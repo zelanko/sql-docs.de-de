@@ -19,19 +19,19 @@ ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962399"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Tools für die Leistungsüberwachung und -optimierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen umfassenden Satz von Tools für die Überwachung von Ereignissen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und für die Optimierung des physischen Datenbankentwurfs bereit. Das richtige Tool ergibt sich aus der Art der gewünschten Überwachung oder Optimierung sowie aus den jeweils zu überwachenden Ereignissen.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine Reihe von Tools für die Überwachung von Ereignissen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und für die Optimierung des physischen Datenbankentwurfs bereit. Das richtige Tool ergibt sich aus der Art der gewünschten Überwachung oder Optimierung sowie aus den jeweils zu überwachenden Ereignissen.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stehen die folgenden Tools zur Überwachung und Optimierung zur Verfügung:  
   
-|Tool|und Beschreibung|  
+|Tool|Beschreibung|  
 |----------|-----------------|  
 |[Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|Integrierte Funktionen zeigen Momentaufnahmestatistiken über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität seit dem Starten des Servers an, die in vordefinierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Leistungsindikatoren gespeichert werden. So enthält beispielsweise **\@\@CPU_BUSY** die Zeitspanne, während der die CPU[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Code ausführte; **\@\@CONNECTIONS** enthält die Anzahl der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungen oder versuchten Verbindungen, und **\@\@PACKET_ERRORS** enthält die Anzahl der Netzwerkpakete, die über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungen übertragen wurden.|  
 |[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|DBCC-Anweisungen (Database Consistency Checker, Datenbankkonsistenzprüfer) ermöglichen die Überprüfung der Leistungsstatistik und der logischen und physischen Konsistenz einer Datenbank.|  
@@ -49,7 +49,7 @@ ms.locfileid: "73962399"
 |[SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozeduren, mit denen die Ablaufverfolgung erstellt, gefiltert und definiert wird:<br /><br /> [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)<br />[sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)<br />[sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)<br />[sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)<br />[sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)|  
 |[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay kann Ablaufverfolgungsdaten mithilfe mehrerer Computer wiedergeben und eine missionskritische Arbeitsauslastung simulieren.|  
 |[sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verfolgt Engine-Prozessereignisse wie das Starten eines Batches oder einer Transaktion. So können Sie die Server- und Datenbankaktivität überwachen (z.B. Deadlocks, schwerwiegende Fehler oder Anmeldeaktivität). Sie können [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder -Datei aufzeichnen und später analysieren oder die aufgezeichneten Ereignisse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schrittweise wiedergeben, um den genauen Ablauf anzuzeigen.|  
-|[Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)|Die folgenden im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System gespeicherten Prozeduren bilden eine leistungsfähige Alternative für zahlreiche Überwachungsaufgaben:<br /><br /> [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md):<br />                    Meldet Momentaufnahme-Informationen zu aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzern und -Prozessen, einschließlich der derzeit ausgeführten Anweisung und der Information, ob die Anweisung blockiert wurde.<br /><br /> [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md):<br />                    Meldet Momentaufnahme-Informationen zu Sperren, einschließlich der Objekt-ID, der Index-ID, des Sperrentyps und des Typs oder der Ressource, auf die die Sperre angewendet wird.<br /><br /> [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md): <br />                    Zeigt einen Schätzwert des Speicherplatzes an, der von einer Tabelle (oder einer gesamten Datenbank) belegt wird.<br /><br /> [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md):<br />                    Zeigt Statistiken, wie die CPU-Auslastung, die E/A-Verwendung und die Leerlaufzeit seit der letzten Ausführung von **sp_monitor** an.|  
+|[Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)|Die folgenden im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System gespeicherten Prozeduren bilden eine leistungsfähige Alternative für zahlreiche Überwachungsaufgaben:<br /><br /> [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md):<br />                    Meldet Momentaufnahme-Informationen zu aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzern und -Prozessen, einschließlich der derzeit ausgeführten Anweisung und der Information, ob die Anweisung blockiert wurde.<br /><br /> [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md):<br />                    Meldet Momentaufnahme-Informationen zu Sperren, einschließlich der Objekt-ID, der Index-ID, des Sperrentyps und des Typs oder der Ressource, auf die die Sperre angewendet wird.<br /><br /> [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md): <br />                    Zeigt einen Schätzwert des Speicherplatzes an, der von einer Tabelle (oder einer gesamten Datenbank) belegt wird.<br /><br /> [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md):<br />                    Zeigt Statistiken, wie die CPU-Auslastung, die E/A-Verwendung und die Leerlaufzeit seit der letzten Ausführung von **sp_monitor** an.|  
 |[Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)|Ablaufverfolgungsflags zeigen Informationen zu einer bestimmten Aktivität im Server an und werden für die Diagnose von Problemen oder Leistungskriterien (z. B. mehrere Deadlocks in Folge) verwendet.|  
   
 ## <a name="choosing-a-monitoring-tool"></a>Auswählen von Überwachungstools  
@@ -61,7 +61,7 @@ ms.locfileid: "73962399"
 |Wiedergeben aufgezeichneter Ereignisse||Ja (von einem einzelnen Computer)|Ja (von mehreren Computern)||||||  
 |Ad-hoc-Überwachung|Ja<sup>1</sup>|Ja|||Ja|Ja|Ja|Ja|  
 |Generieren von Warnungen||||Ja|||||  
-|Grafische Schnittstelle|Ja|Ja||Ja|Ja||Ja|Ja|  
+|Grafische Benutzeroberfläche|Ja|Ja||Ja|Ja||Ja|Ja|  
 |Verwendung im Rahmen von benutzerdefinierten Anwendungen|Ja|Ja<sup>2</sup>||||Ja|||  
   
  <sup>1</sup> Verwenden von [SQL Server Management Studio XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)    
@@ -70,7 +70,7 @@ ms.locfileid: "73962399"
 ## <a name="windows-monitoring-tools"></a>Windows-Überwachungstools  
  Die Windows-Betriebssysteme sowie Windows Server 2003 enthalten außerdem die folgenden Überwachungstools:  
   
-|Tool|und Beschreibung|  
+|Tool|Beschreibung|  
 |----------|-----------------|  
 |Task-Manager|Zeigt eine vergleichende Übersicht über die Prozesse und Anwendungen an, die im System ausgeführt werden.|  
 |Netzwerkmonitor-Agent|Überwacht die Netzwerkbelastung.|  

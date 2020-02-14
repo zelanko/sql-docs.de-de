@@ -12,10 +12,10 @@ ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: feeef370bc64697e3fa9ef3a279e31ba047301fd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296319"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Datenvorschau (Dialogfeld) (SQL Server-Import/Export-Assistent)
@@ -31,7 +31,7 @@ ms.locfileid: "71296319"
 ![Seite „Vorschaudaten“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/preview-data.png "Seite „Vorschaudaten“ des Import/Export-Assistenten")  
   
 ## <a name="preview-sample-data"></a>Anzeigen einer Beispieldatenvorschau  
- **Source**  
+ **Quelle**  
 Zeigt die Abfrage an, die der Assistent zum Laden der Daten aus der Datenquelle verwendet.
 
 Wenn Sie eine Tabelle zum Kopieren ausgewählt haben, wird im Feld **Quelle** eine `SELECT * FROM <table>`-Abfrage statt des Tabellennamens angezeigt. 
@@ -46,5 +46,5 @@ Nachdem Sie die Daten in der Vorschau anzeigen, sollten Sie die Optionen ändern
 ## <a name="whats-next"></a>Wie geht es weiter?  
  Nachdem Sie eine Vorschau der Daten, die Sie kopieren möchten, erstellt haben und auf **OK**klicken, leitet Sie das Dialogfeld **Vorschaudaten** zurück zu den Seiten **Quelltabellen und Sichten auswählen** oder **Flatfileziel konfigurieren** . Weitere Informationen finden Sie unter [Quelltabellen und -sichten auswählen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) oder [Flatfileziel konfigurieren](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
  
- ## <a name="see-also"></a>Siehe auch
+ ## <a name="see-also"></a>Weitere Informationen
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

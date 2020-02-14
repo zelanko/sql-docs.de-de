@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18aad5811c34eadfda4a2a7fabfdd7a9997311b5
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 4654771be070cc02f2c56b1f08950d120706216d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127387"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761678"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "74127387"
 
 Gibt Eigenschaftsinformationen über die Serverinstanz zurück.  
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ SERVERPROPERTY ( 'propertyname' )
 ```  
 
 > [!IMPORTANT]
-> Die Versionsnummern der Datenbank-Engine für SQL Server und Azure SQL-Datenbank sind nicht miteinander vergleichbar, sondern sind interne Buildnummern für diese separaten Produkte. Die Datenbank-Engine für Azure SQL-Datenbank basiert auf der gleichen Codebasis wie die SQL Server-Datenbank-Engine. Entscheidend ist dabei, dass die Datenbank-Engine in Azure SQL-Datenbank immer über die neuesten SQL-Datenbank-Engine-Bits verfügt. Die Version 12 von Azure SQL-Datenbank ist neuer als die Version 15 von SQL Server.
+> Die Versionsnummern der Datenbank-Engine für SQL Server und Azure SQL-Datenbank sind nicht miteinander vergleichbar, sondern sind interne Buildnummern für diese separaten Produkte. Die Datenbank-Engine für Azure SQL-Datenbank basiert auf der gleichen Codebasis wie die SQL Server-Datenbank-Engine. Entscheidend ist dabei, dass die Datenbank-Engine in Azure SQL-Datenbank immer über die neuesten SQL-Datenbank-Engine-Bits verfügt. Die Version 12 von Azure SQL-Datenbank ist neuer als die Version 15 von SQL Server.
 
 ## <a name="arguments"></a>Argumente  
 
@@ -60,7 +60,7 @@ Ein Ausdruck, der die Eigenschafteninformationen enthält, die für Server zurü
 |ComparisonStyle|Die Windows-Vergleichsart der Sortierung.<br /><br /> Basisdatentyp: **int**|  
 |ComputernamePhysischerNetBIOS|NetBIOS-Name des lokalen Computers, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] derzeit ausgeführt wird.<br /><br /> Für eine gruppierte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem Failovercluster ändert sich dieser Wert, wenn für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Failover zu anderen Knoten im Failovercluster ausgeführt wird.<br /><br /> Bei einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bleibt dieser Wert konstant und gibt denselben Wert zurück wie die MachineName-Eigenschaft.<br /><br /> **Hinweis:** Wenn sich die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem Failovercluster befindet und der Name der Failoverclusterinstanz abgerufen werden soll, verwenden Sie die MachineName-Eigenschaft.<br /><br /> NULL = Eingabe ist ungültig, ein Fehler oder nicht anwendbar.<br /><br /> Basisdatentyp: **nvarchar(128)**|  
 |Edition|Installierte Produktedition der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie den Wert dieser Eigenschaft, um die Features und Beschränkungen zu ermitteln, z.B. [Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). 64-Bit-Versionen des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s fügen "(64-Bit)" an die Version an.<br /><br /> Rückgabewerte:<br /><br /> 'Enterprise Edition'<br /><br /> 'Enterprise Edition: Core-basierte Lizenzierung'<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> „SQL Azure“ gibt [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssDW](../../includes/ssdw-md.md)] an.<br /><br /> Basisdatentyp: **nvarchar(128)**|  
-|EditionID|EditionID stellt die installierte Produktedition der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar. Verwenden Sie den Wert dieser Eigenschaft, um Features und Beschränkungen zu ermitteln, z.B. [Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: Kernbasierte Lizenzierung<br /><br /> 610778273 = Enterprise (Evaluation)<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> –1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database oder SQL Data Warehouse<br /><br /> Basisdatentyp: **bigint**|  
+|EditionID|EditionID stellt die installierte Produktedition der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar. Verwenden Sie den Wert dieser Eigenschaft, um Features und Beschränkungen zu ermitteln, z.B. [Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: Kernbasierte Lizenzierung<br /><br /> 610778273 = Enterprise (Evaluation)<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> –1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database oder Azure Synapse Analytics (zuvor SQL Data Warehouse)<br /><br /> Basisdatentyp: **bigint**|  
 |EngineEdition|[!INCLUDE[ssDE](../../includes/ssde-md.md)]-Edition der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die auf dem Server installiert ist.<br /><br /> 1 = Personal oder Desktop Engine (Nicht verfügbar in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen.)<br /><br /> 2 = Standard (Rückgabewert für Standard, Web und Business Intelligence)<br /><br /> 3 = Enterprise (Rückgabewert für Evaluation, Developer und beide Enterprise Editionen)<br /><br /> 4 = Express (Rückgabewert für Express, Express with Tools und Express with Advanced Services)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = Verwaltete Instanz<br /><br /> Basisdatentyp: **int**|  
 |HadrManagerStatus|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Gibt an, ob der [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Manager gestartet wurde.<br /><br /> 0 = Nicht gestartet, ausstehende Kommunikation.<br /><br /> 1 = Gestartet und wird ausgeführt.<br /><br /> 2 = Nicht gestartet und fehlgeschlagen.<br /><br /> NULL = Eingabe ist ungültig, ein Fehler oder nicht anwendbar.|  
 |InstanceDefaultDataPath|**Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur aktuellen Version, ab den Updates vom Spätjahr 2015.<br /><br /> Name des Standardpfads zu den Datendateien der Instanz.|  
@@ -103,7 +103,7 @@ Ein Ausdruck, der die Eigenschafteninformationen enthält, die für Server zurü
 
 **sql_variant**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ### <a name="servername-property"></a>ServerName-Eigenschaft
 

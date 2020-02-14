@@ -15,10 +15,10 @@ ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2100176fa0bb6f02deff6cdf2a210ea81e04f9a6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287444"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Verwenden von Datentypen im Datenfluss
@@ -94,7 +94,7 @@ ms.locfileid: "71287444"
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt64%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI8>|  
   
 ## <a name="mapping-data-types-in-the-data-flow"></a>Zuordnen von Datentypen im Datenfluss  
- Wenn Daten durch Transformationen von der Quelle zum Ziel verschoben werden, muss eine Datenflusskomponente unter Umständen Datentypen zwischen den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Typen, die in der <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType>-Enumeration definiert sind und den verwalteten Datentypen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], die im **System**-Namespace definiert sind, konvertieren. Darüber hinaus muss eine Komponente gegebenenfalls einen [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentyp in einen anderen konvertieren, bevor dieser Typ in einen verwalteten Typ konvertiert werden kann.  
+ Wenn Daten durch Transformationen von der Quelle zum Ziel verschoben werden, muss eine Datenflusskomponente unter Umständen Datentypen zwischen den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Typen, die in der <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType>-Enumeration definiert sind und den verwalteten Datentypen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] konvertieren, die im **System**-Namespace definiert sind. Darüber hinaus muss eine Komponente gegebenenfalls einen [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentyp in einen anderen konvertieren, bevor dieser Typ in einen verwalteten Typ konvertiert werden kann.  
   
 > [!NOTE]  
 >  Die Zuordnungsdateien im XML-Format, die standardmäßig unter „C:\Programme\Microsoft SQL Server\130\DTS\MappingFiles“ installiert werden, hängen nicht mit der in diesem Thema erläuterten Datentypzuordnung zusammen. Diese Dateien ordnen Datentypen aus einer Datenbankversion oder einem System zu (z. B. von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu Oracle) und werden nur vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Import/Export-Assistenten verwendet. Weitere Informationen zu diesen Zuordnungsdateien finden Sie unter [SQL Server-Import/Export-Assistent](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
@@ -123,7 +123,7 @@ ms.locfileid: "71287444"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_GUID>|System.Guid|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I1>|System.SByte|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I2>|System.Int16|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I4>|System.Int32|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I4>|System. Int32|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I8>|System.Int64|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_BOOL>|System.Boolean|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_R4>|System.Single|  

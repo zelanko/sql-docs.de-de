@@ -17,10 +17,10 @@ ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 53fc016bc4657dd1dce7dd0eefcbea58a28ae14e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296996"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>Senden mit dem Skripttask an eine private Remotemeldungswarteschlange
@@ -33,7 +33,7 @@ ms.locfileid: "71296996"
 > [!NOTE]  
 >  Wenn Sie einen Task erstellen möchten, den Sie einfacher in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>Beschreibung  
  Im folgenden Beispiel werden ein vorhandener MSMQ-Verbindungs-Manager sowie Objekte und Methoden des System.Messaging-Namespace verwendet, um in einer Paketvariablen enthaltenen Text an eine private Remotemeldungswarteschlange zu senden. Der Aufruf der M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection(System.Object)-Methode des MSMQ-Verbindungs-Managers gibt ein **MessageQueue**-Objekt zurück, dessen **Send**-Methode diese Aufgabe erfüllt.  
   
 #### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
@@ -48,7 +48,7 @@ ms.locfileid: "71296996"
   
 3.  Fügen Sie der Entwurfsoberfläche einen Skripttask hinzu, und bearbeiten Sie ihn. Um die Variable im Skript verfügbar zu machen, fügen Sie die `MessageText`-Variable im **Scripttask-Editor** auf der Registerkarte **Skript** der **ReadOnlyVariables**-Eigenschaft hinzu.  
   
-4.  Klicken Sie auf **Skript bearbeiten**, um den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-Skript-Editor (VSTA) zu öffnen.  
+4.  Klicken Sie auf **Skript bearbeiten**, um den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Tools für Anwendungen-Skript-Editor (VSTA) zu öffnen.  
   
 5.  Fügen Sie dem **System.Messaging**-Namespace einen Verweis im Skriptprojekt hinzu.  
   

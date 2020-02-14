@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342056"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
@@ -57,8 +57,8 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
   
 |Schlüsselwort|OLE DB-Eigenschaft|Gültige Werte und Beschreibung|  
 |-------------|---------------------|----------------------------------|  
-|Datenquelle|DBPROP_INIT_DATASOURCE|Name der Datenquelle, mit der eine Verbindung hergestellt werden soll. Unterschiedliche Anbieter interpretieren diesen Namen auf unterschiedliche Arten. Für den OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client gibt er den Servernamen an. Für den OLE DB-Anbieter von Jet gibt er den vollständigen Pfad der MDB- oder XLS-Datei an.|  
-|Speicherort|DBPROP_INIT_LOCATION|Speicherort der Datenbank, mit der eine Verbindung hergestellt werden soll.|  
+|Data source|DBPROP_INIT_DATASOURCE|Name der Datenquelle, mit der eine Verbindung hergestellt werden soll. Unterschiedliche Anbieter interpretieren diesen Namen auf unterschiedliche Arten. Für den OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client gibt er den Servernamen an. Für den OLE DB-Anbieter von Jet gibt er den vollständigen Pfad der MDB- oder XLS-Datei an.|  
+|Location|DBPROP_INIT_LOCATION|Speicherort der Datenbank, mit der eine Verbindung hergestellt werden soll.|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|Anbieterspezifische Verbindungszeichenfolge.|  
 |Connect timeout|DBPROP_INIT_TIMEOUT|Timeoutwert, bei dessen Erreichen der Verbindungsversuch einen Fehler verursacht.|  
 |Benutzer-ID|DBPROP_AUTH_USERID|Für die Verbindung zu verwendende Benutzer-ID.|  
@@ -66,7 +66,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |Katalog|DBPROP_INIT_CATALOG|Name des Anfangs- oder Standardkatalogs beim Herstellen einer Verbindung mit der Datenquelle.|  
 |Integrierte Sicherheit|DBPROP_AUTH_INTEGRATED|SSPI, zur Angabe der Windows-Authentifizierung|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `OPENROWSET` erbt immer die Sortierung der Instanz, unabhängig von der für Spalten festgelegten Sortierung.
 
 Mit `OPENDATASOURCE` kann nur auf Remotedaten von OLE DB-Datenquellen zugegriffen werden, wenn für den angegebenen Anbieter die Registrierungsoption DisallowAdhocAccess explizit auf 0 festgelegt wird und wenn die erweiterte Konfigurationsoption „Ad Hoc Distributed Queries“ aktiviert ist. Wenn diese Optionen nicht festgelegt sind, ermöglicht das Standardverhalten keinen Ad-hoc-Zugriff.  

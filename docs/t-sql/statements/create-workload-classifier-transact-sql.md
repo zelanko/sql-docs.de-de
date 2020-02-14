@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056494"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831609"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -36,7 +36,7 @@ Erstellt ein Klassifiziererobjekt für die Verwendung in der Arbeitsauslastungsv
 > [!NOTE]
 > Der Arbeitsauslastungsklassifizierer ersetzt die „sp_addrolemember“-Ressourcenklassenzuweisung.  Führen Sie nach dem Erstellen von Arbeitsauslastungsklassifizierern „sp_droprolemember“ aus, um redundante Ressourcenklassenzuordnungen zu entfernen.
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Syntax
 
@@ -129,14 +129,17 @@ Gibt die relative Wichtigkeit einer Anforderung an.  Die Wichtigkeit kann einen 
 
 Wenn Sie die Wichtigkeit nicht angeben, wird die Wichtigkeitseinstellung der Arbeitsauslastungsgruppe verwendet.  Die Standardwichtigkeit der Arbeitsauslastungsgruppe ist „normal“.  Die Priorität beeinflusst die Reihenfolge, in der Anforderungen geplant werden und somit zuerst Zugriff auf Ressourcen und Sperren erhalten.
 
-## <a name="classification-parameter-precedence"></a>Rangfolge der Klassifizierungsparameter
+## <a name="classification-parameter-weighting"></a>Gewichtung der Klassifizierungsparameter
 
-Eine Anforderung kann mit mehreren Klassifizierern übereinstimmen.  Es gibt eine Rangfolge der Klassifizierungsparameter.  Der in der Rangfolge höhere Klassifizierer wird zuerst verwendet, um eine Arbeitsauslastungsgruppe und Wichtigkeit zuzuweisen.  Die Rangfolge lautet wie folgt:
-1. Benutzer
-2. ROLE
-3. WLM_LABEL
-4. WLM_SESSION
-5. START_TIME/END_TIME
+Eine Anforderung kann mit mehreren Klassifizierern übereinstimmen.  Es gibt eine Gewichtung der Klassifizierungsparameter.  Der übereinstimmende Klassifizierer mit der höchsten Gewichtung wird zum Zuweisen einer Arbeitsauslastungsgruppe und der Wichtigkeit verwendet.  Die Gewichtung funktioniert wie folgt:
+
+|Klassifizierungsparameter |Weight   |
+|---------------------|---------|
+|USER                 |64       |
+|ROLE                 |32       |
+|WLM_LABEL            |16       |
+|WLM_CONTEXT          |8        |
+|START_TIME/END_TIME  |4        |
 
 Beachten Sie die folgenden Klassifiziererkonfigurationen.
 
@@ -151,13 +154,13 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
- ,START_TIME     = '18:00')
+ ,START_TIME     = '18:00'
  ,END_TIME       = '07:00' )
 ```
 
-Der Benutzer `userloginA` ist für beide Klassifizierer konfiguriert.  Wenn „userloginA“ zwischen 18:00 Uhr und 07:00 Uhr eine Abfrage mit der Bezeichnung `salesreport` ausführt, wird die Anforderung mit der Wichtigkeit „HIGH“ in die Arbeitsauslastungsgruppe „wgDashboards“ klassifiziert.  Es wird möglicherweise erwartet, dass die Anforderung außerhalb der Geschäftszeiten mit Wichtigkeit „LOW“ in „wgUserQueries“ klassifiziert wird. „WLM_LABEL“ ist in der Rangfolge höher als „START_TIME/END_TIME“.  In diesem Fall können Sie „START_TIME/END_TIME“ zu „classiferA“ hinzufügen.
+Der Benutzer `userloginA` ist für beide Klassifizierer konfiguriert.  Wenn „userloginA“ zwischen 18:00 Uhr und 07:00 Uhr eine Abfrage mit der Bezeichnung `salesreport` ausführt, wird die Anforderung mit der Wichtigkeit „HIGH“ in die Arbeitsauslastungsgruppe „wgDashboards“ klassifiziert.  Es wird möglicherweise erwartet, dass die Anforderung außerhalb der Geschäftszeiten mit Wichtigkeit „LOW“ in „wgUserQueries“ klassifiziert wird. „WLM_LABEL“ weist jedoch eine höhere Gewichtung als „START_TIME/END_TIME“ auf.  Die Gewichtung von „classiferA“ ist 80 (64 für Benutzer und 16 für WLM_LABEL).  Die Gewichtung von „classiferB“ ist 68 (64 für Benutzer und 4 für START_TIME/END_TIME).  In diesem Fall können Sie WLM_LABEL zu „classiferB“ hinzufügen.
 
- Weitere Informationen finden Sie unter [Arbeitsauslastungsklassifizierung](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence).
+ Weitere Informationen finden Sie unter [Klassifizierung der Arbeitsauslastung](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 
 ## <a name="permissions"></a>Berechtigungen
 

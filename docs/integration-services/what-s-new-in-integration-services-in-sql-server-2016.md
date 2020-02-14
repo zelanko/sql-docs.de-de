@@ -15,10 +15,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295043"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Neuigkeiten in Integration Services in SQL Server 2016
@@ -35,7 +35,7 @@ In der öffentlichen Vorschauversion von Azure Data Factory Version 2, die seit 
 -   Bereitstellen von Paketen in der SSIS-Katalogdatenbank (SSISDB) für Azure SQL-Datenbank
 -   Ausführen von Paketen, die in Azure in Azure SSIS Integration Runtime bereitgestellt wurden. Hierbei handelt es sich um eine Komponente von Azure Data Factory Version 2.
 
-Weitere Informationen finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+Weitere Informationen finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 Diese neuen Funktionen benötigen SQL Server Data Tools (SSDT) Version 17.2 oder höher, nicht jedoch SQL Server 2017 oder SQL Server 2016. Wenn Sie Pakete in Azure bereitstellen, aktualisiert der Assistent für die Paketbereitstellung die Pakete immer auf das aktuelle Paketformat.
 
@@ -250,7 +250,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
 ####  <a name="Parts"></a> Neue Vorlagen, zu Teilen umbenannt  
  Die neuen wiederverwendbaren Vorlagen zur Ablaufsteuerung, die in der CTP-Version 3.0 veröffentlicht wurden, wurden zu Teilen der Ablaufsteuerung oder zu Paketteilen umbenannt. Weitere Informationen zu diesem Feature finden Sie unter [Wiederverwenden der Ablaufsteuerung für Pakete mithilfe von Ablaufsteuerungs-Paketteilen](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).  
 
-## <a name="connectivity"></a>Connectivity  
+## <a name="connectivity"></a>Konnektivität  
 
 ### <a name="expanded-connectivity-on-premises"></a>Erweiterte lokale Konnektivität
 
@@ -271,7 +271,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
 
 ####  <a name="more_hadoop"></a> Erweiterte Unterstützung für Hadoop und HDFS  
   
--   Der Hadoop-Verbindungs-Manager unterstützt jetzt die Standard- und Kerberos-Authentifizierung. Weitere Informationen finden Sie unter [Hadoop Connection Manager](../integration-services/connection-manager/hadoop-connection-manager.md).  
+-   Der Hadoop-Verbindungs-Manager unterstützt jetzt die Standard- und Kerberos-Authentifizierung. Weitere Informationen finden Sie unter [Hadoop-Verbindungs-Manager](../integration-services/connection-manager/hadoop-connection-manager.md).  
   
 -   Die Komponenten HDFS File Source (HDFS-Dateiquelle) und HDFS File Destination (HDFS-Dateispeicherort) unterstützen nun sowohl das Text- als auch das Avro-Format. Weitere Informationen finden Sie unter  [HDFS File Source](../integration-services/data-flow/hdfs-file-source.md) und  [HDFS File Destination](../integration-services/data-flow/hdfs-file-destination.md).  
   
@@ -326,7 +326,7 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
 
  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf ein Integration Services-Projekt, und wählen Sie **Eigenschaften** aus, um die Eigenschaftsseiten für das Projekt zu öffnen. Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften**auf die Eigenschaft **TargetServerVersion** , und wählen Sie dann SQL Server 2016, 2014 oder 2012 aus.  
    
- ![TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
+ ![TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“](../integration-services/media/targetserverversion2.png "TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“")  
 
 > [!IMPORTANT]
 > Wenn Sie benutzerdefinierte Erweiterungen für SSIS entwickeln, siehe [Unterstützung der Festlegung von Zielversionen in Ihren benutzerdefinierten Komponenten](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) und den Blogbeitrag [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(Unterstützung benutzerdefinierter SSIS-Erweiterungen dank der Unterstützung mehrerer Versionsn von SSDT für SQL Server 2016).  

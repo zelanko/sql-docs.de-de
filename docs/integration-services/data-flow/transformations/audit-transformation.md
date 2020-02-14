@@ -17,10 +17,10 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76ce8959e9b9cedb9a1e8a096913a3d6257cfd2d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298018"
 ---
 # <a name="audit-transformation"></a>Überwachungstransformation
@@ -28,12 +28,12 @@ ms.locfileid: "71298018"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Mithilfe der Überwachungstransformation werden in den Datenfluss eines Pakets Daten zur Umgebung, in der das Paket ausgeführt wird, eingeschlossen. Dem Datenfluss kann z. B. der Name des Pakets, Computers und Operators hinzugefügt werden. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] schließt Systemvariablen ein, die diese Informationen bereitstellen.  
+  Mithilfe der Überwachungstransformation werden in den Datenfluss eines Pakets Daten zur Umgebung, in der das Paket ausgeführt wird, eingeschlossen. Dem Datenfluss kann z. B. der Name des Pakets, Computers und Operators hinzugefügt werden. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält Systemvariablen, die diese Informationen bereitstellen.  
   
 ## <a name="system-variables"></a>Systemvariablen  
  In der folgenden Tabelle sind die Systemvariablen beschrieben, die von der Überwachungstransformation verwendet werden können.  
   
-|Systemvariable|Index|und Beschreibung|  
+|Systemvariable|Index|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|Der GUID, der die Ausführungsinstanz des Pakets identifiziert.|  
 |**PackageID**|1|Der eindeutige Bezeichner des Pakets.|  
@@ -54,7 +54,7 @@ ms.locfileid: "71298018"
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -63,14 +63,14 @@ ms.locfileid: "71298018"
 ## <a name="audit-transformation-editor"></a>Transformations-Editor für Überwachung
   Mithilfe der Überwachungstransformation werden in den Datenfluss eines Pakets Daten zur Umgebung, in der das Paket ausgeführt wird, eingeschlossen. Dem Datenfluss kann z. B. der Name des Pakets, Computers und Operators hinzugefügt werden. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält Systemvariablen, die diese Informationen bereitstellen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name der Ausgabespalte**  
  Geben Sie den Namen der neuen Ausgabespalte an, die die Überwachungsinformationen enthalten soll.  
   
  **Überwachungstyp**  
  Wählen Sie eine verfügbare Systemvariable zum Bereitstellen der Überwachungsinformationen aus.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**GUID der Ausführungsinstanz**|Fügen Sie die GUID ein, die die Ausführungsinstanz des Pakets eindeutig identifiziert.|  
 |**Paket-ID**|Fügen Sie die GUID ein, die das Paket eindeutig identifiziert.|  
@@ -78,7 +78,7 @@ ms.locfileid: "71298018"
 |**Versions-ID**|Fügen Sie die GUID ein, die die Paketversion eindeutig identifiziert.|  
 |**Startzeit der Ausführung**|Fügen Sie den Zeitpunkt ein, zu dem mit der Ausführung des Pakets begonnen wird.|  
 |**Computername**|Fügen Sie den Namen des Computers ein, auf dem das Paket gestartet wurde.|  
-|**User name**|Fügen Sie den Anmeldenamen des Benutzers ein, der das Paket gestartet hat.|  
+|**Benutzername**|Fügen Sie den Anmeldenamen des Benutzers ein, der das Paket gestartet hat.|  
 |**Taskname**|Fügen Sie den Namen von dem Datenflusstask ein, mit dem die Überwachungstransformation verknüpft ist.|  
 |**Task-ID**|Fügen Sie die GUID ein, die den mit der Überwachungstransformation verknüpften Datenflusstask eindeutig identifiziert.|  
   

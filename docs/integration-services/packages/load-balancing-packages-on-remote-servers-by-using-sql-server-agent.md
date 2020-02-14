@@ -15,10 +15,10 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 325d5cde9ae15bb58c6173a974f14f48847c3361
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282475"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Lastenausgleich von Paketen auf Remoteservern mithilfe des SQL Server-Agents
@@ -26,7 +26,7 @@ ms.locfileid: "71282475"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Müssen viele Pakete ausgeführt werden, ist es praktisch, hierfür andere verfügbare Server zu verwenden. Diese Methode, bei der zum Ausführen von Paketen andere Server verwendet werden, während die Steuerung der Pakete über ein übergeordnetes Paket erfolgt, wird als Lastenausgleich bezeichnet. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]wird der Lastenausgleich manuell ausgeführt, wobei die Struktur des Verfahrens von den Besitzern der Pakete festgelegt werden muss. Dabei wird der Lastenausgleich nicht automatisch von den Servern ausgeführt. Des Weiteren müssen die auf den Remoteservern ausgeführten Pakete vollständige Pakete sein. Einzelne Tasks anderer Pakete sind dabei nicht zulässig.  
+  Müssen viele Pakete ausgeführt werden, ist es praktisch, hierfür andere verfügbare Server zu verwenden. Diese Methode, bei der zum Ausführen von Paketen andere Server verwendet werden, während die Steuerung der Pakete über ein übergeordnetes Paket erfolgt, wird als Lastenausgleich bezeichnet. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] wird der Lastenausgleich manuell ausgeführt, wobei die Struktur des Verfahrens von den Besitzern der Pakete festgelegt werden muss. Dabei wird der Lastenausgleich nicht automatisch von den Servern ausgeführt. Des Weiteren müssen die auf den Remoteservern ausgeführten Pakete vollständige Pakete sein. Einzelne Tasks anderer Pakete sind dabei nicht zulässig.  
   
  Der Lastenausgleich ist in den folgenden Szenarien nützlich:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71282475"
 ## <a name="illustration-of-load-balancing"></a>Abbildung des Lastenausgleichs  
  Im folgenden Diagramm wird ein übergeordnetes Paket auf einem Server angezeigt. Das übergeordnete Paket enthält mehrere Tasks Auftrag des SQL Server-Agents ausführen. Mit jedem Task des übergeordneten Pakets wird ein SQL Server-Agent auf einem Remoteserver aufgerufen. Diese Remoteserver enthalten SQL Server-Agent-Aufträge, die einen Schritt für den Aufruf eines Pakets auf diesem Server beinhalten.  
   
- ![Übersicht über die SSIS-Architektur mit Lastenausgleich](../../integration-services/packages/media/loadbalancingoverview.gif "Overview of SSIS load balancing architecture")  
+ ![Architektur für den SSIS-Lastenausgleich (Übersicht)](../../integration-services/packages/media/loadbalancingoverview.gif "Architektur für den SSIS-Lastenausgleich (Übersicht)")  
   
  Die in dieser Architektur für den Lastenausgleich erforderlichen Schritte stellen keine neuen Konzepte dar. Der Lastenausgleich wird nämlich erreicht, indem vorhandene Konzepte und allgemeine SSIS-Objekte auf neue Art und Weise verwendet werden.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "71282475"
 ### <a name="listing-child-packages"></a>Auflisten untergeordneter Pakete  
  Wenn Sie ein Projekt, das ein übergeordnetes Paket und untergeordnete Pakete enthält, über den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen, können Sie eine Liste der untergeordneten Pakete anzeigen lassen, die von den übergeordneten Paketen ausgeführt werden. Wenn Sie das übergeordnete Paket ausführen, wird automatisch für das übergeordnete Paket ein Bericht **Übersicht** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellt. Der Bericht führt die untergeordneten Pakete auf, die vom Task "Paket ausführen" ausgeführt wurden, der sich im übergeordneten Paket befindet. Dies wird im folgenden Bild gezeigt.  
   
- ![Übersichtsbericht mit einer Liste von untergeordneten Paketen](../../integration-services/packages/media/overviewreport-childpackagelisting.png "Overview Report with list of child packages")  
+ ![Übersichtsbericht mit Liste der untergeordneten Pakete](../../integration-services/packages/media/overviewreport-childpackagelisting.png "Übersichtsbericht mit Liste der untergeordneten Pakete")  
   
  Weitere Informationen zum Zugreifen auf den Bericht **Übersicht** finden Sie unter [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
@@ -121,7 +121,7 @@ ms.locfileid: "71282475"
 >  Sie können den Task „SQL ausführen“ verwenden, in dem die Transact-SQL-Anweisung **sp_start_job N'package_name'** enthalten ist. Weitere Informationen finden Sie unter [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
   
 ### <a name="debugging-environment"></a>Debugging-Umgebung  
- Verwenden Sie beim Testen des übergeordneten Pakets die Umgebung des Designers zum Debuggen, indem Sie im Menü Debuggen auf Debuggen starten klicken oder F5 drücken. Alternativ können Sie das Eingabeaufforderungs-Hilfsprogramm **dtexec**verwenden. Weitere Informationen finden Sie unter [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+ Verwenden Sie beim Testen des übergeordneten Pakets die Umgebung des Designers zum Debuggen, indem Sie im Menü Debuggen auf Debuggen starten klicken oder F5 drücken. Alternativ können Sie das Eingabeaufforderungs-Hilfsprogramm **dtexec**verwenden. Weitere Informationen finden Sie [hier](../../integration-services/packages/dtexec-utility.md).  
 
 ## <a name="logging-for-load-balanced-packages-on-remote-servers"></a>Protokollierung für Pakete auf Remoteservern, für die ein Lastenausgleich ausgeführt wurde
   Für einen Administrator ist es einfacher, die Protokolle aller untergeordneten Pakete, die auf verschiedenen Servern ausgeführt werden, zu verwalten, wenn alle untergeordneten Pakete denselben Protokollanbieter verwenden und in dasselbe Ziel schreiben. Eine Möglichkeit zum Erstellen einer allgemeinen Protokolldatei für alle untergeordneten Pakete besteht darin, die untergeordneten Pakete für die Protokollierung ihrer Ereignisse in einem SQL Server-Protokollanbieter zu konfigurieren. Sie können alle Pakete für die Verwendung derselben Datenbank, desselben Servers und derselben Server-Instanz konfigurieren.  

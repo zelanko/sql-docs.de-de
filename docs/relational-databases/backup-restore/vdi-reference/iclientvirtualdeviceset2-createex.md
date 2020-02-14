@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 90165738dfcea8818353d602f72390bb08eea792
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847351"
 ---
 # <a name="iclientvirtualdeviceset2createex-vdi"></a>IClientVirtualDeviceSet2::CreateEx (VDI)
@@ -48,7 +48,7 @@ HRESULT IClientVirtualDeviceSet2::CreateEx (
 | VD_E_NOTSUPPORTED | Mindestens ein Feld in der Konfiguration war ungültig oder wurde nicht unterstützt. |
 | VD_E_PROTOCOL | Die Gruppe virtueller Geräte wurde erstellt. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Die „CreateEx“-Methode sollte nur einmal pro BACKUP- oder RESTORE-Vorgang aufgerufen werden. Nachdem die „Close“-Methode aufgerufen wurde, kann der Client die Schnittstelle wiederverwenden, um eine weitere Gruppe virtueller Geräte zu erstellen.
 
@@ -56,7 +56,7 @@ Der Instanzname muss die Instanz identifizieren, an die die Transact-SQL-Sprache
 
 Die „CreateEx“- (und „Create“)-Aufrufe ändern die Sicherheits-DACL für das Prozesshandle im Clientprozess. Aus diesem Grund muss jede andere Änderung des Prozesshandles mit dem Aufruf von „CreateEx“ serialisiert werden. Dabei wird „CreateEx“ mit anderen Aufrufen von „CreateEx“ serialisiert, kann aber nicht mit der externen Verarbeitung serialisiert werden. Der Zugriff wird dem Konto gewährt, das den SQL Server-Dienst ausführt.
 
-Die „CreateEx“-Methode ersetzt die im ursprünglichen IClientVirtualDeviceSet-Befehl definierte „Create“-Methode. Die ursprüngliche „Create“-Methode ist veraltet und sollte bei künftigen Entwicklungen nicht mehr verwendet werden. Mit dieser ursprünglichen „Create“-Methode wird eine Art Unterstützung für Instanznamen mit der Umgebungsvariablen VIRTUAL_SERVER_NAME implementiert. Wenn diese Variable in der Umgebung festgelegt ist, ruft die „Create“-Methode intern die „CreateEx“-Methode auf und übergibt den Wert von VIRTUAL_SERVER_NAME als Instanzname.
+Die „CreateEx“-Methode ersetzt die im ursprünglichen IClientVirtualDeviceSet-Befehl definierte „Create“-Methode. Die ursprüngliche „Create“-Methode ist veraltet und sollte bei künftigen Entwicklungen nicht mehr verwendet werden. Mit dieser ursprünglichen „Create“-Methode wird mit der Umgebungsvariablen _VIRTUAL_SERVER_NAME_ eine Art Unterstützung für Instanznamen implementiert. Wenn diese Variable in der Umgebung festgelegt ist, ruft die „Create“-Methode intern die „CreateEx“-Methode auf und übergibt den Wert von _VIRTUAL_SERVER_NAME_ als Instanzname.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

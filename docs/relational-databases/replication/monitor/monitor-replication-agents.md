@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: aa72ae36463f191ef8f127562d231b2e58480039
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fd19ef065c98022d0f8fecd8e4fd044007759005
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767722"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288067"
 ---
 # <a name="monitor-replication-agents"></a>Überwachen der Replikations-Agents
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Der Replikationsmonitor von[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet einen systemischen Überblick über die Replikationsaktivität und erleichtert gleichzeitig die Suche nach Informationen zu einem bestimmten Agent. Die folgende Liste enthält alle Agents, die Registerkarten im Replikationsmonitor, auf denen die Agents zu finden sind, und einen Verweis darauf, wo Sie Informationen zum Zugreifen auf die jeweilige Registerkarte finden:  
+  Der Replikationsmonitor von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet einen systemischen Überblick über die Replikationsaktivität und erleichtert gleichzeitig die Suche nach Informationen zu einem bestimmten Agent. Die folgende Liste enthält alle Agents, die Registerkarten im Replikationsmonitor, auf denen die Agents zu finden sind, und einen Verweis darauf, wo Sie Informationen zum Zugreifen auf die jeweilige Registerkarte finden:  
   
 -   Die folgenden Agents sind Veröffentlichungen im Replikationsmonitor zugeordnet:  
   
@@ -119,6 +119,6 @@ ms.locfileid: "68767722"
 5.  Klicken Sie auf **Schließen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Replikations-Agents (Übersicht)](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Übersicht über Replikations-Agents](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

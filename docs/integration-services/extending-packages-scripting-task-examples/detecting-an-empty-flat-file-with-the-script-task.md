@@ -16,10 +16,10 @@ ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 70c8f2e18838ade1d5a2e98fd327c86e95a34a80
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297047"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Erkennen einer leeren flachen Datei mit dem Skripttask
@@ -32,8 +32,8 @@ ms.locfileid: "71297047"
 > [!NOTE]  
 >  Wenn Sie einen Task erstellen möchten, den Sie einfacher in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>und Beschreibung  
- Im folgenden Beispiel wird mithilfe von Methoden des **System.IO**-Namespace das in einem Verbindungs-Manager für Flatfiles angegebene Flatfile getestet, um zu ermitteln, ob die Datei leer ist, oder ob sie nur erwartete Nichtdatenzeilen wie z.B. Spaltenkopfzeilen oder eine leere Zeile enthält. Das Skript prüft zuerst die Größe der Datei; bei einer Größe von 0 (null) Bytes ist die Datei leer. Ist die Datei größer als 0 (null), liest das Skript die Zeilen aus der Datei so lange, bis keine weiteren Zeilen mehr vorhanden sind, oder bis die Anzahl der Zeilen höher ist als die erwartete Anzahl der Nichtdatenzeilen. Ist die Anzahl der Zeilen der Datei kleiner oder gleich der erwarteten Anzahl der Nichtdatenzeilen, dann wird davon ausgegangen, dass die Datei leer ist. Das Ergebnis wird dann als boolescher Wert in einer Benutzervariablen zurückgegeben, deren Wert für die Verzweigung in der Paketablaufsteuerung verwendet werden kann. Die **FireInformation**-Methode zeigt das Ergebnis auch im **Ausgabe**-Fenster der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) an.  
+## <a name="description"></a>Beschreibung  
+ Im folgenden Beispiel wird mithilfe von Methoden des **System.IO**-Namespace das in einem Verbindungs-Manager für Flatfiles angegebene Flatfile getestet, um zu ermitteln, ob die Datei leer ist, oder ob sie nur erwartete Nichtdatenzeilen wie z.B. Spaltenkopfzeilen oder eine leere Zeile enthält. Das Skript prüft zuerst die Größe der Datei; bei einer Größe von 0 (null) Bytes ist die Datei leer. Ist die Datei größer als 0 (null), liest das Skript die Zeilen aus der Datei so lange, bis keine weiteren Zeilen mehr vorhanden sind, oder bis die Anzahl der Zeilen höher ist als die erwartete Anzahl der Nichtdatenzeilen. Ist die Anzahl der Zeilen der Datei kleiner oder gleich der erwarteten Anzahl der Nichtdatenzeilen, dann wird davon ausgegangen, dass die Datei leer ist. Das Ergebnis wird dann als boolescher Wert in einer Benutzervariablen zurückgegeben, deren Wert für die Verzweigung in der Paketablaufsteuerung verwendet werden kann. Die **FireInformation**-Methode zeigt das Ergebnis auch im Fenster **Ausgabe** der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) an.  
   
 #### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
   

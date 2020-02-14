@@ -12,10 +12,10 @@ ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc7255cdcb9758f2bdd55b043e70669affadabd8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285220"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>SQL-Anweisung CREATE TABLE (SQL Server-Import/Export-Assistent)
@@ -23,7 +23,7 @@ ms.locfileid: "71285220"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-Wenn Sie die Option **Zieltabelle erstellen** und anschließend **SQL bearbeiten** im Dialogfeld **Spaltenzuordnungen** auswählen, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent das Dialogfeld **SQL-Anweisung CREATE TABLE** an. Auf dieser Seite überprüfen Sie den Befehl **CREATE TABLE**, den der Assistent zum Erstellen der neuen Zieltabelle ausführt, und passen ihn optional an.
+Wenn Sie die Option **Zieltabelle erstellen** und anschließend **SQL bearbeiten** im Dialogfeld **Spaltenzuordnungen** auswählen, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent das Dialogfeld **SQL-Anweisung CREATE TABLE** an. Auf dieser Seite überprüfen Sie den Befehl **CREATE TABLE** , den der Assistent zum Erstellen der neuen Zieltabelle ausführt, und passen ihn optional an.
   
 > [!NOTE]
 > Wenn Sie Informationen zur [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE-Anweisung und nicht zum Dialogfeld **SQL-Anweisung CREATE TABLE** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistenten suchen, gehen Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). 
@@ -33,7 +33,7 @@ Wenn Sie die Option **Zieltabelle erstellen** und anschließend **SQL bearbeiten
  
 In diesem Beispiel enthält das Feld **SQL-Anweisung** die vom Assistenten generierte Standardanweisung **CREATE TABLE** . Diese Anweisung erstellt eine neue Zieltabelle namens **Person.AddressNew**, die eine Kopie der Quelltabelle **Person.Address** darstellt. 
   
- ![Seite „Tabelle erstellen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/create-table.png "Seite „Tabelle erstellen“ des Import/Export-Assistenten")  
+ ![Erstellen einer Tabellenseite des Import/Export-Assistenten](../../integration-services/import-export-data/media/create-table.png "Erstellen einer Tabellenseite des Import/Export-Assistenten")  
   
 ## <a name="review-or-regenerate-the-create-table-statement"></a>Überprüfen oder generieren Sie erneut die Anweisung CREATE TABLE  
  **SQL-Anweisung**  
@@ -58,7 +58,7 @@ Weitere Informationen zur Syntax finden Sie unter [CREATE TABLE &#40;Transact-SQ
 ## <a name="whats-next"></a>Wie geht es weiter?  
  Nachdem Sie den CREATE TABLE-Befehl überprüft und angepasst haben und auf **OK**geklickt haben, leitet Sie das Dialogfeld **SQL Anweisung CREATE TABLE** zum Dialogfeld **Spaltenzuordnungen** zurück. Weitere Informationen finden Sie unter [Spaltenzuordnungen](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
  
- ## <a name="see-also"></a>Siehe auch
+ ## <a name="see-also"></a>Weitere Informationen
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

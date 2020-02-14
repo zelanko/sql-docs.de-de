@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a0e861a1619921081a81fa52f72ba6fc88e98668
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a7feb252e98be7cc820b074bcb3c3b2c6ff4ff5d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908349"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287584"
 ---
 # <a name="replicate-identity-columns"></a>Replizieren von Identitätsspalten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "72908349"
     > [!NOTE]  
     >  Die Abonnenten müssen mit dem Verleger synchronisiert werden, um die neuen Bereiche zu empfangen. Da den Abonnenten die Identitätsbereiche automatisch zugewiesen werden, ist es für alle Abonnenten möglich, sämtliche Identitätsbereiche auszuschöpfen, wenn wiederholt neue Bereiche angefordert werden.  
   
--   Manuell. Diese Option ist bei Momentaufnahme- und Transaktionsreplikationen ohne Updates auf dem Abonnenten, bei Peer-zu-Peer-Transaktionsreplikationen und in den Fällen zu verwenden, in denen Ihre Anwendung die Identitätsbereiche programmgesteuert kontrollieren muss. Wenn Sie die manuelle Verwaltung angeben, müssen Sie sicherstellen, dass dem Verleger und den einzelnen Abonnenten Bereiche zugewiesen werden und dass neue Bereiche zugeordnet werden, sofern die anfänglichen Bereiche verwendet werden. Die Replikation aktiviert die Option NOT FOR REPLICATION für die Identitätsspalte auf dem Abonnenten.  
+-   Manuell Diese Option ist bei Momentaufnahme- und Transaktionsreplikationen ohne Updates auf dem Abonnenten, bei Peer-zu-Peer-Transaktionsreplikationen und in den Fällen zu verwenden, in denen Ihre Anwendung die Identitätsbereiche programmgesteuert kontrollieren muss. Wenn Sie die manuelle Verwaltung angeben, müssen Sie sicherstellen, dass dem Verleger und den einzelnen Abonnenten Bereiche zugewiesen werden und dass neue Bereiche zugeordnet werden, sofern die anfänglichen Bereiche verwendet werden. Die Replikation aktiviert die Option NOT FOR REPLICATION für die Identitätsspalte auf dem Abonnenten.  
   
 -   Keine. Diese Option sollte nur für die Rückwärtskompatibilität mit früheren [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Versionen verwendet werden. Bei Transaktionsveröffentlichungen ist die Option nur über die gespeicherte Prozedur verfügbar.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72908349"
 > [!WARNING]  
 >  Während einer umfangreichen Batcheinfügung wird der Replikationstrigger nur einmal und nicht für jede eingefügte Zeile ausgelöst. Dies kann zu einem Fehler bei der INSERT-Anweisung führen, wenn ein Identitätsbereich während einer umfangreichen Einfügung, z. B. einer **INSERT INTO** -Anweisung, ausgeschöpft ist.  
   
-|Datentyp|Bereich|  
+|Datentyp|Range|  
 |---------------|-----------|  
 |**tinyint**|Keine Unterstützung bei automatischer Verwaltung|  
 |**smallint**|-2^15 (-32,768) bis 2^15-1 (32,767)|  

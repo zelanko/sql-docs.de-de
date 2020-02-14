@@ -14,10 +14,10 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297549"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Integration Services-Datentypen in Ausdrücken
@@ -27,7 +27,7 @@ ms.locfileid: "71297549"
 
   Die Ausdrucksauswertung verwendet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen. Wenn Daten erstmals an einen Datenfluss in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket weitergegeben werden, konvertiert die Datenfluss-Engine alle Spaltendaten in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Datentyp, und die von einem Ausdruck verwendeten Spaltendaten weisen bereits einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Datentyp auf. Ausdrücke, die in den Transformationen für bedingtes Teilen und für abgeleitete Spalten verwendet werden, können auf Spalten verweisen, weil sie Teil eines Datenflusses mit Spaltendaten sind.  
   
-## <a name="variables"></a>Variablen  
+## <a name="variables"></a>Variables  
  In Ausdrücken können außerdem Variablen verwendet werden. Variablen weisen einen Variant-Datentyp auf, und die Ausdrucksauswertung konvertiert den Datentyp einer Variablen von einem Variant-Untertyp in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp, bevor der Ausdruck ausgewertet wird. Für Variablen kann nur eine Teilmenge der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen verwendet werden. Beispielsweise ist für eine Variable kein BLOB-Datentyp (Binary Large Object Block) zulässig.  
   
  Weitere Informationen zu [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen und zum Zuordnen von Variant-Datentypen zu [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen finden Sie unter [Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "71297549"
   
  Die folgenden Beispiele veranschaulichen die Auswirkungen der Umwandlung.  
   
- ![Umwandlungsstrings in SSIS-Ausdrücken](../../integration-services/expressions/media/stringsinssisexpressions2.png "Umwandlungsstrings in SSIS-Ausdrücken")  
+ ![Umwandeln von Zeichenfolgen in SSIS-Ausdrücken](../../integration-services/expressions/media/stringsinssisexpressions2.png "Umwandeln von Zeichenfolgen in SSIS-Ausdrücken")  
   
 1.  Im ersten Ausdruck wird die Umwandlung nicht auf Stammebene des Ausdrucks ausgeführt. Die Ausdrucksauswertung verarbeitet diese Umwandlung auf intelligente Weise und wandelt nicht in DT_STR, sondern in DT_WSTR um. Der Ausdruck gibt DT_WSTR zurück.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71297549"
 >   
 >  Um Fehler oder unerwartete Ergebnisse zu vermeiden, sollten Sie keinen Code erstellen, der von bestimmten numerischen Werten für **True** und **False**abhängig ist. Nach Möglichkeit sollten bei booleschen Variablen nur die für sie vorgesehenen logischen Werte verwendet werden.  
   
- Weitere Informationen finden Sie in folgenden Themen:  
+ Weitere Informationen finden Sie in den folgenden Themen:  
   
 -   [== &#40;Gleich&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/equal-ssis-expression.md)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "71297549"
   
 -   Argumente, die an Datums- und Zeitfunktionen übergeben werden, müssen zu einem gültigen Datum ausgewertet werden. Beispielsweise DAY(GETDATE()). Manche Funktionen, wie z. B. DATEADD, erfordern ein zusätzliches ganzzahliges Argument für die Anzahl von Tagen, die von der Funktion zu einem Datum addiert werden.  
   
- Für Operationen, bei denen ein integer-Wert ohne Vorzeichen mit der Länge von 8 Byte und ein integer-Wert mit Vorzeichen kombiniert werden, ist zum Klären des Ergebnisformats eine explizite Umwandlung erforderlich. Weitere Informationen finden Sie unter [Umwandlung &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
+ Für Operationen, bei denen ein integer-Wert ohne Vorzeichen mit der Länge von 8 Byte und ein integer-Wert mit Vorzeichen kombiniert werden, ist zum Klären des Ergebnisformats eine explizite Umwandlung erforderlich. Weitere Informationen finden Sie unter [Umwandlung &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  Die Ergebnisse vieler Operationen und Funktionen können vordefinierte Datentypen aufweisen. Dies kann der Datentyp des Arguments oder der Datentyp sein, in den die Ausdrucksauswertung das Ergebnis umwandelt. Beispielsweise ist das Ergebnis eines logischen OR-Operators (||) immer ein boolescher Wert, das Ergebnis der ABS-Funktion ist der numerische Datentyp des Arguments, und das Ergebnis einer Multiplikation ist der kleinste numerische Datentyp, der das Ergebnis ohne Verlust speichern kann. Weitere Informationen zu den Datentypen von Ergebnissen finden Sie unter [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md) und [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   

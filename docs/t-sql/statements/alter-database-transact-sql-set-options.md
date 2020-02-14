@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 06c5e725e62946544301098a7636760040b28b64
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.openlocfilehash: 6fea23921dd3b01032de8c8960970526502eee17
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952430"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831896"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -2619,6 +2619,9 @@ ON: Der Abfrageoptimierer erstellt nach Bedarf Statistiken für einzelne Spalten
 Der Standardwert ist ON. Für die meisten Datenbanken empfiehlt sich die Verwendung der Standardeinstellung.
 
 OFF: Der Abfrageoptimierer erstellt beim Kompilieren von Abfragen keine Statistiken für einzelne Spalten in Abfrageprädikaten. Das Festlegen dieser Option auf OFF kann zu suboptimalen Abfrageplänen und einer beeinträchtigten Abfrageleistung führen.
+
+### <a name="remarks"></a>Bemerkungen
+Sie müssen während der Ausführung dieses Befehls mit der Benutzerdatenbank verbunden sein.
 
 Sie können den Status dieser Option ermitteln, indem Sie die Spalte `s_auto_create_stats_on` in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht untersuchen. Sie können den Status auch durch Untersuchen der `IsAutoCreateStatistics`-Eigenschaft der [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion bestimmen.
 

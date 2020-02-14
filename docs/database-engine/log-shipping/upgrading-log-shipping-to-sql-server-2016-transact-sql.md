@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3ebe7da68b057e9f84d2b83572a337ede278401
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 232ecd6278070d928db7485e93e8498adfc70a9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258570"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941138"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "75258570"
  Während der Aktualisierung des Überwachungsservers ist die Protokollversandkonfiguration weiterhin in Betrieb, ihr Status wird allerdings nicht in den Tabellen auf dem Überwachungsserver aufgezeichnet. Warnungen, die ggf. konfiguriert wurden, werden während der Aktualisierung des Überwachungsservers nicht ausgelöst. Nach der Aktualisierung können Sie die Überwachungstabellen aktualisieren, indem Sie die gespeicherte Systemprozedur [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md) ausführen.   Weitere Informationen zu einem Überwachungsserver finden Sie unter [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 ##  <a name="UpgradeSecondaries"></a> Aktualisieren der sekundären Serverinstanzen  
- Der Upgradevorgang erfordert die Aktualisierung der sekundären Serverinstanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , bevor die primäre Serverinstanz aktualisiert wird. Aktualisieren Sie immer zuerst die sekundären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen. Der Protokollversand wird während des Upgradevorgangs weiter ausgeführt, weil die aktualisierten sekundären Serverinstanzen die Protokollsicherungen der primären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Serverinstanz weiterhin wiederherstellen. Wenn die primäre Serverinstanz vor der sekundären Serverinstanz aktualisiert wird, tritt beim Protokollversand ein Fehler auf, weil eine auf einer neueren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellte Sicherung nicht auf einer älteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wiederhergestellt werden kann. Sie können die sekundären Instanzen gleichzeitig oder nacheinander aktualisieren. Um einen Fehler beim Protokollversand zu vermeiden, müssen jedoch alle sekundären Instanzen aktualisiert worden sein, bevor die primäre Instanz aktualisiert wird.  
+ Der Upgradevorgang erfordert die Aktualisierung der sekundären Serverinstanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , bevor die primäre Serverinstanz aktualisiert wird. Aktualisieren Sie immer zuerst die sekundären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen. Der Protokollversand wird während des Upgradevorgangs weiter ausgeführt, weil die aktualisierten sekundären Serverinstanzen die Protokollsicherungen der primären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Serverinstanz weiterhin wiederherstellen. Wenn die primäre Serverinstanz vor der sekundären Serverinstanz aktualisiert wird, tritt beim Protokollversand ein Fehler auf, weil eine auf einer neueren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellte Sicherung nicht auf einer älteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wiederhergestellt werden kann. Sie können die sekundären Instanzen gleichzeitig oder nacheinander aktualisieren. Es müssen jedoch alle sekundären Instanzen aktualisiert worden sein, bevor die primäre Instanz aktualisiert wird, um einen Fehler beim Protokollversand zu vermeiden.  
   
  Während des Upgrades der sekundären Serverinstanz werden die Kopier- und Wiederherstellungsaufträge des Protokollversands nicht ausgeführt. Nicht wiederhergestellte Sicherungen von Transaktionsprotokollen sammeln sich daher auf der primären Instanz an. Daher muss ausreichend Speicherplatz für diese nicht wiederhergestellten Sicherungen vorhanden sein. Die Menge der angehäuften Daten hängt von der Häufigkeit der geplanten Sicherungen auf der primären Serverinstanz und der Reihenfolge ab, mit der die sekundären Instanzen aktualisiert werden. Wenn ein getrennter Überwachungsserver konfiguriert wurde, werden möglicherweise Warnungen ausgegeben, die anzeigen, dass über einen längeren Zeitraum als das konfigurierte Intervall hinweg keine Wiederherstellungsvorgänge ausgeführt wurden.  
   

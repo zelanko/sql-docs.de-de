@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021219"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
@@ -130,7 +130,7 @@ Die variablen Teile des Durchforstungsprotokolldatei-Namens sind die folgenden.
   
 Wichtige Informationen zu den folgenden Formeln finden Sie in den Notizen unter der Tabelle.  
   
-|Platform|Schätzung des von „fdhost.exe“ benötigten Arbeitsspeichers in MB: *F*^1|Formel zum Berechnen des „max server memory“-Werts: *M*^2|  
+|Plattform|Schätzung des von „fdhost.exe“ benötigten Arbeitsspeichers in MB: *F*^1|Formel zum Berechnen des „max server memory“-Werts: *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
 |x86|*F* = *Anzahl der Durchforstungsbereiche* \* 50|*M* = Minimum (*T*, 2000) - F - 500|  
 |x64|*F* = *Anzahl der Durchforstungsbereiche* \* 10 \* 8|*M* = *T* - *F* - 500|  
@@ -178,7 +178,7 @@ Es ist wahrscheinlich, dass die Leistung der vollständigen Auffüllungen nicht 
   
      In der folgenden Tabelle sind die relevanten Wartetypen aufgeführt.  
   
-    |Wartetyp|und Beschreibung|Mögliche Lösung|  
+    |Wartetyp|Beschreibung|Mögliche Lösung|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX oder _UP)|Dies kann auf einen E/A-Engpass hinweisen. In diesem Fall ist normalerweise auch eine hohe durchschnittliche Warteschlangenlänge des Datenträgers zu erkennen.|Sie können den E/A-Engpass ggf. reduzieren, indem Sie den Volltextindex in eine andere Dateigruppe auf einem anderen Datenträger verschieben.|  
     |PAGELATCH_EX (oder _UP)|Dies kann auf eine hohe Zahl von Konflikten zwischen Threads hinweisen, die versuchen, in dieselbe Datenbankdatei zu schreiben.|Diese Konflikte können ggf. verringert werden, indem Sie Dateien der Dateigruppe hinzufügen, auf der sich der Volltextindex befindet.|  

@@ -11,10 +11,10 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0117f867363a9536887ff1b67e1960170317d8d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295935"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lektion 4: Hinzufügen der Fehlerflussumleitung mit SSIS
@@ -23,7 +23,7 @@ ms.locfileid: "71295935"
 
 
 
-Um mögliche Fehler im Transformationsprozess zu behandeln, können Sie mithilfe von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] auf der Grundlage von Komponenten oder Spalten entscheiden, wie Daten zu handhaben sind, die von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nicht transformiert werden können. Sie können einen Fehler in bestimmten Spalten ignorieren, die ganze fehlerverursachende Zeile umleiten oder die Komponente als fehlerhaft behandeln. Standardmäßig sind Komponenten in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] so konfiguriert, dass sie bei Fehlern fehlschlagen. Die fehlerhafte Komponente verursacht wiederum einen Paketausführungsfehler, wodurch die Verarbeitung beendet wird.  
+Mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] können Sie für jede Komponente oder jede Spalte entscheiden, wie Daten behandelt werden sollen, die nicht von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] transformiert werden können, um Fehler zu vermeiden, die beim Transformationsprozess auftreten können. Sie können einen Fehler in bestimmten Spalten ignorieren, die ganze fehlerverursachende Zeile umleiten oder die Komponente als fehlerhaft behandeln. Standardmäßig sind Komponenten in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] so konfiguriert, dass sie bei Fehlern fehlschlagen. Die fehlerhafte Komponente verursacht wiederum einen Paketausführungsfehler, wodurch die Verarbeitung beendet wird.  
   
 Dies können Sie vermeiden, indem Sie potenzielle Verarbeitungsfehler erst bei ihrem Auftreten konfigurieren und behandeln. Eine Option besteht darin, alle Fehler zu ignorieren, damit das Paket immer erfolgreich ausgeführt wird. Sie haben auch die Möglichkeit, die fehlerverursachende Zeile zu einem anderen Verarbeitungspfad umzuleiten, wo die Daten und Fehler gespeichert, untersucht und nochmals verarbeitet werden können.  
   

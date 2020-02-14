@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68742951"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE-Anweisungen: LABELONLY (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68742951"
 > [!NOTE]  
 >  Eine Beschreibung der Argumente finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -78,7 +78,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Resultsets  
  Das Resultset von RESTORE LABELONLY besteht aus einer Zeile mit diesen Informationen.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|Name des Mediums.|  
 |**MediaSetId**|**uniqueidentifier**|Eindeutige ID des Mediensatzes.|  
@@ -100,7 +100,7 @@ FROM <backup_device>
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Die Ausführung von RESTORE LABELONLY stellt eine schnelle Möglichkeit dar, den Inhalt des Sicherungsmediums herauszufinden. Da RESTORE LABELONLY nur den Medienheader liest, wird diese Anweisung schnell abgeschlossen, auch wenn Bandmedien mit hoher Kapazität verwendet werden.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  In einem Sicherungsvorgang können optional Kennwörter für einen Mediensatz angegeben werden. Wenn ein Kennwort für einen Mediensatz definiert wurde, müssen Sie in der RESTORE-Anweisung das richtige Kennwort angeben. Das Kennwort verhindert nicht autorisierte Wiederherstellungsoptionen und unbefugtes Anfügen von Sicherungssätzen an Medien mithilfe der Tools von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mit einem Kennwort kann jedoch das Überschreiben eines Mediums mithilfe der Option FORMAT der BACKUP-Anweisung nicht verhindert werden.  
   
 > [!IMPORTANT]  

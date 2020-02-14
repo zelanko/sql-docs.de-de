@@ -16,10 +16,10 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982462"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE-Anweisungen – Argumente (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "73982462"
 
 In diesem Artikel werden die Argumente dokumentiert, die in den Syntax-Abschnitten der Anweisung „RESTORE {DATABASE|LOG}“ und den zugehörigen Hilfsanweisungen beschrieben werden: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY und RESTORE VERIFYONLY. Die meisten der Argumente werden nur von einer Untermenge dieser sechs Anweisungen unterstützt. Die Unterstützung für jedes Argument wird in der Beschreibung des Arguments angezeigt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
  Informationen zur Syntax finden Sie in den folgenden Themen:  
@@ -52,7 +52,7 @@ In diesem Artikel werden die Argumente dokumentiert, die in den Syntax-Abschnitt
   
  Bei einer Datenbank, die das Modell der vollen oder massenprotokollierten Wiederherstellung verwendet, erfordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in den meisten Fällen die Sicherung des Protokollfragments, bevor die Datenbank wiederhergestellt wird. Wenn eine Datenbank ohne vorherige Sicherung des Protokollfragments wiederhergestellt wird, tritt ein Fehler auf. Dies gilt nicht, wenn die RESTORE DATABASE-Anweisung die WITH REPLACE- oder die WITH STOPAT-Klausel enthält, in der eine Zeit oder Transaktion nach dem Ende der Datensicherung angegeben sein muss. Weitere Informationen zu Sicherungen des Protokollfragments finden Sie unter [Protokollfragmentsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
- LOG  
+ PROTOKOLL  
  **Unterstützt von:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Gibt an, dass eine Transaktionsprotokollsicherung auf diese Datenbank angewendet werden soll. Transaktionsprotokolle müssen in sequenzieller Reihenfolge ausgeführt werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft die gesicherten Transaktionsprotokolle, um sicherzustellen, dass die Transaktionen in der richtigen Reihenfolge in die richtige Datenbank geladen werden. Zur Anwendung mehrerer Transaktionsprotokolle verwenden Sie die Option NORECOVERY für alle Wiederherstellungsoperationen außer für die letzte.  
@@ -401,7 +401,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
 ##### <a name="monitoring-options"></a>Überwachungsoptionen  
  Diese Optionen ermöglichen es Ihnen, die Datenübertragung vom Sicherungsmedium zu überwachen.  
   
- STATS [ **=** _percentage_ ]  
+ STATS [ **=** _Prozentsatz_ ]  
  **Unterstützt von:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) und [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Zeigt nach jedem abgeschlossenen Prozentsatz eine Meldung an und wird als Statusanzeige verwendet. Wird der *Prozentsatz* nicht angegeben, zeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jedes Mal eine Meldung an, wenn weitere ca. 10 % des Vorgangs abgeschlossen sind.  
@@ -541,7 +541,7 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Zusätzliche Hinweise finden Sie in den folgenden Themen:  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -594,7 +594,7 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
 |MOVE|√|-|-|-|-|√|  
 |PASSWORD|√|√|√|-|-|√|  
 |{ REWIND &#124; NOREWIND }|√|Nur REWIND|Nur REWIND|Nur REWIND|-|√|  
-|STATS|√|-|-|-|-|√|  
+|STATISTIK|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=** _backup\_set\_file\_number_, unterscheidet sich von {FILE | FILEGROUP}.  

@@ -35,15 +35,15 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155570"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Verwenden des Wartungsplanungs-Assistenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema wird beschrieben, wie Sie einen Einzelserver- oder Multiserver-Wartungsplan mithilfe des Wartungsplanungs-Assistenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erstellen. Der Wartungsplanungs-Assistent erstellt einen Wartungsplan, den der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent regelmäßig ausführen kann. Dies ermöglicht es Ihnen, verschiedene Aufgaben für die Datenbankverwaltung in bestimmten Intervallen auszuführen, z. B. Sicherungen, Datenbankintegritätsprüfungen oder Datenbankstatistikupdates.  
+  In diesem Thema wird beschrieben, wie Sie einen Einzelserver- oder Multiserver-Wartungsplan mithilfe des Wartungsplanungs-Assistenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erstellen. Der Wartungsplanungs-Assistent erstellt einen Wartungsplan, den der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent regelmäßig ausführen kann. Dies ermöglicht es Ihnen, verschiedene Aufgaben für die Datenbankverwaltung in bestimmten Intervallen auszuführen, z. B. Sicherungen, Datenbankintegritätsprüfungen oder Datenbankstatistikupdates.  
     
  
 ##  <a name="Restrictions"></a> Einschränkungen  
@@ -54,7 +54,7 @@ ms.locfileid: "70155570"
 
 Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit eingeschränkten Berechtigungen, oder fügen Sie der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle nur **sysadmin** -Mitglieder hinzu.  
 
-##  <a name="Prerequisite"></a> Erforderliche Komponenten 
+##  <a name="Prerequisite"></a> Voraussetzungen 
 Sie müssen [Agent XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)aktivieren.
   
   
@@ -157,7 +157,7 @@ Die folgenden Optionen sind auf dieser Seite verfügbar.
   
  -  **Alle Datenbanken**  
   
-Generiert einen Wartungsplan, der diesen Task für alle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken außer **tempdb**ausführt.  
+Generiert einen Wartungsplan, der diesen Task für alle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken außer **tempdb** ausführt.  
   
 **Systemdatenbanken**  
   
@@ -182,7 +182,7 @@ Kontrollkästchen**Indizes einschließen**
   
 ## <a name="define-database-shrink-tasks"></a>Definieren von Tasks zum Verkleinern der Datenbank  
   
-1.  Erstellen Sie auf der Seite **Task 'Datenbank verkleinern' definieren** einen Task, der versucht, die Größe der ausgewählten Datenbanken mithilfe der `DBCC SHRINKDATABASE` -Anweisung mit der `NOTRUNCATE` - oder `TRUNCATEONLY` -Option zu reduzieren. Weitere Informationen finden Sie unter [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md). Klicken Sie anschließend auf **Weiter**.  
+1.  Erstellen Sie auf der Seite **Task 'Datenbank verkleinern' definieren** einen Task, der versucht, die Größe der ausgewählten Datenbanken mithilfe der `DBCC SHRINKDATABASE` -Anweisung mit der `NOTRUNCATE` - oder `TRUNCATEONLY` -Option zu reduzieren. Weitere Informationen finden Sie unter [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md). Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
   
     > **WARNUNG!** Daten, die zum Verkleinern einer Datei verschobenen werden, können an jede verfügbare Position in der Datei verteilt werden. Dies führt zur Indexfragmentierung und kann die Leistung von Abfragen, die einen Bereich des Indexes suchen, verlangsamen. Zur Vermeidung von Fragmentierung sollten die Dateiindizes nach der Verkleinerung neu erstellt werden.  
   
@@ -201,11 +201,11 @@ Kontrollkästchen**Indizes einschließen**
      Die Datenbank wird in aufeinander folgenden Seiten komprimiert. Dabei werden jedoch weder die Seiten neu zugeordnet noch die Datenbankdateien verkleinert. Verwenden Sie diese Option, wenn Sie erwarten, dass die Datenbank wieder wächst, und Sie den Speicher nicht neu zuordnen möchten. Bei Auswahl dieser Option werden die Datenbankdateien nicht so stark wie möglich verkleinert. Dabei wird die NOTRUNCATE-Option verwendet.  
   
      **Freigegebenen Speicherplatz an Betriebssystem zurückgeben**  
-     Die Datenbank wird in aufeinander folgenden Seiten komprimiert und die Seiten werden wieder für das Betriebssystem freigegeben und können für andere Programme verwendet werden. Dabei wird die TRUNCATEONLY-Option verwendet. Diese Option ist die Standardeinstellung.  
+     Die Datenbank wird in aufeinander folgenden Seiten komprimiert und die Seiten werden wieder für das Betriebssystem freigegeben und können für andere Programme verwendet werden. Dabei wird die TRUNCATEONLY-Option verwendet. Dies ist die Standardoption.  
   
 ## <a name="define-the-index-tasks"></a>Definieren der Indextasks  
   
-1.  Wählen Sie auf der Seite **Task „Index neu organisieren“ definieren** die Server aus, auf denen Indexseiten in eine effizientere Suchreihenfolge gebracht werden sollen. Für diesen Task wird die `ALTER INDEX ... REORGANIZE`-Anweisung verwendet. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Klicken Sie anschließend auf **Weiter**.  
+1.  Wählen Sie auf der Seite **Task „Index neu organisieren“ definieren** die Server aus, auf denen Indexseiten in eine effizientere Suchreihenfolge gebracht werden sollen. Für diesen Task wird die `ALTER INDEX ... REORGANIZE`-Anweisung verwendet. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
   
      Die folgenden Optionen sind auf dieser Seite verfügbar.  
   
@@ -238,7 +238,7 @@ Kontrollkästchen**Indizes einschließen**
      Enthält Optionen, mit denen ein Füllfaktor auf Indizes und Tabellen angewendet werden kann.  
   
      **Freier Standardspeicherplatz pro Seite**  
-     Organisiert die Seiten mit der standardmäßigen freien Speicherplatzmenge neu. Dadurch werden die Indizes für die Tabellen in der Datenbank gelöscht, und sie werden mit dem Füllfaktor, der beim Erstellen der Indizes angegeben wurde, neu erstellt. Diese Option ist die Standardeinstellung.  
+     Organisiert die Seiten mit der standardmäßigen freien Speicherplatzmenge neu. Dadurch werden die Indizes für die Tabellen in der Datenbank gelöscht, und sie werden mit dem Füllfaktor, der beim Erstellen der Indizes angegeben wurde, neu erstellt. Dies ist die Standardoption.  
   
      Feld**Freien Speicherplatz pro Seite ändern in**  
      Löscht die Indizes für die Tabellen in der Datenbank und erstellt sie mit einem neuen, automatisch berechneten Füllfaktor neu. Auf diese Weise wird der angegebene freie Speicherplatz auf den Indexseiten reserviert. Ein höherer Prozentsatz bedeutet, dass mehr freier Speicherplatz auf den Indexseiten reserviert wird und der Index entsprechend wachsen kann. Die gültigen Werte sind 0 bis 100. Verwendet die `FILLFACTOR` -Option.  
@@ -297,7 +297,7 @@ Kontrollkästchen**Indizes einschließen**
   
 #### <a name="define-the-history-cleanup-task"></a>Definieren des Tasks "Verlaufscleanup"  
   
-1.  Geben Sie auf der Seite **Task 'Verlaufscleanup' definieren** die Datenbanken an, in denen der alte Taskverlauf verworfen werden soll. Dieser Task entfernt Verlaufsinformationen mithilfe der Anweisungen `EXEC sp_purge_jobhistory`, `EXEC sp_maintplan_delete_log`und `EXEC sp_delete_backuphistory` aus den **msdb** -Tabellen. Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
+1.  Geben Sie auf der Seite **Task 'Verlaufscleanup' definieren** die Datenbanken an, in denen der alte Taskverlauf verworfen werden soll. Dieser Task entfernt Verlaufsinformationen mithilfe der Anweisungen `EXEC sp_purge_jobhistory`, `EXEC sp_maintplan_delete_log`und `EXEC sp_delete_backuphistory` aus den **msdb** -Tabellen. Klicken Sie abschließend auf **Weiter**.  
   
      Die folgenden Optionen sind auf dieser Seite verfügbar.  
   
@@ -322,7 +322,7 @@ Kontrollkästchen**Indizes einschließen**
   
 #### <a name="define-backup-tasks"></a>Definieren von Sicherungstasks  
   
-1.  Wählen Sie auf der Seite **Task 'Datenbank sichern (vollständig)' definieren** die Datenbanken aus, für die eine vollständige Sicherung ausgeführt werden soll. Für diesen Task wird die `BACKUP DATABASE`-Anweisung verwendet. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
+1.  Wählen Sie auf der Seite **Task 'Datenbank sichern (vollständig)' definieren** die Datenbanken aus, für die eine vollständige Sicherung ausgeführt werden soll. Für diesen Task wird die `BACKUP DATABASE`-Anweisung verwendet. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Klicken Sie abschließend auf **Weiter**.  
   
      Die folgenden Optionen sind auf dieser Seite verfügbar.  
   
@@ -422,13 +422,13 @@ Kontrollkästchen**Indizes einschließen**
     |**Sicherung komprimieren**|Klicken Sie hier, um die Sicherung unabhängig von der Standardeinstellung auf Serverebene zu komprimieren.<br /><br /> **\*\* Wichtig \*\*** Standardmäßig steigt die CPU-Nutzung durch die Komprimierung erheblich, und die bei der Komprimierung zusätzlich verbrauchten CPU-Ressourcen können sich negativ auf gleichzeitige Vorgänge auswirken. Daher ist es u. U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch die Ressourcenkontrolle eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen. Weitere Informationen finden Sie unter [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Sicherung nicht komprimieren**|Klicken Sie hier, um unabhängig von der Standardeinstellung auf Serverebene eine nicht komprimierte Sicherung zu erstellen.|  
   
-2.  Wählen Sie auf der Seite **Task 'Datenbank sichern (differenziell)' definieren** die Datenbanken aus, für die eine Teilsicherung ausgeführt werden soll. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie in der Definitionsliste in Schritt 16 oben. Für diesen Task wird die `BACKUP DATABASE ... WITH DIFFERENTIAL`-Anweisung verwendet. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
+2.  Wählen Sie auf der Seite **Task 'Datenbank sichern (differenziell)' definieren** die Datenbanken aus, für die eine Teilsicherung ausgeführt werden soll. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie in der Definitionsliste in Schritt 16 oben. Für diesen Task wird die `BACKUP DATABASE ... WITH DIFFERENTIAL`-Anweisung verwendet. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Klicken Sie abschließend auf **Weiter**.  
   
-3.  Wählen Sie auf der Seite **Task 'Datenbank sichern (Transaktionsprotokoll)' definieren** die Datenbanken aus, in denen eine Sicherung für ein Transaktionsprotokoll ausgeführt werden soll. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie in der Definitionsliste in Schritt 16 oben. Für diesen Task wird die `BACKUP LOG`-Anweisung verwendet. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
+3.  Wählen Sie auf der Seite **Task 'Datenbank sichern (Transaktionsprotokoll)' definieren** die Datenbanken aus, in denen eine Sicherung für ein Transaktionsprotokoll ausgeführt werden soll. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie in der Definitionsliste in Schritt 16 oben. Für diesen Task wird die `BACKUP LOG`-Anweisung verwendet. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Klicken Sie abschließend auf **Weiter**.  
   
 #### <a name="define-maintenance-cleanup-tasks"></a>Definieren von Wartungscleanuptasks  
   
-1.  Geben Sie auf der Seite **Task 'Wartungscleanup' definieren** die Dateitypen an, die im Rahmen des Wartungsplans gelöscht werden sollen (einschließlich Textberichte, die durch Wartungspläne erstellt wurden, sowie Datenbanksicherungsdateien). Für diesen Task wird die `EXEC xp_delete_file` -Anweisung verwendet. Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
+1.  Geben Sie auf der Seite **Task 'Wartungscleanup' definieren** die Dateitypen an, die im Rahmen des Wartungsplans gelöscht werden sollen (einschließlich Textberichte, die durch Wartungspläne erstellt wurden, sowie Datenbanksicherungsdateien). Für diesen Task wird die `EXEC xp_delete_file`-Anweisung verwendet. Klicken Sie abschließend auf **Weiter**.  
   
     > **WICHTIG!** Dateien in den Unterordnern des angegebenen Verzeichnisses werden von diesem Task nicht automatisch gelöscht. Mit dieser Sicherheitsmaßnahme wird die Möglichkeit eines bösartigen Angriffs, bei dem der Task Wartungscleanup zum Löschen von Dateien verwendet wird, reduziert. Wenn Sie Dateien in Unterordnern auf oberster Ebene löschen möchten, müssen Sie **Unterordner auf oberster Ebene einschließen**auswählen.  
   
@@ -505,10 +505,10 @@ Kontrollkästchen**Indizes einschließen**
      **Status**  
      Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler**zurückgegeben wurde.  
   
-     **MessageBox**  
+     **Meldung**  
      Stellt alle vom Prozess zurückgegebenen Fehler- oder Warnmeldungen bereit.  
   
-     **Bericht**  
+     **Report**  
      Erstellt einen Bericht mit den Ergebnissen des Assistenten zum Erstellen von Partitionen. Die Optionen sind **Bericht anzeigen**, **Bericht in Datei speichern**, **Bericht in Zwischenablage kopieren**und **Bericht als E-Mail senden**.  
   
      **Bericht anzeigen**  

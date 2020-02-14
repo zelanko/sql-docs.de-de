@@ -24,10 +24,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4c44f8920fc3a8060dcff6112eb41055f1584d2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291261"
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
@@ -90,7 +90,7 @@ ms.locfileid: "71291261"
   
  Im Folgenden finden Sie weitere Vorteile einer persistenten Speicherung des Caches in einer Datei:  
   
--   ***Die Cachedatei kann für mehrere Pakete freigegeben werden. Weitere Informationen finden Sie unter*** [Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
+-   ***Die Cachedatei kann für mehrere Pakete freigegeben werden. Weitere Informationen finden Sie unter*** [Suchtransformation im Vollcachemodus – Cacheverbindungs-Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)***.***  
   
 -   Die Cachedatei kann mit einem Paket bereitgestellt werden. ***Die Daten können dann auf mehreren Computern verwendet werden.*** Weitere Informationen finden Sie unter [Erstellen und Bereitstellen eines Cache für die Transformation für Suche](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -157,7 +157,7 @@ ms.locfileid: "71291261"
  **Kein Cache**  
  Das Verweisdataset wird während der Ausführung der Transformation für Suche generiert. Es werden keine Daten in den Zwischenspeicher geladen.  
   
- **Cacheverbindungs-Manager**  
+ **Allgemein**  
  Die Transformation für Suche wird für die Verwendung eines Cacheverbindungs-Managers konfiguriert. Diese Option ist nur verfügbar, wenn die Option Vollcache ausgewählt ist.  
   
  **Teilcache**  
@@ -277,7 +277,7 @@ ms.locfileid: "71291261"
 ### <a name="external-resources"></a>Externe Ressourcen  
  Blogeintrag [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Transformation für Fuzzysuche](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Transformation für Ausdruckssuche](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   

@@ -22,16 +22,16 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3c0d1ed26fa58934a51ec051eb3aa4e1d5b9a2bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902107"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ein Prädikat, das in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-[WHERE-Klausel](../../t-sql/queries/where-transact-sql.md) einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-SELECT-Anweisung verwendet wird, um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuche für volltextindizierte Spalten mit zeichenbasierten Datentypen durchzuführen. Dieses Prädikat sucht nach Werten, die der Bedeutung der Suchbedingung entsprechen und nicht genau mit dem Wortlaut der Suchbedingung übereinstimmen. Bei Verwendung von FREETEXT führt die Volltextabfrage-Engine intern die folgenden Aktionen für *freetext_string* aus, weist jedem Begriff eine Gewichtung zu und sucht dann nach Übereinstimmungen:  
+  Dies ist ein Prädikat, das in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-[WHERE-Klausel](../../t-sql/queries/where-transact-sql.md) einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-SELECT-Anweisung verwendet wird, um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuche für volltextindizierte Spalten mit zeichenbasierten Datentypen durchzuführen. Dieses Prädikat sucht nach Werten, die der Bedeutung der Suchbedingung entsprechen und nicht genau mit dem Wortlaut der Suchbedingung übereinstimmen. Bei Verwendung von FREETEXT führt die Volltextabfrage-Engine intern die folgenden Aktionen für *freetext_string* aus, weist jedem Begriff eine Gewichtung zu und sucht dann nach Übereinstimmungen:  
   
 -   Trennt die Zeichenfolge in einzelne Wörter auf der Basis von Wortgrenzen (Wörtertrennung).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67902107"
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -106,7 +106,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
  Wenn Dokumente anderer Sprachen zusammen als BLOBs (Binary Large Objects) in einer einzelnen Spalte gespeichert werden, legt der Gebietsschemabezeichner (LCID) eines bestimmten Dokuments die zur Indizierung seines Inhalts zu verwendende Sprache fest. Beim Abfragen einer solchen Spalte kann die Angabe von LANGUAGE *language_term* die Wahrscheinlichkeit einer hohen Übereinstimmung steigern.  
   
- In Form einer Zeichenfolge entspricht *language_term* dem Wert der **alias**-Spalte in der [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)-Kompatibilitätsansicht.  Die Zeichenfolge muss in einfache Anführungszeichen eingeschlossen werden, z.B. '*language_term*'. In Form einer ganzen Zahl ist *language_term* der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. In Form eines Hexadezimalwerts ist *language_term* gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
+ In Form einer Zeichenfolge entspricht *language_term* dem Wert der **alias**-Spalte in der [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)-Kompatibilitätsansicht.  Die Zeichenfolge muss in einfache Anführungszeichen gesetzt werden, z.B. '*language_term*'. In Form einer ganzen Zahl ist *language_term* der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. In Form eines Hexadezimalwerts ist *language_term* gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
   
  Wird der Wert im Format Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) angegeben, wird er von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Unicode konvertiert.  
   
@@ -126,7 +126,7 @@ Volltextabfragen mit FREETEXT sind nicht so genau wie Volltextabfragen mit CONTA
  Sie können einen vierteiligen Namen im [CONTAINS](../../t-sql/queries/contains-transact-sql.md)- oder FREETEXT-Prädikat zum Abfragen von volltextindizierten Spalten der Zieltabellen auf einem Verbindungsserver verwenden. Erstellen Sie zum Vorbereiten eines Remoteservers für den Empfang von Volltextabfragen einen Volltextindex für die Zieltabellen und -spalten auf dem Remoteserver, und fügen Sie anschließend den Remoteserver als Verbindungsserver hinzu.  
   
 ## <a name="comparison-of-like-to-full-text-search"></a>Vergleich zwischen LIKE und der Volltextsuche  
- Im Gegensatz zur Volltextsuche verarbeitet das [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Prädikat ausschließlich Zeichenmuster. Darüber hinaus können Sie mit dem LIKE-Prädikat keine formatierten Binärdaten abfragen. Eine LIKE-Abfrage in umfangreichen unstrukturierten Textdaten ist sehr viel langsamer als eine entsprechende Volltextabfrage in denselben Daten. Eine LIKE-Abfrage für Millionen von Zeilen von Textdaten kann Minuten in Anspruch nehmen; eine Volltextabfrage kann dagegen in Sekunden oder weniger für dieselben Daten ein Ergebnis liefern, je nach Anzahl der zurückgegebenen Zeilen.  
+ Im Gegensatz zur Volltextsuche verarbeitet das [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] -Prädikat ausschließlich Zeichenmuster. Darüber hinaus können Sie mit dem LIKE-Prädikat keine formatierten Binärdaten abfragen. Eine LIKE-Abfrage in umfangreichen unstrukturierten Textdaten ist sehr viel langsamer als eine entsprechende Volltextabfrage in denselben Daten. Eine LIKE-Abfrage für Millionen von Zeilen von Textdaten kann Minuten in Anspruch nehmen; eine Volltextabfrage kann dagegen in Sekunden oder weniger für dieselben Daten ein Ergebnis liefern, je nach Anzahl der zurückgegebenen Zeilen.  
   
 ## <a name="examples"></a>Beispiele  
   

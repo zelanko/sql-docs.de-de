@@ -11,10 +11,10 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ec7514eeb2e614c1313fba81c4a48b8803f0c29d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296083"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>Lektion 1.9: Testen des Tutorialpakets aus Lektion 1
@@ -54,9 +54,9 @@ Bevor Sie das Paket testen, überprüfen Sie, ob Ablaufsteuerung und Datenfluss 
 2.  Klicken Sie nach dem Ausführen des Pakets im Menü **Debuggen** auf **Stop Debugging** (Debuggen beenden).  
   
 ## <a name="go-to-next-lesson"></a>Weiter zur nächsten Lektion
-[Lektion 2: Hinzufügen von Schleifen mit SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+[Lektion 2: Hinzufügen von Schleifen mit SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Ausführen von Projekten und Paketen](packages/run-integration-services-ssis-packages.md) 
   
   

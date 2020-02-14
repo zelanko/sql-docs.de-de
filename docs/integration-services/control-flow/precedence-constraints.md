@@ -20,10 +20,10 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10deeb5de3a74e765f99a76d59d2184a6b76b106
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294014"
 ---
 # <a name="precedence-constraints"></a>Rangfolgeneinschränkungen
@@ -35,7 +35,7 @@ ms.locfileid: "71294014"
   
  Eine Rangfolgeneinschränkung verlinkt zwei ausführbare Dateien: die ausführbare Datei der Rangfolge und die eingeschränkte ausführbare Datei. Die ausführbare Datei der Rangfolge wird vor der eingeschränkten ausführbaren Datei ausgeführt, und das Ausführungsergebnis der ausführbaren Datei der Rangfolge kann bestimmen, ob die eingeschränkte ausführbare Datei ausgeführt wird. Im folgenden Diagramm werden zwei ausführbare Dateien dargestellt, die durch eine Rangfolgeneinschränkung verlinkt sind.  
   
- ![Ausführbare Dateien, die durch eine Rangfolgeneinschränkung verlinkt sind](../../integration-services/control-flow/media/ssis-pcsimple.gif "Ausführbare Dateien, die durch eine Rangfolgeneinschränkung verlinkt sind")  
+ ![Durch eine Rangfolgeneinschränkung verbundene ausführbare Dateien](../../integration-services/control-flow/media/ssis-pcsimple.gif "Durch eine Rangfolgeneinschränkung verbundene ausführbare Dateien")  
   
  Bei einer linearen Ablaufsteuerung, also einer Ablaufsteuerung ohne Verzweigungen, bestimmen Rangfolgeneinschränkungen alleine die Reihenfolge, in der Tasks ausgeführt werden. Falls sich eine Ablaufsteuerung verzweigt, bestimmt die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Runtime-Engine die Ausführungsreihenfolge für die Tasks und Container, die unmittelbar auf die Verzweigung folgen. Die Runtime-Engine bestimmt außerdem die Ausführungsreihenfolge für nicht verbundene Workflows in einer Ablaufsteuerung.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71294014"
   
 ## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>Festlegen der Eigenschaften von Rangfolgeneinschränkungen mithilfe des Rangfolgeneinschränkungs-Editors  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -112,11 +112,11 @@ ms.locfileid: "71294014"
 ## <a name="precedence-constraint-editor"></a>Rangfolgeneinschränkungs-Editor
 Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolgeneinschränkungen zu konfigurieren.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Auswertungsvorgang**  
  Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Folgende Vorgänge sind möglich: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
   
- **ReplTest1**  
+ **Wert**  
  Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**oder **Beendigung**.  
   
 > [!NOTE]  
@@ -125,7 +125,7 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
  **Ausdruck**  
  Wenn Sie den Vorgang **Ausdruck**, **Ausdruck und Einschränkung**oder **Ausdruck oder Einschränkung**verwenden, geben Sie einen Ausdruck ein, oder starten Sie den Ausdrucks-Generator, um einen Ausdruck zu erstellen. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden.  
   
- **Testen**  
+ **Test**  
  Überprüfen Sie den Ausdruck.  
   
  **Logisches AND**  
@@ -152,7 +152,7 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
   
     |Lese/Schreibeigenschaft|Konfigurationsaktion|  
     |--------------------------|--------------------------|  
-    |und Beschreibung|Bereitstellen einer Beschreibung.|  
+    |Beschreibung|Bereitstellen einer Beschreibung.|  
     |EvalOp|Auswählen eines Auswertungsvorgangs. Wenn die Vorgänge **Expression**, **ExpressionAndConstant**oder **ExpressionOrConstant** ausgewählt sind, können Sie einen Ausdruck angeben.|  
     |Ausdruck|Wenn der Auswertungsvorgang einen Ausdruck einschließt, wird ein Ausdruck bereitgestellt. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden. Weitere Informationen zur Ausdruckssprache finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Legen Sie **LogicalAnd** fest, um anzugeben, ob die Rangfolgeneinschränkung zusammen mit anderen Rangfolgeneinschränkungen ausgewertet wird, wenn mehrere ausführbare Dateien vorausgehen und mit der eingeschränkten ausführbaren Datei verlinkt sind.|  
@@ -166,7 +166,7 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
 
 ## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>Festlegen des Werts einer Rangfolgeneinschränkung mithilfe des Kontextmenüs  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -195,7 +195,7 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
 
 ### <a name="add-an-expression-to-a-precedence-constraint"></a>Hinzufügen einer Rangfolgeneinschränkung zu einem Ausdruck  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -216,22 +216,22 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
   
 |Auswertungsvorgang|Einschränkung wird ausgewertet zu|Ausdruck wird ausgewertet zu|Eingeschränkte ausführbare Datei wird ausgeführt|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|Einschränkung|Wahr|–|Wahr|  
+|Einschränkung|True|–|True|  
 |Einschränkung|False|–|False|  
-|expression|–|Wahr|Wahr|  
-|expression|–|False|False|  
-|Einschränkung und Ausdruck|Wahr|Wahr|Wahr|  
-|Einschränkung und Ausdruck|Wahr|False|False|  
-|Einschränkung und Ausdruck|False|Wahr|False|  
+|Ausdruck|–|True|True|  
+|Ausdruck|–|False|False|  
+|Einschränkung und Ausdruck|True|True|True|  
+|Einschränkung und Ausdruck|True|False|False|  
+|Einschränkung und Ausdruck|False|True|False|  
 |Einschränkung und Ausdruck|False|False|False|  
-|Einschränkung oder Ausdruck|Wahr|Wahr|Wahr|  
-|Einschränkung oder Ausdruck|Wahr|False|Wahr|  
-|Einschränkung oder Ausdruck|False|Wahr|Wahr|  
+|Einschränkung oder Ausdruck|True|True|True|  
+|Einschränkung oder Ausdruck|True|False|True|  
+|Einschränkung oder Ausdruck|False|True|True|  
 |Einschränkung oder Ausdruck|False|False|False|  
 
 
 ## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>Komplexe Einschränkungsszenarien mit mehreren Rangfolgeneinschränkungen 
-Eine Rangfolgeneinschränkung verbindet zwei ausführbare Dateien: zwei Tasks, zwei Container oder einen Task und einen Container. Sie werden als ausführbare Datei der Rangfolge und als eingeschränkte ausführbare Datei bezeichnet. Eine eingeschränkte ausführbare Datei kann mehrere Rangfolgeneinschränkungen haben. Weitere Informationen finden Sie unter [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+Eine Rangfolgeneinschränkung verbindet zwei ausführbare Dateien: zwei Tasks, zwei Container oder einen Task und einen Container. Sie werden als ausführbare Datei der Rangfolge und als eingeschränkte ausführbare Datei bezeichnet. Eine eingeschränkte ausführbare Datei kann mehrere Rangfolgeneinschränkungen haben. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md).  
   
  Wenn Sie komplexe Einschränkungsszenarien durch Gruppieren von Einschränkungen zusammenfassen, können Sie eine komplexe Ablaufsteuerung in Paketen implementieren. Beispielsweise ist in der folgenden Abbildung der Task D mit dem Task A durch eine **Success** -Einschränkung verlinkt, der Task D ist mit dem Task B durch eine **Failure** -Einschränkung verlinkt, und der Task D ist mit dem Task C durch eine **Success** -Einschränkung verlinkt. Die Rangfolgeneinschränkungen zwischen Task D und Task A, zwischen Task D und Task B sowie zwischen Task D und Task C nehmen an einer logischen *AND* -Beziehung teil. Damit Task D ausgeführt wird, muss Task A erfolgreich ausgeführt werden, bei Task B muss ein Fehler auftreten, und Task C muss erfolgreich ausgeführt werden.  
   
@@ -259,7 +259,7 @@ Wenn Sie den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zum ersten Ma
   
 ## <a name="create-a-default-precedence-constraint"></a>Erstellen einer Standard-Rangfolgeneinschränkung  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   

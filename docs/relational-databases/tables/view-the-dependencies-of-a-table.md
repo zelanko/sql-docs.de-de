@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140300"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Anzeigen der Abhängigkeiten einer Tabelle
@@ -55,7 +55,7 @@ ms.locfileid: "68140300"
   
 2.  Klicken Sie mit der rechten Maustaste auf eine Tabelle, und klicken Sie dann auf **Abhängigkeiten anzeigen**.  
   
-3.  Im Dialogfeld **Objektabhängigkeiten** _\<Objektname\>_ wählen Sie entweder **Objekte, abhängig von** _\<Objektname\>_ oder **Objekte, von denen** _\<Objektname \>_ **abhängt**.  
+3.  Klicken Sie im Dialogfeld **Objektabhängigkeiten –** _\<Objektname\>_ entweder auf **Objekte, die von _\<Objektname\>_ abhängig sind** oder auf **Objekte, von denen** _\<Objektname\>_ **abhängt**.  
   
 4.  Wählen Sie im Raster **Abhängigkeiten** ein Objekt aus. Der Objekttyp (z.B. „Trigger“ oder „Gespeicherte Prozedur“) wird im Feld **Typ** angezeigt.  
   

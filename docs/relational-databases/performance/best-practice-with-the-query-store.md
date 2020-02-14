@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: f5861ece9a27e0d38274e9cac97ae046a9f6bdde
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142775"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910103"
 ---
 # <a name="best-practices-with-query-store"></a>Bewährte Methoden für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Datenleerungsintervall (Minuten)** : Diese Option definiert die Häufigkeit, mit der die erfassten Laufzeitstatistiken auf dem Datenträger gespeichert werden. In der grafischen Benutzeroberfläche wird sie in Minuten ausgedrückt, in [!INCLUDE[tsql](../../includes/tsql-md.md)] wird sie jedoch in Sekunden angegeben. Der Standardwert ist 900 Sekunden, d.h. 15 Minuten in der grafischen Benutzeroberfläche. Ziehen Sie in Betracht, einen höheren Wert zu verwenden, wenn Ihre Arbeitsauslastung keine große Anzahl verschiedener Abfragen und Pläne generiert oder Sie längere Zeit warten können, bevor Daten vor dem Herunterfahren der Datenbank persistent gespeichert werden.
  
 > [!NOTE]
-> Mit dem Ablaufverfolgungsflag 7745 wird verhindert, dass Abfragespeicherdaten bei einem Failover oder Befehl zum Herunterfahren auf den Datenträger geschrieben werden. Weitere Informationen finden Sie im Abschnitt [Verwenden von Ablaufverfolgungsflags für unternehmenskritische Server zur effizienteren Notfallwiederherstellung](#Recovery).
+> Mit dem Ablaufverfolgungsflag 7745 wird verhindert, dass Abfragespeicherdaten bei einem Failover oder Befehl zum Herunterfahren auf den Datenträger geschrieben werden. Weitere Informationen finden Sie im Abschnitt [Verwenden von Ablaufverfolgungsflags für unternehmenskritische Server](#Recovery).
 
 Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)], um verschiedene Werte für das **Datenleerungsintervall** festzulegen:  
   
@@ -109,9 +109,12 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
 -   **All**: Erfasst alle Abfragen. Diese Option ist die Standardeinstellung in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 -   **Automatisch**: Unregelmäßige Abfragen und Abfragen mit unbedeutender Kompilierungs- und Ausführungsdauer werden ignoriert. Die Schwellenwerte für die Dauer der Ausführungsanzahl, Kompilierung und Laufzeit werden intern bestimmt. Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ist dies die Standardoption.
--   **None:** Der Abfragespeicher beendet die Erfassung neuer Abfragen.  
+-   **Keine:** Der Abfragespeicher beendet die Erfassung neuer Abfragen.  
 -   **Benutzerdefiniert**: Bietet zusätzliche Steuerungsmöglichkeiten und ermöglicht die Optimierung der Datensammlungsrichtlinie. Die neuen benutzerdefinierten Einstellungen definieren, was während des Zeitschwellenwerts für die interne Erfassungsrichtlinie geschieht. Hierbei handelt es sich um eine Zeitbegrenzung, in der die konfigurierbaren Bedingungen ausgewertet werden, und trifft eine davon zu, ist die Abfrage geeignet, von Abfragespeicher aufgezeichnet zu werden.
-  
+
+> [!IMPORTANT]
+> Cursor, Abfragen in gespeicherten Prozeduren und nativ kompilierte Abfragen werden immer erfasst, wenn der Erfassungsmodus für den Abfragespeicher auf **Alle** (ALL), **Automatisch** (AUTO) oder **Benutzerdefiniert** (CUSTOM) festgelegt ist. Zum Erfassen von nativ kompilierten Abfragen aktivieren Sie die Sammlung von Statistiken pro Abfrage mithilfe von [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
+
  Das folgende Skript legt QUERY_CAPTURE_MODE auf AUTO fest:
   
 ```sql  
@@ -210,7 +213,7 @@ Es dauert einige Zeit, bis der Abfragespeicher das Dataset erfasst, das Ihre Arb
 |**Abfragen mit höchstem Ressourcenverbrauch**|Wählen Sie die gewünschte Ausführungsmetrik, und identifizieren Sie Abfragen mit den extremsten Werten für ein angegebenes Zeitintervall. <br />Verwenden Sie diese Ansicht, um sich auf die relevantesten Abfragen zu konzentrieren, die die größte Auswirkung auf den Ressourcenverbrauch der Datenbank haben.|  
 |**Abfragen mit erzwungenen Plänen**|Zeigt vorherige erzwungene Pläne durch Verwendung des Abfragespeichers an. <br />Verwenden Sie diese Ansicht, um schnell auf alle aktuell erzwungenen Pläne zuzugreifen.|  
 |**Abfragen mit hoher Variation**|Analysieren Sie Abfragen mit hoher Ausführungsvariation in Verbindung mit allen verfügbaren Dimensionen wie Dauer, CPU-Zeit, E/A und Speicherauslastung im gewünschten Zeitintervall.<br />Verwenden Sie diese Ansicht, um Abfragen mit stark abweichender Leistung zu identifizieren, die die Benutzerfreundlichkeit in Ihren Anwendungen beeinträchtigen können.|  
-|**Statistik der Abfragewartezeit**|Analysieren Sie Wartekategorien, die in einer Datenbank am aktivsten sind, sowie welche Abfragen am meisten zur ausgewählten Wartekategorie beitragen.<br />Verwenden Sie diese Ansicht, um Wartezeitstatistiken zu analysieren und Abfragen zu identifizieren, die sich auf die Benutzerfreundlichkeit in Ihren Anwendungen auswirken können.<br /><br />Betrifft: Ab [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Version 18.0 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|  
+|**Statistik der Abfragewartezeit**|Analysieren Sie Wartekategorien, die in einer Datenbank am aktivsten sind, sowie welche Abfragen am meisten zur ausgewählten Wartekategorie beitragen.<br />Verwenden Sie diese Ansicht, um Wartezeitstatistiken zu analysieren und Abfragen zu identifizieren, die sich auf die Benutzerfreundlichkeit in Ihren Anwendungen auswirken können.<br /><br />Gilt für: Ab [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Version 18.0 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|  
 |**Nachverfolgte Abfragen**|Verfolgen Sie die Ausführung der wichtigsten Abfragen in Echtzeit. In der Regel verwenden Sie diese Ansicht, wenn Sie über Abfragen mit erzwungenen Plänen verfügen und Sie sicherstellen möchten, dass die Abfrageleistung stabil ist.|
   
 > [!TIP]
@@ -324,10 +327,10 @@ FROM sys.database_query_store_options;
   
 |Erfassungsmodus für den Abfragespeicher|Szenario|  
 |------------------------|--------------|  
-|**Alle**|Analysieren Sie Ihre Arbeitsauslastung sorgfältig im Hinblick auf alle Abfrageformen und deren Ausführungshäufigkeit und andere Statistiken.<br /><br /> Identifizieren Sie neue Abfragen in Ihrer Arbeitsauslastung.<br /><br /> Ermitteln Sie, ob Ad-hoc-Abfragen verwendet werden, um Chancen auf eine Benutzerparametrisierung oder eine automatische Parametrisierung zu identifizieren.<br /><br />Hinweis: Dies ist der Standarderfassungsmodus in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
+|**Alle**|Analysieren Sie Ihre Arbeitsauslastung sorgfältig im Hinblick auf alle Abfrageformen und deren Ausführungshäufigkeit und andere Statistiken.<br /><br /> Identifizieren Sie neue Abfragen in Ihrer Workload.<br /><br /> Erkennen Sie, ob Ad-hoc-Abfragen verwendet werden, um Möglichkeiten für Benutzer oder eine automatische Parametrisierung zu identifizieren.<br /><br />Hinweis: Dies ist der Standarderfassungsmodus in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
 |**Automatisch**|Konzentrieren Sie sich auf relevante und verwertbare Abfragen. Zum Beispiel auf jene Abfragen, die regelmäßig ausgeführt werden oder einen erheblichen Ressourcenverbrauch aufweisen.<br /><br />Hinweis: Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ist dies der Standarderfassungsmodus.|  
 |**None**|Sie haben bereits den Abfragesatz erfasst, den Sie während der Laufzeit überwachen möchten, und möchten nun Ablenkungen beseitigen, die durch andere Abfragen entstehen können.<br /><br /> „Keine“ ist für Testzwecke geeignet sowie für Vergleichsumgebungen.<br /><br /> „Keine“ eignet sich auch für Softwareanbieter, die bei Auslieferung die Abfragespeicherkonfiguration so festlegen, dass die Anwendungsauslastung überwacht wird.<br /><br /> „Keine“ sollte mit Bedacht verwendet werden, da Sie womöglich die Gelegenheit verpassen, wichtige neue Abfragen nachzuverfolgen und zu optimieren. Vermeiden Sie den Einsatz von „Keine“, es sei denn es ist für ein bestimmtes Szenario erforderlich.|  
-|**Custom**|Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wurde ein benutzerdefinierter Erfassungsmodus für den `ALTER DATABASE SET QUERY_STORE`-Befehl eingeführt. Bei Aktivierung stehen zusätzliche Abfragespeicherkonfigurationen unter einer neuen Einstellung für die Erfassungsrichtlinie des Abfragespeichers zur Verfügung, um die Datensammlung auf einem bestimmten Server zu optimieren.<br /><br />Die neuen benutzerdefinierten Einstellungen definieren, was während des Zeitschwellenwerts für die interne Erfassungsrichtlinie geschieht. Hierbei handelt es sich um eine Zeitbegrenzung, in der die konfigurierbaren Bedingungen ausgewertet werden, und trifft eine davon zu, ist die Abfrage geeignet, von Abfragespeicher aufgezeichnet zu werden. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
+|**Benutzerdefiniert**|Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wurde ein benutzerdefinierter Erfassungsmodus für den `ALTER DATABASE SET QUERY_STORE`-Befehl eingeführt. Bei Aktivierung stehen zusätzliche Abfragespeicherkonfigurationen unter einer neuen Einstellung für die Erfassungsrichtlinie des Abfragespeichers zur Verfügung, um die Datensammlung auf einem bestimmten Server zu optimieren.<br /><br />Die neuen benutzerdefinierten Einstellungen definieren, was während des Zeitschwellenwerts für die interne Erfassungsrichtlinie geschieht. Hierbei handelt es sich um eine Zeitbegrenzung, in der die konfigurierbaren Bedingungen ausgewertet werden, und trifft eine davon zu, ist die Abfrage geeignet, von Abfragespeicher aufgezeichnet zu werden. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 
 > [!NOTE]
 > Cursor, Abfragen in gespeicherten Prozeduren und nativ kompilierte Abfragen werden immer erfasst, wenn der Erfassungsmodus für den Abfragespeicher auf **Alle** (ALL), **Automatisch** (AUTO) oder **Benutzerdefiniert** (CUSTOM) festgelegt ist. Zum Erfassen von nativ kompilierten Abfragen aktivieren Sie die Sammlung von Statistiken pro Abfrage mithilfe von [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
@@ -336,7 +339,7 @@ FROM sys.database_query_store_options;
 Konfigurieren Sie den Abfragespeicher so, dass nur die relevanten Daten enthalten sind. Dann wird er kontinuierlich ausgeführt, was die Problembehandlung erheblich vereinfacht bei minimalen Auswirkungen auf die normale Arbeitsauslastung.  
 Die folgende Tabelle enthält bewährte Methoden:  
   
-|Bewährte Methoden|Einstellung|  
+|Bewährte Methode|Einstellung|  
 |-------------------|-------------|  
 |Begrenzen der Menge von beibehaltenen Verlaufsdaten.|Konfigurieren Sie die zeitbasierte Richtlinie, um die automatische Bereinigung zu aktivieren.|  
 |Filtern Sie nicht relevante Abfragen heraus.|Konfigurieren Sie den **Erfassungsmodus für den Abfragespeicher** als **Automatisch**.|  
@@ -395,7 +398,7 @@ Die globalen Ablaufverfolgungsflags 7745 und 7752 können verwendet werden, um d
    > [!IMPORTANT]
    > Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verwenden, planen Sie baldmöglichst die Installation der Fixes zur Leistungsskalierbarkeit in [KB 4340759](https://support.microsoft.com/help/4340759) ein.
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 - [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)     
 - [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
 - [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     

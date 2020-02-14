@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095315"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
@@ -65,7 +65,7 @@ Im Einmalmodus fordert der Aufzeichnungsauftrag `sp_cdc_scan` auf, bis zu `maxtr
 Im kontinuierlichen Modus wird durch den Aufzeichnungsauftrag das kontinuierliche Ausführen von `sp_cdc_scan` angefordert. Dadurch kann die gespeicherte Prozedur ihre eigene Warteschleife nicht nur durch Bereitstellen der Werte von maxtrans und maxscans, sondern auch durch Bereitstellen eines Wertes für die Anzahl der Sekunden zwischen Protokollverarbeitungsvorgängen (für das Abrufintervall) verwalten. Beim Ausführen in diesem Modus bleibt der Aufzeichnungsauftrag aktiv und führt zwischen Protokollscanvorgängen eine `WAITFOR`-Anweisung aus.  
   
 > [!NOTE]  
-> Wenn der Wert des Abrufintervalls größer als 0 (null) ist, gilt die gleiche Obergrenze für den Durchsatz des wiederkehrenden Einmalauftrags auch für den Auftragsvorgang im kontinuierlichen Modus. Das heißt, (`maxtrans` \* `maxscans`) geteilt durch ein Abrufintervall ungleich 0 (null) legt eine Obergrenze für die durchschnittliche Anzahl der Transaktionen fest, die durch den Aufzeichnungsauftrag verarbeitet werden können.  
+> Wenn der Wert des Abrufintervalls größer als 0 (null) ist, gilt die gleiche Obergrenze für den Durchsatz des wiederkehrenden Einmalauftrags auch für den Auftragsvorgang im kontinuierlichen Modus. Das heißt, dass (`maxtrans` \* `maxscans`) geteilt durch ein Abrufintervall ungleich 0 (null) eine Obergrenze für die durchschnittliche Anzahl der Transaktionen festlegt, die durch den Aufzeichnungsauftrag verarbeitet werden können.  
   
 ### <a name="capture-job-customization"></a>Anpassen eines Aufzeichnungsauftrags
 

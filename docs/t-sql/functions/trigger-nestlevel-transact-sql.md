@@ -20,10 +20,10 @@ ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6215824f230001cb9d7add20d32c85780a65ede6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098814"
 ---
 # <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68098814"
 
   Gibt die Anzahl von Triggern zurück, die für die Anweisung ausgelöst wurden, von der der Trigger ausgeführt wurde. TRIGGER_NESTLEVEL wird in DML- und DDL-Triggern verwendet, um die aktuelle Schachtelungsebene zu bestimmen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

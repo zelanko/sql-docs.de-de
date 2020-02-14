@@ -11,12 +11,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 1ef9084e8264caf6b14289d6d2674afca012cd15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009454"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761927"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Columnstore-Indizes: Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
 ```  
   
 ### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Beispiel: Verwenden eines nicht gruppierten Indexes zum Erzwingen einer Primärschlüsseleinschränkung für eine Columnstore-Tabelle  
- Programmbedingt lässt eine Columnstore-Tabelle keine Primärschlüsseleinschränkung zu. Jetzt können Sie einen nicht gruppierten Index für eine Columnstore-Tabelle verwenden, um eine Primärschlüsseleinschränkung zu erzwingen. Ein Primärschlüssel entspricht einer UNIQUE-Einschränkung für eine Spalte, die ungleich NULL ist, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert eine UNIQUE-Einschränkung als nicht gruppierten Index. Das folgende Beispiele kombiniert diese Fakten und definiert eine UNIQUE-Einschränkung für den Kontoschlüssel der Spalte, die ungleich NULL ist. Das Ergebnis ist ein nicht gruppierter Index, der eine Primärschlüsseleinschränkung als eine UNIQUE-Einschränkung für eine Spalte, die ungleich NULL ist erzwingt.  
+ Entwurfsbedingt lässt eine Columnstore-Tabelle keine gruppierte Primärschlüsseleinschränkung zu. Jetzt können Sie einen nicht gruppierten Index für eine Columnstore-Tabelle verwenden, um eine Primärschlüsseleinschränkung zu erzwingen. Ein Primärschlüssel entspricht einer UNIQUE-Einschränkung für eine Spalte, die ungleich NULL ist, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert eine UNIQUE-Einschränkung als nicht gruppierten Index. Das folgende Beispiele kombiniert diese Fakten und definiert eine UNIQUE-Einschränkung für den Kontoschlüssel der Spalte, die ungleich NULL ist. Das Ergebnis ist ein nicht gruppierter Index, der eine Primärschlüsseleinschränkung als eine UNIQUE-Einschränkung für eine Spalte, die ungleich NULL ist erzwingt.  
   
  Als Nächstes wird die Tabelle zu einem gruppierten Columnstore-Index konvertiert. Bei der Konvertierung besteht der nicht gruppierte Index weiterhin. Das Ergebnis ist ein gruppierter Columnstore-Index mit einem nicht gruppierten Index, der eine Primärschlüsseleinschränkung erzwingt. Da jedes Update oder jedes Einfügen in die Columnstore-Tabelle außerdem Auswirkungen auf den nicht gruppierten Index hat, verursachen alle Vorgänge, die die UNIQUE-Einschränkung und die nicht-NULL verletzen, einen Fehler im ganzen Vorgang.  
   

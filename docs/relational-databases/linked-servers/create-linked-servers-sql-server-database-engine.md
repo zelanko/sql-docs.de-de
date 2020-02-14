@@ -1,10 +1,10 @@
 ---
 title: Erstellen von Verbindungsservern
-ms.date: 11/20/2015
+ms.date: 01/24/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.linkedserver.properties.general.f1
@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 15d7b07b409d8a281b0ea47222ce608a712cfa3f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095888"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761894"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "74095888"
 ##  <a name="Background"></a> Hintergrund  
  Ein Verbindungsserver ermöglicht den Zugriff auf verteilte, heterogene Abfragen für OLE DB-Datenquellen. Nach der Erstellung eines Verbindungsservers können für den Server verteilte Abfragen ausgeführt werden, und Abfragen können Tabellen von mehreren Datenquellen verknüpfen. Wenn der Verbindungsserver als Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]definiert wird, können remote gespeicherte Prozeduren ausgeführt werden.  
   
- Die Funktionen und erforderlichen Argumente des Verbindungsservers können erheblich abweichen. In diesem Thema werden typische Beispiele aufgeführt, allerdings werden nicht alle Optionen beschrieben. Weitere Informationen finden Sie unter [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)erläutert.  
+ Die Funktionen und erforderlichen Argumente des Verbindungsservers können erheblich abweichen. In diesem Thema werden typische Beispiele aufgeführt, allerdings werden nicht alle Optionen beschrieben. Weitere Informationen finden Sie unter [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) erläutert.  
   
 ##  <a name="Security"></a> Sicherheit  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74095888"
      **Anbieterzeichenfolge**  
      Geben Sie die ProgID des OLE DB-Anbieters ein, die der Datenquelle entspricht. Beispiele für gültige Anbieterzeichenfolgen finden Sie unter [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)erläutert.  
   
-     **Speicherort**  
+     **Location**  
      Geben Sie den Speicherort der Datenbank ein, wie er durch den OLE DB-Anbieter interpretiert wird.  
   
      **Katalog**  
@@ -97,14 +97,17 @@ ms.locfileid: "74095888"
   
      **Remotebenutzer**  
      Verwendet den Remotebenutzer für die Zuordnung von Benutzern, die nicht in **Lokale Anmeldung**definiert sind. Der **Remotebenutzer** muss ein Anmeldename mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung auf dem Remoteserver sein.  
-  
+
+    > [!WARNING]
+    > Nur ein SQL Server-Benutzer kann als „Remotebenutzer“ für die Bereitstellung einer verwalteten Azure SQL-Datenbank-Instanz verwendet werden.  
+
      **Remotekennwort**  
      Gibt das Kennwort des Remotebenutzers an.  
   
-     **Hinzufügen**  
+     **Add (Hinzufügen)**  
      Fügt eine neue lokale Anmeldung hinzu.  
   
-     **Entfernen**  
+     **Remove**  
      Entfernt eine vorhandene lokale Anmeldung.  
   
      **Nicht durchgeführt**  
@@ -140,7 +143,7 @@ ms.locfileid: "74095888"
   
      Wenn True angegeben ist, wird für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquellen die Sortierung der Remotespalten und für Datenquellen, die keine[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquellen sind, die im Sortierungsnamen angegebene Sortierung verwendet.  
   
-     Wenn False angegeben ist, verwenden verteilte Abfragen immer die Standardsortierung des lokalen Servers, während der Sortierungsname und die Sortierung von Remotespalten ignoriert werden. Der Standardwert ist false.  
+     Wenn False angegeben ist, verwenden verteilte Abfragen immer die Standardsortierung des lokalen Servers, während der Sortierungsname und die Sortierung von Remotespalten ignoriert werden. Die Standardeinstellung ist „false“.  
   
      **Sortierungsname**  
      Gibt den Namen der von der Remotedatenquelle verwendeten Sortierung an, wenn für die Option zum Verwenden der Remotesortierung der Wert True festgelegt ist und es sich bei der Datenquelle nicht um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle handelt. Der Name muss eine von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützte Sortierung sein.  

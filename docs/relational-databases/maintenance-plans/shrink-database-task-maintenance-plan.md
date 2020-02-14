@@ -17,10 +17,10 @@ ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bbba27f582b65fdcc99ed8fda4d892b9a92eebb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115557"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Task 'Datenbank verkleinern' (Wartungsplan)
@@ -34,8 +34,8 @@ ms.locfileid: "68115557"
   
  Dieser Task führt die DBCC SHRINKDATABASE-Anweisung aus.  
   
-## <a name="options"></a>Optionen  
- **Verbindung**  
+## <a name="options"></a>Tastatur  
+ **Connection**  
  Wählen Sie die Serververbindung aus, die bei der Ausführung dieses Tasks verwendet werden soll.  
   
  **Neu**  
@@ -46,7 +46,7 @@ ms.locfileid: "68115557"
   
 -   **Alle Datenbanken**  
   
-     Generiert einen Wartungsplan, der Wartungstasks für alle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken außer tempdb ausführt.  
+     Generiert einen Wartungsplan, der Wartungstasks für alle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken außer tempdb ausführt.  
   
 -   **Alle Systemdatenbanken**  
   
@@ -89,12 +89,12 @@ ms.locfileid: "68115557"
  Legt fest, wie die Authentifizierung gegenüber dem Server stattfindet.  
   
  **Integrierte Sicherheit von Windows NT verwenden**  
- Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] her.  
+ Stellt mithilfe der [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Windows-Authentifizierung eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] her.  
   
  **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
- Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz her. Diese Option ist nicht verfügbar.  
+ Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] her. Diese Option ist nicht verfügbar.  
   
- **User name**  
+ **Benutzername**  
  Stellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
  **Kennwort**  

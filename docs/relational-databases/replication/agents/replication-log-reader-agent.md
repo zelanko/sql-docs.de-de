@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6c71ce5c804a25123ce18e010585e038f41a2ebf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5c6ed8c51ea7b471f69a462cee06d5ffd0560973
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770720"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288104"
 ---
 # <a name="replication-log-reader-agent"></a>Replikationsprotokolllese-Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,10 +68,10 @@ logread [-?]
   
 ## <a name="arguments"></a>Argumente  
  **-?**  
- Zeigt Informationen zur Verwendung an.  
+ Zeigt Informationen zur Nutzung an.  
   
- **-Verleger** _server_name_[ **\\** _instance_name_]  
- Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Der Name des Verlegers. Geben Sie den *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
  **-PublisherDB** _publisher_database_  
  Der Name der Verlegerdatenbank.  
@@ -97,7 +97,7 @@ logread [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Die Ebene der SSL-Verschlüsselung (Secure Sockets Layer), die vom Protokolllese-Agent beim Herstellen von Verbindungen verwendet wird.  
   
-|Wert von EncryptionLevel|und Beschreibung|  
+|Wert von EncryptionLevel|Beschreibung|  
 |---------------------------|-----------------|  
 |**0**|Gibt an, dass SSL nicht verwendet wird.|  
 |**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
@@ -114,7 +114,7 @@ logread [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  Gibt den Umfang des Verlaufs an, der während eines Vorgangs des Protokolllese-Agents protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
   
-|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|und Beschreibung|  
+|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Beschreibung|  
 |-------------------------------|-----------------|  
 |**0**||  
 |**1**|Standard. Aktualisieren Sie immer eine vorherige Verlaufsmeldung mit dem gleichen Status (Start, Status, Erfolg usw.). Wenn kein vorheriger Datensatz mit dem gleichen Status vorhanden ist, fügen Sie einen neuen Datensatz ein.|  
@@ -135,7 +135,7 @@ logread [-?]
 > [!NOTE]
 >  Für Veröffentlichungen, die nicht über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durchgeführt wurden, wird dieser Parameter ignoriert. Weitere Informationen finden Sie im Abschnitt "Konfigurieren des Transaktionssatz-Auftrags" unter [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).  
   
- **-MessageInterval** _Meldungsintervall_  
+ **-MessageInterval** _message_interval_  
  Das für die Verlaufsprotokollierung verwendete Zeitintervall. Wenn nach der Protokollierung des letzten Verlaufsereignisses der Wert von **MessageInterval** erreicht wird, wird erneut ein Verlaufsereignis protokolliert.  
   
  Wenn an der Quelle keine replizierte Transaktion vorhanden ist, sendet der Agent eine entsprechende Meldung an den Verteiler. Mit dieser Option wird angegeben, wie lange der Agent wartet, bevor eine weitere Meldung gesendet wird, dass keine Transaktion vorhanden ist. Agents melden immer, dass keine Transaktion vorhanden ist, wenn sie feststellen, dass an der Quelle keine Transaktionen verfügbar sind, nachdem zuvor replizierte Transaktionen verarbeitet wurden. Der Standardwert ist 60 Sekunden.  
@@ -146,7 +146,7 @@ logread [-?]
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Gibt an, ob die Ausgabe ausführlich sein soll.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**0**|Nur Fehlermeldungen werden gedruckt.|  
 |**1**|Alle Agent-Statusberichtsmeldungen werden gedruckt.|  

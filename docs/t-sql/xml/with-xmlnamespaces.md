@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12af8c813fd61b4f4c9040d72e19173ef810e80f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048140"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909790"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68048140"
   Deklariert mindestens einen XML-Namespace.  
   
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -86,7 +86,7 @@ DEFAULT <xml_namespace_uri>
   
 -   Das XML-Namespacepräfix `xsi` kann nicht erneut deklariert werden, wenn die ELEMENTS XSINIL-Direktive für die Abfrage verwendet wird.  
 
--   http://www.w3.org/2001/XMLSchema-instance muss nicht deklariert werden, um den XSI-Standardnamespace zu verwenden. Dieser wird vom XML/XPATH-Prozessor implizit hinzugefügt, wenn er nicht angegeben wurde, und XPATH-Ausdrücke können das Präfix „xsi“ verwenden, solange das Schema http://www.w3.org/2001/XMLSchema-instance ordnungsgemäß im XML-Dokument deklariert wurde.
+-   Es muss nicht deklariert werden, dass http://www.w3.org/2001/XMLSchema-instance den XSI-Standardnamespace verwendet soll. Dieser wird vom XML/XPATH-Prozessor implizit hinzugefügt, wenn er nicht angegeben wurde, und XPATH-Ausdrücke können das Präfix „xsi“ verwenden, solange das Schema http://www.w3.org/2001/XMLSchema-instance ordnungsgemäß im XML-Dokument deklariert wurde.
 
 -   URI-Zeichenfolgenwerte werden gemäß der aktuellen Datenbanksortierungs-Codepage verschlüsselt und intern in Unicode übersetzt.  
   

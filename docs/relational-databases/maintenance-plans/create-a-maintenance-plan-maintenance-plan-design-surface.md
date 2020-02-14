@@ -13,10 +13,10 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 892c1dd28eb482eac046016c5cb59b3d711387c8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055179"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Erstellen eines Wartungsplans (Entwurfsoberfläche für Wartungspläne)
@@ -39,7 +39,7 @@ ms.locfileid: "74055179"
   
 -   Wenn Sie einen Multiserver-Wartungsplan erstellen möchten, muss eine Multiserverumgebung mit einem Masterserver und mindestens einem Zielserver konfiguriert sein. Multiserver-Wartungspläne müssen auf dem Masterserver erstellt und verwaltet werden. Diese Pläne können auf Zielservern zwar angezeigt, jedoch nicht verwaltet werden.  
   
--   Mitglieder der **db_ssisadmin** -Rolle und **dc_admin** -Rolle können ihre Berechtigungen möglicherweise auf **sysadmin**erhöhen. Diese Ausweitung von Berechtigungen ist möglich, da diese Rollen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ändern können. Diese Pakete können von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des **sysadmin** -Sicherheitskontexts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden. Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit eingeschränkten Berechtigungen, oder fügen Sie der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle nur **sysadmin** -Mitglieder hinzu.  
+-   Mitglieder der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle können ihre Berechtigungen möglicherweise auf **sysadmin**erhöhen. Diese Ausweitung von Berechtigungen ist möglich, da diese Rollen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ändern können. Diese Pakete können von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des **sysadmin** -Sicherheitskontexts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden. Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit eingeschränkten Berechtigungen, oder fügen Sie der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle nur **sysadmin** -Mitglieder hinzu.  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -54,9 +54,9 @@ ms.locfileid: "74055179"
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Verwaltung** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne** , und klicken Sie anschließend auf **Neuer Wartungsplan**.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne** , und wählen Sie **Neuer Wartungsplan**aus.  
   
-4.  Geben Sie im Dialogfeld **Neuer Wartungsplan** im Feld **Name** einen Namen für den Plan ein, und klicken Sie auf **OK**. Die Toolbox und die *maintenance_plan_name* **[Entwurf]** -Oberfläche mit dem **Unterplan_1** im Hauptraster wird angezeigt.  
+4.  Geben Sie im Dialogfeld **Neuer Wartungsplan** im Feld **Name** einen Namen für den Plan ein, und klicken Sie auf **OK**. Dadurch werden die Toolbox und die Oberfläche *maintenance_plan_name* **[Design]** mit dem Unterplan **Subplan_1** geöffnet, der im Hauptraster erstellt wurde.  
   
      Die folgenden Optionen sind in der Kopfzeile des Entwurfsbereichs verfügbar.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "74055179"
      **Zeitplan entfernen**  
      Mit dieser Option entfernen Sie einen Zeitplan aus dem ausgewählten Unterplan.  
   
-     **Verbindungen verwalten**  
+     **Verwalten von Verbindungen**  
      Hiermit zeigen Sie das Dialogfeld **Verbindungen verwalten** an. Es wird verwendet, um dem Wartungsplan zusätzliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzverbindungen hinzuzufügen. Weitere Informationen zu diesem Dialogfeld finden Sie unten.  
   
      **Berichterstellung und Protokollierung**  
@@ -172,7 +172,7 @@ ms.locfileid: "74055179"
          **Ausdruck**  
          Geben Sie, wenn Sie die Vorgänge **Ausdruck**, **Ausdruck und Einschränkung**oder **Ausdruck oder Einschränkung**verwenden, einen Ausdruck ein. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden.  
   
-         **Testen**  
+         **Test**  
          Überprüfen Sie den Ausdruck.  
   
          **Mehrere Einschränkungen**  
@@ -236,7 +236,7 @@ ms.locfileid: "74055179"
      **Protokoll laden**  
      Öffnen Sie ein Dialogfeld, in dem Sie eine zu ladende Protokolldatei angeben können.  
   
-     **Exportieren**  
+     **Export**  
      Öffnen Sie ein Dialogfeld, in dem Sie die im Raster **Protokolldateizusammenfassung** angezeigten Informationen in eine Textdatei exportieren können.  
   
      **Aktualisieren**  
@@ -245,22 +245,22 @@ ms.locfileid: "74055179"
      **Filter**  
      Öffnen Sie ein Dialogfeld, in dem Sie zum Filtern der Protokolldatei verwendete Einstellungen angeben können, z.B. Filterkriterien wie **Verbindung**, **Datum**oder **Allgemein** .  
   
-     **Suchen**  
+     **Suchen,**  
      Durchsuchen Sie die Protokolldatei nach bestimmtem Text. Das Suchen mit Platzhalterzeichen wird nicht unterstützt.  
   
      **Beenden**  
      Beendet das Laden der Protokolldateieinträge. Diese Option können Sie z. B. verwenden, wenn das Laden einer Remote- oder Offline-Protokolldatei eine lange Zeit in Anspruch nimmt und Sie nur die zuletzt erstellten Einträge anzeigen möchten.  
   
      **Protokolldateizusammenfassung**  
-     In diesem Informationsbereich wird eine Zusammenfassung der Protokolldateifilterung angezeigt. Wenn die Datei nicht gefiltert wurde, wird folgender Text angezeigt: **Kein Filter angewendet**. Nach Anwendung eines Filters auf das Protokoll wird folgender Text angezeigt: **Protokolleinträge auf diesen Fall filtern:** \<Filterkriterien>.  
+     In diesem Informationsbereich wird eine Zusammenfassung der Protokolldateifilterung angezeigt. Wenn die Datei nicht gefiltert wurde, wird folgender Text angezeigt: **Kein Filter angewendet**. Wenn ein Filter auf das Protokoll angewendet wird, wird der folgende Text angezeigt: **Protokolleinträge auf diesen Fall filtern:** \<Filterkriterien>.  
   
-     **Datum**  
+     **Date**  
      Zeigt das Datum des Ereignisses an.  
   
      **Quelle**  
      Zeigt die Ausgangsfunktion an, mit dem das Ereignis erstellt wurde, z. B. den Namen des Diensts (z. B. MSSQLSERVER). Dies wird nicht für alle Protokolltypen angezeigt.  
   
-     **MessageBox**  
+     **Meldung**  
      Zeigt die Meldungen an, die dem Ereignis zugeordnet sind.  
   
      **Protokolltyp**  

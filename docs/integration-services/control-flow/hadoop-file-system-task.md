@@ -13,10 +13,10 @@ ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e97ae33bcccee338be576138ca335bd6298e0128
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294070"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop-Dateisystemtask
@@ -28,12 +28,12 @@ ms.locfileid: "71294070"
   
  Zum Hinzufügen eines Hadoop-Dateisystemtasks ziehen Sie diesen auf den Designer. Doppelklicken Sie anschließend auf den Task, oder klicken Sie mit der rechten Maustaste darauf, und klicken Sie auf **Bearbeiten**, um das Hadoop-Dialogfeld **Editor für den Task „Dateisystem“** zu öffnen.  
   
- ![Editor für den Task „Dateisystem“](../../integration-services/control-flow/media/hadoop-filesystem-task.png "Editor für den Task „Dateisystem“")  
+ ![Editor für Hadoop-Dateisystemaufgaben](../../integration-services/control-flow/media/hadoop-filesystem-task.png "Editor für den Task „Dateisystem“")  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Konfigurieren Sie die folgenden Optionen im Hadoop-Dialogfeld **Editor für den Task „Dateisystem“** .  
   
-|Feld|und Beschreibung|  
+|Feld|Beschreibung|  
 |-----------|-----------------|  
 |**Hadoop-Verbindung**|Geben Sie einen vorhandenen Hadoop-Verbindungs-Manager an, oder erstellen Sie einen neuen. Dieser Verbindungs-Manager gibt an, wo die Zieldateien gehostet werden.|  
 |**Hadoop-Dateipfad**|Geben Sie den Datei- oder Verzeichnispfad auf HDFS an.|  

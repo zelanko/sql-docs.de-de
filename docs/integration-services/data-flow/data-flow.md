@@ -18,10 +18,10 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b252a53acd98a0c5b445166ffcf3fa4328dd646f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293144"
 ---
 # <a name="data-flow"></a>Datenfluss
@@ -40,7 +40,7 @@ ms.locfileid: "71293144"
   
  Im folgenden Diagramm wird ein Datenfluss angezeigt, der eine Quelle, eine Transformation mit einer Eingabe und einer Ausgabe sowie ein Ziel aufweist. Dieses Diagramm enthält die Eingaben, Ausgaben und Fehlerausgaben sowie die Eingabespalten, Ausgabespalten und externen Spalten.  
   
- ![Datenflusskomponenten und ihre Ein- und Ausgaben](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Datenflusskomponenten und ihre Ein- und Ausgaben")  
+ ![Datenflusskomponenten mit Ein- und Ausgaben](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Datenflusskomponenten mit Ein- und Ausgaben")  
   
 ## <a name="data-flow-implementation"></a>Datenflussimplementierung  
  Der erste Schritte beim Implementieren eines Datenflusstasks in einem Paket besteht darin, der Ablaufsteuerung eines Pakets einen Datenflusstask hinzuzufügen. Ein Paket kann mehrere Datenflusstasks mit jeweils einem eigenen Datenfluss einschließen. Wenn z. B. für ein Paket Datenflüsse in einer bestimmten Reihenfolge oder andere Tasks zwischen den Datenflüssen ausgeführt werden müssen, ist für jeden Datenfluss ein separater Datenflusstask erforderlich.  
@@ -101,9 +101,9 @@ ms.locfileid: "71293144"
 ### <a name="sources-available-for-download"></a>Quellen, die zum Download zur Verfügung stehen  
  In der folgenden Tabelle sind zusätzliche Quellen aufgeführt, die Sie von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Website herunterladen können.  
   
-|Quelle|und Beschreibung|  
+|`Source`|Beschreibung|  
 |------------|-----------------|  
-|Oracle-Quelle|Die Oracle-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity umfasst auch einen Verbindungs-Manager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors für Oracle und Teradata von Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
+|Oracle-Quelle|Die Oracle-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity umfasst auch einen Verbindungs-Manager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
 |SAP BI-Quelle|Die SAP BI-Quelle ist die Quellkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für SAP BI enthält außerdem einen Verbindungsmanager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
 |Teradata-Quelle|Die Teradata-Quelle ist die Quellkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Teradata von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Teradata von Attunity umfasst auch einen Verbindungs-Manager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
   
@@ -140,7 +140,7 @@ ms.locfileid: "71293144"
   
  Weitere Informationen finden Sie unter [Integration Services Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md).  
   
-## <a name="destinations"></a>Ziele  
+## <a name="destinations"></a>Destinations  
  Ein Ziel ist die Datenflusskomponente, die die Daten von einem Datenfluss in einen spezifischen Datenspeicher schreibt, oder ein Dataset im Arbeitsspeicher erstellt. Sie können Daten in Flatfiles laden, analytische Objekte verarbeiten und für andere Prozesse Daten bereitstellen. Darüber hinaus können Sie Daten durch das Zugreifen auf Tabellen und Sichten in Datenbanken und durch das Ausführen von Abfragen laden.  
   
  Ein Datenfluss kann mehrere Ziele aufweisen, mit denen Daten in verschiedene Datenbereiche geladen werden.  
@@ -162,11 +162,11 @@ ms.locfileid: "71293144"
 ### <a name="destinations-available-for-download"></a>Ziele, die zum Herunterladen zur Verfügung stehen  
  In der folgenden Tabelle sind zusätzliche Ziele aufgeführt, die Sie von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Website herunterladen können.  
   
-|Quelle|und Beschreibung|  
+|`Source`|Beschreibung|  
 |------------|-----------------|  
 |Oracle-Ziel|Das Oracle-Ziel ist die Zielkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity enthält auch einen Verbindungs-Manager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
 |SAP BI-Ziel|Das SAP BI-Ziel ist die Zielkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connectors für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für SAP BI enthält auch einen Verbindungsmanager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
-|Teradata-Ziel|Das Teradata-Ziel ist die Zielkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connectors für Teradata von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Teradata von Attunity enthält auch einen Verbindungs-Manager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors für Oracle und Teradata von Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
+|Teradata-Ziel|Das Teradata-Ziel ist die Zielkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connectors für Teradata von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Teradata von Attunity enthält auch einen Verbindungs-Manager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
   
  Wie Sie die Leistungsverbesserungen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity nutzen, wird unter [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) veranschaulicht.  
   
@@ -192,10 +192,10 @@ ms.locfileid: "71293144"
   
  Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).  
   
-### <a name="columns"></a>Spalte  
+### <a name="columns"></a>Spalten  
  Eingaben, Ausgaben und Fehlerausgaben sind Auflistungen von Spalten. Alle Spalten sind konfigurierbar, und je nach Spaltentyp (Eingabe, Ausgabe oder extern) stellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterschiedliche Eigenschaften für die jeweilige Spalte bereit. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt drei verschiedene Möglichkeiten zum Festlegen von Spalteneigenschaften bereit: programmgesteuert, durch die Verwendung komponentenspezifischer Dialogfelder oder durch die Verwendung des Dialogfelds **Erweiterter Editor**.  
   
-## <a name="paths"></a>Pfade  
+## <a name="paths"></a>Paths  
  Mit Pfaden werden Datenflusskomponenten verbunden. Im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer können Sie die Pfadeigenschaften anzeigen und ändern, die Ausgabemetadaten für den Ausgangspunkt des Pfads anzeigen sowie einem Pfad Daten-Viewer anfügen.  
   
  Weitere Informationen finden Sie unter [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md) und [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  

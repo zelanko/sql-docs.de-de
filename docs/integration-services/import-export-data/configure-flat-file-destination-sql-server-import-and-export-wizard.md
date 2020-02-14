@@ -12,10 +12,10 @@ ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c596f37cb0a83682c5c8dff370a92a5d3d73eb5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285796"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent)
@@ -43,7 +43,7 @@ ms.locfileid: "71285796"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste das Trennzeichen zum Trennen von Zeilen in der Ausgabe aus. Es gibt keine Option zum Angeben eines *benutzerdefinierten* Zeilentrennzeichens.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Trennen von Zeilen mit einem Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Trennen von Zeilen mit einem Wagenrücklauf.|  
@@ -57,7 +57,7 @@ ms.locfileid: "71285796"
  **Spaltentrennzeichen**  
  Wählen Sie aus der Liste das Trennzeichen zum Trennen von Spalten in der Ausgabe aus. Es gibt keine Option zum Angeben eines *benutzerdefinierten* Spaltentrennzeichens.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Trennen von Spalten mit einem Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Trennen von Spalten mit einem Wagenrücklauf.|  

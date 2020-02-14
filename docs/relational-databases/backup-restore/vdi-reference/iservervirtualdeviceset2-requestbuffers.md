@@ -10,17 +10,17 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 1b941f251c9093f10abbced8c3522f1719a1580e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847181"
 ---
 # <a name="iservervirtualdeviceset2requestbuffers-vdi"></a>IServerVirtualDeviceSet2::RequestBuffers (VDI)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Mit der „RequestBuffers“-Funktion wird die VDI darüber informiert, dass der Server eine bestimmte Anzahl von Puffern mit einer bestimmten Größen- und Ausrichtungsanforderung benötigt.
+Mit der **RequestBuffers**-Funktion wird die VDI darüber informiert, dass der Server eine bestimmte Anzahl von Puffern mit einer bestimmten Größen- und Ausrichtungsanforderung benötigt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ HRESULT IServerVirtualDeviceSet2::RequestBuffers (
 | VD_E_PROTOCOL | Der Satz weist keinen Status auf, in dem Pufferzuweisungen deklariert werden können (siehe Statusübergangsmatrix). |
 | VD_E_MEMORY | Der angeforderte Arbeitsspeicher konnte nicht abgerufen werden. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Diese Methode sollte verwendet werden, bevor Puffer mit „AllocateBuffer“ zugewiesen werden. Mehrere Puffer mit einer bestimmten Größe und Ausrichtung werden mit der „RequestBuffers“-Funktion angefordert, und anschließend werden einzelne Puffer mit „AllocateBuffer“ zugewiesen.
 

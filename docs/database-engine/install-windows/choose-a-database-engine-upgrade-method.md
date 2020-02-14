@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 6dffa188f5641510f2ad47c17af3b40ad16a3ec9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056754"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941151"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Wählen einer Upgrademethode für die Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUD
   
 > [!NOTE]  
 >  Sie können auch ein Upgrade auf Azure SQL-Datenbank erwägen oder Ihre SQL Server-Umgebung als Teil Ihres Upgradeplans virtualisieren. Diese Themen liegen außerhalb des Rahmens dieses Artikels, hier finden Sie jedoch einige Links:
->   - [SQL Server auf virtuellen Azure-Computern – Übersicht](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
+>   - [Übersicht zu SQL Server auf virtuellen Azure-Computern](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/) 
 >   - [Selecting a SQL Server option in Azure (Auswählen einer SQL Server-Option in Azure)](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
   
@@ -66,7 +66,7 @@ Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUD
   
 -   **Systemobjekte:** Einige Anwendungen sind von Informationen, Entitäten und/oder Objekten abhängig, die sich außerhalb des Bereichs einer einzelnen Benutzerdatenbank befinden. Normalerweise weist eine Anwendung Abhängigkeiten von den Datenbanken „master“ und „msdb“ sowie von der Benutzerdatenbank auf. Alle Daten, die außerhalb einer Benutzerdatenbank gespeichert werden und für die richtige Funktionsweise dieser Datenbank erforderlich sind, müssen auf der Zielserverinstanz bereitgestellt werden. Beispielsweise werden die Anmeldungen für eine Anwendung als Metadaten in der „master“-Datenbank gespeichert und müssen auf dem Zielserver neu erstellt werden. Wenn ein Anwendungs- oder Datenbank-Wartungsplan von Aufträgen des SQL Server-Agents abhängig ist, deren Metadaten in der „msdb“-Datenbank gespeichert sind, müssen Sie diese Aufträge auf der Zielserverinstanz neu erstellen. Analog dazu werden die Metadaten für einen Trigger auf Serverebene in der „master“-Datenbank gespeichert.  
  
-   Wenn Sie die Datenbank für eine Anwendung auf eine andere Serverinstanz verschieben, müssen Sie alle Metadaten der abhängigen Entitäten und Objekte in „master“ und „msdb“ auf der Zielserverinstanz neu erstellen. Wenn für eine Datenbankanwendung beispielsweise Trigger auf Serverebene verwendet werden, genügt es nicht, die Datenbank im neuen System lediglich anzufügen oder wiederherzustellen. Die Datenbank funktioniert nicht wie erwartet, wenn Sie die Metadaten für diese Trigger in der „master“-Datenbank nicht manuell neu erstellen. Ausführliche Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+   Wenn Sie die Datenbank für eine Anwendung in eine andere Serverinstanz verschieben, müssen Sie alle Metadaten der abhängigen Entitäten und Objekte in den Datenbanken „master“ und „msdb“ der Zielserverinstanz neu erstellen. Wenn für eine Datenbankanwendung beispielsweise Trigger auf Serverebene verwendet werden, genügt es nicht, die Datenbank im neuen System lediglich anzufügen oder wiederherzustellen. Die Datenbank funktioniert nicht wie erwartet, wenn Sie die Metadaten für diese Trigger in der „master“-Datenbank nicht manuell neu erstellen. Ausführliche Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 -   **In MSDB gespeicherte Integration Services-Pakete:** Wenn Sie Pakete in MSDB speichern, müssen Sie diese Pakete entweder per Skript mithilfe des Hilfsprogramms [dtutil](../../integration-services/dtutil-utility.md) entfernen oder sie auf dem neuen Server erneut bereitstellen. Vor der Verwendung der Pakete auf dem neuen Server müssen Sie die Pakete auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren. Weitere Informationen finden Sie unter [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   

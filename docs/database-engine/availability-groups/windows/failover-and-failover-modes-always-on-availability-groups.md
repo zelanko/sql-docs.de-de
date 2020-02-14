@@ -16,10 +16,10 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 269ec542c7de83afa9c174ea0bc9221f125f7e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67949105"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)
@@ -109,12 +109,12 @@ ms.locfileid: "67949105"
 |-------------|--------------------------------------------------|  
 |Ein|Synchroner Commit mit automatischem Failover|  
 |B|Synchroner Commit mit automatischem Failover|  
-|c|Synchroner Commit nur mit geplantem manuellem Failover|  
+|C|Synchroner Commit nur mit geplantem manuellem Failover|  
 |D|Asynchroner Commit (nur mit erzwungenem Failover)|  
   
  Das Failoververhalten für jedes sekundäre Replikat hängt davon ab, welches Verfügbarkeitsreplikat gerade das primäre Replikat ist. Grundsätzlich ist für ein bestimmtes sekundäres Replikat das Failoververhalten der schlimmste Fall angesichts des aktuellen primären Replikats. In der folgenden Abbildung wird veranschaulicht, wie das Failoververhalten des sekundären Replikats in Abhängigkeit des aktuellen primären Replikats variiert und ob es für den asynchronen (nur mit erzwungenem Failover) oder den synchronen Commit-Modus (mit oder ohne manuellem Failover) konfiguriert ist.  
   
- ![Auswirkungen der Konfiguration des primären Replikats auf das Failover](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "How primary replica configuration affects failover")  
+ ![Wie sich die Konfiguration des primären Replikats auf das Failover auswirkt](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "Wie sich die Konfiguration des primären Replikats auf das Failover auswirkt")  
   
 ##  <a name="AutomaticFailover"></a> Automatic Failover  
  Ein automatisches Failover verursacht den automatischen Übergang eines qualifizierten sekundären Replikats zur primären Rolle, nachdem das primäre Replikat nicht mehr zur Verfügung steht. Ein automatisches Failover ist am besten geeignet, wenn der WSFC-Knoten, der das primäre Replikat hostet, lokal zum Knoten ist, der das sekundäre Replikat hostet. Das liegt daran, dass die Datensynchronisierung am besten bei niedrigen Nachrichtenlatenzzeiten zwischen Computern funktioniert und weil Clientverbindungen lokal hergestellt werden können.  
@@ -183,7 +183,7 @@ ms.locfileid: "67949105"
   
 3.  Das Failoverziel (auf `Node02`) wird zum neuen primären Replikat. Da dies ein geplantes Failover ist, wechselt das frühere primäre Replikat während des Failovers zur sekundären Rolle und schaltet die zugehörigen Datenbanken unmittelbar als sekundäre Datenbanken online.  
   
- ![Abbildung eines geplanten manuellen Failovers](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "Illustation of a planned manual failover")  
+ ![Abbildung eines geplanten manuellen Failovers](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "Abbildung eines geplanten manuellen Failovers")  
   
  **In diesem Abschnitt:**  
   
@@ -326,7 +326,7 @@ ms.locfileid: "67949105"
   
 -   [Ändern des Failovermodus eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [Konfigurieren der flexiblen Failoverrichtlinie zum Steuern der Bedingungen für ein automatisches Failover &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
+-   [Konfigurieren der flexiblen Failoverrichtlinie zum Steuern der Bedingungen für ein automatisches Failover &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
  **So führen Sie ein manuelles Failover aus**  
   
@@ -357,7 +357,7 @@ ms.locfileid: "67949105"
  [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen und Datenbankspiegelung (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)   
- [Failoverrichtlinie für Failoverclusterinstanzen](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)  
   
   

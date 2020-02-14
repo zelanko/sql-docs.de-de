@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 1631c725fb089b96825ea71a550b5d13fe7f400c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68769492"
 ---
 # <a name="subscriber-properties"></a>Abonnenteneigenschaften
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Das Dialogfeld **Abonnenteneigenschaften** enthält Informationen, die für Abonnenten wichtig sind, auf denen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ausgeführt werden.  
+  Das Dialogfeld **Abonnenteneigenschaften** enthält Informationen zu den Abonnenten, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen verwenden, die älter als [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sind.  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Agentverbindung mit dem Abonnenten**  
  Der Kontext, in dem der Verteilungs-Agent und der Merge-Agent die Verbindung vom Verteiler zum Abonnenten herstellen. Dieser gilt nur für Versionen vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68769492"
  **Standardzeitpläne für Agent**  
  Der Standardzeitplan, der im Assistenten für neue Abonnements für Abonnenten verwendet wird, auf denen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]ausgeführt werden.  
   
- **Sonstiges**  
+ **Verschiedenes**  
  Enthält Informationen zum Abonnenten und zum Typ des Abonnenten.  
   
 ## <a name="see-also"></a>Weitere Informationen  

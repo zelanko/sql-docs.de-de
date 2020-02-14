@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127376"
 ---
 # <a name="tables"></a>Tabellen
@@ -37,7 +37,7 @@ Tabellen sind Datenbankobjekte, die sämtliche in einer Datenbank enthaltenen Da
 
 ### <a name="partitioned-tables"></a>Partitionierte Tabellen
 
-Partitionierte Tabellen sind Tabellen, deren Daten horizontal in Einheiten aufgeteilt sind, die über mehrere Dateigruppen innerhalb einer Datenbank verteilt sein können. Durch die Partitionierung werden große Tabellen oder Indizes einfacher verwaltbar, da Sie schnell und effizient auf Datenteilmengen zugreifen können, während die Integrität der gesamten Auflistung erhalten bleibt. Standardmäßig unterstützt [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bis zu 15.000 Partitionen. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
+Partitionierte Tabellen sind Tabellen, deren Daten horizontal in Einheiten aufgeteilt sind, die über mehrere Dateigruppen innerhalb einer Datenbank verteilt sein können. Durch die Partitionierung sind große Tabellen oder Indizes leichter zu verwalten, denn Sie können dadurch schnell und effizient auf Datenteilmengen zugreifen und sie verwalten, während die Integrität der gesamten Sammlung erhalten bleibt. Standardmäßig unterstützt [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bis zu 15.000 Partitionen. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
 ### <a name="temporary-tables"></a>Temporäre Tabellen
 
@@ -92,15 +92,15 @@ Bei breiten Tabellen treten folgende Leistungsauswirkungen auf:
 |Spaltentasks|Thema|
 |------------------|-----------|
 |Beschreibt, wie einer vorhandenen Tabelle Spalten hinzugefügt werden.|[Hinzufügen von Spalten zu einer Tabelle &#40;Datenbank-Engine&#41;](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)|
-|Beschreibt, wie Spalten aus einer Tabelle gelöscht werden.|[Löschen von Spalten aus einer Tabelle](../../relational-databases/tables/delete-columns-from-a-table.md)|
+|Beschreibt, wie Spalten aus einer Tabelle gelöscht werden.|[Spalten aus einer Tabelle löschen](../../relational-databases/tables/delete-columns-from-a-table.md)|
 |Beschreibt, wie der Name einer Spalte geändert wird.|[Umbenennen von Spalten &#40;Datenbank-Engine&#41;](../../relational-databases/tables/rename-columns-database-engine.md)|
 |Beschreibt, wie Spalten einer Tabelle in eine andere Tabelle kopiert werden. Sie können entweder nur die Spaltendefinition oder die Definition und Daten kopieren.|[Kopieren von Spalten aus einer Tabelle in eine andere &#40;Datenbank-Engine&#41;](../../relational-databases/tables/copy-columns-from-one-table-to-another-database-engine.md)|
 |Beschreibt, wie eine Spaltendefinition durch Ändern des Datentyps oder anderer Eigenschaften geändert wird.|[Ändern von Spalten &#40;Datenbank-Engine&#41;](../../relational-databases/tables/modify-columns-database-engine.md)|
-|Beschreibt, wie die Reihenfolge, in der die Spalten angezeigt werden, geändert wird.|[Ändern der Reihenfolge der Spalten in einer Tabelle](../../relational-databases/tables/change-column-order-in-a-table.md)|
+|Beschreibt, wie die Reihenfolge, in der die Spalten angezeigt werden, geändert wird.|[Ändern der Spaltenreihenfolge einer Tabelle](../../relational-databases/tables/change-column-order-in-a-table.md)|
 |Beschreibt, wie eine berechnete Spalte in einer Tabelle erstellt wird.|[Angeben von berechneten Spalten in einer Tabelle](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|
 |Beschreibt, wie ein Standardwert für eine Spalte angegeben wird. Dieser Wert wird verwendet, wenn kein anderer Wert angegeben wird.|[Angeben von Standardwerten für Spalten](../../relational-databases/tables/specify-default-values-for-columns.md)|
 
 ## <a name="see-also"></a>Weitere Informationen
- [Primärschlüssel- und Fremdschlüsseleinschränkungen](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [UNIQUE- und CHECK-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
+ [Primärschlüssel- und Fremdschlüsseleinschränkungen](../../relational-databases/tables/primary-and-foreign-key-constraints.md)[UNIQUE- und CHECK-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 
 

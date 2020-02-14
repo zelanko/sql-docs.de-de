@@ -17,10 +17,10 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710722"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Peer-zu-Peer - Transaktionsreplikation
@@ -51,7 +51,7 @@ ms.locfileid: "71710722"
  In folgenden Szenarien werden die typischen Verwendungsarten der Peer-zu-Peer-Replikation erläutert.  
   
 ### <a name="topology-that-has-two-participating-databases"></a>Topologie mit zwei teilnehmenden Datenbanken  
- ![Peer-zu-Peer-Replikation, zwei Knoten](../../../relational-databases/replication/transactional/media/repl-multinode-01.gif "Peer-toPeer replication, two nodes")  
+ ![Peer-zu-Peer-Replikation, zwei Knoten](../../../relational-databases/replication/transactional/media/repl-multinode-01.gif "Peer-zu-Peer-Replikation, zwei Knoten")  
   
  Die beiden oben stehenden Abbildungen zeigen jeweils zwei teilnehmende Datenbanken, bei denen der Benutzerverkehr über einen Anwendungsserver an die Datenbanken geleitet wird. Diese Konfiguration kann für eine Vielzahl von Anwendungen, von Websites bis zu Arbeitsgruppenanwendungen, verwendet werden, und bietet folgende Vorteile:  
   
@@ -68,7 +68,7 @@ ms.locfileid: "71710722"
  Die Peer-zu-Peer-Replikation unterstützt beide Vorgehensweisen, aber das Beispiel für das zentrale Update auf der rechten Seite wird oft auch bei der standardmäßigen Transaktionsreplikation verwendet.  
   
 ### <a name="topologies-that-have-three-or-more-participating-databases"></a>Topologien mit drei oder mehr teilnehmenden Datenbanken  
- ![Peer-zu-Peer-Replikation an verteilte Standorte](../../../relational-databases/replication/transactional/media/repl-multinode-02.gif "Peer-to-Peer replication to dispersed locations")  
+ ![Peer-zu-Peer-Replikation an verteilte Standorte](../../../relational-databases/replication/transactional/media/repl-multinode-02.gif "Peer-zu-Peer-Replikation an verteilte Standorte")  
   
  Die oben stehende Abbildung zeigt drei teilnehmende Datenbanken, die Daten für einen weltweiten Software-Support-Anbieter mit Niederlassungen in Los Angeles, London und Taipeh bereitstellen. Die Supportmitarbeiter in den jeweiligen Niederlassungen nehmen Kundenanrufe entgegen und geben Informationen zu sämtlichen Kundenanrufen ein und aktualisieren diese. Der Zeitunterschied zwischen den Zeitzonen, in denen sich die drei Niederlassungen befinden, beträgt jeweils acht Stunden, sodass sich die Arbeitszeiten nicht überschneiden. Wenn die Niederlassung in Taipeh schließt, beginnt der Arbeitstag in der Londoner Niederlassung. Wenn ein Anruf noch bearbeitet wird, wenn eine Niederlassung schließt, wird der Anruf an einen Mitarbeiter in der Niederlassung übertragen, die als nächste öffnet.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "71710722"
   
 -   Höhere Verfügbarkeit bei Ausfällen oder Wartungserfordernissen an einer oder mehreren der teilnehmenden Datenbanken.  
   
-     ![Peer-zu-Peer-Replikation, drei und vier Knoten](../../../relational-databases/replication/transactional/media/repl-multinode-04.gif "Peer-to-Peer replication, three and four nodes")  
+     ![Peer-zu-Peer-Replikation, drei und vier Knoten](../../../relational-databases/replication/transactional/media/repl-multinode-04.gif "Peer-zu-Peer-Replikation, drei und vier Knoten")  
   
  Die oben stehende Abbildung zeigt, wie der drei Knoten umfassenden Topologie ein Knoten hinzugefügt wird. Ein Knoten könnte in diesem Szenario aus folgenden Gründen hinzugefügt werden:  
   
@@ -116,7 +116,7 @@ ms.locfileid: "71710722"
   
 -   Die Verwendung von Identitätsspalten wird nicht empfohlen. Bei der Verwendung von Identitäten müssen Sie die den Tabellen zugewiesenen Bereiche in jeder teilnehmenden Datenbank manuell verwalten. Weitere Informationen finden Sie im Abschnitt „Zuweisen von Bereichen für die manuelle Identitätsbereichsverwaltung“ im Thema [Replizieren von Identitätsspalten](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-### <a name="feature-restrictions"></a>Funktionsbezogene Einschränkungen  
+### <a name="feature-restrictions"></a>Featureeinschränkungen  
  Peer-zu-Peer-Replikation unterstützt die zentralen Funktionen der Transaktionsreplikation, unterstützt jedoch nicht die folgenden Optionen:  
   
 -   Initialisierung und erneute Initialisierung mit einer Momentaufnahme.  

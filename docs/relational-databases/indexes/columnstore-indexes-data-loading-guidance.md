@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68307625"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore-Indizes: Leitfaden zum Datenladevorgang
@@ -31,7 +31,7 @@ Optionen und Empfehlungen für das Laden von Daten mithilfe der Funktion zum SQL
 
 Um einen Massenladevorgang auszuführen, können Sie das [bcp-Hilfsprogramm](../../tools/bcp-utility.md) oder [Integration Services](../../integration-services/sql-server-integration-services.md) verwenden, oder Sie können Zeilen aus einer Stagingtabelle auswählen.
 
-![Laden in einen geclusterten Columnstore-Index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
+![Laden in einen gruppierten Columnstore-Index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Laden in einen gruppierten Columnstore-Index")  
   
 Gemäß dem Diagramm gilt Folgendes für das Massenladen:
   
@@ -60,7 +60,7 @@ Diese Szenarien beschreiben, in welchen Fällen geladene Zeilen direkt in den Co
   
 |Zeilen für Massenladevorgang|Zur komprimierten Zeilengruppe hinzugefügte Zeilen|Zur Delta-Zeilengruppe hinzugefügte Zeilen|  
 |-----------------------|-------------------------------------------|--------------------------------------|  
-|102,000|0|102,000|  
+|102.000|0|102.000|  
 |145,000|145,000<br /><br /> Zeilengruppengröße: 145,000|0|  
 |1,048,577|1,048,576<br /><br /> Zeilengruppengröße: 1.048.576|1|  
 |2,252,152|2,252,152<br /><br /> Zeilengruppengrößen: 1.048.576, 1.048.576, 155.000|0|  
@@ -74,7 +74,7 @@ SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id,
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   
- ![Zeilengruppe und Deltastore für einen Batchladevorgang](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup and deltastore for a batch load")  
+ ![Zeilengruppe und Deltastore für einen Batchladevorgang](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Zeilengruppe und Deltastore für einen Batchladevorgang")  
   
 ## <a name="use-a-staging-table-to-improve-performance"></a>Verwenden einer Stagingtabelle zum Verbessern der Leistung
 Wenn Sie Daten nur laden, um sie vor der Ausführung von weiteren Transformationen bereitzustellen, wird der Ladevorgang der Tabelle auf die Heaptabelle schneller sein, als wenn Sie Daten in eine geclusterte Columnstore-Tabelle laden. Darüber hinaus wird das Laden von Daten in eine [temporäre Tabelle] [temporär] auch viel schneller sein als das Laden einer Tabelle für die permanente Speicherung.  

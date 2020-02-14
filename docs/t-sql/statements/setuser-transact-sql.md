@@ -21,10 +21,10 @@ ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076444"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68076444"
 > [!IMPORTANT]  
 >  SETUSER ist nur aus Gründen der Abwärtskompatibilität enthalten. SETUSER wird in einer künftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise nicht mehr unterstützt. Es empfiehlt sich, stattdessen [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) zu verwenden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

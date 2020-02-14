@@ -15,10 +15,10 @@ ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a9fdbe8cca12779e6666e0305ddfb081f3649f44
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294469"
 ---
 # <a name="ado-connection-manager"></a>ADO-Verbindungs-Manager
@@ -56,7 +56,7 @@ ms.locfileid: "71294469"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [OLE DB-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
+-   [Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   

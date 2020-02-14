@@ -11,10 +11,10 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0563ceff3185f856692292884fe63e79c16e4216
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295875"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>Lektion 6.2: Konvertieren des Projekts in das Projektbereitstellungsmodell
@@ -27,7 +27,7 @@ In dieser Aufgabe verwenden Sie den Assistenten zum Konvertieren von Integration
   
 1.  Wählen Sie im Menü **Projekt** die Option **Paketbereitstellungsmodell konvertieren** aus.  
   
-2.  Überprüfen Sie die Schritte auf der **Einführungsseite** des **Assistenten zum Konvertieren von Integration Services-Projekten**, und klicken Sie auf **Weiter**.  
+2.  Überprüfen Sie die Schritte auf der Seite **Einführung** des **Assistenten zum Konvertieren von Integration Services-Projekten**, und klicken Sie auf **Weiter**.  
   
 3.  Deaktivieren Sie auf der Seite **Pakete auswählen** in der Liste **Pakete** alle Kontrollkästchen außer **Lesson 6.dtsx**, und klicken Sie dann auf **Weiter**.  
   

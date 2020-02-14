@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 35db04fee2cc8d17034414bce9c994db501d5c02
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 45c76487f9165da37d0c5383826b00e85ddf27df
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680896"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286501"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -40,7 +40,7 @@ Erstellt Anmeldeinformationen auf Serverebene. Anmeldeinformationen sind in eine
 > [!NOTE]
 > Verwenden Sie [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) zum Erstellen der Anmeldeinformationen auf Datenbankebene. Verwenden Sie Anmeldeinformationen auf Serverebene, wenn Sie dieselben Anmeldeinformationen für mehrere Datenbanken auf demselben Server verwenden müssen. Verwenden Sie datenbankbezogene Anmeldeinformationen, um die Datenbank portierbarer zu machen. Wenn eine Datenbank auf einen neuen Server verschoben wird, werden gleichzeitig auch diese datenbankbezogenen Anmeldeinformationen verschoben. Verwenden Sie datenbankbezogene Anmeldeinformationen in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ WITH IDENTITY = 'identity_name'
 > [!IMPORTANT]
 > Wenn eine Shared Access Signature (SAS) verwendet wird, muss dieser Name dem Containerpfad zugeordnet werden können, mit „https“ beginnen und einen Schrägstrich enthalten. Siehe [Beispiel D](#d-creating-a-credential-using-a-sas-token).
 
-IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Wenn die Anmeldeinformationen zum Zugreifen auf Azure Key Vault verwendet werden, ist **IDENTITY** der Name des Schlüsseltresors. Weitere Informationen finden Sie unten im Beispiel C. Wenn die Anmeldeinformationen eine Shared Access Signature (SAS) verwenden, lautet **IDENTITY** *SHARED ACCESS SIGNATURE*. Siehe Beispiel D.
+IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Wenn die Anmeldeinformationen zum Zugreifen auf Azure Key Vault verwendet werden, ist **IDENTITY** der Name des Schlüsseltresors. Weitere Informationen finden Sie unten im Beispiel C. Wenn die Anmeldeinformationen eine Shared Access Signature (SAS) verwenden, lautet **IDENTITY***SHARED ACCESS SIGNATURE*. Siehe Beispiel D.
 
 > [!IMPORTANT]
 > Azure SQL-Datenbank unterstützt nur Azure Key Vault- und Shared Access Signature-Identitäten. Windows-Benutzeridentitäten werden nicht unterstützt.
@@ -69,7 +69,7 @@ Wenn die Anmeldeinformationen zum Zugreifen auf Azure Key Vault verwendet werden
 
 OR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name* Gibt den Namen eines *EKM-Anbieters (Enterprise Key Management)* an. Weitere Informationen zum Verwalten von Schlüsseln finden Sie unter [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Falls für IDENTITY ein Windows-Benutzer angegeben ist, kann der geheime Bereich das Kennwort enthalten. Der geheime Bereich wird mithilfe des Diensthauptschlüssels verschlüsselt. Falls der Diensthauptschlüssel neu generiert wird, wird der geheime Bereich mithilfe des neuen Diensthauptschlüssels neu verschlüsselt.
 
@@ -99,7 +99,7 @@ GO
 
 ### <a name="b-creating-a-credential-for-ekm"></a>B. Erstellen von Anmeldeinformationen für EKM
 
-Im folgenden Beispiel wird ein zuvor erstelltes Konto namens `User1OnEKM` auf einem EKM-Modul mithilfe der EKM-Verwaltungstools mit einem Standardkontotyp und Kennwort verwendet. Das **sysadmin**-Konto auf dem Server erstellt die Anmeldeinformationen, mit denen die Verbindung mit dem EKM-Konto hergestellt wird, und weist diese dem `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konto zu:
+Im folgenden Beispiel wird ein zuvor erstelltes Konto namens `User1OnEKM` auf einem EKM-Modul mithilfe der EKM-Verwaltungstools mit einem Standardkontotyp und Kennwort verwendet. Das **sysadmin**-Konto auf dem Server erstellt die Anmeldeinformationen, mit denen die Verbindung mit dem EKM-Konto hergestellt wird, und weist diese dem `User1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konto zu:
 
 ```sql
 CREATE CREDENTIAL CredentialForEKM
@@ -108,13 +108,8 @@ CREATE CREDENTIAL CredentialForEKM
 GO
 
 /* Modify the login to assign the cryptographic provider credential */
-ALTER LOGIN Login1
+ALTER LOGIN User1
 ADD CREDENTIAL CredentialForEKM;
-
-/* Modify the login to assign a non cryptographic provider credential */
-ALTER LOGIN Login1
-WITH CREDENTIAL = AlterEgo;
-GO
 ```
 
 ### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>C. Erstellen von Anmeldeinformationen für EKM unter Verwendung des Azure-Schlüsseltresors
@@ -146,7 +141,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;');
 ```
 
-### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Erstellen von Anmeldeinformationen mithilfe eines SAS-Token
+### <a name="d-creating-a-credential-using-a-sas-token"></a>D: Erstellen von Anmeldeinformationen mithilfe eines SAS-Token
 
 **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658) und verwaltete Instanzen in Azure SQL-Datenbank.
 

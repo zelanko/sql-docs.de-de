@@ -28,10 +28,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72916019"
 ---
 # <a name="database-checkpoints-sql-server"></a>Datenbankprüfpunkte (SQL Server)
@@ -43,15 +43,15 @@ Aus Leistungsgründen führt [!INCLUDE[ssDE](../../includes/ssde-md.md)] Änderu
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] unterstützt mehrere Typen von Prüfpunkten. Dazu gehören "automatisch", "indirekt", "manuell" und "intern". In der folgenden Tabelle werden die **Prüfpunkttypen**zusammengefasst:
   
-|Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] -Schnittstelle|und Beschreibung|  
+|Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] -Schnittstelle|Beschreibung|  
 |----------|----------------------------------|-----------------|  
 |Automatic|EXEC sp_configure **'** Wiederherstellungsintervall **','** _seconds_ **'**|Wird automatisch im Hintergrund ausgegeben, um das obere, mittels Serverkonfigurationsoption **Wiederherstellungsintervall** vorgeschlagene Zeitlimit zu erfüllen. Automatische Prüfpunkte werden vollständig ausgeführt.  Automatische Prüfpunkte werden auf Basis der Anzahl an ausstehenden Schreibvorgängen gedrosselt. Zudem hängt die Drosselung auch davon ab, ob [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Erhöhung der Schreiblatenz auf über 50 Millisekunden erkennt.<br /><br /> Weitere Informationen finden Sie unter [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indirekt|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=** _\_Zielwiederherstellungszeit\__ { SECONDS &#124; MINUTES }|Wird im Hintergrund ausgegeben, um eine benutzerdefinierte Zielwiederherstellungszeit für eine bestimmte Datenbank zu erfüllen. Ab [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]ist der Standardwert 1 Minute. Der Standard für ältere Versionen ist 0 und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt.<br /><br /> Weitere Informationen finden Sie unter [Ändern der Zielwiederherstellungszeit einer Datenbank &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Indirekt|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=** _Zielwiederherstellungszeit_ { SECONDS &#124; MINUTES }|Wird im Hintergrund ausgegeben, um eine benutzerdefinierte Zielwiederherstellungszeit für eine bestimmte Datenbank zu erfüllen. Ab [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]ist der Standardwert gleich 1 Minute. Der Standard für ältere Versionen ist 0 und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt.<br /><br /> Weitere Informationen finden Sie unter [Ändern der Zielwiederherstellungszeit einer Datenbank &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)konfiguriert wird.|  
 |Manuell|CHECKPOINT [*checkpoint_duration*]|Wird ausgegeben, wenn Sie einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -CHECKPOINT-Befehl ausführen. Der manuelle Prüfpunkt tritt in der aktuellen Datenbank für die Verbindung auf. Standardmäßig werden manuelle Prüfpunkte vollständig ausgeführt. Das Drosseln erfolgt auf die gleiche Weise wie für automatische Prüfpunkte.  Optional gibt der *checkpoint_duration* -Parameter die Anforderung an, welchen Zeitraum in Sekunden ein Prüfpunkt benötigen darf, bis er abgeschlossen ist.<br /><br /> Weitere Informationen finden Sie unter [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
 |Intern|Keine.|Wird von verschiedenen Servervorgängen wie Sicherung und Erstellung einer Datenbank-Momentaufnahme ausgegeben. So wird gewährleistet, dass Datenträgerabbilder dem aktuellen Protokollstatus entsprechen.|  
   
 > [!NOTE]
-> **-k** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht Datenbankadministratoren, das Prüfpunkt-E/A-Verhalten auf Basis des Durchsatzes des E/A-Teilsystems für einige Typen von Prüfpunkten zu drosseln. Die Setupoption **-k** gilt für automatische Prüfpunkte sowie für andere nicht gedrosselte manuelle und interne Prüfpunkte.  
+> Die erweiterte Setupoption **-k** von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht Datenbankadministratoren das Drosseln des E/A-Prüfpunktverhaltens basierend auf dem Durchsatz des E/A-Teilsystems für einige Arten von Prüfpunkten. Die Setupoption **-k** gilt für automatische Prüfpunkte sowie für andere nicht gedrosselte manuelle und interne Prüfpunkte.  
   
  Für automatische, manuelle und interne Prüfpunkte muss nur für Änderungen, die nach dem letzten Prüfpunkt erfolgt sind, während der Datenbankwiederherstellung ein Rollforward ausgeführt werden. Dadurch verringert sich die Zeit, die zur Wiederherstellung einer Datenbank erforderlich ist.  
   
@@ -65,7 +65,7 @@ Aus Leistungsgründen führt [!INCLUDE[ssDE](../../includes/ssde-md.md)] Änderu
 |----------------------------|-------------------------|-----------------------------|  
 |0|0|Automatische Prüfpunkte, deren Zielwiederherstellungsintervall 1 Minute beträgt.|  
 |0|>0|Automatische Prüfpunkte, deren Zielwiederherstellungsintervall anhand der benutzerdefinierten Einstellung der Option **sp_configure 'recovery interval'** angegeben wurde.|  
-|>0|Nicht verfügbar.|Indirekte Prüfpunkte, deren Zielwiederherstellungszeit anhand der TARGET_RECOVERY_TIME-Einstellung definiert ist (in Sekunden ausgedrückt).|  
+|>0|Nicht zutreffend|Indirekte Prüfpunkte, deren Zielwiederherstellungszeit anhand der TARGET_RECOVERY_TIME-Einstellung definiert ist (in Sekunden ausgedrückt).|  
   
 ##  <a name="AutomaticChkpt"></a> Automatische Prüfpunkte  
 Ein automatischer Prüfpunkt tritt auf, sobald die Anzahl von Protokolldatensätzen die Anzahl der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Schätzungen erreicht, die während der Zeit verarbeitet werden können, die in der Serverkonfigurationsoption **Wiederherstellungsintervall** angegeben ist. Weitere Informationen finden Sie unter [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).
@@ -130,7 +130,7 @@ Interne Prüfpunkte werden von verschiedenen Serverkomponenten generiert, um so 
 ##  <a name="RelatedTasks"></a> Related tasks  
  **So ändern Sie das Wiederherstellungsintervall auf einer Serverinstanz**  
   
--   [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
+-   [Konfigurieren des Wiederherstellungsintervalls (Serverkonfigurationsoption)](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
   
  **So konfigurieren Sie indirekte Prüfpunkte auf einer Datenbank**  
   
@@ -140,7 +140,7 @@ Interne Prüfpunkte werden von verschiedenen Serverkomponenten generiert, um so 
   
 -   [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
 [Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
  

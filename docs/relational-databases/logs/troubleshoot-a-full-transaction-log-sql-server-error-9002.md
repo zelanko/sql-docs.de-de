@@ -19,17 +19,17 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ad8b68338987256f1c7fa01f1f0d56242cef6a7f
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056074"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Problembehandlung bei vollen Transaktionsprotokollen (SQL Server-Fehler 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema werden mögliche Lösungen für volle Transaktionsprotokolle erörtert und Vermeidungsstrategien vorgeschlagen. 
   
-  Wenn das Transaktionsprotokoll voll ist, wird von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] der **Fehler 9002**ausgegeben. Das Protokoll kann sich füllen, wenn die Datenbank online ist oder wiederhergestellt wird. Wenn das Protokoll gefüllt wird, während die Datenbank online ist, bleibt die Datenbank online, sie kann aber nur gelesen und nicht aktualisiert werden. Wird das Protokoll während einer Wiederherstellung gefüllt, wird die Datenbank von [!INCLUDE[ssDE](../../includes/ssde-md.md)] als RESOURCE PENDING (ausstehende Ressource) markiert. In beiden Fällen ist eine Aktion seitens des Benutzers erforderlich, um Speicherplatz im Protokoll verfügbar zu machen.  
+  Wenn das Transaktionsprotokoll voll ist, wird von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] der **Fehler 9002**ausgegeben. Das Protokoll kann sich füllen, wenn die Datenbank online ist oder wiederhergestellt wird. Falls das Protokoll während des Onlinezustands der Datenbank voll ist, bleibt die Datenbank online, aber sie kann nur gelesen und nicht aktualisiert werden. Wird das Protokoll während einer Wiederherstellung gefüllt, wird die Datenbank von [!INCLUDE[ssDE](../../includes/ssde-md.md)] als RESOURCE PENDING (ausstehende Ressource) markiert. In beiden Fällen ist eine Aktion seitens des Benutzers erforderlich, um Speicherplatz im Protokoll verfügbar zu machen.  
   
 ## <a name="responding-to-a-full-transaction-log"></a>Mögliche Vorgehensweisen bei einem vollen Transaktionsprotokoll  
  Die richtige Reaktion auf ein volles Transaktionsprotokoll hängt zum Teil davon ab, aufgrund welcher Bedingungen das Protokoll gefüllt wurde. 
@@ -110,8 +110,8 @@ Mithilfe dieser Anweisung können Sie die Benutzer-ID des Transaktionsbesitzers 
 ### <a name="kill-a-transaction"></a>Abbrechen einer Transaktion
 Manchmal müssen Sie den Prozess einfach nur beenden. Möglicherweise müssen Sie dazu die [KILL](../../t-sql/language-elements/kill-transact-sql.md) -Anweisung verwenden. Verwenden Sie diese Anweisung jedoch sehr vorsichtig, besonders wenn gerade kritische Prozesse ausgeführt werden, die Sie nicht abbrechen möchten. Weitere Informationen finden Sie unter [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md).
 
-## <a name="see-also"></a>Siehe auch  
-[KB-Supportartikel – Ein Transaktionsprotokoll wächst unerwartet in SQL Server oder wird voll](https://support.microsoft.com/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+[KB-Supportartikel: Ein Transaktionsprotokoll wächst unerwartet in SQL Server oder wird voll](https://support.microsoft.com/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af2e1ff51864215d3f5709463ab8d49e6737747e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768760"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285709"
 ---
 # <a name="replication-programming-concepts"></a>Konzepte für die Replikationsprogrammierung
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68768760"
   
 -   Die Replikationstopologien und ihre Ausrichtung auf die Replikationstypen.  
   
- Wenn [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation neu für Sie ist, finden Sie unter [Replikationstypen](../../../relational-databases/replication/types-of-replication.md) weitere Informationen.  
+ Wenn die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation noch neu für Sie ist, finden Sie unter [Replikationstypen](../../../relational-databases/replication/types-of-replication.md) weitere Informationen.  
   
 ## <a name="defining-application-functionality"></a>Definieren der Anwendungsfunktionen  
  Nachdem Sie die Replikationstopologie definiert haben, bestimmen Sie die Funktionen, die die Anwendung bieten soll. Diese Funktionen können von einem Skript zur Synchronisierung eines Abonnements über eine Anwendung mit einer Benutzerschnittstelle bis hin zur Konfiguration der Replikation reichen. Die Replikation unterstützt die folgenden allgemeinen Programmierungstasks:  
@@ -106,7 +106,7 @@ ms.locfileid: "68768760"
 ## <a name="choose-the-appropriate-replication-programming-interface"></a>Auswählen der geeigneten Programmierschnittstelle für die Replikation  
  Der letzte Planungsschritt besteht darin, die geeignete Programmierschnittstelle für die Replikation auszuwählen, die die gewünschten Replikationsfunktionen für die ausgewählte Entwicklungsumgebung implementiert. In der folgenden Tabelle sind die verfügbaren Programmierschnittstellen für die Replikation aufgeführt.  
   
-|Schnittstelle|Umgebung|Verwendungszweck|  
+|Schnittstelle|Environment|Verwendung|  
 |---------------|-----------------|----------|  
 |[Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)|Verwalteter Code|Verwaltung, Überwachung und Synchronisierung|  
 |<xref:Microsoft.SqlServer.Replication>|Verwalteter Code|Synchronisierung|  

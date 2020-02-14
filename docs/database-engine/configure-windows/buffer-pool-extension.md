@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9ee002f5c835f8a6a69aa6afe69e1838c56c24e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013064"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918352"
 ---
 # <a name="buffer-pool-extension"></a>Pufferpoolerweiterung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68013064"
  Solid State Drive (SSD)  
  Solid State Drives speichern Daten im Arbeitsspeicher (RAM) in einer persistenten Weise. Weitere Informationen finden Sie unter [dieser Definition](https://en.wikipedia.org/wiki/Solid-state_drive).  
   
- Puffer  
+ Buffer  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist ein Puffer eine 8-KB-Seite im Arbeitsspeicher. Dies entspricht der Größe einer Datenseite oder Indexseite. Der Puffercache ist ebenfalls in Seiten von je 8 KB unterteilt. Eine Seite verbleibt im Puffercache, bis der Pufferbereich vom Puffer-Manager zum Laden weiterer Daten benötigt wird. Daten werden nur dann zurück auf den Datenträger geschrieben, wenn sie geändert wurden. Diese geänderten Seiten im Arbeitsspeicher werden als modifizierte Seiten bezeichnet. Eine Seite gilt als nicht modifiziert, wenn sie ihrem Datenbankbild auf dem Datenträger entspricht. Daten im Puffercache können mehrfach geändert werden, bevor sie zurück auf den Datenträger geschrieben werden.  
   
  Pufferpool  
@@ -64,7 +64,7 @@ ms.locfileid: "68013064"
   
  Die folgende Abbildung zeigt eine allgemeine Architekturübersicht des Pufferpools im Vergleich zu anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten.  
   
- ![Architektur der SSD-Pufferpoolerweiterung](../../database-engine/configure-windows/media/ssdbufferpoolextensionarchitecture.gif "SSD Buffer Pool Extension Architecture")  
+ ![Architektur der SSD-Pufferpoolerweiterung](../../database-engine/configure-windows/media/ssdbufferpoolextensionarchitecture.gif "Architektur der SSD-Pufferpoolerweiterung")  
   
  Wenn sie aktiviert ist, gibt die Pufferpoolerweiterung die Größe und den Dateipfad der Pufferpoolzwischenspeicherdatei auf dem SSD an. Diese Datei ist ein zusammenhängender Speicherbereich auf dem SSD und wird beim Starten der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]statisch konfiguriert. Änderungen an den Dateikonfigurationsparametern können nur ausgeführt werden, wenn die Pufferpoolerweiterungsfunktion deaktiviert ist. Wenn die Pufferpoolerweiterung deaktiviert wird, werden alle zugehörigen Konfigurationseinstellungen aus der Registrierung entfernt. Die Pufferpoolerweiterungsdatei wird nach dem Herunterfahren der SQL Server-Instanz gelöscht.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "68013064"
   
  Die folgenden XEvents sind verfügbar.  
   
-|XEvent|und Beschreibung|Parameter|  
+|XEvent|Beschreibung|Parameter|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|Wird ausgelöst, wenn eine Seite oder eine Gruppe von Seiten aus dem Pufferpool in die Pufferpoolerweiterungsdatei geschrieben werden.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_read|Wird ausgelöst, wenn eine Seite aus der Pufferpoolerweiterungsdatei in den Pufferpool gelesen wird.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  

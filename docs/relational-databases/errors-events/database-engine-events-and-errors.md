@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29f9245fcb3f827c51060834a37fbc3c01aa5e9b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 941dbe32355ef158f0a0a07c16e5181653738cb1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75247320"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918190"
 ---
 # <a name="database-engine-errors"></a>Fehler der Datenbank-Engine
 
@@ -22,7 +22,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors--2-to-999"></a>Fehler –2 bis 999
 
-| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
+| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   [–2](mssqlserver-neg2-database-engine-error.md) |       |       |   Timeout ist abgelaufen. Das Timeout ist vor dem Beenden des Vorgangs eingetreten, oder der Server reagiert nicht. (Microsoft SQL Server, Fehler: –2)    |
 |   [-1](mssqlserver-1-database-engine-error.md)    |       |       |   Fehler beim Herstellen einer Verbindung mit dem Server. Beim Herstellen einer Verbindung mit SQL Server 2005 kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. (Anbieter: SQL-Netzwerkschnittstellen, Fehler: 28 - Server unterstützt das angeforderte Protokoll nicht) (Microsoft SQL Server, Fehler: -1).  |
@@ -1010,7 +1010,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-2000-to-2999"></a>Fehler 2.000 bis 2.999
 
-| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
+| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   Nein  |   Für die Replikation kann keine Prozedur mit einer Gruppennummer erstellt werden, die höher als 1 ist.   |
 |   2003    |   16  |   Nein  |   Für Prozeduren mit einer Gruppennummer sind keine Parameter mit XML- oder CLR-Datentypen zulässig. Der "%.*ls"-Parameter der "%.* ls"-Prozedur weist den "%ls"-Typ auf.   |
@@ -1996,7 +1996,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   4347    |   16  |   Nein  |   Die aktuelle Wiederherstellungssequenz wurde zuvor während des Übergangs zum Onlinestatus unterbrochen. Mithilfe von RESTORE DATABASE WITH RECOVERY kann der Übergang zum Onlinestatus abgeschlossen werden. |
 |   4348    |   16  |   Nein  |   Fehler bei der Onlinewiederherstellung der '%ls'-Datenbank. Führen Sie stattdessen bei Bedarf eine Offlinewiederherstellung aus. Eine Offlinewiederherstellung wird mit BACKUP LOG WITH NORECOVERY initiiert.  |
 |   4349    |   16  |   Nein  |   Das Protokoll in diesem Sicherungssatz beginnt bei LSN %.*ls. Diese liegt für die Anwendung auf die Datenbank nicht weit genug zurück. Für diese Wiederherstellungssequenz muss das Protokoll so initialisiert werden, dass es bei LSN %.* ls beginnt. Geben Sie die RESTORE LOG-Anweisung mit einer früheren Protokollsicherung erneut aus.   |
-|   4350    |   16  |   Nein  |   Die Liste der Seiten für die RESTORE PAGE-Anweisung weist ein falsches Format auf. Vor dem Problem %d wurden die Seiten richtig identifiziert. Das Problem trat bei Zeichenoffset %d auf. Überprüfen Sie, ob alle Seiten durch numerische <file>:<page>-Paare identifiziert sind, wobei die Paare durch Trennzeichen voneinander getrennt werden müssen. Beispiel:  PAGE="1:57,2:31".   |
+|   4350    |   16  |   Nein  |   Die Liste der Seiten für die RESTORE PAGE-Anweisung weist ein falsches Format auf. Vor dem Problem %d wurden die Seiten richtig identifiziert. Das Problem trat bei Zeichenoffset %d auf. Überprüfen Sie, ob alle Seiten durch numerische <file>:<page>-Paare identifiziert sind, wobei die Paare durch Trennzeichen voneinander getrennt werden müssen. Beispiel: PAGE="1:57,2:31".   |
 |   4351    |   16  |   Nein  |   Sicherungen, die in früheren Versionen von SQL Server erstellt wurden, werden von fn_dump_dblog nicht unterstützt. |
 |   4352    |   16  |   Nein  |   RESTORE LOG wird von dieser Datensicherung nicht unterstützt, da die Datei '%ls' veraltet ist. Verwenden Sie eine reguläre Protokollsicherung, um die Wiederherstellungssequenz fortzusetzen.    |
 |   4353    |   16  |   Nein  |   Für die Datei '%.*ls' wurden widersprüchliche Umsetzungen angegeben. Für einen beliebigen logischen Dateinamen sollte nur eine einzige WITH MOVE-Klausel angegeben werden.    |
@@ -2663,7 +2663,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-6000-to-6999"></a>Fehler 6.000 bis 6.999
 
-| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
+| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   6001    |   10  |   Nein  |   SHUTDOWN wartet auf den Abschluss von %d Prozess(en). |
 |   6004    |   10  |   Nein  |   Der Benutzer besitzt nicht die Berechtigung zum Ausführen dieser Aktion.   |
@@ -4598,7 +4598,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-10000-to-10999"></a>Fehler 10.000 bis 10.999
 
-| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
+| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   10000   |   16  |   Nein  |   Unbekannter Anbieterfehler. |
 |   [10001](mssqlserver-10001-database-engine-error.md) |   16  |   Nein  |   Der Anbieter hat einen unerwarteten schwerwiegenden Fehler gemeldet.   |
@@ -5871,7 +5871,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   14689   |   16  |   Nein  |   Ein Sammlungssatz kann nicht gestartet werden, wenn das Verwaltungs-Data Warehouse nicht konfiguriert ist. Führen Sie das instmdw.sql-Skript aus, um das Verwaltungs-Data Warehouse zu erstellen und zu konfigurieren. |
 |   14690   |   16  |   Nein  |   Diese Prozedur kann nicht durchgeführt werden, wenn der Sammler aktiviert ist. Deaktivieren Sie den Sammler, und wiederholen Sie den Vorgang.  |
 |   14691   |   16  |   Nein  |   Der Status des Sammlers darf nicht NULL sein. Dies deutet möglicherweise auf eine interne Beschädigung der Konfigurationsdaten des Sammlers hin.   |
-|   14692   |   16  |   Nein  |   Keine ausreichenden Privilegien zum Starten des Sammlungssatzes %s. Nur ein Mitglied der festen Serverrolle 'sysadmin' kann einen Sammlungssatz ohne SQL Server Agent-Proxy starten. Hängen Sie einen SQL Server Agent-Proxy an den Sammlungssatz an, bevor Sie den Vorgang wiederholen.    |
+|   14692   |   16  |   Nein  |   Keine ausreichenden Privilegien zum Starten des Sammlungssatzes „%s“. Nur ein Mitglied der festen Serverrolle 'sysadmin' kann einen Sammlungssatz ohne SQL Server Agent-Proxy starten. Hängen Sie einen SQL Server Agent-Proxy an den Sammlungssatz an, bevor Sie den Vorgang wiederholen.    |
 |   14693   |   16  |   Nein  |   Ein Sammlungssatz kann nicht ohne einen Zeitplan gestartet werden. Legen Sie einen Zeitplan für den Sammlungssatz fest.    |
 |   14694   |   16  |   Nein  |   Daten können im Modus ohne Zwischenspeicherung nicht bedarfsgesteuert für den Sammlungssatz '%s' hochgeladen werden.    |
 |   14695   |   16  |   Nein  |   Daten können im Modus mit Zwischenspeicherung nicht bedarfsgesteuert für den Sammlungssatz '%s' aufgelistet werden.   |
@@ -5897,7 +5897,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-15000-to-15999"></a>Fehler 15.000 bis 15.999
 
-| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
+| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   15001   |   16  |   Nein  |   Das '%ls'-Objekt ist nicht vorhanden oder kein gültiges Objekt für diesen Vorgang.    |
 |   15002   |   16  |   Nein  |   Die '%'-Prozedur kann in einer Transaktion nicht ausgeführt werden. |
@@ -6886,7 +6886,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-19000-to-20999"></a>Fehler 19.000 bis 20.999
 
-| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
+| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   19030   |   10  |   Ja |   Die SQL-Ablaufverfolgung mit der ID %d wurde vom Anmeldenamen "%s" gestartet.  |
 |   19031   |   10  |   Ja |   Die SQL-Ablaufverfolgung wurde beendet. Ablaufverfolgungs-ID = '%d'. Anmeldename = '%s'.  |
@@ -7997,7 +7997,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   21796   |   16  |   Nein  |   Der Eigenschaft "xactsetjobinterval" muss ein Wert größer als oder gleich 0 zugewiesen werden.  |
 |   21797   |   16  |   Nein  |   Der Agent-Auftrag kann nicht erstellt werden. "%s" muss eine gültige Windows-Anmeldung der folgenden Form sein: "MACHINE Login" oder "DOMAIN Login". Weitere Informationen finden Sie in der Dokumentation zu '%s'.    |
 |   21798   |   16  |   Nein  |   Die administrative Prozedur für die Replikation kann nicht ausgeführt werden. Der '%s'-Agent-Auftrag muss vor dem Fortsetzen des Vorgangs über '%s' hinzugefügt werden. Weitere Informationen finden Sie in der Dokumentation zu '%s'.   |
-|   21799   |   16  |   Nein  |   Der %s-Agent wurde für den %s-Verleger, %s-Datenbank, %s-Veröffentlichung, nicht gefunden. Erstellen Sie den Agent mit der entsprechenden Prozedur: 'sp_addpublication_snapshot', 'sp_addlogreader_agent' oder 'sp_addqreader_agent'.  |
+|   21799   |   16  |   Nein  |   Der %s-Agent wurde für den %s-Verleger, die %s-Datenbank und die %s-Veröffentlichung nicht gefunden. Erstellen Sie den Agent mit der entsprechenden Prozedur: 'sp_addpublication_snapshot', 'sp_addlogreader_agent' oder 'sp_addqreader_agent'.   |
 |   21800   |   16  |   Nein  |   Das gemeinsame Generierungswasserzeichen in diesem Replikat ist ungültig, da es nicht vorhanden ist oder da möglicherweise für Metadaten für Änderungen, die noch nicht weitergegeben wurden, ein Cleanup ausgeführt wurde. |
 |   21801   |   16  |   Nein  |   Die gespeicherte Prozedur 'sp_createagentparameter' konnte einen oder mehrere Parameter nicht der Systemtabelle 'msdb.dbo.MSagentparameterlist' hinzufügen. Überprüfen Sie, ob 'sp_createagentparameter' und SQL Server beim Ausführen von 'sp_createagentparameter' Fehler zurückgegeben haben.    |
 |   21802   |   16  |   Nein  |   Der angegebene Agentparameterwert kann vom Agentprofil-Erstellungsprozess nicht überprüft werden. '%s' ist kein gültiger Wert für den '%s'-Parameter. Der Wert muss eine ganze Zahl kleiner oder gleich '%d' sein. Überprüfen Sie, ob die Replikation ordnungsgemäß installiert ist.   |
@@ -8077,7 +8077,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-22000-to-22999"></a>Fehler 22.000 bis 22.999
 
-| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
+| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   22101   |   16  |   Nein  |   Der für das change_columns-Argument der CHANGE_TRACKING_IS_COLUMN_IN_MASK-Funktion angegebene Wert ist nicht gültig. Bei dem Wert muss es sich um eine von der CHANGETABLE(CHANGES ...)-Funktion zurückgegebene Bitmaske handeln.   |
 |   22102   |   16  |   Nein  |   Die angegebenen Argumente sind nicht gültig für die CHANGES-Option der CHANGETABLE-Funktion.    |
@@ -8332,7 +8332,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-23000-to-25999"></a>Fehler 23.000 bis 25.999
 
-| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
+| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   23003   |   17  |   Nein  |   Die WinFS-Freigabeberechtigungen sind beschädigt {Fehler: %d}. Versuchen Sie, die Freigabeberechtigungen erneut festzulegen. |
 |   23100   |   16  |   Nein  |   Ungültige(r) Eingabeparameter. |
@@ -8521,7 +8521,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-26000-to-27999"></a>Fehler 26.000 bis 27.999
 
-| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
+| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   26010   |   10  |   Ja |   Der Server konnte das zum Initiieren einer SSL-Verbindung benötigte Zertifikat nicht laden. Folgender Fehler wurde zurückgegeben: %#x. Überprüfen Sie, ob die Zertifikate gültig sind. |
 |   26011   |   16  |   Ja |   Der Server konnte die Verschlüsselung wegen eines Problems bei einer Sicherheitsbibliothek nicht initialisieren. Möglicherweise fehlt die Sicherheitsbibliothek. Überprüfen Sie, ob 'security.dll' auf dem System vorhanden ist.    |
@@ -8814,7 +8814,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-31000-to-41400"></a>Fehler 31.000 bis 41.400
 
-| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
+| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   31001   |   16  |   Nein  |   Die Sitzung '%s' ist bereits vorhanden. Verwenden Sie einen anderen Sitzungsnamen.  |
 |   31002   |   16  |   Nein  |   Dieser Vorgang kann nur vom Sitzungsbesitzer ausgeführt werden.   |

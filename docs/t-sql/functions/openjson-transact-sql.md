@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 48cd04467283683cf1dc54f300b2c4ff21fb8248
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68632142"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -42,7 +42,7 @@ Verwenden Sie **OPENJSON**, um die JSON-Daten in [!INCLUDE[ssNoVersion](../../in
 >
 > Kompatibilitätsgrad 120 kann auch in einer neuen Azure SQL-Datenbank die Standardeinstellung sein.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon")[Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink")[Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ Die Tabellenwertfunktion **OPENJSON** gibt standardmäßig drei Spalten zurück,
   
 ### <a name="with_clause"></a>with_clause
   
-![Syntax für WITH-Klausel in der OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH-Syntax")
+![Syntax für die WITH-Klausel in OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH-Syntax")
 
 *with_clause* enthält eine Liste von Spalten mit Typen, die **OPENJSON** zurückgibt. Standardmäßig ordnet **OPENJSON** Schlüssel im *jsonExpression* den Spaltennamen in *with_clause* zu (in diesem Fall setzen Zuordnungen von Schlüsseln voraus, dass die Groß-/Kleinschreibung beachtet wird). Wenn ein Spaltenname und ein Schlüsselname nicht übereinstimmen, können Sie einen optionalen *column_path* bereitstellen. Dabei handelt es sich um einen [JSON-Pfadausdruck](../../relational-databases/json/json-path-expressions-sql-server.md), der auf einen Schlüssel innerhalb von *jsonExpression* verweist. 
 
@@ -91,7 +91,7 @@ SELECT * FROM OpenJson(@json);
 
 **Ergebnisse:**
 
-| Schlüssel                                | Wert                 | Typ |
+| Schlüssel                                | value                 | type |
 | :--                                | :----                 | :--- |
 | String_value                       | John                  | 1 |
 | DoublePrecisionFloatingPoint_value | 45                    | 2 |
@@ -109,7 +109,7 @@ SELECT * FROM OpenJson(@json);
 
 Ist ein optionaler JSON-Pfadausdruck, der auf ein Objekt oder ein Array in *jsonExpression* verweist. **OPENJSON** sucht im JSON-Text an der angegebenen Position und analysiert nur das referenzierte Fragment. Weitere Informationen finden Sie unter [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).
 
-In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] können Sie eine Variable als Wert des *path* bereitstellen.
+In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] können Sie eine Variable als Wert von *path* bereitstellen.
   
 Das folgende Beispiel gibt ein geschachteltes Objekt durch Angabe des *path* zurück:  
 
@@ -152,7 +152,7 @@ Definiert das Ausgabeschema explizit, das die **OPENJSON**-Funktion zurückgibt.
 Ist der Datentyp für die Ausgabespalte.  
 
 > [!NOTE]
-> Wenn Sie auch die **AS JSON**-Option verwenden, muss die Spalte *Typ* `NVARCHAR(MAX)` sein.
+> Wenn Sie auch die **AS JSON**-Option verwenden, muss die Spalte *Typ*`NVARCHAR(MAX)` sein.
   
 *column_path*  
 Ist der JSON-Pfad, der die zurückzugebende Eigenschaft in der angegebenen Spalte angibt. Weitere Informationen finden Sie in der Beschreibung der *path*-Parameter weiter oben in diesem Thema.  
@@ -214,7 +214,7 @@ WITH (
   
 **Ergebnisse**
   
-|Number|date|Customer|Quantity|Order|  
+|Number|Date|Kunde|Menge|Order|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
@@ -225,12 +225,12 @@ Die Spalten, die die OPENJSON-Funktion zurückgibt, hängen von der WITH-Option 
 1. Wenn Sie OPENJSON mit dem Standardschema aufrufen, und kein explizites Schema in der WITH-Klausel angeben, gibt die Funktion eine Tabelle mit den folgenden Spalten zurück:  
     1.  **Schlüssel**. Ein nvarchar(4000)-Wert, der den Namen der angegebenen Eigenschaft oder den Index des Elements im angegebenen Array enthält. Die Schlüsselspalte verfügt über eine BIN2-Sortierung.  
     2.  **Wert**. Ein nvarchar(max)-Wert, der den Wert der Eigenschaft enthält. Die Wertspalte erbt die Sortierung aus *jsonExpression*.
-    3.  **Typ**. Ein int-Wert, der den Typ des Werts enthält. Die **Typ**-Spalte wird nur zurückgegeben, wenn Sie OPENJSON mit dem Standardschema verwenden. Die Typspalte besitzt einen der folgenden Werte:  
+    3.  **Art:** Ein int-Wert, der den Typ des Werts enthält. Die **Typ**-Spalte wird nur zurückgegeben, wenn Sie OPENJSON mit dem Standardschema verwenden. Die Typspalte besitzt einen der folgenden Werte:  
   
         |Wert der Typspalte|JSON-Datentyp|  
         |------------------------------|--------------------|  
         |0|NULL|  
-        |1|Zeichenfolge|  
+        |1|string|  
         |2|INT|  
         |3|TRUE/FALSE|  
         |4|array|  
@@ -375,7 +375,7 @@ DECLARE @json NVARCHAR(max)  = N'{
         dateOfBirth datetime2, spouse nvarchar(50))
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
  [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Konvertieren von JSON-Daten in Zeilen und Spalten mit OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   

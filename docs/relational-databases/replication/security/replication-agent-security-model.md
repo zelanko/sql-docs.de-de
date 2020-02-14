@@ -21,10 +21,10 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68768469"
 ---
 # <a name="replication-agent-security-model"></a>Sicherheitsmodell des Replikations-Agents
@@ -86,7 +86,7 @@ Das Sicherheitsmodell des Replikations-Agents ist für verwaltete Azure SQL-Date
   
  Wenn Sie die Replikation konfigurieren, geben Sie Konten an, unter denen die Agents ausgeführt werden sollen. Sämtliche Auftragsschritte werden jedoch im Sicherheitskontext eines *Proxys*ausgeführt, somit führt die Replikation folgende Zuordnungen für die von Ihnen angegebenen Agentkonten intern aus:  
   
--   Das Konto wird zunächst mithilfe des [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](../../../t-sql/statements/create-credential-transact-sql.md) statement. Von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Proxys werden Anmeldeinformationen zum Speichern von Informationen zu Windows-Benutzerkonten verwendet.  
+-   Das Konto wird zunächst mithilfe der [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung [CREATE CREDENTIAL](../../../t-sql/statements/create-credential-transact-sql.md) Anmeldeinformationen zugeordnet. Von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Proxys werden Anmeldeinformationen zum Speichern von Informationen zu Windows-Benutzerkonten verwendet.  
   
 -   Die gespeicherte Prozedur [sp_add_proxy](../../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md) wird aufgerufen, und die Anmeldeinformationen werden zum Erstellen eines Proxys verwendet.  
   

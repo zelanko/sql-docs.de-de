@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974361"
 ---
 # <a name="how-query-store-collects-data"></a>Erfassen von Daten im Abfragespeicher
@@ -31,7 +31,7 @@ Die Funktionsweise des SQL Server-Abfragespeichers ähnelt der von Flugdatenschr
  ![Sichten des Abfragespeicherprozesses](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **Sichtbeschreibungen**  
   
-|Sicht|und Beschreibung|  
+|Sicht|Beschreibung|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Stellt eindeutige Abfragetexte dar, die in der Datenbank ausgeführt wurden. Kommentare und Leerzeichen vor und nach dem Abfragetext werden ignoriert. Kommentare und Leerzeichen im Text werden nicht ignoriert. Jede Anweisung im Batch generiert einen separaten Abfragetexteintrag.|  
 |**sys.query_context_settings**|Stellt eindeutige Kombinationen von Einstellungen dar, die sich auf Pläne auswirken, mit denen Abfragen ausgeführt werden. Derselbe Abfragetext, der mit unterschiedlichen Einstellungen zur Planauswirkung ausgeführt wurde, erzeugt separate Abfrageeinträge im Abfragespeicher, da `context_settings_id` Teil des Abfrageschlüssels ist.|  
@@ -57,7 +57,7 @@ Die Funktionsweise des SQL Server-Abfragespeichers ähnelt der von Flugdatenschr
   
  ![Abfragespeicherprozess](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
  Zur Minimierung des E/A-Aufwands werden neue Daten im Speicher erfasst. Schreibvorgänge werden in eine Warteschlange eingereiht und danach auf den Datenträger entleert. Abfrage- und Planinformationen, die im folgenden Diagramm als „Plan Store“ (Planspeicher) angezeigt werden, werden mit minimaler Latenz geleert. Die Laufzeitstatistiken (angezeigt als „Runtime Stats“) verbleiben solange wie die `DATA_FLUSH_INTERVAL_SECONDS`-Option der `SET QUERY_STORE`-Anweisung im Arbeitsspeicher. Sie können das Dialogfeld des [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]-Abfragespeichers verwenden, um einen Wert für **Datenleerungsintervall (Minuten)** einzugeben, der intern in Sekunden konvertiert wird. 
   
  ![Plan für den Abfragespeicherprozess](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
@@ -74,9 +74,9 @@ Die Funktionsweise des SQL Server-Abfragespeichers ähnelt der von Flugdatenschr
  
  Wenn eine Sitzung beendet oder die Clientanwendung neu gestartet wird oder abstürzt, werden keine Abfragestatistiken aufgezeichnet. 
   
- ![Informationen zum Prozessplan des Abfragespeichers](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
+ ![Informationen zum Plan für den Abfragespeicherprozess](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [Bewährte Methode für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md) 

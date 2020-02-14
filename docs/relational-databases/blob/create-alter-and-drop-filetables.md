@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ed2d476be0ba9a22b42e5c7e60789a4059ea73c
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 5483c2b6d344d72eb161b303abf1bf7e56825987
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816733"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922889"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Erstellen, Ändern und Löschen von FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -175,7 +175,7 @@ GO
 |Check-Einschränkungen|Die systemdefinierten CHECK-Einschränkungen erzwingen die folgenden Anforderungen:<br /><br /> Gültige Dateinamen<br /><br /> Gültige Dateiattribute<br /><br /> Übergeordnetes Objekt muss ein Verzeichnis sein.<br /><br /> Namespacehierarchie ist während der Dateibearbeitung gesperrt.|  
   
  **Benennungskonvention für die systemdefinierten Einschränkungen**  
- Die Namen der oben beschriebenen systemdefinierten Einschränkungen weisen das Format **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** auf, wobei gilt:  
+ Die Namen der oben beschriebenen systemdefinierten Einschränkungen werden nach dem Schema **\<Einschränkungstyp>_\<Tabellenname>[\_\<Spaltenname>]\_\<Uniquifier>** benannt, wobei gilt:  
   
 -   *<constraint_type>* ist CK (CHECK-Einschränkung), DF (Standardeinschränkung), FK (Fremdschlüssel), PK (Primärschlüssel) oder UQ (UNIQUE-Einschränkung).  
   

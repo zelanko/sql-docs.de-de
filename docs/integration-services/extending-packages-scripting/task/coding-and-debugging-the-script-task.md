@@ -22,10 +22,10 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a437704946f379f38aa590ccbf53f240fad94cc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296918"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codieren und Debuggen des Skripttasks
@@ -36,7 +36,7 @@ ms.locfileid: "71296918"
   Nach dem Konfigurieren des Skripttasks im **Skripttask-Editor** schreiben Sie den benutzerdefinierten Code in der Skripttask-Entwicklungsumgebung.  
   
 ## <a name="script-task-development-environment"></a>Skripttask-Entwicklungsumgebung  
- Der Skripttask verwendet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools für Anwendungen (VSTA) als Entwicklungsumgebung für das Skript selbst.  
+ Der Skripttask verwendet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]-Tools für Anwendungen (VSTA) als Entwicklungsumgebung für das Skript selbst.  
   
  Skriptcode wird in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# geschrieben. Sie geben die Skriptsprache an, indem Sie die **ScriptLanguage**-Eigenschaft im **Skripttask-Editor** festlegen. Falls Sie lieber eine andere Programmiersprache verwenden möchten, können Sie in Ihrer bevorzugten Sprache eine benutzerdefinierte Assembly entwickeln und ihre Funktionen aus dem Code im Skripttask aufrufen.  
   
@@ -226,7 +226,7 @@ To open Help, press F1.
   
  Die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>-Klasse enthält auch einige öffentliche Elemente, die Sie wahrscheinlich nicht verwenden.  
   
-|Member|und Beschreibung|  
+|Member|Beschreibung|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|Die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>-Eigenschaft ermöglicht einen einfacheren Zugriff auf Variablen. Sie können zwar <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A> verwenden, müssen jedoch explizit Methoden aufrufen, um Variablen für das Lesen und Schreiben zu sperren und die Sperre wieder aufzuheben. Der Skripttask erledigt die Sperrsemantik für Sie, wenn Sie die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>-Eigenschaft verwenden.|  
   

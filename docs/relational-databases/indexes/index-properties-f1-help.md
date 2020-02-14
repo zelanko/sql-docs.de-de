@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68476301"
 ---
 # <a name="index-properties-f1-help"></a>Indexeigenschaften (F1-Hilfe)
@@ -95,10 +95,10 @@ ms.locfileid: "68476301"
  **NULL-Werte zulassen**  
  Zeigt an, ob in der am Indexschlüssel beteiligten Spalte NULL-Werte in der Tabellen- oder Sichtspalte gespeichert werden dürfen.  
   
- **Hinzufügen**  
- Fügt dem Indexschlüssel eine Spalte hinzu. Wählen Sie im Dialogfeld **Select Columns from** (Spalten auswählen aus) *\<table name>* Tabellenspalten aus. Dieses Dialogfeld wird angezeigt, wenn Sie auf **Hinzufügen** klicken. Wenn Sie eine Spalte ausgewählt haben, ist diese Schaltfläche bei einem räumlichen Index abgeblendet.  
+ **Add (Hinzufügen)**  
+ Fügt dem Indexschlüssel eine Spalte hinzu. Wählen Sie Tabellenspalten im Dialogfeld **Spalten auswählen aus** *\<Tabellenname>* aus, das angezeigt wird, wenn Sie auf **Hinzufügen** klicken. Wenn Sie eine Spalte ausgewählt haben, ist diese Schaltfläche bei einem räumlichen Index abgeblendet.  
   
- **Entfernen**  
+ **Remove**  
  Entfernt die ausgewählte Spalte aus der Beteiligung am Indexschlüssel.  
   
  **Nach oben**  
@@ -120,7 +120,7 @@ ms.locfileid: "68476301"
  Aktivieren Sie diese Option, um Spalten hinzuzufügen.  
   
  **Name**  
- Der Name der Spalte.  
+ Name der Spalte.  
   
  **Datentyp**  
  Der Datentyp der Spalte.  
@@ -131,7 +131,7 @@ ms.locfileid: "68476301"
  **Identität**  
  Zeigt bei Identitätsspalten **Ja** an. Wenn die Spalte keine Identitätsspalte ist, wird **Nein** angezeigt.  
   
- **Allow Nulls**  
+ **NULL-Werte zulassen**  
  Zeigt **Ja** an, wenn die Tabellendefinition für die Spalte NULL-Werte zulässt. Zeigt **Nein** an, wenn die Tabellendefinition für die Spalte keine NULL-Werte zulässt.  
 
 ##  <a name="Options"></a> Optionen auf der Seite „Optionen“
@@ -144,7 +144,7 @@ Gibt an, ob Verteilungsstatistiken automatisch neu berechnet werden. Der Standar
 **Doppelte Werte ignorieren** <br>
 Gibt die Fehlermeldung an, wenn ein Einfügevorgang versucht, doppelte Schlüsselwerte in einen eindeutigen Index einzufügen.
 
-Wahr<br>
+True<br>
 Eine Warnmeldung wird ausgegeben, wenn doppelte Schlüsselwerte in einen eindeutigen Index eingefügt werden. Es schlagen nur die Zeilen fehl, die gegen die Eindeutigkeitseinschränkung verstoßen.
 
 False<br>
@@ -181,7 +181,7 @@ Gibt an, ob der Konflikt beim Einfügen der letzten Seite optimiert werden soll.
 **In tempdb sortieren**<br>
 Gibt an, ob temporäre Ergebnisse des Sortierens in tempdb gespeichert werden sollen.
 
-Wahr<br>
+True<br>
 Die Zwischenergebnisse von Sortierungen, mit denen der Index erstellt wird, werden in tempdb gespeichert. Diese Option verringert u. U. den Zeitaufwand, der mit der Erstellung eines Indexes verbunden ist, wenn sich tempdb auf einem anderen Datenträgersatz befindet als die Benutzerdatenbank. Sie erhöht jedoch den Betrag an Speicherplatz, der während der Indexerstellung verwendet wird.
 
 False<br>
@@ -196,7 +196,7 @@ Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Inde
 **Index mit Leerstellen auffüllen**<br>
 Gibt die Auffüllung von Indizes an.
 
-Wahr<br>
+True<br>
 Der Prozentsatz des mit „fillfactor“ angegebenen freien Speicherplatzes wird für die Zwischenebenenseiten des Indexes angewendet.
 
 „False“ oder „fillfactor“ sind nicht angegeben<br>
@@ -242,16 +242,16 @@ Die Zwischenebenenseiten sind nahezu vollständig aufgefüllt. Allerdings ist au
   
  In dem Bereich werden die Koordinaten **(** _X-min_ **,** _Y-min_ **)** und **(** _X-max_ **,** _Y-max_ **)** des umgebenden Felds angezeigt. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ **geometry** erstellen.  
   
- **X-min**  
+ **Minimaler X-Wert**  
  Die X-Koordinate der unteren linken Ecke des umgebenden Felds.  
   
- **Y-min**  
+ **Minimaler Y-Wert**  
  Die Y-Koordinate der unteren linken Ecke des umgebenden Felds.  
   
- **X-max**  
+ **Maximaler X-Wert**  
  Die X-Koordinate der oberen rechten Ecke des umgebenden Felds.  
   
- **Y-max**  
+ **Maximaler Y-Wert**  
  Die Y-Koordinate der oberen rechten Ecke des umgebenden Felds.  
   
 ### <a name="general"></a>Allgemein  
@@ -296,7 +296,7 @@ Die Zwischenebenenseiten sind nahezu vollständig aufgefüllt. Allerdings ist au
  Auf dieser Seite können Sie das Filterprädikat für einen gefilterten Index eingeben. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  **Filterausdruck**  
- Definiert, welche Datenzeilen in den gefilterten Index eingeschlossen werden sollen. Beispiel: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ Definiert, welche Datenzeilen in den gefilterten Index eingeschlossen werden sollen. Zum Beispiel, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Festlegen von Indexoptionen](../../relational-databases/indexes/set-index-options.md)   

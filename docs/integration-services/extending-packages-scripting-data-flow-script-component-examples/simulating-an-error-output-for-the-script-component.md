@@ -16,10 +16,10 @@ ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 318a7302d87e029f45d6e9202f587473210e0976
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296456"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Simulieren einer Fehlerausgabe für die Skriptkomponente
@@ -42,7 +42,7 @@ ms.locfileid: "71296456"
   
 3.  Legen Sie auf der Seite **Skript** die **ScriptLanguage**-Eigenschaft auf die Skriptsprache fest, die Sie zum Codieren des Skripts verwenden möchten.  
   
-4.  Klicken Sie auf **Skript bearbeiten** , um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) zu öffnen.  
+4.  Klicken Sie auf **Skript bearbeiten**, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) zu öffnen.  
   
 5.  Geben Sie den folgenden Beispielcode in die **Input0_ProcessInputRow**-Methode ein, oder fügen Sie ihn mit Kopieren und Einfügen ein.  
   

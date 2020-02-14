@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095683"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
@@ -129,7 +129,7 @@ ms.locfileid: "74095683"
   
  Wenn ein Anweisungsfehler zur Laufzeit (wie etwa eine Einschränkungsverletzung) in einem Batch auftritt, führt das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] standardmäßig nur für die Anweisung ein Rollback aus, die den Fehler generiert hat. Sie können dieses Verhalten mithilfe der `SET XACT_ABORT`-Anweisung ändern. Nach dem Ausführen von `SET XACT_ABORT` ON führt jeder Anweisungsfehler zur Laufzeit dazu, dass automatisch ein Rollback für die aktuelle Transaktion ausgeführt wird. Kompilierungsfehler, wie z.B. Syntaxfehler, sind von `SET XACT_ABORT` nicht betroffen. Weitere Informationen finden Sie unter [SET XACT_ABORT &#40;Transact-SQL&#41;](../t-sql/statements/set-xact-abort-transact-sql.md).  
   
- Für den Fall, dass Fehler auftreten, sollte in den Anwendungscode eine korrigierende Aktion (`COMMIT` oder `ROLLBACK`) aufgenommen werden. Ein effizientes Tool zur Fehlerbehandlung u.a. bei Fehlern in Transaktionen ist die [!INCLUDE[tsql](../includes/tsql-md.md)]-`TRY...CATCH`-Konstruktion. Weitere Informationen mit Beispielen zu Transaktionen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md). Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] kann die `THROW`-Anweisung verwendet werden, um eine Ausnahme auszulösen und die Ausführung an einen `CATCH`-Block eines `TRY...CATCH`-Konstrukts zu übergeben. Weitere Informationen finden Sie unter [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md).  
+ Für den Fall, dass Fehler auftreten, sollte in den Anwendungscode eine korrigierende Aktion (`COMMIT` oder `ROLLBACK`) aufgenommen werden. Das [!INCLUDE[tsql](../includes/tsql-md.md)]-Konstrukt `TRY...CATCH` ist ein effektives Tool für die Fehlerbehandlung, einschließlich der Behandlung von Fehlern in Transaktionen. Weitere Informationen mit Beispielen zu Transaktionen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md). Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] kann die `THROW`-Anweisung verwendet werden, um eine Ausnahme auszulösen und die Ausführung an einen `CATCH`-Block eines `TRY...CATCH`-Konstrukts zu übergeben. Weitere Informationen finden Sie unter [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md).  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>Kompilierungs- und Laufzeitfehler im Autocommit-Modus  
  Im Autocommit-Modus entsteht hin und wieder der Eindruck, dass eine [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Instanz ein Rollback für einen gesamten Batch und nicht nur für eine einzelne SQL-Anweisung ausgeführt hat. Dies passiert, wenn es sich beim aufgetretenen Fehler um einen Kompilierungsfehler und nicht um einen Laufzeitfehler handelt. Bei einem Kompilierungsfehler wird verhindert, dass [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Ausführungsplan erstellt; somit wird keine Anweisung im Batch ausgeführt. Obwohl der Eindruck entsteht, dass für alle Anweisungen vor derjenigen, die den Fehler generiert hat, ein Rollback ausgeführt wurde, hat der Fehler bereits verhindert, dass überhaupt eine Anweisung im Batch ausgeführt wurde. Im folgenden Beispiel wird aufgrund eines Kompilierungsfehlers keine der `INSERT`-Anweisungen im dritten Batch ausgeführt. Es entsteht der Eindruck, dass für die ersten zwei `INSERT`-Anweisungen ein Rollback ausgeführt wird, obwohl sie nie ausgeführt wurden.  
@@ -278,19 +278,19 @@ GO
 ##### <a name="includessdenoversionincludesssdenoversion-mdmd-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Isolationsstufen  
  Der ISO-Standard definiert die folgenden Isolationsstufen, die alle von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] unterstützt werden:  
   
-|Isolationsebene|Definition|  
+|Isolationsstufe|Definition|  
 |---------------------|----------------|  
 |Read Uncommitted|Die niedrigste Isolationsstufe, bei der Transaktionen nur soweit isoliert werden, dass sichergestellt ist, dass keine physisch beschädigten Daten gelesen werden. Auf dieser Stufe sind Dirty Reads zulässig, d. h., eine Transaktion kann Änderungen verfolgen, die von anderen Transaktionen vorgenommen wurden und für die noch kein Commit ausgeführt wurde.|  
 |Read Committed|Ermöglicht einer Transaktion das Lesen von Daten, die zuvor von einer anderen Transaktion gelesen (nicht geändert) wurden, ohne warten zu müssen, bis die erste Transaktion abgeschlossen ist. Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] behält Schreibsperren (die für ausgewählte Daten angefordert wurden) bis zum Ende der Transaktion bei, Lesesperren werden jedoch bei Ausführung des SELECT-Vorgangs freigegeben. Dies ist die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Standardstufe.|  
 |Repeatable Read|Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] behält Lese- und Schreibsperren, die für ausgewählte Daten angefordert wurden, bis zum Ende der Transaktion bei. Da Bereichssperren jedoch nicht verwaltet werden, können Phantomlesevorgänge auftreten.|  
-|Serializable|Die höchste Stufe, auf der Transaktionen vollständig voneinander isoliert sind. Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] behält Lese- und Schreibsperren, die für ausgewählte Daten angefordert wurden, bis zur Freigabe am Ende der Transaktion bei. Bereichssperren werden angefordert, wenn ein SELECT-Vorgang eine WHERE-Bereichsklausel verwendet. Dies dient vor allem der Vermeidung von Phantomlesevorgängen.<br /><br /> **Hinweis:** DDL-Vorgänge und -Transaktionen in replizierten Tabellen schlagen möglicherweise fehl, wenn die Isolationsstufe „Serializable“ angefordert wird. Das liegt daran, dass Replikationsabfragen Hinweise verwenden, die möglicherweise mit der serialisierbaren Isolationsstufe nicht kompatibel sind.|  
+|Serialisierbar|Die höchste Stufe, auf der Transaktionen vollständig voneinander isoliert sind. Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] behält Lese- und Schreibsperren, die für ausgewählte Daten angefordert wurden, bis zur Freigabe am Ende der Transaktion bei. Bereichssperren werden angefordert, wenn ein SELECT-Vorgang eine WHERE-Bereichsklausel verwendet. Dies dient vor allem der Vermeidung von Phantomlesevorgängen.<br /><br /> **Hinweis:** DDL-Vorgänge und -Transaktionen in replizierten Tabellen schlagen möglicherweise fehl, wenn die Isolationsstufe „Serializable“ angefordert wird. Das liegt daran, dass Replikationsabfragen Hinweise verwenden, die möglicherweise mit der serialisierbaren Isolationsstufe nicht kompatibel sind.|  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt außerdem zwei zusätzliche Transaktionsisolationsstufen, bei denen die Zeilenversionsverwaltung verwendet wird. Eine davon ist eine Implementierung der Read Committed-Isolation, die andere – Snapshot – ist eine Transaktionsisolationsstufe.  
   
 |Isolationsstufe der Zeilenversionsverwaltung|Definition|  
 |------------------------------------|----------------|  
 |Read Committed Snapshot|Wenn die READ_COMMITTED_SNAPSHOT-Datenbankoption auf ON festgelegt ist, verwendet die READ COMMITTED-Isolation die Zeilenversionsverwaltung, um eine Lesekonsistenz auf der Anweisungsebene zu gewährleisten. Lesevorgänge erfordern dabei lediglich SCH-S-Sperren auf der Tabellenebene und keine Seiten- oder Zeilensperren. Das heißt, das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet die Zeilenversionsverwaltung, um jede Anweisung mit einer transaktionskonsistenten Momentaufnahme der Daten so darzustellen, wie sie zu Beginn der Anweisung vorhanden waren. Es werden keine Sperren verwendet, um die Daten vor Updates durch andere Transaktionen zu schützen. Eine benutzerdefinierte Funktion kann Daten zurückgeben, für die ein Commit ausgeführt wurde, nachdem die Anweisung mit dem UDF begonnen hat.<br /><br /> Wenn die Datenbankoption `READ_COMMITTED_SNAPSHOT` die Standardeinstellung OFF aufweist, verwendet die Read Committed-Isolation freigegebene Sperren, um zu verhindern, dass andere Transaktionen Zeilen ändern, während die aktuelle Transaktion einen Lesevorgang ausführt. Durch freigegebene Sperren wird außerdem verhindert, dass die Anweisung Zeilen, die von anderen Transaktionen geändert werden, erst nach Abschluss der anderen Transaktion lesen kann. Beide Implementierungen entsprechen der ISO-Definition der Read Committed-Isolation.|  
-|Momentaufnahme|Die Momentaufnahmeisolationsstufe verwendet die Zeilenversionsverwaltung, um die Lesekonsistenz auf der Transaktionsebene zu gewährleisten. Dabei werden durch Lesevorgänge keine Seiten- oder Zeilensperren eingerichtet, sondern lediglich SCH-S-Tabellensperren. Beim Lesen von Zeilen, die durch eine andere Transaktion geändert wurden, wird die Version der Zeile abgerufen, die zum Startzeitpunkt der Transaktion vorhanden war. Sie können die Momentaufnahmeisolation für eine Datenbank nur verwenden, wenn die `ALLOW_SNAPSHOT_ISOLATION`-Datenbankoption auf ON festgelegt wurde. Standardmäßig ist diese Option für Benutzerdatenbanken auf OFF gesetzt.<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt keine Versionsverwaltung von Metadaten. Aus diesem Grund gibt es bezüglich der DDL-Vorgänge, die in einer unter Momentaufnahmeisolation ausgeführten expliziten Transaktion ausgeführt werden, Einschränkungen. Die folgenden DDL-Anweisungen sind bei der Momentaufnahme-Isolationsstufe nach einer BEGIN TRANSACTION-Anweisung nicht zulässig: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME oder eine beliebige CLR-DDL-Anweisung (Common Language Runtime). Diese Anweisungen sind zulässig, wenn die Momentaufnahmeisolation in impliziten Transaktionen verwendet wird. Eine implizite Transaktion ist definitionsgemäß eine einzelne Anweisung, mit der die Semantik der Momentaufnahmeisolation auch in DDL-Anweisungen erzwungen werden kann. Verstöße gegen dieses Prinzip können zu Fehler 3961 führen: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`.|  
+|Momentaufnahme|Die Momentaufnahmeisolationsstufe verwendet die Zeilenversionsverwaltung, um die Lesekonsistenz auf der Transaktionsebene zu gewährleisten. Dabei werden durch Lesevorgänge keine Seiten- oder Zeilensperren eingerichtet, sondern lediglich SCH-S-Tabellensperren. Beim Lesen von Zeilen, die durch eine andere Transaktion geändert wurden, wird die Version der Zeile abgerufen, die zum Startzeitpunkt der Transaktion vorhanden war. Sie können die Momentaufnahmeisolation für eine Datenbank nur verwenden, wenn die `ALLOW_SNAPSHOT_ISOLATION`-Datenbankoption auf ON festgelegt wurde. Standardmäßig ist diese Option für Benutzerdatenbanken auf OFF gesetzt.<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die Versionsverwaltung von Metadaten nicht. Aus diesem Grund gibt es bezüglich der DDL-Vorgänge, die in einer unter Momentaufnahmeisolation ausgeführten expliziten Transaktion ausgeführt werden, Einschränkungen. Die folgenden DDL-Anweisungen sind bei der Momentaufnahme-Isolationsstufe nach einer BEGIN TRANSACTION-Anweisung nicht zulässig: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME oder eine beliebige CLR-DDL-Anweisung (Common Language Runtime). Diese Anweisungen sind zulässig, wenn Sie die Momentaufnahmeisolation in impliziten Transaktionen verwenden. Eine implizite Transaktion ist definitionsgemäß eine einzelne Anweisung, mit der die Semantik der Momentaufnahmeisolation auch in DDL-Anweisungen erzwungen werden kann. Verstöße gegen dieses Prinzip können zu Fehler 3961 führen: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`.|  
   
  Die folgende Tabelle veranschaulicht, welche Parallelitätsnebeneffekte in den einzelnen Isolationsstufen möglich sind.  
   
@@ -340,7 +340,7 @@ GO
   
  Die folgende Tabelle zeigt die Ressourcen, die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sperren kann.  
   
-|Ressource|und Beschreibung|  
+|Resource|Beschreibung|  
 |--------------|-----------------|  
 |RID|Ein Zeilenbezeichner, der verwendet wird, um eine einzelne Zeile in einem Heap zu sperren.|  
 |KEY|Eine Zeilensperre in einem Index, die verwendet wird, um Schlüsselbereiche in serialisierbaren Transaktionen zu schützen.|  
@@ -362,7 +362,7 @@ GO
   
  Die folgende Tabelle zeigt die Ressourcen-Sperrmodi, die das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet.  
   
-|Sperrmodus|und Beschreibung|  
+|Sperrmodus|Beschreibung|  
 |---------------|-----------------|  
 |Shared (S)|Wird für Lesevorgänge verwendet, die Daten nicht ändern oder aktualisieren, wie z.B. eine `SELECT`-Anweisung.|  
 |Update (U)|Wird für Ressourcen verwendet, die aktualisiert werden können. Verhindert eine gängige Form des Deadlocks, die auftritt, wenn mehrere Sitzungen Ressourcen lesen, sperren und anschließend möglicherweise aktualisieren.|  
@@ -397,7 +397,7 @@ GO
   
 <a name="lock_intent_table"></a> Beabsichtigte Sperren umfassen beabsichtigte freigegebene (Intent Shared, IS), beabsichtigte exklusive (Intent Exclusive, IX) und freigegebene mit beabsichtigten exklusiven (Shared With Intent Exclusive, SIX) Sperren.  
   
-|Sperrmodus|und Beschreibung|  
+|Sperrmodus|Beschreibung|  
 |---------------|-----------------|  
 |Beabsichtigte freigegebene Sperre (Intent Shared, IS)|Schützt angeforderte oder eingerichtete freigegebene Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie.|  
 |Beabsichtigte exklusive Sperre (Intent Exclusive, IX)|Schützt angeforderte oder eingerichtete exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. IX ist eine Obermenge der beabsichtigten freigegebenen Sperre und schützt auch vor Anforderung freigegebener Sperren auf Ressourcen untergeordneter Ebenen in der Hierarchie.|  
@@ -461,11 +461,11 @@ GO
 -   Zeile stellt den Sperrmodus dar, der den Indexeintrag schützt.  
 -   Modus stellt den kombinierten Sperrmodus dar, der verwendet wird. Schlüsselbereichssperrmodi setzen sich aus zwei Teilen zusammen. Der erste gibt den Sperrtyp wieder, der zum Sperren des Indexbereichs (Range*T*) verwendet wird, und der zweite gibt den Sperrtyp wieder, der zum Sperren eines bestimmten Schlüssels (*K*) verwendet wird. Die beiden Teile sind durch einen Bindestrich (-) miteinander verbunden, beispielsweise Range*T*-*K*.  
   
-    |Bereich|Zeile|Mode|und Beschreibung|  
+    |Range|Zeile|Mode|Beschreibung|  
     |-----------|---------|----------|-----------------|  
-    |RangeS|S|RangeS-S|Freigegebene Bereichssperre, freigegebene Ressourcensperre; serialisierbarer Bereichsscan.|  
+    |RangeS|E|RangeS-S|Freigegebene Bereichssperre, freigegebene Ressourcensperre; serialisierbarer Bereichsscan.|  
     |RangeS|U|RangeS-U|Freigegebene Sperre für Bereich und Updatesperre für Ressource; serialisierbarer Updatescan.|  
-    |RangeI|NULL|RangeI-N|Einfügungssperre für Bereich und NULL-Sperre für Ressource; wird verwendet, um Bereiche vor dem Einfügen eines neuen Schlüssels in einen Index zu testen.|  
+    |RangeI|Null|RangeI-N|Einfügungssperre für Bereich und NULL-Sperre für Ressource; wird verwendet, um Bereiche vor dem Einfügen eines neuen Schlüssels in einen Index zu testen.|  
     |RangeX|X|RangeX-X|Exklusive Sperren für Bereich und Ressource; wird beim Aktualisieren eines Schlüssels in einem Bereich verwendet.|  
   
 > [!NOTE]  
@@ -489,7 +489,7 @@ GO
   
 |Sperre 1|Sperre 2|Konvertierungssperre|  
 |------------|------------|---------------------|  
-|S|RangeI-N|RangeI-S|  
+|E|RangeI-N|RangeI-S|  
 |U|RangeI-N|RangeI-U|  
 |X|RangeI-N|RangeI-X|  
 |RangeI-N|RangeS-S|RangeX-S|  
@@ -594,7 +594,7 @@ INSERT mytable VALUES ('Dan');
   
  Ein Deadlock ist eine Bedingung, die in jedem System mit mehreren Threads auftreten kann, nicht nur bei Managementsystemen für relationale Datenbanken, sowie in anderen Ressourcen als Sperren für Datenbankobjekte. Ein Thread in einem Multithread-Betriebssystem kann beispielsweise eine Ressource oder mehrere Ressourcen, wie z. B. Speicherblöcke, reservieren. Wenn sich die zu reservierende Ressource derzeit im Besitz eines anderen Threads befindet, muss der erste Thread eventuell warten, bis der Besitzerthread die Zielressource freigegeben hat. Der wartende Thread ist für diese bestimmte Ressource abhängig vom Besitzerthread. In einer Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] können Sitzungen beim Reservieren von anderen als Datenbankressourcen, wie z. B. Speicher oder Threads, in eine Deadlocksituation geraten.  
   
- ![Deadlock](../relational-databases/media/deadlock.png)  
+ ![deadlock](../relational-databases/media/deadlock.png)  
   
  In der Abbildung weist Transaktion T1 eine Abhängigkeit von Transaktion T2 für die Sperrressource der **Part**-Tabelle auf. Entsprechend weist Transaktion T2 eine Abhängigkeit von Transaktion T1 für die Sperrressource der **Supplier**-Tabelle auf. Da diese Abhängigkeiten einen Kreis bilden, besteht ein Deadlock zwischen den Transaktionen T1 und T2.  
   
@@ -1233,7 +1233,7 @@ BEGIN TRANSACTION
   
  sys.dm_tran_current_snapshot. Gibt eine virtuelle Tabelle zurück, die alle aktiven Transaktionen zum Zeitpunkt des Startens der aktuellen Momentaufnahmeisolation aufführt. Wenn die aktuelle Transaktion die Momentaufnahmeisolation verwendet, gibt diese Funktion keine Zeilen zurück. sys.dm_tran_current_snapshot ähnelt sys.dm_tran_transactions_snapshot, mit dem Unterschied, dass es nur die aktiven Transaktionen für die aktuelle Momentaufnahme zurückgibt. Weitere Informationen finden Sie unter [sys.dm_tran_current_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-snapshot-transact-sql.md).  
   
-##### <a name="performance-counters"></a>Performance Counters  
+##### <a name="performance-counters"></a>Leistungsindikatoren  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Leistungsindikatoren stellen Informationen zur Auswirkung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozessen auf die Systemleistung zur Verfügung. Die folgenden Leistungsindikatoren überwachen tempdb und den Versionsspeicher sowie Transaktionen mithilfe der Zeilenversionsverwaltung. Die Leistungsindikatoren sind im SQLServer:Transaktionen-Leistungsobjekt enthalten.  
   
  **Freier Speicherplatz in tempdb (KB)** : Überwacht die Menge des freien Speicherplatzes in Kilobyte (KB), der in der tempdb-Datenbank zur Verfügung steht. Es muss genügend freier Speicherplatz in tempdb zur Verfügung stehen, um den Versionsspeicher zu bearbeiten, der die Momentaufnahmeisolation unterstützt.  
@@ -1495,11 +1495,11 @@ ALTER DATABASE AdventureWorks2016
   
  In der folgenden Tabelle werden die Statusmöglichkeiten der ALLOW_SNAPSHOT_ISOLATION-Option aufgeführt und beschrieben. Der Zugriff von Benutzern auf Daten in der Datenbank wird durch das Verwenden von ALTER DATABASE mit der ALLOW_SNAPSHOT_ISOLATION-Option nicht blockiert.  
   
-|Status der Momentaufnahmeisolationsumgebung der aktuellen Datenbank|und Beschreibung|  
+|Status der Momentaufnahmeisolationsumgebung der aktuellen Datenbank|Beschreibung|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|Die Unterstützung von Momentaufnahmeisolationstransaktionen ist nicht aktiviert. Momentaufnahmeisolationtransaktionen sind nicht zulässig.|  
 |PENDING_ON|Die Unterstützung von Momentaufnahmeisolationstransaktionen befindet sich in einem Übergangsstatus (von OFF nach ON). Offene Transaktionen müssen abgeschlossen werden.<br /><br /> Momentaufnahmeisolationtransaktionen sind nicht zulässig.|  
-|ON|Die Unterstützung von Momentaufnahmeisolationstransaktionen ist aktiviert.<br /><br /> Momentaufnahmeisolationtransaktionen sind zulässig.|  
+|EIN|Die Unterstützung von Momentaufnahmeisolationstransaktionen ist aktiviert.<br /><br /> Momentaufnahmeisolationtransaktionen sind zulässig.|  
 |PENDING_OFF|Die Unterstützung von Momentaufnahmeisolationstransaktionen befindet sich in einem Übergangsstatus (von ON nach OFF).<br /><br /> Momentaufnahmetransaktionen, die nach diesem Zeitpunkt gestartet werden, können nicht auf die Datenbank zugreifen. Updatetransaktionen sind ist in dieser Datenbank noch durch die Versionsverwaltung eingeschränkt. Vorhandene Momentaufnahmetransaktionen können immer noch problemlos auf die Datenbank zugreifen. Der PENDING_OFF-Status wird erst OFF, wenn alle Momentaufnahmetransaktionen abgeschlossen sind, die zu dem Zeitpunkt, als der Momentaufnahmeisolationsstatus der Datenbank ON war, aktiviert waren.|  
   
  Verwenden Sie die `sys.databases`-Katalogsicht, um den Status der beiden Datenbankoptionen zur Zeilenversionsverwaltung zu bestimmen.  
@@ -1603,7 +1603,7 @@ GO
 ```  
   
 ### <a name="customizing-transaction-isolation-level"></a>Anpassen der Isolationsstufe von Transaktionen  
- Die Standardisolationsstufe für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ist READ COMMITTED. Wenn für eine bestimmte Anwendung eine andere Isolationsstufe erforderlich ist, kann eine der folgenden Methoden verwendet werden, um die entsprechende Isolationsstufe anzugeben:  
+ READ COMMITTED ist die Standardisolationsstufe für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Wenn für eine bestimmte Anwendung eine andere Isolationsstufe erforderlich ist, kann eine der folgenden Methoden verwendet werden, um die entsprechende Isolationsstufe anzugeben:  
   
 -   Ausführen der [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)-Anweisung.  
 -   In ADO.NET-Anwendungen, von denen der verwaltete Namespace System.Data.SqlClient verwendet wird, kann mithilfe der SqlConnection.BeginTransaction-Methode die Option *IsolationLevel* angeben werden.  
@@ -1758,7 +1758,7 @@ GO
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ignoriert das Ausführen von Commits für innere Transaktionen. Für die Transaktion wird entweder ein Commit oder Rollback ausgeführt, je nachdem, welche Aktion am Ende der äußersten Transaktion durchgeführt wird. Bei der Ausführung eines Commits für die äußere Transaktion wird für die inneren geschachtelten Transaktionen ebenfalls ein Commit ausgeführt. Bei der Ausführung eines Rollbacks für die äußere Transaktion wird auch für alle inneren Transaktionen ein Rollback ausgeführt, unabhängig davon, ob für jede einzelne der inneren Transaktionen ein Commit ausgeführt wurde oder nicht.  
   
- Jeder Aufruf von `COMMIT TRANSACTION` oder `COMMIT WORK` gilt für die zuletzt ausgeführte `BEGIN TRANSACTION`. Wenn die `BEGIN TRANSACTION`-Anweisungen geschachtelt sind, bezieht sich eine `COMMIT`-Anweisung nur auf die letzte geschachtelte Transaktion, also die innerste Transaktion. Selbst wenn sich eine `COMMIT TRANSACTION`-*transaction_name*-Anweisung in einer geschachtelten Transaktion auf den Transaktionsnamen der äußeren Transaktion bezieht, wird der Commit ausschließlich für die innerste Transaktion ausgeführt.  
+ Jeder Aufruf von `COMMIT TRANSACTION` oder `COMMIT WORK` gilt für die zuletzt ausgeführte `BEGIN TRANSACTION`. Wenn die `BEGIN TRANSACTION`-Anweisungen geschachtelt sind, bezieht sich eine `COMMIT`-Anweisung nur auf die letzte geschachtelte Transaktion, also die innerste Transaktion. Selbst wenn sich eine `COMMIT TRANSACTION` *transaction_name*-Anweisung in einer geschachtelten Transaktion auf den Transaktionsnamen der äußeren Transaktion bezieht, wird der Commit ausschließlich für die innerste Transaktion ausgeführt.  
   
  Es ist nicht zulässig, dass der *transaction_name*-Parameter einer `ROLLBACK TRANSACTION`-Anweisung auf die inneren Transaktionen einer Reihe von benannten geschachtelten Transaktionen verweist. *transaction_name* kann nur auf den Transaktionsnamen der äußersten Transaktion verweisen. Wenn eine ROLLBACK TRANSACTION-*transaction_name*-Anweisung, die den Namen der äußeren Transaktion verwendet, auf einer beliebigen Ebene einer Reihe geschachtelter Transaktionen ausgeführt wird, wird für alle geschachtelten Transaktionen ein Rollback ausgeführt. Wenn eine `ROLLBACK WORK`- oder `ROLLBACK TRANSACTION`-Anweisung ohne Angabe des *transaction_name*-Parameters auf einer beliebigen Ebene einer Reihe von geschachtelten Transaktionen ausgeführt wird, wird für alle geschachtelten Transaktionen, einschließlich der äußersten Transaktion, ein Rollback ausgeführt.  
   

@@ -22,10 +22,10 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75258eabcc1874ca8cda731cc473847b7316ff28
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296200"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services-Ereignishandler (SSIS)
@@ -47,11 +47,11 @@ ms.locfileid: "71296200"
   
  Im folgenden Diagramm wird ein einfaches Paket mit einem For-Schleifencontainer, der einen Task SQL ausführen enthält, angezeigt.  
   
- ![Paket, For-Schleife, Taskhost und Task „SQL ausführen“](../integration-services/media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
+ ![Paket, For-Schleife, Taskhost und Task „SQL ausführen“](../integration-services/media/mw-dts-eventhandlerpkg.gif "Paket, For-Schleife, Taskhost und Task „SQL ausführen“")  
   
  Nur das Paket hat einen Ereignishandler, und zwar für das **OnError** -Ereignis. Wenn beim Ausführen des Tasks SQL ausführen ein Fehler auftritt, wird der **OnError** -Ereignishandler für das Paket ausgeführt. Im folgenden Diagramm wird die Aufrufsequenz angezeigt, durch die der **OnError** -Ereignishandler für das Paket ausgeführt wird.  
   
- ![Ereignishandlerfluss](../integration-services/media/mw-dts-eventhandlers.gif "Event handler flow")  
+ ![Ereignishandlerflow](../integration-services/media/mw-dts-eventhandlers.gif "Ereignishandlerflow")  
   
  Ereignishandler sind Elemente einer Ereignishandlerauflistung, und alle Container schließen diese Auflistung ein. Wenn Sie das Paket mit dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer erstellen, können Sie die Elemente der Ereignishandlerauflistungen im Ordner **Ereignishandler** auf der Registerkarte **Paket-Explorer** des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers anzeigen.  
   
@@ -103,13 +103,13 @@ Zur Laufzeit werden von Containern und Tasks Ereignisse ausgelöst. Sie können 
   
 ### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Hinzufügen eines Ereignishandlers auf der Registerkarte „Ereignishandler“  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
 3.  Klicken Sie auf die Registerkarte **Ereignishandler** .  
   
-     ![Screenshot der Designoberfläche mit Ereignishandlern](../integration-services/media/eventhandlers.gif "Screenshot of design surface with event handler")  
+     ![Screenshot der Entwurfsoberfläche mit Ereignishandler](../integration-services/media/eventhandlers.gif "Screenshot der Entwurfsoberfläche mit Ereignishandler")  
   
      Das Erstellen der Ablaufsteuerung und der Datenflüsse in einem Ereignishandler ist mit dem Erstellen der Ablaufsteuerung und der Datenflüsse in einem Paket vergleichbar. Weitere Informationen finden Sie unter [Control Flow](../integration-services/control-flow/control-flow.md) und [Data Flow](../integration-services/data-flow/data-flow.md).  
   

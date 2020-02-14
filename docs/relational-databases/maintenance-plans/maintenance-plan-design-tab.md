@@ -15,17 +15,17 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115743"
 ---
 # <a name="maintenance-plan-design-tab"></a>Wartungsplan (Registerkarte Entwurf)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Verwenden Sie **Wartungsplan (Registerkarte „Entwurf“)** , um die Eigenschaften eines Wartungsplans und seiner Unterpläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Unterplan hinzufügen**  
  Mit dieser Option fügen Sie einen Unterplan hinzu, den Sie konfigurieren können.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68115743"
  **Zeitplan entfernen**  
  Mit dieser Option entfernen Sie einen Zeitplan aus dem ausgewählten Unterplan.  
   
- **Verbindungen verwalten**  
+ **Verwalten von Verbindungen**  
  Hiermit zeigen Sie das Dialogfeld **Verbindungen verwalten** an. Es wird verwendet, um dem Wartungsplan zusätzliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzverbindungen hinzuzufügen. Jeder Wartungstask im Unterplan-Editor kann beliebige dieser Verbindungen nutzen. Bei der Ausführung stellt der Wartungsplan eine Verbindung vom Wartungsplanserver zu den angegebenen Servern mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, wobei die Anmeldeinformationen der Verbindungen verwendet werden.  
   
  **Berichterstellung und Protokollierung**  
@@ -69,7 +69,7 @@ ms.locfileid: "68115743"
   
  Nachdem ein Wartungstask auf der Entwurfsoberfläche platziert ist, können seine Eigenschaften je nach Bedarf bearbeitet werden. So wird beispielsweise die für einen Task Datenbank sichern relevante Datenbank erst angegeben, nachdem der Task dem Plan hinzugefügt wurde. Die Tasks auf der Entwurfsoberfläche, die nicht ordnungsgemäß konfiguriert sind, enthalten ein rotes Symbol mit einem weißen x.  
   
- Wenn Sie einem Plan einen Wartungstask hinzufügen möchten, ziehen Sie das Symbol des Tasks aus der Toolbox **Wartungsplantasks** in die Planentwurfsoberfläche, oder doppelklicken Sie in der Toolbox auf den Task, wodurch dieser Task der derzeit aktiven Designeroberfläche hinzugefügt wird. Wenn die im Menü **Wartungsplantasks** nicht sichtbar ist, wählen Sie in **im Menü** Ansicht [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Toolbox** aus. Erweitern Sie den Knoten **Wartungsplantasks** im Bereich **Toolbox** .  
+ Wenn Sie einem Plan einen Wartungstask hinzufügen möchten, ziehen Sie das Symbol des Tasks aus der Toolbox **Wartungsplantasks** in die Planentwurfsoberfläche, oder doppelklicken Sie in der Toolbox auf den Task, wodurch dieser Task der derzeit aktiven Designeroberfläche hinzugefügt wird. Klicken Sie im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Menü **Ansicht** auf **Toolbox**, wenn die Toolbox **Wartungsplantasks** nicht sichtbar ist. Erweitern Sie den Knoten **Wartungsplantasks** im Bereich **Toolbox** .  
   
  Wenn Sie einen Task aus einem Plan entfernen möchten, wählen Sie den Task in der Designeroberfläche aus, und drücken Sie die **ENTF** -TASTE, oder klicken Sie mit der rechten Maustaste auf den Task, und klicken Sie auf **Löschen**.  
   

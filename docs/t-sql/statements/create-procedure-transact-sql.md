@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982759"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909820"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,11 +67,11 @@ Erstellt eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]- oder CLR
  Mithilfe dieser Anweisung können Sie eine dauerhafte Prozedur in der aktuellen Datenbank oder eine temporäre Prozedur in der **tempdb**-Datenbank erstellen.  
   
 > [!NOTE]  
->  In diesem Thema wird die Integration der .NET Framework-CLR in SQL Server erläutert. Die CLR-Integration gilt nicht für Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+>  Die Integration der .NET Framework-CLR in SQL Server wird in diesem Thema erläutert. Die CLR-Integration gilt nicht für Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
 Wenn Sie die ausführlichen Informationen zur Syntax überspringen und ein Beispiel für eine einfache gespeicherte Prozedur möchten, fahren Sie einfach mit dem Abschnitt [Einfache Beispiele](#Simple) fort.
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -161,7 +161,7 @@ OR ALTER
  Der vollständige Name einer Prozedur oder einer globalen temporären Prozedur, einschließlich ##, darf 128 Zeichen nicht überschreiten. Der vollständige Name einer lokalen temporären Prozedur, einschließlich #, darf 116 Zeichen nicht überschreiten.  
   
  **;** *number*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Eine optionale ganze Zahl zum Gruppieren von Prozeduren mit dem gleichen Namen. Diese gruppierten Prozeduren können alle mit einer DROP PROCEDURE-Anweisung gelöscht werden.  
   
@@ -199,7 +199,7 @@ OR ALTER
 VARYING  
  Gibt das als Ausgabeparameter unterstützte Resultset an. Dieser Parameter wird dynamisch durch die Prozedur erstellt. Sein Inhalt kann variieren. Gilt nur für **cursor**-Parameter. Diese Option ist für CLR-Prozeduren nicht gültig.  
   
-*default*  
+*Standardwert*  
  Ein Standardwert für einen Parameter. Wenn ein Standardwert für einen Parameter definiert ist, kann die Prozedur ausgeführt werden, ohne dass ein Wert für diesen Parameter angegeben wird. Der Standardwert muss eine Konstante oder NULL sein. Der konstante Wert kann ein Platzhalter sein, wodurch beim Weitergeben des Parameters an die Prozedur das LIKE-Schlüsselwort verwendet werden kann.   
   
  Standardwerte werden in der **sys.parameters.default**-Spalte nur für CLR-Prozeduren erfasst. Diese Spalte hat für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedurparameter den Wert NULL.  
@@ -242,7 +242,7 @@ FOR REPLICATION
  Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die den Textkörper der Prozedur umfassen. Sie können die optionalen BEGIN- und END-Schlüsselwörter zum Einschließen der Anweisungen verwenden. Informationen hierzu erhalten Sie in den folgenden Abschnitten zu bewährten Methoden, allgemeinen Hinweisen und Einschränkungen.  
   
 EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gibt für eine CLR-Prozedur, auf die verwiesen wird, die Methode einer [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly an. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner und als Klasse in der Assembly vorhanden sein. Wenn die Klasse einen mit einem Namespace qualifizierten Namen hat, in dem ein Punkt ( **.** ) zur Trennung der Bestandteile des Namespace verwendet wird, muss der Klassenname mithilfe von Klammern ( **[]** ) oder mit Anführungszeichen ( **""** ) getrennt werden. Bei der angegebenen Methode muss es sich um eine statische Methode der Klasse handeln.  
   
@@ -252,7 +252,7 @@ EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_
 >  CLR-Prozeduren werden in einer enthaltenen Datenbank nicht unterstützt.  
   
 ATOMIC WITH  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt die unteilbare Ausführung der gespeicherten Prozedur an. Änderungen werden entweder über ein Commit ausgeführt, oder ein Rollback aller Änderungen wird durch eine Ausnahme auslöst. Der ATOMIC WITH-Block ist für systemintern kompilierte gespeicherte Prozeduren erforderlich.  
   
@@ -277,24 +277,24 @@ BEGIN-, ROLLBACK- und COMMIT-Vorgänge können nicht innerhalb eines ATOMIC-Bloc
  Bestimmt, ob NULL-Werte in einem Parameter zulässig sind. NULL ist die Standardeinstellung.  
   
 NATIVE_COMPILATION  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt an, dass die Prozedur systemintern kompiliert wird. NATIVE_COMPILATION, SCHEMABINDING und EXECUTE AS können in beliebiger Reihenfolge angegeben werden. Weitere Informationen finden Sie unter [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 SCHEMABINDING  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Stellt sicher, dass Tabellen, auf die eine Prozedur verweist, nicht gelöscht oder geändert werden können. SCHEMABINDING ist in systemintern kompilierten gespeicherten Prozeduren erforderlich. Weitere Informationen finden Sie unter [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md). Es gelten dieselben SCHEMABINDING-Einschränkungen wie für benutzerdefinierte Funktionen. Weitere Informationen finden Sie im Abschnitt SCHEMABINDING in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 LANGUAGE = [N] 'language'  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Entspricht der Sitzungsoption [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). LANGUAGE = [N] 'Sprache' ist erforderlich.  
   
 TRANSACTION ISOLATION LEVEL  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Erforderlich für systemintern kompilierte gespeicherte Prozeduren. Gibt die Transaktionsisolationsstufe für die gespeicherte Prozedur an. Folgende Optionen stehen zur Verfügung:  
+ Erforderlich für systemintern kompilierte gespeicherte Prozeduren. Gibt die Transaktionsisolationsstufe für die gespeicherte Prozedur an. Die folgenden Optionen sind verfügbar:  
   
  Weitere Informationen zu diesen Optionen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -311,21 +311,21 @@ SNAPSHOT
  Gibt an, dass von Anweisungen in einer Transaktion gelesene Daten der im Hinblick auf Transaktionen konsistenten Version der Daten entsprechen, die zu Beginn der Transaktion vorhanden waren.  
   
 DATEFIRST = *number*  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Legt den ersten Wochentag auf eine Zahl von 1 bis 7 fest. DATEFIRST ist optional. Wenn dies nicht angegeben ist, wird die Einstellung von der angegebenen Sprache abgeleitet.  
   
  Weitere Informationen finden Sie unter [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).  
   
 DATEFORMAT = *format*  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Legt die Reihenfolge der Datumsteile für den Tag, den Monat und das Jahr fest, um die date-, smalldatetime-, datetime-, datetime2- und datetimeoffset-Zeichenfolgen zu interpretieren. DATEFORMAT ist optional. Wenn dies nicht angegeben ist, wird die Einstellung von der angegebenen Sprache abgeleitet.  
   
  Weitere Informationen finden Sie unter [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).  
   
 DELAYED_DURABILITY = { OFF | ON }  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionscommits können entweder vollständig dauerhaft (Standardeinstellung) oder verzögert dauerhaft sein.  
   
@@ -440,7 +440,7 @@ GO
 ## <a name="metadata"></a>Metadaten  
  In der folgenden Tabelle sind die Katalogsichten und dynamischen Verwaltungssichten aufgeführt, die Sie verwenden können, um Informationen zu gespeicherten Prozeduren zurückzugeben.  
   
-|Sicht|und Beschreibung|  
+|Sicht|Beschreibung|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Gibt die Definition einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur zurück. Der Text einer mit der ENCRYPTION-Option erstellten Prozedur kann nicht mit der **sys.sql_modules**-Katalogsicht angezeigt werden.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Gibt Informationen zu einer CLR-Prozedur zurück.|  
@@ -457,7 +457,7 @@ GO
   
  \* Diese Indikatoren sind für verschiedene Kategorien von Cacheobjekten verfügbar, einschließlich Ad-hoc-[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, vorbereiteten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, Prozeduren, Triggern usw. Weitere Informationen finden Sie unter [SQL Server, Plancache-Objekt](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die **CREATE PROCEDURE**-Berechtigung für die Datenbank und die **ALTER**-Berechtigung für das Schema, in dem die Prozedur erstellt wird, oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin**.  
@@ -489,7 +489,7 @@ GO
   
 ## <a name="Examples"></a> Beispiele  
   
-|Kategorie|Funktionssyntaxelemente|  
+|Category|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
 |[Grundlegende Syntax](#BasicSyntax)|CREATE PROCEDURE|  
 |[Übergeben von Parametern](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • Tabellenwertparameter-Typ <br> &nbsp;&nbsp; • CURSOR VARYING|  
@@ -561,7 +561,7 @@ GO
 ###  <a name="Parameters"></a> Übergeben von Parametern  
  Die Beispiele in diesem Abschnitt veranschaulichen, wie die Eingabe- und Ausgabeparameter zum Übergeben von Werten von und an eine gespeicherte Prozedur verwendet werden.  
   
-#### <a name="d-creating-a-procedure-with-input-parameters"></a>D. Erstellen einer Prozedur mit Eingabeparametern  
+#### <a name="d-creating-a-procedure-with-input-parameters"></a>D: Erstellen einer Prozedur mit Eingabeparametern  
  Im folgenden Beispiel wird eine gespeicherte Prozedur erstellt, die Informationen für einen bestimmten Mitarbeiter zurückgibt, indem Werte für den Vor- und Nachnamen des Mitarbeiters übergeben werden. Diese Prozedur akzeptiert nur genaue Übereinstimmungen für die übergebenen Parameter an.  
   
 ```sql  
@@ -966,7 +966,7 @@ WITH EXECUTE AS SELF
 AS TRUNCATE TABLE MyDB..MyTable;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>O. Erstellen einer gespeicherten Prozedur, die eine SELECT-Anweisung ausführt  
  In diesem Beispiel wird die grundlegende Syntax zum Erstellen und Ausführen einer Prozedur gezeigt. Beim Ausführen eines Batchs muss CREATE PROCEDURE in der ersten Anweisung enthalten sein. Um beispielsweise die folgende gespeicherte Prozedur in [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] zu erstellen, legen Sie zuerst den Datenbankkontext fest und führen dann die CREATE PROCEDURE-Anweisung aus.  

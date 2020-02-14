@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.openlocfilehash: a4ed76cde2cd8ff8b9d862b981dcbed2361c6ae8
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73049742"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Konnektivitätsbibliotheken und-Frameworks für Microsoft SQL Server
@@ -23,7 +23,7 @@ Arbeiten Sie die [Erste-Schritte-Tutorials](https://aka.ms/sqldev) durch, um sch
 
 In der folgenden Tabelle sind die Konnektivitätsbibliotheken oder *-treiber* aufgeführt, die Clientanwendungen aus verschiedenen Sprachen verwenden können, um eine Verbindung mit einer Microsoft SQL Server-Instanz, die lokal oder in der Cloud, unter Linux, Windows oder Docker ausgeführt wird, oder mit Azure SQL-Datenbank und Azure SQL Data Warehouse herzustellen und die entsprechenden Datenbanken zu verwenden. 
 
-| Sprache | Platform | Weitere Ressourcen | Herunterladen | Erste Schritte |
+| Sprache | Plattform | Zusätzliche Ressourcen | Download | Erste Schritte |
 | :-- | :-- | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Microsoft ADO.NET für SQL Server](/sql/connect/ado-net/microsoft-ado-net-sql-server) | [Download](https://msdn.microsoft.com/vstudio/aa496123.aspx) | [Erste Schritte](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
 | Java | Windows, Linux, macOS | [Microsoft JDBC-Treiber für SQL Server](https://msdn.microsoft.com/library/mt484311.aspx) | [Download](https://go.microsoft.com/fwlink/?LinkId=245496) |  [Erste Schritte](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)
@@ -31,11 +31,11 @@ In der folgenden Tabelle sind die Konnektivitätsbibliotheken oder *-treiber* au
 | Node.js | Windows, Linux, macOS | [Node.js-Treiber für SQL Server](../connect/node-js/node-js-driver-for-sql-server.md) |  [Erste Schritte](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu)
 | Python | Windows, Linux, macOS | [Python-SQL-Treiber](../connect/python/python-driver-for-sql-server.md) <br/> \* [pyodbc](https://msdn.microsoft.com/library/mt763257.aspx) |  [Erste Schritte](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu)
 | Ruby | Windows, Linux, macOS | [Ruby-Treiber für SQL Server](../connect/ruby/ruby-driver-for-sql-server.md) | [Erste Schritte](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu)
-| C++ | Windows, Linux, macOS | [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt654048(v=sql.1).aspx) | [Download](https://msdn.microsoft.com/library/mt654048(v=sql.1).aspx) |  
+| C++ | Windows, Linux, macOS | [Microsoft ODBC-Treiber für SQL Server](https://msdn.microsoft.com/library/mt654048(v=sql.1).aspx) | [Download](https://msdn.microsoft.com/library/mt654048(v=sql.1).aspx) |  
 
 In der folgenden Tabelle sind einige Beispiele zu ORM-Frameworks (Object Relational Mapping, objektrelationale Abbildung) und Webframeworks aufgeführt, die Clientanwendungen mit einer Microsoft SQL Server-Instanz, die lokal oder in der Cloud, unter Linux, Windows oder Docker ausgeführt wird, oder mit Azure SQL-Datenbank und Azure SQL Data Warehouse verwenden können. 
 
-| Sprache | Platform | ORM(s) |
+| Sprache | Plattform | ORM(s) |
 | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Entity Framework](https://docs.microsoft.com/ef)<br>[Entity Framework Core](https://docs.microsoft.com/ef/core/index) |
 | Java | Windows, Linux, macOS |[Hibernate ORM](https://hibernate.org/orm)|

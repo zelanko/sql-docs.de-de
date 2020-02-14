@@ -24,10 +24,10 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281974"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Zugriffssteuerung für vertrauliche Daten in Paketen
@@ -61,7 +61,7 @@ ms.locfileid: "71281974"
 ## <a name="protection-levels"></a>Schutzebenen  
  In der folgenden Tabelle werden die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verfügbaren Schutzebenen beschrieben. Die in Klammern stehenden Werte stammen aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> -Enumeration. Diese Werte werden im Eigenschaftenfenster angezeigt, das Sie zum Konfigurieren der Eigenschaften des Pakets verwenden, wenn Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]mit Paketen arbeiten.  
   
-|Schutzebene|und Beschreibung|  
+|Schutzebene|Beschreibung|  
 |----------------------|-----------------|  
 |Vertrauliche Daten nicht speichern (**DontSaveSensitive**)|Unterdrückt die Werte vertraulicher Eigenschaften im Paket, wenn das Paket gespeichert wird. Diese Schutzebene verschlüsselt nicht, sondern verhindert stattdessen, dass als sensibel markierte Eigenschaften mit dem Paket gespeichert werden. Deshalb stehen die sensiblen Daten anderen Benutzern nicht zur Verfügung. Wenn das Paket von einem anderen Benutzer geöffnet wird, werden die sensiblen Daten durch Leerzeichen ersetzt und der Benutzer muss die sensiblen Daten angeben.<br /><br /> Bei der Verwendung mit dem **dtutil** -Hilfsprogramm (dtutil.exe) entspricht diese Schutzebene dem Wert 0.|  
 |Alles mit einem Kennwort verschlüsseln (**EncryptAllWithPassword**)|Verwendet ein Kennwort zum Verschlüsseln des gesamten Pakets. Das Paket wird mit einem Kennwort verschlüsselt, das beim Erstellen oder Exportieren des Pakets vom Benutzer bereitgestellt wird. Um das Paket im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu öffnen oder mit dem **dtexec** -Eingabeaufforderungs-Hilfsprogramm auszuführen, muss der Benutzer das Paketkennwort angeben. Ohne Kennwort kann der Benutzer das Paket weder öffnen noch ausführen.<br /><br /> Bei der Verwendung mit dem **dtutil** -Hilfsprogramm entspricht diese Schutzebene dem Wert 3.|  
@@ -76,7 +76,7 @@ ms.locfileid: "71281974"
  Wenn Sie das Projekt (ISPAC-Datei) vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server in das Dateisystem exportieren, ändert das System die Schutzebene automatisch in **EncryptSensitiveWithUserKey**. Wenn Sie das Projekt mit dem **Integration Services-Assistenten zum Importieren von Projekten** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]importieren, wird für die **ProtectionLevel** -Eigenschaft im Fenster **Eigenschaften** der Wert **EncryptSensitiveWithUserKey**angezeigt.  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>Festlegen der Schutzebene auf Grundlage des Paketlebenszyklus  
- Die Schutzebene eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets wird bei dessen Entwicklung in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]festgelegt. Wenn das Paket dann zu einem späteren Zeitpunkt bereitgestellt, von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]importiert oder daraus exportiert wird oder von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher oder in das Dateisystem kopiert wird, können Sie die Paketschutzebene aktualisieren. Wenn Sie z. B. Pakete auf Ihrem Computer mit einer Benutzerschlüssel-Schutzebenenoption erstellen und speichern, möchten Sie eventuell die Schutzebene ändern, wenn Sie das Paket anderen Benutzern übergeben; anderenfalls können diese Benutzer das Paket nicht öffnen.  
+ Die Schutzebene eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets wird bei dessen Entwicklung in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] festgelegt. Wenn das Paket dann zu einem späteren Zeitpunkt bereitgestellt, von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]importiert oder daraus exportiert wird oder von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher oder in das Dateisystem kopiert wird, können Sie die Paketschutzebene aktualisieren. Wenn Sie z. B. Pakete auf Ihrem Computer mit einer Benutzerschlüssel-Schutzebenenoption erstellen und speichern, möchten Sie eventuell die Schutzebene ändern, wenn Sie das Paket anderen Benutzern übergeben; anderenfalls können diese Benutzer das Paket nicht öffnen.  
   
  Normalerweise wird die Schutzebene wie in den folgenden Schritten beschrieben geändert:  
   
@@ -141,8 +141,8 @@ ms.locfileid: "71281974"
   
  Zum Verständnis der Anforderungen und Optionen für die Paketsicherheit finden Sie weitere Informationen unter [Sicherheitsübersicht &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
-### <a name="options"></a>enthalten  
- **Package protection level**  
+### <a name="options"></a>Tastatur  
+ **Paketschutzebene**  
  Wählen Sie eine Schutzebene aus der Liste aus.  
   
  **Kennwort**  
@@ -154,7 +154,7 @@ ms.locfileid: "71281974"
 ## <a name="password_dialog"></a> Dialogfeld „Paketkennwort“
   Verwenden Sie das Dialogfeld **Paketkennwort** , um ein Kennwort für ein verschlüsseltes Paket bereitzustellen. Sie müssen ein Kennwort bereitstellen, wenn das Paket die Schutzebene **Sensible Daten mit einem Kennwort verschlüsseln**oder **Alle Daten mit einem Kennwort verschlüsseln** verwendet.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Kennwort**  
  Geben Sie das Kennwort ein.  
   

@@ -13,10 +13,10 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297738"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht
@@ -64,7 +64,7 @@ ms.locfileid: "71297738"
   
     3.  Fügen Sie zwei Datensätze mit den folgenden Daten ein.  
   
-        |im Elementknoten &lt;Customer ID="1"|FirstName|LastName|  
+        |id|FIRSTNAME|LASTNAME|  
         |--------|---------------|--------------|  
         |1|John|Doe|  
         |2|Jane|Doe|  
@@ -73,7 +73,7 @@ ms.locfileid: "71297738"
   
     5.  Konfigurieren Sie die Komponente für das Extrahieren von Daten aus der Tabelle **Mitarbeiter** in die Datenbank **TestDB** . Wählen Sie **(local).TestDB** für **OLE DB-Verbindungs-Manager**, **Tabelle oder Sicht** für **Datenzugriffsmodus**und **[dbo].[Employee** ] für **Name der Tabelle oder Sicht**.  
   
-         ![Datenstreamingziel – OLE DB-Verbindung](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Datenstreamingziel – OLE DB-Verbindung")  
+         ![Datenstreamingziel – OLE-DB-Verbindung](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Datenstreamingziel: OLE-DB-Verbindung")  
   
 6.  Ziehen Sie nun das **Datenstreamingziel** von der Toolbox in den Datenfluss. Diese Komponente sollte sich im allgemeinen Abschnitt der Toolbox befinden.  
   
@@ -96,17 +96,17 @@ ms.locfileid: "71297738"
   
 2.  Klicken Sie auf der Seite **Einführung** auf **Weiter** .  
   
-     ![Datenfeedveröffentlichungs-Assistent – Seite „Einführung“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Datenfeedveröffentlichungs-Assistent – Seite „Einführung“")  
+     ![Datenfeedveröffentlichungs-Assistent: Seite „Einführung“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Datenfeedveröffentlichungs-Assistent: Seite „Einführung“")  
   
 3.  Führen Sie auf der Seite **Paketeinstellungen** die folgenden Aufgaben aus:  
   
     1.  Geben Sie den **Namen** der SQL Server-Instanz ein, die den SSIS-Katalog enthält, oder klicken Sie zum Auswählen des Servers auf **Durchsuchen** .  
   
-         ![Datenfeedveröffentlichungs-Assistent – Seite „Paketeinstellungen“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Datenfeedveröffentlichungs-Assistent – Seite „Paketeinstellungen“")  
+         ![Datenfeedveröffentlichungs-Assistent: Seite für Paketeinstellungen](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Datenfeedveröffentlichungs-Assistent: Seite für Paketeinstellungen")  
   
     2.  Klicken Sie neben dem Pfadfeld auf **Durchsuchen**, durchsuchen Sie den SSIS-Katalog, wählen Sie das zu veröffentlichende SSIS-Paket aus (Beispiel: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**), und klicken Sie dann auf **OK**.  
   
-         ![Datenfeedveröffentlichungs-Assistent – Suchen nach Paket](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Datenfeedveröffentlichungs-Assistent – Suchen nach Paket")  
+         ![Datenfeedveröffentlichungs-Assistent: Suchen nach Paket](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Datenfeedveröffentlichungs-Assistent: Suchen nach Paket")  
   
     3.  Geben Sie mithilfe der Paketparameter, Projektparameter und Registerkarten des Verbindungs-Managers am unteren Seitenrand die Werte für alle Paketparameter, Projektparameter oder Einstellungen des Verbindungs-Managers für das Paket ein. Sie können auch einen Umgebungsverweis angeben, der für die Ausführung des Pakets verwendet wird, und Projekt-/Paketparameter an Umgebungsvariablen binden.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71297738"
   
     1.  Wählen Sie die **Datenbank** für die zu erstellende Sicht aus.  
   
-         ![Datenfeedveröffentlichungs-Assistent – Seite „Veröffentlichungseinstellungen“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Datenfeedveröffentlichungs-Assistent – Seite „Veröffentlichungseinstellungen“")  
+         ![Datenfeedveröffentlichungs-Assistent: Seite für Veröffentlichungseinstellungen](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Datenfeedveröffentlichungs-Assistent: Seite für Veröffentlichungseinstellungen")  
   
     2.  Geben Sie einen **Namen** für die **Sicht**ein. Sie können auch eine vorhandene Sicht aus der Dropdownliste auswählen.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "71297738"
   
         1.  Geben Sie das Datenbankschema an, in dem die Sicht (Feld „Schema“) erstellt werden soll.  
   
-        2.  Geben Sie an, ob die Daten vor dem Senden über das Netzwerk verschlüsselt werden sollen (Feld „Verschlüsselung“). Weitere Informationen zu dieser Einstellung und der „TrustServerCertificate“-Einstellung finden Sie unter [Verwenden von Verschlüsselung ohne Überprüfung](../../relational-databases/native-client/features/using-encryption-without-validation.md).  
+        2.  Geben Sie an, ob die Daten vor dem Senden über das Netzwerk verschlüsselt werden sollen (Feld „Verschlüsselung“). Weitere Informationen zu dieser Einstellung und der „TrustServerCertificate“-Einstellung finden Sie unter [Verwenden von Verschlüsselung ohne Überprüfung](../../relational-databases/native-client/features/using-encryption-without-validation.md) .  
   
         3.  Geben Sie an, ob ein selbstsigniertes Serverzertifikat verwendet werden kann, wenn die Verschlüsselungseinstellung aktiviert ist (Feld**TrustServerCertificate** ).  
   
@@ -140,7 +140,7 @@ ms.locfileid: "71297738"
   
 5.  Auf der Seite **Überprüfung** überprüfen Sie die Ergebnisse der Überprüfung der Werte für alle Einstellungen. Im folgenden Beispiel wird eine **Warnung** für das Vorhandensein des Verbindungsservers angezeigt, da der Verbindungsserver für die ausgewählte SQL Server-Instanz nicht vorhanden ist. Wenn für **Ergebnis** der Wert **Fehler**angezeigt wird, bewegen Sie den Mauszeiger über **Fehler** , um die Details zu diesem Fehler anzuzeigen. Wenn Sie z. B. die Option „InProcess zulassen“ für den SSISOLEDB-Anbieter nicht aktiviert haben, erhalten Sie einen Fehler zur Aktion „Konfiguration des Verbindungsservers“.  
   
-     ![Datenfeedveröffentlichungs-Assistent – Seite „Überprüfung“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Datenfeedveröffentlichungs-Assistent – Seite „Überprüfung“")  
+     ![Datenfeedveröffentlichungs-Assistent: Seite „Überprüfung“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Datenfeedveröffentlichungs-Assistent: Seite „Überprüfung“")  
   
 6.  Klicken Sie auf „Bericht speichern“, um diesen Bericht als XML-Datei zu speichern.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "71297738"
   
 8.  Überprüfen Sie Ihre Auswahl auf der Seite **Zusammenfassung** , und klicken Sie auf **Veröffentlichen** , um den Veröffentlichungsprozess zu starten. Dadurch wird der Verbindungsserver erstellt, wenn er nicht bereits auf dem Server vorhanden ist. Anschließend wird die Sicht mithilfe des Verbindungsservers erstellt.  
   
-     ![Datenfeedveröffentlichungs-Assistent – Seite „Zusammenfassung“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Datenfeedveröffentlichungs-Assistent – Seite „Zusammenfassung“")  
+     ![Datenfeedveröffentlichungs-Assistent: Seite „Zusammenfassung“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Datenfeedveröffentlichungs-Assistent: Seite „Zusammenfassung“")  
   
      Die Ausgabedaten des Pakets können jetzt durch Ausführen der folgenden SQL-Anweisung für die Datenbank „TestDB“ abgefragt werden: SELECT * FROM [SSISPackageView].  
   
@@ -159,7 +159,7 @@ ms.locfileid: "71297738"
     > [!NOTE]  
     >  Die folgenden Datentypen werden nicht unterstützt: text, ntext, image, nvarchar(max), varchar(max) und varbinary(max).  
   
-## <a name="step-3-test-the-sql-view"></a>Schritt 3: Testen der SQL-Ansicht  
+## <a name="step-3-test-the-sql-view"></a>Schritt 3: Testen der SQL-Ansicht  
  In diesem Schritt führen Sie die vom SSIS-Datenfeedveröffentlichungs-Assistenten erstellte SQL-Ansicht aus.  
   
 1.  Starten Sie SQL Server Management Studio.  
@@ -213,7 +213,7 @@ GO
   
  Zur Laufzeit, wenn die Sicht ausgeführt wird, startet die Verbindungsserverabfrage, die in der Sicht definiert ist, das in der Abfrage angegebene SSIS-Paket und empfängt die Paketausgabe als tabellarisches Resultset.  
   
-1.  Geben Sie vor der Erstellung der Sicht die folgende Abfrage in das neue Abfragefenster ein, und führen Sie diese anschließend aus. OPENQUERY ist eine von SQL Server unterstützte Rowsetfunktion. Sie führt die angegebene Pass-Through-Abfrage auf dem angegebenen Verbindungsserver mit dem OLE DB-Anbieter aus, der dem Verbindungsserver zugeordnet ist. Auf OPENQUERY kann in der FROM-Klausel einer Abfrage so verwiesen werden, als ob es ein Tabellenname wäre. Weitere Informationen finden Sie in der [OPENQUERY-Dokumentation in der MSDN Library](../../t-sql/functions/openquery-transact-sql.md).  
+1.  Geben Sie vor der Erstellung der Sicht die folgende Abfrage in das neue Abfragefenster ein, und führen Sie diese anschließend aus. OPENQUERY ist eine von SQL Server unterstützte Rowsetfunktion. Sie führt die angegebene Pass-Through-Abfrage auf dem angegebenen Verbindungsserver mit dem OLE DB-Anbieter aus, der dem Verbindungsserver zugeordnet ist. Auf OPENQUERY kann in der FROM-Klausel einer Abfrage so verwiesen werden, als ob es ein Tabellenname wäre. Weitere Informationen finden Sie in der [OPENQUERY-Dokumentation in der MSDN Library](../../t-sql/functions/openquery-transact-sql.md) .  
   
     ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   
@@ -255,7 +255,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  „Timeout“ gibt die Anzahl der Sekunden an, die der OLE DB-Anbieter für SSIS warten kann, bevor neue Daten aus dem SSIS-Paket eingehen. Der Standardwert für „Timeout“ beträgt 60 Sekunden. Sie können einen ganzzahligen Wert für „Timeout“ zwischen 20 und 32000 angeben.  
   
- Parameter enthalten den Wert von Paket- und Projektparametern. Die Regeln für die Parameter sind mit denen für die Parameter in [DTExec](https://msdn.microsoft.com/library/hh231187.aspx) identisch.  
+ Parameter enthalten den Wert von Paket- und Projektparametern. Die Regeln für die Parameter sind mit denen für die Parameter in [DTExec](https://msdn.microsoft.com/library/hh231187.aspx)identisch.  
   
  Die folgende Liste gibt die in der Abfrageklausel zulässigen Sonderzeichen an:  
   

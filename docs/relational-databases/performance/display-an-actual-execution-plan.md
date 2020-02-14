@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6e96322cdd6dcd310a550fa1cd94d80dba38738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946884"
 ---
 # <a name="display-an-actual-execution-plan"></a>Anzeigen eines tatsächlichen Ausführungsplans
@@ -37,7 +37,7 @@ ms.locfileid: "67946884"
   
 3.  Klicken Sie im Menü **Abfrage** auf **Tatsächlichen Ausführungsplan einschließen**, oder klicken Sie auf die Symbolleistenschaltfläche **Tatsächlichen Ausführungsplan einschließen**.
 
-    ![Schaltfläche „Tatsächlicher Ausführungsplan“ auf der Symbolleiste](../../relational-databases/performance/media/actualexecplantoolbar.png "Schaltfläche „Tatsächlicher Ausführungsplan“ auf der Symbolleiste")   
+    ![Schaltfläche für den tatsächlichen Ausführungsplan in der Symbolleiste](../../relational-databases/performance/media/actualexecplantoolbar.png "Schaltfläche für den tatsächlichen Ausführungsplan in der Symbolleiste")   
   
 4.  Führen Sie die Abfrage aus, indem Sie auf die Symbolleistenschaltfläche **Ausführen** klicken. Der vom Abfrageoptimierer verwendete Plan wird im Ergebnisbereich auf der Registerkarte **Ausführungsplan** angezeigt. 
 
@@ -47,7 +47,7 @@ ms.locfileid: "67946884"
   
     Sie können die Operatoreigenschaften auch im Eigenschaftenfenster anzeigen. Klicken Sie mit der rechten Maustaste auf einen Operator, und klicken Sie auf **Eigenschaften**, wenn die Eigenschaften nicht sichtbar sind. Wählen Sie einen Operator aus, um seine Eigenschaften anzuzeigen.  
 
-    ![Rechtsklick auf „Eigenschaften“ im Planoperator](../../relational-databases/performance/media/planproperties.png "Rechtsklick auf „Eigenschaften“ im Planoperator")    
+    ![Rechtsklick, „Eigenschaften“ im Planoperator](../../relational-databases/performance/media/planproperties.png "Rechtsklick, „Eigenschaften“ im Planoperator")    
   
 6.  Sie können die Anzeige des Ausführungsplans ändern, indem Sie mit der rechten Maustaste auf den Ausführungsplan klicken und **Vergrößern**, **Verkleinern**, **Vergrößern/Verkleinern**oder **Zoom anpassen**auswählen. Mit**Vergrößern** und **Verkleinern** können Sie den Ausführungsplan vergrößern bzw. verkleinern. Mit **Vergrößern/Verkleinern** können Sie dagegen einen eigenen Zoomfaktor definieren, z. B. 80 Prozent. Mit**Zoom anpassen** können Sie den Ausführungsplan an die Größe des Ergebnisbereichs anpassen. Verwenden Sie alternativ eine Kombination aus der STRG-Taste und Ihrem Mausrad, um den **dynamischen Zoom** zu aktivieren.  
 

@@ -23,10 +23,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296949"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services-Dienst (SSIS-Dienst)
@@ -38,7 +38,7 @@ ms.locfileid: "71296949"
   
  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Objekte, Einstellungen und operative Daten in der **SSISDB**-Datenbank für Projekte, die mithilfe des Projektbereitstellungsmodells auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitgestellt wurden. Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server, bei dem es sich um eine Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine handelt, hostet die Datenbank. Weitere Informationen zur Verschlüsselung finden Sie unter [SSIS-Katalog](../../integration-services/catalog/ssis-catalog.md). Weitere Informationen zum Bereitstellen eines Projekts auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server finden Sie unter [Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
-## <a name="management-capabilities"></a>Managementfunktionen  
+## <a name="management-capabilities"></a>Verwaltungsfunktionen  
  Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst ist ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen. Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst steht nur in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zur Verfügung.  
   
  Beim Ausführen des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienstes stehen folgende Verwaltungsfunktionen zur Verfügung:  
@@ -79,7 +79,7 @@ ms.locfileid: "71296949"
   
  Sie können den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst mithilfe eines der folgenden MMC-Snap-Ins (Microsoft Management Console) verwalten: SQL Server-Konfigurations-Manager oder SQL Server Integration Services. Bevor Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Pakete verwalten können, muss der Dienst gestartet werden.  
   
- Standardmäßig wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst für die Verwaltung von Paketen in der msdb-Datenbank der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] konfiguriert, die zur selben Zeit wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert wird. Wenn eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht zur selben Zeit installiert wird, wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst so konfiguriert, dass Pakete in der msdb-Datenbank der lokalen Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwaltet werden. Zur Verwaltung von Paketen, die in einer benannten Instanz oder einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]bzw. in mehreren Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]gespeichert sind, müssen Sie die Konfigurationsdatei ändern.
+ Standardmäßig wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst für die Verwaltung von Paketen in der msdb-Datenbank der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] konfiguriert, die zur selben Zeit wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installiert wird. Wenn eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht zur selben Zeit installiert wird, wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst so konfiguriert, dass Pakete in der msdb-Datenbank der lokalen Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwaltet werden. Zur Verwaltung von Paketen, die in einer benannten Instanz oder einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]bzw. in mehreren Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]gespeichert sind, müssen Sie die Konfigurationsdatei ändern.
   
  Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst ist standardmäßig so konfiguriert, dass ausgeführte Pakete angehalten werden, sobald der Dienst angehalten wird. Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst wartet jedoch nicht darauf, dass die Pakete angehalten werden, und einige Pakete können weiterhin ausgeführt werden, nachdem der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst angehalten wurde.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "71296949"
   
 ## <a name="set-the-properties-of-the-service"></a>Festlegen der Eigenschaften des Diensts
   
- Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst überwacht und verwaltet Pakete in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Bei der erstmaligen Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst gestartet und der Starttyp des Dienstes auf automatisch festgelegt.  
+ Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst überwacht und verwaltet Pakete in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Bei der erstmaligen Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst gestartet, und der Starttyp des Diensts wird auf automatisch festgelegt.  
   
  Nach der Installation des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts können Sie die Eigenschaften des Dienstes entweder mit dem SQL Server-Konfigurations-Manager oder mit dem MMC-Snap-In „Dienste“ festlegen.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "71296949"
   
 4.  Im Dialogfeld **Eigenschaften von SQL Server Integration Services** können Sie folgende Schritte durchführen:  
   
-    -   Klicken Sie auf die Registerkarte **Allgemein** . Um den Dienst zu aktivieren, wählen Sie den Starttyp "Manuell" oder "Automatisch" aus. Um den Dienst zu deaktivieren, wählen Sie im Feld **Starttyp** die Option "Deaktivieren" aus. Die Auswahl von "Deaktivieren" führt nicht zum Beenden des Dienstes, falls er gerade ausgeführt wird.  
+    -   Klicken Sie auf die Registerkarte **Allgemein**. Um den Dienst zu aktivieren, wählen Sie den Starttyp "Manuell" oder "Automatisch" aus. Um den Dienst zu deaktivieren, wählen Sie im Feld **Starttyp** die Option "Deaktivieren" aus. Die Auswahl von "Deaktivieren" führt nicht zum Beenden des Dienstes, falls er gerade ausgeführt wird.  
   
          Wenn der Dienst bereits aktiviert ist, können Sie auf **Beenden** klicken, um den Dienst zu beenden, oder Sie können auf **Starten** klicken, um den Dienst zu starten.  
   
@@ -233,7 +233,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
 > [!NOTE]  
 >  Manche Zeichen sind für Ordnernamen nicht zulässig. Die gültigen Zeichen für Ordnernamen werden durch die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Klasse **System.IO.Path** und das Feld **GetInvalidFilenameChars** bestimmt. Das Feld **GetInvalidFilenameChars** stellt ein plattformspezifisches Array mit Zeichen bereit, das nicht in Pfadzeichenfolgenargumenten angegeben werden kann, die an Mitglieder der **Path** -Klasse übergeben werden. Die Menge der ungültigen Zeichen kann je nach Dateisystem variieren. Normalerweise zählen zu den ungültigen Zeichen das Anführungszeichen ("), das Kleiner-als-Zeichen (<) und der senkrechte Strich (|).  
   
- Um Pakete zu verwalten, die in einer benannten Instanz oder einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] gespeichert sind, müssen Sie die Konfigurationsdatei jedoch ändern. Wenn Sie die Konfigurationsdatei nicht aktualisieren, können Sie mit dem **Objekt-Explorer** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] keine Pakete anzeigen, die in der msdb-Datenbank auf der benannten Instanz oder der Remoteinstanz gespeichert sind. Wenn Sie versuchen, diese Pakete mit dem **Objekt-Explorer** anzuzeigen, erhalten Sie die folgende Fehlermeldung:  
+ Um Pakete zu verwalten, die in einer benannten Instanz oder einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]gespeichert sind, müssen Sie die Konfigurationsdatei jedoch ändern. Wenn Sie die Konfigurationsdatei nicht aktualisieren, können Sie mit dem **Objekt-Explorer** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] keine Pakete anzeigen, die in der msdb-Datenbank auf der benannten Instanz oder der Remoteinstanz gespeichert sind. Wenn Sie versuchen, diese Pakete mit dem **Objekt-Explorer** anzuzeigen, erhalten Sie die folgende Fehlermeldung:  
   
  `Failed to retrieve data for this request. (Microsoft.SqlServer.SmoEnum)`  
   
@@ -314,7 +314,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
   
 3.  Wählen Sie in der Liste **Servertyp** den Eintrag **Integration Services** aus.  
   
-4.  Geben Sie in das Textfeld [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server in the **Server name** text box.  
+4.  Geben Sie den Namen eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Servers in das Textfeld **Servername** ein.  
   
     > [!NOTE]  
     >  Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst ist nicht instanzspezifisch. Sie melden sich beim Dienst mit dem Namen des Computers an, auf dem der Integration Services-Dienst ausgeführt wird.  
@@ -371,7 +371,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
  Wenn Sie ein lokales Windows-Konto auf einem Clientcomputer verwenden, können Sie nur dann eine Verbindung mit dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst auf einem Remotecomputer herstellen, wenn auf dem Remotecomputer ein lokales Konto mit dem gleichen Namen und Kennwort sowie ausreichenden Rechten vorhanden ist.  
   
 ### <a name="by-default-the-ssis-service-does-not-support-delegation"></a>Standardmäßig wird die Delegierung vom SSIS-Dienst nicht unterstützt  
-Die Delegierung von Anmeldeinformationen, auch als Doppelhop bezeichnet, wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst standardmäßig nicht unterstützt. In diesem Szenario verwenden Sie einen Clientcomputer, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ist auf einem zweiten Computer und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem dritten Computer installiert. Zunächst übergibt [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Ihre Anmeldeinformationen erfolgreich vom Clientcomputer an den zweiten Computer, auf dem der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst ausgeführt wird. Anschließend kann der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst Ihre Anmeldeinformationen jedoch nicht vom zweiten Computer an den dritten Computer delegieren, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.
+Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst unterstützt die Delegierung von Anmeldeinformationen, die manchmal auch als „Double-Hop“ bezeichnet wird, standardmäßig nicht. In diesem Szenario verwenden Sie einen Clientcomputer, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ist auf einem zweiten Computer und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem dritten Computer installiert. Zunächst übergibt [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Ihre Anmeldeinformationen erfolgreich vom Clientcomputer an den zweiten Computer, auf dem der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst ausgeführt wird. Anschließend kann der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst Ihre Anmeldeinformationen jedoch nicht vom zweiten Computer an den dritten Computer delegieren, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.
 
 Sie können die Delegierung von Anmeldeinformationen aktivieren, indem Sie dem SQL Server-Dienstkonto, das den Integration Services-Dienst als untergeordneten Prozess startet (ISServerExec.exe), die Berechtigung **Benutzer bei Delegierungen aller Dienste vertrauen (nur Kerberos)** erteilen. Beachten Sie, dass diese Berechtigung die Sicherheitsanforderungen Ihrer Organisation erfüllt, bevor Sie sie erteilen.
 

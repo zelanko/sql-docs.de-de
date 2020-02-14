@@ -35,10 +35,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981969"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM-Klausel mit JOIN, APPLY, PIVOT (Transact-SQL)
@@ -59,7 +59,7 @@ Dieser Artikel behandelt auch die folgenden Schlüsselwörter, die in der FROM-K
 - APPLY
 - PIVOT
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax  
   
@@ -190,7 +190,7 @@ FROM { <table_source> [ ,...n ] }
  Ist die Tabelle oder die Sicht außerhalb der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden, verwenden Sie einen vierteiligen Namen in der Form *linked_server*.*catalog*.*schema*.*object*. Weitere Informationen finden Sie unter [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) erläutert. Ein vierteiliger Name mit der [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)-Funktion als Serverteil des Namens kann ebenfalls zum Angeben der Remotequelltabelle verwendet werden. Wenn OPENDATASOURCE angegeben wird, gelten *database_name* und *schema_name* möglicherweise nicht für alle Datenquellen und unterliegen den Funktionen des OLE DB-Anbieters, der auf das Remoteobjekt zugreift.  
   
  [AS] *table_alias*  
- Ein Alias für*table_source*, der zur Vereinfachung oder zur Unterscheidung einer Tabelle oder Sicht in einem Selbstjoin oder einer Unterabfrage verwendet werden kann. Ein Alias ist oftmals ein verkürzter Tabellenname, der verwendet wird, um in einem Join auf bestimmte Spalten der beteiligten Tabellen zu verweisen. Falls ein Spaltenname in mehr als einer Tabelle des Joins vorkommt, muss dieser Spaltenname für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch einen Tabellennamen, einen Sichtnamen oder einen Alias gekennzeichnet werden. Falls ein Alias definiert ist, kann der Tabellenname nicht verwendet werden.  
+ Ein Alias für *table_source*, der zur Vereinfachung oder zur Unterscheidung einer Tabelle oder Sicht in einem Selbstjoin oder einer Unterabfrage verwendet werden kann. Ein Alias ist oftmals ein verkürzter Tabellenname, der verwendet wird, um in einem Join auf bestimmte Spalten der beteiligten Tabellen zu verweisen. Falls ein Spaltenname in mehr als einer Tabelle des Joins vorkommt, muss dieser Spaltenname für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch einen Tabellennamen, einen Sichtnamen oder einen Alias gekennzeichnet werden. Falls ein Alias definiert ist, kann der Tabellenname nicht verwendet werden.  
   
  Wenn eine abgeleitete Tabelle, Rowsetwertfunktion, Tabellenwertfunktion oder Operatorklausel (z.B. PIVOT oder UNPIVOT) verwendet wird, ist der erforderliche *table_alias*-Ausdruck am Ende der Klausel der zurückgegebene verknüpfte Tabellenname für alle Spalten, einschließlich gruppierter Spalten.  
   
@@ -199,7 +199,7 @@ FROM { <table_source> [ ,...n ] }
   
  *rowset_function*  
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Gibt eine der Rowsetfunktionen (z. B. OPENROWSET) an, die ein Objekt zurückgeben, das statt eines Tabellenverweises verwendet werden kann. Weitere Informationen zur Liste mit Rowsetfunktionen finden Sie unter [Rowsetfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md).  
@@ -208,7 +208,7 @@ FROM { <table_source> [ ,...n ] }
   
  *bulk_column_alias*  
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Ein optionaler Alias, der einen Spaltennamen im Resultset ersetzt. Spaltenaliase sind nur in SELECT-Anweisungen zulässig, die die OPENROWSET-Funktion mit der BULK-Option verwenden. Wenn Sie *bulk_column_alias* verwenden, geben Sie einen Alias für jede Tabellenspalte in derselben Reihenfolge wie die Spalten in der Datei an.  
@@ -221,7 +221,7 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Stellt eine Rowsetsicht eines XML-Dokuments bereit. Weitere Informationen finden Sie unter [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
@@ -229,20 +229,20 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  Entspricht einer Unterabfrage, die Zeilen von der Datenbank abruft. *derived_table* wird für die äußere Abfrage als Eingabe verwendet.  
   
- *derived* *_table* kann mithilfe des Tabellenwertkonstruktors von [!INCLUDE[tsql](../../includes/tsql-md.md)] mehrere Zeilen angeben. Beispiel: `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Weitere Informationen finden Sie unter [Tabellenwertkonstruktor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ *derived* *_table* kann mithilfe des Tabellenwertkonstruktor-Features von [!INCLUDE[tsql](../../includes/tsql-md.md)] mehrere Zeilen angeben. Beispiel: `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Weitere Informationen finden Sie unter [Tabellenwertkonstruktor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  *column_alias*  
  Ein optionaler Alias, der einen Spaltennamen im Resultset der abgeleiteten Tabelle ersetzen soll. Geben Sie für jede Spalte in der Auswahlliste einen Spaltenalias an, und schließen Sie die gesamte Liste der Spaltenaliasnamen in Klammern ein.  
   
  *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Gibt an, dass eine bestimmte Version von Daten aus der angegebenen temporalen Tabelle und die verknüpfte Verlaufstabelle mit Systemversionsverwaltung zurückgegeben werden.  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE-Klausel
-**Gilt für:** SQL Server, SQL-Datenbank 
+**Anwendungsbereich:** SQL Server, SQL-Datenbank 
  
  Gibt an, dass Beispieldaten aus der Tabelle zurückgegeben werden. Die Beispieldaten können ungefähr sein. Diese Klausel kann für eine primäre oder verknüpfte Tabelle in einer SELECT- oder UPDATE-Anweisung verwendet werden. TABLESAMPLE kann nicht für Sichten angegeben werden.  
   
@@ -268,7 +268,7 @@ FROM { <table_source> [ ,...n ] }
  Ist ein konstanter ganzzahliger Ausdruck, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Generieren einer Zufallszahl verwendet wird. *repeat_seed* ist vom Datentyp **bigint**. Wenn *repeat_seed* nicht angegeben ist, weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen zufälligen Wert zu. Für einen bestimmten *repeat_seed*-Wert ist das Stichprobenergebnis immer gleich, wenn keine Änderungen auf die Tabelle angewendet wurden. Der *repeat_seed*-Ausdruck muss zu einem ganzzahligen Wert größer null ausgewertet werden.  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE-Klausel
-**Gilt für:** SQL Data Warehouse
+**Anwendungsbereich:** SQL Data Warehouse
 
  Gibt an, dass Beispieldaten aus der Tabelle zurückgegeben werden. Die Beispieldaten können ungefähr sein. Diese Klausel kann für eine primäre oder verknüpfte Tabelle in einer SELECT- oder UPDATE-Anweisung verwendet werden. TABLESAMPLE kann nicht für Sichten angegeben werden. 
 
@@ -279,7 +279,7 @@ FROM { <table_source> [ ,...n ] }
 ### <a name="joined-table"></a>Verknüpfte Tabelle 
 Eine verknüpfte Tabelle ist ein Resultset, das das Produkt von zwei oder mehr Tabellen darstellt. Verwenden Sie für mehrere Joins Klammern, um die natürliche Joinreihenfolge zu ändern.  
   
-### <a name="join-type"></a>Jointyp
+### <a name="join-type"></a>Join-Typ
 Gibt den Typ der Joinoperation an.  
   
  INNER  
@@ -381,27 +381,27 @@ ON (p.ProductID = v.ProductID);
   
  AS OF \<date_time>  
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Gibt eine Tabelle mit einem einzelnen Datensatz für jede Zeile zurück, die die Werte enthält, die zum angegebenen Zeitpunkt in der Vergangenheit real (aktuell) waren. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte in der Zeile zurückgegeben werden, die zu dem durch den Parameter *\<date_time>* angegebenen Zeitpunkt gültig waren. Der Wert für eine Zeile ist gültig, wenn der Wert *system_start_time_column_name* kleiner als oder gleich dem Parameterwert *\<date_time>* und der Wert *system_end_time_column_name* größer als der Parameterwert *\<date_time>* ist.   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
  Gibt eine Tabelle mit den Werten für alle Zeilenversionen zurück, die innerhalb des angegebenen Zeitbereichs aktiv waren, unabhängig davon, ob ihre Aktivität vor dem *\<start_date_time>* -Parameterwert für das FROM-Argument begonnen hat oder ihre Aktivität nach dem *\<end_date_time>* -Parameterwert für das TO-Argument geendet hat. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte für alle Zeilenversionen zurückgegeben werden, die zu irgendeinem Zeitpunkt innerhalb des angegebenen Zeitbereichs aktiv waren. Zeilen, die genau an dem durch den FROM-Endpunkt definierten unteren Grenzwert aktiv wurden, sind enthalten, und Datensätze, die genau an dem durch den TO-Endpunkt definierten oberen Grenzwert aktiv wurden, sind nicht enthalten.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gleich wie oben in der Beschreibung zu **FROM \<start_date_time> TO \<end_date_time>** , mit dem Unterschied, dass sie Zeilen enthält, die an dem durch den \<end_date_time>-Endpunkt definierten oberen Grenzwert aktiv wurden.  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Gibt eine Tabelle mit den Werten für alle Datensatzversionen zurück, die innerhalb des von den zwei Datums-/Uhrzeitwerten für das Argument CONTAINED IN definierten Zeitbereichs geöffnet und geschlossen wurden. Zeilen, die genau beim unteren Grenzwert aktiv wurden, oder deren Aktivität genau beim oberen Grenzwert endete, sind enthalten.  
@@ -409,7 +409,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  Gibt eine Tabelle mit den Werten aus allen Zeilen aus der aktuellen Tabelle und aus der Verlaufstabelle zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die FROM-Klausel unterstützt die SQL-Syntax von SQL-92 für verknüpfte und abgeleitete Tabellen. Die SQL-92-Syntax stellt die Joinoperatoren INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER und CROSS zur Verfügung.  
   
  UNION und JOIN in einer FROM-Klausel werden in Sichten, abgeleiteten Tabellen und Unterabfragen unterstützt.  
@@ -504,7 +504,7 @@ CROSS JOIN HumanResources.Department AS d
 ORDER BY e.BusinessEntityID, d.Name ;  
 ```  
   
-### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>D. Verwenden der SQL-92-FULL OUTER JOIN-Syntax  
+### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>D: Verwenden der SQL-92-FULL OUTER JOIN-Syntax  
  Im folgenden Beispiel werden der Produktname und alle zugehörigen Kaufaufträge in der `SalesOrderDetail`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben. Außerdem werden Kaufaufträge zurückgegeben, für die kein Produkt in der `Product`-Tabelle aufgeführt ist. Darüber hinaus werden Produkte mit einem anderen Kaufauftrag als dem in der `Product`-Tabelle aufgeführten Kaufauftrag zurückgegeben.  
   
 ```sql  
@@ -593,9 +593,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ### <a name="k-using-apply"></a>K. Verwenden von APPLY  
 Im folgenden Beispiel wird vorausgesetzt, dass die folgenden Tabellen und Tabellenwertfunktionen in der Datenbank vorhanden sind:  
 
-|Objektnamen|Spaltennamen|      
+|Objektname|Spaltennamen|      
 |---|---|   
-|Abteilungen|DeptID, DivisionID, DeptName, DeptMgrID|      
+|Departments|DeptID, DivisionID, DeptName, DeptMgrID|      
 |EmpMgr|MgrID, EmpID|     
 |Employees|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
 |GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     
@@ -632,7 +632,7 @@ GO
   
 ### <a name="m-using-for-system_time"></a>M. Verwenden von FOR SYSTEM_TIME  
   
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Im folgenden Beispiel wird das Argument FOR SYSTEM_TIME AS OF date_time_literal_or_variable verwendet, um Tabellenzeilen zurückzugeben, die am 1. Januar 2014 aktuell waren.  
   
@@ -697,7 +697,7 @@ FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="n-using-the-inner-join-syntax"></a>N. Verwenden der INNER JOIN-Syntax  
  Im folgenden Beispiel werden die Spalten `SalesOrderNumber`, `ProductKey` und `EnglishProductName` aus den Tabellen `FactInternetSales` und `DimProduct` zurückgegeben, wobei der Joinschlüssel `ProductKey` in beiden Tabellen übereinstimmt. Die Spalten `SalesOrderNumber` und `EnglishProductName` sind nur in einer der Tabellen vorhanden. Daher muss mit diesen Spalten kein Tabellenalias angegeben werden. Diese Aliase werden lediglich aus Gründen der besseren Lesbarkeit eingefügt. Das Wort **AS** vor einem Aliasnamen ist nicht erforderlich, wird jedoch aus Gründen der besseren Lesbarkeit sowie zur Einhaltung des ANSI-Standards empfohlen.  

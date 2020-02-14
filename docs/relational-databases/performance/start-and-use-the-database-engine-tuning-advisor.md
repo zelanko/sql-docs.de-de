@@ -19,10 +19,10 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983272"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
@@ -50,7 +50,7 @@ ms.locfileid: "73983272"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>So starten Sie den Datenbankoptimierungsratgeber in SQL Server Management Studio  
   
-1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**Extras** auf **Datenbankoptimierungsratgeber**.  
+1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Menü **Extras** auf **Datenbankoptimierungsratgeber**.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>So starten Sie den Datenbankoptimierungsratgeber über den Abfrage-Editor von SQL Server Management Studio  
   
@@ -89,7 +89,7 @@ ms.locfileid: "73983272"
   
 1.  Starten Sie den Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
   
-2.  Geben Sie Ihr [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript in den Abfrage-Editor ein. Dieses Skript sollte eine Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen an mindestens eine zu optimierende Datenbank enthalten.  
+2.  Geben Sie Ihr [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript in den Abfrage-Editor ein. Dieses Skript sollte eine Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen an mindestens eine zu optimierende Datenbank enthalten.  
   
 3.  Speichern Sie die Datei mit der Erweiterung **SQL**. Die Datenbankoptimierungsratgeber-GUI und das Befehlszeilen-Hilfsprogramm **dta** können dieses [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript als Arbeitsauslastung verwenden.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "73983272"
   
     -   Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]auf das Menü **Extras** , und klicken Sie dann auf **SQL Server Profiler**.  
   
-2.  Erstellen Sie eine Ablaufverfolgungsdatei oder -tabelle mithilfe der [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Tuning** , wie in den folgenden schrittweisen Anleitungen beschrieben:  
+2.  Erstellen Sie, wie in den folgenden detaillierten Anleitungen beschrieben, eine Ablaufverfolgungsdatei oder -tabelle mithilfe der **Optimierungsvorlage** von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
     -   [Erstellen einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -185,7 +185,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
 2.  Erstellen Sie eine Arbeitsauslastung. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Erstellen einer Arbeitsauslastung](#Create) .  
   
-3.  Starten Sie den Datenbankoptimierungsratgeber, und melden Sie sich bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Starten des Datenbankoptimierungsratgebers](#Start) .  
+3.  Starten Sie den Datenbankoptimierungsratgeber, und melden Sie sich bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Starten des Datenbankoptimierungsratgebers](#Start) .  
   
 4.  Geben Sie auf der Registerkarte **Allgemein** einen Namen in **Sitzungsname** ein, um eine neue Optimierungssitzung zu erstellen.  
   
@@ -308,7 +308,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
 ##  <a name="XMLInput"></a> Erstellen einer XML-Eingabedatei  
  Wenn Sie mit der XML-Entwicklung bereits gut vertraut sind, können Sie XML-Formatdateien erstellen, mit denen der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber Arbeitsauslastungen optimieren kann. Um diese XML-Dateien zu erstellen, verwenden Sie Ihre bevorzugten XML-Tools, und bearbeiten Sie eine Beispieldatei, oder generieren Sie eine Instanz des XML-Schemas für den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber.  
   
- Das XML-Schema für den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber ist in Ihrer Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an folgendem Speicherort verfügbar:  
+ Das XML-Schema für den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Optimierungsratgeber ist in Ihrer Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an folgendem Speicherort verfügbar:  
   
  C:\Programme\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -322,7 +322,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
 2.  Erstellen Sie mithilfe einer der folgenden Methoden eine XML-Eingabedatei:  
   
-    -   Kopieren Sie eines der [Beispiele für XML-Eingabedateien &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md), und fügen Sie es in Ihren bevorzugten XML-Editor ein. Ändern Sie die Werte, um die entsprechenden Argumente für Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation anzugeben, und speichern Sie die XML-Datei.  
+    -   Kopieren Sie eines der [Beispiele für XML-Eingabedateien &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md), und fügen Sie es in Ihren bevorzugten XML-Editor ein. Ändern Sie die Werte, um die entsprechenden Argumente für Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation anzugeben, und speichern Sie die XML-Datei.  
   
     -   Generieren Sie mithilfe Ihres bevorzugten XML-Tools eine Instanz vom XML-Schema für den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber.  
   
@@ -360,7 +360,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
  **Sitzungsname**  
  Geben Sie einen Namen für die Sitzung an. Der Sitzungsname weist einer Optimierungssitzung einen Namen zu. Anhand dieses Namens können Sie die Optimierungssitzung später überprüfen.  
   
- **Zuletzt geöffnete Dateien**  
+ **File**  
  Geben Sie eine SQL-Skript- oder Ablaufverfolgungsdatei für eine Arbeitsauslastung an. Geben Sie Pfad und Dateinamen im zugehörigen Textfeld an. Der Datenbankoptimierungsratgeber setzt voraus, dass die Ablaufverfolgungsdatei für die Arbeitsauslastung eine Rolloverdatei ist. Weitere Informationen zu Rolloverdateien finden Sie unter [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md).  
   
  **Table**  
@@ -509,7 +509,7 @@ database_name.owner_name.table_name
  **Status**  
  Zeigt den Status des Aktionsschritts an.  
   
- **MessageBox**  
+ **Meldung**  
  Enthält alle Meldungen, die von den Aktionsschritten zurückgegeben werden.  
   
  **Optimierungsprotokoll**  
@@ -517,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)  
+ [dta (Hilfsprogramm)](../../tools/dta/dta-utility.md)  
   
   

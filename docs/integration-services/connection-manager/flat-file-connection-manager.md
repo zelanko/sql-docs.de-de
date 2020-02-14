@@ -23,10 +23,10 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f865a560cb530060cf8f2f0a2f0a6208fcc924ed
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298594"
 ---
 # <a name="flat-file-connection-manager"></a>Verbindungs-Manager für Flatfiles
@@ -44,7 +44,7 @@ ms.locfileid: "71298594"
  Wenn Sie die Spaltenlängen im Verbindungs-Manager für Flatfiles aktualisieren, nachdem Sie die Flatfilequelle, die den Verbindungs-Manager verwendet, hinzugefügt und geändert haben, ist das manuelle Ändern der Ausgabespaltengröße in der Flatfilequelle nicht erforderlich. Wenn Sie das Dialogfeld **Flatfilequelle** öffnen, stellt die Flatfilequelle eine Option zum Synchronisieren der Spaltenmetadaten bereit.  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Konfiguration des Verbindungs-Managers für Flatfiles  
- Wenn Sie einem Paket einen Verbindungs-Manager für Flatfiles hinzufügen, erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, der zur Laufzeit in eine Flatfileverbindung aufgelöst wird, die Eigenschaften der Flatfileverbindung festlegt und der **Connections** -Sammlung des Pakets den Verbindungs-Manager für Flatfiles hinzufügt.  
+ Wenn Sie einem Paket einen Verbindungs-Manager für Flatfiles hinzufügen, erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, der zur Laufzeit in eine Flatfileverbindung aufgelöst wird, die Eigenschaften der Flatfileverbindung festlegt und den Verbindungs-Manager für Flatfiles zur **Connections**-Sammlung des Pakets hinzufügt.  
   
  Die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers ist auf **FLATFILE**festgelegt.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "71298594"
   
  Weitere Informationen zum Verbindungs-Manager für Flatfiles finden Sie unter [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Flatfileverbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   
@@ -110,9 +110,9 @@ ms.locfileid: "71298594"
  **Format**  
  Gibt an, ob die Datei Formatierung mit Trennzeichen, fester Breite oder rechtem Flatterrand verwendet.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
-|Mit Trennzeichen|Die Trennung von Spalten erfolgt durch Trennzeichen. Welche Trennzeichen dies sind, wird auf der Seite **Spalten** angegeben.|  
+|Durch Trennzeichen getrennt|Die Trennung von Spalten erfolgt durch Trennzeichen. Welche Trennzeichen dies sind, wird auf der Seite **Spalten** angegeben.|  
 |Feste Breite|Spalten haben eine feste Breite.|  
 |Rechter Flatterrand|Bei Dateien mit rechtem Flatterrand haben die Spalten mit Ausnahme der letzten Spalte eine feste Breite. Die Trennung der letzten Spalte erfolgt mit einem Zeilentrennzeichen.|  
   
@@ -125,7 +125,7 @@ ms.locfileid: "71298594"
  **Kopfzeilentrennzeichen**  
  Wählen Sie aus einer Liste mit Trennzeichen für Kopfzeilen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Kopfzeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Kopfzeilen dient ein Wagenrücklauf.|  
@@ -159,7 +159,7 @@ ms.locfileid: "71298594"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -173,7 +173,7 @@ ms.locfileid: "71298594"
  **Spaltentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Spaltentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  
@@ -220,7 +220,7 @@ ms.locfileid: "71298594"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -240,7 +240,7 @@ ms.locfileid: "71298594"
   
  Weitere Informationen zum Verbindungs-Manager für Flatfiles finden Sie unter [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für den Verbindungs-Manager für Flatfiles im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   
@@ -250,7 +250,7 @@ ms.locfileid: "71298594"
  **Konfigurieren Sie die Eigenschaften für jede Spalte.**  
  Wählen Sie eine Spalte im linken Bereich, um im rechten Bereich ihre Eigenschaften anzuzeigen. In der folgenden Tabelle werden die Datentypeigenschaften beschrieben. Einige der aufgeführten Eigenschaften können nur für einige Flatfileformate konfiguriert werden.  
   
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**ColumnType**|Gibt an, ob eine Spalte getrennt ist, eine feste Breite hat bzw. einen unregelmäßigen rechten Rand aufweist. Diese Eigenschaft ist schreibgeschützt. Bei Dateien mit rechtem Flatterrand haben die Spalten mit Ausnahme der letzten Spalte eine feste Breite. Die Trennung der letzten Spalte erfolgt mit einem Zeilentrennzeichen.|  
 |**OutputColumnWidth**|Geben Sie einen Wert an, der als Anzahl von Bytes gespeichert werden soll; bei Unicode-Dateien entspricht dieser Wert einer Zeichenanzahl. Im Datenflusstask dient dieser Wert dem Festlegen der Breite der Ausgabespalte für die Flatfilequelle. Im Objektmodell heißt diese Eigenschaft MaximumWidth.|  
@@ -265,7 +265,7 @@ ms.locfileid: "71298594"
  **Neu**  
  Durch Klicken auf **Neu**fügen Sie eine neue Spalte hinzu. Die neue Spalten wird beim Klicken auf **Neu** standardmäßig am Ende der Liste hinzugefügt. Ferner sind für die Schaltfläche folgende, über die Dropdownliste auswählbare Optionen verfügbar.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Spalte hinzufügen**|Fügt am Ende der Liste eine neue Spalte hinzu.|  
 |**Einfügen vor**|Fügt vor der ausgewählten Spalte eine neue Spalte ein.|  
@@ -281,7 +281,7 @@ ms.locfileid: "71298594"
   
  Weitere Informationen zum Verbindungs-Manager für Flatfiles finden Sie unter [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Flatfile-Verbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   

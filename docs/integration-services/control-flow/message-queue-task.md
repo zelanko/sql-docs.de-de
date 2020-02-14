@@ -22,10 +22,10 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294100"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
@@ -33,7 +33,7 @@ ms.locfileid: "71294100"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Mit dem Task „Nachrichtenwarteschlange“ können Sie Message Queuing (MSMQ) verwenden, um Nachrichten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen zu senden und zu empfangen oder um Nachrichten an eine Anwendungswarteschlange zu senden, die von einer benutzerdefinierten Anwendung verarbeitet wird. Bei diesen Nachrichten kann es sich um einfachen Text, Dateien oder Variablen und deren Werte handeln.  
+  Mit dem Task „Nachrichtenwarteschlange“ können Sie Message Queuing (auch als MSMQ bezeichnet) verwenden, um Nachrichten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen zu senden und zu empfangen oder um Nachrichten an eine Anwendungswarteschlange zu senden, die von einer benutzerdefinierten Anwendung verarbeitet wird. Bei diesen Nachrichten kann es sich um einfachen Text, Dateien oder Variablen und deren Werte handeln.  
   
  Mit dem Task Nachrichtenwarteschlange können Sie Vorgänge im gesamten Unternehmen koordinieren. Nachrichten können in eine Warteschlange eingereiht und später übermittelt werden, falls das Ziel nicht verfügbar oder ausgelastet ist. Beispielsweise können mit diesem Task Nachrichten für den Offlinelaptopcomputer von Vertriebsmitarbeitern, die ihre Nachrichten beim Herstellen einer Verbindung mit dem Netzwerk erhalten, einer Warteschlange hinzugefügt werden. Der Task Nachrichtenwarteschlange kann für folgende Zwecke verwendet werden:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "71294100"
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den Task 'Nachrichtenwarteschlange'  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Nachrichtenwarteschlange aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|Zeigt an, dass das Öffnen der Warteschlange beendet wurde.|  
 |**MSMQBeforeOpen**|Zeigt an, dass das Öffnen der Warteschlange begonnen wurde.|  
@@ -106,7 +106,7 @@ ms.locfileid: "71294100"
 ## <a name="message-queue-task-editor-general-page"></a>Editor für den Task 'Nachrichtenwarteschlange' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task „Nachrichtenwarteschlange“** können Sie den Task „Nachrichtenwarteschlange“ benennen und beschreiben, das Nachrichtenformat angeben und kennzeichnen, ob vom Task Nachrichten gesendet oder empfangen werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task Nachrichtenwarteschlange an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -124,13 +124,13 @@ ms.locfileid: "71294100"
   
  **Verwandte Themen:** [MSMQ-Verbindungs-Manager ](../../integration-services/connection-manager/msmq-connection-manager.md), [MSMQ-Verbindungs-Manager-Editor](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
- **MessageBox**  
+ **Meldung**  
  Geben Sie an, ob Nachrichten vom Task Nachrichtenwarteschlange gesendet oder empfangen werden. Wenn Sie **Nachricht senden**auswählen, wird im linken Bereich des Dialogfelds die Seite Senden angezeigt; wenn Sie **Nachricht empfangen**auswählen, wird die Seite Empfangen aufgelistet. Standardmäßig ist dieser Wert auf **Nachricht senden**festgelegt.  
   
 ## <a name="message-queue-task-editor-send-page"></a>Task 'Nachrichtenwarteschlange' (Seite Senden)
-  Im Dialogfeld **Editor für den Task 'Nachrichtenwarteschlange'** können Sie auf der Seite **Senden** den Task Nachrichtenwarteschlange so konfigurieren, dass Nachrichten von einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket gesendet werden.  
+  Im Dialogfeld **Editor für den Task „Nachrichtenwarteschlange“** können Sie auf der Seite **Senden** den Task „Nachrichtenwarteschlange“ so konfigurieren, dass Nachrichten von einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket gesendet werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **UseEncryption**  
  Geben Sie an, ob die Nachricht verschlüsselt werden soll. Der Standardwert ist **False**.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "71294100"
  Wenn Sie die Verschlüsselung verwenden möchten, müssen Sie den Namen des verwendeten Verschlüsselungsalgorithmus angeben. Für den Task "Nachrichtenwarteschlange" können die Algorithmen RC2 und RC4 verwendet werden. Die Standardeinstellung lautet **RC2**.  
   
 > [!NOTE]  
->  Der RC4-Algorithmus wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.  
+>  Der RC4-Algorithmus wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.  
   
 > [!IMPORTANT]  
 >  Diese Verschlüsselungsalgorithmen werden von der Message Queuing-Technologie (auch bekannt als MSMQ) unterstützt. Diese Verschlüsselungsalgorithmen werden inzwischen im Vergleich zu neueren Algorithmen, die von Message Queuing noch nicht unterstützt werden, beide als kryptografisch schwach betrachtet. Daher sollten Sie Ihren Kryptografiebedarf sorgfältig überdenken, wenn Sie Nachrichten mithilfe des Tasks Nachrichtenwarteschlange senden.  
@@ -146,7 +146,7 @@ ms.locfileid: "71294100"
  **MessageType**  
  Wählen Sie den Nachrichtentyp aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Data file message**|Die Nachricht wird in einer Datei gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **DataFileMessage**angezeigt.|  
 |**Variable message**|Die Nachricht wird in einer Variable gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **VariableMessage**angezeigt.|  
@@ -171,7 +171,7 @@ ms.locfileid: "71294100"
 ## <a name="message-queue-task-editor-receive-page"></a>Editor für den Task 'Nachrichtenwarteschlange' (Seite Empfangen)
   Auf der Seite **Empfangen** des Dialogfelds **Editor für den Task „Nachrichtenwarteschlange“** können Sie den Task „Nachrichtenwarteschlange“ konfigurieren, um MSMQ-Nachrichten ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) zu empfangen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **RemoveFromMessageQueue**  
  Geben Sie an, ob die Nachricht aus der Warteschlange entfernt werden soll, nachdem sie empfangen wurde. Standardmäßig ist dieser Wert auf **False**festgelegt.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "71294100"
  **MessageType**  
  Wählen Sie den Nachrichtentyp aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Data file message**|Die Nachricht wird in einer Datei gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **DataFileMessage**angezeigt.|  
 |**Variable message**|Die Nachricht wird in einer Variable gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **VariableMessage**angezeigt.|  
@@ -203,7 +203,7 @@ ms.locfileid: "71294100"
  **Filter**  
  Geben Sie an, ob auf die Nachricht ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Kein Filter**|Der Task filtert keine Nachrichten. Wenn Sie diesen Wert auswählen, wird die dynamische Option **IdentifierReadOnly**angezeigt.|  
 |**Vom Paket**|Der Task empfängt nur Nachrichten von dem angegebenen Paket. Wenn Sie diesen Wert auswählen, wird die dynamische Option **Identifier**angezeigt.|  
@@ -224,7 +224,7 @@ ms.locfileid: "71294100"
  **Filter**  
  Geben Sie an, ob auf Nachrichten ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Kein Filter**|Der Task filtert keine Nachrichten. Wenn Sie diesen Wert auswählen, wird die dynamische Option **IdentifierReadOnly**angezeigt.|  
 |**Vom Paket**|Der Task empfängt nur Nachrichten von dem angegebenen Paket. Wenn Sie diesen Wert auswählen, wird die dynamische Option **Identifier**angezeigt.|  
@@ -250,9 +250,9 @@ ms.locfileid: "71294100"
  **Vergleichen**  
  Geben Sie an, ob auf Nachrichten ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
-|**InclusionThresholdSetting**|Die Nachrichten werden nicht verglichen.|  
+|**None**|Die Nachrichten werden nicht verglichen.|  
 |**Genaue Übereinstimmung**|Die Nachrichten müssen genau mit der Zeichenfolge in der Option **CompareString** übereinstimmen.|  
 |**Groß-/Kleinschreibung ignorieren**|Die Nachricht muss mit der Zeichenfolge in der Option **CompareString** übereinstimmen, aber beim Vergleichen wird nicht zwischen Groß- und Kleinschreibung unterschieden.|  
 |**Mit Inhalt**|Die Nachrichten müssen die Zeichenfolge in der Option **CompareString** enthalten.|  
@@ -264,9 +264,9 @@ ms.locfileid: "71294100"
  **Vergleichen**  
  Geben Sie an, ob auf Nachrichten ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
-|**InclusionThresholdSetting**|Die Nachrichten werden nicht verglichen.|  
+|**None**|Die Nachrichten werden nicht verglichen.|  
 |**Genaue Übereinstimmung**|Die Nachricht muss genau mit der Zeichenfolge in der Option **CompareString** übereinstimmen.|  
 |**Groß-/Kleinschreibung ignorieren**|Die Nachricht muss mit der Zeichenfolge in der Option **CompareString** übereinstimmen, aber beim Vergleichen wird nicht zwischen Groß- und Kleinschreibung unterschieden.|  
 |**Mit Inhalt**|Die Nachricht muss die Zeichenfolge in der Option **CompareString** enthalten.|  
@@ -282,7 +282,7 @@ ms.locfileid: "71294100"
 ## <a name="select-variables"></a>Variablen auswählen
   Mithilfe des Dialogfelds **Variablen auswählen** geben Sie die Variablen an, die beim Vorgang des Sendens einer Nachricht im Task Nachrichtenwarteschlange verwendet werden. Die Liste **Verfügbare Variablen** enthält Systemvariablen und benutzerdefinierte Variablen, die sich auf den Task „Nachrichtenwarteschlange“ oder dessen übergeordneten Container beziehen. Der Task verwendet die Variablen der Liste **Ausgewählte Variablen** .  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Variablen**  
  Wählen Sie eine oder mehrere Variablen aus.  
   

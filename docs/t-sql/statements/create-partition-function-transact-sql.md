@@ -28,10 +28,10 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912614"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67912614"
 
   Erstellt eine Funktion in der aktuellen Datenbank, die Zeilen einer Tabelle oder eines Indexes Partitionen zuordnet. Dies erfolgt auf Grundlage der Werte einer angegebenen Spalte. Das Verwenden von CREATE PARTITION FUNCTION ist der erste Schritt beim Erstellen einer partitionierten Tabelle oder eines partitionierten Index. Eine Tabelle oder ein Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann maximal 15.000 Partitionen aufweisen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -117,7 +117,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
   
 |Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**Werte**|**col1** \< `1`|**col1** >= `1` AND **col1** \< `100`|**col1** >= `100` AND **col1** \< `1000`|**col1** >= `1000`| 
+|**Werte**|**col1** \< `1`|**col1** >= `1` UND **col1** \< `100`|**col1** >= `100` UND **col1**\<`1000`|**col1** >= `1000`| 
   
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. Erstellen einer RANGE RIGHT-Partitionsfunktion für eine datetime-Spalte  
  Die folgende Partitionsfunktion partitioniert eine Tabelle oder einen Index in 12 Partitionen, d.h. eine für die Menge an Werten eines jeden Monats des Jahres in einer **datetime**-Spalte.  
@@ -133,9 +133,9 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
 |Partition|1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
-|**Werte**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|**datecol** >= `December 1, 2003`| 
+|**Werte**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` UND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` UND **col1** \< `December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
-### <a name="d-creating-a-partition-function-on-a-char-column"></a>D. Erstellen einer Partitionsfunktion für eine char-Spalte  
+### <a name="d-creating-a-partition-function-on-a-char-column"></a>D: Erstellen einer Partitionsfunktion für eine char-Spalte  
  Mit der folgenden Partitionsfunktion wird eine Tabelle oder ein Index in vier Partitionen partitioniert.  
   
 ```sql  
@@ -147,7 +147,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
   
 |Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**Werte**|**col1** \< `EX`...|**col1** >= `EX` AND **col1** \< `RXE`...|**col1** >= `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
+|**Werte**|**col1** \< `EX`...|**col1** >= `EX` UND **col1** \< `RXE`...|**col1** >= `RXE` UND **col1** \< `XR`...|**col1** >= `XR`| 
   
 ### <a name="e-creating-15000-partitions"></a>E. Erstellen von 15.000 Partitionen  
  Mit der folgenden Partitionsfunktion wird eine Tabelle oder ein Index in 15.000 Partitionen partitioniert.  

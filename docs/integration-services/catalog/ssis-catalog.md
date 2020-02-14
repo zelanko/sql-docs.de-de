@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294962"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
@@ -76,9 +76,9 @@ ms.locfileid: "71294962"
   
 -   Ordner  
   
--   Projekt  
+-   Project  
   
--   Umgebung  
+-   Environment  
   
 -   Parameter  
   
@@ -135,7 +135,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
  **Beibehaltungsdauer (Tage)**  
  Definiert das maximale Alter von zulässigen Vorgangsdaten (in Tagen). Ältere Daten werden entfernt.  
   
- Der Mindestwert ist ein Tag. Der Höchstwert wird nur durch den Höchstwert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **int**-Daten beschränkt. Informationen zu diesem Datentyp finden Sie unter [int, bigint, smallint und tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
+ Der Mindestwert ist ein Tag. Der Höchstwert wird nur durch den Höchstwert für Daten vom Typ **int** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschränkt. Informationen zu diesem Datentyp finden Sie unter [int, bigint, smallint und tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
   
  **Alte Versionen regelmäßig entfernen**  
  Der Auftragsschritt für die Projektversionsbereinigung wird ausgeführt, wenn diese Eigenschaft auf **TRUE**festgelegt ist.  
@@ -164,7 +164,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
  Eine Änderung des Verschlüsselungsalgorithmus ist sehr aufwändig. Der Server muss zuerst alle Konfigurationswerte mithilfe des zuvor angegebenen Algorithmus entschlüsseln. Anschließend müssen die Werte vom Server mithilfe des neuen Algorithmus wieder verschlüsselt werden. In diesem Zeitraum können keine anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge auf dem Server ausgeführt werden. Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge weiterhin ohne Unterbrechung ausgeführt werden können, ist der Wert für den Verschlüsselungsalgorithmus im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]-Dialogfeld schreibgeschützt.  
   
- Um die Eigenschafteneinstellung **Verschlüsselungsalgorithmus** zu ändern, legen Sie die **SSISDB** -Datenbank auf den Einzelbenutzermodus fest und rufen dann die gespeicherte Prozedur „catalog.configure_catalog“ auf. Verwenden Sie ENCRYPTION_ALGORITHM für das *property_name*-Argument. Die unterstützten Eigenschaftswerte finden Sie unter [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Weitere Informationen zur gespeicherten Prozedur finden Sie unter [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+ Um die Eigenschafteneinstellung **Verschlüsselungsalgorithmus** zu ändern, legen Sie die **SSISDB** -Datenbank auf den Einzelbenutzermodus fest und rufen dann die gespeicherte Prozedur „catalog.configure_catalog“ auf. Verwenden Sie ENCRYPTION_ALGORITHM für das *property_name* -Argument. Die unterstützten Eigenschaftswerte finden Sie unter [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Weitere Informationen zur gespeicherten Prozedur finden Sie unter [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
  Weitere Informationen zum Einzelbenutzermodus finden Sie unter [Festlegen des Einzelbenutzermodus für eine Datenbank](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Informationen zur Verschlüsselung sowie zu Algorithmen für die Verschlüsselung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]finden Sie in den Themen im Abschnitt [SQL Server-Verschlüsselung](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -319,7 +319,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
 2.  Stellen Sie eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine her.  
   
-3.  Erweitern Sie im Objekt-Explorer den Serverknoten, klicken Sie mit der rechten Maustaste auf **Integration Services-Kataloge** , und klicken Sie anschließend auf **Katalog erstellen**.  
+3.  Erweitern Sie im Objekt-Explorer den Serverknoten, klicken Sie mit der rechten Maustaste auf den Knoten **Integration Services-Kataloge** , und klicken Sie dann auf **Katalog erstellen**.  
   
 4.  Klicken Sie auf **CLR-Integration aktivieren**.  
   
@@ -382,10 +382,10 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
 ###  <a name="options"></a> Konfigurieren der Optionen  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  In der folgenden Tabelle werden spezifische Eigenschaften im Dialogfeld und die entsprechenden Eigenschaften in der `catalog.catalog_properties`-Ansicht beschrieben.  
   
-|Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_properties-Ansicht)|und Beschreibung|  
+|Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_properties-Ansicht)|Beschreibung|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |Name des Verschlüsselungsalgorithmus|ENCRYPTION_ALGORITHM|Gibt den Verschlüsselungstyp an, der zur Verschlüsselung der sensiblen Parameterwerte im Katalog verwendet wird. Folgende Werte sind möglich:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (Standard)|  
 |Maximale Anzahl der Versionen pro Projekt|MAX_PROJECT_VERSIONS|Gibt an, wie viele Versionen eines Projekts im Katalog gespeichert sind. Wenn die maximale Anzahl überschritten wird, werden frühere Versionen von Projekten bei der Projektversionsbereinigung entfernt.|  
@@ -466,13 +466,13 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
     ```  
   
-3.  Stellen Sie die SSISDB-Datenbank über die Sicherung wieder her. Verwenden Sie dazu das Dialogfeld **Datenbank wiederherstellen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie in folgenden Themen:  
+3.  Stellen Sie die SSISDB-Datenbank über die Sicherung wieder her. Verwenden Sie dazu das Dialogfeld **Datenbank wiederherstellen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie in den folgenden Themen:  
   
     -   [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
     -   [Datenbank wiederherstellen &#40;Seite Dateien&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)  
   
-    -   [Datenbank wiederherstellen &#40;Seite „Optionen“&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)  
+    -   [Datenbank wiederherstellen &#40;Seite Optionen&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)  
   
 4.  Führen Sie die Skripts aus, die Sie in [So sichern Sie die SSIS-Datenbank](#backup) für ##MS_SSISServerCleanupJobLogin##, sp_ssis_startup und den SSIS-Serverwartungsauftrag erstellt haben. Bestätigen Sie, dass der SQL Server-Agent gestartet wurde.  
   
@@ -482,11 +482,11 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
     EXEC sp_procoption N'sp_ssis_startup','startup','on'  
     ```  
   
-6.  Ordnen Sie den SSISDB-Benutzer ##MS_SSISServerCleanupJobUser## (SSISDB-Datenbank) ##MS_SSISServerCleanupJobLogin## zu, indem Sie das Dialogfeld **Anmeldungseigenschaften** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden.  
+6.  Ordnen Sie den SSISDB-Benutzer ##MS_SSISServerCleanupJobUser## (SSISDB-Datenbank) ##MS_SSISServerCleanupJobLogin## zu, indem Sie das Dialogfeld **Anmeldungseigenschaften** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwenden.  
   
 7.  Verwenden Sie zum Sichern des Hauptschlüssels eine der folgenden Methoden. Weitere Informationen zur Verschlüsselung finden Sie unter [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
-    -   **Methode 1**  
+    -   **Methode 1:**  
   
          Verwenden Sie diese Methode, wenn Sie bereits eine Sicherung des Datenbank-Hauptschlüssels ausgeführt haben und Sie über das Kennwort verfügen, das verwendet wurde, um den Hauptschlüssel zu verschlüsseln.  
   
@@ -508,7 +508,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
         >   
         >  Das FORCE-Argument gibt an, dass der Wiederherstellungsprozess fortfahren sollte, auch wenn der aktuelle Datenbank-Hauptschlüssel nicht geöffnet ist. Diese Meldung wird für den SSISDB-Katalog angezeigt, da der Datenbank-Hauptschlüssel noch nicht auf der Instanz geöffnet wurde, auf der Sie die Datenbank wiederherstellen.  
   
-    -   **Methode 2**  
+    -   **Methode 2:**  
   
          Verwenden Sie diese Methode, wenn Sie über das ursprüngliche Kennwort verfügen, das verwendet wurde, um SSISDB zu erstellen.  
   
@@ -561,7 +561,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
 6.  Überprüfen Sie die Ergebnisse auf der Seite **Ergebnis** .  
   
-     ![Prüfen der Ergebnisse im SSISDB-Upgrade-Assistenten](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Prüfen der Ergebnisse im SSISDB-Upgrade-Assistenten")  
+     ![Überprüfen der Ergebnisse im SSISDB-Upgrade-Assistenten](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Überprüfen der Ergebnisse im SSISDB-Upgrade-Assistenten")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>Always On für den SSIS-Katalog (SSISDB)
   Das Feature der Always On-Verfügbarkeitsgruppen ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. Eine Verfügbarkeitsgruppe unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken. Diese werden auch als Verfügbarkeitsdatenbanken bezeichnet, die zusammen ein Failover ausführen. Weitere Informationen finden Sie unter [Always On-Verfügbarkeitsgruppen](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
@@ -573,13 +573,13 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
  
  **In diesem Abschnitt:**  
   
-1.  [Erforderliche Komponenten](#prereq)  
+1.  [Voraussetzungen](#prereq)  
   
 2.  [Konfigurieren der SSIS-Unterstützung für Always On](#Firsttime)  
   
 3.  [Upgraden von SSISDB in einer Verfügbarkeitsgruppe](#Upgrade)  
   
-###  <a name="prereq"></a> Erforderliche Komponenten  
+###  <a name="prereq"></a> Voraussetzungen  
 Bevor Sie die Always On-Unterstützung für die SSIS-Datenbank aktivieren, müssen Sie die folgenden Schritte ausführen.  
   
 1.  Erstellen Sie einen Windows-Failovercluster. Weitere Anweisungen finden Sie im Blogbeitrag [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Failoverclusterfunktion und Tools für Windows Server 2012 installieren). Installieren Sie die Funktion und die Tools auf allen Clusterknoten.  

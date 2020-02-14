@@ -16,10 +16,10 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 90855baaa61e242488a7fb6a91a52e34d77e5f48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284403"
 ---
 # <a name="integration-services-transactions"></a>Integration Services-Transaktionen
@@ -27,7 +27,7 @@ ms.locfileid: "71284403"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Pakete verwenden Transaktionen, um die von Tasks ausgeführten Datenbankaktionen in unteilbare Einheiten einzubinden und somit die Integrität der Daten zu erhalten. Alle [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Containertypen-Pakete, For-Schleifen-Container, Foreach-Schleifen-Container und Sequenzcontainer sowie die Taskhosts, die die einzelnen Tasks kapseln, können so konfiguriert werden, dass sie Transaktionen verwenden. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt für das Konfigurieren von Transaktionen drei Optionen bereit: **NotSupported**, **Supported** und **Required**.  
+  Pakete verwenden Transaktionen, um die von Tasks ausgeführten Datenbankaktionen in unteilbare Einheiten einzubinden und somit die Integrität der Daten zu erhalten. Alle [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Containertyppakete, For-Schleifen-Container, Foreach-Schleifen-Container und Sequenzcontainer sowie die Taskhosts, die die einzelnen Tasks kapseln, können so konfiguriert werden, dass sie Transaktionen verwenden. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt für das Konfigurieren von Transaktionen drei Optionen bereit: **NotSupported**, **Supported** und **Required**.  
   
 -   **Required** bedeutet, dass der Container eine Transaktion startet, es sei denn, eine andere Transaktion ist bereits durch den übergeordneten Container gestartet worden. Wenn bereits eine Transaktion vorhanden ist, nimmt der Container an dieser Transaktion teil. Wenn beispielsweise ein Paket, für das die Unterstützung von Transaktionen nicht konfiguriert wurde, einen Sequenzcontainer enthält, der die Option **Required** verwendet, startet der Sequenzcontainer eine eigene Transaktion. Wenn das Paket jedoch mit der Option **Required** konfiguriert wurde, nimmt der Sequenzcontainer an der Pakettransaktion teil.  
   
@@ -120,7 +120,7 @@ Es ist möglich, dass ein Paket nicht miteinander verbundene Transaktionen in ei
   
  Das folgende Diagramm zeigt die fünf nicht miteinander verbundenen Transaktionen im Paket. Eine Transaktion wird durch den Sequenzcontainer gestartet, und vier Transaktionen werden durch die SQL Ausführen-Tasks gestartet.  
   
- ![Implementierung von mehreren Transaktionen](../integration-services/media/mw-dts-trans2.gif "Implementation of multiple transactions")  
+ ![Implementierung von mehreren Transaktionen](../integration-services/media/mw-dts-trans2.gif "Implementierung von mehreren Transaktionen")  
  
 ## <a name="inherited-transactions"></a>Vererbte Transaktionen
  Ein Paket kann mithilfe des Tasks "Paket ausführen" ein anderes Paket ausführen. Das untergeordnete Paket, d. h. das von dem Task Paket ausführen ausgeführte Paket, kann seine eigene Pakettransaktion erstellen oder aber die Pakettransaktion des übergeordneten Pakets erben.  
@@ -144,7 +144,7 @@ Es ist möglich, dass ein Paket nicht miteinander verbundene Transaktionen in ei
   
 -   **TransactionOption** ist für das Paket E sowie für die Tasks Paket ausführen C und Paket ausführen E auf **NotSupported** festgelegt.  
   
- ![Fluss von geerbten Transaktionen](../integration-services/media/mw-dts-executepack.gif "Flow of inherited transactions")  
+ ![Flow von vererbten Transaktionen](../integration-services/media/mw-dts-executepack.gif "Flow von vererbten Transaktionen")  
   
  Nur die Pakete B, D und F können Transaktionen von ihren übergeordneten Paketen erben.  
   

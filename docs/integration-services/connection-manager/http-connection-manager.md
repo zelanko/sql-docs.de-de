@@ -20,10 +20,10 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 106b0d08ec24143ba497fb5b631fcbd5003a4872
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294409"
 ---
 # <a name="http-connection-manager"></a>HTTP-Verbindungs-Manager
@@ -31,7 +31,7 @@ ms.locfileid: "71294409"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Eine HTTP-Verbindung ermöglicht Paketen den Zugriff auf einen Webserver, indem zum Senden und Empfangen von Dateien HTTP verwendet wird. Der Task Webdienst von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet diesen Verbindungs-Manager.  
+  Eine HTTP-Verbindung ermöglicht Paketen den Zugriff auf einen Webserver, indem zum Senden und Empfangen von Dateien HTTP verwendet wird. Der Task „Webdienst“ von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet diesen Verbindungs-Manager.  
   
  Wenn Sie einem Paket einen HTTP-Verbindungs-Manager hinzufügen, erstellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, der zur Laufzeit in eine HTTP-Verbindung aufgelöst wird, die Eigenschaften des Verbindungs-Managers festlegt und der **Connections** -Sammlung im Paket den Verbindungs-Manager hinzufügt.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71294409"
   
  Weitere Informationen zum HTTP-Verbindungs-Manager finden Sie unter [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md). Weitere Informationen zu einem allgemeinen Verwendungsszenario für den HTTP-Verbindungs-Manager finden Sie unter [Web Service Task](../../integration-services/control-flow/web-service-task.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Server-URL**  
  Geben Sie die URL für den Server ein.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "71294409"
  **Anmeldeinformationen verwenden**  
  Geben Sie an, ob der HTTP-Verbindungs-Manager zur Authentifizierung die Sicherheitsanmeldeinformationen des Benutzers verwenden soll.  
   
- **User name**  
+ **Benutzername**  
  Wenn der HTTP-Verbindungs-Manager Anmeldeinformationen verwendet, müssen Sie einen Benutzernamen, ein Kennwort und eine Domäne angeben.  
   
  **Kennwort**  
@@ -84,7 +84,7 @@ ms.locfileid: "71294409"
  **Clientzertifikat verwenden**  
  Geben Sie an, ob der HTTP-Verbindungs-Manager zur Authentifizierung ein Clientzertifikat verwenden soll.  
   
- **Zertifikat**  
+ **Certificate**  
  Wählen Sie mithilfe des Dialogfelds **Zertifikat auswählen** ein Zertifikat aus der Liste aus. Im Textfeld wird der dem Zertifikat zugeordnete Name angezeigt.  
   
  **Timeout (in Sekunden)**  
@@ -101,7 +101,7 @@ ms.locfileid: "71294409"
   
  Weitere Informationen zum HTTP-Verbindungs-Manager finden Sie unter [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md). Weitere Informationen zu einem allgemeinen Verwendungsszenario für den HTTP-Verbindungs-Manager finden Sie unter [Web Service Task](../../integration-services/control-flow/web-service-task.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Proxy verwenden**  
  Gibt an, ob der HTTP-Verbindungs-Manager Verbindungen über einen Proxyserver herstellen soll.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "71294409"
  **Anmeldeinformationen verwenden**  
  Gibt an, ob der HTTP-Verbindungs-Manager Anmeldeinformationen für den Proxyserver verwenden soll.  
   
- **User name**  
+ **Benutzername**  
  Wenn der HTTP-Verbindungs-Manager Anmeldeinformationen verwendet, müssen Sie einen Benutzernamen, ein Kennwort und eine Domäne angeben.  
   
  **Kennwort**  
@@ -126,10 +126,10 @@ ms.locfileid: "71294409"
  **Proxyumgehungsliste**  
  Die Liste der Adressen, für die Sie den Proxyserver umgehen möchten.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Geben Sie eine Adresse ein, für die Sie den Proxyserver umgehen möchten.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie eine Adresse aus, und entfernen Sie sie dann, indem Sie auf **Entfernen**klicken.  
   
 ## <a name="see-also"></a>Weitere Informationen  

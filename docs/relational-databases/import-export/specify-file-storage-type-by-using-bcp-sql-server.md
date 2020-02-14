@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 93b368ece9fc259e13b63c0b58f7efe72256a564
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056377"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>Angeben des Dateispeichertyps mithilfe von bcp (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74056377"
   
  Ihre Eingabe hängt dann von der Aufgabe ab, die Sie ausführen möchten (siehe folgende Liste).  
   
--   Wenn Sie Daten von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datendatei der kompaktesten Speicherform, die möglich ist (systemeigenes Datenformat), massenexportieren möchten, nehmen Sie die Standard-Dateispeichertypen an, die von **bcp**bereitgestellt werden. Eine Liste der systemeigenen Dateispeichertypen finden Sie unter "Systemeigene Dateispeichertypen" weiter unten in diesem Thema.  
+-   Nehmen Sie die von **bcp** bereitgestellten Standarddateispeichertypen an, wenn Sie einen Massenexport für Daten aus einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datendatei in der kompaktesten Speicherform (natives Datenformat) durchführen möchten. Eine Liste der systemeigenen Dateispeichertypen finden Sie unter "Systemeigene Dateispeichertypen" weiter unten in diesem Thema.  
   
 -   Für das Massenexportieren von Daten aus einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datendatei im Zeichenformat geben Sie **char** als Dateispeichertyp für alle Spalten in der Tabelle an.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "74056377"
     |**image**|**I**[**mage**]|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
-    |**Uhrzeit**|**te**|  
+    |**time**|**te**|  
     |**date**|**de**|  
     |**datetime2**|**d2**|  
     |**datetimeoffset**|**do**|  

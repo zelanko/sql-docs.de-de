@@ -19,10 +19,10 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6829260583ebc3c1b0dec3fec5d3158ddbbea297
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293527"
 ---
 # <a name="ado-net-destination"></a>ADO NET-Ziel
@@ -32,7 +32,7 @@ ms.locfileid: "71293527"
 
   Das ADO NET-Ziel lädt Daten in eine Reihe von [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-kompatible Datenbanken, die eine Datenbanktabelle oder -sicht verwenden. Sie haben die Möglichkeit, diese Daten in eine vorhandene Tabelle oder Sicht zu laden, oder Sie können eine neue Tabelle erstellen und die Daten in die neue Tabelle laden.  
   
- Sie können mithilfe des ADO.NET-Ziels eine Verbindung mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]herstellen. Das Herstellen einer Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] über OLE DB wird nicht unterstützt. Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] finden Sie unter [Azure SQL-Datenbank – Allgemeine Einschränkungen und Leitlinien](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Sie können mithilfe des ADO.NET-Ziels eine Verbindung mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] herstellen. Das Herstellen einer Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] über OLE DB wird nicht unterstützt. Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] finden Sie unter [Azure SQL-Datenbank – Allgemeine Einschränkungen und Leitlinien](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>Problembehandlung des ADO NET-Ziels  
  Sie können die vom ADO NET-Ziel an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktion können Sie Probleme beim Speichern von Daten in externen Datenquellen durch das ADO NET-Ziel behandeln. Aktivieren Sie zum Protokollieren der vom ADO NET-Ziel an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -119,11 +119,11 @@ ms.locfileid: "71293527"
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket, das ADO.NET als Ziel hat.  
   
-2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das ADO.NET-Ziel.  
+2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das ADO NET-Ziel.  
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Zuordnungen**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "71293527"
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   

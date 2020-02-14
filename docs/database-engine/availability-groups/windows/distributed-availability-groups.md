@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee844af9f851d1dab1d77c54dfdd04fadd4d3c06
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706230"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941117"
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Die einzige Möglichkeit, um dem primären Replikat von AG 2 das Akzeptieren von
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>Anforderungen für die SQL Server-Version und -Edition für verteilte Verfügbarkeitsgruppen
 
-Verteilte Verfügbarkeitsgruppen in SQL Server 2017 oder höher können verschiedene Hauptversionen von SQL Server in der gleichen verteilten Verfügbarkeitsgruppe kombinieren. Die Verfügbarkeitsgruppe mit dem primärem Replikat für Lese-/Schreibzugriff kann dieselbe oder eine niedrigere Version als die anderen Verfügbarkeitsgruppen aufweisen, die Teil der verteilten Verfügbarkeitsgruppe sind. Die anderen Verfügbarkeitsgruppen können dieselbe oder eine höhere Version aufweisen. Dieses Szenario gilt für Upgrade- und Migrationsszenarios. Wenn die Verfügbarkeitsgruppe, die das primäre Replikat für Lese-/Schreibzugriff enthält, beispielsweise SQL Server 2016 aufweist, Sie jedoch per Migration oder Upgrade zu SQL Server 2017 oder höher wechseln möchten, können die anderen Verfügbarkeitsgruppen in der verteilten Verfügbarkeitsgruppe mit SQL Server 2017 konfiguriert werden.
+Verteilte Verfügbarkeitsgruppen in SQL Server 2017 oder höher können verschiedene Hauptversionen von SQL Server in der gleichen verteilten Verfügbarkeitsgruppe kombinieren. Die Verfügbarkeitsgruppe mit dem primärem Replikat für Lese-/Schreibzugriff kann dieselbe oder eine niedrigere Version als die anderen Verfügbarkeitsgruppen aufweisen, die Teil der verteilten Verfügbarkeitsgruppe sind. Die anderen Verfügbarkeitsgruppen können dieselbe oder eine höhere Version aufweisen. Dieses Szenario gilt für Upgrade- und Migrationsszenarios. Wenn die Verfügbarkeitsgruppe, die das primäre Replikat für Lese-/Schreibzugriff enthält, beispielsweise SQL Server 2016 aufweist, Sie jedoch per Migration oder Upgrade zu SQL Server 2017 oder höher wechseln möchten, können die anderen Verfügbarkeitsgruppen in der verteilten Verfügbarkeitsgruppe mit SQL Server 2017 konfiguriert werden.
 
 Da die Funktion für verteilte Verfügbarkeitsgruppen in SQL Server 2012 oder 2014 noch nicht existiert hat, können Verfügbarkeitsgruppen, die mit diesen Versionen erstellt wurden, nicht Teil von verteilten Verfügbarkeitsgruppen werden. 
 
@@ -148,7 +148,7 @@ Auf der folgenden Abbildung wird Verfügbarkeitsgruppe 1 (AG 1) als primäres Re
 
 In den beiden obigen Beispielen können insgesamt bis zu 27 Replikate in den drei Verfügbarkeitsgruppen vorhanden sein, von denen jedes für schreibgeschützte Abfragen verwendet werden kann. 
 
-Das [schreibgeschützte Routing]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) funktioniert nicht vollständig mit verteilten Verfügbarkeitsgruppen. Genauer gesagt
+Das [schreibgeschützte Routing]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) funktioniert nicht vollständig mit verteilten Verfügbarkeitsgruppen. Dies umfasst insbesondere Folgendes:
 
 1. kann das schreibgeschützte Routing konfiguriert werden, um für die primäre Verfügbarkeitsgruppe der verteilten Verfügbarkeitsgruppe zu funktionieren. 
 2. Das schreibgeschützte Routing kann konfiguriert werden, funktioniert jedoch nicht für die sekundäre Verfügbarkeitsgruppe der verteilten Verfügbarkeitsgruppe. Alle Abfragen, die den Listener verwenden, um eine Verbindung mit der sekundären Verfügbarkeitsgruppe herzustellen, werden an das primäre Replikat der sekundären Verfügbarkeitsgruppe weitergeleitet. Andernfalls müssen Sie jedes Replikat so konfigurieren, dass alle Verbindungen als sekundäres Replikat zugelassen werden und direkt auf diese zugegriffen wird. Das schreibgeschützte Routing funktioniert jedoch, wenn die sekundäre Verfügbarkeitsgruppe nach einem Failover zur primären Verfügbarkeitsgruppe wird. Dieses Verhalten wird mit einem Update zu SQL Server 2016 oder in einer zukünftigen Version von SQL Server möglicherweise geändert.

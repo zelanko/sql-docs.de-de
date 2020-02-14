@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7de5bc19cd49959663bf4ead3f8ebff62b3b982b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982861"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982861"
 
   Ändert eine vorhandene zuvor (durch Ausführen der CREATE FUNCTION-Anweisung) erstellte [!INCLUDE[tsql](../../includes/tsql-md.md)]- oder CLR-Funktion, ohne Berechtigungen zu ändern und ohne abhängige Funktionen, gespeicherte Prozeduren oder Trigger zu beeinflussen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -211,7 +211,7 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Auf den Funktionsnamen müssen Klammern folgen, selbst wenn kein Parameter angegeben ist.  
   
- **@** _parameter_name_  
+ **@** _Parametername_  
  Ein Parameter in der benutzerdefinierten Funktion. Ein oder mehrere Parameter können deklariert werden.  
   
  Eine Funktion kann maximal 2.100 Parameter haben. Der Benutzer muss beim Ausführen einer Funktion den Wert jedes deklarierten Parameters angeben (sofern kein Standardwert für den betreffenden Parameter definiert ist).  
@@ -246,7 +246,7 @@ RETURNS return_data_type
  *function_body*  
  Gibt an, dass eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die zusammen keine Nebeneffekte erzeugen, z. B. Ändern einer Tabelle, den Wert der Funktion definiert. *function_body* wird nur in Skalarfunktionen sowie in Tabellenwertfunktionen mit mehreren Anweisungen verwendet.  
   
- In Skalarfunktionen entspricht *function_body* einer Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die zusammen einen skalaren Wert ergeben.  
+ In Skalarfunktionen entspricht *function_body* einer Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die zusammen einen Skalarwert ergeben.  
   
  In Tabellenwertfunktionen mit mehreren Anweisungen entspricht *function_body* einer Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die eine TABLE-Rückgabevariable auffüllen.  
   
@@ -274,10 +274,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
+ _\<_Definition\_des\_Tabellentyps_\>_ **(** { \<Spaltendefinition\> \<Spaltenconstraint\> | \<Definition\_berechnete\_Spalte\> } [ \<Tabellenconstraint\> ] [ **,** ...*n* ] **)**  
  Definiert den Tabellendatentyp für eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion. Die Tabellendeklaration schließt Spaltendefinitionen und Spalten- oder Tabelleneinschränkungen ein.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Vorschauversion in einigen Regionen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< Definition_des_CLR-Tabellentyps \> **(** { *Spaltenname**Datentyp* } [ **,** ...*n* ] **)** **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([in einigen Regionen als Vorschau verfügbar](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Definiert die Tabellendatentypen für eine CLR-Funktion. Die Tabellendeklaration schließt nur Spaltennamen und Datentypen ein.  
   
@@ -422,7 +422,7 @@ Eine Liste der Bedingungen, die erfüllt sein müssen, damit eine Funktion an ei
  ALLOW_PAGE_LOCKS = { ON | OFF }  
  Gibt an, ob Seitensperren zulässig sind. Der Standardwert ist ON.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  ALTER FUNCTION kann nicht verwendet werden, um eine Skalarwertfunktion in eine Tabellenwertfunktion oder umgekehrt zu ändern. Ebenso kann ALTER FUNCTION nicht verwendet werden, um eine Inlinefunktion in eine Funktion mit mehreren Anweisungen oder umgekehrt zu ändern. ALTER FUNCTION kann nicht zum Ändern einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion in eine CLR-Funktion und umgekehrt verwendet werden.  
   
  Die folgenden Service Broker-Anweisungen können nicht in die Definition einer benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion aufgenommen werden:  

@@ -18,10 +18,10 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 92e0656fd3625f2b93a1e097d2f81291056d01cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298469"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services-Verarbeitungstask
@@ -63,7 +63,7 @@ ms.locfileid: "71298469"
   
  Dieser Task wird häufig zusammen mit einem Masseneinfügungstask verwendet, der Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle lädt, oder mit einem Datenflusstask, der einen Datenfluss zum Laden von Daten in eine Tabelle implementiert. Beispielsweise könnte der Datenflusstask einen Datenfluss aufweisen, der Daten aus einer OLTP-Datenbank (Online Transactional Database) extrahiert und in eine Faktentabelle in einem Data Warehouse lädt. Anschließend wird der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verarbeitungstask aufgerufen, um den im Data Warehouse erstellten Cube zu verarbeiten.  
   
- Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verarbeitungstask stellt mithilfe eines Verbindungs-Managers von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her. Weitere Informationen finden Sie unter [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
+ Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Verarbeitungstask stellt mithilfe eines Verbindungs-Managers von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] her. Weitere Informationen finden Sie unter [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
   
@@ -86,7 +86,7 @@ ms.locfileid: "71298469"
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Editor für den Analysis Services-Verarbeitungstask (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Analysis Services-Verarbeitungstask** können Sie den Analysis Services-Verarbeitungstask benennen und beschreiben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Analysis Services-Verarbeitungstask an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "71298469"
   
 4.  Batcheinstellungen werden für tabellarische Modelle ignoriert.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Analysis Services-Verbindungs-Manager**  
  Wählen Sie einen vorhandenen Analysis Services-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen.  
   
@@ -119,17 +119,17 @@ ms.locfileid: "71298469"
  **Verwandte Themen:** [Analysis Services-Verbindungs-Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Objektliste**  
- |Eigenschaft|und Beschreibung|  
+ |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|**Objektname**|Listet die angegebenen Objektnamen auf.|  
+|**Objektnamen**|Listet die angegebenen Objektnamen auf.|  
 |**Typ**|Listet die Typen der angegebenen Objekte auf.|  
 |**Verarbeitungsoptionen**|Wählen Sie eine Verarbeitungsoption in der Liste aus.<br /><br /> **Verwandte Themen:** [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Einstellungen**|Listet die Verarbeitungseinstellungen für die angegebenen Objekte auf.|  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügen Sie der Liste ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt hinzu.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie ein Objekt aus, und klicken Sie auf **Löschen**.  
   
  **Auswirkungsanalyse**  
@@ -138,7 +138,7 @@ ms.locfileid: "71298469"
  **Verwandte Themen:** [Dialogfeld „Auswirkungsanalyse“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Zusammenfassung der Batcheinstellungen**  
- |Eigenschaft|und Beschreibung|  
+ |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**Verarbeitungsreihenfolge**|Gibt an, ob die Objekte nacheinander oder als Batch verarbeitet werden; bei Verwendung der parallelen Verarbeitung wird die Anzahl der gleichzeitig verarbeiteten Objekte angegeben.|  
 |**Transaktionsmodus**|Gibt den Transaktionsmodus für die sequenzielle Verarbeitung an.|  

@@ -14,10 +14,10 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296170"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services-Paket- und Projektparameter (SSIS)
@@ -50,7 +50,7 @@ ms.locfileid: "71296170"
   
  In der folgenden Tabelle sind die Werttypen aufgeführt.  
   
-|Wertname|und Beschreibung|Werttyp|  
+|Wertname|Beschreibung|Werttyp|  
 |----------------|-----------------|-------------------|  
 |Ausführungswert|Der Wert, der einer bestimmten Instanz der Paketausführung zugewiesen wird. Diese Zuweisung überschreibt alle anderen Werte, gilt aber nur für eine einzelne Instanz der Paketausführung.|Literal|  
 |Serverwert|Der Wert, der dem Parameter innerhalb des Projektbereichs zugewiesen wird, nachdem das Projekt auf dem Integration Services-Server bereitgestellt wurde. Dieser Wert überschreibt den Entwurfsstandard.|Literaler oder Umgebungsvariablenverweis|  
@@ -89,7 +89,7 @@ ms.locfileid: "71296170"
   
  Sie können den Parameterwert auch im Dialogfeld **Paket ausführen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ändern. Weitere Informationen finden Sie unter [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog).  
   
- Sie können einen Parameterwert auch mit der dtexec-Option **/Parameter** ändern. Weitere Informationen finden Sie unter [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
+ Sie können einen Parameterwert auch mit der dtexec-Option **/Parameter** ändern. Weitere Informationen finden Sie [hier](../integration-services/packages/dtexec-utility.md).  
   
 ### <a name="parameter-validation"></a>Parameterüberprüfung  
  Wenn Parameterwerte nicht aufgelöst werden können, schlägt die entsprechende Paketausführung fehl. Zur Fehlervermeidung können Sie Projekte und Pakete im Dialogfeld **Überprüfen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]überprüfen. Mit der Überprüfung stellen Sie sicher, dass alle Parameter über die notwendigen Werte verfügen oder die notwendigen Werte mit bestimmten Umgebungsverweisen auflösen können. Mit der Überprüfung können auch andere häufig auftretende Paketprobleme überprüft werden.  
@@ -103,7 +103,7 @@ ms.locfileid: "71296170"
   
  Während der Vorbereitung einer bestimmten Instanz der Paketausführung wird dem **pkgOptions** -Parameter der Wert 5 zugewiesen. Dieser Wert wird als Ausführungswert bezeichnet, da es für den Parameter nur für diese spezifische Instanz der Ausführung gilt. Wenn die Ausführung startet, wird der dem **pkgOptions** -Parameter entsprechenden Paketeigenschaft der Wert 5 zugewiesen.  
   
-## <a name="create-parameters"></a>Create Parameters
+## <a name="create-parameters"></a>Erstellen von Parametern
 Sie verwenden [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um Projektparameter und Paketparameter zu erstellen. Die folgenden Prozeduren stellen schrittweise Anweisungen zum Erstellen von Paket-/Projektparametern bereit.  
   
 > **HINWEIS:** Wenn Sie ein Projekt, das Sie mit einer früheren Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erstellt haben, in das Projektbereitstellungsmodell konvertieren, können Sie mit dem **Assistent für die Konvertierung von Integration Services-Projekten** Parameter auf Grundlage von Konfigurationen erstellen. Weitere Informationen finden Sie unter [Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -112,22 +112,22 @@ Sie verwenden [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]
   
 1.  Öffnen Sie das Paket in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], und klicken Sie dann auf die Registerkarte **Parameter** im SSIS-Designer.  
   
-     ![Registerkarte „Paketparameter“](../integration-services/media/denali-package-parameters.gif "Package Parameters Tab")  
+     ![Registerkarte „Paketparameter“](../integration-services/media/denali-package-parameters.gif "Registerkarte „Paketparameter“")  
   
 2.  Klicken Sie auf die Schaltfläche **Parameter hinzufügen** auf der Symbolleiste.  
   
-     ![Symbolleisten-Schaltfläche hinzufügen](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![Symbolleistenschaltfläche „Hinzufügen“](../integration-services/media/denali-parameter-add.gif "Symbolleistenschaltfläche „Hinzufügen“")  
   
 3.  Geben Sie Werte für die Eigenschaften **Name**, **Datentyp**, **Wert**, **Vertraulich**und **Erforderlich** in der Liste selbst oder im Fenster **Eigenschaften** ein. In der folgenden Tabelle werden diese Eigenschaften beschrieben.  
   
-    |Eigenschaft|und Beschreibung|  
+    |Eigenschaft|Beschreibung|  
     |--------------|-----------------|  
     |Name|Der Name des Parameters.|  
     |Datentyp|Der Datentyp des Parameters.|  
     |Standardwert|Der Standardwert für den zur Entwurfszeit zugewiesenen Parameter. Dieser wird auch als Entwurfsstandard bezeichnet.|  
-    |Vertraulich|Vertrauliche Parameterwerte werden im Katalog verschlüsselt und in Transact-SQL oder SQL Server Management Studio als NULL-Wert angezeigt.|  
-    |Required|Dazu muss ein anderer als der Entwurfsstandardwert angegeben werden, bevor das Paket ausgeführt werden kann.|  
-    |und Beschreibung|Die Beschreibung des Parameters für bessere Verwaltbarkeit. Legen Sie im Visual Studio-Eigenschaftenfenster von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]die Parameterbeschreibung fest, wenn der Parameter im entsprechenden Parameterfenster ausgewählt wurde.|  
+    |Sensibel|Vertrauliche Parameterwerte werden im Katalog verschlüsselt und in Transact-SQL oder SQL Server Management Studio als NULL-Wert angezeigt.|  
+    |Erforderlich|Dazu muss ein anderer als der Entwurfsstandardwert angegeben werden, bevor das Paket ausgeführt werden kann.|  
+    |Beschreibung|Die Beschreibung des Parameters für bessere Verwaltbarkeit. Legen Sie im Visual Studio-Eigenschaftenfenster von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]die Parameterbeschreibung fest, wenn der Parameter im entsprechenden Parameterfenster ausgewählt wurde.|  
   
     > **HINWEIS:** Wenn Sie im Katalog ein Projekt bereitstellen, werden dem Projekt einige weitere Eigenschaften zugeordnet. Um alle Eigenschaften für alle Parameter im Katalog anzuzeigen, verwenden Sie die Sicht [catalog.object_parameters &#40;SSISDB-Datenbank&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
   
@@ -143,22 +143,22 @@ Sie verwenden [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]
   
 2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **Project.params**, und klicken Sie auf **Öffnen**. Oder doppelklicken auf **Project.params**, um das Projekt zu öffnen.  
   
-     ![Fenster „Projektparameter“](../integration-services/media/denali-project-parameters.gif "Project Parameters Window")  
+     ![Fenster „Projektparameter“](../integration-services/media/denali-project-parameters.gif "Fenster „Projektparameter“")  
   
 3.  Klicken Sie auf die Schaltfläche **Parameter hinzufügen** auf der Symbolleiste.  
   
-     ![Symbolleisten-Schaltfläche hinzufügen](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![Symbolleistenschaltfläche „Hinzufügen“](../integration-services/media/denali-parameter-add.gif "Symbolleistenschaltfläche „Hinzufügen“")  
   
 4.  Geben Sie Werte für die Eigenschaften **Name**, **Datentyp**, **Wert**, **Vertraulich**und **Erforderlich** ein.  
   
-    |Eigenschaft|und Beschreibung|  
+    |Eigenschaft|Beschreibung|  
     |--------------|-----------------|  
     |Name|Der Name des Parameters.|  
     |Datentyp|Der Datentyp des Parameters.|  
     |Standardwert|Der Standardwert für den zur Entwurfszeit zugewiesenen Parameter. Dieser wird auch als Entwurfsstandard bezeichnet.|  
-    |Vertraulich|Vertrauliche Parameterwerte werden im Katalog verschlüsselt und in Transact-SQL oder SQL Server Management Studio als NULL-Wert angezeigt.|  
-    |Required|Dazu muss ein anderer als der Entwurfsstandardwert angegeben werden, bevor das Paket ausgeführt werden kann.|  
-    |und Beschreibung|Die Beschreibung des Parameters für bessere Verwaltbarkeit. Legen Sie im Visual Studio-Eigenschaftenfenster von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]die Parameterbeschreibung fest, wenn der Parameter im entsprechenden Parameterfenster ausgewählt wurde.|  
+    |Sensibel|Vertrauliche Parameterwerte werden im Katalog verschlüsselt und in Transact-SQL oder SQL Server Management Studio als NULL-Wert angezeigt.|  
+    |Erforderlich|Dazu muss ein anderer als der Entwurfsstandardwert angegeben werden, bevor das Paket ausgeführt werden kann.|  
+    |Beschreibung|Die Beschreibung des Parameters für bessere Verwaltbarkeit. Legen Sie im Visual Studio-Eigenschaftenfenster von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]die Parameterbeschreibung fest, wenn der Parameter im entsprechenden Parameterfenster ausgewählt wurde.|  
   
 5.  Speichern Sie das Projekt, um Änderungen an Parametern zu speichern. Parameterwerte werden in Konfigurationen in der Projektdatei gespeichert. Speichern Sie die Projektdatei, um alle Änderungen in den Parameterwerten in einem Commit an den Datenträger zu übergeben.  
   
@@ -167,7 +167,7 @@ Sie verwenden [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
 Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter einer Eigenschaft oder einem Task zuordnen. Sie öffnen das Dialogfeld, indem Sie mit der rechten Maustaste auf einen Task oder die Registerkarte „Ablaufsteuerung“ im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer klicken und dann auf **Parametrisieren** klicken. Die folgende Liste beschreibt Benutzeroberflächenelemente im Dialogfeld. Weitere Informationen zu Parametern finden Sie unter [Integration Services-Parameter (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eigenschaft**  
  Wählen Sie die Eigenschaft der Aufgabe aus, der Sie einem Parameter zuordnen möchten. Diese Liste wird mit allen Eigenschaften aufgefüllt, die parametrisiert werden können.  
   
@@ -186,10 +186,10 @@ Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Param
  **Beschreibung**  
  Geben Sie die Beschreibung für den Parameter an.  
   
- **ReplTest1**  
+ **Wert**  
  Geben Sie den Standardwert für den Parameter an. Dies wird auch als der Entwurfsstandard bezeichnet, der später zur Bereitstellungszeit überschrieben werden kann.  
   
- **Scope**  
+ **Umfang**  
  Geben Sie den Bereich des Parameters an, indem Sie die Option **Projekt** oder die Option **Paket** aktivieren. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen.  
   
  **Vertraulich**  

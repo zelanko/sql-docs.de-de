@@ -15,10 +15,10 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f4a4a91c4703bd4634f471e3d6bc0b9b4baf2305
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908888"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt (vollständiges Wiederherstellungsmodell)
@@ -74,13 +74,13 @@ ms.locfileid: "72908888"
     > [!NOTE]  
     >  Wenn die Sicherung von einem anderen Server abgerufen wird, verfügt der Zielserver über keine Sicherungsverlaufsinformationen für die angegebene Datenbank. Wählen Sie in diesem Fall **Sicherungsmedium** aus, um die wiederherzustellende Datei oder das Medium manuell anzugeben.  
   
-    -   **Sicherungsmedium**  
+    -   **Device**  
   
          Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Wählen Sie im Feld **Sicherungsmedientyp** einen der aufgeführten Medientypen aus. Wenn Sie ein oder mehrere Medien für das Feld **Sicherungsmedien** auswählen möchten, klicken Sie auf **Hinzufügen**.  
   
          Klicken Sie nach dem Hinzufügen der gewünschten Medien zum Listenfeld **Sicherungsmedien** auf **OK** , um zur Seite **Allgemein** zurückzukehren.  
   
-         Wählen Sie im Listenfeld **Quelle: Sicherungsmedium: Datenbank** den Namen der Datenbank aus, die wiederhergestellt werden soll.  
+         Wählen Sie im Listenfeld **Quelle: Gerät: Datenbank** den Namen der Datenbank aus, die wiederhergestellt werden soll.  
   
          **Hinweis** Diese Liste ist nur verfügbar, wenn **Sicherungsmedium** ausgewählt wird. Nur Datenbanken mit Sicherungen auf dem ausgewählten Medium stehen zur Verfügung.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "72908888"
 14. Wählen Sie **Bestätigung vor Wiederherstellen jeder einzelnen Sicherung** aus, wenn Sie zwischen jedem Wiederherstellungsvorgang zur Bestätigung aufgefordert werden möchten. Dies ist in der Regel nur bei großen Datenbanken und bei der gewünschten Überwachung des Status des Wiederherstellungsvorgangs erforderlich.  
 
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- **Before you begin**  
+ **Voraussetzungen**  
   
  Die Wiederherstellung zu einem bestimmten Zeitpunkt erfolgt immer aus einer Protokollsicherung. In jeder RESTORE LOG-Anweisung der Wiederherstellungssequenz müssen Sie den Zielzeitpunkt oder die Transaktion in einer identischen STOPAT-Klausel angeben. Als Voraussetzung für eine Zeitpunktwiederherstellung müssen Sie zuerst eine vollständige Datenbanksicherung wiederherstellen, deren Endpunkt vor dem Zielwiederherstellungszeitpunkt liegt. Diese vollständige Datenbanksicherung kann älter als die letzte vollständige Datenbanksicherung sein, solange Sie dann jede nachfolgende Protokollsicherung wiederherstellen, bis zu und einschließlich der Protokollsicherung, die den Zielzeitpunkt enthält.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "72908888"
   
  Der Wiederherstellungszeitpunkt ist der Transaktionscommit, der zuletzt vor oder genau zu dem gegebenen **datetime** -Wert erfolgte, der für *time*angegeben wird.  
   
- Wenn Sie nur die Änderungen vor dem angegebenen Zeitpunkt wiederherstellen möchten, geben Sie für die einzelnen Sicherungen, die Sie wiederherstellen, WITH STOPAT **=** _time_ an. Damit stellen Sie sicher, dass der Zielzeitpunkt nicht überschritten wird.  
+ Wenn Sie nur die Änderungen vor einem bestimmten Zeitpunkt wiederherstellen möchten, geben Sie für die einzelnen Sicherungen, die Sie wiederherstellen, WITH STOPAT **=** _time_ an. Damit stellen Sie sicher, dass der Zielzeitpunkt nicht überschritten wird.  
   
  **So stellen Sie eine Datenbank bis zu einem Zeitpunkt wieder her**  
   

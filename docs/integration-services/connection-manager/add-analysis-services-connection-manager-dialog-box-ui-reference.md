@@ -15,10 +15,10 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0de4fe433a1f34b49dbfb12082759c954e87a7a4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298570"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen
@@ -26,11 +26,11 @@ ms.locfileid: "71298570"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Mithilfe des Dialogfelds **Analysis Services-Verbindungs-Manager hinzufügen** können Sie eine Verbindung mit einem Server herstellen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ausgeführt wird, oder die Verbindungseigenschaften ändern.  
+  Mithilfe des Dialogfelds **Analysis Services-Verbindungs-Manager hinzufügen** können Sie eine Verbindung mit einem Server herstellen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausgeführt wird. Außerdem können Sie die Verbindungseigenschaften ändern.  
   
  Weitere Informationen zum Analysis Services-Verbindungs-Manager finden Sie unter [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Verbindung mit einem Computer mit Analysis Services herstellen**  
  Verwenden Sie die Standardverbindung mit einem Server, auf dem eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ausgeführt wird, oder erstellen Sie eine neue Verbindung, indem Sie auf **Bearbeiten**klicken.  
   

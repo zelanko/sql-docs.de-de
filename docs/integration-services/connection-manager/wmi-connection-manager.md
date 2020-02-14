@@ -17,10 +17,10 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b3f33d0c37ba9c856d9cc0b66674c8ca4221e0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294358"
 ---
 # <a name="wmi-connection-manager"></a>WMI-Verbindungs-Manager
@@ -28,7 +28,7 @@ ms.locfileid: "71294358"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Mit einem WMI-Verbindungs-Manager kann ein Paket mithilfe der Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) Informationen in einer Unternehmensumgebung verwalten. Der Task Webdienst von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet einen WMI-Verbindungs-Manager.  
+  Mit einem WMI-Verbindungs-Manager kann ein Paket mithilfe der Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) Informationen in einer Unternehmensumgebung verwalten. Der Task „Webdienst“ von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet einen WMI-Verbindungs-Manager.  
   
  Wenn Sie einem Paket einen WMI-Verbindungs-Manager hinzufügen, erstellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, der zur Laufzeit in eine WMI-Verbindung aufgelöst wird, die Eigenschaften des Verbindungs-Managers festlegt und der **Connections** -Sammlung im Paket den Verbindungs-Manager hinzufügt. Die **ConnectionManagerType** -Eigenschaft des Verbindungs-Managers ist auf **WMI**festgelegt.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71294358"
   
  Weitere Informationen zum WMI-Verbindungs-Manager finden Sie unter [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Verbindungs-Manager an.  
   
@@ -68,13 +68,13 @@ ms.locfileid: "71294358"
  **Windows-Authentifizierung verwenden**  
  Wählen Sie diese Option aus, wenn Windows-Authentifizierung verwendet werden soll. Wenn Sie Windows-Authentifizierung verwenden, müssen Sie keinen Benutzernamen und kein Kennwort für die Verbindung angeben.  
   
- **User name**  
+ **Benutzername**  
  Wenn Sie Windows-Authentifizierung nicht verwenden, müssen Sie für die Verbindung einen Benutzernamen angeben.  
   
  **Kennwort**  
  Wenn Sie Windows-Authentifizierung nicht verwenden, müssen Sie für die Verbindung das Kennwort angeben.  
   
- **Testen**  
+ **Test**  
  Testen Sie die Verbindungs-Manager-Einstellungen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

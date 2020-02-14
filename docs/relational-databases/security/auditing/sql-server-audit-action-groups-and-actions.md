@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2efe63ae57e80e06d616938c0dcdf77dbe055ac6
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 77f07412551fd94737a3200a103c16904771d962
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929705"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315590"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit-Aktionsgruppen und -Aktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +68,11 @@ ms.locfileid: "70929705"
  Sämtliche Überwachungen werden nach dem ersten Erstellen deaktiviert.  
   
 ## <a name="server-level-audit-action-groups"></a>Überwachungsaktionsgruppen auf Serverebene  
- Überwachungsaktionsgruppen auf Serverebene sind Aktionen, die Ereignisklassen der Sicherheitsüberwachung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ähneln. Weitere Informationen finden Sie unter [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Überwachungsaktionsgruppen auf Serverebene sind Aktionen, die Ereignisklassen der Sicherheitsüberwachung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ähneln. Weitere Informationen finden Sie unter [Ereignisklassen in SQL Server – Referenz](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  In der folgenden Tabelle werden die Überwachungsaktionsgruppen auf Serverebene beschrieben. Hier finden Sie auch, sofern vorhanden, die entsprechende Ereignisklasse in SQL Server.  
   
-|Aktionsgruppenname|und Beschreibung|  
+|Aktionsgruppenname|Beschreibung|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Das Ereignis wird ausgelöst, wenn ein Kennwort für eine Anwendungsrolle geändert wird. Entspricht der [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine Überwachung erstellt, geändert oder gelöscht wird. Das Ereignis wird ausgelöst, wenn eine Überwachungsspezifikation erstellt, geändert oder gelöscht wird. Jede Änderung an einer Überwachung wird in dieser Überwachung überwacht. Entspricht der [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
@@ -94,6 +94,7 @@ ms.locfileid: "70929705"
 ](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|Das Ereignis wird ausgelöst, wenn ein Prinzipal einen DBCC-Befehl ausgibt. Entspricht der [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md).|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|Gibt an, dass ein Prinzipal vergeblich versucht hat, sich an einer eigenständigen Datenbank anzumelden. Ereignisse in dieser Klasse werden durch neue Verbindungen oder durch Verbindungen ausgelöst, die aus einem Verbindungspool wiederverwendet werden. Entspricht der [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|    
+|FAILED_LOGIN_GROUP|Gibt an, dass ein Prinzipal versucht hat, sich bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anzumelden, und diese Anmeldung fehlgeschlagen ist. Ereignisse in dieser Klasse werden durch neue Verbindungen oder durch Verbindungen ausgelöst, die aus einem Verbindungspool wiederverwendet werden. Entspricht der [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md). Diese Überprüfung gilt nicht für Azure SQL-Datenbank.| 
 |FULLTEXT_GROUP|Gibt an, dass ein Volltextereignis aufgetreten ist. Entspricht der [Audit Fulltext Event Class](../../../relational-databases/event-classes/audit-fulltext-event-class.md).|  
 |LOGIN_CHANGE_PASSWORD_GROUP|Dieses Ereignis wird ausgelöst, wenn das Anmeldekennwort mit einer ALTER LOGIN-Anweisung oder der gespeicherten sp_password-Prozedur geändert wird. Entspricht der [Audit Login Change Password Event Class](../../../relational-databases/event-classes/audit-login-change-password-event-class.md).|  
 |LOGOUT_GROUP|Gibt an, dass ein Prinzipal sich von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]abgemeldet hat. Ereignisse in dieser Klasse werden durch neue Verbindungen oder durch Verbindungen ausgelöst, die aus einem Verbindungspool wiederverwendet werden. Entspricht der [Audit Logout Event Class](../../../relational-databases/event-classes/audit-logout-event-class.md).|  
@@ -118,7 +119,7 @@ ms.locfileid: "70929705"
 |USER_CHANGE_PASSWORD_GROUP|Das Ereignis wird immer dann ausgelöst, wenn das Kennwort des Benutzers einer eigenständigen Datenbank mit der ALTER USER-Anweisung geändert wird.|  
 |USER_DEFINED_AUDIT_GROUP|Diese Gruppe überwacht ausgelöste Ereignisse mithilfe von [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). In der Regel schließen Trigger oder gespeicherte Prozeduren Aufrufe von **sp_audit_write** ein, um das Überwachen von wichtigen Ereignissen zu aktivieren.|  
   
-### <a name="considerations"></a>Weitere Überlegungen  
+### <a name="considerations"></a>Überlegungen  
  Aktionsgruppen auf Serverebene umfassen Aktionen auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz. Das Einchecken eines Schemaobjektszugriffs auf eine Datenbank wird beispielsweise aufgezeichnet, wenn die entsprechende Aktionsgruppe der Serverüberwachungsspezifikation hinzugefügt wird. In einer Datenbank-Überwachungsspezifikation werden nur Schemaobjektzugriffe in dieser Datenbank aufgezeichnet.  
   
  Aktionen auf Serverebene ermöglichen keine ausführliche Filterung für Aktionen auf Datenbankebene. Eine Überwachung auf Datenbankebene, z. B. eine Überwachung der SELECT-Aktionen in der Customers-Tabelle für Anmeldedaten in der Employee-Gruppe, ist für die Implementierung einer ausführlichen Aktionsfilterung notwendig. Beziehen Sie in einer Benutzerdatenbank-Überwachungsspezifikation keine Objekte mit Serverbereich ein, wie Systemsichten.  
@@ -127,11 +128,11 @@ ms.locfileid: "70929705"
  > Da das Aktivieren einer Überwachung auf Transaktionsebene sehr aufwändig ist, ist dies ab [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 standardmäßig deaktiviert, wenn auch die Common Criteria-Kompatibilität deaktiviert ist.  Wenn die Common Criteria-Kompatibilität deaktiviert ist, können Sie zwar trotzdem eine Aktion der TRANSACTION_GROUP zu einer Überwachungsspezifikation hinzufügen, aber dann werden keine Transaktionsdaten erfasst.  Wenn Sie Überwachungsaktionen der TRANSACTION_GROUP konfigurieren möchten, vergewissern Sie sich, dass die Infrastruktur zur Überwachung auf Transaktionsebene aktiviert ist, indem Sie ab [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 und [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 und höher die Common Criteria-Kompatibilität aktivieren.  Beachten Sie dabei, dass bei [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] ab SP1 CU2 die Überwachung auf Transaktionsebene auch mit dem Ablaufverfolgungsflag 3427 deaktiviert sein kann.
   
 ## <a name="database-level-audit-action-groups"></a>Überwachungsaktionsgruppen auf Datenbankebene  
- Überwachungsaktionsgruppen auf Datenbankebene sind Aktionen, die Ereignisklassen der Sicherheitsüberwachung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ähneln. Weitere Informationen zu Ereignisklassen finden Sie unter [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Überwachungsaktionsgruppen auf Datenbankebene sind Aktionen, die Ereignisklassen der Sicherheitsüberwachung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ähneln. Weitere Informationen zu Ereignisklassen finden Sie unter [Ereignisklassen in SQL Server – Referenz](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  In der folgenden Tabelle werden die Überwachungsaktionsgruppen auf Datenbankebene beschrieben. Hier finden Sie auch, sofern vorhanden, die entsprechende Ereignisklasse in SQL Server.  
   
-|Aktionsgruppenname|und Beschreibung|  
+|Aktionsgruppenname|Beschreibung|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Das Ereignis wird ausgelöst, wenn ein Kennwort für eine Anwendungsrolle geändert wird. Entspricht der [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine Überwachung erstellt, geändert oder gelöscht wird. Das Ereignis wird ausgelöst, wenn eine Überwachungsspezifikation erstellt, geändert oder gelöscht wird. Jede Änderung an einer Überwachung wird in dieser Überwachung überwacht. Entspricht der [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
@@ -161,7 +162,7 @@ ms.locfileid: "70929705"
 ## <a name="database-level-audit-actions"></a>Überwachungsaktionen auf Datenbankebene  
  Aktionen auf Datenbankebene unterstützen die direkte Überwachung von spezifischen Aktionen für Datenbankenschema- und Schemaobjekte, z. B. Tabellen, Sichten, gespeicherte Prozeduren, Funktionen, erweiterte gespeicherte Prozeduren, Warteschlangen, Synonyme. Typen, XML-Schemaauflistung, Datenbank und Schema werden nicht überwacht. Die Überwachung von Schemaobjekten kann für Schema und Datenbank konfiguriert werden, d. h., es werden alle Ereignisse für alle Schemaobjekte im angegebenen Schema oder in der angegebenen Datenbank überwacht. In der folgenden Tabelle werden Überwachungsaktionen auf Datenbankebene beschrieben.  
   
-|Aktion|und Beschreibung|  
+|Aktion|Beschreibung|  
 |------------|-----------------|  
 |SELECT|Dieses Ereignis wird immer dann ausgelöst, wenn SELECT ausgegeben wird.|  
 |UPDATE|Dieses Ereignis wird immer dann ausgelöst, wenn UPDATE ausgegeben wird.|  
@@ -171,7 +172,7 @@ ms.locfileid: "70929705"
 |RECEIVE|Dieses Ereignis wird immer dann ausgelöst, wenn RECEIVE ausgegeben wird.|  
 |REFERENCES|Dieses Ereignis wird immer dann ausgelöst, wenn eine REFERENCES-Berechtigung überprüft wird.|  
   
-### <a name="considerations"></a>Weitere Überlegungen  
+### <a name="considerations"></a>Überlegungen  
 *  Überwachungsaktionen auf Datenbankebene gelten nicht für Spalten.  
   
 *  Wenn der Abfrageprozessor die Abfrage parametrisiert, wird der Parameter unter Umständen im Überwachungsereignisprotokoll und nicht in den Spaltenwerten der Abfrage angezeigt. 
@@ -181,7 +182,7 @@ ms.locfileid: "70929705"
 ## <a name="audit-level-audit-action-groups"></a>Überwachungsaktionsgruppen auf Überwachungsebene  
  Sie können auch die Aktionen im Überwachungsprozess überwachen. Dies kann im Serverbereich oder im Datenbankbereich durchgeführt werden. Im Datenbankbereich tritt dies nur bei Datenbank-Überwachungsspezifikationen auf. In der folgenden Tabelle werden Überwachungsaktionsgruppen auf Überwachungsebene beschrieben.  
   
-|Aktionsgruppenname|und Beschreibung|  
+|Aktionsgruppenname|Beschreibung|  
 |-----------------------|-----------------|  
 |AUDIT_CHANGE_GROUP|Dieses Ereignis wird immer dann ausgelöst, wenn einer der folgenden Befehle ausgegeben wird:<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   

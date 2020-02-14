@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946998"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
@@ -102,7 +102,7 @@ WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';
 GO
 ```  
  
-Oder ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
+Alternativ ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
  ```sql  
 SELECT CustomerId, OrderAddedDate  
@@ -256,7 +256,7 @@ Dieser Abschnitt enthält Beispielabfragen, die von den Erweiterungen der Kardin
   
 ### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>Beispiel A. Die Kardinalitätsschätzung berücksichtigt, dass Maximalwerte höher sein können als bei der letzten Erfassung der Statistiken  
   
-Angenommen, die Statistiken für `OrderTable` wurden zuletzt am `2016-04-30` erstellt, als der maximale Wert für `OrderAddedDate` `2016-04-30` entsprach. Bei der Kardinalitätsschätzung 120 (und höher) wird berücksichtigt, dass Spalten in `OrderTable` mit *ansteigenden* Daten Werte aufweisen können, die über dem von der Statistik aufgezeichneten Maximalwert liegen. Dies verbessert den Abfrageplan für [!INCLUDE[tsql](../../includes/tsql-md.md)]-SELECT-Anweisungen wie die folgende.  
+Angenommen, die Statistiken für `OrderTable` wurden zuletzt am `2016-04-30` erstellt, als der maximale Wert für `OrderAddedDate``2016-04-30` entsprach. Bei der Kardinalitätsschätzung 120 (und höher) wird berücksichtigt, dass Spalten in `OrderTable` mit *ansteigenden* Daten Werte aufweisen können, die über dem von der Statistik aufgezeichneten Maximalwert liegen. Dies verbessert den Abfrageplan für [!INCLUDE[tsql](../../includes/tsql-md.md)]-SELECT-Anweisungen wie die folgende.  
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  
@@ -291,7 +291,7 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der SQL Server 2014-Kardinalitätsschätzung)](https://msdn.microsoft.com/library/dn673537.aspx)  
+ [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md)     
  [Abfragehinweise „USE HINT“](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           

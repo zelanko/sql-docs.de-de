@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f18f33d58de48358ffe88adee0bb2a3605c3c50b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1052379affba718d49879c85e395b0117671075a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769988"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286567"
 ---
 # <a name="publication-properties-subscription-options"></a>Veröffentlichungseigenschaften, Abonnementoptionen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68769988"
   
 ### <a name="creation-and-synchronization"></a>Erstellung und Synchronisierung  
  **Anonyme Abonnements zulassen**  
- Bestimmt, ob anonyme Pullabonnements zulässig sind. Anonyme Abonnements werden für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Windows CE unterstützt. Um diese Option für Momentaufnahme- und Transaktionsveröffentlichungen zu verwenden, muss für die Option **Momentaufnahme immer verfügbar** der Wert **True**festgelegt sein.  
+ Bestimmt, ob anonyme Pullabonnements zulässig sind. Anonyme Abonnements werden für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Windows CE unterstützt. Um diese Option für Momentaufnahme- und Transaktionsveröffentlichungen zu verwenden, muss für die Option **Momentaufnahme immer verfügbar** der Wert **True**festgelegt sein.  
   
  **Anfügbare Abonnementdatenbank**  
  Bestimmt, ob Abonnements durch Anfügen einer Kopie einer Abonnementdatenbank erstellt werden können. (Dazu muss die Option **Momentaufnahme immer verfügbar** für Momentaufnahme- und Transaktionsveröffentlichungen auf **True** festgelegt sein.)  
@@ -49,8 +49,8 @@ ms.locfileid: "68769988"
  Bestimmt, ob Abonnenten Pullabonnements dieser Veröffentlichung erstellen dürfen. Weitere Informationen finden Sie unter [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md).  
   
 ### <a name="schema-replication"></a>Schemareplikation  
- **Schemaänderungen replizieren**  
- Nur in[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Schemaänderungen auf veröffentlichte Objekte repliziert werden. (Dazu gehört z. B. das Hinzufügen einer Spalte zu einer Tabelle oder das Ändern des Datentyps einer Spalte.) Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ **Replizieren von Schemaänderungen**  
+ Nur in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Schemaänderungen auf veröffentlichte Objekte repliziert werden. (Dazu gehört z. B. das Hinzufügen einer Spalte zu einer Tabelle oder das Ändern des Datentyps einer Spalte.) Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>Optionen für Momentaufnahme- und Transaktionsveröffentlichungen  
   
@@ -108,13 +108,13 @@ ms.locfileid: "68769988"
   
 ### <a name="filtering"></a>Filterung  
  **Parametrisierte Filter zulassen**  
- Wählen Sie die Option aus, um zuzulassen, dass parametrisierte Filter durch eine Veröffentlichung verwendet werden. Diese Option ist immer schreibgeschützt. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Wählen Sie die Option aus, um zuzulassen, dass parametrisierte Filter durch eine Veröffentlichung verwendet werden. Diese Option ist immer schreibgeschützt. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Abonnenten überprüfen**  
  Bestimmt, welche Funktionen verwendet werden sollen, um zu überprüfen, ob ein Abonnent über die richtige Partition der Daten verfügt. Bei mehreren Werten werden Kommas als Trennzeichen verwendet. Weitere Informationen finden Sie unter [Überprüfen von Partitionsinformationen für einen Mergeabonnenten](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  
   
  **Partitionen im Voraus berechnen**  
- Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob die Synchronisierung optimiert werden soll, indem im Voraus berechnet wird, welche Datenzeilen in welche Partitionen gehören. Der Standardwert für diese Option lautet **True** , wenn die Veröffentlichung die Kriterien für im Voraus berechnete Partitionen erfüllt. Weitere Informationen finden Sie unter [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob die Synchronisierung optimiert werden soll, indem im Voraus berechnet wird, welche Datenzeilen in welche Partitionen gehören. Der Standardwert für diese Option lautet **True** , wenn die Veröffentlichung die Kriterien für im Voraus berechnete Partitionen erfüllt. Weitere Informationen finden Sie unter [Optimieren Parametrisierter Filter-Leistung mit Vorausberechneten Partitionen ](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  **Synchronisierung optimieren**  
  Bestimmt, ob die Mergeverarbeitung optimiert werden soll, indem zusätzliche Metadaten auf den einzelnen Abonnenten gespeichert werden. An die Stelle dieser Optimierung sind die im Voraus berechneten Partitionen getreten, d. h., die Option **Synchronisierung optimieren** ist nur relevant, wenn für **Partitionen im Voraus berechnen** der Wert **False**festgelegt ist. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  

@@ -12,10 +12,10 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296243"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Tabelle kopieren oder Datenbank abfragen (SQL Server-Import/Export-Assistent)
@@ -33,7 +33,7 @@ ms.locfileid: "71296243"
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>Screenshot der Seite Tabelle kopieren oder Datenbank abfragen    
  Die folgende Anzeige stellt die Seite **Tabelle kopieren oder Datenbank Abfragen** des Assistenten dar.    
     
- ![Seite „Tabelle kopieren oder Datenbank abfragen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/table-copy-or-query.png "Table copy or query page of the Import and Export Wizard")    
+ ![Seite „Tabelle kopieren oder Datenbank abfragen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/table-copy-or-query.png "Seite „Tabelle kopieren oder Datenbank abfragen“ des Import/Export-Assistenten")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>Angeben, ob eine gesamte Tabelle kopiert oder eine Abfrage geschrieben werden soll 
  **Daten aus mindestens einer Tabelle oder Sicht kopieren**    
@@ -77,11 +77,11 @@ Auch wenn Sie normalerweise keine SQL-Abfragen schreiben, können Sie nach wie v
     
 -   Wenn Sie **Daten aus mindestens einer Tabelle oder Sicht kopieren**ausgewählt haben, ist für die meisten Zielorte die nächste Seite **Quelltabellen und -sichten auswählen**. Auf dieser Seite wählen Sie die vorhandenen Tabellen und Sichten aus, die aus der Datenquelle in das Ziel kopiert werden sollen. Weitere Informationen finden Sie unter [Quelltabellen und -sichten auswählen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).    
     
--   Wenn Sie **Daten aus mindestens einer Tabelle oder Sicht kopieren** ausgewählt haben und es sich bei Ihrem Ziel um eine Flatfile handelt, ist die nächste Seite **Flatfileziel konfigurieren**. Auf dieser Seite geben Sie Formatierungsoptionen für die Zielflatfile an. (Die nächste Seite nach der Konfiguration der Flatfile ist anschließend **Quelltabellen und -sichten auswählen**.) Weitere Informationen finden Sie unter [Flatfileziel konfigurieren](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).    
+-   Wenn Sie **Daten aus mindestens einer Tabelle oder Sicht kopieren** ausgewählt haben und es sich bei Ihrem Ziel um eine Flatfile handelt, ist die nächste Seite **Flatfileziel konfigurieren**. Auf dieser Seite geben Sie Formatierungsoptionen für das Flatfileziel an. (Die nächste Seite nach der Konfiguration der Flatfile ist anschließend **Quelltabellen und -sichten auswählen**.) Weitere Informationen finden Sie unter [Flatfileziel konfigurieren](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).    
     
--   Wenn Sie **Abfrage zum Angeben der zu übertragenden Daten schreiben** ausgewählt haben, ist die nächste Seite **Quellabfrage eingeben**. Auf dieser Seite schreiben und testen Sie die SQL-Anweisung, die die Daten sammelt, die aus der Datenquelle in das Ziel kopiert werden sollen. (Die nächste Seite nach der Eingabe einer Abfrage ist anschließend **Quelltabellen und -sichten auswählen**.) Weitere Informationen finden Sie unter [Quellabfrage angeben](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md).
+-   Wenn Sie **Abfrage zum Angeben der zu übertragenden Daten schreiben**ausgewählt haben, ist die nächste Seite **Quellabfrage eingeben**. Auf dieser Seite schreiben und testen Sie die SQL-Anweisung, die die Daten sammelt, die aus der Datenquelle in das Ziel kopiert werden sollen. (Die nächste Seite nach der Eingabe einer Abfrage ist anschließend **Quelltabellen und -sichten auswählen**.) Weitere Informationen finden Sie unter [Quellabfrage angeben](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710491"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909630"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Überwachung und Problembehandlung für PolyBase
 
@@ -27,13 +27,13 @@ ms.locfileid: "71710491"
 
 Verwenden Sie die in diesem Thema vorgestellten Methoden, um in PolyBase eine Problembehandlung durchzuführen.
 
-## <a name="catalog-views"></a>Katalogsichten
+## <a name="catalog-views"></a>Katalogansichten
 
 Verwenden Sie die hier aufgelisteten Katalogsichten, um PolyBase-Vorgänge zu verwalten.
 
 |||  
 |-|-|  
-|Sicht|und Beschreibung|  
+|Sicht|Beschreibung|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Identifiziert externe Tabellen.|  
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifiziert externe Datenquellen.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifiziert externe Dateiformate.|  
@@ -142,7 +142,7 @@ Sie können PolyBase-Abfragen mithilfe der folgenden DMVs überwachen und eine P
 
 3. Klicken Sie mit der rechten Maustaste auf den Operator **Remote Query** (Remoteabfrage), und wählen Sie **Eigenschaften**.
 
-4. Kopieren Sie den Remote Query-Wert in einen Text-Editor, um den XML-Remote-Abfrageplan anzuzeigen. Das folgende Beispiel soll dies erläutern:
+4. Kopieren Sie den Remote Query-Wert in einen Text-Editor, um den XML-Remote-Abfrageplan anzuzeigen. Ein entsprechendes Beispiel ist nachfolgend dargestellt.
 
    ```xml  
 
@@ -223,6 +223,6 @@ Problemumgehung: Verwenden Sie den DNS-Namen, um Verbindungen zum aktiven Namens
 
 Informationen zur Problembehandlung bei Fehlern externer Tabellen finden Sie im Blog [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase-Setupfehler und mögliche Lösungen") von Murshed Zaman.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Troubleshoot PolyBase Kerberos connectivity (Problembehandlung: PolyBase-Kerberos-Konnektivität)](polybase-troubleshoot-connectivity.md)

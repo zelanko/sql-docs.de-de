@@ -14,10 +14,10 @@ ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995660"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL-Statistik-Objekt
@@ -32,9 +32,9 @@ ms.locfileid: "67995660"
   
  Weitere Informationen zur einfachen und erzwungenen Parametrisierung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
- Es folgen die Leistungsindikatoren für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-Objekt von** .  
+ Dies sind die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsindikatoren für **SQL-Statistiken**.  
   
-|SQL-Statistik-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|SQL-Statistik-Leistungsindikatoren von SQL Server|Beschreibung|  
 |----------------------------------------|-----------------|  
 |**Versuche für automatische Parametrisierung/Sekunde**|Anzahl der Versuche für automatische Parametrisierung pro Sekunde. Die Gesamtanzahl sollte die Summe der fehlgeschlagenen, gesicherten und ungesicherten automatischen Parametrisierungen sein. Eine automatische Parametrisierung tritt dann ein, wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anforderung zu parametrisieren, indem bestimmte Literale durch Parameter ersetzt werden, damit der sich ergebende zwischengespeicherte Ausführungsplan für mehrere ähnliche Anforderungen wiederverwendet werden kann. Beachten Sie, dass in höheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Auto-Parametrisierungen auch als einfache Parametrisierungen bezeichnet werden. Dieser Leistungsindikator schließt keine erzwungenen Parametrisierungen ein.|  
 |**Batchanforderungen/Sekunde**|Anzahl der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehlsbatches, die pro Sekunde empfangen wurden. Diese Statistik ist von allen Einschränkungen (wie z. B. E/A, Anzahl der Benutzer, Cachegröße, Komplexität der Anforderungen usw.) betroffen. Eine hohe Anzahl der Batchanforderungen bedeutet einen guten Durchsatz.|  

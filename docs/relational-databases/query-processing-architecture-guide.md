@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
-ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
+ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74866076"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909750"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -637,16 +637,16 @@ Außerdem werden die folgenden Abfrageklauseln nicht parametrisiert. Beachten Si
 
 * <select_list> in `SELECT`-Anweisungen. Dies trifft ebenfalls auf `SELECT`-Listen von Unterabfragen sowie `SELECT`-Listen innerhalb von `INSERT`-Anweisungen zu.
 * Unterabfragen mit `SELECT` -Anweisungen innerhalb von `IF` -Anweisungen.
-* Die Abfrageklauseln `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`und `FOR XM`L.
+* Die Abfrageklauseln `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`und `FOR XML`.
 * Direkte oder als Teilausdrücke formulierte Argumente der Operatoren `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML`sowie aller `FULLTEXT` -Operatoren.
 * Das pattern-Argument und das escape_character-Argument einer `LIKE` -Klausel.
 * Das style-Argument einer `CONVERT` -Klausel.
 * Integer-Konstanten innerhalb einer `IDENTITY` -Klausel.
 * Über die ODBC-Erweiterungssyntax angegebene Konstanten.
-* Vor der Kompilierzeit auf eine Konstante reduzierbare Ausdrücke, die Argumente der Operatoren +, -, \*, / und % sind. Um zu ermitteln, ob die erzwungene Parametrisierung in Frage kommt, betrachtet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen Ausdruck als vor der Kompilierzeit auf eine Konstante reduzierbar, wenn die beiden folgenden Bedingungen erfüllt sind:  
+* Zum Kompilierungszeitpunkt auf eine Konstante reduzierbare Ausdrücke, die Argumente der Operatoren `+`, `-`, `*`, `/`und `%` sind. Um zu ermitteln, ob die erzwungene Parametrisierung in Frage kommt, betrachtet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen Ausdruck als vor der Kompilierzeit auf eine Konstante reduzierbar, wenn die beiden folgenden Bedingungen erfüllt sind:  
   * Der Ausdruck enthält keine Spalten, Variablen oder Unterabfragen.  
   * Der Ausdruck enthält eine `CASE` -Klausel.  
-* Argumente von Abfragehinweisklauseln. Zu diesen gehören das `number_of_rows` -Argument des `FAST` -Abfragehinweises, das `number_of_processors` -Argument des `MAXDOP` -Abfragehinweises sowie das number-Argument des `MAXRECURSION` -Abfragehinweises.
+* Argumente von Abfragehinweisklauseln. Zu diesen Argumenten gehören das Argument *number_of_rows* des Abfragehinweises `FAST`, das Argument *number_of_processors* des Abfragehinweises `MAXDOP` sowie das Argument *number* des Abfragehinweises `MAXRECURSION`.
 
 Die Parametrisierung wird auf der Ebene der einzelnen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen ausgeführt, d. h. die Anweisungen werden nacheinander batchweise parametrisiert. Nach dem Kompilieren wird eine parametrisierte Abfrage ausgeführt – in dem Kontext des Batches, in dem die Abfrage ursprünglich übermittelt wurde. Wenn ein Ausführungsplan für eine Abfrage zwischengespeichert wird, können Sie anhand der sql-Spalte der dynamischen Verwaltungssicht sys.syscacheobjects ermitteln, ob die Abfrage parametrisiert wurde. Wenn eine Abfrage parametrisiert wird, stehen die Namen und Datentypen der Parameter vor dem Text des übergebenen Batches in dieser Spalte, z. B. (\@1 tinyint).
 

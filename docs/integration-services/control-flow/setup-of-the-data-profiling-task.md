@@ -13,10 +13,10 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0230354bfe53de8c362bcdb70caa597652706ee2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293982"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Einrichten von Datenprofilerstellungs-Tasks
@@ -43,7 +43,7 @@ ms.locfileid: "71293982"
  Weitere Informationen finden Sie unter [Einschließen einer Datenprofilerstellungs-Task in den Paketworkflow](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  
   
 ## <a name="setup-of-the-task-output"></a>Einrichten der Taskausgabe  
- Nachdem der Datenprofilerstellungs-Task in einem Paket aufgenommen wurde, müssen Sie die Ausgabe für die Profile einrichten, die vom Task berechnet werden. Zum Einrichten der Ausgabe für die Profile verwenden Sie die Seite **Allgemein** des Editors für den Datenprofilerstellungs-Task. Zusätzlich zur Angabe des Ziels für die Ausgabe bietet die Seite **Allgemein** auch die Möglichkeit zur Ausführung eines Schnellprofils der Daten an. Bei Auswahl von **Schnellprofil** erstellt der Datenprofilerstellungs-Task eine Tabelle oder eine Sicht mit einigen oder allen Standardprofilen und deren Standardeinstellungen.  
+ Nachdem der Datenprofilerstellungs-Task in einem Paket aufgenommen wurde, müssen Sie die Ausgabe für die Profile einrichten, die vom Task berechnet werden. Zum Einrichten der Ausgabe für die Profile verwenden Sie die Seite **Allgemein** des Editors für den Datenprofilerstellungs-Task. Zusätzlich zur Angabe des Ziels für die Ausgabe bietet die Seite **Allgemein** auch die Möglichkeit zur Ausführung eines Schnellprofils der Daten an. Bei Auswahl von **Schnellprofil**erstellt der Datenprofilerstellungs-Task eine Tabelle oder eine Sicht mit einigen oder allen Standardprofilen und deren Standardeinstellungen.  
   
  Weitere Informationen finden Sie unter [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md) und [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "71293982"
 -   [Optionen für Anforderung für Wertinklusionsprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>Ausführen des Pakets, das den Datenprofilerstellungs-Task enthält  
- Nachdem Sie den Datenprofilerstellungs-Task eingerichtet haben, können Sie den Task ausführen. Der Task berechnet dann die Datenprofile und gibt diese Informationen im XML-Format in einer Datei oder einer Paketvariablen aus. Die Struktur dieses XML-Formats folgt dem DataProfile.xsd-Schema. Sie können das Schema in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder einem anderen Schema-Editor, in einem XML-Editor oder einem Texteditor wie Notepad anzeigen. Dieses Schema für Datenqualitätsinformationen kann für folgende Zwecke nützlich sein:  
+ Nachdem Sie den Datenprofilerstellungs-Task eingerichtet haben, können Sie den Task ausführen. Der Task berechnet dann die Datenprofile und gibt diese Informationen im XML-Format in einer Datei oder einer Paketvariablen aus. Die Struktur dieses XML-Formats folgt dem DataProfile.xsd-Schema. Sie können das Schema in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder einem anderen Schema-Editor, in einem XML-Editor oder einem Text-Editor wie Notepad anzeigen. Dieses Schema für Datenqualitätsinformationen kann für folgende Zwecke nützlich sein:  
   
 -   Zum Austauschen von Datenqualitätsinformationen innerhalb und außerhalb von Organisationen.  
   

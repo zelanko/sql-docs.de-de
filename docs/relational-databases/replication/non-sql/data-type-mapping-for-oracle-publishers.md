@@ -15,15 +15,15 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901119"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Oracle-Datentypen und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentypen stimmen nicht immer exakt überein. Wenn möglich, wird beim Veröffentlichen einer Oracle-Tabelle der übereinstimmende Datentyp automatisch ausgewählt. In Fällen, in denen eine einzelne Datentypzuordnung unklar ist, werden alternative Datentypzuordnungen bereitgestellt. Informationen dazu, wie alternative Zuordnungen ausgewählt werden, finden Sie im Abschnitt "Angeben alternativer Datentypzuordnungen" weiter unten in diesem Thema.  
+  Oracle-Datentypen und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen stimmen nicht immer exakt überein. Wenn möglich, wird beim Veröffentlichen einer Oracle-Tabelle der übereinstimmende Datentyp automatisch ausgewählt. In Fällen, in denen eine einzelne Datentypzuordnung unklar ist, werden alternative Datentypzuordnungen bereitgestellt. Informationen dazu, wie alternative Zuordnungen ausgewählt werden, finden Sie im Abschnitt "Angeben alternativer Datentypzuordnungen" weiter unten in diesem Thema.  
   
  Die folgende Tabelle zeigt die standardmäßige Zuordnung von Datentypen zwischen Oracle und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die für den Datenfluss von einem Oracle-Verleger zu einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler gültig ist. Die Spalte Alternativen gibt an, ob alternative Zuordnungen verfügbar sind.  
   

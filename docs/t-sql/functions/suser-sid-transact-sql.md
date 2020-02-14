@@ -25,10 +25,10 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981747"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73981747"
 
   Gibt die SID (Sicherheits-ID) für den angegebenen Anmeldenamen zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,7 +59,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary(85)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SUSER_SID kann als DEFAULT-Einschränkung in ALTER TABLE oder CREATE TABLE verwendet werden. SUSER_SID kann in der SELECT-Liste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. Auf SUSER_SID müssen immer Klammern folgen, selbst wenn kein Parameter angegeben wird.  
   
  Bei einem Aufruf ohne Argument gibt SUSER_SID die SID des aktuellen Sicherheitskontexts zurück. Bei einem Aufruf ohne Argument innerhalb eines Batches, bei dem der Kontext mithilfe von EXECUTE AS gewechselt wurde, gibt SUSER_SID die SID des Kontexts an, dessen Identität angenommen wurde. Wenn SUSER_SID(ORIGINAL_LOGIN()) aus einem Kontext aufgerufen wird, dessen Identität angenommen wurde, wird die SID des ursprünglichen Kontexts zurückgegeben.  
@@ -97,7 +97,7 @@ SELECT SUSER_SID('London\Workstation1');
 GO  
 ```  
   
-### <a name="d-using-suser_sid-as-a-default-constraint"></a>D. Verwenden von SUSER_SID als DEFAULT-Einschränkung  
+### <a name="d-using-suser_sid-as-a-default-constraint"></a>D: Verwenden von SUSER_SID als DEFAULT-Einschränkung  
  Im folgenden Beispiel wird `SUSER_SID` als `DEFAULT`-Einschränkung in einer `CREATE TABLE`-Anweisung verwendet.  
   
 ```  

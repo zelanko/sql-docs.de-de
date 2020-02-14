@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.openlocfilehash: 7d7582eca4c3934a43e3faa7c94fc84f5609d86e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320417"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910023"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutorial: Vorbereiten von SQL Server auf die Replikation (Verleger, Verteiler und Abonnent)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,8 +181,9 @@ Das Konfigurieren eines Verlegers mit einem Remoteverteiler wird in diesem Tutor
    ![Menüelement „Verteilung konfigurieren“ im Kontextmenü](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > Wenn Sie **localhost** anstelle des tatsächlichen Servernamens verwendet haben, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen, werden Sie in einer Warnmeldung darauf hingewiesen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht in der Lage ist, eine Verbindung mit **localhost** herzustellen. Klicken Sie im Warnungsdialogfeld auf **OK**. Ändern Sie im Dialogfeld **Verbindung mit Server herstellen** die Angabe für **Servername** von **localhost** in den Namen des Servers. Wählen Sie dann **Verbinden** aus.  
-  
+   > - Wenn Sie **localhost** anstelle des tatsächlichen Servernamens verwendet haben, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen, werden Sie in einer Warnmeldung darauf hingewiesen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht in der Lage ist, eine Verbindung mit **localhost oder der IP-Adresse** herzustellen. Klicken Sie im Warnungsdialogfeld auf **OK**. Ändern Sie im Dialogfeld **Verbindung mit Server herstellen** die Angabe für **Servername** von **localhost oder der IP-Adresse** in den Namen des Servers. Wählen Sie dann **Verbinden** aus.  
+   > - Zurzeit liegt ein bekanntes Problem mit SQL Server Management Studio 18.0 und höher (SSMS) vor, bei dem eine Warnmeldung _nicht_ angezeigt wird, wenn eine Verbindung zum Verteiler über die IP-Adresse hergestellt wird, diese jedoch weiterhin ungültig ist. Der tatsächliche Servername sollte beim Herstellen einer Verbindung zum Verteiler verwendet werden. 
+   
    Der Verteilungskonfigurations-Assistent wird gestartet.  
   
 3. Aktivieren Sie auf der Seite **Verteiler** das Optionsfeld neben < *'Servername'* >  **als seinen eigenen Verteiler verwenden. SQL Server erstellt eine Verteilungsdatenbank und ein Protokoll**. Wählen Sie **Weiter**aus.  

@@ -16,10 +16,10 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093595"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
@@ -36,16 +36,16 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet markierte Funktionen** beschrieben.
 
-|**SQL Server-Leistungsindikator „Als veraltet markierte Funktionen“**|und Beschreibung|  
+|**SQL Server-Leistungsindikator „Als veraltet markierte Funktionen“**|Beschreibung|  
 |-------------|-----------------|  
 |**Verwendung**|Funktionsverwendung seit letztem SQL Server-Start.|
   
  In der folgenden Tabelle werden die Instanzen des „SQL Server:Als veraltet markierte Funktionen“-Leistungsindikators beschrieben.  
   
-|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|und Beschreibung|  
+|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|Beschreibung|  
 |------------------------------------------------------|-----------------|  
 |'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|Ein Bezeichner wurde gefunden, der keine anderen Zeichen als # enthielt. Verwenden Sie mindestens ein zusätzliches Zeichen. Tritt einmal pro Kompilierung auf.|  
-|Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie die Syntax durch `SELECT column_list FROM` *<Funktionsname>* `()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)` durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
+|Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie die Syntax durch `SELECT column_list FROM` *<Funktionsname>* `()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
 |\@ und Namen, die mit \@\@ beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner|Ein Bezeichner wurde gefunden, der mit \@ oder \@\@ beginnt. \@, \@v@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |ADDING TAPE DEVICE|Die veraltete Funktionen sp_addumpdevice '**tape**' wurde gefunden. Verwenden Sie stattdessen sp_addumpdevice '**disk**'. Tritt einmal pro Verwendung auf.|  
 |ALL-Berechtigung|Gesamtanzahl der gefundenen Vorkommnisse der Syntax GRANT ALL, DENY ALL oder REVOKE ALL. Ändern Sie die Syntax, um einzelne Berechtigungen zu widerrufen. Tritt einmal pro Abfrage auf.|  
@@ -110,7 +110,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |Hindi|Ereignis tritt einmal pro Datenbankstart und einmal pro Sortierungsverwendung auf. Planen Sie, Anwendungen zu ändern, die diese Sortierung verwenden. Verwenden Sie stattdessen Indic_General_90.|  
 |HOLDLOCK-Tabellenhinweis ohne Klammern||  
 |IDENTITYCOL|Die Syntax INDENTITYCOL wurde gefunden. Schreiben Sie die Anweisungen so um, dass sie die $identity-Syntax verwenden. Tritt einmal pro Kompilierung auf.|  
-|Indexsicht-Auswahlliste ohne COUNT_BIG(\*)|Die Auswahlliste einer indizierten Aggregatsicht muss den Wert COUNT_BIG (\*) enthalten.|  
+|Indexsicht-Auswahlliste ohne COUNT_BIG(*)|Die Auswahlliste einer indizierten Aggregatsicht muss den Wert COUNT_BIG (\*) enthalten.|  
 |INDEX_OPTION|CREATE TABLE-, ALTER TABLE- oder CREATE INDEX-Syntax ohne Klammern um die Optionen gefunden. Schreiben Sie Anweisung so um, dass sie die aktuelle Syntax verwendet. Tritt einmal pro Abfrage auf.|  
 |INDEXKEY_PROPERTY|Die Syntax INDEXKEY_PROPERTY wurde gefunden. Schreiben Sie die Anweisungen so um, dass sie sys.index_columns abfragen. Tritt einmal pro Kompilierung auf.|  
 |Indirekte TVF-Hinweise|Das indirekte Anwenden von Tabellenhinweisen auf einen Aufruf einer Tabellenwertfunktion (Table Valued Function, TVF) mit mehreren Anweisungen über eine Sicht wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr unterstützt.|  
@@ -118,7 +118,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|Ereignis tritt einmal pro Datenbankstart und einmal pro Sortierungsverwendung auf. Planen Sie, Anwendungen zu ändern, die diese Sortierung verwenden.|  
 |Lithuanian_Classic|Ereignis tritt einmal pro Datenbankstart und einmal pro Sortierungsverwendung auf. Planen Sie, Anwendungen zu ändern, die diese Sortierung verwenden.|  
-|Macedonian|Ereignis tritt einmal pro Datenbankstart und einmal pro Sortierungsverwendung auf. Planen Sie, Anwendungen zu ändern, die diese Sortierung verwenden. Verwenden Sie stattdessen Macedonian_FYROM_90.|  
+|Mazedonisch|Ereignis tritt einmal pro Datenbankstart und einmal pro Sortierungsverwendung auf. Planen Sie, Anwendungen zu ändern, die diese Sortierung verwenden. Verwenden Sie stattdessen Macedonian_FYROM_90.|  
 |MODIFY FILEGROUP READONLY|Die Syntax MODIFY FILEGROUP READONLY wurde gefunden. Schreiben Sie die Anweisungen so um, dass sie die READ_ONLY-Syntax verwenden. Tritt einmal pro Kompilierung auf.|  
 |MODIFY FILEGROUP READWRITE|Die Syntax MODIFY FILEGROUP READWRITE wurde gefunden. Schreiben Sie die Anweisungen so um, dass sie die READ_WRITE-Syntax verwenden. Tritt einmal pro Kompilierung auf.|  
 |Mehr als zweiteiliger Spaltenname|Eine Abfrage hat in der Spaltenliste einen drei- oder vierteiligen Namen verwendet. Ändern Sie die Abfrage so, dass sie die mit dem Standard kompatiblen zweiteiligen Namen verwendet. Tritt einmal pro Kompilierung auf.|  
@@ -254,7 +254,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |sysobjects|Verweise auf sysobjects wurden gefunden. Verwenden Sie stattdessen sys.objects. Tritt einmal pro Kompilierung auf.|  
 |sysoledbusers|Verweise auf sysoledbusers wurden gefunden. Verwenden Sie stattdessen sys.linked_logins. Tritt einmal pro Kompilierung auf.|  
 |sysopentapes|Verweise auf sysopentapes wurden gefunden. Verwenden Sie stattdessen sys.dm_io_backup_tapes. Tritt einmal pro Kompilierung auf.|  
-|sysperfinfo|Verweise auf sysperfinfo wurden gefunden. Verwenden Sie stattdessen sys.dm_os_performance_counters. stattdessen. Tritt einmal pro Kompilierung auf.|  
+|sysperfinfo|Verweise auf sysperfinfo wurden gefunden. Verwenden Sie stattdessen sys.dm_os_performance_counters. instead. (Anforderungsobjekt konnte nicht analysiert werden: Erwartet wurde, dass ‚key‘ und ‚value‘ für base_parameters des JSON-Zuordnungsfelds festgelegt werden. Stattdessen wurde ‚key: „...“‘ festgelegt.) Tritt einmal pro Kompilierung auf.|  
 |syspermissions|Verweise auf syspermissions wurden gefunden. Verwenden Sie stattdessen sys.database_permissions und sys.server_permissions. Tritt einmal pro Kompilierung auf.|  
 |sysprocesses|Verweise auf sysprocesses wurden gefunden. Verwenden Sie stattdessen sys.dm_exec_connections, sys.dm_exec_sessions und sys.dm_exec_requests. Tritt einmal pro Kompilierung auf.|  
 |sysprotects|Verweise auf sysprotects wurden gefunden. Verwenden Sie stattdessen sys.database_permissions und sys.server_permissions. Tritt einmal pro Kompilierung auf.|  
@@ -275,7 +275,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |XMLDATA|Die Syntax FOR XML wurde gefunden. Verwenden Sie XSD-Generierung für RAW- und AUTO-Modus. Es gibt keinen Ersatz für den expliziten Modus. Tritt einmal pro Kompilierung auf.|  
 |XP_API|Eine Anweisung einer erweiterten gespeicherten Prozedur wurde gefunden. Darf nicht verwendet werden.|  
 |xp_grantlogin|Die Prozedur xp_grantlogin wurde gefunden. Verwenden Sie stattdessen CREATE LOGIN. Tritt einmal pro Kompilierung auf.|  
-|xp_loginconfig|Die Prozedur xp_loginconfig wurde gefunden. Verwenden Sie stattdessen das IsIntegratedSecurityOnly-Argument von SERVERPROPERTY. Tritt einmal pro Abfrage auf.|  
+|xp_loginConfig|Die Prozedur xp_loginconfig wurde gefunden. Verwenden Sie stattdessen das IsIntegratedSecurityOnly-Argument von SERVERPROPERTY. Tritt einmal pro Abfrage auf.|  
 |xp_revokelogin|Die Prozedur xp_revokelogin wurde gefunden. Verwenden Sie stattdessen ALTER LOGIN DISABLE oder DROP LOGIN. Tritt einmal pro Kompilierung auf.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

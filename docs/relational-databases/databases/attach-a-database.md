@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: b58af59da33a2a03627d06a2e461da76d359e28b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816763"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911031"
 ---
 # <a name="attach-a-database"></a>Anfügen einer Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In diesem Thema wird beschrieben, wie eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]angefügt wird. Sie können diese Funktion verwenden, um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zu kopieren, zu verschieben oder zu aktualisieren.  
   
-##  <a name="Prerequisites"></a> Erforderliche Komponenten  
+##  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Die Datenbank muss zuerst getrennt werden. Wenn Sie versuchen, eine Datenbank anzufügen, die nicht getrennt wurde, wird ein Fehler zurückgegeben. Weitere Informationen finden Sie unter [Trennen einer Datenbank](../../relational-databases/databases/detach-a-database.md).  
   
@@ -84,25 +84,25 @@ Erfordert die Berechtigung `CREATE DATABASE`, `CREATE ANY DATABASE` oder `ALTER 
      **Status**  
      Zeigt den Status der Datenbank an (siehe folgende Tabelle).  
   
-    |Symbol|Statustext|und Beschreibung|  
+    |Symbol|Statustext|Beschreibung|  
     |----------|-----------------|-----------------|  
     |(Kein Symbol)|(Kein Text)|Das Anfügen hat noch nicht begonnen oder steht für dieses Objekt noch aus. Dies ist der Standardwert bei Öffnen des Dialogfelds.|  
-    |Grünes, nach rechts zeigendes Dreieck|Vorgang wird ausgeführt|Das Anfügen hat begonnen, ist aber noch nicht abgeschlossen.|  
-    |Grünes Häkchen|Success|Das Objekt wurde erfolgreich angefügt.|  
+    |Grünes, nach rechts zeigendes Dreieck|In Bearbeitung|Das Anfügen hat begonnen, ist aber noch nicht abgeschlossen.|  
+    |Grünes Häkchen|Erfolg|Das Objekt wurde erfolgreich angefügt.|  
     |Roter Kreis mit einem weißen Kreuz darin|Fehler|Beim Anfügen ist ein Fehler aufgetreten. Der Vorgang konnte deshalb nicht erfolgreich abgeschlossen werden.|  
     |Kreis mit zwei schwarzen Quadranten (links und rechts) und zwei weißen Quadranten (oben und unten) darin|Beendet|Das Anfügen wurde nicht erfolgreich abgeschlossen, weil der Benutzer den Vorgang angehalten hat.|  
     |Kreis mit einem gekrümmten Pfeil darin, der entgegengesetzt der Uhrzeigerrichtung zeigt|Rollback wurde ausgeführt|Anfügen war erfolgreich, es wurde jedoch ein Rollback durchgeführt, weil beim Anfügen eines anderen Objekts ein Fehler aufgetreten ist.|  
   
-     **MessageBox**  
+     **Meldung**  
      Zeigt entweder eine leere Meldung oder einen "Datei nicht gefunden"-Link an.  
   
-     **Hinzufügen**  
+     **Add (Hinzufügen)**  
      Suchen Sie die erforderlichen Hauptdatenbankdateien. Wenn der Benutzer eine MDF-Datei auswählt, werden entsprechende Informationen automatisch in die jeweiligen Felder des Rasters **Anzufügende Datenbank** eingetragen.  
   
-     **Entfernen**  
+     **Remove**  
      Entfernt die ausgewählte Datei aus dem Raster **Anzufügende Datenbank** .  
   
-     **"** *<database_name>* **" Datenbankdetails für**  
+     **"** *<datenbankname>* **" Datenbankdetails**  
      Zeigt die Namen der anzufügenden Dateien an. Klicken Sie zum Überprüfen oder Ändern des Pfadnamens einer Datei auf die Schaltfläche **Durchsuchen** ( **…** ).  
   
     > [!NOTE]  
@@ -117,7 +117,7 @@ Erfordert die Berechtigung `CREATE DATABASE`, `CREATE ANY DATABASE` oder `ALTER 
      **Aktueller Dateipfad**  
      Zeigt den Pfad zur ausgewählten Datenbankdatei an Die Pfadangabe kann manuell bearbeitet werden.  
   
-     **MessageBox**  
+     **Meldung**  
      Zeigt entweder eine leere Meldung oder einen „**Datei nicht gefunden**“-Hyperlink an.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
@@ -143,9 +143,9 @@ Erfordert die Berechtigung `CREATE DATABASE`, `CREATE ANY DATABASE` oder `ALTER 
     > Alternativ können Sie die gespeicherte Prozedur [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) oder [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) verwenden. Diese Prozeduren werden jedoch in einer zukünftigen Version von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Stattdessen wird die Verwendung von `CREATE DATABASE ... FOR ATTACH` empfohlen.  
   
 ##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Aktualisieren einer SQL Server-Datenbank  
-Nachdem Sie eine Datenbank mithilfe der Anfügemethode aktualisiert haben, ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt.  
+Nachdem Sie eine Datenbank mithilfe der Anfügemethode aktualisiert haben, ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt.  
   
-War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] entspricht. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]entspricht. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]
 > Wenn Sie eine Datenbank aus einer Instanz anfügen, die unter [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder älter ausgeführt wurde und für die Change Data Capture (CDC) aktiviert war, müssen Sie auch den unten genannten Befehl ausführen, um die Metadaten von CDC upzugraden.

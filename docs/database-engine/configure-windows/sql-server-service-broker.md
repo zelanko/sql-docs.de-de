@@ -24,16 +24,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68034519"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] bieten systemeigene Unterstützung für Messaging und Queuing in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und der [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Entwickler können problemlos anspruchsvolle Anwendungen erstellen, die die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Komponenten verwenden, um zwischen verschiedenen Datenbanken zu kommunizieren und verteilte und zuverlässige Anwendungen zu erstellen.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] bieten native Unterstützung für Messaging und Warteschlangen in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [verwalteten Azure SQL-Datenbank-Instanzen](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Entwickler können problemlos anspruchsvolle Anwendungen erstellen, die die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Komponenten verwenden, um zwischen verschiedenen Datenbanken zu kommunizieren und verteilte und zuverlässige Anwendungen zu erstellen.  
   
 ## <a name="when-to-use-service-broker"></a>Einsatz von Service Broker
 
@@ -106,7 +106,7 @@ FROM ExpenseQueue;
 
 - Ein instanzenübergreifender Service Broker wird nicht unterstützt. 
  - `sys.routes` – Voraussetzung: Wählen Sie die Adresse aus sys.routes. Die Adresse muss für jede Route LOCAL sein. Informationen hierzu finden Sie unter [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
- - `CREATE ROUTE` – Sie können `CREATE ROUTE` mit keiner anderen `ADDRESS` als `LOCAL` verwenden. Informationen hierzu finden Sie unter [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+ - `CREATE ROUTE`: `CREATE ROUTE` kann ausschließlich mit dem Wert `LOCAL` für `ADDRESS` verwendet werden. Informationen hierzu finden Sie unter [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
  - `ALTER ROUTE` kann `ALTER ROUTE` mit keiner anderen `ADDRESS` als `LOCAL` verwenden. Informationen hierzu finden Sie unter [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>Nachrichten können an mehrere Zieldienste gesendet werden (Multicast)  
@@ -116,7 +116,7 @@ FROM ExpenseQueue;
  Warteschlangen verfügen über eine neue **message_enqueue_time**-Spalte, in der angezeigt wird, wie lange eine Nachricht in der Warteschlange war.  
   
 ### <a name="poison-message-handling-can-be-disabled"></a>Behandlung nicht verarbeitbarer Nachrichten kann deaktiviert werden  
- Die Anweisungen [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md) und [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md) bieten nun die Möglichkeit, die Behandlung von nicht verarbeitbaren Nachrichten zu aktivieren oder deaktivieren, indem die Klausel `POISON_MESSAGE_HANDLING (STATUS = ON | OFF)` hinzugefügt wird. Die **sys.service_queues**-Katalogsicht enthält jetzt eine **is_poison_message_handling_enabled**-Spalte, in der angezeigt wird, ob die Behandlung nicht verarbeitbarer Nachrichten aktiviert oder deaktiviert ist.  
+ Die Anweisungen [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md) und [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md) bieten nun die Möglichkeit, die Behandlung von nicht verarbeitbaren Nachrichten zu aktivieren oder deaktivieren, indem die Klausel `POISON_MESSAGE_HANDLING (STATUS = ON | OFF)` hinzugefügt wird. Die **sys.service_queues** -Katalogsicht enthält jetzt eine **is_poison_message_handling_enabled** -Spalte, in der angezeigt wird, ob die Behandlung nicht verarbeitbarer Nachrichten aktiviert oder deaktiviert ist.  
   
 ### <a name="always-on-support-in-service-broker"></a>AlwaysOn-Unterstützung in Service Broker  
  Weitere Informationen finden Sie unter [Service Broker mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md).  

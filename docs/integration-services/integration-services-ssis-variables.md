@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296155"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
@@ -30,7 +30,7 @@ ms.locfileid: "71296155"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Variablen speichern Werte, die von einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket und dessen Containern, Tasks und Ereignishandlern zur Laufzeit verwendet werden können. Die Skripts im Skripttask und die Skriptkomponente können ebenfalls Variablen verwenden. Die Rangfolgeneinschränkungen, mit denen Tasks und Container zu einem Workflow zusammengestellt werden, können Variablen verwenden, wenn ihre Einschränkungsdefinitionen Ausdrücke einschließen.  
+  Variablen speichern Werte, die von einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Paket und dessen Containern, Tasks und Ereignishandlern zur Laufzeit verwendet werden können. Die Skripts im Skripttask und die Skriptkomponente können ebenfalls Variablen verwenden. Die Rangfolgeneinschränkungen, mit denen Tasks und Container zu einem Workflow zusammengestellt werden, können Variablen verwenden, wenn ihre Einschränkungsdefinitionen Ausdrücke einschließen.  
   
  Variablen in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen können für folgende Zwecke verwendet werden:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "71296155"
 > [!NOTE]  
 >  Die einzige konfigurierbare Option für Systemvariablen ist das Angeben, ob sie ein Ereignis auslösen, wenn sich der Wert ändert.  
   
- **Description**    
+ **Beschreibung**    
  Gibt die Beschreibung der Variablen an.  
   
  **EvaluateAsExpression**    
@@ -107,7 +107,7 @@ ms.locfileid: "71296155"
  **ReadOnly**  
  Wenn die Eigenschaft auf **False**festgelegt wird, besteht ein Lese- und Schreibzugriff auf die Variable.  
   
-**Scope**    
+**Umfang**    
  > [!NOTE]  
 >  Sie können diese Eigenschafteneinstellung nur ändern, indem Sie im Fenster **Variablen** auf **Variable verschieben** klicken.  
   
@@ -138,7 +138,7 @@ Der Wert einer benutzerdefinierten Variable kann ein Literal oder ein Ausdruck s
 | Boolean | False |
 | numeric- und binary-Datentypen | 0 (Null) |
 | Char- und String-Datentypen | (leere Zeichenfolge) |
-| Objekt | System.Object |
+| Object | System.Object |
 | | |
 
 Eine Variable enthält Optionen zum Festlegen des Variablenwerts und des Datentyps des Werts. Die beiden Eigenschaften müssen kompatibel sein. Beispielsweise ist das Verwenden eines string-Werts zusammen mit einem integer-Datentyp ungültig.  
@@ -168,7 +168,7 @@ Eine Variable enthält Optionen zum Festlegen des Variablenwerts und des Datenty
   
  **Skripttasks und Skriptkomponenten** Stellt eine Liste von schreibgeschützten und Lese-/Schreibvariablen für Skripttasks oder Skriptkomponenten bereit, aktualisiert die Lese/Schreibvariablen innerhalb des Skripts und verwendet dann die aktualisierten Werte innerhalb oder außerhalb des Skripts. Beispielsweise im `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`-Code wird die `numberOfCars` -Skriptvariable durch den Wert in der `NumberOfCars`-Variable aktualisiert. Weitere Informationen finden Sie unter [Using Variables in the Script Task](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md).  
 
-## <a name="add-a-variable"></a>Hinzufügen einer Variable  
+## <a name="add-a-variable"></a>Hinzufügen einer Variablen  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das gewünschte [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket.  
   
@@ -188,14 +188,14 @@ Eine Variable enthält Optionen zum Festlegen des Variablenwerts und des Datenty
   
 6.  Klicken Sie wahlweise auf das Symbol **Rasteroptionen** , wählen Sie zusätzliche Spalten aus, die im Dialogfeld **Variable Rasteroptionen** angezeigt werden sollen, und klicken Sie dann auf **OK**.  
   
-7.  Legen Sie optional die Variableneigenschaften fest. Weitere Informationen finden Sie unter [Festlegen der Eigenschaften von benutzerdefinierten Variablen](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
+7.  Legen Sie optional die Variableneigenschaften fest. Weitere Informationen finden Sie unter [Festlegen der Eigenschaften von benutzerdefinierten Variablen](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)definiert.  
   
 8.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
 
 ### <a name="add-variable-dialog-box"></a>Variable hinzufügen (Dialogfeld)
 Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften einer neuen Variablen angeben.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Container**  
  Wählen Sie in der Liste einen Container aus. Der Container definiert den Gültigkeitsbereich der Variablen. Der Container kann entweder das Paket oder eine im Paket enthaltene ausführbare Datei sein.  
   
@@ -208,7 +208,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
  **Werttyp**  
  Wählen Sie einen Datentyp aus.  
   
- **ReplTest1**  
+ **Wert**  
  Geben Sie einen Wert ein. Der Wert muss mit dem unter der Option **Werttyp** angegebenen Datentyp kompatibel sein.  
   
  **Schreibgeschützt**  
@@ -216,7 +216,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
    
 ## <a name="delete-a-variable"></a>Löschen einer Variable  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket, um es zu öffnen.  
   
@@ -232,7 +232,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 ## <a name="change-the-scope-of-a-variable"></a>Ändern des Bereichs einer Variable  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket, um es zu öffnen.  
   
@@ -282,7 +282,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 ### <a name="set-variable-properties-in-the-variables-window"></a>Festlegen von Variableneigenschaften im Fenster „Variablen“   
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket, um es zu öffnen.  
   
@@ -300,7 +300,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 ### <a name="set-variable-properties-in-the-properties-window"></a>Festlegen von Variableneigenschaften im Fenster „Eigenschaften“  
 
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket, um es zu öffnen.  
   

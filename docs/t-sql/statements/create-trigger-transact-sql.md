@@ -29,10 +29,10 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982698"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
@@ -51,7 +51,7 @@ LOGON-Trigger werden als Reaktion auf das LOGON-Ereignis ausgelöst, das wiederu
 > [!NOTE]  
 >  Die Integration der .NET Framework-CLR in SQL Server wird in diesem Artikel erläutert. Die Integration der CLR gilt nicht für Azure SQL-Datenbank.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -491,7 +491,7 @@ GO
   
 ```  
   
-### <a name="d-using-a-database-scoped-ddl-trigger"></a>D. Verwenden eines DDL-Triggers mit Datenbankbereich  
+### <a name="d-using-a-database-scoped-ddl-trigger"></a>D: Verwenden eines DDL-Triggers mit Datenbankbereich  
 Im folgenden Beispiel wird ein DDL-Trigger verwendet, um zu verhindern, dass ein Synonym aus einer Datenbank gelöscht wird.  
   
 ```sql  

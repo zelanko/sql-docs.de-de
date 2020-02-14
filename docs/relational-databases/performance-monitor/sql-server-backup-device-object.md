@@ -14,20 +14,20 @@ ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 93302a5b9645784b3b326229545f92de0dce56f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987203"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server, Sicherungsmedium-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Das **Sicherungsmedium** -Objekt stellt Leistungsindikatoren bereit, die mit denen für Sicherungs- und Wiederherstellungsvorgänge verwendeten Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungsmedien überwacht werden können. Überwachen Sie Sicherungsmedien, wenn Sie den Durchsatz oder den Fortschritt und die Leistung der Sicherungs- und Wiederherstellungsvorgänge auf jedem Medium einzeln bestimmen möchten. Wenn Sie den Durchsatz des gesamten Sicherungs- oder Wiederherstellungsvorgangs der Datenbank überwachen möchten, sollten Sie den **Sicherungs-/Wiederherstellungsdurchsatz/Sekunde** -Leistungsindikator des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Databases** object. Weitere Informationen finden Sie unter [SQL Server, Databases Object](../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+  Das **Sicherungsmedium** -Objekt stellt Leistungsindikatoren bereit, die mit denen für Sicherungs- und Wiederherstellungsvorgänge verwendeten Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungsmedien überwacht werden können. Überwachen Sie Sicherungsmedien, wenn Sie den Durchsatz oder den Fortschritt und die Leistung der Sicherungs- und Wiederherstellungsvorgänge auf jedem Medium einzeln bestimmen möchten. Wenn Sie den Durchsatz des gesamten Sicherungs- oder Wiederherstellungsvorgangs der Datenbank überwachen möchten, sollten Sie den Leistungsindikator **Sicherungs-/Wiederherstellungsdurchsatz/Sekunde** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-Datenbankobjekts** verwenden. Weitere Informationen finden Sie unter [SQL Server, Databases Object](../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
- In dieser Tabelle wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Sicherungsmedium** beschrieben.  
+ In dieser Tabelle wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsindikator **Sicherungsmedium** beschrieben.  
   
-|Sicherungsmedium-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Sicherungsmedium-Leistungsindikatoren von SQL Server|Beschreibung|  
 |---------------------------------------|-----------------|  
 |**Mediumsdurchsatz Bytes/Sekunde**|Durchsatz von Lese-/Schreibvorgängen für ein Sicherungsmedium. Dieser Leistungsindikator ist nur vorhanden, während der Sicherungs- oder Wiederherstellungsvorgang ausgeführt wird.|  
   

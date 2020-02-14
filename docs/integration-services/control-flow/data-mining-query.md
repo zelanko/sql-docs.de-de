@@ -13,10 +13,10 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ab9374312051ab22aa90c48bfed40713fe4e318
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298316"
 ---
 # <a name="data-mining-query"></a>Data Mining-Abfrage
@@ -26,13 +26,13 @@ ms.locfileid: "71298316"
 
   Im Entwurfsbereich befindet sich der Data Mining-Generator für Vorhersageabfragen, mit dem Sie Data Mining-Vorhersageabfragen erstellen können. Vorhersageabfragen können entweder auf der Grundlage von Eingabetabellen oder von SINGLETON-Vorhersageabfragen erstellt werden. Wechseln Sie zur Ergebnissicht, um die Abfrage auszuführen und die Ergebnisse anzuzeigen. Die Abfragesicht zeigt die vom Generator für Vorhersageabfragen erstellte DMX-Abfrage (Data Mining Extensions).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Schaltfläche Ansicht wechseln  
  Klicken Sie auf ein Symbol, um zwischen dem Entwurfs- und Abfragebereich zu wechseln. Standardmäßig ist der Entwurfsbereich geöffnet.  
   
- Klicken Sie auf das ![Design-Symbol](../../integration-services/control-flow/media/ssis-designicon.gif "Design-Symbol"), um in den Entwurfsbereich zu wechseln.  
+ Klicken Sie auf das ![Design-Symbol](../../integration-services/control-flow/media/ssis-designicon.gif "Entwurf (Symbol)"), um in den Entwurfsbereich zu wechseln.  
   
- Klicken Sie auf das ![SQL-Symbol](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL-Symbol"), um in den Abfragebereich zu wechseln.  
+ Klicken Sie auf das ![SQL-Symbol](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL (Symbol)"), um in den Abfragebereich zu wechseln.  
   
  **Miningmodell**  
  Zeigt das Miningmodell an, auf dem Sie die Vorhersagen aufbauen wollen.  
@@ -57,7 +57,7 @@ ms.locfileid: "71298316"
  **Anzeigen**  
  Wählen Sie aus, ob die Spalte zurückgegeben oder nur in der WHERE-Klausel verwendet werden soll.  
   
- **Gruppieren**  
+ **Gruppe**  
  Wird mit der **Und/Oder** -Spalte verwendet, um Ausdrücke zu gruppieren. Beispielsweise (expr1 OR expr2) AND expr3.  
   
  **Und/Oder**  

@@ -14,10 +14,10 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6033c2d21b10755601f9ef82cabd829db5ad820
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293220"
 ---
 # <a name="connect-components-in-a-data-flow"></a>Verbinden von Komponenten in einem Datenfluss
@@ -30,7 +30,7 @@ Den Datenfluss in einem Paket erstellen Sie auf der Entwurfsoberfläche der Regi
   
  Im folgenden Diagramm wird ein einfacher Datenfluss mit einer Quellkomponente, zwei Transformationen, einer Zielkomponente und den Pfaden, die diese verbinden, angezeigt.  
   
- ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![Datenfluss](../../integration-services/data-flow/media/mw-dts-08.gif "Datenfluss")  
   
  Wenn zwei Komponenten verbunden sind, können Sie die Metadaten der Daten, die über den Pfad verschoben werden, und die Eigenschaften des Pfades in **Datenflusspfad-Editor**anzeigen. Weitere Informationen finden Sie unter [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md).  
   
@@ -38,7 +38,7 @@ Den Datenfluss in einem Paket erstellen Sie auf der Entwurfsoberfläche der Regi
   
 ### <a name="connect-components-in-a-data-flow"></a>Verbinden von Komponenten in einem Datenfluss  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   

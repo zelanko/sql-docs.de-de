@@ -22,19 +22,19 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f718d61c351e11c0e5d159e683390cf311f49e48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51b18437976a9ecb192a69602ecbdc97054b9b47
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914366"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831834"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt für alle gültigen Text- und Zeichendatentypen die Startposition des ersten Auftretens eines Musters in einem angegebenen Ausdruck zurück bzw. 0, wenn das Muster nicht gefunden wird.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,10 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>Argumente  
  *pattern*  
- Ein Zeichenausdruck, der die zu suchende Sequenz enthält. Platzhalterzeichen können verwendet werden, jedoch muss das %-Zeichen vorangestellt werden und *pattern* folgen (es sei denn, Sie suchen nach den ersten oder letzten Zeichen). *pattern* ist ein Ausdruck aus der Kategorie der Zeichenfolgen-Datentypen. *pattern* ist auf 8000 Zeichen beschränkt.  
+ Ein Zeichenausdruck, der die zu suchende Sequenz enthält. Platzhalterzeichen können verwendet werden, jedoch muss das %-Zeichen vorangestellt werden und *pattern* folgen (es sei denn, Sie suchen nach den ersten oder letzten Zeichen). *pattern* ist ein Ausdruck aus der Kategorie der Zeichenfolgen-Datentypen. *pattern* ist auf 8000 Zeichen beschränkt.
+
+ > [!NOTE]
+ > Obwohl reguläre Ausdrücke in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht nativ unterstützt werden, kann ein ähnlich komplexer Musterabgleich durch Verwendung unterschiedlicher Platzhalterausdrücke erzielt werden. In der Dokumentation zum [Zeichenfolgenoperator](../../t-sql/language-elements/string-operators-transact-sql.md) finden Sie weitere Details zur Platzhaltersyntax.
   
  *expression*  
  Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), in der Regel eine Spalte, der nach dem angegebenen Muster durchsucht wird. *expression* ist ein Ausdruck aus der Kategorie der Zeichenfolgen-Datentypen.  
@@ -70,18 +73,22 @@ Bei SC-Sortierungen werden UTF-16-Ersatzpaare im *expression*-Parameter vom Rüc
  Im folgenden Beispiel wird eine kurze Zeichenfolge (`interesting data`) auf die Startposition der Zeichen `ter` überprüft.  
   
 ```sql  
-SELECT PATINDEX('%ter%', 'interesting data');  
+SELECT position = PATINDEX('%ter%', 'interesting data');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-`3`  
+
+```
+position
+--------
+3
+```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. Verwenden eines Musters mit PATINDEX  
 Im folgenden Beispiel wird die Position gefunden, an der in einer bestimmten Zeile der `ensure`-Spalte in der `DocumentSummary`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank das Muster `Document` beginnt.  
   
 ```sql  
-SELECT PATINDEX('%ensure%',DocumentSummary)  
+SELECT position = PATINDEX('%ensure%',DocumentSummary)  
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 GO   
@@ -90,9 +97,9 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 64  
-(1 row(s) affected)
 ```  
   
 Wenn Sie die zu durchsuchenden Zeilen nicht durch eine `WHERE`-Klausel beschränken, gibt die Abfrage alle Zeilen in der Tabelle zurück und meldet Werte ungleich 0 für die Zeilen, in denen das Muster gefunden wurde, sowie 0 für alle Zeilen, in denen das Muster nicht gefunden wurde.  
@@ -101,21 +108,36 @@ Wenn Sie die zu durchsuchenden Zeilen nicht durch eine `WHERE`-Klausel beschrän
  Im folgenden Beispiel wird mit dem Platzhalterzeichen % und dem Platzhalterzeichen _ nach der Position gesucht, an der das Muster `'en'` in der angegebenen Zeichenfolge beginnt und auf das ein beliebiges Zeichen sowie `'ure'` folgen (Index beginnt bei 1):  
   
 ```sql  
-SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
+SELECT position = PATINDEX('%en_ure%', 'Please ensure the door is locked!');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 8  
 ```  
   
 `PATINDEX` funktioniert analog zu `LIKE`; Sie können daher eines der Platzhalterzeichen verwenden. Sie müssen das Muster nicht mit Prozentzeichen umschließen. `PATINDEX('a%', 'abc')` gibt 1 und `PATINDEX('%a', 'cba')` 3 zurück.  
   
  Im Gegensatz zu `LIKE` gibt `PATINDEX` ähnlich wie `CHARINDEX` eine Position zurück.  
-  
-### <a name="d-using-collate-with-patindex"></a>D. Verwenden von COLLATE mit PATINDEX  
+
+### <a name="d-using-complex-wildcard-expressions-with-patindex"></a>D: Verwenden komplexer Platzhalterausdrücke mit PATINDEX 
+Im folgenden Beispiel wird der [Zeichenfolgenoperator](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md) `[^]` verwendet, um die Position eines Zeichens zu finden, das keine Zahl, kein Buchstabe oder kein Leerzeichen ist.
+
+```sql
+SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+33
+```
+
+### <a name="e-using-collate-with-patindex"></a>E. Verwenden von COLLATE mit PATINDEX  
  Im folgenden Beispiel wird die `COLLATE`-Funktion verwendet, um die Sortierung des durchsuchten Ausdrucks ausdrücklich anzugeben.  
   
 ```sql  
@@ -124,13 +146,20 @@ GO
 SELECT PATINDEX ( '%ein%', 'Das ist ein Test'  COLLATE Latin1_General_BIN) ;  
 GO  
 ```  
-  
-### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. Verwenden einer Variable, um das Muster anzugeben  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+9
+```
+
+### <a name="f-using-a-variable-to-specify-the-pattern"></a>F. Verwenden einer Variable, um das Muster anzugeben  
 Im folgenden Beispiel wird eine Variable verwendet, um einen Wert an den *pattern*-Parameter zu übergeben. In diesem Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank verwendet.  
   
 ```sql  
 DECLARE @MyValue varchar(10) = 'safety';   
-SELECT PATINDEX('%' + @MyValue + '%', DocumentSummary)   
+SELECT position = PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 ```  
@@ -138,7 +167,8 @@ WHERE DocumentNode = 0x7B40;
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-------------  
+position
+--------  
 22
 ```  
   

@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 08a4a90580a00e3ab4f2c38c7dfa3cf81b331d08
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 32474836bfbf61f74370724f0750732e11542e9e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768622"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284819"
 ---
 # <a name="distribution-agent-security"></a>Sicherheit für den Verteilungs-Agent
 ::: moniker range=">=sql-server-2014||=sqlallproducts-allversions" 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Im Dialogfeld **Sicherheit für den Verteilungs-Agent** können Sie das Windows-Konto angeben, unter dem der Verteilungs-Agent ausgeführt wird. Der Verteilungs-Agent wird für Pushabonnements auf dem Verteiler und für Pullabonnements auf dem Abonnenten ausgeführt. Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto wird auch als *Prozesskonto*bezeichnet, da der Agentprozess unter diesem Konto ausgeführt wird. Abhängig davon, wie Sie auf dieses Dialogfeld zugreifen, stehen zusätzliche Optionen zur Verfügung:  
   
--   Wenn Sie das Dialogfeld über den Assistenten für neue Abonnements aufrufen, können Sie auch den Kontext angeben, unter dem der Verteilungs-Agent Verbindungen mit dem Abonnenten (bei Pushabonnements) bzw. dem Verteilungs-Agent (bei Pullabonnements) herstellt. Die Verbindung kann entweder durch Identitätswechsel des Windows-Kontos oder unter dem Kontext eines von Ihnen angegebenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Kontos hergestellt werden.  
+-   Wenn Sie das Dialogfeld über den Assistenten für neue Abonnements aufrufen, können Sie auch den Kontext angeben, unter dem der Verteilungs-Agent Verbindungen mit dem Abonnenten (bei Pushabonnements) bzw. dem Verteilungs-Agent (bei Pullabonnements) herstellt. Diese Verbindung kann hergestellt werden, indem die Identität des Windows-Kontos angenommen wird oder indem der Kontext eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Kontos verwendet wird, das Sie festlegen.  
   
 -   Im Falle eines Zugriffs über das Dialogfeld **Abonnementeigenschaften** geben Sie den Kontext ein, unter dem der Verteilungs-Agent Verbindungen herstellen soll, indem Sie in der Zeile**Abonnentenverbindung**bzw. **Verteilerverbindung** dieses Dialogfelds auf die Schaltfläche mit den **drei Punkten** klicken. Weitere Informationen zum Zugreifen auf das Dialogfeld **Abonnementeigenschaften** finden Sie unter [Anzeigen und Ändern der Eigenschaften von Pushabonnements](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) und [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  Alle Konten müssen gültig sein, und für jedes Konto muss das richtige Kennwort angegeben sein. Konten und Kennwörter werden erst bei der Ausführung eines Agents überprüft.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Process Account**  
  Geben Sie ein Windows-Konto ein, unter dem der Verteilungs-Agent ausgeführt wird:  
   
@@ -51,7 +51,7 @@ Im Dialogfeld **Sicherheit für den Verteilungs-Agent** können Sie das Windows-
   
  Zusätzliche Berechtigungen sind erforderlich, wenn beim Herstellen von Verbindungen die Identität des Prozesskontos angenommen wird. Siehe nachstehende Abschnitte **Verbindung mit dem Verteiler herstellen** und **Verbindung mit dem Abonnenten herstellen** .  
   
- **Process Account** kann bei Pullabonnements für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]nicht angegeben werden, da der Verteilungs-Agent auf Instanzen von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ Das **Prozesskonto** kann nicht für Pullabonnements für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] festgelegt werden, da der Verteilungs-Agent nicht auf [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]-Instanzen ausgeführt werden kann.  
   
  **Kennwort** und **Kennwort bestätigen**  
  In diese Felder geben Sie das Kennwort für das Windows-Konto ein.  
@@ -114,7 +114,7 @@ Im Dialogfeld **Sicherheit für den Verteilungs-Agent** können Sie das SQL-Auth
   
  Alle Konten müssen gültig sein, und für jedes Konto muss das richtige Kennwort angegeben sein. Konten und Kennwörter werden erst bei der Ausführung eines Agents überprüft.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Process Account**  
  Geben Sie ein SQL Server-Authentifizierungskonto ein, unter dem der Verteilungs-Agent ausgeführt wird:  
   

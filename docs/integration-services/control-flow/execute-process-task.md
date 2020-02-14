@@ -17,10 +17,10 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 214f28fbb977414d4e14fdd14f2be53e9b705bc1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298339"
 ---
 # <a name="execute-process-task"></a>Prozess ausführen (Task)
@@ -28,14 +28,14 @@ ms.locfileid: "71298339"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Der Task Prozess ausführen führt eine Anwendung oder eine Batchdatei als Teil eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets aus. Mit der Task 'Prozess ausführen' können alle Standardanwendungen wie z. B. [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] oder [!INCLUDE[ofprword](../../includes/ofprword-md.md)]geöffnet werden, normalerweise wird er jedoch zum Ausführen von Geschäftsanwendungen oder Batchdateien für eine Datenquelle verwendet. Beispielsweise können Sie mit dem Task 'Prozess ausführen' eine komprimierte Textdatei expandieren. Anschließend kann das Paket die Textdatei als Datenquelle für den Datenfluss im Paket verwenden. Sie können mit dem Task 'Prozess ausführen' auch eine benutzerdefinierte [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Anwendung ausführen, die einen täglichen Umsatzbericht erstellt. Anschließend können Sie den Bericht an einen "Mail senden"'-Task anfügen und an eine Verteilerliste weiterleiten.  
+  Der Task „Prozess ausführen“ führt eine Anwendung oder Batchdatei als Teil eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketworkflows aus. Mit der Task 'Prozess ausführen' können alle Standardanwendungen wie z. B. [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] oder [!INCLUDE[ofprword](../../includes/ofprword-md.md)]geöffnet werden, normalerweise wird er jedoch zum Ausführen von Geschäftsanwendungen oder Batchdateien für eine Datenquelle verwendet. Beispielsweise können Sie mit dem Task 'Prozess ausführen' eine komprimierte Textdatei expandieren. Anschließend kann das Paket die Textdatei als Datenquelle für den Datenfluss im Paket verwenden. Sie können mit dem Task 'Prozess ausführen' auch eine benutzerdefinierte [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Anwendung ausführen, die einen täglichen Umsatzbericht erstellt. Anschließend können Sie den Bericht an einen "Mail senden"'-Task anfügen und an eine Verteilerliste weiterleiten.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt weitere Tasks ein, die Workflowvorgänge ausführen, wie z. B. das Ausführen von Paketen. Weitere Informationen finden Sie unter [Execute Package Task](../../integration-services/control-flow/execute-package-task.md).  
   
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>Verfügbare benutzerdefinierte Protokolleinträge für den Task 'Prozess ausführen'  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Prozess ausführen aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|Enthält Informationen zu dem Prozess, für dessen Ausführung der Task konfiguriert ist.<br /><br /> Es werden zwei Protokolleinträge geschrieben. Der eine Protokolleintrag enthält Informationen über den Namen und Speicherort der vom Task ausgeführten ausführbaren Datei, im anderen Eintrag wird das Beenden der ausführbaren Datei erfasst.|  
 |**ExecuteProcessVariableRouting**|Enthält Informationen darüber, welche Variablen an die Eingabe und an die Ausgaben der ausführbaren Datei geleitet werden. Es werden Protokolleinträge für stdin (für die Eingabe), für stdout (für die Ausgabe) und für stderr (für die Fehlerausgabe) geschrieben.|  
@@ -60,7 +60,7 @@ ms.locfileid: "71298339"
   
  Sie können einen Ausdruck verwenden, um verschiedene Eigenschaften des Tasks 'Prozess ausführen' festzulegen.  
   
- Wenn Sie zum Konfigurieren des Tasks Prozess ausführen für Eingaben die Eigenschaft **StandardInputVariable** verwenden, rufen Sie zum Lesen der Eingabe die **Console.ReadLine** -Methode der Anwendung auf. Weitere Informationen finden Sie in der [Console.ReadLine-Methode](https://go.microsoft.com/fwlink/?LinkId=129201)-Klassenbibliothek im Thema [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Wenn Sie zum Konfigurieren des Tasks Prozess ausführen für Eingaben die Eigenschaft **StandardInputVariable** verwenden, rufen Sie zum Lesen der Eingabe die **Console.ReadLine** -Methode der Anwendung auf. Weitere Informationen finden Sie im Artikel [Console.ReadLine-Methode](https://go.microsoft.com/fwlink/?LinkId=129201) in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Klassenbibliothek.  
   
  Wenn Sie zum Konfigurieren des Tasks Prozess ausführen für Eingaben die Eigenschaft **Argumente** verwenden, führen Sie zum Abrufen der Argumente einen der folgenden Schritte aus:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "71298339"
 ## <a name="execute-process-task-editor-general-page"></a>Editor für den Task 'Prozess ausführen' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task „Prozess ausführen“** können Sie den Task „Prozess ausführen“ benennen und beschreiben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task 'Prozess ausführen' an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "71298339"
 ## <a name="execute-process-task-editor-process-page"></a>Editor für den Task 'Prozess ausführen' (Seite Verarbeiten)
   Auf der Seite **Verarbeiten** des Dialogfelds **Editor für den Task 'Prozess ausführen'** können Sie die Optionen konfigurieren, die den Prozess ausführen. Zu den Optionen gehören der Name der ausführbaren Datei, der Speicherort dieser Datei, die Argumente der Eingabeaufforderung und die Variablen für die Ein- und Ausgabe.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **RequireFullFileName**  
  Geben Sie an, ob der Task fehlschlagen soll, wenn die ausführbare Datei am angegebenen Speicherort nicht gefunden wird.  
   

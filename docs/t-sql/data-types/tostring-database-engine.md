@@ -18,10 +18,10 @@ ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000433"
 ---
 # <a name="tostring-database-engine"></a>ToString (Datenbank-Engine)
@@ -115,7 +115,7 @@ Im folgenden Codeausschnitt wird die ToString()-Methode aufgerufen:
 this.ToString()  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [hierarchyid-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

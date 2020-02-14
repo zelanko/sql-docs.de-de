@@ -16,15 +16,15 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7ba560e46aaebc1aa5bc6901a3c0067fae91bdb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085945"
 ---
 # <a name="replication-queue-reader-agent"></a>Warteschlangenlese-Agent der Microsoft SQL Server-Replikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Der Warteschlangenlese-Agent der Microsoft SQL Server-Replikation ist eine ausführbare Datei, die in einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Warteschlange oder einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Nachrichtenwarteschlange gespeicherte Nachrichten liest und diese Nachrichten dann auf den Verleger anwendet. Der Warteschlangenlese-Agent wird bei Momentaufnahme- und Transaktionsveröffentlichungen verwendet, die das verzögerte Update über eine Warteschlange gestatten.  
+  Der Replikationswarteschlangenlese-Agent ist eine ausführbare Datei, die in einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Warteschlange oder einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Nachrichtenwarteschlange gespeicherte Nachrichten liest und diese Nachrichten dann auf den Verleger anwendet. Der Warteschlangenlese-Agent wird bei Momentaufnahme- und Transaktionsveröffentlichungen verwendet, die das verzögerte Update über eine Warteschlange gestatten.  
   
 > [!NOTE]  
 >  Parameter können in beliebiger Reihenfolge angegeben werden. Wenn keine optionalen Parameter angegeben werden, werden vordefinierte Werte auf Grundlage des Standardagentprofils verwendet.  
@@ -55,7 +55,7 @@ qrdrsvc [-?]
   
 ## <a name="arguments"></a>Argumente  
  **-?**  
- Zeigt Informationen zur Verwendung an.  
+ Zeigt Informationen zur Nutzung an.  
   
  **-Continuous**  
  Gibt an, ob der Agent fortlaufend versucht, Transaktionen in der Warteschlange zu verarbeiten. Wenn dieses Argument angegeben ist, setzt der Agent die Ausführung auch dann fort, wenn in der Warteschlange keine ausstehenden Transaktionen von einem der Abonnenten vorhanden sind.  
@@ -81,7 +81,7 @@ qrdrsvc [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Die Ebene der SSL-Verschlüsselung (Secure Sockets Layer), die vom Warteschlangenlese-Agent beim Herstellen von Verbindungen verwendet wird.  
   
-|Wert von EncryptionLevel|und Beschreibung|  
+|Wert von EncryptionLevel|Beschreibung|  
 |---------------------------|-----------------|  
 |**0**|Gibt an, dass SSL nicht verwendet wird.|  
 |**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
@@ -95,7 +95,7 @@ qrdrsvc [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
  Gibt den Umfang des Verlaufs an, der während eines Vorgangs des Warteschlangenlese-Agents protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
   
-|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|und Beschreibung|  
+|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Beschreibung|  
 |-------------------------------|-----------------|  
 |**0**|Keine Verlaufsprotokollierung (nicht empfohlen).|  
 |**1**|Standard. Aktualisieren Sie immer eine vorherige Verlaufsmeldung mit dem gleichen Status (Start, Status, Erfolg usw.). Wenn kein vorheriger Datensatz mit dem gleichen Status vorhanden ist, fügen Sie einen neuen Datensatz ein.|  
@@ -115,7 +115,7 @@ qrdrsvc [-?]
  Ist nur relevant, um Abonnements zu aktualisieren, die auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] basierende Warteschlangen verwenden. Gibt an, wie oft die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Warteschlange nach anstehenden Transaktionen abgefragt wird (in Sekunden). Der Wert kann zwischen 0 und 240 Sekunden liegen. Die Standardeinstellung ist 5 Sekunden.  
   
  **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
- Gibt die Failoverpartnerinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, die an einer Datenbank-Spiegelungssitzung mit der Veröffentlichungsdatenbank teilnimmt. Weitere Informationen finden Sie unter [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ Gibt die Failoverpartnerinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, die an einer Datenbank-Spiegelungssitzung mit der Veröffentlichungsdatenbank teilnimmt. Weitere Informationen finden Sie unter [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-ProfileName** _agent_profile_name_  
  Der Name eines Agentprofils, das zum Bereitstellen von Standardwerten an den Agent verwendet wird. Weitere Informationen finden Sie unter [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  

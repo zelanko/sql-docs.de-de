@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f07afead7d74b358c0220dc7ed22dbf31ebbf11a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056049"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Sicherheitsüberwachung-Ereigniskategorie (SQL Server Profiler)
@@ -27,7 +27,7 @@ ms.locfileid: "74056049"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Audit Add DB User (Ereignisklasse)](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|Gibt an, dass eine Anmeldung hinzugefügt oder entfernt wurde, wie ein Datenbankbenutzer zu einer Datenbank.|  
 |[Audit Add Login to Server Role (Ereignisklasse)](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|Gibt an, dass eine Annmeldung von einer festen Serverrolle hinzugefügt oder entfernt wurde.|  
@@ -49,7 +49,7 @@ ms.locfileid: "74056049"
 |[Audit Database Operation-Ereignisklasse](../../relational-databases/event-classes/audit-database-operation-event-class.md)|Gibt an, dass verschiedene Vorgänge, wie z.B. CHECKPOINT oder SUBSCRIBE QUERY NOTIFICATIONS, aufgetreten sind.|  
 |[Audit Database Principal Impersonation (Ereignisklasse)](../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)|Gibt an, dass ein Identitätswechsel innerhalb des Datenbankumfangs aufgetreten ist.|  
 |[Audit Database Principal Management-Ereignisklasse](../../relational-databases/event-classes/audit-database-principal-management-event-class.md)|Gibt an, dass Prinzipale aus einer Datenbank erstellt, in einer Datenbank geändert oder gelöscht wurden.|  
-|[Audit Database Scope GDR (Ereignisklasse)](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|Gibt an, dass eine GRANT-, REVOKE- oder DENY-Anweisung von Anweisungsberechtigungen durch den Benutzer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgelöst wurde.|  
+|[Audit Database Scope GDR (Ereignisklasse)](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|Gibt an, dass eine GRANT-, REVOKE- oder DENY-Anweisung von Anweisungsberechtigungen durch den Benutzer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgelöst wurde.|  
 |[Audit DBCC (Ereignisklasse)](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Gibt an, dass ein DBCC-Befehl ausgegeben wurde.|  
 |[Überwachungsvolltextereignisklasse](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Gibt an, dass ein Volltextereignis aufgetreten ist.|  
 |[Audit Login Change Password-Ereignisklasse](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Gibt an, dass ein Benutzer sein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldekennwort geändert hat.|  

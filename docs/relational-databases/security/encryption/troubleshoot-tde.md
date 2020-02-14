@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 8ec410ba98be0c1893f376daf596a0746983b87d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558465"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909900"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Häufige Fehler bei Transparent Data Encryption (TDE) mit vom Kunden verwalteten Schlüsseln in Azure Key Vault
 
@@ -33,7 +33,7 @@ Wenn das zugrunde liegende Azure Key Vault-Schlüsselzugriffsproblem innerhalb d
 
 Wenn eine unzugängliche Datenbank nicht länger benötigt wird, kann sie sofort gelöscht werden, um Kosten zu vermeiden. Alle weiteren Aktionen für die Datenbank sind erst dann erlaubt, wenn der Zugriff auf den Azure Key Vault-Schlüssel wiederhergestellt wurde und die Datenbank wieder online ist. Das Ändern der TDE-Option von kundenseitig verwalteten Schlüsseln zu dienstseitig verwalteten Schlüsseln ist ebenfalls nicht möglich, wenn eine mit kundenseitig verwalteten Schlüsseln verschlüsselte Datenbank nicht zugänglich ist. Dies ist erforderlich, um die Daten vor einem nicht autorisierten Zugriff zu schützen, wenn die Berechtigungen für den TDE-Schutz widerrufen wurden. 
 
-Wenn eine Datenbank länger als 8 Stunden nicht zugänglich ist, ist eine automatische Reparatur nicht mehr möglich. Wenn der erforderliche Azure Key Vault-Schlüsselzugriff danach wiederhergestellt wurde, müssen Sie den Zugriff manuell erneut validieren, um die Datenbank wieder online zu schalten. Die Wiederinbetriebnahme der Datenbank kann in diesem Fall je nach Größe der Datenbank sehr lange dauern und erfordert aktuell das Öffnen eines Supporttickets. Sobald die Datenbank wieder online ist, gehen zuvor konfigurierte Einstellungen wie z. B. die geografische Verknüpfung (bei konfigurierter georedundanter Notfallwiederherstellung), der PITR-Verlauf sowie Tags verloren. Daher wird empfohlen, ein Benachrichtigungssystem mit [Aktionsgruppen](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) zu implementieren, mit dem zugrunde liegende Probleme mit dem Azure Key Vault-Schlüsselzugriff erkannt und gelöst werden können. 
+Wenn eine Datenbank länger als 8 Stunden nicht zugänglich ist, ist eine automatische Reparatur nicht mehr möglich. Wenn der erforderliche Azure Key Vault-Schlüsselzugriff erst danach wiederhergestellt wurde, müssen Sie den Zugriff auf den Schlüssel manuell noch mal validieren, um die Datenbank wieder online zu schalten. Das Onlineschalten der Datenbank kann in diesem Fall je nach Größe der Datenbank sehr lange dauern. Sobald die Datenbank wieder online ist, gehen zuvor konfigurierte Einstellungen wie die [Failovergruppe](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group), der PITR-Verlauf und Tags **verloren**. Daher wird empfohlen, ein Benachrichtigungssystem mit [Aktionsgruppen](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) zu implementieren, mit dem zugrunde liegende Probleme mit dem Azure Key Vault-Schlüsselzugriff erkannt und gelöst werden können. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Häufige Fehler, die zu unzugänglichen Datenbanken führen
 

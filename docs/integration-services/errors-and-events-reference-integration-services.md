@@ -16,10 +16,10 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290622"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Fehler- und Ereignisreferenz (Integration Services)
@@ -36,7 +36,7 @@ ms.locfileid: "71290622"
   
 ## <a name="error-messages"></a>Fehlermeldungen  
   
-|Symbolischer Name des Fehlers|und Beschreibung|  
+|Symbolischer Name des Fehlers|Beschreibung|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|Gibt an, dass das Paket nicht ausgeführt werden kann, da von einer Transformation für Cachetransformation versucht wird, Daten in den Cache im Arbeitsspeicher zu schreiben. Ein Cacheverbindungs-Manager hat jedoch bereits eine Cachedatei in den Cache im Arbeitsspeicher geladen.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Gibt an, dass das Paket nicht ausgeführt werden kann, da bei einer angegebenen Verbindung ein Fehler aufgetreten ist.|  
@@ -55,7 +55,7 @@ ms.locfileid: "71290622"
 ## <a name="events-sqlispackage"></a>Ereignisse (SQLISPackage)  
  Weitere Informationen finden Sie unter [Von einem Integration Services-Paket protokollierte Ereignisse](../integration-services/performance/events-logged-by-an-integration-services-package.md).  
   
-|Ereignis|und Beschreibung|  
+|Ereignis|Beschreibung|  
 |-----------|-----------------|  
 |SQLISPackage_12288|Gibt an, dass ein Paket gestartet wurde.|  
 |SQLISPackage_12289|Gibt an, dass ein Paket erfolgreich zu Ende ausgeführt wurde.|  
@@ -69,7 +69,7 @@ ms.locfileid: "71290622"
 ## <a name="events-sqlisservice"></a>Ereignisse (SQLISService)  
  Weitere Informationen finden Sie unter [Vom Integration Services-Dienst protokollierte Ereignisse](../integration-services/service/events-logged-by-the-integration-services-service.md).  
   
-|Ereignis|und Beschreibung|  
+|Ereignis|BESCHREIBUNG|  
 |-----------|-----------------|  
 |SQLISService_256|Gibt an, dass der Dienst umgehend gestartet wird.|  
 |SQLISService_257|Gibt an, dass der Dienst gestartet wurde.|  

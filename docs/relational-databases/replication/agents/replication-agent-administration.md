@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93527accb44bd192e1468ea4176702173bf74114
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 43b3c6759f4ea213acf8bed789d67ff4952b4ae8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768225"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288155"
 ---
 # <a name="replication-agent-administration"></a>Replikations-Agent-Verwaltung
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "68768225"
   
 |Ausführbare Agent-Dateien|Dateiname|  
 |----------------------|---------------|  
-|[Replikationsmomentaufnahme-Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
+|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
 |[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[Replikationsprotokolllese-Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
-|[Warteschlangenlese-Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
+|[Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
 |[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
   
  Zusätzlich zu den Replikations-Agents besitzt die Replikation eine Reihe von Aufträgen, die geplante und Bedarfswartungen ausführen.  
@@ -87,7 +87,7 @@ ms.locfileid: "68768225"
 ## <a name="replication-maintenance-jobs"></a>Aufträge zur Replikationswartung  
  Die Replikation verwendet die folgenden Aufträge zum Ausführen von geplanten und Bedarfswartungen.  
   
-|Cleanupauftrag|und Beschreibung|Standardzeitplan|  
+|Bereinigungsauftrag|Beschreibung|Standardzeitplan|  
 |------------------|-----------------|----------------------|  
 |Bereinigung des Agent-Verlaufs: Distribution|Entfernt Verlaufseinträge des Replikations-Agents aus der Verteilungsdatenbank.|Wird alle zehn Minuten ausgeführt.|  
 |Verteilungsbereinigung: Distribution|Entfernt replizierte Transaktionen aus der Verteilungsdatenbank. |Wird alle zehn Minuten ausgeführt.|  

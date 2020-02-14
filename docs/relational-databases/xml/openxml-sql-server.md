@@ -24,10 +24,10 @@ ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6282a242807532095d13fed4b853731937bdd176
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995354"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "67995354"
   
  Der Vorgang wird in der folgenden Abbildung veranschaulicht.  
   
- ![Analysieren von XML mit OPENXML](../../relational-databases/xml/media/xmlsp.gif "Parsing XML with OPENXML")  
+ ![Analysieren von XML mit OPENXML](../../relational-databases/xml/media/xmlsp.gif "Analysieren von XML mit OPENXML")  
   
  Um die Funktionsweise von OPENXML zu verstehen, benötigen Sie Kenntnisse über XPath-Abfragen und XML. Weitere Informationen zur XPath-Unterstützung in SQL Server finden Sie unter [Verwenden von XPath-Abfragen in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md).  
   
@@ -97,7 +97,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  Die folgende Abbildung zeigt die analysierte XML-Struktur des vorherigen XML-Dokuments, das mithilfe von sp_xml_preparedocument erstellt wurde.  
   
- ![Analysierte XML-Struktur](../../relational-databases/xml/media/xmlparsedtree.gif "Parsed XML tree")  
+ ![Analysierter XML-Baum](../../relational-databases/xml/media/xmlparsedtree.gif "Analysierter XML-Baum")  
   
 ## <a name="openxml-parameters"></a>OPENXML-Parameter  
  Zu den Parametern für OPENXML gehören:  
@@ -138,7 +138,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  In der folgenden Tabelle wird die Struktur der Rahmentabelle beschrieben.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Die eindeutige ID des Dokumentknotens.<br /><br /> Das Stammelement weist den ID-Wert 0 auf. Die negativen ID-Werte sind reserviert.|  
 |**parentid**|**bigint**|Identifiziert das übergeordnete Element des Knotens. Bei dem über diese ID identifizierten übergeordneten Objekt muss es sich nicht unbedingt um das übergeordnete Element handeln. Dies hängt jedoch vom NodeType des Knotens ab, dessen übergeordnetes Objekt durch diese ID identifiziert wird. Wenn es sich bei dem Knoten beispielsweise um einen Textknoten handelt, kann das übergeordnete Objekt ein Attributknoten sein.<br /><br /> Wenn sich der Knoten auf der obersten Ebene im XML-Dokument befindet, ist **ParentID** gleich NULL.|  

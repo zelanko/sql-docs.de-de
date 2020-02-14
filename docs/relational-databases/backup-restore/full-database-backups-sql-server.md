@@ -20,10 +20,10 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68890064"
 ---
 # <a name="full-database-backups-sql-server"></a>Vollständige Datenbanksicherungen (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "68890064"
 ##  <a name="DbBuRMs"></a> Datenbanksicherungen im einfachen Wiederherstellungsmodell  
  Im einfachen Wiederherstellungsmodell besteht nach jeder Sicherung die Gefahr, dass in der Datenbank Datenverluste auftreten, wenn ein Notfall auftritt. Die Gefahr des Datenverlusts steigt mit jedem Update bis zur nächsten Sicherung, wenn die Gefahr auf null zurückgeht und ein neuer Zyklus der Datenverlustgefahr beginnt. Die Gefahr des Datenverlusts steigt in der Zeit zwischen den Sicherungen. In der folgenden Abbildung wird die Gefahr des Datenverlusts für eine Sicherungsstrategie veranschaulicht, in der nur vollständige Datenbanksicherungen verwendet werden.  
   
- ![Zeigt den Datenverlust zwischen Datenbanksicherungen an](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Shows work-loss exposure between database backups")  
+ ![Datenverlust zwischen Datenbanksicherungen](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Datenverlust zwischen Datenbanksicherungen")  
   
 ### <a name="example--includetsqlincludestsql-mdmd"></a>Beispiel ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  Im folgenden Beispiel wird veranschaulicht, wie eine vollständige Datenbanksicherung erstellt wird, indem WITH FORMAT zum Überschreiben aller vorhandenen Sicherungen und zum Erstellen eines neuen Mediensatzes verwendet wird.  
@@ -65,7 +65,7 @@ GO
 ##  <a name="DbBuRMf"></a> Datenbanksicherungen im vollständigen Wiederherstellungsmodell  
  Bei Datenbanken, für die die vollständige und massenprotokollierte Wiederherstellung verwendet wird, sind Datensicherungen erforderlich, aber nicht ausreichend. Transaktionsprotokollsicherungen sind ebenfalls erforderlich. In der folgenden Abbildung wird die einfachste Sicherungsstrategie veranschaulicht, die im vollständigen Wiederherstellungsmodell möglich ist.  
   
- ![Reihen vollständiger Datenbanksicherungen und Protokollsicherungen](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "Series of full database backups and log backups")  
+ ![Reihen vollständiger Datenbanksicherungen und Protokollsicherungen](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "Reihen vollständiger Datenbanksicherungen und Protokollsicherungen")  
   
  Informationen zum Verwenden von Transaktionsprotokollsicherungen finden Sie unter [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   

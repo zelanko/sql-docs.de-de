@@ -24,10 +24,10 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902811"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67902811"
 
   Erstellt ein Objekt, das Informationen über eine Datenbank oder ein Serverereignis an einen Service Broker-Dienst sendet. Ereignisbenachrichtigungen werden nur mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen erstellt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -89,7 +89,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  *event_group* fungiert außerdem als Makro, indem dieser Parameter beim Abschließen der CREATE EVENT NOTIFICATION-Anweisung die betroffenen Ereignistypen der **sys.events**-Katalogsicht hinzufügt.  
   
- **'** *broker_service* **'**  
+ **'** *Brokerdienst* **'**  
  Gibt den Zieldienst an, der die Ereignisinstanzdaten empfängt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] öffnet eine oder mehrere Konversationen für den Zieldienst der Ereignisbenachrichtigung. Der Dienst muss denselben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignismeldungstyp und Vertrag berücksichtigen, wie sie zum Senden der Nachricht verwendet werden.  
   
  Die Konversationen bleiben geöffnet, bis die Ereignisbenachrichtigung gelöscht wird. Bestimmte Fehler können dazu führen, dass Konversationen früher geschlossen werden. Das explizite Beenden einiger oder aller Konversationen kann verhindern, dass der Zieldienst weitere Nachrichten empfängt.  
@@ -178,7 +178,7 @@ SELECT * FROM sys.server_event_notifications
 WHERE name = 'log_ddl1';  
 ```  
   
-### <a name="d-getting-information-about-an-event-notification-that-is-database-scoped"></a>D. Abrufen von Informationen zu einer Ereignisbenachrichtigung mit der Datenbank als Bereich  
+### <a name="d-getting-information-about-an-event-notification-that-is-database-scoped"></a>D: Abrufen von Informationen zu einer Ereignisbenachrichtigung mit der Datenbank als Bereich  
  Im folgenden Beispiel wird die `sys.event_notifications`-Katalogsicht für Metadaten zur Ereignisbenachrichtigung `Notify_ALTER_T1` abgefragt, die mit dem Datenbankbereich erstellt wurde.  
   
 ```sql  

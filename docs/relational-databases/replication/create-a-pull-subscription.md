@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5dde30d826d5b6662a4f488aed7c3a1f21dd00b2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ab4bb319460e3666c638b40a63b5676b81048dd1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908425"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284797"
 ---
 # <a name="create-a-pull-subscription"></a>Create a Pull Subscription
 
@@ -65,7 +65,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 #### <a name="to-create-a-pull-subscription-from-the-publisher"></a>So erstellen Sie ein Pullabonnement auf dem Verleger  
   
-1.  Stellen Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.  
+1.  Stellen Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.  
   
 2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .  
   
@@ -131,7 +131,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
     -   **\@subscription_priority**: Legen Sie für das Abonnement eine Priorität fest (**0.00** bis **99.99**). Dies ist nur für Serverabonnements erforderlich.  
   
-         Weitere Informationen finden Sie unter [Erweiterte Konflikterkennung und -lösung bei der Mergereplikation](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+         Weitere Informationen finden Sie unter [Erweiterte Konflikterkennung und -lösung bei der Mergereplikation](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)angegeben wird.  
   
 3.  Führen Sie auf dem Abonnenten [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) aus. Geben Sie die folgenden Parameter an:  
   
@@ -285,7 +285,7 @@ GO
   
 5.  Falls die Abonnementdatenbank nicht vorhanden ist, erstellen Sie sie mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Database> -Klasse. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von Datenbanken](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPullSubscription> -Klasse.  
+6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPullSubscription>-Klasse.  
   
 7.  Legen Sie folgende Eigenschaften für das Abonnement fest:  
   
@@ -327,7 +327,7 @@ GO
   
 5.  Falls die Abonnementdatenbank nicht vorhanden ist, erstellen Sie sie mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Database> -Klasse. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von Datenbanken](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePullSubscription> -Klasse.  
+6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePullSubscription>-Klasse.  
   
 7.  Legen Sie folgende Eigenschaften für das Abonnement fest:  
   

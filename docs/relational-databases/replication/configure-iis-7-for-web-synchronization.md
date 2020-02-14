@@ -14,10 +14,10 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903214"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Konfigurieren von IIS 7 für die Websynchronisierung
@@ -34,7 +34,7 @@ ms.locfileid: "67903214"
   
  Zur Verwendung der Websynchronisierung müssen Sie IIS mithilfe der folgenden Schritte konfigurieren. Jeder Schritt wird in diesem Thema im Detail beschrieben.  
   
-1.  Installieren und konfigurieren Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung auf dem Computer mit IIS.  
+1.  Installieren und konfigurieren Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikationslistener auf dem Computer mit IIS.  
   
 2.  Konfigurieren Sie SSL (Secure Sockets Layer). SSL wird für die Kommunikation zwischen IIS und allen Abonnenten benötigt.  
   

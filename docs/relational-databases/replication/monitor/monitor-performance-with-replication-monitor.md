@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c20631f9a24ddf3950a14897bca8934f6794045
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: feabed59f397f2a12ca3697e5938e0540fcad228
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770592"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288132"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Überwachen der Leistung mit dem Replikationsmonitor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Der[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsmonitor ermöglicht es Ihnen, die Leistung bei Transaktions- und Mergereplikationen zu überwachen. Zu diesem Zweck können die folgenden Aktionen ausgeführt werden:  
+  Mit dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikationsmonitor können Sie die Leistung der Transaktionsreplikation und der Mergereplikation auf folgende Weisen überwachen:  
   
 -   Festlegen von Warnungen und Schwellenwerten  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68770592"
  Weitere Informationen finden Sie unter [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
 ## <a name="view-performance-measurements"></a>Anzeigen von Leistungsindikatoren  
- Der Replikationsmonitor zeigt bei Transaktions- und Mergereplikationen in den Spalten **Aktuelle Durchschnittsleistung** und **Die derzeit schlechteste Leistung** (für Veröffentlichungen) und in der **Leistung** -Spalte (für Abonnements) Leistungswerte an. Folgende Werte sind möglich:  
+ Der Replikationsmonitor zeigt bei Transaktions- und Mergereplikationen in den Spalten **Aktuelle Durchschnittsleistung** und **Die derzeit schlechteste Leistung** (für Veröffentlichungen) und in der **Leistung** -Spalte (für Abonnements) Leistungswerte an. Die Werte sind:  
   
 -   Hervorragend  
   

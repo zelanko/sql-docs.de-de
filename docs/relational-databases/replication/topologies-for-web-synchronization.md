@@ -14,17 +14,17 @@ ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6d793f394b9ffdf329eefbd73889d3233476372b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129810"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Sie können aus unterschiedlichen Websynchronisierungs-Replikationstopologien von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen. Hier einige der gängigen Konfigurationsmethoden für die Websynchronisierung:  
   
--   Einzelner Server  
+-   Einzelserver  
   
 -   Zwei Server  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68129810"
 > [!NOTE]  
 >  Diese Konfiguration wird nur für Intranetszenarien empfohlen. Bei anderen Szenarien sollten sich der IIS-Server und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger/-Verteiler auf separaten Computern befinden.  
   
- ![Websynchronisierung mit einem einzelnen Server](../../relational-databases/replication/media/web-sync02.gif "Web synchronization with a single server")  
+ ![Websynchronisierung mit einem einzelnen Server](../../relational-databases/replication/media/web-sync02.gif "Websynchronisierung mit einem einzelnen Server")  
   
 ## <a name="two-servers"></a>Zwei Server  
  Sie können IIS auf dem einen Server installieren und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger/-Verteiler auf dem anderen Server konfigurieren. Der Server, auf dem IIS ausgeführt wird, kann durch eine Firewall vom Internet isoliert werden. Die Abonnenten führen den Synchronisierungsvorgang aus, indem sie mit IIS auf dem Verleger eine Verbindung herstellen.  
@@ -55,7 +55,7 @@ ms.locfileid: "68129810"
 > [!NOTE]  
 >  Abonnenten können nur mit einem bestimmten Verleger synchronisiert werden. Beispielsweise kann ein Abonnent von Neuverleger A nicht mit Neuverleger B synchronisiert werden, wenn A nicht verfügbar ist.  
   
- ![Websynchronisierung mit Wiederveröffentlichung](../../relational-databases/replication/media/web-sync05.gif "Web synchronization with republishing")  
+ ![Websynchronisierung mit Wiederveröffentlichung](../../relational-databases/replication/media/web-sync05.gif "Websynchronisierung mit Wiederveröffentlichung")  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren der Websynchronisierung](../../relational-databases/replication/configure-web-synchronization.md)   

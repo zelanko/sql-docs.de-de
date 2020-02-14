@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ac60bbbed5a14c0ec891b2794620c1492cdb0fb5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d84df39c307177dc2e7fcbab9c9cdf177b580a73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768854"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286893"
 ---
 # <a name="add-publisher"></a>Verleger hinzufügen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Mithilfe des Dialogfelds **Verleger hinzufügen** können Sie dem linken Bereich des Replikationsmonitors einen oder mehrere Verleger hinzufügen. Nach dem Hinzufügen eines Verlegers werden durch das Auswählen des Verlegers im linken Bereich Informationen zu diesem Verleger im rechten Bereich anzeigt.  
   
-## <a name="options"></a>enthalten  
- **Hinzufügen**  
- Klicken Sie auf diese Option, um den Typ des hinzuzufügenden Verlegers auszuwählen. Dadurch wird das Dialogfeld **Verbindung mit Server herstellen** gestartet. Folgende Optionen sind verfügbar:  
+## <a name="options"></a>Tastatur  
+ **Add (Hinzufügen)**  
+ Klicken Sie auf diese Option, um den Typ des hinzuzufügenden Verlegers auszuwählen. Dadurch wird das Dialogfeld **Verbindung mit Server herstellen** gestartet. Die Optionen sind:  
   
 -   **SQL Server-Verleger hinzufügen...**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68768854"
   
 -   **Oracle-Verleger hinzufügen...**  
   
-     Stellen Sie mithilfe des Dialogfelds [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher using the **Connect to Server** dialog box.  
+     Stellen Sie mithilfe des Dialogfelds **Verbindung mit Server herstellen** eine Verbindung mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verteiler her, der dem Oracle-Verleger zugeordnet ist.  
   
 -   **Geben Sie einen Verteiler an, und fügen Sie seine Verleger hinzu…**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68768854"
 > [!NOTE]  
 >  Verteiler und Verleger werden oft auf derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt, aber der Verteiler kann auch auf einer anderen Instanz ausgeführt werden (diese Konfiguration wird als Remoteverteiler bezeichnet).  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie einen Verleger in dem Raster im oberen Bereich des Dialogfelds aus, und klicken Sie auf **Entfernen** , um den Verleger aus der Liste der hinzuzufügenden Verleger zu entfernen.  
   
 > [!NOTE]  

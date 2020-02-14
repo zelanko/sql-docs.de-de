@@ -16,10 +16,10 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846736"
 ---
 # <a name="replication-merge-agent"></a>Replikationsmerge-Agent
@@ -113,7 +113,7 @@ replmerg [-?]
  Druckt alle verfügbaren Parameter.  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ Der Name des Verlegers. Geben Sie den *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
  **-PublisherDB** _publisher_database_  
  Der Name der Verlegerdatenbank.  
@@ -134,7 +134,7 @@ replmerg [-?]
  Gibt an, ob der Agent fortlaufend versucht, replizierte Transaktionen abzurufen. Wenn dieses Argument angegeben ist, ruft der Agent replizierte Transaktionen in festgelegten Abrufintervallen aus der Quelle ab, selbst wenn keine ausstehenden Transaktionen vorhanden sind.  
   
  **-DestThreads** _number_of_destination_threads_  
- Gibt die Anzahl von Zielthreads an, die der Merge-Agent verwendet, um Änderungen auf das Ziel anzuwenden. Das Ziel ist während des Hochladens der Verleger und während des Herunterladens der Abonnent. Der Standardwert ist "4".  
+ Gibt die Anzahl von Zielthreads an, die der Merge-Agent verwendet, um Änderungen auf das Ziel anzuwenden. Das Ziel ist während des Hochladens der Verleger und während des Herunterladens der Abonnent. Der Standardwert ist 4.  
   
  **-DefinitionFile** _def_path_and_file_name_  
  Der Pfad der Agentdefinitionsdatei. Eine Agentdefinitionsdatei enthält Eingabeaufforderungsargumente für den Agent. Der Inhalt der Datei wird als ausführbare Datei analysiert. Verwenden Sie doppelte Anführungszeichen ("), um Argumentwerte anzugeben, die beliebige Zeichen enthalten.  
@@ -166,7 +166,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Die Ebene der SSL-Verschlüsselung (Secure Sockets Layer), die vom Merge-Agent beim Herstellen von Verbindungen verwendet wird.  
   
-|Wert von EncryptionLevel|und Beschreibung|  
+|Wert von EncryptionLevel|Beschreibung|  
 |---------------------------|-----------------|  
 |**0**|Gibt an, dass SSL nicht verwendet wird.|  
 |**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
@@ -183,7 +183,7 @@ replmerg [-?]
   
  Gibt den Typ des Datenaustauschs während der Synchronisierung an. Folgende Typen sind möglich:  
   
-|Wert von ExchangeType|und Beschreibung|  
+|Wert von ExchangeType|Beschreibung|  
 |------------------------|-----------------|  
 |**1**|Der Agent soll Datenänderungen vom Abonnenten auf den Verleger hochladen.|  
 |**2**|Der Agent soll Datenänderungen vom Verleger auf den Abonnenten herunterladen.|  
@@ -202,7 +202,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  Gibt die Konvergenzebene an, die der Merge-Agent verwenden soll. Die folgenden Werte sind möglich:  
   
-|Wert von ForceConvergenceLevel|und Beschreibung|  
+|Wert von ForceConvergenceLevel|Beschreibung|  
 |---------------------------------|-----------------|  
 |**0** (Standardwert)|Standard. Führt einen standardmäßigen Mergevorgang ohne zusätzliche Konvergenz aus.|  
 |**1**|Erzwingt die Konvergenz für alle Generierungen.|  
@@ -223,7 +223,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  Gibt den Umfang des Verlaufs an, der während eines Mergevorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
   
-|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|und Beschreibung|  
+|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Beschreibung|  
 |-------------------------------|-----------------|  
 |**0**|Protokolliert die abschließende Agent-Statusmeldung, abschließende Sitzungsdetails und ggf. aufgetretene Fehler.|  
 |**1**|Protokolliert zusätzlich zur abschließenden Agent-Statusmeldung, zu abschließenden Sitzungsdetails und ggf. aufgetretenen Fehlern inkrementelle Sitzungsdetails zu jedem Sitzungsstatus, u. a. den Prozentsatz der Fertigstellung.|  
@@ -242,13 +242,13 @@ replmerg [-?]
  **-InternetPassword** _internet_password_  
  Gibt das Kennwort an, das beim Herstellen einer Verbindung mit einer Authentifizierung erfordernden ISAPI-DLL-Datei für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsüberwachung verwendet wird.  
   
- **-InternetProxyLogin**  *Internet_proxy_login*  
+ **-InternetProxyLogin**  *internet_proxy_login*  
  Gibt den Anmeldenamen an, der beim Herstellen einer Verbindung mit einem Authentifizierung erfordernden Proxyserver (in *internet_proxy_server*definiert) verwendet wird.  
   
- **–InternetProxyPassword**  *Internet_proxy_password*  
+ **–InternetProxyPassword** *internet_proxy_password*  
  Gibt das Kennwort an, das beim Herstellen einer Verbindung mit einem Authentifizierung erfordernden Proxyserver (in *internet_proxy_server*definiert) verwendet wird.  
   
- **-InternetProxyServer**  *internet_proxy_server*  
+ **-InternetProxyServer** *internet_proxy_server*  
  Gibt den Proxyserver an, der für den Zugriff auf die in *internet_url*angegebene HTTP-Ressource zu verwenden ist.  
   
  **-InternetSecurityMode** [**0**|**1**]  
@@ -328,7 +328,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  Gibt an, ob eine Abonnentendatenbank vorhanden ist.  
   
-|Wert von SubscriberDBAddOption|und Beschreibung|  
+|Wert von SubscriberDBAddOption|Beschreibung|  
 |---------------------------------|-----------------|  
 |**0**|Die vorhandene Datenbank wird verwendet (Standard).|  
 |**1**|Eine neue, leere Abonnentendatenbank wird erstellt.|  
@@ -374,7 +374,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  Gibt an, ob am Ende der Mergesitzung eine Überprüfung ausgeführt werden soll, und gibt ggf. den Typ der Überprüfung an. Der Wert **3** wird empfohlen.  
   
-|Wert von Validate|und Beschreibung|  
+|Wert von Validate|Beschreibung|  
 |--------------------|-----------------|  
 |**0** (Standardwert)|Keine Überprüfung.|  
 |**1**|Nur Überprüfung der Zeilenanzahl.|  
@@ -387,7 +387,7 @@ replmerg [-?]
  **-ValidateInterval** _validate_interval_  
  Gibt an, wie häufig das Abonnement im kontinuierlichen Modus überprüft wird (in Minuten). Die Standardeinstellung beträgt **60** Minuten.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!IMPORTANT]  
 >  Wenn Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent so installiert haben, dass er unter einem lokalen Systemkonto und nicht unter einem Domänenbenutzerkonto (Standard) ausgeführt wird, kann der Dienst nur auf den lokalen Computer zugreifen. Wenn der Merge-Agent, der unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, so konfiguriert ist, dass beim Anmelden bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]der Windows-Authentifizierungsmodus verwendet wird, schlägt der Merge-Agent fehl. Die Standardeinstellung ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung.  

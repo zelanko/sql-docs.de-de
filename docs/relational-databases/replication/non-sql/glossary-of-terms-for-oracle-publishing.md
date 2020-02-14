@@ -13,10 +13,10 @@ ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ac643b3c0c095dee143c3feca878bd4072273bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901102"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Begriffe im Zusammenhang mit dem Veröffentlichen von Oracle-Daten
@@ -24,7 +24,7 @@ ms.locfileid: "67901102"
   Beim Konfigurieren und Verwalten der Veröffentlichung von Oracle-Daten sollten Sie mit den im Folgenden genannten Oracle-Begriffen vertraut sein. Eine vollständige Liste der Oracle-Begriffe finden Sie in der Oracle-Onlinedokumentation.  
   
 #### <a name="index-organized-tables-iot"></a>Indexorganisierte Tabelle (Index Organized Table, IOT)  
- Tabelle, deren Daten auf dem Datenträger physisch in der Indexreihenfolge sortiert sind. Entspricht damit einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Tabelle mit einem gruppierten Index. IOTs werden als Tabellen mit gruppiertem Index auf die Abonnenten repliziert.  
+ Dies ist eine Tabelle, deren Daten auf dem Datenträger physisch in der Indexreihenfolge sortiert sind. Sie entspricht damit einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle mit einem gruppierten Index. IOTs werden als Tabellen mit gruppiertem Index auf die Abonnenten repliziert.  
   
 #### <a name="instance"></a>Instanz  
  Einer Oracle-Datenbank wird eine Instanz zugeordnet. Die Instanz umfasst die Speicher- und Hintergrundprozesse, die die Datenbank unterstützen. Oracle-Instanzen sind immer mit einer einzelnen Datenbank verknüpft, während [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen viele Datenbanken enthalten können. Unter bestimmten Umständen können aber auch Oracle-Datenbanken mehrere Instanzen besitzen.  
@@ -59,6 +59,6 @@ ms.locfileid: "67901102"
  [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Auf dem Oracle-Verleger erstellte Objekte](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)   
  [Nicht-SQL Server-Verleger](../../../relational-databases/replication/non-sql/non-sql-server-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Veröffentlichungen mit Oracle (Übersicht)](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

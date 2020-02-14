@@ -16,10 +16,10 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba095c6aa132a816dc63377d0b04f559df6a6853
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297079"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Erweitern einer Fehlerausgabe mit der Skriptkomponente
@@ -49,7 +49,7 @@ ms.locfileid: "71297079"
   
 4.  Öffnen Sie den **Transformations-Editor für Skripterstellung**, und wählen Sie auf der Seite **Skript** für die **ScriptLanguage**-Eigenschaft die Skriptsprache aus.  
   
-5.  Klicken Sie auf **Skript bearbeiten**, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA) zu öffnen und den unten dargestellten Beispielcode einzufügen.  
+5.  Klicken Sie auf **Skript bearbeiten**, um die IDE der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Tools for Applications (VSTA) zu öffnen und den unten dargestellten Beispielcode einzufügen.  
   
 6.  Schließen Sie VSTA.  
   

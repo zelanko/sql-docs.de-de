@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846514"
 ---
 # <a name="reinitialize-a-subscription"></a>Erneutes Initialisieren eines Abonnements
@@ -33,7 +33,7 @@ ms.locfileid: "70846514"
 ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Das erneute Initialisieren eines Abonnements ist ein zweistufiger Prozess:  
   
-1.  Zunächst müssen die Abonnements für eine Veröffentlichung, die erneut initialisiert werden sollen, *gekennzeichnet* werden. Das Kennzeichnen der Abonnements für die erneute Initialisierung erfolgt im Dialogfeld **Abonnements erneut initialisieren** , das über die Ordner **Lokale Veröffentlichungen** und **Lokale Abonnements** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar ist. Abonnements können darüber hinaus auch auf der Registerkarte **Alle Abonnements** und über den Veröffentlichungsknoten im Replikationsmonitor als erneut zu initialisieren gekennzeichnet werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md). Beim Kennzeichnen eines Abonnements für die erneute Initialisierung können Sie zwischen den folgenden Optionen auswählen:  
+1.  Zunächst müssen die Abonnements für eine Veröffentlichung, die erneut initialisiert werden sollen, *gekennzeichnet* werden. Das Kennzeichnen der Abonnements für die erneute Initialisierung erfolgt im Dialogfeld **Abonnements erneut initialisieren**, das über die Ordner **Lokale Veröffentlichungen** und **Lokale Abonnements** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbar ist. Abonnements können darüber hinaus auch auf der Registerkarte **Alle Abonnements** und über den Veröffentlichungsknoten im Replikationsmonitor als erneut zu initialisieren gekennzeichnet werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md). Beim Kennzeichnen eines Abonnements für die erneute Initialisierung können Sie zwischen den folgenden Optionen auswählen:  
   
      **Aktuelle Momentaufnahme verwenden**  
      Wählen Sie diese Option aus, wenn die aktuelle Momentaufnahme beim nächsten Ausführen des Verteilungs- oder Merge-Agents auf den Abonnenten angewendet werden soll. Wenn keine gültige Momentaufnahme verfügbar ist, kann diese Option nicht ausgewählt werden.  
@@ -242,6 +242,6 @@ ms.locfileid: "70846514"
 ## <a name="see-also"></a>Weitere Informationen  
  [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Bewährte Methoden für die Replikationssicherheit](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

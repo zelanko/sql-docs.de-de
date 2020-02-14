@@ -20,10 +20,10 @@ ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2830c7ae4166ee0b71b1ddfb9de953c57be2452d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982685"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73982685"
 
 Erstellt einen Ressourcenpool für die Ressourcenkontrolle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ein Ressourcenpool stellt eine Teilmenge der physischen Ressourcen (Arbeitsspeicher, CPUs und E/A) einer Instanz der Datenbank-Engine dar. Mit der Ressourcenkontrolle kann ein Datenbankadministrator Serverressourcen auf Ressourcenpools verteilen, bis zu maximal 64 Pools. Die Ressourcenkontrolle ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
 ```  
@@ -111,7 +111,7 @@ Gibt die maximalen E/A-Vorgänge pro Sekunde (IOPS) pro Datenträgervolume an, d
   
 Wenn `MAX_IOPS_PER_VOLUME` für einen Pool auf den Wert 0 festgelegt ist, wird der Pool überhaupt nicht kontrolliert und kann alle IOPS im System annehmen, selbst wenn für andere Pools MIN_IOPS_PER_VOLUME festgelegt ist. Für diesen Fall wird empfohlen, dass Sie den `MAX_IOPS_PER_VOLUME`-Wert für diesen Pool auf eine höhere Zahl festlegen (z. B. auf den Maximalwert 2^31-1), wenn E/A-Vorgänge für diesen Pool kontrolliert werden sollen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `MIN_IOPS_PER_VOLUME` und `MAX_IOPS_PER_VOLUME` geben das Minimum und das Maximum für Lese- und Schreibvorgänge pro Sekunde an. Die Lese- und Schreibvorgänge können eine beliebige Größe haben und geben daher keinen Aufschluss über den minimalen bzw. maximalen Durchsatz.  
   
 Die Werte für `MAX_CPU_PERCENT` und `MAX_MEMORY_PERCENT` müssen größer als oder gleich den Werten für `MIN_CPU_PERCENT` bzw. `MIN_MEMORY_PERCENT` sein.  

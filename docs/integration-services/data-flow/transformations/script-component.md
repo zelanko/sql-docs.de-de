@@ -23,10 +23,10 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297879"
 ---
 # <a name="script-component"></a>Skriptkomponente
@@ -65,7 +65,7 @@ ms.locfileid: "71297879"
  Im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer weist die Skriptkomponente zwei Modi auf: Metadatenentwurfsmodus und Codeentwurfsmodus. Im Metadatenentwurfsmodus können Sie Eingaben und Ausgaben der Skriptkomponente hinzufügen und ändern, aber Sie können keinen Code erstellen. Nachdem Sie alle Eingaben und Ausgaben konfiguriert haben, wechseln Sie zum Codeentwurfsmodus, um das Skript zu erstellen. Die Skriptkomponente generiert von den Metadaten der Eingaben und Ausgaben automatisch Basiscode. Wenn Sie die Metadaten ändern, nachdem die Skriptkomponente den Basiscode generiert hat, kann es sein, dass der Code nicht mehr kompiliert wird, weil der aktualisierte Basiscode mit Ihrem Code inkompatibel ist.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>Erstellen des von der Komponente verwendeten Skripts  
- Die Skriptkomponente verwendet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] -Tools für Anwendungen (VSTA) als Umgebung zum Erstellen der Skripts. Sie greifen auf VSTA im **Transformations-Editor für Skripterstellung**zu. Weitere Informationen finden Sie unter [Transformations-Editor für Skripterstellung &#40;Seite Skript&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Die Skriptkomponente verwendet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) als Umgebung zum Erstellen der Skripts. Sie greifen auf VSTA im **Transformations-Editor für Skripterstellung**zu. Weitere Informationen finden Sie unter [Transformations-Editor für Skripterstellung &#40;Seite Skript&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
   
  Die Skriptkomponente stellt ein VSTA-Projekt bereit, das eine automatisch generierte Klasse namens ScriptMain generiert, die die Komponentenmetadaten darstellt. Wenn z. B. die Skriptkomponente als Transformation mit drei Ausgaben verwendet wird, enthält ScriptMain eine Methode für jede Ausgabe. ScriptMain ist der Einstiegspunkt in das Skript.  
   
@@ -138,10 +138,10 @@ ms.locfileid: "71297879"
  **Beschreibung**  
  Geben Sie eine Beschreibung für die Verbindung ein.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügen Sie der Liste **Verbindungs-Manager** eine weitere Verbindung hinzu.  
   
- **Entfernen**  
+ **Remove**  
  Entfernen Sie die ausgewählte Verbindung aus der Liste **Verbindungs-Manager** .  
   
 ## <a name="script-transformation-editor-input-columns-page"></a>Transformations-Editor für Skripterstellung (Seite Eingabespalten)
@@ -205,7 +205,7 @@ ms.locfileid: "71297879"
  **Eigenschaften**  
  Zeigt die Skripttransformationseigenschaften an und ermöglicht Änderungen. Viele dieser Eigenschaften sind schreibgeschützt. Die folgenden Eigenschaften können Sie ändern:  
   
-|value|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Beschreibung**|Beschreibt den Zweck der Skripttransformation.|  
 |**LocaleID**|Gibt das Gebietsschema für die Bereitstellung regionsspezifischer Informationen für das Bestellen sowie für Datums- und Zeitformate an.|  
@@ -217,7 +217,7 @@ ms.locfileid: "71297879"
 |**UserComponentTypeName**|Gibt die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> -Klasse und die **Microsoft.SqlServer.TxScript** -Assembly an, die die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Infrastruktur unterstützen.|  
   
  **Skript bearbeiten**  
- Verwenden Sie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] -Tools für Anwendungen (VSTA), um ein Skript zu erstellen oder zu ändern.  
+ Verwenden Sie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA), um ein Skript zu erstellen oder zu ändern.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

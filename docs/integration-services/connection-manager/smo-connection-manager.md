@@ -17,10 +17,10 @@ ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 87400e2216b51bfab0132f369e452f27447b0572
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294399"
 ---
 # <a name="smo-connection-manager"></a>SMO-Verbindungs-Manager
@@ -50,7 +50,7 @@ ms.locfileid: "71294399"
   
  Weitere Informationen zum SMO-Verbindungs-Manager finden Sie unter [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Servername**  
  Geben Sie den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ein, oder wählen Sie den Servernamen aus der Liste aus.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71294399"
  **SQL Server-Authentifizierung verwenden**  
  Verwendet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, um eine Verbindung mit der ausgewählten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz herzustellen.  
   
- **User name**  
+ **Benutzername**  
  Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung ausgewählt haben, geben Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzernamen ein.  
   
  **Kennwort**  

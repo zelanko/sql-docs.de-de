@@ -16,10 +16,10 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 96110e35227fbca970fd3bc92bcee314b5ebae6c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293705"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Erstellen von Paketen in SQL Server-Datentools
@@ -31,7 +31,7 @@ ms.locfileid: "71293705"
   
 -   Verwenden der Paketvorlage in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
--   Verwenden Sie eine benutzerdefinierte Vorlage.  
+-   Verwenden einer benutzerdefinierten Vorlage  
   
      Sie müssen nur die als Vorlage zu verwendenden benutzerdefinierten Pakete zum Erstellen neuer Pakete in den DataTransformationItems-Ordner kopieren. Dieser Ordner befindet sich standardmäßig unter C:\Programme\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\ProjectItems\DataTransformationProject.  
   
@@ -73,7 +73,7 @@ Informationen zum Installieren von SQL Server Data Tools (SSDT) finden Sie unter
   
 2.  Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften**auf die Eigenschaft **TargetServerVersion** , und wählen Sie dann SQL Server 2016, 2014 oder 2012 aus.  
   
-     ![TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
+     ![TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“](../integration-services/media/targetserverversion2.png "TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“")  
   
  Sie können Pakete für SQL Server 2016, SQL Server 2014 oder SQL Server 2012 erstellen, verwalten und ausführen.  
   

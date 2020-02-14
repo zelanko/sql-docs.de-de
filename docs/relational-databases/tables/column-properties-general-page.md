@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 732c1c759eec875af0bd65b763b21d912ffe2de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085763"
 ---
 # <a name="column-properties-general-page"></a>Spalteneigenschaften (Registerkarte Allgemein)
@@ -27,7 +27,7 @@ ms.locfileid: "68085763"
   
  Die Informationen auf dieser Seite sind schreibgeschützt. Zum Ändern der Spalte schließen Sie das Dialogfeld **Spalteneigenschaften** , erweitern Sie im Objekt-Explorer die Tabelle und die Spalten, klicken Sie mit der rechten Maustaste auf die Spalte, und klicken Sie dann auf **Entwurf**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Name**  
  Name der Spalte.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68085763"
  Gibt den anfänglichen Zeilenwert für eine Identitätsspalte an.  
   
  **ID-Schrittweite**  
- Die Eigenschaft **ID-Inkrement** gibt den Wert an, den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Generieren eines Identitätswerts für eine eingefügte Zeile zum größten vorhandenen Zeilenidentitätswert hinzufügt.  
+ Die Eigenschaft **ID-Schrittweite** gibt den Wert an, den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum größten vorhandenen Zeilenidentitätswert hinzufügt, während ein Identitätswert für eine eingefügte Zeile generiert wird.  
   
  **Standardbindungen**  
  Der an die Spalte gebundene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standard. Ohne gebundenen Standard ist diese Spalte leer.  
@@ -64,7 +64,7 @@ ms.locfileid: "68085763"
  **Standardschema**  
  Identifiziert das Datenbankschema, das den an die Spalte, auf die verwiesen wird, gebundenen Standard besitzt. Ohne gebundenen Standard ist diese Spalte leer.  
   
- **Rule**  
+ **Regel**  
  Identifiziert die Datenintegritätseinschränkung, die an die Spalte gebunden ist. Ohne gebundene Regel ist diese Spalte leer.  
   
  **Regelschema**  

@@ -18,23 +18,23 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809950"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  ![Grafik zur Sicherheit auf Zeilenebene](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
+  ![Grafik zur Sicherheit auf Zeilenebene](../../relational-databases/security/media/row-level-security-graphic.png "Grafik zur Sicherheit auf Zeilenebene")  
   
 Mithilfe der Sicherheit auf Zeilenebene können Sie den Zugriff auf Zeilen in einer Datenbanktabelle anhand der Gruppenmitgliedschaft oder des Ausführungskontext steuern.
   
 Eine zeilenbasierte Sicherheit vereinfacht den Entwurf und die Sicherheitscodierung in Ihrer Anwendung. Mithilfe der Sicherheit auf Zeilenebene (Row-Level Security, RLS) können Sie Einschränkungen in den Datenzeilenzugriff implementieren. Beispielsweise können Sie sicherstellen, dass Mitarbeiter nur auf Datenzeilen zugreifen können, die für ihre Abteilung relevant sind. Ein weiteres Beispiel: Sie können den Zugriff von Kunden auf Daten beschränken, die für ihr Unternehmen von Bedeutung sind.  
   
-Die Datenbeschränkungszugriffslogik befindet sich auf der Datenbankebene, statt fern der Daten auf einer anderen Anwendungsebene. Das Datenbanksystem wendet die Zugriffsbeschränkungen bei jedem Zugriffsversuch auf Daten aus einer beliebigen Ebene an. Dadurch wird Ihr Sicherheitssystem zuverlässiger und robuster, indem die Oberfläche Ihres Sicherheitssystems verringert wird.  
+Die Datenbeschränkungszugriffslogik befindet sich auf der Datenbankebene, statt fern der Daten auf einer anderen Anwendungsebene. Das Datenbanksystem wendet die Zugriffsbeschränkungen bei jedem Zugriffsversuch auf Daten aus einer beliebigen Ebene an. Dadurch bietet Ihr Sicherheitssystem eine geringere Angriffsfläche und ist zuverlässiger und robuster.  
   
 Implementieren Sie RLS, indem Sie die [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung und Prädikate verwenden, die als [Inline-Tabellenwertfunktionen](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md) erstellt werden.  
 
@@ -101,7 +101,7 @@ RLS unterstützt zwei Arten von Sicherheitsprädikaten.
   
  RLS-Filterprädikate sind funktional äquivalent zum Anhängen einer **WHERE** -Klausel. Bei dem Prädikat kann es sich um komplexe Geschäftsabläufe handeln oder die Klausel kann so einfach sein wie das `WHERE TenantId = 42`.  
   
- Formaler ausgedrückt führt RLS eine prädikatbasierte Zugriffssteuerung ein. Sie ermöglicht eine flexible, zentrale und prädikatbasierte Auswertung. Das Prädikat kann auf Metadaten oder beliebigen anderen Kriterien basieren, die der Administrator für geeignet hält. Das Prädikat wird als Kriterium verwendet, um zu bestimmen, ob der Benutzer über die entsprechenden Zugriffsberechtigungen für die Daten basierend auf den Benutzerattributen verfügt. Die bezeichnungsbasierte Zugriffssteuerung kann mithilfe der prädikatbasierten Zugriffssteuerung implementiert werden.  
+ Formaler ausgedrückt führt RLS eine prädikatbasierte Zugriffssteuerung ein. Sie ermöglicht eine flexible, zentrale und prädikatbasierte Auswertung. Das Prädikat kann auf Metadaten oder beliebigen anderen Kriterien basieren, die der Administrator für geeignet hält. Das Prädikat wird als Kriterium verwendet, um zu bestimmen, ob der Benutzer über die entsprechenden Zugriffsberechtigungen für die Daten basierend auf den Benutzerattributen verfügt. Mithilfe der prädikatbasierten Zugriffssteuerung kann eine bezeichnerbasierte Zugriffssteuerung implementiert werden.  
   
 ## <a name="Permissions"></a> Berechtigungen
 
@@ -133,7 +133,7 @@ RLS unterstützt zwei Arten von Sicherheitsprädikaten.
   
  Vermeiden Sie Prädikatlogik, die von sitzungsspezifischen [SET-Optionen](../../t-sql/statements/set-statements-transact-sql.md) abhängig: Wenngleich ihre Verwendung in der Praxis eher unwahrscheinlich ist, können Prädikatfunktionen, deren Logik von bestimmten sitzungsspezifischen **SET**-Optionen abhängt, Informationen preisgeben, wenn Benutzer in der Lage sind, beliebige Abfragen auszuführen. Beispiel: Eine Prädikatfunktion, die eine Zeichenfolge implizit in **datetime** konvertiert, kann unterschiedliche Zeilen basierend auf der Option **SET DATEFORMAT** für die aktuelle Sitzung filtern. Im Allgemeinen sollten Prädikatfunktionen die folgenden Regeln einhalten:  
   
-- Prädikatfunktionen dürfen Zeichenfolgen nicht implizit in **date**, **smalldatetime**, **datetime**, **datetime2** oder **datetimeoffset** bzw. umgekehrt konvertieren, da diese Konvertierungen von den Optionen [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) und [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) beeinflusst werden. Verwenden Sie stattdessen die **CONVERT**-Funktion, und geben Sie den „style“-Parameter explizit an.  
+- Prädikatfunktionen dürfen Zeichenfolgen nicht implizit in **date**, **smalldatetime**, **datetime**, **datetime2** oder **datetimeoffset** bzw. umgekehrt konvertieren, da diese Konvertierungen von den Optionen [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) und [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) beeinflusst werden. Verwenden Sie stattdessen die **CONVERT** -Funktion, und geben Sie den „style“-Parameter explizit an.  
   
 - Prädikatfunktionen dürfen nicht vom Wert des ersten Tages der Woche abhängig sein, da dieser Wert von der Option [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md) beeinflusst wird.  
   
@@ -149,7 +149,7 @@ Es ist wichtig zu beachten, dass ein schädlicher Sicherheitsrichtlinien-Manager
   
 ### <a name="carefully-crafted-queries"></a>Sorgfältig erstellte Abfragen
 
-Die Verwendung sorgfältig erstellter Abfragen kann Informationslecks verursachen. Beispiel: `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` würde einen schädlichen Benutzer wissen lassen, dass das Gehalt von John Doe 100.000 USD beträgt. Auch wenn ein Sicherheitsprädikat eingerichtet ist, um zu verhindern, dass ein schädlicher Benutzer die Gehälter anderer Personen direkt abfragen kann, kann der Benutzer bestimmen, wann die Abfrage eine Division-durch-Null-Ausnahme zurückgibt.  
+Es ist möglich, die Offenlegung von Informationen durch die Verwendung von sorgfältig erstellten Abfragen zu verursachen. Beispiel: `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` würde einen schädlichen Benutzer wissen lassen, dass das Gehalt von John Doe 100.000 USD beträgt. Auch wenn ein Sicherheitsprädikat eingerichtet ist, um zu verhindern, dass ein schädlicher Benutzer die Gehälter anderer Personen direkt abfragen kann, kann der Benutzer bestimmen, wann die Abfrage eine Division-durch-Null-Ausnahme zurückgibt.  
 
 ## <a name="Limitations"></a> Featureübergreifende Kompatibilität
 

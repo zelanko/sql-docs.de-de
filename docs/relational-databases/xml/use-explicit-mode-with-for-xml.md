@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001797"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Verwenden des EXPLICIT-Modus mit FOR XML
@@ -42,7 +42,7 @@ ms.locfileid: "68001797"
   
  Zum besseren Verständnis dazu, wie die von der Abfrage generierte Universaltabelle zu einem XML-Ergebnis verarbeitet wird, nehmen Sie einmal an, Sie haben eine Abfrage geschrieben, die die folgende Universaltabelle erstellt:  
   
- ![Beispieluniversaltabelle](../../relational-databases/xml/media/xmlutable.gif "Sample universal table")  
+ ![Beispieluniversaltabelle](../../relational-databases/xml/media/xmlutable.gif "Beispieluniversaltabelle")  
   
  Beachten Sie hinsichtlich dieser Universaltabelle Folgendes:  
   
@@ -52,11 +52,11 @@ ms.locfileid: "68001797"
   
 -   Beim Generieren der XML-Ausgabe aus dieser Universaltabelle werden die Daten dieser Tabelle vertikal in Spaltengruppen partitioniert. Die Gruppierung wird aufgrund des **Tag** -Wertes und der Spaltennamen bestimmt. Beim Konstruieren der XML-Ausgabe wählt die Verarbeitungslogik jeweils eine Spaltengruppe für jede Zeile aus und konstruiert so ein Element. In diesem Beispiel gilt Folgendes:  
   
-    -   Für den Wert „1“ in der ersten Zeile der **Tag**-Spalte bilden die Spalten, deren Namen dieselbe Tagnummer enthalten, also **Customer!1!cid** und **Customer!1!name**, eine Gruppe. Diese Spalten werden nun beim Verarbeiten der Zeile verwendet. Beachten Sie auch die Form des generierten Elements: <`Customer id=... name=...`>. Das Format der Spaltennamen wird weiter unten in diesem Thema beschrieben.  
+    -   Für den Wert „1“ in der ersten Zeile der **Tag** -Spalte bilden die Spalten, deren Namen dieselbe Tagnummer enthalten, also **Customer!1!cid** und **Customer!1!name**, eine Gruppe. Diese Spalten werden nun beim Verarbeiten der Zeile verwendet. Beachten Sie auch die Form des generierten Elements: <`Customer id=... name=...`>. Das Format der Spaltennamen wird weiter unten in diesem Thema beschrieben.  
   
     -   Für die Zeilen mit dem Wert „2“ in der **Tag**-Spalte bilden die Spalten **Order!2!id** und **Order!2!date** eine Gruppe, die dann zum Konstruieren der Elemente verwendet wird, <`Order id=... date=... /`>.  
   
-    -   Für die Zeilen mit dem Wert „3“ in der **Tag**-Spalte bilden die Spalten **OrderDetail!3!id!id** und **OrderDetail!3!pid!idref** ebenfalls eine Gruppe. Jede dieser Zeilen generiert ein Element, <`OrderDetail id=... pid=...`>, aus diesen Spalten.  
+    -   Für die Zeilen mit dem Wert „3“ in der **Tag** -Spalte bilden die Spalten **OrderDetail!3!id!id** und **OrderDetail!3!pid!idref** ebenfalls eine Gruppe. Jede dieser Zeilen generiert ein Element, <`OrderDetail id=... pid=...`>, aus diesen Spalten.  
   
 -   Beachten Sie, dass die Zeilen beim Generieren der XML-Hierarchie der Reihe nach verarbeitet werden. Die XML-Hierarchie wird wie folgt bestimmt:  
   

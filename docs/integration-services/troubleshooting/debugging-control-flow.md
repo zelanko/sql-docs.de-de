@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295130"
 ---
 # <a name="debugging-control-flow"></a>Debuggen der Ablaufsteuerung
@@ -31,7 +31,7 @@ ms.locfileid: "71295130"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features und tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket behandeln können.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten Features und Tools, die Sie für die Behandlung von Problemen mit der Ablaufsteuerung in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket verwenden können.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt Breakpoints für Container und Tasks.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "71295130"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt zehn Unterbrechungsbedingungen bereit, die Sie für alle Tasks und Container aktivieren können. Im Dialogfeld **Breakpoints festlegen** können Sie Breakpoints für die folgenden Bedingungen aktivieren:  
   
-|Unterbrechungsbedingung|und Beschreibung|  
+|Unterbrechungsbedingung|Beschreibung|  
 |---------------------|-----------------|  
 |Wenn der Task oder Container das **OnPreExecute** -Ereignis empfängt.|Wird aufgerufen, unmittelbar bevor ein Task ausgeführt wird. Dieses Ereignis wird durch einen Task oder Container ausgelöst, unmittelbar bevor er ausgeführt wird.|  
 |Wenn der Task oder Container das **OnPostExecute** -Ereignis empfängt.|Wird aufgerufen, unmittelbar nachdem die Ausführungslogik des Tasks beendet wurde. Dieses Ereignis wird durch einen Task oder Container ausgelöst, unmittelbar nachdem er ausgeführt wurde.|  
@@ -71,7 +71,7 @@ ms.locfileid: "71295130"
   
  In der folgenden Tabelle sind die Typen der Trefferanzahl aufgeführt.  
   
-|Typ der Trefferanzahl|und Beschreibung|  
+|Typ der Trefferanzahl|Beschreibung|  
 |--------------------|-----------------|  
 |Always|Die Ausführung wird immer angehalten, wenn der Breakpoint erreicht wird.|  
 |Trefferanzahl ist gleich|Die Ausführung wird angehalten, wenn die Anzahl des Auftretens des Breakpoints der Trefferanzahl entspricht.|  
@@ -89,11 +89,11 @@ ms.locfileid: "71295130"
   
  In der folgenden Tabelle werden die Farben beschrieben, die zum Kennzeichnen des Ausführungsstatus verwendet werden.  
   
-|Farbe|Ausführungsstatus|  
+|Color|Ausführungsstatus|  
 |-----------|----------------------|  
 |Grau|Wartet auf die Ausführung|  
 |Gelb|Wird ausgeführt|  
-|Green|Wurde erfolgreich ausgeführt|  
+|Grün|Wurde erfolgreich ausgeführt|  
 |Hervorgehoben|Wurde mit Fehlern ausgeführt|  
   
  Auf der Registerkarte **Status** werden Tasks und Container in der Ausführungsreihenfolge aufgeführt. Diese Registerkarte enthält außerdem die Start- und Beendigungszeiten, Warnungen und Fehlermeldungen. Wenn die Ausführung des Pakets beendet wurde, sind die Statusinformationen weiterhin auf der Registerkarte **Ausführungsergebnisse** verfügbar.  
@@ -103,7 +103,7 @@ ms.locfileid: "71295130"
   
  Im folgenden Diagramm wird die Registerkarte **Status** angezeigt.  
   
- ![Registerkarte „Status“ des SSIS-Designers](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "Progress tab of SSIS Designer")  
+ ![Fortschrittsregisterkarte des SSIS-Designers](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "Fortschrittsregisterkarte des SSIS-Designers")  
   
 ## <a name="debug-windows"></a>Debugfenster  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] enthält viele Fenster, in denen Sie Breakpoints verwenden und Pakete, die Breakpoints enthalten, debuggen können. Um weitere Informationen zu den einzelnen Fenstern zu erhalten, öffnen Sie das entsprechende Fenster, und drücken Sie F1, um die zugehörige Hilfe anzuzeigen.  
@@ -112,18 +112,18 @@ ms.locfileid: "71295130"
   
  In der folgenden Tabelle sind diese Fenster beschrieben.  
   
-|Fenster|und Beschreibung|  
+|Fenster|Beschreibung|  
 |------------|-----------------|  
 |Breakpoints|Listet die Breakpoints in einem Paket auf und stellt Optionen zum Aktivieren und Löschen von Breakpoints bereit.|  
-|Ausgabe|Zeigt Statusmeldungen für Funktionen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]an.|  
-|Direkt|Wird zum Debuggen und Auswerten von Ausdrücken und zum Drucken von Variablenwerten verwendet.|  
+|Output|Zeigt Statusmeldungen für Funktionen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]an.|  
+|Unmittelbar|Wird zum Debuggen und Auswerten von Ausdrücken und zum Drucken von Variablenwerten verwendet.|  
 
 ## <a name="debug"></a> Debuggen eines Pakets durch Festlegen von Breakpoints auf einem Task oder Container
   In diesem Verfahren wird beschrieben, wie in einem Paket, Task, For-Schleifencontainer, Foreach-Schleifencontainer oder einem Sequenzcontainer Breakpoints festgelegt werden.  
   
 ### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>So legen Sie Breakpoints in einem Paket, einem Task oder einem Container fest  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie auf das Paket, in dem Sie Breakpoints festlegen möchten.  
   
@@ -144,17 +144,17 @@ ms.locfileid: "71295130"
 ## <a name="set-breakpoints"></a>Breakpoints festlegen
   Verwenden Sie das Dialogfeld **Breakpoints festlegen** , um die Ereignisse anzugeben, für die Breakpoints aktiviert werden sollen, sowie um das Verhalten der Breakpoints zu steuern.  
   
-### <a name="options"></a>enthalten  
- **Enabled**  
+### <a name="options"></a>Tastatur  
+ **Aktiviert**  
  Wählen Sie diese Option aus, um einen Breakpoint für ein Ergebnis zu aktivieren.  
   
- **Unterbrechungsbedingung**  
+ **Break Condition**  
  Zeigen Sie eine Liste von verfügbaren Ereignissen an, für die Breakpoints festgelegt werden können.  
   
- **Typ der Trefferanzahl**  
+ **Hit Count Type**  
  Geben Sie an, wann der Breakpoint wirksam werden soll.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Always**|Die Ausführung wird immer angehalten, wenn der Breakpoint erreicht wird.|  
 |**Trefferanzahl ist gleich**|Die Ausführung wird angehalten, wenn die Anzahl des Auftretens des Breakpoints der Trefferanzahl entspricht.|  

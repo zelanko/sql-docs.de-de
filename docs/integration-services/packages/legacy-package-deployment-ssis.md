@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295815"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Legacy-Paketbereitstellung (SSIS)
@@ -110,13 +110,13 @@ ms.locfileid: "71295815"
 ### <a name="package-configuration-types"></a>Paketkonfigurationstypen  
  Die folgende Tabelle beschreibt die verschiedenen Paketkonfigurationstypen.  
   
-|Typ|und Beschreibung|  
+|type|Beschreibung|  
 |----------|-----------------|  
 |XML-Konfigurationsdatei|Eine XML-Datei enthält die Konfigurationen. Die XML-Datei kann mehrere Konfigurationen enthalten.|  
 |Umgebungsvariable|Eine Umgebungsvariable enthält die Konfiguration.|  
 |Registrierungseintrag|Ein Registrierungseintrag enthält die Konfiguration.|  
 |Variable für das übergeordnete Paket|Eine Variable im Paket enthält die Konfiguration. Dieser Konfigurationstyp wird normalerweise zum Aktualisieren von Eigenschaften in untergeordneten Paketen verwendet.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table|Eine Tabelle in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank enthält die Konfiguration. Die Tabelle kann mehrere Konfigurationen enthalten.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle|Eine Tabelle in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank enthält die Konfiguration. Die Tabelle kann mehrere Konfigurationen enthalten.|  
   
 #### <a name="xml-configuration-files"></a>XML-Konfigurationsdateien  
  Wenn Sie den Konfigurationstyp **XML-Konfigurationsdatei** auswählen, können Sie eine neue Konfigurationsdatei erstellen, eine vorhandene Datei erneut verwenden und neue Konfigurationen hinzufügen oder eine vorhandene Datei erneut verwenden und dabei den bisherigen Dateiinhalt überschreiben.  
@@ -215,11 +215,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Nachdem der Assistent beendet ist, wird die neue Konfiguration der Konfigurationsliste im Dialogfeld **Paketkonfigurationsplaner** hinzugefügt.  
   
-> **HINWEIS:** Auf der letzten Seite des Paketkonfigurations-Assistenten, der Seite Assistenten abschließen, werden die Zieleigenschaften der Konfiguration aufgelistet. Wenn Sie beim Ausführen von Paketen mithilfe des Eingabeaufforderungs-Hilfsprogramms **dtexec** die Eigenschaften aktualisieren möchten, können Sie die Zeichenfolgen, die die Eigenschaftspfade darstellen, generieren. Führen Sie hierzu den Paketkonfigurations-Assistenten aus, kopieren Sie dann die Zeichenfolgen, und fügen Sie diese im Eingabeaufforderungsfenster für die Verwendung mit der festgelegten Option von **dtexec** ein.  
+> **HINWEIS:** Auf der letzten Seite des Paketkonfigurations-Assistenten, der Seite Assistenten abschließen, werden die Zieleigenschaften der Konfiguration aufgelistet. Wenn Sie beim Ausführen von Paketen mithilfe des Eingabeaufforderungs-Hilfsprogramms **dtexec** die Eigenschaften aktualisieren möchten, können Sie die Zeichenfolgen, die die Eigenschaftspfade darstellen, generieren. Führen Sie hierzu den Paketkonfigurations-Assistenten aus, kopieren Sie dann die Zeichenfolgen, und fügen Sie diese im Eingabeaufforderungsfenster für die Verwendung mit der festgelegten Option von **dtexec**ein.  
   
  In der folgenden Tabelle werden die Spalten der Konfigurationsliste im Dialogfeld **Paketkonfigurationsplaner** beschrieben.  
   
-|Spalte|und Beschreibung|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |**Konfigurationsname**|De Name der Konfiguration.|  
 |**Konfigurationstyp**|Der Konfigurationstyp.|  
@@ -229,7 +229,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ### <a name="to-create-a-package-configuration"></a>So erstellen Sie eine Paketkonfiguration  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -264,7 +264,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Paketkonfigurationen aktualisieren die Werte der Eigenschaften von Paketobjekten zur Laufzeit. Beim Laden eines Pakets werden die beim Entwickeln des Pakets festgelegten Werte durch die Werte der Konfigurationen ersetzt. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt unterschiedliche Konfigurationstypen. Beispielsweise können Sie eine XML-Datei mit mehreren möglichen Konfigurationen oder eine Umgebungsvariable mit einer einzigen enthaltenen Konfiguration verwenden. Weitere Informationen finden Sie unter [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Paketkonfigurationen aktivieren**  
  Wählen Sie diese Option aus, um mit dem Paket Konfigurationen zu verwenden.  
   
@@ -283,13 +283,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Zieleigenschaft**  
  Zeigt den Namen der durch die Konfiguration geänderten Eigenschaft an. Diese Spalte ist leer, wenn der Konfigurationstyp mehrere Konfigurationen unterstützt.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügt mithilfe des Paketkonfigurationsassistenten eine Konfiguration hinzu.  
   
  **Bearbeiten**  
  Bearbeitet eine vorhandene Konfiguration, indem der Paketkonfigurationsassistent erneut ausgeführt wird.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie eine Konfiguration aus, und klicken Sie auf **Entfernen**.  
   
  **Pfeile**  
@@ -305,7 +305,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="welcome-to-the-package-configuration-wizard-page"></a>Willkommensseite des Paketkonfigurationsassistenten  
  Mithilfe des **SSIS-Konfigurations-Assistenten** können Sie Konfigurationen erstellen, durch die die Eigenschaften eines Paketes und seiner Objekte zur Laufzeit aktualisiert werden.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Diese Seite nicht wieder anzeigen**  
  Die Willkommensseite beim nächsten Öffnen des Assistenten auslassen.  
   
@@ -321,7 +321,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Konfigurationstyp**  
  Wählen Sie mithilfe folgender Optionen den Typ der Quelle aus, in der die Konfiguration gespeichert werden soll:  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**XML-Konfigurationsdatei**|Speichert die Konfiguration als XML-Datei. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen im Abschnitt **Konfigurationstyp**angezeigt.|  
 |**Umgebungsvariable**|Speichert die Konfiguration in einer der Umgebungsvariablen. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen im Abschnitt **Konfigurationstyp**angezeigt.|  
@@ -338,7 +338,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Konfigurationseinstellungen direkt angeben**  
  Verwenden Sie diese Option, um die Einstellungen direkt anzugeben.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Konfigurationsdateiname**|Geben Sie den Pfad der Konfigurationsdatei ein, die der Assistent generiert.|  
 |**Durchsuchen**|Im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** können Sie den Pfad für die Konfigurationsdatei angeben, die der Assistent generiert. Wenn die Datei nicht vorhanden ist, wird sie durch den Assistenten erstellt.|  
@@ -346,7 +346,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert werden soll.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Umgebungsvariable**|Wählen Sie eine Umgebungsvariable aus der Liste aus.|  
   
@@ -358,14 +358,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Konfigurationseinstellungen direkt angeben**  
  Verwenden Sie diese Option, um die Einstellungen direkt anzugeben.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Registrierungseintrag**|Geben Sie den Registrierungsschlüssel ein, der die Konfigurationsinformationen enthält. Das Format lautet: \<Registrierungsschlüssel>.<br /><br /> Der Registrierungsschlüssel muss bereits in HKEY_CURRENT_USER vorhanden sein und einen Wert mit dem Namen "Value" aufweisen. Bei diesem Wert kann es sich um einen Wert vom Typ DWORD oder um eine Zeichenfolge handeln.<br /><br /> Wenn Sie einen Registrierungsschlüssel verwenden möchten, der nicht im Stamm von HKEY_CURRENT_USER gespeichert ist, verwenden Sie das Format \<Registrierungsschlüssel\Registrierungsschlüssel\\...>, um den Schlüssel zu identifizieren.|  
   
  **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert werden soll.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Umgebungsvariable**|Wählen Sie eine Umgebungsvariable aus der Liste aus.|  
   
@@ -373,14 +373,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Konfigurationseinstellungen direkt angeben**  
  Verwenden Sie diese Option, um die Einstellungen direkt anzugeben.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Übergeordnete Variable**|Geben Sie die Variable im übergeordneten Paket an, die die Konfigurationsinformationen enthält.|  
   
  **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert wird.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Umgebungsvariable**|Wählen Sie eine Umgebungsvariable aus der Liste aus.|  
   
@@ -388,23 +388,23 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Konfigurationseinstellungen direkt angeben**  
  Verwenden Sie diese Option, um die Einstellungen direkt anzugeben.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
-|**Verbindung**|Wählen Sie eine Verbindung aus der Liste aus, oder klicken Sie auf **Neu** , um eine neue Verbindung herzustellen.|  
+|**Connection**|Wählen Sie eine Verbindung aus der Liste aus, oder klicken Sie auf **Neu** , um eine neue Verbindung herzustellen.|  
 |**Konfigurationstabelle**|Wählen Sie eine vorhandene Tabelle aus, oder klicken Sie auf **Neu** , um eine SQL-Anweisung zu schreiben, die eine neue Tabelle erstellt.|  
 |**Konfigurationsfilter**|Wählen Sie einen vorhandenen Konfigurationsnamen aus, oder geben Sie einen neuen Namen ein.<br /><br /> Viele SQL Server-Konfigurationen können in derselben Tabelle gespeichert werden, und jede Konfiguration kann mehrere Konfigurationselemente enthalten.<br /><br /> Dieser benutzerdefinierte Wert wird in der Tabelle gespeichert, um Konfigurationselemente zu identifizieren, die zu einer bestimmten Konfiguration gehören.|  
   
  **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert ist.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Umgebungsvariable**|Wählen Sie eine Umgebungsvariable aus der Liste aus.|  
   
 ### <a name="select-objects-to-export-page"></a>Seite "Eigenschaften für den Exportvorgang auswählen"  
  Verwenden Sie die Seite **Zieleigenschaft auswählen** oder die Seite Eigenschaften für den Exportvorgang auswählen, um die in der Konfiguration enthaltenen Objekteigenschaften anzugeben. Mehrere Eigenschaften können nur ausgewählt werden, wenn Sie als Konfigurationstyp XML auswählen.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Objekte**  
  Erweitern Sie die Pakethierarchie, und wählen Sie die zu exportierenden Eigenschaften aus.  
   
@@ -417,7 +417,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="completing-the-wizard-page"></a>Seite "Assistenten abschließen"  
  Mithilfe der Seite **Assistenten abschließen** können Sie einen Namen für die Konfiguration und die Einstellungen der Sicht angeben, die der Assistent zum Erstellen der Konfiguration verwendet. Nach dem Abschließen des Assistenten wird der **Paketkonfigurationsplaner** angezeigt, in dem alle Konfigurationen für das Paket aufgeführt werden.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Konfigurationsname**  
  Geben Sie den Namen der Konfiguration ein.  
   
@@ -482,7 +482,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  In der folgenden Tabelle sind die Eigenschaften des Bereitstellungshilfsprogramms aufgeführt.  
   
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |AllowConfigurationChange|Ein Wert, der angibt, ob Konfigurationen während der Bereitstellung aktualisiert werden können.|  
 |CreateDeploymentUtility|Ein Wert, der angibt, ob beim Erstellen des Projekts ein Paketbereitstellungshilfsprogramm erstellt wird. Diese Eigenschaft muss auf **True** festgelegt sein, um ein Bereitstellungshilfsprogramm zu erstellen.|  
@@ -586,7 +586,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="configure-packages-page"></a>Seite "Pakete konfigurieren"  
  Mithilfe der Seite **Pakete konfigurieren** können Sie Paketkonfigurationen bearbeiten.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Konfigurationsdatei**  
  Bearbeiten Sie die Inhalte einer Konfigurationsdatei, indem Sie die Datei aus der Liste auswählen.  
   
@@ -598,7 +598,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Typ**  
  Zeigen Sie den Datentyp der Eigenschaft an.  
   
- **ReplTest1**  
+ **Wert**  
  Geben Sie den Wert der Konfiguration an.  
   
  **Weiter**  
@@ -622,7 +622,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="deploy-ssis-packages-page"></a>Seit "SSIS-Paket bereitstellen"  
  Mithilfe der Seite **SSIS-Pakete bereitstellen** können Sie angeben, an welcher Stelle [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete und ihre Abhängigkeiten installiert werden sollen.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Bereitstellung im Dateisystem**  
  Stellen Sie Pakete und Abhängigkeiten in einem bestimmten Ordner im Dateisystem bereit.  
   
@@ -647,7 +647,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-installation-folder-page"></a>Seite "Installationsordner auswählen"  
  Mithilfe der Seite **Installationsordner auswählen** können Sie den Dateisystemordner angeben, in dem die Pakete und deren Abhängigkeiten installiert werden sollen.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Ordner**  
  Geben Sie den Pfad und den Ordner an, in den das Paket und seine Abhängigkeiten kopiert werden sollen.  
   
@@ -663,7 +663,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="specify-target-sql-server-page"></a>Seite "Zielserver mit SQL Server angeben"  
  Auf der Seite **Zielserver mit SQL Server angeben** können Sie Optionen zur Bereitstellung des Pakets für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz angeben.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Servername**  
  Geben Sie den Namen des Servers an, auf dem die Pakete bereitgestellt werden sollen.  
   
@@ -673,7 +673,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **SQL Server-Authentifizierung verwenden**  
  Geben Sie an, ob vom Paket für die Anmeldung beim Server die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet werden soll. Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, müssen Sie einen Benutzernamen und ein Kennwort angeben.  
   
- **User name**  
+ **Benutzername**  
  Geben Sie einen Benutzernamen an.  
   
  **Kennwort**  

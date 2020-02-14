@@ -10,10 +10,10 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1610f98d77ba4a762a63f3ccf5a445393537d36b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296337"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten
@@ -31,10 +31,10 @@ Der Assistent verwendet die von [!INCLUDE[ssNoVersion](../../includes/ssnoversio
  Wenn Sie eine vorhandene Zuordnungsdatei bearbeiten oder dem Ordner eine neue Zuordnungsdatei hinzufügen, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten bzw. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] schließen und anschließend erneut öffnen, um die neue oder geänderte Zuordnungsdatei zu laden.  
  
 ## <a name="you-can-change-an-existing-mapping-file"></a>Sie können eine vorhandene Zuordnungsdatei ändern
-Wenn Ihr Unternehmen verschiedene Zuordnungen zwischen Datentypen erfordert, können Sie die Zuordnungsdateien aktualisieren, um die vom Assistenten durchgeführten Zuordnungen zu ändern. Wenn Sie z. B. möchten, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** -Datentyp beim Übertragen von Daten von **in DB2 dem DB2-Datentyp** GRAPHIC **VARin DB2 dem DB2-Datentyp** VARGRAPHIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet wird, ändern Sie die **nchar** -Zuordnung in der Zuordnungsdatei **SqlClientToIBMDB2.xml** so, dass **in DB2 dem DB2-Datentyp** statt **VARin DB2 dem DB2-Datentyp.** verwendet wird.  
+Wenn Ihr Unternehmen verschiedene Zuordnungen zwischen Datentypen erfordert, können Sie die Zuordnungsdateien aktualisieren, um die vom Assistenten durchgeführten Zuordnungen zu ändern. Wenn Sie z. B. möchten, dass der Datentyp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** dem DB2-Datentyp **GRAPHIC** anstelle des DB2-Datentyps **VARGRAPHIC** entsprechen soll, wenn Sie daten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu DB2 übertragen, können Sie die **nchar**-Zuordnung ind er **SqlClientToIBMDB2.xml**-Zuordnungsdatei so ändern, dass **GRAPHIC** anstelle von **VARGRAPHIC** verwendet wird.  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>Sie können eine neue Zuordnungsdatei hinzufügen
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert Zuordnungen zwischen vielen häufig verwendeten Kombinationen von Quelle und Ziel. Sie können auch dem Verzeichnis **MappingFiles** neue Zuordnungsdateien hinzufügen, um weitere Quellen und Ziele zu unterstützen. Die neuen Zuordnungsdateien müssen dem veröffentlichten XSD-Schema entsprechen und einer eindeutigen Kombination aus Quelle und Ziel zugeordnet sein. Das Schema für Zuordnungsdateien, **DataTypeMapping.xsd**, ist [hier](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd) veröffentlicht.
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert Zuordnungen zwischen vielen häufig verwendeten Kombinationen von Quelle und Ziel. Sie können auch dem Verzeichnis **MappingFiles** neue Zuordnungsdateien hinzufügen, um weitere Quellen und Ziele zu unterstützen. Die neuen Zuordnungsdateien müssen dem veröffentlichten XSD-Schema entsprechen und einer eindeutigen Kombination aus Quelle und Ziel zugeordnet sein. Das Schema für Zuordnungsdateien, **DataTypeMapping.xsd**, ist [hier](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd)veröffentlicht.
  
 ## <a name="sample-mapping-file"></a>Beispielzuordnungsdatei
 Es folgt ein Teil der XML-Zuordnungsdatei, die SQL Server-Datentypen (oder genauer gesagt vom .NET Framework-Datenanbieter für SQL Server verwendete Datentypen) Oracle-Datentypen zuordnet. Beispielsweise können Sie sehen, dass der SQL Server -Datentyp **int** dem Oracle-Datentyp **INTEGER** zugeordnet wird.

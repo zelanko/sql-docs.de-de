@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048521"
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
@@ -80,7 +80,7 @@ Wenn der Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-m
 In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ist **FullGlobe** ein spezieller Polygontyp, der den gesamten Globus abdeckt. **FullGlobe** verfügt über einen Bereich, aber nicht über Rahmen oder Scheitelpunkte.  
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Äußere und innere Ringe sind beim `geography`-Datentyp nicht von Bedeutung  
-In der Simple Features for SQL-Spezifikation von OGC werden äußere und innere Ringe erörtert. Diese Unterscheidung ist beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** allerdings nicht sinnvoll: Jeder Ring eines Polygons kann als äußerer Ring interpretiert werden.  
+In der Simple Features for SQL-Spezifikation des OGC werden äußere und innere Ringe erörtert. Diese Unterscheidung ist für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **Geographie** allerdings nicht sinnvoll: Jeder Ring eines Polygons kann als äußerer Ring interpretiert werden.  
 
 Weitere Informationen zu den OGC-Spezifikationen finden Sie in den folgenden Themen:  
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
@@ -114,7 +114,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 Beachten Sie, dass eine **CircularString** -Instanz sieben Punkte erfordert, um das Dreieck zu definieren, eine **LineString** -Instanz erfordert jedoch nur vier Punkte, um das Dreieck zu definieren. Der Grund hierfür ist, dass eine **CircularString** -Instanz Kreisbogensegmente und keine Liniensegmente speichert. Deshalb sind die Seiten des in der **CircularString** -Instanz gespeicherten Dreiecks ABC, CDE und EFA, wohingegen die Seiten des in der **LineString** -Instanz gespeicherten Dreiecks AC, CE und EA sind.  
 
-Betrachten Sie das folgende Beispiel:  
+Betrachten Sie das folgenden Beispiel:  
 
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);

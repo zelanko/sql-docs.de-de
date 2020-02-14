@@ -14,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: b96529feb6e6e4c4ac2ad7d4be62474a624392d8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558201"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909910"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Massenladen von verschlüsselten Daten in Spalten mithilfe von Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Verwenden Sie das folgende Verfahren, um verschlüsselte Daten zu laden.
     ```  
 
 ## <a name="potential-for-data-corruption"></a>Risiko der Datenbeschädigung  
-Die falsche Verwendung dieser Option kann zur Datenbeschädigung führen. Die Option **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** ermöglicht es dem Benutzer, beliebige Daten in verschlüsselte Spalten in der Datenbank einzufügen. Dazu zählen auch Daten, die mit verschiedenen Schlüsseln, falsch oder überhaupt nicht verschlüsselt wurden. Wenn der Benutzer aus Versehen Daten kopiert, die mithilfe des für die Zielspalte festgelegten Verschlüsselungsschemas (Spaltenverschlüsselungsschlüssel, Algorithmus, Verschlüsselungstyp) nicht richtig verschlüsselt wurden, können Sie diese Daten nicht entschlüsseln (die Daten sind beschädigt). Diese Option muss mit Vorsicht verwendet werden, da sie zur Datenbeschädigung in der Datenbank führen kann.  
+Die falsche Verwendung dieser Option kann zur Datenbeschädigung führen. Die Option **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** ermöglicht es dem Benutzer, beliebige Daten in verschlüsselte Spalten in der Datenbank einzufügen. Dazu zählen auch Daten, die mit verschiedenen Schlüsseln, falsch oder überhaupt nicht verschlüsselt wurden. Wenn der Benutzer aus Versehen Daten kopiert, die nicht richtig mit dem für die Zielspalte festgelegten Verschlüsselungsschema (Spaltenverschlüsselungsschlüssel, Algorithmus, Verschlüsselungstyp) verschlüsselt wurden, können Sie diese Daten nicht entschlüsseln (die Daten sind beschädigt). Diese Option muss mit Vorsicht verwendet werden, da sie zur Datenbeschädigung in der Datenbank führen kann.  
 
 Das folgende Szenario zeigt, wie nicht ordnungsgemäß importierte Daten zur Datenbeschädigung führen können:  
 

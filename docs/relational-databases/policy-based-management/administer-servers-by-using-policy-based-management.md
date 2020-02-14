@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e0abb97eddddc65103bfaad7c2e1996423a4919
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 67a62cc33877644f9feb6384c5d454b2cf30695b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558675"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831807"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Verwalten von Servern mit der richtlinienbasierten Verwaltung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,25 +104,19 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
   
 ## <a name="links-to-specific-tasks"></a>Links zu bestimmten Aufgaben 
 
- - [Speichern von Richtlinien zur richtlinienbasierten Verwaltung](policy-based-management-storage.md)|  
- - [Konfigurieren von Warnungen zur Benachrichtigung von Richtlinienadministratoren bei Richtlinienfehlern](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
- - [Erstellen einer neuen Bedingung der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
+ - [Speichern von Richtlinien zur richtlinienbasierten Verwaltung](policy-based-management-storage.md)
+ - [Konfigurieren von Warnungen zur Benachrichtigung von Richtlinienadministratoren bei Richtlinienfehlern](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)
+ - [Erstellen einer neuen Bedingung der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)
  - [Löschen einer Bedingung der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
- - [Anzeigen oder Ändern der Eigenschaften einer Bedingung der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
+ - [Anzeigen oder Ändern der Eigenschaften einer Bedingung der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)
  - [Exportieren einer Richtlinie der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)
- - [Importieren einer Richtlinie der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)|  
+ - [Importieren einer Richtlinie der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)
  - [Auswerten einer Richtlinie der richtlinienbasierten Verwaltung von einem Objekt aus](../../relational-databases/policy-based-management/evaluate-a-policy-based-management-policy-from-an-object.md)
- - [Arbeiten mit Facets der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)|  
+ - [Arbeiten mit Facets der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)
  - [Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
-
 
 ## <a name="see-also"></a>Weitere Informationen  
  
  - [Tutorial: Erstellen und Anwenden der Richtlinie „Standardmäßig deaktiviert“](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [Tutorial: Erstellen und Anwenden einer Richtlinie für Benennungsstandards](lesson-2-create-and-apply-a-naming-standards-policy.md)
  - [Sichten der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
- 
-
- 
-  
-  

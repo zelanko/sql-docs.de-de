@@ -34,10 +34,10 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291495"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Transformation für Fuzzysuche
@@ -58,11 +58,11 @@ ms.locfileid: "71291495"
   
  Diese Transformation weist je eine Eingabe und eine Ausgabe auf.  
   
- Für die Fuzzyübereinstimmung können nur Spalten mit den Datentypen **DT_WSTR** und **DT_STR** verwendet werden. Die genaue Übereinstimmung kann Spalten aller DTS-Datentypen verwendet, mit Ausnahme von **DT_TEXT**, **DT_NTEXT**und **DT_IMAGE**. Weitere Informationen finden Sie unter [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Spalten, die einen Join zwischen der Eingabe- und der Verweistabelle aufweisen, müssen kompatible Datentypen enthalten. So ist beispielsweise das Verknüpfen einer Spalte mit dem DTS-Datentyp **DT_WSTR** mit einer Spalte mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp **nvarchar** gültig, das Verknüpfen einer Spalte mit dem **DT_WSTR**-Datentyp mit einer Spalte mit dem **int**-Datentyp ist jedoch ungültig.  
+ Für die Fuzzyübereinstimmung können nur Spalten mit den Datentypen **DT_WSTR** und **DT_STR** verwendet werden. Die genaue Übereinstimmung kann Spalten aller DTS-Datentypen verwendet, mit Ausnahme von **DT_TEXT**, **DT_NTEXT**und **DT_IMAGE**. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../../integration-services/data-flow/integration-services-data-types.md). Spalten, die einen Join zwischen der Eingabe- und der Verweistabelle aufweisen, müssen kompatible Datentypen enthalten. So ist beispielsweise das Verknüpfen einer Spalte mit dem DTS-Datentyp **DT_WSTR** mit einer Spalte mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp **nvarchar** gültig. Das Verknüpfen einer Spalte mit dem **DT_WSTR**-Datentyp mit einer Spalte mit dem **int**-Datentyp ist jedoch ungültig.  
   
  Sie können diese Transformation anpassen, indem Sie den maximalen Umfang des Arbeitsspeichers, den Zeilenvergleichsalgorithmus sowie den Zwischenspeicher für Indizes und Verweistabellen, die von der Transformation verwendet werden, angeben.  
   
- Der von der Transformation für Fuzzysuche verwendete Arbeitsspeicher kann durch Festlegen der benutzerdefinierten Eigenschaft MaxMemoryUsage konfiguriert werden. Sie können die Größe in Megabyte (MB) angeben oder den Wert 0 verwenden, um bei der Transformation eine dynamische Arbeitsspeichermenge auf Basis der Anforderungen und des verfügbaren physischen Speichers zu verwenden. Die benutzerdefinierte Eigenschaft MaxMemoryUsage kann beim Laden des Pakets mithilfe eines Eigenschaftsausdrucks aktualisiert werden. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Verwenden von Eigenschaftsausdrücken in Paketen](../../../integration-services/expressions/use-property-expressions-in-packages.md) und [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+ Der von der Transformation für Fuzzysuche verwendete Arbeitsspeicher kann durch Festlegen der benutzerdefinierten Eigenschaft MaxMemoryUsage konfiguriert werden. Sie können die Größe in Megabyte (MB) angeben oder den Wert 0 verwenden, um bei der Transformation eine dynamische Arbeitsspeichermenge auf Basis der Anforderungen und des verfügbaren physischen Speichers zu verwenden. Die benutzerdefinierte MaxMemoryUsage-Eigenschaft kann beim Laden des Pakets mithilfe eines Eigenschaftsausdrucks aktualisiert werden. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Verwenden von Eigenschaftsausdrücken in Paketen](../../../integration-services/expressions/use-property-expressions-in-packages.md) und [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ## <a name="controlling-fuzzy-matching-behavior"></a>Steuern des Verhaltens der Fuzzyübereinstimmung  
  Die Transformation für Fuzzysuche umfasst drei Funktionen zum Anpassen der durchgeführten Suche: maximale Suche nach Übereinstimmungen, die pro Eingabezeile zurückgegeben werden, Token-Trennzeichen und Schwellenwerte für Ähnlichkeit.  
@@ -96,7 +96,7 @@ ms.locfileid: "71291495"
   
  In der folgenden Tabelle werden die Optionen für den Übereinstimmungsindex beschrieben.  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|Zum Erstellen, Speichern und Verwalten eines neuen Indexes. Bei der Transformation werden Trigger für die Verweistabelle installiert, damit Verweis- und Indextabelle synchronisiert bleiben.|  
 |**GenerateAndPersistNewIndex**|Zum Erstellen und Speichern eines Indexes, aber nicht zum Verwalten.|  
@@ -133,7 +133,7 @@ ms.locfileid: "71291495"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -149,7 +149,7 @@ ms.locfileid: "71291495"
 > [!NOTE]  
 >  Die **Exhaustive** - und **MaxMemoryUsage** -Eigenschaften der Transformation für Fuzzysuche sind im **Transformations-Editor für Fuzzysuche**nicht verfügbar, können jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden. Darüber hinaus kann ein Wert größer als 100 für **MaxOutputMatchesPerInput** nur im Dialogfeld **Erweiterter Editor**festgelegt werden. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Transformation für Fuzzysuche von [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Teilcache**  
  Wählen Sie einen vorhandenen OLE DB-Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "71291495"
 ## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>Transformations-Editor für Fuzzysuche (Registerkarte Spalten)
   Auf der Registerkarte **Spalten** des Dialogfelds **Transformations-Editor für Fuzzysuche** können Sie die Eigenschaften für die Eingabe- und Ausgabespalten festlegen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Um Eingabespalten mit verfügbaren Suchspalten zu verbinden, ziehen Sie diese auf die Suchspalten. Diese Spalten müssen übereinstimmende, unterstützte Datentypen aufweisen. Wählen Sie eine Zuordnungszeile aus, und klicken Sie mit der rechten Maustaste darauf, um die Zuordnungen im Dialogfeld [Beziehungen erstellen](../../../integration-services/data-flow/transformations/create-relationships.md) zu bearbeiten.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "71291495"
 ## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>Transformations-Editor für Fuzzysuche (Registerkarte Erweitert)
   Auf der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Fuzzysuche** können Sie die Parameter für die Fuzzysuche festlegen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Maximale Anzahl von Übereinstimmungen, die pro Suche ausgegeben werden**  
  Geben Sie die maximale Anzahl der Übereinstimmungen an, die pro Eingabezeile von der Transformation zurückgegeben werden können. Der Standardwert lautet **1**.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "71291495"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Transformation für Suche](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Transformation für Fuzzygruppierung](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: dd7cfe863fde1b4909caadca12b496705f956483
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ac6758c3856858f6b10b17184705022aa51a62e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768806"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288187"
 ---
 # <a name="enhance-general-replication-performance"></a>Verbessern der allgemeinen Replikationsleistung
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68768806"
   
 ## <a name="server-and-network"></a>Server und Netzwerk  
   
--   Legen Sie das Minimum und das Maximum für den Arbeitsspeicher fest, der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]zugeordnet ist.  
+-   Legen Sie das Minimum und das Maximum für den Arbeitsspeicher fest, der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] zugeordnet ist.  
   
      Standardmäßig ändert [!INCLUDE[ssDE](../../../includes/ssde-md.md)] die Arbeitsspeicheranforderungen auf der Grundlage der verfügbaren Systemressourcen dynamisch. Wenn verhindert werden soll, dass während Replikationsaktivitäten nur wenig Arbeitsspeicher zur Verfügung steht, verwenden Sie die Option **Min. Serverarbeitsspeicher** zum Festlegen des Minimums an Arbeitsspeicher. Um zu verhindern, dass das Betriebssystem Speicher auslagern muss, können Sie auch ein Maximum an Arbeitsspeicher mit der Option **Max. Serverarbeitsspeicher** festlegen. Weitere Informationen finden Sie unter [Konfigurationsoptionen für den Serverarbeitsspeicher](../../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68768806"
   
      Die Geschäftslogik in benutzerdefinierten Triggern auf dem Abonnenten kann die Replikation von Änderungen an den Abonnenten verlangsamen.  
   
-    -   Für die Transaktionsreplikation kann es effizienter sein, diese Logik in benutzerdefinierte gespeicherte Prozeduren aufzunehmen, die für die Ausführung der replizierten Befehle verwendet werden. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)  
+    -   Für die Transaktionsreplikation kann es effizienter sein, diese Logik in benutzerdefinierte gespeicherte Prozeduren aufzunehmen, die für die Ausführung der replizierten Befehle verwendet werden. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
     -   Für die Mergereplikation kann es effizienter sein, Geschäftslogikhandler zu verwenden. Weitere Informationen finden Sie unter [Ausführen von Geschäftslogik während der Mergesynchronisierung](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
@@ -159,7 +159,7 @@ ms.locfileid: "68768806"
   
 -   Verwenden Sie den **–UseInprocLoader** -Parameter des Verteilungs-Agents und des Merge-Agents (dieser Parameter kann nicht verwendet werden, wenn veröffentlichte Tabellen XML-Spalten enthalten). Durch diesen Parameter verwendet der Agent beim Anwenden der Momentaufnahme den BULK INSERT-Befehl.  
   
- Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
+ Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter  
   
 -   [Arbeiten mit Replikations-Agent-Profilen](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

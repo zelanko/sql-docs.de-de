@@ -13,10 +13,10 @@ ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f157b2b802142f6f00b7a3e9ffb2596ef80f1773
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298259"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop Hive-Task
@@ -28,12 +28,12 @@ ms.locfileid: "71298259"
   
  Zum Hinzufügen eines Hadoop Hive-Tasks ziehen Sie diesen auf den Designer. Doppelklicken Sie anschließend auf den Task, oder klicken Sie mit der rechten Maustaste darauf, und klicken Sie auf **Bearbeiten**, um das Dialogfeld **Editor für Hadoop-Hive-Aufgaben** zu öffnen.  
   
- ![Editor für Hadoop-Hive-Aufgaben](../../integration-services/control-flow/media/hadoop-hive-task.png "Editor für Hadoop-Hive-Aufgaben")  
+ ![Editor für Hadoop-Hive-Tasks](../../integration-services/control-flow/media/hadoop-hive-task.png "Editor für Hadoop-Hive-Tasks")  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Konfigurieren Sie die folgenden Optionen im Dialogfeld **Editor für Hadoop-Hive-Aufgaben** .  
   
-|Feld|und Beschreibung|  
+|Feld|Beschreibung|  
 |-----------|-----------------|  
 |**Hadoop-Verbindung**|Geben Sie einen vorhandenen Hadoop-Verbindungs-Manager an, oder erstellen Sie einen neuen. Dieser Verbindungs-Manager gibt an, wo der Dienst WebHCat gehostet wird.|  
 |**SourceType**|Geben Sie den Quelltyp der Abfrage an. Mögliche Werte sind **ScriptFile** und **DirectInput**.|  

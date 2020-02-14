@@ -13,19 +13,19 @@ ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2905877f907e932be058a07ba3a9fbbd892e7ae6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115698"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>Wartungsplan (Dialogfeld 'Berichterstellung und Protokollierung')
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mit dem Dialogfeld **Berichterstellung und Protokollierung** können Sie die Berichte und Protokolle konfigurieren, die beim Ausführen von Wartungsplänen generiert werden.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Textdateibericht generieren**  
- Geben Sie an, ob von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Textdateibericht geschrieben werden soll.  
+ Mit dieser Option können Sie angeben, ob [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Textdateibericht erstellen soll.  
   
  **Neue Datei erstellen**  
  Erstellt eine neue Berichtsdatei für jede Ausführung des Wartungsplans. Standardmäßig werden die Berichtsdateien auf den Computer geschrieben, der als Host der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fungiert, die diesen Wartungsplan enthält. Die Dateien werden in dem während des Setups von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festgelegten Standardprotokollordner gespeichert. Wenn Sie einen anderen Ordner angeben möchten, geben Sie im Textfeld **Ordner** den vollständigen Ordnerpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), und navigieren Sie zum gewünschten Ordner.  
@@ -45,7 +45,7 @@ ms.locfileid: "68115698"
  **Auf Remoteserver protokollieren**  
  Protokolliert den Wartungsplanverlauf auf einem Remoteserver.  
   
- **Verbindung**  
+ **Connection**  
  Gibt die Verbindungsinformationen an, die beim Protokollieren auf einem Remoteserver verwendet werden sollen.  
   
  **Neu**  

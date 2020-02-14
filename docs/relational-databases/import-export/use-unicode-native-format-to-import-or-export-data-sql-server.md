@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 473f9c37560ee4a63a296d2023a63ccc67aae779
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091466"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Unicode-Formats zum Importieren oder Exportieren von Daten (SQL Server)
@@ -41,7 +41,7 @@ Sie können Daten im nativen Unicode-Format in eine Tabelle importieren, indem S
   
 Das native Unicode-Format wird durch die folgenden Befehlsoptionen unterstützt:  
   
-|Befehl|Option|und Beschreibung|  
+|Get-Help|Option|Beschreibung|  
 |-------------|------------|-----------------|  
 |bcp|**-N**|Bewirkt, dass das Hilfsprogramm **bcp** das native Unicode-Format verwendet, welches das native (Datenbank-)Datentypen für alle nicht auf Zeichen basierenden Daten und das Unicode-Zeichendatenformat für alle Zeichendaten (**char**, **nchar**, **varchar**, **nvarchar**, **text**und **ntext**) verwendet.|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|Verwendet das native Unicode-Format beim Massenimportieren von Daten|  
@@ -185,7 +185,7 @@ So verwenden Sie Datenformate für Massenimport oder Massenexport
 -   [Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

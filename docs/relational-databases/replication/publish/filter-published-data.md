@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 55eb271c7eb5dff661b37cfb18b029e57bbeb0ba
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 38e0164de9dda9f86183a89a29b58753b2a7f118
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769877"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287638"
 ---
 # <a name="filter-published-data"></a>Filtern von veröffentlichten Daten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "68769877"
 ## <a name="static-row-filters"></a>Statische Zeilenfilter  
  Die folgende Abbildung zeigt eine veröffentlichte Tabelle, die so gefiltert wird, dass nur die Zeilen 2, 3 und 6 in die Veröffentlichung aufgenommen werden.  
   
- ![Zeilenfilterung](../../../relational-databases/replication/publish/media/repl-16.gif "Row filtering")  
+ ![Zeilenfilterung](../../../relational-databases/replication/publish/media/repl-16.gif "Zeilenfilterung")  
   
  Bei einem statischen Zeilenfilter werden die zu veröffentlichenden Daten mit einer WHERE-Klausel ausgewählt. Dabei geben Sie den letzten Teil der WHERE-Klausel an. Sehen Sie sich die **Product** -Tabelle in der AdventureWorks-Beispieldatenbank an, in der die **ProductLine**-Spalte enthalten ist. Wenn Sie nur die Zeilen mit den Daten zu Produkten veröffentlichen möchten, die sich auf Mountainbikes beziehen, geben Sie `ProductLine = 'M'`an.  
   
@@ -74,18 +74,18 @@ ms.locfileid: "68769877"
     > [!NOTE]  
     >  Zeilenfilter in Transaktionsveröffentlichungen können den Verwaltungsaufwand erheblich vergrößern, da die Klausel zur Artikelfilterung für jede Protokollzeile ausgewertet wird, die für eine veröffentlichte Tabelle geschrieben wurde, um zu bestimmen, ob die Zeile repliziert werden soll. Vermeiden Sie Zeilenfilter in Transaktionsveröffentlichungen, wenn die einzelnen Replikationsknoten alle Daten vollständig laden können und die gesamte Datengruppe nicht allzu groß ist.  
   
--   Erstellen Sie bei der Mergereplikation nicht mehrere Veröffentlichungen mit statischen Zeilenfiltern, sondern verwenden Sie vielmehr parametrisierte Zeilenfilter. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   Erstellen Sie bei der Mergereplikation nicht mehrere Veröffentlichungen mit statischen Zeilenfiltern, sondern verwenden Sie vielmehr parametrisierte Zeilenfilter. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Informationen zum Definieren oder Ändern eines statischen Zeilenfilters finden Sie unter [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
 ## <a name="column-filters"></a>Spaltenfilter  
  Die folgende Abbildung zeigt eine Veröffentlichung, bei der die C-Spalte herausgefiltert wird.  
   
- ![Spaltenfilterung](../../../relational-databases/replication/publish/media/repl-17.gif "Column filtering")  
+ ![Spaltenfilterung](../../../relational-databases/replication/publish/media/repl-17.gif "Spaltenfilterung")  
   
  Sie können auch Zeilen- und Spaltenfilter zusammen verwenden, wie hier dargestellt.  
   
- ![Zeilen- und Spaltenfilterung](../../../relational-databases/replication/publish/media/repl-18.gif "Row and column filtering")  
+ ![Zeilen- und Spaltenfilterung](../../../relational-databases/replication/publish/media/repl-18.gif "Zeilen- und Spaltenfilterung")  
   
  Nach dem Erstellen einer Veröffentlichung können Sie eine Spalte mithilfe der Spaltenfilterung aus einer vorhandenen Veröffentlichung löschen, die Spalte jedoch in der Tabelle auf dem Verleger belassen. Außerdem können Sie eine vorhandene Spalte in die Veröffentlichung aufnehmen. Verwenden Sie für weitere Änderungen die Schemaänderungsreplikation, z. B. für das Hinzufügen einer neuen Spalten zu einer Tabelle und das anschließende Hinzufügen zum veröffentlichten Artikel. Weitere Informationen finden Sie in den Abschnitten „Hinzufügen von Spalten“ und „Löschen von Spalten“ im Thema [Durchführen von Schemaänderungen in Veröffentlichungsdatenbanken](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   

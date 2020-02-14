@@ -17,10 +17,10 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f1380370862b735e00799cbcb6a9ba46d69fd3f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294417"
 ---
 # <a name="ftp-connection-manager"></a>FTP-Verbindungs-Manager
@@ -71,14 +71,14 @@ ms.locfileid: "71294417"
   
  Weitere Informationen zum FTP-Verbindungs-Manager finden Sie unter [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Servername**  
  Geben Sie den Namen des FTP-Servers an.  
   
  **Serverport**  
  Geben Sie die Portnummer des FTP-Servers an, der für die Verbindung verwendet werden soll. Der Standardwert dieser Eigenschaft ist **21**.  
   
- **User name**  
+ **Benutzername**  
  Geben Sie einen Benutzernamen für den Zugriff auf den FTP-Server an. Der Standardwert dieser Eigenschaft ist **anonymous**.  
   
  **Kennwort**  
@@ -90,7 +90,7 @@ ms.locfileid: "71294417"
  **Passivmodus verwenden**  
  Geben Sie an, ob die Verbindung durch den Server oder durch den Client initiiert wird. Die Initiierung der Verbindung durch den Server erfolgt im Aktivmodus; der Client aktiviert die Verbindung im Passivmodus. Der Standardwert dieser Eigenschaft ist der **Aktivmodus**.  
   
- **Wiederholungen**  
+ **Wiederholungsversuche**  
  Geben Sie die Häufigkeit an, mit der der Task versucht, eine Verbindung herzustellen. Der Wert **0** gibt eine unbegrenzte Anzahl von Versuchen an.  
   
  **Segmentgröße (in KB)**  

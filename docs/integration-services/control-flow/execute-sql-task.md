@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298305"
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
@@ -147,7 +147,7 @@ Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact
   
  **Verwandte Themen:** [OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md), [ODBC-Verbindungs-Manager](../../integration-services/connection-manager/odbc-connection-manager.md), [ADO-Verbindungs-Manager-](../../integration-services/connection-manager/ado-connection-manager.md), [ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition-Verbindungs-Manager](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **Verbindung**  
+ **Connection**  
  Wählen Sie die Verbindung aus einer Liste definierter Verbindungs-Manager aus. Klicken Sie zum Erstellen einer neuen Verbindung auf \<**Neue Verbindung...** >.  
   
  **SQLSourceType**  
@@ -157,7 +157,7 @@ Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact
   
  Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legen Sie als Quelle eine Transact-SQL-Anweisung fest. Bei Auswahl dieses Wertes wird die dynamische Option **SQLStatement**angezeigt.|  
 |**Dateiverbindung**|Wählen Sie eine Datei aus, die eine Transact-SQL-Anweisung enthält. Durch Festlegen dieser Option wird die dynamische Option **FileConnection**angezeigt.|  
@@ -203,7 +203,7 @@ Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Seite „Parameterzuordnung“ – Editor für den Task „SQL ausführen“
 Mithilfe der Seite **Parameterzuordnung** des Dialogfelds **Editor für den Task 'SQL ausführen'** können Sie Parametern in der SQL-Anweisung Variablen zuordnen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Variablenname**  
  Nachdem Sie auf **Hinzufügen** geklickt und damit eine neue Parameterzuordnung hinzugefügt haben, wählen Sie in der Liste eine Systemvariable oder eine benutzerdefinierte Variable aus, oder klicken Sie auf \<**Neue Variable...** >, um mithilfe des Dialogfelds **Variable hinzufügen** eine neue Variable hinzuzufügen.  
   
@@ -225,16 +225,16 @@ Mithilfe der Seite **Parameterzuordnung** des Dialogfelds **Editor für den Task
   
  Durch diese Einstellung wird sichergestellt, dass der Anbieter genügend Speicherplatz für Parameterwerte variabler Länge zuordnet.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Klicken Sie auf diese Option, um eine Parameterzuordnung hinzuzufügen.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie in der Liste eine Parameterzuordnung aus, und klicken Sie anschließend auf **Entfernen**.  
  
 ## <a name="result-set-page---execute-sql-task-editor"></a>Seite „Resultset“ – Editor für den Task „SQL ausführen“
 Mithilfe der Seite **Resultset** des Dialogfelds **Editor für den Task 'SQL ausführen'** können Sie das Ergebnis der SQL-Anweisung neuen oder vorhandenen Variablen zuordnen. Die Optionen in diesem Dialogfeld sind deaktiviert, wenn auf der Seite Allgemein für **ResultSet** der Wert **Keine**festgelegt ist.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Ergebnisname**  
  Nachdem Sie durch Klicken auf **Hinzufügen**eine Resultsetzuordnung hinzugefügt haben, geben Sie einen Namen für das Ergebnis an. Je nach Resultsettyp müssen Sie bestimmte Ergebnisnamen verwenden.  
   
@@ -246,14 +246,14 @@ Mithilfe der Seite **Resultset** des Dialogfelds **Editor für den Task 'SQL aus
  **Variablenname**  
  Ordnen Sie das Resultset einer Variablen zu, indem Sie eine Variable auswählen, oder klicken Sie auf \<**Neue Variable...** >, um mithilfe des Dialogfelds **Variable hinzufügen** eine neue Variable hinzuzufügen.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Klicken Sie auf diese Option, um eine Resultsetzuordnung hinzuzufügen.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie eine Resultsetzuordnung aus der Liste aus, und klicken Sie anschließend auf **Entfernen**.  
  
 ## <a name="parameters-in-the-execute-sql-task"></a>Parameter im Task „SQL ausführen“
-SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Parameter, **output** -Parameter und Rückgabecodes. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt der Task „SQL ausführen“ die **Input**-, **Output**- und **ReturnValue**-Parametertypen. Sie können den **Input** -Typ für Eingabeparameter, den **Output** -Typ für Ausgabeparameter und den **ReturnValue** -Typ für Rückgabecodes verwenden.  
+SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Parameter, **output** -Parameter und Rückgabecodes. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]unterstützt der Task „SQL ausführen“ die **Input**-, **Output**- und **ReturnValue** -Parametertypen. Sie können den **Input** -Typ für Eingabeparameter, den **Output** -Typ für Ausgabeparameter und den **ReturnValue** -Typ für Rückgabecodes verwenden.  
   
 > [!NOTE]  
 >  Parameter können in einem Task SQL ausführen nur verwendet werden, wenn dies vom Datenanbieter unterstützt wird.  
@@ -312,13 +312,13 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Verwenden von Datums- und Zeitparametern mit ADO.NET- und ADO-Verbindungs-Managern  
  Beim Lesen von Daten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Typen **time** und **datetimeoffset**gelten für einen Task „SQL ausführen“, der einen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] - oder ADO-Verbindungs-Manager verwendet, folgende zusätzliche Anforderungen:  
   
--   Bei **time**-Daten wird vom [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager gefordert, dass diese Daten in einem Parameter gespeichert werden, dessen Parametertyp **Input** oder **Output** und dessen Datentyp **string** lautet.  
+-   Bei **time** -Daten wird vom [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager gefordert, dass diese Daten in einem Parameter gespeichert werden, dessen Parametertyp **Input** oder **Output**und dessen Datentyp **string**lautet.  
   
--   Für **datetimeoffset**-Daten verlangt ein [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager, dass diese Daten in einem der folgenden Parameter gespeichert werden:  
+-   Für **datetimeoffset** -Daten verlangt ein [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager, dass diese Daten in einem der folgenden Parameter gespeichert werden:  
   
     -   Ein Parameter mit dem Parametertyp **Input** und dem Datentyp **string**.  
   
-    -   Ein Parameter mit dem Parametertyp **Output** oder **ReturnValue**und dem Datentyp **datetimeoffset**, **string**oder **datetime2**. Wenn Sie einen Parameter auswählen, dessen Datentyp **string** oder **datetime2** ist, werden die Daten von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in den Datentyp „string“ bzw. „datetime2“ konvertiert.  
+    -   Ein Parameter mit dem Parametertyp **Output** oder **ReturnValue**und dem Datentyp **datetimeoffset**, **string**oder **datetime2**. Wenn Sie einen Parameter auswählen, dessen Datentyp **string** oder **datetime2**ist, werden die Daten von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in den Datentyp „string“ bzw. „datetime2“ konvertiert.  
   
 -   Für einen ADO-Verbindungs-Manager ist es erforderlich, dass **time** -Daten oder **datetimeoffset** -Daten in einem Parameter mit dem Parametertyp **Input** oder **Output**und dem Datentyp **adVarWchar**gespeichert werden.  
   
@@ -351,7 +351,7 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
     |-------------------------------|--------------------|  
     |SQL_DATE|**date**|  
     |SQL_SS_TIME2|**time**|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> -oder-<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> Oder<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
     |SQL_SS_TIMESTAMPOFFSET|**datetimeoffset**|  
   
  Wenn die Daten nicht im entsprechenden Eingabe- oder Ausgabeparameter gespeichert werden, erzeugt das Paket einen Fehler.  
@@ -380,7 +380,7 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
 ###  <a name="Stored_procedures"></a> Verwenden von Parametern mit gespeicherten Prozeduren  
  Für SQL-Befehle, die gespeicherte Prozeduren ausführen, kann die Parameterzuordnung ebenfalls verwendet werden. Die Regeln für die zu verwendenden Parametermarkierungen und Parameternamen hängen, wie die Regeln für parametrisierte Abfragen, vom Typ des Verbindungs-Managers ab, den der Task SQL ausführen verwendet.  
   
- In der folgenden Tabelle finden Sie eine Auflistung von Beispielen des EXEC-Befehls nach verschiedenen Verbindungs-Managertypen. Die Beispiele führen die gespeicherte Prozedur **uspGetBillOfMaterials** in [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]aus. Die gespeicherte Prozedur verwendet die `@StartProductID` - und `@CheckDate` **input** .  
+ In der folgenden Tabelle finden Sie eine Auflistung von Beispielen des EXEC-Befehls nach verschiedenen Verbindungs-Managertypen. Die Beispiele führen die gespeicherte Prozedur **uspGetBillOfMaterials** in [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]aus. Die gespeicherte Prozedur nutzt die **Eingabeparameter** `@StartProductID` und `@CheckDate`.  
   
 |Verbindungstyp|EXEC-Syntax|  
 |---------------------|-----------------|  
@@ -526,9 +526,9 @@ In diesem Abschnitt wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung
 |Typ des Resultsets|Datentyp der Variablen|Typ des Objekts|  
 |---------------------|---------------------------|--------------------|  
 |Einzelne Zeile|Jeder mit der Typspalte im Resultset kompatible Typ|Nicht verfügbar|  
-|Vollständiges Resultset|**Objekt**|Wenn der Task einen systemeigenen Verbindungs-Manager, wie z. B. einen ADO-, OLE DB-, Excel- oder ODBC-Verbindungs-Manager, verwendet, wird als Objekt ein ADO- **Recordset**zurückgegeben.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z.B. den [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager, verwendet, wird als Objekt ein **System.Data.DataSet** zurückgegeben.<br /><br /> Sie können mithilfe eines Skripttasks auf das **System.Data.DataSet** -Objekt zugreifen, wie im folgenden Beispiel veranschaulicht.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
+|Vollständiges Resultset|**Object**|Wenn der Task einen systemeigenen Verbindungs-Manager, wie z. B. einen ADO-, OLE DB-, Excel- oder ODBC-Verbindungs-Manager, verwendet, wird als Objekt ein ADO- **Recordset**zurückgegeben.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z.B. den [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager, verwendet, wird als Objekt ein **System.Data.DataSet**zurückgegeben.<br /><br /> Sie können mithilfe eines Skripttasks auf das **System.Data.DataSet** -Objekt zugreifen, wie im folgenden Beispiel veranschaulicht.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
 |XML|**String**|**String**|  
-|XML|**Objekt**|Wenn der Task einen systemeigenen Verbindungs-Manager, wie z. B. einen ADO-, OLE DB-, Excel- oder ODBC-Verbindungs-Manager, verwendet, wird als Objekt ein **MSXML6.IXMLDOMDocument**zurückgegeben.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z.B. den [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager, verwendet, wird als Objekt ein **System.Xml.XmlDocument** zurückgegeben.|  
+|XML|**Object**|Wenn der Task einen systemeigenen Verbindungs-Manager, wie z. B. einen ADO-, OLE DB-, Excel- oder ODBC-Verbindungs-Manager, verwendet, wird als Objekt ein **MSXML6.IXMLDOMDocument**zurückgegeben.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z.B. den [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager, verwendet, wird als Objekt ein **System.Xml.XmlDocument**zurückgegeben.|  
   
  Die Variable kann im Bereich des Tasks SQL ausführen oder des Pakets definiert werden. Falls die Variable einen Paketbereich aufweist, ist das Resultset für andere Tasks und Container innerhalb des Pakets verfügbar sowie für alle Pakete, die von den Tasks "Paket ausführen" oder "DTS 2000-Paket ausführen" ausgeführt werden.  
   
@@ -541,7 +541,7 @@ In diesem Abschnitt wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung
 ## <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Zuordnen von Resultsets zu Variablen in einem Task 'SQL ausführen'
 In diesem Abschnitt wird das Erstellen einer Zuordnung zwischen einem Resultset und einer Variablen in einem Task „SQL ausführen“ beschrieben. Indem Sie ein Resultset zu einer Variablen zuordnen, wird das Resultset für andere Elemente des Pakets zur Verfügung gestellt. Beispielsweise kann ein Skript eines Skripttasks die Variable lesen und dann die Werte des Resultsets verwenden, oder eine XML-Quelle kann das in einer Variable gespeicherte Resultset verwenden. Wenn das Resultset durch ein übergeordnetes Paket generiert wird, kann das Resultset für ein untergeordnetes Paket, das von einem Task Paket ausführen aufgerufen wird, zur Verfügung gestellt werden. Hierzu wird das Resultset im übergeordneten Paket einer Variablen zugeordnet. Anschließend wird im untergeordneten Paket eine übergeordnete Variablenkonfiguration erstellt, um den übergeordneten Variablenwert zu speichern.  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im **Projektmappen-Explorer**auf das Paket, um es zu öffnen.  
   
@@ -566,7 +566,7 @@ In diesem Abschnitt wird das Erstellen einer Zuordnung zwischen einem Resultset 
 11. Klicken Sie auf **OK**.  
 
 ## <a name="troubleshoot-the-execute-sql-task"></a>Problembehandlung des Tasks „SQL ausführen“  
- Sie können die vom Task SQL ausführen an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktionen können Sie Probleme bei SQL-Befehlen behandeln, die vom Task SQL ausführen ausgeführt werden. Aktivieren Sie zum Protokollieren der vom Task SQL ausführen an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandlung von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ Sie können die vom Task SQL ausführen an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktionen können Sie Probleme bei SQL-Befehlen behandeln, die vom Task SQL ausführen ausgeführt werden. Aktivieren Sie zum Protokollieren der vom Task SQL ausführen an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
  Gelegentlich gibt ein SQL-Befehl oder eine gespeicherte Prozedur mehrere Resultsets zurück. Zu diesen Resultsets gehören nicht nur Rowsets, die das Ergebnis von **SELECT** -Abfragen sind, sondern auch einzelne Werte als Ergebnis von Fehlern in der **RAISERROR** -Anweisung oder **PRINT** -Anweisung. Ob der Task Fehler in Resultsets nach dem ersten Resultset ignoriert, hängt vom verwendeten Typ des Verbindungs-Managers ab:  
   
@@ -577,7 +577,7 @@ In diesem Abschnitt wird das Erstellen einer Zuordnung zwischen einem Resultset 
 ### <a name="custom-log-entries"></a>Benutzerdefinierte Protokolleinträge  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Task <legacyBold>SQL ausführen</legacyBold> beschrieben. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Enthält Informationen zu den Ausführungsphasen der SQL-Anweisung. Protokolleinträge werden geschrieben, wenn der Task eine Verbindung mit der Datenbank erhält, wenn der Task beginnt, die SQL-Anweisung vorzubereiten, und nachdem die Ausführung der SQL-Anweisung abgeschlossen wurde. Der Protokolleintrag für die Vorbereitungsphase schließt die vom Task verwendete SQL-Anweisung ein.|  
 

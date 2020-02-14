@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f393ab9c995e800772561b093af5947526ee183f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911044"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded)-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Die Showplan Text (Unencoded)-Ereignisklasse tritt auf, wenn in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung ausgeführt wird. Diese Ereignisklasse ist mit der Showplan Text-Ereignisklasse bis auf den Unterschied identisch, dass die Informationen hier nicht als binäre Daten, sondern als Zeichenfolge formatiert sind.  
+  Die Ereignisklasse „Showplan Text (Unencoded)“ tritt auf, wenn in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung ausgeführt wird. Diese Ereignisklasse ist mit der Showplan Text-Ereignisklasse bis auf den Unterschied identisch, dass die Informationen hier nicht als binäre Daten, sondern als Zeichenfolge formatiert sind.  
   
  Bei den eingeschlossenen Informationen handelt es sich um eine Teilmenge der Informationen, die in den Ereignisklassen „Showplan All“, „Showplan XML“ und „Showplan XML Statistics Profile“ verfügbar sind.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "67911044"
   
 ## <a name="showplan-text-unencoded-event-class-data-columns"></a>Showplan Text (Unencoded)-Ereignisklasse (Datenspalten)  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |BinaryData|**image**|Binärer Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|2|Ja|  
@@ -50,7 +50,7 @@ ms.locfileid: "67911044"
 |NTUserName|**nvarchar**|Windows-Benutzername.|6|Ja|  
 |ObjectID|**int**|Vom System zugewiesene ID des Objekts.|22|Ja|  
 |ObjectName|**nvarchar**|Name des Objekts, auf das verwiesen wird|34|Ja|  
-|ObjectType|**int**|Der Wert, der den Typ des am Ereignis beteiligten Objekts darstellt. Dieser Wert entspricht der type-Spalte in der sys.objects-Katalogsicht. Weitere Werte finden Sie unter [ObjectType (Spalte für Ablaufverfolgungsereignisse)](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Ja|  
+|ObjektType|**int**|Der Wert, der den Typ des am Ereignis beteiligten Objekts darstellt. Dieser Wert entspricht der type-Spalte in der sys.objects-Katalogsicht. Weitere Werte finden Sie unter [ObjectType (Spalte für Ablaufverfolgungsereignisse)](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Ja|  
 |RequestID|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|Ja|  
 |ServerName|**nvarchar**|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
 |SessionLoginName|**nvarchar**|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie beispielsweise mithilfe von Login1 eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und eine Anweisung als Login2 ausführen, zeigt SessionLoginName den Wert Login1 an und LoginName den Wert Login2. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  

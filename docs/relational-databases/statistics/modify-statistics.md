@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c6f34bf5db992f1d7062f9def1805996701eda5f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906206"
 ---
 # <a name="modify-statistics"></a>Ändern von Statistiken
@@ -61,7 +61,7 @@ ms.locfileid: "72906206"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Statistikobjekt, das Sie ändern möchten, und wählen Sie **Eigenschaften**.  
   
-6.  Klicken Sie im Dialogfeld **Statistikeigenschaften –** *statistics_name* auf der Seite **Allgemein** auf **Hinzufügen**, **Entfernen**, **Nach oben**oder **Nach unten**oder irgendeine Kombination, um die Eigenschaften der Statistiken zu ändern. Beachten Sie, dass sich die Position einer Spalte im Raster **Statistikspalten** erheblich auf die Nützlichkeit der Statistiken auswirken kann.  
+6.  Klicken Sie im Dialogfeld **Statistikeigenschaften –** *Name der Statistik* auf der Seite **Allgemein** auf **Hinzufügen**, **Entfernen**, **Nach oben** oder **Nach unten** oder irgendeine Kombination, um die Eigenschaften der Statistiken zu ändern. Beachten Sie, dass sich die Position einer Spalte im Raster **Statistikspalten** erheblich auf die Nützlichkeit der Statistiken auswirken kann.  
   
 7.  Klicken Sie auf **OK**.  
 

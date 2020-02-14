@@ -14,10 +14,10 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947923"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, Benutzerdefinierbar-Objekt
@@ -29,15 +29,15 @@ ms.locfileid: "67947923"
 > [!NOTE]  
 >  Die gespeicherten Benutzerleistungsindikator-Prozeduren werden nicht automatisch vom Systemmonitor abgerufen. Sie müssen explizit von einer Benutzeranwendung ausgeführt werden, damit die Leistungsindikatorwerte aktualisiert werden. Verwenden Sie einen Trigger für das automatische Update des Leistungsindikatorwerts. Wenn Sie z. B. einen Leistungsindikator erstellen möchten, der die Anzahl von Zeilen in einer Tabelle überwacht, erstellen Sie einen INSERT- und DELETE-Trigger für die Tabelle, der folgende Anweisung ausführt: `SELECT COUNT(*) FROM table`. Wenn der Trigger aufgrund einer INSERT- oder DELETE-Operation in der Tabelle ausgelöst wird, wird der Leistungsindikator des Systemmonitors automatisch aktualisiert.  
   
- In dieser Tabelle wird das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Benutzerdefinierbar** beschrieben.  
+ In dieser Tabelle wird das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekt **Benutzerdefinierbar** beschrieben.  
   
-|Benutzerdefinierbar-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Benutzerdefinierbar-Leistungsindikatoren von SQL Server|Beschreibung|  
 |---------------------------------------|-----------------|  
-|**Dataseteigenschaften**|Das **Benutzerdefinierbar** -Objekt enthält den Abfrageleistungsindikator. Die Benutzer konfigurieren die **User counter** innerhalb des Abfrageobjekts.|  
+|**Abfrage**|Das **Benutzerdefinierbar** -Objekt enthält den Abfrageleistungsindikator. Die Benutzer konfigurieren die **User counter** innerhalb des Abfrageobjekts.|  
   
  In dieser Tabelle werden die **Instanzen** des **Abfrage** -Leistungsindikators beschrieben.  
   
-|Instanzen des Abfrageleistungsindikators|und Beschreibung|  
+|Instanzen des Abfrageleistungsindikators|Beschreibung|  
 |-----------------------------|-----------------|  
 |**Benutzerindikator 1**|Definiert mithilfe von **sp_user_counter1**.|  
 |**User counter 2**|Definiert mithilfe von **sp_user_counter2**.|  

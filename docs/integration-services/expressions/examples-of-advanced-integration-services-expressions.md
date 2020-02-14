@@ -16,10 +16,10 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f5643e4e1d900b0c4152a422927a29302f40f952
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297627"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Beispiele für erweiterte SQL Server Integration Services-Ausdrücke
@@ -29,7 +29,7 @@ ms.locfileid: "71297627"
 
   In diesem Abschnitt werden Beispiele für erweiterte Ausdrücke bereitgestellt, die mehrere Operatoren und Funktionen kombinieren. Falls ein Ausdruck in einer Rangfolgeneinschränkung oder der Transformation für bedingtes Teilen verwendet wird, muss er zu einem booleschen Wert ausgewertet werden. Diese Einschränkung gilt jedoch nicht für Ausdrücke, die in Eigenschaftsausdrücken, Variablen, der Transformation für abgeleitete Spalten oder im For-Schleifencontainer verwendet werden.  
   
- In den folgenden Beispiele werden die Datenbanken **AdventureWorks** und [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet. Jedes Beispiel identifiziert die verwendeten Tabellen.  
+ In den folgenden Beispiele werden die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken **AdventureWorks** und [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] verwendet. Jedes Beispiel identifiziert die verwendeten Tabellen.  
   
 ## <a name="boolean-expressions"></a>Boolesche Ausdrücke  
   

@@ -14,19 +14,19 @@ ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 87e612d8b20fc169873d6d8b4356fdb61a8d0311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093430"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, Sperren-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Das **SQLServer:Locks** -Objekt in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sperren für einzelne Ressourcentypen zur Verfügung. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen, wie etwa Zeilen, die während einer Transaktion gelesen oder geändert werden, werden mit Sperren belegt, um die zeitgleiche Verwendung der Ressourcen durch verschiedene Transaktionen zu verhindern. Wenn beispielsweise eine Zeile in einer Tabelle von einer Transaktion mit einer exklusiven Sperre (X) belegt wird, kann diese Zeile erst dann von einer anderen Transaktion geändert werden, wenn die Sperre aufgehoben wird. Durch die Reduzierung der Anzahl von Sperren kann die Parallelität erhöht werden, wodurch sich die Leistung verbessert. Es können mehrere Instanzen des **Sperren** -Objekts gleichzeitig überwacht werden, wobei jede Instanz eine Sperre für einen Ressourcentyp darstellt.  
   
- In dieser Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Sperren** beschrieben.  
+ In dieser Tabelle werden die **Locks**-Zähler in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschrieben.  
   
-|Sperren-Leistungsindikatoren von SQL Server|und Beschreibung|  
+|Sperren-Leistungsindikatoren von SQL Server|Beschreibung|  
 |-------------------------------|-----------------|  
 |**Durchschnittliche Wartezeit (ms)**|Die durchschnittliche Länge der Wartezeit (in Millisekunden) für jede Sperranforderung, die nicht sofort erfüllt werden konnte.|  
 |**Basis für durchschnittliche Wartezeit**|Nur zur internen Verwendung.|
@@ -39,19 +39,19 @@ ms.locfileid: "68093430"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die folgenden Ressourcen sperren.  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |----------|-----------------|  
 |**_Total**|Informationen für alle Sperren.|  
 |**AllocUnit**|Eine Sperre für eine Zuweisungseinheit.|  
-|**Application**|Eine Sperre für eine anwendungsspezifische Ressource.|  
+|**Anwendung**|Eine Sperre für eine anwendungsspezifische Ressource.|  
 |**Datenbank**|Eine Sperre für eine Datenbank, einschließlich aller Objekte in der Datenbank.|  
 |**Extent**|Eine Sperre für eine zusammenhängende Gruppe von 8 Seiten.|  
 |**File**|Eine Sperre für eine Datenbankdatei.|  
 |**Heap/BTree**|Heap oder BTree (HOBT). Eine Sperre für einen Heap von Datenseiten oder für die BTree-Struktur eines Indexes.|  
-|**Key**|Eine Sperre für eine Zeile in einem Index.|  
+|**Schlüssel**|Eine Sperre für eine Zeile in einem Index.|  
 |**Metadaten**|Eine Sperre für eine Kataloginformationskomponente, die auch als Metadaten bezeichnet wird.|  
-|**Objekt**|Eine Sperre für eine Tabelle, gespeicherte Prozedur, Sicht usw., einschließlich aller Daten und Indizes. Hierbei kann es sich um ein beliebiges Objekt handeln, das einen Eintrag in **sys.all_objects**aufweist.|  
-|**Page**|Eine Sperre für eine 8-KB-Seite in einer Datenbank.|  
+|**Object**|Eine Sperre für eine Tabelle, gespeicherte Prozedur, Sicht usw., einschließlich aller Daten und Indizes. Hierbei kann es sich um ein beliebiges Objekt handeln, das einen Eintrag in **sys.all_objects**aufweist.|  
+|**Seite**|Eine Sperre für eine 8-KB-Seite in einer Datenbank.|  
 |**RID**|Zeilen-ID. Eine Sperre für eine einzelne Zeile in einem Heap.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

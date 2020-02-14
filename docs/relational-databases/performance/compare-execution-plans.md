@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: cc42584c6b3f07961e83e53b8b5165243060256f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907665"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910243"
 ---
 # <a name="compare-execution-plans"></a>Vergleichen von Ausführungsplänen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,6 +102,6 @@ Wenn zwei Ausführungspläne verglichen werden, werden Bereiche des Plans, die *
 
     ![Auswählen von zwei Plänen im Abfragespeicher](../../relational-databases/performance/media/plancomparison-querystore.png "Auswählen von zwei Plänen im Abfragespeicher")   
 
-3.  Verwenden Sie die Schaltfläche **Pläne für die ausgewählte Abfrage in einem separaten Fenster vergleichen**, um den Planvergleich zu starten. Führen Sie dann die Schritte 4 bis 6 von *So vergleichen Sie Ausführungspläne* aus. 
+3.  Verwenden Sie die Schaltfläche **Compare the plans for the select query in a separate window** (Pläne für die ausgewählte Abfrage in einem separaten Fenster vergleichen), um den Planvergleich zu starten. Führen Sie dann die Schritte 4 bis 6 von *So vergleichen Sie Ausführungspläne* aus. 
 
     ![Vergleichen des Showplans im Abfragespeicher](../../relational-databases/performance/media/plancomparison-querystoreoption.png "Vergleichen des Showplans im Abfragespeicher") 

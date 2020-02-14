@@ -11,10 +11,10 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284359"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Von den SQL Server-Editionen unterstützte Integration Services-Funktionen
@@ -35,14 +35,14 @@ Die neuesten Anmerkungen zu dieser Version und Informationen zu Neuigkeiten find
 
 Die SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zur Verfügung.  
     
-> [![Download aus dem Evaluation Center](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
+> [![Download aus dem Evaluation Center](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Laden Sie SQL Server 2016 aus dem Evaluation Center herunter.](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
 ## <a name="ISNew"></a> Neue Integration Services-Funktionen in SQL Server 2017
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Scale Out-Master|Ja|||||
-|Scale Out-Worker|Ja|Ja <sup>1</sup>|TBD|TBD|TBD|
+|Scale Out-Worker|Ja|Ja<sup>1</sup>|TBD|TBD|TBD|
 |Unterstützung für Microsoft Dynamics AX und Microsoft Dynamics CRM in OData-Komponenten <sup>2</sup>|Ja|Ja||||
 
 <sup>1</sup> Wenn Sie Pakete ausführen, für die nur Enterprise-Funktionen in Scale Out erforderlich ist, müssen die Scale Out-Worker ebenfalls auf Instanzen von SQL Server Enterprise ausgeführt werden.

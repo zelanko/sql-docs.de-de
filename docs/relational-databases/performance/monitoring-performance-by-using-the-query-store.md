@@ -15,10 +15,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909308"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
@@ -111,7 +111,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> Verwenden der Funktion „Rückläufige Abfragen“  
 Aktualisieren Sie nach der Aktivierung des Abfragespeichers den Datenbankbereich im Objekt-Explorer-Bereich, um den Abschnitt **Abfragespeicher** hinzuzufügen.  
   
-![SQL Server 2016: Abfragespeicherstruktur im Objekt-Explorer in SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016: Abfragespeicherstruktur im Objekt-Explorer in SSMS")   ![SQL Server 2017: Abfragespeicherstruktur im Objekt-Explorer in SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017: Abfragespeicherstruktur im Objekt-Explorer in SSMS") 
+![SQL Server 2016: Abfragespeicherstruktur im Objekt-Explorer in SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016: Abfragespeicherstruktur im Objekt-Explorer in SSMS") ![SQL Server 2017: Abfragespeicherstruktur im Objekt-Explorer in SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017: Abfragespeicherstruktur im Objekt-Explorer in SSMS") 
   
 Wählen Sie **Zurückgestellte Abfragen** aus, um den Bereich **Zurückgestellte Abfragen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu öffnen. Im Bereich „Regressed Queries“ werden die Abfragen und Pläne im Abfragespeicher angezeigt. Verwenden Sie die Dropdownfelder im oberen Bereich, um Abfragen anhand verschiedener Kriterien zu filtern: **Dauer (ms)** (Standard), CPU-Zeit (ms), Logische Lesevorgänge (KB), Logische Schreibvorgänge (KB), Physische Lesevorgänge (KB), CLR-Zeit (ms), DOP, Arbeitsspeicherverbrauch (KB), Zeilenanzahl, Verwendeter Protokollspeicher (KB), Verwendeter temporärer DB-Speicher (KB) und Wartezeit (ms).  
 Wählen Sie einen Plan aus, um die grafische Darstellung des Abfrageplans anzuzeigen. Schaltflächen stehen zur Verfügung, um die Quellabfrage anzuzeigen, einen Abfrageplan zu erzwingen bzw. seine Erzwingung aufzuheben, zwischen Raster- und Diagrammformaten umzuschalten, ausgewählte Pläne zu vergleichen (wenn mehrere Pläne ausgewählt sind) und die Anzeige zu aktualisieren.  
@@ -142,9 +142,9 @@ Im folgenden finden Sie einige Beispiele, wie Sie ausführlicheren Einblick in I
 |||| 
 |-|-|-|  
 |Frühere Erfahrung|Neue Erfahrung|Aktion|
-|Lange Wartezustände von RESOURCE_SEMAPHORE pro Datenbank|Lange Speicherwartezustände im Abfragespeicher für bestimmte Abfragen|Machen Sie die Abfragen im Abfragespeicher ausfindig, die am meisten Speicher nutzen. Es liegt wahrscheinlich an diesen Abfragen, dass der Fortschritt der betroffen Abfragen verzögert wird. Ziehen Sie in Betracht, den Abfragehinweis „MAX_GRANT_PERCENT“ für diese Abfragen oder für die betroffene Abfrage zu verwenden.|
-|Lange Wartezustände von LCK_M_X pro Datenbank|Lange Sperrwartezustände im Abfragespeicher für bestimmte Abfragen|Überprüfen Sie die Abfragetexte der betroffenen Abfragen, und identifizieren Sie die Zielentitäten. Suchen Sie im Abfragespeicher nach anderen Abfragen, die die gleiche Entität modifizieren und die häufig ausgeführt werden bzw. oder eine lange Dauer haben. Nachdem Sie diese Abfragen identifiziert haben, denken Sie darüber nach, die Anwendungslogik zu ändern, um die Parallelität zu verbessern, oder verwenden Sie eine weniger einschränkende Transaktionsisolationsstufe.|
-|Lange Wartezustände von PAGEIOLATCH_SH pro Datenbank|Lange Wartezustände der Puffer-E/A im Abfragespeicher für bestimmte Abfragen|Suchen Sie im Abfragespeicher nach Abfragen mit einer hohen Zahl an physische Lesevorgängen. Wenn Sie mit den Abfragen mit langen E/A-Wartezuständen übereinstimmen, denken Sie darüber nach, einen Index auf der zugrunde liegenden Entität einzufügen, damit Suchvorgänge statt Scanvorgängen durchgeführt werden und damit der E/A-Aufwand der Abfragen gesenkt wird.|
+|Lange Wartezustände von RESOURCE_SEMAPHORE pro Datenbank|Lange Speicherwartezustände im Abfragespeicher für bestimmte Abfragen|Suchen Sie die im Abfragespeicher die speicherintensivsten Abfragen. Diese Abfragen verzögern wahrscheinlich zusätzlich den Fortschritt der betroffen Abfragen. Ziehen Sie in Betracht, den Abfragehinweis „MAX_GRANT_PERCENT“ für diese Abfragen oder für die betroffene Abfrage zu verwenden.|
+|Lange Wartezustände von LCK_M_X pro Datenbank|Lange Sperrwartezustände im Abfragespeicher für bestimmte Abfragen|Überprüfen Sie die Abfragetexte der betroffenen Abfragen, und identifizieren Sie die Zielentitäten. Suchen Sie im Abfragespeicher nach anderen Abfragen, die die gleiche Entität modifizieren und die häufig ausgeführt werden bzw. oder eine lange Dauer haben. Nachdem Sie diese Abfragen ermittelt haben, ändern Sie ggf. die Anwendungslogik, um die Parallelität zu verbessern, oder verwenden Sie eine weniger restriktive Isolationsstufe.|
+|Lange Wartezustände von PAGEIOLATCH_SH pro Datenbank|Lange Wartezustände der Puffer-E/A im Abfragespeicher für bestimmte Abfragen|Suchen Sie die Abfragen mit einer hohen Anzahl an physischen Lesevorgängen im Abfragespeicher. Wenn Sie mit den Abfragen mit langen E/A-Wartezuständen übereinstimmen, denken Sie darüber nach, einen Index auf der zugrunde liegenden Entität einzufügen, damit Suchvorgänge statt Scanvorgängen durchgeführt werden und damit der E/A-Aufwand der Abfragen gesenkt wird.|
 |Lange Wartezustände von SOS_SCHEDULER_YIELD pro Datenbank|Lange CPU-Wartezustände im Abfragespeicher für bestimmte Abfragen|Machen Sie die Abfragen im Abfragespeicher ausfindig, die am meisten CPU nutzen. Bestimmen Sie dann, welche dieser Abfragen sowohl eine hohe CPU-Auslastung als auch lange CPU-Wartezustände für die betroffenen Abfragen aufweisen. Konzentrieren Sie sich darauf, diese Abfragen zu optimieren: möglicherweise gibt es eine Planregression, oder es fehlt ein Index.|
 
 ##  <a name="Options"></a> Konfigurationsoptionen 
@@ -335,7 +335,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  Sie können eine eigene Prozedur mit abweichender Logik für das Bereinigen von Daten definieren, die Sie nicht mehr benötigen.  
   
- Im Beispiel oben wird die erweiterte gespeicherte Prozedur **sp_query_store_remove_query** verwendet, um nicht benötigte Daten zu entfernen. Sie können auch folgenden Prozeduren verwenden:  
+ Im Beispiel oben wird die erweiterte gespeicherte Prozedur **sp_query_store_remove_query** verwendet, um nicht benötigte Daten zu entfernen. Sie können auch Folgendes verwenden:  
   
 -   **sp_query_store_reset_exec_stats**, um Laufzeitstatistiken für einen bestimmten Plan zu löschen.  
 -   **sp_query_store_remove_plan**, um einen einzelnen Plan zu entfernen.  
@@ -618,5 +618,5 @@ EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
  [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)   
  [Aktivitätsmonitor](../../relational-databases/performance-monitor/activity-monitor.md)   
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)  
- [Betrieb des Abfragespeichers in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/) 
+ [Verwenden des Abfragespeichers in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/) 
   

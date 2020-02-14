@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73530931"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE-Anweisungen (Transact-SQL)
@@ -63,7 +63,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 ||||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -301,7 +301,7 @@ Die folgenden Schlüsselwörter werden in [!INCLUDE[ssKatmai](../../includes/ssk
 |Nicht mehr unterstütztes Schlüsselwort|Ersetzt durch...|Beispiel für Ersetzungsschlüsselwort|
 |--------------------------|------------------|------------------------------------|
 |LOAD|RESTORE|`RESTORE DATABASE`|
-|TRANSACTION|LOG|`RESTORE LOG`|
+|TRANSACTION|PROTOKOLL|`RESTORE LOG`|
 |DBO_ONLY|RESTRICTED_USER|`RESTORE DATABASE ... WITH RESTRICTED_USER`|
 
 ### <a name="restore-log"></a>RESTORE LOG
@@ -420,7 +420,7 @@ Die Wiederherstellung wird unter folgenden Bedingungen nicht unterstützt:
 
 Weitere Informationen finden Sie unter [Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md).
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 Bei einem Sicherungsvorgang können optional Kennwörter für einen Mediensatz, einen Sicherungssatz oder für beides angegeben werden. Wurde ein Kennwort für einen Mediensatz oder Sicherungssatz definiert, müssen die richtigen Kennwörter in der RESTORE-Anweisung angegeben werden. Über diese Kennwörter werden nicht autorisierte Wiederherstellungsoptionen und unbefugtes Anfügen von Sicherungssätzen an Medien mithilfe der Tools von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhindert. Kennwortgeschützte Medien können nicht mit der Option FORMAT der BACKUP-Anweisung überschrieben werden.
 
 > [!IMPORTANT]
@@ -443,7 +443,7 @@ Die Beispiele zu RESTORE schließen Folgendes ein:
 - A. [Wiederherstellen einer vollständigen Datenbank](#restoring_full_db)
 - B. [Wiederherstellung von vollständigen und von differenziellen Datenbanksicherungen](#restoring_full_n_differential_db_backups)
 - C. [Wiederherstellen einer Datenbank mit der RESTART-Syntax](#restoring_db_using_RESTART)
-- D. [Wiederherstellen einer Datenbank und Verschieben von Dateien](#restoring_db_n_move_files)
+- D: [Wiederherstellen einer Datenbank und Verschieben von Dateien](#restoring_db_n_move_files)
 - E. [Kopieren einer Datenbank mithilfe von BACKUP und RESTORE](#copying_db_using_bnr)
 - F. [Wiederherstellen eines bestimmten Zeitpunkts mithilfe von STOPAT](#restoring_to_pit_using_STOPAT)
 - G. [Wiederherstellen eines Transaktionsprotokolls bis zu einer Markierung](#restoring_transaction_log_to_mark)
@@ -735,7 +735,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL-Datenbank – Verwaltete Instanz
 
 Über diesen Befehl können Sie eine komplette Datenbank aus einer vollständigen Datenbanksicherung in einem Azure Blob Storage-Konto wiederherstellen (vollständige Wiederherstellung).
 
@@ -876,7 +876,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 ## <a name="analytics-platform-system"></a>Analyseplattformsystem
 
-Wiederherstellen einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Benutzerdatenbank von einer Datenbanksicherung auf einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Appliance. Die Datenbank wird von einer Sicherung wiederhergestellt, die zuvor mithilfe des [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Befehls [BACKUP DATABASE – Analytics Platform System](../../t-sql/statements/backup-transact-sql.md) erstellt wurde. Mit BACKUP- und RESTORE-Vorgängen können Sie einen Notfallwiederherstellungsplan erstellen oder Datenbanken von einer Appliance zur anderen verschieben.
+Wiederherstellen einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Benutzerdatenbank von einer Datenbanksicherung auf einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Appliance. Die Datenbank wird anhand einer Sicherung wiederhergestellt, die zuvor mithilfe des [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Befehls [BACKUP DATABASE – Analytics Platform System](../../t-sql/statements/backup-transact-sql.md) erstellt wurde. Mit BACKUP- und RESTORE-Vorgängen können Sie einen Notfallwiederherstellungsplan erstellen oder Datenbanken von einer Appliance zur anderen verschieben.
 
 > [!NOTE]
 > Zum Wiederherstellen der Masterdatenbank müssen die Anmeldeinformationen der Appliance wiederhergestellt werden. Verwenden Sie zum Wiederherstellen der Masterdatenbank im Tool **Configuration Manager** die Seite [Wiederherstellen der Masterdatenbank](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md). Dieser Vorgang kann von einem Administrator mit Zugriff auf den Steuerknoten ausgeführt werden. Weitere Informationen zu [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbanksicherungen finden Sie unter „Sichern und Wiederherstellen“ in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].

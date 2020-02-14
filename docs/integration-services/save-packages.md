@@ -19,10 +19,10 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295737"
 ---
 # <a name="save-packages"></a>Speichern von Paketen
@@ -47,7 +47,7 @@ ms.locfileid: "71295737"
     >  Sie können den Pfad und den Dateinamen des gespeicherten Pakets im Eigenschaftenfenster überprüfen.  
 
 ## <a name="save-a-copy-of-a-package"></a>Speichern einer Kopie eines Pakets
-  In diesem Verfahren wird beschrieben, wie Sie eine Kopie eines Pakets im Dateisystem, im Paketspeicher oder in der **msdb**-Datenbank in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] speichern. Wenn Sie einen Speicherort zum Speichern der Paketkopie angeben, können Sie auch den Namen des Pakets aktualisieren.  
+  In diesem Abschnitt wird beschrieben, wie Sie eine Kopie eines Pakets im Dateisystem, im Paketspeicher oder in der **msdb**-Datenbank in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] speichern. Wenn Sie einen Speicherort zum Speichern der Paketkopie angeben, können Sie auch den Namen des Pakets aktualisieren.  
   
  Der Paketspeicher kann sowohl die **msdb** -Datenbank als auch die Ordner im Dateisystem, nur **msdb**oder nur Ordner im Dateisystem einschließen. In **msdb**werden Pakete in der **sysssispackages** -Tabelle gespeichert. Diese Tabelle schließt eine **folderid** -Spalte ein, die den logischen Ordner identifiziert, zu dem das Paket gehört. Logische Ordner bieten eine gute Möglichkeit, gespeicherter Pakete in **msdb** auf die gleiche Weise zu gruppieren, in der Ordner im Dateisystem das Gruppieren von im Dateisystem gespeicherten Paketen ermöglichen. Zeilen in der **sysssispackagefolders** -Tabelle in **msdb** definieren die Ordner.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71295737"
   
 2.  Klicken Sie im Menü **Datei** auf **Kopie von \<Paketdatei> speichern unter**.  
   
-3.  Wählen Sie im Dialogfeld **Kopie des Pakets speichern** in der Liste **Paketspeicherort** einen Paketspeicherort aus. Die folgenden Optionen stehen zur Verfügung:  
+3.  Wählen Sie im Dialogfeld **Kopie des Pakets speichern** in der Liste **Paketspeicherort** einen Paketspeicherort aus. Die folgenden Optionen sind verfügbar:  
     -   SQL Server
     -   Dateisystem 
     -   SSIS-Paketspeicher 

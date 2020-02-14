@@ -17,10 +17,10 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc35bb8b31c88cea2d903981e709f4075929ea7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295747"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Laden der Ausgabe eines lokalen Pakets
@@ -36,16 +36,16 @@ ms.locfileid: "71295747"
 > [!NOTE]  
 > Für die in diesem Artikel beschriebene Vorgehensweise müssen die DelayValidation-Eigenschaft des Datenflusstasks und alle übergeordneten Objekte auf den Standardwert **FALSE** festgelegt werden.
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>Beschreibung  
  In dieser Prozedur wird veranschaulicht, wie eine Clientanwendung in verwaltetem Code entwickelt wird, die die Ausgabe eines Pakets mit einem DataReader-Ziel direkt aus dem Arbeitsspeicher lädt. Die hier zusammengefassten Schritte werden in dem folgenden Codebeispiel veranschaulicht.  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>So laden Sie Datenpaketausgabe in eine Clientanwendung  
   
 1.  Konfigurieren Sie in dem Paket ein DataReader-Ziel so, dass die Ausgabe empfangen wird, die in die Clientanwendung gelesen werden soll. Geben Sie dem DataReader-Ziel einen aussagekräftigen Namen, da Sie diesen Namen später in der Clientanwendung verwenden werden. Notieren Sie sich den Namen des DataReader-Ziels.  
   
-2.  Legen Sie in dem Entwicklungsprojekt einen Verweis auf den **Microsoft.SqlServer.Dts.DtsClient**-Namespace fest, indem Sie die Assembly **Microsoft.SqlServer.Dts.DtsClient.dll** suchen. Diese Assembly wird standardmäßig im Verzeichnis **C:\Programme\Microsoft SQL Server\100\DTS\Binn** installiert. Importieren Sie den Namespace mithilfe der C#-Anweisung **Using** oder der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **Imports**-Anweisung in den Code.  
+2.  Legen Sie in dem Entwicklungsprojekt einen Verweis auf den **Microsoft.SqlServer.Dts.DtsClient**-Namespace fest, indem Sie die Assembly **Microsoft.SqlServer.Dts.DtsClient.dll** suchen. Diese Assembly wird standardmäßig im Verzeichnis **C:\Programme\Microsoft SQL Server\100\DTS\Binn** installiert. Importieren Sie den Namespace mithilfe der C#-Anweisung **Using** oder der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Anweisung **Imports** in Ihren Code.  
   
-3.  Erstellen Sie in Ihrem Code ein Objekt vom Typ **DtsClient.DtsConnection** mit einer Verbindungszeichenfolge, die die Befehlszeilenparameter enthält, die **dtexec.exe** zum Ausführen des Pakets benötigt. Weitere Informationen finden Sie unter [dtexec Utility](../../integration-services/packages/dtexec-utility.md). Öffnen Sie dann die Verbindung mit dieser Verbindungszeichenfolge. Sie können auch das **dtexecui**-Hilfsprogramm verwenden, um die erforderliche Verbindungszeichenfolge visuell zu erstellen.  
+3.  Erstellen Sie in Ihrem Code ein Objekt vom Typ **DtsClient.DtsConnection** mit einer Verbindungszeichenfolge, die die Befehlszeilenparameter enthält, die **dtexec.exe** zum Ausführen des Pakets benötigt. Weitere Informationen finden Sie [hier](../../integration-services/packages/dtexec-utility.md). Öffnen Sie dann die Verbindung mit dieser Verbindungszeichenfolge. Sie können auch das **dtexecui**-Hilfsprogramm verwenden, um die erforderliche Verbindungszeichenfolge visuell zu erstellen.  
   
     > [!NOTE]  
     >  Im Beispielcode wird das Laden des Pakets aus dem Dateisystem mithilfe der `/FILE <path and filename>`-Syntax veranschaulicht. Sie können das Paket jedoch auch aus der MSDB-Datenbank mithilfe der `/SQL <package name>`-Syntax oder aus dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket mithilfe der `/DTS \<folder name>\<package name>`-Syntax laden.  

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661214"
 ---
 # <a name="metadata-visibility-configuration"></a>Konfigurieren der Sichtbarkeit von Metadaten
@@ -45,7 +45,7 @@ GO
   
 |||  
 |-|-|  
-|Katalogsichten|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** -Prozeduren|  
+|Katalogansichten|gespeicherte [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Prozeduren **sp_help**|  
 |Metadaten ausgebende integrierte Funktionen|Informationsschemasichten|  
 |Kompatibilitätssichten|Erweiterte Eigenschaften|  
   
@@ -65,7 +65,7 @@ GO
   
 -   Metadaten ausgebende integrierte Funktionen, wie z. B. OBJECTPROPERTYEX, können NULL zurückgeben.  
   
--   Die gespeicherten [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** geben möglicherweise nur eine Teilmenge von Zeilen oder NULL zurück.  
+-   Die gespeicherten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Prozeduren **sp_help** geben möglicherweise nur eine Teilmenge von Zeilen oder NULL zurück.  
   
  SQL-Module, wie z. B. gespeicherte Prozeduren und Trigger, werden im Sicherheitskontext des Aufrufers ausgeführt und haben deshalb einen eingeschränkten Metadatenzugriff. Wenn z. B. im folgenden Code die gespeicherte Prozedur versucht, auf Metadaten aus der Tabelle `myTable` zuzugreifen, für die der Aufrufer keine Berechtigung hat, wird ein leeres Resultset zurückgegeben. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird eine Zeile zurückgegeben.  
   
@@ -79,7 +79,7 @@ END;
 GO  
 ```  
   
- Um Aufrufern das Anzeigen von Metadaten zu ermöglichen, können Sie ihnen die VIEW DEFINITION-Berechtigung für einen geeigneten Gültigkeitsbereich erteilen: für die Objektebene, für die Datenbankebene oder für die Serverebene. Wenn der Aufrufer im vorigen Beispiel über die VIEW DEFINITION-Berechtigung für `myTable` verfügt, gibt die gespeicherte Prozedur eine Zeile zurück. Weitere Informationen finden Sie unter [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md) und [GRANT (Datenbankberechtigungen)&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
+ Um Aufrufern das Anzeigen von Metadaten zu ermöglichen, können Sie ihnen die VIEW DEFINITION-Berechtigung für einen geeigneten Gültigkeitsbereich erteilen: für die Objektebene, für die Datenbankebene oder für die Serverebene. Wenn der Aufrufer im vorigen Beispiel über die VIEW DEFINITION-Berechtigung für `myTable`verfügt, gibt die gespeicherte Prozedur eine Zeile zurück. Weitere Informationen finden Sie unter [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md) und [GRANT (Datenbankberechtigungen)&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
  Sie können die gespeicherte Prozedur auch so ändern, dass sie unter den Anmeldeinformationen des Besitzers ausgeführt wird. Wenn der Besitzer der Prozedur und der Besitzer der Tabelle identisch sind, gilt die Besitzverkettung, und der Sicherheitskontext des Prozedurbesitzers ermöglicht den Zugriff auf die Metadaten von `myTable`. In diesem Szenario gibt der folgende Code eine Zeile aus Metadaten an den Aufrufer zurück.  
   

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68697492"
 ---
 # <a name="data-type-conversion-database-engine"></a>Datentypkonvertierung (Datenbank-Engine)
@@ -56,7 +56,7 @@ Verwenden Sie CAST anstelle von CONVERT, wenn der [!INCLUDE[tsql](../../includes
   
 In der folgenden Abbildung werden alle expliziten und impliziten Datentypkonvertierungen aufgeführt, die für die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-System bereitgestellten Datentypen zulässig sind. Dazu gehören **xml**, **bigint** und **sql_variant**. Es gibt keine implizite Konvertierung bei der Zuweisung vom **sql_variant**-Datentyp, eine implizite Konvertierung zum **sql_variant**-Datentyp findet jedoch statt.
   
-![Konvertierungstabelle für Datentypen](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
+![Konvertierungstabelle für Datentypen](../../t-sql/data-types/media/lrdatahd.png "Konvertierungstabelle für Datentypen")
 
 Das Diagramm oben veranschaulicht zwar alle expliziten und impliziten Konvertierungen, die in SQL Server zulässig sind, gibt aber nicht den sich ergebenden Datentyp der Konvertierung an. Wenn SQL Server eine explizite Konvertierung ausführt, bestimmt die Anweisung selbst den sich ergebenden Datentyp. Bei impliziten Konvertierungen führen Zuweisungsanweisungen wie das Festlegen des Werts einer Variablen oder das Einfügen eines Werts in eine Spalte zu dem Datentyp, der durch die Variablendeklaration oder Spaltendefinition definiert wurde. Bei Vergleichsoperatoren oder anderen Ausdrücken hängt der sich ergebende Datentyp von den Regeln der Datentyprangfolge ab.
 
@@ -116,7 +116,7 @@ In den folgenden Themen wird das Konvertierungsverhalten der entsprechenden Date
  - [uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)  
   
 ###  <a name="converting-data-types-by-using-ole-automation-stored-procedures"></a>Konvertieren von Datentypen mithilfe von gespeicherten Prozeduren der OLE-Automatisierung  
-Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]-Datentypen und die OLE-Automatisierung [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentypen verwendet, müssen die gespeicherten Prozeduren der OLE-Automatisierung übergebene Daten konvertieren.
+Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)]-Datentypen und die OLE-Automatisierung [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentypen verwendet, müssen die gespeicherten Prozeduren der OLE-Automatisierung übergebene Daten konvertieren.
   
 In der folgenden Tabelle werden die Konvertierungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentypen dargestellt.
   
@@ -124,7 +124,7 @@ In der folgenden Tabelle werden die Konvertierungen von [!INCLUDE[ssNoVersion](.
 |--------------------------|----------------------------|  
 |**char**, **varchar**, **text**, **nvarchar**, **ntext**|**String**|  
 |**decimal**, **numeric**|**String**|  
-|**bit**|**Boolean**|  
+|**bit**|**Boolescher Wert**|  
 |**binary**, **varbinary**, **image**|Eindimensionales **Byte()** -Array|  
 |**int**|**Long**|  
 |**smallint**|**Integer**|  
@@ -132,7 +132,7 @@ In der folgenden Tabelle werden die Konvertierungen von [!INCLUDE[ssNoVersion](.
 |**float**|**Double**|  
 |**real**|**Single**|  
 |**money**, **smallmoney**|**Währung**|  
-|**datetime**, **smalldatetime**|**Datum**|  
+|**datetime**, **smalldatetime**|**Date**|  
 |Beliebige auf NULL festgelegte Typen|**Variant** wurde auf NULL festgelegt.|  
   
 Alle einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werte mit Ausnahme der **binary**-, **varbinary**- und **image**-Werte werden in einen einzelnen [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Wert konvertiert. Diese Werte werden in ein eindimensionales **Byte()** -Array in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] konvertiert. Dieses Array weist einen Bereich von **Byte (** 0 bis _length_ 1 **)** auf, wobei *length* der Anzahl von Bytes in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werten **binary**, **varbinary** oder **image** entspricht.
@@ -144,13 +144,13 @@ Im Folgenden sehen Sie die Konvertierungen von [!INCLUDE[vbprvb](../../includes/
 |**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
 |**Double**, **Single**|**float**|  
 |**Währung**|**money**|  
-|**Datum**|**datetime**|  
+|**Date**|**datetime**|  
 |**String** mit maximal 4000 Zeichen|**varchar**/**nvarchar**|  
 |**String** mit mehr als 4000 Zeichen|**text**/**ntext**|  
 |Eindimensionales **Byte()** -Array mit maximal 8000 Byte|**varbinary**|  
 |Eindimensionales **Byte()** -Array mit mehr als 8000 Byte|**image**|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Gespeicherte OLE-Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
