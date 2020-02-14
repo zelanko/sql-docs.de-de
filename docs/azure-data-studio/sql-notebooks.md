@@ -11,10 +11,10 @@ ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
 ms.openlocfilehash: df1e49af0378b6af4a3d82b5a5ec2a4293be5e35
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957084"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Verwenden von Notebooks in Azure Data Studio
@@ -82,7 +82,7 @@ Nachdem die Installation erfolgreich abgeschlossen wurde, werden unter „Task H
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
-|Kernel|BESCHREIBUNG
+|Kernel|Beschreibung
 |:-----|:-----
 | SQL-Kernel | Schreiben Sie SQL-Code für Ihre relationale Datenbank.
 |PySpark3- und PySpark-Kernel| Schreiben Sie Python-Code mithilfe von Spark-Computing aus dem Cluster.
@@ -119,7 +119,7 @@ Wenn Sie ein Notebook aus einer anderen Quelle öffnen, wird es im Modus **, Nic
 
 ### <a name="save"></a>Speichern 
 
-Sie können das Notebook durch Drücken von **STRG+S** oder durch Klicken auf die Befehle **Speichern**, **Speichern unter** und **Alles speichern** im Menü „Datei“ und auf die in der Befehlspalette eingegebenen Befehle zum **Speichern** speichern.
+Sie können das Notebook durch Drücken von **STRG+S** oder durch Klicken auf die Befehle **Speichern**, **Speichern unter** und **Alles speichern** im Menü „Datei“ und auf die in der Befehlspalette eingegebenen **Befehle zum Speichern** speichern.
 
 ### <a name="pyspark3pyspark-kernel"></a>Pyspark3/PySpark-Kernel
 
