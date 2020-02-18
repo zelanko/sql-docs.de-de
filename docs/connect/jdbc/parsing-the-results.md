@@ -1,5 +1,5 @@
 ---
-title: Ergebnisse werden verarbeitet | Microsoft-Dokumentation
+title: Analysieren der Ergebnisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,23 +12,23 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ms.openlocfilehash: 127c97ec155ef1e19df4103b12a6e10b8b67fe74
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027864"
 ---
 # <a name="parsing-the-results"></a>Analysieren der Ergebnisse
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-In diesem Artikel wird beschrieben, wie SQL Server erwartet, dass Benutzer von einer beliebigen Abfrage zurückgegebene Ergebnisse vollständig verarbeiten.
+In diesem Artikel wird beschrieben, wie die in einer SQL Server-Abfrage zurückgegebenen Ergebnisse von Benutzern verarbeitet werden sollten.
 
-## <a name="update-counts-and-result-sets"></a>Aktualisieren von Zählungen und Resultsets
+## <a name="update-counts-and-result-sets"></a>Anzahl von Updates und Resultsets
 
-In diesem Abschnitt werden die beiden häufigsten Ergebnisse erläutert, die von SQL Server: Update count und Resultset zurückgegeben werden. Im Allgemeinen führt jede von einem Benutzer ausgeführte Abfrage dazu, dass eines dieser Ergebnisse zurückgegeben wird. Benutzer werden davon ausgehen, beide bei der Verarbeitung von Ergebnissen zu verarbeiten.
+In diesem Abschnitt werden die beiden häufigsten Ergebnisse erläutert, die von SQL Server zurückgegeben werden: Anzahl von Updates und Resultsets. Im Allgemeinen führt jede von einem Benutzer ausgeführte Abfrage dazu, dass eines dieser Ergebnisse zurückgegeben wird. Es wird davon ausgegangen, dass Benutzer beide verarbeiten, wenn sie die Ergebnisse untersuchen.
 
-Der folgende Code ist ein Beispiel dafür, wie ein Benutzer alle Ergebnisse vom Server durchlaufen kann:
+Der folgende Code ist ein Beispiel dafür, wie ein Benutzer alle Ergebnisse des Servers durchlaufen kann:
 ```java
 try (Connection connection = DriverManager.getConnection(URL); Statement statement = connection.createStatement()) {
     boolean resultsAvailable = statement.execute(USER_SQL);
@@ -48,7 +48,7 @@ try (Connection connection = DriverManager.getConnection(URL); Statement stateme
 ```
 
 ## <a name="exceptions"></a>Ausnahmen
-Wenn Sie eine Anweisung ausführen, die zu einem Fehler oder einer Informations Meldung führt, reagieren SQL Server abhängig davon, ob ein Ausführungsplan generiert werden kann, unterschiedlich. Die Fehlermeldung kann sofort nach der Ausführung der Anweisung ausgelöst werden, da Sie möglicherweise ein separates Resultset erfordert. Im letzteren Fall müssen die Anwendungen das Resultset analysieren, um die Ausnahme abzurufen.
+Wenn Sie eine Anweisung ausführen, die zu einem Fehler oder einer Informationsmeldung führt, reagiert SQL Server unterschiedlich. Die Reaktion hängt in diesem Fall davon ab, ob ein Ausführungsplan generiert werden kann oder nicht. Die Fehlermeldung kann unmittelbar nach der Ausführung der Anweisung angezeigt werden, oder es kann ein separates Resultset erforderlich sein. Im letzteren Fall müssen die Anwendungen das Resultset analysieren, um die Ausnahme abzurufen.
 
 Wenn SQL Server keinen Ausführungsplan generieren kann, wird die Ausnahme sofort ausgelöst.
 
@@ -78,7 +78,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-Wenn bei der Anweisungs Ausführung mehrere Resultsets generiert werden, muss jedes Resultset verarbeitet werden, bis das mit der Ausnahme erreicht wird.
+Wenn bei der Ausführung einer Anweisung mehrere Resultsets generiert werden, muss jedes Resultset verarbeitet werden, bis das Resultset mit der Ausnahme erreicht wird.
 
 ```java
 String SQL = "SELECT 1; SELECT * FROM nonexistentTable;";
@@ -99,9 +99,9 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-Im Fall von `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`wird die Ausnahme `execute()` sofort ausgelöst und `SELECT 1` überhaupt nicht ausgeführt.
+Im Fall von `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";` wird die Ausnahme unmittelbar bei `execute()` ausgelöst, und `SELECT 1` wird nicht mehr ausgeführt.
 
-Wenn der Fehler von SQL Server den Schweregrad `0` `9`hat, wird er als Informations Meldung betrachtet und als `SQLWarning`zurückgegeben.
+Wenn der von SQL Server zurückgegebene Fehler den Schweregrad `0` bis `9` aufweist, wird er als Informationsmeldung betrachtet und als `SQLWarning` zurückgegeben.
 
 ```java
 String SQL = "RAISERROR ('WarningLevel5', 5, 2);";
@@ -112,6 +112,6 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)

@@ -1,5 +1,5 @@
 ---
-title: Using sql_variant Data Type | Microsoft-Dokumentation
+title: Verwenden des Sql_variant-Datentyps | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,26 +11,26 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025841"
 ---
 # <a name="using-sql_variant-data-type"></a>Verwenden des Sql_variant-Datentyps
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Ab Version 6.3.0 unterstützt der JDBC-Treiber den sql_variant-Datentyp. Sql_variant wird auch unterstützt, wenn Features wie Tabellenwert Parameter und bulkcopy mit einigen Einschränkungen weiter unten auf dieser Seite verwendet werden. Nicht alle Datentypen können im sql_variant-Datentyp gespeichert werden. Eine Liste der unterstützten Datentypen mit sql_variant finden Sie in den [SQL Server](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)-Dokumentation.
+Ab Version 6.3.0 unterstützt der JDBC-Treiber den Datentyp sql_variant. Sql_variant wird bei Verwendung von Features wie Tabellenwertparametern und BulkCopy ebenfalls unterstützt, allerdings gelten in diesem Fall einige Einschränkungen, die später in diesem Artikel erläutert werden. Nicht alle Datentypen können im sql_variant-Datentyp gespeichert werden. Eine Liste der unterstützten Datentypen, die mit sql_variant verwendet werden können, finden Sie in der SQL Server-[Dokumentation](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql).
 
 ##  <a name="populating-and-retrieving-a-table"></a>Auffüllen und Abrufen einer Tabelle:
-Angenommen, eine Tabelle enthält eine Tabelle mit einer sql_variant-Spalte wie:
+Angenommen, eine Tabelle enthält eine sql_variant-Spalte wie diese:
 
 ```sql
 CREATE TABLE sampleTable (col1 sql_variant)  
 ```
 
-Ein Beispielskript zum Einfügen von Werten mithilfe der-Anweisung:
+Nachfolgend ist ein Beispielskript zum Einfügen von Werten mithilfe einer Anweisung gezeigt:
 
 ```java
 try (Statement stmt = connection.createStatement()){
@@ -38,7 +38,7 @@ try (Statement stmt = connection.createStatement()){
 }
 ```
 
-Einfügen von Werten mithilfe der vorbereiteten Anweisung:
+So fügen Sie Werte mit einer vorbereiteten Anweisung ein:
 
 ```java
 try (PreparedStatement preparedStatement = con.prepareStatement("insert into sampleTable values (?)")) {
@@ -47,7 +47,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into sam
 }
 ```      
 
-Wenn der zugrunde liegende Typ der zu über gebenden Daten bekannt ist, kann der entsprechende Setter verwendet werden. Kann beispielsweise `preparedStatement.setInt()` verwendet werden, wenn ein ganzzahliger Wert eingefügt wird.
+Wenn der zugrunde liegende Typ der Daten, die übergeben werden, bekannt ist, kann der entsprechende Setter verwendet werden. Beispiel: Beim Einfügen eines ganzzahligen Werts kann `preparedStatement.setInt()` verwendet werden.
 
 ```java
 try (PreparedStatement preparedStatement = con.prepareStatement("insert into table values (?)")) {
@@ -56,7 +56,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into tab
 }
 ```
 
-Zum Lesen von Werten aus der Tabelle können die entsprechenden Getter verwendet werden. Beispielsweise können `getInt()` - `getString()` oder-Methoden verwendet werden, wenn die vom Server kommenden Werte bekannt sind:    
+Um Werte aus der Tabelle zu lesen, können die entsprechenden Getter verwendet werden. Wenn die vom Server empfangenen Werte bekannt sind, kann z.B. die Methode `getInt()` oder `getString()` verwendet werden:    
 
 ```java
 try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("select * from sampleTable ")) {
@@ -66,7 +66,7 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 ```
 
 ## <a name="using-stored-procedures-with-sql_variant"></a>Verwenden von gespeicherten Prozeduren mit sql_variant:   
-Eine gespeicherte Prozedur wie z. b.:     
+Gehen wir von folgender gespeicherter Prozedur aus:     
 
 ```java
 String sql = "CREATE PROCEDURE " + inputProc + " @p0 sql_variant OUTPUT AS SELECT TOP 1 @p0=col1 FROM sampleTable ";
@@ -82,16 +82,16 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 ```
 
 ## <a name="limitations-of-sql_variant"></a>Einschränkungen von sql_variant:
-- Bei Verwendung von TVP zum Auffüllen einer Tabelle mit einem `datetime` `smalldatetime` `getSmallDateTime()` / `getDateTime()` / `date` / Wert, der in einem sql_variant gespeichert ist, wird beim Aufrufen / `getDate()` von für einen Resultset funktioniert nicht und löst die folgende Ausnahme aus:
+- Bei Verwendung von Tabellenwertparametern zum Auffüllen einer Tabelle mit einem Wert `datetime`/`smalldatetime`/`date`, der in einem sql_variant-Datentyp gespeichert ist, kann `getDateTime()`/`getSmallDateTime()`/`getDate()` nicht für ein Resultset aufgerufen werden. Der Vorgang wird mit folgender Ausnahme abgebrochen:
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
    
-    Problem Umgehung: `getString()` verwenden `getObject()` Sie stattdessen oder. 
+    Problemumgehung: Verwenden Sie stattdessen `getString()` oder `getObject()`. 
     
-- Die Verwendung von TVP zum Auffüllen einer Tabelle und das Senden eines NULL-Werts in einem sql_variant-Objekt wird nicht unterstützt und löst eine Ausnahme aus:
+- Das Verwenden von Tabellenwertparametern und Senden eines NULL-Werts in einem sql_variant-Datentyp wird nicht unterstützt. Der Vorgang wird mit folgender Ausnahme abgebrochen:
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

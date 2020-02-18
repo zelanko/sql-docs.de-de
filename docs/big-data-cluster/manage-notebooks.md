@@ -1,20 +1,21 @@
 ---
-title: Verwalten von SQL Server-Big Data-Clustern mit Azure Data Studio-Notebooks
-titleSuffix: Manage SQL Server Big Data Clusters with Azure Data Studio notebooks
+title: 'Verwalten: Azure Data Studio-Notebooks'
+titleSuffix: SQL Server Big Data Clusters
 description: Verwenden Sie ein Notebook aus Azure Data Studio, um einen Big Data-Cluster zu verwalten und Probleme für ihn zu beheben.
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
-ms.date: 09/09/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 860524daa5e6ab2db17fdf95cf5aa785aeb4fdf7
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: d2a051e297b48ed8d813fce0e0e8ffa748a84d16
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844290"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252012"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Verwalten von SQL Server-Big Data-Clustern mit Azure Data Studio-Notebooks
 
@@ -39,7 +40,7 @@ Zusätzlich zu diesen Voraussetzungen benötigen Sie für die Bereitstellung von
 
 * [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
-* [Azure CLI](/cli/azure/install-azure-cli)
+* [Azure-Befehlszeilenschnittstelle](/cli/azure/install-azure-cli)
 
 ## <a name="access-troubleshooting-notebooks"></a>Zugriff auf Notebooks zur Problembehandlung
 Es gibt drei Möglichkeiten, um auf Notebooks zur Problembehandlung zuzugreifen.

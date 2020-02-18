@@ -12,33 +12,33 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 76c314159faf15e63bf77b17a8a45abf217b205c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265153"
 ---
-# <a name="formatting-decimal-strings-and-money-values-pdosqlsrv-driver"></a>Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)
+# <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Um die Genauigkeit beizubehalten, werden [dezimale oder numerische Typen](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) immer als Zeichen folgen mit exakten Spezifikationen und Skalen abgerufen. Wenn ein Wert kleiner als 1 ist, fehlt die führende Null. Das gleiche gilt für die Felder "Money" und "smallmoney", da es sich um Dezimal Felder mit einer festgelegten Skala von 4 handelt.
+Für maximale Genauigkeit werden [Dezimal- oder numerische Typen](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) immer als Zeichenfolgen mit der exakten Anzahl von Zeichen und Dezimalzeichen abgerufen. Wenn ein Wert geringer als 1 ist, fehlt die führende Null. Gleiches gilt für die Felder „money“ und „smallmoney“, da es sich um Dezimalfelder mit einer festen Anzahl von Dezimalzeichen (4) handelt.
 
-## <a name="add-leading-zeroes-if-missing"></a>Vorangehende Nullen hinzufügen, wenn Sie fehlen
-Ab Version 5.6.0 ermöglicht das Verbindungs-oder Anweisungs `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` Attribut dem Benutzer das Formatieren von Dezimalzeichen folgen. Dieses Attribut erwartet einen booleschen Wert (true oder false) und wirkt sich nur auf die Formatierung der Dezimal-oder numerischen Werte in den abgerufenen Ergebnissen aus. Mit anderen Worten: dieses Attribut hat keine Auswirkung auf andere Vorgänge wie einfügen oder aktualisieren.
+## <a name="add-leading-zeroes-if-missing"></a>Hinzufügen von fehlenden führenden Nullen
+Ab Version 5.6.0 können Benutzer Dezimalzeichenfolgen über das Verbindungs- oder Anweisungsattribut `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` formatieren. Dieses Attribut wird mit einem booleschen Wert (true oder false) verwendet und wirkt sich ausschließlich auf die Formatierung der Dezimal- oder numerischen Werte in den abgerufenen Ergebnissen aus. Mit anderen Worten, es hat keine Auswirkungen auf andere Vorgänge wie beispielsweise Einfüge- oder Aktualisierungsvorgänge.
 
-Standardmäßig ist `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` **false**. Wenn diese Einstellung auf "true" festgelegt ist, werden die führenden Nullen zu dezimalen Zeichen folgen für einen beliebigen Dezimalwert kleiner als 1 hinzugefügt.
+Standardmäßig ist `PDO::SQLSRV_ATTR_FORMAT_DECIMALS`**false**. Bei Festlegung auf „true“ werden führende Nullen zu Dezimalzeichenfolgen hinzugefügt, wenn der Dezimalwert geringer als 1 ist.
 
-## <a name="configure-number-of-decimal-places"></a>Anzahl von Dezimalstellen konfigurieren
-Wenn aktiviert ist, ermöglicht das andere Verbindungs-oder `PDO::SQLSRV_ATTR_DECIMAL_PLACES`Anweisungs Attribut Benutzern das Konfigurieren der Anzahl von Dezimalstellen, wenn Money-und smallmoney-Daten angezeigt werden. `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` Sie akzeptiert ganzzahlige Werte im Bereich von [0, 4], und die Rundung kann auftreten, wenn Sie angezeigt wird. Die zugrunde liegenden Money-Daten bleiben jedoch unverändert.
+## <a name="configure-number-of-decimal-places"></a>Konfigurieren der Anzahl von Dezimalstellen
+Wenn `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` aktiviert ist, können Benutzer das Verbindungs- oder Anweisungsattribut `PDO::SQLSRV_ATTR_DECIMAL_PLACES` verwenden, um die Anzahl von Dezimalstellen bei money- und smallmoney-Daten zu konfigurieren. Für dieses Attribut können ganzzahlige Werte von 0-4 angegeben werden. Bei der Anzeige werden die Werte möglicherweise gerundet. Die zugrunde liegenden money-Daten werden jedoch nicht geändert.
 
-Die Anweisungs Attribute überschreiben immer die entsprechenden Verbindungseinstellungen. Beachten Sie, `PDO::SQLSRV_ATTR_DECIMAL_PLACES` dass die Option **nur** die Money- `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` Daten betrifft und auf true festgelegt werden muss. Andernfalls wird die Formatierung unabhängig von der `PDO::SQLSRV_ATTR_DECIMAL_PLACES` -Einstellung deaktiviert.
+Anweisungsattribute setzen die entsprechenden Verbindungseinstellungen stets außer Kraft. Beachten Sie, dass sich die Option `PDO::SQLSRV_ATTR_DECIMAL_PLACES` **ausschließlich** auf money-Daten auswirkt und `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` auf „true“ festgelegt sein muss. Anderenfalls ist die Formatierung unabhängig von der Einstellung `PDO::SQLSRV_ATTR_DECIMAL_PLACES` deaktiviert.
 
 > [!NOTE]
-> Da die Felder Money oder smallmoney den Wert 4 haben `PDO::SQLSRV_ATTR_DECIMAL_PLACES` , wird das Festlegen von auf eine negative Zahl oder auf einen Wert größer als 4 ignoriert. Es wird nicht empfohlen, als Eingaben in eine beliebige Berechnung formatierte Money-Daten zu verwenden.
+> Da die Felder „money“ und „smallmoney“ über 4 Dezimalzeichen verfügen, wird `PDO::SQLSRV_ATTR_DECIMAL_PLACES` ignoriert, wenn ein negativer Wert oder ein höherer Wert als 4 festgelegt wird. Es wird nicht empfohlen, formatierte money-Daten als Eingabe für Berechnungen zu verwenden.
 
-### <a name="to-set-the-connection-attributes"></a>So legen Sie die Verbindungs Attribute fest
+### <a name="to-set-the-connection-attributes"></a>Festlegen der Verbindungsattribute
 
--   Legen Sie die Attribute zum Verbindungspunkt fest:
+-   So legen Sie Attribute für den Verbindungspunkt fest:
 
     ```php
     $attrs = array(PDO::SQLSRV_ATTR_FORMAT_DECIMALS => true,
@@ -47,7 +47,7 @@ Die Anweisungs Attribute überschreiben immer die entsprechenden Verbindungseins
     $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password, $attrs);
     ```
 
--   Attribute nach der Verbindung festlegen:
+-   So legen Sie Attribute nach der Verbindung fest:
 
     ```php
     $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password);
@@ -55,8 +55,8 @@ Die Anweisungs Attribute überschreiben immer die entsprechenden Verbindungseins
     $conn->setAttribute(PDO::SQLSRV_ATTR_DECIMAL_PLACES, 2);
     ```
 
-## <a name="example---format-money-data"></a>Beispiel: Formatieren von Money-Daten
-Das folgende Beispiel zeigt, wie Sie mit [PDOStatement:: bindColumn](../../connect/php/pdostatement-bindcolumn.md)Money-Daten abrufen:
+## <a name="example---format-money-data"></a>Beispiel: Formatieren von money-Daten
+Das folgende Beispiel zeigt, wie money-Daten mithilfe von [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md) abgerufen werden:
 
 ```php
 <?php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---override-connection-attributes"></a>Beispiel: Überschreiben von Verbindungs Attributen
-Im folgenden Beispiel wird gezeigt, wie die Verbindungs Attribute überschrieben werden:
+## <a name="example---override-connection-attributes"></a>Beispiel: Außerkraftsetzung von Verbindungsattributen
+Das folgende Beispiel zeigt, wie Sie die Verbindungsattribute außer Kraft setzen:
 
 ```php
 <?php

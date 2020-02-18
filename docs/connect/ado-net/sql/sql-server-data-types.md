@@ -7,57 +7,57 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 12ad13d6788ae2b8995289100883b06c5ab6d7c6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 46edb611f29c447f7e1ca2228212ef3e0d594fff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452035"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244043"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server-Datentypen und ADO.NET
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-SQL Server und .NET basieren auf unterschiedlichen Typsystemen, was zu einem möglichen Datenverlust führen kann. Um die Datenintegrität beizubehalten, stellt die Microsoft SqlClient-Datenanbieter für SQL Server (<xref:Microsoft.Data.SqlClient>) typisierte Accessormethoden zum Arbeiten mit SQL Server Daten bereit. Sie können die-Enumerationen in den <xref:System.Data.SqlDbType>-Klassen verwenden, um <xref:Microsoft.Data.SqlClient.SqlParameter> Datentypen anzugeben.  
+SQL Server und .NET basieren auf unterschiedlichen Typsystemen. Dies kann zu Datenverlust führen. Um Datenintegrität sicherzustellen, bietet der Microsoft SqlClient-Datenanbieter für SQL Server (<xref:Microsoft.Data.SqlClient>) typisierte Accessormethoden für die Arbeit mit SQL Server-Daten. Sie können die Enumerationen in den <xref:System.Data.SqlDbType>-Klassen verwenden, um <xref:Microsoft.Data.SqlClient.SqlParameter>-Datentypen anzugeben.  
   
-In SQL Server 2008 werden neue Datentypen eingeführt, die für geschäftliche Anforderungen zum Arbeiten mit Datums-und uhrzeitanforderungen, strukturierten, semistrukturierten und unstrukturierten Daten entworfen wurden. Diese sind in der SQL Server 2008-Onlinedokumentation dokumentiert.  
+In SQL Server 2008 werden neue Datentypen eingeführt, um geschäftliche Anforderungen zu erfüllen. Diese Datentypen ermöglichen die Arbeit mit Datums- und Uhrzeitangaben sowie mit strukturierten, teilweise strukturierten und unstrukturierten Daten. Diese sind in der SQL Server 2008-Onlinedokumentation dokumentiert.  
   
-Die SQL Server Datentypen, die für die Verwendung in Ihrer Anwendung verfügbar sind, hängt von der verwendeten Version von SQL Server ab. Weitere Informationen finden Sie unter [Datentypen (Datenbank-Engine)](https://go.microsoft.com/fwlink/?LinkID=107468) aus SQL Server-Onlinedokumentation.
+Welche SQL Server-Datentypen in Ihrer Anwendung verwendet werden können, hängt von Ihrer SQL Server-Version ab. Weitere Informationen finden Sie unter [Datentypen (Datenbankmodul)](https://go.microsoft.com/fwlink/?LinkID=107468) in der SQL Server-Onlinedokumentation.
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [SqlTypes und das DataSet](sqltypes-dataset.md)  
 Beschreibt die neue Typunterstützung für `SqlTypes` im `DataSet`.  
   
 [Behandlung von NULL-Werten](handle-null-values.md)  
-Veranschaulicht die Arbeit mit NULL-Werten und dreiwertigen Logik.  
+Veranschaulicht, wie Sie mit NULL-Werten und dreiwertiger Logik arbeiten.  
   
 [Vergleichen von GUID- und uniqueidentifier-Werten](compare-guid-uniqueidentifier-values.md)  
-Veranschaulicht das Arbeiten mit GUID-und uniqueidentifier-Werten in SQL Server und .net.  
+Veranschaulicht, wie Sie mit GUID- und uniqueidentifier-Werten in SQL Server und .NET arbeiten.  
   
 [Datums- und Zeitdaten](date-time-data.md)  
-Beschreibt, wie die neuen Datums-und Uhrzeit Datentypen verwendet werden, die in SQL Server 2008 eingeführt wurden.  
+Beschreibt die Verwendung der neuen Datums- und Uhrzeitdatentypen ab SQL Server 2008.  
   
 [Große UDTs](large-udts.md)  
-Veranschaulicht das Abrufen von Daten aus großen Wert-UDTs, die in SQL Server 2008 eingeführt wurden.  
+Veranschaulicht, wie Sie Daten aus UDTs mit großen Werten abrufen, die mit SQL Server 2008 eingeführt wurden.  
   
 [XML-Daten in SQL Server](xml-data-sql-server.md)  
-Beschreibt das Arbeiten mit XML-Daten, die aus SQL Server abgerufen werden.  
+Beschreibt, wie Sie mit XML-Daten arbeiten, die aus SQL Server abgerufen wurden.  
   
 ## <a name="reference"></a>Verweis  
 <xref:System.Data.DataSet>  
-Beschreibt die `DataSet` Klasse und alle Member.  
+Beschreibt die `DataSet`-Klasse und alle ihre Member.  
   
 <xref:System.Data.SqlTypes>  
-Beschreibt die `SqlTypes`-Namespace und alle zugehörigen Member.  
+Beschreibt den `SqlTypes`-Namespace und alle seine Member.  
   
 <xref:System.Data.SqlDbType>  
-Beschreibt die `SqlDbType` Enumeration und alle zugehörigen Member.  
+Beschreibt die `SqlDbType`-Enumeration und alle ihre Member.  
   
 <xref:System.Data.DbType>  
-Beschreibt die `DbType` Enumeration und alle zugehörigen Member.  
+Beschreibt die `DbType`-Enumeration und alle ihre Member.  
   
 ## <a name="next-steps"></a>Nächste Schritte
 - [Tabellenwertparameter](table-valued-parameters.md)

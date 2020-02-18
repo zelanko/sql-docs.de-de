@@ -1,5 +1,5 @@
 ---
-title: Dialog Feld "SQL Server Anmeldung" (OLE DB) | Microsoft-Dokumentation
+title: Dialogfeld „SQL Server-Anmeldung“ (OLE DB) | Microsoft-Dokumentation
 description: Verwenden des Dialogfelds „SQL Server-Anmeldung“
 ms.custom: ''
 ms.date: 10/11/2019
@@ -11,10 +11,10 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: d35c339798b4385cb903d8a4a83f13184bbf4db3
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72381748"
 ---
 # <a name="sql-server-login-dialog-box"></a>Dialogfeld „SQL Server-Anmeldung“
@@ -22,39 +22,39 @@ ms.locfileid: "72381748"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Wenn Sie versuchen, eine Verbindung herzustellen, ohne ausreichend Informationen anzugeben, zeigt der OLE DB Treiber das **SQL Server Anmelde** Dialogfeld an.
+Wenn Sie versuchen, eine Verbindung herzustellen, ohne ausreichend Informationen anzugeben, zeigt der OLE DB-Treiber das Dialogfeld **SQL Server-Anmeldung** an.
 
 > [!NOTE]  
-> SQL Server Anmelde Dialogfeld, das das Verhalten anfordert, wird von der `DBPROP_INIT_PROMPT` Initialisierungs Eigenschaft gesteuert Weitere Informationen finden Sie in den folgenden Themen:
+> Das Aufforderungsverhalten des Dialogfelds „SQL Server-Anmeldung“ wird über die Initialisierungseigenschaft `DBPROP_INIT_PROMPT` gesteuert. Weitere Informationen finden Sie unter
 > - [Initialisierungs- und Autorisierungseigenschaften](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [Programmiererhandbuch für OLE DB](https://go.microsoft.com/fwlink/?linkid=2067702)
+> - [OLE DB-Programmierhandbuch](https://go.microsoft.com/fwlink/?linkid=2067702)
 
-![Screenshot des Dialog Felds "SQL Server Anmeldung"](../media/sql-server-login-dialog.png)
+![Screenshot des Dialogfelds „SQL Server-Anmeldung“](../media/sql-server-login-dialog.png)
 
-## <a name="options"></a>enthalten
-|Option|und Beschreibung|
+## <a name="options"></a>Tastatur
+|Option|Beschreibung|
 |---   |---        |
-|Server|Der Name einer Instanz von SQL Server in Ihrem Netzwerk. Wählen Sie einen Server-/Instanzennamen aus der Liste aus, oder geben Sie den Server-/Instanzennamen in das Feld **Server** ein. Optional können Sie mit dem **SQL Server-Konfigurations-Manager** einen Serveralias auf dem Clientcomputer erstellen und diesen Namen in das Feld **Server** eingeben. <br/><br/>Sie können „(local)“ eingeben, wenn Sie den gleichen Computer wie SQL Server verwenden. Sie können anschließend eine Verbindung mit einer lokalen Instanz von SQL Server herstellen, selbst wenn eine nicht vernetzte Version von SQL Server ausgeführt wird.<br/><br/>Weitere Informationen zu Servernamen für verschiedene Typen von Netzwerken finden Sie unter [SQL Server Installation](https://go.microsoft.com/fwlink/?linkid=2067541).|
-|Authentifizierungsmodus|Sie können die folgenden Authentifizierungs Optionen aus der Dropdown Liste auswählen:<br/><ul><li>`Windows Authentication:` Authentifizierung zum SQL Server mithilfe der Anmelde Informationen für das Windows-Konto des aktuell angemeldeten Benutzers.</li><li>`SQL Server Authentication:` Authentifizierung mit Anmelde-ID und Kennwort.</li><li>`Active Directory - Integrated:` integrierte Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus kann auch zur SQL Server der Windows-Authentifizierung verwendet werden.</li><li>`Active Directory - Password:` Benutzer-ID-und Kenn Wort Authentifizierung mit einer Azure Active Directory-Identität.</li><li>`Active Directory - Universal with MFA support:` interaktive Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus unterstützt Azure Multi-Factor Authentication (MFA).</li></ul>|
+|Server|Der Name einer SQL Server-Instanz in Ihrem Netzwerk. Wählen Sie einen Server-/Instanzennamen aus der Liste aus, oder geben Sie den Server-/Instanzennamen in das Feld **Server** ein. Optional können Sie mit dem **SQL Server-Konfigurations-Manager** einen Serveralias auf dem Clientcomputer erstellen und diesen Namen in das Feld **Server** eingeben. <br/><br/>Sie können „(local)“ eingeben, wenn Sie den gleichen Computer wie SQL Server verwenden. Sie können anschließend eine Verbindung mit einer lokalen Instanz von SQL Server herstellen, selbst wenn eine nicht vernetzte Version von SQL Server ausgeführt wird.<br/><br/>Weitere Informationen zu Servernamen für verschiedene Netzwerktypen finden Sie unter [Installation von SQL Server](https://go.microsoft.com/fwlink/?linkid=2067541).|
+|Authentifizierungsmodus|Sie können in der Dropdownliste die folgenden Authentifizierungsoptionen auswählen:<br/><ul><li>`Windows Authentication:` Authentifizierung gegenüber SQL Server über die Anmeldeinformationen des Windows-Kontos, das aktuell angemeldet ist.</li><li>`SQL Server Authentication:` Authentifizierung über eine Anmelde-ID und ein Kennwort.</li><li>`Active Directory - Integrated:` Integrierte Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus kann auch für die Windows-Authentifizierung gegenüber SQL Server verwendet werden.</li><li>`Active Directory - Password:` Authentifizierung mit Benutzer-ID und Kennwort über eine Azure Active Directory-Identität.</li><li>`Active Directory - Universal with MFA support:` Interaktive Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus unterstützt die Azure Multi-Factor Authentication (MFA).</li></ul>|
 |Server-SPN|Wenn Sie eine vertrauenswürdige Verbindung verwenden, können Sie einen Dienstprinzipalnamen (SPN) für den Server angeben.|
-|Login ID|Gibt die Anmelde-ID an, die für die Verbindung verwendet werden soll. Das Textfeld Anmelde-ID ist nur aktiviert, wenn `Authentication Mode` auf `SQL Server Authentication`, `Active Directory - Password` oder `Active Directory - Universal with MFA support` festgelegt ist.|
-|Kennwort|Gibt das für die Verbindung verwendete Kennwort an. Das Textfeld Kennwort ist nur aktiviert, wenn `Authentication Mode` auf `SQL Server Authentication` oder `Active Directory - Password` festgelegt ist.|
-|enthalten|Zeigt die Gruppe **Optionen** an oder blendet sie aus. Die Schaltfläche **Optionen** wird aktiviert, wenn **Server** über einen Wert verfügt.|
-|Ändern des Kennworts|Wenn diese Option aktiviert ist, werden die Textfelder **Neues Kennwort** und **Kennwort bestätigen** aktiviert.|
+|Login ID|Gibt die Anmelde-ID an, die für die Verbindung verwendet werden soll. Das Textfeld „Anmelde-ID“ ist nur aktiviert, wenn `Authentication Mode` auf `SQL Server Authentication`, `Active Directory - Password` oder `Active Directory - Universal with MFA support` festgelegt ist.|
+|Kennwort|Gibt das Kennwort an, das für die Verbindung verwendet werden soll. Das Textfeld „Kennwort“ ist nur aktiviert, wenn `Authentication Mode` auf `SQL Server Authentication` oder `Active Directory - Password` festgelegt ist.|
+|Tastatur|Zeigt die Gruppe **Optionen** an oder blendet sie aus. Die Schaltfläche **Optionen** wird aktiviert, wenn **Server** über einen Wert verfügt.|
+|Ändern des Kennworts|Wenn diese Option ausgewählt wird, werden die Textfelder **Neues Kennwort** und **Neues Kennwort bestätigen** aktiviert.|
 |Neues Kennwort|Gibt das neue Kennwort an.|
 |Neues Kennwort bestätigen|Gibt das neue Kennwort zur Bestätigung ein zweites Mal an.|
 |Datenbank|Wählen Sie die Standarddatenbank aus, die für die Verbindung verwendet werden soll, oder geben Sie sie ein. Diese Einstellung überschreibt die für die Anmeldung auf dem Server festgelegte Standarddatenbank. Wenn keine Datenbank angegeben ist, wird für die Verbindung die Standarddatenbank verwendet, die für die Anmeldung auf dem Server angegeben ist.|
 |Spiegelserver|Gibt den Namen des Failoverpartners der zu spiegelnden Datenbank an.|
 |Spiegelserver-SPN|Optional können Sie einen SPN für den Spiegelserver angeben. Der SPN für den Spiegelserver wird zur gegenseitigen Authentifizierung zwischen Client und Server verwendet.|
 |Sprache|Gibt die Landessprache an, die für SQL Server-Systemmeldungen verwendet werden soll. Auf dem Computer, auf dem SQL Server ausgeführt wird, muss dies Sprache installiert sein. Diese Einstellung überschreibt die für die Anmeldung auf dem Server festgelegte Standardsprache. Wenn keine Sprache angegeben ist, wird für die Verbindung die Standardsprache verwendet, die für die Anmeldung auf dem Server angegeben ist.|
-|ApplicationName|Gibt den Anwendungsnamen an, der in der Spalte **program_name** in der Zeile für diese Verbindung in **sys.sysprocesses** gespeichert werden soll.|
+|Anwendungsname|Gibt den Anwendungsnamen an, der in der Spalte **program_name** in der Zeile für diese Verbindung in **sys.sysprocesses** gespeichert werden soll.|
 |Workstation ID|Gibt die Arbeitsstations-ID an, die in der Spalte **hostname** in der Zeile für diese Verbindung in **sys.sysprocesses** gespeichert werden soll.|
 |Starke Verschlüsselung für Daten verwenden|Wenn diese Option aktiviert ist, werden die Daten, die über die Verbindung übermittelt werden, verschlüsselt.|
-|Serverzertifikat vertrauen|Wenn dieses Kontrollkästchen aktiviert ist, wird das Zertifikat des Servers überprüft. Das Serverzertifikat muss über den richtigen Hostnamen des Servers verfügen und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt werden.|
+|Serverzertifikat vertrauen|Wenn dieses Kontrollkästchen aktiviert ist, wird das Serverzertifikat überprüft. Das Serverzertifikat muss über den richtigen Hostnamen des Servers verfügen und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt worden sein.|
 
 > [!NOTE]  
-> Wenn Sie `Windows Authentication`-oder `SQL Server Authentication` Modi verwenden, wird das **Serverzertifikat vertrauen** nur dann berücksichtigt, wenn die Option **starke Verschlüsselung für Daten verwenden** aktiviert ist.
+> Wenn Sie den Modus `Windows Authentication` oder `SQL Server Authentication` verwenden, wird **Serverzertifikat vertrauen** nur berücksichtigt, wenn die Option **Starke Verschlüsselung für Daten verwenden** aktiviert ist.
 
 ## <a name="next-steps"></a>Nächste Schritte
-- [Authentifizieren Sie sich bei Azure Active Directory](../features/using-azure-active-directory.md) mithilfe des OLE DB Treibers.
-- Legen Sie Verbindungsinformationen mithilfe [Universal Data Link (UDL)](data-link-pages.md)fest.
+- [Authentifizierung gegenüber Azure Active Directory](../features/using-azure-active-directory.md) unter Verwendung des OLE DB-Treibers.
+- Festlegen von Verbindungsinformationen unter Verwendung von [Universal Data Link (UDL)](data-link-pages.md).

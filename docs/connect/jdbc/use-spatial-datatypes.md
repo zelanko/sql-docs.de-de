@@ -1,5 +1,5 @@
 ---
-title: Verwenden räumlicher Datentypen | Microsoft-Dokumentation
+title: Verwenden von räumlichen Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,23 +11,23 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f133fa066ef2c486cf7bb40c5b653c99e077bc46
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026946"
 ---
 # <a name="using-spatial-datatypes"></a>Verwenden von räumlichen Datentypen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Räumliche Datentypen (Geometry und geography) werden unterstützt, wenn die Vorschauversion des JDBC-Treibers 6.5.0 gestartet wird. Räumliche Datentypen werden derzeit nicht mit gespeicherten Prozeduren, Tabellenwert Parametern (TVP), BulkCopy und Always Encrypted unterstützt. Diese Seite zeigt verschiedene Anwendungsfälle von Geometry-und geography-Datentypen mit dem JDBC-Treiber. Eine Übersicht über räumliche Datentypen finden Sie auf der Seite [Übersicht über räumliche Datentypen](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview) .
+Räumliche Datentypen („Geometry“ and „Geography“) werden ab der Vorschauversion 6.5.0 des JDBC-Treibers unterstützt. Räumliche Datentypen werden bei gespeicherten Prozeduren, Tabellenwertparametern, BulkCopy-Vorgängen und Always Encrypted aktuell nicht unterstützt. Diese Seite zeigt verschiedene Anwendungsfälle der Geometry- und Geography-Datentypen mit dem JDBC-Treiber. Eine Übersicht über räumliche Datentypen finden Sie unter [Übersicht über räumliche Datentypen](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview).
 
-## <a name="creating-a-geometry--geography-object"></a>Erstellen eines Geometry/geography-Objekts
+## <a name="creating-a-geometry--geography-object"></a>Erstellen eines Geometry-/Geography-Objekts
 
-Es gibt zwei Hauptmethoden zum Erstellen eines Geometry/geography-Objekts: konvertieren Sie eine Konvertierung von einem bekannten Text (WKT) oder eine bekannte Binärdatei (WKB).
+Es gibt zwei primäre Methoden zum Erstellen eines Geometry-/Geography-Objekts: entweder eine Konvertierung aus dem WKT- (Well-Known Text) oder aus dem WKB-Format (Well-Known Binary).
 
-### <a name="creating-from-wkt"></a>Erstellen aus WKT
+### <a name="creating-from-wkt"></a>Erstellen eines Objekts aus dem WKT-Format
 
 ```java
 String geoWKT = "LINESTRING(1 0, 0 1, -1 0)";
@@ -35,9 +35,9 @@ Geometry geomWKT = Geometry.STGeomFromText(geoWKT, 0);
 Geography geogWKT = Geography.STGeomFromText(geoWKT, 4326);
 ```
 
-Dadurch wird ein LineString-Geometry-Objekt mit SRID (Spatial Reference System Identifier) und ein geography-Objekt mit SRID 4326 erstellt.
+Durch diesen Vorgang wird ein Geometry-Objekt LINESTRING mit SRID 0 (Spatial Reference System Identifier) und ein Geography-Objekt mit SRID 4326 erstellt.
 
-### <a name="creating-from-wkb"></a>Erstellen aus WKB
+### <a name="creating-from-wkb"></a>Erstellen eines Objekts aus dem WKB-Format
 
 ```java
 byte[] geomWKB = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
@@ -47,17 +47,17 @@ Geometry geomWKT = Geometry.deserialize(geomWKB);
 Geography geogWKT = Geography.deserialize(geogWKB);
 ```
 
-Dadurch wird ein Geometry-und geography-Objekt erstellt, das den zuvor erstellten WKT-Objekten entspricht.
+Durch diesen Vorgang werden ein Geometry- und ein Geography-Objekt erstellt, die den oben erstellten Objekten aus dem WKT-Format entsprechen.
 
-## <a name="working-with-a-geometry--geography-object"></a>Arbeiten mit einem Geometry/geography-Objekt
+## <a name="working-with-a-geometry--geography-object"></a>Arbeiten mit Geometry-/Geography-Objekten
 
-Angenommen, der Benutzer hat eine Tabelle auf SQL Server wie unten dargestellt:
+Gehen wir davon aus, dass ein Benutzer über eine SQL Server-Tabelle wie die unten gezeigte verfügt:
 
 ```sql
 CREATE TABLE sampleTable (c1 geometry)  
 ```
 
-Ein Beispielskript zum Einfügen eines Geometrie Werts wäre:
+Nachfolgend ist ein Beispielskript zum Einfügen eines Geometry-Werts gezeigt:
 
 ```java
 String geoWKT = "LINESTRING(1 0, 0 1, -1 0)";
@@ -67,9 +67,9 @@ pstmt.setGeometry(1, geomWKT);
 pstmt.execute();
 ```
 
-Dasselbe gilt für das Geography-Pendant mit einer geography-Spalte und der **setgeography ()** -Methode.
+Derselbe Vorgang kann für das entsprechende Geography-Objekt durchgeführt werden. Dabei wird eine Geography-Spalte und die **setGeography()** -Methode verwendet.
 
-So lesen Sie eine Geometry/geography-Spalte:
+So lesen Sie eine Geometry-/Geography-Spalte:
 
 ```java
 try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from geomTable")) {
@@ -79,86 +79,86 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 }
 ```
 
-Dasselbe gilt für das Geography-Pendant mit einer geography-Spalte und der **getgeography ()** -Methode.
+Derselbe Vorgang kann für das entsprechende Geography-Objekt durchgeführt werden. Dabei wird eine Geography-Spalte und die **getGeography()** -Methode verwendet.
 
 ## <a name="newly-introduced-apis"></a>Neu eingeführte APIs
 
-Dabei handelt es sich um die neuen öffentlichen APIs, die mit dieser Addition eingeführt wurden, in den Klassen **SQLServerPreparedStatement**, **SQLServerResultSet**, **Geometry**und **geography**.
+Dies sind die neuen öffentlichen APIs, die mit dieser Erweiterung in den Klassen **SQLServerPreparedStatement**, **SQLServerResultSet**, **Geometry** und **Geography** eingeführt wurden.
 
 ### <a name="sqlserverpreparedstatement"></a>SQLServerPreparedStatement
 
-|Methode|und Beschreibung|
+|Methode|Beschreibung|
 |:------|:----------|
-|void setgeometry (int n, Geometry x)| Legt den angegebenen Parameter auf das angegebene Microsoft. SQL. Geometry-Klassenobjekt fest.
-|void setGeography(int n, Geography x)| Legt den angegebenen Parameter auf das angegebene Microsoft. SQL. geography-Klassenobjekt fest.
+|void setGeometry(int n, Geometry x)| Legt den angegebenen Parameter auf das angegebene microsoft.sql.Geometry-Klassenobjekt fest.
+|void setGeography(int n, Geography x)| Legt den angegebenen Parameter auf das angegebene microsoft.sql.Geography-Klassenobjekt fest.
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
-|Methode|und Beschreibung|
+|Methode|Beschreibung|
 |:------|:----------|
-|Geometrie GetGeometry (int colunindex)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses Resultset-Objekts als com. Microsoft. SqlServer. JDBC. Geometry-Objekt in der Programmiersprache Java zurück.
-|Geometrie GetGeometry (String ColumnName)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses Resultset-Objekts als com. Microsoft. SqlServer. JDBC. Geometry-Objekt in der Programmiersprache Java zurück.
-|Geography getgeography (int colunindex)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses Resultset-Objekts als com. Microsoft. SqlServer. JDBC. geography-Objekt in der Programmiersprache Java zurück.
-|Geography getgeography (String ColumnName)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses Resultset-Objekts als com. Microsoft. SqlServer. JDBC. geography-Objekt in der Programmiersprache Java zurück.
+|Geometry getGeometry(int colunIndex)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses ResultSet-Objekts als com.microsoft.sqlserver.jdbc.Geometry-Objekt in der Programmiersprache Java zurück.
+|Geometry getGeometry(String columnName)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses ResultSet-Objekts als com.microsoft.sqlserver.jdbc.Geometry-Objekt in der Programmiersprache Java zurück.
+|Geography getGeography(int colunIndex)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses ResultSet-Objekts als com.microsoft.sqlserver.jdbc.Geography-Objekt in der Programmiersprache Java zurück.
+|Geography getGeography(String columnName)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses ResultSet-Objekts als com.microsoft.sqlserver.jdbc.Geography-Objekt in der Programmiersprache Java zurück.
 
-### <a name="geometry"></a>Geometry
+### <a name="geometry"></a>Geometrie
 
-|Methode|und Beschreibung|
+|Methode|Beschreibung|
 |:------|:----------|
-|Geometry STGeomFromText (String WKT, int SRID)| Konstruktor für eine Geometry-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium), die um alle von der Instanz getragenen Z- und M-Werte (Höhe/Measure) erweitert wurde.
+|Geometry STGeomFromText(String wkt, int SRID)| Konstruktor für eine Geometry-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium), die um alle von der Instanz getragenen Z- und M-Werte (Höhe/Measure) erweitert wurde.
 |Geometry STGeomFromWKB(byte[] wkb)| Konstruktor für eine Geometry-Instanz aus einer Darstellung des Typs „Open Geospatial-Konsortium (OGC) Well-Known Binary (WKB)“.
-|Deserialisieren von Geometrien (Byte [] WKB)| Konstruktor für eine geometry-Instanz aus einem internen SQL Server-Format für räumliche Daten.
-|Geometry-Analyse (Zeichenfolge WKT)| Konstruktor für eine Geometry-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium). Der räumliche Verweis Bezeichner wird standardmäßig auf 0 (null).
-|Geometry-Punkt (Double x, Double y, int SRID)| Konstruktor für eine geometry-Instanz, die eine Point-Instanz aus den X-und Y-Werten und einem räumlichen Verweis Bezeichner darstellt.
-|Zeichenfolge STAsText ()| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geometry-Instanz zurück. Dieser Text enthält keine Z (Höhe)- oder M (Measure)-Werte, die von der Instanz getragen werden.
+|Geometries deserialize(byte[] wkb)| Konstruktor für eine Geometry-Instanz aus einem internen SQL Server-Format für räumliche Daten.
+|Geometry parse(String wkt)| Konstruktor für eine Geometry-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium). Der SRID (Spatial Reference Identifier) ist standardmäßig auf 0 festgelegt.
+|Geometry point(double x, double y, int SRID)| Konstruktor für eine Geometry-Instanz, die mit ihren X- und Y-Werten sowie mit einem Spatial Reference Identifier eine Point-Instanz darstellt.
+|String STAsText()| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geometry-Instanz zurück. Dieser Text enthält keine Z (Höhe)- oder M (Measure)-Werte, die von der Instanz getragen werden.
 |byte[] STAsBinary()| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geometry-Instanz zurück. Dieser Wert enthält keine Z- oder M-Werte, die von der Instanz getragen werden.
 |byte[] serialize()| Gibt die Bytes zurück, die ein internes SQL Server-Format vom Geometry-Typ darstellen.
-|Boolescher HasM ()| Gibt zurück, wenn das Objekt einen M (Measure)-Wert enthält.
-|Boolescher Hasz ()| Gibt zurück, wenn das Objekt einen Z-Wert (Höhe) enthält.
-|Double GetX ()| Gibt den X-Koordinaten Wert zurück.
-|Double Gety ()| Gibt den Y-Koordinaten Wert zurück.
-|Double getm ()| Gibt den M (Measure)-Wert des-Objekts zurück.
-|Double Getz ()| Gibt den Z-Wert (Höhe) des-Objekts zurück.
+|boolean hasM()| Wird zurückgegeben, wenn das Objekt einen M-Wert (Maßeinheit) enthält.
+|boolean hasZ()| Wird zurückgegeben, wenn das Objekt einen Z-Wert (Höhe) enthält.
+|Double getX()| Gibt den Wert der X-Koordinate zurück.
+|Double getY()| Gibt den Wert der Y-Koordinate zurück.
+|Double getM()| Gibt den M-Wert (Maßeinheit) des Objekts zurück.
+|Double getZ()| Gibt den Z-Wert (Höhe) des Objekts zurück.
 |int getSrid()| Gibt den SRID-Wert (Spatial Reference Identifier) zurück.
-|boolean isNull()| Gibt zurück, wenn das Geometry-Objekt NULL ist.
-|int STNumPoints()| Gibt die Anzahl der Punkte im Geometry-Objekt zurück.
-|String STGeometryType ()| Gibt den durch eine geometry-Instanz dargestellten Open Geospatial Consortium (OGC)-Typnamen zurück.
-|Zeichenfolge AsTextZM ()| Gibt die WKT-Darstellung (Well-Known Text) des Geometry-Objekts zurück.
-|String-Zeichenfolge ()| Gibt die Zeichenfolgendarstellung des Geometry-Objekts zurück.
+|boolean isNull()| Wird zurückgegeben, wenn das Geometry-Objekt NULL ist.
+|int STNumPoints()| Gibt die Anzahl von Punkten im Geometry-Objekt zurück.
+|String STGeometryType()| Gibt den durch eine geometry-Instanz dargestellten Open Geospatial Consortium (OGC)-Typnamen zurück.
+|String asTextZM()| Gibt die WKT-Darstellung (Well-Known Text) des Geometry-Objekts zurück.
+|String toString()| Gibt die Zeichenfolgendarstellung des Geometry-Objekts zurück.
 
-### <a name="geography"></a>Geography
+### <a name="geography"></a>Gebiet
 
-|Methode|und Beschreibung|
+|Methode|Beschreibung|
 |:------|:----------|
-|Geography STGeomFromText (String WKT, int SRID)| Konstruktor für eine Geography-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium), die um alle von der Instanz getragenen Z- und M-Werte (Höhe/Measure) erweitert wurde.
+|Geography STGeomFromText(String wkt, int SRID)| Konstruktor für eine Geography-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium), die um alle von der Instanz getragenen Z- und M-Werte (Höhe/Measure) erweitert wurde.
 |Geography STGeomFromWKB(byte[] wkb)| Konstruktor für eine Geography-Instanz aus einer Darstellung des Typs „Open Geospatial-Konsortium (OGC) Well-Known Binary (WKB)“.
-|Geography-Deserialisierung (Byte [] WKB)| Konstruktor für eine geography-Instanz aus einem internen SQL Server-Format für räumliche Daten.
-|Geography-Analyse (Zeichenfolge WKT)| Konstruktor für eine Geography-Instanz aus WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium). Der räumliche Verweis Bezeichner wird standardmäßig auf 0 (null).
-|Geography Point (Double Lon, Double lat, int SRID)| Konstruktor für eine Geography-Instanz, die mit Ihren Längen- und Breitengraden sowie mit einem Spatial Reference Identifier eine Point-Instanz darstellt.
-|Zeichenfolge STAsText ()| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geography-Instanz zurück. Dieser Text enthält keine Z (Höhe)- oder M (Measure)-Werte, die von der Instanz getragen werden.
+|Geography deserialize(byte[] wkb)| Konstruktor für eine Geography-Instanz aus einem internen SQL Server-Format für räumliche Daten.
+|Geography parse(String wkt)| Konstruktor für eine Geography-Instanz aus WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium). Der SRID (Spatial Reference Identifier) ist standardmäßig auf 0 festgelegt.
+|Geography point(double lon, double lat, int SRID)| Konstruktor für eine Geography-Instanz, die mit Ihren Längen- und Breitengraden sowie mit einem Spatial Reference Identifier eine Point-Instanz darstellt.
+|String STAsText()| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geography-Instanz zurück. Dieser Text enthält keine Z (Höhe)- oder M (Measure)-Werte, die von der Instanz getragen werden.
 |byte[] STAsBinary())| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geography-Instanz zurück. Dieser Wert enthält keine Z- oder M-Werte, die von der Instanz getragen werden.
 |byte[] serialize()| Gibt die Bytes zurück, die ein internes SQL Server-Format vom Geography-Typ darstellen.
-|Boolescher HasM ()| Gibt zurück, wenn das Objekt einen M (Measure)-Wert enthält.
-|Boolescher Hasz ()| Gibt zurück, wenn das Objekt einen Z-Wert (Höhe) enthält.
-|Double getlatitude ()| Gibt den Breitengrad Wert zurück.
-|Double getLongitude()| Gibt den Längen Wert zurück.
-|Double getm ()| Gibt den M (Measure)-Wert des-Objekts zurück.
-|Double Getz ()| Gibt den Z-Wert (Höhe) des-Objekts zurück.
+|boolean hasM()| Wird zurückgegeben, wenn das Objekt einen M-Wert (Maßeinheit) enthält.
+|boolean hasZ()| Wird zurückgegeben, wenn das Objekt einen Z-Wert (Höhe) enthält.
+|Double getLatitude()| Gibt den Breitengrad zurück.
+|Double getLongitude()| Gibt den Längengrad zurück.
+|Double getM()| Gibt den M-Wert (Maßeinheit) des Objekts zurück.
+|Double getZ()| Gibt den Z-Wert (Höhe) des Objekts zurück.
 |int getSrid()| Gibt den SRID-Wert (Spatial Reference Identifier) zurück.
-|boolean isNull()| Gibt zurück, wenn das Geography-Objekt NULL ist.
-|int STNumPoints()| Gibt die Anzahl der Punkte im geography-Objekt zurück.
-|String stgeographytype ()| Gibt den durch eine geography-Instanz dargestellten Open Geospatial Consortium (OGC)-Typnamen zurück.
-|Zeichenfolge AsTextZM ()| Gibt die WKT-Darstellung (Well-Known Text) des geography-Objekts zurück.
-|String-Zeichenfolge ()| Gibt die Zeichenfolgendarstellung des Geography-Objekts zurück.
+|boolean isNull()| Wird zurückgegeben, wenn das Geography-Objekt NULL ist.
+|int STNumPoints()| Gibt die Anzahl von Punkten im Geography-Objekt zurück.
+|String STGeographyType()| Gibt den durch eine geography-Instanz dargestellten Open Geospatial Consortium (OGC)-Typnamen zurück.
+|String asTextZM()| Gibt die WKT-Darstellung (Well-Known Text) des Geography-Objekts zurück.
+|String toString()| Gibt die Zeichenfolgendarstellung des Geography-Objekts zurück.
 
 ## <a name="limitations-of-spatial-datatypes"></a>Einschränkungen räumlicher Datentypen
 
-1. Die räumlichen untergeordneten Datatypes **circularstring**, **compoundcurve**, **CurvePolygon**und **fullglobe** werden nur ab SQL Server 2012 und höher unterstützt.
+1. Die räumlichen Unterdatentypen **CircularString**, **CompoundCurve**, **CurvePolygon** und **FullGlobe** werden erst ab SQL Server 2012 und höher unterstützt.
 
 2. Always Encrypted kann nicht mit räumlichen Datentypen verwendet werden.
 
-3. Gespeicherte Prozeduren, TVP und BulkCopy-Vorgänge werden derzeit nicht mit räumlichen Datentypen unterstützt.
+3. Gespeicherte Prozeduren, Tabellenwertparameter und BulkCopy-Vorgänge werden derzeit nicht mit räumlichen Datentypen unterstützt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Beispiel für räumliche Datentypen (JDBC)](../../connect/jdbc/spatial-data-types-sample.md)

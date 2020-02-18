@@ -1,5 +1,5 @@
 ---
-title: Versionshinweise für SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
+title: Versionshinweise für SQL Server Data Tools (SSDT)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -7,16 +7,17 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 08/15/2019
+ms.custom: seo-lt-2019
+ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874893"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688790"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Versionshinweise für SQL Server Data Tools (SSDT)
 
@@ -43,6 +44,40 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3,&nbsp; SSDT für VS 2017
+
+_Veröffentlicht_: &nbsp; 3. Januar 2020  
+_Buildnummer:_ &nbsp; 14.0.16203.0  
+_SSDT für Visual Studio 2017._
+
+### <a name="whats-new"></a>Neues
+
+| Neues Element | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Die Power Query-Quelle für SQL Server 2017 wurde in ihrer bisherigen Form als bereits enthaltene Komponente entfernt. Wir haben die Power Query-Quelle für SQL Server 2017 und 2019 nun als separate Komponente angekündigt, die [hier](https://www.microsoft.com/en-us/download/details.aspx?id=100619) heruntergeladen werden kann. |
+| Integration Services (SSIS) | Der Microsoft-Oracle-Connector für SQL Server 2019 wurde in seiner bisherigen Form als bereits enthaltene Komponente entfernt. Wir haben den Microsoft-Oracle-Connector für SQL Server 2019 nun als separate Komponente angekündigt, die [hier](https://www.microsoft.com/en-us/download/details.aspx?id=58228) heruntergeladen werden kann. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem der SSIS-Debugger gelegentlich nicht gestartet werden kann, weil die IDtsHost-Schnittstelle nicht registriert ist, wenn als Zielserver SQL Server 2017 oder 2019 verwendet wird. |
+| Integration Services (SSIS) | Wichtige Probleme beim UI-Layout im Modus mit hohen DPI-Werten behoben. |
+| Integration Services (SSIS) | Die .NET Framework-Version wurde für Skriptaufgaben/Komponenten auf 4.7 aktualisiert, wenn als Zielserver SQL Server 2019 verwendet wird. |
+| Integration Services (SSIS) | Im ODBC-Verbindungs-Manager wurde die Eigenschaft ConnectByProxy hinzugefügt, um die selbstgehostete Integration Runtime als Proxy im ODBC-Verbindungs-Manager aktivieren zu können. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem Benutzer im Paketbereitstellungsmodus keine neuen Datenquellen hinzufügen konnten. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem Benutzer keine Skriptaufgaben/Komponenten debuggen konnten, wenn der Code neue Syntaxen enthielt, die nach .NET 4.5 eingeführt wurden. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem die erste Data Factory in einem Azure-Abonnement gegebenenfalls nicht über den Assistenten zum Erstellen einer Integration Runtime erstellt werden konnte, weil der Data Factory-Ressourcenanbieter nicht registriert war. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem die SSIS die Liste der Azure-Speicherkonten nicht korrekt im ADF-Verbindungs-Assistenten anzeigen konnten, wenn im Abonnement ein Speicherkonto vom Typ „Nur Datei“ vorhanden war. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem „In Azure ausführen“ nicht funktionierte, wenn das Paket einen Container enthielt. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem char(n char) und varchar2(n char) im Oracle-Connector den falschen DTS-Typen zugeordnet wurden. |
+
+### <a name="known-issues"></a>Bekannte Probleme
+
+| Bekanntes Problem | Details |
+| :---------- | :------ |
+| Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. | Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt. |
+| SSDT für Visual Studio 2017 (ab Version 15.8) unterstützt das Erstellen von Paketen nicht, die Teradata als Quelle oder Ziel verwenden. | Verwenden Sie SSDT für Visual Studio 2017 (15.8). |
+| Die Power Query-Quelle unterstützt möglicherweise kein OData v4, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
+| Die Power Query-Quelle unterstützt möglicherweise kein ODBC für die Verbindung mit Oracle, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
+| Die Power Query-Quelle ist nicht lokalisiert. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2,&nbsp; SSDT für VS 2017
 
@@ -116,7 +151,7 @@ _SSDT für Visual Studio 2017._
 | Integration Services (SSIS) | Die Power Query-Quelle (Preview) für SSIS in ADF 2017 wurde hinzugefügt. |
 | Integration Services (SSIS) | Unterstützung für SQL Server 2012 wurde wieder hinzugefügt. |
 | Integration Services (SSIS) | Eine Oracle-Quelle und ein Oracle-Ziel für SQL Server 2019 wurden hinzugefügt. |
-| Integration Services (SSIS) | Eine Oracle-Quelle und ein Oracle-Ziel für SQL Server 2019 wurden bereits von SSDT installiert. <br/></br> Um Pakete für die Serverversion 2017 oder früher zu entwerfen, laden Sie die entsprechende Oracle-Connectorversion von der Microsoft-Downloadwebsite herunter und installieren sie auf dem SSDT-Computer. <br/></br> [Microsoft Connector Version 5.0 für Oracle von Attunity für SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) <br/></br> [Microsoft Connector Version 4.0 für Oracle von Attunity für SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950 )<br/></br> [Microsoft Connector Version 3.0 für Oracle von Attunity für SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582 )<br/></br> [Microsoft Connector Version 2.0 für Oracle von Attunity für SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) |
+| Integration Services (SSIS) | Eine Oracle-Quelle und ein Oracle-Ziel für SQL Server 2019 wurden bereits von SSDT installiert. <br/></br> Um Pakete für die Serverversion 2017 oder früher zu entwerfen, laden Sie die entsprechende Oracle-Connectorversion von der Microsoft-Downloadwebsite herunter und installieren sie auf dem SSDT-Computer. <br/></br> [Microsoft Connector Version 5.0 für Oracle von Attunity für SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179 ) <br/></br> [Microsoft Connector Version 4.0 für Oracle von Attunity für SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950 )<br/></br> [Microsoft Connector Version 3.0 für Oracle von Attunity für SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582 )<br/></br> [Microsoft Connector Version 2.0 für Oracle von Attunity für SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283 ) |
 | Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem ein Skripttask bzw. eine Komponente bei der Migration von früheren SSIS-Versionen nicht geladen werden konnte. |
 | Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem der Daten-Viewer unter Windows 7 SP1 und Windows 8.1 nicht funktioniert hat. |
 | Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem in einigen Fällen das Speichern des Pakets zum Absturz von Visual Studio geführt hat. |
@@ -642,7 +677,7 @@ _Unterstützung bis SQL Server 2017._
         - Excel 
         - Text/CSV 
         - Xml 
-        - JSON 
+        - Json 
         - Ordner 
         - Access-Datenbank 
         - Azure Blob Storage 
@@ -938,7 +973,7 @@ _Für SQL Server 2016._
 
 SSDT General Availability (GA) ist nun erhältlich. Das Update von SSDT GA vom Juni 2016 bietet Unterstützung für die neuesten Updates von SQL Server 2016 RTM und verschiedene Fehlerbehebungen. Weitere Informationen finden Sie unter [SQL Server Data Tools GA update for June 2016 (Update von SQL Server Data Tools-GA vom Juni 2016)](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/).
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
   
 [Herunterladen von SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Vorgängerversionen von SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  

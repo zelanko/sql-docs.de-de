@@ -5,26 +5,117 @@ description: Erfahren Sie, wie Sie Big Data-Cluster für SQL Server auf ein neue
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f44ef17a712d0d5a19707cf94e7d3e4196a2aba3
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: afb12477dd220e71cf2cf97d6a13b54aa2d35be4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706310"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75831834"
 ---
 # <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Upgraden von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dieser Artikel enthält Anleitungen zum Upgrade eines SQL Server-Big Data-Clusters auf ein neues Release. Die Schritte in diesem Artikel gelten insbesondere für Upgrades von einem Vorschaurelease auf ein Dienstupdaterelease von SQL Server 2019.
+Der Upgradepfad hängt von der aktuellen Version des Big Data-Clusters (BDC) für SQL Server ab. Für ein Upgrade von einem unterstützten Release, einschließlich allgemeine Vertriebsversion, kumulatives Update oder Quick Fix Engineering (QFE), kann ein direktes Upgrade durchgeführt werden. Ein direktes Upgrade von einer CTP- (Community Technology Preview) oder Release Candidate-Version des BDC wird nicht unterstützt. Sie müssen den Cluster entfernen und neu erstellen. In den folgenden Abschnitten werden die jeweils erforderlichen Schritte beschrieben:
 
-## <a name="backup-and-delete-the-old-cluster"></a>Sichern und Löschen des alten Clusters
+- [Upgrade von einem unterstützten Release](#upgrade-from-supported-release)
+- [Aktualisieren einer BDC-Bereitstellung von einer CTP- oder Release Candidate-Version](#update-a-bdc-deployment-from-ctp-or-release-candidate)
 
-Derzeit besteht die einzige Möglichkeit zum Aktualisieren eines Big Data-Clusters auf ein neues Release darin, den Cluster manuell zu entfernen und neu zu erstellen. Jedes Release verfügt über eine eindeutige Version von `azdata`, die mit der vorherigen Version nicht kompatibel ist. Auch wenn ein älterer Cluster ein Containerimage auf einen neuen Knoten herunterladen musste, ist das neueste Image möglicherweise nicht mit den älteren Images auf dem Cluster kompatibel. Beachten Sie, dass das neuere Image nur abgerufen wird, wenn Sie das Imagetag `latest` in der Bereitstellungskonfigurationsdatei für die Containereinstellungen verwenden. Standardmäßig verfügt jedes Release über ein bestimmtes Imagetag, das der Releaseversion von SQL Server entspricht. Führen Sie die folgenden Schritte aus, um ein Upgrade auf das neueste Release durchzuführen:
+>[!NOTE]
+>Das erste unterstützte Release von Big Data-Clustern ist SQL Server 2019 GDR1.
+
+## <a name="upgrade-release-notes"></a>Upgrade-Versionshinweise
+
+Bevor Sie fortfahren, sollten Sie die [Upgrade-Versionshinweise auf bekannte Probleme prüfen](release-notes-big-data-cluster.md#known-issues).
+
+## <a name="upgrade-from-supported-release"></a>Upgrade von einem unterstützten Release
+
+In diesem Abschnitt wird erläutert, wie ein BDC für SQL Server von einem unterstützten Release (ab SQL Server 2019 GDR1) auf ein neueres unterstütztes Release aktualisiert wird.
+
+1. Sichern Sie die SQL Server-Masterinstanz.
+2. Sichern Sie das HDFS (Hadoop Distributed File System).
+
+   ```
+   azdata bdc hdfs cp --from-path <path> --to-path <path>
+   ```
+   
+   Beispiel: 
+
+   ```
+   azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
+   ```
+
+3. Aktualisieren Sie `azdata`.
+
+   Befolgen Sie die Anweisungen zur Installation von `azdata`. 
+   - [Windows Installer](deploy-install-azdata-installer.md)
+   - [Linux mit apt](deploy-install-azdata-linux-package.md)
+   - [Linux mit yum](deploy-install-azdata-yum.md)
+   - [Linux mit zypper](deploy-install-azdata-zypper.md)
+
+   >[!NOTE]
+   >Wenn `azdata` mit `pip` installiert wurde, müssen Sie es vor der Installation mit Windows Installer oder mit dem Linux-Paket-Manager manuell entfernen.
+
+1. Aktualisieren Sie den Big Data-Cluster.
+
+   ```
+   azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
+   ```
+
+   Das folgende Skript verwendet beispielsweise das Imagetag `2019-CU1-ubuntu-16.04`:
+
+   ```
+   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   ```
+
+>[!NOTE]
+>Die neuesten Imagetags finden Sie in den [Versionshinweisen zu Big Data-Clustern in SQL Server 2019](release-notes-big-data-cluster.md).
+
+>[!IMPORTANT]
+>Wenn Sie ein privates Repository verwenden, um die Images für die Bereitstellung oder das Upgrade eines BDC vorab abzurufen, stellen Sie sicher, dass sich die aktuellen Buildimages sowie die Zielbuildimages im privaten Repository befinden. Dadurch kann bei Bedarf ein Rollback durchgeführt werden. Wenn Sie die Anmeldeinformationen des privaten Repositorys seit der ursprünglichen Bereitstellung geändert haben, müssen Sie zudem den entsprechenden geheimen Schlüssel in Kubernetes aktualisieren, bevor Sie das Upgrade durchführen. Das Aktualisieren der Anmeldeinformationen über die Umgebungsvariablen DOCKER_PASSWORD und DOCKER_USERNAME wird nicht unterstützt. Aktualisieren Sie den geheimen Schlüssel mithilfe von [kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). Ein Upgrade unter Verwendung unterschiedlicher privater Repositorys für den aktuellen Build und den Zielbuild wird nicht unterstützt.
+
+### <a name="increase-the-timeout-for-the-upgrade"></a>Erhöhen des Timeoutwerts für das Upgrade
+
+Ein Timeout kann auftreten, wenn bestimmte Komponenten nicht in der zugewiesenen Zeit aktualisiert werden. Der folgende Code zeigt, wie der Fehler aussehen könnte:
+
+   ```
+   >azdata.EXE bdc upgrade --name <mssql-cluster>
+   Upgrading cluster to version 15.0.4003
+
+   NOTE: Cluster upgrade can take a significant amount of time depending on
+   configuration, network speed, and the number of nodes in the cluster.
+
+   Upgrading Control Plane.
+   Control plane upgrade failed. Failed to upgrade controller.
+   ```
+
+Bearbeiten Sie die Konfigurationszuordnung für Upgrades, um die Timeoutwerte für Upgrades zu erhöhen. So bearbeiten Sie die Konfigurationszuordnung für Upgrades:
+
+Führen Sie den folgenden Befehl aus:
+
+   ```bash
+   kubectl edit configmap controller-upgrade-configmap
+   ```
+
+Bearbeiten Sie die unten aufgeführten Felder:
+
+   **controllerUpgradeTimeoutInMinutes** Gibt die Wartezeit in Minuten an, bis der Controller oder die Controllerdatenbank das Upgrade abgeschlossen hat. Der Standardwert ist 5. Aktualisieren Sie diesen Wert auf mindestens 20.
+   **totalUpgradeTimeoutInMinutes**: Gibt die kombinierte Zeitdauer an, bis der Controller und die Controllerdatenbank das Upgrade abgeschlossen haben (Upgrade von Controller und Controllerdatenbank). Der Standardwert ist 10. Aktualisieren Sie diesen Wert auf mindestens 40.
+   **componentUpgradeTimeoutInMinutes**: Gibt die Zeitdauer an, in der jede nachfolgende Phase des Upgrades abgeschlossen sein muss. Der Standardwert ist 30. Aktualisieren Sie diesen Wert auf 45.
+
+Speichern Sie Ihre Änderungen, und schließen Sie die Anwendung.
+
+## <a name="update-a-bdc-deployment-from-ctp-or-release-candidate"></a>Aktualisieren einer BDC-Bereitstellung von einer CTP- oder Release Candidate-Version
+
+Ein direktes Upgrade von einem CTP- oder Release Candidate-Build von SQL Server-Big Data-Clustern wird nicht unterstützt. Im folgenden Abschnitt wird erläutert, wie der Cluster manuell entfernt und neu erstellt wird.
+
+### <a name="backup-and-delete-the-old-cluster"></a>Sichern und Löschen des alten Clusters
+
+Für Big Data-Cluster, die vor SQL Server 2019 GDR1 bereitgestellt wurden, ist kein direktes Upgrade möglich. Um ein Upgrade auf ein neues Release durchzuführen, muss der Cluster manuell entfernt und neu erstellt werden. Jedes Release verfügt über eine eindeutige Version von `azdata`, die mit der vorherigen Version nicht kompatibel ist. Auch wenn ein neueres Containerimage auf einem Cluster herunterladen wird, der mit einer älteren Version bereitgestellt wurde, ist das aktuelle Image möglicherweise nicht mit den älteren Images auf dem Cluster kompatibel. Das neuere Image wird abgerufen, wenn Sie das Imagetag `latest` in der Bereitstellungskonfigurationsdatei für die Containereinstellungen verwenden. Standardmäßig verfügt jedes Release über ein bestimmtes Imagetag, das der Releaseversion von SQL Server entspricht. Führen Sie die folgenden Schritte aus, um ein Upgrade auf das neueste Release durchzuführen:
 
 1. Sichern Sie vor dem Löschen des alten Clusters die Daten auf der SQL Server-Masterinstanz und auf HDFS. Für die SQL Server-Masterinstanz können Sie [SQL Server-Sicherung und -Wiederherstellung](data-ingestion-restore-database.md) verwenden. Für HDFS [können Sie die Daten mit `curl` herauskopieren](data-ingestion-curl.md).
 
@@ -63,7 +154,7 @@ Derzeit besteht die einzige Möglichkeit zum Aktualisieren eines Big Data-Cluste
    > [!IMPORTANT]
    > Für jedes Release ändert sich der Pfad zur `n-1`-Version von `azdata`. Auch wenn Sie zuvor `azdata` installiert haben, müssen Sie vor dem Erstellen des neuen Clusters vom aktuellen Pfad aus neu installieren.
 
-## <a id="azdataversion"></a> Überprüfen der azdata-Version
+### <a id="azdataversion"></a> Überprüfen der azdata-Version
 
 Vergewissern Sie sich vor dem Bereitstellen eines neuen Big Data-Clusters, dass Sie die neueste Version von `azdata` mit dem `--version`-Parameter verwenden:
 
@@ -71,7 +162,7 @@ Vergewissern Sie sich vor dem Bereitstellen eines neuen Big Data-Clusters, dass 
 azdata --version
 ```
 
-## <a name="install-the-new-release"></a>Installieren des neuen Releases
+### <a name="install-the-new-release"></a>Installieren des neuen Releases
 
 Nachdem Sie den vorherigen Big Data-Cluster entfernt und die neueste `azdata`-Version installiert haben, stellen Sie den neuen Big Data-Cluster mithilfe der aktuellen Bereitstellungsanweisungen bereit. Weitere Informationen finden Sie unter [Vorgehensweise: Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] auf Kubernetes](deployment-guidance.md). Stellen Sie anschließend alle erforderlichen Datenbanken oder Dateien wieder her.
 
