@@ -1,6 +1,6 @@
 ---
-title: Anmerkungen zu dieser Version (SSRS) 2017 und höher | Microsoft-Dokumentation
-ms.date: 02/18/2019
+title: Versionshinweise für Reporting Services 2017 und höher | Microsoft-Dokumentation
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,20 +9,20 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
-ms.translationtype: MTE75
+ms.openlocfilehash: 39049ee5a2561821e0a2284ed66b9b04730998bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533833"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74834252"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Versionshinweise für SQL Server Reporting Services (SSRS) 2017 und höher
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017-and-later](../includes/ssrs-appliesto-2017-and-later.md)]
 
-Dieser Artikel beschreibt die Änderungen in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS), für die Versionen 2017 und höher.
+Dieser Artikel beschreibt Änderungen in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) für die Versionen 2017 und höher.
 
-Die Versionshinweise für Berichts-Viewer-Steuerelemente finden Sie unter [Versionshinweise für den Berichts-Viewer-Steuerelemente für WebForms und WinForms von SSRS](application-integration/release-notes-ssrs-application-integration.md).
+Die Versionshinweise zu Berichts-Viewer-Steuerelementen finden Sie unter [Versionshinweise zu den Berichts-Viewer-Steuerelementen für WebForms und WinForms in SSRS](application-integration/release-notes-ssrs-application-integration.md).
 
 <!--
 We are "standardizing" all our 'Release Notes' style articles:
@@ -50,27 +50,39 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## <a name="1406001451-20191113"></a>14.0.600.1451 2019/11/13 
+
+| Behobenes Problem | Details |
+| :---------- | :------ |
+| Sicherheitsupdates | &nbsp; |
+| Paginierte Berichte haben nicht ordnungsgemäß mit Filterparametern funktioniert, wenn Momentaufnahmen aktiviert waren.  | &nbsp; |
+| Benutzer mit Browserrolle und Standardeinstellungen hatten keine Berechtigungen zum Herunterladen von Excel-Dateien.  | &nbsp; |
+| Beim Upgrade auf den Power BI-Berichtsserver von SQL Server 2016 Reporting Services ist ein Fehler aufgetreten. | &nbsp; |
+| Nach dem Upgrade von SQL Server 2012 Reporting Services wurde bei Abonnements der Fehler „Im E-Mail-Header wurde ein ungültiges Zeichen gefunden: ','“ angezeigt. | &nbsp; |
+| Konfigurationstool: Beim Schließen eines modalen Fensters im Abschnitt „Datenbank“ wurde der Reporting Services-Dienst neu gestartet. | &nbsp; |
+| BorderStyle-Eigenschaftenausdrücke von TextBox-Steuerelementen wurden im Excel-Format nicht richtig gerendert.  | &nbsp; |
+| Durch ein Paginierungsproblem wurde bei bestimmten Berichten immer wieder dieselbe Seite gerendert, sodass kein Rendern des gesamten Berichts bis zur letzten Seite möglich war. | &nbsp; |
 
 ## <a name="1406001274-20190701"></a>14.0.600.1274, 1.7.2019
 
-| Problem wurde behoben | Details |
+| Behobenes Problem | Details |
 | :---------- | :------ |
 | Sicherheitsupdates | &nbsp; |
-| Keine Wochentage auswählen beim Erstellen eines freigegebenen Zeitplans für wöchentlichen | &nbsp; |
-| Bericht zeigt keine Wagenrückläufe ordnungsgemäß im Word-Format an | &nbsp; |
-| System Center Operations Manager(SCOM) 2019 wird nicht mehr funktioniert mit aktuellen SSRS 2017 aktualisiert. | &nbsp; |
-| Fehler beim Aufrufen von autorisierungserweiterungen für freigegebenes Dataset | &nbsp; |
-| Logik, die geändert werden, auf die gespeicherte Prozedur GetAllProperties in SSRS 2017 und PBIRS, wodurch die Webdienst-Endpunkt kann nicht abgerufen werden keine Daten für verknüpften Bericht ReportingService2010.GetProperties-Methode | &nbsp; |
-| Einfaches Raster Zeilenheader im mobilen Bericht nicht mehr angezeigt wird, wenn ein Element innerhalb des Rasters geklickt wird | &nbsp; |
-| Keine Date-Felds im Parameter für datengesteuertes Abonnement verwenden | &nbsp; |
-| Geschachtelte Tablix Zeigt kleine oder Schriftart teilweise in SSRS 2016 und höher | &nbsp; |
-| Abonnements mit DateTime-Parameter Fehler nach Benutzer mit verschiedenen Gebietsschemas Änderungen das Abonnement | &nbsp; |
-| Erstellen ein datengesteuertes Abonnement mit Null-Übermittlungserweiterung kann nicht mit "verfügt über eine Bereitstellung Fehler" | &nbsp; |
-| URL-Codierung ist falsch, beim Festlegen des Werts im Excel\Word-format | &nbsp; |
+| Beim Erstellen eines freigegebenen wöchentlichen Zeitplans können keine Wochentage ausgewählt werden. | &nbsp; |
+| Im Bericht werden Wagenrückläufe im Word-Format nicht ordnungsgemäß angezeigt. | &nbsp; |
+| System Center Operations Manager(SCOM) 2019 funktioniert nicht mehr mit aktuellen SSRS 2017-Upgrades. | &nbsp; |
+| Fehler beim Aufrufen der Autorisierungserweiterung für ein freigegebenes Dataset. | &nbsp; |
+| Die Logik für die gespeicherte Prozedur „GetAllProperties“ in SSRS 2017 und PBIRS wurde geändert. Dadurch kann die ReportingService2010.GetProperties-Methode des Webdienst-Endpunkts keine Daten für den verknüpften Bericht abrufen. | &nbsp; |
+| Der einfache Rasterzeilenkopf im mobilen Bericht wird nicht mehr angezeigt, wenn auf ein Element im Raster geklickt wird. | &nbsp; |
+| Das Datumsfeld im datengesteuerten Abonnement kann nicht verwendet werden. | &nbsp; |
+| Die geschachtelte Tablix zeigt in SSRS 2016 und höher eine kleine Schriftart oder eine partielle Schriftart an. | &nbsp; |
+| Bei Abonnements mit dem DateTime-Parameter tritt ein Fehler auf, nachdem ein Benutzer mit einem anderen Gebietsschema das Abonnement ändert. | &nbsp; |
+| Beim Erstellen eines datengesteuerten Abonnements mit NULL-Übermittlungserweiterung wird ein Übermittlungsfehler angezeigt. | &nbsp; |
+| Die URL-Codierung ist falsch, wenn der Wert im Excel- oder Word-Format festgelegt wird. | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109, 12. Februar 2019
 
-| Problem wurde behoben | Details |
+| Behobenes Problem | Details |
 | :---------- | :------ |
 | Nach Änderung des Abonnements ändern sich die Zeitpläne für Cache-Berichtsmomentaufnahmen in „Berichtsspezifischer Zeitplan“. | &nbsp; |
 | „rc:Toolbar=false“ hat in der Express Edition nicht funktioniert. | &nbsp; |
@@ -82,7 +94,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | Sicherheitsupdates | &nbsp; |
 | Benutzeroberfläche für verknüpfte Berichte wurde nicht angezeigt. | &nbsp; |
 | Bestimmte paginierte Berichte mit geschachtelten Tablix-Steuerelementen wiesen falsche Schriftarten auf. | &nbsp; |
-| Leerzeichen wird nicht ordnungsgemäß auf bestimmte paginierte Berichte hinzugefügt, die Tablix-Datenbereiche enthalten. | &nbsp; |
+| In bestimmten paginierten Berichten mit Tablix-Datenbereichen werden fälschlicherweise Leerzeichen hinzugefügt. | &nbsp; |
 | Kopfzeilen sind beim Erweitern einfacher Datenraster in Mobilgeräteberichten verschwunden. | &nbsp; |
 | &nbsp; | &nbsp; |
 
@@ -90,30 +102,30 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 
 Das folgende Problem wurde behoben:
 
-| Problem wurde behoben | Details |
+| Behobenes Problem | Details |
 | :---------- | :------ |
 | Benutzerdefinierte Authentifizierung, die keine richtigen Cookieinformationen zurückgegeben hat. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="140600892-20180831"></a>14.0.600.892, 31. August 2018
 
-| Problem wurde behoben | Details |
+| Behobenes Problem | Details |
 | :---------- | :------ |
 | Ein Textfeld in „Rectangle“ hat bewirkt, dass das Rechteck nicht vertikal erweitert wurde, wenn „rc:Toolbar=False“ festgelegt und in dem Feld viel Text enthalten war. | &nbsp; |
 | Die Textgröße wurde nicht skaliert, wenn „pageHeight“ unter 0,5 Zoll lag. | &nbsp; |
-| Deadlock tritt in der SSRS-Katalogdatenbank auf, wenn er mit CRM verwendet wird. | &nbsp; |
+| Bei Verwendung mit CRM tritt in der SSRS-Katalogdatenbank ein Deadlock auf. | &nbsp; |
 | Vertikal ausgerichtete Spaltenüberschriften wurden beim Herunterscrollen im Bericht falsch angezeigt. | &nbsp; |
-| Benutzer, die System Center Operations Manager-Berichterstattung der Rolle hinzugefügt haben, Zugriff blockiert, SSRS-Webportal. | &nbsp; |
-| Thai-Zeichen ist nicht ordnungsgemäß in die PDF-Datei exportiert. | &nbsp; |
+| Für Benutzer, die der System Center Operations Manager-Berichterstellungsrolle hinzugefügt werden, ist der Zugriff auf das SSRS-Webportal blockiert. | &nbsp; |
+| Thailändische Zeichen werden nicht richtig in das PDF-Format exportiert. | &nbsp; |
 | Behavior Change bei der Browserrolle. | &nbsp; |
 | „rc:Toolbar=false“ hat in der Express Edition nicht funktioniert. | &nbsp; |
-| Fehlt der vertikalen scrollleiste im Eingabeaufforderungsbereich für Parameter. | &nbsp; |
+| Im Eingabeaufforderungsbereich für Parameter fehlt die vertikale Scrollleiste. | &nbsp; |
 | Die Laufzeit des Mobilgeräteberichts wurde aktualisiert. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="140600744-20180425"></a>14.0.600.744, 25. April 2018
 
-| Problem wurde behoben | Details |
+| Behobenes Problem | Details |
 | :---------- | :------ |
 | Auf der Seite „Datengesteuertes Abonnement“ wurde nach der Erstellung die Übermittlungsoption nicht angezeigt. | &nbsp; |
 | Das Upgrade von SSRS 2012 auf SSRS 2017 hat dazu geführt, dass RSManagement alle paar Sekunden eine Ausnahme auslöst. | &nbsp; |
@@ -123,11 +135,11 @@ Das folgende Problem wurde behoben:
 
 ## <a name="140600689-20180228"></a>14.0.600.689, 28. Februar 2018
 
-| Problem wurde behoben | Details |
+| Behobenes Problem | Details |
 | :---------- | :------ |
 | Die Sichtbarkeit von Berichtsparametern in einem verknüpften Bericht wurde nach dem Bearbeiten der zugehörigen Eigenschaften zurückgesetzt. | &nbsp; |
 | Der URL-Parameter „rc:Toolbar = false“ hat in der Express Edition nicht funktioniert. | &nbsp; |
-| Legen mit Ausdrücken in einem Textfeld mit dem "CanGrow"-Eigenschaft auf "false" ergeben sich Werte, die nicht angezeigt. | &nbsp; |
+| Wenn Ausdrücke in einem Textfeld mit der Eigenschaft „CanGrow“ auf „false“ gesetzt sind, werden die Werte nicht angezeigt. | &nbsp; |
 | Der Link _Weitere Informationen_ für den Product Key wurde zum Setup hinzugefügt. | &nbsp; |
 | Das Webportal mit der benutzerdefinierten Formularauthentifizierung hat Cookie mit variablem Ablauf ignoriert. | &nbsp; |
 | Beim Export nach Word wurde eine ungleiche Zeilenhöhe erstellt, wenn der Zeileninhalt leer war. | &nbsp; |
@@ -135,7 +147,7 @@ Das folgende Problem wurde behoben:
 
 ## <a name="140600594-20180109"></a>14.0.600.594, 09. Januar 2018
 
-Es wurden einige Sicherheitsupdates implementiert.
+Implementierung einiger Sicherheitsupdates.
 
 ### <a name="140600490-20171101"></a>14.0.600.490, 01. November 2017
 
