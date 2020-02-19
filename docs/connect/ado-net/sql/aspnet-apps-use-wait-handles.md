@@ -1,6 +1,6 @@
 ---
 title: Verwenden von Wait-Handles in ASP.NET-Anwendungen
-description: Enthält ein Beispiel, das veranschaulicht, wie mehrere gleichzeitige Befehle von einer ASP.NET-Seite aus ausgeführt werden können. dabei wird mithilfe von Wait-Handles der Vorgang bei Abschluss aller Befehle verwaltet.
+description: Enthält ein Beispiel, das veranschaulicht, wie mehrere gleichzeitige Befehle auf einer ASP.NET-Seite ausgeführt werden können, wobei Wait-Handles verwendet werden, um den Vorgang nach Ausführung aller Befehle zu verwalten.
 ms.date: 09/30/2019
 dev_langs:
 - csharp
@@ -9,34 +9,34 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: f7d242410b5f7aadd74494bb33a7572afe23be54
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 0550b67d32d18aa9095b316816ebcbf3494cf195
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452338"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75250959"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Verwenden von Wait-Handles in ASP.NET-Anwendungen
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Die Rückruf-und Abruf Modelle für die Verarbeitung von asynchronen Vorgängen sind nützlich, wenn die Anwendung jeweils nur einen asynchronen Vorgang verarbeitet. Die Wait-Modelle bieten eine flexiblere Methode für die Verarbeitung mehrerer asynchroner Vorgänge. Es gibt zwei Wait-Modelle, die für die <xref:System.Threading.WaitHandle> Methoden benannt werden, die verwendet werden, um Sie zu implementieren: das Wait (Any)-Modell und das Wait (All)-Modell.  
+Die Rückruf- und Abfragemodelle für die Abwicklung asynchroner Vorgänge sind nützlich, wenn Ihre Anwendung jeweils nur einen asynchronen Vorgang verarbeitet. Die Wait-Modelle bieten eine flexiblere Möglichkeit zur Verarbeitung mehrerer asynchroner Vorgänge. Es gibt zwei Wait-Modelle, benannt nach den zur Implementierung verwendeten <xref:System.Threading.WaitHandle>-Methoden: das Wait (Any)-Modell und das Wait (All)-Modell.  
   
-Wenn Sie ein Wait-Modell verwenden möchten, müssen Sie die <xref:System.IAsyncResult.AsyncWaitHandle%2A>-Eigenschaft des <xref:System.IAsyncResult>-Objekts verwenden, das von der <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>-, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>-oder <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>-Methode zurückgegeben wird. Die Methoden <xref:System.Threading.WaitHandle.WaitAny%2A> und <xref:System.Threading.WaitHandle.WaitAll%2A> erfordern, dass Sie die <xref:System.Threading.WaitHandle> Objekte als Argument in einem Array zusammenfassen.  
+Um eines der beiden Wait-Modelle verwenden zu können, müssen Sie die <xref:System.IAsyncResult.AsyncWaitHandle%2A>-Eigenschaft des <xref:System.IAsyncResult>-Objekts verwenden, das von den Methoden <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> oder <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> zurückgegeben wird. Die Methoden <xref:System.Threading.WaitHandle.WaitAny%2A> und <xref:System.Threading.WaitHandle.WaitAll%2A> erfordern beide, dass Sie die <xref:System.Threading.WaitHandle>-Objekte gruppiert in einem Array als Argument senden.  
   
-Beide Wait-Methoden überwachen die asynchronen Vorgänge, die auf den Abschluss warten. Die <xref:System.Threading.WaitHandle.WaitAny%2A>-Methode wartet auf die Beendigung oder das Timeout einer der Operationen. Wenn bekannt ist, dass eine bestimmte Operation abgeschlossen ist, können Sie die Ergebnisse verarbeiten und dann weiter auf die Beendigung oder das Timeout der nächsten Operation warten. Die <xref:System.Threading.WaitHandle.WaitAll%2A>-Methode wartet vor dem Fortfahren auf die Beendigung oder das Timeout aller Prozesse im Array der <xref:System.Threading.WaitHandle>-Instanzen.  
+Beide Wait-Methoden überwachen die asynchronen Vorgänge und warten auf den Abschluss. Die <xref:System.Threading.WaitHandle.WaitAny%2A>-Methode wartet auf die Beendigung oder das Timeout einer der Operationen. Wenn bekannt ist, dass eine bestimmte Operation abgeschlossen ist, können Sie die Ergebnisse verarbeiten und dann weiter auf die Beendigung oder das Timeout der nächsten Operation warten. Die <xref:System.Threading.WaitHandle.WaitAll%2A>-Methode wartet vor dem Fortfahren auf die Beendigung oder das Timeout aller Prozesse im Array der <xref:System.Threading.WaitHandle>-Instanzen.  
   
-Der Vorteil der Wait-Modelle ist am stärksten, wenn Sie mehrere Vorgänge mit einer Länge auf unterschiedlichen Servern ausführen müssen, oder wenn der Server leistungsfähig genug ist, um alle Abfragen gleichzeitig zu verarbeiten. In den hier vorgestellten Beispielen emulieren drei Abfragen lange Prozesse durch das Hinzufügen von WAITFOR-Befehlen mit unterschiedlichen Längen zu nicht Konsequenzen bei SELECT-Abfragen.  
+Der Vorteil der Wait-Modelle ist am auffälligsten, wenn Sie mehrere Vorgänge von einiger Länge auf verschiedenen Servern ausführen müssen oder wenn Ihr Server leistungsfähig genug ist, um alle Abfragen gleichzeitig zu verarbeiten. In den hier vorgestellten Beispielen emulieren drei Abfragen lange Prozesse, indem unterschiedlich lange WAITFOR-Befehle zu folgenlosen SELECT-Abfragen hinzugefügt werden.  
   
-## <a name="example-wait-any-model"></a>Beispiel: Wait (Any)-Modell  
-Im folgenden Beispiel wird das Wait (Any)-Modell veranschaulicht. Nach dem Starten von drei asynchronen Prozessen wird die <xref:System.Threading.WaitHandle.WaitAny%2A>-Methode aufgerufen, um auf den Abschluss einer beliebigen zu warten. Wenn jeder Prozess abgeschlossen ist, wird die <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A>-Methode aufgerufen, und das resultierende <xref:Microsoft.Data.SqlClient.SqlDataReader> Objekt wird gelesen. An diesem Punkt würde eine reale Anwendung wahrscheinlich den <xref:Microsoft.Data.SqlClient.SqlDataReader> verwenden, um einen Teil der Seite aufzufüllen. In diesem einfachen Beispiel wird der Zeitpunkt, zu dem der Prozess abgeschlossen wurde, einem Textfeld hinzugefügt, das dem Prozess entspricht. Die Zeit in den Textfeldern veranschaulicht den Punkt: der Code wird jedes Mal ausgeführt, wenn ein Prozess abgeschlossen ist.  
+## <a name="example-wait-any-model"></a>Beispiel: Wait (Any)-Modell  
+Das folgende Beispiel veranschaulicht das Wait (Any)-Modell. Nach dem Start von drei asynchronen Prozessen wird die <xref:System.Threading.WaitHandle.WaitAny%2A>-Methode aufgerufen, um auf den Abschluss eines beliebigen dieser Prozesse zu warten. Am Ende jedes Prozesses wird die <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A>-Methode aufgerufen und das resultierende <xref:Microsoft.Data.SqlClient.SqlDataReader>-Objekt gelesen. An dieser Stelle würde eine reale Anwendung wahrscheinlich <xref:Microsoft.Data.SqlClient.SqlDataReader> verwenden, um einen Teil der Seite aufzufüllen. Bei diesem einfachen Beispiel wird die Zeit, zu der der Prozess abgeschlossen wurde, in ein Textfeld eingefügt, das zum Prozess gehört. Die Zeitangaben in den Textfeldern verdeutlichen zusammengenommen Folgendes: Bei jeder Beendigung eines Prozesses wird Code ausgeführt.  
   
-Um dieses Beispiel einzurichten, erstellen Sie ein neues ASP.NET-Website Projekt. Platzieren Sie ein <xref:System.Web.UI.WebControls.Button>-Steuerelement und vier <xref:System.Web.UI.WebControls.TextBox>-Steuerelemente auf der Seite (übernehmen Sie für jedes Steuerelement den Standardnamen).  
+Um dieses Beispiel einzurichten, erstellen Sie ein neues ASP.NET-Websiteprojekt. Platzieren Sie ein <xref:System.Web.UI.WebControls.Button>-Steuerelement und vier <xref:System.Web.UI.WebControls.TextBox>-Steuerelemente auf der Seite (wobei der Standardname für jedes Steuerelement übernommen wird).  
   
-Fügen Sie der Klasse des Formulars den folgenden Code hinzu, und ändern Sie die Verbindungs Zeichenfolge nach Bedarf für Ihre Umgebung.  
+Fügen Sie der Klasse des Formulars den folgenden Code hinzu, wobei Sie die Verbindungszeichenfolge entsprechend Ihrer Umgebung ändern müssen.  
   
 ```csharp  
 // Add the following using statements, if they are not already there.  
@@ -191,14 +191,14 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="example-wait-all-model"></a>Beispiel: Wait (All)-Modell  
-Im folgenden Beispiel wird das Wait (All)-Modell veranschaulicht. Nach dem Starten von drei asynchronen Prozessen wird die <xref:System.Threading.WaitHandle.WaitAll%2A>-Methode aufgerufen, um zu warten, bis die Prozesse beendet oder ein Timeout auftritt.  
+## <a name="example-wait-all-model"></a>Beispiel: Wait (All)-Modell  
+Das folgende Beispiel veranschaulicht das Wait (All)-Modell. Nachdem drei asynchrone Prozesse gestartet wurden, wird die <xref:System.Threading.WaitHandle.WaitAll%2A>-Methode aufgerufen, um auf den Abschluss oder das Timeout der Prozesse zu warten.  
   
-Wie im Beispiel für das Wait (Any)-Modell wird die Zeit, zu der der Prozess abgeschlossen wurde, einem Textfeld hinzugefügt, das dem Prozess entspricht. Die Uhrzeiten in den Textfeldern veranschaulichen den Punkt: der Code, der auf die <xref:System.Threading.WaitHandle.WaitAny%2A> Methode folgt, wird erst ausgeführt, nachdem alle Prozesse abgeschlossen sind.  
+Wie im Beispiel des Wait (Any)-Modells wird die Zeit, zu der der Prozess abgeschlossen ist, in ein Textfeld eingefügt, das zum Prozess gehört. Wiederum verdeutlichen die Zeitangaben in den Textfeldern Folgendes: Code, der auf die <xref:System.Threading.WaitHandle.WaitAny%2A>-Methode folgt, wird erst nach Beendigung aller Prozesse ausgeführt.  
   
-Um dieses Beispiel einzurichten, erstellen Sie ein neues ASP.NET-Website Projekt. Platzieren Sie ein <xref:System.Web.UI.WebControls.Button>-Steuerelement und vier <xref:System.Web.UI.WebControls.TextBox>-Steuerelemente auf der Seite (übernehmen Sie für jedes Steuerelement den Standardnamen).  
+Um dieses Beispiel einzurichten, erstellen Sie ein neues ASP.NET-Websiteprojekt. Platzieren Sie ein <xref:System.Web.UI.WebControls.Button>-Steuerelement und vier <xref:System.Web.UI.WebControls.TextBox>-Steuerelemente auf der Seite (wobei der Standardname für jedes Steuerelement übernommen wird).  
   
-Fügen Sie der Klasse des Formulars den folgenden Code hinzu, und ändern Sie die Verbindungs Zeichenfolge nach Bedarf für Ihre Umgebung.  
+Fügen Sie der Klasse des Formulars den folgenden Code hinzu, wobei Sie die Verbindungszeichenfolge entsprechend Ihrer Umgebung ändern müssen.  
   
 ```csharp  
 // Add the following using statements, if they are not already there.  

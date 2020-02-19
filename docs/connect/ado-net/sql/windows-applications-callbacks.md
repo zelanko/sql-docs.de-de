@@ -1,6 +1,6 @@
 ---
 title: Verwenden von Rückrufen in Windows-Anwendungen
-description: Bietet ein Beispiel, das zeigt, wie ein asynchroner Befehl sicher ausgeführt werden kann, wobei die Interaktion mit einem Formular und dessen Inhalt von einem separaten Thread ordnungsgemäß verarbeitet wird.
+description: Bietet ein Beispiel, das zeigt, wie ein asynchroner Befehl sicher ausgeführt werden kann, wobei die Interaktion mit einem Formular und dessen Inhalt in einem separaten Thread ordnungsgemäß gehandhabt wird.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,30 +9,30 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5c2d46e3f2b26a8106e75f2bb116907e2f27a7b9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451900"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253380"
 ---
 # <a name="windows-applications-using-callbacks"></a>Verwenden von Rückrufen in Windows-Anwendungen
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-In den meisten asynchronen Verarbeitungs Szenarien möchten Sie einen Daten Bank Vorgang starten und die Ausführung anderer Prozesse fortsetzen, ohne darauf zu warten, dass der Daten Bank Vorgang beendet wird. Viele Szenarien erfordern jedoch einen Vorgang, nachdem der Daten Bank Vorgang beendet wurde. In einer Windows-Anwendung können Sie z. b. den Vorgang mit langer Laufzeit an einen Hintergrund Thread delegieren, während der Benutzeroberflächen Thread weiterhin reaktionsfähig bleibt. Wenn der Daten Bank Vorgang jedoch beendet ist, sollten Sie die Ergebnisse verwenden, um das Formular zu füllen. Diese Art von Szenario wird am besten mit einem Rückruf implementiert.  
+In den meisten asynchronen Verarbeitungsszenarien möchten Sie einen Datenbankvorgang starten und andere Prozesse fortsetzen, ohne auf den Abschluss des Datenbankvorgangs warten zu müssen. In vielen Szenarien muss jedoch nach Abschluss des Datenbankvorgangs noch etwas erfolgen. In einer Windows-Anwendung beispielsweise ermöglicht das Delegieren des Vorgangs mit langer Ausführungszeit an einen Hintergrundthread, dass der Benutzeroberflächenthread reaktionsfähig bleibt. Wenn der Datenbankvorgang jedoch abgeschlossen ist, möchten Sie die Ergebnisse zum Ausfüllen des Formulars verwenden. Diese Art von Szenario lässt sich am besten mit einem Rückruf umsetzen.  
   
-Sie definieren einen Rückruf, indem Sie einen <xref:System.AsyncCallback> Delegaten in der <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>-, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>-oder <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>-Methode angeben. Der Delegat wird aufgerufen, wenn der Vorgang beendet ist. Sie können dem Delegaten einen Verweis auf die <xref:Microsoft.Data.SqlClient.SqlCommand> selbst übergeben, um den Zugriff auf das <xref:Microsoft.Data.SqlClient.SqlCommand> Objekt zu erleichtern und die entsprechende `End` Methode aufzurufen, ohne eine globale Variable verwenden zu müssen.  
+Sie definieren einen Rückruf, indem Sie in der Methode <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> oder <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> einen <xref:System.AsyncCallback>-Delegaten angeben. Der Delegat wird aufgerufen, wenn der Vorgang abgeschlossen ist. Sie können an den Delegaten einen Verweis auf den <xref:Microsoft.Data.SqlClient.SqlCommand> selbst übergeben, wodurch der Zugriff auf das <xref:Microsoft.Data.SqlClient.SqlCommand>-Objekt und der Aufruf der entsprechenden `End`-Methode problemlos möglich ist, ohne dass eine globale Variable verwendet werden muss.  
   
 ## <a name="example"></a>Beispiel  
-Die folgende Windows-Anwendung veranschaulicht die Verwendung der <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>-Methode, wobei eine Transact-SQL-Anweisung ausgeführt wird, die eine Verzögerung von einigen Sekunden umfasst (emulieren eines Befehls mit langer Ausführungszeit).  
+Die folgende Windows-Anwendung veranschaulicht die Verwendung der <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>-Methode, bei der (zum Emulieren eines Befehls mit langer Ausführungszeit) eine Transact-SQL-Anweisung mit einer Verzögerung von einigen Sekunden ausgeführt wird.  
   
-In diesem Beispiel werden eine Reihe wichtiger Techniken veranschaulicht, einschließlich des Abrufens einer Methode, die mit dem Formular von einem separaten Thread interagiert. Außerdem wird in diesem Beispiel veranschaulicht, wie Sie Benutzer daran hindern müssen, einen Befehl mehrmals gleichzeitig auszuführen, und wie Sie sicherstellen müssen, dass das Formular nicht geschlossen wird, bevor die Rückruf Prozedur aufgerufen wird.  
+Dieses Beispiel veranschaulicht eine Reihe wichtiger Techniken, einschließlich des Aufrufs einer Methode, die in einem separaten Thread mit dem Formular interagiert. Darüber hinaus zeigt dieses Beispiel, wie Sie die gleichzeitige Ausführung eines Befehls durch Benutzer mehrmals blockieren und wie sicherstellen müssen, dass das Formular nicht geschlossen wird, bevor die Rückrufprozedur aufgerufen wird.  
   
-Um dieses Beispiel einzurichten, erstellen Sie eine neue Windows-Anwendung. Platzieren Sie ein <xref:System.Windows.Forms.Button>-Steuerelement und zwei <xref:System.Windows.Forms.Label>-Steuerelemente auf dem Formular (übernehmen Sie für jedes Steuerelement den Standardnamen). Fügen Sie der Klasse des Formulars den folgenden Code hinzu, und ändern Sie die Verbindungs Zeichenfolge nach Bedarf für Ihre Umgebung.  
+Um dieses Beispiel einzurichten, erstellen Sie eine neue Windows-Anwendung. Platzieren Sie ein <xref:System.Windows.Forms.Button>-Steuerelement und zwei <xref:System.Windows.Forms.Label>-Steuerelemente auf dem Formular (wobei der Standardname für jedes Steuerelement übernommen wird). Fügen Sie der Klasse des Formulars den folgenden Code hinzu, wobei Sie die Verbindungszeichenfolge entsprechend Ihrer Umgebung ändern müssen.  
   
 ```csharp  
 // Add these to the top of the class, if they're not already there:  

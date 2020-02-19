@@ -1,6 +1,6 @@
 ---
 title: Bearbeiten von Daten
-description: Enthält Beispiele für das Programmieren von Mars-Anwendungen.
+description: Beispiele für das Programmieren von MARS-Anwendungen.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,30 +9,30 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: df430bbacb69e1d95d001e4f9340ca60473503cd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 7855ef064061957cbc44dfcb4b075ebbd3893325
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452162"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247734"
 ---
 # <a name="manipulating-data"></a>Bearbeiten von Daten
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Vor der Einführung von Mars (Multiple Active Result Sets) mussten Entwickler entweder mehrere Verbindungen oder serverseitige Cursor verwenden, um bestimmte Szenarien zu lösen. Bei der Verwendung mehrerer Verbindungen in einem Transaktionskontext waren darüber hinaus gebundene Verbindungen (mit **sp_getbindtoken** und **sp_bindsession**) erforderlich. In den folgenden Szenarien wird gezeigt, wie eine Mars-aktivierte Verbindung anstelle mehrerer Verbindungen verwendet wird.  
+Vor der Einführung von MARS (Multiple Active Result Sets, mehrere aktive Resultsets) mussten Entwickler entweder mehrere Verbindungen oder serverseitige Cursor verwenden, um bestimmte Szenarien aufzulösen. Bei der Verwendung mehrerer Verbindungen in einem Transaktionskontext waren darüber hinaus gebundene Verbindungen (mit **sp_getbindtoken** und **sp_bindsession**) erforderlich. In den folgenden Szenarien wird gezeigt, wie eine MARS-fähige Verbindung anstelle mehrerer Verbindungen verwendet wird.  
   
-## <a name="using-multiple-commands-with-mars"></a>Verwenden mehrerer Befehle mit Mars  
-In der folgenden Konsolenanwendung wird veranschaulicht, wie zwei <xref:Microsoft.Data.SqlClient.SqlDataReader>-Objekte mit zwei <xref:Microsoft.Data.SqlClient.SqlCommand> Objekten und einem einzelnen <xref:Microsoft.Data.SqlClient.SqlConnection>-Objekt mit aktiviertem MARS verwendet werden.  
+## <a name="using-multiple-commands-with-mars"></a>Verwenden mehrerer Befehle mit MARS  
+Die folgende Konsolenanwendung veranschaulicht die Verwendung zweier <xref:Microsoft.Data.SqlClient.SqlDataReader>-Objekte mit zwei <xref:Microsoft.Data.SqlClient.SqlCommand>-Objekten und einem einzelnen <xref:Microsoft.Data.SqlClient.SqlConnection>-Objekt bei aktiviertem MARS.  
   
 ### <a name="example"></a>Beispiel  
-Im Beispiel wird eine einzelne Verbindung mit der **AdventureWorks**-Datenbank geöffnet. Wenn Sie ein <xref:Microsoft.Data.SqlClient.SqlCommand> Objekt verwenden, wird ein <xref:Microsoft.Data.SqlClient.SqlDataReader> erstellt. Bei Verwendung des Readers wird ein zweiter <xref:Microsoft.Data.SqlClient.SqlDataReader> geöffnet, der Daten aus dem ersten <xref:Microsoft.Data.SqlClient.SqlDataReader> als Eingabe für die WHERE-Klausel des zweiten Readers verwendet.  
+Im Beispiel wird eine einzelne Verbindung mit der **AdventureWorks**-Datenbank geöffnet. Wenn Sie ein <xref:Microsoft.Data.SqlClient.SqlCommand>-Objekt verwenden, wird ein <xref:Microsoft.Data.SqlClient.SqlDataReader> erstellt. Bei Verwenden des Readers wird ein zweiter <xref:Microsoft.Data.SqlClient.SqlDataReader> geöffnet, wobei die Daten aus dem ersten <xref:Microsoft.Data.SqlClient.SqlDataReader> als Eingabe in die WHERE-Klausel für den zweiten Reader verwendet werden.  
   
 > [!NOTE]
->  Im folgenden Beispiel wird die in SQL Server enthaltene **AdventureWorks**-Beispieldatenbank verwendet. Die im Beispielcode angegebene Verbindungs Zeichenfolge setzt voraus, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungs Zeichenfolge nach Bedarf für Ihre Umgebung.  
+>  Im folgenden Beispiel wird die in SQL Server enthaltene **AdventureWorks**-Beispieldatenbank verwendet. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird davon ausgegangen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge nach Bedarf für Ihre Umgebung.  
   
 ```csharp  
 using System;  
@@ -105,14 +105,14 @@ static void Main()
 }  
 ```  
   
-## <a name="reading-and-updating-data-with-mars"></a>Lesen und Aktualisieren von Daten mit Mars  
-Mars ermöglicht die Verwendung einer Verbindung sowohl für Lesevorgänge als auch für DML-Vorgänge (Data Manipulation Language) mit mehr als einem ausstehenden Vorgang. Mit dieser Funktion entfällt die Notwendigkeit, dass eine Anwendung mit Fehlern mit Verbindungs Überlastung umgeht. Außerdem kann Mars den Benutzer von serverseitigen Cursorn ersetzen, die in der Regel mehr Ressourcen verbrauchen. Da außerdem mehrere Vorgänge über eine einzelne Verbindung ausgeführt werden können, kann ein gemeinsamer Transaktionskontext verwendet werden. Dadurch ist die Verwendung der gespeicherten Systemprozeduren **sp_getbindtoken** und **sp_bindsession** nicht mehr erforderlich.  
+## <a name="reading-and-updating-data-with-mars"></a>Lesen und Aktualisieren von Daten mit MARS  
+MARS ermöglicht die Verwendung einer Verbindung sowohl für Lese- als auch für DML-Vorgänge (Data Manipulation Language, Datenbearbeitungssprache) mit mehr als einem ausstehenden Vorgang. Dieses Feature macht eine Anwendung zur Behandlung von Fehlern im Zusammenhang mit der Verbindungsauslastung überflüssig. Darüber hinaus kann MARS die Verwendung serverseitiger Cursor ersetzen, die im Allgemeinen mehr Ressourcen benötigen. Da außerdem mehrere Vorgänge über eine einzelne Verbindung ausgeführt werden können, kann ein gemeinsamer Transaktionskontext verwendet werden. Dadurch ist die Verwendung der gespeicherten Systemprozeduren **sp_getbindtoken** und **sp_bindsession** nicht mehr erforderlich.  
   
 ### <a name="example"></a>Beispiel  
-Die folgende Konsolenanwendung veranschaulicht die Verwendung von zwei <xref:Microsoft.Data.SqlClient.SqlDataReader> Objekten mit drei <xref:Microsoft.Data.SqlClient.SqlCommand> Objekten und einem einzelnen <xref:Microsoft.Data.SqlClient.SqlConnection>-Objekt mit aktiviertem Mars. Das erste Befehls Objekt ruft eine Liste von Anbietern ab, deren Bonitätsbewertung 5 beträgt. Das zweite Befehls Objekt verwendet die Anbieter-ID, die von einem <xref:Microsoft.Data.SqlClient.SqlDataReader> bereitgestellt wird, um die zweite <xref:Microsoft.Data.SqlClient.SqlDataReader> mit allen Produkten für den bestimmten Anbieter zu laden. Jeder Produktdaten Satz wird vom zweiten <xref:Microsoft.Data.SqlClient.SqlDataReader> besucht. Es wird eine Berechnung ausgeführt, um den neuen Wert für **OnOrderQty** zu bestimmen. Anschließend wird mithilfe des dritten Befehlsobjekts die **ProductVendor**-Tabelle mit dem neuen Wert aktualisiert. Der gesamte Prozess findet innerhalb einer einzelnen Transaktion statt, für die am Ende ein Rollback ausgeführt wird.  
+Die folgende Konsolenanwendung veranschaulicht die Verwendung zweier <xref:Microsoft.Data.SqlClient.SqlDataReader>-Objekte mit drei <xref:Microsoft.Data.SqlClient.SqlCommand>-Objekten und einem einzelnen <xref:Microsoft.Data.SqlClient.SqlConnection>-Objekt bei aktiviertem MARS. Das erste Befehlsobjekt ruft eine Liste von Anbietern ab, deren Bonitätsbewertung 5 ist. Das zweite Befehlsobjekt verwendet die von einem <xref:Microsoft.Data.SqlClient.SqlDataReader> bereitgestellte Anbieter-ID, um den zweiten <xref:Microsoft.Data.SqlClient.SqlDataReader> mit allen Produkten für den bestimmten Anbieter zu laden. Jeder Produktdatensatz wird vom zweiten <xref:Microsoft.Data.SqlClient.SqlDataReader> besucht. Es wird eine Berechnung ausgeführt, um den neuen Wert für **OnOrderQty** zu bestimmen. Anschließend wird mithilfe des dritten Befehlsobjekts die **ProductVendor**-Tabelle mit dem neuen Wert aktualisiert. Der gesamte Prozess findet innerhalb einer einzelnen Transaktion statt, für die am Ende ein Rollback erfolgt.  
   
 > [!NOTE]
->  Im folgenden Beispiel wird die in SQL Server enthaltene **AdventureWorks**-Beispieldatenbank verwendet. Die im Beispielcode angegebene Verbindungs Zeichenfolge setzt voraus, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungs Zeichenfolge nach Bedarf für Ihre Umgebung.  
+>  Im folgenden Beispiel wird die in SQL Server enthaltene **AdventureWorks**-Beispieldatenbank verwendet. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird davon ausgegangen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge nach Bedarf für Ihre Umgebung.  
   
 ```csharp  
 using System;  

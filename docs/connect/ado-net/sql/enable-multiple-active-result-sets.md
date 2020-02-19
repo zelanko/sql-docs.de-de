@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: d0c40df5ec7648b7073f9efa369428b8d88f6d11
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: a6907e7f5581ea5160a2c3d5c4b9170c1bced523
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452226"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247796"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Aktivieren mehrerer aktiver Resultsets
 
@@ -26,14 +26,14 @@ ms.locfileid: "72452226"
 MARS ist eine Funktion, die mit SQL Server verwendet wird und das Ausführen mehrerer Batches über eine einzelne Verbindung ermöglicht. Wenn MARS für die Verwendung mit SQL Server aktiviert wird, fügen die einzelnen verwendeten Befehlsobjekte der Verbindung eine Sitzung hinzu.  
   
 > [!NOTE]
->  Eine einzelne MARS-Sitzung öffnet eine logische Verbindung, die von Mars verwendet werden soll, und dann eine logische Verbindung für jeden aktiven Befehl.  
+>  Eine einzelne MARS-Sitzung öffnet eine logische Verbindung, die MARS verwenden kann, und dann eine logische Verbindung für jeden aktiven Befehl.  
   
-## <a name="enabling-and-disabling-mars-in-the-connection-string"></a>Aktivieren und Deaktivieren von Mars in der Verbindungs Zeichenfolge  
+## <a name="enabling-and-disabling-mars-in-the-connection-string"></a>Aktivieren und Deaktivieren von MARS in der Verbindungszeichenfolge  
   
 > [!NOTE]
->  Die folgenden Verbindungszeichenfolgen verwenden die **AdventureWorks**-Beispieldatenbank aus SQL Server. Die angegebenen Verbindungs Zeichenfolgen gehen davon aus, dass die Datenbank auf einem Server mit dem Namen MSSQL1 installiert ist. Ändern Sie die Verbindungs Zeichenfolge nach Bedarf für Ihre Umgebung.  
+>  Die folgenden Verbindungszeichenfolgen verwenden die **AdventureWorks**-Beispieldatenbank aus SQL Server. Die angegebenen Verbindungszeichenfolgen setzen voraus, dass die Datenbank auf einem Server namens MSSQL1 installiert ist. Ändern Sie die Verbindungszeichenfolge nach Bedarf für Ihre Umgebung.  
   
-Die MARS-Feature ist standardmäßig deaktiviert. Sie kann aktiviert werden, indem Sie das Schlüsselwort Paar "MultipleActiveResultSets = True" zur Verbindungs Zeichenfolge hinzufügen. „True“ ist der einzige gültige Wert zum Aktivieren von MARS. Im folgenden Beispiel wird veranschaulicht, wie eine Verbindung mit einer Instanz von hergestellt wird SQL Server und wie angegeben wird, dass MARS aktiviert werden soll. 
+Die MARS-Feature ist standardmäßig deaktiviert. Sie kann durch Hinzufügen des Schlüsselwortpaares „MultipleActiveResultSets=True“ zu Ihrer Verbindungszeichenfolge aktiviert werden. „True“ ist der einzige gültige Wert zum Aktivieren von MARS. Das folgende Beispiel zeigt, wie eine Verbindung mit einer Instanz von SQL Server hergestellt wird und wie angegeben wird, dass MARS aktiviert werden soll. 
   
 ```csharp  
 string connectionString = "Data Source=MSSQL1;" +   
@@ -41,7 +41,7 @@ string connectionString = "Data Source=MSSQL1;" +
     "MultipleActiveResultSets=True";  
 ```  
   
-Sie können Mars deaktivieren, indem Sie das Schlüsselwort Paar "MultipleActiveResultSets = false" zu ihrer Verbindungs Zeichenfolge hinzufügen. „False“ ist der einzige gültige Wert zum Deaktivieren von MARS. In der folgenden Verbindungs Zeichenfolge wird veranschaulicht, wie Mars deaktiviert wird.  
+Sie können MARS deaktivieren, indem Sie das Schlüsselwortpaar „MultipleActiveResultSets=False“ zu Ihrer Verbindungszeichenfolge hinzufügen. „False“ ist der einzige gültige Wert zum Deaktivieren von MARS. Die folgende Verbindungszeichenfolge zeigt, wie MARS deaktiviert werden kann.  
   
 ```csharp  
 string connectionString = "Data Source=MSSQL1;" +   
@@ -49,65 +49,65 @@ string connectionString = "Data Source=MSSQL1;" +
     "MultipleActiveResultSets=False";  
 ```  
   
-## <a name="special-considerations-when-using-mars"></a>Besondere Überlegungen bei der Verwendung von Mars  
-Im Allgemeinen sollten vorhandene Anwendungen nicht geändert werden, um eine Mars-aktivierte Verbindung zu verwenden. Wenn Sie jedoch MARS-Features in Ihren Anwendungen verwenden möchten, sollten Sie sich mit den folgenden Besonderheiten vertraut machen.  
+## <a name="special-considerations-when-using-mars"></a>Besondere Aspekte bei Verwendung von MARS  
+Im Allgemeinen sollten bestehende Anwendungen nicht modifiziert werden müssen, um eine MARS-fähige Verbindung zu nutzen. Wenn Sie jedoch MARS-Features in Ihren Anwendungen verwenden möchten, sollten Sie mit den folgenden besonderen Aspekten vertraut sein.  
   
 ### <a name="statement-interleaving"></a>Anweisungsüberlappung  
-Mars-Vorgänge werden synchron auf dem Server ausgeführt. Die Austausch Vorgänge von SELECT-und BULK INSERT-Anweisungen sind zulässig. DML-Anweisungen (Data Manipulation Language) und DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) werden jedoch atomarisch ausgeführt. Alle Anweisungen, die während der Ausführung eines atomaren Batches ausgeführt werden sollen, werden blockiert. Die parallele Ausführung auf dem Server ist keine Mars-Funktion.  
+MARS-Vorgänge werden auf dem Server synchron ausgeführt. Die Überlappung von SELECT- und BULK INSERT-Anweisungen ist zulässig. DML- (Data Manipulation Language) und DDL-Anweisungen (Data Definition Language) werden jedoch atomisch ausgeführt. Alle Anweisungen, die versuchen, während der Ausführung eines atomischen Batches ausgeführt zu werden, werden blockiert. Die parallele Ausführung auf dem Server ist kein MARS-Feature.  
   
-Wenn zwei Batches unter einer MARS-Verbindung übermittelt werden, von denen eine eine SELECT-Anweisung enthält, die andere, die eine DML-Anweisung enthält, kann die DML-Anweisung innerhalb der Ausführung der SELECT-Anweisung ausgeführt werden. Allerdings muss die DML-Anweisung bis zum Abschluss ausgeführt werden, bevor die SELECT-Anweisung fortgesetzt werden kann. Wenn beide Anweisungen in derselben Transaktion ausgeführt werden, sind alle Änderungen, die von einer DML-Anweisung vorgenommen wurden, nachdem die SELECT-Anweisung gestartet wurde, für den Lesevorgang nicht sichtbar.  
+Wenn zwei Batches über eine MARS-Verbindung übermittelt werden, von denen einer eine SELECT-Anweisung und der andere eine DML-Anweisung enthält, kann DML mit der Ausführung innerhalb der Ausführung der SELECT-Anweisung beginnen. Die DML-Anweisung muss jedoch vollständig abgeschlossen werden, ehe die SELECT-Anweisung fortgesetzt werden kann. Wenn beide Anweisungen innerhalb derselben Transaktion ausgeführt werden, sind alle Änderungen, die durch eine DML-Anweisung nach Beginn der Ausführung der SELECT-Anweisung vorgenommen werden, für den Lesevorgang nicht sichtbar.  
   
-Eine WAITFOR-Anweisung innerhalb einer SELECT-Anweisung ergibt nicht die Transaktion, während Sie wartet, d. h. bis die erste Zeile erstellt wird. Dies bedeutet, dass keine anderen Batches innerhalb derselben Verbindung ausgeführt werden können, während eine WAITFOR-Anweisung wartet.  
+Eine WAITFOR-Anweisung innerhalb einer SELECT-Anweisung hält die Transaktion nicht an, während sie wartet, d. h. bis die erste Zeile erzeugt wird. Dies bedeutet, dass keine anderen Batches innerhalb der gleichen Verbindung ausgeführt werden können, während eine WAITFOR-Anweisung wartet.  
   
-### <a name="mars-session-cache"></a>Mars-Sitzungs Cache  
-Wenn eine Verbindung mit aktiviertem MARS geöffnet wird, wird eine logische Sitzung erstellt, wodurch zusätzlicher Verwaltungsaufwand entsteht. Um den Mehraufwand zu minimieren und die Leistungsfähigkeit zu erhöhen, führt **SqlClient** eine Zwischenspeicherung der MARS-Sitzung in einer Verbindung durch. Der Cache enthält höchstens 10 Mars-Sitzungen. Dieser Wert kann nicht vom Benutzer angepasst werden. Wenn das Sitzungs Limit erreicht ist, wird eine neue Sitzung erstellt – es wird kein Fehler generiert. Der Cache und die darin enthaltenen Sitzungen sind pro Verbindung. Sie werden nicht über Verbindungen gemeinsam genutzt. Wenn eine Sitzung freigegeben wird, wird Sie an den Pool zurückgegeben, es sei denn, die Obergrenze des Pools wurde erreicht. Wenn der Cache Pool voll ist, wird die Sitzung geschlossen. Mars-Sitzungen laufen nicht ab. Sie werden nur bereinigt, wenn das Verbindungs Objekt verworfen wird. Der Mars-Sitzungs Cache ist nicht vorab geladen. Es wird geladen, da die Anwendung mehr Sitzungen benötigt.  
+### <a name="mars-session-cache"></a>MARS-Sitzungscache  
+Wenn eine Verbindung mit aktiviertem MARS geöffnet wird, wird eine logische Sitzung erstellt, was zusätzlichen Aufwand bedeutet. Um den Mehraufwand zu minimieren und die Leistungsfähigkeit zu erhöhen, führt **SqlClient** eine Zwischenspeicherung der MARS-Sitzung in einer Verbindung durch. Der Cache enthält höchstens 10 MARS-Sitzungen. Dieser Wert kann nicht vom Benutzer angepasst werden. Bei Erreichen des Sitzungslimits wird eine neue Sitzung erstellt, ohne dass ein Fehler ausgegeben wird. Der Cache und die darin enthaltenen Sitzungen sind verbindungsbezogen. Daher werden sie nicht von verschiedenen Verbindungen gemeinsam genutzt. Sobald eine Sitzung freigegeben wird, wird sie an den Pool zurückgegeben, es sei denn, die Obergrenze des Pools ist erreicht. Wenn der Cachepool voll ist, wird die Sitzung geschlossen. MARS-Sitzungen laufen nicht ab. Sie werden lediglich bereinigt, wenn das Verbindungsobjekt verworfen wird. Der MARS-Sitzungscache wird nicht vorab geladen. Er wird geladen, sobald die Anwendung mehr Sitzungen benötigt.  
   
 ### <a name="thread-safety"></a>Threadsicherheit  
-Mars-Vorgänge sind nicht Thread sicher.  
+MARS-Vorgänge sind nicht threadsicher.  
   
 ### <a name="connection-pooling"></a>Verbindungspooling  
-Mars-fähige Verbindungen werden wie jede andere Verbindung in einem Pool zusammengefasst. Wenn eine Anwendung zwei Verbindungen öffnet, eine mit aktiviertem Mars und eine, bei der Mars deaktiviert ist, befinden sich die beiden Verbindungen in separaten Pools.
+MARS-fähige Verbindungen lassen sich wie andere Verbindungen in einem Pool zusammenfassen. Wenn eine Anwendung zwei Verbindungen öffnet, eine mit aktiviertem und eine mit deaktiviertem MARS, befinden sich die beiden Verbindungen in getrennten Pools.
   
-### <a name="sql-server-batch-execution-environment"></a>SQL Server Batch Ausführungsumgebung  
-Wenn eine Verbindung geöffnet wird, wird eine Standardumgebung definiert. Diese Umgebung wird dann in eine logische MARS-Sitzung kopiert.  
+### <a name="sql-server-batch-execution-environment"></a>SQL Server-Batchausführungsumgebung  
+Beim Öffnen einer Verbindung wird eine Standardumgebung definiert. Diese Umgebung wird dann in eine logische MARS-Sitzung kopiert.  
   
-Die Batch Ausführungsumgebung umfasst die folgenden Komponenten:  
+Die Batchausführungsumgebung umfasst die folgenden Komponenten:  
   
-- SET-Optionen (z. b. ANSI_NULLS, date_format, Language, TEXTSIZE)  
+- SET-Optionen (z. B. ANSI_NULLS, DATE_FORMAT, LANGUAGE und TEXTSIZE)  
   
-- Sicherheitskontext (Benutzer/Anwendungs Rolle)  
+- Sicherheitskontext (Benutzer/Anwendungsrolle)  
   
-- Daten Bank Kontext (aktuelle Datenbank)  
+- Datenbankkontext (aktuelle Datenbank)  
   
-- Ausführungs Zustandsvariablen (z. b. @ @ERROR, @ @ROWCOUNT, @ @FETCH_STATUS @ @IDENTITY)  
+- Ausführungszustandsvariablen (z. B. @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
   
 - Temporäre Tabellen der obersten Ebene  
   
-Bei Mars ist eine Standard Ausführungsumgebung einer Verbindung zugeordnet. Jeder neue Batch, dessen Ausführung unter einer bestimmten Verbindung gestartet wird, erhält eine Kopie der Standardumgebung. Wenn Code unter einem bestimmten Batch ausgeführt wird, werden alle an der Umgebung vorgenommenen Änderungen auf den jeweiligen Batch beschränkt. Beim Abschluss der Ausführung werden die Ausführungseinstellungen in die Standardumgebung kopiert. Bei einem einzelnen Batch, der mehrere Befehle ausgibt, die in derselben Transaktion sequenziell ausgeführt werden, ist die Semantik identisch mit derjenigen, die von Verbindungen mit früheren Clients oder Servern verfügbar gemacht werden.  
+Bei MARS ist einer Verbindung eine Standardausführungsumgebung zugeordnet. Jeder neue Batch, dessen Ausführung unter einer bestimmten Verbindung gestartet wird, erhält eine Kopie der Standardumgebung. Bei Ausführung von Code in einem bestimmten Batch sind sämtliche an der Umgebung vorgenommenen Änderungen auf diesen speziellen Batch begrenzt. Beim Abschluss der Ausführung werden die Ausführungseinstellungen in die Standardumgebung kopiert. Bei einem einzelnen Batch, der mehrere Befehle enthält, die nacheinander in derselben Transaktion ausgeführt werden sollen, ist die Semantik die gleiche wie bei Verbindungen, die von früheren Clients oder Servern verfügbar gemacht werden.  
   
 ### <a name="parallel-execution"></a>Parallele Ausführung  
-Mars ist nicht darauf ausgelegt, alle Anforderungen für mehrere Verbindungen in einer Anwendung zu entfernen. Wenn eine Anwendung eine echte parallele Ausführung von Befehlen für einen Server benötigt, sollten mehrere Verbindungen verwendet werden.  
+MARS ist nicht so konzipiert, dass alle Anforderungen für mehrere Verbindungen in einer Anwendung entfallen. Wenn eine Anwendung eine tatsächliche parallele Ausführung von Befehlen auf einem Server benötigt, müssen mehrere Verbindungen verwendet werden.  
   
-Betrachten Sie beispielsweise das folgende Szenario. Es werden zwei Befehls Objekte erstellt, eine für die Verarbeitung eines Resultsets und eine andere zum Aktualisieren von Daten. Sie haben eine gemeinsame Verbindung über Mars. In diesem Szenario kann `Transaction`.`Commit` erst erfolgreich ausgeführt werden, nachdem alle Ergebnisse des ersten Befehlsobjekts gelesen wurden. Daher wird eine entsprechende Ausnahme ausgelöst:  
+Ein Beispiel: Es werden zwei Befehlsobjekte erstellt: eines zur Verarbeitung eines Resultsets und ein weiteres zur Aktualisierung von Daten. Beide nutzen eine gemeinsame Verbindung über MARS. In diesem Szenario kann `Transaction`.`Commit` erst erfolgreich ausgeführt werden, nachdem alle Ergebnisse des ersten Befehlsobjekts gelesen wurden. Daher wird eine entsprechende Ausnahme ausgelöst:  
   
 Meldung: Der Transaktionskontext wird von einer anderen Sitzung verwendet.  
   
-Quelle: Microsoft SqlClient Datenanbieter  
+Quelle: Microsoft SqlClient-Datenanbieter  
   
-Erwartet: (null)  
+Erwartet: (NULL)  
   
-Empfangen: Microsoft. Data. SqlClient. SqlException  
+Empfangen: Microsoft.Data.SqlClient.SqlException  
   
-Es gibt drei Optionen für die Behandlung dieses Szenarios:  
+Es gibt zwei Optionen zum Umgang mit diesem Szenario:  
   
-- Starten Sie die Transaktion, nachdem der Reader erstellt wurde, sodass Sie nicht Teil der Transaktion ist. Jedes Update wird dann zu seiner eigenen Transaktion.  
+- Starten Sie die Transaktion nach Erstellen des Readers so, dass sie nicht Teil der Transaktion ist. Jede Aktualisierung wird dann eine eigene Transaktion.  
   
-- Commit für alle arbeiten nach dem Schließen des Readers. Dies hat das Potenzial für einen beträchtlichen Batch von Updates.  
+- Committen Sie alle Aufgaben nach Schließen des Readers. Dies birgt das Potenzial für einen beträchtlichen Batch von Aktualisierungen.  
   
-- Verwenden Sie Mars nicht. Verwenden Sie stattdessen für jedes Befehls Objekt eine separate Verbindung wie vor Mars.  
+- Verwenden Sie nicht MARS sondern für jedes Befehlsobjekt eine separate Verbindung, so wie Sie es vor MARS getan hätten.  
   
 ### <a name="detecting-mars-support"></a>Erkennen der Unterstützung von MARS  
-Eine Anwendung kann die Mars-Unterstützung überprüfen, indem Sie den `SqlConnection.ServerVersion` Wert liest. Die Hauptnummer sollte 9 für SQL Server 2005 und 10 für SQL Server 2008 lauten.  
+Eine Anwendung kann auf MARS-Unterstützung prüfen, indem sie den Wert `SqlConnection.ServerVersion` liest. Die Hauptnummer muss 9 für SQL Server 2005 und 10 für SQL Server 2008 lauten.  
   
 ## <a name="next-steps"></a>Nächste Schritte
 - [Mehrere aktive Resultsets (MARS)](multiple-active-result-sets-mars.md)

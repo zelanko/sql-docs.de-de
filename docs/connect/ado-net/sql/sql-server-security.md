@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: bb9e02743122958cb567e01f5011fc9f8b3481e6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: e3b32e0d0224ee6402b69f112560127eb970b9ae
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452003"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246959"
 ---
 # <a name="sql-server-security"></a>SQL Server-Sicherheit
 
@@ -23,19 +23,19 @@ ms.locfileid: "72452003"
 
 SQL Server besitzt viele Funktionen, die das Erstellen sicherer Datenbankanwendungen unterstützen.  
   
-Allgemeine Sicherheitsfragen, wie der Schutz vor Datendiebstahl oder Vandalismus, bleiben jedoch ungeachtet der jeweils verwendeten SQL Server-Version immer aktuell. Die Datenintegrität sollte auch als Sicherheitsproblem angesehen werden. Wenn Daten nicht geschützt sind, kann es möglicherweise wertlos werden, wenn eine Ad-hoc-Datenbearbeitung zulässig ist und die Daten versehentlich oder böswillig mit falschen Werten geändert oder vollständig gelöscht werden. Außerdem müssen häufig gesetzliche Anforderungen befolgt werden, wie z. b. die korrekte Speicherung vertraulicher Informationen. Die Speicherung einiger personenbezogener Daten ist abhängig von den Gesetzen, die in einem bestimmten Zuständigkeitsbereich gelten, vollständig.  
+Allgemeine Sicherheitsfragen, wie der Schutz vor Datendiebstahl oder Vandalismus, bleiben jedoch ungeachtet der jeweils verwendeten SQL Server-Version immer aktuell. Datenintegrität muss auch als Sicherheitsaspekt berücksichtigt werden. Wenn Daten nicht geschützt sind, können sie möglicherweise wertlos werden, sobald eine Ad-hoc-Manipulation von Daten erlaubt ist und die Daten versehentlich oder böswillig mit falschen Werten versehen oder ganz gelöscht werden. Darüber hinaus gibt es häufig gesetzliche Bestimmungen, die eingehalten werden müssen, wie z. B. die ordnungsgemäße Speicherung vertraulicher Informationen. Die Speicherung einiger Arten personenbezogener Daten ist je nach den in einem bestimmten Rechtsraum geltenden Gesetzen gänzlich verboten.  
   
-Genau wie jede Windows-Version besitzt auch jede SQL Server-Version andere Sicherheitsfunktionen, wobei der Funktionsumfang in höheren Versionen dem früherer Versionen überlegen ist. Es ist wichtig zu verstehen, dass Sicherheitsfeatures allein keine sichere Datenbankanwendung garantieren können. Jede Datenbankanwendung ist in Ihren Anforderungen, der Ausführungsumgebung, dem Bereitstellungs Modell, dem physischen Speicherort und der Benutzer Population eindeutig. Einige Anwendungen, die sich im Bereich befinden, benötigen möglicherweise nur minimale Sicherheit, während andere lokale Anwendungen oder Anwendungen, die über das Internet bereitgestellt werden, möglicherweise strenge Sicherheitsmaßnahmen und eine laufende Überwachung und Auswertung erfordern.  
+Genau wie jede Windows-Version besitzt auch jede SQL Server-Version andere Sicherheitsfunktionen, wobei der Funktionsumfang in höheren Versionen dem früherer Versionen überlegen ist. Wichtig ist zu verstehen, dass Sicherheitsvorkehrungen allein keine sichere Datenbankanwendung garantieren können. Jede Datenbankanwendung ist hinsichtlich ihrer Anforderungen, der Ausführungsumgebung, des Bereitstellungsmodells, des physischen Standorts und der Benutzergruppe einzigartig. Einige Anwendungen, die lokal begrenzt sind, benötigen nur minimale Sicherheit, während andere lokale Anwendungen oder Anwendungen, die über das Internet bereitgestellt werden, möglicherweise strenge Sicherheitsvorkehrungen und eine ständige Überwachung und Einschätzung erfordern.  
   
-Welche Sicherheitsanforderungen eine SQL Server-Datenbankanwendung erfüllen muss, sollte bereits in der Entwurfsphase geklärt werden. Wenn Sie Bedrohungen früh im Entwicklungszyklen auswerten, haben Sie die Möglichkeit, potenzielle Schäden zu verringern, wenn ein Sicherheitsrisiko erkannt wird.  
+Welche Sicherheitsanforderungen eine SQL Server-Datenbankanwendung erfüllen muss, sollte bereits in der Entwurfsphase geklärt werden. Die Einschätzung von Bedrohungen in einem frühen Stadium des Entwicklungszyklus gibt Ihnen die Möglichkeit, potenzielle Schäden einzudämmen, wo auch immer ein Sicherheitsrisiko entdeckt wird.  
   
-Selbst wenn der anfängliche Entwurf einer Anwendung vernünftig ist, können neue Bedrohungen auftreten, wenn sich das System weiterentwickelt. Indem Sie mehrere Verteidigungslinien für die Datenbank erstellen, können Sie den Schaden minimieren, der durch eine Sicherheitsverletzung verursacht wird. Ihre erste Verteidigungslinie besteht darin, die Angriffsfläche zu verringern, indem Sie niemals mehr Berechtigungen gewährt, als Sie unbedingt benötigen.  
+Selbst wenn der anfängliche Entwurf einer Anwendung einwandfrei ist, können bei der Weiterentwicklung des Systems neue Bedrohungen auftauchen. Durch die Schaffung mehrerer Verteidigungslinien rund um Ihre Datenbank können Sie den durch eine Sicherheitsverletzung verursachten Schaden minimieren. Ihre erste Verteidigungslinie besteht darin, die Angriffsfläche zu reduzieren, indem Sie auf keinen Fall mehr Berechtigungen als unbedingt notwendig erteilen.  
   
 In den Themen in diesem Abschnitt werden die für Entwickler relevanten Sicherheitsfunktionen in SQL Server kurz umrissen. Außerdem finden Sie hier Links zu entsprechenden Themen in der SQL Server-Onlinedokumentation und anderen Ressourcen mit ausführlicheren Informationen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Authentifizierung in SQL Server](authentication-sql-server.md)  
-Beschreibt Anmeldungen und Authentifizierung in SQL Server und enthält Links zu weiteren Ressourcen. 
+Beschreibt die Anmeldung und Authentifizierung bei SQL Server und bietet Links zu weiteren Ressourcen. 
   
 [Anwendungssicherheitsszenarios in SQL Server](application-security-scenarios-sql-server.md)  
 Enthält Themen, in denen verschiedene Anwendungssicherheitsszenarien für ADO.NET- und SQL Server-Anwendungen erläutert werden.  
@@ -45,10 +45,10 @@ Beschreibt Sicherheitsüberlegungen für SQL Server Express.
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-Beschreibt Sicherheitsüberlegungen für SQL Server und Azure SQL-Datenbank.
+Beschreibt Sicherheitsüberlegungen für SQL Server und Azure SQL-Datenbank.
 
 [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
-Beschreibt Sicherheitsbedenken, die vor der Installation von SQL Server zu berücksichtigen sind.
+Erörtert Sicherheitsbedenken, die vor der Installation von SQL Server zu berücksichtigen sind.
 
 ## <a name="next-steps"></a>Nächste Schritte
 - [SQL Server und ADO.NET](index.md)

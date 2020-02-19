@@ -1,73 +1,73 @@
 ---
-title: 'Schritt 4: Herstellen einer resilientes Verbindung mit SQL mit ADO.net | Microsoft-Dokumentation'
-description: Beschreibt die Verbindungs Herstellung mit SQL.
+title: 'Schritt 4: Herstellen stabiler SQL-Verbindungen mit ADO.NET | Microsoft-Dokumentation'
+description: Informationen zum Herstellen einer stabilen Verbindung mit SQL
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs:
 - CSharp
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 62ec2eb775ef5fba76b402d1871afe6c87bcc606
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c323880153939b4f7229e5f04cf4b9a9ed16b99
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451799"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253323"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Schritt 4: Herstellen stabiler SQL-Verbindungen mit ADO.NET
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET herunterladen](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-- Vorheriger Artikel: &nbsp;&nbsp;&nbsp;[Step 3: Proof of concept connecting to SQL using ADO.NET (Schritt 3: Proof of Concept für Verbindungen mit SQL über ADO.NET)](step-3-connect-sql-ado-net.md)  
+- Vorheriger Artikel:&nbsp;&nbsp;&nbsp;[Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von ADO.NET](step-3-connect-sql-ado-net.md)  
 
   
-Dieses Thema enthält ein C#-Codebeispiel zur Veranschaulichung einer benutzerdefinierten Wiederholungslogik. Die Wiederholungs Logik bietet Zuverlässigkeit. Die Wiederholungs Logik ist so konzipiert, dass temporäre Fehler oder *vorübergehende Fehler* ordnungsgemäß verarbeitet werden, die tendenziell entfernt werden, wenn das Programm mehrere Sekunden wartet und einen Wiederholungsversuch durchführt.  
+Dieses Thema enthält ein C#-Codebeispiel zur Veranschaulichung einer benutzerdefinierten Wiederholungslogik. Die Wiederholungslogik sorgt für Zuverlässigkeit. Die Wiederholungslogik dient zum ordnungsgemäßen Verarbeiten von *vorübergehenden Fehlern*, die meist nicht mehr vorhanden sind, wenn das Programm mehrere Sekunden wartet und es dann erneut versucht.  
   
-Zu den Quellen vorübergehender Fehler gehören:  
+Quellen vorübergehender Fehler sind u. a.:  
   
-- Ein kurzer Fehler bei dem Netzwerk, das das Internet unterstützt.  
-- Ein cloudsystem ist möglicherweise ein Lastenausgleich seiner Ressourcen zu dem Zeitpunkt, zu dem die Abfrage gesendet wurde.  
+- Ein kurzer Ausfall des Netzwerks, das das Internet unterstützt.  
+- Ein Cloudsystem kann zum Zeitpunkt des Absendens Ihrer Abfrage einen Lastenausgleich seiner Ressourcen vornehmen.  
   
   
-ADO.NET-Klassen für die Verbindung mit Ihrem lokalen Microsoft SQL Server können auch Verbindungen mit Azure SQL-Datenbanken herstellen. Allerdings können die ADO.NET-Klassen selbst nicht die erforderliche Stabilität und Zuverlässigkeit für den Produktionseinsatz bereitstellen. In Ihrem Client Programm können vorübergehende Fehler auftreten, von denen die Anwendung automatisch und ordnungsgemäß wieder hergestellt und fortgesetzt werden sollte.  
+ADO.NET-Klassen für die Verbindung mit Ihrem lokalen Microsoft SQL Server können auch Verbindungen mit Azure SQL-Datenbanken herstellen. Allerdings können die ADO.NET-Klassen allein nicht die ganze Stabilität und Zuverlässigkeit bieten, die für den Produktionseinsatz erforderlich sind. Ihr Clientprogramm kann auf vorübergehende Fehler stoßen, von denen es sich ohne Benutzereingriff ordnungsgemäß erholen sollte, um anschließend selbständig weiterzuarbeiten.  
   
-## <a name="step-1-identify-transient-errors"></a>Schritt 1: identifizieren vorübergehender Fehler  
+## <a name="step-1-identify-transient-errors"></a>Schritt 1: Ermitteln vorübergehender Fehler  
   
-Ihr Programm muss zwischen vorübergehenden Fehlern und permanenten Fehlern unterscheiden. Vorübergehende Fehler sind Fehlerzustände, die innerhalb eines kurzen Zeitraums, z. b. vorübergehender Netzwerkprobleme, gelöscht werden können.  Ein Beispiel für einen permanenten Fehler wäre, wenn das Programm eine falsche Schreibweise des Namens der Zieldatenbank aufweist. in diesem Fall würde der Fehler "keine solche Datenbank gefunden" beibehalten und kann innerhalb eines kurzen Zeitraums nicht gelöscht werden.  
+Ihr Programm muss zwischen vorübergehenden Fehlern und beständigen Fehlern unterscheiden. Vorübergehende Fehler sind Fehlerbedingungen, die sich innerhalb kurzer Zeit auflösen können, wie z. B. zeitweilige Netzwerkprobleme.  Ein Beispiel eines dauerhaften Fehlers wäre, wenn in Ihrem Programm ein Schreibfehler im Namen der Zieldatenbank vorliegt. In diesem Fall würde der Fehler "Keine solche Datenbank gefunden" bestehen bleiben und keine Chance haben, sich innerhalb kurzer Zeit zu korrigieren.  
   
-Die Liste der Fehlernummern, die als vorübergehende Fehler kategorisiert sind, finden Sie unter [Fehlermeldungen für SQL-Datenbank-Client Anwendungen](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/) .  
+Die Liste der Fehlernummern, die als vorübergehende Fehler kategorisiert sind, finden Sie unter [Fehlermeldungen für SQL-Datenbank-Clientanwendungen](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/).  
   
-## <a name="step-2-create-and-run-sample-application"></a>Schritt 2: Erstellen und Ausführen der Beispielanwendung  
+## <a name="step-2-create-and-run-sample-application"></a>Schritt 2: Erstellen und Ausführen einer Beispielanwendung  
   
-In diesem Beispiel wird davon ausgegangen, dass .NET Framework 4.5.1 oder höher installiert ist.  Das C# Codebeispiel besteht aus einer Datei mit dem Namen Program.cs. Der Code wird im nächsten Abschnitt bereitgestellt.  
+Bei dem Beispiel wird davon ausgegangen, dass .NET Framework 4.5.1 oder höher installiert ist.  Das C#-Codebeispiel besteht aus einer Datei mit dem Namen "Program.cs". Den Code dazu finden Sie im nächsten Abschnitt.  
   
-### <a name="step-2a-capture-and-compile-the-code-sample"></a>Schritt 2. a: erfassen und Kompilieren des Code Beispiels  
+### <a name="step-2a-capture-and-compile-the-code-sample"></a>Schritt 2.a: Erfassen und Kompilieren des Codebeispiels  
   
 Sie können das Beispiel mit den folgenden Schritten kompilieren:  
   
-1. Erstellen Sie in der [kostenlosen Visual Studio Community-Edition](https://www.visualstudio.com/products/visual-studio-community-vs)ein neues Projekt C# aus der Konsolen Anwendungs Vorlage.  
-    - Datei > Neues >-Projekt > > Vorlagen > Visual C# > Windows > Classic Desktop > Konsolenanwendung installiert  
-    - Nennen Sie das Projekt **RetryAdo2**.  
+1. Erstellen Sie in der [kostenlosen Visual Studio Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs)ein neues Projekt mit der Vorlage für die C#-Konsolenanwendung.  
+    - "Datei" > "Neu" > Projekt" > "Installiert" > "Vorlagen" > "Visual C#" > "Windows" > "Klassischer Desktop" > "Konsolenanwendung"  
+    - Geben Sie dem Projekt den Namen **RetryAdo2**.  
 2. Öffnen Sie den Bereich „Projektmappen-Explorer“.  
-    - Sehen Sie sich den Namen des Projekts an.  
-    - Sehen Sie sich den Namen der Program.cs-Datei an.  
+    - Beachten Sie den Namen des Projekts.  
+    - Beachten Sie den Namen der Datei "Program.cs".  
 3. Öffnen Sie die Datei „Program.cs“.  
-4. Ersetzen Sie den Inhalt der Program.cs-Datei vollständig durch den Code im folgenden Codeblock.  
-5. Klicken Sie auf das Menü Build > Projekt Mappe erstellen.  
+4. Ersetzen Sie den gesamten Inhalt der Datei "Program.cs" durch den Code im folgenden Codeblock.  
+5. Klicken Sie auf das Menü "Build" > "Projektmappe erstellen".  
   
-### <a name="step-2b-copy-and-paste-sample-code"></a>Schritt 2. b: Kopieren und Einfügen von Beispielcode  
+### <a name="step-2b-copy-and-paste-sample-code"></a>Schritt 2.b: Kopieren und Einfügen des Beispielcodes  
   
-Fügen Sie diesen Code in die **Program.cs** -Datei ein.  
+Fügen Sie diesen Code in die Datei **Program.cs** ein.  
   
-Anschließend müssen Sie die Zeichen folgen für Servername, Kennwort usw. bearbeiten. Sie finden diese Zeichen folgen in der Methode mit dem Namen **gezqlconnectionstringbuilder**.  
+Anschließend müssen Sie die Zeichenfolgen für Servername, Kennwort usw. bearbeiten. Sie finden diese Zeichenfolgen in der Methode namens **GetSqlConnectionStringBuilder**.  
   
-Hinweis: die Verbindungs Zeichenfolge für den Servernamen ist auf die Azure SQL-Datenbank ausgerichtet, da Sie das vier-Zeichen-Präfix von **TCP:** enthält. Sie können jedoch die Server Zeichenfolge so anpassen, dass eine Verbindung mit Ihrer Microsoft SQL Server hergestellt wird  
+HINWEIS:  Die Verbindungszeichenfolge für den Servernamen ist auf Azure SQL-Datenbank ausgerichtet, da sie das vier Zeichen lange Präfix **tcp:** enthält. Sie können jedoch die Serverzeichenfolge für die Verbindung mit Ihrer Microsoft SQL Server-Instanz anpassen.  
   
   
 ```csharp
@@ -244,13 +244,13 @@ SELECT TOP 3
 }  
 ```  
   
-###  <a name="step-2c-run-the-program"></a>Schritt 2. c: Ausführen des Programms  
+###  <a name="step-2c-run-the-program"></a>Schritt 2.c: Ausführen des Programms  
   
   
-Die ausführbare Datei **RetryAdo2. exe** gibt keine Parameter an. So führen Sie ". exe" aus:  
+Die ausführbare Datei **RetryAdo2.exe** gibt keine Parameter ein. So führen Sie die EXE-Datei aus:  
   
-1. Öffnen Sie ein Konsolenfenster, in dem Sie die Binärdatei "RetryAdo2. exe" kompiliert haben.  
-2. Führen Sie RetryAdo2. exe ohne Eingabeparameter aus.  
+1. Öffnen Sie ein Konsolenfenster, wohin Sie die Binärdatei RetryAdo2.exe kompiliert haben.  
+2. Führen Sie RetryAdo2.exe ohne Eingabeparameter aus.  
   
   
   
@@ -262,19 +262,19 @@ filetable_updates_2105058535    2105058535
   
   
   
-## <a name="step-3-ways-to-test-your-retry-logic"></a>Schritt 3: Möglichkeiten zum Testen Ihrer Wiederholungs Logik  
+## <a name="step-3-ways-to-test-your-retry-logic"></a>Schritt 3: Möglichkeiten um Ihre Wiederholungslogik zu testen  
   
-Es gibt eine Vielzahl von Methoden, mit denen Sie einen vorübergehenden Fehler simulieren können, um Ihre Wiederholungs Logik zu testen.  
+Es gibt verschiedene Wege, wie Sie einen vorübergehenden Fehler simulieren können, um Ihre Wiederholungslogik zu testen.  
   
   
-###  <a name="step-3a-throw-a-test-exception"></a>Schritt 3. a: Auslösen einer Test Ausnahme  
+###  <a name="step-3a-throw-a-test-exception"></a>Schritt 3.a: Auslösen einer Testausnahme  
   
-Das Codebeispiel enthält Folgendes:  
+Das Codebeispiel beinhaltet:  
   
-- Eine kleine zweite Klasse mit dem Namen " **testsqlexception**" mit einer Eigenschaft namens " **Number**".  
-- `//throw new TestSqlException(4060);`, für das Sie die Auskommentierung aufheben können.  
+- Eine kleine zweite Klasse namens **TestSqlException** mit einer Eigenschaft namens **Number**.  
+- `//throw new TestSqlException(4060);` , wofür Sie die Auskommentierung aufheben können.  
   
-Wenn Sie die Auskommentierung der throw-Anweisung aufheben und die Kompilierung erneut durchführen, gibt die nächste **RetryAdo2. exe** -Datei eine Ausgabe ähnlich der folgenden aus.  
+Falls Sie die Auskommentierung für die Auslösungsanweisung aufheben und neu kompilieren, gibt die nächste Ausführung von **RetryAdo2.exe** etwas aus, was dem Folgenden ähnelt.  
   
 ```  
 [C:\VS15\RetryAdo2\RetryAdo2\bin\Debug\]  
@@ -292,31 +292,31 @@ ERROR: Unable to access the database!
 >>  
 ```  
   
-###  <a name="step-3b-retest-with-a-persistent-error"></a>Schritt 3. b: erneerstes testen mit einem permanenten Fehler  
+###  <a name="step-3b-retest-with-a-persistent-error"></a>Schritt 3.b: Erneutes Testen mit einem beständigen Fehler  
   
-Um nachzuweisen, dass der Code persistente Fehler ordnungsgemäß behandelt, führen Sie den vorherigen Test erneut aus, sofern Sie nicht die Nummer eines echten vorübergehenden Fehlers wie 4060 verwenden. Verwenden Sie stattdessen die Unsinn-Nummer 7654321. Das Programm sollte dies als permanenten Fehler behandeln und alle Wiederholungen umgehen.  
+Um zu beweisen, dass der Code dauerhafte Fehler ordnungsgemäß behandelt, führen Sie den vorigen Test erneut durch, wobei Sie jedoch nicht die Nummer eines echten vorübergehenden Fehlers wie 4060 verwenden dürfen. Verwenden Sie stattdessen die unsinnige Nummer 7654321. Das Programm sollte diesen als dauerhaften Fehler behandeln und jede Wiederholung ausschließen.  
   
-###  <a name="step-3c-disconnect-from-the-network"></a>Schritt 3. c: Trennen der Verbindung mit dem Netzwerk  
+###  <a name="step-3c-disconnect-from-the-network"></a>Schritt 3.c: Trennen vom Netzwerk  
   
-1. Trennen Sie die Verbindung des Client Computers mit dem Netzwerk.  
-    - Entfernen Sie für einen Desktop das Netzwerkkabel.  
-    - Drücken Sie für einen Laptop die Funktions Kombination der Tasten, um den Netzwerkadapter zu deaktivieren.  
-2. Starten Sie RetryAdo2. exe, und warten Sie, bis die Konsole den ersten vorübergehenden Fehler anzeigt, wahrscheinlich 11001.  
-3. Stellen Sie erneut eine Verbindung mit dem Netzwerk her, während RetryAdo2. exe weiterhin ausgeführt wird.  
-4. Überwachen Sie den Erfolg der Konsolen Berichte bei einem nachfolgenden Wiederholungsversuch.  
+1. Trennen Sie den Clientcomputer vom Netzwerk.  
+    - Bei einem Desktop-Computer stecken Sie das Netzwerkkabel aus.  
+    - Bei einem Laptop drücken Sie die Tastenkombination um den Netzwerkadapter auszuschalten.  
+2. Starten Sie RetryAdo2.exe und warten Sie, bis die Konsole den ersten vorübergehenden Fehler, wahrscheinlich „11001“, anzeigt.  
+3. Verbinden Sie sich wieder mit dem Netzwerk, während RetryAdo2.exe weiterhin ausgeführt wird.  
+4. Beobachten Sie in einem späteren erneuten Versuch, wie die Konsole den Erfolg berichtet.  
   
   
-###  <a name="step-2d-temporarily-misspell-the-server-name"></a>Schritt 2. d: vorübergehendes fehl Schreiben des Server namens  
+###  <a name="step-2d-temporarily-misspell-the-server-name"></a>Schritt 2.d: Temporäres Falschschreiben des Servernamens  
   
-1. Fügen Sie **transienterrornumbers**vorübergehend 40615 als weitere Fehlernummer hinzu, und kompilieren Sie Sie neu.  
-2. Legen Sie einen Haltepunkt in der Zeile fest: `new QC.SqlConnectionStringBuilder()`.  
-3. Verwenden Sie die Funktion " *Bearbeiten und Fortfahren* ", um den Servernamen absichtlich falsch zu schreiben, ein paar Zeilen weiter unten.  
-    - Führen Sie das Programm aus, und kehren Sie zum Breakpoint zurück.  
-    - Der Fehler 40615 tritt auf.  
-4. Korrigieren Sie die falsche Schreibweise.  
-5. Lassen Sie das Programm erfolgreich ausführen und Fertigstellen.  
-6. Entfernen Sie 40615, und kompilieren Sie neu.  
+1. Fügen Sie **TransientErrorNumbers**temporär 40615 als weitere Fehlernummer hinzu und kompilieren Sie neu.  
+2. Setzen Sie einen Haltepunkt in der Zeile: `new QC.SqlConnectionStringBuilder()`.  
+3. Verwenden Sie die Funktion *Bearbeiten und fortfahren*, um einige Zeilen tiefer den Servernamen absichtlich falsch zu schreiben.  
+    - Lassen Sie das Programm laufen und kehren Sie zu Ihrem Haltepunkt zurück.  
+    - Der Fehler „40615“ tritt auf.  
+4. Beheben Sie den Rechtschreibfehler.  
+5. Lassen Sie das Programm laufen und erfolgreich abschließen.  
+6. Entfernen Sie „40615“ und kompilieren Sie erneut.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
-Weitere Best Practices und Entwurfs Richtlinien finden Sie unter Herstellen einer [Verbindung mit SQL-Datenbank: Verknüpfungen, bewährte Methoden und Entwurfs Richtlinien](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+Informationen zu anderen bewährten Methoden und Entwurfsrichtlinien finden Sie unter [Verbindungsherstellung mit SQL-Datenbank: Links, bewährte Methoden und Entwurfsrichtlinien](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

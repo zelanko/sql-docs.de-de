@@ -1,6 +1,6 @@
 ---
 title: Aktivieren von Abfragebenachrichtigungen
-description: Erläutert die Verwendung von Abfrage Benachrichtigungen, einschließlich der Anforderungen für die Aktivierung und Verwendung von.
+description: Erläutert die Verwendung von Abfragebenachrichtigungen, einschließlich der Anforderungen zu deren Aktivierung und Nutzung.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,34 +9,34 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 94b472a1fe040aa3a684d9f7b523ba09c82a651e
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 36be882534d7c70bc20e3ffb4f6907f007491e9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452231"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247783"
 ---
 # <a name="enabling-query-notifications"></a>Aktivieren von Abfragebenachrichtigungen
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Anwendungen, die Abfrage Benachrichtigungen nutzen, haben einen allgemeinen Satz an Anforderungen. Ihre Datenquelle muss richtig konfiguriert sein, um SQL-Abfragebenachrichtigungen zu unterstützen, und die Benutzer müssen über die richtigen client- und serverseitigen Berechtigungen verfügen.  
+Anwendungen, die Abfragebenachrichtigungen nutzen, weisen eine Reihe gemeinsamer Anforderungen auf. Ihre Datenquelle muss richtig konfiguriert sein, um SQL-Abfragebenachrichtigungen zu unterstützen, und die Benutzer müssen über die richtigen client- und serverseitigen Berechtigungen verfügen.  
   
-Zum Verwenden von Abfrage Benachrichtigungen müssen Sie folgende Schritte ausführen:  
+Voraussetzungen für Abfragebenachrichtigungen:  
   
-- Aktivieren Sie Abfrage Benachrichtigungen für Ihre Datenbank.  
+- Aktivieren Sie Abfragebenachrichtigungen für Ihre Datenbank.  
   
-- Stellen Sie sicher, dass die Benutzer-ID für die Verbindung mit der Datenbank über die erforderlichen Berechtigungen verfügt.  
+- Stellen Sie sicher, dass die Benutzer-ID für das Herstellen der Verbindung mit der Datenbank über die erforderlichen Berechtigungen verfügt.  
   
-- Verwenden Sie ein <xref:Microsoft.Data.SqlClient.SqlCommand> Objekt, um eine gültige SELECT-Anweisung mit einem zugeordneten Benachrichtigungs Objekt auszuführen – entweder <xref:Microsoft.Data.SqlClient.SqlDependency> oder <xref:Microsoft.Data.Sql.SqlNotificationRequest>.  
+- Verwenden Sie ein <xref:Microsoft.Data.SqlClient.SqlCommand>-Objekt, um eine gültige SELECT-Anweisung mit einem zugehörigen Benachrichtigungsobjekt (entweder <xref:Microsoft.Data.SqlClient.SqlDependency> oder <xref:Microsoft.Data.Sql.SqlNotificationRequest>) auszuführen.  
   
-- Stellen Sie Code bereit, um die Benachrichtigung zu verarbeiten, wenn sich die überwachten Daten ändern.  
+- Geben Sie den Code zur Verarbeitung der Benachrichtigung an, wenn sich die überwachten Daten ändern.  
   
-## <a name="query-notifications-requirements"></a>Anforderungen für Abfrage Benachrichtigungen  
-Abfrage Benachrichtigungen werden nur für SELECT-Anweisungen unterstützt, die eine Liste spezifischer Anforderungen erfüllen. In der folgenden Tabelle finden Sie Links zu den Service Broker-und Abfrage Benachrichtigungs Dokumentation in SQL Server-Onlinedokumentation.  
+## <a name="query-notifications-requirements"></a>Anforderungen für Abfragebenachrichtigungen  
+Abfragebenachrichtigungen werden nur für SELECT-Anweisungen unterstützt, die eine Liste bestimmter Anforderungen erfüllen. Die folgende Tabelle enthält Links zur Dokumentation zu Service Broker und Abfragebenachrichtigungen in der SQL Server-Onlinedokumentation.  
   
 **SQL Server-Dokumentation**  
   
@@ -58,12 +58,12 @@ Abfrage Benachrichtigungen werden nur für SELECT-Anweisungen unterstützt, die 
   
 - [Entwicklerhandbuch (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
-## <a name="enabling-query-notifications-to-run-sample-code"></a>Aktivieren von Abfrage Benachrichtigungen zum Ausführen von Beispielcode  
+## <a name="enabling-query-notifications-to-run-sample-code"></a>Aktivieren von Abfragebenachrichtigungen zum Ausführen von Beispielcode  
 Führen Sie zum Aktivieren von Service Broker in der **AdventureWorks**-Datenbank mit SQL Server Management Studio die folgende Transact-SQL-Anweisung aus:  
   
 `ALTER DATABASE AdventureWorks SET ENABLE_BROKER;`  
   
-Damit die Abfrage Benachrichtigungs Beispiele ordnungsgemäß ausgeführt werden, müssen die folgenden Transact-SQL-Anweisungen auf dem Datenbankserver ausgeführt werden.  
+Damit die Beispiele von Abfragebenachrichtigungen ordnungsgemäß ausgeführt werden können, müssen auf dem Datenbankserver die folgenden Transact-SQL-Anweisungen ausgeführt werden.  
   
 ```sql
 CREATE QUEUE ContactChangeMessages;  
@@ -73,25 +73,25 @@ CREATE SERVICE ContactChangeNotifications
 ([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification]);  
 ```  
   
-## <a name="query-notifications-permissions"></a>Berechtigungen für Abfrage Benachrichtigungen  
-Benutzer, die Befehle ausführen, die eine Benachrichtigung anfordern, müssen über die Daten Bank Berechtigung abonnieren-Abfrage Benachrichtigungen auf dem Server  
+## <a name="query-notifications-permissions"></a>Berechtigungen für Abfragebenachrichtigungen  
+Benutzer, die Befehle ausführen, für die eine Benachrichtigung gewünscht wird, müssen auf dem Server die Datenbankberechtigung SUBSCRIBE QUERY NOTIFICATIONS haben.  
   
-Client seitiger Code, der in einer teilweise vertrauenswürdigen Situation ausgeführt wird, erfordert die <xref:Microsoft.Data.SqlClient.SqlClientPermission>.  
+Clientseitiger Code, der in einer teilweise vertrauenswürdigen Situation ausgeführt wird, erfordert <xref:Microsoft.Data.SqlClient.SqlClientPermission>.  
   
-Der folgende Code erstellt ein <xref:Microsoft.Data.SqlClient.SqlClientPermission>-Objekt, wobei die <xref:System.Security.Permissions.PermissionState> auf <xref:System.Security.Permissions.PermissionState.Unrestricted> festgelegt wird. Der <xref:System.Security.CodeAccessPermission.Demand%2A> erzwingt zur Laufzeit eine <xref:System.Security.SecurityException>, wenn allen Aufrufern in der Aufruf Listen-Berechtigung die Berechtigung nicht erteilt wurde.  
+Der folgende Code erstellt ein <xref:Microsoft.Data.SqlClient.SqlClientPermission>-Objekt, wobei <xref:System.Security.Permissions.PermissionState> auf <xref:System.Security.Permissions.PermissionState.Unrestricted> festgelegt wird. <xref:System.Security.CodeAccessPermission.Demand%2A> erzwingt zur Laufzeit <xref:System.Security.SecurityException>, wenn allen Aufrufern, die höher im Aufrufstapel stehen, die Berechtigung nicht erteilt wurde.  
   
 [!code-csharp[DataWorks SqlClientPermission_Demand#1](~/../sqlclient/doc/samples/SqlClientPermission_Demand.cs#1)]
   
-## <a name="choosing-a-notification-object"></a>Auswählen eines Benachrichtigungs Objekts  
+## <a name="choosing-a-notification-object"></a>Wählen eines Benachrichtigungsobjekts  
 Die Abfragebenachrichtigungs-API stellt zwei Objekte zum Verarbeiten von Benachrichtigungen zur Verfügung: <xref:Microsoft.Data.SqlClient.SqlDependency> und <xref:Microsoft.Data.Sql.SqlNotificationRequest>.
   
-### <a name="using-sqldependency"></a>Verwenden von sqlabhängigkeit  
-Zum Verwenden der <xref:Microsoft.Data.SqlClient.SqlDependency> muss Service Broker für die verwendete SQL Server-Datenbank aktiviert werden, und Benutzer müssen über Berechtigungen zum Erhalt von Benachrichtigungen verfügen. Service Broker Objekte, z. b. die Benachrichtigungs Warteschlange, sind vordefiniert.  
+### <a name="using-sqldependency"></a>Verwenden von SqlDependency  
+Zum Verwenden der <xref:Microsoft.Data.SqlClient.SqlDependency> muss Service Broker für die verwendete SQL Server-Datenbank aktiviert werden, und Benutzer müssen über Berechtigungen zum Erhalt von Benachrichtigungen verfügen. Service Broker-Objekte, wie z. B. die Benachrichtigungswarteschlange, sind vordefiniert.  
   
-Außerdem wird von <xref:Microsoft.Data.SqlClient.SqlDependency> automatisch ein Arbeits Thread gestartet, um Benachrichtigungen zu verarbeiten, die in der Warteschlange veröffentlicht werden. Außerdem wird die Service Broker Nachricht analysiert und die Informationen als Ereignis Argument Daten verfügbar gemacht. <xref:Microsoft.Data.SqlClient.SqlDependency> müssen initialisiert werden, indem Sie die `Start`-Methode aufrufen, um eine Abhängigkeit zur Datenbank herzustellen. Dies ist eine statische Methode, die nur einmal während der Anwendungs Initialisierung für jede erforderliche Datenbankverbindung aufgerufen werden muss. Die `Stop`-Methode sollte bei der Beendigung der Anwendung für jede vorgenommene Abhängigkeits Verbindung aufgerufen werden.  
+Zusätzlich startet <xref:Microsoft.Data.SqlClient.SqlDependency> automatisch einen Arbeitsthread, um Benachrichtigungen in der Reihenfolge zu verarbeiten, in der sie in die Warteschlange gestellt werden. Außerdem wird die Service Broker-Meldung analysiert, und die Informationen werden als Ereignisargumentdaten verfügbar gemacht. <xref:Microsoft.Data.SqlClient.SqlDependency> muss durch Aufrufen der `Start`-Methode initialisiert werden, um eine Abhängigkeit zur Datenbank einzurichten. Dies ist eine statische Methode, die nur einmal während der Anwendungsinitialisierung für jede erforderliche Datenbankverbindung aufgerufen werden muss. Die `Stop`-Methode muss beim Beenden der Anwendung für jede Abhängigkeitsverbindung, die hergestellt wurde, aufgerufen werden.  
   
 ### <a name="using-sqlnotificationrequest"></a>Verwenden von SqlNotificationRequest  
-Im Gegensatz dazu müssen <xref:Microsoft.Data.Sql.SqlNotificationRequest> die gesamte Abhör Infrastruktur selbst implementieren. Außerdem müssen alle unterstützenden Service Broker Objekte (z. b. die Warteschlange, der Dienst und die Nachrichten Typen, die von der Warteschlange unterstützt werden) definiert werden. Diese manuelle Vorgehensweise ist hilfreich, wenn Ihre Anwendung spezielle Benachrichtigungs-oder Benachrichtigungs Verhalten erfordert oder wenn Ihre Anwendung Teil einer größeren Service Broker Anwendung ist.  
+Im Gegensatz dazu erfordert <xref:Microsoft.Data.Sql.SqlNotificationRequest>, dass Sie die gesamte Lauschinfrastruktur selbst implementieren. Darüber hinaus müssen alle unterstützenden Service Broker-Objekte wie Warteschlange, Dienst und von der Warteschlange unterstützte Nachrichtentypen definiert werden. Dieser manuelle Ansatz ist nützlich, wenn Ihre Anwendung spezielle Benachrichtigungsmeldungen oder -verhalten erfordert, oder wenn Ihre Anwendung Teil einer größeren Service Broker-Anwendung ist.  
   
 ## <a name="next-steps"></a>Nächste Schritte
 - [Abfragebenachrichtigungen in SQL Server](query-notifications-sql-server.md)
