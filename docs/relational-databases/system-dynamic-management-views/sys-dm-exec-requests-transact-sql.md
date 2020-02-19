@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,13 +18,14 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
+ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20257eb1a91b35dd45e1b4fc79f84533c64b2561
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74307997"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429021"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -40,9 +40,9 @@ Gibt Informationen zu jeder Anforderung zurück, die in [!INCLUDE[ssNoVersion](.
 |start_time|**datetime**|Der Zeitstempel, der angibt, wann die Anforderung eingetroffen ist. Lässt keine NULL-Werte zu.|  
 |status|**nvarchar (30)**|Status der Anforderung. Mögliche Werte:<br /><br /> Hintergrund<br />Wird ausgeführt<br />Ausführbar<br />Ruhezustand<br />Suspended<br /><br /> Lässt keine NULL-Werte zu.|  
 |command|**nvarchar (32)**|Identifiziert den aktuellen Typ des Befehls, der gerade verarbeitet wird. Als allgemeine Befehlstypen sind die folgenden möglich:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Der Text der Anforderung kann mithilfe von sys.dm_exec_sql_text und dem entsprechenden sql_handle-Wert für die Anforderung abgerufen werden. Interne Systemprozesse legen den Befehl je nach Typ des ausgeführten Tasks fest. Mögliche Tasks sind z. B. die folgenden:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Lässt keine NULL-Werte zu.|  
-|sql_handle|**varbinary (64)**|Ein Token, das den Batch oder die gespeicherte Prozedur eindeutig identifiziert, zu der die Abfrage gehört. Lässt NULL-Werte zu.|  
-|statement_start_offset|**int**|Anzahl von Zeichen im derzeit ausgeführten Batch oder in der derzeit ausgeführten gespeicherten Prozedur, an der die derzeit ausgeführte Anweisung beginnt. Kann zusammen mit sql_handle, statement_end_offset und der dynamischen Verwaltungsfunktion sys.dm_exec_sql_text zum Abrufen der zurzeit ausgeführten Anweisung für die Anforderung verwendet werden. Lässt NULL-Werte zu.|  
-|statement_end_offset|**int**|Anzahl von Zeichen im derzeit ausgeführten Batch oder in der derzeit ausgeführten gespeicherten Prozedur, an der die derzeit ausgeführte Anweisung endet. Kann zusammen mit sql_handle, statement_end_offset und der dynamischen Verwaltungsfunktion sys.dm_exec_sql_text zum Abrufen der zurzeit ausgeführten Anweisung für die Anforderung verwendet werden. Lässt NULL-Werte zu.|  
+|sql_handle|**varbinary (64)**|Ein Token, das den Batch oder die gespeicherte Prozedur eindeutig identifiziert, zu der die Abfrage gehört. Lässt NULL-Werte zu.| 
+|statement_start_offset|**int**|Gibt die Anfangsposition der aktuell ausgeführten Anweisung für den aktuell ausgeführten Batch oder das beibehaltene Objekt in Bytes an, beginnend mit 0 (null). Kann in Verbindung mit dem `sql_handle`, der `statement_end_offset`und der `sys.dm_exec_sql_text` dynamischen Verwaltungsfunktion verwendet werden, um die derzeit ausgeführte Anweisung für die Anforderung abzurufen. Lässt NULL-Werte zu.|  
+|statement_end_offset|**int**|Gibt die Endposition der aktuell ausgeführten Anweisung für den aktuell ausgeführten Batch oder das beibehaltene Objekt in Bytes an, beginnend mit 0 (null). Kann in Verbindung mit dem `sql_handle`, der `statement_start_offset`und der `sys.dm_exec_sql_text` dynamischen Verwaltungsfunktion verwendet werden, um die derzeit ausgeführte Anweisung für die Anforderung abzurufen. Lässt NULL-Werte zu.|  
 |plan_handle|**varbinary (64)**|Ein Token, das einen Abfrage Ausführungsplan für einen momentan ausgeführten Batch eindeutig identifiziert. Lässt NULL-Werte zu.|  
 |database_id|**smallint**|ID der Datenbank, für die die Anforderung ausgeführt wird. Lässt keine NULL-Werte zu.|  
 |user_id|**int**|ID des Benutzers, der die Anforderung gesendet hat. Lässt keine NULL-Werte zu.|  

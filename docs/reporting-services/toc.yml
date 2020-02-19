@@ -42,13 +42,13 @@
               href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
             - name: 'Lektion 2: Angeben von Verbindungsinformationen'
               href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-            - name: 'Lektion 3: Definieren eines Datasets für den Tabellenbericht'
+            - name: 'Lektion 3: Lektion 3: Definieren eines Datasets für den Tabellenbericht'
               href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-            - name: 'Lektion 4: Hinzufügen einer Tabelle zum Bericht'
+            - name: 'Lektion 4: Lektion 4: Hinzufügen einer Tabelle zum Bericht'
               href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-            - name: 'Lektion 5: Formatieren eines Berichts'
+            - name: 'Lektion 5: Lektion 5: Formatieren eines Berichts'
               href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-            - name: 'Lesson 6: Adding Grouping and Totals'
+            - name: 'Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten'
               href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
         - name: Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
           href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
@@ -57,12 +57,12 @@
               href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
             - name: 'Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle'
               href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-            - name: 'Lesson 3: Defining a Data-Driven Subscription'
+            - name: 'Lektion 3: Definieren eines datengesteuerten Abonnements'
               href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
         - name: Erstellen eines Drillthroughberichts (RDLC) mit Parametern mithilfe von ReportViewer (SSRS-Lernprogramm)
           href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
           items:
-            - name: 'Lektion 1: Erstellen einer neuen Website'
+            - name: 'Lektion 1: Erstellen Sie eine neue Website'
               href: ../reporting-services/lesson-1-create-a-new-web-site.md
             - name: 'Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht'
               href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
@@ -78,42 +78,42 @@
               href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
             - name: 'Lektion 8: Erstellen eines Datenfilters'
               href: ../reporting-services/lesson-8-create-a-data-filter.md
-            - name: 'Lesson 9: Build and Run the Application'
+            - name: 'Lektion 9: Erstellen und Ausführen der Anwendung'
               href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: Lernprogramme für den Berichts-Generator
       href: ../reporting-services/report-builder-tutorials.md
       items:
-        - name: 'Tutorial: Erstellen eines Quick-Diagrammberichts offline'
+        - name: 'Tutorial: Erstellen eines schnellen Diagrammberichts offline'
           href: ../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
         - name: Voraussetzungen für Lernprogramme
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
         - name: Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)
           href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: 'Lernprogramm: Erstellen eines einfachen Tabellenberichts'
+        - name: 'Tutorial: Erstellen eines einfachen Tabellenberichts'
           href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
-        - name: 'Lernprogramm: Erstellen eines Matrixberichts'
+        - name: 'Tutorial: Erstellen eines Matrixberichts'
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
-        - name: 'Lernprogramm: Erstellen eines Freiformberichts'
+        - name: 'Tutorial: Erstellen eines Freiformberichts'
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: 'Lernprogramm: Formatieren von Text (Berichts-Generator)'
+        - name: 'Tutorial: Formatieren von Text (Berichts-Generator)'
           href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: 'Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)'
+        - name: 'Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
         - name: 'Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
         - name: 'Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: 'Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)'
+        - name: 'Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 'Lernprogramm: Hinzufügen eines KPIs zu einem Bericht'
+        - name: 'Tutorial: Hinzufügen einer KPI zu einem Bericht'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: 'Lernprogramm: Kartenbericht'
+        - name: 'Tutorial: Kartenbericht'
           href: ../reporting-services/tutorial-map-report-report-builder.md
-        - name: 'Lernprogramm: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)'
+        - name: 'Tutorial: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
-        - name: 'Lernprogramm: Erstellen von Drillthrough- und Hauptberichten'
+        - name: 'Tutorial: Erstellen von Drillthrough- und Hauptberichten'
           href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
-        - name: 'Lernprogramm: Einführung in Ausdrücke'
+        - name: 'Tutorial: Einführung in Ausdrücke'
           href: ../reporting-services/tutorial-introducing-expressions.md
 - name: Planung
   items:
@@ -145,53 +145,53 @@
           href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
         - name: Hosten einer Berichtsserver-Datenbank in einem SQL Server-Failovercluster
           href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-        - name: Reporting Services-Konfigurations-Manager (einheitlicher Modus)
-          href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+    - name: Reporting Services-Konfigurations-Manager (einheitlicher Modus)
+      href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+      items:
+        - name: Konfigurieren des Berichtsserver-Dienstkontos (SSRS-Konfigurations-Manager)
+          href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
+        - name: Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)
+          href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
           items:
-            - name: Konfigurieren des Berichtsserver-Dienstkontos (SSRS-Konfigurations-Manager)
-              href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-            - name: Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)
-              href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
-              items:
-                - name: Informationen zu URL-Reservierungen und Registrierungen (SSRS-Konfigurations-Manager)
-                  href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-                - name: Konfigurieren einer URL (SSRS-Konfigurations-Manager)
-                  href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-                - name: Syntax für URL-Reservierungen (SSRS-Konfigurations-Manager)
-                  href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-                - name: URLs in Konfigurationsdateien (SSRS-Konfigurations-Manager)
-                  href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-                - name: URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen (SSRS-Konfigurations-Manager)
-                  href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
-            - name: Erstellen einer Datenbank
-              href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
-            - name: Erstellen einer Datenbank im einheitlichen Modus
-              href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
-            - name: Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank
-              href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
-            - name: E-Mail-Einstellungen – Einheitlicher Modus von Reporting Services (Konfigurations-Manager)
-              href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-            - name: Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
-              href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
-            - name: SSRS-Verschlüsselungsschlüssel | Verwalten der Verschlüsselungsschlüssel
-              href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
-              items:
-                - name: 'SSRS-Verschlüsselungsschlüssel: Initialisieren eines Berichtsservers'
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
-                - name: 'SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten'
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
-                - name: 'SSRS-Verschlüsselungsschlüssel: Sichern und Wiederherstellen'
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
-                - name: 'SSRS-Verschlüsselungsschlüssel: Löschen und Neuerstellen'
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
-                - name: 'SSRS-Verschlüsselungsschlüssel: Hinzufügen und Entfernen für die Bereitstellung für horizontales Skalieren'
-                  href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
-            - name: Abonnementeinstellungen und ein Dateifreigabekonto (Konfigurations-Manager)
-              href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-            - name: Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)
-              href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
-            - name: Power BI-Integration
-              href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
+            - name: Informationen zu URL-Reservierungen und Registrierungen (SSRS-Konfigurations-Manager)
+              href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
+            - name: Konfigurieren einer URL (SSRS-Konfigurations-Manager)
+              href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
+            - name: Syntax für URL-Reservierungen (SSRS-Konfigurations-Manager)
+              href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
+            - name: URLs in Konfigurationsdateien (SSRS-Konfigurations-Manager)
+              href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
+            - name: URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen (SSRS-Konfigurations-Manager)
+              href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
+        - name: Erstellen einer Datenbank
+          href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
+        - name: Erstellen einer Datenbank im einheitlichen Modus
+          href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
+        - name: Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank
+          href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
+        - name: E-Mail-Einstellungen – Einheitlicher Modus von Reporting Services (Konfigurations-Manager)
+          href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
+        - name: Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
+          href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
+        - name: SSRS-Verschlüsselungsschlüssel | Verwalten der Verschlüsselungsschlüssel
+          href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
+          items:
+            - name: 'SSRS-Verschlüsselungsschlüssel: Initialisieren eines Berichtsservers'
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
+            - name: 'SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten'
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
+            - name: 'SSRS-Verschlüsselungsschlüssel: Sichern und Wiederherstellen'
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+            - name: 'SSRS-Verschlüsselungsschlüssel: Löschen und Neuerstellen'
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+            - name: 'SSRS-Verschlüsselungsschlüssel: Hinzufügen und Entfernen für die Bereitstellung für horizontales Skalieren'
+              href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
+        - name: Abonnementeinstellungen und ein Dateifreigabekonto (Konfigurations-Manager)
+          href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
+        - name: Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)
+          href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
+        - name: Power BI-Integration
+          href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
     - name: Installieren von Reporting Services 2016 im SharePoint-Modus
       href: ../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
       items:
@@ -411,25 +411,25 @@
           href: ../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
         - name: Festlegen von Verarbeitungsoptionen
           href: ../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
-    - name: Berichts-Viewer-Webpart für eine SharePoint-Website
-      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
-      items:
-        - name: Bereitstellen des Berichts-Viewer-Webparts
-          href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
-        - name: Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite
-          href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
-        - name: Verbinden eines Filters oder Dokumentwebparts
-          href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
-        - name: Anpassen des Berichts-Viewer-Webparts
-          href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
-        - name: Einstellungen der SharePoint-Website für den Berichts-Viewer-Webpart
-          href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
     - name: Hochverfügbarkeit
       href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
     - name: Aktivieren und Deaktivieren von RDL-Sandkasten
       href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
     - name: Konfigurieren von Reporting Services für die Verwendung eines alternativen Antragstellernamens
       href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
+- name: Berichts-Viewer-Webpart für eine SharePoint-Website
+  href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
+  items:
+    - name: Bereitstellen des Berichts-Viewer-Webparts
+      href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
+    - name: Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite
+      href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
+    - name: Verbinden eines Filters oder Dokumentwebparts
+      href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
+    - name: Anpassen des Berichts-Viewer-Webparts
+      href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
+    - name: Einstellungen der SharePoint-Website für den Berichts-Viewer-Webpart
+      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
 - name: Anheften an Power BI
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
 - name: Berichts-Generator in Reporting Services (SSRS)
@@ -1904,7 +1904,7 @@
       href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
     - name: Custom Report Items
       href: ../reporting-services/custom-report-items/custom-report-items.md
-    - name: 'Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements'
+    - name: 'Gewusst wie: Bereitstellen eines benutzerdefinierten Berichtselements'
       href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
     - name: Zugriff auf benutzerdefinierte Assemblys über Ausdrücke
       href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
@@ -1912,7 +1912,7 @@
       href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
     - name: Bereitstellen einer benutzerdefinierten Assembly
       href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
-    - name: 'Vorgehensweise: Debuggen von benutzerdefinierten Assemblys'
+    - name: 'Gewusst wie: Debuggen von benutzerdefinierten Assemblys'
       href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
     - name: Initialisieren von Objekten benutzerdefinierter Assemblys
       href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md
