@@ -1,11 +1,7 @@
 ---
-title: Optionen des Transact-SQL-Editors | Microsoft-Dokumentation
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Optionen des Transact-SQL-Editors
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
@@ -27,14 +23,19 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e5de3a6bef68955611290cce77b95989b7ff72c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110635"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256319"
 ---
 # <a name="transact-sql-editor-options"></a>Optionen des Transact-SQL-Editors
+
 Dieses Thema enthält Informationen zu einigen der Optionen des Transact-SQL-Editors. Um diese Optionen festzulegen, navigieren Sie im Menü **Extras\Optionen** zum Dialogfeld **Option**.  
   
 [Abfrageausführung](#QueryExecution)  
@@ -43,7 +44,7 @@ Dieses Thema enthält Informationen zu einigen der Optionen des Transact-SQL-Edi
   
 ## <a name="QueryExecution"></a>Abfrageausführung  
   
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|Beschreibung|  
 |------------|---------------|  
 |**SET ROWCOUNT**|Der Standardwert 0 zeigt an, dass SQL Server so lange auf die Ergebnisse wartet, bis alle Ergebnisse übermittelt sind. Geben Sie einen Wert größer 0 an, wenn die Abfrage von SQL Server nach Übermittlung einer bestimmten Anzahl von Zeilen abgebrochen werden soll. Geben Sie SET ROWCOUNT 0 an, um diese Option zu deaktivieren (sodass alle Zeilen zurückgegeben werden).|  
 |**SET TEXTSIZE**|Der Standardwert von 2.147.483.647 Bytes zeigt an, dass SQL Server ein vollständiges Datenfeld bereitstellt, das maximal der Größe von text-, ntext-, nvarchar(max)- und varchar(max)-Datenfeldern entspricht. Dies hat keine Auswirkungen auf den XML-Datentyp. Geben Sie eine kleinere Zahl an, um Ergebnisse mit großen Werten zu beschränken. Spalten, deren Größe die angegebene Zahl übersteigt, werden abgeschnitten.|  
@@ -71,7 +72,7 @@ Dieses Thema enthält Informationen zu einigen der Optionen des Transact-SQL-Edi
   
 ## <a name="QueryResults"></a>Abfrageergebnisse  
   
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|Beschreibung|  
 |------------|---------------|  
 |**Abfrage in das Resultset einschließen**|Gibt den Text der Abfrage als Teil des Resultsets zurück.|  
 |**Spaltenheader beim Kopieren oder Speichern der Ergebnisse einschließen**|Schließt Spaltenheader (Titel) ein, wenn Ergebnisse in die Zwischenablage kopiert oder in einer Datei gespeichert werden. Deaktivieren Sie dieses Kontrollkästchen, wenn Sie nur die Ergebnisdaten und nicht die Spaltenheader speichern oder kopieren möchten.|  

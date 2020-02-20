@@ -1,5 +1,5 @@
 ---
-title: setnmerkmal Stream-Methode auf Java. IO. Reader-Objekt | Microsoft-Dokumentation
+title: setNCharacterStream-Methode für java.io.Reader-Objekte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2c245f0e-85ec-4d94-93ac-4957aa52b984
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f64854a45318af22d50705a69ac4c5d7dd63786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973817"
 ---
 # <a name="setncharacterstream-method-sqlserverpreparedstatement"></a>setNCharacterStream-Methode (SQLServerPreparedStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67973817"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setNCharacterStream-Methode &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)|Legt den angegebenen Parameter auf das angegebene java.io.Reader-Objekt fest.|  
 |[setNCharacterStream-Methode &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader-long.md)|Legt den angegebenen Parameter auf das angegebene java.io.Reader-Objekt fest.|  

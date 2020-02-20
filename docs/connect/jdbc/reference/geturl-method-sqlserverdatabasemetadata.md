@@ -16,10 +16,10 @@ ms.assetid: fcb66851-db5f-4ae8-b728-d129480b6f42
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4aa608851ddbe00c8d7c09523c0f3b8f9ec95ff6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978212"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>getURL-Methode (SQLServerDatabaseMetaData)
@@ -47,7 +47,7 @@ public java.lang.String getURL()
   
 -   URL-Wert "jdbc:sqlserver://"  
   
--   Optionale Verbindungs Eigenschaften, z. b. **Servername**, **instanceName**und **PortNumber**  
+-   optionale Verbindungseigenschaften wie **serverName**, **instanceName** und **portNumber**  
   
 -   Andere, vom Benutzer festgelegte Verbindungseigenschaften sowie alle Verbindungseigenschaften mit Treiberstandardwerten, die nicht leer und nicht NULL sind (mit Ausnahme von **userName**, **password** und **integratedSecurity**)  
   

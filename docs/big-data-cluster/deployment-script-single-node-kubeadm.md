@@ -1,26 +1,27 @@
 ---
-title: Bereitstellen mit einem Bash-Skript in einem Kubernetes-Einzelknotencluster
-titleSuffix: SQL Server big data clusters
+title: Bereitstellen eines kubeadm-Clusters mit einem einzelnen Knoten
+titleSuffix: SQL Server Big Data Clusters
 description: Verwenden Sie ein Bash-Bereitstellungsskript, um einen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] in einem Kubernetes-Einzelknotencluster bereitzustellen.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: f60256e58339387323f923c85d2b880459455663
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341837"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252100"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Bereitstellen mit einem Bash-Skript in einem Kubernetes-Einzelknotencluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Tutorial verwenden Sie ein Bash-Beispielbereitstellungsskript, um einen Kubernetes-Einzelknotencluster über kubeadm und in dem Cluster einen Big Data-Cluster für SQL Server bereitzustellen.  
+In diesem Tutorial verwenden Sie ein Bash-Beispielbereitstellungsskript, um einen Kubernetes-Einzelknotencluster über kubeadm und in dem Cluster einen Big Data-Cluster für SQL Server bereitzustellen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -79,7 +80,7 @@ In diesem Tutorial verwenden Sie ein Bash-Beispielbereitstellungsskript, um eine
    azdata --version
    ```
 
-## <a name="cleanup"></a>Bereinigen
+## <a name="cleanup"></a>Cleanup
 
 Das Skript [cleanup-bdc.sh](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/cleanup-bdc.sh) wird als praktische Hilfe bereitgestellt, um die Umgebung ggf. zurücksetzen zu können. Es wird jedoch empfohlen, einen virtuellen Computer zu Testzwecken und die Momentaufnahmefunktion im Hypervisor zu verwenden, um den virtuellen Computer in einen fehlerfreien Zustand zurückzusetzen.
 

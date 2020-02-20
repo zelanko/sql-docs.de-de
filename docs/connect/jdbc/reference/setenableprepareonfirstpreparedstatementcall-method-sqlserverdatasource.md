@@ -1,5 +1,5 @@
 ---
-title: "\"ltenableprepareonfirstpreparedstatus\"-Methode (SQLServerDataSource) | Microsoft-Dokumentation"
+title: Methode „setEnablePrepareOnFirstPreparedStatementCall“ (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ac2cac075d08b8029ac0e85dacffd1674fb0da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974312"
 ---
 # <a name="setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource"></a>setEnablePrepareOnFirstPreparedStatementCall-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt das Verhalten für eine bestimmte Verbindungs Instanz an. Wenn diese Konfiguration false ist, ruft die erste Ausführung einer vorbereiteten Anweisung sp_executesql auf, und es wird keine Anweisung vorbereitet, sobald die zweite Ausführung stattfindet, ruft Sie sp_prepexec auf und richtet tatsächlich ein vorbereitetes Anweisungs Handle ein. Bei den folgenden Ausführungen wird sp_execute aufgerufen. Dadurch ist es nicht mehr erforderlich, sp_unprepare on Prepared Statement CLOSE zu schließen, wenn die Anweisung nur einmal ausgeführt wird.  
+  Mit dieser Methode geben Sie das Verhalten einer bestimmten Verbindungsinstanz an. Bei FALSE ruft die erste Ausführung eines Prepared Statements sp_executesql auf und erstellt kein Prepared Statement. Sobald die zweite Ausführung erfolgt, ruft diese sp_prepexec auf und richtet tatsächlich ein Handle für Prepared Statements ein. Die folgenden Ausführungen rufen sp_execute auf. Dadurch ist sp_unprepare nicht mehr für den Abschluss eines Prepared Statements erforderlich, falls dieses nur einmal ausgeführt wird.  
 ## <a name="syntax"></a>Syntax  
   
 ```
@@ -30,13 +30,13 @@ public void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOn
 #### <a name="parameters"></a>Parameter  
  *enablePrepareOnFirstPreparedStatementCall*  
   
- Der neue Wert der **enableprepareonfirstpreparedstatus** -Verbindungs Eigenschaft.  
+ Der neue Wert der Verbindungseigenschaft **enablePrepareOnFirstPreparedStatementCall**  
 
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode ist über JDBC Driver, Version 6,4 und höher, verfügbar.
+ Diese Methode ist ab der Version 6.4 des JDBC-Treibers verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

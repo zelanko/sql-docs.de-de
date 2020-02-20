@@ -1,10 +1,9 @@
 ---
-title: Tabelleneigenschaften (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: ''
+title: Tabelleneigenschaften
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d40b20c75b6ce9c86767ee655e6e7992ed32cff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b53bed28d05d490b9b6d603260917f7ffbb4d047
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261574"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242179"
 ---
 # <a name="table-properties-visual-database-tools"></a>Tabelleneigenschaften (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ Zeigt den Namen der Tabelle an. Bearbeiten Sie das Textfeld, um den Namen zu än
 > [!CAUTION]  
 > Alle Abfragen, Sichten, benutzerdefinierten Funktionen, gespeicherten Prozeduren und Programme, die auf die Tabelle verweisen, werden durch die Namensänderung ungültig.  
   
-**Datenbankname**  
+**Database Name**  
 Zeigt den Namen der Datenquelle der ausgewählten Tabelle an.  
   
 **Beschreibung**  
@@ -84,5 +85,5 @@ Zeigt die Spalte an, die von Microsoft SQL Server als ROWGUID-Spalte der Tabelle
 Stellt eine Dropdownliste bereit, in der die Dateigruppe für Spalten mit dem Datentyp text oder image ausgewählt werden kann. Wenn die Tabelle mit einem Partitionsschema gespeichert wird, lassen Sie dieses Feld leer.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Entwerfen von Tabellen (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Entwerfen von Tabellen](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

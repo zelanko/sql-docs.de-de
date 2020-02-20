@@ -1,6 +1,6 @@
 ---
-title: Objektabhängigkeiten | Microsoft-Dokumentation
-ms.custom: ''
+title: Objektabhängigkeiten
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78be395cccceff6c01152b38ddf9aa7008a273c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264095"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257161"
 ---
 # <a name="object-dependencies"></a>Objektabhängigkeiten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,11 +31,11 @@ Mithilfe dieses Dialogfelds können Sie sich einen Überblick über die Abhängi
 **Objekte, die von** _\<ausgewähltes Objekt>_ abhängig sind  
 Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, deren Abhängigkeiten nachverfolgt werden und die vom ausgewählten Objekt abhängig sind.  
   
-**Objekte, von denen** _\<ausgewähltes Objekt>_ **abhängt**  
+**Objekte, von denen**  _\<ausgewähltes Objekt>_ **abhängt**  
 Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, deren Abhängigkeiten nachverfolgt werden und von denen das ausgewählte Objekt abhängig ist.  
   
 **Abhängigkeiten**  
-Nach dem Klicken auf **Objekte, die von** *<selected object>* abhängig sind, wird eine hierarchische Ansicht der Objekte angezeigt, die von dem ausgewählten Objekt abhängig sind. Durch Klicken auf **Objekte, von denen** *<selected object>* **abhängt**, wird eine hierarchische Ansicht von Objekten angezeigt, von denen das ausgewählte Objekt abhängig ist.  
+Nach dem Klicken auf **Objekte, die von** *<selected object>* abhängig sind, wird eine hierarchische Ansicht der Objekte angezeigt, die von dem ausgewählten Objekt abhängig sind. Durch Klicken auf **Objekte, von denen** *<selected object>* **abhängt**, wird eine hierarchische Ansicht der Objekte angezeigt, von denen das ausgewählte Objekt abhängig ist.  
   
 **Name**  
 Zeigt den Namen, des oben in der Strukturansicht **Abhängigkeiten** ausgewählten Objekts an.  
@@ -43,7 +43,7 @@ Zeigt den Namen, des oben in der Strukturansicht **Abhängigkeiten** ausgewählt
 **Typ**  
 Zeigt den Typ des oben in der Strukturansicht **Abhängigkeiten** ausgewählten Objekts an.  
   
-**Zeit der letzten Synchronisierung**  
+**Zeitpunkt der letzten Synchronisierung**  
 > [!NOTE]  
 > Diese Option ist nur auf der Seite **Erweitert** verfügbar.  
   
@@ -53,7 +53,7 @@ Gibt das Datum und die Uhrzeit des letzten Updates der Abhängigkeitsinformation
 > [!NOTE]  
 > Diese Option ist nur auf der Seite **Allgemein** verfügbar.  
   
-Zeigt den Typ der Abhängigkeit zwischen zwei Objekten an. Kann einen der folgenden Werte annehmen:  
+Zeigt den Typ der Abhängigkeit zwischen zwei Objekten an. Dabei kann es sich um eine der folgenden Methoden handeln:  
   
 -   Schemagebundene Abhängigkeit  
   

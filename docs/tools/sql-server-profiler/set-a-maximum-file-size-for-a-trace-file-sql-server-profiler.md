@@ -1,26 +1,25 @@
 ---
-title: Festlegen einer maximalen Dateigröße für eine Ablaufverfolgungsdatei (SQL Server Profiler) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Festlegen der maximalen Dateigröße für eine Ablaufverfolgungsdatei
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- maximum file size for traces
-- size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7eb97c28901f5f88c5e741d0d34b845bc40b93ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 74d0d90ed27da0cd66ccf4a14232731a9eeb8f7b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928731"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307912"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>Festlegen einer maximalen Dateigröße für eine Ablaufverfolgungsdatei (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Verwenden Sie die folgende Prozedur, um die maximale Dateigröße für eine Ablaufverfolgungsdatei festzulegen.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "67928731"
      Bei aktivierter Dateirolloveroption wird die Ablaufverfolgung fortgesetzt, bis sie auf andere Weise beendet wird. Um die Ablaufverfolgung zu beenden, nachdem die Dateigrößenbeschränkung erreicht wurde, deaktivieren Sie die Dateirolloveroption.  
   
     > [!NOTE]  
-    >  Durch das FAT32-Dateisystem wird die Größe von Dateien auf knapp 4 Gigabyte (GB) beschränkt. Wenn diese Dateigröße erreicht wird, schlägt die Ablaufverfolgung mit dem Fehler "Nicht genügend Speicherplatz" fehl. Verwenden Sie zum Erstellen größerer Dateien das NTFS-Dateisystem.  
+    >  Durch das FAT32-Dateisystem wird die Größe von Dateien auf knapp 4 Gigabyte (GB) beschränkt. Wenn die Ablaufverfolgungsdatei diese Größe erreicht, schlägt die Ablaufverfolgung mit dem Fehler „Nicht genügend Speicherplatz“ fehl. Verwenden Sie zum Erstellen größerer Dateien das NTFS-Dateisystem.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

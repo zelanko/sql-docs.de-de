@@ -1,5 +1,5 @@
 ---
-title: setTime-Methode zu Zeit-und Kalender Werten | Microsoft-Dokumentation
+title: setTimestamp-Methode für Uhrzeit- und Kalenderwerte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ca08fea8-ee1a-49e4-a973-2923d325df79
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e0a493492c581150809fee6e3707cf770960462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972536"
 ---
 # <a name="settime-method-javalangstring-javasqltime-javautilcalendar"></a>setTime-Methode (java.lang.String, java.sql.Time, java.util.Calendar)
@@ -43,11 +43,11 @@ public void setTime(java.lang.String sCol,
   
  *x*  
   
- Ein Zeit Objekt.  
+ Ein Time-Objekt  
   
  *c*  
   
- Ein Kalender Objekt.  
+ Ein Calendar-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

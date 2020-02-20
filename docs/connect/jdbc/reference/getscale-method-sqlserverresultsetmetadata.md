@@ -16,10 +16,10 @@ ms.assetid: fe29aa5f-4cc5-413f-8bbd-a58064993d87
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c43d503fafba7d6dad8f7d982ad2f51542c61c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980178"
 ---
 # <a name="getscale-method-sqlserverresultsetmetadata"></a>getScale-Methode (SQLServerResultSetMetaData)
@@ -46,9 +46,9 @@ public int getScale(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getScale-Methode wird von der getScale-Methode in der Java. SQL. ResultSetMetaData-Schnittstelle angegeben.  
+ Diese getScale-Methode wird von der getScale-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
   
- Im JDBC-Treiber 3.0 für [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde das Verhalten in der DECIMAL_DIGITS-Spalte geändert. Weitere Informationen finden Sie unter [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
+ Im JDBC-Treiber 3.0 für [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde das Verhalten in der DECIMAL_DIGITS-Spalte geändert. Weitere Informationen finden Sie unter [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSetMetaData-Elemente](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

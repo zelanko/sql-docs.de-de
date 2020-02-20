@@ -1,5 +1,5 @@
 ---
-title: getwarning-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: getWarnings-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 15af39bf-6285-44cc-a021-7341e7a055c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e92087315c468f435cf9eb22b56b587cb1743a3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978110"
 ---
 # <a name="getwarnings-method-sqlserverconnection"></a>getWarnings-Methode (SQLServerConnection)
@@ -35,15 +35,15 @@ public java.sql.SQLWarning getWarnings()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein SQLWARNING-Objekt.  
+ Ein SQLWarning-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getwarning-Methode wird von der getwarning-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
+ Diese getWarnings-Methode wird von der getWarnings-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
- Nachfolgende Warnungen werden mit der ersten SQLWARNING verkettet und mit der getnextwarning-Methode aufgerufen. Beim Aufruf für eine geschlossene Verbindung wird eine Ausnahme ausgelöst.  
+ Darauffolgende Warnungen werden an das erste SQLWarning-Element angehängt und mit der getNextWarning-Methode aufgerufen. Beim Aufruf für eine geschlossene Verbindung wird eine Ausnahme ausgelöst.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: lastInsertId | Microsoft-Dokumentation'
+title: PDO::lastInsertId | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2068b4099649b7ebd8aa2bcb4c58aa0d59e123d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936215"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Gibt den Bezeichner für eine Zeile an, die zuletzt in eine Tabelle in der Datenbank eingefügt wurde. Die Tabelle muss eine IDENTITY NOT NULL-Spalte enthalten. Wenn ein Sequenz Name bereitgestellt wird `lastInsertId` , wird die zuletzt eingefügte Sequenznummer für den angegebenen Sequenznamen zurückgegeben (Weitere Informationen zu Sequenznummern finden Sie [hier](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
+Gibt den Bezeichner für eine Zeile an, die zuletzt in eine Tabelle in der Datenbank eingefügt wurde. Die Tabelle muss eine IDENTITY NOT NULL-Spalte enthalten. Ist ein Sequenzname angegeben, gibt `lastInsertId` für diesen die zuletzt eingefügte Sequenznummer zurück. Weitere Informationen zu Sequenznummern finden Sie im Artikel [Sequenznummern](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers).
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,19 +30,19 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*name*: Eine optionale Zeichenfolge, mit der Sie den Sequenznamen angeben können. 
+$*name*: Eine optionale Zeichenfolge, mit der Sie den Sequenznamen angeben können 
   
 ## <a name="return-value"></a>Rückgabewert  
-Wenn kein Sequenz Name angegeben wird, eine Zeichenfolge des Bezeichners für die Zeile, die zuletzt hinzugefügt wurde.
-Wenn ein Sequenz Name angegeben wird, eine Zeichenfolge des Bezeichners für die Sequenz, die zuletzt hinzugefügt wurde.
-Wenn der Methodenaufrufe fehlschlägt, wird eine leere Zeichenfolge zurückgegeben.
+Ist kein Sequenzname angegeben, wird der Bezeichner für die zuletzt hinzugefügte Zeile als Zeichenfolge zurückgegeben.
+Ist ein Sequenzname angegeben, wird der Bezeichner für die zuletzt hinzugefügte Sequenz als Zeichenfolge zurückgegeben.
+Schlägt der Methodenaufruf fehl, wird eine leere Zeichenfolge zurückgegeben.
   
 ## <a name="remarks"></a>Bemerkungen  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
-Zwischen Version 2,0 und 4,3 ist der optionale Parameter ein Tabellenname, und der Rückgabewert ist die ID der Zeile, die der bereitgestellten Tabelle zuletzt hinzugefügt wurde.
-Ab 5,0 wird der optionale Parameter als Sequenz Name betrachtet, und der Rückgabewert ist die Sequenz, die zuletzt für den bereitgestellten Sequenznamen hinzugefügt wurde.
-Wenn ein Tabellenname für Versionen nach 4,3 bereitgestellt wird `lastInsertId` , wird eine leere Zeichenfolge zurückgegeben.
-Sequenzen werden nur in SQL Server 2012 und höher unterstützt.
+Von Version 2.0 bis Version 4.3 geben Sie mit dem optionalen Parameter einen Tabellennamen an und erhalten als Rückgabewert die ID der zuletzt zur angegebenen Tabelle hinzugefügten Spalte.
+Ab Version 5.0 geben Sie mit dem optionalen Parameter einen Sequenznamen ein und erhalten als Rückgabewert die Sequenz, die dem angegebenen Sequenznamen zuletzt hinzugefügt wurde.
+Wenn Sie in Versionen höher als 4.3 einen Tabellennamen angeben, gibt `lastInsertId` eine leere Zeichenfolge zurück.
+Sequenzen werden nur in SQL Server 2012 und höher unterstützt.
   
 ## <a name="example"></a>Beispiel
   

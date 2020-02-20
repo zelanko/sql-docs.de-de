@@ -1,5 +1,5 @@
 ---
-title: "\"nettresponabbuffering\"-Methode (SQLServerDataSource) | Microsoft-Dokumentation"
+title: setResponseBuffering-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5bfc0fb1d1a74131d0e8e71055356f958a9b508
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973103"
 ---
 # <a name="setresponsebuffering-method-sqlserverdatasource"></a>setResponseBuffering-Methode (SQLServerDataSource)
@@ -44,7 +44,7 @@ public void setResponseBuffering(java.lang.String value)
   
  Der Wert **adaptive** gibt an, dass im Bedarfsfall die geringstmögliche Menge an Daten gepuffert wird. Der **adaptive**-Wert ist der Standardpuffermodus.  
   
- Weitere Informationen zur Verwendung des Antwort Puffer Modus finden Sie unter [Verwenden der adaptiven Pufferung](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Weitere Informationen zur Verwendung des Antwortpuffermodus finden Sie unter [Verwenden der adaptiven Pufferung](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

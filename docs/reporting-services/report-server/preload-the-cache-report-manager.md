@@ -12,10 +12,10 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175000"
 ---
 # <a name="preload-the-cache"></a>Vorabladen des Caches  
@@ -37,7 +37,7 @@ ms.locfileid: "66175000"
   
 ## <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>So laden Sie den Cache vorab, indem Sie einen Cacheaktualisierungsplan erstellen  
   
-1. Starten Sie das [Webportal eines Berichtsservers](../../reporting-services/web-portal-ssrs-native-mode.md "Das Webportal eines Berichtsservers").  
+1. Starten Sie [das Webportal eines Berichtsservers](../../reporting-services/web-portal-ssrs-native-mode.md "Das Webportal eines Berichtsservers").  
   
 2. Wählen Sie auf dem Home-Bildschirm die Option **Durchsuchen** aus, und navigieren Sie durch die Ordnerhierarchie, um das Element zu ermitteln, das Sie zwischenspeichern möchten.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "66175000"
 5. Um die Zwischenspeicherung für ein Dataset zu aktivieren, wählen Sie das Optionsfeld **Kopien von diesem Dataset zwischenspeichern und bei Verfügbarkeit verwenden** aus. Darunter wird der Abschnitt **Cacheablauf** angezeigt. Wählen Sie eins der folgenden Optionsfelder aus:
 
     - **Cache läuft ab nach x Minuten** (geben Sie die gewünschte Anzahl von Minuten ein).
-    - **Cache läuft ab nach Zeitplan**.  Reporting Services bietet freigegebene und berichtsspezifische Zeitpläne, mit denen Sie die Verarbeitung, konsistente Inhalte und die Leistung der Berichtsverteilung steuern können. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von Zeitplänen](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Erstellen, Ändern und Löschen von Zeitplänen"). Für Zeitpläne stehen Ihnen verschiedene Optionen zur Verfügung, in diesem Fall für den Ablauf des Caches: Wählen Sie eine der beiden unten genannten Zeitplanoptionen aus:  
-      - Aktivieren Sie das Optionsfeld **Freigegebener Zeitplan**, und wählen Sie aus dem Dropdownfeld **Freigegebenen Zeitplan auswählen** einen Zeitplan aus. Weitere Informationen finden Sie unter [Zeitpläne](../../reporting-services/subscriptions/schedules.md "Zeitpläne").  
+    - **Cache läuft ab nach Zeitplan**.  Reporting Services bietet freigegebene und berichtsspezifische Zeitpläne, mit denen Sie die Verarbeitung, konsistente Inhalte und die Leistung der Berichtsverteilung steuern können. Weitere Informationen finden Sie unter [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). Für Zeitpläne stehen Ihnen verschiedene Optionen zur Verfügung, in diesem Fall für den Ablauf des Caches: Wählen Sie eine der beiden unten genannten Zeitplanoptionen aus:  
+      - Aktivieren Sie das Optionsfeld **Freigegebener Zeitplan**, und wählen Sie aus dem Dropdownfeld **Freigegebenen Zeitplan auswählen** einen Zeitplan aus. Weitere Informationen finden Sie unter [Schedules](../../reporting-services/subscriptions/schedules.md "Zeitpläne").  
       - Aktivieren Sie das Optionsfeld **Berichtsspezifischer Zeitplan**, und wählen Sie ggf. den Link **Zeitplan bearbeiten** aus, um die Seite *Zeitplandetails* anzuzeigen.  
 
-         ![Die Webportalseite mit Details zum Zeitplan des Cacheablaufs für Datasets](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "Die Webportalseite mit Details zum Zeitplan des Cacheablaufs für Datasets")
+         ![Die Webportalseite mit Details zum Zeitplan des Cacheablaufs für Datasets](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "Detailseite zum Zeitplan für ein Datasetcache")
 
           Auf dieser Seite können Sie Folgendes auswählen:
          - Die Art des Zeitplans:
            - **Stunde** – zur stündlichen Ausführung des Zeitplans. Geben Sie die genauen Stunden- und Minutenwerte sowie die Startzeit ein.
            - **Tag** – wählen Sie eine der drei folgenden Optionen aus:  
-              - **An den folgenden Tagen**: (So, Mo, Di, Mi, Do, Fr, Sa).
+              - **An den folgenden Tagen:** (So, Mo, Di, Mi, Do, Fr, Sa).
               - **An jedem Arbeitstag**
               - **Nach dieser Anzahl von Tagen wiederholen** – geben Sie eine Zahl an.  
            - **Woche** – geben Sie die beiden folgenden Elemente an:
@@ -94,7 +94,7 @@ ms.locfileid: "66175000"
   
 ## <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>So laden Sie den Cache mit einem benutzerspezifischen Bericht vorab, indem Sie ein datengesteuertes Abonnement verwenden
 
-1. Starten Sie das [Webportal eines Berichtsservers](../../reporting-services/web-portal-ssrs-native-mode.md "Das Webportal eines Berichtsservers").  
+1. Starten Sie [das Webportal eines Berichtsservers](../../reporting-services/web-portal-ssrs-native-mode.md "Das Webportal eines Berichtsservers").  
 2. Wählen Sie auf dem Home-Bildschirm die Option **Durchsuchen** aus, und navigieren Sie durch die Ordnerhierarchie, um den Bericht zu ermitteln, den Sie zwischenspeichern möchten.  
 3. Klicken Sie mit der rechten Maustaste auf den Bericht, und wählen Sie **Abonnieren** aus dem Dropdownmenü aus. Die Seite **Neue Abonnements** wird angezeigt.  
 4. Geben Sie im Textfeld **Beschreibung** eine Beschreibung für das Abonnement ein.  
@@ -132,14 +132,14 @@ ms.locfileid: "66175000"
 
 13. Klicken Sie auf **Abonnement erstellen**.  
   
-14. Die Seite **Abonnements** wird mit Ihrem neuen datengesteuerten Abonnement angezeigt. Auf dieser Seite können Sie das Abonnement aktivieren, wenn Sie soweit sind. Aktivieren Sie das Kontrollkästchen links neben dem Abonnement, und klicken Sie auf die Schaltfläche **Aktivieren**. ![Aktivierungsschaltfläche auf Seite „Abonnements“](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "Die Aktivierungsschaltfläche auf der Seite „Abonnements“")
+14. Die Seite **Abonnements** wird mit Ihrem neuen datengesteuerten Abonnement angezeigt. Auf dieser Seite können Sie das Abonnement aktivieren, wenn Sie soweit sind. Aktivieren Sie das Kontrollkästchen links neben dem Abonnement, und klicken Sie auf die Schaltfläche **Aktivieren**. ![Schaltfläche „Aktivieren“ auf der Abonnementsseite](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "Die Schaltfläche „Aktivieren“ auf der Abonnementsseite")
 
 15. Geben Sie an, wann das Abonnement verarbeitet wird. Wählen Sie nicht **Wenn die Berichtsdaten auf dem Berichtsserver aktualisiert werden** aus. Diese Option ist nur für Berichtsmomentaufnahmen verfügbar. Wenn Sie einen vorhandenen Zeitplan verwenden möchten, wählen Sie **Nach einem freigegebenen Zeitplan** aus.  
   
      Zum Erstellen eines benutzerdefinierten Zeitplans wählen Sie **Nach einem Zeitplan, der für dieses Abonnement erstellt wurde** aus und klicken dann auf **Weiter**. Konfigurieren Sie den Zeitplan, und klicken Sie dann auf **Fertig stellen**.  
   
     > [!NOTE]  
-    > Die Abonnenten empfangen nur dann den neuesten Bericht, wenn der von Ihnen konfigurierte Zeitplan konsistent mit dem Zeitplan für die Berichtsübermittlung ist, den Sie für die Abonnenten definiert haben. Weitere Informationen finden Sie unter [Webportal eines Berichtsservers](../../reporting-services/web-portal-ssrs-native-mode.md  "Das Webportal eines Berichtsservers").  
+    > Die Abonnenten empfangen nur dann den neuesten Bericht, wenn der von Ihnen konfigurierte Zeitplan konsistent mit dem Zeitplan für die Berichtsübermittlung ist, den Sie für die Abonnenten definiert haben. Weitere Informationen finden Sie unter [Das Webportal eines Berichtsservers](../../reporting-services/web-portal-ssrs-native-mode.md  "Das Webportal eines Berichtsservers").  
   
 16. Konfigurieren Sie die Ausführungsoptionen für den Bericht wie folgt: Wählen Sie auf der Berichtsseite die Registerkarte **Eigenschaften** aus.  
   
@@ -153,9 +153,9 @@ ms.locfileid: "66175000"
   
     - Wenn die zwischengespeicherte Kopie nach einem Zeitplan ablaufen soll, klicken Sie auf **Eine temporäre Kopie des Berichts zwischenspeichern. Die Kopie des Berichts läuft gemäß dem folgenden Zeitplan ab.** Klicken Sie auf **Konfigurieren**, oder wählen Sie einen freigegebenen Zeitplan aus, um einen Zeitplan für den Berichtsablauf festzulegen.  
   
-20. Wählen Sie **Anwenden**aus.
+20. Wählen Sie **Übernehmen**.
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 
  [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
  [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  

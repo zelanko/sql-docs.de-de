@@ -1,6 +1,6 @@
 ---
 title: Visualisieren von Daten mithilfe von RevoScaleR
-description: Tutorial zum Visualisieren von Daten mithilfe der Programmiersprache R unter SQL Server.
+description: 'Tutorial 6 zu RevoScaleR: Visualisieren von Daten mithilfe der R-Programmiersprache in SQL Server'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,30 +9,30 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f64b42e69b1399e67211e82e26502c3fcec96254
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 887c5790a7de70cf111f004be65e3a41748b47bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727121"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947362"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualisieren von SQL Server-Daten mithilfe von R (Tutorial zu SQL Server und RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Diese Lerneinheit ist Teil des [RevoScaleR-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zum Verwenden von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Dies ist das sechste Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-In dieser Lektion verwenden Sie R-Funktionen zum Anzeigen der Verteilung von Werten in der Spalte *creditLine* nach Geschlecht.
+In diesem Tutorial verwenden Sie R-Funktionen zum Anzeigen der Verteilung von Werten in der Spalte *creditLine* nach Geschlecht.
 
 > [!div class="checklist"]
 > * Erstellen von Minimum- und Maximumwerten für Histogrammeingaben
 > * Visualisieren von Daten in einem Histogramm mithilfe von **rxHistogram** aus **RevoScaleR**
 > * Visualisieren mit Punktdiagrammen mithilfe von **levelplot** aus dem in der R-Basisverteilung enthaltenen **lattice**-Paket
 
-Wie Sie in dieser Lektion sehen werden, können Sie Open-Source- und Microsoft-spezifische Funktionen in einem Skript kombiniert verwenden.
+In diesem Tutorial wird veranschaulicht, dass Sie Open-Source- und Microsoft-spezifische Funktionen in einem Skript kombinieren können.
 
 ## <a name="add-maximum-and-minimum-values"></a>Hinzufügen von Maximum- und Minimumwerten
 
-Auf Grundlage der berechneten Zusammenfassungsstatistiken aus der vorherigen Lektion haben Sie einige nützliche Informationen über die Daten gefunden, die Sie in die Datenquelle für weitere Berechnungen einfügen können. So können Sie beispielsweise mithilfe der Minimum- und Maximumwerte Histogramme berechnen. In dieser Übung fügen Sie der Datenquelle **RxSqlServerData** den höchsten und den niedrigsten Wert hinzu.
+Auf Grundlage der berechneten Zusammenfassungsstatistiken aus dem vorherigen Tutorial haben Sie einige nützliche Informationen über die Daten gefunden, die Sie in die Datenquelle für weitere Berechnungen einfügen können. So können Sie beispielsweise mithilfe der Minimum- und Maximumwerte Histogramme berechnen. In dieser Übung fügen Sie der Datenquelle **RxSqlServerData** den höchsten und den niedrigsten Wert hinzu.
 
 1. Beginnen Sie, indem Sie einige temporäre Variablen einrichten.
   
@@ -41,7 +41,7 @@ Auf Grundlage der berechneten Zusammenfassungsstatistiken aus der vorherigen Lek
     var <- sumDF$Name
     ```
   
-2. Verwenden Sie die Variable *ccColInfo*, die Sie in der vorherigen Lektion zum Definieren von Spalten in der Datenquelle erstellt haben.
+2. Verwenden Sie die Variable *ccColInfo*, die Sie im vorherigen Tutorial zum Definieren von Spalten in der Datenquelle erstellt haben.
   
    Fügen Sie der Spaltensammlung neue berechnete Spalten (*numTrans*, *numIntlTrans* und *creditLine*) hinzu. Damit wird die ursprüngliche Definition überschrieben. Mit dem folgenden Skript werden auf Basis der Minimum- und Maximumwerte Faktoren hinzugefügt, die mit der Variablen „sumOut“ abgerufen werden. Mit dieser Variablen wird das speicherinterne Ergebnis aus **rxSummary** gespeichert. 
   

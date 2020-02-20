@@ -1,6 +1,6 @@
 ---
-title: Löschen eines SQL Server Indexes | Microsoft-Dokumentation
-description: Löschen eines SQL Server-Indexes mithilfe OLE DB Treibers für SQL Server
+title: Löschen eines SQL Server-Index | Microsoft-Dokumentation
+description: Löschen eines SQL Server-Index mit dem OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 708deecefe451115ca0fca97075f88311dec2f5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015253"
 ---
 # <a name="dropping-a-sql-server-index"></a>Löschen eines SQL Server-Index
@@ -29,9 +29,9 @@ ms.locfileid: "68015253"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server macht die **IIndexDefinition::D ropindex** -Funktion verfügbar. Mit dieser Funktion können Consumer einen Index aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle entfernen.  
+  Der OLE DB-Treiber für SQL Server stellt die **IIndexDefinition::DropIndex**-Funktion zur Verfügung. Mit dieser Funktion können Consumer einen Index aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle entfernen.  
   
- Der OLE DB-Treiber für SQL Server macht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einige PRIMARY KEY-und UNIQUE-Einschränkungen als Indizes verfügbar. Der Tabellenbesitzer, der Datenbankbesitzer sowie bestimmte Inhaber von Administrationsfunktionen können [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabellen bearbeiten und Einschränkungen löschen. Standardmäßig kann nur der Tabellenbesitzer einen vorhandenen Index löschen. Aus diesem Grund hängt es nicht nur von den Zugriffsrechten des Anwendungsbenutzers, sondern auch von der Art des angegebenen Indexes ab, ob **DropIndex** erfolgreich verläuft oder fehlschlägt.  
+ Der OLE DB-Treiber für SQL Server stellt einige PRIMARY KEY- und UNIQUE-Einschränkungen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als Indizes zur Verfügung. Der Tabellenbesitzer, der Datenbankbesitzer sowie bestimmte Inhaber von Administrationsfunktionen können [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabellen bearbeiten und Einschränkungen löschen. Standardmäßig kann nur der Tabellenbesitzer einen vorhandenen Index löschen. Aus diesem Grund hängt es nicht nur von den Zugriffsrechten des Anwendungsbenutzers, sondern auch von der Art des angegebenen Indexes ab, ob **DropIndex** erfolgreich verläuft oder fehlschlägt.  
   
  Consumer geben den Tabellennamen als Unicode-Zeichenfolge in das *pwszName*-Element der *uName*-Vereinigung des *pTableID*-Parameters ein. Das *eKind*-Element von *pTableID* muss DBKIND_NAME sein.  
   

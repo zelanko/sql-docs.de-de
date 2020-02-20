@@ -1,5 +1,5 @@
 ---
-title: nullplusnonnullisnull-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: nullPlusNonNullIsNull-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c594736f-3a9b-463f-bbd8-eaf9221230ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 314c3bd05db19d795ce203308b9a9ab87a10e338
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976730"
 ---
 # <a name="nullplusnonnullisnull-method-sqlserverdatabasemetadata"></a>nullPlusNonNullIsNull-Methode (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean nullPlusNonNullIsNull()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn die Verkettungen unterstützt werden. Andernfalls lautet der Wert **false**.  
+ Der Wert **TRUE** wird zurückgegeben, wenn die Verkettungen unterstützt werden. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese nullplusnonnullisnull-Methode wird von der nullplusnonnullisnull-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese nullPlusNonNullIsNull-Methode wird von der nullPlusNonNullIsNull-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   

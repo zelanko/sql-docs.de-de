@@ -1,5 +1,5 @@
 ---
-title: getDate-Methode (Java. util. Calendar)-Parameter | Microsoft-Dokumentation
+title: getDate(java.util.Calendar)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6d0deaf2-6f12-4a6e-b537-a51fa3478059
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d26e3fd94e7d547864d3580394ffb05e06734c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983988"
 ---
 # <a name="getdate-method-javalangstring-javautilcalendar"></a>getDate-Methode (java.lang.String, java.util.Calendar)
@@ -42,10 +42,10 @@ public java.sql.Date getDate(java.lang.String sCol,
   
  *cal*  
   
- Ein Kalender Objekt.  
+ Ein Calendar-Objekt  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Date-Objekt.  
+ Ein Date-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

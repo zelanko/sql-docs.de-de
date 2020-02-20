@@ -1,5 +1,5 @@
 ---
-title: getresponsbuffereing-Methode (SQLServerStatement) | Microsoft-Dokumentation
+title: getResponseBuffering-Methode (SQLServerStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf5a9ee4d4aa001103840ba8768ba338baa42db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980404"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>getResponseBuffering-Methode (SQLServerStatement)
@@ -35,16 +35,16 @@ public final java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Eine **Zeichen** Folge, die einen Kleinbuchstaben **oder** einen **adaptiven**Wert enthält.  
+ Eine **Zeichenfolge**, die den kleingeschriebenen Wert **full** oder **adaptive** enthält  
   
 ## <a name="remarks"></a>Bemerkungen  
  Der Wert **adaptive** gibt an, dass im Bedarfsfall die geringstmögliche Menge an Daten gepuffert wird.  
   
  Der Wert **full** gibt an, dass zur Laufzeit das gesamte Ergebnis vom Server gelesen wird.  
   
- **Adaptive** ist der Standardwert in JDBC Driver, Version 2,0 und 3,0. **Full** war der Standardwert vor JDBC Driver, Version 2,0.  
+ **adaptive** ist der Standardwert bei den JDBC-Treiberversionen 2.0 und 3.0. **full** war bis zu JDBC-Treiberversion 2.0 der Standardwert.  
   
- Weitere Informationen zur Verwendung des Antwort Puffer Modus finden Sie unter [Verwenden der adaptiven Pufferung](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Weitere Informationen zur Verwendung des Antwortpuffermodus finden Sie unter [Verwenden der adaptiven Pufferung](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [setResponseBuffering-Methode &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   

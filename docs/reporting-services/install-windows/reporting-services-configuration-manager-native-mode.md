@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593784"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services-Konfigurations-Manager (einheitlicher Modus)
@@ -46,7 +46,7 @@ Sie konfigurieren [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
   
 -   Konfigurieren Sie Berichtsserver-E-Mail-Optionen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst eine Berichtsserver-E-Mail-Übermittlungserweiterung, die SMTP (Simple Mail Transfer Protocol) für die Übermittlung von Berichten oder Berichtsverarbeitungsbenachrichtigungen an ein elektronisches Postfach verwendet. Sie können den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager verwenden, um anzugeben, welcher SMTP-Server oder welches Gateway Sie in Ihrem Netzwerk für die E-Mail-Übermittlung verwenden möchten.  
   
- Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie keinen Berichtsserverinhalt verwalten, zusätzliche Funktionen aktivieren oder Zugriff auf den Server gewähren. Eine vollständige Bereitstellung setzt voraus, dass Sie auch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwenden, um zusätzliche Funktionen zu aktivieren oder Standardwerte zu ändern, sowie das Webportal, um Benutzerzugriff auf den Server zu gewähren.
+ Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie keinen Berichtsserverinhalt verwalten, zusätzliche Funktionen aktivieren oder Zugriff auf den Server gewähren. Eine vollständige Bereitstellung setzt voraus, dass Sie auch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwenden, um zusätzliche Features zu aktivieren oder Standardwerte zu ändern, sowie das Webportal, um Benutzerzugriff auf den Server zu gewähren.
 
 ##  <a name="bkmk_requirements"></a> Anforderungen
 
@@ -70,7 +70,7 @@ Konfigurations-Manager für Reporting Services wird bei der Installation von SQL
 
     - Geben Sie im Windows-Startbildschirm **Reporting** ein, und wählen Sie in den Suchergebnissen **Konfigurations-Manager für Reporting Services** aus.
 
-    - Wählen Sie im **Startmenü** **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]und anschließend auf **Konfigurationstools**.
+    - Wählen Sie im **Startmenü****Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]und anschließend auf **Konfigurationstools**.
 
          Wenn Sie eine Berichtsserver-Instanz einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]konfigurieren möchten, öffnen Sie den Programmordner für diese Version. Zeigen Sie beispielsweise auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] anstelle von [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , um die Konfigurationstools für Serverkomponenten von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] zu öffnen.
 
@@ -82,7 +82,7 @@ Konfigurations-Manager für Reporting Services wird bei der Installation von SQL
 
 4. Falls Sie einen Remotecomputer angeben, klicken Sie auf **Suchen** , um eine Verbindung herzustellen.
 
-5. Wählen Sie unter **Report Server Wählen Sie unterstance**die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz aus, die Sie konfigurieren möchten. Nur Berichtsserverinstanzen für diese Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden in der Liste angezeigt. Frühere Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können nicht konfiguriert werden.
+5. Wählen Sie in der **Berichtsserverinstanz** die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Instanz aus, die Sie konfigurieren möchten. Nur Berichtsserverinstanzen für diese Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden in der Liste angezeigt. Frühere Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können nicht konfiguriert werden.
 
 6. Wählen Sie **Verbinden**.
 

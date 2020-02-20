@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706762"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (R-Bibliothek in SQL Server)
@@ -36,7 +36,7 @@ Die **RevoScaleR**-Bibliothek wird in mehreren Microsoft-Produkten bereitgestell
 Die **RevoScaleR**-Bibliothek basiert auf R 3.4.3 und ist nur verfügbar, wenn Sie eines der folgenden Microsoft-Produkte oder Downloads installieren:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server-Machine Learning-Dienste](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 oder höher](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R Client](set-up-a-data-science-client.md)
 
@@ -53,7 +53,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 SQL Server und R verwenden in bestimmten Fällen unterschiedliche Datentypen. Eine Liste der Zuordnungen zwischen SQL Server- und R-Datentypen finden Sie unter [Zuordnungen zwischen R- und SQL Server-Datentypen](r-libraries-and-data-types.md).
 
-| Funktion| und Beschreibung|
+| Funktion| Beschreibung|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  Erstellt ein SQL Server-Computekontextobjekt, um Berechnungen in eine Remoteinstanz zu überführen. Mehrere **RevoScaleR**-Funktionen verwenden den Computekontext als Argument. |
 |[rxGetComputeContext/rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Gibt den aktiven Computekontext an oder legt ihn fest |
@@ -68,7 +68,7 @@ SQL Server und R verwenden in bestimmten Fällen unterschiedliche Datentypen. Ei
 
 Sie können DDL-Anweisungen von R ausführen, wenn Sie über die erforderlichen Berechtigungen für die Instanz und die Datenbank verfügen. Die folgenden Funktionen verwenden ODBC-Aufrufe zum Ausführen von DDL-Anweisungen oder zum Abrufen des Datenbankschemas.
 
-| Funktion| und Beschreibung|
+| Funktion| Beschreibung|
 | ------- | ---------- |
 | [rxSqlServerTableExists und rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | Löscht eine [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Tabelle oder überprüft, ob eine Datenbanktabelle oder ein -objekt vorhanden ist |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | Führt einen DDL-Befehl (Data Definition Language) aus, der Datenbankobjekte definiert oder bearbeitet. Diese Funktion kann keine Daten zurückgeben und wird nur zum Abrufen oder Ändern des Objektschemas oder der Metadaten verwendet.|
@@ -77,7 +77,7 @@ Sie können DDL-Anweisungen von R ausführen, wenn Sie über die erforderlichen 
 
 Nachdem Sie ein Datenquellenobjekt erstellt haben, können Sie das Objekt verwenden, um Daten in das Objekt zu laden, Daten zu transformieren oder neue Daten in das angegebene Ziel zu schreiben. Abhängig von der Größe der Daten in der Quelle können Sie die Batchgröße auch als Teil der Datenquelle definieren und Daten in Blöcken verschieben.
 
-| Funktion | und Beschreibung |
+| Funktion | Beschreibung |
 |----------|-------------|
 | [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | Überprüft, ob eine Datenquelle verfügbar ist, öffnet oder schließt eine Datenquelle, liest Daten aus einer Quelle, schreibt Daten in das Ziel, und schließt eine Datenquelle|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | Verschiebt Daten aus einer Datenquelle in den Dateispeicher oder in einen Datenrahmen|
@@ -87,7 +87,7 @@ Nachdem Sie ein Datenquellenobjekt erstellt haben, können Sie das Objekt verwen
 
 ## <a name="3-graphing-functions"></a>3: Diagrammerstellungsfunktionen
 
-| Funktionsname | und Beschreibung |
+| Funktionsname | Beschreibung |
 |---------------|-------------|
 |[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)  |Erstellt ein Histogramm aus Daten | 
 |[rxLinePlot](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlineplot) |Erstellt ein Liniendiagramm aus Daten | 
@@ -98,7 +98,7 @@ Nachdem Sie ein Datenquellenobjekt erstellt haben, können Sie das Objekt verwen
 
 ## <a name="4-descriptive-statistics"></a>4: Beschreibende Statistik
 
-| Funktionsname | und Beschreibung |
+| Funktionsname | Beschreibung |
 |---------------|-------------|
 |[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile) <sup>*</sup> |Berechnet die ungefähren Quantilen für XDF-Dateien oder Datenrahmen ohne Sortierung | 
 |[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) <sup>*</sup> |Generiert eine grundlegende, zusammenfassende Statistik für Daten, einschließlich der Berechnungen nach Gruppe. Das Schreiben von Gruppenberechnungen in eine XDF-Datei wird nicht unterstützt. | 
@@ -119,7 +119,7 @@ Nachdem Sie ein Datenquellenobjekt erstellt haben, können Sie das Objekt verwen
 
 ## <a name="5-prediction-functions"></a>5: Partitionsfunktionen
 
-| Funktionsname | und Beschreibung |
+| Funktionsname | Beschreibung |
 |---------------|-------------|
 |[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) <sup>*</sup> |Passt ein lineares Modell auf Daten an | 
 |[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) <sup>*</sup> |Passt ein logistisches Regressionsmodell auf Daten an | 
@@ -147,7 +147,7 @@ Für eine lokale Ausführung führen Sie in der Regel ein R-Skript über die Bef
 
 Wenn Sie bereit sind, ein R-Skript in einer gespeicherten Prozedur, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), zu kapseln, empfiehlt es sich, den Code als eine einzelne Funktion mit klar definierte Eingaben und Ausgaben neu zu schreiben. 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 + [R-Tutorials](../tutorials/sql-server-r-tutorials.md)
 + [Informationen zur Verwendung von Computekontexten](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: adc18554ebb4494112f424f3e6a3dd02c13b121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 849c3dbc0a0f94387f2e2f25ba17d64c910653cb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993793"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918807"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ Der OLE DB-Treiber für SQL Server ist eine eigenständige Datenzugriffs-API (
   
  Der OLE DB-Treiber für SQL Server wurde entwickelt, um eine einfache Methode für den nativen Datenzugriff auf SQL Server über OLE DB zur Verfügung zu stellen. Er bietet eine Möglichkeit, Datenzugriffsfunktionen zu optimieren und weiterzuentwickeln, ohne die aktuellen Windows DAC-Komponenten zu ändern, die jetzt Teil der Microsoft Windows-Plattform sind.  
   
- Der OLE DB-Treber für SQL Server verwendet zwar Komponenten von Windows DAC, ist jedoch nicht ausdrücklich von einer bestimmten Version von Windows DAC abhängig. Sie können den OLE DB-Treiber für SQL Server mit der Version von Windows DAC verwenden, die zusammen mit dem vom OLE DB-Treiber für SQL Server unterstützten Betriebssystem installiert wird.  
+ Der OLE DB-Treiber für SQL Server verwendet zwar Komponenten von Windows DAC, ist jedoch nicht ausdrücklich von einer bestimmten Version von Windows DAC abhängig. Sie können den OLE DB-Treiber für SQL Server mit der Version von Windows DAC verwenden, die zusammen mit dem vom OLE DB-Treiber für SQL Server unterstützten Betriebssystem installiert wird.  
 
  ## <a name="different-generations-of-ole-db-drivers"></a>Verschiedene Generationen des OLE DB-Treibers
 
@@ -88,7 +88,7 @@ Der neue OLE DB-Anbieter wird als Microsoft OLE DB-Treiber für SQL Server (MSOL
  Stellt zusätzliche Ressourcen über den OLE DB-Treiber für SQL Server bereit, einschließlich Links zu externen Ressourcen und zum Abrufen weiterer Hilfe.  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktualisieren einer Anwendung von SQL Server 2005 Native Client](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
  [Vorgehensweisen für OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

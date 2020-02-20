@@ -1,5 +1,5 @@
 ---
-title: SetString-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
+title: setString-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff224739664e55a1e05d45f684f199969903fc04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972642"
 ---
 # <a name="setstring-method-sqlservercallablestatement"></a>setString-Methode (SQLServerCallableStatement)

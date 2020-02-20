@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580777"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
@@ -109,15 +109,15 @@ ms.locfileid: "65580777"
 ### <a name="report-row-groups-and-column-groups"></a>Zeilen- und Spaltengruppen in Berichten  
  Berichte mit Zeilen- oder Spaltengruppen enthalten beim Export in Excel leere Zellen. Angenommen Sie haben einen Bericht, in dem die Zeilen nach der Entfernung zum Geschäft (Commute Distance) sortiert sind. Jede Entfernungskategorie kann mehr als einen Kunden enthalten. Der Bericht ist im folgenden Bild dargestellt.  
   
- ![Bericht im Reporting Services-Webportal](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Report in the Reporting Services web portal")  
+ ![Bericht im Reporting Services-Webportal](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Bericht im Reporting Services-Webportal")  
   
  Wenn der Bericht nach Excel exportiert wird, wird die Entfernung zum Geschäft nur in einer Zelle der Spalte „Entfernung zum Geschäft“ angezeigt. Abhängig von der Ausrichtung des Texts im Bericht (oben, Mitte oder unten) befindet sich der Wert in der ersten, mittleren oder letzten Zelle. Die anderen Zellen sind leer. Die Namensspalte mit den Geschäftsnamen enthält keine leeren Zellen. Das folgende Bild zeigt den Bericht nach dem Export in Excel. Die roten Zellrahmen wurden zur Hervorhebung hinzugefügt. Die grauen Felder sind die leeren Zellen. (Weder die roten Linien noch die grauen Felder sind Teil des exportierten Berichts.)  
   
- ![Nach Excel exportierter Bericht mit Zeilen](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Report exported to Excel, with lines")  
+ ![In Excel exportierter Bericht, mit Zeilen](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "In Excel exportierter Bericht, mit Zeilen")  
   
  Berichte mit Zeilen- oder Spaltengruppen müssen also nach dem Export in Excel geändert werden, bevor Sie die exportierten Daten als PivotTable anzeigen können. Sie müssen den Gruppenwert in Zellen, in denen er fehlt, hinzufügen, um das Arbeitsblatt zu einer flachen Tabelle mit Werten in allen Zellen zu machen. Die folgende Abbildung zeigt das aktualisierte Arbeitsblatt.  
   
- ![Nach Excel exportierter vereinfachter Bericht](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Report exported to Excel, with lines")  
+ ![In Excel exportierter Bericht, vereinfacht](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "In Excel exportierter Bericht, vereinfacht")  
   
  Wenn Sie einen Bericht erstellen, um ihn zur weiteren Analyse der Berichtsdaten nach Excel zu exportieren, sollten Sie in Ihrem Bericht nicht nach Zeilen oder Spalten gruppieren.  
   
@@ -168,10 +168,10 @@ ms.locfileid: "65580777"
   
 |Eigenschaft|Excel 2003|Aktuelle Excel-Version|  
 |--------------|----------------|-------------------|  
-|Die maximale Anzahl an Spalten pro Arbeitsblatt|256|16,384|  
-|Maximale Anzahl an Zeilen pro Arbeitsblatt|65,536|1,048,576|  
+|Die maximale Anzahl an Spalten pro Arbeitsblatt|256|16.384|  
+|Maximale Anzahl an Zeilen pro Arbeitsblatt|65.536|1,048,576|  
 |Anzahl von in einem Arbeitsblatt zulässigen Farben|56 (Palette)<br /><br /> Falls mehr als 56 Farben im Bericht verwendet werden, gleicht die Renderingerweiterung die erforderliche Farbe mit einer der 56 bereits in der benutzerdefinierten Palette vorhandenen Farben ab.|Ungefähr 16 Millionen (24-Bit-Farbe)|  
-|Komprimierte ZIP-Dateien|None|ZIP-Komprimierung|  
+|Komprimierte ZIP-Dateien|Keine|ZIP-Komprimierung|  
 |Standardschriftfamilie|Arial|Calibri|  
 |Standardschriftgröße|10pt|11pt|  
 |Standardzeilenhöhe|12,75 pt|15 pt|  
@@ -204,11 +204,11 @@ ms.locfileid: "65580777"
 ##  <a name="DocumentProperties"></a> Dokumenteigenschaften  
  Der Excel-Renderer schreibt die folgenden Metadaten in die Excel-Datei.  
   
-|Berichtselementeigenschaften|Description|  
+|Berichtselementeigenschaften|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
 |Erstellt|Datum und Zeit der Berichtsausführung als Datums-/Uhrzeitwert im ISO-Format.|  
-|Author|Autor des Berichts|  
-|und Beschreibung|Berichtsbeschreibung|  
+|Autor|Autor des Berichts|  
+|BESCHREIBUNG|Berichtsbeschreibung|  
 |LastSaved|Datum und Zeit der Berichtsausführung als Datums-/Uhrzeitwert im ISO-Format.|  
   
 ##  <a name="PageHeadersFooters"></a> Seitenkopfzeilen und -fußzeilen  
@@ -253,7 +253,7 @@ ms.locfileid: "65580777"
 ### <a name="drillthrough-links"></a>Drillthroughlinks  
  In Textfeldern enthaltene Drillthroughlinks werden in der Zelle als Excel-Hyperlinks gerendert, in die der Text gerendert wird. Drillthroughlinks für Bilder und Diagramme werden beim Rendern als Excel-Hyperlinks auf dem Bild gerendert. Beim Klicken auf den Drillthroughlink wird der Standardbrowser des Clients geöffnet und zur HTML-Ansicht des Ziels navigiert.  
   
-### <a name="hyperlinks"></a>Hyperlinks  
+### <a name="hyperlinks"></a>Links  
  In Textfeldern enthaltene Hyperlinks werden in der Zelle als Excel-Hyperlinks gerendert, in die der Text gerendert wird. Hyperlinks für Bilder und Diagramme werden beim Rendern als Excel-Hyperlinks auf dem Bild gerendert. Beim Klicken auf den Hyperlink wird der Standardbrowser des Clients geöffnet und zur HTML-Ansicht der Ziel-URL navigiert.  
   
 ### <a name="interactive-sorting"></a>Interaktives Sortieren  
@@ -267,7 +267,7 @@ ms.locfileid: "65580777"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  

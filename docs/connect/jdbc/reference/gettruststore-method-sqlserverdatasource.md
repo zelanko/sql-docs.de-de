@@ -1,5 +1,5 @@
 ---
-title: gettruststore-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: getTrustStore-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f35a71cc741411f3aad3408d366f3f70218fecdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978521"
 ---
 # <a name="gettruststore-method-sqlserverdatasource"></a>getTrustStore-Methode (SQLServerDataSource)

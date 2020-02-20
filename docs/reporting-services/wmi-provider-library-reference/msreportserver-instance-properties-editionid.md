@@ -11,13 +11,13 @@ ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3e73d8416c6c475a8cc5225d478a6e85472ceb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571088"
 ---
-# <a name="msreportserverinstance-properties---editionid"></a>MSReportServer_Instance-Eigenschaften: Edition ID
+# <a name="msreportserver_instance-properties---editionid"></a>MSReportServer_Instance-Eigenschaften: Edition ID
   Gibt die Edition des Berichtsservers zurück. Schreibgeschützt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,12 +34,12 @@ public uint EditionID;
  Ein **uint** -Wert, der die Edition des Berichtsservers enthält  
   
 ## <a name="example-code"></a>Beispielcode  
- [MSReportServer_ConfigurationSetting-Klasse](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MSReportServer_Instance-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+ [MSReportServer_Instance Members (MSReportServer_Instance-Member)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

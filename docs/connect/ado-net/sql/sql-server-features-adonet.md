@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 005830df7d926274e481c9c7fca89a883fc693e6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 88d171e8feab3283d0dd1d593128a102f4be905d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451953"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244020"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server-Features und ADO.NET
 
@@ -23,36 +23,39 @@ ms.locfileid: "72451953"
 
 In den Themen dieses Abschnitts werden Funktionen von SQL Server diskutiert, die für die Entwicklung von Datenbankanwendungen mit ADO.NET vorgesehen sind.  
   
-Weitere Informationen finden Sie unter [Development (Datenbank-Engine)](https://go.microsoft.com/fwlink/?LinkId=115245) from SQL Server-Onlinedokumentation.
+Weitere Informationen finden Sie unter [Entwicklung (Datenbank-Engine)](https://go.microsoft.com/fwlink/?LinkId=115245) in der SQL Server-Onlinedokumentation.
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Auflisten von SQL Server-Instanzen (ADO.NET)](enumerate-instances-sql-server.md)  
 Beschreibt das Auflisten aktiver Instanzen von SQL Server 2000.  
   
 [Anbieterstatistiken für SQL Server](provider-statistics-sql-server.md)  
-Beschreibt die Unterstützung für das Abrufen von SQL Server Lauf Zeit Statistiken.  
+Beschreibt die Unterstützung für das Abrufen von SQL Server-Laufzeitstatistiken  
   
 [SQL Server Express-Benutzerinstanzen](sql-server-express-user-instances.md)  
-Beschreibt die Unterstützung für SQL Server Express Benutzer Instanzen.  
+Beschreibt die Unterstützung für SQL Server Express-Benutzerinstanzen  
   
 [Datenbankspiegelung in SQL Server](database-mirroring-sql-server.md)  
-Beschreibt die Daten Bank Spiegelungs Funktion.  
+Beschreibt die Funktion zum Spiegeln von Datenbanken  
 
 [Die Kontextverbindung](context-connection.md)  
-Beschreibt die Kontext Verbindung.  
+Beschreibt die Kontextverbindung  
   
 [Abfragebenachrichtigungen in SQL Server](query-notifications-sql-server.md)  
-Beschreibt, wie .NET-Anwendungen Benachrichtigungen von SQL Server anfordern können, wenn sich Daten geändert haben.  
+Beschreibt, wie .NET-Anwendungen Benachrichtigungen von SQL Server anfordern können, wenn sich Daten geändert haben  
   
 [Momentaufnahmenisolation in SQL Server](snapshot-isolation-sql-server.md)  
-Beschreibt die Unterstützung für die Momentaufnahme Isolation, einen Mechanismus zur Zeilen Versionsverwaltung, der zum Reduzieren der Blockierung in Transaktions Anwendungen entworfen wurde.  
+Beschreibt die Unterstützung der Momentaufnahmenisolation, eines Mechanismus für die Zeilenversionsverwaltung zum Reduzieren von Blockierungen in Transaktionsanwendungen  
   
 [SqlClient-Unterstützung für Hochverfügbarkeit, Notfallwiederherstellung](sqlclient-support-high-availability-disaster-recovery.md)  
-Beschreibt die SqlClient-Unterstützung für Verfügbarkeits Gruppen mit hoher Verfügbarkeit und Notfall Wiederherstellung (AlwaysOn).  
+Beschreibt die SqlClient-Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung bei (Always On-)Verfügbarkeitsgruppen  
   
 [SqlClient-Unterstützung für LocalDB](sqlclient-support-localdb.md)  
-Beschreibt die SqlClient-Unterstützung für localdb-Datenbanken.  
-  
+Beschreibt die SqlClient-Unterstützung für LocalDB-Datenbanken
+
+[SqlClient-Unterstützung](sqlclient-support-always-encrypted.md) für Always Encrypted  
+Beschreibt die SqlClient-Unterstützung für das Feature „Always Encrypted“
+
 ## <a name="next-steps"></a>Nächste Schritte
 - [SQL Server-Datenvorgänge in ADO.NET](sql-server-data-operations.md)
 - [SQL Server und ADO.NET](index.md)

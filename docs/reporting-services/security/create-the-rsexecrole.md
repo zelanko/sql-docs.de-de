@@ -11,15 +11,15 @@ ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140473"
 ---
 # <a name="create-the-rsexecrole"></a>Erstellen der Rolle RSExecRole
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet eine vordefinierte Datenbankrolle namens **RSExecRole** , um Berichtsserverberechtigungen für die Berichtsserver-Datenbank zu gewähren. Die Rolle **RSExecRole** wird automatisch mit der Berichtsserver-Datenbank erstellt. Als Faustregel gilt, dass Sie sie nie ändern und ihr keine anderen Benutzer zuweisen sollten. Wenn Sie die Berichtsserver-Datenbank jedoch auf ein neues oder anderes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]verlagern, müssen Sie die Rolle in den Systemdatenbanken Master und MSDB neu erstellen.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet eine vordefinierte Datenbankrolle namens **RSExecRole** , um Berichtsserverberechtigungen für die Berichtsserver-Datenbank zu gewähren. Die Rolle **RSExecRole** wird automatisch mit der Berichtsserver-Datenbank erstellt. Als Faustregel gilt, dass Sie sie nie ändern und ihr keine anderen Benutzer zuweisen sollten. Wenn Sie die Berichtsserver-Datenbank jedoch auf eine neue oder andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] verlagern, müssen Sie die Rolle in den Systemdatenbanken Master und msdb neu erstellen.  
   
  Mithilfe der folgenden Anweisungen führen Sie die folgenden Schritte aus:  
   
@@ -30,7 +30,7 @@ ms.locfileid: "67140473"
 > [!NOTE]  
 > Die Anweisungen in diesem Thema sind für Benutzer vorgesehen, die zur Bereitstellung der Berichtsserver-Datenbank kein Skript ausführen oder WMI-Code schreiben möchten. Wenn Sie eine umfangreiche Bereitstellung verwalten und regelmäßig Datenbanken verschieben, sollten Sie ein Skript zur Automatisierung dieser Schritte schreiben. Weitere Informationen finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-## <a name="before-you-start"></a>Vorbereitungen  
+## <a name="before-you-start"></a>Vorbereitung  
   
 -   Sichern Sie die Verschlüsselungsschlüssel, damit Sie sie wiederherstellen können, nachdem die Datenbank verschoben wurde. Dieser Schritt wirkt sich nicht direkt auf die Erstellung oder Bereitstellung der Rolle **RSExecRole**aus. Sie müssen jedoch über eine Sicherung der Schlüssel verfügen, um die durchgeführten Schritte verifizieren zu können. Weitere Informationen finden Sie unter [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67140473"
   
 ### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>So erstellen Sie die Rolle RSExecRole mit Management Studio in der Systemdatenbank „master“  
   
-1.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , und stellen Sie eine Verbindung mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz her, die als Host für die Berichtsserver-Datenbank fungiert.  
+1.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], und stellen Sie eine Verbindung mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her, die als Host für die Berichtsserver-Datenbank fungiert.  
   
 2.  Öffnen Sie **Datenbanken**  
   
@@ -59,13 +59,13 @@ ms.locfileid: "67140473"
   
 6.  Öffnen Sie **Rollen**.  
   
-7.  Klicken Sie mit der rechten Maustaste auf **Datenbankrollen**, und wählen Sie **Neue Datenbankrolle**aus. Die **Datenbankrolle - neue** Seite wird angezeigt.  
+7.  Klicken Sie mit der rechten Maustaste auf **Datenbankrollen**, und wählen Sie **Neue Datenbankrolle**aus. Die Seite **Database Role - New** (Datenbankrolle - Neu) wird angezeigt.  
   
 8.  Geben Sie im Feld **Rollennamen**den Namen **RSExecRole**ein.  
   
 9. Geben Sie im Feld **Besitzer**die Zeichenfolge **dbo** ein.  
   
-10. Seite "Select" **sicherungsfähige Elemente**.  
+10. Navigieren Sie zur Seite **Sicherungsfähige Elemente**.  
   
 11. Klicken Sie auf **Suchen**. Das Dialogfeld **Objekte hinzufügen** wird angezeigt. Standardmäßig ist die Option **Bestimmte Objekte** aktiviert.  
   
@@ -89,13 +89,13 @@ ms.locfileid: "67140473"
   
 18. Klicken Sie auf **OK**, und klicken Sie dann nochmals auf **OK** .  
   
-19. In der **Execute** -Zeile in der **Grant** Spalte das Kontrollkästchen.  
+19. Aktivieren Sie das Kontrollkästchen in der Zeile **Ausführen** in der Spalte **Erteilen**.  
   
 20. Wiederholen Sie diesen Schritt für alle übrigen gespeicherten Prozeduren. Der Rolle**RSExecRole** müssen Berechtigungen zum Ausführen aller drei gespeicherten Prozeduren gewährt werden.  
 
 21. Klicken Sie auf **OK**, um den Vorgang abzuschließen.  
   
- ![Eigenschaftenseite der Datenbankrolle](../../reporting-services/security/media/rsexecroledbproperties.gif "Database Role Properties page")  
+ ![Eigenschaftenseite für Datenbankrolle](../../reporting-services/security/media/rsexecroledbproperties.gif "Eigenschaftenseite für Datenbankrolle")  
   
 ## <a name="create-rsexecrole-in-msdb"></a>Erstellen der Rolle 'RSExecRole' in 'MSDB'  
  Reporting Services verwendet gespeicherte Prozeduren für den SQL Server-Agent-Dienst und ruft zur Unterstützung geplanter Vorgänge Auftragsinformationen ab. Die folgenden Schritte erklären, wie der Rolle RSExecRole Berechtigungen zum Ausführen der Prozeduren und zum Auswählen der Tabellen gewährt werden.  
@@ -116,7 +116,7 @@ ms.locfileid: "67140473"
   
 7.  Geben Sie im Feld „Besitzer“ die Zeichenfolge **dbo** ein.  
   
-8.  Wählen Sie die **sicherungsfähige Elemente** Seite.  
+8.  Navigieren Sie zur Seite **Sicherungsfähige Elemente**.  
   
 9.  Klicken Sie auf **Suchen**. Das Dialogfeld **Objekte hinzufügen** wird angezeigt. Standardmäßig ist die Option **Objekte angeben** aktiviert.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "67140473"
   
 19. Wiederholen Sie diesen Schritt für alle übrigen gespeicherten Prozeduren. Der Rolle RSExecRole müssen Berechtigungen zum Ausführen aller zehn gespeicherten Prozeduren gewährt werden.  
   
-20. Fügen Sie auf die **sicherungsfähige Elemente** auf **Suche** erneut aus. Das Dialogfeld **Objekte hinzufügen** wird angezeigt. Standardmäßig ist die Option **Objekte angeben** aktiviert.  
+20. Klicken Sie auf der Seite **Sicherungsfähige Elemente** noch mal auf **Suchen**. Das Dialogfeld **Objekte hinzufügen** wird angezeigt. Standardmäßig ist die Option **Objekte angeben** aktiviert.  
   
 21. Klicken Sie auf **OK**.  
   
@@ -210,9 +210,9 @@ ms.locfileid: "67140473"
   
 5.  Geben Sie den Servernamen der Datenbank-Engine ein. Wenn Sie die Berichtsserver-Datenbanken an eine benannte Instanz angefügt haben, müssen Sie den Instanznamen im folgenden Format eingeben: \<Servername>\\<Instanzname\>.  
   
-6.  Klicken Sie auf **Verbindung testen**. Daraufhin sollte ein Dialogfeld an, der angibt, "Test-Verbindung erfolgreich."
+6.  Klicken Sie auf **Verbindung testen**. Es sollte ein Dialogfeld mit folgender Meldung angezeigt werden: „Der Verbindungstest war erfolgreich.“
   
-7.  Wählen Sie **Ok** , um das Dialogfeld schließen, und wählen Sie dann **Weiter**.  
+7.  Klicken Sie zunächst auf **OK**, um das Dialogfeld zu schließen, und anschließend auf **Weiter**.  
   
 8.  Wählen Sie die Berichtsserver-Datenbank aus.  
   
@@ -228,7 +228,7 @@ ms.locfileid: "67140473"
   
 14. Klicken Sie auf **Webportal-URL**.  
   
-15. Klicken Sie auf den Link, um das Webportal öffnen. Daraufhin sollten die Berichtsserver-Elemente aus der Berichtsserver-Datenbank angezeigt werden.  
+15. Klicken Sie auf den Link, um das Webportal zu öffnen. Daraufhin sollten die Berichtsserver-Elemente aus der Berichtsserver-Datenbank angezeigt werden.  
 
 ## <a name="creating-the-rsexecrole-role-and-permissions-using-t-sql"></a>Erstellen der Rolle „RSExecRole“ und der Berechtigungen mit T-SQL
 Mit dem folgenden T-SQL-Skript in Systemdatenbanken können Sie auch die Rolle erstellen und die entsprechenden Berechtigungen gewähren:

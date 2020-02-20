@@ -11,10 +11,10 @@ ms.assetid: 54fb2f13-f8d8-47b5-bec1-4a5af3e86a84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d5200ba88b259e75d1417bcb876de9bdbd20899
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974683"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-long"></a>setCharacterStream-Methode (java.lang.String, java.io.Reader, long)
@@ -48,7 +48,7 @@ public final void setCharacterStream(java.lang.String parameterName
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese setcharakteristream-Methode wird von der setcharakteristream-Methode in der Java. SQL. CallableStatement-Schnittstelle angegeben.  
+ Diese setCharacterStream-Methode wird von der setCharacterStream-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
  Entspricht die Länge des Streams nicht der Angabe im *length*-Parameter, wird vom JDBC-Treiber beim Aktualisieren oder Einfügen der Zeile eine Ausnahme ausgelöst.  
   

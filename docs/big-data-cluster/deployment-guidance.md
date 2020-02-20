@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127383"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831602"
 ---
-# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
+# <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,7 +33,7 @@ Bevor Sie einen Big-Data-Cluster für SQL Server 2019 bereitstellen können, mü
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- SQL Server 2019-Erweiterung für Azure Data Studio
+- [Datenvirtualisierungserweiterung](../azure-data-studio/data-virtualization-extension.md) für Azure Data Studio
 
 ## <a id="prereqs"></a> Anforderungen an Kubernetes
 
@@ -48,7 +48,7 @@ Wenn Sie bereits über einen Kubernetes-Cluster verfügen, der die oben genannte
 
 Sie können Kubernetes auf drei Arten bereitstellen:
 
-| Bereitstellung von Kubernetes auf bzw. in: | und Beschreibung | Link |
+| Bereitstellung von Kubernetes auf bzw. in: | Beschreibung | Link |
 |---|---|---|
 | **Azure Kubernetes Service (AKS)** | Ein Managed Kubernetes-Containerdienst in Azure. | [Anweisungen](deploy-on-aks.md) |
 | **Einzelne oder mehrere Computer (`kubeadm`)** | Ein Kubernetes-Cluster, der auf physischen oder virtuellen Computern mithilfe von `kubeadm` bereitgestellt wird. | [Anweisungen](deploy-with-kubeadm.md) |
@@ -169,10 +169,10 @@ Es ist auch möglich, die Bereitstellung an die Workloads anzupassen, die Sie au
 
 Die folgenden Umgebungsvariablen werden für Sicherheitseinstellungen verwendet, die nicht in einer Konfigurationsdatei für Bereitstellungen gespeichert werden. Beachten Sie, dass Docker-Einstellungen mit Ausnahme der Anmeldeinformationen in der Konfigurationsdatei festgelegt werden können.
 
-| Umgebungsvariable | Anforderung |und Beschreibung |
+| Umgebungsvariable | Anforderung |Beschreibung |
 |---|---|---|
-| `AZDATA_USERNAME` | Required |Der Benutzername für den Big Data-Clusteradministrator für SQL Server. In der SQL Server-Masterinstanz wird eine SysAdmin-Anmeldung mit dem gleichen Namen erstellt. Als bewährte Sicherheitsmaßnahme wird das `sa`-Konto deaktiviert. |
-| `AZDATA_PASSWORD` | Required |Das Kennwort für die oben erstellten Benutzerkonten. Das gleiche Kennwort wird für den `root`-Benutzer verwendet, der zum Sichern vom Knox-Gateway und von HDFS verwendet wird. |
+| `AZDATA_USERNAME` | Erforderlich |Der Benutzername für den Big Data-Clusteradministrator für SQL Server. In der SQL Server-Masterinstanz wird eine SysAdmin-Anmeldung mit dem gleichen Namen erstellt. Als bewährte Sicherheitsmaßnahme wird das `sa`-Konto deaktiviert. |
+| `AZDATA_PASSWORD` | Erforderlich |Das Kennwort für die oben erstellten Benutzerkonten. Das gleiche Kennwort wird für den `root`-Benutzer verwendet, der zum Sichern vom Knox-Gateway und von HDFS verwendet wird. |
 | `ACCEPT_EULA`| Erforderlich für die erste Verwendung von `azdata`| Legen Sie diese Einstellung auf „Ja“ fest. Wenn dieser Wert als Umgebungsvariable festgelegt ist, werden die Lizenzbedingungen für SQL Server und `azdata` akzeptiert. Wenn er nicht als Umgebungsvariable festgelegt ist, können Sie `--accept-eula=yes` angeben, wenn Sie den Befehl `azdata` zum ersten Mal verwenden.|
 | `DOCKER_USERNAME` | Optional | Der Benutzername, mit dem auf Containerimages zugegriffen wird, wenn diese in einem privaten Repository gespeichert sind. Weitere Informationen darüber, wie Sie ein privates Docker-Repository zur Bereitstellung von Big-Data-Clustern nutzen, finden Sie im Artikel [Offlinebereitstellungen](deploy-offline.md).|
 | `DOCKER_PASSWORD` | Optional |Das Kennwort, mit dem auf das oben erwähnte private Repository zugegriffen wird. |
@@ -193,7 +193,8 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> Sie müssen den `root`-Benutzer für das Knox-Gateway mit dem oben angegebenen Kennwort verwenden. `root` ist der einzige Benutzer, der in dieser Standardauthentifizierung (Benutzername/Kennwort) unterstützt wird. Der Benutzername, der mit dem oben angegebenen Kennwort für SQL Server Master bereitgestellt wird, lautet `sa`.
+> Sie müssen den `root`-Benutzer für das Knox-Gateway mit dem oben angegebenen Kennwort verwenden. `root` ist der einzige Benutzer, der in dieser Standardauthentifizierung (Benutzername/Kennwort) unterstützt wird.
+> Verwenden Sie dieselben Werte wie die [Umgebungsvariablen](#env) AZDATA_USERNAME und AZDATA_PASSWORD, um über die Standardauthentifizierung eine Verbindung mit SQL Server herzustellen. 
 
 
 Nachdem Sie die Umgebungsvariablen festgelegt haben, müssen Sie `azdata bdc create` ausführen, um die Bereitstellung auszulösen. Im folgenden Beispiel wird das oben erstellte Clusterkonfigurationsprofil verwendet:
@@ -227,7 +228,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> Die vollständige Bereitstellung kann einige Zeit in Anspruch nehmen, da die Containerimages für die Komponenten des Big-Data-Clusters heruntergeladen werden müssen. Der Vorgang sollte jedoch nicht mehrere Stunden dauern. Wenn Probleme bei der Bereitstellung auftreten, finden Sie weitere Informationen unter [Überwachen und Behandeln von Problemen eines [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
+> Die vollständige Bereitstellung kann einige Zeit in Anspruch nehmen, da die Containerimages für die Komponenten des Big-Data-Clusters heruntergeladen werden müssen. Der Vorgang sollte jedoch nicht mehrere Stunden dauern. Wenn Probleme bei der Bereitstellung auftreten, finden Sie weitere Informationen unter [Überwachung und Problembehandlung: [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 Nachdem die Bereitstellung erfolgreich abgeschlossen wurde, wird die folgende Meldung ausgegeben:
 

@@ -1,5 +1,5 @@
 ---
-title: SetBytes-Methode (Long, Byte, int, int) | Microsoft-Dokumentation
+title: setBytes(long, byte, int, int)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee4ab641ede4d4ec614a306f9c0e08c9f16aa5ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974943"
 ---
 # <a name="setbytes-method-long-byte-int-int"></a>setBytes-Methode (long, byte, int, int)
@@ -66,7 +66,7 @@ public int setBytes(long pos,
  Daten werden beginnend mit der angegebenen Position überschrieben, und sie können die ursprüngliche Länge des BLOB übersteigen. Durch Angeben eines Werts vom Typ Position+1 werden Bytes an die Zeichenfolge angefügt. Durch Weitergeben eines Werts vom Typ Position+2 oder größer (oder null oder weniger) wird ein Positionsfehler ausgelöst. Durch Weitergeben eines **Bytearrays** mit einer Länge von NULL wird NULL zurückgegeben, weil keine Bytes geschrieben wurden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SetBytes- &#40;Methode SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
+ [setBytes-Methode &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [SQLServerBlob-Methoden](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob-Elemente](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob-Klasse](../../../connect/jdbc/reference/sqlserverblob-class.md)  

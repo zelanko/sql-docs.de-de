@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Tabellenwert Parametern (OLE DB) | Microsoft-Dokumentation
+title: Verwenden von Tabellenwertparametern (OLE DB) | Microsoft-Dokumentation
 description: Verwenden von Tabellenwertparametern (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994602"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Verwenden von Tabellenwertparametern (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994602"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder höher ausgeführt. In diesem Beispiel werden die folgenden Aufgaben ausgeführt:  
+  Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder höher ausgeführt. Das Beispiel bewirkt Folgendes:  
   
 -   Erstellt Tabellenwertparameter mithilfe von dynamischer Ermittlung über IOpenRowset::OpenRowset.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "67994602"
   
 -   Verwendet benutzerdefinierte Parametereigenschaften mithilfe von ISSCommandWithParameters.  
   
--   Zeigt die Fehlerbehandlung für msoledbsql-Fehler an.  
+-   Anzeigen der Fehlerbehandlung für MSOLEDBSQL-Fehler  
   
- Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;OLE DB Treiber für SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
+ Weitere Informationen über Tabellenwertparameter finden Sie unter [Tabellenwertparameter &#40;OLE DB-Treiber für SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Beispiel  
  Das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) erstellt die im Beispiel verwendete Datenbank.  

@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140214"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -32,9 +32,9 @@ ms.locfileid: "67140214"
 
  Verwenden Sie eine der folgenden Methoden, um festzustellen, ob ein freigegebener Zeitplan aktiv verwendet wird:
 
--   **Webportal:** Prüfen Sie in **Siteeinstellungen** auf der Seite **Zeitpläne** die Werte in den Feldern „Zuletzt ausgeführt am“, „Nächste Ausführung“ und „Status“. Wenn ein Zeitplan nicht mehr ausgeführt wird, weil er abgelaufen ist, wird das Ablaufdatum im Feld Status angezeigt. Weitere Informationen finden Sie unter [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
+-   **Web-Portal:** Überprüfen Sie auf der Registerkarte **Zeitpläne** der **Siteeinstellungen** die Werte in den folgenden Feldern: „Letzte Ausführung“, „Nächste Ausführung“ und „Status“. Wenn ein Zeitplan nicht mehr ausgeführt wird, weil er abgelaufen ist, wird das Ablaufdatum im Feld Status angezeigt. Weitere Informationen finden Sie unter [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
 
--   **SQL Server Management Studio:** Anzeigen der **Berichte** Seite eines bestimmten freigegebenen Zeitplans. Auf dieser Seite werden alle Berichte und freigegebenen Datasets aufgeführt, die den freigegebenen Zeitplan verwenden. Weitere Informationen finden Sie unter [Reporting Services in SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
+-   **SQL Server Management Studio:** Zeigen Sie die Seite **Berichte** eines freigegebenen Zeitplans an. Auf dieser Seite werden alle Berichte und freigegebenen Datasets aufgeführt, die den freigegebenen Zeitplan verwenden. Weitere Informationen finden Sie unter [Reporting Services in SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
 
 -  **Protokolle:** Anzeigen der Protokolldateien oder Ablaufverfolgungsprotokolle der Berichtsausführung, um zu ermitteln, ob Berichte zu den im Zeitplan angegebenen Zeiten ausgeführt wurden. Weitere Informationen finden Sie unter [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).
 
@@ -64,20 +64,20 @@ Ein abgelaufener berichtsspezifischer Zeitplan bleibt weiterhin mit dem Bericht 
    >[!NOTE]  
    >Falls **Einstellungen** nicht verfügbar ist, haben Sie keine Zugriffsberechtigung für die Siteeinstellungen.  
 
-1. Wählen Sie **Siteeinstellungen** aus dem Dropdownmenü aus.
+1. Wählen Sie im Dropdownmenü **Siteeinstellungen** aus.
 1. Wählen Sie die Registerkarte **Zeitpläne** aus.
-1. Wählen Sie **+ neuer Zeitplan**. (Klicken Sie zum Ändern eines vorhandenen Zeitplans auf den Namen des Zeitplans.)
+1. Klicken Sie auf **+ Neuer Zeitplan**. (Klicken Sie zum Ändern eines vorhandenen Zeitplans auf den Namen des Zeitplans.)
 1. Geben Sie einen beschreibenden Namen für den Zeitplan ein.
 1. Wählen Sie **Stunde**, **Tag**, **Woche**oder **Monat**aus. Klicken Sie auf **Einmal** , um einen einmaligen Zeitplan zu erstellen. Wenn Sie die Basis Ihres Zeitplans angeben, werden zusätzliche Optionen angezeigt.
 1. Wählen Sie optional ein Datum aus, an dem der Zeitplan starten soll. Der Standardwert ist der aktuelle Tag. Sie können den Startzeitpunkt des Zeitplans verschieben, indem Sie ein späteres Datum auswählen.
 1. Wählen Sie optional ein Datum aus, an dem der Zeitplan enden soll. An diesem Datum wird die Ausführung des Zeitplans angehalten, der Zeitplan wird jedoch nicht gelöscht.
-1. Wählen Sie einen Zeitpunkt für den Zeitplan ausgeführt.
-1. Wählen Sie **OK**.
+1. Wählen Sie eine Uhrzeit aus, zu der der Zeitplan ausgeführt wird.
+1. Klicken Sie auf **OK**.
 
 ### <a name="to-delete-a-shared-schedule-web-portal"></a>So löschen Sie einen freigegebenen Zeitplan (Webportal)
 
 1. Klicken Sie im Webportal auf der Symbolleiste auf **Einstellungen** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png).
-2. Wählen Sie **Siteeinstellungen** aus dem Dropdownmenü aus.
+2. Wählen Sie im Dropdownmenü **Siteeinstellungen** aus.
 3. Wählen Sie die Registerkarte **Zeitpläne** aus.
 4. Aktivieren Sie das Kontrollkästchen neben dem zu löschenden freigegebenen Zeitplan, und klicken Sie dann auf **Löschen**.
 
@@ -101,7 +101,7 @@ Ein abgelaufener berichtsspezifischer Zeitplan bleibt weiterhin mit dem Bericht 
 
      Oder geben Sie einen einmaligen (nicht wiederkehrenden) Zeitplan an, indem Sie **Einmal**auswählen und anschließend eine **Startzeit**angeben.
 
-8.  Wählen Sie **OK**.
+8.  Klicken Sie auf **OK**.
 
 ##### <a name="to-delete-a-shared-schedule-management-studio"></a>So löschen Sie einen freigegebenen Zeitplan (Management Studio)
 
@@ -110,7 +110,7 @@ Ein abgelaufener berichtsspezifischer Zeitplan bleibt weiterhin mit dem Bericht 
 3. Klicken Sie auf die Registerkarte **Berichte** , um die Liste der Berichte anzuzeigen, die den Zeitplan derzeit verwenden.
 Klicken Sie auf **Abbrechen**.
 4.  Erweitern Sie den Ordner „Freigegebene Zeitpläne“, klicken Sie mit der rechten Maustaste auf den zu löschenden Zeitplan, und klicken Sie anschließend auf **Löschen**. Das Dialogfeld **Katalogelemente löschen** wird angezeigt.
-5.  Wählen Sie **OK**.
+5.  Klicken Sie auf **OK**.
 
  Wenn Sie einen freigegebenen Zeitplan löschen, der von mehreren Berichten und Abonnements verwendet wird, erstellt der Berichtsserver für Berichte und Abonnements, die vorher den freigegebenen Zeitplan verwendet haben, eigene Zeitpläne. Jeder dieser neuen Zeitpläne enthält das Datum, die Zeit und die Wiederholungsoption, die in dem freigegebenen Zeitplan angegeben wurden.
 
@@ -142,7 +142,7 @@ Klicken Sie auf **Abbrechen**.
 4.  Wählen Sie den Zeitplan aus, und klicken Sie auf **Löschen**.
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
  [Zeitpläne](../../reporting-services/subscriptions/schedules.md)  
  [Pause and Resume Shared Schedules (Anhalten und Fortsetzen von freigegebenen Zeitplänen)](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)  
  [Zwischenspeichern von Berichten (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  

@@ -9,10 +9,10 @@ ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499943"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Vorbereiten von Excel-Daten für mobile Berichte von Reporting Services
@@ -44,7 +44,7 @@ Wenn Sie eine Excel-Datei als Dataset für einen mobilen Bericht vorbereiten, so
   
 ![SS_MRP_ExcelDataSheet](../../reporting-services/mobile-reports/media/ss-mrp-exceldatasheet.png)  
           
-## <a name="column-headers"></a>Spaltenköpfe  
+## <a name="column-headers"></a>Spaltenüberschriften  
   
 Wie im obigen Beispiel zu sehen ist, enthält die erste Zeile den Namen der Metrik dieser Spalte. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] behält diese Spaltenköpfe als einfachen Verweis in den Einstellungen des Katalogelements bei. Spaltenköpfe sind jedoch nicht erforderlich. Falls diese fehlen, generiert [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] Überschriften mithilfe der Excel-Konvention A, B, C,..., AA, BB...  
   
@@ -63,7 +63,7 @@ Wenn ein Arbeitsblatt berechnete Zellen oder Formeln enthält, wird nur der resu
   
 Es gibt keine Einschränkungen, wo Sie Excel-Dateien speichern können, die Sie in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]importieren. Wenn Sie die Datei jedoch nach dem Importieren verschieben oder umbenennen, können Sie die Daten nicht über den Befehl **Alle Daten aktualisieren** in der Datenansicht aktualisieren.   
   
->**Hinweis:** : [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] aktualisiert Excel-Daten nicht automatisch. Sie können die Daten aktualisieren, indem Sie den [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **refresh** command, but only if the file hasn't moved.  
+>**Hinweis:** : [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] aktualisiert Excel-Daten nicht automatisch. Sie können die Daten aktualisieren, indem Sie den **refresh**-Befehl in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] ausführen, aber nur, wenn die Datei nicht verschoben wurde.  
   
 ## <a name="dates"></a>Datumsangaben  
   
@@ -83,9 +83,9 @@ Arbeitsblattdaten können beim Importieren unvorhersehbare Ergebnisse hervorrufe
   
 Benutzerdefinierte Objekte in Excel-Arbeitsblättern, einschließlich PivotTables, Visualisierungen und Bilder, werden nicht in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]importiert.  
   
-### <a name="see-also"></a>Siehe auch  
-- [Vorbereiten von Daten für mobile Reporting Services-Berichte](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
-- [Create and publish mobile reports with SQL Server Mobile Report Publisher (Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
+### <a name="see-also"></a>Weitere Informationen  
+- [Prepare data for Reporting Services mobile reports (Vorbereiten von Daten für mobile Berichte von Reporting Services)](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
+- [Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  Anzeigen von [mobilen SQL Server-Berichten und KPIs in der iPad-App](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI für iOS)  
 -  Anzeigen von [mobilen SQL Server-Berichten und KPIs in der iPhone-App](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI für iOS)  
   

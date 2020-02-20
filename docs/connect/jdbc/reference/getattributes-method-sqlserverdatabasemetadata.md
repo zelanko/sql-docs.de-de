@@ -1,5 +1,5 @@
 ---
-title: GetAttributes-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getAttributes-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4dc784ed-4699-4197-9af5-6e03da80d14c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36543107ba8acd635f0e71fde903cab2576a7b17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954072"
 ---
 # <a name="getattributes-method-sqlserverdatabasemetadata"></a>getAttributes-Methode (SQLServerDatabaseMetaData)
@@ -64,7 +64,7 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese GetAttributes-Methode wird von der GetAttributes-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getAttributes-Methode wird von der getAttributes-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

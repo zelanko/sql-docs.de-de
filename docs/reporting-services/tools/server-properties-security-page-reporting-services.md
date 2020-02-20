@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/10/2016
 ms.openlocfilehash: 0e29dcf7681d105f92b3bf187c38ebe764d2449e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571306"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Servereigenschaften (Seite Sicherheit) – Reporting Services
@@ -27,7 +27,7 @@ ms.locfileid: "65571306"
  3) Klicken Sie mit der rechten Maustaste auf den Berichtsservernamen, und wählen Sie **Eigenschaften**aus.
  4) Klicken Sie auf **Sicherheit** , um diese Seite zu öffnen.  
   
-## <a name="options"></a>enthalten
+## <a name="options"></a>Tastatur
 
 ### <a name="enable-windows-integrated-security-for-report-data-sources"></a>Aktivieren der integrierten Sicherheit von Windows für Berichtsdatenquellen
 
@@ -45,4 +45,4 @@ ms.locfileid: "65571306"
   
 ## <a name="see-also"></a>Weitere Informationen
 
- [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md) [Verbinden mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) [Angeben von Anmelde- und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) [Berichtsserver in Management Studio: F1-Hilfe](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+ [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md) [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)

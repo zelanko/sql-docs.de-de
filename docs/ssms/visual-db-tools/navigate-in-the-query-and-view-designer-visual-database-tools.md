@@ -1,10 +1,9 @@
 ---
-title: Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: ''
+title: Navigieren im Abfrage- und Ansicht-Designer
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f9581eca3d6abbefcd897ccc4ce627ca180649b3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5e78aa041929e5b804547db0ef773d40aea7d7c8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262302"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224593"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ Sie können im Abfrage- und Sicht-Designer mit der Tastatur und mit der Maus arb
   
 ## <a name="any-pane"></a>Alle Bereiche  
   
-|**Aktion**|**Tastenkombination**|**Mausaktion**|  
+|**An**|**Tastenkombination**|**Mausaktion**|  
 |----------|-------------|-------------|  
 |Wechseln zwischen den Bereichen des Abfrage- und Sicht-Designers|F6, UMSCHALT+F6|Klicken Sie auf eine beliebige Stelle im Zielbereich.|  
   
@@ -37,7 +38,7 @@ Sie können im Abfrage- und Sicht-Designer mit der Tastatur und mit der Maus arb
   
 ## <a name="diagram-pane"></a>Diagrammbereich  
   
-|**Aktion**|**Tastenkombination**|**Mausaktion**|  
+|**An**|**Tastenkombination**|**Mausaktion**|  
 |----------|-------------|-------------|  
 |Wechseln zwischen Tabellen, anderen tabellenähnlich strukturierten Objekten und zu Joinlinien, sofern verfügbar|TAB oder UMSCHALT+TAB|Klicken Sie auf die Tabelle, das tabellenähnlich strukturierte Objekt oder die Joinlinie, um zu diesem Element zu wechseln.|  
 |Wechseln zwischen den Spalten in einer Tabelle oder einem tabellenähnlich strukturierten Objekt|Pfeiltasten|Klicken Sie auf die Spalte, zu der Sie wechseln möchten.|  
@@ -52,7 +53,7 @@ Weitere Informationen finden Sie unter [Diagrammbereich &#40;Visual Database Too
   
 ## <a name="criteria-pane"></a>Kriterienbereich  
   
-|Aktion|Tastenkombination|Mausaktion|  
+|To|Tastenkombination|Klicken Sie auf|  
 |------|---------|---------|  
 |Wechseln zwischen Zellen|Pfeiltasten, TAB oder UMSCHALT+TAB|Klicken Sie auf die gewünschte Zelle.|  
 |Wechseln in die letzte Zeile der aktuellen Spalte|STRG+NACH-UNTEN||  
@@ -60,7 +61,7 @@ Weitere Informationen finden Sie unter [Diagrammbereich &#40;Visual Database Too
 |Wechseln zur obersten linken Zelle im angezeigten Bereich des Datenblatts|STRG+POS1||  
 |Wechseln zur obersten rechten Zelle|STRG+ENDE||  
 |Wechseln in eine Dropdownliste|NACH-OBEN oder NACH-UNTEN|Klicken Sie auf die Schaltfläche in der Zelle.|  
-|Markieren einer gesamten Spalte eines Datenblatts|STRG+LEERTASTE|Klicken Sie auf den Spaltenkopf.|  
+|Markieren einer gesamten Spalte eines Datenblatts|STRG+LEERTASTE|Die Spaltenüberschrift.|  
 |Wechseln zwischen dem Bearbeitungsmodus und dem Modus für die Zellenauswahl|F2||  
 |Kopieren des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG+C||  
 |Ausschneiden des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG+X||  
@@ -87,7 +88,7 @@ Weitere Informationen finden Sie unter [SQL-Bereich &#40;Visual Database Tools&#
   
 ## <a name="results-pane"></a>Ergebnisbereich  
   
-|**Aktion**|**Tastenkombination**|**Mausaktion**|  
+|**An**|**Tastenkombination**|**Mausaktion**|  
 |----------|-------------|-------------|  
 |Bewegen zwischen Zellen|Pfeiltasten, TAB oder UMSCHALT+TAB|Klicken Sie auf die gewünschte Zelle.|  
 |Wechseln zur ersten oder letzten Zelle in der aktuellen Zeile|POS1 oder ENDE||  

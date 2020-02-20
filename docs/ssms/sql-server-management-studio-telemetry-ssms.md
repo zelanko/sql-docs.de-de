@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio – Nutzungs- und Diagnosedaten (SSMS) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verbrauchs- und Diagnosedaten
+ms.custom: seo-lt-2019
 ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82b4af04963c5161cbea300054d19c61b61ec34a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 5b61b32ab266c4068f610b9138bf3fc8ea364f0e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028819"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245700"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Lokale Überwachung für SSMS-Nutzungs- und -Diagnosedatensammlung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ So aktivieren oder deaktivieren Sie die Sammlung von Nutzungsdaten für SSMS
 
   Eintragstyp `DWORD`: `0` steht für Deaktivieren und `1` für Aktivieren.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
 - [Lokale Überwachung für die Sammlung von SQL Server-Nutzungs- und -Diagnosedaten](https://msdn.microsoft.com/library/mt743085.aspx)

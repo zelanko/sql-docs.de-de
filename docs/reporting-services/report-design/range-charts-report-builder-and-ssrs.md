@@ -9,10 +9,10 @@ ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e28daac5af66601d8a48b4fc793d6e6c5d178ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576464"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>Bereichsdiagramme (Berichts-Generator und SSRS)
@@ -20,12 +20,12 @@ ms.locfileid: "65576464"
   
  Die folgende Illustration zeigt ein einfaches Bereichsdiagramm mit drei Reihen.  
   
- ![Bereichsdiagramm](../../reporting-services/report-design/media/rs-rangechart.gif "Range chart")  
+ ![Bereichsdiagramm](../../reporting-services/report-design/media/rs-rangechart.gif "Bereichsdiagramm")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>Variationen  
+## <a name="variations"></a>Abweichungen  
   
 -   **Glatter Bereich**. Ein glattes Bereichsdiagramm zeigt gekrümmte statt gerade Linien an.  
   

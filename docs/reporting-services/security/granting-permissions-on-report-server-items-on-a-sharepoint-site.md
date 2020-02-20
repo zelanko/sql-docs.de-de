@@ -14,10 +14,10 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580037"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website
@@ -56,7 +56,7 @@ ms.locfileid: "65580037"
  Ein Serveradministrator oder Administrator einer Websitesammlung kann bestimmte Optionen festlegen, um zu bestimmen, ob andere Besitzer Berechtigungen festlegen können. Je nach der Ihnen zugewiesenen Berechtigungsebene können Sie möglicherweise keine SharePoint-Gruppen oder Berechtigungsebenen erstellen oder anpassen.  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>Verwenden vordefinierter SharePoint-Gruppen und Berechtigungsebenen  
- In der Produktdokumentation zu [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] wird empfohlen, SharePoint-Standardgruppen zu verwenden (d.h. *Besitzer von* **Websitename**, *Besitzer von* **Websitename**und *Besitzer von* **Websitename**) und Berechtigungen auf der Websiteebene zuzuweisen. Den meisten Benutzern sollten Sie Berechtigungen als Mitglieder der Gruppen *Besucher von* **Websitename** oder *Besucher von* **Websitename** zuweisen. Berechtigungen für die übergeordnete Website werden von der gesamten Websitehierarchie geerbt. Die Vererbung der Berechtigungen können Sie für bestimmte Elemente unterbrechen, für die zusätzliche Einschränkungen erforderlich sind.  
+ In der Produktdokumentation zu [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] wird empfohlen, SharePoint-Standardgruppen zu verwenden (d. h. **Besitzer** von *Websitename*, **Member** von *Websitename* und **Besucher** von *Websitename*) und Berechtigungen auf der Websiteebene zuzuweisen. Den meisten Benutzern sollten Sie Berechtigungen als Member der Gruppen **Besucher** von *Websitename* oder **Member** von *Websitename* zuweisen. Berechtigungen für die übergeordnete Website werden von der gesamten Websitehierarchie geerbt. Die Vererbung der Berechtigungen können Sie für bestimmte Elemente unterbrechen, für die zusätzliche Einschränkungen erforderlich sind.  
   
  Den aufgeführten SharePoint-Gruppen sind die folgenden vordefinierten Berechtigungsebenen zugeordnet:  
   
@@ -73,13 +73,13 @@ ms.locfileid: "65580037"
  Die integrierten Sicherheitsfunktionen können von den SharePoint-Gruppen nur verwendet werden, wenn Sie diesen Windows-Benutzer- oder Gruppenkonten zugewiesen haben. Mit Ausnahme des Serveradministrators und des Besitzers der Portalwebsite, die beim Installieren der Software automatisch Zugriffsberechtigungen für [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] erhalten, müssen allen Benutzern Berichtigungen für den Serverzugriff gewährt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Use Built-in Security in Windows SharePoint Services for Report Server Items (Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente)](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Erläutert, wie mit den vordefinierten SharePoint-Gruppen und Berechtigungsebenen auf Berichtsserverelemente zugegriffen werden kann.  
   
  [SharePoint Site and List Permission Reference for Report Server Items (Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente)](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  Bietet eine Referenz zu allen SharePoint-Produktberechtigungen, die es erlauben, auf Berichtsservervorgänge zuzugreifen.  
   
- [Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [Set Permissions for Report Server Operations in a SharePoint Web Application (Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung)](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  Beschreibt die Berechtigungsanforderungen für die Ad-hoc-Berichterstellung und enthält empfohlene Vorgehensweisen für die Verfügbarmachung von Funktionen.  
   
  [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  

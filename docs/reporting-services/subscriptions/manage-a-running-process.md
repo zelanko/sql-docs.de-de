@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579004"
 ---
 # <a name="manage-a-running-process"></a>Verwalten eines ausgeführten Prozesses
@@ -87,13 +87,13 @@ ms.locfileid: "65579004"
   
 3.  Legen Sie hierfür **False**fest.  
   
-4.  Speichern Sie die Datei.  
+4.  Speichern Sie die Datei .  
   
 5.  Löschen Sie im Berichts-Manager das datengesteuerte Abonnement aus der Registerkarte Abonnements des Berichts oder aus **Meine Abonnements**.  
   
 6.  Nachdem Sie das Abonnement gelöscht haben, suchen Sie in der Datei RSReportServer.config **IsNotificationService** , und legen Sie dafür **True**fest.  
   
-7.  Speichern Sie die Datei.  
+7.  Speichern Sie die Datei .  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Konfigurieren von Frequenzeinstellungen für den Abruf des Auftragsstatus  
  Ein Auftrag, der gerade ausgeführt wird, wird in der temporären Datenbank des Berichtsservers gespeichert. Durch Ändern der Konfigurationseinstellungen in der Datei RSReportServer.config können Sie steuern, wie oft der Berichtsserver nach Aufträgen, die verarbeitet werden, scannt, sowie das Intervall festlegen, nach dem der Status eines ausgeführten Auftrags von Neu in Wird ausgeführt geändert wird. Die Einstellung **RunningRequestsDbCycle** gibt an, wie oft der Berichtsserver nach ausgeführten Prozessen scannt. Standardmäßig werden die Statusinformationen alle 60 Sekunden aufgezeichnet. Die Einstellung **RunningRequestsAge** gibt das Intervall an, nach dem der Status eines Auftrags von "Neu" in "Wird ausgeführt" geändert wird.  
@@ -118,10 +118,10 @@ ms.locfileid: "65579004"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Berichtsserveraufträge abbrechen &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [Auftragseigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [Ändern einer Reporting Services-Konfigurationsdatei &#40;rsreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Auftragseigenschaften (Management Studio)](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Überwachen der Leistung des Berichtsservers](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+ [Monitoring Report Server Performance (Überwachen der Leistung des Berichtsservers)](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

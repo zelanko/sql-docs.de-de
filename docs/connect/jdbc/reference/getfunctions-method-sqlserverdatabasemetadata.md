@@ -1,5 +1,5 @@
 ---
-title: GetFunctions-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getFunctions-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b799fb56207294041c52fe455ad2acceff508d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982955"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions-Methode (SQLServerDatabaseMetaData)
@@ -60,7 +60,7 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  Jede Funktionsbeschreibung umfasst die folgenden Spalten:  
   
-|Name|Typ|und Beschreibung|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|Der Name der Datenbank, in der die Funktion gespeichert ist.|  
 |FUNCTION_SCHEM|**String**|Der Name des Schemas, in dem die Funktion gespeichert ist.|  
@@ -68,8 +68,8 @@ public ResultSet getFunctions(java.lang.String catalog,
 |NUM_INPUT_PARAMS|**int**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
 |NUM_OUTPUT_PARAMS|**int**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
 |NUM_RESULT_SETS|**int**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
-|REMARKS|**String**|Kommentare zur Funktion.|  
-|FUNCTION_TYPE|**short**|Der Typ der Funktion. Mögliche Werte:<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
+|ANMERKUNGEN|**String**|Kommentare zur Funktion.|  
+|FUNCTION_TYPE|**short**|Der Typ der Funktion. Es kann sich um einen der folgenden Werte handeln:<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
  Alle Beschreibungen im zurückgegebenen Resultset sind nach "FUNCTION_CAT", "FUNCTION_SCHEM", "FUNCTION_NAME" und "SPECIFIC_NAME" sortiert.  
   

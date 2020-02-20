@@ -1,5 +1,5 @@
 ---
-title: SQLServerXADataSource-Member | Microsoft-Dokumentation
+title: SQLServerXADataSource-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2baf4e745e18052646e842eb64445690229ed0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970174"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource-Elemente
@@ -24,7 +24,7 @@ ms.locfileid: "67970174"
   
 ## <a name="constructors"></a>Konstruktoren  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[SQLServerXADataSource ()](../../../connect/jdbc/reference/sqlserverxadatasource-constructor.md)|Initialisiert eine neue Instanz der [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)-Klasse.|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67970174"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Gibt den Wert der **applicationIntent**-Verbindungseigenschaft zurück.|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Gibt den Anwendungsnamen zurück.|  

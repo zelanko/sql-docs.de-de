@@ -16,10 +16,10 @@ ms.assetid: c81bcf9a-2e24-4dfc-8c04-d612e9b7baca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9733494af58ef9fe12655281224be5081c72e205
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978501"
 ---
 # <a name="gettypemap-method-sqlserverconnection"></a>getTypeMap-Methode (SQLServerConnection)
@@ -38,13 +38,13 @@ public java.util.Map getTypeMap()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Map-Objekt.  
+ Ein Map-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getTypeMap-Methode wird von der getTypeMap-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
+ Diese getTypeMap-Methode wird von der getTypeMap-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

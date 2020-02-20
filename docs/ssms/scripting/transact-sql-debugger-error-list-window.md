@@ -1,10 +1,8 @@
 ---
-title: Fenster „Fehlerliste“ (Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Fehlerliste (Fenster)
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,20 +12,28 @@ helpviewer_keywords:
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcf0886a58e1e735e95ed0383313769f4796bd24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253634"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243386"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL-Debugger – Fenster „Fehlerliste“
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  In der Fehlerliste [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **von** werden die vom IntelliSense-Code im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor generierten Syntax- und Semantikfehler angezeigt.  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+In der **Fehlerliste** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] werden die vom IntelliSense-Code im [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor generierten Syntax- und Semantikfehler angezeigt.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="features-of-the-error-list"></a>Funktionen der Fehlerliste  
- Die **Fehlerliste** bietet die folgende Funktionalität:  
+
+Die **Fehlerliste** bietet die folgende Funktionalität:  
   
 -   Beim Bearbeiten von Skripts werden in der **Fehlerliste** die von IntelliSense im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor generierten Fehler und Warnungen angezeigt.  
   
@@ -83,7 +89,7 @@ ms.locfileid: "68253634"
  **Linie**  
  Zeigt eine ganze Zahl an, die angibt, in welcher Codezeile der Fehler enthalten ist.  
   
- **Column**  
+ **Spalte**  
  Zeigt eine ganze Zahl an, die die Position des Fehlers in der Codezeile angibt.  
   
  **Projekt**  

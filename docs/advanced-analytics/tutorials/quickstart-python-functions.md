@@ -1,27 +1,26 @@
 ---
-title: 'Schnellstart: Schreiben von Python-Funktionen'
-titleSuffix: SQL Server Machine Learning Services
-description: In diesem Schnellstart erfahren Sie, wie Sie eine Python-Funktion für erweiterte statistische Berechnungen mit SQL Server Machine Learning Services schreiben.
+title: 'Schnellstart: Python-Funktionen'
+description: In diesem Schnellstart wird beschrieben, wie Sie mathematische Funktionen und Hilfsfunktionen in Python mit SQL Server Machine Learning Services verwenden.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f43c6406d0ca2c95cc21a207cae63af6e86902
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d939e04c4a82575cf8210f2c11e734b9912c0fe5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727008"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831405"
 ---
-# <a name="quickstart-write-advanced-python-functions-with-sql-server-machine-learning-services"></a>Schnellstart: Schreiben erweiterter Python-Funktionen mit SQL Server Machine Learning Services
+# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>Schnellstart: Python-Funktionen mit SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Schnellstart wird beschrieben, wie Sie mathematische und Hilfsfunktionen von Python mit SQL Server Machine Learning Services in eine gespeicherte SQL-Prozedur einbetten. Erweiterte statistische Funktionen, deren Implementierung mit T-SQL kompliziert ist, können in Python mit einer einzigen Codezeile durchgeführt werden.
+In diesem Schnellstart wird beschrieben, wie Sie mathematische Funktionen und Hilfsfunktionen in Python mit SQL Server Machine Learning Services verwenden. Die Implementierung von statistischen Funktionen mit T-SQL ist oft kompliziert, kann aber in Python mit nur wenigen Codezeilen durchgeführt werden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -54,7 +53,7 @@ OutputDataSet = pandas.DataFrame(numpy.random.normal(size=100, loc=50, scale=3))
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-Sie möchten es vereinfachen, einen anderen Satz von Zufallszahlen zu generieren?
+Wie gehen Sie vor, wenn Sie das Erstellen eines anderen Satzes von Zufallszahlen vereinfachen möchten?
 
 In Kombination mit SQL Server ist dies ganz einfach. Sie definieren eine gespeicherte Prozedur, die Argumente vom Benutzer abruft, und übergeben diese Argumente dann als Variablen an das Python-Skript.
 
@@ -79,7 +78,7 @@ OutputDataSet = pandas.DataFrame(numpy.random.normal(size=mynumbers, loc=mymean,
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-- Die erste Zeile definiert alle SQL-Eingabeparameter, die erforderlich sind, wenn die gespeicherte Prozedur ausgeführt wird.
+- Die erste Zeile definiert alle SQL-Eingabeparameter, die beim Ausführen der gespeicherten Prozedur erforderlich sind.
 
 - Die Zeile, die mit `@params` beginnt, definiert alle vom Python-Code verwendeten Variablen und die entsprechenden SQL-Datentypen.
 

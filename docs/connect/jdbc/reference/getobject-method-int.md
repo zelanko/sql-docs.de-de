@@ -1,5 +1,5 @@
 ---
-title: GetObject-Methode (int) | Microsoft-Dokumentation
+title: getObject(int)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c4b8366b-c065-48e1-b712-19e2d9834228
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db0b8768c599ebf8fcef127139b9fb8bd6d8ec50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981220"
 ---
 # <a name="getobject-method-int"></a>getObject-Methode (int)

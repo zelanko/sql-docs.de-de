@@ -1,7 +1,7 @@
 ---
-title: Installationsoptionen für SQL Server-Failovercluster | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Installieren einer Failoverclusterinstanz
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cdc11ab9550b0faaf1fcdc9aa3ba5d7d3fe09eaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063875"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230620"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server-Failoverclusterinstallation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68063875"
   
 1.  Verwenden Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup, um ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster zu installieren, zu konfigurieren und zu verwalten.  
   
-    -   Identifizieren Sie die erforderlichen Informationen zum Erstellen der Failoverclusterinstanz (z. B. Cluster-Datenträgerressource, IP-Adressen und Netzwerkname) und der Knoten, die für ein Failover verfügbar sind. Weitere Informationen:  
+    -   Identifizieren Sie die erforderlichen Informationen zum Erstellen der Failoverclusterinstanz (z. B. Cluster-Datenträgerressource, IP-Adressen und Netzwerkname) und der Knoten, die für ein Failover verfügbar sind. Weitere Informationen finden Sie unter:  
   
         -   [Vor dem Installieren des Failoverclusterings](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68063875"
     - SQL-FCI in Clustern mit mehreren Domänen.   
     - SQL-FCI in Domänen- und Arbeitsgruppenclustern. 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster  
+## <a name="ssnoversion-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>Option 1: Integrierte Installation mithilfe der Funktion zum Hinzufügen eines Knotens  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] besteht aus zwei Schritten:  
@@ -81,13 +81,13 @@ ms.locfileid: "68063875"
   
  **Hinweis** IPV6-IP-Adressen werden unterstützt.  IPV4 und IPV6 werden bei paralleler Konfiguration als unterschiedliche Subnetze eingestuft, und IPV6 soll zuerst online geschaltet werden.  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failovercluster  
+##### <a name="ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failovercluster  
  Sie können OR-Abhängigkeiten festlegen, wenn sich die Knoten im Cluster in unterschiedlichen Subnetzen befinden. Jeder Knoten im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failovercluster muss jedoch möglicher Besitzer mindestens einer angegebenen IP-Adresse sein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Vor dem Installieren des Failoverclusterings](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
  [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Aktualisieren einer SQL Server-Failoverclusterinstanz](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [Upgrade einer SQL Server-Failoverclusterinstanz](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).  
   
   

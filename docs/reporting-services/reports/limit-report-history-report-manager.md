@@ -1,5 +1,5 @@
 ---
-title: Einschränken des Berichtsverlaufs - Reporting Services | Microsoft-Dokumentation
+title: Einschränken des Berichtsverlaufs – Reporting Services | Microsoft-Dokumentation
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,10 +15,10 @@ ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2dd66078363e281c2a73bfcc70ba685493bc3b88
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492591"
 ---
 # <a name="limit-report-history---reporting-services"></a>Einschränken des Berichtsverlaufs – Reporting Services
@@ -40,7 +40,7 @@ ms.locfileid: "67492591"
   
 1.  Navigieren Sie im Berichts-Manager zu dem Bericht, dessen Verlauf Sie konfigurieren möchten, und öffnen Sie ihn, indem Sie auf ihn klicken.  
   
-2.  Klicken Sie auf die Registerkarte **Eigenschaften** .  
+2.  Klicken Sie auf die Registerkarte **Eigenschaften**.  
   
 3.  Klicken Sie auf die Registerkarte **Verlauf** .  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67492591"
   
 1.  Navigieren Sie im Webportal zu dem Bericht, dessen Verlauf Sie konfigurieren möchten, und öffnen Sie ihn, indem Sie auf diesen klicken.  
   
-2.  Klicken Sie auf die Registerkarte **Eigenschaften** .  
+2.  Klicken Sie auf die Registerkarte **Eigenschaften**.  
   
 3.  Klicken Sie auf die Registerkarte **Verlauf** .  
   

@@ -1,6 +1,6 @@
 ---
 title: Transformieren von Daten mithilfe von RevoScaleR
-description: Tutorial zum Transformieren von Daten mithilfe der R-Programmiersprache unter SQL Server
+description: 'Tutorial 9 zu RevoScaleR: Transformieren von Daten mithilfe der R-Programmiersprache in SQL Server'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 773607c7800ed1d507aa721ca7cf86a03857ab8b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 3e8c28548ba4fa5f5ad661e3b7b0872ad166b812
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727169"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947187"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Transformieren von Daten mithilfe von R (Tutorial zu SQL Server und RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Diese Lerneinheit ist Teil des [RevoScaleR-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zum Verwenden von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Bei diesem Tutorial handelt es sich um das 9. Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Tutorial erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
-In dieser Lerneinheit lernen Sie die **RevoScaleR**-Funktionen zum Transformieren von Daten in verschiedenen Phasen der Analyse kennen.
+In diesem Tutorial lernen Sie die **RevoScaleR**-Funktionen zum Transformieren von Daten in verschiedenen Phasen Ihrer Analyse kennen.
 
 > [!div class="checklist"]
 > * Verwenden von **rxDataStep** zur Erstellung und Transformation einer Datenteilmenge

@@ -16,10 +16,10 @@ ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09adea323a5a2930e9c636a1b2e1b00567dbd9ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954956"
 ---
 # <a name="execute-method-javalangstring"></a>execute-Methode (java.lang.String)
@@ -40,7 +40,7 @@ public final boolean execute(java.lang.String sql)
  Eine **Zeichenfolge** mit einer SQL-Anweisung.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn die Anweisung ein Resultset zurückgibt. **false** , wenn eine Update Anzahl oder kein Ergebnis zurückgegeben wird.  
+ Der Wert lautet **TRUE**, wenn die Anweisung ein Resultset zurückgibt. Der Wert lautet **FALSE**, wenn die Anweisung einen aktualisierten Zählerwert oder kein Ergebnis zurückgibt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

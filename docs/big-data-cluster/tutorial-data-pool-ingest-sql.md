@@ -9,14 +9,14 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: b389f8ba8e99678f98ef4eb22d3fe51d8b04bee3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653313"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75325421"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Lernprogramm: Erfassen von Daten in einem SQL Server-Datenpool mit Transact-SQL
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Erfassen von Daten in einem SQL Server-Datenpool mit Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -32,25 +32,25 @@ In diesem Tutorial lernen Sie Folgendes:
 > [!TIP]
 > Wenn Sie möchten, können Sie ein Skript für die Befehle in diesem Tutorial herunterladen und ausführen. Anweisungen finden Sie in den [Beispielen zu Datenpools](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) auf GitHub.
 
-## <a id="prereqs"></a> Erforderliche Komponenten
+## <a id="prereqs"></a> Voraussetzungen
 
 - [Big-Data-Tools](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
    - **Erweiterung von SQL Server 2019**
-- [Load sample data into your big data cluster (Laden von Beispieldaten in ihren Big-Data-Cluster)](tutorial-load-sample-data.md)
+- [Laden von Beispieldaten in einen Big Data-Cluster von SQL Server](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Erstellen einer externen Tabelle im Datenpool
 
-Mit den folgenden Schritten wird eine externe Tabelle namens **web_clickstream_clicks_data_pool** im Datenpool erstellt. Diese Tabelle kann dann als Speicherort für die Erfassung von Daten im Big Data-Cluster verwendet werden.
+Mit den folgenden Schritten wird eine externe Tabelle namens **web_clickstream_clicks_data_pool** im Datenpool erstellt. Diese Tabelle kann dann als Speicherort für die Erfassung von Daten im Big-Data-Cluster verwendet werden.
 
-1. Stellen Sie in Azure Data Studio eine Verbindung mit der SQL Server-Masterinstanz Ihres Big-Data-Clusters her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
+1. Stellen Sie in Azure Data Studio eine Verbindung mit der SQL Server-Masterinstanz Ihres Big Data-Clusters her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
 
 1. Doppelklicken Sie im Fenster **Server** auf die Verbindung, um das Serverdashboard der SQL Server-Masterinstanz anzuzeigen. Wählen Sie **Neue Abfrage** aus.
 
    ![Abfrage der SQL Server-Masterinstanz](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
-1. Führen Sie den folgenden Transact-SQL-Befehl aus, um in der Masterinstanz in den Kontext der **Sales**-Datenbank zu wechseln.
+1. Führen Sie den folgenden Transact-SQL-Befehl aus, um den Kontext in der Masterinstanz in die **Sales**-Datenbank zu ändern.
 
    ```sql
    USE Sales
@@ -77,8 +77,8 @@ Mit den folgenden Schritten wird eine externe Tabelle namens **web_clickstream_c
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. In CTP 3.1 ist die Erstellung des Datenpools asynchron, es existiert bisher jedoch noch keine Möglichkeit zu bestimmen, wann diese abgeschlossen ist. Warten Sie vor dem Ausführen weiterer Aktionen zwei Minuten, um sicherzustellen, dass der Datenpool erstellt wurde.
+
+Die Erstellung einer externen Datenpooltabelle ist ein blockierender Vorgang. Sie können erst dann wieder Aktionen durchführen, wenn die angegebene Tabelle auf allen Back-End-Knoten des Datenpools erstellt wurde. Wenn während des Erstellens ein Fehler auftritt, wird dem Aufrufer eine Fehlermeldung zurückgegeben.
 
 ## <a name="load-data"></a>Laden der Daten
 

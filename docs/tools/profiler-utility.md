@@ -1,6 +1,6 @@
 ---
-title: Profiler-Hilfsprogramm | Microsoft-Dokumentation
-ms.custom: ''
+title: Profiler-Hilfsprogramm
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: faaf063fc00964ec6d060d03f42acc3e1eaaa33a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ed207e5fa854dc25a07edfff49a75aad9d370ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105646"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307396"
 ---
 # <a name="profiler-utility"></a>Profiler-Hilfsprogramm
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,47 +57,47 @@ profiler
  **/?**  
  Zeigt die Syntaxzusammenfassung der **Profiler** -Argumente an.  
   
- **/U** *Login-ID*  
+ **/U** *login_id*  
  Die Benutzeranmelde-ID für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung. Bei Anmelde-IDs wird die Groß- und Kleinschreibung beachtet.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
- **/P** *Kennwort*  
+ **/P** *password*  
  Gibt ein benutzerdefiniertes Kennwort für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung an.  
   
  **/E**  
  Gibt an, dass die Verbindung mithilfe der Windows-Authentifizierung erfolgt und die Anmeldeinformationen des aktuellen Benutzers verwendet werden.  
   
- **/S**  *SQL_Server-Name*  
- Gibt eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz an. Profiler stellt automatisch eine Verbindung mit dem angegebenen Server her und verwendet dabei die Authentifizierungsinformationen, die mit den Schaltern **/U** und **/P** oder mit dem Schalter **/E** angegeben wurden. Um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]herzustellen, verwenden Sie **/S** *SQL_Server-Name*\\*Instanzname*.  
+ **/S** *sql_server_name*  
+ Gibt eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz an. Profiler stellt automatisch eine Verbindung mit dem angegebenen Server her und verwendet dabei die Authentifizierungsinformationen, die mit den Schaltern **/U** und **/P** oder mit dem Schalter **/E** angegeben wurden. Verwenden Sie **/S** *sql_server_name*\\*instance_name*, um eine Verbindung mit einer benannten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz herzustellen.  
   
- **/ A**  *Analysis_Services-Servername*  
- Gibt eine Analysis Services-Instanz an. Profiler stellt automatisch eine Verbindung mit dem angegebenen Server her und verwendet dabei die Authentifizierungsinformationen, die mit den Schaltern **/U** und **/P** oder mit dem Schalter **/E** angegeben wurden. Um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] herzustellen, verwenden Sie **/A** *Analysis_Services-Servername*Instanzname.  
+ **/A** *analysis_services_server_name*  
+ Gibt eine Analysis Services-Instanz an. Profiler stellt automatisch eine Verbindung mit dem angegebenen Server her und verwendet dabei die Authentifizierungsinformationen, die mit den Schaltern **/U** und **/P** oder mit dem Schalter **/E** angegeben wurden. Verwenden Sie **/A** *analysis_services_server_name\instance_name*, um eine Verbindung mit einer benannten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz herzustellen.  
   
- **/D** *Datenbank*  
+ **/D** *database*  
  Gibt den Namen der Datenbank an, die zusammen mit dieser Verbindung verwendet werden soll. Mit dieser Option wird die Standarddatenbank für den angegebenen Benutzer ausgewählt, wenn keine Datenbank angegeben wurde.  
   
- **/B "** *Ablaufverfolgungstabellen-Name* **"**  
+ **/B "** *trace_table_name* **"**  
  Gibt eine Ablaufverfolgungstabelle an, die beim Starten von Profiler geladen werden soll. Sie müssen die Datenbank, den Benutzer oder das Schema und die Tabelle angeben.  
   
- **/ T "** *Vorlagenname* **"**  
+ **/T"** *template_name* **"**  
  Gibt die Vorlage an, die geladen wird, um die Ablaufverfolgung zu konfigurieren. Der Vorlagenname muss in Anführungszeichen eingeschlossen werden. Die Vorlage muss sich entweder im Systemverzeichnis für Vorlagen oder im Benutzerverzeichnis für Vorlagen befinden. Wenn sich in beiden Verzeichnissen eine Vorlage mit diesem Namen befindet, wird die Vorlage aus dem Systemverzeichnis geladen. Wenn die Verzeichnisse keine Vorlage mit dem angegebenen Namen enthalten, wird die Standardvorlage geladen. Beachten Sie, dass die Dateierweiterung für die Vorlage (TDF) nicht als Teil des *Vorlagennamens*angegeben werden darf. Beispiel:  
   
 ```  
 /T "standard"  
 ```  
   
- **/F "** *Dateiname* **"**  
+ **/F"** *filename* **"**  
  Gibt den Pfad und den Dateinamen einer Ablaufverfolgungsdatei an, die beim Starten von Profiler geladen werden soll. Der Pfad und der Dateiname müssen in Anführungszeichen eingeschlossen werden. Diese Option kann nicht zusammen mit **/O**verwendet werden.  
   
- **/O "** *Dateiname*  **"**  
+ **/O "** *filename* **"**  
  Gibt den Pfad und den Dateinamen einer Datei an, in der die Ergebnisse der Ablaufverfolgung erfasst werden sollen. Der Pfad und der Dateiname müssen in Anführungszeichen eingeschlossen werden. Diese Option kann nicht zusammen mit **/F**verwendet werden.  
   
- **/L** *Gebietsschema-ID*  
+ **/L** *locale_ID*  
  Nicht verfügbar.  
   
- **/M "** *MM-DD-YY hh: mm:* **"**  
+ **/M "** *MM-DD-YY hh:mm:ss* **"**  
  Gibt das Datum und die Uhrzeit für die Beendigung der Ablaufverfolgung an. Der Beendigungszeitpunkt muss in Anführungszeichen eingeschlossen werden. Geben Sie den Beendigungszeitpunkt gemäß den Parametern in der folgenden Tabelle an:  
   
 |Parameter|Definition|  
@@ -115,7 +115,7 @@ profiler
  **/R**  
  Aktiviert das Rollover für Ablaufverfolgungsdateien.  
   
- **/Z**  *Dateigröße*  
+ **/Z** *file_size*  
  Gibt die Größe der Ablaufverfolgungsdatei in Megabytes (MB) an. Die Standardgröße ist 5 MB. Wenn das Rollover aktiviert ist, wird die Größe aller Rolloverdateien auf den in diesem Argument angegebenen Wert begrenzt.  
   
 ## <a name="remarks"></a>Bemerkungen  

@@ -1,23 +1,24 @@
 ---
-title: 'Exemplarische Vorgehensweise: Verwenden einer benutzerdefinierten Testbedingung zur Überprüfung der Ergebnisse einer gespeicherten Prozedur | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Benutzerdefinierte Testbedingung zur Überprüfung der Ergebnisse einer gespeicherten Prozedur
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ef888bf2cf4259ec904194a39aa74ed44040586
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068980"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242659"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Exemplarische Vorgehensweise: Verwenden einer benutzerdefinierten Testbedingung zur Überprüfung der Ergebnisse einer gespeicherten Prozedur
+
 In dieser exemplarischen Vorgehensweise zu Funktionserweiterungen erstellen Sie eine Testbedingung und überprüfen deren Funktionsfähigkeit, indem Sie einen SQL Server-Komponententest erstellen. In diesem Verfahren wird ein Klassenbibliotheksprojekt für die Testbedingung erstellt und die Testbedingung signiert und installiert. Falls Sie bereits über eine Testbedingung verfügen und diese aktualisieren möchten, finden Sie unter dem folgenden Link weitere Informationen: [Vorgehensweise: Aktualisieren einer benutzerdefinierten Visual Studio 2010-Testbedingung von einer älteren Version auf SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht:  
@@ -63,7 +64,7 @@ Als Nächstes signieren Sie das Projekt.
   
 6.  Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-7.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  
+7.  Klicken Sie im Menü **Build** auf **Projektmappe erstellen**.  
   
 Im nächsten Schritt fügen Sie dem Projekt die erforderlichen Verweise hinzu.  
   
@@ -344,7 +345,7 @@ namespace ColumnCountCondition
 Als Nächstes wird das Projekt erstellt.  
   
 ## <a name="xxx"></a>Kompilieren des Projekts und Installieren der Testbedingung  
-Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  
+Klicken Sie im Menü **Build** auf **Projektmappe erstellen**.  
   
 Im nächsten Schritt kopieren Sie die Assemblyinformationen in das Verzeichnis „Extensions“. Beim Start von Visual Studio werden alle Erweiterungen im Ordner „%Programme%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions“ und in dessen Unterverzeichnissen identifiziert und für die Verwendung zur Verfügung gestellt:  
   

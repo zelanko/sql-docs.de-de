@@ -9,10 +9,10 @@ ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 91550f60a7fe056a3df68ba9c4006e8359ff2c73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581817"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Integrierte Auflistungen: Verweise auf Datasetfeldauflistungen (Berichts-Generator)
@@ -38,7 +38,7 @@ ms.locfileid: "65581817"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Erkennen von fehlenden Feldern für dynamische Abfragen zur Laufzeit  
- Elemente in der Fields-Sammlung besitzen in der Standardeinstellung zwei Eigenschaften: Value und IsMissing. Mit der IsMissing-Eigenschaft wird angegeben, ob ein zur Entwurfszeit für ein Dataset definiertes Feld in den Feldern enthalten ist, die zur Laufzeit abgerufen werden. Die Abfrage kann zum Beispiel eine gespeicherte Prozedur aufrufen, bei der das Resultset in Abhängigkeit eines Eingabeparameters variiert, oder die Abfrage kann `SELECT * FROM` *\<Tabelle>* lauten und die Tabellendefinition ändern.  
+ Elemente in der Fields-Sammlung besitzen in der Standardeinstellung zwei Eigenschaften: Value und IsMissing. Mit der IsMissing-Eigenschaft wird angegeben, ob ein zur Entwurfszeit für ein Dataset definiertes Feld in den Feldern enthalten ist, die zur Laufzeit abgerufen werden. Die Abfrage kann zum Beispiel eine gespeicherte Prozedur aufrufen, bei der das Resultset in Abhängigkeit eines Eingabeparameters variiert, oder `SELECT * FROM` *\<Tabelle>* lauten, wobei die Definition der Tabelle geändert wurde.  
   
 > [!NOTE]  
 >  IsMissing erkennt für alle Datenquellentypen Änderungen des Datasetschemas zwischen Entwurfs- und Laufzeit. Sie können IsMissing nicht verwenden, um in einem mehrdimensionalen Cube leere Elemente zu erkennen, und es besteht keine Beziehung zu den Begriffen **EMPTY** und **NON EMPTY**der MDX-Abfragesprache.  
@@ -86,7 +86,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>Verwenden von erweiterten Feldeigenschaften  
  Bei den erweiterten Feldeigenschaften handelt es sich um zusätzliche Eigenschaften, die für ein Feld über die Datenverarbeitungserweiterung definiert werden, die vom Datenquellentyp für das Dataset bestimmt wird. Erweiterte Feldeigenschaften sind entweder vordefiniert oder gelten speziell für einen Datenquellentyp. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
- Wenn Sie eine Eigenschaft angeben, die für das Feld nicht unterstützt wird, wird der Verweis als **NULL** (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) ausgewertet. Wenn ein Datenanbieter keine erweiterten Feldeigenschaften unterstützt oder wenn das Feld während des Ausführens der Abfrage nicht gefunden wird, entspricht der Wert für die Eigenschaft bei Eigenschaften vom Typ **Zeichenfolge** und**Objekt** [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]NULL **(** Nothing **in**), und bei Eigenschaften vom Typ **Integer**entspricht er Null (0). Für eine Datenverarbeitungserweiterung können die Vorteile der vordefinierten Eigenschaften genutzt werden, indem die Abfragen optimiert werden, die diese Syntax enthalten.  
+ Wenn Sie eine Eigenschaft angeben, die für das Feld nicht unterstützt wird, wird der Verweis als **NULL** (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) ausgewertet. Wenn ein Datenanbieter keine erweiterten Feldeigenschaften unterstützt oder wenn das Feld während des Ausführens der Abfrage nicht gefunden wird, entspricht der Wert für die Eigenschaft bei Eigenschaften vom Typ **Zeichenfolge** und**Objekt**[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]NULL **(** Nothing **in**), und bei Eigenschaften vom Typ **Integer**entspricht er Null (0). Für eine Datenverarbeitungserweiterung können die Vorteile der vordefinierten Eigenschaften genutzt werden, indem die Abfragen optimiert werden, die diese Syntax enthalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

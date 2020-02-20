@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a4deeec624f349f7fd40bb89dc9b14b6baf309b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592314"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190686"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator und SSRS)
   Ein Dataset gibt die Daten aus einer Datenverbindung an, die Sie verwenden möchten. Ein Dataset basiert auf einer Datenverbindung, die im Bericht als eine eingebettete Datenquelle oder ein Verweis auf eine freigegebene Datenquelle auf einem Berichtsserver gespeichert wurde. Das Dataset enthält eine Abfrage, die einen Satz von Feldern angibt. Wie Sie diese Felder in die Entwurfsoberfläche ziehen, erstellen Sie Ausdrücke, die die tatsächlichen Daten ergeben, wenn der Bericht ausgeführt wird.  
@@ -42,7 +42,7 @@ ms.locfileid: "73592314"
   
 6.  **Abfrageergebnisse:** Sie können die Abfrage ausführen und ein Beispielresultset anzeigen. Zum Ausführen einer Abfrage benötigen Sie Entwurfszeitanmeldeinformationen.  
   
-7.  **Metadaten aus einem Schema:** Der Datenanbieter führt getrennt von der Abfrage einen Schemaabfragebefehl aus, um Metadaten für die Datasetfeldauflistung abzurufen. Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** -Anweisung gibt z.B. die Spaltennamen für eine Datenbanktabelle zurück. Erweitern Sie das Dataset im Berichtsdatenbereich, um die Datasetfeldauflistung anzuzeigen.  
+7.  **Metadaten aus einem Schema:** Der Datenanbieter führt getrennt von der Abfrage einen Schemaabfragebefehl aus, um Metadaten für die Datasetfeldauflistung abzurufen. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung **SELECT** gibt z. B. die Spaltennamen für eine Datenbanktabelle zurück. Erweitern Sie das Dataset im Berichtsdatenbereich, um die Datasetfeldauflistung anzuzeigen.  
   
  Daten können auch mithilfe von vordefinierten freigegebenen Datasets und Berichtsteilen in einen Bericht eingeschlossen werden. Diese Elemente verfügen bereits über die erforderlichen Informationen zur Datenverbindung. Weitere Informationen finden Sie unter [Berichtsdatasets (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md) und [Berichtsteile (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "73592314"
   
 -   Ein Resultset von einem beliebigen registrierten und konfigurierten [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter.  
   
--   Daten aus einem Berichtsmodell, das für eine bestimmte Datenquelle entworfen wurde, mit vordefinierten Entitäten, Entitätenbeziehungen und Feldern. Weitere Informationen finden Sie unter "Berichts Datasets" in der [Reporting Services-Dokumentation](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
+-   Daten aus einem Berichtsmodell, das für eine bestimmte Datenquelle entworfen wurde, mit vordefinierten Entitäten, Entitätenbeziehungen und Feldern. Weitere Informationen finden Sie unter „Berichtsdatasets“ in der [Reporting Services-Dokumentation](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  Wenn der Bericht zur Laufzeit verarbeitet wird, kann das tatsächlich für eine Abfrage zurückgegebene Resultset null oder mehr Zeilen enthalten. Zudem ist es möglich, dass die in der Abfrage definierten Spalten in der Datenquelle fehlen. NULL-Werte aus der Datenquelle werden dem [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Wert **System.DBNull.Value**zugeordnet.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73592314"
   
  Der Unterschied zwischen den eingebetteten und den freigegebenen Datenquellen ist die Art der Erstellung, Speicherung und Verwaltung. In der folgenden Tabelle werden die Unterschiede zwischen eingebetteten und freigegebenen Datenquellen zusammengefasst:  
   
-|und Beschreibung|Eingebettet<br /><br /> Datenquelle|Shared<br /><br /> Datenquelle|  
+|Beschreibung|Eingebettet<br /><br /> Data source|Shared<br /><br /> Data source|  
 |-----------------|------------------------------|----------------------------|  
 |Die Datenverbindung ist in die Berichtsdefinition eingebettet.|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||  
 |Der Zeiger auf die Datenverbindung auf dem Berichtsserver ist in die Berichtsdefinition eingebettet.||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")|  
@@ -144,8 +144,8 @@ ms.locfileid: "73592314"
 |--------------|--------------------------------------------|------------------------------------------|  
 |Abfragetext|Die Abfrage kann konfiguriert werden, einschließlich der Definition als Ausdruck.|Die Abfrage kann nicht geändert werden.|  
 |Abfrageparameter|Auf Berichtsparameter kann nicht verwiesen werden.<br /><br /> Schließt Standardwerte ein.<br /><br /> Schließt eine Markierung für den Schreibschutz ein.|Parameter, die in der Definition nicht als schreibgeschützt markiert sind, können konfiguriert werden.|  
-|Filter|Filter können definiert werden.|Datasetfilter, die Teil der Definition sind, können nicht angezeigt oder geändert werden.<br /><br /> Zusätzliche Filter können erstellt werden.|  
-|Datenquelle|Muss eine freigegebene Datenquelle sein.|Die Datenquelle kann nicht geändert werden.|  
+|Filter|Definieren von Filtern|Datasetfilter, die Teil der Definition sind, können nicht angezeigt oder geändert werden.<br /><br /> Zusätzliche Filter können erstellt werden.|  
+|Data source|Muss eine freigegebene Datenquelle sein.|Die Datenquelle kann nicht geändert werden.|  
 |Felder|Felder im Abfragebefehl<br /><br /> Berechnete Felder sind kein Teil der Datasetdefinition.|Felder anzeigen, aber nicht ändern<br /><br /> Die Feldauflistung ist statisch und basiert auf der Abfrage, die beim Hinzufügen des freigegebenen Datasets zum Berichts vorlag. Klicken Sie im Dialogfeld **Dataseteigenschaften** auf **Felder aktualisieren** , um die Auflistung zu aktualisieren. Die tatsächliche Feldauflistung entspricht dem Rückgabeergebnis der aktuellen Abfrage in der Definition.<br /><br /> Berechnete Felder hinzufügen|  
 |Dataset|Datenoptionen wie z. B. die Berücksichtigung der Groß- und Kleinschreibung|Datenoptionen in der Instanz können überschrieben werden.|  
   
@@ -219,7 +219,7 @@ ms.locfileid: "73592314"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

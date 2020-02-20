@@ -12,16 +12,16 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593870"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Aktivieren von Remotefehlern (Reporting Services)
   Sie können Servereigenschaften auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] festlegen, um zusätzliche Informationen zu auf Remoteservern aufgetretenen Fehlerbedingungen zurückzugeben. Wenn in einer Fehlermeldung der Text "Um weitere Informationen zu diesem Fehler zu erhalten, navigieren Sie zum Berichtsserver auf dem lokalen Servercomputer, oder aktivieren Sie Remotefehler." angezeigt wird, können Sie die **EnableRemoteErrors** -Eigenschaft festlegen, um zusätzliche Informationen zum Behandeln des Problems zu erhalten. Weitere Informationen finden Sie unter [Berichtsserver-Systemeigenschaften](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
- In diesem Thema:  
+ Inhalte dieses Themas:  
   
 -   [Aktivieren von Remotefehlern für den SharePoint-Modus](#bkmk_sharepoint)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73593870"
   
 4.  Klicken Sie auf **Remotefehler im lokalen Modus aktivieren**.  
   
-5.  Klicken Sie auf **OK**.  
+5.  Klicken Sie auf **OK**  
   
 ##  <a name="bkmk_mgtStudio"></a> Aktivieren von Remotefehlern durch SQL Server Management Studio (Einheitlicher Modus)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73593870"
   
 3.  Klicken Sie auf **Erweitert** , um die Eigenschaftenseite zu öffnen. Weitere Informationen finden Sie unter [Servereigenschaften &#40;Seite „Erweitert“&#41; – Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md).  
   
-4.  Wählen Sie im Abschnitt **Sicherheit** in **EnableRemoteErrors**den Wert **true**aus.  
+4.  Klicken Sie im Abschnitt **Sicherheit** unter **EnableRemoteErrors** auf **TRUE**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

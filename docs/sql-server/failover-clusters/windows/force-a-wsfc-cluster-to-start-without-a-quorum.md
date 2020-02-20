@@ -1,6 +1,7 @@
 ---
-title: Erzwingen des Starts eines WSFC-Clusters ohne Quorum | Microsoft-Dokumentation
-ms.custom: ''
+title: Erzwingen des Starts eines Clusters ohne Quorum
+description: In diesem Artikel wird beschrieben, wie der Start eines Windows Server-Failoverclusters ohne Quorum erzwungen wird.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac6464cb5bab7e16cb6ee0282f402c1416ec47cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044734"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258141"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Erzwingen des Starts eines Clusters ohne Quorum
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +105,7 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erzwingen des Clusterstarts ohne ein Quorum  
   
--   NodeWeight-Werte sind neu zu bewerten und zu konfigurieren, um vor der erneuten Onlineschaltung anderer Knoten ein neues Quorum korrekt erstellen zu können. Andernfalls wird für den Cluster u. U. wieder der Offlinemodus aktiviert.  
+-   NodeWeight-Werte sind neu zu bewerten und zu konfigurieren, um vor der erneuten Onlineschaltung anderer Knoten ein neues Quorum korrekt erstellen zu können. Andernfalls wird für den Cluster u. U. wieder der Offlinemodus aktiviert.  
   
      Weitere Informationen finden Sie unter [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   

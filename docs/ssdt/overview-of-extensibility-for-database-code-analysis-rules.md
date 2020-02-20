@@ -1,23 +1,24 @@
 ---
-title: Übersicht über die Erweiterbarkeit um Regeln für die Datenbankcodeanalyse | Microsoft-Dokumentation
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Erweiterbarkeit der Regeln zur Datenbankcodeanalyse
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd64a7c3152941a88122543dc4b8b80045f175a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef4ab84a123252dd35da85213110b8b4abb616ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984488"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251967"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>Übersicht der Erweiterbarkeit um Regeln für die Datenbank-Codeanalyse
+
 Visual Studio-Editionen, die SQL Server Data Tools enthalten, beinhalten Regeln für die Codeanalyse, um Transact\-SQL-Warnungen zu Entwurf, Benennung und Leistung in Ihrem Datenbankcode zu melden. Weitere Informationen zur Codeanalyse finden Sie unter [Analysieren von Datenbankcode zum Verbessern der Codequalität](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx).  
   
 Wenn die integrierten Regeln zur Codeanalyse ein bestimmtes Transact\-SQL-Problem, das Sie berücksichtigen möchten, nicht abdecken, können Sie benutzerdefinierte Regeln zur Analyse von Datenbankcode erstellen. Beispielsweise möchten Sie möglicherweise eine benutzerdefinierte Regel erstellen, die die Verwendung der WAITFOR DELAY-Anweisung verhindert, wie unter [Exemplarische Vorgehensweise: Erstellen einer benutzerdefinierten Regelassembly zur statischen Codeanalyse für SQL Server](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md) veranschaulicht wird. Verwenden Sie zum Erstellen benutzerdefinierter Regeln zur Datenbankcodeanalyse die Klassen im [CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx)-Namespace.  

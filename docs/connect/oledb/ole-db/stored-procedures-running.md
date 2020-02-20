@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993803"
 ---
 # <a name="stored-procedures---running"></a>Gespeicherte Prozeduren: Ausführen
@@ -34,11 +34,11 @@ ms.locfileid: "67993803"
   
 -   Bessere Konsistenz  
   
--   Bessere Genauigkeit.  
+-   Höhere Genauigkeit  
   
 -   Zusätzliche Funktionalität  
   
- Der OLE DB-Treiber für SQL Server unterstützt drei der Mechanismen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die gespeicherte Prozeduren zum Zurückgeben von Daten verwenden:  
+ Der OLE DB-Treiber für SQL Server unterstützt drei der Mechanismen, die gespeicherte Prozeduren in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwenden, um Daten zurückzugeben:  
   
 -   Jede SELECT-Anweisung in der Prozedur generiert ein Resultset.  
   

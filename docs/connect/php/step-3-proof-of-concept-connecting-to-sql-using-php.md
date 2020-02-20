@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Proof of Concept für Verbindungen mit SQL Server mithilfe von PHP | Microsoft-Dokumentation'
+title: 'Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von PHP | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014798"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von PHP
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL Server mithilfe von PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="step-1--connect"></a>Schritt 1: verbinden  
+## <a name="step-1--connect"></a>Schritt 1:  Verbinden  
   
   
-Diese **OpenConnection** -Funktion wird in allen folgenden Funktionen in der Nähe des oberen Aufrufs aufgerufen.  
+Diese **OpenConnection** -Funktion wird zu Beginn in allen im Folgenden aufgeführten Funktionen aufgerufen.  
   
   
 ```php 
@@ -45,9 +45,9 @@ Diese **OpenConnection** -Funktion wird in allen folgenden Funktionen in der Nä
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>Schritt 2: Ausführen der Abfrage  
+## <a name="step-2--execute-query"></a>Schritt 2:  Abfrage ausführen  
   
-Die [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) -Funktion kann verwendet werden, um ein Resultset aus einer Abfrage für die SQL-Datenbank abzurufen. Diese Funktion akzeptiert im Wesentlichen alle Abfragen und das Verbindungs Objekt und gibt ein Resultset zurück, das mit der Verwendung von [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php)durchlaufen werden kann.  
+Mit der [sqlsrv_query](https://php.net/manual/en/function.sqlsrv-query.php)-Funktion können Sie ein Resultset aus einer Abfrage einer SQL-Datenbank abrufen. Diese Funktion akzeptiert praktisch jede Abfrage und jedes Verbindungsobjekt und gibt ein Resultset zurück, das mithilfe von [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php) durchlaufen werden kann.  
   
 ```php  
     function ReadData()  
@@ -77,9 +77,9 @@ Die [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) -Funk
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
+## <a name="step-3--insert-a-row"></a>Schritt 3:  Einfügen einer Zeile  
   
-In diesem Beispiel erfahren Sie, wie Sie eine [Insert](../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher ausführen, Parameter übergeben, die Ihre Anwendung vor dem SQL- [einschleusungs](../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert schützen.    
+In diesem Beispiel erfahren Sie, wie Sie eine [INSERT](../../t-sql/statements/insert-transact-sql.md)-Anweisung sicher ausführen und Parameter zum Schutz Ihrer Anwendung vor einer [Einschleusung von SQL-Befehlen](../../relational-databases/tables/primary-and-foreign-key-constraints.md) übergeben.    
   
   
 ```php 
@@ -109,16 +109,16 @@ In diesem Beispiel erfahren Sie, wie Sie eine [Insert](../../t-sql/statements/in
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Schritt 4: Rollback einer Transaktion  
+## <a name="step-4--rollback-a-transaction"></a>Schritt 4:  Durchführen eines Rollbacks für eine Transaktion  
   
   
-Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen, in denen Sie folgende Vorgänge ausführen:  
+Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen für folgende Aufgaben:  
   
--Begin a Transaction  
+\- Starten von Transaktionen  
   
--Einfügen einer Zeile mit Daten, Aktualisieren einer anderen Daten Zeile  
+\- Hinzufügen einer Zeile mit Daten und Aktualisieren einer anderen Datenzeile  
   
--Committen Sie die Transaktion, wenn die INSERT-und Update-Vorgänge erfolgreich ausgeführt wurden, und führen Sie ein Rollback der Transaktion aus, wenn  
+\- Durchführen eines Commits der Transaktion, wenn Einfügung und Aktualisierung erfolgreich waren, und eines Rollbacks der Transaktion, wenn ein Vorgang fehlgeschlagen ist  
   
   
 ```php 

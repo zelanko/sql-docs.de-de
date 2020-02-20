@@ -11,10 +11,10 @@ ms.assetid: f77af027-c021-4a17-b264-1ee592bfdd84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26986587e9c6f2ba98f5a0a30a5f9ba504d61d6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977080"
 ---
 # <a name="iswrapperfor-method-sqlserverdatasource"></a>isWrapperFor-Methode (SQLServerDataSource)
@@ -32,10 +32,10 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Parameter  
  *iface*  
   
- Eine **Klasse** , die eine Schnittstelle definiert.  
+ Dies ist eine **Klasse** zum Definieren einer Schnittstelle.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn dieses Objekt die-Schnittstelle implementiert oder ein Objekt umschließt, das die-Schnittstelle implementiert. Andernfalls lautet der Wert **false**.  
+ Der Wert lautet **TRUE**, wenn dieses Objekt die Schnittstelle implementiert oder ein Objekt umschließt, das die Schnittstelle implementiert. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -48,7 +48,7 @@ public boolean isWrapperFor(Class iface)
  Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Unwrap- &#40;Methode SQLServerDataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)   
+ [unwrap-Methode &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)   
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

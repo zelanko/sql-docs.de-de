@@ -1,10 +1,9 @@
 ---
-title: Verwenden von HAVING- und WHERE-Klauseln in derselben Abfrage | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von HAVING- und WHERE-Klauseln in derselben Abfrage
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84abe2405901012565e98950320c8d5aa92fa903
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b74f4847964be363972c4226f124c94cce032a07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263042"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246018"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Verwenden von HAVING- und WHERE-Klauseln in derselben Abfrage (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +57,7 @@ Für dieselbe Spalte kann sowohl eine WHERE-Klausel als auch eine HAVING-Klausel
   
 ### <a name="to-specify-a-where-condition-in-an-aggregate-query"></a>So legen Sie eine WHERE-Bedingung in einer Aggregatabfrage fest  
   
-1.  Geben Sie die Gruppen für die Abfrage an. Weitere Informationen finden Sie unter [Gruppieren von Zeilen in Abfrageergebnissen (Visual Database Tools)](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
+1.  Geben Sie die Gruppen für die Abfrage an. Weitere Informationen finden Sie unter [Gruppieren von Zeilen in Abfrageergebnissen](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
   
 2.  Fügen Sie dem Kriterienbereich die Spalte hinzu, auf der die WHERE-Bedingung basieren soll, sofern diese dort nicht bereits vorhanden ist.  
   
@@ -90,6 +91,6 @@ Für dieselbe Spalte kann sowohl eine WHERE-Klausel als auch eine HAVING-Klausel
     ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Sortieren und Gruppieren von Abfrageergebnissen (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[Zusammenfassen von Abfrageergebnissen (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Sortieren und Gruppieren von Abfrageergebnissen](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Zusammenfassen von Abfrageergebnissen](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

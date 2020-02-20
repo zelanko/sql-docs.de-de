@@ -1,5 +1,5 @@
 ---
-title: -Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: setObject-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 93a2b22c-82b4-48c7-a428-369ebe98a372
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27993632c5aa6f1ab334c02c123a1984d3408b6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973297"
 ---
 # <a name="setobject-method-sqlserverpreparedstatement"></a>setObject-Methode (SQLServerPreparedStatement)
@@ -33,7 +33,7 @@ ms.locfileid: "67973297"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setObject (int, java.lang.Object)](../../../connect/jdbc/reference/setobject-method-int-java-lang-object.md)|Legt den Wert des angegebenen Parameters unter Verwendung des angegebenen Objekts fest.|  
 |[setObject (int, java.lang.Object, int)](../../../connect/jdbc/reference/setobject-method-int-java-lang-object-int.md)|Legt den Wert des angegebenen Parameters unter Verwendung des angegebenen Objekts und des Zieltyps fest.|  

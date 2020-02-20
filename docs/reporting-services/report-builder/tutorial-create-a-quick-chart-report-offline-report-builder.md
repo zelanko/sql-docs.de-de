@@ -13,19 +13,19 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037960"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Lernprogramm: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator)
 
-  In diesem Tutorial verwenden Sie einen Assistenten, um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]zu erstellen. Anschließend fügen Sie Prozentwerte hinzu und nehmen geringfügige Änderungen am Kreisdiagramm vor. 
+  In diesem Tutorial verwenden Sie einen Assistenten, um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] zu erstellen. Anschließend fügen Sie Prozentwerte hinzu und nehmen geringfügige Änderungen am Kreisdiagramm vor. 
   
 Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beide Methoden liefern das gleiche Ergebnis – ein Kreisdiagramm entsprechend der folgenden Abbildung:  
   
- ![Kreisdiagramm im Berichts-Generator](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Report Builder quick pie chart")  
+ ![Schnelles Kreisdiagramm im Berichts-Generator](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Schnelles Kreisdiagramm im Berichts-Generator")  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  Sowohl bei Verwendung von XML-Daten als auch bei einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage benötigen Sie Zugriff auf den Berichts-Generator. Sie können [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver starten (entweder im nativem Modus oder im integrierten SharePoint-Modus), oder Sie können [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] aus dem Microsoft Download Center herunterladen. Weitere Informationen finden Sie unter [Installieren des Berichts-Generators](../../reporting-services/install-windows/install-report-builder.md).  
@@ -41,7 +41,7 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
   
  [Erstellen des Kreisdiagramms mit XML-Daten](#CreatePieChartXML)  
   
-### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>Verwenden einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage, die Daten für dieses Tutorial enthält  
+### <a name="using-a-tsql-query-that-contains-data-for-this-tutorial"></a>Verwenden einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage, die Daten für dieses Tutorial enthält  
  Sie können aus diesem Thema eine Abfrage mit Daten kopieren und diese in den Assistenten einfügen. Sie benötigen den Namen einer SQL Server-Instanz sowie Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. In der Datasetabfrage im Tutorial werden zwar Literaldaten verwendet, jedoch muss die Abfrage durch eine SQL Server-Instanz verarbeitet werden, um die für ein Berichtsdataset erforderlichen Metadaten zurückzugeben.  
   
  Der Vorteil der Verwendung der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage besteht darin, dass in allen anderen [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] -Tutorials die gleiche Methode verwendet wird. Sie wissen daher bereits, was zu tun ist, wenn Sie die anderen Tutorials durcharbeiten.  
@@ -56,7 +56,7 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
   
      Das Dialogfeld **Erste Schritte** wird angezeigt.  
   
-     ![Erste Schritte mit dem Berichts-Generator](../../reporting-services/media/rb-getstarted.png "Report Builder Get Started")  
+     ![Erste Schritte mit dem Berichts-Generator](../../reporting-services/media/rb-getstarted.png "Erste Schritte mit dem Berichts-Generator")  
   
      Falls das Dialogfeld **Erste Schritte** nicht angezeigt wird, klicken Sie auf **Datei** >**Neu**zu erstellen. Das Dialogfeld **Neuer Bericht oder neues Dataset** verfügt größtenteils über den gleichen Inhalt wie das Dialogfeld **Erste Schritte** .  
   
@@ -107,7 +107,7 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
   
 11. (Optional) Klicken Sie auf die Schaltfläche **Ausführen** ( **!** ), um die Daten anzuzeigen, auf denen das Diagramm basiert.  
   
-     ![Abfrageansicht im Berichts-Generator](../../reporting-services/report-builder/media/rb-designquery.png "Report Builder Design Query")  
+     ![Berichts-Generator, Abfrageentwurf](../../reporting-services/report-builder/media/rb-designquery.png "Berichts-Generator, Abfrageentwurf")  
   
 12. Klicken Sie auf **Weiter**.  
   
@@ -117,23 +117,23 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
   
      Beachten Sie, dass der Wert automatisch in das Feld **Werte** verschoben wird, da es sich um einen numerischen Wert handelt.  
   
-     ![Assistent zum Anordnen von Feldern im Berichts-Generator](../../reporting-services/report-builder/media/rb-wizarrangefields.png "Report Builder Wizard Arrange Fields")  
+     ![Berichts-Generator, Diagrammfelder anordnen](../../reporting-services/report-builder/media/rb-wizarrangefields.png "Berichts-Generator, Diagrammfelder anordnen")  
   
 15. Ziehen Sie das Feld **FullName** aus dem Feld **Verfügbare Felder** in das Feld **Kategorien** (oder doppelklicken Sie auf das Feld, damit es in das Feld **Kategorien** verschoben wird). Klicken Sie anschließend auf **Weiter**.  
   
      Die Vorschauseite zeigt Ihr neues Kreisdiagramm mit aussagekräftigen Daten. Anstelle der Namen der Vertriebsmitarbeiter enthält die Legende "Full Name 1", "Full Name 2" usw.; außerdem ist die Größe der Kreissegmente nicht exakt. Diese Darstellung soll nur eine Vorstellung vom Aussehen des Berichts vermitteln.  
   
-     ![Neue Diagrammvorschau im Berichts-Generator](../../reporting-services/report-builder/media/rb-newchartpreview.png "Report Builder New Chart Preview")  
+     ![Berichts-Generator, neues Diagramm, Vorschau](../../reporting-services/report-builder/media/rb-newchartpreview.png "Berichts-Generator, neues Diagramm, Vorschau")  
   
 16. Klicken Sie auf **Fertig stellen**.  
   
      Jetzt sehen Sie Ihren neuen Kreisdiagrammbericht in der Entwurfsansicht, immer noch mit aussagekräftigen Daten.  
   
-     ![Neues Tortendiagramm in der Entwurfsansicht im Berichts-Generator](../../reporting-services/report-builder/media/rb-newpiedesign.png "Report Builder New Pie in Design View")  
+     ![Berichts-Generator, neues Kreisdiagramm in der Entwurfsansicht](../../reporting-services/report-builder/media/rb-newpiedesign.png "Berichts-Generator, neues Kreisdiagramm in der Entwurfsansicht")  
   
 17. Klicken Sie auf der Registerkarte **Home** des Menübands auf **Ausführen** , um das tatsächliche Kreisdiagramm anzuzeigen.  
   
-     ![Neues Ausführungsdiagramm im Berichts-Generator](../../reporting-services/report-builder/media/rb-newchartrun.png "Report Builder New Chart Run")  
+     ![Berichts-Generator, neues Diagramm, Ausführung](../../reporting-services/report-builder/media/rb-newchartrun.png "Berichts-Generator, neues Diagramm, Ausführung")  
   
 18. Fahren Sie mit [Nach der Ausführung des Assistenten](#AfterWizard) in diesem Artikel fort, um Ihr Kreisdiagramm weiter zu ändern.  
   
@@ -220,7 +220,7 @@ Beachten Sie, dass sich die Entwurfsoberfläche beim Ziehen vergrößert.
  Weitere Informationen zum Anpassen von Diagrammbezeichnungen und -legenden finden Sie unter [Anzeigen von Prozentwerten in einem Kreisdiagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) sowie unter [Ändern des Texts eines Legendenelements &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
 ##  <a name="WhatsNext"></a> Wie geht es weiter?  
- Nachdem Sie nun Ihren ersten Bericht in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]erstellt haben, können Sie die anderen Tutorials durcharbeiten und die ersten Berichte mit Ihren eigenen Daten erstellen. Zur Ausführung von [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]müssen Sie berechtigt sein, mithilfe einer *Verbindungszeichenfolge*, durch die die Verbindung mit der Datenquelle hergestellt wird, auf Ihre Datenquellen (beispielsweise Datenbanken) zuzugreifen. Der Systemadministrator hat diese Informationen und kann Ihnen bei der Einrichtung helfen.  
+ Nachdem Sie nun Ihren ersten Bericht in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]erstellt haben, können Sie die anderen Tutorials durcharbeiten und die ersten Berichte mit Ihren eigenen Daten erstellen. Zur Ausführung von [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] müssen Sie berechtigt sein, mithilfe einer *Verbindungszeichenfolge*, durch die die Verbindung mit der Datenquelle hergestellt wird, auf Ihre Datenquellen (beispielsweise Datenbanken) zuzugreifen. Der Systemadministrator hat diese Informationen und kann Ihnen bei der Einrichtung helfen.  
   
  Zur Bearbeitung der anderen Tutorials benötigen Sie den Namen einer SQL Server-Instanz sowie Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. Auch dabei können Sie sich an den Systemadministrator wenden.  
   

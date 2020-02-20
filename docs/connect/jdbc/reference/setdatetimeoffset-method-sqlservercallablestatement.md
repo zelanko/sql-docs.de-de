@@ -1,5 +1,5 @@
 ---
-title: SetDateTimeOffset-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
+title: setDateTimeOffset-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,18 +11,18 @@ ms.assetid: 9383e14d-c83e-43c5-980c-50a3e0bedc31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 264de7ac150aca7494a380fbbd4f5b490607c5c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974642"
 ---
 # <a name="setdatetimeoffset-method-sqlservercallablestatement"></a>setDateTimeOffset-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Diese Methode wurde in [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 hinzugefügt.  
+  Diese Methode wurde im JDBC-Treiber 3.0 für [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hinzugefügt.  
   
- Legt den Wert der angegebenen Spalte auf den [DateTimeOffset-Klassen](../../../connect/jdbc/reference/datetimeoffset-class.md) Wert fest.  
+ Mit dieser Methode wird der Wert der angegebenen Spalte auf den Wert der Klasse [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) festgelegt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +38,7 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
   
  *t*  
   
- Das [DateTimeOffset-Klassen](../../../connect/jdbc/reference/datetimeoffset-class.md) Objekt.  
+ Dies ist ein [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)-Klassenobjekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -46,7 +46,7 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
 ## <a name="remarks"></a>Bemerkungen  
  Sie können einen [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)-Wert mit [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md) abrufen.  
   
- [SetDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md) nimmt die Ordnungszahl der Spalte an.  
+ [SetDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md) verwendet die Ordnungszahl der Spalte.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

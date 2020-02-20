@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: bindColumn | Microsoft-Dokumentation'
+title: PDOStatement::bindColumn | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4b159e57f6f2335e894490f7e34d159bd95b2b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993133"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
@@ -30,15 +30,15 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*column:* Die (gemischte) Nummer der Spalte (1-basierter Index) oder der Name der Spalte im Resultset.  
+$*column*: Die (gemischte) Nummer der Spalte (auf 1 basierender Index) oder der Name der Spalte im Resultset  
   
-&$*param:* Der (gemischte) Name der PHP-Variable, an die die Spalte gebunden werden wird.  
+&$*param*: Der (gemischte) Name der PHP-Variable, an die die Spalte gebunden wird  
   
-$*type:* Der optionale Datentyp des Parameters, der durch eine PDO::PARAM_*-Konstante dargestellt wird.  
+$*type*: Der optionale Datentyp des Parameters, durch eine PDO::PARAM_*-Konstante dargestellt  
   
-$*maxLen*: Optionale ganze Zahl, die von den Microsoft-Treibern für PHP für SQL Server nicht verwendet wird.  
+$*maxLen*: Optionale ganze Zahl, wird von den Microsoft-Treibern für PHP für SQL Server nicht verwendet  
   
-$*driverdata:* Optionale(r) gemischte(r) Parameter für den Treiber. Beispielsweise können Sie PDO::SQLSRV_ENCODING_UTF8 angeben, um die Spalte an eine Variable als UTF-8-codierte Zeichenfolge zu binden.  
+$*driverdata*: Optionale(r) gemischte(r) Parameter für den Treiber. Beispielsweise können Sie PDO::SQLSRV_ENCODING_UTF8 angeben, um die Spalte an eine Variable als UTF-8-codierte Zeichenfolge zu binden.  
   
 ## <a name="return-value"></a>Rückgabewert  
 TRUE bei Erfolg, andernfalls FALSE.  

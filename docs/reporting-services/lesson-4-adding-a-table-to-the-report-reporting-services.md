@@ -1,6 +1,7 @@
 ---
-title: 'Lektion 4: Hinzufügen einer Tabelle zum Bericht (Reporting Services) | Microsoft-Dokumentation'
-ms.date: 04/29/2019
+title: 'Lektion 4: Hinzufügen einer Tabelle zum Bericht | Microsoft-Dokumentation'
+description: Nachdem Sie das Dataset definiert haben, können Sie mit dem Entwerfen des paginierten Berichts beginnen. Sie können ein Berichtslayout erstellen, indem Sie Berichtsobjekte aus der Toolbox auf die Entwurfsoberfläche ziehen.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e925dec5eb14365a6c313349599a77ffe1d7ab13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106008"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244302"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lektion 4: Hinzufügen einer Tabelle zum Bericht (Reporting Services)
+# <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>Lektion 4: Hinzufügen einer Tabelle zum Bericht (Reporting Services)
 
-Nach dem Definieren des Datasets können Sie mit dem Entwerfen des Berichts beginnen. Sie können ein Berichtslayout erstellen, indem Sie *Berichtsobjekte* aus der **Toolbox** auf die **Entwurfsoberfläche** ziehen. Es gibt unter anderem folgende Arten von Berichtobjekten:
+Nachdem Sie das Dataset definiert haben, können Sie mit dem Entwerfen des paginierten Berichts beginnen. Sie können ein Berichtslayout erstellen, indem Sie *Berichtsobjekte* aus der **Toolbox** auf die **Entwurfsoberfläche** ziehen. Es gibt unter anderem folgende Arten von Berichtobjekten:
 
 - Tabelle
 - Textfeld
-- image
-- Linie
+- Image
+- Zeile
 - Rechteck
 - Diagramm
 - Karte
@@ -52,7 +53,7 @@ Elemente, die wiederholte Zeilen von Daten aus zugrunde liegenden Datasets entha
 
     ![ssrs_tutorial_Spalte_hinzufügen](media/ssrs-tutorial-addcolumn.png)
 
-7. Fügen Sie das `[LineTotal]`-Feld auf dieselbe Weise hinzu, und erstellen Sie dabei eine fünfte Spalte. Als Spaltenbezeichnung wird „Line Total“ eingegeben. Der Berichts-Designer erstellt für die Spalte automatisch einen besser lesbaren Namen, indem er „LineTotal“ in zwei Wörter aufgeteilt wird.
+7. Fügen Sie das `[LineTotal]`-Feld auf dieselbe Art und Weise hinzu, und erstellen Sie dabei eine fünfte Spalte. Als Spaltenbezeichnung wird „Line Total“ eingegeben. Der Berichts-Designer erstellt für die Spalte automatisch einen besser lesbaren Namen, indem er „LineTotal“ in zwei Wörter aufgeteilt wird.
 
 Die folgende Abbildung zeigt einen Datenbereich einer Tabelle, der mit folgenden Feldern aufgefüllt wurde: Date, Order, Product, Qty und Line Total.
 ![rs_GrundlegendeTabellendetailsEntwurf](media/rs-basictabledetailsdesign.png)
@@ -69,7 +70,7 @@ Wenn Sie einen Bericht in der Vorschau anzeigen, können Sie den gerenderten Ber
 
 In der folgenden Abbildung wird ein Teil des Berichts in der **Vorschau** angezeigt.
 
-   ![Vorschau, Detailzeilen der Tabelle mit fünf Spalten](media/rs-basictabledetailspreview.png "Vorschau, Detailzeilen der Tabelle mit fünf Spalten")
+   ![Vorschau, Zeilen einer Tabelle mit 5 Spalten](media/rs-basictabledetailspreview.png "Vorschau, Zeilen einer Tabelle mit 5 Spalten")
 
 Sehen Sie sich die Werte für „Date“ und „Line Total“ an. In der nächsten Lektion erfahren Sie, wie Sie diese formatieren können, um die Ansicht übersichtlicher zu gestalten.
 
@@ -78,9 +79,9 @@ Sehen Sie sich die Werte für „Date“ und „Line Total“ an. In der nächst
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sie haben Ihrem Bericht erfolgreich einen Tabellendatenbereich hinzugefügt, dem Datenbereich Felder hinzugefügt und den Bericht in der Vorschau angezeigt. In der nächsten Lektion erfahren Sie, wie Spaltenüberschriften und Feldausdrücke formatiert werden. Fahren Sie mit [Lektion 5: Formatieren eines Berichts &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md) fort.
+Sie haben Ihrem Bericht erfolgreich einen Tabellendatenbereich hinzugefügt, dem Datenbereich Felder hinzugefügt und den Bericht in der Vorschau angezeigt. In der nächsten Lektion erfahren Sie, wie Spaltenüberschriften und Feldausdrücke formatiert werden. Fahren Sie fort mit [Lektion 5: Formatieren eines Berichts &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Tabellen &#40;Berichts-Generator und SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)  
-[Datasetfeld-Auflistung &#40;Berichts-Generator und SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+[Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

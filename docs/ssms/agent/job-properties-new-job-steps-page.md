@@ -1,10 +1,9 @@
 ---
-title: Auftragseigenschaften – Neuer Auftrag (Schrittseite) | Microsoft-Dokumentation
-ms.custom: ''
+title: Auftragseigenschaften – Neuer Auftrag (Schrittseite)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 214374ee87b1896ec6683827eaecff7484e3d922
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b4994a7398b038ce8b99d38b2584da6e95d7e552
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262329"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242272"
 ---
 # <a name="job-properties---new-job-steps-page"></a>Auftragseigenschaften – Neuer Auftrag (Schrittseite)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -26,9 +27,9 @@ ms.locfileid: "68262329"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Mithilfe dieser Seite können Sie Auftragsschritte für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzeigen und planen.  
+Mithilfe dieser Seite können Sie Auftragsschritte für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftrag anzeigen und planen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Auftragsschrittliste**  
 Führt die Auftragsschritte für diesen Auftrag auf.  
   
@@ -41,7 +42,7 @@ Wählt den Schritt aus, mit dem der [!INCLUDE[ssNoVersion](../../includes/ssnove
 **Neu**  
 Erstellt einen neuen Auftragsschritt unter dem ausgewählten Auftragsschritt.  
   
-**Insert**  
+**Einfügen**  
 Erstellt einen neuen Auftragsschritt über dem ausgewählten Auftragsschritt.  
   
 **Bearbeiten**  

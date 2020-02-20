@@ -1,10 +1,7 @@
 ---
-title: osql-Hilfsprogramm | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/16/2017
+title: osql (Hilfsprogramm)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,17 +20,23 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: markingmyname
 ms.author: maghan
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cfd8bc56a642442e1a5c5f673ca70bd86eb3ef6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: dbc103ea44027056541dada86451c757a27619ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105749"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307363"
 ---
 # <a name="osql-utility"></a>osql (Hilfsprogramm)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Das Hilfsprogramm **osql** ermöglicht es Ihnen, [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien einzugeben. Dieses Hilfsprogramm verwendet ODBC, um Daten mit dem Server auszutauschen.  
+
+Das Hilfsprogramm **osql** ermöglicht es Ihnen, [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien einzugeben. Dieses Hilfsprogramm verwendet ODBC, um Daten mit dem Server auszutauschen.  
   
 > [!IMPORTANT]  
 >  Diese Funktion wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen sie aktuell verwendet wird. Verwenden Sie stattdessen **sqlcmd** . Weitere Informationen finden Sie unter [sqlcmd Utility](../tools/sqlcmd-utility.md).  
@@ -69,7 +72,7 @@ osql
 > [!NOTE]  
 >  Aufgrund der Übertragungsart in Netzwerken, ist es möglich, dass **osql** nicht zeitnah von allen Servern eine Antwort erhält. Aus diesem Grund kann die Liste der zurückgegebenen Server mit jedem Aufruf dieser Option variieren.  
   
- **-U** _Anmelde-ID_  
+ **-U** _login_id_  
  Die Benutzeranmelde-ID. Bei Anmelde-IDs wird die Groß- und Kleinschreibung beachtet.  
   
  **-P** _password_  
@@ -95,7 +98,7 @@ C:\>osql
  **-E**  
  Verwendet eine vertrauenswürdige Verbindung, statt ein Kennwort anzufordern.  
   
- **-S** _Server\_Name_[ **\\** _Instanzname\__ ]  
+ **-S** _server\_name_[ **\\** _instance\_name_]  
  Gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt wird. Geben Sie *server_name* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Geben Sie _server\_name_ **\\** _instance\_name_ an, um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Falls kein Server angegeben ist, stellt **osql** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **osql** von einem Remotecomputer im Netzwerk ausgeführt wird.  
   
  **-H** _wksta_name_  
@@ -208,7 +211,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL-Befehle  
  Zusätzlich zu den [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen in **osql**, sind auch die folgenden Befehle verfügbar.  
   
-|Befehl|und Beschreibung|  
+|Get-Help|Beschreibung|  
 |-------------|-----------------|  
 |GO|Führt alle Anweisungen aus, die nach dem letzten GO-Befehl eingegeben wurden.|  
 |RESET|Löscht alle Anweisungen, die Sie eingegeben haben.|  

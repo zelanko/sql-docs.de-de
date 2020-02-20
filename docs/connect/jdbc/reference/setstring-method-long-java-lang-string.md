@@ -16,10 +16,10 @@ ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e3e1dfb6447907caa0bd5970df47fe9989b4aab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972628"
 ---
 # <a name="setstring-method-long-javalangstring"></a>setString-Methode (long, java.lang.String)
@@ -56,7 +56,7 @@ public int setString(long pos,
  Zeichendaten werden beginnend mit der angegebenen Position überschrieben, und sie können die ursprüngliche Länge des CLOB übersteigen. Durch Angeben eines Werts vom Typ "Position+1" wird die Zeichenfolge angefügt. Durch Angeben eines Werts vom Typ „Position+2“ oder größer (oder null oder weniger) wird ein Positionsfehler ausgelöst.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SetString- &#40;Methode SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
+ [setString-Methode &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [SQLServerClob-Methoden](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob-Elemente](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob-Klasse](../../../connect/jdbc/reference/sqlserverclob-class.md)  

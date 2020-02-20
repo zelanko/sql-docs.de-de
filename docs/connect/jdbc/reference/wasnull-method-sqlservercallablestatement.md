@@ -16,10 +16,10 @@ ms.assetid: 1a27b2fe-ae12-46a9-9bca-2c5ca66b9eb3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 03e2ba3f7721c0322e54686cef0a53d93a9bf79c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68001545"
 ---
 # <a name="wasnull-method-sqlservercallablestatement"></a>wasNull-Methode (SQLServerCallableStatement)
@@ -35,7 +35,7 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn der letzte gelesene Parameter NULL war. Andernfalls lautet der Wert **false**.  
+ Der Wert lautet **TRUE**, wenn der letzte gelesene Parameter ein NULL-Wert war. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

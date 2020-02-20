@@ -1,5 +1,5 @@
 ---
-title: Rollback-Methode () | Microsoft-Dokumentation
+title: rollback()-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7adb6772-4047-4d8e-931d-b3d20eec44b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3b4575251cb4eb55f9af37bb81ed2c4bedbf564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975702"
 ---
 # <a name="rollback-method-"></a>rollback-Methode ()
@@ -38,12 +38,12 @@ public void rollback()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Rollback-Methode wird von der Rollback-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
+ Diese rollBack-Methode wird von der rollBack-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
  Die Methode sollte nur bei deaktiviertem Modus für automatische Commits verwendet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Rollback- &#40;Methode SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
+ [rollback-Methode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

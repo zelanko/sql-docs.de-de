@@ -1,23 +1,24 @@
 ---
-title: Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests | Microsoft-Dokumentation
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3e720389f790282f1ad7a33302e2d277128178f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ab6cccf656d0951c5f8fd72bb5863bbe91f0e74d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140952"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243488"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests
+
 Sie können die SQL Server-Komponententests verwenden, um einen Baselinezustand für die Datenbank festzulegen und anschließend alle nachfolgenden Änderungen zu überprüfen, die an Datenbankobjekten vorgenommen werden.  
   
 Um einen Baselinezustand für eine Datenbank herzustellen, erstellen Sie ein Testprojekt und schreiben Transact\-SQL-Codesätze, die für Datenbankobjekte ausgeführt werden. Mithilfe dieser Tests können Sie in einer isolierten Entwicklungsumgebung überprüfen, ob Ihre Objekte wie erwartet funktionieren. SQL Server-Komponententests funktionieren gut in Kombination mit der Offlinedatenbankentwicklung, bei denen SQL Server-Datenbankprojekte verwendet werden (weitere Informationen finden Sie unter [Projektorientierte Offlinedatenbankentwicklung](../ssdt/project-oriented-offline-database-development.md)). Sobald Sie über einen Baselinesatz von SQL Server-Komponententests verfügen, können Sie mithilfe der Tests überprüfen, ob die Datenbank ordnungsgemäß funktioniert, bevor Sie Änderungen in die Versionskontrolle einchecken.  

@@ -1,5 +1,5 @@
 ---
-title: supportsgroupbybeyondselect-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsGroupByBeyondSelect-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: eadd2c37-d9ec-4b47-a91e-ed90b1eaf4b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c38f17451149e9206cf12329e5ffef314eac7480
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969383"
 ---
 # <a name="supportsgroupbybeyondselect-method-sqlserverdatabasemetadata"></a>supportsGroupByBeyondSelect-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsGroupByBeyondSelect()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportsgroupbybeyondselect-Methode wird von der supportsgroupbybeyondselect-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsGroupByBeyondSelect-Methode wird von der supportsGroupByBeyondSelect-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

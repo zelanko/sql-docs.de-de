@@ -1,11 +1,7 @@
 ---
-title: 'Gewusst wie: Vornehmen von Änderungen an Datenbankobjekten durch Umbenennen und Refactoring | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Vornehmen von Änderungen an Datenbankobjekten durch Umbenennen und Refactoring
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbrefactoring.previewdialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0897d9498ca93e915dba5df9c32c4544fe08767d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac10530cf2fa3831a26733e7470b6bd107d17121
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097474"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244239"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Gewusst wie: Vornehmen von Änderungen an Datenbankobjekten durch Umbenennen und Refactoring
+
 Mit dem Kontextmenü „Umgestalten“ im Transact\-SQL-Editor können Sie ein Objekt umbenennen oder in ein anderes Schema verschieben. Außerdem können Sie eine Vorschau aller betroffenen Bereiche anzeigen, bevor Sie einen Commit für die Änderung ausführen. Mithilfe des Menüs „Umgestalten“ können Sie auch alle Verweise auf Datenbankobjekte vollständig qualifizieren, und Sie können Platzhalterzeichen in `SELECT`-Anweisungen im Datenbankprojekt erweitern.  
   
 > [!NOTE]  

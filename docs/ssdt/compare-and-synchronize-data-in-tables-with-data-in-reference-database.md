@@ -1,23 +1,24 @@
 ---
-title: Vergleichen und Synchronisieren von Daten in einer oder mehreren Tabellen anhand von Daten aus einer Verweisdatenbank | Microsoft-Dokumentation
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Vergleichen und Synchronisieren von Daten in Tabellen mit Daten aus einer Referenzdatenbank
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 055731473f94003440f4a78c6446ec965f1d0a2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984664"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241699"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Vergleichen und Synchronisieren von Daten in einer oder mehreren Tabellen anhand von Daten aus einer Verweisdatenbank
+
 Sie können die Daten in einer *Quelldatenbank* und einer *Zieldatenbank* vergleichen und angeben, welche Tabellen verglichen werden sollen. Anschließend können Sie die Daten prüfen und entscheiden, welche Änderungen Sie synchronisieren möchten. Sie können entweder das Ziel aktualisieren, um die Datenbanken zu synchronisieren, oder das Updateskript in den Transact\-SQL-Editor oder in eine Datei exportieren.  
   
 So können Sie beispielsweise Datenbanken synchronisieren, um einen Stagingserver mit einer Kopie der Produktionsdaten zu aktualisieren. Auch können Sie einzelne oder mehrere Tabellen synchronisieren, um sie mit Referenzdaten aus einer anderen Datenbank zu versehen. Darüber hinaus können Sie Daten vor und nach dem Ausführen von Tests vergleichen, um einen zusätzlichen Überprüfungsschritt einzubauen.  
@@ -30,7 +31,7 @@ Dieser Abschnitt enthält die folgenden Themen:
   
 -   [Vorgehensweise: Anzeigen von Datenunterschieden](../ssdt/how-to-view-data-differences.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Bei einem Vergleich der Daten in einer Tabelle oder Sicht muss die Tabelle oder Sicht in der Quelldatenbank einige Attribute mit einer Tabelle oder Sicht in der Zieldatenbank gemeinsam haben. Tabellen und Sichten, die die folgenden Kriterien nicht erfüllen, werden nicht verglichen und auch nicht auf der zweiten Seite des Assistenten **Neuer Datenvergleich** angezeigt:  
   
 -   Tabellen müssen übereinstimmende Spaltennamen mit kompatiblen Datentypen enthalten.  
@@ -55,9 +56,9 @@ In diesem Abschnitt werden allgemeine Aufgaben für dieses Szenario beschrieben.
 ## <a name="UnderstandingDataCompareResults"></a>Grundlegendes zu Vergleichsergebnissen  
 In der folgenden Tabelle werden die fünf Spalten im Fenster **Datenvergleich** beschrieben.  
   
-|Spalte|Hinweise|  
+|Column|Notizen|  
 |----------|---------|  
-|Objekt|Enthält den Namen der Tabelle oder Sicht sowie ein Kontrollkästchen, mit dem angegeben wird, ob das Ziel beim Schreiben von Updates oder beim Exportieren des Updateskripts synchronisiert werden soll. Bei Tabellen oder Sichten ohne Daten ist das Kontrollkästchen nicht verfügbar.|  
+|Object|Enthält den Namen der Tabelle oder Sicht sowie ein Kontrollkästchen, mit dem angegeben wird, ob das Ziel beim Schreiben von Updates oder beim Exportieren des Updateskripts synchronisiert werden soll. Bei Tabellen oder Sichten ohne Daten ist das Kontrollkästchen nicht verfügbar.|  
 |Unterschiedliche Datensätze|Enthält die Anzahl der Datensätze im Ziel, die zwar den gleichen Schlüssel wie die Quelle besitzen, nicht aber die gleichen Daten. Die Anzahl der Datensätze, die markiert sind, um beim Schreiben von Updates oder beim Exportieren des Updateskripts aktualisiert zu werden, ist in Klammern angegeben.|  
 |Nur in der Quelle|Enthält die Anzahl der Datensätze in der Quelle, die nicht im Ziel enthalten sind. Die Anzahl der Datensätze, die markiert sind, um beim Schreiben von Updates oder beim Exportieren des Updateskripts hinzugefügt zu werden, ist in Klammern angegeben.|  
 |Nur im Ziel|Enthält die Anzahl der Datensätze im Ziel, die nicht in der Quelle enthalten sind. Die Anzahl der Datensätze, die markiert sind, um beim Schreiben von Updates oder beim Exportieren des Updateskripts gelöscht zu werden, ist in Klammern angegeben.|  

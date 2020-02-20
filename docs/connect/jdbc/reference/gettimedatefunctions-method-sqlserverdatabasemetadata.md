@@ -1,5 +1,5 @@
 ---
-title: gettimedatefunctions-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getTimeDateFunctions-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a56e08ae-6f4e-4dc6-b175-ff457d0d7a81
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6264c962f843a8e7b05c0d3fd0297bb1e4a8fdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978951"
 ---
 # <a name="gettimedatefunctions-method-sqlserverdatabasemetadata"></a>getTimeDateFunctions-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public java.lang.String getTimeDateFunctions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese gettimedatefunctions-Methode wird von der gettimedatefunctions-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getTimeDateFunctions-Methode wird von der getTimeDateFunctions-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

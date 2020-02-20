@@ -1,20 +1,21 @@
 ---
-title: Unterstützung für aktuelle Branch-Versionen des Report Viewer
+title: Unterstützung für Report Viewer-Versionen
+description: Das Steuerelement „Microsoft Report Viewer“ ist mit SQL Server Reporting Services und dem Power BI-Berichtsserver kompatibel, die sich nach der aktuellen Microsoft Lifecycle-Supportrichtlinie richten.
 author: maggiesMSFT
+ms.custom: ''
 ms.author: maggies
 ms.reviewer: jonhp
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.custom: ''
 ms.date: 01/09/2019
-ms.openlocfilehash: b67b62ae0155355d4bd13ce67880c6fa3c5ed002
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 66691267ecdd2814cc84b2bfe544acce1d17ae82
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266936"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796871"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Unterstützung für aktuelle Branch-Versionen des Report Viewer
 

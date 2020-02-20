@@ -1,8 +1,10 @@
 ---
-title: Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
-ms.date: 05/31/2016
+title: Konfigurieren des unbeaufsichtigten Ausführungskontos (Konfigurations-Manager) | Microsoft-Dokumentation
+description: Reporting Services stellen ein besonderes Konto bereit, das für die unbeaufsichtigte Berichtsverarbeitung und zum Senden von Verbindungsanforderungen über das Netzwerk verwendet wird.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -15,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593313"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866317"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt ein besonderes Konto bereit, das für die unbeaufsichtigte Berichtsverarbeitung und zum Senden von Verbindungsanforderungen über das Netzwerk verwendet wird. Das Konto wird bei folgenden Vorgängen verwendet:  
@@ -32,16 +34,16 @@ ms.locfileid: "73593313"
  Mit unbeaufsichtigter Berichtsverarbeitung wird jede Berichtsausführung bezeichnet, die durch ein Ereignis (entweder ein geplantes Ereignis oder ein Datenaktualisierungsereignis) und nicht durch eine Benutzeranforderung ausgelöst wird. Der Berichtsserver verwendet das Konto für die unbeaufsichtigte Berichtsverarbeitung, um sich am Computer anzumelden, der die externe Datenquelle hostet. Dieses Konto ist erforderlich, da die Anmeldeinformationen des für den Berichtsserver verwendeten Dienstkontos nie für Verbindungen mit anderen Computern verwendet werden.  
   
 > [!IMPORTANT]  
->  Das Konfigurieren des Kontos ist optional. Wenn Sie es jedoch nicht konfigurieren, beschränken Sie die Möglichkeiten zur Verbindung mit einigen Datenquellen und können möglicherweise keine Imagedateien von Remotecomputern abrufen. Wenn Sie das Konto konfigurieren, müssen Sie es auf dem neuesten Stand halten. Besonders, wenn Sie das Ablaufen eines Kennworts zulassen oder wenn die Kontoinformationen in Active Directory geändert werden, tritt bei der nächsten Verarbeitung eines Berichts der folgende Fehler auf: "Fehler bei der Anmeldung (rsLogonFailed) Anmeldefehler: unbekannter Name oder falsches Kennwort." Die ordnungsgemäße Verwaltung des Kontos für die unbeaufsichtigte Berichtsverarbeitung ist wesentlich, auch wenn Sie nie externe Images abrufen oder Verbindungsanforderungen an externe Computer senden. Wenn Sie das Konto konfigurieren und dann doch nicht verwenden, können Sie es löschen und so routinemäßige Kontoverwaltungsaufgaben vermeiden.  
+>  Das Konfigurieren des Kontos ist optional. Wenn Sie es jedoch nicht konfigurieren, beschränken Sie die Möglichkeiten zur Verbindung mit einigen Datenquellen und können möglicherweise keine Imagedateien von Remotecomputern abrufen. Wenn Sie das Konto konfigurieren, müssen Sie es auf dem neuesten Stand halten. Beim nächsten Verarbeiten eines Berichts tritt insbesondere dann der folgende Fehler auf, wenn Sie das Ablaufen eines Kennworts zulassen oder die Kontoinformationen in Active Directory geändert werden: "Logon failed (rsLogonFailed) Logon failure: unknown user name or bad password." (Fehler bei der Anmeldung (rsLogonFailed) Anmeldefehler: Unbekannter Benutzername oder falsches Kennwort.) Die ordnungsgemäße Verwaltung des Kontos für die unbeaufsichtigte Berichtsverarbeitung ist wesentlich, auch wenn Sie nie externe Images abrufen oder Verbindungsanforderungen an externe Computer senden. Wenn Sie das Konto konfigurieren und dann doch nicht verwenden, können Sie es löschen und so routinemäßige Kontoverwaltungsaufgaben vermeiden.  
   
 ## <a name="how-to-configure-the-account"></a>Konfigurieren des Kontos  
  Sie müssen ein Domänenbenutzerkonto verwenden. Damit das Konto seinen Zweck erfüllt, sollte es nicht mit dem Konto identisch sein, unter dem Report Server-Webdienst ausgeführt wird. Verwenden Sie unbedingt ein Konto mit minimalen Berechtigungen (Nur-Lese-Zugriff mit Berechtigungen für Netzwerkverbindungen ist ausreichend) und eingeschränktem Zugriff auf die Computer, die Datenquellen und Ressourcen für den Berichtsserver bereitstellen.  
   
  Verwenden Sie zum Angeben des Kontos das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool oder das Hilfsprogramm **rsconfig** . Das einfachste Verfahren zum Konfigurieren des Kontos für die unbeaufsichtigte Ausführung besteht darin, das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool auszuführen und die Anmeldeinformationen auf der Seite Ausführungskonto anzugeben.  
   
-1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationstool, und stellen Sie eine Verbindung zu der zu konfigurierenden Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool, und stellen Sie eine Verbindung zu der zu konfigurierenden Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Wählen Sie auf der Seite „Ausführungskonto“ die Option **Ausführungskonto angeben** aus.  
+2.  Wählen Sie auf der Seite „Ausführungskonto“ die Option **Ausführungskonto angeben**aus.  
   
 3.  Geben Sie das Konto und das Kennwort ein, geben Sie das Kennwort erneut ein, und klicken Sie anschließend auf **Anwenden**.  
   
@@ -50,7 +52,7 @@ ms.locfileid: "73593313"
   
 1.  Erstellen Sie ein Domänenkonto, oder wählen Sie ein Domänenkonto aus, das auf Computer und Server zugreifen kann, die Daten oder Dienste für einen Berichtsserver bereitstellen. Sie sollten ein Konto verwenden, das über beschränkte Berechtigungen verfügt (z. B. Nur-Lese-Zugriff).  
   
-2.  Öffnen Sie eine Eingabeaufforderung: Klicken Sie im **Startmenü** auf **Ausführen**, geben Sie **cmd**ein, und klicken Sie anschließend auf **OK**.  
+2.  Öffnen Sie eine Eingabeaufforderung: Klicken Sie im Menü **Start** auf **Ausführen**, geben Sie **cmd** ein, und klicken Sie dann auf **OK**.  
   
 3.  Geben Sie den folgenden Befehl ein, um das Konto in einer lokalen Berichtsserverinstanz zu konfigurieren:  
   

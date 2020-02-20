@@ -9,10 +9,10 @@ ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8aedfd50c591f3a8aef4855854eed760ce093a7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580628"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Mehrere Reihen in einem Diagramm (Berichts-Generator und SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "65580628"
 ## <a name="using-chart-areas"></a>Verwenden von Diagrammflächen  
  Das Diagramm stellt den Container der obersten Ebene dar, der den äußeren Rahmen, den Diagrammtitel und die Legende enthält. Standardmäßig wird im Diagramm eine Diagrammfläche angezeigt. Die Diagrammfläche ist auf der Diagrammoberfläche nicht sichtbar. Sie können sich diese jedoch als Container vorstellen, in dem lediglich die Achsenbezeichnungen, der Achsentitel und der Zeichnungsbereich einer oder mehrerer Reihen enthalten sind. In der folgenden Abbildung wird das Konzept der Diagrammflächen in einem einzelnen Diagramm veranschaulicht.  
   
- ![Ein Diagramm einer Diagrammfläche](../../reporting-services/report-design/media/chartareasdiagram.gif "Shows a diagram of a chart area")  
+ ![Diagramm eines Diagrammbereichs](../../reporting-services/report-design/media/chartareasdiagram.gif "Diagramm eines Diagrammbereichs")  
   
  Im Dialogfeld **Diagrammflächeneigenschaften** können Sie die 2D- und 3D-Ausrichtung aller auf der Diagrammfläche enthaltenen Reihen angeben, mehrere Diagrammflächen in einem Diagramm ausrichten und die Farben des Zeichnungsbereichs formatieren. Wenn eine neue Diagrammfläche in einem Diagramm definiert wird, das nur eine Standarddiagrammfläche enthält, wird der für eine Diagrammfläche verfügbare Platz horizontal durch 2 dividiert, und die neue Diagrammfläche wird unterhalb der ersten Diagrammfläche platziert.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65580628"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
  [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
   
   

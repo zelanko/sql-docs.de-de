@@ -1,5 +1,5 @@
 ---
-title: gettypeingefo-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getTypeInfo-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978515"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo-Methode (SQLServerDatabaseMetaData)
@@ -45,7 +45,7 @@ public java.sql.ResultSet getTypeInfo()
   
  Das von der getTypeInfo-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
 |DATA_TYPE|**short**|Der SQL-Datentyp aus "java.sql.Types".|  
@@ -53,9 +53,9 @@ public java.sql.ResultSet getTypeInfo()
 |LITERAL_PREFIX|**String**|Die Zeichen, die einer Konstante vorangestellt werden.|  
 |LITERAL_SUFFIX|**String**|Die Zeichen, die eine Konstante beenden.|  
 |CREATE_PARAMS|**String**|Die Beschreibung der Erstellungsparameter für den Datentyp.|  
-|NULLABLE|**short**|Gibt an, ob die Spalte einen NULL-Wert enthalten kann. Mögliche Werte:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
+|NULLABLE|**short**|Gibt an, ob die Spalte einen NULL-Wert enthalten kann. Es kann sich um einen der folgenden Werte handeln:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|Gibt an, ob bei dem Datentyp die Groß-/Kleinschreibung berücksichtigt wird. **TRUE**, wenn die Groß-/Kleinschreibung vom Typ berücksichtigt wird, andernfalls **FALSE**.|  
-|SEARCHABLE|**short**|Gibt an, ob die Spalte in einer SQL-Klausel vom Typ "WHERE" verwendet werden kann. Mögliche Werte:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|SEARCHABLE|**short**|Gibt an, ob die Spalte in einer SQL-Klausel vom Typ "WHERE" verwendet werden kann. Es kann sich um einen der folgenden Werte handeln:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|Gibt das Vorzeichen des Datentyps an. **TRUE**, wenn der Typ kein Vorzeichen besitzt, andernfalls **FALSE**.|  
 |FIXED_PREC_SCALE|**boolean**|Gibt an, dass es sich bei dem Datentyp um eine Währung handeln kann. **TRUE**, wenn es sich bei dem Datentyp um eine Währung handelt, andernfalls **FALSE**.|  
 |AUTO_INCREMENT|**boolean**|Gibt an, dass der Datentyp automatisch inkrementiert werden kann. **TRUE**, wenn der Typ automatisch inkrementiert werden kann, andernfalls **FALSE**.|  

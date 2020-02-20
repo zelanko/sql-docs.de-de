@@ -16,10 +16,10 @@ ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38e5a31ccaf493a8800f0e15abd1c21424db07c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954813"
 ---
 # <a name="executequery-method-javalangstring"></a>executeQuery-Methode (java.lang.String)
@@ -52,7 +52,7 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
   
  Durch den Aufruf dieser Methode wird eine Ausnahme ausgelöst, da die SQL-Anweisung für das SQLServerPreparedStatement-Objekt bei der Erstellung des Objekts angegeben wird.  
   
- [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) wird ausgelöst, wenn die angegebene SQL-Anweisung nichts anderes als ein einzelnes [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) -Objekt erzeugt.  
+ [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) wird ausgelöst, wenn die angegebene SQL-Anweisung etwas anderes als ein einzelnes [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt erzeugt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [executeQuery-Methode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   

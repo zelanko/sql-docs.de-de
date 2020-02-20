@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68136530"
 ---
 # <a name="sql-server-2012-release-notes"></a>Versionsanmerkungen zu SQL Server 2012
@@ -69,7 +69,7 @@ oder
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**Problemumgehung:** Dieser Fehler kann auftreten, wenn SQL Server Engine oder Analysis Services nicht installiert werden können. Informieren Sie sich in den Setupprotokollen von SQL Server, um Probleme mit SQL Server Engine und Analysis Services zu behandeln und den Fehler zu beheben. Weitere Informationen finden Sie unter "Lesen und Anzeigen der Setupprotokolldateien von SQL Server". Weitere Informationen finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+**Problemumgehung:** Dieser Fehler kann auftreten, wenn SQL Server Engine oder Analysis Services nicht installiert werden können. Informieren Sie sich in den Setupprotokollen von SQL Server, um Probleme mit SQL Server Engine und Analysis Services zu behandeln und den Fehler zu beheben. Weitere Informationen finden Sie unter "Lesen und Anzeigen der Setupprotokolldateien von SQL Server". Weitere Informationen finden Sie unter [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 Ein Failoverclusterupgrade von SQL Server 2008 oder 2008 R2 Analysis Services auf SQL Server 2012 verursacht nach der Umbenennung des Netzwerks u. U. einen Fehler  
 **Problem:** Nachdem der Netzwerkname einer Microsoft SQL Server 2008- oder 2008 R2 Analysis Services-Failoverclusterinstanz mit dem Windows-Clusterverwaltungstool umbenannt wurde, verursacht der Upgradevorgang ggf. einen Fehler.  
@@ -246,7 +246,7 @@ Weitere Informationen zum Reparieren einer SQL Server-Instanz finden Sie unter [
   
 **Problemumgehung:** Um dieses Problem zu beheben, verwenden Sie während der Neuinstallation einen anderen Instanznamen, oder löschen Sie die Ressourcengruppe vor der Neuinstallation manuell. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="AS"></a>2.0 Analysis Services  
   
@@ -291,9 +291,9 @@ Bei der Arbeit mit tabellarischen Modellen verursacht der AS-Verarbeitungstask P
   
 **Problem:** Einige Konfigurationsoptionen im Tool treffen nicht zu. Beispielsweise sollte Verbundene Objekte verarbeiten beim Verarbeiten von Partitionen nicht verwendet werden, und die Konfigurationsoption Parallelverarbeitung enthält eine ungültige Fehlermeldung, die angibt, dass die Parallelverarbeitung in der Standard-SKU nicht unterstützt wird.  
   
-**Problemumgehung:** None  
+**Problemumgehung:** Keine  
   
-![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="BOL"></a>3.0 Onlinedokumentation  
   
@@ -315,7 +315,7 @@ Bei der Arbeit mit tabellarischen Modellen verursacht der AS-Verarbeitungstask P
     netsh http add urlacl url=https://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
     ```  
   
-![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="DQS"></a>4.0 Data Quality Services  
   
@@ -332,7 +332,7 @@ Bei der Arbeit mit tabellarischen Modellen verursacht der AS-Verarbeitungstask P
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 Die Anzeige einer beendeten Wissensermittlung oder interaktiven Bereinigungsaktivität ist zeitverzögert  
 **Problem:** Beendet ein Administrator eine Aktivität im Bildschirm „Aktivitätsüberwachung“, wird das Ende der Aktivität einem interaktiven Benutzer, der die Wissensermittlung, Domänenverwaltung oder interaktive Bereinigungsaktivität ausführt, erst dann angezeigt, wenn er den nächsten Vorgang ausführt.  
   
-**Problemumgehung:** None  
+**Problemumgehung:** Keine  
   
 ### <a name="44-a-cancel-operation-discards-work-from-multiple-activities"></a>4.4 Bei einem Abbruchvorgang kann Arbeit aus mehreren Aktivitäten verworfen werden  
 **Problem:** Wenn Sie für eine ausgeführte Wissensermittlungs- oder Domänenverwaltungsaktivität auf **Abbrechen** klicken und andere Aktivitäten zuvor abgeschlossen wurden, ohne dass ein Veröffentlichungsvorgang während der Aktivität ausgeführt wurde, wird die Arbeit aus allen seit der letzten Veröffentlichung ausgeführten Aktivitäten verworfen, nicht nur die der aktuellen Aktivität.  
@@ -392,7 +392,7 @@ Wenn Sie in einem Data Quality-Bereinigungsprojekt ein Feld in den Quelldaten ei
   
 -   Entfernen Sie die Daten aus allen Spalten auf Spalte 255 folgenden Spalten aus der XLS-Datei, speichern Sie die Datei, und importieren Sie dann die Werte aus der XLS-Datei in eine Domäne.  
   
-### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqsadministrator"></a>4.16 Die Funktion für die Aktivitätsüberwachung ist für andere Rollen als "dqs_administrator" nicht verfügbar  
+### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqs_administrator"></a>4.16 Die Funktion für die Aktivitätsüberwachung ist für andere Rollen als "dqs_administrator" nicht verfügbar  
 Die Funktion für die Aktivitätsüberwachung ist nur für Benutzer mit der Rolle dqs_administrator verfügbar. Wenn Ihrem Benutzerkonto die Rolle dqs_kb_editor oder dqs_kb_operator zugewiesen ist, ist die Funktion für die Aktivitätsüberwachung in der Data Quality-Clientanwendung nicht verfügbar.  
   
 ### <a name="417-error-on-opening-a-knowledge-base-in-the-recent-knowledge-base-list-for-domain-management"></a>4.17 Wenn eine Wissensdatenbank für die Domänenverwaltung in der Liste "Zuletzt verwendete Wissensdatenbank" geöffnet wird, tritt ein Fehler auf  
@@ -429,7 +429,7 @@ Dies wird an einem Beispiel deutlich. Im Beispiel wird der Benutzer "Domain\user
 > [!NOTE]  
 > Um dieses Problem zu vermeiden, verwenden Sie zur Angabe des Benutzerkontos für die Anmeldung beim Data Quality-Clientcomputer konsistente Regeln für die Groß-/Kleinschreibung.  
   
-![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="DE"></a>5.0 Database Engine (Datenbankmodul)  
   
@@ -475,7 +475,7 @@ Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 Das neue Layout für Wartungspläne ist mit früheren SQL Server-Tools nicht kompatibel  
 **Problem:** Wenn Sie mit den SQL Server 2012-Verwaltungstools einen vorhandenen Wartungsplan aus einer vorherigen Version der SQL Server-Verwaltungstools (SQL Server 2008 R2, SQL Server 2008 oder SQL Server 2005) ändern, wird der Wartungsplan in einem neuen Format gespeichert. Frühere Versionen der SQL Server-Verwaltungstools unterstützen dieses neue Format nicht.  
   
-**Problemumgehung**: None  
+**Problemumgehung**: Keine  
   
 ### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 Die IntelliSense-Funktionalität ist nach der Anmeldung bei einer eigenständigen Datenbank eingeschränkt  
 Problem: IntelliSense funktioniert in SQL Server Management Studio (SSMS) und SQL Server Data Tools (SSDT) nicht erwartungsgemäß, wenn eigenständige Benutzer bei eigenständigen Datenbanken angemeldet sind. In diesen Fällen tritt das folgende Verhalten auf:  
@@ -486,7 +486,7 @@ Problem: IntelliSense funktioniert in SQL Server Management Studio (SSMS) und SQ
   
 3.  Die QuickInfo-Hilfe für integrierte Funktionen wird nicht ausgeführt.  
   
-**Problemumgehung**:  None  
+**Problemumgehung**:  Keine  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 AlwaysOn-Verfügbarkeitsgruppen  
 Bevor Sie eine Verfügbarkeitsgruppe erstellen, lesen Sie den Abschnitt [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](https://go.microsoft.com/?linkid=9753168) in der Onlinedokumentation. Eine Einführung in AlwaysOn-Verfügbarkeitsgruppen finden Sie unter [AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](https://go.microsoft.com/?linkid=9753166)in der Onlinedokumentation.  
@@ -504,7 +504,7 @@ In der folgenden Tabelle ist die Treiberunterstützung für AlwaysOn-Verfügbark
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Ja|Ja|Ja|Ja|Ja|  
 |SQL Native Client 11.0 OLEDB|Nein|Ja|Ja|Nein|Nein|  
-|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch **\&#42;**|Ja|Ja|Ja|Ja|Benutzerkontensteuerung|  
+|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch **\&#42;**|Ja|Ja|Ja|Ja|Ja|  
 |ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|Ja|Ja|Ja|Ja|Ja|  
 |Microsoft JDBC-Treiber 4.0 für SQL Server|Ja|Ja|Ja|Ja|Ja|  
   
@@ -576,7 +576,7 @@ Dies ist eine Einschränkung des CTP3-Builds. Diese Einschränkung wird in zukü
 #### <a name="577-netbios-conflicts-because-availability-group-listener-names-use-an-identical-15-character-prefix"></a>5.7.7 NetBIOS-Konflikte, da Namen von Verfügbarkeitsgruppenlistenern ein identisches 15-Zeichen-Präfix verwenden  
 Wenn Sie zwei WSFC-Cluster verwenden, die vom gleichen Active Directory gesteuert werden, und Sie versuchen, Verfügbarkeitsgruppenlistener in beiden Clustern mit Namen mit mehr als 15 Zeichen und einem identischen 15-Zeichen-Präfix zu erstellen, erhalten Sie eine Fehlermeldung mit dem Hinweis, dass die VNN-Ressource nicht online geschaltet werden konnte. Informationen zu Präfixbenennungsregeln für DNS-Namen finden Sie unter [Zuweisen von Domänennamen](https://technet.microsoft.com/library/cc731265(WS.10).aspx).  
   
-![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="IS"></a>6.0 Integration Services  
   
@@ -593,7 +593,7 @@ CDC Service für Oracle ist ein Windows-Dienst, der Oracle-Transaktionsprotokoll
   
 **Problemumgehung:** Die richtigen CHM-Dateien werden zusammen mit CDC Service für Oracle und CDC Designer für Oracle installiert. Um die richtigen Hilfeinhalte anzuzeigen, starten Sie die CHM-Dateien direkt vom folgenden Ort: `%Program Files%\Change Data Capture for Oracle by Attunity\*.chm`.  
   
-![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="MDS"></a>7.0 Master Data Services  
   
@@ -613,19 +613,19 @@ Weitere Informationen zu diesen Problemen sowie zum Ausführen der oben angegebe
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 Microsoft Silverlight 5 ist erforderlich  
 Um in der Master Data Manager-Webanwendung arbeiten zu können, muss Silverlight 5.0 auf dem Clientcomputer installiert sein. Falls Sie nicht über die erforderliche Version von Silverlight verfügen, werden Sie aufgefordert, diese zu installieren, wenn Sie zu einem Bereich der Webanwendung navigieren, in dem sie erforderlich ist. Sie können Silverlight 5 von [https://go.microsoft.com/fwlink/?LinkId=243096](https://go.microsoft.com/fwlink/?LinkId=243096) installieren.  
   
-![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="RS"></a>8.0 Reporting Services  
   
 ### <a name="81-reporting-services-connectivity-to-sql-server-pdw-requires-updated-drivers"></a>8.1 Reporting Services-Verbindungen mit SQL Server-PDW erfordern aktualisierte Treiber  
 Verbindungen von SQL Server 2012 Reporting Services mit Microsoft SQL Server PDW Appliance Update 2 und höher erfordern, dass die PDW-Verbindungstreiber aktualisiert werden. Weitere Informationen erhalten SQL Server-PDW-Kunden von Microsoft Support Services.  
   
-![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
 SQL Server 2012 enthält StreamInsight 2.0. StreamInsight 2.0 erfordert eine Microsoft SQL Server 2012-Lizenz sowie .NET Framework 4.0. Die Software umfasst eine Reihe von Leistungsverbesserungen und Programmfehlerbehebungen. Weitere Informationen finden Sie in den [Versionsanmerkungen zu Microsoft StreamInsight 2.0](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Um StreamInsight 2.0 separat herunterzuladen, besuchen Sie die [Microsoft StreamInsight 2.0-Downloadseite](https://go.microsoft.com/fwlink/?LinkId=241593) im Microsoft Download Center.  
   
-![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="UA"></a>10.0 Upgrade Advisor  
   
@@ -634,5 +634,5 @@ Problem: Beim Versuch, Upgrade Advisor auf einer unterstützten Windows-Version 
   
 **Problemumgehung**: Suchen Sie die Datei **SQLUA.msi** auf den SQL Server 2012-Medien unter `\1028_CHT_LP\x64\redist\Upgrade Advisor` oder `\1028_CHT_LP\x86\redist\Upgrade Advisor`, je nach Architektur des Betriebssystems.  
   
-![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
+![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

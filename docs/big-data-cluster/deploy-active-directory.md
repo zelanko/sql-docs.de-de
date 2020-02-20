@@ -5,18 +5,18 @@ description: Erfahren Sie, wie Sie für einen SQL Server-Big Data-Cluster in ein
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127440"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253110"
 ---
-# <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus
+# <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -49,7 +49,7 @@ Dieses Benutzerkonto wird im vorliegenden Artikel als *BDC-Domänendienstkonto* 
 
 ### <a name="creating-an-ou"></a>Erstellen einer Organisationseinheit
 
-Öffnen Sie auf dem Domänencontroller **Active Directory-Benutzer und -Computer**. Klicken Sie im linken Bereich mit der rechten Maustaste auf das Verzeichnis, in dem Sie Ihre OE erstellen möchten. Wählen Sie **Neu –\> Organisationseinheit** aus, und folgenden Sie den Anweisungen des Assistenten, um die OE zu erstellen. Alternativ können Sie eine OE mithilfe von PowerShell erstellen:
+Öffnen Sie auf dem Domänencontroller **Active Directory-Benutzer und -Computer**. Klicken Sie im linken Bereich mit der rechten Maustaste auf das Verzeichnis, in dem Sie Ihre OE erstellen möchten, klicken Sie dann auf „Neu \> **Organisationseinheit**“, und folgen Sie den Anweisungen des Assistenten, um die OE zu erstellen. Alternativ können Sie eine OE mithilfe von PowerShell erstellen:
 
 ```powershell
 New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the directory you wish to create the OU in>"
@@ -109,7 +109,7 @@ Das BDC-Domänendienstkonto muss in der Lage sein, Benutzer-, Gruppen- und Compu
        - **Benutzerobjekte erstellen**
        - **Benutzerobjekte löschen**
 
-    - Klicken Sie auf **OK**.
+    - Klicken Sie auf **OK**
 
 - Klicken Sie auf **Hinzufügen**.
 
@@ -123,7 +123,7 @@ Das BDC-Domänendienstkonto muss in der Lage sein, Benutzer-, Gruppen- und Compu
 
     - Scrollen Sie zurück nach oben, und wählen Sie **Kennwort zurücksetzen** aus.
 
-    - Klicken Sie auf **OK**.
+    - Klicken Sie auf **OK**
 
 - Klicken Sie auf **Hinzufügen**.
 
@@ -137,7 +137,7 @@ Das BDC-Domänendienstkonto muss in der Lage sein, Benutzer-, Gruppen- und Compu
 
     - Scrollen Sie zurück nach oben, und wählen Sie **Kennwort zurücksetzen** aus.
 
-    - Klicken Sie auf **OK**.
+    - Klicken Sie auf **OK**
 
 - Klicken Sie zweimal auf **OK**, um die offenen Dialogfelder zu schließen.
 
@@ -160,7 +160,7 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 ## <a name="provide-security-and-endpoint-parameters"></a>Angeben von Sicherheits- und Endpunktparametern
 
-Zusätzlich zu den Umgebungsvariablen für die Anmeldeinformationen müssen Sie Sicherheits- und Endpunktinformationen angeben, damit die AD-Integration funktioniert. Die benötigten Parameter sind im [Bereitstellungsprofil](deployment-guidance.md#configfile) `kubeadm-prod` bereits enthalten.
+Zusätzlich zu den Umgebungsvariablen für die Anmeldeinformationen müssen Sie Sicherheits- und Endpunktinformationen angeben, damit die AD-Integration funktioniert. Die erforderlichen Parameter sind im `kubeadm-prod`-[Bereitstellungsprofil](deployment-guidance.md#configfile) bereits enthalten.
 
 Für die AD-Integration sind die folgenden Parameter erforderlich. Fügen Sie diese Parameter zu den Dateien `control.json` und `bdc.json` hinzu, indem Sie die später in diesem Artikel beschriebenen `config replace`-Befehle verwenden. In allen nachstehenden Beispielen wird die Domäne `contoso.local` verwendet.
 
@@ -174,13 +174,16 @@ Für die AD-Integration sind die folgenden Parameter erforderlich. Fügen Sie di
 
 - `security.domainDnsName`: Name Ihrer Domäne (z. B. `contoso.local`).
 
-- `security.clusterAdmins`: Dieser Parameter akzeptiert *eine* AD-Gruppe. Mitglieder dieser Gruppe erhalten Administratorberechtigungen im Cluster. Dies bedeutet, dass Mitglieder sysadmin-Berechtigungen in SQL Server, superuser-Berechtigungen in HDFS und Administratorberechtigungen im Controller erhalten.
+- `security.clusterAdmins`: Dieser Parameter akzeptiert **eine AD-Gruppe**. Mitglieder dieser Gruppe erhalten Administratorberechtigungen im Cluster. Das bedeutet, dass Mitglieder sysadmin-Berechtigungen in SQL Server, superuser-Berechtigungen in HDFS und Administratorberechtigungen im Controller erhalten. **Beachten Sie, dass diese Gruppe in AD vorhanden sein muss, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppe nicht in Active Directory auf DomainLocal begrenzt werden kann. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
 
-- `security.clusterUsers`: Liste der AD-Gruppen, die als reguläre Benutzer (ohne Administratorberechtigungen) im Big Data-Cluster fungieren.
+- `security.clusterUsers`: Liste der AD-Gruppen, die als reguläre Benutzer (ohne Administratorberechtigungen) im Big Data-Cluster fungieren. **Beachten Sie, dass diese Gruppen in AD vorhanden sein müssen, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppen nicht in Active Directory auf DomainLocal begrenzt werden können. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
 
-- **Optionaler Parameter** `security.appOwners`: Liste der AD-Gruppen, die über Berechtigungen zum Erstellen, Löschen und Ausführen beliebiger Anwendungen verfügen.
+- **Optionaler Parameter** `security.appOwners`: Liste der AD-Gruppen, die über Berechtigungen zum Erstellen, Löschen und Ausführen beliebiger Anwendungen verfügen. **Beachten Sie, dass diese Gruppen in AD vorhanden sein müssen, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppen nicht in Active Directory auf DomainLocal begrenzt werden können. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
 
-- **Optionaler Parameter** `security.appReaders`: Liste der AD-Benutzer oder -Gruppen, die über Berechtigungen zum Ausführen einer beliebigen Anwendung verfügen. 
+- **Optionaler Parameter** `security.appReaders`: Dieser Parameter ist eine Liste der AD-Gruppen, die über Berechtigungen zum Ausführen einer beliebigen Anwendung verfügen. **Beachten Sie, dass diese Gruppen in AD vorhanden sein müssen, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppen nicht in Active Directory auf DomainLocal begrenzt werden können. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
+
+**Überprüfen des AD-Gruppenbereichs:** 
+ Anweisungen zum Überprüfen des Bereichs einer AD-Gruppe, um zu ermitteln, ob sie auf DomainLocal begrenzt ist, finden Sie [hier](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
 
 Wenn Sie Konfigurationsdatei für die Bereitstellung noch nicht initialisiert haben, können Sie diesen Befehl ausführen, um eine Kopie der Konfiguration abzurufen.
 
@@ -199,6 +202,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dom
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
 Zusätzlich zu den Informationen oben müssen Sie DNS-Namen für die verschiedenen Clusterendpunkte angeben. Die DNS-Einträge mit den angegebenen DNS-Namen werden während der Bereitstellung automatisch in Ihrem DNS-Server erstellt. Sie verwenden diese Namen, wenn Sie eine Verbindung mit den verschiedenen Clusterendpunkten herstellen. Wenn der DNS-Name für die SQL-Masterinstanz beispielsweise `mastersql` lautet, verwenden Sie `mastersql.contoso.local,31433`, um von den Tools aus eine Verbindung mit der Masterinstanz herzustellen.
@@ -293,3 +297,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - Der sichere AD-Modus funktioniert aktuell nur für `kubeadm`-Bereitstellungsumgebungen, nicht für AKS. Das Bereitstellungsprofil `kubeadm-prod` umfasst standardmäßig die Sicherheitsabschnitte.
 
 - Pro Domäne ist aktuell nur ein BDC zugelassen. Die Aktivierung mehrerer BDCs pro Domäne ist für eine zukünftige Version geplant.
+
+- Keine der AD-Gruppen, die in Sicherheitskonfigurationen angegeben werden, können auf DomainLocal begrenzt werden. Sie können den Bereich einer AD-Gruppe überprüfen, indem Sie [diese Anweisungen befolgen](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

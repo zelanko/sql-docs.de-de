@@ -16,10 +16,10 @@ ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e1f13c3fedc3cfaa0645eec5a769ed482b339563
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975999"
 ---
 # <a name="previous-method-sqlserverresultset"></a>previous-Methode (SQLServerResultSet)
@@ -35,13 +35,13 @@ public boolean previous()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn die neue aktuelle Zeile gültig ist. **false** , wenn keine weiteren zu verarbeitenden Zeilen vorhanden sind.  
+ Der Wert **TRUE** wird zurückgegeben, wenn die neue aktuelle Zeile gültig ist. Wenn keine weiteren zu verarbeitenden Zeilen vorhanden sind, wird der Wert **FALSE** zurückgegeben.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese vorherige Methode wird von der vorherigen Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese previous-Methode wird von der previous-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

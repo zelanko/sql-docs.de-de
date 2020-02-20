@@ -18,13 +18,13 @@ ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13c4f2534ec49c1d3467045d778e0c446f972573
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992849"
 ---
-# <a name="sqlsrvcommit"></a>Sqlsrv_commit
+# <a name="sqlsrv_commit"></a>Sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Überträgt die aktuelle Transaktion auf der angegebenen Verbindung, und gibt die Verbindung im Autocommit-Modus zurück. Die aktuelle Transaktion enthält alle Anweisungen für die angegebene Verbindung, die nach dem Aufruf von [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) und vor allen Aufrufen von [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) oder **sqlsrv_commit**ausgeführt wurden.  
@@ -43,7 +43,7 @@ sqlsrv_commit( resource $conn )
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$conn*: Die Verbindung, auf der die Transaktion aktiv ist.  
+*$conn:* Die Verbindung, auf der die Transaktion aktiv ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Ein boolescher Wert: **true** , wenn die Transaktion erfolgreich übertragen wurde. Andernfalls lautet der Wert **false**.  
@@ -126,7 +126,7 @@ Für die Überwachung des Transaktionsverhaltens ist eine empfohlene Fehlerbehan
 ## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Gewusst wie: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
+[Vorgehensweise: Durchführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
 
 [Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md)
   

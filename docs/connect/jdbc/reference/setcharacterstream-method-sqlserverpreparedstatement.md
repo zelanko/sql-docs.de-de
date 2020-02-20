@@ -1,5 +1,5 @@
 ---
-title: setcharakteristream-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: setCharacterStream-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: fe13326b-799d-4bf3-b4f1-32ab1841d0ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5136e4502b3101bfe53998cbf268962e2761d574
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974826"
 ---
 # <a name="setcharacterstream-method-sqlserverpreparedstatement"></a>setCharacterStream-Methode (SQLServerPreparedStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67974826"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setCharacterStream-Methode &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)|Legt den angegebenen Parameter auf das angegebene java.io.Reader-Objekt fest.|  
 |[setCharacterStream-Methode &#40;int, java.io.Reader, int&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-int.md)|Legt den angegebenen Parameter auf das angegebene java.io.Reader-Objekt fest, dessen Länge der angegebenen Zeichenanzahl entspricht.|  

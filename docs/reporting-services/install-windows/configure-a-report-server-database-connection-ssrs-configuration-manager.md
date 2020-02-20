@@ -1,19 +1,20 @@
 ---
-title: Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
+title: Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (Konfigurations-Manager) | Microsoft-Dokumentation
+description: Für jede Berichtsserverinstanz ist eine Verbindung mit der Berichtsserver-Datenbank erforderlich, in der die vom Server verwalteten Berichte, freigegebenen Datenquellen, Ressourcen und Metadaten gespeichert sind.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
-ms.custom: seodec18
-ms.date: 10/09/2019
-ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239371"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866038"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (SSRS-Konfigurations-Manager)
 
@@ -109,7 +110,7 @@ Sie können einen einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> Wenn Sie ein Azure SQL-verwaltete Instanz zum Hosten von Reporting Services 2019-Datenbanken verwenden, ist die Unterstützung auf die Verwendung SQL Server Anmelde Informationen für die Verbindung beschränkt.
+> Wenn Sie zum Hosten von Reporting Services 2019-Datenbanken eine verwaltete Azure SQL-Instanz verwenden, ist die Unterstützung für die Verbindung auf die Verwendung der SQL Server-Anmeldeinformationen beschränkt.
 
 ::: moniker-end
 

@@ -1,20 +1,20 @@
 ---
 title: 'Python-Tutorial: Ski-Verleih'
-description: In diesem Tutorial verwenden Sie Python und die lineare Regression in SQL Server-Machine Learning Services zur Vorhersage von Verleihzahlen für einen Skiverleih.
+description: Im dritten Teil dieser vierteiligen Tutorialreihe erstellen Sie ein lineares Regressionsmodell in Python, um mit SQL Server Machine Learning Services vorherzusagen, wie viele Ski verliehen werden.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/03/2019
+ms.date: 01/02/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 927816988be8882d4149115f6d4aee38dd3a8f3f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fe8a0c9af06d39ce183677adb86f30d9fc197d67
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727038"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75681745"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-in-sql-server-machine-learning-services"></a>Python-Tutorial: Vorhersagen von Verleihzahlen für einen Skiverleih unter Verwendung der linearen Regression in SQL Server-Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ In [Teil 2](python-ski-rental-linear-regression-prepare-data.md) erfahren Sie, w
 
 In [Teil 3](python-ski-rental-linear-regression-train-model.md) trainieren Sie ein lineares Regressionsmodell in Python.
 
-In [Teil 4](python-ski-rental-linear-regression-deploy-model.md) wird beschrieben, wie Sie das Modell in SQL Server speichern und gespeicherte Prozeduren aus den Python-Skripts erstellen, die Sie in Teil 2 und 3 entwickelt haben. Die gespeicherten Prozeduren werden in SQL Server ausgeführt, um Vorhersagen basierend auf neuen Daten treffen zu können.
+In [Teil 4](python-ski-rental-linear-regression-deploy-model.md) haben Sie gelernt, wie Sie das Modell in SQL Server speichern und gespeicherte Prozeduren aus den Python-Skripts erstellen, die Sie in Teil 2 und 3 entwickelt haben. Die gespeicherten Prozeduren werden in SQL Server ausgeführt, um Vorhersagen basierend auf neuen Daten treffen zu können.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -44,32 +44,24 @@ In [Teil 4](python-ski-rental-linear-regression-deploy-model.md) wird beschriebe
 
     Sie können auch Ihre eigene Python-IDE verwenden, wie z. B. Jupyter Notebook oder [Visual Studio Code](https://code.visualstudio.com/docs) mit der [Python-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-python.python) und der [MSSQL-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql). 
 
-* [revoscalepy](../python/ref-py-revoscalepy.md)-Paket: Das **revoscalepy**-Paket ist in SQL Server-Machine Learning Services enthalten. Informationen zur Verwendung des Pakets auf einem Clientcomputer finden Sie unter [Einrichten eines Data Science-Clients für die Python-Entwicklung](../python/setup-python-client-tools-sql.md) mit Optionen für die lokale Installation dieses Pakets.
-
-    Wenn Sie ein Python-Notebook in Azure Data Studio verwenden, führen Sie zusätzlich die folgenden Schritte aus, um **revoscalepy** verwenden zu können:
-
-    1. Öffnen Sie Azure Data Studio.
-    1. Klicken Sie im Menü **Datei** auf **Voreinstellungen** und anschließend auf **Einstellungen**.
-    1. Erweitern Sie die Option **Erweiterungen**, und klicken Sie auf **Notebook-Konfiguration**.
-    1. Geben Sie unter **Python-Pfad** den Pfad ein, in dem Sie die Bibliotheken installiert haben (z. B. `C:\path-to-python-for-mls`).
-    1. Vergewissern Sie sich, dass das Kontrollkästchen bei **Vorhandene Python-IDE verwenden** aktiviert ist.
-    1. Starten Sie Azure Data Studio neu.
-
-    Wenn Sie eine andere Python-IDE verwenden, führen Sie die entsprechenden Schritte für Ihre IDE aus.
-
 * SQL-Abfragetool: In diesem Tutorial wird davon ausgegangen, dass Sie [Azure Data Studio](../../azure-data-studio/what-is.md) verwenden. Sie können stattdessen auch [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS) verwenden.
 
-* Weitere Python-Pakete: In den Beispielen dieser Tutorialreihe werden möglicherweise Python-Pakete verwendet, die Sie nicht installiert haben. Installieren Sie diese Pakete ggf. mit den folgenden **PIP**-Befehlen:
+* Weitere Python-Pakete: In den Beispielen in dieser Tutorialreihe werden die folgenden Python-Pakete verwendet, die möglicherweise nicht standardmäßig installiert sind:
 
-    ```console
-    pip install pandas
-    pip install sklearn
-    pip install pickle
-    ```
+  * pandas
+  * pyodbc
+  * sklearn
+
+  Installieren Sie diese Pakete wie folgt:
+  1. Klicken Sie in Azure Data Studio auf **Manage Packages** (Pakete verwalten).
+  2. Klicken Sie dann im Bereich **Manage Packages** (Pakete verwalten) auf die Registerkarte **Add new** (Neue hinzufügen).
+  3. Geben Sie für jedes der folgenden Pakete den jeweiligen Paketnamen ein, klicken Sie auf **Suchen** und dann auf **Installieren**.
+
+  Alternativ können Sie eine **Eingabeaufforderung** öffnen, zum Installationspfad für die Python-Version wechseln, die Sie in Azure Data Studio verwenden, (z. B. `cd %LocalAppData%\Programs\Python\Python37-32`) und dann für jedes Paket `pip install` ausführen.
 
 ## <a name="restore-the-sample-database"></a>Wiederherstellen der Beispieldatenbank
 
-Das in diesem Tutorial verwendete Beispieldataset wurde in einer **BAK**-Datenbanksicherungsdatei gespeichert, die Sie herunterladen und verwenden können.
+Die in diesem Tutorial verwendete Beispieldatenbank wurde in einer **BAK**-Datenbanksicherungsdatei gespeichert, die Sie herunterladen und verwenden können.
 
 1. Laden Sie die Datei [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak) herunter.
 
@@ -78,12 +70,19 @@ Das in diesem Tutorial verwendete Beispieldataset wurde in einer **BAK**-Datenba
    * Importieren Sie aus der heruntergeladenen Datei **TutorialDB.bak**.
    * Geben Sie der Zieldatenbank den Namen „TutorialDB“.
 
-1. Nach dem Wiederherstellen der Datenbank können Sie überprüfen, ob das Dataset vorhanden ist, indem Sie die Tabelle **dbo.rental_data** abfragen:
+1. Sie können überprüfen, ob die wiederhergestellte Datenbank vorhanden ist, indem Sie die Tabelle **dbo.rental_data** abfragen:
 
-    ```sql
-    USE TutorialDB;
-    SELECT * FROM [dbo].[rental_data];
-    ```
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+
+Aktivieren Sie externe Skripts, indem Sie die folgenden SQL-Befehle ausführen:
+
+  ```sql
+  sp_configure 'external scripts enabled', 1;
+  RECONFIGURE WITH override;
+  ```
 
 ## <a name="next-steps"></a>Nächste Schritte
 

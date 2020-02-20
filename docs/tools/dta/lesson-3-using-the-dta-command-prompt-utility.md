@@ -1,10 +1,9 @@
 ---
-title: 'Lektion 3: Verwenden des Befehlszeilen-Hilfsprogramms DTA | Microsoft-Dokumentation'
-ms.custom: ''
+title: Verwenden des dta-Befehlszeilenprogramms
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +11,20 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04179ee339f41dde1b9e90d7abc30a00e492f3cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 1c97122d6181470ded13a57c54b0c6d44f830ed6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034723"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306971"
 ---
-# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lektion 3: Verwenden des Befehlszeilenprogramms dta
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lektion 3: Verwenden des dta-Befehlszeilenprogramms
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Mit dem Befehlszeilenprogramm **dta** wird die Funktionalität des Datenbankoptimierungsratgebers erweitert.  
   
-Sie können mit Ihren bevorzugten XML-Tools Eingabedateien für das Befehlszeilenprogramm erstellen und dabei das XML-Schema des Datenbankoptimierungsratgebers verwenden. Dieses Schema wird zusammen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert. Es befindet sich unter: C:\Programme (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
+Sie können mit Ihren bevorzugten XML-Tools Eingabedateien für das Befehlszeilenprogramm erstellen und dabei das XML-Schema des Datenbankoptimierungsratgebers verwenden. Dieses Schema wird bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert. Sie finden es unter: C:\Programme (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
   
 Das XML-Schema des Datenbankoptimierungsratgebers ist auch online auf [dieser Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)verfügbar.  
   
@@ -35,7 +36,7 @@ Auf die Verwendung der XML-Eingabefunktionen des Datenbankoptimierungsratgebers 
   
 In dieser Aufgabe erfahren Sie, wie Sie das Hilfsprogramm **dta** starten, die dazugehörige Hilfe anzeigen und es anschließend zur Optimierung einer Arbeitsauslastung von der Eingabeaufforderung aus verwenden. Dabei wird die Arbeitsauslastung MyScript.sql verwendet, die Sie in der Übung zur grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers [Optimieren einer Arbeitsauslastung](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)angelegt haben.  
   
-Im Tutorial wird die AdventureWorks2017-Beispieldatenbank verwendet. Aus Sicherheitsgründen werden die Beispieldatenbanken nicht standardmäßig installiert. Informationen zur Installation der Beispieldatenbanken finden Sie unter [Installieren der SQL Server-Beispiele und -Beispieldatenbanken](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
+In diesem Tutorial wird die Beispieldatenbank „AdventureWorks2017“ verwendet. Aus Sicherheitsgründen werden die Beispieldatenbanken nicht standardmäßig installiert. Informationen zur Installation der Beispieldatenbanken finden Sie unter [Installieren der SQL Server-Beispiele und -Beispieldatenbanken](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
   
 Im Folgenden werden folgende Schritte erläutert: Öffnen einer Eingabeaufforderung, Starten des Befehlszeilen-Hilfsprogramms **dta** , Anzeigen der Syntaxhilfe und Optimieren der einfachen Arbeitsauslastung MyScript.sql, die Sie in [Optimieren einer Arbeitsauslastung](../../tools/dta/lesson-1-1-tuning-a-workload.md)angelegt haben.  
 
@@ -50,9 +51,9 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
 
   >[!NOTE]
-  > Dieses Tutorial richtet sich an einen Benutzer, der mit der Verwendung SQL Server Management Studio und grundlegender Datenbankverwaltungsaufgaben vertraut ist. 
+  > Dieses Tutorial richtet sich an Benutzer, die mit der Verwendung von SQL Server Management Studio und mit grundlegenden Datenbankverwaltungsaufgaben vertraut sind. 
 
-## <a name="access-dta-command-prompt-utility-help-menu"></a>Hilfe Menü für Access-DTA-Eingabeaufforderung
+## <a name="access-dta-command-prompt-utility-help-menu"></a>Zugreifen auf das Hilfemenü des DTA-Befehlszeilenprogramms
   
   
 1.  Zeigen Sie im **Startmenü** auf **Alle Programme**, zeigen Sie auf **Zubehör**, und klicken Sie anschließend auf **Eingabeaufforderung**.  
@@ -65,9 +66,9 @@ Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiede
   
     Der folgende Teil des Befehls ist optional: `| more` . Sie können mit seiner Hilfe jedoch die Syntaxhilfe des Hilfsprogramms besser durchblättern. Drücken Sie die EINGABETASTE, um im Hilfetext jeweils eine weitere Zeile anzuzeigen, oder drücken Sie die LEERTASTE, um auf die nächste Seite zu wechseln.  
 
-  ![Verwenden der Hilfe zum Hilfsprogramm dta cmd](media/dta-tutorials/dta-cmd-help.png)
+  ![Hilfe im DTA-Befehlszeilenprogramm verwenden](media/dta-tutorials/dta-cmd-help.png)
 
-## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>Optimieren der einfachen Arbeitsauslastung mithilfe des Befehlszeilen-Hilfsprogramms DTA  
+## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>Optimieren einfacher Arbeitsauslastungen mithilfe des DTA-Befehlszeilenprogramms  
 
 
   
@@ -81,7 +82,7 @@ Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiede
   
     Dabei gibt `-S` den Namen Ihres Servers und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, in der die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank installiert ist. Die Einstellung `-E` gibt an, dass Sie eine vertrauenswürdige Verbindungsart mit der Instanz verwenden möchten. Dies ist der geeignete Verbindungstyp, wenn Sie eine Verbindung mit einem Windows-Domänenkonto herstellen. Die Einstellung `-D` gibt die Datenbank an, die Sie optimieren möchten, `-if` gibt die Arbeitsauslastungsdatei an, `-s` gibt den Sitzungsnamen an, `-of` gibt die Datei an, in die das Tool das Skript mit den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Empfehlungen schreiben soll, und `-ox` gibt die Datei an, in die das Tool die Empfehlungen im XML-Format schreiben soll. Die letzten drei Schalter legen folgende Optimierungsoptionen fest: `-fa IDX_IV` gibt an, dass der Datenbankoptimierungsratgeber nur das Hinzufügen von Indizes (gruppiert und nicht gruppiert) und von indizierten Sichten berücksichtigen soll; `-fp NONE` gibt an, dass bei der Analyse keine Partitionsstrategie berücksichtigt werden soll; und `-fk NONE` gibt an, dass in der Datenbank vorhandene physische Entwurfsstrukturen nicht beibehalten werden müssen, wenn der Datenbankoptimierungsratgeber seine Empfehlungen abgibt.  
 
-  ![Verwenden von cmd mit DTA](media/dta-tutorials/dta-cmd.png)
+  ![CMD mit DTA verwenden](media/dta-tutorials/dta-cmd.png)
   
 3.  Wenn der Datenbankoptimierungsratgeber mit dem Optimieren der Arbeitsauslastung fertig ist, zeigt er eine Meldung an, die besagt, dass die Optimierungssitzung erfolgreich abgeschlossen wurde. Sie können die Optimierungsergebnisse anzeigen. Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zum Öffnen der Dateien MySession2OutputScript.sql und MySession2Output.xml. Alternativ dazu können Sie auch die Optimierungssitzung MySession2 in der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers öffnen und die Empfehlungen und Berichte so anzeigen, wie in den Abschnitten [Anzeigen von Empfehlungen für die Optimierung](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) und [Anzeigen von Optimierungsberichten](../../tools/dta/lesson-1-3-viewing-tuning-reports.md)erläutert.  
   
@@ -92,7 +93,7 @@ Wenn Sie die Lektionen in diesem Lernprogramm durchgearbeitet haben, finden Sie 
 -   [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) enthält Beschreibungen zum Ausführen von Tasks mit diesem Tool. 
 -   [dta Utility](../../tools/dta/dta-utility.md) enthält Referenzmaterial zum Eingabeaufforderungs-Hilfsprogramm und der optionalen XML-Datei, mit der Sie die Ausführung des Hilfsprogramms steuern können.  
   
-Gehen Sie auf die Seite [Tutorial: Datenbankoptimierungsratgeber](../../tools/dta/tutorial-database-engine-tuning-advisor.md), um zum Anfang des Tutorials zurückzukehren.  
+Mit dem folgenden Link können Sie zum Anfang des Tutorials zurückkehren: [Tutorial: Datenbankoptimierungsratgeber](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Lernprogramme zur Datenbank-Engine](../../relational-databases/database-engine-tutorials.md)  

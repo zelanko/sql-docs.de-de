@@ -17,10 +17,10 @@ ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935804"
 ---
 # <a name="sqlsrv_configure"></a>sqlsrv_configure
@@ -36,9 +36,9 @@ sqlsrv_configure( string $setting, mixed $value )
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$setting*: Name der zu konfigurierenden Einstellung. Eine Liste der Einstellungen finden Sie in der folgenden Tabelle.  
+*$setting:* Name der zu konfigurierenden Einstellung. Die Liste der Einstellungen finden Sie in der folgenden Tabelle.  
   
-*$value*: Wert, der der Einstellung hinzugefügt werden soll, die im *$setting* Parameter angegeben ist. Die möglichen Werte für diesen Parameter hängen von der angegebenen Einstellung ab. In der folgenden Tabelle sind die Kombinationsmöglichkeiten aufgelistet:  
+*$value:* Wert, der auf die Einstellung angewendet werden soll, die im *$setting*-Parameter angegeben ist. Die möglichen Werte für diesen Parameter hängen von der angegebenen Einstellung ab. In der folgenden Tabelle sind die Kombinationsmöglichkeiten aufgelistet:  
   
 |Einstellung|Mögliche Werte für $value-Parameter (entsprechende Ganzzahl in Klammern)|Standardwert|  
 |-----------|------------------------------------------------------------------------------|-----------------|  
@@ -55,7 +55,7 @@ Wenn **sqlsrv_configure** mit nicht unterstützten Einstellungen oder Werten auf
   
 (2) Weitere Informationen zur Protokollierung von Aktivitäten finden Sie unter [Protokollieren von Aktivitäten](../../connect/php/logging-activity.md).  
   
-(3) Weitere Informationen zum Konfigurieren der Fehler- und Warnungsbehandlung finden Sie unter [Gewusst wie: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
+(3) Weitere Informationen zum Konfigurieren von Fehler- und Warnungsbehandlung finden Sie unter [Vorgehensweise: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)

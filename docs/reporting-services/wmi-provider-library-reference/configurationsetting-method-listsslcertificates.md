@@ -11,10 +11,10 @@ ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1e39c771872b0afbb614257145f447d1a47386a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571339"
 ---
 # <a name="configurationsetting-method---listsslcertificates"></a>ConfigurationSetting-Methode: ListSSLCertificates
@@ -55,10 +55,10 @@ public void ListSSLCertificates(out string[] CertificateHash,
   
 ## <a name="remarks"></a>Bemerkungen  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
+ [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

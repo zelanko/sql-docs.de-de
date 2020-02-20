@@ -1,11 +1,13 @@
 ---
-title: Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
-ms.date: 05/31/2016
+title: Löschen und neu Erstellen von Verschlüsselungsschlüsseln (Konfigurations-Manager) | Microsoft-Dokumentation
+description: Das Löschen und erneute Erstellen von Verschlüsselungsschlüsseln gehört nicht zu den routinemäßigen Aktivitäten bei der Verwaltung von Schlüsseln.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
-- re-creating encryption keys
+- recreating encryption keys
 - encryption keys [Reporting Services]
 - deleting encryption keys
 - symmetric keys [Reporting Services]
@@ -14,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593537"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866303"
 ---
-# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS-Verschlüsselungsschlüssel: Löschen und Neuerstellen
+# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)
   Das Löschen und erneute Erstellen von Verschlüsselungsschlüsseln gehört nicht zu den routinemäßigen Aktivitäten bei der Verwaltung von Schlüsseln. Sie führen diese Aufgaben als Reaktion auf eine bestimmte Gefahr für den Berichtsserver oder als letzte Möglichkeit vor dem Verlust des Zugriffs auf die Datenbank des Berichtsservers aus.  
   
 -   Erstellen Sie den symmetrischen Schlüssel neu, wenn Sie annehmen, dass der vorhandene symmetrische Schlüssel nicht mehr sicher ist. Sie können den Schlüssel auch regelmäßig neu erstellen. Dies ist eine bewährte Sicherheitsmethode.  
   
 -   Löschen Sie vorhandene Verschlüsselungsschlüssel und nicht verwendbaren verschlüsselten Inhalt, wenn Sie den symmetrischen Schlüssel nicht wiederherstellen können.  
   
-## <a name="re-creating-encryption-keys"></a>Erneutes Erstellen von Verschlüsselungsschlüsseln  
- Wenn Sie davon ausgehen müssen, dass der symmetrische Schlüssel nicht autorisierten Benutzern bekannt ist, oder wenn der Berichtsserver einem Angriff ausgesetzt war und Sie den symmetrischen Schlüssel als Vorsichtsmaßnahme zurücksetzen möchten, dann können Sie ihn erneut erstellen. Beim erneuten Erstellen des symmetrischen Schlüssels werden alle verschlüsselten Werte mit dem neuen Wert wieder verschlüsselt. Wenn Sie mehrere Berichtsserver in einer Bereitstellung für horizontales Skalieren ausführen, werden alle Kopien des symmetrischen Schlüssels neu aktualisiert. Der Berichtsserver verwendet verfügbare öffentliche Schlüssel zum Aktualisieren des symmetrischen Schlüssels für jeden Server in der Bereitstellung.  
+## <a name="recreating-encryption-keys"></a>Erneutes Erstellen von Verschlüsselungsschlüsseln  
+ Wenn Sie davon ausgehen müssen, dass der symmetrische Schlüssel nicht autorisierten Benutzern bekannt ist, oder wenn der Berichtsserver einem Angriff ausgesetzt war und Sie den symmetrischen Schlüssel als Vorsichtsmaßnahme zurücksetzen möchten, dann können Sie ihn noch mal erstellen. Beim erneuten Erstellen des symmetrischen Schlüssels werden alle verschlüsselten Werte mit dem neuen Wert wieder verschlüsselt. Wenn Sie mehrere Berichtsserver in einer Bereitstellung für horizontales Skalieren ausführen, werden alle Kopien des symmetrischen Schlüssels neu aktualisiert. Der Berichtsserver verwendet verfügbare öffentliche Schlüssel zum Aktualisieren des symmetrischen Schlüssels für jeden Server in der Bereitstellung.  
   
- Sie können den symmetrischen Schlüssel nur dann erneut erstellen, wenn der Server ausgeführt wird. Das erneute Erstellen der Verschlüsselungsschlüssel und das erneute Verschlüsseln des Inhalts unterbricht die Serveroperationen. Sie müssen den Server offline nehmen, während die erneute Verschlüsselung ausgeführt wird. Während dieser Zeit sollten keine Anforderungen an den Server gestellt werden.  
+ Sie können den symmetrischen Schlüssel nur dann neu erstellen, wenn der Server ausgeführt wird. Wenn Sie die Verschlüsselungsschlüssel neu erstellen und den Inhalt wieder verschlüsseln, werden die Servervorgänge unterbrochen. Sie müssen den Server offline nehmen, während die erneute Verschlüsselung ausgeführt wird. Während dieser Zeit sollten keine Anforderungen an den Server gestellt werden.  
   
- Sie können das Reporting Services-Konfigurationstool oder das Hilfsprogramm **rskeymgmt** verwenden, um den symmetrischen Schlüssel und die verschlüsselten Daten zurückzusetzen. Weitere Informationen dazu, wie der symmetrische Schlüssel erstellt wird, finden Sie unter [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Sie können das Reporting Services-Konfigurationstool oder das Hilfsprogramm **rskeymgmt** verwenden, um den symmetrischen Schlüssel und die verschlüsselten Daten zurückzusetzen. Weitere Informationen dazu, wie der symmetrische Schlüssel erstellt wird, finden Sie unter [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Erneutes Erstellen der Verschlüsselungsschlüssel (Reporting Services-Konfigurationstool)  
+### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>Erneutes Erstellen der Verschlüsselungsschlüssel (Reporting Services-Konfigurationstool)  
   
 1.  Deaktivieren Sie den Report Server-Webdienst und HTTP-Zugriff, indem Sie die **IsWebServiceEnabled** -Eigenschaft in der Datei rsreportserver.config ändern. Mit diesem Schritt werden Authentifizierungsanforderungen vorübergehend nicht mehr an den Berichtsserver gesendet, ohne dass der Server vollständig herunterfährt. Sie müssen minimale Berechtigungen haben, damit Sie die Schlüssel neu erstellen können.  
   
@@ -55,7 +57,7 @@ ms.locfileid: "73593537"
   
 5.  Aktivieren Sie den Webdienst und HTTP-Zugriff erneut, indem Sie die Eigenschaft **IsWebServiceEnabled** in der Datei „rsreportserver.config“ ändern. Wiederholen Sie diesen Schritt für alle Instanzen, wenn Sie mit einer Bereitstellung für horizontales Skalieren arbeiten.  
   
-### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>Erneutes Erstellen von Verschlüsselungsschlüsseln (rskeymgmt)  
+### <a name="how-to-recreate-encryption-keys-rskeymgmt"></a>Erneutes Erstellen von Verschlüsselungsschlüsseln (rskeymgmt)  
   
 1.  Deaktivieren Sie den Berichtsserver-Webdienst und den HTTP-Zugriff. Verwenden Sie die Anweisungen in der vorherigen Vorgehensweise, um den Webdienst zu stoppen.  
   

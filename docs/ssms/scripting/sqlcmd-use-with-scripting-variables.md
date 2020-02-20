@@ -1,6 +1,6 @@
 ---
-title: Verwenden von „sqlcmd“ mit Skriptvariablen | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden von sqlcmd mit Skriptvariablen
+ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
 ms.technology: scripting
@@ -18,12 +18,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142fd6bdd0ceb39003aba5c8ec8131c9df6427dd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3a084f84473dd6394aa0ad09e1730bcdb13e4a22
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262862"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761614"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>Verwenden von „sqlcmd“ mit Skriptvariablen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68262862"
   
 3.  Die vor dem Starten von**SET X=Y**an der Eingabeaufforderung festgelegte Befehlsshell ( **SET X=Y**)  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd -v** X=Y  
   
 5.  **:Setvar** X Y  
   
@@ -100,7 +100,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 -   Wenn Anführungszeichen Bestandteil des Variablenwerts sind, müssen sie mit Escapezeichen versehen werden. Beispiel: :`setvar MyVar "spac""e"`.  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Richtlinien für Cmd.exe SET-Variablennamen und -werte  
- Mithilfe von SET definierte Variablen sind Teil der Cmd.exe-Umgebung, und es kann mit **sqlcmd**auf sie verwiesen werden. Beachten Sie die folgenden Richtlinien:  
+ Mithilfe von SET definierte Variablen sind Teil der Cmd.exe-Umgebung, und es kann mit **sqlcmd**auf sie verwiesen werden. Berücksichtigen Sie die folgenden Richtlinien:  
   
 -   Variablennamen dürfen keine Leerzeichen oder Anführungszeichen enthalten.  
   
@@ -109,7 +109,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd-Skriptvariablen  
  Mithilfe von **sqlcmd** definierte Variablen werden als Skriptvariablen bezeichnet. In der folgenden Tabelle sind die **sqlcmd** -Skriptvariablen aufgelistet.  
   
-|        Variable         | Zugehörige Option | R/W |         Default         |
+|        Variable         | Zugehörige Option | R/W |         Standard         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER\*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD\*         | -P             | --  | ""                      |
@@ -119,9 +119,9 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDLOGINTIMEOUT      | -l             | R/W | "8" (Sekunden)           |
 | SQLCMDSTATTIMEOUT       | -t             | R/W | "0" = unbegrenzt warten |
 | SQLCMDHEADERS           | -H             | R/W | "0"                     |
-| SQLCMDCOLSEP            | -S             | R/W | " "                     |
+| SQLCMDCOLSEP            | -S             | R/W | „ “                     |
 | SQLCMDCOLWIDTH          | -w             | R/W | "0"                     |
-| SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
+| SQLCMDPACKETSIZE        | -a             | R   | "4096"                  |
 | SQLCMDERRORLEVEL        | -M             | R/W | "0"                     |
 | SQLCMDMAXVARTYPEWIDTH   | -y             | R/W | "256"                   |
 | SQLCMDMAXFIXEDTYPEWIDTH | -y             | R/W | "0" = unbegrenzt         |
@@ -188,10 +188,10 @@ C:\>sqlcmd -d AdventureWorks2012
 4> GO
 ```
   
-### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. Verwenden von Umgebungsvariablen auf Benutzerebene in "sqlcmd"  
+### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D: Verwenden von Umgebungsvariablen auf Benutzerebene in "sqlcmd"  
  Im folgenden Beispiel wird die `%Temp%` -Umgebungsvariable auf Benutzerebene an der Eingabeaufforderung festgelegt und an die `sqlcmd` -Eingabedatei übergeben. Zum Abrufen der Umgebungsvariable auf Benutzerebene doppelklicken Sie unter **Systemsteuerung**auf **System**. Klicken Sie auf die Registerkarte **Erweitert** , und klicken Sie dann auf **Umgebungsvariablen**.  
   
- In der Eingabedatei `c:\testscript.txt` ist der folgende Code enthalten:
+ In der Eingabedatei `c:\testscript.txt`ist der folgende Code enthalten:
 
 ```
 :OUT $(MyTempDirectory)
@@ -331,8 +331,8 @@ C:\> sqlcmd
 ```
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwenden des Hilfsprogramms sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
- [Hilfsprogramm sqlcmd](../../tools/sqlcmd-utility.md)   
+ [Verwenden des Hilfsprogramms „sqlcmd“](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+ [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)   
  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

@@ -1,6 +1,8 @@
 ---
-title: Verwalten der Authentifizierung in PowerShell der Datenbank-Engine | Microsoft-Dokumentation
-ms.custom: ''
+title: 'Mit PowerShell: Verwalten der Authentifizierung'
+titleSuffix: SQL Server on Linux
+description: In diesem Artikel erfahren Sie, wie Sie mit PowerShell die Windows- und die SQL-Authentifizierung für SQL Server verwalten.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c246a68216d6de4b1a21d2d2c5c0999703362c36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22c48323aa7570440a3edb06400d9a96e9bd9924
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049142"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75557965"
 ---
-# <a name="manage-authentication-in-database-engine-powershell"></a>Verwalten der Authentifizierung in PowerShell der Datenbank-Engine
+# <a name="powershell-manage-authentication-to-sql-server"></a>Mit PowerShell: Verwalten der Authentifizierung für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Standardmäßig wird von den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Komponenten beim Herstellen einer Verbindung mit einer [!INCLUDE[ssDE](../includes/ssde-md.md)]-Instanz die Windows-Authentifizierung verwendet. Sie können die SQL Server-Authentifizierung verwenden, indem Sie entweder ein virtuelles PowerShell-Laufwerk definieren oder die Parameter **-Username** und **-Password** für **Invoke-Sqlcmd** angeben.  

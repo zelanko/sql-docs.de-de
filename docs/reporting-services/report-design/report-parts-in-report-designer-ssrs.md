@@ -11,10 +11,10 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97b6d8c05fa5e5b1487f04a5ff87849f703c90d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576786"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Berichtsteile im Berichts-Designer (SSRS)
@@ -23,10 +23,10 @@ ms.locfileid: "65576786"
   
  Im Allgemeinen weisen Berichtsteile im Berichts-Designer und Berichts-Generator die gleiche Funktionsweise auf. Informationen zu grundlegenden Funktionen finden Sie unter [Berichtsteile (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
- Bei der Arbeit mit Berichtsteilen im Berichts-Designer gibt es grundlegende Unterschiede. Ein Hauptunterschied ist der Workflow. Der Berichts-Generator unterstützt die gemeinsame Erstellung: Sie erstellen einen Berichtsteil und veröffentlichen ihn. Ein anderer Benutzer kann ihn wiederverwenden, ändern und erneut veröffentlichen. In Berichts-Designer sind Veröffentlichungen unidirektional: Ein Berichtsteil kann in Berichts-Designer veröffentlicht und erneut verwendet werden. Ein vorhandener Berichtsteil kann jedoch nicht in einem Bericht in Berichts-Designer wiederverwendet werden. In diesem Thema werden die Unterschiede nach einer kurzen Übersicht über Berichtsteile näher erläutert.  
+ Bei der Arbeit mit Berichtsteilen im Berichts-Designer gibt es grundlegende Unterschiede. Ein Hauptunterschied ist der Workflow. Der Berichts-Generator ermöglicht die gemeinsame Erstellung: Ein Benutzer erstellt einen Berichtsteil und veröffentlicht ihn. Ein anderer Benutzer kann ihn wiederverwenden, ändern und erneut veröffentlichen. In Berichts-Designer ist die Veröffentlichung unidirektional: Ein Benutzer kann einen Berichtsteil in Berichts-Designer veröffentlichen, und ein anderer Benutzer kann diesen erneut verwenden. Ein vorhandener Berichtsteil kann jedoch nicht in einem Bericht in Berichts-Designer wiederverwendet werden. In diesem Thema werden die Unterschiede nach einer kurzen Übersicht über Berichtsteile näher erläutert.  
   
 ##  <a name="ComponentWorkflow"></a> Lebenszyklus der Berichtsteilveröffentlichung  
- ![rs_Komponentenerstellung](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
+ ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  Person A erstellt im Berichts-Designer ein Projekt, das einen Bericht mit einem Diagramm enthält, das von einem eingebetteten Dataset abhängig ist.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "65576786"
   
 3.  Person B erstellt im Berichts-Generator einen leeren Bericht und fügt ihm das Diagramm hinzu. Das Diagramm ist jetzt zusammen mit dem eingebetteten Dataset Teil des Berichts von Person B. Person B kann die im Bericht enthaltenen Diagramm- und Datasetinstanzen ändern. Dies hat weder Auswirkungen auf die Diagramm- und Datasetinstanzen auf dem Berichtsserver, noch wird die Beziehung zwischen den Instanzen im Bericht und auf dem Berichtsserver unterbrochen.  
   
-     ![rs_BIDSKomponentenupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.gif "rs_BIDScomponentupdate")  
+     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.gif "rs_BIDScomponentupdate")  
   
 4.  Person A ändert im Berichts-Designer das Diagramm im ursprünglichen Bericht.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65576786"
   
 -   Listen  
   
- Wenn Sie einen Berichtsteil veröffentlichen, in dem Daten angezeigt werden, z. B. eine Tabelle, Matrix oder ein Diagramm, können Sie als Grundlage für den Berichtsteil ein freigegebenes Dataset verwenden. Andernfalls wird beim Veröffentlichen des Berichtsteils das Dataset, von dem der Berichtsteil abhängig ist, als eingebettetes Dataset gespeichert. Eingebettete Datasets können auf eingebetteten Datenquellen basieren, allerdings werden keine Anmeldeinformationen in eingebetteten Datenquellen gespeichert. Wenn der Berichtsteil von einem eingebetteten Dataset abhängig ist, das eine eingebettete Datenquelle verwendet, muss folglich jeder Benutzer, der diesen Berichtsteil wiederverwendet, die Anmeldeinformationen für die eingebettete Datenquelle angeben. Um dies zu vermeiden, sollten Sie als Grundlage für eingebettete und freigegebene Datasets freigegebene Datenquellen mit gespeicherten Anmeldeinformationen verwenden. Weitere Informationen finden Sie unter [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
+ Wenn Sie einen Berichtsteil veröffentlichen, in dem Daten angezeigt werden, z. B. eine Tabelle, Matrix oder ein Diagramm, können Sie als Grundlage für den Berichtsteil ein freigegebenes Dataset verwenden. Andernfalls wird beim Veröffentlichen des Berichtsteils das Dataset, von dem der Berichtsteil abhängig ist, als eingebettetes Dataset gespeichert. Eingebettete Datasets können auf eingebetteten Datenquellen basieren, allerdings werden keine Anmeldeinformationen in eingebetteten Datenquellen gespeichert. Wenn der Berichtsteil von einem eingebetteten Dataset abhängig ist, das eine eingebettete Datenquelle verwendet, muss folglich jeder Benutzer, der diesen Berichtsteil wiederverwendet, die Anmeldeinformationen für die eingebettete Datenquelle angeben. Um dies zu vermeiden, sollten Sie als Grundlage für eingebettete und freigegebene Datasets freigegebene Datenquellen mit gespeicherten Anmeldeinformationen verwenden. Weitere Informationen finden Sie unter [Berichtsteile und Datasets](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
   
  Die Veröffentlichung eines Berichtsteils im Berichts-Designer umfasst zwei Schritte:  
   

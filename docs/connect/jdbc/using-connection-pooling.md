@@ -11,10 +11,10 @@ ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69aa4d7f29d8c7963f9b300f868bc8265cde2fd0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026372"
 ---
 # <a name="using-connection-pooling"></a>Verwenden von Verbindungspools
@@ -30,7 +30,7 @@ ms.locfileid: "69026372"
 
 Für die Verbindungspoolimplementierung stehen die folgenden Klassen zur Verfügung.  
   
-| Class                                                           | Implementiert                                                    | und Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Klasse                                                           | Implementiert                                                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | --------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc. SQLServerXADataSource             | javax.sql.ConnectionPoolDataSource und javax.sql.XADataSource | Sie sollten für alle erforderlichen Java EE-Serverfunktionen die [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md)-Klasse verwenden, da sie alle JDBC 3.0-Poolfunktionen und XA-Schnittstellen implementiert.                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | com.microsoft.sqlserver.jdbc. SQLServerConnectionPoolDataSource | javax.sql.ConnectionPoolDataSource                            | Bei dieser Klasse handelt es sich um ein Verbindungsfactory, das es dem Java EE-Anwendungsserver ermöglicht, den Verbindungspool mit physischen Verbindungen zu füllen. Wenn die Konfiguration des Java EE-Herstellers eine Klasse erfordert, die „javax.sql.ConnectionPoolDataSource“ implementiert, geben Sie den Klassennamen als [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) an. Sie sollten stattdessen im Allgemeinen die [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md)-Klasse verwenden, da sie sowohl Poolfunktionen als auch XA-Schnittstellen implementiert und in einer größeren Zahl von Java EE-Serverkonfigurationen überprüft wurde. |
@@ -40,6 +40,6 @@ Für die Verbindungspoolimplementierung stehen die folgenden Klassen zur Verfüg
 > [!NOTE]  
 > Der JDBC-Treiber ruft zurzeit nicht die gespeicherte Prozedur "sp_reset_connection" auf, wenn die Verbindung an den Pool zurückgegeben wird. Der Treiber geht stattdessen davon aus, dass die Java-Anwendungsserver der Drittanbieter die Verbindungen wieder in den ursprünglichen Status zurück versetzen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Verbinden mit SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

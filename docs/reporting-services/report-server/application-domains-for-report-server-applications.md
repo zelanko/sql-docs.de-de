@@ -12,10 +12,10 @@ ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d39f1b9b081d50e5d64a6d5f948255f3a4d6e53b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574798"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Anwendungsdomänen für Berichtsserveranwendungen
@@ -36,7 +36,7 @@ ms.locfileid: "65574798"
   
  In der folgenden Tabelle wird das Anwendungsdomänen-Wiederverwendungsverhalten als Reaktion auf diese Ereignisse zusammengefasst:  
   
-|Ereignis|Ereignisbeschreibung|Gilt für|Konfigurierbar|Beschreibung des Wiederverwendungsvorgangs|  
+|Ereignis|Ereignisbeschreibung|Anwendungsbereich|Konfigurierbar|Beschreibung des Wiederverwendungsvorgangs|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
 |Geplante Wiederverwendungsvorgänge, die in vordefinierten Intervallen auftreten|Standardmäßig werden Anwendungsdomänen alle 12 Stunden wiederverwendet.<br /><br /> Geplante Wiederverwendungsvorgänge finden in [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Anwendungen, die dem Gesamtprozesszustand dienen, sehr häufig statt.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Ja. Das Wiederverwendungsintervall wird durch die Konfigurationseinstellung**RecycleTime** in der Datei RSReportServer.config festgelegt.<br /><br /> **MaxAppDomainUnloadTime** legt die Wartezeit fest, während der die Hintergrundverarbeitung abgeschlossen werden kann.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwaltet den Wiederverwendungsvorgang für den Webdienst und den Berichts-Manager.<br /><br /> Für die Hintergrundverarbeitungsanwendung erstellt der Berichtsserver eine neue Anwendungsdomäne für neue Aufträge, die durch Zeitpläne initialisiert werden. Bereits ausgeführte Aufträge können in der aktuellen Anwendungsdomäne zu Ende verarbeitet werden, bis die Wartezeit abläuft.|  
 |Konfigurationsänderungen des Berichtsservers|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Anwendungsdomänen als Reaktion auf Änderungen in der Datei RSReportServer.config wieder.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Nein.|Sie können das Auftreten von Wiederverwendungsvorgängen nicht verhindern. Wiederverwendungsvorgänge, die als Reaktion auf Änderungen der Konfigurationseinstellungen auftreten, werden jedoch auf die gleiche Weise behandelt wie geplante Wiederverwendungsvorgänge. Für neue Anforderungen werden neue Anwendungsdomänen erstellt, während aktuelle Anforderungen und Aufträge in der aktuellen Anwendungsdomäne abgeschlossen werden.|  
@@ -56,7 +56,7 @@ ms.locfileid: "65574798"
   
  Die Anwendungsdomänen für den Report Server-Webdienst, den Berichts-Manager und die Hintergrundverarbeitungsanwendung werden entweder zusammen oder einzeln wiederverwendet, je nachdem wodurch die Wiederverwendung ausgelöst wird:  
   
--   Wiederverwendungsvorgänge, die von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] initiiert werden, wirken sich nur auf folgende [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Anwendungen aus: Report Server-Webdienst und Berichts-Manager. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwendet zugrunde liegende Anwendungsdomänen wieder, wenn Änderungen an den überwachten Dateien vorgenommen werden. Wiederverwendungsvorgänge, die von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] initiiert werden, sind in der Regel unabhängig von Wiederverwendungsvorgängen für die Hintergrundverarbeitungsanwendung.  
+-   Von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] gestartete Wiederverwendungsvorgänge wirken sich nur auf die folgenden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Anwendungen aus: Berichtsserver-Webdienst und Berichts-Manager. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwendet zugrunde liegende Anwendungsdomänen wieder, wenn Änderungen an den überwachten Dateien vorgenommen werden. Wiederverwendungsvorgänge, die von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] initiiert werden, sind in der Regel unabhängig von Wiederverwendungsvorgängen für die Hintergrundverarbeitungsanwendung.  
   
 -   Vom Berichtsserver initiierte Wiederverwendungsvorgänge wirken sich in der Regel auf den Report Server-Webdienst, den Berichts-Manager und die Hintergrundverarbeitungsanwendung aus. Wiederverwendungsvorgänge treten als Reaktion auf Änderungen an den Konfigurationseinstellungen und Neustart von Diensten auf.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65574798"
   
  In der folgenden Tabelle sind diese Elemente beschrieben.  
   
-|Element|Gilt für|Definition|  
+|Element|Anwendungsbereich|Definition|  
 |-------------|----------------|----------------|  
 |**RecycleTime**|Alle drei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungsdomänen|Gibt an, wie oft die Anwendungsdomänen wiederverwendet werden. Der standardmäßige Wiederverwendungszeitplan entspricht dem 12-Stunden-Muster, das in der Regel für die [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Anwendungsdomänen-Wiederverwendung gilt. Zum geplanten Zeitpunkt werden alle neuen Anforderungen an die neue Instanz der Anwendungsdomäne weitergeleitet. Zurzeit in der ursprünglichen Instanz ausgeführte Anforderungen werden abgeschlossen. Nach Abschluss aller Prozesse wird die ursprünglichen Instanz gelöscht, und die neue Instanz wird zur einzig aktiven Instanz der Anwendungsdomäne.<br /><br /> Der Standardwert ist 720 Minuten.|  
 |**MaxAppDomainUnloadTime**|Nur Hintergrundverarbeitungs-Anwendungsdomäne|Ein Berichtsserver ordnet standardmäßig eine Wartezeit von 30 Minuten zu, in der eine Anwendungsdomäne während eines Wiederverwendungsvorgangs heruntergefahren werden kann. Können die zurzeit ausgeführten Aufträge nicht in der vorgesehenen Zeit abgeschlossen werden (oder dauert ein Auftrag länger, als es die Wartezeit zulässt), wird die Instanz der Anwendungsdomäne sofort neu gestartet. Alle nicht abgeschlossenen Aufträge werden beendet.<br /><br /> Weitere Informationen zum Anzeigen des Status oder Abbrechen von Aufträgen, die auf dem Berichtsserver ausgeführt werden, finden Sie unter [Cancel Report Server Jobs (Management Studio) (Abbrechen von Berichtsserveraufträgen (Management Studio))](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md).|  
@@ -80,6 +80,6 @@ ms.locfileid: "65574798"
 ## <a name="see-also"></a>Weitere Informationen  
  [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
+ [Configure Available Memory for Report Server Applications (Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen)](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
   
   

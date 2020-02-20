@@ -14,10 +14,10 @@ ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8b9e33f7c4d1b3ed953882175cd430df2b1e6ce1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62991583"
 ---
 # <a name="identifying-execution-state"></a>Identifizieren des Ausführungsstatus
@@ -37,7 +37,7 @@ ms.locfileid: "62991583"
   
  Das folgende Diagramm zeigt den Verarbeitungs- und Renderingpfad für Berichte.  
   
- ![Bericht Verarbeitung/Rendering-Pfad](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "Report processing/rendering path")  
+ ![Verarbeitungs-/Renderingpfad für Berichte](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "Verarbeitungs-/Renderingpfad für Berichte")  
   
  Um die oben genannten Funktionen zu unterstützen, wurde die aktuelle SOAP-Render-Methode in mehrere Methoden aufgeteilt, die die Phasen der Ausführungsinitialisierung, der Verarbeitung und des Rendering umfassen.  
   

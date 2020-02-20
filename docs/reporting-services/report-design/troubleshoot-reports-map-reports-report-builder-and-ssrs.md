@@ -9,10 +9,10 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 88005509becb45f48702970153f9a891a8a01978
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594496"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Problembehandlung bei Berichten: Kartenberichte (Berichts-Generator und SSRS)
@@ -187,7 +187,7 @@ ms.locfileid: "73594496"
   
 -   Die Kartenprojektion muss **Mercator**sein.  
   
--   Um die lokale Vorschau anzuzeigen, müssen Sie über Internetzugriff verfügen. Für einen Bericht, der vom Berichtsserver ausgeführt wird, muss der Berichtsserver so konfiguriert sein, dass er den Kachelhintergrund unterstützt. Weitere Informationen finden Sie unter [Planen eines Karten Berichts](plan-a-map-report-report-builder-and-ssrs.md).  
+-   Um die lokale Vorschau anzuzeigen, müssen Sie über Internetzugriff verfügen. Für einen Bericht, der vom Berichtsserver ausgeführt wird, muss der Berichtsserver so konfiguriert sein, dass er den Kachelhintergrund unterstützt. Weitere Informationen finden Sie unter [Planen eines Kartenberichts](plan-a-map-report-report-builder-and-ssrs.md).  
   
  Weitere Informationen zum Hinzufügen einer Kachelebene finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

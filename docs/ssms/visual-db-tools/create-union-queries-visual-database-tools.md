@@ -1,10 +1,9 @@
 ---
-title: Erstellen von UNION-Abfragen (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: ''
+title: Erstellen von UNION-Abfragen
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04a8206b39ff3138bccbc4ffbbed05972010833a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 23d918da8b938322c478682ea499136d4bf97b05
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264629"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254215"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>Erstellen von UNION-Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,8 +52,7 @@ Mit dem Schlüsselwort UNION können Sie die Ergebnisse von zwei SELECT-Anweisun
     Die UNION-Abfrage wird jetzt vom Abfrage-Designer formatiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Unterstützte Abfragetypen (Visual Database Tools)](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
-[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Ausführen grundlegender Vorgänge mit Abfragen (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[UNION (Transact-SQL)](https://msdn.microsoft.com/607c296f-8a6a-49bc-975a-b8d0c0914df7)  
-  
+[Unterstützte Abfragetypen](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
+[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Durchführen grundlegender Vorgänge mit Abfragen](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[UNION (Transact-SQL)](https://msdn.microsoft.com/607c296f-8a6a-49bc-975a-b8d0c0914df7)

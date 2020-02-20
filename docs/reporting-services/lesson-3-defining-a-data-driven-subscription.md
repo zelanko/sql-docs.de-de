@@ -9,13 +9,13 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826855"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lektion 3: Definieren eines datengesteuerten Abonnements
 In dieser Lektion des [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Tutorials verwenden Sie die datengesteuerten Abonnementseiten des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Webportals, um eine Verbindung mit einer Abonnementdatenquelle herzustellen, um eine Abfrage zu erstellen, die Abonnementdaten abruft, und um das Resultset den Berichts- und Übermittlungsoptionen zuzuordnen.  
   
 > [!NOTE]  
@@ -33,7 +33,7 @@ In dieser Lektion wird davon ausgegangen, dass Sie Lektion 1 und Lektion 2 abges
 ## <a name="define-a-description"></a>Definieren einer Beschreibung  
 1.  Geben Sie **Lieferung Verkaufsauftrag** bei Beschreibung ein.
 
-## <a name="type"></a>Geben Sie
+## <a name="type"></a>type
 1.  Klicken Sie auf **Datengesteuertes Abonnement**.  
 
 ## <a name="schedule"></a>Zeitplan
@@ -41,10 +41,10 @@ In dieser Lektion wird davon ausgegangen, dass Sie Lektion 1 und Lektion 2 abges
 2. Klicken Sie auf **Zeitplan bearbeiten**.
 3. Klicken Sie in **Zeitplandetails**auf **Einmal**.  
 4. Geben Sie eine Startzeit an, die ein paar Minuten nach der aktuellen Zeit liegt.  
-5. Geben Sie die **Start- und Enddaten**.
-6. Wählen Sie **Anwenden**aus.
+5. Legen Sie **Start- und Enddatum** fest.
+6. Wählen Sie **Übernehmen**.
 
-## <a name="destination"></a>Ziel  
+## <a name="destination"></a>Destination  
 1.  Wählen Sie im Zielabschnitt **Windows-Dateifreigabe** als Übermittlungsmethode aus.  
 
 ## <a name="dataset"></a>Dataset
@@ -85,7 +85,7 @@ Parameter  |Wertquelle  | Wert/Feld
 **Pfad**     | Wert eingeben  | Geben Sie als Wert den Namen einer öffentlichen Dateifreigabe ein, für die Sie Schreibberechtigungen besitzen (z.B. `\\mycomputer\public\myreports`). 
 **Renderformat** | Wert aus Dataset abrufen | Format
 **Schreibmodus**| Wert eingeben| Automatisch inkrementieren    
-**Dateierweiterung** |Wert eingeben |Wahr
+**Dateierweiterung** |Wert eingeben |True
 **Benutzername** | Wert eingeben | Geben Sie Ihr Domänenbenutzerkonto an. Geben Sie es im folgenden Format ein: \<Domäne>\\\<Konto>. Das Benutzerkonto muss über Berechtigungen für den Pfad verfügen, den Sie konfiguriert haben. 
 **Kennwort** | Wert eingeben | Geben Sie Ihr Kennwort ein
 **Dateifreigabekonto verwenden** | Wert eingeben | False
@@ -97,7 +97,7 @@ Parameter  |Wertquelle  | Wert/Feld
 ## <a name="next-steps"></a>Nächste Schritte  
 Beim Ausführen des Abonnements werden vier Berichtsdateien an die von Ihnen angegebene Dateifreigabe übermittelt, eine für jeden Auftrag in der *Abonnenten* -Datenquelle. Jede Übermittlung muss im Hinblick auf die Daten (sie müssen sich auf einen bestimmten Auftrag beziehen), das Renderingformat und das Dateiformat eindeutig sein. Sie können jeden Bericht von dem freigegebenen Ordner aus öffnen, um sicherzustellen, dass jede Version entsprechend den von Ihnen festgelegten Abonnementoptionen angepasst wurde.  
   
-![Liste der Dateien, die vom Abonnement erstellt werden](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "List of files created by the subscription").  
+![Liste der vom Abonnement erstellten Dateien](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Liste der vom Abonnement erstellten Dateien")  
   
 Die Abonnementseite im Webportal enthält das Datum der **letzten Ausführung** und den **Status** des Abonnements. 
 > [!NOTE]
@@ -108,8 +108,8 @@ Die Abonnementseite im Webportal enthält das Datum der **letzten Ausführung** 
 Dies ist der letzte Schritt des Tutorials „Defining a Data-Driven Subscription“ (Definieren eines datengesteuerten Abonnements).   
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Abonnements und Übermittlung &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+[Abonnements und Übermittlung (Reporting Services)](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
 [Datengesteuerte Abonnements](../reporting-services/subscriptions/data-driven-subscriptions.md)  
-[Erstellen, Ändern und Löschen von datengesteuerten Abonnements](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
+[Create, Modify, and Delete Data-Driven Subscriptions (Erstellen, Ändern und Löschen von datengesteuerten Abonnements)](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
 [Verwenden einer externen Datenquelle für Abonnentendaten &#40;datengesteuertes Abonnement&#41;](../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   

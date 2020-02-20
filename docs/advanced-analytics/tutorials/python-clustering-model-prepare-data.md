@@ -1,28 +1,28 @@
 ---
 title: 'Python-Tutorial: Vorbereiten von Clusterdaten'
-description: Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie die Daten aus einer SQL Server-Datenbank-Instanz für das Clustering in Python mit SQL Server-Machine Learning Services vor.
+description: Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie SQL Server-Daten für das Clustering in Python mit SQL Server-Machine Learning Services vor.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11c24d5403e6540da52ec3557c64e1dc8fa57c78
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8ee19ddfa59f8f1a4a32c0adf08b8f36eef9aa1f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727089"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75305546"
 ---
-# <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>Lernprogramm: Vorbereiten von Daten zur Kategorisierung von Kunden in Python mit SQL Server-Machine Learning Services
+# <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>Tutorial: Vorbereiten von Daten zur Kategorisierung von Kunden in Python mit SQL Server-Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Im zweiten Teil dieser vierteiligen Tutorialreihe stellen Sie Daten aus einer SQL-Datenbank mithilfe von Python wieder her und bereiten diese vor. Diese Daten verwenden Sie in einem späteren Teil dieser Reihe zum Trainieren und Bereitstellen eines linearen Clustermodells in Python mit SQL Server-Machine Learning Services.
+Im zweiten Teil dieser vierteiligen Tutorialreihe stellen Sie Daten aus einer SQL-Datenbank mithilfe von Python wieder her und bereiten diese vor. Diese Daten verwenden Sie in einem späteren Teil dieser Reihe zum Trainieren und Bereitstellen eines Clustermodells in Python mit SQL Server Machine Learning Services.
 
 In diesem Artikel lernen Sie Folgendes:
 
@@ -30,11 +30,11 @@ In diesem Artikel lernen Sie Folgendes:
 > * Aufteilen von Kunden über verschiedene Dimensionen mit Python
 > * Laden der Daten aus SQL-Datenbank in einen Python-Datenrahmen
 
-In [Teil 1](python-clustering-model.md) haben Sie die Voraussetzungen installiert und die Beispieldatenbank wiederhergestellt.
+In [Teil 1](python-clustering-model.md) haben Sie die Voraussetzungen installiert und die Beispieldatenbank wiederhergestellt.
 
-In [Teil 3](python-clustering-model-build.md) erfahren Sie, wie Sie ein k-Means-Algorithmusmodell in Python erstellen und trainieren.
+In [Teil 3](python-clustering-model-build.md) erfahren Sie, wie Sie ein K-Means-Clustermodell in Python erstellen und trainieren.
 
-In [Teil 4](python-clustering-model-deploy.md) erfahren Sie, wie Sie eine gespeicherte Prozedur in einer SQL-Datenbank-Instanz erstellen, die in Python Clustering auf der Grundlage neuer Daten durchführen kann.
+In [Teil 4](python-clustering-model-deploy.md) erfahren Sie, wie Sie eine gespeicherte Prozedur in einer SQL-Datenbank erstellen, die Clustering auf der Grundlage neuer Daten in Python durchführen kann.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -44,10 +44,10 @@ In [Teil 4](python-clustering-model-deploy.md) erfahren Sie, wie Sie eine gespei
 
 Sie werden zunächst Kunden nach den folgenden Dimensionen aufteilen, um sich auf das Clustering von Kunden vorzubereiten:
 
-* **orderRatio** = Retourenauftragsquote (Gesamtzahl der teilweise oder vollständig zurückgegebenen Aufträge im Vergleich zur Gesamtzahl der Aufträge)
-* **itemsRatio** = Retourenquote (Gesamtzahl der zurückgegebenen Artikel im Vergleich zur Anzahl der gekauften Artikel)
-* **monetaryRatio** = Retourenbetragsquote (Gesamtbetrag der zurückgegebenen Artikel im Vergleich zum gekauften Betrag)
-* **frequency** = Retourenfrequenz
+* **orderRatio** = Retourenquote für Bestellungen (Gesamtzahl der teilweise oder vollständig zurückgegebenen Bestellungen im Vergleich zur Gesamtzahl der Bestellungen)
+* **itemsRatio** = Retourenquote für Artikel (Gesamtzahl der zurückgegebenen Artikel im Vergleich zur Anzahl der gekauften Artikel)
+* **monetaryRatio** = Rückzahlungsquote (Monetärer Gesamtbetrag der zurückgegebenen Artikel im Vergleich zum erworbenen Betrag)
+* **frequency** = Häufigkeit der Retouren
 
 Öffnen Sie ein neues Notebook in Azure Data Studio, und geben Sie das folgende Skript ein.
 
@@ -55,10 +55,10 @@ Ersetzen Sie bei Bedarf die Verbindungsdetails in der Verbindungszeichenfolge.
 
 ```python
 # Load packages.
+import pyodbc
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import revoscalepy as revoscale
 from scipy.spatial import distance as sci_distance
 from sklearn import cluster as sk_cluster
 
@@ -69,7 +69,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,
@@ -115,14 +115,10 @@ column_info = {
 
 ## <a name="load-the-data-into-a-data-frame"></a>Laden der Daten in einem neuen Datenrahmen
 
-Die Ergebnisse der Abfrage werden mit der revoscalepy-Funktion **RxSqlServerData** an Python zurückgegeben. Als Teil des Prozesses verwenden Sie die Spalteninformationen, die Sie im vorherigen Skript definiert haben.
+Die Ergebnisse der Abfrage werden mit der Pandas-Funktion **read_sql** an Python zurückgegeben. Als Teil des Prozesses verwenden Sie die Spalteninformationen, die Sie im vorherigen Skript definiert haben.
 
 ```python
-data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
-                                        connection_string=conn_str)
-revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
-# import data source and convert to pandas dataframe.
-customer_data = pd.DataFrame(revoscale.rx_import(data_source))
+customer_data = pandas.read_sql(input_query, conn_str)
 ```
 
 Zeigen Sie nun den Anfang des Datenrahmens an, um sicherzustellen, dass er korrekt ist.
@@ -143,7 +139,7 @@ Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 ## <a name="clean-up-resources"></a>Bereinigen von Ressourcen
 
-Wenn Sie mit diesem Tutorial nicht fortfahren möchten, löschen Sie die tpcxbb_1gb-Datenbank aus SQL Server.
+Wenn Sie nicht mit diesem Tutorial fortfahren möchten, löschen Sie die Datenbank „tpcxbb_1gb“ aus SQL Server.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

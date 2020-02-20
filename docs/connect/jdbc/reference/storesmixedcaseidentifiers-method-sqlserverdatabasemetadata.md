@@ -1,5 +1,5 @@
 ---
-title: storesmixedcaseidentifier-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: Methode „storesMixedCaseIdentifiers“ (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a91e5cd6-22b1-464e-aeec-665590737a74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1d1a924b913ecffc4baea959053001d7e30c1db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969909"
 ---
 # <a name="storesmixedcaseidentifiers-method-sqlserverdatabasemetadata"></a>storesMixedCaseIdentifiers-Methode (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean storesMixedCaseIdentifiers()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn die Bezeichner in gemischter Schreibung gespeichert werden. Andernfalls lautet der Wert **false**.  
+ Der Wert **TRUE** wird zurückgegeben, wenn die Bezeichner mit gemischter Groß-/Kleinschreibung gespeichert werden. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese storesmixedcaseidentifier-Methode wird von der storesmixedcaseidentifier-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese storesMixedCaseIdentifiers-Methode wird von der storesMixedCaseIdentifiers-Methode im der java.sql.ServerDatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

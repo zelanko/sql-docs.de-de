@@ -14,16 +14,16 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140270"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Erstellen, Ändern und Löschen von datengesteuerten Abonnements
   Ein datengesteuertes Abonnement ist ein abfragebasiertes Abonnement, das die Datenwerte abfragt, die zum Verarbeiten des Abonnements zur Laufzeit verwendet werden. Wenn das Abonnement ausgelöst wird, wird eine Abfrage verarbeitet, die aktuelle Informationen über Empfänger, Berichtsübermittlungsoptionen, Renderingformate und Parametereinstellungen abruft. Die Abfrageergebnisse werden mit der Abonnementdefinition kombiniert. Dabei wird ein dynamisches Abonnement erstellt, das  Daten verwendet, die bereits in einer Mitarbeiterdatenbank, einer Kundendatenbank oder einer beliebigen Datenbank liegen und Informationen enthalten,  die als Abonnentendaten verwendbar sind.  
   
- Verwenden Sie zum Erstellen eines neuen datengesteuerten Abonnements, oder ändern ein vorhandenes Abonnement, das **verwalten** > **Abonnements** der Webportal auf der Seite. Die **Abonnements** Seite führt Sie durch jeden Schritt erstellen oder Ändern eines Abonnements. Ein bereits erstelltes Abonnement öffnen Sie mithilfe der Seite **Meine Abonnements** oder der Liste „Abonnements“ eines Berichts. Erfahren Sie, wie Sie ein datengesteuertes Abonnement erstellen, indem Sie die Seite [Erstellen eines datengesteuerten Abonnements (SSRS-Tutorial)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md) aufrufen.  
+ Verwenden Sie die Seite **Verwalten** > **Abonnements** im Webportal, um ein neues datengesteuertes Abonnement zu erstellen oder ein vorhandenes Abonnement anzupassen. Auf der Seite **Abonnements** werden die Schritte zum Erstellen oder Anpassen eines Abonnements erläutert. Ein bereits erstelltes Abonnement öffnen Sie mithilfe der Seite **Meine Abonnements** oder der Liste „Abonnements“ eines Berichts. Erfahren Sie, wie Sie ein datengesteuertes Abonnement erstellen, indem Sie die Seite [Erstellen eines datengesteuerten Abonnements (SSRS-Tutorial)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md) aufrufen.  
   
  Inhalt dieses Artikels:  
   
@@ -36,9 +36,9 @@ ms.locfileid: "67140270"
 -   [Ausführen eines Abonnements](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> Verwalten und Löschen eines datengesteuerten Abonnements  
- Ein datengesteuertes Abonnement, die in Bearbeitung ist nicht beendet oder gelöscht wird, über das Webportal. Aus diesem Grund ist es vorteilhaft, einen freigegebenen Zeitplan zu verwenden, um ein datengesteuertes Abonnement auszulösen. Falls Sie die Verarbeitung eines Abonnements vorübergehend unterbinden möchten, können Sie den Zeitplan anhalten, mit dem das Abonnement ausgelöst wird. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ Ein datengesteuertes Abonnement, das gerade verarbeitet wird, kann nicht über das Webportal beendet oder gelöscht werden. Aus diesem Grund ist es vorteilhaft, einen freigegebenen Zeitplan zu verwenden, um ein datengesteuertes Abonnement auszulösen. Falls Sie die Verarbeitung eines Abonnements vorübergehend unterbinden möchten, können Sie den Zeitplan anhalten, mit dem das Abonnement ausgelöst wird. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
- Um ein datengesteuertes Abonnement zu löschen, wählen Sie das Kontrollkästchen neben dem Bericht auf dem **Abonnements** Seite, und wählen Sie dann **löschen**.  
+ Klicken Sie auf das Kontrollkästchen neben dem Bericht auf der Seite **Abonnements**, und wählen Sie dann **Löschen** aus, um ein datengesteuertes Abonnement zu löschen.  
   
  Anweisungen zum Abbrechen eines datengesteuerten Abonnements finden Sie unter [Verwalten eines ausgeführten Prozesses](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -47,11 +47,11 @@ ms.locfileid: "67140270"
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>So erstellen Sie ein datengesteuertes Abonnement (einheitlicher Modus)  
   
-1. Im Webportal, navigieren Sie zu dem Ordner, der den Bericht enthält, mit der rechten Maustaste in des Berichts und wählen Sie **verwalten** aus dem Dropdownmenü aus.  
+1. Navigieren Sie im Webportal zum Ordner mit dem Bericht, klicken Sie mit der rechten Maustaste auf den Bericht, und wählen Sie dann im Dropdownmenü **Verwalten** aus.  
   
 2. Wählen Sie die Registerkarte **Abonnements** aus.  
   
-3. Wählen Sie **+ neues Abonnement** auf die **Abonnements** Seite.  
+3. Klicken Sie auf der Seite **Abonnements** auf **+ Neues Abonnement**.  
   
 ### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>So erstellen Sie ein datengesteuertes Abonnement (SharePoint-Modus)  
   
@@ -61,11 +61,11 @@ ms.locfileid: "67140270"
   
 ### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>So ändern Sie ein vorhandenes datengesteuertes Abonnement (einheitlicher Modus)  
   
-1. Im Webportal, navigieren Sie zu dem Ordner, der den Bericht enthält, mit der rechten Maustaste in des Berichts und wählen Sie **verwalten** aus dem Dropdownmenü aus.  
+1. Navigieren Sie im Webportal zum Ordner mit dem Bericht, klicken Sie mit der rechten Maustaste auf den Bericht, und wählen Sie dann im Dropdownmenü **Verwalten** aus.  
   
 2. Wählen Sie die Registerkarte **Abonnements** aus.  
   
-3. Aktivieren Sie das Kontrollkästchen neben dem Abonnement, das Sie ändern möchten, und wählen Sie **bearbeiten**. Datengesteuerte Abonnements waren, werden der Wert "datengesteuerten" in der **Typ** Spalte.  
+3. Klicken Sie auf das Kontrollkästchen neben dem Abonnement, das Sie anpassen möchten, und wählen Sie dann **Bearbeiten** aus. Datengesteuerte Abonnements enthalten den Wert „Data-driven“ (datengesteuert) in der Spalte **Type** (Typ).  
   
 ### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>So ändern Sie ein vorhandenes datengesteuertes Abonnement (SharePoint-Modus)  
   
@@ -98,10 +98,10 @@ ms.locfileid: "67140270"
 ##  <a name="bkmk_run_subscription"></a> Ausführen eines Abonnements  
  Sie müssen Bedingungen für die Abonnementverarbeitung angeben. Sie können einen Zeitplan angeben oder mit den Updates einer Momentaufnahme zur Berichtsausführung die Verarbeitung des Abonnements auslösen. Das Verarbeiten von datengesteuerten Abonnements ist mit der Verarbeitung von Standardabonnements identisch.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Das Webportal eines Berichtsservers (einheitlicher SSRS-Modus)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Arbeiten mit Abonnements (Webportal)](../../reporting-services/working-with-subscriptions-web-portal.md) [verwenden Meine Abonnements (Native Mode Report Server)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Verwenden von Abonnements (Webportal)](../../reporting-services/working-with-subscriptions-web-portal.md) [Verwenden von „Meine Abonnements“ (Berichtsserver im einheitlichen Modus)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  

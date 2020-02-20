@@ -1,5 +1,5 @@
 ---
-title: Length-Methode (SQLServerBlob) | Microsoft-Dokumentation
+title: length-Methode (SQLServerBlob) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: aa233ccb-72d3-4ea3-979d-07ef9aa47359
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5848943e2b8540f1c2f7733af404520159dfb5ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976903"
 ---
 # <a name="length-method-sqlserverblob"></a>length-Methode (SQLServerBlob)
@@ -41,7 +41,7 @@ public long length()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Length-Methode wird von der Length-Methode in der Java. SQL. BLOB-Schnittstelle angegeben.  
+ Diese length-Methode wird von der length-Methode in der java.sql.Blob-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerBlob-Methoden](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

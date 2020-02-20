@@ -1,10 +1,9 @@
 ---
-title: Aktualisieren von Datenbankdiagrammen aus älteren Versionen | Microsoft-Dokumentation
-ms.custom: ''
+title: Aktualisieren von Datenbankdiagrammen aus älteren Versionen
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,16 +17,18 @@ helpviewer_keywords:
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d28b90273084e9a5b2f9678500efcd68dba924e0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 11617b30fef96d189f5d91f46c3fc272d86a153f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263132"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246045"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Aktualisieren von Datenbankdiagrammen aus älteren Versionen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Datenbankdiagramme, die für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken erstellt wurden, werden automatisch aktualisiert, wenn die Erstellung von Datenbankdiagrammen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eingerichtet ist. Weitere Informationen zum Einrichten der Diagrammerstellung finden Sie unter [Einrichten des Datenbankdiagramm-Designers (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
+Datenbankdiagramme, die für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken erstellt wurden, werden automatisch aktualisiert, wenn die Erstellung von Datenbankdiagrammen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]eingerichtet ist. Weitere Informationen zum Einrichten der Diagrammerstellung finden Sie unter [Einrichten des Datenbankdiagramm-Designers](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>So aktualisieren Sie Datenbankdiagramme aus früheren Versionen  
   
@@ -40,6 +41,6 @@ Datenbankdiagramme, die für frühere Versionen von [!INCLUDE[ssNoVersion](../..
     Daraufhin werden alle in der Datenbank gespeicherten Diagramme aktualisiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Grundlagen des Besitzes von Datenbankdiagrammen (Visual Database Tools)](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
-[Einrichten des Datenbankdiagramm-Designers (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
+[Grundlagen des Besitzes von Datenbankdiagrammen](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[Einrichten des Datenbankdiagramm-Designers](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
   

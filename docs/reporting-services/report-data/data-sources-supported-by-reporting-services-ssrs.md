@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a0777bc6d51ca99da3e52fc533306b49390d173
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 6400b708fa90d384c6c7f6d0bf11ca7352bad560
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593943"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190887"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Von Reporting Services unterstützte Datenquellen (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Berichtsdaten von Datenquellen über eine modulare und erweiterbare Datenschicht abgerufen, für die Datenverarbeitungserweiterungen verwendet werden. Zum Abrufen von Berichtsdaten von einer Datenquelle müssen Sie eine Datenverarbeitungserweiterung auswählen, die den Typ der Datenquelle, die Version der für die Datenquelle ausgeführten Software und die Plattform der Datenquelle (32-Bit oder 64-Bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) unterstützt.  
@@ -32,7 +32,7 @@ ms.locfileid: "73593943"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für MDX, DMX, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]und tabellarische Modelle  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für MDX, DMX, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] und tabellarische Modelle  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73593943"
   
 -   XML  
   
- Zusätzlich können von Systemadministratoren benutzerdefinierte Datenverarbeitungserweiterungen und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Standarddatenanbieter installiert und registriert werden. Zum Verarbeiten und Anzeigen eines Berichts müssen die Datenverarbeitungserweiterungen und Datenanbieter auf dem Berichtsserver installiert und registriert sein. Zum Anzeigen einer Vorschau für einen Bericht müssen sie auf dem Berichterstellungsclient installiert und registriert sein. Datenverarbeitungserweiterungen und Datenanbieter müssen für die Plattform, auf der sie installiert sind, systemintern kompiliert werden. Wenn Sie mit dem SOAP-Webdienst eine Datenquelle programmgesteuert bereitstellen, müssen Sie die Datenquellenerweiterung definieren. Verwenden Sie Datenerweiterungswerte aus der Datei **RSReportDesigner.config** . Standardmäßig befindet sich die Datei im folgenden Ordner:  
+ Zusätzlich können von Systemadministratoren benutzerdefinierte Datenverarbeitungserweiterungen und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Standarddatenanbieter installiert und registriert werden. Zum Verarbeiten und Anzeigen eines Berichts müssen die Datenverarbeitungserweiterungen und Datenanbieter auf dem Berichtsserver installiert und registriert sein. Zum Anzeigen einer Vorschau für einen Bericht müssen sie auf dem Berichterstellungsclient installiert und registriert sein. Datenverarbeitungserweiterungen und Datenanbieter müssen für die Plattform, auf der sie installiert sind, systemintern kompiliert werden. Wenn Sie mit dem SOAP-Webdienst eine Datenquelle programmgesteuert bereitstellen, müssen Sie die Datenquellenerweiterung definieren. Verwenden Sie Datenerweiterungswerte aus der Datei **RSReportDesigner.config** . Standardmäßig befindet sich die Datei im folgenden Ordner:  
   
 ```  
 <drive letter>\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies  
@@ -60,7 +60,7 @@ ms.locfileid: "73593943"
   
  Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenerweiterung lautet z.B. OLEDB-MD.  
   
- Viele [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Standarddatenanbieter von Drittanbietern sind im [Microsoft Download Center](https://www.microsoft.com/download/default.aspx) und auf den entsprechenden Drittanbieterseiten als Downloads verfügbar. Sie können auch das öffentliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Forum nach Informationen zu Datenanbietern von Drittanbietern durchsuchen.  
+ Viele [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Standarddatenanbieter von Drittanbietern sind im [Microsoft Download Center](https://www.microsoft.com/download/default.aspx) und auf den entsprechenden Drittanbieterseiten als Downloads verfügbar. Sie können auch das öffentliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Forum nach Informationen zu dritten Datenanbietern durchsuchen.  
   
 > [!NOTE]  
 >  Es wird von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Standarddatenanbietern nicht notwendigerweise die gesamte Funktionalität unterstützt, die von Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bereitgestellt wird. Mit einigen OLE DB-Datenanbietern und ODBC-Treibern können Sie außerdem zwar Berichte erstellen und in einer Vorschau anzeigen, doch bieten sie keine Unterstützung für auf einem Berichtsserver veröffentlichte Berichte. Beispielsweise wird der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -OLE DB-Anbieter für Jet auf dem Berichtsserver nicht unterstützt. Weitere Informationen finden Sie unter [Datenverarbeitungserweiterungen und .NET Framework-Datenanbieter &#40;SSRS&#41;](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md).  
@@ -81,23 +81,23 @@ ms.locfileid: "73593943"
 ## <a name="supported-data-sources"></a>Unterstützte Datenquellen  
  In der folgenden Tabelle sind [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Datenverarbeitungserweiterungen und Datenanbieter aufgeführt, die Sie zum Abrufen von Daten für Berichtsdatasets und Berichtsmodelle verwenden können. Weitere Informationen zu Erweiterungen oder Datenanbietern erhalten Sie, indem Sie auf den Link in der zweiten Spalte klicken. Die Tabellenspalten enthalten folgende Informationen:  
   
--   Quelle der Berichtsdaten: Der Datentyp, auf den zugegriffen wird, z. B. relationale Datenbank, mehrdimensionale Datenbank, Flatfile oder XML. In dieser Spalte wird die folgende Frage beantwortet: "Welche Datentypen können in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] für einen Bericht verwendet werden?"  
+-   Die Quelle der Berichtsdaten: Der Datentyp, auf den zugegriffen wird, z. B. relationale Datenbank, mehrdimensionale Datenbank, Flatfile oder XML. In dieser Spalte wird die folgende Frage beantwortet: „Welche Datentypen kann [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] für einen Bericht verwenden?“  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Datenquellentyp: Einer der Datenquellentypen, die in der Dropdownliste angezeigt werden, wenn Sie in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]eine Datenquelle definieren. Diese Liste enthält die installierten und registrierten Datenverarbeitungserweiterungen und Datenanbieter. In dieser Spalte wird die folgende Frage beantwortet: "Welchen Datenquellentyp wähle ich beim Erstellen einer Berichtsdatenquelle in der Dropdownliste aus?"  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Datenquellentyp: Einer der Datenquellentypen, die in der Dropdownliste angezeigt werden, wenn Sie in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] eine Datenquelle definieren. Diese Liste enthält die installierten und registrierten Datenverarbeitungserweiterungen und Datenanbieter. In dieser Spalte wird die folgende Frage beantwortet: „Welchen Datenquellentyp wähle ich beim Erstellen einer Berichtsdatenquelle in der Dropdownliste aus?“  
   
--   Name der Datenverarbeitungserweiterung/des Datenanbieters: Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenverarbeitungserweiterung oder der andere Datenanbieter, die oder der dem ausgewählten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenquellentyp entspricht. In dieser Spalte wird die folgende Frage beantwortet: "Welche Datenverarbeitungserweiterung oder welcher Datenanbieter wird verwendet, wenn ich einen Datenquellentyp auswähle?"  
+-   Name der Datenverarbeitungserweiterung/des Datenanbieters: Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterung oder andere Datenanbieter, die dem ausgewählten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Datenquellentyp entsprechen. In dieser Spalte wird die folgende Frage beantwortet: „Welche Datenverarbeitungserweiterung oder welcher Datenanbieter wird verwendet, wenn ich einen Datenquellentyp auswähle?“  
   
--   Zugrunde liegende Datenanbieterversion (optional): Einige Datenquellentypen unterstützen mehr als einen Datenanbieter. Dabei kann es sich um unterschiedliche Versionen eines Datenanbieters oder um unterschiedliche Implementierungen von Drittanbietern für einen Typ von Datenanbieter handeln. Der Name des Anbieters wird nach dem Konfigurieren einer Datenquelle häufig in der Verbindungszeichenfolge angegeben. In dieser Spalte wird die folgende Frage beantwortet: "Welchen Datenanbieter wähle ich nach der Auswahl des Datenquellentyps im Dialogfeld **Verbindungseigenschaften** aus?"  
+-   Zugrunde liegende Datenanbieterversion (optional): Einige Datenquellentypen unterstützen mehrere Datenanbieter. Dabei kann es sich um unterschiedliche Versionen eines Datenanbieters oder um unterschiedliche Implementierungen von Drittanbietern für einen Typ von Datenanbieter handeln. Der Name des Anbieters wird nach dem Konfigurieren einer Datenquelle häufig in der Verbindungszeichenfolge angegeben. In dieser Spalte wird die folgende Frage beantwortet: „Welchen Datenanbieter wähle ich nach der Auswahl des Datenquellentyps im Dialogfeld **Verbindungseigenschaften** aus?“  
   
--   Datenquellen- *\<Plattform>* : Die von der Datenverarbeitungserweiterung oder dem Datenanbieter für die Zieldatenquelle unterstützte Plattform. In dieser Spalte wird die folgende Frage beantwortet: "Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von einer Datenquelle auf diesem Typ von Plattform abgerufen werden?"  
+-   Datenquelle *\<plattform>* : Die von der Datenverarbeitungserweiterung oder dem Datenanbieter für die Zieldatenquelle unterstützte Plattform. In dieser Spalte wird die folgende Frage beantwortet: „Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von einer Datenquelle auf diesem Plattformtyp abgerufen werden?“  
   
--   Version der Datenquelle: Die von der Datenverarbeitungserweiterung oder dem Datenanbieter unterstützte Version der Zieldatenquelle. In dieser Spalte wird die folgende Frage beantwortet: "Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von dieser Version der Datenquelle abgerufen werden?"  
+-   Version der Datenquelle: Die Version der Zieldatenquelle, die von der Datenverarbeitungserweiterung oder dem Datenanbieter unterstützt wird. In dieser Spalte wird die folgende Frage beantwortet: „Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von dieser Version der Datenquelle abgerufen werden?“  
   
--   RS- *\<Plattform>* : Die Plattformen für den Berichtsserver und den Berichterstellungsclient, auf denen Sie eine benutzerdefinierte Datenverarbeitungserweiterung oder einen benutzerdefinierten Datenanbieter installieren können. Die integrierten Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden bei jeder Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereitgestellt. Eine benutzerdefinierte Datenverarbeitungserweiterung oder ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter müssen systemintern für eine bestimmte Plattform kompiliert werden. In dieser Spalte wird die folgende Frage beantwortet: "Kann diese Datenverarbeitungserweiterung oder dieser Datenanbieter auf diesem Typ von Plattform installiert werden?"  
+-   RS *\<plattform>* : Die Plattformen für den Berichtsserver und den Berichterstellungsclient, auf denen Sie eine benutzerdefinierte Datenverarbeitungserweiterung oder einen benutzerdefinierten Datenanbieter installieren können. Die integrierten Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden bei jeder Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereitgestellt. Eine benutzerdefinierte Datenverarbeitungserweiterung oder ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter müssen systemintern für eine bestimmte Plattform kompiliert werden. In dieser Spalte wird die folgende Frage beantwortet: „Kann diese Datenverarbeitungserweiterung oder dieser Datenanbieter auf diesem Plattformtyp installiert werden?“  
   
 ###  <a name="DataSourcesTable"></a> Typen von Datenquellen  
   
-|Quelle der<br /><br /> Berichtsdaten|Reporting Services-Datenquellentyp|Name der Datenverarbeitungserweiterung/des Datenanbieters|Zugrunde liegende Datenanbieterversion<br /><br /> (Optional)|data<br /><br /> Quelle<br /><br /> Plattform x86|data<br /><br /> Quelle<br /><br /> Plattform x64|Version der Datenquelle|RS-<br /><br /> Plattform x86|RS<br /><br /> Plattform x64|  
+|Quelle der<br /><br /> Berichtsdaten|Reporting Services-Datenquellentyp|Name der Datenverarbeitungserweiterung/des Datenanbieters|Zugrunde liegende Datenanbieterversion<br /><br /> (Optional)|Daten<br /><br /> `Source`<br /><br /> Plattform x86|Daten<br /><br /> `Source`<br /><br /> Plattform x64|Version der Datenquelle|RS<br /><br /> Plattform x86|RS<br /><br /> Plattform x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank|[Microsoft SQL Server](#MicrosoftSQLServer)|Integrierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenverarbeitungserweiterung|Erweitert System.Data.SqlClient|J|J|SQL Server 2008 und höher.|J|J|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank|OLEDB|Integrierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenverarbeitungserweiterung|Erweitert System.Data.OledbClient|J|J|SQL Server 2008 und höher.|J|J|  
@@ -132,7 +132,7 @@ ms.locfileid: "73593943"
 > [!NOTE]
 >  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datenverarbeitungserweiterung wird derzeit nicht unterstützt.  
   
- Weitere Informationen zu Datenverarbeitungs Erweiterungen, die von Berichts-Generator unterstützt werden, finden Sie unter [Datenverbindungen, Datenquellen und Verbindungs](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)Zeichenfolgen in Berichts-Generator.
+ Weitere Informationen zu Datenverarbeitungserweiterungen, die vom Berichts-Generator unterstützt werden, finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
   
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server-Datenverarbeitungserweiterung  
  Beim Datenquellentyp **Microsoft SQL Server** wird der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]umschlossen und erweitert. Diese Datenverarbeitungserweiterung wird für x86- und [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]-basierte Plattformen nativ kompiliert und auf diesen Plattformen ausgeführt.  
@@ -164,13 +164,13 @@ Die Unterstützung für diese Datenquelle wurde eingestellt. Verwenden Sie den S
  [Zurück zur Datenquellentabelle](#DataSourcesTable)  
   
 ###  <a name="AnalysisServices"></a> Microsoft SQL Server Analysis Services-Datenverarbeitungserweiterung  
- Wenn Sie den Datenquellentyp **Microsoft SQL Server Analysis Services**auswählen, müssen Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenverarbeitungserweiterung auswählen, mit der der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erweitert wird. Diese Datenverarbeitungserweiterung wird für x86- und x64-basierte Plattformen systemintern kompiliert und auf diesen Plattformen ausgeführt.  
+ Wenn Sie den Datenquellentyp **Microsoft SQL Server Analysis Services**auswählen, müssen Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterung auswählen, mit der der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Datenanbieter für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erweitert wird. Diese Datenverarbeitungserweiterung wird für x86- und x64-basierte Plattformen systemintern kompiliert und auf diesen Plattformen ausgeführt.  
   
  Für diesen Datenanbieter wird das ADOMD.NET-Objektmodell verwendet, um Abfragen mit XMLA (XML for Analysis), Version 1.0, zu erstellen. Ergebnisse werden als vereinfachtes Rowset zurückgegeben. Weitere Informationen finden Sie unter [Analysis Services Connection Type for MDX (SSRS) (Analysis Services-Verbindungstyp für MDX (SSRS))](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Analysis Services Connection Type for DMX (SSRS) (Analysis Services-Verbindungstyp für DMX (SSRS))](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX Query Designer User Interface (Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services)](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) und [Analysis Services DMX Query Designer User Interface (Benutzeroberfläche des DMX-Abfrage-Designers für Analysis Services)](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
   
- Bei Verbindung mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquelle unterstützt die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenverarbeitungserweiterung mehrwertige Parameter und ordnet Zell- und Elementeigenschaften erweiterten Eigenschaften zu, die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]unterstützt werden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+ Bei Verbindung mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquelle unterstützt die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenverarbeitungserweiterung mehrwertige Parameter und ordnet Zell- und Elementeigenschaften erweiterten Eigenschaften zu, die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt werden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
- Sie können auch Modelle aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquellen erstellen.  
+ Sie können auch Modelle aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquellen erstellen.  
   
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  Für die OLE DB-Datenverarbeitungserweiterung ist die Auswahl eines zusätzlichen Datenanbieters in Abhängigkeit von der Version der im Bericht zu verwendenden Datenquelle erforderlich. Wenn Sie keinen bestimmten Datenanbieter auswählen, wird ein Standardwert bereitgestellt. Wählen Sie einen spezifischen Datenanbieter im Dialogfeld **Verbindungseigenschaften** aus, das Sie über das Dialogfeld „Datenquelle“ oder „Freigegebene Datenquelle“ über die Schaltfläche **Bearbeiten** öffnen können.  
@@ -235,7 +235,7 @@ Um die Oracle-Clienttools zu installieren, gehen Sie folgendermaßen vor:
   
  Benannte Parameter werden von dieser Erweiterung unterstützt. Oracle Version 11g oder höher unterstützt Parameter mit mehreren Werten. Verwenden Sie bei unbenannten, positionsabhängigen Parametern die OLE DB-Datenverarbeitungserweiterung mit dem Datenanbieter „ [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für Oracle“. Weitere Informationen zum Konfigurieren von Oracle als Datenquelle finden Sie unter [Verwenden von Reporting Services zum Konfigurieren und Zugreifen auf eine Oracle-Datenquelle](https://support.microsoft.com/kb/834305). Weitere Informationen zur Konfiguration zusätzlicher Berechtigungen finden Sie in der [Knowledge Base unter](https://support.microsoft.com/kb/870668) Hinzufügen von Berechtigunen für den NETWORK SERVICE-Sicherheitsprinzipal [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- Sie können von gespeicherten Prozeduren mit mehreren Eingabeparametern Daten abrufen, die gespeicherte Prozedur darf jedoch nur einen Ausgabecursor zurückgeben. Weitere Informationen finden Sie unter [zurückgeben von Ergebnissen mit Oracle-REF Cursors](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) in "Abrufen von Daten mit einem DataReader".
+ Sie können von gespeicherten Prozeduren mit mehreren Eingabeparametern Daten abrufen, die gespeicherte Prozedur darf jedoch nur einen Ausgabecursor zurückgeben. Weitere Informationen finden Sie im Abschnitt [Zurückgeben von Ergebnissen mit Oracle-CURSORs vom Typ REF](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) des Artikels „Abrufen von Daten mithilfe eines DataReader“.
   
  Weitere Informationen finden Sie unter [Oracle-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md). Weitere Informationen zum zugeordneten Abfrage-Designer finden Sie unter [Grafische Benutzeroberfläche des Abfrage-Designers](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -273,7 +273,7 @@ Um die Oracle-Clienttools zu installieren, gehen Sie folgendermaßen vor:
  [Zurück zur Datenquellentabelle](#DataSourcesTable)  
   
 ###  <a name="SharePointList"></a> SharePoint-Listendatenerweiterung  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Erweiterung für SharePoint-Listendaten, die es Ihnen ermöglicht, SharePoint-Listen in einem Bericht als Datenquelle zu verwenden. Sie können Listendaten aus folgenden Quellen abrufen:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Erweiterung für SharePoint-Listendaten, die es Ihnen ermöglicht, SharePoint-Listen in einem Bericht als Datenquelle zu verwenden. Sie können Listendaten aus folgenden Quellen abrufen:  
   
 -   SharePoint Server 2016  
 
@@ -285,7 +285,7 @@ Um die Oracle-Clienttools zu installieren, gehen Sie folgendermaßen vor:
   
 2.  Auf einem Berichtsserver, der im integrierten SharePoint-Modus konfiguriert ist, stammen die Listendaten entweder aus dem entsprechenden Webdienst Lists.asmx oder aus programmgesteuerten Aufrufen der SharePoint-API. In diesem Modus können Listendaten von einer SharePoint-Farm abgerufen werden.  
   
-3.  In [!INCLUDE[SPS2013](../../includes/sps2013-md.md)] und SharePoint Server 2016 ermöglicht das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für [!INCLUDE[msCoName](../../includes/msconame-md.md)]-SharePoint-Technologien das Abrufen von Listendaten aus einem „Lists.asmx“-Webdienst für eine SharePoint-Website oder von einer SharePoint-Website, die Teil einer SharePoint-Farm ist. Dieses Szenario wird auch als *lokaler Modus* bezeichnet, da kein Berichtsserver erforderlich ist.  
+3.  In [!INCLUDE[SPS2013](../../includes/sps2013-md.md)] und SharePoint Server 2016 ermöglicht das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für [!INCLUDE[msCoName](../../includes/msconame-md.md)]-SharePoint-Technologien das Abrufen von Listendaten aus einem Lists.asmx-Webdienst für eine SharePoint-Website oder von einer SharePoint-Website, die Teil einer SharePoint-Farm ist. Dieses Szenario wird auch als *lokaler Modus* bezeichnet, da kein Berichtsserver erforderlich ist.  
   
  Die Anmeldeinformationen, die Sie angeben können, hängen von der Implementierung ab, die die Clientanwendung verwendet. Weitere Informationen finden Sie unter [SharePoint-Listenverbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md).  
   
@@ -309,7 +309,7 @@ Um die Oracle-Clienttools zu installieren, gehen Sie folgendermaßen vor:
  [Zurück zur Datenquellentabelle](#DataSourcesTable)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)
   

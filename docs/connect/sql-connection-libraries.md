@@ -1,6 +1,6 @@
 ---
-title: Verbindungs Bibliotheken für Microsoft SQL-Datenbanken | Microsoft-Dokumentation
-description: Bietet Download Links für Module, die die Verbindung mit Microsoft SQL Server und Azure SQL-Datenbank über eine Vielzahl von Client Programmiersprachen ermöglichen.
+title: Verbindungsbibliotheken für Microsoft SQL-Datenbanken | Microsoft-Dokumentation
+description: Dieser Artikel bietet Links zum Download von Modulen, die eine Verbindung mit Microsoft SQL Server und Azure SQL-Datenbank mit verschiedenen Clientprogrammiersprachen ermöglichen.
 author: MightyPen
 ms.prod: sql
 ms.technology: ''
@@ -9,31 +9,31 @@ ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
 ms.openlocfilehash: 71254b937c4c0173af9e1549efb98a0b42f65e02
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73632818"
 ---
-# <a name="connection-modules-for-microsoft-sql-databases"></a>Verbindungs Module für Microsoft SQL-Datenbanken
+# <a name="connection-modules-for-microsoft-sql-databases"></a>Verbindungsmodule für Microsoft SQL-Datenbanken
 
-Dieser Artikel bietet Download Links zu Verbindungs Modulen oder *Treibern* , die von Ihren Client Programmen für die Interaktion mit [Microsoft SQL Server](../relational-databases/database-features.md)und mit dem zugehörigen Zwilling in der [Azure SQL](https://docs.microsoft.com/azure/sql-database/)-Cloud-Cloud verwendet werden können. Treiber sind für eine Vielzahl von Programmiersprachen verfügbar, die unter den folgenden Betriebssystemen ausgeführt werden:
+Dieser Artikel bietet Links zum Download von Verbindungsmodulen oder *Treibern*, die Ihre Clientprogramme für die Interaktion mit der Plattform [Microsoft SQL Server](../relational-databases/database-features.md) und ihrem Pendant in der Cloud, [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/), verwenden können. Treiber sind für verschiedene Programmiersprachen verfügbar und können unter folgenden Betriebssystemen ausgeführt werden:
 
 - Linux
-- macOS
+- MacOS
 - Windows
 
-#### <a name="oop-to-relational-mismatch"></a>Nicht übereinstimmender OOP-zu-relationaler Konflikt
+#### <a name="oop-to-relational-mismatch"></a>Konflikt zwischen objektorientierter Programmierung und relationalem Datenbankformat
 
-*Relational*: Client Programme, die in einer OOP-Sprache (Object-Oriented Programming) geschrieben wurden, verwenden häufig SQL-Treiber, die abgefragte Daten in einem Format zurückgeben, das mehr relationaler als objektorientiert ist. C#die Verwendung von ADO.net ist ein Beispiel. Der Konflikt zwischen OOP-relationalem Format ist manchmal schwerer zu schreiben und zu verstehen.
+*Relationales Format*: Clientprogramme, die in einer objektorientierten Programmiersprache (Object-Oriented Programming, OOP) geschrieben sind, verwenden häufig SQL-Treiber, die die abgefragten Daten in einem Format zurückgeben, das eher relational als objektorientiert ist. C# mit ADO.NET ist ein Beispiel hierfür. Der Konflikt zwischen OOP und relationalem Format führt zuweilen dazu, dass OOP-Code schwieriger zu schreiben und zu verstehen ist.
 
-*ORM*: andere Treiber oder Frameworks geben abgefragte Daten im OOP-Format zurück, sodass keine Übereinstimmung gefunden wird. Diese Treiber funktionieren, indem Sie erwarten, dass Klassen so definiert wurden, dass Sie den Datenspalten bestimmter SQL-Tabellen entsprechen. Der Treiber führt dann die *Objekt relationale Zuordnung* (ORM) aus, um abgefragte Daten als eine Instanz einer Klasse zurückzugeben. Die Microsoft-Entity Framework (EF) C#for und Hibernate für Java sind zwei Beispiele.
+*ORM*: Andere Treiber oder Frameworks geben die abgefragten Daten im OOP-Format zurück, um diesen Konflikt zu vermeiden. Diese Treiber erwarten, dass Klassen so definiert wurden, dass sie den Datenspalten bestimmter SQL-Tabellen entsprechen. Diese Treiber führen dann eine *objektrelationale Zuordnung* (Object-Relational Mapping, ORM) aus, um die abgefragten Daten als Instanz einer Klasse zurückzugeben. Das Microsoft Entity Framework (EF) für C# und Hibernate für Java sind zwei Beispiele hierfür.
 
-Im vorliegenden Artikel werden die beiden Arten von Verbindungs Treibern in separaten Abschnitten beschrieben.
+Im vorliegenden Artikel sind diesen beiden Arten von Verbindungstreibern zwei separate Abschnitte gewidmet.
 
 <a name="anchor-20-drivers-relational-access" />
 
-## <a name="drivers-for-relational-access"></a>Treiber für relationalen Zugriff
+## <a name="drivers-for-relational-access"></a>Treiber für den relationalen Zugriff
 
 
 <!--
@@ -47,14 +47,14 @@ PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink
 although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
-| Sprache | Herunterladen des SQL-Treibers |
+| Sprache | Download des SQL-Treibers |
 | :------- | :---------------------- |
-| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.Net Core, für Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.Net Core für MacOS](https://www.microsoft.com/net/core#macos)<br />[.Net Core, für Windows](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.NET Core für Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core für macOS](https://www.microsoft.com/net/core#macos)<br />[.NET Core für Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
-| Node.js | [Node. js-Treiber, Installationsanweisungen](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
+| Node.js | [Node.js-Treiber, Installationsanweisungen](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
-| Python | [pyodbc, Installationsanweisungen](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Herunterladen von ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
+| Python | [pyodbc, Installationsanweisungen](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Herunterladen des ODBC-Treibers](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Ruby-Treiber, Installationsanweisungen](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby-Downloadseite](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
 
@@ -63,14 +63,14 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 ## <a name="drivers-for-orm-access"></a>Treiber für den ORM-Zugriff
 
 
-In der folgenden Tabelle sind Beispiele für ORM-Frameworks (Object Relational Mapping) aufgelistet, die Client Anwendungen zum Herstellen einer Verbindung mit Microsoft SQL-Datenbanken verwenden.
+In der folgenden Tabelle sind Beispiele für ORM-Frameworks aufgelistet, die Clientanwendungen zum Herstellen einer Verbindung mit Microsoft SQL-Datenbanken verwenden können.
 
 
-| Sprache | ORM-Treiber Download |
+| Sprache | Download des ORM-Treibers |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6. x oder höher)](https://docs.microsoft.com/ef/) |
+| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x oder höher)](https://docs.microsoft.com/ef/) |
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
-| PHP | [Eloquentes ORM, in laravel install enthalten](https://laravel.com/docs/) |
+| PHP | [Eloquent ORM, enthalten in der Laravel-Installation](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
@@ -78,26 +78,26 @@ In der folgenden Tabelle sind Beispiele für ORM-Frameworks (Object Relational M
 
 <a name="anchor-60-build-an-app-webpages" />
 
-## <a name="build-an-app-webpages"></a>Build-an-App-Webseiten
-[https://aka.ms/sqldev](https://aka.ms/sqldev) gelangen Sie zu einer Gruppe von *Build-an-App-* Webseiten. Die Webseiten enthalten Informationen zu zahlreichen Kombinationen aus Programmiersprache, Betriebssystem und SQL-Verbindungs Treiber. Zu den Informationen, die von den Webseiten Build-an-App bereitgestellt werden, zählen die folgenden Elemente:
+## <a name="build-an-app-webpages"></a>Webseiten zum Erstellen einer App
+Über [https://aka.ms/sqldev](https://aka.ms/sqldev) gelangen Sie zu einer Reihe von Webseiten zum *Erstellen einer App*. Diese Webseiten enthalten Informationen zu zahlreichen Kombinationen aus Programmiersprache, Betriebssystem und SQL-Verbindungstreiber. Webseiten zum Erstellen einer App bieten u. a. die folgenden Informationen:
 
-- Details zu den ersten Schritten von Anfang an für jede Kombination aus Sprache + Betriebssystem und Treiber.
-    - Anweisungen zum Installieren der aktuellen SQL-Verbindungs Treiber.
-- Code Beispiele für jedes der folgenden Elemente:
-    - Objekt relationale Codebeispiele.
+- Ausführliche Informationen zum Einstieg für jede Kombination aus Sprache, Betriebssystem und Treiber.
+    - Anweisungen zum Installieren der neuesten SQL-Verbindungstreiber.
+- Codebeispiele für jedes der folgenden Elemente:
+    - Objektrelationale Codebeispiele.
     - ORM-Codebeispiele
-    - Columnstore-Index Demonstrationen für eine wesentlich schnellere Leistung.
+    - Columnstore-Index-Demonstrationen zum Erzielen einer wesentlich schnelleren Leistung.
 
-#### <a name="first-page-of-build-an-app-webpages"></a>Erste Seite, von Build-an-App-Webseiten
-![Build-a-app-Webseiten, Screenshot der ersten Seite][image-ref-163-buildanapp-webpages-first-page]
+#### <a name="first-page-of-build-an-app-webpages"></a>Erster Bildschirm einer Webseite zum Erstellen einer App
+![Screenshot des ersten Bildschirms einer Webseite zum Erstellen einer App][image-ref-163-buildanapp-webpages-first-page]
 
-#### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Menü für Java-Ubuntu von Build-an-App-Webseiten
-![Build-an-App-Webseiten, Menü Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
+#### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Menü für Java > Ubuntu auf einer Webseite zum Erstellen einer App
+![Webseite zum Erstellen einer App, Menü für Java > Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
 
 &nbsp;
 
 ## <a name="related-links"></a>Verwandte Links
-- [Code Beispiele für das Herstellen einer Verbindung mit Azure SQL-Datenbank in der Cloud mit Java und anderen Sprachen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+- [Codebeispiele zum Herstellen einer Verbindung mit Azure SQL-Datenbank in der Cloud mit Java und anderen Sprachen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)
 
 <!-- Image references -->
 

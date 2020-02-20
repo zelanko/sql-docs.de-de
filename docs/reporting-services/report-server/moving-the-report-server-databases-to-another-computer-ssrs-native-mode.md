@@ -1,6 +1,7 @@
 ---
-title: Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
-ms.date: 05/30/2017
+title: Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher Modus) | Microsoft-Dokumentation
+description: Sie können die Berichtsserver-Datenbanken, die in einer Installation von SQL Server-Datenbank-Engine verwendet werden, in eine Instanz auf einem anderen Computer verschieben.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65619682"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254578"
 ---
-# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus)
+# <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus)
 
-  Sie können die Berichtsserver-Datenbanken, die in einer Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet werden, in eine Instanz auf einem anderen Computer verschieben. Die Datenbanken reportserver und reportservertempdb müssen gemeinsam verschoben bzw. kopiert werden. Für eine Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sind beide Datenbanken erforderlich. Die reportservertempdb-Datenbank muss namentlich der zu verschiebenden primären reportserver-Datenbank entsprechen.  
+  Sie können die Berichtsserver-Datenbanken, die in einer Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet werden, in eine Instanz auf einem anderen Computer verschieben. Die Datenbanken reportserver und reportservertempdb müssen gemeinsam verschoben bzw. kopiert werden. Für eine Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sind beide Datenbanken erforderlich. Die reportservertempdb-Datenbank muss namentlich der zu verschiebenden primären reportserver-Datenbank entsprechen.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]: einheitlicher Modus  
   
  Das Verschieben einer Datenbank hat keine Auswirkungen auf geplante Vorgänge, die aktuell für Berichtsserverelemente definiert sind.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "65619682"
   
 2.  Beenden Sie den Berichtsserverdienst. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool können Sie den Dienst beenden.  
   
-3.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , und stellen Sie eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz her, die als Host für die Berichtsserver-Datenbanken fungiert.  
+3.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], und stellen Sie eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz her, die als Host für die Berichtsserver-Datenbanken fungiert.  
   
 4.  Klicken Sie mit der rechten Maustaste auf die Berichtsserver-Datenbank, zeigen Sie auf „Tasks“, und klicken Sie auf **Trennen**. Wiederholen Sie diesen Schritt für die temporäre Berichtsserver-Datenbank.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65619682"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>Sichern und Wiederherstellen der Berichtsserver-Datenbanken  
  Wenn Sie den Berichtsserver nicht offline schalten können, können Sie die Berichtsserver-Datenbanken durch Sichern und Wiederherstellen verschieben. Sie müssen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen zum Sichern und Wiederherstellen verwenden. Nach dem Wiederherstellen der Datenbanken müssen Sie den Berichtsserver so konfigurieren, dass die Datenbank in der neuen Serverinstanz verwendet wird. Weitere Informationen finden Sie in den Anweisungen am Ende dieses Themas.  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>Verwenden von BACKUP und COPY_ONLY zum Sichern der Berichtsserver-Datenbanken  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>Verwenden von BACKUP und COPY_ONLY zum Sichern der Berichtsserver-Datenbanken  
  Legen Sie beim Sichern der Datenbanken das COPY_ONLY-Argument fest. Achten Sie unbedingt darauf, dass Sie beide Datenbanken und Protokolldateien sichern.  
   
 ```  

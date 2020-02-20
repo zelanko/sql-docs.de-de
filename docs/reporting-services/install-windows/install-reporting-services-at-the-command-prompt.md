@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7c4597a19b3fbcde0a5b4f6a82cb2398b6776128
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513672"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>Installieren von Reporting Services 2016 über die Eingabeaufforderung
@@ -36,11 +36,11 @@ ms.locfileid: "62513672"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus.  
   
--   Die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+-   Das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 -   Der SQL Server-Agent für die Abonnementfunktionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]gelten.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ```  
 Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /UPDATEENABLED="False" /INSTANCENAME="MSSQLSERVER" /FEATURES="SQLEngine,Adv_SSMS,RS" /RSINSTALLMODE="DefaultNativeMode" /SQLSVCACCOUNT="[DOMAIN\ACCOUNT]" /SQLSVCPASSWORD="[PASSWORD]" /AGTSVCACCOUNT="[DOMAIN\ACCOUNT]" /AGTSVCPASSWORD="[PASSWORD]" /SQLSYSADMINACCOUNTS="[DOMAIN\ACCOUNT]"  

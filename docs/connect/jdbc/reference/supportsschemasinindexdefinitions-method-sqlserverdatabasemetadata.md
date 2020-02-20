@@ -1,5 +1,5 @@
 ---
-title: supportsschemasinindexdefinitions-Methode | Microsoft-Dokumentation
+title: supportsSchemasInIndexDefinitions-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 55ce9e4f-6e3f-482a-93a5-b9ae1b91d7a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b472c7df1b0bade87dad979421636cb8a386c3bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968909"
 ---
 # <a name="supportsschemasinindexdefinitions-method-sqlserverdatabasemetadata"></a>supportsSchemasInIndexDefinitions-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsSchemasInIndexDefinitions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportsschemasinindexdefinitions-Methode wird von der supportsschemasinindexdefinitions-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsSchemasInIndexDefinitions-Methode wird von der supportsSchemasInIndexDefinitions-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

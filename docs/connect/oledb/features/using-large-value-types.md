@@ -1,6 +1,6 @@
 ---
-title: Verwenden von großen Werttypen | Microsoft-Dokumentation
-description: Verwenden von Typen mit umfangreichen Werten mit OLE DB Treiber für SQL Server
+title: Verwenden von Datentypen mit umfangreichen Werten | Microsoft-Dokumentation
+description: Verwenden von Datentypen mit umfangreichen Werten mit dem OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988855"
 ---
 # <a name="using-large-value-types"></a>Verwenden von Datentypen mit umfangreichen Werten
@@ -33,7 +33,7 @@ ms.locfileid: "67988855"
 > [!NOTE]  
 >  Datentypen mit umfangreichen Werten können eine maximale Größe zwischen 1 KB und 8 KB haben oder ohne Größenbeschränkung festgelegt werden.  
   
- Zuvor konnten nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen wie **text**, **ntext** und **image** derartige Längen erreichen. Durch den **max**-Bezeichner für **varchar**, **nvarchar** und **varbinary** wurden diese Datentypen überflüssig. Da Datentypen mit umfangreichen Werten nach wie vor verfügbar sind, bleiben die meisten Schnittstellen zu den OLE DB-Datenzugriffskomponenten unverändert. Aus Gründen der Abwärtskompatibilität mit früheren Versionen wird das DBCOLUMNFLAGS_ISLONG-Flag im OLE DB Treiber für SQL Server weiterhin verwendet. Für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und höher entwickelte Anbieter und Treiber verwenden diese Bedingungen für die neuen Typen weiter, wenn keine Größenbeschränkung angegeben wird.  
+ Zuvor konnten nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen wie **text**, **ntext** und **image** derartige Längen erreichen. Durch den **max**-Bezeichner für **varchar**, **nvarchar** und **varbinary** wurden diese Datentypen überflüssig. Da Datentypen mit umfangreichen Werten nach wie vor verfügbar sind, bleiben die meisten Schnittstellen zu den OLE DB-Datenzugriffskomponenten unverändert. Zu Zwecken der Abwärtskompatibilität mit vorherigen Releases wird das DBCOLUMNFLAGS_ISLONG-Kennzeichen im OLE DB-Treiber für SQL Server weiterhin verwendet. Für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und höher entwickelte Anbieter und Treiber verwenden diese Bedingungen für die neuen Typen weiter, wenn keine Größenbeschränkung angegeben wird.  
   
 > [!NOTE]  
 >  Sie können die Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** auch als Eingabe- und Ausgabeparametertypen für gespeicherte Prozeduren, Funktionsrückgabetypen oder in [CAST und CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md)-Funktionen angeben.  
@@ -62,7 +62,7 @@ ms.locfileid: "67988855"
   
 -   Als DBTYPE_IUNKNOWN binden und Streaming verwenden  
   
- Beim Melden der maximalen Größe einer Spalte meldet der OLE DB Treiber für SQL Server Folgendes:  
+ Beim Melden der maximalen Größe einer Spalte gibt der OLE DB-Treiber für SQL Server einen der folgenden Werte an:  
   
 -   Die definierte maximale Größe, die für eine **varchar(** 2000 **)** -Spalte beispielsweise 2000 beträgt. Oder:  
   
@@ -690,7 +690,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Weitere Informationen darüber, wie der OLE DB-Treiber für SQL Server Datentypen mit umfangreichen Werten verfügbar macht, finden Sie unter [BLOB-und OLE-Objekte](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Weitere Informationen dazu, wie der OLE DB-Treiber für SQL Server Datentypen mit umfangreichen Werten verfügbar macht, finden Sie unter [Blobs und OLE-Objekte](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
 
   
 ## <a name="see-also"></a>Weitere Informationen  

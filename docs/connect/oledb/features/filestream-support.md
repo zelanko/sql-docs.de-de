@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: da67f050eba24ecf040124533c9d98c3f3f6bfec
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74056729"
 ---
 # <a name="filestream-support"></a>FILESTREAM-Unterstützung
@@ -25,9 +25,9 @@ ms.locfileid: "74056729"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Ab [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]unterstützt OLE DB Treiber für SQL Server die erweiterte FILESTREAM-Funktion. Beispiele finden Sie unter [FileStream und OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md).  
+Ab [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] unterstützt der OLE DB-Treiber für SQL Server die erweiterte FILESTREAM-Funktion. Beispiele finden Sie unter [FILESTREAM und OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md).  
 
-Die FILESTREAM-Funktion bietet eine Möglichkeit, große binäre Werte zu speichern und entweder über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder durch direkten Zugriff auf das Windows-Dateisystem darauf zuzugreifen. Ein großer Binärwert ist ein Wert, der größer als 2 Gigabyte (GB) ist. Weitere Informationen zur verbesserten FILESTREAM-Unterstützung finden Sie unter [FileStream &#40;-SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
+Die FILESTREAM-Funktion bietet eine Möglichkeit, große binäre Werte zu speichern und entweder über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder durch direkten Zugriff auf das Windows-Dateisystem darauf zuzugreifen. Ein großer Binärwert ist ein Wert, der größer als 2 Gigabyte (GB) ist. Weitere Informationen zur verbesserten FILESTREAM-Unterstützung finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
 Wenn eine Datenbankverbindung geöffnet wird, wird **\@\@TEXTSIZE** standardmäßig auf –1 („unbegrenzt“) festgelegt.  
   
@@ -54,16 +54,16 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Kompabilität mit früheren Versionen  
-Wenn der Client mit OLE DB Treiber für SQL Server kompiliert wurde und die Anwendung eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]) herstellt, ist das **varbinary (max)** -Verhalten mit dem Verhalten kompatibel, das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]eingeführt hat. Das heißt, die Maximalgröße der zurückgegebenen Daten ist auf 2 GB beschränkt. Ergebniswerte, die größer als 2 GB sind, werden abgeschnitten, und es wird die Warnung „Zeichenfolgendaten werden rechts abgeschnitten“ zurückgegeben. 
+Wenn der Client mit dem OLE DB-Treiber für SQL Server kompiliert wurde und die Anwendung eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellt ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]), ist das Verhalten von **varbinary(max)** mit dem vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Verhalten. Das heißt, die Maximalgröße der zurückgegebenen Daten ist auf 2 GB beschränkt. Ergebniswerte, die größer als 2 GB sind, werden abgeschnitten, und es wird die Warnung „Zeichenfolgendaten werden rechts abgeschnitten“ zurückgegeben. 
   
 Wenn Datentypkompatibilität auf 80 festgelegt wird, ist das Clientverhalten mit dem Verhalten von Clients früherer Versionen konsistent.  
   
 Bei Clients, die SQLOLEDB oder andere Anbieter verwenden, die vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] veröffentlicht wurden, wird **varbinary(max)** dem Datentyp „image“ zugeordnet.  
   
 ## <a name="comments"></a>Kommentare
-- Zum Senden und empfangen von **varbinary (max)** -Werten, die größer als 2 GB sind, verwendet eine Anwendung **DBTYPE_IUNKNOWN** in Parameter-und Ergebnis Bindungen. Für Parameter muss der Anbieter IUnknown:: QueryInterface für ISequentialStream und für Ergebnisse, die ISequentialStream zurückgeben, aufruft.  
+- Eine Anwendung verwendet **DBTYPE_IUNKNOWN** in Parameter- und Ergebnisbindungen, um **varbinary(max)** -Werte zu senden und zu empfangen, die größer als 2 GB sind. Der Anbieter muss für Parameter IUnknown::QueryInterface für ISequentialStream und für Ergebnisse abrufen, die ISequentialStream zurückgeben.  
 
--  Bei OLE DB wird die Überprüfung auf ISequentialStream-Werte gelockert. Wenn *wType* in der **DBBINDING** -Struktur **DBTYPE_IUNKNOWN** wird, kann die Längen Überprüfung entweder durch Weglassen **DBPART_LENGTH** von *dwPart* oder durch Festlegen der Länge der Daten (bei Offset *obLength* im Datenpuffer) auf ~ 0 deaktiviert werden. In diesem Fall überprüft der Provider die Länge des Werts nicht und fordert alle Daten an (oder gibt sie zurück), die über den Datenstrom zur Verfügung stehen. Diese Änderung wird auf alle LOB-Typen (Large Object) und auf XML angewendet, allerdings nur, wenn eine Verbindung zu [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]-Servern (oder höher) besteht. Auf diese Weise erhalten Entwickler eine höhere Flexibilität, während sie die Konsistenz und Abwärtskompatibilität für vorhandene Anwendungen und Downlevelserver beibehalten.  Diese Änderung wirkt sich auf alle Schnittstellen aus, die Daten übertragen, hauptsächlich IRowset:: GetData, ICommand:: Execute und IRowsetFastLoad:: InsertRow.
+-  Für OLE DB wird die auf ISequentialStream-Werte bezogene Überprüfung gelockert. Wenn *wType* in der **DBBINDING**-Struktur **DBTYPE_IUNKNOWN** ist, kann die Längenüberprüfung deaktiviert werden, indem **DBPART_LENGTH** aus *dwPart* ausgelassen wird oder die Länge der Daten (bei Offset *obLength* im Datenpuffer) auf ~0 festgelegt wird. In diesem Fall überprüft der Provider die Länge des Werts nicht und fordert alle Daten an (oder gibt sie zurück), die über den Datenstrom zur Verfügung stehen. Diese Änderung wird auf alle LOB-Typen (Large Object) und auf XML angewendet, allerdings nur, wenn eine Verbindung zu [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]-Servern (oder höher) besteht. Auf diese Weise erhalten Entwickler eine höhere Flexibilität, während sie die Konsistenz und Abwärtskompatibilität für vorhandene Anwendungen und Downlevelserver beibehalten.  Diese Änderung wirkt sich auf alle Schnittstellen aus, die Daten übertragen (hauptsächlich IRowset::GetData, ICommand::Execute und IRowsetFastLoad::InsertRow).
  
 
 ## <a name="see-also"></a>Weitere Informationen  

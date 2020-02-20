@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0ff29e4ed9a5986173020530bd691d0c95a89749
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994793"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (oder IRow::Open) und ISequentialStream
@@ -37,13 +37,13 @@ ms.locfileid: "67994793"
   
 2.  Führen Sie den Befehl aus (in diesem Beispiel wird **ICommandExecute::Execute()** mit IID_IRow aufgerufen).  
   
-3.  Rufen Sie die Spaltendaten mit **IRow:: Open ()** oder **IRow:: GetColumns ()** ab.  
+3.  Rufen Sie die Spaltendaten mithilfe von **IRow::Open()** oder **IRow::GetColumns()** ab.  
   
-    -   **IRow:: Open ()** kann verwendet werden, um einen **ISequentialStream** in der Zeile zu öffnen. Geben Sie DBGUID_STREAM an, um anzugeben, dass die Spalte einen Strom von Binärdaten enthält (mit **IStream** oder **ISequentialStream** können die Daten anschließend aus der Spalte gelesen werden).  
+    -   **IRow::Open()** kann zum Öffnen einer **ISequentialStream**-Schnittstelle in der Zeile verwendet werden. Geben Sie DBGUID_STREAM an, um anzugeben, dass die Spalte einen Strom von Binärdaten enthält (mit **IStream** oder **ISequentialStream** können die Daten anschließend aus der Spalte gelesen werden).  
   
     -   Wenn **IRow::GetColumns()** verwendet wird, wird das **pData**-Element der DBCOLUMNACCESS-Struktur so festgelegt, dass es auf ein Datenstromobjekt zeigt.  
   
-4.  Verwenden Sie **ISequentialStream:: Read ()** wiederholt, um die angegebene Anzahl von Bytes in den Consumerpuffer zu lesen.  
+4.  Verwenden Sie **ISequentialStream::Read()** mehrmals, um die angegebene Anzahl von Bytes in den Consumerpuffer zu lesen.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie Sie mithilfe von IRow eine einzelne Zeile abrufen können. In diesem Beispiel wird jeweils eine Spalte aus der Zeile abgerufen. In diesem Beispiel wird die Verwendung von IRow::Open() sowie IRow::GetColumns() veranschaulicht. Im Beispiel werden die Spaltendaten mithilfe von ISequentialStream::Read gelesen.  

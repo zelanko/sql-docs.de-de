@@ -1,5 +1,5 @@
 ---
-title: getencrypt-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: Methode „getEncrypt“ (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1cdb12dd-6e6f-4bbd-8f5f-9e630f3ee2c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3764ff5b9308b4b370dda14e98787513c28458c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983375"
 ---
 # <a name="getencrypt-method-sqlserverdatasource"></a>getEncrypt-Methode (SQLServerDataSource)
@@ -35,7 +35,7 @@ public boolean getEncypt()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn die Verschlüsselung aktiviert ist. Andernfalls lautet der Wert **false**.  
+ **TRUE**, wenn die Verschlüsselung aktiviert ist. Andernfalls lautet der Wert **false**.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Ist die encrypt-Eigenschaft auf **TRUE** festgelegt, wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sichergestellt, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für alle zwischen Client und Server versendeten Daten die SSL-Verschlüsselung (Secure Sockets Layer) verwendet, sofern auf dem Server ein Zertifikat installiert ist.  

@@ -1,7 +1,6 @@
 ---
-title: Überprüfen der Wiedergabe Ergebnisse | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Überprüfen der Wiedergabeergebnisse
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,18 +9,22 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6b68d6e5376bdf24efb09c50e3df63ed5810373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 03c6f6e0bcb58037e362ffd4b3ad20914fd9c328
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949934"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306946"
 ---
 # <a name="review-the-replay-results"></a>Überprüfen der Wiedergabeergebnisse
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Nachdem die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Funktion eine verteilte Wiedergabe abgeschlossen hat, kann die Wiedergabeaktivität für jeden Client aufgezeichnet und in Ergebnisdateien der Ablaufverfolgung auf jedem Client gespeichert werden. Um diese Aktivität aufzuzeichnen, müssen Sie beim Ausführen des Verwaltungstools mit der **replay**-Option den **-o**-Parameter verwenden. Weitere Informationen zur Wiedergabeoption finden Sie unter [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+
+Nachdem das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Feature eine verteilte Wiedergabe abgeschlossen hat, kann die Wiedergabeaktivität für jeden Client aufgezeichnet und in Ergebnis-Ablaufverfolgungsdateien auf jedem Client gespeichert werden. Um diese Aktivität aufzuzeichnen, müssen Sie beim Ausführen des Verwaltungstools mit der **replay** -Option den **-o** -Parameter verwenden. Weitere Informationen zur Wiedergabeoption finden Sie unter [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
- Der Speicherort für die Ergebnisdateien der Ablaufverfolgung wird vom `<ResultDirectory>`-XML-Element in der Clientkonfigurationsdatei `DReplayClient.xml`, die sich auf jedem Client befindet, angegeben. Die Ablaufverfolgungsdateien im Clientergebnisverzeichnis werden bei jeder Wiedergabe überschrieben.  
+ Der Speicherort für die Ergebnisdateien der Ablaufverfolgung wird vom `<ResultDirectory>` -XML-Element in der Clientkonfigurationsdatei `DReplayClient.xml`, die sich auf jedem Client befindet, angegeben. Die Ablaufverfolgungsdateien im Clientergebnisverzeichnis werden bei jeder Wiedergabe überschrieben.  
   
  Um anzugeben, welche Art von Ausgabe in den Ergebnisdateien der Ablaufverfolgung aufgezeichnet werden soll, ändern Sie die Wiedergabekonfigurationsdatei `DReplay.exe.replay.config`. Sie können mit dem `<OutputOptions>` -XML-Element angeben, ob die Zeilenanzahl oder der Resultsetinhalt aufgezeichnet werden soll.  
   
@@ -30,14 +33,14 @@ ms.locfileid: "67949934"
 ## <a name="event-classes-captured-in-result-trace-files"></a>In Ergebnisdateien der Ablaufverfolgung aufgezeichnete Ereignisklassen  
  In der folgenden Tabelle sind alle Ereignisklassen aufgeführt, die in den Ergebnisdaten der Ablaufverfolgung aufgezeichnet werden.  
   
-|Kategorie|EventClass-Name|Aufzeichnungshäufigkeit|Zeitpunkt der Aufzeichnung|  
+|Category|EventClass-Name|Aufzeichnungshäufigkeit|Zeitpunkt der Aufzeichnung|  
 |--------------|---------------------|-----------------------|----------------------|  
 |Wiedergebbare Ereignisse|Audit Login|Einmal pro Audit Login-Ereignis in den ursprünglichen Ablaufverfolgungsdaten|Bei Fehlschlagen oder erfolgreichem Abschluss des Ereignisses|  
 ||Audit Logout|Einmal pro Audit Logout-Ereignis in den ursprünglichen Ablaufverfolgungsdaten|Bei Fehlschlagen oder erfolgreichem Abschluss des Ereignisses|  
 ||SQL:BatchCompleted|Einmal pro SQL:BatchStarting-Ereignis in den ursprünglichen Ablaufverfolgungsdaten|Bei Fehlschlagen oder erfolgreichem Abschluss des Ereignisses|  
 ||RPC:Completed|Einmal pro RPC:Starting-Ereignis in den ursprünglichen Ablaufverfolgungsdaten|Bei Fehlschlagen oder erfolgreichem Abschluss des Ereignisses|  
-|Statistik und Ergebnisse|Replay Settings-Ereignis|Einmal|Erstes Ereignis im Ergebnis der Ablaufverfolgung|  
-||Replay Statistics-Ereignis|Einmal|Letztes Ereignis im Ergebnis der Ablaufverfolgung|  
+|Statistik und Ergebnisse|Replay Settings-Ereignis|Einmalig|Erstes Ereignis im Ergebnis der Ablaufverfolgung|  
+||Replay Statistics-Ereignis|Einmalig|Letztes Ereignis im Ergebnis der Ablaufverfolgung|  
 ||Replay Result Set-Ereignis|Einmal pro SQL:BatchStarting-Ereignis und RPC:Starting-Ereignis<br /><br /> Nur aufgezeichnet, wenn der Wert der `<RecordResultSet>` -Option in der Wiedergabekonfigurationsdatei auf `Yes`festgelegt wurde.||  
 ||Replay Result Row-Ereignis|Einmal pro Zeile im Resultset für das SQL:BatchStarting-Ereignis und das RPC:Starting-Ereignis<br /><br /> Nur aufgezeichnet, wenn der Wert der `<RecordResultSet>` -Option in der Wiedergabekonfigurationsdatei auf `Yes`festgelegt wurde.||  
 |Fehler und Warnungen|Replay Internal Error|Einmal für jeden internen Fehler|Bei interner Fehlerbedingung|  
@@ -52,12 +55,12 @@ ms.locfileid: "67949934"
 ## <a name="event-class-column-mapping"></a>Zuordnung von Spalten zu Ereignisklassen  
  In der folgenden Abbildung wird gezeigt, welche Spalten im Ergebnis der Ablaufverfolgung für die einzelnen Typen von Ereignisklassen, die während der Wiedergabe aufgezeichnet werden, verfügbar sind.  
   
- ![Event class column mapping](../../tools/distributed-replay/media/eventclassmappings.gif "Event class column mapping")  
+ ![Zuordnung von Spalten zu Ereignisklassen](../../tools/distributed-replay/media/eventclassmappings.gif "Zuordnung von Spalten zu Ereignisklassen")  
   
 ## <a name="column-descriptions-for-result-trace"></a>Beschreibungen der Spalten für das Ergebnis der Ablaufverfolgung  
  In der folgenden Tabelle werden die Spalten der Ergebnisdaten der Ablaufverfolgung beschrieben.  
   
-|Name der Datenspalte|Datentyp|und Beschreibung|Column ID|  
+|Name der Datenspalte|Datentyp|Beschreibung|Column ID|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|Der Name der Ereignisklasse.|1|  
 |EventSequence|**bigint**|Für Anbieterfehler sowie interne Fehler und Warnungen ist dies die Sequenz der Ereignisaufzeichnung, die dem Fehler bzw. der Warnung entspricht.<br /><br /> Für alle anderen Ereignisklassen ist dies die Sequenz des Ereignisses in den ursprünglichen Ablaufverfolgungsdaten.|2|  

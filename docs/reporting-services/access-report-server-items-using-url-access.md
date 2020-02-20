@@ -12,10 +12,10 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52222f154ccc8068c77b0925f246e738a66721cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581259"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Zugreifen auf Berichtsserverelemente über den URL-Zugriff
@@ -29,7 +29,7 @@ ms.locfileid: "65581259"
 ## <a name="access-a-report"></a>Zugreifen auf einen Bericht  
  Verwenden Sie den *rs:Command*=*Render* -Parameter, um einen Bericht im Browser anzuzeigen. Beispiel:  
   
- - **Systemeigenes Format** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **Nativ** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
@@ -43,7 +43,7 @@ ms.locfileid: "65581259"
 ## <a name="access-a-resource"></a>Zugreifen auf eine Ressource  
  Verwenden Sie den *rs:Command*=*GetResourceContents* -Parameter, um auf eine Ressource zuzugreifen. Wenn die Ressource, z.B. ein Bild, mit dem Browser kompatibel ist, wird sie im Browser geöffnet. Andernfalls werden Sie aufgefordert, die Datei oder Ressource zu öffnen oder auf dem Datenträger zu speichern.  
   
- **Systemeigenes Format** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
+ **Nativ** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -54,7 +54,7 @@ ms.locfileid: "65581259"
 ## <a name="access-a-data-source"></a>Zugreifen auf eine Datenquelle  
  Verwenden Sie den Parameter *rs:Command*=*GetDataSourceContents* , um auf eine Datenquelle zuzugreifen. Wenn Ihr Browser XML unterstützt, wird die Datenquellendefinition angezeigt, wenn Sie ein für die Datenquelle authentifizierter Benutzer mit der Berechtigung **Read Contents** sind. Beispiel:  
   
- **Systemeigenes Format** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **Nativ** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -81,7 +81,7 @@ ms.locfileid: "65581259"
 ## <a name="access-the-contents-of-a-folder"></a>Zugreifen auf den Inhalt eines Ordners  
  Verwenden Sie den *rs:Command*=*GetChildren* -Parameter, um auf den Inhalt eines Ordners zuzugreifen. Es wird eine generische Seite zur Ordnernavigation zurückgegeben, die Links zu den Unterordnern, Berichten, Datenquellen und Ressourcen im angeforderten Ordner enthält. Beispiel:  
   
- **Systemeigenes Format** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
+ **Nativ** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -93,4 +93,4 @@ ms.locfileid: "65581259"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [URL-Zugriff &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [URL-Zugriffsparameterverweis](../reporting-services/url-access-parameter-reference.md) 
+ [URL Access Parameter Reference (URL-Zugriffsparameterverweis)](../reporting-services/url-access-parameter-reference.md) 

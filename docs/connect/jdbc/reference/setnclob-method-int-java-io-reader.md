@@ -1,5 +1,5 @@
 ---
-title: setNClob-Methode (int, Java. IO. Reader) | Microsoft-Dokumentation
+title: setNClob(int, java.io.Reader)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 9fc9938c-b821-41c7-8df7-e21cb83a46d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4abac6b892ae5960e8cafc5f265d6a81081e878b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973782"
 ---
 # <a name="setnclob-method-int-javaioreader"></a>setNClob-Methode (int, java.io.Reader)

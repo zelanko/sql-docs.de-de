@@ -1,20 +1,21 @@
 ---
-title: Ausführen von Spark-Aufträgen mit Spark & Hive Tools für VS Code in Big-Data-Clustern für SQL Server
-titleSuffix: SQL Server big data clusters
+title: 'Ausführen von Aufträgen: Spark- und Hive-Tools für VS Code'
+titleSuffix: SQL Server Big Data Clusters
 description: Übermitteln Sie Spark-Aufträge mit der Erweiterung „Spark & Hive Tools“ für Visual Studio Code in Big-Data-Clustern für SQL Server.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653727"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255919"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Übermitteln von Spark-Aufträgen an Big-Data-Cluster von SQL Server in Visual Studio Code
 
@@ -173,7 +174,7 @@ Sie können interaktive PySpark-Abfragen mithilfe der folgenden Schritte übermi
 
 ## <a name="apache-livy-configuration"></a>Apache Livy-Konfiguration
 
-Die [Apache Livy](https://livy.incubator.apache.org/)-Konfiguration wird unterstützt, diese kann im Arbeitsbereichsordner in der Datei **.VSCode\settings.json** festgelegt werden. Derzeit unterstützt die Livy-Konfiguration nur Python-Skript. Weitere Informationen finden Sie im [README für Livy](https://github.com/cloudera/livy/blob/master/README.rst ).
+Die [Apache Livy](https://livy.incubator.apache.org/)-Konfiguration wird unterstützt, diese kann im Arbeitsbereichsordner in der Datei **.VSCode\settings.json** festgelegt werden. Derzeit wird in der Livy-Konfiguration nur das Python-Skript unterstützt. Weitere Informationen finden Sie im [README für Livy](https://github.com/cloudera/livy/blob/master/README.rst ).
 
 ### <a id="triggerlivyconf"></a>**Auslösen der Livy-Konfiguration**
 
@@ -200,36 +201,36 @@ Die [Apache Livy](https://livy.incubator.apache.org/)-Konfiguration wird unterst
 
 **Anforderungstext**
 
-| NAME | description | Typ |
+| name | description | type |
 | :- | :- | :- |
 | file | Die Datei, die die auszuführende Anwendung enthält | Pfad (erforderlich) |
-| proxyUser | Der Benutzer, dessen Identität beim Ausführen des Auftrags angenommen werden soll | Zeichenfolge |
-| className | Die Java-/Spark-Hauptklasse der Anwendung | Zeichenfolge |
+| proxyUser | Der Benutzer, dessen Identität beim Ausführen des Auftrags angenommen werden soll | string |
+| className | Die Java-/Spark-Hauptklasse der Anwendung | string |
 | args | Die Befehlszeilenargumente für die Anwendung | Eine Liste von Zeichenfolgen |
 | jars | Die JAR-Dateien, die in dieser Sitzung verwendet werden sollen | Eine Liste von Zeichenfolgen |
 | pyFiles | Die Python-Dateien, die in dieser Sitzung verwendet werden sollen | Eine Liste von Zeichenfolgen |
 | files | Die Dateien, die in dieser Sitzung verwendet werden sollen | Eine Liste von Zeichenfolgen |
-| driverMemory | Die Menge an Arbeitsspeicher, die für den Treiberprozess verwendet werden soll | Zeichenfolge |
+| driverMemory | Die Menge an Arbeitsspeicher, die für den Treiberprozess verwendet werden soll | string |
 | driverCores | Die Anzahl der Kerne, die für den Treiberprozess verwendet werden soll | INT |
-| executorMemory | Die Menge an Arbeitsspeicher, die pro Executorprozess verwendet werden soll | Zeichenfolge |
+| executorMemory | Die Menge an Arbeitsspeicher, die pro Executorprozess verwendet werden soll | string |
 | executorCores | Die Anzahl von Kernen, die für jeden Executor verwendet werden sollen | INT |
 | numExecutors | Die Anzahl der Executors, die für diese Sitzung gestartet werden sollen | INT |
 | archives | Die Archive, die in dieser Sitzung verwendet werden sollen | Eine Liste von Zeichenfolgen |
-| queue | Der Name der YARN-Warteschlange, an die übermittelt werden soll | Zeichenfolge |
-| NAME | Der Name der Sitzung | Zeichenfolge |
+| queue | Der Name der YARN-Warteschlange, an die übermittelt werden soll | string |
+| name | Der Name der Sitzung | string |
 | conf | Spark-Konfigurationseigenschaften | Zuordnung von Schlüsseln zu Werten |
 
 #### <a name="response-body"></a>Antworttext
 
 Das erstellte Batchobjekt
 
-| NAME | description | Typ |
+| name | description | type |
 | :- | :- | :- |
 | id | Die Sitzungs-ID | INT |
-| appId | Die Anwendungs-ID der Sitzung | Zeichenfolge |
+| appId | Die Anwendungs-ID der Sitzung | String |
 | appInfo | Die ausführliche Anwendungsinformationen | Zuordnung von Schlüsseln zu Werten |
 | log | Die Protokollzeilen | Eine Liste von Zeichenfolgen |
-| state | Der Batchzustand | Zeichenfolge |
+| state | Der Batchzustand | string |
 
 >[!NOTE]
 >Die zugewiesene Livy-Konfiguration wird im Ausgabebereich angezeigt, wenn das Skript übermittelt wird.

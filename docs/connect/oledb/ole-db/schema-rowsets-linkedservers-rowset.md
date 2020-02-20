@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 75b443df235fd99f262cf3fda0abf6a6354da413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993880"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>Schemarowsets: LINKEDSERVERS-Rowset
@@ -29,7 +29,7 @@ ms.locfileid: "67993880"
   
  Das **LINKEDSERVERS** -Rowset enthält die folgenden Spalten.  
   
-|Spaltenname|Typindikator|und Beschreibung|  
+|Spaltenname|Typindikator|Beschreibung|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Name eines Verbindungsservers|  
 |SVR_PRODUCT|DBTYPE_WSTR|Hersteller oder ein anderer Name, der den Typ des Datenspeichers identifiziert, der durch den Namen des Verbindungsservers repräsentiert wird.|  

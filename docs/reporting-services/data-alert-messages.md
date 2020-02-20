@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571558"
 ---
 # <a name="data-alert-messages"></a>Datenwarnmeldungen
@@ -22,7 +22,7 @@ ms.locfileid: "65571558"
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-In SQL Server Reporting Services werden zwei Typen von Datenwarnmeldungen per E-Mail übermittelt: Meldungen mit Datenwarnungsergebnissen und Meldungen mit Fehlerbeschreibungen. Durch Meldungen mit Ergebnissen werden alle Empfänger über Änderungen der Berichtsdaten informiert, die von allgemeinem Interesse und wichtig für Geschäftsentscheidungen sind. Tritt aus einem unbestimmten Grund ein Fehler auf, und sind die Ergebnisse nicht verfügbar, wird stattdessen die Fehlermeldung gesendet.
+Datenwarnungen in SQL Server Reporting Services übermitteln zwei Arten von Datenwarnmeldungen per E-Mail: Meldungen mit Datenwarnergebnissen und Meldungen mit Fehlerbeschreibungen. Durch Meldungen mit Ergebnissen werden alle Empfänger über Änderungen der Berichtsdaten informiert, die von allgemeinem Interesse und wichtig für Geschäftsentscheidungen sind. Tritt aus einem unbestimmten Grund ein Fehler auf, und sind die Ergebnisse nicht verfügbar, wird stattdessen die Fehlermeldung gesendet.
 
 Der Eigentümer der Datenwarnungsdefinition kann auch Informationen zur Datenwarnungsinstanz im Datenwarnungs-Manager anzeigen. Weitere Informationen finden Sie unter [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
 
@@ -34,11 +34,11 @@ Der Eigentümer der Datenwarnungsdefinition kann auch Informationen zur Datenwar
   
  **Ergebnismeldung**  
   
- ![Datenwarnungs-E-Mail mit Ergebnissen](../reporting-services/media/rs-alertmessageresults.gif "Data alert e-mail message with results")  
+ ![E-Mail mit Datenwarnung mit Ergebnissen](../reporting-services/media/rs-alertmessageresults.gif "E-Mail mit Datenwarnung mit Ergebnissen")  
   
  **Fehlermeldung**  
   
- ![Datenwarnmeldung mit Fehlermeldung](../reporting-services/media/rs-alertmessageerrror.gif "Data alert message with error message")  
+ ![Datenwarnmeldung mit Fehlermeldung](../reporting-services/media/rs-alertmessageerrror.gif "Datenwarnmeldung mit Fehlermeldung")  
   
  Die Meldungen beinhalten die gleichen Informationstypen.  
   

@@ -1,6 +1,7 @@
 ---
-title: Always On-Failoverclusterinstanzen (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Always On-Failoverclusterinstanzen
+description: Dieser Artikel enthält eine Beschreibung der Always On-Failoverclusterinstanz für SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: feceb314570449173b5ffc03869e5e3ad06906d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063800"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230190"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn-Failoverclusterinstanzen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +134,7 @@ ms.locfileid: "68063800"
  SQL Server-Binärdateien  
  Die Produktbinärdateien werden lokal auf jedem Knoten der FCI installiert. Dieser Prozess ähnelt eigenständigen Installationen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Während des Starts werden die Dienste jedoch nicht automatisch gestartet, sondern durch den WSFC verwaltet.  
   
- Speicherung  
+ Storage  
  Im Gegensatz zur Verfügbarkeitsgruppe muss eine FCI freigegebenen Speicher zwischen allen Knoten der FCI für Datenbank und Protokolle verwenden. Der freigegebene Speicher kann die Form von WSFC-Clusterdatenträgern, direkten Speicherplätzen (Storage Spaces Direct, S2D), Datenträgern auf einem SAN oder Dateifreigaben auf einem SMB aufweisen. Auf diese Weise verfügen alle Knoten in der FCI immer dann über die gleiche Sicht der Instanzdaten, wenn ein Failover auftritt. Dies bedeutet jedoch, dass der freigegebene Speicher das Potenzial hat, die einzelne Fehlerquelle zu sein. Die FCI hängt zudem von der zugrunde liegenden Speicherlösung ab, um Datenschutz sicherzustellen.  
   
  Netzwerkname  
@@ -155,7 +156,7 @@ ms.locfileid: "68063800"
 |**Beschreibungen der Themen**|**Thema**|  
 |----------------------------|---------------|  
 |Beschreibt die Installation eines neuen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCIs.|[Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Beschreibt die Aktualisierung eines [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Failoverclusters.|[Aktualisieren einer SQL Server-Failoverclusterinstanz](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
+|Beschreibt die Aktualisierung eines [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Failoverclusters.|[Upgrade einer SQL Server-Failoverclusterinstanz](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).|  
 |Beschreibt Konzepte des Windows-Failoverclustering und stellt Links zu Tasks für Windows-Failoverclustering bereit.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Übersicht über Failovercluster](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Übersicht über Failovercluster](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Beschreibt die Unterschiede der Konzepte zwischen Knoten in einer FCI und Replikaten innerhalb einer Verfügbarkeitsgruppe. Zudem werden Überlegungen zum Hosten mithilfe einer FCI für eine Verfügbarkeitsgruppe eines Replikats dargelegt.|[Failoverclustering und Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   

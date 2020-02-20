@@ -1,5 +1,5 @@
 ---
-title: Rollback-Methode (sqlserverxaresource) | Microsoft-Dokumentation
+title: rollback-Methode (SQLServerXAResource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 93d9d7e6-54b6-4d86-8f8c-386c6057e85e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4245dc4314d955aefc3538a38dcd2192403fed9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975724"
 ---
 # <a name="rollback-method-sqlserverxaresource"></a>rollback-Methode (SQLServerXAResource)
@@ -37,7 +37,7 @@ public void rollback(javax.transaction.xa.Xid xid)
 #### <a name="parameters"></a>Parameter  
  *xid*  
   
- Ein xid-Objekt.  
+ Dies ist ein Xid-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  javax.transaction.xa.XAException  

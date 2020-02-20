@@ -1,5 +1,5 @@
 ---
-title: supportscatalogsindatamanipulations-Methode | Microsoft-Dokumentation
+title: supportsCatalogsInDataManipulation-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ee1af47a-4c04-4391-83a5-54ced80218c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bed23d0a0781de7c384e61cb09903e2ab2136268
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969732"
 ---
 # <a name="supportscatalogsindatamanipulation-method-sqlserverdatabasemetadata"></a>supportsCatalogsInDataManipulation-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsCatalogsInDataManipulation()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportscatalogindatamanipulations-Methode wird von der supportscatalogindatamanipulations-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsCatalogInDataManipulation-Methode wird von der supportsCatalogInDataManipulation-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

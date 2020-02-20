@@ -1,5 +1,5 @@
 ---
-title: GetColumnType-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
+title: getColumnType-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 81815a41-9265-4574-a4d8-f6341a68d9fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80f1177506090d459833f70bdc0b5fdcb115d792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952810"
 ---
 # <a name="getcolumntype-method-sqlserverresultsetmetadata"></a>getColumnType-Methode (SQLServerResultSetMetaData)
@@ -46,9 +46,9 @@ public int getColumnType(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese GetColumnType-Methode wird von der GetColumnType-Methode in der Java. SQL. ResultSetMetaData-Schnittstelle angegeben.  
+ Diese getColumnType-Methode wird von der getColumnType-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
   
- Im JDBC-Treiber 3.0 für [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde das Verhalten in der DATA_TYPE-Spalte geändert. Weitere Informationen finden Sie unter [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
+ Der JDBC-Treiber 3.0 für [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] weist Behavior Changes in der DATA_TYPE-Spalte auf. Weitere Informationen finden Sie unter [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSetMetaData-Elemente](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

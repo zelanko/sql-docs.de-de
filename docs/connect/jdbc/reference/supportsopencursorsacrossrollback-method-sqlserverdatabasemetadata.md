@@ -1,5 +1,5 @@
 ---
-title: supportsopumcurrsorsacrossrollback-Methode | Microsoft-Dokumentation
+title: supportsOpenCursorsAcrossRollback-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4bc3e82b-a7e7-43a5-8938-6f29c7570163
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88a989e51a67a8364d2c61660e6146a5945a36c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969143"
 ---
 # <a name="supportsopencursorsacrossrollback-method-sqlserverdatabasemetadata"></a>supportsOpenCursorsAcrossRollback-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsOpenCursorsAcrossRollback()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportsopumcurrsorsacrossrollback-Methode wird von der supportsopeincurrsorsacrossrollback-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsOpenCursorsAcrossRollback-Methode wird von der supportsOpenCursorsAcrossRollback-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

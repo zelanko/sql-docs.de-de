@@ -11,10 +11,10 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049834"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Bereitstellen des JDBC-Treibers
@@ -52,13 +52,13 @@ ms.locfileid: "73049834"
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
 
-## <a name="legalities-of-driver-redistribution"></a>Legalitäten der Treiber Weitergabe
+## <a name="legalities-of-driver-redistribution"></a>Rechtliche Informationen zur Weiterverteilung von Treibern
 
-Die JDBC-Treiberversionen 6,0, 6,2, 6,4 und 7,0 sind Verteil Bar. Lesen Sie die Klausel _Verteilbarer Code_ in den jeweiligen Lizenzvereinbarungen.
+Die Versionen 6.0, 6.2, 6.4 und 7.0 des JDBC-Treibers dürfen weiterverteilt werden. Lesen Sie die Klausel _Verteilbarer Code_ in den jeweiligen Lizenzvereinbarungen.
 
-Die JDBC-Treiberversionen 4. x sind veraltet und veraltet. Die Unterstützung für 4. x ist vor 2018 abgelaufen.
+Die JDBC-Treiberversionen 4.x sind veraltet. Die Unterstützung von 4.x wurde vor 2018 eingestellt.
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

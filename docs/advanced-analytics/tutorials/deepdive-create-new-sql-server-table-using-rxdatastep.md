@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer Tabelle mit rxDataStep
-description: Tutorial zum Erstellen einer SQL Server-Tabelle mithilfe der R-Programmiersprache unter SQL Server
+description: 'Tutorial 11 zu RevoScaleR: Erstellen einer SQL Server-Tabelle mithilfe der R-Programmiersprache in SQL Server'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f4ac51fc1affb4128abab017eb00cba4b56960fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 99f693210b567523b74f851d1db68470cae2891d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727244"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947251"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Erstellen einer neuen SQL Server-Tabelle mithilfe von rxDataStep (Tutorial für SQL Server und RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Diese Lerneinheit ist Teil des [RevoScaleR-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zum Verwenden von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Bei diesem Tutorial handelt es sich um das elfte Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Lernprogramm erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
-In dieser Lektion erfahren Sie, wie Sie Daten zwischen In-Memory-Datenrahmen, dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Kontext und lokalen Dateien verschieben.
+In diesem Tutorial erfahren Sie, wie Sie Daten zwischen In-Memory-Datenrahmen, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Kontext und lokale Dateien verschieben.
 
 > [!NOTE]
-> Für diese Lektion wird ein anderes Dataset verwendet. Das Dataset „Airline Delays“ für Verspätungen einer Fluggesellschaft ist ein öffentliches Dataset, das hauptsächlich für Machine-Learning-Experimente verwendet wird. Die Datendateien, die in diesem Beispiel verwendet werden, sind im selben Verzeichnis wie die anderen Produktbeispiele verfügbar.
+> Für dieses Tutorial wird ein anderes Dataset verwendet. Das Dataset „Airline Delays“ für Verspätungen einer Fluggesellschaft ist ein öffentliches Dataset, das hauptsächlich für Machine-Learning-Experimente verwendet wird. Die Datendateien, die in diesem Beispiel verwendet werden, sind im selben Verzeichnis wie die anderen Produktbeispiele verfügbar.
 
 ## <a name="load-data-from-a-local-xdf-file"></a>Laden von Daten aus einer lokalen XDF-Datei
 
 In der ersten Hälfte dieses Tutorials haben Sie die Funktion **RxTextData** zum Importieren von Daten aus einer Textdatei in R und anschließend die Funktion **RxDataStep** zum Verschieben der Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.
 
-In dieser Lektion kommt eine andere Herangehensweise zum Einsatz. Es werden Daten aus einer Datei verwendet, die im [XDF-Format](https://en.wikipedia.org/wiki/Extensible_Data_Format) gespeichert ist. Nach einigen einfachen Transformationen der Daten mithilfe der XDF-Datei speichern Sie die transformierten Daten in einer neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle.
+In diesem Tutorial kommt eine andere Herangehensweise zum Einsatz. Es werden Daten aus einer Datei verwendet, die im [XDF-Format](https://en.wikipedia.org/wiki/Extensible_Data_Format) gespeichert ist. Nach einigen einfachen Transformationen der Daten mithilfe der XDF-Datei speichern Sie die transformierten Daten in einer neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle.
 
 **Was ist XDF?**
 

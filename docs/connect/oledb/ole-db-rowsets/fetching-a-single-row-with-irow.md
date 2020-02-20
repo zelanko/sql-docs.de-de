@@ -1,6 +1,6 @@
 ---
 title: Abrufen einer einzelnen Zeile mit IRow | Microsoft-Dokumentation
-description: Abrufen einer einzelnen Zeile mithilfe der IRow-Schnittstelle OLE DB Treibers für SQL Server
+description: Abrufen einer einzelnen Zeile mithilfe der IRow-Schnittstelle des OLE DB-Treibers für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 542875dc322cd94970c238747db0adb139b9a480
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994292"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Abrufen einer einzelnen Zeile mit IRow
@@ -29,9 +29,9 @@ ms.locfileid: "67994292"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Die Implementierung der **IRow** -Schnittstelle im OLE DB Treiber für SQL Server wird vereinfacht, um die Leistung zu verbessern. **IRow** lässt den direkten Zugriff auf Spalten eines einzelnen Zeilenobjekts zu. Wenn Sie vorab wissen, dass das Ergebnis einer Befehlsausführung genau eine Zeile erzeugt, dann lassen sich mit **IRow** die Spalten dieser Zeile abrufen. Wenn das Resultset mehrere Zeilen umfasst, macht **IRow** nur die erste Zeile verfügbar.  
+  Die **IRow**-Schnittstellenimplementierung des OLE DB-Treibers für SQL Server ist vereinfacht, um die Leistung zu erhöhen. **IRow** lässt den direkten Zugriff auf Spalten eines einzelnen Zeilenobjekts zu. Wenn Sie vorab wissen, dass das Ergebnis einer Befehlsausführung genau eine Zeile erzeugt, dann lassen sich mit **IRow** die Spalten dieser Zeile abrufen. Wenn das Resultset mehrere Zeilen umfasst, macht **IRow** nur die erste Zeile verfügbar.  
   
- Die **IRow**-Implementierung lässt keine Navigation in der Zeile zu. Mit folgender Ausnahme wird auf jede Spalte der Zeile nur ein einziges Mal zugegriffen: Einmal kann zur Ermittlung der Spaltenbreite auf eine Spalte zugegriffen werden, und dann kann nochmals zum Abruf der Daten auf die Spalte zugegriffen werden.  
+ Die **IRow**-Implementierung lässt keine Navigation in der Zeile zu. Bis auf die folgende Ausnahme wird auf jede Spalte in der Zeile nur einmal zugegriffen: Es ist möglich, dass erst auf eine Spalte zugegriffen wird, um deren Größe zu ermitteln, und ein weiteres Mal, um die Daten abzurufen.  
   
 > [!NOTE]  
 >  **IRow::Open** unterstützt nur das Öffnen von Objekten des Typs DBGUID_STREAM und DBGUID_NULL.  

@@ -1,6 +1,6 @@
 ---
 title: SqlCommand-Ausführung mit SqlNotificationRequest
-description: Veranschaulicht das Konfigurieren eines SqlCommand-Objekts für die Arbeit mit einer Abfrage Benachrichtigung.
+description: In diesem Artikel wird das Konfigurieren eines SqlCommand-Objekts für dar Arbeiten mit einer Abfragebenachrichtigung veranschaulicht.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,38 +9,38 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 892f11e2d81e3a0733a1f0747c0b72c72ebc79fc
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 5477b655554dceaa5f43b7d099e0fc156340f558
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451945"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75233814"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>SqlCommand-Ausführung mit SqlNotificationRequest
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Eine <xref:Microsoft.Data.SqlClient.SqlCommand> kann so konfiguriert werden, dass eine Benachrichtigung generiert wird, wenn Daten geändert werden, nachdem Sie vom Server abgerufen wurden, und das Resultset anders wäre, wenn die Abfrage erneut ausgeführt würde. Dies ist nützlich für Szenarien, in denen Sie benutzerdefinierte Benachrichtigungs Warteschlangen auf dem Server verwenden möchten, oder wenn Sie keine Live Objekte verwalten möchten.
+Ein <xref:Microsoft.Data.SqlClient.SqlCommand>-Objekt kann so konfiguriert werden, dass eine Benachrichtigung generiert wird, wenn Daten geändert werden, nachdem sie vom Server abgerufen wurden, und wenn sich das Resultset bei einer erneuten Ausführung der Abfrage unterscheidet. Dies ist hilfreich für Szenarios, in denen Sie benutzerdefinierte Benachrichtigungswarteschlangen auf dem Server verwenden möchten, oder wenn Sie Liveobjekte nicht verwalten möchten.
 
-## <a name="creating-the-notification-request"></a>Erstellen der Benachrichtigungs Anforderung
+## <a name="creating-the-notification-request"></a>Erstellen der Benachrichtigungsanforderung
 
-Sie können ein <xref:Microsoft.Data.Sql.SqlNotificationRequest> Objekt verwenden, um die Benachrichtigungs Anforderung zu erstellen, indem Sie Sie an ein `SqlCommand` Objekt binden. Nachdem die Anforderung erstellt wurde, benötigen Sie das `SqlNotificationRequest`-Objekt nicht mehr. Sie können die Warteschlange nach Benachrichtigungen Abfragen und entsprechend reagieren. Benachrichtigungen können auch dann erfolgen, wenn die Anwendung heruntergefahren und anschließend neu gestartet wird.
+Sie können ein <xref:Microsoft.Data.Sql.SqlNotificationRequest>-Objekt verwenden, um die Benachrichtigungsanforderung durch Bindung an ein `SqlCommand`-Objekt zu erstellen. Sobald die Anforderung erstellt wurde, benötigen Sie das `SqlNotificationRequest`-Objekt nicht mehr. Sie können die Warteschlange nach Benachrichtigungen abfragen und entsprechend reagieren. Benachrichtigungen können angezeigt werden, auch wenn die Anwendung selbst heruntergefahren und dann neu gestartet wurde.
 
 Wenn der Befehl mit der zugehörigen Benachrichtigung ausgeführt wird, lösen alle Änderungen im ursprünglichen Resultset das Senden einer Nachricht an die SQL Server-Warteschlange aus, die in der Benachrichtigungsanforderung konfiguriert wurde.
 
 Wie Sie die SQL Server-Warteschlange abrufen können und die Meldung interpretieren müssen, hängt von Ihrer Anwendung ab. Die Anwendung ist dafür verantwortlich, die Warteschlange abzufragen und aufgrund der Meldung zu reagieren.
 
 > [!NOTE]
-> Wenn Sie SQL Server Benachrichtigungs Anforderungen mit <xref:Microsoft.Data.SqlClient.SqlDependency> verwenden, erstellen Sie anstelle des Standard Dienst namens ihren eigenen Warteschlangen Namen.
+> Wenn Sie SQL Server-Benachrichtigungsanforderungen mit <xref:Microsoft.Data.SqlClient.SqlDependency> verwenden, erstellen Sie einen eigenen Warteschlangennamen, anstatt den Standarddienstnamen zu verwenden.
 
-Es sind keine neuen Client seitigen Sicherheitselemente für <xref:Microsoft.Data.Sql.SqlNotificationRequest> vorhanden. Dabei handelt es sich hauptsächlich um eine Server Funktion, und der Server hat spezielle Berechtigungen erstellt, die Benutzer benötigen, um eine Benachrichtigung anzufordern.
+Für <xref:Microsoft.Data.Sql.SqlNotificationRequest> gibt es keine neuen clientseitigen Sicherheitselemente. Es handelt sich primär um ein Serverfeature, und der Server hat spezielle Berechtigungen erstellt, die Benutzer haben müssen, um eine Benachrichtigung anzufordern.
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Code Fragment wird veranschaulicht, wie ein <xref:Microsoft.Data.Sql.SqlNotificationRequest> erstellt und einem <xref:Microsoft.Data.SqlClient.SqlCommand> zugeordnet wird.
+Im folgenden Codefragment wird gezeigt, wie <xref:Microsoft.Data.Sql.SqlNotificationRequest> erstellt und mit <xref:Microsoft.Data.SqlClient.SqlCommand> verbunden wird.
 
 ```csharp
 // Assume connection is an open SqlConnection.

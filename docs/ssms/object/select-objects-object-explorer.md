@@ -1,6 +1,6 @@
 ---
-title: Objekte auswählen (Objekt-Explorer) | Microsoft-Dokumentation
-ms.custom: ''
+title: Objekte auswählen (Objekt-Explorer)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,20 +12,20 @@ f1_keywords:
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bed66d2d2d7bfcd275cc5674c0ec41edd2a0e1b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c60f25406cb10e6ca6a12abe10a65a8a91fd1f59
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262245"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243532"
 ---
 # <a name="select-objects-object-explorer"></a>Objekte auswählen (Objekt-Explorer)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Verwenden Sie das Dialogfeld **Objekte auswählen** , um der Liste in einem anderen Dialogfeld ein Objekt hinzuzufügen. Der Titel des Dialogfelds und die darin verfügbaren Optionen hängen davon ab, wie es geöffnet wurde. Es werden nur verfügbare Optionen angezeigt. Wenn Sie z. B. einen Besitzer für ein neues Objekt auswählen, sind nur Benutzernamen verfügbar.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Wählen Sie Objekttypen aus**  
-Zeigt eine Liste der Typen an, zu denen die auszuwählenden Objekte gehören. Zu diesen Typen gehören auch Prinzipale und sicherungsfähige Typen auf der [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ebene und der Datenbankebene. Dieses Feld wird anhand der Auswahl im Dialogfeld **Objekttypen auswählen** ausgefüllt, auf das über die Schaltfläche **Objekttypen** zugegriffen wird.  
+Zeigt eine Liste der Typen an, zu denen die auszuwählenden Objekte gehören. Zu diesen Typen gehören auch Prinzipale und sicherungsfähige Typen auf [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ebene und Datenbankebene. Dieses Feld wird anhand der Auswahl im Dialogfeld **Objekttypen auswählen** ausgefüllt, auf das über die Schaltfläche **Objekttypen** zugegriffen wird.  
   
 **Geben Sie die Namen der auszuwählenden Objekte ein**  
 Geben Sie eine durch Semikolons getrennte Liste der auszuwählenden Objekte ein. Auszuwählende Objekte müssen zu einem Typ gehören, der im Feld **Wählen Sie Objekttypen aus** aufgeführt ist. Die Objekte können aus einer Liste ausgewählt werden, auf die per Mausklick auf die Schaltfläche **Durchsuchen** zugegriffen wird.  

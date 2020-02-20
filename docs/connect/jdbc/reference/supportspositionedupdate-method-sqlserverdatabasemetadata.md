@@ -16,10 +16,10 @@ ms.assetid: f963fb70-377d-43f5-8d56-326591f6d3e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73c85e41df64757a77bc26ff0b1a9534fdbb5ffa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969010"
 ---
 # <a name="supportspositionedupdate-method-sqlserverdatabasemetadata"></a>supportsPositionedUpdate-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsPositionedUpdate()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportsPositionedUpdate-Methode wird von der supportsPositionedUpdate-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsPositionedUpdate-Methode wird von der supportsPositionedUpdate-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

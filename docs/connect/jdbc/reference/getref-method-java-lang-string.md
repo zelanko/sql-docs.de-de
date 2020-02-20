@@ -16,10 +16,10 @@ ms.assetid: a8ff2dd5-923b-4a2f-ab33-665574b2dfda
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd5b2019d31e84406d9386d180b87213273d0389
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980571"
 ---
 # <a name="getref-method-javalangstring"></a>getRef-Methode (java.lang.String)
@@ -40,7 +40,7 @@ public java.sql.Ref getRef(java.lang.String sCol)
  Ein **String-Objekt**, das den Parameternamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Ref-Objekt.  
+ Ein Ref-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

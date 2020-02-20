@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580088"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Verwalten einer Reporting Services-SharePoint-Dienstanwendung
@@ -34,7 +34,7 @@ ms.locfileid: "65580088"
   
 2.  Klicken Sie neben dem Namen der Dienstanwendung oder auf die Spalte **Typ** . Dadurch wird die gesamte Zeile ausgewählt. Klicken Sie anschließend im SharePoint-Menüband auf **Eigenschaften** .  
   
- Weitere Informationen zu Dienstanwendungseigenschaften finden Sie unter [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+ Weitere Informationen zu Dienstanwendungseigenschaften finden Sie unter [Schritt 3: Erstellen einer Reporting Services-Dienstanwendung](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 ## <a name="open-service-application-management-pages"></a>Öffnen der Verwaltungsseiten von Dienstanwendungen
 
@@ -73,7 +73,7 @@ ms.locfileid: "65580088"
   
 |Einstellung|Kommentare|  
 |-------------|--------------|  
-|Protokollierung der Ausführung aktivieren|Der Standardwert ist TRUE.<br /><br /> Geben Sie an, ob der Berichtsserver Ablaufverfolgungsprotokolle generiert, und geben Sie die Anzahl von Tagen für die Beibehaltung der Protokolle an. auf Dienstanwendungen verwalten. Die Protokolle werden auf dem Berichtsservercomputer im Ordner \Microsoft SQL Server\MSSQL.n\ReportServer\Log gespeichert. Bei jedem Neustart des Diensts wird eine neue Protokolldatei begonnen. Weitere Informationen zu Protokolldateien finden Sie unter [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
+|Protokollierung der Ausführung aktivieren|Der Standardwert ist TRUE.<br /><br /> Geben Sie an, ob der Berichtsserver Ablaufverfolgungsprotokolle generiert, und geben Sie die Anzahl von Tagen für die Beibehaltung der Protokolle an. erforderlich. Die Protokolle werden auf dem Berichtsservercomputer im Ordner \Microsoft SQL Server\MSSQL.n\ReportServer\Log gespeichert. Bei jedem Neustart des Diensts wird eine neue Protokolldatei begonnen. Weitere Informationen zu Protokolldateien finden Sie unter [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |Beibehaltungsdauer des Ausführungsprotokolls in Tagen|Der Standard ist 60 Tage.|  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt die SharePoint-ULS-Protokollierung.  Weitere Informationen finden Sie unter [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -92,7 +92,7 @@ ms.locfileid: "65580088"
 |Einstellung|Kommentare|  
 |-------------|--------------|  
 |Berichts-Generator-Download aktivieren|Der Standardwert ist TRUE.<br /><br /> Gibt an, ob Clients die Schaltfläche zum Herunterladen der Berichts-Generator-Anwendung erkennen.|  
-|Start-URL des Berichts-Generators|Geben Sie eine benutzerdefinierte URL an, wenn der Berichtsserver nicht die Standard-URL des Berichts-Generators verwendet. Dies ist eine optionale Einstellung. Wenn Sie keinen Wert angeben, wird die Standard-URL verwendet, mit der Berichts-Generator gestartet wird. Geben Sie den folgenden Wert ein, um den Berichts-Generator 3.0 als ClickOnce-Anwendung zu starten: https://\<Computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|Start-URL des Berichts-Generators|Geben Sie eine benutzerdefinierte URL an, wenn der Berichtsserver nicht die Standard-URL des Berichts-Generators verwendet. Diese Einstellung ist optional. Wenn Sie keinen Wert angeben, wird die Standard-URL verwendet, mit der Berichts-Generator gestartet wird. Geben Sie den folgenden Wert ein, um den Berichts-Generator 3.0 als ClickOnce-Anwendung zu starten: https://\<Computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Clientdruck aktivieren|Der Standard lautet TRUE.<br /><br /> Gibt an, ob Benutzer das clientseitige Steuerelement herunterladen können, das Druckoptionen bereitstellt.|  
 |Sitzungstimeout bearbeiten|Der Standardwert ist 7.200 Sekunden.|  
 |Sitzungscachelimit bearbeiten|Der Standardwert ist 5.|  
@@ -101,7 +101,7 @@ ms.locfileid: "65580088"
 
  Sie können aktive Aufträge anzeigen und löschen, beispielsweise Aufträge, die von Berichtsabonnements und datengesteuerten Abonnements erstellt werden. Die Seite wird nicht zum Verwalten von Abonnements, sondern von Aufträgen verwendet, die von einem Abonnement ausgelöst werden. Beispielsweise generiert ein Abonnement, das planmäßig stündlich einmal ausgeführt wird, jede Stunde einen Auftrag, der auf der Seite **Aufträge verwalten** angezeigt wird.  
   
- ![Verwalten gerade ausgeführter Aufträge](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "manage running jobs")  
+ ![Verwalten ausgeführter Aufträge](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "Verwalten ausgeführter Aufträge")  
   
 ## <a name="key-management"></a>Schlüsselverwaltung
  Die folgende Tabelle fasst die Schlüsselverwaltungsseiten zusammen.  
@@ -109,7 +109,7 @@ ms.locfileid: "65580088"
 > [!IMPORTANT]  
 >  Aus Sicherheitsgründen empfiehlt es sich, den Reporting Services-Verschlüsselungsschlüssel in regelmäßigen Abständen zu ändern. Ein guter Zeitpunkt, um den Schlüssel zu ändern, liegt direkt im Anschluss an ein größeres Versionsupgrade von Reporting Services. Indem der Schlüssel nach einem Upgrade geändert wird, lassen sich zusätzliche Dienstunterbrechungen, die durch eine Änderung des Reporting Services-Verschlüsselungsschlüssels außerhalb des Upgradezyklus verursacht würden, minimieren.  
   
-|Seite|und Beschreibung|  
+|Seite|Beschreibung|  
 |----------|-----------------|  
 |Sichern des Verschlüsselungsschlüssels|1.) Geben Sie in die Felder **Kennwort:** und **Kennwort bestätigen:** ein Kennwort ein, und klicken Sie auf **Exportieren**. Eine Warnung wird angezeigt, wenn das eingegebene Kennwort nicht den Komplexitätsanforderungen der Domänenrichtlinie entspricht.<br /><br /> 2.) Sie werden aufgefordert, einen Dateispeicherort zum Speichern der Schlüsseldatei anzugeben. Speichern Sie ggf. die Schlüsseldatei auf einem separaten Computer und nicht auf dem Computer, auf dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ausgeführt wird. Der Standarddateiname entspricht dem Namen der Dienstanwendung.|  
 |Wiederherstellen von Verschlüsselungsschlüsseln|1.) Geben Sie den Speicherort der Schlüsseldatei in das Feld **Dateispeicherort** ein, oder navigieren Sie zum Speicherort.<br /><br /> 2.) Geben Sie im Feld **Kennwort** das Kennwort ein, mit dem die Verschlüsselungsdatei gesichert wurde.<br /><br /> 3.) Klicken Sie auf **OK**.|  
@@ -140,7 +140,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  Weitere Informationen finden Sie unter [PowerShell-Cmdlets für SharePoint-Modus von Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
 
-### <a name="options"></a>enthalten
+### <a name="options"></a>Tastatur
 
  **Ausführungskonto angeben**  
  Wählen Sie diese Option aus, um ein Konto anzugeben.  
@@ -158,7 +158,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  Verwenden Sie diese Seite, um die SMTP (Simple Mail Transport Protocol)-Einstellungen anzugeben, mit denen die E-Mail-Übermittlung des Berichtsservers aktiviert wird. Mit der E-Mail-Übermittlungserweiterung des Berichtsservers können Sie Berichte oder Benachrichtigungen über Berichtsverarbeitungen mithilfe von E-Mail-Abonnements verteilen. Für die Berichtsserver-E-Mail-Übermittlungserweiterung sind ein SMTP-Server und eine E-Mail-Adresse erforderlich, die im Feld "Von:" verwendet wird.  
 
-### <a name="options"></a>enthalten
+### <a name="options"></a>Tastatur
 
  **SMTP-Server verwenden**  
  Gibt an, ob die Berichtsserver-E-Mail über einen SMTP-Server geleitet wird.  

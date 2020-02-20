@@ -16,10 +16,10 @@ ms.assetid: d7031a89-e964-4ffd-87b7-63825799435d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4ad0910814cd4600b3d70c9037c03e1b9997888
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972855"
 ---
 # <a name="setshort-method-sqlservercallablestatement"></a>setShort-Methode (SQLServerCallableStatement)
@@ -42,7 +42,7 @@ public void setShort(java.lang.String sCol,
   
  *s*  
   
- Ein **Kurzwert** .  
+ Ein **short**-Wert  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

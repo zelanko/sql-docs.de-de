@@ -1,5 +1,5 @@
 ---
-title: SQLServerStatement-Klasse | Microsoft-Dokumentation
+title: Klasse „SQLServerStatement“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89547655fd734ca9e6e340d94832dea5816f2733
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970374"
 ---
 # <a name="sqlserverstatement-class"></a>SQLServerStatement-Klasse
@@ -36,7 +36,7 @@ public class SQLServerStatement
 ## <a name="remarks"></a>Bemerkungen  
  Von der SQLServerStatement-Klasse wird außerdem eine Reihe von Basisklassenimplementierungsmethoden für die JDBC-vorbereitete Anweisung und aufrufbare Anweisungen bereitgestellt. Standardmäßig werden von der SQLServerStatement-Klasse SQL-Anweisungen ausgeführt und anschließend Updatezählungen und Resultsets an die Benutzeranwendung zurückgegeben.  
   
- Diese Klasse unterstützt das Entpacken in die SQLServerStatement-Klasse, die isqlserverstatement-Schnittstelle und die Java. SQL. Statement-Schnittstelle. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Diese Klasse unterstützt das Entpacken in eine SQLServerStatement-Klasse, die ISQLServerStatement-Schnittstelle und die java.sqlServerStatement-Schnittstelle. Weitere Informationen finden Sie im Artikel [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerStatement-Elemente](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

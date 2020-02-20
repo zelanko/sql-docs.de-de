@@ -1,5 +1,5 @@
 ---
-title: SetBytes-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
+title: setBytes-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f264f1a6-ee35-4eaf-81d8-ecf99f03b35d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 53a75e8bd85a3601673f51111d87c34eb050a980
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974873"
 ---
 # <a name="setbytes-method-sqlservercallablestatement"></a>setBytes-Methode (SQLServerCallableStatement)
@@ -42,7 +42,7 @@ public void setBytes(java.lang.String sCol,
   
  *b*  
   
- Ein Array von **Byte** Werten.  
+ Dies ist ein Array von **byte**-Werten.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

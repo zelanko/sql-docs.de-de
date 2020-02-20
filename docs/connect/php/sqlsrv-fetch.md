@@ -18,13 +18,13 @@ ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32b095c37f6a0b039e0836da4508ed8cbfe5fd3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015022"
 ---
-# <a name="sqlsrvfetch"></a>sqlsrv_fetch
+# <a name="sqlsrv_fetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Macht die nächste Zeile eines Resultsets zum Lesen verfügbar. Verwenden Sie [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md), um Felder einer Zeile zu lesen.  
@@ -37,12 +37,12 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$stmt*: Eine Anweisungsressource, die einer ausgeführten Anweisung entspricht.  
+*$stmt*: Hierbei handelt es sich um eine Anweisungsressource, die einer ausgeführten Anweisung entspricht.  
   
 > [!NOTE]  
 > Eine Anweisung muss ausgeführt werden, bevor Ergebnisse abgerufen werden können. Informationen zur Ausführung einer Anweisung finden Sie unter [sqlsrv_query](../../connect/php/sqlsrv-query.md) und [sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
-*row* (optional): Einer der folgenden Werte, der die Zeile angibt, auf die in einem Resultset zugegriffen wird, das einen scrollfähigen Cursor verwendet:  
+*row* [OPTIONAL]: Einer der folgenden Werte, der die Zeile angibt, auf die in einem Resultset zugegriffen werden soll, das einen scrollfähigen Cursor verwendet:  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -58,7 +58,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 Weitere Informationen zu diesen Werten finden Sie unter [Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*offset* (optional): Wird mit SQLSRV_SCROLL_ABSOLUTE und SQLSRV_SCROLL_RELATIVE verwendet, um die Zeile anzugeben, die abgerufen werden soll. Der erste Datensatz im Resultset ist „0“.  
+*offset* [OPTIONAL]: Dieser Wert wird zusammen mit „SQLSRV_SCROLL_ABSOLUTE“ und „SQLSRV_SCROLL_RELATIVE“ verwendet, um die abzurufende Zeile anzugeben. Der erste Datensatz im Resultset ist „0“.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Wenn die nächste Zeile des Resultsets erfolgreich abgerufen wurde, wird **true** zurückgegeben. Wenn keine weiteren Ergebnisse im Resultset vorhanden sind, wird **NULL** zurückgegeben. Wenn ein Fehler aufgetreten ist, wird **false** zurückgegeben.  

@@ -11,10 +11,10 @@ ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1de4bc16b37c6224c0dfbb5556f59b6e15d825a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971521"
 ---
 # <a name="sqlserverdatasource-class"></a>SQLServerDataSource-Klasse
@@ -24,7 +24,7 @@ ms.locfileid: "67971521"
   
  **Paket:** com.microsoft.sqlserver.jdbc  
   
- **Implementiert** [ISQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md), DataSource, java.io.Serializable, javax.naming.Referenceable  
+ **Implementiert:** [ISQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md), DataSource, java.io.Serializable, javax.naming.Referenceable  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ public class SQLServerDataSource
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Klasse unterstützt das Entpacken in die SQLServerDataSource-Klasse, die isqlserverdatasource-Schnittstelle und die DataSource-Schnittstelle. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Diese Klasse unterstützt das Entpacken in die SQLServerDataSource-Klasse, die ISQLServerDataSource-Schnittstelle und die DataSource-Schnittstelle. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

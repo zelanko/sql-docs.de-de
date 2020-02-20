@@ -1,5 +1,6 @@
 ---
 title: Verwalten von Abonnementbesitzern und Ausführen von PowerShell-Abonnement | Microsoft-Dokumentation
+description: Sie können den Besitz eines Reporting Services-Abonnements von einem Benutzer an einen anderen übertragen.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -8,13 +9,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 04/26/2019
-ms.openlocfilehash: 2a0972f5cd644ed06718791ee20b2c5dfd9a1660
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 01/16/2020
+ms.openlocfilehash: a5ec1524c7105c5a408aa11448984b9366e6d51d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893430"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259328"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Verwalten von Abonnementbesitzern und Ausführen von PowerShell-Abonnement
 
@@ -22,23 +23,23 @@ ms.locfileid: "68893430"
 
 Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können Sie den Besitz eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements programmgesteuert von einem Benutzer auf einen anderen übertragen. Dieses Thema enthält mehrere Windows PowerShell-Skripts, die Sie verwenden können, um den Besitz von Abonnements zu ändern oder einfach aufzulisten. Jedes Beispiel enthält Beispielsyntax sowohl für den einheitlichen als auch den SharePoint-Modus. Wenn Sie den Abonnementbesitzer ändern, wird das Abonnement dann im Sicherheitskontext des neuen Besitzers ausgeführt, und das User!UserID-Feld des Berichts zeigt den Wert für den neuen Besitzer an. Weitere Informationen zum Objektmodell des PowerShell-Beispielaufrufs finden Sie unter <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")
+![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt")
 
 ##  <a name="bkmk_top"></a> In diesem Thema:
   
 - [Gewusst wie: Verwenden der Skripts](#bkmk_how_to)  
   
-- [Skript: Auflisten des Besitzes aller Abonnements](#bkmk_list_ownership_all)  
+- [Skript: Auflisten der Besitzer aller Abonnements](#bkmk_list_ownership_all)  
   
-- [Skript: Auflisten aller Abonnements, die ein bestimmter Benutzer besitzt](#bkmk_list_all_one_user)  
+- [Skript: Auflisten aller Abonnements im Besitz eines spezifischen Benutzers](#bkmk_list_all_one_user)  
   
-- [Skript: Ändern des Besitzes aller Abonnements, die ein bestimmter Benutzer besitzt](#bkmk_change_all)  
+- [Skript: Ändern des Besitzes aller Abonnements eines spezifischen Benutzers](#bkmk_change_all)  
   
-- [Skript: Auflisten aller Abonnements, die mit einem bestimmten Bericht verknüpft sind](#bkmk_list_for_1_report)  
+- [Skript: Auflisten aller Abonnements im Zusammenhang mit einem bestimmten Bericht](#bkmk_list_for_1_report)  
   
 - [Skript: Ändern des Besitzes eines bestimmten Abonnements](#bkmk_change_all_1_subscription)  
   
-- [Skript: Ausführen (Auslösen) eines einzelnen Abonnements](#bkmk_run_1_subscription)  
+- [Skript: Ausführen (Auslösen) eines Einzelabonnements](#bkmk_run_1_subscription)  
   
 ## <a name="bkmk_how_to"></a> Gewusst wie: Verwenden der Skripts
   
@@ -56,7 +57,7 @@ In diesem Abschnitt werden die erforderlichen Berechtigungsstufen für die Verwe
   
 **Einheitlicher Modus :**
   
-- Abonnements auflisten: [ReportOperation-Enumeration](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) im Bericht UND der Benutzer ist der Besitzer des Abonnements) ODER ReadAnySubscription.  
+- Abonnements auflisten: [ReportOperation-Enumeration](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) im Bericht UND der Benutzer, der Besitzer des Abonnements ist, ODER ReadAnySubscription  
   
 - Abonnements ändern: Der Benutzer muss ein Mitglied der Gruppe "BUILTIN\Administrators" sein.  
   
@@ -66,7 +67,7 @@ In diesem Abschnitt werden die erforderlichen Berechtigungsstufen für die Verwe
   
  **SharePoint-Modus:**
   
-- Abonnements auflisten: ManageAlerts ODER [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) im Bericht UND der Benutzer ist der Abonnementbesitzer und es handelt sich um ein geplantes Abonnement).  
+- Abonnements auflisten: ManageAlerts ODER [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) im Bericht UND der Benutzer, der Abonnementbesitzer ist, dabei muss es sich um ein geplantes Abonnement handeln.  
   
 - Abonnements ändern: ManageWeb  
   
@@ -98,7 +99,7 @@ In diesem Abschnitt werden die erforderlichen Berechtigungsstufen für die Verwe
   
 - [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
-## <a name="bkmk_list_ownership_all"></a> Skript: Auflisten des Besitzes aller Abonnements
+## <a name="bkmk_list_ownership_all"></a> Skript: Auflisten der Besitzer aller Abonnements
 
 Dieses Skript listet alle Abonnements auf einer Site auf. Sie können dieses Skript verwenden, um Ihre Verbindung zu testen oder um den Berichtspfad und die Abonnement-ID für die Verwendung in den anderen Skripts zu verifizieren. Dieses Skript ist außerdem hilfreich, wenn Sie einfach prüfen möchten, welche Abonnements vorhanden sind und wer diese besitzt.  
   
@@ -136,7 +137,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 > Verwenden Sie das SharePoint-Cmdlet **Get-SPSite**, um Website-URLs im SharePoint-Modus zu verifizieren. Weitere Informationen finden Sie unter [Get-SPSite](https://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
-##  <a name="bkmk_list_all_one_user"></a> Skript: Auflisten aller Abonnements, die ein bestimmter Benutzer besitzt
+##  <a name="bkmk_list_all_one_user"></a> Skript: Auflisten aller Abonnements im Besitz eines spezifischen Benutzers
 
 Dieses Skript listet alle Abonnements auf, die ein bestimmter Benutzer besitzt. Sie können dieses Skript verwenden, um Ihre Verbindung zu testen oder um den Berichtspfad und die Abonnement-ID für die Verwendung in den anderen Skripts zu verifizieren. Dieses Skript ist hilfreich, wenn jemand Ihr Unternehmen verlässt und Sie prüfen möchten, welche Abonnements diese Person besessen hat, sodass Sie den Besitzer ändern oder das Abonnement löschen können.  
   
@@ -174,7 +175,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-## <a name="bkmk_change_all"></a> Skript: Ändern des Besitzes aller Abonnements, die ein bestimmter Benutzer besitzt
+## <a name="bkmk_change_all"></a> Skript: Ändern des Besitzes aller Abonnements eines spezifischen Benutzers
 
 Dieses Skript ändert den Besitz für alle Abonnements, die ein bestimmter Benutzer besitzt, zum neuen Besitzerparameter.  
   
@@ -216,7 +217,7 @@ ForEach ($item in $items)
         $curRepSubs = $rs2010.ListSubscriptions($item.Path);  
         ForEach ($curRepSub in $curRepSubs)  
         {  
-            if ($curRepSub.Owner -eq $previousOwner)  
+            if ($curRepSub.Owner -eq $currentOwner)  
             {  
                 $subscriptions += $curRepSub;  
             }  
@@ -245,7 +246,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-## <a name="bkmk_list_for_1_report"></a> Skript: Auflisten aller Abonnements, die mit einem bestimmten Bericht verknüpft sind  
+## <a name="bkmk_list_for_1_report"></a> Skript: Auflisten aller Abonnements im Zusammenhang mit einem bestimmten Bericht  
 
 Dieses Skript listet alle Abonnements auf, die mit einem bestimmten Bericht verknüpft sind. Die Berichtspfadsyntax unterscheidet sich vom SharePoint-Modus, der eine vollständige URL erfordert. In den Syntaxbeispielen wird der Berichtsname „title only“ verwendet, der ein Leerzeichen enthält und daher einfache Anführungszeichen vor und nach dem Berichtsnamen erfordert.  
   
@@ -330,7 +331,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-## <a name="bkmk_run_1_subscription"></a> Skript: Ausführen (Auslösen) eines einzelnen Abonnements  
+## <a name="bkmk_run_1_subscription"></a> Skript: Ausführen (Auslösen) eines Einzelabonnements  
 
 Dieses Skript führt ein bestimmtes Abonnement mit der FireEvent-Methode aus. Das Skript führt das Abonnement sofort aus, unabhängig davon, welcher Zeitplan für das Abonnement konfiguriert ist. Der EventType (Ereignistyp) wird mit einem bekannten Satz an Ereignissen abgeglichen, die in der Konfigurationsdatei des Berichtsservers **rsreportserver.config** definiert sind. Das Skript verwendet den folgenden Ereignistyp für standardmäßige Abonnements:  
   
@@ -384,7 +385,7 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
   
 ```  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 
 - [ReportingService2010.ListSubscriptions Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
 

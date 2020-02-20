@@ -1,6 +1,7 @@
 ---
 title: Steuern von Zeilen- und Spaltenüberschriften (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.date: 05/24/2018
+description: Eine Tabelle, eine Matrix oder ein Listendatenbereich in einem paginierten Bericht kann mehrere Seiten horizontal oder vertikal enthalten. Sie können angeben, ob die Zeilen- oder Spaltenüberschriften auf jeder Seite wiederholt werden sollen.
+ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ed08231f0bfd3cf7b505e3064883393470047e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581572"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245359"
 ---
-# <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Steuern von Zeilen- und Spaltenüberschriften (Berichts-Generator und SSRS)
-  Eine Tabelle, eine Matrix oder ein Listendatenbereich kann horizontal und vertikal mehrere Seiten enthalten. Sie können angeben, ob die Zeilen- oder Spaltenüberschriften auf jeder Seite wiederholt werden sollen. In einem interaktiven Renderer, z.B. dem Webportal oder der Berichtsvorschau, können Sie auch angeben, ob die Zeilen- bzw. Spaltenüberschriften fixiert werden sollen, sodass sie sichtbar bleiben, wenn Sie in einem Bericht scrollen. In einer Tabelle oder Matrix enthält die erste Zeile normalerweise Spaltenüberschriften mit Beschriftungen für jede Spalte. Die erste Spalte enthält normalerweise Zeilenüberschriften für jede Zeile. Bei geschachtelten Gruppen können Sie nach Bedarf den Anfangssatz mit Zeilen- und Spaltenüberschriften wiederholen, in dem die Gruppenbezeichnungen angegeben sind. In der Standardeinstellung beinhaltet ein Listendatenbereich keine Überschriften.  
+# <a name="control-row--column-headings-report-builder--ssrs"></a>Steuern von Zeilen- und Spaltenüberschriften (Berichts-Generator und SSRS)
+  Eine Tabelle, eine Matrix oder ein Listendatenbereich in einem paginierten Bericht kann mehrere Seiten horizontal oder vertikal enthalten. Sie können angeben, ob die Zeilen- oder Spaltenüberschriften auf jeder Seite wiederholt werden sollen. In einem interaktiven Renderer, z.B. dem Webportal oder der Berichtsvorschau, können Sie auch angeben, ob die Zeilen- bzw. Spaltenüberschriften fixiert werden sollen, sodass sie sichtbar bleiben, wenn Sie in einem Bericht scrollen. In einer Tabelle oder Matrix enthält die erste Zeile normalerweise Spaltenüberschriften mit Beschriftungen für jede Spalte. Die erste Spalte enthält normalerweise Zeilenüberschriften für jede Zeile. Bei geschachtelten Gruppen können Sie nach Bedarf den Anfangssatz mit Zeilen- und Spaltenüberschriften wiederholen, in dem die Gruppenbezeichnungen angegeben sind. In der Standardeinstellung beinhaltet ein Listendatenbereich keine Überschriften.  
   
  Wie Sie die Wiederholung oder das Fixieren der Überschriften steuern, ist von den folgenden Faktoren abhängig:  
   
@@ -60,11 +61,11 @@ ms.locfileid: "65581572"
 ###  <a name="Matrix"></a> Matrix  
  In der Standardeinstellung verfügt eine einfache Matrix über eine Zeilengruppe und eine Spaltengruppe. Die folgende Abbildung zeigt eine Matrix mit einer Zeilengruppe für die Kategorie und einer Spaltengruppe für die Geografie:  
   
- ![Matrix, Zeile „Kategorie“ and Spaltengruppe „Geographie“](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matrix, Category row and Geography column group")  
+ ![Matrix mit Zeilengruppe „Category“ (Kategorie) und Spaltengruppe „Geography“ (Geografie)](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matrix mit Zeilengruppe „Category“ (Kategorie) und Spaltengruppe „Geography“ (Geografie)")  
   
  Die gepunkteten Zeilen zeigen die vier Tablix-Bereiche an. Der Zeilengruppenbereich hat eine Zeilengruppen-Kopfzeile, die die Kategoriebezeichnungen in der ersten Spalte steuert. Entsprechend hat der Spaltengruppenbereich eine Spaltengruppen-Kopfzeile, die die Geografiebezeichnungen in der ersten Zeile steuert. In der Vorschau werden in der Matrix in der ersten Zeile die Spaltenüberschriften angezeigt, wie in der folgenden Abbildung dargestellt:  
   
- ![Vorschau der gerenderten Matrix mit erweiterten Gruppen](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Preview for rendered matrix with expanded groups")  
+ ![Vorschau für gerenderte Matrix mit erweiterten Gruppen](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Vorschau für gerenderte Matrix mit erweiterten Gruppen")  
   
  Um die Spaltenüberschriften in der ersten Zeile zu wiederholen oder zu fixieren, legen Sie die Eigenschaften für die Spaltenkopfzeilen im Tablix-Datenbereich fest. Die Spaltenkopfzeilen für geschachtelte Spaltengruppen werden automatisch mit eingeschlossen.  
   
@@ -75,19 +76,19 @@ ms.locfileid: "65581572"
 ###  <a name="TableNoGroups"></a> Tabelle ohne Zeilengruppen  
  In der Standardeinstellung enthält eine einfache Tabelle ohne Gruppen die Detailgruppe. Die folgende Abbildung zeigt eine Tabelle, in der Kategorie, Bestellnummer und Umsatzdaten angezeigt werden:  
   
- ![Design, Tabelle mit einer statischen und einer dynamischen Zeile](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "Design, table with one static, one dynamic row")  
+ ![Entwurf, Tabelle mit einer statischen und einer dynamischen Zeile](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "Entwurf, Tabelle mit einer statischen und einer dynamischen Zeile")  
   
  Es gibt keine gepunkteten Zeilen, da die Tabelle nur aus dem Tablix-Textbereich besteht. Die erste Zeile enthält Spaltenüberschriften und stellt ein statisches Tablix-Element dar, das keiner Gruppe zugeordnet ist. Die zweite Zeile zeigt Detaildaten an und stellt ein dynamisches Tablix-Element dar, das der Detailgruppe zugeordnet ist. Die folgende Abbildung zeigt eine Vorschau der Tabelle:  
   
- ![Vorschau, Tabelle mit einer statischen und einer dynamischen Zeile](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "Preview, table with one static, one dynamic row")  
+ ![Vorschau, Tabelle mit einer statischen und einer dynamischen Zeile](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "Vorschau, Tabelle mit einer statischen und einer dynamischen Zeile")  
   
  Um Spaltenüberschriften zu wiederholen oder zu fixieren, legen Sie die Eigenschaften im Tablix-Element für die statische Zeile fest, die Teil der Tablix-Datenbereichsdefinition ist. Um die statische Zeile auszuwählen, müssen Sie den erweiterten Modus im Gruppierungsbereich verwenden. In der folgenden Abbildung ist der Zeilengruppenbereich dargestellt:  
   
- ![Zeilengruppen, Tabelle mit einer statischen, einer dynamischen Zeile](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "Row Groups, table with 1 static, 1 dynamic row")  
+ ![Zeilengruppen, Tabelle mit einer statischen und einer dynamischen Zeile](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "Zeilengruppen, Tabelle mit einer statischen und einer dynamischen Zeile")  
   
  In der folgenden Abbildung sind die statischen und dynamischen Tablix-Elemente im erweiterten Modus für die Zeilengruppen in der Tabelle dargestellt:  
   
- ![Zeilengruppen, Erweitert für Standardtabelle](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "Row Groups, Advanced for default table")  
+ ![Zeilengruppen, für Standardtabelle erweitert](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "Zeilengruppen, für Standardtabelle erweitert")  
   
  Wählen Sie die statische Zeile mit der Bezeichnung (**Statisch**) aus, um die Spaltenüberschriften für das Tablix-Element zu wiederholen oder zu fixieren. Im Eigenschaftenbereich werden die Eigenschaften des ausgewählten Tablix-Elements angezeigt. Indem Sie die Eigenschaften für dieses Tablix-Element festlegen, können Sie angeben, ob die erste Zeile wiederholt werden oder immer angezeigt werden soll.  
   
@@ -96,21 +97,21 @@ ms.locfileid: "65581572"
 ###  <a name="TableRowGroupsGroupHeader"></a> Tabelle mit Zeilengruppen und einem Zeilengruppenbereich  
  Wenn Sie einer einfachen Tabelle eine Zeilengruppe hinzufügen, wird der Tabelle auf der Entwurfsoberfläche ein Zeilegruppenbereich hinzugefügt. In der folgenden Abbildung ist eine Tabelle mit einer Zeilengruppe auf der Grundlage einer Kategorie dargestellt:  
   
- ![Design, Tabelle mit einer Zeilengruppe und Einzelheiten](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "Design, table with one row group and details")  
+ ![Entwurf, Tabelle mit einer Zeilengruppe und Details](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "Entwurf, Tabelle mit einer Zeilengruppe und Details")  
   
  Die gepunkteten Zeilen zeigen den Tablix-Zeilengruppenbereich und den Tablix-Textbereich an. Der Zeilengruppenbereich enthält eine Kopfzeile für die Zeilengruppe, jedoch nicht für die Spaltengruppe. Die folgende Abbildung zeigt eine Vorschau dieser Tabelle:  
   
- ![Vorschau, Tabelle mit einer Zeilengruppe und Einzelheiten](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "Preview, table with one row group and details")  
+ ![Vorschau, Tabelle mit einer Zeilengruppe und Details](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "Vorschau, Tabelle mit einer Zeilengruppe und Details")  
   
  Um die Spaltenüberschriften zu wiederholen oder zu fixieren, verwenden Sie den gleichen Ansatz wie im vorherigen Beispiel. Die folgende Abbildung zeigt die Standardansicht des Zeilengruppenbereichs:  
   
- ![Zeilengruppen, Standard mit dynamischen Mitgliedern](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "Row Groups, Default with dynamic members")  
+ ![Zeilengruppen, Standardmodus mit dynamischen Elementen](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "Zeilengruppen, Standardmodus mit dynamischen Elementen")  
   
  Verwenden Sie den Modus **Erweitert** des Zeilengruppenbereichs, um die Tablix-Elemente anzuzeigen, wie in der folgenden Abbildung gezeigt:  
   
- ![Zeilengruppen, erweiterter Modus mit statischen Mitgliedern](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Row Groups, Advanced mode with static members")  
+ ![Zeilengruppen, Erweiterter Modus mit statischen Elementen](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Zeilengruppen, Erweiterter Modus mit statischen Elementen")  
   
- Es werden vier Tablix-Elemente aufgelistet: **Statisch**, (**Statisch**), Kategorie und (**Details**). Ein Tablix-Element mit Klammern () zeigt an, dass keine zugehörige Gruppenkopfzeile vorhanden ist. Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste statische Tablix-Element aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
+ Es werden die folgenden Tablix-Elemente aufgelistet: **Statisch**, (**Statisch**), Kategorie und (**Details**). Ein Tablix-Element mit Klammern () zeigt an, dass keine zugehörige Gruppenkopfzeile vorhanden ist. Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste statische Tablix-Element aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
   
  [Zurück zum Anfang](#Top)  
   
@@ -123,21 +124,21 @@ ms.locfileid: "65581572"
   
  In der folgenden Abbildung ist eine Tabelle mit einer Zeilengruppe ohne Zeilengruppenbereich auf der Entwurfsoberfläche dargestellt:  
   
- ![Design, Tabelle verfügt über eine Zeilengruppe, aber keinen Gruppenkopf](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "Design, table has row group but no group header")  
+ ![Entwurf, Tabelle verfügt über Zeilengruppe, aber keinen Gruppenheader](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "Entwurf, Tabelle verfügt über Zeilengruppe, aber keinen Gruppenheader")  
   
  Die Tabelle enthält drei Zeilen. Die erste Zeile enthält Spaltenkopfzeilen. Die zweite Zeile enthält den Gruppenwert und die Teilergebnisse. Die dritte Zeile enthält die Detaildaten. Es werden keine gepunkteten Zeilen angezeigt, da nur ein Tablix-Textbereich vorhanden ist. Die folgende Abbildung zeigt eine Vorschau dieser Tabelle:  
   
- ![Vorschau, Tabelle verfügt über eine Zeilengruppe, aber keinen Gruppenkopf](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "Preview, table has row group but no group header")  
+ ![Vorschau, Tabelle verfügt über Zeilengruppe, aber keinen Gruppenheader](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "Vorschau, Tabelle verfügt über Zeilengruppe, aber keinen Gruppenheader")  
   
  Um das Wiederholen oder Fixieren der Zeilen zu steuern, müssen Sie die Eigenschaften des Tablix-Elements für jede Zeile festlegen. Im Standardmodus gibt es keinen Unterschied zwischen diesem und dem vorherigen Beispiel für eine Tabelle mit einer Zeilengruppe und einer Gruppenkopfzeile. Die folgende Abbildung zeigt den Gruppierungsbereich im Standardmodus für diese Tabelle:  
   
- ![Zeilengruppen, Standard mit dynamischen Mitgliedern](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "Row Groups, Default with dynamic members")  
+ ![Zeilengruppen, Standardmodus mit dynamischen Elementen](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "Zeilengruppen, Standardmodus mit dynamischen Elementen")  
   
  Im erweiterten Modus zeigt diese Layoutstruktur jedoch an, dass andere Tablix-Elemente vorhanden sind. Die folgende Abbildung zeigt den Gruppierungsbereich im erweiterten Modus für diese Tabelle:  
   
- ![Zeilengruppen, Erweitert, kein Gruppenkopf](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Row Groups, Advanced, no group header.")  
+ ![Zeilengruppen, erweitert, ohne Gruppenheader](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Zeilengruppen, erweitert, ohne Gruppenheader")  
   
- Im Bereich Zeilengruppen werden die folgenden Tablix-Elemente aufgelistet: (**Statisch**), (Kategorie), (**Statisch**) und (**Details**). Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste Tablix-Element (**Statisch**) aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
+ Im Bereich „Zeilengruppen“ werden die folgenden Tablix-Elemente aufgeführt: (**Statisch**), (Kategorie), (**Statisch**) und (**Details**). Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste Tablix-Element (**Statisch**) aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
   
  [Zurück zum Anfang](#Top)  
   

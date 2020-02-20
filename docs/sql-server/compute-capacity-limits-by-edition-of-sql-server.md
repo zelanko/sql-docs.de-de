@@ -14,27 +14,27 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68067576"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Artikel wird erläutert, wie Sie Kapazitätsgrenzen für Editionen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] berechnen und wie diese sich in physischen und virtuellen Umgebungen mit Hyperthread-Prozessoren unterscheiden.  
   
- ![Zuordnungen zu Rechenkapazitätsgrenzen](../sql-server/media/compute-capacity-limits.gif "Mappings to compute capacity limits")  
+ ![Zuordnungen zu Rechenkapazitätsgrenzen](../sql-server/media/compute-capacity-limits.gif "Zuordnungen zu Rechenkapazitätsgrenzen")  
   
  In dieser Tabelle werden die Schreibweisen im vorigen Diagramm beschrieben:  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |0..1|Null oder Eins|  
 |1|Genau eins|  
 |1..\*|Ein oder mehr|  
 |0..\*|0 oder mehr|  
-|1..2|Einer oder zwei|  
+|1..2|Eine oder zwei|  
   
 > [!IMPORTANT]  
 > Weitere Details:  
@@ -61,7 +61,7 @@ ms.locfileid: "68067576"
   
 -   Ein physischer Prozessor kann aus einem oder mehreren Kernen bestehen. Ein physischer Prozessor ist das Gleiche wie ein Prozessorpaket oder ein Socket.  
   
-Systeme mit mehr als einem physischen Prozessor oder Systeme mit physischen Prozessoren, die mehrere Kerne und/oder Hyperthreads haben, ermöglichen dem Betriebssystem, mehrere Tasks gleichzeitig auszuführen. Jeder Thread der Ausführung wird als logischer Prozessor angezeigt. Wenn Ihr Computer z. B. zwei Quad-Core-Prozessoren mit aktiviertem Hyperthreading und zwei Threads pro Kern aufweist, verfügen Sie über 16 logische Prozessoren: 2 Prozessoren × 4 Kerne pro Prozessor × 2 Threads pro Kern. Beachten Sie dabei Folgendes:  
+Systeme mit mehr als einem physischen Prozessor oder Systeme mit physischen Prozessoren, die mehrere Kerne und/oder Hyperthreads haben, ermöglichen dem Betriebssystem, mehrere Tasks gleichzeitig auszuführen. Jeder Thread der Ausführung wird als logischer Prozessor angezeigt. Wenn Ihr Computer z. B. zwei Quad-Core-Prozessoren mit aktiviertem Hyperthreading und zwei Threads pro Kern aufweist, verfügen Sie über 16 logische Prozessoren: 2 Prozessoren × 4 Kerne pro Prozessor × 2 Threads pro Kern. Beachten Sie Folgendes:  
   
 -   Die Rechenkapazität eines logischen Prozessors von einem einzelnen Thread eines Hyperthread-Kerns ist geringer als die Rechenkapazität eines logischen Prozessors von diesem gleichen Kern mit deaktiviertem Hyperthreading.  
   
@@ -92,7 +92,7 @@ Ein Server mit vier Sockets beispielsweise, bestückt mit Quad-Core-Prozessoren 
   
 Es kann daher sinnvoll sein, Hyperthreading zu deaktivieren, wenn die Leistung der einzelnen virtuellen Prozessoren wichtig ist. Sie können das Hyperthreading mithilfe einer BIOS-Einstellung für den Prozessor während der BIOS-Einrichtung aktivieren oder deaktivieren. Normalerweise handelt es sich aber um einen Vorgang im Bereich des Servers, der alle auf dem Server ausgeführten Arbeitsauslastungen betrifft. Dies kann dafür sprechen, Arbeitsauslastungen, die in virtualisierten Umgebungen ausgeführt werden, von solchen zu trennen, die in einer physischen Betriebssystemumgebung von der Leistungssteigerung durch Hyperthreading profitieren würden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Editionen und Komponenten von SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Spezifikationen der maximalen Kapazität für SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   

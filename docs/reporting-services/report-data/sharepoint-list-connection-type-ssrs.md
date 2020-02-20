@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 43f726dbddb9b9f3737a92a82987dc3832182d49
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593955"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190692"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint-Listenverbindungstyp (SSRS)
 
@@ -28,7 +28,7 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
  Im Abfrage-Designer werden automatisch die SharePoint-Listen angezeigt, für die Sie ausreichende Zugriffsberechtigungen besitzen.  
   
- Weitere Beispiele für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Weitere Beispiele für Verbindungszeichenfolgen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Anmeldeinformationen  
  Anmeldeinformationen sind erforderlich, um Abfragen auszuführen und den Bericht lokal oder vom Berichtsserver aus in der Vorschau anzuzeigen. Nachdem Sie den Bericht veröffentlicht haben, müssen Sie eventuell die Anmeldeinformationen für die Datenquelle ändern, sodass die Berechtigungen zum Abrufen der Daten beim Ausführen des Berichts auf dem Berichtsserver gültig sind. Die von dieser Datenerweiterung unterstützten Anmeldeinformationstypen hängen von der SharePoint-Technologiekonfiguration für die als Datenquelle verwendete SharePoint-Liste ab.  
@@ -37,7 +37,7 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
  **Tabelle 1** wird für Berichte verwendet, die auf einer älteren Windows SharePoint-Website bereitgestellt werden. Ältere Windows-Websites unterstützen ausschließlich Kerberos, NTLM und die formularbasierte Authentifizierung (FBA). **Tabelle 2** wird für Berichte verwendet, die auf einer SharePoint-Website mit anspruchsbasierter Authentifizierung bereitgestellt werden.  
   
- **Tabelle 1**  
+ **Tabelle 1**  
   
 ||Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|*Anspruchsauthentifizierung|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
@@ -71,7 +71,7 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
  Weitere Informationen zur Unterstützung der anspruchsbasierten Authentifizierung in der Microsoft BI-Struktur finden Sie unter [Verwenden der anspruchsbasierten Authentifizierung in der Microsoft BI-Struktur](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Angeben von Anmelde- und Verbindungsinformationen für Berichtsdatenquellen](specify-credential-and-connection-information-for-report-data-sources.md) und [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Weitere Informationen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](specify-credential-and-connection-information-for-report-data-sources.md) und [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="Query"></a> Abfragen  
  Erstellen Sie auf Grundlage der Datenquelle ein neues Dataset, und öffnen Sie dann den entsprechenden Abfrage-Designer, um eine Abfrage zu entwerfen. Weitere Informationen finden Sie unter [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
@@ -111,7 +111,7 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
 ### <a name="query-text"></a>Abfragetext  
  Wenn Sie die Abfrage anzeigen möchten, die im grafischen Abfrage-Designer generiert wird, wechseln Sie zum textbasierten Abfrage-Designer. In dieser Ansicht können Sie die XML anzeigen, die vom grafischen Abfrage-Designer erstellt wird. Die XML umfasst Elemente für den Listennamen, die Feldauflistung und den Filter.  
   
-#### <a name="example-1-specified-fields-for-a-list"></a>Beispiel 1. Angegebene Felder für eine Liste  
+#### <a name="example-1-specified-fields-for-a-list"></a>Beispiel 1: Angegebene Felder für eine Liste  
  Im folgenden Beispiel wird eine wohlgeformte SharePoint-Abfrage dargestellt:  
   
 ```  
@@ -140,7 +140,7 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
  Sie können diese Ansicht der Abfrage bearbeiten, solange es wohlgeformter XML-Text bleibt.  
   
-#### <a name="example-2-all-fields-for-a-list"></a>Beispiel 2. Alle Felder für eine Liste  
+#### <a name="example-2-all-fields-for-a-list"></a>Beispiel 2: Alle Felder für eine Liste  
  Sie können auch nur den Namen einer Liste angeben, und alle Felder einschließlich der ausgeblendete Felder werden zurückgegeben. Im folgenden Beispiel werden alle Felder aus einer Liste, die Tasks genannt wird:  
   
 ```  
@@ -169,7 +169,7 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Bietet eine Übersicht über den Zugriff auf Daten für den Bericht.  
   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Enthält Informationen zu Datenverbindungen und Datenquellen.  
   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

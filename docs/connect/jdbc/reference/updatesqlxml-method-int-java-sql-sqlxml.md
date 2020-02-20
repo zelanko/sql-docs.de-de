@@ -1,5 +1,5 @@
 ---
-title: updatesqlxml-Methode (int, Java. SQL. SqlXml) | Microsoft-Dokumentation
+title: updateSQLXML(int, java.sql.SQLXML)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b5170751-fbe1-433b-96f5-4f237ba55f60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee90c33b2b546a3eaf48d52b7577200b7c23306b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998278"
 ---
 # <a name="updatesqlxml-method-int-javasqlsqlxml"></a>updateSQLXML-Methode (int, java.sql.SQLXML)
@@ -37,13 +37,13 @@ public void updateSQLXML(int columnIndex,
   
  *xmlObject*  
   
- Ein SQLXML-Objekt.  
+ Dies ist ein SQLXML-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese updatesqlxml-Methode wird von der updatesqlxml-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese updateSQLXML-Methode wird von der updateSQLXML-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [updateSQLXML-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   

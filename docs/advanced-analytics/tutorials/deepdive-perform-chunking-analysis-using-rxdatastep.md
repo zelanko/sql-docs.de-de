@@ -1,6 +1,6 @@
 ---
 title: Blockweise Analyse in RevoScaleR
-description: Tutorial zum Segmentieren von Daten für die verteilte Analyse mithilfe der R-Programmiersprache in SQL Server.
+description: 'Tutorial 12 zu RevoScaleR: Segmentieren von Daten für die verteilte Analyse mithilfe der R-Programmiersprache in SQL Server'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,22 +9,22 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c7aa853f44a04e55802012e81e59a15d2b5282b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0ad082c3a21292b782d5888b48b698c986c0b5b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727235"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947212"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Durchführen einer blockweisen Analyse mithilfe von rxDataStep (Tutorial für SQL Server und RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Diese Lerneinheit ist Teil des [RevoScaleR-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zum Verwenden von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Bei diesem Tutorial handelt es sich um das zwölfte Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Lernprogramm erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
-In dieser Lektion verarbeiten Sie mithilfe der Funktion **rxDataStep** Daten in Blöcken, ohne das gesamte Dataset in den Speicher laden und gleichzeitig verarbeiten zu müssen, wie es üblicherweise in R der Fall ist. Die Funktion **rxDataStep** liest die Daten in Blöcken und wendet R-Funktionen nacheinander auf die einzelnen Datenblöcke an. Anschließend werden die Ergebnisse der Zusammenfassung für jeden Block in eine gemeinsame [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquelle geschrieben. Wenn alle Daten gelesen wurden, werden die Ergebnisse zusammengeführt.
+In diesem Tutorial verarbeiten Sie mithilfe der Funktion **rxDataStep** Daten in Blöcken, ohne dass das gesamte Dataset in den Speicher geladen und gleichzeitig verarbeitet werden muss, wie es üblicherweise in R der Fall ist. Die Funktion **rxDataStep** liest die Daten in Blöcken und wendet R-Funktionen nacheinander auf die einzelnen Datenblöcke an. Anschließend werden die Ergebnisse der Zusammenfassung für jeden Block in eine gemeinsame [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquelle geschrieben. Wenn alle Daten gelesen wurden, werden die Ergebnisse zusammengeführt.
 
 > [!TIP]
-> In dieser Lektion berechnen Sie mithilfe der **Tabellen**-Funktion in R eine Notfalltabelle. Dieses Beispiel ist nur für Unterrichtszwecke bestimmt. 
+> In diesem Tutorial berechnen Sie mithilfe der **Tabellen**-Funktion in R eine Kontingenztabelle. Dieses Beispiel ist nur für Unterrichtszwecke bestimmt. 
 > 
 > Wenn Sie echte Datasets tabellarisieren möchten, verwenden Sie stattdessen die Funktionen **rxCrossTabs** oder **rxCube** in **RevoScaleR**, die für diese Art von Vorgang optimiert wurden.
 

@@ -1,5 +1,5 @@
 ---
-title: Übersicht über den JDBC-Treiber | Microsoft-Dokumentation
+title: Überblick über den JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/28/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10a2411f26315a7c0cf50e9eca4daec45567fab4
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049829"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Übersicht über den JDBC-Treiber
@@ -25,15 +25,15 @@ Der Microsoft JDBC-Treiber für SQL Server ist ein JDBC (Java Database Connectiv
 
 ## <a name="redistribution"></a>Weiterverteilung
 
-Die JDBC-Treiberversionen 6,0, 6,2, 6,4 und 7,0 sind Verteil Bar. Lesen Sie die Klausel _Verteilbarer Code_ in den jeweiligen Lizenzvereinbarungen.
+Die Versionen 6.0, 6.2, 6.4 und 7.0 des JDBC-Treibers dürfen weiterverteilt werden. Lesen Sie die Klausel _Verteilbarer Code_ in den jeweiligen Lizenzvereinbarungen.
 
-Die JDBC-Treiberversionen 4. x sind veraltet und veraltet. Die Unterstützung für 4. x ist vor 2018 abgelaufen.
+Die JDBC-Treiberversionen 4.x sind veraltet. Die Unterstützung von 4.x wurde vor 2018 eingestellt.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
 Die Themen in diesem Abschnitt enthalten eine allgemeine Übersicht über den JDBC-Treiber, u. a. die notwendigen Systemanforderungen, Verwendungsmöglichkeiten und Verweise auf weitere Informationen.  
 
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Herunterladen des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Links zum Herunterladen des Microsoft JDBC-Treibers für SQL Server|  
 |[Versionshinweise für den JDBC-Treiber](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|Beschreibt die neuen Funktionen in der aktuellen Version des Microsoft JDBC-Treibers|  
@@ -43,11 +43,11 @@ Die Themen in diesem Abschnitt enthalten eine allgemeine Übersicht über den JD
 |[Bereitstellen des JDBC-Treibers](../../connect/jdbc/deploying-the-jdbc-driver.md)|Beschreibt die Weiterverteilung und Bereitstellung des Microsoft JDBC-Treibers auf Windows- und Unix-Betriebssystemen.|  
 |[Suchen von zusätzlichen Informationen zum JDBC-Treiber](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Enthält Informationen zu weiteren Ressourcen zum Microsoft JDBC-Treiber, wie z. B. Links zu externen Ressourcen.|  
 |[Supportmatrix für den Microsoft JDBC-Treiber für SQL](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) Server|Unterstützungsmatrix und Support Lifecycle-Richtlinie für den Microsoft JDBC-Treiber für SQL Server|  
-|[FAQ&#41; zu häufig &#40;gestellten Fragen für JDBC Driver](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Häufig gestellte Fragen zu Microsofts JDBC-Treiber|  
+|[Häufig gestellte Fragen &#40;FAQ&#41; zum JDBC-Treiber](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Häufig gestellte Fragen zu Microsofts JDBC-Treiber|  
 |[Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server|
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [JDBC Driver GitHub repository (GitHub-Repository für den JDBC-Treiber)](https://github.com/microsoft/mssql-jdbc)  
  [API-Referenz für den JDBC-Treiber](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

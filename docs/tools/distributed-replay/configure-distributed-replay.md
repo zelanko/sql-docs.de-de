@@ -1,7 +1,6 @@
 ---
-title: Konfigurieren von Distributed Replay | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Konfigurieren von Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,16 +9,18 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: cbc59ea90a962b105d4ac4fd4aa0e6d10f3ba7d3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023770"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307047"
 ---
 # <a name="configure-distributed-replay"></a>Konfigurieren von Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Die Konfigurationsdetails für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay werden in XML-Dateien auf dem Distributed Replay-Controller, den Clients und am Installationsort des Verwaltungstools angegeben. Hierzu gehören die folgenden Dateien:  
+  Die Konfigurationsdetails für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay befinden sich in XML-Dateien im Distributed Replay-Controller, in den Distributed Replay-Clients und am Installationsort des Verwaltungstools. Hierzu gehören die folgenden Dateien:  
   
 -   [Controllerkonfigurationsdatei](#DReplayController)  
   
@@ -36,9 +37,9 @@ ms.locfileid: "68023770"
   
  Der in der Controllerkonfigurationsdatei angegebene Protokolliergrad enthält die folgenden Informationen:  
   
-|Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
+|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Erforderlich|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Protokolliergrad|`<LoggingLevel>`|Gibt den Protokolliergrad für den Controllerdienst an.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Nein. Der Standardwert ist `CRITICAL`.|  
+|Protokolliergrad|`<LoggingLevel>`|Gibt den Protokolliergrad für den Controllerdienst an.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Nein. Standardmäßig lautet der Wert `CRITICAL`.|  
   
 ### <a name="example"></a>Beispiel  
  In diesem Beispiel wird eine Controllerkonfigurationsdatei gezeigt, die geändert wurde, um `INFORMATION` - und `WARNING` -Protokolleinträge zu unterdrücken.  
@@ -57,12 +58,12 @@ ms.locfileid: "68023770"
   
  In der Clientkonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
-|Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
+|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Erforderlich|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Controller|`<Controller>`|Gibt den Computernamen des Controllers an. Der Client versucht, sich durch Herstellen einer Verbindung mit dem Controller bei der Distributed Replay Utility-Umgebung zu registrieren.|Sie können mit "`localhost`" oder "`.`" auf den lokalen Computer verweisen.|Nein. Standardmäßig versucht der Client, sich bei der Controllerinstanz zu registrieren, die lokal ("`.`") ausgeführt wird, sofern sie vorhanden ist.|  
 |Clientarbeitsverzeichnis|`<WorkingDirectory>`|Der lokale Pfad auf dem Client, unter dem die Dispatchdateien gespeichert werden.<br /><br /> Die Dateien in diesem Verzeichnis werden bei der nächsten Wiedergabe überschrieben.|Ein vollständiger Verzeichnisname, der mit dem Laufwerkbuchstaben beginnt.|Nein. Wenn kein Wert angegeben ist, werden die Dispatchdateien am selben Speicherort wie die Standardclientkonfigurationsdatei gespeichert. Wenn ein Wert angegeben wird und dieser Ordner nicht auf dem Client vorhanden ist, wird der Clientdienst nicht gestartet.|  
 |Clientergebnisverzeichnis|`<ResultDirectory>`|Der lokale Pfad auf dem Client, unter dem die Ergebnisdatei der Ablaufverfolgung aus der Wiedergabeaktivität (für den Client) gespeichert wird.<br /><br /> Die Dateien in diesem Verzeichnis werden bei der nächsten Wiedergabe überschrieben.|Ein vollständiger Verzeichnisname, der mit dem Laufwerkbuchstaben beginnt.|Nein. Wenn kein Wert angegeben ist, wird die Ergebnisdatei der Ablaufverfolgung am selben Speicherort wie die Standardclientkonfigurationsdatei gespeichert. Wenn ein Wert angegeben wird und dieser Ordner nicht auf dem Client vorhanden ist, wird der Clientdienst nicht gestartet.|  
-|Protokolliergrad|`<LoggingLevel>`|Der Protokolliergrad für den Clientdienst.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Nein. Der Standardwert ist `CRITICAL`.|  
+|Protokolliergrad|`<LoggingLevel>`|Der Protokolliergrad für den Clientdienst.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Nein. Standardmäßig lautet der Wert `CRITICAL`.|  
   
 ### <a name="example"></a>Beispiel  
  In diesem Beispiel wird eine Clientkonfigurationsdatei gezeigt, die geändert wurde, um anzugeben, dass der Controllerdienst auf einem anderen Computer (mit dem Namen `Controller1`) ausgeführt wird. Das `WorkingDirectory` -Element und das `ResultDirectory` -Element wurden für die Verwendung des Ordners `c:\ClientWorkingDir` bzw. `c:\ResultTraceDir`konfiguriert. Der Standardwert des Protokolliergrads wurde geändert, um `INFORMATION` - und `WARNING` -Protokolleinträge zu unterdrücken.  
@@ -88,10 +89,10 @@ ms.locfileid: "68023770"
   
  Die Vorverarbeitungskonfigurationseinstellungen werden in XML-Elementen angegeben, die untergeordnete Elemente des `<PreprocessModifiers>` -Elements in der Vorverarbeitungskonfigurationsdatei sind. Dazu gehören folgende Einstellungen:  
   
-|Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
+|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Erforderlich|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Systemsitzungsaktivitäten einschließen|`<IncSystemSession>`|Gibt an, ob Systemsitzungsaktivitäten während der Aufzeichnung in die Wiedergabe eingeschlossen werden.|`Yes` &#124; `No`|Nein. Der Standardwert ist `No`.|  
-|Maximale Leerlaufzeit|`<MaxIdleTime>`|Legt die maximale Leerlaufzeit auf eine absolute Zahl (in Sekunden) fest.|Eine ganze Zahl >= -1.<br /><br /> `-1` gibt an, dass der ursprüngliche Wert in der ursprünglichen Ablaufverfolgungsdatei unverändert bleibt.<br /><br /> `0` gibt an, dass zu einem beliebigen Zeitpunkt Aktivitäten erfolgen.|Nein. Der Standardwert ist `-1`.|  
+|Systemsitzungsaktivitäten einschließen|`<IncSystemSession>`|Gibt an, ob Systemsitzungsaktivitäten während der Aufzeichnung in die Wiedergabe eingeschlossen werden.|`Yes` &#124; `No`|Nein. Standardmäßig lautet der Wert `No`.|  
+|Maximale Leerlaufzeit|`<MaxIdleTime>`|Legt die maximale Leerlaufzeit auf eine absolute Zahl (in Sekunden) fest.|Eine ganze Zahl >= -1.<br /><br /> `-1` gibt an, dass der ursprüngliche Wert in der ursprünglichen Ablaufverfolgungsdatei unverändert bleibt.<br /><br /> `0` gibt an, dass zu einem beliebigen Zeitpunkt Aktivitäten erfolgen.|Nein. Standardmäßig lautet der Wert `-1`.|  
   
 ### <a name="example"></a>Beispiel  
  Die Standardkonfigurationsdatei für die Vorverarbeitung:  
@@ -117,28 +118,28 @@ ms.locfileid: "68023770"
   
  Die Wiedergabekonfigurationseinstellungen werden in XML-Elementen angegeben, die untergeordnete Elemente des `<ReplayOptions>` -Elements und des `<OutputOptions>` -Elements der Wiedergabekonfigurationsdatei sind.  
   
-### <a name="replayoptions-element"></a>\<Replayoptions-> Element  
+### <a name="replayoptions-element"></a>\<ReplayOptions> Element  
  Im `<ReplayOptions>` -Element der Wiedergabekonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
-|Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
+|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Erforderlich|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (der Testserver)|`<Server>`|Gibt den Namen des Servers und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt werden soll.|*Servername*[\\*Instanzname*]<br /><br /> Sie können zum Darstellen des lokalen Hosts nicht "`localhost`" oder "`.`" verwenden.|Nein, wenn der Servername bereits mit dem _target server_-Parameter **-s** für die **replay**-Option des Verwaltungstools angegeben wurde.|  
-|Sequenzierungsmodus|`<SequencingMode>`|Gibt den für die Ereignisplanung verwendeten Modus an.|`synchronization` &#124; `stress`|Nein. Der Standardwert ist `stress`.|  
-|Belastungsskalagranularität|`<StressScaleGranularity>`|Gibt an, ob im Belastungsmodus alle Verbindungen auf dem Dienstprofilbezeichner (Service Profile Identifier, SPID) zusammen (SPID) oder unabhängig voneinander (Verbindung) skaliert werden sollen.|SPID &#124; Verbindung|Ja. Der Standardwert ist `SPID`.|  
-|Verbindungszeitskala|`<ConnectTimeScale>`|Wird verwendet, um die Verbindungszeit im Belastungsmodus zu skalieren.|Eine ganze Zahl zwischen `1` und `100`.|Nein. Der Standardwert ist `100`.|  
-|Reaktionszeitskala|`<ThinkTimeScale>`|Dient zum Skalieren der Reaktionszeit im Belastungsmodus.|Eine ganze Zahl zwischen `0` und `100`.|Nein. Der Standardwert ist `100`.|  
-|Verbindungspooling verwenden|`<UseConnectionPooling>`|Gibt an, ob Verbindungspooling auf jedem Distributed Replay-Client aktiviert wird.|Ja &#124; Nein|Ja. Der Standardwert ist `Yes`.|  
-|Systemüberwachungsintervall|`<HealthmonInterval>`|Gibt an (in Sekunden), wie oft die Systemüberwachung ausgeführt werden soll.<br /><br /> Dieser Wert wird nur im Synchronisierungsmodus verwendet.|Ganze Zahl >= 1<br /><br /> (zum Deaktivieren`-1` )|Nein. Der Standardwert ist `60`.|  
-|Timeout der Abfrage|`<QueryTimeout>`|Gibt den Wert für das Timeout der Abfrage in Sekunden an. Dieser Wert ist nur wirksam, bis die erste Zeile zurückgegeben wurde.|Ganze Zahl >= 1<br /><br /> (zum Deaktivieren`-1` )|Nein. Der Standardwert ist `3600`.|  
+|Sequenzierungsmodus|`<SequencingMode>`|Gibt den für die Ereignisplanung verwendeten Modus an.|`synchronization` &#124; `stress`|Nein. Standardmäßig lautet der Wert `stress`.|  
+|Belastungsskalagranularität|`<StressScaleGranularity>`|Gibt an, ob im Belastungsmodus alle Verbindungen auf dem Dienstprofilbezeichner (Service Profile Identifier, SPID) zusammen (SPID) oder unabhängig voneinander (Verbindung) skaliert werden sollen.|SPID &#124; Verbindung|Ja. Standardmäßig lautet der Wert `SPID`.|  
+|Verbindungszeitskala|`<ConnectTimeScale>`|Wird verwendet, um die Verbindungszeit im Belastungsmodus zu skalieren.|Eine ganze Zahl zwischen `1` und `100`.|Nein. Standardmäßig lautet der Wert `100`.|  
+|Reaktionszeitskala|`<ThinkTimeScale>`|Dient zum Skalieren der Reaktionszeit im Belastungsmodus.|Eine ganze Zahl zwischen `0` und `100`.|Nein. Standardmäßig lautet der Wert `100`.|  
+|Verbindungspooling verwenden|`<UseConnectionPooling>`|Gibt an, ob Verbindungspooling auf jedem Distributed Replay-Client aktiviert wird.|Ja &#124; Nein|Ja. Standardmäßig lautet der Wert `Yes`.|  
+|Systemüberwachungsintervall|`<HealthmonInterval>`|Gibt an (in Sekunden), wie oft die Systemüberwachung ausgeführt werden soll.<br /><br /> Dieser Wert wird nur im Synchronisierungsmodus verwendet.|Ganze Zahl >= 1<br /><br /> (zum Deaktivieren`-1` )|Nein. Standardmäßig lautet der Wert `60`.|  
+|Timeout der Abfrage|`<QueryTimeout>`|Gibt den Wert für das Timeout der Abfrage in Sekunden an. Dieser Wert ist nur wirksam, bis die erste Zeile zurückgegeben wurde.|Ganze Zahl >= 1<br /><br /> (zum Deaktivieren`-1` )|Nein. Standardmäßig lautet der Wert `3600`.|  
 |Threads pro Client|`<ThreadsPerClient>`|Gibt die Anzahl der Wiedergabethreads an, die für jeden Wiedergabeclient verwendet werden sollen.|Eine ganze Zahl zwischen `1` und `512`.|Nein. Wenn kein Wert angegeben ist, wird von Distributed Replay der Wert `255`verwendet.|  
   
-### <a name="outputoptions-element"></a>\<Outputoptions-> Element  
+### <a name="outputoptions-element"></a>\<OutputOptions> Element  
  Im `<OutputOptions>` -Element der Wiedergabekonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
-|Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
+|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Erforderlich|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Zeilenanzahl aufzeichnen|`<RecordRowCount>`|Gibt an, ob die Zeilenanzahl für jedes Resultset aufgezeichnet werden soll.|`Yes` &#124; `No`|Nein. Der Standardwert ist `Yes`.|  
-|Resultset aufzeichnen|`<RecordResultSet>`|Gibt an, ob der Inhalt aller Resultsets aufgezeichnet werden soll.|`Yes` &#124; `No`|Nein. Der Standardwert ist `No`.|  
+|Zeilenanzahl aufzeichnen|`<RecordRowCount>`|Gibt an, ob die Zeilenanzahl für jedes Resultset aufgezeichnet werden soll.|`Yes` &#124; `No`|Nein. Standardmäßig lautet der Wert `Yes`.|  
+|Resultset aufzeichnen|`<RecordResultSet>`|Gibt an, ob der Inhalt aller Resultsets aufgezeichnet werden soll.|`Yes` &#124; `No`|Nein. Standardmäßig lautet der Wert `No`.|  
   
 ### <a name="example"></a>Beispiel  
  Die Standardkonfigurationsdatei für die Wiedergabe:  
@@ -164,20 +165,20 @@ ms.locfileid: "68023770"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Mögliches Problem bei Ausführung mit dem Synchronisierungs Modus der Synchronisierung
- Möglicherweise tritt ein Symptom auf, bei dem die Wiedergabe Funktionalität als "Stall" angezeigt wird oder Ereignisse sehr langsam wieder gibt. Dieses Phänomen kann auftreten, wenn die wiedergegebene Ablauf Verfolgung von Daten und/oder Ereignissen abhängig ist, die in der wiederhergestellten Zieldatenbank nicht vorhanden sind. 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Mögliches Problem beim Ausführen im Sequenzierungsmodus der Synchronisierung
+ Möglicherweise stellen Sie fest, dass die Wiedergabefunktion anscheinend nicht mehr reagiert oder Ereignisse nur sehr langsam wiedergibt. Dieses Phänomen kann auftreten, wenn die wiedergegebene Ablaufverfolgung Daten und/oder Ereignisse verwendet, die in der wiederhergestellten Zieldatenbank nicht vorhanden sind. 
  
- Ein Beispiel hierfür ist eine erfasste Arbeitsauslastung, die WAITFOR verwendet, z. b. in der WAITFOR RECEIVE-Anweisung Service Broker. Wenn Sie den Sequenzierungs Modus für die Synchronisierung verwenden, werden Batches serialisiert wiedergegeben. Wenn eine INSERT-Anweisung für die Quelldatenbank nach der Datenbanksicherung stattfindet, aber bevor die Ablauf Verfolgung für die Wiedergabe Erfassung gestartet wird, muss der während der Wiedergabe ausgegebene WAITFOR-Empfang möglicherweise die gesamte Dauer von WAITFOR warten. Ereignisse, die wiedergegeben werden sollen, nachdem der WAITFOR-Empfangsvorgang angehalten wurde. Dies kann dazu führen, dass der Leistungs Monitor Leistungsindikatoren für Batch Anforderungen/Sek. für das Wiedergabe Daten Bank Ziel auf 0 (null) fällt, bis die WAITFOR abgeschlossen 
+ Ein Beispiel hierfür ist eine erfasste Arbeitsauslastung, die WAITFOR verwendet, wie etwa in einer WAITFOR RECEIVE-Anweisung von Service Broker. Bei Verwendung des Sequenzierungsmodus der Synchronisierung werden Batches nacheinander wiedergegeben. Wenn in der Quelldatenbank eine INSERT-Anweisung ausgeführt wird, nachdem die Datenbanksicherung ausgeführt, aber bevor die Erfassungsablaufverfolgung für die Wiedergabe gestartet wurde, muss die während der Wiedergabe ausgegebene WAITFOR RECEIVE-Anweisung möglicherweise die gesamte Dauer von WAITFOR abwarten. Ereignisse, die für eine Wiedergabe nach der WAITFOR RECEIVE-Anweisung festgelegt wurden, werden blockiert. Dies kann dazu führen, dass der Zähler des Leistungsmonitors für die Anzahl von Batchanforderungen pro Sekunde für die Wiedergabe-Zieldatenbank auf 0 fällt, bis die WAITFOR-Anweisung abgeschlossen ist. 
  
- Wenn Sie den Synchronisierungs Modus verwenden müssen und dieses Verhalten vermeiden möchten, müssen Sie folgende Schritte ausführen:
+ Wenn Sie den Synchronisierungsmodus verwenden müssen und dieses Verhalten vermeiden möchten, gehen Sie folgendermaßen vor:
  
-1.  Versetzen Sie die Datenbanken in den Ruhezustand, die Sie als Wiedergabe Ziele verwenden werden.
+1.  Legen Sie die Datenbanken still, die Sie als Wiedergabeziele verwenden werden.
 
-2.  Alle ausstehenden Aktivitäten können abgeschlossen werden.
+2.  Warten Sie den Abschluss aller ausstehenden Aktivitäten ab.
 
-3.  Sichern Sie die Datenbanken, und lassen Sie Sicherungen zu.
+3.  Sichern Sie die Datenbanken, und warten Sie, bis alle Sicherungen abgeschlossen sind.
 
-4.  Starten Sie die Ablauf Verfolgung für die verteilte Wiedergabe und setzen Sie die normale Arbeitsauslastung fort 
+4.  Starten Sie die Erfassung der Ablaufverfolgung für die Wiedergabe, und nehmen Sie die normale Arbeitsauslastung wieder auf. 
  
  
 ## <a name="see-also"></a>Weitere Informationen  

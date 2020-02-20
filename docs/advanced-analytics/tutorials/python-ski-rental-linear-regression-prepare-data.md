@@ -1,20 +1,20 @@
 ---
 title: 'Python-Tutorial: Vorbereiten von Daten'
-description: In diesem Tutorial verwenden Sie Python und die lineare Regression in SQL Server-Machine Learning Services zur Vorhersage von Verleihzahlen für einen Skiverleih. Sie bereiten Daten aus einer SQL Server-Datenbank mithilfe von Python vor.
+description: Im zweiten Teil dieser vierteiligen Tutorialreihe verwenden Sie Python, um Daten für die Vorhersage von Skiverleihen in SQL Server Machine Learning Services vorzubereiten.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/03/2019
+ms.date: 01/02/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6424a453bff2f0f6d62caa8c9870ccc2ec10d578
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9aeefb0b6fd9ca1a744d132fccf1eedfedbaa6e7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727054"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75681746"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python-Tutorial: Vorbereiten von Daten zum Trainieren eines linearen Regressionsmodells in SQL Server-Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ In [Teil 1](python-ski-rental-linear-regression.md) dieser Tutorialreihe haben S
 
 In [Teil 3](python-ski-rental-linear-regression-train-model.md) trainieren Sie ein lineares Regressionsmodell für Machine Learning in Python.
 
-In [Teil 4](python-ski-rental-linear-regression-deploy-model.md) wird beschrieben, wie Sie das Modell in SQL Server speichern und gespeicherte Prozeduren aus den Python-Skripts erstellen, die Sie in Teil 2 und 3 entwickelt haben. Die gespeicherten Prozeduren werden in SQL Server ausgeführt, um Vorhersagen basierend auf neuen Daten treffen zu können.
+In [Teil 4](python-ski-rental-linear-regression-deploy-model.md) haben Sie gelernt, wie Sie das Modell in SQL Server speichern und gespeicherte Prozeduren aus den Python-Skripts erstellen, die Sie in Teil 2 und 3 entwickelt haben. Die gespeicherten Prozeduren werden in SQL Server ausgeführt, um Vorhersagen basierend auf neuen Daten treffen zu können.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -45,49 +45,21 @@ Erstellen Sie in Azure Data Studio ein neues Python-Notebook, und führen Sie da
 
 Importieren Sie mit dem folgenden Python-Skript das Dataset aus der Tabelle **dbo.rental_data** in Ihrer Datenbank in den Pandas-Datenrahmen **df**:
 
+Ersetzen Sie bei Bedarf die Verbindungsdetails in der Verbindungszeichenfolge.
+
 ```python
-import pandas as pd
+import pyodbc
+import pandas
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
-from revoscalepy import RxComputeContext, RxInSqlServer, RxSqlServerData
-from revoscalepy import rx_import
 
 # Connection string to your SQL Server instance
-conn_str = 'Driver=SQL Server;Server=<SQL Server>;Database=TutorialDB;Trusted_Connection=True;'
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=TutorialDB; Trusted_Connection=yes')
 
-# Define the columns you will import
- column_info = {
-         "Year" : { "type" : "integer" },
-         "Month" : { "type" : "integer" },
-         "Day" : { "type" : "integer" },
-         "RentalCount" : { "type" : "integer" },
-         "WeekDay" : {
-             "type" : "factor",
-             "levels" : ["1", "2", "3", "4", "5", "6", "7"]
-         },
-         "Holiday" : {
-             "type" : "factor",
-             "levels" : ["1", "0"]
-         },
-         "Snow" : {
-             "type" : "factor",
-             "levels" : ["1", "0"]
-         }
-     }
+query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 
-# Get the data from the SQL Server table
-data_source = RxSqlServerData(table="dbo.rental_data",
-                               connection_string=conn_str, column_info=column_info)
-computeContext = RxInSqlServer(
-     connection_string = conn_str,
-     num_tasks = 1,
-     auto_cleanup = False
-)
+df = pandas.read_sql(sql=query_str, con=conn_str)
 
-RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
-
-# import data source and convert to pandas dataframe
-df = pd.DataFrame(rx_import(input_data = data_source))
 print("Data frame:", df)
 
 # Get all the columns from the dataframe.
@@ -100,22 +72,25 @@ columns = [c for c in columns if c not in ["Year"]]
 Das Ergebnis sollte etwa folgendermaßen aussehen:
 
 ```results
-Rows Processed: 453
-Data frame:      Day  Holiday  Month  RentalCount  Snow  WeekDay  Year
-0     20        1      1          445     2        2  2014
-1     13        2      2           40     2        5  2014
-2     10        2      3          456     2        1  2013
-3     31        2      3           38     2        2  2014
-4     24        2      4           23     2        5  2014
-5     11        2      2           42     2        4  2015
-6     28        2      4          310     2        1  2013
-...
+Data frame:      Year  Month  Day  RentalCount  WeekDay  Holiday  Snow
+0    2014      1   20          445        2        1     0
+1    2014      2   13           40        5        0     0
+2    2013      3   10          456        1        0     0
+3    2014      3   31           38        2        0     0
+4    2014      4   24           23        5        0     0
+..    ...    ...  ...          ...      ...      ...   ...
+448  2013      2   19           57        3        0     1
+449  2015      3   18           26        4        0     0
+450  2015      3   24           29        3        0     1
+451  2014      3   26           50        4        0     1
+452  2015     12    6          377        1        0     1
+
 [453 rows x 7 columns]
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Im zweiten Teil dieser Tutorialreihe haben Sie die folgenden Schritte ausgeführt:
+In Teil 2 dieser Tutorialreihe haben Sie die folgenden Schritte ausgeführt:
 
 * Laden der Daten aus der SQL Server-Datenbank in einen **Pandas**-Datenrahmen
 * Vorbereiten der Daten in Python durch Entfernen einiger Spalten

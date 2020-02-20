@@ -10,13 +10,13 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 213db5ee9b88f7af34e3d000fc0f3b241d8e5791
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73725226"
 ---
-# <a name="lesson-1-explore-and-visualize-the-data"></a>Lektion 1: Durchsuchen und Visualisieren der Daten
+# <a name="lesson-1-explore-and-visualize-the-data"></a>Lektion 1: Untersuchen und Visualisieren der Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
@@ -55,7 +55,7 @@ Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die Fahrtendate
   
 -   Die Werte für die Bezeichnungsspalten basieren alle auf der _tip\_amount_-Spalte und verwenden folgende Geschäftsregeln:
   
-    |Name der abgeleiteten Spalte|Rule|
+    |Name der abgeleiteten Spalte|Regel|
     |-|-|
      |tipped|If tip_amount > 0, tipped = 1, otherwise tipped = 0|
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
@@ -281,6 +281,6 @@ Die Zahlen in den Dateinamen werden nach dem Zufallsprinzip generiert, um sicher
 
 [Lektion 2: Erstellen von Datenfeatures mit T-SQL](sqldev-create-data-features-using-t-sql.md)
 
-## <a name="previous-lesson"></a>Vorherige Lektion
+## <a name="previous-lesson"></a>Vorherige Lerneinheit
 
 [Aufsetzen von Demodaten für Taxifahrten in New York City](demo-data-nyctaxi-in-sql.md)

@@ -9,10 +9,10 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580100"
 ---
 # <a name="managing-report-parts"></a>Verwalten von Berichtsteilen
@@ -47,10 +47,10 @@ ms.locfileid: "65580100"
   
  (*) Neu in dieser Version.  
   
-|Eigenschaft|und Beschreibung|Berichtsteil<br /><br /> Katalogsuchkriterien|  
+|Eigenschaft|Beschreibung|Berichtsteil<br /><br /> Katalogsuchkriterien|  
 |--------------|-----------------|---------------------------------------------|  
 |Name|Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Ja|  
-|und Beschreibung|Möglicherweise möchten Sie Berichtsteilnamen auf eine Weise organisieren, die es für Benutzer einfacher macht, sie im Katalog zu finden. Beispielweise können Sie nach einer Beschreibung suchen, die mit "Vertrieb>>" beginnt, um alle Berichtsteile zu finden, die sich auf Vertriebsdaten und -präsentationen beziehen.|Ja|  
+|Beschreibung|Möglicherweise möchten Sie Berichtsteilnamen auf eine Weise organisieren, die es für Benutzer einfacher macht, sie im Katalog zu finden. Beispielweise können Sie nach einer Beschreibung suchen, die mit "Vertrieb>>" beginnt, um alle Berichtsteile zu finden, die sich auf Vertriebsdaten und -präsentationen beziehen.|Ja|  
 |CreatedBy|Die ID des Benutzers, der den Berichtsteil zur Berichtsserver-Datenbank hinzugefügt hat. Das genaue Format hängt von der Authentifizierungsmethode ab. Einige Authentifizierungsmethoden führen z. B. dazu, dass der vollständige Domänen-\Benutzername im CreatedBy-Feld und dem ModifiedBy-Feld angezeigt wird.|Ja|  
 |CreationDate|Das Datum, an dem der Berichtsteil ursprünglich erstellt wurde.<br /><br /> Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Ja|  
 |ModifiedBy|ModifiedBy ist der Name des Benutzers, der den Berichtsteil zuletzt geändert hat.|Ja|  
@@ -66,18 +66,18 @@ ms.locfileid: "65580100"
 |Aktionen|Rollen|  
 |-------------|-----------|  
 |Hinzufügen, Löschen, Bearbeiten von Elementeigenschaften, Verwalten der Sicherheit und Herunterladen von Berichtsteilen|Inhalts-Manager<br /><br /> Meine Berichte|  
-|Hinzufügen, Löschen und Herunterladen von Berichtsteilen|Verleger|  
-|Suchen und Wiederverwenden|-Browser<br /><br /> Berichts-Generator|  
+|Hinzufügen, Löschen und Herunterladen von Berichtsteilen|Herausgeber|  
+|Suchen und Wiederverwenden|Browser<br /><br /> Berichts-Generator|  
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Server im integrierten SharePoint-Modus  
   
-|Aktionen|Rolle|  
+|Aktionen|Role|  
 |-------------|----------|  
 |Hinzufügen, Löschen, Bearbeiten von Elementeigenschaften, Verwalten der Sicherheit und Herunterladen von Berichtsteilen|Vollzugriff|  
-|Hinzufügen, Löschen, Bearbeiten von Elementeigenschaften und Herunterladen von Berichtsteilen|Entwerfen<br /><br /> Mitwirken|  
-|Suchen und Wiederverwenden|Leseberechtigung<br /><br /> Nur anzeigen|  
+|Hinzufügen, Löschen, Bearbeiten von Elementeigenschaften und Herunterladen von Berichtsteilen|Entwurf<br /><br /> Mitwirken|  
+|Suchen und Wiederverwenden|Lesen<br /><br /> Nur anzeigen|  
   
-### <a name="security-considerations"></a>Überlegungen zur Sicherheit  
+### <a name="security-considerations"></a>Sicherheitshinweise  
   
 -   Wenn Berichtsteildefinitionen in einem Bericht wiederverwendet werden, werden sie zusammen mit der identifizierenden Komponenten-ID vollständig in die Berichtsdefinition kopiert. Wenn ein Berichtsteil auf dem Server aktualisiert wird, können Benutzer wählen, die aktualisierten Berichtsteile zu ihrem Bericht herunterzuladen. Die heruntergeladenen Updates sind ebenfalls vollständige Kopien des Berichtsteils in der Berichtsdefinition und ersetzen die vorhandene Version des Berichtsteils, die im Bericht enthalten war.  
   
@@ -90,6 +90,6 @@ ms.locfileid: "65580100"
  [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Berichtsteile im Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [Berichtsteile im Berichts-Designer (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

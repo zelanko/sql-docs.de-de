@@ -1,6 +1,6 @@
 ---
-title: Name nicht gefunden (Dialogfeld) | Microsoft-Dokumentation
-ms.custom: ''
+title: Name nicht gefunden (Dialogfeld)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d2ba40f3580a01bb7f72f54bd69407853820a6d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c6dc23b79346a3e163f896b3f85f120cc9ccc903
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264072"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257173"
 ---
 # <a name="name-not-found-dialog-box"></a>Name nicht gefunden (Dialogfeld)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,6 +38,6 @@ Klicken Sie auf diese Schaltfläche, um das Dialogfeld **Objekttypen auswählen*
 **Geben Sie den Objektnamen ein**  
 Enthält den Namen des Objekts, das nicht gefunden wurde. Korrigieren Sie den Namen des Objekts, oder geben Sie einen neuen Objektnamen ein.  
   
-*<object name>* **aus der Auswahl** **entfernen**  
+**Remove** *<object name>* **from selection** (Objektname aus Auswahl entfernen)  
 Wählen Sie diese Option aus, um das Dialogfeld **Name nicht gefunden** zu schließen und das Element aus dem Dialogfeld **Objekte auswählen** zu entfernen.  
   

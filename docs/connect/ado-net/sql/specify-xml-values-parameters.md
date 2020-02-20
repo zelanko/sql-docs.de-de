@@ -1,6 +1,6 @@
 ---
 title: Angeben von XML-Werten als Parameter
-description: Veranschaulicht, wie XML-Daten als Parameter an einen Befehl übergeben werden.
+description: Hier wird veranschaulicht, wie XML-Daten als Parameter an einen Befehl übergeben werden.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5ef73529119245397932a3a2414ce65f381b55bd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 7f9893d7ac9dd83ae5212684678fc240a8d77097
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452114"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251145"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Angeben von XML-Werten als Parameter
 
@@ -29,11 +29,11 @@ Wenn eine Abfrage einen Parameter erfordert, dessen Wert eine XML-Zeichenfolge i
 In der folgenden Konsolenanwendung wird eine neue Tabelle in der **AdventureWorks**-Datenbank erstellt. Die neue Tabelle enthält die Spalte **SalesID** und die XML-Spalte **SalesInfo**.  
   
 > [!NOTE]
->  Beim Installieren von SQL Server wird die Beispieldatenbank **AdventureWorks** in der Standardeinstellung nicht installiert. Sie können Sie installieren, indem Sie SQL Server-Setup ausführen.  
+>  Beim Installieren von SQL Server wird die Beispieldatenbank **AdventureWorks** in der Standardeinstellung nicht installiert. Sie kann jedoch mithilfe von SQL Server-Setup installiert werden.  
   
-Im Beispiel wird ein <xref:Microsoft.Data.SqlClient.SqlCommand> Objekt vorbereitet, um eine Zeile in die neue Tabelle einzufügen. Eine gespeicherte Datei stellt die XML-Daten für die Spalte **SalesInfo** bereit.  
+Im Beispiel wird ein <xref:Microsoft.Data.SqlClient.SqlCommand>-Objekt auf das Einfügen einer Zeile in einer neuen Tabelle vorbereitet. Eine gespeicherte Datei stellt die XML-Daten für die Spalte **SalesInfo** bereit.  
   
-Erstellen Sie eine neue Textdatei im selben Ordner wie das Projekt, um die für das Beispiel erforderliche Datei zu erstellen. Nennen Sie die Datei "MyTestStoreData. xml". Öffnen Sie die Datei im Editor, kopieren Sie den folgenden Text, und fügen Sie ihn ein:  
+Erstellen Sie eine neue Textdatei im selben Ordner wie Ihr Projekt, um eine Datei zu erstellen, die für die Ausführung des Beispiels erforderlich ist. Benennen Sie die Datei mit MyTestStoreData.xml. Öffnen Sie die Datei im Editor, kopieren Sie folgenden Text, und fügen Sie den Text ein:  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  

@@ -12,10 +12,10 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1979e19b3d93e9687d6abb137758bc71548b10ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577799"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formatieren einer Reporting Services-Skriptdatei
@@ -46,13 +46,13 @@ End Sub
 > [!IMPORTANT]  
 >  Benutzeranmeldeinformationen werden von der Skriptumgebung verwaltet und durch Argumente für die Eingabeaufforderung mithilfe von RS.exe übergeben. Sie können zwar die *rs* -Variable verwenden, um die Authentifizierung des Webdiensts festzulegen, allerdings wird die Verwendung der Skriptumgebung empfohlen. Die Authentifizierung des Webdiensts in der Skriptdatei selbst ist nicht erforderlich. Weitere Informationen zum Authentifizieren der Skriptumgebung finden Sie unter [Hilfsprogramm RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
   
- Es werden keine Namespaces innerhalb der Skriptdatei deklariert. Die Skriptumgebung stellt verschiedene nützliche [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Namespaces zur Verfügung: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**und **System.IO**.  
+ Es werden keine Namespaces innerhalb der Skriptdatei deklariert. Sie Skriptumgebung stellt Ihnen einige nützliche [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Namespaces zur Verfügung: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml** und **System.IO**.  
   
  Skriptbeispiele finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Report Server-Webdienst](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Technische Referenz &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Berichtsserver-Webdienst](../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Technische Referenz (SSRS)](../../reporting-services/technical-reference-ssrs.md)   
  [Hilfsprogramm RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   

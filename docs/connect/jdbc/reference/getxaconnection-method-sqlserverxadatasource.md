@@ -1,5 +1,5 @@
 ---
-title: getxaconnection-Methode (SQLServerXADataSource) | Microsoft-Dokumentation
+title: getXAConnection-Methode (SQLServerXADataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cb1d53c9-27f1-4880-8f1d-c32df0d2fb27
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ce11a1918846d028fd0dd3d9dc10e588dbe3f31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977965"
 ---
 # <a name="getxaconnection-method-sqlserverxadatasource"></a>getXAConnection-Methode (SQLServerXADataSource)
@@ -29,7 +29,7 @@ ms.locfileid: "67977965"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getXAConnection ()](../../../connect/jdbc/reference/getxaconnection-method.md)|Stellt eine physische Datenbankverbindung her, die in einer verteilten Transaktion verwendet werden kann.|  
 |[getXAConnection (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/getxaconnection-method-java-lang-string-java-lang-string.md)|Stellt eine physikalische Datenbankverbindung anhand des angegebenen Benutzernamens und -kennworts her.|  

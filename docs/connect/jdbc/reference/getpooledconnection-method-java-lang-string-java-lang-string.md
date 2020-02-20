@@ -16,10 +16,10 @@ ms.assetid: f2e6391d-9aaf-4b09-ae1c-a27c1ada6301
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69a9db6da093341264953e698cdbb1145093d9a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980872"
 ---
 # <a name="getpooledconnection-method-javalangstring-javalangstring"></a>getPooledConnection-Methode (java.lang.String, java.lang.String)
@@ -51,7 +51,7 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getpooledconnection-Methode wird von der getpooledconnection-Methode in der javax. SQL. ConnectionPoolDataSource-Schnittstelle angegeben.  
+ Diese getPooledConnection-Methode wird von der getPooledConnection-Methode in der javax.sql.ConnectionPoolDataSource-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)   

@@ -9,14 +9,14 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653287"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831412"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Lernprogramm: Laden von Beispieldaten in einen Big Data-Cluster für SQL Server
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Laden von Beispieldaten in einen Big Data-Cluster für SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -28,7 +28,7 @@ In diesem Tutorial wird erläutert, wie Sie ein Skript zum Laden von Beispieldat
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - [Ein bereitgestellter Big Data-Cluster](deployment-guidance.md)
-- [Big Data-Tools](deploy-big-data-tools.md)
+- [Big-Data-Tools](deploy-big-data-tools.md)
    - **azdata**
    - **kubectl**
    - **sqlcmd**
@@ -36,7 +36,7 @@ In diesem Tutorial wird erläutert, wie Sie ein Skript zum Laden von Beispieldat
  
 ## <a id="sampledata"></a> Laden von Beispieldaten
 
-In den folgenden Schritten wird ein Bootstrapskript zum Herunterladen einer SQL Server-Datenbanksicherung und zum Laden der Daten in ihren Big Data-Cluster verwendet. Zur einfachen Verwendung wurden diese Schritte in [Windows](#windows)- und [Linux](#linux)-Abschnitte aufgeteilt.
+In den folgenden Schritten wird ein Bootstrapskript zum Herunterladen einer SQL Server-Datenbanksicherung und zum Laden der Daten in ihren Big Data-Cluster verwendet. Zur einfachen Verwendung wurden diese Schritte in [Windows](#windows)- und [Linux](#linux)-Abschnitte aufgeteilt. Wenn Sie lediglich Benutzername und Kennwort als Authentifizierungsmechanismus verwenden möchten, legen Sie die Umgebungsvariablen AZDATA_USERNAME und AZDATA_PASSWORD fest, bevor Sie das Skript ausführen. Andernfalls stellt das Skript die Verbindung zur SQL Server-Masterinstanz und zum Knox-Gateway mithilfe der integrierten Authentifizierung her. Außerdem muss der jeweilige DNS-Name der Endpunkte angegeben werden, damit die integrierte Authentifizierung verwendet werden kann.
 
 ## <a id="windows"></a> Windows
 
@@ -61,21 +61,19 @@ In den folgenden Schritten wird beschrieben, wie Sie einen Windows-Client verwen
 
 1. Das Bootstrapskript erfordert die folgenden Positionsparameter für Ihren Big Data-Cluster:
 
-   | Parameter | und Beschreibung |
+   | Parameter | Beschreibung |
    |---|---|
    | <CLUSTER_NAMESPACE> | Der Name, den Sie Ihrem Big Data-Cluster gegeben haben. |
-   | <SQL_MASTER_IP> | Die IP-Adresse Ihrer Masterinstanz. |
-   | <SQL_MASTER_SA_PASSWORD> | Das SA-Kennwort für die Masterinstanz. |
-   | <KNOX_IP> | Die IP-Adresse des HDFS/Spark-Gateways. |
-   | <KNOX_PASSWORD> | Das Kennwort für das HDFS/Spark-Gateway. |
-
+   | <SQL_MASTER_ENDPOINT> | Dieser Parameter steht für den DNS-Namen oder die IP-Adresse Ihrer Masterinstanz. |
+   | <KNOX_ENDPOINT> | Dieser Parameter steht für den DNS-Namen oder die IP-Adresse des HDFS/Spark-Gateways. |
+   
    > [!TIP]
    > Suchen Sie mit [kubectl](cluster-troubleshooting-commands.md) die IP-Adressen für die SQL Server-Masterinstanz und Knox. Führen Sie `kubectl get svc -n <your-big-data-cluster-name>` aus, und sehen Sie sich die EXTERNAL-IP-Adressen für die Masterinstanz (**master-svc-external**) und Knox (**gateway-svc-external**) an. Der Standardname eines Clusters ist **mssql-cluster**.
 
 1. Führen Sie das Bootstrapskript aus.
 
    ```cmd
-   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a id="linux"></a> Linux
@@ -97,13 +95,11 @@ In den folgenden Schritten wird beschrieben, wie Sie einen Linux-Client verwende
 
 1. Das Bootstrapskript erfordert die folgenden Positionsparameter für Ihren Big Data-Cluster:
 
-   | Parameter | und Beschreibung |
+   | Parameter | Beschreibung |
    |---|---|
    | <CLUSTER_NAMESPACE> | Der Name, den Sie Ihrem Big Data-Cluster gegeben haben. |
-   | <SQL_MASTER_IP> | Die IP-Adresse Ihrer Masterinstanz. |
-   | <SQL_MASTER_SA_PASSWORD> | Das SA-Kennwort für die Masterinstanz. |
-   | <KNOX_IP> | Die IP-Adresse des HDFS/Spark-Gateways. |
-   | <KNOX_PASSWORD> | Das Kennwort für das HDFS/Spark-Gateway. |
+   | <SQL_MASTER_ENDPOINT> | Dieser Parameter steht für den DNS-Namen oder die IP-Adresse Ihrer Masterinstanz. |
+   | <KNOX_ENDPOINT> | Dieser Parameter steht für den DNS-Namen oder die IP-Adresse des HDFS/Spark-Gateways. |
 
    > [!TIP]
    > Suchen Sie mit [kubectl](cluster-troubleshooting-commands.md) die IP-Adressen für die SQL Server-Masterinstanz und Knox. Führen Sie `kubectl get svc -n <your-big-data-cluster-name>` aus, und sehen Sie sich die EXTERNAL-IP-Adressen für die Masterinstanz (**master-svc-external**) und Knox (**gateway-svc-external**) an. Der Standardname eines Clusters ist **mssql-cluster**.
@@ -111,7 +107,7 @@ In den folgenden Schritten wird beschrieben, wie Sie einen Linux-Client verwende
 1. Führen Sie das Bootstrapskript aus.
 
    ```bash
-   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a name="next-steps"></a>Nächste Schritte

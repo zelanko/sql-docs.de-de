@@ -16,10 +16,10 @@ ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a47ac1202ec73c15198b9b6f3c87ee53e027c83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976182"
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>prepareStatement-Methode (java.lang.String, int, int, int)
@@ -55,13 +55,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
  Ein Wert vom Typ **int** zum Angeben der Resultsethaltbarkeit.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein PreparedStatement-Objekt.  
+ Ein PreparedStatement-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese prepareStatement-Methode wird von der prepareStatement-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
+ Diese prepareStatement-Methode wird von der prepareStatement-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [prepareStatement-Methode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

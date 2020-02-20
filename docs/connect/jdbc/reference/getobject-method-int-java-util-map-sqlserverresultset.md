@@ -16,10 +16,10 @@ ms.assetid: df85a514-ab43-4bf6-98dd-f7f37fad1850
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b66ef3388d8536ca4299891ec24f57fff41a3610
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981259"
 ---
 # <a name="getobject-method-int-javautilmap-sqlserverresultset"></a>getObject-Methode (int, java.util.Map) (SQLServerResultSet)
@@ -45,7 +45,7 @@ public java.lang.Object getObject(int i,
   
  *map*  
   
- Ein Map-Objekt.  
+ Dies ist ein Map-Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein **Object**-Wert.  

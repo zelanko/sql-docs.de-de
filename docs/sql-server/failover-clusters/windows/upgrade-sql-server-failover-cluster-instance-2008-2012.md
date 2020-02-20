@@ -1,6 +1,7 @@
 ---
-title: Aktualisieren von SQL Server-Instanzen auf Windows Server 2008/2008 R2/2012-Clustern | Microsoft-Dokumentation
-ms.date: 01/25/2018
+title: 'Upgraden von SQL Server-Instanzen: Windows Server 2012 und ältere Cluster'
+description: Hier wird beschrieben, wie Sie Ihre SQL Server-Failoverclusterinstanzen upgraden, die unter Windows Server 2008, Windows Server 2008 R2 und Windows Server 2012 ausgeführt werden.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c8825d0d4c8ff0ac6d83b152b8606be6d9fd0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904962"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242846"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aktualisieren von SQL Server-Instanzen auf Windows Server 2008/2008 R2/2012-Clustern
 
@@ -246,7 +247,7 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 
     Aus SQL-Sicht migriert der Datenbankspiegelungsendpunkt mit den Systemtabellen zur neuen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz. Stellen Sie vor der Migration sicher, dass die entsprechenden Regeln auf die Firewalls angewendet wurden und dass kein anderer Prozess auf dem gleichen Port lauscht.
 
--   **Availability Groups (Verfügbarkeitsgruppen)**
+-   **Verfügbarkeitsgruppen**
 
     Verfügbarkeitsgruppen und die dazugehörigen Listener können nicht zwischen Instanzen migrieren. Die Windows Server-Failoverclusterressourcen, die von der Verfügbarkeitsgruppe erstellt wurden, können nicht ohne Weiteres in der Zielumgebung neu erstellt werden. Statt Verfügbarkeitsgruppen zu migrieren, sollten diese gelöscht und dann auf dem Zielcluster neu erstellt werden.
 
@@ -282,9 +283,9 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 
     Remotedienstbindungen funktionieren nach der Migration ordnungsgemäß, da jeder Benutzer, der die Remotedienstbindung verwendet, ordnungsgemäß migriert wird.
 
-### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent
+### <a name="ssnoversion-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent
 
--   **Jobs**
+-   **Aufträge**
 
     Aufträge werden ordnungsgemäß mit Systemdatenbanken migriert. Jeder Benutzer, der entweder einen SQL Agent-Auftrag oder SQL Agent selbst ausführt, verfügt auf dem Zielcomputer über die gleichen Berechtigungen wie in den Anforderungen angegeben.
 
@@ -320,6 +321,6 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
 - [Abschließen des Datenbank-Engine-Upgrades](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
 - [Nutzen Sie die Vorteile der neuen Features von SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
-- [Upgraden einer SQL Server-Failoverclusterinstanz](upgrade-a-sql-server-failover-cluster-instance.md)
+- [Upgrade einer SQL Server-Failoverclusterinstanz](upgrade-a-sql-server-failover-cluster-instance.md).
 - [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [Add Features to an Instance of SQL Server 2016 (Setup) (Hinzufügen von Funktionen zu einer Instanz von SQL Server 2016 (Setup))](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

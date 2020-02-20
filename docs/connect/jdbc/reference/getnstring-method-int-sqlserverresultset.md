@@ -11,10 +11,10 @@ ms.assetid: c8cc4636-01e9-4dc8-a40c-728337ca08f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 336192ffefd750ba3e817ba1b961fd3726d9a6e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981414"
 ---
 # <a name="getnstring-method-int-sqlserverresultset"></a>getNString-Methode (int) (SQLServerResultSet)
@@ -35,7 +35,7 @@ public java.lang.String getNString(int columnIndex)
  Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Zeichen folgen Objekt.  
+ Ein String-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -43,7 +43,7 @@ public java.lang.String getNString(int columnIndex)
 ## <a name="remarks"></a>Bemerkungen  
  Diese getNString-Methode wird von der getNString-Methode in der java.sql.SQLServerResultSet-Schnittstelle angegeben.  
   
- Diese Methode kann verwendet werden, um den Wert einer Spalte vom Typ " **nvarchar**", " **NCHAR**", " **nvarchar (max)** ", "**ntext**" oder " **XML** " in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) -Objekts abzurufen. Beim Versuch, mit dieser Methode Werte anderer Datentypen abzurufen, wird eine Ausnahme ausgelöst.  
+ Mit dieser Methode kann der Wert einer Spalte vom Typ **nvarchar**, **nchar**, **nvarchar(max)**, **ntext** oder **xml** in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts abgerufen werden. Beim Versuch, mit dieser Methode Werte anderer Datentypen abzurufen, wird eine Ausnahme ausgelöst.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getNString-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

@@ -1,5 +1,5 @@
 ---
-title: ExecuteQuery-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: executeQuery-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: dfff3358-f391-4af6-84c1-b94c029f506d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9dcf711e3d95577d41a53329f7ebab4b65389a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954785"
 ---
 # <a name="executequery-method-sqlserverpreparedstatement"></a>executeQuery-Methode (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67954785"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[executeQuery ()](../../../connect/jdbc/reference/executequery-method.md)|Führt die SQL-Abfrage in diesem [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Objekt aus und gibt das durch die Abfrage generierte [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt zurück.|  
 |[executeQuery (java.lang.String)](../../../connect/jdbc/reference/executequery-method-java-lang-string.md)|Führt die angegebene SQL-Anweisung aus und gibt ein einzelnes [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt zurück.|  

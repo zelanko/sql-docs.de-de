@@ -1,23 +1,25 @@
 ---
-title: Verwenden des ReportViewer-Steuerelements in WinForms | Microsoft-Dokumentation
+title: Verwenden des ReportViewer-Steuerelements in WinForms
+description: Zur Anzeige von Berichten, die auf einem Berichtsserver bereitgestellt werden oder die sich auf einem lokalen Dateisystem befinden, können Sie das ReportViewer-Steuerelement für WinForms verwenden, um die Berichte in eine Windows-Anwendung zu rendern.
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d43534148ccf22419c630880192ff21eba2a441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b5b294d78c3e63766ac72b2cdfcfd3c592df3690
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195245"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796886"
 ---
-# <a name="using-the-winforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WinForms
+# <a name="use-the-winforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WinForms
   Zur Anzeige von Berichten, die auf einem Berichtsserver bereitgestellt werden oder die sich auf einem lokalen Dateisystem befinden, können Sie das ReportViewer-Steuerelement für WinForms verwenden, um die Berichte in eine Windows-Anwendung zu rendern.  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>So fügen Sie das ReportViewer-Steuerelement zu einer Windows-Anwendung hinzu  
@@ -30,7 +32,7 @@ ms.locfileid: "63195245"
   
 2.  Suchen Sie das ReportViewer-Steuerelement in der **Toolbox**. Wenn die **Toolbox** nicht sichtbar ist, können Sie über das Menü **Ansicht** darauf zugreifen, indem Sie auf **Toolbox** klicken.  
   
-     ![Auswählen des ReportViewer-Steuerelements](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "Selecting ReportViewer control")  
+     ![Auswählen des ReportViewer-Steuerelements](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "Auswählen des ReportViewer-Steuerelements")  
   
 3.  Ziehen Sie das ReportViewer-Steuerelement auf die Entwurfsoberfläche der Windows Form.  
   
@@ -38,13 +40,13 @@ ms.locfileid: "63195245"
   
  Nachdem das Steuerelement zum Formular hinzugefügt wurde, wird das SmartTag **ReportViewer-Aufgaben** angezeigt, und Sie werden aufgefordert, einen Bericht auszuwählen.  
   
- Wenn der Bericht, den Sie anzeigen möchten, auf einem Berichtsserver bereitgestellt wurde, wählen Sie die Option **\<Server Report>** aus der Dropdownliste **Bericht wählen**. Nachdem die Option **\<Server Report>** aktiviert wurde, werden zwei weitere Eigenschaften angezeigt: **Berichtsserver-URL** und **Berichtspfad**. Die **Berichtsserver-URL** entspricht der Adresse des Berichtsservers, und der **Berichtspfad** entspricht dem vollen Pfad zu dem Bericht, der gerendert werden soll.  
+ Wenn der Bericht, den Sie anzeigen möchten, auf einem Berichtsserver bereitgestellt wurde, wählen Sie die Option **\<Server Report>** aus der Dropdownliste **Bericht wählen**. Nachdem die Option **\<Server Report>** (Serverbericht) ausgewählt wurde, werden zwei zusätzliche Eigenschaften angezeigt: **Berichtsserver-URL** und **Berichtspfad**. Die **Berichtsserver-URL** entspricht der Adresse des Berichtsservers, und der **Berichtspfad** entspricht dem vollen Pfad zu dem Bericht, der gerendert werden soll.  
   
- ![Auswählen des Serverberichts](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Select server report")  
+ ![Auswählen eines Serverberichts](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Auswählen eines Serverberichts")  
   
  Wenn der Bericht, den Sie anzeigen möchten, ein Bericht im lokalen Modus ist, aktivieren Sie entweder die Option **Neuen Bericht entwerfen**, um den Berichts-Designer zu starten, oder Sie wählen einen Bericht aus, der bereits Teil eines bestehenden Projekts ist.  
   
- ![Auswählen eines lokalen Berichts](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "Select local report")  
+ ![Auswählen eines lokalen Berichts](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "Auswählen eines lokalen Berichts")  
   
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Anzeigen von Berichten im Remoteverarbeitungsmodus  
  Im folgenden Beispiel wird veranschaulicht, wie ein Bericht, der mit dem ReportViewer-Steuerelement in WinForms auf einem Berichtsserver bereitgestellt wurde, gerendert wird. In diesem Beispiel wird der Bericht für Auftragsdetails, der im [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Projekt für Beispielberichte enthalten ist, verwendet.  
@@ -157,7 +159,7 @@ End Class
   
      Die Datei Sales Order Detail.rdl sollte jetzt ein Teil des Projekts sein.  
   
-     ![Umsatz, Bericht für Auftragsdetails](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Sales Order Detail Report")  
+     ![Bericht „Sales Order Detail“ (Auftragsdetails)](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Bericht für Auftragsdetails")  
   
 5.  Klicken Sie mit der rechten Maustaste auf die Datei „Sales Order Detail.rdl“ im Projektmappen-Explorer, und wählen Sie **Umbenennen** aus. Benennen Sie den Bericht in **Sales Order Detail.rdlc** um, und drücken Sie die EINGABETASTE.  
   
@@ -168,7 +170,7 @@ End Class
   
 6.  Wählen Sie nach dem Umbenennen des Berichts die Datei aus, und suchen Sie das Eigenschaftenfenster. Ändern Sie die Eigenschaft **In Ausgabeverzeichnis kopieren** in **Kopieren, wenn neuer**.  
   
-     ![Konfigurieren der Einstellung für das Kopieren in eine Ausgabe](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Configuring Copy To Output setting")  
+     ![Konfigurieren der Einstellung „In Ausgabeverzeichnis kopieren“](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Konfigurieren der Einstellung „In Ausgabeverzeichnis kopieren“")  
   
      Wenn das Fenster **Eigenschaften** nicht sichtbar ist, können Sie es im Menü **Ansicht** öffnen, indem Sie auf **Eigenschaftenfenster** klicken.  
   

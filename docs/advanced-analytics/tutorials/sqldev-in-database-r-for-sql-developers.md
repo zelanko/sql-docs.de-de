@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial zu R und T-SQL: Entwickeln eines Modells'
+title: 'Tutorial zu R und Transact-SQL: Entwickeln eines Modells'
 description: Hier erfahren Sie, wie Sie Code der Programmiersprache R in gespeicherte SQL Server-Prozeduren und T-SQL-Funktionen einbetten.
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0734203a5b5e49ad344b2c0440208c6b652c080
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725465"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479411"
 ---
-# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Lernprogramm: R-Datenanalysen für SQL-Entwickler
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: R-Datenanalysen für SQL-Entwickler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Tutorial für SQL-Programmierer erfahren Sie, wie Sie R durch Erstellen und Bereitstellen einer R-basierten Machine Learning-Lösung mithilfe der Datenbank [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) in SQL Server integrieren. Sie verwenden T-SQL, SQL Server Management Studio und eine Datenbank-Engine-Instanz mit [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) und der Unterstützung der R-Programmiersprache.
+In diesem Tutorial für SQL-Programmierer erfahren Sie, wie Sie R durch Erstellen und Bereitstellen einer R-basierten Machine Learning-Lösung mithilfe der Datenbank [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) in SQL Server integrieren. Sie verwenden T-SQL, SQL Server Management Studio und eine Datenbank-Engine-Instanz mit [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) und Unterstützung der R-Programmiersprache.
 
-Dieses Tutorial bietet eine Einführung in R-Funktionen, die in einem Workflow für Datenmodellierung verwendet werden. Dies beinhaltet das Durchsuchen von Daten, das Entwickeln und Trainieren eines binären Klassifizierungsmodells sowie die Modellbereitstellung. Mit dem Modell, das Sie erstellen, soll vorhergesagt werden, ob eine Fahrt (basierend auf der Tageszeit, der zurückgelegten Strecke und der Abholadresse) zur Gabe von Trinkgeld führt. 
+Dieses Tutorial bietet eine Einführung in R-Funktionen, die in einem Workflow für Datenmodellierung verwendet werden. Dies beinhaltet das Durchsuchen von Daten, das Entwickeln und Trainieren eines binären Klassifizierungsmodells sowie die Modellimplementierung. Mit dem Modell, das Sie erstellen, soll vorhergesagt werden, ob eine Fahrt (basierend auf der Tageszeit, der zurückgelegten Strecke und der Abholadresse) zur Gabe von Trinkgeld führt. 
 
 Der gesamte in diesem Tutorial verwendete R-Code wird in gespeicherte Prozeduren eingebunden, die Sie in Management Studio erstellen und ausführen.
 
@@ -29,10 +29,10 @@ Der gesamte in diesem Tutorial verwendete R-Code wird in gespeicherte Prozeduren
 
 Der Erstellungsprozess einer Machine Learning-Lösung ist komplex und kann den Einsatz mehrerer Tools sowie die phasenübergreifende Koordinierung von Experten bei folgenden Schritten erfordern:
 
-+ beim Abrufen und Bereinigen von Daten
-+ beim Untersuchen der Daten und Entwickeln von Modellierungsfunktionen
-+ beim Trainieren und Optimieren des Modells
-+ beim Bereitstellen in der Produktion
++ Abrufen und Bereinigen von Daten
++ Untersuchen der Daten und Entwickeln von Modellierungsfunktionen
++ Trainieren und Optimieren des Modells
++ Bereitstellen in der Produktion
 
 Die Entwicklung und das Testen des eigentlichen Codes werden am besten in einer dedizierten R-Entwicklungsumgebung durchgeführt. Nachdem das Skript vollständig getestet wurde, können Sie es jedoch problemlos in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren in der vertrauten Umgebung von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] bereitstellen.
 

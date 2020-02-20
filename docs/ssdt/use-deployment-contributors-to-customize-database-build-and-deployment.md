@@ -1,23 +1,24 @@
 ---
-title: Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors | Microsoft-Dokumentation
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Anpassen der Datenbankbereitstellung durch Bereitstellungs-Contributors
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa22592bbe86707ec4efa43ba0c188c21a07351e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110573"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256251"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Datenbank-Build und -Bereitstellung anpassen durch Verwendung von Erstellungs- und Bereitstellungs-Contributors
+
 Visual Studio bietet Erweiterungspunkte, mit deren Hilfe Sie das Verhalten der Erstellungs- und Bereitstellungsaktionen für Datenbankprojekte ändern können.  
   
 ## <a name="available-extensibility-points"></a>Verfügbare Erweiterungspunkte  
@@ -25,7 +26,7 @@ Sie können eine Erweiterung für die Erweiterungspunkte erstellen, wie in der f
   
 |**Aktion**|**Contributor-Typ**|**Hinweise**|  
 |--------------|------------------------|-------------|  
-|Erstellen|BuildContributor|Diese Art von Erweiterung wird ausgeführt, wenn das SQL-Projekt nach vollständiger Überprüfung des Projektmodells erstellt wird. Der Erstellungs-Contributor hat Zugriff auf das fertige Modell sowie auf alle Eigenschaften der Erstellungsaufgabe und auf sämtliche benutzerdefinierte Argumente.|  
+|Entwickeln|BuildContributor|Diese Art von Erweiterung wird ausgeführt, wenn das SQL-Projekt nach vollständiger Überprüfung des Projektmodells erstellt wird. Der Erstellungs-Contributor hat Zugriff auf das fertige Modell sowie auf alle Eigenschaften der Erstellungsaufgabe und auf sämtliche benutzerdefinierte Argumente.|  
 |Bereitstellen|DeploymentPlanModifier|Diese Art von Erweiterung wird ausgeführt, wenn das SQL-Projekt nach der Generierung (aber noch vor der Ausführung) des Bereitstellungsplans als Teil der Bereitstellungspipeline bereitgestellt wird. Mithilfe eines DeploymentPlanModifier-Elements können Sie dem Bereitstellungsplan Schritte hinzufügen oder Schritte daraus entfernen. Bereitstellungs-Contributors haben Zugriff auf den Bereitstellungsplan, auf die Vergleichsergebnisse sowie auf das Quell- und Zielmodell.|  
 |Bereitstellen|DeploymentPlanExecutor|Diese Art von Erweiterung wird bei der Ausführung des Bereitstellungsplans ausgeführt und bietet schreibgeschützten Zugriff auf den Bereitstellungsplan. Die durch das DeploymentPlanExectutor-Element ausgeführten Aktionen basieren auf dem Bereitstellungsplan.|  
   

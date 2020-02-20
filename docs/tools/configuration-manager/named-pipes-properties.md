@@ -1,6 +1,6 @@
 ---
-title: Named Pipes-Eigenschaften | Microsoft-Dokumentation
-ms.custom: ''
+title: Named Pipes-Eigenschaften
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,21 +16,21 @@ ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c42b3846ce4e2eda1e7aaf40eeb47ea76babf0af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 923f84ccc98837892d144a07ce71238c877ca5b6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010143"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306446"
 ---
 # <a name="named-pipes-properties"></a>Named Pipes-Eigenschaften
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Verwenden Sie die Seite **Protokoll**im Dialogfeld **Named Pipes-Eigenschaften** , um die Named Pipe anzuzeigen oder zu ändern, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Verwenden des Named Pipes-Protokoll überwacht wird.  
+  Verwenden Sie die Seite **Protokoll** im Dialogfeld **Named Pipes-Eigenschaften**, um die Named Pipe anzuzeigen oder zu ändern, an der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lauscht, wenn Sie das Named Pipes-Protokoll verwenden.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss neu gestartet werden, um das Protokoll zu aktivieren oder zu deaktivieren oder die Named Pipe zu ändern.  
   
-## <a name="options"></a>enthalten  
- **Enabled**  
+## <a name="options"></a>Tastatur  
+ **Aktiviert**  
  Mögliche Werte sind **Yes** und **No**.  
   
  **Pipename**  

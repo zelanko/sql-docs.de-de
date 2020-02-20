@@ -1,10 +1,9 @@
 ---
-title: Angeben mehrerer Suchbedingungen f체r mehrere Spalten | Microsoft-Dokumentation
-ms.custom: ''
+title: Angeben mehrerer Suchbedingungen f체r mehrere Spalten
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1110e4ae1ca4268af611cbb039af2b148694b552
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 57269ce8ed6c9a63ba846b0287ea9130db409617
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265505"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255002"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>Angeben mehrerer Suchbedingungen f체r mehrere Spalten (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,8 +78,8 @@ Um verschiedene Datenspalten nach Bedingungen zu durchsuchen, die mit AND verkn�
 4.  Wiederholen Sie die Schritte 2 und 3 f체r jede weitere Bedingung, die hinzugef체gt werden soll.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Kombinieren von Bedingungen, wenn AND Vorrang hat (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
-[Kombinieren von Bedingungen, wenn OR Vorrang hat (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
-[Konventionen f체r das Kombinieren von Suchbedingungen im Kriterienbereich (Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[Angeben von Suchkriterien (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Kombinieren von Bedingungen, wenn AND Vorrang hat](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
+[Kombinieren von Bedingungen, wenn OR Vorrang hat](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[Konventionen f체r das Kombinieren von Suchbedingungen im Kriterienbereich](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[Angeben von Suchkriterien](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

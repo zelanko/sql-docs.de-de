@@ -1,6 +1,6 @@
 ---
 title: Iris-Demodataset für Tutorials
-Description: Erstellen Sie eine Datenbank, die das IRIS-Dataset und eine Tabelle zum Speichern von Modellen enthält. Dieses Dataset wird in Übungen verwendet, die zeigen, wie die Sprache R oder Python-Code in einer gespeicherten SQL Server-Prozedur umschlossen wird.
+Description: Erstellen Sie eine Datenbank, die das Iris-Dataset und Vorhersagemodelle enthält. Dieses Dataset wird in R- und Python-Tutorials für SQL Server Machine Learning Services verwendet.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e580a4d3b8d0e294573cf19c0194cc9b8a103518
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c87b5c9fede3a8a9ab72add650447d1b02ac89c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727093"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908764"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Iris-Demodaten für Python- und R-Tutorials in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

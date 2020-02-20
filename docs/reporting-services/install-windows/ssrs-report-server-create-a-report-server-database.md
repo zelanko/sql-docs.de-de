@@ -1,20 +1,21 @@
 ---
-title: Erstellen einer Berichtsserver-Datenbank, SSRS-Konfigurations-Manager | Microsoft-Dokumentation
+title: Erstellen einer Berichtsserver-Datenbank, Konfigurations-Manager | Microsoft-Dokumentation
+description: Im einheitlichen Modus von SQL Server Reporting Services werden zwei relationale SQL Server-Datenbanken verwendet, um Berichtsserver-Metadaten und -Objekte zu speichern. Eine Datenbank, die als primärer Speicher dient, und eine zweite Datenbank zum Speichern temporärer Daten.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 08/28/2019
-ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123014"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253308"
 ---
-# <a name="create-a-report-server-database"></a>Erstellen einer Berichtsserver-Datenbank 
+# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Erstellen einer Berichtsserver-Datenbank, SSRS-Konfigurations-Manager  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -26,7 +27,7 @@ Die Datenbanken werden gemeinsam erstellt und sind durch ihre Namen aneinander g
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-Der **SharePoint-Modus** von SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst eine dritte Datenbank, die für Datenwarnungsmetadaten verwendet wird. Die drei Datenbanken werden für jede SSRS-Dienstanwendung erstellt. Die Datenbanknamen enthalten standardmäßig eine GUID, die der Dienstanwendung entspricht. 
+Der **SharePoint-Modus** von SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst eine dritte Datenbank, die für Datenwarnungs-Metadaten verwendet wird. Die drei Datenbanken werden für jede SSRS-Dienstanwendung erstellt. Die Datenbanknamen enthalten standardmäßig eine GUID, die der Dienstanwendung entspricht. 
 
 Im Folgenden finden Sie Beispielnamen der drei Datenbanken im SharePoint-Modus:
 

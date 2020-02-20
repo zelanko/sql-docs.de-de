@@ -1,20 +1,21 @@
 ---
-title: Azure Active Directory in SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 10/28/2019
+title: Azure Active Directory in SSDT
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
+manager: jroth
+reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 302345a2d7e8c1bd9192c91c6f88253c9a4668f2
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049902"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245576"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Azure Active Directory-Unterstützung in SQL Server Data Tools (SSDT)
 
@@ -30,7 +31,7 @@ SQL Server Data Tools (SSDT) bietet mehrere [Azure AD](https://docs.microsoft.co
 
 In diesem Artikel wird Azure AD für die folgende Liste der *Azure SQL-Produkte* in der [Azure-Cloud](https://azure.microsoft.com/) erläutert:
 
-- Azure SQL-Datenbank
+- Azure SQL-Datenbank
 - Azure SQL Data Warehouse
 
 ## <a name="active-directory-password-authentication"></a>Active Directory-Kennwortauthentifizierung

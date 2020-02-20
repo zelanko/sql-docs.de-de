@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d050831-8305-48a8-bd22-207932111040
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7673bf2aff3d5ea60966a8594d3b4ab13950f92d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: b94f6a00e26934426ef1ece760ce1179c3c53046
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974635"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941173"
 ---
 # <a name="setclientinfo-method-javalangstring-javalangstring"></a>setClientInfo-Methode (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +37,13 @@ public void setClientInfo (java.lang.String name,
   
  *value*  
   
- Eine Zeichenfolge mit dem Wert, auf den die Eigenschaft für Clientinformationen festgelegt werden soll.  
+ Eine Zeichenfolge mit dem Wert, auf den die Eigenschaft für Clientinformationen festgelegt werden soll  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese setClientInfo-Methode wird von der setClientInfo-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
+ Diese setClientInfo-Methode wird von der setClientInfo-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
  Von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] werden keine Eigenschaften für Clientinformationen unterstützt. In der JDBC Driver-Version 2.0 wird von dieser Methode eine Warnung für eine Eigenschaft generiert. Zum Abrufen einer Warnung sollte von Anwendungen die [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse verwendet werden.  
   

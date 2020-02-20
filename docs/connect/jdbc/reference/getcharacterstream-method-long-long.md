@@ -1,5 +1,5 @@
 ---
-title: getcharakteristream-Methode (Long, Long) | Microsoft-Dokumentation
+title: getCharacterStream-Methode (long, long) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a47b7ea56873b0b502ba39a91e4d1ba30044e993
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953256"
 ---
 # <a name="getcharacterstream-method-long-long"></a>getCharacterStream-Methode (long, long)
@@ -46,7 +46,7 @@ public java.io.Reader getCharacterStream(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getcharakteristream-Methode wird von der getcharakteristream-Methode in der Java. SQL. CLOB-Schnittstelle angegeben.  
+ Diese getCharacterStream-Methode wird von der getCharacterStream-Methode in der java.sql.Clob-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getCharacterStream-Methode &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)   

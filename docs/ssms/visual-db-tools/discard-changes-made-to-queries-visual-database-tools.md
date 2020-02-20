@@ -1,10 +1,9 @@
 ---
-title: Verwerfen von Änderungen an Abfragen (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwerfen von Änderungen an Abfragen
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb5db1e50e23772219bd7cd822d8e04615b13a29
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 1739a1a7d3fa42ccd0df4ba80bf6961b4e58ca08
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263763"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254640"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>Verwerfen von Änderungen an Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,8 +38,8 @@ Sie können an einer Abfragedefinition vorgenommene Änderungen vor dem Speicher
     Die Abfragedefinition wird in den Zustand beim letzten Speichern zurückgeführt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Speichern von Abfragen (Visual Database Tools)](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Ausführen grundlegender Vorgänge mit Abfragen (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[Verwenden von Daten im Ergebnisbereich (Visual Database Tools)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Speichern von Abfragen](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[Design Queries and Views How-to Topics (Artikel zum Entwerfen von Abfragen und Sichten)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Durchführen grundlegender Vorgänge mit Abfragen](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Verwenden von Daten im Ergebnisbereich](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

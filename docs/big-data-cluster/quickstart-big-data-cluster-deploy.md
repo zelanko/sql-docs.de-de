@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706345"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831394"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Verwenden eines Python-Skripts zum Bereitstellen eines Big-Data-Clusters für SQL Server in Azure Kubernetes Service (AKS)
 
@@ -29,13 +29,13 @@ Die hier verwendete Standardbereitstellung für Big-Data-Cluster besteht aus ein
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- ein Azure-Abonnement
+- Ein Azure-Abonnement.
 - [Big-Data-Tools:](deploy-big-data-tools.md)
    - **azdata**
    - **kubectl**
    - **Azure Data Studio**
-   - **Erweiterung für SQL Server 2019**
-   - **Azure CLI**
+   - **Erweiterung von SQL Server 2019**
+   - **Azure-Befehlszeilenschnittstelle**
 
 ## <a name="log-in-to-your-azure-account"></a>Anmelden bei Ihrem Azure-Konto
 
@@ -57,7 +57,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>Ausführen des Bereitstellungsskripts
 
-Führen Sie die folgenden Schritte aus, um das Bereitstellungsskript auszuführen. Dieses erstellt einen AKS-Dienst in Azure und stellt anschließend einen Big-Data-Cluster für SQL Server 2019 in AKS bereit. Sie können das Skript auch mit anderen [Umgebungsvariablen](deployment-guidance.md#configfile) anpassen, um eine benutzerdefinierte Bereitstellung zu erstellen.
+Führen Sie das Bereitstellungsskript anhand der folgenden Schritte in einer Bash-Eingabeaufforderung von Windows PowerShell oder Linux aus. Dieses erstellt einen AKS-Dienst in Azure und stellt anschließend einen Big-Data-Cluster für SQL Server 2019 in AKS bereit. Sie können das Skript auch mit anderen [Umgebungsvariablen](deployment-guidance.md#configfile) anpassen, um eine benutzerdefinierte Bereitstellung zu erstellen.
 
 1. Führen Sie das Skript mit dem folgenden Befehl aus:
 
@@ -70,7 +70,7 @@ Führen Sie die folgenden Schritte aus, um das Bereitstellungsskript auszuführe
 
 1. Geben Sie folgende Informationen ein, wenn Sie dazu aufgefordert werden:
 
-   | value | und Beschreibung |
+   | value | Beschreibung |
    |---|---|
    | **Azure-Abonnement-ID** | Die Azure-Abonnement-ID, die für AKS verwendet werden soll. Sie können Ihre Abonnements und deren IDs auflisten, indem Sie `az account list` über eine andere Befehlszeile ausführen. |
    | **Azure-Ressourcengruppe** | Der Name der Azure-Ressourcengruppe, die für den AKS-Cluster erstellt werden soll. |
@@ -88,8 +88,6 @@ Führen Sie die folgenden Schritte aus, um das Bereitstellungsskript auszuführe
    > Das SQL Server-Konto `sa` ist während der Bereitstellung eines Big Data-Clusters deaktiviert. In der SQL Server-Masterinstanz wird eine neue SysAdmin-Anmeldung bereitgestellt, die den gleichen Namen wie für die Eingabe **Benutzername** und das der Eingabe **Kennwort** entsprechende Kennwort verwendet. Die gleichen Werte für **Benutzername** und **Kennwort** werden zur Bereitstellung eines Controller-Administratorbenutzers verwendet. Der einzige für das Gateway (Knox) unterstützte Benutzer ist **root**, und das Kennwort ist das gleiche wie oben.
 
 1. Das Skript erstellt zunächst einen AKS-Cluster mithilfe der Parameter, die Sie angegeben haben. Dieser Schritt dauert einige Minuten.
-
-   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
 
 ## <a name="monitor-the-status"></a>Überwachen des Status
 

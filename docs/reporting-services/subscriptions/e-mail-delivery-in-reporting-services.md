@@ -13,10 +13,10 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72305048"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>E-Mail-Übermittlung in Reporting Services
@@ -26,13 +26,13 @@ ms.locfileid: "72305048"
   
  Ausführliche Schritte zum Erstellen eines Abonnements finden Sie hier:  
   
--   [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
+-   [Create and Manage Subscriptions for Native Mode Report Servers (Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus)](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
 -   [Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus|  
   
 ## <a name="e-mail-delivery-options"></a>Optionen für die E-Mail-Übermittlung  
  Die Berichtsserver-E-Mail-Übermittlung kann Berichte wie folgt übermitteln:  
@@ -58,7 +58,7 @@ ms.locfileid: "72305048"
 ## <a name="native-mode-role-based-e-mail-settings"></a>Rollenbasierte E-Mail-Einstellungen im einheitlichen Modus  
  In einer Umgebung mit einheitlichen Berichtsservern variieren die verwendeten E-Mail-Übermittlungseinstellungen je nachdem, ob Ihre Rolle die Aufgabe "Einzelne Abonnements verwalten" oder "Alle Abonnements verwalten" enthält.  
   
-|Task|Verfügbare Einstellungen|  
+|Aufgabe|Verfügbare Einstellungen|  
 |----------|------------------------|  
 |Einzelne Abonnements verwalten|Zeigt Felder an, mit denen ein Benutzer einen Bericht automatisieren und an sich übermitteln kann. In diesem Modus sind keine Felder vorhanden, die E-Mail-Aliasnamen akzeptieren.|  
 |Alle Abonnements verwalten|Zeigt Felder an, die eine breiter angelegte Verteilung unterstützen, einschließlich der Felder An, Cc, Bcc und Antwort an. Auf diese Weise stehen zusätzliche Möglichkeiten zur Verfügung, um einen Bericht an mehrere Abonnenten weiterzuleiten. Die Verfügbarkeit von E-Mail-Aliasfeldern wird durch Einstellungen in der Konfigurationsdatei RSReportServer definiert.|  
@@ -81,7 +81,7 @@ ms.locfileid: "72305048"
  Für einen Berichtsserver im einheitlichen Modus wird die E-Mail-Übermittlungserweiterung mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager im einheitlichen Modus und durch Bearbeiten der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationsdateien konfiguriert. Für einen Berichtsserver im SharePoint-Modus wird die E-Mail-Übermittlungserweiterung auf SharePoint-Verwaltungsseiten und in PowerShell-Skripts konfiguriert.  
   
  
- Informationen zum Konfigurieren eines Berichtsservers im einheitlichen Modus finden Sie unter [E-Mail-Einstellungen – Einheitlicher Modus von Reporting Services (Konfigurations-Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).
+ Informationen zum Konfigurieren eines Berichtsservers im einheitlichen Modus finden Sie unter [E-Mail-Einstellungen: einheitlicher Modus von Reporting Services (Konfigurations-Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).
  
  
  Informationen zum Konfigurieren eines Berichtsservers im SharePoint-Modus finden Sie im folgenden Thema:  
@@ -90,7 +90,7 @@ ms.locfileid: "72305048"
 ## <a name="see-also"></a>Weitere Informationen  
  [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Rollenzuweisungen](../../reporting-services/security/role-assignments.md)  
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Role Assignments (Rollenzuweisungen)](../../reporting-services/security/role-assignments.md)  
   
   

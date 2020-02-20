@@ -1,11 +1,7 @@
 ---
-title: Datenbankprojekteinstellungen | Microsoft-Dokumentation
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Datenbankprojekteinstellungen
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DebugProperties
@@ -40,14 +36,19 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4921df6e1602d4cfc98aa6da3733452d6b5d33d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912857"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241684"
 ---
 # <a name="database-project-settings"></a>Datenbankprojekteinstellungen
+
 Mit Datenbankprojekteinstellungen werden Aspekte der Datenbank-, Debug- und Buildkonfigurationen gesteuert. Diese Einstellungen werden in die folgenden Kategorien eingeteilt.  
   
 -   [Projekteinstellungen](#bkmk_proj_settings)  
@@ -58,7 +59,7 @@ Mit Datenbankprojekteinstellungen werden Aspekte der Datenbank-, Debug- und Buil
   
 -   [SQLCLR- und SQLCLR-Build](#bkmk_sqlclr_sqlclrbuild)  
   
--   [Erstellen](#bkmk_build)  
+-   [Build](#bkmk_build)  
   
 -   [SQLCMD-Variablen](#bkmk_sqlcmd_variables)  
   
@@ -83,14 +84,14 @@ Mit Datenbankprojekteinstellungen werden Aspekte der Datenbank-, Debug- und Buil
 ## <a name="bkmk_proj_settings"></a>Projekteinstellungen  
 Die Einstellungen in der folgenden Tabelle gelten für alle Konfigurationen dieses Datenbankprojekts.  
   
-|Feld|Standardwert|und Beschreibung|  
+|Feld|Standardwert|Beschreibung|  
 |---------|-----------------|---------------|  
 |Zielplattform|Microsoft SQL Server 2012|Gibt die Version von SQL Server an, die das Ziel dieses Datenbankprojekts ist.|  
 |Erweiterte Transact\-SQL-Überprüfung für gemeinsame Objekte aktivieren|Nicht aktiviert, wenn Sie ein neues Projekt erstellen.<br /><br />Aktiviert, wenn Sie ein Projekt aus dem SQL Server-Objekt-Explorer erstellen, das mit SQL Azure verbunden ist, eine SQL Azure-Datenbank in das Projekt importieren oder die Zielplattform eines Projekts in SQL Azure ändern.|Wenn diese Option aktiviert ist, werden Fehler im Projekt, dessen Überprüfung durch den SQL Server-Compiler fehlgeschlagen ist, gemeldet. Wenn Sie die Zielplattform in SQL Azure ändern, wird die erweiterte Überprüfung aktiviert. Die Option wird nicht deaktiviert, wenn Sie die Zielplattform ändern.<br /><br />Sie können diese Option für andere Versionen von SQL Server aktivieren, die Überprüfung ist jedoch auf teilweise eigenständige Datenbanken von Microsoft SQL Server 2012 sowie auf SQL Azure beschränkt. Nicht die gesamte Transact\-SQL-Syntax wird für alle Versionen von SQL Server unterstützt.<br /><br />Weitere Informationen finden Sie unter [Erweiterte Transact-SQL-Überprüfung](#bkmk_evf) weiter unten in diesem Thema.|  
 |Ausgabetypen|||  
 |Datenebenenanwendung (DACPAC-Datei)|Aktiviert und gesperrt. In der Buildausgabe eines Datenbankprojekts wird beim Erstellen des Projekts immer ein DACPAC-Paket erzeugt.|Wenn Sie die SQL Server Data Tools-Version (SSDT) mit der Option „Zusätzliche DACPAC-Downleveldatei (v2.0) erstellen“ verwenden, aktivieren Sie die Option, wenn das Paket mit SQL Server Management Studio oder dem SQL Azure-Verwaltungsportal kompatibel sein soll. Sie können ein DACPAC-Paket direkt aus SSDT bereitstellen. Eine DACPAC-Datei der Version 2.0 kann jedoch über SQL Server Management Studio nur zum Zeitpunkt der Freigabe von SQL Server Data Tools bereitgestellt werden.|  
 |Skript erstellen (.sql-Datei)||Legt fest, ob beim Erstellen des Projekts ein vollständiges SQL-CREATE-Skript für alle Objekte im Projekt erstellt und im Ordner "bin\debug" abgelegt wird. Sie können mithilfe des Befehls **Projekt veröffentlichen** oder mit dem SQL Compare-Hilfsprogramm ein Skript für inkrementelle Updates erstellen.|  
-|Generisch|||  
+|Allgemein|||  
 |Standardschema|dbo|Gibt das Standardschema an, in dem sowohl SQLCLR-Objekte als auch Transact\-SQL-Objekte erstellt werden. Sie können diese Einstellung überschreiben, indem Sie das Schema direkt für Objekte angeben.|  
 |Schemanamen in Dateinamen einschließen|nein|Gibt an, ob das Schema als Präfix in Dateinamen enthalten ist (z. B. "dbo.Products.table.sql"). Wenn dieses Kontrollkästchen deaktiviert ist, werden Dateinamen für Objekte im Format „Objektname.Objekttyp.sql“ erstellt (z.B. „Products.table.sql“).|  
 |Groß-/Kleinschreibung für Bezeichner überprüfen|ja|Gibt an, ob bei der Erstellung des Projekts die Groß-/Kleinschreibung für Bezeichner in den SQL-Objekten im Projekt überprüft wird. Diese Option wird auf Datenbankprojekte angewendet, in denen eine Sortierung mit Berücksichtigung der Groß- und Kleinschreibung für die Datenbank angegeben wird.|  
@@ -116,7 +117,7 @@ Funktionen, die auf der Datenbank- oder Instanzkonfiguration basieren, z. B.:
   
 -   FileTables  
   
--   Änderungsnachverfolgung  
+-   Change Tracking  
   
 -   Rowsetfunktionen – OPENROWSET, OPENQUERY, OPENDATASOURCE  
   
@@ -177,7 +178,7 @@ Sie können für jedes Datenbankprojekt in der Projektmappe eine Buildkonfigurat
   
 1.  Klicken Sie im **Projektmappen-Explorer**auf den Projektmappenknoten, für den Sie eine Buildkonfiguration angeben möchten.  
   
-2.  Klicken Sie im Menü **Erstellen** auf **Konfigurations-Manager**. Das Dialogfeld **Konfigurations-Manager** wird geöffnet.  
+2.  Klicken Sie im Menü **Build** auf **Konfigurations-Manager**. Das Dialogfeld **Konfigurations-Manager** wird angezeigt.  
   
     Geben Sie die Konfigurationseinstellungen an, die Sie für die einzelnen Projekte in der Projektmappe verwenden möchten.  
   
@@ -189,7 +190,7 @@ Sie können für jedes Datenbankprojekt in der Projektmappe eine Buildkonfigurat
   
 Die Einstellungen in der folgenden Tabelle gelten für alle Buildkonfigurationen dieses Datenbankprojekts.  
   
-|Feld|Standardwert|und Beschreibung|  
+|Feld|Standardwert|Beschreibung|  
 |---------|-----------------|---------------|  
 |Buildausgabepfad|bin\Debug\|Gibt an, wo die Buildausgabe generiert wird, wenn Sie das Datenbankprojekt erstellen oder bereitstellen. Einen relativen Pfad müssen Sie relativ zum Pfad des Datenbankprojekts angeben. Wenn der Pfad nicht vorhanden, wird er erstellt.|  
 |Name der Buildausgabedatei|*DatabaseProjectName*|Gibt den Namen für die Ausgabe an, die beim Erstellen des Datenbankprojekts generiert wird.|  
@@ -206,23 +207,23 @@ Außerdem können Sie durch die Veröffentlichung über die Befehlszeile diese W
 ## <a name="bkmk_build_events"></a>Buildereignisse  
 Mit dieser Einstellung können Sie eine Befehlszeile angeben, die vor der Ausführung des Buildvorgangs ausgeführt wird, sowie eine Befehlszeile, die nach Abschluss des Buildvorgangs ausgeführt wird.  
   
-|Feld|Standardwert|und Beschreibung|  
+|Feld|Standardwert|Beschreibung|  
 |---------|-----------------|---------------|  
-|Befehlszeile für Präbuildereignis|None|Gibt die vor der Erstellung des Projekts auszuführende Befehlszeile an. Klicken Sie auf **Präbuild bearbeiten**, um die Befehlszeile zu ändern.|  
-|Befehlszeile für Postbuildereignis|None|Gibt die nach der Erstellung des Projekts auszuführende Befehlszeile an. Klicken Sie auf **Postbuild bearbeiten**, um die Befehlszeile zu ändern.|  
+|Befehlszeile für Präbuildereignis|Keine|Gibt die vor der Erstellung des Projekts auszuführende Befehlszeile an. Klicken Sie auf **Präbuild bearbeiten**, um die Befehlszeile zu ändern.|  
+|Befehlszeile für Postbuildereignis|Keine|Gibt die nach der Erstellung des Projekts auszuführende Befehlszeile an. Klicken Sie auf **Postbuild bearbeiten**, um die Befehlszeile zu ändern.|  
 |Postbuildereignis ausführen|Bei erfolgreichem Erstellen|Gibt an, ob die Postbuildbefehlszeile immer, nur bei erfolgreicher Erstellung oder nur dann ausgeführt werden soll, wenn die Projektausgabe (das Buildskript) durch die Erstellung aktualisiert wurde.|  
   
 ## <a name="bkmk_debug"></a>Debuggen  
 Mit diesen Einstellungen können Sie das Debuggen des Datenbankprojekts steuern.  
   
-|Feld|Standardwert|und Beschreibung|  
+|Feld|Standardwert|Beschreibung|  
 |---------|-----------------|---------------|  
-|Startvorgang|None|Gibt ein Skript oder externes Programm an, das beim Debuggen des Projekts ausgeführt werden soll.|  
+|Startvorgang|Keine|Gibt ein Skript oder externes Programm an, das beim Debuggen des Projekts ausgeführt werden soll.|  
 |Zielverbindungszeichenfolge|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|Gibt die Verbindungsinformationen für den Datenbankserver an, der für die angegebene Buildkonfiguration verwendet werden soll. Die Standardverbindungszeichenfolge bezieht sich auf eine dynamisch erstellte SQL Server LocalDB-Instanz und -Datenbank.|  
 |Datenbankeigenschaften bereitstellen|Ja|Gibt an, ob die Einstellungen in DatabaseProperties.DatabaseProperties bereitgestellt oder aktualisiert werden, wenn Sie das Datenbankprojekt bereitstellen.|  
 |Datenbank immer neu erstellen|Nein|Gibt an, ob die Datenbank gelöscht und neu erstellt wird, anstatt ein inkrementelles Upgrade durchzuführen. Dieses Kontrollkästchen können Sie beispielsweise aktivieren, wenn Sie Datenbankkomponententests für eine neue Bereitstellung der Datenbank ausführen möchten. Wenn dieses Kontrollkästchen deaktiviert wird, wird die vorhandene Datenbank nicht gelöscht und neu erstellt, sondern aktualisiert.|  
 |Inkrementelle Bereitstellung blockieren, wenn Datenverlust auftreten könnte|Ja|Gibt an, ob die Bereitstellung angehalten wird, wenn ein Update Datenverluste verursachen kann. Wenn dieses Kontrollkästchen aktiviert ist, verursachen Änderungen, die zu Datenverlusten führen, das Beenden der Bereitstellung mit einem Fehler, der den Datenverlust verhindert. Die Bereitstellung wird beispielsweise beendet, wenn eine `varchar(50)` -Spalte in `varchar(30)`geändert wird.<br /><br />**HINWEIS:** Die Bereitstellung wird nur blockiert, wenn die Tabellen, in denen es zu einem Datenverlust kommen könnte, Daten enthalten. Die Bereitstellung wird fortgesetzt, wenn keine Daten verloren gehen können.|  
-|DROP-Objekte im Ziel, aber nicht im Projekt|nein|Gibt an, ob Objekte, die sich in der Zieldatenbank, aber nicht im Datenbankprojekt befinden, im Rahmen des Bereitstellungsskripts gelöscht werden sollen. Sie können einige Dateien im Projekt ausschließen, um sie vorübergehend aus dem Buildskript zu entfernen. Sie können jedoch die vorhandenen Versionen solcher Objekte in der Zieldatenbank belassen. Dieses Kontrollkästchen hat keine Auswirkung, wenn das Kontrollkästchen **Datenbank immer neu erstellen** aktiviert ist, da die Datenbank gelöscht wird.|  
+|DROP-Objekte im Ziel, aber nicht im Projekt|Nein|Gibt an, ob Objekte, die sich in der Zieldatenbank, aber nicht im Datenbankprojekt befinden, im Rahmen des Bereitstellungsskripts gelöscht werden sollen. Sie können einige Dateien im Projekt ausschließen, um sie vorübergehend aus dem Buildskript zu entfernen. Sie können jedoch die vorhandenen Versionen solcher Objekte in der Zieldatenbank belassen. Dieses Kontrollkästchen hat keine Auswirkung, wenn das Kontrollkästchen **Datenbank immer neu erstellen** aktiviert ist, da die Datenbank gelöscht wird.|  
 |CLR-Typen nicht mit ALTER ASSEMBLY-Anweisungen aktualisieren|Nein|Gibt an, ob CLR (Common Language Runtime)-Typen mit ALTER ASSEMBLY-Anweisungen aktualisiert werden oder ob stattdessen das Objekt, das den CLR-Typ instanziiert, gelöscht und beim Bereitstellen von Änderungen neu erstellt wird.|  
 |Erweitert...|Nein|Befehlsschaltfläche, die Ihnen das Angeben von Optionen ermöglicht, die Ereignisse und das Verhalten der Bereitstellung steuern.|  
   

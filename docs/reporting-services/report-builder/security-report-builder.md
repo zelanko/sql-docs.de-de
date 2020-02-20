@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb1a8021ca269cc5fde423ba9eb6903876f949fc
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593844"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190098"
 ---
 # <a name="security-report-builder"></a>Sicherheit (Berichts-Generator)
-  Berichts-Generator ist eine für die Verwendung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver konzipierte Berichterstellungsclientanwendung. Der Berichtsserver kann im einheitlichen Modus als eigenständiger Server oder zur Unterstützung von Berichten auf einer SharePoint-Website im integrierten SharePoint-Modus konfiguriert werden.  
+  Der Berichts-Generator ist eine Clientanwendung für die Berichterstellung, die für die Verwendung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver konzipiert wurde. Der Berichtsserver kann im einheitlichen Modus als eigenständiger Server oder zur Unterstützung von Berichten auf einer SharePoint-Website im integrierten SharePoint-Modus konfiguriert werden.  
   
  Im Berichts-Generator können Sie Berichte, freigegebene Datasets und wiederverwendbare Berichtsteile erstellen. Auf einem Berichtsserver oder einer SharePoint-Website können Sie Berichte bearbeiten und freigegebene Datenquellen, freigegebene Datasets und freigegebene Berichtsteile hinzufügen.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73593844"
   
  Damit andere Benutzer von Ihnen veröffentlichte und freigegebene Elemente finden und auswählen können, müssen Sie vom Berichtsserveradministrator eine Ordnerorganisation einrichten lassen, die den jeweiligen Benutzern Zugriff bietet. Der Zugriff muss für das Erstellen von Berichten und Ausführen von veröffentlichten Berichten gewährt werden.  
   
- Weitere Informationen finden Sie in folgenden Themen:  
+ Weitere Informationen finden Sie in den folgenden Themen:  
   
 -   [Rollen und Berechtigungen &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -90,10 +90,10 @@ ms.locfileid: "73593844"
   
  Beim Entwerfen des Berichts werden Anmeldeinformationen verwendet, um Datasetabfragen auszuführen und den Bericht in der Vorschau anzuzeigen. Zur Laufzeit werden Anmeldeinformationen verwendet, um den Bericht auszuführen und Abfrageergebnisse zwischenzuspeichern. Die Abfrageergebnisse für ein freigegebenes Dataset können auch unabhängig zwischengespeichert werden. Die Entwurfszeit- und Laufzeitanmeldeinformationen können sich unterscheiden. Weitere Informationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
- Weitere Informationen zum Sichern von Daten finden Sie unter [Security Center für SQL Server Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
+ Weitere Informationen zu Sicherheitsdaten finden Sie unter [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md). 
   
   
- Weitere Informationen zu Datenquellen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Weitere Informationen über Datenquellen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Models"></a> Grundlegendes zu Modellen und Sicherheitsfiltern  
@@ -107,7 +107,7 @@ ms.locfileid: "73593844"
   
 -   Verwenden Sie Parameter, die auf Abfrageparametern basieren und vom Typ **Text** sind, nur, wenn Sie gültige Werte geben. Durch eine Liste verfügbarer Werte stellen Sie sicher, dass Benutzer nur gültige Werte auswählen. Ohne eine solche Liste ist es nicht möglich, die Werte einzuschränken, die ein Benutzer eingeben kann.  
   
--   Verwenden Sie nicht die globale [&UserID] zum Schützen privater Daten. Dieser Wert kann anhand der URL-Zugriffssyntax als Berichtsparameter in einer Berichts-URL angegeben werden. Wird dieser Wert in einem Ausdruck in einem freigegebenen Dataset verwendet, kann das Dataset nicht zwischengespeichert werden. Weitere Informationen finden Sie unter [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md).  
+-   Verwenden Sie nicht die globale [&UserID] zum Schützen privater Daten. Dieser Wert kann anhand der URL-Zugriffssyntax als Berichtsparameter in einer Berichts-URL angegeben werden. Wird dieser Wert in einem Ausdruck in einem freigegebenen Dataset verwendet, kann das Dataset nicht zwischengespeichert werden. Weitere Informationen finden Sie unter [URL-Zugriffsparameterreferenz](../../reporting-services/url-access-parameter-reference.md).  
   
  Auf einem Berichtsserver veröffentlichte Elemente können vom Berichtsserveradministrator mithilfe der rollenbasierten Sicherheit oder der Sicherheit auf Ordner- und Elementebene geschützt werden. Weitere Informationen finden Sie unter [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md).  
   

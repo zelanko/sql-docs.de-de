@@ -1,6 +1,6 @@
 ---
-title: Registrierte Server (F1-Hilfe) | Microsoft Docs
-ms.custom: ''
+title: Registrierte Server (F1-Hilfe)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf08f76b0df0b3624aa1450b2463599b31fb85fa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266143"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256229"
 ---
 # <a name="registered-servers-f1-help"></a>Registrierte Server (F1-Hilfe)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68266143"
   
  Um auf die Seite zuzugreifen, klicken Sie auf der Symbolleiste **Registrierte Server** auf **Reporting Services** , klicken Sie mit der rechten Maustaste auf eine registrierte Servergruppe wie **Reporting Services**, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Serverregistrierung**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Servertyp**  
  Wenn Sie einen Server über Registrierte Server registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich **Registrierte Server** angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, klicken Sie auf der Symbolleiste **Registrierte Server** auf den gewünschten Server, bevor Sie mit der Registrierung eines neuen Servers beginnen.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68266143"
   
  Um auf diese Seite zuzugreifen, klicken Sie auf der Symbolleiste für Registrierte Server auf **Analysis Services** , klicken Sie mit der rechten Maustaste auf eine registrierte Servergruppe (z.B. **Analysis Services**), zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Serverregistrierung**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Servertyp**  
  Wenn Sie einen Server über Registrierte Server registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich „Registrierte Server“ angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, klicken Sie auf der Symbolleiste **Registrierte Server** auf den gewünschten Server, bevor Sie mit der Registrierung eines neuen Servers beginnen.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68266143"
  **Authentifizierung**  
  Durch Windows-Authentifizierung können Benutzer mithilfe der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen eine Verbindung als Windows-Benutzer oder als Mitglied einer Windows-Gruppe herzustellen.  
   
- **User name**  
+ **Benutzername**  
  Diese Option steht in dieser Version nicht zur Verfügung.  
   
  **Kennwort**  
@@ -115,9 +115,9 @@ ms.locfileid: "68266143"
   
  Um auf die Seite zuzugreifen, klicken Sie auf der Symbolleiste **Registrierte Server** auf **Integration Services** , klicken Sie mit der rechten Maustaste auf eine registrierte Servergruppe, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Serverregistrierung**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Servertyp**  
- Wenn Sie einen Server über „Registrierte Server“ registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich für registrierte Server angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, bevor Sie mit dem Registrieren eines neuen Servers beginnen, klicken Sie auf der Symbolleiste **Registrierte Server**, **Datenbank-Engine**, **Analysis-Server**, **Analysis-Server** **SQL Server Compact** **Registrierte Server** auf **Integration Services**.  
+ Wenn Sie einen Server über „Registrierte Server“ registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich für registrierte Server angezeigten Servertyp übereinstimmt. Wenn Sie einen anderen Servertyp registrieren möchten, klicken Sie, bevor Sie mit dem Registrieren eines neuen Servers beginnen, auf der Symbolleiste **Registrierte Server** auf **Datenbank-Engine**, **Analysis-Server**, **Reporting Services**, **SQL Server Compact** **Edition** oder **Integration Services**.  
   
  **Servername**  
  Wählen Sie den Server aus, mit dem eine Verbindung hergestellt werden soll. Standardmäßig wird der Server angezeigt, mit dem zuletzt eine Verbindung hergestellt wurde.  
@@ -125,7 +125,7 @@ ms.locfileid: "68266143"
  **Authentifizierung**  
  Mit dem Windows-Authentifizierungsmodus können Benutzer die Verbindung über ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkonto herstellen.  
   
- **User name**  
+ **Benutzername**  
  Diese Option steht in dieser Version nicht zur Verfügung.  
   
  **Kennwort**  

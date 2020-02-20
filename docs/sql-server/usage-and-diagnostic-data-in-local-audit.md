@@ -1,6 +1,7 @@
 ---
-title: Lokale Überwachung für SQL Server-Nutzungs- und -Diagnosedatensammlung| Microsoft-Dokumentation
-ms.custom: ''
+title: Lokale Überwachung für die Sammlung von Nutzungs- und -Diagnosedaten
+description: In diesem Artikel erhalten Sie Informationen zur lokalen Überwachung, die von SQL Server verwendet wird, um Nutzungs- und Diagnosedaten zu sammeln und an Microsoft zu senden.
+ms.custom: seo-lt-2019
 ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
@@ -13,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c7697d72aa98429bdaff64044f447dd11384f6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984766"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558047"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Lokale Überwachung für SQL Server-Nutzungs- und -Diagnosedatensammlung (CEIP)
 
@@ -51,7 +52,7 @@ Vor der Aktivierung der lokalen Überwachung muss ein Systemadministrator folgen
 
 1. Er muss den SQL Server-Instanznamen und das Anmeldekonto für den SQL Server-CEIP-Dienst kennen. 
 
-1. Er muss einen neuen Ordner für die Dateien der lokalen Überwachung konfigurieren.
+1. Konfigurieren Sie einen neuen Ordner für die Dateien der lokalen Überwachung.
 
 1. Er muss Berechtigungen für das Anmeldekonto des SQL Server-CEIP-Diensts gewähren.
 
@@ -64,7 +65,7 @@ Führen Sie die folgenden Schritte aus, um das Anmeldekonto für den SQL Server-
  
 1. Starten Sie die Konsole **Dienste**. Wählen Sie dazu die **Windows-Taste + R** auf der Tastatur aus, um das Dialogfeld **Ausführen** zu öffnen. Geben Sie dann *services.msc* in das Textfeld ein, und wählen **OK** aus, um die Konsole **Dienste** zu starten.  
 
-2. Navigieren Sie zu dem entsprechenden Dienst. Suchen Sie z. B. für die Datenbank-Engine nach **SQL Server CEIP-Dienst**  **(*Name Ihrer Instanz*)** . Suchen Sie für Analysis Services nach **SQL Server Analysis Services CEIP**  **(*Name Ihrer Instanz*)** . Suchen Sie für Integration Services nach **SQL Server Integration Services-CEIP-Dienst**.
+2. Navigieren Sie zu dem entsprechenden Dienst. Suchen Sie z. B. für die Datenbank-Engine nach dem **SQL Server-CEIP-Dienst** **(*Name Ihrer Instanz*)** . Suchen Sie für Analysis Services nach **SQL Server Analysis Services-CEIP** **(*Name Ihrer Instanz*)** . Suchen Sie für Integration Services nach **SQL Server Integration Services-CEIP-Dienst**.
 
 3. Klicken Sie mit der rechten Maustaste auf den Dienst, und wählen Sie **Eigenschaften**aus. 
 
@@ -79,10 +80,10 @@ Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in 
 
   ||Entwurfsentscheidung|Empfehlung|  
   |------|-----------------|----------|  
-  |![Kontrollkästchen](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Speicherplatzverfügbarkeit |Planen Sie für mittlere Arbeitsauslastungen mit ungefähr 10 Datenbanken ca. 2 MB an Speicherplatz pro Datenbank und Instanz ein.|  
-|![Kontrollkästchen](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Separate Verzeichnisse | Erstellen sie für jede Instanz ein Verzeichnis. Verwenden Sie z. B. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* für eine SQL Server-Instanz namens `MSSQLSERVER`. Dies vereinfacht die Dateiverwaltung.
-|![Kontrollkästchen](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Separate Ordner |Verwenden Sie für jeden Dienst einen bestimmten Ordner. Verwenden Sie z. B. für einen angegebenen Instanznamen einen Ordner für die Datenbank-Engine. Wenn eine Instanz von Analysis Services denselben Instanznamen verwendet, erstellen Sie einen separaten Ordner für Analysis Services. Wenn sowohl Datenbank-Engine- als auch Analysis Services-Instanzen für denselben Ordner konfiguriert sind, werden alle Daten von der lokalen Überwachung für beide Instanzen in dieselbe Protokolldatei geschrieben.| 
-|![Kontrollkästchen](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Gewähren von Berechtigungen für das Anmeldekonto des SQL Server-CEIP-Diensts|Aktivieren Sie die Zugriffsberechtigungen **Ordnerinhalt auflisten**, **Lesen** und **Schreiben** für das Anmeldekonto des SQL Server-CEIP-Diensts.|
+  |![Kontrollkästchen](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Speicherplatzverfügbarkeit |Planen Sie für mittlere Arbeitsauslastungen mit ungefähr 10 Datenbanken ca. 2 MB an Speicherplatz pro Datenbank und Instanz ein.|  
+|![Kontrollkästchen](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate Verzeichnisse | Erstellen sie für jede Instanz ein Verzeichnis. Verwenden Sie z. B. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* für eine SQL Server-Instanz namens `MSSQLSERVER`. Dies vereinfacht die Dateiverwaltung.
+|![Kontrollkästchen](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate Ordner |Verwenden Sie für jeden Dienst einen bestimmten Ordner. Verwenden Sie z. B. für einen angegebenen Instanznamen einen Ordner für die Datenbank-Engine. Wenn eine Instanz von Analysis Services denselben Instanznamen verwendet, erstellen Sie einen separaten Ordner für Analysis Services. Wenn sowohl Datenbank-Engine- als auch Analysis Services-Instanzen für denselben Ordner konfiguriert sind, werden alle Daten von der lokalen Überwachung für beide Instanzen in dieselbe Protokolldatei geschrieben.| 
+|![Kontrollkästchen](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Gewähren von Berechtigungen für das Anmeldekonto des SQL Server-CEIP-Diensts|Aktivieren Sie die Zugriffsberechtigungen **Ordnerinhalt auflisten**, **Lesen** und **Schreiben** für das Anmeldekonto des SQL Server-CEIP-Diensts.|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>Gewähren von Berechtigungen für das Anmeldekonto des SQL Server-CEIP-Diensts
@@ -107,23 +108,26 @@ Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in 
 
 1. Navigieren Sie zu dem entsprechenden CPE-Pfad:
 
-   | Versionsoptionen | ***Datenbank-Engine*** – Registrierungsschlüssel |
+   | Version | ***Datenbank-Engine*** – Registrierungsschlüssel |
    | :------ | :----------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Name-Ihrer-Instanz*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Name-Ihrer-Instanz*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**15**.*Name-Ihrer-Instanz*\\CPE |
    | &nbsp; | &nbsp; |
 
-   | Versionsoptionen | ***Analysis Services*** – Registrierungsschlüssel |
+   | Version | ***Analysis Services*** – Registrierungsschlüssel |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Name-Ihrer-Instanz*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Name-Ihrer-Instanz*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**15**.*Name-Ihrer-Instanz*\\CPE |  
    | &nbsp; | &nbsp; |
 
-  | Versionsoptionen | ***Integration Services*** – Registrierungsschlüssel |
-  | :------ | :---------------------------------- |
-  | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
-  | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
-  | &nbsp; | &nbsp; |
+   | Version | ***Integration Services*** – Registrierungsschlüssel |
+   | :------ | :---------------------------------- |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
+   | &nbsp; | &nbsp; |
 
 1. Klicken Sie im mit der rechten Maustaste auf den CPE-Pfad, und wählen Sie dann **Neu** aus. Wählen Sie **Zeichenfolgenwert** aus.
 
@@ -156,6 +160,7 @@ Das SQL Server-CEIP sollte die Einstellung für die lokale Überwachung sofort e
     - Für Integration Services: 
         - Für SQL 2016 verwenden Sie *SQL Server Integration Services CEIP-Dienst 13.0*.
         - Für SQL 2017 verwenden Sie *SQL Server Integration Services CEIP-Dienst 14.0*.
+    - Für SQL 2019 verwenden Sie den *SQL Server Integration Services-CEIP-Dienst 15.0*.
 
 1. Klicken Sie mit der rechten Maustaste auf den Dienst, und wählen Sie „Neu starten“ aus. 
 
@@ -166,7 +171,7 @@ Die lokale Überwachung generiert eine Protokolldatei pro Tag. Die Protokolldate
   >[!NOTE]
   > Nach der Aktivierung der lokalen Überwachung kann es bis zu fünf Minuten dauern, bis die Protokolldatei zum ersten Mal geschrieben wird. 
 
-## <a name="maintenance"></a>Verwaltung 
+## <a name="maintenance"></a>Wartung 
 
 1. Um die Nutzung von Speicherplatz beim Schreiben von Dateien durch die lokale Überwachung einzuschränken, richten Sie eine Richtlinie oder einen regulären Auftrag ein. So kann das Verzeichnis für die lokale Überwachung bereinigt werden, um ältere, überflüssige Dateien zu entfernen.  
 
@@ -186,17 +191,17 @@ Die lokale Überwachung generiert eine Protokolldatei pro Tag. Die Protokolldate
 | Logische Informationshierarchie für die lokale Überwachung | Verbundene Spalten |
 | ------ | -------|
 | Header | emitTime, schemaVersion 
-| Computer | operatingSystem 
+| Machine | operatingSystem 
 | Instanz | instanceUniqueID, correlationID, clientVersion 
-| Session | sessionID, traceName 
+| Sitzung | sessionID, traceName 
 | Abfrage | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
-| data |  data 
+| Daten |  data 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Definition und Beispiele für Name-Wert-Paare 
 
 Die nachfolgend aufgeführten Spalten stellen die Reihenfolge für die Dateiausgabe der lokalen Überwachung dar. Unidirektionaler Hash mit SHA-256 dient zum Anonymisieren von Werten für eine Reihe der nachfolgenden Spalten.  
 
-| Name | und Beschreibung | Beispielwerte
+| Name | Beschreibung | Beispielwerte
 |-------|--------| ----------|
 |instanceUniqueID| Anonymisierter Instanzbezeichner | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| Schemaversion von SQLCEIP |  3 
@@ -374,5 +379,5 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Lokale Überwachung für die Sammlung von SSMS-Nutzungs- und -Diagnosedaten](../ssms/sql-server-management-studio-telemetry-ssms.md)

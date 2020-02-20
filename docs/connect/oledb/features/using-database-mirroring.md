@@ -1,6 +1,6 @@
 ---
-title: Verwenden der Daten Bank Spiegelung | Microsoft-Dokumentation
-description: Verwenden der Daten Bank Spiegelung mit OLE DB Treiber für SQL Server
+title: Verwenden der Datenbankspiegelung | Microsoft-Dokumentation
+description: In diesem Artikel wird die Verwendung der Datenbankspiegelung mit dem OLE DB-Treiber für SQL Server erläutert.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9d61dfe1441029cfa1b742e3b56021e55764d4eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988868"
 ---
 # <a name="using-database-mirroring"></a>Verwenden der Datenbankspiegelung
@@ -46,7 +46,7 @@ ms.locfileid: "67988868"
  Beim Angeben des Spiegeldatenbanknamens ist es möglich, einen Alias zu verwenden.  
   
 > [!NOTE]  
->  Informationen zu anfänglichen Verbindungs versuchen und erneuten Verbindungs versuchen mit einer gespiegelten Datenbank finden Sie unter [Verbinden von Clients mit einer Datenbank &#40;-&#41;Spiegelungs Sitzung SQL Server](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  Informationen über Versuche des Erstverbindungsaufbaus sowie Versuche der erneuten Verbindung mit einer Spiegeldatenbank finden Sie unter [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## <a name="programming-considerations"></a>Überlegungen zur Programmierung  
  Wenn auf dem Prinzipaldatenbankserver ein Fehler auftritt, empfängt die Clientanwendung als Antwort auf API-Aufrufe Fehlermeldungen. Dadurch wird angezeigt, dass die Verbindung zur Datenbank unterbrochen ist. Wenn dieser Fall eintritt, gehen alle Datenbankänderungen, für die kein Commit ausgeführt wurde, verloren und für die aktuelle Transaktion wird ein Rollback durchgeführt. Dann sollte die Anwendung die Verbindung beenden (oder das Datenquellobjekt freigeben) und erneut herstellen. Die Verbindung wird transparent zur Spiegeldatenbank umgeleitet, die jetzt als Prinzipalserver fungiert.  
@@ -54,18 +54,18 @@ ms.locfileid: "67988868"
  Wenn eine Verbindung hergestellt wurde, teilt der Prinzipalserver die Identität seines Failoverpartners, der bei einem Failover einspringt, dem Client mit. Wenn eine Anwendung versucht, nach dem Failover des Prinzipalservers eine Verbindung aufzubauen, kennt der Client die Identität des Failoverpartners nicht. Um Clients die Möglichkeit zu geben, in dieser Situation Abhilfe zu schaffen, können sie die Identität des Failoverpartners mithilfe einer Initialisierungseigenschaft und eines zugeordneten Schlüsselworts für die Verbindungszeichenfolge selbst angeben. Das Clientattribut wird nur in dieser Situation verwendet; wenn der Prinzipalserver verfügbar ist, wird es nicht verwendet. Wenn der vom Client angegebene Failoverpartnerserver nicht auf einen Server verweist, der als Failoverpartner fungiert, wird die Verbindung vom Server abgewiesen. Um es Anwendungen zu ermöglichen, sich an Konfigurationsänderungen anzupassen, kann die Identität des tatsächlichen Failoverpartners durch Überprüfung des Attributs nach dem Verbindungsaufbau bestimmt werden. Sie sollten die Partnerinformationen zwischenspeichern, um die Verbindungszeichenfolge zu aktualisieren, oder eine Wiederholungsstrategie für den Fall entwerfen, dass der erste Versuch des Verbindungsaufbaus fehlschlägt.  
   
 > [!NOTE]  
->  Sie müssen die von einer Verbindung zu verwendende Datenbank explizit angeben, wenn Sie diese Funktion in einem DSN, einer Verbindungszeichenfolge oder einer/m Verbindungseigenschaft/-attribut verwenden möchten. Wenn dies nicht der Fall ist, wird OLE DB Treiber für SQL Server nicht versuchen, ein Failover zur Partner Datenbank durchführen.  
+>  Sie müssen die von einer Verbindung zu verwendende Datenbank explizit angeben, wenn Sie diese Funktion in einem DSN, einer Verbindungszeichenfolge oder einer/m Verbindungseigenschaft/-attribut verwenden möchten. Der OLE DB-Treiber für SQL Server versucht sonst nicht, bei einem Fehler zur Partnerdatenbank zu wechseln.  
 >   
 >  Die Spiegelung ist eine Funktion der Datenbank. Anwendungen, die mehrere Datenbanken verwenden, sind möglicherweise nicht in der Lage, diese Funktion zu nutzen.  
 >   
 >  Außerdem erfolgt bei den Servernamen keine Unterscheidung nach Groß-/Kleinschreibung, bei Datenbanknamen jedoch schon. Sie müssen daher auf die Übereinstimmung der Groß-/Kleinschreibung in DSNs und Verbindungszeichenfolgen achten.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQL Server  
- Der OLE DB-Treiber für SQL Server unterstützt die Datenbankspiegelung durch Attribute für Verbindungen und Verbindungszeichenfolgen. Die Eigenschaft SSPROP_INIT_FAILOVERPARTNER wurde dem DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz hinzugefügt, und das Schlüsselwort **FailoverPartner** ist ein neues Verbindungszeichenfolgen-Attribut für DBPROP_INIT_PROVIDERSTRING. Weitere Informationen finden Sie unter [Verwenden von Schlüsselwörtern für Verbindungs Zeichenfolgen mit OLE DB-Treiber für SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Der OLE DB-Treiber für SQL Server unterstützt die Datenbankspiegelung durch Attribute für Verbindungen und Verbindungszeichenfolgen. Die Eigenschaft SSPROP_INIT_FAILOVERPARTNER wurde dem DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz hinzugefügt, und das Schlüsselwort **FailoverPartner** ist ein neues Verbindungszeichenfolgen-Attribut für DBPROP_INIT_PROVIDERSTRING. Weitere Informationen finden Sie unter [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
  Der Failovercache wird aufrechterhalten, solange der Anbieter geladen wird, also bis **CoUninitialize** aufgerufen wird, oder solange die Anwendung über einen Verweis auf ein vom OLE DB-Treiber für SQL Server verwaltetes Objekt, wie z.B. ein Datenquellobjekt, verfügt.  
   
- Ausführliche Informationen zum OLE DB-Treibers für SQL Server Unterstützung für die Daten Bank Spiegelung finden Sie unter [Initialisierungs-und Autorisierungs Eigenschaften](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Ausführliche Informationen zur Unterstützung des OLE DB-Treibers für SQL Server für die Datenbankspiegelung finden Sie unter [Initialisierungs- und Autorisierungseigenschaften](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
  
   
 ## <a name="see-also"></a>Weitere Informationen  

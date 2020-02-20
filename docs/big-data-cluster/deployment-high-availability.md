@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 231a33f4d149e442487a7c93c1e2b4c5cdfad8d5
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 31e5d851b6c049bdd7fd81a4c90be1de7ceff77f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531994"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76115427"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Bereitstellen von Big Data-Clustern in SQL Server mit Hochverfügbarkeit
 
@@ -200,6 +200,7 @@ Bekannte Probleme und Einschränkungen bei Verfügbarkeitsgruppen für SQL Serve
 - Datenbanken, die als Ergebnis von anderen Workflows als `CREATE DATABASE` wie `RESTORE DATABSE`, `CREATE DATABASE FROM SNAPSHOT` erstellt werden, werden der Verfügbarkeitsgruppe nicht automatisch hinzugefügt. [Stellen Sie eine Verbindung mit der Instanz her](#instance-connect), und fügen Sie die Datenbank manuell zur Verfügbarkeitsgruppe hinzu.
 - Für bestimmte Vorgänge wie das Ausführen von Serverkonfigurationseinstellungen mit `sp_configure` ist eine Verbindung mit der `master`-Datenbank der SQL Server-Instanz erforderlich, nicht mit der Verfügbarkeitsgruppe `master`. Der entsprechende primäre Endpunkt kann nicht verwendet werden. Befolgen Sie die [Anweisungen](#instance-connect), um einen Endpunkt verfügbar zu machen, eine Verbindung mit der SQL Server-Instanz herzustellen und `sp_configure` auszuführen. Sie können die SQL-Authentifizierung nur verwenden, wenn Sie den Endpunkt manuell verfügbar machen, um eine Verbindung mit der `master`-Datenbank der SQL Server-Instanz herzustellen.
 - Die Konfiguration für Hochverfügbarkeit muss erstellt werden, sobald ein Big Data-Cluster bereitgestellt wird. Nach der Bereitstellung kann die Konfiguration für Hochverfügbarkeit mit Verfügbarkeitsgruppen nicht mehr aktiviert werden.
+- Obwohl die enthaltene msdb-Datenbank in der Verfügbarkeitsgruppe enthalten ist und die SQL-Agent-Aufträge darin repliziert werden, werden die Aufträge nicht pro Zeitplan ausgelöst. [Stellen Sie eine Verbindung mit jeder der SQL Server-Instanzen her](#instance-connect), und erstellen Sie die Aufträge in der Instanz msdb, um dieses Problem zu umgehen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

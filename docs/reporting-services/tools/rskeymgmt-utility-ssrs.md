@@ -20,10 +20,10 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f64ee56ddbd88f2d981d35fb24d9e156b734ff88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571475"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt-Hilfsprogramm (SSRS)
@@ -73,7 +73,7 @@ rskeymgmt {-?}
  **-j**  
  Konfiguriert eine Remoteberichtsserver-Instanz für die gemeinsame Nutzung der Berichtsserver-Datenbank, die von der lokalen Berichtsserverinstanz verwendet wird.  
   
- **-r**  *installationID*  
+ **-r**  *Installations-ID*  
  Entfernt die Informationen zu einem symmetrischen Schlüssel für eine bestimmte Berichtsserverinstanz, wodurch der Berichtsserver aus einer Bereitstellung für horizontales Skalieren entfernt wird. *installationID* ist ein GUID-Wert, der in der Datei RSReportserver.config gefunden werden kann.  
   
  **-f**  *Datei*  
@@ -95,13 +95,13 @@ rskeymgmt {-?}
  **-n**  
  Gibt den Namen der Berichtsserverinstanz auf einem Remotecomputer an. Dieses Argument ist optional, wenn Sie den Berichtsserver auf der standardmäßigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz installiert haben (der Standardwert für **-n** ist MSSQLSERVER). Wenn Sie den Berichtsserver als benannte Instanz installiert haben, ist **-n** erforderlich.  
   
- **-u**  *useraccount*  
+ **-u**  *Benutzerkonto*  
  Gibt das Administratorkonto auf dem Remotecomputer an, den Sie der Bereitstellung für horizontales Skalieren hinzufügen. Wird kein Konto angegeben, werden die Anmeldeinformationen des aktuellen Benutzers verwendet.  
   
  **-v**  *Kennwort*  
  (Erforderlich für **-u**) Gibt das Kennwort eines Administratorkontos auf dem Remotecomputer an, den Sie der Bereitstellung für horizontales Skalieren hinzufügen möchten.  
   
- **-t**  *Ablaufverfolgung*  
+ **-t**  *trace*  
  Schreibt Fehlermeldungen in das Ablaufverfolgungsprotokoll. Dieses Argument enthält keinen Wert. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -145,7 +145,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Eine Berichtsserverbereitstellung für horizontales Skalieren bezeichnet ein Bereitstellungsmodell, bei dem mehrere Berichtsserverinstanzen dieselbe Berichtsserver-Datenbank gemeinsam nutzen. Eine Berichtsserver-Datenbank kann von jeder Berichtsserverinstanz verwendet werden, die ihre symmetrischen Schlüssel in der Datenbank speichert. Wenn eine Berichtsserver-Datenbank beispielsweise Schlüsselinformationen für drei Berichtsserverinstanzen enthält, werden alle drei Instanzen als Mitglieder derselben Bereitstellung für horizontales Skalieren betrachtet.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Verknüpfen von Berichtsserverinstanzen auf demselben Computer  
- Sie können eine Bereitstellung für horizontales Skalieren von mehreren Berichtsserverinstanzen aus erstellen, die auf demselben Computer installiert sind. Legen Sie die Argumente **-u** und **-v** nicht fest, wenn Sie Berichtsserverinstanzen verknüpfen, die lokal installiert sind. Die Argumente **-u** und **-v** werden nur verwendet, wenn Sie eine Instanz von einem Remotecomputer aus hinzufügen. Wenn Sie die Argumente festlegen, wird die folgende Fehlermeldung angezeigt: "Benutzeranmeldeinformationen können nicht für lokale Verbindungen verwendet werden."  
+ Sie können eine Bereitstellung für horizontales Skalieren von mehreren Berichtsserverinstanzen aus erstellen, die auf demselben Computer installiert sind. Legen Sie die Argumente **-u** und **-v** nicht fest, wenn Sie Berichtsserverinstanzen verknüpfen, die lokal installiert sind. Die Argumente **-u** und **-v** werden nur verwendet, wenn Sie eine Instanz von einem Remotecomputer aus hinzufügen. Wenn Sie die Argumente angeben, erhalten Sie folgenden Fehler: „Benutzeranmeldeinformationen können für lokale Verbindungen nicht verwendet werden.“  
   
  Das folgende Beispiel veranschaulicht die Syntax für eine Bereitstellung für horizontales Skalieren mithilfe mehrerer lokaler Instanzen. In diesem Beispiel ist \<**initializedinstance**> der Name einer Instanz, die bereits für die Verwendung der Berichtsserver-Datenbank initialisiert wurde, und \<**newinstance**> ist der Name der Instanz, die der Bereitstellung hinzugefügt werden soll:  
   
@@ -156,7 +156,7 @@ rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>
 #### <a name="removing-encryption-keys-for-a-single-report-server-in-a-scale-out-deployment"></a>Entfernen von Verschlüsselungsschlüsseln für einzelne Berichtsserver in einer Bereitstellung für horizontales Skalieren  
  In diesem Beispiel wird gezeigt, wie die Verschlüsselungsschlüssel für einen einzelnen Berichtsserver in einer Berichtsserverbereitstellung für horizontales Skalieren entfernt werden können. Die Schlüssel werden aus der Berichtsserver-Datenbank entfernt. Sobald die Schlüssel für diese Berichtsserverinstanz entfernt wurden, kann die Berichtsserverinstanz nicht mehr auf die verschlüsselten Daten in der Datenbank zugreifen; die Instanz wurde somit faktisch aus der Bereitstellung für horizontales Skalieren entfernt.  
   
- Um eine Berichtsserverinstanz aus einer Bereitstellung für horizontales Skalieren zu entfernen, ist es erforderlich, eine Installations-ID anzugeben. Die Installations-ID ist ein GUID, der in der Datei RSReportserver.config der Berichtsserverinstanz gespeichert ist, für die Sie die Verschlüsselungsschlüssel entfernen möchten. Sie müssen den folgenden Befehl auf dem Computer ausführen, den Sie aus der Bereitstellung für horizontales Skalieren entfernen möchten. Wenn der Berichtsserver als benannte Instanz installiert ist, verwenden Sie das Argument **-i** , um die Instanz anzugeben. Weitere Informationen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
+ Um eine Berichtsserverinstanz aus einer Bereitstellung für horizontales Skalieren zu entfernen, ist es erforderlich, eine Installations-ID anzugeben. Die Installations-ID ist ein GUID, der in der Datei RSReportserver.config der Berichtsserverinstanz gespeichert ist, für die Sie die Verschlüsselungsschlüssel entfernen möchten. Sie müssen den folgenden Befehl auf dem Computer ausführen, den Sie aus der Bereitstellung für horizontales Skalieren entfernen möchten. Wenn der Berichtsserver als benannte Instanz installiert ist, verwenden Sie das Argument **-i** , um die Instanz anzugeben. Weitere Informationen finden Sie unter [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
 ```  
 rskeymgmt -r <installationID>  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a7195055e95abe07770633ec672d746c5927054d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577871"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190443"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Erstellen von paginierten Berichten von Reporting Services mit dem Berichts-Designer (SSRS)
 
@@ -44,7 +44,7 @@ Berichtsprojekte dienen als Container für Berichtsdefinitionen und Ressourcen. 
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ist ein Clienttool. Sie können die Berichtslösung lokal auf dem Computer testen, zum Testen der Serverlösung in einer Testumgebung bereitstellen und dann in einer Produktionsumgebung bereitstellen. Überprüfen Sie nach der Bereitstellung, dass die Verarbeitungserweiterungen und Anmeldeinformationen der Datenquelle für die Berichtsserverumgebung konfiguriert wurden. Der Konfigurations-Manager unterstützt Sie beim Verwalten der Eigenschaften für verschiedene Bereitstellungen. Weitere Informationen finden Sie unter [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
 ##  <a name="bkmk_SharedDatasets"></a> Freigegebene Datasets  
  Verwenden Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , um freigegebene Datasets für eine Berichtslösung zu definieren und bereitzustellen. Freigegebene Datasets können mit den Eigenschaften **OverwriteDatasets** und **TargetDatasetFolder** unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
@@ -90,7 +90,7 @@ Paginierte Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werde
  Mit **TargetReportPartFolder** und anderen Eigenschaften können Berichtsteile unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 ##  <a name="bkmk_Resources"></a> Ressourcen  
- Sie können dem Projekt Dateien hinzufügen, die zwar einen Bezug zu dem Bericht haben, aber nicht vom Berichtsserver verarbeitet werden. Sie können z. B. Grafiken für Bilder oder ESRI-Shape-Dateien für räumliche Daten hinzufügen. Weitere Informationen finden Sie unter [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
+ Sie können dem Projekt Dateien hinzufügen, die zwar einen Bezug zu dem Bericht haben, aber nicht vom Berichtsserver verarbeitet werden. Sie können z. B. Grafiken für Bilder oder ESRI-Shape-Dateien für räumliche Daten hinzufügen. Weitere Informationen finden Sie unter [Ressourcen](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
 ##  <a name="bkmk_ReportLayout"></a> Paginiertes Berichtslayout  
  Um das Berichtslayout zu erstellen, ziehen Sie Berichtselemente und Datenbereiche aus der Toolbox auf die Entwurfsoberfläche, und ordnen Sie sie entsprechend an. Ziehen Sie Datasetfelder auf die Elemente in der Entwurfsoberfläche, um dem Bericht Daten hinzuzufügen. Wenn Sie Daten in einem Tablix-Datenbereich in Gruppen organisieren möchten, ziehen Sie Datasetfelder in den Bereich für die Gruppierung. Da Berichterstellungstools primär zum Erstellen von Berichtsdefinitionen dienen, sind die Ansätze für den Berichtsentwurf im Berichts-Generator und Report Designer einander sehr ähnlich.  
@@ -118,7 +118,7 @@ Paginierte Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werde
     > [!NOTE]  
     >  Um den Debugmodus verwenden zu können, müssen Sie ein Startelement festlegen. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Berichtsprojekt, klicken Sie auf **Eigenschaften**, und wählen Sie unter **StartItem**den Namen des anzuzeigenden Berichts aus.  
   
-     Wenn Sie einen bestimmten Bericht in der Vorschau anzeigen möchten, der nicht als Startelement für das Projekt festgelegt ist, wählen Sie eine Konfiguration aus, die den Bericht zwar erstellt, jedoch nicht bereitstellt (z.B. die DebugLocal-Konfiguration). Klicken Sie anschließend mit der rechten Maustaste auf den Bericht, und klicken Sie anschließend auf **Ausführen**. Sie müssen eine Konfiguration auswählen, die den Bericht nicht bereitstellt. Andernfalls wird der Bericht auf dem Berichtsserver veröffentlicht und nicht lokal in einem Vorschaufenster angezeigt.  
+     Wenn Sie einen bestimmten Bericht in der Vorschau anzeigen möchten, der nicht als Startelement für das Projekt festgelegt ist, wählen Sie eine Konfiguration aus, die den Bericht zwar erstellt, jedoch nicht bereitstellt (z.B. die DebugLocal-Konfiguration). Klicken Sie dann mit der rechten Maustaste auf den Bericht, und klicken Sie anschließend auf **Ausführen**. Sie müssen eine Konfiguration auswählen, die den Bericht nicht bereitstellt. Andernfalls wird der Bericht auf dem Berichtsserver veröffentlicht und nicht lokal in einem Vorschaufenster angezeigt.  
   
 -   **Seitenansicht.**  
   
@@ -168,7 +168,7 @@ Paginierte Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werde
   
  In der folgenden Tabelle sind die Fehlerebenen aufgeführt.  
   
-|Fehlerebene|und Beschreibung|  
+|Fehlerebene|Beschreibung|  
 |-----------------|-----------------|  
 |0|Äußerst schwerwiegende und unvermeidliche Erstellungsprobleme, die die Vorschau und Bereitstellung von Berichten verhindern.|  
 |1|Schwere Erstellungsprobleme, die das Berichtslayout drastisch ändern.|  

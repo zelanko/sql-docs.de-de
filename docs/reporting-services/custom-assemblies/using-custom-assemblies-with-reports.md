@@ -13,10 +13,10 @@ ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 94fdcbb6219aefb0cf38f0d77c0c3437ccf19915
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194097"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Verwenden benutzerdefinierter Assemblys mit Berichten
@@ -41,7 +41,7 @@ ms.locfileid: "63194097"
  [Initializing Custom Assembly Objects (Initialisieren von Objekten benutzerdefinierter Assemblys)](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md)  
  Beschreibt, wie Werte für benutzerdefinierte Assemblyobjekte initialisiert werden, die von einem Bericht aufgerufen werden.  
   
- [How to: Debug Custom Assemblies (Vorgehensweise: Debuggen von benutzerdefinierten Assemblys)](../../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md)  
+ [Vorgehensweise: Debuggen von benutzerdefinierten Assemblys](../../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md)  
  Beschreibt das Debuggen von benutzerdefiniertem Assemblycode.  
   
 ## <a name="see-also"></a>Weitere Informationen  

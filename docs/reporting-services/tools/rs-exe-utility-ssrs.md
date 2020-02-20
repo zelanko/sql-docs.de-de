@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8f16f30aeba48be7f0d2e61d2ef28b37060a232c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581287"
 ---
 # <a name="rsexe-utility-ssrs"></a>Hilfsprogramm 'RS.exe' (SSRS)
@@ -48,14 +48,14 @@ rs {-?}
 ##  <a name="bkmk_filelocation"></a> Dateispeicherort  
  **RS.exe** befindet sich unter **\Programme\Microsoft SQL Server\110\Tools\Binn**. Sie können das Hilfsprogramm von einem beliebigen Ordner im Dateisystem ausführen.  
   
-##  <a name="bkmk_arguments"></a> Argumente  
+##  <a name="bkmk_arguments"></a>Argumente  
  **-?**  
  (Optional) Zeigt die Syntax der **rs** -Argumente an.  
   
- **-i** *Eingabedatei*  
+ **-i** *input_file*  
  (Erforderlich) Gibt die auszuführende RSS-Datei an. Dieser Wert kann einen relativen oder einen vollqualifizierten Pfad zur RSS-Datei enthalten.  
   
- **-s** *Server-URL*  
+ **-s** *serverURL*  
  (Erforderlich) Gibt den Namen des Webservers und den Namen des virtuellen Verzeichnisses auf dem Berichtsserver an, in dem die Datei ausgeführt werden soll. Ein Beispiel für eine Berichtsserver-URL ist `https://examplewebserver/reportserver`. Das Präfix http:// oder https:// zu Beginn des Servernamens ist optional. Wenn Sie kein Präfix angeben, verwendet der Berichtsserver-Skripthost zunächst https:// und dann http://, falls https:// nicht verfügbar ist.  
   
  **-u** [*Domäne*\\]*Benutzername*  
@@ -83,7 +83,7 @@ rs {-?}
  **-b**  
  (Optional) Gibt an, dass die Befehle in der Skriptdatei als Batch ausgeführt werden. Falls ein Befehl fehlschlägt, wird ein Rollback für den Batch ausgeführt. Einige Befehle können nicht als Batch ausgeführt werden. Diese Befehle werden wie gewohnt ausgeführt. Nur Ausnahmen, die ausgegeben werden und nicht innerhalb des Skripts behandelt werden, führen zu einem Rollback. Wenn das Skript eine Ausnahme behandelt und normalerweise von **Main**zurückgegeben wird, wird ein Commit für den Batch ausgeführt. Wenn Sie diesen Parameter nicht angeben, werden die Befehle ausgeführt, ohne dass ein Batch erstellt wird. Weitere Informationen finden Sie unter [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
- **-v** *globaleVariable*  
+ **-v** *globalvar*  
  (Optional) Gibt globale Variablen an, die in dem Skript verwendet werden. Wenn das Skript globale Variablen verwendet, müssen Sie dieses Argument angeben. Der angegebene Wert muss für die in der RSS-Datei definierten globalen Variablen gültig sein. Sie müssen eine globale Variable für jedes **-v**-Argument angeben.  
   
  Das Argument **-v** wird in der Befehlszeile angegeben, um zur Laufzeit einen Wert für eine globale Variable festzulegen, die in Ihrem Skript definiert ist. Wenn Ihr Skript beispielsweise eine Variable namens *parentFolder*, enthält, können Sie in der Befehlszeile einen Namen für diesen Ordner angeben:  
@@ -92,7 +92,7 @@ rs {-?}
   
  Globale Variablen werden mit den vorliegenden Namen erstellt und auf die bereitgestellten Werte festgelegt. Durch Angeben von **-v a=** "**1**" **-v b=** "**2**" werden beispielsweise eine Variable namens **a** mit dem Wert**1**und eine Variable **b** mit dem Wert**2**erstellt.  
   
- Globale Variablen stehen für alle Funktionen im Skript zur Verfügung. Eine Kombination von umgekehrtem Schrägstrich und einem Anführungszeichen ( **\\"** ) wird als Anführungszeichen interpretiert. Anführungszeichen sind nur erforderlich, wenn die Zeichenfolge ein Leerzeichen enthält. Namen von Variablen müssen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]gültig sein. Sie müssen mit einem Buchstaben oder Unterstrich beginnen und dürfen ausschließlich Buchstaben, Ziffern oder Unterstriche enthalten. Reservierte Wörter können nicht als Variablennamen verwendet werden. Weitere Informationen zur Verwendung globaler Variablen finden Sie unter [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+ Globale Variablen stehen für alle Funktionen im Skript zur Verfügung. Eine Kombination von umgekehrtem Schrägstrich und einem Anführungszeichen ( **\\"** ) wird als Anführungszeichen interpretiert. Anführungszeichen sind nur erforderlich, wenn die Zeichenfolge ein Leerzeichen enthält. Namen von Variablen müssen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] gültig sein: sie müssen mit einem Buchstaben oder Unterstrich beginnen und Buchstaben, Zahlen oder Unterstriche enthalten. Reservierte Wörter können nicht als Variablennamen verwendet werden. Weitere Informationen zur Verwendung globaler Variablen finden Sie unter [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **-t**  
  (Optional) Schreibt Fehlermeldungen in das Ablaufverfolgungsprotokoll. Dieses Argument enthält keinen Wert. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
@@ -114,15 +114,15 @@ rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver
 ## <a name="remarks"></a>Bemerkungen  
  Sie können Skripts so definieren, dass sie Systemeigenschaften festlegen, Berichte veröffentlichen usw. Die Skripts, die Sie erstellen, können jede Methode der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -API einschließen. Weitere Informationen zu den verfügbaren Methoden und Eigenschaften finden Sie unter [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md).  
   
- Das Skript muss in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET-Code geschrieben und in einer Unicode- oder UTF-8-Textdatei mit der Dateinamenerweiterung „.rss“ gespeichert sein. Das Hilfsprogramm **rs** kann nicht zum Debuggen von Skripts verwendet werden. Führen Sie zum Debuggen eines Skripts den Code in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]aus.  
+ Das Skript muss in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET-Code geschrieben und in einer Unicode- oder UTF-8-Textdatei mit der Dateinamenerweiterung „.rss“ gespeichert sein. Das Hilfsprogramm **rs** kann nicht zum Debuggen von Skripts verwendet werden. Führen Sie den Code in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] aus, um ein Skript zu debuggen.  
   
 > [!TIP]  
 >  Ein ausführliches Beispiel finden Sie unter [Reporting Services-Beispielskript „rs.exe“ zum Migrieren von Inhalten zwischen Berichtsservern](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
-- [Ausführen einer Reporting Services-Skriptdatei](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
-- [Skripts für Bereitstellungs- und Verwaltungsaufgaben](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
-- [Skripterstellung mit dem Hilfsprogramm rs.exe und dem Webdienst](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [Run a Reporting Services Script File (Ausführen einer Reporting Services-Skriptdatei)](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
+- [Script Deployment and Administrative Tasks (Skripts für Bereitstellungs- und Verwaltungsaufgaben)](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [Script with the rs.exe Utility and the Web Service (Skripterstellung mit dem Hilfsprogramm rs.exe und dem Webdienst)](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
 - [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632910"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76909850"
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "73632910"
 
 - [![Download aus dem Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) Laden Sie SQL Server 2016 aus dem **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** herunter.
 - [![Azure Virtual Machine (klein)](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2016 SP1 bereits installiert ist.
-- [![SSMS herunterladen](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Wechseln Sie zu **[Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)** , um die neueste Version von SQL Server Management Studio (SSMS) abzurufen.
+- [![SSMS herunterladen](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Wechseln Sie zu **[Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**, um die neueste Version von SQL Server Management Studio (SSMS) abzurufen.
 
 ## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
 
@@ -39,7 +39,7 @@ Sie müssen Ihren Computer möglicherweise nach der Installation von SQL Server 
 
 Leistungs- und skalierungsbasierte Verbesserungen, die in SQL Server 2016 SP2 enthalten sind
 
-|Funktion|und Beschreibung|Weitere Informationen|
+|Funktion|Beschreibung|Weitere Informationen|
 |---|---|---|
 |Verbesserter Cleanupvorgang für die Verteilungsdatenbank |   Übergroße Verteilungsdatenbanktabellen führten zu Blockierungs- und Deadlocksituationen. Im Rahmen einer verbesserten Cleanup-Prozedur sollen einige davon beseitigt werden. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |Bereinigen der Änderungsnachverfolgung    |   Verbesserte Leistung und Effizienz des Cleanups für Nebentabellen bei der Änderungsnachverfolgung.    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
@@ -54,7 +54,7 @@ Leistungs- und skalierungsbasierte Verbesserungen, die in SQL Server 2016 SP2 en
 
 Unterstützbarkeit und Diagnose betreffende Verbesserungen sind in SQL Server 2016 SP2 beinhaltet.
 
-|Funktion|und Beschreibung|Weitere Informationen|
+|Funktion|Beschreibung|Weitere Informationen|
 |---|---|---|
 |Vollständige DTC-Unterstützung für Datenbanken in einer Verfügbarkeitsgruppe    |   Datenbankübergreifende Transaktionen für Datenbanken, die Teil einer Verfügbarkeitsgruppe sind, werden für SQL Server 2016 nicht unterstützt. Mit SQL Server 2016 SP2 führen wir die vollständige Unterstützung für verteilte Transaktionen mit Datenbanken der Verfügbarkeitsgruppe ein.   |       |
 |Update für die Spalte „is_encrypted“ in „sys.database“ zur genauen Wiedergabe des Verschlüsselungsstatus für TempDB |   Der Wert der Spalte „is_encrypted“ in „sys.databases“ beträgt 1 für tempdb, auch wenn Sie die Verschlüsselung für alle Benutzerdatenbanken deaktivieren und SQL Server neu starten. Das erwartete Verhalten ist, dass der Wert 0 (null) ist, da tempdb in dieser Situation nicht länger verschlüsselt ist. Beginnend mit SQL Server 2016 SP2 gibt „is_encrypted“ in „sys.databases“ nun den Verschlüsselungsstatus für tempdb genau wieder.  |       |
@@ -97,7 +97,7 @@ Die folgenden Features sind in der Standard, Web, Express und Local DB Edition v
 - Komprimierung
 - Dynamische Datenmaskierung
 - Differenzierte Überwachung
-- In-Memory OLTP (in Local DB nicht verfügbar)
+- In-Memory-OLTP (in der lokalen Datenbank nicht verfügbar)
 - Mehrere FileStream-Container (in Local DB nicht verfügbar)
 - Partitionierung
 - PolyBase
@@ -105,7 +105,7 @@ Die folgenden Features sind in der Standard, Web, Express und Local DB Edition v
 
 In der folgenden Tabelle werden wichtige Verbesserungen in SQL Server 2016 SP1 zusammengefasst.
 
-|Funktion|und Beschreibung|Weitere Informationen|
+|Funktion|Beschreibung|Weitere Informationen|
 |---|---|---|
 |Masseneinfügung in Heaps mit automatischem TABLOCK unter TF 715| Das Ablaufverfolgungsflag 715 aktiviert Tabellensperren für Massenladevorgänge in einen Heap ohne nicht gruppierte Indizes.|[Migrating SAP workloads to SQL Server just got 2.5x faster (Beschleunigung der Migration von SAP-Workloads zu SQL Server um das 2,5-fache)](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE OR ALTER|Bereitstellen von Objekten wie gespeicherten Prozeduren, Triggern, benutzerdefinierten Funktionen und Ansichten.|[Blog der SQL Server-Datenbank-Engine](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -131,7 +131,7 @@ Für die Installation von SQL Server 2016 SP1 ist nach der Installation möglich
 - [Service Pack 1 für Microsoft SQL Server 2016 herunterladen](https://www.microsoft.com/download/details.aspx?id=54276)
 - [SQL Server 2016 Service Pack 1 (SP1) freigegeben](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
 - [Releaseinformationen zu SQL Server 2016 Service Pack 1](https://support.microsoft.com/kb/3182545)
-- ![info_tip](../sql-server/media/info-tip.png) Links und Informationen zu allen unterstützten Versionen finden Sie unter [SQL Server-Update Center](https://msdn.microsoft.com/library/ff803383.aspx). Dort finden Sie auch Informationen zu Service Packs von [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
+- ![info_tip](../sql-server/media/info-tip.png) Links und Informationen zu allen unterstützten Versionen finden Sie unter [SQL Server-Update Center](https://msdn.microsoft.com/library/ff803383.aspx). Dort finden Sie auch Informationen zu Service Packs von [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 

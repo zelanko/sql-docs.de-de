@@ -1,6 +1,6 @@
 ---
-title: Eigenschaften von SQL Server Integration Services (Registerkarte „Dienst“) | Microsoft-Dokumentation
-ms.custom: ''
+title: Eigenschaften von SQL Server Integration Services (Registerkarte Dienst)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,18 +11,18 @@ ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d99dd32aa72d550db7aab32f0f4d9a4539d4251d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: e6b25e14ebc6f757239046987e338d941c3fbbd8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024018"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304943"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Eigenschaften von SQL Server Integration Services (Registerkarte Dienst)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Verwenden Sie die Registerkarte **Dienst** im Dialogfeld **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Eigenschaften**, um die folgenden Optionen anzuzeigen oder anzugeben.  
+  Verwenden Sie die Registerkarte **Dienst** im Dialogfeld **Eigenschaften** in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], um die folgenden Optionen anzuzeigen oder anzugeben.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Binärpfad**  
  Zeigt den Speicherort der Programmdateien an, die von diesem Dienst verwendet werden.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68024018"
  Zeigt die Prozess-ID von Windows an.  
   
  **SQL-Diensttyp**  
- Zeigt den für aufrufende Prozesse bereitgestellten Diensttyp an. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mehrere Dienste installiert.  
+ Zeigt den für aufrufende Prozesse bereitgestellten Diensttyp an. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert mehrere Dienste.  
   
  **Startmodus**  
  Richten Sie den Dienst mit den folgenden Auswahlmöglichkeiten ein:  
@@ -51,9 +51,9 @@ ms.locfileid: "68024018"
   
 -   Automatisch: Dieser Dienst wird zusammen mit dem Computer gestartet.  
   
--   Deaktiviert: Dieser Dienst kann nicht gestartet werden.  
+-   Deaktiviert: Der Dienst kann nicht gestartet werden.  
   
- **Status**  
+ **State**  
  Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. „ **…** “ gibt einen ausstehenden Statuswechsel an.  
   
   

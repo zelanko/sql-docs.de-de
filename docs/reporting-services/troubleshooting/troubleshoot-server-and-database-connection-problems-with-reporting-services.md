@@ -1,6 +1,7 @@
 ---
-title: Problembehandlung bei Server- und Datenbankverbindungsproblemen mit Reporting Services | Microsoft-Dokumentation
-ms.date: 05/28/2019
+title: Beheben von Problemen mit Server- und Datenbankverbindungen mithilfe von Reporting Services | Microsoft-Dokumentation
+description: Verwenden Sie dieses Thema, um Probleme zu behandeln, die beim Herstellen einer Verbindung mit einem Berichtsserver auftreten. In diesem Artikel werden außerdem Informationen zu Meldungen des Typs „Unerwartete Fehler“ bereitgestellt.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eda9f349cf53d77af14df10c842c9619fb6d370a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c6d91ea5d1daf7d63c56ae84b2cf76d3ee82846c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403181"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243631"
 ---
-# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Problembehandlung bei Server- und Datenbankverbindungsproblemen mit Reporting Services
+# <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Beheben von Problemen mit Server- und Datenbankverbindungen mithilfe von Reporting Services
 Verwenden Sie dieses Thema, um Probleme zu behandeln, die beim Herstellen einer Verbindung mit einem Berichtsserver auftreten. In diesem Thema werden außerdem Informationen zu "Unerwartete Fehler"-Meldungen bereitgestellt. Weitere Informationen zum Konfigurieren von Datenquellen und Konfigurieren von Verbindungsinformationen des Berichtsservers finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) und [Konfigurieren einer Berichtsserver-Datenbankverbindung (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>Es kann keine Verbindung mit der 'datasourcename'-Datenquelle hergestellt werden. (rsErrorOpeningConnection)  
@@ -28,7 +29,7 @@ Der Benutzer verfügt nicht über Berechtigungen zum Zugreifen auf die Datenquel
 Dieser Fehler tritt auf, wenn Anmeldeinformationen über mehrere Computerverbindungen weitergeleitet werden. Wenn Sie die Windows-Authentifizierung verwenden und das Kerberos-Protokoll, Version 5, nicht aktiviert ist, tritt dieser Fehler auf, wenn Anmeldeinformationen über mehr als eine Computerverbindung weitergeleitet werden. Verwenden Sie gespeicherte Anmeldeinformationen, oder fordern Sie die Benutzer zur Eingabe ihrer Anmeldeinformationen auf, um diesen Fehler zu umgehen. Weitere Informationen zur Problemumgehung finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ### <a name="an-error-has-occurred-while-establishing-a-connection-to-the-server"></a>Fehler beim Herstellen einer Verbindung mit dem Server.  
-Beim Herstellen einer Verbindung mit SQL Server kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. (Anbieter: Named Pipes-Anbieter, Fehler: 40 – Es konnte keine Verbindung mit SQL Server hergestellt werden). Dieser Fehler wird von der Instanz der Datenbank-Engine zurückgegeben, die die Berichtsserver-Datenbank hostet. In den meisten Fällen tritt dieser Fehler auf, weil der SQL Server-Dienst beendet wird. Wenn Sie SQL Server Express with Advanced Services oder eine benannte Instanz verwenden, tritt dieser Fehler auf, wenn die Berichtsserver-URL oder die Verbindungszeichenfolge für die Berichtsserver-Datenbank falsch ist. Gehen Sie wie folgt vor, um diese Probleme zu beheben:  
+Beim Herstellen einer Verbindung mit SQL Server kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. (Anbieter: Named Pipes-Anbieter, Fehler: 40 – Es konnte keine Verbindung zu SQL Server hergestellt werden. Dieser Fehler wird von der Instanz der Datenbank-Engine zurückgegeben, die die Berichtsserver-Datenbank hostet. In den meisten Fällen tritt dieser Fehler auf, weil der SQL Server-Dienst beendet wird. Wenn Sie SQL Server Express with Advanced Services oder eine benannte Instanz verwenden, tritt dieser Fehler auf, wenn die Berichtsserver-URL oder die Verbindungszeichenfolge für die Berichtsserver-Datenbank falsch ist. Gehen Sie wie folgt vor, um diese Probleme zu beheben:  
   
 * Überprüfen Sie, ob der SQL Server-Dienst (**MSSQLSERVER**) gestartet wurde. Klicken Sie auf dem Computer, der die Instanz der Datenbank-Engine hostet, auf „Start“, klicken Sie auf „Verwaltung“, klicken Sie auf „Dienste“, und führen Sie einen Bildlauf zu „SQL Server“ (**MSSQLSERVER**) durch. Wenn der Dienst nicht gestartet wurde, klicken Sie mit der rechten Maustaste auf den Dienst, wählen Sie „Eigenschaften“, wählen Sie unter „Starttyp“ die Option „Automatisch“, klicken Sie auf „Übernehmen“, klicken Sie auf „Start“, und klicken Sie dann auf „OK“.   
 * Überprüfen Sie, ob die Berichtsserver-URL und die Verbindungszeichenfolge für die Berichtsserver-Datenbank richtig sind. Wenn Reporting Services oder die Datenbank-Engine als benannte Instanz installiert wurde, beinhaltet die bei der Installation erstellte Standard-Verbindungszeichenfolge den Instanznamen. Wenn Sie z.B. eine Standardinstanz von SQL Server Express with Advanced Services auf einem Server mit dem Namen DEVSRV01 installiert haben, lautet die Webportal-URL „DEVSRV01\Reports$SQLEXPRESS“. Außerdem lautet der Datenbank-Servername in der Verbindungszeichenfolge ähnlich wie DEVSRV01\SQLEXPRESS. Weitere Informationen über URLs und Datenquellen-Verbindungszeichenfolgen für SQL Server Express finden Sie unter [Reporting Services in SQL Server Express with Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Starten Sie zum Überprüfen der Verbindungszeichenfolge für die Berichtsserver-Datenbank das Reporting Services-Konfigurationstool, und überprüfen Sie die Seite „Setup der Datenbank“.  
@@ -59,14 +60,14 @@ Es kann keine Verbindung mit \<dem Namen Ihres Servers> hergestellt werden. Der 
   
 Um diesen Fehler zu beheben, sollten Sie die Software neu installieren. In allen anderen Fällen können Sie das Problem zeitweilig umgehen, indem Sie über den SOAP-Endpunkt eine Verbindung mit dem Berichtsserver herstellen:  
   
-* Geben Sie in Management Studio im Dialogfeld **Verbindung mit Server herstellen** unter **Servername**die URL des Berichtsservers ein. Die Standardeinstellung ist `https://<your server name>/reportserver`. Wenn Sie SQL Server 2008 Express with Advanced Services verwenden, ist die Standardeinstellung `https://<your server name>/reportserver$sqlexpress`.  
+* Geben Sie in Management Studio im Dialogfeld **Verbindung mit Server herstellen** unter **Servername**die URL des Berichtsservers ein. Standardmäßig ist dies `https://<your server name>/reportserver`. Wenn Sie SQL Server 2008 Express with Advanced Services verwenden, ist die Standardeinstellung `https://<your server name>/reportserver$sqlexpress`.  
   
 Um den Fehler zu beheben, damit Sie über den WMI-Anbieter eine Verbindung herstellen können, führen Sie das Installationsprogramm aus, um Reporting Services zu reparieren oder neu zu installieren.  
   
 ## <a name="connection-error-where-login-failed-due-to-unknown-user-name-or-bad-password"></a>Verbindungsfehler, wobei die Anmeldung aufgrund eines unbekannten Benutzernamens oder ungültigen Kennworts einen Fehler erzeugt hat  
 Ein **rsReportServerDatabaseLogonFailed** -Fehler kann auftreten, wenn Sie ein Domänenkonto für die Verbindung vom Berichtsserver zur Berichtsserver-Datenbankverbindung verwenden und das Kennwort des Domänenkontos geändert wurde.   
   
-Der vollständige Fehlertext lautet: "Der Berichtsserver kann keine Verbindung mit der Berichtsserver-Datenbank herstellen. Fehler bei der Anmeldung (**rsReportServerDatabaseLogonFailed**). Anmeldefehler: unbekannter Benutzername oder falsches Kennwort."  
+Der vollständige Fehlertext lautet: Der Berichtsserver kann keine Verbindung mit der Berichtsserver-Datenbank herstellen. Fehler bei der Anmeldung (**rsReportServerDatabaseLogonFailed**). Anmeldefehler: unbekannter Benutzername oder falsches Kennwort."  
   
 Wenn Sie das Kennwort zurücksetzen, muss die Verbindung aktualisiert werden. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
@@ -76,7 +77,7 @@ Dieser Fehler tritt auf, wenn vom Berichtsserver keine Verbindung mit der relati
   
 Dieser Fehler kann auch auftreten, wenn die Datenbank-Engine-Instanz, von der die Berichtsserver-Datenbank gehostet wird, nicht für Remoteverbindungen konfiguriert ist. In einigen Editionen von SQL Server sind Remoteverbindungen standardmäßig aktiviert. Führen Sie das SQL Server-Konfigurations-Manager-Tool aus, um zu überprüfen, ob sie bei der von Ihnen verwendeten SQL Server-Datenbank-Engine-Instanz aktiviert sind. Sie müssen sowohl TCP/IP als auch Named Pipes aktivieren. Ein Berichtsserver verwendet beide Protokolle. Anweisungen zum Aktivieren von Remoteverbindungen finden Sie unter „Konfigurieren von Remoteverbindungen für die Berichtsserver-Datenbank“ im Abschnitt [Konfigurieren eines Berichtsservers für die Remoteverwaltung](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-Wenn die Fehlermeldung folgenden zusätzlichen Text enthält, ist das Kennwort für das zum Ausführen der Datenbank-Engine-Instanz verwendete Konto abgelaufen: „Fehler beim Herstellen einer Verbindung mit dem Server. Beim Herstellen einer Verbindung mit SQL Server kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. (**Anbieter: SQL Server Network Interfaces, Fehler: 26 – Fehler beim Suchen des angegebenen Servers oder der angegebenen Instanz)** .“ Setzen Sie das Kennwort zurück, um diesen Fehler zu beheben:   
+Wenn die Fehlermeldung folgenden zusätzlichen Text enthält, ist das Kennwort für das zum Ausführen der Datenbank-Engine-Instanz verwendete Konto abgelaufen: „An error has occurred while establishing a connection to the server.“ (Fehler beim Herstellen einer Verbindung mit dem Server.) Beim Herstellen einer Verbindung mit SQL Server kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. **(provider: SQL Server Network Interfaces, error: 26 - Error Locating Server/Instance Specified. [Anbieter: SQL Server-Netzwerkschnittstellen, Fehler: 26 – Fehler beim Auffinden des angegebenen Servers/der angegebenen Instanz.])** Setzen Sie das Kennwort zurück, um diesen Fehler zu beheben:   
   
 ## <a name="rpc-server-is-not-listening"></a>"Der RPC-Server ist nicht in Wartestellung"  
 Der Berichtsserverdienst verwendet für einige Vorgänge Remoteprozeduraufruf-Server (RPC). Wenn der Fehler "Der RPC-Server ist nicht in Wartestellung" auftritt, überprüfen Sie, ob der Berichtsserverdienst ausgeführt wird.  
@@ -85,7 +86,7 @@ Der Berichtsserverdienst verwendet für einige Vorgänge Remoteprozeduraufruf-Se
 Diese Fehlermeldung verweist auf ein Problem bei der Datenquellenverbindung. Sie sollten die Verbindungszeichenfolge prüfen und sicherstellen, dass Sie über die Zugriffsberechtigung für die Datenquelle verfügen. Wenn Sie die Windows-Authentifizierung für den Zugriff auf eine Datenquelle verwenden, benötigen Sie die Zugriffsberechtigung für den Computer, der als Host für die Datenquelle dient.  
   
 ## <a name="unable-to-grant-database-access-in-sharepoint-central-administration"></a>Gewähren des Datenbankzugriffs in SharePoint-Zentraladministration nicht möglich  
-Wenn Sie Reporting Services für die Integration mit einem SharePoint-Produkt oder mit einer -Technologie unter Windows Vista oder Windows Server 2008 konfiguriert haben, erhalten Sie möglicherweise die folgende Fehlermeldung, wenn Sie versuchen, Zugriff auf die Seite **Datenbankzugriff gewähren** in der SharePoint-Zentraladministration zu gewähren: „Verbindung zum Computer kann nicht hergestellt werden.“  
+Wenn Sie Reporting Services für die Integration mit einem SharePoint-Produkt oder mit einer SharePoint-Technologie unter Windows Vista oder Windows Server 2008 konfiguriert haben, erhalten Sie möglicherweise die folgende Fehlermeldung, wenn Sie versuchen, Zugriff auf die Seite **Datenbankzugriff gewähren** in der SharePoint-Zentraladministration zu gewähren: „Mit dem Computer kann keine Verbindung hergestellt werden“.  
   
 Dies geschieht, weil die Benutzerkontensteuerung in Windows Vista und Windows Server 2008 eine explizite Akzeptanz durch einen Administrator für die Erhöhung und Nutzung des Administratortokens bei der Durchführung von Aufgaben erfordert, die Administratorberechtigungen benötigen. In diesem Fall kann der Windows SharePoint Services-Verwaltungsdienst nicht erhöht werden, um dem Reporting Services-Dienstkonto oder den Konten Zugriff auf die SharePoint-Konfiguration und -Inhaltsdatenbanken zu gewähren.  
   
@@ -110,10 +111,10 @@ Es gibt zwei Lösungen für dieses Problem:
 Wenn Sie die Berichtsserverdatenbanken **ReportServer** und **ReportServerTempDB**auf einem virtuellen SQL Server erstellen, der in einem MSCS-Cluster ausgeführt wird, wird der Remotename im Format `<domain>\<computer_name>$` möglicherweise nicht als Anmeldung auf dem SQL Server registriert. Wenn Sie das Berichtsserver-Dienstkonto als ein Konto konfiguriert haben, das diesen Remotenamen für Verbindungen erfordert, können Benutzer keine Verbindung mit den Verzeichnissen „/reports“ und „/reportserver“ in Reporting Services herstellen. Zum Beispiel erfordert das integrierte Windows-Konto NetworkService diesen Remotenamen. Um dieses Problem zu vermeiden, verwenden Sie ein explizites Domänenkonto oder eine SQL Server-Anmeldung, um eine Verbindung mit den Berichtsserverdatenbanken herzustellen.  
     
   ## <a name="see-also"></a>Weitere Informationen  
-[Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+[Browser Support for Reporting Services and Power View (Browserunterstützung für Reporting Services und Power View)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Troubleshoot Data Retrieval issues with Reporting Services Reports (Problembehandlung: Probleme beim Abrufen von Daten in Reporting Services-Berichten)](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
-[Behandlung von Problemen bei Abonnements und Übermittlung in Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
+[Troubleshoot Reporting Services Subscriptions and Delivery (Problembehandlung: Abonnements und Übermittlung in Reporting Services)](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
   

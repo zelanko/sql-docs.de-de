@@ -9,13 +9,13 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63042973"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Lernprogramm: Formatieren von Text (Berichts-Generator)
+# <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatieren von Text (Berichts-Generator)
 
 In diesem Tutorial formatieren Sie in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht Text auf verschiedene Weise. Sie können mit unterschiedlichen Formaten experimentieren. 
 
@@ -25,9 +25,9 @@ Nach dem Einrichten des leeren Berichts mit der Datenquelle und dem Dataset kön
   
 In einem Schritt machen Sie absichtlich einen Fehler, um dadurch erkennen zu können, warum es sich um einen Fehler handelt. Anschließend beheben Sie den Fehler, um den gewünschten Effekt zu erreichen.  
     
-Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 20 Minuten  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="CreateReport"></a>Erstellen eines leeren Berichts mit einer Datenquelle und einem Dataset  
@@ -67,7 +67,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 2.  Vergewissern Sie sich, dass die Datenquelle **TextDataSource**ist.  
   
-3.  Geben Sie im Feld **Name** Folgendes ein: **TextDataset**.  
+3.  Geben Sie im Feld **Name** Folgendes ein: **TextDataset.**  
   
 4.  Überprüfen Sie, ob der Abfragetyp **Text** ausgewählt ist, und klicken Sie anschließend auf **Abfrage-Designer**.  
   
@@ -353,9 +353,9 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
   
 4.  Klicken Sie auf **Speichern**.  
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 
-Es gibt in Berichts-Generator viele Möglichkeiten, um Text zu formatieren. Das [Tutorial: Erstellen eines Freiformberichts](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
+Es gibt in Berichts-Generator viele Möglichkeiten, um Text zu formatieren. [Tutorial: Erstellen eines Freiformberichts](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
 
 [Tutorials für den Bericht-Generator](../reporting-services/report-builder-tutorials.md) 
 [Formatieren von Berichtselementen](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

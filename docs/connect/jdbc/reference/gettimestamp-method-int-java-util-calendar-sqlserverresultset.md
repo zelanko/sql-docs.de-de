@@ -16,10 +16,10 @@ ms.assetid: f2dd5688-7344-437a-8716-7024fb8e9c31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4022d3a90e81ba3d4de73aab88b740108584c5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978892"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar-sqlserverresultset"></a>getTimestamp-Methode (int, java.util.Calendar) (SQLServerResultSet)
@@ -42,10 +42,10 @@ public java.sql.Timestamp getTimestamp(int columnIndex,
   
  *cal*  
   
- Ein Kalender Objekt.  
+ Ein Calendar-Objekt  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Timestamp-Objekt.  
+ Ein Timestamp-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

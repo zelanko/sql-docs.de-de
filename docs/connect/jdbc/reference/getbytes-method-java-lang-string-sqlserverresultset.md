@@ -16,10 +16,10 @@ ms.assetid: ff617165-47f8-41c1-9c51-37ffc7714923
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4591a91d1adb924801a39a132a0f20c68579e31b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953383"
 ---
 # <a name="getbytes-method-javalangstring-sqlserverresultset"></a>getBytes-Methode (java.lang.String) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public byte[] getBytes(java.lang.String columnName)
  Eine **Zeichenfolge**, die den Spaltennamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Array von **Byte** Werten.  
+ Ein Array von **byte**-Werten  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

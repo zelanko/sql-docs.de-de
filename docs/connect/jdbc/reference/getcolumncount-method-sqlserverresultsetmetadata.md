@@ -1,5 +1,5 @@
 ---
-title: GetColumnCount-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
+title: getColumnCount-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a1fc3f50-3635-4fc5-b570-94d2c5a1873c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df819ddaf8f6f574af26c5f7973beb7ae97384e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952981"
 ---
 # <a name="getcolumncount-method-sqlserverresultsetmetadata"></a>getColumnCount-Methode (SQLServerResultSetMetaData)
@@ -41,7 +41,7 @@ public int getColumnCount()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese GetColumnCount-Methode wird von der GetColumnCount-Methode in der Java. SQL. ResultSetMetaData-Schnittstelle angegeben.  
+ Diese getColumnCount-Methode wird von der getColumnCount-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSetMetaData-Methoden](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

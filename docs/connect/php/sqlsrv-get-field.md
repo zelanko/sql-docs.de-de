@@ -18,10 +18,10 @@ ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64ddca64f049ba95426dec542d68dc8a84e7d9dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015010"
 ---
 # <a name="sqlsrv_get_field"></a>sqlsrv_get_field
@@ -36,19 +36,19 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$stmt*: Eine Anweisungsressource, die einer ausgeführten Anweisung entspricht.  
+*$stmt*: Hierbei handelt es sich um eine Anweisungsressource, die einer ausgeführten Anweisung entspricht.  
   
-*$fieldIndex*: Der Index des abzurufenden Felds. Indizes beginnen mit 0.  
+*$fieldIndex*: Hierbei handelt es sich um den Index des abzurufenden Felds. Indizes beginnen mit 0.  
   
-*$getAsType* [OPTIONAL]: Eine **SQLSRV**-Konstante (**SQLSRV_PHPTYPE_&#x2a;** ), die den PHP-Datentyp für die zurückgegebenen Daten bestimmt. Informationen zu den unterstützten Datentypen finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Wenn kein Rückgabetyp spezifiziert ist, wird ein PHP-Typ zurückgegeben. Informationen zu PHP-Standardtypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Informationen zum Spezifizieren von PHP-Datentypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+*$getAsType* [OPTIONAL]: Hierbei handelt es sich um eine **SQLSRV**-Konstante (**SQLSRV_PHPTYPE_&#x2a;** ), welche den PHP-Datentyp für die zurückgegebenen Daten bestimmt. Informationen zu den unterstützten Datentypen finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Wenn kein Rückgabetyp spezifiziert ist, wird ein PHP-Typ zurückgegeben. Informationen zu PHP-Standardtypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Informationen zum Festlegen von PHP-Datentypen finden Sie unter [Vorgehensweise: Festlegen von PHP-Datentypen](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="return-value"></a>Rückgabewert  
-Die Felddaten. Sie können den PHP-Datentyp der zurückgegebenen Daten festlegen, indem Sie den *$getAsType* -Parameter verwenden. Falls kein Rückgabedatentyp festgelegt ist, wird der PHP-Standarddatentyp zurückgegeben. Informationen zu PHP-Standardtypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Informationen zum Spezifizieren von PHP-Datentypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+Die Felddaten. Sie können den PHP-Datentyp der zurückgegebenen Daten festlegen, indem Sie den *$getAsType* -Parameter verwenden. Falls kein Rückgabedatentyp festgelegt ist, wird der PHP-Standarddatentyp zurückgegeben. Informationen zu PHP-Standardtypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Informationen zum Festlegen von PHP-Datentypen finden Sie unter [Vorgehensweise: Festlegen von PHP-Datentypen](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="remarks"></a>Bemerkungen  
 Die Kombination von **sqlsrv_fetch** und **sqlsrv_get_field** bewirkt, dass auf Daten nur vorangehend zugegriffen werden kann.  
   
-Die Kombination **sqlsrv_fetch**/**sqlsrv_get_field** lädt nur ein Feld einer Zeile eines Resultsets in den Skriptspeicher und erlaubt die Festlegung von PHP-Rückgabetypen. Informationen zur Angabe des PHP-Rückgabetyps finden Sie unter [Vorgehensweise: PHP-Datentypen festlegen](../../connect/php/how-to-specify-php-data-types.md). Diese Kombination von Funktionen macht es möglich Daten als Stream abzurufen. Informationen zum Abrufen von Daten als Stream finden Sie unter [Abrufen von Daten als Stream mit dem SQLSRV-Treiber](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md).  
+Die Kombination **sqlsrv_fetch**/**sqlsrv_get_field** lädt nur ein Feld einer Zeile eines Resultsets in den Skriptspeicher und erlaubt die Festlegung von PHP-Rückgabetypen. (Informationen zum Festlegen des PHP-Rückgabetyps finden Sie unter [Vorgehensweise: Festlegen von PHP-Datentypen](../../connect/php/how-to-specify-php-data-types.md).) Diese Kombination von Funktionen macht es möglich Daten als Stream abzurufen. Informationen zum Abrufen von Daten als Stream finden Sie unter [Abrufen von Daten als Stream mit dem SQLSRV-Treiber](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Beispiel  
 Das folgende Beispiel ruft eine Datenzeile ab, die eine Produktprüfung enthält, sowie den Namen des Prüfers. Zum Abrufen von Daten aus dem Resultset wird **sqlsrv_get_field** verwendet. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  

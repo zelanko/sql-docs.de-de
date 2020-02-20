@@ -11,16 +11,16 @@ ms.assetid: b351e999-85bf-498b-915a-f91d89134bce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d9362a41e5a48400c1b63d52b2ff89095d119d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981403"
 ---
 # <a name="getnstring-method-javalangstring"></a>getNString-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen **NCHAR**-, **nvarchar**-oder **LONGNVARCHAR** -Parameters als Zeichenfolge in der Programmiersprache Java ab.  
+  Diese Methode ruft den Wert des angegebenen **NCHAR**-, **NVARCHAR**- oder **LONGNVARCHAR**-Parameters als Zeichenfolge in der Programmiersprache Java ab.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -14,10 +14,10 @@ ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193849"
 ---
 # <a name="authentication-in-reporting-services"></a>Authentifizierung in Reporting Services
@@ -100,7 +100,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
  In folgender Abbildung sehen Sie die Methode, wie Benutzer im Webdienst authentifiziert werden, wenn Ihre Anwendung mit einem Berichtsserver eingesetzt wird, der für die Verwendung einer benutzerdefinierten Authentifizierungserweiterung konfiguriert ist.  
   
- ![Reporting Services-Sicherheitsauthentifizierungsfluss](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Reporting Services security authentication flow")  
+ ![Ablauf der Sicherheitsauthentifizierung von Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Ablauf der Sicherheitsauthentifizierung von Reporting Services")  
   
  Wie in Abbildung 2 gezeigt, sieht der Authentifizierungsprozess folgendermaßen aus:  
   

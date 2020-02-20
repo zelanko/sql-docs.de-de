@@ -16,10 +16,10 @@ ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e2cf823a6c1cd33d647472a2e709517175ddce7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978164"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns-Methode (SQLServerDatabaseMetaData)
@@ -45,7 +45,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
   
  Ein **String-Objekt**, das das Schemanamenmuster enthält.  
   
- *table*  
+ *Tabelle*  
   
  Ein **String-Objekt**, das den Tabellennamen enthält.  
   
@@ -60,7 +60,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
   
  Das von der getVersionColumns-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |SCOPE|**short**|Wird vom JDBC-Treiber nicht unterstützt.|  
 |COLUMN_NAME|**String**|Der Spaltenname.|  
@@ -69,7 +69,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 |COLUMN_SIZE|**int**|Die Genauigkeit der Spalte.|  
 |BUFFER_LENGTH|**int**|Die Länge der Spalten in Bytes.|  
 |DECIMAL_DIGITS|**short**|Die Dezimalstellen der Spalte.|  
-|PSEUDO_COLUMN|**short**|Gibt an, ob die Spalte eine Pseudospalte ist. Mögliche Werte:<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
+|PSEUDO_COLUMN|**short**|Gibt an, ob die Spalte eine Pseudospalte ist. Es kann sich um einen der folgenden Werte handeln:<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
 > [!NOTE]  
 >  Weitere Informationen zu den Daten, die von der getVersionColumns-Methode zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „sp_datatype_info (Transact-SQL)“.  

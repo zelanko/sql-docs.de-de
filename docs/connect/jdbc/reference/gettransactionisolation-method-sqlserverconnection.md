@@ -1,5 +1,5 @@
 ---
-title: gettransaktionisolation-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: getTransactionIsolation-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4b9a8b537e110f220203c0cda7d3ea27e8a6385e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978670"
 ---
 # <a name="gettransactionisolation-method-sqlserverconnection"></a>getTransactionIsolation-Methode (SQLServerConnection)
@@ -53,7 +53,7 @@ public int getTransactionIsolation()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese gettransaktionisolation-Methode wird von der gettransaktionisolation-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
+ Diese getTransactionIsolation-Methode wird von der getTransactionIsolation-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

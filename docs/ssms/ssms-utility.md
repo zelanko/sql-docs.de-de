@@ -14,14 +14,14 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/07/2019
-ms.openlocfilehash: 4fa84860e2d101b43b1ea4ebfe09d9580c0088ee
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5a31fb94fad2e063fe9846bd820957abb4ce9b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893224"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243895"
 ---
 # <a name="ssms-utility"></a>SSMS-Hilfsprogramm
 
@@ -50,16 +50,16 @@ Sie können Dateien angeben, die Abfragen, Projekte oder Lösungen enthalten. F�
  
  *solutionfile* gibt eine zu öffnende Lösung an. Der Parameter muss den vollständigen Pfad zur Lösungsdatei enthalten. 
  
-[ **-S** _servername_] gibt den Servernamen an.
+[ **-S** _servername_] Servername
  
-[ **-d** _databasename_] gibt den Datenbanknamen an.
+[ **-d** _databasename_] Name der Datenbank
 
 [ **-G**] Herstellen einer Verbindung mithilfe von Active Directory-Authentifizierung. Der Verbindungstyp wird angegeben, indem **-U** eingefügt wird.
 
 > [!Note]
 > **Active Directory: universell mit MFA-Unterstützung** wird aktuell nicht unterstützt.
  
-[ **-U** _username_] gibt den Benutzernamen für die Verbindung mit der SQL-Authentifizierung an.
+[ **-U**_username_] Benutzername für die Verbindung mit der SQL-Authentifizierung
  
 [ **-E**] gibt an, dass die Verbindung mithilfe der Windows-Authentifizierung hergestellt werden soll.
  
@@ -79,7 +79,7 @@ Dateien, die Abfragen enthalten, fordern eine Verbindung mit einem Server an, we
 
 In der folgenden Tabelle werden Servertypen zu Dateierweiterungen zugeordnet.
  
-|Servertyp|Erweiterung| 
+|Servertyp|Durchwahl| 
 |-----------------|---------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|SQL|
 |SQL Server Analysis Services|MDX<br /><br /> XMLA|

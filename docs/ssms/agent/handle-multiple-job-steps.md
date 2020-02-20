@@ -1,10 +1,9 @@
 ---
-title: Handhaben mehrerer Auftragsschritte | Microsoft-Dokumentation
-ms.custom: ''
+title: Handhaben mehrerer Auftragsschritte
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 800318df9945b674f3e0777f6c53b67b71ba61a9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ab3749882850be2a07ca9e72a31f729f2f6fadb8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262403"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242341"
 ---
 # <a name="handle-multiple-job-steps"></a>Handhaben mehrerer Auftragsschritte
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "68262403"
 
 Wenn Ihr Auftrag aus mehr als einem Auftragsschritt besteht, müssen Sie die Reihenfolge angeben, in der die Auftragsschritte ausgeführt werden. Dies wird *Ablaufsteuerung* genannt. Sie können jederzeit neue Auftragsschritte hinzufügen und den Ablauf der Auftragsschritte neu ordnen. Die Änderungen werden bei der nächsten Ausführung des Auftrags wirksam. In dieser Abbildung ist die Ablaufsteuerung eines Auftrags für die Datenbanksicherung dargestellt.  
   
-![Ablaufsteuerung für SQL Server-Agent-Auftragsschritte](../../ssms/agent/media/dbflow01.gif "Ablaufsteuerung für SQL Server-Agent-Auftragsschritte")  
+![Ablaufsteuerung bei den Schritten eines SQL Server-Agent-Auftrags](../../ssms/agent/media/dbflow01.gif "Ablaufsteuerung bei den Schritten eines SQL Server-Agent-Auftrags")  
   
 Der erste Schritt besteht in der Datenbanksicherung. Wenn dieser Schritt einen Fehler erzeugt, wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ein Fehler an den Ausführenden berichtet, der als Empfänger der Benachrichtigung definiert ist. Wenn der Schritt zur Datenbanksicherung erfolgreich ist, wird vom Auftrag der nächste Schritt ausgeführt, das "Bereinigen" der Kundendaten. Wenn dieser Schritt einen Fehler erzeugt, wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent der Ablauf mit der Datenbankwiederherstellung fortgesetzt. Wenn die Bereinigung der Benutzerdaten erfolgreich ist, wird der Auftrag mit dem nächsten Schritt fortgesetzt, beispielsweise Aktualisieren der Statistik und so weiter, bis der letzte Schritt entweder einen Erfolg oder einen Fehler des Berichts zum Ergebnis hat.  
   

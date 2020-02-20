@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: SQL Server Management Studio-Komponenten und -Konfiguration'
+title: Komponenten und Konfiguration von SSMS
 description: Ein Tutorial, in dem die Komponenten und grundlegenden Konfigurationsoptionen für Ihre SQL Server Management Studio-Umgebung erläutert werden.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-ms.openlocfilehash: 68a99d74d96fc4d54c7c97bad8049447761f67c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267079"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247293"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio-Komponenten und -Konfiguration
 
-In diesem Tutorial werden die verschiedenen Fensterkomponenten in SQL Server Management Studio (SSMS) und einige grundlegende Konfigurationsoptionen für Ihren Arbeitsbereich erläutert. In diesem Artikel lernen Sie Folgendes: 
+In diesem Tutorial werden die verschiedenen Fensterkomponenten in SQL Server Management Studio (SSMS) und einige grundlegende Konfigurationsoptionen für Ihren Arbeitsbereich erläutert. In diesem Artikel werden folgende Vorgehensweisen behandelt: 
 
 > [!div class="checklist"]
 > * Wie Sie die Komponenten der SSMS-Umgebung ermitteln

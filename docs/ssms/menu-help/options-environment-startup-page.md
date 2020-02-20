@@ -1,5 +1,5 @@
 ---
-title: " SQL Server-Optionsseite – Umgebung – Start | Microsoft-Dokumentation"
+title: " SQL Server-Optionsseite – Umgebung – Start"
 ms.date: 11/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -7,12 +7,12 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 80fff1e8db1fb9dabe6ed12d425bd844e954dac9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 13814422be321a3b26577909588385af43ad3406
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257273"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252222"
 ---
 # <a name="options-environment---startup-page"></a>Optionen (Umgebung – Startseite)
 
@@ -24,7 +24,7 @@ Im Dialogfeld **Optionen** können Sie die Startaktionen, Optionen für die Fens
 
 **Beim Start**
 
-Wählen Sie die Aktion aus, die [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] beim Start ausführen soll. Folgende Optionen sind verfügbar:
+Wählen Sie die Aktion aus, die [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] beim Start ausführen soll. Die Optionen sind:
 
 - Mit**Objekt-Explorer öffnen** werden Sie aufgefordert, eine Verbindung anzugeben, und der Objekt-Explorer wird aufgerufen.
 
@@ -40,7 +40,7 @@ Wählen Sie die Aktion aus, die [!INCLUDE[ssManStudioFull](../../includes/ssmans
 
 Aktivieren Sie dieses Kontrollkästchen, um Systemdatenbanken, Systemtabellen, Systemsichten und gespeicherte Systemprozeduren aus der Struktursicht des Objekt-Explorers zu entfernen. Systemfunktionen und Systemdatentypen werden nicht ausgeblendet. Diese Option betrifft nur Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , d. h., sie wirkt sich nicht auf Server aus, die im Objekt-Explorer bereits verbunden wurden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Optionen (Dialogfelder, F1-Hilfe)](options-dialog-boxes-f1-help.md)
 - [Optionen (Umgebung – Seite „Allgemein“)](options-environment-general-page.md)

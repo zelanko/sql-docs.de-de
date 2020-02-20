@@ -1,7 +1,7 @@
-﻿---
-title: Deinstallieren einer vorhandenen SQL Server-Instanz (Setup) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 09/11/2019
+---
+title: Deinstallieren einer vorhandenen Instanz
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16c406052b563accdc2cd98fd629909cce38e0ce
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 980982f6ae55d72ef6a54fdc07c0c707c4752b8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251065"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258951"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Deinstallieren einer vorhandenen SQL Server-Instanz (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "71251065"
  > [!NOTE]
  > Zur Deinstallation eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster verwenden Sie die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup bereitgestellte Funktion Knoten entfernen, um jeden Knoten einzeln zu entfernen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
 
-## <a name="considerations"></a>Weitere Überlegungen
+## <a name="considerations"></a>Überlegungen
 
 - Um SQL Server zu deinstallieren, müssen Sie ein lokaler Administrator mit der Berechtigung zur Anmeldung als Dienst sein. 
 - Wenn Ihr Computer über die *mindestens* erforderliche Menge an physischem Arbeitsspeicher verfügt, setzen Sie die Größe der Auslagerungsdatei auf die doppelte Menge des physischen Arbeitsspeichers herauf. Unzureichender virtueller Arbeitsspeicher kann zu einer unvollständigen Entfernung von SQL Server führen. 
@@ -55,13 +55,13 @@ ms.locfileid: "71251065"
     > Die ReportServer-Datenbanken sind in SQL Server Reporting Services enthalten.   
 
  
-1.  **Beenden Sie alle**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Dienste.** Beenden Sie alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste vor dem Deinstallieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten. Aktive Verbindungen können eine erfolgreiche Deinstallation verhindern.  
+1.  **Beenden Sie alle** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-**Dienste.** Beenden Sie alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste vor dem Deinstallieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten. Aktive Verbindungen können eine erfolgreiche Deinstallation verhindern.  
   
 1.  **Verwenden Sie ein Konto mit den entsprechenden Berechtigungen.** Melden Sie sich am Server an, indem Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto oder ein Konto mit entsprechenden Berechtigungen verwenden. Beispielsweise können Sie sich mit einem Konto beim Server anmelden, das Mitglied der lokalen Administratorgruppe ist.  
   
 ## <a name="uninstall"></a>Deinstallieren 
 
-# <a name="windows-10--2016-tabwindows10"></a>[Windows 10/2016+](#tab/Windows10)
+# <a name="windows-10--2016-"></a>[Windows 10/2016+](#tab/Windows10)
 
 Führen Sie die folgenden Schritte aus, um SQL Server unter Windows 10, Windows Server 2016, Windows Server 2019 und höher zu deinstallieren: 
 
@@ -84,7 +84,7 @@ Führen Sie die folgenden Schritte aus, um SQL Server unter Windows 10, Windows 
  
 1. Aktualisieren Sie das Fenster **Apps und Features**, um zu überprüfen, ob die SQL Server-Instanz erfolgreich entfernt wurde, und bestimmen Sie, ob noch Komponenten von SQL Server vorhanden sind. Entfernen Sie auch diese Komponenten über dieses Fenster, wenn Sie dies wünschen. 
 
-# <a name="windows-2008---2012-r2tabwindows2012"></a>[Windows 2008–2012 R2](#tab/windows2012)
+# <a name="windows-2008---2012-r2"></a>[Windows 2008–2012 R2](#tab/windows2012)
 
 Führen Sie die folgenden Schritte aus, um SQL Server unter Windows Server 2008, Windows Server 2012 und Windows 2012 R2 zu deinstallieren: 
 

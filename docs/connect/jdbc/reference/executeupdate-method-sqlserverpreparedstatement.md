@@ -16,10 +16,10 @@ ms.assetid: 677b0907-316e-40f2-a0d9-d4d0872c7f52
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74b4e135c8af30619820941cf438e956cc057e8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954613"
 ---
 # <a name="executeupdate-method-sqlserverpreparedstatement"></a>executeUpdate-Methode (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67954613"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[executeUpdate ()](../../../connect/jdbc/reference/executeupdate-method.md)|Führt die SQL-Anweisung in diesem [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Objekt aus. Hierbei muss es sich um eine SQL-Anweisung vom Typ „INSERT“, „UPDATE“, „MERGE“, „DELETE“ oder um eine SQL-Anweisung handeln, von der nichts zurückgegeben wird (z. B. eine DDL-Anweisung).|  
 |[executeUpdate (java.lang.String)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string.md)|Führt die angegebene SQL-Anweisung aus. Hierbei kann es sich um eine Anweisung vom Typ "INSERT", "UPDATE", "MERGE" oder "DELETE" oder um eine SQL-Anweisung handeln, von der nichts zurückgegeben wird (beispielsweise eine SQL-DDL-Anweisung).|  

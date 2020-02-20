@@ -7,18 +7,18 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: v-jizho2, v-chojas, genemi
+ms.reviewer: v-chojas
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041160"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910933"
 ---
-# <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Versionshinweise zu ODBC for SQL Server unter Windows
+# <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Release Notes for ODBC to SQL Server on Windows (Versionshinweise zu ODBC für SQL Server unter Windows)
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -44,14 +44,22 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="175-january-2020"></a>Version 17.5, Januar 2020
+
+| Neues Feature | Details |
+| :------------ | :------ |
+| SQL_COPT_SS_SPID-Verbindungsattribut zum Abrufen der SPID ohne Roundtrip zum Server | Siehe [Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md) |
+| Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>17.4.2, Oktober 2019
 
 | Neues Feature | Details |
 | :------------ | :------ |
-| Unterstützung für zusätzliche Azure Key Vault Endpunkte | Siehe [Verwenden von Always Encrypted mit dem ODBC-Treiber](../using-always-encrypted-with-the-odbc-driver.md). |
-| Unterstützung für das Festlegen der Daten Klassifizierungs Version | Siehe [Data Classification (Datenklassifizierung)](../data-classification.md#bkmk-version) |
-| Der Treiber installiert nun die Azure Active drirectory Authentication Library (Adal. dll), die für die Authentifizierung in Azure verwendet wird. | |
-| Fehlerbehebungen | Siehe [Fehlerbehebungen](../bug-fixes.md) |
+| Unterstützung für zusätzliche Azure Key Vault-Endpunkte | Siehe [Verwenden von Always Encrypted mit dem ODBC-Treiber](../using-always-encrypted-with-the-odbc-driver.md). |
+| Unterstützung für das Festlegen der Datenklassifizierungsversion | Siehe [Data Classification (Datenklassifizierung)](../data-classification.md#bkmk-version) |
+| Die Active Directory-Authentifizierungsbibliothek (adal.dll) wurde zum Installer hinzugefügt | Dieses Feature ist nun Teil der Installation des Basistreibers. Dadurch wird ein Upgrade für bestehende Installationen der Microsoft Active Directory-Authentifizierungsbibliothek für SQL Server durchgeführt und die Bibliothek wird aus der Liste mit installierten Anwendung in Windows entfernt. |
+| Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
 ## <a name="174-july-2019"></a>17.4, Juli 2019
@@ -60,7 +68,7 @@ GeneMi (and CraigG).  2019/03/30.
 | :------------ | :------ |
 | Always Encrypted mit Secure Enclaves. | Siehe [Verwenden von Always Encrypted mit dem ODBC-Treiber](../using-always-encrypted-with-the-odbc-driver.md). |
 | Konfigurierbare TCP-Keep-Alive-Einstellungen. | Siehe [Herstellen einer Verbindung mit SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
-| Fehlerbehebungen | Siehe [Fehlerbehebungen](../bug-fixes.md) |
+| Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
 ## <a name="173-february-2019"></a>Februar 2019: Version 17.3
@@ -70,7 +78,7 @@ GeneMi (and CraigG).  2019/03/30.
 | Authentifizierungsmodus für (systemweite und benutzerseitig zugewiesene) verwaltete Azure Active Directory-Dienstidentitäten | Siehe [Using Azure Active Directory with the ODBC Driver (Verwenden von Azure Active Directory mit dem ODBC-Treiber)](../using-azure-active-directory.md) |
 | Übermitteln von Eingabeparametern für Always Encrypted-Spalten | Siehe [Limitations of the ODBC driver when using Always Encrypted (Einschränkungen des ODBC-Treibers bei Verwendung von Always Encrypted)](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted) |
 | Verteilte XA-Transaktionen | Siehe [Using XA Transactions (Verwenden von XA-Transaktionen)](../use-xa-with-dtc.md) |
-| Fehlerbehebungen | Siehe [Fehlerbehebungen](../bug-fixes.md) |
+| Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
 ## <a name="172-july-2018"></a>Juli 2018: Version 17.2
@@ -79,7 +87,7 @@ GeneMi (and CraigG).  2019/03/30.
 | :------------ | :------ |
 | Datenklassifizierung für Azure SQL-Datenbank und SQL Server | Siehe [Data Classification (Datenklassifizierung)](../data-classification.md) |
 | Unterstützung der UTF-8-Servercodierung | &nbsp; |
-| Fehlerbehebungen | Siehe [Fehlerbehebungen](../bug-fixes.md) |
+| Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
 ## <a name="171-march-2018"></a>März 2018: Version 17.1
@@ -88,7 +96,7 @@ GeneMi (and CraigG).  2019/03/30.
 | :------------ | :------ |
 | Unterstützung der Verbindungsattribute `SQL_COPT_SS_CEKCACHETTL` und `SQL_COPT_SS_TRUSTEDCMKPATHS` | &bull; &nbsp; `SQL_COPT_SS_CEKCACHETTL`<br/>Ermöglicht das Steuern und Leeren der Zeit, für die der lokale Cache von Spaltenverschlüsselungsschlüsseln vorhanden ist<br/><br/>&bull; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS`<br/>Ermöglicht der Anwendung das Einschränken von Always Encrypted-Vorgängen, sodass diese nur die festgelegte Liste von Spaltenhauptschlüsseln nutzen<br/><br/> Weitere Informationen finden Sie unter [Using Always Encrypted with the ODBC Driver for SQL Server (Verwenden von Always Encrypted mit dem ODBC Driver for SQL Server)](../using-always-encrypted-with-the-odbc-driver.md). |
 | Unterstützung der interaktiven Azure Active Directory-Authentifizierung | &nbsp; |
-| Fehlerbehebungen | Siehe [Fehlerbehebungen](../bug-fixes.md) |
+| Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
 ## <a name="17-february-2018"></a>Februar 2018: Version 17

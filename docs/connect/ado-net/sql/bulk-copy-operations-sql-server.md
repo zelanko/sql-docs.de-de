@@ -7,23 +7,23 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 70eed483eb7cb857e23b110b7149badff14ab46f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: d038b0a67923d7c475011b8f3d141f7d64358f61
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452290"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247859"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Massenkopiervorgänge in SQL Server
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Microsoft SQL Server enthält ein beliebtes Befehlszeilen-Hilfsprogramm mit dem Namen **bcp** zum schnellen Massenkopieren großer Dateiumfänge in Tabellen oder Ansichten in SQL Server-Datenbanken. Die <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Klasse ermöglicht es Ihnen, Lösungen für verwalteten Code zu schreiben, die eine ähnliche Funktionalität bereitstellen. Es gibt eine Reihe weiterer Verfahren, Daten in eine SQL-Server-Tabelle zu laden (beispielsweise INSERT-Anweisungen), doch bietet <xref:Microsoft.Data.SqlClient.SqlBulkCopy> ihnen gegenüber einen erheblichen Leistungsvorteil.  
+Microsoft SQL Server enthält ein beliebtes Befehlszeilen-Hilfsprogramm mit dem Namen **bcp** zum schnellen Massenkopieren großer Dateiumfänge in Tabellen oder Ansichten in SQL Server-Datenbanken. Die <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Klasse ermöglicht Ihnen das Schreiben von verwalteten Codelösungen, die eine ähnliche Funktionalität bereitstellen. Es gibt eine Reihe weiterer Verfahren, Daten in eine SQL-Server-Tabelle zu laden (beispielsweise INSERT-Anweisungen), doch bietet <xref:Microsoft.Data.SqlClient.SqlBulkCopy> ihnen gegenüber einen erheblichen Leistungsvorteil.  
   
-Mit der <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Klasse können Sie Folgendes ausführen:  
+Die <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Klasse bietet folgende Möglichkeiten:  
   
 - Einen einzelnen Massenkopiervorgang  
   
@@ -36,16 +36,16 @@ Mit der <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Klasse können Sie Folgendes
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Einrichten des Massenkopierbeispiels](bulk-copy-example-setup.md)  
-Beschreibt die Tabellen, die in den Massen Kopier Beispielen verwendet werden, und stellt SQL-Skripts zum Erstellen der Tabellen in der AdventureWorks-Datenbank bereit.  
+In diesem Artikel werden die Tabellen beschrieben, die in den Beispielen für Massenkopiervorgänge verwendet werden, und SQL-Skripts zum Erstellen der Tabellen in der AdventureWorks-Datenbank werden bereitgestellt.  
   
 [Einzelne Massenkopiervorgänge](single-bulk-copy-operations.md)  
-Beschreibt das Ausführen eines einzelnen Massen Kopierens von Daten in eine Instanz von SQL Server mithilfe der <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Klasse und das Ausführen des Massen Kopiervorgangs mithilfe von Transact-SQL-Anweisungen und der <xref:Microsoft.Data.SqlClient.SqlCommand>-Klasse.  
+In diesem Artikel wird das Durchführen einzelner Massenkopiervorgänge für Daten in eine SQL Server-Instanz mithilfe der <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Klasse beschrieben und wie der Massenkopiervorgang mithilfe von Transact-SQL-Anweisungen und der <xref:Microsoft.Data.SqlClient.SqlCommand>-Klasse durchgeführt werden kann.  
   
 [Mehrere Massenkopiervorgänge](multiple-bulk-copy-operations.md)  
-Beschreibt das Ausführen mehrerer Massen Kopiervorgänge von Daten in eine Instanz von SQL Server mithilfe der <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Klasse.  
+Beschreibt das Ausführen mehrerer Massenkopiervorgänge von Daten in eine SQL Server-Instanz mithilfe der <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Klasse  
   
 [Transaktionen und Massenkopiervorgänge](transaction-bulk-copy-operations.md)  
-Beschreibt, wie ein Massen Kopiervorgang innerhalb einer Transaktion ausgeführt wird, einschließlich des Commits oder Rollbacks der Transaktion.  
+Beschreibt das Ausführen eines Massenkopiervorgangs innerhalb einer Transaktion, einschließlich des Commits oder Rollbacks einer Transaktion  
   
 ## <a name="next-steps"></a>Nächste Schritte
 - [SQL Server und ADO.NET](index.md)

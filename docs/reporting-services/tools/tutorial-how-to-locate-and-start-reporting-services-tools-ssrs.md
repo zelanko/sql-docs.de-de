@@ -1,10 +1,10 @@
 ---
-title: 'Tutorial: So suchen und starten Sie Reporting Services-Tools (SSRS) | Microsoft-Dokumentation'
-ms.date: 05/15/2019
+title: 'Tutorial: Suchen und Starten von Reporting Services-Tools | Microsoft-Dokumentation'
+description: In diesem Tutorial werden die Tools vorgestellt, mit denen Berichtsserver konfiguriert, Berichtsserverinhalte und -vorgänge verwaltet sowie paginierte und mobile Reporting Services-Berichte erstellt und veröffentlicht werden.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
-description: In diesem Tutorial werden die Tools vorgestellt, mit denen Berichtsserver konfiguriert, Berichtsserverinhalte und -vorgänge verwaltet sowie paginierte und mobile Reporting Services-Berichte erstellt und veröffentlicht werden.
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27e90deec22d20f65943f9c7e07cf425772c7737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: be9da26fc71dbcbf9fd47aa94c0ee721b160eed6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65875167"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245517"
 ---
-# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Lernprogramm: So suchen und starten Sie Reporting Services-Tools (SSRS)
+# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: So suchen und starten Sie Reporting Services-Tools (SSRS)
 
   In diesem Tutorial werden die Tools vorgestellt, mit denen Berichtsserver konfiguriert, Berichtsserverinhalte und -vorgänge verwaltet sowie paginierte und mobile [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte erstellt und veröffentlicht werden. Wenn Sie mit den Tools bereits vertraut sind, können Sie zu anderen Tutorials wechseln, in denen Sie wichtige Funktionen für die Verwendung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen lernen. Weitere Tutorials finden Sie unter [Reporting Services-Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)kennen lernen.  
   
@@ -42,15 +42,15 @@ ms.locfileid: "65875167"
 -   Verwalten von Verschlüsselungsschlüsseln.  
 -   Konfigurieren der unbeaufsichtigten Berichtsverarbeitung und E-Mail-Übermittlung von Berichten.  
   
-**Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird bei der Installation des einheitlichen Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installiert. Weitere Informationen finden Sie unter [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
+**Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Configuration Manager wird bei der Installation des einheitlichen Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installiert. Weitere Informationen finden Sie unter [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>So starten Sie den Reporting Services-Konfigurations-Manager  
   
 1.  Geben Sie im Windows-Startbildschirm **reporting** ein und klicken Sie in den Suchergebnissen in **Apps** auf **Reporting Services-Konfigurations-Manager**.  
   
-     ![Reporting Services-Konfigurations-Manager beim Start](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "reporting services configuration manager on start")  
+     ![Reporting Services-Konfigurations-Manager beim Start](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Reporting Services-Konfigurations-Manager beim Start")  
   
-     **Or**  
+     **Oder**  
   
      Klicken Sie auf **Starten**, auf **Programme**, auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], auf **Konfigurationstools**und dann auf **Konfigurations-Manager für Reporting Services**.  
   
@@ -60,20 +60,20 @@ ms.locfileid: "65875167"
   
      Falls Sie einen Remotecomputer angeben, klicken Sie auf **Suchen** , um eine Verbindung herzustellen. Der Berichtsserver muss zuvor für die Remoteverwaltung konfiguriert werden. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die Remoteverwaltung](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-3.  Wählen Sie unter **Wählen Sie unterstance Name**die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz aus, die Sie konfigurieren möchten. In der Liste werden ausschließlich Berichtsserverinstanzen von SQL Server 2008 und höher angezeigt. Frühere Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können nicht konfiguriert werden.  
+3.  Wählen Sie unter **Instanzname** die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Instanz aus, die Sie konfigurieren möchten. In der Liste werden ausschließlich Berichtsserverinstanzen von SQL Server 2008 und höher angezeigt. Frühere Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können nicht konfiguriert werden.  
   
 4.  Klicken Sie auf **Verbinden**.  
   
 5.  Wenn Sie sicherstellen möchten, dass das Tool gestartet wurde, vergleichen Sie Ihre Ergebnisse mit dem folgenden Bild:  
   
-     ![Reporting Services-Konfigurationstool](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services Configuration tool")  
+     ![Reporting Services-Konfigurationstool](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services-Konfigurationstool")  
   
- **Nächste Schritte:** [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) und [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+ **Nächste Schritte:** [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) und [Konfigurations-Manager für Reporting Services &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 ##  <a name="web-portal-native-mode"></a>Webportal (einheitlicher Modus)  
  Verwenden Sie das [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) , um Berechtigungen festzulegen, Abonnements und Zeitpläne zu verwalten und mit Berichten zu arbeiten. Sie können das Webportal auch zum Anzeigen von Berichten verwenden.  
   
- **Installation:** das Webportal ist installiert, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (einheitlicher Modus) installieren: [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **Installation:** Das Webportal wird bei der Installation des einheitlichen Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installiert: [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
  Damit Sie das Webportal öffnen können, müssen Sie über ausreichende Berechtigungen verfügen (anfangs besitzen nur Mitglieder der lokalen Administratorengruppe Berechtigungen, die den Zugriff auf Webportalfunktionen ermöglichen). Das Webportal enthält verschiedene Seiten und Optionen, die sich je nach den Rollenzuweisungen des aktuellen Benutzers unterscheiden. Für Benutzer ohne Berechtigungen wird eine leere Seite angezeigt. Für Benutzer mit Berechtigungen zum Anzeigen von Berichten werden Links angezeigt, auf die sie klicken können, um die Berichte zu öffnen. Weitere Informationen zu Berechtigungen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
@@ -94,11 +94,11 @@ ms.locfileid: "65875167"
   
 1.  Geben Sie im Windows-Startbildschirm **sql server** ein, und klicken Sie in den Suchergebnissen in **Apps** auf **SQL Server Management Studio**.  
   
-     ![Management Studio auf dem Startbildschirm von Windows](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "managment studio from windows start screen")  
+     ![Management Studio vom Windows-Startbildschirm](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "Management Studio vom Windows-Startbildschirm")  
   
-     **Or**  
+     **Oder**  
   
-     Klicken Sie auf **Start**, auf **Alle Programme**, auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]und klicken Sie dann auf **SQL Server Management Studio**. Das Dialogfeld **Verbindung mit Server herstellen** wird angezeigt.  
+     Klicken Sie auf **Start**, auf **Alle Programme**, auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]und klicken Sie dann auf **SQL Server Management Studio**. Das Dialogfeld **Mit Server verbinden** wird angezeigt.  
   
 2.  Wenn das Dialogfeld **Verbindung mit Server herstellen** nicht angezeigt wird, klicken Sie im **Objekt-Explorer**auf **Verbinden** , und wählen Sie dann **Reporting Services**aus.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "65875167"
 5.  Klicken Sie auf **Verbinden**. Sie können den Stammknoten erweitern, um Servereigenschaften festzulegen, Rollendefinitionen zu ändern oder Berichtsserverfunktionen zu deaktivieren.  
   
 ##  <a name="bkmk_ssdt"></a> SQL Server-Datentools mit Berichts-Designer und Berichts-Assistent  
- Sie können zwischen zwei verschiedenen Tools zum Erstellen paginierter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Berichte auswählen: Berichts-Designer und [Berichts-Generator](#bkmk_report_builder).  
+ Sie können zwischen zwei verschiedenen Tools zum Erstellen paginierter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Berichte auswählen:    dem [Berichts-Generator](#bkmk_report_builder) und dem Berichts-Designer.  
   
  Der Berichts-Designer steht in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] – Visual Studio zur Verfügung. Die Entwurfsoberfläche im Berichts-Designer umfasst Fenster mit Registerkarten, Assistenten und Menüs, mit denen der Zugriff auf Berichts- und Modellerstellungsfunktionen möglich ist. Das Berichts-Designer-Tool steht zur Verfügung, wenn Sie ein Berichtsserverprojekt oder eine Vorlage des Berichtsserver-Assistenten in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auswählen. Weitere Informationen finden Sie unter [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). 
  
@@ -125,11 +125,11 @@ Herunterladen von [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkI
   
 4.  Klicken Sie in der Liste **Vorlagen** auf **Berichtsserverprojekt**. Mit der folgenden Grafik wird veranschaulicht, wie die Projektvorlagen im Dialogfeld angezeigt werden:  
   
-     ![Neues Projekt (Vorlagendialogfeld)](../../reporting-services/tools/media/rs-ui-newrsproject.gif "New Project template dialog box")  
+     ![Dialogfeld „Neue Projektvorlage“](../../reporting-services/tools/media/rs-ui-newrsproject.gif "Dialogfeld „Neue Projektvorlage“")  
   
 5.  Geben Sie einen Namen und einen Speicherort für das Projekt ein, oder klicken Sie auf **Durchsuchen** , und wählen Sie einen Speicherort aus.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird mit der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Startseite geöffnet. Der Projektmappen-Explorer umfasst Kategorien zum Erstellen von Berichten und Datenquellen. Mit diesen Kategorien können Sie neue Berichte und Datenquellen erstellen. Wenn Sie eine Berichtsdefinition erstellen, werden Fenster im Registerformat angezeigt. Die Fenster im Registerformat lauten Daten, Layout und Vorschau.  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird mit der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Startseite geöffnet. Der Projektmappen-Explorer umfasst Kategorien zum Erstellen von Berichten und Datenquellen. Mit diesen Kategorien können Sie neue Berichte und Datenquellen erstellen. Wenn Sie eine Berichtsdefinition erstellen, werden Fenster im Registerformat angezeigt. Die Fenster im Registerformat lauten Daten, Layout und Vorschau.  
   
  Informationen zum Erstellen Ihrer ersten Berichte finden Sie unter [Erstellen eines einfachen Tabellenberichts (SSRS-Tutorial)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Weitere Informationen zu Abfrage-Designern, die Sie im Berichts-Designer verwenden können, finden Sie unter [Abfrageentwurfstools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)kennen lernen.  
   
@@ -140,7 +140,7 @@ Wenn Ihr paginierter Bericht vollständig ist, veröffentlichen Sie ihn auf eine
   
  [Laden Sie den Berichts-Generator](https://go.microsoft.com/fwlink/?LinkID=219138) aus dem Microsoft Download Center herunter.  
   
-### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>So starten Sie den [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+### <a name="to-start-ssrbnoversion"></a>So starten Sie den [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
 1.  Wählen Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Webportal im Menü  **Neu** die Option **Paginierter Bericht**.  
   
@@ -159,7 +159,7 @@ Wenn Ihr paginierter Bericht vollständig ist, veröffentlichen Sie ihn auf eine
   
  [Laden Sie den Publisher für mobile Berichte von SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527) aus dem Microsoft Download Center herunter.  
   
-### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>So starten Sie den [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
+### <a name="to-start-ss_mobilereptpub_short"></a>So starten Sie den [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
 1.  Wählen Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Webportal im Menü  **Neu** die Option **Mobiler Bericht**.  
   

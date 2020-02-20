@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651953"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen
@@ -28,9 +28,9 @@ ms.locfileid: "62651953"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
   
- ![SQL Agent-Berechtigungen für Dienstanwendungs-Datenbanken](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "SQL Agent permissions to Service Application DBs")  
+ ![SQL-Agent-Berechtigungen für Dienstanwendungs-Datenbanken](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "SQL-Agent-Berechtigungen für Dienstanwendungs-Datenbanken")  
   
-||und Beschreibung|  
+||Beschreibung|  
 |------|-----------------|  
 |**1**|Die Instanz der SQL Server-Datenbank-Engine, die die Reporting Services-Dienstanwendungsdatenbanken hostet.|  
 |**2**|Die Instanz des SQL Server-Agents für die Instanz der SQL-Datenbank-Engine|  

@@ -16,10 +16,10 @@ ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e96e0c9c957522db6a766b3491d394b7337d7b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954980"
 ---
 # <a name="execute-method-javalangstring-int"></a>execute-Methode (java.lang.String, int[])
@@ -44,7 +44,7 @@ Eine **Zeichenfolge** mit einer SQL-Anweisung.
 Ein Array von Werten vom Typ **int** zum Angeben der Spaltenindizes der automatisch generierten Schlüssel, die verfügbar gemacht werden sollen.
 
 ## <a name="return-value"></a>Rückgabewert
-**true** , wenn das erste Ergebnis ein Resultset ist. Andernfalls lautet der Wert **false**.
+Der Wert **TRUE** wird zurückgegeben, wenn das erste Ergebnis ein Resultset ist. Andernfalls lautet der Wert **false**.
   
 ## <a name="exceptions"></a>Ausnahmen
 [SQLServerException](./sqlserverexception-class.md)
@@ -54,7 +54,7 @@ Diese execute-Methode wird von der execute-Methode in der java.sql.Statement-Sch
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Execute- &#40;Methode SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
+[execute-Methode &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 
 [SQLServerStatement-Elemente](./sqlserverstatement-members.md)
 

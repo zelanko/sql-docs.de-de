@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581246"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planen von Berichtsentwurf und -bereitstellung | Reporting Services
@@ -39,18 +39,18 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
   
 -   [Spezifikationen der Berichtsdefinitionssprache](https://go.microsoft.com/fwlink/?linkid=116865)  
   
--   [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+-   [Berichtsdefinitionssprache (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
  Weitere Informationen zu ReportViewer-Steuerelementen finden Sie unter [ReportViewer-Steuerelemente (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Unterstützung von Berichtsservern und RDL-Schemas  
  Eine Berichtsdefinitionsdatei kann wie folgt auf einem [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] -Berichtsserver bereitgestellt werden:  
   
--   **Berichts-Designer:** Stellen Sie einen Bericht im Berichts-Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]bereit.  
+-   **Berichts-Designer:** Stellen Sie einen Bericht aus dem Berichts-Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] bereit.  
   
--   **Report-Generator:** Speichern Sie einen Bericht aus dem Berichts-Generator auf dem Berichtsserver.  
+-   **Berichts-Generator:** Speichern Sie einen Bericht aus dem Berichts-Generator auf dem Berichtsserver.  
   
--   **Webportal:** Laden Sie einen Bericht aus dem [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]auf einen Berichtsserver im einheitlichen Modus hoch.  
+-   **Webportal:** Laden Sie einen Bericht aus dem [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] auf einen Berichtsserver im einheitlichen Modus hoch.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -109,7 +109,7 @@ Wechseln Sie in einer Bereitstellung im SharePoint-Modus zur Dokumentbibliothek,
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>oder<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> oder<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> oder<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
 |[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> oder<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
   
- Weitere Informationen finden Sie unter den folgenden Links:  
+ Weitere Informationen finden Sie unter  
   
 -   [Konvertieren von RDLC-Dateien in RDL-Dateien](https://msdn.microsoft.com/library/ms252109.aspx)  
   
@@ -120,6 +120,6 @@ Wechseln Sie in einer Bereitstellung im SharePoint-Modus zur Dokumentbibliothek,
 ## <a name="see-also"></a>Weitere Informationen  
  [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services-Tools](../reporting-services/tools/reporting-services-tools.md)   
- [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [Berichtsdefinitionssprache (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

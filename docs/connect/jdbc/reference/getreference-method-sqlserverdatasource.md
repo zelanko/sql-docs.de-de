@@ -1,5 +1,5 @@
 ---
-title: getreferenzierungsmethode (SQLServerDataSource) | Microsoft-Dokumentation
+title: getReference-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4774dcda174d5260289409053a892cc4039b4f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980458"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>getReference-Methode (SQLServerDataSource)
@@ -35,10 +35,10 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Verweis Objekt.  
+ Ein Reference-Objekt  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getreferenzierungsmethode wird von der getreferenzierungsmethode in der javax. naming. referenbar-Schnittstelle angegeben.  
+ Diese getReference-Methode wird von der getReference-Methode in der javax.naming.Referenceable-Schnittstelle angegeben.  
   
  Vor dem JDBC-Treiber 3.0 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] war beim Aufruf von „SQLServerDataSource.setTrustStorePassword“ für ein SQLServerDataSource-Objekt das Kennwort im von SQLServerDataSource.getReference zurückgegebenen Objekt enthalten, und mit dem Objekt konnten zusätzliche Verbindungen hergestellt werden. In JDBC Driver 3.0 muss das Kennwort für das von "SQLServerDataSource.getReference" zurückgegebene Objekt festgelegt werden, bevor Verbindungen mit dem Objekt hergestellt werden.  
   

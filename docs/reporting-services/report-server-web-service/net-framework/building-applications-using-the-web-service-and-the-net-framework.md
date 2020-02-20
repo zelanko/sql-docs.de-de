@@ -19,14 +19,14 @@ ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f22f1b32318f5f6440b4506adcbb4926224908e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284646"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Erstellen von Anwendungen mit dem Webdienst und .NET Framework
-  Mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] können Sie bekannte Programmierkonstrukte, wie z.B. Methoden, Grundtypen und benutzerdefinierte komplexe Typen, für die Arbeit mit Webdiensten verwenden. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] enthält eine Infrastruktur und Tools, mit denen Sie Webdienstclients erstellen können, die jeden Webdienst von World Wide Web Consortium (W3C) aufrufen können, der den Standards entspricht.  
+  Mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] können Sie bekannte Programmierkonstrukte wie z. B. Methoden, einfache Typen und benutzerdefinierte komplexe Typen für die Arbeit mit Webdiensten verwenden. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] enthält eine Infrastruktur und Tools, mit denen Sie Webdienstclients erstellen können, die jeden Webdienst von World Wide Web Consortium (W3C) aufrufen können, der den Standards entspricht.  
   
  Ein Berichtsserver-Webdienstclient ist jede Komponente oder Anwendung, die mit einem Berichtsserver über SOAP-Nachrichten (Simple Object Access Protocol) kommuniziert.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "63284646"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Creating the Web Service Proxy (Erstellen des Webdienstproxys)](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|Beschreibt die Möglichkeiten, dem Projekt mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] eine Proxyklasse hinzuzufügen.|  
+|[Creating the Web Service Proxy (Erstellen des Webdienstproxys)](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|In diesem Artikel werden die Möglichkeiten beschrieben, dem Projekt mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] eine Proxyklasse hinzuzufügen.|  
 |[Web Service Authentication (Webdienstauthentifizierung)](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|Beschreibt, wie Aufrufe des Berichtsserver-Webdiensts authentifiziert werden.|  
-|[Calling Web Service Methods (Aufrufen von Webdienstmethoden)](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|Beschreibt, wie Sie die Webdienstmethoden in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] mit der SOAP-API aufrufen.|  
+|[Calling Web Service Methods (Aufrufen von Webdienstmethoden)](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|In diesem Artikel wird beschrieben, wie Sie die Webdienstmethoden in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] mit der SOAP-API aufrufen.|  
 |[Setting the Url Property of the Web Service (Festlegen der URL-Eigenschaft des Webdiensts)](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Erläutert, wie Sie den Webdienstproxy programmgesteuert auf eine neue Server-URL richten, nachdem Sie den Webverweis erstellt haben.|  
 |[Supplying Web Service Method Arguments (Bereitstellen von Argumenten für Webdienstmethoden)](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Beschreibt, wie Sie eine Webdienstmethode aufrufen und Methodenargumente angeben.|  
 |[Omitting Values for Optional Web Service Objects (Weglassen von Werten für optionale Webdienstobjekte)](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|Beschreibt, wie Werte für optionale Webdienstobjekte weggelassen werden.|  

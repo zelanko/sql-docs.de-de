@@ -1,6 +1,7 @@
 ---
 title: Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.date: 05/20/2019
+description: Im Berichts-Generator und im Berichts-Designer können Sie nach paginierten Berichten, freigegebenen Datenquellen, Modellen und anderen verwandten Berichtselementen suchen.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492868"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258101"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)
-  In Berichts-Generator können Sie Ordner auf einem Berichtsserver oder auf einer SharePoint-Website durchsuchen, um Berichte, freigegebene Datenquellen, Modelle und andere zugehörige Berichtselemente zu suchen und auf Ihrem Computer nach lokalen Berichten zu suchen. Um die Suche nach Berichten einfacher zu gestalten, speichert Berichts-Generator eine Liste der zuletzt verwendeten Server und Websites und stellt Direktzugriff auf den Desktop und die Ordner Eigene Dateien und Arbeitsplatz im Dateisystem des Computers bereit.  
+  Im Berichts-Generator können Sie Ordner auf einem Berichtsserver oder einer SharePoint-Website durchsuchen, um nach paginierten Berichten, freigegebenen Datenquellen, Modellen und anderen verwandten Berichtselementen zu suchen. Außerdem können Sie auf Ihrem Computer nach lokalen Berichten suchen. Um die Suche nach Berichten einfacher zu gestalten, speichert Berichts-Generator eine Liste der zuletzt verwendeten Server und Websites und stellt Direktzugriff auf den Desktop und die Ordner Eigene Dateien und Arbeitsplatz im Dateisystem des Computers bereit.  
   
- In Berichts-Designer können Sie auch den Computer durchsuchen, um lokale Berichte zu suchen. Nach der Bereitstellung von Berichten auf einem Berichtsserver oder einer SharePoint-Website können Sie den Berichtsserver über das Webportal durchsuchen oder auf der SharePoint-Website nach Berichten suchen. Berichte und verwandte Elemente bleiben lokal verfügbar, nachdem sie bereitgestellt wurden.  
+ Im Berichts-Designer können Sie auch auf Ihrem Computer nach lokalen paginierten Berichten suchen. Nach der Bereitstellung von Berichten auf einem Berichtsserver oder einer SharePoint-Website können Sie den Berichtsserver über das Webportal durchsuchen oder auf der SharePoint-Website nach Berichten suchen. Berichte und verwandte Elemente bleiben lokal verfügbar, nachdem sie bereitgestellt wurden.  
   
 > [!NOTE]  
 > Sie können Berichts-Generator im lokalen Modus oder mit einer Verbindung mit einem Berichtsserver verwenden. Bestimmte Einschränkungen kommen zur Geltung, wenn Sie keine aktive Verbindung zu einem Berichtsserver haben.  
@@ -105,7 +106,7 @@ Nachdem Sie einen Bericht ausgeführt haben, können Sie ihn in ein anderes Form
   
  Zur Unterscheidung der Berichtsserverelemente von anderen Elementen auf einer SharePoint-Website können Sie ein Element anhand des Symbols visuell identifizieren oder den Mauszeiger über den Typ halten, sodass die Dateierweiterung angezeigt wird. Das folgende Bild zeigt Ordner und eine Berichtsdefinition in der Bibliothek **Berichte**:  
   
- ![SharePoint-Bibliothek mit Berichtsserverelementen](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Sharepoint library with report server items")  
+ ![SharePoint-Bibliothek mit Berichtsserverelementen](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "SharePoint-Bibliothek mit Berichtsserverelementen")  
   
 ### <a name="viewing-reports"></a>Anzeigen von Berichten  
  Berichtsdefinitionen (RDL-Dateien), die Sie in eine SharePoint-Bibliothek hochladen, werden über ein vom Reporting Services-Add-In installiertes Berichts-Viewer-Webpart angezeigt. Eine RDL-Dateizuordnung wird automatisch beim Installieren des Add-Ins definiert. Wenn Sie einen Bericht auswählen, wird er automatisch im Webpart geöffnet. Nach dem Öffnen des Berichts können Sie die im Webpart enthaltene Berichtssymbolleiste für die Seitennavigation und zum Durchsuchen, Zoomen und Drucken des Berichts verwenden. Die Symbolleiste enthält eine Option zum Exportieren eines Datenfeeds, mit der der Bericht als Atom-Datenfeed exportiert werden kann, und ein Menü **Aktionen** , über das der Bericht gedruckt, abonniert und in andere Formate exportiert werden kann, z. B. PDF, Word und Excel. Über das Menü **Aktionen** kann der Bericht auch im Berichts-Generator geöffnet werden. Das folgende Bild zeigt einen Bericht und die Exportoptionen im Menü **Aktionen** .  
@@ -115,7 +116,7 @@ Nachdem Sie einen Bericht ausgeführt haben, können Sie ihn in ein anderes Form
 ### <a name="managing-items-through-actions"></a>Verwalten von Elementen mithilfe von Aktionen  
  Verwaltungsaufgaben werden durch Aktionen in einem Dropdownmenü für jedes Element unterstützt. Je nach Berechtigungen sind für die einzelnen Elemente allgemeine Aktionen verfügbar, die Standardaktionen für Elemente sind, die in einer SharePoint-Bibliothek gespeichert sind. **Eigenschaften anzeigen** und **Eigenschaften bearbeiten** sind Beispiele für solche allgemeinen Aktionen. Benutzerdefinierte Aktionen stellen elementspezifische Verwaltungsfunktionen bereit. Das folgende Bild zeigt die Aktionen für eine Berichtsdefinition. **Abonnements verwalten** und **Verarbeitungsoptionen verwalten**sind Beispiele für benutzerdefinierte Aktionen für eine Berichtsdefinition:  
   
- ![Menübefehle für Berichtsserverelemente](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Menu commands for report server items")  
+ ![Menübefehle für Berichtsserverelemente](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Menübefehle für Berichtsserverelemente")  
   
   
 ##  <a name="DeskTop"></a> Anzeigen von Berichten in einer Desktopanwendung  
@@ -141,7 +142,7 @@ Nachdem Sie einen Bericht ausgeführt haben, können Sie ihn in ein anderes Form
  [Previewing Reports in Report Builder (Anzeigen einer Berichtsvorschau im Berichts-Generator)](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  Beschreibt, wie Berichte in der Vorschau angezeigt werden, während sie erstellt oder aktualisiert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Speichern von Berichten &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Berichts-Generator in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  

@@ -1,6 +1,6 @@
 ---
 title: Erstellen von R-Modellen mit RevoScaleR
-description: Tutorial zum Erstellen von Modellen mithilfe von R in SQL Server
+description: 'Tutorial 7 zu RevoScaleR: Erstellen eines Models mithilfe der R-Sprache in SQL Server'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a23691e8ed4b5ec5290ae666455f789954fa95d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 11feb62609cba61a695dd60085461410a38ed0f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727272"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947240"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Erstellen von R-Modellen (SQL Server- und RevoScaleR-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Diese Lerneinheit ist Teil des [RevoScaleR-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zum Verwenden von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Bei diesem Tutorial handelt es sich um das 7. Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Lernprogramm erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
-Sie haben die Trainingsdaten angereichert. Jetzt müssen Sie die Daten mithilfe der Regressionsmodellierung analysieren. Lineare Modelle spielen bei Predictive Analytics eine wichtige Rolle. Das **RevoScaleR**-Paket umfasst Regressionsalgorithmen, mit denen die Workload unterteilt und parallel ausgeführt werden kann.
+Sie haben die Trainingsdaten angereichert. In diesem Tutorial müssen Sie die Daten mithilfe der Regressionsmodellierung analysieren. Lineare Modelle spielen bei Predictive Analytics eine wichtige Rolle. Das **RevoScaleR**-Paket umfasst Regressionsalgorithmen, mit denen die Workload unterteilt und parallel ausgeführt werden kann.
 
 > [!div class="checklist"]
 > * Erstellen eines linearen Regressionsmodells

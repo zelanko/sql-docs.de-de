@@ -1,27 +1,26 @@
 ---
-title: 'Schnellstart: Erstellen von R-Skripts'
-titleSuffix: SQL Server Machine Learning Services
-description: Hier erfahren Sie, wie Sie einfache R-Skripts in einer SQL Server-Instanz mit SQL Server Machine Learning Services erstellen und ausführen können.
+title: 'Schnellstart: Ausführen von R-Skripts'
+description: Ausführen einfacher R-Skripts mit SQL Server Machine Learning Services In diesem Artikel erfahren Sie, wie Sie die gespeicherte Prozedur sp_execute_external_script verwenden, um das Skript in einer SQL Server-Instanz auszuführen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a8e2779e930671faa9fa3ab94a7384ab1bdca83
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726984"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831784"
 ---
-# <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Schnellstart: Erstellen und Ausführen einfacher R-Skripts mit SQL Server Machine Learning Services
+# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Schnellstart: Ausführen einfacher R-Skripts mit SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Schnellstart erstellen Sie einige einfache R-Skripts mithilfe von [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) und führen diese aus. Sie erfahren, wie Sie ein gut formatiertes R-Skript in die gespeicherte Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) einbinden und das Skript in einer SQL Server-Instanz ausführen können.
+In diesem Schnellstart führen Sie einige einfache R-Skripts mithilfe von [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) aus. Sie erfahren, wie Sie die gespeicherte Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) verwenden, um das Skript in einer SQL Server-Instanz auszuführen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -74,7 +73,7 @@ print(c(c, d))
     0.5 2
     ```
 
-## <a name="run-a-hello-world-script"></a>Ausführen eines „Hallo Welt“-Skripts
+## <a name="run-a-hello-world-script"></a>Ausführen eines „Hello World“-Skripts
 
 In einem typischen Beispielskript wird nur die Zeichenfolge „Hallo Welt“ (oder „Hello World“) ausgegeben. Führen Sie den folgenden Befehl aus.
 
@@ -91,7 +90,7 @@ Folgende Eingaben sind für die gespeicherte Prozedur `sp_execute_external_scrip
 | | |
 |-|-|
 | @language | definiert die aufzurufende Spracherweiterung (hier R) |
-| @script | definiert die Befehle, die an die R-Runtime übergeben werden Ihr gesamtes R-Skript muss von diesem Argument als Unicode-Text umschlossen sein. Sie können den Text auch einer Variablen des Typs **nvarchar** hinzufügen und die Variable anschließend aufrufen. |
+| @script | definiert die Befehle, die an die R-Runtime übergeben werden Ihr gesamtes R-Skript muss als Unicode-Text in dieses Argument eingeschlossen werden. Sie können den Text auch einer Variablen des Typs **nvarchar** hinzufügen und die Variable anschließend aufrufen. |
 | @input_data_1 | Die von der Abfrage zurückgegebenen Daten werden an die R-Runtime übergeben, die die Daten als Datenrahmen an SQL Server zurückgibt. |
 |WITH RESULT SETS | Mit dieser Klausel wird das Schema der zurückgegebenen Datentabelle für SQL Server definiert und „Hello World“ als Spaltenname und **int** als Datentyp festgelegt. |
 
@@ -161,7 +160,7 @@ Verwenden Sie vorerst die standardmäßig festgelegten Eingabe- und Ausgabevaria
     Beachten Sie, dass R Groß- und Kleinschreibung beachtet. Die im R-Skript verwendeten Eingabe- und Ausgabevariablen (**SQL_out** und **SQL_in**) müssen mit den mit `@input_data_1_name` und `@output_data_1_name` definierten Namen (Groß-/Kleinschreibung beachten) identisch sein.
 
    > [!TIP]
-   > Nur eine Eingabedataset kann als Parameter übergeben werden, und Sie können nur ein Dataset zurückgeben. Allerdings können Sie andere Datasets innerhalb Ihres R-Codes aufrufen und Ausgaben und andere Typen zusätzlich zum Dataset zurückgeben. Sie können auch das Schlüsselwort OUTPUT zu einem beliebigen Parameter hinzufügen, damit es mit den Ergebnissen zurückgegeben wird.
+   > Nur ein Eingabedataset kann als Parameter übergeben werden, und Sie können nur ein Dataset zurückgeben. Sie können aber andere Datasets in Ihrem R-Code aufrufen und zusätzlich zum Dataset Ausgaben anderer Typen zurückgeben. Außerdem können Sie auch allen Parametern das Schlüsselwort OUTPUT hinzufügen, damit es zusammen mit den Ergebnissen zurückgegeben wird.
 
 1. Sie können über das R-Skript auch Werte ohne Eingabedaten generieren, indem kein Wert für `@input_data_1` festgelegt wird.
 
@@ -248,6 +247,6 @@ Befolgen Sie diesen Schnellstart, um die Verwendung von Datenstrukturen mit R in
 
 Weitere Informationen zur Verwendung von R in SQL Server Machine Learning Services finden Sie in den folgenden Artikeln:
 
-- [Schreiben erweiterter R-Funktionen mit SQL Server Machine Learning Services (Vorschauversion)](quickstart-r-functions.md)
+- [Schreiben erweiterter R-Funktionen mit SQL Server Machine Learning Services](quickstart-r-functions.md)
 - [Erstellen und Bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 - [Was ist SQL Server Machine Learning Services (Python und R)?](../what-is-sql-server-machine-learning.md)

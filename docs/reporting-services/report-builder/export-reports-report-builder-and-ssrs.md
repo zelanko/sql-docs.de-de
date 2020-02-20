@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580820"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exportieren von Berichten (Berichts-Generator und SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "65580820"
   
 2.  Klicken Sie im Menüband auf **Exportieren**.  
   
-     ![Exportieren im Berichts-Generator](../../reporting-services/report-builder/media/ssrb-export.png "Report Builder Export")  
+     ![Exportieren im Berichts-Generator](../../reporting-services/report-builder/media/ssrb-export.png "Exportieren im Berichts-Generator")  
   
 3.  Wählen Sie das Format aus, das Sie verwenden möchten.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65580820"
   
 3.  Klicken Sie auf der Berichts-Viewer-Symbolleiste auf den Dropdownpfeil **Exportieren** .  
   
-     ![Exportieren im Reporting Services-Webportal](../../reporting-services/report-builder/media/ssrsportal-export.png "Reporting Services web portal Export")  
+     ![Exportieren im Reporting Services-Webportal](../../reporting-services/report-builder/media/ssrsportal-export.png "Exportieren im Reporting Services-Webportal")  
   
 4.  Wählen Sie das Format aus, das Sie verwenden möchten.  
   
@@ -100,23 +100,23 @@ ms.locfileid: "65580820"
   
 -   **Renderererweiterungen mit bedingtem Seitenumbruch:** Renderingerweiterungen mit bedingtem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für die Bildschirmanzeige und -bereitstellung optimiert, z.B. auf einer Webseite oder in den **ReportViewer** -Steuerelementen.  
   
-     Die folgenden Renderingerweiterungen mit bedingtem Seitenumbruch werden unterstützt: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word und Webarchiv (MHTML).  
+     Die folgenden Renderingerweiterungen für bedingten Seitenumbruch werden unterstützt: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word und Webarchiv (MHTML).  
   
 -   **Renderingerweiterungen mit festem Seitenumbruch:** Renderererweiterungen mit festem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für einen konsistenten Druck oder für die Onlineanzeige in einem Buchformat optimiert.  
   
-     Die folgenden Renderingerweiterungen mit festem Seitenumbruch werden unterstützt: TIFF und PDF  
+     Die folgenden Renderingerweiterungen für harten Seitenumbruch werden unterstützt: TIFF und PDF.  
   
 ##  <a name="ExportFormats"></a> Formate, die Sie beim Anzeigen von Berichten exportieren können  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt Renderingerweiterungen bereit, die Berichte in anderen Formaten rendern. Sie sollten den Berichtsentwurf für das gewählte Dateiformat optimieren.  In der folgenden Tabelle sind die Formate aufgeführt, die Sie über die Benutzeroberfläche exportieren können.  Es gibt zusätzliche Formate, die Sie mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements oder beim Exportieren per URL-Zugriff verwenden können.  Gehen Sie zum Abschnitt [Weitere Methoden zum Exportieren von Berichten](#OtherWaysExportingReports)in diesem Thema.  
   
-|Format|Renderingerweiterungstyp|und Beschreibung|  
+|Format|Renderingerweiterungstyp|Beschreibung|  
 |------------|------------------------------|-----------------|  
 |Acrobat-Datei (PDF-Datei)|Fester Seitenumbruch|Die PDF-Renderingerweiterung rendert Berichte in einem Dateiformat, das in Adobe Acrobat und anderen PDF-Viewern von Drittanbietern geöffnet werden kann, die das Format PDF 1.3 unterstützen. Obwohl PDF 1.3 mit Adobe Acrobat 4.0 oder höher kompatibel ist, wird Adobe Acrobat von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erst ab Version 6 unterstützt. Die Renderingerweiterung erfordert keine Adobe-Software, um Berichte zu rendern. Zum Anzeigen oder Drucken von Berichten im PDF-Format sind allerdings PDF-Viewer wie Adobe Acrobat erforderlich.<br /><br /> Weitere Informationen finden Sie unter [Exportieren als PDF-Datei](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
-|Atom|data|Die Atom-Renderingerweiterung generiert Atom-kompatible Datenfeeds aus Berichten. Die Datenfeeds sind mit Anwendungen lesbar und austauschbar, die Atom-kompatible Datenfeeds nutzen können, z.B. Power Pivot oder Power BI.<br /><br /> Die Ausgabe ist ein Atom-Dienstdokument, in dem die in einem Bericht verfügbaren Datenfeeds aufgeführt sind. Mindestens ein Datenfeed wird für jeden Datenbereich in einem Bericht erstellt. Abhängig vom Typ des Datenbereichs und den darin angezeigten Daten können mehrere Datenfeeds generiert werden.<br /><br /> Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
-|CSV|data|Die durch Trennzeichen getrennte CSV (Comma-Separated Value)-Renderingerweiterung rendert Berichte als vereinfachte Darstellung der Daten eines Berichts in einem standardisierten Nur-Text-Format, das leicht lesbar und mit anderen Anwendungen austauschbar ist.<br /><br /> Weitere Informationen finden Sie unter [Exportieren als CSV-Datei](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
+|Atom|Daten|Die Atom-Renderingerweiterung generiert Atom-kompatible Datenfeeds aus Berichten. Die Datenfeeds sind mit Anwendungen lesbar und austauschbar, die Atom-kompatible Datenfeeds nutzen können, z.B. Power Pivot oder Power BI.<br /><br /> Die Ausgabe ist ein Atom-Dienstdokument, in dem die in einem Bericht verfügbaren Datenfeeds aufgeführt sind. Mindestens ein Datenfeed wird für jeden Datenbereich in einem Bericht erstellt. Abhängig vom Typ des Datenbereichs und den darin angezeigten Daten können mehrere Datenfeeds generiert werden.<br /><br /> Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
+|CSV|Daten|Die durch Trennzeichen getrennte CSV (Comma-Separated Value)-Renderingerweiterung rendert Berichte als vereinfachte Darstellung der Daten eines Berichts in einem standardisierten Nur-Text-Format, das leicht lesbar und mit anderen Anwendungen austauschbar ist.<br /><br /> Weitere Informationen finden Sie unter [Exportieren als CSV-Datei](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
 |EXCELOPENXML|Bedingter Seitenumbruch|Wird beim Überprüfen von Berichten als „Excel“ in den Exportmenüs angezeigt. Die Excel-Renderingerweiterung rendert einen Bericht als Excel-Dokument (.xlsx), das mit [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013 kompatibel ist.  Weitere Informationen finden Sie unter [Exportieren nach Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |PowerPoint|Fester Seitenumbruch|Die PowerPoint-Renderingerweiterung rendert einen Bericht als PowerPoint-Dokument (.pptx), das mit PowerPoint 2013 kompatibel ist.|  
-|TIFF-Datei|Fester Seitenumbruch|Die Bildrenderingerweiterung rendert einen Bericht als Bitmap oder Metadatei. Standardmäßig erstellt die Bildrenderingerweiterung eine TIFF-Datei des Berichts, die auf mehreren Seiten angezeigt werden kann. Nachdem der Client das Bild erhalten hat, kann es in einem Image Viewer angezeigt und gedruckt werden.<br /><br /> Die Bildrenderingerweiterung kann Dateien in allen von [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]unterstützten Formaten generieren: BMP, EMF, EMFPlus, GIF, JPEG, PNG und TIFF.<br /><br /> Weitere Informationen finden Sie unter [Exportieren in eine Bilddatei](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
+|TIFF-Datei|Fester Seitenumbruch|Die Bildrenderingerweiterung rendert einen Bericht als Bitmap oder Metadatei. Standardmäßig erstellt die Bildrenderingerweiterung eine TIFF-Datei des Berichts, die auf mehreren Seiten angezeigt werden kann. Nachdem der Client das Bild erhalten hat, kann es in einem Image Viewer angezeigt und gedruckt werden.<br /><br /> Die Bildrenderingerweiterung kann Dateien in allen von [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)] unterstützten Formaten erstellen: BMP, EMF, EMFPlus, GIF, JPEG, PNG und TIFF.<br /><br /> Weitere Informationen finden Sie unter [Exportieren in eine Bilddatei](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
 |Webarchiv|Bedingter Seitenumbruch|Die HTML-Renderingerweiterung rendert einen Bericht im HTML-Format. Die Renderingerweiterung kann außerdem vollständige HTML-Seiten oder HTML-Fragmente zum Einbetten in andere HTML-Seiten erstellen. HTML wird stets mit UTF-8-Codierung erstellt.<br /><br /> Die HTML-Renderingerweiterung ist die Standardrenderingerweiterung für Berichte, die im Berichts-Generator in der Vorschau angezeigt und in einem Browser angezeigt werden. Dies gilt auch bei der Ausführung im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal.<br /><br /> Weitere Informationen finden Sie unter [Rendern in das HTML-Format](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md).|  
 |WORDOPENXML|Bedingter Seitenumbruch|Beim Anzeigen von Berichten als „Word“ im Exportmenü angezeigt. Die Word-Renderingerweiterung rendert einen Bericht als Word-Dokument (.docx), das mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013 kompatibel ist.  Weitere Informationen finden Sie unter [Exportieren nach Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
 |XML|Daten|Die XML-Renderingerweiterung gibt einen Bericht im XML-Format zurück. Das Schema der Bericht-XML-Ausgabe hängt vom jeweiligen Bericht ab und enthält nur Daten. Layoutinformationen werden von der XML-Renderingerweiterung nicht gerendert, und die Paginierung wird nicht beibehalten. Der von dieser Erweiterung generierte XML-Code kann in eine Datenbank importiert, als XML-Datennachricht verwendet oder an eine benutzerdefinierte Anwendung gesendet werden.<br/><br/> Weitere Informationen finden Sie unter [Exportieren nach XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  

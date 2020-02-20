@@ -9,21 +9,21 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041201"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
 In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Tabellenbericht erstellen. Die folgende Abbildung zeigt den Bericht, den Sie erstellen.  
   
 ![SSRS_Tutorial_einfacher_Tabellenbericht](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 20 Minuten  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="CreateTable"></a>1. Erstellen eines Berichts mithilfe eines Assistenten  
@@ -184,7 +184,7 @@ Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatier
   
 4.  Klicken Sie auf **Weiter** , um eine Vorschau der Tabelle anzuzeigen, und anschließend auf **Fertig stellen**.  
   
-Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält 5 Spalten und 5 Zeilen. Im Bereich "Zeilengruppen" werden drei Zeilengruppen angezeigt: "SalesDate", "Subcategory" und "Details". Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält 5 Spalten und 5 Zeilen. Der Bereich „Zeilengruppen“ umfasst drei Zeilengruppen: SalesDate, Subcategory und Details. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 ## <a name="FormatCurrency"></a>2. Formatieren von Daten als Währung  
 Die Zusammenfassungsdaten für das Feld "Sales" werden standardmäßig als eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen.   
@@ -350,7 +350,7 @@ In diesem Lernprogramm exportieren Sie den Bericht nach Excel, und Sie legen ein
   
 2.  Überprüfen Sie, ob der Name des Arbeitsmappenregisters **Product Sales Excel**lautet.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 Damit ist die exemplarische Vorgehensweise für das Erstellen eines einfachen Tabellenberichts abgeschlossen. Weitere Informationen zu Tabellen finden Sie unter [Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

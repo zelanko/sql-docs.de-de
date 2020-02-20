@@ -1,5 +1,5 @@
 ---
-title: Forget-Methode (sqlserverxaresource) | Microsoft-Dokumentation
+title: forget-Methode (SQLServerXAResource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6d83138d-aa45-4d94-9da6-fdfe7ed28edc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5eaaa98b2d79dc29558d32a254d338c9891372f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954548"
 ---
 # <a name="forget-method-sqlserverxaresource"></a>forget-Methode (SQLServerXAResource)
@@ -37,7 +37,7 @@ public void forget(javax.transaction.xa.Xid xid)
 #### <a name="parameters"></a>Parameter  
  *xid*  
   
- Ein xid-Objekt.  
+ Ein Xid-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  javax.transaction.xa.XAException  

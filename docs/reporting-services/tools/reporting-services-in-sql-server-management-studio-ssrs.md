@@ -11,10 +11,10 @@ ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 27fe190bfa73414158d05353c4aa8f244b65b4f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140359"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services in SQL Server Management Studio (SSRS)
@@ -22,9 +22,9 @@ ms.locfileid: "67140359"
   
 -   Aktivieren Sie Funktionen, legen Sie Serverstandards fest, und verwalten Sie ausgeführte Aufträge.  
   
--   Anzeigen benutzerdefinierter Berichte. Im Objekt-Explorer zeigen die meisten Knoten eine Option für benutzerdefinierte Berichte. Sie benötigen Administratorberechtigungen. Das Schema eines benutzerdefinierten Berichts muss mit dem Schema der installierten Berichte übereinstimmen. Weitere Informationen finden Sie unter [Benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md) und [Suchen der Berichtsdefinitions-Schemaversion (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   Anzeigen benutzerdefinierter Berichte. Die meisten Knoten im Objekt-Explorer zeigen eine Option für benutzerdefinierte Berichte an. Sie benötigen Administratorberechtigungen. Das Schema eines benutzerdefinierten Berichts muss mit dem Schema der installierten Berichte übereinstimmen. Weitere Informationen finden Sie unter [Benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md) und [Suchen der Berichtsdefinitions-Schemaversion (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
- Der nächste Abschnitt enthält Links zu Artikeln, die schrittweise Anleitungen zum Ausführen verschiedener Berichtsspezifischer Aufgaben enthalten [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Sie können auch erstellen und Verwalten von freigegebenen Zeitplänen im Webportal.  
+ Im nächsten Abschnitt finden Sie Links zu Artikeln mit ausführlichen Anweisungen zum Durchführen verschiedener Berichterstellungsaufgaben mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Im Webportal können Sie auch freigegebene Zeitpläne erstellen und verwalten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67140359"
   
 -   [Berichtsserveraufträge abbrechen &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)  
   

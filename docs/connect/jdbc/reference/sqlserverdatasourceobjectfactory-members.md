@@ -1,5 +1,5 @@
 ---
-title: SQLServerDataSourceObjectFactory-Member | Microsoft-Dokumentation
+title: SQLServerDataSourceObjectFactory-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 52c6b133-f7ed-468d-8f34-bc2e4b81553e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4212817f44485d0ceaf56b2dcbe40264a617269e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971327"
 ---
 # <a name="sqlserverdatasourceobjectfactory-members"></a>SQLServerDataSourceObjectFactory-Elemente
@@ -24,7 +24,7 @@ ms.locfileid: "67971327"
   
 ## <a name="constructors"></a>Konstruktoren  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[SQLServerDataSourceObjectFactory ()](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|Initialisiert eine neue Instanz der [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)-Klasse.|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67971327"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)|Ruft eine Instanz des angegebenen Datenquellenobjekts ab.|  
   

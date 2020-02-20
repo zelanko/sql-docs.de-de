@@ -1,30 +1,32 @@
 ---
 title: Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint | Microsoft-Dokumentation
-ms.date: 08/17/2017
+description: In diesem Artikel erfahren Sie, wie Sie das Installationspaket für das Microsoft SQL Server Reporting Services-Add-In für SharePoint-Produkte (rsSharePoint.msi) auf den SharePoint-Servern ausführen, um die Reporting Services-Features innerhalb einer SharePoint-Bereitstellung zu aktivieren.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 41a93cfdac331830477171dfdfc4f306c073bda3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893375"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866363"
 ---
-# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint
+# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  Führen Sie das Installationspaket für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte (rsSharePoint.msi) auf den SharePoint-Servern aus, um die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen innerhalb einer SharePoint-Bereitstellung zu aktivieren. Zu den Features gehören Power View, ein Berichts-Viewer-Webpart, ein URL-Proxyendpunkt, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Inhaltstypen sowie Anwendungsseiten, mit deren Hilfe Berichte, Datenquellen und andere Berichtsserverinhalte auf einer SharePoint-Website erstellt, angezeigt und verwaltet werden können. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist eine erforderliche Komponente für Berichtsserver, die im SharePoint-Modus ausgeführt werden. Führen Sie zum Installieren des Add-Ins entweder den SQL Server 2016-Setup-Assistenten aus, oder laden Sie „rsSharePoint.msi“ über das SQL Server 2016 Feature Pack herunter. Eine Liste der Versionen der Add-In- und Downloadseiten finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+  Führen Sie das Installationspaket für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint-Produkte (rsSharePoint.msi) auf den SharePoint-Servern aus, um die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Features innerhalb einer SharePoint-Bereitstellung zu aktivieren. Zu den Features gehören Power View, ein Berichts-Viewer-Webpart, ein URL-Proxyendpunkt, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Inhaltstypen sowie Anwendungsseiten, mit deren Hilfe Berichte, Datenquellen und andere Berichtsserverinhalte auf einer SharePoint-Website erstellt, angezeigt und verwaltet werden können. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist eine erforderliche Komponente für Berichtsserver, die im SharePoint-Modus ausgeführt werden. Führen Sie zum Installieren des Add-Ins entweder den SQL Server 2016-Setup-Assistenten aus, oder laden Sie „rsSharePoint.msi“ über das SQL Server 2016 Feature Pack herunter. Eine Liste der Versionen der Add-In- und Downloadseiten finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 > [!NOTE]
 > Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
   
-##  <a name="bkmk_prereq"></a> Erforderliche Komponenten  
+##  <a name="bkmk_prereq"></a> Voraussetzungen  
  Die Installation des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins ist einer der zahlreichen Schritte, die notwendig sind, um einen Berichtsserver in eine Instanz eines SharePoint-Produkts zu integrieren. Weitere Informationen zum Installieren und Konfigurieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](install-the-first-report-server-in-sharepoint-mode.md).  
   
 -   Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in eine SharePoint-Farm mit mehreren Web-Front-End-Anwendungen integrieren, installieren Sie das Add-In auf jedem Computer in der Farm, der über ein Webserver-Front-End verfügt. Führen Sie diesen Schritt nur für Web-Front-Ends durch, mit denen auf Berichtsserverinhalte zugegriffen wird.  
@@ -51,7 +53,7 @@ ms.locfileid: "68893375"
 ##  <a name="bkmk_3ways_to_install"></a> Übersicht über die Installationsmethoden  
  Das SQL Server 2016 Reporting Services-Add-In für SharePoint-Produkte kann mithilfe einer der folgenden zwei Methoden installiert werden:  
   
--   **Installations-Assistent**: ![Hinweis](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") Das Add-In kann in SQL Server 2016 mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistenten installiert werden. Wählen Sie im Assistenten auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte** .  
+-   **Installations-Assistent**: ![Hinweis](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Hinweis") Das Add-In kann in SQL Server 2016 mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistenten installiert werden. Wählen Sie im Assistenten auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte** .  
   
 -   **rsSharepoint.msi:** Das Add-In kann direkt von den Installationsmedien installiert bzw. heruntergeladen und installiert werden. rsSharepoint.msi unterstützt sowohl die Installation über die grafische Benutzeroberfläche als auch über die Befehlszeile. Sie müssen die MSI-Datei mit Administratorrechten ausführen, indem Sie zuerst eine Eingabeaufforderung mit erhöhten Rechten öffnen und dann die Datei rsSharepoint.msi über die Befehlszeile ausführen. Weitere Informationen zum Herunterladen des Add-Ins finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -105,7 +107,7 @@ Rssharepoint.msi /?
   
          Die Datei sollte sich hier befinden: **\Benutzer\\<Ihr Name\>\AppData\Local\Temp**.  
   
-    2.  Geben Sie folgenden Befehl ein: Dieser Konfigurationsschritt dauert mehrere Minuten. Der W3SVC-Dienst wird während des Prozesses neu gestartet. Während das Programm Dateien kopiert, Komponenten registriert und den Konfigurations-Assistenten für SharePoint-Produkte ausführt, werden mehrere Statusmeldungen angezeigt.  
+    2.  Geben Sie folgenden Befehl ein. Dieser Konfigurationsschritt dauert mehrere Minuten. Der W3SVC-Dienst wird während des Prozesses neu gestartet. Während das Programm Dateien kopiert, Komponenten registriert und den Konfigurations-Assistenten für SharePoint-Produkte ausführt, werden mehrere Statusmeldungen angezeigt.  
   
         ```  
         rsCustomAction.exe /i  
@@ -144,7 +146,7 @@ Rssharepoint.msi /?
   
  Durch das Deinstallieren des Add-Ins wird Folgendes nicht entfernt:  
   
--   Anmeldungen für das Berichtsserver-Dienstkonto für den Zugriff auf die SharePoint-Konfiguration und die SharePoint-Inhaltsdatenbanken. Löschen Sie alle Anmeldungen für das Berichtsserver-Dienstkonto aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz, die als Host für die SharePoint-Datenbanken dient.  
+-   Anmeldungen für das Berichtsserver-Dienstkonto für den Zugriff auf die SharePoint-Konfiguration und die SharePoint-Inhaltsdatenbanken. Löschen Sie alle Anmeldungen für das Berichtsserver-Dienstkonto aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz, die als Host für die SharePoint-Datenbanken dient.  
   
 -   Berechtigungen oder Gruppen, die Sie für Benutzer von Berichten erstellt haben. Wenn Sie benutzerdefinierte Berechtigungsebenen oder SharePoint-Gruppen erstellt haben, um Zugriff auf Berichtsserverfunktionen zu gewähren, sollten Sie nicht mehr benötigte Berechtigungen aufheben.  
   
@@ -256,10 +258,10 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  In der folgenden Tabelle sind die Schalter für rscustomaction.exe zusammengefasst:  
   
-|Schalter|und Beschreibung|  
+|Schalter|BESCHREIBUNG|  
 |------------|-----------------|  
 |i|Installiert die benutzerdefinierten Aktionen. Dadurch werden die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten in SharePoint registriert. Startet den W3SVC-Dienst neu.|  
-|r|Repair|  
+|r|Reparieren|  
 |u|Deinstallation Dadurch wird die Registrierung der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten in der gesamten SharePoint-Farm aufgehoben, die Dateien werden jedoch auf dem Datenträger belassen. Startet den W3SVC-Dienst neu.|  
 |p|Lokale Deinstallation Dadurch wird die Registrierung der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten nur auf dem lokalen Computer aufgehoben. Die Dateien verbleiben auf dem Datenträger. Startet den W3SVC-Dienst neu.|  
 |t|Nur SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005. Der Schalter testet, ob der Berichtsserver ordnungsgemäß mit der Berichtsserver-Datenbank verbunden ist.|  

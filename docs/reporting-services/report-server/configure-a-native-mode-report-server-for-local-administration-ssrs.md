@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403266"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66403266"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus|  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66403266"
   
 -   [So konfigurieren Sie SQL Server Data Tools (SSDT) für die Veröffentlichung auf einem lokalen Berichtsserver](#bkmk_configure_ssdt)  
   
--   [Zusätzliche Informationen](#bkmk_addiitonal_informaiton)  
+-   [Weitere Informationen](#bkmk_addiitonal_informaiton)  
   
 ##  <a name="bkmk_configuraiton_overview"></a> Übersicht der Konfigurationsänderungen  
  Durch die folgenden Konfigurationsänderungen wird der Server so konfiguriert, dass Berichtsserverinhalte und -vorgänge mit Standardbenutzerberechtigungen verwaltet werden können:  
@@ -93,7 +93,7 @@ ms.locfileid: "66403266"
   
 11. Klicken Sie auf **Hinzufügen**.  
   
-12. Wählen Sie **OK**.  
+12. Klicken Sie auf **OK**.  
   
 ###  <a name="bkmk_configure_folder_settings"></a> Ordnereinstellungen des Webportals  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66403266"
   
 5.  Wählen Sie **Inhalts-Manager**aus.  
   
-6.  Wählen Sie **OK**.  
+6.  Klicken Sie auf **OK**.  
   
 ###  <a name="bkmk_configure_site_settings"></a> Siteeinstellungen des Webportals  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66403266"
   
     ![Zahnradsymbol](../media/ssrsgearmenu.png)erforderlich.
     >[!TIP]  
-    >**Hinweis:** Wenn die Option **Siteeinstellungen** nicht angezeigt wird, schließen Sie den Browser, öffnen Sie ihn mit Administratorberechtigungen erneut, und navigieren Sie zum Webportal.  
+    >**Hinweis:** Wenn die Option **Siteeinstellungen** nicht angezeigt wird, schließen Sie den Browser, öffnen Sie ihn mit Administratorberechtigungen nochmals, und navigieren Sie zum Webportal.  
   
 3.  Wählen Sie auf der Seite „Siteeinstellungen“ die Option **Sicherheit** aus, und wählen Sie dann **Gruppe oder Benutzer hinzufügen** aus.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66403266"
 
 5.  Wählen Sie **Systemadministrator**aus.  
   
-6.  Wählen Sie **OK**.  
+6.  Klicken Sie auf **OK**.  
   
 7.  Schließen Sie das Webportal.  
   
@@ -174,7 +174,7 @@ Sie können jetzt Berichte und andere Elemente auf einem lokalen Berichtsserver 
 ##  <a name="bkmk_addiitonal_informaiton"></a> Zusätzliche Informationen  
  Ein weiterer häufiger Konfigurationsschritt in Verbindung mit der Verwaltung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] besteht darin, Port 80 in der Windows-Firewall zu öffnen, um den Zugriff auf den Berichtsservercomputer zu ermöglichen. Anweisungen finden Sie unter [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Manage a Reporting Services Native Mode Report Server (Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus)](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65619617"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Gewähren von Benutzerzugriff auf einen Berichtsserver
@@ -27,9 +27,9 @@ ms.locfileid: "65619617"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet rollenbasierte Sicherheit, um Benutzerzugriff auf einen Berichtsserver zu gewähren. Bei der Installation eines neuen Berichtsservers haben nur Benutzer, die Mitglieder der lokalen Administratorengruppe sind, Zugriff auf Berichtsserverinhalte und -vorgänge. Damit der Berichtsserver auch von anderen Benutzern verwendet werden kann, müssen Sie Rollenzuweisungen erstellen, mit denen Benutzer- oder Gruppenkonten einer vordefinierten Rolle zugeordnet werden, die eine Auflistung von Tasks festlegt.
 
- **Berichtsserver im SharePoint-Modus:** Für Berichtsserver, die für den integrierten SharePoint-Modus konfiguriert sind, muss der Zugriff von einer SharePoint-Website mit SharePoint-Berechtigungen konfiguriert werden. Die Berechtigungsebenen der SharePoint-Website legen den Zugriff auf Berichtsserverinhalt und -vorgänge fest. Sie müssen Websiteadministrator sein, um Berechtigungen auf einer SharePoint-Website gewähren zu können. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
+ **Berichtsserver im SharePoint-Modus:** Wenn ein Berichtsserver so konfiguriert ist, dass er im integrierten SharePoint-Modus ausgeführt wird, konfigurieren Sie den Zugriff von einer SharePoint-Website mit SharePoint-Berechtigungen. Die Berechtigungsebenen der SharePoint-Website legen den Zugriff auf Berichtsserverinhalt und -vorgänge fest. Sie müssen Websiteadministrator sein, um Berechtigungen auf einer SharePoint-Website gewähren zu können. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
- **Berichtsserver im einheitlichen Modus:** In diesem Artikel liegt der Schwerpunkt auf einem für den einheitlichen Modus konfigurierten Berichtsserver und der Verwendung des Webportals zum Zuweisen von Benutzern zu Rollen. Die folgenden beiden Rollen stehen zur Verfügung:
+ **Berichtsserver im einheitlichen Modus:** In diesem Artikel liegt der Schwerpunkt auf einem für den einheitlichen Modus konfigurierten Berichtsserver und der Verwendung des Webportals zum Zuweisen von Benutzern zu einer Rolle. Die folgenden beiden Rollen stehen zur Verfügung:
 
 - Rollen auf Elementebene werden verwendet, um Berichtsserverinhalte, Abonnements, Berichtsverarbeitung und Berichtsverlauf anzuzeigen, hinzuzufügen und zu verwalten. Rollenzuweisungen auf Elementebene werden im Stammknoten (dem Stammordner) oder in bestimmten Ordnern oder Elementen weiter unten in der Hierarchie definiert.
 
@@ -37,7 +37,7 @@ ms.locfileid: "65619617"
 
     Diese beiden Rollentypen ergänzen sich gegenseitig und sollten zusammen verwendet werden. Das Hinzufügen eines Benutzers zu einem Berichtsserver ist daher ein Vorgang mit zwei Teilvorgängen. Wenn Sie einen Benutzer einer Rolle auf Elementebene zuweisen, sollten Sie ihn ebenfalls einer Rolle auf Systemebene zuweisen. Beim Zuweisen eines Benutzers zu einer Rolle müssen Sie eine bereits definierte Rolle wählen. Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], um Rollen zu erstellen, zu ändern oder zu löschen. Weitere Informationen finden Sie unter [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
 
-## <a name="before-you-start"></a>Vorbereitungen
+## <a name="before-you-start"></a>Vorbereitung
 
 Überprüfen Sie die folgende Liste vor dem Hinzufügen von Benutzern zu einem Berichtsserver im einheitlichen Modus.
 
@@ -45,7 +45,7 @@ ms.locfileid: "65619617"
 
 - Um diese Aufgabe an andere Benutzer zu delegieren, erstellen Sie Rollenzuweisungen, die Benutzerkonten den Rollen Inhalts-Manager und Systemadministrator zuordnen. Benutzer, die über Inhalts-Manager- und Systemadministrator-Berechtigungen verfügen, können einem Berichtsserver Benutzer hinzufügen.
 
-- Sehen Sie sich in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]die vordefinierten Systemrollen und Benutzerrollen an, damit Ihnen die mit den einzelnen Rollen verbundenen Tasks vertraut sind. Im Webportal werden keine Aufgabenbeschreibungen angezeigt, sodass Sie die Rollen kennen sollten, bevor Sie Benutzer hinzufügen.
+- Sehen Sie sich in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] die vordefinierten Systemrollen und Benutzerrollen an, damit Ihnen die mit den einzelnen Rollen verbundenen Aufgaben vertraut sind. Im Webportal werden keine Aufgabenbeschreibungen angezeigt, sodass Sie die Rollen kennen sollten, bevor Sie Benutzer hinzufügen.
 
 - Passen Sie die Rollen optional an, oder definieren Sie zusätzliche Rollen, um die Auflistung von benötigten Tasks einzuschließen. Wenn Sie zum Beispiel benutzerdefinierte Sicherheitseinstellungen für einzelne Elemente verwenden möchten, können Sie eine neue Rollendefinition erstellen, die Lesezugriff für Ordner gewährt.
 
@@ -53,11 +53,11 @@ ms.locfileid: "65619617"
 
 1. Starten Sie das [Webportal](../web-portal-ssrs-native-mode.md).
 
-2. Wählen Sie die **Zahnradsymbol** Symbol oben rechts, und wählen Sie dann **Standorteinstellungen** aus dem Dropdownmenü aus.
+2. Wählen Sie in der oberen rechten Ecke das **Zahnradsymbol** aus, und wählen Sie dann im Dropdownmenü **Siteeinstellungen** aus.
 
-    ![Report Server Web Portal Symbol und eine Dropdownliste zahnradmenü](../../reporting-services/security/media/settings-icon-and-menu.png)
+    ![Zahnradsymbol und Dropdownmenü im Webportal des Berichtsservers](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-3. Wählen Sie **Sicherheit**.
+3. Wählen Sie **Sicherheit** aus.
 
 4. Klicken Sie auf **Gruppe oder Benutzer hinzufügen**.
 
@@ -80,7 +80,7 @@ ms.locfileid: "65619617"
 
 3. Klicken Sie im Dropdownmenü auf **Verwalten**.
 
-4. Wählen Sie **Sicherheit**.
+4. Wählen Sie **Sicherheit** aus.
 
 5. Klicken Sie auf **Gruppe oder Benutzer hinzufügen**.
 
@@ -95,7 +95,7 @@ ms.locfileid: "65619617"
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Create and Manage Role Assignments (Erstellen und Verwalten von Rollenzuweisungen)](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[Erstellen und Verwalten von Rollenzuweisungen](../../reporting-services/security/create-and-manage-role-assignments.md)  
 [Role Assignments (Rollenzuweisungen)](../../reporting-services/security/role-assignments.md)  
 [Rollendefinitionen](../../reporting-services/security/role-definitions.md)  
 

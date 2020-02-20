@@ -1,6 +1,7 @@
 ---
-title: Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.date: 03/07/2017
+title: Zellen, Zeilen und Spalten in einem Tablix-Datenbereich | Microsoft-Dokumentation
+description: Wenn Sie steuern möchten, wie Daten in den Zeilen und Spalten eines Tablix-Datenbereichs in einem paginierten SQL Server Reporting Services-Bericht angezeigt werden, müssen Sie wissen, wie Sie Zeilen und Spalten für Detaildaten, Gruppendaten, Bezeichnungen und Gesamtwerte angeben.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -13,14 +14,15 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 79cfa786930825e28f41ffe38802f4aa1e0ec6f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574717"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252397"
 ---
-# <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)
+# <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Zellen, Zeilen und Spalten in einem Tablix-Datenbereich (Berichts-Generator und SSRS)
+
   Sie müssen sich mit dem Verfahren zum Angeben von Zeilen und Spalten für Detaildaten, Gruppendetails, Bezeichnungen und Gesamtwerte vertraut machen, um zu steuern, wie Daten in den Zeilen und Spalten eines Tablix-Datenbereichs in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht angezeigt werden. In vielen Fällen verwenden Sie die Standardstrukturen einer Tabelle, Matrix oder Liste, um die Daten anzuzeigen. Weitere Informationen finden Sie unter [Tabellen (Berichts-Generator und SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrizen](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) oder [Listen](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  In einem Tablix-Datenbereich werden Detaildaten in Detailzeilen und Detailspalten sowie gruppierte Daten in Gruppenzeilen und Gruppenspalten angezeigt. Wenn Sie einem Tablix-Datenbereich Zeilengruppen und Spaltengruppen hinzufügen, werden Zeilen und Spalten zum Anzeigen der Daten automatisch hinzugefügt. Sie können manuell Zeilen und Spalten hinzufügen oder entfernen, um einen Tablix-Datenbereich anzupassen und die Anzeige der Daten im Bericht zu konfigurieren.  
@@ -36,15 +38,15 @@ ms.locfileid: "65574717"
 ### <a name="row-and-column-handles"></a>Zeilen- und Spaltenhandles  
  Wenn Sie einen Tablix-Datenbereich auswählen, geben die Grafiken der Zeilen- und Spaltenhandles den Zweck der jeweiligen Zeile bzw. Spalte an. Handles geben Zeilen und Spalten an, die sich in einer Gruppe oder außerhalb einer Gruppe befinden. In der folgenden Tabelle wird eine Vielzahl angezeigter Handles aufgelistet.  
   
-|Symbol|und Beschreibung|  
+|Symbol|Beschreibung|  
 |----------|-----------------|  
-|![Zeilenziehpunkt mit drei parallelen Linien für Detailzeile](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Row handle with 3 parallel lines for details row")|Nur die Detailgruppe in der Zeilengruppenhierarchie|  
-|![Zeilenziehpunkt mit Detailzeile und einer äußeren Gruppe](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Row handle with details row and one outer group")|Eine äußere Gruppe und die untergeordnete Detailgruppe|  
-|![Zwei parallele Klammern, die geschachtelte Gruppen darstellen](../../reporting-services/report-design/media/rs-icontablix-nestedgroupnodetails.gif "Two parallel brackets showing nested groups")|Eine äußere Gruppe, eine innere Gruppe, keine Detailgruppe|  
-|![Zwei Klammern, drei gestapelte Linien für Schachtelung und Details](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetails.gif "2 brackets & 3 stacked lines for nested & details")|Eine äußere Gruppe, eine innere Gruppe und die untergeordnete Detailgruppe|  
-|![Eine äußere Gruppe mit Fußzeile, eine innere Gruppe](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentfooter.gif "One outer group with footer row, one inner group")|Eine äußere Gruppe mit einer Fußzeile für Gesamtergebnisse und eine innere Gruppe|  
-|![Klammer für äußere Gruppe, Klammer für innere Gruppe, Details](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "outer group bracket, inner group bracket, details")|Eine äußere Gruppe mit einer Fußzeile für Gesamtergebnisse, eine innere Gruppe mit einer Fußzeile für Gesamtergebnisse und eine Detailzeile|  
-|![Übergeordnete Kopf- und Fußzeile und untergeordnete Gruppe](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "parent header and footer, and also child group")|Eine äußere Gruppe mit einer Kopfzeile für Bezeichnungen und einer Fußzeile für Gesamtergebnisse, eine innere Gruppe, keine Detailgruppe|  
+|![Zeilenhandle mit 3 parallelen Linien für Detailzeile](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Zeilenhandle mit 3 parallelen Linien für Detailzeile")|Nur die Detailgruppe in der Zeilengruppenhierarchie|  
+|![Zeilenhandle für die Detailzeile und eine äußeren Gruppe](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Zeilenhandle für die Detailzeile und eine äußeren Gruppe")|Eine äußere Gruppe und die untergeordnete Detailgruppe|  
+|![Zwei gleiche Klammern, die für geschachtelte Gruppen stehen](../../reporting-services/report-design/media/rs-icontablix-nestedgroupnodetails.gif "Zwei gleiche Klammern, die für geschachtelte Gruppen stehen")|Eine äußere Gruppe, eine innere Gruppe, keine Detailgruppe|  
+|![2 Klammern und 3 gestapelte Linien, die für Schachtelung und Details stehen](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetails.gif "2 Klammern und 3 gestapelte Linien, die für Schachtelung und Details stehen")|Eine äußere Gruppe, eine innere Gruppe und die untergeordnete Detailgruppe|  
+|![Eine äußere Gruppe mit Fußzeile, eine innere Gruppe](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentfooter.gif "Eine äußere Gruppe mit Fußzeile, eine innere Gruppe")|Eine äußere Gruppe mit einer Fußzeile für Gesamtergebnisse und eine innere Gruppe|  
+|![Klammer für äußere Gruppe, Klammer für innere Gruppe, Details](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "Klammer für äußere Gruppe, Klammer für innere Gruppe, Details")|Eine äußere Gruppe mit einer Fußzeile für Gesamtergebnisse, eine innere Gruppe mit einer Fußzeile für Gesamtergebnisse und eine Detailzeile|  
+|![Übergeordnete Kopf- und Fußzeile und untergeordnete Gruppe](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "Übergeordnete Kopf- und Fußzeile und untergeordnete Gruppe")|Eine äußere Gruppe mit einer Kopfzeile für Bezeichnungen und einer Fußzeile für Gesamtergebnisse, eine innere Gruppe, keine Detailgruppe|  
   
 ### <a name="group-rows"></a>Gruppenzeilen  
  Zeilen innerhalb einer Gruppe werden einmal für jeden eindeutigen Gruppenwert wiederholt. Sie werden typischerweise für Zusammenfassungen von Aggregaten verwendet. Zeilen außerhalb einer Gruppe werden einmal in Bezug auf die Gruppe wiederholt und für Bezeichnungen und Teilergebnisse verwendet. Wenn Sie eine Tablix-Zelle auswählen, zeigen die Zeilen- und Spaltenhandles sowie die eckigen Klammern im Tablix-Datenbereich die Gruppen an, zu denen die Zelle gehört. In dieser Abbildung werden die folgenden visuellen Hinweise veranschaulicht:  
@@ -55,17 +57,17 @@ ms.locfileid: "65574717"
   
 -   Gruppenindikatoren, die alle Gruppenmitgliedschaften für eine ausgewählte Zelle anzeigen  
   
- ![Tabelle mit Detailgruppe und geschachtelten Zeilengruppen](../../reporting-services/report-design/media/rs-tablixrowgroupvisualcues.gif "Table with detail and nested row groups")  
+ ![Tabelle mit Detailgruppe und geschachtelten Zeilengruppen](../../reporting-services/report-design/media/rs-tablixrowgroupvisualcues.gif "Tabelle mit Detailgruppe und geschachtelten Zeilengruppen")  
   
 ### <a name="total-rows"></a>Ergebniszeilen  
  Nach dem Hinzufügen von Zeilen- und Spaltengruppen können Sie eine Zeile für die Ergebnisse von Spalten und eine Spalte für die Ergebnisse von Zeilen hinzufügen. In der folgenden Abbildung ist eine Matrix mit Zeilen- und Spaltengruppen sowie einer Ergebniszeile und einer Ergebnisspalte veranschaulicht.  
   
- ![Tablix-Datenbereich](../../reporting-services/report-design/media/rs-tablixparts.gif "Tablix data region")  
+ ![Tablix-Datenbereich](../../reporting-services/report-design/media/rs-tablixparts.gif "Tablix-Datenbereich")  
   
 ### <a name="grouping-pane"></a>Gruppierungsbereich  
  Im Bereich Gruppierung werden die Zeilen- und Spaltengruppen für den derzeit ausgewählten Tablix-Datenbereich auf der Entwurfsoberfläche angezeigt. In der folgenden Abbildung wird der Bereich Gruppierung für diesen Tablix-Datenbereich veranschaulicht.  
   
- ![Gruppierungsbereich für geschachtelte Zeilen- und Spaltengruppen](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Grouping pane for nested row and column groups")  
+ ![Gruppierungsbereich für geschachtelte Zeilen- und Spaltengruppen](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Gruppierungsbereich für geschachtelte Zeilen- und Spaltengruppen")  
   
  Im Bereich Zeilengruppen werden die übergeordnete Gruppe Category und die untergeordnete Gruppe Subcat angezeigt. Im Bereich Spaltengruppen werden die übergeordnete Gruppe Geography und die untergeordnete Gruppe CountryRegion sowie die Gruppe Year angezeigt, die eine angrenzende Gruppe der Gruppe Geography ist. Wenn Sie im Bereich Zeilengruppen die Gruppe Subcat auswählen, wechselt die Farbe der Gruppenleiste zu einem dunkleren Orangeton, und die Zelle des entsprechenden Zeilengruppenelements wird auf der Entwurfsoberfläche ausgewählt.  
   
@@ -82,11 +84,11 @@ ms.locfileid: "65574717"
   
  Die folgende Abbildung zeigt einen Tablix-Datenbereich mit geschachtelten Zeilengruppen und einer Detailgruppe.  
   
- ![Entwurfsansicht, Hinzufügen von Ergebniszeilen zu Gruppe und Tabelle](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "Design view, add total rows to group and table")  
+ ![Entwurfsansicht, Hinzufügen von Ergebniszeilen zu Gruppe und Tabelle](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "Entwurfsansicht, Hinzufügen von Ergebniszeilen zu Gruppe und Tabelle")  
   
  Für einen Tablix-Datenbereich, in dem Detaildaten angezeigt werden, ist die Detailgruppe die innerste untergeordnete Gruppe. Zeilen, die Sie einer Detailgruppe hinzufügen, werden im Resultset für die Abfrage des Datasets, das mit diesem Tablix-Datenbereich verknüpft ist, einmal pro Zeile wiederholt. In der folgenden Abbildung wird die letzte Seite des gerenderten Berichts veranschaulicht. In dieser Abbildung sind die letzten Detailzeilen und die Teilergebniszeile für die letzte Bestellung dargestellt.  
   
- ![Vorschau, Tabelle mit Gruppenergebnissen, letzte Zeilen](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "Preview, Table with Group Totals, last rows")  
+ ![Vorschau, Tabelle mit Gruppenergebnissen, letzte Zeilen](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "Vorschau, Tabelle mit Gruppenergebnissen, letzte Zeilen")  
   
  Für jede Spalte in einem Tablix-Datenbereich gelten dieselben Prinzipien. Eine Spalte befindet sich beispielsweise entweder innerhalb oder außerhalb einer Spaltengruppe. Wenn Ergebnisse angezeigt werden sollen, fügen Sie eine Spalte außerhalb der Gruppe hinzu.  
   

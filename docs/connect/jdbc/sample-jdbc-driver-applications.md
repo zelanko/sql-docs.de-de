@@ -1,5 +1,5 @@
 ---
-title: Beispielanwendungen für JDBC-Treiber | Microsoft-Dokumentation
+title: Beispiele für JDBC-Treiberanwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0e6a8ac2279446e70c6d31467eacbe54ad50386d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 8fff14d68fa1e708e2f6daa84aa84c9cd5be2dcf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027804"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941096"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Beispiele für JDBC-Treiberanwendungen
 
@@ -33,15 +33,15 @@ Die Themen in diesem Abschnitt beschreiben, wie Sie die Beispielanwendungen konf
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-| Thema                                                                                                        | und Beschreibung                                                                                                                                                                                                                                                             |
+| Thema                                                                                                        | Beschreibung                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Verbinden und Abrufen von Daten](../../connect/jdbc/connecting-and-retrieving-data.md)                       | Diese Beispielanwendungen zeigen, wie eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank hergestellt wird. Sie veranschaulichen darüber hinaus verschiedene Möglichkeiten, um Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank abzurufen. |
 | [Working with Data Types &#40;JDBC&#41; (Arbeiten mit Datentypen &#40;JDBC&#41;)](../../connect/jdbc/working-with-data-types-jdbc.md)                 | Diese Beispielanwendungen veranschaulichen die Verwendung der Datentypmethoden des JDBC-Treibers, um Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zu verarbeiten.                                                                                           |
 | [Arbeiten mit Resultsets](../../connect/jdbc/working-with-result-sets.md)                                   | Diese Beispielanwendungen zeigen die Verwendung von Resultsets, um Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zu verarbeiten.                                                                                                         |
 | [Arbeiten mit umfangreichen Daten](../../connect/jdbc/working-with-large-data.md)                                     | Diese Beispielanwendungen veranschaulichen die Verwendung der adaptiven Pufferung zum Abrufen von Daten mit einer großen Menge an Werten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank ohne den durch Servercursor verursachten Overhead.                                                      |
-| [SQL-Datenermittlung und -klassifizierung](../../connect/jdbc/data-discovery-classification-sample.md) | Diese Beispielanwendung veranschaulicht, wie Sie Daten Ermittlung und Klassifizierungs Informationen, die in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank enthalten sind, mithilfe eines JDBC-Treibers aus einem Resultset-Objekt abrufen.                                      |
+| [SQL-Datenermittlung und -klassifizierung](../../connect/jdbc/data-discovery-classification-sample.md) | Diese Beispielanwendung veranschaulicht das Abrufen von Informationen zur Datenermittlung und -klassifizierung in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank über ein ResultSet-Objekt mithilfe des JDBC-Treibers.                                      |
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

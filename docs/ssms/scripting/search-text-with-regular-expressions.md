@@ -1,6 +1,6 @@
 ---
-title: Suchen von Text mit regulären Ausdrücken | Microsoft-Dokumentation
-ms.custom: ''
+title: Suchen von Text mit regulären Ausdrücken
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -16,17 +16,17 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1dba6a77288a4bebba70372ecf6fbd7a1f05dda6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264172"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253680"
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ersetzen von Textmustern. Im Feld **Suchen nach** des Dialogfelds [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
+Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ersetzen von Textmustern. Im Feld **Suchen nach** des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Dialogfelds **Suchen und Ersetzen** kann eine Reihe von bestimmten regulären Ausdrücken verwendet werden.  
   
 ## <a name="find-using-regular-expressions"></a>Suchvorgänge mithilfe von regulären Ausdrücken  
   
@@ -39,9 +39,9 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
   
  Die folgende Tabelle enthält eine Beschreibung der regulären Ausdrücke, die in der **Verweisliste**verfügbar sind.  
   
-|expression|Syntax|und Beschreibung|  
+|Ausdruck|Syntax|Beschreibung|  
 |----------------|------------|-----------------|  
-|Beliebiges Zeichen|aus.|Entspricht jedem beliebigen einzelnen Zeichen außer einem Zeilenumbruch.|  
+|Beliebiges Zeichen|erforderlich.|Entspricht jedem beliebigen einzelnen Zeichen außer einem Zeilenumbruch.|  
 |0 oder mehr|*|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt alle möglichen Übereinstimmungen vor.|  
 |Ein oder mehr|+|Entspricht mindestens einem Vorkommen des vorherigen Ausdrucks.|  
 |Zeilenanfang|^|Verankert die übereinstimmende Zeichenfolgen am Anfang einer Zeile|  
@@ -61,12 +61,12 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
   
  Die Liste aller regulären Ausdrücke, die in **Suchen und Ersetzen** -Vorgängen zulässig sind, ist zu lang, um in der **Verweisliste**angezeigt werden zu können. Sie können auch einen der folgenden regulären Ausdrücke in eine **Suchen nach** -Zeichenfolge einfügen:  
   
-|expression|Syntax|und Beschreibung|  
+|Ausdruck|Syntax|Beschreibung|  
 |----------------|------------|-----------------|  
 |Minimal - zero or more|@|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
 |Minimal - one or more|#|Entspricht einem oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
 |n-mal wiederholen|^n|Entspricht n Vorkommen des vorherigen Ausdrucks. [0-9]^4 entspricht z. B. einer beliebigen Zeichenfolge aus vier Zahlen.|  
-|Grouping|()|Gruppiert einen untergeordneten Ausdruck.|  
+|Gruppierung|()|Gruppiert einen untergeordneten Ausdruck.|  
 |n-markierter Text|\n|Gibt in einem **Suchen und Ersetzen** -Ausdruck den Text an, der dem n-ten markierten Ausdruck entspricht, wobei n eine Zahl von 1 bis 9 ist.<br /><br /> In einem **Ersetzen** -Ausdruck wird mit „\0“ der gesamte übereinstimmende Text eingefügt.|  
 |Rechtsbündig ausgerichtetes Feld|\\(w,n)|Richtet in einem **Ersetzen** -Ausdruck den n-ten markierten Ausdruck in einem Feld um mindestens *w* Zeichen nach rechts aus.|  
 |Linksbündig ausgerichtetes Feld|\\(-w,n)|Richtet in einem **Ersetzen** -Ausdruck den n-ten markierten Ausdruck in einem Feld um mindestens *w* Zeichen nach links aus.|  
@@ -85,7 +85,7 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
   
  In der folgenden Tabelle ist die Syntax für Übereinstimmungen in Bezug auf Standardeigenschaften von Unicode-Zeichen aufgelistet. Die aus zwei Buchstaben bestehende Abkürzung ist mit der in der Datenbank für Eigenschaften von Unicode-Zeichen identisch. Die Abkürzungen lassen sich als Teil eines Zeichensatzes angeben. So entspricht z. B. der Ausdruck [:Nd:Nl:No] einer beliebigen Ziffer.  
   
-|expression|Syntax|und Beschreibung|  
+|Ausdruck|Syntax|Beschreibung|  
 |----------------|------------|-----------------|  
 |Großbuchstabe|:Lu|Entspricht einem beliebigen Großbuchstaben. So entspricht :Luhe z. B. "The", aber nicht "the".|  
 |Kleinbuchstabe|:Ll|Entspricht einem beliebigen Kleinbuchstaben. So entspricht :Llhe z. B. "the", aber nicht "The".|  
@@ -120,11 +120,11 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
   
  Neben den Standardeigenschaften von Unicode-Zeichen können auch die folgenden zusätzlichen Eigenschaften als Teil eines Zeichensatzes angegeben werden:  
   
-|expression|Syntax|und Beschreibung|  
+|Ausdruck|Syntax|Beschreibung|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Entspricht einem beliebigen einzelnen Zeichen. So entspricht :Alhe Wörtern wie "The", "then" und "reached".|  
-|Numerisch|:Nu|Entspricht einer beliebigen Zahl oder Ziffer.|  
-|Satzzeichen|:Pu|Entspricht einem beliebigen Satzzeichen, z. B. ?, @, ' usw.|  
+|Numeric|:Nu|Entspricht einer beliebigen Zahl oder Ziffer.|  
+|Interpunktion|:Pu|Entspricht einem beliebigen Satzzeichen, z. B. ?, @, ' usw.|  
 |Leerzeichen|:Wh|Entspricht allen Arten von Leerzeichen, einschließlich Veröffentlichungsleerzeichen und ideografischen Leerzeichen.|  
 |Bidirektional|:Bi|Entspricht Zeichen aus Skripts mit Schreibrichtung von rechts nach links, z. B. Arabisch und Hebräisch.|  
 |Hangul|:Ha|Entspricht dem koreanischen Hangul-Alphabet und kombinierten Jamo-Lautzeichen.|  

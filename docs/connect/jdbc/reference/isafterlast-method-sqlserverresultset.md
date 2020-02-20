@@ -16,10 +16,10 @@ ms.assetid: 19f9d124-3184-4985-8b97-503a8ab8b4f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 233599694c4fb4f7764bbb48d5c77e0fcd273340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977846"
 ---
 # <a name="isafterlast-method-sqlserverresultset"></a>isAfterLast-Methode (SQLServerResultSet)
@@ -35,13 +35,13 @@ public boolean isAfterLast()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn der Cursor nach der letzten Zeile liegt. **false** , wenn sich der Cursor an einer beliebigen anderen Position befindet oder wenn das Resultset keine Zeilen enthält.  
+ Der Wert **TRUE** wird zurückgegeben, wenn der Cursor hinter der letzten Zeile liegt. Der Wert **FALSE** wird zurückgegeben, wenn der Cursor sich an einer beliebigen anderen Position befindet oder wenn das Resultset keine Zeilen enthält.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese isafterlast-Methode wird von der isafterlast-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese isAfterLast-Methode wird von der isAfterLast-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Wird diese Methode mit dynamischen Cursors verwendet, einschließlich schreibgeschützten Vorwärtscursors und die selectMethod-Verbindungseigenschaft auf "cursor" festgelegt, wird eine Ausnahme ausgelöst.  
   

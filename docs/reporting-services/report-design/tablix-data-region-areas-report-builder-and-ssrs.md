@@ -9,10 +9,10 @@ ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 944b6c7053b024a0a62cc24c53095464844d4387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573951"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Zonen des Tablix-Datenbereichs (Berichts-Generator und SSRS)
@@ -26,7 +26,7 @@ Die Zellen in den einzelnen Bereichen verfügen über unterschiedliche Funktione
   
 Gepunktete Linien auf der Entwurfsoberfläche bezeichnen die vier Bereiche eines ausgewählten Tablix-Datenbereichs. Die folgende Abbildung zeigt die Bereiche für einen Tablix-Bereich mit geschachtelten Zeilengruppen auf der Basis von Category und Subcategory an sowie geschachtelte Spaltengruppen auf der Basis von Geography und CountryRegion und eine angrenzende Spaltengruppe auf der Basis von Year.  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Zonen des Tablix-Datenbereichs](../../reporting-services/report-design/media/rs-tablixareas.gif "Zonen des Tablix-Datenbereichs")  
   
  Die einzelnen Bereiche werden in der folgenden Liste beschrieben:  
   
@@ -42,7 +42,7 @@ Gepunktete Linien auf der Entwurfsoberfläche bezeichnen die vier Bereiche eines
   
  Die folgende Abbildung zeigt den Tablix-Datenbereich in der Vorschau an.  
   
- ![Vorschau, Tablix-Ecke, Zeilen- und Spaltengruppen, Text](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Preview, Tablix corner, row & column groups, body")  
+ ![Vorschau, Tablix-Ecke, Zeilen- und Spaltengruppen, Text](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Vorschau, Tablix-Ecke, Zeilen- und Spaltengruppen, Text")  
   
  Der Zeilengruppenbereich zeigt zwei Kategoriegruppeninstanzen für Clothing und Components an. Die Spaltengruppe zeigt eine Instanz der Gruppe Geography für North America mit zwei geschachtelten Instanzen der Gruppe CountryRegion für Canada (CA) und United States (US) an. Außerdem zeigt die angrenzende Spalte zwei Jahre Gruppeninstanzen für 2003 und 2004 an. Die Spalte Total enthält die Zeilengesamtwerte. Die Ergebniszeile, die mit der Kategoriegruppe wiederholt wird, enthält die Gesamtwerte der Unterkategorie, und in der Gesamtergebniszeile werden die Kategoriegesamtwerte einmal für den Datenbereich angezeigt.  
   

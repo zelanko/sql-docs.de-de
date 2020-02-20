@@ -1,5 +1,5 @@
 ---
-title: gettrustservercertificate-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: getTrustServerCertificate-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81d07743dfefe0b0305b1a094a9ae4632d4effd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978583"
 ---
 # <a name="gettrustservercertificate-method-sqlserverdatasource"></a>getTrustServerCertificate-Methode (SQLServerDataSource)
@@ -35,7 +35,7 @@ public boolean getTrustServerCertificate()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- " **true** ", wenn "TrustServerCertificate" aktiviert ist. Andernfalls lautet der Wert **false**.  
+ Der Wert ist **TRUE**, wenn trustServerCertificate aktiviert ist. Andernfalls lautet der Wert **false**.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Ist die trustServerCertificate-Eigenschaft auf **true** festgelegt, wird dem SSL-Zertifikat von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatisch vertraut, wenn die Kommunikationsschicht mit SSL (Secure Sockets Layer) verschlüsselt ist. Anders gesagt: Das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-SSL-Zertifikat wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] nicht überprüft. Der Standardwert ist **false**.  

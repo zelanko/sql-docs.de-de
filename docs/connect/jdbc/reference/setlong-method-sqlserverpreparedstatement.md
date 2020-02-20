@@ -1,5 +1,5 @@
 ---
-title: setLong-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: Methode „setLong“ (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed2fa6801b1d81c209abeadece0f463b489091f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974009"
 ---
 # <a name="setlong-method-sqlserverpreparedstatement"></a>setLong-Methode (SQLServerPreparedStatement)
@@ -42,7 +42,7 @@ public final void setLong(int n,
   
  *x*  
   
- Ein **Long** -Wert.  
+ Ein **long**-Wert.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -9,10 +9,10 @@ ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67220585"
 ---
 # <a name="manage-shared-datasets"></a>Verwalten von freigegebenen Datasets
@@ -25,7 +25,7 @@ ms.locfileid: "67220585"
   
 -   Berichts-Generator   Verwenden Sie den Entwurfsmodus für freigegebene Datasets, und speichern Sie das freigegebene Dataset auf einem Berichtsserver oder auf einer SharePoint-Website.  
   
--   Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] / Visual Studio zum Erstellen von freigegebene Datasets im Ordner "Datasets" im Projektmappen-Explorer. Um ein freigegebenes Dataset zu veröffentlichen, stellen Sie es auf einem Berichtsserver oder auf einer SharePoint-Website bereit.  
+-   Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]/Visual Studio zum Erstellen freigegebener Datasets im Ordner „Datasets“ im Projektmappen-Explorer. Um ein freigegebenes Dataset zu veröffentlichen, stellen Sie es auf einem Berichtsserver oder auf einer SharePoint-Website bereit.  
   
 -   Hochladen einer Definitionsdatei für freigegebene Datasets (.rsd) Sie können eine Datei auf den Berichtsserver oder auf eine SharePoint-Website hochladen. Auf einer SharePoint-Website. Eine hochgeladene Datei wird erst anhand des Schemas überprüft, wenn das freigegebene Dataset zwischengespeichert oder in einem Bericht verwendet wird.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67220585"
   
  Die folgenden zusätzlichen Eigenschaften für freigegebene Datasets werden automatisch konfiguriert:  
   
-|Eigenschaft|und Beschreibung|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |HasDataSourceCredentials|Gibt an, ob die zugeordnete freigegebene Datenquelle über gespeicherte Anmeldeinformationen auf dem Berichtsserver verfügt.|  
 |HasUserProfileDependencies|Gibt an, ob der Bericht in der Abfrage oder in Filterausdrücken über einen Verweis auf die globale User-Auflistung verfügt.|  
@@ -80,9 +80,9 @@ ms.locfileid: "67220585"
 ## <a name="how-to-work-with-shared-dataset-properties-on-a-report-server"></a>Arbeiten mit Eigenschaften freigegebener Datasets auf Berichtsservern  
  Es stehen zahlreiche Tools für die Arbeit mit freigegebenen Datasets zur Verfügung. In der folgenden Tabelle sind die verschiedenen Methoden und Tools zusammengefasst. Ein Link führt zu weiteren Anweisungen.  
   
-|Task      |Tool      |Link      |  
+|Aufgabe      |Tool      |Link      |  
 |----------|----------|----------|  
-|Hinzufügen eines freigegebenen Datasets oder Ändern der Eigenschaften der Definition eines freigegebenen Datasets.|Speichern im Berichts-Generator.<br /><br /> Bereitstellen im Berichts-Designer.<br /><br /> Hochladen einer RSD-Datei im Webportal|[Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)]<br /><br /> [Hochladen einer Datei oder eines Berichts auf den Berichtsserver](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)<br /><br /> Wenn Sie ein freigegebenes Dataset hochladen, bevor die freigegebene Datenquelle, von der das Dataset abhängig ist, veröffentlicht wird, müssen Sie das freigegebene Dataset manuell an die freigegebene Datenquelle binden. Weitere Informationen finden Sie unter [... /.. /Reporting-Services/Work mit freigegebenen Datasets – Webportal](../work-with-shared-datasets-web-portal.md).|  
+|Hinzufügen eines freigegebenen Datasets oder Ändern der Eigenschaften der Definition eines freigegebenen Datasets.|Speichern im Berichts-Generator.<br /><br /> Bereitstellen im Berichts-Designer.<br /><br /> Hochladen einer RSD-Datei im Webportal|[Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)]<br /><br /> [Hochladen einer Datei oder eines Berichts auf den Berichtsserver](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)<br /><br /> Wenn Sie ein freigegebenes Dataset hochladen, bevor die freigegebene Datenquelle, von der das Dataset abhängig ist, veröffentlicht wird, müssen Sie das freigegebene Dataset manuell an die freigegebene Datenquelle binden. Weitere Informationen finden Sie unter [Arbeiten mit freigegebenen Datasets (Webportal)](../work-with-shared-datasets-web-portal.md).|  
 |Ändern der Eigenschaften freigegebener Datasetelemente|Webportal|[Arbeiten mit freigegebenen Datasets – Webportal](../../reporting-services/work-with-shared-datasets-web-portal.md)|  
 |Angeben zusätzlicher Eigenschaften für freigegebene Datasets für die Instanz eines freigegebenen Datasets in einem Bericht.|Berichts-Generator, Berichts-Designer|[Dataseteigenschaften (Dialogfeld), Abfrage (Berichts-Generator)](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)|  
 |Binden an eine andere freigegebene Datenquelle für ein freigegebenes Dataset.|Webportal|[Konfigurieren von Datenquelleneigenschaften für einen paginierten Bericht – SSRS](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
@@ -98,7 +98,7 @@ ms.locfileid: "67220585"
   
 -   Genauso wie freigegebene Datenquellen werden freigegebene Datasets unabhängig von den Berichten verwaltet, in denen sie verwendet werden. Ein Aspekt bei der Verwaltung eines freigegebenen Datasets auf einem Berichtsserver ist die Fähigkeit, die freigegebene Datenquelle, von der das Dataset abhängig ist, zu ändern, ohne die Definition des freigegebenen Datasets zu bearbeiten.  
   
--   Freigegebene Datasets können wie Berichte zwischengespeichert werden. Die für die Datenquelle erforderlichen Anmeldeinformationen müssen den Einschränkungen für das Zwischenspeichern entsprechen, und für jeden Parameter müssen Standardwerte angegeben werden. Weitere Informationen finden Sie unter [Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
+-   Freigegebene Datasets können wie Berichte zwischengespeichert werden. Die für die Datenquelle erforderlichen Anmeldeinformationen müssen den Einschränkungen für das Zwischenspeichern entsprechen, und für jeden Parameter müssen Standardwerte angegeben werden. Weitere Informationen finden Sie unter [Zwischenspeichern von freigegebenen Datasets (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
   
 -   Bei jeder Verarbeitung wird die aktuelle Definition des Elements auf dem Berichtsserver verwendet, was auch auf Berichte zutrifft. Wenn Sie Änderungen an einem freigegebenen Dataset vornehmen, wird für jeden Bericht, der das Dataset verwendet, bei der Berichtsverarbeitung die aktuelle Definition auf dem Berichtsserver verwendet. Wenn die Zwischenspeicherung für das freigegebene Dataset aktiviert ist und Sie Änderungen an der Definition des freigegebenen Datasets vornehmen, werden die Änderungen erst verwendet, nachdem die Daten im Cache nicht mehr gültig sind. Sie können Cacheaktualisierungspläne verwenden, um konsistente Daten für mehrere Berichte bereitzustellen.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "67220585"
   
 -   Für freigegebene Datasets gelten die gleichen Regeln zum Angeben von Parameterwerten wie für Abonnements.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Granting Permissions on a Native Mode Report Server (Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus)](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   

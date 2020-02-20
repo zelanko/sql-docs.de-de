@@ -1,7 +1,7 @@
 ---
-title: Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Konfigurieren eines mehrfach vernetzten Computers für den Zugriff
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a024707b5fa7ab70394a068ed47110898ae0518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126221"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244461"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "68126221"
   
 3.  Notieren Sie die IPv4- und IPv6-Adressen, die verwendet werden. Die anderen Informationen in der Liste, wie z. B. temporäre Adressen, Subnetzmasken und Standardgateways sind wichtig zum Konfigurieren eines TCP/IP-Netzwerks. Diese Informationen werden in diesem Beispiel jedoch nicht verwendet.  
   
-#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>So bestimmen Sie die IP-Adressen und die Ports zur Verwendung durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>So bestimmen Sie die IP-Adressen und die Ports zur Verwendung durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], zeigen Sie dann auf **Konfigurationstools**, und klicken Sie dann auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager**.  
   

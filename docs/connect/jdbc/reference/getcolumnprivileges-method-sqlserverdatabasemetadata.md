@@ -1,5 +1,5 @@
 ---
-title: getcolumnprivileges-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getColumnPrivileges-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae80a8c33f68ad2f3d2c85b1343a5cc0f2b423c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952876"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges-Methode (SQLServerDatabaseMetaData)
@@ -46,7 +46,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
   
  Ein **String-Objekt**, das den Schemanamen enthält.  
   
- *table*  
+ *Tabelle*  
   
  Ein **String-Objekt**, das den Tabellennamen enthält.  
   
@@ -65,7 +65,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
   
  Das von der getColumnPrivileges-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Katalogname.|  
 |TABLE_SCHEM|**String**|Der Tabellenschemaname.|  

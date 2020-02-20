@@ -13,10 +13,10 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7acbf53f3a77252d00d3ad5de65ffb221afe3b7a
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499880"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)
@@ -24,9 +24,9 @@ ms.locfileid: "66499880"
   
  Bevor Sie einem Bericht eine Karte oder einer Karte eine Kartenebene hinzufügen, sammeln Sie die folgenden Informationen:  
   
--   **Räumliche Datenquelle.** Der Speicherort oder die Verbindung zu einer Quelle, die räumliche Daten bereitstellt, z.B. der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und einer Datenbank, die räumliche Daten enthält, oder der Name einer Shape-Datei vom Environmental Systems Research Institute, Inc. ESRI-Shape-Datei (ESRI Shapefile)  
+-   **Räumliche Datenquelle.** Der Speicherort oder die Verbindung zu einer Quelle, die räumliche Daten bereitstellt, z.B. der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz und einer Datenbank, die räumliche Daten enthält, oder der Name einer Shape-Datei vom Environmental Systems Research Institute, Inc. ESRI-Shape-Datei (ESRI Shapefile)  
   
--   **anbieten.** Ein Feld aus der räumlichen Datenquelle, das Sätze von Koordinaten enthält, die Standorte angeben.  
+-   **Spatial data.** Ein Feld aus der räumlichen Datenquelle, das Sätze von Koordinaten enthält, die Standorte angeben.  
   
 -   **Analytische Daten.** Analytische Daten, die verwendet werden sollen, um die Kartenanzeige zu verändern, wie z. B. der Jahresumsatz pro Laden.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66499880"
   
  Klicken Sie auf den Titel der Assistentenseite, um den entsprechenden Hilfeinhalt anzuzeigen. Die angezeigten Seiten hängen von der Auswahl für den Kartentyp, der Quelle der räumlichen Daten und der Quelle der analytischen Daten ab.  
   
-1.  [Quelle räumlicher Daten auswählen](#SpatialDataSource). Räumliche Daten können aus dem Kartenkatalog, aus einer Shape-Datei des Environmental Systems Research Institute, Inc. (ESRI) oder aus räumlichen Daten in einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank stammen.  
+1.  [Quelle räumlicher Daten auswählen](#SpatialDataSource). Räumliche Daten können aus dem Kartenkatalog, einer Datei des Environmental Systems Research Institute, Inc. (ESRI) oder aus räumlichen Daten in einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank stammen.  
   
     -   [Was sind räumliche Daten?](#SpatialData)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66499880"
   
     -   Kartenvisualisierung auswählen: Punkte  
   
-4.  Auswählen einer Verbindung mit einer Datenquelle für „Kartenvisualisierung auswählen: Punkte“. Wählen Sie eine Datenquellenverbindung aus, oder erstellen Sie eine Verbindung zu einer externen Datenquelle mit analytischen Daten, die auf der Karte angezeigt werden sollen.  
+4.  Auswählen einer Verbindung mit einer Datenquelle für „Kartenvisualisierung auswählen: Punkte. Wählen Sie eine Datenquellenverbindung aus, oder erstellen Sie eine Verbindung zu einer externen Datenquelle mit analytischen Daten, die auf der Karte angezeigt werden sollen.  
   
 5.  Entwerfen Sie eine Abfrage. Erstellen Sie eine Abfrage, die die analytischen Daten angibt.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66499880"
   
  Wenn Sie eine Karte oder eine Kartenebene hinzugefügt haben und den Bericht in der Vorschau anzeigen, können Sie Karten- und Kartenebenenoptionen ändern, die Sie in den Assistenten festgelegt haben. Weitere Informationen finden Sie unter [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Weitere Informationen über Karten finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Schritt-für-Schritt-Anweisungen zum Hinzufügen eines Bericht zu einer Karte finden Sie unter [Lernprogramm: Kartenbericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
+ Weitere Informationen über Karten finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Schrittweise Anweisungen dazu, wie Sie einem Bericht eine Karte hinzufügen, finden Sie unter [ Tutorial: Kartenbericht (Berichts-Generator)](../../reporting-services/tutorial-map-report-report-builder.md).  
   
 ##  <a name="SpatialDataSource"></a> Quelle räumlicher Daten auswählen  
  Geben Sie auf dieser Seite die räumliche Datenquelle an, und legen Sie fest, welche räumlichen Daten eingeschlossen werden sollen. Räumliche Daten können aus dem Kartenkatalog, einer ESRI-Shape-Datei oder einer Datasetabfrage stammen, die räumliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten aus einer Datenbank von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher angibt.  
@@ -181,7 +181,7 @@ ms.locfileid: "66499880"
   
 -   **Luftbild.** Zeigt nur ein Luftbild an. In diesem Modus wird kein Text angezeigt.  
   
--   **Hybrid.** Zeigt die Kombination der Ansichten **Straße** und **Luftbild** an.  
+-   **Hybrid:** Zeigt die Kombination der Ansichten **Straße** und **Luftbild** an.  
   
  Weitere Informationen zu Kacheln finden Sie unter [Bing Maps Tiles System](https://go.microsoft.com/fwlink/?LinkId=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
@@ -249,7 +249,7 @@ ms.locfileid: "66499880"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
+ [Planen eines Kartenberichts (Berichts-Generator und SSRS)](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   

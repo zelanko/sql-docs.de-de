@@ -1,5 +1,5 @@
 ---
-title: Ergebnisse der SQL Server Meldung | Microsoft-Dokumentation
+title: SQL Server-Meldungsergebnisse | Microsoft-Dokumentation
 description: SQL Server-Meldungsergebnisse
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 05d731f418bad21f9e8ec32c620b352c5663994a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994922"
 ---
 # <a name="sql-server-message-results"></a>SQL Server-Meldungsergebnisse
@@ -38,9 +38,9 @@ ms.locfileid: "67994922"
   
 -   SET STATISTICS  
   
- Diese Anweisungen geben entweder eine oder mehrere Informationsmeldungen zurück oder veranlassen, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Informationsmeldungen anstelle von Rowset- oder Anzahlergebnissen zurückgibt. Bei erfolgreicher Ausführung gibt der OLE DB Treiber für SQL Server S_OK zurück, und die Nachrichten sind für den OLE DB Treiber für SQL Server Consumer verfügbar.  
+ Diese Anweisungen geben entweder eine oder mehrere Informationsmeldungen zurück oder veranlassen, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Informationsmeldungen anstelle von Rowset- oder Anzahlergebnissen zurückgibt. Bei erfolgreicher Ausführung gibt der OLE DB-Treiber für SQL Server S_OK zurück, und die Meldungen sind für den Consumer des OLE DB-Treibers für SQL Server verfügbar.  
   
- Der OLE DB Treiber für SQL Server gibt S_OK zurück und verfügt über eine oder mehrere Informationsmeldungen, die nach der [!INCLUDE[tsql](../../../includes/tsql-md.md)] Ausführung vieler Anweisungen oder der Consumer-Ausführung eines OLE DB Treibers für SQL Server Member-Funktion verfügbar sind.  
+ Der OLE DB-Treiber für SQL Server gibt S_OK zurück und weist eine oder mehrere Informationsmeldungen auf, nachdem eine Elementfunktion des OLE DB-Treibers für SQL Server durch den Consumer oder zahlreiche [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen ausgeführt wurden.  
   
  Wenn der Consumer des OLE DB-Treibers für SQL Server die dynamische Angabe von Abfragetext zulässt, sollten die Fehlerschnittstellen nach jeder Ausführung einer Elementfunktion überprüft werden. Dabei spielen der Wert des Rückgabecodes, die Anwesenheit oder Abwesenheit eines zurückgegebenen **IRowset**- oder **IMultipleResults**-Schnittstellenverweises oder die Angabe betroffener Zeilen keine Rolle.  
   

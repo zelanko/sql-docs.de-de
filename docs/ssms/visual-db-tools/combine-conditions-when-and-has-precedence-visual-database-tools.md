@@ -1,10 +1,7 @@
 ---
-title: Kombinieren von Bedingungen, wenn „AND“ Vorrang hat (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 01/19/2017
+title: Kombinieren von Bedingungen, wenn AND Vorrang hat
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,26 +13,32 @@ helpviewer_keywords:
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 58519cd3150c11496c3b8d3b672f3fe9001ae39a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 0f7ca7c3a99165d15b7d5ac38450a3eb7e49d3a3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262514"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241230"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>Kombinieren von Bedingungen, wenn AND Vorrang hat (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Um Bedingungen mit AND zu kombinieren, fügen Sie die Spalte zur Abfrage zweimal hinzu – je einmal für jede Bedingung. Um Bedingungen mit OR zu kombinieren, setzen Sie die erste Bedingung in die Filterspalte und die weiteren Bedingungen in eine Spalte **Oder...** .  
   
 Angenommen, Sie möchten nach Mitarbeitern suchen, die entweder seit mehr als fünf Jahren in der Firma beschäftigt sind und gering qualifizierte Tätigkeiten auf unterer Betriebsebene ausüben oder unabhängig vom Einstellungsdatum auf mittlerer Betriebsebene tätig sind. Diese Abfrage erfordert drei Bedingungen, von denen zwei mit AND verknüpft sind:  
   
 -   Mitarbeiter, die vor weniger als fünf Jahren eingestellt wurden UND deren Tätigkeitsstufe 100 beträgt.  
   
-    -oder-  
+    Oder  
   
 -   Mitarbeiter mit der Tätigkeitsstufe 200.  
   
-### <a name="to-combine-conditions-when-and-has-precedence"></a>So kombinieren Sie Bedingungen, wenn AND Vorrang hat  
+## <a name="to-combine-conditions-when-and-has-precedence"></a>So kombinieren Sie Bedingungen, wenn AND Vorrang hat  
   
 1.  Fügen Sie dem [Kriterienbereich](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)die Datenspalten hinzu, die durchsucht werden sollen. Wenn Sie dieselbe Spalte nach zwei oder mehr mit AND verbundenen Bedingungen durchsuchen möchten, müssen Sie den Namen der Datenspalte für jeden zu suchenden Wert einmal in das Datenblatt einfügen.  
   
@@ -58,9 +61,9 @@ Angenommen, Sie möchten nach Mitarbeitern suchen, die entweder seit mehr als f�
       (job_lvl = 200)  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen  
-[Kombinieren von Bedingungen, wenn OR Vorrang hat (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
-[Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich (Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[Regeln für das Eingeben von Suchwerten (Visual Database Tools)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[Angeben von Suchkriterien (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
-  
+## <a name="see-also"></a>Weitere Informationen
+
+[Kombinieren von Bedingungen, wenn OR Vorrang hat](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[Regeln für die Eingabe von Suchwerten](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[Angeben von Suchkriterien](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)

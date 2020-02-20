@@ -1,6 +1,6 @@
 ---
 title: Datenbank für RevoScaleR-Tutorials
-description: Tutorial zum Erstellen einer SQL Server-Datenbank für R-Tutorials.
+description: 'Tutorial 1 zu RevoScaleR: In diesem Artikel erfahren Sie, wie Sie eine SQL Server-Datenbank für R-Tutorials erstellen.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 537bfb64562dfad9dbefbce70423892cd6e1e431
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: ae2fd2d200b6a231dd76f04556d6d221df00809f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727131"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947202"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Erstellen einer Datenbank und von Berechtigungen (Tutorial zu SQL Server und RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Diese Lerneinheit ist Teil des [RevoScaleR-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zum Verwenden von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Bei diesem Tutorial handelt es sich um das erste Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Lernprogramm erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
-Lektion 1 enthält Informationen zum Einrichten einer SQL Server-Datenbank und von Berechtigungen, die zur Durchführung dieses Tutorials erforderlich sind. Führen Sie mithilfe von [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) oder einem anderen Abfrage-Editor die folgenden Aufgaben aus:
+In diesem Tutorial wird erläutert, wie Sie eine SQL Server-Datenbank erstellen und die für den Abschluss der anderen Tutorials dieses Lernprogramms erforderlichen Berechtigungen festlegen. Führen Sie mithilfe von [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) oder einem anderen Abfrage-Editor die folgenden Aufgaben aus:
 
 > [!div class="checklist"]
 > * Erstellen einer neuen Datenbank zum Speichern der Daten für das Training und die Bewertung von zwei R-Modellen
@@ -37,7 +37,6 @@ Zur Durchführung dieses Tutorial ist eine Datenbank zum Speichern von Daten und
   
 2. Geben Sie einen Namen für die neue Datenbank ein: RevoDeepDive.
   
-
 ## <a name="create-a-login"></a>Erstellen eines Anmeldenamens
   
 1. Klicken Sie auf **Neue Abfrage**, und legen Sie die Masterdatenbank als Datenbankkontext fest.
@@ -115,7 +114,7 @@ Dieser Abschnitt enthält einige häufig auftretende Probleme, denen Sie möglic
   
 - **Ich verfüge über keine DDL-Berechtigungen. Kann ich weiterhin das Tutorial ausführen?**
   
-    Ja, aber Sie sollten jemanden bitten, die Daten vorab in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellen zu laden, und mit der nächsten Lektion fortfahren. Funktionen, für die DDL-Berechtigungen erforderlich sind, werden im Tutorial nach Möglichkeit aufgerufen.
+    Ja, aber Sie sollten jemanden bitten, die Daten vorab in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellen zu laden, und mit dem nächsten Tutorial fortfahren. Funktionen, für die DDL-Berechtigungen erforderlich sind, werden im Tutorial nach Möglichkeit aufgerufen.
 
     Bitten Sie den Administrator zudem, Ihnen die Berechtigung EXECUTE ANY EXTERNAL SCRIPT zu erteilen. Diese Berechtigung benötigen Sie für die Ausführung von R-Skripts, ob als Remoteausführung oder mithilfe von `sp_execute_external_script`.
 

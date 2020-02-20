@@ -1,10 +1,9 @@
 ---
-title: Verwalten von Auftragsschritten | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwalten von Auftragsschritten
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,13 +23,15 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dfb4633efcc190782ce62c17d8c7f26f29b8a0a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258039"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256113"
 ---
 # <a name="manage-job-steps"></a>Verwalten von Auftragsschritten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ Weil Auftragsschritte im Kontext eines bestimmten [!INCLUDE[msCoName](../../incl
   
 -   Ausführbare Programme und Betriebssystembefehle.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen verwendet werden.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen.  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] Aufgaben.  
   
@@ -162,7 +163,7 @@ Wenn Sie einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] -Be
   
 -   Identifizieren der OLAP-Datenbank, in der Sie den Auftragsschritt ausführen.  
   
--   Eingeben der auszuführenden Anweisung. Bei der Anweisung muss es sich um eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **-Methode von XML für** handeln. Die Anweisung enthält möglicherweise keinen vollständigen SOAP-Umschlag (Simple Object Access Protocol) und keine XML für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover** handeln. Hinweis: Während [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vollständige SOAP-Umschläge und die **Discover** -Methode unterstützt, ist das bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsschritten nicht der Fall.  
+-   Eingeben der auszuführenden Anweisung. Bei der Anweisung muss es sich um XML-Code für die **Execute**-Methode in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] handeln. Die Anweisung darf keinen vollständigen SOAP-Umschlag oder XML-Code für eine **Discover**-Methode für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] enthalten. Hinweis: Während [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vollständige SOAP-Umschläge und die **Discover** -Methode unterstützt, ist das bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsschritten nicht der Fall.  
   
 ### <a name="analysis-services-query-job-steps"></a>Analysis Services-Abfrageauftragsschritte  
 Wenn Sie einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] -Abfrageauftragsschritt erstellen, müssen Sie folgende Schritte durchführen:  

@@ -1,10 +1,7 @@
 ---
-title: Auswählen eines Kontos für den SQL Server-Agent-Dienst | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 05/04/2017
+title: Auswählen eines Kontos für den SQL Server-Agent-Dienst
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +18,20 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 86ee07ffd09ab72fdce4bde1a247e37328c4b626
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811551"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253233"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Auswählen eines Kontos für den SQL Server-Agent-Dienst
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -39,7 +41,7 @@ Das Dienststartkonto definiert das [!INCLUDE[msCoName](../../includes/msconame_m
   
 -   **Integriertes Konto**. Sie können aus einer Liste der folgenden integrierten Windows-Dienstkonten auswählen:  
   
-    -   **Lokales Systemkonto** . Der Name dieses Kontos lautet NT-AUTORITÄT\System. Hierbei handelt es sich um ein Konto mit weit reichenden Befugnissen, das über unbeschränkten Zugriff auf alle lokalen Systemressourcen verfügt. Es ist ein Mitglied der Windows-Gruppe **Administratoren** auf dem lokalen Computer und somit Mitglied der festen Serverrolle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **in** .  
+    -   **Lokales Systemkonto** . Der Name dieses Kontos lautet NT-AUTORITÄT\System. Hierbei handelt es sich um ein Konto mit weit reichenden Befugnissen, das über unbeschränkten Zugriff auf alle lokalen Systemressourcen verfügt. Es ist ein Mitglied der Windows-Gruppe **Administratoren** auf dem lokalen Computer und somit Mitglied der festen Serverrolle **sysadmin** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
         > [!IMPORTANT]  
         > Die Option **Lokales Systemkonto** wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. Ein lokales Systemkonto verfügt über Berechtigungen, die für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent nicht erforderlich sind. Vermeiden Sie die Ausführung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents als lokales Systemkonto. Zur Verbesserung der Sicherheit sollten Sie ein Windows-Domänenkonto zusammen mit den im folgenden Abschnitt "Berechtigungen für Windows-Domänenkonten" aufgelisteten Berechtigungen verwenden.  
@@ -82,11 +84,11 @@ In der folgenden Tabelle werden die Windows-Kontotypen aufgelistet, die für den
   
 |Dienstkontotyp|Nicht gruppierter Server|Gruppierter Server|Domänencontroller (nicht gruppiert)|  
 |------------------------|-------------------------|--------------------|--------------------------------------|  
-|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows-Domänenkonto (Mitglied der Windows-Administratorengruppe)|Supported|Supported|Supported|  
-|Windows-Domänenkonto (kein Administratorkonto)|Supported<br /><br />Siehe Einschränkung 1 weiter unten.|Supported<br /><br />Siehe Einschränkung 1 weiter unten.|Supported<br /><br />Siehe Einschränkung 1 weiter unten.|  
-|Netzwerkdienstkonto (NT AUTHORITY\NetworkService)|Supported<br /><br />Siehe Einschränkungen 1, 3 und 4 weiter unten.|Nicht unterstützt|Nicht unterstützt|  
-|Lokales Benutzerkonto (kein Administratorkonto)|Supported<br /><br />Siehe Einschränkung 1 weiter unten.|Nicht unterstützt|Nicht verfügbar|  
-|Lokales Systemkonto (NT AUTHORITY\System)|Supported<br /><br />Siehe Einschränkung 2 weiter unten.|Nicht unterstützt|Supported<br /><br />Siehe Einschränkung 2 weiter unten.|  
+|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows-Domänenkonto (Mitglied der Windows-Administratorengruppe)|Unterstützt|Unterstützt|Unterstützt|  
+|Windows-Domänenkonto (kein Administratorkonto)|Unterstützt<br /><br />Siehe Einschränkung 1 weiter unten.|Unterstützt<br /><br />Siehe Einschränkung 1 weiter unten.|Unterstützt<br /><br />Siehe Einschränkung 1 weiter unten.|  
+|Netzwerkdienstkonto (NT AUTHORITY\NetworkService)|Unterstützt<br /><br />Siehe Einschränkungen 1, 3 und 4 weiter unten.|Nicht unterstützt|Nicht unterstützt|  
+|Lokales Benutzerkonto (kein Administratorkonto)|Unterstützt<br /><br />Siehe Einschränkung 1 weiter unten.|Nicht unterstützt|Nicht verfügbar|  
+|Lokales Systemkonto (NT AUTHORITY\System)|Unterstützt<br /><br />Siehe Einschränkung 2 weiter unten.|Nicht unterstützt|Unterstützt<br /><br />Siehe Einschränkung 2 weiter unten.|  
 |Lokales Dienstkonto (NT AUTHORITY\LocalService)|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Einschränkung 1: Verwenden von Nichtadministratorkonten für die Multiserververwaltung  
@@ -118,7 +120,7 @@ Starten Sie den Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 **So geben Sie das Mailprofil für den SQL Server-Agent an**  
   
--   [Vorgehensweise: Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [Vorgehensweise: Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, um anzugeben, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beim Start des Betriebssystems starten soll.  

@@ -1,6 +1,6 @@
 ---
-title: Aufzählen von OLE DB Datenquellen (OLE DB) | Microsoft-Dokumentation
-description: Aufzählen von OLE DB Datenquellen mit dem msoledbsql-Enumerator
+title: Auflisten von OLE DB-Datenquellen (OLE DB) | Microsoft-Dokumentation
+description: Auflisten von OLE DB-Datenquellen mithilfe des MSOLEDBSQL-Enumerators
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b9e14ef426a07705c51c0aa77c908dd1c2b8bbcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994829"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Auflisten von OLE DB-Datenquellen (OLE DB)
@@ -28,7 +28,7 @@ ms.locfileid: "67994829"
   
  Um die Datenquellen aufzulisten, die für den MSOLEDBSQL-Enumerator sichtbar sind, ruft der Consumer die [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312)-Methode auf. Diese Methode gibt ein Rowset der Informationen zu den gerade sichtbaren Datenquellen zurück.  
   
- Je nach verwendeter Netzwerkbibliothek wird in der entsprechenden Domäne nach den Datenquellen gesucht. Für Named Pipes ist dies die Domäne, an der der Client angemeldet ist. Für AppleTalk ist dies die Standardzone. Für SPX/IPX ist dies die Liste von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationen, die in der Bindery gefunden wird. Für Banyan VINES sind dies die auf dem lokalen Netzwerk gefundenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationen. Multiprotokoll und TCP/IP-Sockets werden nicht unterstützt.  
+ Je nach verwendeter Netzwerkbibliothek wird in der entsprechenden Domäne nach den Datenquellen gesucht. Für Named Pipes ist dies die Domäne, an der der Client angemeldet ist. Für AppleTalk ist dies die Standardzone. Für SPX/IPX ist dies die Liste von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationen, die in der Bindery gefunden wird. Für Banyan VINES sind dies die auf dem lokalen Netzwerk gefundenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationen. Multiprotokoll und TCP/IP-Sockets werden nicht unterstützt.  
   
  Wenn der Server ein- oder ausgeschaltet wird, kann es einige Minuten dauern, die Informationen in diesen Domänen zu aktualisieren.  
   

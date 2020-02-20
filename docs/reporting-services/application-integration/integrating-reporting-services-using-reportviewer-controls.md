@@ -1,9 +1,11 @@
 ---
-title: Integrieren von Reporting Services mithilfe der Report Viewer-Steuerelemente | Microsoft-Dokumentation
+title: Integrieren mit den Berichts-Viewer-Steuerelementen
+description: Visual Studio bietet zwei Berichts-Viewer-Steuerelemente, mit denen Sie Berichtanzeigefunktionen in Ihre Anwendungen integrieren können.
 ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Report Viewer controls
@@ -11,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ffaeb12bc961256959571d18808e2869a1d7485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ce8530e2f7afb998c14838efb91c93d0b1cae3c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741873"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796863"
 ---
-# <a name="integrating-reporting-services-using-report-viewer-controls"></a>Integrieren von Reporting Services mithilfe der Report Viewer-Steuerelemente
+# <a name="integrate-reporting-services-using-report-viewer-controls"></a>Integrieren von Reporting Services mit Berichts-Viewer-Steuerelementen
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 bietet zwei Report Viewer-Steuerelemente, mit denen Sie Berichtanzeigefunktionen in Ihre Anwendungen integrieren können. Es gibt eine Version für Windows Forms-Anwendungen und eine für WebForms-Anwendungen. Jedes Steuerelement verfügt über ähnliche Funktionen, wurde jedoch im Hinblick auf deren individuelle Umgebung konzipiert. Beide Steuerelemente können Berichte verarbeiten, die auf einem Berichtsserver bereitgestellt (Remoteverarbeitungsmodus) oder auf einen Computer kopiert wurden, auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht installiert ist (lokaler Verarbeitungsmodus).  
   
  Das Report Viewer-Steuerelement enthält keine integrierte Unterstützung für die dynamische Anpassung an verschiedene Geräte mit unterschiedlichen Bildschirmauflösungen.  

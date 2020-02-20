@@ -16,10 +16,10 @@ ms.assetid: 79ff6eef-6ad7-4e33-95be-c2d552c65546
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6388ea031c6cbd5c492b5af03bd37a091592868
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972560"
 ---
 # <a name="settime-method-int-javasqltime-javautilcalendar"></a>setTime-Methode (int, java.sql.Time, java.util.Calendar)
@@ -43,11 +43,11 @@ public final void setTime(int n,
   
  *x*  
   
- Ein Zeit Objekt.  
+ Ein Time-Objekt  
   
  *cal*  
   
- Ein Kalender Objekt.  
+ Ein Calendar-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

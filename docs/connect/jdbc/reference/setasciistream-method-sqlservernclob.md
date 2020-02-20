@@ -11,10 +11,10 @@ ms.assetid: 617ece92-0fb1-4f95-b32d-29b5b56eb3fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 043a94108bdb7c8938f06e8bf1d4bf58651fbf21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975375"
 ---
 # <a name="setasciistream-method-sqlservernclob"></a>setAsciiStream-Methode (SQLServerNClob)
@@ -41,7 +41,7 @@ public java.io.OutputStream setAsciiStream(long pos)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode wird von der Methode "Methode" in der Schnittstelle "java. SQL. NCLOB" durch die Methode "ltasciistream" angegeben.  
+ Diese setAsciiStream-Methode wird von der setAsciiStream-Methode in der java.sql.NClob-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerNClob-Methoden](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

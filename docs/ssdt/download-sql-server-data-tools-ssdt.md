@@ -1,5 +1,5 @@
 ---
-title: Herunterladen von SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
+title: Herunterladen von SQL Server Data Tools (SSDT)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -8,16 +8,17 @@ keywords: SSDT installieren, SSDT herunterladen, aktuelle SSDT-Version
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: a79940fa5696a65ed580d8550984d090a48eebdf
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 48426127a379efecbc61587f60a798fff14190b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807444"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688238"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Herunterladen und Installieren von SQL Server Data Tools (SSDT) für Visual Studio
 
@@ -60,15 +61,17 @@ Der Installer listet verfügbare Visual Studio-Instanzen auf, auf denen die SSDT
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT für VS 2017 (eigenständiger Installer)
 
-[![Download](../ssdt/media/download.png) SSDT für Visual Studio 2017 (15.9.2) herunterladen](https://go.microsoft.com/fwlink/?linkid=2095463)
+[![Download](../ssdt/media/download.png) SSDT für Visual Studio 2017 (15.9.3) herunterladen](https://go.microsoft.com/fwlink/?linkid=2110080)
 
 > [!IMPORTANT]
-> - Deinstallieren Sie vor der Installation von SSDT für Visual Studio 2017 (15.9.2) die Erweiterungen *Analysis Services-Projekte* und *Reporting Services-Projekte*, wenn diese bereits installiert wurden, und schließen Sie alle VS-Instanzen.
+> - Deinstallieren Sie vor der Installation von SSDT für Visual Studio 2017 (15.9.3) die Erweiterungen für *Analysis Services-Projekte* und *Reporting Services-Projekte*, wenn diese bereits installiert wurden, und schließen Sie alle VS-Instanzen.
+> - Die Power Query-Quelle für SQL Server 2017 wurde in ihrer bisherigen Form als bereits enthaltene Komponente entfernt. Wir haben die Power Query-Quelle für SQL Server 2017 und 2019 nun als separate Komponente angekündigt, die [hier](https://www.microsoft.com/en-us/download/details.aspx?id=100619) heruntergeladen werden kann.
+> - Der Microsoft Oracle-Connector für SQL Server 2019 wurde in seiner bisherigen Form als bereits enthaltene Komponente entfernt. Wir haben den Microsoft Oracle-Connector für SQL Server 2019 nun als separate Komponente angekündigt, die [hier](https://www.microsoft.com/en-us/download/details.aspx?id=58228) heruntergeladen werden kann.
 > - Verwenden Sie SSDT für Visual Studio 2017 (15.8.0) oder die vorherigen Versionen zum Erstellen von SSIS-Paketen, die Teradata als Quelle oder Ziel verwenden. Mit SSDT für Visual Studio 2017 nach 15.8.0 können keine SSIS-Paketen entworfen werden, die Attunity Teradata Source/Destination enthalten.
 
 ### <a name="version-information"></a>Versionsinformationen
 
-Releasenummer: 15.9.2 Buildnummer: 14.0.16194.0 Veröffentlichungsdatum: 17. Juli 2019 
+Releasenummer: 15.9.3 Buildnummer: 14.0.16203.0 Veröffentlichungsdatum: 3. Januar 2020 
 
 Eine vollständige Liste der Änderungen finden Sie in den [Versionsanmerkungen für SQL Server Data Tools (SSDT)](release-notes-ssdt.md).
 
@@ -78,17 +81,17 @@ SSDT für Visual Studio 2017 hat die gleichen [Systemanforderungen](https://docs
 
 Diese Version von **SSDT für Visual Studio 2017** kann in folgenden Sprachen installiert werden:
 
-- [Chinesisch (vereinfacht)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
-- [Chinesisch (traditionell)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
-- [Englisch (USA)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x409)
-- [Französisch]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40c)
-- [Deutsch]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x407)
-- [Italienisch]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x410)
-- [Japanisch]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x411)
-- [Koreanisch]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x412)
-- [Portugiesisch (Brasilien)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x416)
-- [Russisch]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x419)
-- [Spanisch]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40a)
+- [Chinesisch (vereinfacht)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
+- [Chinesisch (traditionell)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
+- [Englisch (USA)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
+- [Französisch]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
+- [Deutsch]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
+- [Italienisch]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
+- [Japanisch]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
+- [Koreanisch]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
+- [Portugiesisch (Brasilien)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
+- [Russisch]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
+- [Spanisch]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
 
 ## <a name="offline-install"></a>Offlineinstallation
 
@@ -124,7 +127,7 @@ Führen Sie für verfügbare Optionen `SSDT-Setup-ENU.exe /help` aus.
  
 |Projektvorlagen|Unterstützte SQL-Plattformen| 
 |-------------------|--------------------| 
-|Relationale Datenbanken| SQL Server 2005\* – SQL Server 2017<br> (Verwenden Sie SSDT 17.x oder SSDT für Visual Studio 2017, um eine Verbindung mit [SQL Server für Linux](../linux/sql-server-linux-overview.md) herzustellen)<br /><br />Azure SQL-Datenbank<br /><br />Azure SQL Data Warehouse (unterstützt nur Abfragen, Datenbankprojekte werden noch nicht unterstützt)<br /><br /> \* SQL Server 2005 wird nicht mehr unterstützt,<br /><br /> wechseln Sie zu einer offiziell unterstützten SQL-Version|
+|Relationale Datenbanken| SQL Server 2005\* – SQL Server 2017<br> (Verwenden Sie SSDT 17.x oder SSDT für Visual Studio 2017, um eine Verbindung mit [SQL Server für Linux](../linux/sql-server-linux-overview.md) herzustellen)<br /><br />Azure SQL-Datenbank<br /><br />Azure SQL Data Warehouse (unterstützt nur Abfragen, Datenbankprojekte werden noch nicht unterstützt)<br /><br /> \* SQL Server 2005 wird nicht mehr unterstützt,<br /><br /> wechseln Sie zu einer offiziell unterstützten SQL-Version|
 |Analysis Services-Modelle<br /><br />Reporting Services-Berichte | SQL Server 2008 – SQL Server 2017|
 |Integration Services-Pakete| SQL Server 2012 – SQL Server 2019 |
 

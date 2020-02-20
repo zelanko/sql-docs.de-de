@@ -1,5 +1,5 @@
 ---
-title: setTime-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: Methode „setTime“ (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b3a83ea3-6636-4096-842b-71b37340fa07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4b11b2d25abec8717604948101ca81d651fe822
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972452"
 ---
 # <a name="settime-method-sqlserverpreparedstatement"></a>setTime-Methode (SQLServerPreparedStatement)
@@ -33,7 +33,7 @@ ms.locfileid: "67972452"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setTime (int, java.sql.Time)](../../../connect/jdbc/reference/settime-method-int-java-sql-time.md)|Legt den angegebenen Parameter auf den angegebenen Zeitwert fest.|  
 |[setTime (int, java.sql.Time, java.util.Calendar)](../../../connect/jdbc/reference/settime-method-int-java-sql-time-java-util-calendar.md)|Legt den angegebenen Parameter auf die angegebenen Zeit- und Kalenderwerte fest.|  

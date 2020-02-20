@@ -1,5 +1,5 @@
 ---
-title: updateClob-Methode (int, Java. IO. Reader) | Microsoft-Dokumentation
+title: updateClob(int, java.io.Reader)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: df60fbf1-44b2-4658-84a5-5cb129ce2dc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4aebc496766fbf8358e7e18004cd74779cbbfafa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996639"
 ---
 # <a name="updateclob-method-int-javaioreader"></a>updateClob-Methode (int, java.io.Reader)
@@ -37,7 +37,7 @@ public void updateClob(int columnIndex,
   
  *reader*  
   
- Ein Reader-Objekt.  
+ Ein Reader-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: GetPropertyInfo-Methode (SQLServerDriver) | Microsoft-Dokumentation
+title: getPropertyInfo-Methode (SQLServerDriver) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d89a29af5aa3d2518f94101854371cea757e135c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980669"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>getPropertyInfo-Methode (SQLServerDriver)
@@ -45,13 +45,13 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
  Eine Liste mit Eigenschaftswertpaaren (bei der ersten Verwendung NULL).  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Array von driverpropertyinfo-Objekten.  
+ Dies ist ein Array von DriverPropertyInfo-Objekten.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese GetPropertyInfo-Methode wird von der GetPropertyInfo-Methode in der Java. SQL. Driver-Schnittstelle angegeben.  
+ Diese getPropertyInfo-Methode wird von der getPropertyInfo-Methode in der java.sql.Driver-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDriver-Methoden](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

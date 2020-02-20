@@ -1,23 +1,24 @@
 ---
-title: 'Gewusst wie: Ausführen von SQL Server-Komponententests aus Team Foundation Build | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Ausführen von SQL Server-Komponententests aus Team Foundation Build
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035091"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244293"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Gewusst wie: Ausführen von SQL Server-Komponententests aus Team Foundation Build
+
 Sie können Team Foundation Build verwenden, um SQL Server-Komponententests im Rahmen eines Buildüberprüfungstests (Build Verification Test, BVT) auszuführen. Komponententests können so konfiguriert werden, dass sie die Datenbank bereitstellen, Testdaten generieren und ausgewählte Tests ausführen. Wenn Sie mit Team Foundation Build nicht vertraut sind, sollten Sie die folgenden Informationen lesen, bevor Sie die Schritte in diesem Thema ausführen:  
   
 -   [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
@@ -263,7 +264,7 @@ In dieser Prozedur checken Sie alle Dateien der Projektmappe ein. Diese Dateien 
   
 10. Geben Sie in der Gruppe **Standard** unter **Automatisierte Tests** die Tests an, die Sie ausführen möchten. Standardmäßig werden die Tests ausgeführt, die in der Projektmappe in Dateien mit dem Namen „\*test\*.dll“ enthalten sind.  
   
-11. Klicken Sie im Menü **Datei** auf *ProjectName* **speichern**.  
+11. Klicken Sie im Menü **Datei** auf *Projektname* **speichern**.  
   
     Die Builddefinition ist jetzt erstellt. Als Nächstes ändern Sie das Testprojekt.  
   

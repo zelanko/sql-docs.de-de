@@ -16,10 +16,10 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593764"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Verwalten einer Berichtsserver-Datenbank (einheitlicher SSRS-Modus)
@@ -29,7 +29,7 @@ ms.locfileid: "73593764"
   
  Für die Verwaltung der Berichtsserver-Datenbanken enthält [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Reihe von Tools.  
   
--   Zum Sichern oder Wiederherstellen der Berichtsserver-Datenbank, zum Verschieben einer Berichtsserver-Datenbank oder zum Wiederherstellen einer Berichtsserver-Datenbank können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehle oder die Eingabeaufforderungs-Hilfsprogramme für Datenbanken verwenden. Weitere Anweisungen finden Sie unter [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+-   Zum Sichern, Wiederherstellen oder Verschieben einer Berichtsserver-Datenbank können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehle oder die Eingabeaufforderungs-Hilfsprogramme für Datenbanken verwenden. Weitere Anweisungen finden Sie unter [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Um vorhandene Datenbankinhalte in eine andere Berichtsserver-Datenbank zu kopieren, können Sie eine Kopie einer Berichtsserver-Datenbank anfügen und sie mit einer anderen Berichtsserverinstanz verwenden. Oder Sie können ein Skript erstellen und ausführen, das SOAP-Aufrufe verwendet, um Berichtsserverinhalte in einer neuen Datenbank neu zu erstellen. Sie können das Hilfsprogramm **rs** verwenden, um das Skript auszuführen.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73593764"
  Dieser Fehler tritt auf, weil der ReportServerTempdb-Name intern gespeichert und von gespeicherten Prozeduren zum Ausführen interner Vorgänge verwendet wird. Nach dem Umbenennen der temporären Datenbank können die gespeicherten Prozeduren nicht mehr ordnungsgemäß ausgeführt werden.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>Aktivieren von Momentaufnahmeisolation auf der Berichtsserver-Datenbank  
- Sie können keine Momentaufnahmeisolation auf der Berichtsserver-Datenbank aktivieren. Wenn die Momentaufnahmeisolation nicht aktiviert ist, tritt folgender Fehler auf: "Der ausgewählte Bericht ist nicht bereit für die Anzeige. Der Bericht wird immer noch gerendert, oder eine Berichtsmomentaufnahme ist nicht verfügbar."  
+ Sie können keine Momentaufnahmeisolation auf der Berichtsserver-Datenbank aktivieren. Wenn die Momentaufnahmeisolation aktiviert ist, tritt folgender Fehler auf: „Der ausgewählte Bericht kann noch nicht angezeigt werden. Der Bericht wird immer noch gerendert, oder eine Berichtsmomentaufnahme ist nicht verfügbar."  
   
  Wenn Sie die Momentaufnahmeisolation nicht absichtlich aktiviert haben, wurde das Attribut unter Umständen von einer anderen Anwendung festgelegt oder für die **model** -Datenbank ist die Momentaufnahmeisolation aktiviert, sodass alle neuen Datenbanken diese Einstellung übernehmen.  
   
@@ -85,7 +85,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
  [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
  [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: supportsdatamanipulationtransaction sonly-Methode | Microsoft-Dokumentation
+title: Methode „supportsDataManipulationTransactionsOnly“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bdc182db-4518-4bf2-b63a-05f58fdb4eb8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d93c58d045741d281158a1716ab43b0b68e49bec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969490"
 ---
 # <a name="supportsdatamanipulationtransactionsonly-method-sqlserverdatabasemetadata"></a>supportsDataManipulationTransactionsOnly-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsDataManipulationTransactionsOnly()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportsdatamanipulationtransaktionsonly-Methode wird von der supportsdatamanipulationtransaction sonly-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsDataManipulationTransactionsOnly-Methode wird von der supportsDataManipulationTransactionsOnly-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

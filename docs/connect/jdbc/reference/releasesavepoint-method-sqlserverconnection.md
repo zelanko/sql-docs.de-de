@@ -1,5 +1,5 @@
 ---
-title: releasesavepoint-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: releaseSavepoint-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b6b625ea-c7ce-4a32-a9e0-6d2b4321bfd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 406e7f7cbf2cd7656fe50531027c8566cb6c3243
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975758"
 ---
 # <a name="releasesavepoint-method-sqlserverconnection"></a>releaseSavepoint-Methode (SQLServerConnection)
@@ -40,13 +40,13 @@ public void releaseSavepoint(java.sql.Savepoint savepoint)
 #### <a name="parameters"></a>Parameter  
  *savepoint*  
   
- Das zu entfernbare SAVEPOINT-Objekt.  
+ Dies ist das zu entfernende SavePoint-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese releasesavepoint-Methode wird von der releasesavepoint-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
+ Diese releaseSavepoint-Methode wird von der releaseSavepoint-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fba128636ce726396b499200b060592a63db5f65
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MTE75
+ms.openlocfilehash: 18b60a7359392a973a9486c9d4c8266e6997c9df
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542182"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516521"
 ---
 # <a name="url-access-parameter-reference"></a>URL-Zugriffsparameterreferenz
   Sie können die folgenden Parameter als Teil einer URL verwenden, um das Aussehen und Verhalten Ihrer [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]-Berichte zu konfigurieren. In diesem Abschnitt sind die am häufigsten verwendeten Parameter aufgeführt. Bei Parametern muss keine Groß- und Kleinschreibung beachtet werden. Sie beginnen mit dem Präfix *rs:* , wenn sie an den Berichtsserver weitergeleitet werden, und mit *rs:* , wenn sie zu einem HTML-Viewer weitergeleitet werden. Sie können außerdem Parameter angeben, die für Geräte oder Renderingerweiterungen spezifisch sind. Weitere Informationen zu gerätespezifischen Parametern finden Sie unter [Angeben von Geräteinformationseinstellungen in einer URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "72542182"
     > [!IMPORTANT]  
     >  *rc:Toolbar*=**FALSE** funktioniert nicht für URL-Zugriffszeichenfolgen, die eine IP-Adresse anstelle eines Domänennamens verwenden, um auf einen auf einer SharePoint-Website gehosteten Bericht abzuzielen.  
   
--   *Parameter* : Zeigt den Parameterbereich der Symbolleiste an oder blendet ihn aus. Wenn Sie diesen Parameter auf **TRUE**festlegen, wird der Parameterbereich der Symbolleiste angezeigt. Wenn Sie diesen Parameter auf **FALSE**festlegen, wird der Parameterbereich nicht angezeigt und kann auch nicht vom Benutzer angezeigt werden. Wenn Sie diesen Parameter auf den Wert **Reduziert**festlegen, wird der Parameterbereich nicht angezeigt, kann aber vom Endbenutzer ein-/ausgeschaltet werden. Der Standardwert dieses Parameters ist **true**.  
+-   *Parameters*: Zeigt den Parameterbereich der Symbolleiste an oder blendet ihn aus. Wenn Sie diesen Parameter auf **TRUE**festlegen, wird der Parameterbereich der Symbolleiste angezeigt. Wenn Sie diesen Parameter auf **FALSE**festlegen, wird der Parameterbereich nicht angezeigt und kann auch nicht vom Benutzer angezeigt werden. Wenn Sie diesen Parameter auf den Wert **Reduziert**festlegen, wird der Parameterbereich nicht angezeigt, kann aber vom Endbenutzer ein-/ausgeschaltet werden. Der Standardwert dieses Parameters ist **true**.  
   
      Beispiel im **einheitlichen** Modus:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72542182"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* : Legt den Zoomfaktor für den Bericht als ganzzahligen Prozentsatz oder Zeichenfolgenkonstante fest. Standardwerte für die Zeichenfolge sind **Page Width** und **Whole Page**. Dieser Parameter wird von Internet Explorer-Versionen vor Internet Explorer 5.0 sowie allen nicht von[!INCLUDE[msCoName](../includes/msconame-md.md)] bereitgestellten Browsern ignoriert. Der Standardwert dieses Parameters ist **100**.  
+-   *Zoom*: Legt den Zoomfaktor für den Bericht als ganzzahligen Prozentsatz oder Zeichenfolgenkonstante fest. Standardwerte für die Zeichenfolge sind **Page Width** und **Whole Page**. Dieser Parameter wird von Internet Explorer-Versionen vor Internet Explorer 5.0 sowie allen nicht von[!INCLUDE[msCoName](../includes/msconame-md.md)] bereitgestellten Browsern ignoriert. Der Standardwert dieses Parameters ist **100**.  
   
      Beispiel im **einheitlichen** Modus:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72542182"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
--   *Abschnitt* : Legt fest, welche Seite im Bericht angezeigt werden soll. Bei Eingabe eines Wertes, der über der Gesamtzahl der Seiten im Bericht liegt, wird die letzte Seite angezeigt. Bei jedem Wert kleiner als **0** (null) wird Seite 1 des Berichts angezeigt. Der Standardwert dieses Parameters ist **1**.  
+-   *Section*: Legt fest, welche Seite im Bericht angezeigt werden soll. Bei Eingabe eines Wertes, der über der Gesamtzahl der Seiten im Bericht liegt, wird die letzte Seite angezeigt. Bei jedem Wert kleiner als **0** (null) wird Seite 1 des Berichts angezeigt. Der Standardwert dieses Parameters ist **1**.  
   
      Beispiel zum Anzeigen von Berichtsseite 2 im **einheitlichen** Modus:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "72542182"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
     ```  
   
--   *StartFind* : Legt den letzten Abschnitt für die Suche fest. Der Standardwert dieses Parameters ist die letzte Seite des Berichts.  
+-   *StartFind*: Legt den letzten Abschnitt für die Suche fest. Der Standardwert dieses Parameters ist die letzte Seite des Berichts.  
   
      Beispiel im **einheitlichen** Modus, in dem nach dem ersten Vorkommen des Texts „Mountain-400“ im Beispielbericht „Product Catalog“ gesucht wird. Die Suche beginnt auf der ersten Seite und endet auf der fünften Seite.  
   
@@ -107,17 +107,17 @@ ms.locfileid: "72542182"
     https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
--   *EndFind* : Legt die Seitenzahl der letzten Seite für die Suche fest. Beispiel: Der Wert **5** gibt an, dass Seite 5 des Berichts die letzte zu durchsuchende Seite ist. Der Standardwert ist die Seitenzahl der aktuellen Seite. Verwenden Sie diesen Parameter in Verbindung mit dem *StartFind* -Parameter. Weitere Informationen finden Sie im Beispiel oben.  
+-   *EndFind*: Legt die Seitenzahl der letzten Seite für die Suche fest. Beispiel: Der Wert **5** gibt an, dass Seite 5 des Berichts die letzte zu durchsuchende Seite ist. Der Standardwert ist die Seitenzahl der aktuellen Seite. Verwenden Sie diesen Parameter in Verbindung mit dem *StartFind* -Parameter. Weitere Informationen finden Sie im Beispiel oben.  
   
--   *FallbackPage* : Legt die Seitenzahl der Seite fest, die bei einer fehlgeschlagenen Suche oder Dokumentstrukturauswahl angezeigt wird. Der Standardwert ist die Seitenzahl der aktuellen Seite.  
+-   *FallbackPage*: Legt die Seitenzahl der Seite fest, die bei einer fehlgeschlagenen Suche oder Dokumentstrukturauswahl angezeigt wird. Der Standardwert ist die Seitenzahl der aktuellen Seite.  
   
--   *GetImage* : Ruft ein bestimmtes Symbol für die Benutzeroberfläche des HTML-Viewers ab.  
+-   *GetImage*: Ruft ein bestimmtes Symbol für die Benutzeroberfläche des HTML-Viewers ab.  
   
--   *Symbol* : Ruft das Symbol einer bestimmten Renderingerweiterung ab.  
+-   *Icon*: Ruft ein Symbol einer bestimmten Renderingerweiterung ab.  
   
 -   *Stylesheet*: Legt ein Stylesheet fest, das auf den HTML-Viewer angewendet wird.  
   
--   Geräteinformationseinstellung: Legt eine Geräteinformationseinstellung in der Form von `rc:tag=value`fest, wobei *tag* der Name einer für die gerade verwendete Renderingerweiterung spezifischen Geräteinformationseinstellung ist (siehe die Beschreibung für den *Format* -Parameter). Sie können z.B. die *OutputFormat* -Geräteinformationseinstellung für die IMAGE-Renderingerweiterung verwenden, um den Bericht mithilfe der folgenden Parameter in der URL-Zugriffszeichenfolge zu einem JPEG-Bild zu rendern: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Weitere Informationen zu allen erweiterungsspezifischen Geräteinformationseinstellungen finden Sie im Artikel [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Geräteinformationseinstellung: Hiermit wird eine Geräteinformationseinstellung in der Form von `rc:tag=value` festgelegt, wobei *tag* der Name einer für die gerade verwendete Renderingerweiterung spezifischen Geräteinformationseinstellung ist (siehe die Beschreibung für den *Format*-Parameter). Sie können z.B. die *OutputFormat* -Geräteinformationseinstellung für die IMAGE-Renderingerweiterung verwenden, um den Bericht mithilfe der folgenden Parameter in der URL-Zugriffszeichenfolge zu einem JPEG-Bild zu rendern: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Weitere Informationen zu allen erweiterungsspezifischen Geräteinformationseinstellungen finden Sie im Artikel [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Befehle des Berichtsservers (rs:)  
  Befehle des Berichtsservers werden mit dem Präfix *rs:* versehen und zum Auswählen des Berichtsservers verwendet:  
@@ -212,9 +212,13 @@ ms.locfileid: "72542182"
   
     -   **IMAGE**  
   
-    -   **EXCEL**  
+    -   **EXCEL**  (für .xls)
+    
+    -   **EXCELOPENXML** (für .xlsx)
   
-    -   **WORD**  
+    -   **WORD** (für .doc)
+    
+    -   **WORDOPENXML** (für .docx)
   
     -   **CSV**  
   
@@ -247,7 +251,7 @@ ms.locfileid: "72542182"
     https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
--   *Momentaufnahme* : Rendert einen Bericht anhand einer Berichtsverlaufs-Momentaufnahme. Weitere Informationen finden Sie unter [Rendern von Berichtsverlaufs-Momentaufnahmen mit URL-Zugriff](../reporting-services/render-a-report-history-snapshot-using-url-access.md).  
+-   *Snapshot*: Rendert einen Bericht anhand einer Berichtsverlaufs-Momentaufnahme. Weitere Informationen finden Sie unter [Rendern von Berichtsverlaufs-Momentaufnahmen mit URL-Zugriff](../reporting-services/render-a-report-history-snapshot-using-url-access.md).  
   
      Rufen Sie zum Beispiel im **einheitlichen** Modus eine Berichtsverlaufs-Momentaufnahme vom 7.4.2003 mit dem Zeitstempel 13:40:02 ab:  
   
@@ -278,7 +282,7 @@ ms.locfileid: "72542182"
 ##  <a name="bkmk_webpart"></a> Befehle des Berichts-Viewer-Webparts (rv:)  
  Die folgenden reservierten Berichtsparameternamen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden zum Auswählen des in SharePoint integrierten Berichts-Viewer-Webparts verwendet. Diese Parameternamen haben das Präfix *rv:* . Für Berichts-Viewer-Webparts kann auch der *rs:ParameterLanguage* -Parameter verwendet werden.  
   
--   *Symbolleiste*: Steuert die Symbolleistenanzeige des Bericht-Viewer-Webparts. Der Standardwert ist **Full**. Folgende Werte sind möglich:  
+-   *Toolbar*: Steuert die Symbolleistenanzeige des Bericht-Viewer-Webparts. Der Standardwert ist **Full**. Mögliche Werte:  
   
     -   **Full**: Zeigt die vollständige Symbolleiste an.  
   
@@ -292,7 +296,7 @@ ms.locfileid: "72542182"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
     ```  
   
--   *HeaderArea*: Steuert die Anzeige der Kopfzeile des Bericht-Viewer-Webparts. Der Standardwert ist **Full**. Folgende Werte sind möglich:  
+-   *HeaderArea*: Steuert die Anzeige der Kopfzeile des Bericht-Viewer-Webparts. Der Standardwert ist **Full**. Mögliche Werte:  
   
     -   **Full**: Zeigt die vollständige Kopfzeile an.  
   
@@ -310,7 +314,7 @@ ms.locfileid: "72542182"
   
 -   *AsyncRender*: Steuert, ob ein Bericht asynchron gerendert wird. Der Standardwert ist **TRUE**. Er gibt an, dass ein Bericht asynchron gerendert wird. Der Wert muss ein boolescher Wert **TRUE** oder **FALSE**sein.  
   
--   *ParamMode:* Steuert, wie der Eingabeaufforderungsbereich für Parameter des Berichts-Viewer-Webparts in der Ganzseitenansicht angezeigt wird. Der Standardwert ist **Full**. Gültige Werte sind:  
+-   *ParamMode*: Mit diesem Befehl wird gesteuert, wie der Eingabeaufforderungsbereich für Parameter des Berichts-Viewer-Webparts in der Ganzseitenansicht angezeigt wird. Der Standardwert ist **Full**. Gültige Werte sind:  
   
     -   **Full**: Eingabeaufforderungsbereich für Parameter anzeigen.  
   
@@ -324,7 +328,7 @@ ms.locfileid: "72542182"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode:* Steuert, wie der Dokumentstrukturbereich des Berichts-Viewer-Webparts in der Ganzseitenansicht angezeigt wird. Der Standardwert ist **Full**. Gültige Werte sind:  
+-   *DocMapMode*: Mit diesem Befehl wird gesteuert, wie der Dokumentstrukturbereich des Berichts-Viewer-Webparts in der Ganzseitenansicht angezeigt wird. Der Standardwert ist **Full**. Gültige Werte sind:  
   
     -   **Full**: Dokumentstrukturbereich anzeigen.  
   
@@ -332,7 +336,7 @@ ms.locfileid: "72542182"
   
     -   **Hidden**: Dokumentstrukturbereich ausblenden.  
   
--   *DockToolBar:* Steuert, ob die Symbolleiste des Berichts-Viewer-Webparts oben oder unten angedockt wird. Gültige Werte sind **Top** und **Bottom**. Der Standardwert ist **Top**.  
+-   *DockToolBar*: Mit diesem Befehl wird gesteuert, ob die Symbolleiste des Berichts-Viewer-Webparts oben oder unten angedockt wird. Gültige Werte sind **Top** und **Bottom**. Der Standardwert ist **Top**.  
   
      Wenn z.B. im **SharePoint** -Modus die Symbolleiste unten angedockt werden soll.  
   
@@ -372,6 +376,6 @@ ms.locfileid: "72542182"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [URL-Zugriff &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Exportieren von Berichten über URL-Zugriff](../reporting-services/export-a-report-using-url-access.md)  
+ [Export a Report Using URL Access (Exportieren von Berichten über URL-Zugriff)](../reporting-services/export-a-report-using-url-access.md)  
   
   

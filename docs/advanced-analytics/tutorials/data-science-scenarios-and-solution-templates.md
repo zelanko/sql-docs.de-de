@@ -1,6 +1,6 @@
 ---
 title: Data-Science-Lösungsvorlagen
-description: In diesem Artikel werden Vorlagen beschrieben, die bewährte Methoden veranschaulichen und Bausteine für die schnelle Implementierung einer Lösung bereitstellen. Jede Vorlage ist für die Lösung eines bestimmten Problems in einer bestimmten Branche oder einem bestimmten Nischenmarkt konzipiert.
+description: In diesem Artikel werden branchenspezifischen Vorlagen beschrieben, die bewährte Methoden veranschaulichen und Bausteine für die Implementierung einer Machine Learning-Lösung bereitstellen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
@@ -9,17 +9,26 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01893edd0174ec7aeab262b8aeddc3babb8194f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727278"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947278"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Szenarios für Data Science und Lösungsvorlagen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Vorlagen sind Beispiellösungen, die bewährte Methoden veranschaulichen und Bausteine für die schnelle Implementierung einer Lösung bereitstellen. Jede Vorlage ist für die Lösung eines bestimmten Problems in einer bestimmten Branche oder einem bestimmten Nischenmarkt konzipiert. Die Tasks in jeder Vorlage reichen von der Datenvorbereitung und Featureentwicklung bis hin zum Modelltraining und zur Bewertung. Arbeiten Sie sich mithilfe dieser Vorlagen in die Funktionsweise von [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] ein. Dann können Sie die Vorlage an Ihr eigenes Szenario anpassen und so eine benutzerdefinierte Lösung erstellen. 
+In diesem Artikel werden verschiedene Vorlagen für Machine Learning-Lösungen in SQL Server beschrieben. Diese Vorlagen veranschaulichen die bewährten Methoden und stellen Bausteine für die schnelle Implementierung einer Machine Learning-Lösung bereit. Jede Vorlage ist für die Lösung eines bestimmten Data-Science-Problems in einer bestimmten Branche oder einem bestimmten Nischenmarkt konzipiert.
+Die Tasks in jeder Vorlage reichen von der Datenvorbereitung und Featureentwicklung bis hin zum Modelltraining und zur Bewertung. 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Arbeiten Sie sich mithilfe dieser Vorlagen in die Funktionsweise von [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] ein. Dann können Sie die Vorlage an Ihr eigenes Szenario anpassen und so eine benutzerdefinierte Lösung erstellen.
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Mit diesen Vorlagen können Sie sich mit der Funktionsweise von SQL Server Machine Learning Services vertraut machen. Dann können Sie die Vorlage an Ihr eigenes Szenario anpassen und so eine benutzerdefinierte Lösung erstellen.
+::: moniker-end
 
 Jede Lösung umfasst Beispieldaten, R- oder Python-Code und gespeicherte SQL-Prozeduren (falls vorhanden). Der Code kann in Ihrer bevorzugten R- oder Python-Entwicklungsumgebung ausgeführt werden, wobei die Berechnungen in SQL Server durchgeführt werden. In einigen Fällen können Sie Code direkt mit T-SQL und einem beliebigen SQL-Clienttool wie SQL Server Management Studio ausführen.
 
@@ -62,7 +71,7 @@ Jede Lösung umfasst Beispieldaten, R- oder Python-Code und gespeicherte SQL-Pro
 
 **Anwendung:** In dieser Vorlage wird das Abwanderungsproblem als **Binärklassifizierung** dargestellt. Es werden Beispieldaten aus zwei Quellen verwendet, Kundendemografie und Kundentransaktionen, um zu klassifizieren, ob Kunden wahrscheinlich oder eher unwahrscheinlich abwandern.
   
-## <a name="predictive-maintenance"></a>Vorbeugende Wartung
+## <a name="predictive-maintenance"></a>Predictive Maintenance
 
 [Vorlage zu Predictive Maintenance (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 

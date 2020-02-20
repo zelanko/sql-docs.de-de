@@ -1,5 +1,5 @@
 ---
-title: GetSchemas-Methode () | Microsoft-Dokumentation
+title: getSchemas()-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0a5f453e6300258cacffa6606259f85cdd25977
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980081"
 ---
 # <a name="getschemas-method-"></a>getSchemas-Methode ()
@@ -43,9 +43,9 @@ public java.sql.ResultSet getSchemas()
 ## <a name="remarks"></a>Bemerkungen  
  Diese getSchemas-Methode wird von der getSchemas-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Das Resultset, das von der GetSchemas-Methode zurückgegeben wird, enthält die folgenden Informationen:  
+ Das von der getSchemas-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|Der Name des Schemas.|  
 |TABLE_CATALOG|**String**|Der Katalogname für das Schema.|  

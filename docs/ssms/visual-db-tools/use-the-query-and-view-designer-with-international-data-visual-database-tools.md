@@ -1,10 +1,9 @@
 ---
-title: Verwenden des Abfrage- und Sicht-Designers bei internationalen Daten | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden des Abfrage- und Sicht-Designers bei internationalen Daten
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff5eafd8a0a150b40c2383523e269691f0a83b08
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8b2bd268bd46240b5954851946c7546a7f2dbb34
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267410"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246028"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Verwenden des Abfrage- und Sicht-Designers bei internationalen Daten (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,6 +58,6 @@ Die in Abfragen für Daten verwendete Sortierreihenfolge wird durch die verwende
 ## <a name="using-double-byte-characters"></a>Verwenden von Doppelbytezeichen  
 Sie können DBCS-Zeichen für Literalwerte und für Namen von Datenbankobjekten, wie Tabellen- und Sichtnamen oder Aliase, eingeben. Weiterhin sind DBCS-Zeichen in Parameternamen und Parametermarkierungszeichen zulässig. In SQL-Elementen, z. B. Funktionsnamen oder SQL-Schlüsselwörtern, dürfen DBCS-Zeichen jedoch nicht verwendet werden.  
   
-## <a name="see-also"></a>Weitere Informationen  
-[Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-  
+## <a name="see-also"></a>Weitere Informationen
+
+[Design Queries and Views How-to Topics (Artikel zum Entwerfen von Abfragen und Sichten)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)

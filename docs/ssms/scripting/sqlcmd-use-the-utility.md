@@ -1,6 +1,6 @@
 ---
-title: Verwenden des Hilfsprogramms „sqlcmd“ | Microsoft-Dokumentation
-ms.custom: ''
+title: Verwenden des Hilfsprogramms sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/06/2017
 ms.prod: sql
 ms.technology: scripting
@@ -17,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fd1c2eafec0d0dd832e4d01d43195d7ec175485
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: f3e77699ce94f150bc5ec38fa40c400884d38faa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816614"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243457"
 ---
 # <a name="sqlcmd---use-the-utility"></a>Verwenden des Hilfsprogramms „sqlcmd“
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -322,7 +322,7 @@ ms.locfileid: "71816614"
   
  `gustavo0@adventure-works.com`  
   
-### <a name="d-using-sqlcmd-for-database-maintenance"></a>D. Verwenden von "sqlcmd" für die Datenbankwartung  
+### <a name="d-using-sqlcmd-for-database-maintenance"></a>D: Verwenden von "sqlcmd" für die Datenbankwartung  
  Im folgenden Beispiel wird veranschaulicht, wie mithilfe von `sqlcmd` Datenbankwartungstasks ausgeführt werden können. Erstellen Sie `C:\BackupTemplate.sql` mit dem folgenden Code.  
   
  `USE master;`  

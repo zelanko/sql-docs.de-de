@@ -1,7 +1,7 @@
 ---
 title: Hilfeinhalt und Help Viewer für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/15/2019
+ms.date: 12/10/2019
 ms.prod: sql
 ms.technology: ''
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4be5552c60a6a401d9333976402088c7fa199f52
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ad4d98af834e482005e354b2dcd5ce2c52f2fd42
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049915"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251469"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Offlinehilfe und Help Viewer für SQL Server
 
@@ -33,21 +33,25 @@ Es gibt zwei Hauptversionen von Microsoft Help Viewer.  Dabei handelt es sich um
 
 |**Version**|**Tools, die Help Viewer installieren**|**Help Viewer-Version**|
 |-|-|-|
-|SQL Server 2019 (Vorschauversion) <br> SQL Server 2017<br>SQL Server 2016|[Visual Studio 2019 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)<br>[Visual Studio 2017 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017)<br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)<br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791)<br>[SQL Server Data Tools für Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)<br>Visual Studio 2015 | v2.3<br>V2.2|
-|SQLServer 2014<br>SQL Server 2012|SQL Server 2016-Setup (2)<br>SQL Server 2014 Management Studio<br>SQL Server 2014-Setup (2)<br>SQL Server Management Studio 2012<br>SQL Server 2012-Setup (2)| v1.x|
+|SQL Server 2019 <br><br><br>SQL Server 2017 <br>SQL Server 2016 | [Visual Studio 2019 (\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) <br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) <br><br>[Visual Studio 2017 (\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) <br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791) <br>[SQL Server Data Tools für Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) <br>Visual Studio 2015 | v2.3 <br><br><br>v2.2 |
+|SQL Server 2014<br>SQL Server 2012|SQL Server 2016-Setup (\*2)<br>SQL Server 2014 Management Studio<br>SQL Server 2014-Setup (\*2)<br>SQL Server Management Studio 2012<br>SQL Server 2012-Setup (\*2)| v1.x|
 | | | |
 
-(1) Wählen Sie in der Registerkarte „Einzelne Komponenten“ von Visual Studio-Installer unter „Codetools“ **Help Viewer** aus, und klicken Sie dann auf **Installieren**, um Help Viewer mit Visual Studio 2019 oder 2017 zu installieren.
+(\*1) Um Help Viewer mit Visual Studio 2019 oder 2017 zu installieren, wählen Sie im Visual Studio-Installer auf der Registerkarte **Einzelne Komponenten** die Optionen **Codetools** \> **Help Viewer** \> **Installieren** aus.
 
-(2) Daraufhin wird die Option „Dokumentationskomponenten“ im SQL Server-Setup angezeigt.
+(\*2) Gibt die Option **Dokumentationskomponenten** im SQL Server-Setup an.
 
 >[!NOTE]
-> - SQL Server 2016 installiert Help Viewer 1.1. Diese Version unterstützt allerdings nicht die Hilfe für SQL Server 2016-Inhalte. Weitere Informationen finden Sie unter [SQL Server 2016 Release Notes (Versionshinweise zu SQL Server 2016)](sql-server-2016-release-notes.md).  Sie benötigen Version v2.x von Help Viewer, um SQL Server 2016-Inhalte anzuzeigen. 
-> - Ab SQL Server 2017 kann Help Viewer nicht mithilfe des SQL Server-Setups installiert werden.
+> - SQL Server 2016 installiert Help Viewer 1.1. Diese Version unterstützt allerdings nicht die Hilfe für SQL Server 2016-Inhalte. Sie benötigen Version v2.x von Help Viewer, um SQL Server 2016-Inhalte anzuzeigen. Weitere Informationen finden Sie unter [SQL Server 2016 Release Notes (Versionshinweise zu SQL Server 2016)](sql-server-2016-release-notes.md).
+> - Help Viewer 2.x kann mindestens die Dokumentation für die SQL Server-Versionen 2014 – 2019 anzeigen.
+> - Eine einfache Möglichkeit zum Erhalt von Help Viewer 2.3 oder höher besteht darin, zuerst die neueste Version von `SSMS.exe` herunterzuladen. Diese ist kostenlos. Verwenden Sie dann das SSMS-Menü **Hilfe**.
+> - Ab SQL Server 2017 kann Help Viewer nicht mehr über das SQL Server-Setup installiert werden.
 
 ## <a name="use-help-viewer-v2x"></a>Verwenden Sie Help Viewer v2.x
 
-**Herunterladen und Installieren von offline verfügbarem Hilfeinhalt mit Help Viewer v2.x**
+Für diesen Ansatz wird Help Viewer 2.3 oder höher empfohlen. Das **Hilfe**-Menü der [neuesten Version von SSMS.exe](../ssms/download-sql-server-management-studio-ssms.md) bietet Version 2.3 oder höher.
+
+### <a name="to-download-and-install-offline-help-content-with-help-viewer-v2x"></a>Herunterladen und Installieren von offline verfügbarem Hilfeinhalt mit Help Viewer v2.x
 
 1. Klicken Sie in SSMS oder VS im Menü „Hilfe“auf **Hilfeinhalt hinzufügen und entfernen**. 
 
@@ -84,7 +88,7 @@ Es gibt zwei Hauptversionen von Microsoft Help Viewer.  Dabei handelt es sich um
 |*|DAX-Referenz (Data Analysis Expressions) | DAX-Referenz (Data Analysis Expressions)|
 |*|DMX-Referenz (Data Mining-Erweiterungen) | DMX-Referenz (Data Mining-Erweiterungen)|
 |*|Erste Schritte mit Machine Learning in SQL Server | Microsoft Machine Learning Services|
-|*|Power Query M-Referenz | Power Query M-Referenz|
+|*|Referenz zu Power Query M | Referenz zu Power Query M|
 ||Dokumentation zu SQL Server 2016 | Dokumentation zu SQL Server 2016|
 ||Dokumentation zu SQL Server 2017| Dokumentation zu SQL Server 2017|
 |*|Leitfäden für Entwickler für SQL Server | SQL Server Developer-Referenz|
@@ -95,11 +99,12 @@ Es gibt zwei Hauptversionen von Microsoft Help Viewer.  Dabei handelt es sich um
 |*|Tools und Hilfsprogramme für Azure SQL-Datenbank | SQL Server-Tools|
 |*|Transact-SQL-Referenz (Datenbank-Engine) | Transact-SQL-Referenz|
 |*|XQuery-Sprachreferenz (SQL Server) | XQuery-Sprachreferenz (SQL Server)|
+| &nbsp; | &nbsp; | &nbsp; |
 
 > [!NOTE]
 > Wenn Help Viewer beim Hinzufügen von Inhalt nicht mehr reagieren sollte, ändern Sie die Cachezeile „LastRefreshed=\<mm/dd/yyyy> 00:00:00“ in den Dateien „%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings“ oder „HlpViewer_VisualStudiox_en-US.settings“ in ein Datum, das in der Zukunft liegt. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](/visualstudio/welcome-to-visual-studio).
 
-**Anzeigen von offline verfügbarem Hilfeinhalt in SSMS mit Help Viewer v2.x**
+### <a name="to-view-offline-help-content-in-ssms-with-help-viewer-v2x"></a>Anzeigen von offline verfügbarem Hilfeinhalt in SSMS mit Help Viewer v2.x
 
 Drücken Sie STRG+ALT+F1, um die installierte Hilfe in SSMS anzuzeigen, oder wählen Sie im Menü „Hilfe“ **Hilfeinhalt hinzufügen und entfernen** aus, um Help Viewer zu starten. 
 
@@ -111,7 +116,7 @@ Help Viewer öffnet sich in der Registerkarte „Inhalt verwalten“ mit dem ins
 
    ![Help Viewer v2.x mit Inhalt](../sql-server/media/sql-server-help-installation/helpviewer2-withcontentinstalled.png)
 
-**Anzeigen von offline verfügbarem Hilfeinhalt in VS mit Help Viewer v2.x**
+### <a name="to-view-offline-help-content-in-vs-with-help-viewer-v2x"></a>Anzeigen von offline verfügbarem Hilfeinhalt in VS mit Help Viewer v2.x
 
 Führen Sie die folgenden Schritte aus, damit die in Visual Studio installierte Hilfe angezeigt wird:
 1. Zeigen Sie im Menü „Hilfe“ auf **Hilfeeinstellungen festlegen**, und wählen Sie **In Help Viewer starten** aus. 
@@ -126,56 +131,67 @@ Führen Sie die folgenden Schritte aus, damit die in Visual Studio installierte 
   
 ## <a name="use-help-viewer-v1x"></a>Verwenden von Help Viewer v1.x
 
-Frühere Versionen von SSMS und VS verwenden Help Viewer 1.x. Diese Version unterstützt die Hilfe für Inhalte von SQL Server 2014 und 2012. 
+In diesem Abschnitt führen Sie die folgenden allgemeinen Schritte aus:
 
-**Herunterladen und Installieren von offline verfügbarem Hilfeinhalt mit Help Viewer v1.x**
+- Sie laden manuell die SQL Server 2014-Offlinedokumentation herunter, die aus vier Teilen besteht.
+- Sie verwenden das **Hilfe**-Menü von SSMS oder VS, um Help Viewer zu starten.
+- Zum Schluss informieren Sie Help Viewer darüber, wo sich die `*.msha`-Datei von SQL Server 2014 auf Ihrer lokalen Festplatte befindet.
+
+Frühere Versionen von SSMS und VS haben die 1.x-Versionen von Help Viewer bereitgestellt. Version 1.x kann die Offlinedokumentation für die SQL Server-Versionen 2012 und 2014 anzeigen. Die Offlinedokumentation für SQL Server 2016 oder höher kann in Version 1.x jedoch nicht angezeigt werden.
+
+Help Viewer 2.3 kann auch die Offlinedokumentation für SQL Server 2014 anzeigen, nachdem Sie diese auf Ihre lokale Festplatte heruntergeladen haben.
+
+### <a name="to-download-and-install-offline-help-content-with-help-viewer-v1x"></a>Herunterladen und Installieren von offline verfügbarem Hilfeinhalt mit Help Viewer v1.x
 
 In diesem Vorgang wird Help Viewer 1.x verwendet, um die Hilfe für SQL Server 2014 aus dem Microsoft Download Center herunterzuladen und auf dem Computer zu installieren.
 
-1. Navigieren Sie zur Downloadwebsite [Product Documentation for Microsoft SQL Server 2014 (Produktdokumentation für Microsoft SQL Server 2014)](https://www.microsoft.com/download/details.aspx?id=42557), und klicken Sie auf **Herunterladen**.  
-2. Klicken Sie im Meldungsfeld auf **Speichern**, um die Datei *SQLServer2014Documentation\_\*.exe* auf Ihrem Computer zu speichern.  
-   
-   >[!NOTE]
-   >Speichern Sie bei firewall- und proxygeschützten Umgebungen die Downloaddatei auf einem USB-Laufwerk oder anderen Wechselmedium, auf das in der Umgebung zugegriffen werden kann.   
-   
-3. Doppelklicken Sie auf die EXE-Datei, um die Datei mit Hilfeinhalten zu entpacken und in einem lokalen oder freigegebenen Ordner zu speichern.  
-4. Öffnen Sie den **Hilfebibliotheks-Manager**, indem Sie SSMS oder Visual Studio starten und im Menü „Hilfe“ auf **Hilfeeinstellungen verwalten** klicken.  
-5. Klicken Sie auf **Install content from disk** (Inhalt von Datenträger installieren), und suchen Sie nach dem Ordner, in dem Sie die Datei mit Hilfeinhalten entpackt haben.  
-   
+1. Navigieren Sie zur Downloadwebsite [Product Documentation for Microsoft SQL Server 2014 (Produktdokumentation für Microsoft SQL Server 2014)](https://www.microsoft.com/download/details.aspx?id=42557), und klicken Sie auf **Herunterladen**.
+
+2. Klicken Sie im Meldungsfeld auf **Speichern**, um die Datei *SQLServer2014Documentation\_\*.exe* auf Ihrem Computer zu speichern.
+
+   > [!NOTE]
+   > Speichern Sie bei firewall- und proxygeschützten Umgebungen die Downloaddatei auf einem USB-Laufwerk oder anderen Wechselmedium, auf das in der Umgebung zugegriffen werden kann.
+
+3. Doppelklicken Sie auf die EXE-Datei, um die Datei mit Hilfeinhalten zu entpacken und in einem lokalen oder freigegebenen Ordner zu speichern.
+
+4. Öffnen Sie den **Hilfebibliotheks-Manager**, indem Sie SSMS oder Visual Studio starten und im Menü „Hilfe“ auf **Hilfeeinstellungen verwalten** klicken.
+
+5. Klicken Sie auf **Install content from disk** (Inhalt von Datenträger installieren), und suchen Sie nach dem Ordner, in dem Sie die Datei mit Hilfeinhalten entpackt haben.
+
    ![HelpLibraryManager_MainPage_InstallFromDisk](../sql-server/media/sql-server-help-installation/helplibrarymanager-mainpage-installfromdisk.png)
-   
+
    ![HelpLibraryManager_InstallContentFromDisk_dialog1](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog1.png)
-   
+
    > [!IMPORTANT]
-   > Verwenden Sie im **Hilfebibliotheks-Manager** die Option **Install content from disk** (Inhalt von Datenträger installieren), um zu vermeiden, dass lokale Hilfeinhalte installiert werden, bei denen das Inhaltsverzeichnis nur teilweise vorhanden ist.  Wenn Sie **Install content from online** (Inhalt von Onlinespeicherort installieren) ausgewählt haben und Help Viewer das Inhaltsverzeichnis nur teilweise anzeigt, finden Sie in diesem [Blogbeitrag](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) Anweisungen zur Fehlerbehebung. 
-   
-8. Klicken Sie auf die Datei „HelpContentSetup.msha“, klicken Sie dann auf **Öffnen** und dann auf **Weiter**.  
-9. Klicken Sie neben der Dokumentation, die Sie installieren möchten, auf **Hinzufügen** und dann auf **Aktualisieren**.  
-   
-   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog2.png)  
-   
-10. Klicken Sie auf **Fertig stellen** und dann auf **Beenden**.
+   > Verwenden Sie im **Hilfebibliotheks-Manager** die Option **Install content from disk** (Inhalt von Datenträger installieren), um zu vermeiden, dass lokale Hilfeinhalte installiert werden, bei denen das Inhaltsverzeichnis nur teilweise vorhanden ist.  Wenn Sie **Install content from online** (Inhalt von Onlinespeicherort installieren) ausgewählt haben und Help Viewer das Inhaltsverzeichnis nur teilweise anzeigt, finden Sie in diesem [Blogbeitrag](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) Anweisungen zur Fehlerbehebung.
 
-**Anzeigen von offline verfügbarem Hilfeinhalt mit Help Viewer v1.x**
+6. Klicken Sie nacheinander auf die Datei `HelpContentSetup.msha`, auf **Öffnen** und auf **Weiter**K.
 
-11. Öffnen Sie erneut den **Hilfebibliotheks-Manager**, klicken Sie auf **Choose online or local help** (Onlinehilfe oder lokale Hilfe auswählen), und klicken Sie dann auf **I want to use local help** (Ich möchte lokale Hilfe verwenden).
-12. Öffnen Sie den Help Viewer zum Anzeigen des Inhalts, indem Sie im Menü **Hilfe** auf **Hilfe anzeigen** klicken. Die von Ihnen installierten Inhalte werden auf der linken Seite aufgeführt.  
-   
+7. Klicken Sie neben der Dokumentation, die Sie installieren möchten, auf **Hinzufügen** und dann auf **Aktualisieren**.
+
+   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog2.png)
+
+8. Klicken Sie auf **Fertig stellen** und dann auf **Beenden**.
+
+### <a name="to-view-offline-help-content-with-help-viewer-v1x"></a>Anzeigen von offline verfügbarem Hilfeinhalt mit Help Viewer v1.x
+
+1. Öffnen Sie erneut den **Hilfebibliotheks-Manager**, klicken Sie auf **Choose online or local help** (Onlinehilfe oder lokale Hilfe auswählen), und klicken Sie dann auf **I want to use local help** (Ich möchte lokale Hilfe verwenden).
+
+2. Öffnen Sie den Help Viewer zum Anzeigen des Inhalts, indem Sie im Menü **Hilfe** auf **Hilfe anzeigen** klicken. Die von Ihnen installierten Inhalte werden auf der linken Seite aufgeführt.
+
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
-   
-
 
 ## <a name="view-online-help"></a>Anzeigen der Onlinehilfe
 
 In der Onlinehilfe werden stets die aktuellsten Inhalte angezeigt. 
 
-**Anzeigen der Onlinehilfe für SQL Server in SSMS 17.x**
+### <a name="to-view-sql-server-online-help-in-ssms-17x"></a>Anzeigen der Onlinehilfe für SQL Server in SSMS 17.x
 
 - Klicken Sie im Menü **Hilfe** auf **Hilfe anzeigen**. Die neueste Dokumentation zu SQL Server 2016 und SQL Server 2017 von [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/) wird in einem Browser angezeigt.
 
    ![Hilfe anzeigen](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
-**Anzeigen der Visual Studio Onlinehilfe in Visual Studio**
+### <a name="to-view-visual-studio-online-help-in-visual-studio"></a>Anzeigen der Visual Studio Onlinehilfe in Visual Studio
 
 1. Zeigen Sie im Menü „Hilfe“ auf **Hilfeeinstellungen festlegen**, und wählen Sie entweder **In Browser starten** oder **In Help Viewer starten** aus. 
 2. Klicken Sie im Menü „Hilfe“ auf **Hilfe anzeigen**. Die neuste Hilfe für Visual Studio wird in der ausgewählten Umgebung angezeigt. 
@@ -197,7 +213,7 @@ In der Onlinehilfe werden stets die aktuellsten Inhalte angezeigt.
 
 Wenn Sie F1 drücken oder in einem Dialogfeld in SSMS oder Visual Studio auf **Hilfe** oder das Symbol **?** klicken, wird ein Artikel der kontextbezogenen Onlinehilfe im Browser oder in Help Viewer angezeigt.
 
-**Anzeigen der F1-Hilfe**
+### <a name="to-view-f1-help"></a>Anzeigen der F1-Hilfe
 
 1. Klicken Sie im Menü „Hilfe“ auf **Hilfeeinstellungen festlegen**, und wählen Sie entweder **In Browser starten** oder **In Help Viewer starten** aus.
 2. Drücken Sie F1, oder klicken Sie in den Dialogfeldern auf **Hilfe** oder **?** , falls verfügbar, um kontextbezogene Onlineartikel in der ausgewählten Umgebung anzuzeigen.

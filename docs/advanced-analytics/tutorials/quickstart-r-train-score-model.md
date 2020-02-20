@@ -1,22 +1,21 @@
 ---
 title: 'Schnellstart: Trainieren eines Modells in R'
-titleSuffix: SQL Server Machine Learning Services
-description: Erstellen Sie ein einfaches Vorhersagemodell in R mithilfe von SQL Server Machine Learning Services, und prognostizieren Sie dann unter Verwendung neuer Daten ein Ergebnis.
+description: In diesem Schnellstart erstellen und trainieren Sie ein Vorhersagemodell mit R, speichern das Modell in einer Tabelle in Ihrer SQL Server-Instanz und verwenden es dann zur Vorhersage von Werten aus neuen Daten mit SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd91191a84aac8c245bdcbbe0afd2bf3241aa6b3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726519"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831720"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in R mit SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ In diesem Schnellstart erstellen und trainieren Sie ein Vorhersagemodell mit R, 
 Hierzu erstellen Sie zwei gespeicherte Prozeduren, die in SQL ausgeführt werden. Die erste Prozedur nutzt das in R enthaltene Dataset **mtcars** und generiert ein einfaches, verallgemeinertes lineares Modell, das die Wahrscheinlichkeit vorhersagt, mit der ein Fahrzeug mit einem Handschaltgetriebe ausgestattet wurde. Die zweite Prozedur ist für die Bewertung vorgesehen: Sie ruft das in der ersten Prozedur generierte Modell auf, um mehrere Vorhersagen basierend auf neuen Daten auszugeben. Durch das Platzieren von Python-Code in einer gespeicherten SQL-Prozedur werden Vorgänge in SQL eingefügt, die wiederverwendbar sind und von anderen gespeicherten Prozeduren und Clientanwendungen aufgerufen werden können.
 
 > [!TIP]
-> Mit dem folgenden Tutorial, in dem der Prozess zum Anpassen eines Modells mithilfe von rxLinMod beschrieben wird, können Sie Ihr Wissen über lineare Modelle auffrischen:  [Fitting Linear Models (Anpassen linearer Modelle)](/machine-learning-server/r/how-to-revoscaler-linear-model)
+> Mit dem folgenden Tutorial, in dem der Prozess zum Anpassen eines Modells mithilfe von rxLinMod beschrieben wird, können Sie Ihr Wissen über lineare Modelle auffrischen:  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model) (Anpassen von linearen Modellen).
 
 In diesem Schnellstart lernen Sie Folgendes:
 
@@ -80,7 +79,7 @@ Zum Erstellen des Modells erstellen Sie Quelldaten für das Training, erstellen 
    ```
 
    > [!TIP]
-   > Viele kleine und große Datasets sind in der R-Laufzeit enthalten. Geben Sie `library(help="datasets")` in eine R-Eingabeaufforderung ein, um eine Liste von installierten Datasets mit R abzurufen.
+   > In der R-Runtime sind viele kleine und große Datasets enthalten. Geben Sie `library(help="datasets")` in eine R-Eingabeaufforderung ein, um eine Liste von installierten Datasets mit R abzurufen.
 
 ### <a name="create-and-train-the-model"></a>Erstellen und Trainieren des Modells
 
@@ -107,7 +106,7 @@ GO
 ```
 
 - Das erste Argument für `glm` ist der Parameter *formula*, der `am` als abhängig von `hp + wt` definiert.
-- Die Eingabedaten werden in der Variable `MTCarsData` gespeichert, die durch die SQL-Abfrage aufgefüllt wird. Wenn Sie Ihren Eingabedaten keinen spezifischen Namen zuweisen, ist der Standardvariablenname _InputDataSet_.
+- Die Eingabedaten werden in der Variablen `MTCarsData` gespeichert, die mit der SQL-Abfrage aufgefüllt wird. Wenn Sie Ihren Eingabedaten nicht einen spezifischen Namen zuweisen, lautet der Standardvariablenname _InputDataSet_.
 
 ### <a name="store-the-model-in-the-sql-database"></a>Speichern des Modells in der SQL-Datenbank
 
@@ -132,7 +131,7 @@ Als Nächstes speichern Sie das Modell in einer SQL-Datenbank, damit Sie es für
    ```
 
    > [!TIP]
-   > Wenn Sie diesen Code ein zweites Mal ausführen, erhalten Sie den folgenden Fehler: „Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models.“ (Verstoß gegen die PRIMARY KEY-Einschränkung... Ein doppelter Schlüssel kann nicht in das Objekt „dbo.stopping_distance_models“ eingefügt werden.) Eine Möglichkeit zur Vermeidung dieses Fehlers besteht darin, den Namen für jedes neue Modell zu aktualisieren. Sie können den Namen z.B. in einen aussagekräftigeren Namen ändern und den Modelltyp, den Erstellungstag usw. mit aufnehmen.
+   > Wenn Sie diesen Code ein zweites Mal ausführen, erhalten Sie den folgenden Fehler: „Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models.“ (Verstoß gegen die PRIMARY KEY-Einschränkung... Ein doppelter Schlüssel kann nicht in das Objekt „dbo.stopping_distance_models“ eingefügt werden.) Eine Option zur Vermeidung dieses Fehlers ist das Aktualisieren des Namens für jedes neue Modell. Sie können den Namen beispielsweise in eine aussagekräftigere Zeichenfolge ändern und den Modelltyp, den Tag der Erstellung usw. einfügen.
 
      ```sql
      UPDATE GLM_models
@@ -204,9 +203,9 @@ Das obige Skript für die folgenden Schritte aus:
 
 - Verwenden Sie eine SELECT-Anweisung, um ein einzelnes Modell aus der Tabelle abzurufen, und übergeben Sie es als Eingabeparameter.
 
-- Rufen Sie nach dem Abruf des Modells aus der Tabelle die `unserialize`-Funktion auf dem Modell auf.
+- Rufen Sie nach dem Abruf des Modells aus der Tabelle die Funktion `unserialize` für das Modell auf.
 
-- Wenden Sie die `predict`-Funktion mit geeigneten Argumenten auf das Modell an, und stellen Sie die neuen Eingabedaten bereit.
+- Wenden Sie die Funktion `predict` mit den passenden Argumenten auf das Modell an, und geben Sie die neuen Eingabedaten an.
 
 > [!NOTE]
 > Im Beispiel wird die `str`-Funktion während der Testphase hinzugefügt, um das Schema der von R zurückgegebenen Daten zu überprüfen. Sie können diese Anweisung später entfernen.

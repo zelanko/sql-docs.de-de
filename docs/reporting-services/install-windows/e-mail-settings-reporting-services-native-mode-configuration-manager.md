@@ -1,8 +1,10 @@
 ---
-title: 'E-Mail-Einstellungen: einheitlicher Modus von Reporting Services (Konfigurations-Manager) | Microsoft-Dokumentation'
-ms.date: 06/01/2016
+title: E-Mail-Einstellungen im einheitlichen Modus von SSRS (Konfigurations-Manager) | Microsoft-Dokumentation
+description: SQL Server Reporting Services enthält eine Erweiterung zur E-Mail-Übermittlung, mit der Sie Berichte per E-Mail verteilen können.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
@@ -11,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 872c7e4d501017627fcc64eca7ed48204c9d3533
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593819"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866003"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>E-Mail-Einstellungen – Einheitlicher Modus von Reporting Services (Konfigurations-Manager)
-Reporting Services enthält eine Erweiterung zur E-Mail-Übermittlung, damit Sie Berichte per E-Mail verteilen können. Je nachdem, wie Sie das Abonnieren von E-Mails definieren, kann eine E-Mail-Übermittlung aus einer Nachricht, einem Link, einem Anhang oder einem eingebetteten Bericht bestehen. Die Erweiterung der E-Mail-Übermittlung arbeitet mit Ihrer vorhandenen E-Mail-Server-Technologie. Der E-Mail-Server muss ein SMTP-Server oder eine Weiterleitung sein. Der Berichtsserver stellt über CDO-Bibliotheken (Collaboration Data Objects, cdosys.dll), die das Betriebssystem stellt, eine Verbindung zu einem SMTP-Server her.
+SQL Server Reporting Services enthält eine Erweiterung zur E-Mail-Übermittlung, mit der Sie Berichte per E-Mail verteilen können. Je nachdem, wie Sie das Abonnieren von E-Mails definieren, kann eine E-Mail-Übermittlung aus einer Nachricht, einem Link, einem Anhang oder einem eingebetteten Bericht bestehen. Die Erweiterung der E-Mail-Übermittlung arbeitet mit Ihrer vorhandenen E-Mail-Server-Technologie. Der E-Mail-Server muss ein SMTP-Server oder eine Weiterleitung sein. Der Berichtsserver stellt über CDO-Bibliotheken (Collaboration Data Objects, cdosys.dll), die das Betriebssystem stellt, eine Verbindung zu einem SMTP-Server her.
 
 Die E-Mail-Übermittlungserweiterung des Berichtsservers ist standardmäßig nicht konfiguriert. Sie müssen den Reporting Services-Konfigurations-Manager verwenden, um die Erweiterung minimal zu konfigurieren. Sie müssen die Datei RSReportServer.config bearbeiten, um die erweiterten Eigenschaften festzulegen. Wenn Sie den Berichtsserver für die Verwendung dieser Erweiterung nicht konfigurieren können, können Sie stattdessen Berichte an einen freigegebenen Ordner übermitteln. Weitere Informationen finden Sie unter „Dateifreigabeübermittlung in Reporting Services“.
 
@@ -72,7 +74,7 @@ Gehen Sie wie folgt vor, um einen Berichtsserver für die E-Mail-Übermittlung z
      
           Wenn Sie diese Option auswählen, wird `<SendUsing>` in der Datei „rsreportserver.config“ auf den Wert **2** und `<SMTPAuthenticate>` auf den Wert **2** festgelegt.
 
-5. Wählen Sie **Anwenden**aus.
+5. Wählen Sie **Übernehmen**.
 
 6. Optional können Sie in der Datei „rsreportserver.config“ weitere Felder für die E-Mail-Konfiguration anpassen.
 
@@ -109,7 +111,7 @@ Das folgende Beispiel veranschaulicht die Einstellungen für einen SMTP-Remotese
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Konfigurationsoptionen für die Einstellung des "An:"-Felds in einer Nachricht
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Konfigurationsoptionen für das Feld „An:“ in einer Nachricht
 Benutzerdefinierte Abonnements, die gemäß den durch den Task „Einzelne Abonnements verwalten“ erteilten Berechtigungen erstellt werden, enthalten einen vorher festgelegten Benutzernamen, der auf dem Domänenbenutzerkonto basiert. Wenn der Benutzer das Abonnement erstellt, wird der Empfängername im **An:** -Feld mit dem Domänenbenutzerkonto der Person ausgefüllt, die das Abonnement erstellt.
 
 Bei Verwendung eines SMTP-Servers bzw. einer Weiterleitung, der bzw. die E-Mail-Konten verwendet, die mit dem Domänenbenutzerkonto nicht übereinstimmen, erzeugt die Berichtsübermittlung einen Fehler, wenn der SMTP-Server den Bericht an diesen Benutzer übermitteln will.
@@ -122,7 +124,7 @@ Sie können die Konfigurationseinstellungen ändern, die Benutzern das Eingeben 
 
 3. Legen Sie `<DefaultHostName>` auf den DNS-Namen (Domain Name System) oder die IP-Adresse des SMTP-Servers bzw. der Weiterleitung fest.
 
-4. Speichern Sie die Datei.
+4. Speichern Sie die Datei .
 
 ## <a name="configuration-options-for-remote-smtp-service"></a>Konfigurationsoptionen für den SMTP-Remotedienst
 Die Verbindung zwischen dem Berichtsserver und einem SMTP-Server oder einer SMTP-Weiterleitung wird durch die folgenden Konfigurationseinstellungen bestimmt:
@@ -158,7 +160,7 @@ Andere Werte, die für den SMTP-Remotedienst verwendet werden, sind folgende (di
 
 7. Legen Sie `<From>` fest. Sie müssen ein Benutzerkonto angeben, das über die Berechtigung zum Senden von E-Mails vom SMTP-Server verfügt.
 
-8. Speichern Sie die Datei.
+8. Speichern Sie die Datei .
 
      Die neuen Einstellungen werden automatisch vom Berichtsserver verwendet, Sie müssen den Dienst nicht neu starten. Sie können weitere SMTP-Einstellungen angeben, um die Verwendung des SMTP-Servers für die Berichtsserver-E-Mail-Übermittlung weiter zu konfigurieren.
 
@@ -215,12 +217,12 @@ Die Verbindung zwischen dem Berichtsserver und einem lokalen SMTP-Server oder ei
      
      Standardmäßig ist dies *C:\inetpub\mailroot\Pickup*.
      
-16. Legen Sie `<From>`fest. Dadurch wird der Wert festgelegt, der in der **Von:** -Zeile einer E-Mail angezeigt wird.
+16. Legen Sie `<From>` fest. Dadurch wird der Wert festgelegt, der in der **Von:** -Zeile einer E-Mail angezeigt wird.
      
-17. Speichern Sie die Datei.
+17. Speichern Sie die Datei .
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Reporting Services-Konfigurations-Manager (einheitlicher Modus)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[Reporting Services Configuration Manager (Native Mode) (Reporting Services-Konfigurations-Manager (einheitlicher Modus))](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   

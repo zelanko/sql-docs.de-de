@@ -16,10 +16,10 @@ ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975782"
 ---
 # <a name="relative-method-sqlserverresultset"></a>relative-Methode (SQLServerResultSet)
@@ -40,13 +40,13 @@ public boolean relative(int nRows)
  Ein Wert vom Typ **int**, der die Anzahl der zu verschiebenden Zeilen angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn sich der Cursor in einer Zeile befindet. Andernfalls lautet der Wert **false**.  
+ Der Wert **TRUE** wird zurückgegeben, wenn der Cursor in einer Zeile liegt. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese relative Methode wird durch die relative Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese relative-Methode wird von der relative-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Wenn versucht wird, den Cursor über die erste oder letzte Zeile im Resultset hinaus zu verschieben, wird er vor oder hinter der ersten bzw. letzten Reihe positioniert. Der Aufruf von `relative(0)` ist gültig, hat jedoch keine Auswirkungen auf die Position des Cursors.  
   

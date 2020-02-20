@@ -9,10 +9,10 @@ ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: adf756e3ef9cbed7689a5cceb80e6ef4d93e2fb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581729"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Ändern der Zeilenhöhe oder der Spaltenbreite (Berichts-Generator und SSRS)
@@ -37,11 +37,11 @@ ms.locfileid: "65581729"
   
 1.  Klicken Sie in der Ansicht Entwurf auf eine Zelle in der Tabellenzeile.  
   
-     ![Ausgewählte Zelle in einer Tabelle](../../reporting-services/report-design/media/table-selectcell.png "Selected Cell in a Table")  
+     ![Ausgewählte Zelle in einer Tabelle](../../reporting-services/report-design/media/table-selectcell.png "Ausgewählte Zelle in einer Tabelle")  
   
 2.  Ändern Sie im angezeigten Bereich **Eigenschaften** die Eigenschaft **Höhe** , und klicken Sie anschließend auf eine beliebige Stelle außerhalb des Bereichs **Eigenschaften** .  
   
-     ![Eigenschaftenbereich für ausgewählte Tabellenzelle](../../reporting-services/report-design/media/cell-propertiespane.png "Properties Pane for selected table cell")  
+     ![Eigenschaftenbereich für ausgewählte Tabellenzelle](../../reporting-services/report-design/media/cell-propertiespane.png "Eigenschaftenbereich für ausgewählte Tabellenzelle")  
   
 ### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>So deaktivieren Sie die automatische Ausdehnung einer Zeile  
   

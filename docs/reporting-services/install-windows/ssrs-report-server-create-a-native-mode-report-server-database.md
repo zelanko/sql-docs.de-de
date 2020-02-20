@@ -1,8 +1,10 @@
 ---
-title: Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
-ms.date: 05/24/2018
+title: Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (Konfigurations-Manager) | Microsoft-Dokumentation
+description: Bei Reporting Services im einheitlichen Modus wird eine SQL Server-Datenbank als interner Speicher verwendet. Die Datenbank ist erforderlich und wird zum Speichern von veröffentlichten Berichten, Modellen, freigegebenen Datenquellen, Sitzungsdaten, Ressourcen und Servermetadaten verwendet.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -10,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593553"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866333"
 ---
-# <a name="create-a-native-mode-report-server-database"></a>Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus
+# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-Der einheitliche Modus für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank für den Zentralspeicher. Die Datenbank ist erforderlich und wird zum Speichern von veröffentlichten Berichten, Modellen, freigegebenen Datenquellen, Sitzungsdaten, Ressourcen und Servermetadaten verwendet.  
+Der einheitliche Modus für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank als internen Speicher. Die Datenbank ist erforderlich und wird zum Speichern von veröffentlichten Berichten, Modellen, freigegebenen Datenquellen, Sitzungsdaten, Ressourcen und Servermetadaten verwendet.  
 
 Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge oder die Anmeldeinformationen zu ändern, verwenden Sie die Optionen auf der Datenbankseite im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager.  
   
@@ -71,7 +73,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
   
 ### <a name="to-create-a-local-report-server-database"></a>So erstellen Sie eine lokale Berichtsserver-Datenbank  
   
-1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und stellen Sie eine Verbindung mit der Berichtsserverinstanz her, für die Sie die Datenbank erstellen. Weitere Informationen finden Sie unter [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und stellen Sie eine Verbindung mit der Berichtsserverinstanz her, für die Sie die Datenbank erstellen. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Wählen Sie auf der Seite „Datenbank“ die Option **Datenbank ändern**aus.  
   
@@ -107,7 +109,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
   
          Wählen Sie **Anmeldeinformationen des Diensts** , wenn der Berichtsserver die Verbindung mithilfe seines Dienstkontos herstellen soll. Mit dieser Option stellt der Server die Verbindung mit integrierter Sicherheit her; Anmeldeinformationen werden nicht verschlüsselt oder gespeichert.  
   
-    2.  Wählen Sie **Weiter**aus.  
+    2.  Wählen Sie **Weiter** aus.  
   
 7.  Überprüfen Sie die Informationen über die Zusammenfassungsseite, um zu überprüfen, ob die Einstellungen korrekt sind, und wählen Sie dann **Weiter**aus.  
   

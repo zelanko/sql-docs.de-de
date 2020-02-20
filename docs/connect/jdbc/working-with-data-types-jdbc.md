@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f45b8fdf1fa0ef03bdb014ee3553d2e8bf23d29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 19d75051b03a3d6d966961e681e9ce9d70396e86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025703"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76934443"
 ---
 # <a name="working-with-data-types-jdbc"></a>Arbeiten mit Datentypen (JDBC)
 
@@ -32,12 +32,12 @@ Die Themen in diesem Abschnitt beschreiben, wie Sie in Java-Anwendungen unter Ve
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Beispiel zu Standarddatentypen](../../connect/jdbc/basic-data-types-sample.md)|Beschreibt, wie Werte von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standarddatentypen mithilfe von Abrufmethoden für Resultsets abgerufen und wie diese Werte mithilfe von Updatemethoden für Resultsets aktualisiert werden.|  
 |[Beispiel für den SQLXML-Datentyp](../../connect/jdbc/sqlxml-data-type-sample.md)|Beschreibt das Speichern von XML-Daten in einer relationalen Datenbank, das Abrufen von XML-Daten aus einer Datenbank sowie das Analysieren von XML-Daten mit dem Java-Datentyp **SQLXML**.|  
-|[Beispiel für räumliche Datentypen](../../connect/jdbc/spatial-data-types-sample.md)|Beschreibt das Speichern und Abrufen von Daten mit räumlichen Datentypen "Geometry" und "geography" der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank mit **Geometrie** -und **geography** -Java-Typen, die vom Microsoft JDBC-Treiber definiert werden.|
+|[Beispiel für räumliche Datentypen](../../connect/jdbc/spatial-data-types-sample.md)|In diesem Thema wird beschrieben, wie Sie Daten mit den räumlichen Datentypen „Geometrie“ und „Geografie“ in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit den vom Microsoft JDBC-Treiber definierten Java-Typen **Geometry** und **Geography** speichern und wieder abrufen.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Beispiele für JDBC-Treiberanwendungen](../../connect/jdbc/sample-jdbc-driver-applications.md)  

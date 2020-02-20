@@ -1,22 +1,22 @@
 ---
-title: Einstieg in den SqlClient-Treiber | Microsoft-Dokumentation
-description: Einführung in die Verwendung von SqlClient dirver.
+title: Erste Schritte mit dem SqlClient-Treiber | Microsoft-Dokumentation
+description: Einführung in den SqlClient-Treiber
 ms.custom: ''
 ms.date: 09/30/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 2b75ca2a6b7646e48d6d58754fadc462da983e7d
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0f7e0c8a7e6685f902fd383e8ae6421d43a529ae
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452401"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251008"
 ---
 # <a name="getting-started-with-the-sqlclient-driver"></a>Erste Schritte mit dem SqlClient-Treiber
 
