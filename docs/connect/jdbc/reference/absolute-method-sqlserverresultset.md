@@ -16,10 +16,10 @@ ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66bdbfa417077e70be7969b28ae851a0244e54ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67956069"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>absolute-Methode (SQLServerResultSet)
@@ -40,7 +40,7 @@ public boolean absolute(int row)
  Ein Wert vom Typ **int** zum Angeben der Zeilenzahl, an die verschoben werden soll. Kann positiv, negativ oder "0" sein.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn der Cursor an die angegebene Position verschoben wird. **false** , wenn es vor der ersten Zeile oder nach der letzten Zeile liegt.  
+ **TRUE**, wenn der Cursor an die gegebene Position bewegt wird. **FALSE**, wenn sich der Cursor vor der ersten oder nach der letzten Zeile befindet.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

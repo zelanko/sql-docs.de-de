@@ -1,5 +1,5 @@
 ---
-title: getdatabaseproductversion-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: Methode „getDatabaseProductVersion“ (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 19c0c15d-223f-45bd-a215-2867dfefecb0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb131223c59586d30fdf4cfbee84f63c483959f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984091"
 ---
 # <a name="getdatabaseproductversion-method-sqlserverdatabasemetadata"></a>getDatabaseProductVersion-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public java.lang.String getDatabaseProductVersion()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getdatabaseproductversion-Methode wird von der getdatabaseproductversion-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getDatabaseProductVersion-Methode wird von der getDatabaseProductVersion-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

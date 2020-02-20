@@ -1,23 +1,24 @@
 ---
-title: 'Gewusst wie: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c1a9bf666ac79b76d94cfbd04c88bde6eafd85b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119883"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246486"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Gewusst wie: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird
+
 Sie können Komponententests so anpassen, dass sie im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt werden. Bei diesem Ansatz können Sie für alle vom Test durchgeführten Änderungen ein Rollback ausführen, nachdem der Test beendet wurde. Die Vorgehensweise wird in folgenden Verfahren erläutert:  
   
 -   Erstellen einer Transaktion in Ihrem Transact\-SQL-Testskript, das **BEGIN TRANSACTION** und **ROLLBACK TRANSACTION** verwendet  
@@ -26,7 +27,7 @@ Sie können Komponententests so anpassen, dass sie im Gültigkeitsbereich einer 
   
 -   Erstellen einer Transaktion für alle Testmethoden in einer bestimmten Testklasse  
   
-**Erforderliche Komponenten**  
+**Voraussetzungen**  
   
 Bei einigen Verfahren in diesem Thema muss der Distributed Transaction Coordinator-Dienst auf dem Computer ausgeführt werden, auf dem die Komponententests ausgeführt werden. Weitere Informationen finden Sie im Verfahren am Ende dieses Themas.  
   

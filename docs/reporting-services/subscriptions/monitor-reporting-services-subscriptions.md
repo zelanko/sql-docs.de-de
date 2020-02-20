@@ -15,10 +15,10 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67285043"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Überwachen von Reporting Services-Abonnements
@@ -26,7 +26,7 @@ ms.locfileid: "67285043"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** : [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|  
   
  **In diesem Artikel:**  
   
@@ -43,10 +43,10 @@ ms.locfileid: "67285043"
   
  Die folgende Tabelle enthält die möglichen Werte für die Spalte **Status** .  
   
-|Status|und Beschreibung|  
+|Status|Beschreibung|  
 |------------|-----------------|  
 |Neues Abonnement|Wird beim Erstellen des Abonnements angezeigt.|  
-|Inaktiv|Wird angezeigt, wenn ein Abonnement kann nicht verarbeitet werden. Weitere Informationen finden Sie weiter in diesem Artikel unter „Verwalten inaktiver Abonnements“.|  
+|Inaktiv|Dieser Status wird angezeigt, wenn ein Abonnement nicht verarbeitet werden kann. Weitere Informationen finden Sie weiter in diesem Artikel unter „Verwalten inaktiver Abonnements“.|  
 |Fertig: \<*Anzahl*> von insgesamt \<*Anzahl*> verarbeitet; \<*Anzahl*> Fehler.|Zeigt den Status der Ausführung eines datengesteuerten Abonnements an. Diese Meldung stammt vom Prozessor für Zeitplanung und Übermittlung.|  
 |\<*Anzahl*> verarbeitet|Die Anzahl von Benachrichtigungen, die der Prozessor für Zeitplanung und Übermittlung erfolgreich übermittelt hat oder nicht mehr zu übermitteln versucht. Beim Abschluss einer datengesteuerten Übermittlung sollte die Anzahl von verarbeiteten Benachrichtigungen den insgesamt generierten Benachrichtigungen entsprechen.|  
 |\<*Anzahl*> insgesamt|Die Gesamtzahl der Benachrichtigungen, die für die letzte Übermittlung für das Abonnement generiert wurden.|  
@@ -66,7 +66,7 @@ ms.locfileid: "67285043"
 ### <a name="native-mode-log-files"></a>Protokolldateien im einheitlichen Modus  
  Beim Auftreten eines Fehlers während der Übermittlung erfolgt ein Eintrag im Ablaufverfolgungsprotokoll des Berichtsservers.  
   
- Berichtsserveradministratoren können den Abonnementübermittlungsstatus in den Dateien „**reportserverservice_** .log“ überprüfen. Für die E-Mail-Übermittlung schließen Protokolldateien des Berichtsservers eine Aufzeichnung der Verarbeitungs- und Übermittlungsvorgänge für bestimmte E-Mail-Konten ein. Der Standardspeicherort der Protokolldateien lautet:  
+ Berichtsserveradministratoren können den Abonnementübermittlungsstatus in den Dateien „**reportserverservice_**.log“ überprüfen. Für die E-Mail-Übermittlung schließen Protokolldateien des Berichtsservers eine Aufzeichnung der Verarbeitungs- und Übermittlungsvorgänge für bestimmte E-Mail-Konten ein. Der Standardspeicherort der Protokolldateien lautet:  
   
  `C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles`  
   
@@ -76,7 +76,7 @@ ms.locfileid: "67285043"
   
  Es folgt eine Beispielfehlermeldung einer Ablaufverfolgungsprotokolldatei im Zusammenhang mit Abonnements:  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging auf TRUE gemäß Serversystemeigenschaften properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **E-Mail-Sendefehler**. Ausnahme: System.Net.Mail.SmtpException: Für den SMTP-Server ist eine sichere Verbindung erforderlich, oder der Client wurde nicht authentifiziert. Die Serverantwort war: 5.7.1 Client wurde nicht auf System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response) authentifiziert.  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 (EnableExecutionLogging wird gemäß Serversystemeigenschaften auf „TRUE“ initialisiert properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41::) FEHLER: **Fehler beim Senden von E-Mail**. Ausnahme: System.Net.Mail.SmtpException: Für den SMTP-Server ist eine sichere Verbindung erforderlich, oder der Client wurde nicht authentifiziert. Die Serverantwort lautete: 5.7.1 Client wurde nicht auf System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response) authentifiziert.  
   
  Die Protokolldatei enthält keine Informationen, ob der Bericht geöffnet wurde oder ob die Übermittlung tatsächlich erfolgreich war. Eine erfolgreiche Übermittlung bedeutet, dass der Prozessor für Zeitplanung und Übermittlung keine Fehler generiert und der Berichtsserver eine Verbindung zum Mailserver hergestellt hat. Falls für die E-Mail im Postfach des Benutzers eine Fehlermeldung wegen Unzustellbarkeit generiert wird, werden diese Informationen nicht in die Protokolldatei aufgenommen. Weitere Informationen zu Protokolldateien finden Sie unter [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -85,9 +85,9 @@ ms.locfileid: "67285043"
   
 1.  Navigieren Sie zu der Dokumentbibliothek, die den Bericht enthält.  
   
-2.  Öffnen Sie das Kontextmenü des Berichts ( **...** ).  
+2.  Öffnen Sie das Kontextmenü des Berichts (**...**).  
   
-3.  Wählen Sie die erweiterte Menüoption ( **...** ) aus.  
+3.  Wählen Sie die erweiterte Menüoption (**...**) aus.  
   
 4.  Wählen Sie **Abonnements verwalten**aus.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "67285043"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|date|Verarbeiten|Bereich|Kategorie|Ebene|Correlation|MessageBox|  
-|21.05.2019 14:34:06:15|App-Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Berichtsserver-E-Mail-Erweiterung|Unerwartet|(leer)|**Fehler beim Senden von E-Mail.** Ausnahme: System.Net.Mail.SmtpException: Postfach nicht verfügbar. Die Serverantwort war: 5.7.1 Client ist nicht berechtigt, als dieser Absender zu senden  an System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  an System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  an System.Net.Mail.SmtpClient.Send(MailMessage message)  an Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|Date|Prozess|Bereich|Category|Ebene|Correlation|`Message`|  
+|21.05.2019 14:34:06:15|App-Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Berichtsserver-E-Mail-Erweiterung|Unerwartet|(leer)|**Fehler beim Senden von E-Mail.** Ausnahme: System.Net.Mail.SmtpException: Postfach nicht verfügbar. Die Serverantwort lautete: 5.7.1 Client does not have permissions to send as this sender at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) at System.Net.Mail.SmtpClient.Send(MailMessage message) at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification) (5.7.1 Client ist nicht berechtigt, als dieser Absender zu senden: an System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse), an System.Net.Mail.DataStopCommand.Send(SmtpConnection conn), an System.Net.Mail.SmtpClient.Send(MailMessage message) und an Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification))|  
   
 ##  <a name="bkmk_use_powershell"></a> Verwenden von PowerShell zur Überwachung von Abonnements  
- Beispielsweise können Sie zum Überprüfen des Status von SharePoint-Modus Abonnements im einheitlichen Modus oder im PowerShell-Skripts finden Sie [Verwalten von Abonnementbesitzern und Ausführen-Abonnement – PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+ Beispiele für PowerShell-Skripts, die Sie zum Überprüfen des Status von Abonnements im einheitlichen oder SharePoint-Modus verwenden können, finden Sie unter [Manage Subscription Owners and Run Subscription - PowerShell (PowerShell: Verwalten von Abonnementbesitzern und Ausführen des Abonnements)](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 ##  <a name="bkmk_manage_inactive"></a> Verwalten inaktiver Abonnements  
  Falls ein Abonnement nicht mehr aktiv ist, sollten Sie es entweder löschen oder erneut aktivieren, indem Sie die zugrunde liegenden Bedingungen auflösen, die die Verarbeitung verhindern. Abonnements können beim Auftreten von Bedingungen, die die Verarbeitung verhindern, deaktiviert werden. Dazu zählen die folgenden Bedingungen:  
@@ -117,7 +117,7 @@ ms.locfileid: "67285043"
   
  Wenn Bedingungen zur Deaktivierung des Abonnements führen, wird dies im  Abonnement beim Ausführen durch den Berichtsserver angezeigt. Wenn ein Abonnement einen Bericht laut Zeitplan jeden Freitag um 02:00 Uhr übermitteln soll und die verwendete Übermittlungserweiterung am Montag um 09:00 Uhr deinstalliert wurde, wird der inaktive Status des Abonnements erst am Freitag um 02:00 Uhr angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Abonnements und Übermittlung (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   

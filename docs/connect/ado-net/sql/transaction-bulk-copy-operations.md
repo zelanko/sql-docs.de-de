@@ -1,6 +1,6 @@
 ---
 title: Transaktionen und Massenkopiervorgänge
-description: Beschreibt, wie ein Massen Kopiervorgang innerhalb einer Transaktion ausgeführt wird, einschließlich des Commits oder Rollbacks der Transaktion.
+description: In diesem Artikel wird beschrieben, wie Sie Massenkopiervorgänge innerhalb einer Transaktion und Commits oder Rollbacks für diese Transaktion durchführen.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c2e855407edd6b2af51ae5710cd6601e9aa25654
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 465870aa05b97b841a23c0ca1843e3de395a0b8b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451917"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75233799"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transaktionen und Massenkopiervorgänge
 
@@ -40,14 +40,14 @@ Der Massenkopiervorgang wird mit dem Wert „10“ für die Eigenschaft <xref:Mi
 [!code-csharp[DataWorks SqlBulkCopyOpeions_Default#1](~/../sqlclient/doc/samples/SqlBulkCopyOptions_Default.cs#1)]
   
 ## <a name="performing-a-dedicated-bulk-copy-operation-in-a-transaction"></a>Ausführen eines dedizierten Massenkopiervorgangs in einer Transaktion  
-Standardmäßig stellt ein Massenkopiervorgang seine eigene Transaktion dar. Wenn Sie einen dedizierten Massen Kopiervorgang ausführen möchten, erstellen Sie eine neue Instanz von <xref:Microsoft.Data.SqlClient.SqlBulkCopy> mit einer Verbindungs Zeichenfolge, oder verwenden Sie ein vorhandenes <xref:Microsoft.Data.SqlClient.SqlConnection>-Objekt ohne aktive Transaktion. In jedem Szenario erstellt der Massenkopiervorgang die Transaktion, für die er dann einen Commit oder einen Rollback ausführt.  
+Standardmäßig stellt ein Massenkopiervorgang seine eigene Transaktion dar. Wenn Sie einen dedizierten Massenkopiervorgang durchführen möchten, erstellen Sie eine neue Instanz von <xref:Microsoft.Data.SqlClient.SqlBulkCopy> mit einer Verbindungszeichenfolge, oder verwenden Sie ein vorhandenes <xref:Microsoft.Data.SqlClient.SqlConnection>-Objekt ohne eine aktive Transaktion. In jedem Szenario erstellt der Massenkopiervorgang die Transaktion, für die er dann einen Commit oder einen Rollback ausführt.  
   
 Sie können explizit die Option <xref:Microsoft.Data.SqlClient.SqlBulkCopyOptions.UseInternalTransaction> im Klassenkonstruktor <xref:Microsoft.Data.SqlClient.SqlBulkCopy> angeben, um explizit die Ausführung eines Massenkopiervorgangs innerhalb einer eigenen Transaktion zu veranlassen, was dazu führt, dass jeder Batch des Massenkopiervorgangs in einer eigenen Transaktion ausgeführt wird.  
   
 > [!NOTE]
 >  Da verschiedene Batches in verschiedenen Transaktionen ausgeführt werden, wird für alle Zeilen im aktuellen Batch beim Auftreten eines Fehlers ein Rollback ausgeführt, die Zeilen aus vorhergehenden Batches verbleiben jedoch in der Datenbank.  
   
-Die folgende Konsolenanwendung ähnelt dem vorhergehenden Beispiel, mit einer Ausnahme: In diesem Beispiel verwaltet der Massenkopiervorgang seine eigenen Transaktionen. Für alle bis zum Auftreten des Fehlers kopierten Batches wird ein Commit ausgeführt; für den Batch, der den doppelten Schlüssel enthält, wird ein Rollback ausgeführt, und der Massenkopiervorgang wird vor dem Verarbeiten weiterer Batches angehalten.  
+Die folgende Konsolenanwendung ähnelt mit einer Ausnahme dem vorherigen Beispiel: In diesem Beispiel verwaltet der Massenkopiervorgang seine eigenen Transaktionen. Für alle bis zum Auftreten des Fehlers kopierten Batches wird ein Commit ausgeführt; für den Batch, der den doppelten Schlüssel enthält, wird ein Rollback ausgeführt, und der Massenkopiervorgang wird vor dem Verarbeiten weiterer Batches angehalten.  
   
 > [!IMPORTANT]
 >  Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Massenkopierbeispiel-Einrichtung](bulk-copy-example-setup.md) beschrieben erstellt haben. Der angegebene Code dient nur zur Demonstration der Syntax für die Verwendung von **SqlBulkCopy**. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung `INSERT … SELECT` zum Kopieren der Daten einfacher und schneller.  
@@ -55,9 +55,9 @@ Die folgende Konsolenanwendung ähnelt dem vorhergehenden Beispiel, mit einer Au
 [!code-csharp[DataWorks SqlBulkCopyOptions_UseInternalTransaction#1](~/../sqlclient/doc/samples/SqlBulkCopyOptions_UseInternalTransaction.cs#1)]
   
 ## <a name="using-existing-transactions"></a>Verwenden vorhandener Transaktionen  
-Sie können ein vorhandenes <xref:Microsoft.Data.SqlClient.SqlTransaction>-Objekt als Parameter in einem <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Konstruktor angeben. In dieser Situation wird der Massenkopiervorgang in einer vorhandenen Transaktion ausgeführt, und es tritt keine Änderung am Transaktionsstatus ein (d. h. für sie wird weder ein Commit noch ein Abbruch ausgeführt). Dies macht es möglich, dass Anwendungen den Massenkopiervorgang zusammen mit anderen Datenbankvorgängen in einer Transaktion einschließen. Wenn Sie jedoch kein <xref:Microsoft.Data.SqlClient.SqlTransaction> Objekt angeben und einen NULL-Verweis übergeben und die Verbindung über eine aktive Transaktion verfügt, wird eine Ausnahme ausgelöst.  
+Sie können ein vorhandenes <xref:Microsoft.Data.SqlClient.SqlTransaction>-Objekt in einem <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Konstruktor als Parameter festlegen. In dieser Situation wird der Massenkopiervorgang in einer vorhandenen Transaktion ausgeführt, und es tritt keine Änderung am Transaktionsstatus ein (d. h. für sie wird weder ein Commit noch ein Abbruch ausgeführt). Dies macht es möglich, dass Anwendungen den Massenkopiervorgang zusammen mit anderen Datenbankvorgängen in einer Transaktion einschließen. Es wird jedoch eine Ausnahme ausgelöst, wenn Sie kein <xref:Microsoft.Data.SqlClient.SqlTransaction>-Objekt festlegen, einen Nullverweis übergeben und die Verbindung eine aktive Transaktion aufweist.  
   
-Wenn Sie einen Rollback für den gesamten Massen Kopiervorgang ausführen müssen, weil ein Fehler auftritt, oder wenn der Massen Kopiervorgang als Teil eines größeren Prozesses ausgeführt werden soll, für den ein Rollback ausgeführt werden kann, können Sie ein <xref:Microsoft.Data.SqlClient.SqlTransaction> Objekt für den <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Konstruktor bereitstellen.  
+Wenn Sie ein Rollback für den gesamten Massenkopiervorgang durchführen müssen, weil ein Fehler auftritt, oder wenn der Massenkopiervorgang im Rahmen eines größeren Prozesses ausgeführt werden soll, für den ein Rollback ausgeführt werden kann, können Sie ein <xref:Microsoft.Data.SqlClient.SqlTransaction>-Objekt an den <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Konstruktor übergeben.  
   
 Die folgende Konsolenanwendung ähnelt dem ersten (nicht transaktionalen) Beispiel, mit einer Ausnahme: in diesem Beispiel ist der Massenkopiervorgang in einer größeren, externen Transaktion enthalten. Wenn der Fehler aufgrund des Primärschlüsselverstoßes auftritt, wird ein Rollback der gesamten Transaktion ausgeführt, und der Zieltabelle werden keine Zeilen hinzugefügt.  
   

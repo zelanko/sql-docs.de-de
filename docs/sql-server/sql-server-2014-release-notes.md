@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155691"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
@@ -27,7 +27,7 @@ SQL Server 2014 SP2 enthält Rollups von veröffentlichten Hotfixes für SQL Ser
 
 ### <a name="performance-and-scalability-improvements-in-sp2"></a>Verbesserte Leistung und Skalierbarkeit in SP2
 
-|Funktion|und Beschreibung|Weitere Informationen finden Sie unter|
+|Funktion|Beschreibung|Weitere Informationen finden Sie unter|
 |---|---|---|
 |Automatische Soft-NUMA-Partitionierung|Sie können Soft-NUMA automatisch auf Systemen konfigurieren, die über mindestens 8 CPUs pro NUMA-Knoten verfügen.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |Pufferpoolerweiterung|Ermöglicht eine Skalierung des SQL Server-Pufferpools über 8 TB hinaus.|[Pufferpoolerweiterung](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
@@ -38,7 +38,7 @@ SQL Server 2014 SP2 enthält Rollups von veröffentlichten Hotfixes für SQL Ser
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>Verbesserte Unterstützung und Diagnose in SP2
 
-|Funktion|und Beschreibung|Weitere Informationen finden Sie unter|
+|Funktion|Beschreibung|Weitere Informationen finden Sie unter|
 |---|---|---|
 |Protokollierung des Always On-Zeitlimits|Für Leasezeitlimit-Nachrichten wurde eine neue Protokollierungsfunktion hinzugefügt, mit der die aktuelle Zeit und die Zeiten für die erwartete Erneuerung protokolliert werden. |[Improved Always On Availability Group Lease Timeout Diagnostics (Verbesserte Leasezeitlimit-Diagnose bei Always On-Verfügbarkeitsgruppe)](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
 |Always On-XEvents und -Leistungsindikatoren|Neue Always On-XEvents und -Leistungsindikatoren zur Verbesserung der Diagnose von Problemen mit Always On in Bezug auf die Wartezeit bei der Problembehandlung. |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) und [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
@@ -233,7 +233,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 + @v1 + @v2 + ... + @v199  
     ```  
   
-    beispielsweise  
+    Schreiben:  
   
     ```  
     SELECT((@v0 + ... + @v49) + (@v50 + ... + @v99)) + ((@v100 + ... + @v149) + (@v150 + ... + @v199))  
@@ -245,7 +245,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 +@v1 +@v2 +...+@v199  
     ```  
   
-    beispielsweise  
+    Schreiben:  
   
     ```  
     SELECT @v0 +@v1  
@@ -286,23 +286,23 @@ Wenn das Problem mit nicht übereinstimmenden instance_id-Werten bei Ihnen berei
 5.  Identifizieren Sie die Zeilen, die der korrigierten Instanz entsprechen sollten. 
 6.  Aktualisieren Sie den sysdac_history_internal.instance_id-Wert auf den in Schritt 3 notierten Wert (aus der sysdac_instances_internal-Tabelle):  
   
-    `update` sysdac_history_internal `set` instance_id = '\<Wert aus Schritt 3\>' `where` \<Ausdruck, der den zu aktualisierenden Zeilen entspricht\>  
+    `update` sysdac_history_internal `set` instance_id = '\<Wert aus Schritt 3\>' `where` \<Ausdruck, der den zu aktualisierenden Zeilen entspricht\>  
   
 ### <a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>Der SQL Server 2012 Reporting Services-Berichtsserver im einheitlichen Modus kann nicht parallel mit SharePoint-Komponenten von SQL Server 2014 Reporting Services ausgeführt werden  
 **Problem:** Der Windows-Dienst [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im nativen Modus „SQL Server Reporting Services“ (ReportingServicesService.exe) kann nicht gestartet werden, wenn auf demselben Server SharePoint-Komponenten von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installiert sind.  
   
-**Problemumgehung:** Deinstallieren Sie SharePoint-Komponenten von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], und starten Sie den Windows-Dienst „Microsoft SQL Server 2012 Reporting Services“ neu.  
+**Problemumgehung:** Deinstallieren Sie die SharePoint-Komponenten von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], und starten Sie den Windows-Dienst „Microsoft SQL Server 2012 Reporting Services“ neu.  
   
 **Weitere Informationen**  
   
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Der einheitliche Modus kann unter einer der folgenden Bedingungen nicht parallel ausgeführt werden:  
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus kann unter folgenden Bedingungen nicht parallel ausgeführt werden:  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte    
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Gemeinsamer SharePoint-Dienst  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Add-In für SharePoint-Produkte    
+-   Gemeinsamer SharePoint-Dienst von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]  
   
-Die parallele Installation verhindert, dass der Windows-Dienst [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (einheitlicher Modus) gestartet wird. Im Windows-Ereignisprotokoll werden Fehlermeldungen wie die Folgenden angezeigt:  
+Die parallele Installation verhindert, dass der [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Windows-Dienst (einheitlicher Modus) gestartet wird. Im Windows-Ereignisprotokoll werden Fehlermeldungen wie die Folgenden angezeigt:  
   
 ```  
 Log Name:   Application  
@@ -397,7 +397,7 @@ Grund für dieses Problem ist, dass Verfügbarkeitsgruppenlistenern in jedem Sub
 ### <a name="DQS"></a>Data Quality Services (RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>Data Quality Services werden in Master Data Services nicht versionsübergreifend unterstützt.  
-**Problem:** Die folgenden Szenarien werden nicht unterstützt:  
+**Problem:** Folgende Szenarios werden nicht unterstützt:  
   
 -   Master Data Services 2014, gehostet in einer Datenbank der SQL Server-Datenbank-Engine in SQL Server 2012 mit installierten Data Quality Services 2012  
   

@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 320a66b84c6a5b904e98941251801c7ee5927087
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994151"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Ausführen von Befehlen, die Tabellenwertparameter enthalten
@@ -33,12 +33,12 @@ ms.locfileid: "67994151"
 ## <a name="table-valued-parameter-specification"></a>Tabellenwertparameter-Spezifikation  
  Der Consumer kann den Typ des Tabellenwertparameters angeben. Diese Angabe enthält den Typnamen des Tabellenwertparameters. Sie umfasst auch den Schemanamen, wenn der benutzerdefinierte Tabellentyp für den Tabellenwertparameter nicht im aktuellen Standardschema für die Verbindung enthalten ist. Je nach Serverunterstützung kann der Consumer auch optionale Metadateninformationen angeben, z.B. die Sortierreihenfolge der Spalten. Zudem kann er angeben, dass alle Zeilen für bestimmte Spalten Standardwerte aufweisen sollen.  
   
- Um einen Tabellenwert Parameter anzugeben, ruft der Consumer isscommandwithparameter:: SetParameterInfo auf und ruft optional ISSCommandWithParameters:: SetParameterProperties auf. Für einen Tabellenwertparameter verfügt das *pwszDataSourceType*-Feld in der DBPARAMBINDINFO-Struktur über den Wert DBTYPE_TABLE. Das *ulParamSize* -Feld ist auf ~ 0 festgelegt, um anzugeben, dass die Länge unbekannt ist. Bestimmte Eigenschaften für Tabellenwert Parameter (z. b. Schema Name, Typname, Spaltenreihenfolge und Standard Spalten) können mithilfe von ISSCommandWithParameters:: SetParameterProperties festgelegt werden.  
+ Der Consumer ruft ISSCommandWithParameter::SetParameterInfo oder optional ISSCommandWithParameters::SetParameterProperties ab, um einen Tabellenwertparameter anzugeben. Für einen Tabellenwertparameter verfügt das *pwszDataSourceType*-Feld in der DBPARAMBINDINFO-Struktur über den Wert DBTYPE_TABLE. Das *ulParamSize*-Feld wird auf ~0 festgelegt, um anzugeben, dass die Länge unbekannt ist. Spezielle Eigenschaften für Tabellenwertparameter, wie z. B. Schemaname, Typname, Spaltenreihenfolge und Standardspalten, können mit ISSCommandWithParameters::SetParameterProperties festgelegt werden.  
   
 ## <a name="table-valued-parameter-binding"></a>Tabellenwertparameter-Bindung  
  Ein Tabellenwertparameter kann ein beliebiges Rowsetobjekt sein. Während der Ausführung liest der Anbieter beim Senden von Tabellenwertparametern an den Server aus diesem Objekt.  
   
- Um den Tabellenwert Parameter zu binden, ruft der Consumer IAccessor::-accateaccessor auf. Das *wType*-Feld der DBBINDING-Struktur für den Tabellenwertparameter wird auf DBTYPE_TABLE festgelegt. Das *pObject*-Element der DBBINDING-Struktur ist nicht NULL, und das *iid*-Element von *pObject* wird auf IID_IRowset oder jede beliebige andere Rowsetobjekt-Schnittstelle für Tabellenwertparameter festgelegt. Die verbleibenden Felder in der DBBINDING-Struktur können genauso festgelegt werden wie bei gestreamten BLOBs.  
+ Der Consumer ruft IAccessor::CreateAccessor auf, um den Tabellenwertparameter zu binden. Das *wType*-Feld der DBBINDING-Struktur für den Tabellenwertparameter wird auf DBTYPE_TABLE festgelegt. Das *pObject*-Element der DBBINDING-Struktur ist nicht NULL, und das *iid*-Element von *pObject* wird auf IID_IRowset oder jede beliebige andere Rowsetobjekt-Schnittstelle für Tabellenwertparameter festgelegt. Die verbleibenden Felder in der DBBINDING-Struktur können genauso festgelegt werden wie bei gestreamten BLOBs.  
   
  Für die Bindungen des Tabellenwertparameters und des einem Tabellenwertparameter zugeordneten Rowsetobjekts gelten die folgenden Einschränkungen:  
   

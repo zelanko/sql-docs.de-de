@@ -1,37 +1,46 @@
 ---
 title: Herunterladen von Updates für die Offlineinstallation
-description: Laden Sie CAB- und Paketdateien in R und Python für SQL Server Machine Learning Services und SQL Server 2016 R Services herunter.
+description: Herunterladen von Python- und R-CAB-Dateien für SQL Server Machine Learning Services Diese CAB-Dateien enthalten Updates für das Machine Learning Services-Feature (Python und R) und werden für die Installation von SQL Server auf einem Server ohne Internetzugang verwendet.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e7266d90e04071c242145fc0df2e59ce86d86a16
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b2b84349e60bf89a066fb2157a9c521d7be8ecbd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727624"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776528"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>CAB-Dateidownloads für kumulative Updates für SQL Server-Instanzen für datenbankinterne Analysen
+# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>CAB-Dateidownloads für kumulative Updates für SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server-Instanzen, die für datenbankinterne Analysen konfiguriert sind, beinhalten R- und Python-Funktionen. Diese Funktionen sind in CAB-Dateien enthalten und werden über das SQL Server-Setup installiert und gewartet. Auf Geräten, die mit dem Internet verbunden sind, werden CAB-Updates in der Regel über Windows Update angewendet. Auf nicht verbundenen Servern müssen CAB-Dateien heruntergeladen und manuell angewendet werden. 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Laden Sie die Python- und R-CAB-Dateien für SQL Server Machine Learning Services herunter. Diese CAB-Dateien enthalten Updates für das Machine Learning Services-Feature (Python und R) und werden für die Installation von SQL Server auf einem Server ohne Internetzugang verwendet.
+::: moniker-end
 
-Dieser Artikel enthält Downloadlinks für CAB-Dateien für alle kumulativen Updates. Weitere Informationen zur Offlineinstallation finden Sie unter [Installieren von SQL Server-Machine Learning-Komponenten ohne Internetzugang](sql-ml-component-install-without-internet-access.md#apply-cu).
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+Laden Sie die Python- und R-CAB-Dateien für SQL Server 2016 R Services herunter. Diese CAB-Dateien enthalten Updates für das R Services-Feature und werden für die Installation von SQL Server auf einem Server ohne Internetzugang verwendet.
+::: moniker-end
+
+Im Folgenden finden Sie Downloadlinks für CAB-Dateien für alle kumulativen Updates. Weitere Informationen zur Offlineinstallation finden Sie unter [Installieren von SQL Server-Machine Learning-Komponenten ohne Internetzugang](sql-ml-component-install-without-internet-access.md#apply-cu).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Beginnen Sie mit einer Baselineinstallation.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Beginnen Sie mit einer Baselineinstallation. Bei SQL Server Machine Learning Services ist das erste Release die Baselineinstallation. 
+::: moniker-end
 
-+ Bei SQL Server Machine Learning Services ist das erste Release die Baselineinstallation. 
-+ Bei SQL Server 2016 R Services können Sie mit dem ersten Release, SP1 oder SP2 beginnen. 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+Beginnen Sie mit einer Baselineinstallation.  Bei SQL Server 2016 R Services können Sie mit dem ersten Release, SP1 oder SP2 beginnen. 
+::: moniker-end
 
-Sie können kumulative Updates auch auf einen eigenständigen Server anwenden.
+Sie können auch kumulative Updates anwenden.
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
@@ -94,7 +103,7 @@ CAB-Dateien werden in umgekehrter chronologischer Reihenfolge aufgelistet. Wenn 
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 

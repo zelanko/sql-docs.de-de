@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Verschlüsselung ohne Validierung | Microsoft-Dokumentation
+title: Verwenden von Verschlüsselung ohne Überprüfung | Microsoft-Dokumentation
 description: Verwenden von Verschlüsselung ohne Überprüfung
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ef21cdb2a223aaa50b690f5b2b3c30696dd9e196
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988849"
 ---
 # <a name="using-encryption-without-validation"></a>Verwenden von Verschlüsselung ohne Überprüfung
@@ -30,9 +30,9 @@ ms.locfileid: "67988849"
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verschlüsselt stets Netzwerkpakete, die mit der Anmeldung verbunden sind. Wenn auf dem Server beim Start kein Zertifikat bereitgestellt wird, erstellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein selbstsigniertes Zertifikat, mit dem Anmeldungspakete verschlüsselt werden.  
 
-Selbst signierte Zertifikate garantieren keine Sicherheit. Der verschlüsselte Handshake basiert auf dem NT-LAN-Manager (NTLM). Es wird dringend empfohlen, dass Sie ein überprüfbares Zertifikat auf SQL Server für sichere Konnektivität bereitstellen. TLS (Transport Security Layer) kann nur mit der Zertifikat Überprüfung sicher gemacht werden.
+Bei selbstsignierten Zertifikaten kann die Sicherheit nicht garantiert werden. Der verschlüsselte Handshake basiert auf dem Windows NT-LAN-Manager (NTLM). Sie sollten für eine sichere Konnektivität unbedingt ein verifizierbares Zertifikat für SQL Server bereitstellen. Transport Layer Security (TLS) kann nur mit einer Zertifikatüberprüfung gesichert werden.
 
-Anwendungen erfordern möglicherweise auch die Verschlüsselung des gesamten Netzwerkdatenverkehrs mit Verbindungszeichenfolgenschlüsselwörtern oder Verbindungseigenschaften. Die Schlüsselwörter lauten „Encrypt“ für OLE DB, wenn eine Anbieterzeichenfolge mit **IDbInitialize::Initialize** verwendet wird, oder „Use Encryption for Data“ für ADO und OLE DB, wenn eine Initialisierungszeichenfolge mit **IDataInitialize** verwendet wird. Dies kann auch durch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager mithilfe der Option **Protokoll Verschlüsselung erzwingen** konfiguriert werden, und durch Konfigurieren des Clients, um verschlüsselte Verbindungen anzufordern. Standardmäßig ist für die Verschlüsselung des Netzwerkverkehrs für eine Verbindung die Bereitstellung eines Zertifikats auf dem Server erforderlich. Wenn Sie den Client so festlegen, dass das Zertifikat auf dem Server vertrauenswürdig ist, können Sie für man-in-the-Middle-Angriffe anfällig werden. Wenn Sie ein überprüfbares Zertifikat auf dem Server bereitstellen, stellen Sie sicher, dass Sie die Client Einstellungen für die Vertrauenswürdigkeit des Zertifikats auf false ändern.
+Anwendungen erfordern möglicherweise auch die Verschlüsselung des gesamten Netzwerkdatenverkehrs mit Verbindungszeichenfolgenschlüsselwörtern oder Verbindungseigenschaften. Die Schlüsselwörter lauten „Encrypt“ für OLE DB, wenn eine Anbieterzeichenfolge mit **IDbInitialize::Initialize** verwendet wird, oder „Use Encryption for Data“ für ADO und OLE DB, wenn eine Initialisierungszeichenfolge mit **IDataInitialize** verwendet wird. Dies kann auch vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager mithilfe der Option **Protokollverschlüsselung erzwingen** konfiguriert werden, und indem der Client so konfiguriert wird, dass er verschlüsselte Verbindungen anfordert. Standardmäßig ist für die Verschlüsselung des Netzwerkverkehrs für eine Verbindung die Bereitstellung eines Zertifikats auf dem Server erforderlich. Wenn Sie festlegen, dass Ihr Client dem Zertifikat auf dem Server vertraut, werden Sie möglicherweise anfällig für Man-in-the-Middle-Angriffe. Wenn Sie ein verifizierbares Zertifikat auf dem Server bereitstellen, sollten Sie die Vertrauenseinstellungen des Clients für das Zertifikat in FALSE ändern.
 
 Weitere Informationen zu Verbindungszeichenfolgen-Schlüsselwörtern finden Sie unter [Using Connection String Keywords with SQL Server Native Client (Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server)](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md ).  
   
@@ -52,12 +52,12 @@ Weitere Informationen zu Verbindungszeichenfolgen-Schlüsselwörtern finden Sie 
 ||||||
 
 > [!CAUTION]
-> In der obigen Tabelle ist nur ein Leitfaden zum Systemverhalten unter verschiedenen Konfigurationen enthalten. Stellen Sie sicher, dass sowohl der Client als auch der Server eine Verschlüsselung erfordern. Stellen Sie außerdem sicher, dass der Server über ein überprüfbares Zertifikat verfügt und dass die **TrustServerCertificate** -Einstellung auf dem Client auf false festgelegt ist.
+> In der obigen Tabelle finden Sie lediglich einen Leitfaden für das Systemverhalten unter verschiedenen Konfigurationen. Für eine sichere Konnektivität müssen Sie dafür sorgen, dass sowohl der Client als auch der Server die Verschlüsselung erzwingen. Sorgen Sie außerdem dafür, dass der Server über ein verifizierbares Zertifikat verfügt und dass die Einstellung **TrustServerCertificate** für den Client auf FALSE festgelegt ist.
 
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQL Server 
  Der OLE DB-Treiber für SQL Server unterstützt die Verschlüsselung ohne Überprüfung durch Hinzufügen der SSPROP_INIT_TRUST_SERVER_CERTIFICATE-Initialisierungseigenschaft für Datenquellen, die in den DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz implementiert wird. Darüber hinaus wurde ein neues Verbindungszeichenfolgeschlüsselwort, „TrustServerCertificate“, hinzugefügt. Gültig sind die Werte YES oder NO, wobei NO die Standardeinstellung ist. Wenn Dienstkomponenten verwendet werden, sind die Werte "true" und "false" gültig, wobei "false" die Standardeinstellung ist.  
   
- Weitere Informationen zu Verbesserungen am DBPROPSET_SQLSERVERDBINIT-Eigenschaften Satz finden Sie unter [Initialisierungs-und Autorisierungs Eigenschaften](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Weitere Informationen zu Verbesserungen am DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz finden Sie unter [Initialisierungs- und Autorisierungseigenschaften](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -11,10 +11,10 @@ ms.assetid: b616632b-5987-470d-b36c-b22fa9213145
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf4c90644282ff420e064e7a7b5b99a93c257194
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971381"
 ---
 # <a name="sqlserverdatasourceobjectfactory-class"></a>SQLServerDataSourceObjectFactory-Klasse
@@ -38,7 +38,7 @@ public class SQLServerDataSourceObjectFactory
 ## <a name="remarks"></a>Bemerkungen  
  Diese Methode wird von allen Datenquellenklassen geerbt. Diese Klasse, von der ein ObjectFactory-Objekt implementiert wird, wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] als Teil der Unterstützung der Referenceable-Schnittstelle verfügbar gemacht. Von Java-Anwendungsservern wird getReference für Datenquellenklassen aufgerufen, wodurch ein Reference-Objekt erstellt wird, von dem der Klassenname intern als Klassenfactory verwendet wird.  
   
- Wenn der Java-Anwendungs Server das Verweis Objekt dereferenzieren muss, wird eine Instanz des SQLServerDataSourceObjectFactory-Objekts erstellt und die [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md) -Methode aufgerufen, wobei das Verweis Objekt übergeben wird, um die Datenquelle abzurufen. lichen.  
+ Wenn das Reference-Objekt vom Java-Anwendungsserver dereferenziert werden muss, wird eine Instanz des SQLServerDataSourceObjectFactory-Objekts erstellt und die [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)-Methode aufgerufen, um die Datenquellinstanz abzurufen. Dabei wird das Reference-Objekt übergeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSourceObjectFactory-Elemente](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   

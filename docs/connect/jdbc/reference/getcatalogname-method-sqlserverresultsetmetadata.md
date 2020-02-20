@@ -1,5 +1,5 @@
 ---
-title: getcatalogname-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
+title: getCatalogName-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 64f62569-5d8e-411f-a98d-ddc52798391e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f734a6779847aa72b9a41015470b377489c686bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213708"
 ---
 # <a name="getcatalogname-method-sqlserverresultsetmetadata"></a>getCatalogName-Methode (SQLServerResultSetMetaData)
@@ -46,7 +46,7 @@ public java.lang.String getCatalogName(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getcatalogname-Methode wird von der getcatalogname-Methode in der Java. SQL. ResultSetMetaData-Schnittstelle angegeben.  
+ Diese getCatalogName-Methode wird von der getCatalogName-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSetMetaData-Methoden](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

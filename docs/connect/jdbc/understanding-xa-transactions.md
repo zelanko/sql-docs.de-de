@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027218"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947132"
 ---
 # <a name="understanding-xa-transactions"></a>Grundlegendes zu XA-Transaktionen
 
@@ -23,14 +23,16 @@ ms.locfileid: "69027218"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt optional verteilte Transaktionen für die Java-Plattform, Enterprise Edition/JDBC 2.0. JDBC-Verbindungen von der Klasse [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) können Bestandteil normaler verteilter Transaktionsverarbeitungsumgebungen wie Anwendungsserver für die Java-Plattform, Enterprise Edition (Java EE) sein.  
 
+In diesem Artikel steht XA für erweiterte Architektur.
+
 > [!WARNING]  
-> Der Microsoft JDBC-Treiber 4.2 (und höher) für SQL enthält neue Timeoutoptionen für die vorhandene Funktion für den automatischen Rollback nicht vorbereiteter Transaktionen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Konfigurieren von serverseitigen Timeout Einstellungen für das automatische Rollback von nicht vorbereiteten Transaktionen](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) .  
+> Der Microsoft JDBC-Treiber 4.2 (und höher) für SQL enthält neue Timeoutoptionen für die vorhandene Funktion für den automatischen Rollback nicht vorbereiteter Transaktionen. Ausführliche Informationen finden Sie weiter unten in diesem Artikel unter [Konfigurieren von serverseitigen Timeouteinstellungen für den automatischen Rollback nicht vorbereiteter Transaktionen](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide).  
 
 ## <a name="remarks"></a>Bemerkungen
 
 Für die Implementierung verteilter Transaktionen stehen die folgenden Klassen zur Verfügung:  
   
-| Class                                              | Implementiert                      | und Beschreibung                                       |
+| Klasse                                              | Implementiert                      | Beschreibung                                       |
 | -------------------------------------------------- | ------------------------------- | ------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc.SQLServerXADataSource | javax.sql.XADataSource          | Das Klassenfactory für verteilte Verbindungen.    |
 | com.microsoft.sqlserver.jdbc.SQLServerXAResource   | javax.transaction.xa.XAResource | Der Ressourcenadapter für den Transaktions-Manager. |
@@ -44,9 +46,9 @@ Die folgenden zusätzlichen Richtlinien gelten für eng verkoppelte Transaktione
 
 - Wenn Sie XA-Transaktionen zusammen mit MS DTC (Microsoft Distributed Transaction Coordinator) verwenden, stellen Sie möglicherweise fest, dass die aktuelle Version von MS DTC eng verkoppeltes XA-Verzweigungsverhalten nicht unterstützt. MS DTC verfügt beispielsweise über eine 1:1-Zuordnung zwischen einer Transaktions-ID für eine XA-Verzweigung (XID) und einer MS DTC-Transaktions-ID, und die von lose verbundenen XA-Verzweigungen ausgeführten Aktionen sind voneinander isoliert.  
   
-     Der unter [MSDTC and Tightly Coupled Transactions (MSDTC und eng verkoppelte Transaktionen)](https://support.microsoft.com/kb/938653) bereitgestellte Hotfix ermöglicht die Unterstützung von eng verkoppelten XA-Verzweigungen, wobei mehrere XA-Verzweigungen mit derselben globalen Transaktions-ID (GTRID) einer einzelnen MS DTC-Transaktions-ID zugeordnet werden. Durch diese Unterstützung können mehrere eng verkoppelte XA-Verzweigungen die jeweiligen Änderungen im Ressourcen-Manager anzeigen, beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- MS DTC unterstützt auch eng verknüpfte XA-Branches, bei denen mehrere XA-Branches mit der gleichen globalen Transaktions-IDs (GTRID) einer einzelnen MS DTC-Transaktions-ID zugewiesen werden. Durch diese Unterstützung können mehrere eng verkoppelte XA-Verzweigungen die jeweiligen Änderungen im Ressourcen-Manager anzeigen, beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-- Das Flag [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) ermöglicht, dass die Anwendungen die eng verkoppelten XA-Transaktionen verwenden können, die verschiedene XA-Verzweigungstransaktions-IDs (BQUAL) aufweisen, jedoch über dieselbe globale Transaktions-ID (GTRID) und Format-ID (FormatID) verfügen. Um dieses Feature verwenden zu können, müssen Sie [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) für den flags-Parameter der XAResource. Start-Methode festlegen:
+- Das Flag [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) ermöglicht, dass die Anwendungen die eng verkoppelten XA-Transaktionen verwenden können, die verschiedene XA-Verzweigungstransaktions-IDs (BQUAL) aufweisen, jedoch über dieselbe globale Transaktions-ID (GTRID) und Format-ID (FormatID) verfügen. Damit Sie dieses Feature verwenden können, müssen Sie [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) für den flags-Parameter der XAResource.start-Methode festlegen:
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -60,14 +62,14 @@ Die folgenden Schritte sind erforderlich, wenn Sie XA-Datenquellen zusammen mit 
 > Die JDBC-Komponenten für verteilte Transaktionen sind im Verzeichnis "xa" der JDBC-Treiberinstallation enthalten. Zu diesen Komponenten zählen die Dateien "xa_install.sql" und "sqljdbc_xa.dll".  
 
 > [!NOTE]  
-> Beginnend mit der öffentlichen Vorschau von SQL Server 2019 in CTP 2,0 sind die Komponenten der verteilten JDBC-XA-Transaktion in der SQL Server-Engine enthalten und können mit einer gespeicherten System Prozedur aktiviert oder deaktiviert werden.
-> Führen Sie die folgende gespeicherte Prozedur aus, um die erforderlichen Komponenten für die Ausführung von verteilten XA-Transaktionen mit dem JDBC-Treiber zu aktivieren.
+> Ab SQL Server 2019 CTP 2.0 (Public Preview) sind die verteilten JDBC-XA-Transaktionskomponenten in der SQL Server-Engine enthalten. Außerdem können diese mithilfe einer gespeicherten Systemprozedur aktiviert oder deaktiviert werden.
+> Führen Sie die folgende gespeicherte Prozedur aus, um die erforderlichen Komponenten zum Durchführen von verteilten XA-Transaktionen mit dem JDBC-Treiber zu aktivieren.
 >
-> Exec sp_sqljdbc_xa_install
+> EXEC sp_sqljdbc_xa_install
 >
-> Um die zuvor installierten Komponenten zu deaktivieren, führen Sie die folgende gespeicherte Prozedur aus.
+> Führen Sie die folgende gespeicherte Prozedur aus, um die zuvor installierten Komponenten zu deaktivieren.
 >
-> Exec sp_sqljdbc_xa_uninstall
+> EXEC sp_sqljdbc_xa_uninstall
 
 ### <a name="running-the-ms-dtc-service"></a>Ausführen des MS DTC-Diensts
 
@@ -108,9 +110,9 @@ Sie können die derzeit auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 1. Öffnen Sie das Verzeichnis „LOG“ des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computers, der an verteilten Transaktionen teilnehmen soll. Wählen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datei „ERRORLOG“ aus, und öffnen Sie diese. Suchen Sie in der Datei "ERRORLOG" nach "Version ... von 'SQLJDBC_XA.dll' wird verwendet".  
   
-2. Öffnen Sie das Verzeichnis „Binn“ des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computers, der an verteilten Transaktionen teilnehmen soll. Wählen Sie die Assembly sqljdbc_xa. dll aus.
+2. Öffnen Sie das Verzeichnis „Binn“ des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computers, der an verteilten Transaktionen teilnehmen soll. Wählen Sie die Assembly „sqljdbc_xa.dll“ aus.
 
-    - Unter Windows Vista oder höheren Versionen: Klicken Sie mit der rechten Maustaste auf "sqljdbc_xa.dll", und klicken Sie anschließend auf "Eigenschaften". Klicken Sie dann auf die Registerkarte **Details**. Im Feld **Dateiversion** wird die Version von „sqljdbc_xa.dll“ angezeigt, die derzeit auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert ist.  
+    - Unter Windows Vista oder höher: Klicken Sie mit der rechten Maustaste auf „sqljdbc_xa.dll“, und wählen Sie dann „Eigenschaften“ aus. Klicken Sie dann auf die Registerkarte **Details**. Im Feld **Dateiversion** wird die Version von „sqljdbc_xa.dll“ angezeigt, die derzeit auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert ist.  
   
 3. Legen Sie die Protokollfunktion wie im Codebeispiel im nächsten Abschnitt fest. Suchen Sie in der Ausgabeprotokolldatei nach "Server-XA-DLL-Version ...".  
 
@@ -121,9 +123,9 @@ Sie können die derzeit auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 Das Timeoutverhalten von verteilten Transaktionen wird mithilfe von zwei Registrierungseinstellungen (DWORD-Werten) gesteuert:  
   
-- **Xadefaulttimeout** (in Sekunden): der Standard Timeout Wert, der verwendet werden soll, wenn der Benutzer kein Timeout angibt. Die Standardeinstellung ist 0.  
+- **XADefaultTimeout** (in Sekunden): Der zu verwendende Standardwert für das Zeitlimit, wenn der Benutzer kein Zeitlimit angibt Die Standardeinstellung ist 0.  
   
-- **Xamaxtimeout** (in Sekunden): der Höchstwert des Timeouts, der von einem Benutzer festgelegt werden kann. Die Standardeinstellung ist 0.  
+- **XAMaxTimeout** (in Sekunden): Der Höchstwert, den Benutzer für das Zeitlimit festlegen können Die Standardeinstellung ist 0.  
   
 Diese Einstellungen sind für die jeweilige SQL Server-Instanz spezifisch und sollten unter diesem Registrierungsschlüssel erstellt werden:  
 
@@ -159,7 +161,7 @@ Wenn Sie eine neue Version des JDBC-Treibers installieren, sollten Sie auch sqlj
 > [!IMPORTANT]  
 > Sie sollten das Upgrade der Datei „sqljdbc_xa.dll“ im Rahmen einer Wartung oder zu einem Zeitpunkt ausführen, zu dem keine MS DTC-Transaktionen in Bearbeitung sind.
   
-1. Entladen Sie sqljdbc_xa. dll mit [!INCLUDE[tsql](../../includes/tsql-md.md)] dem Befehl **DBCC sqljdbc_xa (Free)** .  
+1. Entladen Sie „sqljdbc_xa.dll“ mit dem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl **DBCC sqljdbc_xa (FREE)** .  
   
 2. Kopieren Sie die neue Datei „sqljdbc_xa.dll“ aus dem Installationsverzeichnis des JDBC-Treibers auf allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computern, die an verteilten Transaktionen teilnehmen, in das Verzeichnis „Binn“.  
   
@@ -347,6 +349,6 @@ class XidImpl implements Xid {
 
 ```
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 
 [Ausführen von Transaktionen mit dem JDBC-Treiber](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

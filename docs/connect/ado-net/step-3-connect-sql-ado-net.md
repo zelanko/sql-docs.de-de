@@ -1,36 +1,36 @@
 ---
-title: 'Schritt 3: Proof of Concept für Verbindungen mit SQL Server mithilfe von ADO.NET | Microsoft-Dokumentation'
-description: Enthält C# Codebeispiele für das Herstellen einer Verbindung mit SQL Server, das Ausführen einer Abfrage und das Einfügen einer Zeile.
+title: 'Schritt 3: Proof of Concept für das Herstellen von Verbindungen mit SQL Server mithilfe von ADO.NET | Microsoft-Dokumentation'
+description: Enthält Codebeispiele in C# für das Herstellen einer Verbindung mit SQL Server durch Ausführen einer Abfrage und Hinzufügen einer Zeile.
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 2819697746f810e0c0b19a9ab7d076fa79c15a2f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cff776c4881dcc012a825bcd48f6d6271b95bb75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451816"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247515"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von ADO.NET
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET herunterladen](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-- Vorheriger Artikel:&nbsp;&nbsp;&nbsp;[Schritt 2: Erstellen einer SQL-Datenbank für die ADO.NET-Entwicklung](step-2-create-sql-database-ado-net-development.md)  
-- Nächster Artikel:&nbsp;&nbsp;&nbsp;[Schritt 4: Herstellen stabiler SQL-Verbindungen mit ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
+- Vorheriger Artikel:&nbsp;&nbsp;&nbsp;[Schritt 2: Erstellen einer SQL-Datenbank für die ADO.NET-Entwicklung](step-2-create-sql-database-ado-net-development.md)  
+- Nächster Artikel:&nbsp;&nbsp;&nbsp;[Schritt 4: Herstellen stabiler SQL-Verbindungen mit ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
 
   
-Dieses C# Codebeispiel sollte nur als Proof of Concept angesehen werden. Der Beispielcode wird aus Gründen der Übersichtlichkeit vereinfacht und repräsentiert nicht notwendigerweise die bewährten Methoden, die von Microsoft empfohlen werden.  
+Dieses C#-Codebeispiel ist lediglich als Proof of Concept zu verstehen. Es wurde zur Verdeutlichung vereinfacht und entspricht nicht zwangsläufig den von Microsoft empfohlenen Best Practices.  
   
-## <a name="step-1-connect"></a>Schritt 1: verbinden
+## <a name="step-1-connect"></a>Schritt 1: Verbinden
   
-Die **SqlConnection. Open** -Methode wird verwendet, um eine Verbindung mit Ihrer SQL-Datenbank herzustellen.  
+Mithilfe der Methode **SqlConnection.Open** wird eine Verbindung zu Ihrer SQL-Datenbank hergestellt.  
 
 
 ```csharp
@@ -69,10 +69,10 @@ Press any key to finish...
 
 ## <a name="step-2-execute-a-query"></a>Schritt 2: Ausführen einer Abfrage  
   
-Die SqlCommand. ExecuteReader-Methode:  
+Die Methode SqlCommand.ExecuteReader:  
   
-- Gibt die SQL-SELECT-Anweisung für das SQL-System aus.  
-- Gibt eine Instanz von SqlDataReader zurück, um den Zugriff auf die Ergebniszeilen bereitzustellen.  
+- sendet die SQL-Anweisung SELECT an das SQL-System.  
+- gibt eine SqlDataReader-Instanz zurück, um Zugriff auf die Zeilen mit den Ergebnissen zu ermöglichen.  
   
   
   
@@ -156,11 +156,11 @@ Press any key to finish...
 ## <a name="step-3-insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
   
-In diesem Beispiel wird Folgendes veranschaulicht:  
+In diesem Beispiel wird veranschaulicht, wie Sie:  
   
-- Führen Sie eine SQL INSERT-Anweisung sicher durch Übergeben von Parametern aus.  
-  - Die Verwendung von Parametern schützt vor einschleusungs Angriffen durch SQL  
-- Ruft den automatisch generierten Wert ab.  
+- eine INSERT-SQL-Anweisung durch Übergeben von Parametern sicher ausführen.  
+  - Das Verwenden von Parametern schützt vor Angriffen durch Einschleusung von SQL-Befehlen.  
+- den automatisch generierten Wert abrufen.  
   
   
   

@@ -18,13 +18,13 @@ ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 333a3b0c6434415c573907bdf0bdbf3e9667afcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992881"
 ---
-# <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
+# <a name="sqlsrv_begin_transaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Beginnt eine Transaktion für eine angegebene Verbindung Die aktuelle Transaktion enthält alle Anweisungen für die angegebene Verbindung, die nach dem Aufruf von **sqlsrv_begin_transaction** und vor allen Aufrufen von [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) oder [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)ausgeführt wurden.  
@@ -43,7 +43,7 @@ sqlsrv_begin_transaction( resource $conn)
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$conn*: Die Verbindung, der die Transaktion zugeordnet ist.  
+*$conn*: Die Verbindung, der die Transaktion zugeordnet ist  
   
 ## <a name="return-value"></a>Rückgabewert  
 Ein boolescher Wert: **true** , wenn die Transaktion erfolgreich gestartet wurde. Andernfalls lautet der Wert **false**.  
@@ -126,7 +126,7 @@ Da wir uns auf die Überwachung des Transaktionsverhaltens konzentrieren, sind T
 ## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Gewusst wie: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
+[Vorgehensweise: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
 
 [Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md) 
   

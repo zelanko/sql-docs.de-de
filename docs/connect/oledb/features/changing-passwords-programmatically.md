@@ -1,6 +1,6 @@
 ---
-title: Programm gesteuertes ändern von Kenn Wörtern | Microsoft-Dokumentation
-description: Programm gesteuertes ändern von Kenn Wörtern mithilfe OLE DB Treibers für SQL Server
+title: Programmgesteuertes Ändern von Kennwörtern | Microsoft-Dokumentation
+description: Programmgesteuertes Ändern von Kennwörtern mithilfe des OLE DB-Treibers für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989132"
 ---
 # <a name="changing-passwords-programmatically"></a>Programmgesteuertes Ändern von Kennwörtern
@@ -32,7 +32,7 @@ ms.locfileid: "67989132"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. Ab unterstützt OLE DB Treiber für SQL Server die programmgesteuerte Verarbeitung des Kenn Wort Ablaufs durch OLE DB Treiber und durch Änderungen an den Dialogfeldern **SQL Server Anmeldung.** [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
+  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] unterstützt der OLE DB-Treiber für SQL Server die programmgesteuerte Verwaltung von abgelaufenen Kennwörtern sowohl durch den OLE DB-Treiber, als auch durch Änderungen an den Dialogfeldern zur **SQL Server-Anmeldung**.  
   
 > [!NOTE]  
 >  Fordern Sie, wenn möglich, Benutzer dazu auf, ihre Anmeldeinformationen zur Laufzeit einzugeben, um zu vermeiden, diese Informationen in einem persistenten Format speichern zu müssen. Wenn Sie die Anmeldeinformationen persistent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532). Weitere Informationen zur Verwendung von Kennwörtern finden Sie unter [Sichere Kennwörter](../../../relational-databases/security/strong-passwords.md).  
@@ -43,17 +43,17 @@ ms.locfileid: "67989132"
 |SQL Server-Fehlercode|Fehlermeldung|  
 |---------------------------|-------------------|  
 |15113|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortüberprüfung. Das Konto ist gesperrt.|  
-|18463|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort kann zurzeit nicht verwendet werden.|  
-|18464|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort ist zu kurz und erfüllt daher nicht die Anforderungen der Richtlinie.|  
-|18465|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort ist zu lang und erfüllt daher nicht die Anforderungen der Richtlinie.|  
-|18466|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort ist nicht komplex genug und erfüllt daher nicht die Anforderungen der Windows-Richtlinie.|  
-|18467|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort erfüllt nicht die Anforderungen der Kennwortfilter-DLL.|  
-|18468|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Unerwarteter Fehler während der Kennwortüberprüfung.|  
-|18487|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort des Kontos ist abgelaufen.|  
-|18488|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort des Kontos muss geändert werden.|  
+|18463|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort kann zurzeit nicht verwendet werden.|  
+|18464|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort ist zu kurz und erfüllt daher nicht die Anforderungen der Richtlinie.|  
+|18465|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort ist zu lang und erfüllt daher nicht die Anforderungen der Richtlinie.|  
+|18466|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort ist nicht komplex genug und erfüllt daher nicht die Anforderungen der Windows-Richtlinie.|  
+|18467|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort erfüllt nicht die Anforderungen der Kennwortfilter-DLL.|  
+|18468|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Unerwarteter Fehler während der Kennwortüberprüfung.|  
+|18487|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort für das Konto ist abgelaufen.|  
+|18488|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort für das Konto muss geändert werden.|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQL Server  
- Der OLE DB-Treiber für SQL Server unterstützt den Ablauf von Kenn Wörtern über eine Benutzeroberfläche und Programm gesteuert.  
+ Der OLE DB-Treiber für SQL Server unterstützt das Ablaufen von Kennwörtern über eine Benutzeroberfläche und programmgesteuert.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB-Benutzeroberfläche für abgelaufene Kennwörter  
  Der OLE DB-Treiber für SQL Server unterstützt die Verwaltung von abgelaufenen Kennwörtern durch Änderungen, die an den Dialogfeldern zur **SQL Server-Anmeldung** vorgenommen wurden. Wenn der Wert DBPROP_INIT_PROMPT auf DBPROMPT_NOPROMPT festgelegt wird, schlägt der erste Verbindungsversuch fehl, wenn das Kennwort abgelaufen ist.  
@@ -89,7 +89,7 @@ ms.locfileid: "67989132"
   
  Wenn ein Versuch, das Kennwort zu ändern, unerwartet fehlschlägt, gibt der Server den Fehlercode 18468 zurück. Für den Verbindungsversuch wird ein Standard-OLEDB-Fehler zurückgegeben.  
   
- Weitere Informationen zum DBPROPSET_SQLSERVERDBINIT-Eigenschaften Satz finden Sie unter [Initialisierungs-und Autorisierungs Eigenschaften](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Weitere Informationen zum DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz finden Sie unter [Initialisierungs- und Autorisierungseigenschaften](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
 ## <a name="see-also"></a>Weitere Informationen  

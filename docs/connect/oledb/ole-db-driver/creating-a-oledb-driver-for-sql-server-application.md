@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4f7861e02b1ed203911f4e3f86575a9688c861fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015663"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Erstellen eines OLE DB-Treibers für eine SQL Server-Anwendung
@@ -26,7 +26,7 @@ ms.locfileid: "68015663"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Das Erstellen eines OLE DB Treibers für SQL Server Anwendung umfasst die folgenden Schritte:  
+  Die Erstellung eines OLE DB-Treibers für eine SQL Server-Anwendung umfasst die folgenden Schritte:  
   
 1.  Herstellen einer Verbindung zu einer Datenquelle  
   

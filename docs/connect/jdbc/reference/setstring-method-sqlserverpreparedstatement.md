@@ -1,5 +1,5 @@
 ---
-title: SetString-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: setString-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 25dabdc9-c60f-485a-87eb-306067964765
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca49c8e50527ab7cafce9c93c314a0e363b45402
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972582"
 ---
 # <a name="setstring-method-sqlserverpreparedstatement"></a>setString-Methode (SQLServerPreparedStatement)

@@ -17,13 +17,13 @@ ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e606d7f5d34225dd690181092c5fdfdfa8d05bb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014828"
 ---
-# <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
+# <a name="sqlsrv_server_info"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Gibt Informationen über den Server zurück. Eine Verbindung muss hergestellt werden, bevor Sie diese Funktion aufrufen.  
@@ -41,11 +41,11 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>Rückgabewert  
 Ein assoziatives Array mit den folgenden Schlüsseln:  
   
-|Key|und Beschreibung|  
+|Key|Beschreibung|  
 |-------|---------------|  
 |CurrentDatabase|Die Datenbank, die derzeit das Ziel darstellt.|  
 |SQLServerVersion|Die Version von SQL Server.|  
-|SQLServerName|Der Name des Servers.|  
+|SQLServerName|Name des Servers|  
   
 ## <a name="example"></a>Beispiel  
 Das folgende Beispiel schreibt Server-Informationen an die Konsole, wenn das Beispiel über die Befehlszeile ausgeführt wird.  

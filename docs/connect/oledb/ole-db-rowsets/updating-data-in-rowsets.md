@@ -1,6 +1,6 @@
 ---
 title: Aktualisieren von Daten in Rowsets | Microsoft-Dokumentation
-description: Aktualisieren von Daten in Rowsets mithilfe OLE DB Treibers für SQL Server
+description: Aktualisieren von Daten in Rowsets mit dem OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e19128d6defa2c154cc8bddbcc4bcaa761b58a2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015337"
 ---
 # <a name="updating-data-in-rowsets"></a>Aktualisieren von Daten in Rowsets
@@ -31,9 +31,9 @@ ms.locfileid: "68015337"
 
   Der OLE DB-Treiber für SQL Server aktualisiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Daten, wenn ein Consumer ein modifizierbares Rowset aktualisiert, das diese Daten enthält. Ein modifizierbares Rowset wird erstellt, wenn der Consumer entweder für die **IRowsetChange**-Schnittstelle oder die **IRowsetUpdate**-Schnittstelle Unterstützung anfordert.  
   
- Alle OLE DB Treiber für SQL Server änderbare Rowsets verwenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cursor zur Unterstützung des Rowsets. Die Rowseteigenschaft DBPROP_LOCKMODE ändert das Parallelitätskontrollverhalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bei Cursorn und bestimmt das Verhalten für den Zeilenabruf bei Rowsets sowie die Fehlergenerierung in Bezug auf die Datenintegrität in aktualisierbaren Rowsets.  
+ Alle vom OLE DB-Treiber für SQL Server modifizierbaren Rowsets verwenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursor zur Unterstützung des Rowsets. Die Rowseteigenschaft DBPROP_LOCKMODE ändert das Parallelitätskontrollverhalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bei Cursorn und bestimmt das Verhalten für den Zeilenabruf bei Rowsets sowie die Fehlergenerierung in Bezug auf die Datenintegrität in aktualisierbaren Rowsets.  
   
- Der OLE DB Treiber für SQL Server unterstützt die Zeilen Synchronisierung vor oder nach einem Update.  
+ Der OLE DB-Treiber für SQL Server unterstützt die Zeilensynchronisierung vor oder nach einem Update.  
   
 > [!NOTE]  
 >  IRowChange::SetColumns ist verfügbar, um die Werte mindestens einer benannten Spalte eines Zeilenobjekts festzulegen.  

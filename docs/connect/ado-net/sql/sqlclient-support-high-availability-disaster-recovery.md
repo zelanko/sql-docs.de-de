@@ -1,27 +1,27 @@
 ---
 title: SqlClient-Unterstützung für Hochverfügbarkeit, Notfallwiederherstellung
-description: Beschreibt die SqlClient-Unterstützung für Verfügbarkeits Gruppen mit hoher Verfügbarkeit und Notfall Wiederherstellung (AlwaysOn).
+description: Beschreibt die SqlClient-Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung bei (Always On-)Verfügbarkeitsgruppen.
 ms.date: 08/15/2019
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c60ade4c949574b589bf1e1e660564775b394527
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: b84790960455d60411cae14ae180be0d8891e4a2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451998"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258550"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient-Unterstützung für Hochverfügbarkeit, Notfallwiederherstellung
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-In diesem Thema wird Microsoft SqlClient Datenanbieter für SQL Server Unterstützung für hohe Verfügbarkeit, Notfall Wiederherstellung AlwaysOn-Verfügbarkeitsgruppen erläutert.  Die Funktion für AlwaysOn-Verfügbarkeitsgruppen wurde SQL Server 2012 hinzugefügt. Weitere Informationen über AlwaysOn-Verfügbarkeitsgruppen finden Sie in der SQL Server-Onlinedokumentation.  
+Dieser Artikel befasst sich mit der Unterstützung des Microsoft SqlClient-Datenanbieters für SQL Server für Hochverfügbarkeit und Notfallwiederherstellung – Always On-Verfügbarkeitsgruppen.  Die Funktion für AlwaysOn-Verfügbarkeitsgruppen wurde SQL Server 2012 hinzugefügt. Weitere Informationen über AlwaysOn-Verfügbarkeitsgruppen finden Sie in der SQL Server-Onlinedokumentation.  
   
 Sie können jetzt den Verfügbarkeitsgruppenlistener einer Verfügbarkeitsgruppe (für hohe Verfügbarkeit und Notfallwiederherstellung) oder eine SQL Server 2012-Failoverclusterinstanz in der Verbindungseigenschaft angeben. Wenn eine SqlClient-Anwendung mit einer Always On-Datenbank verbunden ist, für die ein Failover ausgeführt wird, wird die ursprüngliche Verbindung unterbrochen, und die Anwendung muss eine neue Verbindung öffnen, damit ihre Ausführung nach dem Failover fortgesetzt werden kann.  
   
@@ -30,13 +30,13 @@ Wenn Sie keine Verbindung mit einem Verfügbarkeitsgruppenlistener oder einer SQ
 > [!NOTE]
 >  Das Erhöhen des Verbindungstimeouts sowie die Implementierung von Verbindungswiederholungslogik erhöhen die Wahrscheinlichkeit, dass eine Anwendung eine Verbindung zu einer Verfügbarkeitsgruppe herstellt. Da zudem eine Verbindung aufgrund eines Failovers fehlschlagen kann, empfiehlt sich die Implementierung von Verbindungswiederholungslogik, wodurch im Fall einer fehlgeschlagenen Verbindung bis zur erneuten Verbindung Wiederholungsversuche erfolgen.  
   
-Die folgenden Verbindungs Eigenschaften werden in der Microsoft SqlClient-Datenanbieter für SQL Server unterstützt:  
+Der Microsoft SqlClient-Datenanbieter für SQL Server unterstützt die folgenden Verbindungseigenschaften:  
   
 - `ApplicationIntent`  
   
 - `MultiSubnetFailover`  
   
-Sie können diese Schlüsselwörter für Verbindungs Zeichenfolgen Programm gesteuert mit  
+Sie können diese Schlüsselwörter für Verbindungszeichenfolgen folgendermaßen programmgesteuert ändern:  
   
 - <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
@@ -59,7 +59,7 @@ Befolgen Sie beim Herstellen einer Verbindung mit einem Server in einer Verfügb
   
 - Ein Verbindungsversuch mit einer mit mehr als 64 IP-Adressen konfigurierten SQL Server-Instanz verursacht einen Verbindungsfehler.  
   
-- Das Verhalten einer Anwendung, die die `MultiSubnetFailover`-Verbindungseigenschaft verwendet, wird nicht vom Authentifizierungstyp beeinflusst: SQL Server-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
+- Das Verhalten einer Anwendung, die die Verbindungseigenschaft `MultiSubnetFailover` verwendet, wird nicht vom Authentifizierungstyp beeinflusst: SQL Server-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
   
 - Vergrößern Sie den Wert von `Connect Timeout`, um eine ausreichende Failoverzeit zu konfigurieren und die Anzahl der Verbindungsherstellungsversuche der Anwendung zu reduzieren.  
   
@@ -71,12 +71,12 @@ Befolgen Sie beim Herstellen einer Verbindung mit einem Server in einer Verfügb
   
 - Wenn eine Anwendung `ApplicationIntent=ReadWrite` verwendet (weiter unten erläutert), und der sekundäre Replikatspeicherort für schreibgeschützten Zugriff konfiguriert ist.  
   
-<xref:Microsoft.Data.SqlClient.SqlDependency> wird für schreibgeschützte sekundäre Replikate nicht unterstützt.  
+<xref:Microsoft.Data.SqlClient.SqlDependency> wird bei schreibgeschützten sekundären Replikaten nicht unterstützt.  
   
 Es kann keine Verbindung hergestellt werden, wenn ein primäres Replikat so konfiguriert ist, dass schreibgeschützte Arbeitslasten abgelehnt werden, und die Verbindungszeichenfolge `ApplicationIntent=ReadOnly` enthält.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Aktualisieren zur Verwendung von Multisubnetzclustern aus Datenbankspiegelung  
-Ein Verbindungsfehler (<xref:System.ArgumentException>) tritt auf, wenn die Verbindungs Schlüsselwörter `MultiSubnetFailover` und `Failover Partner` in der Verbindungs Zeichenfolge vorhanden sind, oder wenn `MultiSubnetFailover=True` und ein anderes Protokoll als TCP verwendet werden. Es tritt auch ein Fehler (<xref:Microsoft.Data.SqlClient.SqlException>) auf, wenn `MultiSubnetFailover` verwendet wird und SQL Server eine Failoverpartnerantwort zurückgibt, die angibt, dass es Teil eines Datenbankspiegelungspaars ist.  
+Ein Verbindungsfehler (<xref:System.ArgumentException>) tritt auf, wenn die Verbindungsschlüsselwörter `MultiSubnetFailover` und `Failover Partner` in der Verbindungszeichenfolge vorhanden sind oder wenn `MultiSubnetFailover=True` und ein anderes Protokoll als TCP verwendet wird. Es tritt auch ein Fehler (<xref:Microsoft.Data.SqlClient.SqlException>) auf, wenn `MultiSubnetFailover` verwendet wird und SQL Server eine Failoverpartnerantwort zurückgibt, die angibt, dass es Teil eines Datenbankspiegelungspaars ist.  
   
 Wenn Sie eine SqlClient-Anwendung aktualisieren, die derzeit Datenbankspiegelung in einem Multisubnetz-Szenario verwendet, müssen Sie die `Failover Partner`-Verbindungseigenschaft entfernen und mit `MultiSubnetFailover`, festgelegt auf `True`, ersetzen, sowie den Servernamen in der Verbindungszeichenfolge mit einem Verfügbarkeitsgruppenlistener ersetzen. Wenn eine Verbindungszeichenfolge `Failover Partner` und `MultiSubnetFailover=True` verwendet, generiert der Treiber einen Fehler. Wenn eine Verbindungszeichenfolge jedoch `Failover Partner` und `MultiSubnetFailover=False` (oder `ApplicationIntent=ReadWrite`) verwendet, verwendet die Anwendung Datenbankspiegelung.  
   
@@ -87,7 +87,7 @@ Im Fall von `ApplicationIntent=ReadOnly` fordert der Client eine Lesearbeitslast
   
 Das `ApplicationIntent`-Schlüsselwort funktioniert nicht mit schreibgeschützten Legacy-Datenbanken.  
   
-Eine Datenbank kann Lesearbeitslasten auf der AlwaysOn-Zieldatenbank zulassen bzw. nicht zulassen. (Dies erfolgt mit der `ALLOW_CONNECTIONS`-Klausel der `PRIMARY_ROLE`-und `SECONDARY_ROLE`Transact-SQL-Anweisungen.)  
+Eine Datenbank kann Lesearbeitslasten auf der AlwaysOn-Zieldatenbank zulassen bzw. nicht zulassen. (Dies geschieht über die `ALLOW_CONNECTIONS`-Klausel der Transact-SQL-Anweisungen `PRIMARY_ROLE` und `SECONDARY_ROLE`.)  
   
 Das `ApplicationIntent`-Schlüsselwort wird verwendet, um schreibgeschütztes Routing zu aktivieren.  
   

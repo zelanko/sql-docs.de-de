@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892280"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installieren des ersten Berichtsservers im SharePoint-Modus
@@ -47,7 +47,7 @@ ms.locfileid: "68892280"
 |**(3)**|Die Excel Services-Anwendung wird von Power View und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]verwendet. Dies ist in einer Einzelserverbereitstellung für SharePoint 2016 nicht verfügbar. Es ist ein [Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) erforderlich.|  
 |**(4)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung zu erstellen.|  
   
- ![Bereitstellung eines einzelnen Servers im SSRS-SharePoint-Modus](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint Mode Single Server Deployment")  
+ ![SharePoint-Modus von SSRS: Bereitstellung auf einem Server](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SharePoint-Modus von SSRS: Bereitstellung auf einem Server")  
   
 > [!TIP]  
 >  Komplexere Bereitstellungsbeispiele finden Sie unter [Bereitstellungstopologien für SQL Server-BI-Funktionen in SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
@@ -66,7 +66,7 @@ ms.locfileid: "68892280"
   
      Eine bewährte Sicherheitsmethode besteht darin, die Administratorkonten der SharePoint-Farm nicht gleichzeitig als Administratorkonten des lokalen Betriebssystems festzulegen. Wenn Sie der lokalen Administratorgruppe während der Installation ein Farmadministratorkonto hinzufügen, wird empfohlen, das Konto nach Ende der Installation aus der lokalen Administratorgruppe zu entfernen.  
   
-##  <a name="bkmk_install_SSRS"></a> Schritt 1: Installieren eines Reporting Services-Berichtsservers im SharePoint-Modus
+##  <a name="bkmk_install_SSRS"></a>Schritt 1: Installieren eines Reporting Services-Berichtsservers im SharePoint-Modus
 
  Mit diesem Schritt installieren Sie Reporting Services im SharePoint-Modus und das Reporting Services-Add-In für SharePoint-Produkte. Abhängig von bereits auf dem Computer installierten Komponenten werden einige der in den folgenden Schritten beschriebenen Installationsseiten u. U. nicht angezeigt.  
  
@@ -110,21 +110,21 @@ ms.locfileid: "68892280"
 
 3.  Falls die Seite **Product Key** angezeigt wird, geben Sie Ihren Product Key ein, oder übernehmen Sie den Standardwert der Enterprise Evaluation Edition.  
   
-     Wählen Sie **Weiter**aus.  
+     Wählen Sie **Weiter** aus.  
   
 4.  Lesen Sie die Seite mit den Lizenzbedingungen, falls diese angezeigt wird, und akzeptieren Sie die Bedingungen. Microsoft ist Ihnen dankbar, wenn Sie damit einverstanden sind, Daten zur Funktionsverwendung zu senden, damit wir Produktfunktionen und -support verbessern können.  
   
-     Wählen Sie **Weiter**aus.  
+     Wählen Sie **Weiter** aus.  
 
 5.  Es wird empfohlen, die Option **Mit Microsoft Update nach Updates suchen (empfohlen)** auszuwählen. Diese Eingabe ist optional.
   
-     Wählen Sie **Weiter**aus.   
+     Wählen Sie **Weiter** aus.   
   
 6.  Je nachdem, welche Komponenten bereits auf dem Computer installiert sind, kann auf der Seite **Setupdateien installieren** folgende Meldung angezeigt werden:  
   
     -   „Für mindestens eine betroffene Datei stehen Vorgänge aus. Sie müssen den Computer nach Abschluss des Setupvorgangs neu starten.“  
   
-    -   Wählen Sie **Weiter**aus.  
+    -   Wählen Sie **Weiter** aus.  
   
 7.  Möglicherweise wird die Seite **Installationsregeln** angezeigt. Überprüfen Sie alle Warnungen oder Probleme, die eine Blockierung verursachen. Wählen Sie **Weiter**aus.
  
@@ -136,17 +136,17 @@ ms.locfileid: "68892280"
   
     -   Optional können Sie auch **Database Engine Services** auswählen, um eine vollständige Umgebung zu installieren. Sie müssen allerdings über eine SQL Server-Datenbankmodulinstanz verfügen, auf der die SharePoint-Datenbanken gehostet werden.  
   
-     Wählen Sie **Weiter**aus.  
+     Wählen Sie **Weiter** aus.  
   
      ![rs_SetupFeatureSelection_SharePoint_with_circles](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
   
 9. Wenn Sie Datenbank-Engine-Dienste ausgewählt haben, akzeptieren Sie die Standardinstanz von **MSSQLSERVER** auf der Seite **Instanzkonfiguration** , und klicken Sie auf **Weiter**.  
   
-     ![Hinweis](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")Die Architektur des Reporting Services SharePoint-Dienstes basiert nicht auf einer SQL Server-„Instanz“, wie es bei der vorherigen Reporting Services-Architektur der Fall war.  
+     ![Hinweis](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Hinweis") Die Architektur des SharePoint-Diensts von Reporting Services basiert nicht auf einer SQL Server-„Instanz“, wie es bei der vorherigen Reporting Services-Architektur der Fall war.  
   
 10. Wenn die Seite **Serverkonfiguration** angezeigt wird, geben Sie die entsprechenden Anmeldeinformationen ein. Wenn Sie die Reporting Services-Datenwarn- oder -Abonnementfunktionen verwenden möchten, müssen Sie den **Starttyp** für den SQL Server-Agent in **Automatisch** ändern. Abhängig von den bereits auf dem Computer installierten Komponenten wird die Seite **Serverkonfiguration** möglicherweise nicht angezeigt.  
   
-     Wählen Sie **Weiter**aus.  
+     Wählen Sie **Weiter** aus.  
   
 11. Wenn Sie die Database Engine Services ausgewählt haben, wird die Seite **Datenbankmodulkonfiguration** angezeigt. Fügen Sie der Liste der SQL-Administratoren entsprechende Konten hinzu, und klicken Sie dann auf **Weiter**.  
   
@@ -159,12 +159,12 @@ ms.locfileid: "68892280"
   
 13. Überprüfen Sie eventuell angezeigte Warnungen, und klicken Sie dann auf der Seite **Funktionskonfigurationsregeln** auf **Weiter** , wenn Sie die Konfiguration auf diese Seite beenden möchten.  
   
-14. Lesen Sie auf der Seite **Installationsbereit** die Installationszusammenfassung. Die Zusammenfassung enthält einen untergeordneten Knoten **SharePoint-Modus für Reporting Services** , für den der Wert **SharePointFilesOnlyMode**angezeigt wird. Wählen Sie **Installieren**aus.  
+14. Lesen Sie auf der Seite **Installationsbereit** die Installationszusammenfassung. Die Zusammenfassung enthält einen untergeordneten Knoten **SharePoint-Modus für Reporting Services** , für den der Wert **SharePointFilesOnlyMode**angezeigt wird. Wählen Sie **Installieren** aus.  
   
 15. Die Installation dauert mehrere Minuten. Die Seite **Abgeschlossen** wird mit einer Liste der Funktionen und dem Status der einzelnen Funktionen angezeigt. Möglicherweise werden Sie in einem Informationsdialogfeld darauf hingewiesen, dass der Computer neu gestartet werden muss.  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> Schritt 2: Registrieren und Starten des SharePoint-Dienstes für Reporting Services  
- ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
+##  <a name="bkmk_install_SSRS_sharedservice"></a>Schritt 2: Registrieren und Starten des SharePoint-Diensts für Reporting Services  
+ ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt")  
   
 > [!NOTE]
 > Wenn Sie in eine vorhandene SharePoint-Farm installieren, müssen Sie die Schritte in diesem Abschnitt nicht ausführen. Der Reporting Services SharePoint-Dienst wurde installiert und gestartet, als Sie entsprechend den Anweisungen im vorherigen Abschnitt dieses Dokuments den SQL Server-Installations-Assistenten ausgeführt haben.  
@@ -209,7 +209,7 @@ ms.locfileid: "68892280"
     > [!IMPORTANT]
     > Angenommen, eine Fehlermeldung mit etwa folgendem Wortlaut wird ausgegeben:  
     >   
-    >     Install-SPRSService: Der Begriff **Install-SPRSService** wurde nicht als Name eines Cmdlets, einer Funktion, einer Skriptdatei oder eines ausführbaren Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad enthalten und korrekt ist, und wiederholen Sie den Vorgang.  
+    >     Install-SPRSService: The term 'Install-SPRSService' **is not recognized** as the name of a cmdlet, function, script file, or operable program. (Der Begriff „Install-SPRSService“ wurde nicht als Name eines Cmdlets, einer Funktion, einer Skriptdatei oder eines ausführbaren Programms erkannt.) Prüfen Sie die Schreibweise des Namens bzw. stellen Sie sicher, dass der Pfad korrekt angegeben wurde, und versuchen Sie es erneut.  
     >
     > Entweder befinden Sie sich in Windows PowerShell anstatt in der SharePoint-Verwaltungsshell, oder Reporting Services ist nicht im SharePoint-Modus installiert. Weitere Informationen zu Reporting Services und PowerShell finden Sie unter [PowerShell-Cmdlets für SharePoint-Modus von Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
@@ -224,7 +224,7 @@ ms.locfileid: "68892280"
     > [!NOTE]  
     >  Wenn der Reporting Services-Dienst im Status **Wird gestartet** bleibt und sich nicht in **Gestartet** ändert, stellen Sie sicher, dass der Dienst der SharePoint 2013-Administration im Windows Server-Manager gestartet wurde.  
   
-##  <a name="bkmk_create_serrviceapplication"></a> Schritt 3: Erstellen einer Reporting Services-Dienstanwendung  
+##  <a name="bkmk_create_serrviceapplication"></a>Schritt 3: Erstellen einer Reporting Services-Dienstanwendung  
  Dieser Abschnitt enthält die Schritte zum Erstellen einer Dienstanwendung und eine Beschreibung der Eigenschaften, wenn Sie eine vorhandene Dienstanwendung überprüfen.  
   
 1.  Klicken Sie in der SharePoint-Zentraladministration in der Gruppe **Anwendungsverwaltung** auf **Dienstanwendungen verwalten**.  
@@ -250,17 +250,17 @@ ms.locfileid: "68892280"
   
 9. Wählen Sie im Abschnitt **Webanwendungszuordnungen** die Webanwendung aus, die für Zugriff von der aktuellen Reporting Services-Dienstanwendung bereitgestellt werden soll. Sie können einer Webanwendung eine Reporting Services-Dienstanwendung zuordnen. Wenn alle aktuellen Webanwendungen bereits einer Reporting Services-Dienstanwendung zugeordnet sind, wird eine Warnmeldung angezeigt.  
   
-10. Wählen Sie **OK**.  
+10. Klicken Sie auf **OK**.  
   
 11. Der Dienstanwendungserstellungsprozess dauert möglicherweise mehrere Minuten. Wenn es vollständig ist, sehen Sie eine Bestätigungsmeldung und einen Link zu einer Seite **Abonnements und Warnungen bereitstellen** . Führen Sie den Bereitstellungsschritt aus, wenn Sie die Datenwarn- oder Abonnementfunktion von Reporting Services verwenden möchten. Weitere Informationen finden Sie unter [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") Informationen zur Verwendung von PowerShell zum Erstellen einer Reporting Services-Dienstanwendung finden Sie unter:  
+ ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") Informationen zur Verwendung von PowerShell zum Erstellen einer Reporting Services-Dienstanwendung finden Sie unter folgenden Links:  
   
 -   Weitere Informationen finden Sie im Abschnitt [Windows PowerShell-Skript für die Schritte 1 bis 4](#bkmk_full_script).  
   
 -   Thema [So erstellen Sie eine Reporting Services-Dienstanwendung mit PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
-##  <a name="bkmk_powerview"></a> Schritt 4: Aktivieren der Power View-Websitesammlungsfunktion
+##  <a name="bkmk_powerview"></a> Schritt 4: Aktivieren des Power View-Websitesammlungsfeatures
 
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ist eine Funktion des SQL Server 2016 Reporting Services-Add-Ins für [!INCLUDE[msCoName](../../includes/msconame-md.md)]-SharePoint-Produkte und stellt eine Websitesammlungsfunktion dar. Die Funktion wird für Stammwebsitesammlungen und Websitesammlungen automatisch aktiviert, die nach der Installation des Reporting Services-Add-Ins erstellt wurden. Wenn Sie die Verwendung von [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]planen, sollten Sie sicherstellen, dass die Funktion aktiviert ist.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "68892280"
   
      Öffnen Sie die gewünschte SharePoint-Website in Ihrem Browser. Z.B.: https://\<servername>/sites/bi  
   
-2.  Klicken Sie auf **Einstellungen**![SharePoint-Einstellungen](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings").  
+2.  Wählen Sie **Einstellungen**![SharePoint-Einstellungen](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen") aus.  
   
 3.  Wählen Sie **Websiteeinstellungen**aus.  
   
@@ -391,11 +391,11 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  Für SharePoint 2016 muss ein [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) konfiguriert werden, um Excel Services verwenden zu können. Weitere Informationen finden Sie in den folgenden Whitepapers.
  
- - [Bereitstellen von SQL Server 2016 PowerPivot und Power View in SharePoint 2016](https://docs.microsoft.com/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
+ - [Bereitstellen von SQL Server 2016 Power Pivot und Power View in SharePoint 2016](https://docs.microsoft.com/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
  
- - [Bereitstellen von SQL Server 2016 PowerPivot und Power View in einer Multi-Tier SharePoint 2016-Farm](https://docs.microsoft.com/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
+ - [Bereitstellen von SQL Server 2016 Power Pivot und Power View in einer Multi-Tier SharePoint 2016-Farm](https://docs.microsoft.com/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
  
- Für SharePoint 2016 müssen Sie eine Excel Services-Anwendung erstellen und konfigurieren. Weitere Informationen finden Sie unter den folgenden Links:  
+ Für SharePoint 2016 müssen Sie eine Excel Services-Anwendung erstellen und konfigurieren. Weitere Informationen finden Sie unter  
   
 -   Abschnitt „Konfigurieren von Excel Services für die Analysis Services-Integration“ in [Installieren von Analysis Services im Power Pivot-Modus](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   

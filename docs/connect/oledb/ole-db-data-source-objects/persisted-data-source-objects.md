@@ -1,5 +1,5 @@
 ---
-title: Persistente Datenquellen Objekte | Microsoft-Dokumentation
+title: Persistente Datenquellenobjekte | Microsoft-Dokumentation
 description: Persistente Datenquellenobjekte
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8ba02b1b459e3f1381138eaa708658b317cd9f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015938"
 ---
 # <a name="persisted-data-source-objects"></a>Persistente Datenquellenobjekte
@@ -27,7 +27,7 @@ ms.locfileid: "68015938"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server unterstützt persistente Datenquellen Objekte mit der **IPersistFile** -Schnittstelle.  
+  Der OLE DB-Treiber für SQL Server unterstützt mit der **IPersistFile**-Schnittstelle persistente Datenquellenobjekte.  
   
 ## <a name="examples"></a>Beispiele  
  **A. Beibehalten der Datenquelleninitialisierung:**  
@@ -232,6 +232,6 @@ HRESULT InitFromPersistedDS
  Die **IPersistFile::Save**-Methode kann vor oder nach dem Aufruf von **IDBInitialize::Initialize** aufgerufen werden. Durch Aufruf der Methode nach einer erfolgreichen Rückgabe von **IDBInitialize::Initialize** wird sichergestellt, dass eine gültige Datenquellenspezifikation persistent gespeichert wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [OLE DB für Daten &#40;Quellen Objekte&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Datenquellenobjekte &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

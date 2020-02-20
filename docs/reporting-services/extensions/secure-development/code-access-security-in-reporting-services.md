@@ -16,14 +16,14 @@ ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d629f820dfa2efd87e6460c1c85566e7b33cde8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193828"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Codezugriffssicherheit in Reporting Services
-  Die Codezugriffssicherheit dreht sich um diese Kernbegriffe: Beweise, Codegruppen und benannte Berechtigungssätze. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] haben die Komponenten Berichts-Manager, Berichts-Designer und Berichtsserver jeweils eine Richtliniendatei, die die Codezugriffssicherheit für benutzerdefinierte Assemblys sowie für die Daten-, Übermittlungs-, Rendering- und Sicherheitserweiterung konfiguriert. Die folgenden Abschnitte enthalten eine Übersicht über die Codezugriffssicherheit. Ausführliche Informationen zu den Themen dieses Abschnitts finden Sie unter „Sicherheitsrichtlinienmodell“ in der Dokumentation zum [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  
+  Die Codezugriffssicherheit dreht sich um diese Kernbegriffe: Beweise, Codegruppen und benannte Berechtigungssätze. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] haben die Komponenten Berichts-Manager, Berichts-Designer und Berichtsserver jeweils eine Richtliniendatei, die die Codezugriffssicherheit für benutzerdefinierte Assemblys sowie für die Daten-, Übermittlungs-, Rendering- und Sicherheitserweiterung konfiguriert. Die folgenden Abschnitte enthalten eine Übersicht über die Codezugriffssicherheit. Ausführliche Informationen zu den Themen dieses Abschnitts finden Sie unter „Sicherheitsrichtlinienmodell“ in der Dokumentation zum [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet Codezugriffssicherheit, da ein großer Unterschied zwischen einer typischen [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung und dem Berichtsserver besteht, obwohl der Berichtsserver auf [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Technologie beruht. Eine typische [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung führt keinen Benutzercode aus. Im Gegensatz dazu verwendet [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] eine offene und erweiterbare Architektur, die Benutzern die Programmierung anhand der Berichtsdefinitionsdateien und des **Code**-Elements der Berichtsdefinitionssprache sowie die Entwicklung spezifischer Funktionen in einer benutzerdefinierten Assembly für die Verwendung in Berichten ermöglicht. Weiterhin können Entwickler leistungsstarke Erweiterungen entwerfen und bereitstellen, die die Funktionen des Berichtsservers verbessern. Diese Leistungsstärke und Flexibilität bringt auch die Notwendigkeit mit sich, so viel Schutz und Sicherheit wie möglich zu bieten.  
   

@@ -11,16 +11,16 @@ ms.assetid: a59cac14-32f5-4fa3-ad38-81a3e1e9d29c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e9e7a1d440a724ed7c6415a3499bbc6db5688e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68004355"
 ---
 # <a name="step-1-configure-development-environment-for-java-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für die Java-Entwicklung
   
 ## <a name="windows"></a>Windows  
   
-* Identifizieren Sie basierend auf Ihrer Umgebung die Version des JDBC-Treibers, den Sie verwenden möchten: [System Anforderungen für den JDBC-Treiber](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) .  
-* Laden Sie den entsprechenden JDBC-Treiber herunter, und installieren Sie ihn: [Laden Sie den Microsoft JDBC-SQL Server Treiber](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
-* Legen Sie den Klassenpfad basierend auf der Treiber Version fest, wie hier beschrieben: [Verwenden des JDBC-Treibers.](../../connect/jdbc/using-the-jdbc-driver.md)
+* Bestimmen Sie, welche Version des JDBC-Treibers Sie basierend auf Ihrer Umgebung verwenden sollten. Verwenden Sie dazu die folgenden Informationsressourcen:  [Systemanforderungen für den JDBC-Treiber](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)  
+* Laden Sie den für Sie zutreffenden JDBC-Treiber hier herunter, und installieren Sie ihn:  [Herunterladen des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
+* Legen Sie den Klassenpfad basierend auf der Treiberversion wie im Folgenden beschrieben fest:  [Verwenden des JDBC-Treibers](../../connect/jdbc/using-the-jdbc-driver.md)

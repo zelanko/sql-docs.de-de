@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Daten Bank Metadaten | Microsoft-Dokumentation
+title: Verwenden von Datenbankmetadaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fce2bf9d72136b303ee3bc974f3aede313233a82
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026420"
 ---
 # <a name="using-database-metadata"></a>Verwenden von Datenbankmetadaten
@@ -25,10 +25,10 @@ Zum Abfragen einer Datenbank nach Informationen zu den unterstützten Funktionen
 
 Um ein SQLServerDatabaseMetaData-Objekt zu erstellen, können Sie mit der [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse Informationen über die verbundene Datenbank abrufen.
 
-Im folgenden Beispiel wird eine offene Verbindung zur [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] -Beispieldatenbank an die-Funktion weitergegeben, die GetMetadata-Methode der SQLServerConnection-Klasse wird verwendet, um ein SQLServerDatabaseMetaData-Objekt zurückzugeben, und anschließend verschiedene Methoden des Das SQLServerDatabaseMetaData-Objekt wird verwendet, um Informationen zu Treiber, Treiber Version, Datenbankname und Datenbankversion anzuzeigen.
+Im folgenden Beispiel werden eine offene Verbindung zur [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank an die Funktion übergeben, mit der getMetaData-Methode der SQLServerConnection-Klasse ein SQLServerDatabaseMetadata-Objekt zurückgegeben und dann mit den verschiedenen Methoden des SQLServerDatabaseMetaData-Objekts Informationen zu Treiber, Treiberversion, Datenbankname und Datenbankversion angezeigt.
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Verarbeiten von Metadaten mit dem JDBC-Treiber](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)

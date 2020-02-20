@@ -1,6 +1,6 @@
 ---
 title: Installieren des OLE DB-Treibers für SQL Server | Microsoft-Dokumentation
-description: Installieren und Deinstallieren von OLE DB Treiber für SQL Server
+description: Installieren und Deinstallieren des OLE DB-Treibers für SQL Server
 ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
@@ -22,10 +22,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 08f33d84ee8c035e1e1d3818e2a036f96af2a280
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989310"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Installieren des OLE DB-Treibers für SQL Server
@@ -33,34 +33,34 @@ ms.locfileid: "67989310"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Zum Installieren des OLE DB Treibers für SQL Server benötigen Sie den Installer "msoledbsql. msi".
-Führen Sie das Installationsprogramm aus, und treffen Sie Ihre bevorzugte Auswahl. Der OLE DB Treiber für SQL Server kann parallel zu früheren Versionen von Microsoft OLE DB-Anbietern installiert werden.
+Zum Installieren des OLE DB-Treibers für SQL Server benötigen Sie das Installationsprogramm „msoledbsql.msi“.
+Führen Sie das Installationsprogramm aus, und treffen Sie Ihre bevorzugte Auswahl. Der OLE DB-Treiber für SQL Server kann parallel zu früheren Versionen von Microsoft OLE DB-Anbietern installiert werden.
 
-Der OLE DB Treiber für SQL Server Dateien (msoledbsql. dll, msoledbsqlr. rll) wird in `%SYSTEMROOT%\system32\` installiert. Außerdem werden in x64 msoledbsql. msi 32-Bit-Binärdateien in `%SYSTEMROOT%\SysWOW64\`installiert.
+Die Dateien des OLE DB-Treibers für SQL Server („msoledbsql.dll“, „msoledbsqlr.rll“) werden in `%SYSTEMROOT%\system32\` installiert. Außerdem installiert die x64-msoledbsql.msi-Datei 32-Bit-Binärdateien in `%SYSTEMROOT%\SysWOW64\`.
 
 > [!NOTE]  
-> Alle entsprechenden Registrierungs Einstellungen für den OLE DB Treiber für SQL Server werden im Rahmen des Installationsvorgangs vorgenommen.  
+> Alle entsprechenden Registrierungseinstellungen für den OLE DB-Treiber für SQL Server werden im Rahmen des Installationsprozesses festgelegt.  
 
-Der OLE DB Treiber für SQL Server Header-und Bibliotheksdateien (msoledbsql. h und msoledbsql. lib) werden in `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`installiert. Außerdem werden von der x64 msoledbsql. msi dieselben Dateien in `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`installiert.  
+Die Header- und Bibliotheksdateien des OLE DB-Treibers für SQL Server („msoledbsql.h“ und „msoledbsql.lib“) werden in `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK` installiert. Außerdem installiert die x64-msoledbsql.msi-Datei dieselben Dateien in `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`.  
 
-Sie können OLE DB Treiber für SQL Server über "msoledbsql. msi" verteilen. Möglicherweise müssen Sie OLE DB Treiber für SQL Server installieren, wenn Sie eine Anwendung bereitstellen. Eine Möglichkeit, mehrere Pakete in mehreren Installationen, die für den Benutzer wie eine Installation aussehen, zu installieren, besteht in der Verwendung der Chainer- und Bootstrappertechnologie. Weitere Informationen finden Sie unter [Authoring a Custom Bootstrapper Package for Visual Studio 2005 (Erstellen eines benutzerdefinierten Bootstrapper-Pakets für Visual Studio 2005)](https://go.microsoft.com/fwlink/?LinkId=115667) und [Adding Custom Prerequisites (Hinzufügen benutzerdefinierter Voraussetzungen)](https://go.microsoft.com/fwlink/?LinkId=115668).  
+Sie können den OLE DB-Treiber für SQL Server über „msoledbsql.msi“ verteilen. Möglicherweise müssen Sie den OLE DB-Treiber für SQL Server bei der Bereitstellung einer Anwendung installieren. Eine Möglichkeit, mehrere Pakete in mehreren Installationen, die für den Benutzer wie eine Installation aussehen, zu installieren, besteht in der Verwendung der Chainer- und Bootstrappertechnologie. Weitere Informationen finden Sie unter [Authoring a Custom Bootstrapper Package for Visual Studio 2005 (Erstellen eines benutzerdefinierten Bootstrapper-Pakets für Visual Studio 2005)](https://go.microsoft.com/fwlink/?LinkId=115667) und [Adding Custom Prerequisites (Hinzufügen benutzerdefinierter Voraussetzungen)](https://go.microsoft.com/fwlink/?LinkId=115668).  
   
-Die x64 msoledbsql. msi installiert auch die 32-Bit-Version des OLE DB Treibers für SQL Server. Wenn Ihre Anwendung eine andere Plattform als die für Sie entwickelte Plattform ist, können Sie die Versionen von msoledbsql. msi für x64 und x86 herunterladen.
+Die x64-msoledbsql.msi-Datei installiert auch die 32-Bit-Version des OLE DB-Treibers für SQL Server. Wenn Ihre Anwendung für eine andere Plattform als für diejenige vorgesehen ist, auf der sie entwickelt wurde, können Sie Versionen von „msoledbsql.msi“ für x64 und x86 herunterladen.
 
 Wenn Sie „msoledbsql.msi“ aufrufen, werden nur die Clientkomponenten standardmäßig installiert. Bei den Clientkomponenten handelt es sich um Dateien, die das Ausführen einer mithilfe des OLE DB-Treibers für SQL Server entwickelten Anwendung unterstützen. Um auch die SDK-Komponenten zu installieren, geben Sie `ADDLOCAL=All` in der Befehlszeile an. Beispiel:  
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 
-## <a name="silent-install"></a>Automatische Installation  
+## <a name="silent-install"></a>Installation im Hintergrund  
  Wenn Sie die Optionen „/passive“, „/qn“, „/qb“ oder „/qr“ mit „msiexec“ verwenden, müssen Sie auch IACCEPTSQLNCLILICENSETERMS=YES angeben, um explizit anzuzeigen, dass Sie den Lizenzbedingungen zustimmen. Diese Option muss in Großbuchstaben angegeben werden.  
 
-## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>Installieren von OLE DB Treiber für SQL Server als Abhängigkeit  
-Es ist wichtig, OLE DB Treiber für SQL Server erst zu deinstallieren, wenn alle abhängigen Anwendungen deinstalliert wurden. Verwenden Sie die Installationsoption APPGUID in der MSI-Datei wie folgt, um Benutzern eine Warnung zu geben, dass Ihre Anwendung von OLE DB Treiber für SQL Server abhängig ist:  
+## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>Installieren des OLE DB-Treibers für SQL Server als Abhängigkeit  
+Es ist wichtig, den OLE DB-Treiber für SQL Server erst zu deinstallieren, wenn alle abhängigen Anwendungen deinstalliert wurden. Damit Benutzern eine Warnung angezeigt wird, dass die Anwendung vom OLE DB-Treiber für SQL Server abhängt, verwenden Sie die Installationsoption APPGUID wie folgt im MSI:  
 
  `msiexec /i msoledbsql.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
 
 Der an APPGUID übergebene Wert ist Ihr spezifischer Produktcode. Der Produktcode muss beim Packen des Setupprogramms für die Anwendung mit Microsoft Installer erstellt werden.
-Die Option APPGUID erfordert, dass das Installationsprogramm von einer Eingabeaufforderung mit erhöhten Rechten ausgeführt wird.
+Die Option APPGUID erfordert, dass das Installationsprogramm von einer Eingabeaufforderung mit erhöhten Rechten aus ausgeführt wird.
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

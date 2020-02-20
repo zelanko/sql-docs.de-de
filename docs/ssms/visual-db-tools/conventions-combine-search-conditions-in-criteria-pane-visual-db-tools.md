@@ -1,10 +1,9 @@
 ---
-title: Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich | Microsoft-Dokumentation
-ms.custom: ''
+title: Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,14 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5575530a70eecfc030e457d20596ebc76040cd01
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 889b0497959e7ac7b624d7659fba2648166f0a63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260423"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254438"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -162,7 +163,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 Diese WHERE-Klausel wird vom Abfrage- und Sicht-Designer folgendermaßen im Kriterienbereich dargestellt:  
   
-![Im Kriterienbereich definierte verknüpfte OR-Klauseln](../../ssms/visual-db-tools/media/vs_criteriapane3.gif "Im Kriterienbereich definierte verknüpfte OR-Klauseln")  
+![Im Kriterienbereich definierte, verknüpfte OR-Klauseln](../../ssms/visual-db-tools/media/vs_criteriapane3.gif "Im Kriterienbereich definierte, verknüpfte OR-Klauseln")  
   
 Wenn Sie die Abfrage ändern (z. B. durch Ändern eines der Werte im Kriterienbereich), erstellt der Abfrage- und Sicht-Designer die SQL-Anweisung im SQL-Bereich neu. Die neu erstellte SQL-Anweisung stimmt eher mit der Anzeige im Kriterienbereich als mit der ursprünglichen Anweisung überein. Wenn der Kriterienbereich z. B. verteilte AND-Klauseln enthält, wird die Anweisung im SQL-Bereich mit eindeutig verteilten AND-Klauseln erstellt. Ausführliche Informationen finden Sie weiter oben unter "Verwenden von AND mit mehreren OR-Klauseln".  
   

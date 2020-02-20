@@ -11,10 +11,10 @@ ms.assetid: c426b0e3-2f9d-425a-b7da-1d0325e292d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98e01a552717febaaa5a35612ee3d5cd44baa2c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996805"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader-long"></a>updateCharacterStream-Methode (int, java.io.Reader, long)
@@ -38,7 +38,7 @@ public void updateCharacterStream(int columnIndex,
   
  *x*  
   
- Ein Reader-Objekt.  
+ Dies ist ein Reader-Objekt.  
   
  *length*  
   
@@ -48,7 +48,7 @@ public void updateCharacterStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese updatecharakteristream-Methode wird von der updatecharakteristream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese updateCharacterStream-Methode wird von der updateCharacterStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Von dieser Methode werden Unicode-Zeichen aus einem Reader-Objekt an ausgewählte Text- und Binärspalten übergeben. Hierzu zählen alle Textspalten sowie Spalten vom Typ "binary", "varbinary", "varbinary(max)", "image" und "XML", aber keine UDT-Spalten.  
   

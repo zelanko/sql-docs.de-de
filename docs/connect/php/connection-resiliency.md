@@ -10,44 +10,44 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-mabarw
 ms.openlocfilehash: 3edba0cde94d8661eed053319142ce7f84a70613
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265168"
 ---
 # <a name="idle-connection-resiliency"></a>Resilienz von Verbindungen im Leerlauf
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Die [verbindungsresilienz](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) ist das Prinzip, dass eine Verbindung mit einem unterbrochenen Leerlauf innerhalb bestimmter Einschränkungen wieder hergestellt werden kann. Wenn eine Verbindung mit Microsoft SQL Server fehlschlägt, kann der Client automatisch versuchen, die Verbindung wiederherzustellen. Die verbindungsresilienz ist eine Eigenschaft der Datenquelle. nur SQL Server 2014 und höher und Azure SQL-Datenbank unterstützen Verbindungs Resilienz.
+Die [Verbindungsresilienz](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) beschreibt das Prinzip, dass eine unterbrochene Leerlaufverbindung mit bestimmten Einschränkungen wiederhergestellt werden kann. Wenn eine Verbindung mit Microsoft SQL Server unterbrochen wird, ermöglicht die Verbindungsresilienz es dem Client, automatisch eine Wiederherstellung der Verbindung zu versuchen. Die Verbindungsresilienz ist eine Eigenschaft der Datenquelle und wird nur von SQL Server 2014 und höher und Azure SQL-Datenbank unterstützt.
 
-Verbindungsresilienz wird mit zwei Verbindungs Schlüsselwörtern implementiert, die Verbindungs Zeichenfolgen hinzugefügt werden können: **connectretrycount** und **connectretryinterval**.
+Die Verbindungsresilienz ist mit zwei Verbindungsschlüsselwörtern implementiert, die zu Verbindungszeichenfolgen hinzugefügt werden können: **ConnectRetryCount** und **ConnectRetryInterval**.
 
-|Schlüsselwort|Werte|Default|und Beschreibung|
+|Schlüsselwort|Werte|Standard|Beschreibung|
 |-|-|-|-|
-|**ConnectRetryCount**| Ganze Zahl von 0 bis 255|1|Die maximale Anzahl von versuchen, eine unterbrochene Verbindung wiederherzustellen, bevor Sie den Wert aufgibt. Standardmäßig wird ein einziger Versuch unternommen, eine Verbindung wiederherzustellen, wenn Sie beschädigt ist. Der Wert 0 bedeutet, dass keine erneute Verbindung versucht wird.|
-|**ConnectRetryInterval**| Ganze Zahl von 1 bis 60|1| Die Zeit (in Sekunden) zwischen den versuchen, eine Verbindung wiederherzustellen. Die Anwendung versucht, die Verbindung sofort nach dem Erkennen einer unterbrochenen Verbindung wiederherzustellen, und wartet dann **connectretryinterval** Sekunden, bevor Sie den Vorgang wiederholen. Dieses Schlüsselwort wird ignoriert, wenn **connectretrycount** gleich 0 ist.
+|**ConnectRetryCount**| Ganze Zahl von 0 bis 255|1|Die maximale Anzahl von Versuchen zum Wiederherstellen einer unterbrochenen Verbindung, bevor aufgegeben wird. Standardmäßig wird nur ein Versuch unternommen, eine Verbindung nach einer Unterbrechung wiederherzustellen. Der Wert 0 bedeutet, dass kein Wiederherstellungsversuch unternommen wird.|
+|**ConnectRetryInterval**| Ganze Zahl von 1 bis 60|1| Die Zeit in Sekunden zwischen den Versuchen zum Wiederherstellen einer Verbindung. Die Anwendung versucht sofort nach dem Erkennen einer unterbrochenen Verbindung, diese wiederherzustellen, und wartet dann die mit **ConnectRetryInterval** angegebene Anzahl von Sekunden, bevor sie es erneut versucht. Dieses Schlüsselwort wird ignoriert, wenn **ConnectRetryCount** gleich 0 ist.
 
-Wenn das Produkt von **connectretrycount** multipliziert mit **connectretryinterval** größer als **LoginTimeout**ist, versucht der Client, eine Verbindung herzustellen, nachdem **LoginTimeout** erreicht wurde. Andernfalls wird weiterhin versucht, erneut eine Verbindung herzustellen, bis **connectretrycount** erreicht ist.
+Wenn das Produkt aus **ConnectRetryCount** und **ConnectRetryInterval** größer ist als **LoginTimeout**, versucht der Client nach dem Erreichen von **LoginTimeout** nicht mehr, die Verbindung wiederherzustellen. Andernfalls wird die erneute Verbindung weiter versucht, bis **ConnectRetryCount** erreicht ist.
 
 #### <a name="remarks"></a>Bemerkungen
 
-Verbindungsresilienz gilt, wenn sich die Verbindung im Leerlauf befindet. Fehler, die beim Ausführen einer Transaktion auftreten, führen z. b. keine erneuten Verbindungsversuche aus, da Sie andernfalls nicht erwartungsgemäß erwartet werden. In den folgenden Situationen, die als nicht wiederherstellbare Sitzungs Zustände bezeichnet werden, werden keine erneuten Verbindungsversuche auslöst:
+Die Verbindungsresilienz gilt auch, wenn eine Verbindung sich im Leerlauf befindet. Fehler während der Ausführung einer Transaktion lösen beispielsweise keine erneuten Verbindungsversuche aus, sondern führen erwartungsgemäß zu einem Abbruch. In folgenden Situationen, die als nicht wiederherstellbare Sitzungszustände bezeichnet werden, werden keine erneuten Verbindungsversuche ausgelöst:
 
 * Temporäre Tabellen
 * Globale und lokale Cursor
-* Transaktions-und Sitzungs Ebene-Transaktions Sperren
+* Transaktionskontext und Transaktionssperren auf Sitzungsebene
 * Anwendungssperren
-* EXECUTE AS/REVERT Security Context
-* OLE-Automatisierungs Handles
+* EXECUTE AS/REVERT-Sicherheitskontext
+* OLE-Automatisierungshandles
 * Vorbereitete XML-Handles
 * Ablaufverfolgungsflags
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code stellt eine Verbindung mit einer-Datenbank her und führt eine Abfrage aus. Die Verbindung wird unterbrochen, indem die Sitzung abgebrochen wird, und es wird versucht, mithilfe der unterbrochenen Verbindung eine neue Abfrage auszuführen. In diesem Beispiel wird die [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx)-Beispieldatenbank verwendet.
+Der folgende Code stellt eine Verbindung mit einer Datenbank her und führt eine Abfrage aus. Die Verbindung wird durch Beendigung der Sitzung unterbrochen, und es wird versucht, über die unterbrochene Verbindung eine neue Abfrage zu senden. In diesem Beispiel wird die [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx)-Beispieldatenbank verwendet.
 
-In diesem Beispiel geben wir einen gepufferten Cursor an, bevor die Verbindung unterbrochen wird. Wenn wir keinen gepufferten Cursor angeben, wird die Verbindung nicht wieder hergestellt, da es einen aktiven serverseitigen Cursor gäbe und die Verbindung daher nicht im Leerlauf ist, wenn Sie beschädigt ist. In diesem Fall könnten wir jedoch sqlsrv_free_stmt () vor dem Trennen der Verbindung zum Verlassen des Cursors aufzurufen, und die Verbindung wird erfolgreich wieder hergestellt.
+In diesem Beispiel geben wir einen gepufferten Cursor an, bevor die Verbindung unterbrochen wird. Ohne die Angabe eines gepufferten Cursors würde die Verbindung nicht wiederhergestellt, weil ein aktiver serverseitiger Cursor vorhanden wäre und sich daher die Verbindung im Moment der Unterbrechung nicht im Leerlauf befände. In diesem Fall könnten wir allerdings „sqlsrv_free_stmt()“ aufrufen, bevor die Verbindung unterbrochen wird, um den Cursor freizugeben. Dann würde die Verbindung erfolgreich wiederhergestellt.
 
 ```php
 <?php

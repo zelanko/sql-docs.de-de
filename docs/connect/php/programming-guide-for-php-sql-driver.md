@@ -11,10 +11,10 @@ ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9470b5e4a9e7283930a38c393a4117333fb0fb08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992928"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server
@@ -24,7 +24,7 @@ Dieser Abschnitt enthält Themen, die Ihnen dabei helfen, Anwendungen mit [!INCL
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |---------|---------------|  
 |[Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)|Beschreibt die Optionen und Verfahren zum Verbinden mit dem SQL Server.|  
 |[Vergleichen von Ausführungsfunktionen](../../connect/php/comparing-execution-functions.md)|Vergleicht die Funktionen, die zum Ausführen einer Abfrage verwendet werden, indem verschiedene Anwendungsfälle für jede einzelne Funktion untersucht werden. Im Besonderen vergleicht dieses Dokument die Ausführung einer einzelnen Abfrage mit der mehrmaligen Ausführung einer vorbereiteten Abfrage.|  
@@ -34,7 +34,7 @@ Dieser Abschnitt enthält Themen, die Ihnen dabei helfen, Anwendungen mit [!INCL
 |[Konvertieren von Datentypen](../../connect/php/converting-data-types.md)|Erläutert, wie Datentypen angegeben und Details zu Standard-Datentypen zur Verfügung gestellt werden.|  
 |[Behandeln von Fehlern und Warnungen](../../connect/php/handling-errors-and-warnings.md)|Erläutert, wie Fehler und Warnungen zu behandeln sind.|  
 |[Protokollieren von Aktivitäten](../../connect/php/logging-activity.md)|Informationen zum Protokollieren von Fehlern und Warnungen.|  
-|[Verwenden von Always Encrypted mit den Microsoft-Treibern für PHP für SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Bietet Informationen zur Verwendung Always Encrypted-Features mit den PHP-Treibern.|  
+|[Verwenden von Always Encrypted mit den Microsoft-Treibern für PHP für SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Stellt Informationen zur Verwendung des Features „Always Encrypted“ mit PHP-Treibern bereit|  
 |[Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|Beschreibt Sicherheitsaspekte für das Entwickeln, Bereitstellen und Ausführen von Anwendungen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

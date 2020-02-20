@@ -1,5 +1,5 @@
 ---
-title: getclientconnectionid-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: getClientConnectionID-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84367995aa5820bc6078b5e62bc830b0e58c4b0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953173"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID-Methode (SQLServerConnection)
@@ -35,7 +35,7 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Weitere Informationen zum Zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse finden Sie unter [zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Weitere Informationen über den Zugriff auf Diagnoseinformationen im erweiterten Ereignisprotokoll finden Sie unter [Zugreifen auf Diagnoseinformationen im erweiterten Ereignisprotokoll](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
  Das folgende Beispiel zeigt, wie die Verbindungs-ID abgerufen wird:  
   
@@ -56,7 +56,7 @@ Connection cn = pcon.getConnection();
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
 ```  
   
- **getclientconnectionid** funktioniert unabhängig von der Version des Servers, mit dem Sie eine Verbindung herstellen, aber es sind keine Protokolle für erweiterte Ereignisse und ein Eintrag für Verbindungs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Ringpuffer Fehler in 2008 R2 und früher vorhanden.  
+ **getClientConnectionID** funktioniert unabhängig davon, mit welcher Serverversion Sie eine Verbindung herstellen, erweiterte Ereignisprotokolle und Einträge zu Fehlern bei Konnektivitätsringpuffern sind in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 und früher nicht verfügbar.  
   
  Wenn das erweiterte Ereignis zur Protokollierung der Verbindungs-ID aktiviert ist, können Sie die Verbindungs-ID im erweiterten Ereignisprotokoll suchen, um festzustellen, ob der Fehler auf dem Server aufgetreten ist. Bei bestimmten Verbindungsfehlern können Sie die Verbindungs-ID auch im Verbindungsringpuffer suchen ([Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer (Behandeln von Verbindungsproblemen in SQL Server 2008 mit dem Verbindungsringpuffer)](https://go.microsoft.com/fwlink/?LinkId=207752)). Wenn die Verbindungs-ID nicht im Konnektivitätsringpuffer enthalten ist, ist von einem Netzwerkfehler auszugehen.  
   

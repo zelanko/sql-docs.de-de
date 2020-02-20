@@ -1,5 +1,5 @@
 ---
-title: Aufbauen der Verbindungs-URL | Microsoft-Dokumentation
+title: Erstellen der Verbindungs-URL | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028454"
 ---
 # <a name="building-the-connection-url"></a>Erstellen der Verbindungs-URL
@@ -40,7 +40,7 @@ ms.locfileid: "69028454"
 -   **property** (optional) ist mindestens eine optionale Verbindungseigenschaft. Weitere Informationen zum Festlegen der Verbindungseigenschaften finden Sie unter [Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md). Sie können eine beliebige Eigenschaft aus der Liste angeben. Mehrere Eigenschaften müssen durch ein Semikolon („;“) getrennt werden und dürfen nicht doppelt vorkommen.  
   
 > [!CAUTION]  
->  Aus Sicherheitsgründen sollten Sie es vermeiden, die Verbindungs-URLs basierend auf Benutzereingaben zu erstellen. Sie sollten in der URL lediglich Servername und Treiber angeben. Verwenden Sie für Werte von Benutzernamen und Kennwörtern die properties-Auflistungen für Verbindungen. Weitere Informationen zur Sicherheit in ihren JDBC-Anwendungen finden Sie unter [Sichern von JDBC-Treiber Anwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md).  
+>  Aus Sicherheitsgründen sollten Sie es vermeiden, die Verbindungs-URLs basierend auf Benutzereingaben zu erstellen. Sie sollten in der URL lediglich Servername und Treiber angeben. Verwenden Sie für Werte von Benutzernamen und Kennwörtern die properties-Auflistungen für Verbindungen. Weitere Informationen zur Sicherheit in Ihren JDBC-Anwendungen finden Sie unter [Absichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md).  
   
 ## <a name="connection-examples"></a>Verbindungsbeispiele  
  Herstellen einer Verbindung zur Standarddatenbank auf dem lokalen Computer mit Benutzername und Kennwort:  
@@ -73,7 +73,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Benannte und mehrere SQL Server-Instanzen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt die Installation mehrerer Datenbankinstanzen auf einem Server zu. Jede Instanz wird durch einen bestimmten Namen gekennzeichnet. Um eine Verbindung zu einer benannten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen, können Sie entweder die Portnummer der benannten Instanz angeben (bevorzugte Vorgehensweise) oder den Instanznamen als JDBC-URL-Eigenschaft oder **datasource**-Eigenschaft angeben. Wenn keine Eigenschaft für Instanzname oder Portnummer angegeben wurde, wird eine Verbindung zur Standardinstanz erstellt. Vergleichen Sie die folgenden Beispiele:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt die Installation mehrerer Datenbankinstanzen auf einem Server zu. Jede Instanz wird durch einen bestimmten Namen gekennzeichnet. Um eine Verbindung zu einer benannten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen, können Sie entweder die Portnummer der benannten Instanz angeben (bevorzugte Vorgehensweise) oder den Instanznamen als JDBC-URL-Eigenschaft oder **datasource**-Eigenschaft angeben. Wenn keine Eigenschaft für Instanzname oder Portnummer angegeben wurde, wird eine Verbindung zur Standardinstanz erstellt. Hierzu folgende Beispiele:  
   
  Gehen Sie folgendermaßen vor, wenn eine Portnummer verwendet werden soll:  
   
@@ -96,9 +96,9 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  Die &lt;legacyBold&gt;sqljdbc_auth.dll&lt;/legacyBold&gt;-Dateien werden im folgenden Pfad installiert:  
   
- \<*Installationsverzeichnis*> \sqljdbc_\<*Versions*>\\<*Sprache*> \auth\  
+ \<*Installationsverzeichnis*>\sqljdbc_\<*Version*>\\<*Sprache*>\auth\  
   
- Informationen zu den von unterstützten Betriebs [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]Systemen finden [Sie unter Verwenden der integrierten Kerberos-Authentifizierung zum Herstellen einer Verbindung mit SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) , um [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] eine Beschreibung einer in hinzugefügten Funktion zu erhalten, mit der eine Anwendung eine Verbindung mit einer Datenbank über integrierte Authentifizierung mit dem Typ 4 Kerberos.  
+ Unter [Herstellen von Verbindungen mit SQL Server mit der integrierten Kerberos-Authentifizierung](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) finden Sie für alle vom [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützten Betriebssysteme eine Beschreibung einer in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] eingeführten Funktion, dank derer eine Anwendung mithilfe der integrierten Kerberos-Authentifizierung Typ 4 eine Verbindung mit einer Datenbank herstellen kann.  
   
 > [!NOTE]  
 >  Wenn Sie eine 32-Bit-JVM (Java Virtual Machine) ausführen, verwenden Sie die Datei sqljdbc_auth.dll im Ordner x86, auch wenn es sich bei dem Betriebssystem um die x64-Version handelt. Wenn Sie eine 64-Bit-JVM mit einem x64-Prozessor ausführen, verwenden Sie die Datei „sqljdbc_auth.dll“ im Ordner „x64“.  
@@ -122,7 +122,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verbinden mit SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

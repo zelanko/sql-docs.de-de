@@ -1,5 +1,5 @@
 ---
-title: Sqlserverresource-Member | Microsoft-Dokumentation
+title: SQLServerResource-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d673cf36e3b9ed4d3012e49c620aed8c8e34eb94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970632"
 ---
 # <a name="sqlserverresource-members"></a>SQLServerResource-Elemente
@@ -24,22 +24,22 @@ ms.locfileid: "67970632"
   
 ## <a name="constructors"></a>Konstruktoren  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|Initialisiert eine neue Instanz der [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)-Klasse. Dieser Konstruktor ist nur für die interne Verwendung vorgesehen.|  
+|[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|Initialisiert eine neue Instanz der [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)-Klasse. Dieser Konstruktor dient nur zur internen Verwendung.|  
   
 ## <a name="fields"></a>Felder  
  Keine.  
   
 ## <a name="inherited-fields"></a>Geerbte Felder  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|java.util.ResourceBundle|parent (parent)|  
+|java.util.ResourceBundle|parent|  
   
 ## <a name="methods"></a>Methoden  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|Ruft Informationen zu Fehlerstrings ab. Diese Methode dient nur zur internen Verwendung.|  
   

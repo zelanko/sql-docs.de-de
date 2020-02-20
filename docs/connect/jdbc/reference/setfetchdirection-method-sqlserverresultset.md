@@ -16,10 +16,10 @@ ms.assetid: 4ee82290-508d-4bff-a5c5-8a56338deef8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d801a0184259ae22f86ea5ec23391ef78b23ce38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974265"
 ---
 # <a name="setfetchdirection-method-sqlserverresultset"></a>setFetchDirection-Methode (SQLServerResultSet)
@@ -40,7 +40,7 @@ public void setFetchDirection(int direction)
 #### <a name="parameters"></a>Parameter  
  *direction*  
   
- Ein Wert vom Typ **int** zum Angeben der vorgeschlagenen Abrufrichtung. Folgende Werte sind möglich:  
+ Ein Wert vom Typ **int** zum Angeben der vorgeschlagenen Abrufrichtung. Es kann sich um einen der folgenden Werte handeln:  
   
  ResultSet.FETCH_FORWARD  
   
@@ -52,7 +52,7 @@ public void setFetchDirection(int direction)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese setFetchDirection-Methode wird von der setFetchDirection-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese setFetchDirection-Methode wird von der setFetchDirection-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Der Anfangswert dieser Methode wird vom [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt bestimmt, von dem dieses SQLServerResultSet-Objekt erstellt wurde. Die Abrufrichtung kann jedoch jederzeit geändert werden.  
   

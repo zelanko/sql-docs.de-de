@@ -11,10 +11,10 @@ ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58c6282a11e3fcc0ca896a2e3e4075a4b51d928e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027853"
 ---
 # <a name="performing-transactions-with-the-jdbc-driver"></a>Ausführen von Transaktionen mit dem JDBC-Treiber
@@ -26,7 +26,7 @@ ms.locfileid: "69027853"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Grundlegendes zu Transaktionen](../../connect/jdbc/understanding-transactions.md)|Enthält eine Übersicht über die Verwendung von Transaktionen mit dem JDBC-Treiber.|  
 |[Grundlegendes zu XA-Transaktionen](../../connect/jdbc/understanding-xa-transactions.md)|Enthält eine Übersicht über die Verwendung von XA-Transaktionen mit dem JDBC-Treiber.|  
@@ -34,7 +34,7 @@ ms.locfileid: "69027853"
 |[Verwenden von Sicherungspunkten](../../connect/jdbc/using-savepoints.md)|Beschreibt die Verwendung des JDBC-Treibers für Sicherungspunkte für Transaktionen.|  
 |[Verwenden der Haltbarkeit](../../connect/jdbc/using-holdability.md)|Beschreibt die Verwendung des JDBC-Treibers für die Holdability für Resultsets.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

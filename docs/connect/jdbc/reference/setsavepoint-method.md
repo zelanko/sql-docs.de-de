@@ -1,5 +1,5 @@
 ---
-title: setSavepoint-Methode () | Microsoft-Dokumentation
+title: setSavepoint()-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 11013055-4fd3-45a9-b2da-28b2908dad52
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f6f26909a0ad7c5f33bdf997c48f88c6e7b300a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973012"
 ---
 # <a name="setsavepoint-method-"></a>setSavepoint-Methode ()
@@ -35,13 +35,13 @@ public java.sql.Savepoint setSavepoint()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein SAVEPOINT-Objekt.  
+ Ein SavePoint-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese setSavepoint-Methode wird von der setSavepoint-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
+ Diese setSavePoint-Methode wird von der setSavePoint-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [setSavepoint-Methode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   

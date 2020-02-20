@@ -16,10 +16,10 @@ ms.assetid: 572a1799-c232-400f-b8d8-37a5719a8d5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 701afddaeaad79356a6b76a05a02f5cff1df1f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953901"
 ---
 # <a name="getbigdecimal-method-javalangstring-int-sqlserverresultset"></a>getBigDecimal-Methode (java.lang.String, int) (SQLServerResultSet)
@@ -48,13 +48,13 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName,
  Ein Wert vom Typ **int**, der die Anzahl von Stellen rechts des Dezimalzeichens anzeigt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein BigDecimal-Objekt.  
+ Ein BigDecimal-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getBigDecimal-Methode wird von der getBigDecimal-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese getBigDecimal-Methode wird von der getBigDecimal-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getBigDecimal-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   

@@ -1,10 +1,9 @@
 ---
-title: Spalteneigenschaften (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: ''
+title: Spalteneigenschaften
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,16 +15,18 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ee1e24b0f9b55d299f56aa02c99405e001c33c1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7646eb379b3fe81603e78843808c90914889ed5d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262557"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241273"
 ---
 # <a name="column-properties-visual-database-tools"></a>Spalteneigenschaften (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Für Spalten gibt es zwei Sätze von Eigenschaften: einen vollständigen Satz, der im Tabellen-Designer auf der Registerkarte **Spalteneigenschaften** angezeigt wird (nur für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken verfügbar), und eine Teilmenge, die im Server-Explorer im Eigenschaftenfenster angezeigt wird.  
+Für Spalten gibt es zwei Gruppen von Eigenschaften: eine vollständige Gruppe, die auf der Registerkarte **Spalteneigenschaften** im Tabellen-Designer angezeigt wird (nur für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken verfügbar) und eine Teilgruppe, die im Eigenschaftenfenster des Server-Explorers angezeigt wird.  
   
 > [!NOTE]  
 > Die in diesem Thema behandelten Eigenschaften sind nicht alphabetisch, sondern nach Kategorie angeordnet.  
@@ -72,7 +73,7 @@ Zeigt an, ob die Spalte NULL-Werte zulässt.
 **Genauigkeit**  
 Zeigt die maximale Anzahl der für numerische Datentypen zulässigen Stellen. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben.  
   
-**Dezimalstellen**  
+**Skalieren**  
 Zeigt die maximale Anzahl von Stellen an, die bei numerischen Datentypen rechts vom Dezimalkomma erscheinen können. Dieser Wert muss kleiner oder gleich der Genauigkeit sein. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben.  
   
 ## <a name="column-properties-tab"></a>Registerkarte Spalteneigenschaften  
@@ -105,14 +106,14 @@ Zeigt die Anzahl der für zeichenbasierte Datentypen zulässigen Zeichen an. Die
 **Genauigkeit**  
 Zeigt die maximale Anzahl der für numerische Datentypen zulässigen Stellen. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben. Diese Eigenschaft ist nur für numerische Datentypen verfügbar.  
   
-**Dezimalstellen**  
+**Skalieren**  
 Zeigt die maximale Anzahl von Stellen an, die bei numerischen Datentypen rechts vom Dezimalkomma erscheinen können. Dieser Wert muss kleiner oder gleich der Genauigkeit sein. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben. Diese Eigenschaft ist nur für numerische Datentypen verfügbar.  
   
 **Kategorie Tabellen-Designer**  
 Wird erweitert, um die restlichen Eigenschaften anzuzeigen.  
   
 **Sortierung**  
-Zeigt die Sortierungseinstellung der ausgewählten Spalte an. Klicken Sie auf **Sortierung** und dann rechts neben dem Wert auf die Schaltfläche mit den Auslassungspunkten **(...)** , um diese Einstellung zu ändern.  
+Zeigt die Sortierungseinstellung der ausgewählten Spalte an. Klicken Sie auf **Sortierung** und dann rechts neben dem Wert auf die Schaltfläche mit den Auslassungspunkten **(...)**, um diese Einstellung zu ändern.  
   
 **Spezifikationskategorie der berechneten Spalte**  
 Wird erweitert, um die Eigenschaften für **Formel** und für **Ist Persisted**anzuzeigen. Wenn die Spalte berechnet ist, wird außerdem die Formel angezeigt. Um die Formel zu bearbeiten, erweitern Sie diese Kategorie, und bearbeiten Sie sie in der **Formel** -Eigenschaft.  
@@ -127,7 +128,7 @@ Ermöglicht das Speichern der berechneten Spalte mit der Datenquelle. Eine persi
 Zeigt die Informationen zum Felddatentyp an, im gleichen Format wie in der SQL-Anweisung CREATE TABLE. Beispiel: Ein Feld, das eine Zeichenfolge variabler Länge mit einer maximalen Länge von 20 Zeichen enthält, würde als "varchar(20)" dargestellt. Um diese Eigenschaft zu ändern, geben Sie den Wert direkt ein.  
   
 **Beschreibung**  
-Zeigt die Beschreibung der Spalte an. Klicken Sie auf Beschreibung und dann rechts neben der Eigenschaft auf die Schaltfläche mit den Auslassungspunkten **(...)** , um die vollständige Beschreibung anzuzeigen oder zu bearbeiten.  
+Zeigt die Beschreibung der Spalte an. Klicken Sie auf Beschreibung und dann rechts neben der Eigenschaft auf die Schaltfläche mit den Auslassungspunkten **(...)**, um die vollständige Beschreibung anzuzeigen oder zu bearbeiten.  
   
 **Kategorie Volltextspezifikation**  
 Wird erweitert, um die spezifischen Eigenschaften von Volltextspalten anzuzeigen.  

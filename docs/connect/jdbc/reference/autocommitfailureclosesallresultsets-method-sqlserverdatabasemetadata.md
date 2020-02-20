@@ -1,5 +1,5 @@
 ---
-title: Schließt der JDBC-Treiber geöffnete Resultsets. Microsoft-Dokumentation
+title: Schließt der JDBC-Treiber offene Resultsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1739ecb5-e5cb-4807-b5a8-97c0299929d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fded722f558b68e393fc4e0815a35cc7383b8d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955857"
 ---
 # <a name="autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata"></a>autoCommitFailureClosesAllResultSets-Methode (SQLServerDatabaseMetaData)
@@ -30,13 +30,13 @@ public boolean autoCommitFailureClosesAllResultSets()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn alle geöffneten Resultsets, einschließlich der abholbaren Resultsets, geschlossen werden, wenn ein automatischer Commit aktiviert ist und eine Ausnahme ausgelöst wird. Andernfalls lautet der Wert **false**.  
+ Der Wert **TRUE** wird zurückgegeben, wenn alle offenen Resultsets, einschließlich der Resultset, die beibehalten werden können, geschlossen werden, wenn der Autocommitmodus aktiviert ist und eine Ausnahme ausgelöst wird. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese autoCommitFailureClosesAllResultSets-Methode wird von der autoCommitFailureClosesAllResultSets-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese autoCommitFailureClosesAllResultSets-Methode wird von der autoCommitFailureClosesAllResultSets-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

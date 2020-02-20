@@ -16,10 +16,10 @@ ms.assetid: 150411f7-2a73-4380-b921-9698acd5d1f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17f2762975f72ccd1e6482ea7120701eacf0c4c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984076"
 ---
 # <a name="getdate-method-int-javautilcalendar-sqlserverresultset"></a>getDate-Methode (int, java.util.Calendar) (SQLServerResultSet)
@@ -42,10 +42,10 @@ public java.sql.Date getDate(int columnIndex,
   
  *cal*  
   
- Ein Kalender Objekt.  
+ Ein Calendar-Objekt  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Date-Objekt.  
+ Ein Date-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -55,7 +55,7 @@ public java.sql.Date getDate(int columnIndex,
   
  Von dieser Methode wird ein gültiger Datumsteil eines datetime- oder smalldatetime-Datentyps von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurückgegeben. Der Zeitteil ist dabei in der im Kalender angegebenen Zeitzone auf die Java-Baseline 00:00 (Mitternacht) festgelegt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getDate-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

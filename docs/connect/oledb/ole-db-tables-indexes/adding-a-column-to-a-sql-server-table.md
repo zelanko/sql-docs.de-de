@@ -1,6 +1,6 @@
 ---
-title: Hinzufügen einer Spalte zu einer SQL Server Tabelle | Microsoft-Dokumentation
-description: Hinzufügen einer Spalte zu einer SQL Server Tabelle mithilfe OLE DB Treibers für SQL Server
+title: Hinzufügen einer Spalte zu einer SQL Server-Tabelle | Microsoft-Dokumentation
+description: Hinzufügen einer Spalte zu einer SQL Server-Tabelle mithilfe des OLE DB-Treibers für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994105"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Hinzufügen einer Spalte zu einer SQL Server-Tabelle
@@ -27,9 +27,9 @@ ms.locfileid: "67994105"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server macht die **ITableDefinition:: AddColumn** -Funktion verfügbar. Mit dieser Funktion können Consumer einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle eine Spalte hinzufügen.  
+  Der OLE DB-Treiber für SQL Server stellt die **ITableDefinition::AddColumn**-Funktion zur Verfügung. Mit dieser Funktion können Consumer einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle eine Spalte hinzufügen.  
   
- Wenn Sie einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle eine Spalte hinzufügen, wird der OLE DB-Treiber für SQL Server Consumer wie folgt eingeschränkt:  
+ Wenn Sie einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle eine Spalte hinzufügen, gelten folgende Einschränkungen für den Consumer des OLE DB-Treibers für SQL Server:  
   
 -   Wenn DBPROP_COL_AUTOINCREMENT VARIANT_TRUE ist, muss DBPROP_COL_NULLABLE VARIANT_FALSE sein.  
   

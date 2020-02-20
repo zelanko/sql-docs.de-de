@@ -1,6 +1,7 @@
 ---
 title: Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets (SSRS) | Microsoft-Dokumentation
-ms.date: 05/30/2019
+description: In Microsoft SQL Server Reporting Services können Sie Timeoutwerte angegeben, um Grenzwerte für die Verwendung von Systemressourcen festzulegen.
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506437"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259410"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets (SSRS)
-  Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Timeoutwerte angeben, um Grenzwerte für die Verwendung der Systemressourcen festzulegen. Der Berichtsserver unterstützt die folgenden beiden Timeoutwerte:  
+In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können Sie Timeoutwerte angeben, um Grenzwerte für die Verwendung von Systemressourcen festzulegen. Berichtsserver unterstützen die folgenden beiden Timeoutwerte:  
   
 - Ein Abfragetimeoutwert für ein eingebettetes Dataset gibt an, wie viele Sekunden der Berichtsserver auf eine Antwort von der Datenbank wartet. Dieser Wert wird in einem Bericht definiert.  
   
@@ -33,7 +34,10 @@ ms.locfileid: "66506437"
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>Festlegen eines Abfragetimeouts für ein eingebettetes Dataset in einem Bericht  
  Abfragetimeoutwerte werden im Rahmen der Erstellung eines Berichts beim Definieren eines eingebetteten Datasets angegeben. Der Timeoutwert wird zusammen mit dem Bericht im **Timeout** -Element der Berichtsdefinition gespeichert. Standardmäßig ist dieser Wert auf 30 Sekunden festgelegt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
-  
+ 
+ > [!NOTE]  
+ > Für **Paginierte Berichte in Power BI** ist der Standardwert auf **600 Sekunden** festgelegt.
+ 
  Benutzer mit der Berechtigung zum Ändern der Eigenschaften eines veröffentlichten Berichts können diesen Wert zurücksetzen, indem sie die Definitionsdatei des Berichts bearbeiten.  
   
  Einen Abfragetimeoutwert können Sie auch für datengesteuerte Abonnements angeben. Der Wert für das Abfragetimeout wird auf den Seiten für die datengesteuerten Abonnements festgelegt. Der angegebene Wert bestimmt, wie lange der Berichtsserver beim Abrufen von Daten aus der Abonnentendatenquelle auf den Abschluss der Abfrageverarbeitung wartet.  
@@ -52,7 +56,7 @@ ms.locfileid: "66506437"
 > [!NOTE]  
 > Sie können die Einstellung **RunningRequestsDbCycle** in der Datei „RSReportServer.config“ festlegen, um die Häufigkeit zu ändern, mit der Aufträge, die ausgeführt werden, ausgewertet werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen von Verarbeitungsoptionen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Verwalten eines ausgeführten Prozesses](../../reporting-services/subscriptions/manage-a-running-process.md)   

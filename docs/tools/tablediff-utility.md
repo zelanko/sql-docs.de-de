@@ -1,6 +1,6 @@
 ---
-title: Hilfsprogramm tablediff-Hilfsprogramm | Microsoft-Dokumentation
-ms.custom: ''
+title: tablediff (Hilfsprogramm)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,18 +19,18 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 48fc2d25bc65e76156da80c6b6117a62fa39e2a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986036"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304808"
 ---
 # <a name="tablediff-utility"></a>tablediff (Hilfsprogramm)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Mit dem Hilfsprogramm **tablediff** wird verglichen, ob die Daten in zwei Tabellen konvergent sind. Das Hilfsprogramm eignet sich besonders zur Problembehandlung bei mangelnder Konvergenz in einer Replikationstopologie. Dieses Hilfsprogramm kann an der Eingabeaufforderung oder in einer Batchdatei verwendet werden, um die folgenden Aufgaben auszuführen:  
   
--   Zeilenweiser Vergleich einer Quelltabelle in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz, die als Replikationsverleger agiert, mit der Zieltabelle in einer oder mehreren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen, die als Replikationsabonnenten agieren.  
+-   Durchführen eines zeilenweisen Vergleichs einer Quelltabelle in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz, die als Replikationsherausgeber fungiert, mit der Zieltabelle in einer oder mehreren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzen, die als Replikationsabonnenten fungieren.  
   
 -   Ausführen eines schnellen Vergleichs, indem nur Zeilenanzahl und Schema verglichen werden.  
   
@@ -83,46 +83,46 @@ tablediff
  **-sourceserver** _source_server_name_[ **\\** _instance\_name_]  
  Der Name des Quellservers. Geben Sie *Name des Quellservers* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie _Name des Quellservers_ **\\** _Instanzname_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an.  
   
- **-sourcedatabase** _Quelldatenbank_  
+ **-sourcedatabase** _source_database_  
  Der Name der Quelldatenbank.  
   
- **-sourcetable** _Name der Quelltabelle_  
+ **-sourcetable** _source_table_name_  
  Der Name der zu überprüfenden Quelldatenbank.  
   
- **-sourceschema** _Quellschemaname_  
+ **-sourceschema** _source_schema_name_  
  Der Schemabesitzer der Quelltabelle. Standardmäßig wird dbo als Tabellenbesitzer angenommen.  
   
- **-sourcepassword** _Quellkennwort_  
+ **-sourcepassword** _source_password_  
  Das Kennwort für den Anmeldenamen, der verwendet wird, um mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung mit dem Quellserver herzustellen.  
   
 > [!IMPORTANT]  
 >  Anmeldeinformationen sollten, sofern möglich, zur Laufzeit angegeben werden. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, sollten Sie die Datei an einem sicheren Ort speichern, um den unbefugten Zugriff zu vermeiden.  
   
- **-sourceuser** _Quellanmeldename_  
+ **-sourceuser** _source_login_  
  Der Anmeldename, der verwendet wird, um mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung mit dem Quellserver herzustellen. Wenn *Quellanmeldename* nicht angegeben wird, wird die Windows-Authentifizierung zum Herstellen der Verbindung mit dem Quellserver verwendet. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  Die Quelltabelle wird während des Vergleichs mit den Tabellenhinweisen TABLOCK und HOLDLOCK gesperrt.  
   
- **-destinationserver** _Zielservername_[ **\\** _Instanzname_]  
+ **-destinationserver** _destination_server_name_[ **\\** _instance_name_]  
  Der Name des Zielservers. Angeben von *Zielservername* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie _Zielservername_ **\\** _Instanzname_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an.  
   
- **-destinationdatabase** _Abonnementdatenbank_  
+ **-destinationdatabase** _subscription_database_  
  Der Name der Zieldatenbank.  
   
- **-destinationtable** _Zieltabelle_  
+ **-destinationtable** _destination_table_  
  Entspricht dem Namen der Zieltabelle.  
   
- **-destinationschema** _Zielschemaname_  
+ **-destinationschema** _destination_schema_name_  
  Der Schemabesitzer der Zieltabelle. Standardmäßig wird dbo als Tabellenbesitzer angenommen.  
   
- **-destinationpassword** _Zielkennwort_  
+ **-destinationpassword** _destination_password_  
  Das Kennwort für den Anmeldenamen, der verwendet wird, um mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung mit dem Zielserver herzustellen.  
   
 > [!IMPORTANT]  
 >  Anmeldeinformationen sollten, sofern möglich, zur Laufzeit angegeben werden. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, sollten Sie die Datei an einem sicheren Ort speichern, um den unbefugten Zugriff zu vermeiden.  
   
- **-destinationuser** _Zielanmeldename_  
+ **-destinationuser** _destination_login_  
  Der Anmeldename, der verwendet wird, um mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung mit dem Zielserver herzustellen. Wenn *Zielanmeldename* nicht angegeben wird, wird die Windows-Authentifizierung zum Herstellen der Verbindung mit dem Server verwendet. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
@@ -131,7 +131,7 @@ tablediff
  **-b** _large_object_bytes_  
  Ist die Anzahl von Bytes, die für Spalten mit großen Objektdatentypen überprüft werden und folgendes beinhaltet: **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** and **varbinary(max)** . *large_object_bytes* wird standardmäßig auf die Größe der Spalte festgelegt. Alle Daten über *large_object_bytes* werden nicht überprüft.  
   
- **-bf**  _number_of_statements_  
+ **-bf** _number_of_statements_  
  Die Anzahl der [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, die in die aktuelle [!INCLUDE[tsql](../includes/tsql-md.md)] -Skriptdatei geschrieben werden können, wenn die Option **-f** verwendet wird. Wenn die Anzahl der [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen *number_of_statements*überschreitet, wird eine neue [!INCLUDE[tsql](../includes/tsql-md.md)] -Skriptdatei erstellt.  
   
  **-c**  
@@ -155,7 +155,7 @@ tablediff
  **-rc** _number_of_retries_  
  Gibt an, wie oft das Hilfsprogramm einen fehlgeschlagenen Vorgang wiederholt.  
   
- **-ri**  _retry_interval_  
+ **-ri** _retry_interval_  
  Gibt das Intervall (in Sekunden) zwischen den Wiederholungen an.  
   
  **-strict**  
@@ -166,9 +166,9 @@ tablediff
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
-|**0**|Success|  
+|**0**|Erfolg|  
 |**1**|Schwerwiegender Fehler|  
 |**2**|Tabellenunterschiede|  
   

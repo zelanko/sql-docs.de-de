@@ -1,5 +1,5 @@
 ---
-title: SQLServerNClob-Member | Microsoft-Dokumentation
+title: SQLServerNClob-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 303742b8e7b7bf8221565e09cf23d2e18cdca8de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970948"
 ---
 # <a name="sqlservernclob-members"></a>SQLServerNClob-Elemente
@@ -33,17 +33,17 @@ ms.locfileid: "67970948"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|Mit dieser Methode werden das **NCLOB**-Objekt sowie die von diesem verwendeten Ressourcen freigegeben.|  
-|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|Ruft den vom **java. SQL. NCLOB** -Objekt bezeichneten **NCLOB** -Wert als ASCII-Datenstrom ab.|  
-|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|Ruft den **NCLOB** -Wert ab, der vom **java. SQL. NCLOB** -Objekt festgelegt wird.|  
-|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|Ruft eine Kopie der angegebenen Teil Zeichenfolge im **NCLOB** -Wert ab, der vom **java. SQL. NCLOB** -Objekt festgelegt wird.|  
-|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|Ruft die Anzahl der Zeichen im **NCLOB** -Wert ab, der vom **java. SQL. NCLOB** -Objekt festgelegt wird.|  
+|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|Ruft den **NCLOB**-Wert ab, der vom **java.sql.NClob**-Objekt als ASCII-Datenstrom festgelegt wurde|  
+|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|Ruft den **NCLOB**-Wert ab, der vom **java.sql.NClob**-Objekt festgelegt wurde|  
+|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|Ruft eine Kopie der angegebenen Teilzeichenfolge im vom **java.sql.NClob**-Objekt angegebenen **NCLOB**-Wert ab.|  
+|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|Ruft die Anzahl der Zeichen im vom **java.sql.NClob**-Objekt angegebenen **NCLOB**-Wert ab.|  
 |[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|Ruft die Zeichenposition des angegebenen **java.sql.NClob**-Objekts oder der Teilzeichenfolge in **java.sql.NClob** auf der Grundlage der angegebenen Startposition ab.|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|Ruft einen Datenstrom ab, der verwendet wird, um ab der angegebenen Position ASCII-Zeichen in den **NCLOB**-Wert zu schreiben, der von diesem **java.sql.NClob**-Objekt dargestellt wird.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|Ruft einen Datenstrom ab, der verwendet wird, um ab der angegebenen Position einen Datenstrom von Unicode-Zeichen in den **NCLOB**-Wert zu schreiben, der von diesem **java.sql.NClob**-Objekt dargestellt wird.|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|Schreibt die angegebene **Zeichenfolge** beginnend an der angegebenen Position in das **NCLOB** .|  
+|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|Schreibt die angegebene **Zeichenfolge** ab der angegebenen Position in das **NCLOB**.|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlservernclob.md)|Kürzt den **NCLOB**-Wert auf die angegebene Länge.|  
   
 ## <a name="inherited-methods"></a>Geerbte Methoden  

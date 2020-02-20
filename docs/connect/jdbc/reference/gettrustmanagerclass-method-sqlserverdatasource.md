@@ -1,5 +1,5 @@
 ---
-title: gettrustmanagerclass-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: getTrustManagerClass-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 567f5e7e3aca87b875e4f93c26d7caa5535a8c75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978598"
 ---
 # <a name="gettrustmanagerclass-method-sqlserverdatasource"></a>getTrustManagerClass-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt den Zeichen folgen Wert der Trust ManagerClass-Verbindungs Eigenschaft zurück.
+  Gibt den Zeichenfolgenwert der Verbindungseigenschaft „TrustManagerClass“ zurück
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,10 +35,10 @@ public java.lang.String getTrustManagerClass()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Eine **Zeichenfolge** , die den Wert der Trust ManagerClass-Verbindungs Eigenschaft enthält, oder NULL, wenn kein Wert festgelegt ist.  
+ Eine **Zeichenfolge**, die den Wert der Verbindungseigenschaft „TrustManagerClass“ enthält, oder NULL, wenn kein Wert festgelegt ist  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn die trustmanagerclass-Eigenschaft nicht festgelegt ist, gibt die [gettrustmanagerclass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md) -Methode NULL zurück.  
+ Wenn die Eigenschaft „TrustManagerClass“ nicht festgelegt ist, gibt die [getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)-Methode NULL zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

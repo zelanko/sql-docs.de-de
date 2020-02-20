@@ -12,10 +12,10 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140379"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Aktivieren und Deaktivieren der Reporting Services-Funktionen
@@ -35,7 +35,7 @@ ms.locfileid: "67140379"
   
 ### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>So aktivieren bzw. deaktivieren Sie den Berichtsserver-Webdienst, indem Sie die Konfiguration bearbeiten  
   
-1.  Öffnen Sie die Datei `RsReportServer.config` in einem Texteditor. Weitere Informationen finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+1.  Öffnen Sie die Datei `RsReportServer.config` in einem Text-Editor. Weitere Informationen finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 2.  Um den Berichtsserver-Webdienst zu aktivieren, legen Sie **IsWebServiceEnabled** auf **TRUE** fest:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "67140379"
   
 ##  <a name="WebPortal"></a> Webportal
   
-Das Webportal wird ab SQL Server 2016 Reporting Services kumulativen Update 2 immer aktiviert.
+Seit dem kumulativen Update 2 für SQL Server Reporting Services 2016 ist das Webportal immer aktiviert.
   
 ##  <a name="WinIntSec"></a> Integrierte Sicherheit von Windows  
   
@@ -112,9 +112,9 @@ Das Webportal wird ab SQL Server 2016 Reporting Services kumulativen Update 2 im
   
     -   Um die integrierte Sicherheit von Windows zu deaktivieren, heben Sie die Auswahl der Option **Integrierte Sicherheit von Windows für Berichtsdatenquellen aktivieren** auf.  
   
-4.  Wählen Sie **OK**.  
+4.  Klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Reporting Services Configuration Manager (Native Mode) (Reporting Services-Konfigurations-Manager (einheitlicher Modus))](../install-windows/reporting-services-configuration-manager-native-mode.md)
 
  Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

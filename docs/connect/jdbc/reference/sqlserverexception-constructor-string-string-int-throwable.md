@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18827d05bc5567b4566eaa006d88c249874132cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971073"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>SQLServerException-Constructor (java.lang.String, java.lang.String, int, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Initialisiert eine neue Instanz der [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) -Klasse, wenn ein **Zeichen** folgen Objekt, ein **Zeichen** folgen Objekt, ein **int** und **ein** Einschränkungs Objekt angegeben werden.
+  Mit diesem Konstruktor wird eine neue Instanz der [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)-Klasse initialisiert, wenn ein **string**-, ein **string**-, ein **int**- und ein **Throwable**-Objekt vorhanden sind.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -38,19 +38,19 @@ public SQLServerException(java.lang.String errText,
 #### <a name="parameters"></a>Parameter  
  *errText*  
   
- Eine Zeichenfolge, die den Fehlertext enthält.
+ Dies ist eine Zeichenfolge, die den Fehlertext enthält.
   
  *errState*  
   
- Eine Zeichenfolge, die den Zustand des Fehlers enthält.
+ Dies ist eine Zeichenfolge, die den Status des Fehlers enthält.
  
  *errNum*  
   
- Ein int-Wert, der den Fehlercode für die Ausnahme enthält.
+ Dies ist ein int-Wert, der den Fehlercode für die Ausnahme enthält.
  
  *cause*  
   
- Ein einschränktes Objekt, das die Ursache der Ausnahme enthält.
+ Dies ist ein Throwable-Objekt, das die Ursache der Ausnahme enthält.
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerException-Konstruktoren](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

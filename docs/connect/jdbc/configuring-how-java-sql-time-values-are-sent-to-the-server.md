@@ -11,16 +11,16 @@ ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028229"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Wenn Sie ein java.sql.Time-Objekt oder den java.sql.Types.TIME-JDBC-Typ zum Festlegen eines Parameters verwenden, können Sie konfigurieren, wie der java.sql.Time-Wert an den Server gesendet wird: als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **time**-Type oder als **datetime**-Typ.  
+  Wenn Sie ein java.sql.Time-Objekt oder den java.sql.Types.TIME-JDBC-Typ zum Festlegen eines Parameters verwenden, können Sie konfigurieren, wie der java.sql.Time-Wert an den Server gesendet wird: als **time**- oder als **datetime**-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typ.  
   
  Dies trifft zu, wenn eine der folgenden Methoden verwendet wird:  
   
@@ -40,28 +40,28 @@ ms.locfileid: "69028229"
   
  Der Wert der Verbindungseigenschaft **sendTimeAsDatetime** kann mit [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) geändert werden.  
   
- Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor unterstützen den **Time-Datentyp** nicht, sodass Anwendungen, die Java. SQL. Time verwenden, in der Regel Java. SQL. Time-Werte als **DateTime** oder [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen.  
+ In den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] wurde der **time**-Datentyp nicht unterstützt, sodass Anwendungen, die java.sql.Time verwenden, java.sql.Time-Werte in der Regel entweder als **datetime**- oder -**smalldatetime**-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen speichern.  
   
- Wenn Sie beim Arbeiten mit Java. SQL. Time-Werten die Datentypen **DateTime** und **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden möchten, legen Sie die **sendtimeasdatetime** -Verbindungs Eigenschaft auf **true**fest. Wenn Sie beim Arbeiten mit Java. SQL. Time-Werten den Datentyp " **time** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " verwenden möchten, sollten Sie die **sendtimeasdatetime** -Verbindungs Eigenschaft auf " **false**" festlegen.  
+ Wenn Sie beim Arbeiten mit java.sql.Time-Werten die **datetime**- und **smalldatetime**-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen verwenden möchten, sollten Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf **TRUE** festlegen. Wenn Sie beim Arbeiten mit java.sql.Time-Werten den **time**-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp verwenden möchten, sollten Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf **FALSE** festlegen.  
   
  Wenn Sie ausschließlich java.sql.Time-Werte in einen Parameter senden, deren Datentyp ebenfalls das Datum speichern kann, unterscheiden sich die Standarddaten je nachdem, ob der java.sql.Time-Wert als **datetime**- (01.01.1970) oder **time**-Wert (01.01.1900) gesendet wird. Weitere Informationen zu Datenkonvertierungen beim Senden von Daten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkID=145211).  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3,0 ist **sendtimeasdatetime** standardmäßig auf true fest. In einem künftigen Release wird die Verbindungseigenschaft **sendTimeAsDatetime** möglicherweise standardmäßig auf FALSE festgelegt.  
+ Im JDBC-Treiber 3.0 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist **sendTimeAsDatetime** standardmäßig auf TRUE festgelegt. In einem künftigen Release wird die Verbindungseigenschaft **sendTimeAsDatetime** möglicherweise standardmäßig auf FALSE festgelegt.  
   
  Gehen Sie wie folgt vor, um zu gewährleisten, dass die Anwendung unabhängig vom Standardwert der Verbindungseigenschaft **sendTimeAsDatetime** weiterhin funktioniert:  
   
 -   Verwenden Sie java.sql.Time, wenn Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **time** verwenden.  
   
--   Verwenden Sie Java. SQL. Timestamp, wenn Sie mit den Datentypen **DateTime**, **smalldatetime**und **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arbeiten.  
+-   Verwenden Sie java.sql.Timestamp beim Arbeiten mit den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen **datetime**, **smalldatetime** und **datetime2**.  
   
-Sendtimeasdatetime muss für verschlüsselte Spalten den Wert false aufweisen, da verschlüsselte Spalten die Konvertierung von Time in DateTime nicht unterstützen. Beginnend mit dem Microsoft JDBC-Treiber 6,0 für SQL Server verfügt die SQLServerConnection-Klasse über die folgenden beiden Methoden, um den Wert der sendtimeasdatetime-Eigenschaft festzulegen/zu erhalten.
+SendTimeAsDatetime muss für verschlüsselte Spalten den Wert FALSE aufweisen, da verschlüsselte Spalten die Konvertierung von time in datetime nicht unterstützen. Beginnend mit Microsoft JDBC-Treiber 6.0 für SQL Server verfügt die SQLServerConnection-Klasse über die folgenden beiden Methoden, um den Wert der sendTimeAsDatetime-Eigenschaft festzulegen bzw. abzurufen.
 
 ```java
   public boolean getSendTimeAsDatetime()
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
  [Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

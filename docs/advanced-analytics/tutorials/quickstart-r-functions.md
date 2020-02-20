@@ -1,27 +1,26 @@
 ---
-title: 'Schnellstart: Schreiben von R-Funktionen'
-titleSuffix: SQL Server Machine Learning Services
-description: In diesem Schnellstart erfahren Sie, wie Sie eine R-Funktion für erweiterte statistische Berechnungen mit SQL Server Machine Learning Services schreiben.
+title: 'Schnellstart: R-Funktionen'
+description: In diesem Schnellstart wird beschrieben, wie Sie mathematische R-Funktionen und Hilfsfunktionen mit SQL Server Machine Learning Services verwenden.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e725282aaacde748b43a37a317037b5471efd009
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e67dcbc35bf5af88d2a7fab37f795cd5cc1d55d9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726885"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831775"
 ---
-# <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>Schnellstart: Schreiben erweiterter R-Funktionen mit SQL Server Machine Learning Services
+# <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>Schnellstart: R-Funktionen mit SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Schnellstart wird beschrieben, wie Sie mathematische und Hilfsfunktionen von R mit SQL Server Machine Learning Services in eine gespeicherte SQL-Prozedur einbetten. Erweiterte statistische Funktionen, deren Implementierung mit T-SQL kompliziert ist, können in R mit einer einzigen Codezeile durchgeführt werden.
+In diesem Schnellstart wird beschrieben, wie Sie mathematische R-Funktionen und Hilfsfunktionen mit SQL Server Machine Learning Services verwenden. Die Implementierung von statistischen Funktionen mit T-SQL ist oft kompliziert, kann aber in R mit nur wenigen Codezeilen durchgeführt werden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -52,7 +51,7 @@ EXECUTE sp_execute_external_script
       WITH RESULT SETS (([Density] float NOT NULL));
 ```
 
-Sie möchten es vereinfachen, einen anderen Satz von Zufallszahlen zu generieren?
+Wie gehen Sie vor, wenn Sie das Erstellen eines anderen Satzes von Zufallszahlen vereinfachen möchten?
 
 In Kombination mit SQL Server ist dies ganz einfach. Sie definieren eine gespeicherte Prozedur, die Argumente vom Benutzer abruft, und übergeben diese Argumente dann als Variablen an das R-Skript.
 
@@ -74,13 +73,13 @@ EXECUTE sp_execute_external_script @language = N'R'
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-- Die erste Zeile definiert alle SQL-Eingabeparameter, die erforderlich sind, wenn die gespeicherte Prozedur ausgeführt wird.
+- Die erste Zeile definiert alle SQL-Eingabeparameter, die beim Ausführen der gespeicherten Prozedur erforderlich sind.
 
-- Die Zeile, die mit `@params` beginnt, definiert alle vom R-Code verwendeten Variablen und die entsprechenden SQL-Datentypen.
+- In der mit `@params` beginnenden Zeile werden alle Variablen, die im R-Code verwendet werden, und die zugehörigen SQL-Datentypen definiert.
 
-- Die unmittelbar folgenden Zeilen ordnen die SQL-Parameternamen den entsprechenden R-Variablennamen zu.
+- Die unmittelbar darauf folgenden Zeilen ordnen die SQL-Parameternamen den entsprechenden R-Variablennamen zu.
 
-Nun haben Sie die R-Funktion in einer gespeicherten Prozedur eingeschlossen und können sie ganz einfach aufrufen und ihr andere Werte übergeben:
+Nachdem Sie die R-Funktion in eine gespeicherte Prozedur eingeschlossen haben, können die Funktion ganz einfach wie folgt aufrufen und dabei jeweils andere Werte übergeben:
 
 ```sql
 EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
@@ -90,7 +89,7 @@ EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 Das standardmäßig installierte Paket **utils** bietet eine Vielzahl von Hilfsfunktionen zum Untersuchen der aktuellen R-Umgebung. Diese Funktionen können sich als nützlich erweisen, wenn Sie Diskrepanzen bei der Leistung Ihres R-Codes in SQL Server und externen Umgebungen feststellen.
 
-Sie können zum Beispiel die R-`memory.limit()`-Funktion verwenden, um Arbeitsspeicher für die aktuelle R-Umgebung abzurufen. Da das `utils`-Paket standardmäßig installiert, aber nicht geladen wird, müssen Sie es zuerst mit der `library()`-Funktion laden.
+Sie können z. B. die R-Funktion `memory.limit()` verwenden, um den Arbeitsspeicher für die aktuelle R-Umgebung abzurufen. Da das Paket `utils` installiert ist, aber nicht standardmäßig geladen wird, laden Sie es zunächst mit der `library()`-Funktion.
 
 ```sql
 EXECUTE sp_execute_external_script

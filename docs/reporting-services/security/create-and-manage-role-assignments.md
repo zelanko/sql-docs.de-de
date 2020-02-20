@@ -15,10 +15,10 @@ ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 863904e2d82fc97045305dd2430241a91e333f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65619602"
 ---
 # <a name="create-and-manage-role-assignments"></a>Erstellen und Verwalten von Rollenzuweisungen
@@ -45,7 +45,7 @@ Wählen Sie ein Element aus, das weit oben in der Ordnerhierarchie angeordnet is
 
 Sie müssen Mitglied der lokalen Gruppe Administratoren auf dem Berichtsserver-Computer sein, um eine Rollenzuweisung erstellen zu können. Sie können diese Aufgabe delegieren, indem Sie andere Benutzer der Rolle **Inhalts-Manager** zuweisen.
 
-Zum Erstellen oder Verwalten von rollenzuweisungen oder Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver](../../reporting-services/security/grant-user-access-to-a-report-server.md)
+Weitere Informationen zum Erstellen oder Verwalten von Rollenzuweisungen finden Sie unter [Grant User Access to a Report Server (Gewähren von Benutzerzugriff auf einen Berichtsserver)](../../reporting-services/security/grant-user-access-to-a-report-server.md).
   
 ## <a name="creating-a-system-level-role-assignment"></a>Erstellen einer Rollenzuweisung auf Systemebene
 
@@ -55,7 +55,7 @@ Rollenzuweisungen auf Systemebene umfassen eine Vielzahl von Berechtigungen, jed
 
 Im Gegensatz zu den Systemberechtigungen auf einem Computer umfassen die Systemrollen in Berichtsservern keine übergreifenden Berechtigungen, die alle möglichen Aufgaben umfassen. Bei Rollenzuweisungen auf Systemebene handelt es sich einfach um eine Menge von Tasks, die die Berichtsserversite betreffen. Anhand von Systemrollenzuweisungen wird bestimmt, ob Benutzer Anwendungseigenschaften (beispielsweise als Bild oder Titel der Homepage) anzeigen, freigegebene Zeitpläne anzeigen oder verwalten oder den Berichts-Generator ausführen können.
 
-Erstellen und Verwalten von rollenzuweisung auf Systemebene oder für Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver](../../reporting-services/security/grant-user-access-to-a-report-server.md) und [vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md).  
+Weitere Informationen zum Erstellen oder Verwalten einer Rollenzuweisung auf Systemebene finden Sie unter [Grant User Access to a Report Server (Gewähren von Benutzerzugriff auf einen Berichtsserver)](../../reporting-services/security/grant-user-access-to-a-report-server.md) und [Predefined Roles (Vordefinierte Rollen)](../../reporting-services/security/role-definitions-predefined-roles.md).  
 
 ## <a name="modifying-a-role-assignment"></a>Ändern einer Rollenzuweisung
 

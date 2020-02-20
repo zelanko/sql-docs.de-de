@@ -1,5 +1,5 @@
 ---
-title: Daten Bank Anweisung Daten Definitions Anweisung in Transaktion ignorieren | Microsoft-Dokumentation
+title: Ignoriert die Datenbank die Datendefinitionsanweisung in Transaktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1674fb46-43a7-46d0-9f05-cf993d3bc032
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d1538cc4aaf3e62086f57602b29ce0e61bceb6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955205"
 ---
 # <a name="datadefinitionignoredintransactions-method-sqlserverdatabasemetadata"></a>dataDefinitionIgnoredInTransactions-Methode (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean dataDefinitionIgnoredInTransactions()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn DDL-Anweisungen innerhalb von Transaktionen ignoriert werden. Andernfalls lautet der Wert **false**.  
+ Der Wert **TRUE** wird zurückgegeben, wenn DDL-Anweisungen in Transaktionen ignoriert werden. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese dataDefinitionIgnoredInTransactions-Methode wird von der dataDefinitionIgnoredInTransactions-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese dataDefinitionIgnoredInTransactions-Methode wird von der dataDefinitionIgnoredInTransactions-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

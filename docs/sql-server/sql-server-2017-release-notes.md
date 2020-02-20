@@ -11,21 +11,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68136483"
 ---
 # <a name="sql-server-2017-release-notes"></a>Versionsanmerkungen zu SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
-In den folgenden Artikeln werden Einschränkungen und Probleme mit SQL Server 2017 beschrieben. Verwandte Informationen finden Sie unter:
+In den folgenden Artikeln werden Einschränkungen und Probleme mit SQL Server 2017 beschrieben. Verwandte Informationen
 - [Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server unter Linux: Anmerkungen zu dieser Version](../linux/sql-server-linux-release-notes.md)
 - [SQL Server 2017 Cumulative updates (Kumulative Updates für SQL Server 2017)](https://aka.ms/sql2017cu) für Informationen zu den aktuellen kumulativen Updates
 
 **Probieren Sie SQL Server aus!**
-- [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 herunterladen](https://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Download aus dem Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 herunterladen](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Erstellen eines virtuellen Computers](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Starten von virtuellen Computern mit SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
@@ -113,7 +113,7 @@ Es gibt keine Anmerkungen zu dieser Version von SQL Server für Windows. Siehe: 
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **Problem und Kundenbeeinträchtigung:** Nach der Installation auf einem Computer mit einer 2016er-Version von *TSqlLanguageService.msi* (entweder über SQL-Setup oder als eigenständiges Redistributable) werden die v13.* (SQL 2016)-Versionen von *Microsoft.SqlServer.Management.SqlParser.dll* und *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* entfernt. Jede Anwendung, die eine Abhängigkeit von den 2016er-Versionen dieser Assemblys hat, funktioniert nicht mehr und erzeugt einen ähnlichen Fehler wie: *Fehler: Could not load file or assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. (Die Datei oder Assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' oder eine Abhängigkeit davon konnte nicht geladen werden.) Das System kann die angegebene Datei nicht finden.*
+- **Problem und Kundenbeeinträchtigung:** Nach der Installation auf einem Computer mit einer 2016er-Version von *TSqlLanguageService.msi* (entweder über SQL-Setup oder als eigenständiges Redistributable) werden die v13.* (SQL 2016)-Versionen von *Microsoft.SqlServer.Management.SqlParser.dll* und *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* entfernt. Jede Anwendung, die eine Abhängigkeit von den 2016er-Versionen dieser Assemblys hat, funktioniert nicht mehr und erzeugt einen ähnlichen Fehler wie: *Fehler: Could not load file or assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. (Die Datei oder Assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' oder eine Abhängigkeit davon konnte nicht geladen werden.) The system cannot find the file specified. („csc. exe“ wurde mit dem Fehlercode 1 beendet -- eine Instanz von Analyzer AAAA kann nicht aus „C:\BBBB.dll“ erstellt werden: Die Datei oder Assembly „Microsoft.CodeAnalysis, Version=X.X.X.X, Culture=neutral, PublicKeyToken=31bf3856ad364e35“ oder eine Abhängigkeit davon wurde nicht gefunden. Das System kann die angegebene Datei nicht finden.)*
 
    Darüber hinaus wird beim Versuch, eine 2016er-Version von „TSqlLanguageService.msi“ neu zu installieren, die folgende Fehlermeldung angezeigt: *Fehler bei der Installation von Microsoft SQL Server 2016 T-SQL-Sprachdienst, da eine neuere Version bereits auf dem Computer vorhanden ist*.
 
@@ -131,7 +131,7 @@ Es gibt keine Anmerkungen zu dieser Version von SQL Server für Windows. Siehe: 
 - **Problem und Kundenbeeinträchtigung:** Die Dokumentation für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] ist eingeschränkt, und die Inhalte sind in der [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)]-Dokumentation enthalten.  Inhalte in Artikeln, die für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] spezifisch sind, sind mit **Gilt für:** gekennzeichnet. 
 - **Problem und Kundenbeeinträchtigung:** Für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] sind keine Offlineinhalte verfügbar.
 
-### <a name="always-on-availability-groups"></a>AlwaysOn-Verfügbarkeitsgruppen
+### <a name="always-on-availability-groups"></a>Always On-Verfügbarkeitsgruppen
 
 - **Problem und Kundenbeeinträchtigung:** Eine SQL Server-Instanz, die ein sekundäres Replikat einer Verfügbarkeitsgruppe hostet, stürzt ab, wenn die Hauptversion von SQL Server älter ist als die Instanz, die das primäre Replikat hostet. Hat Auswirkungen auf Upgrades von allen unterstützten Versionen von SQL Server, die Verfügbarkeitsgruppen für SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0 hosten. Dieses Problem tritt unter den folgenden Bedingungen auf. 
 

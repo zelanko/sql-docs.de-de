@@ -16,10 +16,10 @@ ms.assetid: d07944b8-7001-49b5-b3b3-0676f71e17cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 843cb16fab8b05ae72c502fecd171f9af2886779
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213658"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-int"></a>updateAsciiStream-Methode (int, java.io.InputStream, int)
@@ -43,7 +43,7 @@ public void updateAsciiStream(int index,
   
  *x*  
   
- Ein InputStream-Objekt.  
+ Ein InputStream-Objekt  
   
  *length*  
   
@@ -53,7 +53,7 @@ public void updateAsciiStream(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese updateAsciiStream-Methode wird von der updateAsciiStream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese updateAsciiStream-Methode wird von der updateAsciiStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Von dieser Methode werden ASCII-Zeichen (Bytes) von einem InputStream-Objekt an konvertierbare Zeichenspalten übergeben, bei denen es sich um den ASCII-Bereich „[0x00 – 0x7F]“ von Unicode sowie um die Codepages 874, 932, 936, 949, 950 und 1250 bis 1258 handelt. Von dieser Methode wird eine Konvertierung zur Zielsortierseite vorgenommen. Beim Versuch, eine nicht konvertierbare Zielspalte zu aktualisieren, wird eine Ausnahme ausgelöst. Für Binärspalten werden Rohbytes übergeben.  
   

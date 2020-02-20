@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259366"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Treemap- und Sunburst-Diagramme in Reporting Services 
@@ -45,7 +45,7 @@ In der folgenden Abbildung eines Beispiel-Treemap-Diagramms ist das Gebiet „So
     * **Kategoriegruppen** (in der folgenden Reihenfolge):
         1. CategoryName
         2. SubcategoryName
-    * **Reihengruppen**: TerritoryName  
+    * **Seriengruppen**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -91,7 +91,7 @@ In einem Sunburst-Diagramm wird die Hierarchie durch eine Reihe von Kreisen darg
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **Reihengruppen**: TerritoryName  
+    * **Seriengruppen**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -115,7 +115,7 @@ Die Abfrage gibt detaillierte AdventureWorks-Daten zu Verkaufsaufträgen mit Dat
   
 1. **Rufen Sie die Daten ab**.  
   
-     Die Abfrage in diesem Abschnitt basiert auf der AdventureWorks-Datenbank, die unter [AdventureWorks 2016 full database backup (Vollständige Datenbanksicherung von AdventureWorks 2016 )](https://github.com/Microsoft/sql-server-samples/releases) auf GitHub heruntergeladen werden kann.  
+     Die Abfrage in diesem Abschnitt basiert auf der AdventureWorks-Datenbank, die von GitHub heruntergeladen werden kann: [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases) (Vollständige Datenbanksicherung von AdventureWorks 2016).  
 
 2. **Erstellen Sie eine Datenquelle**.  
   
@@ -168,11 +168,11 @@ Die Abfrage gibt detaillierte AdventureWorks-Daten zu Verkaufsaufträgen mit Dat
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    5. Wählen Sie **OK**.  
+    5. Klicken Sie auf **OK**.  
   
      Weitere Informationen zum Erstellen eines Datasets finden Sie unter [Create a shared dataset or embedded dataset (Report Builder and SSRS) (Erstellen eines freigegebenen oder eingebetteten Datasets (Berichts-Generator und SSRS))](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Shared dataset design view (Report Builder) (Entwurfsansicht für freigegebene Datasets (Berichts-Generator))](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)
 
@@ -180,4 +180,4 @@ Die Abfrage gibt detaillierte AdventureWorks-Daten zu Verkaufsaufträgen mit Dat
 
 * [Tutorial: Treemaps in Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [Treemap: Visualisierungs-Apps von Microsoft Research Data für Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [Treemap: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

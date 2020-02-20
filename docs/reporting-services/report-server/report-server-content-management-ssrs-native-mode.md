@@ -14,14 +14,14 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fa8579f24cbad2bdbebe3ad5198732ac7786bde9
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67228750"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus)
-In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verweist die Inhaltsverwaltung auf die Verwaltung von Berichtsserverelementen. Alle Elemente lassen sich durch Eigenschaften und Sicherheitseinstellungen unabhängig verwalten. Alle Elemente können an einen anderen Speicherort im Ordnernamespace des Berichtsservers verschoben werden. Zur effektiven Verwaltung der Elemente muss Ihnen bekannt sein, welche Aufgaben von einem Inhalts-Manager ausgeführt werden. Ab SQL Server 2016 Reporting Services oder höher (SSRS) CTP 3.2 den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web-Portal verfügbar ist. In diesem Artikel werden das Webportal und das neue Webportal erläutert.  
+In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verweist die Inhaltsverwaltung auf die Verwaltung von Berichtsserverelementen. Alle Elemente lassen sich durch Eigenschaften und Sicherheitseinstellungen unabhängig verwalten. Alle Elemente können an einen anderen Speicherort im Ordnernamespace des Berichtsservers verschoben werden. Zur effektiven Verwaltung der Elemente muss Ihnen bekannt sein, welche Aufgaben von einem Inhalts-Manager ausgeführt werden. Ab SQL Server 2016 Reporting Services (SSRS) CTP 3.2 ist das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webportal verfügbar. In diesem Artikel werden das Webportal und das neue Webportal erläutert.  
   
 > [!NOTE]  
 > Die Inhaltsverwaltung unterscheidet sich von der Berichtsserververwaltung. Weitere Informationen zum Verwalten einer Umgebung, in der ein Berichtsserver ausgeführt wird, finden Sie unter [Reporting Services-Berichtsserver (einheitlicher Modus)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -42,7 +42,7 @@ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verweist die Inh
   
 -   Gleichen Sie Berichtsverarbeitungsanforderungen für den Server ab. Planen Sie dazu die Berichtsverarbeitung und geben Sie an, welche bei Bedarf auszuführen bzw. aus dem Cache zu laden sind.  
   
--   Gewähren Sie anhand von vordefinierten Rollen die Berechtigung zum Ausführen von Verwaltungsaufgaben: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind.  
+-   Gewähren Sie anhand von vordefinierten Rollen die Berechtigung zum Durchführen von Verwaltungsaufgaben: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind.  
   
 Tools zum Verwalten von Berichtsserverinhalt umfassen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und das Webportal. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ermöglicht es Ihnen, Standards festzulegen und Funktionen zu aktivieren. Das Webportal wird verwendet, um Benutzern Zugriff auf Berichtsserverelemente und -vorgänge zu gewähren und Berichte und andere Inhaltstypen sowie alle freigegebenen Elemente und Berichtsverteilungsfunktionen anzuzeigen und zu verwenden. Das Webportal ist eine aktualisierte Website, die einen Großteil der Funktionalität des veralteten Berichts-Managers bietet. Weitere Informationen finden Sie unter [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md).  
   
@@ -56,7 +56,7 @@ Tools zum Verwalten von Berichtsserverinhalt umfassen [!INCLUDE[ssManStudio](../
   
  Im Webportal werden die verschiebbaren Elemente in der Ordnerhierarchie angezeigt. In der folgenden Abbildung sind die Symbole für die verschiedenen verschiebbaren Elemente dargestellt.  
   
-  ![Report Server-Symbole für bewegliche Elemente](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
+  ![Berichtsserversymbole für verschiebbare Elemente](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
 
  Nicht alle Elemente, mit denen Sie arbeiten, können verschoben werden. Elemente, die einem Bericht zugeordnet sind, z. B. Abonnements oder ein Berichtsverlauf, können nicht verschoben werden. Diese Elemente werden mit den zugehörigen Berichten verschoben. Auch Elemente wie freigegebene Zeitpläne, die außerhalb der Ordnerhierarchie vorhanden sind, können nicht verschoben werden. Sie können ohne die entsprechende Berechtigung keine Elemente verschieben. Die Berechtigung zum Verschieben eines Elements wird erteilt, wenn folgende Tasks in Ihrer Rollenzuweisung für das entsprechende Element ausgewählt sind: „Berichte verwalten“, „Ordner verwalten“ und „Datenquellen verwalten“.  
   
@@ -94,7 +94,7 @@ Tools zum Verwalten von Berichtsserverinhalt umfassen [!INCLUDE[ssManStudio](../
   
 |Ordner|Zweck|  
 |------------|-------------|  
-|Home|Der Stammknoten der Ordnerhierarchie.|  
+|Privat|Der Stammknoten der Ordnerhierarchie.|  
 |Benutzer|Dieser Ordner wird angezeigt, wenn Sie die Funktion "Meine Berichte" aktivieren. Er enthält Unterordner für alle Benutzer der Funktion Meine Berichte und ist nur für Berichtsserveradministratoren verfügbar. Der Name des Unterordners entspricht dem Namen des Benutzers.|  
 |Meine Berichte|Stellt einen persönlichen Arbeitsbereich für jeden Benutzer bereit.|  
   
@@ -173,7 +173,7 @@ Tools zum Verwalten von Berichtsserverinhalt umfassen [!INCLUDE[ssManStudio](../
  [Aktualisieren einer Ressource (Webportal)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
  [Hochladen von Dateien in einen Ordner](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md)   
  [Rollen und Berechtigungen (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Reporting Services-Berichte &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von SQL-Escapesequenzen Microsoft-Dokumentation
+title: Verwenden von SQL-Escapesequenzen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025895"
 ---
 # <a name="using-sql-escape-sequences"></a>Verwenden von SQL-Escapesequenzen
@@ -71,7 +71,7 @@ In der folgenden Tabelle werden die unterschiedlichen Funktionen aufgeführt, di
   
 | Zeichenfolgenfunktionen                                                                                                                                                                                                                                                                                                                        | Numerische Funktionen                                                                                                                                                                                                                                                                                                                                                                                                   | datetime-Funktionen                                                                                                                                                                                                                                                                                                                                             | Systemfunktionen                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LSCHNEIDEN<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> TAGDERWOCHE<br /><br /> TAGDESJAHRES<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTAL<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> Benutzer |
+| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS (ABS)<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> PROTOKOLL<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> TAGDERWOCHE<br /><br /> TAGDESJAHRES<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTAL<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> USER |
 
 > [!NOTE]  
 > Wenn Sie versuchen, eine von der Datenbank nicht unterstützte Funktion zu verwenden, tritt ein Fehler auf.  
@@ -86,10 +86,10 @@ Die Escapesyntax für Datums-, Zeit- und Timestampliterale lautet wie folgt:
 
 Hierbei ist `literal-type` einer der folgenden Typen:  
   
-| Literaltyp | und Beschreibung | Wertformat               |
+| Literaltyp | Beschreibung | Wertformat               |
 | ------------ | ----------- | -------------------------- |
-| d            | date        | yyyy-mm-dd                 |
-| t            | Uhrzeit        | hh:mm:ss [1]               |
+| d            | Date        | yyyy-mm-dd                 |
+| t            | Time        | hh:mm:ss [1]               |
 | ts           | TimeStamp   | yyyy-mm-dd hh:mm:ss[.f...] |
   
 Beispiel:  
@@ -111,7 +111,7 @@ Bei einer Prozedur handelt es sich um ein in der Datenbank gespeichertes, ausfü
 
 Dabei gibt `procedure-name` den Namen einer gespeicherten Prozedur an, und `parameter` gibt einen Parameter für eine gespeicherte Prozedur an.  
   
-Weitere Informationen zum Verwenden der `call` Escapesequenz mit gespeicherten Prozeduren finden Sie unter Verwenden von [Anweisungen mit gespeicherten Prozeduren](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+Weitere Informationen zur Verwendung der Escapesequenz `call` mit gespeicherten Prozeduren finden Sie unter [Verwenden von Anweisungen mit gespeicherten Prozeduren](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
 ## <a name="outer-joins"></a>Äußere Joins
 
@@ -159,6 +159,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 Die Escapesyntax besteht aus zwei Teilen: \<*rows*> ist obligatorisch und gibt die Anzahl der zurückzugebenden Zeilen an. OFFSET und \<*row offset*> sind optional und geben die Anzahl der zu überspringenden Zeilen an, bevor mit der Rückgabe von Zeilen begonnen wird. Der JDBC-Treiber unterstützt nur den obligatorischen Teil, indem er die Abfrageklausel von LIMIT in TOP umwandelt. SQL Server unterstützt die LIMIT-Klausel nicht. **Der JDBC-Treiber unterstützt den optionalen Parameter \<row offset> nicht, und der Treiber löst eine Ausnahme aus, wenn er verwendet wird.**  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Verwenden von Anweisungen mit dem JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

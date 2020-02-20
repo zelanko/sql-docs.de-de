@@ -19,13 +19,13 @@ ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 59414abbc5c098382ec83d308d135af92f9dbb35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014999"
 ---
-# <a name="sqlsrvnextresult"></a>sqlsrv_next_result
+# <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Aktiviert das nächste Ergebnis (Resultset, Zeilenanzahl oder Ausgabeparameter) der angegebenen Anweisung.  
@@ -41,7 +41,7 @@ sqlsrv_next_result( resource $stmt )
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$stmt*: Die ausgeführte Anweisung, auf die das nächste Ergebnis aktiviert wird.  
+*$stmt*: Hierbei handelt es sich um die ausgeführte Anweisung, auf der das nächste Ergebnis aktiviert wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Wenn das nächste Ergebnis erfolgreich aktiviert wurde, wird der boolesche Wert **true** zurückgegeben. Wenn beim Aktivieren des nächsten Ergebnisses ein Fehler auftritt, wird **false** zurückgegeben. Wenn keine weiteren Ergebnisse verfügbar sind, wird **NULL** zurückgegeben.  
@@ -177,7 +177,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-Beim Ausführen einer gespeicherten Prozedur, die Ausgabeparameter besitzt, wird empfohlen, dass alle anderen Ergebnisse verarbeitet werden, bevor der Zugriff auf die Werte von Ausgabeparametern erfolgt. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben der Parameterrichtung mit dem SQLSRV-Treiber](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)  
+Beim Ausführen einer gespeicherten Prozedur, die Ausgabeparameter besitzt, wird empfohlen, dass alle anderen Ergebnisse verarbeitet werden, bevor der Zugriff auf die Werte von Ausgabeparametern erfolgt. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben der Parameterrichtung](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Beispiel  
 Im folgenden Beispiel wird eine Batchabfrage durchgeführt, die eine Produktprüfungsinformation für eine angegebene Produkt-ID abruft, dann eine Prüfung für das Produkt einfügt und anschließend erneut die Produktprüfungsinformationen für die angegebene Produkt-ID abruft. Die neu eingefügte Produktprüfung wird im endgültigen Resultset der Batchabfrage enthalten sein. Im Beispiel wird [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) verwendet, um von einem Ergebnis der Batchabfrage zum nächsten zu wechseln.  
@@ -271,7 +271,7 @@ sqlsrv_close( $conn );
 
 [Abrufen von Daten](../../connect/php/retrieving-data.md)
 
-[Aktualisieren von Daten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+[Aktualisieren von Daten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
 [Beispielanwendung &#40;SQLSRV-Treiber&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 

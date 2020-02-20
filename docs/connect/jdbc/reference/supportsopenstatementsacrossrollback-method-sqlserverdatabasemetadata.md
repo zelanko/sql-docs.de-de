@@ -1,5 +1,5 @@
 ---
-title: supportsopeinstatuementsacrossrollback-Methode | Microsoft-Dokumentation
+title: supportsOpenStatementsAcrossRollback-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4e38b938-f39f-4c5d-9b32-4ba489535c45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ea2ba789b3b2d34671f07acad9f5a7e6636326c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969069"
 ---
 # <a name="supportsopenstatementsacrossrollback-method-sqlserverdatabasemetadata"></a>supportsOpenStatementsAcrossRollback-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsOpenStatementsAcrossRollback()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportsopeinstatuementsacrossrollback-Methode wird von der supportsopeinstatuementsacrossrollback-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsOpenStatementsAcrossRollback-Methode wird von der supportsOpenStatementsAcrossRollback-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

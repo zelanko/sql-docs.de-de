@@ -11,10 +11,10 @@ ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a74f5ccd8a36527dd7c37fc02150d11be632ba9
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025580"
 ---
 # <a name="wrappers-and-interfaces"></a>Wrapper und Schnittstellen
@@ -27,9 +27,9 @@ ms.locfileid: "69025580"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt die java.sql.Wrapper-Schnittstelle. Diese Schnittstelle bietet einen Mechanismus für den Zugriff auf Erweiterungen der für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] spezifischen JDBC-API über eine Proxyschnittstelle.
 
-Die Java. SQL. Wrapper-Schnittstelle definiert zwei Methoden: **isWrapperFor** und **Unwrap**. Mit der Methode **isWrapperFor** wird überprüft, ob das angegebene Eingabeobjekt diese Schnittstelle implementiert. Die Methode**unwrap** gibt ein Objekt zurück, das diese Schnittstelle implementiert, um den Zugriff auf die für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] spezifischen Methoden zu ermöglichen.
+Die java.sql.Wrapper-Schnittstelle definiert zwei Methoden: **isWrapperFor** und **unwrap**. Mit der Methode **isWrapperFor** wird überprüft, ob das angegebene Eingabeobjekt diese Schnittstelle implementiert. Die Methode**unwrap** gibt ein Objekt zurück, das diese Schnittstelle implementiert, um den Zugriff auf die für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] spezifischen Methoden zu ermöglichen.
 
-die **isWrapperFor** -Methode und die **Unwrap** -Methode werden wie folgt verfügbar gemacht:
+Die Methoden **isWrapperFor** und **unwrap** werden wie folgt bereitgestellt:
 
 - [isWrapperFor-Methode &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
 
@@ -41,7 +41,7 @@ die **isWrapperFor** -Methode und die **Unwrap** -Methode werden wie folgt verf�
 
 - [isWrapperFor-Methode &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
 
-- [Unwrap- &#40;Methode SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
+- [unwrap-Methode &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
 
 - [isWrapperFor-Methode &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
 
@@ -49,11 +49,11 @@ die **isWrapperFor** -Methode und die **Unwrap** -Methode werden wie folgt verf�
 
 - [isWrapperFor-Methode &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)
 
-- [Unwrap- &#40;Methode (SQLServerStatement)&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
+- [unwrap-Methode &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
 
 - [isWrapperFor-Methode &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)
 
-- [Unwrap- &#40;Methode SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
+- [unwrap-Methode &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
 
 ## <a name="interfaces"></a>Schnittstellen
 
@@ -77,7 +77,7 @@ Die folgenden Schnittstellen wurden hinzugefügt:
 
 ## <a name="example"></a>Beispiel
 
-### <a name="description"></a>und Beschreibung
+### <a name="description"></a>Beschreibung
 
 In diesem Beispiel wird veranschaulicht, wie der Zugriff auf eine [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-spezifische Funktion über ein DataSource-Objekt erfolgt. Die Klasse „DataSource“ wurde möglicherweise von einem Anwendungsserver umschlossen. Für den Zugriff auf die JDBC-Treiber-spezifische Funktion oder Konstante können Sie die Datenquelle in eine ISQLServerDataSource-Schnittstelle entpacken und die darin deklarierten Funktionen verwenden.
 
@@ -111,6 +111,6 @@ public class UnWrapTest {
 }  
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

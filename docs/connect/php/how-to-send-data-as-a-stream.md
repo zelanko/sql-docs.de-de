@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Senden von Daten als Stream | Microsoft-Dokumentation'
+title: 'Gewusst wie: Senden von Daten als Stream | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d524e7c7f00b08ce636f8a3b7b945f3e8b349af0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936407"
 ---
-# <a name="how-to-send-data-as-a-stream"></a>Vorgehensweise: Streamen von Daten
+# <a name="how-to-send-data-as-a-stream"></a>Gewusst wie: Senden von Daten als Stream
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] nutzt PHP-Datenströme, um große Objekte an den Server zu senden. In diesem Thema wird erklärt, wie Sie Daten in Strömen senden können. Im ersten Beispiel wird mithilfe des SQLSRV-Treibers die Standardvorgehensweise veranschaulicht, bei der alle Datenstromdaten direkt bei der Abfrageausführung gesendet werden. Im zweiten Beispiel wird mithilfe des SQLSRV-Treibers veranschaulicht, wie Sie bis zu 8 Kilobyte (8 KB) an Streamdaten gleichzeitig an den Server senden können.  
   
 Im dritten Beispiel wird veranschaulicht, wie Sie mithilfe des PDO_SQLSRV-Treibers Datenstromdaten an den Server senden.  
   
-## <a name="example-sending-stream-data-at-execution"></a>Beispiel: Senden von Datenstrom Daten bei der Ausführung
+## <a name="example-sending-stream-data-at-execution"></a>Beispiel: Senden von Streamdaten bei der Ausführung
 Im folgenden Beispiel wird eine einzelne Zeile in die *Production.ProductReview* Tabelle der AdventureWorks-Datenbank eingefügt. Die Kundenkommentare ($*comments*) werden mithilfe der PHP-Funktion [fopen](https://php.net/manual/en/function.fopen.php) als Stream geöffnet und bei der Ausführung der Abfrage dann an den Server gestreamt.  
   
 Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Die Ausgabe wird in die Konsole geschrieben.  
@@ -79,7 +79,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>Beispiel: Senden von Datenstrom Daten mithilfe von sqlsrv_send_stream_data
+## <a name="example-sending-stream-data-using-sqlsrv_send_stream_data"></a>Beispiel: Senden von Streamdaten mithilfe von sqlsrv_send_stream_data
 Das nächste Beispiel ähnelt dem vorherigen Beispiel, allerdings wurde hier die Standardvorgehensweise zum Senden von Streamdaten bei der Ausführung der Abfrage deaktiviert. Im Beispiel wird [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) verwendet, um Datenstromdaten an den Server zu senden. Mit jedem Aufruf werden bis zu acht Kilobyte (8 KB) Daten an **sqlsrv_send_stream_data** gesendet. Das Skript zählt die Anzahl der Aufrufe durch **sqlsrv_send_stream_data** und zeigt sie in der Konsole an.  
   
 Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Die Ausgabe wird in die Konsole geschrieben.  
@@ -143,7 +143,7 @@ sqlsrv_close( $conn);
   
 Obwohl in den Beispielen in diesem Thema nur Zeichendaten an den Server gesendet werden, können Daten aller Formate als Strom gesendet werden. Sie können die in diesem Thema erläuterten Techniken beispielsweise nutzen, um Bilder im Binärformat als Ströme zu senden.  
   
-## <a name="example-sending-an-image-as-a-stream"></a>Beispiel: Senden eines Bilds als Stream 
+## <a name="example-sending-an-image-as-a-stream"></a>Beispiel: Senden eines Image als Stream 
   
 ```  
 <?php  

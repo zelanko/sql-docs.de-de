@@ -16,10 +16,10 @@ ms.assetid: 43c428df-ef91-4f55-81c3-49a4db3379cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1ce02a3d3944480d5c00fa4a3b0369aed38c6d59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982201"
 ---
 # <a name="getmaxcolumnsinselect-method-sqlserverdatabasemetadata"></a>getMaxColumnsInSelect-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public int getMaxColumnsInSelect()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getMaxColumnsInSelect-Methode wird von der getMaxColumnsInSelect-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getMaxColumnsInSelect-Methode wird von der getMaxColumnsInSelect-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

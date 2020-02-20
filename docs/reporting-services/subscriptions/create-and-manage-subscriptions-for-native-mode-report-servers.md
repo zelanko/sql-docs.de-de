@@ -12,10 +12,10 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403252"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus
@@ -52,9 +52,9 @@ ms.locfileid: "66403252"
   
 2.  Navigieren Sie zum gewünschten Bericht. Klicken Sie mit der rechten Maustaste auf den Bericht, und wählen Sie dann **Abonnieren** aus.  
   
-3.  **Beschreibung**: Geben Sie eine Beschreibung für das Berichtsabonnement ein, die maximal 512 Zeichen lang ist.  
+3.  **Beschreibung**: Geben Sie eine Beschreibung für das Berichtsabonnement ein, die maximal 512 Zeichen lang ist.  
   
-4.  **Besitzer**: Das Besitzerfeld hat den aktuellen Benutzer als Standardwert und kann nicht bearbeitet werden, wenn Sie ein Abonnement erstellen. Nachdem das Abonnement gespeichert ist, können Sie jedoch die Eigenschaften des Abonnements ändern, einschließlich des Besitzers und der Beschreibung.  
+4.  **Besitzer:** Das Besitzerfeld hat den aktuellen Benutzer als Standardwert und kann nicht bearbeitet werden, wenn Sie ein Abonnement erstellen. Nachdem das Abonnement gespeichert ist, können Sie jedoch die Eigenschaften des Abonnements ändern, einschließlich des Besitzers und der Beschreibung.  
 
 5. Wählen Sie unter **Typ des Abonnements** das Optionsfeld **Standardabonnement** aus.
 
@@ -68,14 +68,14 @@ ms.locfileid: "66403252"
   
 8. Geben Sie unter **Übermittlungsoptionen (Windows-Dateifreigabe)** Folgendes an:  
    - **Dateiname**: Geben Sie einen Dateinamen für den Bericht ein.
-   - **Beim Erstellen der Datei eine Erweiterung hinzufügen**: Diese Option fügt dem Dateinamen eine Erweiterung um drei Zeichen hinzu. Die Dateierweiterung wird vom Berichtsausgabeformat bestimmt, das Sie auswählen.  
-   - **Pfad**: Geben Sie einen UNC-Pfad (Universal Naming Convention) zu einem vorhandenen Ordner ein, an den Sie die Berichte senden möchten, (z.B. \\<Servername\>\<Meine Berichte>). Beginnen Sie die Pfadangabe mit zwei umgekehrten Schrägstrichen (\\). Geben Sie keinen umgekehrten Schrägstrich am Ende an.  
+   - **Fügen Sie beim Erstellen der Datei eine Dateierweiterung hinzu:** Mit dieser Option wird dem Dateinamen eine aus drei Zeichen bestehende Dateierweiterung hinzugefügt. Die Dateierweiterung wird vom Berichtsausgabeformat bestimmt, das Sie auswählen.  
+   - **Pfad**: Geben Sie einen UNC-Pfad (Universal Naming Convention) zu einem vorhandenen Ordner ein, an den Sie die Berichte senden möchten (z. B. \\<Servername\>\<Meine Berichte>). Beginnen Sie die Pfadangabe mit zwei umgekehrten Schrägstrichen (\\). Geben Sie keinen umgekehrten Schrägstrich am Ende an.  
   
-     ![Abonnement einer Dateifreigabe](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "file share subscription")  
+     ![Dateifreigabeabonnement](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "Dateifreigabeabonnement")  
   
-   - **Renderformat**: Wählen Sie ein Berichtsausgabeformat zur Dateiübermittlung aus. Wählen Sie ein Format aus, das der Desktopanwendung entspricht, die Sie verwenden, um den Bericht zu öffnen. Vermeiden Sie Formate, die einen Bericht nicht in einem einzigen Datenstrom rendern oder die Interaktivität einführen, die in einer statischen Datei (beispielsweise HTML 4.0) nicht unterstützt wird.  
+   - **Renderformat:** Wählen Sie ein Berichtsausgabeformat für die Dateiübermittlung aus. Wählen Sie ein Format aus, das der Desktopanwendung entspricht, die Sie verwenden, um den Bericht zu öffnen. Vermeiden Sie Formate, die einen Bericht nicht in einem einzigen Datenstrom rendern oder die Interaktivität einführen, die in einer statischen Datei (beispielsweise HTML 4.0) nicht unterstützt wird.  
   
-   - **Anmeldeinformationen**: Wählen Sie aus, ob Sie das Dateifreigabekonto oder normale Windows-Benutzeranmeldeinformationen verwenden möchten. **Dateifreigabekonto verwenden** ist deaktiviert, wenn Ihr Berichtsadministrator kein Dateifreigabekonto konfiguriert hat. Weitere Informationen finden Sie unter [Abonnementeinstellungen und ein Dateifreigabekonto &#40;Konfigurations-Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Geben Sie in die Textfelder **Benutzername** und **Kennwort** die Anmeldeinformationen ein, die für den Zugriff auf die Dateifreigabe erforderlich sind. Verwenden Sie für den Benutzernamen das Format *\<Domäne>* \\ *\<Benutzername>* .  
+   - **Anmeldeinformationen**: Wählen Sie aus, ob Sie das Dateifreigabekonto oder bestimmte Windows-Benutzeranmeldeinformationen verwenden möchten. **Dateifreigabekonto verwenden** ist deaktiviert, wenn Ihr Berichtsadministrator kein Dateifreigabekonto konfiguriert hat. Weitere Informationen finden Sie unter [Abonnementeinstellungen und ein Dateifreigabekonto &#40;Konfigurations-Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Geben Sie in die Textfelder **Benutzername** und **Kennwort** die Anmeldeinformationen ein, die für den Zugriff auf die Dateifreigabe erforderlich sind. Verwenden Sie für den Benutzernamen das Format *\<Domäne>* \\ *\<Benutzername>* .  
   
    - **Optionen für das Überschreiben**:  
      - **Eine vorhandene Datei mit einer neueren Version überschreiben**.  
@@ -92,9 +92,9 @@ Der Bericht wird als statische Datei übermittelt. Wenn der Bericht interaktive 
   
 2. Navigieren Sie zum gewünschten Bericht. Klicken Sie mit der rechten Maustaste auf den Bericht, und wählen Sie dann **Abonnieren** aus.  
   
-3. **Beschreibung**: Geben Sie eine Beschreibung für das Berichtsabonnement ein, die maximal 512 Zeichen lang ist.  
+3. **Beschreibung**: Geben Sie eine Beschreibung für das Berichtsabonnement ein, die maximal 512 Zeichen lang ist.  
   
-4.  **Besitzer**: Das Besitzerfeld hat den aktuellen Benutzer als Standardwert und kann nicht bearbeitet werden, wenn Sie ein Abonnement erstellen. Nachdem das Abonnement gespeichert ist, können Sie jedoch die Eigenschaften des Abonnements ändern, einschließlich des Besitzers und der Beschreibung.  
+4.  **Besitzer:** Das Besitzerfeld hat den aktuellen Benutzer als Standardwert und kann nicht bearbeitet werden, wenn Sie ein Abonnement erstellen. Nachdem das Abonnement gespeichert ist, können Sie jedoch die Eigenschaften des Abonnements ändern, einschließlich des Besitzers und der Beschreibung.  
 
 5. Wählen Sie unter **Typ des Abonnements** das Optionsfeld **Standardabonnement** aus.
 
@@ -107,18 +107,18 @@ Der Bericht wird als statische Datei übermittelt. Wenn der Bericht interaktive 
 7. Klicken Sie unter **Ziel** auf **E-Mail**.  Wenn die Option **E-Mail** nicht verfügbar ist, wurde der Berichtsserver nicht für E-Mail-Abonnements konfiguriert. Weitere Informationen finden Sie unter [Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md).
   
 8. Geben Sie unter **Übermittlungsoptionen (E-Mail)** Folgendes an:
-   - **An**: Der Empfängername im „An:“-Feld ist selbstadressiert, wofür Ihr Domänenbenutzerkonto verwendet wird. Stellen Sie sicher, dass das Format [benutzername]@[domain.com] ist. Berichtsserver-Konfigurationseinstellungen legen fest, ob das Feld **An** bereits mit Ihrem Benutzerkonto ausgefüllt wird. Weitere Informationen zum Ädern der Konfigurationseinstellung für E-Mail-Adressen finden Sie unter [Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md).
+   - **An**: Als Empfängername im „An:“-Feld wird Ihr eigener Name angegeben. Hierfür wird Ihr Domänenbenutzerkonto verwendet. Stellen Sie sicher, dass das Format [benutzername]@[domain.com] ist. Berichtsserver-Konfigurationseinstellungen legen fest, ob das Feld **An** bereits mit Ihrem Benutzerkonto ausgefüllt wird. Weitere Informationen zum Ädern der Konfigurationseinstellung für E-Mail-Adressen finden Sie unter [Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md).
 
      >[!NOTE]  
      > Abhängig von Ihren Berechtigungen können Sie auch die E-Mail-Adresse eingeben, an die der Bericht geliefert werden soll. Mehrere E-Mail-Adressen müssen durch ein Semikolon (;) getrennt werden. Sie können weitere E-Mail-Adressen in die Textfelder **Cc**, **Bcc**und **Antwort an** eingeben. Für dieses Verfahren müssen Sie über die Berechtigung zum Verwalten von Abonnements verfügen.  
   
-   - **Betreff:** Standardmäßig „Der @ReportName-Bericht wurde zum Zeitpunkt '@ExecutionTime' ausgeführt“. Sie können den Betreff bearbeiten. Beachten Sie jedoch, dass @ReportName und @ExecutionTime die einzigen globalen Variablen sind, die im **Betreff**-Feld unterstützt werden.  
+   - **Antragsteller:** Standardmäßig „Der @ReportName-Bericht wurde zum Zeitpunkt „@ExecutionTime“ ausgeführt.“ Sie können den Betreff bearbeiten. Beachten Sie jedoch, dass @ReportName und @ExecutionTime die einzigen globalen Variablen sind, die im **Betreff**-Feld unterstützt werden.  
   
      ![E-Mail-Abonnement](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "E-Mail-Abonnement")  
 
-   - **Bericht einschließen**: Wählen Sie diese Option aus, um eine Kopie des Berichts einzubetten oder anzufügen. Das Format des Berichts wird durch das ausgewählte Renderingformat bestimmt. Wählen Sie diese Option nicht aus, wenn Sie annehmen, dass die Berichtsgröße das maximale Limit des E-Mail-Systems überschreitet.  
+   - **Bericht einschließen:** Wählen Sie diese Option aus, um eine Kopie des Berichts einzubetten oder anzufügen. Das Format des Berichts wird durch das ausgewählte Renderingformat bestimmt. Wählen Sie diese Option nicht aus, wenn Sie annehmen, dass die Berichtsgröße das maximale Limit des E-Mail-Systems überschreitet.  
   
-   - **Link einschließen**: Wählen Sie diese Option aus, um einen URL-Link zum Bericht im Textkörper der E-Mail-Nachricht einzuschließen.  
+   - **Link einschließen:** Wählen Sie diese Option aus, um einen URL-Link zum Bericht im Textkörper der E-Mail-Nachricht einzufügen.  
   
      >[!NOTE]  
      >Wenn Sie diese beiden Optionen deaktivieren, wird nur der Benachrichtigungstext in der Betreffzeile gesendet.  
@@ -135,7 +135,7 @@ Der Bericht wird als statische Datei übermittelt. Wenn der Bericht interaktive 
 ##  <a name="bkmk_modify_subscription"></a> So ändern Sie ein Abonnement  
  Ein Abonnement kann jederzeit geändert werden. Falls Sie ein Abonnement ändern, während es verarbeitet wird, werden die aktualisierten Einstellungen verwendet, falls sie im Berichtsserver gespeichert sind, bevor die Übermittlungserweiterung die Abonnementdaten erhält. Andernfalls werden die vorhandenen Einstellungen verwendet.  
   
- Ein Benutzer, der ein Abonnement erstellt, ist Besitzer dieses Abonnements. Jeder Benutzer kann seine eigenen Abonnements ändern oder löschen. Sie können den Besitzer des Berichts aus der Seite mit den Abonnementseigenschaften, oder programmgesteuert automatisch ändern. Weitere Informationen finden Sie unter den folgenden Links:  
+ Ein Benutzer, der ein Abonnement erstellt, ist Besitzer dieses Abonnements. Jeder Benutzer kann seine eigenen Abonnements ändern oder löschen. Sie können den Besitzer des Berichts aus der Seite mit den Abonnementseigenschaften, oder programmgesteuert automatisch ändern. Weitere Informationen finden Sie unter  
   
 -   [Verwenden von PowerShell, um Reporting Services-Abonnenten zu ändern und aufzulisten sowie ein Abonnement auszuführen](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
@@ -163,7 +163,7 @@ Informationen zum Beenden eines Abonnements, das zurzeit auf dem Berichtsserver 
   
  Ein Abonnement wird automatisch gelöscht, wenn der zugrunde liegende Bericht gelöscht wird. Wenn Sie ein Abonnement während der Verarbeitung löschen, wird das Abonnement beendet, falls der Löschvorgang durchgeführt wird, bevor die Übermittlungserweiterung die Abonnementdaten erhält. Andernfalls wird die Verarbeitung des Abonnements fortgesetzt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
  [Verwenden von PowerShell, um Reporting Services-Abonnenten zu ändern und aufzulisten sowie ein Abonnement auszuführen](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
  [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)  

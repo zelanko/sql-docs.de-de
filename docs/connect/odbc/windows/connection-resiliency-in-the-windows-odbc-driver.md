@@ -11,10 +11,10 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008430"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Verbindungsresilienz im Windows ODBC-Treiber
@@ -35,7 +35,7 @@ ms.locfileid: "68008430"
   
      Sie können die Anzahl der Verbindungsversuche ändern, wenn Sie:  
   
-    -   Eine Datenquelle definieren oder ändern, die den ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit **ConnectionRetryCount** -Kontrolle verwendet.  
+    -   Eine Datenquelle definieren oder ändern, die den ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit **ConnectionRetryCount**-Kontrolle verwendet.  
   
     -   Verwenden Sie das Schlüsselwort für Verbindungszeichenfolgen **ConnectionRetryCount** .  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68008430"
   
  Die folgenden Statuscodes werden von jeder Funktion zurückgegeben, die auf dem Server einen Befehl ausführt:  
   
-|Status|MessageBox|  
+|State|`Message`|  
 |-----------|-------------|  
 |IMC01|Die Verbindung ist unterbrochen und kann nicht wiederhergestellt werden. Der Client-Treiber hat versucht, die Verbindung ein oder mehrere Male wiederherzustellen und alle Versuche sind fehlgeschlagen. Erhöhen Sie den Wert der Verbindungszeichenfolgen von ConnectRetryCount, um die Anzahl der Wiederherstellungsversuche zu erhöhen.|  
 |IMC02|Der Server hat einen Wiederherstellungsversuch nicht bestätigt. Die Wiederherstellung der Verbindung ist nicht möglich.|  
@@ -71,7 +71,7 @@ ms.locfileid: "68008430"
 |IMC06|Die Verbindung ist unterbrochen und kann nicht wiederhergestellt werden. Die Verbindung wird vom Clienttreiber als nicht behebbar markiert. Es wurde nicht versucht, die Verbindung wiederherzustellen.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel enthält zwei Funktionen. **func1** veranschaulicht, wie Sie mit einem Datenquellennamen (DSN), der den ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows verwendet, eine Verbindung herstellen können. Der DSN verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung und gibt die Benutzer-ID an. **func1** ruft dann die Anzahl der Verbindungs Wiederholungen mit **SQL_COPT_SS_CONNECT_RETRY_COUNT**ab.  
+ Das folgende Beispiel enthält zwei Funktionen. **func1** veranschaulicht, wie Sie mit einem Datenquellennamen (DSN), der den ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows verwendet, eine Verbindung herstellen können. Der DSN verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung und gibt die Benutzer-ID an. **func1** ruft anschließend die Anzahl der nochmaligen Verbindungsversuche mithilfe von **SQL_COPT_SS_CONNECT_RETRY_COUNT** ab.  
   
  **func2** verwendet **SQLDriverConnect**, **ConnectRetryCount** -Schlüsselwort der Verbindungszeichenfolge sowie die Verbindungsattribute, um die Einstellung für Verbindungsversuche und das Wiederholungsintervall aufzurufen.  
   
@@ -173,6 +173,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
+ [Microsoft ODBC Driver for SQL Server unter Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

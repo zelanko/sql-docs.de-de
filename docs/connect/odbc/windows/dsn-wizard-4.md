@@ -1,5 +1,5 @@
 ---
-title: Datenquellen-Assistent (Bildschirm 4) (ODBC-Treiber für SQL Server) | Microsoft-Dokumentation
+title: Datenquellen-Assistent (Bildschirm 4); ODBC-Treiber für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989466"
 ---
 # <a name="data-source-wizard-screen-4"></a>Datenquellen-Assistent (Bildschirm 4)
 
 Geben Sie die Sprache an, die für SQL Server-Meldungen verwendet werden soll, die Übersetzung des Zeichensatzes, und ob der ODBC Driver for SQL Server Einstellungen für Land/Region verwenden soll. Sie können auch die Protokollierung von Abfragen mit langer Ausführungszeit und die Einstellungen der Treiberstatistik steuern.
 
-## <a name="options"></a>enthalten
+## <a name="options"></a>Tastatur
 
 ### <a name="change-the-language-of-sql-server-system-messages-to"></a>Ändern der Sprache von SQL Server-Systemmeldungen in
 
@@ -33,7 +33,7 @@ Wenn diese Option ausgewählt ist, werden Daten, die durch Verbindungen weiterge
 
 ### <a name="trust-server-certificate"></a>Serverzertifikat vertrauen
 
-Diese Option ist nur anwendbar, wenn die Option **starke Verschlüsselung für Daten verwenden** aktiviert ist. Wenn diese Option ausgewählt ist, wird das Zertifikat des Servers nicht so überprüft, dass es den richtigen Hostnamen des Servers hat und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wird. 
+Diese Option ist nur verfügbar, wenn die Option **Starke Verschlüsselung für Daten verwenden** aktiviert ist. Wenn Sie diese Option auswählen, wird nicht geprüft, ob das Zertifikat den richtigen Hostnamen des Servers hat und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wurde. 
 
 ### <a name="perform-translation-for-character-data"></a>Übersetzung für Zeichendaten ausführen
 
@@ -61,19 +61,19 @@ Das Statistikprotokoll ist eine durch Tabstopps getrennte Datei, die in Microsof
 
 ### <a name="connect-retry-count"></a>Verbindungswiederholungsanzahl
 
-Gibt an, wie oft versucht wird, einen erfolglosen Verbindungsversuch zu wiederholen.
+Gibt an, wie oft versucht werden soll, einen erfolglosen Verbindungsversuch zu wiederholen
 
 ### <a name="connect-retry-interval-seconds"></a>Verbindungswiederholungsintervall (Sekunden)
 
-Gibt die Anzahl der Sekunden zwischen den einzelnen Verbindungs Wiederholungs versuchen an. Weitere Informationen zu diesem Vorgang und den Optionen für die Verbindungs **Wiederholungs Anzahl finden Sie** unter [verbindungsresilienz im Windows ODBC-Treiber](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
+Gibt an, wie viele Sekunden zwischen den einzelnen Verbindungsversuchen liegen sollen. Weitere Informationen zur Verwendung dieser Option und der Option **Verbindungswiederholungsanzahl** finden Sie unter [Verbindungsresilienz im ODBC-Treiber für Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
 
 ### <a name="back"></a>Zurück
 
 Klicken Sie auf diese Schaltfläche, um zur vorherigen Seite des Assistenten zurückzukehren.
 
-### <a name="finish"></a>Fertig stellen
+### <a name="finish"></a>Finish
 
-Wenn die auf diesem Bildschirm angegebenen Informationen vollständig sind, können Sie auf **Fertig**stellen klicken. Der DSN wird mit allen auf diesem und anderen Bildschirmen des Assistenten angegebenen Attributen erstellt, und Sie haben die Möglichkeit, den neu erstellten DSN zu testen.
+Nachdem Sie auf diesem Bildschirm alle Informationen angegeben haben, klicken Sie auf **Finish** (Fertigstellen). Der DSN wird erstellt. Dabei werden alle Attribute verwendet, die Sie auf dieser und auf den anderen Seiten des Assistenten angegeben haben. Anschließend haben Sie die Möglichkeit, den neu erstellten DSN zu testen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -1,6 +1,6 @@
 ---
 title: Einzelne Massenkopiervorgänge
-description: Beschreibt das Ausführen eines einzelnen Massen Kopierens von Daten in eine Instanz von SQL Server mithilfe der SqlBulkCopy-Klasse und das Ausführen des Massen Kopiervorgangs mithilfe von Transact-SQL-Anweisungen und der SqlCommand-Klasse.
+description: In diesem Artikel wird das Durchführen einzelner Massenkopiervorgänge für Daten in eine SQL Server-Instanz mithilfe der Klasse „SqlBulkCopy“ beschrieben und wie der Massenkopiervorgang mithilfe von Transact-SQL-Anweisungen und der Klasse „SqlCommand“ durchgeführt werden kann.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 792ebcb5a4365301c31362a748d786c17ddee42a
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 85d24b6695dfe9f592bfefabb13c2042cf3450c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452094"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251172"
 ---
 # <a name="single-bulk-copy-operations"></a>Einzelne Massenkopiervorgänge
 
@@ -30,13 +30,13 @@ Die einfachste Herangehensweise an einen SQL Server-Massenkopiervorgang ist das 
 >   
 >  Weitere Informationen finden Sie unter [Transaktionen und Massenkopiervorgänge](transaction-bulk-copy-operations.md).  
   
-Die allgemeinen Schritte zum Ausführen eines Massen Kopiervorgangs lauten wie folgt:  
+Dies sind die allgemeinen Schritte zum Durchführen eines Massenkopiervorgangs:  
   
-1. Herstellen einer Verbindung mit dem Quellserver und Abrufen der zu kopierenden Daten. Daten können auch aus anderen Quellen stammen, wenn Sie von einem <xref:System.Data.IDataReader> oder <xref:System.Data.DataTable> Objekt abgerufen werden können.  
+1. Herstellen einer Verbindung mit dem Quellserver und Abrufen der zu kopierenden Daten. Die Daten können auch aus einer anderen Quelle stammen, solange sie aus einem <xref:System.Data.IDataReader>- oder <xref:System.Data.DataTable>-Objekt abgerufen werden können.  
   
 2. Stellen Sie eine Verbindung mit dem Zielserver her (sofern die Verbindung nicht von **SqlBulkCopy** hergestellt werden soll).  
   
-3. Erstellen Sie ein <xref:Microsoft.Data.SqlClient.SqlBulkCopy> Objekt, und legen Sie alle erforderlichen Eigenschaften fest.  
+3. Erstellen Sie ein <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Objekt, und nehmen Sie die erforderlichen Einstellungen vor.  
   
 4. Legen Sie die **DestinationTableName**-Eigenschaft fest, um die Zieltabelle für den Masseneinfügevorgang anzugeben.  
   
@@ -44,20 +44,20 @@ Die allgemeinen Schritte zum Ausführen eines Massen Kopiervorgangs lauten wie f
   
 6. Optional können Sie Eigenschaften aktualisieren und **WriteToServer** bei Bedarf erneut aufrufen.  
   
-7. Ruft <xref:Microsoft.Data.SqlClient.SqlBulkCopy.Close%2A> auf oder packt die Massen Kopiervorgänge innerhalb einer `Using` Anweisung.  
+7. Rufen sie <xref:Microsoft.Data.SqlClient.SqlBulkCopy.Close%2A> auf, oder umschließen Sie die Massenkopiervorgänge mit einer `Using`-Anweisung.  
   
 > [!CAUTION]
 >  Wir empfehlen die Verwendung gleicher Datentypen für Quell- und Zielspalten. Wenn die Datentypen nicht übereinstimmen, versucht **SqlBulkCopy**, die einzelnen Quellwerte anhand der vom <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A> angewendeten Regeln in den Zieldatentyp zu konvertieren. Konvertierungen wirken sich negativ auf die Leistung aus und können außerdem zu unerwarteten Fehlern führen. Beispielsweise kann ein Datentyp `Double` in den meisten Fällen in den Datentyp `Decimal` konvertiert werden, aber nicht immer.  
   
 ## <a name="example"></a>Beispiel  
-In der folgenden Konsolenanwendung wird veranschaulicht, wie Daten mithilfe der <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Klasse geladen werden. In diesem Beispiel werden in der SQL Server-Datenbank **AdventureWorks** unter Verwendung von <xref:Microsoft.Data.SqlClient.SqlDataReader> Daten aus der Tabelle **Production.Product** in eine ähnliche Tabelle derselben Datenbank kopiert.  
+Die folgende Konsolenanwendung zeigt das Laden von Daten mithilfe der Klasse <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. In diesem Beispiel werden in der SQL Server-Datenbank **AdventureWorks** unter Verwendung von <xref:Microsoft.Data.SqlClient.SqlDataReader> Daten aus der Tabelle **Production.Product** in eine ähnliche Tabelle derselben Datenbank kopiert.  
   
 > [!IMPORTANT]
 >  Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Massenkopierbeispiel-Einrichtung](bulk-copy-example-setup.md) beschrieben erstellt haben. Der angegebene Code dient nur zur Demonstration der Syntax für die Verwendung von **SqlBulkCopy**. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung `INSERT … SELECT` zum Kopieren der Daten einfacher und schneller.  
   
 [!code-csharp[DataWorks SqlBulkCopy_WriteToServer#1](~/../sqlclient/doc/samples/SqlBulkCopy_WriteToServer.cs#1)]
   
-## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Ausführen eines Massen Kopiervorgangs mithilfe von Transact-SQL und der Command-Klasse  
+## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Durchführen eines Massenkopiervorgangs mithilfe von Transact-SQL und der Klasse „command“  
 Das folgende Beispiel zeigt die Verwendung der Methode <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> zum Ausführen der Anweisung BULK INSERT.  
   
 > [!NOTE]

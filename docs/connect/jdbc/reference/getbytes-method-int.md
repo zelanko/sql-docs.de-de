@@ -1,5 +1,5 @@
 ---
-title: GetBytes-Methode (int) | Microsoft-Dokumentation
+title: getBytes(int)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8c2973e6-d57f-4f64-b812-350ce4098ce6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 848400e46992369d10c57170a1aeccbeac402f84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953390"
 ---
 # <a name="getbytes-method-int"></a>getBytes-Methode (int)
@@ -40,7 +40,7 @@ public byte[] getBytes(int index)
  Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Array von **Byte** Werten.  
+ Ein Array von **byte**-Werten  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -12,37 +12,37 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-mabarw
 ms.openlocfilehash: 8712681a244e969d230b0b7099acd4aa56334f11
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265179"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) ist eine zentrale Benutzer-ID-Verwaltungs Technologie, die als Alternative zur [SQL Server Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md)fungiert. Azure AD ermöglicht Verbindungen mit Microsoft Azure SQL-Datenbank und SQL Data Warehouse mit Verbund Identitäten in Azure AD mit einem Benutzernamen und einem Kennwort, integrierter Windows-Authentifizierung oder einem Azure AD Zugriffs Token. Die PHP-Treiber für SQL Server bieten partielle Unterstützung für diese Features.
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) ist eine zentrale Technologie zur Verwaltung von Benutzer-IDs, die als Alternative zur [SQL Server-Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md) fungiert. Azure AD ermöglicht Verbindungen mit Microsoft Azure SQL-Datenbank und SQL Data Warehouse mit Verbundidentitäten in Azure AD unter Verwendung eines Benutzernamens und Kennworts, der integrierten Windows-Authentifizierung oder einem Azure AD-Zugriffstoken. Die PHP-Treiber für SQL Server unterstützen diese Features teilweise.
 
-Um Azure AD zu verwenden, verwenden Sie die Schlüsselwörter " **Authentication** " oder " **accesstoken** " (die sich gegenseitig ausschließen), wie in der folgenden Tabelle dargestellt. Weitere technische Informationen finden Sie unter [Verwenden von Azure Active Directory mit dem ODBC-Treiber](../../connect/odbc/using-azure-active-directory.md).
+Wenn Sie Azure AD nutzen möchten, verwenden Sie die Schlüsselwörter **Authentication** oder **AccessToken** (diese schließen sich gegenseitig aus), wie in der folgenden Tabelle gezeigt. Weitere technische Details finden Sie unter [Verwenden von Azure Active Directory mit dem ODBC Driver](../../connect/odbc/using-azure-active-directory.md).
 
-|Schlüsselwort|Werte|und Beschreibung|
+|Schlüsselwort|Werte|Beschreibung|
 |-|-|-|
-|**AccessToken**|Nicht festgelegt (Standard)|Der Authentifizierungsmodus, der durch andere Schlüsselwörter bestimmt wird. Weitere Informationen finden Sie unter [Connection Options](../../connect/php/connection-options.md). |
-||Eine Byte Zeichenfolge|Das Azure AD Zugriffs Token, das aus einer OAuth-JSON-Antwort extrahiert wurde. Die Verbindungs Zeichenfolge darf nicht die Benutzer-ID, das Kennwort oder das Authentifizierungs Schlüsselwort enthalten (erfordert den ODBC-Treiber Version 17 oder höher unter Linux oder macOS). |
-|**Authentifizierung**|Nicht festgelegt (Standard)|Der Authentifizierungsmodus, der durch andere Schlüsselwörter bestimmt wird. Weitere Informationen finden Sie unter [Connection Options](../../connect/php/connection-options.md). |
-||`SqlPassword`|Direktes Authentifizieren bei einer SQL Server Instanz (bei der es sich um eine Azure-Instanz handeln kann) mithilfe eines Benutzernamens und Kennworts. Der Benutzername und das Kennwort müssen mithilfe der Schlüsselwörter **UID** und **pwd** in die Verbindungs Zeichenfolge übergeben werden. |
-||`ActiveDirectoryPassword`|Authentifizieren Sie sich mit einer Azure Active Directory Identität mithilfe eines Benutzernamens und Kennworts. Der Benutzername und das Kennwort müssen mithilfe der Schlüsselwörter **UID** und **pwd** in die Verbindungs Zeichenfolge übergeben werden. |
-||`ActiveDirectoryMsi`|Authentifizieren Sie sich entweder über eine vom System zugewiesene verwaltete Identität oder eine vom Benutzer zugewiesene verwaltete Identität (erfordert den ODBC-Treiber Version 17.3.1.1 oder höher). Eine Übersicht und Tutorials finden Sie unter [Was sind verwaltete Identitäten für Azure-Ressourcen?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
+|**AccessToken**|Nicht festgelegt (Standardeinstellung)|Der Authentifizierungsmodus wird durch andere Schlüsselwörter bestimmt. Weitere Informationen finden Sie unter [Connection Options](../../connect/php/connection-options.md). |
+||Eine Bytezeichenfolge|Das aus einer OAuth-JSON-Antwort extrahierte Azure AD-Zugriffstoken. Die Verbindungszeichenfolge darf weder eine Benutzer-ID noch ein Kennwort noch das Schlüsselwort „Authentication“ enthalten (erfordert die ODBC-Treiberversion 17 oder höher unter Linux oder macOS). |
+|**Authentifizierung**|Nicht festgelegt (Standardeinstellung)|Der Authentifizierungsmodus wird durch andere Schlüsselwörter bestimmt. Weitere Informationen finden Sie unter [Connection Options](../../connect/php/connection-options.md). |
+||`SqlPassword`|Direkte Authentifizierung bei einer SQL Server-Instanz (dies kann eine Azure-Instanz sein) unter Verwendung eines Benutzernamens und eines Kennworts. Benutzername und Kennwort müssen mit den Schlüsselwörtern **UID** und **PWD** an die Verbindungszeichenfolge übergeben werden. |
+||`ActiveDirectoryPassword`|Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung eines Benutzernamens und eines Kennworts. Benutzername und Kennwort müssen mit den Schlüsselwörtern **UID** und **PWD** an die Verbindungszeichenfolge übergeben werden. |
+||`ActiveDirectoryMsi`|Authentifizierung über eine vom System oder vom Benutzer zugewiesene verwaltete Identität (erfordert die ODBC-Treiberversion 17.3.1.1 oder höher). Eine Übersicht und Tutorials finden Sie unter [Was sind verwaltete Identitäten für Azure-Ressourcen?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
 
-Das **Authentifizierungs** Schlüsselwort wirkt sich auf die Verbindungs Sicherheitseinstellungen aus. Wenn Sie in der Verbindungs Zeichenfolge festgelegt ist, wird **das Schlüsselwort** Encryption standardmäßig auf true festgelegt. Dies bedeutet, dass der Client die Verschlüsselung anfordert. Außerdem wird das Serverzertifikat unabhängig von der Verschlüsselungs Einstellung überprüft, es sei denn, " **TrustServerCertificate** " ist auf "true" festgelegt (standardmäßig "**false** "). Diese Funktion unterscheidet sich von der alten, weniger sicheren Anmelde Methode, bei der das Serverzertifikat nur überprüft wird, wenn die Verschlüsselung in der Verbindungs Zeichenfolge ausdrücklich angefordert wird.
+Das Schlüsselwort **Authentication** wirkt sich auf die Einstellungen der Verbindungssicherheit aus. Wenn dieses Schlüsselwort in der Verbindungszeichenfolge festgelegt ist, wird das Schlüsselwort **Encrypt** standardmäßig auf „true“ festgelegt. Das bedeutet, dass der Client eine Verschlüsselung anfordert. Darüber hinaus wird unabhängig von der Verschlüsselungseinstellung das Serverzertifikat überprüft, sofern nicht **TrustServerCertificate** auf „true“ festgelegt wird (die Standardeinstellung ist **false**). Dieses Feature unterscheidet sich von der alten, weniger sicheren Anmeldemethode, bei der das Serverzertifikat nur dann überprüft wird, wenn die Verschlüsselung in der Verbindungszeichenfolge explizit angefordert wird.
 
-Wenn Sie Azure AD mit den PHP-Treibern für SQL Server unter Windows verwenden, werden Sie möglicherweise aufgefordert, den [Microsoft Online Services-Anmelde-Assistenten](https://www.microsoft.com/download/details.aspx?id=41950) zu installieren (nicht erforderlich für ODBC 17 und höher).
+Wenn Sie Azure AD mit den PHP-Treibern für SQL Server unter Windows verwenden, werden Sie möglicherweise aufgefordert, den [Microsoft Online Services-Anmeldeassistenten](https://www.microsoft.com/download/details.aspx?id=41950) zu installieren (für ODBC-Version 17 und höher nicht erforderlich).
 
 #### <a name="limitations"></a>Einschränkungen
 
-Unter Windows unterstützt der zugrunde liegende ODBC-Treiber einen weiteren Wert für das **Authentifizierungs** Schlüsselwort **activedirectoryintegrated**, aber die PHP-Treiber unterstützen diesen Wert auf keiner Plattform.
+Unter Windows unterstützt der zugrunde liegende ODBC-Treiber einen weiteren Wert für das Schlüsselwort **Authentication**: **ActiveDirectoryIntegrated**. Allerdings unterstützen die PHP-Treiber diesen Wert auf keiner Plattform.
 
-## <a name="example---connect-using-sqlpassword-and-activedirectorypassword"></a>Beispiel: Herstellen einer Verbindung mithilfe von sqlpassword und activedirectoriypassword
+## <a name="example---connect-using-sqlpassword-and-activedirectorypassword"></a>Beispiel: Herstellen einer Verbindung mithilfe von SqlPassword und ActiveDirectoryPassword
 
 ```php
 <?php
@@ -82,7 +82,7 @@ if ($conn === false) {
 ?>
 ```
 
-## <a name="example---connect-using-the-pdosqlsrv-driver"></a>Beispiel: Herstellen einer Verbindung mithilfe des PDO_SQLSRV-Treibers
+## <a name="example---connect-using-the-pdo_sqlsrv-driver"></a>Beispiel: Herstellen einer Verbindung mithilfe des PDO_SQLSRV-Treibers
 
 ```php
 <?php
@@ -120,7 +120,7 @@ try {
 ?>
 ```
 
-## <a name="example---connect-using-azure-ad-access-token"></a>Beispiel: Herstellen einer Verbindung mithilfe Azure AD Zugriffs Tokens
+## <a name="example---connect-using-azure-ad-access-token"></a>Beispiel: Herstellen einer Verbindung mithilfe eines Azure AD-Zugriffstokens
 
 ### <a name="sqlsrv-driver"></a>SQLSRV-Treiber
 
@@ -140,7 +140,7 @@ if ($conn === false) {
 ?>
 ```
 
-### <a name="pdosqlsrv-driver"></a>PDO_SQLSRV-Treiber
+### <a name="pdo_sqlsrv-driver"></a>PDO_SQLSRV-Treiber
 
 ```php
 <?php
@@ -159,11 +159,11 @@ try {
 ?>
 ```
 
-## <a name="example---connect-using-managed-identities-for-azure-resources"></a>Beispiel: Verbinden mit verwalteten Identitäten für Azure-Ressourcen
+## <a name="example---connect-using-managed-identities-for-azure-resources"></a>Beispiel: Herstellen einer Verbindung mithilfe von verwalteten Identitäten für Azure-Ressourcen
 
-### <a name="using-the-system-assigned-managed-identity-with-sqlsrv-driver"></a>Verwenden der vom System zugewiesenen verwalteten Identität mit dem sqlsrv-Treiber
+### <a name="using-the-system-assigned-managed-identity-with-sqlsrv-driver"></a>Verwenden der vom System zugewiesenen verwalteten Identität mit dem SQLSRV-Treiber
 
-Verwenden Sie beim Herstellen einer Verbindung mithilfe der vom System zugewiesenen verwalteten Identität nicht die UID-oder PWD-Optionen.
+Wenn Sie mithilfe der vom System zugewiesenen verwalteten Identität eine Verbindung herstellen, verwenden Sie nicht die Optionen UID und PWD.
 
 ```php
 <?php
@@ -198,11 +198,11 @@ if ($conn === false) {
 ?>
 ```
 
-### <a name="using-the-user-assigned-managed-identity-with-pdosqlsrv-driver"></a>Verwenden der vom Benutzer zugewiesenen verwalteten Identität mit dem PDO_SQLSRV-Treiber
+### <a name="using-the-user-assigned-managed-identity-with-pdo_sqlsrv-driver"></a>Verwenden der vom Benutzer zugewiesenen verwalteten Identität mit dem PDO_SQLSRV-Treiber
 
-Eine vom Benutzer zugewiesene verwaltete Identität wird als eigenständige Azure-Ressource erstellt. Azure erstellt eine Identität in dem Azure AD Mandanten, der vom verwendeten Abonnement als vertrauenswürdig eingestuft wird. Nachdem die Identität erstellt wurde, kann die Identität mindestens einer Azure-Dienst Instanz zugewiesen werden. Kopieren Sie `Object ID` die dieser Identität, und legen Sie Sie als Benutzernamen in der Verbindungs Zeichenfolge fest. 
+Eine vom Benutzer zugewiesene verwaltete Identität wird als eigenständige Azure-Ressource erstellt. Azure erstellt eine Identität in dem Azure AD-Mandanten, der vom verwendeten Abonnement als vertrauenswürdig eingestuft wird. Nachdem die Identität erstellt wurde, kann sie einer oder mehreren Azure-Dienstinstanzen zugewiesen werden. Kopieren Sie die `Object ID` dieser Identität, und legen Sie sie als Benutzernamen in der Verbindungszeichenfolge fest. 
 
-Wenn Sie also eine Verbindung mit der vom Benutzer zugewiesenen verwalteten Identität herstellen, geben Sie die Objekt-ID als Benutzernamen an, und lassen Sie das Kennwort aus.
+Geben Sie beim Herstellen einer Verbindung mithilfe der vom Benutzer zugewiesenen verwalteten Identität die Objekt-ID als Benutzernamen an, lassen Sie aber das Kennwort weg.
 
 ```php
 <?php

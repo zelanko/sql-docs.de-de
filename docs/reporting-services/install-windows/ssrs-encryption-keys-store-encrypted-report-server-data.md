@@ -15,10 +15,10 @@ ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593480"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten
@@ -52,7 +52,7 @@ ms.locfileid: "73593480"
   
  In einer Berichtsserverbereitstellung für horizontales Skalieren, bei der mehrere Berichtsserverinstanzen dieselbe Berichtsserver-Datenbank verwenden, wird ein einzelner symmetrischer Schlüssel von allen Berichtsserverknoten verwendet. Jeder Knoten muss über eine Kopie des freigegebenen symmetrischen Schlüssels verfügen. Eine Kopie des symmetrischen Schlüssels wird automatisch für jeden Knoten erstellt, wenn die Bereitstellung für horizontales Skalieren konfiguriert wird. Jeder Knoten verschlüsselt seine Kopie des symmetrischen Schlüssels mithilfe des öffentlichen Schlüssels eines für das jeweilige Windows-Dienstkonto spezifischen Schlüsselpaares. Informationen zur Erstellung des symmetrischen Schlüssels für die Bereitstellung durch einzelne Instanzen oder horizontales Skalieren finden Sie unter [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
  
- Außerdem kann die Berichts Server-Datenbank ab 2019 mit Transparent Data Encryption in SQL Server konfiguriert werden, um einen zusätzlichen Schutz für Ihre ruhenden Daten bereitzustellen.
+ Außerdem kann die Berichtsserver-Datenbank ab 2019 mit Transparent Data Encryption in SQL Server konfiguriert werden, um einen zusätzlichen Schutz für Ihre ruhenden Daten bereitzustellen.
   
 > [!NOTE]  
 >  Wenn Sie das Report Server-Windows-Dienstkonto ändern, können die asymmetrischen Schlüssel ihre Gültigkeit verlieren und Serveroperationen dadurch unterbrochen werden. Um dieses Problem zu vermeiden, verwenden Sie immer das Reporting Services-Konfigurationstool, um die Einstellungen des Dienstkontos zu ändern. Wenn Sie das Konfigurationstool verwenden, werden die Schlüssel automatisch aktualisiert. Weitere Informationen finden Sie unter [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  

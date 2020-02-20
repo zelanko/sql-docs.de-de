@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: dc86193f40474fc373c1b0e7dd48e579e8548821
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015844"
 ---
 # <a name="conversions-ole-db"></a>Konvertierungen (OLE DB)
@@ -26,11 +26,11 @@ ms.locfileid: "68015844"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In diesem Abschnitt wird erläutert, wie Sie zwischen **DateTime** -und **DateTimeOffset** -Werten konvertieren. Die in diesem Abschnitt beschriebenen Konvertierungen werden entweder von OLE DB bereitgestellt oder sind eine konsistente Erweiterung von OLE DB.  
+  In diesem Abschnitt wird die Konvertierung zwischen **datetime**- und **datetimeoffset**-Werten beschrieben. Die in diesem Abschnitt beschriebenen Konvertierungen werden entweder von OLE DB bereitgestellt oder sind eine konsistente Erweiterung von OLE DB.  
   
- Das Format für Literale und Zeichenfolgen für Datums- und Zeitangaben in OLE DB entspricht normalerweise ISO und hängt nicht von der Gebietsschemaeinstellung des Clients ab. Eine Ausnahme ist DBTYPE_DATE, wo der Standard OLE-Automatisierung ist. Da jedoch OLE DB Treiber für SQL Server nur zwischen Typen konvertiert, wenn Daten an oder vom Client übertragen werden, kann eine Anwendung OLE DB Treiber nicht erzwingen, dass SQL Server zwischen DBTYPE_DATE-und Zeichen folgen Formaten konvertiert werden kann. Andernfalls verwenden Zeichenfolgen die folgenden Formate (Text in Klammern gibt ein optionales Element an):  
+ Das Format für Literale und Zeichenfolgen für Datums- und Zeitangaben in OLE DB entspricht normalerweise ISO und hängt nicht von der Gebietsschemaeinstellung des Clients ab. Eine Ausnahme ist DBTYPE_DATE, wo der Standard OLE-Automatisierung ist. Da der OLE DB-Treiber für SQL Server jedoch nur zwischen Typen konvertiert, wenn Daten vom oder zum Client übertragen werden, kann eine Anwendung nicht erzwingen, dass der OLE DB-Treiber für SQL Server zwischen DBTYPE_DATE und Zeichenfolgenformaten konvertiert. Andernfalls verwenden Zeichenfolgen die folgenden Formate (Text in Klammern gibt ein optionales Element an):  
   
--   **DateTime** -und **DateTimeOffset** -Zeichen folgen haben folgendes Format:  
+-   Das Format der **datetime**- und **datetimeoffset**-Zeichenfolgen ist das folgende:  
   
      *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
@@ -38,14 +38,14 @@ ms.locfileid: "68015844"
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   Das Format von **Datums** Zeichenfolgen lautet:  
+-   Das Format von **date**-Zeichenfolgen ist das folgende:  
   
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  Frühere Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und SQLOLEDB haben OLE-Konvertierungen implementiert, falls Standardkonvertierungen fehlgeschlagen sind. Der OLE DB-Treiber für SQL Server folgt dem gleichen Verhalten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wie Native Client. Folglich unterscheiden sich einige Konvertierungen, die von OLE DB Treiber für SQL Server ausgeführt werden, von der OLE DB Spezifikation.  
+>  Frühere Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und SQLOLEDB haben OLE-Konvertierungen implementiert, falls Standardkonvertierungen fehlgeschlagen sind. Der OLE DB-Treiber für SQL Server verhält sich identisch mit dem nativen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Client. Als Ergebnis unterscheiden sich einige vom OLE DB-Treiber für SQL Server ausgeführte Konvertierungen von der OLE DB-Spezifikation.  
   
- Konvertierungen von Zeichenfolgen ermöglichen Flexibilität bei Leerstellen- und Feldbreite. Weitere Informationen finden Sie im Abschnitt "Datenformate: Zeichen folgen und Literale" unter [Datentyp Unterstützung für OLE DB Datums-und Uhrzeit Verbesserungen](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Konvertierungen von Zeichenfolgen ermöglichen Flexibilität bei Leerstellen- und Feldbreite. Weitere Informationen finden Sie im Abschnitt „Datenformate: Zeichenfolgen und Literale“ des Artikels [Datentypunterstützung für Verbesserungen von Datum und Uhrzeit in OLE DB](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Folgende sind allgemeine Konvertierungsregeln:  
   

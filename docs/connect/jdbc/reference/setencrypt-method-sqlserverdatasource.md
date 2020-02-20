@@ -1,5 +1,5 @@
 ---
-title: "\"ltencrypt\"-Methode (SQLServerDataSource) | Microsoft-Dokumentation"
+title: setEncrypt-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 248213fed555ffc029162c44bdcccb656c311703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974287"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>setEncrypt-Methode (SQLServerDataSource)
@@ -37,7 +37,7 @@ public void setEncypt(boolean encrypt)
 #### <a name="parameters"></a>Parameter  
  *encrypt*  
   
- **true** , wenn die Secure Sockets Layer (SSL)-Verschlüsselung zwischen dem Client und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]aktiviert ist. Andernfalls lautet der Wert **false**.  
+ Der Wert lautet **TRUE**, wenn die SSL-Verschlüsselung (Secure Sockets Layer) zwischen dem Client und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aktiviert ist. Andernfalls lautet der Wert **false**.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Ist die encrypt-Eigenschaft auf **TRUE** festgelegt, wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sichergestellt, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für alle zwischen Client und Server versendeten Daten die SSL-Verschlüsselung (Secure Sockets Layer) verwendet, sofern auf dem Server ein Zertifikat installiert ist. Der Standardwert ist **false**.  

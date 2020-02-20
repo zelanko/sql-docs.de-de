@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu Isolations Stufen | Microsoft-Dokumentation
+title: Transaktionsisolationsstufen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027394"
 ---
 # <a name="understanding-isolation-levels"></a>Grundlegendes zu Isolationsstufen
@@ -45,13 +45,13 @@ Eine niedrigere Isolationsstufe erhöht einerseits die Möglichkeit, dass viele 
 
  Die folgende Tabelle veranschaulicht, welche Parallelitätsnebeneffekte in den einzelnen Isolationsstufen zulässig sind.  
   
-| Isolationsebene  | Dirty Read | Non Repeatable Read | Phantom |
+| Isolationsstufe  | Dirty Read | Non Repeatable Read | Phantom |
 | ---------------- | ---------- | ------------------- | ------- |
 | Read Uncommitted | Ja        | Ja                 | Ja     |
 | Read Committed   | Nein         | Ja                 | Ja     |
 | Repeatable Read  | Nein         | Nein                  | Ja     |
 | Momentaufnahme         | Nein         | Nein                  | Nein      |
-| Serializable     | Nein         | Nein                  | Nein      |
+| Serialisierbar     | Nein         | Nein                  | Nein      |
   
 Transaktionen müssen mindestens auf der Isolationsstufe „Repeatable Read“ ausgeführt werden, um den Verlust von Updates zu verhindern. Dies kann auftreten, wenn zwei Transaktionen jeweils die gleiche Zeile abrufen und sie später auf Grundlage der zunächst abgerufenen Werte aktualisieren. Wenn die beiden Transaktionen Zeilen mit einer einzigen UPDATE-Anweisung aktualisieren und die Aktualisierung nicht auf Grundlage der zuvor abgerufenen Werte erfolgt, können bei der Standardisolationsstufe „Read Committed“ keine verlorenen Aktualisierungen auftreten.  
 
@@ -75,6 +75,6 @@ con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
 
 Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Isolationsstufen finden Sie unter „Isolationsstufen in [!INCLUDE[ssDE](../../includes/ssde_md.md)]“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Ausführen von Transaktionen mit dem JDBC-Treiber](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

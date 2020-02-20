@@ -1,28 +1,30 @@
 ---
-title: Verwenden des ReportViewer-Steuerelements in WebForms | Microsoft-Dokumentation
+title: Verwenden des WebForms-Steuerelement „ReportViewer“
+description: Zum Anzeigen von Berichten, die auf einem Berichtsserver bereitgestellt werden oder sich im lokalen Dateisystem befinden, können Sie das ReportViewer-Steuerelement in WebForms verwenden, um die Berichte in einer Webanwendung zu rendern.
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5ea5370cbb59d5fb70fa233f3695ac77e412669
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MTE75
+ms.openlocfilehash: 1271a159feaf20dd46d23c5fc3ff4a0cb2aa87be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687379"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796938"
 ---
-# <a name="using-the-webforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WebForms
+# <a name="use-the-webforms-reportviewer-control"></a>Verwenden des WebForms-Steuerelement „ReportViewer“
   Zum Anzeigen von Berichten, die auf einem Berichtsserver bereitgestellt werden oder sich im lokalen Dateisystem befinden, können Sie das ReportViewer-Steuerelement in WebForms verwenden, um die Berichte in einer Webanwendung zu rendern.  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>So verwenden Sie das ReportViewer-Steuerelement in einer Webanwendung  
   
-1.  Erstellen Sie mithilfe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] eine neue [!INCLUDE[msCoName](../../includes/msconame-md.md)]-ASP.NET-Website.  
+1.  Erstellen Sie mithilfe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] eine neue [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET-Website.  
   
      \- Oder –  
   

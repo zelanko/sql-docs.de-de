@@ -16,10 +16,10 @@ ms.assetid: f6999d9c-eab6-4e4d-96d8-e0fa4b4b87e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de499e4cc11f1da1780878e4c921d161ee8b2693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998443"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject"></a>updateObject-Methode (java.lang.String, java.lang.Object)
@@ -48,7 +48,7 @@ public void updateObject(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese UpdateObject-Methode wird von der UpdateObject-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese updateObject-Methode wird von der updateObject-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [updateObject-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   

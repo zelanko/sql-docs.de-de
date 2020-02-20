@@ -18,10 +18,10 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0012f01fead8d6890f8e593f4991cbb0252e3dd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576527"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS)
@@ -99,7 +99,7 @@ ms.locfileid: "65576527"
 ### <a name="groups-and-scope-in-data-regions"></a>Gruppen und Bereiche in Datenbereichen  
  Geben Sie für jeden Datenbereich die gleichen Gruppierungsausdrücke an, um mehrere Sichten der Daten aus einem Dataset bereitzustellen. Sie können kategorisierte Daten z. B. zur Anzeige aller Detaildaten in einer Tabelle und zur Anzeige von Aggregaten in einem Kreisdiagramm anzeigen, um jede Kategorie in Bezug zum gesamten Dataset zu visualisieren. Weitere Informationen finden Sie unter [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
- Wenn Sie einen Datenbereich in einer Zelle in einer Tabelle, Matrix oder Liste schachteln, legen Sie die Daten automatisch auf die innersten Gruppenmitgliedschaften der Zelle aus. Angenommen, Sie fügen einer Zelle, die sich in einer Zeilengruppe und in einer Spaltengruppe befindet, ein Diagramm hinzu. Die für dieses Diagramm verfügbaren Daten werden zur Laufzeit dem Bereich der innersten Zeilengruppeninstanz und innersten Spaltengruppeninstanz zugeordnet. Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Wenn Sie einen Datenbereich in einer Zelle in einer Tabelle, Matrix oder Liste schachteln, legen Sie die Daten automatisch auf die innersten Gruppenmitgliedschaften der Zelle aus. Angenommen, Sie fügen einer Zelle, die sich in einer Zeilengruppe und in einer Spaltengruppe befindet, ein Diagramm hinzu. Die für dieses Diagramm verfügbaren Daten werden zur Laufzeit dem Bereich der innersten Zeilengruppeninstanz und innersten Spaltengruppeninstanz zugeordnet. Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)-Ausdruck dar.  
   
   
 ##  <a name="Sorting"></a> Sortieren von Daten im Bericht  
@@ -107,12 +107,12 @@ ms.locfileid: "65576527"
   
  Alle drei Typen von Sortierungen können im gleichen Bericht kombiniert werden. Standardmäßig wird die Sortierreihenfolge durch die Reihenfolge bestimmt, in der Daten von der Datasetabfrage zurückgegeben werden. Sortierungsausdrücke werden im Datenbereich und in der Datenbereichsgruppe angewendet. Interaktive Sortierungen werden nach Sortierungsausdrücken angewendet.  
   
- Bei Ausdrücken, die Aggregatfunktionen enthalten, sind die meisten Ergebnisse nicht von der Sortierreihenfolge betroffen. Rückgabewerte für die folgenden Aggregatfunktionen sind von der Sortierreihenfolge betroffen: „First“, „Last“ und „Previous“. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Bei Ausdrücken, die Aggregatfunktionen enthalten, sind die meisten Ergebnisse nicht von der Sortierreihenfolge betroffen. Rückgabewerte für die folgenden Aggregatfunktionen sind von der Sortierreihenfolge betroffen: First, Last und Previous. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Sortieren von Daten in einer Datasetabfrage  
  Schließen Sie Sortierreihenfolge in der Datasetabfrage ein, um diese vorzusortieren, bevor sie für einen Bericht abgerufen werden. Beim Sortieren von Daten in der Abfrage wird die Sortierung selbst von der Datenquelle und nicht vom Berichtsprozessor ausgeführt.  
   
- Beim Datenquellentyp [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie der Datenbankabfrage eine ORDER BY-Klausel hinzufügen. Beispielsweise sortiert die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage die Spalten Sales und Region by Sales in absteigender Reihenfolge von der Tabelle SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`.  
+ Bei einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquellentyp können Sie der Datenbankabfrage eine ORDER BY-Klausel hinzufügen. Beispielsweise sortiert die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage die Spalten Sales und Region by Sales in absteigender Reihenfolge von der Tabelle SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`.  
   
 > [!NOTE]  
 >  Nicht alle Datenquellen unterstützen die Möglichkeit, in der Abfrage die Sortierreihenfolge anzugeben.  

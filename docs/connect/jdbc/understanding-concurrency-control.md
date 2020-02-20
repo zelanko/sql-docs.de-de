@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zur Parallelitäts Steuerung | Microsoft-Dokumentation
+title: Grundlegendes zur Parallelitätssteuerung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027639"
 ---
 # <a name="understanding-concurrency-control"></a>Grundlegendes zur Parallelitätssteuerung
@@ -28,9 +28,9 @@ ms.locfileid: "69027639"
 ## <a name="remarks"></a>Bemerkungen  
  Der JDBC-Treiber unterstützt die folgenden Parallelitätstypen:  
   
-|Parallelitätstyp|Merkmale|Anzahl von Zeilensperren|und Beschreibung|  
+|Parallelitätstyp|Merkmale|Anzahl von Zeilensperren|Beschreibung|  
 |----------------------|---------------------|---------------|-----------------|  
-|CONCUR_READ_ONLY|Schreibgeschützt|Nein|Updates über den Cursor sind nicht zulässig; es werden keine Sperren für die Zeilen aufrechterhalten, aus denen das Resultset besteht.|  
+|CONCUR_READ_ONLY|Nur Leseberechtigung|Nein|Updates über den Cursor sind nicht zulässig; es werden keine Sperren für die Zeilen aufrechterhalten, aus denen das Resultset besteht.|  
 |CONCUR_UPDATABLE|Optimistic Read Write|Nein|Die Datenbank geht davon aus, dass Zeilenkonflikte unwahrscheinlich, aber möglich sind. Zeilenintegrität wird mit einem Timestampvergleich geprüft.|  
 |CONCUR_SS_SCROLL_LOCKS|Pessimistic Read Write|Ja|Die Datenbank geht davon aus, dass Zeilenkonflikte wahrscheinlich sind. Zeilenintegrität wird mit Zeilensperren sichergestellt.|  
 |CONCUR_SS_OPTIMISTIC_CC|Optimistic Read Write|Nein|Die Datenbank geht davon aus, dass Zeilenkonflikte unwahrscheinlich, aber möglich sind. Zeilenintegrität wird mit einem Timestampvergleich überprüft.<br /><br /> Bei [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher ändert der Server dies in CONCUR_SS_OPTIMISTIC_CCVAL, wenn die Tabelle keine timestamp-Spalte enthält.<br /><br /> Wenn in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] die zugrunde liegende Tabelle eine timestamp-Spalte aufweist, wird OPTIMISTIC WITH ROW VERSIONING selbst dann verwendet, wenn OPTIMISTIC WITH VALUES angegeben wurde. Wenn OPTIMISTIC WITH ROW VERSIONING angegeben wurde und die Tabelle keine Timestamps aufweist, wird OPTIMISTIC WITH VALUES verwendet.|  
@@ -39,13 +39,13 @@ ms.locfileid: "69027639"
 ## <a name="result-sets-that-are-not-updateable"></a>Nicht aktualisierbare Resultsets  
  Ein aktualisierbares Resultset ist ein Resultset, in dem Zeilen eingefügt, aktualisiert und gelöscht werden können. In den folgenden Fällen kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen aktualisierbaren Cursor erstellen. Die generierte Ausnahme lautet "Das Resultset kann nicht aktualisiert werden".  
   
-|Ursache|und Beschreibung|Lösung|  
+|Ursache|Beschreibung|Problembehandlung|  
 |-----------|-----------------|------------|  
 |Anweisung wurde nicht mit JDBC 2.0-Syntax (oder neuer) erstellt|In JDBC 2.0 wurden neue Methoden eingeführt, um Anweisungen zu erstellen. Bei der Verwendung von JDBC 1.0-Syntax ist das Resultset standardmäßig schreibgeschützt.|Geben Sie den Resultsettyp und die Parallelität beim Erstellen der Anweisung an.|  
 |Anweisung wurde mit TYPE_SCROLL_INSENSITIVE erstellt|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt einen statischen Momentaufnahmencursor. Dieser ist von den zugrunde liegenden Tabellenzeilen getrennt, um den Cursor vor Zeilenudpates durch andere Benutzer zu schützen.|Verwenden Sie TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC oder TYPE_FORWARD_ONLY mit CONCUR_UPDATABLE, um das Erstellen eines statischen Cursors zu vermeiden.|  
 |Tabellenentwurf schließt einen KEYSET-Cursor oder einen DYNAMIC-Cursor aus|Die zugrunde liegende Tabelle weist keine eindeutigen Schlüssel auf, mit denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Zeile eindeutig identifizieren kann.|Fügen Sie der Tabelle eindeutige Schlüssel hinzu, um eine eindeutige Identifikation jeder Zeile bereitzustellen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Resultsets mit dem JDBC-Treiber](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

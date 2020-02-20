@@ -1,6 +1,6 @@
 ---
-title: Löschen einer SQL Server Tabelle | Microsoft-Dokumentation
-description: Löschen einer SQL Server Tabelle mithilfe OLE DB Treibers für SQL Server
+title: Löschen einer SQL Server-Tabelle | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie eine SQL Server-Tabelle mit dem OLE DB-Treiber für SQL Server löschen.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5c5b241af215c04a72bf389079a4a0299d7496b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994005"
 ---
 # <a name="dropping-a-sql-server-table"></a>Löschen einer SQL Server-Tabelle
@@ -28,7 +28,7 @@ ms.locfileid: "67994005"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server macht die **ITableDefinition::D roptable** -Funktion verfügbar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , um eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle aus einer Datenbank zu entfernen.  
+  Der OLE DB-Treiber für SQL Server macht die **ITableDefinition::DropTable**-Funktion verfügbar, mit der sich [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabellen aus Datenbanken entfernen lassen.  
   
  Geben Sie den Tabellennamen als Unicode-Zeichenfolge in das *pwszName* -Element der *uName*-Vereinigung des *pTableID*-Parameters ein. Das *eKind*-Element von *pTableID* muss DBKIND_NAME sein.  
   

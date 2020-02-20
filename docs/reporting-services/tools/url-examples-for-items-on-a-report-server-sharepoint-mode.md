@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574019"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Beispiele für URLs von Elementen auf einem Berichtsserver (SharePoint-Modus)
@@ -29,7 +29,7 @@ ms.locfileid: "65574019"
   
  Die folgenden Elemente der Webhierarchie können zum Zugreifen auf und Sichern von Berichtsserverinhalten verwendet werden. Andere Objekte wie Listen und Seiten werden für den Zugriff auf Berichtsserverinhalte nicht verwendet und daher in der folgenden Tabelle nicht beschrieben.  
   
-|Objekt|und Beschreibung|  
+|Object|BESCHREIBUNG|  
 |------------|-----------------|  
 |SharePoint-Webanwendung|Eine SharePoint-Webanwendung kann als eigenständiger Server oder als Teil einer Farm installiert werden, die eine Auflistung von virtuellen Servern enthält. Eine Webanwendung besitzt eine URL (z.B. `http:*//servername*`) und kann mehrere Websites enthalten.|  
 |Website|Bei einer Website handelt es sich entweder um eine übergeordnete Website für eine Webanwendung oder um eine Unterwebsite.|  
@@ -49,12 +49,12 @@ ms.locfileid: "65574019"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL für eine SharePoint-Serverwebsite oder -Unterwebsite  
  Wenn Sie einen Bericht oder eine Berichtsdatenquelle bereitstellen, müssen Sie eine URL zu einer SharePoint-Website und ggf. -Unterwebsite verwenden. In der URL wird der Name der Website unmittelbar nach dem Servernamen angezeigt, z.B. `https://*servername/site*` oder `https://*servername/site/subsite*`.  
   
- In einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007- oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Webanwendung entsprechen die Website und die Unterwebsite häufig den Registerkarten auf der Hauptwebsite. Klicken Sie zum Suchen des Website- oder Unterwebsitenamens auf **Homepage**und anschließend auf **Gesamter Websiteinhalt**. Führen Sie einen Bildlauf ganz nach unten durch, und suchen Sie nach **Websites und Arbeitsbereiche**. Im folgenden Abschnitt sind die Websites aufgeführt.  
+ In einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007- oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]-Webanwendung entsprechen die Website und die Unterwebsite häufig den Registerkarten auf der Hauptwebsite. Klicken Sie zum Suchen des Website- oder Unterwebsitenamens auf **Homepage**und anschließend auf **Gesamter Websiteinhalt**. Führen Sie einen Bildlauf ganz nach unten durch, und suchen Sie nach **Websites und Arbeitsbereiche**. Im folgenden Abschnitt sind die Websites aufgeführt.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL für eine SharePoint-Bibliothek  
  Wenn Sie einen Bericht oder ein verknüpftes Element in einer SharePoint-Bibliothek bereitstellen, müssen Sie eine URL zur SharePoint-Bibliothek verwenden. Die URL für eine Bibliothek unterscheidet sich je nach verwendeter SharePoint-Version.  
   
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 oder [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] wird die Bibliothek nach dem Servernamen angezeigt, z.B. `https://*servername/*Shared Documents`.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 oder [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] wird die Bibliothek nach dem Servernamen angezeigt, z. B. `https://*servername/*Shared Documents`.  
   
  In [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]wird die Bibliothek nach der Website und der Unterwebsite angezeigt. Beispiel: `https://*servername/site/*Documents`.  
   
@@ -135,6 +135,6 @@ ms.locfileid: "65574019"
 ## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen eines Berichts in einer SharePoint-Bibliothek](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publish a Shared Data Source to a SharePoint Library (Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek)](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Eigenschaftsseiten für Projekt (Dialogfeld)](../../reporting-services/tools/project-property-pages-dialog-box.md)  
+ [Project Property Pages Dialog Box (Projekt (Eigenschaftenseiten, Dialogfeld))](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   

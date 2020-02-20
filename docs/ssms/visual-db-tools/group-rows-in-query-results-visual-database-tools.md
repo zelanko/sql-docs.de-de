@@ -1,10 +1,7 @@
 ---
-title: Gruppieren von Zeilen in Abfrageergebnissen (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 01/19/2017
+title: Gruppenzeilen in Abfrageergebnissen
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,20 +11,24 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3208a3458098b85325a19c014d99bca3b4f05c4d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 508c7561dc77f375375e174d68d3955e044ae4ee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254475"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247198"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Gruppieren von Zeilen in Abfrageergebnissen (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Zum Bilden von Teilergebnissen oder zum Anzeigen weiterer Kurzinformationen für Teilbereiche einer Tabelle erstellen Sie Gruppen mithilfe einer Aggregatabfrage. In jeder Gruppe werden die Daten aus allen Zeilen der Tabelle mit demselben Wert zusammengefasst.  
   
 Angenommen, Sie möchten den durchschnittlichen Preis für ein Buch in der Tabelle `titles` anzeigen lassen, wobei die Ergebnisse nach Herausgeber aufgeteilt werden sollen. Dazu gruppieren Sie die Abfrage nach Herausgeber (z. B. `pub_id`). Hierfür kann folgende Abfrageausgabe formuliert werden:  
   
-![Abfrageergebnisse: Durchschnittspreis gruppiert nach Verleger](../../ssms/visual-db-tools/media/dv3w9e1.gif "Query results: average price grouped by publisher")  
+![Abfrageergebnisse: Durchschnittspreis gruppiert nach Verlag](../../ssms/visual-db-tools/media/dv3w9e1.gif "Abfrageergebnisse: Durchschnittspreis gruppiert nach Verlag")  
   
 Beim Gruppieren von Daten können nur Daten aus Zusammenfassungen bzw. gruppierte Daten angezeigt werden, z. B.:  
   
@@ -49,7 +50,7 @@ GROUP BY pub_id, type
   
 Die entsprechende Ausgabe könnte folgendermaßen aussehen:  
   
-![Abfrageergebnisse: Preis gruppiert nach Verleger und Typ](../../ssms/visual-db-tools/media/dv3w9e2.gif "Query results: price grouped by publisher and type")  
+![Abfrageergebnisse: Preis gruppiert nach Verlag und Art](../../ssms/visual-db-tools/media/dv3w9e2.gif "Abfrageergebnisse: Preis gruppiert nach Verlag und Art")  
   
 ### <a name="to-group-rows"></a>So gruppieren Sie Zeilen  
   
@@ -73,7 +74,7 @@ Die entsprechende Ausgabe könnte folgendermaßen aussehen:
   
     Der Abfrage- und Sicht-Designer weist der Spalte, die zusammengefasst wird, automatisch einen Spaltenalias zu. Sie können diesen automatisch generierten durch einen aussagekräftigeren Alias ersetzen. Weitere Informationen finden Sie unter [Erstellen von Spaltenaliasen (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
-    ![Hinzufügen eines Spaltenalias zum Abfrageresultset](../../ssms/visual-db-tools/media/dv3w9e3.gif "Adding a column alias to the query result set")  
+    ![Hinzufügen eines Spaltenalias zum Resultset der Abfrage](../../ssms/visual-db-tools/media/dv3w9e3.gif "Hinzufügen eines Spaltenalias zum Resultset der Abfrage")  
   
     Die entsprechende Anweisung im Bereich **SQL** könnte folgendermaßen aussehen:  
   

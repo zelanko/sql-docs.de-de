@@ -11,10 +11,10 @@ ms.assetid: c1b95ee7-7e82-418f-8f30-948589086f63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c8dba5603a0dcd3cb264b8c49883b1aa43101509
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973744"
 ---
 # <a name="setnclob-method-javalangstring-javaioreader-long"></a>setNClob-Methode (java.lang.String, java.io.Reader, long)
@@ -38,7 +38,7 @@ public final void setNClob(java.lang.String parameterName,
   
  *reader*  
   
- Ein Reader-Objekt.  
+ Ein Reader-Objekt  
   
  *length*  
   
@@ -48,7 +48,7 @@ public final void setNClob(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode sollte für **NCHAR**-, **nvarchar**-, **ntext**-und **XML** -Parameter Datentypen verwendet werden.  
+ Diese Methode sollte für die Parameterdatentypen **NCHAR**, **NVARCHAR**, **NTEXT** und **XML** verwendet werden.  
   
  Diese setNClob-Methode wird von der setNClob-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   

@@ -18,13 +18,13 @@ ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8475944b4167184a6a2ef4a71d8751b2cd320fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014962"
 ---
-# <a name="sqlsrvrollback"></a>sqlsrv_rollback
+# <a name="sqlsrv_rollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Führt ein Rollback der aktuellen Transaktion für die angegebene Verbindung aus und setzt die Verbindung in den Autocommit-Modus zurück. Die aktuelle Transaktion enthält alle Anweisungen für die angegebene Verbindung, die nach dem Aufruf von [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) und vor allen Aufrufen von **sqlsrv_rollback** oder [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)ausgeführt wurden.  
@@ -43,7 +43,7 @@ sqlsrv_rollback( resource $conn)
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$conn*: Die Verbindung, auf der die Transaktion aktiv ist.  
+*$conn:* Die Verbindung, auf der die Transaktion aktiv ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Ein boolescher Wert: **true** , wenn die Transaktion erfolgreich zurückgesetzt wurde. Andernfalls lautet der Wert **false**.  
@@ -126,7 +126,7 @@ Für die Überwachung des Transaktionsverhaltens ist eine empfohlene Fehlerbehan
 ## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Gewusst wie: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
+[Vorgehensweise: Durchführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
 
 [Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md) 
   

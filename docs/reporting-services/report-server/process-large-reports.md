@@ -15,10 +15,10 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140253"
 ---
 # <a name="process-large-reports"></a>Verarbeiten von großen Berichten
@@ -36,7 +36,7 @@ ms.locfileid: "67140253"
 ## <a name="configuration-recommendations"></a>Konfigurationsempfehlungen  
  Für das Ausführen und Rendern von Berichten sowie für den Zugriff auf Berichte gelten die folgenden Empfehlungen:  
   
--   Entwerfen Sie den Bericht so, dass die Paginierung unterstützt wird. Der Berichtsserver sendet einen Bericht seitenweise. Bei einem Bericht mit Paginierung können Sie steuern, wie viele Daten an den Browser gesendet werden. Weitere Informationen finden Sie unter [Vorabladen des Caches (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
+-   Entwerfen Sie den Bericht so, dass die Paginierung unterstützt wird. Der Berichtsserver sendet einen Bericht seitenweise. Bei einem Bericht mit Paginierung können Sie steuern, wie viele Daten an den Browser gesendet werden. Weitere Informationen finden Sie unter [Vorabladen des Caches](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
   
 -   Konfigurieren Sie den Bericht so, dass er als geplante Berichtsmomentaufnahme ausgeführt wird, um eine bedarfsgesteuerte Ausführung zu verhindern. Legen Sie keinen Timeoutwert für die Berichtsausführung fest. Führen Sie den Bericht außerhalb der Spitzenzeiten aus.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67140253"
   
  Für eine Übermittlung von Berichten per E-Mail müssen Sie das Abonnement so konfigurieren, dass es einen Link einschließt. Sie sollten Berichte nicht als Anlage versenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

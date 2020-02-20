@@ -5,18 +5,19 @@ description: Verwenden Sie eine auf Big Data-Clustern für SQL Server bereitgest
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 01/07/2020
+ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32b3884b48e20b73da186f8c0d80e6c85516a8ed
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73707180"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721405"
 ---
-# <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>Verwenden einer auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] bereitgestellten App mithilfe eines RESTful-Webdiensts
+# <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Verwenden einer auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] bereitgestellten App mithilfe eines RESTful-Webdiensts
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -32,9 +33,9 @@ In diesem Artikel wird beschrieben, wie Sie mithilfe eines RESTful-Webdiensts ei
 
 Nachdem Sie eine Anwendung auf Ihrer Instanz von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] bereitgestellt haben, können Sie mithilfe eines RESTful-Webdiensts auf diese Anwendung zugreifen und sie verwenden. Dadurch kann diese App aus anderen Anwendungen oder Diensten (z. B. einer mobile App oder Website) integriert werden. In der folgenden Tabelle werden die Befehle zur Anwendungsbereitstellung beschrieben, die Sie mit **azdata** verwenden können, um Informationen zum RESTful-Webdienst Ihrer App abzurufen.
 
-|Befehl |und Beschreibung |
+|Get-Help |Beschreibung |
 |:---|:---|
-|`azdata app describe` | Beschreiben der Anwendung |
+|`azdata app describe` | Beschreiben einer Anwendung. |
 
 Mit dem Parameter `--help` können Sie wie im folgenden Beispiel Hilfe erhalten:
 
@@ -90,7 +91,16 @@ Sie können diese Informationen auch abrufen, indem Sie auf dem Server in Azure 
 
 ## <a name="generate-a-jwt-access-token"></a>Generieren eines JWT-Zugriffstokens
 
-Für den Zugriff auf den RESTful-Webdienst für die von Ihnen bereitgestellte App müssen Sie zunächst ein JWT-Zugriffstoken generieren. Öffnen Sie die URL `https://[IP]:[PORT]/docs/swagger.json` in Ihrem Browser, und verwenden Sie dabei die IP-Adresse und den Port, die Sie weiter oben durch Ausführen des Befehls `describe` abgerufen haben. Sie müssen sich mit denselben Anmeldeinformationen wie für `azdata login` anmelden.
+Für den Zugriff auf den RESTful-Webdienst für die von Ihnen bereitgestellte App müssen Sie zunächst ein JWT-Zugriffstoken generieren. Die URL für das Zugriffstoken hängt von der Version des Big Data-Clusters ab. 
+
+|Version |URL|
+|------------|------|
+|GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
+|Kumulatives Update 1 und höher| `https://[IP]:[PORT]/api/v1/swagger.json`|
+
+> Versionsinformationen finden Sie im [Releaseverlauf](release-notes-big-data-cluster.md#release-history).
+
+Öffnen Sie die entsprechende URL in Ihrem Browser, und verwenden Sie dabei die IP-Adresse und den Port, die Sie zuvor mithilfe des Befehls [`describe`](#retrieve-the-endpoint) abgerufen haben. Melden Sie sich mit denselben Anmeldeinformationen an, die Sie für `azdata login` verwendet haben.
 
 Fügen Sie den Inhalt von `swagger.json` in den [Swagger-Editor](https://editor.swagger.io) ein, um festzustellen, welche Methoden verfügbar sind:
 

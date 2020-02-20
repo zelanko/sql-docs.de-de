@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ausführen von Transaktionen | Microsoft-Dokumentation'
+title: 'Gewusst wie: Durchführen von Transaktionen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936435"
 ---
-# <a name="how-to-perform-transactions"></a>Vorgehensweise: Ausführen von Transaktionen
+# <a name="how-to-perform-transactions"></a>Gewusst wie: Ausführen von Transaktionen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Der SQLSRV-Treiber des [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] bietet drei Funktionen zur Durchführung von Transaktionen:  
   
 -   [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)  
   
--   [Sqlsrv_commit](../../connect/php/sqlsrv-commit.md)  
+-   [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)  
   
 -   [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md)  
   
@@ -61,7 +61,7 @@ Die Schritte zum Ausführen einer Transaktion können wie folgt zusammengefasst 
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>und Beschreibung  
+### <a name="description"></a>Beschreibung  
 Im folgenden Beispiel werden mehrere Abfragen im Rahmen einer Transaktion ausgeführt. Wenn alle Abfragen erfolgreich sind, wird die Transaktion committet. Wenn eine der Abfragen fehlschlägt, wird für die Transaktion ein Rollback ausgeführt.  
   
 Das Beispiel versucht, einen Verkaufsauftrag aus der *Sales.SalesOrderDetail* -Tabelle zu löschen und die Lagerbestände der Produkte in der *Product.ProductInventory* -Tabelle für jedes Produkt im Verkaufsauftrag anzupassen. Diese Abfragen werden in eine Transaktion aufgenommen, weil alle Abfragen erfolgreich ausgeführt werden müssen, damit die Datenbank den Status der Aufträge und die Verfügbarkeit von Produkten korrekt widerspiegelt.  
@@ -150,7 +150,7 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Kommentare  
-Für die Überwachung des Transaktionsverhaltens ist eine empfohlene Fehlerbehandlung im vorherigen Beispiel nicht enthalten. Für eine Produktionsanwendung empfehlen wir die Überprüfung eines Aufrufens einer **sqlsrv** -Funktion auf Fehler und deren Behandlung entsprechend.
+Für die Überwachung des Transaktionsverhaltens ist eine empfohlene Fehlerbehandlung im vorherigen Beispiel nicht enthalten. Für Produktionsanwendungen wird empfohlen, dass jeder Aufruf einer **sqlsrv**-Funktion auf Fehler überprüft wird und eventuelle Fehler entsprechend behandelt werden.
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Aktualisieren von Daten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

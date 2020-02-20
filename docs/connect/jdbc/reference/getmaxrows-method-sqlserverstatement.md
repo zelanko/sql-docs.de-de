@@ -16,10 +16,10 @@ ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0b9df5512466c5f12c5fda1b4e5cb4a91504499
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982073"
 ---
 # <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows-Methode (SQLServerStatement)
@@ -41,7 +41,7 @@ public final int getMaxRows()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getMaxRows-Methode wird von der getMaxRows-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
+ Diese getMaxRows-Methode wird von der getMaxRows-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
  Die getMaxRows-Methode gibt für dynamische, scrollfähige Cursor immer 0 zurück.  
   

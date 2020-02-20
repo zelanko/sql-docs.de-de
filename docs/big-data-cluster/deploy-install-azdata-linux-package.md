@@ -5,29 +5,24 @@ description: Erfahren Sie, wie Sie das azdata-Tool zum Installieren und Verwalte
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d8d4a34e89de7c136e1e80b43929531a2d10eba
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532072"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75728581"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-linux"></a>Installieren von `azdata` zum Verwalten von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] unter Linux
+# <a name="install-azdata-with-apt"></a>Installieren von `azdata` mit apt
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In diesem Artikel wird beschrieben, wie Sie `azdata` für Big Data-Cluster in SQL Server 2019 unter Linux installieren. Bevor diese Paket-Manager verfügbar waren, was `pip` für die Installation von `azdata` erforderlich.
 
-Die Paket-Manager sind für verschiedene Betriebssysteme und Verteilungen konzipiert.
-
-- Unter Windows und Linux (Ubuntu-Distribution) ist es einfacher, wenn Sie einen [Paket-Manager](./deploy-install-azdata-installer.md) für die Installation verwenden.
-- [Installieren Sie `azdata` unter Linux (Ubuntu) mit `apt`](#azdata-apt).
-
-Zurzeit gibt es keine Paket-Manager zur Installation von `azdata` unter anderen Betriebssystemen oder Verteilungen. Informationen zur Installation auf diesen Plattformen finden Sie unter [Installieren von `azdata` ohne Paket-Manager](./deploy-install-azdata.md).
+[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
 ## <a id="linux"></a>Installieren von `azdata` für Linux
 
@@ -42,19 +37,27 @@ Das `azdata`-Installationspaket ist mit `apt` für Ubuntu verfügbar.
 
     ```bash
     sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl apt-transport-https lsb-release -y
+    sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
     ```
 
 2. Laden Sie den Signaturschlüssel herunter, und installieren Sie diesen:
 
     ```bash
-    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+    curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+    gpg --dearmor |
+    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
     ```
 
-3. Fügen Sie die Repositoryinformationen für `azdata` hinzu:
+3. Fügen Sie die Repositoryinformationen für `azdata` hinzu.
 
+   Führen Sie für Ubuntu 16.04-Clients den folgenden Befehl aus:
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+    ```
+
+   Führen Sie für Ubuntu 18.04-Clients den folgenden Befehl aus:
+    ```bash
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
     ```
 
 4. Aktualisieren Sie die Repositoryinformationen, und installieren Sie `azdata`:
@@ -70,7 +73,7 @@ Das `azdata`-Installationspaket ist mit `apt` für Ubuntu verfügbar.
     azdata --version
     ```
 
-### <a name="update"></a>Update
+### <a name="update"></a>Aktualisieren
 
 Führen Sie ein Upgrade nur für `azdata` durch:
 

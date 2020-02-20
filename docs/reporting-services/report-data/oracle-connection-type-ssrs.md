@@ -1,6 +1,6 @@
 ---
 title: Oracle-Verbindungstyp (SSRS, Power BI-Berichtsserver und Berichts-Generator) | Microsoft-Dokumentation
-ms.date: 07/26/2019
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -8,31 +8,55 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2942ad1432b2674ab0b9906b5ab6e2f07be83ae7
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
-ms.translationtype: MTE75
+ms.openlocfilehash: f6918d240a6da7f961899d1a4cb71996bbec9ec6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632073"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259398"
 ---
 # <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Oracle-Verbindungstyp (SSRS, Power BI-Berichtsserver und Berichts-Generator)
 
-Wenn Sie Daten aus einer Oracle-Datenbank im Bericht verwenden möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "Oracle" basiert. Dieser integrierte Datenquellentyp verwendet direkt den Oracle-Datenanbieter und erfordert eine Oracle-Clientsoftwarekomponente. In diesem Artikel wird erläutert, wie Sie Treiber für Reporting Services, Power BI-Berichtsserver und Berichts-Generator herunterladen und installieren.
+Wenn Sie Daten aus einer Oracle-Datenbank im Bericht verwenden möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "Oracle" basiert. Dieser integrierte Datenquellentyp verwendet direkt den Oracle-Datenanbieter und erfordert eine Oracle-Clientsoftwarekomponente. Dieser Artikel erläutert, wie Sie Treiber für Reporting Services, den Power BI-Berichtsserver und den Berichts-Generator herunterladen.
 
-## <a name="64-bit-drivers-for-the-report-servers"></a>64-Bit-Treiber für die Berichts Server
+## <a name="64-bit-drivers-for-the-report-servers"></a>64-Bit-Treiber für die Berichtsserver
 
-Power BI-Berichtsserver und SQL Server Reporting Services 2016 und 2017 verwenden alle Managed ODP.net. Die folgenden Schritte sind nur erforderlich, wenn die neuesten 18x-Treiber verwendet werden. Sie gehen davon aus, dass Sie die Dateien in "c:\oracle64." installiert haben.
+Der Power BI-Berichtsserver sowie SQL Server Reporting Services 2016 und 2017 verwenden Managed ODP.NET. Die folgenden Schritte sind nur erforderlich, wenn Sie die neuesten 18x-Treiber verwenden. Es wird angenommen, dass die Dateien in „c:\oracle64“ installiert wurden.
 
-1. Installieren Sie auf der Oracle-Download Site den [Oracle-64-Bit-ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html). 
-2. Registrieren Sie den verwalteten ODP.NET-Client im GAC: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: GAC/ProviderPath: C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-3. Fügen Sie ODP.NET Managed Client entries to Machine. config: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: config/Force/Product: odpm/Frameworkversion: v 4.0.30319/ProductVersion: 4.122.18.3
+1. Installieren Sie den [Oracle 64-Bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html) von der Oracle-Downloadwebsite. 
+2. Registrieren Sie ODP.NET Managed Client bei GAC:  C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. Fügen Sie ODP.NET Managed Client-Einträge zu „machine.config“ hinzu:  C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
 
-## <a name="32-bit-drivers-for-report-builder"></a>32-Bit-Treiber für Berichts-Generator
-Die folgenden Schritte sind nur erforderlich, wenn die neuesten 18x-Treiber verwendet werden. Sie gehen davon aus, dass Sie die Dateien in "c:\oracle32." installiert haben.
+### <a name="power-bi-reports-use-unmanaged-odpnet"></a>Power BI-Berichte verwenden Unmanaged ODP.NET
 
-1. Installieren Sie auf der Oracle-Download Site den [Oracle-32-Bit-ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html).
-2. Registrieren Sie den verwalteten ODP.NET-Client im GAC: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: GAC/ProviderPath: C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-3. Fügen Sie ODP.NET Managed Client entries to Machine. config: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: config/Force/Product: odpm/Frameworkversion: v 4.0.30319/ProductVersion: 4.122.18.3
+Power BI-Berichte verwenden **Unmanaged ODP.NET**. Führen Sie diese Schritte aus, um Unmanaged ODP.NET zu registrieren:
+
+1. Registrieren Sie ODP.NET Unmanaged Client bei GAC:
+
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+2. Fügen Sie ODP.NET Unmanaged Client-Einträge zu „machine.config“ hinzu:
+
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+ 
+## <a name="32-bit-drivers-for-report-builder"></a>32-Bit-Treiber für den Berichts-Generator
+
+Die folgenden Schritte sind nur erforderlich, wenn Sie die neuesten 18x-Treiber verwenden. Es wird angenommen, dass die Dateien in „c:\oracle32“ installiert wurden.
+
+1. Installieren Sie den [Oracle 32-Bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html) von der Oracle-Downloadwebsite.
+2. Registrieren Sie ODP.NET Managed Client bei GAC:  C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. Fügen Sie ODP.NET Managed Client-Einträge zu „machine.config“ hinzu:  C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+
+### <a name="power-bi-reports-use-unmanaged-odpnet"></a>Power BI-Berichte verwenden Unmanaged ODP.NET  
+
+Power BI-Berichte verwenden **Unmanaged ODP.NET**. Führen Sie diese Schritte aus, um Unmanaged ODP.NET zu registrieren:
+
+1. Registrieren Sie ODP.NET Unmanaged Client bei GAC:
+
+   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+2. Fügen Sie ODP.NET Unmanaged Client-Einträge zu „machine.config“ hinzu:
+
+   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+ 
 
  Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -43,7 +67,7 @@ Die folgenden Schritte sind nur erforderlich, wenn die neuesten 18x-Treiber verw
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- Weitere Beispiele für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Weitere Beispiele für Verbindungszeichenfolgen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Anmeldeinformationen  
  Anmeldeinformationen sind erforderlich, um Abfragen auszuführen und den Bericht lokal oder vom Berichtsserver aus in der Vorschau anzuzeigen.  
@@ -67,7 +91,7 @@ Data Source="Oracle"; Unicode="True"
 ##  <a name="Remarks"></a> Hinweise  
  Bevor Sie eine Verbindung mit einer Oracle-Datenquelle herstellen können, muss der Systemadministrator die Version des .NET-Datenanbieters für Oracle installieren, die das Abrufen von Daten aus der Oracle-Datenbank unterstützt. Dieser Datenanbieter muss auf dem gleichen Computer wie der Berichts-Generator und auf dem Berichtsserver installiert werden.  
   
- Weitere Informationen finden Sie unter den folgenden Links:  
+ Weitere Informationen finden Sie in den folgenden Artikeln:  
   
 -   [Verwenden von Reporting Services zum Konfigurieren und Zugreifen auf eine Oracle-Datenquelle](https://support.microsoft.com/kb/834305)  
 -   [Hinzufügen von Berechtigungen für den NETZWERKDIENST-Sicherheitsprinzipal](https://support.microsoft.com/kb/870668)  

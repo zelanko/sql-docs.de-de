@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: Fetch | Microsoft-Dokumentation'
+title: PDOStatement::fetch | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a69b1093240112a804504f8d0e636ffbdfe8439e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993056"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
@@ -30,11 +30,11 @@ mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*fetch_style:* Ein optionales ganzzahliges Symbol, das das Format der Zeilendaten angibt. Eine Liste der möglichen Werte für $*fetch_style* finden Sie im Abschnitt „Anmerkungen“. Der Standardwert ist PDO::FETCH_BOTH. $*fetch_style* in der Abrufmethode überschreibt die Angabe von $*fetch_style* in der PDO::query-Methode.  
+$*fetch_style*: Dieser Wert gibt ein optionales Symbol (ganze Zahl) an, welches das Format der Daten aus der Zeile angibt. Eine Liste der möglichen Werte für $*fetch_style* finden Sie im Abschnitt „Anmerkungen“. Der Standardwert ist PDO::FETCH_BOTH. $*fetch_style* in der Abrufmethode überschreibt die Angabe von $*fetch_style* in der PDO::query-Methode.  
   
-$*cursor_orientation:* Ein optionales ganzzahliges Symbol, das die Zeile angibt, die abgerufen werden soll, wenn die prepare-Anweisung `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` angibt. Eine Liste der möglichen Werte für $*cursor_orientation* finden Sie im Abschnitt „Anmerkungen“. Ein Beispiel mit einem bildlauffähigen Cursor finden Sie unter [PDO::prepare](../../connect/php/pdo-prepare.md) .  
+$*cursor_orientation*: Dieser Wert gibt ein optionales Symbol (ganze Zahl) an, welches die Zeile angibt, die abgerufen werden soll, wenn das Prepared Statement `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` angibt. Eine Liste der möglichen Werte für $*cursor_orientation* finden Sie im Abschnitt „Anmerkungen“. Ein Beispiel mit einem bildlauffähigen Cursor finden Sie unter [PDO::prepare](../../connect/php/pdo-prepare.md) .  
   
-$*cursor_offset*: : Ein optionales ganzzahliges Symbol, das die Zeile angibt, die abgerufen werden soll, wenn $*cursor_orientation* entweder PDO::FETCH_ORI_ABS oder PDO::FETCH_ORI_REL und PDO::ATTR_CURSOR PDO::CURSOR_SCROLL ist.  
+$*cursor_offset*: Dieser Wert gibt ein optionales Symbol (ganze Zahl) an, das die Zeile angibt, die abgerufen werden soll, wenn $*cursor_orientation* entweder „PDO::FETCH_ORI_ABS“ oder „PDO::FETCH_ORI_REL“ und „PDO::ATTR_CURSOR“ „PDO::CURSOR_SCROLL“ ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Ein gemischter Wert, der eine Zeile oder „false“ zurückgibt.  
@@ -42,10 +42,10 @@ Ein gemischter Wert, der eine Zeile oder „false“ zurückgibt.
 ## <a name="remarks"></a>Bemerkungen  
 Der Cursor wird automatisch vorgerückt, wenn FETCH aufgerufen wird. Die folgende Tabelle enthält die Liste der möglichen Werte für $*fetch_style*.  
   
-|$*fetch_style*|und Beschreibung|  
+|$*fetch_style*|Beschreibung|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|Gibt ein Array an, das von einem Spaltennamen indiziert ist.|  
-|PDO::FETCH_BOTH|Gibt ein Array an, das von einem Spaltennamen und einer 0-basierten Reihenfolge indiziert ist. Dies ist die Standardeinstellung.|  
+|PDO::FETCH_BOTH|Gibt ein Array an, das von einem Spaltennamen und einer 0-basierten Reihenfolge indiziert ist. Dies ist die Standardoption.|  
 |PDO::FETCH_BOUND|Gibt „true“ zurück und weist die Werte gemäß [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md)zu.|  
 |PDO::FETCH_CLASS|Erstellt eine Instanz und ordnet Spalten den benannten Eigenschaften zu.<br /><br />Rufen Sie [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) auf, bevor Sie FETCH aufrufen.|  
 |PDO::FETCH_INTO|Aktualisiert eine Instanz der angeforderten Klasse.<br /><br />Rufen Sie [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) auf, bevor Sie FETCH aufrufen.|  
@@ -57,9 +57,9 @@ Wenn sich der Cursor am Ende des Resultsets befindet (die letzte Zeile wurde abg
   
 Wenn der Cursor bildlauffähig ist (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), wird FETCH den Cursor innerhalb der Begrenzung des Resultsets bewegen. Die folgende Tabelle enthält die Liste der möglichen Werte für $*cursor_orientation*.  
   
-|$*cursor_orientation*|und Beschreibung|  
+|$*cursor_orientation*|Beschreibung|  
 |--------------------------|---------------|  
-|PDO::FETCH_ORI_NEXT|Ruft die nächste Zeile ab. Dies ist die Standardeinstellung.|  
+|PDO::FETCH_ORI_NEXT|Ruft die nächste Zeile ab. Dies ist die Standardoption.|  
 |PDO::FETCH_ORI_PRIOR|Ruft die vorherige Zeile ab.|  
 |PDO::FETCH_ORI_FIRST|Ruft die erste Zeile ab.|  
 |PDO::FETCH_ORI_LAST|Ruft die letzte Zeile ab.|  

@@ -1,20 +1,20 @@
 ---
 title: 'Python-Tutorial: Trainieren des Modells'
-description: In diesem Tutorial verwenden Sie Python und die lineare Regression in SQL Server Machine Learning Services zur Vorhersage von Verleihzahlen für einen Skiverleih. Dazu trainieren Sie ein lineares Regressionsmodell in Python.
+description: Im dritten Teil dieser vierteiligen Tutorialreihe trainieren Sie ein lineares Regressionsmodell in Python, um mit SQL Server Machine Learning Services vorherzusagen, wie viele Ski verliehen werden.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/03/2019
+ms.date: 01/20/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e5f83fe37890c997865c44198cbe30bc13cdea4e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c564ac26c5706e67d9a633a05f81cb48d00fb771
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727045"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75681761"
 ---
 # <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python-Tutorial: Trainieren eines linearen Regressionsmodells in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Dann trainieren Sie das Modell **lin_model** mit einem linearen Regressionsalgor
 
 ```python
 # Store the variable we'll be predicting on.
-target = "RentalCount"
+target = "Rentalcount"
 
 # Generate the training set.  Set random_state to be able to replicate results.
 train = df.sample(frac=0.8, random_state=1)
@@ -84,26 +84,27 @@ lin_mse = mean_squared_error(lin_predictions, test[target])
 print("Computed error:", lin_mse)
 ```
 
+Das Ergebnis sollte etwa folgendermaßen aussehen:
+
 ```results
-Predictions: [  40.   38.  240.   39.  514.   48.  297.   25.  507.   24.   30.   54.
-   40.   26.   30.   34.   42.  390.  336.   37.   22.   35.   55.  350.
-  252.  370.  499.   48.   37.  494.   46.   25.  312.  390.   35.   35.
-  421.   39.  176.   21.   33.  452.   34.   28.   37.  260.   49.  577.
-  312.   24.   24.  390.   34.   64.   26.   32.   33.  358.  348.   25.
-   35.   48.   39.   44.   58.   24.  350.  651.   38.  468.   26.   42.
-  310.  709.  155.   26.  648.  617.   26.  846.  729.   44.  432.   25.
-   39.   28.  325.   46.   36.   50.   63.]
-Computed error: 3.59831533436e-26
+Predictions: [ 40.  38. 240.  39. 514.  48. 297.  25. 507.  24.  30.  54.  40.  26.
+  30.  34.  42. 390. 336.  37.  22.  35.  55. 350. 252. 370. 499.  48.
+  37. 494.  46.  25. 312. 390.  35.  35. 421.  39. 176.  21.  33. 452.
+  34.  28.  37. 260.  49. 577. 312.  24.  24. 390.  34.  64.  26.  32.
+  33. 358. 348.  25.  35.  48.  39.  44.  58.  24. 350. 651.  38. 468.
+  26.  42. 310. 709. 155.  26. 648. 617.  26. 846. 729.  44. 432.  25.
+  39.  28. 325.  46.  36.  50.  63.]
+Computed error: 2.9960763804270902e-27
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In Teil 3 dieser Tutorialreihe haben Sie die folgenden Schritte ausgeführt:
+In Teil 3 dieser Tutorialreihe haben Sie die folgenden Schritte ausgeführt:
 
 * Trainieren eines linearen Regressionsmodells
 * Treffen von Vorhersagen mit dem linearen Regressionsmodell
 
-Um das von Ihnen erstellte Machine-Learning-Modell einzusetzen, fahren Sie mit Teil 4 dieser Tutorialreihe fort:
+Fahren Sie mit Teil 4 dieser Tutorialreihe fort, um das von Ihnen erstellte Machine Learning-Modell einzusetzen:
 
 > [!div class="nextstepaction"]
 > [Python-Tutorial: Bereitstellen eines Machine Learning-Modells](python-ski-rental-linear-regression-deploy-model.md)

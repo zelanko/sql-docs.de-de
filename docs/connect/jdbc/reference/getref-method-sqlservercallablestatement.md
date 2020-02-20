@@ -1,5 +1,5 @@
 ---
-title: getref-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
+title: getRef-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0c7632a9-1ef6-46f0-8208-06a6cbd202e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f0a37385750db130a82bee39e430f5d4632f139
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980561"
 ---
 # <a name="getref-method-sqlservercallablestatement"></a>getRef-Methode (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67980561"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[getRef (int)](../../../connect/jdbc/reference/getref-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als Ref-Objekt in der Programmiersprache Java ab.|  
 |[getRef (java.lang.String)](../../../connect/jdbc/reference/getref-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als Ref-Objekt in der Programmiersprache Java ab.|  

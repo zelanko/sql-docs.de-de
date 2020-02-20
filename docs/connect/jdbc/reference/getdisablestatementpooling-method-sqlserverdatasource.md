@@ -1,5 +1,5 @@
 ---
-title: getdisablestatuementpooling-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: getDisableStatementPooling-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 108bc70b3ff4a3fb03d332def79f9ceebeffd94a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983647"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverdatasource"></a>getDisableStatementPooling-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt den Wert der **disablestatuementpooling** -Verbindungs Eigenschaft zurück. Mit dieser Einstellung wird gesteuert, ob das Anweisungs Pooling für diese Verbindung aktiviert ist.
+  Diese Methode gibt den Wert der Verbindungseigenschaft **disableStatementPooling** zurück. Mit dieser Einstellung wird gesteuert, ob für diese Verbindung Anweisungspooling aktiviert ist.
 
   
 ## <a name="syntax"></a>Syntax  
@@ -30,13 +30,13 @@ public boolean getDisableStatementPooling();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **boolescher** Wert, der den Wert der **disablestatuementpooling** -Verbindungs Eigenschaft enthält.
+ Diese Methode gibt einen **booleschen** Wert zurück, der den Wert der Verbindungseigenschaft **disableStatementPooling** enthält.
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode ist über JDBC Driver, Version 6,4 und höher, verfügbar.
+ Diese Methode ist über den JDCB-Treiber, Version 6.4 und höher verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

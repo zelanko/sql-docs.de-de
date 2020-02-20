@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2bbb4c05a6760709fcb873cd8c39f301c37aeb2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706364"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190389"
 ---
-# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Erste Schritte mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-big-data-clusters-2019"></a>Erste Schritte mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,11 +33,16 @@ In diesem Artikel erhalten Sie einen Überblick über die grundlegenden Konzepte
 > [!TIP]
 > Verwenden Sie eines der Beispielskripts aus dem [Abschnitt zu Skripts](#scripts), um schnell eine Umgebung mit Kubernetes und einem Big Data-Cluster bereitzustellen, damit Sie die Funktionen kennenlernen können. Verwenden Sie nach der Bereitstellung die [Clienttools](#tools) aus dem folgenden Abschnitt, um den Cluster zu verwalten.
 
+Sehen Sie sich dieses 9-minütige Video an, um einen Überblick über die Bereitstellung von Big Data Clustern zu erhalten:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
 ## <a id="tools"></a> Clienttools
 
 Für die Bereitstellung von Big-Data-Clustern benötigen Sie eine Reihe von bestimmten Clienttools. Installieren Sie die folgenden Tools, bevor Sie Big-Data-Cluster für Kubernetes bereitstellen:
 
-| Tool | und Beschreibung |
+| Tool | Beschreibung |
 |---|---|
 | **azdata** | Zur Bereitstellung und Verwaltung von Big-Data-Clustern. |
 | **kubectl** | Zur Erstellung und Verwaltung des zugrunde liegenden Kubernetes-Clusters. |

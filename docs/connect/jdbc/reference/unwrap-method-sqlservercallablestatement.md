@@ -1,5 +1,5 @@
 ---
-title: Unwrap-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
+title: unwrap-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0dc8ddf82859b8bf47853a3d72a7461567388b87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67995195"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>unwrap-Methode (SQLServerCallableStatement)
@@ -45,9 +45,9 @@ public <T> T unwrap(Class<T> iface)
   
  Von den Anwendungen muss möglicherweise auf [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifische JDBC-API-Erweiterungen zugegriffen werden. Die unwrap-Methode unterstützt das Entpacken in öffentliche, von diesem Objekt erweiterte Klassen, wenn von den Klassen Herstellererweiterungen verfügbar gemacht werden.  
   
- Das [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Element implementiert das [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Element, das vom [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Element erweitert wurde. Beim Aufrufen dieser Methode wird das Objekt in die folgenden Klassen entpackt: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
+ Das [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Element implementiert das [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Element, das vom [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Element erweitert wurde. Wenn diese Methode aufgerufen wird, wird das Objekt in die folgenden Klassen aufgeschlüsselt: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
- Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Weitere Informationen finden Sie im Artikel [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie sich mithilfe der Methoden isWrapperFor und unwrap die Treibererweiterungen überprüfen und die herstellerspezifischen Methoden wie [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) und [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) aufrufen lassen.  
   

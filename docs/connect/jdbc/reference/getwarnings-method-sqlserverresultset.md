@@ -16,10 +16,10 @@ ms.assetid: eb4339b0-383b-4337-a935-e8ec3f0d4123
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 242ad42751fac88a08046346915f298378a66b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978089"
 ---
 # <a name="getwarnings-method-sqlserverresultset"></a>getWarnings-Methode (SQLServerResultSet)
@@ -38,13 +38,13 @@ public java.sql.SQLWarning getWarnings()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein SQLWARNING-Objekt.  
+ Ein SQLWarning-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getwarning-Methode wird von der getwarning-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese getWarnings-Methode wird von der getWarnings-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: Tabellenwert Parameter (OLE DB) | Microsoft-Dokumentation
+title: Tabellenwertparameter (OLE DB) | Microsoft-Dokumentation
 description: Tabellenwertparameter (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 3f942130244aaf08d533ac4a1abdc1752971209d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015272"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Tabellenwertparameter (OLE DB)
@@ -25,12 +25,12 @@ ms.locfileid: "68015272"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In diesem Abschnitt wird die Unterstützung von Tabellenwert Parametern in OLE DB Treiber für SQL Server beschrieben. Weitere Übersichts Informationen finden Sie unter [Tabellenwert Parameter &#40;OLE DB Treiber für SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Ein Beispiel finden Sie unter [Verwenden von Tabellenwert Parametern &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
+  In diesem Abschnitt wird die Unterstützung für Tabellenwertparameter im OLE DB-Treiber für SQL Server beschrieben. Weitere allgemeine Informationen finden Sie im Artikel [Tabellenwertparameter (OLE DB-Treiber für SQL Server)](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Ein Beispiel finden Sie unter [Verwenden von Tabellenwertparametern (OLE DB)](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
 ## <a name="remarks"></a>Bemerkungen  
  Derzeit können Sie mehrzeilige Daten an den Server als Parameter an eine Prozedur mit Parametersätzen senden (der DBPARAMS-Parameter in **ICommand::Execute**). Bei Parametersätzen muss jedes Element des Satzes in einer separaten Remoteprozeduranforderung (Remote Procedure Call, RPC) an den Server gesendet werden. Tabellenwertparameter stellen eine ähnliche Funktionalität bereit, bieten jedoch eine bessere Integration mit dem Server. Dadurch werden die Anzahl von RPC-Anforderungen reduziert und setbasierte Vorgänge auf dem Server aktiviert.  
   
- Tabellenwert Parameter werden in OLE DB-Treiber für SQL Server als OLE DB **Rowset**objekte unterstützt.** Jedes **Rowset**-Objekt kann vom Consumer (d.h. von der Clientanwendung, die den OLE DB-Treiber für SQL Server verwendet) als Platzhalter für Tabellenwertparameter bereitgestellt werden. Tabellenwertparameter werden wie andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Parametertypen behandelt. Der OLE DB-Treiber für SQL Server stellt Erstellungs-, Ermittlungs-, Spezifikations-, Bindungs-und Schema Schnittstellen bereit.  
+ Tabellenwertparameter werden im OLE DB-Treiber für SQL Server als OLE DB-**Rowsetobjekte** unterstützt. Jedes **Rowset**-Objekt kann vom Consumer (d.h. von der Clientanwendung, die den OLE DB-Treiber für SQL Server verwendet) als Platzhalter für Tabellenwertparameter bereitgestellt werden. Tabellenwertparameter werden wie andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Parametertypen behandelt. Der OLE DB-Treiber für SQL Server stellt Schnittstellen für das Erstellen, für die Ermittlung, Spezifikation und Bindung sowie Schemaschnittstellen zur Verfügung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

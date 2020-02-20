@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Momentaufnahme zum Berichts Verlauf-Reporting Services | Microsoft-Dokumentation
+title: Hinzufügen einer Momentaufnahme zum Berichtsverlauf (Reporting Services) | Microsoft-Dokumentation
 ms.prod: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
@@ -9,10 +9,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
 ms.openlocfilehash: 2ada64f14c3564bd1e6c9846f890fdd8b287cb6f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68251929"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Hinzufügen einer Momentaufnahme zum Berichtsverlauf
@@ -31,7 +31,7 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
   
 3. Klicken Sie auf **Neue Momentaufnahme**. In der Spalte **Ausführungszeitpunkt** wird eine neue Momentaufnahme erstellt.  
     > [!NOTE]
-    > Um das Erstellen von Momentaufnahmen zu ermöglichen, muss der Administrator den Berichts Verlauf so konfigurieren, **dass der Verlauf manuell erstellt werden kann**. Weitere Informationen finden Sie unter [Einschränken des Berichtsverlaufs &#40;Berichts-Manager&#41;](../reports/limit-report-history-report-manager.md).
+    > Der Administrator muss den Berichtsverlauf auf **Berichtsverlauf kann manuell erstellt werden** konfigurieren, um das Erstellen von Momentaufnahmen zu ermöglichen. Weitere Informationen finden Sie unter [Einschränken des Berichtsverlaufs &#40;Berichts-Manager&#41;](../reports/limit-report-history-report-manager.md).
 
 4. Klicken Sie auf **Anwenden**.
   
@@ -57,7 +57,7 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
   
 3. Klicken Sie auf **Momentaufnahmeoptionen**.  
   
-4. Aktivieren Sie das Kontrollkästchen für **Folgenden Zeitplan verwenden, um dem Berichtsverlauf Momentaufnahmen hinzuzufügen**. Führen Sie eine der folgenden Aktionen aus:  
+4. Aktivieren Sie das Kontrollkästchen für **Folgenden Zeitplan verwenden, um dem Berichtsverlauf Momentaufnahmen hinzuzufügen**. Führen Sie einen der folgenden Schritte aus:  
   
     - Wählen Sie **Berichtsspezifischer Zeitplan**aus. Geben Sie die Zeitplandetails ein, wählen Sie Start- und Enddatum für den Zeitplan aus, und klicken Sie dann auf **OK**.  
 
@@ -65,7 +65,7 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
 
 5. Klicken Sie auf **Anwenden**.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurieren von Ausführungseigenschaften für einen Bericht &#40;Berichts-Manager&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Einschränken des Berichtsverlaufs (Berichts-Manager)](../../reporting-services/reports/limit-report-history-report-manager.md)
@@ -82,35 +82,35 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
   
 2. Klicken Sie im Dropdownmenü auf **Verwalten**.  
   
-3. Wählen Sie die Registerkarte **Verlaufs Momentaufnahmen**.  
+3. Klicken Sie auf die Registerkarte **Verlaufsmomentaufnahmen**.  
   
-4. Wählen Sie auf der Seite **Verlaufs Momentaufnahmen** die **neue**Verlaufs Momentaufnahme aus. Eine neue Momentaufnahme wird erstellt und unten mit dem aktuellen Datum und der aktuellen Uhrzeit in der **erstellten** Spalte angezeigt.  
+4. Klicken Sie auf der Registerkarte **Verlaufsmomentaufnahmen** auf **Neue Verlaufsmomentaufnahme**. Es wird eine neue Momentaufnahme erstellt und unten in der Spalte **Erstellt** mit dem aktuellen Datum und der Uhrzeit angezeigt.  
   
     > [!NOTE]
-    > Um das Erstellen von Momentaufnahmen zu ermöglichen, muss der Administrator den Berichts Verlauf so konfigurieren, **dass der Verlauf manuell erstellt werden kann**. Weitere Informationen finden Sie unter [Einschränken des Berichts Verlaufs (Webportal)](../../reporting-services/reports/limit-report-history-report-manager.md).
+    > Der Administrator muss den Berichtsverlauf auf **Berichtsverlauf kann manuell erstellt werden** konfigurieren, um das Erstellen von Momentaufnahmen zu ermöglichen. Weitere Informationen finden Sie unter [Einschränken des Berichtsverlaufs (Webportal)](../../reporting-services/reports/limit-report-history-report-manager.md).
 
-## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>So fügen Sie Momentaufnahmen über einen Zeitplan zum Berichts Verlauf hinzu
+## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>Hinzufügen von Momentaufnahmen zum Berichtsverlauf über einen Zeitplan
 
 1. Navigieren Sie im Webportal zu dem Element, für das Sie den Verlauf anzeigen möchten, und klicken Sie mit der rechten Maustaste darauf.  
   
 2. Klicken Sie im Dropdownmenü auf **Verwalten**.  
   
-3. Wählen Sie die Registerkarte **Verlaufs Momentaufnahmen**.  
+3. Klicken Sie auf die Registerkarte **Verlaufsmomentaufnahmen**.  
   
-4. Wählen Sie auf der Seite **Verlaufs Momentaufnahmen** die Schaltfläche **Zeitplan und Einstellungen** aus.  
+4. Klicken Sie auf der Seite **Berichtsmomentaufnahmen** auf die Schaltfläche **Zeitplan und Einstellungen**.  
   
-5. Wählen Sie im Abschnitt **Zeitplan** mindestens eine der folgenden Optionen aus, wenn mindestens eine Auswahl nicht bereits ausgewählt ist:
+5. Wählen Sie im Abschnitt **Zeitplan** eine oder beide der folgenden Optionen aus, wenn nicht bereits mindestens eine Option ausgewählt ist:
     - **Verlaufsmomentaufnahmen nach Zeitplan erstellen**  
     - **Benutzern das manuelle Erstellen von Momentaufnahmen gestatten**  
   
-6. Wählen Sie im Abschnitt **erweitert** die Option Alle Verlaufs **Momentaufnahmen beibehalten**aus.  
+6. Klicken Sie im Abschnitt **Erweitert** auf **Alle Verlaufsmomentaufnahmen beibehalten**.  
   
-7. Aktivieren Sie optional auch das Kontrollkästchen **Cache Momentaufnahmen im Berichts Verlauf speichern**.  
+7. Optional können Sie das Kontrollkästchen für **Cachemomentaufnahmen auch in Berichtsverlauf speichern**  aktivieren.  
   
 8.  Klicken Sie auf **Anwenden**, um die Einstellungen zu speichern.  
 
     > [!NOTE]  
-    > Um das Erstellen von Momentaufnahmen zu ermöglichen, muss der Administrator den Berichts Verlauf so konfigurieren, **dass der Verlauf manuell erstellt werden kann**. Weitere Informationen finden Sie unter [Einschränken des Berichts Verlaufs (Webportal)](../../reporting-services/reports/limit-report-history-report-manager.md).
+    > Der Administrator muss den Berichtsverlauf auf **Berichtsverlauf kann manuell erstellt werden** konfigurieren, um das Erstellen von Momentaufnahmen zu ermöglichen. Weitere Informationen finden Sie unter [Einschränken des Berichtsverlaufs (Webportal)](../../reporting-services/reports/limit-report-history-report-manager.md).
 
 9.  Klicken Sie auf **Anwenden**.
 
@@ -122,17 +122,17 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
   
 3. Klicken Sie im Dropdownmenü auf **Verwalten**.  
   
-4. Wählen Sie die Registerkarte **Verlaufs Momentaufnahmen**.  
+4. Klicken Sie auf die Registerkarte **Verlaufsmomentaufnahmen**.  
   
-5. Wählen Sie auf der Seite **Verlaufs Momentaufnahmen** die Schaltfläche **Zeitplan und Einstellungen** aus.  
+5. Klicken Sie auf der Seite **Berichtsmomentaufnahmen** auf die Schaltfläche **Zeitplan und Einstellungen**.  
   
-6. Wählen Sie im Abschnitt **Zeitplan** mindestens eine der folgenden Optionen aus, wenn mindestens eine Auswahl nicht bereits ausgewählt ist:
+6. Wählen Sie im Abschnitt **Zeitplan** eine oder beide der folgenden Optionen aus, wenn nicht bereits mindestens eine Option ausgewählt ist:
     - **Verlaufsmomentaufnahmen nach Zeitplan erstellen**  
     - **Benutzern das manuelle Erstellen von Momentaufnahmen gestatten**  
   
-7. Wählen Sie im Abschnitt **erweitert** die Option Alle Verlaufs **Momentaufnahmen beibehalten**aus.  
+7. Klicken Sie im Abschnitt **Erweitert** auf **Alle Verlaufsmomentaufnahmen beibehalten**.  
   
-8. Aktivieren Sie optional auch das Kontrollkästchen **Cache Momentaufnahmen im Berichts Verlauf speichern**.  
+8. Optional können Sie das Kontrollkästchen für **Cachemomentaufnahmen auch in Berichtsverlauf speichern**  aktivieren.  
   
 9. Klicken Sie auf **Anwenden**, um die Einstellungen zu speichern.  
   
@@ -142,11 +142,11 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
   
 2. Klicken Sie im Dropdownmenü auf **Verwalten**.  
   
-3. Wählen Sie die Registerkarte **Verlaufs Momentaufnahmen**.  
+3. Klicken Sie auf die Registerkarte **Verlaufsmomentaufnahmen**.  
   
-4. Wählen Sie auf der Seite **Verlaufs Momentaufnahmen** die Schaltfläche **Zeitplan und Einstellungen** aus.  
+4. Klicken Sie auf der Seite **Berichtsmomentaufnahmen** auf die Schaltfläche **Zeitplan und Einstellungen**.  
   
-5. Aktivieren Sie das Kontrollkästchen für **Folgenden Zeitplan verwenden, um dem Berichtsverlauf Momentaufnahmen hinzuzufügen**. Führen Sie eine der folgenden Aktionen aus:  
+5. Aktivieren Sie das Kontrollkästchen für **Folgenden Zeitplan verwenden, um dem Berichtsverlauf Momentaufnahmen hinzuzufügen**. Führen Sie einen der folgenden Schritte aus:  
   
     - Wählen Sie **Berichtsspezifischer Zeitplan**aus. Geben Sie die Zeitplandetails ein, wählen Sie Start- und Enddatum für den Zeitplan aus, und klicken Sie dann auf **OK**.  
 
@@ -154,10 +154,10 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
 
 5. Klicken Sie auf **Anwenden**.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Configure Execution Properties for a Report (Konfigurieren von Ausführungseigenschaften für einen Bericht (Webportal))](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
-- [Einschränken des Berichts Verlaufs (Webportal)](../../reporting-services/reports/limit-report-history-report-manager.md)
+- [Einschränken des Berichtsverlaufs (Webportal)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Zeitpläne](../../reporting-services/subscriptions/schedules.md)   
 - [Webportal &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
 

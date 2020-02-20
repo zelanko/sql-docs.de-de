@@ -9,10 +9,10 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65105929"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lektion 5: Formatieren eines Berichts (Reporting Services)
@@ -57,17 +57,17 @@ Sie können dem Bericht weitere Formatierungen hinzufügen, indem Sie die Kopfze
 
 3. Wählen Sie die Zeile mit den Spaltenkopfbezeichnungen aus, und klicken Sie im Menü **Format** auf **Schriftart** > **Fett**.
 
-4. Zeigen Sie eine Vorschau des Berichts an. Dies sollte folgendermaßen aussehen:
+4. Zeigen Sie den Bericht in der Vorschau an. Dies sollte folgendermaßen aussehen:
 
-    ![Vorschau der Tabelle mit fett formatierten Spaltenüberschriften](media/rs-basictabledetailsformattedpreview.png "Preview of table with bold column headers")  
+    ![Vorschau der Tabelle mit fett formatierten Spaltenüberschriften](media/rs-basictabledetailsformattedpreview.png "Vorschau der Tabelle mit fett formatierten Spaltenüberschriften")  
 
 5. Klicken Sie im Menü **Datei** auf **Alle Speichern**, um den Bericht zu speichern.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In dieser Lektion haben Sie erfolgreich Spaltenüberschriften und Feldausdrücke formatiert. Als Nächstes erfahren Sie, wie Sie dem Bericht Gruppierungen und Gesamtwerte hinzufügen. Weiter mit [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
+In dieser Lektion haben Sie erfolgreich Spaltenüberschriften und Feldausdrücke formatiert. Als Nächstes erfahren Sie, wie Sie dem Bericht Gruppierungen und Gesamtwerte hinzufügen. Fahren Sie fort mit [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)
 [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)

@@ -1,5 +1,5 @@
 ---
-title: Azure Key Vault-Beispiel Version 6.0.0 | Microsoft-Dokumentation
+title: Azure Key Vault-Beispielversion 6.0.0 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20ca1afc5261c2a03a10b2f146cb9aad9b67a315
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028467"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Azure Key Vault-Beispielversion 6.0.0
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="sample-application-using-azure-key-vault-feature"></a>Beispielanwendung mit Azure Key Vault-Funktion
+## <a name="sample-application-using-azure-key-vault-feature"></a>Beispielanwendung mit Azure Key Vault-Feature
 
-Diese Anwendung kann mit dem JDBC-Treiber 6.0.0 und Azure-keyvault (Version 0.9.7), Adal4j (Version 1.3.0) und ihren Abhängigkeiten durchlaufen werden.  Die zugrunde liegenden Abhängigkeiten können aufgelöst werden, indem Sie diese Bibliotheken der POM-Datei des Projekts hinzufügen, wie [hier](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)beschrieben:
+Diese Anwendung ist mit dem JDBC-Treiber 6.0.0, Azure Key Vault (Version 0.9.7), Adal4j (Version 1.3.0) und den jeweiligen Abhängigkeiten ausführbar.  Die zugrunde liegenden Abhängigkeiten können aufgelöst werden, indem Sie diese Bibliotheken so wie [hier](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) beschrieben der POM-Datei des Projekts hinzufügen:
 
 ```java
 import java.net.URISyntaxException;
@@ -225,7 +225,7 @@ public class AKV_600 {
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Azure Key Vault-Beispielversion 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
 [Azure Key Vault-Beispielversion 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)

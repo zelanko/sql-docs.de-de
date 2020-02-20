@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68714963"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Erstellen von Anmeldeinformationen für SQLRUserGroup
@@ -33,19 +33,19 @@ Sie können den Verbindungsfehler umgehen, indem Sie für **SQLServerRUserGroup*
 
 2. Wählen Sie im Dialogfeld **Anmeldung – Neu** die Option **Suchen** aus. (Geben Sie in das Feld noch nichts ein.)
     
-     ![Auf „Suchen“ klicken, um eine neue Anmeldung für Maschinelles Lernen hinzuzufügen](media/implied-auth-login1.png "Auf „Suchen“ klicken, um eine neue Anmeldung für Maschinelles Lernen hinzuzufügen")
+     ![Klicken auf „Suchen“, um eine neue Anmeldung für das maschinelle Lernen hinzuzufügen](media/implied-auth-login1.png "Klicken auf „Suchen“, um eine neue Anmeldung für das maschinelle Lernen hinzuzufügen")
 
 3. Klicken Sie im Feld **Benutzer oder Gruppe auswählen** auf die Schaltfläche **Objekttypen**.
 
-     ![Nach Objekttypen suchen, um eine neue Anmeldung für Maschinelles Lernen hinzuzufügen](media/implied-auth-login2.png "Nach Objekttypen suchen, um eine neue Anmeldung für Maschinelles Lernen hinzuzufügen")
+     ![Suchen nach Objekttypen, um eine neue Anmeldung für das maschinelle Lernen hinzuzufügen](media/implied-auth-login2.png "Suchen nach Objekttypen, um eine neue Anmeldung für das maschinelle Lernen hinzuzufügen")
 
 4. Wählen Sie im Dialogfeld **Objekttypen** die Option **Gruppen** aus. Deaktivieren Sie alle anderen Kontrollkästchen.
 
-     ![Im Dialogfeld „Objekttypen“ die Option „Gruppen“ auswählen](media/implied-auth-login3.png "Im Dialogfeld „Objekttypen“ die Option „Gruppen“ auswählen")
+     ![Auswählen von Gruppen im Objekttypendialogfeld](media/implied-auth-login3.png "Auswählen von Gruppen im Objekttypendialogfeld")
 
 4. Klicken Sie auf **Erweitert**. Vergewissern Sie sich, dass als der zu durchsuchende Speicherort der aktuelle Computer angezeigt wird, und klicken Sie auf **Suche starten**.
 
-     ![Auf „Suche starten“ klicken, um Liste mit Gruppen abzurufen](media/implied-auth-login4.png "Auf „Suche starten“ klicken, um Liste mit Gruppen abzurufen")
+     ![Klicken auf „Suche starten“, um eine Liste von Gruppen abzurufen](media/implied-auth-login4.png "Klicken auf „Suche starten“, um eine Liste von Gruppen abzurufen")
 
 5. Scrollen Sie durch die Liste der Gruppenkonten auf dem Server, bis Sie einen finden, der mit `SQLRUserGroup` beginnt.
     

@@ -1,5 +1,5 @@
 ---
-title: Rowsets und SQL Server Cursor | Microsoft-Dokumentation
+title: Rowsets und SQL Server-Cursor | Microsoft-Dokumentation
 description: Rowsets und SQL Server-Cursor
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994180"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Rowsets und SQL Server-Cursor
@@ -62,7 +62,7 @@ ms.locfileid: "67994180"
   
  Consumer können andere Cursorverhaltensweisen in einem Rowset anfordern, indem sie bestimmte Rowseteigenschaften festlegen. Wenn der Consumer keine Rowseteigenschaft festlegt oder alle Rowseteigenschaften auf den Standardwert setzt, implementiert der OLE DB-Treiber für SQL Server das Rowset mithilfe eines Standardresultsets. Wird eine dieser Eigenschaften nicht auf den Standardwert festgelegt, implementiert der OLE DB-Treiber für SQL Server das Rowset mithilfe eines Servercursors.  
   
- Die folgenden Rowseteigenschaften leiten den OLE DB-Treiber an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server, Cursor zu verwenden. Einige Eigenschaften können mit anderen problemlos kombiniert werden. Ein Rowset mit den Eigenschaften DBPROP_IRowsetScroll und DBPROP_IRowsetChange entspricht beispielsweise einem Lesezeichenrowset mit sofortigem Updateverhalten. Andere Eigenschaften schließen sich hingegen gegenseitig aus. Zum Beispiel kann ein Rowset, das DBPROP_OTHERINSERT aufweist, keine Lesezeichen enthalten.  
+ Die folgenden Rowseteigenschaften weisen den OLE DB-Treiber für SQL Server an, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursor zu verwenden. Einige Eigenschaften können mit anderen problemlos kombiniert werden. Ein Rowset mit den Eigenschaften DBPROP_IRowsetScroll und DBPROP_IRowsetChange entspricht beispielsweise einem Lesezeichenrowset mit sofortigem Updateverhalten. Andere Eigenschaften schließen sich hingegen gegenseitig aus. Zum Beispiel kann ein Rowset, das DBPROP_OTHERINSERT aufweist, keine Lesezeichen enthalten.  
   
 |Eigenschafts-ID|value|Rowsetverhalten|  
 |-----------------|-----------|---------------------|  
@@ -93,55 +93,55 @@ ms.locfileid: "67994180"
   
  Um ein bestimmtes Cursormodell zu verwenden, suchen Sie die dem Cursormodell entsprechende Spalte, und suchen Sie alle Rowseteigenschaften mit dem Wert "T" in der Spalte. Legen Sie diese Rowseteigenschaften auf VARIANT_TRUE fest, um das gewünschte Cursormodell zu verwenden. Die Rowseteigenschaften mit dem Wert "-" können entweder auf VARIANT_TRUE oder VARIANT_FALSE festgelegt werden.  
   
-|Rowseteigenschaften/Cursormodelle|Default<br /><br /> result<br /><br /> Menge<br /><br /> (RO)|Schnell<br /><br /> forward-<br /><br /> nur<br /><br /> (RO)|STATIC-Cursor<br /><br /> (RO)|Keyset<br /><br /> driven<br /><br /> (RO)|  
+|Rowseteigenschaften/Cursormodelle|Standard<br /><br /> result<br /><br /> set<br /><br /> (RO)|Schnell<br /><br /> forward-<br /><br /> Machine Learning<br /><br /> (RO)|statischen<br /><br /> (RO)|Keyset<br /><br /> driven<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
-|DBPROP_SERVERCURSOR|V|T|T|T|  
-|DBPROP_DEFERRED|V|V|-|-|  
-|DBPROP_IrowsetChange|V|V|V|V|  
-|DBPROP_IrowsetLocate|V|V|-|-|  
-|DBPROP_IrowsetScroll|V|V|-|-|  
-|DBPROP_IrowsetUpdate|V|V|V|V|  
-|DBPROP_BOOKMARKS|V|V|-|-|  
-|DBPROP_CANFETCHBACKWARDS|V|V|-|-|  
-|DBPROP_CANSRCOLLBACKWARDS|V|V|-|-|  
-|DBPROP_CANHOLDROWS|V|V|-|-|  
-|DBPROP_LITERALBOOKMARKS|V|V|-|-|  
-|DBPROP_OTHERINSERT|V|T|V|V|  
-|DBPROP_OTHERUPDATEDELETE|V|T|V|T|  
-|DBPROP_OWNINSERT|V|T|V|T|  
-|DBPROP_OWNUPDATEDELETE|V|T|V|T|  
-|DBPROP_QUICKSTART|V|V|-|-|  
-|DBPROP_REMOVEDELETED|V|V|V|-|  
-|DBPROP_IrowsetResynch|V|V|V|-|  
-|DBPROP_CHANGEINSERTEDROWS|V|V|V|V|  
-|DBPROP_SERVERDATAONINSERT|V|V|V|-|  
-|DBPROP_UNIQUEROWS|-|V|V|V|  
+|DBPROP_SERVERCURSOR|F|T|T|T|  
+|DBPROP_DEFERRED|F|F|-|-|  
+|DBPROP_IrowsetChange|F|F|F|F|  
+|DBPROP_IrowsetLocate|F|F|-|-|  
+|DBPROP_IrowsetScroll|F|F|-|-|  
+|DBPROP_IrowsetUpdate|F|F|F|F|  
+|DBPROP_BOOKMARKS|F|F|-|-|  
+|DBPROP_CANFETCHBACKWARDS|F|F|-|-|  
+|DBPROP_CANSRCOLLBACKWARDS|F|F|-|-|  
+|DBPROP_CANHOLDROWS|F|F|-|-|  
+|DBPROP_LITERALBOOKMARKS|F|F|-|-|  
+|DBPROP_OTHERINSERT|F|T|F|F|  
+|DBPROP_OTHERUPDATEDELETE|F|T|F|T|  
+|DBPROP_OWNINSERT|F|T|F|T|  
+|DBPROP_OWNUPDATEDELETE|F|T|F|T|  
+|DBPROP_QUICKSTART|F|F|-|-|  
+|DBPROP_REMOVEDELETED|F|F|F|-|  
+|DBPROP_IrowsetResynch|F|F|F|-|  
+|DBPROP_CHANGEINSERTEDROWS|F|F|F|F|  
+|DBPROP_SERVERDATAONINSERT|F|F|F|-|  
+|DBPROP_UNIQUEROWS|-|F|F|F|  
 |DBPROP_IMMOBILEROWS|-|-|-|T|  
   
 |Rowseteigenschaften/Cursormodelle|Dynamic (RO)|Keyset (R/W)|Dynamic (R/W)|  
 |--------------------------------------|--------------------|---------------------|----------------------|  
 |DBPROP_SERVERCURSOR|T|T|T|  
 |DBPROP_DEFERRED|-|-|-|  
-|DBPROP_IrowsetChange|V|-|-|  
-|DBPROP_IrowsetLocate|V|-|V|  
-|DBPROP_IrowsetScroll|V|-|V|  
-|DBPROP_IrowsetUpdate|V|-|-|  
-|DBPROP_BOOKMARKS|V|-|V|  
+|DBPROP_IrowsetChange|F|-|-|  
+|DBPROP_IrowsetLocate|F|-|F|  
+|DBPROP_IrowsetScroll|F|-|F|  
+|DBPROP_IrowsetUpdate|F|-|-|  
+|DBPROP_BOOKMARKS|F|-|F|  
 |DBPROP_CANFETCHBACKWARDS|-|-|-|  
 |DBPROP_CANSRCOLLBACKWARDS|-|-|-|  
-|DBPROP_CANHOLDROWS|V|-|V|  
-|DBPROP_LITERALBOOKMARKS|V|-|V|  
-|DBPROP_OTHERINSERT|T|V|T|  
+|DBPROP_CANHOLDROWS|F|-|F|  
+|DBPROP_LITERALBOOKMARKS|F|-|F|  
+|DBPROP_OTHERINSERT|T|F|T|  
 |DBPROP_OTHERUPDATEDELETE|T|T|T|  
 |DBPROP_OWNINSERT|T|T|T|  
 |DBPROP_OWNUPDATEDELETE|T|T|T|  
 |DBPROP_QUICKSTART|-|-|-|  
 |DBPROP_REMOVEDELETED|T|-|T|  
 |DBPROP_IrowsetResynch|-|-|-|  
-|DBPROP_CHANGEINSERTEDROWS|V|-|V|  
-|DBPROP_SERVERDATAONINSERT|V|-|V|  
-|DBPROP_UNIQUEROWS|V|V|V|  
-|DBPROP_IMMOBILEROWS|V|T|V|  
+|DBPROP_CHANGEINSERTEDROWS|F|-|F|  
+|DBPROP_SERVERDATAONINSERT|F|-|F|  
+|DBPROP_UNIQUEROWS|F|F|F|  
+|DBPROP_IMMOBILEROWS|F|T|F|  
   
  Für einen spezifischen Satz von Rowseteigenschaften wird das Cursormodell, das ausgewählt wird, wie folgt bestimmt.  
   

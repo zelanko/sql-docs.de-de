@@ -11,10 +11,10 @@ ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2210d5eb5997ec66e707a90cdc52dc24328e6f6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193359"
 ---
 # <a name="authorization-in-reporting-services"></a>Autorisierung in Reporting Services
@@ -68,7 +68,7 @@ public bool CheckAccess(
 ### <a name="authorization-flow"></a>Autorisierungsablauf  
  Die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Autorisierung wird von der Sicherheitserweiterung gesteuert, die derzeit für die Ausführung auf dem Server konfiguriert ist. Die Autorisierung ist rollenbasiert und auf die Berechtigungen und Vorgänge beschränkt, die von der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Sicherheitsarchitektur bereitgestellt werden. Das folgende Diagramm veranschaulicht den Prozess der Autorisierung von Benutzern für die Bearbeitung von Elementen in der Berichtsserver-Datenbank:  
   
- ![Reporting Services-Sicherheitsautorisierungsfluss](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Reporting Services security authorization flow")  
+ ![Ablauf der Sicherheitsautorisierung von Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Ablauf der Sicherheitsautorisierung von Reporting Services")  
   
  Wie in diesem Diagramm angezeigt, befolgt die Autorisierung diese Reihenfolge:  
   

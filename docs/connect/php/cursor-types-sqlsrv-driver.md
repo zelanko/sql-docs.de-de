@@ -11,48 +11,48 @@ ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac090ad8831397bf31c0911ab8a8db21486528db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015115"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Cursortypen (SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Mit dem SQLSRV-Treiber können Sie ein Resultset mit Zeilen erstellen, auf die Sie in beliebiger Reihenfolge (abhängig vom Cursortyp) zugreifen können.  In diesem Thema werden Client seitige (gepufferte) und serverseitige (nicht gepufferte) Cursor behandelt.  
+Mit dem SQLSRV-Treiber können Sie ein Resultset mit Zeilen erstellen, auf die Sie in beliebiger Reihenfolge (abhängig vom Cursortyp) zugreifen können.  In diesem Thema werden clientseitige (gepufferte) und serverseitige (nicht gepufferte) Cursor erläutert.  
   
 ## <a name="cursor-types"></a>Cursortypen  
-Wenn Sie ein Resultset mit [sqlsrv_query](../../connect/php/sqlsrv-query.md) oder mit [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)erstellen, können Sie den Cursortyp angeben. Standardmäßig wird ein Vorwärts Cursor verwendet, mit dem Sie zeilenweise beginnend an der ersten Zeile des Resultsets verschieben können, bis Sie das Ende des Resultsets erreichen.  
+Wenn Sie ein Resultset mit [sqlsrv_query](../../connect/php/sqlsrv-query.md) oder [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) erstellen, können Sie den Cursortyp angeben. Standardmäßig wird ein Vorwärtscursor verwendet, mit dem Sie beginnend bei der ersten Zeile um jeweils eine Zeile vorrücken können, bis das Ende des Resultsets erreicht ist.  
   
-Sie können ein Resultset mit einem Bild lauffähigen Cursor erstellen, mit dem Sie in beliebiger Reihenfolge auf eine beliebige Zeile im Resultset zugreifen können. In der folgenden Tabelle sind die Werte aufgeführt, die in sqlsrv_query oder sqlsrv_prepare an die **scrollable** -Option übermittelt werden können.  
+Sie können ein Resultset mit einem scrollbaren Cursor erstellen, mit dem Sie in beliebiger Reihenfolge auf alle Zeilen im Resultset zugreifen können. In den folgenden Tabellen sind die Werte aufgeführt, die an die **Scrollable**-Option in „sqlsrv_query“ oder „sqlsrv_prepare“ übergeben werden können.  
   
-|Option|und Beschreibung|  
+|Option|Beschreibung|  
 |----------|---------------|  
-|SQLSRV_CURSOR_FORWARD|Ermöglicht das Verschieben von Zeilen zu einem Zeitpunkt ab der ersten Zeile des Resultsets, bis das Ende des Resultsets erreicht ist.<br /><br />Dies ist der Standard Cursortyp.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) gibt einen Fehler für Resultsets zurück, die mit diesem Cursortyp erstellt wurden.<br /><br />**Forward** ist die abgekürzte Form von SQLSRV_CURSOR_FORWARD.|  
-|SQLSRV_CURSOR_STATIC|Ermöglicht den Zugriff auf Zeilen in beliebiger Reihenfolge, aber die Änderungen in der Datenbank werden nicht widerspiegelt.<br /><br />**static** ist die abgekürzte Form von SQLSRV_CURSOR_STATIC.|  
-|SQLSRV_CURSOR_DYNAMIC|Ermöglicht den Zugriff auf Zeilen in beliebiger Reihenfolge und spiegelt Änderungen in der Datenbank wider.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) gibt einen Fehler für Resultsets zurück, die mit diesem Cursortyp erstellt wurden.<br /><br />**Dynamic** ist die abgekürzte Form von SQLSRV_CURSOR_DYNAMIC.|  
-|SQLSRV_CURSOR_KEYSET|Ermöglicht den Zugriff auf Zeilen in beliebiger Reihenfolge. Ein Keysetcursor aktualisiert nach dem Löschen einer Zeile aus einer Tabelle jedoch nicht die Zeilenanzahl (eine gelöschte Zeile wird ohne Werte zurückgegeben).<br /><br />**Keyset** ist die abgekürzte Form von SQLSRV_CURSOR_KEYSET.|  
-|SQLSRV_CURSOR_CLIENT_BUFFERED|Ermöglicht den Zugriff auf Zeilen in beliebiger Reihenfolge. Erstellt eine Client seitige Cursor Abfrage.<br /><br />**gepuffert** ist die abgekürzte Form von SQLSRV_CURSOR_CLIENT_BUFFERED.|  
+|SQLSRV_CURSOR_FORWARD|Hiermit können Sie beginnend bei der ersten Zeile um jeweils eine Zeile vorrücken, bis das Ende des Resultsets erreicht ist.<br /><br />Dies ist der Standardcursortyp.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) gibt einen Fehler für Resultsets zurück, die mit diesem Cursortyp erstellt wurden.<br /><br />**forward** ist die abgekürzte Form von SQLSRV_CURSOR_FORWARD.|  
+|SQLSRV_CURSOR_STATIC|Hiermit können Sie in beliebiger Reihenfolge auf Zeilen zugreifen, aber die Änderungen in der Datenbank werden nicht widergespiegelt.<br /><br />**static** ist die abgekürzte Form von SQLSRV_CURSOR_STATIC.|  
+|SQLSRV_CURSOR_DYNAMIC|Hiermit können Sie in beliebiger Reihenfolge auf Zeilen zugreifen, und die Änderungen in der Datenbank werden widergespiegelt.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) gibt einen Fehler für Resultsets zurück, die mit diesem Cursortyp erstellt wurden.<br /><br />**dynamic** ist die abgekürzte Form von SQLSRV_CURSOR_DYNAMIC.|  
+|SQLSRV_CURSOR_KEYSET|Hiermit können Sie in beliebiger Reihenfolge auf Zeilen zugreifen. Ein Keysetcursor aktualisiert nach dem Löschen einer Zeile aus einer Tabelle jedoch nicht die Zeilenanzahl (eine gelöschte Zeile wird ohne Werte zurückgegeben).<br /><br />**keyset** ist die abgekürzte Form von SQLSRV_CURSOR_KEYSET.|  
+|SQLSRV_CURSOR_CLIENT_BUFFERED|Hiermit können Sie in beliebiger Reihenfolge auf Zeilen zugreifen. Es wird eine clientseitige Cursorabfrage erstellt.<br /><br />**buffered** ist die abgekürzte Form von SQLSRV_CURSOR_CLIENT_BUFFERED.|  
   
-Wenn eine Abfrage mehrere Resultsets generiert, gilt die **scrollable** -Option für alle Resultsets.  
+Wenn eine Abfrage mehrere Resultsets generiert, gilt die **Scrollable**-Option für alle Resultsets.  
   
 ## <a name="selecting-rows-in-a-result-set"></a>Auswählen von Zeilen in einem Resultset  
-Nachdem Sie ein Resultset erstellt haben, können Sie mit [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md), [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)oder [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) eine Zeile angeben.  
+Nach dem Erstellen eines Resultsets können Sie [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md), [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) oder [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) verwenden, um eine Zeile anzugeben.  
   
-In der folgenden Tabelle werden die Werte beschrieben, die Sie im *Zeilen* Parameter angeben können.  
+In der folgenden Tabelle werden die Werte beschrieben, die Sie im Parameter *row* angeben können.  
   
-|Parameter|und Beschreibung|  
+|Parameter|Beschreibung|  
 |-------------|---------------|  
-|SQLSRV_SCROLL_NEXT|Gibt die nächste Zeile an. Dies ist der Standardwert, wenn Sie den *Zeilen* Parameter für ein scrollbares Resultset nicht angeben.|  
+|SQLSRV_SCROLL_NEXT|Gibt die nächste Zeile an. Dies ist der Standardwert, wenn Sie den *row*-Parameter nicht für ein scrollbares Resultset festlegen.|  
 |SQLSRV_SCROLL_PRIOR|Gibt die Zeile vor der aktuellen Zeile an.|  
 |SQLSRV_SCROLL_FIRST|Gibt die erste Zeile im Resultset an.|  
 |SQLSRV_SCROLL_LAST|Gibt die letzte Zeile im Resultset an.|  
-|SQLSRV_SCROLL_ABSOLUTE|Gibt die mit dem *Offset* -Parameter angegebene Zeile an.|  
-|SQLSRV_SCROLL_RELATIVE|Gibt die Zeile an, die mit dem *Offset* -Parameter aus der aktuellen Zeile angegeben wird.|  
+|SQLSRV_SCROLL_ABSOLUTE|Gibt die mit dem Parameter *offset* angegebene Zeile an.|  
+|SQLSRV_SCROLL_RELATIVE|Gibt die mit dem Parameter *offset* ab der aktuellen Zeile angegebene Zeile an.|  
   
-## <a name="server-side-cursors-and-the-sqlsrv-driver"></a>Server seitige Cursor und der sqlsrv-Treiber  
-Im folgenden Beispiel werden die Auswirkungen der verschiedenen Cursor veranschaulicht. In Zeile 33 des Beispiels sehen Sie die erste von drei Abfrage Anweisungen, die verschiedene Cursor angeben.  Zwei der Abfrage Anweisungen werden kommentiert. Jedes Mal, wenn Sie das Programm ausführen, verwenden Sie einen anderen Cursortyp, um die Auswirkung der Datenbankaktualisierung in Zeile 47 anzuzeigen.  
+## <a name="server-side-cursors-and-the-sqlsrv-driver"></a>Serverseitige Cursor und der SQLSRV-Treiber  
+Das folgende Beispiel veranschaulicht die Auswirkungen der verschiedenen Cursor. In Zeile 33 des Beispiels sehen Sie die erste von drei Abfrageanweisungen, die verschiedene Cursor angeben.  Zwei der Abfrageanweisungen sind auskommentiert. Verwenden Sie bei jeder Programmausführung einen anderen Cursor, und sehen Sie sich die Auswirkung auf die Datenbankaktualisierung in Zeile 47 an.  
   
 ```  
 <?php  
@@ -118,20 +118,20 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>Client seitige Cursor und der sqlsrv-Treiber  
-Client seitige Cursor sind ein Feature, das in Version 3,0 von hinzu [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] gefügt wurde, mit dem Sie ein gesamtes Resultset im Arbeitsspeicher zwischenspeichern können. Die Zeilen Anzahl ist verfügbar, nachdem die Abfrage ausgeführt wurde, wenn ein Client seitiger Cursor verwendet wird.  
+## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>Clientseitige Cursor und der SQLSRV-Treiber  
+Das Feature „clientseitige Cursor“ wurde in Version 3.0 der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] hinzugefügt. Mit ihnen können Sie ein komplettes Resultset im Arbeitsspeicher zwischenspeichern. Bei Verwendung eines clientseitigen Cursors ist die Zeilenanzahl nach Ausführung der Abfrage verfügbar.  
   
-Clientseitige Cursor eignen sich für kleine bis mittelgroße Resultsets. Verwenden Sie serverseitige Cursor für große Resultsets.  
+Clientseitige Cursor eignen sich für kleine bis mittelgroße Resultsets. Verwenden Sie bei großen Resultsets serverseitige Cursor.  
   
-Eine Abfrage gibt false zurück, wenn der Puffer nicht groß genug ist, um das gesamte Resultset zu speichern. Sie können die Puffergröße bis zur Grenze des PHP-Speichers erhöhen.  
+Eine Abfrage gibt FALSE zurück, wenn der Puffer nicht groß genug für das komplette Resultset ist. Sie können die Puffergröße bis zur Grenze des PHP-Speichers erhöhen.  
   
-Mit dem sqlsrv-Treiber können Sie die Größe des Puffers, der das Resultset enthält, mit der Einstellung clientbuffermaxkbsize für [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)konfigurieren. [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) gibt den Wert von clientbuffermaxkbsize zurück. Sie können auch die maximale Puffergröße in der Datei "php. ini" mit sqlsrv festlegen. Clientbuffermaxkbsize (z. b. sqlsrv). Clientbuffermaxkbsize = 1024).  
+Bei Verwendung des SQLSRV-Treibers können Sie mit der ClientBufferMaxKBSize-Einstellung für [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) die Größe des Puffers für das Resultset konfigurieren. [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) gibt den Wert von ClientBufferMaxKBSize zurück. Sie können die maximale Puffergröße auch mit sqlsrv.ClientBufferMaxKBSize (z. B. sqlsrv.ClientBufferMaxKBSize = 1024) in der Datei „php.ini“ festlegen.  
   
-Das folgende Beispiel zeigt Folgendes:  
+Dieses Beispiel zeigt Folgendes:  
   
--   Die Zeilen Anzahl ist immer mit einem Client seitigen Cursor verfügbar.  
+-   Die Zeilenanzahl ist bei einem clientseitigen Cursor immer verfügbar.  
   
--   Verwendung von Client seitigen Cursorn und Batch Anweisungen.  
+-   Verwendung von clientseitigen Cursorn und Batchanweisungen.  
   
 ```  
 <?php  
@@ -189,7 +189,7 @@ echo "Employee ID = $EmployeeID \n";
 ?>  
 ```  
   
-Das folgende Beispiel zeigt einen Client seitigen Cursor mit [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) und einer anderen Client Puffergröße.
+Das folgende Beispiel zeigt einen clientseitigen Cursor mit Verwendung von [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) und einer anderen Clientpuffergröße.
   
 ```  
 <?php  

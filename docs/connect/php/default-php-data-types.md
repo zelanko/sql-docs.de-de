@@ -1,5 +1,5 @@
 ---
-title: PHP-Standard Datentypen | Microsoft-Dokumentation
+title: PHP-Standarddatentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993670"
 ---
 # <a name="default-php-data-types"></a>PHP-Standarddatentypen
@@ -29,46 +29,46 @@ Wenn Daten mit dem Treiber PDO_SQLSRV zurückgegeben werden, wird als Datentyp e
   
 Im weiteren Verlauf dieses Themas werden die Standarddatentypen erläutert, die den SQLSRV-Treiber verwenden.  
   
-Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Server abgerufen wird), den PHP-Standarddatentyp (der Datentyp, in den Daten konvertiert werden) und die Standardcodierung für Datenströme und Zeichenfolgen. Weitere Informationen dazu, wie Sie Datentypen beim Abrufen von Daten vom Server festlegen, finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Server abgerufen wird), den PHP-Standarddatentyp (der Datentyp, in den Daten konvertiert werden) und die Standardcodierung für Datenströme und Zeichenfolgen. Weitere Informationen dazu, wie Sie Datentypen beim Abrufen von Daten vom Server festlegen, finden Sie unter [Vorgehensweise: Festlegen von PHP-Datentypen](../../connect/php/how-to-specify-php-data-types.md).  
   
 |SQL Server-Typ|PHP-Standardtyp|Standardcodierung|  
 |-------------------|--------------------|--------------------|  
-|BIGINT|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|BIGINT|String|8-Bit-Zeichen<sup>1</sup>|  
 |BINARY|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |bit|Integer|8-Bit-Zeichen<sup>1</sup>|  
-|char|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
-|Datum<sup>4</sup>|DATETIME|Nicht verfügbar|  
-|datetime<sup>4</sup>|DATETIME|Nicht verfügbar|  
-|datetime2<sup>4</sup>|DATETIME|Nicht verfügbar|  
-|datetimeoffset<sup>4</sup>|DATETIME|Nicht verfügbar|  
-|Decimal|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
-|FLOAT|float|8-Bit-Zeichen<sup>1</sup>|  
+|char|String|8-Bit-Zeichen<sup>1</sup>|  
+|Datum<sup>4</sup>|Datetime|Nicht verfügbar|  
+|datetime<sup>4</sup>|Datetime|Nicht verfügbar|  
+|datetime2<sup>4</sup>|Datetime|Nicht verfügbar|  
+|datetimeoffset<sup>4</sup>|Datetime|Nicht verfügbar|  
+|Decimal|String|8-Bit-Zeichen<sup>1</sup>|  
+|float|Float|8-Bit-Zeichen<sup>1</sup>|  
 |geography|Datenstrom|Binär<sup>3</sup>|  
 |Geometrie|Datenstrom|Binär<sup>3</sup>|  
-|Abbildung<sup>5</sup>|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
+|image<sup>5</sup>|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |INT|Integer|8-Bit-Zeichen<sup>1</sup>|  
-|money|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
-|NCHAR|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
-|NUMERIC|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
-|NVARCHAR|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|money|String|8-Bit-Zeichen<sup>1</sup>|  
+|NCHAR|String|8-Bit-Zeichen<sup>1</sup>|  
+|NUMERIC|String|8-Bit-Zeichen<sup>1</sup>|  
+|NVARCHAR|String|8-Bit-Zeichen<sup>1</sup>|  
 |nvarchar(Max)|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
 |ntext<sup>6</sup>|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
-|REAL|float|8-Bit-Zeichen<sup>1</sup>|  
-|smalldatetime|DATETIME|8-Bit-Zeichen<sup>1</sup>|  
+|real|Float|8-Bit-Zeichen<sup>1</sup>|  
+|smalldatetime|Datetime|8-Bit-Zeichen<sup>1</sup>|  
 |SMALLINT|Integer|8-Bit-Zeichen<sup>1</sup>|  
-|SMALLMONEY|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
-|sql_variant<sup>7</sup>|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|SMALLMONEY|String|8-Bit-Zeichen<sup>1</sup>|  
+|sql_variant<sup>7</sup>|String|8-Bit-Zeichen<sup>1</sup>|  
 |text<sup>8</sup>|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
-|time<sup>4</sup>|DATETIME|Nicht verfügbar|  
-|timestamp|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|time<sup>4</sup>|Datetime|Nicht verfügbar|  
+|timestamp|String|8-Bit-Zeichen<sup>1</sup>|  
 |TINYINT|Integer|8-Bit-Zeichen<sup>1</sup>|  
 |UDT|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |UNIQUEIDENTIFIER|String<sup>9</sup>|8-Bit-Zeichen<sup>1</sup>|  
 |varbinary|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |varbinary(MAX)|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
-|varchar|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|varchar|String|8-Bit-Zeichen<sup>1</sup>|  
 |varchar(MAX)|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|
-|xml|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
+|Xml|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
   
 
 1.  Daten werden in 8-Bit-Zeichen gemäß der Codepage des im System eingestellten Windows-Gebietsschemas zurückgegeben. Alle Multi-Byte-Zeichen oder Zeichen, die nicht in dieser Codepage enthalten sind, werden durch ein aus einem einzelnen Byte bestehendes Fragezeichen (?) ersetzt.  
@@ -77,13 +77,13 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
   
 3.  Die Daten werden als uncodierter und nicht übersetzter Strom aus unbearbeiteten Bytes vom Server zurückgegeben.  
 
-4.  Daten des Typs „Datum“ und „Uhrzeit“ können als Zeichenfolgen abgerufen werden. Weitere Informationen finden Sie unter [So wird's gemacht: Datums- und Uhrzeittypen mittels des SQLSRV-Treibers als Zeichenfolgen abrufen](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).  
+4.  Daten des Typs „Datum“ und „Uhrzeit“ können als Zeichenfolgen abgerufen werden. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen mittels des SQLSRV-Treibers](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).  
 
 5.  Dies ist ein veralteter Typ, der dem varbinary(max)-Typ zugeordnet ist.
 
 6. Dies ist ein veralteter Typ, der dem nvarchar(max)-Typ zugeordnet ist.
 
-7.  sql_variant wird in bidirektionalen oder Ausgabeparametern nicht unterstützt.
+7.  Der Typ sql_variant wird in bidirektionalen und Ausgabeparametern nicht unterstützt.
 
 8.  Dies ist ein veralteter Typ, der dem varchar(max)-Typ zugeordnet ist.  
   
@@ -97,11 +97,11 @@ Datentypen, die in SQL Server 2008 neu sind und die außerhalb von Spalten (z.B.
   
 |Funktion|PHP-Unterstützung|  
 |-----------|---------------|  
-|Tabellenwertparameter|Nein|  
+|Tabellenwertparameter|Nein |  
 |Spalten mit geringer Dichte|Teilweise|  
 |NULL-Bit-Komprimierung|Ja|  
 |Große benutzerdefinierte CLR-Typen (UDTs)|Ja|  
-|Dienstprinzipalname|Nein|  
+|Dienstprinzipalname|Nein |  
 |MERGE|Ja|  
 |FILESTREAM|Teilweise|  
   
@@ -110,7 +110,7 @@ Teilweise Unterstützung besagt, dass Sie den Spaltentyp nicht programmgesteuert
 ## <a name="see-also"></a>Weitere Informationen  
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[Converting Data Types](../../connect/php/converting-data-types.md)
+[Konvertieren von Datentypen](../../connect/php/converting-data-types.md)
 
 [PHP-Typen](https://php.net/manual/en/language.types.php)
 

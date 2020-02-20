@@ -16,10 +16,10 @@ ms.assetid: 1e15de27-a490-45cd-a3a6-a49721f15a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad5239c609e58750e7fd494d482ee11c62ab9cc8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985447"
 ---
 # <a name="updatebigdecimal-method-int-javamathbigdecimal"></a>updateBigDecimal-Methode (int, java.math.BigDecimal)
@@ -42,13 +42,13 @@ public void updateBigDecimal(int index,
   
  *x*  
   
- Ein BigDecimal-Objekt.  
+ Ein BigDecimal-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese updateBigDecimal-Methode wird von der updateBigDecimal-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese updateBigDecimal-Methode wird von der updateBigDecimal-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [updateBigDecimal-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)   

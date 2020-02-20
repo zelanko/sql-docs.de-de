@@ -16,16 +16,16 @@ ms.assetid: 9436c39f-f1a1-484a-a75b-776a72ca70f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 978805a1bd275771bdcfbae1616bd49535e2499a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975515"
 ---
 # <a name="setasciistream-method-int-javaioinputstream-int"></a>setAsciiStream-Methode (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt die angegebene Parameter Nummer auf das angegebene InputStream-Objekt mit der angegebenen Anzahl von Bytes fest.  
+  Mit dieser Methode wird die angegebene Parameternummer auf das angegebene InputStream-Objekt mit der angegebenen Anzahl von Bytes festgelegt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ public final void setAsciiStream(int n,
   
  *x*  
   
- Ein InputStream-Objekt.  
+ Ein InputStream-Objekt  
   
  *length*  
   
@@ -53,7 +53,7 @@ public final void setAsciiStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode wird von der Methode "Methode" in der Java. SQL. PreparedStatement-Schnittstelle angegeben.  
+ Diese setAsciiStream-Methode wird von der setAsciiStream-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
  Entspricht die Länge des Streams nicht der Angabe im *length*-Parameter, wird vom JDBC-Treiber beim Aktualisieren oder Einfügen der Zeile eine Ausnahme ausgelöst.  
   

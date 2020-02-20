@@ -1,9 +1,11 @@
 ---
-title: Verwenden der SOAP-API in einer Web-Anwendung – Reporting Services | Microsoft-Dokumentation
+title: Verwenden der SOAP-API in Webanwendungen
+description: Über die Reporting Services-SOAP-API können Sie auf alle Funktionen des Berichtsservers zugreifen.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - SOAP [Reporting Services], Web applications
@@ -14,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3d9b086f6ec5a57493c96e3a4d0462a44d9c2e3c
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: d7ae6c53033d1ea79a58d566bf57d8ed622e8f8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492775"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796829"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>Integrieren von Reporting Services mithilfe von SOAP: Webanwendung
   Über die Reporting Services-SOAP-API können Sie auf alle Funktionen des Berichtsservers zugreifen. Da es sich um einen Webdienst handelt, kann problemlos auf die SOAP-API zugegriffen werden, um Funktionen zur Unternehmensberichterstellung für Ihre benutzerdefinierten Geschäftsanwendungen bereitzustellen. Wenn Sie über eine Webanwendung auf den Report Server-Webdienst zugreifen, gehen Sie ganz ähnlich vor, als würden Sie über eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendung auf die SOAP-API zugreifen. Mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können Sie eine Proxyklasse generieren, die die Eigenschaften und Methoden des Berichtsserver-Webdiensts verfügbar macht und es Ihnen ermöglicht, für die Erstellung von Geschäftsanwendungen auf Basis der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Technologie eine vertraute Infrastruktur und vertraute Tools zu verwenden.  
@@ -37,19 +39,19 @@ ms.locfileid: "67492775"
 > [!NOTE]  
 >  Der Identitätswechsel ist standardmäßig deaktiviert.  
   
- Weitere Informationen zum [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Identitätswechsel finden Sie in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK-Dokumentation.  
+ Weitere Informationen zum [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Identitätswechsel finden Sie in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-SDK-Dokumentation.  
   
 ## <a name="managing-the-report-server-using-soap-api"></a>Verwalten des Berichtsservers mit der SOAP-API  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
- Sie können die Webanwendung auch verwenden, um einen Berichtsserver und seinen Inhalt zu verwalten. Der mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gelieferte Berichts-Manager ist ein Beispiel für eine Webanwendung, die komplett mit [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] und der Reporting Services-SOAP-API erstellt wurde. Sie können den benutzerdefinierten Webanwendungen die Berichtsverwaltungsfunktionalität des Berichts-Managers hinzufügen. Sie können beispielsweise eine Liste der verfügbaren Berichte in der Berichtsserver-Datenbank zurückgeben und diese Berichte in einem [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-**Listbox**-Steuerelement anzeigen, in dem die Benutzer eine Auswahl treffen können. Der folgende Code stellt eine Verbindung zur Berichtsserver-Datenbank her und gibt eine Liste der Elemente in der Berichtsserver-Datenbank zurück. Die verfügbaren Berichte werden dann zu einem ListBox-Steuerelement hinzugefügt, das für jeden Bericht eine Pfadangabe anzeigt.  
+ Sie können die Webanwendung auch verwenden, um einen Berichtsserver und seinen Inhalt zu verwalten. Der mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gelieferte Berichts-Manager ist ein Beispiel für eine Webanwendung, die komplett mit [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] und der Reporting Services-SOAP-API erstellt wurde. Sie können den benutzerdefinierten Webanwendungen die Berichtsverwaltungsfunktionalität des Berichts-Managers hinzufügen. Sie sollten beispielsweise eine Liste der verfügbaren Berichte in der Berichtsserver-Datenbank zurückgeben und diese Berichte in einem [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-**Listbox**-Steuerelement anzeigen, in dem die Benutzer eine Auswahl treffen können. Der folgende Code stellt eine Verbindung zur Berichtsserver-Datenbank her und gibt eine Liste der Elemente in der Berichtsserver-Datenbank zurück. Die verfügbaren Berichte werden dann zu einem ListBox-Steuerelement hinzugefügt, das für jeden Bericht eine Pfadangabe anzeigt.  
 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
- Sie können die Webanwendung auch verwenden, um einen Berichtsserver und seinen Inhalt zu verwalten. Im Lieferumfang von Web-Portal [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ist ein Beispiel für eine Webanwendung, die einen Großteil der Aufgaben verwaltet Sie in der Regel mithilfe von Reporting Services ausführen würden. Sie können den benutzerdefinierten Webanwendungen die Berichtsverwaltungsfunktionalität des Webportals hinzufügen. Sie können beispielsweise eine Liste der verfügbaren Berichte in der Berichtsserver-Datenbank zurückgeben und diese Berichte in einem [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-**Listbox**-Steuerelement anzeigen, in dem die Benutzer eine Auswahl treffen können. Der folgende Code stellt eine Verbindung zur Berichtsserver-Datenbank her und gibt eine Liste der Elemente in der Berichtsserver-Datenbank zurück. Die verfügbaren Berichte werden dann zu einem ListBox-Steuerelement hinzugefügt, das für jeden Bericht eine Pfadangabe anzeigt.  
+ Sie können die Webanwendung auch verwenden, um einen Berichtsserver und seinen Inhalt zu verwalten. Das in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthaltene Webportal ist ein Beispiel für eine Webanwendung, die den Großteil der Aufgaben verwaltet, die Sie typischerweise mit Reporting Services durchführen würden. Sie können den benutzerdefinierten Webanwendungen die Berichtsverwaltungsfunktionalität des Webportals hinzufügen. Sie sollten beispielsweise eine Liste der verfügbaren Berichte in der Berichtsserver-Datenbank zurückgeben und diese Berichte in einem [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-**Listbox**-Steuerelement anzeigen, in dem die Benutzer eine Auswahl treffen können. Der folgende Code stellt eine Verbindung zur Berichtsserver-Datenbank her und gibt eine Liste der Elemente in der Berichtsserver-Datenbank zurück. Die verfügbaren Berichte werden dann zu einem ListBox-Steuerelement hinzugefügt, das für jeden Bericht eine Pfadangabe anzeigt.  
 
 ::: moniker-end
   

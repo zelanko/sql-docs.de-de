@@ -1,6 +1,6 @@
 ---
-title: Massen Daten kopieren mithilfe von IRowsetFastLoad (OLE DB) | Microsoft-Dokumentation
-description: Massen Kopieren von Daten in eine SQL Server Tabelle mithilfe der IRowsetFastLoad-Schnittstelle OLE DB Treibers für SQL Server
+title: Massenkopieren von Daten mithilfe von IRowsetFastLoad (OLE DB) | Microsoft-Dokumentation
+description: Massenkopieren von Daten in eine SQL Server-Tabelle mithilfe der IRowsetFastLoad-Schnittstelle des OLE DB-Treibers für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 926cc4f4d3dd1f3022c2b653a32f12ee58492b24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015641"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Massenkopieren von Daten mithilfe von IRowsetFastLoad (OLE DB)
@@ -29,7 +29,7 @@ ms.locfileid: "68015641"
 
   In diesem Beispiel wird die Verwendung von IRowsetFastLoad für das Massenkopieren von Datensätzen in eine Tabelle gezeigt.  
   
- Der Consumer benachrichtigt OLE DB Treiber, dass er zum Massen kopieren SQL Server muss, indem er den OLE DB Treiber für SQL Server Treiber spezifische Eigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE festlegt. Wenn die-Eigenschaft für die Datenquelle festgelegt ist, erstellt der Consumer einen OLE DB Treiber für SQL Server Sitzung. Die neue Sitzung ermöglicht dem Consumer den Zugriff auf **IRowsetFastLoad**.  
+ Der Benutzer teilt dem OLE DB-Treiber für SQL Server mit, dass ein Massenkopiervorgang durchgeführt werden soll, indem er die treiberspezifische Eigenschaft SSPROP_ENABLEFASTLOAD des OLE DB-Treibers für SQL Server auf VARIANT_TRUE festlegt. Wenn diese Eigenschaft für die Datenquelle festgelegt wurde, erstellt der Benutzer eine OLE DB-Treiber für SQL Server-Sitzung. Diese neue Sitzung ermöglicht dem Benutzer Zugriff auf **IRowsetFastLoad**.  
   
  Es ist ein vollständiges Beispiel verfügbar, das die Verwendung von **IRowsetFastLoad** zum Massenkopieren der Datensätze in eine Tabelle veranschaulicht. In diesem Beispiel werden der Tabelle **IRFLTable** 10 Datensätze hinzugefügt. Sie müssen die Tabelle **IRFLTable** in der Datenbank erstellen.  
   
@@ -42,17 +42,17 @@ ms.locfileid: "68015641"
   
 1.  Stellen Sie eine Verbindung mit der Datenquelle her.  
   
-2.  Legen Sie den OLE DB-Treiber für SQL Server Treiber spezifische Datenquellen Eigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE fest. Wenn diese Eigenschaft auf VARIANT_TRUE festgelegt wurde, lässt die neu erstellte Sitzung den Consumerzugriff auf **IRowsetFastLoad** zu.  
+2.  Legen Sie die treiberspezifische Datenquelleneigenschaft SSPROP_ENABLEFASTLOAD des OLE DB-Treibers für SQL Server auf VARIANT_TRUE fest. Wenn diese Eigenschaft auf VARIANT_TRUE festgelegt wurde, lässt die neu erstellte Sitzung den Consumerzugriff auf **IRowsetFastLoad** zu.  
   
-3.  Erstellen einer Sitzung, die die **IOpenRowset** -Schnittstelle anfordert.  
+3.  Erstellen Sie eine Sitzung, in der die **IOpenRowset**-Schnittstelle angefordert wird.  
   
 4.  Rufen Sie **IOpenRowset::OpenRowset** auf, um ein Rowset zu öffnen, das alle Zeilen aus der Tabelle enthält, in die Daten mit dem Massenkopiervorgang kopiert werden sollen.  
   
-5.  Führen Sie die erforderlichen Bindungen aus, und erstellen Sie mithilfe von **IAccessor::-accateaccessor**einen Accessor.  
+5.  Definieren Sie die notwendigen Bindungen, und erstellen Sie mit **IAccessor::CreateAccessor** einen Accessor.  
   
 6.  Richten Sie den Arbeitsspeicherpuffer ein, aus dem die Daten in die Tabelle kopiert werden.  
   
-7.  Aufrufen von **IRowsetFastLoad:: InsertRow** zum Massen Kopieren der Daten in die-Tabelle.  
+7.  Rufen Sie **IRowsetFastLoad::InsertRow** auf, um das Massenkopieren der Daten in die Tabelle durchzuführen.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel werden der Tabelle IRFLTable 10 Datensätze hinzugefügt. Sie müssen die Tabelle IRFLTable in der Datenbank erstellen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  

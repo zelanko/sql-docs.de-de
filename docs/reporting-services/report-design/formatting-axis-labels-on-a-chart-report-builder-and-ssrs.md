@@ -26,10 +26,10 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575631"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Achsenbezeichnungen in einem Diagramm (Berichts-Generator und SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "65575631"
 ## <a name="types-of-axes"></a>Achsentypen  
  Das Diagramm verfügt über zwei Hauptachsen: die Wertachse und die Kategorieachse.  
   
- ![Kategorie- und Wertachsen eines Diagramms](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Chart categorical and value axes")  
+ ![Kategorie- und Wertachsen eines Diagramms](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Kategorie- und Wertachsen eines Diagramms")  
   
  Wenn Sie ein Feld aus Ihrem Dataset auf die Entwurfsoberfläche ziehen, bestimmt das Diagramm, ob dieses Feld zur Kategorie- oder zur Wertachse gehört.  
   
@@ -56,10 +56,10 @@ ms.locfileid: "65575631"
   
  Die Achsenskala ist an einen Mindest- und einen Höchstwert gebunden, die den Datenbereich definieren, der an der Anchse angezeigt wird. Das Diagramm berechnet den Mindest- und Höchstwert an jeder Achse auf Grundlage der Werte im Resultset. Auf der Wertachse wird die Skala immer von der kleinsten und größten Zahl im Wertfeld bestimmt. Auf der Kategorieachse werden dieMindest- und Höchstwerttypen abhängig vom Typ des Kategoriefelds bestimmt. Jedes Feld in einem Dataset kann einem von drei Kategoriefeldtypen zugeordnet werden. In der folgenden Tabelle werden diese drei Typen von Kategoriefeldern illustriert.  
   
-|Kategoriefeldtyp|und Beschreibung|Beispiel|  
+|Kategoriefeldtyp|Beschreibung|Beispiel|  
 |-------------------------|-----------------|-------------|  
-|Numerisch|Kategorien werden in numerischer Reihenfolge an der x-Achse dargestellt.|Ein Verkaufsbericht nach Mitarbeiter-ID zeigt die Mitarbeiter-IDs an der x-Achse an.|  
-|Date/Time|Kategorien werden in chronolgischer Reihenfolge an der x-Achse dargestellt.|Bei einem monatlichen Verkaufsbericht werden formatierte Datumsangaben an der x-Achse angezeigt.|  
+|Numeric|Kategorien werden in numerischer Reihenfolge an der x-Achse dargestellt.|Ein Verkaufsbericht nach Mitarbeiter-ID zeigt die Mitarbeiter-IDs an der x-Achse an.|  
+|Datum/Uhrzeit|Kategorien werden in chronolgischer Reihenfolge an der x-Achse dargestellt.|Bei einem monatlichen Verkaufsbericht werden formatierte Datumsangaben an der x-Achse angezeigt.|  
 |Zeichenfolgen|Kategorien werden in der Reihenfolge, in der sie in der Datenquelle vorkommen, an der x-Achse dargestellt.|Bei einem Verkaufsbericht nach Regionen werden die Regionsnamen an der x-Achse angezeigt.|  
   
  Alle Diagrammtypen mit zwei Achsen sind so konzipiert, dass einige Achsenbezeichnungen unterdrückt werden, wenn zu viele Kategorien vorhanden sind, um auf die Achse zu passen. Auf diese Weise wird das Diagramm übersichtlicher und Bezeichnungskollisionen werden vermieden.  
@@ -75,7 +75,7 @@ ms.locfileid: "65575631"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Beispiel für die Berechnung der Achsenbezeichnungen durch das Diagramm  
  Die hier gezeigte Tabelle enthält Beispielumsatzdaten, die in einem Säulendiagramm dargestellt werden sollen. Das Feld Name wird dem Bereich Kategoriegruppen und das Feld Menge dem Bereich Werte hinzugefügt.  
   
-|Name|Quantity|  
+|Name|Menge|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

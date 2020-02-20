@@ -13,10 +13,10 @@ ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492757"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>Konfigurieren von Ausführungseigenschaften für einen Bericht
@@ -56,28 +56,28 @@ ms.locfileid: "67492757"
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
-## <a name="to-configure-report-execution-properties"></a>Konfigurieren von Ausführungseigenschaften für einen Bericht  
+## <a name="to-configure-report-execution-properties"></a>So konfigurieren Sie Berichtsausführungseigenschaften  
   
 Führen Sie folgende Schritte im [Webportal eines Berichtsservers (einheitlicher SSRS-Modus)](../../reporting-services/web-portal-ssrs-native-mode.md) durch:  
   
-1. Navigieren Sie zu den Bericht für den Sie die Ausführungseigenschaften konfigurieren möchten.  
+1. Navigieren Sie zu dem Bericht, dessen Ausführungseigenschaften Sie konfigurieren möchten.  
   
-2. Mit der rechten Maustaste den Bericht, und wählen Sie **verwalten** im Dropdown-Menü.
+2. Klicken Sie mit der rechten Maustaste auf den Bericht, und klicken Sie im Dropdownmenü auf **Manage** (Verwalten).
 
-3. Wählen Sie die **Berichtsverlaufs-Momentaufnahmen** Registerkarte zum Anzeigen der **Berichtsverlaufs-Momentaufnahmen** Seite.  
+3. Klicken Sie auf die Registerkarte **History snapshots** (Verlaufsmomentaufnahmen), um die Seite **History snapshots** (Verlaufsmomentaufnahmen) anzuzeigen.  
   
-4. Wählen Sie **Zeitpläne und Einstellungen** Schaltfläche, und überprüfen Sie **Berichtsverlaufs-Momentaufnahmen nach einem Zeitplan erstellen** , wenn er noch nicht aktiviert ist.
+4. Klicken Sie auf die Schaltfläche **Schedules and settings** (Zeitpläne und Einstellungen), und aktivieren Sie die Option **Create history snapshots on a schedule** (Verlaufsmomentaufnahmen nach einem Zeitplan erstellen), falls diese noch nicht aktiviert ist.
   
-5. Wählen Sie entweder eine **freigegebener Zeitplan** oder **Berichtsspezifischer Zeitplan** je nach Bedarf.  
+5. Wählen Sie nach Belieben entweder einen **freigegebenen Zeitplan** oder einen **berichtsspezifischen Zeitplan** aus.  
   
-6. In der **erweitert** Abschnitt, wählen Sie den gewünschten **Aufbewahrung** -Richtlinie für die Berichtsverlaufs-Momentaufnahmen.  
+6. Wählen Sie dann im Abschnitt **Advanced** (Erweitert) die gewünschte **Aufbewahrungsrichtlinie** für die Verlaufsmomentaufnahmen aus.  
   
-7. Wählen Sie **Anwenden**aus.  
+7. Wählen Sie **Übernehmen**.  
   
    >[!NOTE]
-   >Wenn Sie sofort eine Momentaufnahme erstellen möchten, wählen Sie die **neue Berichtsverlaufs-Momentaufnahme** anstelle der Schaltfläche die **Zeitpläne und Einstellungen** Schaltfläche und eine Berichtsmomentaufnahme wird sofort erstellt werden.  
+   >Wenn Sie sofort eine Momentaufnahme erstellen möchten, klicken Sie anstelle der Schaltfläche **Schedules and settings** (Zeitpläne und Einstellungen) auf die Schaltfläche **New history snapshot** (Neue Verlaufsmomentaufnahme), woraufhin sofort eine Berichtsmomentaufnahme erstellt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Set Report Processing Properties (Festlegen von Berichtsverarbeitungseigenschaften)](../../reporting-services/report-server/set-report-processing-properties.md)   

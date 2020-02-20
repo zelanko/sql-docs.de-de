@@ -11,10 +11,10 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd0b847ba4ebaa2d669927abe0665b18a2d517bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579173"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)
@@ -22,7 +22,7 @@ In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 
   
  Ausdrücke können einfach oder komplex sein. *Einfache Ausdrücke* enthalten einen Verweis auf ein einzelnes Datasetfeld, einen Parameter oder ein integriertes Feld. Komplexe Ausdrücke können mehrere integrierte Verweise, Operatoren und Funktionsaufrufe enthalten. Beispiel: Ein komplexer Ausdruck könnte die auf dem Feld Vertrieb angewendete Sum-Funktion einschließen.  
   
- Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben. Ein Ausdruck beginnt mit einem Gleichheitszeichen (=) gefolgt von einer Kombination aus Verweisen auf integrierte Auflistungen wie Datasetfelder und Parameter, Konstanten, Funktionen und Operatoren.  
+ Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] geschrieben. Ein Ausdruck beginnt mit einem Gleichheitszeichen (=) gefolgt von einer Kombination aus Verweisen auf integrierte Auflistungen wie Datasetfelder und Parameter, Konstanten, Funktionen und Operatoren.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -57,7 +57,7 @@ In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 
 |Formatieren von Daten in einem Textfeld in Abhängigkeit des Werts.|Farbe für einen Platzhalter in einem Textfeld in der Detailzeile eines Tablix-Elements. Dialogfeld **Textfeldeigenschaften, Schriftart**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Einmaliges Berechnen eines Werts, um überall im Bericht darauf verweisen zu können.|Wert für eine Berichtsvariable. Dialogfeld **Berichtseigenschaften, Variablen**.|`=Variables!MyCalculation.Value`|  
 |Einschließen bestimmter Werte für mehrere Felder aus einem Dataset.|Filtergleichung für eine Gruppe in einem Tablix-Element. Dialogfeld **Tablix-Eigenschaften, Filter**.|Wählen Sie als Datentyp die Option **Boolesch**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Ausblenden eines Textfelds auf der Entwurfsoberfläche, das von Benutzern ein- oder ausgeblendet werden kann, indem diese einen booleschen Parameter mit dem Namen *Show*verwenden.|Ausgeblendete Eigenschaft in einem Textfeld. Dialogfeld **Textfeldeigenschaften, Sichtbarkeit**.|`=Not Parameters!` *Anzeigen\<boolescher Parameter>* `.Value`|  
+|Ausblenden eines Textfelds auf der Entwurfsoberfläche, das von Benutzern ein- oder ausgeblendet werden kann, indem diese einen booleschen Parameter mit dem Namen *Show*verwenden.|Ausgeblendete Eigenschaft in einem Textfeld. Dialogfeld **Textfeldeigenschaften, Sichtbarkeit**.|`=Not Parameters!` *\<boolescher Parameter> anzeigen* `.Value`|  
 |Angeben des dynamischen Inhalts von Seitenkopf- oder Seitenfußzeilen.|Wert für einen Platzhalter in einem Textfeld, das in die Seitenkopf- oder Seitenfußzeile eingefügt wird.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Dynamisches Angeben einer Datenquelle mithilfe eines Parameters.|Verbindungszeichenfolge in der Datenquelle. Dialogfeld **Datenquelleneigenschaften, Allgemein**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Identifizieren aller Werte für einen mehrwertigen Parameter, der vom Benutzer ausgewählt wurde.|Wert für einen Platzhalter in einem Textfeld. Dialogfeld **Tablix-Eigenschaften, Filter**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  

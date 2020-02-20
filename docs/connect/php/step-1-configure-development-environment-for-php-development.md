@@ -11,30 +11,30 @@ ms.assetid: 0bce6022-00bd-45c6-9671-eaa9dfa395a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc923e3f6e24290f7f2c869fa15dfa4305776452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014873"
 ---
-# <a name="step-1-configure-environment-for-php-development"></a>Schritt 1: Konfigurieren der Umgebung für die PHP-Entwicklung
+# <a name="step-1-configure-environment-for-php-development"></a>Schritt 1: Konfigurieren der Umgebung für PHP-Entwicklung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 
 
 
-* Identifizieren Sie basierend auf Ihrer Umgebung, welche Version des PHP-Treibers verwendet werden soll, wie hier beschrieben: [System Anforderungen für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)
-* Herunterladen und Installieren des entsprechenden PHP-Treibers hier: [Herunterladen von Microsoft PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)  
-* Laden Sie den entsprechenden ODBC-Treiber herunter, und installieren Sie ihn: [ODBC Driver for SQL Server herunterladen](../../connect/odbc/download-odbc-driver-for-sql-server.md)  
-* Konfigurieren Sie den PHP-Treiber und-Webserver für ihr bestimmtes Betriebssystem:
+* Bestimmen Sie, welche Version des PHP-Treibers Sie basierend auf Ihrer Umgebung verwenden. Verwenden Sie dazu die folgenden Informationsressourcen:  [Systemanforderungen für Microsoft-Treiber für PHP für SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+* Laden Sie den für Sie zutreffenden PHP-Treiber hier herunter, und installieren Sie ihn: [Download des Microsoft-PHP-Treibers](https://www.microsoft.com/download/details.aspx?id=20098)  
+* Laden Sie den für Sie zutreffenden ODBC-Treiber hier herunter, und installieren Sie ihn:  [Herunterladen des ODBC-Treibers für SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)  
+* Konfigurieren Sie den PHP-Treiber und den Webserver für Ihr spezifisches Betriebssystem:
 
 ### <a name="windows"></a>Windows  
   
 
-* Konfigurieren Sie das Laden des PHP-Treibers, wie hier beschrieben: [Laden der Microsoft-Treiber für PHP für SQL Server](../../connect/php/loading-the-php-sql-driver.md) 
-* Konfigurieren Sie IIS zum Hosten von PHP-Anwendungen, wie hier beschrieben: [Konfigurieren von IIS für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/configuring-iis-for-php-sql-driver.md)
+* Konfigurieren und laden Sie den PHP-Treiber wie hier beschrieben: [Loading the Microsoft Drivers for PHP for SQL Server (Laden von Microsoft-Treibern für PHP für SQL Server)](../../connect/php/loading-the-php-sql-driver.md) 
+* Konfigurieren Sie die IIS zum Hosten von PHP-Anwendungen wie hier beschrieben: [Konfigurieren der IIS für Microsoft-Treiber für PHP für SQL Server](../../connect/php/configuring-iis-for-php-sql-driver.md)
 
 ### <a name="linux-and-mac"></a>Linux und Mac
 
 
-*   Konfigurieren Sie das Laden des PHP-Treibers, und konfigurieren Sie den Webserver zum Hosten von PHP-Anwendungen, wie im folgenden beschrieben: [Tutorial zur Installation von PHP Linux und](../../connect/php/installation-tutorial-linux-mac.md)
+*   Konfigurieren Sie das Laden des PHP-Treibers und Ihren Webserver zum Hosten von PHP-Anwendungen wie hier beschrieben: [Tutorial zur Installation der PHP-Treiber unter Linux und macOS](../../connect/php/installation-tutorial-linux-mac.md)

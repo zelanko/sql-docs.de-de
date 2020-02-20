@@ -11,10 +11,10 @@ ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492808"
 ---
 # <a name="create-a-linked-report"></a>Erstellen eines verknüpften Berichts
@@ -28,23 +28,23 @@ ms.locfileid: "67492808"
   
 ## <a name="to-create-a-linked-report"></a>So erstellen Sie einen verknüpften Bericht  
   
-1. Wechseln Sie in der Webportal zu den gewünschten Bericht, mit der rechten Maustaste darauf und wählen Sie **verwalten** aus der Dropdown-Menü.
+1. Navigieren Sie im Webportal zum gewünschten Bericht, klicken Sie mit der rechten Maustaste auf diesen, und wählen Sie dann im Dropdownmenü **Verwalten** aus.
 
-2. Auf der **verwalten <reportname>**  Seite **verknüpften Bericht erstellen**.  
+2. Klicken Sie auf der Seite **<reportname> verwalten** auf **Verknüpften Bericht erstellen**.  
   
 3. Geben Sie einen Namen für den neuen verknüpften Bericht ein. Geben Sie optional eine Beschreibung ein.  
   
-4. Um einen anderen Ordner für den Bericht auszuwählen, wählen Sie die Schaltfläche mit den Auslassungspunkten (...) rechts neben ***Speicherort***.  Navigieren Sie zu den neuen Ordner für den Bericht, und wählen Sie **wählen**. Wenn Sie einen anderen Ordner nicht auswählen, wird der verknüpfte Bericht im aktuellen Ordner erstellt.  
+4. Klicken Sie rechts neben ***Speicherort*** auf die Schaltfläche mit Auslassungspunkten (...), um einen anderen Ordner für den Bericht auszuwählen.  Navigieren Sie zum neuen Ordner für den Bericht, und klicken Sie auf **Auswählen**. Wenn Sie keinen anderen Ordner auswählen, wird der verknüpfte Bericht im aktuellen Ordner erstellt.  
   
-5. Wählen Sie **Erstellen**aus. Der verknüpfte Bericht wird erstellt.  
+5. Klicken Sie auf **Erstellen**. Der verknüpfte Bericht wird erstellt.  
 
-6. Klicken Sie unter **erweitert**, wählen Sie einen anderen **berichtstimeout** -Wert, wenn gewünscht, und wählen Sie **übernehmen** zum Speichern der Änderungen.
+6. Wählen Sie bei Bedarf unter **Erweitert** einen anderen **Berichtstimeout**-Wert aus, und klicken Sie dann auf **Anwenden**, um die Änderungen zu speichern.
   
      Das Symbol für einen verknüpften Bericht unterscheidet sich von anderen Elementen, die von einem Berichtsserver verwaltet werden. Das folgende Symbol steht für einen verknüpften Bericht:  
   
-     ![Symbol verknüpfte Berichte](../../reporting-services/report-server/media/hlp-16linked.gif "Linked report icon")  
+     ![Symbol für einen verknüpften Bericht](../../reporting-services/report-server/media/hlp-16linked.gif "Symbol für einen verknüpften Bericht")  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 
  [Konzepte von Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)  
  [Das Webportal eines Berichtsservers (einheitlicher SSRS-Modus)](../../reporting-services/web-portal-ssrs-native-mode.md)

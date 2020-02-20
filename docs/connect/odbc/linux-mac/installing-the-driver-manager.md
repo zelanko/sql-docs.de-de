@@ -13,10 +13,10 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fc46627dcbd10e4fc64a8520412105475e9c0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008794"
 ---
 # <a name="installing-the-driver-manager"></a>Installieren des Treiber-Managers
@@ -71,7 +71,7 @@ Wenn das Skript für die Installation nicht abgeschlossen werden konnte, konfigu
   
 4.  Wechseln Sie zum Verzeichnis „unixODBC-2.3.0“.  
   
-5.  Führen Sie an einer Eingabeaufforderung den Befehl: **CPPFLAGS = "-DSIZEOF_LONG_INT = 8"** .  
+5.  Führen Sie den folgenden Befehl in einer Eingabeaufforderung aus: **CPPFLAGS="-DSIZEOF_LONG_INT=8"** .  
   
 6.  Führen Sie an einer Eingabeaufforderung den Befehl: **export CPPFLAGS**.  
   
@@ -83,7 +83,7 @@ Wenn das Skript für die Installation nicht abgeschlossen werden konnte, konfigu
 
 Sie können nun den Treiber installieren. Weitere Informationen finden Sie unter [installieren Microsoft ODBC Driver for SQL Server unter Linux und MacOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 [Installieren des Microsoft ODBC Driver for SQL Server unter Linux und macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [Bekannte Probleme in dieser Version des Treibers](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)

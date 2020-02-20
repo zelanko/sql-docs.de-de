@@ -14,10 +14,10 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68044787"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Problembehandlung bei Failoverclustern
@@ -67,7 +67,7 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
   
 -   Hardwarefehler in einem Knoten eines Zwei-Knoten-Clusters. Die Ursache für diesen Hardwarefehler könnte beispielsweise ein Fehler auf der SCSI-Karte oder im Betriebssystem sein.  
   
-     Zum Beheben dieses Fehlers entfernen Sie den fehlerhaften Knoten mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setupprogramms vom Failovercluster, behandeln Sie den Hardwarefehler, während der Computer offline ist, fahren Sie den Computer wieder hoch, und fügen Sie dann der Failoverclusterinstanz den reparierten Knoten wieder hinzu.  
+     Zum Beheben dieses Fehlers entfernen Sie den fehlerhaften Knoten mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setupprogramms vom Failovercluster, behandeln Sie den Hardwarefehler, während der Computer offline ist, fahren Sie den Computer wieder hoch, und fügen Sie dann der Failoverclusterinstanz den reparierten Knoten wieder hinzu.  
   
      Weitere Informationen finden Sie unter [Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) und [Wiederherstellen nach einem Fehler der Failoverclusterinstanz](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md).  
   
@@ -88,11 +88,11 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
  **Lösung 1:** Verwenden Sie anstelle des **/qn**-Schalters den **/qb**-Schalter. Wenn Sie den **/qb** -Schalter verwenden, wird bei jedem Schritt die Standardbenutzeroberfläche mit allen Fehlermeldungen angezeigt.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problem: SQL Server kann sich nach der Migration auf einen anderen Knoten nicht am Netzwerk anmelden  
- **Problem 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten kann kein Kontakt mit einem Domänencontroller hergestellt werden.  
+ **Problem 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkonten können keinen Kontakt mit einem Domänencontroller herstellen.  
   
  **Lösung 1:** Überprüfen Sie die Ereignisprotokolle in Hinblick auf Netzwerkprobleme wie Adapterfehler oder DNS-Probleme. Überprüfen Sie, ob Sie Ihren Domänencontroller pingen können.  
   
- **Problem 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontokennwörter stimmen nicht auf allen Clusterknoten überein, oder vom Knoten wird ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst, der von einem fehlerhaften Knoten migriert wurde, nicht neu gestartet.  
+ **Problem 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkontokennwörter stimmen nicht auf allen Clusterknoten überein, oder vom Knoten wird ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienst, der von einem fehlerhaften Knoten migriert wurde, nicht neu gestartet.  
   
  **Lösung 2:** Ändern Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkontokennwörter mithilfe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Configuration Manager. Andernfalls müssen Sie nach dem Ändern der Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten auf einem Knoten auch die Kennwörter auf allen anderen Knoten ändern. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Der Konfigurations-Manager führt dies automatisch aus.  
   
@@ -122,13 +122,13 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
   
  **Lösung 2:** Verwenden Sie „NBTSTAT“, um den doppelten Namen zu finden, und beheben Sie dann das Problem.  
   
- **Problem 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt keine Verbindung mithilfe von Named Pipes her.  
+ **Problem 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt keine Verbindung mithilfe von Named Pipes her.  
   
  **Lösung 3:** Erstellen Sie mit dem SQL Server-Konfigurations-Manager einen Alias, der eine Verbindung mit dem entsprechenden Computer herstellt, um eine Verbindung mithilfe von Named Pipes herzustellen. Wenn Sie beispielsweise über einen Cluster mit zwei Knoten (**Knoten A** und **Knoten B**) und eine Failoverclusterinstanz (**Virtsql**) mit einer Standardinstanz verfügen, können Sie die Verbindung mit dem Server, dessen Netzwerknamenressource offline ist, wie folgt herstellen:  
   
 1.  Ermitteln Sie mithilfe der Clusterverwaltung den Knoten, auf dem die Gruppe mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird. In diesem Beispiel ist es **Knoten A**.  
   
-2.  Starten Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst auf diesem Computer mithilfe von **net start**. Weitere Informationen zum Verwenden von **net start** finden Sie unter [Manuelles Starten von SQL Server](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx).  
+2.  Starten Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst auf diesem Computer mithilfe von **net start**. Weitere Informationen zum Verwenden von **net start**finden Sie unter [Manuelles Starten von SQL Server](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx).  
   
 3.  Starten Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQL Server-Konfigurations-Manager auf **Knoten A**. Zeigen Sie den Pipenamen an, der vom Server überwacht wird. Dieser sollte in etwa so aussehen: \\\\.\\$$\VIRTSQL\pipe\sql\query.  
   

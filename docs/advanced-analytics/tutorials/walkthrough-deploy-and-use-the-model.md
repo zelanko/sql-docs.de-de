@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d553d991bd07785a6a6a7592cee38a1e66badf29
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73723707"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479394"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Bereitstellen des R-Modells und Verwendung in SQL Server (exemplarische Vorgehensweise)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ Erstellen Sie die gespeicherte Prozedur *PredictTipBatchMode*, die mehrere Vorhe
 
     + Verwenden Sie eine SELECT-Anweisung, um das gespeicherte Modell aus einer SQL-Tabelle abzurufen. Das Modell wird aus der Tabelle, die in der SQL-Variable _\@lmodel2_ gespeichert ist, als **varbinary(max)** abgerufen, und als Parameter *mod* an die gespeicherte Systemprozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) übergeben.
 
-    + Die Eingabedaten für die Bewertung werden als SQL-Abfrage bewertet und als Zeichenfolge in der SQL-Variable _\@input_ gespeichert. Wenn Daten aus der Datenbank abgerufen werden, werden sie in einem Datenrahmen namens *InputDataSet* gespeichert. Dieser Name ist die Standardbezeichnung für Eingabedaten in die Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Sie können bei Bedarf einen anderen Variablennamen über den Parameter *_\@input_data_1_name_* festlegen.
+    + Die Eingabedaten für die Bewertung werden als SQL-Abfrage bewertet und als Zeichenfolge in der SQL-Variable _\@input_ gespeichert. Wenn Daten aus der Datenbank abgerufen werden, werden sie in einem Datenrahmen namens *InputDataSet* gespeichert. Dieser Name ist die Standardbezeichnung für Eingabedaten in die Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Sie können bei Bedarf einen anderen Variablennamen über den Parameter _\@input_data_1_name_ festlegen.
 
     + Die gespeicherte Prozedur ruft die rxPredict-Funktion aus der **RevoScaleR**-Bibliothek auf, um die Bewertung zu generieren.
 

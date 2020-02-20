@@ -1,5 +1,5 @@
 ---
-title: C++ODBC-Anwendung, die Zugriff auf eine SQL-Datenbank
+title: C++-ODBC-App, die auf eine SQL-Datenbank zugreift
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 541757a8a6919577cfe54c7dd6efa461ae0f1449
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67690554"
 ---
-# <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++ODBC-Beispiel-Anwendung greift auf eine SQL-Datenbank
+# <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++-ODBC-Beispielanwendung greift auf eine SQL-Datenbank zu
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Dies C++ beispielanwendung veranschaulicht, wie die ODBC-APIs eine Verbindung herstellen und auf eine SQL­Datenbank zugreifen.
+Mithilfe der folgenden C++-Beispielanwendung wird gezeigt, wie Sie mit den ODBC-APIs eine Verbindung zu einer SQL-Datenbank herstellen und darauf zugreifen.
 
-Juli 2019, in diesem Beispiel bis Oktober 2013 C++ ODBC-Anwendung wurde 47,300 Mal heruntergeladen. Im Juli 2019 wurde diese Anwendungsquelle von Microsofts Code Gallery zu dieser Webseite verschoben.
+Vom Oktober 2013 bis zum Juli 2019 wurde diese C++-ODBC-Beispielanwendung 47.300 Mal heruntergeladen. Im Juli 2019 wurde die Anwendungsquelle von der Microsoft Code Gallery auf diese Webseite verlegt.
 
 <!-- 
 docs/connect/odbc/ , cpp-code-example-app-connect-access-sql-db.md
@@ -765,7 +765,7 @@ Global
 EndGlobal 
 ```
 
-## <a name="d-odbcsqlvcxproj-code"></a>D. odbcsql.vcxproj code
+## <a name="d-odbcsqlvcxproj-code"></a>D: odbcsql.vcxproj code
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?> 
@@ -943,6 +943,6 @@ EndGlobal
 </Project>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

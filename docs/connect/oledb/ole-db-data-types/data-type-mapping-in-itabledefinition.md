@@ -1,5 +1,5 @@
 ---
-title: Datentyp Zuordnung in ITableDefinition | Microsoft-Dokumentation
+title: Datentypzuordnung in ITableDefinition | Microsoft-Dokumentation
 description: Datentypzuordnung zu ITableDefinition
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: abe874a50e8534291a67393dfaf3485c96405b02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015854"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Datentypzuordnung zu ITableDefinition
@@ -37,7 +37,7 @@ ms.locfileid: "68015854"
 |OLE DB-Datentyp|SQL Server<br /><br /> Datentyp|Zusätzliche Informationen|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
-|DBTYPE_BYTES|**binary**, **varbinary**, **image** oder **varbinary(max)**|Der OLE DB-Treiber für SQL Server überprüft das *ulColumnSize* -Element der dbcolumndebug-Struktur. Basierend auf dem-Wert und der-Version [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der-Instanz ordnet der OLE DB Treiber für SQL Server den Typ dem **Image**zu.<br /><br /> Wenn der Wert von *ulColumnSize* kleiner als die maximale Länge einer Spalte des **binary**-Datentyps ist, dann überprüft der OLE DB-Treiber für SQL Server das Element *rgPropertySets* der DBCOLUMNDESC-Struktur. Wenn DBPROP_COL_FIXEDLENGTH VARIANT_TRUE ist, ordnet der OLE DB Treiber für SQL Server den Typ **Binär**zu. Wenn der Wert der Eigenschaft "VARIANT_FALSE" ist, ordnet der OLE DB Treiber für SQL Server den Typ " **varbinary**" zu. In jedem Fall bestimmt das Element *ulColumnSize* der DBCOLUMNDESC-Struktur die Breite der SQL Server-Spalte, die erstellt wird.|  
+|DBTYPE_BYTES|**binary**, **varbinary**, **image** oder **varbinary(max)**|Der OLE DB-Treiber für SQL Server untersucht die *ulColumnSize*-Elemente der DBCOLUMNDESC-Struktur. Basierend auf dem Wert und der Version der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ordnet der OLE DB-Treiber für SQL Server den Typ zu **image** hinzu.<br /><br /> Wenn der Wert von *ulColumnSize* kleiner als die maximale Länge einer Spalte des **binary**-Datentyps ist, dann überprüft der OLE DB-Treiber für SQL Server das Element *rgPropertySets* der DBCOLUMNDESC-Struktur. Falls „VARIANT_TRUE“ der Wert für „DBPROP_COL_FIXEDLENGTH“ ist, ordnet der OLE DB-Treiber für SQL Server den Typ zu **binary** hinzu. Falls der Wert der Eigenschaft „VARIANT_FALSE“ ist, ordnet der OLE DB-Treiber für SQL Server den Typ zu **varbinary** hinzu. In jedem Fall bestimmt das Element *ulColumnSize* der DBCOLUMNDESC-Struktur die Breite der SQL Server-Spalte, die erstellt wird.|  
 |DBTYPE_CY|**money**||  
 |DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
@@ -47,11 +47,11 @@ ms.locfileid: "68015854"
 |DBTYPE_NUMERIC|**numeric**|Der OLE DB-Treiber für SQL Server überprüft das Element *bPrecision* und das Element *bScale* der DBCOLUMDESC-Struktur, um Genauigkeit und Dezimalstellen der Spalte **numeric** zu bestimmen.|  
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
-|DBTYPE_STR|**char**, **varchar**, **text** oder **varchar(max)**|Der OLE DB-Treiber für SQL Server überprüft das *ulColumnSize* -Element der dbcolumndebug-Struktur. Basierend auf dem Wert und der Version der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz ordnet der OLE DB-Treiber für SQL Server den Typ **Text**zu.<br /><br /> Wenn der Wert von *ulColumnSize* kleiner ist als die maximale Länge einer Spalte eines Datentyps für Multibyte-Zeichendaten ist, dann überprüft der OLE DB-Treiber für SQL Server das Element *rgPropertySets* von DBCOLUMNDESC. Wenn DBPROP_COL_FIXEDLENGTH VARIANT_TRUE ist, ordnet der OLE DB Treiber für SQL Server den Typ zu **char**zu. Wenn der Wert der Eigenschaft VARIANT_FALSE ist, ordnet der OLE DB Treiber für SQL Server den Typ **varchar**zu. In jedem Fall bestimmt das Element *ulColumnSize* der DBCOLUMNDESC-Struktur die Breite der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalte, die erstellt wird.|  
-|DBTYPE_UDT|**UDT**|Die folgenden Informationen werden von **DBCOLUMNDESC**-Strukturen verwendet, die von **ITableDefinition::CreateTable** verwendet werden, wenn UDT-Spalten erforderlich sind:<br /><br /> *pwsztypame* wird ignoriert.<br /><br /> *rgPropertySets* müssen einen **DBPROPSET_SQLSERVERCOLUMN** -Eigenschaften Satz enthalten, wie im Abschnitt auf **DBPROPSET_SQLSERVERCOLUMN**unter [Verwenden von benutzerdefinierten Typen](../../oledb/features/using-user-defined-types.md)beschrieben.|  
+|DBTYPE_STR|**char**, **varchar**, **text** oder **varchar(max)**|Der OLE DB-Treiber für SQL Server untersucht die *ulColumnSize*-Elemente der DBCOLUMNDESC-Struktur. Basierend auf dem Wert und der Version der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ordnet der OLE DB-Treiber für SQL Server den Typ zu **text** hinzu.<br /><br /> Wenn der Wert von *ulColumnSize* kleiner ist als die maximale Länge einer Spalte eines Datentyps für Multibyte-Zeichendaten ist, dann überprüft der OLE DB-Treiber für SQL Server das Element *rgPropertySets* von DBCOLUMNDESC. Falls „VARIANT_TRUE“ der Wert für „DBPROP_COL_FIXEDLENGTH“ ist, ordnet der OLE DB-Treiber für SQL Server den Typ zu **char** hinzu. Falls der Wert der Eigenschaft „VARIANT_FALSE“ ist, ordnet der OLE DB-Treiber für SQL Server den Typ zu **varchar** hinzu. In jedem Fall bestimmt das Element *ulColumnSize* der DBCOLUMNDESC-Struktur die Breite der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalte, die erstellt wird.|  
+|DBTYPE_UDT|**UDT**|Die folgenden Informationen werden von **DBCOLUMNDESC**-Strukturen verwendet, die von **ITableDefinition::CreateTable** verwendet werden, wenn UDT-Spalten erforderlich sind:<br /><br /> *pwSzTypeName* wird ignoriert.<br /><br /> *rgPropertySets* muss wie im Abschnitt zu **DBPROPSET_SQLSERVERCOLUMN** unter [Verwenden von benutzerdefinierten Typen](../../oledb/features/using-user-defined-types.md) beschrieben einen **DBPROPSET_SQLSERVERCOLUMN**-Eigenschaftensatz umfassen.|  
 |DBTYPE_UI1|**tinyint**||  
 |DBTYPE_VARIANT|**sql_variant**||
-|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** oder **nvarchar(max)**|Der OLE DB-Treiber für SQL Server überprüft das *ulColumnSize* -Element der dbcolumndebug-Struktur. Basierend auf dem-Wert ordnet der OLE DB-Treiber für SQL Server den Typ **ntext**zu.<br /><br /> Wenn der Wert von *ulColumnSize* kleiner ist als die maximale Länge einer Spalte eines Datentyps für Unicode-Zeichendaten ist, dann überprüft der OLE DB-Treiber für SQL Server das Element *rgPropertySets* von DBCOLUMNDESC. Wenn DBPROP_COL_FIXEDLENGTH VARIANT_TRUE ist, ordnet der OLE DB Treiber für SQL Server den Typ **NCHAR**zu. Wenn der Wert der Eigenschaft VARIANT_FALSE ist, ordnet der OLE DB Treiber für SQL Server den Typ **nvarchar**zu. In jedem Fall bestimmt das Element *ulColumnSize* der DBCOLUMNDESC-Struktur die Breite der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalte, die erstellt wird.|  
+|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** oder **nvarchar(max)**|Der OLE DB-Treiber für SQL Server untersucht die *ulColumnSize*-Elemente der DBCOLUMNDESC-Struktur. Basierend auf dem Wert ordnet der OLE DB-Treiber für SQL Server den Typ zu **ntext** hinzu.<br /><br /> Wenn der Wert von *ulColumnSize* kleiner ist als die maximale Länge einer Spalte eines Datentyps für Unicode-Zeichendaten ist, dann überprüft der OLE DB-Treiber für SQL Server das Element *rgPropertySets* von DBCOLUMNDESC. Falls „VARIANT_TRUE“ der Wert für „DBPROP_COL_FIXEDLENGTH“ ist, ordnet der OLE DB-Treiber für SQL Server den Typ zu **nchar** hinzu. Falls der Wert der Eigenschaft „VARIANT_FALSE“ ist, ordnet der OLE DB-Treiber für SQL Server den Typ zu **nvarchar** hinzu. In jedem Fall bestimmt das Element *ulColumnSize* der DBCOLUMNDESC-Struktur die Breite der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalte, die erstellt wird.|  
 |DBTYPE_XML|**XML**||  
 
 > [!NOTE]  

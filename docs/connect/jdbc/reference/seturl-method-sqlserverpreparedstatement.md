@@ -1,5 +1,5 @@
 ---
-title: Server-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: setURL-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: d853b2f3-fb72-4d4b-8997-f4a45a9dfefc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 47b1cff27860a09e4f9b8cc43f8523b5a1846a3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972086"
 ---
 # <a name="seturl-method-sqlserverpreparedstatement"></a>setURL-Methode (SQLServerPreparedStatement)
@@ -42,7 +42,7 @@ public final void setURL(int parameterIndex,
   
  *x*  
   
- Ein URL-Objekt.  
+ Ein URL-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

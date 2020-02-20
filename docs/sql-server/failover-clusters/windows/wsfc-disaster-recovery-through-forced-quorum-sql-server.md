@@ -1,6 +1,7 @@
 ---
-title: WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Notfallwiederherstellung durch erzwungenes Quorum
+description: Zur Beseitigung eines Quorumfehlers ist ein manueller Eingriff erforderlich. In diesem Artikel wird erläutert, wie Sie ein Quorum in einem Notfall bei einer SQL Server-Failoverclusterinstanz erzwingen.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2453c994ca274d4fd584d04026e3f4e0eb0cecf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904954"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821980"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +35,13 @@ ms.locfileid: "67904954"
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Bei der Prozedur für erzwungene Quoren wird davon ausgegangen, dass vor dem Quorumfehler ein fehlerfreies Quorum vorhanden war.  
   
 > [!WARNING]  
 >  Der Benutzer sollte mit den Begriffen und Wechselwirkungen von Windows Server Failover Clustering, WSFC-Quorummodellen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]und der spezifischen Bereitstellungskonfiguration der Umgebung vertraut sein.  
 >   
->  Weitere Informationen finden Sie in den folgenden Themen:  [Windows Server-Failoverclustering (WSFC) mit SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx) und [WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  Weitere Informationen finden Sie unter  [Windows Server-Failoverclustering (WSFC) mit SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx) und [WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> Sicherheit  
  Der Benutzer muss einem Domänenkonto entsprechen, das Mitglied der lokalen Administratorgruppe an jedem Knoten des WSFC-Clusters ist.  
@@ -65,7 +66,7 @@ ms.locfileid: "67904954"
   
      Versetzen Sie den Cluster von diesem Knoten aus unter Verwendung der erzwungenen Quorumprozedur manuell in den Onlinemodus.  Um potenzielle Datenverluste zu minimieren, wählen Sie einen Knoten aus, der zuletzt ein primäres Replikat der Verfügbarkeitsgruppe gehostet hat.  
   
-     Weitere Informationen finden Sie in den folgenden Themen:  [Erzwingen des Starts eines Clusters ohne Quorum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     Weitere Informationen finden Sie unter  [Erzwingen des Starts eines Clusters ohne Quorum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  Die erzwungene Quorumeinstellung bewirkt, dass im gesamten Cluster die Quorumüberprüfungen blockiert werden, bis der logische WSFC-Cluster die Mehrheit der Abstimmungsknoten erreicht und automatisch zu einem regulären Quorumbetriebsmodus übergeht.  
@@ -95,7 +96,7 @@ ms.locfileid: "67904954"
     > [!NOTE]  
     >  Wenn Sie den WSFC-Konfigurationsüberprüfungs-Assistenten ausführen, wenn im WSFC-Cluster ein Verfügbarkeitsgruppenlistener vorhanden ist, generiert der Assistent die folgende falsche Warnmeldung:  
     >   
-    >  „Die RegisterAllProviderIP-Eigenschaft für Netzwerkname 'Name:<Netzwerkname>' ist auf 1 festgelegt. Für die aktuelle Clusterkonfiguration muss dieser Wert auf 0 festgelegt werden.“  
+    >  „Die RegisterAllProviderIP-Eigenschaft für Netzwerkname 'Name:&lt;Netzwerkname' ist auf 1 festgelegt. Für die aktuelle Clusterkonfiguration muss dieser Wert auf 0 festgelegt werden.“  
     >   
     >  Ignorieren Sie diese Meldung.  
   

@@ -1,5 +1,5 @@
 ---
-title: Befehle, die Ergebnisse von mehreren Rowsets erzeugen | Microsoft-Dokumentation
+title: Befehle, die mehrere Rowsetergebnisse erzeugen | Microsoft-Dokumentation
 description: Mehrere Rowsetergebnisse generierende Befehle
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016066"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Mehrere Rowsetergebnisse generierende Befehle
@@ -29,14 +29,14 @@ ms.locfileid: "68016066"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server kann mehrere Rowsets von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anweisungen zurückgeben. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anweisungen geben unter folgenden Bedingungen mehrere Rowsetergebnisse zurück:  
+  Der OLE DB-Treiber für SQL Server kann mehrere Rowsets von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anweisungen zurückgeben. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anweisungen geben unter folgenden Bedingungen mehrere Rowsetergebnisse zurück:  
   
 -   SQL-Anweisungen im Batchmodus werden als einzelner Befehl gesendet.  
   
 -   Gespeicherte Prozeduren implementieren einen Batch SQL-Anweisungen.  
   
 ## <a name="batches"></a>Batches  
- Der OLE DB-Treiber für SQL Server erkennt das Semikolon als Batch Trennzeichen für SQL-Anweisungen:  
+ Der OLE DB-Treiber für SQL Server erkennt das Semikolonzeichen als Batchtrennzeichen für SQL-Anweisungen:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

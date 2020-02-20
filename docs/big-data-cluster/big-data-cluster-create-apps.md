@@ -1,22 +1,23 @@
 ---
-title: Bereitstellen von Anwendungen mit „azdata“
-titleSuffix: SQL Server big data clusters
+title: Bereitstellen von Anwendungen mit azdata
+titleSuffix: SQL Server Big Data Clusters
 description: Stellen Sie ein Python- oder R-Skript als Anwendung in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] bereit.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706699"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253148"
 ---
-# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Bereitstellen einer App in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>Bereitstellen einer App in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -45,7 +46,7 @@ Die folgenden Typen von Apps werden unterstützt:
 
 In SQL Server 2019 können Sie Ihre Anwendung erstellen, löschen, beschreiben, initialisieren, auflisten und aktualisieren. In der folgenden Tabelle werden die Befehle für die Anwendungsbereitstellung beschrieben, die Sie mit **azdata** verwenden können.
 
-|Befehl |und Beschreibung |
+|Get-Help |Beschreibung |
 |:---|:---|
 |`azdata login` | Anmelden bei einem Big Data-Cluster für SQL Server |
 |`azdata app create` | Erstellen einer Anwendung. |

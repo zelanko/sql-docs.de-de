@@ -1,26 +1,32 @@
 ---
-title: Ausführen von Notebooks in Azure Data Studio
-titleSuffix: SQL Server big data clusters
+title: 'Ausführen von Notebooks: Azure Data Studio'
+titleSuffix: SQL Server Big Data Clusters
 description: In diesem Artikel wird erläutert, wie Jupyter Notebooks in Azure Data Studio bei einer Verbindung mit einem SQL Server 2019-Big-Data-Cluster ausgeführt werden.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/08/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23ff737a0fe1434c29b9cdf09102bc5042e68dc3
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: ff3f569761b7ba95a64f693f1726df589ce7e579
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844303"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244103"
 ---
 # <a name="how-to-use-notebooks-in-sql-server"></a>Verwenden von Notebooks in SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In diesem Artikel wird beschrieben, wie Sie die Notebookumgebung in der neuesten Version von [**Azure Data Studio**](../azure-data-studio/download.md) starten und wie Sie mit der Erstellung eigener Notebooks beginnen. Außerdem wird gezeigt, wie Notebooks mithilfe verschiedener Kernel geschrieben werden.
+
+Sehen Sie sich dieses kurze 5-minütige Video an, um eine Einführung in Notebooks in Azure Data Studio zu erhalten:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introduction-to-Azure-Data-Studio-Notebooks/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="connect-to-sql-server"></a>Verbindung mit SQL Server herstellen
 
@@ -96,7 +102,7 @@ Nachdem die Installation erfolgreich abgeschlossen wurde, werden unter „Task H
 
 ![Jupyter-Back-End](media/notebooks-guidance/jupyter-backend.png)
 
-|Kernel|und Beschreibung
+|Kernel|Beschreibung
 |:-----|:-----
 | SQL-Kernel | Schreiben Sie SQL-Code für Ihre relationale Datenbank.
 |PySpark3- und PySpark-Kernel| Schreiben Sie Python-Code mithilfe von Spark-Computing aus dem Cluster.
@@ -105,7 +111,7 @@ Nachdem die Installation erfolgreich abgeschlossen wurde, werden unter „Task H
 
 `Attach to` stellt den Kontext für den anzufügenden Kernel bereit. Wenn Sie SQL-Kernel verwenden, können Sie `Attach to` für eine beliebige SQL Server-Instanz verwenden.
 
-Wenn Sie Python3-Kernel verwenden, ist `Attach to` `localhost`. Sie können diesen Kernel für Ihre lokale Python-Entwicklung verwenden.
+Wenn Sie Python3-Kernel verwenden, ist `Attach to``localhost`. Sie können diesen Kernel für Ihre lokale Python-Entwicklung verwenden.
 
 Wenn Sie mit dem Big-Data-Cluster von SQL Server 2019 verbunden sind, ist `Attach to` standardmäßig der Endpunkt des Clusters und ermöglicht Ihnen das Übermitteln von Python-, Scala- und R-Code mithilfe von Spark-Computing des Clusters.
 

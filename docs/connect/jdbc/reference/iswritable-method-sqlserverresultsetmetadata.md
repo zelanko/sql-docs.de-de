@@ -1,5 +1,5 @@
 ---
-title: isbeschreib Table-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
+title: isWritable-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d5a22e4fa9a3bd27da1862b0157324e3fbe9098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977013"
 ---
 # <a name="iswritable-method-sqlserverresultsetmetadata"></a>isWritable-Methode (SQLServerResultSetMetaData)
@@ -40,13 +40,13 @@ public boolean isWritable(int column)
  Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn die Schreibvorgänge für die Spalte erfolgreich sind. Andernfalls lautet der Wert **false**.  
+ **TRUE**, wenn Schreibvorgänge für die Spalte erfolgreich sind. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese isbeschreib Table-Methode wird von der isbeschreib Table-Methode in der Java. SQL. ResultSetMetaData-Schnittstelle angegeben.  
+ Diese isWritable-Methode wird von der isWritable-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSetMetaData-Methoden](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

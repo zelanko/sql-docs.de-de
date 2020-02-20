@@ -11,10 +11,10 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fbef30f8a5bf5658376a37144c8f770317d6981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576723"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Berichtsteile (Berichts-Generator und SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "65576723"
  Die Beziehung zwischen dem Berichtsteil, den Sie einem Bericht hinzufügen, und der Instanz des Berichtsteils auf der Website oder dem Server bleibt durch die Verwendung einer eindeutigen ID erhalten. Nachdem Sie einem Bericht Berichtsteile von einer Website oder einem Server hinzugefügt haben, können Sie diese unabhängig vom ursprünglichen Berichtsteil auf der Website oder dem Server ändern. Sie können Updates annehmen, die andere Personen am Berichtsteil auf der Website oder dem Server vorgenommen haben, und den geänderten Berichtsteil auf der Website oder dem Server neu speichern, indem Sie entweder einen neuen Berichtsteil hinzufügen oder die ursprüngliche Datei überschreiben, sofern Sie über entsprechende Berechtigungen dafür verfügen.  
   
 ##  <a name="ComponentWorkflow"></a> Lebenszyklus eines Berichtsteils  
- ![rs_Komponentenerstellung](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
+ ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  Person A erstellt einen Bericht mit einem Diagramm, das von einem eingebetteten Dataset abhängig ist.  
   
@@ -141,6 +141,6 @@ ms.locfileid: "65576723"
 ## <a name="see-also"></a>Weitere Informationen  
  [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Verwalten von Berichtsteilen](../../reporting-services/report-design/managing-report-parts.md)  
+ [Managing Report Parts (Verwalten von Berichtsteilen)](../../reporting-services/report-design/managing-report-parts.md)  
   
   

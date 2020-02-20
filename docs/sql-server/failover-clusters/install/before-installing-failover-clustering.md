@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72517940"
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
@@ -39,7 +39,7 @@ ms.locfileid: "72517940"
   
 ##  <a name="BestPractices"></a> Bewährte Methoden  
   
--   Weitere Informationen finden Sie in den [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Versionshinweisen](https://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Lesen Sie die [Versionshinweise](https://go.microsoft.com/fwlink/?LinkId=296445) für [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   Installieren Sie erforderliche Software. Installieren Sie vor dem Ausführen des Setups zum Installieren von oder Aktualisieren auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]die folgenden erforderlichen Komponenten, um die Installationsdauer zu verkürzen. Sie können die erforderliche Software auf jedem Failoverclusterknoten installieren und die Knoten anschließend einmal neu starten, bevor Sie Setup ausführen.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "72517940"
   
     -   Nach der Einbindung zusätzlicher Laufwerke wird keine Laufwerkformatierung unterstützt.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstallation wird nur der lokale Datenträger zum Installieren der tempdb-Dateien unterstützt. Stellen Sie sicher, dass der für die tempdb-Daten und die Protokolldateien angegebene Pfad auf allen Clusterknoten gültig ist. Sind die tempdb-Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar, wird die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource nicht online geschaltet. Weitere Informationen finden Sie unter [Speichertypen für Datendateien](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) und [Konfiguration der Datenbank-Engine – Datenverzeichnisse](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
+-   Bei der[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstallation wird nur der lokale Datenträger zum Installieren der tempdb-Dateien unterstützt. Stellen Sie sicher, dass der für die tempdb-Daten und die Protokolldateien angegebene Pfad auf allen Clusterknoten gültig ist. Sind die tempdb-Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar, wird die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource nicht online geschaltet. Weitere Informationen finden Sie unter [Speichertypen für Datendateien](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) und [Konfiguration der Datenbank-Engine – Datenverzeichnisse](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
   
 -   Wenn Sie einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster auf Komponenten mit iSCSI-Technologie (Internet Small Computer System Interface) bereitstellen, ist es empfehlenswert, mit entsprechender Vorsicht vorzugehen. Weitere Informationen finden Sie unter [Unterstützung für SQL Server auf iSCSI-Technologiekomponenten](https://go.microsoft.com/fwlink/?LinkId=116960).  
   
@@ -202,7 +202,7 @@ ms.locfileid: "72517940"
 ##  <a name="MultiSubnet"></a> Zusätzliche Überlegungen zu Multisubnetz-Konfigurationen  
  In den folgenden Abschnitten werden die Anforderungen beschrieben, die bei der Installation eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failoverclusters berücksichtigt werden müssen. Da bei der Multisubnetz-Konfiguration Cluster über mehrere Subnetze erstellt werden, werden auch mehrere IP-Adressen verwendet und u. U. Änderungen an den Abhängigkeiten der IP-Adressressourcen vorgenommen.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Edition und zum Betriebssystem  
+### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Edition und zum Betriebssystem  
   
 -   Weitere Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failovercluster unterstützen, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -253,7 +253,7 @@ ms.locfileid: "72517940"
 > [!IMPORTANT]  
 >  Bei einem Fehler in der MSDTC-Instanz der lokalen Clustergruppe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versucht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht automatisch, die Standardclusterinstanz oder die lokale Computerinstanz von MSDTC zu verwenden. Sie müssten die fehlerhafte Instanz von MSDTC vollständig aus der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Gruppe entfernen, um eine andere Instanz von MSDTC zu verwenden. Wenn Sie eine Zuordnung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellen und ein Fehler in der zugeordneten Instanz von MSDTC auftritt, kommt es analog zu Fehlern bei den verteilten Transaktionen. Wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine andere Instanz von MSDTC verwenden soll, müssen Sie der lokalen Clustergruppe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Instanz von MSDTC hinzufügen oder die Zuordnung löschen.  
   
-### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>Konfigurieren von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator  
+### <a name="configure-msconame-distributed-transaction-coordinator"></a>Konfigurieren von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator  
  Nachdem Sie das Betriebssystem installiert und den Cluster konfiguriert haben, müssen Sie MS DTC mithilfe der Clusterverwaltung für die Ausführung in einem Cluster konfigurieren. Wenn MSDTC nicht für die Ausführung in einem Cluster konfiguriert wird, führt dies nicht zu einer Blockierung des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setups, aber die Funktionen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anwendung können beeinträchtigt sein, falls MSDTC nicht ordnungsgemäß konfiguriert wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  

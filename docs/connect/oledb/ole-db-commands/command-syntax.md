@@ -1,5 +1,5 @@
 ---
-title: Befehls Syntax | Microsoft-Dokumentation
+title: Befehlssyntax | Microsoft-Dokumentation
 description: Befehlssyntax und gespeicherte Prozeduren
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016119"
 ---
 # <a name="command-syntax"></a>Befehlsyntax
@@ -27,7 +27,7 @@ ms.locfileid: "68016119"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server erkennt Befehlssyntax, die vom DBGUID_SQL-Makro angegeben wird. Für den OLE DB-Treiber für SQL Server gibt der Spezifizierer an, dass ein Amalgam von ODBC SQL, [!INCLUDE[tsql](../../../includes/tsql-md.md)] ISO und eine gültige Syntax ist. Die folgende SQL-Anweisung beispielsweise verwendet eine ODBC SQL-Escapesequenz, um die LCASE-Zeichenfolgenfunktion anzugeben:  
+  Der OLE DB-Treiber für SQL Server erkennt vom Makro DBGUID_SQL angegebene Befehlssyntax. Für den OLE DB-Treiber für SQL Server gibt der Bezeichner an, dass ein Zusammenschluss von ODBC SQL, ISO und [!INCLUDE[tsql](../../../includes/tsql-md.md)] eine gültige Syntax ist. Die folgende SQL-Anweisung beispielsweise verwendet eine ODBC SQL-Escapesequenz, um die LCASE-Zeichenfolgenfunktion anzugeben:  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  

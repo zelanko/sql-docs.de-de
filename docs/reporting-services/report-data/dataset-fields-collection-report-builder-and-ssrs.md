@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a893a9a25f4ad19dcc71f538b62110b5838fa3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573156"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Datasetfeldauflistung (Berichts-Generator und SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "65573156"
  Wenn Sie mit einer Berichtsmodelldatenquelle arbeiten, geben Sie die Entitäten und Entitätsfelder als Berichtsdaten an. Im Abfrage-Designer für ein Berichtsmodell können Sie verknüpfte Entitäten interaktiv untersuchen und wählen und die Felder auswählen, die Sie in das Berichtsdataset einschließen möchten. Nachdem Sie die Abfrage entworfen haben, können Sie die Auflistung von Entitätsbezeichnern und Entitätsfeldern im Berichtsdatenbereich sehen. Entitätsbezeichner werden automatisch vom Berichtsmodell generiert und werden in der Regel nicht für den Endbenutzer angezeigt.  
   
 ### <a name="using-extended-field-properties"></a>Verwenden von erweiterten Feldeigenschaften  
- Datenquellen, die mehrdimensionale Abfragen unterstützen, zum Beispiel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], unterstützen auch Feldeigenschaften in Feldern. Feldeigenschaften werden im Resultset einer Abfrage angezeigt, sind im Bereicht **Berichtsdaten** jedoch nicht sichtbar. Sie stehen trotzdem zur Verwendung im Bericht zur Verfügung. Wenn Sie auf eine Eigenschaft für ein Feld verweisen möchten, ziehen Sie das Feld in den Bericht und ändern die Standardeigenschaft **Value** in den Feldnamen der gewünschten Eigenschaft. In einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube können Sie zum Beispiel Formate für Werte in den Cubezellen definieren. Der formatierte Wert ist mithilfe der Feldeigenschaft **FormattedValue**verfügbar. Um den Wert direkt zu verwenden, anstatt einen Wert zu verwenden und die Formateigenschaft des Textfelds festzulegen, ziehen Sie das Feld in das Textfeld und ändern den Standardausdruck `=Fields!FieldName.Value` in `=Fields!FieldName.FormattedValue`.  
+ Datenquellen, die mehrdimensionale Abfragen wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützen, unterstützen auch Feldeigenschaften in Feldern. Feldeigenschaften werden im Resultset einer Abfrage angezeigt, sind im Bereicht **Berichtsdaten** jedoch nicht sichtbar. Sie stehen trotzdem zur Verwendung im Bericht zur Verfügung. Wenn Sie auf eine Eigenschaft für ein Feld verweisen möchten, ziehen Sie das Feld in den Bericht und ändern die Standardeigenschaft **Value** in den Feldnamen der gewünschten Eigenschaft. In einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube können Sie zum Beispiel Formate für Werte in den Cubezellen definieren. Der formatierte Wert ist mithilfe der Feldeigenschaft **FormattedValue**verfügbar. Um den Wert direkt zu verwenden, anstatt einen Wert zu verwenden und die Formateigenschaft des Textfelds festzulegen, ziehen Sie das Feld in das Textfeld und ändern den Standardausdruck `=Fields!FieldName.Value` in `=Fields!FieldName.FormattedValue`.  
   
 > [!NOTE]
 >  Nicht alle **Field** -Eigenschaften können für alle Datenquellen verwendet werden. Die **Value** - und die **IsMissing** -Eigenschaft werden für alle Datenquellen definiert. Weitere vordefinierte Eigenschaften (zum Beispiel **Key**, **UniqueName**und **ParentUniqueName** für mehrdimensionale Datenquellen) werden nur unterstützt, wenn die Datenquelle diese Eigenschaften bereitstellt. Benutzerdefinierte Eigenschaften werden von einigen Datenanbietern unterstützt. Weitere Informationen finden Sie in den entsprechenden Themen zu erweiterten Feldeigenschaften für den Datenquellentyp unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Ein Beispiel einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquelle finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
@@ -89,9 +89,9 @@ ms.locfileid: "65573156"
   
      Die Datentypen, die der Berichtsprozessor für die neuen Datums- und Uhrzeittypen verwendet, die mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eingeführt werden, sind in der folgenden Tabelle aufgeführt:  
   
-    |SQL-Datentyp|CLR-Datentyp|und Beschreibung|  
+    |SQL-Datentyp|CLR-Datentyp|Beschreibung|  
     |-------------------|-------------------|-----------------|  
-    |**Datum**|**DateTime**|Nur Datum|  
+    |**Date**|**DateTime**|Nur Datum|  
     |**Time**|**TimeSpan**|Nur Uhrzeit|  
     |**DateTimeTZ**|**DateTimeOffset**|Datum und Uhrzeit mit Zeitzonenoffset|  
     |**DateTime2**|**DateTime**|Datum und Uhrzeit mit Bruchteilen von Millisekunden|  

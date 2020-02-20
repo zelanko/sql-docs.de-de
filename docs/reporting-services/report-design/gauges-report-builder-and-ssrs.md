@@ -157,10 +157,10 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b65ca56f0cb942f5cc5c9fc6b01d4a9df7e0b88e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580280"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Messgeräte (Berichts-Generator und SSRS)
@@ -176,9 +176,9 @@ ms.locfileid: "65580280"
   
  Es gibt zwei Typen von Messgeräten: radiale und lineare Messgeräte. Die folgende Abbildung zeigt die grundlegenden Elemente eines einzelnen radialen Messgeräts im Messgerätbereich.  
   
- ![Diagramm mit Messgerätelementen](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Gauge elements diagram")  
+ ![Diagramm mit Messgerätelementen](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagramm mit Messgerätelementen")  
   
- Weitere Informationen zur Verwendung von Messgeräten als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Weitere Informationen zu Messgeräten als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Sie können Messgeräten in einem Bericht als Berichtsteile getrennt veröffentlichen. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -196,15 +196,15 @@ ms.locfileid: "65580280"
   
  **Radiales Messgerät**  
   
- ![rs_RundesMessgerät](../../reporting-services/report-design/media/rs-radialgauge.gif "rs_RadialGauge")  
+ ![rs_Radialmessgerät](../../reporting-services/report-design/media/rs-radialgauge.gif "rs_Radialmessgerät")  
   
- Optionen für radiale Messgeräte: "Radial", "Radial mit kleinem Messgerät", "Zwei Skalen", "90 Grad Nordost", "90 Grad Nordwest", "90 Grad Südwest", "90 Grad Südost", "180 Grad Nord", "180 Grad Süd", "180 Grad West", "180 Grad Ost" und "Messgerät".  
+ Optionen für radiale Messgeräte: „Radial“, „Radial mit kleinem Messgerät“, „Zwei Skalen“, „90 Grad Nordost“, „90 Grad Nordwest“, „90 Grad Südwest“, „90 Grad Südost“, „180 Grad Nord“, „180 Grad Süd“, „180 Grad West“, „180 Grad Ost“ und „Messgerät“.  
   
  **Lineares Messgerät**  
   
- ![rs_LinearesMessgerät](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
+ ![rs_Linearmessgerät](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_Linearmessgerät")  
   
- Optionen für lineare Messgeräte: "Horizontal", "Vertikal", "Mehrere Balkenzeiger", "Zwei Skalen", "Drei Farbbereiche", "Logarithmisch", "Thermometer", "Thermometer Fahrenheit/Celsius" und "Lineardiagramm".  
+ Optionen für lineare Messgeräte: „Horizontal“, „Vertikal“, „Mehrere Balkenzeiger“, „Zwei Skalen“, „Drei Farbbereiche“, „Logarithmisch“, „Thermometer“, „Thermometer Fahrenheit/Celsius“ und „Lineardiagramm“.  
   
 ##  <a name="AddingData"></a> Hinzufügen von Daten zu einem Messgerät  
  Ziehen Sie nach dem Hinzufügen des Messgeräts zur Entwurfsoberfläche ein Datasetfeld in den Messgerätdatenbereich. Das Messgerät aggregiert standardmäßig Feldwerte in einen Wert, der auf dem Messgerät angezeigt wird. Dieser Wert wird mit der Value-Eigenschaft an den Zeiger angefügt. Abhängig vom Datentyp des Felds verwendet das Messgerät das SUM- oder COUNT-Aggregat. Wenn Sie numerische Daten verwenden, die zum Hinzufügen geeignet sind, verwendet das Messgerät die SUM-Funktion. Andernfalls verwendet es das COUNT-Aggregat. Der Wert des Zeigers kann ein anderes Aggregat oder kein Aggregat verwenden.  

@@ -1,23 +1,24 @@
 ---
-title: 'Gewusst wie: Verwenden von Microsoft SQL Server 2012-Objekten in einem Projekt | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Objekte von SQL Server 2012 im Projekt
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 222b725e7e5497adaf679f710fa390dcea8aecf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9ea326bc37d4843b6cb7e3bc4e21fa356af5435
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034977"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244254"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Gewusst wie: Verwenden von Microsoft SQL Server 2012-Objekten im Projekt
+
 In diesem Beispiel fügen Sie einem Datenbankprojekt, das auf Microsoft SQL Server 2012 zeigt, ein Sequenzobjekt hinzu.  
   
 In Microsoft SQL Server 2012 werden Sequenzen eingeführt. Als Sequenz wird ein benutzerdefiniertes schemagebundenes Objekt bezeichnet, das eine Sequenz numerischer Werte anhand der Spezifikation generiert, mit der die Sequenz erstellt wurde. Die Sequenz von numerischen Werten wird in aufsteigender oder absteigender Reihenfolge in einem definierten Intervall generiert, und je nach Anforderung wird ein Zyklus (Wiederholungen) ausgeführt.  Weitere Informationen zu Sequenzobjekten finden Sie unter [Sequenznummern](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). Informationen zu Neuerungen in Microsoft SQL Server 2012 finden Sie unter [What's New in SQL Server 2012 (Neuigkeiten zu SQL Server 2012)](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
@@ -31,7 +32,7 @@ In Microsoft SQL Server 2012 werden Sequenzen eingeführt. Als Sequenz wird ein 
   
 2.  Klicken Sie im linken Bereich auf **Programmierung**, und wählen Sie **Sequenz** aus. Klicken Sie auf **Hinzufügen**, um dem Projekt das neue Objekt hinzuzufügen.  
   
-3.  Ersetzen Sie den Standardcode durch folgenden Code.  
+3.  Ersetzen Sie den Standardcode durch Folgendes.  
   
     ```  
     CREATE SEQUENCE [dbo].[Seq1]  

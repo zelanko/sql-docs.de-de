@@ -1,5 +1,5 @@
 ---
-title: getsupertables-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getSuperTables-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 085461de-367b-4832-88aa-010813d2bc41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 798b5d2abca5aad5daa075a10652b4952dae6e8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979314"
 ---
 # <a name="getsupertables-method-sqlserverdatabasemetadata"></a>getSuperTables-Methode (SQLServerDatabaseMetaData)

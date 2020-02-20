@@ -18,10 +18,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1a440ba648fd7ca0c377cc09b8bf67ac799e2e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581501"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "65581501"
 2.  Anzeigen eines Berichts in der Vorschau mit Verweisen auf benutzerdefinierte Assemblys im lokalen Modus.  
   
 ##  <a name="Common"></a> Einschließen von Verweisen auf häufig verwendete Funktionen  
- Verwenden Sie das Dialogfeld **Ausdruck** , um eine kategorisierte Liste allgemeiner, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierter Funktionen anzuzeigen. Wenn Sie **Allgemeine Funktionen** erweitern und auf eine Kategorie klicken, wird im Bereich **Element** die Liste der Funktionen angezeigt, die Sie in einen Ausdruck einschließen. Die allgemeinen Funktionen umfassen Klassen aus den Namespaces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> und <xref:System.Convert> sowie Funktionen der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Laufzeitbibliothek. Die gängigsten Funktionen sind im Dialogfeld **Ausdruck** nach Kategorie sortiert aufgeführt: Text, Datum und Uhrzeit, Mathematische Funktionen, Qualitätskontrolle, Programmfluss, Aggregat, Finanzen, Konvertierung und Sonstiges. Weniger häufig verwendete Funktionen werden nicht in der Liste angezeigt, können jedoch auch in einem Ausdruck verwendet werden.  
+ Verwenden Sie das Dialogfeld **Ausdruck** , um eine kategorisierte Liste allgemeiner, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierter Funktionen anzuzeigen. Wenn Sie **Allgemeine Funktionen** erweitern und auf eine Kategorie klicken, wird im Bereich **Element** die Liste der Funktionen angezeigt, die Sie in einen Ausdruck einschließen. Die allgemeinen Funktionen umfassen Klassen aus den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Namespaces <xref:System.Math> und <xref:System.Convert> sowie Funktionen der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Laufzeitbibliothek. Der Einfachheit halber können Sie die am häufigsten verwendeten Funktionen im Dialogfeld **Ausdruck** anzeigen, wo diese nach Kategorie aufgelistet werden: Text, Datum und Uhrzeit, Mathematik, Überprüfung, Programmablauf, Aggregat, Finanzen, Konvertierung und Sonstiges. Weniger häufig verwendete Funktionen werden nicht in der Liste angezeigt, können jedoch auch in einem Ausdruck verwendet werden.  
   
  Um eine integrierte Funktion zu verwenden, doppelklicken Sie auf den Funktionsnamen im Bereich Element. Im Bereich Beschreibung wird eine Beschreibung der Funktion angezeigt, und ein Beispiel des Funktionsaufrufs finden Sie im Bereich Beispiel. Wenn Sie im Codebereich den Funktionsnamen und anschließend eine linke Klammer **(** eingeben, zeigt die IntelliSense-Hilfe jede gültige Syntax für diesen Funktionsaufruf an. Zur Berechnung des Höchstwerts für ein Feld mit dem Namen `Quantity` in einer Tabelle fügen Sie dem Codebereich beispielsweise den einfachen Ausdruck `=Max(` hinzu und zeigen mithilfe der Smarttags alle gültigen Syntaxmöglichkeiten für den Funktionsaufruf an. Um dieses Beispiel zu vervollständigen, geben Sie `=Max(Fields!Quantity.Value)`ein.  
   
@@ -99,7 +99,7 @@ Public Dim MyDoubleVersion As Double = 123.456
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
- Mit dem folgenden Code wird eine Implementierung der **FixSpelling** -Methode veranschaulicht, wenn er in den Codeblock einer Berichtsdefinition eingebettet ist. In diesem Beispiel wird gezeigt, wie ein vollqualifizierter Verweis auf die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **StringBuilder** -Klasse angewandt wird.  
+ Mit dem folgenden Code wird eine Implementierung der **FixSpelling** -Methode veranschaulicht, wenn er in den Codeblock einer Berichtsdefinition eingebettet ist. In diesem Beispiel wird gezeigt, wie Sie einen vollqualifizierten Verweis auf die **StringBuilder**-Klasse von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] anwenden.  
   
 ```vb  
 Public Function FixSpelling(ByVal s As String) As String  
@@ -115,7 +115,7 @@ End Function
  Weitere Informationen zu integrierten Objektsammlungen und die Initialisierung finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md) und [Initialisieren von Objekten benutzerdefinierter Assemblys](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md).  
   
 ##  <a name="Parameters"></a> Einschließen von Verweisen auf Parameter von Code  
- Sie können auf die globale Parameters-Auflistung per benutzerdefinierten Code über einen Codeblock der Berichtsdefinition oder über eine von Ihnen bereitgestellte benutzerdefinierte Assembly verweisen. Die Parameters-Auflistung ist schreibgeschützt und verfügt über keine öffentlichen Iteratoren. Es ist nicht möglich, eine [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **für jedes** Konstrukt zu verwenden, um die Auflistung zu durchlaufen. Sie benötigen den in der Berichtsdefinition definierten Namen des Parameters, um in Ihrem Code auf ihn verweisen zu können. Allerdings ist es möglich, alle Werte eines mehrwertigen Parameters zu durchlaufen.  
+ Sie können auf die globale Parameters-Auflistung per benutzerdefinierten Code über einen Codeblock der Berichtsdefinition oder über eine von Ihnen bereitgestellte benutzerdefinierte Assembly verweisen. Die Parameters-Auflistung ist schreibgeschützt und verfügt über keine öffentlichen Iteratoren. Sie können kein **For Each**-Konstrukt von [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] verwenden, um die Sammlung zu durchlaufen. Sie benötigen den in der Berichtsdefinition definierten Namen des Parameters, um in Ihrem Code auf ihn verweisen zu können. Allerdings ist es möglich, alle Werte eines mehrwertigen Parameters zu durchlaufen.  
   
  Die folgende Tabelle enthält Beispiele für Verweise auf die integrierte `Parameters` -Sammlung von benutzerdefiniertem Code:  
   
@@ -178,9 +178,9 @@ End Function
  Weitere Informationen zum Zugreifen auf Ihren Code finden Sie unter [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
 ##  <a name="collections"></a> Übergeben von integrierten Auflistungen in benutzerdefinierte Assemblys  
- Um integrierte Sammlungen wie die *Globals* - oder *Parameters* -Sammlung zur Verarbeitung an eine benutzerdefinierte Assembly zu übergeben, fügen Sie einen Assemblyverweis im Codeprojekt der Assembly hinzu, die die integrierten Auflistungen definiert, und greifen Sie auf den korrekten Namespace zu. Abhängig davon, ob Sie die benutzerdefinierte Assembly für einen auf einem Berichtsserver ausgeführten Bericht (Serverbericht) oder einen in einer .NET-Anwendung lokal ausgeführten Bericht (lokaler Bericht) entwickeln, unterscheidet sich jeweils die zu referenzierende Assembly. Weitere Details siehe unten.  
+ Um integrierte Sammlungen wie die *Globals* - oder *Parameters* -Sammlung zur Verarbeitung an eine benutzerdefinierte Assembly zu übergeben, fügen Sie einen Assemblyverweis im Codeprojekt der Assembly hinzu, die die integrierten Auflistungen definiert, und greifen Sie auf den korrekten Namespace zu. Abhängig davon, ob Sie die benutzerdefinierte Assembly für einen auf einem Berichtsserver ausgeführten Bericht (Serverbericht) oder einen in einer .NET-Anwendung lokal ausgeführten Bericht (lokaler Bericht) entwickeln, unterscheidet sich jeweils die zu referenzierende Assembly. Weitere Informationen siehe unten.  
   
--   **Namespace** : Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
+-   **Namespace:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
 -   **Assembly (lokaler Bericht):** Microsoft.ReportingServices.ProcessingObjectModel.dll  
   
@@ -191,7 +191,7 @@ End Function
 ## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Code zu einem Bericht &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [Verwenden benutzerdefinierter Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Hinzufügen eines Assemblyverweises zu einem Bericht &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Hinzufügen eines Assemblyverweises zu einem Bericht (SSRS)](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
  [Reporting Services-Tutorials (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Berichtsbeispiele (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  

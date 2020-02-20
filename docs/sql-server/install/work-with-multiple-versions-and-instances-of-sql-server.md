@@ -1,7 +1,7 @@
 ---
-title: Verwenden mehrerer Versionen und Instanzen von SQL Server | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 08/25/2017
+title: Arbeiten mit mehreren Versionen und Instanzen
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba5e4fdaab769fca0443f6395536dc31207b1374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045660"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258969"
 ---
-# <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Verwenden mehrerer Versionen und Instanzen von SQL Server
+# <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Arbeiten mit mehreren Versionen und Instanzen von SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -60,13 +60,13 @@ Sie können frühere Versionen von SQL Server auf einem Computer aktualisieren, 
   
  Bei jeder Haupt- oder Nebenversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird die Versionsnummer erhöht, damit sie sich von früheren Versionen unterscheidet. Diese Änderung an der Version wird zu vielen Zwecken verwendet. Dazu gehören das Anzeigen von Versionsinformationen an der Benutzeroberfläche, die Steuerung der Ersetzung von Dateien während eines Upgrades, die Anwendung von Service Packs sowie die funktionale Differenzierung zwischen den aufeinanderfolgenden Versionen.
   
-### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Von allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-by-all-versions-of-ssnoversion"></a>Von allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
  Bestimmte Komponenten werden von allen Instanzen aller installierten Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam genutzt. Wenn Sie unterschiedliche Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer parallel installieren, werden diese Komponenten automatisch auf die neueste Version aktualisiert. Solche Komponenten werden im Allgemeinen automatisch deinstalliert, wenn die letzte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deinstalliert wird.
   
  Beispiele: der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser und Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer.
   
-### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>Von allen Instanzen derselben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>Von allen Instanzen derselben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen, die die gleiche Hauptversion aufweisen, werden einige Komponenten von allen Instanzen gemeinsam genutzt. Wenn die freigegebenen Komponenten während des Upgrades ausgewählt werden, werden die vorhandenen Komponenten auf die neueste Version aktualisiert.
   
@@ -78,13 +78,13 @@ Beispiele: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCL
   
 Beispiel: .
   
-### <a name="components-specific-to-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-specific-to-an-instance-of-ssnoversion"></a>Für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Einige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten oder -Dienste gehören speziell zu einer bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie werden auch als instanzabhängig bezeichnet. Sie nutzen die gleiche Version wie ihre Hostinstanz und werden ausschließlich für diese Instanz verwendet.
   
 Beispiele: [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen unabhängige Komponenten
+### <a name="components-that-are-independent-of-the-ssnoversion-versions"></a>Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen unabhängige Komponenten
 
 Bestimmte Komponenten werden während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installiert, aber sind von den Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unabhängig. Sie werden möglicherweise von Hauptversionen oder von allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen gemeinsam genutzt.  
 
@@ -92,7 +92,7 @@ Beispiele: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 Weitere Informationen über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Installation finden Sie unter [Installieren von SQL Server 2016 vom Installations-Assistenten aus &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). Weitere Informationen zur Deinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact finden Sie unter [Deinstallieren einer vorhandenen SQL Server-Instanz &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Parallele Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>Parallele Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer installieren, auf dem bereits Instanzen einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version ausgeführt werden. Wenn auf dem Computer bereits eine Standardinstanz vorhanden ist, muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als benannte Instanz installiert werden.  
   

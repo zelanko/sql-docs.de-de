@@ -1,24 +1,24 @@
 ---
-title: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio (SSMS)
+title: Herstellen einer Verbindung mit und Abfragen einer SQL Server-Instanz
 description: Ein Tutorial für die Herstellung einer Verbindung zu einer SQL Server-Instanz durch Verwendung von SQL Server Management Studio und Ausführen grundlegender T-SQL-Abfragen
 keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein; maghan
 ms.topic: quickstart
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c1d13b939dc0846c88e9bd05a1384d259c3f911c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708332"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76162649"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Lernprogramm: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio (SSMS)
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Tutorial: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio (SSMS)
 
 In diesem Tutorial erfahren Sie, wie Sie mit SQL Server Management Studio (SSMS) eine Verbindung mit einer SQL Server-Instanz herstellen und grundlegende T-SQL-Befehle (Transact-SQL) ausführen. Dieser Artikel zeigt, wie die folgenden Schritte ausgeführt werden:
 
@@ -44,7 +44,7 @@ Wenn Sie über keinen Zugriff auf eine SQL Server-Instanz verfügen, wählen Sie
 
 ## <a name="connect-to-a-sql-server-instance"></a>Eine Verbindung mit einer SQL Server-Instanz herstellen
 
-1. Starten von SQL Server Management Studio Beim ersten Ausführen von SSMS wird das Fenster **Connect to Server** (Verbindung mit Server herstellen) geöffnet. Wenn das Fenster nicht geöffnet wird, können Sie es manuell öffnen, indem Sie auf **Objekt-Explorer** > **Verbinden** > **Datenbank-Engine** klicken.
+1. Starten Sie SQL Server Management Studio. Beim ersten Ausführen von SSMS wird das Fenster **Connect to Server** (Verbindung mit Server herstellen) geöffnet. Wenn das Fenster nicht geöffnet wird, können Sie es manuell öffnen, indem Sie auf **Objekt-Explorer** > **Verbinden** > **Datenbank-Engine** klicken.
 
     ![Die Verknüpfung „Verbinden“ im Objekt-Explorer](media/connect-query-sql-server/connectobjexp.png)
 
@@ -109,7 +109,7 @@ In diesem Abschnitt erstellen Sie nun eine Tabelle in der neuen Datenbank „Tut
    ![Ändern der Datenbank](media/connect-query-sql-server/changedb.png)
 
 2. Fügen Sie den folgenden T-SQL-Codeausschnitt in das Abfragefenster ein, wählen Sie ihn aus, und klicken Sie auf **Ausführen** (oder drücken Sie F5).  
-   Sie können entweder den vorhandenen Text im Abfragefenster ersetzen oder weiteren Text am Ende anfügen. Um den gesamten Code im Abfragefenster auszuführen, klicken Sie auf **Ausführen**. Wenn Sie den Text angehängt haben, und Sie nur den Teil des Textes ausführen möchten, markieren Sie also diesen Teil, und wählen Sie dann **Ausführen** aus.  
+   Sie können entweder den vorhandenen Text im Abfragefenster ersetzen oder weiteren Text am Ende anfügen. Um den gesamten Code im Abfragefenster auszuführen, klicken Sie auf **Ausführen**. Wenn Sie den Text angehängt haben, und Sie nur den Teil des Textes ausführen möchten, markieren Sie also diesen Teil, und klicken Sie dann auf **Ausführen**.  
   
    ```sql
    USE [TutorialDB]
@@ -195,11 +195,16 @@ Mit den nachfolgenden Schritten können Sie die Serververbindung für das aktuel
     > [!NOTE]
     > Diese Aktion ändert nur den Server, mit dem das Abfragefenster verbunden ist und nicht den Server, den der Objekt-Explorer verwendet.
 
+## <a name="azure-data-studio"></a>Azure Data Studio
+
+Sie können mithilfe von Azure Data Studio auch Verbindungen mit [SQL Server](../../azure-data-studio/quickstart-sql-server.md), einer [Azure SQL-Datenbank](../../azure-data-studio/quickstart-sql-database.md) und [Azure SQL Data Warehouse-Instanzen](../../azure-data-studio/quickstart-sql-dw.md) herstellen und diese abfragen.
+
 ## <a name="next-steps"></a>Nächste Schritte
 
-Am besten machen Sie sich mit SSMS vertraut, indem Sie einige praktische Aufgaben durchführen. Diese Artikel unterstützen Sie bei der Verwendung der verschiedenen Features, die in SSMS verfügbar sind.  In diesen Artikeln erfahren Sie, wie Sie die Komponenten von SSMS verwalten und wie Sie die Funktionen finden, die Sie regelmäßig verwenden.
+Am besten machen Sie sich mit SSMS vertraut, indem Sie einige praktische Aufgaben durchführen. Diese Artikel unterstützen Sie bei der Verwendung der verschiedenen Features, die in SSMS verfügbar sind. In diesen Artikeln erfahren Sie, wie Sie die Komponenten von SSMS verwalten und wie Sie die Funktionen finden, die Sie regelmäßig verwenden.
 
 * [Skripterstellung](scripting-ssms.md)
 * [Verwenden von Vorlagen in SSMS](../template/templates-ssms.md)
 * [SSMS-Konfiguration](ssms-configuration.md)
 * [Zusätzliche Tipps und Tricks für die Verwendung von SSMS](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

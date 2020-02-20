@@ -17,10 +17,10 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67412653"
 ---
 # <a name="monitoring-report-server-performance"></a>Überwachen der Leistung des Berichtsservers
@@ -57,7 +57,7 @@ ms.locfileid: "67412653"
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services-Leistungsobjekte  
-SQL Server 2016 Reporting Services oder höher (SSRS) umfasst die folgenden Leistungsobjekte:  
+SQL Server 2016 Reporting Services (SSRS) und höher umfassen die folgenden Leistungsobjekte:  
   
 -   **MSRS 2011 Web Service** und **MSRS 2011 SharePoint Mode Web Service** zum Überwachen der Berichtsserverleistung. Diese Leistungsobjekte enthalten eine Reihe von Leistungsindikatoren zum Nachverfolgen der Verarbeitung auf einem Berichtsserver, die in der Regel über interaktive Vorgänge zum Anzeigen von Berichten gestartet wird. Diese Leistungsindikatoren werden zurückgesetzt, sobald [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] den Berichtsserver-Webdienst beendet.  
   
@@ -70,10 +70,10 @@ SQL Server 2016 Reporting Services oder höher (SSRS) umfasst die folgenden Leis
 ## <a name="other-performance-counters"></a>Weitere Leistungsindikatoren  
  Benutzerdefinierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Leistungsindikatoren stehen nur für den **MSRS 2008-Webdienst**, **MSRS 2008-Windows-Dienst**und **ReportServer Service**zur Verfügung. Die folgenden Leistungsobjekte stellen zusätzliche Leistungsüberwachungsdaten für den Berichtsserver bereit.  
   
-|Leistungsobjekt|Hinweise|  
+|Leistungsobjekt|Notizen|  
 |------------------------|-----------|  
-|**.NET CLR Data** und **.NET CLR Memory**|Das Webportal verwendet [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Leistungsindikatoren. Weitere Informationen finden Sie auf der MSDN-Website unter "Improving .NET Application Performance and Scalability" (in Englisch).|  
-|**Verarbeiten**|Fügen Sie die Leistungsindikatoren **Elapsed Time** und **ID Process** für eine ReportingServicesService-Instanz hinzu, um die Prozessbetriebszeit nach Prozess-ID nachzuverfolgen.|  
+|**.NET CLR Data** und **.NET CLR Memory**|Das Webportal nutzt [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Leistungsindikatoren. Weitere Informationen finden Sie auf der MSDN-Website unter "Improving .NET Application Performance and Scalability" (in Englisch).|  
+|**Prozess**|Fügen Sie die Leistungsindikatoren **Elapsed Time** und **ID Process** für eine ReportingServicesService-Instanz hinzu, um die Prozessbetriebszeit nach Prozess-ID nachzuverfolgen.|  
   
 ## <a name="sharepoint-events"></a>SharePoint-Ereignisse  
  Zusätzlich zu den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Leistungsobjekten möchten Sie möglicherweise auch SharePoint-Ereignisse konfigurieren, wenn Sie einen Berichtsserver im integrierten SharePoint-Modus ausführen und die Berichterstellungsumgebung für die Verwendung eines SharePoint-Produkts konfiguriert haben. Mit den Ereignissen für einen Berichtsserver im integrierten SharePoint-Modus in diesem Abschnitt können Sie Diagnoseereignisse prüfen, die möglicherweise hilfreiche Informationen zur Verfügung stellen, wenn Ihre Berichterstellungsumgebung mit SharePoint integriert ist.  
@@ -85,12 +85,12 @@ SQL Server 2016 Reporting Services oder höher (SSRS) umfasst die folgenden Leis
  [Leistungsindikatoren für den MSRS 2011-Webdienst im SharePoint-Modus und den MSRS 2011-Windows-Dienst im SharePoint-Modus, Leistungsobjekte &#40;SharePoint-Modus&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  Beschreibt die Leistungsindikatoren, die vom Berichtsserver-Windows-Dienst verwendet werden.  
   
- [Leistungsindikatoren für die Leistungsobjekte 'ReportServer:Service' und 'ReportServerSharePoint:Service'](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
+ [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects (Leistungsindikatoren für die Leistungsobjekte ReportServer:Service und ReportServerSharePoint:Service)](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  Beschreibt die HTTP-bezogenen und speicherbezogenen Leistungsindikatoren in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 ::: moniker-end
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md)  

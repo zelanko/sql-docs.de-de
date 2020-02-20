@@ -16,10 +16,10 @@ ms.assetid: b6492341-fdc2-449c-9d03-95a5dadf1bb0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab60742b06054f5583cc438a68ddb5ed634740f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983032"
 ---
 # <a name="getfloat-method-javalangstring"></a>getFloat-Methode (java.lang.String)
@@ -40,7 +40,7 @@ public float getFloat(java.lang.String sCol)
  Ein **String-Objekt**, das den Parameternamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **float** -Wert.  
+ Ein **float**-Wert  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

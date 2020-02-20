@@ -13,10 +13,10 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578065"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>SharePoint-Bibliotheksübermittlung in Reporting Services
@@ -27,7 +27,7 @@ ms.locfileid: "65578065"
 > [!NOTE]  
 >  Die Übermittlung von Berichten an eine SharePoint-Website wird von der Übermittlungserweiterung nicht unterstützt, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird. Wenn Sie versuchen, die Übermittlungserweiterung für einen Berichtsserver im einheitlichen Modus programmgesteuert aufzurufen, wird vom Server der **rsDeliveryExtensionNotFound** -Fehler zurückgegeben und der **rsOperationNotSupportedSharePointMode** -Fehler in den Berichtsserver-Protokolldateien protokolliert.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Zum Übermitteln gerenderter Berichte an eine Bibliothek müssen folgende Anforderungen erfüllt werden:  
   
 -   Der Berichtsserver muss für die SharePoint-Integration konfiguriert sein.  
@@ -71,7 +71,7 @@ ms.locfileid: "65578065"
  Titel  
  Gibt eine optionale **Title** -Eigenschaft für den Bericht in der Zielbibliothek an. Dies ist eine Standardeigenschaft für alle in einer Bibliothek gespeicherten Elemente. Benutzer können angeben, ob diese Eigenschaft beim Anzeigen des Inhalts der Bibliothek auf einer SharePoint-Website angezeigt oder ausgeblendet werden soll.  
   
- Pfad  
+ `Path`  
  Gibt eine vollqualifizierte URL zur SharePoint-Bibliothek an, einschließlich der SharePoint-Webanwendung und -Website. Beispielsweise `https://mySharePointWeb/MySite/MyDocLib`, wobei `https://mySharePointWeb` die Webanwendung angibt, „MySite“ die SharePoint-Website ist und „MyDocLib“ der SharePoint-Bibliothek entspricht, an die der Bericht übermittelt wird.  
   
  Sie können keine Seite, Website oder Liste angeben. Der Zielcontainer muss eine Bibliothek auf derselben Website oder Webfarm sein.  

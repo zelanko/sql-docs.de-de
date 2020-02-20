@@ -1,28 +1,29 @@
 ---
-title: 'Gewusst wie: Herstellen einer Verbindung mit einer Datenbank und Durchsuchen vorhandener Objekte | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Herstellen einer Verbindung mit einer Datenbank und Durchsuchen vorhandener Objekte
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49049fbbff2397f6492cac385b10c23a66d48a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 65559af8337bc7421f96463a954a212f56a3c269
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897323"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75755818"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Gewusst wie: Herstellen einer Verbindung mit einer Datenbank und Durchsuchen vorhandener Objekte
+
 Eine häufige Aufgabe für Datenbankadministratoren und -entwickler besteht darin, eine Verbindung mit einer Livedatenbank herzustellen, deren Schema zu entwerfen oder zu durchsuchen und auf die enthaltenen Objekte abzufragen. Der SQL Server-Objekt-Explorer in Visual Studio enthält nun einen dedizierten Knoten **SQL Server**, unter dem sämtliche verbundenen SQL Server-Instanzen zusammen mit ihren Datenbanken in einer Hierarchie gruppiert sind, die der von SSMS ähnelt. Die verbundenen SQL Server-Instanzen können lokale Instanzen (z.B. eine ausgeführte SQL Server 2008-Instanz) oder eine externe SQL Azure-Instanz darstellen.  
   
-In der folgenden Prozedur wird davon ausgegangen, dass die AdventureWorks-Beispieldatenbank bereits installiert ist. Auf [CodePlex](https://msftdbprodsamples.codeplex.com/) finden Sie Beispieldatenbanken, die für unterschiedliche SQL Server-Versionen verwendet und installiert werden können. Falls gewünscht, können Sie die Schritte auch unter Verwendung einer auf Ihrem Server vorhandenen Datenbank ausführen.  
+In der folgenden Prozedur wird davon ausgegangen, dass die AdventureWorks-Beispieldatenbank bereits installiert ist. Auf [GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) finden Sie Beispieldatenbanken, die für unterschiedliche SQL Server-Versionen verwendet und installiert werden können. Falls gewünscht, können Sie die Schritte auch unter Verwendung einer auf Ihrem Server vorhandenen Datenbank ausführen.  
   
 ### <a name="to-connect-to-a-database-instance"></a>So stellen Sie eine Verbindung mit einer Datenbankinstanz her  
   

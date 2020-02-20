@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 06379ee06ec4b6f6663488b90dace90de97474cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015213"
 ---
 # <a name="stored-procedures"></a>Gespeicherte Prozeduren
@@ -27,7 +27,7 @@ ms.locfileid: "68015213"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Eine gespeicherte Prozedur ([gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) ist ein ausführbares Objekt, das in einer Datenbank gespeichert ist. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt:  
+  Eine gespeicherte Prozedur ([Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) ist ein ausführbares Objekt, das in einer Datenbank gespeichert ist. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt:  
   
 -   Gespeicherte Prozeduren  
   

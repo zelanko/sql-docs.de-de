@@ -1,5 +1,5 @@
 ---
-title: updateref-Methode (int, Java. SQL. Ref) | Microsoft-Dokumentation
+title: updateRef(int, java.sql.Ref)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: eab3ebae-3f68-4303-869a-fee06e3a9c71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 174be7f4e4a9a693a3beaac51d69ad40569bdf64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998403"
 ---
 # <a name="updateref-method-int-javasqlref"></a>updateRef-Methode (int, java.sql.Ref)
@@ -42,7 +42,7 @@ public void updateRef(int columnIndex,
   
  *x*  
   
- Ein Ref-Objekt.  
+ Ein Ref-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

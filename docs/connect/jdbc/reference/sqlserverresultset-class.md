@@ -11,10 +11,10 @@ ms.assetid: eaffcff1-286c-459f-83da-3150778480c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e0a2185037f54aa7ed975667c0bdd5fb921c845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970616"
 ---
 # <a name="sqlserverresultset-class"></a>SQLServerResultSet-Klasse
@@ -42,7 +42,7 @@ public final class SQLServerResultSet
   
  Die SQLServerResultSet-Klasse bietet eine Vielzahl von Methoden, mit denen sich das Resultset mit beliebigen systemeigenen Java-Datentypen sowie mit vielen Java-Objekttypen aktualisieren lässt.  
   
- Diese Klasse unterstützt das Entpacken in die SQLServerResultSet-Klasse, die isqlserverresultset-Schnittstelle und die Java. SQL. Resultset-Schnittstelle. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Diese Klasse unterstützt das Entpacken in die SQLServerResultSet-Klasse, die ISQLServerResultSet-Schnittstelle und die java.sql.ResultSet-Schnittstelle. Weitere Informationen finden Sie im Artikel [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

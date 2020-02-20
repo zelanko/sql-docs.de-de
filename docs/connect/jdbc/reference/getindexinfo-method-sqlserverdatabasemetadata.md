@@ -16,10 +16,10 @@ ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982793"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo-Methode (SQLServerDatabaseMetaData)
@@ -47,17 +47,17 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  Ein **String-Objekt**, das den Schemanamen enthält.  
   
- *table*  
+ *Tabelle*  
   
  Ein **String-Objekt**, das den Tabellennamen enthält.  
   
  *unique*  
   
- **true** , wenn nur Indizes für eindeutige Werte zurückgegeben werden. **false** , wenn alle Indizes zurückgegeben werden.  
+ **TRUE**, falls nur Indizes für eindeutige Werte zurückgegeben werden. **FALSE**, falls alle Indizes zurückgegeben werden.  
   
  *approximate*  
   
- **true** , wenn die Ergebnisse ungefähre oder veraltete Werte widerspiegeln. **false** , wenn die Ergebnisse korrekt sind.  
+ **TRUE**, falls die Ergebnisse ungefähre oder veraltete Werte widerspiegeln. **FALSE**, falls die Ergebnisse korrekt sind.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.  
@@ -70,7 +70,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  Das von der getIndexInfo-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Name der Datenbank, in der sich die angegebene Tabelle befindet.|  
 |TABLE_SCHEM|**String**|Das Schema der Tabelle.|  
@@ -78,10 +78,10 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |NON_UNIQUE|**boolean**|Gibt an, ob die Indexwerte nicht eindeutig sein können.|  
 |INDEX_QUALIFIER|**String**|Der Name des Indexbesitzers. Wenn für TYPE das tableIndexStatistic-Objekt eingetragen wird, entspricht er NULL.|  
 |INDEX_NAME|**String**|Der Name des Index.|  
-|TYPE|**short**|Der Typ des Indexes. Mögliche Werte:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
+|TYPE|**short**|Der Typ des Indexes. Es kann sich um einen der folgenden Werte handeln:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|Die Ordinalposition der Spalte innerhalb des Indexes. Die erste Spalte im Index hat den Wert 1.|  
 |COLUMN_NAME|**String**|Name der Spalte.|  
-|ASC_OR_DESC|**String**|Der in der Indexsortierung verwendete Befehl. Mögliche Werte:<br /><br /> A (aufsteigend)<br /><br /> D (absteigend)<br /><br /> NULL (nicht anwendbar)<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt immer A zurück.|  
+|ASC_OR_DESC|**String**|Der in der Indexsortierung verwendete Befehl. Es kann sich um einen der folgenden Werte handeln:<br /><br /> A (aufsteigend)<br /><br /> D (absteigend)<br /><br /> NULL (nicht anwendbar)<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt immer „A“ zurück.|  
 |CARDINALITY|**int**|Die Anzahl der Zeilen in der Tabelle oder der eindeutigen Werte im Index|  
 |PAGES|**int**|Die Anzahl der Seiten, die zum Speichern des Indexes oder der Tabelle verwendet werden.|  
 |FILTER_CONDITION|**String**|Die Filter-Bedingung.<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt immer NULL zurück.|  

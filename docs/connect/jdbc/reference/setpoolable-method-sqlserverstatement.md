@@ -1,5 +1,5 @@
 ---
-title: setpoolable-Methode (SQLServerStatement) | Microsoft-Dokumentation
+title: setPoolable-Methode (SQLServerStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5424de7d0d6f7bda44ec61ea61f48d63bb097c97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973198"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>setPoolable-Methode (SQLServerStatement)
@@ -42,9 +42,9 @@ public void setPoolable(boolean poolable) throws SQLException
   
  Der Poolwert einer Anwendung gilt für vom Treiber implementierte interne Anweisungscaches und externe von Anwendungsservern oder anderen Anwendungen implementierte Anweisungscaches.  
   
- Standardmäßig kann ein SQLServerStatement-Objekt bei der Erstellung nicht gebündelt werden. SQLServerPreparedStatement-und SQLServerCallableStatement-Objekte können bei der Erstellung gebündelt werden.  
+ SQLServerStatement-Objekte können standardmäßig nicht bei der Erstellung einem Pool zugewiesen werden. Die Objekte SQLServerPreparedStatement und SQLServerCallableStatement können bei der Erstellung einem Pool zugewiesen werden.  
   
- [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) wird ausgelöst, wenn diese Methode für eine geschlossene Anweisung aufgerufen wird.  
+ [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) wird ausgelöst, wenn diese Methode in einer geschlossenen Anweisung aufgerufen wird.  
   
  Von [isPoolable](../../../connect/jdbc/reference/ispoolable-method-sqlserverstatement.md) wird ein Wert zurückgegeben, der anzeigt, ob das Objekt dem Pool hinzugefügt werden kann.  
   

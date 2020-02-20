@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c3cf3c1debc03c169c585521b8b46dd8b1365c5
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 41e5f384878dfb284c31d6ba2886c9e223d03ca3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69641157"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479425"
 ---
 # <a name="get-r-package-information"></a>Abrufen von Paketinformationen für R
 
@@ -85,23 +85,23 @@ EXECUTE sp_execute_external_script
 
 Die folgenden R-Pakete werden mit SQL Server R Services installiert.
 
-|Pakete | Versionsoptionen | und Beschreibung |
+|Pakete | Version | BESCHREIBUNG |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Wird für Remotecomputekontexte, Streaming, parallele Ausführung von RX-Funktionen für Datenimport und Transformation, Modellierung, Visualisierung und Analyse verwendet. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | Wird zum Einschließen von R-Skripts in gespeicherte Prozeduren verwendet. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Wird zum Einschließen von R-Skripts in gespeicherte Prozeduren verwendet. |
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 Wenn Sie bei der Installation die R-Funktion auswählen, werden die folgenden R-Pakete mit SQL Server Machine Learning Services installiert.
 
-|Pakete | Versionsoptionen | und Beschreibung |
+|Pakete | Version | BESCHREIBUNG |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Wird für Remotecomputekontexte, Streaming, parallele Ausführung von RX-Funktionen für Datenimport und Transformation, Modellierung, Visualisierung und Analyse verwendet. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 9.2 | Wird zum Einschließen von R-Skripts in gespeicherte Prozeduren verwendet. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.2 | Fügt Machine Learning-Algorithmen in R hinzu. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 9.2 | Wird zum Schreiben von MDX-Anweisungen in R verwendet. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | Wird zum Einschließen von R-Skripts in gespeicherte Prozeduren verwendet. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | Fügt Machine Learning-Algorithmen in R hinzu. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | Wird zum Schreiben von MDX-Anweisungen in R verwendet. |
 
 ::: moniker-end
 
@@ -178,7 +178,12 @@ print(packageDescription("glue"))
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-+ [Neue R-Pakete installieren](../r/install-additional-r-packages-on-sql-server.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [Installieren von Paketen mit R-Tools](install-r-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [Installieren von neuen R-Paketen mit sqlmlutils](install-additional-r-packages-on-sql-server.md)
+::: moniker-end
 + [Abrufen von Paketinformationen für Python](python-package-information.md)
 + [Neue Python-Pakete installieren](../python/install-additional-python-packages-on-sql-server.md)
 + [R- und Python-Tutorials](../tutorials/machine-learning-services-tutorials.md)

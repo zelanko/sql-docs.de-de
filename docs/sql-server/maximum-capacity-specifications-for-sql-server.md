@@ -21,10 +21,10 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72008439"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
@@ -40,10 +40,10 @@ ms.locfileid: "72008439"
   
  [SQL Server-Replikationsobjekte](#Replication)  
   
-##  <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)] Objekte  
+##  <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)]-Objekte  
  Die maximale Größe und Anzahl verschiedener Objekte, die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbanken definiert sind oder auf die in [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen verwiesen wird.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] Objekt (object)||Maximale Größe/Anzahl – [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 Bit)|Zusätzliche Informationen|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]-Objekte||Maximale Größe/Anzahl – [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 Bit)|Zusätzliche Informationen|  
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|  
 |Batchgröße||65.536 * Netzwerkpaketgröße|Die Netzwerk-Paketgröße entspricht der Größe der TDS-Pakete (Tabular Data Stream), die für die Kommunikation zwischen Anwendungen und relationalem [!INCLUDE[ssDE](../includes/ssde-md.md)]verwendet werden. Die Standardpaketgröße beträgt 4 KB und wird durch die Konfigurationsoption Netzwerkpaketgröße gesteuert.|  
 |Bytes pro Spalte mit kurzen Zeichenfolgen||8\.000||  
@@ -103,7 +103,7 @@ ms.locfileid: "72008439"
 |Benutzerverbindungen||32.767||  
 |XML-Indizes||249||  
   
-##  <a name="Utility"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hilfsprogrammobjekte  
+##  <a name="Utility"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hilfsprogrammobjekte  
  Die maximale Größe und Anzahl verschiedener, im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm getesteter Objekte.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hilfsprogrammobjekt||Maximale Größe/Anzahl – [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 Bit)|  
@@ -120,7 +120,7 @@ ms.locfileid: "72008439"
   
  \* Die maximale Anzahl verwalteter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen, die vom [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm unterstützt werden, ist von der Hardwarekonfiguration des Servers abhängig. Informationen zu ersten Schritten finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Ein Steuerungspunkt für das Hilfsprogramm ist nicht in jeder Edition von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](https://msdn.microsoft.com/library/cc645993.aspx).    
   
-##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datenebenenanwendungs-Objekte  
+##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenebenen-Anwendungsobjekte  
  Die maximale Größe und Anzahl verschiedener in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenebenenanwendungen (DAC) getesteter Objekte.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC-Objekt||Maximale Größe/Anzahl – [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 Bit)|  

@@ -11,10 +11,10 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37f644b07b02c90e74b0b4fe4e0d5215f5efa298
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049821"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Häufig gestellte Fragen (FAQ) zum JDBC-Treiber
@@ -39,9 +39,9 @@ Der Microsoft JDBC-Treiber 7.4 unterstützt die JDBC-Spezifikationen 4.2 sowie 4
 
 | JAR                        | JDBC-Spezifikation            | JDK-Version |
 | -------------------------- | ----------------------------- | ----------- |
-| MSSQL-JDBC-Version 7.4.1. jre12. jar | JDBC 4.3 (teilweise) und 4.2 | JDK 12.0    |
-| MSSQL-JDBC-Version 7.4.1. jre11. jar | JDBC 4.3 (teilweise) und 4.2 | JDK 11.0    |
-| MSSQL-JDBC-Version 7.4.1. jre8. jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-7.4.1.jre12.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 12.0    |
+| mssql-jdbc-7.4.1.jre11.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 11.0    |
+| mssql-jdbc-7.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Der Microsoft JDBC-Treiber 7.2 unterstützt die JDBC-Spezifikation 4.2 sowie 4.3 (teilweise), und das Installationspaket enthält zwei JAR-Klassenbibliotheken:
@@ -102,7 +102,7 @@ Der Microsoft JDBC-Treiber für SQL steht Ihnen kostenlos zur Verfügung.
 Die JDBC-Treiber 6.0, 6.2, 6.4 und 7.0 können weiterverteilt werden. Lesen Sie in den jeweiligen Lizenzverträgen die Klausel „Verteilbarer Code“.
 
 **Kann ich mithilfe des Treibers von einem Linux-Computer aus auf Microsoft SQL Server zugreifen?**  
-Ja! Sie können den Treiber verwenden, um von Linux, Unix und anderen nicht-Windows-Plattformen auf SQL Server zuzugreifen. Weitere Informationen finden Sie unter [Supportmatrix für den Microsoft JDBC-Treiber für SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
+Ja. Sie können den Treiber verwenden, um von Linux, Unix und anderen nicht-Windows-Plattformen auf SQL Server zuzugreifen. Weitere Informationen finden Sie unter [Supportmatrix für den Microsoft JDBC-Treiber für SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
 **Unterstützt der Treiber die SSL-Verschlüsselung (Secure Sockets Layer)?**  
 Die SSL-Verschlüsselung wird seit Version 1.2 des Treibers unterstützt. Weitere Informationen finden Sie unter [Verwenden der SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md).
@@ -110,7 +110,7 @@ Die SSL-Verschlüsselung wird seit Version 1.2 des Treibers unterstützt. Weiter
 **Welche Authentifizierungstypen werden vom Microsoft JDBC-Treiber für SQL Server unterstützt?**  
 Die verfügbaren Authentifizierungsoptionen sind in der folgenden Tabelle aufgelistet. Eine reine Java Kerberos-Authentifizierung ist seit Version 4.0 des Treibers verfügbar.
 
-| Platform    | Authentifizierung                        |
+| Plattform    | Authentifizierung                        |
 | ----------- | ------------------------------------- |
 | Nicht-Windows-System | Reine Java Kerberos                    |
 | Nicht-Windows-System | SQL Server                            |
@@ -129,7 +129,7 @@ Ja. Der Treiber unterstützt die Verwendung von IPv6-Adressen. Verwenden Sie die
 Die adaptive Pufferung wurde in Version 1.2 des Microsoft JDBC-Treibers für SQL Server 2005 eingeführt. Mit der adaptiven Pufferung können Daten mit einer großen Menge an Werten ohne den durch Servercursor verursachten Overhead abgerufen werden. Die adaptive Pufferung des Microsoft SQL Server JDBC Drivers stellt mit „responseBuffering“ eine Eigenschaft für Verbindungszeichenfolgen bereit, die auf „adaptive“ oder „full“ festgelegt werden kann. In Version 1.2 lautet der Puffermodus standardmäßig „full“, und die Anwendung muss den Modus für die adaptive Pufferung explizit festlegen. Ab Version 2.0 des JDBC-Treibers ist das Standardverhalten des Treibers „adaptive“. Daher muss Ihre Anwendung das adaptive Verhalten nicht explizit anfordern, um ein adaptives Pufferverhalten zu erzielen. Weitere Informationen finden Sie unter [Using Adaptive Buffering (Verwenden der adaptiven Pufferung)](../../connect/jdbc/using-adaptive-buffering.md) und im Blogbeitrag [What is adaptive response buffering and why should I use it? (Was ist die adaptive Pufferung und warum sollte ich sie verwenden?)](https://go.microsoft.com/fwlink/?LinkId=111575).
 
 **Unterstützt der Treiber das Verbindungspooling?**  
-Der Treiber unterstützt das Verbindungspooling unter Java Platform, Enterprise Edition 5 (Java EE 5). Der Treiber implementiert die erforderlichen JDBC 3.0-Schnittstellen, damit er implementiertes Verbindungspooling von Anbietern für Anwendungsserver auf Middleware-Ebene nutzen kann. Der Treiber nutzt in diesen Umgebungen Verbindungspool. Weitere Informationen finden Sie unter [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). Der Treiber bietet keine eigene Implementierung des Poolings, sondern es beruht auf Java-Anwendungsservern von Drittanbietern.
+Der Treiber unterstützt das Verbindungspooling unter Java Platform, Enterprise Edition 5 (Java EE 5). Der Treiber implementiert die erforderlichen JDBC 3.0-Schnittstellen, damit er implementiertes Verbindungspooling von Anbietern für Anwendungsserver auf Middleware-Ebene nutzen kann. Der Treiber nutzt in diesen Umgebungen Verbindungspool. Weitere Informationen finden Sie unter [Verwenden des Verbindungspoolings](../../connect/jdbc/using-connection-pooling.md). Der Treiber bietet keine eigene Implementierung des Poolings, sondern es beruht auf Java-Anwendungsservern von Drittanbietern.
 
 **Steht für den Treiber Support zur Verfügung?**  
 Es sind zahlreiche Optionen verfügbar. Sie können Ihre Frage oder Ihr Problem in unserem [GitHub-Repository](https://github.com/microsoft/mssql-jdbc) posten, das von Microsoft überwacht wird. [Foren](https://go.microsoft.com/fwlink/?LinkID=246673) werden von Microsoft, MVPs und der Community überwacht. Sie können sich auch an den Microsoft Kundendienst wenden. Das Entwicklungsteam bittet Sie möglicherweise, das Problem außerhalb von Anwendungsservern von Drittanbietern zu reproduzieren. Wenn das Problem nicht außerhalb der Hostumgebung des Java-Containers reproduziert werden kann, müssen Sie den Drittanbieter hinzuziehen, damit das Team Ihnen weiterhin helfen kann. Außerdem bittet Sie das Team möglicherweise, Ihr Problem unter einem Betriebssystem wie Windows zu reproduzieren, damit die optimale Lösung für das Problem gefunden werden kann.
@@ -149,6 +149,6 @@ Kunden, die SAP-Produkte verwenden und die Unterstützung für JRE 14. benötige
 **Kann der Treiber mit durch FIPS validierten Algorithmen kommunizieren?**  
 Der Microsoft JDBC-Treiber enthält keine kryptografischen Algorithmen. Wenn ein Kunde Algorithmen für Betriebssysteme, Anwendungen und JVM verwendet, die entsprechend der Federal Information Processing Standards (FIPS) zulässig sind, und der Kunde den Treiber für die Verwendung dieser Algorithmen konfiguriert, dann verwendet der Treiber nur die festgelegten Algorithmen für die Kommunikation.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)

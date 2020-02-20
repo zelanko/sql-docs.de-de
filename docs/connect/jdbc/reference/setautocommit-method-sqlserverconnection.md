@@ -1,5 +1,5 @@
 ---
-title: "\"ltaudecommit\"-Methode (SQLServerConnection) | Microsoft-Dokumentation"
+title: setAutoCommit-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dbf9b18fdc6b590f085b5be6babd64100006163a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975263"
 ---
 # <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit-Methode (SQLServerConnection)
@@ -37,13 +37,13 @@ public void setAutoCommit(boolean value)
 #### <a name="parameters"></a>Parameter  
  *value*  
   
- **true** , um den Autocommit-Modus für die Verbindung zu aktivieren, **false** , um ihn zu deaktivieren.  
+ Mit dem Wert **TRUE** wird der Autocommitmodus für die Verbindung aktiviert, und mit dem Wert **FALSE** wird er deaktiviert.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode "staudecommit" wird von der Methode "" in der Schnittstelle "java. SQL. Connection" durch die Methode "" festgelegt.  
+ Diese setAutoCommit-Methode wird von der setAutoCommit-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
  Ist für eine Verbindung der Modus für automatische Commits aktiviert, werden alle SQL-Anweisungen als einzelne Transaktionen ausgeführt, und die Commits der SQL-Anweisungen werden als einzelne Transaktionen ausgeführt. Andernfalls werden die SQL-Anweisungen in Transaktionen gruppiert, die mit einem Aufruf der [commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)- oder der [rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)-Methode beendet werden. Der Modus für automatische Commits ist für neue Verbindungen standardmäßig aktiviert.  
   

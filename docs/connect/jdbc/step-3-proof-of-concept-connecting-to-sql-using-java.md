@@ -11,19 +11,19 @@ ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027510"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Java
   
-Dieses Beispiel sollte nur als Proof of Concept angesehen werden. Der Beispielcode wird aus Gründen der Übersichtlichkeit vereinfacht und repräsentiert nicht unbedingt die bewährten Methoden, die von Microsoft empfohlen werden.  
+Dieses Beispiel ist lediglich als Proof of Concept zu verstehen. Es wurde zur Verdeutlichung vereinfacht und entspricht nicht zwangsläufig den von Microsoft empfohlenen Best Practices.  
   
-## <a name="step-1-connect"></a>Schritt 1: verbinden  
+## <a name="step-1-connect"></a>Schritt 1: Verbinden  
   
-Verwenden Sie die Verbindungs Klasse, um eine Verbindung mit SQL-Datenbank herzustellen.   
+Verwenden Sie die Verbindungsklasse, um eine Verbindung mit der SQL-Datenbank herzustellen.   
   
 ```java  
 import java.sql.Connection;
@@ -55,7 +55,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-2-execute-a-query"></a>Schritt 2: Ausführen einer Abfrage  
-In diesem Beispiel stellen Sie eine Verbindung mit Azure SQL-Datenbank her, führen eine SELECT-Anweisung aus und geben ausgewählte Zeilen zurück.   
+In diesem Beispiel stellen Sie eine Verbindung mit einer Azure SQL-Datenbank her, führen eine SELECT-Anweisung aus und geben ausgewählte Zeilen zurück.   
   
 ```java  
 import java.sql.Connection;
@@ -100,7 +100,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-3-insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
-Führen Sie in diesem Beispiel eine INSERT-Anweisung aus, übergeben Sie Parameter, und rufen Sie den automatisch generierten Primärschlüssel Wert ab.   
+In diesem Beispiel führen Sie eine INSERT-Anweisung aus, übergeben Parameter und rufen den automatisch generierten Primärschlüsselwert ab.   
   
 ```java  
 import java.sql.Connection;

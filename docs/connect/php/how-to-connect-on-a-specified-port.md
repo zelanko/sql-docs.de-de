@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Herstellen einer Verbindung an einem angegebenen Port | Microsoft-Dokumentation'
+title: 'Gewusst wie: Verbinden über einen angegebenen Port | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af055a73904bb8feec92fb2afe93df064a09ab23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015052"
 ---
-# <a name="how-to-connect-on-a-specified-port"></a>Vorgehensweise: Verbinden über einen angegebenen Port
+# <a name="how-to-connect-on-a-specified-port"></a>Gewusst wie: Verbinden über einen angegebenen Port
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In diesem Thema wird beschrieben, wie über einen angegebenen Port mit der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]eine Verbindung zu SQL Server hergestellt wird.  
   
 ### <a name="to-connect-on-a-specified-port"></a>Verbinden über einen angegebenen Port  
   
-1.  Stellen Sie sicher, dass der Port, auf den der Server konfiguriert ist, Verbindungen akzeptiert. Informationen zum Konfigurieren eines Servers, um Verbindungen über einen angegebenen Port zu akzeptieren, finden Sie unter [How to: Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager) (Vorgehensweise: Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports (SQL Server-Konfigurations-Manager))](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
+1.  Stellen Sie sicher, dass der Port, auf den der Server konfiguriert ist, Verbindungen akzeptiert. Weitere Informationen zum Konfigurieren eines Servers, sodass er Verbindungen auf einem angegebenen Port annimmt, finden Sie unter [ Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 2.  Fügen Sie den gewünschten Port dem *$serverName*-Parameter der [sqlsrv_connect](../../connect/php/sqlsrv-connect.md)-Funktion hinzu. Trennen Sie den Servernamen und den Port durch ein Komma. Beispielsweise verwenden die folgenden Codezeilen die SQLSRV-Treiber, um zu veranschaulichen, wie die Verbindung mit einem Server namens *myServer* über Port 1521 hergestellt wird:  
   

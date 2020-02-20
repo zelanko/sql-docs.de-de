@@ -12,14 +12,14 @@ ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 087f7f6da8882f181c55a187438d4493ec5b1a9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62991555"
 ---
 # <a name="detail-property"></a>Detail-Eigenschaft
-  Die **Detail**-Eigenschaft der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException**-Klasse verfügt über folgende XML-Struktur:  
+  Die XML-Struktur der **Detail**-Eigenschaft der **SoapException**-Klasse in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sieht wie folgt aus:  
   
 ## <a name="elements"></a>Elemente  
  **Detail**  
@@ -31,7 +31,7 @@ ms.locfileid: "62991555"
  **HttpStatus**  
  Der HTTP-Statuscode.  
   
- **MessageBox**  
+ **Meldung**  
  Die Fehlermeldung und der Fehlercode, die vom Berichtsserver zugewiesen werden.  
   
  **HelpLink**  
@@ -44,7 +44,7 @@ ms.locfileid: "62991555"
  Der Name des Produkts. Der Standardwert ist **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
- Die Version von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Die maximale Länge beträgt 15 Zeichen. Das Format der Versionsnummer sollte folgendermaßen sein: 8.00.0xxx.00.  
+ Die Version von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Die maximale Länge beträgt 15 Zeichen. Das Format der Versionsnummer sollte folgendermaßen aussehen: 8.00.0xxx.00.  
   
  **ProductLocaleId**  
  Die Gebietsschema- oder Sprach-ID der INTL DLL (z.B. 0x41A) der Anwendung.  
@@ -61,7 +61,7 @@ ms.locfileid: "62991555"
  **Quelle**  
  Ein untergeordnetes Element von **MoreInformation**. Die Ursache des Fehlers.  
   
- **MessageBox**  
+ **Meldung**  
  Ein untergeordnetes Element von **MoreInformation**. Die Fehlermeldung einer verschachtelten Ausnahme. Dieses Element enthält XML-Attribute für **ErrorCode** und **HelpLink**.  
   
  **Warnungen**  

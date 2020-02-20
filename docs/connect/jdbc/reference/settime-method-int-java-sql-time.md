@@ -1,5 +1,5 @@
 ---
-title: setTime-Methode (int, Java. SQL. Time) | Microsoft-Dokumentation
+title: setTime(int, java.sql.Time)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1e3878dc-42fe-4fac-8fe3-22a7bd70c6da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7004f57f0516263ee70d8f9723536dc7d5ad9904
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972555"
 ---
 # <a name="settime-method-int-javasqltime"></a>setTime-Methode (int, java.sql.Time)
@@ -42,7 +42,7 @@ public final void setTime(int n,
   
  *x*  
   
- Ein Zeit Objekt.  
+ Ein Time-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

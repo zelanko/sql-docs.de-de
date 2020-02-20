@@ -1,5 +1,5 @@
 ---
-title: SQLXML-Datentyp Beispiel | Microsoft-Dokumentation
+title: Beispiel für den SQLXML-Datentyp | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0cc8e3e48024e6d5af789919173454d0ee05e56
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027648"
 ---
 # <a name="sqlxml-data-type-sample"></a>Beispiel für den SQLXML-Datentyp
@@ -36,7 +36,7 @@ Die Codedatei für dieses Beispiel heißt „SqlXmlDataType.java“ und befindet
 \<installation directory>\sqljdbc_<version>\<language>\samples\datatypes
 ```
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei "sqljdbc4.jar" in den Klassenpfad aufnehmen. Wenn im Klassenpfad kein Eintrag für „sqljdbc4.jar“ vorhanden ist, löst die Beispielanwendung die Ausnahme „ClassNotFound“ aus. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../connect/jdbc/using-the-jdbc-driver.md).
 
@@ -60,6 +60,6 @@ Die showTransformer-Methode veranschaulicht das Abrufen von XML-Daten aus der ei
 
 [!code[JDBC#UsingSQLXML1](../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Arbeiten mit Datentypen &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)

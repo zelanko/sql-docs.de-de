@@ -24,14 +24,14 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68661342"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
-Ausdrücke werden in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+Ausdrücke werden in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Bei aktiviertem RDL-Sandkasten können nur bestimmte Typen und Elemente zum Veröffentlichungszeitpunkt des Berichts im Ausdruckstext verwendet werden. Weitere Informationen finden Sie unter [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
@@ -62,11 +62,11 @@ Beispiele für Ausdrücke und die jeweiligen Verwendungsmöglichkeiten finden Si
   
 Weitere Informationen zu einfachen und komplexen Ausdrücken, zu den Verwendungsmöglichkeiten von Ausdrücken sowie zu den Verweistypen, die Sie in einen Ausdruck einbinden können, finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Weitere Informationen zum Kontext, in dem Ausdrücke zum Berechnen von Aggregaten ausgewertet werden, finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Operatoren verwenden, die auch in den beispielhaften Ausdrücken in diesem Thema zum Schreiben von Berichten verwendet werden, finden Sie weitere Informationen unter [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Operatoren verwenden, die auch in den beispielhaften Ausdrücken in diesem Thema zum Schreiben von Berichten verwendet werden, finden Sie weitere Informationen unter [Tutorial: Einführung in Ausdrücke](../../reporting-services/tutorial-introducing-expressions.md).  
 
   
-## <a name="functions"></a>Funktionen  
- Viele Ausdrücke in einem Bericht enthalten Funktionen. Mit diesen Funktionen können Sie Daten formatieren, Code anwenden und auf Berichtsmetadaten zugreifen. Sie können Ausdrücke schreiben, die Funktionen aus der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Laufzeitbibliothek sowie aus den Namespaces <xref:System.Convert> und <xref:System.Math> verwenden. Sie können Verweise auf Funktionen aus anderen Assemblys oder benutzerdefinierten Code hinzufügen. Sie können auch Klassen aus [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]verwenden, einschließlich <xref:System.Text.RegularExpressions>.  
+## <a name="functions"></a>Functions  
+ Viele Ausdrücke in einem Bericht enthalten Funktionen. Mit diesen Funktionen können Sie Daten formatieren, Code anwenden und auf Berichtsmetadaten zugreifen. Sie können Ausdrücke schreiben, die Funktionen aus der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Laufzeitbibliothek sowie aus den Namespaces <xref:System.Convert> und <xref:System.Math> verwenden. Sie können Verweise auf Funktionen aus anderen Assemblys oder benutzerdefinierten Code hinzufügen. Sie können auch Klassen aus [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] einschließlich <xref:System.Text.RegularExpressions> verwenden.  
   
 ##  <a name="VisualBasicFunctions"></a> Visual Basic-Funktionen  
  Mit [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen können Sie die Daten bearbeiten, die in Textfeldern angezeigt oder für Parameter, Eigenschaften oder sonstige Bereiche des Berichts verwendet werden. In diesem Abschnitt werden Beispiele zur Veranschaulichung einiger dieser Funktionen bereitgestellt. Weitere Informationen finden Sie unter [Member der Visual Basic-Laufzeitbibliothek](https://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
@@ -120,7 +120,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   Die **Year** -Funktion zeigt das Jahr für ein bestimmtes Datum an. Hiermit können Sie Datumsangaben zusammenfassen oder die Jahreszahl für eine Datumsgruppe anzeigen. Dieser Ausdruck liefert das Jahr für eine bestimmte Gruppe von Bestelldaten. Mit der **Month** -Funktion und anderen Funktionen können Datumsangaben auch bearbeitet werden. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+-   Die **Year** -Funktion zeigt das Jahr für ein bestimmtes Datum an. Hiermit können Sie Datumsangaben zusammenfassen oder die Jahreszahl für eine Datumsgruppe anzeigen. Dieser Ausdruck liefert das Jahr für eine bestimmte Gruppe von Bestelldaten. Mit der **Month** -Funktion und anderen Funktionen können Datumsangaben auch bearbeitet werden. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -214,7 +214,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     Der folgende Ausdruck liefert dasselbe Ergebnis, wobei Elemente der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> -Klasse anstelle von [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen verwendet werden:  
+     Der folgende Ausdruck liefert dasselbe Ergebnis, wobei Elemente der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String>-Klasse anstelle von [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Funktionen verwendet werden:  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -233,7 +233,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
   
     ```  
   
--   Der **Regex** -Funktionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sind für das Ändern des Formats vorhandener Zeichenfolgen hilfreich, beispielsweise für das Formatieren einer Telefonnummer. Für den folgenden Ausdruck wird die **Replace** -Funktion zum Ändern des Formats einer zehnstelligen Telefonnummer in ein Feld von „*nnn*-*nnn*-*nnnn*“ in „(*nnn*) *nnn*-*nnnn*“ verwendet:  
+-   **Regex**-Funktionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sind für das Ändern des Formats vorhandener Zeichenfolgen wie beispielsweise das Formatieren einer Telefonnummer hilfreich. Für den folgenden Ausdruck wird die **Replace** -Funktion zum Ändern des Formats einer zehnstelligen Telefonnummer in ein Feld von „*nnn*-*nnn*-*nnnn*“ in „(*nnn*) *nnn*-*nnnn*“ verwendet:  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -242,7 +242,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
     > [!NOTE]  
     >  Überprüfen Sie, ob der Wert für Fields!Phone.Value unter Umständen zusätzliche Leerzeichen enthält und vom Typ <xref:System.String>.  
   
-### <a name="lookup"></a>Suche  
+### <a name="lookup"></a>Nachschlagen  
   
 -   Durch Angabe eines Schlüsselfelds können Sie mit der **Lookup** -Funktion einen Wert von einem Dataset für eine 1:1-Beziehung, beispielsweise ein Schlüssel-Wert-Paar, abrufen. Der folgende Ausdruck zeigt den Produktnamen aus einem Dataset („Product“) an, wenn der Produktbezeichner als Grundlage für die Übereinstimmung angegeben ist:  
   

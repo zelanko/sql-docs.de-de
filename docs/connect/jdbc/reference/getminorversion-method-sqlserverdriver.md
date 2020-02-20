@@ -16,10 +16,10 @@ ms.assetid: 5507000a-98b1-40b1-b8a7-16365ae80d7d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 94f0bd637a50e56db86394153bec4fe8fdb492b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981814"
 ---
 # <a name="getminorversion-method-sqlserverdriver"></a>getMinorVersion-Methode (SQLServerDriver)
@@ -38,7 +38,7 @@ public int getMinorVersion()
  Ein Wert vom Typ **int** mit der Nebenversionsnummer des JDBC-Treibers.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getMinorVersion-Methode wird von der getMinorVersion-Methode in der Java. SQL. Driver-Schnittstelle angegeben.  
+ Diese getMinorVersion-Methode wird von der getMinorVersion-Methode in der java.sql.Driver-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDriver-Methoden](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

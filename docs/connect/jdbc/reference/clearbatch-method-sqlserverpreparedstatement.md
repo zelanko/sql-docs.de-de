@@ -1,5 +1,5 @@
 ---
-title: ClearBatch-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: clearBatch-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6e5cda26-e24d-4637-8dfd-8135ba126e3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12ac8ff4ab9e066d9d0c24b95290e0d86674eec0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955825"
 ---
 # <a name="clearbatch-method-sqlserverpreparedstatement"></a>clearBatch-Methode (SQLServerPreparedStatement)
@@ -38,7 +38,7 @@ public final void clearBatch()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese ClearBatch-Methode wird von der clearBatch-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
+ Diese clearBatch-Methode wird von der clearBatch-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

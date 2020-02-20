@@ -1,5 +1,5 @@
 ---
-title: getmaxcatalognamelength-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getMaxCatalogNameLength-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 89c11327-eae1-4178-9e26-4b484d521c65
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff0e29e95b321d912f19cece28fd1579aeff50a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982353"
 ---
 # <a name="getmaxcatalognamelength-method-sqlserverdatabasemetadata"></a>getMaxCatalogNameLength-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public int getMaxCatalogNameLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getmaxcatalognamelength-Methode wird von der getmaxcatalognamelength-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getMaxCatalogNameLength-Methode wird von der getMaxCatalogNameLength-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

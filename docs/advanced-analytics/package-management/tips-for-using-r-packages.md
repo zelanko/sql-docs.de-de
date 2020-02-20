@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e283ab478a6d65243e9962fd5c26f5f91d87c15
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 64799766b8b9d69a5577fd589c8f610be75ebb8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70196343"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479401"
 ---
 # <a name="tips-for-using-r-packages"></a>Tipps für die Verwendung von R-Paketen
 
@@ -88,8 +88,13 @@ Mithilfe der folgenden Richtlinien können Sie Fehler vom Typ „Paket nicht gef
 
 + Informieren Sie sich darüber, welche Paketbibliothek der Instanz zugeordnet ist. Weitere Informationen finden Sie unter [Abrufen von Paketinformationen für R](../package-management/r-package-information.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-+ [Neue R-Pakete installieren](install-additional-r-packages-on-sql-server.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [Installieren von Paketen mit R-Tools](install-r-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [Installieren von neuen R-Paketen mit sqlmlutils](install-additional-r-packages-on-sql-server.md)
+::: moniker-end
 + [Neue Python-Pakete installieren](../python/install-additional-python-packages-on-sql-server.md)
 + [Tutorials, Beispiele, Lösungen](../tutorials/machine-learning-services-tutorials.md)

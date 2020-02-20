@@ -11,10 +11,10 @@ ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c36e81631435e4e079d2b52aea4fe9bce587159
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028105"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>Diagnostizieren von Problemen mit dem JDBC-Treiber
@@ -26,7 +26,7 @@ ms.locfileid: "69028105"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|und Beschreibung|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Behandlung von Fehlern](../../connect/jdbc/handling-errors.md)|Beschreibt das Behandeln von Fehlern, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden.|  
 |[Abrufen der Treiberversion](../../connect/jdbc/getting-the-driver-version.md)|Beschreibt, wie die installierte Version des JDBC-Treibers bestimmt wird.|  
@@ -34,7 +34,7 @@ ms.locfileid: "69028105"
 |[Behandlung von Verbindungsproblemen](../../connect/jdbc/troubleshooting-connectivity.md)|Beschreibt die Fehlerbehebung bei der Datenbankkonnektivität.|  
 |[Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)|Beschreibt, wie Verbindungsfehler mithilfe der Informationen im erweiterten Ereignisprotokoll des Servers untersucht werden können.|  
   
-## <a name="see-also"></a>Siehe auch 
+## <a name="see-also"></a>Weitere Informationen 
  [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

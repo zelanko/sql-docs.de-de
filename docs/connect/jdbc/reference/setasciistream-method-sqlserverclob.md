@@ -1,5 +1,5 @@
 ---
-title: ltasciistream-Methode (SQLServerClob) | Microsoft-Dokumentation
+title: setAsciiStream-Methode (SQLServerClob) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fff312217f9191e6752f8eb753096ff7499a0496
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975437"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>setAsciiStream-Methode (SQLServerClob)
@@ -46,7 +46,7 @@ public java.io.OutputStream setAsciiStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode wird von der Methode "" in der Schnittstelle "java. SQL. CLOB" durch die Methode "*" angegeben.  
+ Diese setAsciiStream-Methode wird von der setAsciiStream-Methode in der java.sql.Clob-Schnittstelle angegeben.  
   
  Zeichendaten im CLOB werden beginnend mit der angegebenen Position vom Ausgabedatenstrom überschrieben, und sie können die ursprüngliche Länge des CLOB übersteigen. Durch Angeben eines Werts vom Typ Position+1 werden ASCII-Zeichen angefügt. Durch Angeben eines Werts vom Typ Position+2 oder größer (oder null oder weniger) wird ein Positionsfehler ausgelöst.  
   

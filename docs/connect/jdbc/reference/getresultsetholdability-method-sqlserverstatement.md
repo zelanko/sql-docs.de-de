@@ -1,5 +1,5 @@
 ---
-title: getresultltholdability-Methode (SQLServerStatement) | Microsoft-Dokumentation
+title: getResultSetHoldability-Methode (SQLServerStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 053549ee-2018-47ab-9538-789dac2b150a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 153da54f0b70d94b4428e2152db6b159230fa38c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980324"
 ---
 # <a name="getresultsetholdability-method-sqlserverstatement"></a>getResultSetHoldability-Methode (SQLServerStatement)
@@ -41,7 +41,7 @@ public final int getResultSetHoldability()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getresultltholdability-Methode wird von der getresultltholdability-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
+ Diese getResultSetHoldability-Methode wird von der getResultSetHoldability-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerStatement-Elemente](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

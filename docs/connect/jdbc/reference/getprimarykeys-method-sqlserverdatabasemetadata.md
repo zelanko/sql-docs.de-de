@@ -16,10 +16,10 @@ ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb1eb0053c9bb15c6d03013df13635e022a5072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980767"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>getPrimaryKeys-Methode (SQLServerDatabaseMetaData)
@@ -45,7 +45,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
   
  Ein **String-Objekt**, das den Schemanamen enthält.  
   
- *table*  
+ *Tabelle*  
   
  Ein **String-Objekt**, das den Tabellennamen enthält.  
   
@@ -56,18 +56,18 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getPrimaryKeys-Methode wird von der getPrimaryKeys-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getPrimaryKeys-Methode wird von der getPrimaryKeys-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getPrimaryKeys-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
-|TABLE_CAT|Zeichenfolge|Der Name der Datenbank, in der sich die angegebene Tabelle befindet.|  
-|TABLE_SCHEM|Zeichenfolge|Das Schema der Tabelle.|  
-|table_name|Zeichenfolge|Der Name der Tabelle.|  
-|COLUMN_NAME|Zeichenfolge|Name der Spalte.|  
+|TABLE_CAT|String|Der Name der Datenbank, in der sich die angegebene Tabelle befindet.|  
+|TABLE_SCHEM|String|Das Schema der Tabelle.|  
+|table_name|String|Der Name der Tabelle.|  
+|COLUMN_NAME|String|Name der Spalte.|  
 |KEY_SEQ|short|Die Sequenznummer der Spalte bei einem Primärschlüssel, der durch mehrere Spalten definiert wird.|  
-|PK_NAME|Zeichenfolge|Der Name des Primärschlüssels.|  
+|PK_NAME|String|Der Name des Primärschlüssels.|  
   
 > [!NOTE]  
 >  Weitere Informationen zu den Daten, die von der getPrimaryKeys-Methode zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „sp_pkeys (Transact-SQL)“.  

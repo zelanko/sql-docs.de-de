@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
-ms.translationtype: MTE75
+ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742792"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911188"
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
 
@@ -64,7 +64,7 @@ Die folgenden Features sind nicht in dieser Version des ODBC-Treibers für macOS
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   Sqlbrowseconnetct (vor Version 17,2)
+-   SQLBrowseConnect (vor Version 17.2)
 -   C-Intervall-Typen, wie z.B. SQL_C_INTERVAL_YEAR_TO_MONTH (dokumentiert in [-Datentypbezeichnungen und Deskriptoren](https://msdn.microsoft.com/library/ms716351(VS.85).aspx)), werden derzeit nicht unterstützt.
 -   Der Wert SQL_CUR_USE_ODBC des Attributs SQL_ATTR_ODBC_CURSORS der Funktion SQLSetConnectAttr.
 
@@ -74,7 +74,12 @@ Für ODBC-Treiber 13 und 13.1 müssen die SQLCHAR-Daten die UTF-8-Codierung aufw
 
 Für ODBC-Treiber 17 werden die folgenden Zeichensätze bzw. Codierungen für SQLCHAR-Daten unterstützt:
 
-|Name|und Beschreibung|
+> [!NOTE]  
+> Aufgrund von Unterschieden bei `iconv` in `musl` und `glibc` werden viele dieser Gebietsschemas unter Alpine Linux nicht unterstützt.
+>
+> Weitere Informationen finden Sie unter [Functional differences from glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html) (Funktionsbezogene Unterschiede zu glibc).
+
+|Name|Beschreibung|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS-Latin-US|
@@ -118,10 +123,13 @@ Zwischen Windows und mehreren Versionen der iconv-Bibliothek unter Linux und mac
 Im ODBC-Treiber 13 und 13.1 werden Daten beschädigt, wenn UTF-8-Mehrbytezeichen oder UTF-16-Ersatzzeichen auf SQLPutData-Puffer aufgeteilt werden. Für das Streamen von SQLPutData, verwenden Sie Puffer, die nicht in partiellen Zeichencodierungen enden. Diese Einschränkung wurde mit dem Version 17 des ODBC-Treibers entfernt.
 
 ## <a name="bkmk-openssl"></a>OpenSSL
-Ab Version 17,4 lädt der Treiber OpenSSL dynamisch, sodass er auf Systemen ausgeführt werden kann, die entweder über die Version 1,0 oder 1,1 verfügen, ohne dass separate Treiberdateien erforderlich sind. Wenn mehrere OpenSSL-Versionen vorhanden sind, versucht der Treiber, die neueste Version zu laden. Der Treiber unterstützt derzeit openssl 1.0. x und 1.1. x.
+Ab Version 17.4 lädt der Treiber OpenSSL dynamisch, sodass diese Software auf Systemen mit Version 1.0 oder 1.1 ausgeführt werden kann, ohne dass separate Treiberdateien erforderlich sind. Wenn mehrere OpenSSL-Versionen vorhanden sind, versucht der Treiber, die neueste zu laden. Der Treiber unterstützt derzeit OpenSSL 1.0.x und 1.1.x.
 
 > [!NOTE]  
-> Ein potenzieller Konflikt kann auftreten, wenn die Anwendung, die den Treiber (oder eine ihrer Komponenten) verwendet, mit einer anderen Version von OpenSSL verknüpft oder dynamisch geladen wird. Wenn mehrere OpenSSL-Versionen auf dem System vorhanden sind und diese von der Anwendung verwendet werden, wird dringend empfohlen, sicherzustellen, dass die von der Anwendung geladene Version und der Treiber nicht übereinstimmen, da die Fehler den Arbeitsspeicher beeinträchtigen und somit wird nicht notwendigerweise auf offensichtliche oder konsistente Weise Manifest.
+> Es können Konflikte auftreten, wenn die Anwendung, die den Treiber verwendet (oder eine ihrer Komponenten), mit einer anderen Version von OpenSSL verknüpft ist oder dynamisch eine andere Version von OpenSSL lädt. Wenn im System mehrere OpenSSL-Versionen vorhanden sind und eine Anwendung OpenSSL verwendet, müssen Sie unbedingt sicherstellen, dass die von der Anwendung und vom Treiber geladene Version übereinstimmen. Fehler könnten den Arbeitsspeicher beeinträchtigen, daher macht sich ein solcher Konflikt möglicherweise nicht auf offensichtliche oder konsistente Weise bemerkbar.
+
+## <a name="bkmk-alpine"></a>Alpine Linux
+Zum Zeitpunkt der Erstellung dieser Dokumentation beträgt die Standardstapelgröße in MUSL 128K. Dies ist für die grundlegenden ODBC-Treiberfunktionen ausreichend, aber je nach Zweck der Anwendung kann dieser Grenzwert schnell überschritten werden – insbesondere dann, wenn der Treiber aus mehreren Threads aufgerufen wird. Es empfiehlt sich, eine ODBC-Anwendung unter Alpine Linux mit `-Wl,-z,stack-size=<VALUE IN BYTES>` zu kompilieren, um die Stapelgröße zu erhöhen. Zur Referenz: Die Standardstapelgröße in den meisten GLIBC-Systemen beträgt 2 MB.
 
 ## <a name="additional-notes"></a>Weitere Hinweise  
 
@@ -136,7 +144,7 @@ Ab Version 17,4 lädt der Treiber OpenSSL dynamisch, sodass er auf Systemen ausg
     
 2.  Der UnixODBC-Treiber-Manager gibt „ Attribut-/Optionsbezeichner ungültig“ für alle Anweisungsattribute zurück, wenn sie über SQLSetConnectAttr übergeben werden. Wenn SQLSetConnectAttr unter Windows einen Anweisungsattributwert erhält, verursacht dieser, dass der Treiber diesen Wert für alle aktiven Anweisungen festlegt, die dem Verbindungshandle untergeordnet sind.  
 
-3.  Wenn Sie den Treiber mit stark Multithreadanwendungen verwenden, kann die Überprüfung von unixodbc-Handles zu einem Leistungsengpass werden. In solchen Szenarien kann eine deutlich höhere Leistung erzielt werden, indem unixodbc mit der `--enable-fastvalidate` -Option kompiliert wird. Beachten Sie jedoch, dass dies dazu führen kann, dass Anwendungen, die ungültige Handles an ODBC- `SQL_INVALID_HANDLE` APIs übergeben, abstürzen, anstatt Fehler zurückzugeben.
+3.  Bei Verwendung des Treibers mit Anwendungen mit sehr vielen Threads kann die Handlevalidierung von unixODBC zu einem Leistungsengpass führen. In solchen Szenarien lässt sich durch Kompilieren von unixODBC mit der Option `--enable-fastvalidate` eine wesentlich bessere Leistung erzielen. Beachten Sie jedoch, dass dies bei Anwendungen, die ungültige Handles an ODBC-APIs übergeben, dazu führen kann, dass diese Anwendungen abstürzen, anstatt `SQL_INVALID_HANDLE`-Fehler zurückzugeben.
 
 ## <a name="see-also"></a>Weitere Informationen  
 [Häufig gestellte Fragen](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

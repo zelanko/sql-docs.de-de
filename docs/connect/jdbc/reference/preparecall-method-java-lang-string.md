@@ -16,10 +16,10 @@ ms.assetid: cb83b567-4ce5-447a-93cc-895d4eaf3a05
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dd0a5c40cf12ddae0c6a7aae00c6a83bfe6549f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976220"
 ---
 # <a name="preparecall-method-javalangstring"></a>prepareCall-Methode (java.lang.String)
@@ -40,13 +40,13 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql)
  Eine **Zeichenfolge**, die eine SQL-Anweisung enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein CallableStatement-Objekt.  
+ Ein CallableStatement-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese prepareCall-Methode wird von der prepareCall-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
+ Diese prepareCall-Methode wird von der prepareCall-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [prepareCall-Methode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   

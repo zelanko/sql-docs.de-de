@@ -1,6 +1,7 @@
 ---
-title: Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.date: 03/01/2017
+title: Hinzufügen einer Erweiterungs- oder Reduzieraktion (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+description: Sie können einem Benutzer das interaktive Erweitern oder Reduzieren von Elementen in einem paginierten Bericht, oder für eine Tabelle oder Matrix das Erweitern oder Reduzieren der zugehörigen Zeilen und Spalten einer Gruppe ermöglichen.
+ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a4cddc93108a3e45828e79822eaf5f76f0fba7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582122"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242547"
 ---
-# <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element (Berichts-Generator und SSRS)
-  Sie können einem Benutzer das interaktive Erweitern oder Reduzieren von Berichtselementen, oder für eine Tabelle oder Matrix das Erweitern oder Reduzieren der zugehörigen Zeilen und Spalten einer Gruppe ermöglichen. Zu diesem Zweck legen Sie die Sichtbarkeitseigenschaften eines Elements fest, das von Benutzern erweitert oder reduziert werden soll. Die Sichtbarkeit wird in einem HTML-Berichts-Viewer festgelegt. Eine solche Einstellung wird auch als *Drilldownaktion* bezeichnet.  
+# <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>Hinzufügen einer Erweiterungs- oder Reduzieraktion (Berichts-Generator und SSRS)
+  Sie können einem Benutzer das interaktive Erweitern oder Reduzieren von Elementen in einem paginierten Bericht, oder für eine Tabelle oder Matrix das Erweitern oder Reduzieren der zugehörigen Zeilen und Spalten einer Gruppe ermöglichen. Zu diesem Zweck legen Sie die Sichtbarkeitseigenschaften eines Elements fest, das von Benutzern erweitert oder reduziert werden soll. Die Sichtbarkeit wird in einem HTML-Berichts-Viewer festgelegt. Eine solche Einstellung wird auch als *Drilldownaktion* bezeichnet.  
   
  In der Berichtsentwurfsansicht geben Sie den Namen des Textfelds an, für das Umschaltsymbole zum Erweitern und Reduzieren angezeigt werden sollen. Im gerenderten Bericht wird zusätzlich zum Inhalt des Textfelds ein Pluszeichen (+) oder Minuszeichen (-) für das Feld angezeigt. Wenn der Benutzer auf das Umschaltsymbol klickt, wird die Berichtsanzeige aktualisiert, um das Berichtselement entsprechend den aktuellen Sichtbarkeitseinstellungen für Elemente im Bericht ein- oder auszublenden.  
   
@@ -29,13 +30,13 @@ ms.locfileid: "65582122"
   
 1.  Klicken Sie in der Berichtsentwurfsansicht auf die Tabelle oder Matrix, um sie auszuwählen. Im Gruppierungsbereich werden die Zeilen- und Spaltengruppen angezeigt.  
   
-     ![Gruppierungsbereich](../../reporting-services/report-design/media/groupingpane.png "Grouping Pane")  
+     ![Gruppierungsbereich](../../reporting-services/report-design/media/groupingpane.png "Gruppierungsbereich")  
   
      Wenn der Gruppierungsbereich nicht erscheint, klicken Sie auf das Menü **Ansicht** , und klicken Sie dann auf **Gruppierung**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle der Titelleiste des Bereichs Gruppierung, und klicken Sie anschließend auf **Erweitert**. Der Modus des Bereichs Gruppierung wird gewechselt, sodass nun die zugrunde liegende Anzeigestruktur für Zeilen und Spalten in der Entwurfsoberfläche angezeigt wird.  
   
-     ![Gruppierungsbereich mit Menü für erweiterten Modus](../../reporting-services/report-design/media/groupingpane-advancedmode.png "Grouping Pane with Advanced Mode menu")  
+     ![Gruppierungsbereich mit Menüoption für erweiterten Modus](../../reporting-services/report-design/media/groupingpane-advancedmode.png "Gruppierungsbereich mit Menüoption für erweiterten Modus")  
   
 3.  Klicken Sie im entsprechenden Gruppenbereich auf die Zeilengruppe oder Spaltengruppe, deren zugeordnete Zeilen oder Spalten ausgeblendet werden sollen. Die Gruppe wird ausgewählt, und im Bereich Eigenschaften werden die Eigenschaften für **Tablix-Element** angezeigt.  
   
@@ -48,24 +49,24 @@ ms.locfileid: "65582122"
   
     -   Wählen Sie **True** aus, wenn das Berichtselement ausgeblendet werden soll.  
   
-    -   Klicken Sie auf **\<Ausdruck>** , um das Dialogfeld **Ausdruck** zu öffnen, in dem Sie einen Ausdruck erstellen können, der zur Laufzeit zum Bestimmen der Sichtbarkeit ausgewertet wird.  
+    -   Klicken Sie auf **\<Ausdruck>**, um das Dialogfeld **Ausdruck** zu öffnen, in dem Sie einen Ausdruck erstellen können, der zur Laufzeit zum Bestimmen der Sichtbarkeit ausgewertet wird.  
   
 5.  Wählen Sie unter **ToggleItem**im Dropdownfeld den Namen eines Textfelds aus, dem das Umschaltbild hinzugefügt werden soll.  
   
      In der folgenden Grafik ist die Zeilengruppenfarbe so konfiguriert, dass Benutzer zugehörige Zeilen erweitern und reduzieren können.  
   
-     ![Konfigurieren einer zu erweiternden Zeilengruppe](../../reporting-services/report-design/media/expandcollapse-confighiddentoggleitemwithnumbers.png "Configuring a row group to be expanded")  
+     ![Konfigurieren einer zu erweiternden Zeilengruppe](../../reporting-services/report-design/media/expandcollapse-confighiddentoggleitemwithnumbers.png "Konfigurieren einer zu erweiternden Zeilengruppe")  
   
     > [!NOTE]  
     >  Bei dem Textfeld mit dem Umschaltbild kann es sich nicht um die Zeilen- oder Spaltengruppe handeln, deren Zeilen oder Spalten ausgeblendet werden sollen. Es muss sich entweder in derselben Gruppe wie das ausgeblendete Element oder in einer Vorgängergruppe befinden. Beispiel: Wenn Sie die Sichtbarkeit von Zeilen umschalten möchten, die mit einer untergeordneten Gruppe verknüpft sind, wählen Sie ein Textfeld in einer Zeile, die mit der übergeordneten Gruppe verknüpft ist.  
   
 6.  Führen Sie den Bericht aus, und klicken Sie auf das Textfeld mit dem Umschaltbild, um die Umschaltfunktion zu testen. Die Berichtsanzeige wird aktualisiert, sodass Zeilengruppen und Spaltengruppen nun mit ihrer umgeschalteten Sichtbarkeit angezeigt werden.  
   
-     ![Ausführen des Berichts mit einer erweiterbaren Zeilengruppe](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "Running report with expandable row group")  
+     ![Ausführen des Berichts mit einer erweiterbaren Zeilengruppe](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "Ausführen des Berichts mit einer erweiterbaren Zeilengruppe")  
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>So fügen Sie einem Berichtselement eine Erweiterungs- und Reduzieraktion hinzu  
   
-1.  Klicken Sie in der Berichtsentwurfsansicht mit der rechten Maustaste auf das Berichtselement, das ein- bzw. ausgeblendet werden soll, und klicken Sie anschließend auf *\<Berichtselement>* **Eigenschaften**. Das Dialogfeld *\<Berichtselement>* **Eigenschaften** für das betreffende Berichtselement wird geöffnet.  
+1.  Klicken Sie in der Berichtsentwurfsansicht mit der rechten Maustaste auf das Berichtselement, das ein- bzw. ausgeblendet werden soll, und klicken Sie anschließend auf *\<Berichtselement>* **Eigenschaften**. Daraufhin wird das Dialogfeld *\<Berichtselement>* **Eigenschaften** für das Berichtselement geöffnet.  
   
 2.  Klicken Sie auf **Sichtbarkeit**.  
   
@@ -84,17 +85,17 @@ ms.locfileid: "65582122"
   
      In der folgenden Grafik ist die Tabelle so konfiguriert, dass Benutzer sie erweitern und reduzieren können. Die Tabellenanzeige kann mithilfe des Textfelds „Produkttabelle“ ein- bzw. ausgeblendet werden.  
   
-     ![Konfigurieren einer zu erweiternden Berichtstabelle](../../reporting-services/report-design/media/expandcollapse-reporttable.png "Configure a report table to be expanded")  
+     ![Konfigurieren einer zu erweiternden Berichtstabelle](../../reporting-services/report-design/media/expandcollapse-reporttable.png "Konfigurieren einer zu erweiternden Berichtstabelle")  
   
     > [!NOTE]  
     >  Das ausgewählte Textfeld muss im aktuellen oder enthaltenden Bereich für dieses Berichtselement enthalten sein (bis einschließlich des Berichtshauptteils). Wählen Sie zum Umschalten der Sichtbarkeit eines Diagramms z. B. ein Textfeld aus, das sich in demselben enthaltenden Bereich befindet wie das Diagramm, z. B. der Berichtshauptteil oder ein Rechteck. Das Textfeld muss sich in der gleichen Containerhierarchie oder auf einer höheren Ebene befinden.  
   
 5.  Führen Sie den Bericht aus, und klicken Sie auf das Textfeld mit dem Umschaltbild, um die Umschaltfunktion zu testen. Die Berichtsanzeige wird aktualisiert, sodass Berichtselemente nun mit ihrer umgeschalteten Sichtbarkeit angezeigt werden.  
   
-     ![Ausführen eines Berichts mit einer erweiternden Tabelle](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "Running report with an expanding table")  
+     ![Ausführen eines Berichts mit einer erweiterbaren Tabelle](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "Ausführen eines Berichts mit einer erweiterbaren Tabelle")  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Ausblenden eines Elements &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [Ausblenden eines Elements (Berichts-Generator und SSRS)](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

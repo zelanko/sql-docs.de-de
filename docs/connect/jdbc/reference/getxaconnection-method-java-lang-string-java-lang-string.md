@@ -16,10 +16,10 @@ ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23ba6bc636e5bc714a606c29a46f7b52ce1bbea4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977997"
 ---
 # <a name="getxaconnection-method-javalangstring-javalangstring"></a>getXAConnection-Methode (java.lang.String, java.lang.String)
@@ -45,13 +45,13 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
  Eine **Zeichenfolge**, die das Kennwort enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein xaconnetction-Objekt.  
+ Ein XAConnection-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getxaconnection-Methode wird von der getxaconnection-Methode in der javax. SQL. XADataSource-Schnittstelle angegeben.  
+ Diese getXAConnection-Methode wird von der getXAConnection-Methode in der javax.sql.XADataSource-Schnittstelle angegeben.  
   
 > [!NOTE]  
 >  Diese Methode wird normalerweise von XA-Verbindungspoolimplementierungen und nicht vom regulären JDBC-Anwendungscode aufgerufen.  

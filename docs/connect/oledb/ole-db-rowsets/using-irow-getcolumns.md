@@ -1,6 +1,6 @@
 ---
-title: 'Verwenden von IRow:: GetColumns | Microsoft-Dokumentation'
-description: 'Verwenden von IRow:: GetColumns zum Zugreifen auf alle Spalten in einer Zeile'
+title: Verwenden von IRow::GetColumns | Microsoft-Dokumentation
+description: Verwenden von IRow::GetColumns zum Zugreifen auf alle Spalten in einer Zeile
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ddec5950f9dd8acc55c8bf1b6fe751bd0f34ac1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015327"
 ---
 # <a name="using-irowgetcolumns"></a>Verwenden von IRow::GetColumns

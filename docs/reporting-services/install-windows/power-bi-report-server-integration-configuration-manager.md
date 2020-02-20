@@ -7,10 +7,10 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
 ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265645"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Berichtsserverintegration für Power BI (Configuration Manager)
@@ -23,9 +23,9 @@ Die Seite  **Power BI-Integration** in [!INCLUDE[ssRSnoversion](../../includes/s
 
 Zusätzlich zu einer aktiven Internetverbindung zum Öffnen des [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Diensts sind die folgenden Anforderungen zum Abschließen der Integration von [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]erforderlich.
 
-- **Azure Active Directory:** Ihr Unternehmen muss Azure Active Directory verwenden, das die Verzeichnis- und Identitätsverwaltung für Azure-Dienste und Webanwendungen bietet. Weitere Informationen finden Sie unter [Erläuterungen zu Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/).
+- **Azure Active Directory:** Ihr Unternehmen muss Azure Active Directory verwenden, das die Verzeichnis- und Identitätsverwaltung für Azure-Dienste und Webanwendungen bietet. Weitere Informationen finden Sie unter [Was ist Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/).
 
-- **Verwalteter Mandant:** Das [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Dashboard, an das Sie Berichtselemente anheften möchten, muss Teil eines verwalteten Azure AD-Mandanten sein.  Ein verwalteter Mandant wird automatisch beim erstmaligen Abonnieren der Azure-Dienste wie Office 365 und Microsoft Intune für Ihr Unternehmen erstellt.   Virale Mandanten werden derzeit nicht unterstützt.  Weitere Informationen finden Sie in den Abschnitten „Erläuterung zum Azure AD-Mandanten“ und „Gewusst wie: Abrufen eines Azure AD-Verzeichnisses“ in [Erläuterungen zum Azure AD-Verzeichnis](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
+- **Verwalteter Mandant:** Das [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]-Dashboard, an das Sie Berichtselemente anheften möchten, muss Teil eines verwalteten Azure AD-Mandanten sein.  Ein verwalteter Mandant wird automatisch beim erstmaligen Abonnieren der Azure-Dienste wie Office 365 und Microsoft Intune für Ihr Unternehmen erstellt.   Virale Mandanten werden derzeit nicht unterstützt.  Weitere Informationen finden Sie in den Abschnitten „Erläuterung zum Azure AD-Mandanten“ und „Gewusst wie: Abrufen eines Azure AD-Verzeichnisses“ in [Erläuterungen zum Azure AD-Verzeichnis](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
 
 - Der Benutzer, der die [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Integration durchführt, muss ein Mitglied des Azure AD-Mandanten, ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Systemadministrator und ein Systemadministrator für die ReportServer-Katalogdatenbank sein.
 
@@ -33,15 +33,15 @@ Zusätzlich zu einer aktiven Internetverbindung zum Öffnen des [!INCLUDE[sspowe
 
 - Berichte, aus denen Sie Informationen anheften möchten, müssen gespeicherte Anmeldeinformationen verwenden. Dies ist keine Voraussetzung für die [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Integration selbst, aber für den Aktualisierungsprozess für die angehefteten Elemente.  Beim Anheften eines Berichtselements wird ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnement zum Verwalten des Aktualisierungszeitplans der Kacheln in [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]erstellt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements: Erfordern gespeicherte Anmeldeinformationen. Wenn ein Bericht keine gespeicherten Anmeldeinformationen verwendet, kann ein Benutzer weiterhin Berichtselemente anheften, aber wenn das zugehörige Abonnement versucht, die Daten auf [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]zu aktualisieren, wird eine Fehlermeldung angezeigt, die der folgenden Meldung auf der Seite **Meine Abonnements** ähnelt.
 
-    PowerBI-Übermittlungsfehler: Dashboard: Analysebeispiel für IT-Ausgaben, Anzeige: Diagramm 2, Fehler: Die aktuelle Aktion kann nicht abgeschlossen werden. Die Datenquellen-Anmeldeinformationen des Benutzers entsprechen nicht die Anforderungen zum Ausführen dieses Berichts oder freigegebenen Datasets. Dies gilt auch für die Datenquellen-Anmeldeinformationen des Benutzers.
+    PowerBI-Übermittlungsfehler: Dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. Die Datenquellen-Anmeldeinformationen des Benutzers entsprechen nicht die Anforderungen zum Ausführen dieses Berichts oder freigegebenen Datasets. Dies gilt auch für die Datenquellen-Anmeldeinformationen des Benutzers.
 
 Weitere Informationen zum Speichern von Anmeldeinformationen finden Sie im Abschnitt „Konfigurieren von gespeicherten Anmeldeinformationen für eine berichtsspezifische Datenquelle“ unter [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Ein Administrator kann die  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Protokolldateien auf weitere Informationen überprüfen.  Es werden Meldungen wie die Folgenden angezeigt. Eine hervorragende Möglichkeit zum Überprüfen und Überwachen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Protokolldateien ist die Verwendung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query für die Dateien.  Weitere Informationen und ein kurzes Video finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-- Abonnement!WindowsService_1!1458!09/24/2015-00:09:27:: e FEHLER: PowerBI-Übermittlungsfehler: Dashboard: Analysebeispiel für IT-Ausgaben, Anzeige: Diagramm 2, Fehler: Die aktuelle Aktion kann nicht abgeschlossen werden. Die Datenquellen-Anmeldeinformationen des Benutzers entsprechen nicht die Anforderungen zum Ausführen dieses Berichts oder freigegebenen Datasets. Entweder sind die Datenquellen-Anmeldeinformationen des Benutzers nicht in der Berichtsserverdatenbank gespeichert oder die Datenquelle des Benutzers ist so konfiguriert, dass keine Anmeldeinformationen erforderlich sind, aber das Konto für die unbeaufsichtigte Ausführung nicht angegeben ist.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI-Übermittlungsfehler: Dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. Die Datenquellen-Anmeldeinformationen des Benutzers entsprechen nicht die Anforderungen zum Ausführen dieses Berichts oder freigegebenen Datasets. Entweder sind die Datenquellen-Anmeldeinformationen des Benutzers nicht in der Berichtsserverdatenbank gespeichert oder die Datenquelle des Benutzers ist so konfiguriert, dass keine Anmeldeinformationen erforderlich sind, aber das Konto für die unbeaufsichtigte Ausführung nicht angegeben ist.
 
-- Benachrichtigung!WindowsService_1!1458!09/24/2015-00:09:27:: e FEHLER: Fehler beim Verarbeiten von Abonnement fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI-Übermittlungsfehler: Dashboard: Analysebeispiel für IT-Ausgaben, Anzeige: Diagramm 2, Fehler: Die aktuelle Aktion kann nicht abgeschlossen werden. Die Datenquellen-Anmeldeinformationen des Benutzers entsprechen nicht den Anforderungen zum Ausführen dieses Berichts oder freigegebenen Datasets. Entweder sind die Datenquellen-Anmeldeinformationen des Benutzers nicht in der Berichtsserverdatenbank gespeichert oder die Datenquelle des Benutzers ist so konfiguriert, dass keine Anmeldeinformationen erforderlich sind, aber das Konto für die unbeaufsichtigte Ausführung nicht angegeben ist.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Fehler beim Verarbeiten des Abonnements fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI-Übermittlungsfehler: Dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. Die Datenquellen-Anmeldeinformationen des Benutzers entsprechen nicht den Anforderungen zum Ausführen dieses Berichts oder freigegebenen Datasets. Entweder sind die Datenquellen-Anmeldeinformationen des Benutzers nicht in der Berichtsserverdatenbank gespeichert oder die Datenquelle des Benutzers ist so konfiguriert, dass keine Anmeldeinformationen erforderlich sind, aber das Konto für die unbeaufsichtigte Ausführung nicht angegeben ist.
 
 ## <a name="bkmk_steps2integrate"></a> So integrieren und registrieren Sie den Berichtsserver
 
@@ -110,9 +110,9 @@ In diesem Abschnitt werden die grundlegenden Schritte und die damit verbundenen 
 
  **Wenn ein Benutzer ein Berichtselement an ein Dashboard anheftet:**
 
-1. Benutzer zeigen eine Berichtsvorschau im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] an. Wenn sie das erste Mal klicken, um ein Berichtselement aus dem [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]anzuheften.
+1. Benutzer zeigen eine Berichtsvorschau im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] an und wenn sie das erste Mal klicken, um ein Berichtselement aus dem [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] anzuheften.
 
-2. Sie werden zur Azure Active Directory-Anmeldeseite umgeleitet. Sie können sich auch über die Seite [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Wenn sich Benutzer bei einem verwalteten Azure-Mandanten anmelden, wird eine Beziehung zwischen dem Azure-Konto und den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berechtigungen erstellt.  Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](../my-settings-for-power-bi-integration-web-portal.md).
+2. Sie werden zur Azure Active Directory-Anmeldeseite umgeleitet. Sie können sich auch über die [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]-Seite **Meine Einstellungen** anmelden. Wenn sich Benutzer bei einem verwalteten Azure-Mandanten anmelden, wird eine Beziehung zwischen dem Azure-Konto und den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berechtigungen erstellt.  Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](../my-settings-for-power-bi-integration-web-portal.md)integrieren.
 
 3. Ein Benutzersicherheitstoken wird an den Berichtsserver zurückgegeben.
 
@@ -124,7 +124,7 @@ In diesem Abschnitt werden die grundlegenden Schritte und die damit verbundenen 
 
 7. Es wird ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnement erstellt, um die geplante Aktualisierung des Berichtselements auf der Dashboardkachel zu verwalten. Das Abonnement verwendet das Sicherheitstoken, das bei der Anmeldung des Benutzers erstellt wurde.
 
-     Das Token ist für **90 Tage**gültig. Anschließend müssen sich die Benutzer neu anmelden, um ein neues Benutzertoken zu erstellen. Wenn das Token abgelaufen ist, werden die angehefteten Kacheln weiterhin im Dashboard angezeigt, aber die Daten werden nicht mehr aktualisiert.  Die für angeheftete Elemente verwendeten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements weisen einen Fehler auf, bis ein neues Benutzertoken erstellt wird. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](../my-settings-for-power-bi-integration-web-portal.md). .
+     Das Token ist für **90 Tage**gültig. Anschließend müssen sich die Benutzer neu anmelden, um ein neues Benutzertoken zu erstellen. Wenn das Token abgelaufen ist, werden die angehefteten Kacheln weiterhin im Dashboard angezeigt, aber die Daten werden nicht mehr aktualisiert.  Die für angeheftete Elemente verwendeten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements weisen einen Fehler auf, bis ein neues Benutzertoken erstellt wird. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration (Webportal)](../my-settings-for-power-bi-integration-web-portal.md). finden Sie weitere Informationen.
 
 Wenn ein Benutzer ein Element ein zweites Mal anheftet, werden die Schritte 1 bis 4 übersprungen und stattdessen die App-ID und die URLs aus der ReportServer-Datenbank abgerufen. Der Ablauf wird dann mit Schritt 5 fortgesetzt.
 

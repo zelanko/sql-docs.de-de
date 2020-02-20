@@ -1,6 +1,6 @@
 ---
-title: Große Datenmengen | Microsoft-Dokumentation
-description: Umfangreiche Daten werden mithilfe OLE DB Treibers für SQL Server
+title: Abrufen großer Datenmengen | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie große Datenmengen mithilfe des OLE DB-Treibers für SQL Server abrufen.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: fc9b1ccc24a31083e2a6ef111ad2e79781eef6d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936537"
 ---
 # <a name="getting-large-data"></a>Abrufen großer Datenmengen
@@ -37,9 +37,9 @@ ms.locfileid: "67936537"
   
 -   ICommand::Execute  
   
- Wenn die Eigenschaft DBPROP_ACCESSORDER (in der Rowset-Eigenschaftengruppe) entweder auf DBPROPVAL_AO_SEQUENTIAL oder auf DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS festgelegt ist, sollte der Consumer in einem Aufruf der **GetNextRows**-Methode nur eine einzige Datenzeile abrufen. Dies liegt daran, dass die BLOB-Daten nicht gepuffert werden. Ist der Wert von DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM festgelegt, kann der Consumer mehrere Datenzeilen mit **GetNextRows** abrufen.  
+ Wenn die Eigenschaft DBPROP_ACCESSORDER (in der Rowset-Eigenschaftengruppe) entweder auf DBPROPVAL_AO_SEQUENTIAL oder auf DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS festgelegt ist, sollte der Consumer in einem Aufruf der **GetNextRows**-Methode nur eine einzige Datenzeile abrufen. Das liegt daran, dass Blob-Daten nicht gepuffert werden. Ist der Wert von DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM festgelegt, kann der Consumer mehrere Datenzeilen mit **GetNextRows** abrufen.  
   
- Der OLE DB Treiber für SQL Server ruft keine großen Daten von ab [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die vom Consumer angefordert werden. Der Consumer sollte alle kleinen Datenmengen in einem Accessor zusammenfassen und dann einen oder mehrere Accessoren zum Abrufen großer Datenwerte verwenden.  
+ Der OLE DB-Treiber für SQL Server ruft erst dann große Datenmengen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab, wenn er vom Consumer dazu aufgefordert wird. Der Consumer sollte alle kleinen Datenmengen in einem Accessor zusammenfassen und dann einen oder mehrere Accessoren zum Abrufen großer Datenwerte verwenden.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird ein großer Datenwert aus einer einzelnen Spalte abgerufen:  

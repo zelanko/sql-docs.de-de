@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Sicherungs Punkten | Microsoft-Dokumentation
+title: Verwenden von Sicherungspunkten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d860e368fe66ce926687fd343fe9f23704cfc7d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026130"
 ---
 # <a name="using-savepoints"></a>Verwenden von Sicherungspunkten
@@ -31,6 +31,6 @@ Im folgenden Beispiel wird beim Ausführen einer lokalen Transaktion mit zwei ge
 
 [!code[JDBC#UsingSavepoints1](../../connect/jdbc/codesnippet/Java/using-savepoints_1.java)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Ausführen von Transaktionen mit dem JDBC-Treiber](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)

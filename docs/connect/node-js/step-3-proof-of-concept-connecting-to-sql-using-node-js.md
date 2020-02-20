@@ -11,23 +11,23 @@ ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68419256"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Node.js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von Node.js
 
-![Herunterladen-nach-unten-Taste](../../ssdt/media/download.png)[zum Herunterladen von Node. js-SQL-Treiber](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-Abwärtspfeil-eingekreist](../../ssdt/media/download.png)[Herunterladen des Node.js-SQL-Treibers](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Dieses Beispiel sollte nur als Proof of Concept angesehen werden.  Der Beispielcode wird aus Gründen der Übersichtlichkeit vereinfacht und repräsentiert nicht notwendigerweise die bewährten Methoden, die von Microsoft empfohlen werden. Weitere Beispiele, in denen dieselben wichtigen Funktionen verwendet werden, sind auf GitHub verfügbar:
+Dieses Beispiel ist lediglich als Proof of Concept zu verstehen.  Es wurde zur Verdeutlichung vereinfacht und entspricht nicht zwangsläufig den von Microsoft empfohlenen Best Practices. Weitere Beispiele, die dieselben entscheidenden Funktionen verwenden, sind auf GitHub verfügbar:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>Schritt 1: verbinden  
+## <a name="step-1-connect"></a>Schritt 1: Verbinden  
   
-Die **neue Verbindungs** Funktion wird zum Herstellen einer Verbindung mit der SQL-Datenbank verwendet.  
+Die **new Connection** -Funktion dient zum Herstellen einer Verbindung mit der SQL-Datenbank.  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -53,10 +53,10 @@ Die **neue Verbindungs** Funktion wird zum Herstellen einer Verbindung mit der S
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Schritt 2: Ausführen einer Abfrage  
+## <a name="step-2--execute-a-query"></a>Schritt 2:  Ausführen einer Abfrage  
   
   
-Alle SQL-Anweisungen werden mithilfe der **neuen Request ()** -Funktion ausgeführt. Wenn die-Anweisung Zeilen zurückgibt, wie z. b. eine SELECT-Anweisung, können Sie diese mithilfe der **Request. on ()** -Funktion abrufen. Wenn keine Zeilen vorhanden sind, gibt die Request. on ()-Funktion leere Listen zurück.  
+Alle SQL-Anweisungen werden mithilfe der Funktion **new Request ()** ausgeführt. Wenn die Anweisung Zeilen zurückgibt, z. B. eine SELECT-Anweisung, können Sie sie mithilfe der **request.on()** -Funktion abrufen. Wenn es keine Zeilen gibt, gibt die request.on()-Funktion leere Listen zurück.  
   
   
 ```javascript  
@@ -113,7 +113,7 @@ Alle SQL-Anweisungen werden mithilfe der **neuen Request ()** -Funktion ausgefü
   
 ## <a name="step-3-insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
-In diesem Beispiel erfahren Sie, wie Sie eine [Insert](../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher ausführen, Parameter übergeben, die Ihre Anwendung vor dem SQL- [einschleusungs](../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert schützen.    
+In diesem Beispiel erfahren Sie, wie Sie eine [INSERT](../../t-sql/statements/insert-transact-sql.md)-Anweisung sicher ausführen und Parameter zum Schutz Ihrer Anwendung vor einer [Einschleusung von SQL-Befehlen](../../relational-databases/tables/primary-and-foreign-key-constraints.md) übergeben.    
   
   
 ```javascript  

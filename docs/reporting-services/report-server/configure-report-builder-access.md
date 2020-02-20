@@ -8,14 +8,14 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
 ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68255171"
 ---
 # <a name="configure-report-builder-access"></a>Konfigurieren des Berichts-Generator-Zugriffs
-Der Berichts-Generator ist ein Tool für die Ad-hoc-Berichterstellung, das mit einem für den einheitlichen oder den integrierten SharePoint-Modus konfigurierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver zusammen installiert wird.  
+Der Berichts-Generator ist ein Tool für die Ad-hoc-Berichterstellung, das mit einem für den einheitlichen oder den integrierten SharePoint-Modus konfigurierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver zusammen installiert wird.  
 
 Der Zugriff auf den Berichts-Generator ist von den folgenden Faktoren abhängig:  
 
@@ -29,15 +29,15 @@ Der Zugriff auf den Berichts-Generator ist von den folgenden Faktoren abhängig:
 
 Der Berichts-Generator ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Unterstützte Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-Auf dem Client Computer muss [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4,6 oder 4.6.1 für SSRS 2016 bzw. 2017 installiert sein. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt die Infrastruktur zum Ausführen von [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Anwendungen bereit.  
+Auf dem Clientcomputer muss [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 oder 4.6.1 für SSRS 2016 bzw. 2017 installiert sein. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt die Infrastruktur zum Ausführen von [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Anwendungen bereit.  
 
-Sie müssen Internet [!INCLUDE[msCoName](../../includes/msconame-md.md)] Explorer 11 oder höher oder einen anderen modernen Browser verwenden.  
+Sie müssen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 oder höher oder einen anderen modernen Browser verwenden.  
 
 Der Berichts-Generator wird immer im Modus für volle Vertrauenswürdigkeit ausgeführt; Sie können ihn nicht so konfigurieren, dass er im Modus für teilweise Vertrauenswürdigkeit ausgeführt wird. In früheren Versionen war es möglich, den Berichts-Generator im Modus für partielle Vertrauenswürdigkeit auszuführen, aber diese Option wird in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen nicht unterstützt.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>Aktivieren und Deaktivieren des Berichts-Generators  
 
-Der Berichts-Generator ist in der Standardeinstellung aktiviert. Berichtsserveradministratoren können den Berichts-Generator deaktivieren, indem sie die Berichtsserver-Systemeigenschaft **ShowDownloadMenu** auf **FALSE** festlegen. Wenn Sie diese Eigenschaft festlegen, werden die Downloads für Berichts-Generator, Publisher für Mobile Berichte und Power BI Mobile für diesen Berichts Server deaktiviert.  
+Der Berichts-Generator ist in der Standardeinstellung aktiviert. Berichtsserveradministratoren können den Berichts-Generator deaktivieren, indem sie die Berichtsserver-Systemeigenschaft **ShowDownloadMenu** auf **FALSE** festlegen. Wenn Sie diese Eigenschaft festlegen, werden die Downloads für den Berichts-Generator, den Publisher für mobile Berichte und Power BI Mobile für diesen Berichtsserver deaktiviert.  
 
  Zum Festlegen der Berichtsserver-Systemeigenschaften können Sie Management Studio oder ein Skript verwenden:   
 
@@ -101,7 +101,7 @@ Nachdem Sie die Rollenzuweisungen erstellt haben, sind die Benutzer zu Folgendem
 
     4. Geben Sie im Feld Beschreibung eine Rollenbeschreibung ein, damit die Benutzer im Webportal wissen, wozu ihre Rolle dient.  
 
-    5. Fügen Sie die folgenden Aufgaben hinzu: **Berichte lesen**, **Berichte anzeigen**, **Modelle anzeigen**, **Ressourcen anzeigen**, **Ordner anzeigen**und **Einzelne Abonnements verwalten**.  
+    5. Fügen Sie die folgenden Aufgaben hinzu: **Berichte lesen**, **Berichte anzeigen**, **Modelle anzeigen**, **Ressourcen anzeigen**, **Ordner anzeigen** und **Einzelne Abonnements verwalten**.  
 
     6. Klicken Sie auf **OK** , um die Rolle zu speichern.  
 
@@ -109,8 +109,8 @@ Nachdem Sie die Rollenzuweisungen erstellt haben, sind die Benutzer zu Folgendem
 
 1. Starten Sie das Webportal.  
 
-2. Klicken Sie oben rechts auf der Startseite des Webportals auf das Zahnrad Symbol, und wählen Sie im Dropdown Menü die Option **Website Einstellungen** aus.  
-![das Zahnrad Symbol und-Menü des Webportals](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
+2. Klicken Sie oben rechts auf der Startseite des Webportals auf das Zahnradsymbol, und wählen Sie im Dropdownmenü **Siteeinstellungen** aus.  
+![das Zahnradsymbol und Menü des Webportals](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Klicken Sie auf **Sicherheit**.  
 
@@ -145,7 +145,7 @@ Wenn Sie benutzerdefinierte Berechtigungsstufen verwenden, müssen Sie Elemente 
 
 In der folgenden Tabelle werden die vom Berichtsserver unterstützten Authentifizierungstypen beschrieben, und es wird angegeben, ob zusätzliche Konfigurationsschritte für den Zugriff auf den Berichts-Generator erforderlich sind.  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 
 - [Authentication with the Report Server (Authentifizierung mit dem Berichtsserver)](../../reporting-services/security/authentication-with-the-report-server.md)
 - [Browser Support for Reporting Services and Power View (Browserunterstützung für Reporting Services und Power View)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)

@@ -9,18 +9,22 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f984871729ea1d92b8da3b90751988fc33e741ff
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532041"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558315"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Konfigurieren von Bereitstellungseinstellungen für Clusterressourcen und -dienste
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Ausgehend von einer Gruppe von vordefinierten und im Verwaltungstool `azdata` integrierten Konfigurationsprofilen können Sie die Standardeinstellungen ganz einfach an die Anforderungen Ihrer BDC-Workload anpassen. Die Struktur der Konfigurationsdateien ermöglicht es Ihnen, die Einstellungen für die jeweiligen Dienstressourcen einzeln zu aktualisieren.
+
+In diesem 13-minütigen Video erhalten Sie einen Überblick über die Big Data-Clusterkonfiguration:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Cluster-Configuration/player?WT.mc_id=dataexposed-c9-niner]
 
 > [!TIP]
 > Weitere Informationen zum Bereitstellen von hoch verfügbaren Diensten finden Sie in den Artikeln zum Konfigurieren der **Hochverfügbarkeit** für unternehmenskritische Komponenten wie [SQL Server Master](deployment-high-availability.md) oder [HDFS-Namensknoten](deployment-high-availability-hdfs-spark.md).
@@ -448,12 +452,12 @@ Aktualisieren Sie dann die Konfigurationsdateien der Clusterbereitstellung so, d
 
 ```bash
 azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc"
-azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/control.json -j "$.spec.nodeLabel=bdc-shared"
 
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.master.spec.nodeLabel=bdc-master"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.compute-0.spec.nodeLabel=bdc-compute-pool"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.data-0.spec.nodeLabel=bdc-compute-pool"
-azdata bdc config add -c custom-bdc/bdc.json-j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
 
 # below can be omitted in which case we will take the node label default from the control.json
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.nmnode-0.spec.nodeLabel=bdc-shared"
@@ -604,7 +608,7 @@ Mit den folgenden `patch.json`-Dateien werden die folgenden Änderungen durchgef
 > [!TIP]
 > Weitere Informationen zur Struktur und zu den Optionen zum Ändern einer Bereitstellungskonfigurationsdatei finden Sie unter [Referenz zur Bereitstellungskonfigurationsdatei für Big-Data-Cluster](reference-deployment-config.md).
 
-Verwenden Sie `azdata bdc config`-Befehle, um die Änderungen in der JSON-Patchdatei anzuwenden. Im folgenden Beispiel wird die Datei `patch.json` auf eine Zielkonfigurationsdatei `custom-bdc/bdc.json` für die Bereitstellung angewendet.
+Verwenden Sie `azdata bdc config`-Befehle, um die Änderungen in der JSON-Patchdatei anzuwenden. Im folgenden Beispiel wird die `patch.json`-Datei auf eine `custom-bdc/bdc.json`-Zielkonfigurationsdatei für die Bereitstellung angewendet.
 
 ```bash
 azdata bdc config patch --config-file custom-bdc/bdc.json --patch-file ./patch.json

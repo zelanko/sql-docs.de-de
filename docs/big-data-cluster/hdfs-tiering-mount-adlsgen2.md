@@ -9,12 +9,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632783"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252008"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Einbinden von ADLS Gen2 für HDFS-Tiering in einen Big Data-Cluster
 
@@ -23,7 +23,7 @@ Die folgenden Abschnitte zeigen ein Beispiel für die Konfiguration von HDFS-Tie
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - [Bereitgestellte Big Data-Cluster](deployment-guidance.md)
-- [Big Data-Tools](deploy-big-data-tools.md)
+- [Big-Data-Tools](deploy-big-data-tools.md)
   - **azdata**
   - **kubectl**
 
@@ -84,7 +84,7 @@ Warten Sie 5-10 Minuten, bevor Sie die Anmeldeinformationen für die Einbindung 
 Sie können die Einbindung auch mithilfe von Zugriffsschlüsseln durchführen, die Sie für Ihr ADLS-Konto im Azure-Portal abrufen können.
 
  > [!TIP]
-   > Weitere Informationen zum Suchen des Zugriffsschlüssels (`<storage-account-access-key>`) für Ihr Speicherkonto finden Sie unter [Anzeigen von Kontoschlüsseln und Verbindungszeichenfolgen](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
+   > Weitere Informationen zum Suchen des Zugriffsschlüssels (`<storage-account-access-key>`) für Ihr Speicherkonto finden Sie unter [Anzeigen von Kontoschlüsseln und Verbindungszeichenfolgen](/azure/storage/common/storage-account-keys-manage#view-access-keys-and-connection-string).
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>Festlegen der Umgebungsvariablen für Zugriffsschlüssel-Anmeldeinformationen
 

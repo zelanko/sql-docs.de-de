@@ -1,6 +1,5 @@
 ---
-title: Verwenden der mssql-Erweiterung von Visual Studio Code für SQL Server
-titleSuffix: SQL Server
+title: Verwenden der mssql-Erweiterung für Visual Studio Code
 description: Verwenden Sie die Visual Studio Code-Erweiterung „mssql“, um Transact-SQL-Skripts für SQL Server für Linux zu bearbeiten und auszuführen.
 ms.topic: conceptual
 ms.prod: sql
@@ -9,12 +8,12 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
-ms.openlocfilehash: 91cc06b4d0d2791f91a26ecc1800859713267d9b
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.openlocfilehash: 615e205566ced2c1d0a66ab69b3e9eb80c7f82f3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73588984"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558455"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Verwenden von Visual Studio Code zum Erstellen und Ausführen von Transact-SQL-Skripts
 
@@ -83,12 +82,12 @@ Führen Sue die folgenden Schritte aus, um ein Verbindungsprofil zu erstellen un
 
 5. Befolgen Sie die Anweisungen, um die Eigenschaften für das neue Verbindungsprofil anzugeben. Nachdem Sie sämtliche Werte angegeben haben, drücken Sie die **EINGABETASTE**, um fortzufahren.
 
-   | Verbindungseigenschaft | und Beschreibung |
+   | Verbindungseigenschaft | Beschreibung |
    |---|---|
    | **Servername oder ADO-Verbindungszeichenfolge** | Gibt den Namen der SQL Server-Instanz an. Verwenden Sie *localhost*, um eine Verbindung mit einer SQL Server-Instanz auf Ihrem lokalen Computer herzustellen. Geben Sie den Namen oder die IP-Adresse der SQL Server-Zielinstanz ein, um eine Verbindung mit einer SQL Server-Remoteinstanz herzustellen. Geben Sie die IP-Adresse des Hostcomputers des Containers an, um eine Verbindung mit einem SQL Server-Container herzustellen. Wenn Sie einen Port festlegen müssen, verwenden Sie ein Komma, um ihn vom Namen zu trennen. Geben Sie für einen Server, der an Port 1401 lauscht, beispielsweise `<servername or IP>,1401` ein.<br/><br/>Alternativ können Sie hier die ADO-Verbindungszeichenfolge für Ihre Datenbank eingeben. |
    | **Datenbankname** (optional) | Hier können Sie die Datenbank angeben, die Sie verwenden möchten. Geben Sie hier keinen Datenbanknamen an, wenn Sie eine Verbindung mit der Standarddatenbank herstellen möchten. |
    | **Authentifizierungstyp** | Wählen Sie entweder **Integriert** oder **SQL-Anmeldung** aus. |
-   | **User name** | Wenn Sie **SQL-Anmeldung** ausgewählt haben, geben Sie den Namen eines Benutzers mit Zugriff auf eine Datenbank auf dem Server aus. |
+   | **Benutzername** | Wenn Sie **SQL-Anmeldung** ausgewählt haben, geben Sie den Namen eines Benutzers mit Zugriff auf eine Datenbank auf dem Server aus. |
    | **Kennwort** | Geben Sie das Kennwort für den angegebenen Benutzer ein. |
    | **Kennwort speichern** | Drücken Sie die **EINGABETASTE**, um **Ja** auszuwählen und das Kennwort zu speichern. Wählen Sie **Nein** aus, um bei jeder Verwendung des Verbindungsprofils zur Eingabe des Kennworts aufgefordert zu werden. |
    | **Profilname** (optional) | Geben Sie einen Namen für das Verbindungsprofil ein, z. B. *localhost-Profil*. |

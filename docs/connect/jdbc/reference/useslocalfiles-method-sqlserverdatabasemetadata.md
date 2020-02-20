@@ -1,5 +1,5 @@
 ---
-title: useslocalfiles-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: usesLocalFiles-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 69afb3a9-ed56-4191-88b8-bc46c03b817b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a88b6645445b9b9a4c644444ad3996377436112f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68001594"
 ---
 # <a name="useslocalfiles-method-sqlserverdatabasemetadata"></a>usesLocalFiles-Methode (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean usesLocalFiles()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn die Datenbank lokale Dateien verwendet. Andernfalls lautet der Wert **false**.  
+ Der Wert lautet **TRUE**, wenn die Datenbank lokale Dateien verwendet. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese useslocalfiles-Methode wird von der useslocalfiles-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese usesLocalFiles-Methode wird von der usesLocalFiles-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

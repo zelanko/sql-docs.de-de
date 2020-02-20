@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: senden und Abrufen von ASCII-Daten in Linux und macOS (SQL) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Senden und Abrufen von ASCII-Daten unter Linux und macOS (SQL) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -15,33 +15,33 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 9edd73f5ef01d1d3f22db78400cc3c204efe1379
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68251906"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Gewusst wie: Senden und Abrufen von ASCII-Daten unter Linux und macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In diesem Artikel wird davon ausgegangen, dass die ASCII-Gebiets Schemata (nicht UTF-8) in Ihren Linux-oder macOS-Systemen generiert oder installiert wurden. 
+In diesem Artikel wird vorausgesetzt, dass die ASCII-Gebietsschemata (nicht UTF-8) auf Ihren Linux- oder macOS-Systemen generiert oder installiert wurden. 
 
-Zum Senden oder Abrufen von ASCII-Zeichensätzen an den Server:  
+So senden Sie ASCII-Zeichensätze an den Server oder rufen dort ab:  
 
-1.  Wenn das gewünschte Gebiets Schema nicht der Standard in Ihrer Systemumgebung ist, stellen Sie sicher `setlocale(LC_ALL, $locale)` , dass Sie aufrufen, bevor Sie die erste Verbindung herstellen. Die PHP-setlocale ()-Funktion ändert das Gebiets Schema nur für das aktuelle Skript. Wenn Sie nach dem Herstellen der ersten Verbindung aufgerufen wird, wird Sie möglicherweise ignoriert.
+1.  Wenn das gewünschte Gebietsschema nicht der Standard in Ihrer Systemumgebung ist, stellen Sie sicher, dass Sie `setlocale(LC_ALL, $locale)` aufrufen, bevor Sie die erste Verbindung herstellen. Die PHP-Funktion setlocale() ändert das Gebietsschema nur für das aktuelle Skript. Wenn sie nach dem Herstellen der ersten Verbindung aufgerufen wird, wird sie möglicherweise ignoriert.
  
-2.  Wenn Sie den sqlsrv-Treiber verwenden, können `'CharacterSet' => SQLSRV_ENC_CHAR` Sie als Verbindungs Option angeben. dieser Schritt ist jedoch optional, da es sich hierbei um die Standard Codierung handelt.
+2.  Wenn Sie den SQLSRV-Treiber verwenden, können Sie `'CharacterSet' => SQLSRV_ENC_CHAR` als Verbindungsoption angeben, aber dieser Schritt ist optional, da es sich um die Standardcodierung handelt.
 
-3.  Wenn Sie den PDO_SQLSRV-Treiber verwenden, gibt es zwei Möglichkeiten. Legen Sie zunächst beim Herstellen der Verbindung auf `PDO::SQLSRV_ATTR_ENCODING` fest `PDO::SQLSRV_ENCODING_SYSTEM` (ein Beispiel für das Festlegen einer Verbindungs Option finden Sie unter [PDO:: __construct](../../connect/php/pdo-construct.md)). Alternativ können Sie nach erfolgreicher Verbindungs Herstellung diese Zeile hinzufügen.`$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+3.  Bei Verwendung des PDO_SQLSRV-Treibers haben Sie zwei Möglichkeiten. Erstens können Sie beim Herstellen der Verbindung `PDO::SQLSRV_ATTR_ENCODING` auf `PDO::SQLSRV_ENCODING_SYSTEM` festlegen (ein Beispiel für das Festlegen einer Verbindungsoption finden Sie unter [PDO::__construct](../../connect/php/pdo-construct.md)). Alternativ können Sie nach erfolgreicher Verbindungsherstellung diese Zeile `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` hinzufügen. 
   
-Wenn Sie die Codierung einer Verbindungs Ressource (in sqlsrv) oder eines Verbindungs Objekts (PDO_SQLSRV) angeben, geht der Treiber davon aus, dass für die anderen Verbindungs Options Zeichenfolgen dieselbe Codierung verwendet wird. Auch beim Servernamen und den Abfragezeichenfolgen geht er vom selben Zeichensatz aus.  
+Wenn Sie die Codierung einer Verbindungsressource (in SQLSRV) oder eines Verbindungsobjekts (PDO_SQLSRV) angeben, geht der Treiber davon aus, dass für die anderen Verbindungsoptions-Zeichenfolgen dieselbe Codierung verwendet wird. Auch beim Servernamen und den Abfragezeichenfolgen geht er vom selben Zeichensatz aus.  
   
-Die Standard Codierung für PDO_SQLSRV Driver ist UTF-8 (PDO:: SQLSRV_ENCODING_UTF8), anders als der sqlsrv-Treiber. Weitere Informationen zu diesen Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
+Die Standardcodierung für den PDO_SQLSRV-Treiber ist UTF-8 (PDO::SQLSRV_ENCODING_UTF8), anders als der SQLSRV-Treiber. Weitere Informationen zu diesen Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
   
 ## <a name="example"></a>Beispiel  
-In den folgenden Beispielen wird veranschaulicht, wie ASCII-Daten mithilfe der PHP-Treiber für SQL Server gesendet und abgerufen werden, indem ein bestimmtes Gebiets Schema vor dem Herstellen der Verbindung angegeben wird. Die Gebiets Schemas auf verschiedenen Linux-Plattformen können anders benannt werden als die gleichen Gebiets Schemas in macOS. Beispielsweise befindet `en_US.ISO-8859-1` sich das Gebiets Schema US ISO-8859-1 (Latin 1) in Linux, während der `en_US.ISO8859-1`Name in macOS den Namen hat.
+In den folgenden Beispielen wird veranschaulicht, wie ASCII-Daten mithilfe der PHP-Treiber für SQL Server gesendet und abgerufen werden, indem vor dem Herstellen der Verbindung ein bestimmtes Gebietsschema angegeben wird. Die Gebietsschemata auf verschiedenen Linux-Plattformen können anders benannt werden als die gleichen Gebietsschemata in macOS. Beispielsweise ist das Gebietsschema „USA ISO-8859-1 (Lateinisch 1)“ in Linux `en_US.ISO-8859-1`, während es in macOS `en_US.ISO8859-1` ist.
   
-In den Beispielen wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon ausgegangen, dass auf einem Server installiert ist. Wenn die Beispiele über den Browser ausgeführt werden, werden alle Ausgaben im Browser geschrieben.  
+In den Beispielen wird davon ausgegangen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Server installiert ist. Wenn die Beispiele über den Browser ausgeführt werden, werden alle Ausgaben im Browser geschrieben.  
   
 ```  
 <?php  
@@ -167,7 +167,7 @@ try {
 ## <a name="see-also"></a>Weitere Informationen  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)  
 [Arbeiten mit UTF-8-Daten](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
-[Aktualisierungsdaten &#40;Microsoft-Treiber für&#41; PHP für SQL Server](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[Aktualisieren von Daten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [Beispielanwendung &#40;SQLSRV-Treiber&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQLServerConnection-Klasse | Microsoft-Dokumentation
+title: Klasse „SQLServerConnection“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 937292a6-1525-423e-a2b2-a18fd34c2893
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e09c80081dc4e3c9230cfba51b1b477420146fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971740"
 ---
 # <a name="sqlserverconnection-class"></a>SQLServerConnection-Klasse
@@ -24,7 +24,7 @@ ms.locfileid: "67971740"
   
  **Paket:** com.microsoft.sqlserver.jdbc  
   
- **Implementiert** [ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md) und java.io.Serializable  
+ **Implementiert:** [ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md), java.io.Serializable  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,12 +36,12 @@ public class SQLServerConnection
 ## <a name="remarks"></a>Bemerkungen  
  SQLServerConnection unterstützt JDBC-Verbindungspooling und kann entweder eine physische JDBC-Verbindung oder eine logische JDBC-Verbindung sein. SQLServerConnection verwaltet die Transaktionssteuerung für alle Anweisungen, die aus ihr erstellt wurden, und kann an verteilten XA-Transaktionen teilnehmen, die über einen XAResource-Adapter verwaltet werden.  
   
- SQLServerConnection verwaltet einen Pool vorbereiteter Anweisungs Handles. Vorbereitete Anweisungen werden einmal vorbereitet und werden normalerweise mehrere Male mit unterschiedlichen Parameterdatenwerten ausgeführt. Vorbereitete Anweisungen werden ebenfalls über logische (als Poolverbindung verwendete) Verbindungsgrenzen hinweg beibehalten.  
+ SQLServerConnection verwaltet einen Pool vorbereiteter Anweisungshandles. Vorbereitete Anweisungen werden einmal vorbereitet und werden normalerweise mehrere Male mit unterschiedlichen Parameterdatenwerten ausgeführt. Vorbereitete Anweisungen werden ebenfalls über logische (als Poolverbindung verwendete) Verbindungsgrenzen hinweg beibehalten.  
   
 > [!NOTE]  
->  SQLServerConnection ist nicht Thread sicher. Mehrere aus einer einzelnen Verbindung erstellte Anweisungen können simultan in parallelen Threads verarbeitet werden.  
+>  SQLServerConnection ist nicht threadsicher. Mehrere aus einer einzelnen Verbindung erstellte Anweisungen können simultan in parallelen Threads verarbeitet werden.  
   
- Diese Klasse unterstützt das Entpacken in die SQLServerConnection-Klasse, die Java. SQL. Connection-Schnittstelle und die isqlserverconnection-Schnittstelle. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Diese Klasse unterstützt das Entpacken in die SQLServerConnection-Klasse, die java.sql.connection-Schnittstelle und die ISQLServerConnection-Schnittstelle. Weitere Informationen finden Sie im Artikel [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

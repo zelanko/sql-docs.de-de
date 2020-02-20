@@ -1,29 +1,29 @@
 ---
 title: Installieren von Machine Learning Server (eigenständig)
-description: Richten Sie mithilfe von RevoScaleR, revoscalepy, MicrosoftML und anderen Paketen eine eigenständige Machine Learning Server-Plattform für die R- und Python-Entwicklung ein, die nicht instanzabhängig ist.
+description: In diesem Artikel erfahren Sie, wie Sie einen eigenständigen Machine Learning-Server für Python und R einrichten. Ein per SQL Server-Setup installierter, eigenständiger Server stimmt funktionell mit nicht-SQL-Versionen von Microsoft Machine Learning Server überein.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 01/03/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 319ae61fbdca64bc6f27143bdd4a42aec635d129
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727637"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76891725"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installieren von Machine Learning Server (eigenständig) oder R Server (Standalone) mithilfe des SQL Server-Setups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Das SQL Server-Setup umfasst eine Option für ein **freigegebenes Feature** zum Installieren eines nicht instanzabhängigen, eigenständigen Machine Learning-Servers, der außerhalb von SQL Server ausgeführt wird. Dieses Feature heißt **Machine Learning Server (eigenständig)** und umfasst R und Python. 
+Das SQL Server-Setup umfasst eine Option für **freigegebene Features** zum Installieren eines eigenständigen Machine Learning-Servers, der außerhalb von SQL Server ausgeführt wird. Dieses Feature heißt **Machine Learning Server (eigenständig)** und umfasst R und Python. 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Das SQL Server-Setup umfasst eine Option für ein **freigegebenes Feature** zum Installieren eines nicht instanzabhängigen, eigenständigen Machine Learning-Servers, der außerhalb von SQL Server ausgeführt wird. In SQL Server 2016 heißt dieses Feature **R Server (Standalone)** .  
+Das SQL Server-Setup umfasst eine Option für **freigegebene Features** zum Installieren eines eigenständigen Machine Learning-Servers, der außerhalb von SQL Server ausgeführt wird. In SQL Server 2016 heißt dieses Feature **R Server (Standalone)** .  
 ::: moniker-end
 
 Ein per SQL Server-Setup installierter eigenständiger Server stimmt funktionell mit nicht-SQL-Versionen von [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) überein und unterstützt dieselben Anwendungsfälle und Szenarios, einschließlich der folgenden:
@@ -151,7 +151,7 @@ Wenn Sie nur das R-Feature integrieren möchten, sollten Sie die Umgebungsvariab
 
 1. Klicken Sie in der Systemsteuerung auf **System und Sicherheit** > **System** > **Erweiterte Systemeinstellungen** > **Umgebungsvariablen**.
 
-2. Erstellen Sie einen neuen Benutzer oder eine Systemvariable. 
+2. Erstellen Sie eine neue Benutzer- oder Systemvariable. 
 
   + Legen Sie den Variablenname auf `MKL_CBWR` fest.
   + Legen Sie den Variablenwert auf `AUTO` fest.
@@ -166,7 +166,7 @@ Bei der R- und Python-Entwicklung ist es üblich, dass mehrere Versionen auf dem
 
 In der folgenden Tabelle werden die Pfade für R- und Python-Verteilungen aufgeführt, die von Microsoft-Installationsprogrammen erstellt werden. Der Vollständigkeit halber enthält die Tabelle Pfade, die vom SQL Server-Setup und vom eigenständigen Installationsprogramm für Microsoft Machine Learning Server generiert werden.
 
-|Versionsoptionen| Installationsmethode | Standardordner|
+|Version| Installationsmethode | Standardordner|
 |----|----|----|
 |SQL Server 2019 Machine Learning Server (eigenständig) |  SQL Server 2019-Setup-Assistent |`C:\Program Files\Microsoft SQL Server\150\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\150\PYTHON_SERVER`|
 |SQL Server 2017 Machine Learning Server (eigenständig) |  SQL Server 2017-Setup-Assistent |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
@@ -196,11 +196,7 @@ Auf getrennten Servern sind zusätzliche Schritte erforderlich. Sie müssen das 
 
 3. Wenn Sie die Ausführung der Operationalisierung als Web- und Computeknoten für Webdienstbereitstellungen aktiviert haben, legen Sie vorsichtshalber eine Sicherung der Datei **AppSettings.json** an. Durch Anwendung von SQL Server 2017 CU13 wird diese Datei überarbeitet, daher sollten Sie möglicherweise eine Sicherungskopie anlegen, um die ursprüngliche Version beizubehalten.
 
-4. Klicken Sie auf einem mit dem Internet verbundenen Gerät auf den Link für das kumulative Update für Ihre SQL Server-Version.
-
-  + SQL Server 2019-Updates *(es sind noch keine Updates verfügbar)*
-  + [SQL Server 2017-Updates](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [SQL Server 2016-Updates](https://sqlserverupdates.com/sql-server-2016-updates/)
+4. Laden Sie auf einem mit dem Internet verbundenen Computer das neueste kumulative Update für Ihre Version von der Website [Neueste Updates für Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server) herunter.
 
 5. Laden Sie das neueste kumulative Update herunter. Dabei handelt es sich um eine ausführbare Datei.
 
@@ -214,7 +210,7 @@ Auf getrennten Servern sind zusätzliche Schritte erforderlich. Sie müssen das 
 
    + Doppelklicken Sie auf die EXE-Datei, um das Setup auszuführen. Beim Installieren eines kumulativen Updates auf einem Server ohne Internetverbindung werden Sie dazu aufgefordert, den Speicherort der CAB-Dateien für R und Python auszuwählen.
 
-8. Bearbeiten Sie nach der Installation die Datei **AppSettings.json** auf einem Server, für den Sie die Operationalisierung mit Web- und Computeknoten aktiviert haben, und fügen Sie einen „MMLResourcePath“-Eintrag direkt unter „MMLNativePath“ hinzu. Beispiel:
+8. Bearbeiten Sie nach der Installation die Datei **AppSettings.json** auf einem Server, für den Sie die Bereitstellung mit Web- und Computeknoten aktiviert haben, und fügen Sie einen Eintrag „MMLResourcePath“ direkt unter „MMLNativePath“ hinzu. Beispiel:
 
     ```json
     "ScorerParameters": {

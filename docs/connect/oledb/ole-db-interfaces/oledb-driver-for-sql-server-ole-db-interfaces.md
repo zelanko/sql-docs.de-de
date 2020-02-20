@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6cbe0bf465460fe1464b47deed461d05217595f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994347"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>OLE DB-Treiber für SQL Server-Schnittstellen (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "67994347"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server macht Schnittstellen für Consumer verfügbar, die Datenzugriff auf einen oder mehrere Computer benötigen, auf denen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird. Der OLE DB Treiber für SQL Server ist ein OLE DB, Version 2,0-kompatibler Anbieter.  
+  Der OLE DB-Treiber für SQL Server macht Schnittstellen für Consumer verfügbar, die Datenzugriff auf einen oder mehrere Computer benötigen, auf denen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird. Der OLE DB-Treiber für SQL Server ist mit Version 2.0 der OLE DB kompatibel.  
   
  In dieser Programmierungsdokumentation für den OLE DB-Treiber für SQL Server werden nicht alle OLE DB-Schnittstellen und -Methoden behandelt, sondern nur solche, die eine anbieterspezifische Funktionsweise aufweisen, wenn der OLE DB-Treiber für SQL Server verwendet wird.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67994347"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Schnitt &#40;stellen OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [Schnittstellen &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

@@ -16,10 +16,10 @@ ms.assetid: eb340450-45a7-49c8-84bc-1b9dd5ee842f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2fa61d7239858cb3479e7eeaa730e4197bf6bc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955864"
 ---
 # <a name="alltablesareselectable-method-sqlserverdatabasemetadata"></a>allTablesAreSelectable-Methode (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean allTablesAreSelectable()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn der Benutzer über Berechtigungen zum Abrufen von allen Tabellen verfügt. Andernfalls lautet der Wert **false**.  
+ Der Wert lautet **TRUE**, wenn der Benutzer über Berechtigungen zum Aufrufen aller Tabellen verfügt. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese allTablesAreSelectable-Methode wird von der allTablesAreSelectable-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese allTablesAreSelectable-Methode wird von der allTablesAreSelectable-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

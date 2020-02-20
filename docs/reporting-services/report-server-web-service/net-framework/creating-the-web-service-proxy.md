@@ -15,16 +15,16 @@ ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 116e4ca4ef2080c186a11b6816a08d4c3c5ba169
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284640"
 ---
 # <a name="creating-the-web-service-proxy"></a>Erstellen des Webdienstproxys
   Ein Client und ein Webdienst können über SOAP-Nachrichten kommunizieren, die die Eingabe- und Ausgabeparameter als XML-Datei einkapseln. Eine Proxyklasse ordnet XML-Elementen Parameter zu und sendet dann die SOAP-Nachrichten über ein Netzwerk. So sorgt die Proxyklasse dafür, dass Sie nicht auf der SOAP-Ebene mit dem Webdienst kommunizieren müssen. Außerdem können Sie die Webdienstmethoden in jeder Entwicklungsumgebung aufrufen, die SOAP- und Webdienstproxys unterstützt.  
   
- Es gibt zwei Möglichkeiten, mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] eine Proxyklasse zu Ihrem Entwicklungsprojekt hinzuzufügen: über das WSDL-Tool in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] und durch Hinzufügen eines Webverweises in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. In den folgenden Abschnitten wird dieser Betreff detaillierter erläutert.  
+ Es gibt zwei Möglichkeiten, mit dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] eine Proxyklasse zu Ihrem Entwicklungsprojekt hinzuzufügen: über das WSDL-Tool im [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] und durch Hinzufügen eines Webverweises in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. In den folgenden Abschnitten wird dieser Betreff detaillierter erläutert.  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>Hinzufügen des Proxys über das WSDL-Tool  
  Das [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-SDK enthält das WSDL-Tool (Web Services Description Language, Wsdl.exe), mit dem Sie einen Webdienstproxy für die Verwendung in der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Entwicklungsumgebung generieren können. Die gängigste Methode, einen Clientproxy in Sprachen zu erstellen, die Webdienste unterstützen (derzeit C# und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), ist die Verwendung des WSDL-Tools.  

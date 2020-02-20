@@ -12,10 +12,10 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67564026"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen
@@ -36,9 +36,9 @@ ms.locfileid: "67564026"
   
  Wenn im System keine Engpässe in Bezug auf den Arbeitsspeicher bestehen, fordert jede Anwendung beim Starten und vor dem Empfang von Anforderungen eine bestimmte Menge an Arbeitsspeicher an, damit beim Eingang von Anforderungen eine ideale Leistung geboten werden kann. Wenn sich die Arbeitsspeicherauslastung erhöht, passt der Berichtsserver sein Verarbeitungsmodell wie in der folgenden Tabelle beschrieben an.  
   
-|Arbeitsspeicherauslastung|Reaktion des Servers|  
+|Hohe Arbeitsspeicherauslastung|Reaktion des Servers|  
 |---------------------|---------------------|  
-|Low|Aktuelle Anforderungen werden weiterhin verarbeitet. Neue Anforderungen werden fast immer akzeptiert. Anforderungen, die an die Hintergrundverarbeitungsanwendung gerichtet sind, wird eine geringere Priorität eingeräumt als Anforderungen, die sich an den Report Server-Webdienst richten.|  
+|Niedrig|Aktuelle Anforderungen werden weiterhin verarbeitet. Neue Anforderungen werden fast immer akzeptiert. Anforderungen, die an die Hintergrundverarbeitungsanwendung gerichtet sind, wird eine geringere Priorität eingeräumt als Anforderungen, die sich an den Report Server-Webdienst richten.|  
 |Medium|Aktuelle Anforderungen werden weiterhin verarbeitet. Neue Anforderungen werden unter Umständen akzeptiert. Anforderungen, die an die Hintergrundverarbeitungsanwendung gerichtet sind, wird eine geringere Priorität eingeräumt als Anforderungen, die sich an den Report Server-Webdienst richten. Die Speicherbelegungen für alle drei Serveranwendungen werden reduziert, wobei vor allem der Arbeitsspeicher für die Hintergrundverarbeitung reduziert wird, damit mehr Arbeitsspeicher für Webdienstanforderungen zur Verfügung steht.|  
 |High|Die Speicherbelegung wird weiter reduziert. Serveranwendungen, die mehr Arbeitsspeicher anfordern, werden abgelehnt. Aktuelle Anforderungen werden langsamer verarbeitet und abgeschlossen. Neue Anforderungen werden nicht akzeptiert. Der Berichtsserver lagert Datendateien aus dem Arbeitsspeicher auf die Festplatte aus.<br /><br /> Wenn die Speichereinschränkungen gravierend werden und kein Arbeitsspeicher mehr zum Verarbeiten neuer Anforderungen zur Verfügung steht, gibt der Berichtsserver einen HTTP 503-Fehler (Server nicht verfügbar) aus, während aktuelle Anforderungen abgeschlossen werden. In einigen Fällen können die Anwendungsdomänen wiederverwendet werden, um die Arbeitsspeicherauslastung zu reduzieren.|  
   
@@ -60,19 +60,19 @@ ms.locfileid: "67564026"
   
  In der folgenden Abbildung wird gezeigt, wie die Einstellungen zum Unterscheiden zwischen geringer, mittlerer und hoher Arbeitsspeicherauslastung eingesetzt werden können:  
   
- ![Konfigurationseinstellungen für Speicherstatus](../../reporting-services/report-server/media/rs-memoryconfigurationzones.png "Configuration settings for memory state")  
+ ![Konfigurationseinstellungen für den Speicherstatus](../../reporting-services/report-server/media/rs-memoryconfigurationzones.png "Konfigurationseinstellungen für den Speicherstatus")  
   
  In der folgenden Tabelle werden die Einstellungen **WorkingSetMaximum**, **WorkingSetMinimum**, **MemorySafetyMargin**und **MemoryThreshold** beschrieben. Die Konfigurationseinstellungen werden in der Datei [RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)angegeben.  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |**WorkingSetMaximum**|Gibt einen Arbeitsspeicherschwellenwert an, ab dem keine neuen Speicherbelegungsanforderungen für Berichtsserveranwendungen mehr möglich sind.<br /><br /> Standardmäßig legt der Berichtsserver die Einstellung **WorkingSetMaximum** auf den gesamten verfügbaren Arbeitsspeicher auf dem Computer fest. Dieser Wert wird erkannt, wenn der Dienst gestartet wird.<br /><br /> Diese Einstellung ist nicht in der Datei RSReportServer.config vorhanden, es sei denn, Sie fügen sie manuell ein. Wenn Sie möchten, dass der Berichtsserver weniger Arbeitsspeicher beansprucht, können Sie der Datei RSReportServer.config dieses Element und einen entsprechenden Wert hinzufügen. Gültige Werte sind 0 bis zu einer maximalen ganzen Zahl. Dieser Wert wird in Kilobyte angegeben.<br /><br /> Nach Erreichen des Werts für **WorkingSetMaximum** nimmt der Berichtsserver keine neuen Anforderungen mehr an. Zurzeit ausgeführte Anforderungen werden aber abgeschlossen. Neue Anforderungen werden nur angenommen, wenn die Arbeitsspeicherverwendung unter den durch **WorkingSetMaximum**angegebenen Wert fällt.<br /><br /> Wenn vorhandene Anforderungen auch nach Erreichen des Werts für **WorkingSetMaximum** zusätzlichen Arbeitsspeicher beanspruchen, werden alle Anwendungsdomänen wiederverwendet. Weitere Informationen finden Sie unter [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md).|  
 |**WorkingSetMinimum**|Gibt eine Untergrenze für die Ressourcenbeanspruchung an. Der Berichtsserver gibt nur Speicher frei, wenn die allgemeine Speicherauslastung unter dieser Grenze liegt.<br /><br /> Standardmäßig wird der Wert bei Dienststart berechnet. In der Regel beträgt die anfängliche Speicherbelegungsanforderung 60 Prozent von **WorkingSetMaximum**.<br /><br /> Diese Einstellung ist nicht in der Datei RSReportServer.config vorhanden, es sei denn, Sie fügen sie manuell ein. Wenn Sie diesen Wert anpassen möchten, müssen Sie der Datei RSReportServer.config das **WorkingSetMinimum** -Element hinzufügen. Gültige Werte sind 0 bis zu einer maximalen ganzen Zahl. Dieser Wert wird in Kilobyte angegeben.|  
 |**MemoryThreshold**|Gibt einen Prozentwert von **WorkingSetMaximum** an, der die Grenze zwischen hoher und mittlerer Arbeitsspeicherauslastung definiert. Wenn die Arbeitsspeicherauslastung des Berichtsservers diesen Wert erreicht, verlangsamt der Berichtsserver die Anforderungsverarbeitung und ändert die Speichermenge, die den verschiedenen Serveranwendungen zugeordnet ist. Der Standardwert ist 90. Dieser Wert sollte höher sein als der Wert für **MemorySafetyMargin**.|  
-|**MemorySafetyMargin**|Gibt einen Prozentsatz von **WorkingSetMaximum** an, der die Grenze zwischen mittlerer und geringer Arbeitsspeicherauslastung definiert. Dieser Wert ist der Prozentsatz an verfügbarem Speicher, der für das System reserviert ist und nicht für Berichtsservervorgänge verwendet werden kann. Der Standardwert ist 80.|  
+|**MemorySafetyMargin**|Gibt einen Prozentwert von **WorkingSetMaximum** an, der die Grenze zwischen mittlerer und geringer Arbeitsspeicherauslastung definiert. Dieser Wert ist der Prozentsatz an verfügbarem Speicher, der für das System reserviert ist und nicht für Berichtsservervorgänge verwendet werden kann. Der Standardwert ist 80.|  
   
 > [!NOTE]  
->  Die Einstellungen**MemoryLimit** und **MaximumMemoryLimit** sind in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und later versions. Wenn Sie eine vorhandene Installation aktualisiert haben oder eine RSReportServer.config-Datei verwenden, die diese Einstellungen enthält, berücksichtigt der Berichtsserver diese Werte nicht mehr.  
+>  Die Einstellungen **MemoryLimit** und **MaximumMemoryLimit** sind in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und späteren Versionen veraltet. Wenn Sie eine vorhandene Installation aktualisiert haben oder eine RSReportServer.config-Datei verwenden, die diese Einstellungen enthält, berücksichtigt der Berichtsserver diese Werte nicht mehr.  
   
 #### <a name="example-of-memory-configuration-settings"></a>Beispiel für Konfigurationseinstellungen des Arbeitsspeichers  
  Im folgenden Beispiel werden die Konfigurationseinstellungen für einen Berichtsserver gezeigt, in denen benutzerdefinierte Werte für die Speicherkonfiguration verwendet werden. Wenn Sie **WorkingSetMaximum** oder **WorkingSetMinimum**hinzufügen möchten, müssen Sie die Elemente und Werte in die Datei RSReportServer.config eingeben. Beide Werte sind ganze Zahlen, die angeben, wie viel Kilobyte RAM den Serveranwendungen zugeordnet werden. Im folgenden Beispiel wird angegeben, dass die gesamte Speicherbelegung für die Berichtsserveranwendungen 4 Gigabyte nicht übersteigen darf. Wenn der Standardwert für **WorkingSetMinimum** (60 % von **WorkingSetMaximum**) akzeptabel ist, können Sie ihn auslassen und nur **WorkingSetMaximum** in der Datei „RSReportServer.config“ angeben. In diesem Beispiel ist auch **WorkingSetMinimum** enthalten, um zu zeigen, wie dieser Eintrag aussieht, wenn Sie ihn hinzufügen:  
@@ -86,9 +86,9 @@ ms.locfileid: "67564026"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>Informationen zu Arbeitsspeicherkonfigurationen in ASP.NET  
- Obwohl das 2016 und höher Report Server-Webdienst und das Webportal werden HTML5-Anwendungen, die frühere Versionen sind [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Anwendungen, reagiert keine Anwendung auf Arbeitsspeicher-Konfigurationseinstellungen, die Sie, in angeben der **ProcessModel**  im Abschnitt "Machine.config" für [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Anwendungen, die in IIS 5.0 und höher-Kompatibilitätsmodus ausgeführt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] liest nur Arbeitsspeicher-Konfigurationseinstellungen von der Datei "RSReportServer.config".  
+ Obwohl die Berichtsserver-Webdienstversion 2016 und höher sowie das Webportal HTML5-Anwendungen und vorherige Versionen [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Anwendungen sind, reagiert kein Anwendung auf Arbeitsspeicher-Konfigurationseinstellungen, die Sie im Abschnitt **processModel** von „machine.config“ für [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Anwendungen angeben, die im IIS 5.0-Kompatibilitätsmodus oder höher ausgeführt werden. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] liest nur Arbeitsspeicher-Konfigurationseinstellungen von der Datei "RSReportServer.config".  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
  [Application Domains for Report Server Applications (Anwendungsdomänen für Berichtsserveranwendungen)](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  

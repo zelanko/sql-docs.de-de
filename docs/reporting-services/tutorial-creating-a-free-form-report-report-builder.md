@@ -9,22 +9,22 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499564"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Erstellen eines Freiformberichts (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie einen paginierten Bericht erstellen, der wie ein Newslettern funktioniert. Jede Seite zeigt statischen Text, zusammenfassende Visualisierungen und detaillierte Beispielumsatzdaten an.
 
 ![Berichts-Generator-Freiformbericht-vollständig](../reporting-services/media/report-builder-free-form-report-complete.png)
 
 Im Bericht werden Informationen nach Gebiet gruppiert und der Name des Vertriebsmanagers für das Gebiet sowie ausführliche und zusammenfassende Umsatzdaten angezeigt. Der Listendatenbereich wird als Grundlage für den formfreien Bericht verwendet. Anschließend werden folgende Objekte hinzugefügt: ein dekoratives Panel mit einem Bild, statischer Text mit eingefügten Daten, eine Tabelle zum Anzeigen ausführlicher Informationen und optional Kreis- und Säulendiagramme zum Anzeigen zusammenfassender Informationen.  
   
-Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 20 Minuten  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="BlankReport"></a>1. Erstellen eines leeren Berichts, einer leeren Datenquelle und eines leeren Datasets  
@@ -48,11 +48,11 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Datenquelle**.  
   
-2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataSource**  
+2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataSource**.  
   
 3.  Klicken Sie auf **In Bericht eingebettete Verbindung verwenden**.  
   
-4.  Überprüfen Sie, ob der Verbindungstyp „Microsoft SQL Server“ ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Datenquelle = \<Servername>** .  
+4.  Überprüfen Sie, ob der Verbindungstyp Microsoft SQL Server ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Data Source = \<servername>**  
   
     Der **\<Servername>** , z.B. Report001, bezeichnet einen Computer, auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Da die Daten für diesen Bericht nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird nur verwendet, um die Abfrage zu analysieren.  
   
@@ -64,7 +64,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Dataset**.  
   
-2.  Geben Sie im Feld **Name** **ListDataset**ein.  
+2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataset**.  
   
 3.  Klicken Sie auf **Ein in den eigenen Bericht eingebettetes Dataset verwenden**und überprüfen Sie, ob **ListDataSource**die Datenquelle ist.  
   
@@ -201,7 +201,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
   
 3.  Setzen Sie den Cursor in das Textfeld, und geben Sie anschließend Folgendes ein: **Newsletter für** . Setzen Sie ein Leerzeichen nach dem Wort „für“, um den Text von dem Feld zu trennen, das Sie im nächsten Schritt hinzufügen werden.   
   
-    ![Hinzufügen von Text für Newsletterüberschriften](../reporting-services/media/tutorial-newsletterfor.png "Add newsletter heading text")  
+    ![Hinzufügen von Text für Newsletterüberschriften](../reporting-services/media/tutorial-newsletterfor.png "Hinzufügen von Text für Newsletterüberschriften")  
   
 4.  Ziehen Sie das `[Territory]` -Feld aus ListDataSet in den Bereich „Berichtsdaten“ in das Textfeld, und platzieren Sie es hinter „Newsletter for “.  
   
@@ -215,7 +215,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
     *  **20 pt**
     *  **Tomate**  
   
-9. Platzieren Sie den Cursor unterhalb des Texts, den Sie in Schritt 3 eingegeben haben, und geben Sie **Hallo** mit einem anschließenden Leerzeichen ein, um den Text von dem Feld zu trennen, das Sie im nächsten Schritt hinzufügen.  
+9. Platzieren Sie den Cursor unter dem Text, den Sie in Schritt 3 eingegeben haben, und geben Sie Folgendes ein: Das Wort **Hallo** gefolgt von einem Leerzeichen, um den Text und das Feld, das Sie im nächsten Schritt hinzufügen, voneinander zu trennen.  
  
 10. Ziehen Sie das `[FullName]` -Feld aus ListDataSet im Bereich „Berichtsdaten“ in das Textfeld, platzieren Sie es hinter „Hallo “, und geben Sie anschließend ein Komma (,) ein.  
    
@@ -244,7 +244,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
       *  **10 pt**
       *  **Schwarz**  
  
-20. Platzieren Sie den Cursor im Textfeld unter dem bedeutungslosen Text, und geben Sie **Glückwünsche zum Gesamtumsatz von**mit einem anschließenden Leerzeichen ein, um den Text von dem Feld zu trennen, das Sie im nächsten Schritt hinzufügen. 
+20. Bewegen Sie den Cursor in das Textfeld unter den bedeutungslosen Text und geben Sie Folgendes ein: **Herzlichen Glückwunsch zu Ihrem Gesamtumsatz von** gefolgt von einem Leerzeichen, um den Text und das Feld, das Sie im nächsten Schritt hinzufügen, voneinander zu trennen. 
   
 21. Ziehen Sie das Feld „Sales“ in das Textfeld, platzieren Sie es hinter dem im vorherigen Schritt eingegebenen Text, und geben Sie anschließend ein Ausrufezeichen (!) ein.  
 
@@ -371,8 +371,8 @@ Fügen Sie eine Zeile hinzu, um den Leitartikel und die Details des Berichts zu 
 3.  Zeichnen Sie eine Linie unter dem Textfeld, das Sie in Lektion 4 hinzugefügt haben.  
   
 4.  Klicken Sie auf die Linie, und wählen Sie anschließend auf der Registerkarte **Start** im Bereich **Border** (Rahmen) Folgendes aus:
-     * Wählen Sie als**Stärke**  **3** pt aus.
-     * Wählen Sie für**Farbe**  **Tomate**aus.  
+     * Wählen Sie als**Stärke** **3** pt aus.
+     * Wählen Sie für**Farbe** **Tomate**aus.  
   
 ## <a name="Visualization"></a>8. Hinzufügen von Zusammenfassungsdatenvisualisierungen (optional)  
 Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie in einem Rechteck ein Kreis- und ein Säulendiagramm, um sicherzustellen, dass der Bericht wunschgemäß gerendert wird.  
@@ -405,12 +405,12 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 9. Ziehen Sie das Diagramm in das Rechteck.  
    
-10. Wählen Sie den Diagrammtitel und Typ **Verkaufte Produktmengen**aus.  
+10. Wählen Sie den Diagrammtitel aus, und geben Sie Folgendes ein: **Verkaufte Produktmengen**.  
   
 12. Legen Sie für den Titel auf der Registerkarte **Start** im Bereich **Font** (Schriftart) Folgendes fest:
-    * **Schriftart** **Segoe UI Semibold**.
-    * **Größe** **12 pt**.
-    * **Farbe** **Schwarz**.  
+    * **Schriftart:** **Segoe UI Semibold**
+    * **Größe:** **12 pt**
+    * **Farbe:** **Schwarz**  
 
 13. Klicken Sie mit der rechten Maustaste auf die Legende, und klicken Sie anschließend auf **Legendeneigenschaften**.
 
@@ -444,12 +444,12 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 9. Ziehen Sie das Diagramm in das Rechteck unter dem Kreisdiagramm.  
    
-10. Wählen Sie den Diagrammtitel aus und geben Sie **Produktumsatz**ein.  
+10. Wählen Sie den Diagrammtitel aus, und geben Sie Folgendes ein: **Produktverkaufszahlen**.  
   
 12. Legen Sie für den Titel auf der Registerkarte **Start** im Bereich **Font** (Schriftart) Folgendes fest:
-    * **Schriftart** **Segoe UI Semibold**.
-    * **Größe** **12 pt**.
-    * **Farbe** **Schwarz**.  
+    * **Schriftart:** **Segoe UI Semibold**
+    * **Größe:** **12 pt**
+    * **Farbe:** **Schwarz**  
   
 15. Klicken Sie mit der rechten Maustaste auf die Legende, und klicken Sie dann auf **Legende löschen**.  
   
@@ -497,7 +497,7 @@ Im Bericht werden nun Zusammenfassungsumsatzdaten in Kreis- und Säulendiagramme
   
 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 Hiermit ist das Tutorial für die Erstellung von formfreien Berichten abgeschlossen.  
   
 Weitere Informationen zu Listen finden Sie unter: 

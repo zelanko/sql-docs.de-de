@@ -16,10 +16,10 @@ ms.assetid: 7dea981b-b4fd-4f8d-954f-e686124627e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c7fca859273c5eff58cde02b98f98699307ff1b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979582"
 ---
 # <a name="getstatement-method-sqlserverresultset"></a>getStatement-Methode (SQLServerResultSet)
@@ -35,13 +35,13 @@ public java.sql.Statement getStatement()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein SQLServerStatement-Objekt.  
+ Ein SQLServerStatement-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getstatement-Methode wird von der getstatement-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese getStatement-Methode wird von der getStatement-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Wird das Resultset auf andere Art erstellt, z. B. mit einer [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)-Methode, wird von der Methode NULL zurückgegeben.  
   

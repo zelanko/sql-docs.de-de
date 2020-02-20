@@ -16,10 +16,10 @@ ms.assetid: 38ce7b75-2623-4eff-bc18-8cf7193adec8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ff7567d85800969eeb5c450bbe0a59753491e2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984062"
 ---
 # <a name="getdate-method-int-javautilcalendar"></a>getDate-Methode (int, java.util.Calendar)
@@ -42,10 +42,10 @@ public java.sql.Date getDate(int index,
   
  *cal*  
   
- Ein Kalender Objekt.  
+ Ein Calendar-Objekt  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Date-Objekt.  
+ Ein Date-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -53,7 +53,7 @@ public java.sql.Date getDate(int index,
 ## <a name="remarks"></a>Bemerkungen  
  Diese getDate-Methode wird von der getDate-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
- Von dieser Methode wird ein gültiger Datumsteil eines **datetime**- oder **smalldatetime**-Datentyps von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurückgegeben. Der Zeitteil ist dabei auf die Java-Baseline (00:00, Mitternacht) festgelegt.  
+ Diese Methode gibt einen gültigen Datumsteil eines **datetime**- oder **smalldatetime**-Datentyps von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurück. Der Zeitteil ist dabei auf die Java-Baseline 00:00 Uhr (Mitternacht) festgelegt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getDate-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   

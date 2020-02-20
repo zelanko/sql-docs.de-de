@@ -1,6 +1,6 @@
 ---
 title: Verwenden von RevoScaleR-Computekontexten
-description: Tutorial zum Definieren eines Computekontexts mithilfe der R-Programmiersprache in SQL Server
+description: 'Tutorial 4 zu RevoScaleR: Definieren eines Computekontexts mithilfe der R-Programmiersprache in SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ae3f3ac7747410730cb91cf56733130ab9f0abb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c90c935f85584f8886ae112d5cfc03759c0a129a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727199"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947217"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>Definieren und Verwenden von Computekontexten (SQL Server und RevoScaleR-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Diese Lerneinheit ist Teil des [RevoScaleR-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zum Verwenden von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Bei diesem Tutorial handelt es sich um das 4. Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). Hier erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
-In der vorherigen Lerneinheit haben Sie **RevoScaleR**-Funktionen zum Untersuchen von Datenobjekten verwendet. In dieser Lerneinheit wird die [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)-Funktion erläutert, mit der Sie einen Computekontext für einen Remote-SQL Server definieren können. Mit einem Remotecomputekontext können Sie die R-Ausführung von einer lokalen Sitzung zu einer Remotesitzung auf dem Server verschieben. 
+Im vorherigen Tutorial haben Sie **RevoScaleR**-Funktionen zum Untersuchen von Datenobjekten verwendet. In diesem Tutorial wird die [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)-Funktion erläutert, mit der Sie einen Computekontext für einen Remote-SQL-Server definieren können. Mit einem Remotecomputekontext können Sie die R-Ausführung von einer lokalen Sitzung zu einer Remotesitzung auf dem Server verschieben. 
 
 > [!div class="checklist"]
 > * Grundlegendes zu SQL Server-Remotecomputekontext
@@ -108,7 +108,7 @@ In diesem Abschnitt werden Sie durch die einzelnen Teile geführt.
     rxGetComputeContext()
     ```
 
-7. Setzen Sie den Computekontext zurück auf den lokalen Computer, indem Sie das Schlüsselwort „lokal“ angeben (in der nächsten Lerneinheit wird die Verwendung des Remotecomputekontexts erläutert).
+7. Aktivieren Sie wieder den Computekontext des lokalen Computers, indem Sie das Schlüsselwort „local“ (lokal) angeben. Die Verwendung des Remotecomputekontexts wird im nächsten Tutorial erläutert.
 
     ```R
     rxSetComputeContext("local")

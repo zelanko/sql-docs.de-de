@@ -1,5 +1,5 @@
 ---
-title: Erhalten der Treiber Version | Microsoft-Dokumentation
+title: Abrufen der Treiberversion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db44a391c16a63d28057c99755018179d6c2c0b5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028046"
 ---
 # <a name="getting-the-driver-version"></a>Abrufen der Treiberversion
@@ -28,7 +28,7 @@ ms.locfileid: "69028046"
   
  Außerdem kann der JDBC-Treibername mit dem [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md)-Methodenaufruf für die SQLServerDatabaseMetaData-Klasse zurückgegeben werden. Dabei wird z. B. „Microsoft JDBC-Treiber 6.4 für SQL Server“ zurückgegeben.  
   
- Im folgenden finden Sie ein Beispiel für die Ausgabe von Aufrufen der Methoden der SQLServerDatabaseMetaData-Klasse:  
+ Im Folgenden wird ein Beispiel für die Ausgabe von Aufrufen der Methoden in der SQLServerDatabaseMetaData-Klasse bereitgestellt:  
   
  `getDriverName = Microsoft JDBC Driver 6.4 for SQL Server`  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69028046"
   
  Dabei ist "xxx.x" die abschließende Versionsnummer.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

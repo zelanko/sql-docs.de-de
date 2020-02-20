@@ -16,10 +16,10 @@ ms.assetid: 8deb1987-c4e3-4599-8e37-0a04ec20b480
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f006c4343c1a89fcb6387bc437a3415607ca094
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969416"
 ---
 # <a name="supportsextendedsqlgrammar-method-sqlserverdatabasemetadata"></a>supportsExtendedSQLGrammar-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsExtendedSQLGrammar()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportsextendedsqlgrammer-Methode wird von der supportsextendedsqlgrammer-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsExtendedSQLGrammer-Methode wird von der supportsExtendedSQLGrammer-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

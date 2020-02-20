@@ -1,6 +1,6 @@
 ---
-title: Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor | Microsoft-Dokumentation
-ms.custom: ''
+title: Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +17,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7931e678db7e93dfea385b5ca905dd6968ec78eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263480"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253912"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68263480"
   
 3.  Wählen Sie auf der **SQL-Editor** -Symbolleiste in der Liste **Verfügbare Datenbanken** die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank aus.  
   
-4.  Geben Sie im Fenster des Abfrage-Editors die folgenden beiden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und die `!!DIR` **sqlcmd** -Anweisung ein:  
+4.  Geben Sie im Fenster des Abfrage-Editors die folgenden beiden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und die `!!DIR`-Anweisung **sqlcmd** ein:  
   
     ```  
     SELECT DISTINCT Type FROM Sales.SpecialOffer;  
@@ -91,7 +91,7 @@ ms.locfileid: "68263480"
  Zum Aktivieren der SQLCMD-Skripterstellung als Standard wählen Sie im Menü **Extras** die Option **Optionen**aus, erweitern Sie **Abfrageausführung**und **SQL Server**, klicken Sie auf die Seite **Allgemein** , und aktivieren Sie das Kontrollkästchen **Standardmäßig neue Abfragen im SQLCMD-Modus öffnen** .  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>Schreiben und Bearbeiten von SQLCMD-Skripts  
- Wenn Sie den Skriptmodus aktiviert haben, können Sie SQLCMD-Befehle und [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen schreiben. Dabei gelten die folgenden Regeln:  
+ Wenn Sie den Skriptmodus aktiviert haben, können Sie SQLCMD-Befehle und [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen schreiben. Es gelten die folgenden Regeln:  
   
 -   SQLCMD-Befehle müssen die erste Anweisung in einer Zeile sein.  
   
@@ -161,6 +161,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+ [SQLCMD-Hilfsprogramm](../../tools/sqlcmd-utility.md)  
   
   

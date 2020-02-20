@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 904a3bbc5b7a3d4987cd6c06b257ff680e4e8343
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 61cfc9c83e5d9c2976f5fcb00eab29e91c1f726d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593833"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190835"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer externen [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der Datenerweiterung für [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], die es Ihnen ermöglicht, mehrdimensionale Daten aus einer externen [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle abzurufen.  
@@ -27,7 +27,7 @@ ms.locfileid: "73593833"
 Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- Weitere Informationen zu Beispielen für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Weitere Informationen über Beispiele für Verbindungszeichenfolgen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Anmeldeinformationen  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  Nachdem Sie den Bericht veröffentlicht haben, müssen Sie eventuell die Anmeldeinformationen für die Datenquelle ändern, sodass die Berechtigungen zum Abrufen der Daten beim Ausführen des Berichts auf dem Berichtsserver gültig sind.  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen &#40;Berichts-Generator und SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oder [Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Abfragen  
@@ -81,11 +81,11 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**Eigenschaft**|**Typ**|**Beschreibung oder erwarteter Wert**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**Objekt**|Gibt den Datenwert des Felds an.<br /><br /> Bei einer Dimensionseigenschaft wird dies MEMBER_CAPTION zugeordnet. Bei einem Measure wird dies dem Datenwert zugeordnet.|  
-|**IsMissing**|**Boolean**|Gibt an, ob das Feld im resultierenden Dataset gefunden wurde.|  
+|**Wert**|**Object**|Gibt den Datenwert des Felds an.<br /><br /> Bei einer Dimensionseigenschaft wird dies MEMBER_CAPTION zugeordnet. Bei einem Measure wird dies dem Datenwert zugeordnet.|  
+|**IsMissing**|**Boolescher Wert**|Gibt an, ob das Feld im resultierenden Dataset gefunden wurde.|  
 |**FormattedValue**|**String**|Gibt einen formatierten Wert für eine Kennzahl zurück.<br /><br /> Von FORMATTED_VALUE im MDX-Ausdruck zugeordnet.|  
 |**BackgroundColor**|**String**|Gibt die Hintergrundfarbe zurück, die in der Datenbank für das Feld definiert ist.<br /><br /> Von BACK_COLOR im MDX-Ausdruck zugeordnet.|  
-|**Farbe**|**String**|Gibt die Vordergrundfarbe zurück, die in der Datenbank für das Element definiert ist.<br /><br /> Von FORE_COLOR im MDX-Ausdruck zugeordnet.|  
+|**Color**|**String**|Gibt die Vordergrundfarbe zurück, die in der Datenbank für das Element definiert ist.<br /><br /> Von FORE_COLOR im MDX-Ausdruck zugeordnet.|  
 |**UniqueName**|**String**|Gibt den vollqualifizierten Namen einer Ebene zurück.<br /><br /> Von MEMBER_UNIQUE_NAME im MDX-Ausdruck zugeordnet.|  
   
  Weitere Informationen zur Verwendung von Feldern und Feldeigenschaften in einem Ausdruck finden Sie unter [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
@@ -127,7 +127,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Bietet eine Übersicht über den Zugriff auf Daten für den Bericht.  
   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Enthält Informationen zu Datenverbindungen und Datenquellen.  
   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -136,7 +136,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Enthält Informationen zu der von der Datasetabfrage generierten Feldauflistung.  
   
- [Von Reporting Services &#40;SSRS&#41; unterstützte Datenquellen](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) Bietet ausführliche Informationen zur Plattform-und Versions Unterstützung für die einzelnen Daten Erweiterungen.  
+ [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md): Dieser Abschnitt enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.  
   
  [Verwenden von SQL Server 2005 Reporting Services mit Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)  
  Enthält ausführliche Informationen zum Arbeiten mit dieser Datenerweiterung.  

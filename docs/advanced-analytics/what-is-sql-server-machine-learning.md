@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: fe7a83c66dba9af372e82fc2814828aae32d6a2d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149941"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558287"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Was ist SQL Server Machine Learning Services (Python und R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Zum Ausführen von Python- und R-Skripts in SQL Server wird von Machine Learning
 
 Mit Machine Learning Services können Sie Machine Learning- und Deep Learning-Modelle in SQL Server erstellen und trainieren. Sie können auch vorhandene Modelle für Machine Learning Services bereitstellen und relationale Daten für Vorhersagen verwenden.
 
-Hier einige Beispiele für die Art von Vorhersagen, für die Sie SQL Server Machine Learning Services verwenden können:
+Hier finden Sie einige Beispiele für die Art von Vorhersagen, für die Sie SQL Server-Machine Learning Services verwenden können:
 
 |||
 |-|-|
@@ -67,7 +67,7 @@ Es gibt zwei Möglichkeiten, Python- und R-Skripts in Machine Learning Services 
 
 Neben den Enterprise-Paketen von Microsoft können Sie auch Open-Source-Pakete und -Frameworks verwenden. Die gängigsten Open-Source-Pakete für Python und R sind in Machine Learning Services bereits vorinstalliert. Zudem sind die folgenden Python- und R-Pakete von Microsoft bereits enthalten:
 
-| Sprache | Paket | und Beschreibung |
+| Sprache | Paket | Beschreibung |
 |-|-|-|
 | Python | [revoscalepy](python/ref-py-revoscalepy.md) | Das primäre Paket mit skalierbaren Python-Funktionen zum Transformieren und Bearbeiten von Daten sowie zum Erstellen von statistischen Übersichten, Visualisierungen und vielen anderen Modellierungsformen. Zudem enthält das Paket zur Parallelverarbeitung Funktionen zum automatischen Verteilen von Workloads auf verfügbare Kerne. |
 | Python | [microsoftml](python/ref-py-microsoftml.md) | Stellt Machine Learning-Algorithmen zur Erstellung von benutzerdefinierten Modellen für die Text-, Bild- und Stimmungsanalyse bereit. | 
@@ -81,7 +81,7 @@ Weitere Informationen zu den in Machine Learning Services installierten Paketen 
 
 + [Abrufen von Paketinformationen für Python](package-management/python-package-information.md)
 + [Installieren von Python-Paketen mit sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md)
-+ [Abrufen von Paketinformationen für R](package-management/r-package-information.md)
++ [Abrufen von R-Paketinformationen](package-management/r-package-information.md)
 + [Installieren von neuen R-Paketen mit sqlmlutils](package-management/install-additional-r-packages-on-sql-server.md)
 
 ## <a name="how-do-i-get-started-with-machine-learning-services"></a>Erste Schritte mit Machine Learning Services
@@ -97,9 +97,9 @@ Weitere Informationen zu den in Machine Learning Services installierten Paketen 
 
     + Schnellstart: [Erstellen und Ausführen einfacher R-Skripts in SQL](tutorials/quickstart-r-create-script.md)
     + Schnellstart: [Erstellen und Trainieren eines Vorhersagemodells in R](tutorials/quickstart-r-train-score-model.md)
-    + Lernprogramm: [Verwenden von Python in T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Daten durchsuchen, Features entwickeln, Modelle trainieren und bereitstellen und Vorhersagen treffen (fünfteilige Reihe)
-    + Lernprogramm: [Verwenden von R in T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Daten durchsuchen, Features entwickeln, Modelle trainieren und bereitstellen und Vorhersagen treffen (fünfteilige Reihe)
-    + Lernprogramm: [Verwenden von Machine Learning Services in R-Tools](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Daten durchsuchen, Graphen und Plots erstellen, Features entwickeln, Modelle trainieren und bereitstellen und Vorhersagen treffen (sechsteilige Reihe)
+    + Tutorial: [Verwenden von Python in T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Daten durchsuchen, Features entwickeln, Modelle trainieren und bereitstellen und Vorhersagen treffen (fünfteilige Reihe)
+    + Tutorial: [Verwenden von R in T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Daten durchsuchen, Features entwickeln, Modelle trainieren und bereitstellen und Vorhersagen treffen (fünfteilige Reihe)
+    + Tutorial: [Verwenden von Machine Learning Services in R-Tools](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Daten durchsuchen, Graphen und Plots erstellen, Features entwickeln, Modelle trainieren und bereitstellen und Vorhersagen treffen (sechsteilige Reihe)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

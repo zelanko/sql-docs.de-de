@@ -1,6 +1,8 @@
 ---
-title: Erste Schritte mit dem ReportViewer 2016-Steuerelement | Microsoft-Dokumentation
-ms.date: 09/18/2018
+title: Erste Schritte mit Berichts-Viewer-Steuerelementen
+description: Die Report Viewer-Steuerelemente können verwendet werden, um RDL-Berichte von Reporting Services in Web- und WinForms-Apps zu integrieren.
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -8,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1fd408e5459aea50c04c29d234fce54d8a3ab772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d7e1e64bddcdcc7efed701770aea0e97c8e84ec5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503909"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241826"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrieren von Reporting Services mit den Report Viewer-Steuerelementen – erste Schritte
 
@@ -48,7 +50,7 @@ Die Report Viewer-Steuerelemente können verwendet werden, um RDL-Berichte von R
     
 Die letzte Seite sollte wie folgt aussehen:
 
-```
+```html
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
@@ -69,7 +71,6 @@ Die letzte Seite sollte wie folgt aussehen:
     </form>
 </body>
 </html>
-
 ```
 
 ## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>Aktualisieren eines vorhandenen Projekts zur Verwendung des Report Viewer-Steuerelements
@@ -78,7 +79,7 @@ Stellen Sie sicher, dass Sie alle Assemblyverweise auf Version *15.0.0.0* aktual
 
 ### <a name="sample-webconfig-changes"></a>Beispiel für web.config-Änderungen
 
-```
+```xml
 <?xml version="1.0"?>
 <!--
   For more information on how to configure your ASP.NET application, please visit
@@ -145,9 +146,9 @@ Stellen Sie sicher, dass Sie alle Assemblyverweise auf Version *15.0.0.0* aktual
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. Fügen Sie entweder ein neues Steuerelement aus Code hinzu oder [fügen Sie der Toolbox das Steuerelement hinzu](##adding-control-to-visual-studio-toolbar).
+3. Fügen Sie entweder ein neues Steuerelement aus Code hinzu oder [fügen Sie der Toolbox das Steuerelement hinzu](#adding-control-to-visual-studio-toolbar).
 
-    ```
+    ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     
     private void InitializeComponent()
@@ -175,7 +176,7 @@ Wenn Sie die Höhe des Anzeigesteuerelements auf 100 % festlegen, muss das über
 
 ### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>Festlegen der Höhe aller Vorgängerelemente auf 100 %
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -196,14 +197,13 @@ Wenn Sie die Höhe des Anzeigesteuerelements auf 100 % festlegen, muss das über
     </form>
 </body>
 </html>
-
 ```
 
 ### <a name="setting-the-parents-height-attribute"></a>Festlegen der Höhe des übergeordneten Elements
 
 Weitere Informationen zu den Längen der Viewports in Prozent finden Sie unter [Viewport-percentage lengths (Längen der Viewports in Prozent)](http://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -219,7 +219,6 @@ Weitere Informationen zu den Längen der Viewports in Prozent finden Sie unter [
     </form>
 </body>
 </html>
-
 ```
 
 ## <a name="adding-control-to-visual-studio-toolbar"></a>Hinzufügen eines Steuerelements zur Visual Studio-Symbolleiste
@@ -261,7 +260,7 @@ Das Anzeigesteuerelement wurde für moderne Browser entwickelt. Das Steuerelemen
 
 Informieren Sie das Team in den [Reporting Services-Foren](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) über Probleme.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Datensammlung im Report Viewer-Steuerelement](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

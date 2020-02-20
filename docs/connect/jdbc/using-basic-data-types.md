@@ -1,5 +1,5 @@
 ---
-title: Verwenden von grundlegenden Datentypen | Microsoft-Dokumentation
+title: Verwenden von Standarddatentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026514"
 ---
 # <a name="using-basic-data-types"></a>Verwenden von Standarddatentypen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwendet die JDBC-Standarddatentypen für die Konvertierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in ein Format, das von der Programmiersprache Java verarbeitet werden kann, und umgekehrt. Der JDBC-Treiber bietet Unterstützung für die JDBC 4,0-API, die den **SQLXML** -Datentyp und nationale (Unicode-) Datentypen wie **NCHAR**, **nvarchar**, **LONGNVARCHAR**und **NCLOB**enthält.  
+Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwendet die JDBC-Standarddatentypen für die Konvertierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in ein Format, das von der Programmiersprache Java verarbeitet werden kann, und umgekehrt. Der JDBC-Treiber bietet Unterstützung für die JDBC-API 4.0, die die Datentypen **SQLXML** und nationale Datentypen (Unicode), z. B. **NCHAR**, **NVARCHAR**, **LONGNVARCHAR** und **NCLOB**.  
   
 ## <a name="data-type-mappings"></a>Datentypzuordnungen
 
@@ -32,43 +32,43 @@ Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!
 | BIGINT             | bigint                                             | long                         |
 | BINARY             | BINARY                                             | byte[]                       |
 | bit                | BIT                                                | boolean                      |
-| char               | CHAR                                               | Zeichenfolge                       |
+| char               | CHAR                                               | String                       |
 | date               | DATE                                               | java.sql.Date                |
-| DATETIME           | timestamp                                          | java.sql.Timestamp           |
+| datetime           | timestamp                                          | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
 | datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
-| Decimal            | DEZIMAL                                            | java.math.BigDecimal         |
-| FLOAT              | DOUBLE                                             | double                       |
+| Decimal            | DECIMAL                                            | java.math.BigDecimal         |
+| float              | Double                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
 | INT                | INTEGER                                            | INT                          |
-| money              | DEZIMAL                                            | java.math.BigDecimal         |
-| NCHAR              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | Zeichenfolge                       |
-| ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | Zeichenfolge                       |
+| money              | DECIMAL                                            | java.math.BigDecimal         |
+| NCHAR              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | String                       |
+| ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String                       |
 | NUMERIC            | NUMERIC                                            | java.math.BigDecimal         |
-| NVARCHAR           | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | Zeichenfolge                       |
-| nvarchar(max)      | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | Zeichenfolge                       |
-| REAL               | real                                               | FLOAT                        |
+| NVARCHAR           | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
+| nvarchar(max)      | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
+| real               | real                                               | float                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
 | SMALLINT           | SMALLINT                                           | short                        |
-| SMALLMONEY         | DEZIMAL                                            | java.math.BigDecimal         |
-| text               | LONGVARCHAR                                        | Zeichenfolge                       |
+| SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
+| text               | LONGVARCHAR                                        | String                       |
 | time               | TIME (1)                                           | java.sql.Time (1)            |
 | timestamp          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
-| UNIQUEIDENTIFIER   | CHAR                                               | Zeichenfolge                       |
+| UNIQUEIDENTIFIER   | CHAR                                               | String                       |
 | varbinary          | VARBINARY                                          | byte[]                       |
 | varbinary(max)     | VARBINARY                                          | byte[]                       |
-| varchar            | VARCHAR                                            | Zeichenfolge                       |
-| varchar(max)       | VARCHAR                                            | Zeichenfolge                       |
-| xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | Zeichenfolge<br /><br /> SQLXML    |
-| sqlvariant         | SQLVARIANT                                         | Objekt                       |
+| varchar            | VARCHAR                                            | String                       |
+| varchar(max)       | VARCHAR                                            | String                       |
+| Xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String<br /><br /> SQLXML    |
+| sqlvariant         | SQLVARIANT                                         | Object                       |
 | Geometrie           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
 (1) Zur Verwendung von java.sql.Time mit dem Zeittyp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf „false“ festlegen.  
   
-(2) Sie können Programm gesteuert auf die Werte von **DateTimeOffset** mit der [DateTimeOffset-Klasse](../../connect/jdbc/reference/datetimeoffset-class.md)zugreifen.  
+(2) Sie können mit der [DateTimeOffset-Klasse](../../connect/jdbc/reference/datetimeoffset-class.md) programmgesteuert auf die Werte von **datetimeoffset** zugreifen.  
   
 Die folgenden Abschnitte enthalten Beispiele für die Verwendung des JDBC-Treibers und der Standarddatentypen. Ein ausführlicheres Beispiel für die Verwendung der Standarddatentypen in einer Java-Anwendung finden Sie unter [Standarddatentypen – Beispiel](../../connect/jdbc/basic-data-types-sample.md).  
   
@@ -89,7 +89,7 @@ Wenn Sie Daten aus einer Datenquelle abrufen müssen und den Typ der abgerufenen
 
 ## <a name="updating-data-by-data-type"></a>Aktualisieren von Daten nach Datentyp
 
-Wenn Sie den Wert eines Felds in einer Datenquelle aktualisieren müssen, verwenden Sie einen der\<Updatetyp > Methoden der SQLServerResultSet-Klasse. Im folgenden Beispiel wird die [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)-Methode zusammen mit der [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)-Methode verwendet, um die Daten in der Datenquelle zu aktualisieren:  
+Wenn Sie den Wert eines Felds in einer Datenquelle aktualisieren müssen, verwenden Sie eine der update\<Typ>-Methoden der SQLServerResultSet-Klasse. Im folgenden Beispiel wird die [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)-Methode zusammen mit der [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)-Methode verwendet, um die Daten in der Datenquelle zu aktualisieren:  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -113,7 +113,7 @@ Wenn Sie typisierte Parameter an eine gespeicherte Prozedur übergeben müssen, 
 > [!NOTE]  
 > In diesem Beispiel wird ein Resultset zurückgegeben, das die Ergebnisse der gespeicherten Prozedur enthält.
 
-Weitere Informationen zum Verwenden des JDBC-Treibers mit gespeicherten Prozeduren und Eingabe Parametern finden Sie unter [Verwenden einer gespeicherten Prozedur mit Eingabe Parametern](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Weitere Informationen zum Verwenden des JDBC-Treibers mit gespeicherten Prozeduren und Eingabeparametern finden Sie unter [Verwenden von gespeicherten Prozeduren mit Eingabeparametern](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Abrufen von Parametern von gespeicherten Prozeduren
 
@@ -124,8 +124,8 @@ Wenn Sie Parameter wieder aus einer gespeicherten Prozedur abrufen müssen, müs
 > [!NOTE]  
 > Zusätzlich zum zurückgegebenen out-Parameter kann auch ein Resultset zurückgegeben werden, das die Ergebnisse der gespeicherten Prozedur enthält.  
   
-Weitere Informationen zum Verwenden des JDBC-Treibers mit gespeicherten Prozeduren und Ausgabeparametern finden [Sie unter Verwenden einer gespeicherten Prozedur mit Ausgabeparametern](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
+Weitere Informationen zum Verwenden des JDBC-Treibers mit gespeicherten Prozeduren und Ausgabeparametern finden Sie unter [Verwenden von gespeicherten Prozeduren mit Ausgabeparametern](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

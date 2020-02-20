@@ -1,23 +1,24 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069008"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242691"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken
+
 Sie können einen Erstellungs-Contributor erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein Datenbankprojekt erstellen. In dieser exemplarischen Vorgehensweise erstellen Sie einen Erstellungs-Contributor mit der Bezeichnung ModelStatistics, von dem Statistiken über das SQL-Datenbankmodell ausgegeben werden, wenn Sie ein Datenbankprojekt erstellen. Da von diesem Erstellungs-Contributor beim Erstellen Parameter übernommen werden, sind einige zusätzliche Schritte erforderlich.  
   
 In dieser exemplarischen Vorgehensweise führen Sie folgende Hauptaufgaben aus:  
@@ -60,7 +61,7 @@ Hier sind einige der Befehle, die vom Beispiel-Contributor in dieser exemplarisc
   
 **Eindeutiges Identifizieren Ihres Contributors**  
   
-Während des Erstellungsprozesses werden benutzerdefinierte Contributors aus dem Standarderweiterungsverzeichnis geladen. Erstellungs-Contributors werden anhand eines [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) -Attributs gekennzeichnet. Dieses Attribut muss angegeben werden, damit die Contributors ermittelt werden können. Dieses Attribut sollte folgendem ähnlich sehen:  
+Während des Erstellungsprozesses werden benutzerdefinierte Contributors aus dem Standarderweiterungsverzeichnis geladen. Erstellungscontributors werden anhand eines [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx)-Attributs gekennzeichnet. Dieses Attribut muss angegeben werden, damit die Contributors ermittelt werden können. Dieses Attribut sollte folgendem ähnlich sehen:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -74,7 +75,7 @@ Zum Erstellen eines Erstellungs-Contributors führen Sie folgende Aufgaben aus:
   
 -   Erstellen Sie ein Klassenbibliotheksprojekt, und fügen Sie die erforderlichen Verweise hinzu.  
   
--   Definieren Sie eine Klasse mit der Bezeichnung ModelStatistics, die von [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)erbt.  
+-   Definieren Sie eine Klasse mit der Bezeichnung „ModelStatistics“, die von [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) erbt.  
   
 -   Überschreiben Sie die OnExecute-Methode.  
   
@@ -447,7 +448,7 @@ Zum Erstellen eines Erstellungs-Contributors führen Sie folgende Aufgaben aus:
   
 8.  Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-9. Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  
+9. Klicken Sie im Menü **Build** auf **Projektmappe erstellen**.  
   
     Als Nächstes müssen Sie die Assembly installieren, damit sie geladen wird, wenn Sie SQL-Projekte erstellen.  
   
@@ -587,7 +588,7 @@ Relationships
   
     Die gemeldeten Ergebnisse sind auch in der XML-Datei enthalten.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 Sie können weitere Tools erstellen, um die Verarbeitung der Ausgabe-XML-Datei durchzuführen. Dies ist nur ein Beispiel eines Erstellungs-Contributors. Sie können beispielsweise einen Erstellungs-Contributor erstellen, um eine Datenwörterbuch-Datei als Teil Ihres Builds auszugeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

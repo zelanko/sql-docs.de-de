@@ -1,5 +1,5 @@
 ---
-title: getUnicodeStream-Methode (Java. lang. String) | Microsoft-Dokumentation
+title: Methode „getUnicodeStream“ (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e8ea50a3-804a-4752-96e5-eb3d521f93c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be721dad48fae3f83aa720516d0979d9f8ff26df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978411"
 ---
 # <a name="getunicodestream-method-javalangstring"></a>getUnicodeStream-Methode (java.lang.String)
@@ -43,13 +43,13 @@ public java.io.InputStream getUnicodeStream(java.lang.String columnName)
  Eine **Zeichenfolge**, die den Spaltennamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein InputStream-Objekt.  
+ Ein InputStream-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getunicodestring-Methode wird von der getunicodestring-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese getUnicodeString-Methode wird von der getUnicodeString-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getUnicodeStream-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)   

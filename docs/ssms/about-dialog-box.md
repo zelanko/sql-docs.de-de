@@ -1,6 +1,6 @@
 ---
-title: Informationen über das Dialogfeld „Info“| Microsoft-Dokumentation
-ms.custom: ''
+title: Info (Dialogfeld)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23ee5e291bc1007e11a1342968c9cafbc3440909
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ee278c968bbfc9e0bde214080fcdcf20f61e4198
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263314"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254569"
 ---
 # <a name="about-dialog-box"></a>Info (Dialogfeld)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
-Das Dialogfeld **Info** stellt Produktinformationen bereit und ermöglicht Ihnen den Zugriff auf Informationen zu dem Computer, auf dem das Produkt ausgeführt wird. Bei Evaluierungsversionen ist im Eintrag für [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] die Anzahl der Tage aufgeführt, die bis zum Ablaufen der Installation verbleiben. Dieses Dialogfeld steht im Menü **Hilfe** zur Verfügung.  
+Das Dialogfeld **Info** stellt Produktinformationen bereit und ermöglicht Ihnen den Zugriff auf Informationen zu dem Computer, auf dem das Produkt ausgeführt wird. Bei Evaluierungsversionen wird im [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]-Eintrag die Anzahl der verbleibenden Tage bis zum Ablaufen der Installation aufgeführt. Dieses Dialogfeld steht im Menü **Hilfe** zur Verfügung.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Komponentenname**  
 Listet die Namen der einzelnen installierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Elemente auf.  
   

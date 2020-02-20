@@ -1,5 +1,5 @@
 ---
-title: allproceduresarecallable-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: allProceduresAreCallable-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8886137d-455e-497c-afea-4b326eda52f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 559c025a5fcb7d27f4520cea0868761b449107a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955928"
 ---
 # <a name="allproceduresarecallable-method-sqlserverdatabasemetadata"></a>allProceduresAreCallable-Methode (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean allProceduresAreCallable()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn der Benutzer über Berechtigungen zum Abrufen aller Prozeduren verfügt. Andernfalls lautet der Wert **false**.  
+ Der Wert **TRUE** wird zurückgegeben, wenn der Benutzer über Berechtigungen zum Aufrufen aller Prozeduren verfügt. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese allproceduresarecallable-Methode wird von der allproceduresarecallable-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese allProceduresAreCallable-Methode wird von der allProceduresAreCallable-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

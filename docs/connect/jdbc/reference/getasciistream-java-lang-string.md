@@ -1,5 +1,5 @@
 ---
-title: getAsciiStream (Java. lang. String) | Microsoft-Dokumentation
+title: getAsciiStream (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 630b659f-eb36-4277-b04e-9a2e6134f795
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b31fe466494bdcbca279a5229a3ff083ce20dd51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954223"
 ---
 # <a name="getasciistream-javalangstring"></a>getAsciiStream (java.lang.String)
@@ -40,7 +40,7 @@ public final java.io.InputStream getAsciiStream(java.lang.String paramName)
  Eine **Zeichenfolge** zum Angeben des Parameternamens.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein InputStream-Objekt.  
+ Ein InputStream-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

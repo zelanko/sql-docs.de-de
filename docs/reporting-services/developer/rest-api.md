@@ -1,5 +1,5 @@
 ---
-title: Entwickeln mit REST-APIs für Reporting Services | Microsoft-Dokumentation
+title: Entwickeln mithilfe von REST-APIs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: ba424fa0c79249a8870962d0df4cdaf383c9aa39
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 48d3cea7dfb57ad771f512806fd0c95528566559
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263033"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75321820"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Entwickeln mit REST-APIs für Reporting Services
 
@@ -32,10 +32,10 @@ Ein REST-API-Anforderung/Antwort-Paar kann in fünf Komponenten gegliedert werde
 
 * Der **Anforderungs-URI**, der aus `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}` besteht. Obwohl der Header der Anforderungsnachricht den Anforderungs-URI enthält, erwähnen wir ihn an dieser Stelle extra, da es für viele Sprachen und Frameworks erforderlich ist, diesen separat der Anforderungsnachricht zu entnehmen.
 
-    * URI-Schema: gibt das Protokoll an, das zum Übertragen der Anforderung verwendet wird. Zum Beispiel: `http` oder `https`.
-    * URI-Host: gibt den Domänennamen oder die IP-Adresse des Servers an, auf dem die REST-Dienstendpunkte gehostet werden. Zum Beispiel: `myserver.contoso.com`.
-    * Ressourcenpfad: gibt die Ressource oder die Ressourcenauflistung an, die möglicherweise mehrere Segmente enthalten, die vom Dienst zur Bestimmung der Auswahl dieser Ressourcen verwendet werden. Beispielsweise kann `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` verwendet werden, um angegebene Eigenschaften für CatalogItem zu verwenden.
-    * Abfragezeichenfolge (optional): stellt zusätzliche, einfache Parameter wie die API-Version oder die Kriterien der Ressourcenauswahl bereit.
+    * URI-Schema: Gibt das Protokoll an, das zum Übertragen der Anforderung verwendet wird. Zum Beispiel: `http` oder `https`.
+    * URI-Host: Gibt den Domänennamen oder die IP-Adresse des Servers an, auf dem der REST-Dienstendpunkt gehostet wird. Zum Beispiel: `myserver.contoso.com`.
+    * Ressourcenpfad: Gibt die Ressource oder die Ressourcenauflistung an, die möglicherweise mehrere Segmente enthält, die vom Dienst zur Bestimmung der Auswahl dieser Ressourcen verwendet werden. Beispielsweise kann `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` verwendet werden, um angegebene Eigenschaften für CatalogItem zu verwenden.
+    * Abfragezeichenfolge (optional): Stellt zusätzliche, einfache Parameter wie die API-Version oder die Kriterien der Ressourcenauswahl bereit.
 
 * Nachrichtenheaderfelder mit HTTP-Anforderungen:
 

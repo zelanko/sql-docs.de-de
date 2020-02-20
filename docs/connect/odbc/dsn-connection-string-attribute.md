@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: MightyPen
+ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712918"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911244"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen
 
@@ -22,9 +22,9 @@ Auf dieser Seite sind die Schlüsselwörter für Verbindungszeichenfolgen und f�
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Unterstützte Schlüsselwörter für DSN/Verbindungszeichenfolgen und Verbindungsattribute
 
-In der folgenden Tabelle sind die verfügbaren Schlüsselwörter und Attribute nach Plattform aufgelistet (L: Linux, M: Max, W: Windows). Klicken Sie auf das Schlüsselwort oder das Attribut, um detailliertere Informationen zu erhalten.
+In der folgenden Tabelle sind die verfügbaren Schlüsselwörter und Attribute nach Plattform aufgelistet (L: Linux; M: Mac; W: Windows). Klicken Sie auf das Schlüsselwort oder das Attribut, um detailliertere Informationen zu erhalten.
 
-| DSN / Verbindungszeichenfolgen-Schlüsselwort | Verbindungsattribut | Platform |
+| DSN / Verbindungszeichenfolgen-Schlüsselwort | Verbindungsattribut | Plattform |
 |-|-|-|
 | [Addr](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Adresse](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -45,8 +45,8 @@ In der folgenden Tabelle sind die verfügbaren Schlüsselwörter und Attribute n
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 und höher, nur DSN)| | LMW |
-| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +, nur DSN) | | LMW |
+| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, nur DSN)| | LMW |
+| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, nur DSN) | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -113,16 +113,17 @@ In der folgenden Tabelle sind die verfügbaren Schlüsselwörter und Attribute n
 | | [SQL_COPT_SS_OLDPWD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssoldpwd) | LMW |
 | | [SQL_COPT_SS_PERF_DATA_LOG_NOW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalognow) | W |
 | | [SQL_COPT_SS_PRESERVE_CURSORS](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsspreservecursors) | LMW |
+| | [SQL_COPT_SS_SPID](../../connect/odbc/dsn-connection-string-attribute.md#sql_copt_ss_spid) (v17.5+) | LMW |
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
 | [ClientCertificate](../../connect/odbc/dsn-connection-string-attribute.md#clientcertificate) | | LMW | 
-| [Clientkey](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
+| [ClientKey](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
 Hier sind einige Schlüsselwörter für Verbindungszeichenfolgen und Verbindungsattribute aufgeführt, die nicht in den Artikeln [Using Connection String Keywords with SQL Server Native Client (Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client)](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) und [SQLSetConnectAttr Function (SQLSetConnectAttr-Funktion)](../../odbc/reference/syntax/sqlsetconnectattr-function.md) dokumentiert sind.
 
-### <a name="description"></a>und Beschreibung
+### <a name="description"></a>Beschreibung
 
 Wird zum Beschreiben der Datenquelle verwendet.
 
@@ -130,7 +131,7 @@ Wird zum Beschreiben der Datenquelle verwendet.
 
 Steuert die ANSI-in-OEM-Konvertierung. 
 
-| Attributwert | und Beschreibung |
+| Attributwert | Beschreibung |
 |-|-|
 | SQL_AO_OFF | (Standard) Keine Zeichenübersetzung wird durchgeführt. |
 | SQL_AO_ON | Zeichenübersetzung wird durchgeführt. |
@@ -139,7 +140,7 @@ Steuert die ANSI-in-OEM-Konvertierung.
 
 Steuert die Verwendung von SQL Server-Fallbackverbindungen. Wird nicht mehr unterstützt.
 
-| Attributwert | und Beschreibung |
+| Attributwert | Beschreibung |
 |-|-|
 | SQL_FB_OFF | (Standard) Fallbackverbindungen sind deaktiviert. |
 | SQL_FB_ON | Fallbackverbindungen sind aktiviert. |
@@ -152,7 +153,7 @@ Steuert die Verwendung von SQL Server-Fallbackverbindungen. Wird nicht mehr unte
 
 Legt den Authentifizierungsmodus für die Verbindung mit SQL Server fest. Weitere Informationen finden Sie unter [Using Azure Active Directory (Verwenden von Azure Active Directory)](using-azure-active-directory.md).
 
-| Schlüsselwortwert | Attributwert | und Beschreibung |
+| Schlüsselwortwert | Attributwert | Beschreibung |
 |-|-|-|
 | |SQL_AU_NONE|(Standard) Nicht festgelegt. Die Kombination anderer Attribute bestimmt den Authentifizierungsmodus.|
 |SqlPassword|SQL_AU_PASSWORD|SQL Server-Standardauthentifizierung mit Benutzername und Kennwort.|
@@ -169,7 +170,7 @@ Legt den Authentifizierungsmodus für die Verbindung mit SQL Server fest. Weiter
 
 Steuert transparente Spaltenverschlüsselung (Always Encrypted). Weitere Informationen finden Sie unter [Using Always Encrypted with the ODBC Driver for SQL Server (Verwenden von Always Encrypted mit dem ODBC-Treiber für SQL Server)](using-always-encrypted-with-the-odbc-driver.md).
 
-| Schlüsselwortwert | Attributwert | und Beschreibung |
+| Schlüsselwortwert | Attributwert | Beschreibung |
 |-|-|-|
 |Aktiviert|SQL_CE_ENABLED|Aktiviert Always Encrypted.|
 |Disabled|SQL_CE_DISABLED|(Standard) Deaktiviert Always Encrypted.|
@@ -179,16 +180,16 @@ Steuert transparente Spaltenverschlüsselung (Always Encrypted). Weitere Informa
 
 Steuert das Feature zur transparenten Netzwerk-IP-Adressauflösung, das mit MultiSubnetFailover interagiert, um erneute Verbindungsversuche zu beschleunigen. Weitere Informationen finden Sie unter [Using Transparent Network IP Resolution (Verwenden der transparenten Netzwerk-IP-Adressauflösung)](using-transparent-network-ip-resolution.md).
 
-| Schlüsselwortwert | Attributwert| und Beschreibung |
+| Schlüsselwortwert | Attributwert| Beschreibung |
 |-|-|-|
-|Ja|SQL_IS_ON|(Standard) Aktiviert die transparente Netzwerk-IP-Adressauflösung.|
-|Nein|SQL_IS_OFF|Deaktiviert die transparente Netzwerk-IP-Adressauflösung.|
+|Aktiviert|SQL_IS_ON|(Standard) Aktiviert die transparente Netzwerk-IP-Adressauflösung.|
+|Disabled|SQL_IS_OFF|Deaktiviert die transparente Netzwerk-IP-Adressauflösung.|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
 Steuert die Verwendung von „SET FMTONLY“ für Metadaten bei der Verbindung mit SQL Server 2012 und höheren Versionen.
 
-| Schlüsselwortwert | und Beschreibung |
+| Schlüsselwortwert | Beschreibung |
 |-|-|
 |Nein|(Standard) Verwenden von „sp_describe_first_result_set“ für Metadaten, wenn verfügbar. |
 |Ja| Verwenden von „SET FMTONLY“ für Metadaten. |
@@ -196,33 +197,33 @@ Steuert die Verwendung von „SET FMTONLY“ für Metadaten bei der Verbindung m
 
 ## <a name="clientcertificate"></a>ClientCertificate
 
-Gibt das Zertifikat an, das für die Authentifizierung verwendet werden soll. Folgende Optionen sind verfügbar: 
+Dieser Wert gibt das Zertifikat an, das für die Authentifizierung verwendet werden soll. Die Optionen sind: 
 
-| Optionswert | und Beschreibung |
+| Optionswert | Beschreibung |
 |-|-|
-| sha1:`<hash_value>` | Der ODBC-Treiber verwendet den SHA1-Hash, um ein Zertifikat im Windows-Zertifikat Speicher zu finden. |
-| subject:`<subject>` | Der ODBC-Treiber verwendet subject, um ein Zertifikat im Windows-Zertifikat Speicher zu finden. |
-| Datei: `<file_location>` [, Kennwort: `<password>`] | Der ODBC-Treiber verwendet eine Zertifikatsdatei. |
+| sha1:`<hash_value>` | Der ODBC-Treiber verwendet den SHA1-Hash, um im Windows-Zertifikatspeicher nach einem Zertifikat zu suchen. |
+| subject:`<subject>` | Der ODBC-Treiber verwendet „subject“, um im Windows-Zertifikatspeicher nach einem Zertifikat zu suchen. |
+| file:`<file_location>`[,password:`<password>`] | Der ODBC-Treiber verwendet eine Zertifikatsdatei. |
 
-Falls das Zertifikat im PFX-Format vorliegt und der private Schlüssel im PFX-Zertifikat Kenn Wort geschützt ist, ist das Kenn Wort Schlüsselwort erforderlich. Für Zertifikate im PEM-und der-Format ist das clientkey-Attribut erforderlich.
+Falls das Zertifikat im PFX-Format vorliegt und der private Schlüssel im PFX-Zertifikat kennwortgeschützt ist, wird das Schlüsselwort „password“ benötigt. Für Zertifikate im PEM- und DER-Format wird das ClientKey-Attribut benötigt.
 
 
-## <a name="clientkey"></a>Clientkey
+## <a name="clientkey"></a>ClientKey
 
-Gibt den Speicherort des privaten Schlüssels für PEM-oder der-Zertifikate an, der durch das ClientCertificate-Attribut angegeben wird. Format: 
+Dieser Wert gibt den Speicherort des privaten Schlüssels für PEM- oder DER-Zertifikate an, die durch das ClientCertificate-Attribut angegeben werden. Format: 
 
-| Optionswert | und Beschreibung |
+| Optionswert | Beschreibung |
 |-|-|
-| Datei: `<file_location>` [, Kennwort: `<password>`] | Gibt den Speicherort der Datei mit dem privaten Schlüssel an. |
+| file:`<file_location>`[,password:`<password>`] | Diese Zeichenfolge gibt den Speicherort der Datei mit dem privaten Schlüssel an. |
 
-Wenn die private Schlüsseldatei Kenn Wort geschützt ist, ist das Schlüsselwort "Password" erforderlich. Wenn das Kennwort beliebige ","-Zeichen enthält, wird unmittelbar nach jedem ein zusätzliches ","-Zeichen hinzugefügt. Wenn das Kennwort z. b. "a, b, c" lautet, ist das in der Verbindungs Zeichenfolge vorhandene Kennwort "a", "b", "c". 
+Wenn die Datei mit privatem Schlüssel kennwortgeschützt ist, wird das Schlüsselwort „password“ benötigt. Wenn das Kennwort Kommazeichen (,) enthält, wird unmittelbar nach jedem Komma ein zusätzliches hinzugefügt. Wenn das Kennwort z. B. „a, b, c“ ist, lautet das Kennwort mit Escapezeichen in der Verbindungszeichenfolge „a,,b,,c“. 
     
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
 Ermöglicht die Verwendung eines Zugriffstokens für Azure Active Directory zur Authentifizierung. Weitere Informationen finden Sie unter [Using Azure Active Directory (Verwenden von Azure Active Directory)](using-azure-active-directory.md).
 
-| Attributwert | und Beschreibung |
+| Attributwert | Beschreibung |
 |-|-|
 | NULL | (Standard) Kein Zugriffstoken steht zur Verfügung. |
 | ACCESSTOKEN* | Zeiger zu einem Zugriffstoken. |
@@ -231,7 +232,7 @@ Ermöglicht die Verwendung eines Zugriffstokens für Azure Active Directory zur 
 
 Kommuniziert mit einer geladenen Keystore-Anbieterbibliothek. Steuert transparente Spaltenverschlüsselung (Always Encrypted). Dieses Attribut hat keinen Standardwert. Weitere Informationen finden Sie unter [Custom Keystore Providers (Benutzerdefinierte Keystore-Anbieter)](custom-keystore-providers.md).
 
-| Attributwert | und Beschreibung |
+| Attributwert | Beschreibung |
 |-|-|
 | CEKEYSTOREDATA * | Kommunikationsdatenstruktur für die Keystore-Anbieterbibliothek |
 
@@ -239,7 +240,7 @@ Kommuniziert mit einer geladenen Keystore-Anbieterbibliothek. Steuert transparen
 
 Lädt eine Keystore-Anbieterbibliothek für Always Encrypted oder ruft die Namen der geladenen Keystore-Anbieterbibliotheken ab. Weitere Informationen finden Sie unter [Custom Keystore Providers (Benutzerdefinierte Keystore-Anbieter)](custom-keystore-providers.md). Dieses Attribut hat keinen Standardwert.
 
-| Attributwert | und Beschreibung |
+| Attributwert | Beschreibung |
 |-|-|
 | char * | Pfad zur Keystore-Anbieterbibliothek |
 
@@ -254,10 +255,18 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 ``` 
 
-|value|und Beschreibung|Plattformen|  
+|value|Beschreibung|Plattformen|  
 |-----------|-----------------|-----------------|  
 |XACALLPARAM object*|Der Zeiger auf das `XACALLPARAM`-Objekt.|Windows, Linux und Mac|
 |TRUE|Ordnet die XA-Transaktion der ODBC-Verbindung zu. Alle entsprechenden Datenbankaktivitäten werden unter dem Schutz der XA-Transaktion durchgeführt.|Windows|  
 |FALSE|Hebt die Zuordnung der XA-Transaktion zur ODBC-Verbindung auf.|Windows|
 
  Weitere Informationen zu XA-Transaktionen finden Sie unter [Using XA Tansactions (Verwenden von XA-Transaktionen)](../../connect/odbc/use-xa-with-dtc.md).
+
+### <a name="sql_copt_ss_spid"></a>SQL_COPT_SS_SPID
+
+Dieser Wert ruft die Serverprozess-ID der Verbindung ab. Er entspricht der T-SQL-Variablen [@@SPID](../../t-sql/functions/spid-transact-sql.md), mit dem Unterschied, dass er keinen zusätzlichen Roundtrip zum Server verursacht.
+
+| Attributwert | Beschreibung |
+|-|-|
+| DWORD | SPID |

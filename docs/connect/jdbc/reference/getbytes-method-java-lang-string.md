@@ -16,10 +16,10 @@ ms.assetid: 4d0dac7f-7f39-47a2-953e-80ab03688d82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 35476869b1e083e66c349439563b4fed5fd8be2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953379"
 ---
 # <a name="getbytes-method-javalangstring"></a>getBytes-Methode (java.lang.String)
@@ -40,7 +40,7 @@ public byte[] getBytes(java.lang.String sCol)
  Ein **String-Objekt**, das den Parameternamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Array von **Byte** Werten.  
+ Ein Array von **byte**-Werten  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

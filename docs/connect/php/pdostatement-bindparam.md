@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: bindParam | Microsoft-Dokumentation'
+title: PDOStatement::bindParam | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 77b0899d6bc0a73db5e0cfa7794209ab74ed25ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936157"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918654"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,15 +30,15 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*parameter*: Ein (gemischter) Parameterbezeichner. Ein Parametername (:name) für eine Anweisung, die benannte Platzhalter verwendet. Für eine vorbereitete Anweisung mit der Fragezeichensyntax stellt dieser den 1-basierten Index des Parameters dar.  
+$*parameter*: Dies ist ein (gemischter) Parameterbezeichner. Ein Parametername (:name) für eine Anweisung, die benannte Platzhalter verwendet. Für eine vorbereitete Anweisung mit der Fragezeichensyntax stellt dieser den 1-basierten Index des Parameters dar.  
   
-&$*variable:* Der (gemischte) Name der PHP-Variablen, die an den SQL-Anweisungsparameter gebunden werden soll.  
+&$*variable*: Dies ist der (gemischte) Name der PHP-Variable, die an den SQL-Anweisungsparameter gebunden werden soll.  
   
-$*data_type:* Eine optionale (ganzzahlige) PDO::PARAM_*-Konstante. Der Standardwert ist PDO::PARAM_STR.  
+$*data_type*: Dies ist eine optionale (ganzzahlige) PDO::PARAM_*-Konstante. Der Standardwert ist PDO::PARAM_STR.  
   
-$*length:* Eine optionale (ganzzahlige) Länge des Datentyps. Sie können PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE festlegen, um die Standardgröße anzugeben, wenn Sie PDO::PARAM_INT oder PDO::PARAM_BOOL in $*data_type* verwenden.  
+$*length*: Dies ist die optionale (ganzzahlige) Länge des Datentyps. Sie können PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE festlegen, um die Standardgröße anzugeben, wenn Sie PDO::PARAM_INT oder PDO::PARAM_BOOL in $*data_type* verwenden.  
   
-$*driver_options*: die optionalen (gemischten) treiberspezifischen Optionen. Beispielsweise können Sie PDO::SQLSRV_ENCODING_UTF8 angeben, um die Spalte an eine Variable als UTF-8-codierte Zeichenfolge zu binden.  
+$*driver_options*: Dies sind die optionalen (gemischten) treiberspezifischen Optionen. Beispielsweise können Sie PDO::SQLSRV_ENCODING_UTF8 angeben, um die Spalte an eine Variable als UTF-8-codierte Zeichenfolge zu binden.  
   
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  
@@ -99,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> Wenn beim Binden eines Ausgabe Parameters an einen bigint-Typ der Wert möglicherweise außerhalb des Bereichs einer [ganzen](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)Zahl liegt, kann die Verwendung von PDO::P aram_int mit PDO:: SQLSRV_PARAM_OUT_DEFAULT_SIZE zu einem "Wert außerhalb des gültigen Bereichs" führen. Verwenden Sie daher die standardmäßige PDO::P aram_str, und geben Sie die Größe der resultierenden Zeichenfolge an (höchstens 21). Dabei handelt es sich um die maximale Anzahl von Ziffern (einschließlich des negativen Zeichens) eines beliebigen bigint-Werts. 
+> Wenn beim Binden eines Ausgabeparameters an einen bigint-Typ der Wert möglicherweise außerhalb des Bereichs einer [ganzen Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) liegt, kann die Verwendung von PDO::PARAM_INT mit PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE zu einem „Wert außerhalb des gültigen Bereichs“ führen. Verwenden Sie stattdessen den Standardwert PDO::PARAM_STR, und geben Sie die Größe der resultierenden Zeichenfolge an (höchstens 21). Dabei handelt es sich um die maximale Anzahl von Ziffern (einschließlich des negativen Zeichens) eines beliebigen bigint-Werts. 
 
 ## <a name="example"></a>Beispiel  
 In diesem Codebeispiel wird veranschaulicht, wie ein Input/Output-Parameter verwendet wird.  
@@ -133,7 +133,7 @@ $server = "(local)";
 $conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
 
 // Assume TestTable exists with a decimal field 
-$input = 9223372036854.80000;
+$input = "9223372036854.80000";
 $stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
 // by default it is PDO::PARAM_STR, rounding of a large input value may
 // occur if PDO::PARAM_INT is specified

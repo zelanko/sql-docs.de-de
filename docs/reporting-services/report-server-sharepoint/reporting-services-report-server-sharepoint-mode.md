@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262350"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services-Berichtsserver (SharePoint-Modus)
@@ -66,7 +66,7 @@ ms.locfileid: "68262350"
   
 -   *Lokaler Modus:* Im lokalen Modus können Berichte lokal von der SharePoint-Dokumentbibliothek gerendert werden, ohne den Reporting Services-Berichtsserver integrieren zu müssen. Das Reporting Services-Add-In für SharePoint-Produkte ist zwar erforderlich, aber Sie benötigen keinen Reporting Services-Berichtsserver. Das Add-In lässt sich auf verschiedene Weise installieren, einschließlich mithilfe des Vorbereitungstools für SharePoint 2010-Produkte. Weitere Informationen zum lokalen Modus finden Sie unter [Local mode vs. connected mode reports in the Report Viewer (Berichte im Berichts-Viewer im lokalen und verbundenen Modus im Vergleich)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) und [Where to find the Reporting Services add-in for SharePoint products (Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte)](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
--   *Verbundener Modus:* Der verbundene Modus wird durch die Integration eines Reporting Services-Berichtsservers mit der SharePoint-Zentraladministration in die SharePoint-Farm unterstützt. Die Kombination mit einem Berichtsserver ermöglicht vollständige End-to-End-Berichterstellung, indem die Zusammenarbeitsfunktionen von SharePoint 2010 und die serverbasierten Funktionen eines Berichtservers bereitgestellt werden, einschließlich Abonnements, Momentaufnahmen und serverbasierte Verarbeitung.  
+-   *Verbundener Modus:* Der verbundene Modus wird durch die Integration eines Reporting Services-Berichtsservers mit der SharePoint-Zentraladministration in die SharePoint-Farm unterstützt. Die Integration mit einem Berichtsserver ermöglicht vollständige End-to-End-Berichterstellung, indem die Zusammenarbeitsfunktionen von SharePoint 2010 und die serverbasierten Funktionen eines Berichtservers bereitgestellt werden, dazu gehören: Abonnements, Momentaufnahmen und die serverbasierte Verarbeitung.  
   
 ## <a name="unsupported-sharepoint-features"></a>Nicht unterstützte SharePoint-Funktionen
 
@@ -122,11 +122,11 @@ ms.locfileid: "68262350"
   
  Wenn die Sprache Ihres SharePoint-Produkts oder der SharePoint-Technologie von der Berichtsserversprache abweicht, versucht Reporting Services, eine Sprache aus derselben Sprachfamilie zu verwenden, die der ursprünglichen Sprache am ähnlichsten ist. Falls keine geeignete Ersatzsprache verfügbar ist, verwendet der Berichtsserver Englisch.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben
+## <a name="related-tasks"></a>Zugehörige Aufgaben
 
  In der folgenden Tabelle sind die Aufgaben zusammengefasst, die sich auf einen Reporting Services-Berichtsserver im SharePoint-Modus beziehen:  
   
-|**Task**|**Link**|  
+|**Aufgabe**|**Link**|  
 |--------------|--------------|  
 |Ausführliche Schritte zum Installieren und Konfigurieren von Reporting Services im SharePoint-Modus.|[Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) und [Add an additional Report Server to a farm (Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
 |Nehmen Sie eine horizontale Skalierung für Ihre Reporting Services-SharePoint-Bereitstellung vor, indem Sie zusätzliche Berichtsserver hinzufügen.|[Add an additional Report Server to a farm (Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) und [Bereitstellungstopologien für SQL Server-BI-Funktionen in SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  

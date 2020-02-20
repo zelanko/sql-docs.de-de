@@ -16,10 +16,10 @@ ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b253ad989593fa88b2281d933387dfe38fee1732
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974251"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>setFetchSize-Methode (SQLServerResultSet)
@@ -37,13 +37,13 @@ public void setFetchSize(int rows)
 #### <a name="parameters"></a>Parameter  
  *rows*  
   
- Ein **int** , der die Anzahl der abzurufenden Zeilen angibt.  
+ Ein Wert vom Typ **int**, der die Anzahl der abzurufenden Zeilen angibt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese setFetchSize-Methode wird von der setFetchSize-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese setFetchSize-Methode wird von der setFetchSize-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Ist die angegebene Abrufgröße NULL, wird der Wert vom JDBC-Treiber ignoriert und die korrekte Abrufgröße geschätzt. Der Standardwert wird von dem [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt festgelegt, von dem das Resultset erstellt wurde. Die Abrufgröße kann jedoch jederzeit geändert werden.  
   
