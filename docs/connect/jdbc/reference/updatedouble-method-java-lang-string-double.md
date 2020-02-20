@@ -1,5 +1,5 @@
 ---
-title: updatedouble-Methode (Java. lang. String, Double) | Microsoft-Dokumentation
+title: updateDouble(java.lang.String, double)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f70971d5-34cc-4f70-8a91-5d46356b24ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15617e1d5dda6315547228e07853c373f9eb1a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999041"
 ---
 # <a name="updatedouble-method-javalangstring-double"></a>updateDouble-Methode (java.lang.String, double)
@@ -42,13 +42,13 @@ public void updateDouble(java.lang.String columnName,
   
  *x*  
   
- Ein **Double** -Wert.  
+ Ein **double**-Wert  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese updatedouble-Methode wird von der updatedouble-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese updateDouble-Methode wird von der updateDouble-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [updateDouble-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   
