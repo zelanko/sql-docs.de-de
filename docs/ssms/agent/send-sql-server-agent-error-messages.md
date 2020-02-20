@@ -1,10 +1,9 @@
 ---
-title: Senden von SQL Server-Agent-Fehlermeldungen | Microsoft-Dokumentation
-ms.custom: ''
+title: Send SQL Server Agent Error Messages
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7ff6bbdfa2964f8bf633f36f1911f8afe4bc34c4
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 3aec88f017ffd9b405a68e15494f980322386690
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552604"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75239191"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "69552604"
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In diesem Thema wird beschrieben, wie der [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent konfiguriert wird, sodass Agent-Fehlermeldungen mit NET SEND in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]übermittelt werden.  
+In diesem Artikel wird beschrieben, wie Sie den [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent konfigurieren, um Fehlermeldungen mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mit dem Befehl NET SEND in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zu senden.  
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   

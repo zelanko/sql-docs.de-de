@@ -1,6 +1,6 @@
 ---
-title: sqlcmd-Hilfsprogramm | Microsoft-Dokumentation
-ms.custom: ''
+title: SQLCMD-Hilfsprogramm
+ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -27,29 +27,29 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d57369af9e621b9b2700104aff9050fda43593fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 2ce739f026afc8f61e490cb359b23b7f61c931ee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065485"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306688"
 ---
-# <a name="sqlcmd-utility"></a>sqlcmd Utility
+# <a name="sqlcmd-utility"></a>SQLCMD-Hilfsprogramm
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> Informationen zu SQL Server 2014 und niedriger finden [Sie unter sqlcmd Utility.](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
-> )
+> Informationen zu SQL Server 2014 und niedrigeren Versionen finden Sie unter [sqlcmd-Hilfsprogramm](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
+> ).
 > 
 > Informationen zur Verwendung von sqlcmd unter Linux finden Sie unter [Installieren von sqlcmd und bcp unter Linux](../linux/sql-server-linux-setup-tools.md).
 
- Mit dem Hilfsprogramm **sqlcmd** können Sie Transact-SQL-Anweisungen, System Prozeduren und Skriptdateien über eine Vielzahl von verfügbaren Modi eingeben:
+ Mit dem Hilfsprogramm **sqlcmd** können Sie Transact-SQL-Anweisungen, Systemprozeduren und Skriptdateien in verschiedenen Modi eingeben:
 
 - An einer Eingabeaufforderung.
 - Im **Abfrage-Editor** im SQLCMD-Modus.
 - In einer Windows-Skriptdatei.
-- In einem Auftrags Schritt des Betriebssystems (cmd. exe) eines SQL Server-Agent Auftrags.
+- In einem Auftragsschritt eines SQL Server-Agent-Auftrags für ein Betriebssystem (cmd.exe).
 
-Das Hilfsprogramm verwendet zum Ausführen von Transact-SQL-Batches ODBC.
+Das Hilfsprogramm verwendet ODBC zum Ausführen von Transact-SQL-Batches.
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Herunterladen der aktuellen Version des sqlcmd-Hilfsprogramms
 
@@ -62,21 +62,21 @@ Die Befehlszeilentools sind allgemein verfügbar (GA-Version), sie werden jedoch
 
 Releasenummer: 15.0 <br>
 Buildnummer: 15.0.1300.359<br>
-Releasedatum: 13. März 2019
+Veröffentlichungsdatum: 13. März 2019
 
 Die neue Version von SQLCMD unterstützt die Azure AD-Authentifizierung, einschließlich der Multi-Factor Authentication-Unterstützung (MFA) für SQL-Datenbank, SQL Data Warehouse und Always Encrypted-Features.
 Die neue BCP unterstützt die Azure AD-Authentifizierung, einschließlich der Multi-Factor Authentication-Unterstützung (MFA) für SQL-Datenbank und SQL Data Warehouse.
 
 **Systemanforderungen** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2. Für diese Komponente sind der [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) und der [Microsoft ODBC Driver 17.3.1.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567) erforderlich.
  
-Um den Befehl sqlcmd Version Execute `sqlcmd -?` zu überprüfen und zu bestätigen, dass 15.0.1300.359 Version oder höher verwendet wird.
+Zum Überprüfen der SQLCMD-Version führen Sie den Befehl `sqlcmd -?` aus, und vergewissern Sie sich, dass Version 15.0.1300.359 oder höher verwendet wird.
 
 
 
 > [!NOTE]
-> Sie benötigen Version 13,1 oder höher, um Always encrypted (`-g`) und Azure Active Directory Authentifizierung (`-G`) zu unterstützen. (Möglicherweise haben Sie mehrere Versionen von „sqlcmd.exe“ auf Ihrem Computer installiert. Achten Sie darauf, dass Sie die richtige Version verwenden. Um die Version zu bestimmen, führen Sie `sqlcmd -?`aus.)
+> Sie benötigen mindestens Version 13.1 zur Unterstützung von Always Encrypted (`-g`) und Azure Active Directory-Authentifizierung (`-G`). (Möglicherweise haben Sie mehrere Versionen von „sqlcmd.exe“ auf Ihrem Computer installiert. Achten Sie darauf, dass Sie die richtige Version verwenden. Um die Version zu bestimmen, führen Sie `sqlcmd -?`aus.)
 
-Sie können das Hilfsprogramm sqlcmd aus Azure Cloud Shell testen, da es standardmäßig vorinstalliert ist: [ ![Starten Sie Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "Start Cloud Shell")](https://shell.azure.com)
+Sie können das sqlcmd-Hilfsprogramm über die Azure Cloud Shell testen, da diese standardmäßig vorinstalliert ist: [![Starten von Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell starten")](https://shell.azure.com)
 
   Um sqlcmd-Anweisungen in SSMS auszuführen, wählen Sie in der Navigations-Dropdownliste oben im Menü „Abfrage“ den Befehl „SQLCMD-Modus“ aus.  
   
@@ -88,7 +88,7 @@ Sie können das Hilfsprogramm sqlcmd aus Azure Cloud Shell testen, da es standar
  
  Weitere Themen:
 - [Starten des Hilfsprogramms „sqlcmd“](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
-- [Verwenden des Hilfsprogramms „sqlcmd“](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Verwenden des Hilfsprogramms sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>Syntax  
   
@@ -145,15 +145,15 @@ sqlcmd
 ## <a name="command-line-options"></a>Befehlszeilenoptionen  
  **Anmeldungsvorgänge**  
   **-A**  
- Bewirkt die Anmeldung bei SQL Server über eine dedizierte Administratorverbindung (DAC). Diese Verbindungsart wird verwendet, um Serverprobleme zu behandeln. Diese Verbindung funktioniert nur mit Server Computern, die DAC unterstützen. Wenn DAC nicht verfügbar ist, generiert **sqlcmd** eine Fehlermeldung und wird dann beendet. Weitere Informationen zu DAC finden Sie unter [Diagnoseverbindung für Datenbankadministratoren](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Die Option "-A" wird mit der Option "-G" nicht unterstützt. Beim Herstellen einer Verbindung mit SQL-Datenbank mithilfe von-a müssen Sie SQL Server-Administrator sein. Die DAC ist für einen Azure Active Directory-Administrator nicht verfügbar.
+ Bewirkt die Anmeldung bei SQL Server über eine dedizierte Administratorverbindung (DAC). Diese Verbindungsart wird verwendet, um Serverprobleme zu behandeln. Diese Verbindung funktioniert nur bei Servercomputern, die DAC unterstützen. Wenn DAC nicht verfügbar ist, generiert **sqlcmd** eine Fehlermeldung und wird dann beendet. Weitere Informationen zu DAC finden Sie unter [Diagnoseverbindung für Datenbankadministratoren](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Die Option „-A“ wird mit der Option „-G“ nicht unterstützt. Wenn Sie mithilfe der Option „-A“ eine Verbindung mit SQL-Datenbank herstellen möchten, müssen Sie SQL-Serveradministrator sein. DAC ist für Azure Active Directory-Administratoren nicht verfügbar.
   
  **-C**  
  Dieser Schalter wird vom Client verwendet, um ihn so zu konfigurieren, dass er dem Serverzertifikat ohne Überprüfung implizit vertraut. Diese Option entspricht der ADO.NET-Option `TRUSTSERVERCERTIFICATE = true`.  
   
- **-d** _db_name_  
- Gibt beim Starten von **sqlcmd** eine `USE` *db_name*-Anweisung aus. Durch diese Option wird die **sqlcmd** -Skriptvariable SQLCMDDBNAME festgelegt. Dieser Parameter gibt die anfängliche Datenbank an. Der Standardwert ist die Standarddatenbank-Eigenschaft der Anmelde-ID. Wenn die Datenbank nicht vorhanden ist, wird eine Fehlermeldung generiert und **sqlcmd** beendet.  
+ **-d** _Datenbankname_  
+ Gibt beim Starten von **sqlcmd** eine `USE` *Datenbankname*-Anweisung aus. Durch diese Option wird die **sqlcmd** -Skriptvariable SQLCMDDBNAME festgelegt. Dieser Parameter gibt die Ausgangsdatenbank an. Der Standardwert ist die Standarddatenbank-Eigenschaft der Anmelde-ID. Wenn die Datenbank nicht vorhanden ist, wird eine Fehlermeldung generiert und **sqlcmd** beendet.  
   
- **-l** _Anmeldungstimeout_  
+ **-l** _Anmeldetimeout_  
  Gibt an, wie viele Sekunden bei der Herstellung einer Verbindung mit einem Server verstreichen dürfen, bevor für eine **sqlcmd** -Anmeldung beim ODBC-Treiber ein Timeout eintritt. Durch diese Option wird die **sqlcmd** -Skriptvariable SQLCMDLOGINTIMEOUT festgelegt. Der Standardwert für das Timeout einer **sqlcmd** -Anmeldung beträgt acht Sekunden. Wenn Sie die **-G** -Option zum Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse und zur Authentifizierung mithilfe von Azure Active Directory empfiehlt sich ein Timeoutwert von mindestens 30 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert **sqlcmd** eine Fehlermeldung. Mit dem Wert 0 wird eine unbegrenzte Wartezeit festgelegt.
   
  **-E**  
@@ -165,7 +165,7 @@ sqlcmd
 Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hierzu finden Sie unter [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Es werden nur Hauptschlüssel unterstützt, die im Windows-Zertifikatspeicher gespeichert sind. Der Schalter -g erfordert mindestens **sqlcmd** Version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Um die Version zu bestimmen, führen Sie `sqlcmd -?`aus.
 
  **-G**  
- Dieser Schalter wird vom Client beim Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse verwendet, um anzugeben, dass der Benutzer mithilfe der Azure Active Directory-Authentifizierung authentifiziert werden soll. Durch diese Option wird die **sqlcmd** -Skriptvariable „SQLCMDUSEAAD = true“ festgelegt. Der Schalter -G erfordert mindestens **sqlcmd** Version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Um die Version zu bestimmen, führen Sie `sqlcmd -?`aus. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Die Option "-A" wird mit der Option "-G" nicht unterstützt.
+ Dieser Schalter wird vom Client beim Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse verwendet, um anzugeben, dass der Benutzer mithilfe der Azure Active Directory-Authentifizierung authentifiziert werden soll. Durch diese Option wird die **sqlcmd** -Skriptvariable „SQLCMDUSEAAD = true“ festgelegt. Der Schalter -G erfordert mindestens **sqlcmd** Version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Um die Version zu bestimmen, führen Sie `sqlcmd -?`aus. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Die Option „-A“ wird mit der Option „-G“ nicht unterstützt.
 
 > [!IMPORTANT]
 > Die `-G`-Option gilt nur für Azure SQL-Datenbank und Azure Data Warehouse.
@@ -178,7 +178,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
     ``` 
     Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G 
     ``` 
-    Der Parameter "-G" generiert die folgende Verbindungs Zeichenfolge im Back-End: 
+    Der Parameter „-G“ generiert die folgende Verbindungszeichenfolge im Back-End: 
 
     ```
      SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID= bob@contoso.com;PWD=MyAADPassword;AUTHENTICATION = ActiveDirectoryPassword 
@@ -207,19 +207,19 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
  
    Durch die interaktive Azure AD-Authentifizierung für Azure SQL-Datenbank und SQL Data Warehouse können Sie eine interaktive Methode verwenden, die die mehrstufige Authentifizierung unterstützt. Weitere Informationen finden Sie unter [Interaktive Active Directory-Authentifizierung](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
-   Für die interaktive Azure AD-Authentifizierung sind **sqlcmd**, [Version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) oder höher und [ODBC, Version 17.2 oder höher](https://www.microsoft.com/download/details.aspx?id=56567) erforderlich.  
+   Für die interaktive Azure AD-Authentifizierung sind **sqlcmd** in [Version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) oder höher und [ODBC in Version 17.2 oder höher](https://www.microsoft.com/download/details.aspx?id=56567) erforderlich.  
 
    Geben Sie zum Aktivieren der interaktiven Authentifizierung die Option „-G“ nur mit dem Benutzernamen (-U) und ohne ein Kennwort an.
 
    Im folgenden Beispiel werden Daten mithilfe des interaktiven Azure AD-Modus exportiert. Hierbei wird ein Benutzername angegeben, der ein AAD-Konto darstellt. Dies ist das gleiche Beispiel, das im vorherigen Abschnitt verwendet wurde: *Azure Active Directory-Benutzername und -Kennwort*.  
 
-   Im interaktiven Modus muss ein Kennwort manuell eingegeben werden.Bei Konten mit mehrstufiger Authentifizierung müssen Sie Ihre konfigurierte MFA-Authentifizierungsmethode vervollständigen.
+   Im interaktiven Modus muss ein Kennwort manuell eingegeben werden. Bei Konten mit mehrstufiger Authentifizierung müssen Sie Ihre konfigurierte MFA-Authentifizierungsmethode vervollständigen.
 
    ``` 
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
    ```
 
-   Mit dem vorherigen Befehl wird die folgende Verbindungs Zeichenfolge im Back-End generiert:  
+   Der vorherige Befehl generiert die folgende Verbindungszeichenfolge im Back-End:  
 
    ```
    SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com; AUTHENTICATION = ActiveDirectoryInteractive   
@@ -234,7 +234,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
    Die Gastbenutzeralias wird verwendet, wenn Gastbenutzer in einer bestimmten Azure AD-Instanz vorhanden und Teil einer Gruppe von SQL-Datenbank sind, die über Datenbankberechtigungen zum Ausführen des sqlcmd-Befehls verfügt (z. B. *keith0@adventureworks.com* ).
 
   >[!IMPORTANT]
-  >Es gibt ein bekanntes Problem, wenn Sie `-G` die `-U` -Option und die-Option mit sqlcmd verwenden, `-G` bei der die `-U` -Option vor der-Option zu Fehlern bei der Authentifizierung führen kann. Beginnen Sie immer mit `-G` der-Option, `-U` gefolgt von der-Option.
+  >Bei Verwendung der Optionen `-G` und `-U` mit SQLCMD gibt es ein bekanntes Problem: Wenn die Option `-U` vor die Option `-G` gesetzt wird, kann bei der Authentifizierung ein Fehler auftreten. Verwenden Sie die Option `-G` immer vor der Option `-U`.
 
     
  **-H** _Arbeitsstationsname_  
@@ -243,23 +243,23 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
 
 **-j** Zeigt unformatierte Fehlermeldungen auf dem Bildschirm an.
   
- **-K** _Anwendungszweck_  
- Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben ist, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ **-K** _Anwendungsabsicht_  
+ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben ist, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
-**-M** _Multisubnetz-Failover_  
- Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer SQL Server-Verfügbarkeitsgruppe oder einer SQL Server-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen finden Sie unter [Listener, Clientkonnektivität, Anwendungsfailover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) und [Aktive Sekundäre: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx). 
+**-M** _Multisubnetzfailover_  
+ Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer SQL Server-Verfügbarkeitsgruppe oder einer SQL Server-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen finden Sie unter [Listener, Clientkonnektivität, Anwendungsfailover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) und [Aktive Sekundäre: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx). 
   
  **-N**  
  Dieser Schalter wird vom Client verwendet, um eine verschlüsselte Verbindung anzufordern.  
   
  **-P** _Kennwort_  
- Ein vom Benutzer angegebenes Kennwort. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Wenn die Option -U verwendet wird, nicht aber die Option **-P** , und die SQLCMDPASSWORD-Umgebungsvariable nicht festgelegt wurde, wird der Benutzer von **sqlcmd** zur Angabe eines Kennworts aufgefordert. Die Verwendung des NULL-Kennworts wird nicht empfohlen, aber Sie können das NULL-Kennwort angeben, indem Sie ein paar zusammenhängender doppelter Anführungszeichen für den Parameterwert verwenden:
+ Ein vom Benutzer angegebenes Kennwort. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Wenn die Option -U verwendet wird, nicht aber die Option **-P** , und die SQLCMDPASSWORD-Umgebungsvariable nicht festgelegt wurde, wird der Benutzer von **sqlcmd** zur Angabe eines Kennworts aufgefordert. Die Verwendung des NULL-Kennworts wird nicht empfohlen, Sie können es jedoch angeben, indem Sie ein Paar zusammenhängender doppelter gerader Anführungszeichen oben für den Parameterwert verwenden:
 
 - **-P ""**
 
 Es wird empfohlen, ein sicheres Kennwort zu verwenden.
  
-#### <a name="use-a-strong-passwordrelational-databasessecuritystrong-passwordsmd"></a>[**Verwenden Sie ein sicheres Kennwort!** ](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-password"></a>[**Verwenden Sie ein sicheres Kennwort!** ](../relational-databases/security/strong-passwords.md)
   
   
  Die Aufforderung zur Eingabe des Kennworts wird folgendermaßen an der Konsole ausgegeben: `Password:`  
@@ -277,7 +277,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
   
  Wenn die Kombination aus Benutzername und Kennwort falsch ist, wird eine Fehlermeldung generiert.  
   
-**HINWEIS!**  Die OSQLPASSWORD-Umgebungsvariable wurde aus Gründen der Abwärtskompatibilität beibehalten. Die SQLCMDPASSWORD-Umgebungsvariable hat Vorrang vor der OSQLPASSWORD-Umgebungsvariablen. Da OSQLPASSWORD nun nicht mehr freigegeben ist, können die Hilfsprogramme **sqlcmd** und **osql** ohne Störungen nebeneinander verwendet werden. Alte Skripts werden weiterhin funktionieren.  
+**HINWEIS!**  Die OSQLPASSWORD-Umgebungsvariable wurde aus Gründen der Abwärtskompatibilität beibehalten. Die SQLCMDPASSWORD-Umgebungsvariable hat Vorrang vor der OSQLPASSWORD-Umgebungsvariable. Da OSQLPASSWORD nicht mehr freigegeben ist, können die Hilfsprogramme **sqlcmd** und **osql** ohne Störungen nebeneinander verwendet werden. Vorhandene Skripts funktionieren weiterhin.  
   
  Wird die Option **-P** zusammen mit der Option **-E** verwendet, wird eine Fehlermeldung generiert.  
   
@@ -331,7 +331,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
   
  Geben Sie an der Eingabeaufforderung **chcp** ein, um die Codepage von Cmd.exe zu überprüfen.  
   
- **-i** _Eingabedatei_ [ **,** _Eingabe\_file2_...]  
+ **-i** _Eingabedatei_[ **,** _Eingabedatei2_...]  
  Identifiziert die Datei, die einen Batch mit SQL-Anweisungen oder gespeicherten Prozeduren enthält. Sie können mehrere Dateien angeben, die der Reihe nach gelesen und verarbeitet werden. Verwenden Sie keine Leerzeichen zwischen Dateinamen. **sqlcmd** prüft zunächst, ob alle angegebenen Dateien vorhanden sind. Wenn eine oder mehrere Dateien nicht vorhanden sind, wird **sqlcmd** beendet. Die Optionen -i und -Q/-q schließen sich gegenseitig aus.  
   
  Beispiele für Pfade:  
@@ -344,12 +344,12 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
   
  Dateipfade, die Leerzeichen enthalten, müssen in Anführungszeichen eingeschlossen werden.  
   
- Diese Option kann mehrmals verwendet werden: **-i**_input\_file_ **-I**_I input_file_.  
+ Diese Option kann mehrmals verwendet werden: **-i**_Eingabedatei_ **-I**_I Eingabedatei._  
   
  **-o** _Ausgabedatei_  
  Identifiziert die Datei, die die Ausgabe von **sqlcmd**erhält.  
   
- Ist **-u** angegeben, wird die *Ausgabedatei* im Unicode-Format gespeichert. Wenn der Dateiname ungültig ist, wird eine Fehlermeldung generiert und **sqlcmd** beendet. **sqlcmd** unterstützt keine parallelen Schreibvorgänge mehrerer **sqlcmd** -Prozesse in die gleiche Datei. In diesem Fall wäre die Dateiausgabe beschädigt oder fehlerhaft. Weitere Informationen finden Sie unter der Schalter **-f** ist auch für Dateiformate relevant. Falls sie noch nicht vorhanden ist, wird die Datei erstellt. Eine Datei mit demselben Namen aus einer früheren **sqlcmd** -Sitzung wird überschrieben. Bei der hier angegebenen Datei handelt es sich nicht um die **stdout** -Datei. Wenn eine **stdout**-Datei angegeben ist, wird diese Datei nicht verwendet.  
+ Ist **-u** angegeben, wird die *Ausgabedatei* im Unicode-Format gespeichert. Wenn der Dateiname ungültig ist, wird eine Fehlermeldung generiert und **sqlcmd** beendet. **sqlcmd** unterstützt keine parallelen Schreibvorgänge mehrerer **sqlcmd** -Prozesse in die gleiche Datei. In diesem Fall wäre die Dateiausgabe beschädigt oder fehlerhaft. Informieren Sie sich auch über die Option **-f**, die für Dateiformate ebenfalls relevant ist. Falls sie noch nicht vorhanden ist, wird die Datei erstellt. Eine Datei mit demselben Namen aus einer früheren **sqlcmd** -Sitzung wird überschrieben. Bei der hier angegebenen Datei handelt es sich nicht um die **stdout** -Datei. Wenn eine **stdout**-Datei angegeben ist, wird diese Datei nicht verwendet.  
   
  Beispiele für Pfade:  
 
@@ -412,7 +412,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
 > [!NOTE]  
 >  Der tatsächliche Timeoutwert kann einige Sekunden von dem für *Timeout* angegebenen Wert abweichen.  
   
- **-vvar =**  _Wert_ [**var =** _Wert_...]  
+ **-vvar =**  _Wert_[ **var =** _Wert_...]  
  Erstellt eine **sqlcmd**-Skriptvariable, die in einem **sqlcmd** -Skript verwendet werden kann. Setzen Sie den Wert in Anführungszeichen, falls er Leerzeichen enthält. Sie können mehrere Werte für _**var**_ = **"** _values_ **"** angeben. Wenn einer der angegebenen Werte fehlerhaft ist, generiert **sqlcmd** eine Fehlermeldung und wird beendet.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
@@ -423,22 +423,22 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
  Bewirkt, dass **sqlcmd** Skriptvariablen ignoriert. Dieser Parameter erweist sich als nützlich, wenn ein Skript mehrere INSERT-Anweisungen enthält, die Zeichenfolgen im selben Format wie reguläre Variablen enthalten können, wie z.B. $(*Variablenname*).  
   
  **Formatierungsoptionen**  
-  **-h** _headers_  
+  **-h** _Kopfzeilen_  
  Gibt die Anzahl der Zeilen an, die zwischen den Spaltenüberschriften ausgegeben werden. Standardmäßig werden die Überschriften für jedes Resultset der Abfrage einmal gedruckt. Durch diese Option wird die **sqlcmd** -Skriptvariable SQLCMDHEADERS festgelegt. Mit **-1** können Sie angeben, dass keine Überschriften ausgegeben werden sollen. Ein ungültiger Wert bewirkt, dass **sqlcmd** eine Fehlermeldung generiert und dann beendet wird.  
   
  **-k** [**1** | **2**]  
  Entfernt alle Steuerzeichen aus der Ausgabe, z. B. Tabstoppzeichen und Neue-Zeile-Zeichen. Mit diesem Parameter bleibt die Spaltenformatierung erhalten, wenn Daten zurückgegeben werden. Wenn 1 angegeben wird, werden die Steuerzeichen durch ein einzelnes Leerzeichen ersetzt. Wenn 2 angegeben wird, werden aufeinanderfolgende Steuerzeichen durch ein einzelnes Leerzeichen ersetzt. **-k** ist der Gleiche wie **-k1**.  
   
- **-s** _col_separator_  
+ **-s** _Spaltentrennzeichen_  
  Gibt das Spaltentrennzeichen an. Der Standardwert ist ein Leerzeichen. Durch diese Option wird die **sqlcmd** -Skriptvariable SQLCMDCOLSEP festgelegt. Um Zeichen verwenden zu können, die für das Betriebssystem eine besondere Bedeutung haben, z. B. das kaufmännische Und-Zeichen (&) oder das Semikolon (;), müssen Sie das Zeichen in Anführungszeichen (") einschließen. Das Spaltentrennzeichen kann ein beliebiges 8-Bit-Zeichen sein.  
   
- **-w** _column_width_  
+ **-w** _Spaltenbreite_  
  Gibt die Bildschirmbreite für die Ausgabe an. Durch diese Option wird die **sqlcmd** -Skriptvariable SQLCMDCOLWIDTH festgelegt. Die Spaltenbreite muss eine Zahl größer als 8 und kleiner als 65536 sein. Wenn die angegebene Spaltenbreite außerhalb dieses Bereichs liegt, generiert **sqlcmd** eine Fehlermeldung. Die Standardbreite beträgt 80 Zeichen. Wenn eine Ausgabezeile die angegebene Spaltenbreite überschreitet, wird sie in die nächste Zeile umbrochen.  
   
  **-W**  
  Mit dieser Option werden nachfolgende Leerzeichen aus einer Spalte entfernt. Verwenden Sie diese Option zusammen mit der Option **-s** , um Daten vorzubereiten, die in eine andere Anwendung exportiert werden sollen. Diese Option kann nicht mit der Option **-y** oder **-Y** verwendet werden.  
   
- **-y** _variable_Länge_Typ_Anzeigebreite_  
+ **-y** _Anzeigebreite_bei_Typen_mit_variabler_Länge_  
  Dadurch wird die **sqlcmd** -Skriptvariable `SQLCMDMAXVARTYPEWIDTH`festgelegt. Der Standardwert ist 256. Sie begrenzt die Anzahl der Zeichen, die für die großen Datentypen variabler Länge zurückgegeben werden:  
   
 -   **varchar(max)**  
@@ -464,18 +464,18 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
 > [!IMPORTANT]  
 >  Verwenden Sie die Option **-y 0** mit äußerster Sorgfalt, da sie je nach Größe der zurückgegebenen Daten zu ernsthaften Leistungsproblemen auf dem Server und im Netzwerk führen kann.  
   
- **-Y** _feste_Länge_Typ_Anzeigebreite_  
+ **-Y** _Anzeigebreite_bei_Typen_mit_fester_Länge_  
  Dadurch wird die **sqlcmd** -Skriptvariable `SQLCMDMAXFIXEDTYPEWIDTH`festgelegt. Der Standardwert ist 0 (unbegrenzt). Er begrenzt die Anzahl der zurückgegebenen Zeichen für die folgenden Datentypen:  
   
--   **char(** _n_ **)** , wobei 1 <= n <= 8000  
+-   **char(** _n_ **)** , wobei 1<=n<=8000  
   
--   **nchar(** _n_ **)** , wobei 1 <= n <= 4000  
+-   **nchar(n** _n_ **)** , wobei 1<=n<=4000  
   
--   **varchar(** _n_ **)** , wobei 1 <= n <= 8000  
+-   **varchar(n** _n_ **)** , wobei 1<=n<=8000  
   
--   **nvarchar(** _n_ **)** , wobei 1 <= n <= 4000  
+-   **nvarchar(n** _n_ **)** , wobei 1<=n<=4000  
   
--   **varbinary(n** _n_ **)** , wobei 1 <= n \<= 4000  
+-   **varbinary(n** _n_ **)** , wobei 1<=n\<=4000  
   
 -   **variant**  
   
@@ -485,7 +485,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
   
  Wenn das **sqlcmd** -Skript einen falschen Kommentar bzw. einen Syntaxfehler enthält oder eine Skriptvariable fehlt, wird der ERRORLEVEL-Wert 1 zurückgegeben.  
   
- **-m** _error_level_  
+ **-m** _Fehlerebene_  
  Steuert, welche Fehlermeldungen an **stdout**gesendet werden. Fehlermeldungen mit einem Schweregrad, der größer oder gleich diesem Wert ist, werden gesendet. Wenn dieser Wert auf **-1**festgelegt ist, werden alle Meldungen gesendet, einschließlich der Informationsmeldungen. Es sind keine Leerzeichen zwischen **-m** und **-1**zulässig. Beispielsweise ist **-m-1** gültig, **-m -1** jedoch nicht.  
   
  Mit dieser Option wird außerdem die **sqlcmd** -Skriptvariable SQLCMDERRORLEVEL festgelegt. Diese Variable hat den Standardwert 0.  
@@ -494,10 +494,10 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
  Steuert den Schweregrad, der zur Festlegung der ERRORLEVEL-Variable verwendet wird. Für Fehlermeldungen mit einem Schweregrad, der größer oder gleich diesem Wert ist, wird ERRORLEVEL festgelegt. Werte kleiner 0 werden als 0 zurückgegeben. Batch- und CMD-Dateien können verwendet werden, um den Wert der ERRORLEVEL-Variable zu testen.  
   
  **Sonstige Optionen**  
-  **-a** _packet_size_  
+  **-a** _Paketgröße_  
  Fordert ein Paket einer anderen Größe an. Durch diese Option wird die **sqlcmd** -Skriptvariable SQLCMDPACKETSIZE festgelegt. *packet_size* muss einen Wert zwischen 512 und 32767 haben. Der Standardwert lautet 4096. Ein höherer Wert für die Paketgröße kann das Leistungsverhalten beim Ausführen von Skripts verbessern, die zahlreiche SQL-Anweisungen zwischen GO-Befehlen aufweisen. Sie können eine größere Paketgröße anfordern. Wenn die Anforderung abgelehnt wird, verwendet **sqlcmd** jedoch den Standardwert des Servers für die Paketgröße.  
   
- **-c** _Batchabschlusszeichen_  
+ **-c** _Batchterminator_  
  Gibt das Batchabschlusszeichen an. Standardmäßig werden Befehle abgeschlossen und an SQL Server gesendet, indem das Wort „GO“ in eine eigene Zeile eingegeben wird. Wenn Sie das Batchabschlusszeichen neu festlegen, dürfen Sie keine für Transact-SQL reservierten Schlüsselwörter oder Zeichen verwenden, die eine spezielle Bedeutung für das Betriebssystem haben, und zwar auch dann nicht, wenn vor dem Wort bzw. Zeichen ein umgekehrter Schrägstrich steht.  
   
  **-L**[**c**]  
@@ -506,7 +506,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
 > [!NOTE]  
 >  Aufgrund der Beschaffenheit des Broadcastings in Netzwerken ist es möglich, dass **sqlcmd** nicht von allen Servern rechtzeitig eine Antwort empfängt. Daher kann die Liste der zurückgegebenen Server mit jedem Aufruf dieser Option variieren.  
   
- Wenn der optionale Parameter **c** angegeben ist, wird die Ausgabe ohne die Kopfzeile **Server:** angezeigt. Jede Serverzeile wird ohne führende Leerzeichen ausgegeben. Diese Präsentation wird als saubere Ausgabe bezeichnet. Durch die einfache Ausgabe wird die Verarbeitungsleistung von Skriptsprachen verbessert.  
+ Wenn der optionale Parameter **c** angegeben ist, wird die Ausgabe ohne die Kopfzeile **Server:** angezeigt. Jede Serverzeile wird ohne führende Leerzeichen ausgegeben. Diese Darstellung wird als bereinigte Ausgabe bezeichnet. Durch die einfache Ausgabe wird die Verarbeitungsleistung von Skriptsprachen verbessert.  
   
  **-p**[**1**]  
  Gibt Leistungsstatistiken für jedes Resultset aus. Folgende Ausgabe ist ein Beispiel für das Format von Leistungsstatistiken:  
@@ -517,7 +517,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
   
  `Clock Time (ms.): total       t1  avg       t2 (t3 xacts per sec.)`  
   
- Erläuterungen:  
+ Hierbei gilt:  
   
  `x` = Anzahl der Transaktionen, die von SQL Server verarbeitet werden.  
   
@@ -538,7 +538,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
   
 -   **ED**  
   
--   **!!** _Befehl_  
+-   **!!** _command_  
   
  Wenn die **-X** -Option angegeben wird, verhindert sie die Übergabe von Umgebungsvariablen an **sqlcmd**. Sie verhindert darüber hinaus die Ausführung des Startskripts, das mithilfe der SQLCMDINI-Skriptvariablen angegeben wurde. Weitere Informationen zu **sqlcmd** Skriptvariablen finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
@@ -574,7 +574,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd-Skriptvariablen  
   
-|Variable|Damit verbundene Schalter|R/W|Default|  
+|Variable|Damit verbundene Schalter|R/W|Standard|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -584,9 +584,9 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8" (Sekunden)|  
 |SQLCMDSTATTIMEOUT|-t|R/W|"0" = unbegrenzt warten|  
 |SQLCMDHEADERS|-H|R/W|"0"|  
-|SQLCMDCOLSEP|-S|R/W|" "|  
+|SQLCMDCOLSEP|-S|R/W|„ “|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|R/W|0|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = unbegrenzt|  
@@ -645,7 +645,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
  Gibt den Inhalt des Anweisungscaches aus.  
   
  **Variablen**  
-  **: Setvar** \<**var**>[ **"** _Wert_ **"** ]  
+  **:Setvar** \<**var**> [ **"** _Wert_ **"** ]  
  Definiert **sqlcmd** -Skriptvariablen. Skriptvariablen haben das folgende Format: `$(VARNAME)`.  
   
  Bei Variablennamen wird die Groß- und Kleinschreibung nicht beachtet.  
@@ -706,7 +706,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
  [ **:** ] **QUIT**  
  Bewirkt, dass **sqlcmd** beendet wird.  
   
- [ **:** ] **EXIT** [ **(** _Anweisung_ **)** ]  
+ [ **:** ] **EXIT**[ **(** _Anweisung_ **)** ]  
  Gibt Ihnen die Möglichkeit, das Ergebnis einer SELECT-Anweisung als Rückgabewert von **sqlcmd**zu verwenden. Wenn numerisch, wird die erste Spalte der letzten Ergebniszeile in eine 4 Byte lange ganze Zahl (Long) konvertiert. MS-DOS übergibt das niedrige Byte an den übergeordneten Prozess oder an die Fehlerebene des Betriebssystems. Windows 200x übergibt die gesamte 4 Bytes lange ganze Zahl. Die Syntax ist:  
   
  `:EXIT(query)`  
@@ -745,17 +745,17 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
   
  Die Rückgabewerte −1 bis −99 sind für SQL Server reserviert. **sqlcmd** definiert die folgenden zusätzlichen Rückgabewerte:  
   
-|Rückgabewerte|und Beschreibung|  
+|Rückgabewerte|Beschreibung|  
 |-------------------|-----------------|  
 |-100|Vor dem Auswählen des Rückgabewerts ist ein Fehler aufgetreten.|  
 |-101|Beim Auswählen eines Rückgabewerts wurden keine Zeilen gefunden.|  
 |-102|Beim Auswählen des Rückgabewerts ist ein Konvertierungsfehler aufgetreten.|  
   
  **GO** [*Anzahl*]  
- GO signalisiert sowohl das Ende eines Batches als auch die Ausführung aller zwischengespeicherten Transact-SQL-Anweisungen. Der Batch wird mehrmals als separate Batches ausgeführt. Es ist nicht möglich, eine Variable mehrmals in einem einzelnen Batch zu deklarieren.
+ GO signalisiert sowohl das Ende eines Batches als auch die Ausführung aller zwischengespeicherten Transact-SQL-Anweisungen. Das Batch wird mehrmals als separate Batches ausgeführt. Sie können eine Variable in einem einzelnen Batch nicht mehr als einmal deklarieren.
   
  **Sonstige Befehle**  
-  **:r \<** _filename_ **>**  
+  **:r \<** _Dateiname_ **>**  
  Analysiert zusätzliche Transact-SQL-Anweisungen und **sqlcmd**-Befehle aus der durch **\<** _filename_ **>** angegebenen Datei und schreibt das Ergebnis in den Anweisungscache.  
   
  Wenn die Datei Transact-SQL-Anweisungen enthält, die nicht von **GO** gefolgt sind, müssen Sie **GO** in der ersten Zeile nach **:r** eingeben.  
@@ -771,7 +771,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
  **:Serverlist**  
  Listet die lokal konfigurierten Server sowie die Namen der Server auf, die Nachrichten über das Netzwerk senden.  
   
- **:Connect**  _server_name_[ **\\** _instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  _Servername_[ **\\** _Instanzname_] [-l *Timeout*] [-U *Benutzername* [-P *Kennwort*]]  
  Stellt eine Verbindung mit einer Instanz von SQL Server her. Schließt außerdem die aktuelle Verbindung.  
   
  Timeoutoptionen:  
@@ -814,7 +814,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
 ### <a name="sqlcmd-file-names"></a>sqlcmd-Dateinamen  
  **sqlcmd** -Eingabedateien können mit der Option **-i** oder dem Befehl **:r** angegeben werden. Ausgabedateien können mit der Option **-o** oder den Befehlen **:Error**, **:Out** und **:Perftrace** angegeben werden. Es folgen einige Richtlinien für das Verwenden dieser Dateien:  
   
--   Für **:Error**, **:Out** und **:Perftrace** sollten verschiedene **\<** _Dateiname_ **>** -Parameter verwendet werden. Wird derselbe **\<** _Dateiname_ **>** -Parameter verwendet, werden Eingaben von den Befehlen womöglich vermischt.  
+-   **:Error**, **:Out** und **:Perftrace** sollten verschiedene **\<** _Dateiname_ **>** -Parameter verwendet werden. Wird derselbe **\<** _Dateiname_ **>** -Parameter verwendet, werden Eingaben von den Befehlen womöglich vermischt.  
   
 -   Wenn eine Eingabedatei auf einem Remoteserver einen Laufwerksdateipfad wie „:Out c:\OutputFile.txt“ enthält und von **sqlcmd** auf einem lokalen Computer aufgerufen wird, Die wird Ausgabedatei auf dem lokalen Computer und nicht auf dem Remoteserver erstellt.  
   
@@ -830,13 +830,13 @@ Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
 
 `sqlcmd`
   
-Geben Sie an der SQLCMD-Eingabeaufforderung Folgendes ein:
+Geben Sie an der sqlcmd-Eingabeaufforderung Folgendes ein:
 
 `USE AdventureWorks2012;`
 
 `GO`
 
-Wenn Sie die EINGABETASTE drücken, wird die folgende Informationsmeldung ausgegeben: "Der Datenbankkontext wurde auf 'AdventureWorks2012' geändert."  
+Wenn Sie die EINGABETASTE drücken, wird folgende Informationsmeldung ausgegeben: Der Datenbankkontext wurde in "AdventureWorks2012" geändert.  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Ausgabeformat von Transact-SQL-Abfragen  
  **sqlcmd** gibt zuerst eine Spaltenüberschrift aus, die die in der SELECT-Liste angegebenen Spaltennamen enthält. Die Spaltennamen werden durch das SQLCMDCOLSEP-Zeichen getrennt. Standardmäßig handelt es sich hierbei um ein Leerzeichen. Wenn der Spaltenname kürzer als die Spaltenbreite ist, wird die Ausgabe bis zur nächsten Spalte mit Leerzeichen aufgefüllt.  
@@ -915,7 +915,7 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
  [Starten des Hilfsprogramms „sqlcmd“](~/relational-databases/scripting/sqlcmd-start-the-utility.md)   
  [Ausführen von Transact-SQL-Skriptdateien mithilfe von „sqlcmd“](~/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)   
  [Verwenden des Hilfsprogramms „sqlcmd“](~/relational-databases/scripting/sqlcmd-use-the-utility.md)   
- [Verwenden von „sqlcmd“ mit Skriptvariablen](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
+ [Verwenden von sqlcmd mit Skriptvariablen](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [Herstellen einer Verbindung mit der Datenbank-Engine mithilfe von „sqlcmd“](~/relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)   
  [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
  [Verwalten von Auftragsschritten](~/ssms/agent/manage-job-steps.md)   
@@ -924,7 +924,7 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
 
 ## <a name="feedback"></a>Feedback
 
-![Hilfe_benötigt_Person_Symbol](../ssms/media/needhelp_person_icon.png) [SQL Clienttools-Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
+![Person_benötigt_Hilfe_Symbol](../ssms/media/needhelp_person_icon.png) [SQL Clienttools-Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

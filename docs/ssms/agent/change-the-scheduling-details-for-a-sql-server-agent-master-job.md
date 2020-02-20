@@ -1,24 +1,26 @@
 ---
-title: Ändern der Zeitplandetails für einen Rasterauftrag für den SQL Server-Agent | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 01/19/2017
+title: Ändern der Zeitplandetails für einen Masterauftrag
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9baa8d095102f63f834342d7145e05c345a6ac1e
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 45eddc3b97099eafdba01ec091f3e860f1b2ab8e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553304"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242536"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -40,31 +42,31 @@ Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie si
   
 #### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>So ändern Sie die Zeitplandetails für eine Auftragsdefinition  
   
-1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, in dem der Auftrag mit dem zu bearbeitenden Zeitplan enthalten ist.  
+1. Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, in dem der Auftrag mit dem zu bearbeitenden Zeitplan enthalten ist.  
   
-2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
+2. Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
-3.  Klicken Sie auf das Pluszeichen, um den Ordner **Aufträge** zu erweitern.  
+3. Klicken Sie auf das Pluszeichen, um den Ordner **Aufträge** zu erweitern.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Auftrag, dessen Zeitplan Sie bearbeiten möchten, und wählen Sie **Eigenschaften**aus.  
+4. Klicken Sie mit der rechten Maustaste auf den Auftrag, dessen Zeitplan Sie bearbeiten möchten, und wählen Sie **Eigenschaften**aus.  
   
-5.  Klicken Sie im Dialogfeld **Auftragseigenschaften >** _Auftragsname_ unter **Seite auswählen** auf die Option **Zeitpläne**. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften – Neuer Auftrag &#40;Seite „Zeitpläne“&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
+5. Klicken Sie im Dialogfeld **Auftragseigenschaften >** _Auftragsname_ unter **Seite auswählen** auf die Option **Zeitpläne**. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften – Neuer Auftrag &#40;Seite „Zeitpläne“&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
   
-6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
+6. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
 ## <a name="TsqlProcedure"></a>Verwenden von Transact-SQL  
   
-#### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>So ändern Sie die Zeitplandetails für eine Auftragsdefinition  
+#### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>So ändern Sie die Zeitplandetails für eine Auftragsdefinition
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde_md.md)]-Instanz her.  
+1. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde_md.md)]-Instanz her.  
   
-2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
+2. Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
+3. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
     ```  
-    -- changes the enabled status of the NightlyJobs schedule to 0   
-    -- and sets the owner to terrid.   
+    -- changes the enabled status of the NightlyJobs schedule to 0
+    -- and sets the owner to terrid.
     USE msdb ;  
     GO  
   
@@ -75,5 +77,4 @@ Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie si
     GO  
     ```  
   
-Weitere Informationen finden Sie unter [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).  
-  
+Weitere Informationen finden Sie unter [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).
