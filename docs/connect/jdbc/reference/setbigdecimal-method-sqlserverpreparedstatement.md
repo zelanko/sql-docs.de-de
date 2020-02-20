@@ -16,10 +16,10 @@ ms.assetid: 860f86db-d840-401a-a5c2-cd22e8cc1e4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8af0ef075e40444daec1b6e141294d85a74fe3ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975243"
 ---
 # <a name="setbigdecimal-method-sqlserverpreparedstatement"></a>setBigDecimal-Methode (SQLServerPreparedStatement)
@@ -42,13 +42,13 @@ public final void setBigDecimal(int n,
   
  *x*  
   
- Ein BigDecimal-Objekt.  
+ Ein BigDecimal-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese setBigDecimal-Methode wird von der setBigDecimal-Methode in der Java. SQL. PreparedStatement-Schnittstelle angegeben.  
+ Diese setBigDecimal-Methode wird von der setBigDecimal-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

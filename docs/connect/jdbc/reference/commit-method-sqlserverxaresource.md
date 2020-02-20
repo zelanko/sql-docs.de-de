@@ -1,5 +1,5 @@
 ---
-title: Commit-Methode (sqlserverxaresource) | Microsoft-Dokumentation
+title: commit-Methode (SQLServerXAResource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1d0f8612-fb4a-4eca-bc37-8342e1419fd4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85bc4f123dd29025e906d57d64f21746df5f2e07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955559"
 ---
 # <a name="commit-method-sqlserverxaresource"></a>Commit-Methode (SQLServerXAResource)
@@ -38,7 +38,7 @@ public void commit(javax.transaction.xa.Xid xid,
 #### <a name="parameters"></a>Parameter  
  *xid*  
   
- Ein xid-Objekt.  
+ Ein Xid-Objekt  
   
  *onePhase*  
   

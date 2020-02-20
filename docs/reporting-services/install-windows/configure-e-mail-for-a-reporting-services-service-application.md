@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1025ea1de1e349e640b285174ffab694f791fd21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68221646"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung
@@ -50,7 +50,7 @@ ms.locfileid: "68221646"
   
 1.  Wenn Ihre E-Mail-Umgebung NTLM-Authentifizierung erfordert und keinen anonymen Zugriff zulässt, müssen Sie die Konfiguration der E-Mail-Übermittlungserweiterung für die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendungen ändern. Beispielsweise, wenn die folgende Meldung für **Letzte Ergebnisse** unter „ **Abonnements verwalten** -Seite: Abonnements“ angezeigt wird.  
   
-    -   Fehler beim Senden von E-Mail: Für den SMTP-Server ist eine sichere Verbindung erforderlich, oder der Client wurde nicht authentifiziert. Die Serverantwort war: „5.7.1 Client wurde nicht authentifiziert. E-Mails werden nicht erneut gesendet“.  
+    -   Fehler beim Senden von E-Mails: Für den SMTP-Server ist eine sichere Verbindung erforderlich, oder der Client wurde nicht authentifiziert. Die Serverantwort lautete: 5.7.1 Client was not authenticatedMail will not be resent. (Der Client 5.7.1 konnte nicht authentifiziert werden. E-Mails werden nicht noch mal gesendet.)  
   
      Ändern Sie **SMTPAuthenticate** so, dass der Wert „2“ verwendet wird. Dieser Wert kann nicht über die Benutzeroberfläche geändert werden. Das folgende beispielhafte PowerShell-Skript aktualisiert die vollständige Konfiguration für die Berichtsserver-E-Mail-Übermittlungserweiterung für die Dienstanwendung mit dem Namen „SSRS_TESTAPPLICATION“. Beachten Sie, dass einige der im Skript aufgeführten Knoten, wie z. B. die Absenderadresse, über die Benutzeroberfläche festgelegt werden können.  
   

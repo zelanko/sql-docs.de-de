@@ -16,10 +16,10 @@ ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87d3dfc2183bdc00261417a024507b41ea5fde28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952744"
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>getConnection-Methode (java.lang.String, java.lang.String)
@@ -51,9 +51,9 @@ public java.sql.Connection getConnection(java.lang.String username,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getConnection-Methode wird von der getConnection-Methode in der javax. SQL. DataSource-Schnittstelle angegeben.  
+ Diese getConnection-Methode wird von der getConnection-Methode in der javax.sql.DataSource-Schnittstelle angegeben.  
   
- Wenn die getConnection-Methode mit einem Benutzernamen oder Kennwort ungleich NULL aufgerufen wird, werden die Benutzernamen-und Kenn Wort Eigenschaften ersetzt, die für die SQLServerDataSource-Klasse festgelegt werden, wenn das SQLServerConnection-Objekt initialisiert wird. Beispiel: Hat der Aufrufer [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) und [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) für die Datenquelle aufgerufen und ruft anschließend getConnection auf und gibt einen Benutzernamen und ein Kennwort ungleich NULL an, werden der Benutzername und das Kennwort, der bzw. das durch setUser und setPassword festgelegt sind, durch das an getConnection weitergegebene Kennwort ersetzt.  
+ Wenn die getConnection-Methode mit einem Benutzernamen oder Kennwort aufgerufen wird, dessen Wert nicht NULL ist, werden die Eigenschaften für den Benutzernamen und das Kennwort ersetzt, die bei der Initialisierung des SQLServerConnection-Objekts für die SQLServerDataSource-Klasse festgelegt werden. Beispiel: Hat der Aufrufer [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) und [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) für die Datenquelle aufgerufen und ruft anschließend getConnection auf und gibt einen Benutzernamen und ein Kennwort ungleich NULL an, werden der Benutzername und das Kennwort, der bzw. das durch setUser und setPassword festgelegt sind, durch das an getConnection weitergegebene Kennwort ersetzt.  
   
 > [!NOTE]  
 >  Benutzernamen und Kennwörter, die in der URL durch einen Aufruf der [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md)-Methode festgelegt sind, werden in diesem Fall nicht geändert.  

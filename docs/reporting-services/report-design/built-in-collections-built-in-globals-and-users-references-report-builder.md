@@ -9,10 +9,10 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581847"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Integrierte Auflistungen – Integrierte globale Variablen und Benutzerverweise (Berichts Generator)
@@ -42,10 +42,10 @@ ms.locfileid: "65581847"
 ### <a name="renderformat"></a>RenderFormat  
  In der folgenden Tabelle werden die Elemente von **RenderFormat**beschrieben.  
   
-|Member|Typ|und Beschreibung|  
+|Member|type|BESCHREIBUNG|  
 |------------|----------|-----------------|  
 |Name|**String**|Der Name des Renderers laut Registrierung in der RSReportServer-Konfigurationsdatei.<br /><br /> Verfügbar während bestimmter Teile des Berichtsverarbeitungs-/Renderingzyklus.|  
-|IsInteractive|**Boolean**|Gibt an, ob die aktuelle Renderinganforderung ein interaktives Renderingformat verwendet.|  
+|IsInteractive|**Boolescher Wert**|Gibt an, ob die aktuelle Renderinganforderung ein interaktives Renderingformat verwendet.|  
 |DeviceInfo|Schreibgeschützte Namens-/Werteauflistung|Schlüssel-Wert-Paare für die deviceinfo-Parameter der aktuellen Renderinganforderung.<br /><br /> Zeichenfolgenwerte können mit dem Schlüssel oder einem Index in der Auflistung angegeben werden.|  
   
 ### <a name="examples"></a>Beispiele  
@@ -55,7 +55,7 @@ ms.locfileid: "65581847"
   
      `=Globals.PageNumber & " of " & Globals.TotalPages`  
   
--   Dieser Ausdruck stellt den Namen des Berichts und die Zeit seiner Ausführung bereit. Die Zeit wird mit der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolge für ein kurzes Datum formatiert:  
+-   Dieser Ausdruck stellt den Namen des Berichts und die Zeit seiner Ausführung bereit. Die Zeit wird mit der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Formatzeichenfolge für ein kurzes Datum formatiert:  
   
      `=Globals.ReportName & ", dated " & Format(Globals.ExecutionTime, "d")`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "65581847"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Ausdruck &#40;Dialogfeld, Berichts-Generator&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [Dialogfeld „Ausdruck“ (Berichts-Generator)](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  

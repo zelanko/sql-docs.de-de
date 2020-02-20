@@ -1,6 +1,6 @@
 ---
-title: Erstellung eines Tabellenwert Parameter-Rowsets | Microsoft-Dokumentation
-description: Erstellung statischer und dynamischer Tabellenwert Parameter-Rowsets
+title: Tabellenwertparameter für die Rowseterstellung | Microsoft-Dokumentation
+description: Statische und dynamische Tabellenwertparameter für die Rowseterstellung
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c771d8bde657b464b29a109dadd7a4d6fa33fbdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994109"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Tabellenwertparameter-Rowseterstellung
@@ -24,16 +24,16 @@ ms.locfileid: "67994109"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Consumer können zwar ein beliebiges Rowsetobjekt für Tabellenwertparameter bereitstellen, typische Rowsetobjekte werden jedoch mit Back-End-Datenspeichern implementiert und bieten somit nur eine eingeschränkte Leistung. Der OLE DB-Treiber für SQL Server ermöglicht es somit Consumern, ein spezielles Rowset-Objekt auf speicherinternen Daten zu erstellen. Dieses spezielle, in-Memory-Rowsetobjekt ist ein neues COM-Objekt, das als Tabellenwert Parameter-Rowset bezeichnet wird. Es bietet ähnliche Funktionen wie Parametersätze.  
+  Consumer können zwar ein beliebiges Rowsetobjekt für Tabellenwertparameter bereitstellen, typische Rowsetobjekte werden jedoch mit Back-End-Datenspeichern implementiert und bieten somit nur eine eingeschränkte Leistung. Der OLE DB-Treiber für SQL Server ermöglicht es somit Consumern, ein spezielles Rowset-Objekt auf speicherinternen Daten zu erstellen. Dieses besondere Rowsetobjekt im Arbeitsspeicher ist ein neues COM-Objekt, das als Tabellenwertparameter für Rowsets bezeichnet wird. Es bietet ähnliche Funktionen wie Parametersätze.  
   
  Tabellenwertparameter-Rowsetobjekte werden explizit vom Consumer für Eingabeparameter durch mehrere Schnittstellen auf Sitzungsebene erstellt. Es steht eine Instanz des Tabellenwertparameter-Rowsetobjekts pro Tabellenwertparameter zur Verfügung. Der Consumer kann die Tabellenwertparameter-Rowsetobjekte entweder durch Bereitstellen der Metadateninformationen, die bereits bekannt sind (statisches Szenario), oder durch Ermitteln über Anbieterschnittstellen (dynamisches Szenario) erstellen. In den folgenden Abschnitten werden diese beiden Szenarien beschrieben.  
   
 ## <a name="static-scenario"></a>Statisches Szenario  
- Wenn die Typinformationen bekannt sind, verwendet der Consumer ITableDefinitionWithConstraints:: kreatetablewitheinschränkungen, um ein Tabellenwert Parameter-Rowsetobjekt zu instanziieren, das einem Tabellenwert Parameter entspricht.  
+ Wenn die Typinformationen bekannt sind, verwendet der Consumer ITableDefinitionWithConstraints::CreateTableWithConstraints, um einen Tabellenwertparameter für Rowsetobjekte zu instanziieren, die einem Tabellenwertparameter entsprechen.  
   
- Das *GUID* -Feld (*pTableID* -Parameter) enthält die besondere GUID (CLSID_ROWSET_TVP). Das Element *pwszName* enthält den Namen des Tabellenwertparameter-Typs, den der Consumer instanziieren möchte. Das Feld *eKin* wird auf DBKIND_GUID_NAME festgelegt. Der Name ist erforderlich, wenn es sich um eine Ad-hoc-SQL-Anweisung handelt; bei einem Prozeduraufruf ist die Angabe des Namens optional.  
+ Das *guid*-Feld (*pTableID*-Parameter) enthält die besondere GUID (CLSID_ROWSET_TVP). Das Element *pwszName* enthält den Namen des Tabellenwertparameter-Typs, den der Consumer instanziieren möchte. Das Feld *eKin* wird auf DBKIND_GUID_NAME festgelegt. Der Name ist erforderlich, wenn es sich um eine Ad-hoc-SQL-Anweisung handelt; bei einem Prozeduraufruf ist die Angabe des Namens optional.  
   
- Bei der Aggregation übergibt der Consumer den Parameter " *pUnkOuter* " mit dem steuernden "IUnknown".  
+ Bei der Aggregation übergibt der Consumer den *pUnkOuter*-Parameter mit dem kontrollierenden IUnknown-Element.  
   
  Die Eigenschaften des Tabellenwertparameter-Rowsetobjekts sind schreibgeschützt, sodass der Consumer keine Eigenschaften in *rgPropertySets* festlegen muss.  
   
@@ -41,12 +41,12 @@ ms.locfileid: "67994109"
   
  Um entsprechende Informationen aus einem Tabellenwertparameter-Rowsetobjekt abzurufen, verwendet der Consumer IRowsetInfo::GetProperties.  
   
- Der Consumer kann IColumnsRowset:: GetColumnsRowset oder IColumnsInfo:: GetColumnInfo verwenden, um Informationen über den NULL-, eindeutigen, berechneten und Update Status der einzelnen Spalten abzurufen. Diese Methoden stellen ausführliche Informationen über jede Tabellenwertparameter-Rowsetspalte bereit.  
+ Der Consumer kann IColumnsRowset::GetColumnsRowset oder IColumnsInfo::GetColumnInfo verwenden, um Informationen über die Statusangaben „NULL“, „Eindeutig“, „Berechnet“ und „Update“ für die einzelnen Spalten abzurufen. Diese Methoden stellen ausführliche Informationen über jede Tabellenwertparameter-Rowsetspalte bereit.  
   
- Der Consumer gibt den Typ jeder Spalte des Tabellenwertparameters an. Dies ähnelt der Angabe von Spalten, wenn in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Tabelle erstellt wird. Der Consumer ruft ein Tabellenwert Parameter-Rowsetobjekt aus dem OLE DB Treiber für die SQL Server über den *ppRowset* -Ausgabeparameter ab.  
+ Der Consumer gibt den Typ jeder Spalte des Tabellenwertparameters an. Dies ähnelt der Angabe von Spalten, wenn in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Tabelle erstellt wird. Der Consumer erhält vom OLE DB-Treiber für SQL Server über den *ppRowset*-Ausgabeparameter ein Rowsetobjekt für Tabellenwertparameter.  
   
 ## <a name="dynamic-scenario"></a>Dynamisches Szenario  
- Wenn der Consumer keine Typinformationen hat, sollte er IOpenRowset:: OPENROWSET verwenden, um Tabellenwert Parameter-Rowsetobjekte zu instanziieren. Der Consumer muss dem Anbieter somit nur den Typnamen zur Verfügung stellen.  
+ Wenn der Consumer keine Typinformationen hat, sollte IOpenRowset::OpenRowset zum Instanziieren von Rowsetobjekten für Tabellenwertparameter verwendet werden. Der Consumer muss dem Anbieter somit nur den Typnamen zur Verfügung stellen.  
   
  In diesem Szenario erhält der Anbieter im Namen des Consumers Typinformationen zu einem Tabellenwertparameter-Rowsetobjekt vom Server.  
   

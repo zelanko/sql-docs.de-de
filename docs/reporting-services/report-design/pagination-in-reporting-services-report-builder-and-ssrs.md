@@ -1,6 +1,7 @@
 ---
-title: Paginierung in Reporting Services (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.date: 07/26/2019
+title: Paginierung in Berichten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+description: „Paginierung“ bezieht sich auf die Anzahl der Seiten in einem paginierten Bericht und auf die Anordnung von Berichtselementen auf diesen Seiten. Die Paginierung in Reporting Services ändert sich abhängig von der Renderingerweiterung, die Sie zum Anzeigen und Übermitteln des Berichts verwenden.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 507aeab666f1849b9216b22e90dfee3d21f92694
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
-ms.translationtype: MTE75
+ms.openlocfilehash: 2c3ce298553ebe5103cc8639a3a86e14977725ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632025"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247342"
 ---
-# <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginierung in Reporting Services (Berichts-Generator und SSRS)
-  Paginierung bezieht sich auf die Anzahl der Seiten in einem Bericht und wie Berichtselemente auf diesen Seiten angeordnet werden. Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ändert sich abhängig von der Renderingerweiterung, die Sie zum Anzeigen und Übermitteln des Berichts verwenden. Wenn Sie einen Bericht auf dem Berichtsserver erstellen, verwendet der Bericht den HTML-Renderer. Für HTML gilt ein bestimmter Satz von Paginierungsregeln. Wenn Sie den gleichen Bericht nach PDF exportieren, wird beispielsweise der PDF-Renderer verwendet, und es findet ein anderer Satz von Regeln Anwendung. Daher wird der Bericht unterschiedlich paginiert. Um einen übersichtlichen Bericht für Ihre Benutzer zu entwerfen, der für den Renderer, mit dem Sie den Bericht übermitteln möchten, optimiert ist, müssen Sie die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen.  
+# <a name="pagination-in-reports-report-builder--and-ssrs"></a>Paginierung in Berichten (Berichts-Generator und SSRS)
+  „Paginierung“ bezieht sich auf die Anzahl der Seiten in einem paginierten Bericht und auf die Anordnung von Berichtselementen auf diesen Seiten. Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ändert sich abhängig von der Renderingerweiterung, die Sie zum Anzeigen und Übermitteln des Berichts verwenden. Wenn Sie einen Bericht auf dem Berichtsserver erstellen, verwendet der Bericht den HTML-Renderer. Für HTML gilt ein bestimmter Satz von Paginierungsregeln. Wenn Sie den gleichen Bericht nach PDF exportieren, wird beispielsweise der PDF-Renderer verwendet, und es findet ein anderer Satz von Regeln Anwendung. Daher wird der Bericht unterschiedlich paginiert. Um einen übersichtlichen Bericht für Ihre Benutzer zu entwerfen, der für den Renderer, mit dem Sie den Bericht übermitteln möchten, optimiert ist, müssen Sie die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen.  
   
  In diesem Thema wird erörtert, wie sich Seitengröße und Berichtslayout auf das Rendern des Berichts durch Renderer von harten Seitenumbrüchen auswirken. Im Bereich **Berichtseigenschaften** , im Bereich **Eigenschaften** oder im Dialogfeld **Seite einrichten** können Sie Eigenschaften festlegen, mit denen die physische Seitengröße und die Ränder geändert und der Bericht in Spalten aufgeteilt werden können. Sie können auf den Bereich **Berichtseigenschaften** zugreifen, indem Sie auf den blauen Bereich außerhalb des Hauptteils des Berichts klicken. Zum Öffnen des Dialogfelds **Seite einrichten** klicken Sie auf der Registerkarte Start auf **Ausführen** und dann auf der Registerkarte Ausführen auf **Seite einrichten** .  
   
@@ -43,14 +44,14 @@ ms.locfileid: "68632025"
   
  Der Bereich der physischen Seite, der nach Zuweisen von Raum für Ränder, Spaltenabstände und Seitenkopf- und Seitenfußzeile verbleibt, wird als *verwendbarer Seitenbereich*bezeichnet. Ränder werden nur übernommen, wenn Sie Berichte in Renderingformaten mit harten Seitenumbrüchen rendern und drucken. Das folgende Bild gibt den Rand und verwendbaren Seitenbereich einer physischen Seite an.  
   
- ![Physische Seite mit Rändern und verwendbarem Bereich](../../reporting-services/report-design/media/rspagemargins.gif "Physical page with margins and usable area")  
+ ![Physische Seite mit Rändern und verwendbarem Bereich](../../reporting-services/report-design/media/rspagemargins.gif "Physische Seite mit Rändern und verwendbarem Bereich")  
   
 ### <a name="newsletter-style-columns"></a>Spalten im Zeitungsformat  
  Ihr Bericht kann in Spalten, wie Spalten in einer Zeitung, unterteilt werden, die als logische Seiten behandelt und auf derselben physischen Seite gerendert werden. Sie sind von links nach rechts und von oben nach unten angeordnet und werden durch Leerraum zwischen den einzelnen Spalten abgetrennt. Wird der Bericht in mehr als eine Spalte unterteilt, wird jede physische Seite vertikal in Spalten unterteilt. Jede Spalte wird als eine logische Seite behandelt. Angenommen, es sind zwei Spalten auf einer physischen Seite vorhanden. Dann füllt der Inhalt des Berichts zunächst die erste und anschließend die zweite Spalte aus. Wenn der Bericht nicht vollständig in die ersten beiden Spalten passt, füllt der Bericht die erste Spalte und anschließend die zweite Spalte auf der nächsten Seite aus. Die Spalten werden weiter von links nach rechts und oben nach unten ausgefüllt, bis alle Berichtselemente gerendert sind. Wenn Sie Spaltengrößen angeben, durch die die horizontale oder vertikale Breite null ergibt, wird der Spaltenabstand standardmäßig auf null gesetzt.  
   
  Spalten werden im Bereich **Berichtseigenschaften** , im Dialogfeld **Seite einrichten** oder durch Ändern der Eigenschaften TopMargin, BottomMargin, LeftMargin und RightMargin im Bereich **Eigenschaften** festgelegt. Wenn Sie eine nicht definierte Seitenrandgröße verwenden möchten, können Sie die Randgröße in den Geräteinformationseinstellungen für den entsprechenden Renderer angeben, mit dem Sie den Bericht exportieren. Spalten werden nur übernommen, wenn Sie Berichte im PDF- oder in Bildformaten rendern und drucken. Das folgende Bild gibt den verwendbaren Seitenbereich einer Seite mit Spalten an.  
   
- ![Physische Seite mit dargestellten Spalten](../../reporting-services/report-design/media/rspagecolumns.gif "Physical page with columns depicted")  
+ ![Physische Seite mit Spalten](../../reporting-services/report-design/media/rspagecolumns.gif "Physische Seite mit Spalten")  
   
 ## <a name="page-breaks-and-page-names"></a>Seitenumbrüche und Seitennamen  
  Durch die Verwendung von Seitennamen ist ein Bericht u. U. besser zu lesen, und die darin enthaltenen Daten sind einfacher zu überwachen und zu exportieren. Reporting Services stellen Eigenschaften für Berichte und Tablix-Datenbereiche (Tabelle, Matrix und Liste), Gruppen und Rechtecke im Bericht bereit, mit denen die Paginierung gesteuert, Seitenzahlen zurückgesetzt und bei Seitenumbrüchen neue Namen für Berichtsseiten angegeben werden können. Mit diesen Funktionen können Berichte unabhängig vom Format optimiert werden, in dem sie gerendert werden, sie sind jedoch insbesondere beim Exportieren von Berichten in Excel-Arbeitsmappen hilfreich.  

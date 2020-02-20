@@ -11,10 +11,10 @@ ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96d2e01d4ca8d38b79906ee31cc5b50df0d8cb25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970767"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement-Klasse
@@ -26,7 +26,7 @@ ms.locfileid: "67970767"
   
  **Erweitert:** SQLServerStatement  
   
- **Implementiert** [ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md).  
+ **Implementiert:** [ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,11 +36,11 @@ public class SQLServerPreparedStatement
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
- SQLServerPreparedStatement stellt Methoden bereit, mit denen Sie Parameter in Form beliebiger nativer Java-Typen und verschiedener Java-Objekttypen angeben können. SQLServerPreparedStatement bereitet anhand der gespeicherten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozedur **sp_prepare** Anweisungen vor und verwendet das zurückgegebene Anweisungshandle erneut für jede darauffolgende Ausführung einer Anweisung, wobei normalerweise verschiedene vom Benutzer bereitgestellte Parameter verwendet werden.  
+ SQLServerPreparedStatement stellt Methoden bereit, mit denen Sie Parameter in Form beliebiger nativer Java-Typen und verschiedener Java-Objekttypen angeben können. SQLServerPreparedStatement bereitet anhand der gespeicherten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sp_prepare**-Prozedur Anweisungen vor und verwendet das zurückgegebene Anweisungshandle noch mal für jede nachfolgende Ausführung einer Anweisung, wobei normalerweise verschiedene vom Benutzer bereitgestellte Parameter verwendet werden.  
   
  SQLServerPreparedStatement unterstützt Batchverarbeitung, wobei eine Reihe von vorbereiteten Anweisungen in einem einzelnen Datenbankroundtrip ausgeführt wird, um die Laufzeitleistung zu verbessern.  
   
- Diese Klasse unterstützt das Entpacken in die SQLServerPreparedStatement-Klasse, die isqlserverpreparedstatement-Schnittstelle, die Java. SQL. PreparedStatement-Schnittstelle sowie die Klassen und Schnittstellen, die von SQLServerStatement zum Entpacken unterstützt werden. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Diese Klasse unterstützt das Entpacken in die SQLServerPreparedStatement-Klasse, die Schnittstellen „ISQLServerPreparedStatement“ und „java.sql.PreparedStatement“ und die von SQLServerStatement für das Entpacken unterstützten Klassen und Schnittstellen. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

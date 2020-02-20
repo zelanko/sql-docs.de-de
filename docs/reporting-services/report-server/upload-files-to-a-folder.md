@@ -17,10 +17,10 @@ ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d93840b2b1b7354238ccae12ba3a540889038fb2
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67228684"
 ---
 # <a name="upload-files-to-a-folder"></a>Hochladen von Dateien in einen Ordner
@@ -33,23 +33,23 @@ ms.locfileid: "67228684"
     >[!NOTE]  
     >Sie können eine RDS-Datei (report data source, Berichtsdatenquelle) nicht hochladen, um eine freigegebene Datenquelle zu erstellen. Eine RDS-Datei wird nur im Berichts-Designer verwendet. Die Datei kann den Inhalt für ein freigegebenes Datenquellenelement, das Sie mithilfe des Webportals definieren und verwalten, nicht bereitstellen. Als Alternative zum Hochladen können Sie ein Skript schreiben, das eine freigegebene, auf einer RDS-Datei basierende Datenquelle erstellt.  
   
- Die maximale Dateigröße für hochgeladene Elemente beträgt 2 GB und kann festgelegt werden, mithilfe der Eigenschaft MaxFileSizeMb in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ Die maximale Dateigröße für hochgeladene Elemente beträgt 2 GB und kann mithilfe der Eigenschaft MaxFileSizeMb in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] festgelegt werden.  
   
  Dateien, die Sie in eine Berichtsserver-Datenbank hochladen, werden in der Ordnerhierarchie anhand der folgenden Symbole dargestellt.  
   
-  ![Melden Sie uploadable Dateisymbole Server](../../reporting-services/report-server/media/upload-files-to-a-folder/report-server-uploadable-file-icons.png)
+  ![Symbole für Dateien, die auf den Berichtsserver hochgeladen werden können](../../reporting-services/report-server/media/upload-files-to-a-folder/report-server-uploadable-file-icons.png)
   
  Beim Hochladen einer Datei wird diese stets im aktuell ausgewählten Ordner gespeichert. Sie können zu dem Ordner navigieren, in dem das Element zuerst gespeichert werden soll. Oder Sie laden eine Datei hoch und verschieben diese dann später an den endgültigen Speicherort.  
   
- Verwenden Sie zum Hochladen einer Datei, des Webportals ein. Ob Sie Dateien auf einen Berichtsserver hochladen können, hängt von den Tasks ab, die zu der Rollenzuweisung gehören. Falls Sie die Standardsicherheit verwenden, können lokale Administratoren Elemente zu einem Berichtsserver hinzufügen. Wenn Meine Berichte aktiviert ist, hat jeder Benutzer, der über einen Ordner Meine Berichte verfügt, die Berechtigung, Elemente in diesen Ordner hochzuladen. Wenn Sie benutzerdefinierte Rollenzuweisungen verwenden, muss die Rollenzuweisung Aufgaben für die Ordnerverwaltung enthalten.  
+ Verwenden Sie zum Hochladen einer Datei das Webportal. Ob Sie Dateien auf einen Berichtsserver hochladen können, hängt von den Tasks ab, die zu der Rollenzuweisung gehören. Falls Sie die Standardsicherheit verwenden, können lokale Administratoren Elemente zu einem Berichtsserver hinzufügen. Wenn Meine Berichte aktiviert ist, hat jeder Benutzer, der über einen Ordner Meine Berichte verfügt, die Berechtigung, Elemente in diesen Ordner hochzuladen. Wenn Sie benutzerdefinierte Rollenzuweisungen verwenden, muss die Rollenzuweisung Aufgaben für die Ordnerverwaltung enthalten.  
   
-|Zweck|Einzubindende Aufgaben|  
+|Aufgabe|Einzubindende Aufgaben|  
 |----------------|-------------------------|  
 |Eine RDL-Datei in einen Ordner hochladen|Berichte verwalten|  
 |Eine beliebige Datei als binäres Objekt hochladen|Ressourcen verwalten|  
 |Die Inhalte eines Ordners anzeigen|Ressourcen anzeigen, Berichte anzeigen|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Das Webportal eines Berichtsservers (einheitlicher SSRS-Modus)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md)   

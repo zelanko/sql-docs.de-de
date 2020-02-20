@@ -1,34 +1,28 @@
 ---
-title: Speichern von Ablauf Verfolgungen und Ablauf Verfolgungs Vorlagen | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Speichern von Ablaufverfolgungen und Ablaufverfolgungsvorlagen
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- saving traces
-- traces [SQL Server], saving
-- templates [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler], templates
-- trace templates [SQL Server]
-- exporting trace templates
-- importing trace templates
-- SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d3c8a9ddcaa11f4bcfae6e5abd4c000f1ffbdba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 9d3437ca51d12de09c7f0ae386b2e1c09ad50eab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928747"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307426"
 ---
 # <a name="save-traces-and-trace-templates"></a>Speichern von Ablaufverfolgungen und Ablaufverfolgungsvorlagen
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Es ist wichtig, zwischen dem Speichern von Ablaufverfolgungsdateien und dem Speichern von Ablaufverfolgungsvorlagen zu unterscheiden. Beim Speichern einer Ablaufverfolgungsdatei werden die aufgezeichneten Ereignisdaten an einem angegebenen Speicherort gespeichert. Beim Speichern einer Ablaufverfolgungsvorlage wird die Ablaufverfolgungsdefinition gespeichert, wie z. B. angegebene Datenspalten, Ereignisklassen oder Filter.  
+
+Es ist wichtig, zwischen dem Speichern von Ablaufverfolgungsdateien und dem Speichern von Ablaufverfolgungsvorlagen zu unterscheiden. Beim Speichern einer Ablaufverfolgungsdatei werden die aufgezeichneten Ereignisdaten an einem angegebenen Speicherort gespeichert. Beim Speichern einer Ablaufverfolgungsvorlage wird die Ablaufverfolgungsdefinition gespeichert, wie z. B. angegebene Datenspalten, Ereignisklassen oder Filter.  
   
 ## <a name="saving-traces"></a>Speichern von Ablaufverfolgungen  
  Speichern Sie die aufgezeichneten Ereignisdaten in einer Datei oder einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle, wenn Sie die aufgezeichneten Daten später analysieren oder wiedergeben müssen. Verwenden Sie eine Ablaufverfolgungsdatei folgendermaßen:  
@@ -51,7 +45,7 @@ ms.locfileid: "67928747"
  Die Vorlagendefinition einer Ablaufverfolgung enthält die Ereignisklassen, Datenspalten, Filter und alle anderen Eigenschaften (außer den aufgezeichneten Ereignisdaten), mit denen eine Ablaufverfolgung erstellt werden kann. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] stellt vordefinierte Systemvorlagen für allgemeine Ablaufverfolgungstasks und für spezielle Tasks bereit, z. B. für das Erstellen einer Arbeitsauslastung, mit der der Datenbankoptimierungsratgeber den physischen Datenbankentwurf optimieren kann. Sie können auch benutzerdefinierte Vorlagen erstellen und speichern.  
   
 ### <a name="importing-and-exporting-templates"></a>Importieren und Exportieren von Vorlagen  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ermöglicht das Importieren und Exportieren von Vorlagen zwischen Servern. Beim Exportieren einer Vorlage wird eine Kopie einer vorhandenen Vorlage in ein von Ihnen angegebenes Verzeichnis verschoben. Beim Importieren einer Vorlage wird eine Kopie einer von Ihnen angegebenen Vorlage erstellt. Wenn diese Vorlagen in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]angezeigt werden, können Sie sie durch die an den Vorlagennamen angefügte Zeichenfolge "(Benutzer)" von Systemvorlagen unterscheiden. Sie können eine vordefinierte Systemvorlage nicht überschreiben oder direkt ändern.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ermöglicht das Importieren und Exportieren von Vorlagen zwischen Servern. Beim Exportieren einer Vorlage wird eine Kopie einer vorhandenen Vorlage in ein von Ihnen angegebenes Verzeichnis verschoben. Beim Importieren einer Vorlage wird eine Kopie einer von Ihnen angegebenen Vorlage erstellt. Wenn diese Vorlagen in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] angezeigt werden, können Sie sie anhand des an den Vorlagennamen angefügten Begriffs „(user)“ (Benutzer) von Systemvorlagen unterscheiden. Sie können eine vordefinierte Systemvorlage nicht überschreiben oder direkt ändern.  
   
 ### <a name="analyzing-performance-with-templates"></a>Analysieren der Leistung mit Vorlagen  
  Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]häufig überwachen, sollten Sie zur Analyse der Leistung Vorlagen verwenden. Die Vorlagen zeichnen jedes Mal dieselben Ereignisdaten auf und verwenden dieselbe Ablaufverfolgungsdefinition zum Überwachen der gleichen Ereignisse. Sie müssen die Ereignisklassen und Datenspalten nicht jedes Mal neu definieren, wenn Sie eine Ablaufverfolgung erstellen. Darüber hinaus kann eine Vorlage an einen anderen Benutzer weitergegeben werden, der bestimmte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse überwachen möchte. So kann z. B. der Technische Support einem Kunden eine Vorlage zur Verfügung stellen. Der Kunde verwendet die Vorlage zur Aufzeichnung der erforderlichen Ereignisdaten, die dann zur Analyse an den Anbieter für technischen Support gesendet werden.  

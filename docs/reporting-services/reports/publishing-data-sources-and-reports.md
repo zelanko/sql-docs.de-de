@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e98421a76fda260c71c691551151bd9dad245a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a5a043efe7e80805a9d2c1c18dc86a425f01be7f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579971"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190461"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Veröffentlichen von Datenquellen und Berichten
   Vor dem Veröffentlichen Ihres Berichts sollten Sie ihn in der Vorschau anzeigen. Sie können die Gestaltung weiter optimieren, bis Sie mit den Ergebnissen zufrieden sind.  
@@ -27,7 +27,7 @@ ms.locfileid: "65579971"
  Wenn Sie den Bericht mithilfe einer freigegebenen Datenquelle erstellt haben, müssen Sie diese an demselben Speicherort veröffentlichen wie den Bericht. Ähnlich wie Berichte können auch freigegebene Datenquellen auf dem Berichtsserver getrennt verwaltet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Ausführen einer Vorschau für Berichte](../../reporting-services/reports/previewing-reports.md)  
+ [Previewing Reports (Vorschau von Berichten)](../../reporting-services/reports/previewing-reports.md)  
  Beschreibt, wie der Bericht vor dem Veröffentlichen in der Vorschau angezeigt werden kann.  
   
  [Veröffentlichen von Berichten auf einem Berichtsserver](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
@@ -37,12 +37,12 @@ ms.locfileid: "65579971"
  Beschreibt das Veröffentlichen eines Berichts auf einer SharePoint-Website.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Seitenlayout und Rendering (Berichts-Generator und SSRS)](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
+ [Drucken von Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
   
   

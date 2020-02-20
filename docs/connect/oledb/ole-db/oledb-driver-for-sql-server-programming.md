@@ -1,5 +1,5 @@
 ---
-title: OLE DB Treiber für SQL Server Programmierung | Microsoft-Dokumentation
+title: OLE DB-Treiber für SQL Server-Programmierung | Microsoft-Dokumentation
 description: OLE DB-Treiber für SQL Server-Programmierung
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993927"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>OLE DB-Treiber für SQL Server-Programmierung
@@ -30,17 +30,17 @@ ms.locfileid: "67993927"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB Treiber für SQL Server ist eine com-API auf niedriger Ebene, die für den Datenzugriff verwendet wird. Der OLE DB-Treiber für SQL Server wird für die Entwicklung von Tools, Hilfsprogrammen oder untergeordneten Komponenten empfohlen, die eine hohe Leistung erfordern. Der OLE DB-Treiber für SQL Server ist ein nativer Hochleistungsanbieter, der direkt auf das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-TDS-Protokoll (Tabular Data Stream) zugreift.  
+  Der OLE DB-Treiber für SQL Server ist eine COM-API auf niedriger Ebene, die zum Zugreifen auf Daten verwendet wird. Der OLE DB-Treiber für SQL Server wird für die Entwicklung von Tools, Hilfsprogrammen oder untergeordneten Komponenten empfohlen, die eine hohe Leistung erfordern. Der OLE DB-Treiber für SQL Server ist ein nativer Hochleistungsanbieter, der direkt auf das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-TDS-Protokoll (Tabular Data Stream) zugreift.  
   
- OLE DB Treiber für SQL Server bietet OLE DB Unterstützung für Anwendungen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]die eine Verbindung mit herstellen.  
+ Der OLE DB-Treiber für SQL Server bietet OLE DB-Unterstützung für Anwendungen, die eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellen.  
   
- Der OLE DB Treiber für SQL Server ist ein OLE DB, Version 2,0-kompatibler Anbieter.  
+ Der OLE DB-Treiber für SQL Server ist mit Version 2.0 der OLE DB kompatibel.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 -   [Erstellen eines OLE DB-Treibers für eine SQL Server-Anwendung](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [OLE DB für Daten &#40;Quellen Objekte&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [Datenquellenobjekte &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [Befehle](../../oledb/ole-db-commands/commands.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67993927"
   
 -   [Unterstützung für Sparsespalten &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [OLE DB Treiber für SQL Server &#40;OLE DB&#41; Referenz](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [Referenz zum OLE DB-Treiber für SQL Server &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [Vorgehensweisen für OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

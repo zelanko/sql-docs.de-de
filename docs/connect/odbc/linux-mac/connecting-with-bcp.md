@@ -13,16 +13,16 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996616"
 ---
 # <a name="connecting-with-bcp"></a>Herstellen einer Verbindung mit bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Das Hilfsprogramm [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) ist im [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Linux und macOS verfügbar. Auf dieser Seite werden die Unterschiede in der Windows `bcp`-Version von dokumentiert.
+Das Hilfsprogramm [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) ist im [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Linux und macOS verfügbar. Auf dieser Seite werden die Unterschiede im Vergleich zur Windows-Version von `bcp` dokumentiert.
   
 - Das Feldabschlusszeichen ist ein Tabulator („\t“).  
   
@@ -46,7 +46,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Verfügbare Optionen
 In der aktuellen Version sind die folgende Syntax und die folgenden Optionen verfügbar:  
 
-[_Datenbank_ **]** _Schema_ **.** _Tabelle_ **in** Datendatei- | **out** - _DatenDatei\__ _\__
+[_database_ **.** ]_schema_ **.** _table_ **in** _data\_file_ | **out** _data\_file_
 
 - -a *packet_size*  
 Gibt an, wie viele Bytes pro Netzwerkpaket an den Server bzw. vom Server gesendet werden.  
@@ -78,7 +78,7 @@ Gibt die Nummer der ersten Zeile an, die aus einer Tabelle exportiert oder von e
 Gibt an, dass während des Vorgangs keine Standardwerte in leere Spalten eingefügt werden, sondern ein NULL-Wert für diese Spalten beibehalten werden soll.  
   
 - -l  
-Gibt einen Anmeldungstimeout an. Die Option „-I“ gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor für eine Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Timeout eintritt. Das standardmäßige Anmeldungs Timeout beträgt 15 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `bcp` eine Fehlermeldung. Der Wert 0 gibt ein unendliches Timeout an.
+Gibt einen Anmeldungstimeout an. Die Option „-I“ gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor für eine Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Timeout eintritt. Das Standardanmeldetimeout beträgt 15 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `bcp` eine Fehlermeldung. Der Wert 0 steht für ein unendliches Timeout.
   
 - -L *last_row*  
 Gibt die Nummer der letzten Zeile an, die aus einer Tabelle exportiert oder von einer Datendatei importiert werden soll.  
@@ -92,17 +92,17 @@ Verwendet die systemeigenen (Datenbank-) Datentypen, um den Massenkopiervorgang 
 - -P *password*  
 Gibt das Kennwort für die Anmelde-ID an.  
   
-- -Q  
+- -q  
 Führt die SET QUOTED_IDENTIFIERS ON-Anweisung in der Verbindung zwischen dem Hilfsprogramm `bcp` und einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz aus.  
   
 - -r *row_terminator*  
 Gibt das Zeilenabschlusszeichen an.  
   
-- -r  
+- -R  
 Gibt an, dass beim Massenkopieren von Währungs-, Datums- und Zeitdaten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] das Länderformat verwendet wird, das durch die Gebietsschemaeinstellung des Clientcomputers definiert wird.  
   
 - -S *server*  
-Gibt den Namen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Instanz an, mit der eine Verbindung hergestellt werden soll, oder, wenn-D verwendet wird, einen DSN.  
+Gibt den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz, mit der eine Verbindung hergestellt werden soll oder, wenn „-D“ verwendet wird, ein DSN an  
   
 - -t *field_terminator*  
 Gibt das Feldabschlusszeichen an.  
@@ -113,7 +113,7 @@ Gibt an, dass das Hilfsprogramm `bcp` die Verbindung mit [!INCLUDE[ssNoVersion](
 - -U *login_id*  
 Gibt die Anmelde-ID an, die zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendet wird.  
   
-- -V  
+- -v  
 Meldet die Versionsnummer und das Copyright für das Hilfsprogramm `bcp`.  
   
 - -w  
@@ -133,7 +133,7 @@ Gibt den oder die Hinweise an, die beim Massenimportieren von Daten in eine Tabe
 - -i *input_file*  
 Gibt den Namen einer Antwortdatei an.  
   
-- -n  
+- -N  
 Verwendet die systemeigenen (Datenbank-) Datentypen für Daten, die keinen Zeichendatentyp haben, sowie Unicode-Zeichen für Zeichendaten.  
   
 - -o *output_file*  

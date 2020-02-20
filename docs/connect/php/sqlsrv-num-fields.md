@@ -17,16 +17,16 @@ ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5c095b74f8f299a1d5f2b15daaf95e3d5086ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992669"
 ---
-# <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
+# <a name="sqlsrv_num_fields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Ruft die Anzahl der Felder in einem aktiven Resultset ab. Diese Funktion kann für jede vorbereitete Anweisung vor oder nach der Ausführung aufgerufen werden.  
+Ruft die Anzahl der Felder in einem aktiven Resultset ab. Diese Funktion kann für jedes Prepared Statement vor oder nach der Ausführung aufgerufen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +36,7 @@ sqlsrv_num_fields( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$stmt*: Die Anweisung, zu der das Zielresultset aktiv ist.  
+*$stmt:* Die Anweisung, zu der das Zielresultset aktiv ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Ein ganzzahliger Wert, der die Anzahl der Felder im aktiven Resultset darstellt. Falls ein Fehler auftritt, wird der boolesche Wert **false** zurückgegeben.  

@@ -11,13 +11,13 @@ ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc81bae599bcd9e401aad7e610a7c43ed1a0dcec
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027886"
 ---
-# <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC-Treiber für SQL Server
+# <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC-Treiber für SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -27,9 +27,9 @@ Der Microsoft JDBC-Treiber für SQL Server wurde auf Kompatibilität mit wichtig
   
 ## <a name="getting-started"></a>Erste Schritte  
 
-* [Step 1: Configure development environment for Java development (Schritt 1: Konfigurieren der Entwicklungsumgebung für Java-Entwicklung)](step-1-configure-development-environment-for-java-development.md)  
-* [Step 2: Create a SQL database for Java development (Schritt 2: Erstellen einer SQL-Datenbank für die Java-Entwicklung)](step-2-create-a-sql-database-for-java-development.md)  
-* [Step 3: Proof of concept connecting to SQL using Java (Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Java)](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [Schritt 1: Konfigurieren der Entwicklungsumgebung für die Java-Entwicklung](step-1-configure-development-environment-for-java-development.md)  
+* [Schritt 2: Erstellen einer SQL-Datenbank für die Java-Entwicklung](step-2-create-a-sql-database-for-java-development.md)  
+* [Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>Dokumentation  
 
@@ -46,15 +46,15 @@ Der Microsoft JDBC-Treiber für SQL Server wurde auf Kompatibilität mit wichtig
 
 [Feedback und Suchen von zusätzlichen Informationen zum JDBC-Treiber](finding-additional-jdbc-driver-information.md)  
   
-## <a name="download"></a>Herunterladen
+## <a name="download"></a>Download
 
-[Laden Sie den Microsoft JDBC-Treiber für SQL Server herunter](download-microsoft-jdbc-driver-for-sql-server.md) : enthält zusätzliche Informationen über Maven-Projekte und vieles mehr.
+[Laden Sie den Microsoft JDBC-Treiber für SQL Server herunter.](download-microsoft-jdbc-driver-for-sql-server.md) Dieser enthält u. a. zusätzliche Informationen über Maven-Projekte.
   
 ## <a name="samples"></a>Beispiele  
 
 * [Beispiele für JDBC-Treiberanwendungen](sample-jdbc-driver-applications.md)  
-* [Einstieg in Java unter Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [Einstieg in Java unter macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Ersten Schritte mit Java unter Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Getting Started with Java on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [Ersten Schritte mit Java auf SuSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [Erste Schritte mit Java unter Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [Erste Schritte mit Java unter macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Erste Schritte mit Java unter Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Erste Schritte mit Java unter Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [Erste Schritte mit Java unter SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

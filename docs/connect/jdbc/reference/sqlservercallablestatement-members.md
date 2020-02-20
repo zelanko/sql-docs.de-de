@@ -1,5 +1,5 @@
 ---
-title: SQLServerCallableStatement-Member | Microsoft-Dokumentation
+title: SQLServerCallableStatement-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69a12437e3b1e611cf9e48d60c9fd77cd02f63bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971874"
 ---
 # <a name="sqlservercallablestatement-members"></a>SQLServerCallableStatement-Elemente
@@ -37,7 +37,7 @@ ms.locfileid: "67971874"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|und Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Geerbt von [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Fügt dem Befehlsbatch für dieses CallableStatement-Objekt einen Parametersatz hinzu.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Bricht die SQL-Anweisung ab, die derzeit von diesem CallableStatement-Objekt ausgeführt wird.|  
@@ -50,7 +50,7 @@ ms.locfileid: "67971874"
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|(Geerbt von [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Führt die SQL-Abfrage in diesem CallableStatement-Objekt aus und gibt das durch die Abfrage generierte [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt zurück.|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|(Geerbt von [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Führt die SQL-Anweisung in diesem CallableStatement-Objekt aus. Hierbei muss es sich um eine SQL-Anweisung vom Typ „INSERT“, „UPDATE“, „MERGE“ oder „DELETE“ oder um eine SQL-Anweisung handeln, von der nichts zurückgegeben wird (z. B. eine DDL-Anweisung).|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Ruft das [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt ab, von dem dieses CallableStatement-Objekt erstellt wurde.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Ruft den Wert der angegebenen Spalte als [DateTimeOffset-Klassen](../../../connect/jdbc/reference/datetimeoffset-class.md) Objekt ab.|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Ruft den Wert der angegebenen Spalte als Objekt der Klasse [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) ab|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Ruft die Richtung zum Abrufen von Zeilen aus Datenbanktabellen ab, die standardmäßig für Resultsets verwendet wird, die auf der Grundlage dieses CallableStatement-Objekts generiert werden.|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Ruft die Anzahl von Resultsetzeilen ab, bei der es sich um die standardmäßige Abrufgröße für Resultsetobjekte handelt, die auf der Grundlage dieses CallableStatement-Objekts generiert werden.|  
 |[getGeneratedKeys](../../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Ruft sämtliche automatisch generierte Schlüssel ab, die aufgrund der Ausführung dieses CallableStatement-Objekts erstellt werden.|  
@@ -70,14 +70,14 @@ ms.locfileid: "67971874"
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)|Ruft den Wert des angegebenen Parameters als java.io.Reader-Objekt ab.|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|Ruft den Wert des angegebenen JDBC-BLOB-Parameters als CLOB-Objekt in der Programmiersprache Java ab.|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|Ruft den Wert des angegebenen Parameters als java.sql.Date-Objekt in der Programmiersprache Java ab.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Ruft den Wert der angegebenen Spalte als[DateTimeOffset-Klassen](../../../connect/jdbc/reference/datetimeoffset-class.md) Objekt ab.|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Ruft den Wert der angegebenen Spalte als Objekt der Klasse [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) ab|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|Ruft den Wert des angegebenen Parameters als Wert vom Typ **double** in der Programmiersprache Java ab.|  
 |[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|Ruft den Wert des angegebenen Parameters als Wert vom Typ **float** in der Programmiersprache Java ab.|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|Ruft den Wert des angegebenen Parameters als **int**-Wert in der Programmiersprache Java ab.|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|Ruft den Wert des angegebenen Parameters als Wert vom Typ **long** in der Programmiersprache Java ab.|  
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)|Ruft den Wert des angegebenen Parameters als Readerobjekt ab.|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)|Ruft den Wert des angegebenen JDBC-**NCLOB**-Parameters als **NClob**-Objekt in der Programmiersprache Java ab.|  
-|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|Ruft den Wert des angegebenen **NCHAR**-, **nvarchar** -oder **LONGNVARCHAR** -Parameters als Zeichenfolge in der Programmiersprache Java ab.|  
+|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|Diese Methode ruft den Wert des angegebenen **NCHAR**-, **NVARCHAR**- oder **LONGNVARCHAR**-Parameters als Zeichenfolge in der Programmiersprache Java ab.|  
 |[getObject](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)|Ruft den Wert des angegebenen Parameters als Objekt in der Programmiersprache Java ab.|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Ruft die Anzahl von Sekunden ab, die von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] auf die Ausführung dieses CallableStatement-Objekts gewartet wird.|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)|Ruft den Wert des angegebenen Parameters als Ref-Objekt in der Programmiersprache Java ab.|  
@@ -110,7 +110,7 @@ ms.locfileid: "67971874"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)|(Geerbt von [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Legt den angegebenen Parameter auf das angegebene Objekt fest.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Legt den SQL-Cursornamen auf die angegebene Zeichenfolge fest, die dann für nachfolgende Ausführungsmethoden verwendet wird.|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlservercallablestatement.md)|Legt den angegebenen Parameter auf den angegebenen Datumswert fest.|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|Legt den Wert der angegebenen Spalte auf den [DateTimeOffset-Klassen](../../../connect/jdbc/reference/datetimeoffset-class.md) Wert fest.|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|Mit dieser Methode wird der Wert der angegebenen Spalte auf den Wert der Klasse [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) festgelegt.|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlservercallablestatement.md)|Legt den angegebenen Parameter auf den angegebenen **double**-Wert fest.|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Legt den Escapeverarbeitungsmodus fest.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Gibt für den JDBC-Treiber die Richtung an, in der die Resultsetzeilen verarbeitet werden sollen.|  
@@ -125,7 +125,7 @@ ms.locfileid: "67971874"
 |[setNString](../../../connect/jdbc/reference/setnstring-method-sqlservercallablestatement.md)|Legt den angegebenen Parameter auf das angegebene Zeichenfolgenobjekt fest.|  
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)|Legt den angegebenen Parameter unter Berücksichtigung des festzulegenden Parametertyps auf einen NULL-Wert fest.|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)|Legt den Wert des angegebenen Parameters unter Verwendung des angegebenen Objekts fest.|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Sendet eine Anforderung, dass dem Pool eine Anweisung hinzugefügt bzw. nicht hinzugefügt werden soll. Standardmäßig kann ein SQLServerCallableStatement-Objekt bei der Erstellung in einem Pool erstellt werden.|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Sendet eine Anforderung, dass dem Pool eine Anweisung hinzugefügt bzw. nicht hinzugefügt werden soll. Standardmäßig kann ein SQLServerCallableStatement-Objekt bei der Erstellung einem Pool hinzugefügt werden.|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Legt die Anzahl von Sekunden, die vom Treiber auf die Ausführung eines CallableStatement-Objekts gewartet wird, auf die angegebene Anzahl von Sekunden fest.|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|(Geerbt von [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Legt den angegebenen Parameter auf das angegebene Ref-Objekt fest.|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Legt den Antwortpuffermodus für dieses [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt auf **String full** oder auf **adaptive** (jeweils ohne Berücksichtigung der Groß-/Kleinschreibung) fest.|  

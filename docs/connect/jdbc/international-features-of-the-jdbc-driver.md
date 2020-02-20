@@ -1,5 +1,5 @@
 ---
-title: Internationale Funktionen des JDBC-Treibers | Microsoft-Dokumentation
+title: Internationale Features des JDBC-Treibers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028008"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Internationale Funktionen des JDBC-Treibers
@@ -33,7 +33,7 @@ ms.locfileid: "69028008"
 ## <a name="handling-of-character-data"></a>Verarbeitung von Zeichendaten  
  Zeichendaten in Java werden standardmäßig als Unicode-Daten verarbeitet; das Java-Objekt **String** stellt Unicode-Zeichendaten dar. Die einzige Ausnahme dieser Regel im JDBC-Treiber bilden die Abruf- und Festlegungsmethoden für ASCII-Datenströme. Dabei handelt es sich um Sonderfälle, da Bytedatenströme mit der impliziten Voraussetzung einer einzelnen bekannten Codepage (ASCII) verwendet werden.  
   
- Darüber hinaus stellt der JDBC-Treiber die **sendStringParametersAsUnicode** -Verbindungs Zeichenfolgen-Eigenschaft bereit. Mit dieser Eigenschaft kann angegeben werden, dass die vorbereiteten Parameter für Zeichendaten anstatt in Unicode in ASCII oder als Multibyte-Zeichensatz (MBCS) gesendet werden. Weitere Informationen zur **sendStringParametersAsUnicode** -Verbindungs Zeichenfolgen-Eigenschaft finden Sie unter [Festlegen der Verbindungs Eigenschaften](../../connect/jdbc/setting-the-connection-properties.md).  
+ Darüber hinaus stellt der JDBC-Treiber die -Verbindungszeichenfolgeeigenschaft **sendStringParametersAsUnicode** bereit. Mit dieser Eigenschaft kann angegeben werden, dass die vorbereiteten Parameter für Zeichendaten anstatt in Unicode in ASCII oder als Multibyte-Zeichensatz (MBCS) gesendet werden. Weitere Informationen zur Verbindungszeichenfolgeneigenschaft **sendStringParametersAsUnicode** finden Sie unter [Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).  
   
 ### <a name="driver-incoming-conversions"></a>Konvertierung eingehender Daten  
  Unicode-Textdaten vom Server brauchen nicht konvertiert zu werden. Sie werden direkt als Unicode-Daten übergeben. Nicht-Unicode-Daten vom Server werden von der Codepage für die Daten auf Datenbank- oder Spaltenebene in Unicode konvertiert. Der JDBC-Treiber verwendet die JVM-Konvertierungsroutinen (Java Virtual Machine) für diese Konvertierungen. Diese Konvertierungen werden in allen Abrufmethoden für typisierte Zeichenfolge- und Zeichendatenströme ausgeführt.  
@@ -46,7 +46,7 @@ ms.locfileid: "69028008"
  Die API-Methoden für nicht nationale Zeichensätze wie „setString“, „setCharacterStream“ und „setClob“ der Klassen [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) senden ihre Werte hingegen nur im Unicode-Format an den Server, wenn die Eigenschaft **sendStringParametersAsUnicode** auf TRUE festgelegt ist, was dem Standardwert entspricht.  
   
 ## <a name="non-unicode-parameters"></a>Nicht-Unicode-Parameter  
- Legen Sie für die optimale Leistung mit dem **char**-, **varchar** -oder **LONGVARCHAR** -Typ von nicht-Unicode-Parametern die **sendStringParametersAsUnicode** -Verbindungs Zeichen folgen Eigenschaft auf "false" fest, und verwenden Sie die Methoden für nicht nationale Zeichen folgen.  
+ Um bei Verwendung der folgenden Typen von Nicht-Unicode-Parametern eine optimale Leistung zu erhalten, legen Sie die**sendStringParametersAsUnicode**-Verbindungszeichenfolgeneigenschaft auf FALSE fest und verwenden die Methoden für nicht nationale Zeichen: **CHAR**, **VARCHAR** oder **LONGVARCHAR**.  
   
 ## <a name="formatting-issues"></a>Formatierungsprobleme  
  Bei Datums-, Uhrzeit- und Währungsangaben erfolgt die gesamte Formatierung mit lokalisierten Daten mit dem Locale-Objekt und den verschiedenen Formatierungsmethoden für die Datentypen **Date**, **Calendar** und **Number** auf Java-Ebene. In den seltenen Fällen, in denen der JDBC-Treiber gebietsschemasensitive Daten in einem lokalisierten Format übergeben muss, wird die entsprechende Formatierungsmethode mit dem JVM-Standardgebietsschema verwendet.  
@@ -62,7 +62,7 @@ ms.locfileid: "69028008"
 > [!NOTE]  
 >  Der Großteil der für Windows-Plattformen geschriebenen Konfliktlösersoftware basiert auf den Internet-DSN-Standards und verwendet aus diesem Grund mit hoher Wahrscheinlichkeit das Punycode-Format für IDN. Ein Windows-basierter DNS-Server in einem privaten Netzwerk kann hingegen so konfiguriert werden, dass die Verwendung von UTF-8-Zeichen auf Serverbasis möglich ist.  Weitere Informationen finden Sie unter [Unicode character support (Unterstützung von Unicode-Zeichen)](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

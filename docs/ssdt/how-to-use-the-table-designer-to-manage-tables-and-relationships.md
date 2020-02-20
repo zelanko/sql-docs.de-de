@@ -1,11 +1,7 @@
 ---
-title: 'Gewusst wie: Verwalten von Tabellen und Beziehungen mithilfe des Tabellen-Designers | Microsoft-Dokumentation'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Verwalten von Tabellen und Beziehungen mithilfe des Tabellen-Designers
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.columnspecification.index.dialog
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91fddb94bf028ec884a4589c7c4a88bd3be923e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097469"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226825"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Gewusst wie: Verwalten von Tabellen und Beziehungen mithilfe des Tabellen-Designers
+
 Der Tabellen-Designer bietet gemeinsam mit dem Transact\-SQL-Editor eine visuelle Oberfläche zum Erstellen und Bearbeiten von Tabellenstrukturen, einschließlich tabellenspezifischer Programmierobjekte, für SQL Server-Datenbanken.  Er wird gestartet, wenn Sie eine neue Tabelle für eine verbundene Datenbank oder ein Projekt erstellen oder wenn Sie im SQL Server-Objekt-Explorer oder Projektmappen-Explorer auf eine Tabelle doppelklicken, um sie zu bearbeiten.  
   
 Der Designer besteht aus dem Spaltenraster, dem Skriptbereich und dem Kontextbereich. Im Spaltenraster werden alle Spalten in der Tabelle aufgelistet. In diesem Raster können Sie Spalten hinzufügen, bearbeiten und löschen.  Im Kontextbereich erhalten Sie eine logische Ansicht der Tabellendefinition (Schlüssel, Indizes, Einschränkungen, Trigger usw.). Hier können Sie ein Objekt auswählen, um dessen Beziehungen zu einzelnen Spalten hervorzuheben. In diesem Bereich können Sie der Tabelle außerdem neue Objekte hinzufügen und die Eigenschaften eines ausgewählten Objekts im Eigenschaftenraster bearbeiten. Im Skriptbereich wird die Definition der Tabellenstruktur angezeigt, und das Skript des ausgewählten Objekts wird im Kontextbereich oder Spaltenraster hervorgehoben. Sie können das Skript bearbeiten, während daneben das Spaltenraster und der Kontextbereich angezeigt werden. Alle Änderungen in einem der drei Bereiche werden sofort in den anderen beiden Bereichen übernommen.  

@@ -9,10 +9,10 @@ ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 34f69e4c8c1b62e01f8cb73e26f84d05e427a9ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581658"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Diagrammeffekte: Hinzufügen einer Abschrägung, eines Relief oder von Texturstilen (Berichts-Generator)
@@ -40,7 +40,7 @@ ms.locfileid: "65581658"
 > [!NOTE]  
 >  Sie können 3D nicht mit Abschrägungen oder Prägungen im selben Diagramm verwenden. Wenn Sie für das Diagramm 3D aktiviert haben, wird die PieDrawingStyle-Eigenschaft nicht angezeigt.  
   
- ![Kreisdiagramm mit konkaver Zeichnungsart](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "Pie chart with concave drawing style")  
+ ![Kreisdiagramm mit konkaver Zeichnungsart](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "Kreisdiagramm mit konkaver Zeichnungsart")  
   
 ### <a name="to-add-texture-styles-to-a-bar-or-column-chart"></a>So fügen Sie einem Balken- oder Säulendiagramm Strukturarten hinzu  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65581658"
 > [!NOTE]  
 >  Sie können 3D nicht mit Abschrägungen oder Prägungen im selben Diagramm verwenden. Wenn Sie für das Diagramm 3D aktiviert haben, wird die PieDrawingStyle-Eigenschaft nicht angezeigt.  
   
- ![Balkendiagramm mit LightToDark-Zeichnungseffekt](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "Bar chart with LightToDark drawing effect")  
+ ![Balkendiagramm mit LightToDark-Zeichnungseffekt](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "Balkendiagramm mit LightToDark-Zeichnungseffekt")  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   

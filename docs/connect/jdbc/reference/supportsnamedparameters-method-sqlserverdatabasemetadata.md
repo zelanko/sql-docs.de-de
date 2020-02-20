@@ -1,5 +1,5 @@
 ---
-title: supportsnamedparameters-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsNamedParameters-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 158be08f-387d-4c5b-b567-a1fe590d6f16
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c5c0ac339c60b4e88138d18a1f66798b4c66d8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969130"
 ---
 # <a name="supportsnamedparameters-method-sqlserverdatabasemetadata"></a>supportsNamedParameters-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsNamedParameters()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportsnamedparameters-Methode wird von der supportsnamedparameters-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsNamedParameters-Methode wird von der supportsNamedParameters-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

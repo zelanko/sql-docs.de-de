@@ -11,10 +11,10 @@ ms.assetid: 1dcc3d4f-ae30-45c0-afad-a531358807af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9acd8b75a7152a8e10faeb7f80d6d02c070ad2f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985517"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream"></a>updateAsciiStream-Methode (int, java.io.InputStream)
@@ -37,17 +37,17 @@ public void updateAsciiStream(int columnIndex,
   
  *x*  
   
- Ein InputStream-Objekt.  
+ Ein InputStream-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese updateAsciiStream-Methode wird von der updateAsciiStream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese updateAsciiStream-Methode wird von der updateAsciiStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Von dieser Methode werden ASCII-Zeichen (Bytes) von einem InputStream-Objekt an konvertierbare Zeichenspalten übergeben, bei denen es sich um den ASCII-Bereich „[0x00 – 0x7F]“ von Unicode sowie um die Codepages 874, 932, 936, 949, 950 und 1250 bis 1258 handelt. Von dieser Methode wird eine Konvertierung zur Zielsortierseite vorgenommen. Beim Versuch, eine nicht konvertierbare Zielspalte zu aktualisieren, wird eine Ausnahme ausgelöst. Für Binärspalten werden Rohbytes übergeben.  
   
- Die Verwendung dieser Methode für die Datentypen **Image**, **Text**und **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann sich auf die Leistung auswirken.  
+ Die Verwendung dieser Methode für die Datentypen **image**, **text** und **ntext**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann sich negativ auf die Leistung auswirken.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [updateAsciiStream-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   

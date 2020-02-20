@@ -9,13 +9,13 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041574"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Lernprogramm: Kartenbericht (Berichts-Generator)
+# <a name="tutorial-map-report-report-builder"></a>Tutorial: Kartenbericht (Berichts-Generator)
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial erfahren Sie mehr über die Kartenfunktionen, mit denen Sie Daten vor einem geografischen Hintergrund in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht anzeigen können. 
   
 Karten basieren auf räumlichen Daten, die in der Regel aus Punkten, Linien und Polygonen bestehen. Ein Polygon kann z. B. den Umriss eines Countys darstellen, eine Linie eine Straße und ein Punkt die Position eines Orts. Jeder räumliche Datentyp wird auf einer separaten Kartenebene als Satz von Kartenelementen angezeigt.  
@@ -27,11 +27,11 @@ Geben Sie zum Verändern der Darstellung von Kartenelementen ein Feld mit Werten
 In diesem Tutorial erstellen Sie einen Kartenbericht, in dem Geschäftsstandorte in den Countys des Bundesstaats New York angezeigt werden.  
    
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie ausführliche Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Das erste Tutorial dieser Reihe enthält Schrittanleitungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle, zum Erstellen eines Datasets und zum Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 30 Minuten  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 Der Berichtsserver muss für dieses Tutorial für die Unterstützung von Bing Maps als Hintergrund konfiguriert werden. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
 
 Weitere Informationen zu weiteren Voraussetzungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -118,7 +118,7 @@ In diesem Abschnitt fügen Sie mithilfe des Kartenebenen-Assistenten eine Punkte
   
 1.  Klicken Sie auf die Registerkarte **Ausführen** auf **Entwurf**, um wieder zur Entwurfsansicht zurück zu wechseln.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie in auf der Symbolleiste auf die Schaltfläche **Assistent für neue Ebenen** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf die Schaltfläche **Assistent für neue Ebenen** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
 
     ![Berichts-Generator-Karte-Symbol-des-Assistent-für-neue-Ebene](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -169,13 +169,13 @@ In diesem Abschnitt fügen Sie mithilfe des Kartenebenen-Assistenten eine Punkte
 9. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ).  
   
     Das Resultset enthält sieben Spalten mit einem Satz von Geschäften im Bundesstaat New York, die Verbrauchsgüter verkaufen. Im Folgenden finden Sie eine Liste mit Erklärungen für die Spalten, die nicht selbsterklärend sind: 
-    *   **StoreKey**: ein Geschäftsbezeichner  
+    *   **StoreKey**: ein Geschäftsbezeichner.  
     *   **StoreName**
-    *   **SellingArea**: die für eine Produktauslage zur Verfügung stehende Fläche, von 455 sq ft bis hin zu 1125 sq ft
+    *   **SellingArea**: die für eine Produktauslage zur Verfügung stehende Fläche, von 455 sq ft bis 1125 sq ft.
     *   **City**
     *   **County**
-    *   **Vertrieb**: Gesamtvertrieb 
-    *   **SpatialLocation**: Position in Längen- und Breitengraden 
+    *   **Vertrieb:** Gesamtumsatz. 
+    *   **SpatialLocation**: Standort, angegeben in Längen- und Breitengrad. 
 
     ![Berichts-Generator-Abfrage-entwerfen](../reporting-services/media/report-builder-map-design-query.png) 
   
@@ -195,9 +195,9 @@ In diesem Abschnitt fügen Sie mithilfe des Kartenebenen-Assistenten eine Punkte
   
 16. Aktivieren Sie auf der Seite **Farbdesign und Datenvisualisierung auswählen** die Option **Blasengrößen zum Anzeigen von Daten verwenden**.  
   
-17. Wählen Sie unter **Datenfeld** `[Sum(SellingArea)]` aus, um die Blasengröße entsprechend der Größe der Ausstellfläche für die Produkte zu variieren.  
+17. Wählen Sie unter **Datenfeld**`[Sum(SellingArea)]` aus, um die Blasengröße entsprechend der Größe der Ausstellfläche für die Produkte zu variieren.  
   
-18. Wählen Sie **Bezeichnungen anzeigen**und unter **Datenfeld** `[City]`aus.
+18. Wählen Sie **Bezeichnungen anzeigen**und unter **Datenfeld**`[City]`aus.
 
 18. Klicken Sie auf **Fertig stellen**.  
   
@@ -234,7 +234,7 @@ Fügen Sie mithilfe des Kartenebenen-Assistenten eine Kartenebene hinzu, die ein
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie in auf der Symbolleiste auf die Schaltfläche **Assistent für neue Ebenen** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf die Schaltfläche **Assistent für neue Ebenen** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  Wählen Sie auf der Seite **Quelle räumlicher Daten auswählen** den Eintrag **SQL Server-Abfrage nach räumlichen Daten** aus, und klicken Sie auf **Weiter**.  
   
@@ -453,7 +453,7 @@ In diesem Abschnitt geben Sie einen Punkt an, und verwenden den Markertyp **Ster
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **Ebene hinzufügen** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer") und anschließend auf **Punktebene**.  
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste erst auf **Ebene hinzufügen** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer") und anschließend auf **Punktebene**.  
   
     Der Karte wird eine neue Punktebene hinzugefügt. Standardmäßig verfügt die Punktebene über den räumlichen Datentyp **Eingebettet**.  
   
@@ -536,7 +536,7 @@ Wenn Sie den Bericht auf einem Berichtsserver speichern, können Sie ihn dort au
 
 ![Berichts-Generator-Karte-im-Portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 Damit ist die exemplarische Vorgehensweise für das Hinzufügen einer Karte zum Bericht abgeschlossen.  
   
 Weitere Informationen finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  

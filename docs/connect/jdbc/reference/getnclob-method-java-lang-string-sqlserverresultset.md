@@ -11,10 +11,10 @@ ms.assetid: 36571f7c-b335-4249-8f83-51dcb6923aec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e26b8c0eb4595403e3370a2e56aabfce63f0c80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981510"
 ---
 # <a name="getnclob-method-javalangstring-sqlserverresultset"></a>getNClob-Methode (java.lang.String) (SQLServerResultSet)
@@ -35,7 +35,7 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
  Eine **Zeichenfolge**, die die Spaltenbezeichnung enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein NCLOB-Objekt.  
+ Ein NClob-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -43,7 +43,7 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
 ## <a name="remarks"></a>Bemerkungen  
  Diese getNClob-Methode wird von der getNClob-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Diese Methode wird nur für Spalten vom Typ " **nvarchar (max)** ", " **ntext**" und " **XML** " unterstützt. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
+ Diese Methode wird nur in **nvarchar(max)** -, **ntext**- und **xml**-Spalten unterstützt. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getNClob-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)   

@@ -1,6 +1,6 @@
 ---
 title: NYC Taxi-Demodaten für Tutorials
-description: Anleitung zum Herunterladen der NYC Taxi-Beispieldaten und zum Erstellen einer Datenbank. Daten werden für Python- und R-Tutorials in SQL Server verwendet, um zu zeigen, wie Skripts in gespeicherten SQL Server-Prozeduren und T-SQL-Funktionen eingebettet werden.
+description: Erstellen Sie eine Datenbank mit Beispieldaten zu Taxis in New York City. Dieses Dataset wird in R- und Python-Tutorials für SQL Server Machine Learning Services verwendet.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/31/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8413456563a85f9c126dd9981e3e6df548cd30c4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727156"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908923"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>NYC Taxi-Demodaten für Python- und R-Tutorials in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ In der folgenden Tabelle finden Sie eine Übersicht über die in der Demodatenba
 
 |**Objektname**|**Objekttyp**|**Beschreibung**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | Datenbank | Erstellt eine Datenbank und zwei Tabellen:<br /><br />Tabelle „dbo.nyctaxi_sample“: Enthält das Hauptdataset von NYC Taxi. Einer Tabelle wird ein gruppierter Columnstore-Index hinzugefügt, um den Speicher und die Abfrageleistung zu verbessern. Die 1 %-Stichprobe des NYC Taxi-Datasets wird in diese Tabelle eingefügt.<br /><br />Tabelle „dbo.nyc_taxi_models“: Wird zum Speichern des trainierten Modells für die erweiterte Analyse verwendet.|
+|**NYCTaxi_Sample** | database | Erstellt eine Datenbank und zwei Tabellen:<br /><br />Tabelle „dbo.nyctaxi_sample“: Enthält das Hauptdataset von NYC Taxi. Einer Tabelle wird ein gruppierter Columnstore-Index hinzugefügt, um den Speicher und die Abfrageleistung zu verbessern. Die 1 %-Stichprobe des NYC Taxi-Datasets wird in diese Tabelle eingefügt.<br /><br />Tabelle „dbo.nyc_taxi_models“: Wird zum Speichern des trainierten Modells für die erweiterte Analyse verwendet.|
 |**fnCalculateDistance** |Skalarwertfunktion | Berechnet die direkte Entfernung zwischen Abhol- und Ablageorten. Diese Funktion wird in den Lektionen [Erstellen von Datenfeatures](sqldev-create-data-features-using-t-sql.md), [Trainieren und Speichern eines Modells](sqldev-train-and-save-a-model-using-t-sql.md) und [Operationalisieren des R-Modells](sqldev-operationalize-the-model.md) verwendet.|
 |**fnEngineerFeatures** |Tabellenwertfunktion | Erstellt neue Datenfeatures für das Modelltraining. Diese Funktion wird in den Lektionen [Erstellen von Datenfeatures](sqldev-create-data-features-using-t-sql.md) und [Operationalisieren des R-Modells](sqldev-operationalize-the-model.md) verwendet.|
 

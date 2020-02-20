@@ -1,5 +1,5 @@
 ---
-title: Protokollierungs Aktivität | Microsoft-Dokumentation
+title: Protokollieren von Aktivitäten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993331"
 ---
 # <a name="logging-activity"></a>Protokollieren von Aktivitäten
@@ -24,7 +24,7 @@ ms.locfileid: "67993331"
 
 Standardmäßig werden Fehler und Warnungen, die von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] generiert werden, nicht protokolliert. Dieses Thema erläutert, wie Protokollierungsaktivitäten konfiguriert werden.  
   
-## <a name="logging-activity-using-the-pdosqlsrv-driver"></a>Protokollieren von Aktivitäten mit dem PDO_SQLSRV-Treiber  
+## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>Protokollieren von Aktivitäten mit dem PDO_SQLSRV-Treiber  
 Die einzige Konfiguration, die für den PDO_SQLSRV-Treiber verfügbar ist, ist der pdo_sqlsrv.log_severity-Eintrag in der Datei „php.ini“.  
   
 Fügen Sie am Ende der Datei „php.ini“ Folgendes ein:  
@@ -36,13 +36,13 @@ pdo_sqlsrv.log_severity = <number>
   
 Für**log_severity** sind die folgenden Werte möglich.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |---------|---------------|  
 |0|Die Protokollierung ist deaktiviert (Standardeinstellung, wenn nichts definiert ist).|  
 |-1|Gibt an, dass Fehler, Warnungen und Hinweise protokolliert werden.|  
-|1|Gibt an, dass Fehler protokolliert werden.|  
-|2|Gibt an, dass Warnungen protokolliert werden.|  
-|4|Gibt an, dass Benachrichtigungen protokolliert werden.|  
+|1|Gibt an, dass Fehler protokolliert werden|  
+|2|Gibt an, dass Warnungen protokolliert werden|  
+|4|Gibt an, dass Benachrichtigungen protokolliert werden|  
   
 Protokollierungsinformationen werden der „phperrors.log“-Datei hinzugefügt.  
   
@@ -61,10 +61,10 @@ Sie können die Protokollierung mit der [sqlsrv_configure](../../connect/php/sql
   
 Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSubsystems** -Einstellung verwendet werden können:  
   
-|Wert (entsprechende ganze Zahl in Klammern)|und Beschreibung|  
+|Wert (entsprechende ganze Zahl in Klammern)|Beschreibung|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Aktiviert die Protokollierung aller Subsysteme.|  
-|SQLSRV_LOG_SYSTEM_OFF(0)|Deaktiviert die Protokollierung. Dies ist die Standardeinstellung.|  
+|SQLSRV_LOG_SYSTEM_OFF(0)|Deaktiviert die Protokollierung. Dies ist die Standardoption.|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|Aktiviert die Protokollierung der Initialisierungsaktivität.|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|Aktiviert die Protokollierung der Verbindungsaktivität.|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|Aktiviert die Protokollierung der Anweisungsaktivität.|  
@@ -92,12 +92,12 @@ Nachdem die Protokollierung aktiviert wurde, müssen Sie angeben, was protokolli
   
 Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSeverity** -Einstellung verwendet werden können:  
   
-|Wert (entsprechende ganze Zahl in Klammern)|und Beschreibung|  
+|Wert (entsprechende ganze Zahl in Klammern)|Beschreibung|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Gibt an, dass Fehler, Warnungen und Hinweise protokolliert werden.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Gibt an, dass Fehler protokolliert werden. Dies ist die Standardeinstellung.|  
-|SQLSRV_LOG_SEVERITY_WARNING (2)|Gibt an, dass Warnungen protokolliert werden.|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|Gibt an, dass Benachrichtigungen protokolliert werden.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Gibt an, dass Fehler protokolliert werden Dies ist die Standardoption.|  
+|SQLSRV_LOG_SEVERITY_WARNING (2)|Gibt an, dass Warnungen protokolliert werden|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|Gibt an, dass Benachrichtigungen protokolliert werden|  
   
 Sie können mehr als einen Wert gleichzeitig für die **LogSeverity**-Einstellung mithilfe des logischen OR-Operators (|) festlegen. Die folgende Codezeile gibt z. B. an, dass Fehler und Warnungen protokolliert werden sollten:  
   

@@ -1,5 +1,5 @@
 ---
-title: Sichern von JDBC-Treiber Anwendungen | Microsoft-Dokumentation
+title: Schützen von JDBC-Treiberanwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027756"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Schützen von JDBC-Treiberanwendungen
@@ -27,14 +27,14 @@ In den Themen in diesem Abschnitt werden einige häufige Sicherheitsrisiken besc
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-| Thema                                                                            | und Beschreibung                                                                                                                                                           |
+| Thema                                                                            | BESCHREIBUNG                                                                                                                                                           |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Sichern von Verbindungszeichenfolgen](../../connect/jdbc/securing-connection-strings.md) | Beschreibt Verfahren zum Schützen von Informationen, mit denen eine Verbindung mit einer Datenquelle hergestellt wird.                                                                                    |
 | [Überprüfen der Benutzereingabe](../../connect/jdbc/validating-user-input.md)             | Beschreibt Verfahren zum Überprüfen von Benutzereingaben.                                                                                                                          |
 | [Anwendungssicherheit](../../connect/jdbc/application-security.md)               | Beschreibt die Verwendung von Java-Richtlinienberechtigungen zum Sichern einer JDBC-Treiberanwendung.                                                                                |
 | [Verwenden der SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)               | Beschreibt das Herstellen eines sicheren Kommunikationskanals mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mithilfe von Secure Sockets Layer (SSL). |
-| [FIPS-Modus](../../connect/jdbc/fips-mode.md)                                     | Beschreibt die Verwendung des JDBC-Treibers im fps-kompatiblen Modus.                                                                                                              |
+| [FIPS-Modus](../../connect/jdbc/fips-mode.md)                                     | In diesem Artikel wird die Verwendung des JDBC-Treibers im FIPS-konformen Modus beschrieben.                                                                                                              |
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 
  [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

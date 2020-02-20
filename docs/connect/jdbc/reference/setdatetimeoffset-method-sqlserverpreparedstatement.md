@@ -1,5 +1,5 @@
 ---
-title: SetDateTimeOffset-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: setDateTimeOffset-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,18 +11,18 @@ ms.assetid: 5014dba9-1755-4769-b070-6cbeecee864e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 429e1720a6fac8c01ce2d201717787146bc8cc63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974360"
 ---
 # <a name="setdatetimeoffset-method-sqlserverpreparedstatement"></a>setDateTimeOffset-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Diese Methode wurde in [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 hinzugefügt.  
+  Diese Methode wurde im JDBC-Treiber 3.0 für [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hinzugefügt.  
   
- Legt den Wert der angegebenen Spalte auf den [DateTimeOffset-Klassen](../../../connect/jdbc/reference/datetimeoffset-class.md) Wert fest.  
+ Mit dieser Methode wird der Wert der angegebenen Spalte auf den Wert der Klasse [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) festgelegt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +38,7 @@ public final void setDateTimeOffset(int n, microsoft.sql.DateTimeOffset x)
   
  *x*  
   
- Das [DateTimeOffset-Klassen](../../../connect/jdbc/reference/datetimeoffset-class.md) Objekt.  
+ Dies ist ein Objekt der [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)-Klasse.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

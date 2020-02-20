@@ -1,5 +1,6 @@
 ---
-title: 'Lektion 3: Definieren eines Datasets für den Tabellenbericht (Reporting Services) | Microsoft-Dokumentation'
+title: 'Lektion 3: Definieren eines Datasets für den Tabellenbericht | Microsoft-Dokumentation'
+description: Sobald Sie die Datenquelle für den paginierten Bericht definiert haben, müssen Sie ein Dataset definieren. In SQL Server Reporting Services sind Daten, die Sie in Berichten verwenden, in einem Dataset enthalten.
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eaa2af570ae363e6a48c8d14e5b73c70e6790b5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106032"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244306"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lektion 3: Definieren eines Datasets für den Tabellenbericht (Reporting Services)
+# <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>Lektion 3: Definieren eines Datasets für den Tabellenbericht: SQL Server Reporting Services
 
-Nachdem Sie die Datenquelle festgelegt haben, müssen Sie ein Dataset definieren. In [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)]sind die Daten, die Sie in Berichten verwenden, in einem *Dataset*enthalten. Ein Dataset umfasst einen Zeiger auf eine Datenquelle und eine Abfrage, die vom Bericht verwendet werden sollen, sowie berechnete Felder und Variablen.
+Sobald Sie die Datenquelle für den paginierten Bericht definiert haben, müssen Sie ein Dataset definieren. In [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)]sind die Daten, die Sie in Berichten verwenden, in einem *Dataset*enthalten. Ein Dataset umfasst einen Zeiger auf eine Datenquelle und eine Abfrage, die vom Bericht verwendet werden sollen, sowie berechnete Felder und Variablen.
 
 Verwenden Sie den Abfrage-Designer im Berichts-Designer, um das Dataset zu definieren. In diesem Tutorial erstellen Sie eine Abfrage, die Auftragsinformationen aus der Datenbank „AdventureWorks2016“ abruft.
 
@@ -60,7 +61,7 @@ Verwenden Sie den Abfrage-Designer im Berichts-Designer, um das Dataset zu defin
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (Optional) Klicken Sie auf die Schaltfläche **Abfrage-Designer**. Die Abfrage wird im textbasierten *Abfrage-Designer* angezeigt. Wenn Sie die Abfrageergebnisse anzeigen möchten, klicken Sie in der Symbolleiste des **Abfrage-Designers** auf die Schaltfläche ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **ausführen**. Das angezeigte Dataset enthält sechs Felder aus vier Tabellen der Datenbank „AdventureWorks2016“. Diese Abfrage nutzt Transact-SQL-Funktionen wie Aliase. Beispielsweise wird die Tabelle SalesOrderHeader als *soh*bezeichnet.
+7. (Optional) Klicken Sie auf die Schaltfläche **Abfrage-Designer**. Die Abfrage wird im textbasierten *Abfrage-Designer* angezeigt. Wenn Sie die Abfrageergebnisse abrufen möchten, klicken Sie in der Symbolleiste des **Abfrage-Designers** auf die Schaltfläche ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **Ausführen**. Das angezeigte Dataset enthält sechs Felder aus vier Tabellen der Datenbank „AdventureWorks2016“. Diese Abfrage nutzt Transact-SQL-Funktionen wie Aliase. Beispielsweise wird die Tabelle SalesOrderHeader als *soh*bezeichnet.
 
 8. Klicken Sie auf **OK**, um den **Abfrage-Designer** zu beenden.
 
@@ -72,9 +73,9 @@ Die Felder und das Dataset „AdventureWorksDataset“ werden im Bereich **Beric
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Damit haben Sie erfolgreich eine Abfrage angegeben, mit der Sie Daten für Ihren Bericht abrufen. Als Nächstes erstellen Sie das Berichtslayout. Weiter mit [Lektion 4: Hinzufügen einer Tabelle zum Bericht &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
+Damit haben Sie erfolgreich eine Abfrage angegeben, mit der Sie Daten für Ihren Bericht abrufen. Als Nächstes erstellen Sie das Berichtslayout. Fahren Sie fort mit [Lektion 4: Hinzufügen einer Tabelle zum Bericht &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Abfrageentwurfstools &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)
 [SQL Server-Verbindungstyp &#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)

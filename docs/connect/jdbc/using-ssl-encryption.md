@@ -11,10 +11,10 @@ ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f769e35477d564365df702bd768ac1953c7affa
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71712972"
 ---
 # <a name="using-encryption"></a>Verwenden von Verschlüsselung
@@ -32,16 +32,16 @@ Das Aktivieren der TLS-Verschlüsselung erhöht die Sicherheit von Daten, die ne
 In den in diesem Abschnitt aufgeführten Artikeln werden die Unterstützung der SSL-Verschlüsselung in der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Version und neue Verbindungseigenschaften sowie das Konfigurieren des Vertrauensspeichers auf Clientseite beschrieben.  
   
 > [!NOTE]  
-> Zum Überprüfen eines TLS-Zertifikats wird die **hostNameInCertificate** -Verbindungs Eigenschaft empfohlen.  
+> Für das Überprüfen eines TLS-Zertifikats wird die **hostNameInCertificate**-Verbindungseigenschaft empfohlen.  
 
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
-| Thema                                                                                                        | und Beschreibung                                                                                                                                           |
+| Thema                                                                                                        | Beschreibung                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Grundlegendes zur Verschlüsselungsunterstützung](../../connect/jdbc/understanding-ssl-support.md)                                 | Beschreibt die Unterstützung der TLS-Verschlüsselung in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].                                              |
 | [Herstellen von Verbindungen mit einer Verschlüsselung](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Beschreibt das Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mithilfe der neuen TLS-spezifischen Verbindungseigenschaften. |
 | [Konfigurieren des Clients für die Verschlüsselung](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | Beschreibt das Konfigurieren des Standardvertrauensspeichers auf Clientseite und das Importieren eines privaten Zertifikats im Vertrauensspeicher des Clientcomputers.   |
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Schützen von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  

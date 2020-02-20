@@ -11,10 +11,10 @@ ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b1a572d3ab2dfba9d0aa0b8284fc770f3422782
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977101"
 ---
 # <a name="iswrapperfor-method-sqlservercallablestatement"></a>isWrapperFor-Methode (SQLServerCallableStatement)
@@ -32,10 +32,10 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Parameter  
  *iface*  
   
- Eine **Klasse** , die eine Schnittstelle definiert.  
+ Dies ist eine **Klasse** zum Definieren einer Schnittstelle.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn dieses Objekt die-Schnittstelle implementiert oder ein Objekt umschließt, das die-Schnittstelle implementiert. Andernfalls lautet der Wert **false**.  
+ Der Wert lautet **TRUE**, wenn dieses Objekt die Schnittstelle implementiert oder ein Objekt umschließt, das die Schnittstelle implementiert. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

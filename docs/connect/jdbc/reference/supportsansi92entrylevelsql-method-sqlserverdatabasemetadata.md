@@ -16,10 +16,10 @@ ms.assetid: a3fffc08-7254-4af7-bbae-8ff591fbd5ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85e7f1781fe6b42cdd8057978ed22456fe60382b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969844"
 ---
 # <a name="supportsansi92entrylevelsql-method-sqlserverdatabasemetadata"></a>supportsANSI92EntryLevelSQL-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsANSI92EntryLevelSQL()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportsANSI92EntryLevelSQL-Methode wird von der supportsANSI92EntryLevelSQL-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsANSI92EntryLevelSQL-Methode wird von der supportsANSI92EntryLevelSQL-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

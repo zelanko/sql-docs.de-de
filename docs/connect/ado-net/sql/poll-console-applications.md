@@ -1,6 +1,6 @@
 ---
 title: Abrufen in Konsolenanwendungen
-description: Enthält ein Beispiel für die Verwendung von Abruf, um auf den Abschluss einer asynchronen Befehlsausführung aus einer Konsolenanwendung zu warten. Diese Technik ist auch in einer Klassenbibliothek oder einer anderen Anwendung ohne Benutzeroberfläche gültig.
+description: Dieser Artikel enthält ein Beispiel zur Verwendung von Abrufen, um in einer Konsolenanwendung auf den Abschluss der Ausführung eines asynchronen Befehls zu warten. Diese Technik eignet sich auch in Klassenbibliotheken oder anderen Anwendungen ohne Benutzeroberfläche.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: e8dc5597743a277b53f36d0bfb1487a12cbd80d9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: bf89d2d111452970955953132edd76e602590668
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452099"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247678"
 ---
 # <a name="polling-in-console-applications"></a>Abrufen in Konsolenanwendungen
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Mit asynchronen Vorgängen in ADO.net können Sie zeitaufwändige Daten Bank Vorgänge in einem Thread initiieren, während Sie andere Tasks in einem anderen Thread ausführen. In den meisten Szenarios erreichen Sie jedoch irgendwann einen Punkt, an dem die Anwendung nicht fortgesetzt werden sollte, bis der Daten Bank Vorgang beendet ist. In solchen Fällen ist es hilfreich, den asynchronen Vorgang abzufragen, um zu bestimmen, ob der Vorgang abgeschlossen wurde oder nicht.  
+Mithilfe von asynchronen Vorgängen in ADO.NET können Sie zeitaufwendige Datenbankvorgänge auf einem Thread initiieren, während andere Tasks auf einem weiteren Thread ausgeführt werden. In den meisten Szenarios erreichen Sie jedoch irgendwann einen Punkt, an dem die Anwendung angehalten werden sollte, bis der Datenbankvorgang beendet ist. Dann ist es hilfreich, den asynchronen Vorgang abzurufen, um zu ermitteln, ob der Vorgang abgeschlossen wurde.  
   
-Sie können die <xref:System.IAsyncResult.IsCompleted%2A>-Eigenschaft verwenden, um herauszufinden, ob der Vorgang abgeschlossen wurde.  
+Dafür können Sie die Eigenschaft <xref:System.IAsyncResult.IsCompleted%2A> verwenden.  
   
 ## <a name="example"></a>Beispiel  
-Mit der folgenden Konsolenanwendung werden Daten innerhalb der **AdventureWorks**-Beispieldatenbank unter Verwendung eines asynchronen Vorgangs aktualisiert. Um einen Prozess mit langer Laufzeit zu emulieren, fügt dieses Beispiel eine WAITFOR-Anweisung in den Befehls Text ein. Normalerweise würden Sie nicht versuchen, die Befehle langsamer auszuführen, aber dies ist in diesem Fall einfacher, um das asynchrone Verhalten zu veranschaulichen.  
+Mit der folgenden Konsolenanwendung werden Daten innerhalb der **AdventureWorks**-Beispieldatenbank unter Verwendung eines asynchronen Vorgangs aktualisiert. In diesem Beispiel wird eine WAITFOR-Anweisung in den Befehlstext eingefügt, um einen Prozess mit langer Laufzeit zu emulieren. Normalerweise ist es nicht wünschenswert, dass Befehle langsamer ausgeführt werden, aber in diesem Fall kann dadurch das asynchrone Verhalten besser veranschaulicht werden.  
   
 ```csharp  
 using System;  

@@ -1,5 +1,5 @@
 ---
-title: Sqlserverxaresource-Member | Microsoft-Dokumentation
+title: SQLServerXAResource-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b420dd7c4bc714e26c8078112c5af54ae5aa7b0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970067"
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource-Elemente
@@ -27,7 +27,7 @@ ms.locfileid: "67970067"
   
 ## <a name="fields"></a>Felder  
   
-|Name|und Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|Hierdurch werden eng verkoppelte XA-Transaktionen ermöglicht, die unterschiedliche XA-Verzweigungstransaktions-IDs (XIDs) aber dieselbe globale Transaktions-ID (GTRID) aufweisen.|  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67970067"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|Führt einen Commit für die globale Transaktion aus, die durch das angegebene Xid-Objekt festgelegt wird.|  
 |[end](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|Beendet die für einen Transaktionszweig durchgeführte Arbeit.|  
@@ -47,7 +47,7 @@ ms.locfileid: "67970067"
 |[getTransactionTimeout](../../../connect/jdbc/reference/gettransactiontimeout-method-sqlserverxaresource.md)|Ruft den aktuellen Transaktionstimeoutwert für das [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)-Objekt ab.|  
 |[isSameRM](../../../connect/jdbc/reference/issamerm-method-sqlserverxaresource.md)|Ermittelt, ob die vom Zielobjekt dargestellte Ressourcen-Manager-Instanz der vom XAResource-Objekt dargestellten Ressourcen-Manager-Instanz entspricht.|  
 |[prepare](../../../connect/jdbc/reference/prepare-method-sqlserverxaresource.md)|Fordert an, dass der Ressourcen-Manager für eine Transaktions-Commit-Aktion der vom vorhandenen Xid-Objekt angegebenen Transaktion vorbereitet wird.|  
-|[Wiederherstellen](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|Ruft eine Liste vorbereiteter Transaktionszweige von einem Ressourcen-Manager ab.|  
+|[recover](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|Ruft eine Liste vorbereiteter Transaktionszweige von einem Ressourcen-Manager ab.|  
 |[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|Fordert an, dass der Ressourcen-Manager für die für den Transaktionszweig durchgeführte Arbeit ein Rollback ausführt.|  
 |[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|Legt den aktuellen Transaktionstimeoutwert für das [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) -Objekt fest.|  
 |[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|Startet die Arbeit am Xid-Objekt, das in einem Transaktionszweig angegeben ist.|  

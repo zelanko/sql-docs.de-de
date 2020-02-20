@@ -1,5 +1,5 @@
 ---
-title: Delta Content-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: deletesAreDetected-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955124"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected-Methode (SQLServerDatabaseMetaData)
@@ -58,7 +58,7 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn die gelöschte Zeile durch eine Lücke ersetzt wird. **false** , wenn die gelöschte Zeile entfernt wird.  
+ **TRUE**, wenn die gelöschte Zeile durch eine Lücke ersetzt wird. **FALSE**, wenn die gelöschte Zeile entfernt wird.  
   
  Bei Verwendung von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank wird von dieser Methode für TYPE_SS_SCROLL_KEYSET-Cursor der Wert **TRUE** und für alle anderen Resultsettypen der Wert **FALSE** zurückgegeben.  
   
@@ -66,7 +66,7 @@ public boolean deletesAreDetected(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode "Delta Type" wird von der Methode "Delta Reader" in der Schnittstelle "java. SQL. DatabaseMetaData" angegeben.  
+ Diese deletesAreDetected-Methode wird von der deletesAreDetected-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  
 >  Gelöschte Zeilen werden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zwar für alle aktualisierbaren Cursortypen erkannt, die Erkennung für Vorwärtscursor und dynamische Cursor ist jedoch kurzlebig.  

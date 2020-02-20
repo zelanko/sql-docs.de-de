@@ -9,10 +9,10 @@ ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63218954"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Benutzerdefiniertes Anpassen des Parameterbereichs in einem Bericht (Berichts-Generator)
@@ -24,7 +24,7 @@ ms.locfileid: "63218954"
   
 1.  Wählen Sie das **Parameter** -Kontrollkästchen auf der Registerkarte **Ansicht** aus, um den Parameterbereich anzuzeigen.  
   
-     ![Zugriff auf den Parameterbereich über die Registerkarte „Ansicht“](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Access parameters pane from View tab")  
+     ![Zugriffsbereich für Parameter auf der Registerkarte „Ansicht“](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Zugriffsbereich für Parameter auf der Registerkarte „Ansicht“")  
   
      Der Bereich erscheint im oberen Teil der Entwurfsoberfläche.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63218954"
   
     -   Klicken Sie in eine leere Zelle im Parameterbereich und klicken Sie anschließend auf **Parameter hinzufügen**.  
   
-         ![Hinzufügen neuer Parameter über den Parameterbereich](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Add new parameter from parameters pane")  
+         ![Neuen Parameter zum Parameterbereich hinzufügen](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "Neuen Parameter zum Parameterbereich hinzufügen")  
   
     -   Klicken Sie mit der rechten Maustaste im Bereich **Berichtsdaten** auf **Parameter** , und klicken Sie anschließend auf **Parameter hinzufügen**.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "63218954"
   
     -   Klicken Sie im Parameterbereich mit der rechten Maustaste auf den Parameter, und klicken Sie anschließend auf **Parametereigenschaften**.  
   
-         ![Zugriff auf die Parametereigenschaften über den Parameterbereich](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Access parameter properties from the parameters pane")  
+         ![Zugriff auf Parametereigenschaften über den Parameterbereich](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Zugriff auf Parametereigenschaften über den Parameterbereich")  
   
     -   Klicken Sie im Bereich **Berichtsdaten** mit der rechten Maustaste auf den Parameter, und klicken Sie anschließend auf **Parametereigenschaften**.  
   
 5.  Klicken Sie mit der rechten Maustaste auf einen beliebigen Punkt im Parameterbereich, um dem Bereich neue Spalten oder Zeilen hinzuzufügen, oder um vorhandene Zeilen und Spalten zu löschen, und klicken Sie einen Befehl in dem Menü an, das daraufhin angezeigt wird.  
   
-     ![Hinzufügen von Spalten und Zeilen zum Parameterbereich](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Add columns and rows to the parameters pane")  
+     ![Spalten und Zeilen zum Parameterbereich hinzufügen](../../reporting-services/report-design/media/ssrs-customparameter-addcolumnsrows.png "Spalten und Zeilen zum Parameterbereich hinzufügen")  
   
     > [!IMPORTANT]  
     >  Wenn Sie eine Spalte oder Zeile löschen, die Parameter enthält, werden die Parameter aus dem Bericht gelöscht.  
@@ -59,7 +59,7 @@ ms.locfileid: "63218954"
   
     -   Klicken Sie im Parameterbereich mit der rechten Maustaste auf den Parameter, und klicken Sie anschließend auf  **Löschen**.  
   
-         ![Löschen von Parametern aus dem Parameterbereich](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Delete parameters from the parameters pane")  
+         ![Parameter aus dem Parameterbereich löschen](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "Parameter aus dem Parameterbereich löschen")  
   
     -   Klicken Sie im Bereich **Berichtsdaten** mit der rechten Maustaste auf „Parameter“, und klicken Sie anschließend auf **Löschen**.  
   

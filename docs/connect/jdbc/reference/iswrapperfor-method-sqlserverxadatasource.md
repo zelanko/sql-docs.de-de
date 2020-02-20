@@ -11,10 +11,10 @@ ms.assetid: d612461d-4c3f-46db-b968-ff4c80b2aa7c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e32cbf975d156aae723dfbff105fe51e039dc1b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977021"
 ---
 # <a name="iswrapperfor-method-sqlserverxadatasource"></a>isWrapperFor-Methode (SQLServerXADataSource)
@@ -32,10 +32,10 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Parameter  
  *iface*  
   
- Eine **Klasse** , die eine Schnittstelle definiert.  
+ Dies ist eine **Klasse** zum Definieren einer Schnittstelle.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn dieses Objekt die-Schnittstelle implementiert oder ein Objekt umschließt, das die-Schnittstelle implementiert. Andernfalls lautet der Wert **false**.  
+ Der Wert lautet **TRUE**, wenn dieses Objekt die Schnittstelle implementiert oder ein Objekt umschließt, das die Schnittstelle implementiert. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -48,7 +48,7 @@ public boolean isWrapperFor(Class iface)
  Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Unwrap- &#40;Methode SQLServerXADataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   
+ [unwrap-Methode &#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   
  [SQLServerXADataSource-Methoden](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
  [SQLServerXADataSource-Elemente](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [SQLServerXADataSource-Klasse](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  

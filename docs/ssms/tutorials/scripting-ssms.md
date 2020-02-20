@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Erstellen von Skripts für Objekte in SQL Server Management Studio'
+title: SSMS-Skriptobjekte
 description: Tutorial zur Erstellung von Skripts für Objekte in SSMS
 keywords: SQL Server, SSMS, SQL Server Management Studio, Skripts, Skripterstellung
 author: MashaMSFT
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988417"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247295"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Erstellen von Skripts für Objekte in SQL Server Management Studio
 
@@ -135,9 +135,9 @@ Im folgenden Abschnitt erfahren Sie, wie Sie mit den Optionen **Script As** (Skr
 
 5. Wählen Sie **Weiter** aus, um die Seite **Skripterstellungsoptionen festlegen** zu öffnen. Hier können Sie den Speicherort des Skripts und einige zusätzliche erweiterte Optionen konfigurieren. 
 
-    A. Wählen Sie **In Fenster 'Neue Abfrage' speichern** aus.
+    a. Wählen Sie **In Fenster 'Neue Abfrage' speichern** aus.
 
-    B. Wählen Sie **Erweitert** aus, und vergewissern Sie sich, dass die folgenden Optionen festgelegt sind:
+    b. Wählen Sie **Erweitert** aus, und vergewissern Sie sich, dass die folgenden Optionen festgelegt sind:
 
       * **Skripterstellung für Statistiken** ist auf *Skripterstellung für Statistiken* festgelegt.
       * **Datentypen, für die ein Skript erstellt wird** ist auf *Nur Schema* festgelegt.
@@ -146,9 +146,9 @@ Im folgenden Abschnitt erfahren Sie, wie Sie mit den Optionen **Script As** (Skr
    ![Erstellen von Skripts für Objekte](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > Sie können für die Datenbank Skripts für die Daten erstellen, indem Sie für die Option **Datentypen, für die ein Skript erstellt wird** *Schema und Daten* auswählen. Allerdings ist dies bei großen Datenbanken nicht ideal. Möglicherweise ist mehr Arbeitsspeicher erforderlich, als SSMS zuordnen kann. Diese Einschränkung ist für kleine Datenbanken aber unproblematisch. Wenn Sie Daten für eine größere Datenbank verschieben möchten, verwenden Sie den [Import- und Export-Assistenten](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+   > Sie können für die Datenbank Skripts für die Daten erstellen, indem Sie für die Option **Datentypen, für die ein Skript erstellt wird***Schema und Daten* auswählen. Allerdings ist dies bei großen Datenbanken nicht ideal. Möglicherweise ist mehr Arbeitsspeicher erforderlich, als SSMS zuordnen kann. Diese Einschränkung ist für kleine Datenbanken aber unproblematisch. Wenn Sie Daten für eine größere Datenbank verschieben möchten, verwenden Sie den [Import- und Export-Assistenten](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-6. Wählen Sie **OK**, und wählen Sie anschließend **Weiter**aus.
+6. Wählen Sie **OK** und anschließend **Weiter** aus.
 
 7. Wählen Sie in der **Zusammenfassung** **Weiter** aus. Wählen Sie dann erneut **Weiter** aus, um das Skript in einem Fenster **Neue Abfrage** zu erstellen.
 

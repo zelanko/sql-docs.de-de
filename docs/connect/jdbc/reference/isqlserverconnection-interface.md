@@ -1,5 +1,5 @@
 ---
-title: Isqlserverconnection-Schnittstelle | Microsoft-Dokumentation
+title: ISQLServerConnection-Schnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: 031c01e2-2c65-4fe4-9700-fdbcc7a39f30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2fbe3b6c1721720720b06bdcf4122a289589e639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977450"
 ---
 # <a name="isqlserverconnection-interface"></a>ISQLServerConnection-Schnittstelle
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Stellt eine JDBC-Verbindung mit einer [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank dar. Diese Schnittstelle wurde im JDBC-Treiber 3.0 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hinzugefügt.  
+  Stellt eine JDBC-Verbindung mit einer [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank dar. Diese Schnittstelle wurde im JDBC-Treiber 3.0 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hinzugefügt.  
   
  **Paket:** com.microsoft.sqlserver.jdbc  
   
@@ -34,7 +34,7 @@ public interface ISQLServerConnection
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Schnittstelle wird von der [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)implementiert.  
+ Diese Schnittstelle wird von der Klasse [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) implementiert.  
   
  Diese Schnittstelle macht das folgende [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifische Feld verfügbar:  
   

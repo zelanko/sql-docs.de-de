@@ -1,22 +1,24 @@
 ---
 title: Abonnementeinstellungen und ein Dateifreigabekonto (Configuration Manager) | Microsoft-Dokumentation
-ms.date: 05/31/2016
+description: Über die Seite „Abonnementeinstellungen“ im Konfigurations-Manager für Reporting Services können Sie ein Dateifreigabekonto für Berichtsserver im einheitlichen Modus und Dateifreigabeabonnements konfigurieren.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e8dfea342f4545313035869f8c2e12367e62aed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651972"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866273"
 ---
-# <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Abonnementeinstellungen und ein Dateifreigabekonto (Konfigurations-Manager)
+# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>Abonnementeinstellungen und ein Dateifreigabekonto (SSRS-Configuration Manager)
   Verwenden Sie die Seite **Abonnementeinstellungen** im Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um ein Dateifreigabekonto für Berichtsserver im einheitlichen Modus und Dateifreigabeabonnements zu konfigurieren. Mit dem Dateifreigabekonto können Sie einen einzelnen Anmeldeinformationssatz in mehreren Abonnements verwenden, die Berichte an eine Dateifreigabe übermitteln. Wenn die Anmeldeinformationen geändert werden müssen, konfigurieren Sie die Änderung für das Dateifreigabekonto. So müssen Sie nicht jedes einzelne Abonnement aktualisieren.  
   
  Es gibt zwei Workflows für Dateifreigabeabonnements in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -27,7 +29,7 @@ ms.locfileid: "62651972"
   
 -   Sie können beide Ansätze auch kombinieren, sodass einige Dateifreigabeabonnements das zentrale Dateifreigabekonto verwenden, während andere Abonnements bestimmte Anmeldeinformationen nutzen.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus  
   
 ## <a name="specify-a-file-share-account"></a>Ein Dateifreigabekonto angeben  
  Wenn diese Option ausgewählt ist, können Sie ein Konto für den Zugriff auf Dateifreigaben vom Berichtsserver bereitstellen. Wenn Sie das Dateifreigabekonto konfigurieren, können alle Benutzer das Konto für alle Abonnements auswählen, die für die Übermittlung von Berichten an eine Dateifreigabe konfiguriert sind. Wenn diese Option nicht ausgewählt ist, wird das Dateifreigabekonto **nicht** in allen Abonnements zur Verfügung stehen.  
@@ -36,7 +38,7 @@ ms.locfileid: "62651972"
   
  Die folgende Abbildung zeigt, was Benutzer in Abonnements sehen, die für eine Dateifreigabeübermittlung konfiguriert sind. **Dateifreigabekonto verwenden** ist deaktiviert, wenn kein Dateifreigabekonto konfiguriert wurde.  
   
- ![Configuration Manager-Dateifreigabekonto](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "configuration manager file share account")  
+ ![Configuration Manager-Dateifreigabekonto](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "Configuration Manager-Dateifreigabekonto")  
   
 ## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>Verhindern von Berechtigungsausweitung oder erhöhten Rechten  
   
@@ -96,6 +98,6 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dateifreigabeübermittlung in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
+ [Create and Manage Subscriptions for Native Mode Report Servers (Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus)](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   

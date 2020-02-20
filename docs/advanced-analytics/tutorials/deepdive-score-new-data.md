@@ -1,6 +1,6 @@
 ---
 title: Bewerten von Daten mithilfe von RevoScaleR
-description: Tutorial zum Bewerten von Daten mithilfe der R-Programmiersprache unter SQL Server.
+description: 'Tutorial 8 zu RevoScaleR: Bewerten von Daten mithilfe der R-Programmiersprache in SQL Server'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf4198e4f8baa0c572f5da3d2b4cf457e695a4b7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 26f5c7b56298e6a3bd5f1fa9d8bc1d4db79d60af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727173"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947191"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Bewerten neuer Daten (SQL Server- und RevoScaleR-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Diese Lerneinheit ist Teil des [RevoScaleR-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zum Verwenden von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Dies ist das achte Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-In diesem Schritt verwenden Sie das logistische Regressionsmodell, das Sie in der vorherigen Lektion erstellt haben, um ein weiteres Dataset zu bewerten, das dieselben unabhängigen Variablen als Eingaben verwendet.
+In diesem Tutorial erfahren Sie, wie Sie das logistische Regressionsmodell verwenden, das Sie im letzten Tutorial erstellt haben, um ein weiteres Dataset zu bewerten, das dieselben unabhängigen Variablen als Eingaben verwendet.
 
 > [!div class="checklist"]
 > * Bewerten neuer Daten
@@ -32,7 +32,7 @@ In diesem Schritt verwenden Sie das logistische Regressionsmodell, das Sie in de
 
 ## <a name="generate-and-save-scores"></a>Generieren und Speichern von Ergebnissen
   
-1. Aktualisieren Sie die sqlScoreDS-Datenquelle (erstellt in [Lerneinheit 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)), um die in der vorherigen Lerneinheit erstellten Spalteninformationen zu verwenden.
+1. Aktualisieren Sie die sqlScoreDS-Datenquelle (in [Tutorial 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) erstellt), um die im letzten Tutorial erstellten Spalteninformationen zu verwenden.
   
     ```R
     sqlScoreDS <- RxSqlServerData(
@@ -51,7 +51,7 @@ In diesem Schritt verwenden Sie das logistische Regressionsmodell, das Sie in de
     ```
     Zu diesem Zeitpunkt ist die Tabelle noch nicht erstellt worden. Diese Anweisung definiert lediglich einen Datencontainer.
      
-3. Überprüfen Sie den aktuellen Computekontext mithilfe von **rxGetComputeContext()** , und legen Sie ihn bei Bedarf auf den Server fest.
+3. Überprüfen Sie den aktuellen Computekontext mithilfe von **rxGetComputeContext()**, und legen Sie ihn bei Bedarf auf den Server fest.
   
     ```R
     rxSetComputeContext(sqlCompute)

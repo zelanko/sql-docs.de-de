@@ -11,10 +11,10 @@ ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027773"
 ---
 # <a name="programming-with-sqlxml"></a>Programmieren mit SQLXML
@@ -27,11 +27,11 @@ ms.locfileid: "69027773"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>Lesen und Schreiben von XML-Daten mit SQLXML-Objekten  
  In der folgenden Liste ist aufgeführt, wie Sie die API-Methoden von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] zum Lesen und Schreiben von XML-Daten mit SQLXML-Objekten verwenden:  
   
--   Zum Erstellen eines SQLXML-Objekts verwenden Sie die [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse. Beachten Sie, dass mit dieser Methode ein SQLXML-Objekt ohne Daten erstellt wird. Um dem SQLXML-Objekt **XML** -Daten hinzuzufügen, müssen Sie eine der folgenden Methoden aufrufen, die in der SQLXML-Schnittstelle angegeben sind: setResult, setcharakteristream, setBinaryStream oder SetString.  
+-   Zum Erstellen eines SQLXML-Objekts verwenden Sie die [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse. Beachten Sie, dass mit dieser Methode ein SQLXML-Objekt ohne Daten erstellt wird. Wenn Sie dem SQLXML-Objekt **XML-** Daten hinzuzufügen möchten, müssen Sie eine der folgenden Methoden aufrufen, die in der SQLXML-Schnittstelle angegeben sind: setResult, setCharacterStream, setBinaryStream oder setString.  
   
 -   Zum Abrufen des eigentlichen SQLXML-Objekts verwenden Sie die getSQLXML-Methoden der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse oder der [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse.  
   
--   Um die **XML** -Daten aus einem SQLXML-Objekt abzurufen, verwenden Sie eine der folgenden Methoden, die in der SQLXML-Schnittstelle angegeben sind: GetSource, getcharakteristream, getBinaryStream oder GetString.  
+-   Wenn Sie die **XML-** Daten aus einem SQLXML-Objekt abrufen möchten, müssen Sie eine der folgenden Methoden aufrufen, die in der SQLXML-Schnittstelle angegeben sind: getSource, getCharacterStream, getBinaryStream oder getString.  
   
 -   Zum Aktualisieren der **xml**-Daten in einem SQLXML-Objekt verwenden Sie die [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)-Methode der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "69027773"
   
 |Methodenname|SQLXML-Abrufobjekt<br /><br /> (Lesbar)|SQLXML-Festlegungsobjekt<br /><br /> (Schreibbar)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
-|CallableStatement.setSQLXML()|Nicht unterstützt|Supported|  
-|CallableStatement.setObject()|Nicht unterstützt|Supported|  
-|PreparedStatement.setSQLXML()|Nicht unterstützt|Supported|  
-|PreparedStatement.setObject()|Nicht unterstützt|Supported|  
-|ResultSet.updateSQLXML()|Nicht unterstützt|Supported|  
-|ResultSet.updateObject()|Nicht unterstützt|Supported|  
-|ResultSet.getSQLXML()|Supported|Nicht unterstützt|  
-|CallableStatement.getSQLXML()|Supported|Nicht unterstützt|  
+|CallableStatement.setSQLXML()|Nicht unterstützt|Unterstützt|  
+|CallableStatement.setObject()|Nicht unterstützt|Unterstützt|  
+|PreparedStatement.setSQLXML()|Nicht unterstützt|Unterstützt|  
+|PreparedStatement.setObject()|Nicht unterstützt|Unterstützt|  
+|ResultSet.updateSQLXML()|Nicht unterstützt|Unterstützt|  
+|ResultSet.updateObject()|Nicht unterstützt|Unterstützt|  
+|ResultSet.getSQLXML()|Unterstützt|Nicht unterstützt|  
+|CallableStatement.getSQLXML()|Unterstützt|Nicht unterstützt|  
   
  Wie in der Tabelle oben angegeben ist, können die SQLXML-Festlegungsmethoden nicht mit den lesbaren SQLXML-Objekten verwendet werden. Entsprechend können die Abrufmethoden nicht mit den schreibbaren SQLXML-Objekten verwendet werden.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "69027773"
  XML-Parser können leere Werte nicht behandeln. SQL Server erlaubt Anwendungen jedoch das Abrufen und Speichern leerer Werte aus bzw. in Datenbankspalten mit dem XML-Datentyp. Dies bedeutet, dass beim Analysieren der XML-Daten vom Parser eine Ausnahme ausgelöst wird, wenn der zugrunde liegende Wert leer ist. Bei DOM-Ausgaben fängt der JDBC-Treiber die Ausnahme ab und löst einen Fehler aus. Bei SAX- und StAX-Ausgaben stammt der Fehler direkt vom Parser.  
   
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Adaptive Pufferung und SQLXML-Unterstützung  
- Die vom SQLXML-Objekt zurückgegebenen Binär- und Zeichendatenströme richten sich nach den Modi für die adaptive oder vollständige Pufferung. Wenn die XML-Parser hingegen keine Datenströme sind, berücksichtigen sie die Einstellungen für adaptive oder vollständige Pufferung nicht. Weitere Informationen zur adaptiven Pufferung finden [Sie unter Verwenden der adaptiven Pufferung](../../connect/jdbc/using-adaptive-buffering.md).  
+ Die vom SQLXML-Objekt zurückgegebenen Binär- und Zeichendatenströme richten sich nach den Modi für die adaptive oder vollständige Pufferung. Wenn die XML-Parser hingegen keine Datenströme sind, berücksichtigen sie die Einstellungen für adaptive oder vollständige Pufferung nicht. Weitere Informationen zur Verwendung der adaptiven Pufferung finden Sie unter [Verwenden der adaptiven Pufferung](../../connect/jdbc/using-adaptive-buffering.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md)  
   
   

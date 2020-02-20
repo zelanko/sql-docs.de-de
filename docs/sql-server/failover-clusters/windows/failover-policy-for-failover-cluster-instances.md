@@ -1,6 +1,7 @@
 ---
-title: Failoverrichtlinie für Failoverclusterinstanzen | Microsoft-Dokumentation
-ms.custom: ''
+title: Failoverrichtlinie für Failoverclusterinstanzen
+description: Beschreibung der verschiedenen Failoverrichtlinien, die für SQL Server-Failoverclusterinstanzen verfügbar sind
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e2fae9bbc5f0f601f4d455204df6c9d18383458
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 153de78e01099cf1079c6fe0ad34c15c6d7afc44
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044750"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258166"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failoverrichtlinie für Failoverclusterinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "68044750"
   
 4.  io_subsystem  
   
-5.  -Ereignisse  
+5.  events  
   
  Das System, die Ressource und der Abfrageprozess werden für die Fehlererkennung verwendet. Die io_subsytem und die Ereignisse werden nur zu Diagnosezwecken verwendet.  
   
@@ -92,7 +93,7 @@ ms.locfileid: "68044750"
   
  Informieren Sie sich unter [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), da diese gespeicherte Systemprozedur eine wichtige Funktion im Hinblick auf Fehlerbedingungsebenen erfüllt.  
   
-|Ebene|Bedingung|und Beschreibung|  
+|Ebene|Bedingung|BESCHREIBUNG|  
 |-----------|---------------|-----------------|  
 |0|Kein automatischer Failover oder Neustart|Gibt an, dass bei einer Fehlerbedingung nicht automatisch ein Failover oder Neustart ausgelöst wird. Diese Ebene ist nur für die Systemwartung vorgesehen.|  
 |1|Failover oder Neustart bei Serverausfall|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn die folgende Bedingung zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.|  

@@ -1,5 +1,5 @@
 ---
-title: setlogwriter-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: setLogWriter-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 7a77d8ef-2211-4bf8-af35-020fc896c073
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1adddf442f9d2b6ff84f955cf4e448a31e6741da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974081"
 ---
 # <a name="setlogwriter-method-sqlserverdatasource"></a>setLogWriter-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Diese Methode dient nur zur internen Verwendung. Weitere Informationen zur Protokollierung finden Sie unter [Ablauf Verfolgung des Treibers](../../../connect/jdbc/tracing-driver-operation.md).  
+  Diese Methode dient nur zur internen Verwendung. Weitere Informationen über die Protokollierung finden Sie unter [Ablaufverfolgung für Treibervorgänge](../../../connect/jdbc/tracing-driver-operation.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +37,10 @@ public void setLogWriter(java.io.PrintWriter out)
 #### <a name="parameters"></a>Parameter  
  *out*  
   
- Ein PrintWriter-Objekt.  
+ Ein PrintWriter-Objekt  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese setlogwriter-Methode wird von der setlogwriter-Methode in der javax. SQL. DataSource-Schnittstelle angegeben.  
+ Diese setLogWriter-Methode wird von der setLogWriter-Methode in der javax.sql.DataSource-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

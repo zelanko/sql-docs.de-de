@@ -1,6 +1,7 @@
 ---
-title: Problembehandlung bei verwaisten Benutzern (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
+title: Problembehandlung bei verwaisten Benutzern
+description: Es kommt zu verwaisten Benutzern, wenn die Anmeldedaten eines Datenbankbenutzers nicht mehr in der Masterdatenbank gespeichert sind. In diesem Artikel wird erläutert, wie Sie verwaiste Benutzer identifizieren und entfernen.
+ms.custom: seo-lt-2019
 ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -19,12 +20,12 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d42da661015f1184945d4e4ae45cb3f70016e987
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91d3d04efa0300683a5ee727cfa0a1fcd31e3c10
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063816"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822049"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Problembehandlung bei verwaisten Benutzern (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ ms.locfileid: "68063816"
   
  Ein Datenbankbenutzer (basierend auf einem Anmeldenamen), für den ein entsprechender [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename auf einer Serverinstanz nicht oder falsch definiert ist, kann sich bei der Instanz nicht anmelden. Diese Benutzer werden als *verwaiste Benutzer* der Datenbank dieser Serverinstanz bezeichnet. Verwaisungen treten auf, wenn der Datenbankbenutzer einer Anmelde-SID zugeordnet wird, die auf der `master` -Instanz nicht vorhanden ist. Ein Datenbankbenutzer kann anschließend zu einem verwaisten Benutzer werden, wenn die Datenbank wiederhergestellt oder an eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz angefügt wird, wo der Anmeldename nie erstellt wurde. Ein Datenbankbenutzer kann auch zu einem verwaisten Benutzer werden, wenn der entsprechende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename gelöscht wird. Selbst wenn der Anmeldename neu erstellt wird, verfügt er über eine andere SID, sodass der Datenbankbenutzer verweist bleibt.  
   
-## <a name="to-detect-orphaned-users"></a>So ermitteln Sie verwaiste Benutzer  
+## <a name="detect-orphaned-users"></a>Ermitteln von verwaisten Benutzern  
 
 **Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und PDW**
 
@@ -95,7 +96,7 @@ Die `sys.server_principals` -Tabelle ist in der SQL-Datenbank oder SQL Data Ware
 
 3. Vergleichen Sie die beiden Listen, um festzustellen, ob die Tabelle `sys.database_principals` der Benutzerdatenbank SIDs enthält, für die in der Tabelle `sql_logins` der Masterdatenbank keine entsprechenden Anmelde-SIDs vorhanden sind. 
   
-## <a name="to-resolve-an-orphaned-user"></a>So lösen Sie einen verwaisten Benutzer auf  
+## <a name="resolve-an-orphaned-user"></a>Entfernen eines verwaisten Benutzers  
 Verwenden Sie in der Masterdatenbank die Anweisung [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) zusammen mit der SID-Option, um einen fehlenden Anmeldenamen neu zu erstellen und geben Sie die `SID` des Datenbankbenutzers an, die Sie im vorherigen Abschnitt erhalten haben:  
   
 ```  
@@ -132,6 +133,6 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_password &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)   
  [sys.sysusers &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md)   
- [sys. sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md) [sys.syslogins (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
+ [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md) [sys.syslogins &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: supportstransaction IsolationLevel-Methode | Microsoft-Dokumentation
+title: supportsTransactionIsolationLevel-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b716ed6c-6ec3-47a7-8e6d-16cbf2469d6d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ecfbc637db90531378d589043b637596c4ec2ee3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968669"
 ---
 # <a name="supportstransactionisolationlevel-method-sqlserverdatabasemetadata"></a>supportsTransactionIsolationLevel-Methode (SQLServerDatabaseMetaData)
@@ -46,7 +46,7 @@ public boolean supportsTransactionIsolationLevel(int level)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportstransaktionisolationlevel-Methode wird von der supportstransaktionisolationlevel-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsTransactionIsolationLevel-Methode wird von der supportsTransactionIsolationLevel-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

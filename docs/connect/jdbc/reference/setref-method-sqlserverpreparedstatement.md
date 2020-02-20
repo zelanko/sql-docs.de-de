@@ -1,5 +1,5 @@
 ---
-title: ltref-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: setRef-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1a09bbf9-6f8f-4a21-85d2-2182111b5ce7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a002ec9f607804854e0bf390c455e6b492432a42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973121"
 ---
 # <a name="setref-method-sqlserverpreparedstatement"></a>setRef-Methode (SQLServerPreparedStatement)
@@ -42,7 +42,7 @@ public final void setRef(int i,
   
  *x*  
   
- Ein Ref-Objekt.  
+ Ein Ref-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

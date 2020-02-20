@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30568da0ea6f8b937fd87a4891058b9d68949fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580653"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957444"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendern in das HTML-Format (Berichts-Generator und SSRS)
   Die HTML-Renderingerweiterung rendert einen paginierten Bericht im HTML-Format. Die Renderingerweiterung kann außerdem vollständige HTML-Seiten oder HTML-Fragmente zum Einbetten in andere HTML-Seiten erstellen. HTML wird stets mit UTF-8-Codierung erstellt.  
@@ -79,11 +79,13 @@ ms.locfileid: "65580653"
 ### <a name="hyperlinks-and-drillthrough"></a>Links und Drillthroughlinks  
  Hyperlinks und Drillthroughlinks werden in Berichtselementen als Hyperlinks gerendert. Dabei wird das HTML-Anchortag (\<a>) um das Element verwendet, für das sie definiert sind.  
   
-### <a name="search"></a>Suchen  
+### <a name="search"></a>Suchen,  
  Die Suchfunktion ermöglicht es Benutzern, nach einer Textzeichenfolge innerhalb des Berichts zu suchen.  
   
  Zusätzliche Suchfunktionen werden vom ReportViewer Web Forms-Steuerelement bereitgestellt.  
   
+##  <a name="FontsOnClient"></a> Schriftarten auf dem Clientcomputer
+ Wenn eine benutzerdefinierte Schriftart in dem Bericht verwendet wird, muss diese auf dem Computer installiert sein, der zum Anzeigen des Berichts verwendet wird (dem Clientcomputer), damit der Bericht fehlerfrei angezeigt wird. Wenn die Schriftart nicht auf dem Clientcomputer installiert ist, wird der Bericht in einer Standardschriftart anstelle der benutzerdefinierten Schriftart angezeigt.
   
 ##  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
  Sie können einige Standardeinstellungen für diesen Renderer ändern, einschließlich des Modus für das Rendern. Ändern Sie dazu die Geräteinformationseinstellungen. Weitere Informationen finden Sie unter [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md).  
@@ -91,7 +93,7 @@ ms.locfileid: "65580653"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  

@@ -1,5 +1,5 @@
 ---
-title: storeslowercasequotedidentifier-Methode | Microsoft-Dokumentation
+title: storesLowerCaseQuotedIdentifiers-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3e104c9e-66d4-436b-8b5b-a00ff667c95b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58135670e18af30dd8795cc124eb43908f611e24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969982"
 ---
 # <a name="storeslowercasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseQuotedIdentifiers-Methode (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean storesLowerCaseQuotedIdentifiers()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn die Bezeichner in Kleinbuchstaben gespeichert werden. Andernfalls lautet der Wert **false**.  
+ Der Wert lautet **TRUE**, wenn die Bezeichner mit Kleinbuchstaben gespeichert werden. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese storeslowercasequotedidentifier-Methode wird von der storeslowercasequotedidentifier-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese storesLowerCaseQuotedIdentifiers-Methode wird von der storesLowerCaseQuotedIdentifiers-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

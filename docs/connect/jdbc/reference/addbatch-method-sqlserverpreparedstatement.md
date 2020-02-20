@@ -16,10 +16,10 @@ ms.assetid: 134f1455-c98c-4112-ab2d-9205a0db73df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 21664ab5f612689949f65ffb237a50c8747d1cd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67956004"
 ---
 # <a name="addbatch-method-sqlserverpreparedstatement"></a>addBatch-Methode (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67956004"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[addBatch ()](../../../connect/jdbc/reference/addbatch-method.md)|Fügt dem Befehlsbatch für dieses [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Objekt einen Parametersatz hinzu.|  
 |[addBatch (java.lang.String)](../../../connect/jdbc/reference/addbatch-method-java-lang-string.md)|Fügt den angegebenen SQL-Befehl der aktuellen Liste mit Befehlen für dieses [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Objekt hinzu.|  

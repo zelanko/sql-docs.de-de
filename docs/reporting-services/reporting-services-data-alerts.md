@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580071"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
@@ -49,7 +49,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
  Das folgende Diagramm zeigt den Workflow zum Erstellen und Speichern einer Datenwarnungsdefinition und zum Erstellen eines SQL-Agent-Auftrags, um mit der Verarbeitung der Instanz der Datenwarnung und dem Senden von Datenwarnmeldungen per E-Mail zu beginnen, die die Berichtsdaten enthalten, die die Warnung für mindestens einen Empfänger ausgelöst haben.  
   
- ![Workflows von Reporting Services-Warnungen](../reporting-services/media/rs-alertingworkflow.gif "Workflow in Reporting Services alerting")  
+ ![Workflow bei Reporting Services-Warnungen](../reporting-services/media/rs-alertingworkflow.gif "Workflow bei Reporting Services-Warnungen")  
   
 ### <a name="reports-supported-by-data-alerts"></a>Von Datenwarnungen unterstützte Berichte  
  Sie können Datenwarnungen für alle Typen von professionellen Berichten erstellen, die in der Berichtsdefinitionssprache (RDL) geschrieben und im Berichts-Designer oder Berichts-Generator erstellt wurden. Berichte, die Datenbereiche wie z. B. Tabellen und Diagramme enthalten, Berichte mit Unterberichten und komplexe Berichte mit mehreren parallelen Spaltengruppen und geschachtelten Datenbereichen. Die einzige Voraussetzung ist, dass der Bericht mindestens einen Datenbereich beliebigen Typs beinhaltet und die Berichtsdatenquelle so konfiguriert ist, dass entweder gespeicherte Anmeldeinformationen oder keine Anmeldeinformationen verwendet werden. Wenn der Bericht keine Datenbereiche aufweist, können Sie keine Warnung dafür erstellen.  
@@ -58,13 +58,13 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
  Wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus oder im SharePoint-Modus installieren oder die eigenständige Version des Berichts-Generators verwenden, können Sie Berichte auf einem Berichtsserver, dem Computer oder in einer SharePoint-Bibliothek speichern. Um Datenwarnungen zu Berichten zu erstellen, müssen die Berichte gespeichert oder in eine SharePoint-Bibliothek hochgeladen werden. Das bedeutet, dass Sie keine Warnungen zu Berichten erstellen können, die auf einem Berichtsserver im einheitlichen Modus oder dem Computer gespeichert sind. Zudem können Sie keine in benutzerdefinierten Anwendungen eingebetteten Warnungen erstellen.  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt zahlreiche Typen von Anmeldeinformationen in Berichten. Sie können Datenwarnungen für Berichte mit Datenquellen erstellen, die so konfiguriert sind, dass gespeicherte Anmeldeinformationen oder keine Anmeldeinformationen verwendet werden. Sie können keine Warnungen für Berichte erstellen, die zur Verwendung der Anmeldeinformationen mit integrierter Sicherheit oder der Eingabeaufforderung für Anmeldeinformationen konfiguriert wurden. Der Bericht wird als Teil der Verarbeitung der Warnungsdefinition ausgeführt, und die Verarbeitung schlägt ohne Anmeldeinformationen fehl. Weitere Informationen finden Sie unter den folgenden Links:  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt zahlreiche Typen von Anmeldeinformationen in Berichten. Sie können Datenwarnungen für Berichte mit Datenquellen erstellen, die so konfiguriert sind, dass gespeicherte Anmeldeinformationen oder keine Anmeldeinformationen verwendet werden. Sie können keine Warnungen für Berichte erstellen, die zur Verwendung der Anmeldeinformationen mit integrierter Sicherheit oder der Eingabeaufforderung für Anmeldeinformationen konfiguriert wurden. Der Bericht wird als Teil der Verarbeitung der Warnungsdefinition ausgeführt, und die Verarbeitung schlägt ohne Anmeldeinformationen fehl. Weitere Informationen finden Sie unter  
   
 -   [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
 -   [Rollen und Berechtigungen &#40;Reporting Services&#41;](../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
--   [Authentifizierung mit dem Berichtsserver](../reporting-services/security/authentication-with-the-report-server.md)  
+-   [Authentication with the Report Server (Authentifizierung mit dem Berichtsserver)](../reporting-services/security/authentication-with-the-report-server.md)  
   
 ### <a name="run-reports"></a>Ausführen von Berichten  
  Der erste Schritt zum Erstellen einer Datenwarnungsdefinition umfasst das Suchen des gewünschten Berichts in der SharePoint-Bibliothek und das anschließende Ausführen des Berichts. Wenn ein Bericht bei der Ausführung keine Daten enthält, können Sie zu diesem Zeitpunkt keine Warnung für den Bericht erstellen.  
@@ -116,7 +116,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
 ##  <a name="InstallAlerting"></a> Installieren von Datenwarnungen  
  Die Datenwarnungsfunktion ist nur verfügbar, wenn [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installiert ist. Wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installieren, erstellt das Setup automatisch die Warnungsdatenbank, in der Datenwarnungsdefinitionen und Warnungsmetadaten gespeichert werden, sowie zwei SharePoint-Seiten zum Verwalten von Warnungen. Zudem wird der SharePoint-Website der Datenwarnungs-Designer hinzugefügt. Für Warnungen während der Installation müssen keine besonderen Schritte ausgeführt oder Optionen festgelegt werden.  
   
- Weitere Informationen zum Installieren von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus, einschließlich des gemeinsamen Diensts von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , der in der [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] - und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung neu ist und die Sie vor der Verwendung der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen erstellen und konfigurieren müssen, finden Sie unter [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) in der MSDN Library.  
+ Weitere Informationen zum Installieren von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus, einschließlich des gemeinsamen Diensts von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], der in der [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]- und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dienstanwendung neu ist, und die Sie vor der Verwendung der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Funktionen erstellen und konfigurieren müssen, finden Sie unter [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) in der MSDN Library.  
   
  Gemäß des zuvor in diesem Thema gezeigten Diagramms verwenden Datenwarnungen SQL Server-Agent-Aufträge. Zum Erstellen des Auftrags muss der SQL Server-Agent ausgeführt werden. Unter Umständen haben Sie den SQL Server-Agent bei der Installation von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]so konfiguriert, dass er automatisch startet. Andernfalls lässt sich der SQL Server-Agent manuell starten. Weitere Informationen finden Sie unter [Konfigurieren des SQL Server-Agents](../ssms/agent/configure-sql-server-agent.md) und [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agents oder des SQL Server-Browsers](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -131,7 +131,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
  In der folgenden Tabelle sind die Konfigurationselemente für Datenwarnungen, ihre Standardwerte, Beschreibungen und Speicherorte aufgeführt.  
   
-|Einstellung|Standardwert|und Beschreibung|Speicherort|  
+|Einstellung|Standardwert|BESCHREIBUNG|Location|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Zeit zwischen Starts des Cleanupzyklus in Minuten.|Konfigurationsdatei des Berichtsservers|  
 |AlertingExecutionLogCleanupMinutes|10080|Zeit für die Aufbewahrung von Ausführungsprotokolleinträgen in Minuten.|Konfigurationsdatei des Berichtsservers|  
@@ -145,7 +145,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
 ### <a name="event-handlers-and-retry"></a>Ereignishandler und Wiederholung  
  Die Ereignishandler sind:  
   
-|Ereignishandler|und Beschreibung|  
+|Ereignishandler|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |FireAlert|Klicken Sie im Datenwarnungs-Manager auf **Ausführen**  , um die unmittelbare Verarbeitung einer Warnungsdefinition zu initiieren.|  
 |FireSchedule|Der SQL Server-Agent startet den Auftragszeitplan für eine Warnungsdefinition.|  
@@ -207,7 +207,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
 |Benutzertyp|SharePoint-Berechtigung|Taskbeschreibung|  
 |---------------|---------------------------|----------------------|  
-|Information Worker|Elemente anzeigen<br /><br /> Warnungen erstellen|Zeigen Sie Elemente wie z. B. Berichte an, und erstellen Sie Datenwarnungen in den Berichten. Bearbeiten und löschen Sie Warnungen.|  
+|Information Worker|Elemente anzeigen<br /><br /> Erstellen von Warnungen|Zeigen Sie Elemente wie z. B. Berichte an, und erstellen Sie Datenwarnungen in den Berichten. Bearbeiten und löschen Sie Warnungen.|  
 |Warnungsadministrator|Benachrichtigungen verwalten|Zeigen Sie eine Liste aller Datenwarnungen an, die auf der SharePoint-Website gespeichert wurden, und löschen Sie die Warnungen.|  
   
 ##  <a name="DiagnosticsLogging"></a> Diagnose und Protokollierung  
@@ -249,7 +249,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
  Sie können die gespeicherte Prozedur mithilfe von SQL-Agents nach einem Zeitplan ausführen. Weitere Informationen finden Sie unter [SQL Server Agent](../ssms/agent/sql-server-agent.md).  
   
 #### <a name="report-server-execution-log"></a>Berichtsserver-Ausführungsprotokoll  
- Berichte werden ausgeführt, um die Datenfeeds zu generieren, auf denen Datenwarnungsdefinitionen basieren. Das Ausführungsprotokoll des Berichtsservers in der zugehörigen Datenbank erfasst bei jeder Ausführung des Berichts Informationen. Fragen Sie die ExecutionLog2-Sicht in der Datenbank ab, um ausführliche Informationen zu erhalten. Weitere Informationen finden Sie unter [Berichtsserver-Ausführungsprotokoll und die ExecutionLog3-Sicht](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+ Berichte werden ausgeführt, um die Datenfeeds zu generieren, auf denen Datenwarnungsdefinitionen basieren. Das Ausführungsprotokoll des Berichtsservers in der zugehörigen Datenbank erfasst bei jeder Ausführung des Berichts Informationen. Fragen Sie die ExecutionLog2-Sicht in der Datenbank ab, um ausführliche Informationen zu erhalten. Weitere Informationen finden Sie unter [Berichtsserverausführungsprotokoll und die ExecutionLog3-Ansicht](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
 #### <a name="report-server-trace-log"></a>Ablaufverfolgungsprotokoll des Berichtsservers  
  Das Ablaufverfolgungsprotokoll des Berichtsservers enthält sehr detaillierte Informationen für Berichtsserver-Dienstvorgänge, einschließlich der vom Berichtsserver-Webdienst und der Hintergrundverarbeitung ausgeführten Vorgänge. Ablaufverfolgungsinformationen können beispielsweise zum Debuggen einer Anwendung, die einen Berichtsserver enthält, oder zum Analysieren eines bestimmten Problems, das ins Ereignis- oder Ausführungsprotokoll geschrieben wurde, nützlich sein. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md).  
@@ -305,7 +305,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
 -   [Speichern eines Berichts in einer SharePoint-Bibliothek &#40;Berichts-Generator&#41;](../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [Create a Data Alert in Data Alert Designer (Erstellen einer Datenwarnung im Datenwarnungs-Designer)](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
 -   [Edit a Data Alert in Alert Designer (Bearbeiten einer Datenwarnung im Warnungs-Designer)](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
@@ -313,7 +313,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
 -   [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
--   [Gewähren von Berechtigungen an Benutzer und Warnungsadministratoren](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
+-   [Grant Permissions to Users and Alerting Administrators (Gewähren von Berechtigungen an Benutzer und Warnungsadministratoren)](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
 ## <a name="see-also"></a>Weitere Informationen
 

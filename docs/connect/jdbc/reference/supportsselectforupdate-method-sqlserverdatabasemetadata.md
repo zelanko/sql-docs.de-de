@@ -1,5 +1,5 @@
 ---
-title: supportsselectforupdate-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsSelectForUpdate-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 721bc8e3-36c0-4fa6-8561-4f8d54c8265a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5b70b18a7b331ac448d5135d57e95741f76b85b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968866"
 ---
 # <a name="supportsselectforupdate-method-sqlserverdatabasemetadata"></a>supportsSelectForUpdate-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsSelectForUpdate()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportsselectforupdate-Methode wird von der supportsselectforupdate-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsSelectForUpdate-Methode wird von der supportsSelectForUpdate-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

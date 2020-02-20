@@ -9,13 +9,13 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65089664"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten (Reporting Services)
 
 In dieser letzten Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Bericht Gruppierungen und Gesamtergebnisse hinzufügen, um Ihre Daten zu organisieren und zusammenzufassen.  
 
@@ -28,7 +28,7 @@ In dieser letzten Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion
     > [!NOTE]
     > Beachten Sie, dass das Zeilenhandle nun Klammern zur Angabe einer Gruppe aufweist. Außerdem verfügt die Tabelle nun auf jeder Seite der vertikalen gepunkteten Linie über eine Spalte für den Ausdruck `[Date]`.
     >
-    >![Datumsgruppe hinzugefügt](media/rs-basictablegroups1design.png "date group added")
+    >![Gruppe „Date“ (Datum) hinzugefügt](media/rs-basictablegroups1design.png "Gruppe „Date“ (Datum) hinzugefügt")
 4. Ziehen Sie im **Berichtsdatenbereich** das Feld `[Order]` in den Bereich **Zeilengruppen**. Platzieren das Feld unter **Date** und über **= (Details)** .
 
     ![ssrs_ssdt_Feld_Order_hinzufügen](media/ssrs-ssdt-addorderfield.png)
@@ -38,7 +38,7 @@ In dieser letzten Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion
 
 5. Löschen Sie die ursprünglichen Spalten für die Ausdrücke `[Date]` und `[Order]` rechts neben der doppelten Linie. Wählen Sie die Spaltenhandles für die beiden Spalten aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Spalten löschen** aus. Der Berichts-Designer entfernt die einzelnen Zeilenausdrücke, sodass nur die Gruppenausdrücke angezeigt werden.
 
-    ![Zu löschende Spalten auswählen](media/rs-basictablegroupsdeletecols.gif "Select columns to delete")
+    ![Auswählen der zu löschenden Spalten](media/rs-basictablegroupsdeletecols.gif "Auswählen der zu löschenden Spalten")
 
 6. Zum Formatieren der neuen Spalte `[Date]` klicken Sie mit der rechten Maustaste auf die Datenbereichszelle, die den Ausdruck `[Date]` enthält, und wählen Sie **Textfeldeigenschaften**.
 7. Klicken Sie im Spaltenlistenfeld ganz links auf **Zahl** und im Listenfeld **Kategorie** auf **Datum**.
@@ -58,7 +58,7 @@ In dieser letzten Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion
 6. Wählen Sie im Menü **Format** die Option **Hintergrundfarbe** > **Hellgrau** aus.
 7. Klicken Sie auf **OK**, um das Format zu übernehmen.
 
-   ![Entwurfsansicht: einfache Tabelle mit Gesamtergebnis der Bestellungen](media/rs-basictablesumlinetotaldesign.gif "Design view: Basic table with order total")
+   ![Designansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen](media/rs-basictablesumlinetotaldesign.gif "Designansicht: Einfache Tabelle mit Gesamtzahl der Bestellungen")
 
 ## <a name="add-the-daily-total-to-the-report"></a>Hinzufügen des Tagesgesamtwerts zum Bericht
 
@@ -68,7 +68,7 @@ In dieser letzten Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion
 4. Wählen Sie im Menü **Format** die Option **Hintergrundfarbe** > **Orange** aus.
 5. Klicken Sie auf **OK**, um das Format zu übernehmen.
 
-   ![Set background color to Orange (Festlegen der Hintergrundfarbe auf Orange)](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
+   ![Hintergrundfarbe auf Orange festlegen](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
 
 ## <a name="add-the-grand-total-to-the-report"></a>Hinzufügen des Gesamtergebnisses zum Bericht
 
@@ -78,13 +78,13 @@ In dieser letzten Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion
 4. Wählen Sie im Menü **Format** die Option **Hintergrundfarbe** > **Hellblau** aus.
 5. Klicken Sie auf **OK**, um das Format zu übernehmen.
 
-    ![Entwurfsansicht: Gesamtergebnis in einfacher Tabelle](media/rs-basictablesumgrandtotaldesign.gif "Design view: Grand total in basic table")
+    ![Designansicht: Gesamtergebnis in einfacher Tabelle](media/rs-basictablesumgrandtotaldesign.gif "Designansicht: Gesamtergebnis in einfacher Tabelle")
 
 ## <a name="preview-the-report"></a>Anzeigen des Berichts in der Vorschau
 
 Zur Anzeige der geänderten Formatierung wählen Sie die Registerkarte **Vorschau** aus. Wählen Sie in der Symbolleiste **Vorschau** die Schaltfläche **Letzte Seite**, die wie ![ssrs_ssdt_viewertoolbar_lastpage](media/ssrs-ssdt-viewertoolbar-lastpage.png) aussieht. Die Vorschau sollte folgendermaßen aussehen:
 
-   ![Vorschau: Einfache Tabelle mit Gesamtergebnis](media/rs-basictablesumgrandtotalpreview.gif "Preview: Basic table with grand total")
+   ![Vorschau: Einfache Tabelle mit Gesamtergebnis](media/rs-basictablesumgrandtotalpreview.gif "Vorschau: Einfache Tabelle mit Gesamtergebnis")
 
 ## <a name="publishing-the-report-to-the-report-server-optional"></a>Veröffentlichen des Berichts auf dem *Berichtsserver* (Optional)
 
@@ -96,7 +96,7 @@ Ein optionaler Schritt besteht darin, den vervollständigten Bericht auf dem Ber
     - `https://localhost/reportserver` funktioniert, wenn Sie den Bericht auf dem Berichtsserver erstellen.
 
 3. Für **TargetReportFolder** wurde „Tutorial“ angegeben – der Name des Projekts. Der Bericht wird vom Berichts-Designer in diesem Ordner bereitgestellt.
-4. Wählen Sie **OK**.
+4. Klicken Sie auf **OK**.
 5. Wählen Sie im Menü **Erstellen** > **Deploy Tutorial** (Tutorial bereitstellen).
 
     Wenn Sie im **Ausgabefenster** eine Meldung wie die Folgende sehen, war die Bereitstellung erfolgreich:
@@ -126,6 +126,6 @@ Ein optionaler Schritt besteht darin, den vervollständigten Bericht auf dem Ber
 
 Sie haben das Tutorial zum **Erstellen eines einfachen Tabellenberichts** erfolgreich abgeschlossen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)

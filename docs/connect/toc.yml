@@ -2630,6 +2630,9 @@
           href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
         - name: Verwenden von „Immer verschlüsselt“ mit dem JDBC-Treiber
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
+          items:
+            - name: Always Encrypted mit Secure Enclaves
+              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
         - name: Artikel des Handbuchs
           items:
             - name: Verwenden von Anweisungen mit SQL
@@ -2755,11 +2758,11 @@
   items:
     - name: Node.js-Treiber für SQL Server
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für die Node.js-Entwicklung'
+    - name: 'Schritt 1:  Konfigurieren der Entwicklungsumgebung für die Node.js-Entwicklung'
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
     - name: 'Schritt 2: Erstellen einer SQL-Datenbank für die Node.js-Entwicklung'
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: 'Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Node.js'
+    - name: 'Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von Node.js'
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
@@ -3036,7 +3039,7 @@
                     - name: Grundlegende Schritte für die ODBC-Anwendung
                       href: ../odbc/reference/develop-app/basic-odbc-application-steps.md
                       items:
-                        - name: 'Schritt 1: Herstellen der Verbindung mit der Datenquelle'
+                        - name: 'Schritt 1: Herstellen einer Verbindung mit einer Datenquelle'
                           href: ../odbc/reference/develop-app/step-1-connect-to-the-data-source.md
                         - name: 'Schritt 2: Initialisieren der Anwendung'
                           href: ../odbc/reference/develop-app/step-2-initialize-the-application.md
@@ -3046,7 +3049,7 @@
                           href: ../odbc/reference/develop-app/step-4a-fetch-the-results.md
                         - name: 'Schritt 4b: Abrufen der Zeilenanzahl'
                           href: ../odbc/reference/develop-app/step-4b-fetch-the-row-count.md
-                        - name: 'Schritt 5: Ausführen eines Commits für die Transaktion'
+                        - name: 'Schritt 5: Committen der Transaktion'
                           href: ../odbc/reference/develop-app/step-5-commit-the-transaction.md
                         - name: 'Schritt 6: Trennen der Verbindung mit der Datenquelle'
                           href: ../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md
@@ -3986,9 +3989,9 @@
                 - name: ODBC-Anhänge
                   href: ../odbc/reference/appendixes/odbc-appendixes.md
                   items:
-                    - name: 'Anhang A: ODBC-Fehlercodes'
+                    - name: "Anhang\_A: ODBC-Fehlercodes"
                       href: ../odbc/reference/appendixes/appendix-a-odbc-error-codes.md
-                    - name: 'Anhang B: ODBC-Statusübergangstabellen'
+                    - name: "Anhang\_B: ODBC-Statusübergangstabellen"
                       href: ../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md
                       items:
                         - name: Umgebungsübergänge
@@ -3999,7 +4002,7 @@
                           href: ../odbc/reference/appendixes/statement-transitions.md
                         - name: Deskriptorübergänge
                           href: ../odbc/reference/appendixes/descriptor-transitions.md
-                    - name: 'Anhang C: SQL-Grammatik'
+                    - name: "Anhang\_C: SQL-Grammatik"
                       href: ../odbc/reference/appendixes/appendix-c-sql-grammar.md
                       items:
                         - name: Minimale SQL-Grammatik
@@ -4039,7 +4042,7 @@
                               href: ../odbc/reference/appendixes/numeric-literal-syntax.md
                         - name: Reservierte Schlüsselwörter
                           href: ../odbc/reference/appendixes/reserved-keywords.md
-                    - name: 'Anhang D:-Datentypen'
+                    - name: "Anhang\_D: Datentypen"
                       href: ../odbc/reference/appendixes/appendix-d-data-types.md
                       items:
                         - name: Verwenden von Datentypbezeichnern
@@ -4110,50 +4113,50 @@
                         - name: Konvertieren von Daten von SQL- zu C-Datentypen
                           href: ../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md
                           items:
-                            - name: 'SQL zu C: binär'
+                            - name: 'SQL in C: Binary'
                               href: ../odbc/reference/appendixes/sql-to-c-binary.md
-                            - name: 'SQL zu C: Bit'
+                            - name: 'SQL in C: bit'
                               href: ../odbc/reference/appendixes/sql-to-c-bit.md
-                            - name: 'SQL zu C: Zeichen'
+                            - name: 'SQL in C: Zeichen'
                               href: ../odbc/reference/appendixes/sql-to-c-character.md
-                            - name: 'SQL zu C: Datum'
+                            - name: 'SQL in C: Date'
                               href: ../odbc/reference/appendixes/sql-to-c-date.md
-                            - name: 'SQL zu C: Tag-Uhrzeit-Intervalle'
+                            - name: 'SQL in C: Tag-Uhrzeit-Intervalle'
                               href: ../odbc/reference/appendixes/sql-to-c-day-time-intervals.md
-                            - name: 'SQL zu C: GUID'
+                            - name: 'SQL in C: GUID'
                               href: ../odbc/reference/appendixes/sql-to-c-guid.md
-                            - name: 'SQL zu C: numerisch'
+                            - name: 'SQL in C: Numeric'
                               href: ../odbc/reference/appendixes/sql-to-c-numeric.md
-                            - name: 'SQL zu C: Zeitstempel'
+                            - name: 'SQL in C: Timestamp'
                               href: ../odbc/reference/appendixes/sql-to-c-timestamp.md
-                            - name: 'SQL zu C: Uhrzeit'
+                            - name: 'SQL in C: Time'
                               href: ../odbc/reference/appendixes/sql-to-c-time.md
-                            - name: 'SQL zu C: Jahr-Monat-Intervalle'
+                            - name: 'SQL in C: Jahr-Monat-Intervalle'
                               href: ../odbc/reference/appendixes/sql-to-c-year-month-intervals.md
                             - name: Beispiele für die Datenkonvertierung von SQL zu C
                               href: ../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md
                         - name: Konvertieren von Daten von C- zu SQL-Datentypen
                           href: ../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md
                           items:
-                            - name: 'C zu SQL: Binärdaten'
+                            - name: 'C in SQL: Binary'
                               href: ../odbc/reference/appendixes/c-to-sql-binary.md
-                            - name: 'C zu SQL: Bit'
+                            - name: 'C in SQL: bit'
                               href: ../odbc/reference/appendixes/c-to-sql-bit.md
-                            - name: 'C zu SQL: Zeichen'
+                            - name: 'C in SQL: Zeichen'
                               href: ../odbc/reference/appendixes/c-to-sql-character.md
-                            - name: 'C zu SQL: Datum'
+                            - name: 'C in SQL: Date'
                               href: ../odbc/reference/appendixes/c-to-sql-date.md
-                            - name: 'C zu SQL: Tag-Uhrzeit-Intervalle'
+                            - name: 'C in SQL: Tag-Uhrzeit-Intervalle'
                               href: ../odbc/reference/appendixes/c-to-sql-day-time-intervals.md
-                            - name: 'C zu SQL: GUID'
+                            - name: 'C in SQL: GUID'
                               href: ../odbc/reference/appendixes/c-to-sql-guid.md
-                            - name: 'C zu SQL: numerisch'
+                            - name: 'C in SQL: Numeric'
                               href: ../odbc/reference/appendixes/c-to-sql-numeric.md
-                            - name: 'C zu SQL: Zeitstempel'
+                            - name: 'C in SQL: Timestamp'
                               href: ../odbc/reference/appendixes/c-to-sql-timestamp.md
-                            - name: 'C zu SQL: Uhrzeit'
+                            - name: 'C in SQL: Time'
                               href: ../odbc/reference/appendixes/c-to-sql-time.md
-                            - name: 'C zu SQL: Jahr-Monat-Intervalle'
+                            - name: 'C in SQL: Jahr-Monat-Intervalle'
                               href: ../odbc/reference/appendixes/c-to-sql-year-month-intervals.md
                             - name: Beispiele für die Datenkonvertierung von C zu SQL
                               href: ../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md
@@ -4612,7 +4615,7 @@
                           href: ../odbc/microsoft/order-by-expression-list.md
                         - name: ORDER BY mit GROUP BY
                           href: ../odbc/microsoft/order-by-with-group-by.md
-                        - name: 'Jet: äußere Joins'
+                        - name: 'Jet: Äußere Verknüpfungen'
                           href: ../odbc/microsoft/jet-outer-joins.md
                         - name: Skalarfunktionen
                           href: ../odbc/microsoft/scalar-functions.md
@@ -5485,17 +5488,17 @@
         - name: Verbinden mit dem Server
           href: ../connect/php/connecting-to-the-server.md
           items:
-            - name: 'Vorgehensweise: Herstellen einer Verbindung mithilfe der Windows-Authentifizierung'
+            - name: 'Gewusst wie: Herstellen einer Verbindung mithilfe der Windows-Authentifizierung'
               href: ../connect/php/how-to-connect-using-windows-authentication.md
-            - name: 'Vorgehensweise: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung'
+            - name: 'Gewusst wie: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung'
               href: ../connect/php/how-to-connect-using-sql-server-authentication.md
             - name: 'Gewusst wie: Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung'
               href: ../connect/php/azure-active-directory.md
-            - name: 'Vorgehensweise: Verbinden über einen angegebenen Port'
+            - name: 'Gewusst wie: Verbinden über einen angegebenen Port'
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: Verbindungspooling
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: 'Vorgehensweise: Deaktivieren von Multiple Active Resultsets (MARS)'
+            - name: 'Gewusst wie: Deaktivieren von mehreren aktiven Resultsets (MARS)'
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: Verbindungsoptionen
               href: ../connect/php/connection-options.md
@@ -5519,16 +5522,16 @@
               items:
                 - name: 'Datentypen mit Stream-Unterstützung, die den SQLSRV-Treiber nutzen'
                   href: ../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md
-                - name: 'Vorgehensweise: Abrufen von Zeichendaten als Stream mit dem SQLSRV-Treiber'
+                - name: 'Gewusst wie: Abrufen von Zeichendaten als Stream mit dem SQLSRV-Treiber'
                   href: ../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md
-                - name: 'Vorgehensweise: Abrufen von Binärdaten als Stream mithilfe des SQLSRV-Treibers'
+                - name: 'Gewusst wie: Abrufen von Binärdaten als Stream mithilfe des SQLSRV-Treibers'
                   href: ../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md
             - name: Verwenden direktionaler Parameter
               href: ../connect/php/using-directional-parameters.md
               items:
-                - name: 'Vorgehensweise: Angeben der Parameterrichtung mit dem SQLSRV-Treiber'
+                - name: 'Gewusst wie: Angeben der Parameterrichtung mit dem SQLSRV-Treiber'
                   href: ../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md
-                - name: 'Vorgehensweise: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber'
+                - name: 'Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber'
                   href: ../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md
                 - name: 'Gewusst wie: Abrufen von Eingabe- und Ausgabeparametern mit dem SQLSRV-Treiber'
                   href: ../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md
@@ -5541,7 +5544,7 @@
                   href: ../connect/php/cursor-types-pdo-sqlsrv-driver.md
             - name: 'Gewusst wie: Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen mit dem SQLSRV-Treiber'
               href: ../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md
-            - name: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber
+            - name: 'Gewusst wie: Abrufen von Datums- und Uhrzeittypen als PHP-datetime-Objekte mit dem SQLSRV-Treiber'
               href: ../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md
             - name: Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber)
               href: ../connect/php/formatting-decimals-sqlsrv-driver.md
@@ -5550,11 +5553,11 @@
         - name: Aktualisieren von Daten
           href: ../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md
           items:
-            - name: 'Vorgehensweise: Ausführen von parametrisierten Abfragen'
+            - name: 'Gewusst wie: Ausführen parametrisierter Abfragen'
               href: ../connect/php/how-to-perform-parameterized-queries.md
-            - name: 'Vorgehensweise: Streamen von Daten'
+            - name: 'Gewusst wie: Senden von Daten als Stream'
               href: ../connect/php/how-to-send-data-as-a-stream.md
-            - name: 'Vorgehensweise: Ausführen von Transaktionen'
+            - name: 'Gewusst wie: Ausführen von Transaktionen'
               href: ../connect/php/how-to-perform-transactions.md
         - name: Konvertieren von Datentypen
           href: ../connect/php/converting-data-types.md
@@ -5563,25 +5566,29 @@
               href: ../connect/php/default-sql-server-data-types.md
             - name: PHP-Standarddatentypen
               href: ../connect/php/default-php-data-types.md
-            - name: 'Vorgehensweise: Angeben von SQL Server-Datentypen, wenn der SQLSRV-Treiber verwendet wird.'
+            - name: 'Gewusst wie: Angeben von SQL Server-Datentypen bei Verwendung des SQLSRV-Treibers'
               href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
-            - name: 'Vorgehensweise: PHP-Datentypen festlegen'
+            - name: 'Gewusst wie: Festlegen von PHP-Datentypen'
               href: ../connect/php/how-to-specify-php-data-types.md
-            - name: 'Vorgehensweise: Senden und Abrufen von UTF-8-Daten mithilfe der eingebauten UTF-8-Unterstützung.'
+            - name: 'Gewusst wie: Senden und Abrufen von UTF-8-Daten mithilfe der integrierten UTF-8-Unterstützung'
               href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
             - name: 'Gewusst wie: Senden und Abrufen von ASCII-Daten unter Linux und macOS'
               href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
         - name: Behandeln von Fehlern und Warnungen
           href: ../connect/php/handling-errors-and-warnings.md
           items:
-            - name: 'Vorgehensweise: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers'
+            - name: 'Gewusst wie: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers'
               href: ../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md
-            - name: 'Vorgehensweise: Fehlerbehandlung und Warnungen bei Verwendung des SQLSRV-Treibers'
+            - name: 'Gewusst wie: Behandeln von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers'
               href: ../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md
         - name: Protokollieren von Aktivitäten
           href: ../connect/php/logging-activity.md
         - name: Verwenden von Always Encrypted mit den PHP-Treibern für SQL Server
           href: ../connect/php/using-always-encrypted-php-drivers.md
+        - name: Always Encrypted mit Secure Enclaves mit den PHP-Treibern für SQL Server
+          href: ../connect/php/always-encrypted-secure-enclaves.md
+        - name: Nicht vom System festgelegte Gebietsschemaeinstellungen
+          href: ../connect/php/non-system-locale-settings.md
         - name: Konstanten (Microsoft-Treiber für PHP für SQL Server)
           href: ../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md
         - name: API-Referenz für den SQLSRV-Treiber
@@ -5730,7 +5737,7 @@
     - name: Python-SQL-Treiber – pyodbc
       href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
       items:
-        - name: 'Schritt 1: Konfigurieren von Entwicklungsumgebung für Pyodbc-Python'
+        - name: 'Schritt 1: Konfigurieren von Entwicklungsumgebung für pyodbc-Python'
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
         - name: 'Schritt 2: Erstellen einer SQL-Datenbank für die pyodbc-Python-Entwicklung'
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
@@ -5743,7 +5750,7 @@
           href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
         - name: 'Schritt 2: Erstellen einer SQL-Datenbank für die pymssql-Python-Entwicklung'
           href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-        - name: 'Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von pymssql'
+        - name: 'Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von pymssql'
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 - name: Ruby
   items:
@@ -5753,7 +5760,7 @@
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
     - name: 'Schritt 2: Erstellen einer SQL-Datenbank für die Ruby-Entwicklung'
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
-    - name: 'Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Ruby'
+    - name: 'Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von Ruby'
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
 - name: ADO
   items:
@@ -5886,7 +5893,7 @@
             - name: Batchmodus
               href: ../ado/guide/data/batch-mode.md
               items:
-                - name: 'Senden der Updates: UpdateBatch-Methode'
+                - name: 'Senden von Updates: UpdateBatch-Methode'
                   href: ../ado/guide/data/sending-the-updates-updatebatch-method.md
                 - name: Filtern nach aktualisierten Datensätzen
                   href: ../ado/guide/data/filtering-for-updated-records.md
@@ -5896,7 +5903,7 @@
                   href: ../ado/guide/data/detecting-and-resolving-conflicts.md
                 - name: Trennen und erneutes Herstellen einer Verbindung mit dem Recordset
                   href: ../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md
-                - name: 'Aktualisieren von verknüpften Ergebnissen: eindeutige Tabelle'
+                - name: 'Aktualisieren von mit JOIN verknüpften Ergebnissen: Eindeutige Tabelle'
                   href: ../ado/guide/data/updating-joined-results-unique-table.md
             - name: Transaktionsverarbeitung
               href: ../ado/guide/data/transaction-processing.md
@@ -6140,17 +6147,17 @@
     - name: RDS-Tutorial
       href: ../ado/guide/remote-data-service/rds-tutorial.md
       items:
-        - name: 'Schritt 1: Serverprogramm angeben (RDS-Tutorial)'
+        - name: 'Schritt 1: Angeben eines Serverprogramms (RDS-Tutorial)'
           href: ../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md
-        - name: 'Schritt 2: Serverprogramm aufrufen (RDS-Tutorial)'
+        - name: 'Schritt 2: Aufrufen eines Serverprogramms (RDS-Tutorial)'
           href: ../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md
-        - name: 'Schritt 3: Server ruft ein Recordset ab (RDS-Tutorial)'
+        - name: 'Schritt 3: Abrufen eines Recordsets durch den Server (RDS-Tutorial)'
           href: ../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md
-        - name: 'Schritt 4: Server gibt das Recordset zurück (RDS-Tutorial)'
+        - name: 'Schritt 4: Zurückgeben eines Recordsets durch den Server (RDS-Tutorial)'
           href: ../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md
-        - name: 'Schritt 5: DataControl wird nutzbar gemacht (RDS-Tutorial)'
+        - name: 'Schritt 5: Nutzbarmachen von DataControl (RDS-Tutorial)'
           href: ../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md
-        - name: 'Schritt 6: Änderungen werden an den Server gesendet (RDS-Tutorial)'
+        - name: 'Schritt 6: Senden von Änderungen an den Server (RDS-Tutorial)'
           href: ../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md
         - name: RDS-Tutorial (VBScript)
           href: ../ado/guide/remote-data-service/rds-tutorial-vbscript.md
@@ -6217,7 +6224,7 @@
               href: ../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md
             - name: Minimieren des Verbrauchs an Protokolldatei-Speicherplatz
               href: ../ado/guide/remote-data-service/minimizing-log-file-space-usage.md
-    - name: 'Anhang A: Anbieter'
+    - name: "Anhang\_A: Anbieter"
       href: ../ado/guide/appendixes/appendix-a-providers.md
       items:
         - name: Microsoft Cursor Service für OLE DB
@@ -6244,7 +6251,7 @@
           href: ../ado/guide/appendixes/microsoft-ole-db-simple-provider.md
         - name: Microsoft Data Shaping Service für OLE DB
           href: ../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md
-    - name: 'Anhang B: ADO-Fehler'
+    - name: "Anhang\_B: ADO-Fehler"
       href: ../ado/guide/appendixes/appendix-b-ado-errors.md
       items:
         - name: ADO-Fehlercodes
@@ -6255,7 +6262,7 @@
           href: ../ado/guide/appendixes/internet-explorer-error-codes.md
         - name: Fehlercodes für Internetinformationsdienste (IIS)
           href: ../ado/guide/appendixes/internet-information-services-error-codes.md
-    - name: 'Anhang C: Programmieren mit ADO'
+    - name: "Anhang\_C: Programmieren mit ADO"
       href: ../ado/guide/appendixes/appendix-c-programming-with-ado.md
       items:
         - name: ADO-Java-Klassen-Wrapper
@@ -6284,7 +6291,7 @@
               href: ../ado/guide/appendixes/visual-c-extensions-header.md
             - name: Verwenden von Visual C++-Erweiterungen
               href: ../ado/guide/appendixes/using-visual-c-extensions.md
-    - name: 'Anhang D: ADO-Beispiele'
+    - name: "Anhang\_D: ADO-Beispiele"
       href: ../ado/guide/appendixes/appendix-d-ado-samples.md
     - name: Verweis auf die ADO-Bibliotheken in Visual C++-Anwendungen
       href: ../ado/guide/referencing-the-ado-libraries-in-a-visual-c-application.md
@@ -7554,7 +7561,7 @@
               href: ../ado/reference/adox-api/indexnulls-property-example-vb.md
             - name: 'Append-Methode für Schlüssel, Key Type-, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften – Beispiel (VB)'
               href: ../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md
-            - name: 'ADOX-Codebeispiel: NumericScale- und Precision-Eigenschaften – Beispiel (VB)'
+            - name: 'ADOX-Codebeispiel: Beispiel: NumericScale- und Precision-Eigenschaften (VB)'
               href: ../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md
             - name: 'Parameters-Collection, Command-Eigenschaft – Beispiel (VB)'
               href: ../ado/reference/adox-api/parameters-collection-command-property-example-vb.md
@@ -7623,7 +7630,7 @@
               href: ../ado/reference/adox-api/parentcatalog-property-example-vc.md
             - name: PrimaryKey- und Unique-Eigenschaften – Beispiel (VC++)
               href: ../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md
-    - name: 'Veraltet: RDS-API-Verweis'
+    - name: 'Veraltet: RDS-API-Referenz'
       href: ../ado/reference/rds-api/rds-api-reference.md
     - name: RDS-Objekte
       href: ../ado/reference/rds-api/rds-objects.md

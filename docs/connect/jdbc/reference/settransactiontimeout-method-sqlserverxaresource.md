@@ -1,5 +1,5 @@
 ---
-title: settransaktiontimeout-Methode (sqlserverxaresource) | Microsoft-Dokumentation
+title: setTransactionTimeout-Methode (SQLServerXAResource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 38bf4a1a-6ad3-437c-b9ed-8792ab6dde7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 481843393f15998df059bb7a732c64010b2c8bf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972282"
 ---
 # <a name="settransactiontimeout-method-sqlserverxaresource"></a>setTransactionTimeout-Methode (SQLServerXAResource)
@@ -37,16 +37,16 @@ public boolean setTransactionTimeout(int seconds)
 #### <a name="parameters"></a>Parameter  
  *Sekunden*  
   
- Ein **int** -Wert.  
+ Ein **int**-Wert  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn das Timeout erfolgreich festgelegt wurde. Andernfalls lautet der Wert **false**.  
+ **TRUE**, wenn das Timeout erfolgreich festgelegt wurde. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese settransaktiontimeout-Methode wird von der settransaktiontimeout-Methode in der javax. Transaction. XA. XAResource-Schnittstelle angegeben.  
+ Diese setTransactionTimeout-Methode wird von der setTransactionTimeout-Methode in der javax.transaction.xa.XAResource-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerXAResource-Methoden](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

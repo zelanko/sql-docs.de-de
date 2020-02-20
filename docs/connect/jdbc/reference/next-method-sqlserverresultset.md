@@ -16,10 +16,10 @@ ms.assetid: 60248447-6908-4036-a779-a501453cd553
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c83fe6aa33d77db98fcdfc757b9bf219a45a9b15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976760"
 ---
 # <a name="next-method-sqlserverresultset"></a>next-Methode (SQLServerResultSet)
@@ -35,7 +35,7 @@ public boolean next()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn die neue aktuelle Zeile gültig ist. **false** , wenn keine weiteren zu verarbeitenden Zeilen vorhanden sind.  
+ **TRUE**, wenn die neue aktuelle Zeile gültig ist. **FALSE**, wenn keine weiteren zu verarbeitenden Zeilen vorhanden sind.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: setserverpreparedstatus-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: setServerPreparedStatementDiscardThreshold-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8f66746b15e96f49d96b428e8cf8844eeea12a12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972919"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>setServerPreparedStatementDiscardThreshold-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Gibt das Verhalten für eine bestimmte Verbindungs Instanz an. Mit dieser Einstellung wird gesteuert, wie viele ausstehende vorbereitete Aktionen für die Anweisungs Verwerfungs Aktion (sp_unprepare) pro Verbindung ausstehend sein können, bevor ein Cleanup der ausstehenden Handles auf dem Server ausgeführt wird. Wenn die Einstellung < = 1 ist, werden die Vorbereitungs Aktionen sofort nach dem Schließen der vorbereiteten Anweisung ausgeführt. Wenn der Wert auf > 1 festgelegt ist, werden diese Aufrufe in einem Batch zusammengefasst, um den mehr Aufwand des Aufrufs von sp_unprepare zu vermeiden.
+ Mit dieser Methode geben Sie das Verhalten einer bestimmten Verbindungsinstanz an. Mit dieser Einstellung steuern Sie, wie viele ausstehende Aktionen zum Verwerfen von Prepared Statements (sp_unprepare) pro Verbindung vorhanden sein dürfen, bevor ein Aufruf zum Bereinigen der ausstehenden Handles auf dem Server ausgeführt wird. Wenn diese Eigenschaft auf „<= 1“ festgelegt ist, werden Löschaktionen sofort nach Abschluss der vorbereiteten Anweisung ausgeführt. Wenn die Eigenschaft auf „>1“ festgelegt ist, werden diese Aufrufe in einem Batch zusammengefasst, um einen durch zu häufiges Aufrufen von „sp_unprepare“ entstehenden Overhead zu vermeiden.
 
 
 ## <a name="syntax"></a>Syntax  
@@ -38,13 +38,13 @@ public void setServerPreparedStatementDiscardThreshold(boolean thresholdValue)
 #### <a name="parameters"></a>Parameter  
  *thresholdValue*  
  
- Der neue Wert der **serverpreparedstatuementverwerdthreshold** -Verbindungs Eigenschaft.  
+ Der neue Wert der Verbindungseigenschaft **serverPreparedStatementDiscardThreshold**.  
  
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode ist über JDBC Driver, Version 6,4 und höher, verfügbar.
+ Diese Methode ist ab Version 6.4 des JDBC-Treibers verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

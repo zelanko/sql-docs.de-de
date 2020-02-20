@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: abff9abb82ad0ff54d9b1126541b98babbd6bd76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015286"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB-Typunterstützung für Tabellenwertparameter
@@ -27,7 +27,7 @@ ms.locfileid: "68015286"
   In diesem Artikel wird die OLE DB-Typunterstützung für Tabellenwertparameter beschrieben.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>Tabellenwertparameter-Rowsetobjekt  
- Sie können ein spezielles Rowsetobjekt für Tabellenwertparameter erstellen. Sie erstellen das Tabellenwert Parameter-Rowsetobjekt mithilfe von ITableDefinitionWithConstraints:: kreatetablewitheinschränkungs-oder IOpenRowset:: OpenRowset. Legen Sie hierzu das *eKind*-Element des *pTableID*-Parameters auf DBKIND_GUID_NAME fest, und geben Sie für das *guid*-Element CLSID_ROWSET_INMEMORY an. Der Servertyp Name für den Tabellenwert Parameter muss im *pwszName* -Member von *pTableID* angegeben werden, wenn IOpenRowset:: OPENROWSET verwendet wird. Das Tabellenwert Parameter-Rowsetobjekt verhält sich wie ein regulärer OLE DB Treiber für SQL Server-Objekt.  
+ Sie können ein spezielles Rowsetobjekt für Tabellenwertparameter erstellen. Sie können das Rowsetobjekt für Tabellenwertparameter mithilfe von ITableDefinitionWithConstraints::CreateTableWithConstraints oder IOpenRowset::OpenRowset erstellen. Legen Sie hierzu das *eKind*-Element des *pTableID*-Parameters auf DBKIND_GUID_NAME fest, und geben Sie für das *guid*-Element CLSID_ROWSET_INMEMORY an. Der Servertypname für den Tabellenwertparameter muss bei Verwendung von IOpenRowset:: OPENROWSET im *pwszName*-Element von *pTableID* angegeben werden. Das Rowsetobjekt für den Tabellenwertparameter verhält sich wie ein reguläres Objekt des OLE DB-Treibers für SQL Server.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -46,7 +46,7 @@ CoType RowsetTVP
 };  
 ```  
   
-## <a name="dbtypetable"></a>DBTYPE_TABLE  
+## <a name="dbtype_table"></a>DBTYPE_TABLE  
  Der neue Typ DBTYPE_TABLE stellt einen Tabellentyp dar. Dieser Typ gibt Tabellenwertparameter in verschiedenen OLE DB-Schnittstellen an, wo ein DBTYPE erforderlich ist.  
   
 ```  
@@ -58,10 +58,10 @@ CoType RowsetTVP
  Konvertierungen zu und von DBTYPE_TABLE für andere Typen werden nicht unterstützt. Außer bei einer Konvertierung von DBTYPE_TABLE zu DBTYPE_TABLE gibt IConvertType::CanConvert bei einer nicht unterstützten Konvertierung für jede Anforderung S_FALSE zurück. Hierbei wird die Angabe von DBCONVERTFLAGS_PARAMETER für das Command-Objekt angenommen.  
   
 ## <a name="methods"></a>Methoden  
- Weitere Informationen zu OLE DB Methoden, die Tabellenwert Parameter unterstützen, finden Sie [unter Unterstützung &#40;&#41;von OLE DB Tabellenwert Parameter-Typen](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
+ Weitere Informationen zu OLE DB-Methoden, die Tabellenwertparameter unterstützen, finden Sie unter [OLE DB-Unterstützung von Tabellenwertparametern &#40;Methoden&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Eigenschaften  
- Informationen zu OLE DB Eigenschaften, die Tabellenwert Parameter unterstützen, finden Sie [unter Unterstützung &#40;&#41;von OLE DB Tabellenwert Parameter-Typen](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ Weitere Informationen zu OLE DB-Eigenschaften, die Tabellenwertparameter unterstützen, finden Sie unter [OLE DB-Unterstützung von Tabellenwertparametern &#40;Eigenschaften&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tabellenwertparameter &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

@@ -1,5 +1,5 @@
 ---
-title: getMoreResults-Methode (int) | Microsoft-Dokumentation
+title: getMoreResults(int)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981776"
 ---
 # <a name="getmoreresults-method-int"></a>getMoreResults-Methode (int)
@@ -46,13 +46,13 @@ public final boolean getMoreResults(int mode)
  CLOSE_ALL_RESULTS  
   
 ## <a name="return-value"></a>Rückgabewert  
- **true** , wenn das zurückgegebene Ergebnis ein Resultset ist. Andernfalls lautet der Wert **false**.  
+ Der Wert ist **TRUE**, wenn das zurückgegebene Ergebnis ein Resultset ist. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getMoreResults-Methode wird von der getMoreResults-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
+ Diese getMoreResults-Methode wird von der getMoreResults-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
  Falls die getMoreResults-Methode aufgerufen wird, bevor die Ergebnisse abgerufen werden, entspricht das Verhalten dem *mode*-Argument, und das nächste Ergebnis wird aufgerufen.  
   

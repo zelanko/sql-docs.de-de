@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904312"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831625"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Navigationsleitfaden zur SQL Server-Dokumentation 
 
@@ -37,7 +37,7 @@ Wenn Sie eine PDF-Datei erstellen möchten, wählen Sie den Link **PDF herunterl
 
 ![PDF herunterladen](media/sql-server-docs-navigation-guide/download-pdf.png)
 
-## <a name="toc-navigation-hints"></a>Navigationshinweise zum Inhaltsverzeichnis
+## <a name="toc-symbols"></a>Symbole im Inhaltsverzeichnis 
 
 Inhaltsverzeichniseinträge mit einem `>` am Ende weisen darauf hin, dass Sie zur technischer Dokumentation mit einem anderen Inhaltsverzeichnis geleitet werden. 
 
@@ -51,7 +51,7 @@ Wenn Sie zu einer dieser Seiten navigieren, können Sie zur technischen Hauptsei
 
 ![Navigieren zurück zum SQL-Inhaltsverzeichnis](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
-## <a name="toc-search-tip"></a>Suchtipps zum Inhaltsverzeichnis
+## <a name="toc-search"></a>Suchen im Inhaltsverzeichnis 
 Auf docs.microsoft.com können Sie den Inhalt des Inhaltsverzeichnisses über das Filtersuchfeld oben durchsuchen: 
 
 ![Filterfeld verwenden](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
@@ -63,14 +63,13 @@ Sie können den [Versionsfilter](versioning-system-monikers-ui-sql-server.md) ve
 
 ![Versionsfilter der SQL-Dokumentation](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Wenn Sie **Alle SQL-Produkte** \> **Nichts ausblenden** auswählen, wird sichergestellt, dass alle Inhalte sichtbar sind und nichts durch den Versionsfilter verborgen wird. Über die Option **Nichts ausblenden** können für verschiedene Versionen von SQL Server relevante Inhalte innerhalb desselben Artikels angezeigt werden. Dies kann widersprüchlich oder verwirrend sein. Aus diesem Grund wird die Option [**Nichts ausblenden** für die routinemäßige Verwendung nicht empfohlen](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
+Wenn Sie **All SQL** \> **Hide nothing** (Alle SQL-Produkte > Nichts ausblenden) auswählen, wird sichergestellt, dass alle Inhalte sichtbar sind und nichts durch den Versionsfilter verborgen wird. Über die Option **Nichts ausblenden** können für verschiedene Versionen von SQL Server relevante Inhalte innerhalb desselben Artikels angezeigt werden. Dies kann widersprüchlich oder verwirrend sein. Aus diesem Grund wird die Option [**Nichts ausblenden** für die routinemäßige Verwendung nicht empfohlen](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## <a name="breadcrumbs"></a>Brotkrümelnavigation
 
 Brotkrümel finden Sie unterhalb der Überschrift und über dem Inhaltsverzeichnis. Sie geben an, wo sich der aktuelle Artikel im Inhaltsverzeichnis befindet.  Dies hilft nicht nur, den Kontext darauf festzulegen, welche Art von Inhalt Sie lesen, sondern ermöglicht es Ihnen auch, in der Inhaltsverzeichnisstruktur zurück nach oben zu navigieren:
 
 ![Brotkrümelnavigation in der SQL-Dokumentation](media/sql-server-docs-navigation-guide/sql-docs-bread-crumbs.gif)
-
 
 ## <a name="article-section-navigation"></a>Navigation in Artikelabschnitten
 
@@ -89,10 +88,10 @@ Sie können auch allgemeines Feedback zur Dokumentation und Vorschläge unter [h
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
-![Bearbeiten der SQL-Dokumentation](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
+![SQL-Dokumentation bearbeiten](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 - Erste Schritte mit der [technischen Dokumentation zu SQL Server](index.yml).
 - Weitere Informationen zum Übermitteln von Feedback oder zum Erhalten von Hilfe zu SQL Server finden Sie auf der Seite [Hilfe erhalten](sql-server-get-help.md). 
-- Um schnell auf alle Schnellstarts und Tutorials zuzugreifen, besuchen Sie das [SQL Server Education Center](../lp/sql-server/sql-education-center.md).
+- Über die Seite [Lernmaterialien für SQL](../sql-server/educational-sql-resources.yml) haben Sie schnellen Zugriff auf alle Schnellstarts und Tutorials.

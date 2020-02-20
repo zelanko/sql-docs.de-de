@@ -1,8 +1,10 @@
 ---
-title: Informationen zu URL-Reservierungen und -Registrierungen (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
-ms.date: 06/20/2019
+title: URL-Reservierungen und -Registrierungen (Configuration Manager) | Microsoft-Dokumentation
+description: Anwendungen für URLs für Reporting Services werden als URL-Reservierungen in HTTP.SYS definiert.
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -11,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314039"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259333"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informationen zu URL-Reservierungen und Registrierungen (SSRS-Konfigurations-Manager)
   Anwendungen für URLs für Reporting Services werden als URL-Reservierungen in HTTP.SYS definiert. Eine URL-Reservierung definiert die Syntax eines URL-Endpunkts für eine Webanwendung. URL-Reservierungen werden sowohl für den Berichtsserver-Webdienst als auch für das Webportal beim Konfigurieren der Anwendungen auf dem Berichtsserver definiert. Beim Konfigurieren von URLs mit Setup oder mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool werden URL-Reservierungen automatisch für Sie erstellt:  
@@ -82,8 +84,8 @@ ms.locfileid: "67314039"
   
 |Instanztyp|Application|Standard-URL|Tatsächliche URL-Reservierung in HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Standardinstanz|Report Server-Webdienst|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
-|Standardinstanz|Webportal|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Standardinstanz|Report Server-Webdienst|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|Standardinstanz|Webportal|`https://<servername>/reports`|`https://<servername>:80/reports`|  
 |Benannte Instanz|Report Server-Webdienst|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
 |Benannte Instanz|Webportal|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
 |SQL Server Express|Report Server-Webdienst|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  
@@ -102,7 +104,7 @@ ms.locfileid: "67314039"
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] und höher enthalten neue Sicherheitsfunktionen, um das Risiko einer versehentlichen Ausführung von Programmen mit erweiterten Berechtigungen zu minimieren. Zur Aktivierung der lokalen Verwaltung für diese Betriebssysteme müssen zusätzliche Schritte ausgeführt werden. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [URL-Reservierungssyntax &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   

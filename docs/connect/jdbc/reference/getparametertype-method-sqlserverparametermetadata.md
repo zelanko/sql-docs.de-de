@@ -1,5 +1,5 @@
 ---
-title: getparametertype-Methode (SQLServerParameterMetaData) | Microsoft-Dokumentation
+title: getParameterType-Methode (SQLServerParameterMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 638aca05-63e4-4d73-a9c8-e0442f775720
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd9252827e7c7bec70636937bc89dd5390e68519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980952"
 ---
 # <a name="getparametertype-method-sqlserverparametermetadata"></a>getParameterType-Methode (SQLServerParameterMetaData)
@@ -46,7 +46,7 @@ public int getParameterType(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getparametertype-Methode wird von der getparametertype-Methode in der Java. SQL. parametermetadata-Schnittstelle angegeben.  
+ Diese getParameterType-Methode wird von der getParameterType-Methode in der java.sql.ParameterMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerParameterMetaData-Methoden](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

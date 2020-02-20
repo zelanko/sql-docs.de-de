@@ -7,22 +7,22 @@ ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028844"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761804"
 ---
 # <a name="sql-server-privacy-supplement"></a>Ergänzende Datenschutzbestimmungen zu SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dieser Artikel beschreibt internetfähige Features, die anonyme Featurenutzungs- und Diagnosedaten sammeln und an Microsoft senden können. SQL Server sammelt möglicherweise Standardinformationen zu Ihrem Computer, und Daten zur Nutzung und Leistung werden möglicherweise an Microsoft übermittelt und analysiert, um die Qualität, Sicherheit und Zuverlässigkeit des Produkts zu optimieren. Dieser Artikel ist ein Nachtrag zu den [Microsoft-Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkId=521839). Die Datenklassifizierung in diesem Artikel gilt nur für lokale Versionen von SQL Server. Sie gilt nicht für folgende Produkte:
+Dieser Artikel beschreibt internetfähige Features, die anonyme Featurenutzungs- und Diagnosedaten sammeln und an Microsoft senden können. SQL Server sammelt möglicherweise Standardinformationen zu Ihrem Computer, und Daten zur Nutzung und Leistung werden möglicherweise an Microsoft übermittelt und analysiert, um die Qualität, Sicherheit und Zuverlässigkeit des Produkts zu optimieren. Wenn Sie SQL Server auf einem virtuellen Computer in Microsoft Azure installieren, werden möglicherweise Umgebungsinformationen an Microsoft gesendet, damit Microsoft Ihre SQL Server-VM-Ressource beim Ressourcenanbieter in Ihrem Azure-Abonnement registrieren kann. Weitere Informationen dazu finden Sie [hier](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). Im Rahmen der Registrierung der SQL Server VM-Ressource wird die SQL Server-IaaS-Agent-Erweiterung auf dem virtuellen Computer installiert, wie [hier](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)beschrieben. Dieser Artikel ist ein Nachtrag zu den [Microsoft-Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkId=521839). Die Datenklassifizierung in diesem Artikel gilt nur für lokale Versionen von SQL Server. Sie gilt nicht für folgende Produkte:
 
-- Azure SQL-Datenbank
+- Azure SQL-Datenbank
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
@@ -100,7 +100,7 @@ Daten, die gemäß der SQL Server-Lizenzbedingungen für die Bereitstellung von 
 
 - Informationen über die Computerspezifikationen
 - Name oder Version des Browsers
-- SQL Server-Version
+- SQL Server-Version
 - Sprachcode
 - Eine IP-Adresse mit bestimmten entfernten Oktetten
 - Kartendaten

@@ -1,5 +1,5 @@
 ---
-title: setTimestamp-Methode auf Zeitstempel-Wert | Microsoft-Dokumentation
+title: setTimestamp-Methode auf timestamp-Wert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: dc45b126-3196-47ff-956b-cbc897980ff8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc7ee76a87022f5ed2194027971e02f3895e8b36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972367"
 ---
 # <a name="settimestamp-method-javalangstring-javasqltimestamp"></a>setTimestamp-Methode (java.lang.String, java.sql.Timestamp)
@@ -42,7 +42,7 @@ public void setTimestamp(java.lang.String sCol,
   
  *t*  
   
- Ein Timestamp-Objekt.  
+ Ein Timestamp-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

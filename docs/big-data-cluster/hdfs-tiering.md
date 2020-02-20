@@ -9,14 +9,14 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706050"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190400"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Konfigurieren von HDFS-Tiering in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Konfigurieren von HDFS-Tiering in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -25,6 +25,11 @@ HDFS-Tiering bietet die Möglichkeit, ein externes, HDFS-kompatibles Dateisystem
 ## <a name="hdfs-tiering-overview"></a>Übersicht zum HDFS-Tiering
 
 Beim Tiering können Anwendungen nahtlos auf Daten in einer Vielzahl externer Speicher zugreifen, als ob sich die Daten im lokalen HDFS befinden. Die Einbindung ist ein Metadatenvorgang, bei dem die Metadaten, die den Namespace im externen Dateisystem beschreiben, in Ihr lokales HDFS kopiert werden. Diese Metadaten enthalten Informationen zu den externen Verzeichnissen und Dateien zusammen mit ihren Berechtigungen und ACLs. Die entsprechenden Daten werden nur bei Bedarf kopiert, wenn auf die Daten selbst z.B. über eine Abfrage zugegriffen wird. Der Zugriff auf die externen Dateisystemdaten ist jetzt über den SQL Server-Big Data-Cluster möglich. Sie können Spark-Aufträge und SQL-Abfragen für diese Daten auf die gleiche Weise ausführen, wie Sie sie für allen lokalen Daten ausführen, die in HDFS im Cluster gespeichert sind.
+
+Dieses 7-minütige Video enthält eine Übersicht über HDFS-Tiering:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Unify-your-data-lakes-with-HDFS-tiering/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ### <a name="caching"></a>Caching
 Heutzutage wird standardmäßig 1% des gesamten HDFS-Speichers für das Zwischenspeichern der eingebundenen Daten reserviert. Das Zwischenspeichern ist eine Einbindungen übergreifende globale Einstellung.
@@ -41,7 +46,7 @@ Das HDFS-Tiering unterstützt die Aktualisierung. Aktualisieren Sie eine vorhand
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - [Bereitgestellte Big Data-Cluster](deployment-guidance.md)
-- [Big Data-Tools](deploy-big-data-tools.md)
+- [Big-Data-Tools](deploy-big-data-tools.md)
   - **azdata**
   - **kubectl**
 

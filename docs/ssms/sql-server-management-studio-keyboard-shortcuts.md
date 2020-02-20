@@ -1,6 +1,6 @@
 ---
-title: Tastenkombinationen für SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Tastenkombinationen für SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9aebe5e7b8de9ac8ed95ffcece25f40bff639df7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2997c185dcd01c00b007cd676fe0eef7e3ac2048
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264763"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242813"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tastenkombinationen für SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bietet Benutzern zwei Tastaturschemas. Standardmäßig wird das [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Schema mit auf [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 basierenden Tastenkombinationen verwendet. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet auch ein dem Standardschema von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ähnliches Tastaturschema. Um das Tastaturschema zu ändern oder weitere Tastenkombinationen hinzuzufügen, klicken Sie im Menü **Extras** auf **Optionen**. Wählen Sie das gewünschte Tastaturschema unter **Umgebung**auf der Seite **Tastatur** aus.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bietet Benutzern zwei Tastaturschemas. Standardmäßig wird das Schema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] mit auf [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 basierenden Tastenkombinationen verwendet. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet auch ein dem Standardschema von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ähnliches Tastaturschema. Um das Tastaturschema zu ändern oder weitere Tastenkombinationen hinzuzufügen, klicken Sie im Menü **Extras** auf **Optionen**. Wählen Sie das gewünschte Tastaturschema unter **Umgebung**auf der Seite **Tastatur** aus.  
   
 > [!NOTE]  
 >  Klicken Sie oben auf dieser Seite auf **Alle reduzieren** , um nur die Überschriften anzuzeigen.  
@@ -56,7 +56,7 @@ ms.locfileid: "68264763"
 |------------|-----------------------------|---------------------------------|  
 |Schließen des aktuellen untergeordneten MDI-Fensters|STRG+F4|STRG+F4|  
 |Schließen eines Menüs oder Dialogfelds, Abbrechen eines Vorgangs oder Fokussieren des aktuellen Dokumentfensters|ESC|ESC|  
-|Drucken|STRG+P|STRG+P|  
+|print|STRG+P|STRG+P|  
 |Beenden|ALT+F4|ALT+F4|  
 |Ein- und Ausschalten des Vollbildmodus|UMSCHALT+ALT+EINGABE|UMSCHALT+ALT+EINGABE|  
 |Schließen des aktuellen Toolfensters|UMSCHALT+ESC|UMSCHALT+ESC|  
@@ -136,7 +136,7 @@ ms.locfileid: "68264763"
 |Bewegen des Cursors um eine Zeile nach oben, Erweitern der Markierung|UMSCHALT+ALT+NACH-OBEN-TASTE|UMSCHALT+ALT+NACH-OBEN-TASTE|  
 |Erweitern der Markierung um eine Seite nach oben|UMSCHALT+BILD-AUF|UMSCHALT+BILD-AUF|  
 |Erweitern der Markierung um eine Seite nach unten|UMSCHALT+BILD-AB|UMSCHALT+BILD-AB|  
-|Markieren des gesamten aktuellen Dokuments|CTRL+A|CTRL+A|  
+|Markieren des gesamten aktuellen Dokuments|STRG+A|STRG+A|  
 |Markieren des Worts, auf dem sich der Cursor befindet, bzw. das nächste Wort|STRG+W|STRG+W|  
 |Markieren der aktuellen Position im Editor zurück zur vorherigen Position im Editor|STRG+=|STRG+=|  
 |Erweitern der Markierung zum oberen Rand des aktuellen Fensters|STRG+UMSCHALT+BILD-AUF|STRG+UMSCHALT+BILD-AUF|  
@@ -185,8 +185,8 @@ ms.locfileid: "68264763"
 |Wiederherstellen der zuvor rückgängig gemachten Bearbeitung|STRG+UMSCHALT+Z<br /><br /> oder<br /><br /> STRG+Y<br /><br /> oder<br /><br /> ALT+UMSCHALT+RÜCKTASTE|STRG+UMSCHALT+Z<br /><br /> oder<br /><br /> STRG+Y<br /><br /> oder<br /><br /> ALT+UMSCHALT+RÜCKTASTE|  
 |Speichern des ausgewählten Elements|STRG+S|STRG+S|  
 |Alle speichern|STRG+UMSCHALT+S|STRG+UMSCHALT+S|  
-|Schließen|STRG+F4|STRG+F4|  
-|Drucken|STRG+P|STRG+P|  
+|Close (Schließen)|STRG+F4|STRG+F4|  
+|print|STRG+P|STRG+P|  
 |Beenden|ALT+F4|ALT+F4|  
 |Öffnen der aktuellen Datei in einem Browser|STRG+UMSCHALT+W|Keine Entsprechung|  
 |Löschen des gesamten Texts in der aktuellen Datei|STRG+UMSCHALT+ENTF|STRG+UMSCHALT+ENTF|  
@@ -214,7 +214,7 @@ ms.locfileid: "68264763"
 |Wechseln zwischen Abfrage- und Ergebnisbereich|F6|F6|  
 |Kopieren des Ergebnisrasters und der Kopfzeilen in die Zwischenablage|STRG+UMSCHALT+C|Keine Entsprechung|  
 |Wechseln zum nächsten aktiven Fenster in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]|ALT+F6|ALT+F6|  
-|Öffnen [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|STRG+ALT+P|STRG+ALT+P|  
+|Öffnen Sie [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].|STRG+ALT+P|STRG+ALT+P|  
 |Anzeigen des Dialogfelds "Abfrage-Designer" über das Fenster des Abfrage-Editors|STRG+UMSCHALT+Q|Keine Entsprechung|  
 |Ausführen der gespeicherten Systemprozedur **sp_help**|ALT+F1|ALT+F1|  
 |Ausführen der gespeicherten Systemprozedur **sp_who**|STRG+1|STRG+1|  
@@ -365,7 +365,7 @@ ms.locfileid: "68264763"
 |Zeigt die Definition für das ausgewählte Symbol an.|F12|Keine Entsprechung|  
 |Zeigt die Liste mit Verweisen für das ausgewählte Symbol an.|UMSCHALT+F12|Keine Entsprechung|  
 |Anzeigen des Dialogfelds **Ersetzen**|STRG+H|STRG+H|  
-|Starten der inkrementellen Suche. Eingeben der zu suchenden Zeichen, oder Drücken von STRG+I zur Suche nach Zeichen aus dem vorherigen Suchvorgang|STRG+S|STRG+S|  
+|Starten der inkrementellen Suche. Eingeben der zu suchenden Zeichen, oder Drücken von STRG+I zur Suche nach Zeichen aus dem vorherigen Suchvorgang|STRG+I|STRG+I|  
 |Suchen des nächsten Vorkommens des vorherigen Suchtexts|F3|F3|  
 |Suchen des vorherigen Vorkommens des Suchtexts|UMSCHALT+F3|UMSCHALT+F3|  
 |Suchen des nächsten Vorkommens des derzeit ausgewählten Texts|STRG+F3|STRG+F3|  
@@ -421,7 +421,7 @@ ms.locfileid: "68264763"
 |Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Aktualisieren|F5|F5|  
-|Öffnen eines Detailfensters von einem Raster aus|EINGABE|EINGABE|  
+|Öffnen eines Detailfensters von einem Raster aus|EINGABETASTE|EINGABETASTE|  
   
 ## <a name="replication-conflict-viewer-keyboard-shortcuts"></a>Tastenkombinationen für den Replikationskonflikt-Viewer  
   
@@ -458,7 +458,7 @@ ms.locfileid: "68264763"
 |Verringern der Höhe des ausgewählten Steuerelements in acht Inkrementen|UMSCHALT+NACH-OBEN-TASTE|Keine Entsprechung|  
 |Wechseln zum nächsten Steuerelement auf der Seite|TAB|Keine Entsprechung|  
 |Wechseln zum vorherigen Steuerelement auf der Seite|UMSCHALT+TAB|Keine Entsprechung|  
-|Anzeigen des Rasters auf der Entwurfsoberfläche|EINGABE|Keine Entsprechung|  
+|Anzeigen des Rasters auf der Entwurfsoberfläche|EINGABETASTE|Keine Entsprechung|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anpassen von Menüs und Tastenkombinationen](customize-menus-and-shortcut-keys.md)  

@@ -1,5 +1,5 @@
 ---
-title: setDate-Methode auf Date und Calendar-String | Microsoft-Dokumentation
+title: setDate-Methode für Datums- und Kalenderwerte – Zeichenfolge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: fd152ad6-dd5e-49ef-b166-917371a2cba6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f986b7fd5faadfbd24708ec9a339d3bd2f104f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974583"
 ---
 # <a name="setdate-method-javalangstring-javasqldate-javautilcalendar"></a>setDate-Methode (java.lang.String, java.sql.Date, java.util.Calendar)
@@ -43,11 +43,11 @@ public void setDate(java.lang.String sCol,
   
  *x*  
   
- Ein Date-Objekt.  
+ Ein Date-Objekt  
   
  *c*  
   
- Ein Kalender Objekt.  
+ Ein Calendar-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

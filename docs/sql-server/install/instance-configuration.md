@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69609300"
 ---
 # <a name="installation-wizard-help"></a>Hilfe zum Installations-Assistenten
@@ -45,7 +45,7 @@ Bei der Instanz kann es sich um eine Standardinstanz oder um eine benannte Insta
   
  Weitere Informationen finden Sie unter [Spezifikationen der maximalen Kapazität für SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
-### <a name="options"></a>enthalten
+### <a name="options"></a>Tastatur
 
 **Nur Failoverclusterinstanzen**: Geben Sie den Netzwerkname für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failovercluster an. Anhand dieses Namens wird die Failoverclusterinstanz im Netzwerk identifiziert.  
   
@@ -111,7 +111,7 @@ Verwenden Sie diese Seite zum Einrichten des Servermodus und zum Zuweisen von ad
   
 Bei der Installation von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] sollten Sie Administratoren von SharePoint-Farmen oder -Diensten, die für eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Serverbereitstellung in einer [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]-Farm zuständig sind, Administratorrechte gewähren.  
   
-### <a name="options"></a>enthalten
+### <a name="options"></a>Tastatur
 
 **Servermodus**: Der Servermodus gibt den Typ von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbanken an, die auf dem Server bereitgestellt werden können. Servermodi werden während des Setups bestimmt und können später nicht mehr geändert werden. Die einzelnen Modi schließen einander aus. Das bedeutet, dass Sie zwei Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] benötigen, die jeweils für einen anderen Modus konfiguriert sind, um beide klassische Lösungen – die analytische Onlineverarbeitung (OLAP) und das tabellarische Modell – zu unterstützen.  
   
@@ -120,7 +120,7 @@ Bei der Installation von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-m
 > [!NOTE]  
 > Die Benutzerkontensteuerung (User Account Control, UAC) ist eine Windows-Sicherheitsfunktion, bei der ein Administrator administrative Aktionen oder Anwendungen einzeln genehmigen muss, bevor diese ausgeführt werden können. Da die Benutzerkontensteuerung in den Standardeinstellungen aktiviert ist, werden Sie aufgefordert, einzelne Vorgänge, für die erhöhte Berechtigungen erforderlich sind, zu genehmigen. Sie können die Benutzerkontensteuerung konfigurieren, um das Standardverhalten zu ändern, oder sie für bestimmte Programme anpassen. Weitere Informationen über die Benutzerkontensteuerung und deren Konfiguration finden Sie unter [Schritt-für-Schritt-Anleitung zur Benutzerkontensteuerung](https://go.microsoft.com/fwlink/?linkid=196350) und [Benutzerkontensteuerung (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen
   
 * [Konfigurieren von Dienstkonten &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)
 * [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
@@ -131,14 +131,14 @@ Die in der folgenden Tabelle angegebenen Standardverzeichnisse können beim Setu
   
 ### <a name="uielement-list"></a>UIElement-Liste  
   
-|und Beschreibung|Standardverzeichnis|Empfehlungen|  
+|BESCHREIBUNG|Standardverzeichnis|Empfehlungen|  
 |-----------------|-----------------------|---------------------|  
 |**Datenstammverzeichnis**|\<Laufwerk:>\Programme\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |Stellen Sie sicher, dass der Ordner \Programme\Microsoft SQL Server\ durch entsprechend eingeschränkte Berechtigungen geschützt wird. Die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist in vielen Konfigurationen von der Leistung des Speichers abhängig, in dem sich das Datenverzeichnis befindet. Platzieren Sie dieses Verzeichnis im Speicher mit der höchsten Leistung, der mit dem System verknüpft ist. Stellen Sie für Failoverclusterinstallationen sicher, dass Datenverzeichnisse auf dem freigegebenen Datenträger platziert werden.|  
 |**Protokolldateiverzeichnis**|\<Laufwerk:>\Programme\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |Dies ist das Verzeichnis für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Protokolldateien, das auch das FlightRecorder-Protokoll enthält. Wenn Sie die Dauer von Flight Recorder erhöhen, stellen Sie sicher, dass für das Protokollverzeichnis genügend Speicherplatz zur Verfügung steht.|  
 |**Temporäres Verzeichnis**|\<Laufwerk:>\Programme\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp\ |Platzieren Sie das temporäre Verzeichnis in einem leistungsstarken Speichersubsystem.|  
 |**Sicherungsverzeichnis**|\<Laufwerk:>\Programme\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\ |Dies ist das Verzeichnis für Standardsicherungsdateien von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Bei einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Installation werden in diesem Verzeichnis zudem die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datendateien des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Systemdiensts zwischengespeichert.<br /><br /> Stellen Sie sicher, dass zur Vermeidung von Datenverlusten entsprechende Berechtigungen festgelegt wurden und die Benutzergruppe für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] über die erforderlichen Berechtigungen zum Schreiben im Sicherungsverzeichnis verfügt. Die Verwendung eines zugeordneten Laufwerks für Sicherungsverzeichnisse wird nicht unterstützt.|  
   
-### <a name="considerations"></a>Weitere Überlegungen  
+### <a name="considerations"></a>Überlegungen  
   
 * Auf einer SharePoint-Farm bereitgestellte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanzen speichern Anwendungsdateien, Datendateien und Eigenschaften in Inhaltsdatenbanken und Dienstanwendungsdatenbanken.  
   
@@ -154,7 +154,7 @@ Die in der folgenden Tabelle angegebenen Standardverzeichnisse können beim Setu
   * In einem Dateisystem, in dem die Komprimierung verwendet wird  
   * In einem Verzeichnis, in dem sich Systemdateien befinden  
   
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen
 
 Weitere Informationen zu Verzeichnissen, Dateispeicherorten und Namen für Instanz-IDs finden Sie unter [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
@@ -164,14 +164,14 @@ Die in der folgenden Tabelle angegebenen Standardverzeichnisse können beim Setu
   
 #### <a name="uielement-list"></a>UIElement-Liste
   
-|und Beschreibung|Standardverzeichnis|Empfehlungen|  
+|Beschreibung|Standardverzeichnis|Empfehlungen|  
 |-----------------|-----------------------|---------------------|  
 |**Datenstammverzeichnis** |\<Laufwerk:>\Programme\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |Stellen Sie sicher, dass der Ordner \Programme\Microsoft SQL Server\ durch entsprechend eingeschränkte Berechtigungen geschützt wird. Die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist in vielen Konfigurationen von der Leistung des Speichers abhängig, in dem sich das Datenverzeichnis befindet. Platzieren Sie dieses Verzeichnis im Speicher mit der höchsten Leistung, der mit dem System verknüpft ist. Stellen Sie für Failoverclusterinstallationen sicher, dass Datenverzeichnisse auf dem freigegebenen Datenträger platziert werden.|  
 |**Protokolldateiverzeichnis**|\<Laufwerk:>\Programme\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |Dies ist das Verzeichnis für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Protokolldateien, das auch das FlightRecorder-Protokoll enthält. Wenn Sie die Dauer von Flight Recorder erhöhen, stellen Sie sicher, dass für das Protokollverzeichnis genügend Speicherplatz zur Verfügung steht.|  
 |**Temporäres Verzeichnis**|\<Laufwerk:>\Programme\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |Platzieren Sie das temporäre Verzeichnis in einem leistungsstarken Speichersubsystem.|  
 |**Sicherungsverzeichnis**|\<Laufwerk:>\Programme\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |Dies ist das Verzeichnis für Standardsicherungsdateien von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Bei einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Installation werden in diesem Verzeichnis zudem die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datendateien des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Systemdiensts zwischengespeichert.<br /><br /> Stellen Sie sicher, dass zur Vermeidung von Datenverlusten entsprechende Berechtigungen festgelegt wurden und die Benutzergruppe für den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienst über die erforderlichen Berechtigungen zum Schreiben im Sicherungsverzeichnis verfügt. Die Verwendung eines zugeordneten Laufwerks für Sicherungsverzeichnisse wird nicht unterstützt.|  
   
-#### <a name="considerations"></a>Weitere Überlegungen
+#### <a name="considerations"></a>Überlegungen
   
 * Auf einer SharePoint-Farm bereitgestellte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanzen speichern Anwendungsdateien, Datendateien und Eigenschaften in Inhaltsdatenbanken und Dienstanwendungsdatenbanken.  
   
@@ -187,7 +187,7 @@ Die in der folgenden Tabelle angegebenen Standardverzeichnisse können beim Setu
   * In einem Dateisystem, in dem die Komprimierung verwendet wird  
   * In einem Verzeichnis, in dem sich Systemdateien befinden  
   
-#### <a name="see-also"></a>Siehe auch
+#### <a name="see-also"></a>Weitere Informationen
 
 * Weitere Informationen zu Verzeichnissen, Dateispeicherorten und Namen für Instanz-IDs finden Sie unter [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
 * [Share- und NTFS-Berechtigung für einen Dateiserver](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
@@ -196,17 +196,17 @@ Die in der folgenden Tabelle angegebenen Standardverzeichnisse können beim Setu
 
 Auf dieser Seite können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherheitsmodus festlegen und Windows-Benutzer oder -Gruppen als Administratoren von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]hinzufügen.  
   
-### <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>Überlegungen für das Ausführen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+### <a name="considerations-for-running-sscurrent"></a>Überlegungen für das Ausführen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde die Gruppe „VORDEFINIERT\Administratoren“ für die Anmeldung bei [!INCLUDE[ssDE](../../includes/ssde-md.md)] bereitgestellt, und Mitglieder der lokalen Administratorgruppe konnten sich mit ihren Administratoranmeldeinformationen anmelden. Die Verwendung von erhöhten Berechtigungen ist aber keine bewährte Methode.
 
 In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird die Gruppe „VORDEFINIERT\Administratoren“ nicht für die Anmeldung bereitgestellt. Erstellen Sei für jeden Administratorbenutzer eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung, und fügen Sie diese während der Installation einer neuen Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] der festen Serverrolle **sysadmin** hinzu. Gehen Sie genauso vor für Windows-Konten, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Aufträge ausführen, einschließlich Replikations-Agent-Aufträge.  
   
-### <a name="options"></a>enthalten
+### <a name="options"></a>Tastatur
 
 **Sicherheitsmodus**: Wählen Sie für die Installation die **Windows-Authentifizierung** oder die **Authentifizierung im gemischten Modus** aus.  
   
-**Windows-Prinzipal-Bereitstellung**: In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befand sich die lokale Windows-Gruppe „VORDEFINIERT\Administratoren“ in der Serverrolle **sysadmin** von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wodurch die Windows-Administratoren effektiv Zugriff auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz erhielten. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird die Gruppe „VORDEFINIERT\Administratoren“ in der Serverrolle **sysadmin** nicht bereitgestellt. Stattdessen sollten Sie während des Setups explizit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren für Neuinstallationen festlegen.  
+**Windows-Prinzipal-Bereitstellung**: In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befand sich die lokale Windows-Gruppe „VORDEFINIERT\Administratoren“ in der Serverrolle **sysadmin** von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wodurch Windows-Administratoren effektiv Zugriff auf die Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erhielten. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird die Gruppe „VORDEFINIERT\Administratoren“ in der Serverrolle **sysadmin** nicht bereitgestellt. Stattdessen sollten Sie während des Setups explizit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren für Neuinstallationen festlegen.  
   
 > [!IMPORTANT]  
 > Sie müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren für Neuinstallationen während des Setups explizit festlegen. Sie können den Setup-Vorgang erst nach Ausführung dieses Schrittes fortsetzen.
@@ -245,7 +245,7 @@ Wenn Sie die Authentifizierung im gemischten Modus auswählen und beim Ausführe
 Sichere Kennwörter können von anderen nur schwer erraten und selbst von Computerprogrammen nicht ohne größeren Aufwand ausgespäht werden. Beim Festlegen von sicheren Kennwörtern dürfen keine verbotenen Richtlinien oder Bestimmungen verwendet werden, z.B.:  
   
 * Leeres Kennwort oder NULL
-* "Password"
+* Password
 * "Admin"
 * "Administrator"
 * "sa"
@@ -265,7 +265,7 @@ Ein sicheres Kennwort muss mehr als 8 Zeichen enthalten und wenigstens drei der 
   
 Auf dieser Seite eingegebene Kennwörter müssen die Anforderungen der Richtlinien für sichere Kennwörter erfüllen. Bei Automatisierungen, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden, sollten Sie sicherstellen, dass das Kennwort die Anforderungen der Richtlinien für sichere Kennwörter erfüllt.  
   
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen
 
 Weitere Informationen zum Auswählen von Windows-Authentifizierung im Vergleich zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung finden Sie im Thema [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md).  
 
@@ -279,13 +279,13 @@ Um eine SMB-Dateifreigabe als Verzeichnis anzugeben, müssen Sie den unterstütz
 
 `\\<ServerName>\<ShareName>\...`
 
-### <a name="standalone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Eigenständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="standalone-instance-of-ssnoversion"></a>Eigenständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 In der folgenden Tabelle sind die unterstützten Speichertypen und Standardverzeichnisse für eigenständige Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt, die Sie während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups konfigurieren können:  
   
 ### <a name="uielement-list"></a>UIElement-Liste
   
-|und Beschreibung|Unterstützte Speichertypen|Standardverzeichnis|Empfehlungen|  
+|Beschreibung|Unterstützte Speichertypen|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**Datenstammverzeichnis**|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher* |\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Das Setup konfiguriert Zugriffssteuerungslisten (ACLs) für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.|  
 |**Benutzerdatenbankverzeichnis**|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher*|\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |Welche Vorgehensweise für Benutzerdatenverzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab.|  
@@ -294,18 +294,18 @@ In der folgenden Tabelle sind die unterstützten Speichertypen und Standardverze
   
 \* Obwohl freigegebene Datenträger unterstützt werden, empfehlen wir nicht, diese für eine eigenständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu verwenden.  
   
-### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="failover-cluster-instance-of-ssnoversion"></a>Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 In der folgenden Tabelle sind die unterstützten Speichertypen und Standardverzeichnisse für eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt, die Sie während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups konfigurieren können.  
   
-|und Beschreibung|Unterstützte Speichertypen|Standardverzeichnis|Empfehlungen|  
+|Beschreibung|Unterstützte Speichertypen|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**Datenstammverzeichnis**|Freigegebener Speicher, SMB-Dateiserver|\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> **Tipp**: Wenn Sie **Freigegebener Datenträger** auf der Seite zur **Datenträgerauswahl für Cluster** ausgewählt haben, ist der Standardwert der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Das Setup konfiguriert ACLs für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.|  
 |**Benutzerdatenbankverzeichnis**|Freigegebener Speicher, SMB-Dateiserver|\<Laufwerk:>Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Tipp**: Wenn Sie **Freigegebener Datenträger** auf der Seite zur **Datenträgerauswahl für Cluster** ausgewählt haben, ist der Standardwert der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Welche Vorgehensweise für Benutzerdatenverzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab.|  
 |**Benutzerdatenbank-Protokollverzeichnis**|Freigegebener Speicher, SMB-Dateiserver|\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Tipp**: Wenn Sie **Freigegebener Datenträger** auf der Seite zur **Datenträgerauswahl für Cluster** ausgewählt haben, ist der Standardwert der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Stellen Sie sicher, dass ausreichend Speicherplatz für das Protokollverzeichnis verfügbar ist.|  
 |**Sicherungsverzeichnis**|Lokaler Datenträger, freigegebener Speicher, SMB-Dateiserver|\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **Tipp**: Wenn Sie **Freigegebener Datenträger** auf der Seite zur **Datenträgerauswahl für Cluster** ausgewählt haben, ist der Standardwert der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Legen Sie zur Vermeidung von Datenverlusten entsprechende Berechtigungen fest, und stellen Sie sicher, dass das Benutzerkonto für den SQL Server-Dienst über die erforderlichen Berechtigungen zum Schreiben im Sicherungsverzeichnis verfügt. Die Verwendung eines zugeordneten Laufwerks für Sicherungsverzeichnisse wird nicht unterstützt.|  
   
-### <a name="security-considerations"></a>Überlegungen zur Sicherheit
+### <a name="security-considerations"></a>Sicherheitshinweise
   
 Das Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verzeichnisse und unterbricht während der Konfiguration die Vererbung.  
   
@@ -317,7 +317,7 @@ Die folgenden Empfehlungen gelten für den SMB-Dateiserver:
   
 * Dem Konto, das für die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, müssen SeSecurityPrivilege-Berechtigungen auf dem SMB-Dateiserver zugewiesen werden. Diese Berechtigung weisen Sie zu, indem Sie die Konsole "Lokale Sicherheitsrichtlinie" auf dem Dateiserver verwenden, um der Richtlinie zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verwalten von Überwachungs- und Sicherheitsprotokollen **das** -Setupkonto hinzuzufügen. Diese Einstellung ist in der Konsole für lokale Sicherheitsrichtlinien im Abschnitt **Zuweisen von Benutzerrechten** unter **Lokale Richtlinien** verfügbar.
 
-### <a name="considerations"></a>Weitere Überlegungen
+### <a name="considerations"></a>Überlegungen
   
 * Wenn Sie Funktionen zu einer vorhandenen Installation hinzufügen, können Sie den Speicherort einer vorher installierten Funktion nicht ändern und auch keinen Speicherort für eine neue Funktion angeben.  
   
@@ -338,22 +338,22 @@ Um eine SMB-Dateifreigabe als Verzeichnis anzugeben, müssen Sie den unterstütz
 
 `\\<ServerName>\<ShareName>\....`
   
-### <a name="data-and-log-directories-for-a-standalone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Daten- und Protokollverzeichnisse für eine eigenständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="data-and-log-directories-for-a-standalone-instance-of-ssnoversion"></a>Daten- und Protokollverzeichnisse für eine eigenständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 In der folgenden Tabelle sind die unterstützten Speichertypen und Standardverzeichnisse für eigenständige Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt, die Sie während des Setups konfigurieren können.  
   
-|und Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
+|Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**Datenverzeichnisse**|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher* |\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Das Setup konfiguriert ACLs für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.<br /><br /> Welche Vorgehensweise für die **tempdb**-Verzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab. Geben Sie verschiedenen Ordner oder Laufwerke an, um die Datendateien über mehrere Volumes zu verteilen.|  
 |**Protokollverzeichnis**|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher*|\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Stellen Sie sicher, dass ausreichend Speicherplatz für das Protokollverzeichnis verfügbar ist.|  
   
 \* Obwohl freigegebene Datenträger unterstützt werden, empfehlen wir nicht, diese für eine eigenständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu verwenden.  
   
-### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Daten- und Protokollverzeichnisse für eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-ssnoversion"></a>Daten- und Protokollverzeichnisse für eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 In der folgenden Tabelle sind die unterstützten Speichertypen und Standardverzeichnisse für eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt, die Sie während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups konfigurieren können.  
   
-|und Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
+|Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**tempdb-Datenverzeichnis**|Lokaler Datenträger, freigegebener Speicher, SMB-Dateiserver|\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> **Tipp**: Wenn Sie **Freigegebener Datenträger** auf der Seite zur **Datenträgerauswahl für Cluster** ausgewählt haben, ist der Standardwert der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Das Setup konfiguriert ACLs für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.<br /><br /> Stellen Sie sicher, dass das angegebene Verzeichnis oder die angegebenen Verzeichnisse (falls mehrere Dateien angegeben sind) für alle Clusterknoten gültig sind. Falls die **tempdb** -Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar sind, wird die SQL Server-Ressource nicht online geschaltet.|  
 |**tempdb-Protokollverzeichnis**|Lokaler Datenträger, freigegebener Speicher, SMB-Dateiserver|\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Tipp**: Wenn Sie **Freigegebener Datenträger** auf der Seite zur **Datenträgerauswahl für Cluster** ausgewählt haben, ist der Standardwert der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Welche Vorgehensweise für Benutzerdatenverzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab.<br /><br /> Stellen Sie sicher, dass das angegebene Verzeichnis für alle Clusterknoten gültig ist. Falls die **tempdb** -Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar sind, wird die SQL Server-Ressource nicht online geschaltet.<br /><br /> Stellen Sie sicher, dass ausreichend Speicherplatz für das Protokollverzeichnis verfügbar ist.|  
@@ -391,7 +391,7 @@ Konfigurieren Sie die Einstellungen für **tempdb** entsprechend Ihrer Arbeitsau
   
 * **Protokollverzeichnis** ist das Verzeichnis, in dem **tempdb** -Protokolldateien erstellt werden. Es gib nur ein **tempdb**-Protokollverzeichnis.  
   
-### <a name="security-considerations"></a>Überlegungen zur Sicherheit
+### <a name="security-considerations"></a>Sicherheitshinweise
   
 Das Setup konfiguriert ACLs für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.  
 
@@ -406,7 +406,7 @@ Die folgenden Empfehlungen gelten für den SMB-Dateiserver:
 > [!NOTE]
 > Wenn Sie andere Installationsverzeichnisse als die Standardverzeichnisse angeben, müssen Sie sicherstellen, dass die Installationsordner nur für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Keines der Verzeichnisse in diesem Dialogfeld sollte gemeinsam mit Verzeichnissen anderer Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genutzt werden. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)]- und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Komponenten in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollten ebenfalls in separaten Verzeichnissen installiert werden.
   
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen
 
 * [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
 * [Share- und NTFS-Berechtigung für einen Dateiserver](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
@@ -437,7 +437,7 @@ Wird diese Seite während des Setups übersprungen, entspricht der Standardwert 
 
 ### <a name="uielement-list"></a>UIElement-Liste
   
-**Default:** Dieses Optionsfeld ist standardmäßig ausgewählt und legt die Einstellungen **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher** auf die Standardwerte für [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fest. 
+**Standard:** Dieses Optionsfeld ist standardmäßig ausgewählt und legt die Einstellungen **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher** auf die Standardwerte für [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fest. 
 
 **Empfohlen:** Dieses Optionsfeld muss ausgewählt werden, um die berechneten empfohlenen Werte zu übernehmen oder um die berechneten Werte in vom Benutzer konfigurierte Werte zu ändern.  
   
@@ -463,7 +463,7 @@ Verwenden Sie diese Seite, um FILESTREAM für diese Installation von [!INCLUDE[s
   
 **Streamingzugriff von Remoteclients auf FILESTREAM-Daten zulassen**: Aktivieren Sie dieses Kontrollkästchen, damit Remoteclients auf diese FILESTREAM-Daten auf diesem Server zugreifen können.  
   
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen
 
 * [Aktivieren und Konfigurieren von FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)
 * [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
@@ -475,7 +475,7 @@ Auf der Seite **Benutzerinstanz** haben Sie folgende Möglichkeiten:
 * Generieren Sie eine separate [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz für Benutzer ohne Administratorberechtigungen.
 * Fügen Sie Benutzer zur Administratorrolle hinzu.  
   
-### <a name="options"></a>enthalten
+### <a name="options"></a>Tastatur
   
 **Benutzerinstanzen aktivieren**: Der Standardwert ist ON. Um die Möglichkeit zum Aktivieren von Benutzerinstanzen zu deaktivieren, deaktivieren Sie das Kontrollkästchen.  
   

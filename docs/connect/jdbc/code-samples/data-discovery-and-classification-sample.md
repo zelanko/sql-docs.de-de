@@ -10,25 +10,25 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 206bd656c1300a6436298c426697f6c1d47a9e86
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028385"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Diese [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] Beispielanwendung veranschaulicht, wie Sie mithilfe von gett-Methoden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für das Abrufen von Informationen zur SQL-Daten Ermittlung und-Klassifizierung aus den Tabellen abrufen können, die diese Informationen verwenden.
+Diese [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-Beispielanwendung veranschaulicht, wie Sie in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von Getter-Methoden für Resultsets „Informationen zur SQL-Datenermittlung und -klassifizierung“ aus Tabellen abrufen können, die solche Informationen enthalten.
   
-Die Codedatei für dieses Beispiel heißt "datadiscoveryandclassification. Java" und befindet sich an folgendem Speicherort:  
+Die Codedatei für dieses Beispiel heißt „DataDiscoveryAndClassification.java“ und befindet sich unter dem folgenden Pfad:  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  
 ```
 
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 
 Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „mssql-jdbc.jar“ in den Klassenpfad aufnehmen. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [Verwenden des JDBC-Treibers](../../jdbc/using-the-jdbc-driver.md).
 
@@ -182,6 +182,6 @@ public class DataDiscoveryAndClassification {
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Beispiele für JDBC-Treiberanwendungen](../../jdbc/code-samples/sample-jdbc-driver-applications.md)  

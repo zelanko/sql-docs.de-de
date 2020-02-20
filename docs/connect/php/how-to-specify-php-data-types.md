@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Angeben von PHP-Datentypen | Microsoft-Dokumentation'
+title: 'Gewusst wie: Angeben von PHP-Datentypen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae00c01e962da05015a5132608915fc9d70258f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936399"
 ---
-# <a name="how-to-specify-php-data-types"></a>Vorgehensweise: PHP-Datentypen festlegen
+# <a name="how-to-specify-php-data-types"></a>Gewusst wie: Festlegen von PHP-Datentypen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Wenn Sie den PDO_SQLSRV-Treiber verwenden, können Sie mittels „PDOStatement::bindColumn“ und „PDOStatement::bindParam“ den PHP-Datentyp festlegen, wenn Sie Daten vom Server abrufen. Weitere Informationen finden Sie unter [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md) und [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) .  
@@ -99,7 +99,7 @@ sqlsrv_close( $conn);
   
 Im Beispiel sorgt der Abruf des zweiten Feldes (*ReviewDate*) als Zeichenfolge für die Millisekunden-Genauigkeit des SQL Server-Datentyps DATETIME. Standardmäßig wird der SQL Server-Datentyp DATETIME als PHP-DateTime-Objekt abgerufen, wobei die Millisekunden-Genauigkeit verloren geht.  
   
-Das vierte Feld (*Comments*) wird zu Vorführungszwecken als Stream abgerufen. Standardmäßig wird der SQL Server-Datentyp „nvarchar(3850)“ als eine Zeichenfolge abgerufen. Dies ist für die meisten Situationen akzeptabel.  
+Das vierte Feld (*Comments*) wird zu Vorführungszwecken als Stream abgerufen. Standardmäßig wird der SQL Server-Datentyp „nvarchar(3850)“ als eine Zeichenfolge abgerufen. Dies ist für die meisten Situationen akzeptabel.   
   
 > [!NOTE]  
 > Die [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) -Funktion bietet eine Möglichkeit, Feldinformationen inklusive Feldtypinformationen zu erhalten bevor eine Abfrage durchgeführt wird.  
@@ -109,7 +109,7 @@ Das vierte Feld (*Comments*) wird zu Vorführungszwecken als Stream abgerufen. S
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Vorgehensweise: Abrufen von Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
-[Gewusst wie: Abrufen von Eingabe- und Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[Vorgehensweise: Abrufen von Eingabe- und Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

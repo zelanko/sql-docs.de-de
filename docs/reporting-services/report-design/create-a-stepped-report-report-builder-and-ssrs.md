@@ -9,16 +9,16 @@ ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581539"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Erstellen von abgestuften Berichten (Berichts-Generator und SSRS)
 Ein abgestufter Bericht ist paginierter  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtstyp, der Detailzeilen oder Untergruppen wie im folgenden Beispiel unter einer übergeordneten Gruppe eingerückt in der gleichen Spalte anzeigt:  
   
- ![Gerenderter abgestufter Bericht](../../reporting-services/report-design/media/steppedreportrendered.gif "Rendered stepped report")  
+ ![Gerenderter abgestufter Bericht](../../reporting-services/report-design/media/steppedreportrendered.gif "Gerenderter abgestufter Bericht")  
   
  Bei herkömmlichen Tabellenberichten wird die übergeordnete Gruppe in einer angrenzenden Spalte im Bericht platziert. Der neue Tablix-Datenbereich ermöglicht es Ihnen, eine Gruppe und Detailzeilen bzw. Untergruppen zur gleichen Spalte hinzuzufügen. Um die Gruppenzeilen von den Detailzeilen oder Zeilen untergeordneter Gruppen zu unterscheiden, können Sie entweder eine Formatierung wie eine Schriftfarbe anwenden oder die Detailzeilen mit einem Einzug versehen.  
   
@@ -46,15 +46,15 @@ Ein abgestufter Bericht ist paginierter  [!INCLUDE[ssRSnoversion](../../includes
   
      Sie haben jetzt einen grundlegenden Tabellenbericht. Beim Rendern werden eine Spalte mit dem Gruppeninstanzwert und eine oder mehrere weitere Spalten mit gruppierten Detaildaten angezeigt. Die folgende Abbildung zeigt, wie der Datenbereich auf der Entwurfsoberfläche aussehen könnte.  
   
-     ![Tabellendatenbereich mit Gruppe](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Table data region with group")  
+     ![Tabellendatenbereich mit Gruppe](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Tabellendatenbereich mit Gruppe")  
   
      Die folgende Abbildung zeigt, wie der gerenderte Datenbereich beim Anzeigen des Berichts aussehen könnte.  
   
-     ![Gerenderter gruppierter Bericht](../../reporting-services/report-design/media/tablereportrendered.gif "Rendered grouped report")  
+     ![Gerenderter gruppierter Bericht](../../reporting-services/report-design/media/tablereportrendered.gif "Gerenderter gruppierter Bericht")  
   
 3.  Für einen abgestuften Bericht benötigen Sie die erste Spalte, die die Gruppeninstanz enthält, nicht. Kopieren Sie stattdessen den Wert in der Gruppenkopfzelle, löschen Sie die Gruppenspalte, und fügen Sie den Wert in das erste Textfeld in der Gruppenkopfzeile ein. Um die Gruppenspalte zu entfernen, klicken Sie mit der rechten Maustaste auf die Gruppenspalte oder die Zelle, und klicken Sie auf **Spalten löschen**. Die folgende Abbildung zeigt, wie der Datenbereich auf der Entwurfsoberfläche aussehen könnte.  
   
-     ![Datenbereich mit Gruppenkopfzeile](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Data region with group header row")  
+     ![Datenbereich mit Gruppenkopfzeile](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Datenbereich mit Gruppenkopfzeile")  
   
 4.  Ändern Sie die Auffüllung der Detaildatenzelle, um die Detailzeilen unter der Gruppenkopfzeile in der gleichen Spalte einzurücken.  
   
@@ -76,7 +76,7 @@ Ein abgestufter Bericht ist paginierter  [!INCLUDE[ssRSnoversion](../../includes
   
      Ihr Datenbereich sollte dem folgenden Beispiel ähneln.  
   
-     ![Datenbereich für abgestuften Bericht](../../reporting-services/report-design/media/steppedreportdataregion.gif "Data region for stepped report")  
+     ![Datenbereich für abgestuften Bericht](../../reporting-services/report-design/media/steppedreportdataregion.gif "Datenbereich für abgestuften Bericht")  
   
      **Datenbereich für abgestuftes Berichtslayout**  
   
@@ -103,7 +103,7 @@ Ein abgestufter Bericht ist paginierter  [!INCLUDE[ssRSnoversion](../../includes
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formatieren von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [Tabellen (Berichts-Generator und SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Matrizen (Berichts-Generator und SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   

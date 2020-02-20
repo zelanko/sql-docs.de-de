@@ -17,13 +17,13 @@ ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a6f062d1237cfc92c5697fa005b3f78268aa48f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992719"
 ---
-# <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
+# <a name="sqlsrv_free_stmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Gibt alle der angegebenen Anweisung zugeordneten Ressourcen frei. Die Anweisung kann nicht erneut verwendet werden, nachdem diese Funktion aufgerufen wurde.  
@@ -36,7 +36,7 @@ sqlsrv_free_stmt( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$stmt*: Die Anweisung, die geschlossen werden soll.  
+*$stmt:* die Anweisung, die geschlossen werden soll  
   
 ## <a name="return-value"></a>Rückgabewert  
 Der boolesche Wert **true** , außer die Funktion wird mit einem ungültigen Parameter aufgerufen. Wenn die Funktion mit einem ungültigen Parameter aufgerufen wird, wird **false** zurückgegeben.  

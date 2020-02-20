@@ -1,5 +1,5 @@
 ---
-title: GetMetadata-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: getMetaData-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 86223cb5-3bf4-489a-8c82-669a91764f2b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4fdf49c68acd2ef1b1544ad02efcb4079ceeac67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981861"
 ---
 # <a name="getmetadata-method-sqlserverconnection"></a>getMetaData-Methode (SQLServerConnection)
@@ -35,13 +35,13 @@ public java.sql.DatabaseMetaData getMetaData()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Das DatabaseMetaData-Objekt.  
+ Das DatabaseMetaData-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese GetMetadata-Methode wird von der GetMetadata-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
+ Diese getMetaData-Methode wird von der getMetaData-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

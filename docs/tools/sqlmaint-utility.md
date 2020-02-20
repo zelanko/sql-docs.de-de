@@ -1,6 +1,6 @@
 ---
-title: sqlmaint (Hilfsprogramm) | Microsoft-Dokumentation
-ms.custom: ''
+title: sqlmaint (Hilfsprogramm)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecc0a38acd6ea00656e67e9f582a55c05ca15583
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c0f87bca3404505e82c903bd868e9b5c2da00bed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986283"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306962"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (Hilfsprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Das **sqlmaint**-Hilfsprogramm führt eine Reihe angegebener Wartungsvorgänge für eine oder mehrere Datenbanken aus. Verwenden Sie **sqlmaint** , um DBCC-Überprüfungen auszuführen, eine Datenbank und das zugehörige Transaktionsprotokoll zu sichern, Statistiken zu aktualisieren und Indizes neu zu erstellen. Bei allen Datenbankwartungsaktivitäten wird ein Bericht generiert, der an eine festgelegte Textdatei, HTML-Datei oder ein festgelegtes E-Mail-Konto gesendet werden kann. **sqlmaint** führt Datenbankwartungspläne aus, die in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]erstellt wurden. Verwenden Sie das Hilfsprogramm [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dtexec [, um Wartungspläne von](../integration-services/packages/dtexec-utility.md)über die Eingabeaufforderung auszuführen.  
+  Das**sqlmaint** -Hilfsprogramm führt eine Reihe angegebener Wartungsvorgänge für eine oder mehrere Datenbanken aus. Verwenden Sie **sqlmaint** , um DBCC-Überprüfungen auszuführen, eine Datenbank und das zugehörige Transaktionsprotokoll zu sichern, Statistiken zu aktualisieren und Indizes neu zu erstellen. Bei allen Datenbankwartungsaktivitäten wird ein Bericht generiert, der an eine festgelegte Textdatei, HTML-Datei oder ein festgelegtes E-Mail-Konto gesendet werden kann. **sqlmaint** führt Datenbankwartungspläne aus, die in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]erstellt wurden. Verwenden Sie das Hilfsprogramm [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dtexec [, um Wartungspläne von](../integration-services/packages/dtexec-utility.md)über die Eingabeaufforderung auszuführen.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Verwenden Sie stattdessen die Wartungsplanfunktion von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Weitere Informationen zu Wartungsplänen finden Sie unter [Wartungspläne](../relational-databases/maintenance-plans/maintenance-plans.md).  
@@ -81,9 +81,9 @@ number[minutes | hours | days | weeks | months]
  Gibt an, dass das Syntaxdiagramm für **sqlmaint** zurückgegeben werden soll. Dieser Parameter darf nur alleine verwendet werden.  
   
  **-S** _server_name_[ **\\** _instance\_name_]  
- Gibt die Zielinstanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie _server\_name_ an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] auf diesem Server herzustellen. Geben Sie _server\_name_ **\\** _instance\_name_ an, um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf diesem Server herzustellen. Wenn kein Server angegeben wird, stellt **sqlmaint** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf dem lokalen Computer her.  
+ Gibt die Zielinstanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an. Geben Sie _server\_name_ an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] auf diesem Server herzustellen. Geben Sie _server\_name_ **\\** _instance\_name_ an, um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf diesem Server herzustellen. Wenn kein Server angegeben wird, stellt **sqlmaint** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf dem lokalen Computer her.  
   
- **-U** _Anmelde-ID_  
+ **-U** _login_ID_  
  Gibt die Anmelde-ID an, der beim Verbinden zum Server verwendet werden soll. Wenn dieses Argument nicht angegeben wird, versucht **sqlmaint** , die [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierung zu verwenden. Wenn die *Anmelde-ID* Sonderzeichen enthält, muss das Argument in doppelte Anführungszeichen (") eingeschlossen werden. Andernfalls sind die doppelten Anführungszeichen optional.  
   
 > [!IMPORTANT]  
@@ -95,16 +95,16 @@ number[minutes | hours | days | weeks | months]
 > [!IMPORTANT]  
 >  Das Kennwort wird nicht maskiert. Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
- **-D** _Datenbankname_  
+ **-D** _database_name_  
  Gibt den Namen der Datenbank an, in der der Wartungsvorgang durchgeführt werden soll. Wenn der *Datenbankname* Sonderzeichen enthält, muss das Argument in doppelte Anführungszeichen eingeschlossen werden. Andernfalls sind die doppelten Anführungszeichen optional.  
   
- **-PlanName** _Name_  
+ **-PlanName** _name_  
  Gibt den Namen eines Datenbank-Wartungsplans an, der mithilfe des Datenbank-Wartungsplanungs-Assistenten definiert wurde. Von den Informationen, die dieser Plan enthält, verwendet **sqlmaint** nur die Liste der Datenbanken im Plan. Alle Wartungsaktivitäten, die Sie in den anderen **sqlmaint** -Parametern angeben, werden auf die in dieser Liste aufgeführten Datenbanken angewendet.  
   
- **-PlanID** _GUID_  
+ **-PlanID** _guid_  
  Gibt einen global eindeutigen Bezeichner (Globally Unique Identifier, GUID) eines Datenbank-Wartungsplans an, der mithilfe des Datenbank-Wartungsplanungs-Assistenten definiert wurde. Von den Informationen, die dieser Plan enthält, verwendet **sqlmaint** nur die Liste der Datenbanken im Plan. Alle Wartungsaktivitäten, die Sie in den anderen **sqlmaint** -Parametern angeben, werden auf die in dieser Liste aufgeführten Datenbanken angewendet. Der GUID muss mit einem der plan_id-Werte in msdb.dbo.sysdbmaintplans übereinstimmen.  
   
- **-Rpt** _extdatei_  
+ **-Rpt** _text_file_  
  Gibt den vollständigen Pfad und Namen der Datei an, in der der Bericht generiert werden soll. Der Bericht wird auch auf dem Bildschirm generiert. Der Bericht verwaltet Versionsinformationen, indem er das Datum zum Dateinamen hinzufügt. Das Datum wird folgendermaßen generiert: am Ende des Dateinamens, aber vor dem Punkt im Format _*yyyyMMddhhmm*. *yyyy* = Jahr, *MM* = Monat, *dd* = Tag, *hh* = Stunde, *mm* = Minute.  
   
  Wenn Sie das Hilfsprogramm am 1. Dezember 1996 um 10:23 Uhr ausführen und dies der *Textdatei* -Wert ist:  
@@ -121,18 +121,18 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  Für *extdatei* ist der vollständige UNC-Dateiname (Universal Naming Convention) erforderlich, wenn **sqlmaint** auf einen Remoteserver zugreift.  
   
- **-To**  _Operatorname_  
+ **-To** _operator_name_  
  Gibt den Operator an, an den der generierte Bericht über SQL Mail gesendet wird.  
   
- **-HtmlRpt** _HTML-Datei_  
+ **-HtmlRpt** _html_file_  
  Gibt den vollständigen Pfad und Namen der Datei an, in der der HTML-Bericht generiert werden soll. **sqlmaint** generiert den Dateinamen, indem eine Zeichenfolge im Format _*yyyyMMddhhmm* an den Dateinamen angefügt wird, ebenso wie beim **-Rpt** -Parameter.  
   
  Für *HTML-Datei* ist der vollständige UNC-Dateiname erforderlich, wenn **sqlmaint** auf einen Remoteserver zugreift.  
   
- **-DelHtmlRpt** \<*Zeitraum*>  
+ **-DelHtmlRpt** \<*time_period*>  
  Gibt an, dass jeder HTML-Bericht im Berichtsverzeichnis gelöscht werden soll, wenn das Zeitintervall nach Erstellen der Berichtsdatei den Wert \<*Zeitraum*> überschreitet. **-DelHtmlRpt** sucht nach Dateien, deren Namen dem Muster entsprechen, das aus dem *HTML-Datei*-Parameter generiert wurde. Wenn für *html_file* der Wert C:\Programme\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm angegeben wird, bewirkt **-DelHtmlRpt**, dass **sqlmaint** alle Dateien löscht, deren Namen dem Muster C:\Programme\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm entsprechen und die älter als der angegebene Wert für \<*time_period*> sind.  
   
- **-RmUnusedSpace** _Schwellenwert_Prozent_ungenutzt_Prozent_  
+ **-RmUnusedSpace** _threshold_percent free_percent_  
  Gibt an, dass nicht verwendeter Speicherplatz aus der mit **-D**angegebenen Datenbank entfernt wird. Diese Option ist nur für Datenbanken nützlich, die für das automatische Wachstum definiert wurden. *Schwellenwert_Prozent* gibt die Größe in Megabytes an, die die Datenbank erreichen muss, bevor **sqlmaint** versucht, nicht verwendeten Datenspeicherplatz zu entfernen. Wenn die Datenbank kleiner als *Schwellenwert_Prozent*ist, wird keine Aktion ausgeführt. *Prozent_frei* gibt an, wie viel nicht verwendeter Speicherplatz in der Datenbank verbleiben muss. Die Angabe erfolgt als Prozentsatz der endgültigen Größe der Datenbank. Wenn eine 200 MB große Datenbank z.B. 100 MB an Daten enthält, bewirkt die Angabe des Werts 10 für *Prozent_frei* , dass die endgültige Größe der Datenbank 110 MB beträgt. Beachten Sie, dass eine Datenbank nicht erweitert wird, wenn sie kleiner als der Wert ist, der sich aus *Prozent_frei* zuzüglich der Menge der Daten in der Datenbank ergibt. Wenn eine 108 MB große Datenbank z.B. 100 MB an Daten enthält, bewirkt die Angabe des Werts 10 für *Prozent_frei* nicht, dass die Datenbank auf 110 MB erweitert wird; die Datenbank bleibt 108 MB groß.  
   
  **-CkDB** |  **-CkDBNoIdx**  
@@ -141,12 +141,12 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  Wenn die Datenbank zum Zeitpunkt der Ausführung von *sqlmaint* verwendet wird, wird eine Warnung in die Datei geschrieben, die mit **Textdatei** angegeben wurde.  
   
  **-CkAl** |  **-CkAlNoIdx**  
- Gibt an, dass eine DBCC CHECKALLOC-Anweisung mit der Option NOINDEX in der Datenbank ausgeführt werden soll, die mit **-D** angegeben wurde. Weitere Informationen finden Sie unter [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md).  
+ Gibt an, dass eine DBCC CHECKALLOC-Anweisung mit der Option NOINDEX in der Datenbank ausgeführt werden soll, die mit **-D**angegeben wurde. Weitere Informationen finden Sie unter [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md).  
   
  **-CkCat**  
  Gibt an, dass eine DBCC CHECKCATALOG-Anweisung (Transact-SQL) in der Datenbank ausgeführt werden soll, die mit **-D** angegeben wurde. Weitere Informationen finden Sie unter [DBCC CHECKCATALOG &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md).  
   
- **-UpdOptiStats** _Beispiel_Prozent_  
+ **-UpdOptiStats** _sample_percent_  
  Gibt an, dass für jede Tabelle der Datenbank die folgende Anweisung ausgeführt werden soll:  
   
 ```  
@@ -157,7 +157,7 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
   
  Weitere Informationen finden Sie unter [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)erstellt wurden.  
   
- **-RebldIdx** _Speicher_frei_  
+ **-RebldIdx** _free_space_  
  Gibt an, dass die Indizes der Tabellen in der Zieldatenbank neu erstellt werden sollen, wobei der *Speicher_frei* -Prozentwert als Umkehrwert des Füllfaktors verwendet wird. Wenn der *Speicher_frei* -Prozentsatz z.B. 30 beträgt, dann ist der verwendete Füllfaktor 70. Wenn ein *Speicher_frei* -Prozentwert von 100 angegeben wird, werden die Indizes mit dem ursprünglichen Füllfaktorwert neu erstellt.  
   
  Falls die Indizes für berechnete Spalten erstellt wurden, müssen Sie zudem das **-SupportComputedColumn-** Argument angeben, wenn Sie **-RebldIdx**verwenden.  
@@ -178,7 +178,7 @@ dbname_db_yyyyMMddhhmm.BAK
   
 ```  
   
- Dabei gilt:  
+ Hierbei gilt:  
   
 -   *dbname* ist der Name der Datenbank, die gesichert werden soll.  
   
@@ -206,7 +206,7 @@ dbname_log_yyyymmddhhmm.BAK
  Gibt bei Datenträgersicherungen an, dass ein Unterverzeichnis im Verzeichnis [*Sicherungspfad*] oder im Standardsicherungsverzeichnis erstellt werden soll, wenn **-UseDefDir** ebenfalls angegeben ist. Der Name des Unterverzeichnisses wird anhand des Datenbanknamens generiert, der mit **-D**angegeben wurde. **-CrBkSubDir** bietet ein einfaches Verfahren, um alle Sicherungen für verschiedene Datenbanken in unterschiedlichen Unterverzeichnissen abzulegen, ohne den *Sicherungspfad* -Parameter ändern zu müssen.  
   
  **-UseDefDir**  
- Gibt für Datenträgersicherungen an, dass die Sicherungsdatei im Standardsicherungsverzeichnis erstellt werden soll. **UseDefDir** überschreibt *Sicherungspfad* , wenn beide Parameter angegeben werden. Bei einer Standardinstallation von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist C:\Programme\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup das Standardsicherungsverzeichnis.  
+ Gibt für Datenträgersicherungen an, dass die Sicherungsdatei im Standardsicherungsverzeichnis erstellt werden soll. **UseDefDir** überschreibt *Sicherungspfad* , wenn beide Parameter angegeben werden. Bei einer Standardeinrichtung von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] befindet sich das Standardsicherungsverzeichnis unter dem Pfad „C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup“.  
   
  **TAPE**  
  Gibt an, dass das Sicherungsmedium ein Band ist.  
@@ -264,7 +264,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 
 sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -CrBkSubDir -DelBkUps 2weeks  
 ```  
   
-### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql13mssqlservermssqlbackup-directory"></a>D. Sichern einer Datenbank in das Standardverzeichnis „x:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup“.  
+### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql13mssqlservermssqlbackup-directory"></a>D: Sichern einer Datenbank in das Standardverzeichnis „x:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup“.  
   
 ```  
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  

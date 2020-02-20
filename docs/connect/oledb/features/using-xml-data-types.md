@@ -1,6 +1,6 @@
 ---
 title: Verwenden von XML-Datentypen | Microsoft-Dokumentation
-description: Verwenden von XML-Datentypen mit OLE DB Treiber für SQL Server
+description: Verwenden von XML-Datentypen im OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -31,10 +31,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0d3554363e4813dfb4b3f6cbeefec00214d5a2d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988792"
 ---
 # <a name="using-xml-data-types"></a>Verwenden von XML-Datentypen
@@ -58,7 +58,7 @@ ms.locfileid: "67988792"
  `INSERT INTO xmltable(xmlcol) VALUES(N'<?xml version="1.0" encoding="UTF-8"?><doc/>')`  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQL Server 
- DBTYPE_XML ist ein neuer Datentyp, der für XML im OLE DB Treiber für SQL Server spezifisch ist. Zusätzlich können XML-Daten über die vorhandenen OLE DB-Typen DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT und DBTYPE_IUNKNOWN aufgerufen werden. Daten, die in XML-Spalten gespeichert wurden, können in einem OLE DB-Treiber für SQL Server-Rowset in den folgenden Formaten aus der Spalte abgerufen werden:  
+ DBTYPE_XML ist ein neuer Datentyp für XML im OLE DB-Treiber für SQL Server. Zusätzlich können XML-Daten über die vorhandenen OLE DB-Typen DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT und DBTYPE_IUNKNOWN aufgerufen werden. Daten, die in XML-Spalten gespeichert wurden, können in einem OLE DB-Treiber für SQL Server-Rowset in den folgenden Formaten aus der Spalte abgerufen werden:  
   
 -   Textzeichenfolge  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67988792"
 > [!NOTE]  
 >  Der OLE DB-Treiber für SQL Server umfasst keinen SAX-Reader, **ISequentialStream** kann jedoch einfach mit MSXML an SAX- und DOM-Objekte übergeben werden.  
   
- **ISequentialStream** sollte zum Abrufen großer XML-Dokumente verwendet werden. Die für andere große Werttypen verwendeten Techniken gelten auch für XML. Weitere Informationen finden Sie unter [Verwenden von großen Werttypen](../../oledb/features/using-large-value-types.md).  
+ **ISequentialStream** sollte zum Abrufen großer XML-Dokumente verwendet werden. Die für andere große Werttypen verwendeten Techniken gelten auch für XML. Weitere Informationen finden Sie im Abschnitt [Verwenden von Datentypen für umfangreiche Werte](../../oledb/features/using-large-value-types.md).  
   
  Daten, die in XML-Spaltentypen in einem Rowset gespeichert sind, können über die bekannten Schnittstellen wie **IRow::GetColumns**, **IRowChange::SetColumns** und **ICommand::Execute** abgerufen, eingefügt oder aktualisiert werden. Ähnlich wie beim Abrufen kann die Anwendung entweder eine Textzeichenfolge oder einen **ISequentialStream** an den OLE DB-Treiber für SQL Server übergeben.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "67988792"
  Wenn die XML-Eingabe als DBTYPE_WSTR gebunden ist, muss die Anwendung sicherstellen, dass sie bereits in Unicode codiert wurde, um mögliche Beschädigungen durch Datenkonvertierung zu verhindern.  
   
 ### <a name="data-bindings-and-coercions"></a>Datenbindungen und -umwandlungen  
- Die folgende Tabelle veranschaulicht die Bindung und Umwandlung bei Verwendung der aufgeführten Datentypen mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **xml**-Datentyp.  
+ Die folgende Tabelle veranschaulicht die Bindung und erzwungene Umwandlung bei Verwendung der aufgeführten Datentypen mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp **xml**.  
   
 |Datentyp|Zu Server<br /><br /> **XML**|Zu Server<br /><br /> **Nicht-XML**|Von Server<br /><br /> **XML**|Von Server<br /><br /> **Nicht-XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -125,7 +125,7 @@ ms.locfileid: "67988792"
   
  Datenkonvertierungen durch OLE DB-Basisdienste (**IDataConvert**) sind nicht auf DBTYPE_XML anwendbar.  
   
- Die Überprüfung erfolgt, wenn Daten an den Server gesendet werden. Die Client seitige Validierung und Codierungs Änderungen müssen von Ihrer Anwendung verarbeitet werden. Es wird empfohlen, die XML-Daten nicht direkt zu verarbeiten, sollten Sie stattdessen einen Dom-oder SAX-Reader verwenden, um Sie zu verarbeiten.  
+ Die Überprüfung erfolgt, wenn Daten an den Server gesendet werden. Die clientseitige Validierung und Codierungsänderungen müssen von Ihrer Anwendung verarbeitet werden. Es wird empfohlen, die XML-Daten nicht direkt zu verarbeiten, sondern einen DOM oder SAX-Reader zu verwenden.  
   
  DBTYPE_NULL und DBTYPE_EMPTY können für Eingabeparameter gebunden werden, aber nicht für Ausgabeparameter oder Ergebnisse. Ist der Status für Eingabeparameter gebunden, muss er auf DBSTATUS_S_ISNULL oder DBSTATUS_S_DEFAULT festgelegt werden.  
   
@@ -134,24 +134,24 @@ ms.locfileid: "67988792"
  DBTYPE_IUNKNOWN ist eine unterstützte Bindung (wie in der vorherigen Tabelle gezeigt), aber es gibt keine Konvertierungen zwischen DBTYPE_XML und DBTYPE_IUNKNOWN. DBTYPE_IUNKNOWN kann nicht mit DBTYPE_BYREF verwendet werden.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Hinzufügungen und Änderungen am OLE DB-Rowset  
- OLE DB Treiber für SQL Server fügt viele der Kern OLE DB Schemarowsets neue Werte oder Änderungen hinzu.  
+ Der OLE DB-Treiber für SQL Server fügt vielen der wichtigsten OLE DB-Schemarowsets neue Werte oder Änderungen hinzu.  
   
-#### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Die COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets  
+#### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Die COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets  
  Den COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets wurden unter anderem die folgenden Spalten hinzugefügt:  
   
-|Spaltenname|Typ|und Beschreibung|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Name des Katalogs, in dem eine XML-Schemaauflistung definiert ist. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Der Name eines Schemas, in dem eine XML-Schemaauflistung definiert ist. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  
 |SS_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|Der Name der XML-Schemaauflistung. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  
   
-#### <a name="the-providertypes-schema-rowset"></a>Das PROVIDER_TYPES-Schemarowset  
+#### <a name="the-provider_types-schema-rowset"></a>Das PROVIDER_TYPES-Schemarowset  
  Im PROVIDER_TYPES-Schemarowset ist der COLUMN_SIZE-Wert für den **XML**-Datentyp 0, und DATA_TYPE ist DBTYPE_XML.  
   
-#### <a name="the-ssxmlschema-schema-rowset"></a>Das SS_XMLSCHEMA-Schemarowset  
+#### <a name="the-ss_xmlschema-schema-rowset"></a>Das SS_XMLSCHEMA-Schemarowset  
  Ein neues Schemarowset SS_XMLSCHEMA wird eingeführt, mit dem Clients XML-Schema-Informationen abrufen können. Das SS_XMLSCHEMA-Rowset enthält folgende Spalten:  
   
-|Spaltenname|Typ|und Beschreibung|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Katalog, zu dem eine XML-Auflistung gehört.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Das Schema, zu dem eine XML-Auflistung gehört.|  
@@ -166,21 +166,21 @@ ms.locfileid: "67988792"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Hinzufügungen und Änderungen an der OLE DB-Eigenschaftengruppe  
- OLE DB Treiber für SQL Server fügt viele der Kern OLE DB-Eigenschaften Sätze neue Werte oder Änderungen hinzu.  
+ Der OLE DB-Treiber für SQL Server fügt vielen der wichtigsten OLE DB-Eigenschaftensätze neue Werte oder Änderungen hinzu.  
   
-#### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Die DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe  
+#### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Die DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe  
  Um den **XML**-Datentyp über OLE DB zu unterstützen, implementiert der OLE DB-Treiber für SQL Server die neue DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe mit folgenden Werten.  
   
-|Name|Typ|und Beschreibung|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Name des Katalogs (Datenbank), in dem eine XML-Schemaauflistung definiert ist. Teil des dreiteiligen SQL-Namensbezeichners.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Der Name eines XML-Schemas in der Schemaauflistung. Teil des dreiteiligen SQL-Namensbezeichners.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|Der Name der XML-Schemaauflistung im Katalogteil A des dreiteiligen SQL-Namensbezeichners.|  
   
-#### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Die DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe  
+#### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Die DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe  
  Um die Tabellenerstellung in der **ITableDefinition**-Schnittstelle zu unterstützen, fügt der OLE DB-Treiber für SQL Server zur DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe drei neue Spalten hinzu.  
   
-|Name|Typ|und Beschreibung|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Bei typisierten XML-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem das XML-Schema gespeichert ist. Für andere Spaltentypen gibt diese Eigenschaft eine leere Zeichenfolge zurück.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Bei typisierten XML-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des XML-Schemas angibt, das diese Spalte definiert.|  
@@ -189,7 +189,7 @@ ms.locfileid: "67988792"
  Wie die SSPROP_PARAM-Werte sind all diese Eigenschaften optional und standardmäßig leer. SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME und SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME können nur angegeben werden, wenn SSPROP_COL_XML_SCHEMACOLLECTIONNAME angegeben ist. Bei der Übergabe von XML an den Server werden diese Werte (falls vorhanden) auf ihr Vorhandensein in der aktuellen Datenbank überprüft, und die Instanzdaten werden mit dem Schema verglichen. In jedem Fall müssen sie entweder alle leer oder alle ausgefüllt sein, um gültig zu sein.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Hinzufügungen und Änderungen an der OLE DB-Schnittstelle  
- OLE DB Treiber für SQL Server fügt viele der Kern OLE DB Schnittstellen neue Werte oder Änderungen hinzu.  
+ Der OLE DB-Treiber für SQL Server fügt vielen der wichtigsten OLE DB-Schnittstellen neue Werte oder Änderungen hinzu.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Die ISSCommandWithParameters-Schnittstelle  
  Um den **XML**-Datentyp durch OLE DB zu unterstützen, implementiert der OLE DB-Treiber für SQL Server eine Reihe von Änderungen, darunter die neue [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)-Schnittstelle. Diese neue Schnittstelle erbt von der OLE DB-Kernschnittstelle **ICommandWithParameters**. Zusätzlich zu den drei von **ICommandWithParameters** geerbten Methoden (**GetParameterInfo**, **MapParameterNames** und **SetParameterInfo**) stellt **ISSCommandWithParameters** zur Verarbeitung serverspezifischer Datentypen die Methoden [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) und [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) bereit.  
@@ -200,7 +200,7 @@ ms.locfileid: "67988792"
 #### <a name="the-icolumnsrowset-interface"></a>Die IDBColumnsRowset-Schnittstelle  
  Der OLE DB-Treiber für SQL Server fügt die folgenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifischen Spalten zu dem von der **IColumnRowset::GetColumnsRowset**-Methode zurückgegebenen Rowset hinzu. Diese Spalten enthalten den dreiteiligen Namen einer XML-Schemaauflistung. Für Nicht-XML-Spalten oder nicht typisierte XML-Spalten nehmen alle drei Spalten den Standardwert von NULL an.  
   
-|Spaltenname|Typ|und Beschreibung|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Katalog, zu dem eine XML-Schemaauflistung gehört.<br /><br /> Andernfalls NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Das Schema, zu dem eine XML-Schemaauflistung gehört. Andernfalls NULL.|  
@@ -231,6 +231,6 @@ ms.locfileid: "67988792"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [ISSCommandWithParameters &#40;-OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

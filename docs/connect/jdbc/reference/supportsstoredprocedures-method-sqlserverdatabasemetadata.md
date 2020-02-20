@@ -1,5 +1,5 @@
 ---
-title: supportsstoredprocedures-Methode | Microsoft-Dokumentation
+title: supportsStoredProcedures-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 776ff53a-8bf3-4864-a7b7-170fdef1a87b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd3c71aa058534342ddd70fdf1ae5256fb75e708
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968763"
 ---
 # <a name="supportsstoredprocedures-method-sqlserverdatabasemetadata"></a>supportsStoredProcedures-Methode (SQLServerDatabaseMetaData)
@@ -41,7 +41,7 @@ public boolean supportsStoredProcedures()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese supportsstoredprocedures-Methode wird von der supportsstoredprocedures-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsStoredProcedures-Methode wird von der supportsStoredProcedures-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung bei Konnektivität | Microsoft-Dokumentation
+title: Behandlung von Konnektivitätsproblemen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027620"
 ---
-# <a name="troubleshooting-connectivity"></a>Behandlung von Verbindungsproblemen
+# <a name="troubleshooting-connectivity"></a>Behandlung von Konnektivitätsproblemen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] setzt für die Kommunikation mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank voraus, dass TCP/IP installiert und aktiv ist. Sie können mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Configuration Manager überprüfen, welche Netzwerkbibliotheksprotokolle installiert sind.  
@@ -28,7 +28,7 @@ ms.locfileid: "69027620"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist installiert, aber TCP/IP wurde nicht mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bzw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Configuration Manager für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher als Netzwerkprotokoll für [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] installiert.  
   
-    -   TCP/IP ist als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokoll installiert, lauscht aber nicht an dem in der JDBC-Verbindungs-URL angegebenen Port. Der Standardport ist 1433. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann aber bei der Produktinstallation für das Lauschen an einem beliebigen Port konfiguriert werden. Vergewissern Sie sich, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an Port 1433 lauscht. Sollte der Port geändert worden sein, vergewissern Sie sich, dass der in der JDBC-Verbindungs-URL angegebene Port dem geänderten Port entspricht. Weitere Informationen zu JDBC-Verbindungs-URLs finden Sie unter " [aufbauen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md)".  
+    -   TCP/IP ist als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokoll installiert, lauscht aber nicht an dem in der JDBC-Verbindungs-URL angegebenen Port. Der Standardport ist 1433. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann aber bei der Produktinstallation für das Lauschen an einem beliebigen Port konfiguriert werden. Vergewissern Sie sich, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an Port 1433 lauscht. Sollte der Port geändert worden sein, vergewissern Sie sich, dass der in der JDBC-Verbindungs-URL angegebene Port dem geänderten Port entspricht. Weitere Informationen zu JDBC-Verbindungs-URLs finden Sie unter [Erstellen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md).  
   
     -   Die Adresse des in der JDBC-Verbindungs-URL angegebenen Computers verweist nicht auf einen Server, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert und gestartet wurde.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69027620"
   
 -   Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden, setzt der JDBC-Treiber voraus, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung installiert ist. Dabei handelt es sich nicht um die Standardeinstellung. Vergewissern Sie sich beim Installieren oder Konfigurieren der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dass diese Option enthalten ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [Verbinden mit SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   

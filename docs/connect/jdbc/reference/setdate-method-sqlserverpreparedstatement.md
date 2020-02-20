@@ -16,10 +16,10 @@ ms.assetid: f81e5203-71eb-407e-b71f-1bdc722887a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc64a807ac219e5f726ec414ad13c9f7c83daca1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974389"
 ---
 # <a name="setdate-method-sqlserverpreparedstatement"></a>setDate-Methode (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67974389"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[setDate (int, java.sql.Date)](../../../connect/jdbc/reference/setdate-method-int-java-sql-date.md)|Legt den angegebenen Parameter auf den angegebenen Datumswert fest.|  
 |[setDate (int, java.sql.Date, java.util.Calendar)](../../../connect/jdbc/reference/setdate-method-int-java-sql-date-java-util-calendar.md)|Legt den angegebenen Parameter auf die angegebenen Datums- und Kalenderwerte fest.|  

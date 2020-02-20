@@ -1,5 +1,5 @@
 ---
-title: GetColumns-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getColumns-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d34f5748a5a85d67754ea9a001ba1819935e53a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952835"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns-Methode (SQLServerDatabaseMetaData)
@@ -46,7 +46,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  Ein **String-Objekt**, das das Schemanamenmuster enthält.  
   
- *table*  
+ *Tabelle*  
   
  Ein **String-Objekt**, das das Tabellennamenmuster enthält.  
   
@@ -65,7 +65,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  Das von der getColumns-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   
-|Name|Typ|und Beschreibung|  
+|Name|type|BESCHREIBUNG|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Katalogname.|  
 |TABLE_SCHEM|**String**|Der Tabellenschemaname.|  
@@ -77,8 +77,8 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |BUFFER_LENGTH|**smallint**|Die Übertragungsgröße der Daten.|  
 |DECIMAL_DIGITS|**smallint**|Die Dezimalstellen der Spalte.|  
 |NUM_PREC_RADIX|**smallint**|Die Basis der Spalte.|  
-|NULLABLE|**smallint**|Gibt an, ob die Spalte NULL-Werte zulässt. Mögliche Werte:<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**String**|Die der Spalte zugeordneten Kommentare.<br /><br /> **Hinweis:** Für diese Spalte wird von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] immer NULL zurückgegeben.|  
+|NULLABLE|**smallint**|Gibt an, ob in der Spalte NULL-Werte zugelassen sind. Es kann sich um einen der folgenden Werte handeln:<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
+|ANMERKUNGEN|**String**|Die der Spalte zugeordneten Kommentare.<br /><br /> **Hinweis:** Für diese Spalte wird von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] immer NULL zurückgegeben.|  
 |COLUMN_DEF|**String**|Der Standardwert der Spalte.|  
 |SQL_DATA_TYPE|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte entspricht der DATA_TYPE-Spalte mit Ausnahme des datetime-Datentyps und des SQL-92-Datentyps interval. Diese Spalte gibt immer einen Wert zurück.|  
 |SQL_DATETIME_SUB|**smallint**|Untertypcode für den datetime-Datentyp und den SQL-92-Datentyp interval. Bei allen anderen Datentypen gibt diese Spalte NULL zurück.|  
@@ -102,7 +102,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 > [!NOTE]  
 >  Weitere Informationen zu den Daten, die von der getColumns-Methode zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „sp_columns (Transact-SQL)“.  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Im JDBC-Treiber 3,0 werden die folgenden Verhaltensänderungen von früheren Versionen des JDBC-Treibers angezeigt: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+ Der [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-JDBC-Treiber 3.0 weist die folgenden Behavior Changes im Vergleich zu früheren Versionen auf:  
   
  Die DATA_TYPE-Spalte wurde folgendermaßen geändert:  
   
@@ -124,7 +124,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp|Rückgabetyp in JDBC Driver 2.0|Rückgabetyp in JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647 (Datenbankmetadaten)|  
-|xml|1073741823|2147483647 (Datenbankmetadaten)|  
+|Xml|1073741823|2147483647 (Datenbankmetadaten)|  
 |benutzerdefinierter Typ mit weniger oder genau 8 KB|8 KB (Resultset- und Parametermetadaten)|Die tatsächliche von der gespeicherten Prozedur zurückgegebene Größe|  
 |time||Die Länge (in Zeichen) der Zeichenfolgendarstellung des Typs, wobei die maximal zulässige Genauigkeit der Komponente für Sekundenbruchteile vorausgesetzt wird.|  
 |date||entspricht "time"|  
@@ -155,11 +155,11 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  Die SQL_DATA_TYPE-Spalte wurde folgendermaßen geändert:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]2008 Datenwert in JDBC Driver 2,0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]2008 Datenwert in JDBC Driver 3,0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008-Datenwert im JDBC-Treiber 2.0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008-Datenwert im JDBC-Treiber 3.0|  
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|-10|–9|  
 |nvarchar(max)|-1|–9|  
-|xml|-10|–152|  
+|Xml|-10|–152|  
 |benutzerdefinierter Typ mit weniger oder genau 8 KB|-3|–151|  
 |benutzerdefinierter, 8 KB überschreitender Typ|Nicht verfügbar in JDBC Driver 2.0|–151|  
 |geography|–4|–151|  

@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994374"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -44,10 +44,10 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>Argumente  
  *hChapter*[in]  
- Das Kapitelhandle. Wenn das abgerufen-Objekt kein Rowsetobjekt ist oder der Vorgang nicht für ein Kapitel gilt, sollte es auf DB_NULL_HCHAPTER festgelegt werden, was vom Anbieter ignoriert wird.  
+ Das Kapitelhandle. Wenn das abgerufene Objekt kein Rowsetobjekt ist oder der Vorgang nicht für ein Kapitel gilt, sollte der Wert DB_NULL_HCHAPTER verwendet werden, der vom Anbieter nicht berücksichtigt wird.  
   
  *eOperation*[in]  
- Der Vorgang, für den der asynchrone Status angefordert wird. Der folgende Wert sollte verwendet werden:  
+ Der Vorgang, für den der asynchrone Status angefordert wird. Dieser sollte den folgenden Wert haben:  
   
  DBASYNCHOP_OPEN – Der Consumer fordert Informationen über das asynchrone Öffnen oder Auffüllen eines Rowsets oder über die asynchrone Initialisierung eines Datenquellobjekts an. Wenn der Anbieter OLE DB 2.5-kompatibel ist und die direkte URL-Bindung unterstützt, fordert der Consumer Informationen über die asynchrone Initialisierung oder Auffüllung einer Datenquelle, eines Rowsets, einer Zeile oder eines Datenstromobjekts an.  
   
@@ -62,7 +62,7 @@ HRESULT GetStatus(
  Wenn es sich bei *pulProgressMax* um einen NULL-Zeiger handelt, wird kein erwarteter maximaler Wert zurückgegeben.  
   
  *peAsynchPhase*[out]  
- Ein Zeiger auf den Arbeitsspeicher, in dem weitere Informationen zum Status des asynchronen Vorgangs zurückgegeben werden sollen. Gültige Werte sind:  
+ Ein Zeiger auf den Arbeitsspeicher, in dem weitere Informationen zum Status des asynchronen Vorgangs zurückgegeben werden sollen. Gültige Werte:  
   
  DBASYNCHPHASE_INITIALIZATION – Das Objekt befindet sich in einer Initialisierungsphase. Die Argumente *pulProgress* und *pulProgressMax* geben an, wie weit der Vorgang in etwa abgeschlossen ist. Das Objekt ist noch nicht vollständig materialisiert. Der Versuch, andere Schnittstellen aufzurufen, schlägt möglicherweise fehl, und die vollständige Gruppe von Schnittstellen ist möglicherweise für das Objekt nicht verfügbar. Wenn der asynchrone Vorgang die Folge eines Aufrufs von **ICommand::Execute** für einen Befehl zum Aktualisieren, Löschen oder Einfügen von Zeilen war und wenn *cParamSets* größer als 1 ist, zeigen *pulProgress* und *pulProgressMax* möglicherweise den Status für einen einzelnen Parametersatz oder für das gesamte Array von Parametersätzen an.  
   

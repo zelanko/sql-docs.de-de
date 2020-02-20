@@ -15,10 +15,10 @@ ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5cefdef6a787b522f7d185a67f329054ed868eb5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892812"
 ---
 # <a name="technical-reference-ssrs"></a>Technische Referenz (SSRS)
@@ -41,14 +41,14 @@ ms.locfileid: "68892812"
   
  [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Kleines Dateiordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") **Eingabeaufforderungs-Hilfsprogramme für Berichtsserver**  
+ ![Kleines Dateiordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Hilfsprogramme für die Eingabeaufforderung im Berichtsserver**  
  [Hilfsprogramm RS.exe (SSRS)](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
  [rsconfig-Hilfsprogramm (SSRS)](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
  [rskeymgmt-Hilfsprogramm &#40;SSRS&#41;](../reporting-services/tools/rskeymgmt-utility-ssrs.md)  
   
- ![Kleines Dateiordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") **Reporting Services WMI Provider-Klassenbibliothek**  
+ ![Kleines Dateiordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Klassenbibliothek für den WMI-Anbieter für Reporting Services**  
  [Reporting Services WMI Provider-Bibliotheksreferenz (SSRS)](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

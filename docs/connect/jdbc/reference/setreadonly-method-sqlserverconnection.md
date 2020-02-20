@@ -1,5 +1,5 @@
 ---
-title: ltreadonly-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: setReadOnly-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bd11fd50-f092-43a0-a6bc-c63e70cff8da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bda879ceba5c6f1193ecdfa09995e851c2bcd6e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973155"
 ---
 # <a name="setreadonly-method-sqlserverconnection"></a>setReadOnly-Methode (SQLServerConnection)
@@ -40,13 +40,13 @@ public void setReadOnly(boolean readOnly)
 #### <a name="parameters"></a>Parameter  
  *readOnly*  
   
- **true** , wenn die Verbindung schreibgeschützt sein soll. Andernfalls lautet der Wert **false**.  
+ **TRUE**, wenn die Verbindung schreibgeschützt ist. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode "ltreadonly" wird von der Methode "-Methode" in der Java. SQL. Connection-Schnittstelle angegeben.  
+ Diese setReadOnly-Methode wird von der setReadOnly-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

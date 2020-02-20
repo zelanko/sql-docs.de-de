@@ -16,10 +16,10 @@ ms.assetid: 9dcdbf69-1d47-422c-842e-0bed5afdcb93
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91cc095971d4cf4b613d1a9447ee10b6c8a65d75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981849"
 ---
 # <a name="getmetadata-method-sqlserverresultset"></a>getMetaData-Methode (SQLServerResultSet)
@@ -41,7 +41,7 @@ public java.sql.ResultSetMetaData getMetaData()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese GetMetadata-Methode wird von der GetMetadata-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
+ Diese getMetaData-Methode wird von der getMetaData-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

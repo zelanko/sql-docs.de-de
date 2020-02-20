@@ -12,10 +12,10 @@ ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5442980dd2f67cf72e301a82ae3730f90a173116
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70911326"
 ---
 # <a name="pdf-device-information-settings"></a>PDF-Geräteinformationseinstellungen
@@ -28,7 +28,7 @@ ms.locfileid: "70911326"
 |**ColumnSpacing**|Der für den Bericht gewünschte Spaltenabstand. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**DpiX**|Die Auflösung des Ausgabegeräts in x-Richtung.|  
 |**DpiY**|Die Auflösung des Ausgabegeräts in y-Richtung.|  
-|**Einbettungen**|Gibt an, ob Schriftarten in die PDF-Datei eingebettet werden, die größer ist, aber die Berichts Schriftarten werden für alle Clients ordnungsgemäß renderert. Der Wert **None** deaktiviert die Schriftart Einbettung.|  
+|**EmbedFonts**|Gibt an, ob Schriftarten in die PDF-Datei eingebettet werden, die zwar größer ist, bei der aber Berichtsschriftarten für alle Clients richtig gerendert werden. Der Wert **None** (Keine) deaktiviert die Schriftarteinbettung.|  
 |**EndPage**|Die letzte Seite des zu rendernden Berichts. Der Standardwert ist der Wert für **StartPage**.|  
 |**HumanReadablePDF**|Gibt an, ob eine nicht komprimierte PDF-Datei gerendert werden soll. Eine solche Datei ist zwar größer, aber in einem Nur-Text-Editor besser lesbar. Der Standardwert ist **false.**|  
 |**MarginBottom**|Der für den Bericht gewünschte Wert für den unteren Rand in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert gefolgt von „in“ angeben (z. B. „1in“). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
@@ -41,7 +41,7 @@ ms.locfileid: "70911326"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technische Referenz &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technische Referenz (SSRS)](../reporting-services/technical-reference-ssrs.md)  
   
   

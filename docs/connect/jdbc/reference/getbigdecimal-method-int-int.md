@@ -1,5 +1,5 @@
 ---
-title: getBigDecimal-Methode (int, int) | Microsoft-Dokumentation
+title: getBigDecimal(int, int)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: d9351b35-7046-4852-a612-72d4c46b2bbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 77fa7092b7835e400b7ced8c7dbc0368188b0eb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954006"
 ---
 # <a name="getbigdecimal-method-int-int"></a>getBigDecimal-Methode (int, int)
@@ -48,13 +48,13 @@ public java.math.BigDecimal getBigDecimal(int index,
  Ein Wert vom Typ **int**, der die Anzahl von Stellen rechts des Dezimalzeichens anzeigt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein BigDecimal-Objekt.  
+ Ein BigDecimal-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese getBigDecimal-Methode wird von der getBigDecimal-Methode in der Java. SQL. CallableStatement-Schnittstelle angegeben.  
+ Diese getBigDecimal-Methode wird von der getBigDecimal-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getBigDecimal-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

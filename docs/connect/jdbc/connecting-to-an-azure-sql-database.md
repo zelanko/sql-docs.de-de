@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit einer Azure SQL-Datenbank | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit Azure SQL-Datenbank | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155112"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank
@@ -25,14 +25,14 @@ In diesem Artikel werden Probleme behandelt, die auftreten können, wenn über d
   
 - [SQL Azure-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [How to: Connect to SQL Azure Using JDBC (Vorgehensweise: Herstellen einer Verbindung mit SQL Azure mithilfe von JDBC)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [Vorgehensweise: Herstellen einer Verbindung mit SQL Azure mithilfe von JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [Connecting using Azure Active Directory Authentication (Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung)](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>Details
 
-Beim Herstellen einer Verbindung [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]mit einem sollten Sie eine Verbindung mit der Master-Datenbank herstellen, um **SQLServerDatabaseMetaData. getkatalogen**aufzurufen.  
-Die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank wird von [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] nicht unterstützt. **SQLServerDatabaseMetaData. getkatalogen** verwendet die sys. Database-Sicht, um die Kataloge zu erhalten. Informationen zum Verhalten von **SQLServerDatabaseMetaData. getkatalogen** in einem [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]finden Sie in der Erläuterung der Berechtigungen in [sys. Database (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
+Wenn Sie eine Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]-Instanz herstellen, sollten Sie die Masterdatenbank auswählen, um **SQLServerDatabaseMetaData.getCatalogs** aufzurufen.  
+Die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank wird von [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] nicht unterstützt. **SQLServerDatabaseMetaData.getCatalogs** verwendet die Ansicht „sys.databases“, um Kataloge abzurufen. Erläuterung zum Verhalten von **SQLServerDatabaseMetaData.getCatalogs** in einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]-Instanz finden Sie im Abschnitt „Berechtigungen“ des Artikels [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
 ## <a name="connections-dropped"></a>Getrennte Verbindungen
 
@@ -46,8 +46,8 @@ Um zu vermeiden, dass Verbindungen im Leerlauf durch eineNetzwerkkomponente getr
   
 |Registrierungseinstellung|Empfohlener Wert|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ System \ CurrentControlSet \ Services \ tcpip \ Parameters \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ System \ CurrentControlSet \ Services \ tcpip \ Parameters \ keepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30.000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Starten Sie den Computer neu, damit die Registrierungseinstellungen wirksam werden.  
@@ -80,7 +80,7 @@ Vor Version 4.0 von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Einstellung „hostNameInCertificate“ zur Verwendung der Verschlüsselung erforderlich
 
-Vor der 7,2- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]Version von sollten Sie beim Herstellen einer Verbindung mit einen [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] **hostNameInCertificate** angeben, wenn Sie " **verschlüsseln = True** " angeben (wenn der Servername in der Verbindungs Zeichenfolge " *Shortname*" lautet. *Domain Name*: Legen Sie die **hostNameInCertificate** -Eigenschaft \*auf fest. *Domain Name*.). Diese Eigenschaft ist ab Version 7,2 des Treibers optional.
+Wenn Sie eine Vorgängerversion von Version 7.2 des [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwenden, sollten Sie beim Herstellen einer Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]-Instanz **hostNameInCertificate** angeben, wenn Sie **encrypt=true** angeben. Wenn der Servername in der Verbindungszeichenfolge *shortName*.*domainName* lautet, legen Sie die Eigenschaft **hostNameInCertificate** auf \*.*domainName* fest. Diese Eigenschaft ist ab Version 7.2 des Treibers optional.
 
 Beispiel:
 
@@ -88,6 +88,6 @@ Beispiel:
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Verbinden mit SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

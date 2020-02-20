@@ -1,22 +1,23 @@
 ---
-title: Erstellen und Exportieren von Machine Learning-Modellen mit MLeap in Spark
-titleSuffix: SQL Server big data clusters
+title: 'Erstellen und Exportieren von Machine Learning-Modellen von Spark: MLeap'
+titleSuffix: SQL Server Big Data Clusters
 description: Verwenden Sie PySpark, um Machine Learning-Modelle mit Spark in Big Data-Clustern auf SQL Server zu trainieren und zu erstellen. Exportieren Sie das Modell mit MLeap, und bewerten Sie es dann mit Java in SQL Server.
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc9191ad90b05e9f48facab0cc4003bbf5adce11
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844229"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255915"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Erstellen, Exportieren und Bewerten von Machine Learning-Modellen in Spark auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>Erstellen, Exportieren und Bewerten von Machine Learning-Modellen in Spark auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 Im folgenden Beispiel wird veranschaulicht, wie Sie ein Modell mit [Spark ML](https://spark.apache.org/docs/latest/ml-guide.html) erstellen, es nach [MLeap](http://mleap-docs.combust.ml/) exportieren und in SQL Server mit der [Java-Spracherweiterung](../language-extensions/language-extensions-overview.md) bewerten. Dies erfolgt im Kontext eines Big Data-Clusters in SQL Server 2019.
 

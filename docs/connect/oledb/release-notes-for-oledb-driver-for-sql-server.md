@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 350856cc27bdec601e0db2998f9ff9953cdf6ec7
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.openlocfilehash: 23c730ce0bba9003b47b777108907763d981c551
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381731"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74401535"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Anmerkungen zu dieser Version vom OLE DB-Treiber für SQL Server
 
@@ -38,17 +38,17 @@ Oktober 2019
 | Neues Feature | Details |
 | :------------ | :------ |
 | Unterstützung für die Azure Active Directory-Authentifizierung (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Verwenden von Azure Active Directory](features/using-azure-active-directory.md). |
-| Unterstützung für eingebettete Active Directory-Authentifizierungsbibliothek (Adal). | Eine separate Adal-Installation ist nicht mehr erforderlich, um bestimmte Authentifizierungsmethoden zu verwenden. |
+| Die Active Directory-Authentifizierungsbibliothek (adal.dll) wurde zum Installer hinzugefügt | Dieses Feature ist nun Teil der Installation des Basistreibers. Es sorgt dafür, dass ein Upgrade für bestehende Installationen der Microsoft Active Directory-Authentifizierungsbibliothek für SQL Server durchgeführt und die Bibliothek aus der Liste mit installierten Anwendung in Windows entfernt wird. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Behobene Probleme
 
-| Behobenes Problem | Details |
+| Behobene Fehler | Details |
 | :-------- | :------ |
-| Die Drop Index-Logik wurde in [IIndexDefinition::D ropindex](https://go.microsoft.com/fwlink/?linkid=2106448)korrigiert. | Frühere Versionen des OLE DB Treibers können keinen Primärschlüssel Index löschen, wenn die Schema-ID und die Benutzer-ID des Besitzers des Indexes nicht gleich sind. |
+| Probleme mit der DROP INDEX-Logik in [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448) wurden behoben. | Frühere Versionen des OLE DB-Treibers können keinen Primärschlüsselindex ablegen, wenn die Schema- und die Benutzer-ID des Indexbesitzers nicht gleich sind. |
 | &nbsp; | &nbsp; |
 
-## <a name="1823"></a>18.2.3
+## <a name="1823"></a>18.2.3.0
 
 Juni 2019
 
@@ -56,7 +56,7 @@ Juni 2019
 
 | Neues Feature | Details |
 | :------------ | :------ |
-| Unterstützung für Treiber Upgrades vom SQL Server Wechsel Datenträger. | Diese Verbesserung ermöglicht Treiber Upgrades direkt vom SQL Server Wechselmedium. |
+| Unterstützung für Treiberupgrades über SQL Server-Wechselmedien | Durch diese Verbesserungen können Treiberupgrades direkt über SQL Server-Wechselmedien durchgeführt werden. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -65,7 +65,7 @@ Mai 2019
 
 ### <a name="bugs-fixed"></a>Behobene Probleme
 
-| Behobenes Problem | Details |
+| Behobene Fehler | Details |
 | :-------- | :------ |
 | Die nicht interaktive Azure Active Directory-Authentifizierung im Multithread-Apartment-Modus (MTA) wurde behoben. | Der OLE DB-Treiber Version 18.2.1 versucht fälschlicherweise das COM-Parallelitätsmodell für ein Apartment zu ändern, das zuvor als Multithread-Apartment (MTA) initialisiert wurde. Daher kann der Treiber in einer Anwendung, die vor dem Aufruf der Schnittstelle [IDBInitialize::Initialize](https://go.microsoft.com/fwlink/?linkid=2092522) mehr als einen nachfolgenden Aufruf von [CoInitialize](https://go.microsoft.com/fwlink/?linkid=2092520) oder [CoInitializeEx](https://go.microsoft.com/fwlink/?linkid=2092521) durchführt, keine Verbindung herstellen, wenn ein Azure Active Directory-Authentifizierungsmodus verwendet wird. |
 | &nbsp; | &nbsp; |
@@ -90,12 +90,12 @@ Juli 2018
 
 | Neues Feature | Details |
 | :------------ | :------ |
-| Unterstützung für das Schlüsselwort der `UseFMTONLY`-Verbindungszeichenfolge sowie für die Initialisierungseigenschaft `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` steuert, wie Metadaten abgerufen wird, wenn eine Verbindung mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher hergestellt wird.<br/><br/>Weitere Informationen finden [Sie unter Verwenden von Schlüsselwörtern für Verbindungs Zeichenfolgen mit OLE DB-Treiber für SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Unterstützung für das Schlüsselwort der `UseFMTONLY`-Verbindungszeichenfolge sowie für die Initialisierungseigenschaft `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` steuert, wie Metadaten abgerufen wird, wenn eine Verbindung mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher hergestellt wird.<br/><br/>Weitere Informationen finden Sie unter [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit dem OLE DB-Treiber für SQL Server.](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Behobene Probleme
 
-| Behobenes Problem | Details |
+| Behobene Fehler | Details |
 | :-------- | :------ |
 | Die falsche Version der BCP-Formatdatei wurde korrigiert. | Der OLE DB-Treiber 18.0 legt fälschlicherweise die Version der BCP-Formatdatei auf 18.0 statt auf 11.0 fest.<br/>Die Formatdateien, die vom OLE DB-Treiber 18.0 generiert wurden, können nicht vom OLE DB-Treiber 18.1 gelesen werden.<br/>Wenn Sie mit dem neuen Treiber Formatdateien verwenden müssen, die von der vorherigen Treiberversion generiert wurden, können Sie diese Dateien manuell bearbeiten, um die Version in 11.0 zu ändern. |
 | &nbsp; | &nbsp; |
@@ -106,9 +106,9 @@ Juli 2018
 
 | Neues Feature | Details |
 | :------------ | :------ |
-| Unterstützung für das Schlüsselwort der `MultiSubnetFailover`-Verbindungszeichenfolge sowie für die Initialisierungseigenschaft `SSPROP_INIT_MULTISUBNETFAILOVER`. | Weitere Informationen finden Sie in den folgenden Themen:<br/>&bull; &nbsp; [OLE DB-Treiber für SQL Server-Unterstützung für Hochverfügbarkeit, Notfallwiederherstellung](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md),<br/>&bull; &nbsp; [Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Unterstützung für das Schlüsselwort der `MultiSubnetFailover`-Verbindungszeichenfolge sowie für die Initialisierungseigenschaft `SSPROP_INIT_MULTISUBNETFAILOVER`. | Weitere Informationen finden Sie unter<br/>&bull; &nbsp; [OLE DB-Treiber für SQL Server-Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) und<br/>&bull; &nbsp; [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit dem OLE DB-Treiber für SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Microsoft OLE DB-Treiber für SQL Server](oledb-driver-for-sql-server.md)

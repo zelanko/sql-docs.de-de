@@ -1,5 +1,5 @@
 ---
-title: API-Referenz für den sqlsrv-Treiber | Microsoft-Dokumentation
+title: API-Referenz für den SQLSRV-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3d5a6afaa4580623bade5ac6d7dd5b13a4cbdc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992778"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>API-Referenz für den SQLSRV-Treiber
@@ -25,7 +25,7 @@ Der Name der API für den SQLSRV-Treiber in der [!INCLUDE[ssDriverPHP](../../inc
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 Der SQLSRV-Treiber enthält die folgenden Funktionen:  
   
-|Funktion|und Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|beginnt eine Transaktion,|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|Verwirft eine Aussage; bricht ausstehende Ergebnisse der Aussage ab|  

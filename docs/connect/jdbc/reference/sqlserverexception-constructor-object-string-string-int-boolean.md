@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72ae0e8ed3c65a795723326d7ca49e2f5a909f18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971146"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException Constructor (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Initialisiert eine neue Instanz der [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) -Klasse, wenn ein **Objekt**, ein **Zeichen** folgen Objekt, ein **Zeichen** folgen Objekt, ein **int**-Wert und ein **boolescher**Wert angegeben werden.
+  Initialisiert eine neue Instanz der [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)-Klasse, wenn ein **Objekt**, ein **string**-Objekt, ein **string**-Objekt, ein **int**-Wert und ein **boolescher** Wert vorhanden sind.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -41,23 +41,23 @@ public SQLServerException(java.lang.Object obj,
 #### <a name="parameters"></a>Parameter  
  *obj*  
   
- Der IO-Puffer, der die Ausnahme generiert hat.
+ Der E/A-Puffer, der die Ausnahme generiert hat
 
  *errText*  
   
- Eine Zeichenfolge, die den Fehlertext enthält.
+ Eine Zeichenfolge, die den Fehlertext enthält
   
  *sqlState*  
   
- Ein Enumeration-Objekt, das den SQL-Zustand enthält.
+ Ein Enumerationsobjekt, das den SQL-Zustand enthält
  
  *errNum*  
   
- Ein int-Wert, der den Fehlercode für die Ausnahme enthält.
+ Ein int-Wert, der den Fehlercode für die Ausnahme enthält
  
  *bStack*  
   
- Ein boolescher Wert, der angibt, ob die Stapel Überwachung generiert werden soll.
+ Ein boolescher Wert, der angibt, ob die Stapelüberwachung generiert werden soll
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerException-Konstruktoren](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

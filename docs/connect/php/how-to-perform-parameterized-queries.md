@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ausführen von parametrisierten Abfragen | Microsoft-Dokumentation'
+title: 'Gewusst wie: Ausführen von parametrisierten Abfragen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993502"
 ---
-# <a name="how-to-perform-parameterized-queries"></a>Vorgehensweise: Ausführen von parametrisierten Abfragen
+# <a name="how-to-perform-parameterized-queries"></a>Gewusst wie: Ausführen parametrisierter Abfragen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Dieses Thema fasst zusammen und veranschaulicht, wie die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] verwendet werden, um eine parametrisierte Abfrage auszuführen.  
@@ -31,7 +31,7 @@ Die Schritte zur Durchführung einer parametrisierten Abfrage können in vier Sc
   
 2.  Initialisieren oder aktualisieren Sie PHP-Variablen, die den Platzhaltern in der Transact-SQL-Abfrage entsprechen.  
   
-3.  Verwenden Sie die PHP-Variablen aus Schritt 2, um ein Array von Parameterwerten zu erstellen oder zu aktualisieren, das den Parameterplatzhaltern in der Transact-SQL-Zeichenfolge entspricht. Die Parameterwerte im Array müssen in derselben Reihenfolge vorliegen wie die Platzhalter, die Sie darstellen sollen.
+3.  Verwenden Sie die PHP-Variablen aus Schritt 2, um ein Array von Parameterwerten zu erstellen oder zu aktualisieren, das den Parameterplatzhaltern in der Transact-SQL-Zeichenfolge entspricht. Die Parameterwerte im Array müssen in derselben Reihenfolge angeordnet sein wie ihre Platzhalter.
   
 4.  Führen Sie die Abfrage aus:  
   
@@ -49,7 +49,7 @@ Das folgende Beispiel aktualisiert die Menge für eine angegebene Produkt-ID in 
   
 Das Beispiel fragt dann die Datenbank ab, um sicherzustellen, dass die Menge korrekt aktualisiert wurde. Die Produkt-ID ist ein Parameter in der SELECT-Abfrage.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  

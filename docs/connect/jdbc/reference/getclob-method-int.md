@@ -1,5 +1,5 @@
 ---
-title: getClob-Methode (int) | Microsoft-Dokumentation
+title: getClob(int)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 34858e03-5b93-40b1-bf21-13ad7cc7a55e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8c2a617bb0494529254b54d81b0572f13d8b597e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953048"
 ---
 # <a name="getclob-method-int"></a>getClob-Methode (int)
@@ -40,7 +40,7 @@ public java.sql.Clob getClob(int index)
  Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Clob-Objekt.  
+ Ein CLOB-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
