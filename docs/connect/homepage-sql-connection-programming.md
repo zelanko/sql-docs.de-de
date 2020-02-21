@@ -1,6 +1,6 @@
 ---
-title: Startseite für die SQL-Client Programmierung | Microsoft-Dokumentation
-description: Eine Hub-Seite mit mit Anmerkungen versehene Links zu Downloads und Dokumentation für zahlreiche Kombinationen von Sprachen und Betriebssystemen für die Verbindung mit SQL Server oder Azure SQL-Datenbank.
+title: Homepage für die SQL-Clientprogrammierung | Microsoft-Dokumentation
+description: Hubseite mit kommentierten Links zu Downloads und Dokumentationsmaterial zum Herstellen einer Verbindung mit SQL Server oder Azure SQL-Datenbank für zahlreiche Kombinationen aus Sprachen und Betriebssystemen.
 author: MightyPen
 ms.date: 11/07/2018
 ms.prod: sql
@@ -10,58 +10,58 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
-ms.openlocfilehash: 6961f8c23b4acfd787958cc9a160faf88362b54c
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+ms.openlocfilehash: 145ca5c64223e4d16b327e4caf23458a479b87a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451849"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74491912"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Startseite für die Clientprogrammierung in Microsoft SQL Server
 
 
-Willkommen bei unserer Homepage zur Client Programmierung für die Interaktion mit Microsoft SQL Server und Azure SQL-Datenbank in der Cloud. Dieser Artikel bietet die folgenden Informationen:
+Willkommen auf unserer Homepage für die Clientprogrammierung zum Interagieren mit Microsoft SQL Server und Azure SQL-Datenbank in der Cloud. Dieser Artikel bietet die folgenden Informationen:
 
-- Listet die verfügbaren Kombinationen aus Sprache und Treiber auf und beschreibt diese.
-    - Informationen werden für die Betriebssysteme von Linux (Ubuntu und andere), MacOS und Windows angegeben.
-- Enthält Links zu der detaillierten Dokumentation für jede Kombination.
-- Zeigt die Bereiche und Unterbereiche der hierarchischen Dokumentation für bestimmte Sprachen an, wenn dies angebracht ist.
-
-
-#### <a name="azure-sql-database"></a>Azure SQL-Datenbank
-
-In jeder beliebigen Sprache ist der Code, der eine Verbindung mit SQL Server herstellt, fast identisch mit dem Code für die Verbindung mit Azure SQL-Datenbank.
-
-Ausführliche Informationen zu den Verbindungs Zeichenfolgen für das Herstellen einer Verbindung mit Azure SQL-Datenbank finden Sie unter:
-
-- [Verwenden Sie .net CoreC#(), um eine Azure SQL-Datenbank abzufragen](/azure/sql-database/sql-database-connect-query-dotnet-core).
-- Weitere Azure SQL-Datenbanken, die sich in der Nähe des vorangehenden Artikels im Inhaltsverzeichnis befinden, zu anderen Sprachen. Informationen zum Beispiel finden [Sie unter Verwenden von PHP zum Abfragen einer Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php).
+- Die verfügbaren Kombinationen aus Sprache und Treiber werden aufgeführt und beschrieben.
+    - Es werden Informationen zu den Betriebssystemen von Linux (Ubuntu und weitere), macOS und Windows bereitgestellt.
+- Der Artikel stellt Links zur detaillierten Dokumentation für jede Kombination bereit.
+- Die über- und untergeordneten Bereiche der hierarchischen Dokumentation für bestimmte Sprachen werden angezeigt, sofern vorhanden.
 
 
-#### <a name="build-an-app-webpages"></a>Build-an-App-Webseiten
+#### <a name="azure-sql-database"></a>Azure SQL-Datenbank
 
-Unsere Webseiten von *Build-a-app* enthalten Codebeispiele sowie Konfigurationsinformationen in einem alternativen Format. Weitere Informationen finden Sie weiter unten in diesem Artikel im [Abschnitt mit der Bezeichnung *Build-an-App-Website*](#an-204-aka-ms-sqldev).
+In allen Sprachen ist der Code, mit dem eine Verbindung mit SQL Server hergestellt wird, nahezu identisch mit dem Code zum Herstellen einer Verbindung mit Azure SQL-Datenbank.
+
+Details zu den Verbindungszeichenfolgen zum Herstellen einer Verbindung mit Azure SQL-Datenbank finden Sie hier:
+
+- [Abfragen einer Azure SQL-Datenbank mithilfe von .NET Core (C#)](/azure/sql-database/sql-database-connect-query-dotnet-core).
+- Weitere Artikel zu Vorgängen für Azure SQL-Datenbank mit anderen Sprachen, die sich im Inhaltsverzeichnis in der Nähe des oben genannten Artikels befinden. Beispiel: [Abfragen einer Azure SQL-Datenbank mithilfe von PHP](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php).
+
+
+#### <a name="build-an-app-webpages"></a>Webseiten zum Erstellen einer App
+
+Unsere Webseiten zum *Erstellen einer App* enthalten Codebeispiele sowie Konfigurationsinformationen in einem alternativen Format. Weitere Informationen finden Sie weiter unten in diesem Artikel im [Abschnitt *Website zum Erstellen einer App*](#an-204-aka-ms-sqldev).
 
 
 
 <a name="an-050-languages-clients" />
 
-## <a name="languages-and-drivers-for-client-programs"></a>Sprachen und Treiber für Client Programme
+## <a name="languages-and-drivers-for-client-programs"></a>Sprachen und Treiber für Clientprogramme
 
 
-In der folgenden Tabelle ist jedes sprach Image ein Link zu Details zur Verwendung der Sprache mit SQL Server. Jeder Link springt zu einem späteren Abschnitt in diesem Artikel.
+In der folgenden Tabelle enthält jedes Bild einer Sprache einen Link zu weiteren Informationen zur Verwendung der Sprache mit SQL Server. Jeder Link führt zu einem Abschnitt weiter unten in diesem Artikel.
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp; [![C# Logo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM Entity Framework von .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java-Logo][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node. js-Logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP Logo][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp; [![Python-Logo][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby Logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp; [![C#-Logo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM Entity Framework von .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java-Logo][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![Node.js-Logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP-Logo][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Python-Logo][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby-Logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
 #### <a name="downloads-and-installs"></a>Downloads und Installationen
 
-Der folgende Artikel dient zum herunterladen und Installieren verschiedener SQL-Verbindungs Treiber für die Verwendung durch Programmiersprachen:
+Der folgende Artikel beschreibt den Download und die Installation verschiedener SQL-Treiber zum Herstellen von Verbindungen, zur Verwendung mit verschiedenen Programmiersprachen:
 
 - [SQL Server-Treiber](sql-server-drivers.md)
 
@@ -69,27 +69,27 @@ Der folgende Artikel dient zum herunterladen und Installieren verschiedener SQL-
 
 <a name="an-110-ado-net-docu" />
 
-## <a name="c-logoimage-ref-320-csharp-c-using-adonet"></a>![C#Logo][image-ref-320-csharp] C#Verwenden von ADO.net
+## <a name="c-logoimage-ref-320-csharp-c-using-adonet"></a>![C#-Logo][image-ref-320-csharp] C# unter Verwendung von ADO.NET
 
-Die verwalteten .net C# -Sprachen, wie z. b. und Visual Basic, sind die gängigsten Benutzer von ADO.net. *ADO.net* ist ein zufälliger Name für eine Teilmenge von .NET Framework-Klassen.
+Die .NET-verwalteten Sprachen wie C# und Visual Basic sind die häufigsten Einsatzgebiete von ADO.NET. *ADO.NET* ist ein informeller Name für eine Teilmenge von .NET Framework-Klassen.
 
 #### <a name="code-examples"></a>Codebeispiele
 
 |||
 | :-- | :-- |
-| [Proof of concept connecting to SQL using ADO.NET (Proof of Concept für Verbindungen mit SQL mithilfe von ADO.NET)](./ado-net/step-3-connect-sql-ado-net.md) | Ein kleines Codebeispiel konzentriert sich auf das verbinden und Abfragen von SQL Server. |
-| [Connect resiliently to SQL with ADO.NET (Herstellen stabiler SQL-Verbindungen mit ADO.NET)](./ado-net/step-4-connect-resiliently-sql-ado-net.md) | Wiederholungs Logik in einem Codebeispiel, da bei Verbindungen gelegentlich Verbindungs Verluste auftreten können.<br /><br />Die Wiederholungs Logik gilt auch für Verbindungen, die über das Internet in beliebige clouddatenbanken wie Azure SQL-Datenbank verwaltet werden. |
-| [Azure SQL-Datenbank: Demonstration der Verwendung von .net Core unter Windows/Linux/macOS zum Erstellen eines C# Programms, zum Herstellen einer Verbindung und Abfragen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Beispiel für eine Azure SQL-Datenbank. |
-| [Build-an-App: C#, ADO.net, Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | Konfigurationsinformationen, zusammen mit Codebeispielen. |
+| [Proof of concept connecting to SQL using ADO.NET (Proof of Concept für Verbindungen mit SQL mithilfe von ADO.NET)](./ado-net/step-3-connect-sql-ado-net.md) | Ein kleines Codebeispiel zum Herstellen einer Verbindung mit und Abfragen von SQL Server. |
+| [Connect resiliently to SQL with ADO.NET (Herstellen stabiler SQL-Verbindungen mit ADO.NET)](./ado-net/step-4-connect-resiliently-sql-ado-net.md) | Wiederholungslogik in einem Codebeispiel, da bei Verbindungen gelegentlich kurze Unterbrechungen auftreten können.<br /><br />Die Wiederholungslogik lässt sich gut auf Verbindungen mit Clouddatenbanken über das Internet anwenden, beispielsweise mit Azure SQL-Datenbank. |
+| [Azure SQL-Datenbank: Demonstration zur Verwendung von .NET Core unter Windows/Linux/macOS zum Erstellen eines C#-Programms zum Herstellen einer Verbindung und Abfragen von Datenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Beispiel für Azure SQL-Datenbank. |
+| [Erstellen einer App: C#, ADO.NET, Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | Konfigurationsinformationen sowie Codebeispiele. |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>Dokumentation
 
 |||
 | :-- | :-- |
-| [C#Verwenden von ADO.net](./ado-net/index.md)| Der Stamm der Dokumentation. |
-| [Namespace: System. Data](https://docs.microsoft.com/dotnet/api/system.data) | Eine Reihe von Klassen, die für ADO.NET verwendet werden. |
-| [Namespace: System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.SqlClient) | Der Satz von Klassen, die am meisten direkt den Mittelpunkt von ADO.net haben. |
+| [C# unter Verwendung von ADO.NET](./ado-net/index.md)| Hauptseite unserer Dokumentation. |
+| [Namespace: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | Eine Reihe von Klassen, die für ADO.NET verwendet werden. |
+| [Namespace: Microsoft.Data.SqlClient](https://docs.microsoft.com/dotnet/api/microsoft.data.SqlClient) | Die Klassen, die für den Microsoft-.NET-Datenanbieter für SQL Server verwendet werden. |
 | &nbsp; | <br /> |
 
 
@@ -98,31 +98,31 @@ Die verwalteten .net C# -Sprachen, wie z. b. und Visual Basic, sind die gängigs
 
 ## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Entity Framework-Logo][image-ref-333-ef] Entity Framework (EF) mit C&#x23;
 
-Entity Framework (EF) stellt eine Objekt relationale Zuordnung (ORM) bereit. ORM vereinfacht den OOP-Quellcode (Object-Oriented Programming) zum Bearbeiten von Daten, die aus einer relationalen SQL-Datenbank abgerufen wurden.
+Das Entity Framework (EF) stellt eine objektrelationale Zuordnung (Object-Relational Mapping, ORM) bereit. Mit dieser Zuordnung kann Quellcode, der in einer objektorientierten Programmiersprache (Object-Oriented Programming, OOP) geschrieben wurde, aus einer relationalen SQL-Datenbank abgerufene Daten leichter ändern.
 
-EF hat direkte oder indirekte Beziehungen zu den folgenden Technologien:
+Das EF verfügt über direkte oder indirekte Beziehungen zu den folgenden Technologien:
 
 - .NET Framework
-- [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)oder [LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- Verbesserungen der Sprachsyntax, z. b C#. der **=>** Operator in.
-- Praktische Programme, die Quellcode für Klassen generieren, die den Tabellen in der SQL-Datenbank zugeordnet sind. Beispielsweise " [EdmGen. exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)".
+- [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/) oder [LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
+- Erweiterungen der Sprachsyntax, wie z. B. der **=>** -Operator in C#.
+- Praktische Programme, die Quellcode für Klassen generieren, die sich den Tabellen in Ihrer SQL-Datenbank zuordnen lassen. Beispiel: [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 
 #### <a name="original-ef-and-new-ef"></a>Ursprüngliches EF und neues EF
 
-Die [Startseite für Entity Framework](https://docs.microsoft.com/ef/) führt EF mit einer Beschreibung ein, die der folgenden ähnelt:
+Die [Startseite für das Entity Framework](https://docs.microsoft.com/ef/) bietet eine Einführung in das mit folgender Beschreibung:
 
-- Entity Framework ist eine Objekt relationale Zuordnung (Object-Relational Mapper, O/RM), die .NET-Entwicklern die Arbeit mit einer Datenbank mithilfe von .NET-Objekten ermöglicht. Dadurch entfällt der größte Teil des Datenzugriffs Quellcodes, den Entwickler in der Regel schreiben müssen.
+- Das Entity Framework (EF) ist eine objektrelationale Zuordnung (Object-Relational Mapper, O/RM), die .NET-Entwicklern mithilfe von .NET-Objekten das Arbeiten mit einer Datenbank ermöglicht. Im EF ist der Großteil des Datenzugriffscodes, den Entwickler in der Regel schreiben müssen, nicht mehr erforderlich.
 
-*Entity Framework* ist ein Name, der von zwei separaten Quell Code Verzweigungen gemeinsam verwendet wird. Eine EF-Verzweigung ist älter, und ihr Quellcode kann nun von der öffentlichen verwaltet werden. Der andere EF ist neu. Die beiden EFS werden im folgenden beschrieben:
+*Entity Framework* ist der Name zweier separater Quellcodeversionen. Eine der beiden Versionen ist älter, und der zugehörige Quellcode kann jetzt öffentlich verwaltet werden. Das andere EF ist neu. Im Folgenden werden die beiden Frameworks beschrieben:
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft hat zuerst EF im August 2008 veröffentlicht. Im März 2015 hat Microsoft angekündigt, dass EF 6. x die endgültige Version ist, die Microsoft entwickeln würde. Microsoft hat den Quellcode in der öffentlichen Domäne veröffentlicht.<br /><br />Zunächst war EF Teil .NET Framework. EF 6. x wurde jedoch aus .NET Framework entfernt.<br /><br />[EF 6. x-Quellcode auf GitHub im Repository *ASPNET/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
-| [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft hat die neu entwickelte EF Core im Juni 2016 veröffentlicht. EF Core ist für eine bessere Flexibilität und Portabilität konzipiert. EF Core können auf Betriebssystemen außerhalb von Microsoft Windows ausgeführt werden. Und EF Core können über Microsoft SQL Server und andere relationale Datenbanken hinaus mit Datenbanken interagieren.<br /><br />**C&#x23; -Codebeispiele:**<br />[Erste Schritte mit Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Die ersten Schritte mit EF Core auf .NET Framework mit einer vorhandenen Datenbank](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft brachte das EF im August 2008 heraus. Im März 2015 kündigte Microsoft an, dass EF 6.x die letzte von Microsoft entwickelte Version sei. Microsoft stellte den Quellcode für die Öffentlichkeit zur Verfügung.<br /><br />Ursprünglich war das EF Teil von .NET Framework. EF 6.x wurde jedoch aus .NET Framework herausgelöst.<br /><br />[EF 6.x-Quellcode auf GitHub im Repository *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
+| [EF Core](https://docs.microsoft.com/ef/core/) | Im Juni 2016 veröffentlichte Microsoft das neu entwickelte EF Core. EF Core wurde im Hinblick auf mehr Flexibilität und Portierbarkeit konzipiert. EF Core kann auf anderen Betriebssystemen als Microsoft Windows ausgeführt werden. Und EF Core kann mit Datenbanken über Microsoft SQL Server und andere relationale Datenbanken hinaus interagieren.<br /><br />**C&#x23;-Codebeispiele:**<br />[Erste Schritte mit Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Erste Schritte mit EF Core auf .NET Framework mit einer vorhandenen Datenbank](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
-EF und verwandte Technologien sind leistungsstark und für den Entwickler, der den gesamten Bereich beherrschen möchte, sehr viel zu erlernen.
+EF und verwandte Technologien sind ausgesprochen leistungsstark, und Entwickler, die den gesamten Themenbereich beherrschen möchten, müssen viel lernen.
 
 &nbsp;
 
@@ -132,47 +132,47 @@ EF und verwandte Technologien sind leistungsstark und für den Entwickler, der d
 
 ## <a name="java-logoimage-ref-330-java-java-and-jdbc"></a>![Java-Logo][image-ref-330-java] Java und JDBC
 
-Microsoft stellt einen JDBC-Treiber (Java Database Connectivity) für die Verwendung mit SQL Server (oder mit Azure SQL-Datenbank) bereit. Dabei handelt es sich um einen JDBC-Treiber vom Typ 4, der über die Standardanwendungsprogrammierschnittstellen für JDBC Database Connectivity zur Verfügung stellt.
+Microsoft stellt einen JDBC-Treiber (Java Database Connectivity) für die Verwendung mit SQL Server (oder natürlich Azure SQL-Datenbank) bereit. Dabei handelt es sich um einen JDBC-Treiber vom Typ 4, der über die Standardanwendungsprogrammierschnittstellen für JDBC Database Connectivity zur Verfügung stellt.
 
 #### <a name="code-examples"></a>Codebeispiele
 
 |||
 | :-- | :-- |
-| [Codebeispiele](./jdbc/code-samples/index.md) | Code Beispiele, die Informationen zu Datentypen, Resultsets und großen Datenmengen vermitteln. |
-| [Verbindungs-URL – Beispiel](./jdbc/connection-url-sample.md) | Beschreibt die Verwendung einer Verbindungs-URL zum Herstellen einer Verbindung mit SQL Server. Verwenden Sie diese dann, um eine SQL-Anweisung zum Abrufen von Daten zu verwenden. |
-| [Beispiel für Datenquellen](./jdbc/data-source-sample.md) | Beschreibt, wie eine Datenquelle verwendet wird, um eine Verbindung mit SQL Server herzustellen. Verwenden Sie dann eine gespeicherte Prozedur, um Daten abzurufen. |
-| [Abfragen einer Azure SQL-Datenbank mithilfe von Java](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Beispiel für eine Azure SQL-Datenbank. |
-| [Erstellen von Java-Apps mithilfe von SQL Server unter Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | Konfigurationsinformationen, zusammen mit Codebeispielen. |
+| [Codebeispiele](./jdbc/code-samples/index.md) | Codebeispiele, die Informationen zu Datentypen, Resultsets und umfangreichen Datenmengen vermitteln. |
+| [Verbindungs-URL – Beispiel](./jdbc/connection-url-sample.md) | Beschreibt die Verwendung einer Verbindungs-URL zum Herstellen einer Verbindung mit SQL Server. Hierbei verwenden Sie eine SQL-Anweisung zum Abrufen von Daten. |
+| [Beispiel für Datenquellen](./jdbc/data-source-sample.md) | Beschreibt die Verwendung einer Datenquelle zum Herstellen einer Verbindung mit SQL Server. Hierbei verwenden Sie eine gespeicherte Prozedur zum Abrufen von Daten. |
+| [Abfragen einer Azure SQL-Datenbank mithilfe von Java](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Beispiel für Azure SQL-Datenbank. |
+| [Erstellen von Java-Apps mithilfe von SQL Server unter Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | Konfigurationsinformationen sowie Codebeispiele. |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>Dokumentation
 
-Die JDBC-Dokumentation enthält die folgenden Hauptbereiche:
+Die JDBC-Dokumentation umfasst die folgenden Hauptthemen:
 
 |||
 | :-- | :-- |
-| [Java Database Connectivity (JDBC)](./jdbc/index.md) | Stamm der JDBC-Dokumentation. |
+| [Java Database Connectivity (JDBC)](./jdbc/index.md) | Hauptseite unserer JDBC-Dokumentation. |
 | [Referenz](./jdbc/reference/index.md) | Schnittstellen, Klassen und Member. |
-| [Programmierhandbuch für den JDBC-SQL-Treiber](./jdbc/programming-guide-for-jdbc-sql-driver.md) | Konfigurationsinformationen, zusammen mit Codebeispielen. |
+| [Programmierhandbuch für den JDBC-SQL-Treiber](./jdbc/programming-guide-for-jdbc-sql-driver.md) | Konfigurationsinformationen sowie Codebeispiele. |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-140-node-js-docu" />
 
-## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Node. js-Logo][image-ref-340-node] Node.js
+## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Node.js-Logo][image-ref-340-node] Node.js
 
-Mit Node. js können Sie eine Verbindung mit SQL Server von Windows, Linux oder Mac herstellen. Der Stamm der Node. js-Dokumentation finden Sie [hier](./node-js/index.md).
+Mithilfe von Node.js können Sie unter Windows, Linux oder Mac eine Verbindung mit SQL Server herstellen. Die Hauptseite unserer Node.js-Dokumentation befindet sich [hier](./node-js/index.md).
 
-Der Node. js-Verbindungs Treiber für SQL Server wird in JavaScript implementiert. Der Treiber verwendet das TDS-Protokoll, das von allen modernen Versionen von SQL Server unterstützt wird. Der Treiber ist ein Open Source-Projekt, das [auf GitHub verfügbar](https://tediousjs.github.io/tedious/)ist.
+Der Node.js-Verbindungstreiber für SQL Server ist in JavaScript implementiert. Der Treiber verwendet das TDS-Protokoll, das von allen modernen SQL Server-Versionen unterstützt wird. Der Treiber ist ein Open Source-Projekt und [auf GitHub verfügbar](https://tediousjs.github.io/tedious/).
 
 #### <a name="code-examples"></a>Codebeispiele
 
 |||
 | :-- | :-- |
-| [Proof of concept connecting to SQL using Node.js (Proof of Concept für Verbindungen mit SQL mithilfe von Node.js)](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | Der Quellcode für das Herstellen einer Verbindung mit SQL Server und das Ausführen einer Abfrage. |
-| [Azure SQL-Datenbank: Verwenden von Node. js zum Abfragen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | Beispiel für Azure SQL-Datenbank in der Cloud. |
-| [Erstellen von Node. js-Apps für die Verwendung von SQL Server unter macOS](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) | Konfigurationsinformationen, zusammen mit Codebeispielen. |
+| [Proof of concept connecting to SQL using Node.js (Proof of Concept für Verbindungen mit SQL mithilfe von Node.js)](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | Reiner Quellcode zum Herstellen einer Verbindung mit SQL Server und Ausführen einer Abfrage. |
+| [Azure SQL-Datenbank: Verwenden von Node.js zum Abfragen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | Beispiel für Azure SQL-Datenbank in der Cloud. |
+| [Erstellen von Node.js-Apps zur Verwendung von SQL Server unter macOS](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) | Konfigurationsinformationen sowie Codebeispiele. |
 | &nbsp; | <br /> |
 
 
@@ -183,34 +183,34 @@ Der Node. js-Verbindungs Treiber für SQL Server wird in JavaScript implementier
 
 ![ODBC-Logo][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
-ODBC (Open Database Connectivity) wurde in den 90er Jahren entwickelt, und es werden .NET Framework vorausgeht. ODBC ist unabhängig von einem bestimmten Datenbanksystem und unabhängig vom Betriebssystem.
+ODBC (Open Database Connectivity) wurde in den 90er-Jahren entwickelt, noch vor .NET Framework. ODBC ist sowohl vom Datenbanksystem als auch vom Betriebssystem unabhängig.
 
-Im Laufe der Jahre wurden zahlreiche ODBC-Treiber von Gruppen innerhalb und außerhalb von Microsoft erstellt und freigegeben. Der Bereich der Treiber umfasst mehrere Client Programmiersprachen. Die Liste der Datenziele geht weit über die SQL Server hinaus.
+Im Lauf der Jahre wurde von verschiedenen Gruppen innerhalb und außerhalb von Microsoft eine Vielzahl von ODBC-Treibern entwickelt. In diese Treiber sind verschiedene Clientprogrammiersprachen involviert. Die Liste der Datenziele geht weit über SQL Server hinaus.
 
-Einige andere konnektivitätstreiber verwenden ODBC intern.
+Einige andere Konnektivitätstreiber verwenden intern ODBC.
 
 #### <a name="code-example"></a>Codebeispiel
 
 - [C++-Codebeispiel unter Verwendung von ODBC](../odbc/reference/sample-odbc-program.md)
 
-#### <a name="documentation-outline"></a>Dokumentations Gliederung
+#### <a name="documentation-outline"></a>Übersicht über die Dokumentation
 
-Der ODBC-Inhalt in diesem Abschnitt konzentriert sich auf den Zugriff auf SQL Server oder Azure SQL C++-Datenbank, von. In der folgenden Tabelle wird ein ungefähre Umriss der Haupt Dokumentation für ODBC aufgelistet.
+Bei den ODBC-Inhalten in diesem Abschnitt geht es hauptsächlich um den Zugriff auf SQL Server oder Azure SQL-Datenbank über C++. In der folgenden Tabelle finden Sie eine allgemeine Übersicht über die wichtigsten Dokumentationsmaterialien für ODBC.
 
 
-| Bereich | Unterbereich | und Beschreibung |
+| Bereich | Unterbereich | Beschreibung |
 | :--- | :------ | :---------- |
-| [ODBC für C++](./odbc/index.md) | Der Stamm der Dokumentation. |
-| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Informationen zur Verwendung von ODBC unter den Linux-oder MacOS-Betriebssystemen. |
-| [Windows](./odbc/windows/index.md)     | &nbsp; | Informationen zur Verwendung von ODBC unter dem Windows-Betriebssystem. |
-| [Verwaltung](../odbc/admin/index.md) | &nbsp; | Das Verwaltungs Tool zum Verwalten von ODBC-Datenquellen. |
+| [ODBC für C++](./odbc/index.md) | Hauptseite unserer Dokumentation. |
+| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Informationen zur Verwendung von ODBC auf den Linux- oder MacOS-Betriebssystemen. |
+| [Windows](./odbc/windows/index.md)     | &nbsp; | Informationen zur Verwendung von ODBC auf den Windows-Betriebssystemen. |
+| [Verwaltung](../odbc/admin/index.md) | &nbsp; | Das Tool zur Verwaltung von ODBC-Datenquellen. |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Verschiedene ODBC-Treiber, die von Microsoft erstellt und bereitgestellt werden. |
-| [Konzeptionell und Verweis](../odbc/reference/index.md) | &nbsp; | Konzeptionelle Informationen zur ODBC-Schnittstelle, zusätzlich zur herkömmlichen Referenz. |
-| &nbsp; " | [Anhänge](../odbc/reference/appendixes/index.md)    | Zustands Übergangs Tabellen, ODBC-Cursor Bibliothek und mehr. |
-| &nbsp; " | [Entwickeln der APP](../odbc/reference/develop-app/index.md)  | Funktionen, Handles und vieles mehr. |
-| &nbsp; " | [Entwickeln von Treibern](../odbc/reference/develop-driver/index.md) | Erfahren Sie, wie Sie einen eigenen ODBC-Treiber entwickeln, wenn Sie über eine spezialisierte Datenquelle verfügen. |
-| &nbsp; " | [Installieren](../odbc/reference/install/index.md) | ODBC-Installation, Unterschlüssel und mehr. |
-| &nbsp; " | [Syntax](../odbc/reference/syntax/index.md)   | APIs für Setup, Installer, Übersetzung und Datenzugriff. |
+| [Konzepte und Referenzen](../odbc/reference/index.md) | &nbsp; | Konzeptionelle Informationen zur ODBC-Schnittstelle sowie herkömmliche Referenzmaterialien. |
+| &nbsp; " | [Anhänge](../odbc/reference/appendixes/index.md)    | Tabellen für Statusübergänge, ODBC-Cursorbibliothek und vieles mehr. |
+| &nbsp; " | [Entwickeln von Apps](../odbc/reference/develop-app/index.md)  | Funktionen, Handles und vieles mehr. |
+| &nbsp; " | [Entwickeln von Treibern](../odbc/reference/develop-driver/index.md) | Informationen zum Entwickeln eigener ODBC-Treiber, wenn eine spezialisierte Datenquelle vorhanden ist. |
+| &nbsp; " | [Installieren](../odbc/reference/install/index.md) | ODBC-Installation, Unterschlüssel und vieles mehr. |
+| &nbsp; " | [Syntax](../odbc/reference/syntax/index.md)   | APIs für Setup, Installationsprogramm, Übersetzung und Datenzugriff. |
 | &nbsp; | &nbsp; | <br /> |
 
 
@@ -219,16 +219,16 @@ Der ODBC-Inhalt in diesem Abschnitt konzentriert sich auf den Zugriff auf SQL Se
 
 ## <a name="php-logoimage-ref-360-php-php"></a>![PHP-Logo][image-ref-360-php] PHP
 
-Sie können PHP verwenden, um mit SQL Server zu interagieren. Den Stamm der PHP-Dokumentation finden Sie [hier](./php/index.md).
+Sie können PHP für die Interaktion mit SQL Server verwenden. Die Hauptseite unserer PHP-Dokumentation befindet sich [hier](./php/index.md).
 
 #### <a name="code-examples"></a>Codebeispiele
 
 |||
 | :-- | :-- |
-| [Proof of concept connecting to SQL using PHP (Proof of Concept für Verbindungen mit SQL mithilfe von PHP)](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | Ein kleines Codebeispiel konzentriert sich auf das verbinden und Abfragen von SQL Server. |
-| [Connect resiliently to SQL with PHP (Herstellen stabiler SQL-Verbindungen mit PHP)](./php/step-4-connect-resiliently-to-sql-with-php.md) | Wiederholungs Logik in einem Codebeispiel, da bei Verbindungen über das Internet und die Cloud gelegentlich Zeit-und konnektivitätsverluste auftreten können. |
-| [Azure SQL-Datenbank: Verwenden von PHP zum Abfragen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Beispiel für eine Azure SQL-Datenbank. |
-| [Erstellen von PHP-Apps für die Verwendung von SQL Server für RHEL](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | Konfigurationsinformationen, zusammen mit Codebeispielen. |
+| [Proof of concept connecting to SQL using PHP (Proof of Concept für Verbindungen mit SQL mithilfe von PHP)](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | Ein kleines Codebeispiel zum Herstellen einer Verbindung mit und Abfragen von SQL Server. |
+| [Connect resiliently to SQL with PHP (Herstellen stabiler SQL-Verbindungen mit PHP)](./php/step-4-connect-resiliently-to-sql-with-php.md) | Wiederholungslogik in einem Codebeispiel, da bei Verbindungen über das Internet und die Cloud gelegentlich kurze Unterbrechungen auftreten können. |
+| [Azure SQL-Datenbank: Verwenden von PHP für Abfragen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Beispiel für Azure SQL-Datenbank. |
+| [Erstellen von PHP-Apps zur Verwendung von SQL Server unter RHEL](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | Konfigurationsinformationen sowie Codebeispiele. |
 | &nbsp; | <br /> |
 
 
@@ -238,24 +238,24 @@ Sie können PHP verwenden, um mit SQL Server zu interagieren. Den Stamm der PHP-
 ## <a name="python-logoimage-ref-370-python-python"></a>![Python-Logo][image-ref-370-python] Python
 
 
-Sie können python verwenden, um mit SQL Server zu interagieren.
+Sie können Python für die Interaktion mit SQL Server verwenden.
 
 #### <a name="code-examples"></a>Codebeispiele
 
 |||
 | :-- | :-- |
-| [Proof of Concept für das Herstellen einer Verbindung mit SQL mit python mithilfe von pyodbc](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | Ein kleines Codebeispiel konzentriert sich auf das verbinden und Abfragen von SQL Server. |
-| [Azure SQL-Datenbank: Verwenden von python zum Abfragen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Beispiel für eine Azure SQL-Datenbank. |
-| [Erstellen von PHP-Apps für die Verwendung von SQL Server in SLES](https://www.microsoft.com/sql-server/developer-get-started/python/sles/) | Konfigurationsinformationen, zusammen mit Codebeispielen. |
+| [Proof of Concept für Verbindungen mit SQL mithilfe von Python: pyodbc](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | Ein kleines Codebeispiel zum Herstellen einer Verbindung mit und Abfragen von SQL Server. |
+| [Azure SQL-Datenbank: Verwenden von Python für Abfragen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Beispiel für Azure SQL-Datenbank. |
+| [Erstellen von PHPs-Apps zur Verwendung von SQL Server unter SLES](https://www.microsoft.com/sql-server/developer-get-started/python/sles/) | Konfigurationsinformationen sowie Codebeispiele. |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>Dokumentation
 
-| Bereich | und Beschreibung |
+| Bereich | Beschreibung |
 | :--- | :---------- |
-| [Python zu SQL Server](./python/index.md) | Der Stamm der Dokumentation. |
-| [pymssql-Treiber](./python/pymssql/index.md) | Microsoft verwaltet oder testet den pymssql-Treiber nicht.<br /><br />Der pymssql-Verbindungs Treiber ist eine einfache Schnittstelle zu SQL-Datenbanken, die in Python-Programmen verwendet werden können. Pymssql baut auf freetds auf, um eine Python DB-API-Schnittstelle (PEP-249) für Microsoft SQL Server bereitzustellen. |
-| [pyodbc-Treiber](./python/pyodbc/index.md)   | Der pyodbc-Verbindungs Treiber ist ein Open-Source-Python-Modul, das den Zugriff auf ODBC-Datenbanken vereinfacht. Es implementiert die Spezifikation der DB-API 2,0, bietet jedoch noch mehr Pythonic-Unterstützung. |
+| [Python für SQL Server](./python/index.md) | Hauptseite unserer Dokumentation. |
+| [pymssql-Treiber](./python/pymssql/index.md) | Microsoft wartet und testet den pymssql-Treiber nicht.<br /><br />Der pymssql-Verbindungstreiber ist eine einfache Schnittstelle für SQL-Datenbanken, die in Python-Programmen verwendet wird. pymssql setzt auf FreeTDS auf, um eine Python-Datenbank-API-Schnittstelle (PEP-249) zu Microsoft SQL Server bereitzustellen. |
+| [pyodbc-Treiber](./python/pyodbc/index.md)   | Der pyodbc-Verbindungstreiber ist ein Open Source-Python-Modul, das den Zugriff auf ODBC-Datenbanken vereinfacht. Er implementiert die DB API 2.0-Spezifikation und enthält darüber hinaus viele weitere Python-bezogene praktische Funktionen. |
 | &nbsp; | <br /> |
 
 
@@ -263,94 +263,94 @@ Sie können python verwenden, um mit SQL Server zu interagieren.
 
 ## <a name="ruby-logoimage-ref-380-ruby-ruby"></a>![Ruby-Logo][image-ref-380-ruby] Ruby
 
-Sie können Ruby verwenden, um mit SQL Server zu interagieren. Das Stammverzeichnis unserer Ruby-Dokumentation finden Sie [hier](./ruby/index.md).
+Sie können Ruby für die Interaktion mit SQL Server verwenden. Die Hauptseite unserer Ruby-Dokumentation befindet sich [hier](./ruby/index.md).
 
 #### <a name="code-examples"></a>Codebeispiele
 
 |||
 | :-- | :-- |
-| [Proof of Concept für Verbindungen mit SQL mithilfe von PHP](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | Ein kleines Codebeispiel konzentriert sich auf das verbinden und Abfragen von SQL Server. |
-| [Azure SQL-Datenbank: Verwenden von Ruby zum Abfragen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Beispiel für eine Azure SQL-Datenbank. |
-| [Erstellen von Ruby-Apps für die Verwendung von SQL Server unter MacOS](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | Konfigurationsinformationen, zusammen mit Codebeispielen. |
+| [Proof of Concept für Verbindungen mit SQL mithilfe von PHP](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | Ein kleines Codebeispiel zum Herstellen einer Verbindung mit und Abfragen von SQL Server. |
+| [Azure SQL-Datenbank: Verwenden von Ruby für Abfragen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Beispiel für Azure SQL-Datenbank. |
+| [Erstellen von Ruby-Apps zur Verwendung von SQL Server unter macOS](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | Konfigurationsinformationen sowie Codebeispiele. |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-204-aka-ms-sqldev" />
 
-## <a name="build-an-app-website-for-sql-client-developmenthttpswwwmicrosoftcomsql-serverdeveloper-get-started"></a>[Build-an-App-Website für die SQL-Client Entwicklung](https://www.microsoft.com/sql-server/developer-get-started/)
+## <a name="build-an-app-website-for-sql-client-development"></a>[Website zum Erstellen einer App – für die SQL-Cliententwicklung](https://www.microsoft.com/sql-server/developer-get-started/)
 
 
-Auf unseren Webseiten [*Build-an-App*](https://www.microsoft.com/sql-server/developer-get-started/) können Sie aus einer langen Liste von Programmiersprachen auswählen, um eine Verbindung mit SQL Server herzustellen. Und das Client Programm kann eine Vielzahl von Betriebssystemen ausführen.
+Auf unseren Webseiten zum [*Erstellen einer App*](https://www.microsoft.com/sql-server/developer-get-started/) können Sie aus zahlreichen Programmiersprachen zum Herstellen einer Verbindung mit SQL Server auswählen. Ihr Clientprogramm kann unter einer Vielzahl von Betriebssystemen ausgeführt werden.
 
-*Build-a-app* betont Einfachheit und Vollständigkeit für den Entwickler, der gerade erst gestartet wird. In den folgenden Schritten werden die folgenden Aufgaben erläutert:
+Bei *Erstellen einer App* liegt der Fokus auf Einfachheit und Vollständigkeit – für Entwickler, die noch nicht über sehr viel Erfahrung verfügen. Die Schritte erläutern die folgenden Aufgaben:
 
 1. Installieren von Microsoft SQL Server
-2. Hier erfahren Sie, wie Sie Tools und Treiber herunterladen und installieren.
-3. So nehmen Sie ggf. erforderliche Konfigurationen für Ihr ausgewähltes Betriebssystem vor.
-4. Kompilieren des bereitgestellten Quellcodes.
+2. Herunterladen und Installieren von Tools und Treibern
+3. Durchführen von erforderlichen Konfigurationen für das von Ihnen ausgewählte Betriebssystem
+4. Kompilieren des bereitgestellten Quellcodes
 5. Ausführen des Programms.
 
-Im nächsten Abschnitt werden einige ungefähre Details der auf der Website bereitgestellten Details aufgeführt:
+Im Folgenden finden Sie eine Übersicht über die auf der Website bereitgestellten Informationen:
 
 #### <a name="java-on-ubuntu"></a>Java unter Ubuntu:
 
 1. Einrichten Ihrer Umgebung
     - Schritt 1.1: Installieren von SQL Server
-    - Schritt 1,2 Installieren von Java
-    - Schritt 1,3 Installieren des Java Development Kit (JDK)
-    - Schritt 1,4 Installieren von Maven
+    - Schritt 1.2: Installieren von Java
+    - Schritt 1.3: Installieren des Java Development Kit (JDK)
+    - Schritt 1.4: Installieren von Maven
 2. Erstellen einer Java-Anwendung mit SQL Server
-    - Schritt 2,1 Erstellen einer Java-App, die eine Verbindung mit SQL Server herstellt und Abfragen ausführt
-    - Schritt 2,2 Erstellen einer Java-App, die eine Verbindung zu SQL Server mithilfe des beliebten Framework-Ruhe Zustands herstellt
-3. Machen Sie Ihre Java-App bis zu 100-mal schneller
-    - Schritt 3,1 Erstellen einer Java-App zur Veranschaulichung von columnstore-Indizes
+    - Schritt 2.1: Erstellen einer Java-App, die eine Verbindung mit SQL Server herstellt und Abfragen ausführt
+    - Schritt 2.2: Erstellen einer Java-App, die über das beliebte Framework Hibernate eine Verbindung mit SQL Server herstellt
+3. Beschleunigen Ihrer Java-App auf die bis zu 100-fache Geschwindigkeit
+    - Schritt 3.1: Erstellen einer Java-App zum Veranschaulichen von Columnstore-Indizes
 
 #### <a name="python-on-windows"></a>Python unter Windows:
 
 1. Einrichten Ihrer Umgebung
     - Schritt 1.1: Installieren von SQL Server
-    - Schritt 1,2 Installieren von python
-    - Schritt 1,3 installieren Sie den ODBC-Treiber und das SQL-Befehlszeilen-Hilfsprogramm für SQL Server
-2. Erstellen einer python-Anwendung mit SQL Server
-    - Schritt 2,1 Installieren des python-Treibers für SQL Server
-    - Schritt 2,2 Erstellen einer Datenbank für Ihre Anwendung
-    - Schritt 2,3 Erstellen einer python-APP, die eine Verbindung mit SQL Server herstellt und Abfragen ausführt
-3. Machen Sie Ihre python-app bis zu 100-mal schneller
-    - Schritt 3,1 Erstellen einer neuen Tabelle mit 5 Millionen mithilfe von "sqlcmd"
-    - Schritt 3,2 Erstellen Sie eine python-APP, die diese Tabelle abfragt und die benötigte Zeit misst.
-    - Schritt 3,3 Messen, wie lange die Abfrage ausgeführt wird
-    - Schritt 3,4 fügen Sie der Tabelle einen columnstore--Index hinzu.
-    - Schritt 3,5 Messen, wie lange es dauert, bis die Abfrage mit einem columnstore--Index ausgeführt wird
+    - Schritt 1.2: Installieren von Python
+    - Schritt 1.3 Installieren des ODBC-Treibers und des SQL-Befehlszeilen-Hilfsprogramms für SQL Server
+2. Erstellen einer Python-Anwendung mit SQL Server
+    - Schritt 2.1: Installieren des Python-Treibers für SQL Server
+    - Schritt 2.2: Erstellen einer Datenbank für Ihre Anwendung
+    - Schritt 2.3: Erstellen einer Python-App, die eine Verbindung mit SQL Server herstellt und Abfragen ausführt
+3. Beschleunigen Ihrer Python-App auf die bis zu 100-fache Geschwindigkeit
+    - Schritt 3.1: Erstellen einer neuen Tabelle mit 5 Millionen Zeilen mithilfe von sqlcmd
+    - Schritt 3.2: Erstellen einer Python-App, die diese Tabelle abfragt und die benötigte Zeit misst
+    - Schritt 3.3: Messen, wie lange die Ausführung der Abfrage dauert
+    - Schritt 3.4: Hinzufügen eines Columnstore-Indexes zur Tabelle
+    - Schritt 3.5: Messen, wie lange die Ausführung der Abfrage mit einem Columnstore-Index dauert
 
-Die folgenden Screenshots zeigen Ihnen, wie die Website zur SQL-Entwicklungsdokumentation aussieht.
+Die folgenden Screenshot zeigen, wie unsere Website mit der Dokumentation für die SQL-Entwicklung aussieht.
 
 #### <a name="choose-a-language"></a>Wählen Sie eine Sprache aus:
 
-![SQL dev-Website, Einstieg][image-ref-390-aka-ms-sqldev-choose-language]
+![Website für die SQL-Entwicklung, erste Schritte][image-ref-390-aka-ms-sqldev-choose-language]
 
 &nbsp;
 
-#### <a name="choose-an-operating-system"></a>Auswählen eines Betriebssystems:
+#### <a name="choose-an-operating-system"></a>Wählen Sie ein Betriebssystem aus:
 
-![SQL dev-Website, Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
+![Website für die SQL-Entwicklung, Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
 
 &nbsp;
 
 
 
-## <a name="other-development"></a>Andere Entwicklung
+## <a name="other-development"></a>Weitere Entwicklungsoptionen
 
 
-Dieser Abschnitt enthält Links zu anderen Entwicklungsoptionen. Dazu gehört die Verwendung derselben Sprachen für die Azure-Entwicklung im Allgemeinen. Die Informationen gehen über die Zielsetzung der Azure SQL-Datenbank und der Microsoft SQL Server hinaus.
+Dieser Abschnitt enthält Links zu anderen Entwicklungsoptionen. Diese umfassen dieselben Sprachen für die allgemeine Azure-Entwicklung. Diese Informationen gehen über die Entwicklung für Azure SQL-Datenbank und Microsoft SQL Server hinaus.
 
-#### <a name="developer-hub-for-azure"></a>Developer Hub für Azure
+#### <a name="developer-hub-for-azure"></a>Entwicklerhub für Azure
 
-- [Developer Hub für Azure](https://docs.microsoft.com/azure/)
+- [Entwicklerhub für Azure](https://docs.microsoft.com/azure/)
 - [Azure für .NET-Entwickler](https://docs.microsoft.com/dotnet/azure/)
 - [Azure für Java-Entwickler](https://docs.microsoft.com/java/azure/)
-- [Azure für Node. js-Entwickler](https://docs.microsoft.com/nodejs/azure/)
-- [Azure für python-Entwickler](https://docs.microsoft.com/python/azure/)
+- [Azure für Node.js-Entwickler](https://docs.microsoft.com/nodejs/azure/)
+- [Azure für Python-Entwickler](https://docs.microsoft.com/python/azure/)
 - [Erstellen einer PHP-Web-App in Azure](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
 
 #### <a name="other-languages"></a>Andere Sprachen

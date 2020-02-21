@@ -9,16 +9,16 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570856"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Konzepte von Reporting Services (SSRS)
-  Dieses Thema bietet eine kurze Einführung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konzepte.  
+  In diesem Artikel werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Konzepte zusammengefasst.  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | SharePoint-Modus von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
+ **[!INCLUDE[applies](../includes/applies-md.md)]Gilt für:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (einheitlicher Modus) | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SharePoint-Modus)   
   
 ##  <a name="bkmk_ReportServerConcepts"></a> Berichtsserverkonzepte  
  Ein Berichtsserver ist ein Computer, auf dem eine Instanz von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installiert ist. Ein Berichtsserver speichert intern Elemente, wie z.B. paginierte und mobile Berichte, berichtsbezogene Elemente und Ressourcen, Zeitpläne und Abonnements. Ein Berichtsserver kann als eigenständiger einzelner Server oder als skalierbare Farm konfiguriert werden, oder er kann in SharePoint Server integriert werden. Sie interagieren durch den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Webdienst, WMI-Anbieter, URL-Zugriff oder programmgesteuert durch Skripts mit Berichtsserverelementen. Die Art und Weise, in der Sie mit einem Berichtsserver interagieren, hängt von der Bereitstellungstopologie und der Konfiguration ab.  
@@ -186,7 +186,7 @@ Sie erstellen mobile Reporting Services-Berichte (RSMOBILE-Dateien) im Publisher
 ##  <a name="bkmk_StagesofReports"></a> Phasen von paginierten Reporting Services-Berichten  
  Eine Berichtsdefinition kann erstellt, veröffentlicht oder gespeichert, kompiliert, verarbeitet, zwischengespeichert, gerendert, angezeigt, exportiert und als Verlauf gespeichert werden. Wenn Sie einen Bericht ausführen, verarbeitet der Berichtsserver den Bericht in drei Schritten. Zu diesen Schritten gehört die Berichtsverarbeitung, die Datenverarbeitung und das Rendering. Daten- und Berichtsverarbeitung werden in einer Berichtsdefinition ausgeführt. Die Ergebnisse liegen in einem internen Zwischenformat vor. Berichte im Zwischenformat werden nachfolgend in einem bestimmten Anzeigeformat gerendert. Das folgende Diagramm zeigt die Phasen und Elemente der Berichtsverarbeitung.  
   
- ![Abbildung der Berichtsverarbeitung](../reporting-services/media/report-execution.gif "report processing diagram")  
+ ![report processing diagram](../reporting-services/media/report-execution.gif "Diagramm für die Berichtsverarbeitung")  
 Diagramm für die Berichtsverarbeitung  
   
 ### <a name="report-definition"></a>Berichtsdefinition  
@@ -210,7 +210,7 @@ Diagramm für die Berichtsverarbeitung
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Funktionen und -Tasks &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
- [Technische Referenz &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
+ [Technische Referenz (SSRS)](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

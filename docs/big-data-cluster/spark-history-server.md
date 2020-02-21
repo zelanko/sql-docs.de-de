@@ -1,22 +1,23 @@
 ---
 title: Debuggen und Diagnostizieren von Spark-Anwendungen
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Verwenden Sie Spark History Server, um Spark-Anwendungen zu debuggen und zu diagnostizieren, die auf Big Data-Clustern unter [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ausgeführt werden.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dd35de4111c5e18d8c8237e2935df5de458f19b1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: d81732079ddc549bb7a04abad938fc551eeed84a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706111"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243936"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Debuggen und Diagnostizieren von Spark-Anwendungen in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Spark History Server
+# <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Debuggen und Diagnostizieren von Spark-Anwendungen in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Spark History Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -163,9 +164,9 @@ Wählen Sie die Auftrags-ID aus, und klicken Sie im Toolmenü auf **Diagnosis** 
 ### <a name="data-skew"></a>Datenschiefe
 Klicken Sie auf die Registerkarte **Data Skew** (Datenschiefe). Dann werden basierend auf den angegebenen Parametern die entsprechenden schiefen Aufträge angezeigt. 
 
-+ **Specify Parameters** (Parameter angeben): Im ersten Abschnitt werden die Parameter angezeigt, die zum Erkennen der Datenschiefe verwendet werden. Es gilt die folgende Regel: Die gelesenen Auftragsdaten sind dreimal so groß wie der durchschnittliche Auftrag zum Lesen von Daten und größer als 10 MB. Wenn Sie eine eigene Regel für Aufträge mit Datenschiefe definieren möchten, können Sie Ihre Parameter und die **Skewed Stage** (Phase mit Datenschiefe) auswählen. Dann wird der Abschnitt **Skew Chart** (Diagramm zur Datenschiefe) entsprechend aktualisiert. 
++ **Parameter festlegen:** Im ersten Abschnitt werden die Parameter angezeigt, die zum Erkennen von Datenschiefe verwendet werden. Es gilt die folgende Regel: Task-Datenlesevorgänge > 3 durchschnittliche Task-Datenlesevorgänge und Task-Datenlesevorgänge > 10 MB. Wenn Sie eine eigene Regel für Aufträge mit Datenschiefe definieren möchten, können Sie Ihre Parameter und die **Skewed Stage** (Phase mit Datenschiefe) auswählen. Dann wird der Abschnitt **Skew Chart** (Diagramm zur Datenschiefe) entsprechend aktualisiert. 
 
-+ **Skewed Stage** (Phase mit Datenschiefe): Im zweiten Abschnitt werden Phasen mit schiefen Aufträgen angezeigt, die die oben angegebenen Kriterien erfüllen. Wenn in einer Stufe mehr als ein schiefer Auftrag vorhanden ist, werden in der Tabelle mit den schiefen Aufträgen nur die schiefsten Aufträge angezeigt (z. B. der größte Datensatz für die Datenschiefe). 
++ **Schiefe Phase:** Im zweiten Abschnitt werden die Phasen angezeigt, die Aufgaben mit Abweichungen entsprechend den oben angegebenen Kriterien enthalten. Wenn in einer Stufe mehr als ein schiefer Auftrag vorhanden ist, werden in der Tabelle mit den schiefen Aufträgen nur die schiefsten Aufträge angezeigt (z. B. der größte Datensatz für die Datenschiefe). 
 
     ![Abschnitt 2: Datenschiefe](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
@@ -176,7 +177,7 @@ Klicken Sie auf die Registerkarte **Data Skew** (Datenschiefe). Dann werden basi
 ### <a name="time-skew"></a>Zeitabweichung
 Auf der Registerkarte **Time Skew** (Zeitabweichung) werden schiefe Aufträge basierend auf ihrer Ausführungszeit angezeigt. 
 
-+ **Specify Parameters** (Parameter angeben): Im ersten Abschnitt werden die Parameter angezeigt, die zum Erkennen der Zeitabweichung verwendet werden. Die Standardkriterien zum Erkennen einer Zeitabweichung lauten: die Auftragsausführungszeit ist dreimal so lang wie die durchschnittliche Ausführungszeit und länger als 30 Sekunden. Sie können die Parameter Ihren Anforderungen entsprechend anpassen. Unter **Skewed Stage** (Phase mit Datenschiefe) und **Skew Chart** (Diagramm zur Datenschiefe) werden wie auf der obenstehenden Registerkarte **Data Skew** (Datenschiefe) die Informationen zu den einzelnen Phasen und Aufträgen angezeigt.
++ **Parameter festlegen:** Im ersten Abschnitt werden die Parameter angezeigt, die zum Erkennen der Zeitabweichung verwendet werden. Die Standardkriterien zum Erkennen von Zeitabweichungen sind: Ausführungszeit der Aufgabe > 3-mal durchschnittliche Ausführungszeit und Ausführungszeit der Aufgabe > 30 Sekunden. Sie können die Parameter Ihren Anforderungen entsprechend anpassen. Unter **Skewed Stage** (Phase mit Datenschiefe) und **Skew Chart** (Diagramm zur Datenschiefe) werden wie auf der obenstehenden Registerkarte **Data Skew** (Datenschiefe) die Informationen zu den einzelnen Phasen und Aufträgen angezeigt.
 
 + Klicken Sie auf **Time Skew** (Zeitabweichung). Dann werden im Abschnitt **Skewed Stage** (Phase mit Datenschiefe) entsprechend den im Abschnitt **Specify Parameters** (Parameter angeben) festgelegten Parametern die gefilterten Ergebnisse angezeigt. Klicken Sie im Abschnitt **Skewed Stage** (Phase mit Datenschiefe) auf ein Element. Dann wird in Abschnitt 3 ein Entwurf des entsprechenden Diagramms angezeigt, und die Auftragsdetails finden Sie im unteren Bereich auf der rechten Seite.
 

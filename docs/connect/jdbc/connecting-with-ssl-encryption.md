@@ -11,10 +11,10 @@ ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cff4228404690147d97a44f6f5dd43b1a180153c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71713292"
 ---
 # <a name="connecting-with-encryption"></a>Herstellen von Verbindungen mit einer Verschlüsselung
@@ -35,7 +35,7 @@ String connectionUrl =
   
  Wenn die Eigenschaften **encrypt** und **trustServerCertificate** auf **FALSE** festgelegt sind, wird von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Überprüfung des TLS-Zertifikats für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt. Das Überprüfen des Serverzertifikats ist Teil des TLS-Handshakes und stellt sicher, dass es sich bei dem Server tatsächlich um den Server handelt, mit dem eine Verbindung hergestellt werden soll. Zum Überprüfen des Serverzertifikats müssen die Vertrauensinformationen zur Verbindungszeit explizit mithilfe der **trustStore**-Verbindungseigenschaft und der **trustStorePassword**-Verbindungseigenschaft oder implizit mithilfe des Standardvertrauensspeichers der zugrunde liegenden Java Virtual Machine (JVM) übermittelt werden.  
   
- Die **trustStore**-Eigenschaft gibt den Pfad (einschließlich des Dateinamens) der trustStore-Zertifikatsdatei an. Diese enthält die Liste der Zertifikate, denen der Client vertraut. Die **trustStorePassword**-Eigenschaft gibt das Kennwort an, das verwendet wird, um die Integrität der trustStore-Daten zu überprüfen. Weitere Informationen zur Verwendung des Standard Vertrauens Speicher der JVM finden Sie unter [Konfigurieren des Clients für die Verschlüsselung](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
+ Die **trustStore**-Eigenschaft gibt den Pfad (einschließlich des Dateinamens) der trustStore-Zertifikatsdatei an. Diese enthält die Liste der Zertifikate, denen der Client vertraut. Die **trustStorePassword**-Eigenschaft gibt das Kennwort an, das verwendet wird, um die Integrität der trustStore-Daten zu überprüfen. Weitere Informationen zur Verwendung des Standardvertrauensspeichers von JVM finden Sie unter [Konfigurieren des Clients für die Verschlüsselung](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
   
  Im folgenden Codebeispiel wird das Festlegen der **trustStore**-Eigenschaft und der **trustStorePassword**-Eigenschaft in einer Verbindungszeichenfolge veranschaulicht:  
   
@@ -63,8 +63,8 @@ String connectionUrl =
 > [!NOTE]  
 >  Sie können den Wert von Verbindungseigenschaften auch mithilfe der entsprechenden **Setter**-Methoden festlegen, die von der [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)-Klasse bereitgestellt werden.  
   
- Wenn die Eigenschaft **verschlüsseln** auf **true** festgelegt ist und die **TrustServerCertificate** -Eigenschaft auf **false** festgelegt ist und der Servername in der Verbindungs Zeichenfolge nicht mit dem Servernamen im TLS-Zertifikat identisch ist, wird der folgende Fehler angezeigt: ausgestellt: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. Ab Version 7,2 unterstützt der Treiber die Zuordnung von Platzhalter Mustern in der äußersten linken Bezeichnung des Server namens im TLS-Zertifikat.
+ Wenn die **encrypt**-Eigenschaft auf **TRUE** und die **trustServerCertificate**-Eigenschaft auf **FALSE** festgelegt ist, und der Servername in der Verbindungszeichenfolge nicht dem Servernamen im TLS-Zertifikat entspricht, wird der folgende Fehler ausgegeben: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. Ab Version 7.2 unterstützt der Treiber die Zuordnung von Platzhaltermustern in der ganz links stehenden Bezeichnung des Servernamens im TLS-Zertifikat.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
- [Verwenden der Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md) [Sichern von JDBC-Treiber Anwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)
+ [Verwenden von Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md) [Schützen von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)
