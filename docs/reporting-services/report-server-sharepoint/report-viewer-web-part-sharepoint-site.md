@@ -1,22 +1,22 @@
 ---
 title: Berichts-Viewer-Webpart auf einer SharePoint-Website (SSRS) | Microsoft-Dokumentation
-ms.date: 11/15/2018
+ms.date: 02/11/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 882dafee6997f4e0a140872847cfa2fdc1109f05
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2ec6a87467f2ec69164827e0a1ce76ad95180377
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580568"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256807"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>Berichts-Viewer-Webpart auf einer SharePoint-Website – Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 Das Berichts-Viewer-Webpart ist ein benutzerdefiniertes Webpart. Mit diesem Webpart können Sie Berichte auf einem Berichtsserver auf einer SharePoint-Website abrufen und drucken. Sie können die Berichte außerdem exportieren und in ihnen navigieren. Das Berichts-Viewer-Webpart ist Berichtsdefinitionsdateien (RDL-Dateien) zugeordnet, die von einem Microsoft SQL Server Reporting Services-Berichtsserver verarbeitet werden. 
 

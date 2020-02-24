@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a2a3258dfa0fbb234cf4f888e4ae98f27c215993
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 570ac300f8f522d0ea4acfb711d78bd7cfaf7ef2
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67988520"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146290"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Konfigurieren von Sicherungen auf sekundären Replikaten von Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie die Sicherung auf sekundären Replikaten für eine AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]konfiguriert wird.  
   
 > [!NOTE]  
->  Eine Einführung in die Sicherung auf sekundären Replikaten finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)konfiguriert wird.  
+>  Eine Einführung in die Sicherung auf sekundären Replikaten finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ##  <a name="Prerequisites"></a> Voraussetzungen  
  Sie müssen mit der Serverinstanz verbunden sein, die das primäre Replikat hostet.  
@@ -72,7 +72,7 @@ ms.locfileid: "67988520"
      Gibt an, dass Sicherungsaufträge die Rolle der Verfügbarkeitsreplikate ignorieren sollen, wenn sie das Replikat zum Durchführen der Sicherungen auswählen. Sicherungsaufträge können andere Faktoren auswerten, wie z. B. die Sicherungspriorität jedes Verfügbarkeitsreplikats in Verbindung mit seinem Betriebszustand und Verbindungsstatus.  
   
     > [!IMPORTANT]  
-    >  Die Voreinstellung für die automatisierte Sicherung wird nicht erzwungen. Die Interpretation dieser Voreinstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer bestimmten Verfügbarkeitsgruppe eingefügt haben. Die Voreinstellung für die automatisierte Sicherung hat keine Auswirkungen auf Ad-hoc-Sicherungen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten](#FollowUp) .  
+    >  Die Voreinstellung für die automatisierte Sicherung wird nicht erzwungen. Die Interpretation dieser Voreinstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer bestimmten Verfügbarkeitsgruppe eingefügt haben. Die Voreinstellung für die automatisierte Sicherung hat keine Auswirkungen auf Ad-hoc-Sicherungen. Weitere Informationen finden Sie in diesem Artikel unter [Nächster Schritt: After Configuring Backup on Secondary Replicas (Nächste Schritte: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten)](#FollowUp)  
   
 6.  Verwenden Sie das Raster **Replikatssicherungsprioritäten** , um die Sicherungspriorität der Verfügbarkeitsreplikate zu ändern. Dieses Raster enthält die aktuelle Sicherungspriorität aller Serverinstanzen, die ein Replikat für die Verfügbarkeitsgruppe hosten. Es gibt folgende Rasterspalten:  
   
@@ -140,7 +140,7 @@ ms.locfileid: "67988520"
      Gibt an, dass Sicherungsaufträge die Rolle der Verfügbarkeitsreplikate ignorieren sollen, wenn sie das Replikat zum Durchführen der Sicherungen auswählen. Hinweis: Sicherungsaufträge können andere Faktoren auswerten, wie z. B. die Sicherungspriorität jedes Verfügbarkeitsreplikats in Verbindung mit seinem Betriebszustand und Verbindungsstatus.  
   
     > [!IMPORTANT]  
-    >  **AutomatedBackupPreference**wird nicht erzwungen. Die Interpretation dieser Voreinstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer bestimmten Verfügbarkeitsgruppe eingefügt haben. Die Voreinstellung für die automatisierte Sicherung hat keine Auswirkungen auf Ad-hoc-Sicherungen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten](#FollowUp) .  
+    >  **AutomatedBackupPreference**wird nicht erzwungen. Die Interpretation dieser Voreinstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer bestimmten Verfügbarkeitsgruppe eingefügt haben. Die Voreinstellung für die automatisierte Sicherung hat keine Auswirkungen auf Ad-hoc-Sicherungen. Weitere Informationen finden Sie in diesem Artikel unter [Nächster Schritt: After Configuring Backup on Secondary Replicas (Nächste Schritte: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten)](#FollowUp)  
   
      Beispielsweise legt der folgende Befehl die **AutomatedBackupPreference** -Eigenschaft der Verfügbarkeitsgruppe `MyAg` auf **SecondaryOnly**fest. Automatisierte Sicherungen der Datenbanken in dieser Verfügbarkeitsgruppe treten nie auf dem primären Replikat auf, sondern werden an das sekundäre Replikat mit der höchsten Sicherungspriorität umgeleitet.  
   
@@ -159,14 +159,14 @@ ms.locfileid: "67988520"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten  
  Damit die automatisierte Sicherungseinstellung für eine angegebene Verfügbarkeitsgruppe berücksichtigt wird, müssen Sie auf jeder Serverinstanz, die ein Verfügbarkeitsreplikat hostet, dessen Sicherungspriorität größer als Null (>0) ist, Sicherungsauftragsskripts für die Datenbanken in der Verfügbarkeitsgruppe erstellen. Um zu bestimmen, ob das aktuelle Replikat das bevorzugte Sicherungsreplikat ist, verwenden Sie die [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) -Funktion in Ihrem Sicherungsskript. Wenn das Verfügbarkeitsreplikat, das von der aktuellen Serverinstanz gehostet wird, das bevorzugte Replikat für die Sicherungen ist, wird von dieser Funktion "1" zurückgegeben. Wenn dies nicht zutrifft, wird von der Funktion "0" zurückgegeben. Indem Sie auf jedem Verfügbarkeitsreplikat, von dem diese Funktion abgefragt wird, ein einfaches Skript ausführen, können Sie bestimmen, von welchem Replikat ein bestimmter Sicherungsauftrag ausgeführt werden sollte. Ein typischer Ausschnitt eines Sicherungsauftragsskripts würde z. B. so aussehen:  
   
-```  
+```sql  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
       Select 'This is not the preferred replica, exiting with success';  
-      RETURN 0 - This is a normal, expected condition, so the script returns success  
+      RETURN 0 -- This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -191,10 +191,10 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten (Always On-Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

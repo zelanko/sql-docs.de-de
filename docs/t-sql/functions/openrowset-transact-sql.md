@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1a134e6792eedca184c74b7973d4cb267b104b
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910143"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074458"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -75,13 +75,23 @@ OPENROWSET
 
 ## <a name="arguments"></a>Argumente
 
-„*provider_name*“ ist eine Zeichenfolge für den Anzeigenamen (oder die ProgID) des OLE DB-Anbieters, wie er in der Registrierung angegeben wurde. *provider_name* verfügt nicht über einen Standardwert.
+### <a name="provider_name"></a>'*provider_name*'
+Eine Zeichenfolge für den Anzeigenamen (oder die PROGID) des OLE DB-Anbieters, wie er in der Registrierung angegeben wurde. *provider_name* verfügt nicht über einen Standardwert.
 
 „*datasource*“ ist eine Zeichenfolgenkonstante, die einer bestimmten OLE DB-Datenquelle entspricht. *datasource* ist die DBPROP_INIT_DATASOURCE-Eigenschaft, die zum Initialisieren des Anbieters an die IDBProperties-Schnittstelle des Anbieters übergeben werden muss. Normalerweise enthält diese Zeichenfolge den Namen der Datenbankdatei, den Namen des Datenbankservers oder einen Namen, mit dem der Anbieter die Datenbank(en) suchen kann.
 
 „*user_id*“ ist eine Zeichenfolgenkonstante für den Benutzernamen, der an den angegebenen OLE DB-Anbieter übergeben wird. *user_id* gibt den Sicherheitskontext für die Verbindung an und wird als DBPROP_AUTH_USERID-Eigenschaft übergeben, um den Anbieter zu initialisieren. *user_id* darf keine Anmelde-ID von Microsoft Windows sein.
 
 „*password*“ ist eine Zeichenfolgenkonstante für das Benutzerkennwort, das an den OLE DB-Anbieter übergeben wird. *password* wird beim Initialisieren des Anbieters als DBPROP_AUTH_PASSWORD-Eigenschaft übergeben. *password* darf kein Microsoft Windows-Kennwort sein.
+
+```sql
+SELECT a.*
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+                   'C:\SAMPLES\Northwind.mdb';
+                   'admin';
+                   'password',
+                   Customers) AS a;
+```
 
 „*provider_string*“ ist eine anbieterspezifische Verbindungszeichenfolge, die als DBPROP_INIT_PROVIDERSTRING-Eigenschaft übergeben wird, um den OLE DB-Anbieter zu initialisieren. *provider_string* kapselt normalerweise alle zum Initialisieren des Anbieters benötigten Verbindungsinformationen. Eine Liste der Schlüsselwörter, die vom OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client erkannt werden, finden Sie unter [Initialization and Authorization Properties (Initialisierungs- und Autorisierungseigenschaften)](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).
 
@@ -91,9 +101,23 @@ OPENROWSET
 
 „*object*“ ist der Objektname, der das zu verwendende Objekt eindeutig identifiziert.
 
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS a;
+```
+
 „*query*“ ist eine Zeichenfolgenkonstante, die zum Anbieter geschickt und von ihm ausgeführt wird. Die lokale Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verarbeitet nicht diese Abfrage, sondern die vom Anbieter zurückgegebenen Abfrageergebnisse (eine Pass-Through-Abfrage). Pass-Through-Abfragen eignen sich bei Anbietern, die ihre Tabellendaten nicht über Tabellennamen verfügbar machen, sondern nur über eine Befehlssprache. Pass-Through-Abfragen werden auf dem Remoteserver unterstützt, wenn der Abfrageanbieter das Command-Objekt von OLE DB und die dafür notwendigen Schnittstellen unterstützt. Weitere Informationen finden Sie unter [SQL Server Native Client &#40;OLE DB&#41; Reference (Verweis für SQL Server Native Client &#40;OLE DB&#41;)](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).
 
-„BULK“ verwendet den BULK-Rowsetanbieter für OPENROWSET, um Daten aus einer Datei zu lesen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann OPENROWSET aus einer Datendatei lesen, ohne die Daten in eine Zieltabelle zu laden. Auf diese Weise können Sie OPENROWSET mit einer einfachen SELECT-Anweisung verwenden.
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+     'SELECT TOP 10 GroupName, Name
+     FROM AdventureWorks2012.HumanResources.Department') AS a;
+```
+
+### <a name="bulk"></a>BULK
+Verwendet den BULK-Rowsetanbieter für OPENROWSET, um Daten aus einer Datei zu lesen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann OPENROWSET aus einer Datendatei lesen, ohne die Daten in eine Zieltabelle zu laden. Auf diese Weise können Sie OPENROWSET mit einer einfachen SELECT-Anweisung verwenden.
 
 > [!IMPORTANT]
 > Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
@@ -181,10 +205,23 @@ Wenn *data_file* als ASCII gelesen wird, wird der Inhalt als einzeiliges, einspa
 
 „SINGLE_NCLOB“ gibt den Inhalt als einzeiliges, einspaltiges Rowset vom Typ **nvarchar(max)** zurück, indem es *data_file* als UNICODE liest, wobei die Sortierung der aktuellen Datenbank verwendet wird.
 
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
 ### <a name="input-file-format-options"></a>Formatoptionen der Eingabedatei
 
 FORMAT **=** 'CSV' **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Gibt eine CSV-Datei an, die dem Standard [RFC 4180](https://tools.ietf.org/html/rfc4180) entspricht.
+
+```sql
+SELECT *
+FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
+    FORMATFILE = N'D:\XChange\test-csv.fmt',
+    FIRSTROW=2,
+    FORMAT='CSV') AS cars;
+```
 
 „FORMATFILE ='*format_file_path*'“ gibt den vollständigen Pfad einer Formatdatei an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt zwei Typen von Formatdateien: XML- und Nicht-XML-Formatdateien.
 

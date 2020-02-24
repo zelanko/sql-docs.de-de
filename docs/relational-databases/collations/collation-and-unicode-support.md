@@ -290,7 +290,7 @@ In der folgenden Tabelle werden die standardmäßig verwendeten Sortierbezeichnu
 |Norwegisch, Bokmål (Norwegen)|0x0414|0x0414|Latin1_General_CI_AI|
 |Norwegisch (Nynorsk, Norwegen)|0x0814|0x0414|Latin1_General_CI_AI|
 |Okzitanisch (Frankreich)|0x0482|0x040c|French_CI_AS|
-|Oriya (Indien)|0x0448|0x0439|Auf Serverebene nicht verfügbar|
+|Odia (Indien)|0x0448|0x0439|Auf Serverebene nicht verfügbar|
 |Paschtu (Afghanistan)|0x0463|0x0463|Auf Serverebene nicht verfügbar|
 |Persisch (Iran)|0x0429|0x0429|Latin1_General_CI_AI|
 |Polnisch (Polen)|0x0415|0x0415|Polish_CI_AS|

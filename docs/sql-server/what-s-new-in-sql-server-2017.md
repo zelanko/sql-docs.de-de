@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 92f289ec22ca35834420dc7ee84d667c55e29a19
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874824"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478496"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,6 @@ SQL Server-2017 umfasst viele neue Datenbank-Engine-Funktionen, Verbesserungen u
 - **Speicheroptimierte Objektverbesserungen** umfassen sp_spaceused und die Löschung der acht Indexeinschränkungen für speicheroptimierte Tabellen, sp_rename für speicheroptimierte Tabellen und nativ kompilierte T-SQL-Module und CASE und TOP (N) WITH TIES für nativ kompilierte T-SQL-Module. Speicheroptimierte Dateigruppendateien können jetzt auf Azure Storage gespeichert, gesichert und wiederhergestellt werden. (CTP 1.0)
 - **DATABASE SCOPED CREDENTIAL** ist eine neue Klasse der sicherungsfähigen, unterstützenden Berechtigungen CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP und VIEW DEFINITION. ADMINISTER DATABASE BULK OPERATIONS ist jetzt in sys.fn_builtin_permissions sichtbar. (CTP 1.0)
 - Die Datenbank **COMPATIBILITY_LEVEL 140** wurde hinzugefügt. (CTP 1.0).  
-
-Weitere Informationen finden Sie unter [What's new in SQL Server 2017 Database Engine (Neues im Datenbankmodul von SQL Server 2017)](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
 
 ## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
 - Die neue **Scale Out**-Funktion in SSIS weist die folgenden neuen und geänderten Funktionen auf. Weitere Informationen finden Sie unter [What's New in Integration Services in SQL Server 2017 (Neues in Integration Services in SQL Server 2017)](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md). (RC1)

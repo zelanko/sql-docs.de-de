@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dba29bb00f0b8d54edd8c8c98d4134cf794fe2fd
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893037"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478502"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Was ist neu in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -52,7 +52,6 @@ Auf dieser Seite finden Sie eine zusammenfassende Übersicht sowie Links zu deta
     - **Dynamische Datenmaskierung:** Wenn dieses Feature in der Tabellendefinition angegeben ist, werden maskierte Daten für die meisten Benutzer ausgeblendet, und nur Benutzer mit einer UNMASK-Berechtigung können alle Daten anzeigen.
     - **Sicherheit auf Zeilenebene:** Der Datenzugriff kann auf Ebene der Datenbank-Engine eingeschränkt werden, sodass Benutzer nur die Daten anzeigen können, die für sie relevant sind. 
 
-Weitere Informationen finden Sie unter [Datenbank-Engine](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services bietet eine verbesserte Leistung und Funktionalität für die Erstellung, Datenbankverwaltung, Filterung, Verarbeitung und viele weitere Vorgänge für Tabellenmodelldatenbanken mit **Kompatibilitätsgrad 1200**.
 - **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integrieren die für die statistische Analyse verwendete Programmiersprache R in SQL Server. 

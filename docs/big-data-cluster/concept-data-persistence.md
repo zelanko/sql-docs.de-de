@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c46cf3fbc2138350c50e3f520871b0b6a8efde7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74317027"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173571"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Datenpersistenz mit SQL Server-Big Data-Clustern in Kubernetes
 
@@ -30,7 +30,7 @@ Im Folgenden sind einige wichtige Aspekte aufgeführt, die beim Planen der Speic
 
 - Für die erfolgreiche Bereitstellung eines Big Data-Clusters müssen Sie sicherstellen, dass die erforderliche Anzahl von persistenten Volumes verfügbar ist. Wenn Sie Ihr System in einem AKS-Cluster (Azure Kubernetes Service) bereitstellen und eine der integrierten Speicherklassen (`default` oder `managed-premium`) verwenden, unterstützen diese die dynamische Bereitstellung für die persistenten Volumes. Das bedeutet, dass Sie die persistenten Volumes nicht vorab erstellen müssen. Sie müssen jedoch sicherstellen, dass die im AKS-Cluster verfügbaren Workerknoten so viele Datenträger anfügen können, wie persistente Volumes für die Bereitstellung erforderlich sind. Abhängig von der [VM-Größe](https://docs.microsoft.com/azure/virtual-machines/linux/sizes), die für die Workerknoten angegeben wird, kann jeder Knoten eine bestimmte Anzahl von Datenträgern anfügen. Bei einem Cluster mit Standardgröße (ohne Hochverfügbarkeit) sind mindestens 24 Datenträger erforderlich. Wenn Sie Hochverfügbarkeit aktivieren oder einen Pool zentral hochskalieren, müssen Sie sicherstellen, dass für jedes zusätzliche Replikat mindestens zwei persistente Volumes vorhanden sind. Dies gilt unabhängig von der Ressource, die Sie zentral hochskalieren.
 
-- Wenn der Speicheranbieter für die Speicherklasse, die Sie in der Konfiguration bereitstellen, keine dynamische Bereitstellung unterstützt, müssen Sie die persistenten Volumes vorab erstellen. Die dynamische Bereitstellung wird beispielsweise nicht vom `local-storage`-Anbieter unterstützt. Weitere Informationen zu einem mit `kubeadm` bereitgestellten Kubernetes-Cluster finden Sie in diesem [Beispielskript](https://github.com/microsoft/sql-server-samples/tree/cu1-bdc/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu).
+- Wenn der Speicheranbieter für die Speicherklasse, die Sie in der Konfiguration bereitstellen, keine dynamische Bereitstellung unterstützt, müssen Sie die persistenten Volumes vorab erstellen. Die dynamische Bereitstellung wird beispielsweise nicht vom `local-storage`-Anbieter unterstützt. Weitere Informationen zu einem mit `kubeadm` bereitgestellten Kubernetes-Cluster finden Sie in diesem [Beispielskript](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu).
 
 - Wenn Sie einen Big Data-Cluster bereitstellen, können Sie für alle Komponenten im Cluster dieselbe Speicherklasse konfigurieren. Als bewährte Methode für eine Produktionsbereitstellung benötigen verschiedene Komponenten jedoch unterschiedliche Speicherkonfigurationen, um verschiedene Workloads in Bezug auf die Größe oder den Durchsatz zu unterstützen. Sie können die im Controller angegebene Standardspeicherkonfiguration für jede SQL Server-Masterinstanz und für alle Datasets und Speicherpools überschreiben. Diese Schritte werden in diesem Artikel anhand von Beispielen veranschaulicht.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66403252"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971315"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus
   Ein Standardabonnement wird von einzelnen Benutzern erstellt, die einen Bericht per E-Mail oder an einen freigegebenen Ordner übermitteln möchten. Dieses Thema stellt Informationen zu Standardabonnements bereit, die von einzelnen Benutzern erstellt und verwaltet werden. Für datengesteuerte Abonnements gelten unterschiedliche Anforderungen und Schritte, die in einem anderen Thema behandelt werden. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von datengesteuerten Abonnements](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "66403252"
   
  In diesem Artikel wird nicht erläutert, wie ein datengesteuertes Abonnement erstellt wird. Anleitungen zum Erstellen eines datengesteuerten Abonnements finden Sie unter [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
-###  <a name="bkmk_create_fileshare_subscription"></a> So erstellen Sie ein Dateifreigabeabonnement  
+## <a name="bkmk_create_fileshare_subscription"></a> So erstellen Sie ein Dateifreigabeabonnement  
   
 1. Durchsuchen Sie [das Webportal eines Berichtsservers (einheitlicher SSRS-Modus)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66403252"
   
 Der Bericht wird als statische Datei übermittelt. Wenn der Bericht interaktive Funktionen enthält (z. B. Links zu zusätzlichen Zeilen oder Spalten), stehen diese Funktionen nicht zur Verfügung.  
   
-###  <a name="bkmk_create_email_subscription"></a> So erstellen Sie ein E-Mail-Abonnement  
+##  <a name="bkmk_create_email_subscription"></a> So erstellen Sie ein E-Mail-Abonnement  
   
 1. Durchsuchen Sie [das Webportal eines Berichtsservers (einheitlicher SSRS-Modus)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -170,4 +170,3 @@ Informationen zum Beenden eines Abonnements, das zurzeit auf dem Berichtsserver 
  [Abonnements und Übermittlung (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
  [Das Webportal eines Berichtsservers (einheitlicher SSRS-Modus)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [Verwenden von „Meine Abonnements“ (Berichtsserver im einheitlichen Modus)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
-  

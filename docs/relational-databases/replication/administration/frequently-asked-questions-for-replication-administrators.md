@@ -15,12 +15,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 233a96ee389e8ffa7b190fde4413a33d51d0c462
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910163"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173581"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ Nein, die Replikation funktioniert nur, wenn Sie den tatsächlichen Servernamen 
   
 -   Für Artikel in Veröffentlichungen, die Zeichenmodus-Momentaufnahmen verwenden (werden für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten und [!INCLUDE[ssEW](../../../includes/ssew-md.md)] -Abonnenten verwendet): Standardmäßig wird der Besitzer leer gelassen. Als Besitzer wird standardmäßig der Besitzer verwendet, der mit dem vom Verteilungs- oder Merge-Agent zum Herstellen einer Verbindung mit dem Abonnenten verwendeten Konto verknüpft ist.  
   
- Der Objektbesitzer kann im Dialogfeld **Artikeleigenschaften\<***Artikel***>** und über folgende gespeicherte Prozeduren festgelegt werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Der Objektbesitzer kann im Dialogfeld **Artikeleigenschaften - \<** _Article_ **>** und über folgende gespeicherte Prozeduren festgelegt werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>Wie können Erteilungen in der Abonnementdatenbank so konfiguriert werden, dass sie mit den Erteilungen in der Veröffentlichungsdatenbank übereinstimmen?  
  Bei der Replikation werden GRANT-Anweisungen standardmäßig nicht für die Abonnementdatenbank ausgeführt. Wenn die Berechtigungen für die Abonnementdatenbank mit denen für die Veröffentlichungsdatenbank übereinstimmen sollen, verwenden Sie eine der folgenden Methoden:  
