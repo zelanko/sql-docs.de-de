@@ -1,7 +1,7 @@
 ---
 title: managed_backup. sp_backup_config_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 02/20/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942075"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507533"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,10 @@ EXEC managed_backup.sp_backup_config_schedule
  Die Dauer des Zeitfensters für die Sicherung. Beachten Sie, dass es keine Garantie gibt, dass Sicherungen während des durch @backup_begin_time und @backup_durationdefinierten Zeitfensters abgeschlossen werden. Sicherungs Vorgänge, die in diesem Zeitfenster gestartet werden, aber die Dauer des Fensters überschreiten, werden nicht abgebrochen.  
   
  @log_backup_freq  
- Dadurch wird die Häufigkeit der Transaktionsprotokoll Sicherungen bestimmt. Diese Sicherungen erfolgen in regelmäßigen Abständen anstelle des Zeitplans, der für die Datenbanksicherungen festgelegt wurde. @log_backup_freqkann innerhalb von Minuten oder Stunden liegen, und der Wert 0 ist gültig. Dies deutet auf keine Protokoll Sicherungen hin. Die Deaktivierung von Protokoll Sicherungen ist nur für Datenbanken mit einem einfachen Wiederherstellungs Modell geeignet.  
+ Dadurch wird die Häufigkeit der Transaktionsprotokoll Sicherungen bestimmt. Diese Sicherungen erfolgen in regelmäßigen Abständen anstelle des Zeitplans, der für die Datenbanksicherungen festgelegt wurde. @log_backup_freqkann innerhalb von Minuten oder Stunden liegen `0:00` und ist gültig und weist auf keine Protokoll Sicherungen hin. Die Deaktivierung von Protokoll Sicherungen ist nur für Datenbanken mit einem einfachen Wiederherstellungs Modell geeignet.  
   
 > [!NOTE]  
->  Wenn das Wiederherstellungs Modell von einfach in vollständig geändert wird, müssen Sie die log_backup_freq zwischen 0 und einem Wert ungleich 0 (null) neu konfigurieren.  
+>  Wenn das Wiederherstellungs Modell von einfach in vollständig geändert wird, müssen Sie die log_backup_freq von `0:00` auf einen Wert ungleich 0 (null) umkonfigurieren.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
