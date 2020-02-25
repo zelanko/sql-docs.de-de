@@ -59,7 +59,7 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren bearbeiten
   
 4.  Klicken Sie mit der rechten Maustaste auf den Operator, den Sie bearbeiten möchten, und wählen Sie **Eigenschaften**aus.  
   
-    Weitere Informationen zu den verfügbaren Optionen im Dialogfeld **Eigenschaften** für _Operatorname_ finden Sie unter:  
+    Weitere Informationen zu den verfügbaren Optionen im Dialogfeld **Eigenschaften** für _Operatorname\__ finden Sie unter:  
   
     -   [Operatoreigenschaften – Neuer Operator &#40;Seite „Allgemein“&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

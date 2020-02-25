@@ -30,7 +30,7 @@ In diesem Thema wird beschrieben, wie Sie mit [!INCLUDE[ssSqlProfiler](../../inc
   
      Das Dialogfeld **Ablaufverfolgungseigenschaften** wird angezeigt.  
   
-    > **HINWEIS:** Wenn die Option Ablaufverfolgung sofort nach dem Herstellen der Verbindung starten ausgewählt wurde, wird die Ablaufverfolgung sofort gestartet, ohne dass das Dialogfeld **Ablaufverfolgungseigenschaften** angezeigt wird. Um diese Einstellung zu deaktivieren, klicken Sie im Menü **Extras** auf **Optionen**, und deaktivieren Sie das Kontrollkästchen „Ablaufverfolgung sofort nach dem Herstellen der Verbindung starten“.  
+    > **HINWEIS:** Wenn die Option **Ablaufverfolgung sofort nach dem Herstellen der Verbindung starten** ausgewählt wurde, wird die Ablaufverfolgung sofort gestartet, ohne dass das Dialogfeld **Ablaufverfolgungseigenschaften** angezeigt wird. Um diese Einstellung zu deaktivieren, klicken Sie im Menü **Extras** auf **Optionen**, und deaktivieren Sie das Kontrollkästchen „Ablaufverfolgung sofort nach dem Herstellen der Verbindung starten“.  
   
 2.  Geben Sie im Feld **Ablaufverfolgungsname** einen Namen für die Ablaufverfolgung ein.  
   
