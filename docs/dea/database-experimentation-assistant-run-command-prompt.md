@@ -2,7 +2,7 @@
 title: Ausführen von Assistent für Datenbankexperimente an einer Eingabeaufforderung
 description: Ausführen von Assistent für Datenbankexperimente an einer Eingabeaufforderung
 ms.custom: seo-lt-2019
-ms.date: 01/24/2020
+ms.date: 02/25/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,28 +12,58 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 8055ae8b66c2f2b59f18b0ee40dcac8753c0eb7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76831750"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600130"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Ausführen von Assistent für Datenbankexperimente an einer Eingabeaufforderung
 
 In diesem Artikel wird beschrieben, wie Sie eine Ablauf Verfolgung in Assistent für Datenbankexperimente (DEA) erfassen und dann die Ergebnisse über eine Eingabeaufforderung analysieren.
 
+   > [!NOTE]
+   > Wenn Sie mehr über jeden DEA-Vorgang erfahren möchten, führen Sie den folgenden Befehl aus:
+   >
+   > `Deacmd.exe -o <operation> --help`
+   >
+   > Ein Vorgangs Name ist erforderlich. gültige Vorgänge sind **Analysis**, **startcapture**und **stopcapture**.
+
 ## <a name="start-a-new-workload-capture-by-using-the-dea-command"></a>Starten einer neuen Arbeits Auslastungs Erfassung mit dem Befehl "DEA"
 
 Führen Sie an einer Eingabeaufforderung den folgenden Befehl aus, um eine neue Arbeits Auslastungs Erfassung zu starten:
 
-`Deacmd.exe -o startcapturetrace -s <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
+`Deacmd.exe -o StartCapture -h <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
 
 **Beispiel**
 
-`Deacmd.exe -o startcapturetrace -s localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+`Deacmd.exe -o StartCapture -h localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+
+**Zusätzliche Optionen**
+
+Beim Starten einer neuen Arbeits Auslastungs `Deacmd.exe` Erfassung mit dem Befehl können Sie die folgenden zusätzlichen Optionen verwenden:
+
+| Option| BESCHREIBUNG |  
+| --- | --- |
+| -n, --name | Benötigten Name der Ablauf Verfolgungs Datei |
+| -x,--Format | Benötigten Format der Ablauf Verfolgung (Trace = 0, xevents = 1) |
+| -d,--Dauer | Benötigten maximale Dauer für die Erfassung (in Minuten) |
+| -l, --location | Benötigten Speicherort des Ausgabe Ordners zum Speichern von Trace/XEvent-Dateien auf dem Host Computer |
+| -t,--Typ | (Standard: 0) Typ/Edition von SQL Server (SQLServer = 0, azuresqldb = 1, Azure SQL verwaltete Instanz = 2) |
+| -h, --host | Benötigten SQL Server Hostnamen und/oder Instanzname zum Starten der Erfassung |
+| -e,--verschlüsseln | (Standardwert: true) Verschlüsseln Sie die Verbindung mit SQL Server-Instanz. Die Standardeinstellung ist „true“. |
+| --Vertrauensstellung | (Standardwert: false) Vertrauenswürdiges Serverzertifikat beim Herstellen einer Verbindung mit SQL Server-Instanz. Die Standardeinstellung ist „false“. |
+| -f,--DatabaseName | (Standard:) Der Name der Datenbank, in der die Ablauf Verfolgungen gefiltert werden sollen. Falls nicht angegeben, wird die Erfassung für alle Datenbanken gestartet. |
+| -m,--authmode | (Standard: 0) Authentifizierungsmodus (Windows = 0, SQL-Authentifizierung = 1) |
+| -u,--username | Benutzername für die Verbindung mit der SQL Server |
+| -p,--Kennwort | Kennwort für das Herstellen einer Verbindung mit dem SQL Server |
 
 ## <a name="replay-a-workload-capture"></a>Wiedergeben einer workloaderfassung
+
+**Verwenden von Distributed Replay**
+
+Wenn Sie Distributed Replay verwenden, führen Sie die folgenden Schritte aus.
 
 1. Melden Sie sich beim Distributed Replay Controller-Computer an.
 2. Führen Sie an einer Eingabeaufforderung den folgenden Befehl aus, um die Arbeits Auslastungs Ablauf Verfolgung, die Sie mit dem Befehl "DEA" erfasst haben, in eine UNF-Datei umzuwandeln
@@ -65,15 +95,42 @@ Führen Sie an einer Eingabeaufforderung den folgenden Befehl aus, um eine neue 
 7. Bearbeiten `@Tracefile` Sie, um den Pfad der Ablauf Verfolgungs Datei auf dem Zielcomputer mit SQL Server abzugleichen.
 8. Führen Sie das Skript auf dem Zielcomputer mit SQL Server aus.
 
+**Verwenden der integrierten Wiedergabe**
+
+Wenn Sie die integrierte Wiedergabe verwenden, müssen Sie Distributed Replay nicht einrichten. Die Möglichkeit, die integrierte Wiedergabe über die Befehlszeile zu verwenden, ist auf dem Weg, aber in der Zwischenzeit können Sie die Benutzeroberfläche verwenden, um die Wiedergabe mit integrierter Wiedergabe auszuführen.
+
 ## <a name="analyze-traces-using-the-dea-command"></a>Analysieren von Ablauf Verfolgungen mit dem Befehl "DEA"
 
 Führen Sie an einer Eingabeaufforderung den folgenden Befehl aus, um eine neue Ablauf Verfolgungs Analyse zu starten:
 
-`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -s <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
+`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
 
 **Beispiel**
 
 `Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
+
+Zum Anzeigen der Analyseberichte dieser Ablauf Verfolgungs Dateien müssen Sie die GUI zum Anzeigen von Diagrammen und organisierten Metriken verwenden.  Die Analysedatenbank wird jedoch in die angegebene SQL Server Instanz geschrieben, sodass Sie die generierten Analyse Tabellen auch direkt abfragen können.
+
+**Zusätzliche Optionen**
+
+Beim Analysieren von Ablauf Verfolgungen mit dem Befehl "DEA" können Sie die folgenden zusätzlichen Optionen verwenden:
+
+| Option| BESCHREIBUNG |  
+| --- | --- |
+| -a,--tracea | Benötigten Dateipfad zur Ereignis Datei für eine-Instanz. Beispiel: c:\traces\sql2008trace.trc.  Wenn es einen Batch von Dateien gibt, wählen Sie die erste Datei aus, und die DEA überprüft automatisch, ob Rolloverdateien vorhanden sind. Wenn sich Dateien im BLOB befinden, geben Sie den Ordner Pfad an, in dem die Ereignis Dateien lokal gespeichert werden sollen.  Beispiel: c:\traces\ |
+| -b,--traceb | Benötigten Dateipfad zur Ereignis Datei für die B-Instanz. Beispiel: c:\traces\sql2014trace.trc. Wenn es einen Batch von Dateien gibt, wählen Sie die erste Datei aus, und die DEA überprüft automatisch, ob Rolloverdateien vorhanden sind. Wenn sich Dateien im BLOB befinden, geben Sie den Ordner Pfad an, in dem die Ereignis Dateien lokal gespeichert werden sollen.  Beispiel: c:\traces\ |
+| -r,--Report Name | Benötigten der Name für die aktuelle Analyse. Der Analysebericht, der generiert wird, wird anhand dieses Namens identifiziert. |
+| -t,--Typ | (Standard: 0) Typ/Edition von SQL Server (SQLServer = 0, azuresqldb = 1, Azure SQL verwaltete Instanz = 2) |
+| -h, --host | Benötigten SQL Server Hostname und/oder Instanzname |
+| -e,--verschlüsseln | (Standardwert: true) Verschlüsseln Sie die Verbindung mit SQL Server-Instanz. Die Standardeinstellung ist „true“. |
+| --Vertrauensstellung | (Standardwert: false) Vertrauenswürdiges Serverzertifikat beim Herstellen einer Verbindung mit SQL Server-Instanz. Die Standardeinstellung ist „false“. |
+| -m,--authmode | (Standard: 0) Authentifizierungsmodus (Windows = 0, SQL-Authentifizierung = 1) |
+| -u,--username | Benutzername für die Verbindung mit der SQL Server |
+| --p | Kennwort für das Herstellen einer Verbindung mit dem SQL Server |
+| --ab | (Standardwert: false) Der Speicherort der Ablauf Verfolgung A befindet sich im BLOB. Bei Verwendung von muss auch--Abu (Trace A BLOB URL) angegeben werden. |
+| --BB | (Standardwert: false) Der Speicherort der Ablauf Verfolgung B befindet sich im BLOB. Bei Verwendung von muss auch--BBU (Trace B-BLOB-URL) angegeben werden. |
+| --Abu | BLOB-URL für eine-Instanz mit einem SAS-Schlüssel |
+| --BBU | BLOB-URL für B-Instanz mit SAS-Schlüssel |
 
 ## <a name="see-also"></a>Weitere Informationen
 
