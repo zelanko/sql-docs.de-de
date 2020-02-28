@@ -86,7 +86,7 @@ DEFAULT <xml_namespace_uri>
   
 -   Das XML-Namespacepräfix `xsi` kann nicht erneut deklariert werden, wenn die ELEMENTS XSINIL-Direktive für die Abfrage verwendet wird.  
 
--   Es muss nicht deklariert werden, dass http://www.w3.org/2001/XMLSchema-instance den XSI-Standardnamespace verwendet soll. Dieser wird vom XML/XPATH-Prozessor implizit hinzugefügt, wenn er nicht angegeben wurde, und XPATH-Ausdrücke können das Präfix „xsi“ verwenden, solange das Schema http://www.w3.org/2001/XMLSchema-instance ordnungsgemäß im XML-Dokument deklariert wurde.
+-   Es muss nicht deklariert werden, dass http://www.w3.org/2001/XMLSchema-instance den XSI-Standardnamespace verwendet soll. Dieser wird vom XML/XPATH-Prozessor implizit hinzugefügt, wenn er nicht angegeben wurde, und XPATH-Ausdrücke können das Präfix „xsi“ verwenden, solange das Schema 'http://www.w3.org/2001/XMLSchema-instance ' ordnungsgemäß im XML-Dokument deklariert wurde.
 
 -   URI-Zeichenfolgenwerte werden gemäß der aktuellen Datenbanksortierungs-Codepage verschlüsselt und intern in Unicode übersetzt.  
   
