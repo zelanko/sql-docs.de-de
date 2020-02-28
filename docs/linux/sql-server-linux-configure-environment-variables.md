@@ -61,7 +61,7 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, um SQL Server 201
 | **MSSQL_ENABLE_HADR** | Aktivieren der Verfügbarkeitsgruppe. Beispielsweise bedeutet „1“ aktiviert und „0“ deaktiviert. |
 | **MSSQL_AGENT_ENABLED** | Aktivieren des SQL Server-Agents. Beispielsweise bedeutet „true“ aktiviert und „false“ deaktiviert. Standardmäßig ist der Agent deaktiviert.  |
 | **MSSQL_MASTER_DATA_FILE** | Festlegen des Speicherorts der Masterdatenbankdatei. Muss bis zur ersten Ausführung von SQL Server als **master.mdf** benannt werden. |
-| **MSSQL_MASTER_LOG_FILE** | Festlegen des Speicherorts der Masterdatenbank-Protokolldatei. Muss bis zur ersten Ausführung von SQL Server als **mastlog.mdf** benannt werden. |
+| **MSSQL_MASTER_LOG_FILE** | Festlegen des Speicherorts der Masterdatenbank-Protokolldatei. Muss bis zur ersten Ausführung von SQL Server als **mastlog.ldf** benannt werden. |
 | **MSSQL_ERROR_LOG_FILE** | Festlegen des Speicherorts der Protokolldateien. |
 
 ::: moniker-end
