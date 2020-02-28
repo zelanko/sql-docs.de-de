@@ -1,7 +1,7 @@
 ---
 title: Handbuch zur Architektur der Abfrageverarbeitung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/24/2019
+ms.date: 02/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - row mode execution
 - batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: pmasl
+ms.author: pelopes
+ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909750"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77466171"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ In einem Abfrageausführungsplan wird Folgendes definiert:
 
 Der Vorgang, in dessen Verlauf ein bestimmter Ausführungsplan aus einer Anzahl möglicher Ausführungspläne ausgewählt wird, wird Optimierung genannt. Der Abfrageoptimierer stellt eine der wichtigsten Komponenten eines SQL-Datenbanksystems dar. Der Abfrageoptimierer erzeugt zwar den zusätzlichen Aufwand, um die Abfrage analysieren und einen Plan auswählen zu können, ein Vielfaches dieses Aufwands wird jedoch normalerweise dadurch eingespart, dass der Abfrageoptimierer einen effizienten Ausführungsplan auswählt. Nehmen Sie z. B. an, zwei Bauunternehmer erhalten dieselben Konstruktionszeichnungen für ein Haus. Wenn nun das eine Unternehmen zunächst einige Tage darauf verwendet, den Bau des Hauses detailliert zu planen, das andere Unternehmen jedoch sofort und ohne weitere Planung mit dem Bau des Hauses beginnt, ist es mehr als wahrscheinlich, dass das erste Unternehmen, das sich Zeit für die Planung des Projekts nimmt, den Bau des Hauses zuerst abschließen wird.
 
-Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] arbeitet kostenorientiert. Jeder denkbare Ausführungsplan verfügt über zugeordnete Kosten hinsichtlich des Umfangs der benötigten Verarbeitungsressourcen. Der Abfrageoptimierer muss die möglichen Pläne analysieren und den Plan auswählen, der die geringsten geschätzten Kosten verursacht. Einige komplexe `SELECT` -Anweisungen verfügen über mehrere Tausend mögliche Ausführungspläne. In einem solchen Fall werden nicht alle denkbaren Kombinationen vom Abfrageoptimierer analysiert. Stattdessen werden komplexe Algorithmen verwendet, um einen Ausführungsplan zu ermitteln, dessen Kosten sich in vernünftigem Rahmen an die möglichen Mindestkosten annähern.
+Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist eine kostenbasierte Optimierung. Jeder denkbare Ausführungsplan verfügt über zugeordnete Kosten hinsichtlich des Umfangs der benötigten Verarbeitungsressourcen. Der Abfrageoptimierer muss die möglichen Pläne analysieren und den Plan auswählen, der die geringsten geschätzten Kosten verursacht. Einige komplexe `SELECT` -Anweisungen verfügen über mehrere Tausend mögliche Ausführungspläne. In einem solchen Fall werden nicht alle denkbaren Kombinationen vom Abfrageoptimierer analysiert. Stattdessen werden komplexe Algorithmen verwendet, um einen Ausführungsplan zu ermitteln, dessen Kosten sich in vernünftigem Rahmen an die möglichen Mindestkosten annähern.
 
 Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wählt nicht nur den Ausführungsplan aus, der die geringsten Kosten bezüglich der benötigten Ressourcen verursacht. Stattdessen wird der Plan ausgewählt, der die Ergebnisse so schnell wie möglich an den Benutzer zurückgibt und dabei Kosten für Ressourcen in vertretbarem Maß verursacht. Für die parallele Verarbeitung einer Abfrage werden in der Regel mehr Ressourcen verwendet als für die serielle Verarbeitung, die Abfrageausführung wird jedoch schneller beendet. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer verwendet einen Plan mit paralleler Ausführung, um Ergebnisse zurückzugeben, wenn sich dies nicht negativ auf die Serverlast auswirkt.
 
@@ -132,7 +132,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist
 5. Die relationale Engine transformiert die Daten, die von der Speicher-Engine zurückgegeben werden, in das für das Resultset definierte Format und gibt das Resultset an den Client zurück.
 
 ### <a name="ConstantFolding"></a> Reduktion konstanter Ausdrücke und Auswertung von Ausdrücken 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wertet bestimmte konstante Ausdrücke frühzeitig aus, um die Abfrageleistung zu steigern. Dies wird als Reduktion konstanter Ausdrücke bezeichnet. Eine Konstante ist ein [!INCLUDE[tsql](../includes/tsql-md.md)]-Literal, z. B. 3, „ABC“, „2005-12-31“, 1.0e3 oder 0x12345678.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wertet bestimmte konstante Ausdrücke frühzeitig aus, um die Abfrageleistung zu steigern. Dies wird als Reduktion konstanter Ausdrücke bezeichnet. Eine Konstante ist ein [!INCLUDE[tsql](../includes/tsql-md.md)]-Literal, z. B. `3`, `'ABC'`, `'2005-12-31'`, `1.0e3` und `0x12345678`.
 
 #### <a name="foldable-expressions"></a>Zur Kompilierzeit reduzierbare Ausdrücke
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet die Reduktion konstanter Ausdrücke mit den folgenden Ausdruckstypen:
@@ -203,11 +203,11 @@ GO
 CREATE PROCEDURE MyProc2( @d datetime )
 AS
 BEGIN
-DECLARE @d2 datetime
-SET @d2 = @d+1
-SELECT COUNT(*)
-FROM Sales.SalesOrderHeader
-WHERE OrderDate > @d2
+  DECLARE @d2 datetime
+  SET @d2 = @d+1
+  SELECT COUNT(*)
+  FROM Sales.SalesOrderHeader
+  WHERE OrderDate > @d2
 END;
 ```
 
@@ -219,7 +219,7 @@ Die zuvor beschriebenen grundlegenden Schritte für die Verarbeitung einer `SELE
 Sogar DDL-Anweisungen (Data Definition Language, Datendefinitionssprache), wie z.B. `CREATE PROCEDURE` oder `ALTER TABLE`, werden letztendlich in eine Folge relationaler Operationen aufgelöst, die für die Systemkatalogtabellen und manchmal (wie bei `ALTER TABLE ADD COLUMN`) auch für die Datentabellen ausgeführt werden.
 
 ### <a name="worktables"></a>Arbeitstabellen
-Soll eine logische Operation ausgeführt werden, die in einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung angegeben wurde, muss die relationale Engine ggf. eine Arbeitstabelle erstellen. Arbeitstabellen sind interne Tabellen, die zum Speichern von Zwischenergebnissen verwendet werden. Arbeitstabellen werden für bestimmte `GROUP BY`-, `ORDER BY`- oder `UNION` -Abfragen generiert. Wenn z.B. eine `ORDER BY`-Klausel auf Spalten verweist, die nicht durch Indizes erfasst werden, muss die relationale Engine eventuell eine Arbeitstabelle generieren, um das Resultset in der angeforderten Reihenfolge sortieren zu können. Arbeitstabellen werden mitunter auch als Spool-Speicher verwendet, die vorübergehend das Ergebnis der Ausführung eines Teils eines Abfrageplans aufnehmen. Arbeitstabellen werden in tempdb erstellt und automatisch wieder gelöscht, sobald sie nicht mehr benötigt werden.
+Soll eine logische Operation ausgeführt werden, die in einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung angegeben wurde, muss die relationale Engine ggf. eine Arbeitstabelle erstellen. Arbeitstabellen sind interne Tabellen, die zum Speichern von Zwischenergebnissen verwendet werden. Arbeitstabellen werden für bestimmte `GROUP BY`-, `ORDER BY`- oder `UNION` -Abfragen generiert. Wenn beispielsweise eine `ORDER BY`-Klausel auf Spalten verweist, die nicht durch Indizes erfasst werden, muss die relationale Engine eventuell eine Arbeitstabelle generieren, um das Resultset in der angeforderten Reihenfolge sortieren zu können. Arbeitstabellen werden mitunter auch als Spool-Speicher verwendet, die vorübergehend das Ergebnis der Ausführung eines Teils eines Abfrageplans aufnehmen. Arbeitstabellen werden in tempdb erstellt und automatisch wieder gelöscht, sobald sie nicht mehr benötigt werden.
 
 ### <a name="view-resolution"></a>Sichtauflösung
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageprozessor behandelt indizierte und nicht indizierte Sichten unterschiedlich: 
@@ -240,7 +240,7 @@ CREATE VIEW EmployeeName AS
 SELECT h.BusinessEntityID, p.LastName, p.FirstName
 FROM HumanResources.Employee AS h 
 JOIN Person.Person AS p
-ON h.BusinessEntityID = p.BusinessEntityID;
+  ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
@@ -251,16 +251,16 @@ Von dieser Sicht ausgehend führen die beiden folgenden [!INCLUDE[tsql](../inclu
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
 JOIN AdventureWorks2014.dbo.EmployeeName AS EmpN
-ON (soh.SalesPersonID = EmpN.BusinessEntityID)
+  ON (soh.SalesPersonID = EmpN.BusinessEntityID)
 WHERE OrderDate > '20020531';
 
 /* SELECT referencing the Person and Employee tables directly. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.HumanResources.Employee AS e 
 JOIN AdventureWorks2014.Sales.SalesOrderHeader AS soh
-ON soh.SalesPersonID = e.BusinessEntityID
+  ON soh.SalesPersonID = e.BusinessEntityID
 JOIN AdventureWorks2014.Person.Person AS p
-ON e.BusinessEntityID =p.BusinessEntityID
+  ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
 
@@ -328,7 +328,7 @@ Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * `ARITHABORT`
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
-  * Die `NUMERIC_ROUNDABORT` -Sitzungsoption ist auf OFF festgelegt.
+* Die `NUMERIC_ROUNDABORT` -Sitzungsoption ist auf OFF festgelegt.
 * Der Abfrageoptimierer findet eine Übereinstimmung zwischen den Indexspalten der Sicht und Abfrageelementen, wie z. B.: 
   * Suchbedingungsprädikate in der WHERE-Klausel
   * Joinvorgänge
@@ -348,7 +348,6 @@ Eine Abfrage muss nicht explizit in der `FROM`-Klausel auf eine indizierte Sicht
 Der Abfrageoptimierer behandelt eine indizierte Sicht, auf die in der `FROM`-Klausel verwiesen wird, als Standardsicht. Der Abfrageoptimierer erweitert am Beginn des Optimierungsprozesses die Definition der Sicht in die Abfrage. Dann erfolgt der Abgleich der indizierten Sicht. Die indizierte Sicht kann im endgültigen Ausführungsplan verwendet werden, der vom Abfrageoptimierer ausgewählt wird, oder stattdessen kann der Plan die erforderlichen Daten aus der Sicht materialisieren, indem auf die Basistabellen zugegriffen wird, auf die durch die Sicht verwiesen wird. Der Abfrageoptimierer wählt die kostengünstigste Alternative aus.
 
 #### <a name="using-hints-with-indexed-views"></a>Verwenden von Hinweisen mit indizierten Sichten
-
 Sie können verhindern, dass Sichtindizes für eine Abfrage verwendet werden, indem Sie den `EXPAND VIEWS` -Abfragehinweis verwenden oder indem Sie mit dem `NOEXPAND` -Tabellenhinweis die Verwendung eines Indexes für eine indizierte Sicht erzwingen, die in der `FROM` -Klausel einer Abfrage angegeben ist. Sie sollten jedoch den Abfrageoptimierer für jede Abfrage dynamisch ermitteln lassen, welches die besten Zugriffsmethoden sind. Verwenden Sie `EXPAND` und `NOEXPAND` nur in bestimmten Fällen, wenn Tests gezeigt haben, dass durch sie die Leistung deutlich gesteigert wird.
 
 Die Option `EXPAND VIEWS` gibt an, dass der Abfrageoptimierer für die gesamte Abfrage keine Sichtindizes verwendet. 
@@ -364,7 +363,6 @@ Allgemein gilt: Wenn der Abfrageoptimierer eine indizierte Sicht mit einer Abfra
 In den Definitionen von indizierten Sichten sind Hinweise nicht zulässig. In den Kompatibilitätsmodi 80 und höher ignoriert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die in den Definitionen indizierter Sichten enthaltenen Hinweise, wenn diese verwaltet werden oder wenn Abfragen ausgeführt werden, in denen indizierte Sichten verwendet werden. Obwohl die Verwendung von Hinweisen in den Definitionen indizierter Sichten im Kompatibilitätsmodus 80 nicht zu einem Syntaxfehler führt, werden sie ignoriert.
 
 ### <a name="resolving-distributed-partitioned-views"></a>Auflösen verteilter partitionierter Sichten
-
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageprozessor optimiert die Leistung von verteilten partitionierten Sichten. Der wichtigste Aspekt bei der Leistung von verteilten partitionierten Sichten ist das Minimieren der Datenmenge, die zwischen den Mitgliedsservern übertragen wird.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erstellt intelligente, dynamische Pläne, in denen verteilte Abfragen effizient für den Zugriff auf Daten in Remotemitgliedstabellen verwendet werden: 
@@ -408,34 +406,66 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erstellt diese dynamischen Ausführungspläne manchmal sogar für nicht parametrisierte Abfragen. Der Abfrageoptimierer kann eine Abfrage parametrisieren, sodass der Ausführungsplan wieder verwendet werden kann. Falls der Abfrageoptimierer eine Abfrage parametrisiert, die auf eine partitionierte Sicht verweist, kann der Abfrageoptimierer nicht mehr davon ausgehen, dass die erforderlichen Zeilen aus einer bestimmten Basistabelle stammen. In diesem Fall muss der Optimierer dynamische Filter im Ausführungsplan verwenden.
 
 ## <a name="stored-procedure-and-trigger-execution"></a>Ausführung von gespeicherten Prozeduren und Triggern
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] speichert nur die Quelle für gespeicherte Prozeduren und Trigger. Wenn eine gespeicherte Prozedur oder ein Trigger das erste Mal ausgeführt wird, wird die Quelle zu einem Ausführungsplan kompiliert. Wenn die gespeicherte Prozedur oder der Trigger erneut ausgeführt wird, bevor der Ausführungsplan aus dem Arbeitsspeicher entfernt wurde, erkennt die relationale Engine den vorhandenen Plan und verwendet ihn erneut. Wenn der Plan aus dem Arbeitsspeicher entfernt wurde, wird ein neuer Plan erstellt. Dieser Vorgang ist mit dem Verfahren vergleichbar, das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für alle [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen anwendet. Der wesentliche Leistungsvorteil, den gespeicherte Prozeduren und Trigger in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] im Vergleich zu Batches dynamischer [!INCLUDE[tsql](../includes/tsql-md.md)] besitzen, besteht darin, dass ihre [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen immer identisch sind. Aus diesem Grund können sie durch die relationale Engine auf einfache Weise vorhandenen Ausführungsplänen zugeordnet werden. Pläne für gespeicherte Prozeduren und Trigger können einfach erneut verwendet werden.
 
 Der Ausführungsplan für gespeicherte Prozeduren und Trigger wird getrennt von dem Ausführungsplan für den Batch ausgeführt, der die gespeicherte Prozedur aufruft oder den Trigger auslöst. Dadurch können die Ausführungspläne für gespeicherte Prozeduren und Trigger mehrmals erneut verwendet werden.
 
 ## <a name="execution-plan-caching-and-reuse"></a>Zwischenspeichern und Wiederverwenden von Ausführungsplänen
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verfügt über einen Arbeitsspeicherpool, der zum Speichern von Ausführungsplänen und von Datenpuffern verwendet wird. Der Prozentsatz des Pools, der entweder für Ausführungspläne oder für Datenpuffer zugeordnet wird, verändert sich dynamisch in Abhängigkeit vom Status des Systems. Der Teil des Arbeitsspeicherpools, der zum Speichern von Ausführungsplänen verwendet wird, wird Plancache genannt.
+
+Der Plancache enthält zwei Speicher für alle kompilierten Pläne:
+-  Der Cache für **Objektpläne** (OBJCP) wird für Pläne verwendet, die sich auf persistente Objekte beziehen (gespeicherte Prozeduren, Funktionen und Auslöser).
+-  Der Cache für **SQL-Pläne** (SQLCP) wird für Pläne verwendet, die sich auf automatisch parametrisierte, dynamische oder vorbereitete Abfragen beziehen.
+
+Die folgende Abfrage stellt Informationen zur Arbeitsspeicherauslastung für diese zwei Caches bereit:
+
+```sql
+SELECT * FROM sys.dm_os_memory_clerks
+WHERE name LIKE '%plans%';
+```
+
+> [!NOTE]
+> Der Plancache verfügt über zwei zusätzliche Speicher, die nicht zum Speichern von Plänen verwendet werden:     
+> -  Der Cache für **Bound Trees** (PHDR) wird für Datenstrukturen während der Plankompilierung für Ansichten, Einschränkungen und Standardwerte verwendet. Diese Strukturen werden „Bound Trees“ (Gebundene Strukturen) oder „Algebrizer Trees“ (Algebrizerstrukturen) genannt.      
+> -  Der Cache für **erweiterte gespeicherte Prozedur** (XPROC) wird für vordefinierte Systemprozeduren wie `sp_executeSql` oder `xp_cmdshell` verwendet, die mithilfe einer DLL-Datei und nicht mit Transact-SQL-Anweisungen definiert werden. Die zwischengespeicherte Struktur enthält nur den Funktionsnamen und den Namen der DLL-Datei, in der die Prozedur implementiert wird.      
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Ausführungspläne weisen die folgenden Hauptkomponenten auf: 
 
-- **Abfrageausführungsplan**     
-  Bei dem größten Teil des Ausführungsplans handelt es sich um eine eintrittsinvariante, schreibgeschützte Datenstruktur, die von einer beliebigen Anzahl von Benutzern verwendet werden kann. Man bezeichnet diesen Teil als Abfrageplan. Im Abfrageplan wird kein Benutzerkontext gespeichert. Im Arbeitsspeicher befinden sich immer nur eine oder zwei Kopien des Abfrageplans: eine Kopie für alle seriellen Ausführungen und eine weitere für alle parallelen Ausführungen. Die parallele Kopie deckt alle parallelen Ausführungen ab, und zwar unabhängig von ihrem Grad an Parallelität. 
+- **Kompilierter Plan** (oder Abfrageplan)     
+  Der vom Kompilierungsprozess erstellte Abfrageplan ist größtenteils eine wiedereintrittsfähige, schreibgeschützte Datenstruktur, die von einer beliebigen Anzahl an Benutzern verwendet werden kann. Diese speichert Informationen über:
+  -  Physische Operatoren, die den von logischen Operatoren beschriebenen Vorgang implementieren. 
+  -  Die Reihenfolge dieser Operatoren, die bestimmt, in welcher Reihenfolge auf Daten zugegriffen, gefiltert und aggregiert werden. 
+  -  Die Anzahl der geschätzten Zeilen, die die Operatoren durchlaufen. 
+  
+     > [!NOTE]
+     > In neueren Versionen von [!INCLUDE[ssde_md](../includes/ssde_md.md)] werden auch Informationen über die Statistikobjekte gespeichert, die für die [Kardinalitätsschätzung](../relational-databases/performance/cardinality-estimation-sql-server.md) verwendet wurden.
+     
+  -  Welche Unterstützungsobjekte erstellt werden müssen, z. B. [Arbeitstabellen](#worktables) oder Arbeitsdateien in tempdb. 
+  Im Abfrageplan werden keine Informationen über den Benutzerkontext oder die Laufzeit gespeichert. Im Arbeitsspeicher befinden sich immer nur eine oder zwei Kopien des Abfrageplans: eine Kopie für alle seriellen Ausführungen und eine weitere für alle parallelen Ausführungen. Die parallele Kopie deckt alle parallelen Ausführungen ab, und zwar unabhängig von ihrem Grad an Parallelität.   
+  
 - **Ausführungskontext**     
-  Jeder Benutzer, der die Abfrage zurzeit ausführt, verfügt über eine Datenstruktur mit den Daten, die für diese Ausführung spezifisch sind, z. B. Parameterwerte. Diese Datenstruktur wird als Ausführungskontext bezeichnet. Die Datenstrukturen des Ausführungskontexts werden wiederverwendet. Wenn ein Benutzer eine Abfrage ausführt und eine der Strukturen nicht verwendet wird, wird diese Struktur erneut initialisiert, und zwar diesmal mit dem Kontext für den neuen Benutzer. 
+  Jeder Benutzer, der die Abfrage zurzeit ausführt, verfügt über eine Datenstruktur mit den Daten, die für diese Ausführung spezifisch sind, z. B. Parameterwerte. Diese Datenstruktur wird als Ausführungskontext bezeichnet. Die Datenstrukturen des Ausführungskontexts werden wiederverwendet, aber nicht ihr Inhalt. Wenn ein anderer Benutzer dieselbe Abfrage ausführt, werden die Datenstrukturen mit dem Kontext für den neuen Benutzer nochmal initialisiert. 
 
-![execution_context](../relational-databases/media/execution-context.gif)
-
-Wenn eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, durchsucht die relationale Engine zunächst den Plancache, um zu überprüfen, ob ein vorhandener Ausführungsplan für dieselbe [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung vorhanden ist. Die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung wird dann als vorhanden qualifiziert, wenn sie mit einer zuvor ausgeführten [!INCLUDE[tsql](../includes/tsql-md.md)]-­Anweisung mit einem zwischengespeicherten Plan Zeichen für Zeichen übereinstimmt. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet sämtliche vorhandenen Pläne wieder, die hierbei gefunden werden, und spart sich somit den Aufwand für das erneute Kompilieren der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung. Wenn kein Ausführungsplan vorhanden ist, generiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen neuen Ausführungsplan für die Abfrage.
+  ![execution_context](../relational-databases/media/execution-context.gif)
 
 > [!NOTE]
-> Einige [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen werden nicht zwischengespeichert. Beispiele hierfür sind Anweisungen für Massenvorgänge, die auf Zeilenspeicher ausgeführt werden, oder Anweisungen mit Zeichenfolgenliteralen, die größer als 8 KB sind.
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verfügt über drei Optionen zum Anzeigen von Ausführungsplänen:        
+> -  Der ***[geschätzte Ausführungsplan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, der dem kompilierten Plan entspricht.        
+> -  Der ***[tatsächliche Ausführungsplan](../relational-databases/performance/display-an-actual-execution-plan.md)***, der dem kompilierten Plan entspricht und den Ausführungskontext enthält. Dies umfasst die Laufzeitinformationen, die nach Abschluss der Ausführung verfügbar sind, z. B. Ausführungswarnungen oder, in neueren Versionen von [!INCLUDE[ssde_md](../includes/ssde_md.md)], die vergangene und die CPU-Zeit der Ausführung.        
+> -  Die ***[Live-Abfragestatistik](../relational-databases/performance/live-query-statistics.md)***, die dem kompilierten Plan entspricht und den Ausführungskontext enthält. Dies umfasst Laufzeitinformationen während des Ausführungsfortschritts, die sekündlich aktualisiert werden. Laufzeitinformationen enthalten beispielsweise die genaue Anzahl der Zeilen, die die Operatoren durchlaufen.       
+
+Wenn eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, durchsucht [!INCLUDE[ssde_md](../includes/ssde_md.md)] zunächst den Plancache, um zu überprüfen, ob ein vorhandener Ausführungsplan für dieselbe [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung vorhanden ist. Die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung wird dann als vorhanden qualifiziert, wenn sie mit einer zuvor ausgeführten [!INCLUDE[tsql](../includes/tsql-md.md)]-­Anweisung mit einem zwischengespeicherten Plan Zeichen für Zeichen übereinstimmt. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet sämtliche vorhandenen Pläne wieder, die hierbei gefunden werden, und spart sich somit den Aufwand für das erneute Kompilieren der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung. Wenn kein Ausführungsplan vorhanden ist, generiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen neuen Ausführungsplan für die Abfrage.
+
+> [!NOTE]
+> Die Ausführungspläne für einige [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen werden nicht im Plancache beibehalten, z. B. Anweisungen für Massenvorgänge, die in Rowstore oder Anweisungen mit Zeichenfolgenliteralen mit einer Größe über 8 KB ausgeführt werden. Diese Pläne sind nur vorhanden, während die Abfrage ausgeführt wird.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet einen effizienten Algorithmus, um vorhandene Ausführungspläne für bestimmte [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen zu suchen. In den meisten Systemen können durch das erneute Verwenden vorhandener Pläne anstelle des erneuten Kompilierens jeder [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung mehr Ressourcen eingespart werden, als für den Scan nach vorhandenen Plänen benötigt werden.
 
-Die Algorithmen, die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen mit vorhandenen, nicht verwendeten Ausführungsplänen im Cache vergleichen, erfordern, dass alle Objektverweise vollqualifiziert sind. Angenommen, `Person` ist das Standardschema für den Benutzer, der die unten angegebenen `SELECT`-Anweisungen ausführt. Da es in diesem Beispiel nicht erforderlich ist, dass die Tabelle `Person` zum Ausführen vollqualifiziert ist, bedeutet dies, dass die zweite Anweisung nicht mit einem vorhandenen Plan verglichen wird, aber die dritte Anweisung:
+Die Algorithmen, die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen mit vorhandenen, nicht verwendeten Ausführungsplänen im Plancache vergleichen, erfordern, dass alle Objektverweise vollqualifiziert sind. Angenommen, `Person` ist das Standardschema für den Benutzer, der die unten angegebenen `SELECT`-Anweisungen ausführt. Da es in diesem Beispiel nicht erforderlich ist, dass die Tabelle `Person` zum Ausführen vollqualifiziert ist, bedeutet dies, dass die zweite Anweisung nicht mit einem vorhandenen Plan verglichen wird, aber die dritte Anweisung:
 
 ```sql
+USE AdventureWorks2014;
+GO
 SELECT * FROM Person;
 GO
 SELECT * FROM Person.Person;
@@ -444,8 +474,154 @@ SELECT * FROM Person.Person;
 GO
 ```
 
-### <a name="removing-execution-plans-from-the-plan-cache"></a>Entfernen von Ausführungsplänen aus dem Plancache
+Wenn eine der folgenden SET-Optionen für eine jeweilige Ausführung geändert wird, wirkt sich das auf die Wiederverwendungsfähigkeit der Pläne aus, da [!INCLUDE[ssde_md](../includes/ssde_md.md)] [konstantes Folding](#ConstantFolding) durchführt und diese Optionen sich auf die Ergebnisse solcher Ausdrücke auswirken:
 
+|||   
+|-----------|------------|------------|    
+|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
+|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
+|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
+|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
+|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+
+### <a name="caching-multiple-plans-for-the-same-query"></a>Zwischenspeichern mehrerer Pläne für dieselbe Abfrage 
+Abfragen und Ausführungspläne sind in [!INCLUDE[ssde_md](../includes/ssde_md.md)] eindeutig identifizierbar, ähnlich wie bei einem Fingerabdruck:
+-  Der **Abfrageplanhash** ist ein binärer Hashwert, der im Ausführungsplan für eine jeweilige Abfrage berechnet und dann zur eindeutigen Identifizierung ähnlicher Ausführungspläne verwendet wird. 
+-  Der **Abfragehash** ist ein binärer Hashwert, der für den [!INCLUDE[tsql](../includes/tsql-md.md)]-Text einer Abfrage berechnet und zur eindeutigen Identifizierung von Abfragen verwendet wird. 
+
+Ein kompilierter Plan kann mithilfe eines **Planhandles** aus dem Plancache abgerufen werden. Dies ist ein vorübergehender Bezeichner, der nur konstant bleibt, während der Plan sich im Cache befindet. Der Planhandle ist ein Hashwert, der vom kompilierten Plan des gesamten Batches abgeleitet wurde. Der Planhandle für einen kompilierten Plan bleibt gleich, auch wenn mindestens eine Anweisung im Batch neu kompiliert wird.
+
+> [!NOTE]
+> Wenn ein Plan für mehrere Anweisungen kompiliert wurde, können Sie den Plan für einzelne Anweisungen im Batch mithilfe des Planhandles und der Anweisungsoffsets abrufen.     
+> Die dynamische Verwaltungssicht `sys.dm_exec_requests` enthält die Spalten `statement_start_offset` und `statement_end_offset` für alle Datensätze, die auf die aktuell ausgeführte Anweisung eines Batches oder persistenten Objekts verweisen, das derzeit ausgeführt wird. Weitere Informationen finden Sie unter [sys.dm_exec_requests (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).       
+> Die dynamische Verwaltungssicht `sys.dm_exec_query_stats` enthält diese Spalten für alle Datensätze, die auf die Position einer Anweisung im Batch oder persistenten Objekt verweisen. Weitere Informationen finden Sie unter [sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).     
+
+Der tatsächliche [!INCLUDE[tsql](../includes/tsql-md.md)]-Text eines Batches wird an einem vom Plancache getrennten Speicherbereich gespeichert, der als **SQL Manager**-Cache (SQLMGR) bezeichnet wird. Der [!INCLUDE[tsql](../includes/tsql-md.md)]-Text für einen kompilierten Plan kann mithilfe eines **SQL-Handles** aus dem SQL Manager-Cache abgerufen werden. Dieser Handle ist ein vorübergehender Bezeichner, der nur konstant bleibt, wenn sich mindestens ein Plan im Plancache befindet, der auf diesen verweist. Der SQL-Handle ist ein Hashwert, der vom gesamten Batchtext abgeleitet wird und ist für alle Batches immer eindeutig.
+
+> [!NOTE]
+> Wie bei einem kompiliertem Plan wird der [!INCLUDE[tsql](../includes/tsql-md.md)]-Text pro Batch mitsamt der Kommentare gespeichert. Der SQL-Handle enthält den MD5-Hash des gesamten Batchtexts und ist für alle Batches immer eindeutig.
+
+Die folgende Abfrage bietet Informationen über die Arbeitsspeicherauslastung für den SQL Manager-Cache:
+
+```sql
+SELECT * FROM sys.dm_os_memory_objects
+WHERE type = 'MEMOBJ_SQLMGR';
+```
+
+Zwischen einem SQL-Handle und Planhandles besteht eine 1:n-Beziehung. Eine solche Bedingung liegt vor, wenn sich der Cacheschlüssel für die kompilierten Pläne unterscheidet. Dies kann aufgrund einer Änderung an den SET-Optionen zwischen zwei Ausführungen desselben Batches auftreten.
+
+Sehen Sie sich die folgende gespeicherte Prozedur an:
+
+```sql
+USE WideWorldImporters;
+GO
+CREATE PROCEDURE usp_SalesByCustomer @CID int
+AS
+SELECT * FROM Sales.Customers
+WHERE CustomerID = @CID
+GO
+
+SET ANSI_DEFAULTS ON
+GO
+
+EXEC usp_SalesByCustomer 10
+GO
+```
+
+Überprüfen Sie, was Sie mithilfe der folgenden Abfrage im Plancache ermitteln können:
+
+```sql
+SELECT cp.memory_object_address, cp.objtype, refcounts, usecounts, 
+    qs.query_plan_hash, qs.query_hash,
+    qs.plan_handle, qs.sql_handle
+FROM sys.dm_exec_cached_plans AS cp
+CROSS APPLY sys.dm_exec_sql_text (cp.plan_handle)
+CROSS APPLY sys.dm_exec_query_plan (cp.plan_handle)
+INNER JOIN sys.dm_exec_query_stats AS qs ON qs.plan_handle = cp.plan_handle
+WHERE text LIKE '%usp_SalesByCustomer%'
+GO
+```
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+Führen Sie jetzt die gespeicherte Prozedur mit einem anderen Parameter aus, aber nehmen Sie keine anderen Änderungen am Ausführungskontext vor:
+
+```sql
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+Überprüfen Sie nochmal, was Sie im Plancache ermitteln können. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+Beachten Sie, dass der Wert von `usecounts` auf 2 erhöht wurde. Das bedeutet, dass der selbe zwischengespeicherte Plan ohne Änderungen wiederverwendet wurde, da die Datenstrukturen des Ausführungskontexts nochmal verwendet wurden. Ändern Sie nun die `SET ANSI_DEFAULTS`-Option, und führen Sie die gespeicherte Prozedur mit dem gleichen Parameter aus.
+
+```sql
+SET ANSI_DEFAULTS OFF
+GO
+
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+Überprüfen Sie nochmal, was Sie im Plancache ermitteln können. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02B031F111CD01000001000000000000000000000000000000000000000000000000000000
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+Beachten Sie, dass nun zwei Einträge in der dynamische Verwaltungssicht von `sys.dm_exec_cached_plans` enthalten sind:
+-  Die `usecounts`-Spalte zeigt den Wert `1` im ersten Datensatz, d. h. der Plan wurde einmal mit `SET ANSI_DEFAULTS OFF` ausgeführt.
+-  Die `usecounts`-Spalte zeigt den Wert `2` im zweiten Datensatz, d. h. der Plan wurde mit `SET ANSI_DEFAULTS ON` ausgeführt, weil er zweimal ausgeführt wurde.    
+-  Die unterschiedlichen `memory_object_address`-Werte beziehen sich auf verschiedene Ausführungsplaneinträge im Plancache. Der `sql_handle`-Wert gilt jedoch für beide Einträge, weil sie sich auf denselben Batch beziehen. 
+   -  Die Ausführung, bei der OFF für `ANSI_DEFAULTS` festgelegt ist, verfügt über einen neuen `plan_handle` und kann in Aufrufen wiederverwendet werden, die über die gleichen SET-Optionen verfügen. Der neue Planhandle ist erforderlich, weil der Ausführungskontext aufgrund geänderter SET-Optionen neu initialisiert wurde. Dadurch wird jedoch keine Neukompilierung ausgelöst: beide Einträge beziehen sich auf denselben Plan und dieselbe Abfrage, was durch die identischen `query_plan_hash`- und `query_hash`-Werte bestätigt wird.
+
+Das bedeutet schließlich, das zwei Planeinträge für denselben Batch im Cache enthalten sind. Dies unterstreicht die Wichtigkeit davon, dass sichergestellt werden muss, dass die SET-Optionen identisch sind, die sich auf den Plancache auswirken, wenn die gleichen Abfragen wiederholt ausgeführt werden, um die Wiederverwendung des Plans zu optimieren und die Größe des Plancaches auf das erforderliche Mindestmaß zu beschränken. 
+
+> [!TIP]
+> Ein häufig auftretendes Problem besteht darin, dass verschiedene Clients möglicherweise unterschiedliche Standardwerte für die SET-Optionen aufweisen. Bei der Herstellung einer Verbindung über [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wird `QUOTED_IDENTIFIER` beispielsweise auf ON festgelegt, während SQLCMD `QUOTED_IDENTIFIER` auf OFF festgelegt. Wenn die gleichen Abfragen auf diesen zwei Clients ausgeführt werden, führt dies wie im Beispiel oben zu mehreren Plänen.
+
+### <a name="removing-execution-plans-from-the-plan-cache"></a>Entfernen von Ausführungsplänen aus dem Plancache
 Ausführungspläne verbleiben im Plancache, solange ausreichend Speicherplatz für deren Speicherung zur Verfügung steht. Wenn nicht ausreichend Speicherplatz zur Verfügung steht, ermittelt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] kostenbasiert, welche Ausführungspläne aus dem Plancache entfernt werden. Für die kostenbasierte Entscheidung erhöht und senkt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die aktuelle Kostenvariable für sämtliche Ausführungspläne anhand der im Folgenden aufgeführten Faktoren.
 
 Wenn ein Benutzerprozess einen Ausführungsplan in den Cache einfügt, werden die aktuellen Kosten auf die Kosten der ursprünglichen Abfragekompilierung festgelegt. Für Ad-hoc-Ausführungspläne legt der Benutzerprozess die aktuellen Kosten auf 0 (null) fest. Jedes Mal, wenn danach ein Benutzerprozess auf einen Ausführungsplan verweist, werden die aktuellen Kosten auf die ursprünglich kompilierten Kosten zurückgesetzt. Für Ad-hoc-Ausführungspläne erhöht der Benutzerprozess die aktuellen Kosten. Für alle Pläne entspricht der maximale Wert für die aktuellen Kosten den Kosten der ursprünglichen Kompilierung.
@@ -503,14 +679,13 @@ Die `recompile_cause`-Spalte von `sql_statement_recompile` xEvent enthält einen
 
 > [!NOTE]
 > In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Versionen, in denen xEvents nicht verfügbar sind, kann die [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md)-Ablaufverfolgung des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Profiler auch zur Berichterstellung von Neukompilierungen auf Anweisungsebene verwendet werden.
-> Das Ablaufereignis [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) meldet ebenfalls Neukompilierungen, und dieses Ablaufereignis kann auch zum Nachverfolgen und Debuggen von Neukompilierungen verwendet werden. Während „SP:Recompile“ nur für gespeicherte Prozeduren und Trigger generiert wird, wird `SQL:StmtRecompile` für gespeicherte Prozeduren, Trigger, Ad-hoc-Batches, Batches, die mithilfe von `sp_executesql` ausgeführt werden, vorbereitete Abfragen sowie für dynamisches SQL generiert.
+> Das Ablaufverfolgungsereignis `SQL:StmtRecompile` meldet ebenfalls Neukompilierungen, und es kann auch zum Nachverfolgen und Debuggen von Neukompilierungen verwendet werden. Während `SP:Recompile` nur für gespeicherte Prozeduren und Trigger generiert wird, wird `SQL:StmtRecompile` für gespeicherte Prozeduren, Trigger, Ad-hoc-Batches, Batches, die mithilfe von `sp_executesql`ausgeführt werden, vorbereitete Abfragen sowie für dynamisches SQL generiert.
 > Die *EventSubClass*-Spalte von `SP:Recompile` und `SQL:StmtRecompile` enthält einen ganzzahligen Code, der den Grund für die Neukompilierung angibt. Die Codes sind [hier](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) beschrieben.
 
 > [!NOTE]
 > Wenn die Datenbankoption `AUTO_UPDATE_STATISTICS` auf `ON` festgelegt wird, werden Abfragen neu kompiliert, wenn sie Tabellen oder indizierte Sichten betreffen, deren Statistiken aktualisiert wurden oder deren Kardinalitäten sich seit der letzten Ausführung signifikant geändert haben. Dieses Verhalten gilt für standardmäßige benutzerdefinierte Tabellen, temporäre Tabellen und die durch DML-Trigger erstellten eingefügten und gelöschten Tabellen. Wenn sich sehr viele Neukompilierungen auf die Abfrageleistung auswirken, können Sie diese Einstellung in `OFF`ändern. Wenn die `AUTO_UPDATE_STATISTICS`-Datenbankoption auf `OFF` festgelegt wird, werden auf der Grundlage von Statistiken oder wegen Änderungen der Kardinalität keine Neukompilierungen durchgeführt, mit Ausnahme der durch DML `INSTEAD OF`-Trigger erstellten eingefügten und gelöschten Tabellen. Da diese Tabellen in „tempdb“ erstellt wurden, hängt die Neukompilierung von Abfragen, die auf diese Tabellen zugreifen, von der `AUTO_UPDATE_STATISTICS` -Einstellung in „tempdb“ ab. Beachten Sie, dass, auch wenn diese Einstellung auf `OFF` festgelegt ist, Abfragen in früheren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Versionen als 2005 weiterhin auf der Grundlage der Kardinalitätsänderungen in den durch DML-Trigger eingefügten und gelöschten Tabellen noch mal kompiliert werden.
 
 ### <a name="PlanReuse"></a> Parameter und Wiederverwendung von Ausführungsplänen
-
 Durch die Verwendung von Parametern, einschließlich der Parametermarkierungen in ADO-, OLE DB- und ODBC-Anwendungen, kann die Wiederverwendbarkeit von Ausführungsplänen erhöht werden. 
 
 > [!WARNING] 
@@ -579,7 +754,6 @@ WHERE AddressID = 1 + 2;
 Sie kann jedoch nach den Regeln der einfachen Parametrisierung parametrisiert werden. Wenn die erzwungene Parametrisierung einen Fehler erzeugt, wird anschließend die einfache Parametrisierung versucht.
 
 ### <a name="SimpleParam"></a> Einfache Parametrisierung
-
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird durch das Verwenden von Parametern oder Parametermarkierungen in Transact-SQL-Anweisungen die Fähigkeit der relationalen Engine verbessert, neue [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen vorhandenen, zuvor kompilierten Ausführungsplänen zuzuordnen.
 
 > [!WARNING] 
@@ -615,7 +789,6 @@ Beim Standardverhalten der einfachen Parametrisierung parametrisiert [!INCLUDE[s
 Alternativ können Sie angeben, dass eine einzelne Abfrage und alle anderen Abfragen, die in ihrer Syntax gleichwertig sind, und lediglich in ihren Parameterwerten abweichen, parametrisiert werden. 
 
 ### <a name="ForcedParam"></a> Erzwungene Parametrisierung
-
 Sie können das standardmäßige Parametrisierungsverhalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die einfache Parametrisierung, überschreiben, indem Sie angeben, dass alle `SELECT`-, `INSERT`-, `UPDATE`- und `DELETE`-Anweisungen in einer Datenbank mit bestimmten Einschränkungen parametrisiert werden sollen. Die erzwungene Parametrisierung wird aktiviert, indem die `PARAMETERIZATION` -Option in der `FORCED` -Anweisung auf `ALTER DATABASE` festgelegt wird. Indem sie die Frequenz von Anweisungskompilierungen und -neukompilierungen verringert, kann die erzwungene Parametrisierung die Leistungsfähigkeit bestimmter Datenbanken erhöhen. Dabei handelt es sich im Allgemeinen um Datenbanken, die einer großen Anzahl gleichzeitiger Abfragen ausgesetzt sind, wie z. B. Point-of-Sale-Anwendungen.
 
 Wenn die `PARAMETERIZATION` -Option auf `FORCED`festgelegt ist, werden während der Kompilierung der Abfrage alle Literalwerte in `SELECT`-, `INSERT`-, `UPDATE`- oder `DELETE` -Anweisungen, ungeachtet der Form, in der sie übergeben wurden, in Parameter konvertiert. Ausnahmen bilden Literalwerte in folgenden Abfragekonstruktionen: 
@@ -654,7 +827,6 @@ Die Parametrisierung wird auf der Ebene der einzelnen [!INCLUDE[tsql](../include
 > Parameternamen sind willkürlich. Benutzer bzw. Anwendungen sollten sich nicht auf eine bestimmte Namensreihenfolge verlassen. Darüber hinaus kann sich zwischen verschiedenen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Service Pack-Upgrades Folgendes ändern: Parameternamen, die Auswahl der parametrisierten Literale und der Abstand im parametrisierten Text.
 
 #### <a name="data-types-of-parameters"></a>Parameterdatentypen
-
 Beim Parametrisieren von Literalwerten konvertiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Parameter in folgende Datentypen:
 
 * Integer-Literale, die von der Größe her in den int-Datentyp passen, werden beim Parametrisieren in int-Werte konvertiert. Größere Integer-Literale, die Teil von Prädikaten mit Vergleichsoperatoren sind (unter anderem <, \<=, =, !=, >, >=, , !\<, !>, <>, `ALL`, `ANY`, `SOME`, `BETWEEN`, and `IN`) werden beim Parametrisieren in numeric(38,0)-Werte konvertiert. Größere Literale, die nicht Teil von Prädikaten mit Vergleichsoperatoren sind, werden bei der Parametrisierung in numerische Werte mit ausreichenden Ziffern (precision) für ihre Größe und einem Dezimalstellenwert (scale) von 0 konvertiert.
@@ -666,7 +838,6 @@ Beim Parametrisieren von Literalwerten konvertiert [!INCLUDE[ssNoVersion](../inc
 * Literale vom Typ „money“ werden bei der Parametrisierung in money-Werte konvertiert.
 
 #### <a name="ForcedParamGuide"></a> Richtlinien für die Verwendung der erzwungenen Parametrisierung
-
 Berücksichtigen Sie Folgendes, wenn Sie die `PARAMETERIZATION` -Option auf FORCED festlegen:
 
 * Die erzwungene Parametrisierung konvertiert die literalen Konstanten einer Abfrage, sobald diese kompiliert wird, tatsächlich in Parameter. Daher ist es möglich, dass der Abfrageoptimierer nicht die optimalen Abfragepläne auswählt. Insbesondere verringert sich die Wahrscheinlichkeit, dass der Abfrageoptimierer eine Übereinstimmung zwischen der Abfrage und der richtigen indizierten Sicht oder dem Index für eine berechnete Spalte findet. Außerdem wählt der Abfrageoptimierer möglicherweise auch für Abfragen für partitionierte Tabellen und verteilte partitionierte Sichten nicht optimale Abfragepläne aus. Die erzwungene Parametrisierung sollte deshalb nicht in Umgebungen verwendet werden, die sich stark auf indexierte Sichten oder Indizes für berechnete Spalten stützen. Im Allgemeinen sollte die `PARAMETERIZATION FORCED` -Option nur von erfahrenen Datenbankadministratoren verwendet werden, und auch dann nur, wenn diese sichergestellt haben, dass die erzwungene Parametrisierung die Leistung der Datenbank nicht beeinträchtigt.
@@ -681,7 +852,6 @@ Sie können das Verhalten der erzwungenen Parametrisierung überschreiben, indem
 > Wird die `PARAMETERIZATION`-Option auf `FORCED` festgelegt, unterscheiden sich Fehlermeldungen möglicherweise, wenn die Option `PARAMETERIZATION` auf `SIMPLE` festgelegt ist: Eventuell werden mehr Fehlermeldungen unter erzwungener Parametrisierung ausgegeben, und die Zeilennummern, in denen die Fehler aufgetreten sind, werden möglicherweise falsch gemeldet.
 
 ### <a name="preparing-sql-statements"></a>Vorbereiten von SQL-Anweisungen
-
 Die relationale Engine von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bietet vollständige Unterstützung für die Vorbereitung von [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen vor ihrer Ausführung. Wenn eine Anwendung eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung mehrfach ausführen muss, kann mithilfe der Datenbank-API Folgendes erreicht werden: 
 
 * Einmaliges Vorbereiten der Anweisung. Mit diesem Schritt wird die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung zu einem Ausführungsplan kompiliert.
@@ -734,7 +904,6 @@ Weitere Informationen zur Problembehandlung bei fehlerhafter Parameterermittlung
 > Für Abfragen, die den `RECOMPILE`-Hinweis verwenden, werden jeweils die Parameterwerte und aktuellen Werte der lokalen Variablen ermittelt. Die ermittelten Werte (der Parameter und lokalen Variablen) sind die, die an dem Ort direkt vor der Anweisung mit dem `RECOMPILE`-Hinweis vorhanden sind. Im Gegensatz dazu werden bei Parametern die Werte, die innerhalb des Batchaufrufs übermittelt werden, nicht geprüft.
 
 ## <a name="parallel-query-processing"></a>Parallele Abfrageverarbeitung
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ermöglicht parallele Abfragen, um die Abfrageausführung und Indexvorgänge für Computer zu optimieren, die über mehrere Mikroprozessoren (CPUs) verfügen. Da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mehrere Betriebssystem-Arbeitsthreads verwenden kann, um eine Abfrage oder einen Indexvorgang parallel auszuführen, kann der betreffende Vorgang schnell und effizient ausgeführt werden.
 
 Während der Abfrageoptimierung sucht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nach Abfragen oder Indexvorgängen, für die eine parallele Ausführung vorteilhaft ist. Für diese Abfragen fügt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Verteilungsoperatoren in den Abfrageausführungsplan ein, um die Abfrage für die parallele Ausführung vorzubereiten. Ein Verteilungsoperator ist ein Operator in einem Plan für die Abfrageausführung, der die Prozessverwaltung, die Neuverteilung der Daten und die Ablaufsteuerung ermöglicht. Der Verteilungsoperator schließt die logischen Operatoren `Distribute Streams`, `Repartition Streams`und `Gather Streams` als Untertypen ein. Einer oder mehrere dieser Operatoren können in der Showplanausgabe eines Abfrageplans für eine parallele Abfrage enthalten sein. 
@@ -766,23 +935,22 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ver
 * Die Abfrage enthält skalare oder relationale Operatoren, die nicht parallel ausgeführt werden können. Bestimmte Operatoren können verursachen, dass ein Abschnitt des Ausführungsplans oder der gesamte Plan im seriellen Modus ausgeführt wird.
 
 ### <a name="DOP"></a> Grad der Parallelität
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erkennt automatisch den am besten geeigneten Grad an Parallelität für jede Instanz einer parallelen Abfrageausführung oder eines DDL-Indizierungsvorgangs (Data Definition Language). Dazu werden die folgenden Kriterien untersucht: 
 
 1. Wird [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem Computer mit mehreren Mikroprozessoren (oder CPUs) ausgeführt wie z. B. auf einem symmetrischen Multiprozessorcomputer (Symmetric Multiprocessing, SMP)?  
-  Nur Computer mit mehreren CPUs können parallele Abfragen verwenden. 
+   Nur Computer mit mehreren CPUs können parallele Abfragen verwenden. 
 
 2. Sind ausreichend Arbeitsthreads verfügbar?  
-  Jeder Abfrage- oder Indexvorgang setzt zu seiner Ausführung eine bestimmte Anzahl von Arbeitsthreads voraus. Das Ausführen eines parallelen Plans erfordert mehr Arbeitsthreads als ein serieller Plan, und die Anzahl der erforderlichen Arbeitsthreads steigt mit dem Grad der Parallelität. Wenn die Arbeitsthreadanforderung des parallelen Plans für einen bestimmten Grad der Parallelität nicht erfüllt werden kann, reduziert [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] den Grad an Parallelität automatisch oder verwirft den parallelen Plan in dem angegebenen Arbeitsauslastungskontext. Stattdessen wird der serielle Plan (ein Arbeitsthread) ausgeführt. 
+   Jeder Abfrage- oder Indexvorgang setzt zu seiner Ausführung eine bestimmte Anzahl von Arbeitsthreads voraus. Das Ausführen eines parallelen Plans erfordert mehr Arbeitsthreads als ein serieller Plan, und die Anzahl der erforderlichen Arbeitsthreads steigt mit dem Grad der Parallelität. Wenn die Arbeitsthreadanforderung des parallelen Plans für einen bestimmten Grad der Parallelität nicht erfüllt werden kann, reduziert [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] den Grad an Parallelität automatisch oder verwirft den parallelen Plan in dem angegebenen Arbeitsauslastungskontext. Stattdessen wird der serielle Plan (ein Arbeitsthread) ausgeführt. 
 
 3. Welcher Abfragetyp oder Indexvorgangstyp soll ausgeführt werden?  
-  Indexvorgänge, die einen Index erstellen oder neu erstellen oder einen gruppierten Index löschen, sowie Abfragen, die sehr viele CPU-Zyklen beanspruchen, eignen sich am besten für einen parallelen Plan. So sind z. B. Joins großer Tabellen, umfassende Aggregationen und Sortierungen großer Resultsets gut geeignet. Für einfache Abfragen, die häufig in transaktionsverarbeitenden Anwendungen eingesetzt werden, wird der zusätzliche Aufwand, der für die Koordinierung einer parallelen Abfrageausführung erforderlich ist, durch die erwartete Leistungssteigerung in der Regel nicht gerechtfertigt. Um zu ermitteln, für welche Abfragen die parallele Ausführung sinnvoll ist und für welche dies nicht gilt, vergleicht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die geschätzten Kosten für die Ausführung der Abfrage oder des Indexvorgangs mithilfe des [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)-Werts (Kostenschwellenwert für Parallelität). Benutzer können den Standardwert 5 mithilfe von [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ändern, wenn durch einen richtigen Test ermittelt wurde, dass ein anderer Wert besser für die ausgeführte Workload geeignet ist. 
+   Indexvorgänge, die einen Index erstellen oder neu erstellen oder einen gruppierten Index löschen, sowie Abfragen, die sehr viele CPU-Zyklen beanspruchen, eignen sich am besten für einen parallelen Plan. So sind z. B. Joins großer Tabellen, umfassende Aggregationen und Sortierungen großer Resultsets gut geeignet. Für einfache Abfragen, die häufig in transaktionsverarbeitenden Anwendungen eingesetzt werden, wird der zusätzliche Aufwand, der für die Koordinierung einer parallelen Abfrageausführung erforderlich ist, durch die erwartete Leistungssteigerung in der Regel nicht gerechtfertigt. Um zu ermitteln, für welche Abfragen die parallele Ausführung sinnvoll ist und für welche dies nicht gilt, vergleicht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die geschätzten Kosten für die Ausführung der Abfrage oder des Indexvorgangs mithilfe des [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)-Werts (Kostenschwellenwert für Parallelität). Benutzer können den Standardwert 5 mithilfe von [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ändern, wenn durch einen richtigen Test ermittelt wurde, dass ein anderer Wert besser für die ausgeführte Workload geeignet ist. 
 
 4. Gibt es eine ausreichende Anzahl von zu verarbeitenden Zeilen?  
-  Wenn der Abfrageoptimierer ermittelt, dass die Anzahl der Zeilen zu niedrig ist, werden keine Verteilungsoperatoren eingesetzt, um die Zeilen zu verteilen. Demzufolge werden die Operatoren seriell ausgeführt. Durch das Ausführen der Operatoren in einem seriellen Plan werden Situationen vermieden, in denen die Kosten für Start, Verteilung und Koordinierung den Nutzen übersteigen, der durch die parallele Ausführung der Operatoren erzielt würde.
+   Wenn der Abfrageoptimierer ermittelt, dass die Anzahl der Zeilen zu niedrig ist, werden keine Verteilungsoperatoren eingesetzt, um die Zeilen zu verteilen. Demzufolge werden die Operatoren seriell ausgeführt. Durch das Ausführen der Operatoren in einem seriellen Plan werden Situationen vermieden, in denen die Kosten für Start, Verteilung und Koordinierung den Nutzen übersteigen, der durch die parallele Ausführung der Operatoren erzielt würde.
 
 5. Sind aktuelle Verteilungsstatistiken verfügbar?  
-  Wenn der höchste Grad der Parallelität nicht möglich ist, werden zunächst niedrigere Grade in Betracht gezogen, bevor der parallele Plan verworfen wird.  
+   Wenn der höchste Grad der Parallelität nicht möglich ist, werden zunächst niedrigere Grade in Betracht gezogen, bevor der parallele Plan verworfen wird.  
   Wenn Sie z. B. einen gruppierten Index für eine Sicht erstellen, können die Statistiken nicht ausgewertet werden, weil der gruppierte Index noch nicht vorhanden ist. In diesem Fall kann [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] nicht den höchsten Grad der Parallelität für den Indexvorgang bereitstellen. Allerdings können einige Vorgänge, wie z. B. das Sortieren und Scannen, von der parallelen Ausführung profitieren.
 
 > [!NOTE]
@@ -795,7 +963,6 @@ In einem parallelen Abfrageausführungsplan werden die Vorgänge zum Einfügen, 
 Statische Cursor und keysetgesteuerte Cursor können durch parallele Ausführungspläne aufgefüllt werden. Das spezifische Verhalten dynamischer Cursor kann jedoch nur durch die serielle Ausführung gewährleistet werden. Für eine Abfrage, die Teil eines dynamischen Cursors ist, generiert der Abfrageoptimierer immer einen seriellen Ausführungsplan.
 
 #### <a name="overriding-degrees-of-parallelism"></a>Überschreiben der Grade der Parallelität
-
 Mithilfe der Serverkonfigurationsoption [Max. Grad an Parallelität](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) in [!INCLUDE[ssSDS_md](../includes/sssds-md.md)] ) kann die Anzahl der Prozessoren beschränkt werden, die bei der Ausführung paralleler Pläne verwendet werden. Die Option „Max. Grad an Parallelität“ kann jedoch für einzelne Abfrage- und Indexvorgangsanweisungen überschrieben werden, indem der MAXDOP-Abfragehinweis oder die MAXDOP-Indexoption angegeben wird. MAXDOP bietet mehr Kontrolle über einzelne Abfrage- und Indexvorgänge. Sie können z.B. die MAXDOP-Option verwenden, um durch Erhöhen oder Reduzieren eine Steuerung der Anzahl der einem Onlineindexvorgang zugewiesenen Prozessoren zu bewirken. Auf diese Weise können Sie die Ressourcen, die von dem Indexvorgang verwendet werden, mit den Ressourcen gleichzeitiger Benutzer ausgleichen. 
 
 Wenn die Option „Max. Grad an Parallelität“ auf 0 (Standard) festgelegt wurde, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle verfügbaren Prozessoren (maximal 64) zur Ausführung paralleler Pläne verwenden. Obwohl [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein Laufzeitziel von 64 logischen Prozessoren festlegt, wenn MAXDOP auf 0 festgelegt ist, kann falls nötig ein anderer Wert manuell festgelegt werden. Wenn MAXDOP für Abfragen und Indizes auf 0 (null) festgelegt wurde, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle verfügbaren Prozessoren (maximal 64) zur Ausführung paralleler Pläne für die jeweiligen Abfragen oder Indizes verwenden. MAXDOP ist kein erzwungener Wert für alle parallelen Abfragen, sondern eher ein Ziel mit Vorbehalt für alle Abfragen, die für die Parallelität qualifiziert sind. Das bedeutet, dass wenn nicht genügend Arbeitsthreads zur Laufzeit vorhanden sind, eine Abfrage möglicherweise mit einem niedrigeren Grad der Parallelität als die MAXDOP-Serverkonfigurationsoption ausgeführt wird.
@@ -803,7 +970,6 @@ Wenn die Option „Max. Grad an Parallelität“ auf 0 (Standard) festgelegt wur
 Bewährte Methoden zum Konfigurieren von MAXDOP finden Sie im [Microsoft Support-Artikel](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server).
 
 ### <a name="parallel-query-example"></a>Beispiel für eine parallele Abfrage
-
 In der folgenden Abfrage wird die Anzahl der Bestellungen gezählt, die in einem bestimmten Quartal, beginnend mit dem 1. April 2000, aufgegeben wurden und in denen mindestens ein Artikel der Bestellung vom Kunden erst nach dem angekündigten Datum empfangen wurde. Die Abfrage listet die Anzahl dieser Bestellungen gruppiert nach Priorität der Bestellung und in aufsteigender Reihenfolge der Priorität auf. 
 
 In diesem Beispiel werden erfundene Tabellen- und Spaltennamen verwendet.
@@ -913,7 +1079,6 @@ Die Hauptphasen eines parallelen Indexvorgangs umfassen Folgendes:
 Einzelne `CREATE TABLE` - oder `ALTER TABLE` -Anweisungen können über mehrere Einschränkungen verfügen, die die Erstellung eines Indexes erforderlich machen. Diese mehrfachen Indexerstellungsvorgänge werden seriell durchgeführt, obwohl jeder einzelne Indexerstellungsvorgang auf einem Computer mit mehreren CPUs als paralleler Vorgang ausgeführt werden kann.
 
 ## <a name="distributed-query-architecture"></a>Architektur verteilter Abfragen
-
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt zwei Methoden, um auf heterogene OLE DB-Datenquellen in [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen zu verweisen:
 
 * Verbindungsservernamen  
@@ -1013,16 +1178,15 @@ Die folgende Abbildung zeigt die Eigenschaften des `Clustered Index Seek` -Opera
 
 #### <a name="partitioned-attribute"></a>Das Partitioned-Attribut
 
-Wenn ein Operator wie `Index Seek` für eine partitionierte Tabelle oder einen partitionierten Index ausgeführt wird, enthalten der Kompilierzeit- und der Laufzeitausführungsplan das Attribut `Partitioned` , das auf `True` (1) festgelegt wird. Das Attribut wird nicht angezeigt, wenn es auf `False` (0) gesetzt ist.
+Wenn ein Operator wie „Index Seek“ für eine partitionierte Tabelle oder einen partitionierten Index ausgeführt wird, enthalten der Kompilierzeit- und Laufzeitplan das Attribut `Partitioned`, das auf `True` (1) festgelegt wird. Das Attribut wird nicht angezeigt, wenn es auf `False` (0) gesetzt ist.
 
 Das `Partitioned` -Attribut kann in den folgenden physischen und logischen Operatoren erscheinen:  
-* `Table Scan`  
-* `Index Scan`  
-* `Index Seek`  
-* `Insert`  
-* `Update`  
-* `Delete`  
-* `Merge`  
+|||
+|--------|--------|
+|Table Scan|Index Scan|
+|Index Seek|Einfügen|
+|Aktualisieren|Löschen|
+|Merge||
 
 Wie in der obigen Abbildung zu sehen, wird das Attribut in den Eigenschaften des Operators, in dem es definiert ist, angezeigt. In der XML-Showplanausgabe erscheint das Attribut als `Partitioned="1"` im `RelOp` -Knoten des Operators, in dem es definiert ist.
 

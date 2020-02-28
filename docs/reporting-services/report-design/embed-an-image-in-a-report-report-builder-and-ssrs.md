@@ -1,5 +1,5 @@
 ---
-title: Einbetten eines Bilds in einen Bericht (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Einbetten eines Bilds in einen Bericht (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8da5d6851b9cf042d1b04e72b9c58257f9f9f509
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: acdbae6c6654494abe5cb498211cfb77cf0ad891
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579329"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080442"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Einbetten eines Bilds in einen Bericht (Berichts-Generator und SSRS)
   Ein Bericht kann ein eingebettetes Bild enthalten. Durch das Einbetten eines Bilds wird sichergestellt, dass das Bild immer für den Bericht verfügbar ist. Gleichzeitig nimmt allerdings die Größe der Berichtsdefinition zu; das ist die Datei, die den Bericht definiert. Die in einen Bericht eingebetteten Bilder werden im Berichtsdatenbereich aufgeführt.  

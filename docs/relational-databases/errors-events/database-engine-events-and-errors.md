@@ -1,7 +1,7 @@
 ---
 title: Datenbank-Engine (Fehler und Ereignisse)
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -9,16 +9,27 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 941dbe32355ef158f0a0a07c16e5181653738cb1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3ed6d0a694370cf6dbaa14ea861bf3d0d6c618f7
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76918190"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146280"
 ---
 # <a name="database-engine-errors"></a>Fehler der Datenbank-Engine
 
 Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den Fehlermeldungstext aus der sys.messages-Katalogansicht. Gegebenenfalls wird mit der Fehlernummer auf weitere Informationen verwiesen.
+
+Diese Liste ist nicht vollständig. Für eine vollständige Liste der Fehler führen Sie die folgende Abfrage für die sys.messages-Katalogansicht aus:
+
+```sql
+SELECT message_id AS Error, severity AS Severity,  
+[Event Logged] = CASE is_event_logged WHEN 0 THEN 'No' ELSE 'Yes' END,
+text AS [Description]
+FROM sys.messages
+WHERE language_id = <desired language, such as 1033 for US English>
+ORDER BY message_id
+```
 
 ## <a name="errors--2-to-999"></a>Fehler –2 bis 999
 
@@ -574,11 +585,35 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   971 |   10  |   Nein  |   Die Ressourcendatenbank wurde an zwei verschiedenen Speicherorten erkannt. Die Ressourcendatenbank wird an dasselbe Verzeichnis angefügt wie "sqlservr.exe" bei "%.*ls" und nicht an die derzeit angefügte Ressourcendatenbank bei "%.* ls".    |
 |   972 |   17  |   Nein  |   Datenbank '%d' konnte nicht während der Ausführung der Prozedur verwendet werden. |
 |   973 |   10  |   Ja |   Die %ls-Datenbank wurde gestartet. FILESTREAM ist jedoch nicht mit den Optionen READ_COMMITTED_SNAPSHOT und ALLOW_SNAPSHOT_ISOLATION kompatibel. Entfernen Sie die FILESTREAM-Dateien und die FILESTREAM-Dateigruppen, oder legen Sie READ_COMMITTED_SNAPSHOT und ALLOW_SNAPSHOT_ISOLATION auf OFF fest.   |
+|974 | 10  | Nein  |  Fehler beim Anfügen der Ressourcendatenbank im selben Verzeichnis wie „sqlservr.exe“ bei '%.*ls', da die Datenbankdateien nicht vorhanden sind.|
+|975 | 10  | Ja |  In der '%.*ls'-Datenbank konnten keine Systemobjekte aktualisiert werden, da sie schreibgeschützt ist. |
+|976 | 14  | Nein  |  Die Zieldatenbank '%.*ls' gehört einer Verfügbarkeitsgruppe an und ist derzeit nicht für Abfragen verfügbar. Entweder die Datenverschiebung wurde angehalten, oder für das Verfügbarkeitsreplikat wurde kein Schreibzugriff aktiviert. Um den schreibgeschützten Zugriff auf diese und andere Datenbanken in der Verfügbarkeitsgruppe zuzulassen, […]. |
+|977 | 10 |  Nein  |  Warnung: Der zugeordnete Index für die Einschränkung '%.*ls' für object_id '%d' in der '%.* ls'-Datenbank wurde nicht gefunden.|
+|978 | 14 |  Nein  |  Die Zieldatenbank ('%.*ls') ist in einer Verfügbarkeitsgruppe enthalten und derzeit für Verbindungen verfügbar, wenn der Anwendungszweck auf „Schreibgeschützt“ festgelegt ist. Weitere Informationen zum Anwendungszweck finden Sie in der SQL Server-Onlinedokumentation. |
+|979  | 14 | Nein  |  Die Zieldatenbank ('%.*ls') ist in einer Verfügbarkeitsgruppe enthalten und lässt derzeit keine schreibgeschützten Verbindungen zu. Weitere Informationen zum Anwendungszweck finden Sie in der SQL Server-Onlinedokumentation.|
+|980 |  21 |  Ja |  Die '%.*ls'-Datenbank kann von SQL Server nicht geladen werden, da sie einen Columnstore-Index enthält. Columnstore-Indizes werden von der derzeit installierten SQL Server-Edition |nicht unterstützt. Deaktivieren Sie entweder den Columnstore-Index in der Datenbank mithilfe einer unterstützten SQL Server-Edition, […].|
+|981  |  10 | Nein | Der Datenbank-Manager verwendet die Zieldatenbankversion %d. |
+|982  |  14 | Nein | Auf die '%.*ls'-Datenbank kann nicht zugegriffen werden, weil für kein online verfügbares sekundäres Replikat der schreibgeschützte Zugriff aktiviert wurde. Überprüfen Sie die Konfiguration der Verfügbarkeitsgruppe, um sicherzustellen, dass mindestens ein sekundäres Replikat für den schreibgeschützten Zugriff konfiguriert ist. Warten Sie, bis ein aktiviertes Replikat […].|
+|983 |  14  | Nein | Auf die Verfügbarkeitsdatenbank '%.*ls' kann nicht zugegriffen werden, weil sich das Datenbankreplikat nicht in der PRIMARY-Rolle oder SECONDARY-Rolle befindet. Verbindungen mit einer Verfügbarkeitsdatenbank sind nur zulässig, wenn sich das Datenbankreplikat in der PRIMARY-Rolle oder SECONDARY-Rolle befindet. Wiederholen Sie den Vorgang später. |
+|984 | 21  | Ja | Fehler beim Kopieren von „sqlscriptdowngrade.dll“ mit Versionsangabe von „Binn“ in den Ordner „Binn\Cache“. Fehler bei VerInstallFile-API mit Fehlercode %d.|
+|985 |  10 | Ja  |      Die Datei '%ls' wurde erfolgreich im Ordner '%ls' installiert. |
+|986 |  10 | Nein   |     Nach %d Versuchen konnte keine saubere Startseite für die Datenbank '%.*ls' abgerufen werden. Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich. |
+|987 |  23  |    Ja | Beim Aktualisieren von Systemobjekten in der Datenbank '%.*ls' wurde ein Zeichen doppelt eingegeben.|
+|988 |  14  |    Nein  | Auf die Datenbank '%.*ls' kann nicht zugegriffen werden, weil das für Hochverfügbarkeit erforderliche Quorum von Knoten fehlt. Versuchen Sie es später erneut.|
+|989 |  16  |    Nein  | Die Hostdatenbank mit der ID %d konnte nicht offline geschaltet werden, während mindestens eine ihrer Partitionsdatenbanken als fehlerverdächtig gekennzeichnet war.|
+|990 |  16  |    Nein  | Die Hostdatenbank mit der ID %d wird offline geschaltet, weil mindestens eine ihrer Partitionsdatenbanken als fehlerverdächtig gekennzeichnet ist.|
+|991 |  16  |    Nein  | Die '%.*ls'-Hostdatenbank konnte nicht offline geschaltet werden, während mindestens eine ihrer Partitionsdatenbanken als fehlerverdächtig gekennzeichnet war.|
+|992 |  16  |    Nein  | Fehler beim Abrufen der gemeinsamen Sperre für Datenbank '%.*ls'.|
+|993 |  10  |    Nein  | Wiederholen des für die Datenbank '%.*ls' angewendeten Versionsupgradeschritts %d auf %d.|
+|994 |  10  |    Nein  | Warnung: Der Index „%.*ls“ für „%.* ls“. „%.*ls“ ist deaktiviert, weil er eine berechnete Spalte enthält.|
+|995 |  10  |    Nein  | Warnung: Der Index „%.*ls“ für „%.* ls“. „%.*ls“ ist deaktiviert. Er kann nicht aktualisiert werden, weil er in einer schreibgeschützten Dateigruppe gespeichert ist.|
+|996 |  10  |    Nein  | Warnung: Der Index „%.*ls“ für „%.* ls“. „%.*ls“ ist deaktiviert. Dieser Columnstore-Index kann nicht aktualisiert werden (wahrscheinlich, weil er den Grenzwert für die Tabellengröße von '%d' Bytes überschreitet).|
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
+
 
 ## <a name="errors-1000-to-1999"></a>Fehler 1.000 bis 1.999
 
-| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
+| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   Nein  |   Zeile %d: Längen- oder Präzisionsangabe %d ist ungültig.   |
 |   1002    |   16  |   Nein  |   Zeile %d: Angegebene Skala %d ist nicht gültig. |
@@ -1824,7 +1859,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-4000-to-4999"></a>Fehler 4.000 bis 4.999
 
-| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
+| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   Nein  |   Der Client sendet eine sp_reset_connection, obwohl noch Anforderungen ausstehen. Die Verbindung mit dem Server wird getrennt.  |
 |   4002    |   16  |   Nein  |   Der eingehende Datenstrom des TDS-Protokolls (Tabular Data Stream) ist nicht richtig. Der Datenstrom endete unerwartet. |
@@ -2158,11 +2193,12 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   4863    |   16  |   Nein  |   Datenkonvertierungsfehler (Abschneiden) beim Massenladen für %d-Zeile, %d-Spalte (%ls).   |
 |   4864    |   16  |   Nein  |   Datenkonvertierungsfehler beim Massenladen (Typenkonflikt oder ungültiges Zeichen für die angegebene Codepage) für %d-Zeile, %d-Spalte (%ls).    |
 |   4865    |   16  |   Nein  |   Das Massenladen ist nicht möglich, da die maximale Fehleranzahl (%d) überschritten wurde.    |
-|   4866    |   16  |   Nein  |   Fehler beim Massenladen. Die Spalte in der Datendatei ist zu lang für %d-Zeile, %d-Spalte. Überprüfen Sie, ob das Feldabschlusszeichen und das Zeilenabschlusszeichen richtig angegeben sind.   |
+|   4866    |   16  |   Nein  |   Fehler beim Massenladen. Die Spalte in der Datendatei ist zu lang für %d-Zeile, %d-Spalte. Überprüfen Sie, ob das Feldabschlusszeichen und das Zeilenabschlusszeichen richtig angegeben sind.   | Fehler beim Massenladen aufgrund eines ungültigen Spaltenwerts in der CSV-Datendatei %ls in Zeile %d, Spalte %d. | 
 |   4867    |   16  |   Nein  |   Datenkonvertierungsfehler (Überlauf) beim Massenladen für %d-Zeile, %d-Spalte (%ls). |
 |   4868    |   16  |   Nein  |   Fehler beim Massenladen. Die Codepage '%d' ist nicht installiert. Installieren Sie die Codepage, und führen Sie den Befehl erneut aus.   |
 |   4869    |   16  |   Nein  |   Fehler beim Massenladen. Unerwarteter NULL-Wert in der Datendatei %d-Zeile, %d-Spalte. Die Zielspalte (%ls) ist als NOT NULL definiert.    |
 |   4870    |   16  |   Nein  |   Das Massenladen ist aufgrund eines Fehlers beim Schreiben der Datei '%ls' nicht möglich. Betriebssystemfehlercode %ls.   |
+|   4879    |   16  |   Nein  | 
 |   4871    |   16  |   Nein  |   Massenladefehler beim Protokollieren von Fehlern. |
 |   4872    |   16  |   Nein  |   %d-Zeile in der Formatdatei '%ls': doppelte Element-ID '%ls'.   |
 |   4873    |   16  |   Nein  |   %d-Zeile in der Formatdatei '%ls': Verweis auf nicht vorhandene Element-ID '%ls'.    |
@@ -2663,7 +2699,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-6000-to-6999"></a>Fehler 6.000 bis 6.999
 
-| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   6001    |   10  |   Nein  |   SHUTDOWN wartet auf den Abschluss von %d Prozess(en). |
 |   6004    |   10  |   Nein  |   Der Benutzer besitzt nicht die Berechtigung zum Ausführen dieser Aktion.   |
@@ -5897,7 +5933,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-15000-to-15999"></a>Fehler 15.000 bis 15.999
 
-| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   15001   |   16  |   Nein  |   Das '%ls'-Objekt ist nicht vorhanden oder kein gültiges Objekt für diesen Vorgang.    |
 |   15002   |   16  |   Nein  |   Die '%'-Prozedur kann in einer Transaktion nicht ausgeführt werden. |
@@ -6886,7 +6922,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-19000-to-20999"></a>Fehler 19.000 bis 20.999
 
-| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   19030   |   10  |   Ja |   Die SQL-Ablaufverfolgung mit der ID %d wurde vom Anmeldenamen "%s" gestartet.  |
 |   19031   |   10  |   Ja |   Die SQL-Ablaufverfolgung wurde beendet. Ablaufverfolgungs-ID = '%d'. Anmeldename = '%s'.  |
@@ -8332,7 +8368,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-23000-to-25999"></a>Fehler 23.000 bis 25.999
 
-| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   23003   |   17  |   Nein  |   Die WinFS-Freigabeberechtigungen sind beschädigt {Fehler: %d}. Versuchen Sie, die Freigabeberechtigungen erneut festzulegen. |
 |   23100   |   16  |   Nein  |   Ungültige(r) Eingabeparameter. |
@@ -8814,7 +8850,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 
 ## <a name="errors-31000-to-41400"></a>Fehler 31.000 bis 41.400
 
-| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   31001   |   16  |   Nein  |   Die Sitzung '%s' ist bereits vorhanden. Verwenden Sie einen anderen Sitzungsnamen.  |
 |   31002   |   16  |   Nein  |   Dieser Vorgang kann nur vom Sitzungsbesitzer ausgeführt werden.   |

@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren der Serverkonfigurationsoption „Max. Grad an Parallelität“ | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -16,17 +16,23 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2e0296f410c84705e0a31ed6ab3e347b188c180e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 47b9704591acd305a49ff315eb99314f14e87af1
+ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72260338"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259224"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Max. Grad an Parallelität (MAXDOP)** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer mit mehreren Mikroprozessoren oder CPUs ausgeführt wird, wird der Grad an Parallelität erkannt, also die Anzahl von Prozessoren, die für die Ausführung einer einzelnen Anweisung eingesetzt werden. Dies gilt für jede Ausführung eines parallelen Plans. Mithilfe der Option **Max. Grad an Parallelität** kann die Anzahl der Prozessoren beschränkt werden, die bei der Ausführung paralleler Pläne verwendet werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Ausführung paralleler Pläne für Abfragen, DDL-Indizierungsvorgänge (Data Definition Language, DDL), parallele Einfügevorgänge, Onlineausführung von ALTER COLUMN, parallele Sammlung von Statistiken sowie die statische und keysetgesteuerte Cursorauffüllung.
+  In diesem Artikel wird beschrieben, wie Sie die Serverkonfigurationsoption **Max. Grad an Parallelität (MAXDOP)** in SQL Server mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] konfigurieren. Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer mit mehreren Mikroprozessoren oder CPUs ausgeführt wird, wird der Grad an Parallelität erkannt, also die Anzahl von Prozessoren, die für die Ausführung einer einzelnen Anweisung eingesetzt werden. Dies gilt für jede Ausführung eines parallelen Plans. Mithilfe der Option **Max. Grad an Parallelität** kann die Anzahl der Prozessoren beschränkt werden, die bei der Ausführung paralleler Pläne verwendet werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Ausführung paralleler Pläne für Abfragen, DDL-Indizierungsvorgänge (Data Definition Language, DDL), parallele Einfügevorgänge, Onlineausführung von ALTER COLUMN, parallele Sammlung von Statistiken sowie die statische und keysetgesteuerte Cursorauffüllung.
+
+> [!NOTE]
+> Mit [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] wurden automatische Empfehlungen zum Festlegen des MAXDOP-Werts während des Installationsvorgangs eingeführt. Auf der Setupbenutzeroberfläche können Sie entweder die empfohlenen Einstellungen übernehmen oder diese anpassen. Weitere Informationen finden Sie in den folgenden Artikeln:
+>  - [MaxDOP Added to SQL 2019 Setup (MAXDOP wurde zum SQL 2019-Setup hinzugefügt)](https://techcommunity.microsoft.com/t5/premier-field-engineering/maxdop-added-to-sql-2019-ctp3-0-setup/ba-p/780071)
+>  - [SQL Server 2019 Installation Enhancements for MAXDOP and Max Memory (Verbesserungen der SQL Server 2019-Installation für MAXDOP und Max Memory)](https://www.mssqltips.com/sqlservertip/6211/sql-server-2019-installation-enhancements-for-maxdop-and-max-memory/)
+>
 
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -49,9 +55,9 @@ ms.locfileid: "72260338"
 -   Neben Abfragen und Indexoperationen steuert diese Option auch die Parallelität von DBCC CHECKTABLE, DBCC CHECKDB und DBCC CHECKFILEGROUP. Sie können Pläne für die parallele Ausführung für diese Anweisungen deaktivieren, und zwar mithilfe des Ablaufverfolgungsflags 2528. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Verwenden Sie den **Abfragehinweis** [MAXDOP](../../t-sql/queries/hints-transact-sql-query.md), um dies auf Abfrageebene zu erreichen.     
+> Verwenden Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**, um dies auf Abfrageebene zu erreichen.     
 > Verwenden Sie den **MAXDOP**-Wert der auf die [Datenbank beschränkten Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), um dies auf Datenbankebene zu erreichen.      
-> Verwenden Sie die **Resource Governor-Konfigurationsoption** MAX_DOP[ für die Arbeitsauslastungsgruppe](../../t-sql/statements/create-workload-group-transact-sql.md), um dies auf Arbeitsauslastungsebene zu erreichen.      
+> Verwenden Sie die [Resource Governor-Konfigurationsoption **MAX_DOP** für die Arbeitsauslastungsgruppe](../../t-sql/statements/create-workload-group-transact-sql.md), um dies auf Arbeitsauslastungsebene zu erreichen.      
 
 ###  <a name="Guidelines"></a> Richtlinien  
 Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] werden beim Starten des Diensts standardmäßig automatisch Soft-NUMA-Knoten erstellt, wenn [!INCLUDE[ssde_md](../../includes/ssde_md.md)] beim Startup mehr als acht physische Kerne pro NUMA-Knoten oder Socket erkennt. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] platziert logische Prozessoren aus dem gleichen physischen Kern in verschiedene Soft-NUMA-Knoten. Die Empfehlungen in der folgenden Tabelle sollen alle Arbeitsthreads einer parallelen Abfrage innerhalb des gleichen NUMA-Knotens beibehalten. Dies verbessert die Leistung der Abfragen und die Verteilung von Arbeitsthreads in allen NUMA-Knoten für die Workload. Weitere Informationen finden Sie unter [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
@@ -69,7 +75,7 @@ Verwenden Sie ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] die folgenden
 > Der NUMA-Knoten in der obigen Tabelle bezieht sich auf automatisch von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höheren Versionen erstellte Soft-NUMA-Knoten oder auf hardwarebasierte NUMA-Knoten, wenn Soft-NUMA deaktiviert wurde.   
 >  Verwenden Sie dieselben Richtlinien, wenn Sie die Option „Max. Grad an Parallelität“ für Resource Governor-Arbeitsauslastungsgruppen festlegen. Weitere Informationen finden Sie unter [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
   
-Verwenden Sie von [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]bis[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] die folgenden Richtlinien beim Konfigurieren des Serverkonfigurationswerts **Max. Grad an Parallelität**:
+Verwenden Sie von **bis** die folgenden Richtlinien beim Konfigurieren des Serverkonfigurationswerts [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]Max. Grad an Parallelität[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]:
 
 ||||
 |----------------|-----------------|-----------------|
@@ -118,7 +124,7 @@ GO
   
  Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Option Max. Grad an Parallelität  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Option „Max. Grad an Parallelität“  
  Die Einstellung tritt ohne Neustarten des Servers sofort in Kraft.  
   
 ## <a name="see-also"></a>Weitere Informationen  

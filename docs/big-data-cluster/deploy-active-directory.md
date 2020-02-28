@@ -1,20 +1,20 @@
 ---
-title: Bereitstellen eines SQL Server-Big Data-Clusters im Active Directory-Modus
-titleSuffix: Deploy SQL Server Big Data Cluster in Active Directory mode
+title: Bereitstellen im Active Directory-Modus
+titleSuffix: SQL Server Big Data Cluster
 description: Erfahren Sie, wie Sie für einen SQL Server-Big Data-Cluster in einer Active Directory-Domäne ein Upgrade durchführen.
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/02/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253110"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544876"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus
 
@@ -164,23 +164,23 @@ Zusätzlich zu den Umgebungsvariablen für die Anmeldeinformationen müssen Sie 
 
 Für die AD-Integration sind die folgenden Parameter erforderlich. Fügen Sie diese Parameter zu den Dateien `control.json` und `bdc.json` hinzu, indem Sie die später in diesem Artikel beschriebenen `config replace`-Befehle verwenden. In allen nachstehenden Beispielen wird die Domäne `contoso.local` verwendet.
 
-- `security.ouDistinguishedName`: DN (Distinguished Name) einer Organisationseinheit (OE), in der alle während der Clusterbereitstellung erstellten AD-Konten gespeichert werden. Wenn die Domäne den Namen `contoso.local` aufweist, lautet der DN der Organisationseinheit `OU=BDC,DC=contoso,DC=local`.
+- `security.activeDirectory.ouDistinguishedName`: DN (Distinguished Name) einer Organisationseinheit (OE), in der alle während der Clusterbereitstellung erstellten AD-Konten gespeichert werden. Wenn die Domäne den Namen `contoso.local` aufweist, lautet der DN der Organisationseinheit `OU=BDC,DC=contoso,DC=local`.
 
-- `security.dnsIpAddresses`: Liste der IP-Adressen der Domänencontroller.
+- `security.activeDirectory.dnsIpAddresses`: Liste der IP-Adressen der Domänencontroller.
 
-- `security.domainControllerFullyQualifiedDns`: Liste der FQDNs der Domänencontroller. Der FQDN enthält den Computer-/Hostnamen eines Domänencontrollers. Wenn Sie über mehrere Domänencontroller verfügen, können Sie hier eine Liste angeben. Beispiel: `HOSTNAME.CONTOSO.LOCAL`
+- `security.activeDirectory.domainControllerFullyQualifiedDns`: Liste der FQDNs der Domänencontroller. Der FQDN enthält den Computer-/Hostnamen eines Domänencontrollers. Wenn Sie über mehrere Domänencontroller verfügen, können Sie hier eine Liste angeben. Beispiel: `HOSTNAME.CONTOSO.LOCAL`
 
-- **Optionaler Parameter** `security.realm`: In den meisten Fällen entspricht der Bereich dem Domänennamen. Falls sich Bereich und Domänenname unterscheiden, verwenden Sie diesen Parameter zum Definieren des Bereichs (z. B. `CONTOSO.LOCAL`).
+- **Optionaler Parameter** `security.activeDirectory.realm`: In den meisten Fällen entspricht der Bereich dem Domänennamen. Falls sich Bereich und Domänenname unterscheiden, verwenden Sie diesen Parameter zum Definieren des Bereichs (z. B. `CONTOSO.LOCAL`).
 
-- `security.domainDnsName`: Name Ihrer Domäne (z. B. `contoso.local`).
+- `security.activeDirectory.domainDnsName`: Name Ihrer Domäne (z. B. `contoso.local`).
 
-- `security.clusterAdmins`: Dieser Parameter akzeptiert **eine AD-Gruppe**. Mitglieder dieser Gruppe erhalten Administratorberechtigungen im Cluster. Das bedeutet, dass Mitglieder sysadmin-Berechtigungen in SQL Server, superuser-Berechtigungen in HDFS und Administratorberechtigungen im Controller erhalten. **Beachten Sie, dass diese Gruppe in AD vorhanden sein muss, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppe nicht in Active Directory auf DomainLocal begrenzt werden kann. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
+- `security.activeDirectory.clusterAdmins`: Dieser Parameter akzeptiert **eine AD-Gruppe**. Mitglieder dieser Gruppe erhalten Administratorberechtigungen im Cluster. Das bedeutet, dass Mitglieder sysadmin-Berechtigungen in SQL Server, superuser-Berechtigungen in HDFS und Administratorberechtigungen im Controller erhalten. **Beachten Sie, dass diese Gruppe in AD vorhanden sein muss, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppe nicht in Active Directory auf DomainLocal begrenzt werden kann. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
 
-- `security.clusterUsers`: Liste der AD-Gruppen, die als reguläre Benutzer (ohne Administratorberechtigungen) im Big Data-Cluster fungieren. **Beachten Sie, dass diese Gruppen in AD vorhanden sein müssen, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppen nicht in Active Directory auf DomainLocal begrenzt werden können. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
+- `security.activeDirectory.clusterUsers`: Liste der AD-Gruppen, die als reguläre Benutzer (ohne Administratorberechtigungen) im Big Data-Cluster fungieren. **Beachten Sie, dass diese Gruppen in AD vorhanden sein müssen, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppen nicht in Active Directory auf DomainLocal begrenzt werden können. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
 
-- **Optionaler Parameter** `security.appOwners`: Liste der AD-Gruppen, die über Berechtigungen zum Erstellen, Löschen und Ausführen beliebiger Anwendungen verfügen. **Beachten Sie, dass diese Gruppen in AD vorhanden sein müssen, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppen nicht in Active Directory auf DomainLocal begrenzt werden können. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
+- **Optionaler Parameter** `security.activeDirectory.appOwners`: Liste der AD-Gruppen, die über Berechtigungen zum Erstellen, Löschen und Ausführen beliebiger Anwendungen verfügen. **Beachten Sie, dass diese Gruppen in AD vorhanden sein müssen, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppen nicht in Active Directory auf DomainLocal begrenzt werden können. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
 
-- **Optionaler Parameter** `security.appReaders`: Dieser Parameter ist eine Liste der AD-Gruppen, die über Berechtigungen zum Ausführen einer beliebigen Anwendung verfügen. **Beachten Sie, dass diese Gruppen in AD vorhanden sein müssen, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppen nicht in Active Directory auf DomainLocal begrenzt werden können. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
+- **Optionaler Parameter** `security.activeDirectory.appReaders`: Dieser Parameter ist eine Liste der AD-Gruppen, die über Berechtigungen zum Ausführen einer beliebigen Anwendung verfügen. **Beachten Sie, dass diese Gruppen in AD vorhanden sein müssen, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppen nicht in Active Directory auf DomainLocal begrenzt werden können. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
 
 **Überprüfen des AD-Gruppenbereichs:** 
  Anweisungen zum Überprüfen des Bereichs einer AD-Gruppe, um zu ermitteln, ob sie auf DomainLocal begrenzt ist, finden Sie [hier](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
@@ -193,7 +193,22 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 
 Um die oben aufgeführten Parameter in der Datei `control.json` festzulegen, verwenden Sie die folgenden `azdata`-Befehle. Über diese Befehle werden die Konfigurationswerte vor der Bereitstellung durch Ihre eigenen Werte ersetzt.
 
-Im Beispiel unten werden die AD-bezogenen Parameterwerte in der Bereitstellungskonfiguration ersetzt. Die Domänendetails unten sind Beispielwerte.
+ > [!IMPORTANT]
+ > Im SQL Server 2019 CU2-Release hat sich die Struktur des Sicherheitskonfigurationsabschnitts im Bereitstellungsprofil leicht geändert, sodass nun alle Einstellungen im Zusammenhang mit Active Directory im neuen *activeDirectory* in der json-Struktur unter *security* in der Datei *control.json* zu finden sind.
+
+Im nachfolgenden Beispiel wird SQL Server 2019 CU2 verwendet. Dort wird gezeigt, wie Sie die AD-bezogenen Parameterwerte in der Bereitstellungskonfiguration ersetzen. Die Domänendetails unten sind Beispielwerte.
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.dnsIpAddresses=[\"10.100.10.100\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainDnsName=contoso.local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
+```
+
+In Releases vor SQL Server 2019 CU2 können Sie entsprechend Folgendes ausführen:
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"

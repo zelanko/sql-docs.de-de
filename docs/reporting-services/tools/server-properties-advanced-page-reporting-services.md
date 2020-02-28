@@ -9,12 +9,12 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/28/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f7a1e8d3d6341da5812bb44726c5bf8186d3b19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831942"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77054836"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Servereigenschaften – Seite „Erweitert“: Power BI-Berichtsserver und Reporting Services
 
@@ -123,7 +123,7 @@ Gibt an, ob die Protokollierung der Berichtsausführung aktiviert ist. Der Stand
 ### <a name="enableintegratedsecurity"></a>EnableIntegratedSecurity
 Bestimmt, ob die integrierte Sicherheit von Windows für Berichtsdatenquellen-Verbindungen unterstützt wird. Der Standardwert ist **True**. Die folgenden Werte sind gültig:
 
-|Werte|Beschreibung|
+|Werte|BESCHREIBUNG|
 |---------|---------|
 |**Wahr**|Die integrierte Sicherheit von Windows ist aktiviert.|
 |**False**|Die integrierte Sicherheit von Windows ist nicht aktiviert. Berichtsdatenquellen, die für die Verwendung der integrierten Sicherheit von Windows konfiguriert sind, werden nicht ausgeführt.|
@@ -140,6 +140,9 @@ Gibt an, ob die Funktion <legacyBold>Meine Berichte</legacyBold> aktiviert ist. 
 
 ### <a name="enablepowerbireportexportdata"></a>EnablePowerBIReportExportData 
 (Nur Power BI-Berichtsserver) Aktivieren Sie den Export von Power BI-Berichtsserverdaten aus Power BI-Visuals. Die Werte sind TRUE und FALSE.  Der Standardwert lautet "True". 
+
+### <a name="enablepowerbireportexportunderlyingdata"></a>EnablePowerBIReportExportUnderlyingData 
+(Nur Power BI-Berichtsserver) Gibt an, ob ein Kunde zugrunde liegende Daten aus Power BI-Visuals zum Power BI-Berichtsserver exportieren kann. Der Wert TRUE gibt an, dass die Funktion aktiviert ist.
 
 ### <a name="enableremoteerrors"></a>EnableRemoteErrors
 Nimmt externe Fehlerinformationen (beispielsweise Fehlerinformationen zu Berichtsdatenquellen) in die Fehlermeldungen auf, die für Benutzer zurückgegeben werden, die Berichte von Remotecomputern anfordern. Gültige Werte sind **true** und **false**. Der Standardwert ist **false**. Weitere Informationen finden Sie unter [Aktivieren von Remotefehlern &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
@@ -207,7 +210,7 @@ Der Name der Berichtsserversite, der im Seitentitel des Webportals angezeigt wir
 ### <a name="snapshotcompression"></a>SnapshotCompression
 Definiert, wie Momentaufnahmen komprimiert werden. Der Standardwert lautet **SQL**. Die folgenden Werte sind gültig:
 
-|Werte|Beschreibung|
+|Werte|BESCHREIBUNG|
 |---------|---------|
 |**SQL**|Momentaufnahmen werden komprimiert, wenn sie in der Berichtsserver-Datenbank gespeichert werden. Diese Komprimierung entspricht dem aktuellen Verhalten.|
 |**None**|Momentaufnahmen werden nicht komprimiert.|

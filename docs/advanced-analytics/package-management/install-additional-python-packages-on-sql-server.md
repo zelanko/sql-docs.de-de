@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d759921ac82f34156856b587161f44c64269ea0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929898"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558312"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installieren von Python-Paketen mit sqlmlutils
 
@@ -37,7 +37,7 @@ Weitere Informationen zu dem Paketspeicherort und Installationspfaden finden Sie
 
 ### <a name="other-considerations"></a>Weitere Überlegungen
 
-+ Die Pakete müssen Python 3.5-kompatibel sein und unter Windows ausgeführt werden.
++ Pakete müssen mit den möglichen Versionen von Python konform sein. Weitere Informationen zu der in jeder SQL Server-Version enthaltenen Python-Version finden Sie unter [„Python- und R-Pakete“ im Artikel „Was ist SQL Server Machine Learning Services (Python und R)?“](../what-is-sql-server-machine-learning.md#versions).
 
 + Die Python-Paketbibliothek befindet sich im Ordner „Programme“ Ihrer SQL Server-Instanz, und für die Installation in diesem Ordner sind standardmäßig Administratorberechtigungen erforderlich. Weitere Informationen finden Sie unter [Speicherort der Paketbibliothek](../package-management/python-package-information.md#default-python-library-location).
 
@@ -64,7 +64,7 @@ Zur Verwendung von **sqlmlutils** müssen Sie dies zunächst auf dem Clientcompu
 
    ```console
    pip install "pymssql<3.0"
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-0.7.2.zip
    ```
 
 ## <a name="add-a-python-package-on-sql-server"></a>Hinzufügen eines Python-Pakets in SQL Server
@@ -77,11 +77,11 @@ Wenn der Clientcomputer, mit dem Sie sich mit SQL Server verbinden, über einen 
 
 1. Öffnen Sie auf dem Clientcomputer **Python** oder eine Python-Umgebung.
 
-1. Verwenden Sie die folgenden Befehle, um das Paket **text-tools** zu installieren. Ersetzen Sie die eigenen Verbindungsdaten der SQL Server-Datenbank. (Wenn Sie keine Windows-Authentifizierung verwenden, fügen Sie die Parameter `uid` und `pwd` hinzu.)
+1. Verwenden Sie die folgenden Befehle, um das Paket **text-tools** zu installieren. Ersetzen Sie die SQL Server-Datenbankverbindungsinformationen durch Ihre eigenen.
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
+   connection = sqlmlutils.ConnectionInfo(server="server", database="database", uid="username", pwd="password")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 

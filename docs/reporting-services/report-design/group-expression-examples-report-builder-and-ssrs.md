@@ -1,5 +1,5 @@
 ---
-title: Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Beispiele für Gruppierungsausdrücke (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: abfb9f445b52550caf63cc440143e6b008df1d62
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e6378f523b74483ed6f1a459f63aafbfa1fc5ee
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580268"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082098"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)
   In einem Datenbereich können Sie Daten nach einem einzelnen Feld gruppieren oder komplexe Ausdrücke erstellen, mit denen die Daten identifiziert werden, nach denen gruppiert wird. Komplexe Ausdrücke schließen Verweise auf mehrere Felder oder Parameter, Bedingungsanweisungen oder benutzerdefinierten Code ein. Wenn Sie für einen Datenbereich eine Gruppe definieren, fügen Sie diese Ausdrücke den **Gruppeneigenschaften** hinzu. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "65580268"
 ## <a name="examples-of-group-expressions"></a>Beispiele für Gruppenausdrücke  
  In der folgenden Tabelle sind Beispiele für Gruppenausdrücke aufgeführt, die Sie zum Definieren einer Gruppe verwenden können.  
   
-|BESCHREIBUNG|Ausdruck|  
+|Beschreibung|Ausdruck|  
 |-----------------|----------------|  
 |Gruppieren nach dem `Region` -Feld.|`=Fields!Region.Value`|  
 |Gruppieren Sie nach Nachnamen und Vornamen.|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

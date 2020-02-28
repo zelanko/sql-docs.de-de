@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "71952744"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429051"
 ---
 # <a name="install-sql-server-reporting-services"></a>Installieren von SQL Server Reporting Services
 
@@ -67,7 +67,7 @@ Die Installation des Berichtsservers ist unkompliziert. Zum Installieren der Dat
 
 7. Klicken Sie nach dem erfolgreichen Setup auf **Berichtsserver konfigurieren**, um Konfigurations-Manager für Reporting Services zu starten.
 
-## <a name="configuration-your-report-server"></a>Konfigurieren Ihres Berichtsservers
+## <a name="configure-your-report-server"></a>Konfigurieren Ihres Berichtsservers
 
 Wenn Sie beim Setup auf **Berichtsserver konfigurieren** klicken, wird der **Konfigurations-Manager für Reporting Services** angezeigt. Weitere Informationen finden Sie unter [Report Server Configuration Manager (Konfigurations-Manager des Berichtsservers)](reporting-services-configuration-manager-native-mode.md).
 

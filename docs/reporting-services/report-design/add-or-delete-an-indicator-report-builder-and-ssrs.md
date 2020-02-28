@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen oder Löschen eines Indikators (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Hinzufügen oder Löschen eines Indikators (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9bb437acf4b30a4a497286e3b8c6adabd6b5291
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 08dd396fc68bae04d973d6b96f67466006642120
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581916"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081574"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Hinzufügen oder Löschen eines Indikators (Berichts-Generator und SSRS)
   In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht sind Indikatoren minimale Messgeräte, die den Zustand eines einzelnen Datenwerts auf einen Blick wiedergeben. Weitere Informationen dazu finden Sie unter [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  

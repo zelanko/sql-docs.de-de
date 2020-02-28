@@ -1,5 +1,5 @@
 ---
-title: URL-Zugriff (SSRS) | Microsoft-Dokumentation
+title: URL-Zugriff | Microsoft-Dokumentation
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 59f183a3a5063b894bfa8a52a5334bb377119794
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574250"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078937"
 ---
 # <a name="url-access-ssrs"></a>URL-Zugriff (SSRS)
   Durch den URL-Zugriff des Berichtsservers in SQL Server Reporting Services (SSRS) können Sie Befehle an den Berichtsserver über eine URL-Anforderung senden. Beispielsweise können Sie das Rendering eines Berichts auf einem Berichtsserver im einheitlichen Modus oder in einer SharePoint-Bibliothek anpassen. Möglicherweise haben Sie den Bericht unter Verwendung bestimmter Berichtsparameterwerte angezeigt oder eine bestimmte Berichtsseite gelesen, die für Sie von Interesse war. Diese Informationen können mithilfe vordefinierter URL-Zugriffsparameter in der URL gekapselt werden. Außerdem kann die Berichtsverarbeitung auf dem Berichtsserver weiter angepasst werden, indem Sie Parameter für Renderingformate oder für das Erscheinungsbild des Berichts-Viewers einbetten. Anschließend können Sie diese URL direkt in eine E-Mail oder Webseite einfügen, damit andere Benutzer im Browser auf die gleiche Weise auf den Bericht zugreifen können.  
@@ -102,7 +102,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  URL-Text, der dem Wert des Parameters entspricht, der verwendet wird.  
   
- **Hinweis:** Eine Liste der verfügbaren URL-Zugriffsparameter finden Sie unter [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md). Beispiele für die Übergabe von Berichtsparametern mit der URL finden Sie unter [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
+ **Hinweis:** Eine Liste der verfügbaren URL-Zugriffsparameter finden Sie im Artikel [URL-Zugriffsparameterreferenz](../reporting-services/url-access-parameter-reference.md). Beispiele für die Übergabe von Berichtsparametern mit der URL finden Sie unter [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

@@ -1,5 +1,5 @@
 ---
-title: Beispiele für Ausdrücke (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Beispiele für Ausdrücke (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68661342"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080342"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
 Ausdrücke werden in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  

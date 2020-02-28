@@ -10,22 +10,22 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b6662705a3b9e9f946d17b3edfbe158a8ac4f53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75325552"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256725"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Was sind erweiterte Sicherheitsupdates für SQL Server?
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel bietet Informationen zur Verwendung des SQL Server-Registrierungsdiensts, um erweiterte Sicherheitsupdates für [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] zu erhalten. Weitere Informationen zu anderen Optionen bei Ende des Supports finden Sie unter [Optionen bei Ende des Supports](sql-server-end-of-life-overview.md). 
 
 ## <a name="overview"></a>Übersicht
-
-Sobald [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Ende seines Supportlebenszyklus erreicht hat, haben Sie die Möglichkeit, ein Abonnement für ein erweitertes Sicherheitsupdate (ESU) für Ihre Server abzuschließen und bis zu drei Jahre lang geschützt zu bleiben, bis Sie bereit sind, auf eine neuere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu aktualisieren oder zu [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] zu migrieren. Dieses Abonnement kann für Ihre lokalen Server erworben werden oder kostenlos durch die Migration lokaler Server zu Azure Virtual Machines erfolgen. Sie können anschließend mithilfe des **SQL Server-Registrierungsdiensts** im Azure-Portal Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz mit abgelaufenem Support registrieren und Updates herunterladen, sobald diese verfügbar sind. 
+Sobald [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Ende seines Supportlebenszyklus erreicht hat, haben Sie die Möglichkeit, ein Abonnement für ein erweitertes Sicherheitsupdate (ESU) für Ihre Server abzuschließen und bis zu drei Jahre lang geschützt zu bleiben, bis Sie bereit sind, auf eine neuere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu aktualisieren oder zu [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] zu migrieren. Dieses Abonnement ist auf zwei Arten verfügbar:
+-  Sie können es für lokale oder gehostete Umgebungsserver kaufen.
+-  Sie erhalten es standardmäßig kostenlos (und aktiviert), wenn Sie lokale Server in Azure Virtual Machines migrieren. Sie können anschließend mithilfe des **SQL Server-Registrierungsdiensts** im Azure-Portal Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz mit abgelaufenem Support registrieren und Updates herunterladen, sobald diese verfügbar sind. 
 
 Microsoft empfiehlt, ESU-Patches anzuwenden, sobald sie verfügbar sind, um Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu schützen. Detaillierte Informationen zu ESUs finden Sie auf der [Seite mit häufig gestellten Fragen zu ESUs](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
@@ -33,9 +33,9 @@ Microsoft empfiehlt, ESU-Patches anzuwenden, sobald sie verfügbar sind, um Ihre
 > [Der erweiterte Support für SQL Server 2008 und 2008 R2 wurde am 10. Juli 2019 eingestellt](https://www.microsoft.com/cloud-platform/windows-sql-server-2008). Erwägen Sie für diese Versionen den Einsatz der in diesem Artikel beschriebenen erweiterten Sicherheitsupdates oder andere Migrationsoptionen. Weitere Informationen finden Sie unter [Optionen bei Ende des Supports](sql-server-end-of-life-overview.md).
 
 ## <a name="what-are-extended-security-updates"></a>Was sind erweiterte Sicherheitsupdates?
-Erweiterte Sicherheitsupdates (ESUs) für [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] umfassen die Bereitstellung von Sicherheitsupdates für Kunden, die ein Abonnement für erweiterte Supportupdates erworben haben. 
+Erweiterte Sicherheitsupdates (ESUs) für [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] umfassen die Bereitstellung von Sicherheitsupdates für Kunden, die ein Abonnement für erweiterte Supportupdates erworben haben.
 
-ESUs werden **gemäß Verfügbarkeit** verteilt, sobald ein Sicherheitsrisiko entdeckt und vom [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com) als **kritisch** eingestuft wird. Daher gibt es kein regelmäßiges Veröffentlichungsintervall für ESUs für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ESUs werden **bei Bedarf** zur Verfügung gestellt, sobald ein Sicherheitsrisiko entdeckt und vom [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com) als **Kritisch** eingestuft wird. Daher gibt es kein regelmäßiges Veröffentlichungsintervall für ESUs für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ESUs bieten Folgendes nicht:
 - Neue Funktionen
@@ -43,34 +43,39 @@ ESUs bieten Folgendes nicht:
 - Von Kunden angeforderte Korrekturen
 
 ### <a name="support"></a>Support
-
 ESUs sehen keinen technischen Support vor. Sie können jedoch einen aktiven Supportvertrag wie [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3) oder Premier/Unified Support für [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] / [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] nutzen, um technischen Support für die von ESUs abgedeckten Workloads zu erhalten, wenn Sie sich dafür entscheiden, weiterhin lokal zu arbeiten. Bei Hosting in Azure können Sie alternativ einen Azure-Supportplan nutzen, um technischen Support zu erhalten. 
 
   > [!NOTE]
   > Microsoft kann ohne ESU-Abonnement (sowohl in lokalen als auch in Hostingumgebungen) keinen technischen Support für [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]- und [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]-Instanzen leisten. 
 
-## <a name="esu-availability"></a>Verfügbarkeit von ESUs
+## <a name="esu-availability-and-deployment"></a>Verfügbarkeit und Bereitstellung von ESUs
+ESUs sind für Kunden verfügbar, die ihre Workload in Azure, lokalen oder gehosteten Umgebungen ausführen.
 
-ESUs sind für Kunden verfügbar, die ihre Workload in Azure, lokalen oder gehosteten Umgebungen ausführen. 
+### <a name="azure-virtual-machines"></a>Azure Virtual Machines
+Wenn Sie Ihre Workloads zu Azure Virtual Machines (IaaS) migrieren, haben Sie bis zu drei Jahre nach Ende des Supports Zugriff auf erweiterte Sicherheitsupdates für [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], und zwar **ohne zusätzliche Kosten** über die für den Betrieb des virtuellen Computers hinaus. Kunden benötigen nicht Software Assurance, um erweiterte Sicherheitsupdates in Azure zu erhalten. 
 
-**Azure Virtual Machines**: Wenn Sie Ihre Workloads zu Azure Virtual Machines (IaaS) migrieren, haben Sie bis zu drei Jahre nach Ende des Supports Zugriff auf erweiterte Sicherheitsupdates für [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], und zwar **ohne zusätzliche Kosten** über die für den Betrieb des virtuellen Computers hinaus. Kunden benötigen nicht Software Assurance, um erweiterte Sicherheitsupdates in Azure zu erhalten. 
+Azure-VMs auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter **Windows Server 2008 R2 und höher** erhält automatisch ESUs über die vorhandenen Updatekanäle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wenn der virtuelle Computer für [automatisierte Patches](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching) konfiguriert ist.
 
-**Lokale oder gehostete Umgebungen**: Wenn Sie über Software Assurance verfügen, können Sie im Rahmen eines Enterprise Agreement (EA), Enterprise Subscription Agreement (EAS), Server & Cloud Enrollment (SCE) oder Enrollment for Education Solutions (EES) erweiterte Sicherheitsupdates für bis zu drei Jahre nach Ablauf des Supportzeitraums erwerben. Sie können erweiterte Sicherheitsupdates nur für die Server erwerben, die Sie abdecken müssen. Erweiterte Sicherheitsupdates können direkt bei Microsoft oder einem Microsoft-Lizenzierungspartner erworben werden. 
+Für Azure-VMs auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter **Windows Server 2008** oder VMs, die ***nicht* für [automatisierte Patches](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** konfiguriert wurden, müssen Sie ESU-Patches wie im Abschnitt [Lokale oder gehostete Umgebungen](#on-premises-or-hosted-environments) beschrieben manuell herunterladen und bereitstellen.
+
+### <a name="on-premises-or-hosted-environments"></a>Lokale oder gehostete Umgebungen
+Wenn Sie über Software Assurance verfügen, können Sie im Rahmen eines Enterprise Agreement (EA), Enterprise Subscription Agreement (EAS), Server & Cloud Enrollment (SCE) oder Enrollment for Education Solutions (EES) ein ESU-Abonnement (Erweiterte Sicherheitsupdates) für bis zu drei Jahre nach Ablauf des Supportzeitraums erwerben. Sie können ESUs nur für die Server erwerben, die Sie schützen müssen. ESUs können direkt bei Microsoft oder einem Microsoft-Lizenzierungspartner erworben werden. 
+
+Kunden mit ESU-Vereinbarungen müssen folgende Schritte durchführen, um einen ESU-Patch herunterzuladen und bereitzustellen:
+-  [Registrieren Sie zulässige Instanzen](#register-instances-for-esus) mit der **[SQL Server-Registrierung](#create-sql-server-registry)** . 
+-  Wenn nach der Registrierung ESU-Patches veröffentlicht werden, können Sie das Paket über einen Downloadlink im Azure-Portal herunterladen. 
+-  Das heruntergeladene Paket kann in Ihrer lokalen oder gehosteten Umgebung manuell oder über eine beliebige Lösung für die Updateorchestrierung in Ihrer Organisation bereitgestellt werden, z. B. Microsoft Endpoint Configuration Manager (ehemals System Center Configuration Manager). 
+
+> [!NOTE]
+> Dies ist auch die Vorgehensweise, die Kunden für Azure Stack und Azure Virtual Machines befolgen müssen, die nicht den Empfang automatischer Updates konfiguriert sind.
 
 Weitere Informationen finden Sie unter [Häufig gestellte Fragen zu erweiterten Sicherheitsupdates](https://www.microsoft.com/cloud-platform/extended-security-updates). 
 
-## <a name="esu-delivery"></a>Bereitstellung von ESUs
-
-**Azure Virtual Machines**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Kunden mit Windows Server 2008 R2 und höher erhalten ESUs automatisch über bestehende Updatekanäle für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Verwendung [automatisierter Patches](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching). Bei virtuellen Azure-Computern mit Windows Server 2008 oder VMs, die _nicht_ für automatische Patches konfiguriert sind, muss die lokale Registrierung und Downloadmethode manuell implementiert werden.  
-
-**Lokale oder gehostete Umgebungen**: Kunden mit Vereinbarungen über erweiterte Sicherheitsupdates können [berechtigte Instanzen](#register-instances-for-esus) in der **SQL Server-Registrierung** registrieren. Nach Registrierung verfügbarer ESUs können Kunden den Downloadlink im Azure-Portal verwenden, um das ESU-Paket herunterzuladen und in ihren lokalen oder gehosteten Umgebungen bereitzustellen. Dies ist auch die Vorgehensweise, die Kunden für Azure Stack und Azure Virtual Machines befolgen müssen, die nicht den Empfang automatischer Updates konfiguriert sind.
-
 ## <a name="create-sql-server-registry"></a>Erstellen der SQL Server-Registrierung
-
 Um Ihre ESU-fähigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen zu registrieren, müssen Sie zunächst im Azure-Portal die SQL Server-Registrierung erstellen. 
 
-  > [!IMPORTANT]
-  > Es ist nicht notwendig, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen für ESUs zu registrieren, wenn eine Azure-VM ausgeführt wird, die für [automatische Updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching) konfiguriert ist. 
+> [!IMPORTANT]
+> Es ist nicht notwendig, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen für ESUs zu registrieren, wenn eine Azure-VM ausgeführt wird, die für [automatische Updates](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching) konfiguriert ist. 
 
 Führen Sie die folgenden Schritte aus, um die SQL Server-Registrierung zu erstellen:
 

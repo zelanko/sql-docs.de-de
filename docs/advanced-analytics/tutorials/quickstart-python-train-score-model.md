@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
+ms.sourcegitcommit: acfdeacc80c112992c1201748e0b5c59a473032d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831768"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977544"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in Python mit SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ Nachdem Sie nun ein Modell erstellt, trainiert und gespeichert haben, fahren Sie
 
 In dieser Übung haben Sie gelernt, wie Sie gespeicherte Prozeduren erstellen, die für verschiedene Tasks vorgesehen sind. Dabei wurde von jeder gespeicherten Prozedur die gespeicherte Systemprozedur `sp_execute_external_script` verwendet, um einen Python-Prozess zu starten. Eingaben für den Python-Prozess werden an `sp_execute_external` als Parameter übergeben. Sowohl das Python-Skript selbst als auch Datenvariablen in einer SQL Server-Datenbank werden als Eingaben übergeben.
 
-Grundsätzlich sollten Sie nur SSMS mit hoch entwickeltem Python-Code verwenden, oder aber einfachen Python-Code, der zeilenbasierte Ausgaben zurückgibt. Als Tool unterstützt SSMS Abfragesprachen wie T-SQL und gibt flache Rowsets zurück. Wenn Ihr Code eine visuelle Ausgabe wie ein Punktdiagramm oder Histogramm erzeugt, benötigen Sie ein Tool oder eine Endbenutzeranwendung, die das Bild darstellen kann.
+Grundsätzlich sollten Sie nur SSMS mit hoch entwickeltem Python-Code verwenden, oder aber einfachen Python-Code, der zeilenbasierte Ausgaben zurückgibt. Als Tool unterstützt SSMS Abfragesprachen wie T-SQL und gibt flache Rowsets zurück. Wenn Ihr Code eine visuelle Ausgabe wie ein Punktdiagramm oder Histogramm erzeugt, benötigen Sie ein eigenständiges Tool oder eine Endbenutzeranwendung, die das Bild außerhalb der gespeicherten Prozedur darstellen kann.
 
 Für einige Python-Entwickler, die es gewohnt sind, allumfassende Skripts zu schreiben, die eine Reihe von Vorgängen ausführen, mag die Organisation von Tasks in separate Prozeduren unnötig erscheinen. Training und Bewertung haben jedoch unterschiedliche Anwendungsfälle. Indem Sie diese trennen, können Sie jede Task in einem anderen Zeitplan und in Bereichsberechtigungen für jeden Vorgang platzieren.
 

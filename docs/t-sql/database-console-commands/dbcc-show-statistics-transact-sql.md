@@ -33,12 +33,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68116482"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074445"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -118,7 +118,7 @@ In der folgenden Tabelle werden die Spalten beschrieben, die beim Angeben von DE
   
 Die folgende Tabelle beschreibt die Spalten, die im Resultset zurückgegeben werden, wenn die HISTOGRAM-Option angegeben wird.
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |---|---|
 |RANGE_HI_KEY|Oberer Spaltengrenzwert für einen Histogrammschritt. Der Spaltenwert wird auch als Schlüsselwert bezeichnet.|  
 |RANGE_ROWS|Geschätzte Anzahl von Zeilen, deren Spaltenwerte innerhalb eines Histogrammschritts liegen, ohne den oberen Grenzwert.|  
@@ -158,28 +158,30 @@ Der Abfrageoptimierer verwendet Dichten, um Kardinalitätsschätzungen für Abfr
 ## <a name="restrictions"></a>Beschränkungen  
  DBCC SHOW_STATISTICS stellt keine Statistik für räumliche oder speicheroptimierte xVelocity-columnstore-Indizes bereit.  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Berechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-Zum Anzeigen des Statistikobjekts muss der Benutzer Besitzer der Tabelle oder Mitglied der festen Serverrolle `sysadmin` bzw. der festen Datenbankrollen `db_owner` oder `db_ddladmin` sein.
-  
-Durch [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 werden die Berechtigungseinschränkungen gelockert, sodass Benutzer mit SELECT-Berechtigung in der Lage sind, diesen Befehl auszuführen. Die folgenden Voraussetzungen müssen erfüllt sein, damit der Befehl erfolgreich mit SELECT-Berechtigung ausgeführt werden kann:
+## <a name="permissions-for-ssnoversion-and-sssds"></a>Berechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+Zum Anzeigen des Statistikobjekts muss der Benutzer über die SELECT-Berechtigung für die Tabelle verfügen.
+Die folgenden Voraussetzungen müssen erfüllt sein, damit der Befehl erfolgreich mit SELECT-Berechtigung ausgeführt werden kann:
 -   Die Benutzer benötigen eine Zugriffsberechtigung für alle Spalten im Statistikobjekt.  
 -   Die Benutzer benötigen eine Zugriffsberechtigung für alle Spalten in einer Filterbedingung (falls vorhanden).  
--   Die Tabelle kann keine Sicherheitsrichtlinie auf Zeilenebene haben.  
+-   Die Tabelle kann keine Sicherheitsrichtlinie auf Zeilenebene haben.
+-   Wenn eine der Spalten innerhalb eines Statistikobjekts mit dynamischen Datenmaskierungsregeln maskiert ist, muss der Benutzer neben der SELECT-Berechtigung über die UNMASK-Berechtigung verfügen.
+
+In Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 muss der Benutzer die Tabelle besitzen oder Mitglied der festen Serverrollen `sysadmin`, `db_owner` oder `db_ddladmin` sein.
+[!NOTE]
+Verwenden Sie das Ablaufverfolgungsflag 9485, um das Verhalten in das Verhalten vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 zu ändern.
   
-Um dieses Verhalten zu deaktivieren, verwenden Sie das Ablaufverfolgungsflag 9485.
-  
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Berechtigungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="permissions-for-sssdw-and-sspdw"></a>Berechtigungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS erfordert eine SELECT-Berechtigung in der Tabelle oder Mitgliedschaft in einer der folgenden Rollen:
 -   Feste Serverrolle sysadmin  
 -   Feste Datenbankrolle db_owner  
 -   Feste Datenbankrolle db_ddladmin  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Einschränkungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Einschränkungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS zeigt Statistiken an, die in der Shell-Datenbank auf der Ebene des Steuerelements gespeichert sind. Statistiken die automatisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf den Computeknoten erstellt wurden, werden nicht angezeigt.
   
 DBCC SHOW_STATISTICS wird nicht auf externen Tabellen unterstützt.
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Beispiele: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-ssnoversion-and-sssds"></a>Beispiele: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>A. Zurückgeben aller Statistikinformationen  
 Im folgenden Beispiel werden alle Statistikinformationen für den Index `AK_Address_rowguid` der Tabelle `Person.Address` in der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] angezeigt.
   
@@ -196,7 +198,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Anzeigen der Inhalte eine Statistikobjekts  
  Im folgenden Beispiel werden die Inhalte der Customer_LastName-Statistiken in der Tabelle „DimCustomer“ angezeigt.  
   

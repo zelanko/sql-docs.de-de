@@ -1,6 +1,6 @@
 ---
 title: Registrieren eines Dienstprinzipalnamens (SPN) für einen Berichtsserver | Microsoft-Dokumentation
-ms.date: 03/01/2017
+ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66500230"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256423"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrieren eines Dienstprinzipalnamens (SPN) für einen Berichtsserver
   Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in einem Netzwerk bereitstellen, in dem das Kerberos-Protokoll zur gegenseitigen Authentifizierung verwendet wird, müssen Sie einen Dienstprinzipalnamen (SPN) für den Berichtsserverdienst erstellen, wenn Sie diesen als Domänenbenutzerkonto konfigurieren.  
@@ -23,17 +23,18 @@ ms.locfileid: "66500230"
   
  Um einen SPN zu erstellen, können Sie das Befehlszeilen-Hilfsprogramm **SetSPN** verwenden. Weitere Informationen finden Sie unter  
   
--   [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx)  
+-   [SetSPN](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11))  
   
 -   [SetSPN-Syntax (Setspn.exe) für Dienstprinzipalnamen (SPN)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
  Sie müssen Domänenadministrator sein, um das Hilfsprogramm auf dem Domänencontroller auszuführen.  
   
 ## <a name="syntax"></a>Syntax  
- Die Befehlssyntax für die Verwendung des Hilfsprogramms SetSPN zum Erstellen eines SPN für den Berichtsserver kann z. B. wie folgt lauten:  
+
+Wenn Sie SPNs mit setspn bearbeiten, muss der entsprechende SPN im richtigen Format eingegeben werden. Das Format von SPNs ist: `<serviceclass>/host:<por>`. Die Befehlssyntax für die Verwendung des Hilfsprogramms SetSPN zum Erstellen eines SPN für den Berichtsserver kann z. B. wie folgt lauten:  
   
 ```  
-Setspn -s http/<computername>.<domainname> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
 ```  
   
  **SetSPN** ist in Windows Server verfügbar. Mit dem Argument **-s** wird ein SPN hinzugefügt, nachdem überprüft wurde, dass kein doppelter Name vorhanden ist. **HINWEIS:** „-s“ ist in Windows Server ab Windows Server 2008 verfügbar.  
@@ -44,7 +45,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 ## <a name="register-an-spn-for-domain-user-account"></a>Registrieren eines SPNs für ein Domänenbenutzerkonto  
   
-#### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>So registrieren Sie einen SPN für einen Berichtsserverdienst, der als Domänenbenutzer ausgeführt wird  
+### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>So registrieren Sie einen SPN für einen Berichtsserverdienst, der als Domänenbenutzer ausgeführt wird  
   
 1.  Installieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , und konfigurieren Sie den Berichtsserverdienst zur Ausführung als Domänenbenutzerkonto. Erst wenn Sie die folgenden Schritte ausgeführt haben, können Benutzer eine Verbindung mit dem Berichtsserver herstellen.  
   
@@ -55,10 +56,10 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 4.  Kopieren Sie den folgenden Befehl, um Platzhalterwerte durch gültige Werte für das Netzwerk zu ersetzen:  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
     ```  
   
-     Beispiel: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+    Beispiel: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
 5.  Führen Sie den Befehl aus.  
   

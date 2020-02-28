@@ -1,5 +1,5 @@
 ---
-title: Suchen und Anzeigen von Berichten mit einem Browser (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Suchen und Anzeigen von Berichten mit einem Browser (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf30cee34e988f552a36fac1f7b9eb9ed14d83ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dc69666eaecfcacea21291dec13f6356e0f18d13
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594008"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079260"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Suchen und Anzeigen von Berichten mit einem Browser (Berichts-Generator und SSRS)
   Mit jedem unterstützten Webbrowser kann ein Bericht über eine Direktverbindung mit einem Berichtsserver angezeigt werden. Für jeden Bericht gibt es auf einem Berichtsserver eine URL-Adresse. Sie können die Webadresse eines Berichts eingeben, um ihn in einem Browserfenster unabhängig von der Webanwendung zu öffnen. Der Bericht wird im HTML-Format geöffnet und enthält die Berichtssymbolleiste, sodass Sie auf Seiten navigieren oder Datenwerte innerhalb des Berichts suchen können. Sie können in der URL Parameter festlegen, um die Symbolleiste auszublenden oder das Ausgabeformat des Berichts auszuwählen.  

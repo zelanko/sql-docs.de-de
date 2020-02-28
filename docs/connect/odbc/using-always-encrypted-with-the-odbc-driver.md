@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: c140087942ebe39870316e21994b6a1169daeba0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76706273"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363237"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -314,7 +314,7 @@ Sie können das Verhalten von Always Encrypted für einzelne Abfragen ändern, w
 
 Rufen Sie zum Steuern des Verhaltens von Always Encrypted für eine Anweisung „SQLSetStmtAttr“ auf, um das Anweisungsattribut `SQL_SOPT_SS_COLUMN_ENCRYPTION` auf einen der folgenden Werte festzulegen:
 
-|value|Beschreibung|
+|value|BESCHREIBUNG|
 |-|-|
 |`SQL_CE_DISABLED` (0)|Always Encrypted ist für die Anweisung deaktiviert.|
 |`SQL_CE_RESULTSETONLY` (1)|Nur Entschlüsselung. Resultsets und Rückgabewerte werden entschlüsselt, und Parameter werden nicht verschlüsselt.|
@@ -367,7 +367,7 @@ Wenn der Treiber den Klartextwert eines ECEK abrufen möchten, benötigt er zun�
 
 ODBC Driver for SQL Server verfügt über die folgenden integrierten Schlüsselspeicheranbieter:
 
-| Name | Beschreibung | Name des Anbieters (Metadaten) |Verfügbarkeit|
+| Name | BESCHREIBUNG | Name des Anbieters (Metadaten) |Verfügbarkeit|
 |:---|:---|:---|:---|
 |Azure-Schlüsseltresor |Speichert CMKs im Azure Key Vault. | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Windows-Zertifikatspeicher|Speichert CMKs lokal im Windows-Schlüsselspeicher.| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -381,7 +381,7 @@ ODBC Driver for SQL Server verfügt über die folgenden integrierten Schlüssels
 Azure Key Vault (AKV) ist eine praktische Möglichkeit zum Speichern und Verwalten von Spaltenhauptschlüsseln für Always Encrypted (insbesondere, wenn Ihre Anwendungen in Azure gehostet werden). Unter Linux, macOS und Windows enthält ODBC Driver for SQL Server einen integrierten CMK-Speicheranbieter für den Azure Key Vault. Weitere Informationen zum Konfigurieren von Azure Key Vault für Always Encrypted finden Sie unter [Azure Key Vault – Step by Step (Ausführliche Anleitung zu Azure Key Vault)](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Getting Started with Key Vault (Erste Schritte mit dem Azure Key Vault)](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) und [Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).
 
 > [!NOTE]
-> Der ODBC-Treiber unterstützt die Active Directory-Verbunddienste (AD FS) für die AKV-Authentifizierung nicht. Wenn Sie die Azure Active Directory-Authentifizierung bei AKV verwenden und Ihre Active Directory-Konfiguration Verbunddienste umfasst, kann bei der Authentifizierung ein Fehler auftreten.
+> Der ODBC-Treiber unterstützt die Azure Key Vault-Authentifizierung nur direkt für Azure Active Directory. Wenn Sie die Azure Active Directory-Authentifizierung bei Azure Key Vault verwenden und Ihre Active Directory-Konfiguration die Authentifizierung für einen Active Directory-Verbunddienstendpunkt erfordert, kann bei der Authentifizierung ein Fehler auftreten.
 > Unter Linux und macOS ist ab ODBC Driver 17.2 for SQL Server für die Verwendung dieses Anbieters `libcurl` erforderlich. Dabei handelt es sich jedoch nicht um eine explizite Abhängigkeit, da es für andere Vorgänge mit dem Treiber nicht erforderlich ist. Wenn im Bezug zu `libcurl` ein Fehler auftritt, überprüfen Sie ob es installiert ist.
 
 Der Treiber unterstützt die Authentifizierung beim Azure Key Vault mithilfe der folgenden Typen von Anmeldeinformationen:
@@ -439,7 +439,7 @@ Durch das Festlegen des Verbindungsattributs `SQL_COPT_SS_CEKEYSTOREPROVIDER` ka
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| Argument | Beschreibung |
+| Argument | BESCHREIBUNG |
 |:---|:---|
 |`ConnectionHandle`|[Eingabe] Verbindungshandle. Es muss sich um ein gültiges Verbindungshandle handeln, jedoch kann auf Anbieter, die über ein Verbindungshandle geladen werden, von jedem anderen Handle im selben Vorgang aus zugegriffen werden.|
 |`Attribute`|[Eingabe] Festzulegendes Attribut: die Konstante `SQL_COPT_SS_CEKEYSTOREPROVIDER`.|
@@ -459,7 +459,7 @@ Der Treiber versucht, mithilfe des von der Plattform definierten Lademechanismus
 > [!NOTE]
 > Der Programmierer der Anwendung muss sicherstellen, dass alle benutzerdefinierten Anbieter geladen werden, bevor über eine beliebige Verbindung eine Abfrage gesendet wird, mit der die Anbieter angefordert werden. Andernfalls wird folgender Fehler ausgelöst:
 
-| Fehler | Beschreibung |
+| Fehler | BESCHREIBUNG |
 |:--|:--|
 |`CE200`|Schlüsselspeicheranbieter %1 wurde nicht gefunden. Stellen Sie sicher, dass die entsprechende Bibliothek für Schlüsselspeicheranbieter geladen wurde.|
 
@@ -474,7 +474,7 @@ Durch Abrufen des Verbindungsattributs kann eine Clientanwendung die aktuell im 
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| Argument | Beschreibung |
+| Argument | BESCHREIBUNG |
 |:---|:---|
 |`ConnectionHandle`|[Eingabe] Verbindungshandle. Es muss sich um ein gültiges Verbindungshandle handeln, jedoch kann auf Anbieter, die über ein Verbindungshandle geladen werden, von jedem anderen Handle im selben Vorgang aus zugegriffen werden.|
 |`Attribute`|[Eingabe] Abzurufendes Attribut: die Konstante `SQL_COPT_SS_CEKEYSTOREPROVIDER`.|
@@ -501,7 +501,7 @@ char data[];
 } CEKEYSTOREDATA;
 ```
 
-| Argument | Beschreibung |
+| Argument | BESCHREIBUNG |
 |:---|:---|
 |`name`|[Eingabe] Bei SET-Vorgängen: Name des Anbieters, an den die Daten gesendet werden. Wird bei GET-Vorgängen ignoriert. Auf NULL endende Zeichenfolge für breite Zeichen.|
 |`dataSize`|[Eingabe] Größe des Datenarrays gemäß der Struktur.|
@@ -593,7 +593,7 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 
 ### <a name="connection-string-keywords"></a>Schlüsselwörter für Verbindungszeichenfolgen
 
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |`ColumnEncryption`|Zulässige Werte sind `Enabled`/`Disabled`.<br>`Enabled`: aktiviert Always Encrypted-Funktionen für die Verbindung.<br>`Disabled`: deaktiviert Always Encrypted-Funktionen für die Verbindung.<br>*type*,*data* (Version 17.4 und höher): aktiviert Always Encrypted mit Secure Enclave und dem Nachweisprotokoll *type* sowie den zugehörigen Nachweisdaten *data*. <br><br>Der Standardwert lautet `Disabled`.|
 |`KeyStoreAuthentication` | Gültige Werte: `KeyVaultPassword`, `KeyVaultClientSecret` |
@@ -613,19 +613,19 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 
 ### <a name="statement-attributes"></a>Anweisungsattribute
 
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0): Always Encrypted ist für die Anweisung deaktiviert. <br>`SQL_CE_RESULTSETONLY` (1): Nur Entschlüsselung. Resultsets und Rückgabewerte werden entschlüsselt, und Parameter werden nicht verschlüsselt. <br>`SQL_CE_ENABLED` (3): Always Encrypted ist aktiviert und wird für Parameter und Ergebnisse verwendet.|
 
 ### <a name="descriptor-fields"></a>Deskriptorfelder
 
-|IPD-Feld|Größe/Typ|Standardwert|Beschreibung|
+|IPD-Feld|Größe/Typ|Standardwert|BESCHREIBUNG|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 Bytes)|0|Bei 0 (Standardeinstellung): Entscheidung, ob dieser Parameter verschlüsselt wird, basiert auf der Verfügbarkeit von Verschlüsselungsmetadaten.<br><br>Bei ungleich 0: Parameter wird verschlüsselt, wenn Verschlüsselungsmetadaten dafür verfügbar sind. Andernfalls schlägt die Anforderung fehl [CE300] [Microsoft][ODBC Driver 13 for SQL Server] Die obligatorische Verschlüsselung wurde für einen Parameter angegeben, es wurden vom Server jedoch keine Verschlüsselungsmetadaten bereitgestellt.|
 
 ### <a name="bcp_control-options"></a>Optionen für „bcp_control“
 
-|Optionsname|Standardwert|Beschreibung|
+|Optionsname|Standardwert|BESCHREIBUNG|
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|Bei TRUE können Werte vom Typ „varbinary(max)“ in eine verschlüsselte Spalte eingefügt werden. Bei FALSE wird das Einfügen verhindert, solange die korrekten Typ- und Verschlüsselungsmetadaten nicht bereitgestellt werden.|
 
@@ -642,7 +642,7 @@ Wenn bei der Verwendung von Always Encrypted Probleme auftreten, überprüfen Si
 
 Darüber hinaus identifizieren Nachweisfehler bei Verwendung von Secure Enclave den Schritt im Nachweisprozess, in dem der Fehler aufgetreten ist. Weitere Informationen finden Sie in der folgenden Tabelle:
 
-|Schritt|Beschreibung|
+|Schritt|BESCHREIBUNG|
 |----|-----------|
 |0–99| Ungültige Nachweisantwort oder Fehler bei der Signaturüberprüfung. |
 |100–199| Fehler beim Abrufen von Zertifikaten aus der Nachweis-URL. Stellen Sie sicher, dass `<attestation URL>/v2.0/signingCertificates` gültig und zugänglich ist. |

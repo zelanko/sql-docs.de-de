@@ -1,5 +1,5 @@
 ---
-title: Datentypen in Ausdrücken (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Datentypen in Ausdrücken (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 998757029ae5e3a8239a937897f176d5994c5880
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fc38e22d7265384e8f16df56ffcab63018ecd4e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68892995"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080529"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Datentypen in Ausdrücken (Berichts-Generator und SSRS)
   Datentypen stellen verschiedene Arten von Daten dar, die auf diese Weise effizient gespeichert und verarbeitet werden können. Zu den gängigen Datentypen gehören Text (auch String oder Zeichenfolge genannt), Zahlen mit oder ohne Dezimalstellen, Datum und Uhrzeit sowie Bilder. Werte in einem Bericht müssen dem RDL-Datentyp (Report Definition Language) entsprechen. Sie können einen Wert beliebig formatieren, wenn Sie ihn in einem Bericht anzeigen. So kann ein Feld, das eine Währung darstellt, als Gleitkommazahl in der Berichtsdefinition gespeichert, jedoch je nach gewählter Formatierungseigenschaft in verschiedenen Formaten angezeigt werden.  

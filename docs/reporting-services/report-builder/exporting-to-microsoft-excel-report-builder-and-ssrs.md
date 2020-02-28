@@ -1,5 +1,5 @@
 ---
-title: Exportieren nach Microsoft Excel (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Exportieren nach Microsoft Excel (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b067dea118592a58b87a9da50ba31d4ee2897cfe
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580777"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079579"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   Die Excel-Renderingerweiterung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendert einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht im [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Format (XLSX). Mit der Excel-Renderingerweiterung spiegelt die Breite von Spalten in Excel die Breite von Spalten in Berichten genauer wider.  
@@ -208,7 +208,7 @@ ms.locfileid: "65580777"
 |-------------------------------|-----------------|  
 |Erstellt|Datum und Zeit der Berichtsausführung als Datums-/Uhrzeitwert im ISO-Format.|  
 |Autor|Autor des Berichts|  
-|BESCHREIBUNG|Berichtsbeschreibung|  
+|Beschreibung|Berichtsbeschreibung|  
 |LastSaved|Datum und Zeit der Berichtsausführung als Datums-/Uhrzeitwert im ISO-Format.|  
   
 ##  <a name="PageHeadersFooters"></a> Seitenkopfzeilen und -fußzeilen  

@@ -1,5 +1,5 @@
 ---
-title: Mehrere Reihen in einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Mehrere Reihen in einem Diagramm (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8aedfd50c591f3a8aef4855854eed760ce093a7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e976b6b534121b4285438525267b7b15598ef6be
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580628"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082472"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Mehrere Reihen in einem Diagramm (Berichts-Generator und SSRS)
   Wenn in einem Diagramm mehrere Reihen vorhanden sind, müssen Sie die optimale Möglichkeit zum Vergleichen der Reihen bestimmen. Sie können ein gestapeltes Diagramm verwenden, in dem die relativen Anteile der einzelnen Reihen angezeigt werden. Wenn Sie nur zwei Reihen vergleichen, die über eine gemeinsame Kategorieachse (X) verfügen, verwenden Sie die sekundäre Achse. Dies ist hilfreich, wenn zwei aufeinander bezogene Reihen von Daten angezeigt werden, z. B. Preis und Volumen oder Einkommen und Steuern. Wenn die Lesbarkeit des Diagramms beeinträchtigt wird, empfiehlt es sich, mehrere Diagrammflächen zu verwenden, um die einzelnen Reihen visuell stärker voneinander zu trennen.  

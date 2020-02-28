@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: c5f0b10d0b2bbd953b14873e76b938ecfdce6fd9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74993021"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250595"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -44,10 +44,32 @@ In der Befehlszeile von **SqlPackage.exe** können diese Aktionen zusammen mit a
 ```
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
-  
+
+### <a name="usage-examples"></a>Anwendungsbeispiele
+
+**Generieren eines Vergleichs zwischen Datenbanken mithilfe von DACPAC-Dateien mit SQL-Skriptpausgabe**
+
+Erstellen Sie zunächst eine DACPAC-Datei aus Ihren letzten Datenbankänderungen:
+
+```
+sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+ 
+Erstellen Sie eine DACPAC-Datei Ihres Datenbankziels (das keine Änderungen aufweist):
+
+ ```
+ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+
+Erstellen Sie ein SQL-Skript, das die Unterschiede der zwei DACPAC-Dateien generiert:
+
+```
+sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
+ ```
+
 ### <a name="help-for-the-extract-action"></a>Hilfe zur Extract-Aktion
 
-|Parameter|Kurzform|value|Beschreibung|
+|Parameter|Kurzform|value|BESCHREIBUNG|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -98,7 +120,7 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 
 ### <a name="help-for-publish-action"></a>Hilfe zur Publish-Aktion
 
-|Parameter|Kurzform|value|Beschreibung|
+|Parameter|Kurzform|value|BESCHREIBUNG|
 |---|---|---|---|
 |**/Action:**|**/a**|Veröffentlichen|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -206,6 +228,7 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Gibt an, ob Unterschiede bei dem Zeitraum, über den SQL Server die Route in der Routingtabelle beibehält, beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Gibt an, ob Unterschiede in den Semikolons zwischen T-SQL-Anweisungen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Gibt an, ob Unterschiede in den Tabellenoptionen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Gibt an, ob Unterschiede in den Tabellenpartitionsoptionen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.  Diese Option gilt nur für Data Warehouse-Datenbanken von Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Gibt an, ob Unterschiede in den Benutzereinstellungsobjekten beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Gibt an, ob Unterschiede in den Leerzeichen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Gibt an, ob Unterschiede im Wert der WITH NOCHECK-Klausel für CHECK-Einschränkungen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
@@ -235,7 +258,7 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 
 In der folgenden Tabelle wird das Format der Option beschrieben, mit der Sie den Wert einer SQL-Befehlsvariablen (**sqlcmd**) außer Kraft setzen können, die während einer Veröffentlichungsaktion verwendet wird. Die Werte der in der Befehlszeile angegebenen Variablen überschreiben andere Werte, die der Variablen zugewiesen sind (z. B. Werte in einem Veröffentlichungsprofil).  
   
-|Parameter|Standard|Beschreibung|  
+|Parameter|Standard|BESCHREIBUNG|  
 |-------------|-----------|---------------|  
 |**/Variables:{PropertyName}={Value}**||Gibt ein Name-Wert-Paar für eine aktionsspezifische Variable an: {VariableName}={Value}. Die DACPAC-Datei enthält die Liste gültiger SQLCMD-Variablen. Wenn nicht für jede Variable ein Wert angegeben wird, wird ein Fehler ausgegeben.|  
   
@@ -245,7 +268,7 @@ Durch eine SqlPackage.exe-Exportaktion wird eine Livedatenbank aus SQL Server bz
   
 ### <a name="help-for-export-action"></a>Hilfe zur Export-Aktion
 
-|Parameter|Kurzform|value|Beschreibung|
+|Parameter|Kurzform|value|BESCHREIBUNG|
 |---|---|---|---|
 |**/Action:**|**/a**|Exportieren|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -286,7 +309,7 @@ Durch eine SqlPackage.exe-Importaktion werden das Schema und die Tabellendaten a
   
 ### <a name="help-for-command-actions"></a>Hilfe zu Befehlsaktionen
 
-|Parameter|Kurzform|value|Beschreibung|
+|Parameter|Kurzform|value|BESCHREIBUNG|
 |---|---|---|---|
 |**/Action:**|**/a**|Importieren|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -309,7 +332,7 @@ Durch eine SqlPackage.exe-Importaktion werden das Schema und die Tabellendaten a
 
 Spezifische Eigenschaften für die Import-Aktion
 
-|Eigenschaft|value|Beschreibung|
+|Eigenschaft|value|BESCHREIBUNG|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Gibt das Befehlstimeout in Sekunden zum Ausführen von Abfragen in SQL Server zurück.|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Definiert die Edition einer Azure SQL-Datenbank.|
@@ -433,6 +456,7 @@ Durch eine **SqlPackage.exe**-Berichtsaktion wird ein XML-Bericht der Änderunge
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Gibt an, ob Unterschiede bei dem Zeitraum, über den SQL Server die Route in der Routingtabelle beibehält, beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Gibt an, ob Unterschiede in den Semikolons zwischen T-SQL-Anweisungen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.| 
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Gibt an, ob Unterschiede in den Tabellenoptionen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.| 
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Gibt an, ob Unterschiede in den Tabellenpartitionsoptionen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.  Diese Option gilt nur für Data Warehouse-Datenbanken von Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Gibt an, ob Unterschiede in den Benutzereinstellungsobjekten beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Gibt an, ob Unterschiede in den Leerzeichen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen. |
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Gibt an, ob Unterschiede im Wert der WITH NOCHECK-Klausel für CHECK-Einschränkungen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.| 
@@ -490,7 +514,7 @@ Durch eine **SqlPackage.exe**-Skriptaktion wird ein inkrementelles Transact-SQL-
   
 ### <a name="help-for-the-script-action"></a>Hilfe zur Script-Aktion
 
-|Parameter|Kurzform|value|Beschreibung|
+|Parameter|Kurzform|value|BESCHREIBUNG|
 |---|---|---|---|
 |**/Action:**|**/a**|Skript|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
@@ -528,7 +552,7 @@ Durch eine **SqlPackage.exe**-Skriptaktion wird ein inkrementelles Transact-SQL-
 
 ### <a name="properties-specific-to-the-script-action"></a>Spezifische Eigenschaften für die Script-Aktion
 
-|Eigenschaft|value|Beschreibung|
+|Eigenschaft|value|BESCHREIBUNG|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Gibt zusätzliche Bereitstellungs-Contributorargumente für die Bereitstellungs-Contributors an. Dabei sollte es sich um eine Liste von Werten mit Semikolatrennung handeln.
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Gibt zusätzliche Bereitstellungs-Contributors an, die beim Bereitstellen des Dacpacs ausgeführt werden sollen. Dabei sollte es sich um eine Liste der Namen oder IDs der vollqualifizierten Erstellungs-Contributors mit Semikolatrennung handeln.
@@ -597,6 +621,7 @@ Durch eine **SqlPackage.exe**-Skriptaktion wird ein inkrementelles Transact-SQL-
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Gibt an, ob Unterschiede bei dem Zeitraum, über den SQL Server die Route in der Routingtabelle beibehält, beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Gibt an, ob Unterschiede in den Semikolons zwischen T-SQL-Anweisungen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Gibt an, ob Unterschiede in den Tabellenoptionen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Gibt an, ob Unterschiede in den Tabellenpartitionsoptionen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.  Diese Option gilt nur für Data Warehouse-Datenbanken von Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Gibt an, ob Unterschiede in den Benutzereinstellungsobjekten beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Gibt an, ob Unterschiede in den Leerzeichen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Gibt an, ob Unterschiede im Wert der WITH NOCHECK-Klausel für CHECK-Einschränkungen beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden sollen.|

@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen, Ändern oder Löschen von Berichtsparametern (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Hinzufügen, Ändern oder Löschen von Berichtsparametern (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb0d29f62a3751f0b8b6acd1c33c7b7f7eb10ff2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5b07c03980cf1eb2cc7f99ab6d4e6470485bb53f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582069"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080604"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Hinzufügen, Ändern oder Löschen von Berichtsparametern (Berichts-Generator und SSRS)
   Mithilfe von Berichtsparametern können Sie Berichtsdaten auswählen, eine Verbindung zwischen verwandten Berichten herstellen und die Berichtspräsentation anpassen. Sie können einen Standardwert und eine Liste mit verfügbaren Werten bereitstellen, und die Benutzer können dann eine Auswahl treffen.  
@@ -63,7 +63,7 @@ ms.locfileid: "65582069"
  [Ändern der Reihenfolge von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Hinzufügen von kaskadierenden Parametern zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Tutorial: Add a Parameter to Your Report (Report Builder) (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Parameters Collection References (Report Builder and SSRS) (Verweise auf Parameterauflistungen (Berichts-Generator und SSRS))](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Add a multi-value parameter to a Report (Hinzufügen eines aus mehreren Werten bestehenden Parameters zu einem Bericht)](../../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md)  

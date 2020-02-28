@@ -1,5 +1,5 @@
 ---
-title: Registrieren eines .NET Framework-Standarddatenproviders (SSRS) | Microsoft-Dokumentation
+title: Registrieren eines .NET Framework-Standarddatenanbieters | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: badeb4de20aa885a77fa61ec3a261a8c09c79506
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0f9435584579e36e46d55aa6723e0ade60b6642b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571250"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081946"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrieren eines .NET Framework-Standarddatenproviders (SSRS)
   Wenn Sie zum Abrufen von Daten für ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Berichtsdataset einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenanbieter eines Drittanbieters verwenden möchten, müssen Sie die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly an zwei Speicherorten bereitstellen und registrieren: auf dem Berichterstellungsclient und auf dem Berichtsserver. Auf dem Berichterstellungsclient müssen Sie den Datenanbieter als Datenquellentyp registrieren und einem Abfrage-Designer zuordnen. Beim Erstellen eines Berichtsdatasets können Sie diesen Datenanbieter als Datenquellentyp auswählen. Der zugeordnete Abfrage-Designer wird geöffnet, um das Erstellen von Abfragen für diesen Datenquellentyp zu erleichtern. Der Datenanbieter muss auf dem Berichtsserver als Datenquellentyp registriert werden. Anschließend können Sie veröffentlichte Berichte verarbeiten, für die mithilfe dieses Datenanbieters Daten von einer Datenquelle abgerufen werden.  
@@ -56,7 +56,7 @@ ms.locfileid: "65571250"
   
 4.  Fügen Sie einen Eintrag für den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter hinzu.  
   
-    |attribute|Beschreibung|  
+    |attribute|BESCHREIBUNG|  
     |---------------|-----------------|  
     |**Name**|Geben Sie einen eindeutigen Namen für den Datenanbieter an, z. B. **MyNETDataProvider**. Die maximale Länge für das **Name** -Attribut beträgt 255 Zeichen. Der Name muss für sämtliche Einträge im **Extension** -Element einer Konfigurationsdatei eindeutig sein. Der hier eingeschlossene Wert wird beim Erstellen einer neuen Datenquelle in der Dropdownliste der Datenquellentypen angezeigt.|  
     |**Typ**|Geben Sie eine durch Trennzeichen getrennte Liste ein, die den vollqualifizierten Namespace der Klasse enthält, die die <xref:System.Data.IDbConnection> -Schnittstelle implementiert, gefolgt vom Namen der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly (ohne die Dateinamenerweiterung DLL).|  
@@ -129,7 +129,7 @@ ms.locfileid: "65571250"
   
 4.  Fügen Sie einen Eintrag für den Datenanbieter hinzu.  
   
-    |attribute|Beschreibung|  
+    |attribute|BESCHREIBUNG|  
     |---------------|-----------------|  
     |**Name**|Geben Sie einen eindeutigen Namen für den Datenanbieter an, z. B. **MyNETDataProvider**. Die maximale Länge für das **Name** -Attribut beträgt 255 Zeichen. Der Name muss für sämtliche Einträge im **Extension** -Element einer Konfigurationsdatei eindeutig sein. Der hier eingeschlossene Wert wird beim Erstellen einer neuen Datenquelle in der Dropdownliste der Datenquellentypen angezeigt.|  
     |**Typ**|Geben Sie eine durch Trennzeichen getrennte Liste ein, die den vollqualifizierten Namespace der Klasse enthält, die die <xref:System.Data.IDbConnection> -Schnittstelle implementiert, gefolgt vom Namen der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly (ohne die Dateinamenerweiterung DLL).|  

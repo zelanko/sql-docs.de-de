@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 149e83acd2a8e0e6d3022d74f929584190c91374
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68118469"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479675"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,10 @@ ms.locfileid: "68118469"
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC3_CHECK_CATALOG|  
 |Meldungstext|Meldung ERROR zum Prüfen des Katalogs, Ebene LEVEL, Status STATE: MESSAGE.|  
-  
+
+> [!NOTE]
+> Die Fehlermeldung 8992 verweist auf eine spezifische andere Fehlermeldung (zwischen 3851 und 3858) zur tatsächlichen Inkonsistenz.
+
 ## <a name="explanation"></a>Erklärung  
 DBCC CHECKCATALOG oder DBCC CHECKDB hat in den Systemmetadatentabellen eine Inkonsistenz für das angegebene Objekt festgestellt. Es handelt sich um eine Inkonsistenz zwischen der aufgezeichneten Objekt-ID und dem in der Fehlermeldung angegebenen Objekt.  
   
@@ -40,23 +43,18 @@ Dieser Fehler kann auftreten, wenn eine oder mehrere Systemtabellen manuell auf 
 Dieser Fehler kann beim Ausführen von DBCC CHECKDB für eine Datenbank auftreten, die von SQL Server 2000 auf SQL Server 2005 oder höher aktualisiert wurde. In SQL Server 2000 enthält DBCC CHECKDB die DBCC CHECKCATALOG-Funktion nicht. Deshalb wird der Fehler nicht vor dem Upgrade abgefangen, es sei denn, DBCC CHECKCATALOG wurde ausdrücklich für die Datenbank in SQL Server 2000 ausgeführt.  
   
 In Verbindung mit Fehler 8992 werden möglicherweise folgende Fehler angezeigt:  
-  
-Meldung 3851 – Eine ungültige Zeile (%ls) wurde in der sys.%ls%ls-Systemtabelle gefunden.  
-  
-Meldung 3852 – Für die Zeile (%ls) in sys.%ls%ls ist keine entsprechende Zeile (%ls) in sys.%ls%ls vorhanden.  
-  
-3853 – Für das Attribut (%ls) der Zeile (%ls) in sys.%ls%ls ist keine entsprechende Zeile (%ls) in sys.%ls%ls vorhanden.  
-  
-3854 – Für das Attribut (%ls) der Zeile (%ls) in sys.%ls%ls ist eine entsprechende Zeile (%ls) in sys.%ls%ls vorhanden, sie ist jedoch ungültig.  
-  
-3855 – Das Attribut (%ls) ist ohne eine Zeile (%ls) in sys.%ls%ls vorhanden.  
-  
-3856 – Das Attribut (%ls) ist fälschlicherweise für die Zeile (%ls) in sys.%ls%ls vorhanden.  
-  
-3857 – Das Attribut (%ls) ist für die Zeile (%ls) in sys.%ls%ls erforderlich, fehlt jedoch.  
-  
-3858 – Das Attribut (%ls) der Zeile (%ls) in sys.%ls%ls weist einen ungültigen Wert auf.  
-  
+|||
+|-|-| 
+|Meldungs-ID|Fehlertext|
+|3851|Eine ungültige Zeile (%ls) wurde in der sys.%ls%ls-Systemtabelle gefunden.|
+|3852|Für die Zeile (%ls) in sys.%ls%ls ist keine entsprechende Zeile (%ls) in sys.%ls%ls vorhanden.|
+|3853|Für das Attribut (%ls) der Zeile (%ls) in sys.%ls%ls ist keine entsprechende Zeile (%ls) in sys.%ls%ls vorhanden.|
+|3854|Für das Attribut (%ls) der Zeile (%ls) in sys.%ls%ls ist eine entsprechende Zeile (%ls) in sys.%ls%ls vorhanden, sie ist jedoch ungültig.|
+|3855|Das Attribut (%ls) ist ohne eine Zeile (%ls) in sys.%ls%ls vorhanden.|
+|3856|Das Attribut (%ls) ist fälschlicherweise für die Zeile (%ls) in sys.%ls%ls vorhanden.|
+|3857|Das Attribut (%ls) ist für die Zeile (%ls) in sys.%ls%ls erforderlich, fehlt jedoch.|
+|3858|Das Attribut (%ls) der Zeile (%ls) in sys.%ls%ls weist einen ungültigen Wert auf.|
+
 ## <a name="user-action"></a>Benutzeraktion  
   
 ### <a name="drop-and-re-create-the-specified-object"></a>Löschen und Neuerstellen des angegebenen Objekts  
@@ -72,8 +70,22 @@ Wenn die Metadateninkonsistenz auch in der Sicherung enthalten ist, müssen Sie 
 Dieser Fehler kann nicht repariert werden.  Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 ### <a name="do-not-manually-update-system-tables"></a>Systemtabellen dürfen nicht manuell aktualisiert werden  
-Nehmen Sie keine manuellen Updates an den Systemtabellen vor. SQL Server unterstützt keine manuellen Änderungen an den Systemdatenbanken. Wenn Sie eine Systemtabelle in einer SQL Server-Datenbank aktualisieren, werden zwei Ereignisse (Ereignis-ID 17659 und Ereignis-ID 3859) protokolliert. Weitere Informationen finden Sie im KB-Artikel 2688307 "Beim Aktualisieren von Systemtabellen in einer SQL Server-Datenbank werden Ereignis-ID 17659 und Ereignis-ID 3859 protokolliert".  
-  
-## <a name="see-also"></a>Weitere Informationen  
-[Beim Aktualisieren von Systemtabellen in einer SQL Server-Datenbank werden Ereignis-ID 17659 und Ereignis-ID 3859 protokolliert](https://support.microsoft.com/kb/2688307/EN-US)  
+
+Nehmen Sie keine manuellen Updates an den Systemtabellen vor. SQL Server unterstützt keine manuellen Änderungen an den Systemdatenbanken. Wenn Sie eine Systemtabelle in SQL Server-Datenbank aktualisieren, werden die folgenden Ereignisse protokolliert:
+
+#### <a name="when-a-system-table-is-manually-updated"></a>Wenn eine Systemtabelle manuell aktualisiert wird
+
+Fehlermeldung 17659: Warnung: Die Systemtabelle mit der ID <id> in der Datenbank mit der ID <id> wurde direkt aktualisiert. Die Cachekohärenz ist möglicherweise verloren gegangen. SQL Server sollte neu gestartet werden.
+
+#### <a name="starting-a-database-with-a-system-table-that-was-manually-updated"></a>Beim Starten einer Datenbank mit einer manuell aktualisierten Systemtabelle
+
+Fehlermeldung 3859: Warnung: Der Systemkatalog wurde direkt in der Datenbank mit der ID <id> aktualisiert, zuletzt um date_time.
+
+#### <a name="when-you-execute-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>Beim Ausführen des Befehls DBCC_CHECKDB, nachdem eine Systemtabelle manuell aktualisiert wurde
+
+Fehlermeldung 3859: Warnung: Der Systemkatalog wurde direkt in der Datenbank mit der ID <id> aktualisiert, zuletzt um date_time.  
+
+## <a name="see-also"></a>Weitere Informationen
+
+[Systembasistabellen](../system-tables/system-base-tables.md)
   

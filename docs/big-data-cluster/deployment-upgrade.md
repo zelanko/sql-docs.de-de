@@ -5,18 +5,18 @@ description: Erfahren Sie, wie Sie Big Data-Cluster für SQL Server auf ein neue
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afb12477dd220e71cf2cf97d6a13b54aa2d35be4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75831834"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256865"
 ---
-# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Upgraden von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-upgrade-big-data-clusters-2019"></a>Upgraden von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -76,7 +76,7 @@ In diesem Abschnitt wird erläutert, wie ein BDC für SQL Server von einem unter
 >Die neuesten Imagetags finden Sie in den [Versionshinweisen zu Big Data-Clustern in SQL Server 2019](release-notes-big-data-cluster.md).
 
 >[!IMPORTANT]
->Wenn Sie ein privates Repository verwenden, um die Images für die Bereitstellung oder das Upgrade eines BDC vorab abzurufen, stellen Sie sicher, dass sich die aktuellen Buildimages sowie die Zielbuildimages im privaten Repository befinden. Dadurch kann bei Bedarf ein Rollback durchgeführt werden. Wenn Sie die Anmeldeinformationen des privaten Repositorys seit der ursprünglichen Bereitstellung geändert haben, müssen Sie zudem den entsprechenden geheimen Schlüssel in Kubernetes aktualisieren, bevor Sie das Upgrade durchführen. Das Aktualisieren der Anmeldeinformationen über die Umgebungsvariablen DOCKER_PASSWORD und DOCKER_USERNAME wird nicht unterstützt. Aktualisieren Sie den geheimen Schlüssel mithilfe von [kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). Ein Upgrade unter Verwendung unterschiedlicher privater Repositorys für den aktuellen Build und den Zielbuild wird nicht unterstützt.
+>Wenn Sie ein privates Repository verwenden, um die Images für die Bereitstellung oder das Upgrade eines BDC vorab abzurufen, stellen Sie sicher, dass sich die aktuellen Buildimages sowie die Zielbuildimages im privaten Repository befinden. Dadurch kann bei Bedarf ein Rollback durchgeführt werden. Wenn Sie die Anmeldeinformationen des privaten Repositorys seit der ursprünglichen Bereitstellung geändert haben, müssen Sie zudem die entsprechenden Umgebungsvariablen (DOCKER_PASSWORD und DOCKER_USERNAME) aktualisieren. Ein Upgrade unter Verwendung unterschiedlicher privater Repositorys für den aktuellen Build und den Zielbuild wird nicht unterstützt.
 
 ### <a name="increase-the-timeout-for-the-upgrade"></a>Erhöhen des Timeoutwerts für das Upgrade
 
@@ -93,7 +93,15 @@ Ein Timeout kann auftreten, wenn bestimmte Komponenten nicht in der zugewiesenen
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-Bearbeiten Sie die Konfigurationszuordnung für Upgrades, um die Timeoutwerte für Upgrades zu erhöhen. So bearbeiten Sie die Konfigurationszuordnung für Upgrades:
+Sie können die Timeouts für ein Upgrade erhöhen, indem Sie die Parameter **--controller-timeout** und **--component-timeout** nutzen, um höhere Werte festzulegen, wenn Sie das Upgrade initiieren. Diese Option ist nur ab SQL Server 2019 CU2 verfügbar. Beispiel:
+
+   ```bash
+   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   ```
+**--controller-timeout** gibt die Wartezeit in Minuten an, bis der Controller oder die Controllerdatenbank das Upgrade abgeschlossen hat.
+**--component-timeout** gibt die Zeitdauer an, in der jede nachfolgende Phase des Upgrades abgeschlossen sein muss.
+
+Bearbeiten Sie in Versionen vor SQL Server 2019 CU2 die Konfigurationszuordnung für Upgrades, um die Timeoutwerte für Upgrades zu erhöhen. So bearbeiten Sie die Konfigurationszuordnung für Upgrades:
 
 Führen Sie den folgenden Befehl aus:
 

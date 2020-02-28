@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Ausdrucksverwendungen in Berichten (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd0b847ba4ebaa2d669927abe0665b18a2d517bc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579173"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080276"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)
 In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten werden Ausdrücke innerhalb der gesamten Berichtsdefinition verwendet, um Werte für folgende Elemente anzugeben oder zu berechnen: Parameter, Abfragen, Filter, Berichtselementeigenschaften, Gruppierungs- und Sortierdefinitionen, Textfeldeigenschaften, Lesezeichen, Dokumentstrukturen, dynamischer Inhalt von Seitenkopf- und Seitenfußzeilen, Bilder und dynamische Datenquellendefinitionen. Dieses Hilfethema enthält Beispiele für die vielen Anwendungsmöglichkeiten, die Ausdrücke bieten, um den Inhalt oder die Darstellung eines Berichts zu variieren. Es handelt sich dabei aber nicht um eine vollständige Liste. Sie können für jede beliebige Eigenschaft einen Ausdruck in einem Dialogfeld festlegen, in dem die Ausdrucksschaltfläche (**fx**) angezeigt wird, oder in einer Dropdownliste, in der **\<Ausdruck...>** angezeigt wird.  

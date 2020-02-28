@@ -1,5 +1,5 @@
 ---
-title: Berichte, Berichtsteile und Berichtsdefinitionen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Berichte, Berichtsteile und Berichtsdefinitionen (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 640cd9bfd39b272e7829cc25b51ee50a82176a65
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 11236a29e22877e1d785d7ac2325898cc11bac7e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67037876"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081047"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Berichte, Berichtsteile und Berichtsdefinitionen (Berichts-Generator und SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet eine Vielzahl von Begriffen, mit denen die verschiedenen Zustände eines paginierten Berichts beschrieben werden, darunter Anfangsdefinition, veröffentlichter Bericht und angezeigter Bericht, wie der Benutzer ihn sieht.  

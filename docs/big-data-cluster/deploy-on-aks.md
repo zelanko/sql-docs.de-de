@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251199"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173609"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Azure Kubernetes Service für die Bereitstellung von Big-Data-Clustern für SQL Server
 
@@ -68,6 +68,12 @@ Eine Azure-Ressourcengruppe ist eine logische Gruppe, in der Azure-Ressourcen be
 
    ```azurecli
    az account set --subscription <subscription id>
+   ```
+
+1. Identifizieren über den folgenden Befehl Sie die Azure-Region, in der Sie den Cluster und die Ressourcen bereitstellen möchten:
+
+   ```azurecli
+   az account list-locations -o table
    ```
 
 1. Erstellen Sie mithilfe des Befehls **az group create** eine Ressourcengruppe. Im folgenden Beispiel wird eine Ressourcengruppe mit dem Namen `sqlbdcgroup` am Standort `westus2` erstellt.
@@ -132,7 +138,7 @@ Wählen Sie die neuste für Ihren Cluster verfügbare Version aus. Notieren Sie 
    --kubernetes-version <version number>
    ```
 
-   Sie können die Anzahl der Kubernetes-Agent-Knoten erhöhen oder verringern, indem Sie den Wert für `--node-count <n>` ändern. Dabei steht `<n>` für die Anzahl der Agent-Knoten, die Sie verwenden möchten. Dies schließt nicht den Kubernetes-Masterknoten ein, der im Hintergrund von AKS verwaltet wird. Im vorherigen Beispiel wird nur ein einzelner Knoten zu Evaluierungszwecken verwendet.
+   Sie können die Anzahl der Kubernetes-Agent-Knoten erhöhen oder verringern, indem Sie den Wert für `--node-count <n>` ändern. Dabei steht `<n>` für die Anzahl der Agent-Knoten, die Sie verwenden möchten. Dies schließt nicht den Kubernetes-Masterknoten ein, der im Hintergrund von AKS verwaltet wird. Im vorherigen Beispiel wird nur ein einzelner Knoten zu Evaluierungszwecken verwendet. Sie können auch `--node-vm-size` ändern, um eine geeignete Größe der virtuellen Computer auszuwählen, die Ihren Workloadanforderungen entspricht. Verwenden Sie den `az vm list-sizes --location westus2 -o table`-Befehl, um verfügbare Größen für virtuelle Computer in Ihrer Region auflisten.
 
    Nach einigen Minuten wird der Befehl abgeschlossen und gibt Informationen über den Cluster im JSON-Format zurück.
 
@@ -161,6 +167,7 @@ Wenn Sie die oben genannten Befehle verwenden und Probleme beim Erstellen einer 
 
 - Vergewissern Sie sich, dass Sie die [neueste Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) installiert haben.
 - Führen Sie dieselben Schritte noch einmal mit einer anderen Ressourcengruppe und einem anderen Clusternamen.
+- Weitere Informationen finden Sie in der ausführlichen [Dokumentation zur Problembehandlung für AKS](https://docs.microsoft.com/azure/aks/troubleshooting).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

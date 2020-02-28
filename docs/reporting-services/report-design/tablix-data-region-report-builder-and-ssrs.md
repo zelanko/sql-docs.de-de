@@ -1,5 +1,5 @@
 ---
-title: Tablix-Datenbereich (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Tablix-Datenbereich (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b80383fee9ede0fece7ed2fd16e95bdf63592b04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a37105db6639b7d7db35c3beb1fc85020015d7e4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574496"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081370"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Tablix-Datenbereich (Berichts-Generator und SSRS)
   Der Tablix-Datenbereich ist in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]ein Berichtselement mit verallgemeinertem Layout, in dem paginierte Berichtsdaten in Zellen angezeigt werden, die in Zeilen und Spalten organisiert sind. Bei den Berichtsdaten kann es sich um aus der Datenquelle abgerufene Detaildaten oder in benutzerdefinierten Gruppen organisierte aggregierte Detaildaten handeln. Jede Tablix-Zelle kann ein beliebiges Berichtselement enthalten, z. B. ein Textfeld, ein Bild oder einen anderen Datenbereich (z. B. einen Tablix-Bereich, ein Diagramm oder ein Messgerät). Wenn Sie einer Zelle mehrere Berichtselemente hinzufügen möchten, erstellen Sie zuerst ein Rechteck, das als Container fungiert. Anschließend fügen Sie dem Rechteck Berichtselemente hinzu.  

@@ -1,5 +1,5 @@
 ---
-title: Einfügen oder Löschen einer Zeile (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Einfügen oder Löschen einer Zeile (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b20b95586e387484d536ad8005c6f57c1de4698
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6bdec71e808d577a764d2b0cc3fa99fc9cd522fd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580168"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082020"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Einfügen oder Löschen einer Zeile (Berichts-Generator und SSRS)
 Sie können in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht Zeilen einem Tablix-Datenbereich hinzufügen bzw. daraus entfernen. Der Tablix-Datenbereich kann eine Tabelle, eine Matrix oder eine Liste sein. Die folgenden Vorgehensweisen gelten nicht für Diagramm- und Messgerätdatenbereiche.  

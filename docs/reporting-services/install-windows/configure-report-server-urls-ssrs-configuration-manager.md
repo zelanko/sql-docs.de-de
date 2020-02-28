@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
+title: Konfigurieren von Berichtsserver-URLs (Konfigurations-Manager) | Microsoft-Dokumentation
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: da3f7c0f0385ddfd8bdb61ab7009a6503acfb80a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594074"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080247"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]werden URLs für den Zugriff auf den Report Server-Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]verwendet. Bevor Sie die eine der Anwendungen verwenden können, müssen Sie mindestens je eine URL für den Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]konfigurieren. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet Standardwerte für beide Anwendungs-URLs, die in den meisten Bereitstellungsszenarien gut funktionieren, auch in parallelen Bereitstellungen mit anderen Webdiensten und -anwendungen.  

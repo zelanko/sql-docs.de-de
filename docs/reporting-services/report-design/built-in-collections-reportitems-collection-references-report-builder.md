@@ -1,5 +1,5 @@
 ---
-title: Verweise auf Parameterauflistungen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Verweise auf die ReportItems-Auflistung (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24a50de92a2b182295abc926c98358fa56e2f379
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e8819e97cbece0ab9682252c3afdedee7d671428
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581766"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081889"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Integrierte Auflistungen: Verweise auf ReportItems-Auflistungen (Berichts-Generator)
   Die integrierte **ReportItems** -Sammlung besteht aus einem Satz von Textfeldern aus Berichtselementen, wie Zeilen eines Datenbereichs oder Textfelder auf der Berichtsentwurfsoberfläche. Die **ReportItems** -Auflistung umfasst Textfelder, die sich im aktuellen Bereich einer Seitenkopfzeile, einer Seitenfußzeile oder eines Berichtshauptteils befinden. Diese Auflistung wird vom Berichtsprozessor und vom Berichtsrenderer zur Laufzeit bestimmt. Der aktuelle Bereich wird geändert, wenn der Berichtsprozessor Berichtsdaten und die Layoutelemente des Berichtselements erfolgreich kombiniert, während der Benutzer Seiten eines Berichts anzeigt. Sie können die integrierte **ReportItems** -Sammlung verwenden, um Seitenkopfzeilen im Wörterbuchformat zu erstellen, die das erste und das letzte Element auf jeder Seite anzeigen.  
@@ -22,7 +22,7 @@ ms.locfileid: "65581766"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Verwenden der ReportItems-Werteigenschaft  
- Elemente in der **ReportItems** -Auflistung verfügen nur über eine Eigenschaft: Wert. Mit dem Wert für ein **ReportItems** -Element können Daten aus einem anderen Feld im Bericht angezeigt oder berechnet werden. Der Zugriff auf den Wert des aktuellen Textfelds kann über den in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] integrierten globalen Me.Value oder einfach über Value erfolgen. In Berichtsfunktionen wie "Erster" und in Aggregatfunktionen müssen Sie jedoch die vollqualifizierte Syntax verwenden.  
+ Elemente in der **ReportItems** -Auflistung verfügen nur über eine Eigenschaft: Value. Mit dem Wert für ein **ReportItems** -Element können Daten aus einem anderen Feld im Bericht angezeigt oder berechnet werden. Der Zugriff auf den Wert des aktuellen Textfelds kann über den in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] integrierten globalen Me.Value oder einfach über Value erfolgen. In Berichtsfunktionen wie "Erster" und in Aggregatfunktionen müssen Sie jedoch die vollqualifizierte Syntax verwenden.  
   
  Beispiel:  
   

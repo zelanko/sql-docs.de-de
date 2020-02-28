@@ -1,5 +1,5 @@
 ---
-title: Rendern von Berichtselementen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Rendern von Berichtselementen (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ae3b511031b95023ab8ebe2a8e4c0aa065d4f35
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 32bd51cd5dc4419465fac494559dc4d116f796c4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576443"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077021"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendern von Berichtselementen (Berichts-Generator und SSRS)
   Die Zahl, die Größe und der Ort der Berichtselemente beeinflussen, wie die Renderer den Text des Berichts paginieren. Unten finden Sie eine Beschreibung zum Rendering verschiedener Berichtselemente.  

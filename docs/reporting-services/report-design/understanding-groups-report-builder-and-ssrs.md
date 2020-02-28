@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu Gruppen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Grundlegendes zu Gruppen (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b9d8dda589d5753a406fb46fa848191c1e4793a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8a24833de353f4a524dd12f3a37a343fdc1a9151
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574461"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080851"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Grundlegendes zu Gruppen (Berichts-Generator und SSRS)
   In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht ist eine Gruppe ein benannter Satz von Daten aus dem Berichtsdataset, der an einen Datenbereich gebunden ist. Im Grunde wird mit einer Gruppe eine Sicht eines Berichtsdatasets organisiert. Alle Gruppen in einem Datenbereich geben unterschiedliche Sichten desselben Berichtsdatasets an.  

@@ -1,5 +1,5 @@
 ---
-title: Bilder, Textfelder, Rechtecke und Linien (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Bilder, Textfelder, Rechtecke und Linien (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c27c732f04d661d210e089948416d10e3274b9d5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a57bef0be8819674142526d62ec824078ded04e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580239"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082058"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Bilder, Textfelder, Rechtecke und Linien (Berichts-Generator und SSRS)
   Neben Datenbereichen wie Tabellen, Matrizen und Diagrammen werden in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten andere Berichtselemente wie Bilder, Textfelder und Rechtecke verwendet, um visuelle Effekte hinzuzufügen, wichtige Informationen hervorzuheben oder verwandte Informationen bereitzustellen. Sie können die Formatierung eines Berichtselements ändern. Sie können z. B. einen Rahmen oder eine Auffüllung hinzufügen, die ursprüngliche Sichtbarkeit oder Richtung ändern oder die genaue Größe oder Position des Elements angeben.  

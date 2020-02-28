@@ -1,5 +1,5 @@
 ---
-title: Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 82208f23aa3bf0126c13a71f2130163b0d75c4dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f93ab65674436fc0225ba8f8c66b98d12f9b7694
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576270"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080022"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)
 Wenn Sie ordnungsgemäß formatierte DateTime-Werte auf einer Achse in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht anzeigen, zeigt ein Diagramm diese Werte automatisch als Tage an. Zum Festlegen eines Datums- oder Zeitintervalls für die x-Achse (z. B. ein Monats- oder Stundenintervall) müssen Sie die Achsenbezeichnungen formatieren und den Achsentyp auf ein gültiges Datums- oder Zeitintervall festlegen.  

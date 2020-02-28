@@ -1,5 +1,5 @@
 ---
-title: Verweise auf Berichts- und Gruppenvariablenauflistungen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Verweise auf Berichts- und Gruppenvariablenauflistungen (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 97123f3e9802ddbdf452f66e83a1b3c00f99764d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581781"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081452"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Integrierte Auflistungen: Verweise auf Berichts- und Gruppenvariablen (Berichts-Generator)
   Bei komplexen Berechnungen, die in Ausdrücken eines Berichts mehrfach verwendet werden, empfiehlt sich das Erstellen einer Variable. Sie können eine Berichtsvariable oder eine Gruppenvariable erstellen. Variablennamen müssen im Bericht eindeutig sein.  

@@ -1,5 +1,5 @@
 ---
-title: Drilldownaktion (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Drilldown-Aktion (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -38,12 +38,12 @@ f1_keywords:
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee55b7c5b6e5fc1d65f5914cc2850e204c0c0c2e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a0c286663b339171a2536340ca19213879e22091
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579016"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080467"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Drilldownaktion (Berichts-Generator und SSRS)
 Durch die Bereitstellung von Plus- oder Minussymbolen für ein Textfeld können Sie Benutzern das interaktive Aus- und Einblenden von Elementen ermöglichen. Dies wird als *Drilldownaktion* bezeichnet. Für eine Tabelle oder Matrix können Sie statische Zeilen und Spalten oder Zeilen und Spalten ein- und ausblenden, die Gruppen zugeordnet sind.  

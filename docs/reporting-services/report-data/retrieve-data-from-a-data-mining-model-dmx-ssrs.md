@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Daten aus einem Data Mining-Modell (DMX) (SSRS) | Microsoft-Dokumentation
+title: Abrufen von Daten aus einem Data Mining-Modell (DMX) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 954ca8c9cf79cf03d311b87c78914264af245ee7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3b49ed7ad49555f83a80ece77f2ba23d2d4252a8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190707"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081807"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>Abrufen von Daten aus einem Data Mining-Modell (DMX) (SSRS)
   Zur Verwendung von Daten aus einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Data Mining-Modell in Ihrem Bericht müssen Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquelle und mindestens ein Berichtsdataset definieren. Sie müssen beim Erstellen der Datenquellendefinition eine Verbindungszeichenfolge sowie Anmeldeinformationen angeben, damit Sie von Ihrem Clientcomputer auf die Datenquelle zugreifen können.  

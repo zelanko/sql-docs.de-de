@@ -1,5 +1,5 @@
 ---
-title: Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS) | Microsoft-Dokumentation
+title: Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: aa0f8b8d8b8ee4cbd3ebdaf70fcb63b9cb5005b9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573318"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077677"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenverarbeitungserweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu den für die Datenquelle verfügbaren und von der Datenverarbeitungserweiterung unterstützten Feldeigenschaften **Value** und **IsMissing** vorhanden. Erweiterte Eigenschaften werden im Berichtsdatenbereich nicht als Teil der Feldauflistung für ein Berichtsdataset angezeigt. Sie können erweiterte Feldeigenschaftswerte in den Bericht einbeziehen, indem Sie Ausdrücke schreiben, die deren Namen in der integrierten **Fields** -Sammlung angeben.  

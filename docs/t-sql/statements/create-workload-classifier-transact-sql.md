@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831609"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429031"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -144,13 +144,13 @@ Eine Anforderung kann mit mehreren Klassifizierern übereinstimmen.  Es gibt ein
 Beachten Sie die folgenden Klassifiziererkonfigurationen.
 
 ```sql
-CREATE WORKLOAD CLASSIFIER classiferA WITH  
+CREATE WORKLOAD CLASSIFIER classifierA WITH  
 ( WORKLOAD_GROUP = 'wgDashboards'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = HIGH
  ,WLM_LABEL      = 'salereport' )
 
-CREATE WORKLOAD CLASSIFIER classiferB WITH  
+CREATE WORKLOAD CLASSIFIER classifierB WITH  
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
@@ -158,7 +158,7 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
  ,END_TIME       = '07:00' )
 ```
 
-Der Benutzer `userloginA` ist für beide Klassifizierer konfiguriert.  Wenn „userloginA“ zwischen 18:00 Uhr und 07:00 Uhr eine Abfrage mit der Bezeichnung `salesreport` ausführt, wird die Anforderung mit der Wichtigkeit „HIGH“ in die Arbeitsauslastungsgruppe „wgDashboards“ klassifiziert.  Es wird möglicherweise erwartet, dass die Anforderung außerhalb der Geschäftszeiten mit Wichtigkeit „LOW“ in „wgUserQueries“ klassifiziert wird. „WLM_LABEL“ weist jedoch eine höhere Gewichtung als „START_TIME/END_TIME“ auf.  Die Gewichtung von „classiferA“ ist 80 (64 für Benutzer und 16 für WLM_LABEL).  Die Gewichtung von „classiferB“ ist 68 (64 für Benutzer und 4 für START_TIME/END_TIME).  In diesem Fall können Sie WLM_LABEL zu „classiferB“ hinzufügen.
+Der Benutzer `userloginA` ist für beide Klassifizierer konfiguriert.  Wenn „userloginA“ zwischen 18:00 Uhr und 07:00 Uhr eine Abfrage mit der Bezeichnung `salesreport` ausführt, wird die Anforderung mit der Wichtigkeit „HIGH“ in die Arbeitsauslastungsgruppe „wgDashboards“ klassifiziert.  Es wird möglicherweise erwartet, dass die Anforderung außerhalb der Geschäftszeiten mit Wichtigkeit „LOW“ in „wgUserQueries“ klassifiziert wird. „WLM_LABEL“ weist jedoch eine höhere Gewichtung als „START_TIME/END_TIME“ auf.  Die Gewichtung von „classifierA“ ist 80 (64 für Benutzer und 16 für WLM_LABEL).  Die Gewichtung von „classiferB“ ist 68 (64 für Benutzer und 4 für START_TIME/END_TIME).  In diesem Fall können Sie WLM_LABEL zu „classifierB“ hinzufügen.
 
  Weitere Informationen finden Sie unter [Klassifizierung der Arbeitsauslastung](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 

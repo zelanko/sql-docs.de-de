@@ -9,17 +9,47 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 12/26/2019
-ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.date: 02/19/2020
+ms.openlocfilehash: 441679bbcf6d6a24e48233d4134d575ec526e0b2
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75521730"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479692"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](download.md)**
+
+## <a name="february-hotfix"></a>Februar (Hotfix)
+
+19. Februar 2019 &nbsp; / &nbsp; Version: 1.15.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fehlerbehebung #9149 „Aktive Verbindungen anzeigen“ | [Issue #9149](https://github.com/microsoft/azuredatastudio/issues/9149)  |
+| Fehlerbehebung #9061 Beim Bearbeiten des Datenrasters wird die Größe nicht ordnungsgemäß angepasst, wenn der SQL-Bereich angezeigt oder ausgeblendet wird | [Issue #9061](https://github.com/microsoft/azuredatastudio/issues/9061)  |
+| &nbsp; | &nbsp; |
+
+## <a name="february-2020"></a>Februar 2020
+
+13. Februar 2019 &nbsp; / &nbsp; Version: 1.15.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Neue Verbesserung der Azure-Anmeldung | Eine Funktion wurde zur Azure-Anmeldung hinzugefügt, einschließlich Entfernung des Kopier-/Einfügevorgangs von Gerätecode für eine nahtlosere Funktion. |
+| Suche in Notebooks | Benutzer können STRG+F innerhalb eines Notebooks verwenden. Die Suche in der Notebook-Unterstützung durchsucht alle Zeilen in Code- und Textzellen. |
+| VS Code-Zusammenführung der Versionen von 1.38 bis 1.42 | Dieses Release enthält Updates für VS Code aus den drei vorherigen VS Code-Releases. Weitere Informationen finden Sie in den [Versionshinweisen](https://code.visualstudio.com/updates/v1_42). |
+| Fehlerbehebung für das oft gemeldete Problem mit [„leeren Anzeigen“](https://github.com/microsoft/azuredatastudio/issues/8775). | |
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22February+2020%22). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>Bekanntes Problem
+- Benutzer unter macOS Catalina müssen mit der rechten Maustaste auf Azure Data Studio klicken, und anschließend „Öffnen“ auswählen.
 
 ## <a name="december-2019-hotfix"></a>Dezember 2019 (Hotfix)
 

@@ -1,5 +1,5 @@
 ---
-title: Formatieren von Bereichen auf einem Messgerät (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Formatieren von Bereichen auf einem Messgerät (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eebf7f66e968ec2c7c3d0dcca168eb79fbbc3797
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1540979cedf5fc77675e7bca3036ddd6524bcc8e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575592"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079651"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Bereichen auf einem Messgerät (Berichts-Generator und SSRS)
  In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht ist ein Messbereich eine Zone oder ein Bereich auf der Messgerätskala, die oder der einen wichtigen Unterabschnitt von Werten auf dem Messgerät angibt. Mit einem Messbereich können Sie grafisch angeben, wann der Zeigerwert in eine bestimmte Wertespanne eintritt. Messbereiche sind durch einen Startwert und einen Endwert definiert.  

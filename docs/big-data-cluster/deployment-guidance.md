@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831602"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256883"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
 
@@ -48,7 +48,7 @@ Wenn Sie bereits über einen Kubernetes-Cluster verfügen, der die oben genannte
 
 Sie können Kubernetes auf drei Arten bereitstellen:
 
-| Bereitstellung von Kubernetes auf bzw. in: | Beschreibung | Link |
+| Bereitstellung von Kubernetes auf bzw. in: | BESCHREIBUNG | Link |
 |---|---|---|
 | **Azure Kubernetes Service (AKS)** | Ein Managed Kubernetes-Containerdienst in Azure. | [Anweisungen](deploy-on-aks.md) |
 | **Einzelne oder mehrere Computer (`kubeadm`)** | Ein Kubernetes-Cluster, der auf physischen oder virtuellen Computern mithilfe von `kubeadm` bereitgestellt wird. | [Anweisungen](deploy-with-kubeadm.md) |
@@ -169,7 +169,7 @@ Es ist auch möglich, die Bereitstellung an die Workloads anzupassen, die Sie au
 
 Die folgenden Umgebungsvariablen werden für Sicherheitseinstellungen verwendet, die nicht in einer Konfigurationsdatei für Bereitstellungen gespeichert werden. Beachten Sie, dass Docker-Einstellungen mit Ausnahme der Anmeldeinformationen in der Konfigurationsdatei festgelegt werden können.
 
-| Umgebungsvariable | Anforderung |Beschreibung |
+| Umgebungsvariable | Anforderung |BESCHREIBUNG |
 |---|---|---|
 | `AZDATA_USERNAME` | Erforderlich |Der Benutzername für den Big Data-Clusteradministrator für SQL Server. In der SQL Server-Masterinstanz wird eine SysAdmin-Anmeldung mit dem gleichen Namen erstellt. Als bewährte Sicherheitsmaßnahme wird das `sa`-Konto deaktiviert. |
 | `AZDATA_PASSWORD` | Erforderlich |Das Kennwort für die oben erstellten Benutzerkonten. Das gleiche Kennwort wird für den `root`-Benutzer verwendet, der zum Sichern vom Knox-Gateway und von HDFS verwendet wird. |

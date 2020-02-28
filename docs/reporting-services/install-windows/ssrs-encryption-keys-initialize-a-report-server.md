@@ -1,5 +1,5 @@
 ---
-title: Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
+title: Initialisieren eines Berichtsservers (Konfigurations-Manager) | Microsoft-Dokumentation
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fdb68c0e61d5b48db3a997af0315e7cabf302f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 264159f4c892cc688b15293c0e4283fc46520720
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593546"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080828"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS-Verschlüsselungsschlüssel: Initialisieren eines Berichtsservers
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kann ein initialisierter Server Daten in einer Berichtsserver-Datenbank verschlüsseln und entschlüsseln. Die Initialisierung ist die Voraussetzung für Berichtsservervorgänge. Die Initialisierung wird ausgeführt, wenn der Berichtsserverdienst zum ersten Mal gestartet wird. Sie wird ebenfalls ausgeführt, wenn Sie den Berichtsserver mit vorhandenen Bereitstellung verknüpfen, oder wenn Sie die Schlüssel manuell, als Teil des Wiederherstellungsprozesses neu erstellen. Weitere Informationen dazu, wie und warum Verschlüsselungsschlüssel verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) und [Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Verschlüsselungsschlüssel basieren teilweise auf den Profilinformationen des Berichtsserverdiensts. Wenn Sie die Benutzeridentität ändern, mit der Sie den Berichtsserverdienst ausführen, müssen Sie die Schlüssel entsprechend aktualisieren. Wenn Sie das Reporting Services-Konfigurationstool verwenden, um Ihre Identität zu ändern, wird dieser Schritt automatisch für Sie erledigt.  
   
- Falls die Initialisierung fehlschlägt, sendet der Berichtsserver einen **RSReportServerNotActivated** -Fehler als Antwort auf Benutzer- und Dienstanforderungen zurück. In diesem Fall müssen Sie möglicherweise die Problembehandlung für das System oder die Serverkonfiguration ausführen. Weitere Informationen finden Sie im Technet-Wiki unter [SSRS: Troubleshoot issues and errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (SSRS: Beheben von Problemen und Fehlern bei Reporting Services).  
+ Falls die Initialisierung fehlschlägt, sendet der Berichtsserver einen **RSReportServerNotActivated** -Fehler als Antwort auf Benutzer- und Dienstanforderungen zurück. In diesem Fall müssen Sie möglicherweise die Problembehandlung für das System oder die Serverkonfiguration ausführen. Weitere Informationen finden Sie im Artikel [SSRS: Beheben von Problemen und Fehlern bei Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) in TechNet Wiki.  
   
 ## <a name="overview-of-the-initialization-process"></a>Übersicht über den Initialisierungsprozess  
  Der Initialisierungsprozess erstellt und speichert einen symmetrischen Schlüssel, der zur Verschlüsselung verwendet wird. Der symmetrische Schlüssel wird von den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Kryptografiediensten erstellt und anschließend vom Berichtsserverdienst verwendet, um Daten zu ver- und entschlüsseln. Der symmetrische Schlüssel selbst wird mit einem asymmetrischen Schlüssel verschlüsselt.  

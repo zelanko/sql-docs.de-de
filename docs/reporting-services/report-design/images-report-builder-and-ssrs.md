@@ -1,5 +1,5 @@
 ---
-title: Bilder (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Bilder (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdcb7800999434cff8b26707ed477c599129e5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d1336910c5538ff9d15ff7f2d651aa23e220ca87
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580248"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082082"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Bilder (Berichts-Generator und SSRS)
   Ein Bild ist ein Berichtselement mit einem Verweis auf ein Bild, das in den Bericht eingebettet, in einer Datenbank, auf dem Berichtsserver oder an einer anderen Stelle im Internet gespeichert ist. Ein Bild kann ein mit Datenzeilen wiederholtes Bild darstellen. Sie können ein Bild auch als Hintergrund für bestimmte Berichtselemente verwenden.  

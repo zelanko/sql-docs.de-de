@@ -9,14 +9,14 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75720935"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173636"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
+# <a name="what-are-big-data-clusters-2019"></a>Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -71,12 +71,11 @@ Ein Big-Data-Cluster für SQL Server enthält einen skalierbaren HDFS-*Speicherp
 
 Verwaltung und Überwachung werden durch eine Kombination von Befehlszeilentools, APIs, Portalen und dynamischen Verwaltungssichten bereitgestellt.
 
-Sie können Azure Data Studio dazu verwenden, eine Vielzahl von Aufgaben im Big-Data-Cluster auszuführen. Dies wird durch die neue **SQL Server 2019-Erweiterung** ermöglicht. Diese Erweiterung bietet Folgendes:
-
+Sie können [Azure Data Studio](../azure-data-studio/what-is.md) dazu verwenden, eine Vielzahl von Aufgaben im Big-Data-Cluster auszuführen:
 - Integrierte Codeausschnitte für allgemeine Verwaltungsaufgaben.
 - Möglichkeit zum Durchsuchen von HDFS, zum Hochladen von Dateien, zur Vorschau von Dateien und zum Erstellen von Verzeichnissen.
 - Möglichkeit zum Erstellen, Öffnen und Ausführen von Jupyter-kompatiblen Notebooks.
-- Datenvirtualisierungsassistent für eine vereinfachte Erstellung externer Datenquellen.
+- Datenvirtualisierungsassistent für eine vereinfachte Erstellung externer Datenquellen (aktiviert durch die **Datenvirtualisierungserweiterung**)
 
 ## <a id="architecture"></a> Architektur
 

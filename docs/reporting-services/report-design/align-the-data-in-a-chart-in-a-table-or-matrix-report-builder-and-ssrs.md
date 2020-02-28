@@ -1,5 +1,5 @@
 ---
-title: Ausrichten von Daten in einem Diagramm, in einer Tabelle oder einer Matrix (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Ausrichten von Daten in einem Diagramm, in einer Tabelle oder einer Matrix (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 75137575-d1bf-46d6-8527-5afc85eea5e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d639e686251effc19e445a39c97860a3336c8ff2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6cb82188a6ded92fadf96385f193f504c29bf56
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581875"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081523"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>Ausrichten von Diagrammdaten in einer Tabelle oder einer Matrix (Berichts-Generator und SSRS)
   Sparklines und Datenbalken sind kleine, einfache Diagramme, die viel Information mit wenig relevanten Details vermitteln. Wenn Sie diese Option in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht aktivieren, werden die Werte in Ihren Sparklines und Datenbalken in den verschiedenen Zellen in der Tabelle oder Matrix ausgerichtet, selbst wenn in den Daten Werte fehlen, auf denen die Sparklines und Datenbalken basieren.  

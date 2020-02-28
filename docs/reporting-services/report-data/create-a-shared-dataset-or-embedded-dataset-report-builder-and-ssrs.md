@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines freigegebenen Datasets oder eingebetteten Datasets (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Erstellen eines freigegebenen oder eingebetteten Datasets (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9e401ab8fd48e6d1bbb487be3692897add2e225
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b19b5442731bf52e299450a32cb8536c0f95467f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190875"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081412"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Erstellen eines freigegebenen Datasets oder eingebetteten Datasets (Berichts-Generator und SSRS)
 Eingebettete Datasets können nur in einem einzelnen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht verwendet werden. Freigegebene Datasets auf einem Berichtsserver können in mehreren Berichten verwendet werden, sowohl in mobilen als auch in paginierten. Sie benötigen zum Erstellen eines Dataset eine eingebettete oder eine freigegebene Datenquelle.  

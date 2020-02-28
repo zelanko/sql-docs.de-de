@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca8f97c98ec94ca021f025ffc5b67152e8253ad6
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.openlocfilehash: b33e22b3d6575e7f83572eeca5692d538b58a16b
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971449"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77253325"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -166,7 +166,7 @@ Bei **ON** behalten die Statistiken den festgelegten Prozentsatz für die Stichp
 **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher
 
 MAXDOP = *max_degree_of_parallelism*  
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Statistikvorgangs. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
@@ -181,7 +181,9 @@ MAXDOP = *max_degree_of_parallelism*
  0 (Standard)  
  Verwendet abhängig von der aktuellen Systemarbeitsauslastung die tatsächliche Anzahl von Prozessoren oder weniger Prozessoren.  
   
- \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ \<update_stats_stream_option> 
+ 
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
 ## <a name="remarks"></a>Bemerkungen  
   
@@ -279,7 +281,7 @@ UPDATE STATISTICS Production.Product(Products)
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-update-statistics-on-a-table"></a>E. Aktualisieren aller Statistiken für eine Tabelle  
  Im folgenden Beispiel wird die Statistik `CustomerStats1` in der Tabelle `Customer` aktualisiert.  

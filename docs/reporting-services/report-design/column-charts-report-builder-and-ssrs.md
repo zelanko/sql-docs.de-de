@@ -1,5 +1,5 @@
 ---
-title: Säulendiagramme (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Säulendiagramme (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 667f150ee0516b4f2ee63161509d6839b21e78e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 926c2613000423d4b0bb2acb16f81183ee470966
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581602"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082316"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Säulendiagramme (Berichts-Generator und SSRS)
   Ein Säulendiagramm zeigt eine Reihe als Satz vertikaler Balken an, die nach Kategorie gruppiert sind. Säulendiagramme sind nützlich, um Datenänderungen über einen bestimmten Zeitraum anzuzeigen oder Vergleiche zwischen Elementen zu veranschaulichen. Das einfache Säulendiagramm ist eng mit dem Balkendiagramm und dem Säulenbereichsdiagramm verbunden. Das Balkendiagramm zeigt Reihen als Sätze horizontaler Balken an, während das Bereichssäulendiagramm Reihen als Sätze vertikaler Balken mit verschiedenen Anfangs- und Endpunkten darstellt. Weitere Informationen finden Sie unter [Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) und [Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  

@@ -1,5 +1,5 @@
 ---
-title: Referenz zu Aggregatfunktionen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Referenz zu Aggregatfunktionen (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 243f895c22621c3f83fab38a5bab47d1f7b7b490
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893761"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081320"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funktionen des Berichts-Generators: Referenz zu Aggregatfunktionen
   Um aggregierte Werte in den Bericht einzuschließen, können Sie integrierte Aggregatfunktionen in Ausdrücken verwenden. Die Standardaggregatfunktion für numerische Felder ist SUM. Sie können den Ausdruck bearbeiten und eine andere integrierte Aggregatfunktion verwenden oder einen anderen Bereich angeben. Mit dem Bereich wird angegeben, welcher Satz an Daten für die Berechnung verwendet werden soll.  
@@ -173,7 +173,7 @@ ms.locfileid: "68893761"
 ##  <a name="TestingforScope"></a> Testen für Bereich  
  Die folgende integrierte Funktion testet den aktuellen Kontext eines Berichtselements, um festzustellen, ob dieses Mitglied eines bestimmten Bereichs ist.  
   
-|Funktion|Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Gibt an, ob sich die aktuelle Instanz eines Elements innerhalb des angegebenen Bereichs befindet.|  
   

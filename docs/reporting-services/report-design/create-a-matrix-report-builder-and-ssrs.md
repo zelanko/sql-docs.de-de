@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Matrix (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Erstellen einer Matrix (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aec3e79fbfbaf96475cf10457c9f21c8c3d78b6c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cd0268916173f4e2b9d3f6c096fceb6787d18487
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581545"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078678"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Erstellen einer Matrix (Berichts-Generator und SSRS)
   Mithilfe einer Matrix können Sie gruppierte Daten und Zusammenfassungsinformationen anzeigen. Sie können Daten nach mehreren Feldern oder Ausdrücken in Zeilen- und Spaltengruppen gruppieren. Matrizen stellen ähnliche Funktionen wie Kreuztabellen und Pivottabellen bereit. Wenn zur Laufzeit die Berichtsdaten und Datenbereiche kombiniert werden, wächst die Matrix auf der Seite horizontal und vertikal. Werte in Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört. Sie können die Zeilen und Spalten formatieren, um die Daten zu markieren, die Sie hervorheben möchten. Sie können auch Drilldownschalter einfügen, mit denen die Detaildaten anfänglich ausgeblendet werden. Benutzer können dann auf die Schalter klicken, um nach Bedarf ausführlichere bzw. weniger Details anzuzeigen.  

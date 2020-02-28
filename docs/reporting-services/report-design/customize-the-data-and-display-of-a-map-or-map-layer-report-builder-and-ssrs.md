@@ -1,5 +1,5 @@
 ---
-title: Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96f1fd480d0260c24bf534dec80eef2e4ff6fda2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 53b1495299dd3a71843ceaa1ad3a43464c374210
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65572333"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080518"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
   Nachdem Sie einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht mithilfe eines Assistenten eine Karte oder eine Kartenebene hinzugefügt haben, möchten Sie möglicherweise anpassen, wie die Karte im Bericht angezeigt wird. Sie können Verbesserungen vornehmen, indem Sie die folgenden Ideen beachten:  
@@ -121,7 +121,7 @@ ms.locfileid: "65572333"
   
  Der Gruppenausdruck gibt an, wie analytische Daten, die zu räumlichen Daten in einer Beziehung stehen, für jedes Kartenelement in der Ebene aggregiert werden. Standardmäßig ist der Gruppenausdruck der Satz von Übereinstimmungsfeldern, der für die Beziehung zwischen den räumlichen Daten und den analytischen Daten angegeben wurden. Beispielsweise enthalten für eine Blasendiagrammkarte, die Orte und Einwohnerzahlen für ein Land oder einen Bereich anzeigt, die Übereinstimmungsfelder Ortsnamen [City] und Bereichsnamen [Region], da es mehrere Orte mit dem gleichen Namen geben kann. Der entsprechende Gruppenausdruck schließt zwei Felder ein: [City] und [Region].  
   
- Weitere Informationen finden Sie unter [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991)(Kartentipps: Importieren von Shape-Dateien in SQL Server und Anpassen räumlicher Daten).  
+ Weitere Informationen finden Sie unter [ Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991) (Kartentipps: Importieren von Shape-Dateien in SQL Server und Aggregieren von räumlichen Daten).  
   
 ##  <a name="MapElements"></a> Ändern von Optionen für die Kartenelemente auf der Ebene  
  Kartenelemente sind die Punkte, Linien oder Polygone auf einer Ebene, die auf den räumlichen Daten basieren. Für Kartenelemente können die folgenden Optionen festgelegt werden. Diese Optionen gelten für alle Kartenelemente auf der Ebene, egal ob sie eingebettet werden oder nicht:  

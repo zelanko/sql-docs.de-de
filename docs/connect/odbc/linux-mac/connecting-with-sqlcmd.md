@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c73ee7914d0d9ac560d57a204458e5cd4ba57a0d
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68005912"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971445"
 ---
 # <a name="connecting-with-sqlcmd"></a>Herstellen einer Verbindung mit sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,6 +52,9 @@ Im aktuellen Release sind die folgenden Optionen verfügbar:
 - -e Schreibt Eingabeskripts in das Standardausgabegerät (stdout).
 
 - -E Verwendet eine vertrauenswürdige Verbindung (integrierte Authentifizierung). Weitere Informationen zum Herstellen von vertrauenswürdigen Verbindungen, die die integrierte Authentifizierung von einem Linux- oder macOS-Client verwenden, finden Sie unter [Verwenden der integrierten Authentifizierung](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
+
+- -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] Gibt die Eingabe- und Ausgabecodepages an. Die Codepagenummer ist ein numerischer Wert, der eine installierte Linux-Codepage angibt.
+(verfügbar seit Version 17.5.1.1)
 
 - -h *number_of_rows* Gibt Sie die Anzahl der Zeilen an, die zwischen den Spaltenüberschriften ausgegeben werden sollen.  
   
@@ -159,8 +162,6 @@ Im aktuellen Release sind die folgenden Befehle verfügbar:
 Im aktuellen Release sind die folgenden Optionen nicht verfügbar:  
 
 - -A Bewirkt die Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über eine dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC). Weitere Informationen zur Herstellung einer dedizierten Administratorverbindung (DAC) finden Sie unter [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md).  
-  
-- -f *code_page* Gibt die Eingabe- und Ausgabecodepages an.  
   
 - -L Listet die lokal konfigurierten Servercomputer sowie die Namen der Servercomputer auf, die Broadcastnachrichten über das Netzwerk senden.  
   

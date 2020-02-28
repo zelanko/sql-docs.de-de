@@ -1,5 +1,5 @@
 ---
-title: Beginnen der Kreisdiagrammwerte an der Kreisoberseite (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Beginnen der Kreisdiagrammwerte an der Kreisoberseite (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7f2e174d9f08e22f57375703093ed44ab57be83e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3f23163da5fc4b23a364646be607167e663187fd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578467"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080901"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Beginnen der Kreisdiagrammwerte an der Kreisoberseite (Berichts-Generator und SSRS)
 Standardmäßig beginnt bei Kreisdiagrammen in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten der erste Wert im Dataset bei 90 Grad zur Oberseite des Kreises versetzt. 

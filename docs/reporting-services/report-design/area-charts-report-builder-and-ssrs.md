@@ -1,5 +1,5 @@
 ---
-title: Flächendiagramme (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Flächendiagramme (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bcd78ad109727e8f585f06703a293665b7cb310
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90bc9dd81ce2f005d771c57d5e3f5cdff2743f99
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581860"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081498"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>Flächendiagramme (Berichts-Generator und SSRS)
   Ein Flächendiagramm zeigt eine Reihe als verschiedene Punkte an, die durch eine Linie miteinander verbunden sind, wobei die Fläche unterhalb der Linie ausgefüllt ist. Weitere Informationen zu Hinzufügen von Daten zu einem Flächendiagramm finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

@@ -1,7 +1,7 @@
 ---
 title: 'Nicht unterstützte Features: In-Memory-OLTP'
 ms.custom: ''
-ms.date: 05/29/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,19 +11,19 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412514"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558324"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-In diesem Thema werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen erläutert, bei denen die Verwendung mit speicheroptimierten Objekten nicht unterstützt wird.  
+In diesem Thema werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen erläutert, bei denen die Verwendung mit speicheroptimierten Objekten nicht unterstützt wird. Außerdem werden im letzten Abschnitt Features aufgeführt, die für In-Memory-OLTP nicht unterstützt wurden und mittlerweile unterstützt werden.
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen, die für In-Memory-OLTP nicht unterstützt werden  
+## <a name="ssnoversion-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen, die für In-Memory-OLTP nicht unterstützt werden  
 
 Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen werden in einer Datenbank nicht unterstützt, die speicheroptimierte Objekte (einschließlich einer speicheroptimierten Dateigruppe) enthält.  
 
@@ -44,18 +44,18 @@ Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktio
 | Fibermodus | Der Fibermodus wird für speicheroptimierte Tabellen nicht unterstützt:<br /><br />Wenn der Fibermodus aktiviert ist, können keine Datenbanken mit speicheroptimierten Dateigruppen erstellt oder speicheroptimierte Dateigruppen zu vorhandenen Datenbanken hinzugefügt werden.<br /><br />Sie können den Fibermodus aktivieren, wenn Datenbanken mit speicheroptimierten Dateigruppen vorhanden sind. Allerdings erfordert das Aktivieren des Fibermodus einen Serverneustart. In einem solchen Fall können Datenbanken mit speicheroptimierten Dateigruppen nicht wiederhergestellt werden. Dann wird eine Fehlermeldung angezeigt, die Ihnen empfiehlt, den Fibermodus zu deaktivieren, um Datenbanken mit speicheroptimierten Dateigruppen nutzen zu können.<br /><br />Das Anfügen und Wiederherstellen von Datenbanken mit speicheroptimierten Dateigruppen schlägt fehl, wenn der Fibermodus aktiviert ist. Die Datenbanken werden als fehlerverdächtig gekennzeichnet.<br /><br />Weitere Informationen finden Sie unter [Lightweightpooling (Serverkonfigurationsoption)](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Service Broker-Einschränkung|Kann über eine systemintern kompilierte gespeicherte Prozedur nicht auf eine Warteschlange zugreifen.<br /><br /> Kann in einer Transaktion, die auf speicheroptimierte Tabellen zugreift, nicht auf eine Warteschlange in einer Remotedatenbank zugreifen.|  
 |Replikation auf Abonnenten|Die Transaktionsreplikation in speicheroptimierte Tabellen von Abonnenten wird nur eingeschränkt unterstützt. Weitere Informationen finden Sie unter [Replikation mit Abonnenten von speicheroptimierten Tabellen](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|  
-
+|||
 
 #### <a name="cross-database-queries-and-transcations"></a>Datenbankübergreifende Abfragen und Transaktionen
 
 Datenbankübergreifende Transaktionen werden bis auf einige Ausnahmen nicht unterstützt. In der folgenden Tabelle werden unterstützte Szenarien und entsprechende Einschränkungen beschrieben. (Siehe auch [Datenbankübergreifende Abfragen](../../relational-databases/in-memory-oltp/cross-database-queries.md).)  
 
 
-|Datenbanken|Zulässig|BESCHREIBUNG|  
+|Datenbanken|Zulässig|Beschreibung|  
 |---------------|-------------|-----------------|  
 | Benutzerdatenbanken, **Modell**- und **msdb**-Datenbanken | Nein | In den meisten Fällen werden datenbankübergreifende Abfragen und Transaktionen *nicht* unterstützt.<br /><br />Ein Abfrage kann nicht auf andere Datenbanken zugreifen, wenn die Abfrage eine speicheroptimierte Tabelle oder eine nativ kompilierte gespeicherte Prozedur verwendet. Diese Einschränkung gilt für Transaktionen und Abfragen.<br /><br />Ausgenommen sind die Systemdatenbanken **tempdb** und **master**. Hier steht die **master**-Datenbank nur für den schreibgeschützten Zugriff zur Verfügung. |
 | Datenbank **Resource**, **tempdb** | Ja | Bei einer Transaktion, die speicherinterne OLTP-Objekte betrifft, können die Systemdatenbanken **Resource** und **tempdb** ohne zusätzliche Einschränkungen verwendet werden.
-
+||||
 
 ## <a name="scenarios-not-supported"></a>Nicht unterstützte Szenarien  
   
@@ -69,9 +69,7 @@ Datenbankübergreifende Transaktionen werden bis auf einige Ausnahmen nicht unte
 - Der Datentyp ROWVERSION (TIMESTAMP) wird nicht unterstützt. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL &#41;](../../t-sql/queries/from-transact-sql.md).
   
 - Automatisches Schließen wird für Datenbanken, die eine MEMORY_OPTIMIZED_DATA-Dateigruppe enthalten, nicht unterstützt.  
-  
-- Datenbankmomentaufnahmen werden für Datenbanken, die eine MEMORY_OPTIMIZED_DATA-Dateigruppe enthalten, nicht unterstützt.  
-  
+
 - Transaktions-DDL, wie z.B. CREATE/ALTER/DROP von speicherinternen OLTP-Objekten wird innerhalb von Benutzertransaktionen nicht unterstützt.  
   
 - Ereignisbenachrichtigung  
@@ -82,7 +80,17 @@ Datenbankübergreifende Transaktionen werden bis auf einige Ausnahmen nicht unte
 - Datenbankkapselung ([Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)) wird bei In-Memory-OLTP nicht unterstützt.
     - Die Authentifizierung eigenständiger Datenbanken wird unterstützt. Allerdings werden alle speicherinternen OLTP-Objekte in den **dm_db_uncontained_entities** der dynamischen Verwaltungssicht als „breaking containment“ gekennzeichnet.
 
-  
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="recently-added-supports"></a>Kürzlich hinzugefügte Unterstützungen
+
+In manchen Fällen wird durch ein neues Release von SQL Server Unterstützung für ein Feature hinzugefügt, das zuvor nicht unterstützt wurde. In diesem Abschnitt werden Features aufgeführt, die früher nicht für In-Memory-OLTP unterstützt wurden. Mittlerweile werden diese jedoch für In-Memory-OLTP unterstützt.
+
+In der folgenden Tabelle wird unter den Werten für _Version_ (z. B. `(15.x)`) aufgeführt, welcher Wert von der Transact-SQL-Anweisung `SELECT @@Version;` zurückgegeben wird.
+
+| Feature name | Version von SQL Server | Kommentare |
+| :----------- | :-------------------- | :------- |
+| Datenbank-Momentaufnahmen | 2019 (15.x) | Datenbankmomentaufnahmen werden nun für Datenbanken unterstützt, die eine MEMORY_OPTIMIZED_DATA-Dateigruppe enthalten. |
+| &nbsp; | &nbsp; | &nbsp; |
+
+## <a name="see-also"></a>Weitere Informationen
 
 - [SQL Server-Unterstützung für In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)

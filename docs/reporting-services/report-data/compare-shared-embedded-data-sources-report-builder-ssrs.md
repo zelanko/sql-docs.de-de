@@ -1,5 +1,5 @@
 ---
-title: 'Vergleichen von freigegebenen und eingebetteten Datenquellen: Berichts-Generator und Reporting Services (SSRS) | Microsoft-Dokumentation'
+title: 'Vergleichen von freigegebenen und eingebetteten Datenquellen: Berichts-Generator und Reporting Services | Microsoft-Dokumentation'
 ms.date: 11/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ae21994a83659204f6a5053288ff632ce44be06
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 33e257659922e3e0dcf06f559838db0c58f0b18e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74196782"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081789"
 ---
 # <a name="compare-shared-and-embedded-data-sources---report-builder--reporting-services-ssrs"></a>Vergleichen von freigegebenen und eingebetteten Datenquellen: Berichts-Generator und Reporting Services (SSRS)
 
@@ -38,7 +38,7 @@ Sie können eine Verbindung mit Daten entweder über eine freigegebene oder eine
   
  In der folgenden Tabelle werden die Unterschiede zwischen eingebetteten und freigegebenen Datenquellen zusammengefasst.  
   
-|Beschreibung|Eingebettet<br /><br /> Data source|Shared<br /><br /> Data source|  
+|BESCHREIBUNG|Eingebettet<br /><br /> Data source|Shared<br /><br /> Data source|  
 |-----------------|------------------------------|----------------------------|  
 |Die Datenverbindung ist in die Berichtsdefinition eingebettet.|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||  
 |Der Zeiger auf die Datenverbindung auf dem Berichtsserver ist in die Berichtsdefinition eingebettet.||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")|  

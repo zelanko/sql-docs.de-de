@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Always Encrypted mit dem JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/05/2020
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ae119c85877768f7a3356a139c5aaf3f70dc6f8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75681711"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004607"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Verwenden von Always Encrypted mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ Der Microsoft JDBC-Treiber für SQL Server kommuniziert mit einem Keystore, wobe
 ### <a name="using-built-in-column-master-key-store-providers"></a>Verwenden integrierter Spaltenhauptschlüssel-Speicheranbieter
 Der Microsoft JDBC-Treiber für SQL Server verfügt über die folgenden integrierten Spaltenhauptschlüssel-Speicheranbieter. Einige dieser Anbieter sind bereits mit den spezifischen (für die Suche nach dem Anbieter verwendeten) Anbieternamen registriert, und einige erfordern entweder zusätzliche Anmeldeinformationen oder eine explizite Registrierung.
 
-| Klasse                                                 | Beschreibung                                        | Anbietername (Suche)  | Bereits registriert? |
+| Klasse                                                 | BESCHREIBUNG                                        | Anbietername (Suche)  | Bereits registriert? |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
 | **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Ein Anbieter für einen Keystore für die Azure Key Vault-Instanz. | AZURE_KEY_VAULT         | Vor der JDBC-Treiberversion 7.4.1 _nicht_, aber _ab_ Version 7.4.1 des JDBC-Treibers. |
 | **SQLServerColumnEncryptionCertificateStoreProvider** | Ein Anbieter für den Windows-Zertifikatspeicher.      | MSSQL_CERTIFICATE_STORE | _Ja_                |
@@ -147,7 +147,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> Während die anderen Keystore-Anbieter in diesem Artikel auf allen Plattformen verfügbar sind, die vom Treiber unterstützt werden, ist die SQLServerColumnEncryptionCertificateStoreProvider-Implementierung des JDBC-Treibers nur auf Windows-Betriebssystemen verfügbar. Es besteht eine Abhängigkeit von der „sqljdbc_auth.dll“, die im Treiberpaket verfügbar ist. Wenn Sie diesen Anbieter verwenden möchten, müssen Sie die Datei „sqljdbc_auth.dll“ in ein Verzeichnis im Windows-Systempfad des Computers kopieren, auf dem der JDBC-Treiber installiert ist. Alternativ können Sie mit der java.libary.path-Systemeigenschaft das Verzeichnis von „sqljdbc_auth.dll“ angeben. Wenn Sie eine 32-Bit-JVM (Java Virtual Machine) ausführen, verwenden Sie die Datei sqljdbc_auth.dll im Ordner x86, auch wenn es sich bei dem Betriebssystem um die x64-Version handelt. Wenn Sie eine 64-Bit-JVM mit einem x64-Prozessor ausführen, verwenden Sie die Datei „sqljdbc_auth.dll“ im Ordner „x64“. Wenn Sie beispielsweise die 32-Bit-JVM verwenden und der JDBC-Treiber im Standardverzeichnis installiert ist, können Sie den Speicherort der DLL beim Start der Java-Anwendung mit dem folgenden VM-Argument (Virtual Machine) angeben: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> Während die anderen Keystore-Anbieter in diesem Artikel auf allen Plattformen verfügbar sind, die vom Treiber unterstützt werden, ist die SQLServerColumnEncryptionCertificateStoreProvider-Implementierung des JDBC-Treibers nur auf Windows-Betriebssystemen verfügbar. Es besteht eine Abhängigkeit von der Datei mssql-jdbc_auth-\<version>-\<arch>.dll, die im Treiberpaket verfügbar ist. Wenn Sie diesen Anbieter verwenden möchten, müssen Sie die Datei mssql-jdbc_auth-\<version>-\<arch>.dll in ein Verzeichnis im Windows-Systempfad des Computers kopieren, auf dem der JDBC-Treiber installiert ist. Alternativ können Sie mit der java.libary.path-Systemeigenschaft das Verzeichnis von mssql-jdbc_auth-\<version>-\<arch>.dll angeben. Wenn Sie eine 32-Bit-JVM (Java Virtual Machine) ausführen, verwenden Sie die Datei mssql-jdbc_auth-\<version>-x86.dll im Ordner x86, auch wenn es sich bei dem Betriebssystem um die x64-Version handelt. Wenn Sie eine 64-Bit-JVM mit einem x64-Prozessor ausführen, verwenden Sie die Datei mssql-jdbc_auth-\<version>-x64.dll im Ordner x64. Wenn Sie beispielsweise die 32-Bit-JVM verwenden und der JDBC-Treiber im Standardverzeichnis installiert ist, können Sie den Speicherort der DLL beim Start der Java-Anwendung mit dem folgenden VM-Argument (Virtual Machine) angeben: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Verwenden des Java Key Store-Anbieters
 Der JDBC-Treiber ist mit einer integrierten Schlüsselspeicheranbieter-Implementierung für den Java Key Store ausgestattet. Wenn die Eigenschaft **keyStoreAuthentication** der Verbindungszeichenfolge vorhanden und auf „JavaKeyStorePassword“ festgelegt ist, instanziiert und registriert der Treiber automatisch den Anbieter für Java Key Store. Der Name des Java Key Store-Anbieters ist MSSQL_JAVA_KEYSTORE. Dieser Name kann auch mit der SQLServerColumnEncryptionJavaKeyStoreProvider.getName()-API abgefragt werden. 
@@ -458,7 +458,7 @@ In diesem Beispiel wird eine Zeile in die Tabelle „Patients“ eingefügt. Bea
 - Die in die Datenbankspalten eingefügten Werte, einschließlich der verschlüsselten Spalten, werden mit SQLServerPreparedStatement als Parameter übergeben. Während die Verwendung von Parametern optional ist, wenn Werte an nicht verschlüsselte Spalten gesendet werden (obwohl es dringend empfohlen wird, da es dabei hilft, eine Einschleusung von SQL-Befehlen zu verhindern), ist sie für Werte erforderlich, die verschlüsselte Spalten anzielen. Wenn die in die verschlüsselten Spalten eingefügten Werte als Literale übergeben würden, die in die Abfrageanweisung eingebettet sind, würde bei der Abfrage ein Fehler auftreten, da der Treiber die Werte in den verschlüsselten Zielspalten nicht ermitteln könnte und nicht verschlüsseln würde. Daher würde der Server sie zurückweisen, da sie mit den verschlüsselten Spalten inkompatibel sind.
 - Alle Werte werden vom Programm als Klartext ausgegeben, da der JDBC-Treiber für SQL Server die aus den verschlüsselten Spalten abgerufenen Daten transparent entschlüsselt.
 - Wenn Sie eine Suche mit einer WHERE-Klausel durchführen, muss der in der WHERE-Klausel verwendete Wert als Parameter übergeben werden, damit ihn der Treiber vor dem Senden an die Datenbank transparent verschlüsseln kann. Im folgenden Beispiel wird die SSN als Parameter übergeben, aber LastName als Literalwert, da LastName nicht verschlüsselt ist.
-- Für den auf die Spalte „SSN“ ausgerichteten Parameter wird die Settermethode setString() verwendet, die dem SQL Server-Datentyp „char/varchar“ zugeordnet wird. Wenn für diesen Parameter die setNString()-Methode verwendet wurde, die „nchar“ bzw. „nvarchar“ zugeordnet wird, würde bei der Abfrage ein Fehler auftreten, da Always Encrypted keine Konvertierungen von verschlüsselten nchar- und nvarchar-Werten in verschlüsselte char- und varchar-Werte unterstützt.
+- Für den auf die Spalte „SSN“ ausgerichteten Parameter wird die Settermethode setString() verwendet, die dem SQL Server-Datentyp „char/varchar“ zugeordnet wird. Wenn für diesen Parameter die Settermethode setNString() verwendet wurde, die nchar bzw. nvarchar zugeordnet wird, würde bei der Abfrage ein Fehler auftreten, da Always Encrypted keine Konvertierungen von verschlüsselten nchar- und nvarchar-Werten in verschlüsselte char- und varchar-Werte unterstützt.
 
 ```java
 // <Insert keystore-specific code here>

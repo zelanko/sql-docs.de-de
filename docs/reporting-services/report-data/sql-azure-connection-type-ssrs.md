@@ -1,5 +1,5 @@
 ---
-title: SQL Azure-Verbindungstyp (SSRS) | Microsoft-Dokumentation
+title: SQL Azure-Verbindungstyp | Microsoft-Dokumentation
 description: Die Datenerweiterung „SQL Azure-Verbindung“ unterstützt mehrwertige Parameter, Serveraggregate und getrennt von der Verbindungszeichenfolge verwaltete Anmeldeinformationen.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c9ffc6865a6dd7ccc9665eb85da8142bc918b4af
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244571"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081762"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure-Verbindungstyp (SSRS)
 
@@ -184,7 +184,7 @@ Diese Abschnitte der Dokumentation enthalten umfassende grundlegende Information
 [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Bietet eine Übersicht über den Zugriff auf Daten für den Bericht.  
   
-[Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+[Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 Enthält Informationen zu Datenverbindungen und Datenquellen.  
   
 [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

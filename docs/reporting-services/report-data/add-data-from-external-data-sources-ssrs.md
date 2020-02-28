@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Daten aus externen Datenquellen (SSRS) | Microsoft-Dokumentation
+title: Hinzufügen von Daten aus externen Datenquellen | Microsoft-Dokumentation
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +9,12 @@ ms.author: maggies
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: e96e72540810c42be9f8abd1d656fb2cec0e5d41
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190943"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081844"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Hinzufügen von Daten aus externen Datenquellen (SSRS)
   Daten werden mithilfe einer Datenverbindung aus einer externen Datenquelle abgerufen. Datenverbindungsinformationen werden normalerweise vom Besitzer der externen Datenquelle bereitgestellt, der für das Gewähren der Berechtigungen und Festlegen der erforderlichen Anmeldeinformationstypen zuständig ist. Datenverbindungsinformationen werden als Berichtsdatenquelle gespeichert. Der Datenquellentyp bestimmt, welche Datenerweiterung zum Abrufen der Daten verwendet wird.  
@@ -94,7 +94,7 @@ ms.locfileid: "74190943"
 
  Diese Abschnitte der Dokumentation enthalten umfassende grundlegende Informationen zu Berichtsdaten sowie Informationen zum Definieren, Anpassen und Verwenden der mit Daten zusammenhängenden Teile eines Berichts.  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)|Bietet eine Übersicht über den Zugriff auf Daten für den Bericht.|  
 |[Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|Enthält Informationen zu Datenverbindungen und Datenquellen.|  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen, Ändern und Löschen von freigegebenen Datenquellen (SSRS) | Microsoft-Dokumentation
+title: Erstellen, Ändern und Löschen von freigegebenen Datenquellen | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9f5ed3f000f13d965d9f45c853d831e18d5dd4e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3cb8f79b892b639e618143fd138920650fb5cfda
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190867"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081816"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Erstellen, Ändern und Löschen von freigegebenen Datenquellen (SSRS)
   Eine freigegebene Datenquelle besteht aus einem Satz von Datenquellen-Verbindungseigenschaften, auf die von mehreren auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver ausgeführten Berichten, Modellen und datengesteuerten Abonnements verwiesen werden kann.  Freigegebene Datenquellen bieten eine einfache Möglichkeit, Datenquelleneigenschaften zu verwalten, die sich im Laufe der Zeit häufig ändern. Wenn sich ein Benutzerkonto oder Kennwort ändert oder Sie die Datenbank auf einen anderen Server verschieben, können Sie die Verbindungsinformationen zentral aktualisieren.  
@@ -30,10 +30,10 @@ ms.locfileid: "74190867"
   
  Eine freigegebene Datenquelle setzt sich aus folgenden Komponenten zusammen:  
   
-|Teil|Beschreibung|  
+|Teil|BESCHREIBUNG|  
 |----------|-----------------|  
 |Name|Ein Name, der das Element innerhalb der Ordnerhierarchie des Berichtsservers identifiziert.|  
-|Beschreibung|Eine Beschreibung, die mit dem Element im Webportal angezeigt wird, wenn Sie den Inhalt des Ordners anzeigen.|  
+|BESCHREIBUNG|Eine Beschreibung, die mit dem Element im Webportal angezeigt wird, wenn Sie den Inhalt des Ordners anzeigen.|  
 |Verbindungstyp|Die für die Datenquelle verwendete Datenverarbeitungserweiterung. Sie können nur Datenverarbeitungserweiterungen verwenden, die auf dem Berichtsserver bereitgestellt werden. Weitere Informationen zu in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthaltenen Datenverarbeitungserweiterungen finden Sie unter [Von Reporting Services unterstützte Datenquellen (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Verbindungszeichenfolge|Die Verbindungszeichenfolge für die Datenbank. Weitere Informationen und Beispiele für Verbindungszeichenfolgen bis hin zu häufig verwendeten Datenquellen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Anmeldeinformationstyp|Gibt an, wie Anmeldeinformationen für die Verbindung abgerufen werden und ob sie nach dem Herstellen der Verbindung verwendet werden sollen. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  

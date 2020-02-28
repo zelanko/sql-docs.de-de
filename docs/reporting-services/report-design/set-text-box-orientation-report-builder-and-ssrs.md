@@ -1,5 +1,5 @@
 ---
-title: Festlegen der Textfeldausrichtung (Berichts-Generator und SSRS) |- Microsoft-Dokumentation
+title: Festlegen der Textfeldausrichtung (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 119e9f04ddbaf91da420d69343d7fe741fbdd63d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 322c393749f60b1fb505577bf3af57238eb093c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576850"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080996"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Festlegen der Textfeldausrichtung (Berichts-Generator und SSRS)
 In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht können Sie ein Textfeld auf verschiedene Weise drehen:   
@@ -42,6 +42,6 @@ Da die Drehung für das Textfeld und nicht den Text selbst festgelegt wird, wird
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Textfelder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Tutorial: Formatieren von Text (Berichts-Generator)](../../reporting-services/tutorial-format-text-report-builder.md)  
+ [Tutorial: Formatieren von Text &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
   
   

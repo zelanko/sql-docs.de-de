@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75245301"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179281"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Jede Datenbank weist einen Zähler auf, der für jeden Einfüge- oder Updatevorg
   
 **timestamp** ist das Synonym für den **rowversion**-Datentyp und unterliegt der Verhaltensweise von Datentypsynonymen. Verwenden Sie in DDL-Anweisungen nach Möglichkeit stets **rowversion** anstelle von **timestamp**. Weitere Informationen finden Sie unter [Data Type Synonyms &#40;Transact-SQL&#41; (Synonyme für Datentypen &#40;Transact-SQL&#41;)](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
-Der [!INCLUDE[tsql](../../includes/tsql-md.md)]timestamp **-Datentyp von**  unterscheidet sich vom **timestamp**-Datentyp, der im ISO-Standard definiert ist.
+Der **timestamp**-Datentyp von [!INCLUDE[tsql](../../includes/tsql-md.md)] unterscheidet sich vom **timestamp**-Datentyp, der im ISO-Standard definiert ist.
   
 > [!NOTE]  
 >  Die **timestamp**-Syntax ist veraltet. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-Anschließend können Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Beispielanweisungen verwenden, um während des Updates eine Steuerung durch vollständige Parallelität in der `MyTest`-Tabelle zu implementieren.
+Anschließend können Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Beispielanweisungen verwenden, um während des Updates eine Steuerung durch vollständige Parallelität in der `MyTest`-Tabelle zu implementieren. Das Skript nutzt `<myRv>`, um den **rowversion**-Wert darzustellen, zu dem Sie die Zeile zuletzt gelesen haben. Ersetzen Sie den Wert durch den tatsächlichen **rowversion**-Wert. `0x00000000000007D3` ist ein Beispiel für einen tatsächlichen **rowversion**-Wert.
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -89,7 +89,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myRv;  
+    AND RV = <myRv>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -99,12 +99,12 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myRv` ist der **rowversion**-Spaltenwert für die Zeile, die die Zeit angibt, zu der Sie die Zeile zuletzt gelesen haben. Dieser Wert muss durch den tatsächlichen **rowversion**-Wert ersetzt werden. Ein Beispiel für den tatsächlichen **rowversion**-Wert ist 0x00000000000007D3.
-  
+
+
 Sie können die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Beispielanweisungen auch in einer Transaktion ablegen. Indem Sie die `@t`-Variable im Gültigkeitsbereich der Transaktion abfragen, können Sie die aktualisierte `myKey`-Spalte der Tabelle abrufen, ohne die Tabelle `MyTest` erneut abzufragen.
-  
-Im Folgenden wird das gleiche Beispiel mit der **timestamp**-Syntax angeführt:
-  
+
+Im Folgenden wird dasselbe Beispiel mit der **timestamp**-Syntax veranschaulicht. Ersetzen Sie `<myTS>` durch einen tatsächlichem **timestamp**-Wert.
+
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
     ,myValue int, TS timestamp);  
@@ -118,7 +118,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myTS;  
+    AND TS = <myTS>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

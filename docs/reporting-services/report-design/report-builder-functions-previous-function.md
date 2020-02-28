@@ -1,5 +1,5 @@
 ---
-title: Previous-Funktion (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Previous-Funktion (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3a54bd68b1bac51581329224aa7e9405cee8e93
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 882a098aaabcd4610fc6623e9741f7eeaa4f53ec
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577198"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081180"
 ---
 # <a name="report-builder-functions---previous-function"></a>Funktionen des Berichts-Generators: Previous-Funktion
   Gibt den Wert oder den angegebenen Aggregatwert für die vorherige Instanz eines Elements innerhalb des angegebenen Bereichs zurück.  
@@ -67,7 +67,7 @@ Previous(expression, scope)
 =Previous(Fields!LineTotal.Value)  
 ```  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Das folgende Codebeispiel zeigt einen Ausdruck, der die Summe der Umsätze an einem bestimmten Tag des Monats und den vorherigen Wert für den Tag des Monats in einem vorhergehenden Jahr berechnet. Der Ausdruck wird einer Zelle in einer Zeile, die zur untergeordneten Gruppe `GroupbyDay`gehört, hinzugefügt. Die übergeordnete Gruppe ist `GroupbyMonth`, deren übergeordnete Gruppe wiederum `GroupbyYear`ist. Der Ausdruck zeigt die Ergebnisse für GroupbyDay (Standardbereich) und anschließend für `GroupbyYear` (der übergeordneten Gruppe der übergeordneten Gruppe `GroupbyMonth`) an.  
   
  Angenommen, in einem Datenbereich verfügt eine übergeordnete Gruppe namens `Year`über die untergeordnete Gruppe `Month`, der wiederum die Gruppe `Day` untergeordnet ist (drei geschachtelte Ebenen). Der Ausdruck `=Previous(Sum(Fields!Sales.Value,"Day"),"Year")` in einer mit der Gruppe `Day` verknüpften Zeile gibt den Umsatzwert für denselben Tag und Monat des vorherigen Jahrs zurück.  

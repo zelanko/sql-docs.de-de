@@ -1,5 +1,5 @@
 ---
-title: Binden eines Berichts an eine freigegebene Datenquelle (SSRS) | Microsoft-Dokumentation
+title: Binden eines Berichts an eine freigegebene Datenquelle | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e41ac864403dce2cad648790099496b53c4b6dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c5aa5e504c8434d3634b903c08b6a03c0e62345c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190899"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081419"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Binden eines Berichts an eine freigegebene Datenquelle (SSRS)
   In einigen Situationen, z.B., wenn Sie einen Bericht von einem Testserver auf einen Produktionsserver verschieben, sollten Sie die Datei auf dem lokalen Computer speichern und anschließend auf einen anderen Berichtsserver hochladen. Wenn Sie den Bericht auf den neuen Server hochladen, müssen Sie ihn erneut an eine freigegebene, auf dem neuen Berichtsserver gespeicherte Datenquelle binden. Wenn Sie den Bericht nicht erneut binden, kann er nicht ordnungsgemäß verwendet werden, wenn über den neuen Berichtsserver auf ihn zugegriffen wird.  

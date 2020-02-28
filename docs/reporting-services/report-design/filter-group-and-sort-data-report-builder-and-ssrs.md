@@ -1,5 +1,5 @@
 ---
-title: Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0012f01fead8d6890f8e593f4991cbb0252e3dd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e08a4a43897c1497c81a9e01f010fa99a252130e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576527"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080168"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS)
   In einem Bericht werden Ausdrücke zum Steuern, Organisieren und Sortieren von Berichtsdaten verwendet. Beim Erstellen von Datasets und Entwerfen des Berichtslayouts werden die Eigenschaften von Berichtselementen standardmäßig automatisch auf Ausdrücke festgelegt. Diese Einstellungen basieren auf den Datasetfeldern, Parametern und anderen Elementen, die im Berichtsdatenbereich angezeigt werden. Sie können einer Tabellen- oder Matrixzelle auch eine interaktive Sortierschaltfläche hinzufügen, um dem Benutzer das interaktive Ändern der Zeilensortierreihenfolge für Gruppen oder Zeilen innerhalb von Gruppen zu ermöglichen.  

@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9f50535bbf4cca1775e963a2733e19dcd4ec7497
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a74ef0a64fb7d1a77f3e336f98aeaa245c4458d8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582158"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080668"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator und SSRS)
   Fügen Sie einem Bericht Unterberichte hinzu, wenn Sie einen Hauptbericht erstellen möchten, der mehrere verwandte Berichte enthält. Ein Unterbericht ist ein Verweis auf einen anderen Bericht. Um die Berichte über Datenwerte zu verbinden (z. B. damit mehrere Berichte Daten für denselben Kunden anzeigen), müssen Sie einen parametrisierten Bericht erstellen (z. B. einen Bericht, der die Details für einen bestimmten Kunden enthält). Wenn Sie dem Hauptbericht einen Unterbericht hinzufügen, können Sie Parameter angeben, die an den Unterbericht übergeben werden sollen.  

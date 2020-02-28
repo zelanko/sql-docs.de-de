@@ -1,5 +1,5 @@
 ---
-title: URLs in Konfigurationsdateien (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
+title: URLs in Konfigurationsdateien (Configuration Manager) | Microsoft-Dokumentation
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 75da68330bcce06a4ffdaf152bb19811cffe1f99
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e2024af63b1a033b2dcb5afbde461cff02b9462b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593935"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082219"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URLs in Konfigurationsdateien (SSRS-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert Anwendungseinstellungen in einer RSReportServer.config-Datei. In dieser Datei befinden sich Konfigurationseinstellungen sowohl für URLs als auch für URL-Reservierungen. Diese Konfigurationseinstellungen haben ganz verschiedene Zwecke und Regeln für Änderungen. Wenn Sie es gewohnt sind, Konfigurationsdateien zu ändern, um eine Bereitstellung zu optimieren, finden Sie in diesem Thema hilfreiche Informationen dazu, wie jede URL-Einstellung verwendet wird.  
@@ -38,7 +38,7 @@ ms.locfileid: "73593935"
   
  In den meisten Fällen ist es nicht notwendig, **UrlRoot**zu ändern. Wenn der Zugriff auf den Berichtsserver jedoch über eine vollqualifizierte URL erfolgt und Sie keine URL konfiguriert haben, die einen Hostheader zum vollqualifizierten Websitenamen verwendet, müssen Sie die Datei „RSReportServer.config“ manuell bearbeiten, um **UrlRoot** auf die vollqualifizierte URL des Berichtsservers festzulegen, mit der der Bericht gerendert wird (z.B. https://www.adventure-works.com/mywebapp/reportserver).  
   
-#### <a name="urls-connecting-the-includessrswebportalincludesssrswebportalmd-and-web-parts-to-the-report-server-web-service"></a>URLs zur Verbindung des [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] und Webparts zum Berichtsserver-Webdienst  
+#### <a name="urls-connecting-the-ssrswebportal-and-web-parts-to-the-report-server-web-service"></a>URLs zur Verbindung des [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] und Webparts zum Berichtsserver-Webdienst  
  Der [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] und SharePoint 2.0 Webparts für Reporting Services sind Web-Front-End-Komponenten, die eine Verbindung zu einem Berichtsserver herstellen. URLs, die verwendet werden, um eine Verbindung mit einem Back-End-Berichtsserver herzustellen, umfassen Folgendes:  
   
 -   **ReportServerUrl** (verwendet von [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)])  

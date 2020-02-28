@@ -1,5 +1,5 @@
 ---
-title: Formatieren von Text und Platzhaltern (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Formatieren von Text und Platzhaltern (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59e78e1c11b18d71e20c054f69979d3f3679bce2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5c97993b2cc2bd2585bfe6010e6aa4b1cfd59f78
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580298"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079517"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formatieren von Text und Platzhaltern (Berichts-Generator und SSRS)
   Ein Textfeld kann ein Berichtselement sein oder eine einzelne Zelle in einem Datenbereich mit Text, ein berechnetes Feld oder ein Zeiger auf ein Feld in einer Datenbank. Es kann sich auch um eine Kombination aus diesen drei Elementen handeln. Sie können Schriftarten und Farben kombinieren sowie Fett- und Kursivformatierungen hinzufügen; außerdem können Sie Absätze mithilfe von Ausrichtungen und Einzügen formatieren. Sie können ein vollständiges Textfeld formatieren, oder Sie können bestimmte Textelemente, Zahlen, Ausdrücke oder Felder in einem Textfeld formatieren.  

@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen oder Löschen einer Gruppe in einem Datenbereich (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Hinzufügen oder Löschen einer Gruppe in einem Datenbereich (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 004cb81902d921380eee21532626f141ca35b646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e559dc00246fb0b990c81de99c8036356a64034f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581931"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081577"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Hinzufügen oder Löschen einer Gruppe in einem Datenbereich (Berichts-Generator und SSRS)
 Fügen Sie in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht einem Datenbereich eine Gruppe hinzu, wenn Sie Daten nach einem spezifischen Wert oder einer Reihe von Ausdrücken zu Anzeige- und Berechnungszwecken organisieren möchten. Eine Gruppe verfügt über einen Namen und einen Ausdruck, der angibt, welche Daten aus einem Dataset zur Gruppe gehören. Weitere Informationen zu Gruppen finden Sie unter [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  

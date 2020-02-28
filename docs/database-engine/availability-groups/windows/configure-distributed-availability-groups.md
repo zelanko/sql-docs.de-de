@@ -2,7 +2,7 @@
 title: Konfigurieren verteilter Verfügbarkeitsgruppen
 description: 'In diesem Thema wird beschrieben, wie Sie eine verteilte Always On-Verfügbarkeitsgruppe erstellen und konfigurieren. '
 ms.custom: seodec18
-ms.date: 08/17/2017
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952487"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146303"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Konfigurieren verteilter Always On-Verfügbarkeitsgruppen  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ GO
 ### <a name="create-a-listener-for--the-secondary-availability-group"></a>Erstellen eines Listeners für die sekundäre Verfügbarkeitsgruppe  
  Fügen Sie im nächsten Schritt einen Listener für die sekundäre Verfügbarkeitsgruppe auf dem zweiten WSFC hinzu. In diesem Beispiel hat der Listener den Namen `ag2-listener`. Weitere Informationen zum Erstellen eines Listeners finden Sie unter [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server &#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
-```  
+```sql  
 ALTER AVAILABILITY GROUP [ag2]    
     ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
 GO  
@@ -228,15 +228,15 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 Zurzeit wird nur manuelles Failover unterstützt. So führen Sie ein manuelles Failover für eine verteilte Verfügbarkeitsgruppe aus:
 
-1. Legen Sie die verteilte Verfügbarkeitsgruppe auf synchrone Commits fest, um sicherzustellen, dass keine Daten verloren gehen.
-1. Warten Sie, bis die verteilte Verfügbarkeitsgruppe synchronisiert wurde.
+1. Beenden Sie alle Transaktionen auf den globalen primären Datenbanken (d. h. Datenbanken der primären Verfügbarkeitsgruppe), und legen Sie dann die verteilte Verfügbarkeitsgruppe auf synchrone Commits fest, um sicherzustellen, dass keine Daten verloren gehen.
+1. Warten Sie darauf, dass die verteilte Verfügbarkeitsgruppe synchronisiert wurde und für alle Datenbanken denselben last_hardened_lsn-Wert aufweist. 
 1. Legen Sie die Rolle der verteilten Verfügbarkeitsgruppe für das globale, primäre Replikat auf `SECONDARY` fest.
 1. Testen Sie die Failoverbereitschaft.
 1. Führen Sie einen Failover der primären Verfügbarkeitsgruppe aus.
 
 In den folgenden Transact-SQL-Beispielen werden die ausführlichen Schritte zum Ausführen eines Failover für die verteilte Verfügbarkeitsgruppe namens `distributedag` veranschaulicht:
 
-1. Legen Sie die verteilte Verfügbarkeitsgruppe auf einen synchronen Commit fest, indem Sie folgenden Code auf dem globalen primären Replikat *und* der Weiterleitung ausführen.   
+1. Beenden Sie alle Transaktionen auf den globalen primären Datenbanken (d. h. Datenbanken der primären Verfügbarkeitsgruppe), um sicherzustellen, dass keine Daten verloren gehen. Legen Sie dann die verteilte Verfügbarkeitsgruppe auf einen synchronen Commit fest, indem Sie folgenden Code auf dem globalen primären Replikat *und* der Weiterleitung ausführen.   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 
@@ -262,24 +262,29 @@ In den folgenden Transact-SQL-Beispielen werden die ausführlichen Schritte zum 
        GO
 
       ```  
-   >[!NOTE]
-   >In einer verteilten Verfügbarkeitsgruppe hängt der Synchronisierungsstatus der zwei Verfügbarkeitsgruppen vom Verfügbarkeitsmodus beider Replikate ab. Für den synchronen Commitmodus müssen sowohl die aktuell primäre Verfügbarkeitsgruppe als auch die aktuell sekundäre Verfügbarkeitsgruppe den Verfügbarkeitsmodus `SYNCHRONOUS_COMMIT` aufweisen. Aus diesem Grund müssen Sie das obige Skript auf dem globalen primären Replikat und der Weiterleitung ausführen.
+   > [!NOTE]
+   > In einer verteilten Verfügbarkeitsgruppe hängt der Synchronisierungsstatus der zwei Verfügbarkeitsgruppen vom Verfügbarkeitsmodus beider Replikate ab. Für den synchronen Commitmodus müssen sowohl die aktuell primäre Verfügbarkeitsgruppe als auch die aktuell sekundäre Verfügbarkeitsgruppe den Verfügbarkeitsmodus `SYNCHRONOUS_COMMIT` aufweisen. Aus diesem Grund müssen Sie das obige Skript auf dem globalen primären Replikat und der Weiterleitung ausführen.
 
-1. Warten Sie, bis sich der Status der verteilten Verfügbarkeitsgruppe in `SYNCHRONIZED`geändert hat. Führen Sie die folgende Abfrage auf dem globalen primären Replikat aus, bei dem es sich um das primäre Replikat der primären Verfügbarkeitsgruppe handelt. 
+
+1. Warten Sie, bis der Status der verteilten Verfügbarkeitsgruppe in `SYNCHRONIZED` geändert wurde und alle Replikate denselben last_hardened_lsn-Wert aufweisen (pro Datenbank). Führen Sie die folgende Abfrage für die globale primäre Datenbank, d. h. das primäre Replikat der primären Verfügbarkeitsgruppe, und die Weiterleitung aus, um synchronization_state_desc und last_hardened_lsn zu überprüfen: 
     
       ```sql  
+      -- Run this query on the Global Primary and the forwarder
+      -- Check the results to see if synchronization_state_desc is SYNCHRONIZED, and the last_hardened_lsn is the same per database on both the global primary and       forwarder 
+      -- If not rerun the query on both side every 5 seconds until it is the case
+      --
       SELECT ag.name
              , drs.database_id
+             , db_name(drs.database_id) as database_name
              , drs.group_id
              , drs.replica_id
              , drs.synchronization_state_desc
-             , drs.end_of_log_lsn 
-        FROM sys.dm_hadr_database_replica_states drs,
-        sys.availability_groups ag
-          WHERE drs.group_id = ag.group_id;      
+             , drs.last_hardened_lsn  
+      FROM sys.dm_hadr_database_replica_states drs 
+      INNER JOIN sys.availability_groups ag on drs.group_id = ag.group_id;
       ```  
 
-    Führen Sie den nächsten Schritt aus, sobald **synchronization_state_desc** für die Verfügbarkeitsgruppe gleich `SYNCHRONIZED`ist. Ist **synchronization_state_desc** nicht gleich `SYNCHRONIZED`, führen Sie den Befehl alle fünf Sekunden aus, bis die Änderung erfolgt ist. Wechseln Sie erst zum nächsten Schritt, wenn **synchronization_state_desc** = `SYNCHRONIZED` ist. 
+    Fahren Sie fort, sobald der **synchronization_state_desc**-Wert der Verfügbarkeitsgruppe `SYNCHRONIZED` ist und die last_hardened_lsn-Werte der Datenbanken in der globalen primären Datenbank und der Weiterleitung identisch sind.  Wenn **synchronization_state_desc** nicht `SYNCHRONIZED` entspricht oder die last_hardened_lsn-Werte nicht identisch sind, führen Sie den Befehl alle fünf Sekunden aus, bis die Änderung erfolgt. Fahren Sie nicht fort, bevor **synchronization_state_desc** den Wert `SYNCHRONIZED` aufweist und die last_hardened_lsn-Werte identisch sind. 
 
 1. Legen Sie auf dem globalen primären Replikat die Rolle der verteilten Verfügbarkeitsgruppe auf `SECONDARY` fest. 
 
@@ -289,23 +294,41 @@ In den folgenden Transact-SQL-Beispielen werden die ausführlichen Schritte zum 
 
     Zu diesem Zeitpunkt ist die verteilte Verfügbarkeitsgruppe nicht verfügbar.
 
-1. Testen Sie die Failoverbereitschaft. Führen Sie die folgende Abfrage aus:
+1. Testen Sie die Failoverbereitschaft. Führen Sie die folgende Abfrage für die globale primäre Datenbank und die Weiterleitung aus:
 
     ```sql
-    SELECT ag.name, 
-        drs.database_id, 
-        drs.group_id, 
-        drs.replica_id, 
-        drs.synchronization_state_desc, 
-        drs.end_of_log_lsn 
-    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-    WHERE drs.group_id = ag.group_id; 
+     -- Run this query on the Global Primary and the forwarder
+     -- Check the results to see if the last_hardened_lsn is the same per database on both the global primary and forwarder 
+     -- The availability group is ready to fail over when the last_hardened_lsn is the same for both availability groups per database
+     --
+     SELECT ag.name, 
+         drs.database_id, 
+         db_name(drs.database_id) as database_name,
+         drs.group_id, 
+         drs.replica_id,
+         drs.last_hardened_lsn
+     FROM sys.dm_hadr_database_replica_states drs
+     INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id;
     ```  
-    Die Verfügbarkeitsgruppe ist für das Failover eingerichtet, wenn **synchronization_state_desc** gleich `SYNCHRONIZED` ist und wenn **end_of_log_lsn** für beide Verfügbarkeitsgruppen identisch ist. 
 
-1. Führen Sie ein Failover von der primären Verfügbarkeitsgruppe auf die sekundäre Verfügbarkeitsgruppe aus. Führen Sie den folgenden Befehl auf dem SQL-Server aus, der das primäre Replikat der sekundären Verfügbarkeitsgruppe hostet. 
+    Die Verfügbarkeitsgruppe ist für das Failover bereit, wenn die **last_hardened_lsn**-Werte der Verfügbarkeitsgruppen pro Datenbank identisch sind. Wenn die last_hardened_lsn-Werte nach einiger Zeit nicht identisch sind, führen Sie ein Failback auf die globale primäre Datenbank durch, indem Sie den folgenden Befehl auf dieser ausführen, und fangen Sie dann ab dem zweiten Schritt von neu an, um Datenverlust zu vermeiden: 
 
     ```sql
+    -- If the last_hardened_lsn is not the same after a period of time, to avoid data loss, 
+    -- we need to fail back to the global primary by running this command on the global primary 
+    -- and then start over from the second step:
+
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```
+
+
+1. Führen Sie ein Failover von der primären Verfügbarkeitsgruppe auf die sekundäre Verfügbarkeitsgruppe aus. Führen Sie den folgenden Befehl für die Weiterleitung aus, die SQL Server-Instanz, die das primäre Replikat der sekundären Verfügbarkeitsgruppe hostet. 
+
+    ```sql
+    -- Once the last_hardened_lsn is the same per database on both sides
+    -- We can Fail over from the primary availability group to the secondary availability group. 
+    -- Run the following command on the forwarder, the SQL Server instance that hosts the primary replica of the secondary availability group.
+
     ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
     ```  
 

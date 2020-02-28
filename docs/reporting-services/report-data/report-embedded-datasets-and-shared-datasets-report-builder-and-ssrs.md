@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a4deeec624f349f7fd40bb89dc9b14b6baf309b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a77d0b930b15d287a010e141c256c9bf311dc303
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190686"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081802"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator und SSRS)
   Ein Dataset gibt die Daten aus einer Datenverbindung an, die Sie verwenden möchten. Ein Dataset basiert auf einer Datenverbindung, die im Bericht als eine eingebettete Datenquelle oder ein Verweis auf eine freigegebene Datenquelle auf einem Berichtsserver gespeichert wurde. Das Dataset enthält eine Abfrage, die einen Satz von Feldern angibt. Wie Sie diese Felder in die Entwurfsoberfläche ziehen, erstellen Sie Ausdrücke, die die tatsächlichen Daten ergeben, wenn der Bericht ausgeführt wird.  
@@ -122,7 +122,7 @@ ms.locfileid: "74190686"
   
  Der Unterschied zwischen den eingebetteten und den freigegebenen Datenquellen ist die Art der Erstellung, Speicherung und Verwaltung. In der folgenden Tabelle werden die Unterschiede zwischen eingebetteten und freigegebenen Datenquellen zusammengefasst:  
   
-|Beschreibung|Eingebettet<br /><br /> Data source|Shared<br /><br /> Data source|  
+|BESCHREIBUNG|Eingebettet<br /><br /> Data source|Shared<br /><br /> Data source|  
 |-----------------|------------------------------|----------------------------|  
 |Die Datenverbindung ist in die Berichtsdefinition eingebettet.|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")||  
 |Der Zeiger auf die Datenverbindung auf dem Berichtsserver ist in die Berichtsdefinition eingebettet.||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Verfügbar")|  

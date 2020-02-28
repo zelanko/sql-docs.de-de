@@ -1,5 +1,5 @@
 ---
-title: Eingebettete und freigegebene Datasets (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Eingebettete und freigegebene Datasets (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ba5d42e04758b0577ca77e761a67b352dbbf163
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f1d665699dc2051745b08a56796588dab51e3bcf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190827"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077623"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Eingebettete und freigegebene Datasets (Berichts-Generator und SSRS)
   In einem Bericht stellt ein Dataset Berichtsdaten dar, die als Ergebnis der Ausführung einer Abfrage für eine externe Datenquelle zurückgegeben werden. Das Dataset hängt von der Datenverbindung ab, die Informationen zur externen Datenquelle enthält. Die Daten selbst sind nicht in der Berichtsdefinition enthalten. Das Dataset enthält einen Abfragebefehl, eine Feldauflistung, Parameter, Filter und Datenoptionen, mit denen die Groß- und Kleinschreibung berücksichtigt und eine Sortierung vorgenommen werden kann. Die folgenden beiden Datasettypen stehen zur Verfügung:  

@@ -1,5 +1,5 @@
 ---
-title: Untersuchen der Flexibilität eines Tablix-Datenbereichs (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Untersuchen der Flexibilität eines Tablix-Datenbereichs (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45cc3c743c8ece0aecf3a286baef9e1f907c157d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: aaddc6f5671ceb2727ca950459e60dc24402bb9e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579131"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082111"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Untersuchen der Flexibilität eines Tablix-Datenbereichs (Berichts-Generator und SSRS)
 Wenn Sie in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht einen Tabellen-, Matrix- oder Listendatenbereich über die Registerkarte „Einfügen“ des Menübands hinzufügen, starten Sie mit einer Ausgangsvorlage für einen Tablix-Datenbereich. Diese Vorlage stellt jedoch keine Beschränkung für Sie dar. Sie können die Datenanzeige weiterentwickeln, indem Sie Tablix-Datenbereichsfunktionen wie Gruppen, Zeilen und Spalten hinzufügen oder entfernen.  

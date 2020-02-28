@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f8097f477368a9aa4cd8846b8da77e8bff73324e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 491d1e260206121b431276088ff5b34516b4d337
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929147"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173596"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Konfigurieren von Windows-Dienstkonten und -Berechtigungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -387,7 +387,7 @@ In diesem Abschnitt werden die Berechtigungen beschrieben, die beim [!INCLUDE[ss
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|Lesen, Ausführen, Ordnerinhalt auflisten|  
 |Launchpad|%binn|Lesen, Ausführen|
 ||ExtensiblilityData|Vollzugriff|
-||Log\ExtensibiltityLog|Vollzugriff|
+||Log\ExtensibilityLog|Vollzugriff|
   
  \*Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst ist auf [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]- und [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]-Instanzen mit Advanced Services deaktiviert.  
   

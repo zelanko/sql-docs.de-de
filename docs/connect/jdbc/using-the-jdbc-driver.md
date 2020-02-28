@@ -1,7 +1,7 @@
 ---
 title: Verwenden des JDBC-Treibers | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,22 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34478dfb61f59835ab6373849876cec26dc35984
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69025770"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004668"
 ---
 # <a name="using-the-jdbc-driver"></a>Verwenden des JDBC-Treibers
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Dieser Abschnitt enthält Anleitungen, um in kurzer Zeit mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine einfache Verbindung mit einer [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Datenbank herzustellen. Vor dem Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem lokalen Computer oder einem Server sowie der JDBC-Treiber auf dem lokalen Computer installiert werden.  
+Dieser Abschnitt enthält Anleitungen, um in kurzer Zeit mit [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine einfache Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank herzustellen. Vor dem Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem lokalen Computer oder einem Server sowie der JDBC-Treiber auf dem lokalen Computer installiert werden.  
   
 ## <a name="choosing-the-right-jar-file"></a>Auswählen der richtigen JAR-Datei
 
 Der Microsoft JDBC-Treiber bietet verschiedene JAR-Dateien, die in Verbindung mit Ihren bevorzugten Einstellungen für die Java Runtime Environment (JRE) verwendet werden können:
+
+Der Microsoft JDBC-Treiber 8.2 für SQL Server bietet die Klassenbibliotheksdateien **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** und **mssql-jdbc-8.2.0.jre13.jar**.
 
 Der Microsoft JDBC-Treiber 7.4 für SQL Server bietet die Klassenbibliotheksdateien **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** und **mssql-jdbc-7.4.1.jre12.jar**.
 
@@ -59,7 +61,31 @@ Wenn Sie JDBC-Treiber 7.2 verwenden, legen Sie fest, dass der Klassenpfad die Da
 
 Wenn Sie den JDBC-Treiber 7.4 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** oder **mssql-jdbc-7.4.1.jre12.jar** enthält.
 
+Wenn Sie den JDBC-Treiber 8.2 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** oder **mssql-jdbc-8.2.0.jre13.jar** enthält.
+
 Wenn im Klassenpfad kein Eintrag für die richtige JAR-Datei vorhanden ist, löst eine Anwendung die allgemeine Ausnahme `Class not found` aus.  
+
+### <a name="for-microsoft-jdbc-driver-82"></a>Für Microsoft JDBC-Treiber 8.2
+
+Die Datei **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** oder **mssql-jdbc-8.2.0.jre13.jar** wird im folgenden Verzeichnis installiert:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre13.jar
+```
+
+Der folgende Codeausschnitt stellt ein Beispiel für die CLASSPATH-Anweisung dar, die für eine Windows-Anwendung verwendet wird:
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.0.jre11.jar`
+
+Der folgende Codeausschnitt stellt ein Beispiel für die CLASSPATH-Anweisung dar, die für eine Linux/Unix-Anwendung verwendet wird:
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.0.jre11.jar`
+
+Stellen Sie sicher, dass die CLASSPATH-Anweisung nur eine [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Datei enthält, z. B. entweder **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** oder **mssql-jdbc-8.2.0.jre13.jar**.
 
 ### <a name="for-microsoft-jdbc-driver-74"></a>Für Microsoft JDBC-Treiber 7.4
 
@@ -227,7 +253,7 @@ Ab der JDBC-API 4.0 wurde die `DriverManager.getConnection()`-Methode so erweite
 Wenn die getConnection-Methode der DriverManager-Klasse aufgerufen wird, wird aus der Gruppe der registrierten JDBC-Treiber ein geeigneter Treiber ausgewählt. „sqljdbc4.jar“, „sqljdbc41.jar“ und „sqljdbc42.jar“ enthalten die Datei „META-INF/services/java.sql.Driver“, die den **com.microsoft.sqlserver.jdbc.SQLServerDriver** als registrierten Treiber enthält. Vorhandene Anwendungen, die die Treiber derzeit mit der Methode Class.forName laden, funktionieren auch weiterhin ohne Änderungen.  
   
 > [!NOTE]  
-> Die Klassenbibliothek „sqljdbc4.jar“, „sqljdbc41.jar“ oder „sqljdbc42.jar“ kann nicht mit älteren Versionen von Java Runtime Environment (JRE) verwendet werden. Die Liste der vom [ unterstützten JRE-Versionen finden Sie unter ](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)Systemanforderungen für den JDBC-Treiber[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+> Die Klassenbibliothek „sqljdbc4.jar“, „sqljdbc41.jar“ oder „sqljdbc42.jar“ kann nicht mit älteren Versionen von Java Runtime Environment (JRE) verwendet werden. Die Liste der vom [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützten JRE-Versionen finden Sie unter [Systemanforderungen für den JDBC-Treiber](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
 
 Weitere Informationen zum Herstellen einer Verbindung mit Datenquellen und zum Verwenden einer Verbindungs-URL finden Sie unter [Erstellen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md) und [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).  
   

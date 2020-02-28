@@ -1,5 +1,5 @@
 ---
-title: Berichtsserver-Datenbank (nativer SSRS-Modus) | Microsoft-Dokumentation
+title: Berichtsserver-Datenbank (nativer Modus) | Microsoft-Dokumentation
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a7e49888ddeb4d0666a8b46849560c63c4ac22f5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 71207cc3476374c457ab72aa03e54215b38330ba
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66826884"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078009"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Berichtsserver-Datenbank (nativer SSRS-Modus)
   Ein Berichtsserver ist ein zustandsloser Server, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[!INCLUDE[ssDE](../../includes/ssde-md.md)] zum Speichern von Metadaten und Objektdefinitionen verwendet. Eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation im nativen Modus verwendet zwei Datenbanken, um den persistenten Datenspeicher von temporären Speicheranforderungen zu trennen. Die Datenbanken werden gemeinsam erstellt und sind durch ihre Namen aneinander gebunden. Die Namen der Datenbanken lauten standardmäßig **ReportServer** bzw. **ReportServerTempDB**.  

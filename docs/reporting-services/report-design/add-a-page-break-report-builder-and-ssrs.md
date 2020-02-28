@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen eines Seitenumbruchs (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Hinzufügen eines Seitenumbruchs (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ca618e82e9eed6a0cb43582b8aa1feff33d67626
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39b0e385b533ecc479f99244488d13ae77a8b87f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574802"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080699"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>Hinzufügen eines Seitenumbruchs (Berichts-Generator und SSRS)
   Sie können Rechtecken, Datenbereichen oder Gruppen innerhalb von Datenbereichen einen Seitenumbruch hinzufügen, um die Datenmenge auf jeder Seite zu steuern. Durch Hinzufügen von Seitenumbrüchen kann die Leistung von veröffentlichten Berichten verbessert werden, da beim Anzeigen des Berichts nur die Elemente auf jeder Seite verarbeitet werden müssen. Wenn der ganze Bericht aus einer einzelnen Seite besteht, müssen alle Elemente verarbeitet werden, bevor Sie den Bericht anzeigen können.  

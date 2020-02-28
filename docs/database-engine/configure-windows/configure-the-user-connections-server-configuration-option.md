@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 09062541d167be92c40877033e46eec6ebd1c98f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d1d9cab0c7e6d44eb94ff6f64b2825a316ab3006
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68012167"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173652"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Benutzerverbindungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ GO
  Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
   
 ##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Option „Benutzerverbindungen“  
- Der Server muss neu gestartet werden, bevor die Einstellung wirksam werden kann.  
+ Die SQL-Instanz muss neu gestartet werden, bevor die Einstellung wirksam werden kann.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

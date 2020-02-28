@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/25/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6802e2f93c4f171797198eda2132e8b0353621f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910133"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558366"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -59,7 +59,7 @@ BULK INSERT
    [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] FIRSTROW = first_row ]
    [ [ , ] FIRE_TRIGGERS ]
-   [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ [ , ] FORMATFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] KEEPIDENTITY ]
    [ [ , ] KEEPNULLS ]
    [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch ]
@@ -128,7 +128,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 > [!NOTE]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, für jede Spalte einen Sortierungsnamen in einer [Formatdatei](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md) anzugeben.
 
-|CODEPAGE-Wert|Beschreibung|
+|CODEPAGE-Wert|BESCHREIBUNG|
 |--------------------|-----------------|
 |ACP|Spalten vom Datentyp **char**, **varchar** oder **text** werden von der [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Codepage (ISO 1252) in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codepage konvertiert.|
 |OEM (Standard)|Spalten vom Datentyp **char**, **varchar** oder **text** werden von der OEM-Codepage des Systems in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codepage konvertiert.|
@@ -166,7 +166,7 @@ FIRE_TRIGGERS: gibt an, dass INSERT-Trigger, die für die Zieltabelle definiert 
 
 Wenn FIRE_TRIGGERS nicht angegeben ist, werden keine INSERT-Trigger ausgeführt.
 
-FORMATFILE_DATASOURCE **=** 'data_source_name' **: Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
+FORMATFILE_DATA_SOURCE **=** 'Datenquellenname' **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
 Es handelt sich um eine benannte externe Datenquelle, die auf den Azure Blob-Speicherort der Formatatei verweist, welche das Schema der importierten Daten definiert. Die externe Datenquelle muss mithilfe der in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 hinzugefügten `TYPE = BLOB_STORAGE`-Option erstellt werden. Weitere Informationen finden Sie unter [CREATE EXTERNAL DATA SOURCE (CREATE EXTERNAL DATA SOURCE)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 KEEPIDENTITY: gibt an, dass Identitätswerte in der importierten Datendatei für die Identitätsspalte verwendet werden sollen. Wird KEEPIDENTITY nicht angegeben, werden die Identitätswerte für diese Spalte zwar überprüft, jedoch nicht importiert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist dann auf der Basis von Ausgangswerten und inkrementellen Werten, die beim Erstellen der Tabelle angegeben wurden, eindeutige Werte zu. Wenn die Datendatei keine Werte für die Identitätsspalte in der Tabelle oder Sicht enthält, geben Sie mithilfe einer Formatdatei an, dass die Identitätsspalte der Tabelle oder Sicht beim Importieren von Daten ausgelassen werden soll. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist der Spalte automatisch eindeutige Werte zu. Weitere Informationen finden Sie unter [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
@@ -338,7 +338,9 @@ Wenn Sie Daten aus Azure Blob Storage importieren, die nicht öffentlich sind (a
 
 ### <a name="permissions"></a>Berechtigungen
 
-Erfordert die Berechtigungen INSERT und ADMINISTER BULK OPERATIONS. In der Azure SQL-Datenbank sind INSERT- und ADMINISTER DATABASE BULK OPERATIONS-Berechtigungen erforderlich. Darüber hinaus ist die ALTER TABLE-Berechtigung erforderlich, wenn mindestens eine der folgenden Bedingungen zutrifft:
+Erfordert die Berechtigungen INSERT und ADMINISTER BULK OPERATIONS. In der Azure SQL-Datenbank sind INSERT- und ADMINISTER DATABASE BULK OPERATIONS-Berechtigungen erforderlich. SQL Server für Linux unterstützt weder ADMINISTER BULK OPERATIONS-Berechtigungen noch die Rolle „bulkadmin“. Nur `sysadmin` kann Masseneinfügungen für SQL Server für Linux durchführen. 
+
+Darüber hinaus ist die ALTER TABLE-Berechtigung erforderlich, wenn mindestens eine der folgenden Bedingungen zutrifft:
 
 - Es sind Einschränkungen vorhanden, und die Option CHECK_CONSTRAINTS ist nicht angegeben.
 

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Parallel Data Warehouse-Verbindungstyp (SSRS) | Microsoft-Dokumentation
+title: SQL Server Parallel Data Warehouse-Verbindungstyp | Microsoft-Dokumentation
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 445057a5ac7144e7bb97f74f8d6eb20d8332f8e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d506c15c1cc0a9bf2e4d414210b769c02556a32a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190625"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081397"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse-Verbindungstyp (SSRS)
 
@@ -96,7 +96,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ausführen** (**!**), um die Abfrage auszuführen und ein Resultset anzuzeigen.  
+ Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ausführen** ( **!** ), um die Abfrage auszuführen und ein Resultset anzuzeigen.  
   
  Um diese Abfrage zu parametrisieren, fügen Sie einen Abfrageparameter hinzu. Beispiel: Ändern Sie die WHERE-Klausel wie folgt:  
   

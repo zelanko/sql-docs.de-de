@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558047"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256653"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Lokale Überwachung für SQL Server-Nutzungs- und -Diagnosedatensammlung (CEIP)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75558047"
 
 Microsoft SQL Server enthält internetfähige Features, die Daten über Ihren Computer oder Ihr Gerät erfassen und senden können. Die zugehörigen Informationen werden als *Standardcomputerinformationen* bezeichnet. Die Komponente „Lokale Überwachung“ der [SQL Server-Nutzungs- und -Diagnosedatensammlung](usage-and-diagnostic-data-configuration-for-sql-server.md) schreibt die vom Dienst erfassten Daten, die die an Microsoft zu sendenden Daten (Protokolle) darstellen, in einen bestimmten Ordner. Der Zweck der lokalen Überwachung besteht darin, dass Kunden die von Microsoft mit dem Feature erfassten Daten einsehen können, um die Compliance sowie die Einhaltung von behördlichen Bestimmungen oder Datenschutzbestimmungen zu überprüfen.  
 
-Seit SQL Server 2016 CU2 kann die lokale Überwachung auf der Instanzebene für SQL Server-Datenbank-Engine und Analysis Services (SSAS) konfiguriert werden. In SQL Server 2016 CU4 und SQL Server 2016 SP1 ist die lokale Überwachung auch für SQL Server Integration Services (SSIS) aktiviert. Andere SQL Server-Komponenten, die beim Setup installiert werden, und SQL Server-Tools, die nach dem Setup heruntergeladen oder installiert werden, bieten keine Funktion zur lokalen Überwachung der Nutzungs- und Diagnosedatensammlung.
+Seit SQL Server 2016 CU2 und CU3 kann die lokale Überwachung auf der Instanzebene für SQL Server-Datenbank-Engine und Analysis Services (SSAS) konfiguriert werden. In SQL Server 2016 CU4, SQL Server 2016 SP1 und späteren Releases ist die lokale Überwachung auch für SQL Server Integration Services (SSIS) aktiviert. Andere SQL Server-Komponenten, die beim Setup installiert werden, und SQL Server-Tools, die nach dem Setup heruntergeladen oder installiert werden, bieten keine Funktion zur lokalen Überwachung der Nutzungs- und Diagnosedatensammlung.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -42,7 +42,7 @@ Informationen zur Deaktivierung der Datensammlung finden Sie unter [Aktivieren o
 
 Nachfolgend sind die erforderlichen Komponenten zum Aktivieren der lokalen Überwachung auf jeder SQL Server-Instanz aufgeführt: 
 
-1. Die Instanz wird auf SQL Server 2016 RTM CU2 oder höher gepatcht. Für Integration Services wird die Instanz auf SQL 2016 RTM CU4 oder SQL 2016 SP1 gepatcht.
+1. Die Instanz wird auf SQL Server 2016 RTM CU2 oder höher gepatcht. Für Integration Services wird die Instanz auf SQL 2016 RTM CU4, SQL 2016 SP1 oder höher gepatcht.
 
 1. Benutzer muss ein Systemadministrator oder eine Rolle mit Zugriff zum Hinzufügen und Ändern von Registrierungsschlüsseln, Erstellen von Ordnern, Verwalten der Ordnersicherheit und Beenden/Starten eines Windows-Diensts sein.  
 
@@ -320,7 +320,7 @@ Diese Protokolldateien werden im JSON-Format geschrieben. Jede Zeile ist ein JSO
 Es wird keine Datei für die lokale Überwachung geschrieben.
 
 **Was geschieht, wenn keine Verbindung mit dem Internet besteht bzw. der Computer sich hinter der Firewall befindet?**
-Nutzungs- und Diagnosedaten von SQL Server 2016 werden nicht an Microsoft gesendet. Es wird weiterhin versucht, die Protokolle der lokalen Überwachung zu schreiben, wenn dies ordnungsgemäß konfiguriert wurde.
+Nutzungs- und Diagnosedaten von SQL Server werden nicht an Microsoft gesendet. Es wird weiterhin versucht, die Protokolle der lokalen Überwachung zu schreiben, wenn dies ordnungsgemäß konfiguriert wurde.
 
 **Wie deaktivieren DBAs die lokale Überwachung?**
 Entfernen Sie den Registrierungsschlüsseleintrag „UserRequestedLocalAuditDirectory“.
@@ -333,7 +333,7 @@ Das Bereinigen der Dateien im Verzeichnis muss von den Datenbankadministratoren 
 
 **Gibt es einen Client oder ein Tool, mit dem diese JSON-Ausgabe gelesen werden kann?**
 Die Ausgabe kann mit Editor, Visual Studio oder einem beliebigen JSON-Reader gelesen werden.
-Alternativ können Sie die JSON-Datei lesen und die Daten in einer Instanz von SQL Server 2016 analysieren, wie unten dargestellt. Weitere Informationen zum Lesen von JSON-Datei in SQL Server finden Sie unter [Importieren von JSON-Dateien in SQL Server mithilfe von OPENROWSET (BULK) und OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
+Alternativ können Sie die JSON-Datei lesen und die Daten in einer SQL Server-Instanz analysieren, wie unten dargestellt. Weitere Informationen zum Lesen von JSON-Datei in SQL Server finden Sie unter [Importieren von JSON-Dateien in SQL Server mithilfe von OPENROWSET (BULK) und OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

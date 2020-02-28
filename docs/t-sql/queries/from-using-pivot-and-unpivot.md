@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d776fbae94ae69af10595d7c0d50b84449dd9875
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72305177"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255994"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM: Verwenden von PIVOT und UNPIVOT
 
@@ -157,6 +157,8 @@ Die von der Spalte `EmployeeID` zurückgegebenen eindeutigen Werte werden zu Fel
   
 > [!IMPORTANT]  
 >  Beim Verwenden der Aggregatfunktionen mit `PIVOT` werden eventuell vorhandene NULL-Werte in der Wertespalte bei der Berechnung der Aggregation nicht berücksichtigt.  
+
+## <a name="unpivot-example"></a>UNPIVOT-Beispiel
   
 `UNPIVOT` führt nahezu den entgegengesetzten Vorgang zu `PIVOT` aus, indem dabei die Spalten zu Zeilen umgesetzt werden. Angenommen, die im vorherigen Beispiel erstellte Tabelle wurde in der Datenbank als `pvt` gespeichert, und Sie möchten nun die Spalten-IDs `Emp1`, `Emp2`, `Emp3`, `Emp4` und `Emp5` zu Zeilenwerten umsetzen, sodass sie einem bestimmten Verkäufer entsprechen. Dies bedeutet, dass Sie zwei zusätzliche Spalten identifizieren müssen. Die Spalte, die die umzusetzenden Spaltenwerte erhalten soll (`Emp1`, `Emp2`, ...), wird `Employee` genannt, und die Spalte, die die Werte erhalten soll, die sich derzeit unter den umzusetzenden Spalten befinden, wird `Orders` genannt. Diese Spalten entsprechen jeweils *pivot_column* und *value_column* in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Definition. So sieht die Abfrage aus.  
   

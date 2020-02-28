@@ -1,5 +1,5 @@
 ---
-title: Suchen und Anzeigen von Berichten im Web-Portal (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Suchen und Anzeigen von Berichten im Web-Portal (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f98607ce8544a913ace04bbc70aa578d1090557
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b0041517770e7ffe961fa1df42afa56bfb161fc7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "71923785"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079268"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Suchen und Anzeigen von Berichten im Web-Portal (Berichts-Generator und SSRS)
   Der Berichts-Manager ist ein webbasiertes Tool mit Funktionen zum Anzeigen und Verwalten von Berichten. Er ist in der Berichtsserverinstallation enthalten. Um den Berichts-Manager zu öffnen, geben Sie die Berichts-Manager-URL in einem Browserfenster ein. Weitere Informationen zu den Browseranforderungen von finden Sie unter [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Wenden Sie sich an den Systemadministrator, wenn Sie wissen möchten, wie eine Berichts-Manager-URL auf dem Berichtsserver konfiguriert werden kann. Weitere Informationen finden Sie unter [Konfigurieren des Berichts-Managers &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  

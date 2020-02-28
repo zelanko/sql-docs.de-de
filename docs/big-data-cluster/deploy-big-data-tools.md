@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd1cab79ce226a710de1f701cfff5094a82704a5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 12dea4163feba35af6346d347503f42ab31c852a
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721695"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173632"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installieren von Big Data-Tools für SQL Server 2019
 
@@ -26,7 +26,7 @@ In diesem Artikel werden die Clienttools beschrieben, die zum Erstellen, Verwalt
 
 In der folgenden Tabelle sind die allgemeinen Big Data-Cluster-Tools und deren Installation aufgeführt:
 
-| Tool | Erforderlich | Beschreibung | Installation |
+| Tool | Erforderlich | BESCHREIBUNG | Installation |
 |---|---|---|---|
 | `python` | Ja | Python ist eine interpretierte, objektorientierte Programmiersprache auf hoher Ebene mit dynamischer Semantik. Viele Teile von Big Data-Clustern für SQL Server verwenden Python. | [Installieren von Python](#python)|
 | `azdata` | Ja | Befehlszeilentool für die Installation und Verwaltung eines Big Data-Clusters. | [Installieren](deploy-install-azdata.md) |
@@ -35,7 +35,7 @@ In der folgenden Tabelle sind die allgemeinen Big Data-Cluster-Tools und deren I
 | **Datenvirtualisierungserweiterung** | Ja | Erweiterung für Azure Data Studio, die einen Datenvirtualisierungs-Assistenten bereitstellt. | [Installieren](../azure-data-studio/data-virtualization-extension.md) |
 | **Azure CLI**<sup>2</sup> | Für AKS | Moderne Befehlszeilenschnittstelle zum Verwalten von Azure-Diensten. Wird mit AKS-Big Data-Cluster-Bereitstellungen verwendet ([Weitere Informationen](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Installieren](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Optional | Moderne Befehlszeilenschnittstelle zum Abfragen von SQL Server ([Weitere Informationen](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
-| **sqlcmd** | Für einige Skripts | Legacybefehlszeilentool zum Abfragen von SQL Server ([Weitere Informationen](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **sqlcmd** | Für einige Skripts | Legacybefehlszeilentool zum Abfragen von SQL Server ([Weitere Informationen](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). Möglicherweise müssen Sie Microsoft ODBC Driver 11 für SQL Server installieren, bevor Sie das SQLCMD-Paket installieren. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | Für einige Skripts | Befehlszeilentool zum Übertragen von Daten mit URLs. | [Windows](https://curl.haxx.se/windows/) \| Linux: Installieren von curl-Paket |
 
 <sup>1</sup> Sie müssen die `kubectl`-Version 1.13 oder höher verwenden. Außerdem sollte die Version von `kubectl` um eins höher oder niedriger als die Nebenversion Ihres Kubernetes-Clusters sein. Wenn Sie eine bestimmte Version auf dem `kubectl`-Client installieren möchten, finden Sie weitere Informationen unter [Installieren von `kubectl` mit curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (Verwenden Sie unter Windows 10 cmd.exe und nicht Windows PowerShell zum Ausführen von curl).

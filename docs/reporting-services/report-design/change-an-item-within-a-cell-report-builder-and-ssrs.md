@@ -1,5 +1,5 @@
 ---
-title: Ändern eines Elements in einer Zelle (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Ändern eines Elements in einer Zelle (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc13f82453349b16e4c9fc00b8f0f083652daa75
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e94201485577a2f70d8e459322a6d0475a65300d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581746"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081869"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>Ändern eines Elements in einer Zelle (Berichts-Generator und SSRS)
 In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten kann nur ein Nichtcontainerelement, z.B. ein Textfeld, eine Zeile oder ein Bild, durch ein neues Berichtselement ersetzt werden. Sie können beispielsweise eine Tabelle in ein Textfeld ziehen, um das Textfeld durch eine Tabelle zu ersetzen.  

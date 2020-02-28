@@ -1,5 +1,5 @@
 ---
-title: Andocken des Berichtsdatenbereichs im Berichts-Designer (SSRS) | Microsoft-Dokumentation
+title: Andocken des Berichtsdatenbereichs im Berichts-Designer | Microsoft-Dokumentation
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2480d94a6a6815c18c7464a7441daad1dd3595db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e865cb5d12a66a1225a037fdc3a191333de7179c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190417"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080584"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Andocken des Berichtsdatenbereichs im Berichts-Designer (SSRS)
   Im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichts-Designer wird in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Berichtsdatenbereich eine hierarchische Sicht von Datenobjekten angezeigt, die Sie in einem Bericht in Verbindung mit Datenquellen, Datasets, Feldern, Parametern und Bildern verwenden können. Datenquellen können in dieser Sicht eingebettet oder Verweise auf freigegebene Datenquellen sein, die im Projektmappen-Explorer angezeigt werden.  

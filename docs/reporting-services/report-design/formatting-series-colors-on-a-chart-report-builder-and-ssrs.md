@@ -1,5 +1,5 @@
 ---
-title: Formatieren von Reihenfarben in einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Formatieren von Reihenfarben in einem Diagramm (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2bdcd1df91408f33c25ad0a8eefa4c9ef2ee771
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f1d56ecf79c427c885814e87437264ca23c13e18
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580303"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079507"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Reihenfarben in einem Diagramm (Berichts-Generator und SSRS)
   Reporting Services stellt mehrere integrierte Paletten für Diagramme bereit. Außerdem können Sie eine benutzerdefinierte Palette definieren. Diagramme verwenden standardmäßig die integrierte **Pacific** -Farbpalette, um die einzelnen Reihen auszufüllen. Diese Farben werden auch in der Legende angezeigt. Beim Hinzufügen mehrerer Reihen zum Diagramm erfolgt das Zuweisen von Farben zu einer Reihe durch das Diagramm anhand der Reihenfolge, in der die Farben in der Palette definiert wurden.  

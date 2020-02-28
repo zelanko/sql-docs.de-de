@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906830"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179271"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -41,7 +41,7 @@ Unter [Anzeigen oder Ändern des Kompatibilitätsgrads einer Datenbank](../../re
   
 ## <a name="syntax"></a>Syntax  
 
-```sql
+```
 STRING_SPLIT ( string , separator )  
 ```
 
@@ -62,6 +62,8 @@ Gibt eine einspaltige Tabelle zurück, deren Zeilen die Teilzeichenfolgen sind. 
 **STRING_SPLIT** gibt eine Zeichenfolge mit getrennten Teilzeichenfolgen und ein Zeichen ein, das als Trennzeichen oder Trennlinie verwendet werden kann. STRING_SPLIT gibt eine einspaltige Tabelle aus, deren Zeilen die Teilzeichenfolgen enthalten. Der Name der Ausgabespalte ist **value**.
 
 Die Ausgabezeilen können in beliebiger Reihenfolge sein. Die Reihenfolge ist _nicht_ stimmt nicht garantiert mit der Reihenfolge der Teilzeichenfolgen in der Eingabezeichenfolge überein. Sie können die endgültige Sortierreihenfolge überschreiben, indem Sie in der SELECT-Anweisung (`ORDER BY value`) eine ORDER BY-Klausel verwenden.
+
+0x0000 (**char(0)** ) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in SPRING_SPLIT enthalten sein.
 
 Leere Teilzeichenfolgen der Länge null sind vorhanden, wenn die Eingabezeichenfolge zwei oder mehr aufeinanderfolgende Vorkommen des Trennzeichens enthält. Leere Teilzeichenfolgen werden genauso behandelt wie normale Teilzeichenfolgen. Sie können alle Zeilen, die die leere Teilzeichenfolge enthalten, mit der WHERE-Klausel (`WHERE value <> ''`) herausfiltern. Wenn die Eingabezeichenfolge NULL ist, gibt die Tabellenwertfunktion STRING_SPLIT eine leere Tabelle zurück.  
 

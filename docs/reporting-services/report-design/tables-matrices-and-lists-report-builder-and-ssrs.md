@@ -1,5 +1,5 @@
 ---
-title: Tabellen, Matrizen und Listen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Tabellen, Matrizen und Listen (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -33,12 +33,12 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a326ce7ea6701b1fe55f76861bced6c3c86174d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e3390f952eaa553c144d8dd50e906276d4f96649
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574675"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080878"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)
  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]sind Tabellen, Matrizen und Listen *Datenbereiche* , in denen Daten paginierter Berichte in Zellen angezeigt werden, die in Zeilen und Spalten angeordnet sind. Die Zellen enthalten in der Regel Textdaten wie Text, Datumsangaben und Zahlen, können jedoch auch Messgeräte, Diagramme oder Berichtselemente wie Bilder enthalten. Als Ganzes gesehen werden Tabellen, Matrizen und Listen häufig als *Tablix* -Datenbereiche bezeichnet.  

@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 652d37ec9f19ccc91e1e0d472cb98d734b65df52
+ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412818"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125287"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.
   
  In dieser Abfrage werden Zeilen aus der Order-Tabelle mithilfe des gruppierten Indexes abgerufen. Der physische Operator **Hash Match** wird jetzt für **Inner Join**verwendet. Der gruppierte Index für Order wird nicht nach CustomerID sortiert. Deshalb würde **Merge Join** einen Sortieroperator erfordern, der sich auf die Leistung auswirkt. Beachten Sie die relativen Kosten des **Hash Match** -Operators (75%), verglichen mit den Kosten des **Merge Join** -Operators im vorherigen Beispiel (46%). Der Optimierer hätte den **Hash Match** -Operator auch im vorherigen Beispiel in Betracht gezogen, hat aber festgestellt, dass der **Merge Join** -Operator eine bessere Leistung bietet.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfrageverarbeitung für datenträgerbasierte Tabellen  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfrageverarbeitung für datenträgerbasierte Tabellen  
  Das folgende Diagramm zeigt den Abfrageverarbeitungsfluss in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Ad-hoc-Abfragen:  
   
  ![Abfrageverarbeitungspipeline in SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Abfrageverarbeitungspipeline in SQL Server.")  
@@ -119,7 +119,7 @@ Abfrageverarbeitungspipeline in SQL Server.
 
  Für die erste Beispielabfrage fordert die Ausführungs-Engine von Zugriffsmethoden Zeilen im gruppierten Index für Customer und im nicht gruppierten Index für Order an. Zugriffsmethoden durchläuft die B-Struktur-Indexstrukturen, um die angeforderten Zeilen abzurufen. In diesem Fall werden alle Zeilen abgerufen, da der Plan vollständige Indexscans fordert.  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Interpretierter [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>Interpretierter [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] werden auch als interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)]. "Interpretiert" bezieht sich auf die Tatsache, dass der Abfrageplan von der Abfrageausführungs-Engine für jeden Operator im Abfrageplan interpretiert wird. Die Ausführungs-Engine liest den Operator und die Parameter und führt den Vorgang aus.  
   
  Interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)] kann verwendet werden, um auf speicheroptimierte und datenträgerbasierte Tabellen zuzugreifen. Die folgende Abbildung veranschaulicht die Abfrageverarbeitung für den interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen:  
@@ -225,7 +225,7 @@ Ausführung systemintern kompilierter gespeicherten Prozeduren.
   
  Der Aufruf einer systemintern kompilierten gespeicherten Prozedur lässt sich folgendermaßen beschreiben:  
   
-1.  Der Benutzer gibt eine **EXEC**_usp_myproc_ -Anweisung aus.  
+1.  Der Benutzer gibt eine **EXEC** _usp_myproc_-Anweisung aus.  
   
 2.  Der Parser extrahiert den Namen und die Parameter der gespeicherten Prozedur.  
   

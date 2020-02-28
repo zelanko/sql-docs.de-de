@@ -1,7 +1,7 @@
 ---
 title: Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7019efd6e1071624eb3e89873918fb9eb2775833
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028123"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004647"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 
@@ -30,7 +30,7 @@ Folgende Verbindungseigenschaften im Microsoft-JDBC-Treiber für SQL Server unte
     * **ActiveDirectoryMSI**
         * `authentication=ActiveDirectoryMSI` wird ab Treiberversion **v7.2** unterstützt und kann verwendet werden, um aus einer Azure-Ressource mit aktivierter Identitätsunterstützung heraus eine Verbindung mit einer Azure SQL-Datenbank- oder Data Warehouse-Instanz herzustellen. Optional kann in den Eigenschaften für Verbindung und Datenquelle zusätzlich zu diesem Authentifizierungsmodus auch **msiClientId** angegeben werden. Diese Eigenschaft muss die Client-ID einer verwalteten Dienstidentität enthalten, mit der das **accessToken** zum Herstellen der Verbindung abgerufen wird.
     * **ActiveDirectoryIntegrated**
-        * `authentication=ActiveDirectoryIntegrated` wird ab Treiberversion **v6.0** unterstützt und kann verwendet werden, um mithilfe der integrierten Authentifizierung eine Verbindung mit einer Azure SQL-Datenbank- oder Data Warehouse-Instanz herzustellen. Um diesen Authentifizierungsmodus zu verwenden, müssen Sie einen Verbund zwischen den lokalen Active Directory-Verbunddiensten (AD FS) und Azure Active Directory in der Cloud einrichten. Sobald dieser Verbund eingerichtet ist, können Sie eine Verbindung herstellen, indem Sie entweder die native Bibliothek „sqljdbc_auth.dll“ zum Anwendungsklassenpfad im Windows-Betriebssystem hinzufügen oder ein Kerberos-Ticket einrichten, um eine plattformübergreifende Authentifizierung zu unterstützen. Wenn Sie bei einem in die Domäne eingebundenen Computer angemeldet sind, können Sie auf Azure SQL-Datenbank bzw. Azure Data Warehouse zugreifen, ohne zur Eingabe von Anmeldeinformationen aufgefordert zu werden.
+        * `authentication=ActiveDirectoryIntegrated` wird ab Treiberversion **v6.0** unterstützt und kann verwendet werden, um mithilfe der integrierten Authentifizierung eine Verbindung mit einer Azure SQL-Datenbank- oder Data Warehouse-Instanz herzustellen. Um diesen Authentifizierungsmodus zu verwenden, müssen Sie einen Verbund zwischen den lokalen Active Directory-Verbunddiensten (AD FS) und Azure Active Directory in der Cloud einrichten. Sobald dieser Verbund eingerichtet ist, können Sie eine Verbindung herstellen, indem Sie entweder die native Bibliothek „mssql-jdbc_auth-\<version>-\<arch>.dll“ zum Anwendungsklassenpfad im Windows-Betriebssystem hinzufügen oder ein Kerberos-Ticket einrichten, um eine plattformübergreifende Authentifizierung zu unterstützen. Wenn Sie bei einem in die Domäne eingebundenen Computer angemeldet sind, können Sie auf Azure SQL-Datenbank bzw. Azure Data Warehouse zugreifen, ohne zur Eingabe von Anmeldeinformationen aufgefordert zu werden.
     * **ActiveDirectoryPassword**
         * `authentication=ActiveDirectoryPassword` wird ab Treiberversion **v6.0** unterstützt und kann verwendet werden, um mithilfe eines Azure AD-Prinzipalnamens und des zugehörigen Kennworts eine Verbindung mit einer Azure SQL-Datenbank- oder Data Warehouse-Instanz herzustellen.
     * **SqlPassword**
@@ -107,7 +107,7 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>Herstellen einer Verbindung im ActiveDirectoryIntegrated-Authentifizierungsmodus
 Ab Version 6.4. fügt der Microsoft-JDBC-Treiber Unterstützung für die ActiveDirectoryIntegrated-Authentifizierung mithilfe eines Kerberos-Tickets auf verschiedenen Plattformen hinzu (Windows, Linux und macOS).
-Weitere Informationen finden Sie unter [Einrichten eines Kerberos-Tickets unter Windows, Linux und Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac). Alternativ dazu kann unter Windows auch „sqljdbc_auth.dll“ für die ActiveDirectoryIntegrated-Authentifizierung mit dem JDBC-Treiber verwendet werden.
+Weitere Informationen finden Sie unter [Einrichten eines Kerberos-Tickets unter Windows, Linux und Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac). Alternativ dazu kann unter Windows auch „mssql-jdbc_auth-\<version>-\<arch>.dll“ für die ActiveDirectoryIntegrated-Authentifizierung mit dem JDBC-Treiber verwendet werden.
 
 > [!NOTE]
 >  Wenn Sie eine ältere Version des Treibers verwenden, finden Sie unter diesem [Link](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) Informationen zu den jeweiligen Abhängigkeiten, die zur Verwendung dieses Authentifizierungsmodus erforderlich sind. 

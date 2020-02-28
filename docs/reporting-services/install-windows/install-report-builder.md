@@ -1,29 +1,35 @@
 ---
 title: Installieren des Berichts-Generators | Microsoft-Dokumentation
 description: Der Berichts-Generator ist eine eigenständige App, die von Ihnen oder einem Administrator auf dem Computer installiert wird.
-ms.date: 01/03/2020
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70cf4c586f6fe38bd36ca99cd1ed36026969a446
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75776438"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971385"
 ---
 # <a name="install-report-builder"></a>Installieren des Berichts-Generators
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ist eine eigenständige App, die von Ihnen oder einem Administrator auf dem Computer installiert wird. Sie können sie über das Microsoft Download Center, über einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsserver oder über eine in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierte SharePoint-Website installieren.  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ist eine eigenständige App, die von Ihnen oder einem Administrator auf dem Computer installiert wird. Sie können sie über das Microsoft Download Center, über einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsserver oder über eine in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierte SharePoint-Website installieren.  
 
 > [!NOTE]
-> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
-  
+> Sie sind auf der Suche nach Informationen zur Installation von Power BI Report Builder? Wechseln Sie zur [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=58158)-Seite im Download Center. 
+
  In der Regel installiert und konfiguriert ein Administrator [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], gewährt die Berechtigung zum Herunterladen des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] s vom Webportal und verwaltet Ordner und Berechtigungen für auf dem Berichtsserver gespeicherte Berichte, Berichtsteile und freigegebene Datasets. Weitere Informationen zur Verwaltung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Reporting Services-Berichtsserver (einheitlicher Modus)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ## <a name="install-ssrbnoversion-from--a--web-portal-or-sharepoint-library"></a>Installieren des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] s über ein Webportal oder die SharePoint-Bibliothek 
+
+> [!NOTE]
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
   
  Sie können den [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] von einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal oder von einer in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website aus starten. Informationen finden Sie unter [Starten des Berichts-Generators](../../reporting-services/report-builder/start-report-builder.md).  
 

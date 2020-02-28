@@ -1,5 +1,5 @@
 ---
-title: Karten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Karten (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c03db76d1c8ad67bf9db43c1b4acfa728396b703
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66428973"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082611"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Karten (Berichts-Generator und SSRS)
   Um Geschäftsdaten anhand eines geografischen Hintergrunds visuell darzustellen, können Sie dem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Karte hinzufügen. Welchen Kartentyp Sie auswählen sollten, hängt davon ab, was für Informationen Sie im Bericht mitteilen möchten. Sie können eine Karte hinzufügen, die nur Orte anzeigt, oder eine Blasendiagrammkarte, bei der die Blasengröße von der Anzahl der Haushalte für einen Bereich abhängt, oder eine Markerkarte, bei der das Markerformat vom gewinnbringendsten Produkt für jeden Laden abhängt, oder eine Linienkarte, die Routen zwischen Läden anzeigt.  
@@ -70,7 +70,7 @@ ms.locfileid: "66428973"
 #### <a name="sources-of-spatial-data"></a>Quellen von räumlichen Daten  
  Die folgenden Quellen räumlicher Daten werden unterstützt:  
   
--   **Kartenkatalogberichte.** Räumliche Daten werden in Berichte eingebettet, die sich im Kartenkatalog befinden. Standardmäßig wird der Kartenkatalog unter „*\<Laufwerk >*:\Programme\Microsoft SQL Server\Report Builder\MapGallery“ installiert.  
+-   **Kartenkatalogberichte.** Räumliche Daten werden in Berichte eingebettet, die sich im Kartenkatalog befinden. Standardmäßig wird der Kartenkatalog unter „ *\<Laufwerk >* :\Programme\Microsoft SQL Server\Report Builder\MapGallery“ installiert.  
   
     > [!NOTE]  
     >  Für diese [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Kartenfunktion werden Daten aus TIGER/Line-Shape-Dateien verwendet, die vom U.S. Census Bureau ([https://www.census.gov/](https://www.census.gov/)). TIGER/Line-Shape-Dateien sind ein Auszug aus ausgewählten geografischen und kartographischen Informationen aus der Census MAF/TIGER-Datenbank. TIGER/Line-Shape-Dateien sind kostenfrei vom amerikanischen Volkszählungsbüro (U.S. Census Bureau) verfügbar. Um weitere Informationen zu den TIGER/Line-Shape-Dateien zu erhalten, navigieren Sie zu [TIGER/Line-Shape-Dateien und der technischen Dokumentation zu TIGER/Line-Dateien](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). Die Informationen zu geografischen Grenzen in den TIGER/Line-Shape-Dateien dienen nur der Sammlung statistischer Daten und der Tabellierung. Ihre Darstellung und Verwendung zu statistischen Zwecken bedeutet keine Aussage einer Rechtsprechungsbehörde, begründet keine Eigentumsrechte oder Rechtsansprüche und stellt keine rechtsverbindlichen Landbeschreibungen dar. Census TIGER und TIGER/Line sind eingetragene Marken des U.S. Bureau of the Census.  

@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2ce739f026afc8f61e490cb359b23b7f61c931ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75306688"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544934"
 ---
 # <a name="sqlcmd-utility"></a>SQLCMD-Hilfsprogramm
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,8 +53,8 @@ Das Hilfsprogramm verwendet ODBC zum Ausführen von Transact-SQL-Batches.
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Herunterladen der aktuellen Version des sqlcmd-Hilfsprogramms
 
-**[![Download](../ssdt/media/download.png) Microsoft-Befehlszeilen-Hilfsprogramme 15.0.x für SQL Server (x64) herunterladen (2,6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![Download](../ssdt/media/download.png) Microsoft-Befehlszeilen-Hilfsprogramme 15.0.x für SQL Server (x86) herunterladen (2,3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![download](../ssdt/media/download.png)Microsoft Befehlszeilen-Hilfsprogramme 15 für SQL Server (x64) herunterladen (2,6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![download](../ssdt/media/download.png)Microsoft Befehlszeilen-Hilfsprogramme 15 für SQL Server (x86) herunterladen (2,3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 Die Befehlszeilentools sind allgemein verfügbar (GA-Version), sie werden jedoch mit dem Installationspaket für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] veröffentlicht.
 
@@ -67,11 +67,11 @@ Veröffentlichungsdatum: 13. März 2019
 Die neue Version von SQLCMD unterstützt die Azure AD-Authentifizierung, einschließlich der Multi-Factor Authentication-Unterstützung (MFA) für SQL-Datenbank, SQL Data Warehouse und Always Encrypted-Features.
 Die neue BCP unterstützt die Azure AD-Authentifizierung, einschließlich der Multi-Factor Authentication-Unterstützung (MFA) für SQL-Datenbank und SQL Data Warehouse.
 
-**Systemanforderungen** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2. Für diese Komponente sind der [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) und der [Microsoft ODBC Driver 17.3.1.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567) erforderlich.
+**Systemanforderungen** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2
+
+Für diese Komponente sind sowohl [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) als auch [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567) erforderlich.
  
 Zum Überprüfen der SQLCMD-Version führen Sie den Befehl `sqlcmd -?` aus, und vergewissern Sie sich, dass Version 15.0.1300.359 oder höher verwendet wird.
-
-
 
 > [!NOTE]
 > Sie benötigen mindestens Version 13.1 zur Unterstützung von Always Encrypted (`-g`) und Azure Active Directory-Authentifizierung (`-G`). (Möglicherweise haben Sie mehrere Versionen von „sqlcmd.exe“ auf Ihrem Computer installiert. Achten Sie darauf, dass Sie die richtige Version verwenden. Um die Version zu bestimmen, führen Sie `sqlcmd -?`aus.)

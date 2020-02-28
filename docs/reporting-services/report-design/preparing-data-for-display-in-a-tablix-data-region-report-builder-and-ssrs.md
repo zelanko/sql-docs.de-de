@@ -1,5 +1,5 @@
 ---
-title: Daten für die Anzeige in einem Tablix-Datenbereich vorbereiten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Daten für die Anzeige in einem Tablix-Datenbereich vorbereiten (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 93782573628b711c4e8be9eb0e9a6b52eb4935bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cf1e776b874a371dceeef8c10306a55efdd1a2ff
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578202"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082402"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Vorbereiten von Daten für die Anzeige in einem Tablix-Datenbereich (Berichts-Generator und SSRS)
   Ein Tablix-Datenbereich zeigt Daten aus einem Dataset an. Sie können alle für das Dataset abgerufenen Daten anzeigen oder Filter erstellen, sodass nur eine Teilmenge der Daten angezeigt wird. Sie können auch bedingte Ausdrücke hinzufügen, um NULL-Werte aufzufüllen, oder die Abfrage für ein Dataset so ändern, dass Spalten mit Definitionen der Sortierreihenfolge für eine vorhandene Spalte enthalten sind.  

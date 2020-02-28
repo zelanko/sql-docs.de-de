@@ -1,5 +1,5 @@
 ---
-title: Formatieren von Text in einem Textfeld (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Formatieren von Text in einem Textfeld (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f50e170276a67e819524e5c9e255ac6801a4091c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f7448ee783e1e4a747942ef774a9106de09487fe
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576018"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079961"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Formatieren von Text in einem Textfeld (Berichts-Generator und SSRS)
   Sie können beliebige Teile des Texts in einem Textfeld unabhängig voneinander formatieren und Platzhaltertext und statischen Text in einem Textfeld mischen. Durch das Mischen von Formaten und Hinzufügen von Platzhaltertext können Sie im Bericht Seriendrucke oder Vorlagen für Text erstellen. Jeder Ausdruck kann mithilfe eines Platzhalters getrennt definiert und formatiert werden.  

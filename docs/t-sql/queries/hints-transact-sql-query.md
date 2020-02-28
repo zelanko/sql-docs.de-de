@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 15165b25ba9b8bb4b44172ccd99c3c0c1a2f29bf
+ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75002335"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144194"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,6 +105,7 @@ Abfragehinweise geben an, dass die angezeigten Hinweise in der gesamten Abfrage 
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
+  | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -186,7 +187,7 @@ KEEPFIXED PLAN
 Zwingt den Abfrageoptimierer, die Abfrage aufgrund von Änderungen in den Statistiken nicht erneut zu kompilieren. Durch Angabe von KEEPFIXED PLAN wird sichergestellt, dass eine Abfrage nur dann erneut kompiliert wird, wenn das Schema der zugrunde liegenden Tabellen geändert wird oder für diese Tabellen **sp_recompile** ausgeführt wird.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher).  
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)  
   
 Verhindert, dass die Abfrage einen nicht gruppierten speicheroptimierten Columnstore-Index verwendet. Wenn die Abfrage den Abfragehinweis enthält, der die Verwendung des Columnstore-Indexes verhindert, sowie einen Indexhinweis, der die Verwendung eines Columnstore-Index festlegt, besteht ein Konflikt zwischen den Hinweisen, und die Abfrage gibt einen Fehler zurück.  
   
@@ -240,7 +241,7 @@ OPTIMIZE FOR UNKNOWN
 Weist den Abfrageoptimierer an, beim Kompilieren und Optimieren der Abfrage für alle lokalen Variablen, statistische Daten statt der Anfangswerte zu verwenden. Diese Optimierung umfasst auch Parameter, die mit erzwungener Parametrisierung erstellt werden.  
   
 Wenn OPTIMIZE FOR @variable_name = _literal\_constant_ und OPTIMIZE FOR UNKNOWN in dem gleichen Abfragehinweis verwendet werden, verwendet der Abfrageoptimierer die _literal\_constant_, die für einen bestimmten Wert angegeben wurde. Der Abfrageoptimierer verwendet UNKNOWN für die übrigen Variablenwerte. Diese Werte werden nur während der Abfrageoptimierung verwendet, nicht während der Abfrageausführung.  
-  
+
 PARAMETERIZATION { SIMPLE | FORCED }     
 Gibt die Parametrisierungsregeln an, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer bei der Kompilierung auf die Abfrage anwendet.  
   
@@ -249,6 +250,11 @@ Gibt die Parametrisierungsregeln an, die der [!INCLUDE[ssNoVersion](../../includ
 > Weitere Informationen finden Sie unter [Angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
 Mit SIMPLE wird der Abfrageoptimierer angewiesen, einfache Parametrisierung auszuführen. Mit FORCED wird der Abfrageoptimierer angewiesen, eine erzwungene Parametrisierung auszuführen. Weitere Informationen finden Sie unter [„Erzwungene Parametrisierung“ im Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) und unter [„Einfache Parametrisierung“ im Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
+
+QUERYTRACEON trace_flag    
+Mit dieser Option können Sie ein Ablaufverfolgungsflag, das sich auf den Plan auswirkt, nur während der Kompilierung einer einzelnen Abfrage aktivieren. Wie andere Optionen auf Abfrageebene können Sie diese Option zusammen mit Planhinweislisten verwenden, um den Text einer Abfrage, der in einer beliebigen Sitzung ausgeführt wird, abzugleichen, und automatisch ein Ablaufverfolgungsflag anzuwenden, das sich auf den Plan auswirkt, wenn die Abfrage kompiliert wird. Die Option QUERYTRACEON wird nur für Ablaufverfolgungsflags der in der Tabelle mit weiteren Informationen und im Artikel [DBCC TRACEON – Ablaufverfolgungsflags](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) erläuterten Abfrageoptimierer unterstützt. Für diese Option wird jedoch kein Fehler oder keine Warnung zurückgegeben, wenn eine nicht unterstützte Ablaufverfolgungsflagsnummer verwendet wird. Wenn das angegebene Ablaufverfolgungsflag keines ist, das sich auf den Ausführungsplan der Abfrage auswirkt, wird die Option einfach ignoriert.
+
+Wenn QUERYTRACEON trace_flag_number mit verschiedenen Ablaufverfolgungsflagsnummern dupliziert wird, kann mehr als ein Ablaufverfolgungsflag in der OPTION-Klausel angegeben werden.
 
 RECOMPILE  
 Weist [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an, einen neuen, temporären Plan für die Abfrage zu erstellen und diesen Plan sofort nach Ausführung der Abfrage zu verwerfen. Der generierte Abfrageplan ersetzt keinen im Cache gespeicherten Plan, wenn dieselbe Abfrage ohne den Hinweis RECOMPILE ausgeführt wird. Ohne die Angabe von RECOMPILE werden Abfragepläne von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zwischengespeichert und wiederverwendet. Beim Kompilieren von Abfrageplänen verwendet der RECOMPILE-Abfragehinweis die aktuellen Werte aller lokalen Variablen in der Abfrage. Wenn sich die Abfrage innerhalb einer gespeicherten Prozedur befindet, werden die aktuellen Werte an beliebige Parameter übergeben.  
@@ -599,7 +605,24 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
-    
+### <a name="m-using-querytraceon-hint"></a>M. Verwenden von QUERYTRACEON HINT  
+ Im folgenden Beispiel werden die QUERYTRACEON-Abfragehinweise verwendet. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet. Sie können mithilfe der folgenden Abfrage alle den Plan beeinflussenden Hotfixes aktivieren, die vom Ablaufverfolgungsflag 4199 für eine bestimmte Abfrage gesteuert werden:
+  
+```sql  
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (QUERYTRACEON 4199);
+```  
+
+ Wie in der folgenden Abfrage können Sie auch mehrere Ablaufverfolgungsflags verwenden:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
+```
+
+
 ## <a name="see-also"></a>Weitere Informationen  
 [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

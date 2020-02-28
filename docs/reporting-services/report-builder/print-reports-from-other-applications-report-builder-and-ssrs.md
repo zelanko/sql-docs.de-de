@@ -1,5 +1,5 @@
 ---
-title: Drucken von Berichten aus anderen Anwendungen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Drucken von Berichten aus anderen Anwendungen (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aecaaf98504f9e6228da16b3379efaffcaaaf5a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5b187ce75c0b005cbc322bddaff847e78147ae0d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580690"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082498"
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>Drucken von Berichten aus anderen Anwendungen (Berichts-Generator und SSRS)
   Berichts-Generator stellt eine Exportoption bereit, mit der Sie einen Bericht in anderen Anwendungen einfach anzeigen können. Der Befehl **Export** ist auf der Berichtssymbolleiste verfügbar, die oben in einem Bericht angezeigt wird, wenn der Bericht in einem Browser oder in einer webbasierten Anwendung geöffnet wird. Nach dem Export eines Berichts wird dieser in einer anderen Anwendung angezeigt (durch Exportieren eines Berichts nach Excel wird der Bericht z. B. in [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]geöffnet). Das Exportieren des Berichts zum Drucken wird nur dann empfohlen, wenn die Anwendung über spezifische Druckfunktionen verfügt, die Sie verwenden möchten.  

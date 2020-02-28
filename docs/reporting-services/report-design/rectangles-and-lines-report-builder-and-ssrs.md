@@ -1,5 +1,5 @@
 ---
-title: Rechtecke und Linien (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Rechtecke und Linien (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 308091c5aeb62c396c380c89fcf82e04b9658ad9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8d4448fba4e9faf1c3d51bb6233723385d111230
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576659"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082338"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Rechtecke und Linien (Berichts-Generator und SSRS)
   Mit Rechtecken und Linien können visuelle Effekte in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht erzeugt werden. Sie können Anzeigeeigenschaften für diese Berichtselemente im Abschnitt „Rahmen“ auf der Registerkarte „Home“ festlegen. Im Bereich „Eigenschaften“ können weitere Eigenschaften festgelegt werden. Sie können einem Rechteck Funktionen wie eine Hintergrundfarbe oder ein Bild, eine QuickInfo oder ein Lesezeichen hinzufügen.  

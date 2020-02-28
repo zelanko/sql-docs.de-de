@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Verbindungstyp für DMX (SSRS) | Microsoft-Dokumentation
+title: Analysis Services-Verbindungstyp für DMX | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70c8e83ee72386d483f8f17a6be175a102e8580d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 96aa224d6eb9dac6e6f2959010631007ba41a8cd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190923"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081439"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Analysis Services-Verbindungstyp für DMX (SSRS)
   Wenn Sie ein Dataset mithilfe einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquelle erstellen, wird vom Berichts-Designer standardmäßig der MDX-Abfrage-Designer (Multidimensional Expressions, mehrdimensionale Ausdrücke) angezeigt, sobald ein gültiger Cube erkannt wird. Falls kein Cube erkannt wird, jedoch ein Data Mining-Modell verfügbar ist, zeigt der Berichts-Designer den DMX-Abfrage-Designer (Data Mining-Erweiterungen) an. Klicken Sie für einen Wechsel zwischen dem MDX- und dem DMX-Designer auf die Schaltfläche **DMX-Befehlstyp** (![Ändern der Anzeige der DMX-Abfragesprache](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Zur Ansicht für die DXM-Abfragesprache wechseln")) auf der Symbolleiste. Mithilfe des DMX-Abfrage-Designers können Sie interaktiv eine DMX-Abfrage erstellen, die grafische Elemente verwendet. Damit der DMX-Abfrage-Designer verwendet werden kann, muss die angegebene Datenquelle bereits über ein Data Mining-Modell verfügen, das die Daten bereitstellt. Die Abfrageergebnisse werden für die Verwendung im Bericht in ein vereinfachtes Rowset konvertiert.  

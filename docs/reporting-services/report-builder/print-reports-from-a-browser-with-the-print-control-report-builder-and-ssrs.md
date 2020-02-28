@@ -1,5 +1,5 @@
 ---
-title: Drucken von Berichten in einem Browser mit dem Drucksteuerelement (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Drucken von Berichten in einem Browser mit dem Drucksteuerelement (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 535d35ad80f940e7d3ed4a9163b2e65757088e58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc5eabd755bec6c25c16b3974efe267cf3e27c72
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581168"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082542"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Drucken von Berichten in einem Browser mit dem Drucksteuerelement (Berichts-Generator und SSRS)
   Ein Browser ist zwar die am häufigsten verwendete Clientanwendung zum Anzeigen von Berichten, die Druckfunktionen des Browsers sind jedoch für das Drucken von Berichten nicht ideal. Die Druckfunktionen eines Browsers sind zum Drucken von Webseiten konzipiert. In der Regel enthalten die von einem Browser gedruckten Seiten alle visuellen Elemente einer Webseite, dazu Kopf- und Fußzeileninformationen zur Identifikation der Seite oder Website. Beim Drucken über einen Browser wird der Inhalt des aktuellen Fensters gedruckt. Bei mehrseitigen Berichten wird maximal die erste Seite gedruckt, möglicherweise sogar weniger, wenn die Berichtsseite die Dimensionen der gedruckten Seite übersteigt.  

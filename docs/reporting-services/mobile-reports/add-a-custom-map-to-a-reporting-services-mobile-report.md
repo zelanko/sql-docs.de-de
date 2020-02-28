@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen einer benutzerdefinierten Karte zu einem mobilen Reporting Services-Bericht | Microsoft-Dokumentation
-ms.date: 03/01/2017
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9410aac6b74fbb515010517a2fe0667f3c197802
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63141242"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971400"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Hinzufügen einer benutzerdefinierten Karte zu einem mobilen Reporting Services-Bericht
 Benutzerdefinierte Karten erfordern zwei Dateien:  
@@ -22,7 +22,7 @@ Benutzerdefinierte Karten erfordern zwei Dateien:
   
 Informieren Sie sich über [benutzerdefinierte Karten in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).  
   
-Speichern Sie die beiden Dateien im selben Ordner. Die Dateinamen müssen übereinstimmen (z.B. "canada.shp" und "canada.dbf"). Die Metadaten (DBF-Datei) müssen das Feld "NAME" mit dem Namen (Schlüssel) der entsprechenden Shape enthalten, die beim Auffüllen der Karte mit Daten verwendet werden soll.   
+Speichern Sie die beiden Dateien im selben Ordner. Die Dateinamen müssen übereinstimmen (z.B. "canada.shp" und "canada.dbf"). Die erste Spalte der Metadaten (DBF-Datei) wird für den Abgleich mit dem Schlüsselwert des Namens (Schlüssel) der entsprechenden Form verwendet, die beim Auffüllen der Karte mit Daten verwendet werden soll.
   
 ## <a name="load-a-custom-map"></a>Laden einer benutzerdefinierten Karte  
   

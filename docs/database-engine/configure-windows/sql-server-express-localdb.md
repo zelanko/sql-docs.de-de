@@ -14,14 +14,14 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 355cb8b80e4a27a7f58bb42dd37ca9b91059fa25
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73926039"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479725"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -38,17 +38,17 @@ Bei der Installation von LocalDB wird ein minimalen Satz von Dateien kopiert, de
  >[!TIP]
  > Sie können LocalDB auch als Teil von Visual Studio installieren. Wählen Sie während der Installation von Visual Studio die Workload **.NET-Desktopentwicklung** aus, in der SQL Server Express LocalDB enthalten ist.
 
-- Sie haben ein Azure-Konto? [Machen Sie sich mit den ersten Schritten vertraut](https://azure.microsoft.com/services/virtual-machines/sql-server/), und starten Sie einen virtuellen Computer, auf dem [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bereits installiert ist.
+- Sie haben ein Azure-Konto? [Machen Sie sich mit den ersten Schritten vertraut](https://azure.microsoft.com/services/virtual-machines/sql-server/), und starten Sie einen virtuellen Computer, auf dem SQL Server bereits installiert ist.
 
 ## <a name="install-localdb"></a>Installieren von LocalDB
 
-Installieren Sie LocalDB über den Installations-Assistenten oder mithilfe des Programms „SqlLocalDB.msi“. LocalDB ist eine Option bei der Installation von [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
+Installieren Sie LocalDB über den Installations-Assistenten oder mithilfe des Programms „SqlLocalDB.msi“. LocalDB ist eine Option bei der Installation von SQL Server Express LocalDB. 
  
 Wählen Sie während der Installation auf der Seite **Featureauswahl/Freigegebene Features**  „LocalDB“ aus. Es darf nur eine Installation der LocalDB-Binärdateien für eine Hauptversion von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vorhanden sein. Mehrere [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Prozesse können gestartet werden und verwenden dann die gleichen Binärdateien. Für eine Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], die als LocalDB gestartet wurde, gelten die gleichen Einschränkungen wie für [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].
 
 Eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB wird mit dem Hilfsprogramm `SqlLocalDB.exe` verwaltet. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB sollte anstelle des veralteten [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]-Benutzerinstanzfeatures verwendet werden.
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
 Das LocalDB-Setupprogramm installiert mithilfe von `SqlLocalDB.msi` die notwendigen Dateien auf dem Computer. Nach der Installation ist LocalDB eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken erstellt und geöffnet werden können. Die Systemdatenbankdateien für die Datenbank werden im lokalen AppData-Pfad des Benutzers gespeichert, der normalerweise verborgen ist. Beispiel: `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. Benutzerdatenbankdateien werden an dem vom Benutzer angegebenen Speicherort gespeichert, in der Regel im Ordner `C:\Users\<user>\Documents\`.
 
@@ -134,7 +134,7 @@ Informationen zur Problembehandlung für LocalDB finden Sie unter [Problembehand
 
 ## <a name="permissions"></a>Berechtigungen
 
-Eine Instanz von [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] LocalDB ist eine von einem Benutzer zur eigenen Verwendung erstellte Instanz. Jeder Benutzer auf dem Computer kann eine Datenbank mithilfe einer LocalDB-Instanz erstellen, Dateien unter seinem Benutzerprofil speichern und die gemäß den Anmeldeinformationen erlaubten Prozesse ausführen. Der Zugriff auf die LocalDB-Instanz ist standardmäßig auf ihren Besitzer beschränkt. Die in LocalDB enthaltenen Daten sind per Dateisystemzugriff auf die Datenbankdateien geschützt. Wenn die Datenbankdateien eines Benutzers an einem freigegebenen Speicherort gespeichert werden, kann die Datenbank von jedem Benutzer mit Dateisystemzugriff auf diesen Speicherort geöffnet werden, und zwar über die jeweils eigene Instanz von LocalDB. Wenn die Datenbankdateien sich an einem geschützten Speicherort befinden, z. B. dem Datenordner des Benutzers, können nur dieser Benutzer und Administratoren mit Zugriffsrechten für diesen Ordner die Datenbank öffnen. Die LocalDB-Dateien können jeweils nur von einer LocalDB-Instanz geöffnet werden.
+Eine Instanz von SQL Server Express LocalDB ist eine von einem Benutzer zur eigenen Verwendung erstellte Instanz. Jeder Benutzer auf dem Computer kann eine Datenbank mithilfe einer LocalDB-Instanz erstellen, Dateien unter seinem Benutzerprofil speichern und die gemäß den Anmeldeinformationen erlaubten Prozesse ausführen. Der Zugriff auf die LocalDB-Instanz ist standardmäßig auf ihren Besitzer beschränkt. Die in LocalDB enthaltenen Daten sind per Dateisystemzugriff auf die Datenbankdateien geschützt. Wenn die Datenbankdateien eines Benutzers an einem freigegebenen Speicherort gespeichert werden, kann die Datenbank von jedem Benutzer mit Dateisystemzugriff auf diesen Speicherort geöffnet werden, und zwar über die jeweils eigene Instanz von LocalDB. Wenn die Datenbankdateien sich an einem geschützten Speicherort befinden, z. B. dem Datenordner des Benutzers, können nur dieser Benutzer und Administratoren mit Zugriffsrechten für diesen Ordner die Datenbank öffnen. Die LocalDB-Dateien können jeweils nur von einer LocalDB-Instanz geöffnet werden.
 
 >[!NOTE]
 >LocalDB wird immer im Sicherheitskontext des Benutzers ausgeführt, d.h., LocalDB wird nie mit den Anmeldeinformationen der lokalen Gruppe „Administratoren“ ausgeführt. Das bedeutet, dass der Zugriff auf alle von einer LocalDB-Instanz verwendeten Datenbankdateien über das eigene Windows-Konto des Benutzers möglich sein muss, unabhängig von der Mitgliedschaft in der lokalen Gruppe „Administratoren“.

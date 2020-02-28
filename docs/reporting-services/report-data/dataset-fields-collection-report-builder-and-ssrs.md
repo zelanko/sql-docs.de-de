@@ -1,5 +1,5 @@
 ---
-title: Verweise auf Datasetfeldauflistungen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Datasetfeld-Auflistungen (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a893a9a25f4ad19dcc71f538b62110b5838fa3ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b33041f7debc2ad75268973867c72e073459f1de
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573156"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077779"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Datasetfeldauflistung (Berichts-Generator und SSRS)
   Datasetfelder stellen die Daten aus einer Datenverbindung dar. Ein Feld kann entweder numerische oder nicht numerische Daten darstellen. Dazu zählen z. B. Umsätze, der Gesamtumsatz, Kundennamen, Datenbankbezeichner, URLs, Bilder, räumliche Daten und E-Mail-Adressen. Auf der Entwurfsoberfläche werden Felder als Ausdrücke in Berichtselementen wie z. B. Textfelder, Tabellen und Diagramme angezeigt.  

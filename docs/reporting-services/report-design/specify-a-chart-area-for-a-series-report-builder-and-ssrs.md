@@ -1,5 +1,5 @@
 ---
-title: Angeben einer Diagrammfläche für eine Reihe (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Angeben eines Diagrammbereichs für eine Reihe (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ef1e735b69e0547f7a9ca9a9d64bf9423a6068e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 32f16dd226167c180de81a456a6493f1c717b481
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578529"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080953"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Angeben einer Diagrammfläche für eine Reihe (Berichts-Generator und SSRS)
   in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten stellt das *Diagramm* den Container der obersten Ebene dar, der den äußeren Rahmen, den Diagrammtitel und die Legende enthält. Standardmäßig wird im Diagramm eine *Diagrammfläche*angezeigt. Die Diagrammfläche ist auf der Diagrammoberfläche nicht sichtbar. Sie können sich diese jedoch als Container vorstellen, der lediglich die Achsenbezeichnungen, den Achsentitel und den Zeichnungsbereich einer oder mehrerer Reihen umfasst. In der folgenden Abbildung wird das Konzept mehrerer Diagrammflächen in einem einzelnen Diagramm veranschaulicht.  

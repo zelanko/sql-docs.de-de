@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c0f9d73dace4e17d87e1c93da703786fc920b2fb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e32889ceafa78d6c6eac716fca213f17badc5cea
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70176168"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363222"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Verwenden von Azure Active Directory mit dem ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "70176168"
 Der Microsoft ODBC Driver for SQL Server 13.1 oder höher ermöglicht ODBC-Anwendungen das Herstellen einer Verbindung mit einer SQL Azure-Instanz unter Verwendung dieser Optionen: Verbundidentität in Azure Active Directory mit Benutzername/Kennwort, Azure Active Directory-Zugriffstoken, verwaltete Azure Active Directory-Dienstidentität oder integrierte Windows-Authentifizierung (_nur Windows-Treiber_). Bei der ODBC Driver-Version 13.1 funktioniert die Authentifizierung über ein Azure Active Directory-Zugriffstoken _nur unter Windows_. Die ODBC Driver-Version 17 und höhere Versionen unterstützen diese Authentifizierung auf allen Plattformen (Windows, Linux und Mac). In der ODBC Driver-Version 17.1 für Windows wird eine neue interaktive Azure Active Directory-Authentifizierung mit Anmelde-ID eingeführt. In der ODBC Driver-Version 17.3.1.1 wurde eine neue Authentifizierungsmethode mit verwalteten Azure Active Directory-Dienstidentitäten sowohl für systemseitig als auch für benutzerseitig zugewiesene Identitäten hinzugefügt. All diese Methoden werden mithilfe von neuen Schlüsselwörtern für DSN und Verbindungszeichenfolgen sowie von Verbindungsattributen umgesetzt.
 
 > [!NOTE]
-> Der ODBC-Treiber für Linux und macOS unterstützt die Active Directory-Verbunddienste (AD FS) nicht. Wenn Sie die Azure Active Directory-Authentifizierung per Benutzername/Kennwort eines Linux- oder macOS-Clients verwenden und Ihre Active Directory-Konfiguration Verbunddienste umfasst, kann bei der Authentifizierung ein Fehler auftreten.
+> Der ODBC-Treiber unterstützt unter Linux und macOS ausschließlich die Azure Key Vault-Authentifizierung nur direkt für Azure Active Directory. Wenn Sie die Benutzernamen-/Kennwortauthentifizierung von Azure Active Directory über einen Linux- oder macOS-Client verwenden und erforderlich ist, dass sich der Client beim Active Directory-Verbunddienstendpunkt authentifiziert, kann bei der Authentifizierung ein Fehler auftreten.
 
 ## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>Neue und/oder geänderte Schlüsselwörter für DSN und Verbindungszeichenfolgen
 
 Das Schlüsselwort `Authentication` kann beim Herstellen einer Verbindung mit einem DSN oder einer Verbindungszeichenfolge verwendet werden, um den Authentifizierungsmodus zu steuern. Der in der Verbindungszeichenfolge festgelegte Wert überschreibt den Wert im DSN, sofern angegeben. Der _pre-attribute-Wert_ der Einstellung `Authentication` ist der Wert, der aus den Werten für Verbindungszeichenfolge und DSN berechnet wird.
 
-|Name|Werte|Standard|Beschreibung|
+|Name|Werte|Standard|BESCHREIBUNG|
 |-|-|-|-|
 |`Authentication`|(nicht festgelegt), (leere Zeichenfolge), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(nicht festgelegt)|Steuert den Authentifizierungsmodus.<table><tr><th>value<th>Beschreibung<tr><td>(nicht festgelegt)<td>Der Authentifizierungsmodus wird durch andere Schlüsselwörter bestimmt (vorhandene ältere Verbindungsoptionen).<tr><td>(leere Zeichenfolge)<td>(Nur Verbindungszeichenfolge.) Überschreibt und löscht einen im DSN festgelegten `Authentication`-Wert.<tr><td>`SqlPassword`<td>Direkte Authentifizierung bei einer SQL Server-Instanz unter Verwendung eines Benutzernamens und eines Kennworts.<tr><td>`ActiveDirectoryPassword`<td>Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung eines Benutzernamens und eines Kennworts.<tr><td>`ActiveDirectoryIntegrated`<td>_Nur Windows-Treiber_. Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung der integrierten Authentifizierung.<tr><td>`ActiveDirectoryInteractive`<td>_Nur Windows-Treiber_. Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung der interaktiven Authentifizierung.<tr><td>`ActiveDirectoryMsi`<td>Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung der Authentifizierung mit einer verwalteten Dienstidentität. Für die Identität, die dem Benutzer zugewiesen wurde, ist die Benutzer-ID auf die Objekt-ID der Benutzeridentität festgelegt.</table>|
 |`Encrypt`|(nicht festgelegt), `Yes`, `No`|(Siehe Beschreibung)|Steuert die Verschlüsselung für eine Verbindung. Wenn der pre-attribute-Wert der Einstellung `Authentication` im DSN oder der Verbindungszeichenfolge nicht _none_ lautet, ist der Standardwert `Yes`. Andernfalls ist der Standardwert `No`. Wenn das Attribut `SQL_COPT_SS_AUTHENTICATION` den pre-attribute-Wert `Authentication` überschreibt, legen Sie den Wert von „Encryption“ im DSN, in der Verbindungszeichenfolge oder im Verbindungsattribut explizit fest. Der pre-attribute-Wert von „Encryption“ ist `Yes`, wenn der Wert im DSN oder in der Verbindungszeichenfolge auf `Yes` festgelegt ist.|
@@ -40,7 +40,7 @@ Das Schlüsselwort `Authentication` kann beim Herstellen einer Verbindung mit ei
 
 Die folgenden pre-connect-Verbindungsattribute wurden eingeführt oder geändert, um die Azure Active Directory-Authentifizierung zu unterstützen. Wenn ein Verbindungsattribut über ein entsprechendes Schlüsselwort für Verbindungszeichenfolge oder DSN verfügt und festgelegt ist, hat das Verbindungsattribut Vorrang.
 
-|attribute|type|Werte|Standard|Beschreibung|
+|attribute|type|Werte|Standard|BESCHREIBUNG|
 |-|-|-|-|-|
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_AD_MSI`, `SQL_AU_RESET`|(nicht festgelegt)|Siehe Beschreibung des `Authentication`-Schlüsselworts weiter oben. `SQL_AU_NONE` wird bereitgestellt, um einen festgelegten `Authentication`-Wert im DSN und/oder der Verbindungszeichenfolge explizit zu überschreiben. `SQL_AU_RESET` hebt die Festlegung des Attributs auf, falls dieses festgelegt war, sodass der DSN- bzw. Verbindungszeichenfolgenwert Vorrang erhalten kann.|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|Zeiger auf `ACCESSTOKEN` oder NULL|NULL|Wenn der Wert ungleich NULL ist, wird hiermit das zu verwendende Azure AD-Zugriffstoken angegeben. Es ist ein Fehler, ein Zugriffstoken und auch die Schlüsselwörter `UID`, `PWD`, `Trusted_Connection` oder `Authentication` für Verbindungszeichenfolgen oder deren äquivalente Attribute anzugeben. <br> **HINWEIS:** Die ODBC Driver-Version 13.1 unterstützt dies nur unter _Windows_.|

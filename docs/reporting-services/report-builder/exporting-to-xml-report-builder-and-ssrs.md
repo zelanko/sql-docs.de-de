@@ -1,5 +1,5 @@
 ---
-title: Exportieren nach XML (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Exportieren im XML-Format (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52d83c17a1cfe79f8add7f0764216d404c14cfd9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4ac6d962838191365048b3c41d5a8efd367d8355
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580758"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079307"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportieren nach XML (Berichts-Generator und SSRS)
   Die XML-Renderingerweiterung gibt einen paginierten Bericht im XML-Format zurück. Das Schema der Bericht-XML-Ausgabe hängt vom jeweiligen Bericht ab und enthält nur Daten. Layoutinformationen werden von der XML-Renderingerweiterung nicht gerendert, und die Paginierung wird nicht beibehalten. Der von dieser Erweiterung generierte XML-Code kann in eine Datenbank importiert, als XML-Datennachricht verwendet oder an eine benutzerdefinierte Anwendung gesendet werden.  

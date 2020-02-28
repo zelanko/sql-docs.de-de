@@ -3,18 +3,18 @@ title: Installieren unter Windows
 description: Erfahren Sie, wie Sie SQL Server-Machine Learning Services unter Windows installieren. Sie können Machine Learning Services verwenden, um Python- und R-Skripts in einer Datenbank auszuführen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/23/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 26fe15ff88a52b6673d5e7de7dcad3a047fca6ba
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76891726"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507588"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installieren von SQL Server Machine Learning Services (Python und R) unter Windows
 
@@ -40,7 +40,8 @@ Erfahren Sie, wie Sie SQL Server-Machine Learning Services unter Windows install
   + R- und Python-Skripts, die in externen Bibliotheken ausgeführt werden, können nicht von SQL Server verwaltet werden, was zu Ressourcenkonflikten führt.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-+ Machine Learning Services wird standardmäßig auf SQL Server-Big Data-Clustern installiert. Wenn Sie einen Big Data-Cluster verwenden, müssen Sie die Schritte in diesem Artikel nicht ausführen. Weitere Informationen finden Sie unter [Verwenden von Machine Learning Services (Python und R) in Big Data-Clustern](../../big-data-cluster/machine-learning-services.md).
+> [!NOTE]
+> Machine Learning Services wird standardmäßig auf **SQL Server-Big Data-Clustern** installiert. Wenn Sie einen **Big Data-Cluster** verwenden, müssen Sie die Schritte in diesem Artikel nicht ausführen. Weitere Informationen finden Sie unter [Verwenden von Machine Learning Services (Python und R) in Big Data-Clustern](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 
 > [!IMPORTANT]

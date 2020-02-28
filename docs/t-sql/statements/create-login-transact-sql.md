@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f91edadf5e33c0938a6af0be0244fec7635dd36d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7fe202e213f200dcf98a7f0479c29451d36b8a8f
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952353"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255974"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -406,7 +406,7 @@ Legt fest, dass der Anmeldename zur Azure AD-Authentifizierung dient.
 
 PASSWORD **=** '*password*' Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet.
 
-Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens acht Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten.
+Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens 10 Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten.
 
 SID **=** *sid*: Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für SQL Server-Authentifizierungsanmeldungen. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL-Datenbank ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)** ) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 

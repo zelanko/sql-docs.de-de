@@ -1,5 +1,5 @@
 ---
-title: Ändern des Texts eines Legendenelements (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Ändern des Texts eines Legendenelements (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc8b459c3ecfe9c34ff7552acb2565c1b25239a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5f592abd3f634865a432b31d2aba4764187b0d86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581691"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078700"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Diagrammlegende: Ändern von Elementtext (Berichts-Generator)
   Wenn Sie ein Feld im Wertebereich des Diagramms ablegen, wird automatisch ein Legendenelement mit dem Namen dieses Felds erstellt. Alle Legendenelemente im Diagramm sind mit jeweils einer Reihe verknüpft, mit Ausnahme von Formdiagrammen, bei denen die Legende stattdessen mit einzelnen Datenpunkten verknüpft ist.  
@@ -35,7 +35,7 @@ ms.locfileid: "65581691"
   
  In der folgenden Tabelle sind Beispiele für diagrammspezifische Schlüsselwörter aufgelistet, die für die Eigenschaft **Benutzerdefinierter Legendentext** verwendet werden sollen. Weitere Informationen zu Schlüsselwörtern finden Sie unter [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
-|Schlüsselwort|Beschreibung|Beispiel für den in der Legende angezeigten Text|  
+|Schlüsselwort|BESCHREIBUNG|Beispiel für den in der Legende angezeigten Text|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|Zeigt den Prozentsatz des Gesamtwerts mit einer Dezimalstelle an.|85.0%|  
 |`#VALY`|Zeigt den tatsächlichen numerischen Wert des Datenfelds an.|17000|  

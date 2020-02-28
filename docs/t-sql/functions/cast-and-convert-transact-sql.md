@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761645"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440688"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -171,7 +171,7 @@ Wenn *expression* **binary(n)** , **char(n)** , **varbinary(n)** oder **varchar(
 Bei impliziten Konvertierungen ist keine Spezifikation der CAST- oder CONVERT-Funktion erforderlich. Bei expliziten Konvertierungen ist eine Spezifikation der CAST- oder CONVERT-Funktion erforderlich. In der folgenden Abbildung werden alle expliziten und impliziten Datentypkonvertierungen aufgeführt, die für die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-System bereitgestellten Datentypen zulässig sind. Dazu gehören **bigint**, **sql_variant** und **xml**. Es gibt keine implizite Konvertierung bei der Zuweisung vom **sql_variant**-Datentyp, eine implizite Konvertierung zum **sql_variant**-Datentyp findet jedoch statt.
   
 > [!TIP]  
-> Dieses Diagramm ist als herunterladbare PDF-Datei im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35834) verfügbar.  
+> Dieses Diagramm ist als herunterladbare PNG-Datei im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35834) verfügbar.  
   
 ![Konvertierungstabelle für Datentypen](../../t-sql/data-types/media/lrdatahd.png "Konvertierungstabelle für Datentypen")
   
@@ -760,7 +760,7 @@ SELECT @notastring + '1'
 
 In diesem Fall kann die Zeichenfolge `'1'` in den Integerwert 1 konvertiert werden, sodass die SELECT-Anweisung den Wert 2 zurückgibt. Wenn die angegebenen Datentypen Integerwerte sind, führt der Operator + nicht zu einer Zeichenfolgenverkettung, sondern zu einer mathematischen Addition.
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="l-using-cast-and-convert"></a>L. Verwenden von CAST und CONVERT  
 In diesem Beispiele werden die Namen der Produkte abgerufen, deren Listenpreis mit der Ziffer `3` beginnt. Der `ListPrice`-Wert dieser Produkte wird in einen **int**-Wert konvertiert. Verwendet wird die Datenbank `AdventureWorksDW2016`.

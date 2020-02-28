@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d22a5971d2becebec841c5e343e2361cbe2f26a9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6bc3c94923c3ebdb6e2897c4d3aaedbc58621c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66500505"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082582"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich (Berichts-Generator und SSRS)
   Datasetfelder sind die integrierte Auflistung von Feldnamen, die die Daten darstellen, die zurückgegeben werden, wenn eine Datasetabfrage in einer externen Datenquelle ausgeführt wird.  

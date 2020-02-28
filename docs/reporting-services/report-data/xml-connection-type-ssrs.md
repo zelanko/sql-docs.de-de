@@ -1,5 +1,5 @@
 ---
-title: XML-Verbindungstyp (SSRS) | Microsoft-Dokumentation
+title: XML-Verbindungstyp | Microsoft-Dokumentation
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96049f3ec8f0cd79a25a57ab0467dff29053ee27
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190489"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081682"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer XML-Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "XML" basiert. Dieser integrierte Datenquellentyp basiert auf der XML-Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit XML-Dokumenten, Webdiensten oder in die Abfrage eingebetteten XML-Daten herzustellen und Daten abzurufen.  

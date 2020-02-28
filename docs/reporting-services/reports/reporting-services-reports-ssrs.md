@@ -1,5 +1,5 @@
 ---
-title: Reporting Services-Berichte (SSRS) | Microsoft-Dokumentation
+title: Reporting Services-Berichte | Microsoft-Dokumentation
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a0b224d51daad95e4d19cc614d3a964779cd11b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190453"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082430"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services-Berichte (SSRS)
   Paginierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichte sind XML-basierte Berichtsdefinitionen, die Berichtsdaten und Berichtslayoutelemente enthalten. Auf einem Clientdateisystem verfügen Berichtsdefinitionen über die Dateierweiterung ".rdl". Nachdem ein paginierter Bericht veröffentlicht wurde, wird er zu einem auf dem Berichtsserver oder der SharePoint-Website gespeicherten Berichtselement. Paginierte Berichte stellen einen Teil der von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereitgestellten serverbasierten Berichtsplattform dar. Sie haben außerdem die Möglichkeit zum [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  

@@ -1,5 +1,5 @@
 ---
-title: XML-Abfragesyntax für XML-Berichtsdaten (SSRS) | Microsoft-Dokumentation
+title: XML-Abfragesyntax für XML-Berichtsdaten | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574859"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081348"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML-Abfragesyntax für XML-Berichtsdaten (SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Datasets für XML-Datenquellen erstellen. Wenn Sie eine Datenquelle definiert haben, erstellen Sie eine Abfrage für das Dataset. Je nach Typ der XML-Daten, auf die die Datenquelle zeigt, können Sie die Datasetabfrage erstellen, indem Sie eine XML- **Query** oder einen Elementpfad einfügen. Eine XML-**Abfrage** beginnt mit einem **\<Query>** -Tag und enthält Namespaces sowie XML-Elemente, die je nach Datenquelle variieren. Ein Elementpfad ist von Namespaces unabhängig und gibt die Knoten und Knotenattribute in den zugrunde liegenden XML-Daten an, die mit der XPath-ähnlichen Syntax verwendet werden sollen. Weitere Informationen zu Elementpfaden finden Sie unter [Syntax für Elementpfade für XML-Berichtsdaten (SSRS)](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "65574859"
 |XML-Dokument, das Standardwerte verwendet.|*No query*.<br /><br /> Der Elementpfad wird vom XML-Dokument selbst abgeleitet und ist von Namespaces unabhängig.|  
   
 > [!NOTE]  
->  Im ersten Webdienstbeispiel wird der Inhalt des Berichtsservers aufgeführt, der die <xref:ReportService2006.ReportingService2006.ListChildren%2A> -Methode Diese Abfrage können Sie ausführen, indem Sie eine neue Datenquelle erstellen und die Verbindungszeichenfolge auf `https://localhost/reportserver/reportservice2006.asmx` festlegen. Die <xref:ReportService2006.ReportingService2006.ListChildren%2A> -Methode akzeptiert zwei Parameter: **Item** und **Recursive**. Legen Sie den Standardwert für **Item** auf **/** und für **Recursive** auf **1**fest.  
+>  Im ersten Webdienstbeispiel wird der Inhalt des Berichtsservers aufgeführt, der die <xref:ReportService2006.ReportingService2006.ListChildren%2A> -Methode Diese Abfrage können Sie ausführen, indem Sie eine neue Datenquelle erstellen und die Verbindungszeichenfolge auf `https://localhost/reportserver/reportservice2006.asmx` festlegen. Die Methode <xref:ReportService2006.ReportingService2006.ListChildren%2A> akzeptiert zwei Parameter: **Item** und **Recursive**. Legen Sie den Standardwert für **Item** auf **/** und für **Recursive** auf **1**fest.  
   
 ## <a name="specifying-namespaces"></a>Angeben von Namespaces  
  Verwenden Sie das XML- **Query** -Element zum Angeben der in den XML-Daten der Datenquelle verwendeten Namespaces. In der folgenden XML-Abfrage wird der Namespace **sales**verwendet. Die XML- **ElementPath** -Knoten für `sales:LineItems` und `sales:LineItem` verwenden den Namespace **sales**.  

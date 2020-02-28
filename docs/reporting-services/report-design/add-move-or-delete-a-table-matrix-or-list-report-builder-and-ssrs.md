@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen, Verschieben oder Löschen einer Tabelle, Matrix oder Liste (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Hinzufügen, Verschieben oder Löschen einer Tabelle, Matrix oder Liste (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7239efa5a2d64b3751fde34d7cd1e676ea905dd4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 995bfa16d25392e35b9147c021b6bbcaff423a6c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581998"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081611"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Hinzufügen, Verschieben oder Löschen einer Tabelle, Matrix oder Liste (Berichts-Generator und SSRS)
   In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht zeigt ein Datenbereich Daten aus einem Berichtsdataset an. Zu den Datenbereichen gehören Tabelle, Matrix, Liste, Diagramm und Messgerät. Um einen Datenbereich in einen anderen Datenbereich zu schachteln, fügen Sie die Datenbereiche getrennt hinzu, und ziehen Sie dann den Datenbereich, den Sie schachteln möchten, auf den anderen Datenbereich.  

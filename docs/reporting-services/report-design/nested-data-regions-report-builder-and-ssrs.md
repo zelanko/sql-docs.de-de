@@ -1,5 +1,5 @@
 ---
-title: Geschachtelte Datenbereiche (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Geschachtelte Datenbereiche (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fd50e97693c254e3b28c431a6b2961fc15df8585
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d58cdcf55429a76766e3e1810c1d6599aa360e6d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578714"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082602"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Geschachtelte Datenbereiche (Berichts-Generator und SSRS)
   Sie können einen Datenbereich wie ein Diagramm in einen anderen Datenbereich schachteln, z. B. in eine Matrix. Dies geschieht häufig, um Zusammenfassungen von Daten in kompakter Form anzuzeigen oder eine visuelle Darstellung zusammen mit einer Tabellen- oder Matrixdarstellung bereitzustellen.  

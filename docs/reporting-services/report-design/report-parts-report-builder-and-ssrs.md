@@ -1,5 +1,5 @@
 ---
-title: Berichtsteile (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Berichtsteile (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3fbef30f8a5bf5658376a37144c8f770317d6981
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0bd0dd7c77e7ebc2501b507324b02ba1bb364190
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576723"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081108"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Berichtsteile (Berichts-Generator und SSRS)
   Berichtselemente wie Tabellen, Matrizen, Diagramme und Bilder können als *Berichtsteile*veröffentlicht werden. Berichtsteile sind Elemente paginierter Berichte, die separat auf einem Berichtsserver veröffentlicht wurden und in anderen paginierten Berichten wieder verwendet werden können. Berichtsteile besitzen die Dateierweiterung ".rsc".  

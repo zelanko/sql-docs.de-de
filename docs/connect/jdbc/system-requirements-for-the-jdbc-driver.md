@@ -1,7 +1,7 @@
 ---
 title: Systemanforderungen für den JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e9e74d080ed0e7cd91dcde6cbaa2ca2e32f04dc6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027671"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004558"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Systemanforderungen für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,6 +26,8 @@ ms.locfileid: "69027671"
 - Java-Laufzeitumgebung (Java Runtime Environment, JRE)
 
 ## <a name="java-runtime-environment-requirements"></a>Java Runtime Environment-Anforderungen  
+
+ Ab dem Microsoft JDBC-Treiber 8.2 für SQL Server werden das JDK 13.0 (Java Development Kit) und die JRE 13.0 (Java Runtime Environment) unterstützt.
 
  Ab dem Microsoft JDBC-Treiber 7.4 für SQL Server werden das JDK 12.0 (Java Development Kit) und die JRE 12.0 (Java Runtime Environment) unterstützt.
 
@@ -43,6 +45,31 @@ ms.locfileid: "69027671"
   
  Bei der Bereitstellung von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unter Windows- und UNIX-Betriebssystemen müssen Sie entsprechend eines der folgenden Installationspakete verwenden: *sqljdbc_\<version> _enu.exe* oder *sqljdbc_\<version>_enu.tar.gz*. Weitere Informationen zum Bereitstellen des JDBC-Treibers finden Sie unter [Bereitstellen des JDBC-Treibers](../../connect/jdbc/deploying-the-jdbc-driver.md).  
 
+**Microsoft JDBC-Treiber 8.2 für SQL Server:**  
+
+  Der Microsoft JDBC-Treiber 8.2 enthält in jedem Installationspaket drei JAR-Klassenbibliotheken: **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** und **mssql-jdbc-8.2.0.jre13.jar**.
+
+  Der JDBC-Treiber 8.2 ist für die Verwendung und Unterstützung aller wichtigen virtuellen Java-Computer konzipiert. Er wird jedoch nur für OpenJDK 1.8, OpenJDK 11.0, OpenJDK 13.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 und Azul Zulu JRE 13.0. getestet.
+  
+  Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den beiden im Microsoft JDBC-Treiber 8.2 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
+  
+  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|BESCHREIBUNG|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-8.2.0.jre8.jar|4,2|8|Erfordert die JRE-Version 1.8 (Java Runtime Environment). Bei Verwendung von JRE 1.7 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 8.2: Unterstützung für JDK 13, Always Encrypted mit Secure Enclaves und Leistungsverbesserungen für temporale Datentypen. |
+|mssql-jdbc-8.2.0.jre11.jar|4.3|11|Erfordert die JRE 11.0. Bei Verwendung von JRE 10.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 8.2: Unterstützung für JDK 13, Always Encrypted mit Secure Enclaves und Leistungsverbesserungen für temporale Datentypen. |
+|mssql-jdbc-8.2.0.jre13.jar|4.3|13|Erfordert die Java Runtime Environment (JRE) 13.0. Bei Verwendung von JRE 11.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 8.2: Unterstützung für JDK 13, Always Encrypted mit Secure Enclaves und Leistungsverbesserungen für temporale Datentypen. |
+
+
+  Der JDBC-Treiber 8.2 steht auch im zentralen Maven-Repository zur Verfügung und kann einem Maven-Projekt hinzugefügt werden, indem Sie der Datei POM.XML den folgenden Code hinzufügen:  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>8.2.0.jre11</version>
+</dependency>
+```
+
 **Microsoft JDBC-Treiber 7.4 für SQL Server:**  
 
   Der Microsoft JDBC-Treiber 7.4 enthält in jedem Installationspaket drei JAR-Klassenbibliotheken: **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** und **mssql-jdbc-7.4.1.jre12.jar**.
@@ -51,7 +78,7 @@ ms.locfileid: "69027671"
   
   Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den beiden im Microsoft JDBC-Treiber 7.4 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
   
-  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|Beschreibung|  
+  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|BESCHREIBUNG|  
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-7.4.1.jre8.jar|4,2|8|Erfordert die JRE-Version 1.8 (Java Runtime Environment). Bei Verwendung von JRE 1.7 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 7.4: JDK 12-Unterstützung, NTLM-Authentifizierung und useFmtOnly |    
 |mssql-jdbc-7.4.1.jre11.jar|4.3|11|Erfordert die JRE 11.0. Bei Verwendung von JRE 10.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 7.4: JDK 12-Unterstützung, NTLM-Authentifizierung und useFmtOnly |  
@@ -76,7 +103,7 @@ ms.locfileid: "69027671"
   
   Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den beiden im Microsoft JDBC-Treiber 7.2 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
   
-  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|Beschreibung|  
+  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|BESCHREIBUNG|  
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-7.2.2.jre8.jar|4,2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Bei Verwendung von JRE 7.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 7.2: JDK 11-Unterstützung, Authentifizierung mit einer verwalteten Active Directory-Dienstidentität (Active Directory Managed Service Identity, MSI), OSGi-Unterstützung und SQLServerError-APIs |    
 |mssql-jdbc-7.2.2.jre11.jar|4.3|10|Erfordert die JRE 11.0. Bei Verwendung von JRE 10.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 7.2: JDK 11-Unterstützung, Authentifizierung mit einer verwalteten Active Directory-Dienstidentität (Active Directory Managed Service Identity, MSI), OSGi-Unterstützung und SQLServerError-APIs |    
@@ -148,7 +175,7 @@ Der JDBC-Treiber 6.4 steht auch im zentralen Maven-Repository zur Verfügung und
   
  Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den beiden in den Microsoft JDBC-Treibern 6.0 und 4.2 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
   
-|JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|Beschreibung|  
+|JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|BESCHREIBUNG|  
 |---------|-----------------------------|----------------------|-----------------|
 |mssql-jdbc-6.2.2.jre7.jar|4,1|7|Erfordert die Java-Laufzeitumgebung( JRE) Version 7.0. Bei Verwendung von JRE 6.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 6.2: Azure AD-Authentifizierung für Linux, Prinzipal/Kennwort-Methode für Kerberos, automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, eingeschränkte Kerberos-Delegierung, Abfragetimeout, Sockettimeout und Wiederverwendung des Handles für Prepared Statements |  
 |mssql-jdbc-6.2.3.jre8.jar|4,2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Bei Verwendung von JRE 7.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 6.2: Azure AD-Authentifizierung für Linux, Prinzipal/Kennwort-Methode für Kerberos, automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, eingeschränkte Kerberos-Delegierung, Abfragetimeout, Sockettimeout und Wiederverwendung des Handles für Prepared Statements|    
@@ -180,7 +207,7 @@ Der JDBC-Treiber 6.4 steht auch im zentralen Maven-Repository zur Verfügung und
   
  Der JDBC-Treiber 4.1 enthält in jedem Installationspaket eine JAR-Klassenbibliothek: **sqljdbc41.jar**.  
     
-|JAR|BESCHREIBUNG|  
+|JAR|Beschreibung|  
 |---------|-----------------|  
 |sqljdbc41.jar|Die Klassenbibliothek **sqljdbc41.jar** stellt Unterstützung für die JDBC 4.0-API bereit. Sie enthält außerdem alle Funktionen des JDBC 4.0-Treibers sowie die JDBC 4.0-API-Methoden. JDBC 4.1 wird nicht unterstützt (die Ausnahme „SQLFeatureNotSupportedException“ wird ausgelöst).<br /><br /> Die Klassenbibliothek **sqljdbc41.jar** erfordert JRE (Java Runtime Environment) Version 7.0. Bei Verwendung von **sqljdbc41.jar** mit JRE 6.0 und 5.0 wird eine Ausnahme ausgelöst.<br /><br /> 
   
@@ -196,7 +223,7 @@ Der JDBC-Treiber 6.4 steht auch im zentralen Maven-Repository zur Verfügung und
  Der JDBC-Treiber unterstützt Verbindungen mit Azure-SQL-Datenbank und SQL Server. Die Microsoft JDBC-Treiber 4.2 und 4.1 für SQL Server werden beginnend mit SQL Server 2008 unterstützt.
   
 ## <a name="operating-system-requirements"></a>Betriebssystemanforderungen  
- Der JDBC-Treiber ist für die Verwendung mit einem Betriebssystem konzipiert, das die Java Virtual Machine (JVM) unterstützt. Allerdings wurden nur die Betriebssysteme Sun Solaris, SUSE Linux und Windows offiziell getestet.  
+ Der JDBC-Treiber ist für die Verwendung mit einem Betriebssystem konzipiert, das die Java Virtual Machine (JVM) unterstützt. Allerdings wurden nur die Betriebssysteme Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS, MacOS und Windows offiziell getestet.  
   
 ## <a name="supported-languages"></a>Unterstützte Sprachen  
  Der JDBC-Treiber unterstützt alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spaltensortierungen. Weitere Informationen zu den vom JDBC-Treiber unterstützten Sortierungen finden Sie unter [Internationale Features des JDBC-Treibers](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  

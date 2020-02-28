@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Drillthroughaktion für einen Bericht (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Hinzufügen einer Drillthroughaktion für einen Bericht (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cfae70562bf244ba9294f31f1dcba9d85f5699f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8f2737d0d67851fdcce06a926d8ceb71849aea2c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574865"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080742"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Hinzufügen einer Drillthroughaktion für einen Bericht (Berichts-Generator und SSRS)
   Der Bericht, der geöffnet wird, wenn Sie auf den Link im Hauptbericht klicken, wird als *Drillthroughbericht*bezeichnet. Der Drillthrough-Link ermöglicht einen Drillthrough-Vorgang.  

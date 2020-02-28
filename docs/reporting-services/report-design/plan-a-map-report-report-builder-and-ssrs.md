@@ -1,5 +1,5 @@
 ---
-title: Planen eines Kartenberichts (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Planen eines Kartenberichts (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8918251cccca5c04bd42bcb931c4efa5d1f9fd6d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0b90397a154836f41659aba858f55e28502e2741
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576329"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082418"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planen eines Kartenberichts (Berichts-Generator und SSRS)
 Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Verständniszugewinn dienen können. Um Analytische Daten, wie z. B. Gesamtumsätze oder demografische Daten, mit einem geografischen Hintergrund zu präsentieren, können Sie dem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Karte hinzufügen. Eine Karte kann mehrere Ebenen enthalten, wobei jede Ebene Kartenelemente anzeigt, die von einem bestimmten Typ räumlicher Daten definiert werden: Punkte, die Positionen darstellen, Linien, die Routen darstellen, oder Polygone, die Flächen darstellen. Sie können den analytischen Daten auf jeder Ebene Kartenelemente zuordnen.  

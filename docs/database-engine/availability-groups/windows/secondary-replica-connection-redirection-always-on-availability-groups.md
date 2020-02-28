@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235196"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256663"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat (Always On-Verfügbarkeitsgruppen)
 
@@ -46,7 +46,7 @@ Vor [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] leiten der Verfüg
 Damit ein sekundäres Replikat Lese-/Schreibverbindungsanforderungen umleiten kann, müssen folgende Voraussetzungen erfüllt sein:
 * Das sekundäre Replikat muss online sein. 
 * Die Replikatspezifikation `PRIMARY_ROLE` muss `READ_WRITE_ROUTING_URL` enthalten.
-* Die Verbindungszeichenfolge muss `ApplicationIntent` als `ReadWrite` definieren – dies ist die Standardeinstellung.
+* Die Verbindungszeichenfolge muss auf `ReadWrite` festgelegt werden, indem `ApplicationIntent` als `ReadWrite` definiert wird oder indem `ApplicationIntent` nicht festgelegt wird, sodass standardmäßig `ReadWrite` verwendet wird.
 
 ## <a name="set-read_write_routing_url-option"></a>Festlegen der READ_WRITE_ROUTING_URL-Option
 

@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32b0e633aa95ab2d9e4eadea822d10dbfe47d8d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582080"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080647"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
   Eine Karte ist eine Sammlung von Ebenen. Wenn Sie einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Karte hinzufügen, definieren Sie die erste Ebene. Sie können zusätzliche Ebenen mit dem Kartenebenen-Assistenten erstellen.  
@@ -43,7 +43,7 @@ ms.locfileid: "65582080"
   
  In der folgenden Tabelle werden die Symbole für den Bereich **Karte** angezeigt:  
   
-|Symbol|Beschreibung|Verwendung|  
+|Symbol|BESCHREIBUNG|Verwendung|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Kartenebenen-Assistent|Um mit einem Assistenten eine Ebene hinzuzufügen, klicken Sie auf **Assistent für neue Ebenen**.|  
 |![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Ebene hinzufügen|Um manuell eine Ebene hinzuzufügen, klicken Sie auf **Ebene hinzufügen**, und klicken Sie dann auf den Typ der Kartenebene, die Sie hinzufügen möchten.|  

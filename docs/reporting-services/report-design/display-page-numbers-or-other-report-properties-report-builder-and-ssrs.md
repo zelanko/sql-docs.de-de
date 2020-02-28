@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Seitenzahlen oder anderen Berichtseigenschaften (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Anzeigen von Seitenzahlen oder anderen Berichtseigenschaften (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 14496cc4e46118b5421f4d061136f7b1c5b16850
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580882"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080491"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Anzeigen von Seitenzahlen oder anderen Berichtseigenschaften (Berichts-Generator und SSRS)
   Seitenkopf- oder –fußzeilen in dem Bericht können Seitenzahlen, Berichtstitel, Dateinamen und andere Berichtseigenschaften auf einfache Weise hinzugefügt werden. Diese Eigenschaften werden als Felder im Ordner Integrierte Felder im Berichtsdatenbereich gespeichert:  
@@ -60,7 +60,7 @@ ms.locfileid: "65580882"
   
 1.  Klicken Sie mit der rechten Maustaste auf das Textfeld, das [&PageNumber] enthält, und klicken Sie auf **Ausdrücke**.  
   
-     Das Textfeld **Ausdruck festlegen für: Wert** enthält den Ausdruck =Globals!PageNumber.  
+     Das Feld**Ausdruck festlegen für: Wert** enthält den Ausdruck „=Globals!PageNumber“.  
   
 2.  Setzen Sie den Cursor hinter das Gleichheitszeichen (=), und geben Sie **„Seite“ &** ein.  
   

@@ -1,7 +1,7 @@
 ---
 title: Bereitstellen des JDBC-Treibers | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 01/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99ca0fab9a23689ac9c20cad6ebf0d94dd7b2113
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73049834"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004673"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Bereitstellen des JDBC-Treibers
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,15 +30,8 @@ ms.locfileid: "73049834"
 >  Allgemeine Informationen zur Bereitstellung von Java-Anwendungen finden Sie auf der Java-Website.  
   
 ## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Bereitstellen des JDBC-Treibers auf Windows-Systemen  
- Wenn Sie den JDBC-Treiber auf Windows-Betriebssystemen bereitstellen, müssen Sie die ausführbare ZIP-Dateiversion des Installationspakets verwenden, das normalerweise `sqljdbc_<version>_<language>.exe` heißt.  
-  
- Wenn die ausführbare ZIP-Datei automatisch ausgeführt werden soll, müssen Sie in der Befehlszeile oder in einer Batchdatei wie folgt die Befehlszeilenoption `/auto` verwenden:  
-  
- `sqljdbc_<version>_<language>.exe /auto`  
-  
-> [!NOTE]  
->  Bei Angabe der Option `/auto` erfolgt die Installation nicht wirklich automatisch, da auf dem Bildschirm des Benutzers ein WinZip-Dialogfeld angezeigt wird. Es sind jedoch keine Benutzereingaben erforderlich, da das Dialogfeld nach Abschluss der Dekomprimierung automatisch geschlossen wird.  
-  
+ Wenn Sie den JDBC-Treiber auf Windows-Betriebssystemen bereitstellen, müssen Sie die ZIP-Dateiversion des Installationspakets entpacken, das normalerweise `sqljdbc_<version>_<language>.zip` heißt.
+
 ## <a name="deploying-the-driver-on-unix-systems"></a>Bereitstellen des JDBC-Treibers auf UNIX-Systemen 
  Wenn Sie den JDBC-Treiber auf UNIX-Betriebssystemen bereitstellen, müssen Sie die GZIP-Dateiversion des Installationspakets verwenden, das normalerweise `sqljdbc_<version>_<language>.tar.gz` heißt.  
   
@@ -54,7 +47,7 @@ ms.locfileid: "73049834"
 
 ## <a name="legalities-of-driver-redistribution"></a>Rechtliche Informationen zur Weiterverteilung von Treibern
 
-Die Versionen 6.0, 6.2, 6.4 und 7.0 des JDBC-Treibers dürfen weiterverteilt werden. Lesen Sie die Klausel _Verteilbarer Code_ in den jeweiligen Lizenzvereinbarungen.
+Die Versionen 6.0, 6.2, 6.4, 7.0, 7.2, 7.4 und 8.2 des JDBC-Treibers sind weitervertreibbar. Lesen Sie die Klausel _Verteilbarer Code_ in den jeweiligen Lizenzvereinbarungen.
 
 Die JDBC-Treiberversionen 4.x sind veraltet. Die Unterstützung von 4.x wurde vor 2018 eingestellt.
 

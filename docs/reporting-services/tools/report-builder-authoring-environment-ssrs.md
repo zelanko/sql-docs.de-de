@@ -1,5 +1,5 @@
 ---
-title: Berichterstellungsumgebung des Berichts-Generators (SSRS) | Microsoft-Dokumentation
+title: Berichterstellungsumgebung des Berichts-Generators | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 597685b5de75fa78fab0fda4fc3f217462c3d736
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 97a48ed9ee18442f4fc1ea4263282faa3dd1702e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576311"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081910"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Berichterstellungsumgebung des Berichts-Generators (SSRS)
   Der [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Berichts-Generator ist eine eigenständige Berichterstellungsumgebung zum Erstellen von paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten außerhalb von Visual Studio. Beim Entwurf eines Berichts geben Sie an, wo die Daten abgerufen werden sollen, welche Daten abgerufen werden sollen und wie die Daten angezeigt werden sollen. Bei der Ausführung des Berichts übernimmt der Berichtsprozessor alle angegebenen Informationen, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu generieren. Die Installation kann über das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal oder über das Microsoft Download Center erfolgen.  

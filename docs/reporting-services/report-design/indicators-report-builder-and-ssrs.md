@@ -1,5 +1,5 @@
 ---
-title: Indikatoren (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Indikatoren (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 75cda38839aa4ee8a32eb65595b0f8df204983b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c2e62ec26c0019e82b3f0e37dbdd9c1539332212
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580213"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082067"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indikatoren (Berichts-Generator und SSRS)
   In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten sind Indikatoren kleine Messgeräte, die den Zustand eines einzelnen Datenwerts auf einen Blick wiedergeben. Die Symbole zur Darstellung der Indikatoren und ihres Zustands sind einfach und auch in kleineren Größen optisch wirkungsvoll.  

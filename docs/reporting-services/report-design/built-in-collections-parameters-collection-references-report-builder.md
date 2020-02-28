@@ -1,5 +1,5 @@
 ---
-title: Verweise auf Parameterauflistungen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Verweise auf Parameterauflistungen (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e2d6986e4bed1876854c0c78b596746be5dc758
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581793"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082191"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Integrierte Auflistungen: Verweise auf Parameterauflistungen
   Berichtsparameter gehören zu den integrierten Auflistungen, auf die Sie aus einem Ausdruck heraus verweisen können. Indem Sie Parameter in einen Ausdruck einschließen, können Sie die Berichtsdaten und die Darstellung von Berichten anhand der Auswahlen eines Benutzers anpassen. Ausdrücke können für jede Eigenschaft eines Berichtselements oder Textfelds verwendet werden, das die Optionen (*Fx*) oder \<**Ausdruck**> bereitstellt. Ausdrücke werden auch zum Steuern des Berichtsinhalts und der Darstellung eines Berichts auf andere Weise verwendet. Weitere Informationen finden Sie unter [Beispiele für Ausdrücke (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  

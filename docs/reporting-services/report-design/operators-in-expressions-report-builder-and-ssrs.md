@@ -1,5 +1,5 @@
 ---
-title: Operatoren in Ausdrücken (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Operatoren in Ausdrücken (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3edfb8c885fbb8f7436f21271fc73d89599adfc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0cf32f32a375f998522ff689663ec0296a0b5be4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582232"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082587"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatoren in Ausdrücken (Berichts-Generator und SSRS)
   Ein Operator ist ein Symbol, das Aktionen darstellt, die auf einen oder mehrere Begriffe in einem Ausdruck angewendet werden. Die folgenden Operatorkategorien werden in einem Ausdruck unterstützt: Arithmetik, Vergleich, Verkettung, logisch oder bitweise und Bitverschiebung  
@@ -51,7 +51,7 @@ ms.locfileid: "65582232"
 ### <a name="string-concatenation"></a>Verketten von Zeichenfolgen  
  Mit der Zeichenfolgenverkettung wird die zweite Zeichenfolge in einem Ausdruck an die erste Zeichenfolge angefügt. Verwenden Sie für andere Zeichenfolgenoperationen integrierte Funktionen.  
   
-|Operator|Beschreibung|  
+|Operator|BESCHREIBUNG|  
 |--------------|-----------------|  
 |&|Verkettet zwei Zeichenfolgen.|  
 |+|Verkettet zwei Zeichenfolgen.|  
@@ -59,7 +59,7 @@ ms.locfileid: "65582232"
 ### <a name="logical-and-bitwise"></a>Logisch und bitweise  
  Logische und bitweise Operatoren führen logische Manipulationen zwischen zwei ganzzahligen Begriffen in einem Ausdruck aus.  
   
-|Operator|Beschreibung|  
+|Operator|BESCHREIBUNG|  
 |--------------|-----------------|  
 |And|Führt eine logische Konjunktion zweier boolescher Ausdrücke oder eine bitweise Konjunktion zweier numerischer Ausdrücke aus.|  
 |Not|Führt eine logische Negation eines booleschen Ausdrucks oder eine bitweise Negation eines numerischen Ausdrucks aus.|  
@@ -71,7 +71,7 @@ ms.locfileid: "65582232"
 ### <a name="bit-shift"></a>Bitverschiebung  
  Bitweise Operatoren führen Bitmanipulationen zwischen zwei ganzzahligen Begriffen in einem Ausdruck aus.  
   
-|Operator|Beschreibung|  
+|Operator|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<\<|Führt eine arithmetische Verschiebung nach links für ein Bitmuster aus.|  
 |>>|Führt eine arithmetische Verschiebung nach rechts für ein Bitmuster aus.|  

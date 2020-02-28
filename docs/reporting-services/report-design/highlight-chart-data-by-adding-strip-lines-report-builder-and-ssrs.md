@@ -1,5 +1,5 @@
 ---
-title: Hervorheben von Diagrammdaten durch Hinzufügen von Bereichsstreifen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Hervorheben von Diagrammdaten durch Hinzufügen von Bereichsstreifen (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90ed2330ce7b4627798a5e548f2984886b80644d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9fd7c4ee0998f7f0386272130e56bab47303b31c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580255"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082086"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Hervorheben von Diagrammdaten durch Hinzufügen von Bereichsstreifen (Berichts-Generator und SSRS)
   Bereichsstreifen oder Streifen sind horizontale oder vertikale Bereiche, die den Hintergrund des Diagramms in regelmäßigen oder benutzerdefinierten Abständen schattieren. Mithilfe von Bereichsstreifen können Sie Folgendes tun:  

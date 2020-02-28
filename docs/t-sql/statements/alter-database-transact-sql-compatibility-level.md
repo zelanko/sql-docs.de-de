@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909650"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544897"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 
@@ -307,6 +307,7 @@ In diesem Abschnitt werden neue mit Kompatibilitätsgrad 100 eingeführte Verhal
 |Weitere Informationen finden Sie im Beispiel E weiter unten im Abschnitt „Beispiele“.|Siehe Beispiel F im nachfolgenden Abschnitt „Beispiele“.|Niedrig|
 |Die ODBC-Funktion &lt;legacyBold&gt;{fn CONVERT ()}&lt;/legacyBold&gt; verwendet das Standarddatumsformat der Sprache. Bei einigen Sprachen lautet das Standardformat YDM. Dies kann zu Konvertierungsfehlern führen, wenn CONVERT() mit anderen Funktionen kombiniert wird, die ein YMD-Format erwarten, wie z.B. `{fn CURDATE()}`.|Die ODBC-Funktion `{fn CONVERT()}` verwendet für die Konvertierung in die ODBC-Datentypen SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP das sprachenunabhängige XMD-Format im Format 121.|Niedrig|
 |Für systeminterne datetime-Funktionen, wie z.&#160;B. DATEPART, ist es nicht erforderlich, dass Zeichenfolgeneingabewerte gültige datetime-Literale sind. `SELECT DATEPART (year, '2007/05-30')` wird beispielsweise erfolgreich kompiliert.|Für systeminterne datetime-Funktionen wie z.B. `DATEPART` ist es erforderlich, dass Zeichenfolgeneingabewerte gültige datetime-Literale sind. Fehler 241 wird zurückgegeben, wenn ein ungültiges datetime-Literal verwendet wird.|Niedrig|
+|Nachstehende Leerzeichen, die im erstem Eingabeparameter der REPLACE-Funktion angegeben werden, werden gekürzt, wenn der Parameter den Typ „Char“ aufweist. In der folgenden Anweisung wird der Wert 'ABC ' beispielsweise fälschlicherweise als 'ABC' ausgewertet: SELECT '<' + REPLACE(CONVERT(char(6), 'ABC '), ' ', 'L') + '>'.|Nachstehende Leerzeichen werden immer beibehalten. Für Anwendungen, die sich auf das frühere Verhalten der Funktion stützen, verwenden Sie die RTRIM-Funktion bei der Angabe der ersten Eingabeparameter der Funktion. Die folgende Syntax reproduziert das Verhalten von SQL Server 2005: SELECT '<' + REPLACE(RTRIM(CONVERT(char(6), 'ABC ')), ' ', 'L') + '>'.|Niedrig|
 
 ## <a name="reserved-keywords"></a>Reservierte Schlüsselwörter
 

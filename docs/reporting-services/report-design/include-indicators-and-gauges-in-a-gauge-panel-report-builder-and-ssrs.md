@@ -1,5 +1,5 @@
 ---
-title: Aufnehmen von Indikatoren und Messgeräten in einen Messgerätbereich (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Aufnehmen von Indikatoren und Messgeräten in einen Messgerätbereich (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3c53c5c034fcefb1da13c5830679863f9d7d9ae9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0d9f5cf2619ea26c56f6511b829b5da524776602
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580196"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082043"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Aufnehmen von Indikatoren und Messgeräten in einen Messgerätbereich (Berichts-Generator und SSRS)
   Der Messgerätbereich ist der Container der obersten Ebene, der mindestens ein Messgerät und/oder einen Indikator enthält. Indikatoren können in Messgeräte eingebettet werden oder neben ihnen im Messgerätbereich eingefügt werden.  
