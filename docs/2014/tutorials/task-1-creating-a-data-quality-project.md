@@ -10,29 +10,29 @@ ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3724210a1c55a1ad584b5b581de72763fdfd1c0e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65484906"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177300"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>Aufgabe 1: Erstellen eines Data Quality-Projekts
-  In dieser Aufgabe erstellen Sie ein Data Quality-Projekt zur Bereinigung der Lieferantendaten in einer Excel-Datei anhand der Wissensdatenbank "Suppliers", die Sie zuvor in diesem Lernprogramm erstellt haben.  
-  
-1.  Klicken Sie im Bereich **Data Quality-Projekt** auf der Hauptseite auf **Neues Data Quality-Projekt**.  
-  
-     ![Schaltfläche "Neues Data Quality-Projekt" auf der Hauptseite](../../2014/tutorials/media/et-creatingadataqualityproject-01.jpg "Schaltfläche "Neues Data Quality-Projekt" auf der Hauptseite")  
-  
-2.  Geben Sie Bereinigung **Lieferantenliste** als **Namen** für das Projekt ein.  
-  
-3.  Wählen Sie **Suppliers** für das Feld **Wissensdatenbank verwenden** aus. Sie bereinigen eingegebene Lieferantendaten anhand der Wissensdatenbank "Suppliers", die Sie zuvor in diesem Lernprogramm erstellt haben.  
-  
-4.  Stellen Sie sicher, dass die **Bereinigung** als **Aktivität** am unteren Rand des rechten Bereichs ausgewählt ist, und klicken Sie auf **weiter**.  
-  
-     ![Seite "Neues Data Quality-Projekt" – "Bereinigung" ausgewählt](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "Seite "Neues Data Quality-Projekt" – "Bereinigung" ausgewählt")  
-  
-## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 2: Zuordnen von Excel-Spalten zu DQS-Domänen](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
-  
-  
+  In dieser Aufgabe erstellen Sie ein Data Quality-Projekt zur Bereinigung der Lieferantendaten in einer Excel-Datei anhand der Wissensdatenbank "Suppliers", die Sie zuvor in diesem Lernprogramm erstellt haben.
+
+1.  Klicken Sie im Bereich **Data Quality-Projekt** auf der Hauptseite auf **Neues Data Quality-Projekt**.
+
+     ![Schaltfläche "Neues Data Quality-Projekt" auf der Hauptseite](../../2014/tutorials/media/et-creatingadataqualityproject-01.jpg "Schaltfläche "Neues Data Quality-Projekt" auf der Hauptseite")
+
+2.  Geben Sie Bereinigung **Lieferantenliste** als **Namen** für das Projekt ein.
+
+3.  Wählen Sie **Suppliers** für das Feld **Wissensdatenbank verwenden** aus. Sie bereinigen eingegebene Lieferantendaten anhand der Wissensdatenbank "Suppliers", die Sie zuvor in diesem Lernprogramm erstellt haben.
+
+4.  Stellen Sie sicher, dass die **Bereinigung** als **Aktivität** am unteren Rand des rechten Bereichs ausgewählt ist, und klicken Sie auf **weiter**.
+
+     ![Seite "Neues Data Quality-Projekt" – "Bereinigung" ausgewählt](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "Seite "Neues Data Quality-Projekt" – "Bereinigung" ausgewählt")
+
+## <a name="next-step"></a>Nächster Schritt
+ [Aufgabe 2: Zuordnen von Excel-Spalten zu DQS-Domänen](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)
+
+

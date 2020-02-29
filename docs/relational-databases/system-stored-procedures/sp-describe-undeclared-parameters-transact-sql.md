@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1205572235b141709cd463476182d9b405446188
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72908329"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180125"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
 
   Gibt ein Resultset zurück, das Metadaten zu nicht deklarierten Parametern in einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch enthält. Berücksichtigt jeden Parameter, der ** \@im spql** -Batch verwendet wird, aber nicht in ** \@para**Metern deklariert ist. Ein Resultset wird zurückgegeben, das für jeden dieser Parameter eine Zeile mit den abgeleiteten Typinformationen für diesen Parameter enthält. Die Prozedur gibt ein leeres Resultset zurück, wenn der ** \@TQL** -Eingabe Batch über keine Parameter verfügt, ausgenommen der in ** \@para**Metern deklarierten Parameter.  
   
@@ -40,7 +40,10 @@ sp_describe_undeclared_parameters
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
 ```  
-  
+
+> [!Note] 
+> Um diese gespeicherte Prozedur in Azure Synapse Analytics (früher SQL DW) verwenden zu können, muss der Kompatibilitäts Grad einer Datenbank größer als 10 sein. 
+
 ## <a name="arguments"></a>Argumente  
 `[ \@tsql = ] 'Transact-SQL\_batch'`Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (**_n_**)** oder **nvarchar (max)** sein.  
   
@@ -203,7 +206,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **sql_variant**  
   
-    -   **basi**  
+    -   **xml**  
   
     -   System definierte CLR-Typen (**hierarchyid**, **Geometry**, **geography**)  
   

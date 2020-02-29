@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 91a7278230a0e7201e78354a38af58f417ac26ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108163"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180115"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Zeigt die Berechtigungen einer festen Datenbankrolle an. **sp_dbfixedrolepermission** gibt korrekte Informationen in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]zurück. Die Ausgabe spiegelt nicht die Änderungen an der Berechtigungs Hierarchie wider, die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]in implementiert wurden. Weitere Informationen finden Sie unter[Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Zeigt die Berechtigungen einer festen Datenbankrolle an. **sp_dbfixedrolepermission** gibt korrekte Informationen in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]zurück. Die Ausgabe spiegelt nicht die Änderungen an der Berechtigungs Hierarchie wider, die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]in implementiert wurden. Weitere Informationen finden Sie unter [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), die eine Liste fester Daten bankrollen und zugehöriger Berechtigungen anzeigen.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -57,7 +57,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ## <a name="remarks"></a>Bemerkungen  
  Führen Sie **sp_helpdbfixedrole**aus, um eine Liste der fixierten Daten bankrollen anzuzeigen. In der folgenden Tabelle werden die festen Datenbankrollen angezeigt.  
   
-|Fixed-Daten Bank Rolle|BESCHREIBUNG|  
+|Fixed-Daten Bank Rolle|Beschreibung|  
 |-------------------------|-----------------|  
 |**db_owner**|Datenbankbesitzer|  
 |**db_accessadmin**|Administratoren für den Datenbankzugriff|  

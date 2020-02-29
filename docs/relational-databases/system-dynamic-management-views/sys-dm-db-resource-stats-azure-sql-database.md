@@ -1,7 +1,7 @@
 ---
 title: sys. dm_db_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/21/2019
+ms.date: 02/27/2020
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245964"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175147"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,22 +43,22 @@ ms.locfileid: "75245964"
 |max_session_percent|**Dezimalzahl (5, 2)**|Maximale Anzahl gleichzeitiger Sitzungen als Prozentsatz des Limits der Dienst Ebene der Datenbank.|  
 |dtu_limit|**int**|Aktuelle DTU-Einstellung für die Datenbank für diese Datenbank während dieses Intervalls. Bei Datenbanken, die das v-Kern-basierte Modell verwenden, ist diese Spalte NULL.|
 |cpu_limit|**Dezimalzahl (5, 2)**|Anzahl der vkerne für diese Datenbank während dieses Intervalls. Für Datenbanken, die das DTU-basierte Modell verwenden, ist diese Spalte NULL.|
-|avg_instance_cpu_percent|**Dezimalzahl (5, 2)**|Durchschnittliche CPU-Auslastung der Datenbank als Prozentsatz des SQL-DB-Prozesses.|
-|avg_instance_memory_percent|**Dezimalzahl (5, 2)**|Durchschnittliche Daten Bank Speicherauslastung als Prozentsatz des SQL-DB-Prozesses.|
+|avg_instance_cpu_percent|**Dezimalzahl (5, 2)**|Die durchschnittliche CPU-Auslastung für die SQL Server-Instanz, die die Datenbank als Host für die Datenbank verwendet. Umfasst die CPU-Auslastung durch Benutzer-und interne Workloads.|
+|avg_instance_memory_percent|**Dezimalzahl (5, 2)**|Die durchschnittliche Arbeitsspeicher Auslastung für die SQL Server-Instanz, die die Datenbank als Host für die Datenbank verwendet. Beinhaltet die Arbeitsspeicher Auslastung durch Benutzer-und interne Workloads.|
 |avg_login_rate_percent|**Dezimalzahl (5, 2)**|Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
 |replica_role|**int**|Stellt die Rolle des aktuellen Replikats mit 0 als primär, 1 als Sekundär und 2 als Weiterleitung (primärer sekundäres Replikat) dar. Wenn eine Verbindung mit der schreibgeschützten Absicht für alle lesbaren sekundären Replikate besteht, wird "1" angezeigt. Wenn Sie eine Verbindung mit einem georeplikat herstellen, ohne die schreibgeschützte Absicht anzugeben, sollte "2" (Verbindung mit der Weiterleitung) angezeigt werden.|
 |||
   
 > [!TIP]  
->  Weitere Informationen zu diesen Grenzwerten und Dienst Ebenen finden Sie in den Themen [Dienst Ebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) und [dienstebenenfunktionen und-Einschränkungen](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
+> Weitere Informationen zu diesen Grenzwerten und Dienst Ebenen finden Sie in den Themen [Dienst Ebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Manuelles Optimieren der Abfrageleistung in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)und [Ressourcen Limits für SQL-Datenbank und Ressourcen](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)Kontrolle.
   
-## <a name="permissions"></a>Berechtigungen  
+## <a name="permissions"></a>Berechtigungen
  Diese Sicht erfordert die VIEW DATABASE STATE-Berechtigung.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Bemerkungen
  Die von **sys. dm_db_resource_stats** zurückgegebenen Daten werden als Prozentsatz der maximal zulässigen Grenzwerte für die Dienst Ebene/Leistungsstufe ausgedrückt, die Sie ausführen.
  
- Wenn innerhalb der letzten 60 Minuten ein Failover auf einem anderen Server für die Datenbank durchgeführt wurde, gibt die Ansicht nur die Daten für die Zeit zurück, die diese die primäre Datenbank seit dem Failover darstellt.  
+ Wenn für die Datenbank innerhalb der letzten 60 Minuten ein Failover auf einen anderen Server durchgeführt wurde, gibt die Sicht nur Daten für den Zeitraum seit dem Failover zurück.  
   
  Verwenden Sie die **sys. resource_stats** -Katalog Sicht in der **Master** -Datenbank, um eine weniger präzise Ansicht dieser Daten mit längerer Beibehaltungs Dauer zu erhalten. Diese Sicht erfasst die Daten jede 5 Minuten und behält die Verlaufsdaten 14 Tage bei.  Weitere Informationen finden Sie unter [sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
@@ -101,8 +101,4 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [Dienst Ebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Funktionen und Beschränkungen von Dienstebenen](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
-  
-  
+ [sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [Dienst Ebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)

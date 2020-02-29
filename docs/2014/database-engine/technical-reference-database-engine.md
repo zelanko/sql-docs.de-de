@@ -13,41 +13,36 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 67e79a107c47563e507ad27fb0bd14f703206b4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 43cecce8e173c0135a7a37ee5800c7cf658c1f1a
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66088789"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175379"
 ---
 # <a name="technical-reference-database-engine"></a>Technische Referenz (Datenbank-Engine)
-  Suchen Sie nach den Tools, den Sprachen und der Referenzdokumentation für die Verwaltungsprogrammierung für das [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-  
- ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Funktionsreferenz**  
- [Registrierte Server (F1-Hilfe)](../ssms/register-servers/registered-servers-f1-help.md)  
-  
- [SQL Server Management Studio-Hilfemenü](../ssms/menu-help/sql-server-management-studio-menu-help.md)  
-  
- [Visual Database Tools - F1-Hilfe](../ssms/visual-db-tools/visual-database-tools-f1-help.md)  
-  
- ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Eingabe Aufforderungs Hilfsprogramm-Referenz**  
- [bcp (Hilfsprogramm)](../tools/bcp-utility.md)  
-  
- [dta](../tools/dta/dta-utility.md)  
-  
- [SqlLocalDB-Hilfsprogramm](../tools/sqllocaldb-utility.md)  
-  
- [Weitere Informationen...](../tools/command-prompt-utility-reference-database-engine.md)  
-  
- ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Datenbank-Engine PowerShell-Cmdlets**  
- [Invoke-PolicyEvaluation-Cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  
-  
- [Invoke-Sqlcmd-Cmdlet](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)  
-  
- ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Fehler-und Ereignis Referenz**  
- [Datenbank-Engine Ereignisse und Fehler] (.. /relational-databases/errors-events/database-engine-events-and-errors.md0  
-  
- ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") ( **Referenz zu logischen und physischen Operatoren** )  
- [Referenz zu logischen und physischen Showplanoperatoren](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
-  
-  
+  Suchen Sie nach den Tools, den Sprachen und der Referenzdokumentation für die Verwaltungsprogrammierung für das [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+
+ ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Feature Reference** [registrierte Server (F1-Hilfe](../ssms/register-servers/registered-servers-f1-help.md) )
+
+ [SQL Server Management Studio-Hilfemenü](../ssms/menu-help/sql-server-management-studio-menu-help.md)
+
+ [Visual Database Tools - F1-Hilfe](../ssms/visual-db-tools/visual-database-tools-f1-help.md)
+
+ ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Befehlszeilen-Hilfsprogramm Referenz** [bcp-Hilfsprogramm](../tools/bcp-utility.md)
+
+ [dta](../tools/dta/dta-utility.md)
+
+ [SqlLocalDB-Hilfsprogramm](../tools/sqllocaldb-utility.md)
+
+ [Weitere Informationen...](../tools/command-prompt-utility-reference-database-engine.md)
+
+ ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Datenbank-Engine PowerShell-Cmdlets** [aufrufen-PolicyEvaluation-Cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)
+
+ [Invoke-Sqlcmd-Cmdlet](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)
+
+ ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Fehler-und Ereignis Referenz** [Datenbank-Engine-Ereignisse und-Fehler] (.. /relational-databases/errors-events/database-engine-events-and-errors.md0
+
+ ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") " **logische und physische Operatoren** für Showplan" Verweis Referenz [zu logischen und physischen Operatoren](../relational-databases/showplan-logical-and-physical-operators-reference.md)
+
+

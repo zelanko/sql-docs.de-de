@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 35f9cdfcc40d417a6aed19a3abe0e590061b2eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75256012"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180088"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Gibt den Abfrage Ausführungsplan für in-Flight-Anforderungen zurück. Verwenden Sie diese DMV zum Abrufen von Showplan XML mit vorübergehenden Statistiken. 
 
@@ -52,7 +52,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |request_id|**int**|ID der Anforderung. Lässt keine NULL-Werte zu.|
 |sql_handle|**varbinary (64)**|Ein Token, das den Batch oder die gespeicherte Prozedur eindeutig identifiziert, zu der die Abfrage gehört. NULL-Werte sind zulässig.|
 |plan_handle|**varbinary (64)**|Ein Token, das einen Abfrage Ausführungsplan für einen momentan ausgeführten Batch eindeutig identifiziert. NULL-Werte sind zulässig.|
-|query_plan|**basi**|Enthält die Showplan-Lauf Zeit Darstellung des Abfrage Ausführungs Plans, der mit *plan_handle* angegeben wird, die partielle Statistiken enthält. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert. NULL-Werte sind zulässig.|
+|query_plan|**xml**|Enthält die Showplan-Lauf Zeit Darstellung des Abfrage Ausführungs Plans, der mit *plan_handle* angegeben wird, die partielle Statistiken enthält. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert. NULL-Werte sind zulässig.|
 
 ## <a name="remarks"></a>Bemerkungen
 Diese Systemfunktion ist ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 verfügbar. Siehe KB [3190871](https://support.microsoft.com/help/3190871)
@@ -66,7 +66,8 @@ Unter den folgenden Bedingungen wird keine Show Plan Ausgabe in der **query_plan
 Aufgrund einer Einschränkung in der Anzahl der zulässigen, im **XML** -Datentyp zulässigen Werte kann **sys. dm_exec_query_statistics_xml** keine Abfrage Pläne zurückgeben, die 128 Ebenen von geschachtelte-Elementen erfüllen oder überschreiten. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verhinderte diese Bedingung das Zurückgeben des Abfrageplans, wobei der Fehler 6335 generiert wurde. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 und höheren Versionen gibt die **query_plan** -Spalte NULL zurück.   
 
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die `VIEW SERVER STATE`-Berechtigung auf dem Server.  
+Unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung auf dem Server erforderlich.  
+Bei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.
 
 ## <a name="examples"></a>Beispiele  
   
@@ -96,7 +97,7 @@ GO
 ```   
   
 ## <a name="see-also"></a>Weitere Informationen
-  [Laufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
+  [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Datenbank &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 
