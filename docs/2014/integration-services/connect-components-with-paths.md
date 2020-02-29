@@ -14,44 +14,41 @@ ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a75a9717345d1d0dc4c2fe30bf7fc441cb91ddc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e6cc08adc2682b65b1e2de9a2c3fd1d483a33c92
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66060387"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176485"
 ---
 # <a name="connect-components-with-paths"></a>Verbinden von Komponenten mit Pfaden
-  Den Datenfluss in einem Paket erstellen Sie auf der Entwurfsoberfläche der Registerkarte **Datenfluss** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer. Falls ein Datenfluss zwei Datenflusskomponenten enthält, können Sie diese verbinden, indem Sie die Ausgabe einer Quelle oder Transformation mit der Eingabe einer Transformation oder eines Zieles verbinden. Der Konnektor zwischen den beiden Datenflusskomponenten wird als Pfad bezeichnet.  
-  
- Im folgenden Diagramm wird ein einfacher Datenfluss mit einer Quellkomponente, zwei Transformationen, einer Zielkomponente und den Pfaden, die diese verbinden, angezeigt.  
-  
- ![Datenfluss](media/mw-dts-08.gif "Datenfluss")  
-  
- Wenn zwei Komponenten verbunden sind, können Sie die Metadaten der Daten, die über den Pfad verschoben werden, und die Eigenschaften des Pfades in **Datenflusspfad-Editor**anzeigen. Weitere Informationen finden Sie unter [Integration Services Paths](data-flow/integration-services-paths.md).  
-  
- Sie können Pfaden auch Daten-Viewer hinzufügen. Mit einem Daten-Viewer können Sie Daten anzeigen, die zwischen Datenflusskomponenten verschoben werden, wenn das Paket ausgeführt wird.  
-  
-### <a name="to-connect-components-in-a-data-flow"></a>So verbinden Sie Komponenten in einem Datenfluss  
-  
--   [Verbinden von Komponenten in einem Datenfluss](data-flow/connect-components-in-a-data-flow.md)  
-  
-### <a name="to-set-path-properties"></a>So legen Sie Pfadeigenschaften fest  
-  
--   [Festlegen der Eigenschaften eines Pfads mithilfe des Datenflusspfad-Editors](../../2014/integration-services/set-the-properties-of-a-path-by-using-the-data-flow-path-editor.md)  
-  
-### <a name="to-view-path-metadata"></a>So zeigen Sie Pfadmetadaten an  
-  
--   [Anzeigen von Pfadmetadaten im Datenflusspfad-Editor](../../2014/integration-services/view-path-metadata-in-the-data-flow-path-editor.md)  
-  
-### <a name="to-view-path-metadata"></a>So zeigen Sie Pfadmetadaten an  
-  
--   [Hinzufügen eines Daten-Viewers zu einem Datenfluss](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
-  
-## <a name="see-also"></a>Weitere Informationen  
- [Datenflusstask](control-flow/data-flow-task.md)   
- [Datenfluss](data-flow/data-flow.md)   
- [Transformieren von Daten mit Transformationen](data-flow/transformations/transform-data-with-transformations.md)   
- [Fehlerbehandlung in Daten](data-flow/error-handling-in-data.md)  
-  
-  
+  Den Datenfluss in einem Paket erstellen Sie auf der Entwurfsoberfläche der Registerkarte **Datenfluss** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer. Falls ein Datenfluss zwei Datenflusskomponenten enthält, können Sie diese verbinden, indem Sie die Ausgabe einer Quelle oder Transformation mit der Eingabe einer Transformation oder eines Zieles verbinden. Der Konnektor zwischen den beiden Datenflusskomponenten wird als Pfad bezeichnet.
+
+ Im folgenden Diagramm wird ein einfacher Datenfluss mit einer Quellkomponente, zwei Transformationen, einer Zielkomponente und den Pfaden, die diese verbinden, angezeigt.
+
+ ![Datenfluss](media/mw-dts-08.gif "Datenfluss")
+
+ Wenn zwei Komponenten verbunden sind, können Sie die Metadaten der Daten, die über den Pfad verschoben werden, und die Eigenschaften des Pfades in **Datenflusspfad-Editor**anzeigen. Weitere Informationen finden Sie unter [Integration Services Paths](data-flow/integration-services-paths.md).
+
+ Sie können Pfaden auch Daten-Viewer hinzufügen. Mit einem Daten-Viewer können Sie Daten anzeigen, die zwischen Datenflusskomponenten verschoben werden, wenn das Paket ausgeführt wird.
+
+### <a name="to-connect-components-in-a-data-flow"></a>So verbinden Sie Komponenten in einem Datenfluss
+
+-   [Verbinden von Komponenten in einem Datenfluss](data-flow/connect-components-in-a-data-flow.md)
+
+### <a name="to-set-path-properties"></a>So legen Sie Pfadeigenschaften fest
+
+-   [Festlegen der Eigenschaften eines Pfads mithilfe des Datenflusspfad-Editors](../../2014/integration-services/set-the-properties-of-a-path-by-using-the-data-flow-path-editor.md)
+
+### <a name="to-view-path-metadata"></a>So zeigen Sie Pfadmetadaten an
+
+-   [Anzeigen von Pfadmetadaten im Datenflusspfad-Editor](../../2014/integration-services/view-path-metadata-in-the-data-flow-path-editor.md)
+
+### <a name="to-view-path-metadata"></a>So zeigen Sie Pfadmetadaten an
+
+-   [Hinzufügen eines Daten-Viewers zu einem Datenfluss](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)
+
+## <a name="see-also"></a>Weitere Informationen
+ Datenfluss [Task](control-flow/data-flow-task.md) [-Datenfluss](data-flow/data-flow.md) [Transformieren von Daten mit Transformationen](data-flow/transformations/transform-data-with-transformations.md) [Fehlerbehandlung in Daten](data-flow/error-handling-in-data.md)
+
+
