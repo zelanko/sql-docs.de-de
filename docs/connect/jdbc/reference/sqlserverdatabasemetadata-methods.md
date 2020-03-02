@@ -1,5 +1,5 @@
 ---
-title: SQLServerDatabaseMetaData Methods | Microsoft Docs
+title: SQLServerDatabaseMetaData-Methoden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,6 +20,6 @@ ms.locfileid: "67971532"
 # <a name="sqlserverdatabasemetadata-methods"></a>SQLServerDatabaseMetaData-Methoden
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  For information about the members of [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md), see [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md).  
+  Informationen zu den Members [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) finden Sie unter [SQLServerDatabaseMetaDataj-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sort and Group Query Results
+title: Sortieren und Gruppieren von Abfrageergebnissen
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql

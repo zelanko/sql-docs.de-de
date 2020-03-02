@@ -21,13 +21,13 @@ ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571453"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Abwärtskompatibilität von Reporting Services
-Learn about changes in behavior of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Hier werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt werden.
+Erfahren Sie mehr zu Verhaltensänderungen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Hier werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt werden.
 
 Es werden außerdem grundlegende Änderungen am Produkt beschrieben, die bekanntermaßen eine benutzerdefinierte Anwendung unterbrechen, die die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionalität enthält.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Discontinued functionality to SQL Server Reporting Services in SQL Server 2016 (Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQL Server 2016)](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|Beschreibt Funktionen, die in früheren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vorhanden waren, jedoch in späteren Versionen entfernt wurden.|  
 |[Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](deprecated-features-in-sql-server-reporting-services-ssrs.md)|Beschreibt Funktionen, die in dieser Version von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aus Gründen der Abwärtskompatibilität beibehalten wurden, die aber in einer zukünftigen Version von SQL Server entfernt werden.|  
