@@ -1,7 +1,7 @@
 ---
 title: DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Dokumentation
 ms.custom: ''
-ms.date: 07/16/2017
+ms.date: 02/25/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7eee258c997cf6b0aab59b4de158f2e3f35484f4
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68039131"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608424"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt alle nicht verwendeten Cacheeinträge aus allen Caches frei. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] löscht nicht verwendete Cacheeinträge aktiv im Hintergrund und macht so neuen Speicherplatz für aktuelle Einträge verfügbar. Sie können mit diesem Befehl jedoch nicht verwendete Einträge aus jedem Cache oder aus einem angegebenen Cache für den Resource Governor-Pool löschen.
   
@@ -62,7 +62,7 @@ Alle Informationsmeldungen werden unterdrückt.
 Durch das Ausführen von DBCC FREESYSTEMCACHE wird der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende Informationsmeldung: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den %2!s!-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von DBCC FREEPROCCACHE- oder DBCC FREESYSTEMCACHE-Vorgängen ausgelöst wurden.“ Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 ## <a name="result-sets"></a>Resultsets  
-DBCC FREESYSTEMCACHE gibt Folgendes zurück: „Die DBCC-Ausführung wurde abgeschlossen. Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator."
+DBCC FREESYSTEMCACHE gibt Folgendes zurück: "Die DBCC-Ausführung wurde abgeschlossen. Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator."
   
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert die ALTER SERVER STATE-Berechtigung auf dem Server.
