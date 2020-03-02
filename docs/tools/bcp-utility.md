@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8aefcae2c8e9c449061b18b4287968120dbae852
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544920"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634849"
 ---
 # <a name="bcp-utility"></a>Hilfsprogramms bcp
 
@@ -228,13 +228,13 @@ Bewirkt, dass der Wert, der an die `bcp`-Option `-S` übergeben wird, als Datenq
 
     Im folgenden Beispiel werden Daten mithilfe von Azure AD-Benutzername und -Kennwort exportiert, wobei Benutzer und Kennwort AAD-Anmeldeinformationen sind. Im Beispiel wird die Tabelle `bcptest` aus der Datenbank `testdb` vom Azure-Server `aadserver.database.windows.net` exportiert, und die Daten werden in der Datei `c:\last\data1.dat` gespeichert:
 
-    ```cmd
+    ```console
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     Im folgenden Beispiel werden Daten mithilfe von Azure AD-Benutzername und -Kennwort importiert, wobei Benutzer und Kennwort AAD-Anmeldeinformationen sind. Im Beispiel werden Daten aus der Datei `c:\last\data1.dat` in die Tabelle `bcptest` für die Datenbank `testdb` auf dem Azure-Server `aadserver.database.windows.net` importiert:
 
-    ```cmd
+    ```console
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +244,13 @@ Bewirkt, dass der Wert, der an die `bcp`-Option `-S` übergeben wird, als Datenq
 
     Im folgenden Beispiel werden Daten mithilfe des integrierten Azure AD-Kontos exportiert. Im Beispiel wird die Tabelle `bcptest` aus der Datenbank `testdb` vom Azure-Server `aadserver.database.windows.net` exportiert, und die Daten werden in der Datei `c:\last\data2.dat` gespeichert:
 
-    ```cmd
+    ```console
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     Im folgenden Beispiel werden Daten mithilfe der integrierten Azure AD-Authentifizierung importiert. Im Beispiel werden Daten aus der Datei `c:\last\data2.txt` in die Tabelle `bcptest` für die Datenbank `testdb` auf dem Azure-Server `aadserver.database.windows.net` importiert:
 
-    ```cmd
+    ```console
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -266,13 +266,13 @@ Bewirkt, dass der Wert, der an die `bcp`-Option `-S` übergeben wird, als Datenq
 
    Im interaktiven Modus muss ein Kennwort manuell eingegeben werden. Bei Konten mit mehrstufiger Authentifizierung müssen Sie Ihre konfigurierte MFA-Authentifizierungsmethode vervollständigen.
 
-   ```cmd
+   ```console
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    Für den Fall, dass ein Azure AD-Benutzer auch ein Benutzer eines Domänenverbunds ist und ein Windows-Konto verwendet, enthält der in der Befehlszeile erforderliche Benutzername dessen Domänenkonto (Beispiel joe@contoso.com unten):
 
-   ```cmd
+   ```console
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +448,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
     
     Geben Sie Folgendes in die Eingabeaufforderung ein, um zu ermitteln, wo sämtliche Versionen des bcp-Hilfsprogramms installiert sind:
     
-    ```cmd
+    ```console
     where bcp.exe
     ```
 
@@ -604,7 +604,7 @@ END
 
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```cmd
+```console
 bcp -v
 ```
   
@@ -616,7 +616,7 @@ In den folgenden Beispielen wird die Verwendung der Option **out** in der Tabell
 
   Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-  ```cmd
+  ```console
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +638,7 @@ Im folgenden Beispiel wird die Verwendung der Option **out** in der `WideWorldIm
 
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein: \(Das System fordert Sie zur Eingabe des Kennworts auf.\)
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +650,7 @@ Die folgenden Beispiele veranschaulichen die Option **in** für die `WideWorldIm
 
   Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-  ```cmd
+  ```console
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +658,7 @@ Die folgenden Beispiele veranschaulichen die Option **in** für die `WideWorldIm
   
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +670,7 @@ Zum Kopieren einer bestimmten Spalte können Sie die Option **queryout** verwend
   
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```cmd
+```console
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +680,7 @@ Zum Kopieren einer bestimmten Zeile können Sie die Option **queryout** verwende
   
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```cmd
+```console
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +690,7 @@ Verwenden Sie die Option **queryout** zum Kopieren des Resultsets einer Transact
 
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```cmd
+```console
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +700,7 @@ In dem folgenden Beispiel werden drei verschiedene Formatdateien für die `Wareh
 
 Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 
-```cmd
+```console
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +722,7 @@ Wenn Sie eine zuvor erstellte Formatdatei zum Importieren von Daten in eine [!IN
 
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 
