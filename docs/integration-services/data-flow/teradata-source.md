@@ -43,7 +43,7 @@ Die benutzerdefinierten Eigenschaften der Teradata-Quelle sind in der folgenden 
 |Eigenschaftenname|Datentyp|Beschreibung|
 |:-|:-|:-|
 |AccessMode|Ganze Zahl (Enumeration)|Der zum Zugreifen auf die Datenbank verwendete Modus. Die möglichen Werte sind *Tabellenname* und *SQL-Befehl*. Der Standardwert ist *Tabellenname*.|
-|BlockSize|Integer|Die Blockgröße in Bytes, die beim Zurückgeben von Daten an den Client verwendet wird. Der Standardwert ist 1.048.576 MB (1 MB). Der Mindestwert ist 256 Bytes. Der Höchstwert ist 16.7751.68 Bytes.<br> Diese Eigenschaft befindet sich im Bereich **Erweiterter Editor**.|
+|BlockSize|Integer|Die Blockgröße in Bytes, die beim Zurückgeben von Daten an den Client verwendet wird. Der Standardwert ist 1.048.576 (1 MB). Der Mindestwert ist 256 Bytes. Der Höchstwert ist 16.775.168 Bytes.<br> Diese Eigenschaft befindet sich im Bereich **Erweiterter Editor**.|
 |BufferMaxSize|Integer|Die maximale Gesamtgröße des von der GetBuffer-Funktion zurückgegebenen Datenpuffers. Diese Größe muss ausreichend sein, um mindestens eine Datenzeile, einschließlich Zeilenkopf, eigentlicher Datenzeile und Puffernachspann, aufzunehmen. Die standardmäßige maximale Gesamtgröße des Datenpuffers ist 16.775.552 Bytes. <br>Weitere Informationen finden Sie unter [Exportieren von Daten aus einer Teradata-Datenbank mithilfe von GetBuffer](https://docs.teradata.com/reader/TvVKKmxaBAoyETJZD8zz_g/oaxiwNJmnCa6UctY4k498w).|
 |BufferMode|Boolean|Der Standardwert ist *True*. Wenn die PutBuffer-Funktion verwendet wird, muss der Wert *True* sein. Diese Eigenschaft befindet sich im Bereich **Erweiterter Editor**.|
 |DataEncryption|Boolean|Der Standardwert ist *False*. Wenn der Wert *True* ist, wird die vollständige Sicherheitsverschlüsselung verwendet.|
@@ -111,7 +111,7 @@ Wählen Sie im Bereich **Verbindungs-Manager** die Instanz des Teradata-Verbindu
 
 **Vorschau**
 
-* Wählen **Vorschau** aus, um (max.) die ersten 200 Zeilen der Daten anzuzeigen, die aus der ausgewählten Tabelle bzw. Sicht extrahiert wurden.
+* Wählen Sie **Vorschau** aus, um (max.) die ersten 200 Zeilen der Daten anzuzeigen, die aus der ausgewählten Tabelle bzw. Sicht extrahiert wurden.
 
 ## <a name="the-columns-pane"></a>Der Bereich „Spalten“
 
