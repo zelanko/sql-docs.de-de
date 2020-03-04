@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0f11b1e7300027d024b5961f73ffa71c7b07a2bd
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909308"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608494"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72909308"
 ##  <a name="Enabling"></a> Aktivieren des Abfragespeichers  
  Der Abfragespeicher ist bei neuen Datenbanken standardmäßig nicht aktiviert.  
   
-#### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Verwenden der Seite „Abfragespeicher“ in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+#### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Verwenden der Seite „Abfragespeicher“ in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf eine Datenbank und anschließend auf **Eigenschaften**.  
   
@@ -595,7 +595,7 @@ Durch die Verwendung von **sp_query_store_force_plan** können Sie ausschließli
 
 #### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Erzwingen eines Plans für schnelle Vorwärts- und statische Cursor
   
-Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 unterstützt der Abfragespeicher die Möglichkeit, Abfrageausführungspläne für schnelle Vorwärtscursor und statische Cursor ([!INCLUDE[tsql](../../includes/tsql-md.md)] und API) zu erzwingen. Das Erzwingen wird durch `sp_query_store_force_plan` oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Abfragespeicherberichte unterstützt.
+Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und Azure SQL-Datenbank (alle Bereitstellungsmodelle) unterstützt der Abfragespeicher die Möglichkeit, Abfrageausführungspläne für schnelle Vorwärtscursor und statische Cursor ([!INCLUDE[tsql](../../includes/tsql-md.md)] und API) zu erzwingen. Das Erzwingen wird durch `sp_query_store_force_plan` oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Abfragespeicherberichte unterstützt.
 
 ### <a name="remove-plan-forcing-for-a-query"></a>Aufheben der Erzwingung eines Plans für eine Abfrage
 

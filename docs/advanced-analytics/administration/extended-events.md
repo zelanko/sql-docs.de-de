@@ -3,18 +3,18 @@ title: Überwachen von Skripts mit erweiterten Ereignissen
 description: Erfahren Sie, wie Sie erweiterte Ereignisse verwenden, um Vorgänge im Zusammenhang mit SQL Server Machine Learning Services, dem SQL Server-Launchpad und externen Skripts für Python- oder R-Aufträge zu überwachen und Probleme zu beheben.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2019
+ms.date: 02/28/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 272e92bed10261b5701e2dcb4d35092ad11d59c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fe8601801a92b28022a83b54ea06ec5836c6c013
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73727736"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200981"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Überwachen von Python- und R-Skripts mit erweiterten Ereignissen in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Weitere Informationen zum Erfassen dieser Ereignisse finden Sie im Abschnitt [Sa
 
 ## <a name="table-of-extended-events"></a>Tabelle erweiterter Ereignisse
 
-|Ereignis|Beschreibung|Notizen|  
+|Ereignis|BESCHREIBUNG|Notizen|  
 |-----------|-----------------|---------|  
 |connection_accept|Tritt auf, wenn eine neue Verbindung akzeptiert wird. Dieses Ereignis dient dazu, alle Verbindungsversuche zu protokollieren.||  
 |failed_launching|Fehler beim Starten.|Gibt einen Fehler an.|  
@@ -87,13 +87,13 @@ SQL Server Machine Learning Services startet einige Dienste, die außerhalb des 
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-    Legen Sie die *.config*-Datei im Binn-Verzeichnis für die SQL Server-Instanz ab, um Ereignisse zu erfassen, die im Zusammenhang mit Launchpad auftreten. In einer Standardinstallation wäre dies:
+    Legen Sie die *.xml*-Datei im Binn-Verzeichnis für die SQL Server-Instanz ab, um Ereignisse zu erfassen, die im Zusammenhang mit dem Launchpad auftreten. In einer Standardinstallation wäre dies:
 
     `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
 + **BXLServer** ist der Satellitenprozess, der die Erweiterbarkeit von SQL auf externe Skriptsprachen wie R oder Python unterstützt. Für jede externe Sprachinstanz wird eine separate Instanz von BXLServer gestartet.
   
-    Sie können Ereignisse erfassen, die im Zusammenhang mit BXLServer auftreten, indem Sie die *.config*-Datei im Installationsverzeichnis von R oder Python ablegen. In einer Standardinstallation wäre dies:
+    Sie können Ereignisse erfassen, die im Zusammenhang mit BXLServer auftreten, indem Sie die *.xml*-Datei im Installationsverzeichnis von R oder Python ablegen. In einer Standardinstallation wäre dies:
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
@@ -145,7 +145,7 @@ Das folgende Beispiel zeigt die Definition einer Ereignisnachverfolgung für den
 </event_sessions>  
 ```
 
-+ Platzieren Sie die *.config*-Datei im Binn-Verzeichnis für die SQL Server-Instanz.
++ Legen Sie die *.xml*-Datei im Binn-Verzeichnis für die SQL Server-Instanz ab.
 + Diese Datei muss den Namen `Launchpad.xevents.xml` haben.
 
 ### <a name="example-capturing-bxlserver-events"></a>Beispiel: Erfassen von BXLServer-Ereignissen  
@@ -175,7 +175,7 @@ Das folgende Beispiel zeigt die Definition einer Ereignisablaufverfolgung für d
 </event_sessions>  
 ```
 
-+ Legen Sie die *.config*-Datei im gleichen Verzeichnis ab wie die ausführbare BXLServer-Datei.
++ Legen Sie die *.xml*-Datei im selben Verzeichnis ab wie die ausführbare BXLServer-Datei.
 + Diese Datei muss den Namen `bxlserver.xevents.xml` haben.
 
 ## <a name="next-steps"></a>Nächste Schritte

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77466171"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903870"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,22 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist
 - Arithmetische Ausdrücke wie 1+1, 5/3*2, die nur Konstanten enthalten.
 - Logische Ausdrücke wie 1=1 und 1>2 AND 3>4, die nur Konstanten enthalten.
 - Integrierte Funktionen, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zur Kompilierzeit reduziert werden können, einschließlich `CAST` und `CONVERT`. Im Allgemeinen gilt eine systeminterne Funktion als zur Kompilierzeit reduzierbar, wenn sie ausschließlich aus Eingaben besteht – ohne weitere kontextbezogene Informationen wie SET-Optionen, Spracheinstellungen, Datenbankoptionen oder Verschlüsselungsschlüssel. Nicht deterministische Funktionen sind nicht zur Kompilierzeit reduzierbar. Deterministische integrierte Funktionen sind bis auf einige Ausnahmen zur Kompilierzeit reduzierbar.
+- Deterministische Methoden von CLR-benutzerdefinierten Typen sowie deterministische CLR-benutzerdefinierte Skalarwertfunktionen (beginnend mit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Weitere Informationen finden Sie unter [Reduktion konstanter Ausdrücke für benutzerdefinierte CLR-Funktionen und -Methoden](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE] 
-> Eine Ausnahme sind große Objekte. Wenn der Ausgabetyp des Reduktionsprozesses ein großes Objekt (text, image, nvarchar(max), varchar(max) oder varbinary(max)) ist, reduziert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] den Ausdruck nicht zur Kompilierzeit.
+> Eine Ausnahme sind große Objekte. Wenn der Ausgabetyp des Reduktionsprozesses ein großes Objekt (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) oder XML) ist, reduziert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] den Ausdruck nicht zur Kompilierzeit.
 
 #### <a name="nonfoldable-expressions"></a>Nicht zur Kompilierzeit reduzierbare Ausdrücke
 Alle anderen Ausdruckstypen können nicht zur Kompilierzeit reduziert werden. Dabei handelt es sich insbesondere um folgende Ausdrücke:
 - Nicht konstante Ausdrücke, wie z. B. Ausdrücke, deren Ergebnisse vom Wert einer Spalte abhängig sind.
 - Ausdrücke, deren Ergebnisse von einer lokalen Variable bzw. einem lokalen Parameter abhängig sind, wie z. B. @x.
 - Nicht deterministische Funktionen.
-- Benutzerdefinierte Funktionen ([!INCLUDE[tsql](../includes/tsql-md.md)] und CLR).
+- Benutzerdefinierte [!INCLUDE[tsql](../includes/tsql-md.md)]-Funktionen<sup>1</sup>
 - Ausdrücke, deren Ergebnisse von Spracheinstellungen abhängig sind.
 - Ausdrücke, deren Ergebnisse von SET-Optionen abhängig sind.
 - Ausdrücke, deren Ergebnisse von Serverkonfigurationsoptionen abhängig sind.
+
+<sup>1</sup> Vor [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] konnten deterministische CLR-benutzerdefinierte Skalarwertfunktionen und Methoden CLR-benutzerdefinierter Typen nicht reduziert werden. 
 
 #### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>Beispiele für zur Kompilierzeit reduzierbare und nicht zur Kompilierzeit reduzierbare konstante Ausdrücke
 Betrachten Sie die folgende Abfrage:
@@ -912,21 +915,27 @@ Während der Abfrageoptimierung sucht [!INCLUDE[ssNoVersion](../includes/ssnover
 > Bestimmte Konstrukte verhindern, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Parallelität für den gesamten Ausführungsplan oder Teile davon nutzen kann.
 
 Zu den Konstrukten, die Parallelität verhindern, gehören:
->
-> - **Benutzerdefinierte Skalarfunktionen**    
->   Weitere Informationen zu benutzerdefinierten Skalarfunktionen finden Sie unter [Erstellen benutzerdefinierter Funktionen](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Ab [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] bietet die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die Möglichkeit, ein Inlining dieser Funktionen vorzunehmen und die Verwendung von Parallelität während der Abfrageverarbeitung zu entsperren. Weitere Informationen zum Inlining benutzerdefinierter Skalarfunktionen finden Sie unter [Intelligente Abfrageverarbeitung in SQL-Datenbanken](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
-> - **Remote Query**    
->   Weitere Informationen zu Remote Query finden Sie unter [Referenz zu logischen und physischen Showplanoperatoren](../relational-databases/showplan-logical-and-physical-operators-reference.md).
-> - **Dynamische Cursor**    
->   Weitere Informationen zu Cursorn finden Sie unter [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
-> - **Rekursive Abfragen**    
->   Weitere Informationen zur Rekursion finden Sie unter [Richtlinien zum Definieren und Verwenden rekursiver allgemeiner Tabellenausdrücke](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) und [Rekursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
-> - **Tabellenwertfunktionen**    
->   Weitere Informationen zu Tabellenwertfunktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen (Datenbank-Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
-> - **TOP-Schlüsselwort**    
->   Weitere Informationen finden Sie unter [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
+-   **Benutzerdefinierte Skalarfunktionen**        
+    Weitere Informationen zu benutzerdefinierten Skalarfunktionen finden Sie unter [Erstellen benutzerdefinierter Funktionen](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Ab [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] bietet die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die Möglichkeit, ein Inlining dieser Funktionen vorzunehmen und die Verwendung von Parallelität während der Abfrageverarbeitung zu entsperren. Weitere Informationen zum Inlining benutzerdefinierter Skalarfunktionen finden Sie unter [Intelligente Abfrageverarbeitung in SQL-Datenbanken](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+    
+-   **Remote Query**        
+    Weitere Informationen zu Remote Query finden Sie unter [Referenz zu logischen und physischen Showplanoperatoren](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+    
+-   **Dynamische Cursor**        
+    Weitere Informationen zu Cursorn finden Sie unter [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
+    
+-   **Rekursive Abfragen**        
+    Weitere Informationen zur Rekursion finden Sie unter [Richtlinien zum Definieren und Verwenden rekursiver allgemeiner Tabellenausdrücke](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) und [Rekursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
 
-Nach dem Einfügen eines Verteilungsoperators ist das Ergebnis ein Plan für eine parallele Abfrageausführung. Ein Plan für die parallele Abfrageausführung kann mehrere Arbeitsthreads verwenden. Ein serieller Ausführungsplan, der von einer nicht parallelen Abfrage verwendet wird, verwendet nur einen Arbeitsthread bei seiner Ausführung. Die tatsächliche Anzahl der Arbeitsthreads, die von einer parallelen Abfrage verwendet werden, wird während der Initialisierung der Abfrageplanausführung bestimmt und durch die Komplexität des Plans und den Grad der Parallelität bestimmt. Der Grad der Parallelität bestimmt die maximal verwendete Anzahl von CPUs; er bezieht sich nicht auf die Anzahl der verwendeten Arbeitsthreads. Der Wert für den Grad der Parallelität wird auf Serverebene festgelegt und kann mithilfe der gespeicherten Systemprozedur „sp_configure“ geändert werden. Sie können diesen Wert für einzelne Abfrage- oder Indexanweisungen überschreiben, indem Sie den `MAXDOP` -Abfragehinweis oder die `MAXDOP` -Indexoption angeben. 
+-   **Tabellenwertfunktionen**        
+    Weitere Informationen zu Tabellenwertfunktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen (Datenbank-Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+    
+-   **TOP-Schlüsselwort**        
+    Weitere Informationen finden Sie unter [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
+
+Nach dem Einfügen eines Verteilungsoperators ist das Ergebnis ein Plan für eine parallele Abfrageausführung. Ein Plan für die parallele Abfrageausführung kann mehrere Arbeitsthreads verwenden. Ein serieller Ausführungsplan, der von einer nicht parallelen (seriellen) Abfrage verwendet wird, verwendet nur einen Arbeitsthread bei seiner Ausführung. Die tatsächliche Anzahl der Arbeitsthreads, die von einer parallelen Abfrage verwendet werden, wird während der Initialisierung der Abfrageplanausführung bestimmt und durch die Komplexität des Plans und den Grad der Parallelität bestimmt. 
+
+Der Grad der Parallelität bestimmt die maximal verwendete Anzahl von CPUs; er bezieht sich nicht auf die Anzahl der verwendeten Arbeitsthreads. Der Grad der Parallelität wird [taskbezogen](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) festgelegt. Es handelt sich nicht um einen [anforderungs](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)- oder abfragebezogenen Grenzwert. Das bedeutet, dass während einer parallelen Abfrageausführung eine einzelne Abfrage mehrere Tasks erzeugen kann, die einem [Planer](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) zugeordnet sind. Mehrere Prozessoren als die von MAXDOP angegebenen, können möglicherweise gleichzeitig zu jedem Punkt der Abfrageausführung verwendet werden, wenn unterschiedliche Aufgaben gleichzeitig ausgeführt werden. Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../relational-databases/thread-and-task-architecture-guide.md).
 
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer verwendet keinen parallelen Ausführungsplan für eine Abfrage, wenn eine der folgenden Bedingungen zutrifft:
 
@@ -937,21 +946,15 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ver
 ### <a name="DOP"></a> Grad der Parallelität
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erkennt automatisch den am besten geeigneten Grad an Parallelität für jede Instanz einer parallelen Abfrageausführung oder eines DDL-Indizierungsvorgangs (Data Definition Language). Dazu werden die folgenden Kriterien untersucht: 
 
-1. Wird [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem Computer mit mehreren Mikroprozessoren (oder CPUs) ausgeführt wie z. B. auf einem symmetrischen Multiprozessorcomputer (Symmetric Multiprocessing, SMP)?  
-   Nur Computer mit mehreren CPUs können parallele Abfragen verwenden. 
+1. Wird [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem **Computer mit mehreren Mikroprozessoren (oder CPUs) ausgeführt** wie z. B. auf einem symmetrischen Multiprozessorcomputer (Symmetric Multiprocessing, SMP)? Nur Computer mit mehreren CPUs können parallele Abfragen verwenden. 
 
-2. Sind ausreichend Arbeitsthreads verfügbar?  
-   Jeder Abfrage- oder Indexvorgang setzt zu seiner Ausführung eine bestimmte Anzahl von Arbeitsthreads voraus. Das Ausführen eines parallelen Plans erfordert mehr Arbeitsthreads als ein serieller Plan, und die Anzahl der erforderlichen Arbeitsthreads steigt mit dem Grad der Parallelität. Wenn die Arbeitsthreadanforderung des parallelen Plans für einen bestimmten Grad der Parallelität nicht erfüllt werden kann, reduziert [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] den Grad an Parallelität automatisch oder verwirft den parallelen Plan in dem angegebenen Arbeitsauslastungskontext. Stattdessen wird der serielle Plan (ein Arbeitsthread) ausgeführt. 
+2. Sind **ausreichend Arbeitsthreads verfügbar**? Jeder Abfrage- oder Indexvorgang setzt zu seiner Ausführung eine bestimmte Anzahl von Arbeitsthreads voraus. Das Ausführen eines parallelen Plans erfordert mehr Arbeitsthreads als ein serieller Plan, und die Anzahl der erforderlichen Arbeitsthreads steigt mit dem Grad der Parallelität. Wenn die Arbeitsthreadanforderung des parallelen Plans für einen bestimmten Grad der Parallelität nicht erfüllt werden kann, reduziert [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] den Grad an Parallelität automatisch oder verwirft den parallelen Plan in dem angegebenen Arbeitsauslastungskontext. Stattdessen wird der serielle Plan (ein Arbeitsthread) ausgeführt. 
 
-3. Welcher Abfragetyp oder Indexvorgangstyp soll ausgeführt werden?  
-   Indexvorgänge, die einen Index erstellen oder neu erstellen oder einen gruppierten Index löschen, sowie Abfragen, die sehr viele CPU-Zyklen beanspruchen, eignen sich am besten für einen parallelen Plan. So sind z. B. Joins großer Tabellen, umfassende Aggregationen und Sortierungen großer Resultsets gut geeignet. Für einfache Abfragen, die häufig in transaktionsverarbeitenden Anwendungen eingesetzt werden, wird der zusätzliche Aufwand, der für die Koordinierung einer parallelen Abfrageausführung erforderlich ist, durch die erwartete Leistungssteigerung in der Regel nicht gerechtfertigt. Um zu ermitteln, für welche Abfragen die parallele Ausführung sinnvoll ist und für welche dies nicht gilt, vergleicht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die geschätzten Kosten für die Ausführung der Abfrage oder des Indexvorgangs mithilfe des [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)-Werts (Kostenschwellenwert für Parallelität). Benutzer können den Standardwert 5 mithilfe von [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ändern, wenn durch einen richtigen Test ermittelt wurde, dass ein anderer Wert besser für die ausgeführte Workload geeignet ist. 
+3. Welcher **Abfragetyp oder Indexvorgangstyp soll ausgeführt werden**? Indexvorgänge, die einen Index erstellen oder neu erstellen oder einen gruppierten Index löschen, sowie Abfragen, die sehr viele CPU-Zyklen beanspruchen, eignen sich am besten für einen parallelen Plan. So sind z. B. Joins großer Tabellen, umfassende Aggregationen und Sortierungen großer Resultsets gut geeignet. Für einfache Abfragen, die häufig in transaktionsverarbeitenden Anwendungen eingesetzt werden, wird der zusätzliche Aufwand, der für die Koordinierung einer parallelen Abfrageausführung erforderlich ist, durch die erwartete Leistungssteigerung in der Regel nicht gerechtfertigt. Um zu ermitteln, für welche Abfragen die parallele Ausführung sinnvoll ist und für welche dies nicht gilt, vergleicht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die geschätzten Kosten für die Ausführung der Abfrage oder des Indexvorgangs mithilfe des [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)-Werts (Kostenschwellenwert für Parallelität). Benutzer können den Standardwert 5 mithilfe von [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ändern, wenn durch einen richtigen Test ermittelt wurde, dass ein anderer Wert besser für die ausgeführte Workload geeignet ist. 
 
-4. Gibt es eine ausreichende Anzahl von zu verarbeitenden Zeilen?  
-   Wenn der Abfrageoptimierer ermittelt, dass die Anzahl der Zeilen zu niedrig ist, werden keine Verteilungsoperatoren eingesetzt, um die Zeilen zu verteilen. Demzufolge werden die Operatoren seriell ausgeführt. Durch das Ausführen der Operatoren in einem seriellen Plan werden Situationen vermieden, in denen die Kosten für Start, Verteilung und Koordinierung den Nutzen übersteigen, der durch die parallele Ausführung der Operatoren erzielt würde.
+4. Gibt es eine **ausreichende Anzahl von zu verarbeitenden Zeilen**? Wenn der Abfrageoptimierer ermittelt, dass die Anzahl der Zeilen zu niedrig ist, werden keine Verteilungsoperatoren eingesetzt, um die Zeilen zu verteilen. Demzufolge werden die Operatoren seriell ausgeführt. Durch das Ausführen der Operatoren in einem seriellen Plan werden Situationen vermieden, in denen die Kosten für Start, Verteilung und Koordinierung den Nutzen übersteigen, der durch die parallele Ausführung der Operatoren erzielt würde.
 
-5. Sind aktuelle Verteilungsstatistiken verfügbar?  
-   Wenn der höchste Grad der Parallelität nicht möglich ist, werden zunächst niedrigere Grade in Betracht gezogen, bevor der parallele Plan verworfen wird.  
-  Wenn Sie z. B. einen gruppierten Index für eine Sicht erstellen, können die Statistiken nicht ausgewertet werden, weil der gruppierte Index noch nicht vorhanden ist. In diesem Fall kann [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] nicht den höchsten Grad der Parallelität für den Indexvorgang bereitstellen. Allerdings können einige Vorgänge, wie z. B. das Sortieren und Scannen, von der parallelen Ausführung profitieren.
+5. Sind **aktuelle Verteilungsstatistiken verfügbar**? Wenn der höchste Grad der Parallelität nicht möglich ist, werden zunächst niedrigere Grade in Betracht gezogen, bevor der parallele Plan verworfen wird. Wenn Sie z. B. einen gruppierten Index für eine Sicht erstellen, können die Statistiken nicht ausgewertet werden, weil der gruppierte Index noch nicht vorhanden ist. In diesem Fall kann [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] nicht den höchsten Grad der Parallelität für den Indexvorgang bereitstellen. Allerdings können einige Vorgänge, wie z. B. das Sortieren und Scannen, von der parallelen Ausführung profitieren.
 
 > [!NOTE]
 > Parallele Indexvorgänge sind nur in den Editionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer und Evaluation verfügbar.
@@ -963,11 +966,23 @@ In einem parallelen Abfrageausführungsplan werden die Vorgänge zum Einfügen, 
 Statische Cursor und keysetgesteuerte Cursor können durch parallele Ausführungspläne aufgefüllt werden. Das spezifische Verhalten dynamischer Cursor kann jedoch nur durch die serielle Ausführung gewährleistet werden. Für eine Abfrage, die Teil eines dynamischen Cursors ist, generiert der Abfrageoptimierer immer einen seriellen Ausführungsplan.
 
 #### <a name="overriding-degrees-of-parallelism"></a>Überschreiben der Grade der Parallelität
-Mithilfe der Serverkonfigurationsoption [Max. Grad an Parallelität](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) in [!INCLUDE[ssSDS_md](../includes/sssds-md.md)] ) kann die Anzahl der Prozessoren beschränkt werden, die bei der Ausführung paralleler Pläne verwendet werden. Die Option „Max. Grad an Parallelität“ kann jedoch für einzelne Abfrage- und Indexvorgangsanweisungen überschrieben werden, indem der MAXDOP-Abfragehinweis oder die MAXDOP-Indexoption angegeben wird. MAXDOP bietet mehr Kontrolle über einzelne Abfrage- und Indexvorgänge. Sie können z.B. die MAXDOP-Option verwenden, um durch Erhöhen oder Reduzieren eine Steuerung der Anzahl der einem Onlineindexvorgang zugewiesenen Prozessoren zu bewirken. Auf diese Weise können Sie die Ressourcen, die von dem Indexvorgang verwendet werden, mit den Ressourcen gleichzeitiger Benutzer ausgleichen. 
+Der Grad an Parallelität legt die Anzahl der bei der Ausführung paralleler Pläne einzusetzenden Prozessoren fest. Diese Konfiguration kann auf verschiedenen Ebenen festgelegt werden:
+
+1.  Auf Serverebene mithilfe der [Serverkonfigurationsoption](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) für den **maximalen Grad an Parallelität (MAXDOP)** .</br> **Gilt für:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+    > [!NOTE]
+    > Mit [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] wurden automatische Empfehlungen zum Festlegen der MAXDOP-Serverkonfigurationsoption während des Installationsvorgangs eingeführt. Auf der Setupbenutzeroberfläche können Sie entweder die empfohlenen Einstellungen übernehmen oder Ihren eigenen Wert eingeben. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „MaxDOP“](../sql-server/install/instance-configuration.md#maxdop).
+
+2.  Auf Arbeitsauslastungsebene mithilfe der [Resource Governor-Konfigurationsoption **MAX_DOP** für die Arbeitsauslastungsgruppe](../t-sql/statements/create-workload-group-transact-sql.md).</br> **Gilt für:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+3.  Auf Datenbankebene mithilfe des **MAXDOP**-Werts der auf die [Datenbank beschränkten Konfiguration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).</br> **Gilt für:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
+
+4.  Auf Abfrage- oder INDEX-Anweisungsebene mithilfe des **MAXDOP**-[Abfragehinweises](../t-sql/queries/hints-transact-sql-query.md) oder der **MAXDOP**-Indexoption. Sie können z.B. die MAXDOP-Option verwenden, um durch Erhöhen oder Reduzieren eine Steuerung der Anzahl der einem Onlineindexvorgang zugewiesenen Prozessoren zu bewirken. Auf diese Weise können Sie die Ressourcen, die von dem Indexvorgang verwendet werden, mit den Ressourcen gleichzeitiger Benutzer ausgleichen.</br> **Gilt für:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
 
 Wenn die Option „Max. Grad an Parallelität“ auf 0 (Standard) festgelegt wurde, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle verfügbaren Prozessoren (maximal 64) zur Ausführung paralleler Pläne verwenden. Obwohl [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein Laufzeitziel von 64 logischen Prozessoren festlegt, wenn MAXDOP auf 0 festgelegt ist, kann falls nötig ein anderer Wert manuell festgelegt werden. Wenn MAXDOP für Abfragen und Indizes auf 0 (null) festgelegt wurde, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle verfügbaren Prozessoren (maximal 64) zur Ausführung paralleler Pläne für die jeweiligen Abfragen oder Indizes verwenden. MAXDOP ist kein erzwungener Wert für alle parallelen Abfragen, sondern eher ein Ziel mit Vorbehalt für alle Abfragen, die für die Parallelität qualifiziert sind. Das bedeutet, dass wenn nicht genügend Arbeitsthreads zur Laufzeit vorhanden sind, eine Abfrage möglicherweise mit einem niedrigeren Grad der Parallelität als die MAXDOP-Serverkonfigurationsoption ausgeführt wird.
 
-Bewährte Methoden zum Konfigurieren von MAXDOP finden Sie im [Microsoft Support-Artikel](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server).
+> [!TIP]
+> Einen Leitfaden zum Konfigurieren von MAXDOP finden Sie auf der [Dokumentationsseite](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
 
 ### <a name="parallel-query-example"></a>Beispiel für eine parallele Abfrage
 In der folgenden Abfrage wird die Anzahl der Bestellungen gezählt, die in einem bestimmten Quartal, beginnend mit dem 1. April 2000, aufgegeben wurden und in denen mindestens ein Artikel der Bestellung vom Kunden erst nach dem angekündigten Datum empfangen wurde. Die Abfrage listet die Anzahl dieser Bestellungen gruppiert nach Priorität der Bestellung und in aufsteigender Reihenfolge der Priorität auf. 

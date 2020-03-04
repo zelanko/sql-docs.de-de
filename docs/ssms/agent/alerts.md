@@ -24,12 +24,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8baf9a3ab87f53bf1e193f680e5977dc9631c4b3
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252685"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608475"
 ---
 # <a name="alerts"></a>Alerts
 
@@ -104,6 +104,12 @@ Sie können Warnungen als Reaktion auf einen bestimmten Leistungsstatus angeben.
   
     > [!NOTE]  
     > Leistungsdaten werden in regelmäßigen Abständen geprüft, was zu einer geringfügigen Verzögerung (wenige Sekunden) zwischen dem Erreichen des Schwellwerts und dem Auslösen der Leistungswarnung führen kann.  
+  
+    > [!NOTE]  
+    > Ereignisprotokollvariablen, die den Servernamen speichern, sind auf 32 Zeichen beschränkt. Daher wird möglicherweise die folgende Fehlermeldung angezeigt, wenn die Gesamtlänge des Hostnamens und des Instanznamens länger als 32 Zeichen ist:
+    
+    Warnung [466] Fehler beim Kopieren des Servernamens LONGNAMESQLSERV\LONGINSTANCENAME während Leistungsindikatorwarnungen generiert werden.
+  
   
 ## <a name="selecting-a-wmi-event"></a>Auswählen eines WMI-Ereignisses  
 Sie können Warnungen als Reaktion auf ein bestimmtes WMI-Ereignis angeben. Zum Auswählen eines WMI-Ereignisses definieren Sie die folgenden Punkte im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent auf der Seite **Allgemein** im Dialogfeld **Neue Warnung** oder **Eigenschaften von Warnung** :  

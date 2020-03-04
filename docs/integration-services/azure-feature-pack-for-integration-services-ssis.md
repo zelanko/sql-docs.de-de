@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75329952"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568083"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack für Integration Services (SSIS)
 
@@ -191,8 +191,17 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
  Verwenden Sie den Foreach-Schleifencontainer mit dem Azure Blob-Enumerator, um Daten in mehreren BLOB-Dateien zu verarbeiten.
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
-  
+
 ## <a name="release-notes"></a>Versionsinformationen
+
+### <a name="version-1170"></a>Version 1.17.0
+
+Hierbei handelt es sich um eine ausschließlich für SQL Server 2019 veröffentlichte Hotfixversion.
+
+#### <a name="bugfixes"></a>Fehlerbehebungen
+
+1. Beim Ausführen in Visual Studio 2019 mit SQL Server 2019 als Ziel kann es bei flexiblen Dateitasks/Quellen/Zielen zu folgender Fehlermeldung kommen: „Es wurde versucht, auf ein Element zuzugreifen, dessen Typ mit dem Array nicht kompatibel ist.“
+1. Beim Ausführen in Visual Studio 2019 mit SQL Server 2019 als Ziel kann es bei flexiblen Dateitasks/Zielen bei Verwendung des ORC-/Parquet-Formats zu folgender Fehlermeldung kommen: `Microsoft.DataTransfer.Common.Shared.HybridDeliveryException: An unknown error occurred. JNI.JavaExceptionCheckException.` (Microsoft.DataTransfer.Common.Shared.HybridDeliveryException: Unbekannter Fehler. JNI.JavaExceptionCheckException.).
 
 ### <a name="version-1160"></a>Version 1.16.0
 

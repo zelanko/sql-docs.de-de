@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76536646"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903817"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY – Transact-SQL (Vorschau)
 
@@ -205,7 +205,7 @@ Mit dem COPY-Befehl wird der Komprimierungstyp automatisch auf Grundlage der Dat
 
 - .gz – **GZIP**
 - .snappy – **Snappy**
-- .deflate – **DefaultCodec**
+- .deflate – **DefaultCodec**  (nur Parquet und ORC)
 
  *FIELDQUOTE = 'Feldquote'*</br>
 *FIELDQUOTE* gilt für CSV und gibt ein einzelnes Zeichen an, das als Anführungszeichen (Zeichenfolgen-Trennzeichen) in der CSV-Datei verwendet wird. Wenn dies nicht angegeben ist, wird das Anführungszeichen (") so verwendet, wie es im Standard RFC 4180 definiert ist. Erweiterte ASCII-Zeichen werden bei UTF-8 für FIELDQUOTE nicht unterstützt.

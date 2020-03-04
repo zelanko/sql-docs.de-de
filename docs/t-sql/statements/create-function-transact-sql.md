@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 183edfbae4da98f12d9ed32b594e74b1932b6f1b
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982786"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705895"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -313,7 +313,7 @@ Ein Standardwert für den Parameter. Wenn ein *default*-Wert definiert ist, kann
  Wenn ein Parameter der Funktion über einen Standardwert verfügt, muss beim Aufrufen der Funktion das DEFAULT-Schlüsselwort angegeben werden, um den Standardwert abzurufen. In diesem Punkt gibt es einen Unterschied zum Verwenden von Parametern in einer gespeicherten Prozedur. Fehlt im Aufruf einer gespeicherten Prozedur ein Parameter, der einen Standardwert hat, wird automatisch dieser Standardwert verwendet. Beim Aufrufen einer Skalarfunktion mit der EXECUTE-Anweisung ist das DEFAULT-Schlüsselwort jedoch nicht erforderlich.  
   
  READONLY  
- Gibt an, dass der Parameter nicht aktualisiert oder innerhalb der Definition der Funktion geändert werden kann. Wenn der Parametertyp ein benutzerdefinierter Tabellentyp ist, sollte READONLY angegeben werden.  
+ Gibt an, dass der Parameter nicht aktualisiert oder innerhalb der Definition der Funktion geändert werden kann. READONLY ist bei benutzerdefinierten Tabellentypparametern (TVPs) erforderlich und kann nicht für andere Parametertypen verwendet werden.
   
  *return_data_type*  
  Der Rückgabewert einer benutzerdefinierten Skalarfunktion. Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen sind abgesehen vom **timestamp**-Datentyp alle Datentypen zulässig, einschließlich benutzerdefinierter CLR-Typen. Für CLR-Funktionen sind abgesehen von den Datentypen **text**, **ntext**, **image** und **timestamp** alle Datentypen zulässig, einschließlich benutzerdefinierter CLR-Typen. Die nicht skalaren Typen **cursor** und **table** können weder in [!INCLUDE[tsql](../../includes/tsql-md.md)]- noch in CLR-Funktionen als Rückgabedatentyp angegeben werden.  
@@ -581,7 +581,7 @@ Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Funkti
 ### <a name="computed-column-interoperability"></a>Interoperabilität bei berechneten Spalten  
  Funktionen verfügen über die folgenden Eigenschaften. Die Werte dieser Eigenschaften bestimmen, ob Funktionen in permanent berechneten oder indizierten berechneten Spalten verwendet werden können.  
   
-|Eigenschaft|Beschreibung|Notizen|  
+|Eigenschaft|BESCHREIBUNG|Notizen|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|Die Funktion ist deterministisch oder nicht deterministisch.|Lokaler Datenzugriff ist in deterministischen Funktionen zulässig. Funktionen, die immer dasselbe Ergebnis zurückgeben, wenn sie mit bestimmten Eingabewerten und mit demselben Datenbankstatus aufgerufen werden, werden beispielsweise als deterministisch bezeichnet.|  
 |**IsPrecise**|Die Funktion ist präzise oder unpräzise.|Unpräzise Funktionen enthalten Vorgänge wie Gleitkommatransaktionen.|  
@@ -655,7 +655,7 @@ Durch die `ORDER`-Klausel wird keine bestimmte Ergebnisreihenfolge bei der Ausf�
 ## <a name="metadata"></a>Metadaten  
  In der folgenden Tabelle werden die Systemkatalogsichten aufgelistet, die Sie verwenden können, um Metadaten zu benutzerdefinierten Funktionen zurückzugeben.  
   
-|Systemsicht|Beschreibung|  
+|Systemsicht|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Weitere Informationen finden Sie im Beispiel E weiter unten im Abschnitt „Beispiele“.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Zeigt Informationen zu benutzerdefinierten CLR-Funktionen an.|  
@@ -810,7 +810,7 @@ GO
   
  Ein Beispiel zum Erstellen einer CLR-Tabellenwertfunktionen finden Sie unter [CLR-Tabellenwertfunktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md).  
   
-### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. Zeigt die Definition von benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen an.  
+### <a name="e-displaying-the-definition-of-tsql-user-defined-functions"></a>E. Zeigt die Definition von benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen an.  
   
 ```sql  
 SELECT definition, type   

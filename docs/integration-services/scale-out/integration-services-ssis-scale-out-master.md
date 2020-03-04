@@ -1,5 +1,5 @@
 ---
-title: SSIS Scale Out-Master (SQL Server Integration Services) | Microsoft-Dokumentation
+title: Scale Out-Master | Microsoft-Dokumentation
 description: In diesem Artikel wird die Scale Out-Masterkomponente von SSIS Scale Out beschrieben.
 ms.custom: performance
 ms.date: 01/19/2019
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e3e52a854224210ed4561dbce12877fbb4c0f6fb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68082124"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903807"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Master für horizontales Hochskalieren von Integration Services (SSIS)
 
@@ -52,7 +52,7 @@ Der Scale Out-Masterdienst ist ein Windows-Dienst, über den die Kommunikation m
 Konfigurieren Sie den Scale Out-Masterdienst mithilfe der `<drive>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`-Datei. Der Dienst muss nach dem Aktualisieren der Konfigurationsdatei neu gestartet werden.
 
 
-|Konfiguration  |Beschreibung  |Standardwert  |
+|Konfiguration  |BESCHREIBUNG  |Standardwert  |
 |---------|---------|---------|
 |PortNumber|Die Netzwerkportnummer, die zur Kommunikation mit einem Worker für horizontales Hochskalieren verwendet wird|8391|
 |SSLCertThumbprint|Der Fingerabdruck des SSL-Zertifikats verwendet, mit dem die Kommunikation mit einem Worker für horizontales Hochskalieren geschützt wird|Der Fingerabdruck des SSL-Zertifikats, das bei der Installation von Worker für horizontales Hochskalieren angegeben wurde|

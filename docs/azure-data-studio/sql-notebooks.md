@@ -10,17 +10,16 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: df1e49af0378b6af4a3d82b5a5ec2a4293be5e35
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74957084"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575379"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Verwenden von Notebooks in Azure Data Studio
 
 In diesem Artikel wird beschrieben, wie Sie die Notebookumgebung in Azure Data Studio starten und wie Sie mit der Erstellung eigener Notebooks beginnen. Außerdem wird gezeigt, wie Notebooks mithilfe verschiedener Kernel geschrieben werden.
-
 
 ## <a name="connect-to-sql-server"></a>Verbindung mit SQL Server herstellen
 
@@ -37,16 +36,16 @@ Es gibt mehrere Möglichkeiten, ein neues Notebook zu starten.
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-3. Klicken Sie mit der rechten Maustaste auf die **SQL Server**-Verbindung, und starten Sie dann **New Notebook** (Neues Notebook). 
+2. Klicken Sie mit der rechten Maustaste auf die **SQL Server**-Verbindung, und starten Sie dann **New Notebook** (Neues Notebook). 
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-4. Öffnen Sie die Befehlspalette (**STRG+UMSCHALT+P**), und geben Sie dann **New Notebook** (Neues Notebook) ein. Eine neue Datei mit dem Namen `Notebook-1.ipynb` wird geöffnet.
+3. Öffnen Sie die Befehlspalette (**STRG+UMSCHALT+P**), und geben Sie dann **New Notebook** (Neues Notebook) ein. Eine neue Datei mit dem Namen `Notebook-1.ipynb` wird geöffnet.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Unterstützte Kernel und Anfügen an Kontext
 
-SQL-Kernel werden von der Notebookinstallation in Azure Data Studio nativ unterstützt. Wenn Sie SQL-Entwickler sind und Notebooks verwenden möchten, wäre dies der ausgewählte Kernel. 
+SQL-Kernel werden von der Notebookinstallation in Azure Data Studio nativ unterstützt. Wenn Sie SQL-Entwickler sind und Notebooks verwenden möchten, wäre dies der ausgewählte Kernel.
 
-Der SQL-Kernel kann auch verwendet werden, um eine Verbindung mit PostgreSQL-Serverinstanzen herzustellen. Wenn Sie ein PostgreSQL-Entwickler sind und eine Verbindung mit Ihrem PostgreSQL-Server herstellen möchten, müssen Sie die [**PostgreSQL-Erweiterung** ](postgres-extension.md) im Marketplace der Azure Data Studio-Erweiterung herunterladen.
+Der SQL-Kernel kann auch verwendet werden, um eine Verbindung mit PostgreSQL-Serverinstanzen herzustellen. Wenn Sie ein PostgreSQL-Entwickler sind und eine Verbindung mit Ihrem PostgreSQL-Server herstellen möchten, müssen Sie die [**PostgreSQL-Erweiterung**](postgres-extension.md) im Marketplace der Azure Data Studio-Erweiterung herunterladen.
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -91,7 +90,7 @@ Nachdem die Installation erfolgreich abgeschlossen wurde, werden unter „Task H
 
 `Attach to` stellt den Kontext für den anzufügenden Kernel bereit. Wenn Sie SQL-Kernel verwenden, können Sie `Attach to` für eine beliebige SQL Server-Instanz verwenden.
 
-Wenn Sie Python3-Kernel verwenden, ist `Attach to``localhost`. Sie können diesen Kernel für Ihre lokale Python-Entwicklung verwenden.
+Wenn Sie Python3-Kernel verwenden, ist `Attach to` `localhost`. Sie können diesen Kernel für Ihre lokale Python-Entwicklung verwenden.
 
 Wenn Sie mit dem Big-Data-Cluster von SQL Server 2019 verbunden sind, ist `Attach to` standardmäßig der Endpunkt des Clusters und ermöglicht Ihnen das Übermitteln von Python-, Scala- und R-Code mithilfe von Spark-Computing des Clusters.
 
@@ -115,9 +114,9 @@ Wenn Sie außerhalb der Textzelle klicken, wird der Markdowntext angezeigt.
 
 In Azure Data Studio geöffnete Notebooks gelten standardmäßig als **Vertrauenswürdig**.
 
-Wenn Sie ein Notebook aus einer anderen Quelle öffnen, wird es im Modus **, Nicht vertrauenswürdig** geöffnet, und Sie können es dann als **Vertrauenswürdig** einstufen.
+Wenn Sie ein Notebook aus einer anderen Quelle öffnen, wird es im Modus **Nicht vertrauenswürdig** geöffnet, und Sie können es dann als **Vertrauenswürdig** einstufen.
 
-### <a name="save"></a>Speichern 
+### <a name="save"></a>Speichern
 
 Sie können das Notebook durch Drücken von **STRG+S** oder durch Klicken auf die Befehle **Speichern**, **Speichern unter** und **Alles speichern** im Menü „Datei“ und auf die in der Befehlspalette eingegebenen **Befehle zum Speichern** speichern.
 
@@ -154,7 +153,8 @@ Wählen Sie den lokalen Python-Kernel aus, und geben Sie in der Zelle Folgendes 
 ![image16](media/sql-notebooks/local-python.png)
 
 ## <a name="manage-packages"></a>Verwalten von Paketen
-Zu den Dingen, die wir für die lokale Python-Entwicklung optimiert haben, gehört die Möglichkeit, Pakete zu Installieren, die Kunden für Ihre Szenarios benötigen. Die allgemeinen Pakete wie `pandas`, `numpy` usw. sind standardmäßig integriert. Wenn Sie jedoch ein Paket erwarten, das nicht enthalten ist, schreiben Sie den folgenden Code in die Notebookzelle: 
+
+Zu den Dingen, die wir für die lokale Python-Entwicklung optimiert haben, gehört die Möglichkeit, Pakete zu Installieren, die Kunden für Ihre Szenarios benötigen. Die allgemeinen Pakete wie `pandas`, `numpy` usw. sind standardmäßig integriert. Wenn Sie jedoch ein Paket erwarten, das nicht enthalten ist, schreiben Sie den folgenden Code in die Notebookzelle:
 
 ```python
 import <package-name>
@@ -166,9 +166,9 @@ Wenn der Fehler `Module not Found` zurückgegeben wird, klicken Sie auf **Pakete
 
 ![image17](media/sql-notebooks/manage-packages.png)
 
-In diesem Assistenten werden die **installierten** Pakete angezeigt. Sie können die Liste und die Versionen der einzelnen Pakete durchsuchen. Wenn Sie ein Paket **deinstallieren** möchten, klicken Sie auf dieses, und wählen Sie dann die Option **Uninstall selected packages** (Ausgewählte Pakete deinstallieren) aus.
+In diesem Assistenten werden die **installierten** Pakete angezeigt. Sie können die Liste und die Versionen der einzelnen Pakete durchsuchen. Wenn Sie ein Paket deinstallieren möchten, klicken Sie auf dieses, und wählen Sie dann die Option **Ausgewählte Pakete deinstallieren** aus.
 
-Sie können auch auf **Add new packages** (Neue Pakete hinzufügen) klicken, um nach einem bestimmten Paket zu **suchen**. Wählen Sie die zugehörige Version aus, und klicken Sie dann auf **Installieren**. Standardmäßig wird die neueste Version des gesuchten Pakets ausgewählt. 
+Sie können auch auf **Add new packages** (Neue Pakete hinzufügen) klicken, um nach einem bestimmten Paket zu **suchen**. Wählen Sie die zugehörige Version aus, und klicken Sie dann auf **Installieren**. Standardmäßig wird die neueste Version des gesuchten Pakets ausgewählt.
 
 Nachdem das Paket installiert wurde, können Sie in die Notebookzelle wechseln und den folgenden Befehl eingeben:
 
@@ -176,7 +176,7 @@ Nachdem das Paket installiert wurde, können Sie in die Notebookzelle wechseln u
 import <package-name>
 ```
 
-Wenn Sie ein Paket **deinstallieren** möchten, klicken Sie dieses, und wählen Sie dann die Option **Uninstall selected packages** (Ausgewählte Pakete deinstallieren) aus.
+Wenn Sie ein Paket deinstallieren möchten, klicken Sie dieses, und wählen Sie dann die Option **Ausgewählte Pakete deinstallieren** aus.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

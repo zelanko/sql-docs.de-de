@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: ca80b2f95ee049d763d22f35e4ff6d35e344a8c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b217787d0cba0a1d62ab8393ef7fac76d7665bb0
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75956501"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568063"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -68,9 +68,11 @@ CREATE WORKLOAD GROUP group_name
 
 ## <a name="arguments"></a>Argumente
 
-*group_name* ist der benutzerdefinierte Name für die Arbeitsauslastungsgruppe. *group_name* ist alphanumerisch, kann bis zu 128 Zeichen enthalten, muss innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eindeutig sein und muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.
+*group_name*</br>
+Der benutzerdefinierte Name für die Arbeitsauslastungsgruppe. *group_name* ist alphanumerisch, kann bis zu 128 Zeichen enthalten, muss innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eindeutig sein und muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.
 
-IMPORTANCE = { LOW | **MEDIUM** | HIGH } gibt die relative Wichtigkeit einer Anforderung in der Arbeitsauslastungsgruppe an. Für die Wichtigkeit sind folgende Einstellungen möglich, wobei MEDIUM die Standardeinstellung ist:
+IMPORTANCE = { LOW | **MEDIUM** | HIGH }</br>
+Gibt die relative Wichtigkeit einer Anforderung in der Arbeitsauslastungsgruppe an. Für die Wichtigkeit sind folgende Einstellungen möglich, wobei MEDIUM die Standardeinstellung ist:
 
 - LOW
 - MEDIUM (Standard)
@@ -81,9 +83,10 @@ IMPORTANCE = { LOW | **MEDIUM** | HIGH } gibt die relative Wichtigkeit einer Anf
 
 IMPORTANCE hat einen lokalen Bezug zum Ressourcenpool; Arbeitsauslastungsgruppen mit verschiedener Wichtigkeit innerhalb desselben Ressourcenpools beeinflussen sich gegenseitig, haben jedoch keine Auswirkungen auf Arbeitsauslastungsgruppen in anderen Ressourcenpools.
 
-REQUEST_MAX_MEMORY_GRANT_PERCENT = *value* gibt die Höchstmenge an Arbeitsspeicher an, die eine einzelne Anforderung vom Pool in Anspruch nehmen kann. *value* entspricht einem Prozentwert, der relativ zur Ressourcenpoolgröße ist, die mit MAX_MEMORY_PERCENT festgelegt wird.
+REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
+Gibt die Höchstmenge an Arbeitsspeicher an, die eine einzelne Anforderung vom Pool in Anspruch nehmen kann. *value* entspricht einem Prozentwert, der relativ zur Ressourcenpoolgröße ist, die mit MAX_MEMORY_PERCENT festgelegt wird.
 
-*value* entspricht bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] einem Integer und ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] einer Gleitkommazahl. Der Standardwert ist 25. Der zulässige Bereich für *value* liegt zwischen 1 und 100.
+*value* entspricht bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] einem Integer und ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] sowie in verwalteten [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Instanzen einer Gleitkommazahl. Der Standardwert ist 25. Der zulässige Bereich für *value* liegt zwischen 1 und 100.
 
 > [!IMPORTANT]  
 > Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.
@@ -100,22 +103,26 @@ REQUEST_MAX_MEMORY_GRANT_PERCENT = *value* gibt die Höchstmenge an Arbeitsspeic
 >
 > Beachten Sie, dass in beiden Fällen der Timeoutfehler 8645 auftreten kann, wenn der Server nicht über ausreichend physischen Arbeitsspeicher verfügt.
 
-REQUEST_MAX_CPU_TIME_SEC = *value* gibt die maximale CPU-Zeit in Sekunden an, die eine Anforderung beanspruchen kann. *value* muss 0 (null) oder ein positiver Integer sein. Die Standardeinstellung für *value* ist 0 (null), also unbegrenzt.
+REQUEST_MAX_CPU_TIME_SEC = *value*</br>
+Gibt die maximale CPU-Zeit in Sekunden an, die eine Anforderung beanspruchen kann. *value* muss 0 (null) oder ein positiver Integer sein. Die Standardeinstellung für *value* ist 0 (null), also unbegrenzt.
 
 > [!NOTE]
 > Resource Governor verhindert nicht, dass eine Anforderung bei Erreichung des maximalen Zeitlimits fortgesetzt wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded (Ereignisklasse)](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).
 > [!IMPORTANT]
 > Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 bricht Resource Governor mit [Ablaufverfolgungsflag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) eine Anforderung ab, wenn die maximale Zeit überschritten wird.
 
-REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value* gibt die maximale Zeit in Sekunden an, die eine Abfrage auf das Freiwerden einer Speicherzuweisung (Arbeitsspeicherpuffer) warten kann. *value* muss 0 (null) oder ein positiver Integer sein. Die Standardeinstellung für *value* ist 0 (null). Hierbei wird eine interne Berechnung basierend auf den Abfragekosten verwendet, um die maximale Zeit zu ermitteln.
+REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*</br>
+Gibt die maximale Zeit in Sekunden an, die eine Abfrage auf das Freiwerden einer Speicherzuweisung (Arbeitsspeicherpuffer) wartet. *value* muss 0 (null) oder ein positiver Integer sein. Die Standardeinstellung für *value* ist 0 (null). Hierbei wird eine interne Berechnung basierend auf den Abfragekosten verwendet, um die maximale Zeit zu ermitteln.
 
 > [!NOTE]
 > Eine Abfrage schlägt nicht grundsätzlich fehl, wenn das Timeout der Arbeitsspeicherzuweisung erreicht wird. Eine Abfrage schlägt nur fehl, wenn zu viele Abfragen gleichzeitig ausgeführt werden. Andernfalls könnte die Abfrage nur die minimale Arbeitsspeicherzuweisung nutzen, was zu reduzierter Abfrageleistung führen kann.
 
-MAX_DOP = *value* gibt den **maximalen Grad an Parallelität (MAXDOP)** für parallele Abfrageausführungen an. *value* muss 0 (null) oder ein positiver Integer sein. Der zulässige Bereich für *value* liegt zwischen 0 und 64. Die *value*-Standardeinstellung 0 verwendet die globale Einstellung. MAX_DOP wird wie folgt behandelt:
+MAX_DOP = *value*</br>
+Gibt den **maximalen Grad an Parallelität (MAXDOP)** für die parallele Ausführung von Abfragen an. *value* muss 0 (null) oder ein positiver Integer sein. Der zulässige Bereich für *value* liegt zwischen 0 und 64. Die *value*-Standardeinstellung 0 verwendet die globale Einstellung. MAX_DOP wird wie folgt behandelt:
 
 > [!NOTE]
 > MAX_DOP für die Arbeitsauslastungsgruppe überschreibt die [Serverkonfiguration des maximalen Grads an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) und den **MAXDOP**-Wert der auf die [Datenbank beschränkten Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+
 > [!TIP]
 > Verwenden Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**, um dies auf Abfrageebene zu erreichen. Die Festlegung des maximalen Grads an Parallelität als Abfragehinweis gilt, solange der MAX_DOP-Wert der Arbeitsauslastungsgruppe nicht überschritten wird. Wenn der MAXDOP-Wert des Abfragehinweises den von Resource Governor konfigurierten Wert überschreitet, verwendet [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den `MAX_DOP`-Wert von Resource Governor. Der [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) für MAXDOP überschreibt stets die [Serverkonfiguration des maximalen Grads an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 >
@@ -123,16 +130,19 @@ MAX_DOP = *value* gibt den **maximalen Grad an Parallelität (MAXDOP)** für pa
 >
 > Verwenden Sie den **MAXDOP**-Wert (maximaler Parallelitätsgrad) der [Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), um dies auf Serverebene zu erreichen.
 
-GROUP_MAX_REQUESTS = *value* gibt die maximale Anzahl gleichzeitiger Anforderungen an, die in der Arbeitsauslastungsgruppe ausgeführt werden können. *value* muss 0 (null) oder ein positiver Integer sein. Der Standardwert von *value* ist 0 (null) und lässt eine unbegrenzte Anzahl von Anforderungen zu. Wenn die maximale Anzahl gleichzeitiger Anforderungen erreicht wird, kann sich ein Benutzer dieser Gruppe zwar anmelden, wird jedoch in den Wartezustand versetzt, bis die Anzahl gleichzeitiger Anforderungen unter den angegebenen Wert gefallen ist.
+GROUP_MAX_REQUESTS = *value*</br>
+Gibt die maximale Anzahl gleichzeitiger Anforderungen an, die in der Arbeitsauslastungsgruppe ausgeführt werden können. *value* muss 0 (null) oder ein positiver Integer sein. Der Standardwert von *value* ist 0 (null) und lässt eine unbegrenzte Anzahl von Anforderungen zu. Wenn die maximale Anzahl gleichzeitiger Anforderungen erreicht wird, kann sich ein Benutzer dieser Gruppe zwar anmelden, wird jedoch in den Wartezustand versetzt, bis die Anzahl gleichzeitiger Anforderungen unter den angegebenen Wert gefallen ist.
 
-USING { *pool_name* |  **"default"** } ordnet die Arbeitsauslastungsgruppe dem benutzerdefinierten Ressourcenpool zu, der durch *pool_name* identifiziert wird. Hierdurch wird die Arbeitsauslastungsgruppe im Endeffekt im Ressourcenpool platziert. Wenn *pool_name* nicht bereitgestellt wird oder wenn das USING-Argument nicht verwendet wird, wird die Arbeitsauslastungsgruppe in den vordefinierten Standardpool von Resource Governor eingefügt.
+USING { *pool_name* |  **"default"** }</br>
+Ordnet die Arbeitsauslastungsgruppe dem benutzerdefinierten Ressourcenpool zu, der durch *pool_name* identifiziert wird. Hierdurch wird die Arbeitsauslastungsgruppe im Endeffekt im Ressourcenpool platziert. Wenn *pool_name* nicht bereitgestellt wird oder wenn das USING-Argument nicht verwendet wird, wird die Arbeitsauslastungsgruppe in den vordefinierten Standardpool von Resource Governor eingefügt.
 
 "default" ist ein reserviertes Wort und muss bei der Verwendung mit USING in Anführungszeichen ("") oder Klammern ([]) eingeschlossen werden.
 
 > [!NOTE]
 > Für vordefinierte Arbeitsauslastungsgruppen und Ressourcenpools werden ausschließlich kleingeschriebene Namen verwendet, z. B. "default". Dies sollte bei Servern beachtet werden, die bei der Sortierung zwischen Groß-/Kleinschreibung unterscheiden. Server, die bei der Sortierung keine Groß- und Kleinschreibung unterscheiden, z. B. SQL_Latin1_General_CP1_CI_AS, behandeln "default" und "Default" gleich.
 
-EXTERNAL external_pool_name | "default" **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher).
+EXTERNAL external_pool_name | "default"</br>
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).
 
 Die Arbeitsauslastungsgruppe kann einen externen Ressourcenpool angeben. Sie können eine Arbeitsauslastungsgruppe definieren und zwei Pools zuordnen:
 
@@ -161,7 +171,11 @@ Erstellen Sie eine Arbeitsauslastungsgruppe namens `newReports`, die Resource Go
 
 ```sql
 CREATE WORKLOAD GROUP newReports
-    USING "default" ;
+WITH
+    (REQUEST_MAX_MEMORY_GRANT_PERCENT = 2.5
+      , REQUEST_MAX_CPU_TIME_SEC = 100
+      , MAX_DOP = 4)    
+USING "default" ;
 GO
 ```
 
@@ -191,14 +205,15 @@ Erstellt eine Arbeitsauslastungsgruppe Arbeitsauslastungsgruppen sind Container 
 
 ```
 CREATE WORKLOAD GROUP group_name
- WITH
- (        MIN_PERCENTAGE_RESOURCE = value
-      ,   CAP_PERCENTAGE_RESOURCE = value
-      ,   REQUEST_MIN_RESOURCE_GRANT_PERCENT = value
+[ WITH
+ (  [ MIN_PERCENTAGE_RESOURCE = value ]
+  [ [ , ] CAP_PERCENTAGE_RESOURCE = value ]
+  [ [ , ] REQUEST_MIN_RESOURCE_GRANT_PERCENT = value ]
   [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ]
-  [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]
+  [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } ]
   [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )
   [ ; ]
+]
 ```
 
 *group_name*</br>
@@ -216,10 +231,11 @@ Diese Zeile legt die Mindestmenge der Ressourcen fest, die pro Anforderung zugeo
 Beispiel:
 
 ```sql
-CREATE WORKLOAD GROUP wgSample WITH
-( MIN_PERCENTAGE_RESOURCE = 26              -- integer value
- ,REQUEST_MIN_RESOURCE_GRANT_PERCENT = 3.25 -- factor of 26 (guaranteed a minimum of 8 concurrency)
- ,CAP_PERCENTAGE_RESOURCE = 100 )
+CREATE WORKLOAD GROUP wgSample 
+WITH
+  ( MIN_PERCENTAGE_RESOURCE = 26                -- integer value
+    , REQUEST_MIN_RESOURCE_GRANT_PERCENT = 3.25 -- factor of 26 (guaranteed a minimum of 8 concurrency)
+    , CAP_PERCENTAGE_RESOURCE = 100 )
 ```
 
 Sehen Sie sich die Werte an, die für die Ressourcenklassen als Richtlinie für request_min_resource_grant_percent verwendet werden.  Die folgende Tabelle enthält die Ressourcenzuordnung für Gen2.
@@ -232,10 +248,10 @@ Sehen Sie sich die Werte an, die für die Ressourcenklassen als Richtlinie für 
 |Xlargerc|70 %|
 |||
 
-*REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>
+*REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>         
 Diese Zeile legt die Maximalmenge der Ressourcen fest, die pro Anforderung zugeordnet werden. Dabei ist *value* ein optionaler Dezimalparameter mit einem Standardwert, der „request_min_resource_grant_percent“ entspricht. Der Wert von *value* muss größer oder gleich „request_min_resource_grant_percent“ sein. Wenn der Wert von request_max_resource_grant_percent größer als request_min_resource_grant_percent ist und Systemressourcen verfügbar sind, werden einer Anforderung zusätzliche Ressourcen zugeordnet.
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
+*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>        
 Diese Zeile gibt die Standardwichtigkeit einer Anforderung für die Arbeitsauslastungsgruppe an. Für die Wichtigkeit sind folgende Einstellungen möglich, wobei NORMAL die Standardeinstellung ist:
 
 - LOW
@@ -246,18 +262,18 @@ Diese Zeile gibt die Standardwichtigkeit einer Anforderung für die Arbeitsausla
 
 Die Wichtigkeit, die für eine Arbeitsauslastungsgruppe festgelegt wird, entspricht der Standardwichtigkeit für alle Anforderungen in der Arbeitsauslastungsgruppe. Benutzer können die Wichtigkeit auch auf Klassifizierungsebene festlegen und somit die festgelegte Wichtigkeit der Arbeitsauslastungsgruppe überschreiben. Dadurch wird eine Differenzierung der Wichtigkeit für Anforderungen innerhalb einer Arbeitsauslastungsgruppe ermöglicht, um schneller auf nicht reservierte Ressourcen zugreifen zu können. Wenn die Summe von min_percentage_resource in den Arbeitsauslastungsgruppen weniger als 100 ist, sind nicht reservierte Ressourcen vorhanden, die nach Wichtigkeit zugewiesen werden.
 
-*QUERY_EXECUTION_TIMEOUT_SEC* = value</br>
+*QUERY_EXECUTION_TIMEOUT_SEC* = value</br>     
 Diese Zeile gibt die maximale Zeit in Sekunden an, für deren Dauer eine Abfrage ausgeführt werden kann, bevor sie abgebrochen wird. *value* muss 0 (null) oder ein positiver Integer sein. Die Standardeinstellung für value ist 0 (null). Das bedeutet, dass für die Abfrage kein Timeout eintritt. QUERY_EXECUTION_TIMEOUT_SEC zählt, sobald die Abfrage als ausgeführt erkannt wird, nicht jedoch, wenn die Abfrage in die Warteschlange eingereiht wird.
 
 ## <a name="remarks"></a>Bemerkungen
 
 Die entsprechenden Arbeitsauslastungsgruppen für Ressourcenklassen werden aufgrund der Abwärtskompatibilität automatisch generiert. Diese vom System definierten Arbeitsauslastungsgruppen können nicht gelöscht werden. Es können acht zusätzliche benutzerdefinierte Arbeitsauslastungsgruppen erstellt werden.
 
-Wenn eine Arbeitsauslastungsgruppe mit min_percentage_resource größer als 0 (null) erstellt wird, wird die `CREATE WORKLOAD GROUP`-Anweisung in die Warteschlange eingereiht, bis genügend Ressourcen zum Erstellen der Arbeitsauslastungsgruppe vorhanden sind.
+Wenn eine Arbeitsauslastungsgruppe mit `min_percentage_resource` größer als 0 (null) erstellt wird, wird die `CREATE WORKLOAD GROUP`-Anweisung in die Warteschlange eingereiht, bis genügend Ressourcen zum Erstellen der Arbeitsauslastungsgruppe vorhanden sind.
 
 ## <a name="effective-values"></a>Effektive Werte
 
-Die Parameter min_percentage_resource, cap_percentage_resource, request_min_resource_grant_percent und request_max_resource_grant_percent besitzen effektive Werte, die im Kontext der aktuellen Dienstebene und der Konfiguration anderer Arbeitsauslastungsgruppen angepasst werden.
+Die Parameter `min_percentage_resource`, `cap_percentage_resource`, `request_min_resource_grant_percent` und `request_max_resource_grant_percent` haben effektive Werte, die basierend auf dem aktuellen Servicelevel und der Konfiguration anderer Arbeitsauslastungsgruppen angepasst werden.
 
 Die unterstützte Parallelität pro Dienstebene bleibt so, als würden Ressourcenklassen verwendet werden, um Ressourcenzuweisungen pro Abfrage zu definieren. Die unterstützten Werte für request_min_resource_grant_percent hängen also von der Dienstebene ab, auf die die Instanz festgelegt ist. Auf dem niedrigsten Servicelevel (DW100c) sind mindestens 25 % der Ressourcen pro Anforderung erforderlich. Bei DW100c kann der effektive Wert von request_min_resource_grant_percent für eine konfigurierte Arbeitsauslastungsgruppe bei 25 % oder höher liegen. In der folgenden Tabelle finden Sie weitere Informationen dazu, wie effektive Werte abgeleitet werden.
 
@@ -281,15 +297,15 @@ Die unterstützte Parallelität pro Dienstebene bleibt so, als würden Ressource
 |DW30000c|0,75 %|128|
 ||||
 
-Ebenso müssen request_min_resource_grant_percent und min_percentage_resource größer oder gleich dem effektiven Wert von request_min_resource_grant_percent sein. Bei einer Arbeitsauslastungsgruppe, deren Wert für min_percentage_resource geringer als der effektive Wert von min_percentage_resource ist, wird der Wert zur Laufzeit auf 0 angepasst. In diesem Fall sind die für min_percentage_resource konfigurierten Ressourcen für alle Arbeitsauslastungsgruppen freigegeben. Beispielsweise hätte die Arbeitsauslastungsgruppe wgAdHoc mit einem min_percentage_resource-Wert von 10 % unter DW1000c einen effektiven min_percentage_resource-Wert von 10 % (3,25 % ist der Mindestwert bei DW1000c). Unter DW100c hätte wgAdhoc einen effektiven min_percentage_resource-Wert von 0 %. Die für wgAdhoc konfigurierten 10 % würden für alle Arbeitsauslastungsgruppen freigegeben werden.
+Ebenso müssen request_min_resource_grant_percent und min_percentage_resource größer oder gleich dem effektiven Wert von request_min_resource_grant_percent sein. Bei einer Arbeitsauslastungsgruppe, deren Wert für `min_percentage_resource` geringer als der effektive Wert von `min_percentage_resource` ist, wird der Wert zur Laufzeit auf 0 (null) angepasst. In diesem Fall sind die für `min_percentage_resource` konfigurierten Ressourcen für alle Arbeitsauslastungsgruppen freigegeben. Beispielsweise hätte die Arbeitsauslastungsgruppe `wgAdHoc` mit einem Wert für `min_percentage_resource` von 10 % unter DW1000c einen effektiven Wert für `min_percentage_resource` von 10 % (3,25 % ist der Mindestwert bei DW1000c). Bei DW100c hätte `wgAdhoc` einen effektiven Wert für min_percentage_resource von 0 %. Die für `wgAdhoc` konfigurierten 10 % würden für alle Arbeitsauslastungsgruppen freigegeben werden.
 
-Auch cap_percentage_resource besitzt einen effektiven Wert. Wenn die Arbeitsauslastungsgruppe wgAdhoc mit einem cap_percentage_resource-Wert von 100 % konfiguriert ist und eine weitere Arbeitsauslastungsgruppe, wgDashboard, mit einem min_percentage_resource-Wert von 25 % generiert wird, ist der effektive Wert von cap_percentage_resource für wgAdhoc 75 %.
+`cap_percentage_resource` hat ebenfalls einen effektiven Wert. Wenn eine Arbeitsauslastungsgruppe `wgAdhoc` mit einem Wert von 100 % für `cap_percentage_resource` konfiguriert wird und eine andere Arbeitsauslastungsgruppe `wgDashboards` mit einem Wert von 25 % für `min_percentage_resource`, wird der effektive Wert von `cap_percentage_resource` für `wgAdhoc` 75 %.
 
 Die Laufzeitwerte für Ihre Arbeitsauslastungsgruppe lassen sich am einfachsten erklären, indem Sie die Systemsicht [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) abfragen.
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die CONTROL DATABASE-Berechtigung
+Erfordert die `CONTROL DATABASE`-Berechtigung
 
 ## <a name="see-also"></a>Weitere Informationen
 

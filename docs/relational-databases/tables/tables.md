@@ -14,12 +14,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71127376"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608512"
 ---
 # <a name="tables"></a>Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -46,7 +46,7 @@ Temporäre Tabellen werden in **tempdb**gespeichert. Es gibt zwei Arten von tem
 
 #### <a name="ctp23"></a> Weniger Neukompilierungen für Workloads mit temporären Tabellen für mehrere Bereiche
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] verringert Neukompilierungen für Workloads mit temporären Tabellen für mehrere Bereiche. Vor der Einführung dieses Features, konnte das Verweisen auf eine temporäre Tabelle mit einer DML-Anweisung (`SELECT`, `INSERT`, `UPDATE`, `DELETE`) zu einer Neukompilierung der DML-Anweisung bei jeder Ausführung führen, wenn die temporäre Tabelle in einem Batch im äußeren Bereich erstellt wurde. Durch dieses Update führt SQL Server zusätzliche einfache Überprüfungen durch, um unnötige Neukompilierungen zu vermeiden:
+Bei allen Datenbank-Kompatibilitätsgraden verringert [!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] die Neukompilierungen für Arbeitsauslastungen mit temporären Tabellen für mehrere Bereiche. Dieses Feature ist in Azure SQL-Datenbank beim Datenbank-Kompatibilitätsgrad 150 für alle Bereitstellungsmodelle ebenfalls aktiviert.  Vor der Einführung dieses Features, konnte das Verweisen auf eine temporäre Tabelle mit einer DML-Anweisung (`SELECT`, `INSERT`, `UPDATE`, `DELETE`) zu einer Neukompilierung der DML-Anweisung bei jeder Ausführung führen, wenn die temporäre Tabelle in einem Batch im äußeren Bereich erstellt wurde. Durch dieses Update führt SQL Server zusätzliche einfache Überprüfungen durch, um unnötige Neukompilierungen zu vermeiden:
 
 - Überprüfung, ob es sich bei dem Modul im äußeren Bereich, das zur Kompilierzeit zur Erstellung der temporären Tabelle verwendet wurde, um das gleiche Modul handelt, das für nachfolgende Ausführungen verwendet wurde 
 - Nachverfolgung von Änderungen an der Datendefinitionssprache (Data Definition Language, DDL), die bei der ersten Kompilierung vorgenommen wurden, und Vergleich mit den DDL-Vorgängen für nachfolgende Ausführungen

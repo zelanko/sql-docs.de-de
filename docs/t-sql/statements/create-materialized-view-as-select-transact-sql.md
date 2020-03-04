@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fd41b851ac7240ded3b0508f0bfd45fad0377c27
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75226736"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568073"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -50,7 +50,7 @@ ms.locfileid: "75226736"
 
 Dieser Artikel beschreibt die T-SQL-Anweisung CREATE MATERIALIZED VIEW AS SELECT in Azure SQL Data Warehouse für die Entwicklung von Lösungen. Der Artikel enthält auch Codebeispiele.
 
-In einer materialisierten Sicht werden die von der Sichtdefinitionsabfrage zurückgegebenen Daten beibehalten, und die Sicht wird automatisch aktualisiert, wenn Daten in den zugrunde liegenden Tabellen geändert werden.   Sie verbessert die Leistung komplexer Abfragen (in der Regel Abfragen mit Joins und Aggregationen) und bietet einfache Wartungsvorgänge.   Dank der Funktion zum automatischen Abgleich ihres Ausführungsplans muss eine materialisierte Sicht nicht in der Abfrage referenziert werden, damit der Optimierer die Sicht für Ersetzungen berücksichtigt.  Dadurch können Dateningenieure materialisierte Ansichten als Mechanismus zur Verbesserung der Antwortzeit von Abfragen implementieren, ohne die Abfragen ändern zu müssen.  
+In einer materialisierten Sicht werden die von der Sichtdefinitionsabfrage zurückgegebenen Daten beibehalten, und die Sicht wird automatisch aktualisiert, wenn Daten in den zugrunde liegenden Tabellen geändert werden.   Sie verbessert die Leistung komplexer Abfragen (in der Regel Abfragen mit Joins und Aggregationen) und bietet einfache Wartungsvorgänge.   Dank der Funktion zum automatischen Abgleich ihres Ausführungsplans muss eine materialisierte Sicht nicht in der Abfrage referenziert werden, damit der Optimierer die Sicht für Ersetzungen berücksichtigt.  Dadurch können Dateningenieure materialisierte Sichten als Mechanismus zur Verbesserung der Beantwortungszeit für Abfragen implementieren, ohne die Abfragen ändern zu müssen.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -104,31 +104,35 @@ Wenn MIN/MAX-Aggregate in der SELECT-Liste der Definition der materialisierten S
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- Die materialisierte Sicht wird bei einem UPDATE oder DELETE in den referenzierten Basistabellen deaktiviert.  Diese Einschränkung gilt nicht für INSERT-Vorgänge.  Um die materialisierte Sicht erneut zu aktivieren, führen Sie ALTER MATERIALIZED INDEX mit REBUILD aus.
+- Die materialisierte Sicht wird bei einem UPDATE oder DELETE in den referenzierten Basistabellen deaktiviert.  Diese Einschränkung gilt nicht für INSERT-Anweisungen.  Um die materialisierte Sicht erneut zu aktivieren, führen Sie ALTER MATERIALIZED INDEX mit REBUILD aus.
   
 ## <a name="remarks"></a>Bemerkungen
 
-Eine materialisierte Sicht in Azure Data Warehouse ähnelt in vielerlei Punkten einer indizierten Sicht in SQL Server.  Es gelten fast die gleichen Einschränkungen wie für eine indizierte Sicht (Details siehe [Erstellen indizierter Sichten](/sql/relational-databases/views/create-indexed-views)) – abgesehen davon, dass eine materialisierte Sicht Aggregatfunktionen unterstützt.   Nachfolgend werden einige weitere Überlegungen zu materialisierten Sichten aufgeführt.  
- 
+Eine materialisierte Sicht in Azure Data Warehouse ähnelt einer indizierten Sicht in SQL Server.  Es gelten fast die gleichen Einschränkungen wie für eine indizierte Sicht (Details siehe [Erstellen indizierter Sichten](/sql/relational-databases/views/create-indexed-views)) – abgesehen davon, dass eine materialisierte Sicht Aggregatfunktionen unterstützt.   
+
 Eine materialisierte Sicht unterstützt nur CLUSTERED COLUMNSTORE INDEX. 
 
 Eine materialisierte Sicht kann nicht auf andere Sichten verweisen.  
- 
-Materialisierte Sichten können für partitionierte Tabellen erstellt werden.  SPLIT/MERGE-Vorgänge werden für Tabellen unterstützt, die in materialisierten Sichten referenziert werden.  SWITCH wird nicht für Tabellen unterstützt, die in materialisierten Sichten referenziert werden. Bei einem Versuch der Verwendung wird dem Benutzer dieser Fehler angezeigt: `Msg 106104, Level 16, State 1, Line 9`
+
+Für Tabellen mit dynamischer Datenmaskierung (DDM) kann keine materialisierte Sicht erstellt werden, selbst wenn die DDM-Spalte nicht Teil der materialisierten Sicht ist.  Wenn eine Tabellenspalte Teil einer aktiven oder deaktivierten materialisierten Sicht ist, kann bei dieser Spalte keine DDM hinzugefügt werden.  
+
+Für Tabellen mit aktivierter Sicherheit auf Zeilenebene kann keine materialisierte Sicht erstellt werden.
+
+Materialisierte Sichten können für partitionierte Tabellen erstellt werden.  SPLIT/MERGE in Bezug auf Partitionen wird bei Basistabellen für materialisierte Sichten unterstützt. SWITCH in Bezug auf Partitionen wird nicht unterstützt.  
  
 ALTER TABLE SWITCH wird nicht für Tabellen unterstützt, die in materialisierten Sichten referenziert werden. Deaktivieren oder löschen Sie die materialisierte Sicht, bevor Sie ALTER TABLE SWITCH verwenden. In den folgenden Szenarien erfordert das Erstellen der materialisierten Sicht das Hinzufügen neuer Spalten zur materialisierten Sicht:
 
 |Szenario|Der materialisierten Sicht neu hinzuzufügende Spalten|Comment|  
 |-----------------|---------------|-----------------|
-|COUNT_BIG() fehlt in der SELECT-Liste der Definition einer materialisierten Sicht| COUNT_BIG (*) |Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich.|
+|COUNT_BIG() fehlt in der SELECT-Liste der Definition einer materialisierten Sicht.| COUNT_BIG (*) |Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich.|
 |SUM(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, und „a“ ist ein Ausdruck, der NULL-Werte zulässt. |COUNT_BIG (a) |Benutzer müssen der Definition der materialisierten Sicht den Ausdruck „a“ manuell hinzufügen.|
-|AVG(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, „a“ ist hierbei ein Ausdruck, der NULL-Werte zulässt.|SUM(a), COUNT_BIG(a)|Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich.|
-|STDEV(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, „a“ ist hierbei ein Ausdruck.|SUM(a), COUNT_BIG(a), SUM(square(a))|Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich. |
+|AVG(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, wobei „a“ ein Ausdruck ist.|SUM(a), COUNT_BIG(a)|Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich.|
+|STDEV(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, wobei „a“ ein Ausdruck ist.|SUM(a), COUNT_BIG(a), SUM(square(a))|Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich. |
 | | | |
 
 Nach ihrer Erstellung werden materialisierte Sichten in SQL Server Management Studio unterhalb des Ordners mit Sichten der Azure SQL Data Warehouse-Instanz angezeigt.
 
-Benutzer können [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) und [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) ausführen, um den von einer materialisierten Sicht verbrauchten Speicherplatz zu bestimmen.  
+Benutzer können [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) und [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) ausführen, um den von einer materialisierten Sicht verbrauchten Speicherplatz zu ermitteln.  
 
 Eine materialisierte Sicht kann über DROP VIEW gelöscht werden.  Sie können eine materialisierte Sicht mit ALTER MATERIALIZED VIEW deaktivieren oder neu erstellen.   
 

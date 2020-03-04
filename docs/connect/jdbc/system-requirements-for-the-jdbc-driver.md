@@ -1,7 +1,7 @@
 ---
 title: Systemanforderungen für den JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e9e74d080ed0e7cd91dcde6cbaa2ca2e32f04dc6
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 1a6aac999ef6877356f66f4db1d6d6763cc0f1ea
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004558"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903727"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Systemanforderungen für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,17 +47,17 @@ ms.locfileid: "77004558"
 
 **Microsoft JDBC-Treiber 8.2 für SQL Server:**  
 
-  Der Microsoft JDBC-Treiber 8.2 enthält in jedem Installationspaket drei JAR-Klassenbibliotheken: **mssql-jdbc-8.2.0.jre8.jar**, **mssql-jdbc-8.2.0.jre11.jar** und **mssql-jdbc-8.2.0.jre13.jar**.
+  Der JDBC-Treiber 8.2 enthält in jedem Installationspaket drei JAR-Klassenbibliotheken: **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** und **mssql-jdbc-8.2.1.jre13.jar**.
 
   Der JDBC-Treiber 8.2 ist für die Verwendung und Unterstützung aller wichtigen virtuellen Java-Computer konzipiert. Er wird jedoch nur für OpenJDK 1.8, OpenJDK 11.0, OpenJDK 13.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 und Azul Zulu JRE 13.0. getestet.
   
   Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den beiden im Microsoft JDBC-Treiber 8.2 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
   
-  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|BESCHREIBUNG|  
+  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|Beschreibung|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-8.2.0.jre8.jar|4,2|8|Erfordert die JRE-Version 1.8 (Java Runtime Environment). Bei Verwendung von JRE 1.7 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 8.2: Unterstützung für JDK 13, Always Encrypted mit Secure Enclaves und Leistungsverbesserungen für temporale Datentypen. |
-|mssql-jdbc-8.2.0.jre11.jar|4.3|11|Erfordert die JRE 11.0. Bei Verwendung von JRE 10.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 8.2: Unterstützung für JDK 13, Always Encrypted mit Secure Enclaves und Leistungsverbesserungen für temporale Datentypen. |
-|mssql-jdbc-8.2.0.jre13.jar|4.3|13|Erfordert die Java Runtime Environment (JRE) 13.0. Bei Verwendung von JRE 11.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 8.2: Unterstützung für JDK 13, Always Encrypted mit Secure Enclaves und Leistungsverbesserungen für temporale Datentypen. |
+|mssql-jdbc-8.2.1.jre8.jar|4,2|8|Erfordert die JRE-Version 1.8 (Java Runtime Environment). Bei Verwendung von JRE 1.7 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 8.2: Unterstützung für JDK 13, Always Encrypted mit Secure Enclaves und Leistungsverbesserungen für temporale Datentypen. |
+|mssql-jdbc-8.2.1.jre11.jar|4.3|11|Erfordert die JRE 11.0. Bei Verwendung von JRE 10.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 8.2: Unterstützung für JDK 13, Always Encrypted mit Secure Enclaves und Leistungsverbesserungen für temporale Datentypen. |
+|mssql-jdbc-8.2.1.jre13.jar|4.3|13|Erfordert die Java Runtime Environment (JRE) 13.0. Bei Verwendung von JRE 11.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 8.2: Unterstützung für JDK 13, Always Encrypted mit Secure Enclaves und Leistungsverbesserungen für temporale Datentypen. |
 
 
   Der JDBC-Treiber 8.2 steht auch im zentralen Maven-Repository zur Verfügung und kann einem Maven-Projekt hinzugefügt werden, indem Sie der Datei POM.XML den folgenden Code hinzufügen:  
@@ -66,7 +66,7 @@ ms.locfileid: "77004558"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
 </dependency>
 ```
 
@@ -127,7 +127,7 @@ ms.locfileid: "77004558"
   
   Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den beiden im Microsoft JDBC-Treiber 7.0 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
   
-  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|Beschreibung|  
+  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|BESCHREIBUNG|  
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-7.0.0.jre8.jar|4,2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Bei Verwendung von JRE 7.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 7.0: JDK 10-Unterstützung, aktualisierte Standardkonformitätsstufe in JDBC 4.2-Spezifikationen, Unterstützung von räumlichen Datentypen, cancelQueryTimeout-Verbindungseigenschaft, Methoden für Anforderungsgrenzen, useBulkCopyForBatchInsert-Verbindungseigenschaft, Datenermittlungs- und -klassifizierungsinformationen, UTF-8-Featureerweiterung und CityHash-Unterstützung |    
 |mssql-jdbc-7.0.0.jre10.jar|4.3|10|Erfordert die Java Runtime Environment (JRE) 10.0. Bei Verwendung von JRE 9.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 7.0: JDK 10-Unterstützung, aktualisierte Standardkonformitätsstufe in JDBC 4.2-Spezifikationen, Unterstützung von räumlichen Datentypen, cancelQueryTimeout-Verbindungseigenschaft, Methoden für Anforderungsgrenzen, useBulkCopyForBatchInsert-Verbindungseigenschaft, Datenermittlungs- und -klassifizierungsinformationen, UTF-8-Featureerweiterung und CityHash-Unterstützung |    
@@ -151,7 +151,7 @@ ms.locfileid: "77004558"
   
   Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den drei im Microsoft JDBC-Treiber 6.4 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
   
-  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|Beschreibung|  
+  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|BESCHREIBUNG|  
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-6.4.0.jre7.jar|4,1|7|Erfordert die Java-Laufzeitumgebung( JRE) Version 7.0. Bei Verwendung von JRE 6.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 6.4: Azure AD-Authentifizierung für Linux, Prinzipal/Kennwort-Methode für Kerberos, automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, eingeschränkte Kerberos-Delegierung, Abfragetimeout, Sockettimeout und Wiederverwendung des Handles für Prepared Statements |  
 |mssql-jdbc-6.4.0.jre8.jar|4,2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Bei Verwendung von JRE 7.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 6.4: Azure AD-Authentifizierung für Linux, Prinzipal/Kennwort-Methode für Kerberos, automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, eingeschränkte Kerberos-Delegierung, Abfragetimeout, Sockettimeout und Wiederverwendung des Handles für Prepared Statements |    
@@ -175,7 +175,7 @@ Der JDBC-Treiber 6.4 steht auch im zentralen Maven-Repository zur Verfügung und
   
  Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den beiden in den Microsoft JDBC-Treibern 6.0 und 4.2 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
   
-|JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|BESCHREIBUNG|  
+|JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|Beschreibung|  
 |---------|-----------------------------|----------------------|-----------------|
 |mssql-jdbc-6.2.2.jre7.jar|4,1|7|Erfordert die Java-Laufzeitumgebung( JRE) Version 7.0. Bei Verwendung von JRE 6.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 6.2: Azure AD-Authentifizierung für Linux, Prinzipal/Kennwort-Methode für Kerberos, automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, eingeschränkte Kerberos-Delegierung, Abfragetimeout, Sockettimeout und Wiederverwendung des Handles für Prepared Statements |  
 |mssql-jdbc-6.2.3.jre8.jar|4,2|8|Erfordert die Java-Laufzeitumgebung(JRE) Version 8.0. Bei Verwendung von JRE 7.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Neue Features in Version 6.2: Azure AD-Authentifizierung für Linux, Prinzipal/Kennwort-Methode für Kerberos, automatische Erkennung von REALM im SPN für domänenübergreifende Authentifizierung, eingeschränkte Kerberos-Delegierung, Abfragetimeout, Sockettimeout und Wiederverwendung des Handles für Prepared Statements|    
@@ -207,7 +207,7 @@ Der JDBC-Treiber 6.4 steht auch im zentralen Maven-Repository zur Verfügung und
   
  Der JDBC-Treiber 4.1 enthält in jedem Installationspaket eine JAR-Klassenbibliothek: **sqljdbc41.jar**.  
     
-|JAR|Beschreibung|  
+|JAR|BESCHREIBUNG|  
 |---------|-----------------|  
 |sqljdbc41.jar|Die Klassenbibliothek **sqljdbc41.jar** stellt Unterstützung für die JDBC 4.0-API bereit. Sie enthält außerdem alle Funktionen des JDBC 4.0-Treibers sowie die JDBC 4.0-API-Methoden. JDBC 4.1 wird nicht unterstützt (die Ausnahme „SQLFeatureNotSupportedException“ wird ausgelöst).<br /><br /> Die Klassenbibliothek **sqljdbc41.jar** erfordert JRE (Java Runtime Environment) Version 7.0. Bei Verwendung von **sqljdbc41.jar** mit JRE 6.0 und 5.0 wird eine Ausnahme ausgelöst.<br /><br /> 
   

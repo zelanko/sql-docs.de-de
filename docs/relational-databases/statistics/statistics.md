@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5245df31c2e3b31d95095fbb6770a786d4be6c03
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982805"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634800"
 ---
 # <a name="statistics"></a>Statistik
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,9 +50,9 @@ Zum Erstellen des Histogramms sortiert der Abfrageoptimierer die Spaltenwerte, b
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt das **Histogramm** aus den sortierten Spaltenwerten in drei Schritten:
 
-- **Initialisierung des Histogramms:** Im ersten Schritt wird eine Wertesequenz verarbeitet, die am Anfang der sortierten Menge beginnt, und bis zu 200 Werte von *range_high_key*, *equal_rows*, *range_rows*, und *distinct_range_rows* werden erfasst (*range_rows* und *distinct_range_rows* sind während dieses Schritts immer 0). Der erste Schritt ist abgeschlossen, wenn alle Eingaben erschöpft sind oder 200 Werte gefunden wurden. 
-- **Scannen mit Bucketzusammenführung:** Jeder zusätzliche Wert aus der führenden Spalte des Statistikschlüssels wird im zweiten Schritt in sortierter Reihenfolge verarbeitet. Jeder nachfolgende Wert wird entweder zum letzten Bereich hinzugefügt, oder es wird am Ende ein neuer Bereich erstellt (dies ist möglich, da die Eingabewerte sortiert sind). Wenn ein neuer Bereich erstellt wird, wird ein Paar der vorhandenen benachbarten Bereiche zu einem einzelnen Bereich reduziert. Dieses Bereichspaar wird ausgewählt, um den Verlust von Informationen zu minimieren. Diese Methode verwendet einen Algorithmus für die *maximale Differenz*, um die Anzahl von Schritten im Histogramm zu minimieren und gleichzeitig die Differenz zwischen den Begrenzungswerten zu maximieren. Die Anzahl von Schritten nach dem Reduzieren von Bereichen bleibt in diesem Schritt bei 200.
-- **Konsolidierung des Histogramms:** Im dritten Schritt können weitere Bereiche reduziert werden, wenn keine erhebliche Menge an Informationen verloren geht. Die Anzahl von Histogrammschritten kann geringer sein als die Anzahl unterschiedlicher Werte, auch bei Spalten mit weniger als 200 Grenzpunkten. Wenn jede Spalte mehr als 200 eindeutige Werte enthält, kann das Histogramm daher weniger als 200 Schritte enthalten. Für eine Spalte, die nur aus eindeutigen Werten besteht, enthält das konsolidierte Histogramm mindestens drei Schritte.
+- **Initialisierung des Histogramms:** Im ersten Schritt wird eine Wertesequenz verarbeitet, die am Anfang der sortierten Menge beginnt, und bis zu 200 Werte von *range_high_key*, *equal_rows*, *range_rows* und *distinct_range_rows* werden erfasst (*range_rows* und *distinct_range_rows* sind in diesem Schritts immer 0). Der erste Schritt ist abgeschlossen, wenn alle Eingaben erschöpft sind oder 200 Werte gefunden wurden. 
+- **Scannen mit Bucketzusammenführung:** Jeder zusätzliche Wert aus der führenden Spalte des Statistikschlüssels wird im zweiten Schritt in sortierter Reihenfolge verarbeitet. Jeder nachfolgende Wert wird entweder zum letzten Bereich hinzugefügt, oder es wird am Ende ein neuer Bereich erstellt (dies ist möglich, weil die Eingabewerte sortiert sind). Wenn ein neuer Bereich erstellt wird, wird ein Paar der vorhandenen benachbarten Bereiche zu einem einzelnen Bereich reduziert. Dieses Bereichspaar wird ausgewählt, um den Verlust von Informationen zu minimieren. Diese Methode verwendet einen Algorithmus für die *maximale Differenz*, um die Anzahl von Schritten im Histogramm zu minimieren und gleichzeitig die Differenz zwischen den Begrenzungswerten zu maximieren. Die Anzahl von Schritten nach dem Reduzieren von Bereichen bleibt in diesem Schritt bei 200.
+- **Konsolidierung des Histogramms:** Im dritten Schritt können weitere Bereiche reduziert werden, wenn dabei keine erhebliche Menge an Informationen verloren geht. Die Anzahl von Histogrammschritten kann geringer sein als die Anzahl unterschiedlicher Werte, auch bei Spalten mit weniger als 200 Grenzpunkten. Wenn jede Spalte mehr als 200 eindeutige Werte enthält, kann das Histogramm daher weniger als 200 Schritte enthalten. Für eine Spalte, die nur aus eindeutigen Werten besteht, enthält das konsolidierte Histogramm mindestens drei Schritte.
 
 > [!NOTE]
 > Wenn das Histogramm mithilfe eines Beispiels statt mit der Option „Fullscan“ erstellt wurde, werden die Werte von *equal_rows*, *range_rows*, *distinct_range_rows* und *average_range_rows* geschätzt und müssen keine ganzen Zahlen sein.
@@ -159,6 +159,9 @@ Weitere Informationen zur Steuerung von AUTO_UPDATE_STATISTICS finden Sie unter 
  Der Abfrageoptimierer erstellt bereits Statistiken in der folgenden Weise:  
   
 1.  Bei der Indexerstellung berechnet der Abfrageoptimierer Statistiken für Indizes, die sich auf Tabellen oder Sichten beziehen. Diese Statistiken werden für die Schlüsselspalten des Indexes erstellt. Wenn es sich um einen gefilterten Index handelt, erstellt der Abfrageoptimierer gefilterte Statistiken für die gleiche Teilmenge von Zeilen, die für den gefilterten Index angegeben wurden. Weitere Informationen zu gefilterten Indizes finden Sie unter [Erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md) und [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+
+    > [!NOTE]
+    > Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] werden Statistiken nicht durch das Scannen aller Zeilen in der Tabelle erstellt, wenn ein partitionierter Index erstellt oder neu erstellt wird. Der Abfrageoptimierer generiert stattdessen Statistiken mithilfe des Standardalgorithmus zur Stichprobenentnahme. Nachdem eine Datenbank mit partitionierten Indizes aktualisiert wurde, bemerken Sie möglicherweise einen Unterschied in den Histogrammdaten für diese Indizes. Diese Änderung des Verhaltens beeinträchtigt die Abfrageleistung möglicherweise nicht. Um Statistiken zu partitionierten Indizes durch das Scannen aller Zeilen in der Tabelle abzurufen, verwenden Sie `CREATE STATISTICS` oder `UPDATE STATISTICS` mit der `FULLSCAN`-Klausel. 
   
 2.  Der Abfrageoptimierer erstellt Statistiken für einzelne Spalten in Abfrageprädikaten, wenn [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) aktiviert ist.  
 
@@ -199,7 +202,7 @@ In diesem Beispiel verfügt das Statistikobjekt `LastFirst` über Dichten für d
 ### <a name="query-selects-from-a-subset-of-data"></a>Abfrage wählt aus einer Teilmenge von Daten aus  
 Wenn der Abfrageoptimierer Statistiken für einzelne Spalten und Indizes erstellt, berechnet er Statistiken für die Werte sämtlicher Zeilen. Wenn bei Abfragen aus einer Teilmenge von Zeilen ausgewählt wird und diese Teilmenge über eine eindeutige Datenverteilung verfügt, können Abfragepläne durch gefilterte Statistiken verbessert werden. Sie können gefilterte Statistiken erstellen, indem Sie die [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)-Anweisung mit der [WHERE](../../t-sql/queries/where-transact-sql.md)-Klausel verwenden, um den Filterprädikatausdruck zu definieren.  
   
-Durch die Verwendung von [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] beispielsweise gehört jedes Produkt in der `Production.Product`-Tabelle zu einer von vier Kategorien in der `Production.ProductCategory`-Tabelle: Fahrräder, Bauteile, Bekleidung und Zubehör. Jede Kategorie verfügt über eine andere Datenverteilung für das Gewicht: Die Gewichte der Fahrräder reichen von 13,77 bis 30,0, die Gewichte der Bauteile reichen von 2,12 bis 1050,00 mit einigen NULL-Werten, die Gewichte der Bekleidung sind alle NULL, und die Gewichte des Zubehörs sind ebenfalls NULL.  
+Beispielsweise gehört durch die Verwendung von [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] jedes Produkt in der `Production.Product`-Tabelle zu einer von vier Kategorien in der `Production.ProductCategory`-Tabelle: Fahrräder, Bauteile, Bekleidung und Zubehör. Jede Kategorie verfügt über eine andere Datenverteilung für das Gewicht: Die Gewichte der Fahrräder reichen von 13,77 bis 30,0, die Gewichte der Bauteile reichen von 2,12 bis 1050,00 mit einigen NULL-Werten, die Gewichte der Bekleidung sind alle NULL, und die Gewichte des Zubehörs sind ebenfalls NULL.  
   
 Bei den Fahrrädern liefern gefilterte Statistiken dem Abfrageoptimierer zu allen Fahrradgewichten genauere Statistikdaten und können die Abfrageplanqualität im Vergleich zu Tabellenstatistiken oder nicht vorhandenen Statistiken für die Weight-Spalte verbessern. Die Spalte mit dem Fahrradgewicht eignet sich besonders für gefilterte Statistiken, jedoch weniger für einen gefilterten Index, wenn nur relativ wenige Suchen nach Gewichtsangaben ausgeführt werden. Die Leistungsvorteile, die gefilterte Indizes bei der Suche bieten, können die zusätzlichen Kosten für Wartung und Speicher, die mit der Implementierung eines gefilterten Indexes in der Datenbank verbunden sind, jedoch nicht aufwiegen.  
   

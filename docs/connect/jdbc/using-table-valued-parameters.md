@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66d9c24a31002f0c991fbf1dfdd7210adbf53172
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74249712"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575333"
 ---
 # <a name="using-table-valued-parameters"></a>Verwenden von Tabellenwertparametern
 
@@ -32,7 +32,7 @@ Für den Zugriff auf Spaltenwerte in Tabellenwertparametern können Standard-SEL
   
  Weitere Informationen zu Tabellenwertparametern finden Sie in den folgenden Ressourcen.  
   
-| Resource                                                                                                             | Beschreibung                                                                         |
+| Resource                                                                                                             | BESCHREIBUNG                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [Tabellenwertparameter (Datenbankmodul)](https://go.microsoft.com/fwlink/?LinkId=98363) in der SQL Server-Onlinedokumentation | Beschreibt, wie Sie Tabellenwertparameter erstellen und verwenden.                             |
 | [Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkId=98364) in der SQL Server-Onlinedokumentation.                  | Beschreibt die benutzerdefinierten Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden. |
@@ -237,7 +237,7 @@ pStmt.execute();
 
 Diese Klasse repräsentiert Metadaten für eine Spalte. Sie wird in der ISQLServerDataRecord-Schnittstelle verwendet, um Spaltenmetadaten an den Tabellenwertparameter zu übergeben. Diese Klasse enthält folgende Methoden:  
 
-| Name                                                                                                                                                                             | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Name                                                                                                                                                                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public SQLServerMetaData(String columnName, int sqlType, int precision, int scale, boolean useServerDefault, boolean isUniqueKey, SQLServerSortOrder sortOrder, int sortOrdinal) | Initialisiert eine neue Instanz von SQLServerMetaData mit dem angegebenen Werten für Spaltenname, SQL-Typ, Genauigkeit, Dezimalstellen und Serverstandardwert. Diese Form des Konstruktors unterstützt Tabellenwertparameter: Sie können angeben, ob die Spalte im Tabellenwertparameter eindeutig ist, und Sie können die Sortierreihenfolge für die Spalte sowie die Ordnungszahl der Sortierspalte festlegen. <br/><br/>useServerDefault - – gibt an, ob diese Spalte den Serverstandardwert verwenden soll. Der Standardwert lautet „false“.<br>isUniqueKey – gibt an, ob die Spalte im Tabellenwertparameter eindeutig ist. Der Standardwert lautet „false“.<br>sortOrder  – gibt die Sortierreihenfolge für eine Spalte an. Der Standardwert lautet „SQLServerSortOrder.Unspecified“.<br>sortOrdinal – gibt die Ordnungszahl der Sortierspalte an. Die Werte für sortOrdinal beginnen bei 0, der Standardwert lautet „-1“. |
 | public SQLServerMetaData( String columnName, int sqlType)                                                                                                                        | Initialisiert unter Verwendung des Spaltennamens und des SQL-Typs eine neue Instanz von SQLServerMetaData.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -261,7 +261,7 @@ Eine Enumeration, die die Sortierreihenfolge definiert. Mögliche Werte: „Asce
 
 Diese Klasse repräsentiert eine In-Memory-Datentabelle, die mit Tabellenwertparametern verwendet werden soll. Diese Klasse enthält folgende Methoden:  
 
-| Name                                                          | Beschreibung                                          |
+| Name                                                          | BESCHREIBUNG                                          |
 | ------------------------------------------------------------- | ---------------------------------------------------- |
 | Public SQLServerDataTable()                                   | Initialisiert eine neue Instanz von SQLServerDataTable.    |
 | public Iterator<Entry\<Integer, Object[]>> getIterator()      | Ruft einen Iterator für die Zeilen der Datentabelle ab. |
@@ -275,7 +275,7 @@ Diese Klasse repräsentiert eine In-Memory-Datentabelle, die mit Tabellenwertpar
 
 Diese Klasse repräsentiert eine Spalte der In-Memory-Datentabelle, die durch SQLServerDataTable dargestellt wird. Diese Klasse enthält folgende Methoden:  
 
-| Name                                                       | Beschreibung                                                                      |
+| Name                                                       | BESCHREIBUNG                                                                      |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | public SQLServerDataColumn(String columnName, int sqlType) | Initialisiert unter Verwendung des Spaltennamens und des SQL-Typs eine neue Instanz von SQLServerDataColumn. |
 | public String getColumnName()                              | Ruft den Spaltennamen ab.                                                       |
@@ -285,7 +285,7 @@ Diese Klasse repräsentiert eine Spalte der In-Memory-Datentabelle, die durch SQ
 
 Diese Klasse repräsentiert eine Schnittstelle, die Benutzer zum Streamen von Daten in einen Tabellenwertparameter implementieren können. Diese Schnittstelle enthält folgende Methoden:  
   
-| Name                                                    | Beschreibung                                                                                             |
+| Name                                                    | BESCHREIBUNG                                                                                             |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | public SQLServerMetaData getColumnMetaData(int column); | Ruft die Spaltenmetadaten des angegebenen Spaltenindex ab.                                               |
 | public int getColumnCount();                            | Ruft die Gesamtanzahl von Spalten ab.                                                                  |
@@ -296,7 +296,7 @@ Diese Klasse repräsentiert eine Schnittstelle, die Benutzer zum Streamen von Da
 
 Die folgenden Methoden wurden dieser Klasse hinzugefügt, um die Übergabe von Tabellenwertparametern zu unterstützen.  
 
-| Name                                                                                                    | Beschreibung                                                                                                                                                                                                                                                                                                |
+| Name                                                                                                    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public final void setStructured(int parameterIndex, String tvpName, SQLServerDataTable tvpDataTable)    | Füllt einen Tabellenwertparameter mit einer Datentabelle auf. parameterIndex ist der Parameterindex, tvpName ist der Name des Tabellenwertparameters, und tvpDataTable ist das Quelldatentabellenobjekt.                                                                                                          |
 | public final void setStructured(int parameterIndex, String tvpName, ResultSet tvpResultSet)             | Füllt einen Tabellenwertparameter mit einem aus einer anderen Tabelle abgerufenen ResultSet auf. parameterIndex ist der Parameterindex, tvpName ist der Name des Tabellenwertparameters, und tvpResultSet ist das Quellresultsetobjekt.                                                                               |
@@ -306,7 +306,7 @@ Die folgenden Methoden wurden dieser Klasse hinzugefügt, um die Übergabe von T
 
 Die folgenden Methoden wurden dieser Klasse hinzugefügt, um die Übergabe von Tabellenwertparametern zu unterstützen.  
   
-| Name                                                                                                        | Beschreibung                                                                                                                                                                                                                                                                                                                      |
+| Name                                                                                                        | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public final void setStructured(String parameterName, String tvpName, SQLServerDataTable tvpDataTable)    | Füllt einen an eine gespeicherte Prozedur übergebenen Tabellenwertparameter mit einer Datentabelle auf. parameterName ist der Name des Parameters, tvpName ist der Name des Tabellenwertparametertyps, und tvpDataTable ist das Datentabellenobjekt.                                                                                                                 |
 | public final void setStructured(String parameterName, String tvpName, ResultSet tvpResultSet)             | Füllt einen an eine gespeicherte Prozedur übergebenen Tabellenwertparameter mit einem aus einer anderen Tabelle abgerufenen ResultSet auf. parameterName ist der Name des Parameters, tvpName ist der Name des Tabellenwertparametertyps, und tvpResultSet ist das Quellresultsetobjekt.                                                                              |

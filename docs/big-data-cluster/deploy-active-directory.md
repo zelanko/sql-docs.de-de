@@ -5,16 +5,16 @@ description: Erfahren Sie, wie Sie für einen SQL Server-Big Data-Cluster in ein
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544876"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200961"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus
 
@@ -311,6 +311,6 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - Der sichere AD-Modus funktioniert aktuell nur für `kubeadm`-Bereitstellungsumgebungen, nicht für AKS. Das Bereitstellungsprofil `kubeadm-prod` umfasst standardmäßig die Sicherheitsabschnitte.
 
-- Pro Domäne ist aktuell nur ein BDC zugelassen. Die Aktivierung mehrerer BDCs pro Domäne ist für eine zukünftige Version geplant.
+- Pro Domäne (Active Directory) ist aktuell nur ein BDC zulässig. Die Aktivierung mehrerer BDCs pro Domäne ist für eine zukünftige Version geplant.
 
 - Keine der AD-Gruppen, die in Sicherheitskonfigurationen angegeben werden, können auf DomainLocal begrenzt werden. Sie können den Bereich einer AD-Gruppe überprüfen, indem Sie [diese Anweisungen befolgen](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).

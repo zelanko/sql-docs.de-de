@@ -23,18 +23,21 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8dce4ae0ec739bad6df3ac064ca96d04e91dcf7
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
+ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558353"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180075"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-Diese Anweisung aktiviert mehrere Einstellungen für die Datenbankkonfiguration auf der Ebene **einzelner Datenbanken**. Sie ist in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verfügbar. Zu diesen Einstellungen zählen die folgenden:
+Dieser Befehl aktiviert mehrere Einstellungen für die Datenbankkonfiguration auf der Ebene **einzelner Datenbanken**. 
+
+Die folgenden Einstellungen werden in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] sowie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] unterstützt: 
 
 - Löschen des Prozedurcaches.
 - Festlegen des MAXDOP-Parameters auf einen beliebigen Wert (1,2, ...) für die primäre Datenbank, basierend auf dem, was am besten für diese bestimmte Datenbank ist, und Festlegen eines anderen Werts (z. B. 0) für alle verwendeten sekundären Datenbanken (z. B. für Berichtsabfragen).
@@ -54,11 +57,16 @@ Diese Anweisung aktiviert mehrere Einstellungen für die Datenbankkonfiguration 
 - Aktivieren oder Deaktivieren des letzten tatsächlichen Ausführungsplans in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)
 - Geben Sie die Anzahl der Minuten an, in denen ein angehaltener fortsetzbarer Indexvorgang angehalten wird, bevor er von der SQL Server-Engine automatisch abgebrochen wird.
 
+Diese Einstellung ist nur in Azure Synapse Analytics (ehemals SQL DW) verfügbar.
+- Festlegen des Kompatibilitätsgrads von Benutzerdatenbanken
+
 ![Linksymbol](../../database-engine/configure-windows/media/topic-link.gif "Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 
 ```
+-- Syntax for SQL Server and Azure SQL Database
+
 ALTER DATABASE SCOPED CONFIGURATION
 {
     { [ FOR SECONDARY] SET <set_options>}
@@ -101,6 +109,21 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_INTERLEAVED_EXECUTION_TVF` wurde in `INTERLEAVED_EXECUTION_TVF` geändert
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` wurde in `BATCH_MODE_MEMORY_GRANT_FEEDBACK` geändert
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` wurde in `BATCH_MODE_ADAPTIVE_JOINS` geändert
+
+```
+-- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+
+ALTER DATABASE SCOPED CONFIGURATION
+{
+    SET <set_options>
+}
+[;]
+
+< set_options > ::=
+{
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+}
+```
 
 ## <a name="arguments"></a>Argumente
 
@@ -373,6 +396,18 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 **GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Ermöglicht es Ihnen, zu steuern, ob ein Prädikat für die [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) (Row-Level Security, RLS) die Kardinalität des Ausführungsplans für die gesamte Benutzerabfrage beeinflusst. Wenn für ISOLATE_SECURITY_POLICY_CARDINALITY ON festgelegt ist, beeinflussen RLS-Prädikate die Kardinalität von Ausführungsplänen nicht. Angenommen, es gibt eine Tabelle mit 1 Million Zeilen und ein RLS-Prädikat, das das Ergebnis für einen bestimmten Benutzer, der die Abfrage durchführt, auf 10 Zeilen beschränkt. Wenn für diese datenbankweite Konfiguration OFF festgelegt ist, schätzt dieses Prädikat die Kardinalität auf 10. Wenn für diese datenbankweite Konfiguration ON festgelegt ist, schätzt die Abfrageoptimierung die Anzahl der Zeilen auf 1 Million. Für die meisten Arbeitsauslastungen wird empfohlen, den Standardwert zu verwenden.
+
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+
+**GILT FÜR**: nur Azure Synapse Analytics (ehemals SQL DW)
+
+Dieses Argument legt fest, dass das Transact-SQL- und Abfrageverarbeitungsverhalten jeweils mit der angegebenen Version der Datenbank-Engine kompatibel sein muss.  Sobald es festgelegt ist, werden beim Ausführen von Abfragen für die entsprechende Datenbank nur die kompatiblen Features ausgeführt.  Beim Erstellen einer Datenbank wird für den Kompatibilitätsgrad standardmäßig AUTO festgelegt.  Der Kompatibilitätsgrad wird auch nach dem Anhalten/Fortsetzen einer Datenbank sowie Sicherungs-/Wiederherstellungsvorgängen beibehalten. 
+
+|Kompatibilitätsgrad    |   Kommentare|  
+|-----------------------|--------------|
+|**AUTO**| Standard.  Der Wert entspricht dem zuletzt unterstützten Kompatibilitätsgrad.|
+|**10**| Bei diesem Wert wird das Transact-SQL- und Abfrageverarbeitungsverhalten ausgeführt, bevor Kompatibilitätsgradunterstützung eingeführt wird.|
+|**20**| Hierbei handelt es sich um den ersten Kompatibilitätsgrad mit geschlossenem Transact-SQL- und Abfrageverarbeitungsverhalten. |
 
 ## <a name="Permissions"></a> Berechtigungen
 

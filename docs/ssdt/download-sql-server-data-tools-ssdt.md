@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 97f4ebef586d7e0deb77f753ff264120f97cef5a
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 6be69f873785f413b4edddf42f303e8eb7d4b14c
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544908"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652939"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Herunterladen von SQL Server Data Tools (SSDT) für Visual Studio 2015
 
@@ -32,13 +32,16 @@ ms.locfileid: "77544908"
 
 Die wichtigsten SSDT-Funktionen zum Erstellen von Datenbankprojekten sind weiterhin in Visual Studio enthalten.
 
-In Visual Studio 2019 wurde die erforderliche Funktionalität zur Unterstützung von Analysis Services-, Integration Services- und Reporting Services-Projekten ausschließlich in die jeweiligen Visual Studio-Erweiterungen (VSIX) verlagert. Es ist keine eigenständige SSDT-Installation mehr erforderlich.
+In Visual Studio 2019 wurde die erforderliche Funktionalität zur Unterstützung von Analysis Services-, Integration Services- und Reporting Services-Projekten ausschließlich in die jeweiligen Visual Studio-Erweiterungen (VSIX) verlagert.
+
+> [!NOTE]
+> Es gibt kein eigenständiges SSDT-Installationsprogramm für Visual Studio 2019.
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Installieren von SSDT mit Visual Studio 2019
 
 Wenn Visual Studio 2019 bereits installiert ist, können Sie [die Liste der Workloads bearbeiten](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019), um SSDT einzuschließen.
 
-* Wählen Sie für SQL-Datenbank-Projekte **SQL Server Data Tools** unter **Datenspeicherung und -verarbeitung** aus.
+* Klicken Sie für SQL-Datenbank-Projekte unter **Datenspeicherung und -verarbeitung** auf **SQL Server Data Tools**.
 
    ![Workload „Datenspeicherung und -verarbeitung“](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
@@ -46,7 +49,7 @@ Wenn Visual Studio 2019 bereits installiert ist, können Sie [die Liste der Work
 
 Falls Sie Visual Studio 2019 nicht installiert haben, können Sie [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/) herunterladen und installieren. 
 
-* Wählen Sie für SQL-Datenbank-Projekte **SQL Server Data Tools** während der Installation in der Workloadliste unter **Datenspeicherung und -verarbeitung** aus.
+* Klicken Sie für SQL-Datenbank-Projekte während der Installation in der Workloadliste unter **Datenspeicherung und -verarbeitung** auf **SQL Server Data Tools**.
 
 * Für Analysis Services-, Integration Services- oder Reporting Services-Projekte können Sie die entsprechenden [Erweiterungen](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) über *Extras > Erweiterungen und Updates* oder über den [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) installieren.
 
@@ -56,7 +59,7 @@ Falls Sie Visual Studio 2019 nicht installiert haben, können Sie [Visual Studi
 
 Ab Visual Studio 2017 wurde die Funktionalität zum Erstellen von Datenbankprojekten in die Visual Studio-Installation integriert. Es ist nicht erforderlich, den eigenständigen SSDT-Installer zu installieren, um die Kernoberfläche von SSDT zu nutzen.
 
-Zum Erstellen von Integration Services-, Analysis Services- oder Reporting Services-Projekten benötigen Sie jedoch weiterhin den eigenständigen SSDT-Installer.
+Zum Erstellen von Analysis Services-, Integration Services- oder Reporting Services-Projekten benötigen Sie jedoch weiterhin das eigenständige SSDT-Installationsprogramm.
 
 ### <a name="install-ssdt-with-visual-studio-2017"></a>Installieren von SSDT mit Visual Studio 2017
 

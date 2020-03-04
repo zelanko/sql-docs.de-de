@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ece6ef614e336b2478779107a4e4f37d2903841a
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70846736"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705865"
 ---
 # <a name="replication-merge-agent"></a>Replikationsmerge-Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,8 @@ replmerg [-?]
 [-SubscriberSecurityMode [0|1]]  
 [-SubscriberType [0|1|2|3|4|5|6|7|8|9]]  
 [-SubscriptionType [0|1|2]]  
-[-SyncToAlternate [0|1]  
+[-SyncToAlternate [0|1]]  
+[-T [101|102]]  
 [-UploadGenerationsPerBatch upload_generations_per_batch]  
 [-UploadReadChangesPerBatch upload_read_changes_per_batch]  
 [-UploadWriteChangesPerBatch upload_write_changes_per_batch]  
@@ -183,7 +184,7 @@ replmerg [-?]
   
  Gibt den Typ des Datenaustauschs während der Synchronisierung an. Folgende Typen sind möglich:  
   
-|Wert von ExchangeType|Beschreibung|  
+|Wert von ExchangeType|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |**1**|Der Agent soll Datenänderungen vom Abonnenten auf den Verleger hochladen.|  
 |**2**|Der Agent soll Datenänderungen vom Verleger auf den Abonnenten herunterladen.|  
@@ -202,7 +203,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  Gibt die Konvergenzebene an, die der Merge-Agent verwenden soll. Die folgenden Werte sind möglich:  
   
-|Wert von ForceConvergenceLevel|Beschreibung|  
+|Wert von ForceConvergenceLevel|BESCHREIBUNG|  
 |---------------------------------|-----------------|  
 |**0** (Standardwert)|Standard. Führt einen standardmäßigen Mergevorgang ohne zusätzliche Konvergenz aus.|  
 |**1**|Erzwingt die Konvergenz für alle Generierungen.|  
@@ -223,7 +224,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  Gibt den Umfang des Verlaufs an, der während eines Mergevorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
   
-|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Beschreibung|  
+|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
 |**0**|Protokolliert die abschließende Agent-Statusmeldung, abschließende Sitzungsdetails und ggf. aufgetretene Fehler.|  
 |**1**|Protokolliert zusätzlich zur abschließenden Agent-Statusmeldung, zu abschließenden Sitzungsdetails und ggf. aufgetretenen Fehlern inkrementelle Sitzungsdetails zu jedem Sitzungsstatus, u. a. den Prozentsatz der Fertigstellung.|  
@@ -328,7 +329,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  Gibt an, ob eine Abonnentendatenbank vorhanden ist.  
   
-|Wert von SubscriberDBAddOption|Beschreibung|  
+|Wert von SubscriberDBAddOption|BESCHREIBUNG|  
 |---------------------------------|-----------------|  
 |**0**|Die vorhandene Datenbank wird verwendet (Standard).|  
 |**1**|Eine neue, leere Abonnentendatenbank wird erstellt.|  
@@ -358,7 +359,10 @@ replmerg [-?]
   
  **-SyncToAlternate** [ **0|1**]  
  Gibt an, ob der Merge-Agent eine Synchronisierung zwischen einem Abonnenten und einem alternativen Verleger ausführt. Der Wert **1** gibt an, dass es sich um einen alternativen Verleger handelt. Die Standardeinstellung ist **0**.  
-  
+ 
+ **-T** [**101|102**]  
+ Ablaufverfolgungsflags, die zusätzliche Funktionen für den Merge-Agent ermöglichen. Ein Wert von **101** aktiviert zusätzliche ausführliche Protokollierungsinformationen, die Ihnen dabei helfen, zu bestimmen, wie viel Zeit jeder Schritt des Synchronisierungsprozesses für die Mergereplikation erfordert. Ein Wert von **102** schreibt die gleiche Statistik wie das Ablaufverfolgungsflag **101**, jedoch wird diese stattdessen in die Tabelle <Distribution server>..msmerge_history geschrieben. Aktivieren Sie die Merge-Agent-Protokollierung, wenn Sie das Ablaufverfolgungsflag 101 verwenden, indem Sie die Parameter `-output` und `-outputverboselevel` verwenden.  Fügen Sie beispielsweise dem Merge-Agent die folgenden Parameter hinzu, und starten Sie den Agent neu: `-T 101, -output, -outputverboselevel` 
+ 
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  Die Anzahl von Generierungen, die in einem einzigen Batch verarbeitet werden sollen, während Änderungen vom Abonnenten auf den Verleger hochgeladen werden. Eine Generierung ist als logische Gruppe von Änderungen pro Artikel definiert. Der Standardwert für eine zuverlässige Kommunikationsverbindung beträgt **100**. Der Standardwert für eine unzuverlässige Kommunikationsverbindung beträgt **1**.  
   
@@ -394,7 +398,12 @@ replmerg [-?]
   
  Führen Sie zum Starten des Merge-Agents von der Eingabeaufforderung **replmerg.exe** aus. Informationen hierzu finden Sie im [Abschnitt zu den ausführbaren Dateien von Replikations-Agents](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
+ ### <a name="troubleshooting-merge-agent-performance"></a>Problembehandlung der Leistung des Merge-Agents 
  Der Merge-Agent-Verlauf für die aktuelle Sitzung wird im kontinuierlichen Modus nicht entfernt. Ein lang ausgeführter Agent kann zu vielen Einträgen in den Merge-Verlaufstabellen führen, was sich auf die Leistung auswirken kann. Wechseln Sie zur Behebung dieses Problems zum geplanten Modus, oder verwenden Sie weiterhin den kontinuierlichen Modus. Erstellen Sie dann jedoch einen dedizierten Auftrag, um den Merge-Agent in regelmäßigen Abständen neu zu starten, oder reduzieren Sie die Ausführlichkeit der Verlaufsebene, um die Anzahl der Zeilen und damit die Auswirkungen auf die Leistung zu reduzieren.  
+ 
+  In einigen Fällen kann es einige Zeit dauern, bis der Merge-Agent Änderungen repliziert. Verwenden Sie das Ablaufverfolgungsflag 101 zusammen mit der Merge-Agent-Protokollierung, um zu bestimmen, welche Schritt im Synchronisierungsprozess der Mergereplikation am längsten braucht. Verwenden Sie dazu die folgenden Parameter als Merge-Agentparameter, und starten Sie den Agent neu:   <br/>-T 101   <br/>-output   <br/>-outputverboselevel
+
+Wenn Sie zusätzlich Statistiken in die Tabelle <Distribution server>..msmerge_history schreiben müssen, verwenden Sie das Ablaufverfolgungsflag -T 102.
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replikations-Agent-Verwaltung](../../../relational-databases/replication/agents/replication-agent-administration.md)  

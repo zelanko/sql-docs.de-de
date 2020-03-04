@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7bf485ec7f6295ed3ee0f9ca04e3f088e5d9cb5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74687374"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176690"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -346,7 +346,7 @@ Es wird empfohlen, Daten in Blockgrößen einzufügen bzw. zu aktualisieren, die
   
 Wenn in einer OUTPUT-Klausel auf die von der **\.WRITE**-Klausel geänderte Spalte verwiesen wird, wird der vollständige Wert der Spalte – entweder das vorherige Image in **deleted.** _column\_name_ oder das endgültige Image in **inserted.** _column\_name_ – an die angegebene Spalte in der Tabellenvariable zurückgegeben. Weitere Informationen finden Sie unten im Beispiel R.  
   
-Verwenden Sie **STUFF &#40;Transact-SQL&#41;\., um die gleiche Funktionalität der** [WRITE](../../t-sql/functions/stuff-transact-sql.md)-Klausel mit anderen Zeichen- oder binären Datentypen zu erzielen.  
+Verwenden Sie [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md), um die gleiche Funktionalität der **\.WRITE**-Klausel mit anderen Zeichen- oder binären Datentypen zu erzielen.  
   
 ### <a name="updating-user-defined-type-columns"></a>Aktualisieren von Spalten mit benutzerdefiniertem Datentyp  
  Sie können Werte in benutzerdefinierten Spalten auf eine der folgenden Arten aktualisieren:  
@@ -461,7 +461,7 @@ ID     Value
  Eine UPDATE-Anweisung ruft immer eine exklusive (X) Sperre für die von ihr geänderte Tabelle ab und hält diese Sperre bis zum Abschluss der Transaktion aufrecht. Bei einer exklusiven Sperre können keine anderen Transaktionen Daten ändern. Sie können Tabellenhinweise angeben, um dieses Standardverhalten für die Dauer der UPDATE-Anweisung zu überschreiben, indem Sie eine andere Sperrmethode angeben. Es wird jedoch empfohlen, dass Hinweise nur von erfahrenen Entwicklern und Datenbankadministratoren und nur als letzte Möglichkeit verwendet werden. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
- Die UPDATE-Anweisung wird protokolliert; Teilupdates von Datentypen mit umfangreichen Werten, welche die **.** WRITE-Klausel verwenden, werden allerdings nur minimal protokolliert. Weitere Informationen finden Sie im vorherigen Abschnitt „Datentypen“ unter „Aktualisieren von Datentypen mit umfangreichen Werten“.  
+ Die UPDATE-Anweisung wird protokolliert. Teilupdates von Datentypen mit umfangreichen Werten, welche die **\.WRITE**-Klausel verwenden, werden allerdings nur minimal protokolliert. Weitere Informationen finden Sie im vorherigen Abschnitt „Datentypen“ unter „Aktualisieren von Datentypen mit umfangreichen Werten“.  
   
 ## <a name="security"></a>Sicherheit  
   
@@ -1067,7 +1067,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="ad-using-a-simple-update-statement"></a>AD. Verwenden einer einfachen UPDATE-Anweisung  
  Im folgenden Beispiel wird gezeigt, welche Auswirkungen es auf sämtliche Zeilen haben kann, wenn für die Angabe der zu aktualisierenden Zeile (oder Zeilen) keine WHERE-Klausel verwendet wird.  

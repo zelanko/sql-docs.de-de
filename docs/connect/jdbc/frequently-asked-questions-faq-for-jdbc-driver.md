@@ -1,7 +1,7 @@
 ---
 title: Häufig gestellte Fragen (FAQ) zum JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1055b9b0422073d7b9875c748dcfe889af053dc2
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: e982c4b90c1c856d67720301fdf13595872b18c2
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004622"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903617"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Häufig gestellte Fragen (FAQ) zum JDBC-Treiber
 
@@ -39,9 +39,9 @@ Der Microsoft JDBC-Treiber 8.2 unterstützt die JDBC-Spezifikationen 4.2 sowie
 
 | JAR                        | JDBC-Spezifikation            | JDK-Version |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.0.jre13.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.0.jre11.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Der Microsoft JDBC-Treiber 7.4 unterstützt die JDBC-Spezifikationen 4.2 sowie 4.3 (teilweise), und das Installationspaket enthält drei JAR-Klassenbibliotheken:
@@ -124,6 +124,7 @@ Die verfügbaren Authentifizierungsoptionen sind in der folgenden Tabelle aufgel
 | Nicht-Windows-System | Reine Java Kerberos                    |
 | Nicht-Windows-System | SQL Server                            |
 | Nicht-Windows-System | Azure Active Directory-Authentifizierung |
+| Nicht-Windows-System | NTLM                                  |
 | Windows     | Reine Java Kerberos                    |
 | Windows     | SQL Server                            |
 | Windows     | Kerberos mit NTLM als Backup             |
