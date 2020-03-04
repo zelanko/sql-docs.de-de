@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 15d27881378a88c8f4ae6d65640be6218ecd3530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 15049436b0d1769361ae1cfc47b52bfb503ba763
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632767"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256877"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -44,10 +44,26 @@ ms.locfileid: "73632767"
 |group_name|**sysname** |Bei Anforderungen, die Ressourcen verwenden, ist group_name der Name der Arbeits Auslastungs Gruppe, unter der die Anforderung ausgeführt wird.  Wenn die Anforderung keine Ressourcen verwendet, ist group_name NULL.</br>Gilt für: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|Für Anforderungen, die Ressourcen verwenden, den Namen des Klassifizierers, der zum Zuweisen von Ressourcen und Wichtigkeit verwendet wird.||
 |resource_allocation_percentage|**Dezimalzahl (5, 2)**|Die prozentuale Menge der Ressourcen, die der Anforderung zugeordnet sind.</br>Gilt für: Azure SQL Data Warehouse|
-|result_set_cache|**bit**|Gibt an, ob eine abgeschlossene Abfrage ein Ergebnis Cache Treffer (1) oder nicht (0) war. </br>Gilt für: Azure SQL Data Warehouse|0, 1|
+|result_set_cache|**bit**|Erläutert, ob für eine abgeschlossene Abfrage der resultsetcache verwendet wurde.  </br>Gilt für: Azure SQL Data Warehouse| 1 = resultsetcache-Treffer </br> 0 = resultsetcache-Fehler </br> Negative Werte = Gründe, warum das Zwischenspeichern von Resultsets nicht verwendet wurde.  Weitere Informationen finden Sie im Abschnitt "Hinweise".|
 ||||
   
+## <a name="remarks"></a>Bemerkungen 
  Informationen über die maximale Anzahl von Zeilen, die in dieser Sicht beibehalten werden, finden Sie im Abschnitt "Metadaten" im Thema [Kapazitäts Limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
+
+ Der result_set_cache ist eine Bitmaske der Verwendung von resultsetcache einer Abfrage.  Diese Spalte kann [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt mindestens eines der folgenden Werte:  
+  
+|value|BESCHREIBUNG|  
+|-----------|-----------------|  
+|**1**|Resultsetcache-Treffer|  
+|-**0x00**|Resultsetcache-Fehler|  
+|-**0x01**|Das Zwischenspeichern von Resultsets ist für die Datenbank deaktiviert.|  
+|-**0x02**|Das Zwischenspeichern von Resultsets ist für die Sitzung deaktiviert. | 
+|-**0x04**|Das Zwischenspeichern von Resultsets ist deaktiviert, weil keine Datenquellen für die Abfrage verfügbar sind.|  
+|-**0x08**|Das Zwischenspeichern von Resultsets ist aufgrund von Sicherheits Prädikaten auf Zeilenebene deaktiviert.|  
+|-**0x10**|Das Zwischenspeichern von Resultsets ist aufgrund der Verwendung der Systemtabelle, der temporären Tabelle oder der externen Tabelle in der Abfrage deaktiviert.|  
+|-**0x20**|Das Zwischenspeichern von Resultsets ist deaktiviert, da die Abfrage Lauf Zeitkonstanten, benutzerdefinierte Funktionen oder nicht deterministische Funktionen enthält.|  
+|-**0x40**|Das Zwischenspeichern von Resultsets ist deaktiviert, da die geschätzte Größe des Resultsets zu groß ist (> 1 Million Zeilen).|  
+|-**0x80**|Das Zwischenspeichern von Resultsets ist deaktiviert, da das Resultset Zeilen mit großer Größe (>64 KB) enthält.|  
   
 ## <a name="permissions"></a>Berechtigungen
 
