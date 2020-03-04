@@ -58,7 +58,7 @@ WITH IDENTITY = 'identity_name'
 > [!IMPORTANT]
 > Wenn eine Shared Access Signature (SAS) verwendet wird, muss dieser Name dem Containerpfad zugeordnet werden können, mit „https“ beginnen und einen Schrägstrich enthalten. Siehe [Beispiel D](#d-creating-a-credential-using-a-sas-token).
 
-IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Wenn die Anmeldeinformationen zum Zugreifen auf Azure Key Vault verwendet werden, ist **IDENTITY** der Name des Schlüsseltresors. Weitere Informationen finden Sie unten im Beispiel C. Wenn die Anmeldeinformationen eine Shared Access Signature (SAS) verwenden, lautet **IDENTITY***SHARED ACCESS SIGNATURE*. Siehe Beispiel D.
+IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Wenn die Anmeldeinformationen zum Zugreifen auf Azure Key Vault verwendet werden, ist **IDENTITY** der Name des Schlüsseltresors. Weitere Informationen finden Sie unten im Beispiel C. Wenn die Anmeldeinformationen eine Shared Access Signature (SAS) verwenden, lautet **IDENTITY** *SHARED ACCESS SIGNATURE*. Siehe Beispiel D.
 
 > [!IMPORTANT]
 > Azure SQL-Datenbank unterstützt nur Azure Key Vault- und Shared Access Signature-Identitäten. Windows-Benutzeridentitäten werden nicht unterstützt.
