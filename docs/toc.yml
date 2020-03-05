@@ -8520,8 +8520,6 @@
                 - name: Abfragen und Text-Editoren
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
-                    - name: Abfrage-Editor der Datenbank-Engine
-                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: XML-Editor
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: Farbcodierung im Abfrage-Editor
@@ -9023,6 +9021,8 @@
               items:
                 - name: F1-Hilfe für Serververbindungen (SSMS)
                   href: ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+                - name: Abfrage-Editor der Datenbank-Engine
+                  href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                 - name: Mit Microsoft Azure Storage verbinden
                   href: ssms/f1-help/connect-to-microsoft-azure-storage.md
                 - name: Herstellen einer Verbindung mit einer beliebigen SQL Server-Komponente aus SQL Server Management Studio
