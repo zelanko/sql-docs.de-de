@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632796"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288981"
 ---
 # <a name="start-sql-server-management-studio"></a>Starten von SQL Server Management Studio
   Zu Beginn dieses Lernprogramms geht es hauptsächlich um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "73632796"
   
     > [!NOTE]  
     >  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist nicht standardmäßig installiert. Wenn [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht verfügbar ist, installieren Sie es, indem Sie Setup ausführen. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ist in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]nicht verfügbar. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express steht als kostenloser Download im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=7593)zur Verfügung, verfügt aber über eine andere Benutzeroberfläche als in diesem Tutorial beschrieben.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist nicht standardmäßig installiert. Wenn [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht verfügbar ist, installieren Sie es, indem Sie Setup ausführen. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ist in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]nicht verfügbar. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express steht als kostenloser Download im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=14630)zur Verfügung, verfügt aber über eine andere Benutzeroberfläche als in diesem Tutorial beschrieben.  
   
 2.  Überprüfen Sie im Dialogfeld **Verbindung mit dem Server herstellen** die Standardeinstellungen, und klicken Sie dann auf **Verbinden**. Damit die Verbindung hergestellt werden kann, muss das Feld **Servername** den Namen des Computers enthalten, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Wenn es sich bei um eine benannte Instanz handelt, sollte das Feld **Server Name** auch den Instanznamen im Format \< *computer_name*>\\<*instance_name*> enthalten.  
   

@@ -10,19 +10,19 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632716"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280917"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Lektion 1: Erstellen von Datenbankobjekten
   In dieser Lektion erfahren Sie, wie Sie eine Datenbank erstellen, eine Tabelle in der Datenbank erstellen und dann auf die Daten in der Tabelle zugreifen und diese ändern können. Weil diese Lektion eine Einführung in die Verwendung von [!INCLUDE[tsql](../includes/tsql-md.md)]darstellt, werden viele der für diese Anweisungen verfügbaren Optionen nicht verwendet bzw. beschrieben.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen können wie folgt geschrieben und an die [!INCLUDE[ssDE](../includes/ssde-md.md)] übertragen werden:  
   
--   Mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In diesem Lernprogramm wird vorausgesetzt, dass Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]verwenden. Sie können jedoch auch [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express verwenden, das als kostenloser Download im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=7593)zur Verfügung steht.  
+-   Mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In diesem Lernprogramm wird vorausgesetzt, dass Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]verwenden. Sie können jedoch auch [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express verwenden, das als kostenloser Download im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=14630)zur Verfügung steht.  
   
 -   Mithilfe des [Hilfsprogramms sqlcmd](../tools/sqlcmd-utility.md).  
   
