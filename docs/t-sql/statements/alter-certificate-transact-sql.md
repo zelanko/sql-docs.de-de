@@ -87,7 +87,7 @@ ALTER CERTIFICATE certificate_name
  Wird nur ein Dateiname angegeben, wird die Datei in den Standardordner für Benutzerdaten für die Instanz gespeichert. Bei diesem Ordner kann es sich (muss aber nicht) um den Ordner „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA“ handeln. Für SQL Server Express LocalDB entspricht der Standardordner für Benutzerdaten für die Instanz dem von der Umgebungsvariable `%USERPROFILE%` angegebenen Pfad für das Konto, mit dem die Instanz erstellt wurde.  
   
  BINARY = '*private_key_bits*'  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Private Schlüsselbits, die als binäre Konstante angegeben sind. Diese Bits können in verschlüsselter Form vorhanden sein. Bei Verschlüsselung muss der Benutzer ein Entschlüsselungskennwort bereitstellen. Kennwortrichtlinienüberprüfungen werden für dieses Kennwort nicht ausgeführt. Die privaten Schlüsselbits müssen in einem PVK-Dateiformat vorliegen.  
   
