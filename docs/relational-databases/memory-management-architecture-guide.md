@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68115266"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338448"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 
@@ -47,7 +47,7 @@ Eines der vorrangigen Ziele beim Entwurf jeder Datenbanksoftware ist die Minimie
 > [!NOTE]
 > Bei einem stark ausgelasteten System mit ungenügendem Arbeitsspeicher können Abfragen mit Zusammenführungsjoin, Sortierung und Bitmap im Abfrageplan zum Löschen der Bitmap führen, wenn für die Abfragen nicht der für die Bitmap erforderliche minimale Arbeitsspeicher verfügbar ist. Dies kann die Abfrageleistung beeinträchtigen. Wenn zudem der Sortierprozess nicht genügend Arbeitsspeicher erhält, kann dies zu einer erhöhten Verwendung von Arbeitstabellen in der tempdb-Datenbank führen, was ein Anwachsen der tempdb-Datenbank bewirkt. Um dieses Problem zu lösen, müssen Sie physischen Arbeitsspeicher hinzufügen oder die Abfragen so optimieren, dass Sie einen anderen und schnelleren Abfrageplan verwenden.
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>Bereitstellen der maximalen Menge von Arbeitsspeicher für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+### <a name="providing-the-maximum-amount-of-memory-to-ssnoversion"></a>Bereitstellen der maximalen Menge von Arbeitsspeicher für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank-Engine die folgenden Mengen von Arbeitsspeicher bereitstellen. 
 
@@ -72,7 +72,7 @@ Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie f
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
-## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Änderungen an der Verwaltung des Arbeitsspeichers ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory-management-starting-with-sssql11"></a>Änderungen an der Verwaltung des Arbeitsspeichers ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 In früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) erfolgte die Speicherbelegung mithilfe von fünf verschiedenen Mechanismen:
 -  **Einzelseitenbelegung (Single-Page Allocator, SPA)** , die im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess nur Speicherbelegungen umfasst, die kleiner als oder gleich 8 KB waren. Die Konfigurationsoptionen *Max. Serverarbeitsspeicher (MB)* und *Min. Serverarbeitsspeicher (MB)* bestimmten die Grenzen des vom SPA verbrauchten physischen Arbeitsspeichers. Der Pufferpool bildete zugleich den Mechanismus für SPA und den größten Verbraucher für Einzelseitenbelegungen.
@@ -107,7 +107,7 @@ Dieses Verhalten wird normalerweise während folgender Vorgänge beobachtet:
 -  Ablaufverfolgungsvorgänge, die große Eingabeparameter speichern müssen.
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>Änderungen an "memory_to_reserve" ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>Änderungen an "memory_to_reserve" ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 In früheren Versionen von SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) reservierte die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherverwaltung einen Teil des virtuellen Prozessadressbereichs (Process Virtual Address Space, VAS) für die Verwendung durch die **Mehrseitenbelegung (Multi-Page Allocation, MPA)** , **CLR-Belegung**, Speicherbelegungen für **Threadstapel** im SQL Server-Prozess und **Direkte Belegungen von Windows (Direct Windows Allocations, DWA)** . Dieser Teil des virtuellen Adressbereichs wird auch als „Zu belassender Arbeitsspeicher“ oder „Nicht-Pufferpool“-Bereich bezeichnet.
 
 Der virtuelle Adressbereich, der für diese Zuteilungen reserviert ist, wird durch die Konfigurationsoption _**memory\_to\_reserve**_ festgelegt. Der von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendete Standardwert ist 256 MB. Verwenden Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Startparameter *-g*, um den Standardwert zu überschreiben. Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](../database-engine/configure-windows/database-engine-service-startup-options.md).
