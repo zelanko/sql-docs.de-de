@@ -35,14 +35,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70153824"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339021"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Verwenden des Wartungsplanungs-Assistenten
-  In diesem Thema wird beschrieben, wie Sie einen Einzelserver- oder Multiserver-Wartungsplan mithilfe des Wartungsplanungs-Assistenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erstellen. Der Wartungsplanungs-Assistent erstellt einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wartungsplan, den der-Agent regelmäßig ausführen kann. Dies ermöglicht es Ihnen, verschiedene Aufgaben für die Datenbankverwaltung in bestimmten Intervallen auszuführen, z. B. Sicherungen, Datenbankintegritätsprüfungen oder Datenbankstatistikupdates.  
+  In diesem Thema wird beschrieben, wie Sie einen Einzelserver- oder Multiserver-Wartungsplan mithilfe des Wartungsplanungs-Assistenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erstellen. Der Wartungsplanungs-Assistent erstellt einen Wartungsplan, den der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent regelmäßig ausführen kann. Dies ermöglicht es Ihnen, verschiedene Aufgaben für die Datenbankverwaltung in bestimmten Intervallen auszuführen, z. B. Sicherungen, Datenbankintegritätsprüfungen oder Datenbankstatistikupdates.  
   
  **In diesem Thema**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "70153824"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   [Erstellen eines Wartungsplans mit dem Wartungsplanungs-Assistenten in SQL Server Management Studio](#SSMSProcedure)  
   
@@ -429,7 +429,7 @@ ms.locfileid: "70153824"
      **Textberichte für Wartungspläne**  
      Löscht Textberichte über zuvor ausgeführte Wartungspläne.  
   
-     **Dateispeicherort**  
+     **Datei Speicherort**  
      Geben Sie den Pfad der zu löschenden Dateien an.  
   
      **Bestimmte Datei löschen**  

@@ -29,11 +29,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62519163"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339138"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Erstellen partitionierter Tabellen und Indizes
   Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]eine partitionierte Tabelle oder einen Index erstellen. Die Daten in partitionierten Tabellen und Indizes werden horizontal in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt werden können. Die Partitionierung kann bewirken, dass sich große Tabellen und Indizes besser verwalten und skalieren lassen.  
@@ -54,7 +54,7 @@ ms.locfileid: "62519163"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Erstellen einer partitionierten Tabelle oder eines partitionierten Indexes mit:**  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62519163"
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, in der Sie eine partitionierte Tabelle erstellen möchten und wählen Sie **Eigenschaften**aus.  
   
-2.  Wählen Sie im Dialogfeld **Datenbankeigenschaften -** *database_name* unter **Seite auswählen**die Option **Dateigruppen**aus.  
+2.  Klicken Sie im Dialogfeld **Datenbankeigenschaften -** *database_name* unter **Seite auswählen** auf die Option **Dateigruppen**.  
   
 3.  Klicken Sie unter **Zeilen**auf **Hinzufügen**. Geben Sie in der neuen Zeile den Dateigruppennamen ein.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62519163"
   
 #### <a name="to-create-a-partitioned-table"></a>So erstellen Sie eine partitionierte Tabelle  
   
-1.  Klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie partitionieren möchten, zeigen Sie auf **Speicher**, und klicken Sie dann auf **Partition erstellen...**.  
+1.  Klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie partitionieren möchten, zeigen Sie auf **Speicher**, und klicken Sie dann auf **Partition erstellen...** .  
   
 2.  Klicken Sie im **Assistent zum Erstellen von Partitionen**auf der Seite **Willkommen beim Assistenten zum Erstellen von Partitionen** auf **Weiter**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62519163"
      **Diese Tabelle der ausgewählten partitionierten Tabelle zuordnen**  
      Ermöglicht das Auswählen einer partitionierten Tabelle mit verwandten Daten, die über die Partitionierungsspalte mit einer anderen Tabelle verknüpft werden soll. Tabellen mit Partitionen, die über die Partitionierungsspalten verknüpft sind, können i. d. R. effizienter abgefragt werden.  
   
-     **Nicht eindeutige Indizes und eindeutige Indizes mit indizierter partitions Spalte im Speicher ausrichten**  
+     **Nicht eindeutige Indizes und eindeutige Indizes mit indizierter Partitionsspalte am Speicher ausrichten**  
      Richtet alle Indizes der Tabelle, die mit dem gleichen Partitionsschema partitioniert sind, aneinander aus. Wenn eine Tabelle und ihre Indizes aneinander ausgerichtet sind, können Sie Partitionen effektiver in und aus partitionierten Tabellen verschieben, da die Daten mit dem gleichen Algorithmus partitioniert sind.  
   
      Nach der Auswahl der Partitionierungsspalte und beliebiger anderer Optionen klicken Sie auf **Weiter**.  
@@ -141,10 +141,10 @@ ms.locfileid: "62519163"
   
      Die folgenden zusätzlichen Optionen sind auf dieser Seite verfügbar:  
   
-     **Grenzen festlegen...**  
+     **Begrenzungen festlegen...**  
      Öffnet das Dialogfeld **Begrenzungswerte festlegen** , um die Begrenzungswerte und Datumsbereiche für die Partitionen auszuwählen. Diese Option ist nur verfügbar, wenn Sie eine Partitionierungs Spalte ausgewählt haben, die einen der folgenden Datentypen `date`enthält `datetime`: `smalldatetime`, `datetime2`,, `datetimeoffset`oder.  
   
-     **Schätzen des Speichers**  
+     **Schätzungsspeicher**  
      Schätzt die Zeilenanzahl sowie den zum Speichern erforderlichen und verfügbaren Speicherplatz für jede für die Partitionen angegebene Dateigruppe. Diese Werte werden im Raster als schreibgeschützte Werte angezeigt.  
   
      Das Dialogfeld **Begrenzungswerte festlegen** berücksichtigt die folgenden zusätzlichen Optionen:  
@@ -201,7 +201,7 @@ ms.locfileid: "62519163"
   
                 -   Wenn Sie **Tag**auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am 15. ausgeführt wird, wählen Sie **Tag** aus, und geben Sie in das erste Feld „15“ und in das zweite Feld „2“ ein. Beachten Sie, dass die größte im zweiten Feld zulässige Zahl „99“ ist.  
   
-                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag** und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld „2“ ein. Sie können auch **erster**, **zweiter**, **dritter**oder **vierter**sowie bestimmte Wochentage (z.B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zulässige Zahl „99“ ist.  
+                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag** und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld „2“ ein. Sie können auch **ersten**, **zweiten**, **dritten**oder **vierten**sowie bestimmte Wochentage z. B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zulässige Zahl „99“ ist.  
   
         2.  Geben Sie unter **Häufigkeit pro Tag**an, wie oft der Auftragszeitplan an dem Tag wiederholt werden soll, an dem der Auftragszeitplan ausgeführt wird:  
   
@@ -409,11 +409,11 @@ ms.locfileid: "62519163"
   
  Weitere Informationen finden Sie unter  
   
--   [ALTER DATABASE-Optionen Datei und Dateigruppe &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
+-   [ALTER DATABASE-Optionen für Dateien und Dateigruppen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
   
--   [Erstellen einer Partitions Funktion &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)  
+-   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)  
   
--   [Erstellen eines Partitions Schemas &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)  
+-   [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)  
   
 -   [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  
   

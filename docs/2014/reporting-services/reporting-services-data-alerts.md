@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6478be669b53cd4d1a919ff6142be834de187dcc
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177130"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339278"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
   
@@ -144,7 +144,7 @@ ms.locfileid: "78177130"
 ### <a name="event-handlers-and-retry"></a>Ereignishandler und Wiederholung
  Die Ereignishandler sind:
 
-|Ereignishandler|Beschreibung|
+|Ereignishandler|BESCHREIBUNG|
 |-------------------|-----------------|
 |FireAlert|Klicken Sie im Datenwarnungs-Manager auf **Ausführen**  , um die unmittelbare Verarbeitung einer Warnungsdefinition zu initiieren.|
 |FireSchedule|Der SQL Server-Agent startet den Auftragszeitplan für eine Warnungsdefinition.|

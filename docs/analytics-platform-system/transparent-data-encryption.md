@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74399933"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339738"
 ---
 # <a name="transparent-data-encryption"></a>Transparente Datenverschlüsselung
 Sie können verschiedene Vorsichtsmaßnahmen zum Schützen der Datenbank treffen, z.B. Entwerfen eines sicheren Systems, Verschlüsseln vertraulicher Datenbestände und Erstellen einer Firewall für die Datenbankserver. In einem Szenario, in dem die physischen Medien (z. b. Laufwerke oder Sicherungsbänder) gestohlen werden, kann eine böswillige Partei jedoch die Datenbank einfach wiederherstellen oder Anfügen und die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  

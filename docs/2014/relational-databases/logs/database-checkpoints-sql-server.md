@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68206110"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339308"
 ---
 # <a name="database-checkpoints-sql-server"></a>Datenbankprüfpunkte (SQL Server)
   Dieses Thema bietet eine Übersicht über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankprüfpunkte. Ein *Prüfpunkt erstellt einen* bekannten fehlerfreien Punkt, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] von dem aus während der Wiederherstellung nach einem unerwarteten Herunterfahren oder Absturz Änderungen im Protokoll enthalten können.  
@@ -70,8 +70,7 @@ ms.locfileid: "68206110"
 |>0|Nicht zutreffend|Indirekte Prüfpunkte, deren Zielwiederherstellungszeit anhand der TARGET_RECOVERY_TIME-Einstellung definiert ist (in Sekunden ausgedrückt).|  
   
 ###  <a name="AutomaticChkpt"></a>Automatische Prüfpunkte  
- Ein automatischer Prüfpunkt tritt jedes Mal auf, wenn die Anzahl der Protokolldaten Sätze [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Anzahl der in der `recovery interval` Server Konfigurationsoption angegebenen Zeit erreicht. In jeder Datenbank ohne benutzerdefinierte Zielwiederherstellungszeit generiert [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatische Prüfpunkte. Die Häufigkeit automatischer Prüfpunkte hängt von der `recovery interval` erweiterten Server Konfigurationsoption ab, die die maximale Zeit angibt, die eine bestimmte Serverinstanz zum Wiederherstellen einer Datenbank während eines Systemneustarts verwenden soll. 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] schätzt die maximale Anzahl an Protokolldatensätzen, die innerhalb des Wiederherstellungsintervalls verarbeitet werden können. Erreicht eine Datenbank, die automatische Prüfpunkte verwendet, diese maximale Anzahl an Protokolldatensätzen, gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Prüfpunkt auf der Datenbank aus. Das Zeitintervall zwischen automatischen Prüfpunkten kann stark variieren. Bei einer Datenbank mit einer beträchtlichen Transaktionsarbeitsauslastung treten häufiger Prüfpunkte auf als bei einer Datenbank für hauptsächlich schreibgeschützte Vorgänge.  
+ Ein automatischer Prüfpunkt tritt jedes Mal auf, wenn die Anzahl der Protokolldaten Sätze [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Anzahl der in der `recovery interval` Server Konfigurationsoption angegebenen Zeit erreicht. In jeder Datenbank ohne benutzerdefinierte Zielwiederherstellungszeit generiert [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatische Prüfpunkte. Die Häufigkeit automatischer Prüfpunkte hängt von der `recovery interval` erweiterten Server Konfigurationsoption ab, die die maximale Zeit angibt, die eine bestimmte Serverinstanz zum Wiederherstellen einer Datenbank während eines Systemneustarts verwenden soll. [!INCLUDE[ssDE](../../includes/ssde-md.md)] schätzt die maximale Anzahl an Protokolldatensätzen, die innerhalb des Wiederherstellungsintervalls verarbeitet werden können. Erreicht eine Datenbank, die automatische Prüfpunkte verwendet, diese maximale Anzahl an Protokolldatensätzen, gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Prüfpunkt auf der Datenbank aus. Das Zeitintervall zwischen automatischen Prüfpunkten kann stark variieren. Bei einer Datenbank mit einer beträchtlichen Transaktionsarbeitsauslastung treten häufiger Prüfpunkte auf als bei einer Datenbank für hauptsächlich schreibgeschützte Vorgänge.  
   
  Im Fall des einfachen Wiederherstellungsmodells wird ein automatischer Prüfpunkt auch in die Warteschlange aufgenommen, wenn das Protokoll zu 70 Prozent gefüllt ist.  
   

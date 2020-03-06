@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74ec775d958c6842f284dea5bc90e5d45955423b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175048"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339191"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus)
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]verweist die Inhaltsverwaltung auf die Verwaltung von Berichtsserverelementen. Alle Elemente lassen sich durch Eigenschaften und Sicherheitseinstellungen unabhängig verwalten. Alle Elemente können an einen anderen Speicherort im Ordnernamespace des Berichtsservers verschoben werden. Zur effektiven Verwaltung der Elemente muss Ihnen bekannt sein, welche Aufgaben von einem Inhalts-Manager ausgeführt werden.

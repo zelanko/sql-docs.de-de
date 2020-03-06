@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68188831"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339093"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt ** , die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]in als Aufträge bezeichnet werden.  
@@ -78,10 +78,9 @@ ms.locfileid: "68188831"
   
  Eine Warnung kann als Reaktion auf eine der folgenden Bedingungen ausgegeben werden:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fall  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignisse  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsbedingungen  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsbedingungen  
   
 -   Ereignisse in der Microsoft Windows-Verwaltungsinstrumentation (WMI) auf dem Computer, auf dem der SQL Server-Agent ausgeführt wird  
   

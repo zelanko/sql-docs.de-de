@@ -11,11 +11,11 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73728066"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338084"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
 
@@ -46,7 +46,7 @@ Links zu Videos und Ressourcen zum Erlernen von [!INCLUDE[ssMDSshort_md](../incl
 - Wenn Sie [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem Computer mit Windows Server 2012 installieren, müssen Sie möglicherweise die verstärkte Sicherheit von Internet Explorer konfigurieren, um die Skripterstellung für die Webanwendungswebsite zuzulassen. Andernfalls kann auf dem Servercomputer Website nicht aufgerufen werden.
 - Um in der Webanwendung zu arbeiten, muss Silverlight 5 auf dem Clientcomputer installiert sein. Falls Sie nicht über die erforderliche Version von Silverlight verfügen, werden Sie aufgefordert, diese zu installieren, wenn Sie zu einem Bereich der Webanwendung navigieren, in dem sie erforderlich ist. Sie können Silverlight 5 von **[hier](https://www.microsoft.com/silverlight/)** installieren.
 
-## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>
+## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>
   [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem virtuellen Azure-Computer
 Wenn Sie einen virtuellen Azure-Computer einrichten, auf dem [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] bereits installiert ist, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] wird standardmäßig ebenfalls installiert. 
 

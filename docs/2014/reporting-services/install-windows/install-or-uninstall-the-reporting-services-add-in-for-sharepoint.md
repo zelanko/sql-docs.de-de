@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63f45fa174296e4ce79985236da2d97d3f11e937
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78173639"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339293"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint (SharePoint 2010 und SharePoint 2013)
   Führen Sie das Installations [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Paket-Add-in für SharePoint-Produkte (rsSharePoint. msi) auf SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servern aus, um Funktionen innerhalb einer SharePoint-Bereitstellung zu aktivieren. Zu den Funktionen gehören Power View, ein Berichts-Viewer-Webpart, ein URL-Proxyendpunkt, Inhaltstypen sowie Anwendungsseiten, mit deren Hilfe Berichte, Berichtsmodelle, Datenquellen und andere Berichtsserverinhalte auf einer SharePoint-Website erstellt, angezeigt und verwaltet werden können. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist eine erforderliche Komponente für Berichtsserver, die im SharePoint-Modus ausgeführt werden. Zum Installieren des Add-Ins führen Sie entweder den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setup-Assistenten aus oder laden rsSharePoint.msi aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack herunter. Eine Liste der Versionen der Add-In- und Downloadseiten finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).

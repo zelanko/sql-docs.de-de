@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74401467"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340467"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Checklisten für die Gerätekonfiguration für Analytics Platform System
 Enthält Checklisten für die Aufgaben, die erforderlich sind, um Analytics Platform System für Ihre eigene Umgebung zu konfigurieren. Diese Konfigurationsaufgaben sind erforderlich, bevor Sie das Gerät verwenden können.  

@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70176123"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339292"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Von den SQL Server 2014-Editionen unterstützte Funktionen
 
@@ -34,7 +34,7 @@ ms.locfileid: "70176123"
   
  [Skalierbarkeit und Leistung](#Scalability)  
   
- [Sicherheit](#Enterprise_security)  
+ [Security](#Enterprise_security)  
   
  [Replikation](#Replication)  
   
@@ -169,7 +169,7 @@ ms.locfileid: "70176123"
 |Distributed Replay - Client|Ja|Nein|Ja|Ja||||  
 |Distributed Replay - Controller|Ja (Enterprise unterstützt bis zu 16 Clients, Developer unterstützt nur 1 Client)|Nein|Ja (nur 1 Client unterstützt)|Ja (nur 1 Client unterstützt)||||  
 |SQL Profiler|Ja|Ja|Ja|Nein<sup>2</sup>|Nein<sup>2</sup>|Nein<sup>2</sup>|Nein<sup>2</sup>|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Büros|Ja|Ja|Ja|Ja||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent|Ja|Ja|Ja|Ja||||  
 |Microsoft System Center Operations Manager Management Pack|Ja|Ja|Ja|Ja||||  
 |Datenbankoptimierungsratgeber (DTA)|Ja|Ja|Ja<sup>3</sup>|Ja<sup>3</sup>||||  
 |Assistent zum [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Bereitstellen einer Datenbank in einer Azure-VM|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  

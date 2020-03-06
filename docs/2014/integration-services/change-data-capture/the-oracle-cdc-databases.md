@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771197"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338993"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
   Eine Oracle CDC-Instanz wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank mit dem gleichen Namen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz zugeordnet. Diese Datenbank wird als Oracle CDC-Datenbank (oder kurz CDC-Datenbank) bezeichnet.  
@@ -109,7 +109,7 @@ ms.locfileid: "62771197"
   
 |Name|Standard|Min|Max|statischen|BESCHREIBUNG|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|Ablaufverfolgung|False|-|-|False|Verfügbare Werte:<br /><br /> **Fall**<br /><br /> **Alarm**<br /><br /> **auf**<br /><br /> **aus**|  
+|Ablaufverfolgung|False|-|-|False|Verfügbare Werte:<br /><br /> **Wahr**<br /><br /> **False**<br /><br /> **auf**<br /><br /> **aus**|  
 |cdc_update_state_interval|10|1|120|False|Die Größe von Arbeitsspeichersegmenten (in KB), die für eine Transaktion zugeordnet werden (eine Transaktion kann mehr als ein Segment zuordnen). Siehe Spalte „memory_limit“ in der [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) -Tabelle.|  
 |target_max_batched_transactions|100|1|1000|True|Die maximale Anzahl von Oracle-Transaktionen, die beim Update von SQL Server CT-Tabellen zusammengefasst zu einer Transaktion verarbeitet werden können.|  
 |target_idle_lsn_update_interval|10|0|1|False|Das Intervall (in Sekunden) zum Aktualisieren der Tabelle **lsn_time_mapping** , wenn die aufgezeichneten Tabellen keine Aktivität aufweisen.|  

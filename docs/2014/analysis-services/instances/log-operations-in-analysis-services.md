@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079761"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339073"
 ---
 # <a name="log-operations-in-analysis-services"></a>Protokollvorgänge in Analysis Services
   Eine Analysis Services Instanz protokolliert Server Benachrichtigungen, Fehler und Warnungen in der Datei "msmdsrv. log": eine für jede Instanz, die Sie installieren. Administratoren finden in diesem Protokoll Einblicke in routinemäßige und außergewöhnliche Ereignisse. In neueren Versionen wurde die Protokollierung verbessert, um weitere Informationen zu erfassen. Protokolldatensätze enthalten jetzt die Produktversion und Editionsinformationen sowie Prozessor, Speicher, Konnektivität und blockierende Ereignisse. Sie können die gesamte Änderungsliste unter [Protokollierungsverbesserungen](https://support.microsoft.com/kb/2965035)einsehen.  
