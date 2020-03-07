@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74947152"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866368"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "74947152"
 |kpid|**smallint**|Windows-Thread-ID.|  
 |blocked|**smallint**|ID der Sitzung, die die Anforderung blockiert. Wenn diese Spalte den Wert NULL aufweist, wird die Anforderung nicht blockiert, oder die Sitzungsinformationen der blockierenden Sitzung sind nicht verfügbar (bzw. können nicht identifiziert werden).<br /><br /> -2 = Der Besitzer der blockierenden Ressource ist eine verwaiste verteilte Transaktion.<br /><br /> -3 = Der Besitzer der blockierenden Ressource ist eine verzögerte Wiederherstellungstransaktion.<br /><br /> -4 = Die Sitzungs-ID des Besitzers des blockierenden Latches konnte aufgrund interner Latchstatusübergänge nicht bestimmt werden.|  
 |waittype|**Binär (2)**|Reserviert.|  
-|waittime|**BIGINT**|Aktuelle Wartezeit in Millisekunden.<br /><br /> 0 = Prozess wartet nicht.|  
+|waittime|**bigint**|Aktuelle Wartezeit in Millisekunden.<br /><br /> 0 = Prozess wartet nicht.|  
 |lastwaittype|**NCHAR (32)**|Eine Zeichenfolge, die den Namen des letzten oder aktuellen Wartetyps anzeigt.|  
 |waitresource|**NCHAR (256)**|Textdarstellung einer Sperrressource.|  
 |dbid|**smallint**|ID der derzeit vom Prozess verwendeten Datenbank.|  
 |uid|**smallint**|Die ID des Benutzers, der den Befehl ausgeführt hat. Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl von Benutzern und Rollen 32.767 übersteigt.|  
 |cpu|**int**|Kumulierte CPU-Zeit des Prozesses. Der Eintrag wird unabhängig davon, ob die Option SET STATISTICS TIME auf ON oder OFF festgelegt ist, für alle Prozesse aktualisiert.|  
-|physical_io|**BIGINT**|Kumulative Anzahl von Datenträgerschreib- und -lesezugriffen für den Prozess.|  
+|physical_io|**bigint**|Kumulative Anzahl von Datenträgerschreib- und -lesezugriffen für den Prozess.|  
 |memusage|**int**|Anzahl der Seiten im Prozedur Cache, die diesem Prozess zurzeit zugeordnet sind. Eine negative Anzahl gibt an, dass der Prozess Arbeitsspeicher freigibt, der von einem anderen Prozess zugeordnet wurde.|  
 |login_time|**datetime**|Zeitpunkt, zu dem sich ein Clientprozess am Server angemeldet hat.|  
 |last_batch|**datetime**|Der Zeitpunkt, zu dem ein Clientprozess zuletzt einen RPC-Aufruf oder eine EXECUTE-Anweisung ausgeführt hat.|  
@@ -58,7 +58,7 @@ ms.locfileid: "74947152"
 |hostname|**NCHAR (128)**|Name der Arbeitsstation.|  
 |program_name|**NCHAR (128)**|Name des Anwendungsprogramms.|  
 |hostprocess|**NCHAR (10)**|Prozess-ID der Arbeitsstation.|  
-|cmd|**NCHAR (26)**|Derzeit ausgeführter Befehl.|  
+|cmd|**NCHAR (52)**|Derzeit ausgeführter Befehl.|  
 |nt_domain|**NCHAR (128)**|Windows-Domäne für den Client, wenn die Windows-Authentifizierung oder eine vertrauenswürdige Verbindung verwendet wird.|  
 |nt_username|**NCHAR (128)**|Der Windows-Benutzername für den Prozess beim Verwenden der Windows-Authentifizierung, oder eine vertrauenswürdige Verbindung.|  
 |net_address|**NCHAR (12)**|Der zugewiesene eindeutige Bezeichner für die Netzwerkkarte auf der Arbeitsstation jedes einzelnen Benutzers. Bei der Anmeldung eines Benutzers wird dieser Bezeichner in die net_address-Spalte eingefügt.|  

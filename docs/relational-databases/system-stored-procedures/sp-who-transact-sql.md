@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5d758c7ca2d21183b9486030704c31b9d5f621d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7c949e62261e710854aefda9b83a7ca20c222b78
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67950515"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866480"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,14 +59,14 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|Sitzungs-ID|  
 |**ecid**|**smallint**|Ausführungskontext-ID für einen bestimmten Thread, der einer bestimmten Sitzungs-ID zugeordnet ist.<br /><br /> Ecid = {0, 1, 2, 3,... *n*}, wobei 0 immer den Haupt-oder übergeordneten Thread darstellt und {1, 2, 3,... *n*} stellt die Subthreads dar.|  
-|**Stands**|**NCHAR (30)**|Prozessstatus. Mögliche Werte:<br /><br /> **ruhende**. 
+|**status**|**NCHAR (30)**|Prozessstatus. Mögliche Werte:<br /><br /> **ruhende**. 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setzt die Sitzung zurück.<br /><br /> wird **ausgeführt**. Die Sitzung führt einen oder mehrere Batches aus. Wenn MARS (Multiple Active Result Sets) aktiviert ist, kann eine Sitzung mehrere Batches ausführen. Weitere Informationen finden Sie unter [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Hintergrund**. Die Sitzung führt einen Hintergrundtask aus, z. B. Deadlockerkennung.<br /><br /> **Rollback**. Die Sitzung führt gerade einen Transaktionsrollback aus.<br /><br /> **Ausstehend**. Die Sitzung wartet, dass ein Arbeitsthread verfügbar wird.<br /><br /> **ausführbaren**. Der Task der Sitzung wartet in der ausführbaren Warteschlange eines Zeitplanungsmoduls darauf, ein Zeitquantum zu erhalten.<br /><br /> **SPINLOOP**. Der Task der Sitzung wartet darauf, dass ein Spinlock frei wird.<br /><br /> angeh **alten.** Die Sitzung wartet, dass ein Ereignis, z. B. E/A, abgeschlossen wird.|  
 |**loginame**|**NCHAR (128)**|Dem entsprechenden Prozess zugeordneter Benutzername.|  
 |**Hostname**|**NCHAR (128)**|Host- oder Computername für den Prozess.|  
 |**blk**|**char (5)**|Sitzungs-ID für den blockierenden Prozess, falls vorhanden. Andernfalls ist diese Spalte 0.<br /><br /> Wenn eine Transaktion einer bestimmten Sitzungs-ID zugeordnet ist und durch eine verwaiste verteilte Transaktion blockiert wird, gibt diese Spalte den Wert -2 für die blockierende verwaiste Transaktion zurück.|  
 |**dbname**|**NCHAR (128)**|Vom Prozess verwendete Datenbank.|  
 |**cmd**|**NCHAR (16)**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Befehl ([!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, interner [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Prozess usw.), der für den Prozess ausgeführt wird.|  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Befehl ([!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, interner [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Prozess usw.), der für den Prozess ausgeführt wird. In SQL Server 2019 wurde der Datentyp in **NCHAR (26)** geändert.|  
 |**request_id**|**int**|ID für Anforderungen, die in einer bestimmten Sitzung ausgeführt werden.|  
   
  Bei paralleler Verarbeitung werden für die bestimmte Sitzungs-ID Subthreads erstellt. Der Hauptthread wird mit `spid = <xxx>` und `ecid =0` angegeben. Die anderen Subthreads haben dieselbe `spid = <xxx>`, aber mit **ECID** > 0.  

@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74564813"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338446"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ Ein gültiger Bezeichner für den allgemeinen Tabellenausdruck. *expression_name
  *CTE_query_definition*  
  Gibt eine SELECT-Anweisung an, mit deren Resultset der allgemeine Tabellenausdruck aufgefüllt wird. Die SELECT-Anweisung für *CTE_query_definition* muss die gleichen Anforderungen erfüllen wie für das Erstellen einer Ansicht. Als Ausnahme gilt, dass mit einem allgemeinen Tabellenausdruck kein anderer allgemeiner Tabellenausdruck definiert werden kann. Weitere Informationen finden Sie im Abschnitt „Hinweise“ und unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Wenn *CTE_query_definition* mehrfach definiert ist, müssen die Abfragedefinitionen durch einen der folgenden Mengenoperator verbunden werden: UNION ALL, UNION, EXCEPT oder INTERSECT.  
+ Wenn *CTE_query_definition* mehrfach definiert wurde, müssen die Abfragedefinitionen durch einen der folgenden Mengenoperatoren verbunden werden: UNION ALL, UNION, EXCEPT oder INTERSECT.  
   
 ## <a name="remarks"></a>Bemerkungen  
   
@@ -142,7 +142,7 @@ Die folgenden Richtlinien gelten für nicht rekursive allgemeine Tabellenausdrü
   
 -   Analyse- und Aggregatfunktionen im rekursiven Teil des allgemeinen Tabellenausdrucks werden auf die Menge für die aktuelle Rekursionsebene und nicht auf die Menge für den allgemeinen Tabellenausdruck angewendet. Funktionen wie `ROW_NUMBER` werden nur für die von der aktuellen Rekursionsebene übergebene Teilmenge von Daten und nicht für die an den rekursiven Teil des allgemeinen Tabellenausdrucks übergebene gesamte Datenmenge ausgeführt. Weitere Informationen finden Sie weiter unten im Beispiel K.: „Verwenden von Analysefunktionen in einem rekursiven allgemeinen Tabellenausdruck“.  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Features und Einschränkungen allgemeiner Tabellenausdrücke in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="features-and-limitations-of-common-table-expressions-in-sssdw-and-sspdw"></a>Features und Einschränkungen allgemeiner Tabellenausdrücke in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Die aktuelle Implementierung allgemeiner Tabellenausdrücke in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] weist folgende Features und Einschränkungen auf:  
   
 -   Ein allgemeiner Tabellenausdruck kann in einer `SELECT`-Anweisung angegeben werden.  
@@ -171,7 +171,7 @@ Die folgenden Richtlinien gelten für nicht rekursive allgemeine Tabellenausdrü
   
 -   Wird ein allgemeiner Tabellenausdruck in einer Anweisung verwendet, die zu einem Batch gehört, muss auf die vorangehende Anweisung ein Semikolon folgen.  
   
--   Wenn allgemeine Tabellenausdrücke in von `sp_prepare` vorbereiteten Anweisungen verwendet werden, verhalten sie sich wie andere `SELECT`-Anweisungen in PDW. Wenn allgemeine Tabellenausdrücke jedoch in von `sp_prepare` vorbereiteten CETAS-Anweisungen verwendet werden, kann das Verhalten aufgrund der Art und Weise, wie die Bindung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert wird, von `sp_prepare` und anderen PDW-Anweisungen abweichen. Wenn in einer `SELECT`-Anweisung, die auf einen allgemeinen Tabellenausdruck verweist, eine falsche, im allgemeinen Tabellenausdruck nicht vorhandene Spalte verwendet wird, wird `sp_prepare` ohne Erkennung des Fehlers durchlaufen. Stattdessen wird der Fehler jedoch während `sp_execute` ausgelöst.  
+-   Wenn allgemeine Tabellenausdrücke in von `sp_prepare` vorbereiteten Anweisungen verwendet werden, verhalten sie sich wie andere `SELECT`-Anweisungen in PDW. Wenn allgemeine Tabellenausdrücke jedoch in von `sp_prepare` vorbereiteten CETAS-Anweisungen verwendet werden, kann das Verhalten aufgrund der Art und Weise, wie die Bindung für `sp_prepare` implementiert wird, von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anderen PDW-Anweisungen abweichen. Wenn in einer `SELECT`-Anweisung, die auf einen allgemeinen Tabellenausdruck verweist, eine falsche, im allgemeinen Tabellenausdruck nicht vorhandene Spalte verwendet wird, wird `sp_prepare` ohne Erkennung des Fehlers durchlaufen. Stattdessen wird der Fehler jedoch während `sp_execute` ausgelöst.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -568,7 +568,7 @@ Lvl  N
   
  `N` gibt 1 für jede Übergabe des rekursiven Teils des allgemeinen Tabellenausdrucks zurück, da nur die Teilmenge der Daten für diese Rekursionsebene an `ROWNUMBER` übergeben wird. Für jede Iteration des rekursiven Teils der Abfrage wird nur eine Zeile an `ROWNUMBER` übergeben.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. Verwenden eines allgemeinen Tabellenausdrucks in einer CTAS-Anweisung  
  Im folgenden Beispiel wird eine neue Tabelle mit der Gesamtanzahl der Verkäufe pro Jahr für jeden Vertriebsmitarbeiter von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] angezeigt.  
