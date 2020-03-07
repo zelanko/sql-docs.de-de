@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095683"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339678"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -258,7 +258,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt verschiedene Typen der Parallelitätssteuerung. Benutzer geben den Typ der Parallelitätssteuerung an, indem sie Transaktionsisolationsstufen für Verbindungen oder Parallelitätsoptionen für Cursor angeben. Diese Attribute können mithilfe von [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen definiert werden oder über die Eigenschaften und Attribute der Schnittstellen zur Anwendungsprogrammierung (APIs, Application Programming Interfaces) der Datenbank, wie z. B. ADO, ADO.NET, OLE DB und ODBC.  
   
-#### <a name="isolation-levels-in-the-includessdenoversionincludesssdenoversion-mdmd"></a>Isolationsstufen im [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+#### <a name="isolation-levels-in-the-ssdenoversion"></a>Isolationsstufen im [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
  Transaktionen geben eine Isolationsstufe an, mit der definiert wird, bis zu welchem Ausmaß eine Transaktion von Ressourcen- oder Datenänderungen isoliert sein muss, die von anderen Transaktionen durchgeführt werden. Die einzelnen Isolationsstufen werden dahingehend beschrieben, welche Parallelitätsnebeneffekte (wie z. B. Dirty Reads oder Phantomlesezugriffe) zulässig sind.  
   
  Durch die Transaktionsisolationsstufen wird Folgendes gesteuert:  
@@ -275,7 +275,7 @@ GO
   
  Eine niedrigere Isolationsstufe erhöht einerseits die Möglichkeit, dass viele Benutzer gleichzeitig auf Daten zugreifen können, führt aber gleichzeitig zum Anstieg der negativen Parallelitätseffekte (Dirty Reads oder verlorene Updates), mit denen die Benutzer rechnen müssten. Und umgekehrt schränkt eine höhere Isolationsstufe zwar die Typen der Parallelitätseffekte ein, mit denen Benutzer rechnen müssen, gleichzeitig werden dafür aber mehr Systemressourcen beansprucht, und die Wahrscheinlichkeit steigt, dass sich die Transaktionen untereinander blockieren. So muss bei jeder Auswahl der geeigneten Isolationsstufe eine Abwägung zwischen den Datenintegritätsanforderungen der Anwendungen einerseits und dem mit jeder Isolationsstufe verbundenen Aufwand andererseits erfolgen. Die höchste Isolationsstufe (Serializable) garantiert, dass eine Transaktion jedes Mal, wenn sie einen Lesevorgang wiederholt, genau dieselben Daten liest. Dies wird jedoch durch ein Ausmaß an Sperren erreicht, das in Systemen mit mehreren Benutzern wahrscheinlich zu negativen Auswirkungen für andere Benutzer führt. Mit der niedrigsten Isolationsstufe (Read Uncommitted) können Daten abgerufen werden, die von anderen Transaktionen geändert wurden, für die jedoch noch kein Commit ausgeführt wurde. In der Isolationsstufe Read Uncommitted können sämtliche denkbaren Parallelitätsnebeneffekte auftreten, dagegen werden keine Lesesperren und keine Versionsverwaltung verwendet, wodurch der Aufwand minimiert wird.  
   
-##### <a name="includessdenoversionincludesssdenoversion-mdmd-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Isolationsstufen  
+##### <a name="ssdenoversion-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Isolationsstufen  
  Der ISO-Standard definiert die folgenden Isolationsstufen, die alle von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] unterstützt werden:  
   
 |Isolationsstufe|Definition|  
@@ -340,7 +340,7 @@ GO
   
  Die folgende Tabelle zeigt die Ressourcen, die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sperren kann.  
   
-|Resource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |RID|Ein Zeilenbezeichner, der verwendet wird, um eine einzelne Zeile in einem Heap zu sperren.|  
 |KEY|Eine Zeilensperre in einem Index, die verwendet wird, um Schlüsselbereiche in serialisierbaren Transaktionen zu schützen.|  
@@ -362,7 +362,7 @@ GO
   
  Die folgende Tabelle zeigt die Ressourcen-Sperrmodi, die das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet.  
   
-|Sperrmodus|Beschreibung|  
+|Sperrmodus|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Shared (S)|Wird für Lesevorgänge verwendet, die Daten nicht ändern oder aktualisieren, wie z.B. eine `SELECT`-Anweisung.|  
 |Update (U)|Wird für Ressourcen verwendet, die aktualisiert werden können. Verhindert eine gängige Form des Deadlocks, die auftritt, wenn mehrere Sitzungen Ressourcen lesen, sperren und anschließend möglicherweise aktualisieren.|  
@@ -397,7 +397,7 @@ GO
   
 <a name="lock_intent_table"></a> Beabsichtigte Sperren umfassen beabsichtigte freigegebene (Intent Shared, IS), beabsichtigte exklusive (Intent Exclusive, IX) und freigegebene mit beabsichtigten exklusiven (Shared With Intent Exclusive, SIX) Sperren.  
   
-|Sperrmodus|Beschreibung|  
+|Sperrmodus|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Beabsichtigte freigegebene Sperre (Intent Shared, IS)|Schützt angeforderte oder eingerichtete freigegebene Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie.|  
 |Beabsichtigte exklusive Sperre (Intent Exclusive, IX)|Schützt angeforderte oder eingerichtete exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. IX ist eine Obermenge der beabsichtigten freigegebenen Sperre und schützt auch vor Anforderung freigegebener Sperren auf Ressourcen untergeordneter Ebenen in der Hierarchie.|  
@@ -461,7 +461,7 @@ GO
 -   Zeile stellt den Sperrmodus dar, der den Indexeintrag schützt.  
 -   Modus stellt den kombinierten Sperrmodus dar, der verwendet wird. Schlüsselbereichssperrmodi setzen sich aus zwei Teilen zusammen. Der erste gibt den Sperrtyp wieder, der zum Sperren des Indexbereichs (Range*T*) verwendet wird, und der zweite gibt den Sperrtyp wieder, der zum Sperren eines bestimmten Schlüssels (*K*) verwendet wird. Die beiden Teile sind durch einen Bindestrich (-) miteinander verbunden, beispielsweise Range*T*-*K*.  
   
-    |Range|Zeile|Mode|Beschreibung|  
+    |Range|Zeile|Mode|BESCHREIBUNG|  
     |-----------|---------|----------|-----------------|  
     |RangeS|E|RangeS-S|Freigegebene Bereichssperre, freigegebene Ressourcensperre; serialisierbarer Bereichsscan.|  
     |RangeS|U|RangeS-U|Freigegebene Sperre für Bereich und Updatesperre für Ressource; serialisierbarer Updatescan.|  
