@@ -30,11 +30,11 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71282565"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338349"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
 
@@ -99,7 +99,7 @@ ms.locfileid: "71282565"
 #### <a name="log-schema"></a>Protokollschema  
  In der folgenden Tabelle werden die Elemente im Protokollschema beschrieben.  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |Computer|Der Name des Computers, auf dem das Protokollereignis auftrat.|  
 |Operator|Die Identität des Benutzers, der das Paket gestartet hat.|  
@@ -111,7 +111,7 @@ ms.locfileid: "71282565"
   
  Die folgende Tabelle beschreibt drei zusätzliche Elemente des Protokollschemas, die auf der Registerkarte **Details** des Dialogfensters **SSIS-Protokolle konfigurieren** nicht verfügbar sind.  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |StartTime|Der Zeitpunkt, zu dem der Container oder der Task die Ausführung beginnt.|  
 |EndTime|Der Zeitpunkt, zu dem der Container oder der Task die Ausführung beendet.|  
@@ -180,7 +180,7 @@ ms.locfileid: "71282565"
 #### <a name="use-the-pipelinecomponenttime-event"></a>Verwenden des PipelineComponentTime-Ereignisses  
  Das PipelineComponentTime-Ereignis stellt möglicherweise den nützlichsten benutzerdefinierten Protokolleintrag dar. Dieser Protokolleintrag meldet den Zeitaufwand in Millisekunden, den jede Komponente im Datenfluss für die fünf Hauptverarbeitungsschritte jeweils aufbringt. In der folgenden Tabelle werden diese Verarbeitungsschritte beschrieben. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Entwickler kennen diese Schritte als Hauptmethoden einer <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
-|Schritt|Beschreibung|  
+|Schritt|BESCHREIBUNG|  
 |----------|-----------------|  
 |Überprüfen|Die Komponente überprüft Eigenschaftswerte und Konfigurationseinstellungen auf ihre Gültigkeit.|  
 |PreExecute|Die Komponente führt eine einmalige Verarbeitung aus, bevor sie mit der Verarbeitung von Datenzeilen beginnt.|  
@@ -332,7 +332,7 @@ ms.locfileid: "71282565"
  **Erweitert**  
  Auswählen oder Löschen zu protokollierender Ereignisse und Auswählen oder Löschen von Informationen, die für jedes Ereignis protokolliert werden sollen. Klicken Sie auf **Standard** , um alle Protokollierungsdetails mit Ausnahme der Liste der Ereignisse auszublenden. Die folgenden Informationen sind für die Protokollierung verfügbar:  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Computer**|Der Name des Computers, auf dem das protokollierte Ereignis aufgetreten ist.|  
 |**Operator**|Der Benutzername der Person, die das Paket gestartet hat.|  
@@ -410,7 +410,7 @@ ms.locfileid: "71282565"
 ### <a name="select-a-logging-level"></a>Auswählen eines Protokolliergrads  
  Die folgenden integrierten Protokolliergrade sind verfügbar. Sie können auch einen vorhandenen benutzerdefinierten Protokolliergrad auswählen. Dieses Thema enthält eine Beschreibung benutzerdefinierter Protokolliergrade.  
   
-|Protokolliergrad|Beschreibung|  
+|Protokolliergrad|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |Keine|Die Protokollierung ist deaktiviert. Nur der Status der Ausführung von Paketen wird protokolliert.|  
 |Basic|Alle Ereignisse werden protokolliert, außer benutzerdefinierten und Diagnose-Ereignissen. Dies ist der Standardwert.|  
@@ -494,7 +494,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="Package"></a> Paket  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für Pakete aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**PackageStart**|Zeigt den Beginn der Paketausführung an. Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
 |**PackageEnd**|Zeigt den Abschluss der Paketausführung an. Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
@@ -503,7 +503,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="BulkInsert"></a> Masseneinfügungstask  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Masseneinfügungstask aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**DTSBulkInsertTaskBegin**|Zeigt den Beginn der Masseneinfügung an.|  
 |**DTSBulkInsertTaskEnd**|Zeigt die Fertigstellung der Masseneinfügung an.|  
@@ -512,7 +512,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="DataFlow"></a> Data Flow Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Datenflusstask aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Zeigt an, dass der Datenflusstask die Größe des Puffers geändert hat. Der Protokolleintrag beschreibt die Gründe für die Größenänderung und listet die temporäre neue Puffergröße auf.|  
 |**OnPipelinePostEndOfRowset**|Gibt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten hat. Dieses Signal wird durch den letzten Aufruf der **ProcessInput** -Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
@@ -528,7 +528,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="ExecuteDTS200"></a> DTS 2000 ausführen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task DTS 2000 ausführen aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|Zeigt an, dass die Ausführung eines DTS 2000-Pakets über den Task gestartet wurde.|  
 |**ExecuteDTS80PackageTaskEnd**|Zeigt an, dass die Ausführung über den Task beendet wurde.<br /><br /> Hinweis: Das DTS 2000-Paket kann nach Beendigung des Tasks mit der Ausführung fortfahren.|  
@@ -546,7 +546,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="ExecuteSQL"></a> SQL ausführen (Task)  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Task <legacyBold>SQL ausführen</legacyBold> beschrieben.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Enthält Informationen zu den Ausführungsphasen der SQL-Anweisung. Protokolleinträge werden geschrieben, wenn der Task eine Verbindung mit der Datenbank erhält, wenn der Task beginnt, die SQL-Anweisung vorzubereiten, und nachdem die Ausführung der SQL-Anweisung abgeschlossen wurde. Der Protokolleintrag für die Vorbereitungsphase schließt die vom Task verwendete SQL-Anweisung ein.|  
   
@@ -568,7 +568,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="MessageQueue"></a> Nachrichtenwarteschlange (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Nachrichtenwarteschlange aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|Zeigt an, dass das Öffnen der Warteschlange beendet wurde.|  
 |**MSMQBeforeOpen**|Zeigt an, dass das Öffnen der Warteschlange begonnen wurde.|  
@@ -582,14 +582,14 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="Script"></a> Skripttask  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Skripttask beschrieben.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|Gibt die Ergebnisse des Implementierens der Protokollierung innerhalb des Skripts an. Für jeden Aufruf der **Log** -Methode des **Dts** -Objekts wird jeweils ein Protokolleintrag geschrieben. Der Eintrag wird beim Ausführen des Codes geschrieben. Weitere Informationen finden Sie unter [Logging in the Script Task](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
 ####  <a name="SendMail"></a> Mail senden (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task 'Mail senden' aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|Zeigt an, dass das Senden einer E-Mail-Nachricht begonnen wurde.|  
 |**SendMailTaskEnd**|Zeigt an, dass das Senden einer E-Mail-Nachricht beendet wurde.|  
@@ -598,7 +598,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="TransferDatabase"></a> Datenbanken übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Datenbanken übertragen aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**SourceDB**|Gibt die vom Task kopierte Datenbank an.|  
 |**SourceSQLServer**|Gibt den Computer an, von dem die Datenbank kopiert wurde.|  
@@ -606,7 +606,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="TransferErrorMessages"></a> Fehlermeldungen übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Fehlermeldungen übertragen aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**TransferErrorMessagesTaskFinishedTransferringObjects**|Zeigt an, dass das Übertragen von Fehlermeldungen beendet wurde.|  
 |**TransferErrorMessagesTaskStartTransferringObjects**|Zeigt an, dass das Übertragen von Fehlermeldungen gestartet wurde.|  
@@ -614,7 +614,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="TransferJobs"></a> Aufträge übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Aufträge übertragen aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**TransferJobsTaskFinishedTransferringObjects**|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen beendet wurde.|  
 |**TransferJobsTaskStartTransferringObjects**|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen gestartet wurde.|  
@@ -622,7 +622,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="TransferLogins"></a> Task "Anmeldungen übertragen"  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Anmeldungen übertragen aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**TransferLoginsTaskFinishedTransferringObjects**|Zeigt an, dass das Übertragen von Anmeldungen beendet wurde.|  
 |**TransferLoginsTaskStartTransferringObjects**|Zeigt an, dass das Übertragen von Anmeldungen gestartet wurde.|  
@@ -630,7 +630,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="TransferMasterStoredProcedures"></a> In master gespeicherte Prozeduren übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task In master gespeicherte Prozeduren übertragen aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**TransferStoredProceduresTaskFinishedTransferringObjects**|Zeigt an, dass das Übertragen von benutzerdefinierten gespeicherten Prozeduren, die in der **master** -Datenbank gespeichert sind, beendet wurde.|  
 |**TransferStoredProceduresTaskStartTransferringObjects**|Zeigt an, dass das Übertragen von benutzerdefinierten gespeicherten Prozeduren, die in der **master** -Datenbank gespeichert sind, gestartet wurde.|  
@@ -646,7 +646,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="WebServices"></a> Webdienste (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge aufgelistet, die für den Task Webdienste aktiviert werden können.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**WSTaskBegin**|Der Zugriff auf einen Webdienst wurde begonnen.|  
 |**WSTaskEnd**|Eine Webdienstmethode wurde beendet.|  
@@ -655,7 +655,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="WMIDataReader"></a> WMI-Datenleser (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task WMI-Datenleser aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|Zeigt an, dass das Lesen der WMI-Daten begonnen wurde.|  
 |**WMIDataReaderOperation**|Berichtet die vom Task ausgeführte WQL-Abfrage.|  
@@ -672,7 +672,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="XML"></a> XML-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den XML-Task beschrieben.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**XMLOperation**|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|  
 
