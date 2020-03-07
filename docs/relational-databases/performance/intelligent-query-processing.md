@@ -13,11 +13,11 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f555713a25db2068a4f6a923504db765d3f3a09e
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256793"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338444"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 
@@ -140,7 +140,7 @@ Seitdem das Feedback zur Speicherzuweisung im Zeilenmodus verfügbar ist, werden
 
 *LastRequestedMemory* zeigt den zugewiesenen Speicher in KB von der vorherigen Abfrageausführung an. Mit dem Attribut *IsMemoryGrantFeedbackAdjusted* können Sie den Feedbackstatus einer Speicherzuweisung für die Anweisung in einem Abfrageausführungsplan überprüfen. Folgende Werte werden in diesem Attribut angezeigt:
 
-| Wert IsMemoryGrantFeedbackAdjusted | Beschreibung |
+| Wert IsMemoryGrantFeedbackAdjusted | BESCHREIBUNG |
 |---|---|
 | No: First Execution | Das Feedback zur Speicherzuweisung passt den Speicher für die erste Kompilierung und die zugeordnete Ausführung nicht an.  |
 | No: Accurate Grant | Wenn es keinen Überlauf auf dem Datenträger gibt und die Anweisung mindestens 50 % des zugewiesenen Speichers nutzt, wird Feedback zur Speicherzuweisung nicht ausgelöst. |
@@ -213,7 +213,7 @@ Sobald ein verschachtelter Ausführungsplan zwischengespeichert wurde, wird der 
 ### <a name="tracking-interleaved-execution-activity"></a>Nachverfolgen der Aktivität von verschachtelten Ausführungen
 Sie können sich Verwendungsattribute im Ausführungsplan der Abfrage anschauen:
 
-| Ausführungsplanattribut | Beschreibung |
+| Ausführungsplanattribut | BESCHREIBUNG |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | Gilt für den Knoten *QueryPlan*. Wenn dieser *true* lautet, gibt dieser an, dass der Plan mögliche Kandidaten für die überlappende Ausführung enthält. |
 | IsInterleavedExecuted | Das Attribut des Elements *RuntimeInformation* befindet sich für den Knoten „TVF“ unter „RelOp“. Wenn es *true* entspricht, wurde der Vorgang im Zuge einer überlappenden Ausführung materialisiert. |
