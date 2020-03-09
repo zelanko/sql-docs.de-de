@@ -5,22 +5,22 @@ ms.custom: ''
 ms.date: 09/30/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 937e84c055f7da690542c7e74bb2abd036427ab1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 0831e307ca0868cd80d92d22f6077070ca1730ea
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250983"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897092"
 ---
 # <a name="overview-of-the-sqlclient-driver"></a>Übersicht über den SqlClient-Treiber
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET herunterladen](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
  Der Microsoft SqlClient-Datenanbieter für SQL Server ist ein .NET Framework- und .NET Core-Datenanbieter, der zum Verbinden mit einer Datenbank, Ausführen von Befehlen und Abrufen von Ergebnissen verwendet wird.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "75250983"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Einführung in den Namespace „Microsoft.Data.SqlClient“](introduction-microsoft-data-sqlclient-namespace.md)|Einführungsseite für den Namespace Microsoft.Data.SqlClient|  
 |[Herunterladen des Microsoft SqlClient-Datenanbieters für SQL Server](download-microsoft-sqlclient-data-provider.md)|Downloadseite für ADO.NET und den Microsoft SqlClient-Datenanbieter für SQL Server|  

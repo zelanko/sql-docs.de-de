@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 60c27bd94162b4d6bf4d7370218e1fa7781e6491
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4475e4b8a71b4abcf4e1c2324a49e03a8bb64fbb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247700"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896670"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Multiple Active Result Sets (MARS)
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 MARS (mehrere aktive Resultsets) ist ein Feature, mit dem mehrere Batches über eine Verbindung ausgeführt werden können. In früheren Versionen konnte nur ein Batch für eine einzelne Verbindung ausgeführt werden. Wenn mehrere Batches mit MARS ausgeführt werden, impliziert das nicht die gleichzeitige Ausführung von Vorgängen.  
   

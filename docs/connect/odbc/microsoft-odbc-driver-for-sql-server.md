@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 442a6ad69681a257355d5743d10cb4f933008b8a
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.openlocfilehash: a0c194903b0f9b5f5e1c06baabc17d607c68cd61
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971336"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866353"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -35,7 +35,7 @@ Das folgende C++-Beispiel zeigt, wie die ODBC-APIs verwendet werden, um eine Ver
 
 ## <a name="download"></a>Download
 
-- ![Download-Abwärtspfeil-eingekreist](../../ssdt/media/download.png)[So wird der ODBC-Treiber heruntergeladen](download-odbc-driver-for-sql-server.md)
+- ![Download-Abwärtspfeil-eingekreist](../../ssms/media/download-icon.png)[So wird der ODBC-Treiber heruntergeladen](download-odbc-driver-for-sql-server.md)
 
 ## <a name="documentation"></a>Dokumentation
 

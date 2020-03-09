@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: af8402a7ff58e5d5b90d655547abcaf159bb67b4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e572b8fcf1550562c7a9f1841eec1c311f18c3f8
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247723"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896706"
 ---
 # <a name="large-udts"></a>Große UDTs
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Benutzerdefinierte Typen (UDTs) gestatten Entwicklern, das Skalartypsystem durch das Speichern von CLR-Objekten (Common Language Runtime) in einer SQL Server-Datenbank zu erweitern. UDTs können mehrere Elemente enthalten und Verhalten aufweisen, die sich von den herkömmlichen Aliasdatentypen unterscheiden, die aus einem einzigen SQL Server-Systemdatentyp bestehen.  
   
@@ -73,7 +73,7 @@ Beachten Sie, dass für die aktuelle Version von ADO.NET keine Konvertierungen e
 ## <a name="specifying-sqlparameters"></a>Angeben von SqlParameters  
 Die folgenden <xref:Microsoft.Data.SqlClient.SqlParameter>-Eigenschaften wurden für das Arbeiten mit großen UDTs erweitert.  
   
-|SqlParameter-Eigenschaft|Beschreibung|  
+|SqlParameter-Eigenschaft|BESCHREIBUNG|  
 |---------------------------|-----------------|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A>|Ruft ein Objekt ab oder legt es fest, das den Wert des Parameters darstellt. Der Standardwert ist NULL. Die Eigenschaft kann `SqlBinary`, `Byte[]` oder ein verwaltetes Objekt sein.|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.SqlValue%2A>|Ruft ein Objekt ab oder legt es fest, das den Wert des Parameters darstellt. Der Standardwert ist NULL. Die Eigenschaft kann `SqlBinary`, `Byte[]` oder ein verwaltetes Objekt sein.|  
@@ -110,3 +110,4 @@ reader.close
   
 ## <a name="next-steps"></a>Nächste Schritte
 - [Binäre Daten und Daten mit umfangreichen Werten in SQL Server](sql-server-binary-large-value-data.md)
+ 

@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1b81b179657fc3564105a113712929ca8f3e10da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75246970"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896242"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express-Benutzerinstanzen
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Microsoft SQL Server Express Edition (SQL Server Express) unterstützt das Feature „Benutzerinstanz“, das die Verwendung des Microsoft SqlClient-Datenanbieters für SQL Server voraussetzt. Eine Benutzerinstanz ist eine separate Instanz der SQL Server Express-Datenbank-Engine, die von einer übergeordneten Instanz generiert wird. Benutzerinstanzen ermöglichen Benutzern, die keine Administratoren auf ihren lokalen Computern sind, eine Verbindung mit SQL Server Express-Datenbanken herzustellen. Jede Instanz wird im Sicherheitskontext des jeweiligen Benutzers auf instanz- und benutzerbezogener Basis ausgeführt.  
   

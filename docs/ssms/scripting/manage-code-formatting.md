@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 741fce0949ce1a07f0f164c7f131579c220d4cfc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6d1c9bd306cf30ee0974aff2396946c131bfb824
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253809"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261859"
 ---
 # <a name="manage-code-formatting"></a>Verwalten der Codeformatierung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "75253809"
 3.  Zum Konvertieren von Text in Kleinbuchstaben drücken Sie STRG+UMSCHALT+L, oder klicken Sie im Menü **Bearbeiten** im Untermenü **Erweitert** auf **In Kleinbuchstaben umwandeln** .  
   
 > [!NOTE]  
->  Eine vollständige Liste der Tastenkombinationen finden Sie unter [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+>  Eine vollständige Liste der Tastenkombinationen finden Sie unter [Tastenkombinationen für SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="displaying-and-linking-to-urls"></a>Anzeigen von und Verknüpfen mit URLs  
  Sie können im Code klickbare URLs erstellen und anzeigen. Standardmäßig haben die URLs folgende Eigenschaften:  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 25519d06df8b948d5cfc5d387029cf09beafc856
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: afa9863d955ef7f075ffd8c8c68844130bcfd9ca
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67936275"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866495"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Übersicht über die Microsoft-Treiber für PHP für SQL Server
 
@@ -27,9 +27,9 @@ Sie müssen über die richtige Version von SQL Server Native Client verfügen od
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |---------|---------------|  
-| ![Download: eingekreister Pfeil nach unten](../../ssdt/media/download.png)[ Herunterladen von Microsoft-Treibern für PHP für SQL Server](download-drivers-php-sql-server.md) | Links zum Herunterladen von Microsoft-Treibern für PHP für SQL Server. |
+| ![Download: eingekreister Pfeil nach unten](../../ssms/media/download-icon.png)[ Herunterladen von Microsoft-Treibern für PHP für SQL Server](download-drivers-php-sql-server.md) | Links zum Herunterladen von Microsoft-Treibern für PHP für SQL Server. |
 |[Anmerkungen zu dieser Version für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/release-notes-php-sql-driver.md)|Listet die Features auf, die für die Versionen 4.0, 3.2, 3.1, 3.0 und 2.0 hinzugefügt wurden.|  
 |[Unterstützungsressourcen für Microsoft-Treiber für PHP für SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|Enthält Links zu Ressourcen, die hilfreich sein können, wenn Sie Anwendungen entwickeln, die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]nutzen.|  
 |[Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)|Enthält Informationen, die beim Ausführen der Codebeispiele in dieser Dokumentation hilfreich sind.|  

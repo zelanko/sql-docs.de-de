@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5477b655554dceaa5f43b7d099e0fc156340f558
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4ec71c2bd693599106692a45f9e9aa10a63babd
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75233814"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896226"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>SqlCommand-Ausführung mit SqlNotificationRequest
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Ein <xref:Microsoft.Data.SqlClient.SqlCommand>-Objekt kann so konfiguriert werden, dass eine Benachrichtigung generiert wird, wenn Daten geändert werden, nachdem sie vom Server abgerufen wurden, und wenn sich das Resultset bei einer erneuten Ausführung der Abfrage unterscheidet. Dies ist hilfreich für Szenarios, in denen Sie benutzerdefinierte Benachrichtigungswarteschlangen auf dem Server verwenden möchten, oder wenn Sie Liveobjekte nicht verwalten möchten.
 

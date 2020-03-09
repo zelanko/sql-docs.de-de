@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ccd2ce331f6e88933ff546c18446b5edbc956511
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1f59b2d14ab34cee3e703eda9fb9db6750da96a2
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67935680"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866638"
 ---
 # <a name="python-sql-driver"></a>Python-SQL-Treiber
 
-![Download-Abwärtspfeil-eingekreist](../../ssdt/media/download.png)[SQL-Treiber für Python installieren](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-Abwärtspfeil-eingekreist](../../ssms/media/download-icon.png)[SQL-Treiber für Python installieren](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Sie können mit Python unter Windows, Linux oder Mac eine Verbindung zu einer SQL-Datenbank herstellen.   
   

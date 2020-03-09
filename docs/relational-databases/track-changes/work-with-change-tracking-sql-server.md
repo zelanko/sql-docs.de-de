@@ -22,12 +22,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbe4665a1f690a41883ca3339e2e70f251c52a1a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 905c1dc08c2d2e766425b62d7e0a920730ae2b41
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177370"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256995"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Verwenden der Änderungsnachverfolgung (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,16 +65,16 @@ ms.locfileid: "78177370"
  Das folgende Beispiel zeigt, wie die Anfangsversion der Synchronisierung und das Anfangsdataset abgerufen werden.  
   
 ```sql  
-    declare @synchronization_version bigint;
+declare @synchronization_version bigint;
 
-    -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
-    SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
+-- Obtain the current synchronization version. This will be used next time that changes are obtained.  
+SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
-    -- Obtain initial data set.  
-    SELECT  
-        P.ProductID, P.Name, P.ListPrice  
-    FROM  
-        SalesLT.Product AS P  
+-- Obtain initial data set.  
+SELECT  
+    P.ProductID, P.Name, P.ListPrice  
+FROM  
+   SalesLT.Product AS P  
 ```  
   
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>Verwenden der Änderungsnachverfolgungsfunktionen zum Abrufen von Änderungen  
@@ -87,8 +87,7 @@ SELECT
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
 FROM  
-    CHANGETABLE(CHANGES SalesLT.Product, @last_synchronization_version) AS CT  
-  
+    CHANGETABLE(CHANGES SalesLT.Product, @last_synchronization_version) AS CT
 ```  
   
  In der Regel möchte ein Client nicht nur die Primärschlüssel, sondern die neuesten Daten für eine Zeile abrufen. In diesem Fall führt eine Anwendung die Ergebnisse der CHANGETABLE(CHANGES ...)-Funktion mit den Daten in der Benutzertabelle zusammen. Beispiel: Bei der folgenden Abfrage wird die Funktion mit der `SalesLT.Product` -Tabelle verknüpft, um die Werte der `Name` -Spalte und der `ListPrice` -Spalte abzurufen. Beachten Sie, dass `OUTER JOIN`verwendet wird. Dies ist erforderlich, um sicherzustellen, dass die Änderungsinformationen für die Zeilen zurückgegeben werden, die aus der Benutzertabelle gelöscht wurden.  
@@ -107,11 +106,11 @@ ON
 ```  
   
  Verwenden Sie die CHANGE_TRACKING_CURRENT_VERSION()-Funktion wie im folgenden Beispiel gezeigt, um die in der nächsten Änderungsenumeration zu verwendende Version abzurufen.  
-  
+
 ```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
-  
+ 
  Beim Abrufen von Änderungen muss eine Anwendung sowohl CHANGETABLE(CHANGES ...) als auch CHANGE_TRACKING_CURRENT_VERSION() verwenden, wie im folgenden Beispiel gezeigt.  
   
 ```sql  
@@ -371,20 +370,20 @@ END
  Kontextinformationen werden in der Regel verwendet, um die Quelle der Änderungen zu identifizieren. Wenn die Quelle einer Änderung identifiziert werden kann, können diese Informationen von einem Datenspeicher verwendet werden, um das Abrufen von Änderungen bei der nächsten Synchronisierung zu vermeiden.  
   
 ```sql  
-  -- Try to update the row and check for a conflict.  
-  WITH CHANGE_TRACKING_CONTEXT (@source_id)  
-  UPDATE  
-     SalesLT.Product  
-  SET  
-      ListPrice = @new_listprice  
-  FROM  
-      SalesLT.Product AS P  
-  WHERE  
-     ProductID = @product_id AND  
-     @last_sync_version >= ISNULL (  
-         (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,  
-         (ProductID), (P.ProductID)) AS CT),  
-         0)  
+-- Try to update the row and check for a conflict.  
+WITH CHANGE_TRACKING_CONTEXT (@source_id)  
+UPDATE  
+  SalesLT.Product  
+SET  
+  ListPrice = @new_listprice  
+FROM  
+  SalesLT.Product AS P  
+WHERE  
+  ProductID = @product_id AND  
+    @last_sync_version >= ISNULL (  
+    (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,  
+    (ProductID), (P.ProductID)) AS CT),  
+       0)  
 ```  
   
 ### <a name="ensuring-consistent-and-correct-results"></a>Sicherstellen von konsistenten und richtigen Ergebnissen  

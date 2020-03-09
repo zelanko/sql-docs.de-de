@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7855ef064061957cbc44dfcb4b075ebbd3893325
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a3a567d86cb70c5d6d931d631a0f744ea59d359f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247734"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896694"
 ---
 # <a name="manipulating-data"></a>Bearbeiten von Daten
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Vor der Einführung von MARS (Multiple Active Result Sets, mehrere aktive Resultsets) mussten Entwickler entweder mehrere Verbindungen oder serverseitige Cursor verwenden, um bestimmte Szenarien aufzulösen. Bei der Verwendung mehrerer Verbindungen in einem Transaktionskontext waren darüber hinaus gebundene Verbindungen (mit **sp_getbindtoken** und **sp_bindsession**) erforderlich. In den folgenden Szenarien wird gezeigt, wie eine MARS-fähige Verbindung anstelle mehrerer Verbindungen verwendet wird.  
   

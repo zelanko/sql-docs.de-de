@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 22d64b260d8d700afc8ed354d87de730e8c3b21f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9c2275e94d30560ae1173a12bfdcc6bfdc1eecb4
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253372"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895885"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Schreiben von sicherem dynamischem SQL in SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Bei der Einschleusung von SQL-Befehlen gibt ein böswilliger Benutzer anstelle gültiger Eingaben Transact-SQL-Anweisungen ein. Wenn die Eingabe ohne Überprüfung direkt an den Server weitergegeben wird und die Anwendung den eingeschleusten Code versehentlich ausführt, kann der Angriff Daten beschädigen oder zerstören.  
   
@@ -73,7 +73,7 @@ Die datenbankübergreifende Besitzverkettung funktioniert nicht in Fällen, in d
 ## <a name="external-resources"></a>Externe Ressourcen  
 Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
-|Resource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[Gespeicherte Prozeduren](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md) und [SQL Injection](../../../relational-databases/security/sql-injection.md) in der SQL Server-Onlinedokumentation|In den Themen wird beschrieben, wie gespeicherte Prozeduren erstellt werden und die Einschleusung von SQL-Befehlen funktioniert.|  
   

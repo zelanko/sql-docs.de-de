@@ -20,16 +20,18 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2997c185dcd01c00b007cd676fe0eef7e3ac2048
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f835927ba9927b5614ac0660ce3cad2ae96ae483
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75242813"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261719"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tastenkombinationen für SQL Server Management Studio
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bietet Benutzern zwei Tastaturschemas. Standardmäßig wird das Schema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] mit auf [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 basierenden Tastenkombinationen verwendet. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet auch ein dem Standardschema von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ähnliches Tastaturschema. Um das Tastaturschema zu ändern oder weitere Tastenkombinationen hinzuzufügen, klicken Sie im Menü **Extras** auf **Optionen**. Wählen Sie das gewünschte Tastaturschema unter **Umgebung**auf der Seite **Tastatur** aus.  
+
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bietet Benutzern zwei Tastaturschemas. Standardmäßig wird das Schema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] mit auf [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 basierenden Tastenkombinationen verwendet. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet auch ein dem Standardschema von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ähnliches Tastaturschema. Um das Tastaturschema zu ändern oder weitere Tastenkombinationen hinzuzufügen, klicken Sie im Menü **Extras** auf **Optionen**. Wählen Sie das gewünschte Tastaturschema unter **Umgebung**auf der Seite **Tastatur** aus.  
   
 > [!NOTE]  
 >  Klicken Sie oben auf dieser Seite auf **Alle reduzieren** , um nur die Überschriften anzuzeigen.  

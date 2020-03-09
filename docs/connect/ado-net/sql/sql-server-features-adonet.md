@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 88d171e8feab3283d0dd1d593128a102f4be905d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ed7fa07959715ac6c08b8799c5579e90939f87c2
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244020"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896270"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server-Features und ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 In den Themen dieses Abschnitts werden Funktionen von SQL Server diskutiert, die für die Entwicklung von Datenbankanwendungen mit ADO.NET vorgesehen sind.  
   

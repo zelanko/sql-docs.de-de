@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 354b3ef1f0db45c64363d508d4bb055ee32d6416
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c7ace2feb39bcc3f5f257c0ac2c7360649cfc33c
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247830"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897001"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Datenbankspiegelung in SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Mithilfe der Datenbankspiegelung in SQL Server können Sie eine Kopie, oder auch Spiegelbild, einer SQL Server-Datenbank auf einem Standbyserver speichern. Die Spiegelung stellt sicher, dass jederzeit zwei getrennte Kopien der Daten vorhanden sind, was Hochverfügbarkeit und vollständige Datenredundanz gewährleistet. Der Microsoft-SqlClient-Anbieter für SQL Server stellt implizite Unterstützung für die Datenbankspiegelung bereit. Das Schreiben von Code oder Ausführen anderer Aktionen nach dem Konfigurieren für eine SQL Server-Datenbank ist daher seitens der Entwickler nicht erforderlich. Zusätzlich unterstützt das <xref:Microsoft.Data.SqlClient.SqlConnection>-Objekt einen expliziten Verbindungsmodus, der es erlaubt, den Namen eines Failoverpartnerservers in <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> anzugeben.  
   

@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: bf89d2d111452970955953132edd76e602590668
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 89bcaa6d6e92ccde2d1c151b493c26fe1279d89f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247678"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896644"
 ---
 # <a name="polling-in-console-applications"></a>Abrufen in Konsolenanwendungen
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Mithilfe von asynchronen Vorgängen in ADO.NET können Sie zeitaufwendige Datenbankvorgänge auf einem Thread initiieren, während andere Tasks auf einem weiteren Thread ausgeführt werden. In den meisten Szenarios erreichen Sie jedoch irgendwann einen Punkt, an dem die Anwendung angehalten werden sollte, bis der Datenbankvorgang beendet ist. Dann ist es hilfreich, den asynchronen Vorgang abzurufen, um zu ermitteln, ob der Vorgang abgeschlossen wurde.  
   

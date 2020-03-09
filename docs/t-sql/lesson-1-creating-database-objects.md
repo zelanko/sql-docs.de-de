@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257017"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280950"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lektion 1: Erstellen und Abfragen von Datenbankobjekten
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ In dieser Lektion erfahren Sie, wie Sie eine Datenbank erstellen, eine Tabelle i
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen können wie folgt geschrieben und an die [!INCLUDE[ssDE](../includes/ssde-md.md)] übertragen werden:  
   
--   Mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In diesem Lernprogramm wird vorausgesetzt, dass Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]verwenden. Sie können jedoch auch [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express verwenden, das als kostenloser Download im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=7593)zur Verfügung steht.  
+-   Mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In diesem Lernprogramm wird vorausgesetzt, dass Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]verwenden. Sie können jedoch auch [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express verwenden, das als kostenloser Download im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=14630)zur Verfügung steht.  
   
 -   Mithilfe des [Hilfsprogramms sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -40,7 +40,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio u
 - Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Wenn Sie über keinen Zugriff auf eine SQL Server-Instanz verfügen, wählen Sie Ihre Plattform aus den folgenden Links aus. Wenn Sie die SQL-Authentifizierung wählen, verwenden Sie Ihre SQL Server-Anmeldeinformationen.
-- **Windows**: [Herunterladen der SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
+- **Windows**: [Herunterladen von Microsoft SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - **macOS**: [Herunterladen von SQL Server 2017 für Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
 ## <a name="create-a-database"></a>Erstellen einer Datenbank

@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 837bb71e81ac2d2ead661915c332ad826c4f944f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251195"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896608"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Anbieterstatistiken für SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Ab . NET Framework 2.0 und .NET Core 1.0 unterstützt der Microsoft SqlClient-Datenanbieter für SQL Server Laufzeitstatistiken. Sie müssen Statistiken aktivieren, indem Sie die Eigenschaft <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> des <xref:Microsoft.Data.SqlClient.SqlConnection>-Objekts auf `True` festlegen, nachdem Sie ein gültiges Verbindungsobjekt erstellt haben. Nachdem Statistiken aktiviert wurden, können Sie sie als Momentaufnahme überprüfen, indem Sie einen <xref:System.Collections.IDictionary>-Verweis über die <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>-Methode des <xref:Microsoft.Data.SqlClient.SqlConnection>-Objekts abrufen. Sie zählen die Liste als eine Reihe von Wörterbucheinträgen in Form von Name-Wert-Paaren durch. Diese Name-Wert-Paare sind nicht geordnet. Sie können jederzeit die <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A>-Methode des <xref:Microsoft.Data.SqlClient.SqlConnection>-Objekts zum Zurücksetzen der Zähler aufrufen. Wenn die Statistikerfassung nicht aktiviert ist, wird keine Ausnahme generiert. Wenn außerdem <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> aufgerufen wird, ohne dass zuvor <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> aufgerufen wurde, sind die abgerufenen Werte die Anfangswerte jedes Eintrags. Wenn Sie Statistiken aktivieren, Ihre Anwendung eine Weile ausführen und Statistiken dann deaktivieren, spiegeln die abgerufenen Werte die Werte wider, die bis zu dem Punkt erfasst wurden, an dem Statistiken deaktiviert wurden. Alle erfassten statistischen Werte gelten verbindungsbezogen.  
   
@@ -33,7 +33,7 @@ Gegenwärtig bietet der Microsoft SQL Server-Anbieter 18 Elemente. Die Anzahl d
   
 In der folgenden Tabelle werden die aktuell verfügbaren statistischen Werte beschrieben. Beachten Sie, dass die Schlüsselnamen für die einzelnen Werte in den regionalen Versionen von Microsoft .NET Framework und .NET Core nicht lokalisiert sind.  
   
-|Schlüsselname|Beschreibung|  
+|Schlüsselname|BESCHREIBUNG|  
 |--------------|-----------------|  
 |`BuffersReceived`|Gibt die Anzahl der TDS-Pakete (Tabular Data Stream) zurück, die der Anbieter von SQL Server empfangen hat, nachdem die Anwendung die Nutzung des Anbieters gestartet und Statistiken aktiviert hat.|  
 |`BuffersSent`|Gibt die Anzahl der TDS-Pakete zurück, die vom Anbieter nach Aktivieren von Statistiken an SQL Server gesendet wurden. Für große Befehle sind möglicherweise mehrere Puffer erforderlich. Wenn z. B. ein großer Befehl an den Server gesendet wird und er sechs Pakete erfordert, wird `ServerRoundtrips` um 1 und `BuffersSent` um 6 erhöht.|  

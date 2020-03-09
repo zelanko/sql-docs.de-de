@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a49f0ffe4de2f3242daf147ecb80dc950f8d8a9f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: b7c0e54f4193fcb918a5b4b5a362e1bbd9fee646
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177400"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866460"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Herunterladen des Microsoft OLE DB-Treibers für SQL Server
 
@@ -24,8 +24,8 @@ Der OLE DB-Treiber für SQL Server ist eine eigenständige Datenzugriffs-API (
 
 Der Microsoft OLE DB-Treiber 18.3 für SQL Server ist die aktuellste allgemein verfügbare Version. Wenn Sie eine frühere Version des Microsoft OLE DB-Treibers 18 für SQL Server installiert haben, können Sie durch Installieren der Version 18.3 ein Upgrade auf Version 18.3 durchführen.
 
-**[![Download](../../ssdt/media/download.png) Herunterladen des Microsoft OLE DB-Treibers für SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)**  
-**[![Download](../../ssdt/media/download.png) Herunterladen des Microsoft OLE DB-Treibers für SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)**  
+**[![Download](../../ssms/media/download-icon.png) Herunterladen des Microsoft OLE DB-Treibers für SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)**  
+**[![Download](../../ssms/media/download-icon.png) Herunterladen des Microsoft OLE DB-Treibers für SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)**  
 
 ### <a name="version-information"></a>Versionsinformationen
 

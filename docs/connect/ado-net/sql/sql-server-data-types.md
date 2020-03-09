@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 46edb611f29c447f7e1ca2228212ef3e0d594fff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 50a6e158f5678b30028337b70e1da6914038e64a
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244043"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896542"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server-Datentypen und ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server und .NET basieren auf unterschiedlichen Typsystemen. Dies kann zu Datenverlust führen. Um Datenintegrität sicherzustellen, bietet der Microsoft SqlClient-Datenanbieter für SQL Server (<xref:Microsoft.Data.SqlClient>) typisierte Accessormethoden für die Arbeit mit SQL Server-Daten. Sie können die Enumerationen in den <xref:System.Data.SqlDbType>-Klassen verwenden, um <xref:Microsoft.Data.SqlClient.SqlParameter>-Datentypen anzugeben.  
   

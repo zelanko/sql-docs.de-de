@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 602dfe9c96c1e8713b90c607806dd09ed16a37b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e3e26a76522d1c1a99794076c5f152e6ec1e1f7d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247760"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896742"
 ---
 # <a name="filestream-data"></a>FILESTREAM-Daten
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Das FILESTREAM-Speicherattribut ist für binäre (Blob-)Daten vorgesehen, die in einer Spalte des Typs „varbinary(max)“ gespeichert sind. Vor FILESTREAM erforderte das Speichern von Binärdaten eine spezielle Verarbeitung. Unstrukturierte Daten, wie z. B. Textdokumente, Bilder und Videos, werden oft außerhalb der Datenbank gespeichert und sind daher schwierig zu verwalten.
 
@@ -187,7 +187,7 @@ Ein weiteres Beispiel finden Sie unter [Speichern und Abrufen von Binärdaten in
 
 Die vollständige Dokumentation für FILESTREAM finden Sie in den folgenden Abschnitten der SQL Server-Onlinedokumentation.
 
-|Thema|Beschreibung|
+|Thema|BESCHREIBUNG|
 |-----------|-----------------|
 |[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)|Beschreibt, wann FILESTREAM-Speicher verwendet wird und wie dieser die SQL Server-Datenbank-Engine in ein NTFS-Dateisystem integriert.|
 |[Erstellen von Clientanwendungen für FILESTREAM-Daten](../../../relational-databases/blob/create-client-applications-for-filestream-data.md)|Beschreibt die Windows-API-Funktionen für das Arbeiten mit FILESTREAM-Daten.|
