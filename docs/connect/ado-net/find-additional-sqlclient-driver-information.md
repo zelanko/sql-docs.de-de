@@ -13,22 +13,22 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 08ff52be06f976171623b4af91da3ebc1d26d53b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39723f61eaa5bf2fc18e950bbd3432837ee8620a
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251036"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897110"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>Suchen von zusätzlichen Informationen zum SqlClient-Treiber
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET herunterladen](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 Weitere Informationen zum SqlClient-Datenanbieter von Microsoft für die SQL Server-Entwicklung im Allgemeinen finden Sie in den folgenden Onlineressourcen:
 
 ## <a name="remarks"></a>Bemerkungen  
   
-|Resource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[GitHub-Repository für .Net CoreFX](https://github.com/dotnet/corefx)|Dieses Repository enthält die Bibliothekimplementierung für .NET Core.|
 |[GitHub-Repository des Microsoft SqlClient-Datenanbieters für SQL Server](https://github.com/dotnet/SqlClient)|Dieses Repository enthält den Quellcode für den SqlClient-Treiber.|  
