@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903870"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338445"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verarbeitet Abfragen für verschiedene Datenspeicherungsarchitekturen, z.B. lokale Tabellen, partitionierte Tabellen und serverübergreifend verteilte Tabellen. In den folgenden Themen wird erläutert, wie mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfragen verarbeitet werden und die Wiederverwendung von Abfragen mithilfe des Zwischenspeicherns von Ausführungsplänen optimiert wird.
 
@@ -86,7 +86,7 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>Optimieren von SELECT-Anweisungen
-Eine `SELECT` -Anweisung ist nicht prozedural; sie gibt nicht die genauen Schritte vor, die der Datenbankserver verwenden soll, um die angeforderten Daten abzurufen. Dies bedeutet, dass der Datenbankserver die Anweisung analysieren muss, um das effizienteste Verfahren zum Extrahieren der angeforderten Daten zu ermitteln. Dieser Vorgang wird als Optimieren der `SELECT` -Anweisung bezeichnet. Die Komponente, die ihn durchführt, wird als Abfrageoptimierer bezeichnet. Die Eingaben für den Abfrageoptimierer bestehen aus der Abfrage, dem Datenbankschema (Tabellen- und Indexdefinitionen) und den Datenbankstatistiken. Die Ausgabe des Abfrageoptimierers ist ein Abfrageausführungsplan, der manchmal auch als Abfrageplan oder einfach nur als Plan bezeichnet wird. Der Inhalt eines Abfrageplans wird ausführlicher an späterer Stelle in diesem Thema beschrieben.
+Eine `SELECT` -Anweisung ist nicht prozedural; sie gibt nicht die genauen Schritte vor, die der Datenbankserver verwenden soll, um die angeforderten Daten abzurufen. Dies bedeutet, dass der Datenbankserver die Anweisung analysieren muss, um das effizienteste Verfahren zum Extrahieren der angeforderten Daten zu ermitteln. Dieser Vorgang wird als Optimieren der `SELECT` -Anweisung bezeichnet. Die Komponente, die ihn durchführt, wird als Abfrageoptimierer bezeichnet. Die Eingaben für den Abfrageoptimierer bestehen aus der Abfrage, dem Datenbankschema (Tabellen- und Indexdefinitionen) und den Datenbankstatistiken. Die Ausgabe des Abfrageoptimierers ist ein Abfrageausführungsplan, der manchmal auch als Abfrageplan oder Ausführungsplan bezeichnet wird. Der Inhalt eines Ausführungsplans wird ausführlicher an späterer Stelle in diesem Thema beschrieben.
 
 Die Ein- und Ausgaben des Abfrageoptimierers während der Optimierung einer einzelnen `SELECT`-Anweisung werden in folgendem Diagramm dargestellt:
 
@@ -100,17 +100,19 @@ Eine `SELECT` -Anweisung definiert lediglich Folgendes:
 
 In einem Abfrageausführungsplan wird Folgendes definiert: 
 
-* Die Reihenfolge des Zugriffs auf die Quelltabellen.  
-  In der Regel gibt es viele Abfolgen, in denen der Datenbankserver auf die Basistabellen zugreifen kann, um das Resultset zu erstellen. Wenn die `SELECT` -Anweisung z.B. auf drei Tabellen verweist, könnte der Datenbankserver zuerst auf `TableA`zugreifen, dann die Daten aus `TableA` verwenden, um die entsprechenden Zeilen aus `TableB`zu extrahieren, und dann die Daten aus `TableB` verwenden, um Daten aus `TableC`zu extrahieren. Die anderen Abfolgen, in denen der Datenbankserver auf die Tabellen zugreifen kann, lauten:  
+- **Die Reihenfolge des Zugriffs auf die Quelltabellen.** In der Regel gibt es viele Abfolgen, in denen der Datenbankserver auf die Basistabellen zugreifen kann, um das Resultset zu erstellen. Wenn die `SELECT` -Anweisung z.B. auf drei Tabellen verweist, könnte der Datenbankserver zuerst auf `TableA`zugreifen, dann die Daten aus `TableA` verwenden, um die entsprechenden Zeilen aus `TableB`zu extrahieren, und dann die Daten aus `TableB` verwenden, um Daten aus `TableC`zu extrahieren. Die anderen Abfolgen, in denen der Datenbankserver auf die Tabellen zugreifen kann, lauten:  
   `TableC`, `TableB`, `TableA`oder  
   `TableB`, `TableA`, `TableC`oder  
   `TableB`, `TableC`, `TableA`oder  
   `TableC`, `TableA`, `TableB`  
 
-* Die Methoden, die verwendet werden, um Daten aus den einzelnen Tabellen zu extrahieren.  
+- **Die Methoden, die verwendet werden, um Daten aus den einzelnen Tabellen zu extrahieren.**  
   Für den Zugriff auf die Daten in den einzelnen Tabellen gibt es in der Regel unterschiedliche Methoden. Wenn nur wenige Zeilen mit bestimmten Schlüsselwerten erforderlich sind, kann der Datenbankserver einen Index verwenden. Wenn alle Zeilen der Tabelle erforderlich sind, kann der Datenbankserver die Indizes übergehen und einen Tabellenscan ausführen. Wenn alle Zeilen einer Tabelle erforderlich sind, die Tabelle jedoch über einen Index verfügt, dessen Schlüsselspalten in einer `ORDER BY`-Klausel verwendet werden, kann durch die Durchführung eines Indexscans anstelle eines Tabellenscans eine andere Sortierung des Resultsets gespeichert werden. Wenn es sich um eine sehr kleine Tabelle handelt, können Tabellenscans die effizienteste Methode für fast alle Zugriffe auf die Tabelle darstellen.
+  
+- **Die Methoden, die für Berechnungen und zum Filtern, Aggregieren und Sortieren von Daten aus den einzelnen Tabellen verwendet werden.**  
+  Wenn von Tabellen aus auf Daten zugegriffen wird, gibt es verschiedene Methoden zum Durchführen von Berechnungen für Daten, wie z. B. Berechnen von skalaren Werten, und zum Aggregieren und Sortieren von Daten wie im Abfragetext definiert, z. B. bei Verwendung einer `GROUP BY`- oder `ORDER BY`-Klausel, und zum Filtern von Daten, z. B. bei Verwendung einer `WHERE`- oder `HAVING`-Klausel.
 
-Der Vorgang, in dessen Verlauf ein bestimmter Ausführungsplan aus einer Anzahl möglicher Ausführungspläne ausgewählt wird, wird Optimierung genannt. Der Abfrageoptimierer stellt eine der wichtigsten Komponenten eines SQL-Datenbanksystems dar. Der Abfrageoptimierer erzeugt zwar den zusätzlichen Aufwand, um die Abfrage analysieren und einen Plan auswählen zu können, ein Vielfaches dieses Aufwands wird jedoch normalerweise dadurch eingespart, dass der Abfrageoptimierer einen effizienten Ausführungsplan auswählt. Nehmen Sie z. B. an, zwei Bauunternehmer erhalten dieselben Konstruktionszeichnungen für ein Haus. Wenn nun das eine Unternehmen zunächst einige Tage darauf verwendet, den Bau des Hauses detailliert zu planen, das andere Unternehmen jedoch sofort und ohne weitere Planung mit dem Bau des Hauses beginnt, ist es mehr als wahrscheinlich, dass das erste Unternehmen, das sich Zeit für die Planung des Projekts nimmt, den Bau des Hauses zuerst abschließen wird.
+Der Vorgang, in dessen Verlauf ein bestimmter Ausführungsplan aus einer Anzahl möglicher Ausführungspläne ausgewählt wird, wird Optimierung genannt. Der Abfrageoptimierer ist eine der wichtigsten Komponenten des [!INCLUDE[ssde_md](../includes/ssde_md.md)]. Der Abfrageoptimierer erzeugt zwar den zusätzlichen Aufwand, um die Abfrage analysieren und einen Plan auswählen zu können, ein Vielfaches dieses Aufwands wird jedoch normalerweise dadurch eingespart, dass der Abfrageoptimierer einen effizienten Ausführungsplan auswählt. Nehmen Sie z. B. an, zwei Bauunternehmer erhalten dieselben Konstruktionszeichnungen für ein Haus. Wenn nun das eine Unternehmen zunächst einige Tage darauf verwendet, den Bau des Hauses detailliert zu planen, das andere Unternehmen jedoch sofort und ohne weitere Planung mit dem Bau des Hauses beginnt, ist es mehr als wahrscheinlich, dass das erste Unternehmen, das sich Zeit für die Planung des Projekts nimmt, den Bau des Hauses zuerst abschließen wird.
 
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist eine kostenbasierte Optimierung. Jeder denkbare Ausführungsplan verfügt über zugeordnete Kosten hinsichtlich des Umfangs der benötigten Verarbeitungsressourcen. Der Abfrageoptimierer muss die möglichen Pläne analysieren und den Plan auswählen, der die geringsten geschätzten Kosten verursacht. Einige komplexe `SELECT` -Anweisungen verfügen über mehrere Tausend mögliche Ausführungspläne. In einem solchen Fall werden nicht alle denkbaren Kombinationen vom Abfrageoptimierer analysiert. Stattdessen werden komplexe Algorithmen verwendet, um einen Ausführungsplan zu ermitteln, dessen Kosten sich in vernünftigem Rahmen an die möglichen Mindestkosten annähern.
 
@@ -121,6 +123,12 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer st�
 <sup>1</sup> Dichte definiert die Verteilung von eindeutigen Werten, die in den Daten vorhanden sind, oder die durchschnittliche Anzahl doppelter Werte für eine bestimmte Spalte. Bei einer Verringerung der Dichte erhöht sich die Selektivität eines Werts.
 
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist deshalb so wichtig, weil er es dem Datenbankserver ermöglicht, dynamische Anpassungen an geänderte Bedingungen in der Datenbank vorzunehmen, ohne dass eine Eingabe durch einen Programmierer oder Datenbankadministrator erforderlich ist. Programmierer können sich somit darauf konzentrieren, das endgültige Ergebnis der Abfrage zu beschreiben. Sie können sich darauf verlassen, dass der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer bei jeder Ausführung der Anweisung einen effizienten Ausführungsplan auf der Basis des aktuellen Status der Datenbank erstellt.
+
+> [!NOTE]
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verfügt über drei Optionen zum Anzeigen von Ausführungsplänen:        
+> -  Der ***[geschätzte Ausführungsplan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, der dem vom Abfrageoptimierer produzierten kompilierten Plan entspricht.        
+> -  Der ***[tatsächliche Ausführungsplan](../relational-databases/performance/display-an-actual-execution-plan.md)***, der dem kompilierten Plan entspricht und den Ausführungskontext enthält. Dies umfasst die Laufzeitinformationen, die nach Abschluss der Ausführung verfügbar sind, z. B. Ausführungswarnungen oder, in neueren Versionen von [!INCLUDE[ssde_md](../includes/ssde_md.md)], die vergangene und die CPU-Zeit der Ausführung.        
+> -  Die ***[Live-Abfragestatistik](../relational-databases/performance/live-query-statistics.md)***, die dem kompilierten Plan entspricht und den Ausführungskontext enthält. Dies umfasst Laufzeitinformationen während des Ausführungsfortschritts, die sekündlich aktualisiert werden. Laufzeitinformationen enthalten beispielsweise die genaue Anzahl der Zeilen, die die Operatoren durchlaufen.       
 
 ### <a name="processing-a-select-statement"></a>Verarbeiten einer SELECT-Anweisung
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] führt zur Verarbeitung einer einzelnen SELECT-Anweisung die folgenden grundlegenden Schritte aus: 
@@ -450,12 +458,6 @@ WHERE name LIKE '%plans%';
   Jeder Benutzer, der die Abfrage zurzeit ausführt, verfügt über eine Datenstruktur mit den Daten, die für diese Ausführung spezifisch sind, z. B. Parameterwerte. Diese Datenstruktur wird als Ausführungskontext bezeichnet. Die Datenstrukturen des Ausführungskontexts werden wiederverwendet, aber nicht ihr Inhalt. Wenn ein anderer Benutzer dieselbe Abfrage ausführt, werden die Datenstrukturen mit dem Kontext für den neuen Benutzer nochmal initialisiert. 
 
   ![execution_context](../relational-databases/media/execution-context.gif)
-
-> [!NOTE]
-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verfügt über drei Optionen zum Anzeigen von Ausführungsplänen:        
-> -  Der ***[geschätzte Ausführungsplan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, der dem kompilierten Plan entspricht.        
-> -  Der ***[tatsächliche Ausführungsplan](../relational-databases/performance/display-an-actual-execution-plan.md)***, der dem kompilierten Plan entspricht und den Ausführungskontext enthält. Dies umfasst die Laufzeitinformationen, die nach Abschluss der Ausführung verfügbar sind, z. B. Ausführungswarnungen oder, in neueren Versionen von [!INCLUDE[ssde_md](../includes/ssde_md.md)], die vergangene und die CPU-Zeit der Ausführung.        
-> -  Die ***[Live-Abfragestatistik](../relational-databases/performance/live-query-statistics.md)***, die dem kompilierten Plan entspricht und den Ausführungskontext enthält. Dies umfasst Laufzeitinformationen während des Ausführungsfortschritts, die sekündlich aktualisiert werden. Laufzeitinformationen enthalten beispielsweise die genaue Anzahl der Zeilen, die die Operatoren durchlaufen.       
 
 Wenn eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, durchsucht [!INCLUDE[ssde_md](../includes/ssde_md.md)] zunächst den Plancache, um zu überprüfen, ob ein vorhandener Ausführungsplan für dieselbe [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung vorhanden ist. Die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung wird dann als vorhanden qualifiziert, wenn sie mit einer zuvor ausgeführten [!INCLUDE[tsql](../includes/tsql-md.md)]-­Anweisung mit einem zwischengespeicherten Plan Zeichen für Zeichen übereinstimmt. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet sämtliche vorhandenen Pläne wieder, die hierbei gefunden werden, und spart sich somit den Aufwand für das erneute Kompilieren der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung. Wenn kein Ausführungsplan vorhanden ist, generiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen neuen Ausführungsplan für die Abfrage.
 
