@@ -9,11 +9,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68693188"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340382"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Mitwirken an der SQL Server-Dokumentation
 
@@ -79,7 +79,7 @@ Dieser Abschnitt enthält zusätzliche Hinweise zur Arbeit mit dem **sql-docs**-
 
 Zur Organisation von Inhalten werden im [sql-docs](https://github.com/MicrosoftDocs/sql-docs)-Repository die folgenden Standardordner verwendet:
 
-| Ordner | Beschreibung |
+| Ordner | BESCHREIBUNG |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | Enthält alle veröffentlichten SQL Server-Inhalte. In Unterordnern werden verschiedene Inhaltsbereiche organisiert. |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | Enthält Includedateien. Diese Dateien bestehen aus Inhaltsblöcken, die in ein oder mehrere Artikel aufgenommen werden können. |

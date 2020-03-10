@@ -10,11 +10,11 @@ ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
 ms.openlocfilehash: b459877be731da11b33d13772bbf186ecf72198c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72381851"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339588"
 ---
 # <a name="using-azure-active-directory"></a>Verwenden von Azure Active Directory
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ Mit Version 18.3 wird Unterstützung für die folgenden Authentifizierungsmethod
 ## <a name="connection-string-keywords-and-properties"></a>Schlüsselwörter und Eigenschaften bei Verbindungszeichenfolgen
 Zur Unterstützung der Azure Active Directory-Authentifizierung wurden die folgenden Schlüsselwörter für Verbindungszeichenfolgen eingeführt:
 
-|Verbindungszeichenfolgen-Schlüsselwort|Verbindungseigenschaft|Beschreibung|
+|Verbindungszeichenfolgen-Schlüsselwort|Verbindungseigenschaft|BESCHREIBUNG|
 |---               |---                |---        |
 |Access Token|SSPROP_AUTH_ACCESS_TOKEN|Gibt ein Zugriffstoken für die Authentifizierung gegenüber Azure Active Directory an. |
 |Authentifizierung|SSPROP_AUTH_MODE|Gibt die zu verwendende Authentifizierungsmethode an.|

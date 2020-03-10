@@ -16,11 +16,11 @@ ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a8ffafae40991d6134925481409b5898b06c20c4
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77479715"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340517"
 ---
 # <a name="change-server-authentication-mode"></a>Ändern des Serverauthentifizierungsmodus
 

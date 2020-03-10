@@ -24,11 +24,11 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71281974"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339658"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Zugriffssteuerung für vertrauliche Daten in Paketen
 
@@ -61,7 +61,7 @@ ms.locfileid: "71281974"
 ## <a name="protection-levels"></a>Schutzebenen  
  In der folgenden Tabelle werden die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verfügbaren Schutzebenen beschrieben. Die in Klammern stehenden Werte stammen aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> -Enumeration. Diese Werte werden im Eigenschaftenfenster angezeigt, das Sie zum Konfigurieren der Eigenschaften des Pakets verwenden, wenn Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]mit Paketen arbeiten.  
   
-|Schutzebene|Beschreibung|  
+|Schutzebene|BESCHREIBUNG|  
 |----------------------|-----------------|  
 |Vertrauliche Daten nicht speichern (**DontSaveSensitive**)|Unterdrückt die Werte vertraulicher Eigenschaften im Paket, wenn das Paket gespeichert wird. Diese Schutzebene verschlüsselt nicht, sondern verhindert stattdessen, dass als sensibel markierte Eigenschaften mit dem Paket gespeichert werden. Deshalb stehen die sensiblen Daten anderen Benutzern nicht zur Verfügung. Wenn das Paket von einem anderen Benutzer geöffnet wird, werden die sensiblen Daten durch Leerzeichen ersetzt und der Benutzer muss die sensiblen Daten angeben.<br /><br /> Bei der Verwendung mit dem **dtutil** -Hilfsprogramm (dtutil.exe) entspricht diese Schutzebene dem Wert 0.|  
 |Alles mit einem Kennwort verschlüsseln (**EncryptAllWithPassword**)|Verwendet ein Kennwort zum Verschlüsseln des gesamten Pakets. Das Paket wird mit einem Kennwort verschlüsselt, das beim Erstellen oder Exportieren des Pakets vom Benutzer bereitgestellt wird. Um das Paket im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu öffnen oder mit dem **dtexec** -Eingabeaufforderungs-Hilfsprogramm auszuführen, muss der Benutzer das Paketkennwort angeben. Ohne Kennwort kann der Benutzer das Paket weder öffnen noch ausführen.<br /><br /> Bei der Verwendung mit dem **dtutil** -Hilfsprogramm entspricht diese Schutzebene dem Wert 3.|  

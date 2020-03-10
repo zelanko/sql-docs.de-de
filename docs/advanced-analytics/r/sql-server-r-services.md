@@ -10,11 +10,11 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 48f3b3433d0ca2f4daf08048228989598c5cf36a
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971433"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339263"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>Was ist SQL Server 2016 R Services?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ Die R-Version 3.2.2 ist in SQL Server 2016 R Services enthalten. Verwenden Sie f
 
 Neben den Enterprise-Paketen von Microsoft können Sie auch Open-Source-Pakete und -Frameworks verwenden. Die gängigsten Open-Source-R-Pakete sind in R Services bereits vorinstalliert. Zudem sind die folgenden R-Pakete von Microsoft bereits enthalten:
 
-| Paket | Beschreibung |
+| Paket | BESCHREIBUNG |
 |-|-|
 | [RevoScaleR](../r/ref-r-revoscaler.md) | Das primäre Paket mit skalierbaren R-Funktionen zum Transformieren und Bearbeiten von Daten sowie zum Erstellen von statistischen Übersichten, Visualisierungen und vielen anderen Modellierungsformen. Zudem enthält das Paket zur Parallelverarbeitung Funktionen zum automatischen Verteilen von Workloads auf verfügbare Kerne. |
 | [MicrosoftML (R)](../r/ref-r-microsoftml.md) | Stellt Machine Learning-Algorithmen zur Erstellung von benutzerdefinierten Modellen für die Text-, Bild- und Stimmungsanalyse bereit. |

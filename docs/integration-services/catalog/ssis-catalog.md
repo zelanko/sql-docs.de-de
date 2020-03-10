@@ -15,11 +15,11 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71294962"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338963"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
 
@@ -385,7 +385,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
 #### <a name="options"></a>Tastatur  
  In der folgenden Tabelle werden spezifische Eigenschaften im Dialogfeld und die entsprechenden Eigenschaften in der `catalog.catalog_properties`-Ansicht beschrieben.  
   
-|Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_properties-Ansicht)|Beschreibung|  
+|Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_properties-Ansicht)|BESCHREIBUNG|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |Name des Verschlüsselungsalgorithmus|ENCRYPTION_ALGORITHM|Gibt den Verschlüsselungstyp an, der zur Verschlüsselung der sensiblen Parameterwerte im Katalog verwendet wird. Folgende Werte sind möglich:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (Standard)|  
 |Maximale Anzahl der Versionen pro Projekt|MAX_PROJECT_VERSIONS|Gibt an, wie viele Versionen eines Projekts im Katalog gespeichert sind. Wenn die maximale Anzahl überschritten wird, werden frühere Versionen von Projekten bei der Projektversionsbereinigung entfernt.|  
