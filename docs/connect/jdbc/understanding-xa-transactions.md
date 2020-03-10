@@ -11,11 +11,11 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74947132"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340502"
 ---
 # <a name="understanding-xa-transactions"></a>Grundlegendes zu XA-Transaktionen
 
@@ -32,7 +32,7 @@ In diesem Artikel steht XA für erweiterte Architektur.
 
 Für die Implementierung verteilter Transaktionen stehen die folgenden Klassen zur Verfügung:  
   
-| Klasse                                              | Implementiert                      | Beschreibung                                       |
+| Klasse                                              | Implementiert                      | BESCHREIBUNG                                       |
 | -------------------------------------------------- | ------------------------------- | ------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc.SQLServerXADataSource | javax.sql.XADataSource          | Das Klassenfactory für verteilte Verbindungen.    |
 | com.microsoft.sqlserver.jdbc.SQLServerXAResource   | javax.transaction.xa.XAResource | Der Ressourcenadapter für den Transaktions-Manager. |

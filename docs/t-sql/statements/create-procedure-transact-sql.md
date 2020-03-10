@@ -47,11 +47,11 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909820"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339803"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -440,7 +440,7 @@ GO
 ## <a name="metadata"></a>Metadaten  
  In der folgenden Tabelle sind die Katalogsichten und dynamischen Verwaltungssichten aufgeführt, die Sie verwenden können, um Informationen zu gespeicherten Prozeduren zurückzugeben.  
   
-|Sicht|Beschreibung|  
+|Sicht|BESCHREIBUNG|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Gibt die Definition einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur zurück. Der Text einer mit der ENCRYPTION-Option erstellten Prozedur kann nicht mit der **sys.sql_modules**-Katalogsicht angezeigt werden.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Gibt Informationen zu einer CLR-Prozedur zurück.|  
@@ -966,7 +966,7 @@ WITH EXECUTE AS SELF
 AS TRUNCATE TABLE MyDB..MyTable;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>O. Erstellen einer gespeicherten Prozedur, die eine SELECT-Anweisung ausführt  
  In diesem Beispiel wird die grundlegende Syntax zum Erstellen und Ausführen einer Prozedur gezeigt. Beim Ausführen eines Batchs muss CREATE PROCEDURE in der ersten Anweisung enthalten sein. Um beispielsweise die folgende gespeicherte Prozedur in [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] zu erstellen, legen Sie zuerst den Datenbankkontext fest und führen dann die CREATE PROCEDURE-Anweisung aus.  
