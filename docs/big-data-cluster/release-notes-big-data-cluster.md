@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9de368594383ef1f7fe3ae3c062f92873fb15698
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 38a1e2381bb3b7730a06af09b807886e18a50d13
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256901"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78924705"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Versionshinweise zu Big Data-Clustern für SQL Server 2019
 
@@ -59,7 +59,7 @@ In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[big-data-clusters
 
 | Release               | Version       | Veröffentlichungsdatum |
 |-----------------------|---------------|--------------|
-| [CU2](#cu2)           | 15.0.4013.40    | 13.02.2020   |
+| [CU2](#cu2)           | 15.0.4013.40    | 13.2.2020   |
 | [CU1](#cu1)           | 15.0.4003.23   | 01.07.2020   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
 
@@ -69,7 +69,7 @@ Informationen zum Installieren von Updates finden Sie unter [Upgraden von Big Da
 
 ## <a id="cu2"></a> CU2 (Februar 2020)
 
-Kumulatives Update 2-Release (CU2) für SQL Server 2019 Die Version der SQL Server-Datenbank-Engine für dieses Release ist 15.0.4003.23.
+Kumulatives Update 2-Release (CU2) für SQL Server 2019 Die Version der SQL Server-Datenbank-Engine für dieses Release ist 15.0.4013.40.
 
 |Paketversion | Imagetag |
 |-----|-----|
