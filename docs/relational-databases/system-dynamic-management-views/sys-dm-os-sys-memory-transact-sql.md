@@ -20,12 +20,12 @@ ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ca8b0f6e700e97c5cbc33964cc450ad54ea1a7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 891ae8c4f21d0a38302a7213aab22b8a70e855ba
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67899705"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027944"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "67899705"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**total_physical_memory_kb**|**BIGINT**|Physischer Gesamtspeicher in Kilobytes (KB), der dem Betriebssystem zur Verfügung steht.|  
-|**available_physical_memory_kb**|**BIGINT**|Verfügbarer physischer Arbeitsspeicher in KB.|  
-|**total_page_file_kb**|**BIGINT**|Die vom Betriebssystem gemeldete Commitgrenze in KB.|  
-|**available_page_file_kb**|**BIGINT**|Gesamtangabe für den in der Auslagerungsdatei nicht genutzten Speicher in KB.|  
-|**system_cache_kb**|**BIGINT**|Gesamter Arbeitsspeicher im Systemcache in KB.|  
-|**kernel_paged_pool_kb**|**BIGINT**|Gesamtgröße des ausgelagerten Kernelpools in KB.|  
-|**kernel_nonpaged_pool_kb**|**BIGINT**|Gesamtgröße des nicht ausgelagerten Kernelpools in KB.|  
+|**total_physical_memory_kb**|**bigint**|Physischer Gesamtspeicher in Kilobytes (KB), der dem Betriebssystem zur Verfügung steht.|  
+|**available_physical_memory_kb**|**bigint**|Verfügbarer physischer Arbeitsspeicher in KB.|  
+|**total_page_file_kb**|**bigint**|Die vom Betriebssystem gemeldete Commitgrenze in KB.|  
+|**available_page_file_kb**|**bigint**|Die Gesamtmenge der Auslagerungs Datei, die nicht verwendet wird, in KB.|  
+|**system_cache_kb**|**bigint**|Gesamter Arbeitsspeicher im Systemcache in KB.|  
+|**kernel_paged_pool_kb**|**bigint**|Gesamtgröße des ausgelagerten Kernelpools in KB.|  
+|**kernel_nonpaged_pool_kb**|**bigint**|Gesamtgröße des nicht ausgelagerten Kernelpools in KB.|  
 |**system_high_memory_signal_state**|**bit**|Benachrichtigung zum Systemstatus: Speicherressourcen sind ausreichend. Ein Wert von 1 gibt an, dass das Signal für ausreichende Speicherressourcen von Windows festgelegt wurde. Weitere Informationen finden Sie unter " [kreatememoryresourcenotifi"](https://go.microsoft.com/fwlink/?LinkId=82427) in der MSDN Library.|  
 |**system_low_memory_signal_state**|**bit**|Benachrichtigung zum Systemstatus: Speicherressourcen sind nicht ausreichend. Ein Wert von 1 gibt an, dass das Signal für nicht ausreichende Speicherressourcen von Windows festgelegt wurde. Weitere Informationen finden Sie unter " [kreatememoryresourcenotifi"](https://go.microsoft.com/fwlink/?LinkId=82427) in der MSDN Library.|  
 |**system_memory_state_desc**|**nvarchar(256)**|Beschreibung des Speicherstatus. Siehe hierzu die nachstehende Tabelle.|  
