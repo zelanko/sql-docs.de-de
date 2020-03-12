@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
-ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
+ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634849"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280902"
 ---
 # <a name="bcp-utility"></a>Hilfsprogramms bcp
 
@@ -121,14 +121,14 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  _**database\_name**_ <a name="db_name"></a>  
  Der Name der Datenbank, in der die angegebene Tabelle oder Sicht vorhanden ist. Wenn kein Name angegeben ist, wird diese Datenbank als Standarddatenbank des Benutzers verwendet.  
 
- Sie können den Datenbanknamen mit **d-** auch explizit angeben.  
+ Sie können den Datenbanknamen auch explizit mit **-d** angeben.  
 
  **in** *Datendatei* | **out** *Datendatei* | **queryout** *Datendatei* | **format nul**  
  Gibt die Richtung des Massenkopierens wie folgt an:  
   
 -   **in**<a name="in"></a> werden Daten aus einer Datei in die Datenbanktabelle oder -sicht kopiert.  
   
--   **out**<a name="out"></a> werden Daten aus der Datenbanktabelle oder -sicht in eine Datei kopiert. Wenn Sie eine vorhandene Datei angeben, wird die Datei überschrieben. Beachten Sie, dass das Hilfsprogramm **bcp** beim Extrahieren von Daten leere Zeichenfolgen als NULL-Zeichenfolgen und NULL-Zeichenfolgen als leere Zeichenfolgen darstellt.  
+-   **out**<a name="out"></a> werden Daten aus der Datenbanktabelle oder -sicht in eine Datei kopiert. Wenn Sie eine vorhandene Datei angeben, wird die Datei überschrieben. Das Hilfsprogramm **bcp** stellt beim Extrahieren von Daten leere Zeichenfolgen als NULL-Zeichenfolgen und NULL-Zeichenfolgen als leere Zeichenfolgen dar.  
   
 -   **queryout**<a name="qry_out"></a> werden Daten aus einer Abfrage kopiert. Diese Option muss nur beim Massenkopieren von Daten über eine Abfrage angegeben werden.  
   
@@ -168,7 +168,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > Es wird empfohlen, für jede Spalte in einer Formatdatei einen Sortierungsnamen anzugeben, außer wenn die 65001-Option Priorität vor der Angabe von Sortierung/Codepage haben soll.
   
-|Codepagewert|BESCHREIBUNG|  
+|Codepagewert|Beschreibung|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Standardcodepage, die vom Client verwendet wird. Die Standardcodepage, die verwendet wird, wenn **-C** nicht angegeben wird.|  
@@ -187,10 +187,11 @@ Bewirkt, dass der Wert, der an die `bcp`-Option `-S` übergeben wird, als Datenq
   
  Wenn *Fehlerdatei* mit einem Bindestrich (-) oder einem Schrägstrich (/) beginnt, darf kein Leerzeichen zwischen **-e** und dem *Fehlerdatei* -Wert enthalten sein.  
   
- **-E**<a name="E"></a>   
- Gibt an, dass der oder die Identitätswerte in der importierten Datendatei für die Identitätsspalte verwendet werden sollen. Wenn **-E** nicht angegeben wird, werden die Identitätswerte für diese Spalte in der zu importierenden Datendatei ignoriert. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] weist automatisch eindeutige Werte zu, basierend auf den Ausgangswerten und den inkrementellen Werten, die beim Erstellen der Tabelle angegeben wurden.  
+**-E**<a name="E"></a>
+
+Gibt an, dass der oder die Identitätswerte in der importierten Datendatei für die Identitätsspalte verwendet werden sollen. Wenn **-E** nicht angegeben wird, werden die Identitätswerte für diese Spalte in der zu importierenden Datendatei ignoriert. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] weist automatisch eindeutige Werte zu, basierend auf den Ausgangswerten und den inkrementellen Werten, die beim Erstellen der Tabelle angegeben wurden.  Weitere Informationen finden Sie unter [DBCC CHECKIDENT](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
   
- Wenn die Datendatei keine Werte für die Identitätsspalte in der Tabelle oder Sicht enthält, geben Sie mithilfe einer Formatdatei an, dass die Identitätsspalte der Tabelle oder Sicht beim Importieren von Daten ausgelassen werden soll. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] weist der Spalte automatisch eindeutige Werte zu. Weitere Informationen finden Sie unter [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+ Wenn die Datendatei keine Werte für die Identitätsspalte in der Tabelle oder Sicht enthält, geben Sie mithilfe einer Formatdatei an, dass die Identitätsspalte der Tabelle oder Sicht beim Importieren von Daten ausgelassen werden soll. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] weist der Spalte automatisch eindeutige Werte zu.
   
  Für die Option **-E** sind besondere Berechtigungen erforderlich. Weitere Informationen finden Sie unter „[Hinweise](#remarks)“ weiter unten in diesem Thema.  
    
@@ -228,13 +229,13 @@ Bewirkt, dass der Wert, der an die `bcp`-Option `-S` übergeben wird, als Datenq
 
     Im folgenden Beispiel werden Daten mithilfe von Azure AD-Benutzername und -Kennwort exportiert, wobei Benutzer und Kennwort AAD-Anmeldeinformationen sind. Im Beispiel wird die Tabelle `bcptest` aus der Datenbank `testdb` vom Azure-Server `aadserver.database.windows.net` exportiert, und die Daten werden in der Datei `c:\last\data1.dat` gespeichert:
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     Im folgenden Beispiel werden Daten mithilfe von Azure AD-Benutzername und -Kennwort importiert, wobei Benutzer und Kennwort AAD-Anmeldeinformationen sind. Im Beispiel werden Daten aus der Datei `c:\last\data1.dat` in die Tabelle `bcptest` für die Datenbank `testdb` auf dem Azure-Server `aadserver.database.windows.net` importiert:
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +245,13 @@ Bewirkt, dass der Wert, der an die `bcp`-Option `-S` übergeben wird, als Datenq
 
     Im folgenden Beispiel werden Daten mithilfe des integrierten Azure AD-Kontos exportiert. Im Beispiel wird die Tabelle `bcptest` aus der Datenbank `testdb` vom Azure-Server `aadserver.database.windows.net` exportiert, und die Daten werden in der Datei `c:\last\data2.dat` gespeichert:
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     Im folgenden Beispiel werden Daten mithilfe der integrierten Azure AD-Authentifizierung importiert. Im Beispiel werden Daten aus der Datei `c:\last\data2.txt` in die Tabelle `bcptest` für die Datenbank `testdb` auf dem Azure-Server `aadserver.database.windows.net` importiert:
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -266,13 +267,13 @@ Bewirkt, dass der Wert, der an die `bcp`-Option `-S` übergeben wird, als Datenq
 
    Im interaktiven Modus muss ein Kennwort manuell eingegeben werden. Bei Konten mit mehrstufiger Authentifizierung müssen Sie Ihre konfigurierte MFA-Authentifizierungsmethode vervollständigen.
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    Für den Fall, dass ein Azure AD-Benutzer auch ein Benutzer eines Domänenverbunds ist und ein Windows-Konto verwendet, enthält der in der Befehlszeile erforderliche Benutzername dessen Domänenkonto (Beispiel joe@contoso.com unten):
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +449,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
     
     Geben Sie Folgendes in die Eingabeaufforderung ein, um zu ermitteln, wo sämtliche Versionen des bcp-Hilfsprogramms installiert sind:
     
-    ```console
+    ```cmd
     where bcp.exe
     ```
 
@@ -604,7 +605,7 @@ END
 
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```console
+```cmd
 bcp -v
 ```
   
@@ -616,7 +617,7 @@ In den folgenden Beispielen wird die Verwendung der Option **out** in der Tabell
 
   Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +639,7 @@ Im folgenden Beispiel wird die Verwendung der Option **out** in der `WideWorldIm
 
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein: \(Das System fordert Sie zur Eingabe des Kennworts auf.\)
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +651,7 @@ Die folgenden Beispiele veranschaulichen die Option **in** für die `WideWorldIm
 
   Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +659,7 @@ Die folgenden Beispiele veranschaulichen die Option **in** für die `WideWorldIm
   
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +671,7 @@ Zum Kopieren einer bestimmten Spalte können Sie die Option **queryout** verwend
   
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```console
+```cmd
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +681,7 @@ Zum Kopieren einer bestimmten Zeile können Sie die Option **queryout** verwende
   
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```console
+```cmd
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +691,7 @@ Verwenden Sie die Option **queryout** zum Kopieren des Resultsets einer Transact
 
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```console
+```cmd
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +701,7 @@ In dem folgenden Beispiel werden drei verschiedene Formatdateien für die `Wareh
 
 Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 
-```console
+```cmd
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +723,7 @@ Wenn Sie eine zuvor erstellte Formatdatei zum Importieren von Daten in eine [!IN
 
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 

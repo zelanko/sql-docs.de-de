@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 07bb9cf8f0fc697e1d31a80e22a72cd5a0ea484a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e59dfd9c79090bc20a517367e0145303822d8079
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257954"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280887"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Aktivieren von SQL Server Managed Backup für Azure
 
@@ -34,7 +34,7 @@ Für den Prozess ist ein Azure-Konto erforderlich. Überspringen Sie diesen Schr
 
 Weitere Informationen zu Speicherkonten finden Sie unter [Informationen zu Azure-Speicherkonten](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
 
-#### <a name="azure-clitabazure-cli"></a>[Azure-Befehlszeilenschnittstelle](#tab/azure-cli)
+#### <a name="azure-cli"></a>[Azure-Befehlszeilenschnittstelle](#tab/azure-cli)
 
 1. Melden Sie sich bei Ihrem Azure-Konto an.
 
@@ -61,7 +61,7 @@ Weitere Informationen zu Speicherkonten finden Sie unter [Informationen zu Azure
     az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
     ```
 
-#### <a name="powershelltabazure-powershell"></a>[PowerShell](#tab/azure-powershell)
+#### <a name="powershell"></a>[PowerShell](#tab/azure-powershell)
 
 1. Mit dem folgenden Befehl erfolgt die Anmeldung beim Azure-Konto.
 

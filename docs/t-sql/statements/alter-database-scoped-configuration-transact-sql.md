@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 99c252c81b081a7d4e0583e6722c5c853904cc27
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180075"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288969"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -121,7 +121,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
 }
 ```
 
@@ -397,7 +397,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 Ermöglicht es Ihnen, zu steuern, ob ein Prädikat für die [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) (Row-Level Security, RLS) die Kardinalität des Ausführungsplans für die gesamte Benutzerabfrage beeinflusst. Wenn für ISOLATE_SECURITY_POLICY_CARDINALITY ON festgelegt ist, beeinflussen RLS-Prädikate die Kardinalität von Ausführungsplänen nicht. Angenommen, es gibt eine Tabelle mit 1 Million Zeilen und ein RLS-Prädikat, das das Ergebnis für einen bestimmten Benutzer, der die Abfrage durchführt, auf 10 Zeilen beschränkt. Wenn für diese datenbankweite Konfiguration OFF festgelegt ist, schätzt dieses Prädikat die Kardinalität auf 10. Wenn für diese datenbankweite Konfiguration ON festgelegt ist, schätzt die Abfrageoptimierung die Anzahl der Zeilen auf 1 Million. Für die meisten Arbeitsauslastungen wird empfohlen, den Standardwert zu verwenden.
 
-DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL (Vorschau) **=** {**AUTO** | 10 | 20 }
 
 **GILT FÜR**: nur Azure Synapse Analytics (ehemals SQL DW)
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 45a1b461c5a56bfd894122eeb67e69672c36d093
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117287"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288959"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -76,11 +76,11 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
  *\<block_dml_operation>* Der DML-Vorgang, auf den das BLOCK-Prädikat angewendet werden soll. AFTER legt fest, dass das Prädikat für die Zeilenwerte ausgewertet werden soll, nachdem der DML-Vorgang (INSERT oder UPDATE) durchgeführt wurde. BEFORE legt fest, dass das Prädikat für die Zeilenwerte ausgewertet werden soll, bevor der DML-Vorgang (UPDATE oder DELETE) durchgeführt wird. Wenn kein Vorgang angegeben ist, gilt das Prädikat für alle Vorgänge.  
   
- [ STATE = { ON | **OFF** } ]  
+ [ STATE = { **ON** | OFF } ]  
  Aktiviert oder deaktiviert das Erzwingen der Sicherheitsprädikate der Sicherheitsrichtlinie für die Zieltabellen. Wenn nichts angegeben ist, wird die erstellte Sicherheitsrichtlinie aktiviert.  
   
- [ SCHEMABINDING = { ON | OFF } ]  
- Gibt an, ob alle Prädikatfunktionen in der Richtlinie über die SCHEMABINDING-Option erstellt werden sollen. Standardmäßig müssen alle Funktionen über SCHEMABINDING erstellt werden.  
+ [ SCHEMABINDING = { **ON** | OFF } ]  
+ Gibt an, ob alle Prädikatfunktionen in der Richtlinie über die SCHEMABINDING-Option erstellt werden sollen. Standardmäßig ist diese Einstellung auf **ON** festgelegt, und alle Funktionen müssen mit SCHEMABINDING erstellt werden.  
   
  NOT FOR REPLICATION  
  Gibt an, dass die Sicherheitsrichtlinie nicht ausgeführt werden soll, wenn ein Replikations-Agent das Zielobjekt ändert. Weitere Informationen finden Sie unter [Kontrollieren des Verhaltens von Triggern und Einschränkungen während der Synchronisierung &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  

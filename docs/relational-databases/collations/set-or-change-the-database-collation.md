@@ -13,19 +13,22 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fe614dc28c434a068378d256a6e1c7aaa59e6d6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72289343"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866109"
 ---
 # <a name="set-or-change-the-database-collation"></a>Festlegen oder Ändern der Datenbanksortierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie die Datenbanksortierung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]festgelegt und geändert werden kann. Wenn keine Sortierung angegeben wird, wird die Sortierung des Servers verwendet.  
+  
+> [!IMPORTANT]
+> Das Ändern der Datenbanksortierung ist in Azure SQL-Datenbank nicht ausdrücklich verboten. Das Ändern der Datenbanksortierung erfordert jedoch eine exklusive Sperre für die Datenbank, und durch andere Benutzer- oder Hintergrundprozesse (z. B. für die Sicherung) gehaltene Datenbanksperren könnten eine Änderung der Sortierung verhindern. Bei `ALTER DATABASE COLLATE`-Anweisungen in Azure SQL-Datenbank tritt ein Fehler auf, wenn sie ausgeführt werden, während Hintergrundprozesse auf die Datenbank zugreifen. Wenn Sie Fehler aufgrund von Sperrtimeouts erhalten, müssen Sie die Anweisung wiederholen. 
  
 > [!NOTE]
-> Sobald die Datenbank einmal in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellt wurde, kann sie nicht mit [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mehr geändert werden. Sie kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)] geändert werden.
+> Sobald die Datenbank einmal in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] erstellt wurde, kann sie nicht mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mehr geändert werden. Sie kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)] geändert werden.
 
  **In diesem Thema**  
   
@@ -35,7 +38,7 @@ ms.locfileid: "72289343"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Festlegen oder Ändern der Datenbanksortierung mit:**  
   
@@ -51,7 +54,7 @@ ms.locfileid: "72289343"
   
 -   Wenn die angegebene Sortierung oder die Sortierung des Objekts, auf das verwiesen wird, eine Codepage verwendet, die nicht von Windows unterstützt wird, zeigt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler an.  
 
--   Sobald die Datenbank einmal in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellt wurde, kann sie nicht mit [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mehr geändert werden. Sie kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)] geändert werden.
+-   Sobald die Datenbank einmal in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] erstellt wurde, kann sie nicht mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mehr geändert werden. Sie kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)] geändert werden.
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
+ms.sourcegitcommit: 951740963d5fe9cea7f2bfe053c45ad5d846df04
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76281868"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78225919"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>DevOps-Tools für SQL Server Integration Services (Vorschau)
 
@@ -38,6 +38,8 @@ Wenn Sie noch nicht über eine **Azure DevOps-Organisation** verfügen, registri
 
 Pfad des Projektordners oder der Projektdatei, die erstellt werden sollen. Wird ein Ordnerpfad angegeben, durchsucht der SSIS-Buildtask alle DTPROJ-Dateien in diesem Ordner rekursiv und erstellt alle.
 
+Der Projektpfad darf nicht *leer* sein. Legen Sie ihn als **.** fest, um den Build im Stammordner des Repositorys zu erstellen.
+
 #### <a name="project-configuration"></a>Projektkonfiguration
 
 Name der Projektkonfiguration, die für den Build verwendet werden soll. Wird keine Projektkonfiguration angegeben, wird als Standardeinstellung die erste definierte Projektkonfiguration in jeder DTPROJ-Datei verwendet.
@@ -50,9 +52,19 @@ Pfad eines separaten Ordners zum Speichern von Buildergebnissen, die über den T
 
 - Der SSIS-Buildtask verwendet den Visual Studio- und SSIS-Designer, der für Build-Agents obligatorisch ist. Wenn Sie den SSIS-Buildtask also in der Pipeline ausführen möchten, wählen Sie für von Microsoft gehostete Agents **vs2017-win2016** aus. Oder installieren Sie für selbstgehostete Agents den Visual Studio- und SSIS-Designer (entweder VS2017 und SSDT2017 oder VS2019 und SSIS-Projekterweiterungen).
 
-- Wenn Sie SSIS-Projekte mit beliebigen Standardkomponenten (wie etwa SSIS Azure Feature Pack oder andere Drittanbieterkomponenten) erstellen möchten, müssen Sie diese auf dem Computer installieren, auf dem der Pipeline-Agent ausgeführt wird.  Bei von Microsoft gehosteten Agents können Benutzer einen [PowerShell-Skripttask](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) oder [Befehlszeilen-Skripttask](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) hinzufügen, um die Komponenten vor Ausführung des SSIS-Buildtasks herunterzuladen und zu installieren.
+- Wenn Sie SSIS-Projekte mit beliebigen Standardkomponenten (wie etwa SSIS Azure Feature Pack oder andere Drittanbieterkomponenten) erstellen möchten, müssen Sie diese auf dem Computer installieren, auf dem der Pipeline-Agent ausgeführt wird.  Bei von Microsoft gehosteten Agents können Benutzer einen [PowerShell-Skripttask](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) oder [Befehlszeilen-Skripttask](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) hinzufügen, um die Komponenten vor Ausführung des SSIS-Buildtasks herunterzuladen und zu installieren. Hier finden Sie das PowerShell-Beispielskript zum Installieren von Azure Feature Pack: 
 
-- Die Schutzebenen **EncryptSensitiveWithPassword** und **EncryptAllWithPassword** werden vom SSIS-Buildtask nicht unterstützt. Stellen Sie sicher, dass diese beiden Schutzebenen von keinem SSIS-Projekt in der Codebasis verwendet werden, da der SSIS-Buildtask ansonsten während der Ausführung nicht mehr reagiert und ein Timeout erzeugt.
+```powershell
+wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
+
+start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
+
+cat log.txt
+```
+
+- Die Schutzebenen **EncryptSensitiveWithPassword** und **EncryptAllWithPassword** werden vom SSIS-Buildtask nicht unterstützt. Stellen Sie sicher, dass diese beiden Schutzebenen von keinem SSIS-Projekt in der Codebasis verwendet werden, da der SSIS-Buildtask ansonsten während der Ausführung nicht mehr reagiert und zu einem Timeout führt.
+
+- **ConnectByProxy** ist eine neue Eigenschaft, die kürzlich zu SSDT hinzugefügt wurde. Auf von Microsoft gehosteten Agents installierte SSDT-Instanzen werden nicht aktualisiert. Verwenden Sie daher zur Problemumgehung einen selbstgehosteten Agent.
 
 ## <a name="ssis-deploy-task"></a>SSIS-Bereitstellungstask
 
@@ -128,7 +140,7 @@ Geben Sie an, ob die Bereitstellung der verbleibenden Projekte oder Dateien fort
 Folgende Szenarios werden vom SSIS-Bereitstellungstask zurzeit nicht unterstützt:
 
 - Konfigurieren der Umgebung im SSIS-Katalog
-- Bereitstellen von ISPAC-Dateien für Azure SQL Server oder eine verwaltete Azure SQL-Instanz (nur mehrstufige Authentifizierung (MFA) zulässig)
+- Bereitstellen von ISPAC-Dateien in Azure SQL Server oder einer verwalteten Azure SQL-Instanz – hierbei ist nur eine mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) zulässig
 - Bereitstellen von Paketen für MSDB oder SSIS-Paketspeicher
 
 ## <a name="release-notes"></a>Versionshinweise

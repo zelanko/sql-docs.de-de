@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cf6cd4cce3435491632afa98195650a73fe4a23b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911196"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896762"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Versionshinweise zu Microsoft ODBC Driver for SQL Server für Linux und macOS
 
@@ -36,11 +36,20 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
-## <a name="175-january-2020"></a>17.5, Januar 2020
+## <a name="1752-march-2020"></a>17.5.2, März 2020
 
 | Neues Feature | Details |
 | :------------ | :------ |
-| SQL_COPT_SS_SPID-Verbindungsattribut zum Abrufen der SPID ohne Roundtrip zum Server. | Siehe [Schlüsselwörter und Attribute von DSN- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md). |
+| Unterstützung für die Authentifizierung mit einer verwalteten Identität bei Azure Key Vault | Siehe [Verwenden von Always Encrypted mit dem ODBC-Treiber](../using-always-encrypted-with-the-odbc-driver.md). |
+| Unterstützung für zusätzliche Azure Key Vault-Endpunkte | Siehe [Verwenden von Always Encrypted mit dem ODBC-Treiber](../using-always-encrypted-with-the-odbc-driver.md). |
+| Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
+| &nbsp; | &nbsp; |
+
+## <a name="175-january-2020"></a>Version 17.5, Januar 2020
+
+| Neues Feature | Details |
+| :------------ | :------ |
+| SQL_COPT_SS_SPID-Verbindungsattribut zum Abrufen der SPID ohne Roundtrip zum Server | Siehe [Schlüsselwörter und Attribute von DSN- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md). |
 | Unterstützung für das Angeben der EULA-Annahme über `debconf` in Debian und Ubuntu. | Siehe [Installieren des Treibers](./installing-the-microsoft-odbc-driver-for-sql-server.md). |
 | Neue Verteilungen werden unterstützt | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
@@ -127,7 +136,7 @@ Unterstützung für verwaltete Azure SQL-Instanzen (verlängerte private Vorscha
 > -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] wird nicht unterstützt
 > -   Fehlermeldungen werden unabhängig von Ihren Spracheinstellungen immer in englischer Sprache angezeigt (wie bei Azure) 
 
-## <a name="131-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos-may-2017"></a>Mai 2017: Version 13.1 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Linux und macOS
+## <a name="131-for-ssnoversion-on-linux-and-macos-may-2017"></a>Mai 2017: Version 13.1 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Linux und macOS
 
 Mit dem ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde Unterstützung für Always Encrypted und Azure Active Directory bei Verwendung mit Microsoft SQL Server 2016 hinzugefügt.
 
@@ -137,7 +146,7 @@ Mit dem ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversio
 
 **Unterstützung der BCP-API**: Der ODBC-Treiber für Linux und macOS unterstützt nun die Verwendung der [BCP-API-Funktionen (**bcp_init** usw.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
-## <a name="130-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Version 13.0 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Linux
+## <a name="130-for-ssnoversion-on-linux"></a>Version 13.0 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Linux
 
 Mit dem Microsoft ODBC Driver 13.0 for SQL Server werden jetzt auch SQL Server 2014 und SQL Server 2016 unterstützt.  
 
@@ -151,7 +160,7 @@ Ubuntu wird jetzt zusammen mit Red Hat und SUSE unterstützt. Jede Plattform ver
 
 **Unterstützung für TLS 1.2**: Microsoft ODBC Driver 13.0 for SQL Server unter Linux unterstützt nun TLS 1.2, wenn eine sichere Kommunikation mit SQL Server verwendet wird.
 
-## <a name="11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Version 11 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Linux
+## <a name="11-for-ssnoversion-on-linux"></a>Version 11 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Linux
 
 Der ODBC-Treiber unter SUSE Linux (Preview) unterstützt das 64-Bit-SUSE Linux Enterprise 11 Service Pack 2. Weitere Informationen finden Sie unter [Systemanforderungen](../../../connect/odbc/linux-mac/system-requirements.md).  
 

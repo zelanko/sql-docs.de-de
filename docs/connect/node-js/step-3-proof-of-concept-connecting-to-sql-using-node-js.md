@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7925b376fa7ec751faf0b109b6598ab86a348b3f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68419256"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897153"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von Node.js
 
-![Download-Abwärtspfeil-eingekreist](../../ssdt/media/download.png)[Herunterladen des Node.js-SQL-Treibers](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-Abwärtspfeil-eingekreist](../../ssms/media/download-icon.png)[Herunterladen des Node.js-SQL-Treibers](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Dieses Beispiel ist lediglich als Proof of Concept zu verstehen.  Es wurde zur Verdeutlichung vereinfacht und entspricht nicht zwangsläufig den von Microsoft empfohlenen Best Practices. Weitere Beispiele, die dieselben entscheidenden Funktionen verwenden, sind auf GitHub verfügbar:
 
@@ -113,7 +113,7 @@ Alle SQL-Anweisungen werden mithilfe der Funktion **new Request ()** ausgeführt
   
 ## <a name="step-3-insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
-In diesem Beispiel erfahren Sie, wie Sie eine [INSERT](../../t-sql/statements/insert-transact-sql.md)-Anweisung sicher ausführen und Parameter zum Schutz Ihrer Anwendung vor einer [Einschleusung von SQL-Befehlen](../../relational-databases/tables/primary-and-foreign-key-constraints.md) übergeben.    
+In diesem Beispiel sehen Sie, wie Sie eine [INSERT](../../t-sql/statements/insert-transact-sql.md)-Anweisung sicher ausführen und Parameter zum Schutz Ihrer Anwendung vor einer [Einschleusung von SQL-Befehlen](../../relational-databases/security/sql-injection.md) übergeben.    
   
   
 ```javascript  

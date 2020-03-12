@@ -17,12 +17,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68809950"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288974"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
 
@@ -63,7 +63,7 @@ RLS unterstützt zwei Arten von Sicherheitsprädikaten.
   
  FILTER- und BLOCK-Prädikate und Sicherheitsrichtlinien weisen folgendes Verhalten auf:  
   
-- Sie können eine Prädikatfunktion definieren, die mit einer anderen Tabelle verknüpft wird und/oder eine Funktion aufruft. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = ON`erstellt wird, ist die Verknüpfung oder Funktion über die Abfrage zugänglich und funktioniert wie erwartet, ohne zusätzliche Berechtigungsüberprüfungen durchführen zu müssen. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = OFF` erstellt wird, benötigen Benutzer zum Abfragen der Zieltabelle **SELECT**- oder **EXECUTE**-Berechtigungen für diese zusätzlichen Tabellen und Funktionen.
+- Sie können eine Prädikatfunktion definieren, die mit einer anderen Tabelle verknüpft wird und/oder eine Funktion aufruft. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = ON` (Standardeinstellung) erstellt wird, ist die Verknüpfung oder Funktion über die Abfrage erreichbar und funktioniert wie erwartet, ohne dass zusätzliche Berechtigungsüberprüfungen durchgeführt werden zu müssen. Wenn die Sicherheitsrichtlinie mit `SCHEMABINDING = OFF` erstellt wird, benötigen Benutzer **SELECT**-Berechtigungen für diese zusätzlichen Tabellen und Funktionen, um die Zieltabelle abfragen zu können. Wenn die Prädikatfunktion eine CLR-Skalarwertfunktion aufruft, wird zusätzlich die **EXECUTE**-Berechtigung benötigt.
   
 - Sie können eine Abfrage auf eine Tabelle anwenden, für die ein Sicherheitsprädikat zwar definiert, jedoch deaktiviert ist. Zeilen, die gefiltert oder gesperrt wurden, sind nicht betroffen.  
   
@@ -121,7 +121,7 @@ RLS unterstützt zwei Arten von Sicherheitsprädikaten.
   
 ## <a name="Best"></a> Bewährte Methoden  
   
-- Es wird dringend empfohlen, ein separates Schema für RLS-Objekte, Prädikatfunktion und Sicherheitsrichtlinie zu erstellen.  
+- Es wird dringend empfohlen, ein separates Schema für die RLS-Objekte zu erstellen: Prädikatfunktionen und Sicherheitsrichtlinien. So lassen sich die Berechtigungen, die für diese speziellen Objekte erforderlich sind, von den Zieltabellen trennen. Eine weitere Trennung für verschiedene Richtlinien und Prädikatfunktionen ist möglicherweise in mehrinstanzenfähigen Datenbanken erforderlich, aber nicht als Standardeinstellung für jeden Fall.
   
 - Die **ALTER ANY SECURITY POLICY**-Berechtigung sollte nur für Benutzer mit erhöhten Berechtigungen (z.B. ein Sicherheitsrichtlinienmanager) verwendet werden. Der Sicherheitsrichtlinienmanager benötigt keine **SELECT**-Berechtigung für die geschützten Tabellen.  
   

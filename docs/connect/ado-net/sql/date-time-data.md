@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 95c250c0eff6d22bb5bc8b284503156d412d6a45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 75d8b98726a758e0533053dbdf8d2e03b3bfdf0d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247809"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896991"
 ---
 # <a name="date-and-time-data"></a>Datums- und Zeitdaten
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET herunterladen](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server 2008 bietet neue Datentypen für Datums- und Uhrzeitinformationen. Die neuen Datentypen umfassen getrennte Typen für Datum und Uhrzeit sowie erweiterte Datentypen mit größerem Umfang, mehr Präzision und besserer Berücksichtigung von Zeitzonen. Der Microsoft SqlClient-Datenanbieter für SQL Server (<xref:Microsoft.Data.SqlClient>) bietet volle Unterstützung für alle neuen Features der Datenbank-Engine von SQL Server 2008. Sie müssen .NET Framework 3.5 SP1 (oder höher) oder .NET Core 1.0 (oder höher) installieren, um diese neuen Features mit SqlClient nutzen zu können.  
   
@@ -32,7 +32,7 @@ Eine vollständige Dokumentation der SQL Server-Datentypen finden Sie in der SQL
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Einführung von Datum/Uhrzeit-Datentypen in SQL Server 2008  
  In der folgenden Tabelle werden die Datums- und Uhrzeit-Datentypen beschrieben.  
   
-|SQL Server-Datentyp|Beschreibung|  
+|SQL Server-Datentyp|BESCHREIBUNG|  
 |--------------------------|-----------------|  
 |`date`|Der Bereich der gültigen Werte für den `date`-Datentyp reicht vom 1. Januar 0001 bis zum 31. Dezember 9999 mit einer Genauigkeit von einem Tag. Der Standardwert ist der 1. Januar 1900. Die Speichergröße beträgt 3 Byte.|  
 |`time`|Der `time`-Datentyp speichert reine Uhrzeitwerte im 24-Stunden-Format. Der `time`-Datentyp hat einen Bereich von 00:00:00.0000000 bis 23:59:59.9999999 mit einer Genauigkeit von 100 Nanosekunden. Der Standardwert ist 00:00:00.0000000 (Mitternacht). Der `time`-Datentyp unterstützt benutzerdefinierte Sekundenbruchteilgenauigkeit, und die Speichergröße variiert je nach angegebener Genauigkeit zwischen 3 und 6 Bytes.|  
@@ -92,7 +92,7 @@ Der Typ eines Microsoft SqlClient-Datenanbieters eines Parameterobjekts wird vom
 ### <a name="sqlparameter-properties"></a>SqlParameter-Eigenschaften  
  In der folgenden Tabelle werden `SqlParameter`-Eigenschaften beschrieben, die für Datums- und Uhrzeitdatentypen relevant sind.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.IsNullable%2A>|Ruft ab oder legt fest, ob ein Wert NULL sein kann. Wenn Sie den Parameterwert NULL an den Server senden, müssen Sie <xref:System.DBNull> anstelle von `null` (`Nothing` in Visual Basic) angeben. Weitere Informationen zu NULL-Werten in Datenbanken finden Sie unter [Behandeln von NULL-Werten](handle-null-values.md).|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Precision%2A>|Ruft die maximale Anzahl von Stellen ab, die verwendet werden, um den Wert darzustellen, oder legt diese fest. Diese Einstellung wird für Datums -und Uhrzeitdatentypen ignoriert.|  
@@ -170,7 +170,7 @@ Die folgende Tabelle zeigt, welche `SqlDbTypes` von welchen CLR-Typen abgeleitet
 ## <a name="retrieving-date-and-time-data"></a>Abrufen von Datums- und Uhrzeitdaten  
 In der folgenden Tabelle werden die Methoden zum Abrufen von Datums- und Uhrzeitwerten in SQL Server 2008 beschrieben.  
   
-|SqlClient-Methode|Beschreibung|  
+|SqlClient-Methode|BESCHREIBUNG|  
 |----------------------|-----------------|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetDateTime%2A>|Ruft den angegebenen Spaltenwert als <xref:System.DateTime>-Struktur ab.|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|Ruft den angegebenen Spaltenwert als <xref:System.DateTimeOffset>-Struktur ab.|  
@@ -206,7 +206,7 @@ Uhrzeitwerte, die kleiner als 0 oder größer oder gleich 24 Stunden sind, löse
 ## <a name="resources-in-sql-server-2008-books-online"></a>Ressourcen in der SQL Server 2008-Onlinedokumentation  
 Weitere Informationen zum Arbeiten mit Datums- und Uhrzeitwerten in SQL Server 2008 finden Sie in den folgenden Ressourcen der SQL Server 2008-Onlinedokumentation.  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Bietet eine Übersicht über alle Transact-SQL-Datentypen und -Funktionen zur Angabe des Datums und der Uhrzeit.|  
 |[Verwenden von Datums- und Uhrzeitdaten](https://go.microsoft.com/fwlink/?LinkId=98361)|Stellt Informationen zu den Datentypen und Funktionen zur Angabe des Datums und der Uhrzeit sowie Beispiele für deren Verwendung bereit.|  

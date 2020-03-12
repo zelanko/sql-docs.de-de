@@ -3,18 +3,18 @@ title: Überwachen von Skripts mit erweiterten Ereignissen
 description: Erfahren Sie, wie Sie erweiterte Ereignisse verwenden, um Vorgänge im Zusammenhang mit SQL Server Machine Learning Services, dem SQL Server-Launchpad und externen Skripts für Python- oder R-Aufträge zu überwachen und Probleme zu beheben.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe8601801a92b28022a83b54ea06ec5836c6c013
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: cf0253788e19061fe54b8e2b0b8dfd3142856472
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200981"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78335739"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Überwachen von Python- und R-Skripts mit erweiterten Ereignissen in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Weitere Informationen zum Erfassen dieser Ereignisse finden Sie im Abschnitt [Sa
 
 ## <a name="table-of-extended-events"></a>Tabelle erweiterter Ereignisse
 
-|Ereignis|BESCHREIBUNG|Notizen|  
+|Ereignis|Beschreibung|Notizen|  
 |-----------|-----------------|---------|  
 |connection_accept|Tritt auf, wenn eine neue Verbindung akzeptiert wird. Dieses Ereignis dient dazu, alle Verbindungsversuche zu protokollieren.||  
 |failed_launching|Fehler beim Starten.|Gibt einen Fehler an.|  
@@ -66,7 +66,7 @@ Weitere Informationen zum Erfassen dieser Ereignisse finden Sie im Abschnitt [Sa
 |satellite_message_ring_buffer_record|Eintrag über Nachrichtenringpuffer||  
 |satellite_message_summary|zusammenfassende Informationen zur Nachrichtenübermittlung||  
 |satellite_message_version_mismatch|Versionsfeld der Nachricht stimmt nicht überein||  
-|satellite_messaging|Wird verwendet, um das Nachrichtenereignis (Binden, Bindung aufheben usw.) nachzuverfolgen.||  
+|satellite_messaging|Wird verwendet, um ein Nachrichtenereignis (Binden, Bindung aufheben usw.) nachzuverfolgen.||  
 |satellite_partial_message|Wird verwendet, um eine Teilnachricht auf Netzwerkebene nachzuverfolgen.||  
 |satellite_schema_received|Wird ausgelöst, wenn die Schemanachricht empfangen und von SQL gelesen wird.||  
 |satellite_schema_sent|Wird ausgelöst, wenn der Satellit eine Schemanachricht sendet.|Nur aus externem Prozess ausgelöst. Lesen Sie die Anleitung für das Sammeln von Ereignissen aus externen Prozessen.|  
@@ -84,7 +84,12 @@ Weitere Informationen zum Erfassen dieser Ereignisse finden Sie im Abschnitt [Sa
 ### <a name="collecting-events-from-external-processes"></a>Sammeln von Ereignissen aus externen Prozessen
 
 SQL Server Machine Learning Services startet einige Dienste, die außerhalb des SQL Server-Prozesses ausgeführt werden. Sie können Ereignisse erfassen, die im Zusammenhang mit diesen externen Prozessen auftreten, indem Sie eine Konfigurationsdatei zur Ereignisnachverfolgung erstellen. Diese Datei müssen Sie im gleichen Verzeichnis wie die ausführbare Datei für den Prozess ablegen.  
-  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> In SQL Server 2019 wurde der Isolationsmechanismus geändert. Daher müssen Sie dem Verzeichnis, in dem die Konfigurationsdatei für die Ereignisablaufverfolgung gespeichert ist, geeignete Berechtigungen erteilen. Informationen zum Festlegen dieser Berechtigungen finden Sie im [Abschnitt zu Dateiberechtigungen unter „SQL Server 2019 unter Windows: Isolationsänderungen für Machine Learning Services“](../install/sql-server-machine-learning-services-2019.md#file-permissions).
+::: moniker-end
+
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
     Legen Sie die *.xml*-Datei im Binn-Verzeichnis für die SQL Server-Instanz ab, um Ereignisse zu erfassen, die im Zusammenhang mit dem Launchpad auftreten. In einer Standardinstallation wäre dies:

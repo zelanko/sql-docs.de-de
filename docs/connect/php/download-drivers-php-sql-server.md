@@ -1,7 +1,7 @@
 ---
 title: Herunterladen der Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 05/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,46 +9,46 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e752df73d1da04b5db870cb01be581811a137ea0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 829370c413614c6cb2d5a38ff1e3dcc8b40c5ab8
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910457"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866470"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Herunterladen von Microsoft-Treibern für PHP für SQL Server
 
-[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
+Die Microsoft-Treiber für PHP für SQL Server ermöglichen die Integration in SQL Server für PHP-Anwendungen. Die Treiber sind PHP-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten aus PHP-Skripts ermöglichen. Die Treiber stellen Schnittstellen für den Zugriff auf Daten in Azure SQL-Datenbanken und in allen Editionen von SQL Server 2005 und höher (einschließlich Express-Editionen) bereit. Die Treiber verwenden PHP-Features, einschließlich PHP-Streams, um große Objekte zu lesen und zu schreiben.
 
-## <a name="windows"></a>Windows
+Unter Linux und macOS können die Treiber für PHP ganz einfach über die PECL heruntergeladen und installiert werden. Weitere Informationen finden Sie im [Tutorial zur Linux- und macOS-Installation](installation-tutorial-linux-mac.md). Wenn Sie die Treiber für PHP unter Linux und macOS manuell herunterladen und installieren müssen, finden Sie Pakete für diese Plattformen unter den entsprechenden Releasetags auf GitHub.
 
-Die folgenden Versionen der Treiber für PHP unter Windows stehen zum Download zur Verfügung:
+## <a name="download"></a>Download
 
-- [Microsoft-Treiber 5.8 für PHP für SQL Server](https://download.microsoft.com/download/2/6/a/26a631f3-24e3-4a99-83a3-882ae78f3503/SQLSRV58.EXE)
-- [Microsoft-Treiber 5.6 für PHP für SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
-- [Microsoft-Treiber 5.3 für PHP für SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
-- [Microsoft-Treiber 5.2 für PHP für SQL Server](https://www.microsoft.com/download/details.aspx?id=56729)
-- [Microsoft-Treiber 4.3 für PHP für SQL Server](https://www.microsoft.com/download/details.aspx?id=55642)
-- [Microsoft-Treiber 4.0, 3.2, 3.1 und 3.0 für PHP für SQL Server:](https://www.microsoft.com/download/details.aspx?id=20098)
+Version 5.8 der Microsoft-Treiber für PHP für SQL Server ist die neueste allgemein verfügbare Version.
 
-## <a name="linux-and-macos"></a>Linux und macOS
+**[![Download](../../ssms/media/download-icon.png) Microsoft-Treiber für PHP für SQL Server (Windows) herunterladen](https://go.microsoft.com/fwlink/?linkid=2120362)**  
+[GitHub-Releasetag v5.8.0 (hier sind Pakete für Linux und macOS verfügbar)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
 
-Unter Linux und macOS können die Treiber für PHP mit PECL einfach heruntergeladen und installiert werden. Weitere Informationen finden Sie im [Tutorial zur Linux- und macOS-Installation](installation-tutorial-linux-mac.md). Für den Fall, dass Sie die Treiber für PHP unter Linux oder macOS manuell installieren müssen, stehen Ihnen die folgenden Versionen zum Download zur Verfügung:
+### <a name="version-information"></a>Versionsinformationen
 
-- [Microsoft-Treiber 5.8 für PHP für SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
-- [Microsoft-Treiber 5.6 für PHP für SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
-- [Microsoft-Treiber 5.3 für PHP für SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
-- [Microsoft-Treiber 5.2 für PHP für SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
-- [Microsoft-Treiber 4.3 für PHP für SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
+- Releasenummer: 5.8.0
+- Veröffentlichung: 31. Januar 2019
+
+Wenn Sie Feedback bereitstellen möchten, wenden Sie sich am besten an das für die Microsoft-Treiber für PHP für SQL Server zuständige Team, indem Sie im [GitHub-Repository](https://github.com/Microsoft/msphpsql/issues) ein Issue eröffnen.
+
+## <a name="release-notes"></a>Versionshinweise
+
+Ausführliche Informationen zu den Änderungen in diesem Release finden Sie in den [Versionshinweisen](release-notes-php-sql-driver.md).
+
+## <a name="previous-releases"></a>Vorgängerversionen
+
+Diese Seite bietet nur Informationen zur neuesten Version der Microsoft-Treiber für PHP. Informationen zum Herunterladen vorheriger Versionen finden Sie unter [Versionshinweise für die Microsoft-Treiber für PHP für SQL Server](release-notes-php-sql-driver.md#previous-releases).
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Getting Started with the Microsoft Drivers for PHP for SQL Server (Erste Schritte mit dem Microsoft-Treiber für PHP für SQL Server)](getting-started-with-the-php-sql-driver.md)
-
-[Systemanforderungen für Microsoft-Treiber für PHP für SQL Server](system-requirements-for-the-php-sql-driver.md)
-
-[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](programming-guide-for-php-sql-driver.md)
-
-[API-Referenz für den SQLSRV-Treiber](sqlsrv-driver-api-reference.md)
-
-[API-Referenz für den PDO_SQLSRV-Treiber](pdo-sqlsrv-driver-reference.md)
+[Getting Started with the Microsoft Drivers for PHP for SQL Server (Erste Schritte mit dem Microsoft-Treiber für PHP für SQL Server)](getting-started-with-the-php-sql-driver.md)  
+[Systemanforderungen für Microsoft-Treiber für PHP für SQL Server](system-requirements-for-the-php-sql-driver.md)  
+[Unterstützungsmatrix für Microsoft-PHP-Treiber für SQL Server](microsoft-php-drivers-for-sql-server-support-matrix.md)  
+[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](programming-guide-for-php-sql-driver.md)  
+[API-Referenz für den SQLSRV-Treiber](sqlsrv-driver-api-reference.md)  
+[API-Referenz für den PDO_SQLSRV-Treiber](pdo-sqlsrv-driver-reference.md)  
