@@ -10,20 +10,20 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637772"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112221"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2014
   In diesem Thema werden die Funktionen beschrieben, die nach dem Upgrade auf [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] nicht mehr zur Verfügung stehen.  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-sssql14"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Keine nicht mehr unterstützten Funktionen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-sssql11"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="discontinued-active-directory-helper-service"></a>Eingestellter Hilfsdienst für Active Directory  
  Der Active Directory-Hilfsdienst und die zugehörigen Komponenten wurden entfernt. In der folgenden Tabelle werden die zugehörigen und somit entfernten Komponenten aufgeführt:  
@@ -41,7 +41,7 @@ ms.locfileid: "73637772"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Nicht mehr unterstützte Funktionen in SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Nicht mehr unterstütztes SQL-DMO aus der SQL Server Express-Installation  
- SQL-DMO für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wurde aus [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] entfernt. Es wird empfohlen, Anwendungen, die diese Funktion derzeit nutzen, so schnell wie möglich zu ändern. Wenn Sie SQL-DMO für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express unterstützen müssen, installieren Sie die abwärts Kompatibilitäts [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Komponenten aus dem Feature Pack aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=24793). Verwenden Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) für neue Entwicklungen.  
+ SQL-DMO für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wurde aus [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] entfernt. Es wird empfohlen, Anwendungen, die diese Funktion derzeit nutzen, so schnell wie möglich zu ändern. Wenn Sie SQL-DMO für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express unterstützen müssen, installieren Sie die abwärts Kompatibilitäts [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Komponenten aus dem Feature Pack aus dem [Microsoft Download Center](https://www.microsoft.com/download/). Verwenden Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) für neue Entwicklungen.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Nicht mehr unterstützte Option für Web-Assistent  
  Die Option `sp_configure` zur Aktivierung des Web-Assistenten wurde aus [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] entfernt. Stattdessen wird die Verwendung von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] empfohlen.  

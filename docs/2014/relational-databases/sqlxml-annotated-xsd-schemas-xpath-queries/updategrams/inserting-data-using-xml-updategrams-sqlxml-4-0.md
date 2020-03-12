@@ -33,12 +33,12 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b06e98d5ef3dfc4ad8ab99e374e2d7b5539c98be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637907"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112192"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Einfügen von Daten mit XML-Updategrams (SQLXML 4.0)
   Ein Update Gram zeigt einen Einfügevorgang an, wenn eine Daten Satz Instanz im ** \<nach>** -Block, jedoch nicht im entsprechenden ** \<before>** -Block angezeigt wird. In diesem Fall fügt das Update Gram den Datensatz im ** \<nach>** Block in die Datenbank ein.  
@@ -211,7 +211,7 @@ ms.locfileid: "73637907"
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Tabellennamen Leerzeichen enthalten, wie beispielsweise die Order Details-Tabelle in der Northwind-Datenbank. Dies gilt jedoch nicht für XML-Zeichen, die gültige [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Bezeichner sind, aber keine gültigen XML-IDs können mithilfe von "__xHHHH\_\_" als Codierungs Wert codiert werden, wobei "HHHH" für den vierstelligen hexadezimalen UCS-2-Code für das Zeichen in der signifikantesten bidirektionalen Reihenfolge steht.  
   
 > [!NOTE]  
->  Für dieses Beispiel wird die Northwind-Datenbank verwendet. Sie können die Northwind-Datenbank mithilfe eines SQL-Skripts installieren, das von dieser [Microsoft](https://www.microsoft.com/download/details.aspx?id=23654)-Website heruntergeladen werden kann.  
+>  Für dieses Beispiel wird die Northwind-Datenbank verwendet. Sie können die Northwind-Datenbank mithilfe eines SQL-Skripts installieren, das von dieser [Microsoft](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)-Website heruntergeladen werden kann.  
   
  Der Elementname muss in Klammern ([ ]) stehen. Da die Zeichen [und] in XML nicht gültig sind, müssen Sie Sie als _x005B\_ bzw. _x005D\_codieren. (Falls Sie ein Zuordnungsschema verwenden, können Sie Elementnamen bereitstellen, die keine ungültigen Zeichen wie Leezeichen enthalten. Die erforderliche Zuordnung erfolgt über das Zuordnungsschema, daher müssen Sie diese Zeichen nicht codieren.)  
   

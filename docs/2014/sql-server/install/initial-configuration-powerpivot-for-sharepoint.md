@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200435"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112219"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Anfängliche Konfiguration (PowerPivot für SharePoint)
   Verwenden Sie die Schritte in diesem Thema, um eine ursprüngliche Installation von PowerPivot für SharePoint zu konfigurieren. Die einfachste Möglichkeit zur Konfiguration einer ursprünglichen Installation ist die Verwendung des PowerPivot-Konfigurationstools. Dieses Tool automatisiert alle unten beschriebenen Konfigurationsschritte.  
@@ -227,7 +227,7 @@ ms.locfileid: "74200435"
   
  Durch die Installation des Anbieters funktionieren Arbeitsmappen, die in der Datenverbindungszeichenfolge auf MSOLAP.4 verweisen, erwartungsgemäß auf einem [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot-Server. Die Installation des SQL Server 2008 R2 OLE DB-Anbieters ist eine alternative Methode zum Aktualisieren der in einer früheren Version von PowerPivot für Excel erstellten Arbeitsmappen.  
   
- Sie können den Anbieter von der [Seite SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)herunterladen. Suchen Sie nach **Microsoft® Analysis Services OLE DB-Anbieter für Microsoft® SQL Server® 2008 R2**, und laden Sie das x64-Paket `SQLServer2008_ASOLEDB10.msi` des-Installationsprogramms herunter.  
+ Sie können den Anbieter von der [Seite SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)herunterladen. Suchen Sie nach **Microsoft® Analysis Services OLE DB-Anbieter für Microsoft® SQL Server® 2008 R2**, und laden Sie das x64-Paket `SQLServer2008_ASOLEDB10.msi` des-Installationsprogramms herunter.  
   
  Weitere Informationen zum Installieren des Anbieters, einschließlich der Überprüfungs Schritte, finden Sie unter [install the Analysis Services OLE DB-Anbieter on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   

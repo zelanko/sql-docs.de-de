@@ -11,12 +11,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
-ms.openlocfilehash: adee6ee7d0d769d8e87e228c475b224a3e78675b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1d6a27c171fafc8480cbbcdb03c4683816ec30d4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637877"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112184"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte
 
@@ -57,7 +57,7 @@ Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
 ##  <a name="bkmk_sql2008sp2"></a>SQL Server 2008 SP2 Reporting Services-Add-in für SharePoint 2007-Produkte und-Technologien  
  Bei dem Microsoft SQL Server 2008 SP2 Reporting Services-Add-In handelt es sich um eine aktualisierte Version des 2008-Add-Ins, das Unterstützung bei der Integration von 2008 R2-Berichtsservern mit SharePoint 2007-Produkten bietet.  
   
- Die aktuelle Version dieser Datei steht online im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center unter [Microsoft SQL Server 2008 SP2 Reporting Services-Add-In für Microsoft SharePoint-Technologien](https://www.microsoft.com/download/details.aspx?id=793)zur Verfügung.  
+ Die aktuelle Version dieser Datei steht online im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center unter [Microsoft SQL Server 2008 SP2 Reporting Services-Add-In für Microsoft SharePoint-Technologien](https://www.microsoft.com/download/details.aspx?id=43344)zur Verfügung.  
   
 ##  <a name="bkmk_sql2008"></a>SQL Server 2008 Reporting Services-Add-in für SharePoint 2007-Produkte und-Technologien  
  Das Microsoft SQL Server 2008 Reporting Services-Add-In für Microsoft SharePoint-Technologien bietet Funktionen zum Ausführen eines Berichtsservers innerhalb einer Bereitstellung von Windows SharePoint Services 3.0 oder Microsoft Office SharePoint Server 2007.  

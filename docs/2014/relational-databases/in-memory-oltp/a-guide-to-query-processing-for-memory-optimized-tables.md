@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811069"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112243"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
   Mit In-Memory OLTP werden speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eingeführt. Dieser Artikel gibt eine Übersicht über die Abfrageverarbeitung für speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren.  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- Zum Erstellen der in diesem Artikel dargestellten Abfragepläne werden die beiden Tabellen mit Beispieldaten aus der Northwind-Beispieldatenbank aufgefüllt. Diese können Sie von [Northwind and pubs Sample Databases for SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654)(Northwind and pubs-Beispieldatenbanken für SQL Server 2000) herunterladen.  
+ Zum Erstellen der in diesem Artikel dargestellten Abfragepläne werden die beiden Tabellen mit Beispieldaten aus der Northwind-Beispieldatenbank aufgefüllt. Diese können Sie von [Northwind and pubs Sample Databases for SQL Server 2000](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)(Northwind and pubs-Beispieldatenbanken für SQL Server 2000) herunterladen.  
   
  Betrachten wir die folgende Abfrage, in der die Tabellen "Customer" und "Order" verknüpft sind und die die Bestell-ID und die zugehörigen Kundeninformationen zurückgibt:  
   
@@ -94,7 +94,7 @@ Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.
   
  In dieser Abfrage werden Zeilen aus der Order-Tabelle mithilfe des gruppierten Indexes abgerufen. Der physische Operator `Hash Match` wird jetzt für `Inner Join` verwendet. Der gruppierte Index für Order wird nicht nach CustomerID sortiert. Deshalb würde `Merge Join` einen Sortieroperator erfordern, der sich auf die Leistung auswirkt. Beachten Sie die relativen Kosten des `Hash Match`-Operators (75%) verglichen mit den Kosten des `Merge Join`-Operators im vorherigen Beispiel (46%). Der Optimierer hätte den `Hash Match`-Operator auch im vorherigen Beispiel in Betracht gezogen, hat aber festgestellt, dass der `Merge Join`-Operator eine bessere Leistung bietet.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Abfrageverarbeitung für datenträgerbasierte Tabellen  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Abfrageverarbeitung für datenträgerbasierte Tabellen  
  Das folgende Diagramm zeigt den Abfrageverarbeitungsfluss in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Ad-hoc-Abfragen:  
   
  ![Abfrageverarbeitungspipeline in SQL Server.](../../database-engine/media/hekaton-query-plan-3.gif "Abfrageverarbeitungspipeline in SQL Server.")  
@@ -116,7 +116,7 @@ Abfrageverarbeitungspipeline in SQL Server.
   
  Für die erste Beispielabfrage fordert die Ausführungs-Engine von Zugriffsmethoden Zeilen im gruppierten Index für Customer und im nicht gruppierten Index für Order an. Zugriffsmethoden durchläuft die B-Struktur-Indexstrukturen, um die angeforderten Zeilen abzurufen. In diesem Fall werden alle Zeilen abgerufen, da der Plan vollständige Indexscans fordert.  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Interpretierter [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>Interpretierter [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] werden auch als interpretiertes [!INCLUDE[tsql](../../../includes/tsql-md.md)]. "Interpretiert" bezieht sich auf die Tatsache, dass der Abfrageplan von der Abfrageausführungs-Engine für jeden Operator im Abfrageplan interpretiert wird. Die Ausführungs-Engine liest den Operator und die Parameter und führt den Vorgang aus.  
   
  Interpretiertes [!INCLUDE[tsql](../../../includes/tsql-md.md)] kann verwendet werden, um auf speicheroptimierte und datenträgerbasierte Tabellen zuzugreifen. Die folgende Abbildung veranschaulicht die Abfrageverarbeitung für den interpretierten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen:  
@@ -200,7 +200,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Kompilierung und Abfrageverarbeitung  
  Das folgende Diagramm veranschaulicht den Kompilierungsprozess systemintern kompilierte gespeicherte Prozeduren:  
   
- ![Native Kompilierung gespeicherter Prozeduren.](../../database-engine/media/hekaton-query-plan-6.gif "Systeminterne Kompilierung gespeicherter Prozeduren.")  
+ ![Systeminterne Kompilierung gespeicherter Prozeduren.](../../database-engine/media/hekaton-query-plan-6.gif "Systeminterne Kompilierung gespeicherter Prozeduren.")  
 Systeminterne Kompilierung gespeicherter Prozeduren.  
   
  Der Prozess lässt sich folgendermaßen beschreiben:  
@@ -217,7 +217,7 @@ Systeminterne Kompilierung gespeicherter Prozeduren.
   
  Der Aufruf einer systemintern kompilierten gespeicherten Prozedur wird in einen Funktionsaufruf in der DLL übersetzt.  
   
- ![Ausführung nativ kompilierter gespeicherter Prozeduren.](../../database-engine/media/hekaton-query-plan-7.gif "Ausführung systemintern kompilierter gespeicherten Prozeduren.")  
+ ![Ausführung systemintern kompilierter gespeicherten Prozeduren.](../../database-engine/media/hekaton-query-plan-7.gif "Ausführung systemintern kompilierter gespeicherten Prozeduren.")  
 Ausführung systemintern kompilierter gespeicherten Prozeduren.  
   
  Der Aufruf einer systemintern kompilierten gespeicherten Prozedur lässt sich folgendermaßen beschreiben:  
@@ -232,7 +232,7 @@ Ausführung systemintern kompilierter gespeicherten Prozeduren.
   
 4.  Der Computercode in der DLL wird ausgeführt, und die Ergebnisse werden an den Client zurückgegeben.  
   
- **Parametersniffing**  
+ **Parameterermittlung**  
   
  Interpretierte gespeicherte [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Prozeduren werden im Gegensatz zu systemintern kompilierten gespeicherten Prozeduren, die zur Erstellungszeit kompiliert werden, bei der ersten Ausführung kompiliert. Wenn interpretierte gespeicherte Prozeduren beim Aufruf kompiliert werden, werden die Werte der Parameter, die für diesen Aufruf angegeben werden, bei der Erstellung des Ausführungsplans vom Abfrageoptimierer verwendet. Diese Verwendung von Parametern während der Kompilierung wird als Parameterermittlung bezeichnet.  
   

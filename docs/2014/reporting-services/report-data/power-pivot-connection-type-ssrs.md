@@ -10,12 +10,12 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 50ce060d270cf06a771136c581bf96fe1ec21eee
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200416"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112142"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot-Verbindungstyp (SSRS)
   Sie können Daten mithilfe der SQL Server Analysis Services-Datenverarbeitungserweiterung aus einer PowerPivot-Arbeitsmappe abrufen, die in einem SharePoint-PowerPivot-Katalog veröffentlicht wird.  
@@ -25,7 +25,7 @@ ms.locfileid: "74200416"
 ## <a name="prerequisites"></a>Voraussetzungen  
  Die PowerPivot-Datenquelle muss in einem PowerPivot-Katalog auf einer SharePoint-Website veröffentlicht sein.  
   
- Zur Unterstützung von Verbindungen von Berichts-Generator mit einer PowerPivot-Arbeitsmappe muss SQL Server 2008 R2 ADOMD.NET auf der Arbeitsstation installiert sein. Diese Clientbibliothek wird mit PowerPivot for Excel installiert. Wenn Sie jedoch einen Computer verwenden, der nicht über diese Anwendung verfügt, müssen Sie ADOMD.NET von der Seite [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)herunterladen und installieren.  
+ Zur Unterstützung von Verbindungen von Berichts-Generator mit einer PowerPivot-Arbeitsmappe muss SQL Server 2008 R2 ADOMD.NET auf der Arbeitsstation installiert sein. Diese Clientbibliothek wird mit PowerPivot for Excel installiert. Wenn Sie jedoch einen Computer verwenden, der nicht über diese Anwendung verfügt, müssen Sie ADOMD.NET von der Seite [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)herunterladen und installieren.  
   
 ## <a name="data-source-type"></a>Datenquellentyp  
  Verwenden Sie den Berichtsdatenquellentyp **Microsoft SQL Server Analysis Services**.  
@@ -63,7 +63,7 @@ ms.locfileid: "74200416"
 -   Der Bericht enthält nur PowerPivot-Daten aus einer PowerPivot-Datenquelle.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Analysis Services die Benutzeroberfläche des MDX-Abfrage-Designers &#40;Berichts-Generator&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services &#40;Berichts-Generator&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

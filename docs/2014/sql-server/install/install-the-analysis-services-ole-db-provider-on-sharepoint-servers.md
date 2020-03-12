@@ -10,12 +10,12 @@ ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f8dcec71f8b9c90df9f30aa5bfb972fef28fbcd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1146c612225c2f58dd501ce9cba658ca7ca6ba69
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200450"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112174"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern
   Der Microsoft OLE DB-Anbieter für Analysis Services (MSOLAP) ist eine Schnittstelle, die von Clientanwendungen für die Interaktion mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Daten verwendet wird. In einer SharePoint-Umgebung, die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] einschließt, verarbeitet der Anbieter Verbindungsanforderungen für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Daten.  
@@ -111,7 +111,7 @@ ms.locfileid: "74200450"
 ##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a>Verwenden Sie das PowerPivot für SharePoint Installationspaket (sppowerpivot. msi), um den SQL Server 2012 OLE DB-Anbieter zu installieren.  
  Installieren Sie [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] den OLE DB Anbieter auf dem-und dem Excel Services [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Server mithilfe des Installationspakets **(sppowerpivot. msi)**.  
   
-#### <a name="download-the-msolap5-provider-from-the-includesssql11sp1includessssql11sp1-mdmd-feature-pack"></a>Laden Sie den MSOLAP.5-Anbieter aus dem [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Feature Pack herunter.  
+#### <a name="download-the-msolap5-provider-from-the-sssql11sp1-feature-pack"></a>Laden Sie den MSOLAP.5-Anbieter aus dem [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Feature Pack herunter.  
   
 1.  Navigieren Sie zu [Microsoft® SQL Server® 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580) .  
   
@@ -129,7 +129,7 @@ ms.locfileid: "74200450"
   
 #### <a name="step-1-download-and-install-the-client-library"></a>Schritt 1: Herunterladen und Installieren der Clientbibliothek  
   
-1.  Suchen Sie auf der [Seite "SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)" nach Microsoft Analysis Services OLE DB-Anbieter für Microsoft SQL Server 2008 R2.  
+1.  Suchen Sie auf der [Seite "SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)" nach Microsoft Analysis Services OLE DB-Anbieter für Microsoft SQL Server 2008 R2.  
   
 2.  Laden Sie das x64-Paket des `SQLServer2008_ASOLEDB10.msi`-Installationsprogramms herunter. Obwohl der Dateiname SQLServer2008 enthält, handelt es sich um die richtige Datei für die SQL Server 2008 R2-Version des Anbieters.  
   

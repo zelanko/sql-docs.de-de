@@ -1,5 +1,6 @@
 ---
 title: Installieren und Konfigurieren der AdventureWorks-Beispieldatenbank
+description: Befolgen Sie diese Anweisungen, um AdventureWorks-Beispiel Datenbanken mit SQL Server Management Studio oder in Azure SQL-Datenbank herunterzuladen und zu installieren.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6a4b56a31ede0d8e011c1a2244f5d014e185e7e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 424d85e947769e8e78b828e5b46d3b384eb1b50a
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74318995"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112322"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>Installation und Konfiguration von AdventureWorks
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

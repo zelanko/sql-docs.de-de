@@ -34,12 +34,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caf6c6bc9e9807b042baf365c3a1efbe9d2b74c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 671dc9c8a0091a2fb14a4aa1c42ea8246b376c7a
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252497"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112268"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Einfügen von Daten mit XML-Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -213,7 +213,7 @@ ms.locfileid: "75252497"
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Tabellennamen Leerzeichen enthalten, wie beispielsweise die Order Details-Tabelle in der Northwind-Datenbank. Dies gilt jedoch nicht für XML-Zeichen, die gültige [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Bezeichner sind, aber keine gültigen XML-IDs können mithilfe von "__xHHHH\_\_" als Codierungs Wert codiert werden, wobei "HHHH" für den vierstelligen hexadezimalen UCS-2-Code für das Zeichen in der signifikantesten bidirektionalen Reihenfolge steht.  
   
 > [!NOTE]  
->  Für dieses Beispiel wird die Northwind-Datenbank verwendet. Sie können die Northwind-Datenbank mithilfe eines SQL-Skripts installieren, das von dieser [Microsoft](https://www.microsoft.com/download/details.aspx?id=23654)-Website heruntergeladen werden kann.  
+>  Für dieses Beispiel wird die Northwind-Datenbank verwendet. Sie können die Northwind-Datenbank mithilfe eines SQL-Skripts installieren, das von dieser [Microsoft](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)-Website heruntergeladen werden kann.  
   
  Der Elementname muss in Klammern ([ ]) stehen. Da die Zeichen [und] in XML nicht gültig sind, müssen Sie Sie als _x005B\_ bzw. _x005D\_codieren. (Falls Sie ein Zuordnungsschema verwenden, können Sie Elementnamen bereitstellen, die keine ungültigen Zeichen wie Leezeichen enthalten. Die erforderliche Zuordnung erfolgt über das Zuordnungsschema, daher müssen Sie diese Zeichen nicht codieren.)  
   

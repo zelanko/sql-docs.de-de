@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73705300"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112151"
 ---
 # <a name="data-mining-projects"></a>Data Mining-Projekte
   Ein Data Mining-Projekt ist Teil einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösung. Während des Entwurfsprozesses sind die Objekte, die Sie in diesem Projekt erstellen, für Tests und Abfragen im Rahmen einer Arbeitsbereichsdatenbank verfügbar. Wenn Benutzer in der Lage sein sollen, die Objekte im Projekt abzufragen oder zu durchsuchen, müssen Sie das Projekt auf einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitstellen, die im mehrdimensionalen Modus ausgeführt wird.  
@@ -162,7 +162,7 @@ ms.locfileid: "73705300"
   
  Diese Visualisierungen sind temporär und werden ohne Speicherung geschlossen, wenn Sie die Sitzung mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]beenden. Wenn Sie daher diese Visualisierungen in eine andere Anwendung zur Präsentation oder weiteren Analyse exportieren müssen, verwenden Sie die auf jeder Registerkarte oder in jedem Bereich der Viewerschnittstelle bereitgestellten Befehle zum **Kopieren** .  
   
- Die Data Mining Add-Ins für Excel stellen ebenfalls eine Visio-Vorlage bereit, die Sie verwenden können, um die Modelle in einem Visio-Diagramm darstellen und kommentieren sowie um das Diagramm mit Visio-Tools ändern zu können. Weitere Informationen finden Sie unter [Microsoft SQL Server 2008 SP2 Data Mining-Add-Ins für Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=7294).
+ Die Data Mining Add-Ins für Excel stellen ebenfalls eine Visio-Vorlage bereit, die Sie verwenden können, um die Modelle in einem Visio-Diagramm darstellen und kommentieren sowie um das Diagramm mit Visio-Tools ändern zu können. Weitere Informationen finden Sie unter [Microsoft SQL Server 2008 SP2 Data Mining-Add-Ins für Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=8569).
   
 ###  <a name="bkmk_Validate"></a>Testen und Validieren von Modellen  
  Nachdem Sie die Modelle verarbeitet haben, können Sie die Ergebnisse analysieren und entscheiden, welche Modelle ihrer Aufgabe am besten gerecht wurden.  

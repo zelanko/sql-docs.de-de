@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: c4e6d16645b8a7ecab9ed2e814ed345834e80f1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245918"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112064"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Verknüpfen von Zugriffs Anwendungen mit SQL Server-Azure SQL-Datenbank (Access Token-SQL)
 Wenn Sie die vorhandenen Access-Anwendungen mit verwenden möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], können Sie die ursprünglichen Zugriffs Tabellen mit den migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen oder den SQL Azure Tabellen verknüpfen. Durch die Verknüpfung wird die Access-Datenbank geändert, sodass Ihre Abfragen, Formulare, Berichte und Datenzugriffsseiten die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-oder-SQL Azure Datenbank anstelle der Daten in der Access-Datenbank verwenden.  
@@ -56,7 +56,7 @@ Wenn Sie eine Tabelle in Access öffnen, werden die Daten mit einem Keysetcursor
   
 > [!IMPORTANT]  
 > Um Zugriffs Tabellen mit einer Azure-Datenbank zu verknüpfen, benötigen Sie SQL Server Native Client (SNAC) Version 10,5 oder höher.   
-> Sie können die neueste Version von SNAC von [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)abrufen.  
+> Sie können die neueste Version von SNAC von [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)abrufen.  
   
 ## <a name="unlinking-access-tables"></a>Aufheben der Verknüpfung von Zugriffs Tabellen  
 Wenn Sie die Verknüpfung einer Zugriffs Tabelle mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder-SQL Azure Tabelle aufheben, stellt SSMA die ursprüngliche Zugriffs Tabelle und die zugehörigen Daten wieder her.  
