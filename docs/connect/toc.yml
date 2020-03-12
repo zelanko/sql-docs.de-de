@@ -2774,8 +2774,10 @@
           href: ../connect/odbc/linux-mac/system-requirements.md
         - name: Installieren des Treiber-Managers
           href: ../connect/odbc/linux-mac/installing-the-driver-manager.md
-        - name: Installieren des Microsoft ODBC Driver for SQL Server
+        - name: Installieren des ODBC-Treibers (Linux)
           href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
+        - name: Installieren des ODBC-Treibers (macOS)
+          href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
         - name: Featureleitfäden
           items:
             - name: Schlüsselwörter für Verbindungszeichenfolgen und Datenquellennamen (DSNs)

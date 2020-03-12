@@ -4163,12 +4163,8 @@
   items:
     - name: Übersicht
       items:
-        - name: Neuerungen
+        - name: Neues
           href: sql-server/install/what-s-new-in-sql-server-installation.md
-        - name: Spezifikationen der maximalen Kapazität
-          href: sql-server/maximum-capacity-specifications-for-sql-server.md
-        - name: Rechenkapazitätsgrenzen nach Edition
-          href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: Versionshinweise
       items:
         - name: In SQL Server nicht mehr unterstützte Funktionen
@@ -4188,19 +4184,23 @@
     - name: Planung
       href: sql-server/install/planning-a-sql-server-installation.md
       items:
+        - name: Spezifikationen der maximalen Kapazität
+          href: sql-server/maximum-capacity-specifications-for-sql-server.md
+        - name: Rechenkapazitätsgrenzen nach Edition
+          href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
         - name: Hardware- und Softwareanforderungen
           items:
             - name: SQL Server 2019
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
             - name: SQL Server 2017 und früher
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
-        - name: Überlegungen zur Sicherheit
+        - name: Sicherheitshinweise
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
-        - name: Netzwerkprotokolle und Netzwerkbibliotheken
+        - name: Netzwerkprotokolle und Bibliotheken
           href: sql-server/install/network-protocols-and-network-libraries.md
         - name: Arbeiten mit mehreren Versionen und Instanzen
           href: sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
-        - name: Lokale Sprachversionen
+        - name: Sprachversionen
           href: sql-server/install/local-language-versions-in-sql-server.md
         - name: Dateispeicherorte
           href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
@@ -9837,6 +9837,8 @@
               href: linux/sql-server-linux-setup-ssis.md
             - name: Installieren von SQL Server-Machine Learning Services
               href: linux/sql-server-linux-setup-machine-learning.md
+            - name: Installieren von SQL Server Machine Learning Services (Python und R) unter Docker
+              href: linux/sql-server-setup-machine-learning-docker.md
             - name: Installieren von SQL Server-Spracherweiterungen
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: Konfigurieren von Repositorys
