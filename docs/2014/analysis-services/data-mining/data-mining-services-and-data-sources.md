@@ -10,12 +10,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66084918"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217131"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Data Mining-Dienste und Datenquellen
   Für Data Mining ist eine Verbindung zu einer Instanz von SQL Server Analysis Services erforderlich. Daten von einem Cube sind für Data Mining nicht erforderlich, und die Verwendung relationaler Quellen wird empfohlen. Data Mining verwendet jedoch von der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Engine bereitgestellte Komponenten.  
@@ -46,7 +46,7 @@ ms.locfileid: "66084918"
 ### <a name="xmla-listener"></a>XMLA-Überwachung  
  Die XMLA-Überwachungskomponente verarbeitet die gesamte XMLA-Kommunikation zwischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und den zugehörigen Clients. Mithilfe [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` der Konfigurationseinstellung in der Datei Msmdsrv. ini können Sie einen Port angeben, an dem eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz lauscht. Wird in dieser Datei der Wert 0 angegeben, wird der Standardport von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwacht. Falls nicht anders angegeben, verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die folgenden TCP-Standardports:  
   
-|Port|BESCHREIBUNG|  
+|Port|Beschreibung|  
 |----------|-----------------|  
 |2383|Standard Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |2382|Redirector für andere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
@@ -117,7 +117,7 @@ ms.locfileid: "66084918"
   
  Wenn die Prozedur ein Dataset zurückgibt, erhält der Client ein Dataset oder eine Datentabelle mit einer geschachtelten Tabelle, die die Zeilen enthält. Wenn Sie jedoch eine Abfrage für den Modellinhalt erstellen, gibt die Abfrage das ganze Modell zurück. Damit nicht zu viele Zeilen zurückgegeben werden, können Sie gespeicherte Prozeduren schreiben, indem Sie das ADOMD+-Objektmodell verwenden.  
   
- Um eine servergespeicherte Prozedur zu schreiben, müssen Sie auf den Microsoft.AnalysisServices.AdomdServer-Namespace verweisen. Weitere Informationen zum Erstellen und Verwenden von gespeicherten Prozeduren finden Sie unter [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
+ Um eine servergespeicherte Prozedur zu schreiben, müssen Sie auf den Microsoft.AnalysisServices.AdomdServer-Namespace verweisen. Weitere Informationen zum Erstellen und Verwenden von gespeicherten Prozeduren finden Sie unter [User Defined Functions and Stored Procedures](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Gespeicherte Prozeduren können nicht verwendet werden, um die Sicherheit auf Datenserverobjekten zu ändern. Wenn Sie eine gespeicherte Prozedur ausführen, wird der aktuelle Kontext des Benutzers verwendet, um den Zugriff auf alle Serverobjekte zu bestimmen. Daher müssen Benutzer über entsprechende Berechtigungen für Datenbankobjekte verfügen, auf die sie zugreifen.  

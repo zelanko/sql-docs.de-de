@@ -10,12 +10,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079583"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217121"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Verwenden von dynamischen Verwaltungssichten (DMVs) zum Überwachen von Analysis Services
   Dynamische Verwaltungssichten (DMV) von Analysis Services sind Abfragestrukturen, die Informationen zu lokalen Servervorgängen und zum Serverstatus verfügbar machen. Die Abfragestruktur stellt eine Schnittstelle zu Schemarowsets dar, die Metadaten und Überwachungsinformationen zu einer Analysis Services-Instanz zurückgeben.  
@@ -104,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 > [!NOTE]  
 >  Wenn eine DMV für ein bestimmtes Rowset nicht verfügbar ist, gibt der Server den folgenden Fehler zurück: " \<der Schemarowset> Anforderungstyp wurde vom Server nicht erkannt". Alle anderen Fehler weisen auf Probleme mit der Syntax hin.  
   
-|Rowset|BESCHREIBUNG|  
+|Rowset|Beschreibung|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|Gibt eine Liste der Analysis Services-Datenbanken für die aktuelle Verbindung zurück.|  
 |[DBSCHEMA_COLUMNS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|Gibt eine Liste aller Spalten in der aktuellen Datenbank zurück. Sie können diese Liste verwenden, um eine DMV-Abfrage zu erstellen.|  
@@ -112,7 +112,7 @@ ORDER BY TABLE_NAME ASC
 |[DBSCHEMA_TABLES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|Gibt eine Liste aller Tabellen in der aktuellen Datenbank zurück. Sie können diese Liste verwenden, um eine DMV-Abfrage zu erstellen.|  
 |[DISCOVER_CALC_DEPENDENCY-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|Gibt eine Liste der Spalten und Tabellen zurück, die in einem Modell verwendet werden und über Abhängigkeiten von anderen Spalten und Tabellen verfügen.|  
 |[DISCOVER_COMMAND_OBJECTS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|Stellt Ressourcenverwendungs- und Aktivitätsinformationen zu Objekten bereit, die von dem Befehl, auf den verwiesen wird, verwendet werden.|  
-|[DISCOVER_COMMANDS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|Stellt Informationen zur Ressourcenauslastung und Aktivität in Verbindung mit dem momentan ausgeführten Befehl bereit.|  
+|[DISCOVER_COMMANDS-Rowset](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)|Stellt Informationen zur Ressourcenauslastung und Aktivität in Verbindung mit dem momentan ausgeführten Befehl bereit.|  
 |[DISCOVER_CONNECTIONS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Stellt Informationen zur Ressourcenauslastung und Aktivität in Verbindung mit geöffneten Verbindungen zu Analysis Services bereit.|  
 |[DISCOVER_CSDL_METADATA-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|Gibt Informationen zu einem tabellarischen Modell zurück.<br /><br /> Erfordert die Hinzufügung von SYSTEMRESTRICTSCHEMA und weiteren Parametern.|  
 |[DISCOVER_DB_CONNECTIONS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|Stellt Informationen zur Ressourcenauslastung und Aktivität in Bezug auf geöffnete Verbindungen von Analysis Services für externe Datenquellen bereit, z. B. während der Verarbeitung oder während des Imports.|  
@@ -159,9 +159,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_INPUT_DATASOURCES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|Gibt Informationen zu den Datenquellenobjekten zurück, die in der aktuellen Datenbank definiert sind.|  
 |[MDSCHEMA_KPIS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|Gibt Informationen zu den KPIs zurück, die in der aktuellen Datenbank definiert sind.|  
 |[MDSCHEMA_LEVELS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|Gibt Informationen zu den Ebenen innerhalb der Hierarchien zurück, die in der aktuellen Datenbank definiert sind.|  
-|[MDSCHEMA_MEASUREGROUP_DIMENSIONS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|Listet die Dimension von Measuregruppen auf.|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS-Rowset](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/e6399481-a289-41f3-94d2-e081bf29e094)|Listet die Dimension von Measuregruppen auf.|  
 |[MDSCHEMA_MEASUREGROUPS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|Gibt eine Liste von Measuregruppen unter der aktuellen Verbindung zurück.|  
-|[MDSCHEMA_MEASURES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|Gibt eine Liste von Measures unter der aktuellen Verbindung zurück.|  
+|[MDSCHEMA_MEASURES-Rowset](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/ab8e721f-9b9c-4ba1-b105-37a5f200d67c)|Gibt eine Liste von Measures unter der aktuellen Verbindung zurück.|  
 |[MDSCHEMA_MEMBERS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|Gibt eine Liste aller Elemente für die aktuelle Verbindung sortiert nach Datenbank, Cube und Dimension zurück.|  
 |[MDSCHEMA_PROPERTIES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|Gibt den vollqualifizierten Namen jeder Eigenschaft zusammen mit Eigenschaftstyp, Datentyp und anderen Metadaten zurück.|  
 |[MDSCHEMA_SETS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Gibt eine Liste mit den Sätzen zurück, die unter der aktuellen Verbindung definiert sind.|  

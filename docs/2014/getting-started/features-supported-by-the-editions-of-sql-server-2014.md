@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339292"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289288"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Von den SQL Server 2014-Editionen unterstützte Funktionen
 
@@ -89,7 +89,7 @@ ms.locfileid: "78339292"
   
  <sup>1</sup> die Enterprise Edition mit einer Lizenzierung auf Grundlage von Server + Client Zugriffslizenz (CAL) (für neue Verträge nicht verfügbar) ist auf maximal 20 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Kerne pro-Instanz beschränkt. Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-##  <a name="High_availability"></a>Hohe Verfügbarkeit  
+##  <a name="High_availability"></a> Hochverfügbarkeit  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  

@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63f45fa174296e4ce79985236da2d97d3f11e937
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339293"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289438"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint (SharePoint 2010 und SharePoint 2013)
-  Führen Sie das Installations [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Paket-Add-in für SharePoint-Produkte (rsSharePoint. msi) auf SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servern aus, um Funktionen innerhalb einer SharePoint-Bereitstellung zu aktivieren. Zu den Funktionen gehören Power View, ein Berichts-Viewer-Webpart, ein URL-Proxyendpunkt, Inhaltstypen sowie Anwendungsseiten, mit deren Hilfe Berichte, Berichtsmodelle, Datenquellen und andere Berichtsserverinhalte auf einer SharePoint-Website erstellt, angezeigt und verwaltet werden können. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist eine erforderliche Komponente für Berichtsserver, die im SharePoint-Modus ausgeführt werden. Zum Installieren des Add-Ins führen Sie entweder den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setup-Assistenten aus oder laden rsSharePoint.msi aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack herunter. Eine Liste der Versionen der Add-In- und Downloadseiten finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
+  Führen Sie das Installationspaket für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint-Produkte (rsSharePoint.msi) auf den SharePoint-Servern aus, um die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Features innerhalb einer SharePoint-Bereitstellung zu aktivieren. Zu den Funktionen gehören Power View, ein Berichts-Viewer-Webpart, ein URL-Proxyendpunkt, Inhaltstypen sowie Anwendungsseiten, mit deren Hilfe Berichte, Berichtsmodelle, Datenquellen und andere Berichtsserverinhalte auf einer SharePoint-Website erstellt, angezeigt und verwaltet werden können. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist eine erforderliche Komponente für Berichtsserver, die im SharePoint-Modus ausgeführt werden. Zum Installieren des Add-Ins führen Sie entweder den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setup-Assistenten aus oder laden rsSharePoint.msi aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack herunter. Eine Liste der Versionen der Add-In- und Downloadseiten finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
 
 ||
 |-|
@@ -59,7 +59,7 @@ ms.locfileid: "78339293"
 
 -   Diagramme zu Beispiel Bereitstellungen mit dem Add-in finden Sie unter [Deployment Topologien for SQL Server BI Features in SharePoint](../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).
 
-##  <a name="bkmk_whatinstalled"></a>Was wird durch das Add-in installiert?
+##  <a name="bkmk_whatinstalled"></a> Was wird durch das Add-In installiert?
  Der Add-In-Installationsvorgang besteht aus zwei Phasen, beide werden automatisch abgeschlossen, wenn Sie eine Standardinstallation abschließen:
 
 -   In der ersten Phase werden die Dateien in den entsprechenden Ordnern installiert. Bei den Ordnern handelt es sich um die Standardordner für SharePoint-Bereitstellungen. Eine der installierten Dateien ist rsCustomAction.exe.
@@ -87,17 +87,17 @@ ms.locfileid: "78339293"
 
  Das Vorbereitungstool für SharePoint 2013-Produkte führt **keine** Installation des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins für SharePoint-Produkte aus.
 
-##  <a name="bkmk_3ways_to_install"></a>Übersicht über die Installationsmethoden
+##  <a name="bkmk_3ways_to_install"></a> Übersicht über die Installationsmethoden
  Das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-in für SharePoint-Produkte kann mithilfe einer der folgenden beiden Methoden installiert werden:
 
 -   **Der Installations-Assistent:** ![beachten Sie](../../../2014/reporting-services/media/rs-fyinote.png "Hinweis"), dass das Add-in mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installations-Assistenten installiert werden kann. Wählen Sie im Assistenten auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte** .
 
--   **rsSharePoint. msi:** Das Add-in kann direkt von den Installationsmedien installiert oder heruntergeladen und installiert werden. rsSharepoint.msi unterstützt sowohl die Installation über die grafische Benutzeroberfläche als auch über die Befehlszeile. Sie müssen die MSI-Datei mit Administratorrechten ausführen, indem Sie zuerst eine Eingabeaufforderung mit erhöhten Rechten öffnen und dann die Datei rsSharepoint.msi über die Befehlszeile ausführen. Weitere Informationen zum Herunterladen des Add-Ins finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
+-   **rsSharepoint.msi:** Das Add-In kann direkt von den Installationsmedien installiert bzw. heruntergeladen und installiert werden. rsSharepoint.msi unterstützt sowohl die Installation über die grafische Benutzeroberfläche als auch über die Befehlszeile. Sie müssen die MSI-Datei mit Administratorrechten ausführen, indem Sie zuerst eine Eingabeaufforderung mit erhöhten Rechten öffnen und dann die Datei rsSharepoint.msi über die Befehlszeile ausführen. Weitere Informationen zum Herunterladen des Add-Ins finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).
 
     > [!NOTE]
     >  Wenn Sie den Schalter **/q** für eine Befehlszeileninstallation im unbeaufsichtigten Modus verwenden, wird der Endbenutzer-Lizenzvertrag nicht angezeigt. Unabhängig von der Installationsmethode unterliegt die Verwendung dieser Software einem Lizenzvertrag, dessen Einhaltung in Ihrer Verantwortung liegt.
 
-##  <a name="bkmk_install_rssharepoint"></a>Installieren des Add-Ins mithilfe der Installationsdatei "rsSharePoint. msi"
+##  <a name="bkmk_install_rssharepoint"></a> Installieren des Add-Ins mithilfe der Installationsdatei "rsSharePoint.msi"
  In diesem Abschnitt wird die direkte Installation der Datei rssharepoint.msi beschrieben, indem entweder der Installations-Assistent für MSI-Dateien oder eine Befehlszeileninstallation ausgeführt wird. Wenn Sie das Add-In mithilfe des SQL Server-Installations-Assistenten installiert haben, müssen folgende Schritte nicht ausgeführt werden.
 
  Führen Sie folgenden Befehl aus, um eine vollständige Liste der Befehlszeilenschalter anzuzeigen:
@@ -118,10 +118,10 @@ Rssharepoint.msi /?
 
 3.  Konfigurieren Sie die Berichtsservereinstellungen und die Funktionsaktivierung in der SharePoint-Zentraladministration. . Weitere Informationen zum Installieren und Konfigurieren des SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).
 
-###  <a name="bkmk_files_only_installation"></a>Reine Datei Installation
+###  <a name="bkmk_files_only_installation"></a> "Nur-Datei"-Installation
  Wenn Sie die Dateien installieren möchten, die Installationsphase mit benutzerdefinierten Aktionen jedoch übersprungen werden soll, führen Sie die Datei rssharepoint.msi über die Befehlszeile mit der SKIPCA-Option aus:
 
-1.  Öffnen Sie eine Eingabeaufforderung **mit Administrator Berechtigungen**.
+1.  Öffnen Sie eine Eingabeaufforderung **mit Administratorberechtigungen**.
 
 2.  Führen Sie den folgenden Befehl aus:
 
@@ -140,7 +140,7 @@ Rssharepoint.msi /?
 
     1.  Wechseln Sie zu dem Ordner, in dem die Datei `rsCustomAction.exe` enthalten ist. Diese Datei wird bei der ausschließlichen Installation von Dateien des Add-Ins auf den Computer kopiert. `rsCustomAction.exe`befindet sich im Verzeichnis **% Temp%** . Geben Sie an der Eingabeaufforderung Folgendes ein, um zur Datei zu navigieren:
 
-         **CD% Temp%**.
+         **CD %temp%** .
 
          Die Datei sollte sich hier befinden: **\Benutzer\\<Ihr Name\>\AppData\Local\Temp**.
 
@@ -160,7 +160,7 @@ Rssharepoint.msi /?
 
  So führen Sie eine stille Installation aus:
 
-1.  Öffnen Sie eine Eingabeaufforderung **mit Administrator Berechtigungen**.
+1.  Öffnen Sie eine Eingabeaufforderung **mit Administratorberechtigungen**.
 
 2.  Führen Sie den folgenden Befehl aus:
 
@@ -168,7 +168,7 @@ Rssharepoint.msi /?
     Msiexec.exe /i rsSharePoint.msi /q
     ```
 
-##  <a name="bkmk_remove_addin"></a>Entfernen des Reporting Services-Add-ins
+##  <a name="bkmk_remove_addin"></a> Vorgehensweise: Entfernen des Reporting Services-Add-Ins
  Sie können das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte über die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Systemsteuerung oder über die Befehlszeile deinstallieren.
 
 1.  Indem Sie die Systemsteuerung dafür verwenden, werden die Daten auf dem aktuellen Computer vollständig deinstalliert **UND** die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Objekte und -Funktionen aus der SharePoint-Farm entfernt. Wenn das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Objekt und die -Funktionen entfernt werden, können Sie Berichte nicht mehr überprüfen und aktualisieren.
@@ -183,7 +183,7 @@ Rssharepoint.msi /?
 
  Durch das Deinstallieren des Add-Ins wird Folgendes nicht entfernt:
 
--   Anmeldungen für das Berichtsserver-Dienstkonto für den Zugriff auf die SharePoint-Konfiguration und die SharePoint-Inhaltsdatenbanken. Sie müssen alle Anmeldungen für das Berichts Server-Dienst Konto aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz löschen, die zum Hosten der SharePoint-Datenbanken verwendet wird.
+-   Anmeldungen für das Berichtsserver-Dienstkonto für den Zugriff auf die SharePoint-Konfiguration und die SharePoint-Inhaltsdatenbanken. Löschen Sie alle Anmeldungen für das Berichtsserver-Dienstkonto aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz, die als Host für die SharePoint-Datenbanken dient.
 
 -   Berechtigungen oder Gruppen, die Sie für Benutzer von Berichten erstellt haben. Wenn Sie benutzerdefinierte Berechtigungsebenen oder SharePoint-Gruppen erstellt haben, um Zugriff auf Berichtsserverfunktionen zu gewähren, sollten Sie nicht mehr benötigte Berechtigungen aufheben.
 
@@ -203,7 +203,7 @@ Rssharepoint.msi /?
 ### <a name="uninstall-from-the-command-line"></a>Deinstallieren über die Befehlszeile
  So deinstallieren Sie das Add-In über die Befehlszeile
 
-1.  Öffnen Sie eine Eingabeaufforderung **mit Administrator Berechtigungen**.
+1.  Öffnen Sie eine Eingabeaufforderung **mit Administratorberechtigungen**.
 
 2.  Führen Sie den folgenden Befehl aus:
 
@@ -216,7 +216,7 @@ Rssharepoint.msi /?
 ### <a name="uninstall-the-add-in-from-the-local-server-only"></a>Deinstallieren des Add-Ins nur vom lokalen Server
  Durch die vorherigen Methoden zum Deinstallieren des Add-Ins werden die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen und das -Objekt der Farm entfernt. Führen Sie die folgenden Schritte aus, wenn Sie über eine Multiserverfarm verfügen und das Add-In nur von einem lokalen Computer deinstallieren und die SharePoint-Farm in einem funktionsfähigen Status belassen möchten:
 
-1.  Öffnen Sie eine Eingabeaufforderung **mit Administrator Berechtigungen**.
+1.  Öffnen Sie eine Eingabeaufforderung **mit Administratorberechtigungen**.
 
 2.  Führen Sie den folgenden Befehl aus:
 
@@ -228,7 +228,7 @@ Rssharepoint.msi /?
 
  Führen Sie die folgenden Schritte aus, wenn Sie die Registrierung der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen in SharePoint aufheben, die Dateien zur späteren Verwendung jedoch auf dem Datenträger belassen möchten.
 
-1.  Öffnen Sie eine Eingabeaufforderung **mit Administrator Berechtigungen**.
+1.  Öffnen Sie eine Eingabeaufforderung **mit Administratorberechtigungen**.
 
 2.  Führen Sie den folgenden Befehl aus:
 
@@ -238,10 +238,10 @@ Rssharepoint.msi /?
 
  In den obigen Schritten wird davon ausgegangen, dass Sie die Installation der MSI-Datei mit SkipCA=1 abgeschlossen haben und dass die Datei "rscusstomaction.exe" verfügbar ist. Weitere Informationen finden Sie im Abschnitt, in dem die "Nur-Datei"-Installation beschrieben wird.
 
-##  <a name="bkmk_repair"></a>Reparieren von "rsSharePoint. msi" über die Befehlszeile
+##  <a name="bkmk_repair"></a> Vorgehensweise: Reparieren von "rssharepoint.msi" über die Befehlszeile
  Führen Sie zum Reparieren oder Deinstallieren des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins mit der Befehlszeile die folgenden Schritte aus:
 
-1.  Öffnen Sie eine Eingabeaufforderung **mit Administrator Berechtigungen**.
+1.  Öffnen Sie eine Eingabeaufforderung **mit Administratorberechtigungen**.
 
 2.  Führen Sie den folgenden Befehl aus:
 
@@ -249,7 +249,7 @@ Rssharepoint.msi /?
     msiexec.exe /f rssharepoint.msi
     ```
 
-##  <a name="bkmk_logfiles"></a>Setup Protokolldateien
+##  <a name="bkmk_logfiles"></a> Setupprotokolldateien
  Beim Ausführen von Setup werden Informationen zum Benutzer, der das **-Add-In installiert hat, in einer Protokolldatei im Ordner** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] protokolliert. Beispiel: **C:\Benutzer\\<Benutzername\>\AppData\Local\Temp**. Der Dateiname lautet **RS_SP_\<Nummer>.log**, also beispielsweise **RS_SP_0.log**. Alle Fehler im Protokoll beginnen mit der Zeichenfolge SSRSCustomActionError.
 
 > [!NOTE]
@@ -279,20 +279,20 @@ Rssharepoint.msi /?
     Get-Content -Path C:\Users\<UserName\AppData\Local\Temp\rs_sp_0.log | Select-String "ssrscustomactionerror"
     ```
 
-2.  Die Ausgabe sieht etwa wie folgt aus:
+2.  Die Ausgabe ist mit folgender Zeichenfolge vergleichbar:
 
      `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`.
 
-##  <a name="bkmk_upgrade"></a>Zuführen
+##  <a name="bkmk_upgrade"></a> Upgrade
  Wenn Sie bereits über eine Installation des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins verfügen, können Sie diese auf die aktuelle Version aktualisieren. Das Setupprogramm für das Add-In erkennt die vorhandene Version und fordert Sie auf, das Update zu bestätigen. Die Meldung lautet wie folgt oder ähnlich:
 
- **Eine niedrigere Version dieses Produkts wurde auf Ihrem System erkannt. Möchten Sie die vorhandene Installation aktualisieren?**
+ **Eine frühere Version dieses Produkts wurde auf Ihrem System gefunden. Möchten Sie die vorhandene Installation aktualisieren?**
 
  Wenn Sie bestätigen, wird die frühere Version des Add-Ins entfernt und die neue Version installiert.
 
  Beachten Sie, dass das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In nicht instanzabhängig ist. Es kann nur eine Instanz des Add-Ins auf einem Computer vorhanden sein. Sie können keine unterschiedlichen Versionen parallel zur aktuellen Version ausführen.
 
-##  <a name="bkmk_rscustomaction"></a>RsCustomAction. exe
+##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe
  In der folgenden Tabelle sind die Schalter für rscustomaction.exe zusammengefasst:
 
 |Schalter|BESCHREIBUNG|

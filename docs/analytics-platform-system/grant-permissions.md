@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339570"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289698"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Erteilen von T-SQL-Berechtigungen für parallele Data Warehouse
 Erteilen Sie T-SQL-Berechtigungen für Daten Bank Vorgänge parallel Data Warehouse.
@@ -249,4 +249,4 @@ Informationen zum Erstellen von Administrator Anmeldungen finden Sie unter [Fixe
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [Benutzer erstellen](../t-sql/statements/create-user-transact-sql.md)  
 [Rolle erstellen](../t-sql/statements/create-role-transact-sql.md)  
-[Laden](load-overview.md)  
+[Load](load-overview.md)  

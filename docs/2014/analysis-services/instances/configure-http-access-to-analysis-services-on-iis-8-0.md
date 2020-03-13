@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225403"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217075"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste (IIS) 8.0
   In diesem Artikel wird beschrieben, wie Sie einen HTTP-Endpunkt für den Zugriff auf eine Analysis Services-Instanz einrichten. Sie können den HTTP-Zugriff aktivieren, indem Sie MSMDPUMP.dll konfigurieren, eine ISAPI-Erweiterung, die in Internetinformationsdienste (IIS) ausgeführt wird und Datapump zu und von Clientanwendungen und einem Analysis Services-Server ausführt. Dieser Ansatz bietet eine Alternative zum Herstellen einer Verbindung mit Analysis Services, wenn die BI-Lösung die folgenden Funktionen erfordert:  
@@ -52,7 +52,7 @@ ms.locfileid: "75225403"
   
 -   [Testen Ihrer Konfiguration](#bkmk_test)  
   
-##  <a name="bkmk_overview"></a>Übersicht über  
+##  <a name="bkmk_overview"></a> Übersicht  
  MSMDPUMP ist eine ISAPI-Erweiterung, die in IIS geladen wird und die Umleitung zu einer lokalen oder Remote-Analysis-Services-Instanz bereitstellt. Durch die Konfiguration dieser ISAPI-Erweiterung erstellen Sie einen HTTP-Endpunkt für eine Analysis Services-Instanz.  
   
  Sie müssen ein virtuelles Verzeichnis für jeden HTTP-Endpunkt erstellen und konfigurieren. Jeder Endpunkt erfordert für jede Analysis Services-Instanz, mit der Sie eine Verbindung herstellen möchten, eine eigene MSMDPUMP-Dateigruppe. In einer Konfigurationsdatei innerhalb der Dateigruppe ist der Name der für die einzelnen HTTP-Endpunkte verwendeten Analysis Services-Instanz angegeben.  
@@ -293,7 +293,7 @@ ms.locfileid: "75225403"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- Weitere Informationen zum programmgesteuerten Herstellen einer Verbindung finden Sie unter [Aufbauen von sicheren Verbindungen in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
+ Weitere Informationen zum programmgesteuerten Herstellen einer Verbindung finden Sie unter [Aufbauen von sicheren Verbindungen in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections).  
   
  Führen Sie abschließend gründlichere Tests durch, indem Sie einen Clientcomputer verwenden, der in der Netzwerkumgebung ausgeführt wird, aus der die Verbindungen hergestellt werden.  
   

@@ -14,12 +14,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 365834e3c1cd239a245c1523947a359b7c2dcc57
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67934557"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289118"
 ---
 # <a name="automatic-tuning"></a>Automatische Optimierung
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Ohne die automatische Optimierung müssen Benutzer ihr System regelmäßig über
 Manuell erzwungene Pläne sollten nicht immer erzwungen werden, da der [!INCLUDE[ssde_md](../../includes/ssde_md.md)] in der Lage sein sollte, optimale Pläne anzuwenden. Der Benutzer oder DBA sollte die Erzwingungs Planung des `sp_query_store_unforce_plan` Plans schließlich mithilfe der Prozedur [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erzwingen und den optimalen Plan suchen lassen. 
 
 > [!TIP]
-> Verwenden Sie in alternativelly die **Abfragen mit erzwungenen Plänen** Abfragespeicher Ansicht, um Pläne zu suchen und deren Erzwingung zu erzwingen.
+> Verwenden Sie alternativ die **Abfragen mit erzwungenen Plänen** Abfragespeicher Sicht, um Pläne zu suchen und deren erzwungene aufgängig zu machen.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bietet alle notwendigen Sichten und Prozeduren, die zur Überwachung der Leistung und Behebung von Problemen in Abfragespeicher erforderlich sind.
 

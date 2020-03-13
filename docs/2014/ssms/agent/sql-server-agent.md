@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339093"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289628"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt ** , die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]in als Aufträge bezeichnet werden.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt *jobs* , die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]in als Aufträge bezeichnet werden.  
   
  **In diesem Thema**  
   
@@ -126,7 +126,7 @@ ms.locfileid: "78339093"
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert die in der folgenden Tabelle aufgeführten Subsysteme:  
   
-|Name des Subsystems|BESCHREIBUNG|  
+|Name des Subsystems|Beschreibung|  
 |--------------------|-----------------|  
 |Microsoft ActiveX-Skript|Ausführen eines ActiveX-Skriptauftragsschritts.<br /><br /> ** \* Wichtig \* \* ** Das ActiveX Scripting-Subsystem wird in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aus dem-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |Betriebs System (**CmdExec**)|Ausführen eines ausführbaren Programms.|  

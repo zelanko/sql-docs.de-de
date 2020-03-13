@@ -17,11 +17,11 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339043"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289448"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server)
   Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault ermöglicht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Verschlüsselung, um den Azure Key Vault-Dienst als [erweiterbare Schlüsselverwaltung &#40;EKM-&#41;](extensible-key-management-ekm.md) Anbieter zum Schutz seiner Verschlüsselungsschlüssel zu nutzen.
