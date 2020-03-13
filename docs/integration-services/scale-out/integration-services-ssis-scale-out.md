@@ -1,5 +1,5 @@
 ---
-title: Horizontale Hochskalierung für Integration Services (SSIS) | Microsoft-Dokumentation
+title: Integration Services (SSIS) Integration Services Scale Out | Microsoft-Dokumentation
 description: Dieser Artikel enthält eine Übersicht über das SSIS Scale Out-Feature, das leistungsstarke Ausführung von SSIS-Paketen ermöglicht.
 ms.custom: performance
 ms.date: 12/13/2017
@@ -18,7 +18,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295657"
 ---
-# <a name="integration-services-ssis-scale-out"></a>Horizontale Hochskalierung für Integration Services (SSIS)
+# <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -28,7 +28,7 @@ Mithilfe von Scale Out für SQL Server [!INCLUDE[ssISnoversion](../../includes/s
 ## <a name="components"></a>Komponenten
 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out besteht aus einem Scale Out-Master für [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] und mindestens einem Scale Out-Worker für [!INCLUDE[ssIS_md](../../includes/ssis-md.md)].
 
--   Der Master für horizontales Hochskalieren ist für die Verwaltung von horizontaler Hochskalierung verantwortlich und empfängt Paketausführungsanforderungen von Benutzern. Weitere Informationen finden Sie unter [Scale Out-Master](integration-services-ssis-scale-out-master.md).
+-   Der Scale Out-Master ist für die Scale Out-Verwaltung verantwortlich und empfängt Paketausführungsanforderungen von Benutzern. Weitere Informationen finden Sie unter [Scale Out-Master](integration-services-ssis-scale-out-master.md).
 
 -   Die Scale Out-Worker entnehmen dem Scale Out-Master Ausführungsaufgaben und führen die Pakete aus. Weitere Informationen finden Sie unter [Scale Out-Worker](integration-services-ssis-scale-out-worker.md).
 

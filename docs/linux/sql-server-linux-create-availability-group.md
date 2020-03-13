@@ -59,7 +59,7 @@ Sie können zum Hinzufügen der folgenden Zeilen auch die `mssql.conf`-Datei än
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] neu starten
+### <a name="restart-ssnoversion-md"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] neu starten
 Nachdem Sie Verfügbarkeitsgruppen wie unter Windows aktiviert haben, müssen Sie [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] neu starten. Dies erreichen Sie auf folgende Weise:
 
 ```bash
@@ -316,7 +316,7 @@ In diesem Beispiel werden Zertifikate für eine Konfiguration mit drei Knoten er
 
 In diesem Abschnitt wird beschrieben, wie [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) oder Transact-SQL zum Erstellen der Verfügbarkeitsgruppe für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] verwendet wird.
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Verwenden Sie [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
+### <a name="use-ssmanstudiofull-md"></a>Verwenden Sie [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
 In diesem Abschnitt wird gezeigt, wie mithilfe von SSMS mit dem neuen Verfügbarkeitsgruppenassistenten eine Verfügbarkeitsgruppe mit dem Clustertyp „Extern“ erstellt wird.
 
@@ -533,7 +533,7 @@ In diesem Beispiel wird gezeigt, wie eine Konfiguration mit zwei Replikaten mit 
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Erstellen des [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Anmeldenamens und der Berechtigungen für Pacemaker
+## <a name="create-the-ssnoversion-md-login-and-permissions-for-pacemaker"></a>Erstellen des [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Anmeldenamens und der Berechtigungen für Pacemaker
 
 Ein unter Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] zugrunde liegender Pacemaker-Cluster mit Hochverfügbarkeit benötigt Zugriff auf die [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Instanz und Berechtigungen für die Verfügbarkeitsgruppe selbst. Mit diesen Schritten werden der Anmeldename und die zugehörigen Berechtigungen zusammen mit einer Datei erstellt, die Pacemaker mitteilt, wie die Anmeldung bei [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] erfolgen soll.
 

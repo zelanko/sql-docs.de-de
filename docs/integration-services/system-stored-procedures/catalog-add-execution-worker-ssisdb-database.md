@@ -64,7 +64,7 @@ Die Worker-Agent-ID für den Scale Out-Worker. Die *workeragent_id* ist **unique
 
 - Die Worker-Agent-ID ist ungültig.
 
-- Die Ausführung erfolgt nicht in horizontaler Hochskalierung.
+- Die Ausführung erfolgt nicht in Scale Out.
 
 ## <a name="see-also"></a>Weitere Informationen
 [Ausführen von Paketen in horizontaler Hochskalierung](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).

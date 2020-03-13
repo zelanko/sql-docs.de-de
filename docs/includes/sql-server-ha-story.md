@@ -54,7 +54,7 @@ In SQL Server 2017 gibt es einige neue Funktionen und Erweiterungen für Verfüg
 * Clustertypen
 * REQUIRED_SECONDARIES_TO_COMMIT
 * Erweiterte MS DTC-Unterstützung (Microsoft Distributed Transaction Coordinator) für Windows Server-basierte Konfigurationen
-* Zusätzliche Szenarios für horizontales Hochskalieren von schreibgeschützten Datenbanken (später in diesem Artikel beschrieben)
+* Zusätzliche Szenarios für das Aufskalieren von schreibgeschützten Datenbanken (später in diesem Artikel beschrieben)
 
 ##### <a name="always-on-availability-group-cluster-types"></a>Clustertypen von Always On-Verfügbarkeitsgruppen
 
@@ -245,7 +245,7 @@ Bei allen Szenarios für die schreibgeschützte horizontale Skalierung mit Verf�
 
 ## <a name="summary"></a>Zusammenfassung
 
-Instanzen und Datenbanken von SQL Server 2017 können hoch verfügbar gemacht werden, indem die gleichen Funktionen unter Windows Server und Linux verwendet werden. Neben den Standardszenarios für die lokale Hochverfügbarkeit und die Verfügbarkeit der Notfallwiederherstellung kann die Ausfallzeit bei Upgrades und Migrationen durch die Verfügbarkeitsfunktionen in SQL Server minimiert werden. Verfügbarkeitsgruppen können ebenfalls zusätzliche Kopien einer Datenbank als Teil derselben Architektur für schreibgeschützte hochskalierte Kopien bereitstellen. Ob Sie eine neue Lösung mithilfe von SQL Server 2017 bereitstellen möchten oder ein Upgrade erwägen: SQL Server 2017 bietet Ihnen die Verfügbarkeit und Zuverlässigkeit, die Sie benötigen.
+Instanzen und Datenbanken von SQL Server 2017 können hoch verfügbar gemacht werden, indem die gleichen Funktionen unter Windows Server und Linux verwendet werden. Neben den Standardszenarios für die lokale Hochverfügbarkeit und die Verfügbarkeit der Notfallwiederherstellung kann die Ausfallzeit bei Upgrades und Migrationen durch die Verfügbarkeitsfunktionen in SQL Server minimiert werden. Verfügbarkeitsgruppen können ebenfalls zusätzliche Kopien einer Datenbank als Teil derselben Architektur bereitstellen, um schreibgeschützte Kopien aufzuskalieren. Ob Sie eine neue Lösung mithilfe von SQL Server 2017 bereitstellen möchten oder ein Upgrade erwägen: SQL Server 2017 bietet Ihnen die Verfügbarkeit und Zuverlässigkeit, die Sie benötigen.
  
 [SimpleAG]:media\sql-server-ha-story\image1.png
 [SSMSAGOptions]:media\sql-server-ha-story\image2.png

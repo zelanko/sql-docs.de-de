@@ -35,7 +35,7 @@ catalog.disable_worker_agent [@WorkerAgentId =] WorkerAgentId
 [@WorkerAgentId =] *WorkerAgentId* Die Worker-Agent-ID für den Scale Out-Worker. Das Argument *WorkerAgentId* ist vom Typ **uniqueidentifier**.
 
 ## <a name="example"></a>Beispiel
-In diesem Beispiel wird der Worker für horizontales Hochskalieren auf „MachineA“ deaktiviert.
+In diesem Beispiel wird der Scale Out-Worker auf „MachineA“ deaktiviert.
 
 ```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
