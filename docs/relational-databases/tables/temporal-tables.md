@@ -18,7 +18,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165698"
 ---
-# <a name="temporal-tables"></a>Temporäre Tabellen
+# <a name="temporal-tables"></a>Temporale Tabellen
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
