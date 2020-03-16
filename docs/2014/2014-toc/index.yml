@@ -3,18 +3,18 @@ title: Dokumentation zu SQL Server 2014
 summary: Bei der lokalen Version von Microsoft SQL Server 2014 handelt es sich um eine relationale Datenbank.
 metadata:
   title: Themen zu SQL Server 2014
-  description: Wählen Sie den Bereich von SQL Server 2014 aus, an dem Sie interessiert sind.
+  description: Wählen Sie den Bereich der lokalen, relationalen SQL Server 2014-Datenbank oder von verwandten Produkten und Diensten aus, die für Sie interessant sind.
   ms.prod: sql
   ms.topic: landing-page
   author: MightyPen
   ms.author: genemi
   ms.date: 11/25/2019
-  ms.openlocfilehash: 68632f82835836b9097e8547683b069771143e2d
-  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+  ms.openlocfilehash: 70af131ea185351e1034e1ec093094cce1369e4c
+  ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/31/2020
-  ms.locfileid: "75224397"
+  ms.lasthandoff: 03/12/2020
+  ms.locfileid: "79190512"
 landingContent:
 - title: Besondere Artikel
   linkLists:

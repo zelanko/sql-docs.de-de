@@ -220,6 +220,10 @@
               href: big-data-cluster/spark-hive-tools-vscode.md
             - name: Verwenden von erweiterten Spark-Verlaufsservern
               href: big-data-cluster/spark-history-server.md
+        - name: Problembehandlung
+          items:
+            - name: Active Directory-Bereitstellung
+              href: big-data-cluster/troubleshoot-active-directory.md
     - name: Verweis
       items:
         - name: Referenz zur Bereitstellung
