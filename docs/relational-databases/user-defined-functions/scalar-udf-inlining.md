@@ -16,11 +16,11 @@ author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339179"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287404"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
@@ -142,7 +142,7 @@ Je nach Komplexität der Logik in der benutzerdefinierten Funktion kann der resu
     - `IF`/`ELSE`: Verzweigung mit beliebigen Schachtelungsebenen
     - `RETURN`: eine oder mehrere RETURN-Anweisungen
     - `UDF`: geschachtelte bzw. rekursive Funktionsaufrufe<sup>2</sup>
-    - Sonstige: relationale Operatoren wie `EXISTS`, `ISNULL`
+    - Sonstige: relationale Vorgänge wie `EXISTS`, `ISNULL`
 - Die benutzerdefinierte Funktion ruft keine intrinsische Funktion auf, die zeitabhängig ist (wie `GETDATE()`) oder Nebeneffekte<sup>3</sup> hat (wie `NEWSEQUENTIALID()`).
 - Die benutzerdefinierte Funktion verwendet die `EXECUTE AS CALLER`-Klausel (Standardverhalten, wenn die `EXECUTE AS`-Klausel nicht angegeben wurde).
 - Die benutzerdefinierte Funktion verweist nicht auf Tabellenvariablen oder Tabellenwertparameter.

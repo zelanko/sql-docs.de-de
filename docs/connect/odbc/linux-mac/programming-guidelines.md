@@ -10,11 +10,11 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911188"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285864"
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
 
@@ -79,7 +79,7 @@ Für ODBC-Treiber 17 werden die folgenden Zeichensätze bzw. Codierungen für SQ
 >
 > Weitere Informationen finden Sie unter [Functional differences from glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html) (Funktionsbezogene Unterschiede zu glibc).
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS-Latin-US|

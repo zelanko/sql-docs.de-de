@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76909850"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286334"
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "76909850"
 
 - [![Download aus dem Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) Laden Sie SQL Server 2016 aus dem **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** herunter.
 - [![Azure Virtual Machine (klein)](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2016 SP1 bereits installiert ist.
-- [![SSMS herunterladen](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Wechseln Sie zu **[Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**, um die neueste Version von SQL Server Management Studio (SSMS) abzurufen.
+- [![SSMS herunterladen](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Wechseln Sie zu **[Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)** , um die neueste Version von SQL Server Management Studio (SSMS) abzurufen.
 
 ## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
 
@@ -39,13 +39,13 @@ Sie müssen Ihren Computer möglicherweise nach der Installation von SQL Server 
 
 Leistungs- und skalierungsbasierte Verbesserungen, die in SQL Server 2016 SP2 enthalten sind
 
-|Funktion|Beschreibung|Weitere Informationen|
+|Funktion|BESCHREIBUNG|Weitere Informationen|
 |---|---|---|
 |Verbesserter Cleanupvorgang für die Verteilungsdatenbank |   Übergroße Verteilungsdatenbanktabellen führten zu Blockierungs- und Deadlocksituationen. Im Rahmen einer verbesserten Cleanup-Prozedur sollen einige davon beseitigt werden. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |Bereinigen der Änderungsnachverfolgung    |   Verbesserte Leistung und Effizienz des Cleanups für Nebentabellen bei der Änderungsnachverfolgung.    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
 |Verwenden von CPU-Timeout zum Abbrechen von Resource Governor-Anforderungen   |   Verbessert die Handhabung von Abfrageanforderungen, indem die Anforderung tatsächlich abgebrochen wird, falls CPU-Schwellenwerte für eine Anforderung erreicht werden. Dieses Verhalten wird unter dem Ablaufverfolgungsflag 2422 aktiviert. |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
 |Verwenden von SELECT INTO zum Erstellen einer Zieltabelle in der Dateigruppe    |   Ab SQL Server 2016 SP2 unterstützt die T-SQL-Syntax SELECT INTO das Laden einer Tabelle in eine Dateigruppe, die nicht die Standarddateigruppe des Benutzers ist, die das Schlüsselwort ON <Filegroup name> in der T-SQL-Syntax verwendet. |       |
-|Verbesserter indirekter Prüfpunkt für tempdb    |   Das Verwenden eines indirekten Prüfpunkts für tempdb wurde verbessert, um die Spinlock-Konflikte für DPLists zu reduzieren. Diese Verbesserung erlaubt der tempdb-Workload in SQL Server 2016 eine sofort einsatzbereite zentrale Hochskalierung, falls die Verwendung des indirekten Prüfpunkts für tempdb ON (Ein) ist.    |   [KB4040276](https://support.microsoft.com/help/4040276) |
+|Verbesserter indirekter Prüfpunkt für tempdb    |   Das Verwenden eines indirekten Prüfpunkts für tempdb wurde verbessert, um die Spinlock-Konflikte für DPLists zu reduzieren. Diese Verbesserung erlaubt der tempdb-Workload in SQL Server 2016 eine sofort einsatzbereite Aufskalierung, falls die Verwendung des indirekten Prüfpunkts für tempdb ON (Ein) ist.    |   [KB4040276](https://support.microsoft.com/help/4040276) |
 |Verbesserte Leistung bei der Datenbanksicherung auf Computern mit großem Speicher  |   SQL Server 2016 SP2 optimiert die Art und Weise, wie wir die fortlaufende E/A während der Sicherung ausgleichen, wodurch wir eine deutliche Leistungssteigerung bei der Sicherung für kleine bis mittlere Datenbanken erreichen. Wenn Sicherungen der Systemdatenbank auf einem Computer mit 2 TB durchgeführt werden, ist die Leistung stark verbessert. Die Leistungssteigerung sinkt mit steigender Datenbankgröße, da die zu sichernden Seiten und die Sicherungs-E/A im Vergleich zur Iteration des Pufferpools mehr Zeit in Anspruch nehmen. Durch diese Änderung können Sie die Sicherungsleistung für Kunden optimieren, die mehrere kleine Datenbanken auf hochwertigen Servern mit hoher Speicherkapazität hosten.    |       |
 |Unterstützung für die VDI-Sicherungskomprimierung für mit TDE aktivierte Datenbanken   |   SQL Server 2016 SP2 fügt VDI-Support hinzu, damit VDI-Sicherungslösungen die Komprimierung für mit TDE aktivierte Datenbanken nutzen können. Durch diese Verbesserung wurde ein neues Sicherungsformat eingeführt, um die Sicherungskomprimierung für mit TDE-aktivierte Datenbanken zu unterstützen. Die SQL Server-Engine verarbeitet transparent neue und alte Sicherungsformate, um die Sicherungen wiederherzustellen.   |       |
 |Dynamisches Laden von Profilparametern des Replikations-Agents    |   Mithilfe dieser neuen Erweiterungen können Replikations-Agent-Parameter dynamisch geladen werden, ohne dass der Agent neu gestartet werden muss. Diese Änderung gilt nur für die am häufigsten verwendeten Agent-Profilparameter. |       |
@@ -54,7 +54,7 @@ Leistungs- und skalierungsbasierte Verbesserungen, die in SQL Server 2016 SP2 en
 
 Unterstützbarkeit und Diagnose betreffende Verbesserungen sind in SQL Server 2016 SP2 beinhaltet.
 
-|Funktion|Beschreibung|Weitere Informationen|
+|Funktion|BESCHREIBUNG|Weitere Informationen|
 |---|---|---|
 |Vollständige DTC-Unterstützung für Datenbanken in einer Verfügbarkeitsgruppe    |   Datenbankübergreifende Transaktionen für Datenbanken, die Teil einer Verfügbarkeitsgruppe sind, werden für SQL Server 2016 nicht unterstützt. Mit SQL Server 2016 SP2 führen wir die vollständige Unterstützung für verteilte Transaktionen mit Datenbanken der Verfügbarkeitsgruppe ein.   |       |
 |Update für die Spalte „is_encrypted“ in „sys.database“ zur genauen Wiedergabe des Verschlüsselungsstatus für TempDB |   Der Wert der Spalte „is_encrypted“ in „sys.databases“ beträgt 1 für tempdb, auch wenn Sie die Verschlüsselung für alle Benutzerdatenbanken deaktivieren und SQL Server neu starten. Das erwartete Verhalten ist, dass der Wert 0 (null) ist, da tempdb in dieser Situation nicht länger verschlüsselt ist. Beginnend mit SQL Server 2016 SP2 gibt „is_encrypted“ in „sys.databases“ nun den Verschlüsselungsstatus für tempdb genau wieder.  |       |
@@ -105,7 +105,7 @@ Die folgenden Features sind in der Standard, Web, Express und Local DB Edition v
 
 In der folgenden Tabelle werden wichtige Verbesserungen in SQL Server 2016 SP1 zusammengefasst.
 
-|Funktion|Beschreibung|Weitere Informationen|
+|Funktion|BESCHREIBUNG|Weitere Informationen|
 |---|---|---|
 |Masseneinfügung in Heaps mit automatischem TABLOCK unter TF 715| Das Ablaufverfolgungsflag 715 aktiviert Tabellensperren für Massenladevorgänge in einen Heap ohne nicht gruppierte Indizes.|[Migrating SAP workloads to SQL Server just got 2.5x faster (Beschleunigung der Migration von SAP-Workloads zu SQL Server um das 2,5-fache)](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE OR ALTER|Bereitstellen von Objekten wie gespeicherten Prozeduren, Triggern, benutzerdefinierten Funktionen und Ansichten.|[Blog der SQL Server-Datenbank-Engine](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|

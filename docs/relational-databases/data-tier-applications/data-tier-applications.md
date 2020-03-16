@@ -15,11 +15,11 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72278285"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287584"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "72278285"
   
 -   **IMPORT**: Der Benutzer kann das Schema und die Daten in eine neue Datenbank auf dem Hostserver importieren.  
   
- Beide Funktionen werden von den Datenbankverwaltungstools unterstützt: SQL Server Management Studio, das Azure-Portal und die DACFx-API.  
+ Diese Funktionen werden beide von den folgenden Datenbankverwaltungstools unterstützt: SQL Server Management Studio, vom Azure-Portal und der DACFx-API.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss Mitglied der **dbmanager**-Rolle sein oder **CREATE DATABASE**-Berechtigungen erhalten haben, um eine Datenbank erstellen zu können. Dies gilt auch für das Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Der Benutzer muss Mitglied der **dbmanager**-Rolle sein oder **DROP DATABASE**-Berechtigungen erhalten haben, um eine Datenbank löschen zu können.  

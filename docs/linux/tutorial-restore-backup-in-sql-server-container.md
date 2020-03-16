@@ -3,17 +3,17 @@ title: Wiederherstellen einer SQL Server-Datenbank in Docker
 description: In diesem Tutorial erfahren Sie, wie Sie eine SQL Server-Datenbanksicherung in einem Docker-Container in Linux wiederherstellen.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 21b25edb34d89cb9ef3629955dd06a357a8607a2
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75721805"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198281"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Docker-Container in Linux
 
@@ -115,11 +115,11 @@ In diesem Tutorial erfahren Sie, wie Sie eine SQL Server-Sicherungsdatei in ein 
 1. Übertragen Sie das Linux-Containerimage von SQL Server 2019 mithilfe von Pull aus dem Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    > [!TIP]
@@ -131,14 +131,14 @@ In diesem Tutorial erfahren Sie, wie Sie eine SQL Server-Sicherungsdatei in ein 
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    Mit diesem Befehl wird ein Container von SQL Server 2019 erstellt, der standardmäßig die Developer-Edition enthält. Der SQL Server-Port **1433** wird auf dem Host als Port **1401** bereitgestellt. Mit dem optionalen Parameter `-v sql1data:/var/opt/mssql` wird ein Datenvolumecontainer namens **sql1ddata** erstellt. Dieser wird verwendet, um die von SQL Server erstellten Daten permanent zu speichern.
@@ -407,7 +407,7 @@ Nachdem Sie Ihre Datenbank in einem Container wiederhergestellt haben, können S
 
 ## <a name="use-the-persisted-data"></a>Verwenden der persistenten Daten
 
-Zum Schutz Ihrer Daten können Sie neben Datenbanksicherungen auch Datenvolumecontainer verwenden. Zu Beginn dieses Tutorials haben Sie mit dem Parameter **den Container**sql1`-v sql1data:/var/opt/mssql` erstellt. Im Datenvolumecontainer **sql1data** werden die Daten aus **/var/opt/mssql** auch dann weiterhin gespeichert, wenn der Container gelöscht wird. Führen Sie die folgenden Schritte aus, um den Container **sql1** vollständig zu entfernen und anschließend einen neuen Container namens **sql2** mit den persistenten Daten zu erstellen.
+Zum Schutz Ihrer Daten können Sie neben Datenbanksicherungen auch Datenvolumecontainer verwenden. Zu Beginn dieses Tutorials haben Sie mit dem Parameter `-v sql1data:/var/opt/mssql` den Container **sql1** erstellt. Im Datenvolumecontainer **sql1data** werden die Daten aus **/var/opt/mssql** auch dann weiterhin gespeichert, wenn der Container gelöscht wird. Führen Sie die folgenden Schritte aus, um den Container **sql1** vollständig zu entfernen und anschließend einen neuen Container namens **sql2** mit den persistenten Daten zu erstellen.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -492,13 +492,13 @@ Zum Schutz Ihrer Daten können Sie neben Datenbanksicherungen auch Datenvolumeco
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     ```
 
 1. Die Datenbank von Wide World Importers befindet sich nun im neuen Container. Führen Sie eine Abfrage aus, um die vorherige Änderung zu überprüfen.

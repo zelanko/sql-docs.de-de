@@ -36,11 +36,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77440688"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286944"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -131,7 +131,7 @@ Bei der Konvertierung von Zeichendaten in **datetimeoffset** wird unter Verwendu
 ## <a name="float-and-real-styles"></a>float- und real-Formate
 Wenn *expression* **float** oder **real** ist, kann *style* einen der in der folgenden Tabelle aufgelisteten Werte aufweisen. Andere Werte werden als 0 verarbeitet.
   
-|value|Output|  
+|Wert|Output|  
 |---|---|
 |**0** (Standardwert)|Maximal 6 Ziffern. Wird ggf. in der wissenschaftlichen Schreibweise verwendet.|  
 |**1**|Immer 8 Ziffern. Wird immer in der wissenschaftlichen Schreibweise verwendet.|  
@@ -142,7 +142,7 @@ Wenn *expression* **float** oder **real** ist, kann *style* einen der in der fol
 ## <a name="money-and-smallmoney-styles"></a>money- und smallmoney-Formate
 Wenn *expression* **money** oder **smallmoney** ist, kann *style* einen der in der folgenden Tabelle aufgelisteten Werte aufweisen. Andere Werte werden als 0 verarbeitet.
   
-|value|Output|  
+|Wert|Output|  
 |---|---|
 |**0** (Standardwert)|Links vom Dezimaltrennzeichen werden keine Tausendertrennzeichen eingefügt, rechts vom Dezimaltrennzeichen stehen zwei Ziffern<br /><br />Beispiel: 4235.98.|  
 |**1**|Links vom Dezimaltrennzeichen werden Tausendertrennzeichen eingefügt, rechts vom Dezimaltrennzeichen stehen zwei Ziffern<br /><br />Beispiel: 3,510.92.|  
@@ -152,7 +152,7 @@ Wenn *expression* **money** oder **smallmoney** ist, kann *style* einen der in d
 ## <a name="xml-styles"></a>xml-Formate
 Wenn *expression* **xml** ist, kann *style* einen der in der folgenden Tabelle aufgelisteten Werte aufweisen. Andere Werte werden als 0 verarbeitet.
   
-|value|Output|  
+|Wert|Output|  
 |---|---|
 |**0** (Standardwert)|Standardanalyseverhalten verwenden, bei dem bedeutungslose Leerzeichen verworfen werden und interne DTD-Teilmengen nicht zulässig sind.<br /><br />**Hinweis:** Beim Konvertieren in den **XML**-Datentyp werden bedeutungslose Leerzeichen aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anders behandelt als in XML 1.0. Weitere Informationen finden Sie unter [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Bedeutungslose Leerzeichen erhalten. Mit dieser Formateinstellung wird festgelegt, dass die Standardbehandlung **xml:space** dem Verhalten von **xml:space="preserve"** entspricht.|  
@@ -162,7 +162,7 @@ Wenn *expression* **xml** ist, kann *style* einen der in der folgenden Tabelle a
 ## <a name="binary-styles"></a>Binäre Formate
 Wenn *expression* **binary(n)** , **char(n)** , **varbinary(n)** oder **varchar(n)** ist, kann *style* einen der in der folgenden Tabelle aufgelisteten Werte aufweisen. Bei Formatwerten, die nicht in der Tabelle aufgelistet sind, wird ein Fehler zurückgegeben.
   
-|value|Output|  
+|Wert|Output|  
 |---|---|
 |**0** (Standardwert)|Übersetzt ASCII-Zeichen in binäre Bytes bzw. binäre Bytes in ASCII-Zeichen. Jedes Zeichen bzw. Byte wird 1:1 konvertiert.<br /><br /> Bei einem binären *data_type* werden die Zeichen 0x links neben dem Ergebnis hinzugefügt.|  
 |**1**, **2**|Bei einem binären *data_type* muss der Ausdruck ein Zeichenausdruck sein. *expression* muss aus einer **geraden** Anzahl hexadezimaler Zeichen bestehen (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Wenn *style* auf 1 festgelegt wird, müssen die Zeichen 0x die ersten beiden Zeichen im Ausdruck sein. Wenn der Ausdruck eine ungerade Anzahl an Zeichen oder ein ungültiges Zeichen enthält, wird ein Fehler ausgelöst.<br /><br /> Wenn die Länge des konvertierten Ausdrucks die Länge von *data_type* übersteigt, wird das Ergebnis rechts abgeschnitten.<br /><br /> Bei *data_types* mit fester Länge, die länger sind als das konvertierte Ergebnis, wird im Ergebnis rechts die entsprechende Anzahl Nullen angehängt.<br /><br /> Für den Zeichentyp *data_type* ist ein binärer Ausdruck erforderlich. Jedes Binärzeichen wird in zwei Hexadezimalzeichen konvertiert. Wenn die Länge des konvertierten Ausdrucks die Länge von *data_type* übersteigt, wird der Ausdruck rechts abgeschnitten.<br /><br /> Bei dem Zeichentyp *data_type* mit fester Länge werden rechts neben dem konvertierten Ausdruck Leerzeichen hinzugefügt, um eine gerade Anzahl an Hexadezimalstellen zu erhalten, wenn die Länge des konvertierten Ergebnisses kleiner ist als die Länge von *data_type*.<br /><br /> Bei *style* 1 werden links neben dem konvertierten Ergebnis die Zeichen 0x hinzugefügt.|  

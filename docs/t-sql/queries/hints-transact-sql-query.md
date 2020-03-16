@@ -56,11 +56,11 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
 ms.openlocfilehash: 7a4c7733bd346f0631d353af228955dbd8e0b46b
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77608508"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288834"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -171,7 +171,7 @@ Gibt an, dass die von der Abfragesyntax angegebene Joinreihenfolge während der 
 { FORCE | DISABLE } EXTERNALPUSHDOWN  
 Erzwingen oder Deaktivieren der Weitergabe der Berechnung von qualifizierenden Ausdrücken in Hadoop. Gilt nur für Abfragen mit PolyBase. Wird nicht in den Azure-Speicher weitergegeben.  
 
-{ FORCE | DISABLE } SCALEOUTEXECUTION: Hiermit wird die Ausführung des horizontalen Hochskalierens von PolyBase-Abfragen erzwungen oder deaktiviert, die externe Tabellen in SQL Server 2019-Big Data Clustern verwenden. Dieser Hinweis wird nur von einer Abfrage berücksichtigt, die die Masterinstanz eines SQL-Big Data-Clusters verwendet. Das horizontale Hochskalieren erfolgt über den Computepool des Big Data-Clusters. 
+{ FORCE | DISABLE } SCALEOUTEXECUTION: Hiermit wird die Ausführung des Aufskalierens von PolyBase-Abfragen erzwungen oder deaktiviert, die externe Tabellen in SQL Server 2019-Big Data Clustern verwenden. Dieser Hinweis wird nur von einer Abfrage berücksichtigt, die die Masterinstanz eines SQL-Big Data-Clusters verwendet. Das Aufskalieren erfolgt über den Computepool des Big Data-Clusters. 
 
 KEEP PLAN  
 Zwingt den Abfrageoptimierer, den geschätzten Neukompilierungsschwellenwert für eine Abfrage zu lockern. Der geschätzte Recompile-Neukompilierungsschwellenwert startet ein automatisches Neukompilieren für die Abfrage, wenn die geschätzte Anzahl von indizierten Spaltenänderungen in einer Tabelle durch Ausführen einer der folgenden Anweisungen vorgenommen wurde:

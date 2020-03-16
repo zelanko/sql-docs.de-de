@@ -24,11 +24,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338451"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286734"
 ---
 # <a name="statistics"></a>Statistik
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -153,7 +153,7 @@ Weitere Informationen zur Steuerung von AUTO_UPDATE_STATISTICS finden Sie unter 
 * Statistiken, die für interne Tabellen erstellt wurden.  
 * Statistiken, die mit räumlichen Indizes oder XML-Indizes erstellt wurden.  
   
-**Gilt für** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher. 
+**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher. 
   
 ## <a name="CreateStatistics"></a> Zeitpunkt der Erstellung von Statistiken  
  Der Abfrageoptimierer erstellt bereits Statistiken in der folgenden Weise:  

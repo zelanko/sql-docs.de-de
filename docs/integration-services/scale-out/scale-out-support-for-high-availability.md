@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338962"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286884"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out-Unterstützung für Hochverfügbarkeit
 
@@ -27,7 +27,7 @@ In SSIS Scale Out wird die Hochverfügbarkeit auf Workerseite über ausführende
 
 Die Hochverfügbarkeit auf Scale Out-Masterseite erfolgt über [Always On for SSIS Catalog (Always On für den SSIS-Katalog)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) und Windows-Failovercluster. In dieser Lösung werden in einem Windows-Failovercluster werden mehrere Instanzen des Scale Out-Masters gehostet. Wenn der Scale Out-Masterdienst oder die SSISDB auf dem Primärknoten ausfallen, akzeptieren der Dienst oder die SSISDB auf dem Sekundärknoten weiterhin Benutzeranforderungen, und beide kommunizieren mit den Scale Out-Workern.
 
-Alternativ kann die Hochverfügbarkeit auf Scale Out-Masterseite mithilfe einer SQL Server-Failoverclusterinstanz eingerichtet werden. Weitere Informationen finden Sie unter [Scale Out support for high availability via SQL Server failover cluster instance (Scale-Out-Unterstützung für Hochverfügbarkeit über eine SQL Server-Failoverclusterinstanz)](scale-out-failover-cluster-instance.md).
+Alternativ kann die Hochverfügbarkeit auf Scale Out-Masterseite mithilfe einer SQL Server-Failoverclusterinstanz eingerichtet werden. Weitere Informationen finden Sie unter [Scale Out support for high availability via SQL Server failover cluster instance (Scale Out-Unterstützung für Hochverfügbarkeit über eine SQL Server-Failoverclusterinstanz)](scale-out-failover-cluster-instance.md).
 
 Führen Sie die folgenden Schritte aus, um die Hochverfügbarkeit auf der Scale Out-Masterseite mit Always On für den SSIS-Katalog einzurichten:
 
@@ -67,7 +67,7 @@ Führen Sie die Anweisungen zur Einrichtung und Konfiguration der SSISDB-Unterst
 Außerdem müssen Sie einen Verfügbarkeitsgruppenlistener für die Verfügbarkeitsgruppe erstellen, zu der Sie SSISDB hinzufügen. Vgl. [Create or Configure an Availability Group Listener (Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners)](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Aktualisieren Sie die Konfigurationsdatei des Scale Out-Masterdiensts
-Aktualisieren Sie die Konfigurationsdatei des Scale Out Masterdiensts (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) auf dem Primär- und dem Sekundärknoten. Aktualisieren Sie **SqlServerName** auf *[DNS des Verfügbarkeitsgruppenlisteners],[Port]* .
+Aktualisieren Sie die Konfigurationsdatei des Scale Out-Masterdiensts (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) auf dem Primär- und dem Sekundärknoten. Aktualisieren Sie **SqlServerName** auf *[DNS des Verfügbarkeitsgruppenlisteners],[Port]* .
 
 ## <a name="6-enable-package-execution-logging"></a>6. Aktualisieren Sie die Ausführungsprotokollierung.
 
@@ -108,10 +108,10 @@ Führen Sie auf dem primären SQL Server die gespeicherte Prozedur `[catalog].[u
 
 ## <a name="9-add-the-scale-out-workers"></a>9. Hinzufügen des Scale Out-Workers
 
-Jetzt können Sie Scale Out-Workers mithilfe des [Integration Services Scale Out-Managers](integration-services-ssis-scale-out-manager.md) hinzufügen. Geben Sie auf der Verbindungsseite `[SQL Server Availability Group Listener DNS name],[Port]` ein.
+Jetzt können Sie Scale Out-Worker mithilfe des [Integration Services Scale Out-Managers](integration-services-ssis-scale-out-manager.md) hinzufügen. Geben Sie auf der Verbindungsseite `[SQL Server Availability Group Listener DNS name],[Port]` ein.
 
 ## <a name="upgrade-scale-out-in-high-availability-environment"></a>Upgrade von Scale Out in einer Hochverfügbarkeitsumgebung
-Befolgen Sie für ein Upgrade von Scale Out in einer Hochverfügbarkeitsumgebung die Schritte [zum Upgrade von Always On für den SSIS-Katalog](../catalog/ssis-catalog.md#Upgrade). Aktualisieren Sie Scale Out Master und Scale Out Worker auf jedem Computer, und erstellen Sie die Failoverclusterrolle von Windows Server in Schritt 7 mit einer neuen Version des Scale Out Master-Diensts.
+Befolgen Sie für ein Upgrade von Scale Out in einer Hochverfügbarkeitsumgebung die Schritte [zum Upgrade von Always On für den SSIS-Katalog](../catalog/ssis-catalog.md#Upgrade). Aktualisieren Sie Scale Out-Master und Scale Out-Worker auf jedem Computer, und erstellen Sie die Failoverclusterrolle von Windows Server in Schritt 7 mit einer neuen Version des Scale Out-Masterdiensts.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen finden Sie in den folgenden Artikeln:

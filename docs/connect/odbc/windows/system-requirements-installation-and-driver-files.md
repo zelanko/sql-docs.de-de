@@ -11,11 +11,11 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6365b86a4efe8d29273035d62f76c7bb02b15335
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74908849"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285814"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Systemanforderungen, Installation und Treiberdateien
 
@@ -113,7 +113,7 @@ Wenn Sie beispielweise eine ODBC-Anwendung mit `msodbcsql11.lib` und `msodbcsql.
 
 Der ODBC-Treiber für Windows enthält die folgenden Komponenten:
 
-| Komponente | Beschreibung |
+| Komponente | BESCHREIBUNG |
 | :-------- | :---------- |
 |msodbcsql17.dll oder <br/> msodbcsql13.dll oder <br/> msodbcsql11.dll|Die DLL-Datei (Dynamic-Link Library, DLL), die die gesamte Funktionalität des Treibers enthält Diese Datei wird in „%SYSTEMROOT%\System32“ installiert.|  
 |msodbcdiag17.dll oder <br/> msodbcdiag13.dll oder <br/> msodbcdiag11.dll|Die DLL-Datei (Dynamic-Link Library), die die Diagnoseschnittstelle (Ablaufverfolgung) des Treibers enthält. Diese Datei wird in „%SYSTEMROOT%\System32“ installiert.|

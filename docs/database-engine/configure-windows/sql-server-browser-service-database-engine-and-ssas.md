@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68028627"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375557"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server-Browserdienst (Datenbank-Engine und SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68028627"
   
  Beim Starten beansprucht der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser UDP-Port 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser liest die Registrierung, identifiziert alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Computer und notiert die verwendeten Ports und Named Pipes. Wenn ein Server über zwei oder mehr Netzwerkkarten verfügt, gibt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser den ersten gefundenen aktivierten Port für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurück. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser unterstützt ipv6 und ipv4.  
   
- Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen anfordern, sendet die Clientnetzwerkbibliothek über den Port 1434 eine UDP-Nachricht an den Server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser antwortet mit dem TCP/IP-Port oder der Named Pipe der angeforderten Instanz. Anschließend wird die Verbindung durch die Netzwerkbibliothek der Clientanwendung vollständig abgeschlossen, indem über den Port oder die Named Pipe der gewünschten Instanz eine Anforderung an den Server gesendet wird. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser gibt keine Portinformationen für die Standardinstanz zurück.  
+ Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen anfordern, sendet die Clientnetzwerkbibliothek über den Port 1434 eine UDP-Nachricht an den Server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser antwortet mit dem TCP/IP-Port oder der Named Pipe der angeforderten Instanz. Anschließend wird die Verbindung durch die Netzwerkbibliothek der Clientanwendung vollständig abgeschlossen, indem über den Port oder die Named Pipe der gewünschten Instanz eine Anforderung an den Server gesendet wird. 
   
  Informationen zum Starten und Beenden des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdiensts finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   

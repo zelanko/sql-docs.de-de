@@ -22,11 +22,11 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028740"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288354"
 ---
 # <a name="server-memory-configuration-options"></a>Konfigurationsoptionen für den Serverarbeitsspeicher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Sie können die Serveroptionen **Min. Serverarbeitsspeicher** und **Max. Servera
 
 <sup>2</sup> Informationen zu den standardmäßig berechneten Arbeitsthreads für eine bestimmte Anzahl kategorisierter CPUs auf dem aktuellen Host finden Sie auf der Dokumentationsseite zum [Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md).
 
-## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>So konfigurieren Sie Arbeitsspeicheroptionen mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="how-to-configure-memory-options-using-ssmanstudiofull"></a>So konfigurieren Sie Arbeitsspeicheroptionen mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 Mit den beiden Arbeitsspeicheroptionen für den Server, **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher**, können Sie den vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicher-Manager für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwalteten Umfang des Arbeitsspeichers (in MB) umkonfigurieren. Standardmäßig können die Arbeitsspeicheranforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anhand der verfügbaren Systemressourcen dynamisch geändert werden.  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>Vorgehensweise beim Konfigurieren eines festen Arbeitsspeichers (nicht empfohlen)  
@@ -105,7 +105,7 @@ So aktivieren Sie die Option "Sperren von Seiten im Speicher":
   
 6.  Fügen Sie im Dialogfeld **Lokale Sicherheitseinstellung** das Konto mit Privilegien zum Ausführen von „sqlservr.exe“ (das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Startkonto) hinzu.  
   
-## <a name="running-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Ausführen mehrerer Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="running-multiple-instances-of-ssnoversion"></a>Ausführen mehrerer Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Wenn Sie mehrere Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausführen, stehen Ihnen zum Verwalten des Arbeitsspeichers drei Möglichkeiten zur Verfügung:  
   
 -   Verwenden Sie **Max. Serverarbeitsspeicher**, um die Speicherbelegung zu steuern, wie [oben ausführlich dargestellt](#max_server_memory). Richten Sie für jede Instanz Maximaleinstellungen ein, und achten Sie darauf, dass der gesamte zugeordnete Arbeitsspeicher nicht größer ist als der insgesamt auf dem Computer verfügbare physische Speicher. Es empfiehlt sich, den jeder Instanz zugeordneten Arbeitsspeicher proportional zur erwarteten Arbeitsauslastung oder Datenbankgröße zu bemessen. Dieser Ansatz hat den Vorteil, dass beim Starten neuer Prozesse oder Instanzen sofort freier Arbeitsspeicher für die Prozesse oder Instanzen zur Verfügung steht. Der Nachteil ist, wenn nicht alle Instanzen ausgeführt werden, dass keine der laufenden Instanzen den verbleibenden freien Arbeitsspeicher nutzen kann.  

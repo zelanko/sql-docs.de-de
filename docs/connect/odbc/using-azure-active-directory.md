@@ -11,11 +11,11 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e32889ceafa78d6c6eac716fca213f17badc5cea
-ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77363222"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286424"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Verwenden von Azure Active Directory mit dem ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -33,7 +33,7 @@ Das Schlüsselwort `Authentication` kann beim Herstellen einer Verbindung mit ei
 
 |Name|Werte|Standard|BESCHREIBUNG|
 |-|-|-|-|
-|`Authentication`|(nicht festgelegt), (leere Zeichenfolge), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(nicht festgelegt)|Steuert den Authentifizierungsmodus.<table><tr><th>value<th>Beschreibung<tr><td>(nicht festgelegt)<td>Der Authentifizierungsmodus wird durch andere Schlüsselwörter bestimmt (vorhandene ältere Verbindungsoptionen).<tr><td>(leere Zeichenfolge)<td>(Nur Verbindungszeichenfolge.) Überschreibt und löscht einen im DSN festgelegten `Authentication`-Wert.<tr><td>`SqlPassword`<td>Direkte Authentifizierung bei einer SQL Server-Instanz unter Verwendung eines Benutzernamens und eines Kennworts.<tr><td>`ActiveDirectoryPassword`<td>Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung eines Benutzernamens und eines Kennworts.<tr><td>`ActiveDirectoryIntegrated`<td>_Nur Windows-Treiber_. Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung der integrierten Authentifizierung.<tr><td>`ActiveDirectoryInteractive`<td>_Nur Windows-Treiber_. Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung der interaktiven Authentifizierung.<tr><td>`ActiveDirectoryMsi`<td>Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung der Authentifizierung mit einer verwalteten Dienstidentität. Für die Identität, die dem Benutzer zugewiesen wurde, ist die Benutzer-ID auf die Objekt-ID der Benutzeridentität festgelegt.</table>|
+|`Authentication`|(nicht festgelegt), (leere Zeichenfolge), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(nicht festgelegt)|Steuert den Authentifizierungsmodus.<table><tr><th>Wert<th>BESCHREIBUNG<tr><td>(nicht festgelegt)<td>Der Authentifizierungsmodus wird durch andere Schlüsselwörter bestimmt (vorhandene ältere Verbindungsoptionen).<tr><td>(leere Zeichenfolge)<td>(Nur Verbindungszeichenfolge.) Überschreibt und löscht einen im DSN festgelegten `Authentication`-Wert.<tr><td>`SqlPassword`<td>Direkte Authentifizierung bei einer SQL Server-Instanz unter Verwendung eines Benutzernamens und eines Kennworts.<tr><td>`ActiveDirectoryPassword`<td>Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung eines Benutzernamens und eines Kennworts.<tr><td>`ActiveDirectoryIntegrated`<td>_Nur Windows-Treiber_. Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung der integrierten Authentifizierung.<tr><td>`ActiveDirectoryInteractive`<td>_Nur Windows-Treiber_. Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung der interaktiven Authentifizierung.<tr><td>`ActiveDirectoryMsi`<td>Authentifizierung mit einer Azure Active Directory-Identität unter Verwendung der Authentifizierung mit einer verwalteten Dienstidentität. Für die Identität, die dem Benutzer zugewiesen wurde, ist die Benutzer-ID auf die Objekt-ID der Benutzeridentität festgelegt.</table>|
 |`Encrypt`|(nicht festgelegt), `Yes`, `No`|(Siehe Beschreibung)|Steuert die Verschlüsselung für eine Verbindung. Wenn der pre-attribute-Wert der Einstellung `Authentication` im DSN oder der Verbindungszeichenfolge nicht _none_ lautet, ist der Standardwert `Yes`. Andernfalls ist der Standardwert `No`. Wenn das Attribut `SQL_COPT_SS_AUTHENTICATION` den pre-attribute-Wert `Authentication` überschreibt, legen Sie den Wert von „Encryption“ im DSN, in der Verbindungszeichenfolge oder im Verbindungsattribut explizit fest. Der pre-attribute-Wert von „Encryption“ ist `Yes`, wenn der Wert im DSN oder in der Verbindungszeichenfolge auf `Yes` festgelegt ist.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>Neue und/oder geänderte Verbindungsattribute

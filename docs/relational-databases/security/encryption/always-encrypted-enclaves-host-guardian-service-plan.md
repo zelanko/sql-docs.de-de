@@ -11,11 +11,11 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74317959"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287144"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planen des Nachweises des Host-Überwachungsdiensts
 
@@ -112,7 +112,7 @@ Für Nachweisdaten müssen nur geringe Speicheranforderungen erfüllt werden, di
 
 Stellen Sie keine Verknüpfung des HGS-Computers mit einer Domäne her, bevor Sie beginnen.
 
-### <a name="include-ssnoversion-mdincludesssnoversion-mdmd-computer-prerequisites"></a>Voraussetzungen für [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Computer
+### <a name="ssnoversion-md-computer-prerequisites"></a>Voraussetzungen für [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Computer
 
 Die Computer, auf denen [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] ausgeführt wird, müssen sowohl die [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) als auch die [Hyper-V-Hardwareanforderungen](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) erfüllen.
 

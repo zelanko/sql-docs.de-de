@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e750d14aae5006e1229130eb4055fac74a7029b
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893909"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198417"
 ---
 # <a name="sql-data-developer"></a>SQL Data Developer
 Verwenden Sie die SQL-Datenplattform von Microsoft, um datenzentrierte Lösungen für mobile Geräte und Desktops für Webserver, Unternehmensserver und die Cloud zu erstellen.  
@@ -23,7 +23,7 @@ Verwenden Sie die SQL-Datenplattform von Microsoft, um datenzentrierte Lösungen
 ## <a name="sql-data-storage"></a>SQL-Datenspeicher
 * [SQL Server-Datenbank-Engine](../database-engine/configure-windows/sql-server-database-engine.md): Verwenden Sie die SQL Server-Datenbank-Engine, um relationale Datenbanken für die Onlinetransaktionsverarbeitung oder die analytische Onlineverarbeitung zu erstellen. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): Verwenden Sie SQL Azure, um Ihre Datenbank in die Cloud zu verlagern. 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): Verwenden Sie SQL Server Compact, um eigenständige und nur gelegentlich verbundene Anwendungen für mobile Geräte, Desktops und Webclients zu erstellen.
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): Verwenden Sie SQL Server Compact, um eigenständige und nur gelegentlich verbundene Anwendungen für mobile Geräte, Desktops und Webclients zu erstellen.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): Verwenden Sie LocalDB, um Transact-SQL-Code zu schreiben und zu testen, ohne eine vollständige Instanz von SQL Server verwalten zu müssen.
 
 ## <a name="sql-data-tools"></a>SQL-Datentools

@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339800"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286844"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Bewährte Methoden für die Leistung und Konfigurationsrichtlinien für SQL Server für Linux
 
@@ -61,7 +61,7 @@ Für das Linux-Betriebssystem werden die folgenden Einstellungen empfohlen, um b
 
 In der folgenden Tabelle finden Sie Empfehlungen für die CPU-Einstellungen:
 
-| Einstellung | value | Weitere Informationen |
+| Einstellung | Wert | Weitere Informationen |
 |---|---|---|
 | CPU frequency governor (Kontrolle der CPU-Häufigkeit) | Leistung | Dokumentation zum Befehl **cpupower** |
 | ENERGY_PERF_BIAS | Leistung | Dokumentation zum Befehl **x86_energy_perf_policy** |
@@ -70,7 +70,7 @@ In der folgenden Tabelle finden Sie Empfehlungen für die CPU-Einstellungen:
 
 In der folgenden Tabelle finden Sie Empfehlungen für die Datenträgereinstellungen:
 
-| Einstellung | value | Weitere Informationen |
+| Einstellung | Wert | Weitere Informationen |
 |---|---|---|
 | disk readahead | 4096 | Dokumentation zum Befehl **blockdev** |
 | sysctl-Einstellungen | kernel.sched_min_granularity_ns = 10.000.000<br/>kernel.sched_wakeup_granularity_ns = 15.000.000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | Dokumentation zum Befehl **sysctl** |

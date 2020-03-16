@@ -11,13 +11,13 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903657"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288744"
 ---
-# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Exemplarische Vorgehensweise: Einrichten von SQL Server Integration Services Scale Out (SSIS; horizontales Hochskalieren)
+# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Exemplarische Vorgehensweise: Einrichten von SQL Server Integration Services (SSIS) Scale Out
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -25,25 +25,25 @@ ms.locfileid: "77903657"
 Richten Sie (SSIS-) Scale Out für [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] ein, indem Sie die folgenden Aufgaben ausführen. 
 
 > [!TIP]
-> Wenn Sie Scale Out auf einem einzelnen Computer installieren, installieren Sie gleichzeitig auch die Komponenten „Scale Out-Master “ und „Scale Out-Worker“. Wenn Sie die Komponenten gleichzeitig installieren, wird automatisch der Endpunkt generiert, über den eine Verbindung mit Master für horizontales Hochskalieren hergestellt wird. 
+> Wenn Sie Scale Out auf einem einzelnen Computer installieren, installieren Sie gleichzeitig auch die Komponenten „Scale Out-Master “ und „Scale Out-Worker“. Wenn Sie die Komponenten gleichzeitig installieren, wird automatisch der Endpunkt generiert, über den eine Verbindung mit dem Scale Out-Master hergestellt wird. 
 
-* [Installieren von Master für horizontales Hochskalieren](#InstallMaster)
+* [Installieren des Scale Out-Masters](#InstallMaster)
 
-* [Installieren von Worker für horizontales Hochskalieren](#InstallWorker)
+* [Installieren des Scale Out-Workers](#InstallWorker)
 
-* [Installieren des Clientzertifikats für Worker für horizontales Hochskalieren](#InstallCert)
+* [Installieren des Clientzertifikats für Scale Out-Worker](#InstallCert)
 
 * [Öffnen des Firewallports](#Firewall)
 
-* [Starten der SQL Server-Dienste Master und Worker für horizontales Hochskalieren](#Start)
+* [Starten der SQL Server-Dienste für Scale Out-Master und Scale Out-Worker](#Start)
 
-* [Aktivieren von Master für horizontales Hochskalieren](#EnableMaster)
+* [Aktivieren des Scale Out-Masters](#EnableMaster)
 
 * [Aktivieren des SQL Server-Authentifizierungsmodus](#EnableAuth)
 
-* [Aktivieren von Worker für horizontales Hochskalieren](#EnableWorker)
+* [Aktivieren des Scale Out-Workers](#EnableWorker)
 
-## <a name="InstallMaster"></a> Installieren von Master für horizontales Hochskalieren
+## <a name="InstallMaster"></a> Installieren des Scale Out-Masters
 
 Zum Einrichten des Scale Out-Masters müssen Sie die Datenbank-Engine-Dienste [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] installieren. Für die Einrichtung von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] müssen Sie die Komponente „Scale Out-Master“ von SSIS installieren. 
 
@@ -59,10 +59,10 @@ Verwenden Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../
   
     ![Komponentenauswahl „Master“](media/feature-select-master.PNG)
   
-2.  Wählen Sie auf der Seite **Serverkonfiguration** das Konto aus, unter dem der Dienst **Master für horizontales Hochskalieren von SQL Server Integration Service** ausgeführt werden soll, und wählen Sie den **Starttyp**aus.  
+2.  Wählen Sie auf der Seite **Serverkonfiguration** das Konto aus, unter dem der **SQL Server Integration Services Scale Out-Masterdienst** ausgeführt werden soll, und wählen Sie den **Starttyp** aus.  
     ![Serverkonfiguration](media/server-config.PNG)
 
-3.  Geben Sie auf der Seite **Masterkonfiguration für horizontales Hochskalieren von Integration Services** die Portnummer an, über die Master für horizontales Hochskalieren und Worker für horizontales Hochskalieren kommunizieren. Die Standardportnummer ist 8391.  
+3.  Geben Sie auf der Seite **Integration Services Scale Out-Masterkonfiguration** die Portnummer an, über die der Scale Out-Master und der Scale Out-Worker kommunizieren. Die Standardportnummer ist 8391.  
 
     ![Masterkonfiguration](media/master-config.PNG "Masterkonfiguration")
 
@@ -91,7 +91,7 @@ Führen Sie die Anweisungen aus, die unter [Installieren von SQL Server von der 
     > [!NOTE]
     > Wenn der Scale Out-Master nicht zusammen mit der Datenbank-Engine installiert wurde und diese eine benannte Instanz darstellt, müssen Sie `SqlServerName` nach der Installation in der Dienstkonfigurationsdatei des Scale Out-Masters konfigurieren. Weitere Informationen finden Sie unter [Scale Out-Master](integration-services-ssis-scale-out-master.md).
 
-## <a name="InstallWorker"></a> Installieren von Worker für horizontales Hochskalieren
+## <a name="InstallWorker"></a> Installieren des Scale Out-Workers
  
 Installieren Sie [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] und dessen Komponente „Scale Out-Worker“ im [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Setup, um den Scale Out-Worker einzurichten.
 
@@ -103,11 +103,11 @@ Verwenden Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../
 
     ![Komponentenauswahl „Worker“](media/feature-select-worker.PNG)
 
-2.  Wählen Sie auf der Seite **Serverkonfiguration** das Konto aus, unter dem der Dienst **Worker für horizontales Hochskalieren von SQL Server Integration Services** ausgeführt werden soll, und wählen Sie den **Starttyp**aus.
+2.  Wählen Sie auf der Seite **Serverkonfiguration** das Konto aus, unter dem der Dienst **SQL Server Integration Services Scale Out-Workerdienst** ausgeführt werden soll, und wählen Sie den **Starttyp** aus.
 
     ![Serverkonfiguration 2](media/server-config-2.PNG "Serverkonfiguration 2")
 
-3.  Geben Sie auf der Seite **Workerkonfiguration für horizontales Hochskalieren von Integration Services** den Endpunkt an, über den eine Verbindung mit Master für horizontales Hochskalieren hergestellt wird. 
+3.  Geben Sie auf der Seite **Integration Services Scale Out-Workerkonfiguration** den Endpunkt an, über den eine Verbindung mit dem Scale Out-Master hergestellt wird. 
 
     - Für eine Umgebung mit **einem einzelnen Computer** wird der Endpunkt automatisch generiert, wenn der Scale Out-Master und der Scale Out-Worker gleichzeitig installiert werden. 
 
@@ -142,7 +142,7 @@ Führen Sie die Anweisungen aus, die unter [Installieren von SQL Server von der 
     -   `/ISWORKERSVCMASTER` (optional)
     -   `/ISWORKERSVCCERT` (optional)
  
-## <a name="InstallCert"></a> Installieren des Clientzertifikats für Worker für horizontales Hochskalieren
+## <a name="InstallCert"></a> Installieren des Clientzertifikats für Scale Out-Worker
 
 Während der Installation des Scale Out-Workers wird automatisch ein Workerzertifikat auf dem Computer installiert. Außerdem wird unter `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` ein entsprechendes Clientzertifikat („SSISScaleOutWorker.cer“) installiert. Damit der Scale Out-Master vom Scale Out-Worker authentifiziert werden kann, müssen Sie dieses Clientzertifikat zum Stammspeicher des lokalen Computers mit dem Scale Out-Master hinzufügen.
   
@@ -155,7 +155,7 @@ Doppelklicken Sie auf die CER-Datei, und klicken Sie dann im Dialogfeld „Zerti
 > [!Note]
 > Nachdem Sie den Firewallport geöffnet haben, müssen Sie den Dienst für den Scale Out-Worker neu starten.
     
-## <a name="Start"></a> Starten der SQL Server-Dienste Master und Worker für horizontales Hochskalieren
+## <a name="Start"></a> Starten der SQL Server Scale Out-Master- und -Workerdienste
 
 Wenn Sie bei der Installation den Starttyp der Dienste nicht auf **Automatisch** festgelegt haben, starten Sie die folgenden Dienste:
 
@@ -163,7 +163,7 @@ Wenn Sie bei der Installation den Starttyp der Dienste nicht auf **Automatisch**
 
 -   SQL Server Integration Services Scale Out-Worker 14.0 (SSISScaleOutWorker140)
 
-## <a name="EnableMaster"></a> Aktivieren von Master für horizontales Hochskalieren
+## <a name="EnableMaster"></a> Aktivieren des Scale Out-Masters
 
 Klicken Sie im Dialogfeld **Katalog erstellen** auf **Diesen Server als SSIS Scale Out-Master aktivieren**, wenn Sie den SSISDB-Katalog in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] erstellen.
 
@@ -174,7 +174,7 @@ Wenn Sie die [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Authen
 
 Paketausführung wird nicht blockiert, wenn SQL Server-Authentifizierung deaktiviert ist. Allerdings kann das Ausführungsprotokoll nicht in SSISDB schreiben.
 
-## <a name="EnableWorker"></a> Aktivieren von Worker für horizontales Hochskalieren
+## <a name="EnableWorker"></a> Aktivieren des Scale Out-Workers
 
 Sie können den Scale Out-Worker mithilfe des [Scale Out-Managers](integration-services-ssis-scale-out-manager.md), der eine grafische Benutzeroberfläche bereitstellt, oder mithilfe einer gespeicherten Prozedur aktivieren.
 

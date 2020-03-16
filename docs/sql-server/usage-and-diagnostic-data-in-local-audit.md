@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256653"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286274"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Lokale Überwachung für SQL Server-Nutzungs- und -Diagnosedatensammlung (CEIP)
 
@@ -201,7 +201,7 @@ Die lokale Überwachung generiert eine Protokolldatei pro Tag. Die Protokolldate
 
 Die nachfolgend aufgeführten Spalten stellen die Reihenfolge für die Dateiausgabe der lokalen Überwachung dar. Unidirektionaler Hash mit SHA-256 dient zum Anonymisieren von Werten für eine Reihe der nachfolgenden Spalten.  
 
-| Name | Beschreibung | Beispielwerte
+| Name | BESCHREIBUNG | Beispielwerte
 |-------|--------| ----------|
 |instanceUniqueID| Anonymisierter Instanzbezeichner | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| Schemaversion von SQLCEIP |  3 
