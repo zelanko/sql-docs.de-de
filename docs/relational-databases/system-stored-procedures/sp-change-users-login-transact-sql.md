@@ -17,17 +17,20 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
+ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68120228"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448331"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Ordnet einen vorhandenen Datenbankbenutzer einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen zu. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Alter User](../../t-sql/statements/alter-user-transact-sql.md) .  
+  Ordnet einen vorhandenen Datenbankbenutzer einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen zu. 
+  
+ > [!IMPORTANT]
+ > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Alter User](../../t-sql/statements/alter-user-transact-sql.md) .  
   
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -47,7 +50,7 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action= ] "*Action*"  
  Beschreibt die von der Prozedur durchzuführende Aktion. *Action* ist vom Datentyp **varchar (10)**. die *Aktion* kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Auto_Fix**|Verknüpft einen Benutzereintrag in der sys.database_principals-Systemkatalogsicht in der aktuellen Datenbank mit einem gleichlautenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen. Ist kein gleichlautender Anmeldename vorhanden, wird er erstellt. Überprüfen Sie das Ergebnis der **Auto_Fix** -Anweisung, um zu bestätigen, dass tatsächlich der richtige Link erstellt wurde. Vermeiden Sie die Verwendung von **Auto_Fix** in sicherheitsrelevanten Situationen.<br /><br /> Wenn Sie **Auto_Fix**verwenden, müssen Sie *Benutzer* und *Kennwort* angeben, wenn die Anmeldung nicht bereits vorhanden ist. andernfalls müssen Sie den *Benutzer* angeben, aber das *Kennwort* wird ignoriert. der *Anmelde* Name muss NULL sein. der *Benutzer* muss ein gültiger Benutzer in der aktuellen Datenbank sein. Dem Anmeldenamen kann kein anderer Benutzer zugeordnet werden.|  
 |**Report**|Listet die Benutzer und entsprechenden Sicherheits-IDs (SIDs) in der aktuellen Datenbank auf, die mit keinem Anmeldenamen verknüpft sind. *Benutzer*, *Anmelde*Name und *Kennwort* müssen NULL oder nicht angegeben sein.<br /><br /> Um die Berichts Option durch eine Abfrage mithilfe der Systemtabellen zu ersetzen, vergleichen Sie die Einträge in **sys. server_prinicpals** mit den Einträgen in **sys. database_principals**.|  
@@ -75,7 +78,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserSID|**varbinary(85)**|Sicherheits-ID des Benutzers.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Mithilfe von sp_change_users_login kann ein Datenbankbenutzer in der aktuellen Datenbank mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verknüpft werden. Wenn sich der Anmeldename für einen Benutzer geändert hat, verknüpfen Sie den Benutzer mithilfe von sp_change_users_login mit dem neuen Anmeldenamen, ohne die Benutzerberechtigungen zu verlieren. Der neue *Anmelde* Name kann nicht SA sein, und der *Benutzer*darf nicht dbo, Guest oder ein INFORMATION_SCHEMA Benutzer sein.  
+ Mithilfe von sp_change_users_login kann ein Datenbankbenutzer in der aktuellen Datenbank mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verknüpft werden. Wenn sich der Anmeldename für einen Benutzer geändert hat, verknüpfen Sie den Benutzer mithilfe von sp_change_users_login mit dem neuen Anmeldenamen, ohne die Benutzerberechtigungen zu verlieren. Der neue *Anmelde* Name kann nicht SA sein, und der *Benutzer* darf nicht dbo, Guest oder ein INFORMATION_SCHEMA Benutzer sein.  
   
  sp_change_users_login kann nicht zum Erstellen einer Zuordnung zwischen Datenbankbenutzern und Prinzipalen, Zertifikaten oder asymmetrischen Schlüsseln auf Windows-Ebene verwendet werden.  
   
@@ -121,7 +124,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Erstellen der Anmeldung &#40;Transact-SQL-&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_helplogins &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
