@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74096088"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79428151"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph-Verarbeitung mit SQL Server und Azure SQL-Datenbank
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,19 +30,19 @@ ms.locfileid: "74096088"
 
 ## <a name="what-is-a-graph-database"></a>Was ist eine Graph-Datenbank?  
 Eine Diagrammdatenbank ist eine Sammlung von Knoten (oder Vertices) und Edges (oder Beziehungen). Ein Knoten repräsentiert eine Entität (z.B. eine Person oder eine Organisation), und eine Kante repräsentiert eine Beziehung zwischen den beiden Knoten, die durch die Kante verbunden sind (z.B. „Gefällt mir“-Markierungen oder Freunde). Sowohl Knoten als auch Kanten können Eigenschaften zugeordnet sein. Folgende Features machen eine Graphdatenbank einmalig:  
--   Kanten oder Beziehungen sind Entitäten der ersten Klasse in einer Graphdatenbank, denen Attribute oder Eigenschaften zugeordnet sein können. 
--   Eine einzelne Kante kann flexibel mehrere Knoten in einer Graphdatenbank verbinden.
--   Musterabgleiche und Navigationsabfragen über mehrere Hops lassen sich ganz einfach ausdrücken.
--   Transitive Abschlüsse und polymorphe Abfragen lassen sich ebenfalls sehr einfach ausdrücken.
+-    Kanten oder Beziehungen sind Entitäten der ersten Klasse in einer Graphdatenbank, denen Attribute oder Eigenschaften zugeordnet sein können. 
+-    Eine einzelne Kante kann flexibel mehrere Knoten in einer Graphdatenbank verbinden.
+-    Musterabgleiche und Navigationsabfragen über mehrere Hops lassen sich ganz einfach ausdrücken.
+-    Transitive Abschlüsse und polymorphe Abfragen lassen sich ebenfalls sehr einfach ausdrücken.
 
 ## <a name="when-to-use-a-graph-database"></a>Verwendung einer Graph-Datenbank
 
-Eine Graphdatenbank kann keine Ergebnisse erzielen, die nicht auch mit einer relationalen Datenbank erreicht werden können. Eine Graph-Datenbank kann es jedoch einfacher machen, bestimmte Arten von Abfragen auszudrücken. Mit bestimmten Optimierungen können auch bestimmte Abfragen besser funktionieren. Bei der Entscheidung für die eine oder die andere Lösung spielen folgende Faktoren eine Rolle:  
--   Ihre Anwendung verfügt über hierarchische Daten. Der hierarchyid-Datentyp kann verwendet werden, um Hierarchien zu implementieren. es gelten jedoch einige Einschränkungen. Beispielsweise ist es nicht möglich, mehrere übergeordnete Elemente für einen Knoten zu speichern.
--   Ihre Anwendung verfügt über komplexe m:n-Beziehungen. Wenn die Anwendung weiterentwickelt wird, werden neue Beziehungen hinzugefügt.
--   Sie müssen miteinander verbundene Daten und Beziehungen analysieren.
+Eine relationale Datenbank kann eine beliebige Diagramm Datenbank erreichen. Eine Graph-Datenbank erleichtert jedoch das Ausdrücken bestimmter Arten von Abfragen. Mit bestimmten Optimierungen können auch bestimmte Abfragen besser funktionieren. Die Entscheidung, ob Sie eine relationale Datenbank oder eine Graph-Datenbank auswählen, basiert auf den folgenden Faktoren:  
+-    Ihre Anwendung verfügt über hierarchische Daten. Der hierarchyid-Datentyp kann verwendet werden, um Hierarchien zu implementieren. es gelten jedoch einige Einschränkungen. Beispielsweise ist es nicht möglich, mehrere übergeordnete Elemente für einen Knoten zu speichern.
+-    Ihre Anwendung verfügt über komplexe m:n-Beziehungen. Wenn die Anwendung weiterentwickelt wird, werden neue Beziehungen hinzugefügt.
+-    Sie müssen miteinander verbundene Daten und Beziehungen analysieren.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>In eingeführte Graph-Features[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssqlv14"></a>In eingeführte Graph-Features[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Wir beginnen damit, SQL Server Graph-Erweiterungen hinzuzufügen, um das Speichern und Abfragen von Diagramm Daten zu vereinfachen. Die folgenden Funktionen werden in der ersten Version eingeführt. 
 
 
@@ -68,7 +68,7 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Vollständig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine integriert 
+### <a name="fully-integrated-in-ssnoversion-engine"></a>Vollständig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine integriert 
 Graph-Erweiterungen sind vollständig [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die-Engine integriert. Verwenden Sie die gleiche Speicher-Engine, Metadaten, den Abfrage Prozessor usw., um Diagramm Daten zu speichern und abzufragen. Abfragen über Diagramm-und relationale Daten in einer einzelnen Abfrage. Kombinieren von Diagramm Funktionen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit anderen Technologien wie z. b. columnstore, ha, R Services usw. Die SQL Graph-Datenbank unterstützt auch alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbaren Sicherheits-und Kompatibilitäts Features.
  
 ### <a name="tooling-and-ecosystem"></a>Tools und Ökosystem

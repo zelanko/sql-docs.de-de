@@ -10,11 +10,11 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3ed6d0a694370cf6dbaa14ea861bf3d0d6c618f7
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340372"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287244"
 ---
 # <a name="database-engine-errors"></a>Fehler der Datenbank-Engine
 
@@ -33,7 +33,7 @@ ORDER BY message_id
 
 ## <a name="errors--2-to-999"></a>Fehler –2 bis 999
 
-| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   [–2](mssqlserver-neg2-database-engine-error.md) |       |       |   Timeout ist abgelaufen. Das Timeout ist vor dem Beenden des Vorgangs eingetreten, oder der Server reagiert nicht. (Microsoft SQL Server, Fehler: –2)    |
 |   [-1](mssqlserver-1-database-engine-error.md)    |       |       |   Fehler beim Herstellen einer Verbindung mit dem Server. Beim Herstellen einer Verbindung mit SQL Server 2005 kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. (Anbieter: SQL-Netzwerkschnittstellen, Fehler: 28 - Server unterstützt das angeforderte Protokoll nicht) (Microsoft SQL Server, Fehler: -1).  |
@@ -613,7 +613,7 @@ ORDER BY message_id
 
 ## <a name="errors-1000-to-1999"></a>Fehler 1.000 bis 1.999
 
-| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   Nein  |   Zeile %d: Längen- oder Präzisionsangabe %d ist ungültig.   |
 |   1002    |   16  |   Nein  |   Zeile %d: Angegebene Skala %d ist nicht gültig. |
@@ -1045,7 +1045,7 @@ ORDER BY message_id
 
 ## <a name="errors-2000-to-2999"></a>Fehler 2.000 bis 2.999
 
-| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   Nein  |   Für die Replikation kann keine Prozedur mit einer Gruppennummer erstellt werden, die höher als 1 ist.   |
 |   2003    |   16  |   Nein  |   Für Prozeduren mit einer Gruppennummer sind keine Parameter mit XML- oder CLR-Datentypen zulässig. Der "%.*ls"-Parameter der "%.* ls"-Prozedur weist den "%ls"-Typ auf.   |
@@ -1859,7 +1859,7 @@ ORDER BY message_id
 
 ## <a name="errors-4000-to-4999"></a>Fehler 4.000 bis 4.999
 
-| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   Nein  |   Der Client sendet eine sp_reset_connection, obwohl noch Anforderungen ausstehen. Die Verbindung mit dem Server wird getrennt.  |
 |   4002    |   16  |   Nein  |   Der eingehende Datenstrom des TDS-Protokolls (Tabular Data Stream) ist nicht richtig. Der Datenstrom endete unerwartet. |
@@ -4634,7 +4634,7 @@ ORDER BY message_id
 
 ## <a name="errors-10000-to-10999"></a>Fehler 10.000 bis 10.999
 
-| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   10000   |   16  |   Nein  |   Unbekannter Anbieterfehler. |
 |   [10001](mssqlserver-10001-database-engine-error.md) |   16  |   Nein  |   Der Anbieter hat einen unerwarteten schwerwiegenden Fehler gemeldet.   |
@@ -8113,7 +8113,7 @@ ORDER BY message_id
 
 ## <a name="errors-22000-to-22999"></a>Fehler 22.000 bis 22.999
 
-| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   22101   |   16  |   Nein  |   Der für das change_columns-Argument der CHANGE_TRACKING_IS_COLUMN_IN_MASK-Funktion angegebene Wert ist nicht gültig. Bei dem Wert muss es sich um eine von der CHANGETABLE(CHANGES ...)-Funktion zurückgegebene Bitmaske handeln.   |
 |   22102   |   16  |   Nein  |   Die angegebenen Argumente sind nicht gültig für die CHANGES-Option der CHANGETABLE-Funktion.    |
@@ -8557,7 +8557,7 @@ ORDER BY message_id
 
 ## <a name="errors-26000-to-27999"></a>Fehler 26.000 bis 27.999
 
-| Fehler| severity | Protokolliertes Ereignis | Beschreibung|
+| Fehler| severity | Protokolliertes Ereignis | BESCHREIBUNG|
 | :------ | :------| :------| :----------------------------- |
 |   26010   |   10  |   Ja |   Der Server konnte das zum Initiieren einer SSL-Verbindung benötigte Zertifikat nicht laden. Folgender Fehler wurde zurückgegeben: %#x. Überprüfen Sie, ob die Zertifikate gültig sind. |
 |   26011   |   16  |   Ja |   Der Server konnte die Verschlüsselung wegen eines Problems bei einer Sicherheitsbibliothek nicht initialisieren. Möglicherweise fehlt die Sicherheitsbibliothek. Überprüfen Sie, ob 'security.dll' auf dem System vorhanden ist.    |
