@@ -11,5 +11,5 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 02/08/2020
 ms.locfileid: "76037799"
 ---
-<Token>**GILT FÜR: **![Ja](media/yes.png)SQL Server ![Ja](media/yes.png)Azure SQL-Datenbank ![Nein](media/no.png)Azure Synapse Analytics (SQL DW) ![Ja](media/yes.png)Parallel Data Warehouse </Token>
+<Token>**GILT FÜR:** ![Ja](media/yes.png)SQL Server ![Ja](media/yes.png)Azure SQL-Datenbank ![Nein](media/no.png)Azure Synapse Analytics (SQL DW) ![Ja](media/yes.png)Parallel Data Warehouse </Token>
 
