@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67284860"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525471"
 ---
 # <a name="tabular-model-data-access"></a>Zugriff auf Daten im tabellarischen Modell
   Auf tabellarische Modelldatenbanken in Analysis Services kann mit den meisten Clients, Schnittstellen und Sprachen zugegriffen werden, mit denen Sie auch Daten oder Metadaten aus einem mehrdimensionalen Modell abrufen. Weitere Informationen finden Sie unter [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "67284860"
   
  Der [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Client bestimmt die Struktur des angegebenen Modells, indem er eine Anforderung an die angegebene Datenquelle sendet, die ein Schema zurückgibt, das vom Client verwendet werden kann, um Abfragen für das Modell als Datenquelle zu erstellen und Vorgänge auf Grundlage der Daten auszuführen. Nachfolgende Vorgänge in der [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Benutzeroberfläche, um Daten zu filtern, Berechnungen oder Aggregationen auszuführen und zugeordnete Daten anzuzeigen, werden vom Client gesteuert und können nicht programmgesteuert bearbeitet werden.  
   
- Die Abfragen, die vom [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Client an das Modell gesendet werden, werden als DAX-Anweisungen ausgegeben, die Sie überwachen können, indem Sie eine Ablaufverfolgung auf dem Modell festlegen.  Der Client gibt auch eine Anforderung an den Server für die ursprüngliche Schemadefinition aus, die entsprechend der konzeptionellen Schemadefinitionssprache (CSDL) präsentiert wird. Weitere Informationen finden Sie unter [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ Die Abfragen, die vom [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Client an das Modell gesendet werden, werden als DAX-Anweisungen ausgegeben, die Sie überwachen können, indem Sie eine Ablaufverfolgung auf dem Modell festlegen.  Der Client gibt auch eine Anforderung an den Server für die ursprüngliche Schemadefinition aus, die entsprechend der konzeptionellen Schemadefinitionssprache (CSDL) präsentiert wird. Weitere Informationen finden Sie unter [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Instanzen verwalten, die tabellarische Modelle hosten, sowie die darin enthaltenen Metadaten und Daten abfragen. Sie können die Modelle oder die Objekte in einem Modell verarbeiten, Partitionen erstellen und verwalten sowie die Sicherheit festlegen, die zum Verwalten des Datenzugriffs verwendet werden kann. Weitere Informationen finden Sie in den folgenden Themen:  
@@ -75,7 +75,7 @@ ms.locfileid: "67284860"
 ### <a name="csdl"></a>CSDL  
  Die konzeptionelle Schemadefinitionssprache ist an sich keine Abfragesprache, sie kann aber verwendet werden, um Informationen zum Modell und den Modellmetadaten abzurufen, die später verwendet werden können, um Berichte oder Abfragen für das Modell zu erstellen.  
   
- Informationen darüber, wie CSDL in tabellarischen Modellen verwendet wird, finden Sie unter [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi).  
+ Informationen darüber, wie CSDL in tabellarischen Modellen verwendet wird, finden Sie unter [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi).  
   
 ## <a name="programmatic-interfaces"></a>Befehlsorientierte Benutzerschnittstellen  
  Die Hauptschnittstellen, die zum Interagieren mit tabellarischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modellen verwendet werden, sind die Schemarowsets, XMLA- und Abfrageclients sowie Abfragetools, die von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]zur Verfügung gestellt werden.  
@@ -91,7 +91,7 @@ ms.locfileid: "67284860"
   
  Sie können auch Daten aus einer Analysis Services-Instanz direkt im XML-basierten Format abrufen. Sie können das Schema des tabellarischen Modells mit dem DISCOVER_CSDL_METADATA-Rowset abrufen, oder Sie können einen EXECUTE- oder DISCOVER-Befehl mit vorhandenen ASSL-Elementen, -Objekten oder -Eigenschaften verwenden. Weitere Informationen finden Sie in den folgenden Ressourcen:  
   
--   [CSDL-Anmerkungen für Business Intelligence &#40;csdlbi&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+-   [CSDL-Anmerkungen für Business Intelligence &#40;csdlbi&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>Bearbeiten von Analysis Services-Objekten  
  Sie können tabellarische Modelle und darin enthaltene Objekte, einschließlich Tabellen, Spalten, Perspektiven, Measures und Partitionen, mit XMLA-Befehlen oder mit AMO erstellen, ändern, löschen und verarbeiten. Sowohl AMO als auch XMLA wurden aktualisiert, um zusätzliche Eigenschaften, die in tabellarischen Modellen zur verbesserten Berichterstellung und Modellierung verwendet werden, zu unterstützen.  

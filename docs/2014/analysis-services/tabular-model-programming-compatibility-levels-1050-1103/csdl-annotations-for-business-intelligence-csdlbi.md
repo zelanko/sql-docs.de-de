@@ -10,12 +10,12 @@ ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757952"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525451"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>CSDL-Anmerkungen für Business Intelligence (CSDLBI)
   
@@ -36,7 +36,7 @@ ms.locfileid: "62757952"
   
  Das CSDLBI-Schema wird vom Analysis Services-Server als Reaktion auf eine Anforderung für eine Modelldefinition von einem Client wie [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] generiert. Die Clientanwendung sendet eine XML-Abfrage an den Analysis Services-Server, der die Modelldaten hostet. Im Gegenzug sendet der Server mithilfe der CSDLBI-Anmerkungen eine XML-Meldung, die eine Definition der Entitäten im Modell enthält. Der Berichtsclient verwendet dann die Informationen zur Darstellung der im Modell verfügbaren Felder, Aggregationen und Measures. Die CSDLBI-Anmerkungen enthalten auch Informationen zum Gruppieren, Sortieren und Formatieren der Daten.  
   
- Allgemeine Informationen zu csdlbi finden Sie unter [csdlbi-Konzepte](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
+ Allgemeine Informationen zu csdlbi finden Sie unter [csdlbi-Konzepte](/analysis-services/csdlbi/csdlbi-concepts).  
   
 ### <a name="working-with-csdl"></a>Arbeiten mit CSDL  
  Der Satz von CSDLBI-Anmerkungen, der ein bestimmtes tabellarische Modell darstellt, ist ein XML-Dokument, das eine Auflistung einfacher und komplexer Entitäten enthält. Die Entitäten definieren Tabellen (oder Dimensionen), Spalten (Attribute), Zuordnungen (Beziehungen) und Formeln in berechneten Spalten, Measures oder KPIs.  
@@ -72,12 +72,12 @@ ms.locfileid: "62757952"
   
 -   Unterstützung für Perspektiven.  
   
- Ausführliche Informationen zu einzelnen Elementen in den csdlbi-Anmerkungen finden Sie unter [Technische Referenz für BI-Anmerkungen zu CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Weitere Informationen zur CSDL-Kern Spezifikation finden Sie in der [CSDL V3-Spezifikation](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
+ Ausführliche Informationen zu einzelnen Elementen in den csdlbi-Anmerkungen finden Sie unter [Technische Referenz für BI-Anmerkungen zu CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl). Weitere Informationen zur CSDL-Kern Spezifikation finden Sie in der [CSDL V3-Spezifikation](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
   
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Grundlegendes zum tabellarischen Objektmodell](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [Csdlbi-Konzepte](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
+ [Csdlbi-Konzepte](/analysis-services/csdlbi/csdlbi-concepts)   
  [Grundlegendes zum tabellarischen Objektmodell](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

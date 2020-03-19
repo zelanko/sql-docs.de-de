@@ -10,12 +10,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7bf73822e8872397499bdfbc04bab6747035fbec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757947"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525441"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI-Konzepte
   Die konzeptionelle Schemadefinitionssprache mit BI-Anmerkungen (CSDLBI) basiert auf Entity Data Framework, einer Abstraktion zum Darstellen von Daten, die es ermöglicht, dass unterschiedliche Datasets programmgesteuert aufgerufen, abgefragt oder exportiert werden können. CSDLBI wird verwendet, um mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellte Datenmodelle darzustellen, weil diese Sprache umfangreiche datengesteuerte Berichterstellungsfunktionen und Anwendungen unterstützt.  
@@ -113,7 +113,7 @@ ms.locfileid: "62757947"
   
  Wenn Sie mit den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Tools ein Modell generieren, folgen die Namen, die für Objekte erstellt werden, den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Konventionen für Objektbenennung und Namenseindeutigkeit. Da jedoch CSDLBI auf dem Entity Data Framework (EDF) basiert, welches erfordert, dass Namen die Konventionen für C#-Bezeichner einhalten, nimmt der Server, wenn er die CSDLBI-Ausgabe für ein Modell erstellt, die innerhalb des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Schemas verwendeten Namen und erstellt automatisch neue Objektnamen, die den EDF-Anforderungen entsprechen. In der folgenden Tabelle werden die Vorgänge, durch die die neuen Namen generiert werden, beschrieben.  
   
-|Regel|Action|  
+|Regel|Aktion|  
 |----------|------------|  
 |Keine unzulässigen Zeichen|Unzulässige Zeichen werden durch Unterstriche ersetzt.|  
 |Namen müssen eindeutig sein|Wenn zwei Zeichenfolgen gleich sind, wird an eine ein Unterstrich plus eine Zahl angefügt, um sie eindeutig zu machen|  
@@ -147,6 +147,6 @@ ms.locfileid: "62757947"
  **Einschränkungen:** Die Zellen Sicherheit wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CSDL-Anmerkungen für Business Intelligence &#40;csdlbi&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ [CSDL-Anmerkungen für Business Intelligence &#40;csdlbi&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
   
