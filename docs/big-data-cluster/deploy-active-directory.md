@@ -2,19 +2,19 @@
 title: Bereitstellen im Active Directory-Modus
 titleSuffix: SQL Server Big Data Cluster
 description: Erfahren Sie, wie Sie für einen SQL Server-Big Data-Cluster in einer Active Directory-Domäne ein Upgrade durchführen.
-author: NelGson
-ms.author: negust
+author: mihaelablendea
+ms.author: mihaelab
 ms.reviewer: mikeray
 ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200961"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190580"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus
 
@@ -174,16 +174,27 @@ Für die AD-Integration sind die folgenden Parameter erforderlich. Fügen Sie di
 
 - `security.activeDirectory.domainDnsName`: Name Ihrer Domäne (z. B. `contoso.local`).
 
-- `security.activeDirectory.clusterAdmins`: Dieser Parameter akzeptiert **eine AD-Gruppe**. Mitglieder dieser Gruppe erhalten Administratorberechtigungen im Cluster. Das bedeutet, dass Mitglieder sysadmin-Berechtigungen in SQL Server, superuser-Berechtigungen in HDFS und Administratorberechtigungen im Controller erhalten. **Beachten Sie, dass diese Gruppe in AD vorhanden sein muss, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppe nicht in Active Directory auf DomainLocal begrenzt werden kann. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
+- `security.activeDirectory.clusterAdmins`: Dieser Parameter akzeptiert eine AD-Gruppe. Der AD-Gruppenbereich muss „universal“ oder „domain global“ entsprechen. Mitglieder dieser Gruppe erhalten Administratorberechtigungen im Cluster. Das bedeutet, dass Mitglieder `sysadmin`-Berechtigungen in SQL Server, Superuser-Berechtigungen in HDFS und Administratorberechtigungen im Controller erhalten. 
 
-- `security.activeDirectory.clusterUsers`: Liste der AD-Gruppen, die als reguläre Benutzer (ohne Administratorberechtigungen) im Big Data-Cluster fungieren. **Beachten Sie, dass diese Gruppen in AD vorhanden sein müssen, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppen nicht in Active Directory auf DomainLocal begrenzt werden können. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
+  >[!IMPORTANT]
+  >Erstellen Sie diese Gruppe in AD, bevor Sie mit der Bereitstellung beginnen. Wenn der Bereich für diese AD-Gruppe „domain local“ ist, schlägt die Bereitstellung fehl.
 
-- **Optionaler Parameter** `security.activeDirectory.appOwners`: Liste der AD-Gruppen, die über Berechtigungen zum Erstellen, Löschen und Ausführen beliebiger Anwendungen verfügen. **Beachten Sie, dass diese Gruppen in AD vorhanden sein müssen, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppen nicht in Active Directory auf DomainLocal begrenzt werden können. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
+- `security.activeDirectory.clusterUsers`: Liste der AD-Gruppen, die als reguläre Benutzer (ohne Administratorberechtigungen) im Big Data-Cluster fungieren. Die Liste darf AD-Gruppen enthalten, die auf Gruppen der Kategorien „universal“ oder „domain global“ begrenzt sind. Es dürfen keine „domain local“-Gruppen enthalten sein.
 
-- **Optionaler Parameter** `security.activeDirectory.appReaders`: Dieser Parameter ist eine Liste der AD-Gruppen, die über Berechtigungen zum Ausführen einer beliebigen Anwendung verfügen. **Beachten Sie, dass diese Gruppen in AD vorhanden sein müssen, bevor die Bereitstellung beginnt. Beachten Sie auch, dass diese Gruppen nicht in Active Directory auf DomainLocal begrenzt werden können. Eine auf DomainLocal begrenzte Gruppe führt zu einem Bereitstellungsfehler.**
+  >[!IMPORTANT]
+  >Erstellen Sie diese Gruppen in AD, bevor Sie mit der Bereitstellung beginnen. Wenn der Bereich für eine dieser AD-Gruppen „domain local“ ist, schlägt die Bereitstellung fehl.
 
-**Überprüfen des AD-Gruppenbereichs:** 
- Anweisungen zum Überprüfen des Bereichs einer AD-Gruppe, um zu ermitteln, ob sie auf DomainLocal begrenzt ist, finden Sie [hier](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+- **Optionaler Parameter** `security.activeDirectory.appOwners`: Liste der AD-Gruppen, die über Berechtigungen zum Erstellen, Löschen und Ausführen beliebiger Anwendungen verfügen. Die Liste darf AD-Gruppen enthalten, die auf Gruppen der Kategorien „universal“ oder „domain global“ begrenzt sind. Es dürfen keine „domain local“-Gruppen enthalten sein.
+
+  >[!IMPORTANT]
+  >Erstellen Sie diese Gruppen in AD, bevor Sie mit der Bereitstellung beginnen. Wenn der Bereich für eine dieser AD-Gruppen „domain local“ ist, schlägt die Bereitstellung fehl.
+
+- **Optionaler Parameter** `security.activeDirectory.appReaders`: Dieser Parameter ist eine Liste der AD-Gruppen, die über Berechtigungen zum Ausführen einer beliebigen Anwendung verfügen. Die Liste darf AD-Gruppen enthalten, die auf Gruppen der Kategorien „universal“ oder „domain global“ begrenzt sind. Es dürfen keine „domain local“-Gruppen enthalten sein.
+
+  >[!IMPORTANT]
+  >Erstellen Sie diese Gruppen in AD, bevor Sie mit der Bereitstellung beginnen. Wenn der Bereich für eine dieser AD-Gruppen „domain local“ ist, schlägt die Bereitstellung fehl.
+
+[Überprüfen Sie den AD-Gruppenbereich](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), um zu ermitteln, ob es sich um eine DomainLocal-Gruppe handelt.
 
 Wenn Sie Konfigurationsdatei für die Bereitstellung noch nicht initialisiert haben, können Sie diesen Befehl ausführen, um eine Kopie der Konfiguration abzurufen.
 

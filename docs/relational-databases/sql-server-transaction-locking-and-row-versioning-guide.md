@@ -1,7 +1,7 @@
 ---
 title: Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 ms.custom: seo-dt-2019
-ms.date: 02/17/2018
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,25 +12,28 @@ helpviewer_keywords:
 - transaction locking and row versioning guide
 - lock compatibility matrix, [SQL Server]
 - lock granularity and hierarchies, [SQL Server]
+- deadlocks, [SQL Server]
+- lock escalation, [SQL Server]
+- lock partitioning, [SQL Server]
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: 7b7341273c36bacdbfd49596df535b9c73ba5049
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339678"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287174"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In jeder Datenbank führt die fehlerhafte Verwaltung von Transaktionen bei Systemen mit zahlreichen Benutzern häufig zu Konflikten und Leistungsproblemen. Mit steigender Anzahl von Benutzern, die auf die Daten zugreifen, wird der Einsatz von Anwendungen, die Transaktionen effizient verwenden, immer wichtiger. In diesem Handbuch werden Mechanismen für Sperren und die Zeilenversionsverwaltung beschrieben, durch die das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die physische Integrität jeder Transaktion sicherstellt. Darüber hinaus erfahren Sie, wie Transaktionen von Anwendungen effizient gesteuert werden.  
+In jeder Datenbank führt die fehlerhafte Verwaltung von Transaktionen bei Systemen mit zahlreichen Benutzern häufig zu Konflikten und Leistungsproblemen. Mit steigender Anzahl von Benutzern, die auf die Daten zugreifen, wird der Einsatz von Anwendungen, die Transaktionen effizient verwenden, immer wichtiger. In diesem Handbuch werden Mechanismen für Sperren und die Zeilenversionsverwaltung beschrieben, durch die das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die physische Integrität jeder Transaktion sicherstellt. Darüber hinaus erfahren Sie, wie Transaktionen von Anwendungen effizient gesteuert werden.  
   
-**Gilt für**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], falls nicht anders angegeben. 
+**Gilt für:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], sofern nicht anders angegeben) und [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. 
   
-##  <a name="Basics"></a> Grundlagen zu Transaktionen  
+##  <a name="transaction-basics"></a><a name="Basics"></a> Grundlagen zu Transaktionen  
  Eine Transaktion ist eine Folge von Operationen, die als einzelne logische Arbeitseinheit ausgeführt wird. Eine logische Arbeitseinheit muss vier Eigenschaften aufweisen, die als ACID-Eigenschaften (Atomicity, Consistency, Isolation und Durability; Unteilbarkeit, Konsistenz, Isolation und Beständigkeit) bezeichnet werden, um als Transaktion zu gelten.  
   
  **Unteilbarkeit**  
@@ -94,32 +97,32 @@ ms.locfileid: "78339678"
 |Delete|INSERT|TRUNCATE TABLE|  
 |DROP|OPEN|UPDATE|  
   
- **Transaktionen mit Batchbereich**  
- Trifft nur auf MARS (Multiple Active Result Sets) zu; eine explizite oder implizite [!INCLUDE[tsql](../includes/tsql-md.md)]-Transaktion, die unter einer MARS-Sitzung gestartet wird, wird zu einer Transaktion im Batchbereich. Für eine Transaktionen mit Batchbereich, für die nach Abschluss des Batches kein Commit oder Rollback ausgeführt wird, wird das Rollback automatisch durch [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vorgenommen.  
+-  **Transaktionen mit Batchbereich**  
+   Trifft nur auf MARS (Multiple Active Result Sets) zu; eine explizite oder implizite [!INCLUDE[tsql](../includes/tsql-md.md)]-Transaktion, die unter einer MARS-Sitzung gestartet wird, wird zu einer Transaktion im Batchbereich. Für eine Transaktionen mit Batchbereich, für die nach Abschluss des Batches kein Commit oder Rollback ausgeführt wird, wird das Rollback automatisch durch [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vorgenommen.  
   
- **Distributed Transactions** (Verteilte Transaktionen)  
- Verteilte Transaktionen erstrecken sich auf mindestens zwei Server, die als Ressourcen-Manager bekannt sind. Die Verwaltung der Transaktionen muss zwischen den Ressourcen-Managern von einer Serverkomponente, dem Transaktions-Manager, koordiniert werden. Jede [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Instanz kann als Ressourcen-Manager in verteilten Transaktionen eingesetzt werden, die von Transaktions-Managern, wie [!INCLUDE[msCoName](../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) oder anderen Transaktions-Managern, die die Open Group XA-Spezifikation für die verteilte Transaktionsverarbeitung unterstützen, koordiniert werden. Weitere Informationen finden Sie in der MS DTC-Dokumentation.  
+-  **Distributed Transactions** (Verteilte Transaktionen)  
+   Verteilte Transaktionen erstrecken sich auf mindestens zwei Server, die als Ressourcen-Manager bekannt sind. Die Verwaltung der Transaktionen muss zwischen den Ressourcen-Managern von einer Serverkomponente, dem Transaktions-Manager, koordiniert werden. Jede [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Instanz kann als Ressourcen-Manager in verteilten Transaktionen eingesetzt werden, die von Transaktions-Managern, wie [!INCLUDE[msCoName](../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) oder anderen Transaktions-Managern, die die Open Group XA-Spezifikation für die verteilte Transaktionsverarbeitung unterstützen, koordiniert werden. Weitere Informationen finden Sie in der MS DTC-Dokumentation.  
   
- Eine Transaktion auf einem einzelnen Computer mit [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die sich auf mindestens zwei Datenbanken erstreckt, ist tatsächlich eine verteilte Transaktion. Die Instanz verwaltet die verteilte Transaktion jedoch intern; für den Benutzer entsteht der Eindruck, es handele sich um eine lokale Transaktion.  
+   Eine Transaktion auf einem einzelnen Computer mit [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die sich auf mindestens zwei Datenbanken erstreckt, ist tatsächlich eine verteilte Transaktion. Die Instanz verwaltet die verteilte Transaktion jedoch intern; für den Benutzer entsteht der Eindruck, es handele sich um eine lokale Transaktion.  
   
- Auf der Anwendungsebene wird eine verteilte Transaktion beinahe so wie eine lokale Transaktion verwaltet. Am Ende der Transaktion fordert die Anwendung die Transaktion auf, entweder einen Commit oder Rollback auszuführen. Ein verteilter Commit darf vom Transaktions-Manager nicht auf dieselbe Art verwaltet werden, um das Risiko zu minimieren, dass einige Ressourcen-Manager bei einem Netzwerkfehler den Commit erfolgreich ausführen, während andere für die Transaktion einen Rollback ausführen. Dies wird dadurch erreicht, dass der Commitvorgang in zwei Phasen verwaltet wird (die Vorbereitungsphase und die Commitphase), bekannt als Zweiphasencommit (2PC).  
+   Auf der Anwendungsebene wird eine verteilte Transaktion beinahe so wie eine lokale Transaktion verwaltet. Am Ende der Transaktion fordert die Anwendung die Transaktion auf, entweder einen Commit oder Rollback auszuführen. Ein verteilter Commit darf vom Transaktions-Manager nicht auf dieselbe Art verwaltet werden, um das Risiko zu minimieren, dass einige Ressourcen-Manager bei einem Netzwerkfehler den Commit erfolgreich ausführen, während andere für die Transaktion einen Rollback ausführen. Dies wird dadurch erreicht, dass der Commitvorgang in zwei Phasen verwaltet wird (die Vorbereitungsphase und die Commitphase), bekannt als Zweiphasencommit (2PC).  
   
- **Vorbereitungsphase**  
- Wenn der Transaktions-Manager eine Anforderung für ein Commit erhält, sendet er einen Vorbereitungsbefehl an alle Ressourcen-Manager, die an der Transaktion beteiligt sind. Jeder Ressourcen-Manager trifft dann die notwendigen Vorbereitungen, um die Transaktion beständig zu machen, und alle Puffer, die Images von Protokollen für die Transaktion enthalten, werden auf den Datenträger geleert. Wenn die Ressourcen-Manager die Vorbereitungsphase beenden, geben sie jeweils eine Information über den Erfolg oder das Fehlschlagen der Vorbereitung an den Transaktions-Manager zurück. Mit [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] wurde die verzögerte Transaktionsdauerhaftigkeit eingeführt. Für verzögerte dauerhafte Transaktionen wird ein Commit ausgeführt, bevor das Protokollimage auf den Datenträger geleert wird. Weitere Informationen zur Dauerhaftigkeit verzögerter Transaktionen finden Sie im Thema [Transaktionsdauerhaftigkeit](../relational-databases/logs/control-transaction-durability.md).  
+   -  **Vorbereitungsphase**  
+      Wenn der Transaktions-Manager eine Anforderung für ein Commit erhält, sendet er einen Vorbereitungsbefehl an alle Ressourcen-Manager, die an der Transaktion beteiligt sind. Jeder Ressourcen-Manager trifft dann die notwendigen Vorbereitungen, um die Transaktion beständig zu machen, und alle Puffer, die Images von Protokollen für die Transaktion enthalten, werden auf den Datenträger geleert. Wenn die Ressourcen-Manager die Vorbereitungsphase beenden, geben sie jeweils eine Information über den Erfolg oder das Fehlschlagen der Vorbereitung an den Transaktions-Manager zurück. Mit [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] wurde die verzögerte Transaktionsdauerhaftigkeit eingeführt. Für verzögerte dauerhafte Transaktionen wird ein Commit ausgeführt, bevor das Protokollimage auf den Datenträger geleert wird. Weitere Informationen zur Dauerhaftigkeit verzögerter Transaktionen finden Sie im Thema [Transaktionsdauerhaftigkeit](../relational-databases/logs/control-transaction-durability.md).  
   
- **Commitphase**  
- Wenn der Transaktions-Manager von der erfolgreichen Vorbereitung aller Ressourcen-Manager in Kenntnis gesetzt wird, sendet er Commitbefehle an alle Ressourcen-Manager. Die Ressourcen-Manager können dann den Commit beenden. Wenn alle Ressourcen-Manager eine erfolgreiche Ausführung des Commits melden, sendet der Transaktions-Manager eine Benachrichtigung über die erfolgreiche Ausführung an die Anwendung. Wenn einer der Ressourcen-Manager einen Fehler bei der Vorbereitung ausgibt, sendet der Transaktions-Manager einen Rollbackbefehl an alle Ressourcen-Manager und benachrichtigt die Anwendung über die fehlgeschlagene Ausführung des Commits.  
+   -  **Commitphase**  
+      Wenn der Transaktions-Manager von der erfolgreichen Vorbereitung aller Ressourcen-Manager in Kenntnis gesetzt wird, sendet er Commitbefehle an alle Ressourcen-Manager. Die Ressourcen-Manager können dann den Commit beenden. Wenn alle Ressourcen-Manager eine erfolgreiche Ausführung des Commits melden, sendet der Transaktions-Manager eine Benachrichtigung über die erfolgreiche Ausführung an die Anwendung. Wenn einer der Ressourcen-Manager einen Fehler bei der Vorbereitung ausgibt, sendet der Transaktions-Manager einen Rollbackbefehl an alle Ressourcen-Manager und benachrichtigt die Anwendung über die fehlgeschlagene Ausführung des Commits.  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Anwendungen können verteilte Transaktionen entweder über [!INCLUDE[tsql](../includes/tsql-md.md)] oder die Datenbank-API verwalten. Weitere Informationen finden Sie unter [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
+      [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Anwendungen können verteilte Transaktionen entweder über [!INCLUDE[tsql](../includes/tsql-md.md)] oder die Datenbank-API verwalten. Weitere Informationen finden Sie unter [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
   
 #### <a name="ending-transactions"></a>Beenden von Transaktionen  
  Sie können Transaktionen entweder mit einer COMMIT-Anweisung oder ROLLBACK-Anweisung oder durch eine entsprechende API-Funktion beenden.  
   
- **COMMIT**  
- Wenn eine Transaktion erfolgreich ist, führen Sie einen Commit aus. Durch eine COMMIT-Anweisung wird sichergestellt, dass alle Änderungen der Transaktion zum dauerhaften Bestandteil der Datenbank werden. Durch eine COMMIT-Anweisung werden auch von der Transaktion verwendete Ressourcen, wie etwa Sperren, freigegeben.  
+-  **COMMIT**  
+   Wenn eine Transaktion erfolgreich ist, führen Sie einen Commit aus. Durch eine COMMIT-Anweisung wird sichergestellt, dass alle Änderungen der Transaktion zum dauerhaften Bestandteil der Datenbank werden. Durch eine COMMIT-Anweisung werden auch von der Transaktion verwendete Ressourcen, wie etwa Sperren, freigegeben.  
   
- **ROLLBACK**  
- Wenn ein Fehler in einer Transaktion auftritt, oder wenn ein Benutzer beschließt, die Transaktion abzubrechen, führen Sie ein Rollback aus. Durch eine ROLLBACK-Anweisung werden alle Änderungen, die während der Transaktion vorgenommen wurden, rückgängig gemacht, sodass die Daten in ihren Ausgangsstatus zurückversetzt werden. Durch das ROLLBACK werden auch Ressourcen freigegeben, die von der Transaktion beansprucht wurden.  
+-  **ROLLBACK**  
+   Wenn ein Fehler in einer Transaktion auftritt, oder wenn ein Benutzer beschließt, die Transaktion abzubrechen, führen Sie ein Rollback aus. Durch eine ROLLBACK-Anweisung werden alle Änderungen, die während der Transaktion vorgenommen wurden, rückgängig gemacht, sodass die Daten in ihren Ausgangsstatus zurückversetzt werden. Durch das ROLLBACK werden auch Ressourcen freigegeben, die von der Transaktion beansprucht wurden.  
   
 > [!NOTE]  
 > Bei Verbindungen, die für die Unterstützung von MARS (Multiple Active Result Sets) aktiviert sind, kann für eine durch eine API-Funktion gestartete explizite Transaktion kein Commit ausgeführt werden, solange Ausführungsanforderungen anstehen. Jeder Versuch, ein Commit für eine derartige Transaktion auszuführen, für die noch ausstehende Vorgänge vorhanden sind, führt zu einem Fehler.  
@@ -171,16 +174,16 @@ SELECT * FROM TestBatch;  -- Returns rows 1 and 2.
 GO  
 ```   
   
-##  <a name="Lock_Basics"></a> Grundlagen zu Sperren und Zeilenversionsverwaltung  
+##  <a name="locking-and-row-versioning-basics"></a><a name="Lock_Basics"></a> Grundlagen zu Sperren und Zeilenversionsverwaltung  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet die folgenden Mechanismen, um die Integrität von Transaktionen sicherzustellen und die Konsistenz der Datenbanken beizubehalten, wenn mehrere Benutzer gleichzeitig auf Daten zugreifen:  
   
--   Sperren  
+-  **Sperren**    
+
+   Jede Transaktion fordert Sperren verschiedener Typen für die Ressourcen (wie z. B. Zeilen, Seiten oder Tabellen) an, von denen die Transaktion abhängt. Diese Sperren verhindern, dass die Ressourcen durch andere Transaktionen in einer Weise geändert werden, die zu Problemen für die Transaktion führen würde, die die Sperre angefordert hat. Jede Transaktion hebt ihre Sperren wieder auf, sobald sie nicht mehr von den gesperrten Ressourcen abhängig ist.  
   
-     Jede Transaktion fordert Sperren verschiedener Typen für die Ressourcen (wie z. B. Zeilen, Seiten oder Tabellen) an, von denen die Transaktion abhängt. Diese Sperren verhindern, dass die Ressourcen durch andere Transaktionen in einer Weise geändert werden, die zu Problemen für die Transaktion führen würde, die die Sperre angefordert hat. Jede Transaktion hebt ihre Sperren wieder auf, sobald sie nicht mehr von den gesperrten Ressourcen abhängig ist.  
-  
--   Zeilenversionsverwaltung  
-  
-     Wenn eine auf Zeilenversionsverwaltung basierende Isolationsstufe aktiviert ist, bewahrt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Versionen jeder Zeile auf, an der Änderungen vorgenommen werden. Anwendungen können angeben, dass eine Transaktion die Zeilenversionen verwendet, um die Daten so anzuzeigen, wie sie zum Zeitpunkt des Transaktions- oder Abfragestarts vorgelegen haben, statt alle Lesevorgänge durch Sperren zu schützen. Durch Verwendung der Zeilenversionsverwaltung wird die Wahrscheinlichkeit, dass ein Lesevorgang zur Blockierung anderer Transaktionen führt, weitgehend reduziert.  
+-  **Zeilenversionsverwaltung**    
+
+   Wenn eine auf Zeilenversionsverwaltung basierende Isolationsstufe aktiviert ist, bewahrt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Versionen jeder Zeile auf, an der Änderungen vorgenommen werden. Anwendungen können angeben, dass eine Transaktion die Zeilenversionen verwendet, um die Daten so anzuzeigen, wie sie zum Zeitpunkt des Transaktions- oder Abfragestarts vorgelegen haben, statt alle Lesevorgänge durch Sperren zu schützen. Durch Verwendung der Zeilenversionsverwaltung wird die Wahrscheinlichkeit, dass ein Lesevorgang zur Blockierung anderer Transaktionen führt, weitgehend reduziert.  
   
  Sperren und Zeilenversionsverwaltung verhindern, dass Benutzer Daten lesen, für die noch kein Commit ausgeführt wurde, und verhindern, dass viele Benutzer gleichzeitig versuchen, dieselben Daten zu ändern. Ohne Sperren oder Zeilenversionsverwaltung könnten Abfragen, die für Daten ausgeführt werden, zu unerwarteten Ergebnissen führen, weil Daten zurückgegeben werden, für die in der Datenbank noch kein Commit ausgeführt wurde.  
   
@@ -275,22 +278,22 @@ GO
   
  Eine niedrigere Isolationsstufe erhöht einerseits die Möglichkeit, dass viele Benutzer gleichzeitig auf Daten zugreifen können, führt aber gleichzeitig zum Anstieg der negativen Parallelitätseffekte (Dirty Reads oder verlorene Updates), mit denen die Benutzer rechnen müssten. Und umgekehrt schränkt eine höhere Isolationsstufe zwar die Typen der Parallelitätseffekte ein, mit denen Benutzer rechnen müssen, gleichzeitig werden dafür aber mehr Systemressourcen beansprucht, und die Wahrscheinlichkeit steigt, dass sich die Transaktionen untereinander blockieren. So muss bei jeder Auswahl der geeigneten Isolationsstufe eine Abwägung zwischen den Datenintegritätsanforderungen der Anwendungen einerseits und dem mit jeder Isolationsstufe verbundenen Aufwand andererseits erfolgen. Die höchste Isolationsstufe (Serializable) garantiert, dass eine Transaktion jedes Mal, wenn sie einen Lesevorgang wiederholt, genau dieselben Daten liest. Dies wird jedoch durch ein Ausmaß an Sperren erreicht, das in Systemen mit mehreren Benutzern wahrscheinlich zu negativen Auswirkungen für andere Benutzer führt. Mit der niedrigsten Isolationsstufe (Read Uncommitted) können Daten abgerufen werden, die von anderen Transaktionen geändert wurden, für die jedoch noch kein Commit ausgeführt wurde. In der Isolationsstufe Read Uncommitted können sämtliche denkbaren Parallelitätsnebeneffekte auftreten, dagegen werden keine Lesesperren und keine Versionsverwaltung verwendet, wodurch der Aufwand minimiert wird.  
   
-##### <a name="ssdenoversion-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Isolationsstufen  
+##### <a name="database-engine-isolation-levels"></a>Isolationsstufen der Datenbank-Engine  
  Der ISO-Standard definiert die folgenden Isolationsstufen, die alle von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] unterstützt werden:  
   
 |Isolationsstufe|Definition|  
 |---------------------|----------------|  
-|Read Uncommitted|Die niedrigste Isolationsstufe, bei der Transaktionen nur soweit isoliert werden, dass sichergestellt ist, dass keine physisch beschädigten Daten gelesen werden. Auf dieser Stufe sind Dirty Reads zulässig, d. h., eine Transaktion kann Änderungen verfolgen, die von anderen Transaktionen vorgenommen wurden und für die noch kein Commit ausgeführt wurde.|  
-|Read Committed|Ermöglicht einer Transaktion das Lesen von Daten, die zuvor von einer anderen Transaktion gelesen (nicht geändert) wurden, ohne warten zu müssen, bis die erste Transaktion abgeschlossen ist. Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] behält Schreibsperren (die für ausgewählte Daten angefordert wurden) bis zum Ende der Transaktion bei, Lesesperren werden jedoch bei Ausführung des SELECT-Vorgangs freigegeben. Dies ist die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Standardstufe.|  
-|Repeatable Read|Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] behält Lese- und Schreibsperren, die für ausgewählte Daten angefordert wurden, bis zum Ende der Transaktion bei. Da Bereichssperren jedoch nicht verwaltet werden, können Phantomlesevorgänge auftreten.|  
-|Serialisierbar|Die höchste Stufe, auf der Transaktionen vollständig voneinander isoliert sind. Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] behält Lese- und Schreibsperren, die für ausgewählte Daten angefordert wurden, bis zur Freigabe am Ende der Transaktion bei. Bereichssperren werden angefordert, wenn ein SELECT-Vorgang eine WHERE-Bereichsklausel verwendet. Dies dient vor allem der Vermeidung von Phantomlesevorgängen.<br /><br /> **Hinweis:** DDL-Vorgänge und -Transaktionen in replizierten Tabellen schlagen möglicherweise fehl, wenn die Isolationsstufe „Serializable“ angefordert wird. Das liegt daran, dass Replikationsabfragen Hinweise verwenden, die möglicherweise mit der serialisierbaren Isolationsstufe nicht kompatibel sind.|  
+|**Read uncommitted**|Die niedrigste Isolationsstufe, bei der Transaktionen nur soweit isoliert werden, dass sichergestellt ist, dass keine physisch beschädigten Daten gelesen werden. Auf dieser Stufe sind Dirty Reads zulässig, d. h., eine Transaktion kann Änderungen verfolgen, die von anderen Transaktionen vorgenommen wurden und für die noch kein Commit ausgeführt wurde.|  
+|**Read committed**|Ermöglicht einer Transaktion das Lesen von Daten, die zuvor von einer anderen Transaktion gelesen (nicht geändert) wurden, ohne warten zu müssen, bis die erste Transaktion abgeschlossen ist. Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] behält Schreibsperren (die für ausgewählte Daten angefordert wurden) bis zum Ende der Transaktion bei, Lesesperren werden jedoch bei Ausführung des SELECT-Vorgangs freigegeben. Dies ist die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Standardstufe.|  
+|**Repeatable read**|Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] behält Lese- und Schreibsperren, die für ausgewählte Daten angefordert wurden, bis zum Ende der Transaktion bei. Da Bereichssperren jedoch nicht verwaltet werden, können Phantomlesevorgänge auftreten.|  
+|**Serializable**|Die höchste Stufe, auf der Transaktionen vollständig voneinander isoliert sind. Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] behält Lese- und Schreibsperren, die für ausgewählte Daten angefordert wurden, bis zur Freigabe am Ende der Transaktion bei. Bereichssperren werden angefordert, wenn ein SELECT-Vorgang eine WHERE-Bereichsklausel verwendet. Dies dient vor allem der Vermeidung von Phantomlesevorgängen.<br /><br /> **Hinweis:** DDL-Vorgänge und -Transaktionen in replizierten Tabellen schlagen möglicherweise fehl, wenn die Isolationsstufe „Serializable“ angefordert wird. Das liegt daran, dass Replikationsabfragen Hinweise verwenden, die möglicherweise mit der serialisierbaren Isolationsstufe nicht kompatibel sind.|  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt außerdem zwei zusätzliche Transaktionsisolationsstufen, bei denen die Zeilenversionsverwaltung verwendet wird. Eine davon ist eine Implementierung der Read Committed-Isolation, die andere – Snapshot – ist eine Transaktionsisolationsstufe.  
   
 |Isolationsstufe der Zeilenversionsverwaltung|Definition|  
 |------------------------------------|----------------|  
-|Read Committed Snapshot|Wenn die READ_COMMITTED_SNAPSHOT-Datenbankoption auf ON festgelegt ist, verwendet die READ COMMITTED-Isolation die Zeilenversionsverwaltung, um eine Lesekonsistenz auf der Anweisungsebene zu gewährleisten. Lesevorgänge erfordern dabei lediglich SCH-S-Sperren auf der Tabellenebene und keine Seiten- oder Zeilensperren. Das heißt, das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet die Zeilenversionsverwaltung, um jede Anweisung mit einer transaktionskonsistenten Momentaufnahme der Daten so darzustellen, wie sie zu Beginn der Anweisung vorhanden waren. Es werden keine Sperren verwendet, um die Daten vor Updates durch andere Transaktionen zu schützen. Eine benutzerdefinierte Funktion kann Daten zurückgeben, für die ein Commit ausgeführt wurde, nachdem die Anweisung mit dem UDF begonnen hat.<br /><br /> Wenn die Datenbankoption `READ_COMMITTED_SNAPSHOT` die Standardeinstellung OFF aufweist, verwendet die Read Committed-Isolation freigegebene Sperren, um zu verhindern, dass andere Transaktionen Zeilen ändern, während die aktuelle Transaktion einen Lesevorgang ausführt. Durch freigegebene Sperren wird außerdem verhindert, dass die Anweisung Zeilen, die von anderen Transaktionen geändert werden, erst nach Abschluss der anderen Transaktion lesen kann. Beide Implementierungen entsprechen der ISO-Definition der Read Committed-Isolation.|  
-|Momentaufnahme|Die Momentaufnahmeisolationsstufe verwendet die Zeilenversionsverwaltung, um die Lesekonsistenz auf der Transaktionsebene zu gewährleisten. Dabei werden durch Lesevorgänge keine Seiten- oder Zeilensperren eingerichtet, sondern lediglich SCH-S-Tabellensperren. Beim Lesen von Zeilen, die durch eine andere Transaktion geändert wurden, wird die Version der Zeile abgerufen, die zum Startzeitpunkt der Transaktion vorhanden war. Sie können die Momentaufnahmeisolation für eine Datenbank nur verwenden, wenn die `ALLOW_SNAPSHOT_ISOLATION`-Datenbankoption auf ON festgelegt wurde. Standardmäßig ist diese Option für Benutzerdatenbanken auf OFF gesetzt.<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die Versionsverwaltung von Metadaten nicht. Aus diesem Grund gibt es bezüglich der DDL-Vorgänge, die in einer unter Momentaufnahmeisolation ausgeführten expliziten Transaktion ausgeführt werden, Einschränkungen. Die folgenden DDL-Anweisungen sind bei der Momentaufnahme-Isolationsstufe nach einer BEGIN TRANSACTION-Anweisung nicht zulässig: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME oder eine beliebige CLR-DDL-Anweisung (Common Language Runtime). Diese Anweisungen sind zulässig, wenn Sie die Momentaufnahmeisolation in impliziten Transaktionen verwenden. Eine implizite Transaktion ist definitionsgemäß eine einzelne Anweisung, mit der die Semantik der Momentaufnahmeisolation auch in DDL-Anweisungen erzwungen werden kann. Verstöße gegen dieses Prinzip können zu Fehler 3961 führen: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`.|  
+|**READ COMMITTED-Momentaufnahme (RCSI)**|Wenn die READ_COMMITTED_SNAPSHOT-Datenbankoption auf ON festgelegt ist, verwendet die READ COMMITTED-Isolation die Zeilenversionsverwaltung, um eine Lesekonsistenz auf der Anweisungsebene zu gewährleisten. Lesevorgänge erfordern dabei lediglich SCH-S-Sperren auf der Tabellenebene und keine Seiten- oder Zeilensperren. Das heißt, das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet die Zeilenversionsverwaltung, um jede Anweisung mit einer transaktionskonsistenten Momentaufnahme der Daten so darzustellen, wie sie zu Beginn der Anweisung vorhanden waren. Es werden keine Sperren verwendet, um die Daten vor Updates durch andere Transaktionen zu schützen. Eine benutzerdefinierte Funktion kann Daten zurückgeben, für die ein Commit ausgeführt wurde, nachdem die Anweisung mit dem UDF begonnen hat.<br /><br /> Wenn die Datenbankoption `READ_COMMITTED_SNAPSHOT` die Standardeinstellung OFF aufweist, verwendet die Read Committed-Isolation freigegebene Sperren, um zu verhindern, dass andere Transaktionen Zeilen ändern, während die aktuelle Transaktion einen Lesevorgang ausführt. Durch freigegebene Sperren wird außerdem verhindert, dass die Anweisung Zeilen, die von anderen Transaktionen geändert werden, erst nach Abschluss der anderen Transaktion lesen kann. Beide Implementierungen entsprechen der ISO-Definition der Read Committed-Isolation.|  
+|**Momentaufnahme**|Die Momentaufnahmeisolationsstufe verwendet die Zeilenversionsverwaltung, um die Lesekonsistenz auf der Transaktionsebene zu gewährleisten. Dabei werden durch Lesevorgänge keine Seiten- oder Zeilensperren eingerichtet, sondern lediglich SCH-S-Tabellensperren. Beim Lesen von Zeilen, die durch eine andere Transaktion geändert wurden, wird die Version der Zeile abgerufen, die zum Startzeitpunkt der Transaktion vorhanden war. Sie können die Momentaufnahmeisolation für eine Datenbank nur verwenden, wenn die `ALLOW_SNAPSHOT_ISOLATION`-Datenbankoption auf ON festgelegt wurde. Standardmäßig ist diese Option für Benutzerdatenbanken auf OFF gesetzt.<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die Versionsverwaltung von Metadaten nicht. Aus diesem Grund gibt es bezüglich der DDL-Vorgänge, die in einer unter Momentaufnahmeisolation ausgeführten expliziten Transaktion ausgeführt werden, Einschränkungen. Die folgenden DDL-Anweisungen sind bei der Momentaufnahme-Isolationsstufe nach einer BEGIN TRANSACTION-Anweisung nicht zulässig: ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME oder eine beliebige CLR-DDL-Anweisung (Common Language Runtime). Diese Anweisungen sind zulässig, wenn Sie die Momentaufnahmeisolation in impliziten Transaktionen verwenden. Eine implizite Transaktion ist definitionsgemäß eine einzelne Anweisung, mit der die Semantik der Momentaufnahmeisolation auch in DDL-Anweisungen erzwungen werden kann. Verstöße gegen dieses Prinzip können zu Fehler 3961 führen: `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`.|  
   
  Die folgende Tabelle veranschaulicht, welche Parallelitätsnebeneffekte in den einzelnen Isolationsstufen möglich sind.  
   
@@ -306,7 +309,8 @@ GO
   
  Die Isolationsstufen von Transaktionen können mithilfe von [!INCLUDE[tsql](../includes/tsql-md.md)] oder durch eine Datenbank-API festgelegt werden.  
   
- [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts verwenden die SET TRANSACTION ISOLATION LEVEL-Anweisung.  
+ **[!INCLUDE[tsql](../includes/tsql-md.md)]**                                      
+ [!INCLUDE[tsql](../includes/tsql-md.md)]-Skripts verwenden die `SET TRANSACTION ISOLATION LEVEL`-Anweisung.  
   
  **ADO**  
  ADO-Anwendungen legen die `IsolationLevel`-Eigenschaft des **Connection**-Objekts auf „adXactReadUncommitted“, „adXactReadCommitted“, „adXactRepeatableRead“ oder „adXactReadSerializable“ fest.  
@@ -324,7 +328,7 @@ GO
   
  Für Momentaufnahmetransaktionen rufen Anwendungen `SQLSetConnectAttr` auf, wobei „Attribute“ auf SQL_COPT_SS_TXN_ISOLATION und „ValuePtr“ auf SQL_TXN_SS_SNAPSHOT festgelegt sind. Eine Momentaufnahmetransaktion kann mit SQL_COPT_SS_TXN_ISOLATION oder SQL_ATTR_TXN_ISOLATION abgerufen werden.  
   
-##  <a name="Lock_Engine"></a> Sperren im [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+##  <a name="locking-in-the-database-engine"></a><a name="Lock_Engine"></a> Sperren in der Datenbank-Engine  
  Sperren beschreiben einen Mechanismus, der von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] zum Synchronisieren des gleichzeitigen Benutzerzugriffs auf die gleichen Daten verwendet wird.  
   
  Bevor eine Transaktion eine Abhängigkeit für den aktuellen Status von Daten abruft, z. B. durch Lesen oder Ändern der Daten, muss sie sich selbst vor den Auswirkungen schützen, die sich ergeben können, wenn eine andere Transaktion die gleichen Daten ändert. Die Transaktion fordert zu diesem Zweck eine Sperre für die betreffenden Daten an. Sperren besitzen verschiedene Modi, z. B. freigegeben oder exklusiv. Der Sperrmodus definiert den Grad der Abhängigkeit, den die Transaktion für die Daten eingerichtet hat. Keiner Transaktion wird eine Sperre gewährt, die einen Konflikt mit dem Modus einer Sperre verursachen würde, die einer anderen Transaktion bereits für die betreffenden Daten erteilt wurde. Wenn eine Transaktion einen Sperrmodus anfordert, der einen Konflikt mit einer Sperre verursacht, die bereits für die gleichen Daten erteilt wurde, hält die Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die anfordernde Transaktion an, bis die erste Sperre freigegeben wird.  
@@ -357,35 +361,35 @@ GO
 > [!NOTE]  
 > HoBT- und TABLE-Sperren können durch die LOCK_ESCALATION-Option von [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) beeinflusst werden.  
   
-### <a name="lock_modes"></a> Sperrmodi  
+### <a name="lock-modes"></a><a name="lock_modes"></a> Sperrmodi  
  Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sperrt Ressourcen mithilfe unterschiedlicher Sperrmodi, die bestimmen, wie gleichzeitige Transaktionen auf Ressourcen zugreifen können.  
   
  Die folgende Tabelle zeigt die Ressourcen-Sperrmodi, die das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet.  
   
 |Sperrmodus|BESCHREIBUNG|  
 |---------------|-----------------|  
-|Shared (S)|Wird für Lesevorgänge verwendet, die Daten nicht ändern oder aktualisieren, wie z.B. eine `SELECT`-Anweisung.|  
-|Update (U)|Wird für Ressourcen verwendet, die aktualisiert werden können. Verhindert eine gängige Form des Deadlocks, die auftritt, wenn mehrere Sitzungen Ressourcen lesen, sperren und anschließend möglicherweise aktualisieren.|  
-|Exclusive (X)|Wird für Datenänderungsvorgänge verwendet, wie z.B. `INSERT`, `UPDATE` oder`DELETE`. Stellt sicher, dass nicht mehrere Updates an derselben Ressource gleichzeitig vorgenommen werden können.|  
-|Intent|Wird verwendet, um eine Sperrhierarchie zu erstellen. Es gibt folgende Typen von beabsichtigten Sperren: beabsichtigte freigegebene Sperre (Intent Shared, IS), beabsichtigte exklusive Sperre (Intent Exclusive, IX) und freigegebene Sperre mit beabsichtigter exklusiver Sperre (Shared With Intent Exclusive, SIX).|  
-|Schema|Wird beim Ausführen von Vorgängen verwendet, die vom Schema einer Tabelle abhängen. Es gibt folgende Typen von Schemasperren: Schemaänderungssperre (Sch-M) und Schemastabilitätssperre (Sch-S).|  
-|Bulk Update (BU)|Wird beim Massenkopieren von Daten in eine Tabelle verwendet, wenn der `TABLOCK`-Hinweis angegeben ist.|  
-|Schlüsselbereich|Schützt den von einer Abfrage gelesenen Zeilenbereich, wenn die serialisierbare Transaktionsisolationsstufe verwendet wird. Stellt sicher, dass keine anderen Transaktionen Zeilen einfügen können, die von den Abfragen der serialisierbaren Transaktion berücksichtigt werden können, falls diese erneut ausgeführt würden.|  
+|**Freigegebene Sperre (Shared, S)**|Wird für Lesevorgänge verwendet, die Daten nicht ändern oder aktualisieren, wie z. B. SELECT-Anweisungen.|  
+|**Updatesperre (U)**|Wird für Ressourcen verwendet, die aktualisiert werden können. Verhindert eine gängige Form des Deadlocks, die auftritt, wenn mehrere Sitzungen Ressourcen lesen, sperren und anschließend möglicherweise aktualisieren.|  
+|**Exklusive Sperre (X)**|Wird bei Datenänderungen wie INSERT-, UPDATE- oder DELETE-Vorgängen verwendet. Stellt sicher, dass nicht mehrere Updates an derselben Ressource gleichzeitig vorgenommen werden können.|  
+|**Absicht**|Wird verwendet, um eine Sperrhierarchie zu erstellen. Es gibt folgende Typen von beabsichtigten Sperren: beabsichtigte freigegebene Sperre (Intent Shared, IS), beabsichtigte exklusive Sperre (Intent Exclusive, IX) und freigegebene Sperre mit beabsichtigter exklusiver Sperre (Shared With Intent Exclusive, SIX).|  
+|**Schema**|Wird beim Ausführen von Vorgängen verwendet, die vom Schema einer Tabelle abhängen. Es gibt folgende Typen von Schemasperren: Schemaänderungssperre (Sch-M) und Schemastabilitätssperre (Sch-S).|  
+|**Massenaktualisierung (Bulk Update, BU)**|Wird beim Massenkopieren von Daten in eine Tabelle verwendet, wenn der **TABLOCK**-Hinweis angegeben ist.|  
+|**Schlüsselbereich**|Schützt den von einer Abfrage gelesenen Zeilenbereich, wenn die serialisierbare Transaktionsisolationsstufe verwendet wird. Stellt sicher, dass keine anderen Transaktionen Zeilen einfügen können, die von den Abfragen der serialisierbaren Transaktion berücksichtigt werden können, falls diese erneut ausgeführt würden.|  
   
-#### <a name="shared"></a> Gemeinsame Sperren  
+#### <a name="shared-locks"></a><a name="shared"></a> Gemeinsame Sperren  
  Freigegebene Sperren (S) ermöglichen, dass Transaktionen eine Ressource gleichzeitig lesen können (SELECT), wenn die Steuerung durch eingeschränkte Parallelität aktiviert ist. Andere Transaktionen können die Daten nicht ändern, während freigegebene Sperren (S) für die Ressource eingerichtet sind. Freigegebene Sperren (S) einer Ressource werden aufgehoben, sobald der Lesevorgang abgeschlossen ist, es sei denn, die Isolationsstufe der Transaktion wird auf REPEATABLE READ oder höher festgelegt oder ein Sperrhinweis wird verwendet, um freigegebene Sperren (S) für die Dauer der Transaktion beizubehalten.  
   
-#### <a name="update"></a> Aktualisierungssperren  
+#### <a name="update-locks"></a><a name="update"></a> Aktualisierungssperren  
  Updatesperren (Update, U) verhindern eine häufige Form von Deadlocks. Bei REPEATABLE READ- oder SERIALIZABLE-Transaktionen liest die Transaktion Daten, wozu sie eine freigegebene Sperre (S) für die Ressource (Seite oder Zeile) einrichtet, und ändert anschließend die Daten, was eine Konvertierung der Sperre in eine exklusive Sperre (X) erfordert. Wenn zwei Transaktionen eine freigegebene Sperre für eine Ressource einrichten und anschließend versuchen, Daten gleichzeitig zu aktualisieren, versucht die erste Transaktion, die Sperre zu einer exklusiven Sperre (X) zu konvertieren. Diese Konvertierung muss aufgeschoben werden, da der Modus der exklusiven Sperre der einen Transaktion nicht kompatibel mit dem Modus der freigegebenen Sperre der anderen Transaktion ist. Es ergibt sich ein Sperrenwartevorgang. Die zweite Transaktion versucht nun ebenfalls, eine exklusive Sperre (X) für das Update einzurichten. Da beide Transaktionen das Konvertieren in eine exklusive Sperre (X) versuchen und darauf warten, dass die andere Transaktion die freigegebene Sperre aufhebt, kommt es zu einem Deadlock.  
   
  Um dieses potenzielle Deadlockproblem zu vermeiden, werden Updatesperren (U) verwendet. Es kann jeweils nur eine Transaktion eine Updatesperre (U) für eine Ressource einrichten. Wenn eine Transaktion eine Ressource ändert, wird die Updatesperre (U) in eine exklusive Sperre (X) konvertiert.  
   
-#### <a name="exclusive"></a> Exklusive Sperren  
+#### <a name="exclusive-locks"></a><a name="exclusive"></a> Exklusive Sperren  
  Exklusive Sperren (X) verhindern, dass Transaktionen gleichzeitig auf eine Ressource zugreifen. Eine exklusive Sperre (X) bewirkt, dass keine andere Transaktion Daten ändern kann. Lesevorgänge können nur mithilfe des NOLOCK-Hinweises oder der READ UNCOMMITTED-Isolationsstufe ausgeführt werden.  
   
  Datenänderungsanweisungen wie INSERT, UPDATE und DELETE setzen sowohl Änderungs- als auch Lesevorgänge voraus. Die Anweisung führt zunächst Lesevorgänge aus, um die Daten einzulesen, und anschließend die erforderlichen Änderungsvorgänge. Daher machen Datenänderungsanweisungen normalerweise sowohl freigegebene als auch exklusive Sperren erforderlich. Eine UPDATE-Anweisung kann beispielsweise Zeilen einer Tabelle ändern, die auf einem Join mit einer anderen Tabelle basieren. In diesem Fall fordert die UPDATE-Anweisung freigegebene Sperren für die Zeilen in der verknüpften Tabelle an, sowie exklusive Sperren für die zu aktualisierenden Zeilen.  
   
-#### <a name="intent"></a> Beabsichtigte Sperren  
+#### <a name="intent-locks"></a><a name="intent"></a> Beabsichtigte Sperren  
  Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet beabsichtigte Sperren, um das Platzieren einer freigegebenen (S) oder exklusiven Sperre (X) auf eine Ressource zu schützen, die sich weiter unten in der Sperrhierarchie befinden. Die Bezeichnung 'beabsichtige Sperre' bedeutet, dass beabsichtigte Sperren vor Sperren auf untergeordneten Ebenen eingerichtet werden, und damit die Absicht ausdrücken, Sperren auf untergeordneten Ebenen zu platzieren.  
   
  Beabsichtigte Sperren werden aus zwei Gründen verwendet:  
@@ -399,21 +403,21 @@ GO
   
 |Sperrmodus|BESCHREIBUNG|  
 |---------------|-----------------|  
-|Beabsichtigte freigegebene Sperre (Intent Shared, IS)|Schützt angeforderte oder eingerichtete freigegebene Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie.|  
-|Beabsichtigte exklusive Sperre (Intent Exclusive, IX)|Schützt angeforderte oder eingerichtete exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. IX ist eine Obermenge der beabsichtigten freigegebenen Sperre und schützt auch vor Anforderung freigegebener Sperren auf Ressourcen untergeordneter Ebenen in der Hierarchie.|  
-|Freigegebene Sperre mit beabsichtigter exklusiver Sperre (Shared With Intent Exclusive, SIX)|Schützt angeforderte oder eingerichtete freigegebene Sperren aller Ressourcen untergeordneter Ebenen in der Hierarchie sowie beabsichtigte exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. Gleichzeitige beabsichtigte freigegebene Sperren auf der Ressource der obersten Ebene sind zugelassen. So werden beispielsweise bei einer Sperre des Typs SIX für eine Tabelle auch beabsichtigte exklusive Sperren für die zu ändernden Seiten sowie exklusive Sperren für die zu ändernden Zeilen eingerichtet. Es kann jeweils nur eine Sperre des Typs SIX pro Ressource eingerichtet werden, durch die Updates an der Ressource durch andere Transaktionen verhindert werden. Dennoch können andere Transaktionen Ressourcen, die sich weiter unten in der Hierarchie befinden, lesen, indem sie beabsichtigte freigegebene Sperren auf Tabellenebene einrichten.|  
-|Beabsichtigte Updatesperre (Intent Update, IU)|Schützt angeforderte oder eingerichtete Updatesperren aller Ressourcen untergeordneter Hierarchieebenen. IU-Sperren werden nur mit Seitenressourcen verwendet. IU-Sperren werden zu IX-Sperren konvertiert, wenn ein Updatevorgang ausgeführt wird.|  
-|Freigegebene beabsichtigte Updatesperre (Shared Intent Update, SIU)|Eine Kombination der Sperren vom Typ S und IU, die sich aus der separaten Einrichtung dieser Sperren und dem gleichzeitigen Beibehalten beider Sperren ergibt. Nehmen Sie beispielsweise an, eine Transaktion führt eine Abfrage mit dem PAGLOCK-Hinweis und anschließend einen Updatevorgang aus. Die Abfrage mit dem PAGLOCK-Hinweis richtet also die S-Sperre ein, wohingegen der Updatevorgang die IU-Sperre einrichtet.|  
-|Exklusive beabsichtigte Updatesperre (Update intent exclusive, UIX)|Eine Kombination der Sperren vom Typ U und IX, die sich aus dem separaten Einrichten dieser Sperren und dem gleichzeitigen Beibehalten beider Sperren ergibt.|  
+|**Beabsichtigte freigegebene Sperre (Intent Shared, IS)**|Schützt angeforderte oder eingerichtete freigegebene Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie.|  
+|**Beabsichtigte exklusive Sperre (Intent Exclusive, IX)**|Schützt angeforderte oder eingerichtete exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. IX ist eine Obermenge der beabsichtigten freigegebenen Sperre und schützt auch vor Anforderung freigegebener Sperren auf Ressourcen untergeordneter Ebenen in der Hierarchie.|  
+|**Freigegebene Sperre mit beabsichtigter exklusiver Sperre (Shared With Intent Exclusive, SIX)**|Schützt angeforderte oder eingerichtete freigegebene Sperren aller Ressourcen untergeordneter Ebenen in der Hierarchie sowie beabsichtigte exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. Gleichzeitige beabsichtigte freigegebene Sperren auf der Ressource der obersten Ebene sind zugelassen. So werden beispielsweise bei einer Sperre des Typs SIX für eine Tabelle auch beabsichtigte exklusive Sperren für die zu ändernden Seiten sowie exklusive Sperren für die zu ändernden Zeilen eingerichtet. Es kann jeweils nur eine Sperre des Typs SIX pro Ressource eingerichtet werden, durch die Updates an der Ressource durch andere Transaktionen verhindert werden. Dennoch können andere Transaktionen Ressourcen, die sich weiter unten in der Hierarchie befinden, lesen, indem sie beabsichtigte freigegebene Sperren auf Tabellenebene einrichten.|  
+|**Beabsichtigte Aktualisierungssperre (IU)**|Schützt angeforderte oder eingerichtete Updatesperren aller Ressourcen untergeordneter Hierarchieebenen. IU-Sperren werden nur mit Seitenressourcen verwendet. IU-Sperren werden zu IX-Sperren konvertiert, wenn ein Updatevorgang ausgeführt wird.|  
+|**Gemeinsame Sperre mit beabsichtigter Aktualisierungssperre (SIU)**|Eine Kombination der Sperren vom Typ S und IU, die sich aus der separaten Einrichtung dieser Sperren und dem gleichzeitigen Beibehalten beider Sperren ergibt. Nehmen Sie beispielsweise an, eine Transaktion führt eine Abfrage mit dem PAGLOCK-Hinweis und anschließend einen Updatevorgang aus. Die Abfrage mit dem PAGLOCK-Hinweis richtet also die S-Sperre ein, wohingegen der Updatevorgang die IU-Sperre einrichtet.|  
+|**Aktualisierungssperre mit beabsichtigter exklusiver Sperre (UIX)**|Eine Kombination der Sperren vom Typ U und IX, die sich aus dem separaten Einrichten dieser Sperren und dem gleichzeitigen Beibehalten beider Sperren ergibt.|  
   
-#### <a name="schema"></a> Schemasperren  
+#### <a name="schema-locks"></a><a name="schema"></a> Schemasperren  
  Sperren des Typs Sch-M (Schema Modification, Schemaänderung) werden von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet, wenn für eine Tabelle ein DDL-Vorgang (Data Definition Language, Datendefinitionssprache) ausgeführt wird, wie etwa das Hinzufügen einer Spalte oder Löschen einer Tabelle. Während die Sch-M-Sperre besteht, werden gleichzeitige Zugriffe auf die Tabelle verhindert. Dies bedeutet, dass die Sch-M-Sperre alle externen Vorgänge blockiert, bis die Sperre aufgehoben wird.  
   
  Einige DML-Vorgänge (Data Manipulation Language), z. B. das Abschneiden von Tabellen, verhindern mithilfe von Sch-M-Sperren, dass gleichzeitige Vorgänge auf die betroffenen Tabellen zugreifen.  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet Sperren des Typs Sch-S (Schemastabilität) beim Kompilieren und Ausführen von Abfragen. Sch-S-Sperren blockieren keine Transaktionssperren, auch keine exklusive Sperren (X). Daher können während der Kompilierung einer Abfrage andere Transaktionen, einschließlich Transaktionen mit exklusiven Sperren (X) auf Tabellenebene, weiterhin ausgeführt werden. Gleichzeitige DDL-Vorgänge und gleichzeitige DML-Vorgänge, die Sch-M-Sperren abrufen, können für die Tabelle jedoch nicht ausgeführt werden.  
   
-#### <a name="bulk_update"></a> Massenaktualisierungssperren  
+#### <a name="bulk-update-locks"></a><a name="bulk_update"></a> Massenaktualisierungssperren  
  Massenupdatesperren (BU) werden verwendet, damit mehrere Threads gleichzeitig Daten in dieselbe Tabelle laden können, während sie zugleich anderen Prozessen, die keine Daten massenkopieren, keinen Zugriff auf die Tabelle gewähren. Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet Massenupdatesperren (Bulk Update, BU), wenn die folgenden Bedingungen zutreffen.  
   
 -   Zum Massenkopieren von Daten in eine Tabelle verwenden Sie die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung BULK INSERT oder die OPENROWSET(BULK)-Funktion. Sie können auch einen der Masseneinfügungs-API-Befehle wie „.NET SqlBulkCopy“, OLEDB-FastLoad-APIs oder die ODBC-APIs für das Massenkopieren verwenden.  
@@ -422,10 +426,10 @@ GO
 > [!TIP]  
 > Im Gegensatz zur BULK INSERT-Anweisung, die eine weniger restriktive Massenupdatesperre enthält, weist INSERT INTO…SELECT mit dem TABLOCK-Hinweis eine exklusive Sperre (X) für die Tabelle auf. Das bedeutet, dass Sie keine Zeilen mit parallelen Einfügevorgängen einfügen können.  
   
-#### <a name="key_range"></a> Schlüsselbereichssperren  
+#### <a name="key-range-locks"></a><a name="key_range"></a> Schlüsselbereichssperren  
  Schlüsselbereichssperren schützen einen Bereich von Zeilen, die implizit in ein Recordset eingeschlossen wurden, das von einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung gelesen wird; dies geschieht bei Verwendung der Transaktionsisolationsstufe SERIALIZABLE. Durch Schlüsselbereichssperren werden Phantomlesezugriffe verhindert. Indem die Schlüsselbereiche zwischen Zeilen geschützt werden, wird auch verhindert, dass beim Zugreifen von Transaktionen auf Recordsets Phantomeinfügungen oder -löschungen erfolgen.  
   
-### <a name="lock_compatibility"></a> Kompatibilität von Sperren  
+### <a name="lock-compatibility"></a><a name="lock_compatibility"></a> Kompatibilität von Sperren  
  Durch die Kompatibilität von Sperren wird gesteuert, ob mehrere Transaktionen gleichzeitig Sperren für dieselbe Ressource einrichten können. Wenn eine Ressource bereits durch eine andere Transaktion gesperrt wurde, kann eine erneute Sperranforderung nur gewährt werden, wenn der Modus der angeforderten Sperre mit dem Modus der vorhandenen Sperre kompatibel ist. Wenn der Modus der angeforderten Sperre nicht mit dem Modus der vorhandenen Sperre kompatibel ist, wartet die Transaktion, von der die neue Sperre angefordert wird, bis die vorhandene Sperre aufgehoben wird oder bis das Timeoutintervall der Sperre abgelaufen ist. So sind z. B. keine anderen Sperrmodi mit exklusiven Sperren kompatibel. Wenn eine exklusive Sperre (X) eingerichtet ist, kann eine andere Transaktion eine Sperre jeglicher Art (freigegeben, Update oder exklusiv) für die Ressource erst dann einrichten, wenn die exklusive Sperre (X) am Ende der ersten Transaktion aufgehoben wird. Falls hingegen eine freigegebene Sperre (Shared, S) auf eine Ressource angewendet wurde, können andere Transaktionen ebenfalls eine freigegebene Sperre oder eine Updatesperre (Update, U) auf dieses Element anwenden, selbst wenn die erste Transaktion noch nicht beendet ist. Andere Transaktionen können jedoch eine exklusive Sperre erst dann einrichten, wenn die freigegebene Sperre aufgehoben wurde.  
   
 <a name="lock_compat_table"></a> Die folgende Tabelle stellt die Kompatibilität der am häufigsten auftretenden Sperrmodi dar.  
@@ -452,9 +456,9 @@ GO
   
  Durch Schlüsselbereichssperren werden Phantomlesezugriffe verhindert. Indem die Schlüsselbereiche zwischen Zeilen geschützt werden, wird außerdem verhindert, dass es zu Phantomeinfügungsvorgängen in Datensätzen kommt, auf die eine Transaktion zugreift.  
   
- Eine Schlüsselbereichssperre wird für einen Index platziert; auf diese Weise wird ein Start- und Endschlüsselwert angegeben. Durch diese Sperre wird jeglicher Versuch blockiert, eine Zeile mit einem Schlüsselwert einzufügen, zu aktualisieren oder zu löschen, der dem Bereich zugehörig ist, da von diesen Vorgängen zunächst eine Sperre für den Index eingerichtet werden müsste. Eine serialisierbare Transaktion könnte beispielsweise eine SELECT-Anweisung ausgeben, die sämtliche Zeilen liest, deren Schlüsselwerte zwischen **'** AAA **'** und **'** CZZ **'** liegen. Eine Schlüsselbereichssperre für die Schlüsselwerte im Bereich von **'** AAA **'** bis **'** CZZ **'** verhindert, dass andere Transaktionen Zeilen mit Schlüsselwerten in diesem Bereich einfügen, beispielsweise **'** ADG **'** , **'** BBD **'** oder **'** CAL **'** .  
+ Eine Schlüsselbereichssperre wird für einen Index platziert; auf diese Weise wird ein Start- und Endschlüsselwert angegeben. Durch diese Sperre wird jeglicher Versuch blockiert, eine Zeile mit einem Schlüsselwert einzufügen, zu aktualisieren oder zu löschen, der dem Bereich zugehörig ist, da von diesen Vorgängen zunächst eine Sperre für den Index eingerichtet werden müsste. Eine serialisierbare Transaktion könnte beispielsweise eine `SELECT`-Anweisung ausgeben, die alle Zeilen liest, deren Schlüsselwerte mit der Bedingung `BETWEEN 'AAA' AND 'CZZ'` übereinstimmen. Eine Schlüsselbereichssperre für die Schlüsselwerte im Bereich von **'** AAA **'** bis **'** CZZ **'** verhindert, dass andere Transaktionen Zeilen mit Schlüsselwerten in diesem Bereich einfügen, beispielsweise **'** ADG **'** , **'** BBD **'** oder **'** CAL **'** .  
   
-#### <a name="key_range_modes"></a> Sperrmodi für Schlüsselbereiche  
+#### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> Sperrmodi für Schlüsselbereiche  
  Zu Schlüsselbereichssperren gehören eine Bereichs- und eine Zeilenkomponente, die im Bereichszeilenformat angegeben werden.  
   
 -   Bereich stellt den Sperrmodus dar, der den Bereich zwischen zwei aufeinander folgenden Indexeinträgen schützt.  
@@ -484,7 +488,7 @@ GO
 |**RangeI-N**|Ja|Ja|Ja|Nein|Nein|Ja|Nein|  
 |**RangeX-X**|Nein|Nein|Nein|Nein|Nein|Nein|Nein|  
   
-#### <a name="lock_conversion"></a> Konvertierungssperren  
+#### <a name="conversion-locks"></a><a name="lock_conversion"></a> Konvertierungssperren  
  Konvertierungssperren werden erstellt, wenn eine Schlüsselbereichssperre eine andere Sperre überlappt.  
   
 |Sperre 1|Sperre 2|Konvertierungssperre|  
@@ -561,7 +565,7 @@ INSERT mytable VALUES ('Dan');
   
  Für den Indexeintrag, der dem Namen David entspricht, wird die Schlüsselbereichssperre mit dem Modus RangeI-N platziert, um den Bereich zu testen. Wenn die Sperre erteilt wird, wird `Dan` eingefügt, und für den Wert `Dan` wird eine exklusive Sperre (X) platziert. Die Schlüsselbereichssperre mit dem Modus RangeI-N ist nur notwendig, um den Bereich zu testen, und wird nicht für die Dauer der Transaktion aufrechterhalten, die den Einfügungsvorgang ausführt. Andere Transaktionen können Werte vor oder nach dem eingefügten Wert `Dan` einfügen oder löschen. Eine Transaktion, die versucht, den Wert `Dan` zu lesen, einzufügen oder zu löschen, wird jedoch so lange gesperrt, bis für die einfügende Transaktion entweder ein Commit oder ein Rollback ausgeführt wird.  
   
-### <a name="dynamic_locks"></a> Dynamische Sperre  
+### <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Dynamische Sperre  
  Wenn Sie Sperren auf niedriger Ebene verwenden, z. B. Zeilensperren, wird die Parallelität erhöht, da die Wahrscheinlichkeit geringer ist, dass zwei Transaktionen gleichzeitig Sperren für die gleichen Daten anfordern. Das Verwenden von Sperren auf niedriger Ebene erhöht außerdem die Anzahl der Sperren sowie der Ressourcen, die für deren Verwaltung erforderlich sind. Wenn Sie Tabellen- oder Seitensperren auf hoher Ebene verwenden, wird der Aufwand zwar gesenkt, jedoch auf Kosten der Parallelität.  
   
  ![lockcht](../relational-databases/media/lockcht.png) 
@@ -576,7 +580,7 @@ INSERT mytable VALUES ('Dan');
   
  In [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und höheren Versionen hat sich das Verhalten der Sperrenausweitung mit der Einführung der `LOCK_ESCALATION`-Option geändert. Weitere Informationen finden Sie unter der `LOCK_ESCALATION`-Option von [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
   
-### <a name="deadlocks"></a> Deadlocks  
+## <a name="deadlocks"></a><a name="deadlocks"></a> Deadlocks  
  Ein Deadlock tritt auf, wenn zwei Tasks einander dauerhaft gegenseitig blockieren, weil jeder der Tasks eine Sperre für eine Ressource aufrecht erhält, die die anderen Tasks zu sperren versuchen. Beispiel:  
   
 -   Die Transaktion A richtet eine freigegebene Sperre für Zeile 1 ein.  
@@ -590,28 +594,29 @@ INSERT mytable VALUES ('Dan');
   
  Deadlocks werden oft mit normalen Blockierungen verwechselt. Wenn eine Transaktion eine Sperre für eine Ressource anfordert, die bereits von einer anderen Transaktion gesperrt ist, wartet die anfordernde Transaktion, bis die Sperre aufgehoben wird. Standardmäßig treten bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Transaktionen keine Timeouts auf, es sei denn, LOCK_TIMEOUT wurde festgelegt. Die anfordernde Transaktion ist also blockiert, befindet sich aber nicht in einem Deadlock, da sie ihrerseits die andere Transaktion, die im Besitz der Sperre ist, nicht blockiert. Die Transaktion, die die Sperre besitzt, wird zu gegebener Zeit abgeschlossen und die Sperre aufgehoben, woraufhin die anfordernde Transaktion die Sperre erhält und den Transaktionsvorgang ausführt.  
   
- Deadlocks werden manchmal auch "deadly embrace" (tödliche Umarmung) genannt.  
+> [!NOTE]
+> Deadlocks werden manchmal auch "deadly embrace" (tödliche Umarmung) genannt.  
   
  Ein Deadlock ist eine Bedingung, die in jedem System mit mehreren Threads auftreten kann, nicht nur bei Managementsystemen für relationale Datenbanken, sowie in anderen Ressourcen als Sperren für Datenbankobjekte. Ein Thread in einem Multithread-Betriebssystem kann beispielsweise eine Ressource oder mehrere Ressourcen, wie z. B. Speicherblöcke, reservieren. Wenn sich die zu reservierende Ressource derzeit im Besitz eines anderen Threads befindet, muss der erste Thread eventuell warten, bis der Besitzerthread die Zielressource freigegeben hat. Der wartende Thread ist für diese bestimmte Ressource abhängig vom Besitzerthread. In einer Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] können Sitzungen beim Reservieren von anderen als Datenbankressourcen, wie z. B. Speicher oder Threads, in eine Deadlocksituation geraten.  
   
- ![deadlock](../relational-databases/media/deadlock.png)  
+ ![Diagramm mit Transaktionsdeadlock](../relational-databases/media/deadlock.png)  
   
  In der Abbildung weist Transaktion T1 eine Abhängigkeit von Transaktion T2 für die Sperrressource der **Part**-Tabelle auf. Entsprechend weist Transaktion T2 eine Abhängigkeit von Transaktion T1 für die Sperrressource der **Supplier**-Tabelle auf. Da diese Abhängigkeiten einen Kreis bilden, besteht ein Deadlock zwischen den Transaktionen T1 und T2.  
   
  Deadlocks können auch auftreten, wenn eine Tabelle partitioniert wird und für die `LOCK_ESCALATION`-Einstellung von `ALTER TABLE` die Option AUTO festgelegt ist. Ist für `LOCK_ESCALATION` die Option AUTO festgelegt, nimmt die Parallelität durch Unterstützung der Sperre von Tabellenpartitionen auf HoBT-Ebene anstatt auf TABLE-Ebene durch [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] zu. Wenn jedoch separate Transaktionen Partitionssperren in eine Tabelle aufnehmen und in der anderen Partitionstransaktion eine Sperre hinzugefügt werden soll, wird hiermit ein Deadlock verursacht. Diese Art Deadlock kann durch Festlegen von `TABLE` für `LOCK_ESCALATION` vermieden werden, auch wenn mit dieser Einstellung die Parallelität verringert wird, indem große Updates gezwungen werden, auf eine Tabellensperre zu warten.  
   
-#### <a name="detecting-and-ending-deadlocks"></a>Erkennen und Beenden von Deadlocks  
+### <a name="detecting-and-ending-deadlocks"></a>Erkennen und Beenden von Deadlocks  
  Ein Deadlock tritt auf, wenn zwei Tasks einander dauerhaft gegenseitig blockieren, weil jeder der Tasks eine Sperre für eine Ressource aufrecht erhält, die die anderen Tasks zu sperren versuchen. Die folgende Abbildung zeigt den Deadlockstatus auf hoher Ebene, wobei Folgendes gilt.  
   
 -   Task T1 erhält eine Sperre für Ressource R1 aufrecht (wird durch den Pfeil von R1 zu T1 angezeigt) und hat eine Sperre für Ressource R2 angefordert (wird durch den Pfeil von T1 zu R2 angezeigt).  
 -   Task T2 erhält eine Sperre für Ressource R2 aufrecht (wird durch den Pfeil von R2 zu T1 angezeigt) und hat eine Sperre für Ressource R1 angefordert (wird durch den Pfeil von T2 zu R1 angezeigt).  
 -   Da keiner der Tasks fortgesetzt werden kann, bevor eine Ressource verfügbar ist, und keine der Ressourcen freigegeben werden kann, bevor ein Task fortgesetzt wird, ist ein Deadlock vorhanden.  
   
- ![Task_Deadlock_State](../relational-databases/media/Task_Deadlock_State.png)  
+ ![Diagramm mit Tasks im Deadlockstatus](../relational-databases/media/Task_Deadlock_State.png)  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] erkennt Deadlockzyklen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatisch. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] wählt eine der Sitzungen als Deadlockopfer aus, und die aktuelle Transaktion wird mit einem Fehler beendet, um den Deadlock zu durchbrechen.  
   
-##### <a name="deadlock_resources"></a> Ressourcen, die an einem Deadlock beteiligt sein können  
+#### <a name="resources-that-can-deadlock"></a><a name="deadlock_resources"></a> Ressourcen, die an einem Deadlock beteiligt sein können  
  Für jede Benutzersitzung werden möglicherweise ein oder mehrere Tasks ausgeführt, von denen jeder Task eine Vielzahl von Ressourcen abruft oder auf den Abruf wartet. Die folgenden Typen von Ressourcen können eine Blockierung bewirken, die zu einem Deadlock führt.  
   
 -   **Sperren:** Das Warten auf den Abruf von Sperren für Ressourcen, z. B. Objekte, Seiten, Zeilen, Metadaten und Anwendungen, kann einen Deadlock verursachen. Transaktion T1 besitzt z. B. eine freigegebene (S) Sperre für Zeile r1 und wartet darauf, eine exklusive (X) Sperre für r2 zu erhalten. Transaktion T2 besitzt eine freigegebene (S) Sperre für Zeile r2 und wartet darauf, eine exklusive (X) Sperre für Zeile r1 zu erhalten. Dies führt zu einem Sperrenzyklus, in dem T1 und T2 darauf warten, dass die jeweils andere Transaktion die gesperrten Ressourcen freigibt.  
@@ -620,7 +625,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **Speicher** Wenn gleichzeitige Anforderungen auf Arbeitsspeicherzuweisungen warten, die mit dem verfügbaren Arbeitsspeicher nicht befriedigt werden können, kann ein Deadlock auftreten. Zwei gleichzeitige Abfragen, Q1 und Q2, werden z. B. als benutzerdefinierte Funktionen ausgeführt, die 10 MB bzw. 20 MB Arbeitsspeicher abrufen. Wenn jede der Abfragen 30 MB benötigt und der gesamte verfügbare Arbeitsspeicher 20 MB beträgt, müssen Q1 und Q2 warten, bis die jeweils andere Transaktion Arbeitsspeicher freigibt; dies führt zu einem Deadlock.  
   
--   **Ressourcen in Verbindung mit einer parallelen Abfrageausführung:** Coordinator-, Producer- oder Consumer-Threads, die mit einem Austauschanschluss verknüpft sind, können einander blockieren und einen Deadlock verursachen, wenn mindestens ein weiterer Prozess eingeschlossen ist, der nicht Teil der parallelen Abfrage ist. Wenn also eine parallele Abfrageausführung gestartet wird, bestimmt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] den Grad des Parallelismus oder die Anzahl der Arbeitsthreads auf Basis der aktuellen Arbeitsauslastung. Ein Deadlock kann auftreten, wenn sich die Arbeitsauslastung des Systems unerwartet ändert. Das ist beispielsweise der Fall, wenn neue Abfragen auf dem Server gestartet werden oder im System nicht mehr genügend Arbeitsthreads vorhanden sind.  
+-   **Ressourcen in Verbindung mit einer parallelen Abfrageausführung:** Coordinator-, Producer- oder Consumer-Threads, die mit einem Austauschport verknüpft sind, können einander blockieren und einen Deadlock verursachen, wenn mindestens ein weiterer Prozess eingeschlossen ist, der nicht Teil der parallelen Abfrage ist. Wenn also eine parallele Abfrageausführung gestartet wird, bestimmt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] den Grad des Parallelismus oder die Anzahl der Arbeitsthreads auf Basis der aktuellen Arbeitsauslastung. Ein Deadlock kann auftreten, wenn sich die Arbeitsauslastung des Systems unerwartet ändert. Das ist beispielsweise der Fall, wenn neue Abfragen auf dem Server gestartet werden oder im System nicht mehr genügend Arbeitsthreads vorhanden sind.  
   
 -   **MARS-Ressourcen (Multiple Active Result Sets):** Diese Ressourcen werden zum Steuern des Interleavings mehrerer aktiver Anforderungen unter MARS verwendet. Weitere Informationen finden Sie unter [Verwenden von Multiple Active Result Sets (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
@@ -641,7 +646,7 @@ INSERT mytable VALUES ('Dan');
   
  ![LogicFlowExamplec](../relational-databases/media/udb9_LogicFlowExamplec.png)  
   
-##### <a name="deadlock_detection"></a> Deadlockerkennung  
+### <a name="deadlock-detection"></a><a name="deadlock_detection"></a> Deadlockerkennung  
  Alle in diesem Abschnitt aufgeführten Ressourcen nehmen am [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Deadlockerkennungsschema teil. Die Deadlockerkennung wird von einem Sperrenüberwachungsthread ausgeführt, der periodisch alle Tasks in einer Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] durchsucht. Die folgenden Schritte beschreiben den Suchvorgang:  
   
 -   Das Standardintervall beträgt 5 Sekunden.  
@@ -659,20 +664,24 @@ INSERT mytable VALUES ('Dan');
   
  Wenn CLR verwendet wird, erkennt der Deadlockmonitor automatisch Deadlocks für Synchronisierungsressourcen (Überwachungsprogramme, Leser/Schreibersperre und Threadjoin), auf die in verwalteten Prozeduren zugegriffen wird. Der Deadlock wird jedoch behoben, indem eine Ausnahme in der Prozedur ausgelöst wird, die als Deadlockopfer ausgewählt wurde. Beachten Sie unbedingt, dass die Ausnahme nicht automatisch Ressourcen freigibt, die sich zurzeit im Besitz des Opfers befinden; die Ressourcen müssen explizit freigegeben werden. Die zum Identifizieren eines Deadlockopfers verwendete Ausnahme kann konsistent mit dem Verhalten der Ausnahme abgefangen und behandelt werden.  
   
-##### <a name="deadlock_tools"></a> Tools zum Anzeigen von Deadlockinformationen  
+### <a name="deadlock-information-tools"></a><a name="deadlock_tools"></a> Tools zum Anzeigen von Deadlockinformationen  
  Zum Anzeigen von Deadlockinformationen werden in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Überwachungstools in Form einer system\_health xEvent-Sitzung, zwei Ablaufverfolgungsflags sowie das Deadlock Graph-Ereignis in SQL Profiler bereitgestellt.  
 
-###### <a name="deadlock_xevent"></a> Deadlock in der system_health-Sitzung
-Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] erfasst die system\_health-Sitzung bei einem Deadlock alle `xml_deadlock_report`-xEvents. Die system\_health-Sitzung ist standardmäßig aktiviert. Der in der Regel erfasste Deadlock Graph verfügt über drei unterschiedliche Knoten:
+#### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Erweitertes Deadlock-Ereignis
+Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sollte das erweiterte Ereignis `xml_deadlock_report` (xEvent) anstelle der Ereignisklasse des Deadlock-Graphen in der SQL-Ablaufverfolgung oder in SQL Server Profiler verwendet werden.
+
+Ebenfalls ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] erfasst die system\_health-Sitzung bei Auftreten eines Deadlock alle `xml_deadlock_report`-xEvents, die den Deadlockgraphen enthalten. Da die system\_health-Sitzung standardmäßig aktiviert ist, ist es nicht erforderlich, eine eigene xEvent-Sitzung zu konfigurieren, um Deadlock-Informationen zu sammeln. 
+
+Der in der Regel erfasste Deadlock Graph verfügt über drei unterschiedliche Knoten:
 -   **victim-list:** Prozessbezeichner des Deadlockopfers.
 -   **process-list:** Informationen zu allen am Deadlock beteiligten Prozessen.
 -   **resource-list:** Informationen zu den am Deadlock beteiligten Ressourcen.
 
 Das folgende Beispiel zeigt, wie [!INCLUDE[ssManStudio](../includes/ssManStudio-md.md)] beim Öffnen der system\_health-Sitzungsdatei oder des -Ringpuffers (sofern der `xml_deadlock_report`-xEvent aufgezeichnet wird) eine grafische Darstellung der an einem Deadlock beteiligten Tasks und Ressourcen bereitstellt: 
 
-![xEventDeadlockGraphc](../relational-databases/media/udb9_xEventDeadlockGraphc.png)
+![xEvent-Deadlock-Graph](../relational-databases/media/udb9_xEventDeadlockGraphc.png)
 
-Die folgende Abfrage kann alle Deadlockereignisse anzeigen, die vom Ringpuffer der system\_health-Sitzung erfasst wurden.
+Die folgende Abfrage kann alle Deadlock-Ereignisse anzeigen, die vom Ringpuffer der system\_health-Sitzung erfasst wurden:
 
 ```sql
 SELECT xdr.value('@timestamp', 'datetime') AS [Date],
@@ -760,8 +769,11 @@ END
 
 Weitere Informationen finden Sie unter [Verwenden der system_health-Sitzung](../relational-databases/extended-events/use-the-system-health-session.md).
 
-###### <a name="deadlock_traceflags"></a> Ablaufverfolgungsflag 1204 und Ablaufverfolgungsflag 1222  
+#### <a name="trace-flag-1204-and-trace-flag-1222"></a><a name="deadlock_traceflags"></a> Ablaufverfolgungsflag 1204 und Ablaufverfolgungsflag 1222  
  Wenn Deadlocks auftreten, geben die Ablaufverfolgungsflags 1204 und 1222 Informationen zurück, die im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Fehlerprotokoll erfasst werden. Ablaufverfolgungsflag 1204 meldet von jedem im Deadlock beteiligten Knoten formatierte Deadlockinformationen. Ablaufverfolgungsflag 1222 formatiert Deadlockinformationen, zunächst prozessweise, anschließend Ressource für Ressource. Es ist möglich, beide Ablaufverfolgungsflags zu aktivieren, um zwei Darstellungen desselben Deadlockereignisses zu erhalten.  
+
+> [!IMPORTANT]
+> Vermeiden Sie die Verwendung der Ablaufverfolgungsflags 1204 und 1222 für Systeme mit hoher Arbeitsauslastung, die Deadlocks verursachen. Die Verwendung dieser Ablaufverfolgungsflags kann zu Leistungsproblemen führen. Verwenden Sie stattdessen das erweiterte Deadlock-Ereignis (#deadlock_xevent).
   
  Zur weiteren Definition der Eigenschaften der Ablaufverfolgungsflags 1204 und 1222 werden in der folgenden Tabelle die Ähnlichkeiten und Unterschiede aufgeführt.  
   
@@ -771,7 +783,7 @@ Weitere Informationen finden Sie unter [Verwenden der system_health-Sitzung](../
 |Identifizieren von Attributen|**SPID:<x\> ECID:<x\>.** : Identifiziert den Thread der Systemprozess-ID bei parallelen Prozessen. Der Eintrag `SPID:<x> ECID:0`, in dem <x\> durch den SPID-Wert ersetzt wird, stellt den Hauptthread dar. Der Eintrag `SPID:<x> ECID:<y>`, in dem <x\> durch den SPID-Wert ersetzt wird und <y\> größer als 0 ist, stellt die Unterthreads desselben SPID-Werts dar.<br /><br /> **BatchID** (**sbid** für Ablaufverfolgungsflag 1222): Identifiziert den Batch, von dem die Codeausführung angefragt oder eine Sperre aufrechterhalten wird. Wenn MARS (Multiple Active Result Sets) deaktiviert sind, ist der BatchID-Wert gleich 0. Wenn MARS aktiviert sind, kann der Wert für aktive Batches von 1 bis *n* reichen. Sind in der Sitzung keine aktiven Batches vorhanden, ist der BatchID-Wert gleich 0.<br /><br /> **Mode**: Gibt den Typ der Sperre für eine bestimmte Ressource an, die angefragt, erteilt oder von einem Thread erwartet wird. Dies kann eine beabsichtigte freigegebene Sperre (Intent Shared, IS), eine freigegebene Sperre (Shared), eine Updatesperre (Update, U), eine beabsichtigte exklusive Sperre (Intent Exclusive, IX), eine freigegebene mit beabsichtigten exklusiven Sperren (Shared with Intent Exclusive, SIX) und eine exklusive Sperre (Exclusive, X) sein.<br /><br /> **Line #** (**line** für Ablaufverfolgungsflag 1222): Listet die Zeilennummer des aktuellen Batches von Anweisungen auf, die beim Auftreten des Deadlocks ausgeführt wurden.<br /><br /> **Input Buf** (**inputbuf** für Ablaufverfolgungsflag 1222): Listet alle Anweisungen im aktuellen Batch auf.|**Node**: Stellt die Eintragsnummer in der Deadlockkette dar.<br /><br /> **Lists**: Der Sperrenbesitzer kann Bestandteil dieser Listen sein:<br /><br /> **Grant List**: Zählt die aktuellen Besitzer der Ressource auf.<br /><br /> **Convert List**: Zählt die aktuellen Besitzer auf, die versuchen, ihre Sperren in eine höhere Ebene zu konvertieren.<br /><br /> **Wait List**: Zählt die neuesten Sperrenanforderungen für die Ressource auf.<br /><br /> **Statement Type**: Beschreibt den Typ der DML-Anweisung (SELECT, INSERT, UPDATE oder DELETE), für die Threads über Berechtigungen verfügen.<br /><br /> **Victim Resource Owner**: Gibt den teilnehmenden Thread an, den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zum Durchbrechen des Deadlockzyklus als Opfer auswählt. Der ausgewählte Thread und alle vorhandenen Unterthreads werden beendet.<br /><br /> **Next Branch**: Stellt die beiden oder mehreren im Deadlockzyklus beteiligten Unterthreads desselben SPID-Werts dar.|**deadlock victim**: Stellt die physische Speicheradresse des Tasks dar (siehe [sys.dm_os_tasks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)), der als Deadlockopfer ausgewählt wurde. Im Fall eines nicht aufgelösten Deadlocks kann diese Angabe 0 (Null) sein. Ein Task, für den ein Rollback ausgeführt wird, kann nicht als Deadlockopfer ausgewählt werden.<br /><br /> **executionstack**: Stellt den [!INCLUDE[tsql](../includes/tsql-md.md)]-Code dar, der zum Zeitpunkt des Auftretens des Deadlocks ausgeführt wird.<br /><br /> **priority**: Stellt die Deadlockpriorität dar. Unter bestimmten Umständen kann [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die Deadlockpriorität für eine kurze Zeitspanne ändern, um eine bessere Parallelität zu erzielen.<br /><br /> **logused**: Vom Task verwendeter Protokollspeicherplatz.<br /><br /> **owner id**: Die ID der Transaktion, die die Steuerung der Anforderung durchführt.<br /><br /> **status**: Der Status des Tasks. Ist einer der folgenden Werte:<br /><br /> >> **pending**: Warten auf einen Arbeitsthread.<br /><br /> >> **runnable**: Bereit zum Ausführen, jedoch wird auf das Eintreffen eines Quantums gewartet.<br /><br /> >> **running**: Wird derzeit auf dem Zeitplanungsmodul ausgeführt.<br /><br /> >> **suspended**: Die Ausführung wird angehalten.<br /><br /> >> **done**: Der Task ist abgeschlossen.<br /><br /> >> **spinloop**: Es wird auf die Verfügbarkeit eines Spinlocks gewartet.<br /><br /> **waitresource**: Die vom Task benötigte Ressource.<br /><br /> **waittime**: Zeitspanne in Millisekunden, die auf die Ressource gewartet wurde.<br /><br /> **schedulerid**: Diesem Task zugeordnetes Zeitplanungsmodul. Siehe [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).<br /><br /> **hostname**: Der Name der Arbeitsstation.<br /><br /> **isolationlevel**: Die aktuelle Isolationsstufe für Transaktionen.<br /><br /> **Xactid**: Die ID der Transaktion, die die Steuerung der Anforderung durchführt.<br /><br /> **currentdb**: Die ID der Datenbank.<br /><br /> **lastbatchstarted**: Uhrzeit des letzten Starts der Batchausführung durch einen Clientprozess.<br /><br /> **lastbatchcompleted**: Uhrzeit des letzten Abschlusses der Batchausführung durch einen Clientprozess.<br /><br /> **clientoption1 und clientoption2**: SET-Optionen für diese Clientverbindung. Es handelt sich um ein Bitmuster, das Informationen zu Optionen enthält, die normalerweise durch SET-Anweisungen, z. B. SET NOCOUNT und SET XACTABORT, gesteuert werden.<br /><br /> **associatedObjectId**: Stellt die HoBT-ID (Heap- oder B-Struktur) dar.|  
 |Ressourcenattribute|**RID**: Identifiziert die einzelne Zeile innerhalb einer Tabelle, in der eine Sperre aufrechterhalten oder angefragt wird. RID wird als RID dargestellt: *db_id:file_id:page_no:row_no*. Beispiel: `RID: 6:1:20789:0`.<br /><br /> **OBJECT**: Identifiziert die Tabelle, in der eine Sperre aufrechterhalten oder angefragt wird. OBJECT wird als OBJECT dargestellt: *db_id:object_id*. Beispiel: `TAB: 6:2009058193`.<br /><br /> **KEY**: Identifiziert den Schlüsselbereich innerhalb eines Indexes, in dem eine Sperre aufrechterhalten oder angefragt wird. KEY wird als KEY dargestellt: *db_id:hobt_id* (*Indexschlüssel-Hashwert*). Beispiel: `KEY: 6:72057594057457664 (350007a4d329)`.<br /><br /> **PAG**: Identifiziert die Seitenressource, in der eine Sperre aufrechterhalten oder angefragt wird. PAG wird als PAG dargestellt: *db_id:file_id:page_no*. Beispiel: `PAG: 6:1:20789`.<br /><br /> **EXT**: Identifiziert die Blockstruktur. EXT wird als EXT dargestellt: *db_id:file_id:extent_no*. Beispiel: `EXT: 6:1:9`.<br /><br /> **DB**: Identifiziert die Datenbanksperre. **DB wird auf eine der folgenden Arten dargestellt:**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]: Identifiziert die von der Sicherungsdatenbank erstellte Datenbanksperre.<br /><br /> DB: *db_id*[BULK-OP-LOG]: Identifiziert die vom Sicherungsprotokoll für diese bestimmte Datenbank erstellte Sperre.<br /><br /> **APP**: Identifiziert die von einer Anwendungsressource erstellte Sperre. APP wird als APP dargestellt: *lock_resource*. Beispiel: `APP: Formf370f478`.<br /><br /> **METADATA**: Stellt die in einem Deadlock beteiligten Metadatenressourcen dar. Da METADATA über viele Unterressourcen verfügt, hängt der zurückgegebene Wert von der Unterressource ab, für die ein Deadlock vorliegt. METADATA.USER_TYPE gibt beispielsweise `user_type_id =` <*integer_value*> zurück. Weitere Informationen zu METADATA-Ressourcen und -Unterressourcen finden Sie unter [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).<br /><br /> **HOBT**: Stellt eine in einem Deadlock beteiligte Heap- oder B-Struktur dar.|Gilt nicht ausschließlich für dieses Ablaufverfolgungsflag.|Gilt nicht ausschließlich für dieses Ablaufverfolgungsflag.|  
   
-###### <a name="trace-flag-1204-example"></a>Beispiel für Ablaufverfolgungsflag 1204  
+##### <a name="trace-flag-1204-example"></a>Beispiel für Ablaufverfolgungsflag 1204  
  Im folgenden Beispiel wird die Ausgabe beim Aktivieren des Ablaufverfolgungsflags 1204 gezeigt. Hierbei wird die Tabelle auf Knoten 1 als Heap ohne Indizes und die Tabelle auf Knoten 2 als Heap mit einem nicht gruppierten Index verwendet. Der Indexschlüssel auf Knoten 2 wird beim Auftreten des Deadlocks aktualisiert.  
   
 ```  
@@ -811,7 +823,7 @@ Victim Resource Owner:
      Mode: U SPID:55 BatchID:0 ECID:0 TaskProxy:(0x0475E374) Value:0x315d4a0 Cost:(0/380)  
 ```  
   
-###### <a name="trace-flag-1222-example"></a>Beispiel für Ablaufverfolgungsflag 1222  
+##### <a name="trace-flag-1222-example"></a>Beispiel für Ablaufverfolgungsflag 1222  
  Im folgenden Beispiel wird die Ausgabe beim Aktivieren des Ablaufverfolgungsflags 1222 gezeigt. Hierbei wird eine Tabelle als Heap ohne Indizes und die andere Tabelle als Heap mit einem nicht gruppierten Index verwendet. In der zweiten Tabelle wird der Indexschlüssel beim Auftreten des Deadlocks aktualisiert.  
   
 ```  
@@ -877,7 +889,7 @@ deadlock-list
      waiter id=process689978 mode=U requestType=wait  
 ```  
   
-###### <a name="profiler-deadlock-graph-event"></a>Profiler Deadlock Graph-Ereignis  
+#### <a name="profiler-deadlock-graph-event"></a>Profiler Deadlock Graph-Ereignis  
 Dies ist ein Ereignis in SQL Profiler, das eine grafische Darstellung der an einem Deadlock beteiligten Tasks und Ressourcen bereitstellt. Im folgenden Beispiel wird die Ausgabe von SQL Profiler gezeigt, wenn das Deadlock Graph-Ereignis aktiviert ist.  
   
  ![ProfilerDeadlockGraphc](../relational-databases/media/udb9_ProfilerDeadlockGraphc.png)  
@@ -886,7 +898,7 @@ Weitere Informationen zum Deadlockereignis finden Sie unter [Lock:Deadlock (Erei
 
 Weitere Informationen zum Ausführen von SQL Profiler Deadlock Graph finden Sie unter [Speichern von Deadlock Graphs &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md).  
   
-#### <a name="handling-deadlocks"></a>Behandeln von Deadlocks  
+### <a name="handling-deadlocks"></a>Behandeln von Deadlocks  
  Wenn eine [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Instanz eine Transaktion als Deadlockopfer auswählt, beendet sie den aktuellen Batch, führt einen Rollback der Transaktion durch und gibt die Fehlermeldung 1205 an die Anwendung zurück.  
   
  `Your transaction (process ID #52) was deadlocked on {lock | communication buffer | thread} resources with another process and has been chosen as the deadlock victim. Rerun your transaction.`  
@@ -897,7 +909,7 @@ Weitere Informationen zum Ausführen von SQL Profiler Deadlock Graph finden Sie 
   
  Die Anwendung sollte kurzzeitig angehalten werden, bevor die Abfrage erneut abgesendet wird. Auf diese Weise kann die andere Transaktion, die an einem Deadlock beteiligt ist, abgeschlossen werden und die Sperren freigeben, die einen Anteil am Deadlockzyklus hatten. Die Wahrscheinlichkeit, dass ein Deadlock erneut auftritt, wenn die erneut abgesendete Abfrage ihre Sperren anfordert, wird so verringert.  
   
-#### <a name="deadlock_minimizing"></a> Minimieren von Deadlocks  
+### <a name="minimizing-deadlocks"></a><a name="deadlock_minimizing"></a> Minimieren von Deadlocks  
  Obwohl Deadlocks nicht vollständig vermieden werden können, kann das Risiko eines Deadlocks durch das Befolgen bestimmter Codierungskonventionen minimiert werden. Wenn die Anzahl der Deadlocks minimiert wird, können der Transaktionsdurchsatz erhöht und der Aufwand des Systems reduziert werden, und zwar aus folgenden Gründen:  
   
 -   Die Anzahl der Transaktionen, für die ein Rollback ausgeführt wird, durch den die von einer Transaktion ausgeführte Arbeit rückgängig gemacht wird, ist geringer.  
@@ -910,27 +922,27 @@ Weitere Informationen zum Ausführen von SQL Profiler Deadlock Graph finden Sie 
 -   Verwenden Sie kurze Transaktionen in einem einzigen Batch.  
 -   Verwenden Sie eine niedrigere Isolationsstufe.  
 -   Verwenden Sie eine auf der Zeilenversionsverwaltung basierende Isolationsstufe.  
-    -   Legen Sie die Datenbankoption READ_COMMITTED_SNAPSHOT auf ON fest, um die Verwendung der Zeilenversionsverwaltung für READ COMMITTED-Transaktionen zu aktivieren.  
+    -   Legen Sie die Datenbankoption `READ_COMMITTED_SNAPSHOT` auf ON fest, um die Verwendung der Zeilenversionsverwaltung für READ COMMITTED-Transaktionen zu aktivieren.  
     -   Verwenden Sie die Momentaufnahmeisolation.  
 -   Verwenden Sie gebundene Verbindungen.  
   
-##### <a name="access-objects-in-the-same-order"></a>Zugreifen auf Objekte in derselben Reihenfolge  
+#### <a name="access-objects-in-the-same-order"></a>Zugreifen auf Objekte in derselben Reihenfolge  
  Wenn alle gleichzeitigen Transaktionen in derselben Reihenfolge auf Objekte zugreifen, treten Deadlocks seltener auf. Wenn beispielsweise zwei gleichzeitige Transaktionen jeweils zuerst die **Supplier**-Tabelle und anschließend die **Part**-Tabelle mit einer Sperre belegen, wird eine Transaktion für die **Supplier**-Tabelle blockiert, bis die andere abgeschlossen ist. Nachdem für die erste Transaktion ein Commit- oder Rollback-Vorgang ausgeführt wurde, wird die Ausführung der zweiten Transaktion fortgesetzt, und es tritt kein Deadlock auf. Durch das Verwenden von gespeicherten Prozeduren für alle Datenänderungen kann die Reihenfolge, in der auf Objekte zugegriffen wird, standardisiert werden.  
   
  ![deadlock2](../relational-databases/media/dedlck2.png)  
   
-##### <a name="avoid-user-interaction-in-transactions"></a>Vermeiden von Benutzerinteraktion in Transaktionen  
+#### <a name="avoid-user-interaction-in-transactions"></a>Vermeiden von Benutzerinteraktion in Transaktionen  
  Vermeiden Sie es, Transaktionen zu schreiben, die Benutzerinteraktionen enthalten, da die Geschwindigkeit von Batches, die ohne Benutzereingriffe ausgeführt werden, bedeutend höher ist als die Geschwindigkeit, mit der ein Benutzer manuell auf Abfragen reagieren muss (z. B. beim Antworten auf eine Eingabeaufforderung, wenn eine Anwendung einen Parameter anfordert). Wenn eine Transaktion z. B. auf eine Benutzereingabe wartet, der jeweilige Benutzer jedoch zum Essen oder sogar für das Wochenende nach Hause geht, verzögert der Benutzer die Fertigstellung der Transaktion. Dadurch wird der Durchsatz des Systems beeinträchtigt, da Sperren, die von der Transaktion aufrechterhalten werden, erst dann aufgehoben werden, wenn ein Commit oder Rollback für die Transaktion ausgeführt wird. Selbst wenn es nicht zu einem Deadlock kommt, werden andere Transaktionen blockiert, die auf dieselben Ressourcen zugreifen, da sie darauf warten, dass die Transaktion beendet wird.  
   
-##### <a name="keep-transactions-short-and-in-one-batch"></a>Verwenden kurzer Transaktionen in einem einzigen Batch  
+#### <a name="keep-transactions-short-and-in-one-batch"></a>Verwenden kurzer Transaktionen in einem einzigen Batch  
  Ein Deadlock tritt in der Regel dann auf, wenn mehrere Transaktionen mit langer Ausführungszeit gleichzeitig in derselben Datenbank ausgeführt werden. Je länger die Transaktion dauert, desto länger werden die exklusiven Sperren oder Updatesperren aufrechterhalten, wodurch andere Aktivitäten blockiert werden und es möglicherweise zu Deadlocks kommt.  
   
  Wenn die Transaktionen in einem einzigen Batch enthalten sind, wird die Anzahl der Netzwerkroundtrips während einer Transaktion minimiert, wodurch mögliche Verzögerungen beim Beenden der Transaktion und Aufheben der Sperren reduziert werden.  
   
-##### <a name="use-a-lower-isolation-level"></a>Verwenden einer niedrigeren Isolationsstufe  
+#### <a name="use-a-lower-isolation-level"></a>Verwenden einer niedrigeren Isolationsstufe  
  Ermitteln Sie, ob eine Transaktion auf einer niedrigeren Isolationsstufe ausgeführt werden kann. Durch die READ COMMITTED-Implementierung kann eine Transaktion Daten, die zuvor von einer anderen Transaktion gelesen (nicht geändert) wurden, lesen, ohne warten zu müssen, bis die erste Transaktion abgeschlossen ist. Wenn eine niedrigere Isolationsstufe verwendet wird, beispielsweise READ COMMITTED, werden freigegebene Sperren kürzer aufrechterhalten als bei einer höheren Isolationsstufe, beispielsweise der serialisierbaren. Hierdurch werden Sperrkonflikte reduziert.  
   
-##### <a name="use-a-row-versioning-based-isolation-level"></a>Verwenden einer auf der Zeilenversionsverwaltung basierenden Isolationsstufe  
+#### <a name="use-a-row-versioning-based-isolation-level"></a>Verwenden einer auf der Zeilenversionsverwaltung basierenden Isolationsstufe  
  Wenn die Datenbankoption `READ_COMMITTED_SNAPSHOT` auf ON festgelegt ist, verwendet eine Transaktion, die gemäß der READ COMMITTED-Isolationsstufe ausgeführt wird, bei Lesevorgängen die Zeilenversionsverwaltung anstelle freigegebener Sperren.  
   
 > [!NOTE]  
@@ -940,13 +952,13 @@ Weitere Informationen zum Ausführen von SQL Profiler Deadlock Graph finden Sie 
   
  Implementieren Sie diese Isolationsstufen, um die Wahrscheinlichkeit von Deadlocks zu minimieren, die zwischen Lese- und Schreibvorgängen auftreten können.  
   
-##### <a name="use-bound-connections"></a>Verwenden gebundener Verbindungen  
+#### <a name="use-bound-connections"></a>Verwenden gebundener Verbindungen  
  Beim Verwenden gebundener Verbindungen können zwei oder mehr Verbindungen, die von derselben Anwendung geöffnet wurden, zusammenarbeiten. Sperren, die von den sekundären Verbindungen eingerichtet wurden, werden so aufrechterhalten, als ob sie von der primären Verbindung eingerichtet wurden, und umgekehrt. Folglich blockieren sie sich nicht gegenseitig.  
   
-### <a name="lock_partitioning"></a> Sperrenpartitionierung  
+## <a name="lock-partitioning"></a><a name="lock_partitioning"></a> Sperrenpartitionierung  
  In großen Computersystemen können Sperren für häufig referenzierte Objekte einen Leistungsengpass darstellen, weil die Anforderung und Freigabe von Sperren zu Konflikten bei den internen Sperrenressourcen führt. Die Sperrenpartitionierung verbessert die Sperrenleistung, indem eine einzelne Sperrenressource in mehrere Sperrenressourcen aufgeteilt wird. Diese Funktion ist nur für Systeme mit 16 oder mehr CPUs verfügbar, wird automatisch aktiviert und kann nicht deaktiviert werden. Es können nur Objektsperren partitioniert werden. Objektsperren mit einem Untertyp werden nicht partitioniert. Weitere Informationen finden Sie unter [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-#### <a name="understanding-lock-partitioning"></a>Grundlegendes zur Sperrenpartitionierung  
+### <a name="understanding-lock-partitioning"></a>Grundlegendes zur Sperrenpartitionierung  
  Sperrtasks greifen auf verschiedene freigegebene Ressourcen zu, von denen zwei durch die Sperrenpartitionierung optimiert werden:  
   
 -   **Spinlock**: Diese Ressource steuert den Zugriff auf eine Sperrenressource wie z. B. eine Zeile oder Tabelle.  
@@ -959,7 +971,7 @@ Weitere Informationen zum Ausführen von SQL Profiler Deadlock Graph finden Sie 
   
      Sobald das Spinlock aktiviert wurde, werden die Sperrenstrukturen im Arbeitsspeicher gespeichert, und anschließend erfolgt der Zugriff auf diese Strukturen, und sie werden möglicherweise geändert. Die Verteilung des Sperrenzugriffs auf mehrere Ressourcen senkt die Notwendigkeit zur Übertragung von Arbeitsspeicherblöcken zwischen CPUs, was zu einer verbesserten Leistung führt.  
   
-#### <a name="implementing-and-monitoring-lock-partitioning"></a>Implementieren und Überwachen der Sperrenpartitionierung  
+### <a name="implementing-and-monitoring-lock-partitioning"></a>Implementieren und Überwachen der Sperrenpartitionierung  
  Die Sperrenpartitionierung wird bei Systemen mit mindestens 16 CPUs standardmäßig aktiviert. Wenn die Sperrenpartitionierung aktiviert ist, wird eine Informationsmeldung im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Fehlerprotokoll gespeichert.  
   
  Beim Aktivieren von Sperren für eine partitionierte Ressource gelten folgende Grundsätze:  
@@ -972,15 +984,14 @@ Weitere Informationen zum Ausführen von SQL Profiler Deadlock Graph finden Sie 
   
  Die `resource_lock_partition`-Spalte in der dynamischen Verwaltungssicht (DMV, Dynamic Management View) von `sys.dm_tran_locks` stellt die Sperrenpartitions-ID für eine sperrenpartitionierte Ressource bereit. Weitere Informationen finden Sie unter [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-#### <a name="working-with-lock-partitioning"></a>Arbeiten mit der Sperrenpartitionierung  
+### <a name="working-with-lock-partitioning"></a>Arbeiten mit der Sperrenpartitionierung  
  Die folgenden Codebeispiele veranschaulichen die Verwendung der Sperrenpartitionierung. In den Beispielen werden zwei Transaktionen in zwei verschiedenen Sitzungen ausgeführt, um das Verhalten der Sperrenpartitionierung in einem Computersystem mit 16 CPUs zu zeigen.  
   
  Mit diesen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen werden Testobjekte erstellt, die in den folgenden Beispielen verwendet werden.  
   
 ```sql  
 -- Create a test table.  
-CREATE TABLE TestTable  
-    (col1        int);  
+CREATE TABLE TestTable  (col1 int);  
 GO  
   
 -- Create a clustered index on the table.  
@@ -993,7 +1004,7 @@ INSERT INTO TestTable VALUES (1);
 GO  
 ```  
   
-##### <a name="example-a"></a>Beispiel A  
+#### <a name="example-a"></a>Beispiel A  
  Sitzung 1  
   
  Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die beabsichtigte freigegebene Sperre für die Partitions-ID 7 aktiviert wird.  
@@ -1003,8 +1014,8 @@ GO
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
     SELECT col1  
-        FROM TestTable  
-        WITH (HOLDLOCK);  
+    FROM TestTable  
+    WITH (HOLDLOCK);  
 ```  
   
  Sitzung 2:  
@@ -1014,8 +1025,8 @@ BEGIN TRANSACTION
 ```sql  
 BEGIN TRANSACTION  
     SELECT col1  
-        FROM TestTable  
-        WITH (TABLOCK, HOLDLOCK);  
+    FROM TestTable  
+    WITH (TABLOCK, HOLDLOCK);  
 ```  
   
  Sitzung 1  
@@ -1024,11 +1035,11 @@ BEGIN TRANSACTION
   
 ```sql  
 SELECT col1  
-    FROM TestTable  
-    WITH (TABLOCKX);  
+FROM TestTable  
+WITH (TABLOCKX);  
 ```  
   
-##### <a name="example-b"></a>Beispiel B  
+#### <a name="example-b"></a>Beispiel B  
  Sitzung 1  
   
  Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die beabsichtigte freigegebene Sperre für die Partitions-ID 6 aktiviert wird.  
@@ -1038,8 +1049,8 @@ SELECT col1
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
     SELECT col1  
-        FROM TestTable  
-        WITH (HOLDLOCK);  
+    FROM TestTable  
+    WITH (HOLDLOCK);  
 ```  
   
  Sitzung 2:  
@@ -1051,11 +1062,11 @@ BEGIN TRANSACTION
 ```sql  
 BEGIN TRANSACTION  
     SELECT col1  
-        FROM TestTable  
-        WITH (TABLOCKX, HOLDLOCK);  
+    FROM TestTable  
+    WITH (TABLOCKX, HOLDLOCK);  
 ```   
   
-##  <a name="Row_versioning"></a> Auf Zeilenversionsverwaltung basierende Isolationsstufen im [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
+##  <a name="row-versioning-based-isolation-levels-in-the-ssdenoversion"></a><a name="Row_versioning"></a> Auf Zeilenversionsverwaltung basierende Isolationsstufen im [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]  
  Ab [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] führt das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine Implementierung der vorhandenen Transaktionsisolationsstufe READ COMMITTED ein, die mithilfe der Zeilenversionsverwaltung eine Momentaufnahme auf Anweisungsebene bereitstellt. Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] bietet außerdem die Transaktionsisolationsstufe SNAPSHOT, die ebenfalls die Zeilenversionsverwaltung verwendet, um Momentaufnahmen auf Transaktionsebene bereitzustellen.  
   
  Die Zeilenversionsverwaltung ist ein allgemeines Framework in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], das beim Ändern oder Löschen einer Zeile einen "Kopie-bei-Schreibvorgang"-Mechanismus aufruft. Das setzt bei einer ausgeführten Transaktion voraus, dass die alte Zeilenversion für Transaktionen verfügbar sein muss, die einen früheren transaktionskonsistenten Zustand erfordern. Die Zeilenversionsverwaltung wird zur Unterstützung folgender Funktionen verwendet:  
@@ -1495,7 +1506,7 @@ ALTER DATABASE AdventureWorks2016
   
  In der folgenden Tabelle werden die Statusmöglichkeiten der ALLOW_SNAPSHOT_ISOLATION-Option aufgeführt und beschrieben. Der Zugriff von Benutzern auf Daten in der Datenbank wird durch das Verwenden von ALTER DATABASE mit der ALLOW_SNAPSHOT_ISOLATION-Option nicht blockiert.  
   
-|Status der Momentaufnahmeisolationsumgebung der aktuellen Datenbank|Beschreibung|  
+|Status der Momentaufnahmeisolationsumgebung der aktuellen Datenbank|BESCHREIBUNG|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|Die Unterstützung von Momentaufnahmeisolationstransaktionen ist nicht aktiviert. Momentaufnahmeisolationtransaktionen sind nicht zulässig.|  
 |PENDING_ON|Die Unterstützung von Momentaufnahmeisolationstransaktionen befindet sich in einem Übergangsstatus (von OFF nach ON). Offene Transaktionen müssen abgeschlossen werden.<br /><br /> Momentaufnahmeisolationtransaktionen sind nicht zulässig.|  
@@ -1699,7 +1710,7 @@ GO
   
  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] kann die `LOCK_ESCALATION`-Option von `ALTER TABLE` Tabellensperren als unerwünscht festlegen und HoBT-Sperren für partitionierte Tabellen aktivieren. Diese Option ist kein Sperrhinweis, kann jedoch verwendet werden, um die Sperrenausweitung zu reduzieren. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
   
-###  <a name="Customize"></a> Anpassen der Sperren für einen Index  
+###  <a name="customizing-locking-for-an-index"></a><a name="Customize"></a> Anpassen der Sperren für einen Index  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet eine dynamische Sperrstrategie, die für Abfragen in den meisten Fällen automatisch die am besten geeignete Granularität der Sperren auswählt. Es empfiehlt sich, die Standardeinstellungen der Sperrebenen, in denen die Seiten- und Zeilensperre aktiviert ist, nicht zu überschreiben, es sei denn, die Zugriffsmuster für Tabellen oder Indizes sind bekannt und konsistent und es liegt ein Ressourcenkonflikt vor, der behoben werden muss. Das Überschreiben einer Sperrebene kann den gleichzeitigen Zugriff auf eine Tabelle oder einen Index signifikant einschränken. Wenn beispielsweise in einer großen Tabelle, auf die viele Benutzer zugreifen, nur Sperren auf Tabellenebene angegeben werden, kann dies zu Engpässen führen, da die Benutzer die Aufhebung der Sperre auf Tabellenebene abwarten müssen, bevor sie auf die Tabelle zugreifen können.  
   
  Wenn die Zugriffsmuster gut bekannt und konsistent sind, kann das Untersagen von Seiten- oder Zeilensperren in einigen Fällen sinnvoll sein. So verwendet beispielsweise eine Datenbankanwendung eine Nachschlagetabelle, die wöchentlich in einem Batchverarbeitungsprozess aktualisiert wird. Gleichzeitige Leser greifen mit einer freigegebenen Sperre (S) auf die Tabelle zu. Das wöchentliche Batchupdate greift mit einer exklusiven Sperre (X) auf die Tabelle zu. Durch das Deaktivieren der Seiten- und Zeilensperrung für die Tabelle wird der Sperraufwand unter der Woche reduziert, indem Leser mithilfe freigegebener Tabellensperren gleichzeitig auf die Tabelle zugreifen können. Wenn der Batchauftrag ausgeführt wird, kann er das Update effizient ausführen, da er eine exklusive Tabellensperre erhält.  
@@ -1716,7 +1727,7 @@ GO
 |Zeilenebene|Sperren auf Seiten- und Tabellenebene|  
 |Seiten- und Zeilenebene|Sperren auf Tabellenebene|  
   
-##  <a name="Advanced"></a> Weiterführende Themen zu Transaktionen  
+##  <a name="advanced-transaction-information"></a><a name="Advanced"></a> Weiterführende Themen zu Transaktionen  
   
 ### <a name="nesting-transactions"></a>Schachteln von Transaktionen  
  Explizite Transaktionen können geschachtelt werden. Auf diese Weise sollen in erster Linie Transaktionen in gespeicherten Prozeduren unterstützt werden, die sowohl von einem Prozess, der sich bereits in einer Transaktion befindet, als auch von Prozessen, die keine aktiven Transaktionen aufweisen, aufgerufen werden können.  
@@ -1805,7 +1816,7 @@ GO
 ### <a name="coding-efficient-transactions"></a>Codieren effizienter Transaktionen  
  Transaktionen sollten so kurz wie möglich gehalten werden. Wenn eine Transaktion gestartet wird, muss ein Datenbank-Managementsystem (Database Management System, DBMS) viele Ressourcen bis zum Ende der Transaktion bereitstellen, um die ACID-Eigenschaften der Transaktion zu schützen. Wenn Daten verändert werden, müssen die zu ändernden Zeilen durch exklusive Sperren geschützt werden, die verhindern, dass andere Transaktionen die Zeilen lesen. Diese exklusiven Sperren müssen so lange aufrechterhalten werden, bis für die Transaktion ein Commit oder Rollback ausgeführt wird. Abhängig von den Einstellungen der Isolationsstufen von Transaktionen können `SELECT`-Anweisungen Sperren einrichten, die bis zum Ausführen eines Commits oder Rollbacks für die Transaktion aufrechterhalten werden müssen. Vor allem bei Systemen mit zahlreichen Benutzern müssen Transaktionen so kurz wie möglich gehalten werden, um die Wahrscheinlichkeit zu reduzieren, dass bei gleichzeitigen Verbindungen Sperrkonflikte für Ressourcen auftreten. Lang andauernde, ineffiziente Transaktionen sind bei wenigen Benutzern möglicherweise nicht problematisch, in einem System mit Tausenden von Benutzern jedoch inakzeptabel. Ab [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden verzögerte dauerhafte Transaktionen unterstützt. Verzögerte dauerhafte Transaktionen gewährleisten keine Dauerhaftigkeit. Weitere Informationen finden Sie im Thema [Transaktionsdauerhaftigkeit](../relational-databases/logs/control-transaction-durability.md).  
   
-#### <a name="guidelines"></a> Richtlinien für das Codieren  
+#### <a name="coding-guidelines"></a><a name="guidelines"></a> Richtlinien für das Codieren  
  Im Folgenden sind Richtlinien für das Codieren von effizienten Transaktionen aufgeführt:  
   
 -   Verzichten Sie auf Benutzereingaben während einer Transaktion.  
@@ -1820,8 +1831,7 @@ GO
 -   Sie sollten für schreibgeschützte Abfragen gegebenenfalls eine auf Zeilenversionsverwaltung basierende Isolationsstufe verwenden, um die Möglichkeit von Blockierungen zu reduzieren.  
   
 -   Setzen Sie die niedrigeren Isolationsstufen von Transaktionen sinnvoll ein.  
-  
-     Viele Anwendungen können ganz leicht so codiert werden, dass die Isolationsstufe, bei der ein Commit vor dem Lesevorgang ausgeführt sein muss, für die Transaktion verwendet wird. Nicht alle Transaktionen erfordern die Isolationsstufe SERIALIZABLE.  
+    Viele Anwendungen können ganz leicht so codiert werden, dass die Isolationsstufe, bei der ein Commit vor dem Lesevorgang ausgeführt sein muss, für die Transaktion verwendet wird. Nicht alle Transaktionen erfordern die Isolationsstufe SERIALIZABLE.  
   
 -   Setzen Sie die niedrigen Optionen der Cursorparallelität, wie etwa die vollständige Parallelität, sinnvoll ein.  
     Wenn es in einem System relativ unwahrscheinlich ist, dass Updates gleichzeitig vorgenommen werden, kann der Aufwand, der gelegentlich für die Fehlerbehandlung entsteht, wenn Daten nach einem Lesevorgang von einem anderen Benutzer geändert werden, bedeutend geringer sein als der Aufwand, der durch das konsequente Sperren von Zeilen bei jedem Lesen entsteht.  
@@ -1859,7 +1869,7 @@ GO
 #### <a name="stopping-a-transaction"></a>Beenden einer Transaktion  
  Unter Umständen müssen Sie die KILL-Anweisung ausführen. Verwenden Sie diese Anweisung jedoch sehr vorsichtig, besonders wenn gerade kritische Prozesse ausgeführt werden. Weitere Informationen finden Sie unter [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  
   
-##  <a name="Additional_Reading"></a> Zusätzliches Lesematerial   
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Zusätzliches Lesematerial   
 [Mehraufwand der Zeilenversionsverwaltung](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
 [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     

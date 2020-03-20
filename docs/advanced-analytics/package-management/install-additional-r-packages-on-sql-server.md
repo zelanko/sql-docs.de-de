@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558373"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027935"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installieren von neuen R-Paketen mit sqlmlutils
 
@@ -108,7 +108,7 @@ Auf einem Computer mit Internetzugriff:
     , @script = N'print(R.version)'
    ```
 
-1. Laden Sie die neueste **sqlmlutils**-ZIP-Datei unter https://github.com/Microsoft/sqlmlutils/tree/master/R/dist herunter. (Entpacken Sie die Datei jedoch nicht.) Laden Sie die Datei beispielsweise in das Verzeichnis `c:\downloads\sqlmlutils_0.7.1.zip`.
+1. Laden Sie die neueste **sqlmlutils**-ZIP-Datei unter [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) herunter. (Entpacken Sie die Datei jedoch nicht.) Laden Sie die Datei beispielsweise in das Verzeichnis `c:\downloads\sqlmlutils_0.7.1.zip`.
 
 1. Kopieren Sie den gesamten **RODBCext**-Repositoryordner (`c:\downloads\rodbcext`) und die **sqlmlutils**-ZIP-Datei (`c:\downloads\sqlmlutils_0.7.1.zip`) auf den Clientcomputer. Kopieren Sie beispielsweise beides in den Ordner `c:\temp\packages` auf dem Clientcomputer.
 

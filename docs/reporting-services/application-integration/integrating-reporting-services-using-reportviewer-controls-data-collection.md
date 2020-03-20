@@ -1,6 +1,6 @@
 ---
 title: Datensammlung im ReportViewer-Steuerelement
-description: Das Steuerelement sammelt anonyme Nutzungsdaten, um zu erfassen, wie Kunden ein Produkt verwenden. Mithilfe von Nutzungsdaten kann man sich bei der zukünftigen Entwicklung auf Verbesserungen konzentrieren, die für Kunden relevant sind.
+description: Das ReportViewer-Steuerelement erfasst anonyme Nutzungsdaten, um zu ermitteln, wie Kunden das Produkt verwenden, damit sich die Entwicklung auf Verbesserungen konzentrieren kann, die für Kunden am relevantesten sind.
 author: maggiesMSFT
 ms.author: maggies
 ms.custom: ''
@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.date: 09/18/2018
-ms.openlocfilehash: d7b70445fc4d8a29d8ebcdf7ecbffe4b54133f0e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 078b36034d48dbb4389c69e64d8b8b18d240b24c
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796895"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198177"
 ---
 # <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>Integrieren von Reporting Services mit den ReportViewer-Steuerelementen: Datensammlung
 

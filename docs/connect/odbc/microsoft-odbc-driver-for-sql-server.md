@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a0c194903b0f9b5f5e1c06baabc17d607c68cd61
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.openlocfilehash: f953d3b36818ce4d44d80ddb1c67033fa468f093
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866353"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058734"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -52,7 +52,8 @@ Das folgende C++-Beispiel zeigt, wie die ODBC-APIs verwendet werden, um eine Ver
 
 ### <a name="linux-and-macos"></a>Linux und macOS
 
-- [Installieren des Treibers](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installieren des Treibers unter Linux](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installieren des Treibers unter macOS](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 - [Connecting to SQL Server (Herstellen einer Verbindung mit SQL Server)](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [Herstellen einer Verbindung mit **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [Herstellen einer Verbindung mit **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)

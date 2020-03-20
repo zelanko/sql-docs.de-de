@@ -1,5 +1,6 @@
 ---
 title: Methoden für verknüpfte Berichte | Microsoft-Dokumentation
+description: Diese Methoden fügen verknüpfte Elemente zu einer Datenbank hinzu, rufen den Namen eines Elements für ein verknüpftes Element ab, rufen Elemente ab, die mit einem Element verknüpft sind, und legen ein Katalogelement für ein verknüpftes Element fest.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2bad756be9bf5431a93ba167cc8ec88fd0802a02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a474b4b3cb3a9973fc4fdaf14e7179cc73a2d2de
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284416"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198247"
 ---
 # <a name="linked-reports-methods"></a>Methoden für verknüpfte Berichte
   Sie können diese Methoden verwenden, um verknüpfte Elemente zu erstellen und zu verwalten.  
   
-|Methode|Action|  
+|Methode|Aktion|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateLinkedItem%2A>|Fügt der Berichtsserver-Datenbank ein neues verknüpftes Element hinzu.|  
 |<xref:ReportService2010.ReportingService2010.GetItemLink%2A>|Gibt den Namen des Elements zurück, dessen Elementdefinition für das angegebene verknüpfte Element verwendet wird.|  

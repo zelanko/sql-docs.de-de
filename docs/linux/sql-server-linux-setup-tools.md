@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: In diesem Artikel wird beschrieben, wie die SQL Server-Tools unter Linux installiert werden.
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/07/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: a6ee495dc984273b8a1c20784542d6611edbbbba
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340422"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288784"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren der SQL Server-Befehlszeilentools sqlcmd und bcp unter Linux
 
@@ -36,7 +36,7 @@ Installieren Sie die Tools für Ihre Plattform:
 
 In diesem Artikel wird beschrieben, wie die Befehlszeilentools installiert werden. Beispiele zur Verwendung von **sqlcmd** oder **bcp** finden Sie unter den [Links](#next-steps) am Ende dieses Artikels.
 
-## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Installieren von Tools unter RHEL 7
+## <a name="a-idrhelinstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Installieren von Tools unter RHEL 7
 
 Führen Sie zum Installieren von **mssql-tools** unter Red Hat Enterprise Linux die folgenden Schritte aus. 
 
@@ -92,9 +92,12 @@ Führen Sie zum Installieren von **mssql-tools** unter Red Hat Enterprise Linux 
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Installieren von Tools unter Ubuntu 16.04
+## <a name="install-tools-on-ubuntu-1604"></a><a id="ubuntu"></a>Installieren von Tools unter Ubuntu 16.04
 
-Führen Sie zum Installieren von **mssql-tools** unter Ubuntu die folgenden Schritte aus. 
+Führen Sie zum Installieren von **mssql-tools** unter Ubuntu die folgenden Schritte aus.
+
+> [!NOTE]
+> Ubuntu 18.04 wird ab SQL Server 2019 CU3 unterstützt. Wenn Sie Ubuntu 18.04 verwenden, ändern Sie den Pfad des Repositorys von `/ubuntu/16.04` in `/ubuntu/18.04`.
 
 1. Importieren Sie die GPG-Schlüssel des öffentlichen Repositorys.
 
@@ -137,7 +140,7 @@ Führen Sie zum Installieren von **mssql-tools** unter Ubuntu die folgenden Schr
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a>Installieren von Tools unter SLES 12
+## <a name="install-tools-on-sles-12"></a><a id="SLES"></a>Installieren von Tools unter SLES 12
 
 Führen Sie zum Installieren von **mssql-tools** unter SUSE Linux Enterprise Server die folgenden Schritte aus. 
 
@@ -176,7 +179,7 @@ Führen Sie zum Installieren von **mssql-tools** unter SUSE Linux Enterprise Ser
    source ~/.bashrc
    ```
 
-## <a id="macos"></a> Installieren von Tools unter macOS
+## <a name="install-tools-on-macos"></a><a id="macos"></a> Installieren von Tools unter macOS
 
 Eine Vorschauversion von **sqlcmd** und **bcp** ist nun unter macOS verfügbar. Weitere Informationen finden Sie in der [Ankündigung](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
 
@@ -195,7 +198,7 @@ brew install mssql-tools
 #HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
-## <a id="docker"></a> Docker
+## <a name="docker"></a><a id="docker"></a> Docker
 
 Wenn Sie [SQL Server in einem Docker-Container ausführen](quickstart-install-connect-docker.md), sind die SQL Server-Befehlszeilentools bereits im Linux-Containerimage von SQL Server enthalten. Wenn Sie mithilfe einer interaktiven Bash-Shell mit einem ausgeführten Container verbunden sind, können Sie die Tools lokal ausführen.
 

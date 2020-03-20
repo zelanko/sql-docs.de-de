@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: be126095fc300820a60bd4b195d43ec7d2059072
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256685"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198377"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Verwenden der Active Directory-Authentifizierung für SQL Server für Linux
 
@@ -46,11 +46,11 @@ Bevor Sie die AD-Authentifizierung konfigurieren können, müssen Sie Folgendes 
   * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-## <a id="join"></a> Verknüpfen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hosts mit der AD-Domäne
+## <a name="join-ssnoversion-host-to-ad-domain"></a><a id="join"></a> Verknüpfen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hosts mit der AD-Domäne
 
 Verknüpfen Sie Ihren Linux-Host für SQL Server mit einem Active Directory-Domänencontroller. Informationen dazu finden Sie unter [Verknüpfen von eines Linux-Hosts für SQL Server mit einer Active Directory-Domäne](sql-server-linux-active-directory-join-domain.md).
 
-## <a id="createuser"></a> Erstellen eines AD-Benutzers (oder -MSA) für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Festlegen eines SPN
+## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a> Erstellen eines AD-Benutzers (oder -MSA) für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Festlegen eines SPN
 
 > [!NOTE]
 > Verwenden Sie für die folgenden Schritte Ihren [vollqualifizierten Domänennamen](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Wenn Sie in **Azure** arbeiten, müssen Sie **[einen erstellen](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** ,bevor Sie fortfahren können.
@@ -80,14 +80,14 @@ Verknüpfen Sie Ihren Linux-Host für SQL Server mit einem Active Directory-Dom
 
 Weitere Informationen finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
-## <a id="configurekeytab"></a> Konfigurieren der KEYTAB-Datei für den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dienst
+## <a name="configure-ssnoversion-service-keytab"></a><a id="configurekeytab"></a> Konfigurieren der KEYTAB-Datei für den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dienst
 
 Zum Konfigurieren der AD-Authentifizierung für SQL Server unter Linux benötigen Sie ein AD-Konto (MSA oder AD-Benutzerkonto) sowie den im vorherigen Abschnitt erstellten SPN.
 
 > [!IMPORTANT]
 > Wird das Kennwort für das AD-Konto oder für das Konto, dem die SPN zugewiesen sind, geändert, müssen Sie die KEYTAB-Datei mit dem neuen Kennwort und der Schlüsselversionsnummer (Key Version Number, KVNO) aktualisieren. Einige Dienste rotieren die Kennwörter möglicherweise auch automatisch. Überprüfen Sie sämtliche Richtlinien für die Kennwortrotation, die für die betreffenden Konten gelten, und passen Sie geplante Wartungsaktivitäten an diese an, um unerwartete Ausfallzeiten zu vermeiden.
 
-### <a id="spn"></a> KEYTAB-Einträge für den SPN
+### <a name="spn-keytab-entries"></a><a id="spn"></a> KEYTAB-Einträge für den SPN
 
 1. Überprüfen Sie die KVNO des AD-Kontos, das Sie im vorherigen Schritt erstellt haben. Normalerweise lautet diese 2, aber es kann auch ein anderer Integerwert sein, wenn Sie das Kennwort des Kontos mehrmals geändert haben. Führen Sie auf dem Hostcomputer für SQL Server die folgenden Befehle aus:
 
@@ -125,6 +125,7 @@ Zum Konfigurieren der AD-Authentifizierung für SQL Server unter Linux benötige
 
    > [!NOTE]
    > Mit den obigen Befehlen werden für die AD-Authentifizierung sowohl AES- als auch RC4-Verschlüsselungsmethoden zugelassen. RC4 ist eine ältere Verschlüsselungsmethode. Ist ein höherer Sicherheitsgrad erforderlich, können Sie die KEYTAB-Einträge auch nur mithilfe der AES-Verschlüsselung erstellen.
+   > Die letzten zwei `UserName`-Einträge müssen kleingeschrieben werden, da sonst die Authentifizierung der Berechtigungen fehlschlagen kann.
 
 1. Nach dem Ausführen des obigen Befehls sollte eine KEYTAB-Datei namens „mssql.keytab“ vorhanden sein. Kopieren Sie die Datei auf den SQL Server-Computer in den Ordner `/var/opt/mssql/secrets`.
 
@@ -163,7 +164,7 @@ Zum Konfigurieren der AD-Authentifizierung für SQL Server unter Linux benötige
 
 Nun können Sie AD-basierte Anmeldeinformationen in SQL Server verwenden.
 
-## <a id="createsqllogins"></a> Erstellen von AD-basierten Anmeldeinformationen in Transact-SQL
+## <a name="create-ad-based-logins-in-transact-sql"></a><a id="createsqllogins"></a> Erstellen von AD-basierten Anmeldeinformationen in Transact-SQL
 
 1. Stellen Sie eine Verbindung mit SQL Server her, und erstellen Sie neue AD-basierte Anmeldeinformationen:
 
@@ -177,7 +178,7 @@ Nun können Sie AD-basierte Anmeldeinformationen in SQL Server verwenden.
    SELECT name FROM sys.server_principals;
    ```
 
-## <a id="connect"></a> Herstellen einer Verbindung mit SQL Server über die AD-Authentifizierung
+## <a name="connect-to-sql-server-using-ad-authentication"></a><a id="connect"></a> Herstellen einer Verbindung mit SQL Server über die AD-Authentifizierung
 
 Melden Sie sich über Ihre Domänenanmeldeinformationen bei einem Clientcomputer an. Nun können Sie eine Verbindung mit SQL Server herstellen, ohne Ihr Kennwort über die AD-Authentifizierung erneut eingeben zu müssen. Wenn Sie Anmeldeinformationen für eine AD-Gruppe erstellen, kann jeder AD-Benutzer, der Mitglied dieser Gruppe ist, auf die gleiche Weise eine Verbindung herstellen.
 
@@ -212,7 +213,7 @@ In der folgenden Tabelle werden die Empfehlungen für andere Clienttreiber besch
 | **ODBC** | Verwenden Sie die integrierte Authentifizierung. |
 | **ADO.NET** | Verwenden Sie die Syntax der Verbindungszeichenfolge. |
 
-## <a id="additionalconfig"></a> Zusätzliche Konfigurationsoptionen
+## <a name="additional-configuration-options"></a><a id="additionalconfig"></a> Zusätzliche Konfigurationsoptionen
 
 Wenn Sie Hilfsprogramme von Drittanbietern wie [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) oder [Centrify](https://www.centrify.com/) verwenden, um den Linux-Host mit der AD-Domäne zu verknüpfen, und Sie erzwingen möchten, dass die SQL Server-Instanz die OpenLDAP-Bibliothek direkt verwendet, können Sie die Option **disablesssd** wie folgt mithilfe des Tools **mssql-conf** konfigurieren:
 

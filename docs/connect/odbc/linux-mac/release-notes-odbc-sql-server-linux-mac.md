@@ -1,7 +1,7 @@
 ---
-title: Versionshinweise zur ODBC für Linux und macOS | Microsoft-Dokumentation
+title: Versionshinweise zu Microsoft ODBC Driver for SQL Server unter Linux und macOS
 ms.custom: ''
-ms.date: 06/30/2018
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896762"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090495"
 ---
-# <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Versionshinweise zu Microsoft ODBC Driver for SQL Server für Linux und macOS
+# <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Versionshinweise zu Microsoft ODBC Driver for SQL Server unter Linux und macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -51,7 +51,7 @@ GeneMi.  2019/04/03.
 | :------------ | :------ |
 | SQL_COPT_SS_SPID-Verbindungsattribut zum Abrufen der SPID ohne Roundtrip zum Server | Siehe [Schlüsselwörter und Attribute von DSN- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md). |
 | Unterstützung für das Angeben der EULA-Annahme über `debconf` in Debian und Ubuntu. | Siehe [Installieren des Treibers](./installing-the-microsoft-odbc-driver-for-sql-server.md). |
-| Neue Verteilungen werden unterstützt | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| Neue Verteilungen werden unterstützt | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
@@ -82,9 +82,9 @@ Bei Verwendung von Always Encrypted mit Secure Enclaves und Azure Key Vault kön
 
 | Neues Element | Details |
 | :------- | :------ |
-| Neue Verteilungen werden unterstützt | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
+| Neue Verteilungen werden unterstützt | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Authentifizierungsmodus für (systemweite und benutzerseitig zugewiesene) verwaltete Azure Active Directory-Dienstidentitäten | Siehe [Using Azure Active Directory with the ODBC Driver (Verwenden von Azure Active Directory mit dem ODBC-Treiber)](../using-azure-active-directory.md) |
-| Übermitteln von Eingabeparametern für Always Encrypted-Spalten | Weitere Informationen finden Sie unter [Limitations of the ODBC driver when using Always Encrypted (Einschränkungen des ODBC-Treibers bei Verwendung von Always Encrypted)](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted) |
+| Übermitteln von Eingabeparametern für Always Encrypted-Spalten | Weitere Informationen finden Sie unter [Einschränkungen des ODBC-Treibers bei Verwendung von Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Verteilte XA-Transaktionen | Siehe [Using XA Transactions (Verwenden von XA-Transaktionen)](../use-xa-with-dtc.md)<br/><br/>XA ist ein Akronym für _eXtended Architecture_. Dabei handelt es sich um einen Standard für die Ausführung einer globalen Transaktion, die auf mehrere serverseitige Datenspeichersysteme zugreift. |
 | &nbsp; | &nbsp; |
 
@@ -122,7 +122,7 @@ Always Encrypted-Unterstützung für die BCP-API
 
 Das neue Verbindungszeichenfolgenattribut „UseFMTOnly“ bewirkt, dass der Treiber in besonderen Fällen ältere Metadaten verwendet, die temporäre Tabellen erfordern.
 
-Unterstützung für verwaltete Azure SQL-Instanzen (verlängerte private Vorschau) 
+Unterstützung verwalteter Azure SQL-Datenbank-Instanzen 
 > [!NOTE]
 > Bei der Verwendung verwalteter Instanzen gibt es einige Unterschiede:
 > -   FILESTREAM wird nicht unterstützt 
@@ -140,7 +140,7 @@ Unterstützung für verwaltete Azure SQL-Instanzen (verlängerte private Vorscha
 
 Mit dem ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde Unterstützung für Always Encrypted und Azure Active Directory bei Verwendung mit Microsoft SQL Server 2016 hinzugefügt.
 
-**Neue Verteilungen werden unterstützt:** OS X 10.11 und macOS 10.12 werden im ersten Release des ODBC-Treibers für macOS unterstützt. Ubuntu 16.10 wird jetzt zusammen mit Red Hat 6, 7 und SUSE 12 unterstützt. Jede Plattform verfügt über ein für die Plattform relevantes Paket (RPM oder DEB), um die Installation und Konfiguration zu vereinfachen.  Installationsanweisungen finden Sie unter [Installing the Driver (Installieren des Treibers)](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+**Neue Verteilungen werden unterstützt:** OS X 10.11 und macOS 10.12 werden im ersten Release des ODBC-Treibers für macOS unterstützt. Ubuntu 16.10 wird jetzt zusammen mit Red Hat 6, 7 und SUSE 12 unterstützt. Jede Plattform verfügt über ein für die Plattform relevantes Paket (RPM oder DEB), um die Installation und Konfiguration zu vereinfachen. Weitere Informationen finden Sie in den Installationsanweisungen für den ODBC-Treiber für [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) und [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
 **Änderungen bei der Unterstützung des unixODBC-Treiber-Managers 2.3.1**: Der ODBC-Treiber ist nicht mehr von benutzerdefinierten Paketen für den unixODBC-Treiber-Manager (mit Ausnahme von Red Hat 6) abhängig. Stattdessen wird nun der Verteilungspaket-Manager genutzt, um die unixODBC-Abhängigkeit von den Repositorys der Verteilung aufzulösen.
 

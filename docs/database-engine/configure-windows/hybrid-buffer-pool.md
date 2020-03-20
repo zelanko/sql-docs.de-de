@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: c7919232bcd2c84ea58ac2e8b9d23b48cc58ee60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831704"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112288"
 ---
 # <a name="hybrid-buffer-pool"></a>Hybrider Pufferpool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,14 +86,9 @@ SELECT * FROM
 sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
-Das folgende Beispiel gibt zwei Tabellen zurück:
-
-- Die erste Tabelle zeigt den aktuellen Status der Systemkonfiguration des hybriden Pufferpools für eine Instanz von SQL Server.
-- In der zweiten Tabelle sind die Datenbanken und die Einstellung auf Datenbankebene für den hybriden Pufferpool (`is_memory_optimized_enabled`) aufgeführt.
+Im folgenden Beispiel sind die Datenbanken und die Einstellung auf Datenbankebene für den hybriden Pufferpool (`is_memory_optimized_enabled`) aufgeführt.
 
 ```sql
-SELECT * FROM sys.configurations WHERE name = 'hybrid_buffer_pool';
-
 SELECT name, is_memory_optimized_enabled FROM sys.databases;
 ```
 

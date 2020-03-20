@@ -1,5 +1,6 @@
 ---
 title: Neuigkeiten zu SQL Server 2019 | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die neuen Features von SQL Server 2019 (15.x), die Ihnen eine Auswahl aus Entwicklungssprachen, Datentypen, Umgebungen und Betriebssystemen bieten.
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -8,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0cddfe78555d5e5f57e57346aff1ead52f05cebf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831554"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79218055"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -193,7 +194,7 @@ Eine allgemeine Aufgabe, die jeder berücksichtigen sollte, der [!INCLUDE[ssNoVe
 ## <a name="platform-choice"></a>Plattformauswahl
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] baut auf den Innovationen auf, die in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] eingeführt wurden, sodass Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf Ihrer bevorzugten Plattform mit mehr Funktionen und Sicherheit als je zuvor ausführen können.
 
-### <a id="sql-server-on-linux"></a>Linux
+### <a name="linux"></a><a id="sql-server-on-linux"></a>Linux
 
 | Neue Funktion oder Update | Details |
 |:-----|:-----|
@@ -226,7 +227,7 @@ Die einfachste Möglichkeit, um die Arbeit mit [!INCLUDE[ssNoVersion](../include
 |Setupwarnung bei Produktschlüssel für Sever-/CAL-Lizenz|Wenn ein Produktschlüssel für eine Server-/Cal-Lizenz eingegeben wird und die Maschine mehr als 20 physische (oder 40 logische Kerne bei aktiviertem Hyper-Threading) hat, wird während des Setupvorgangs eine Warnung angezeigt. Benutzer haben nun die Wahl. Sie können wie bisher die Beschränkung zur Kenntnis nehmen und mit dem Setupvorgang fortfahren, oder sie geben einen Lizenzschlüssel ein, der die maximal mögliche Prozessorzahl des Systems unterstützt.|
 | &nbsp; | &nbsp; |
 
-## <a id="ml"></a>SQL Server-Machine Learning-Dienste
+## <a name="sql-server-machine-learning-services"></a><a id="ml"></a>SQL Server-Machine Learning-Dienste
 
 |Neue Funktion oder Update | Details |
 |:---|:---|

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 486d26dd3afeb91cb43181875e22592fb482af5f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 159aedf0665df441a31c93760c26523b843921bb
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68702806"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058714"
 ---
 # <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,7 +52,7 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-Sie können optional das Protokoll und den Port für die Verbindung mit dem Server angeben. Beispiel: **Server=tcp:**_Servername_**,12345**. Beachten Sie, dass das einzige von Linux- und macOS-Treibern unterstützte Protokoll `tcp` ist.
+Sie können optional das Protokoll und den Port für die Verbindung mit dem Server angeben. Beispiel: **Server=tcp:** _Servername_ **,12345**. Beachten Sie, dass das einzige von Linux- und macOS-Treibern unterstützte Protokoll `tcp` ist.
 
 Um eine Verbindung mit einer benannten Instanz auf einem statischen Port herzustellen, verwenden Sie <b>Server=</b>*servername*,**port_number**. Das Herstellen einer Verbindung mit einem dynamischen Port wird vor Version 17.4 nicht unterstützt.
 
@@ -93,8 +93,8 @@ SSL verwendet die OpenSSL-Bibliothek. Die folgende Tabelle zeigt die minimalen u
 |Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
-|SuSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
+|SUSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
+|SUSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
 |Ubuntu 18.10, 19.04|1.1.1|/etc/ssl/certs|
 |Ubuntu 18.04|1.1.0|/etc/ssl/certs|
 |Ubuntu 16.04, 16.10, 17.10|1.0.2|/etc/ssl/certs|
@@ -111,7 +111,8 @@ Fügen Sie entweder dem Abschnitt des Treibers in `odbcinst.ini` oder dem Abschn
 
 - `KeepAliveInterval=<integer>` bestimmt das Intervall, das zwischen den erneuten Keep-Alive-Übertragungen liegt, bis eine Antwort empfangen wird.  Der Standardwert beträgt **1** Sekunde.
 
+## <a name="see-also"></a>Weitere Informationen
 
-## <a name="see-also"></a>Weitere Informationen  
-[Installieren des Microsoft ODBC Driver for SQL Server unter Linux und macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  
-[Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [Installieren von Microsoft ODBC Driver for SQL Server unter Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installieren von Microsoft ODBC Driver for SQL Server unter macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
+- [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md)

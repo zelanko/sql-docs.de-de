@@ -1,5 +1,6 @@
 ---
 title: Neues in SQL Server 2017 | Microsoft-Dokumentation
+description: Erfahren Sie, was es neues in SQL Server 2017 gibt, die Plattform, die die Leistungsfähigkeit von SQL Server für Linux, Linux-basierte Docker-Container sowie für Windows bereitstellt.
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92f289ec22ca35834420dc7ee84d667c55e29a19
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: 48188e98d992f45ca282c3687bf56e255d15a40a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478496"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190625"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -58,12 +59,12 @@ SQL Server-2017 umfasst viele neue Datenbank-Engine-Funktionen, Verbesserungen u
 ## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
 - Die neue **Scale Out**-Funktion in SSIS weist die folgenden neuen und geänderten Funktionen auf. Weitere Informationen finden Sie unter [What's New in Integration Services in SQL Server 2017 (Neues in Integration Services in SQL Server 2017)](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md). (RC1)
     -   Scale Out-Master unterstützt jetzt Hochverfügbarkeit.
-    -   Die Failoverbehandlung der Ausführungsprotokolle aus Scale-Out-Workern wurde verbessert.
+    -   Die Failoverbehandlung der Ausführungsprotokolle aus Scale Out-Workern wurde verbessert.
     -   Der Parameter *runincluster* der gespeicherten Prozedur **[catalog].[create_execution]** wird hinsichtlich Konsistenz und Lesbarkeit in *runinscaleout* umbenannt.
     -   Der SSIS-Katalog verfügt über eine neue globale Eigenschaft, um den Standardmodus für das Ausführen von SSIS-Paketen anzugeben.
-- In der neuen Funktion **Scale Out** können Sie jetzt den Parameter **Use32BitRuntime** verwenden, wenn Sie die Ausführung auslösen. (CTP 2.1)
+- In der neuen Funktion **Scale Out für SSIS** können Sie jetzt den Parameter **Use32BitRuntime** verwenden, wenn Sie die Ausführung auslösen. (CTP 2.1)
 - Der Integration Services (SSIS) von SQL Server 2017 unterstützt jetzt auch **SQL Server unter Linux**, und mit einem neuen Paket können Sie die SSIS-Pakete auf Linux über die Befehlszeile ausführen. Weitere Informationen finden Sie unter dem [Blogpost, der die SSIS-Unterstützung für Linux ankündigt](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). (CTP 2.1)
-- Die neue Funktion **Scale Out für SSIS** macht es viel einfacher, SSIS auf mehreren Computern auszuführen. Weitere Informationen finden Sie unter [Integration Services Scale Out (Integration Services Scale Out)](~/integration-services/scale-out/integration-services-ssis-scale-out.md). (CTP 1.0)
+- Die neue Funktion **Scale Out für SSIS** macht es viel einfacher, SSIS auf mehreren Computern auszuführen. Weitere Informationen finden Sie unter [Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md). (CTP 1.0)
 - OData-Quelle und der OData-Verbindungs-Manager unterstützen jetzt Verbindungen mit den OData-Feeds von Microsoft Dynamics AX Online und Microsoft Dynamics CRM Online. (CTP 1.0)
 
 Weitere Informationen finden Sie unter [What's New in Integration Services in SQL Server 2017 (Neues in Integration Services in SQL Server 2017)](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).

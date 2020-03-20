@@ -1,7 +1,7 @@
 ---
-title: Versionshinweise zu ODBC for SQL Server unter Windows | Microsoft-Dokumentation
+title: Versionshinweise für Microsoft ODBC Driver for SQL Server für Windows
 ms.custom: ''
-ms.date: 02/27/2019
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 174ea00f9becf1445212c20137ea902f3892918e
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: 95d3002ff9dd32bc4070cfb541ebd54edbc70b7c
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896752"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090507"
 ---
-# <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Release Notes for ODBC to SQL Server on Windows (Versionshinweise zu ODBC für SQL Server unter Windows)
+# <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Versionshinweise für Microsoft ODBC Driver for SQL Server für Windows
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -44,7 +44,19 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
-## <a name="1752-march-2020"></a>17.5.2, März 2020
+## <a name="1752"></a>17.5.2
+
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120137)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120140)  
+
+Versionsnummer: 17.5.2.1  
+Veröffentlichung: 6. März 2019
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x40a)  
+
+### <a name="features-added-in-1752"></a>In 17.5.2 hinzugefügte Features
 
 | Neues Feature | Details |
 | :------------ | :------ |
@@ -53,25 +65,65 @@ GeneMi (and CraigG).  2019/03/30.
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
-## <a name="175-january-2020"></a>Version 17.5, Januar 2020
+## <a name="previous-releases"></a>Vorgängerversionen
+
+Laden Sie frühere Versionen des ODBC-Treibers herunter, indem Sie auf die Downloadlinks in den folgenden Abschnitten klicken:
+
+## <a name="175"></a>17,5
+
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120248)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120353)  
+
+Versionsnummer: 17.5.1.1  
+Veröffentlichung: 31. Januar 2019
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x40a)  
+
+### <a name="features-added-in-175"></a>In 17.5 hinzugefügte Features
 
 | Neues Feature | Details |
 | :------------ | :------ |
-| SQL_COPT_SS_SPID-Verbindungsattribut zum Abrufen der SPID ohne Roundtrip zum Server | Siehe [Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md) |
+| SQL_COPT_SS_SPID-Verbindungsattribut zum Abrufen der SPID ohne Roundtrip zum Server | Siehe [Schlüsselwörter und Attribute von DSN- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md). |
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
-## <a name="1742-october-2019"></a>17.4.2, Oktober 2019
+## <a name="1742"></a>17.4.2
+
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120354)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120249)  
+
+Versionsnummer: 17.4.2.1  
+Veröffentlichung: Oktober 2019
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x40a)  
+
+### <a name="features-added-in-1742"></a>In 17.4.2 hinzugefügte Features
 
 | Neues Feature | Details |
 | :------------ | :------ |
 | Unterstützung für zusätzliche Azure Key Vault-Endpunkte | Siehe [Verwenden von Always Encrypted mit dem ODBC-Treiber](../using-always-encrypted-with-the-odbc-driver.md). |
 | Unterstützung für das Festlegen der Datenklassifizierungsversion | Siehe [Data Classification (Datenklassifizierung)](../data-classification.md#bkmk-version) |
-| Die Active Directory-Authentifizierungsbibliothek (adal.dll) wurde zum Installer hinzugefügt | Dieses Feature ist nun Teil der Installation des Basistreibers. Dadurch wird ein Upgrade für bestehende Installationen der Microsoft Active Directory-Authentifizierungsbibliothek für SQL Server durchgeführt und die Bibliothek wird aus der Liste mit installierten Anwendung in Windows entfernt. |
+| Die Active Directory-Authentifizierungsbibliothek (adal.dll) wurde zum Installer hinzugefügt | Dieses Feature ist nun Teil der Installation des Basistreibers. Das ODBC-Installationsprogramm sorgt dafür, dass ein Upgrade für bestehende Installationen der Microsoft Active Directory-Authentifizierungsbibliothek für SQL Server durchgeführt und die Bibliothek aus der Liste mit installierten Anwendungen in Windows entfernt wird. |
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
-## <a name="174-july-2019"></a>17.4, Juli 2019
+## <a name="174"></a>17.4
+
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120149)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120150)  
+
+Versionsnummer: 17.4.1.1  
+Veröffentlichung: Juli 2019
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x40a)  
+
+### <a name="features-added-in-174"></a>In 17.4 hinzugefügte Features
 
 | Neues Feature | Details |
 | :------------ | :------ |
@@ -80,7 +132,19 @@ GeneMi (and CraigG).  2019/03/30.
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
-## <a name="173-february-2019"></a>Februar 2019: Version 17.3
+## <a name="173"></a>17.3
+
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120355)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120356)  
+
+Versionsnummer: 17.3.1.1  
+Veröffentlichung: Februar 2019
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x40a)  
+
+### <a name="features-added-in-173"></a>In 17.3 hinzugefügte Features
 
 | Neues Feature | Details |
 | :------------ | :------ |
@@ -90,7 +154,19 @@ GeneMi (and CraigG).  2019/03/30.
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
-## <a name="172-july-2018"></a>Juli 2018: Version 17.2
+## <a name="172"></a>17.2
+
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120250)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120357)  
+
+Versionsnummer: 17.2.0.1  
+Veröffentlichung: Juli 2018
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x40a)  
+
+### <a name="features-added-in-172"></a>In 17.2 hinzugefügte Features
 
 | Neues Feature | Details |
 | :------------ | :------ |
@@ -99,7 +175,19 @@ GeneMi (and CraigG).  2019/03/30.
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
-## <a name="171-march-2018"></a>März 2018: Version 17.1
+## <a name="171"></a>17.1
+
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120151)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120443)  
+
+Versionsnummer: 17.1.0.1  
+Veröffentlichung: März 2018
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x40a)  
+
+### <a name="features-added-in-171"></a>In 17.1 hinzugefügte Features
 
 | Neues Feature | Details |
 | :------------ | :------ |
@@ -108,13 +196,25 @@ GeneMi (and CraigG).  2019/03/30.
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
-## <a name="17-february-2018"></a>Februar 2018: Version 17
+## <a name="170"></a>17.0
+
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120444)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120152)  
+
+Versionsnummer: 17.0.1.1  
+Veröffentlichung: Februar 2018
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x40a)  
+
+### <a name="features-added-in-170"></a>In 17.0 hinzugefügte Features
 
 | Neues Feature | Details |
 | :------------ | :------ |
 | Always Encrypted-Unterstützung für die BCP-API | &nbsp; |
 | Neues Verbindungszeichenfolgenattribut `UseFMTOnly` | Bewirkt, dass der Treiber in speziellen Fällen ältere Metadaten verwendet, die temporäre Tabellen erfordern |
-| Unterstützung verwalteter Azure SQL-Datenbank-Instanzen | Die private Vorschau wurde verlängert<br/><br/>Weitere Informationen finden Sie in der folgenden [Liste der Unterschiede bei der Verwendung verwalteter Instanzen (ODBC-Version 17)](#diffs-managed-instance-17) |
+| Unterstützung verwalteter Azure SQL-Datenbank-Instanzen | Weitere Informationen finden Sie in der folgenden [Liste der Unterschiede bei der Verwendung verwalteter Instanzen (ODBC-Version 17)](#diffs-managed-instance-17) |
 | &nbsp; | &nbsp; |
 
 | Geänderte Abhängigkeit | Details |
@@ -122,15 +222,15 @@ GeneMi (and CraigG).  2019/03/30.
 | Der Anmeldeassistent für Microsoft-Onlinedienste wurde entfernt | Die Abhängigkeit wurde entfernt |
 | &nbsp; | &nbsp; |
 
-### <a name="diffs-managed-instance-17"></a> Unterschiede bei der Verwendung verwalteter Instanzen (ODBC-Version 17)
+### <a name="differences-when-using-managed-instance-odbc-version-17"></a><a name="diffs-managed-instance-17"></a> Unterschiede bei der Verwendung verwalteter Instanzen (ODBC-Version 17)
 
-Diese Version von ODBC umfasst Unterstützung für verwaltete Azure SQL-Instanzen (verlängerte private Vorschau) In der folgenden Liste werden die Unterschiede bei der Verwendung von verwalteten Instanzen aufgeführt.
+Diese Version von ODBC umfasst Unterstützung für verwaltete Azure SQL-Instanzen. In der folgenden Liste werden die Unterschiede bei der Verwendung von verwalteten Instanzen aufgeführt.
 
 > [!NOTE]
 > Bei der Verwendung verwalteter Instanzen gibt es einige Unterschiede:
 >
 > - FILESTREAM wird nicht unterstützt
-> - Der Zugriff auf das lokale Dateisystem wird nicht unterstützt, ist jedoch für Dinge wie Ablaufverfolgungsdateien erforderlich
+> - Der Zugriff auf das lokale Dateisystem wird nicht unterstützt, ist jedoch für Dinge wie Ablaufverfolgungsdateien erforderlich.
 > - Das Erstellen von benutzerdefinierten Typen aus lokalen Pfaden wird nicht unterstützt
 > - Die integrierte Windows-Authentifizierung wird nicht unterstützt
 > - DTC wird nicht unterstützt
@@ -142,13 +242,39 @@ Diese Version von ODBC umfasst Unterstützung für verwaltete Azure SQL-Instanze
 
 ## <a name="131"></a>Version 13.1
 
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2121020)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120923)  
+
+Versionsnummer: Version 13.1  
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x40a)  
+
+[Microsoft Befehlszeilenprogramme 13.1 für SQL Server](https://www.microsoft.com/download/details.aspx?id=53591)
+
+### <a name="features-added-in-131"></a>In 13.1 hinzugefügte Features
+
 | Neues Feature | Details |
 | :------------ | :------ |
 | Mit dem ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurden [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) und [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) hinzugefügt | Diese hinzugefügten Unterstützungen stehen zur Verfügung, wenn eine Verbindung mit Microsoft SQL Server 2016 oder einer höheren Version hergestellt wird |
-| Es wurden Schlüsselwörter und Attribute für das Verbindungspooling hinzugefügt, die den Unterstützungen für Always Encrypted und Azure Active Directory entsprechen | Diese Schlüsselwörter und Attribute werden unter [Driver Aware Connection Pooling in the ODBC Driver for SQL Server (Treiberfähiges Verbindungspooling im ODBC Driver for SQL Server)](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md) beschrieben |
+| Es wurden Schlüsselwörter und Attribute für das Verbindungspooling hinzugefügt, die den Unterstützungen für Always Encrypted und Azure Active Directory entsprechen | Diese Schlüsselwörter und Attribute werden unter [Treiberfähiges Verbindungspooling im ODBC-Treiber für SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md) beschrieben. |
 | &nbsp; | &nbsp; |
 
 ## <a name="13"></a>13
+
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2121118)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120924)  
+
+Versionsnummer: 13  
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x40a)  
+
+[Download: Microsoft Befehlszeilenprogramme 13 für SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)
+
+### <a name="features-added-in-13"></a>In 13 hinzugefügte Features
 
 | Neues Feature | Details |
 | :------------ | :------ |
@@ -156,6 +282,19 @@ Diese Version von ODBC umfasst Unterstützung für verwaltete Azure SQL-Instanze
 | &nbsp; | &nbsp; |
 
 ## <a name="11"></a>11
+
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2121206)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2121021)  
+
+Versionsnummer: 11  
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x40a)  
+
+[Download: Microsoft Befehlszeilenprogramme 11 für SQL Server](https://www.microsoft.com/download/details.aspx?id=36433)  
+
+### <a name="features-added-in-11"></a>In 11 hinzugefügte Features
 
 | Neues Feature | Details |
 | :------------ | :------ |

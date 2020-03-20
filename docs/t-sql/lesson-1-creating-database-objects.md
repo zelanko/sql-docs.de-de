@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280950"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198407"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lektion 1: Erstellen und Abfragen von Datenbankobjekten
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,12 +39,12 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio u
 
 - Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Wenn Sie über keinen Zugriff auf eine SQL Server-Instanz verfügen, wählen Sie Ihre Plattform aus den folgenden Links aus. Wenn Sie die SQL-Authentifizierung wählen, verwenden Sie Ihre SQL Server-Anmeldeinformationen.
+Wenn Sie keine SQL Server-Instanz haben, erstellen Sie eine. Wählen Sie dazu aus den folgenden Links Ihre Plattform aus. Wenn Sie die SQL-Authentifizierung wählen, verwenden Sie Ihre SQL Server-Anmeldeinformationen.
 - **Windows**: [Herunterladen von Microsoft SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - **macOS**: [Herunterladen von SQL Server 2017 für Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
 ## <a name="create-a-database"></a>Erstellen einer Datenbank
-Wie viele [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen verfügt auch die CREATE DATABASE-Anweisung über einen erforderlichen Parameter: den Namen der Datenbank. CREATE DATABASE verfügt auch über viele optionale Parameter wie den Speicherort auf dem Datenträger, an den Sie die Datenbankdateien kopieren möchten. Wenn Sie CREATE DATABASE ohne optionale Parameter ausführen, werden von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standardwerte für viele dieser Parameter verwendet. In diesem Lernprogramm werden nur wenige der optionalen Syntaxparameter verwendet.   
+Wie viele [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen verfügt auch die [`CREATE DATABASE`](statements/create-database-transact-sql.md)-Anweisung über einen erforderlichen Parameter: den Namen der Datenbank. ` CREATE DATABASE` verfügt auch über viele optionale Parameter wie den Speicherort auf dem Datenträger, an den Sie die Datenbankdateien kopieren möchten. Wenn Sie `CREATE DATABASE` ohne optionale Parameter ausführen, werden von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standardwerte für viele dieser Parameter verwendet.
 
 1.  Geben Sie in einem Fenster des Abfrage-Editors den folgenden Code ein, aber führen Sie ihn nicht aus:  
   
@@ -53,7 +53,7 @@ Wie viele [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen verfügt auch di
     GO  
     ```  
   
-2.  Verwenden Sie den Zeiger, um die Wörter `CREATE DATABASE`auszuwählen, und drücken Sie dann **F1**. Das CREATE DATABASE-Thema in der SQL Server-Onlinedokumentation sollte geöffnet werden. Sie können dieses Verfahren verwenden, um die vollständige Syntax für CREATE DATABASE und für die anderen in diesem Lernprogramm verwendeten Anweisungen zu finden.  
+2.  Verwenden Sie den Zeiger, um die Wörter `CREATE DATABASE`auszuwählen, und drücken Sie dann **F1**. Das `CREATE DATABASE`-Thema in der SQL Server-Onlinedokumentation sollte geöffnet werden. Sie können dieses Verfahren verwenden, um die vollständige Syntax für `CREATE DATABASE` und für die anderen in diesem Tutorial verwendeten Anweisungen zu finden.  
   
 3.  Drücken Sie im Abfrage-Editor **F5** , um die Anweisung auszuführen und eine Datenbank mit Namen `TestData`zu erstellen.  
   
@@ -63,6 +63,7 @@ Wenn Sie eine Datenbank erstellen, wird von [!INCLUDE[ssNoVersion](../includes/s
 > Das GO-Schlüsselwort trennt Anweisungen, wenn mehrere Anweisungen in einem einzelnen Batch gesendet werden. GO ist optional, wenn der Batch nur eine Anweisung enthält.  
 
 ## <a name="create-a-table"></a>Erstellen einer Tabelle
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Zum Erstellen einer Tabelle müssen Sie einen Tabellennamen sowie die Namen und Datentypen jeder Spalte in der Tabelle angeben. Außerdem empfiehlt es sich, anzugeben, ob NULL-Werte in den einzelnen Spalten zulässig sind. Zum Erstellen der Tabelle müssen Sie über die Berechtigung `CREATE TABLE` verfügen sowie über die Berechtigung `ALTER SCHEMA` für das Schema, das die Tabelle enthalten wird. Die feste Datenbankrolle [`db_ddladmin`](../relational-databases/security/authentication-access/database-level-roles.md) verfügt über folgende Berechtigungen.  
@@ -76,6 +77,7 @@ Eine Liste der Datentypen sowie Links zu Beschreibungen der einzelnen Datentypen
   
   
 ### <a name="switch-the-query-editor-connection-to-the-testdata-database"></a>Ändern der Verbindung des Abfrage-Editors in die Datenbank TestData  
+
 Geben Sie in einem Abfrage-Editorfenster den folgenden Code ein, und führen Sie ihn aus, um die Verbindung in die `TestData` -Datenbank zu ändern.  
   
   ```sql  
@@ -84,7 +86,8 @@ Geben Sie in einem Abfrage-Editorfenster den folgenden Code ein, und führen Sie
   ```  
   
 ### <a name="create-the-table"></a>Erstellen der Tabelle
-Geben Sie in einem Abfrage-Editorfenster den folgenden Code ein, und führen Sie ihn aus, um eine einfache Tabelle namens `Products`zu erstellen. Die Spalten in der Tabelle heißen `ProductID`, `ProductName`, `Price`und `ProductDescription`. Die `ProductID` -Spalte ist der Primärschlüssel der Tabelle. `int`, `varchar(25)`, `money`und `varchar(max)` sind Datentypen. Nur die Spalten `Price` und `ProductionDescription` dürfen keine Daten enthalten, wenn eine Zeile eingefügt oder geändert wird. Diese Anweisung enthält ein optionales Element (`dbo.`), das als Schema bezeichnet wird. Das Schema ist das Datenbankobjekt, das die Tabelle besitzt. Wenn Sie Administrator sind, ist `dbo` das Standardschema. `dbo` steht für Datenbankbesitzer (database owner, dbo).  
+
+Geben Sie in einem Abfrage-Editorfenster den folgenden Code ein, und führen Sie ihn aus, um eine Tabelle namens `Products` zu erstellen. Die Spalten in der Tabelle heißen `ProductID`, `ProductName`, `Price`und `ProductDescription`. Die `ProductID` -Spalte ist der Primärschlüssel der Tabelle. `int`, `varchar(25)`, `money`und `varchar(max)` sind Datentypen. Nur die Spalten `Price` und `ProductionDescription` dürfen keine Daten enthalten, wenn eine Zeile eingefügt oder geändert wird. Diese Anweisung enthält ein optionales Element (`dbo.`), das als Schema bezeichnet wird. Das Schema ist das Datenbankobjekt, das die Tabelle besitzt. Wenn Sie Administrator sind, ist `dbo` das Standardschema. `dbo` steht für Datenbankbesitzer (database owner, dbo).  
   
   ```sql  
   CREATE TABLE dbo.Products  
@@ -103,13 +106,13 @@ Nachdem Sie nun die **Products** -Tabelle erstellt haben, können Sie Daten mith
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3,17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
-|3000|3mm Bracket|.52||  
+|3000|3 mm Bracket|0,52||  
   
 Die grundlegende Syntax lautet: INSERT, Tabellenname, Spaltenliste, VALUES und dann eine Liste der einzufügenden Werte. Die beiden Bindestriche vor einer Zeile geben an, dass es sich bei der Zeile um einen Kommentar handelt, der vom Compiler ignoriert wird. In diesem Fall wird im Kommentar eine zulässige Variante der Syntax beschrieben.  
   
 ### <a name="insert-data-into-a-table"></a>Einfügen von Daten in eine Tabelle  
   
-1.  Führen Sie die folgende Anweisung aus, um eine Zeile in die in der vorhergehenden Aufgabe erstellte `Products` -Tabelle einzufügen. Dies ist die grundlegende Syntax.  
+1.  Führen Sie die folgende Anweisung aus, um eine Zeile in die in der vorhergehenden Aufgabe erstellte `Products` -Tabelle einzufügen.
   
    ```sql 
    -- Standard syntax  
@@ -117,7 +120,21 @@ Die grundlegende Syntax lautet: INSERT, Tabellenname, Spaltenliste, VALUES und d
        VALUES (1, 'Clamp', 12.48, 'Workbench clamp')  
    GO   
    ```  
-  
+
+   > [!NOTE]
+   > Wenn der Einfügevorgang erfolgreich ist, fahren Sie mit dem nächsten Schritt fort.
+   >
+   > Wenn der Einfügevorgang fehlschlägt, kann das daran liegen, dass die `Product`-Tabelle bereits über eine Zeile verfügt, in der sich diese Produkt-ID befindet. Löschen Sie alle Zeilen in der Tabelle, und wiederholen Sie den vorherigen Schritt, um fortfahren zu können. [`TRUNCATE TABLE`](statements/truncate-table-transact-sql.md) löscht aller Zeilen in der Tabelle. 
+   >
+   > Führen Sie den folgenden Befehl aus, um alle Zeilen in der Tabelle zu löschen:
+   > 
+   > ```sql
+   >TRUNCATE TABLE TestData.dbo.Products;
+   > GO
+   >```
+   >
+   > Nachdem Sie die Zeilen aus der Tabelle entfernt haben, führen Sie den `INSERT`-Befehl dieses Schritts noch mal aus.
+
 2.  In der folgenden Anweisung sehen Sie, wie die Reihenfolge, in der die Parameter bereitgestellt werden, durch Wechseln der Position von `ProductID` und `ProductName` sowohl in der Liste der Felder (in Klammern) als auch in der Liste der Werte geändert werden kann.  
   
    ```sql  
@@ -141,7 +158,7 @@ Die grundlegende Syntax lautet: INSERT, Tabellenname, Spaltenliste, VALUES und d
    ```sql  
    -- Dropping the optional dbo and dropping the ProductDescription column  
    INSERT Products (ProductID, ProductName, Price)  
-       VALUES (3000, '3mm Bracket', .52)  
+       VALUES (3000, '3 mm Bracket', 0.52)  
    GO  
    ```  
   
@@ -169,7 +186,7 @@ Daten in einer Tabelle können mithilfe der SELECT-Anweisung gelesen werden. Die
   GO  
   ```  
   
-2.  Sie können alle Spalten in der Tabelle mithilfe eines Sternchens auswählen. Dies wird häufig bei Ad-hoc-Abfragen verwendet. Sie sollten die Spaltenliste im dauerhaften Code bereitstellen, sodass die Anweisung die vorhergesagten Spalten zurückgibt, selbst wenn der Tabelle später eine neue Spalte hinzugefügt wird.  
+2.  Sie können alle Spalten in der Tabelle mithilfe eines Sternchens (`*`) auswählen. Das Sternchen eignet sich für Ad-hoc-Abfragen. Sie sollten die Spaltenliste im dauerhaften Code bereitstellen, sodass die Anweisung die vorhergesagten Spalten zurückgibt, selbst wenn der Tabelle später eine neue Spalte hinzugefügt wird.  
   
   ```sql  
   -- Returns all columns in the table  
@@ -224,7 +241,7 @@ In diesem Beispiel erstellen Sie mithilfe von CREATE VIEW eine Sicht, die nur zw
   
 ### <a name="create-a-view"></a>Erstellen einer Ansicht  
   
-Führen Sie die folgende Anweisung aus, um eine sehr einfache Sicht zu erstellen, die eine SELECT-Anweisung ausführt und die Namen und Preise der Produkte an den Benutzer zurückgibt.  
+Führen Sie die folgende Anweisung aus, um eine Sicht zu erstellen, die eine SELECT-Anweisung ausführt und die Namen und Preise der Produkte an den Benutzer zurückgibt.  
   
   ```sql  
   CREATE VIEW vw_Names  

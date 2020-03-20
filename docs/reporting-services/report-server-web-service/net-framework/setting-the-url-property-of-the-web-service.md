@@ -1,5 +1,6 @@
 ---
 title: Festlegen der URL-Eigenschaft des Webdiensts | Microsoft-Dokumentation
+description: In Ihren Microsoft .NET Framework-Anwendungen können Sie die Basis-URL des Berichtsserver-Webdiensts ändern, auf den Ihre Anwendung derzeit weiterleitet.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13fc37cd6b0b7396196ad8f514ec34fb9b317a16
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 982b1c80e9c9cd71b67e0f5a2fb227a9dc8d999f
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128835"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198507"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Festlegen der URL-Eigenschaft des Webdiensts
   Sie können die Basis-URL des Berichtsserver-Webdiensts, auf den Ihre Anwendung derzeit weiterleitet, jederzeit in Ihren [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Anwendungen ändern. Hierzu legen Sie einfach die **Url**-Eigenschaft des Dienstobjekts fest. Beispiel:  

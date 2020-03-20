@@ -14,11 +14,11 @@ author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338883"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287574"
 ---
 # <a name="best-practices-with-query-store"></a>Bewährte Methoden für den Abfragespeicher
 
@@ -26,17 +26,17 @@ ms.locfileid: "78338883"
 
 In diesem Artikel werden die bewährten Methoden für den Einsatz des SQL Server-Abfragespeichers mit Ihrer Arbeitsauslastung vorgestellt.
 
-## <a name="SSMS"></a> Verwenden des neuesten [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a> Verwenden des neuesten [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über mehrere Benutzeroberflächen, die zum Konfigurieren des Abfragespeichers und zur Nutzung der gesammelten Daten über Ihre Arbeitsauslastung konzipiert wurden. Laden Sie die neueste Version von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [hier](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) herunter.
 
 Eine kurze Beschreibung zur Verwendung des Abfragespeichers bei Fehlerbehebungen finden Sie in den [@AzureBlogs zu Abfragespeichern](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
 
-## <a name="Insight"></a> Verwenden von Query Performance Insight in Azure SQL-Datenbank
+## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Verwenden von Query Performance Insight in Azure SQL-Datenbank
 
-Wenn Sie Abfragespeicher in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ausführen, können Sie [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) verwenden, um den Ressourcenverbrauch im Laufe der Zeit zu analysieren. Obwohl Sie und [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) verwenden können, um einen detaillierten Ressourcenverbrauch für alle Abfragen zu erhalten, wie z. b. CPU, Arbeitsspeicher und e/a, bietet Query Performance Insight eine schnelle und effiziente Möglichkeit, um ihre Auswirkungen auf den gesamten DTU-Verbrauch für Ihre Datenbank zu ermitteln. Weitere Informationen finden Sie unter [Query Performance Insight für Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+Wenn Sie den Abfragespeicher in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausführen, können Sie mit [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) die Ressourcennutzung im Verlauf der Zeit analysieren. Sie können zwar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) verwenden, um detaillierte Ressourcennutzungswerte für alle Ihre Abfragen wie CPU, Arbeitsspeicher und E/A abzurufen, Query Performance Insight bietet Ihnen jedoch eine schnelle und effiziente Möglichkeit, um deren Auswirkung auf den DTU-Verbrauch Ihrer Datenbank insgesamt zu ermitteln. Weitere Informationen finden Sie unter [Query Performance Insight für Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
 
-In diesem Abschnitt werden optimale Konfigurations Standardwerte beschrieben, die entworfen wurden, um den zuverlässigen Betrieb der Abfragespeicher und der abhängigen Features sicherzustellen. Die Standardkonfiguration ist für die fortlaufende Datensammlung optimiert. Dies bedeutet, dass möglichst wenig Zeit im Status OFF bzw. READ_ONLY verbracht wird.
+Dieser Abschnitt beschreibt die optimalen Standardeinstellungen der Konfiguration, mit denen der zuverlässige Betrieb des Abfragespeichers und der abhängigen Features sichergestellt wird. Die Standardkonfiguration ist für die fortlaufende Datensammlung optimiert. Dies bedeutet, dass möglichst wenig Zeit im Status OFF bzw. READ_ONLY verbracht wird.
 
 | Konfiguration | BESCHREIBUNG | Standard | Comment |
 | --- | --- | --- | --- |
@@ -49,7 +49,7 @@ In diesem Abschnitt werden optimale Konfigurations Standardwerte beschrieben, di
 | | | | |
 
 > [!IMPORTANT]
-> Diese Standardeinstellungen werden in der letzten Phase der Abfragespeicheraktivierung automatisch auf alle Azure SQL-Datenbanken angewendet (siehe wichtigen Hinweis oben). Nach dieser Beleuchtung werden von der Azure SQL-Datenbank keine von Kunden festgelegten Konfigurationswerte geändert, es sei denn, Sie wirken sich negativ auf die primäre Arbeitsauslastung oder den zuverlässigen Betrieb des Abfragespeicher aus.
+> Diese Standardeinstellungen werden in der letzten Phase der Abfragespeicheraktivierung automatisch auf alle Azure SQL-Datenbanken angewendet (siehe wichtigen Hinweis oben). Nach diesem Optimierungsschritt werden die von Kunden festgelegten Konfigurationswerte für Azure SQL-Datenbank nicht mehr geändert, es sei denn, sie wirken sich negativ auf die primäre Workload oder den zuverlässigen Betrieb des Abfragespeichers aus.
 
 Wenn Sie weiterhin Ihre benutzerdefinierten Einstellungen nutzen möchten, helfen Ihnen die Informationen unter [ALTER DATABASE SET-Optionen (Transact-SQL)](https://msdn.microsoft.com/library/bb522682.aspx) weiter, um die Konfiguration wieder in den vorherigen Zustand zu versetzen. Lesen Sie den Artikel [Bewährte Methoden für den Abfragespeicher](https://msdn.microsoft.com/library/mt604821.aspx) , um zu erfahren, wie Sie die optimalen Konfigurationsparameter auswählen.
 
@@ -57,20 +57,20 @@ Wenn Sie weiterhin Ihre benutzerdefinierten Einstellungen nutzen möchten, helfe
 
 Sie können den Abfragespeicher bedenkenlos in allen Datenbanken verwenden, selbst in dicht gepackten Pools. Alle mit übermäßiger Ressourcennutzung zusammenhängenden Probleme, die bei der Aktivierung des Abfragespeichers für die große Anzahl Datenbanken in Pools für elastische Datenbanken auftreten konnten, wurden behoben.
 
-## <a name="Configure"></a>Halten Sie Abfragespeicher an ihre Arbeitsauslastung angepasst.
+## <a name="keep-query-store-adjusted-to-your-workload"></a><a name="Configure"></a> Dauerhafte Abfragespeicheranpassung an Ihre Arbeitsauslastung
 
 Konfigurieren Sie Abfragespeicher basierend auf den Anforderungen hinsichtlich der Arbeitsauslastung und der Behandlung von Leistungsproblemen.
 Die Standardparameter sind für den Einstieg ausreichend, Sie sollten jedoch das Verhalten des Abfragespeichers im Verlauf der Zeit überwachen und die Konfiguration entsprechend anpassen.
 
- ![Eigenschaften von Abfragespeicher](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")
+ ![Eigenschaften des Abfragespeichers](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")
 
  Hier sind einige Richtlinien zum Festlegen der Parameterwerte:
 
-**Max size (MB)**: gibt den Grenzwert für den Datenbereich an, der von Abfragespeicher in der Datenbank benötigt wird. Dies ist die wichtigste Einstellung, die sich direkt auf den Betriebsmodus des Abfragespeichers auswirkt.
+**Maximale Größe (MB):** Gibt den Grenzwert für den Datenbereich an, den der Abfragespeicher innerhalb der Datenbank einnimmt. Dies ist die wichtigste Einstellung, die sich direkt auf den Betriebsmodus des Abfragespeichers auswirkt.
 
 Während der Abfragespeicher Abfragen, Ausführungspläne und Statistiken sammelt, wächst die Datenbank an, bis dieser Grenzwert erreicht ist. In diesem Fall ändert der Abfragespeicher automatisch den Betriebsmodus in schreibgeschützt und beendet die Erfassung von neuen Daten, sodass die Leistungsanalyse nicht mehr korrekt ist.
 
-Der Standardwert in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ist 100 MB. Diese Größe reicht möglicherweise nicht aus, wenn die Arbeitsauslastung eine große Anzahl unterschiedlicher Abfragen und Pläne generiert oder wenn der Abfrageverlauf einen längeren Zeitraum aufbewahrt werden soll. Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] beträgt der Standardwert 1 GB. Verfolgen Sie den aktuellen Speicherplatz und erhöhen Sie den Wert für **Maximale Größe (MB)**, um zu verhindern, dass der Abfragespeicher in den schreibgeschützten Modus übergeht.
+Der Standardwert in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ist 100 MB. Diese Größe reicht möglicherweise nicht aus, wenn die Arbeitsauslastung eine große Anzahl unterschiedlicher Abfragen und Pläne generiert oder wenn der Abfrageverlauf einen längeren Zeitraum aufbewahrt werden soll. Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] beträgt der Standardwert 1 GB. Verfolgen Sie den aktuellen Speicherplatz und erhöhen Sie den Wert für **Maximale Größe (MB)** , um zu verhindern, dass der Abfragespeicher in den schreibgeschützten Modus übergeht.
 
 > [!IMPORTANT]
 > Der Grenzwert **Maximale Größe (MB)** wird nicht erzwungen. Die Speichergröße wird nur überprüft, wenn der Abfragespeicher Daten auf einen Datenträger schreibt. Das Intervall wird durch die Option **Datenleerungsintervall (Minuten)** festgelegt. Wenn der Abfragespeicher die maximale Größe zwischen Speichergrößenüberprüfungen überschritten hat, geht er in den schreibgeschützten Modus über. Bei Aktivierung von **Größenbasierter Bereinigungsmodus** wird auch der Bereinigungsmechanismus zum Erzwingen der maximalen Größe ausgelöst.
@@ -93,10 +93,10 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
 ```
 
- **Daten Leerungs Intervall (Minuten)**: definiert die Häufigkeit, mit der gesammelte Lauf Zeit Statistiken auf dem Datenträger persistent gespeichert werden. In der grafischen Benutzeroberfläche wird sie in Minuten ausgedrückt, in [!INCLUDE[tsql](../../includes/tsql-md.md)] wird sie jedoch in Sekunden angegeben. Der Standardwert ist 900 Sekunden, d.h. 15 Minuten in der grafischen Benutzeroberfläche. Ziehen Sie in Betracht, einen höheren Wert zu verwenden, wenn Ihre Arbeitsauslastung keine große Anzahl verschiedener Abfragen und Pläne generiert oder Sie längere Zeit warten können, bevor Daten vor dem Herunterfahren der Datenbank persistent gespeichert werden.
+ **Datenleerungsintervall (Minuten)** : Diese Option definiert die Häufigkeit, mit der die erfassten Laufzeitstatistiken auf dem Datenträger gespeichert werden. In der grafischen Benutzeroberfläche wird sie in Minuten ausgedrückt, in [!INCLUDE[tsql](../../includes/tsql-md.md)] wird sie jedoch in Sekunden angegeben. Der Standardwert ist 900 Sekunden, d.h. 15 Minuten in der grafischen Benutzeroberfläche. Ziehen Sie in Betracht, einen höheren Wert zu verwenden, wenn Ihre Arbeitsauslastung keine große Anzahl verschiedener Abfragen und Pläne generiert oder Sie längere Zeit warten können, bevor Daten vor dem Herunterfahren der Datenbank persistent gespeichert werden.
 
 > [!NOTE]
-> Mit dem Ablaufverfolgungsflag 7745 wird verhindert, dass Abfragespeicherdaten bei einem Failover oder Befehl zum Herunterfahren auf den Datenträger geschrieben werden. Weitere Informationen finden Sie im Abschnitt [Verwenden von Ablaufverfolgungsflags für unternehmenskritische Server](#Recovery) .
+> Mit dem Ablaufverfolgungsflag 7745 wird verhindert, dass Abfragespeicherdaten bei einem Failover oder Befehl zum Herunterfahren auf den Datenträger geschrieben werden. Weitere Informationen finden Sie im Abschnitt [Verwenden von Ablaufverfolgungsflags für unternehmenskritische Server](#Recovery).
 
 Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)], um verschiedene Werte für das **Datenleerungsintervall** festzulegen:
 
@@ -105,14 +105,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);
 ```
 
-**Statistik Sammlungs Intervall**: definiert den Grad der Granularität für die gesammelte Lauf Zeit Statistik (ausgedrückt in Minuten). Der Standardwert ist 60 Minuten. Es ist ratsam, einen niedrigeren Wert zu verwenden, wenn Sie eine höhere Granularität benötigen oder weniger Zeit zum Erkennen und Verringern von Problemen haben. Denken Sie daran, dass der Wert die Größe der Abfragespeicherdaten direkt beeinflusst. Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)], um einen anderen Wert für das **Statistiksammlungsintervall** festzulegen:
+**Statistiksammelungsintervall**: Definiert den Grad der Granularität für die erfasste Laufzeitstatistik, ausgedrückt in Minuten. Der Standardwert ist 60 Sekunden. Es ist ratsam, einen niedrigeren Wert zu verwenden, wenn Sie eine höhere Granularität benötigen oder weniger Zeit zum Erkennen und Verringern von Problemen haben. Denken Sie daran, dass der Wert die Größe der Abfragespeicherdaten direkt beeinflusst. Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)], um einen anderen Wert für das **Statistiksammlungsintervall** festzulegen:
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);
 ```
 
-**Schwellenwert für veraltete Abfragen (Tage)**: zeitbasierte Bereinigungs Richtlinie, mit der die Beibehaltungs Dauer von beibehaltenen Lauf Zeit Statistiken und inaktiven Abfragen (in Tagen) gesteuert wird. Standardmäßig ist der Abfragespeicher so konfiguriert, dass Daten 30 Tage lang gespeichert werden. Dies ist möglicherweise für Ihr Szenario unnötig lange.
+**Schwellenwert für veraltete Abfragen (Tage)** : Zeitbasierte Richtlinie zur Bereinigung, die den Aufbewahrungszeitraum für persistente Laufzeitstatistiken und inaktive Abfragen steuert, ausgedrückt in Tagen. Standardmäßig ist der Abfragespeicher so konfiguriert, dass Daten 30 Tage lang gespeichert werden. Dies ist möglicherweise für Ihr Szenario unnötig lange.
 
 Vermeiden Sie es, Verlaufsdaten aufzubewahren, die Sie nicht mehr verwenden möchten. Dies reduziert die Wahrscheinlichkeit für Änderungen in den schreibgeschützten Status. Die Größe der Abfragespeicherdaten sowie die Zeit, um Probleme zu erkennen und zu mindern, lassen sich besser vorhersagen. Verwenden Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder das folgende Skript, um die zeitbasierte Cleanuprichtlinie zu konfigurieren:
 
@@ -121,19 +121,19 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
 ```
 
-**Größen basierter Bereinigungs Modus**: gibt an, ob eine automatische Datenbereinigung stattfindet, wenn Abfragespeicher Datengröße den Grenzwert erreicht. Aktivieren Sie die größenbasierte Bereinigung, um sicherzustellen, dass der Abfragespeicher immer im Lese-/ Schreibmodus ausgeführt wird und die neuesten Daten erfasst.
+**Größenbasierter Bereinigungsmodus**: Gibt an, ob die automatische Bereinigung ausgeführt wird, wenn der Umfang der Abfragespeicherdaten den Grenzwert erreicht. Aktivieren Sie die größenbasierte Bereinigung, um sicherzustellen, dass der Abfragespeicher immer im Lese-/ Schreibmodus ausgeführt wird und die neuesten Daten erfasst.
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 ```
 
-**Abfragespeicher Erfassungs Modus**: gibt die Abfrage Erfassungs Richtlinie für Abfragespeicher an.
+**Erfassungsmodus für Abfragespeicher**: Gibt die Abfrageerfassungsrichtlinie für den Abfragespeicher an.
 
-- **All**: erfasst alle Abfragen. Diese Option ist die Standardeinstellung in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-- **Auto**: seltene Abfragen und Abfragen mit unbedeutender Kompilierungs-und Ausführungsdauer werden ignoriert. Die Schwellenwerte für die Dauer der Ausführungsanzahl, Kompilierung und Laufzeit werden intern bestimmt. Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ist dies die Standardoption.
-- **None**: Abfragespeicher beendet die Erfassung neuer Abfragen.
-- **Custom**: ermöglicht eine zusätzliche Steuerung und die Möglichkeit, die Richtlinie zur Datenerfassung zu optimieren. Die neuen benutzerdefinierten Einstellungen definieren, was während des Zeitschwellenwerts für die interne Erfassungsrichtlinie geschieht. Hierbei handelt es sich um eine Zeitbegrenzung, in der die konfigurierbaren Bedingungen ausgewertet werden, und trifft eine davon zu, ist die Abfrage geeignet, von Abfragespeicher aufgezeichnet zu werden.
+- **All**: Erfasst alle Abfragen. Diese Option ist die Standardeinstellung in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+- **Automatisch**: Unregelmäßige Abfragen und Abfragen mit unbedeutender Kompilierungs- und Ausführungsdauer werden ignoriert. Die Schwellenwerte für die Dauer der Ausführungsanzahl, Kompilierung und Laufzeit werden intern bestimmt. Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ist dies die Standardoption.
+- **Keine:** Der Abfragespeicher beendet die Erfassung neuer Abfragen.
+- **Benutzerdefiniert**: Bietet zusätzliche Steuerungsmöglichkeiten und ermöglicht die Optimierung der Datensammlungsrichtlinie. Die neuen benutzerdefinierten Einstellungen definieren, was während des Zeitschwellenwerts für die interne Erfassungsrichtlinie geschieht. Hierbei handelt es sich um eine Zeitbegrenzung, in der die konfigurierbaren Bedingungen ausgewertet werden, und trifft eine davon zu, ist die Abfrage geeignet, von Abfragespeicher aufgezeichnet zu werden.
 
 > [!IMPORTANT]
 > Cursor, Abfragen in gespeicherten Prozeduren und nativ kompilierte Abfragen werden immer erfasst, wenn der Erfassungsmodus für den Abfragespeicher auf **Alle** (ALL), **Automatisch** (AUTO) oder **Benutzerdefiniert** (CUSTOM) festgelegt ist. Zum Erfassen von nativ kompilierten Abfragen aktivieren Sie die Sammlung von Statistiken pro Abfrage mithilfe von [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
@@ -208,7 +208,7 @@ SET QUERY_STORE = ON
 
 Der Workflow zur Behandlung von Problemen mit dem Abfragespeicher ist einfach, wie im folgenden Diagramm dargestellt:
 
-![Abfragespeicher Problembehandlung](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")
+![Problembehandlung bei Abfragespeichern](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")
 
 Aktivieren Sie den Abfragespeicher mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], wie im vorherigen Abschnitt beschrieben, oder führen Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung aus:
 
@@ -218,8 +218,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 
 Es dauert einige Zeit, bis der Abfragespeicher das Dataset erfasst, das Ihre Arbeitsauslastung präzise darstellt. In der Regel reicht ein Tag, selbst bei sehr komplexen Arbeitsauslastungen. Sie können jedoch unmittelbar nach Aktivierung der Funktion damit beginnen, die Daten zu untersuchen und Abfragen zu identifizieren, die Ihre Aufmerksamkeit erfordern. Navigieren Sie zu dem Abfragespeicher-Unterordner unter dem Datenbankknoten im Objekt-Explorer von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], um Problembehandlungsansichten für bestimmte Szenarios zu öffnen.
 
-
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Abfragespeicheransichten arbeiten mit dem Satz von Ausführungsmetriken, die alle als eine der folgenden Statistikfunktionen ausgedrückt werden:
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Abfragespeicheransichten arbeiten mit dem Satz von Ausführungsmetriken, die alle als eine der folgenden Statistikfunktionen ausgedrückt werden:
 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version|Ausführungsmetrik|Statistikfunktion|
 |----------------------|----------------------|------------------------|
@@ -234,23 +233,22 @@ In der folgenden Tabelle wird erläutert, wann Sie die einzelnen Abfragespeicher
 
 |SQL Server Management Studio-Ansicht|Szenario|
 |---------------|--------------|
-|**Zurück gestellte Abfragen**|Identifizieren von Abfragen, bei denen die Ausführungsmetriken vor kurzem rückläufig waren (z.B. sich verschlechtert haben). <br />Verwenden Sie diese Ansicht, um beobachtete Leistungsprobleme in Ihrer Anwendung mit den tatsächlichen Abfragen zu korrelieren, die korrigiert oder verbessert werden müssen.|
+|**Rückläufige Abfragen**|Identifizieren von Abfragen, bei denen die Ausführungsmetriken vor kurzem rückläufig waren (z.B. sich verschlechtert haben). <br />Verwenden Sie diese Ansicht, um beobachtete Leistungsprobleme in Ihrer Anwendung mit den tatsächlichen Abfragen zu korrelieren, die korrigiert oder verbessert werden müssen.|
 |**Gesamter Ressourcenverbrauch**|Analysieren Sie den Gesamtressourcenverbrauch für die Datenbank für eine der Ausführungsmetriken.<br />Verwenden Sie diese Ansicht, um Ressourcenmuster zu identifizieren (tägliche im Vergleich zu nächtlichen Arbeitsauslastungen), und optimieren Sie den Gesamtverbrauch für Ihre Datenbank.|
-|**Abfragen mit dem höchsten Ressourcenverbrauch**|Wählen Sie die gewünschte Ausführungsmetrik, und identifizieren Sie Abfragen mit den extremsten Werten für ein angegebenes Zeitintervall. <br />Verwenden Sie diese Ansicht, um sich auf die relevantesten Abfragen zu konzentrieren, die die größte Auswirkung auf den Ressourcenverbrauch der Datenbank haben.|
+|**Abfragen mit höchstem Ressourcenverbrauch**|Wählen Sie die gewünschte Ausführungsmetrik, und identifizieren Sie Abfragen mit den extremsten Werten für ein angegebenes Zeitintervall. <br />Verwenden Sie diese Ansicht, um sich auf die relevantesten Abfragen zu konzentrieren, die die größte Auswirkung auf den Ressourcenverbrauch der Datenbank haben.|
 |**Abfragen mit erzwungenen Plänen**|Zeigt vorherige erzwungene Pläne durch Verwendung des Abfragespeichers an. <br />Verwenden Sie diese Ansicht, um schnell auf alle aktuell erzwungenen Pläne zuzugreifen.|
 |**Abfragen mit hoher Variation**|Analysieren Sie Abfragen mit hoher Ausführungsvariation in Verbindung mit allen verfügbaren Dimensionen wie Dauer, CPU-Zeit, E/A und Speicherauslastung im gewünschten Zeitintervall.<br />Verwenden Sie diese Ansicht, um Abfragen mit stark abweichender Leistung zu identifizieren, die die Benutzerfreundlichkeit in Ihren Anwendungen beeinträchtigen können.|
-|**Statistik für Abfrage Wartezeit**|Analysieren Sie Wartekategorien, die in einer Datenbank am aktivsten sind, sowie welche Abfragen am meisten zur ausgewählten Wartekategorie beitragen.<br />Verwenden Sie diese Ansicht, um Wartezeitstatistiken zu analysieren und Abfragen zu identifizieren, die sich auf die Benutzerfreundlichkeit in Ihren Anwendungen auswirken können.<br /><br />Gilt für: ab [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v 18,0 und. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|
-|**Nach verfolgte Abfragen**|Verfolgen Sie die Ausführung der wichtigsten Abfragen in Echtzeit. In der Regel verwenden Sie diese Ansicht, wenn Sie über Abfragen mit erzwungenen Plänen verfügen und Sie sicherstellen möchten, dass die Abfrageleistung stabil ist.|
+|**Statistik der Abfragewartezeit**|Analysieren Sie Wartekategorien, die in einer Datenbank am aktivsten sind, sowie welche Abfragen am meisten zur ausgewählten Wartekategorie beitragen.<br />Verwenden Sie diese Ansicht, um Wartezeitstatistiken zu analysieren und Abfragen zu identifizieren, die sich auf die Benutzerfreundlichkeit in Ihren Anwendungen auswirken können.<br /><br />Gilt für: Ab [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Version 18.0 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
+|**Nachverfolgte Abfragen**|Verfolgen Sie die Ausführung der wichtigsten Abfragen in Echtzeit. In der Regel verwenden Sie diese Ansicht, wenn Sie über Abfragen mit erzwungenen Plänen verfügen und Sie sicherstellen möchten, dass die Abfrageleistung stabil ist.|
 
 > [!TIP]
 > Eine ausführliche Beschreibung dazu, wie Sie mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] die Abfragen mit dem größten Ressourcenverbrauch identifizieren und diejenigen Abfragen korrigieren können, die aufgrund der Änderung der Planauswahl zurückgestellt wurden, finden Sie in den [Blogs zu Abfragespeichern@Azure](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
 
 Wenn Sie eine Abfrage mit nicht optimaler Leistung identifiziert haben, richtet sich das weitere Vorgehen nach der Art des Problems.
 
-- Wenn die Abfrage mit mehreren Plänen ausgeführt wurde und der letzte Plan signifikant schlechter als der vorherige ist, können Sie den Planerzwingungsmechanismus verwenden, um diesen zu erzwingen. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, den Plan im Optimierer zu erzwingen. Wenn das Erzwingen des Plans fehlschlägt, wird ein XEvent ausgelöst, und der Optimierer wird angewiesen, die Optimierung auf die übliche Weise durchzuführen.
+- Wenn die Abfrage mit mehreren Plänen ausgeführt wurde und der letzte Plan signifikant schlechter als der vorherige ist, können Sie den Planerzwingungsmechanismus verwenden, um diesen zu erzwingen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, den Plan im Optimierer zu erzwingen. Wenn das Erzwingen des Plans fehlschlägt, wird ein XEvent ausgelöst, und der Optimierer wird angewiesen, die Optimierung auf die übliche Weise durchzuführen.
 
-  ![Abfragespeicher Force-Plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")
+  ![Erzwingen des Plans für Abfragespeicher](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")
 
   > [!NOTE]
   > Die vorherige Abbildung kann verschiedene Formen für bestimmte Abfragepläne aufweisen, wobei die möglichen Status folgende Bedeutungen haben:<br />
@@ -258,21 +256,21 @@ Wenn Sie eine Abfrage mit nicht optimaler Leistung identifiziert haben, richtet 
   > |Form|Bedeutung|
   > |-------------------|-------------|
   > |Circle|Abfrage abgeschlossen, d.h., dass eine reguläre Ausführung erfolgreich abgeschlossen wurde.|
-  > |Quadrat|Abgebrochen, d.h., dass ein vom Client initiierter Abbruch der Ausführung erfolgte.|
+  > |Square|Abgebrochen, d.h., dass ein vom Client initiierter Abbruch der Ausführung erfolgte.|
   > |Triangle|Fehlerhaft, d.h., dass die Ausführung durch eine Ausnahme abgebrochen wurde.|
   >
   > Darüber hinaus gibt die Größe der Form Aufschluss über die Anzahl von Abfrageausführungen innerhalb des angegebenen Zeitintervalls. Die Größe der Form nimmt mit zunehmender Anzahl von Ausführungen zu.
 
-- Sie können daraus schließen, dass der Abfrage ein Index für eine optimale Ausführung fehlt. Diese Informationen werden innerhalb des Abfrageausführungsplans eingeblendet. Erstellen Sie den fehlenden Index, und überprüfen Sie den Speicher Abfrageleistung nach usingquery.
+- Sie können daraus schließen, dass der Abfrage ein Index für eine optimale Ausführung fehlt. Diese Informationen werden innerhalb des Abfrageausführungsplans eingeblendet. Erstellen Sie den fehlenden Index, und überprüfen Sie die Abfrageleistung mit dem Abfragespeicher.
 
-   ![Abfragespeicher Plan anzeigen](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
+   ![Anzeigen des Plans für Abfragespeicher](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
 
 Wenn Sie Ihre Arbeitsauslastung auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ausführen, registrieren Sie sich für den [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Indexratgeber, um automatisch Indexempfehlungen zu erhalten.
 
 - In einigen Fällen können Sie eine statistische Neukompilierung erzwingen, wenn Sie feststellen, dass der Unterschied zwischen der geschätzten und der tatsächlichen Anzahl der Zeilen im Ausführungsplan maßgeblich ist.
 - Schreiben Sie problematische Abfragen neu, beispielsweise, um die Vorteile der Abfrageparametrisierung nutzen zu können oder um eine bessere Logik zu implementieren.
 
-## <a name="Verify"></a>Überprüfen, ob Abfragespeicher kontinuierlich Abfrage Daten sammelt
+## <a name="verify-that-query-store-collects-query-data-continuously"></a><a name="Verify"></a> Überprüfen, ob der Abfragespeicher kontinuierlich Abfragedaten erfasst
 
 Der Abfragespeicher kann den Betriebsmodus automatisch ändern. Überwachen Sie regelmäßig den Status des Abfragespeichers, um sicherzustellen, dass der Abfragespeicher funktioniert, und um Maßnahmen zu ergreifen, damit so Ausfälle aufgrund von vermeidbaren Ursachen verhindert werden. Führen Sie die folgende Abfrage aus, um den Betriebsmodus zu ermitteln und die wichtigsten Parameter anzuzeigen:
 
@@ -357,8 +355,8 @@ Behalten Sie die relevantesten Daten im Abfragespeicher. Die folgende Tabelle be
 
 |Erfassungsmodus für den Abfragespeicher|Szenario|
 |------------------------|--------------|
-|**Alle**|Analysieren Sie Ihre Arbeitsauslastung sorgfältig im Hinblick auf alle Abfrageformen und deren Ausführungshäufigkeit und andere Statistiken.<br /><br /> Identifizieren Sie neue Abfragen in Ihrer Workload.<br /><br /> Erkennen Sie, ob Ad-hoc-Abfragen verwendet werden, um Möglichkeiten für Benutzer oder eine automatische Parametrisierung zu identifizieren.<br /><br />Hinweis: Dies ist der Standard Erfassungs Modus [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]und.|
-|**Auto**|Konzentrieren Sie sich auf relevante und verwertbare Abfragen. Zum Beispiel auf jene Abfragen, die regelmäßig ausgeführt werden oder einen erheblichen Ressourcenverbrauch aufweisen.<br /><br />Hinweis: ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]ist dies der Standard Erfassungs Modus.|
+|**Alle**|Analysieren Sie Ihre Arbeitsauslastung sorgfältig im Hinblick auf alle Abfrageformen und deren Ausführungshäufigkeit und andere Statistiken.<br /><br /> Identifizieren Sie neue Abfragen in Ihrer Workload.<br /><br /> Erkennen Sie, ob Ad-hoc-Abfragen verwendet werden, um Möglichkeiten für Benutzer oder eine automatische Parametrisierung zu identifizieren.<br /><br />Hinweis: Dies ist der Standarderfassungsmodus in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
+|**Automatisch**|Konzentrieren Sie sich auf relevante und verwertbare Abfragen. Zum Beispiel auf jene Abfragen, die regelmäßig ausgeführt werden oder einen erheblichen Ressourcenverbrauch aufweisen.<br /><br />Hinweis: Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ist dies der Standarderfassungsmodus.|
 |**None**|Sie haben bereits den Abfragesatz erfasst, den Sie während der Laufzeit überwachen möchten, und möchten nun Ablenkungen beseitigen, die durch andere Abfragen entstehen können.<br /><br /> „Keine“ ist für Testzwecke geeignet sowie für Vergleichsumgebungen.<br /><br /> „Keine“ eignet sich auch für Softwareanbieter, die bei Auslieferung die Abfragespeicherkonfiguration so festlegen, dass die Anwendungsauslastung überwacht wird.<br /><br /> „Keine“ sollte mit Bedacht verwendet werden, da Sie womöglich die Gelegenheit verpassen, wichtige neue Abfragen nachzuverfolgen und zu optimieren. Vermeiden Sie den Einsatz von „Keine“, es sei denn es ist für ein bestimmtes Szenario erforderlich.|
 |**Benutzerdefiniert**|Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wurde ein benutzerdefinierter Erfassungsmodus für den `ALTER DATABASE SET QUERY_STORE`-Befehl eingeführt. Bei Aktivierung stehen zusätzliche Abfragespeicherkonfigurationen unter einer neuen Einstellung für die Erfassungsrichtlinie des Abfragespeichers zur Verfügung, um die Datensammlung auf einem bestimmten Server zu optimieren.<br /><br />Die neuen benutzerdefinierten Einstellungen definieren, was während des Zeitschwellenwerts für die interne Erfassungsrichtlinie geschieht. Hierbei handelt es sich um eine Zeitbegrenzung, in der die konfigurierbaren Bedingungen ausgewertet werden, und trifft eine davon zu, ist die Abfrage geeignet, von Abfragespeicher aufgezeichnet zu werden. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|
 
@@ -376,13 +374,13 @@ Die folgende Tabelle enthält bewährte Methoden:
 |Filtern Sie nicht relevante Abfragen heraus.|Konfigurieren Sie den **Erfassungsmodus für den Abfragespeicher** als **Automatisch**.|
 |Löschen Sie weniger relevanten Abfragen, wenn die maximale Größe erreicht ist.|Aktivieren Sie die größenbasierte Cleanuprichtlinie.|
 
-## <a name="Parameterize"></a>Vermeiden Sie die Verwendung von nicht parametrisierten Abfragen.
+## <a name="avoid-using-non-parameterized-queries"></a><a name="Parameterize"></a> Vermeiden des Einsatzes von nicht parametrisierten Abfragen
 
 Es wird nicht empfohlen, parametrisierte Abfragen zu verwenden, wenn dies nicht erforderlich ist. Ein Beispiel hierfür ist die Ad-hoc-Analyse. Zwischengespeicherte Pläne können nicht wiederverwendet werden, sodass der Abfrageoptimierer gezwungen ist, Abfragen für jeden eindeutigen Abfragetext zu kompilieren. Weitere Informationen finden Sie unter [Richtlinien für die Verwendung der erzwungenen Parametrisierung](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).
 
 Der Abfragespeicher kann darüber hinaus schnell die Kontingentgröße aufgrund einer potenziell großen Anzahl von verschiedenen Abfragetexten und somit einer großen Anzahl von verschiedenen Ausführungsplänen mit ähnlicher Form überschreiten. Daher wird die Leistung Ihrer Arbeitsauslastung suboptimal sein, und der Abfragespeicher wechselt möglicherweise in den schreibgeschützten Modus oder löscht kontinuierlich die Daten, um mit den eingehenden Abfragen Schritt zu halten.
 
-Betrachten Sie die folgenden Optionen:
+Ziehen Sie folgende Möglichkeiten in Betracht:
 
 - Parametrisieren Sie Abfragen, sofern möglich. Beispielsweise indem Sie Abfragen innerhalb einer gespeicherten Prozedur oder sp_executesql umschließen. Weitere Informationen finden Sie unter [Parameter und Wiederverwendung von Ausführungsplänen](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).
 - Verwenden Sie die Option [Für Ad-hoc-Arbeitsauslastungen optimieren](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md), wenn Ihre Arbeitsauslastung viele einmalige Ad-hoc-Batches mit anderen Abfrageplänen enthält.
@@ -392,11 +390,11 @@ Betrachten Sie die folgenden Optionen:
   - Konfigurieren Sie die erzwungene Parametrisierung über den Befehl für die [Option zur Parametrisierung der Datenbank](../../relational-databases/databases/database-properties-options-page.md#miscellaneous), wenn Ihre Arbeitsauslastung eine kleine Anzahl von unterschiedlichen Abfragepläne umfasst. Ein Beispiel: Das Verhältnis zwischen der Anzahl der unterschiedlichen query_hash und der Gesamtanzahl der Einträge in sys.query_store_query ist wesentlich kleiner als 1.
 - Legen Sie QUERY_CAPTURE_MODE auf AUTO fest, um Ad-hoc-Abfragen mit geringem Ressourcenverbrauch automatisch herauszufiltern.
 
-## <a name="Drop"></a>Vermeiden eines Drop-und Create-Musters für enthaltende Objekte
+## <a name="avoid-a-drop-and-create-pattern-for-containing-objects"></a><a name="Drop"></a> Vermeiden eines DROP- und CREATE-Musters für enthaltende Objekte
 
 Der Abfragespeicher ordnet einen Abfrageeintrag einem enthaltenen Objekt zu (gespeicherte Prozedur, Funktion und Trigger). Wenn Sie ein enthaltenes Objekt neu erstellen, wird ein neuer Abfrageeintrag für den gleichen Abfragetext generiert. Dies verhindert die Nachverfolgung der Leistungsstatistiken für diese Abfrage im Verlauf der Zeit und die Anwendung eines Mechanismus zur Nutzungsplanerzwingung. Damit dies vermieden wird, verwenden Sie den `ALTER <object>`-Prozess, um die Definition des enthaltenen Objekts nach Möglichkeit zu ändern.
 
-## <a name="CheckForced"></a>Regelmäßiges Überprüfen des Status der erzwungenen Pläne
+## <a name="check-the-status-of-forced-plans-regularly"></a><a name="CheckForced"></a> Regelmäßiges Überprüfen des Status der erzwungenen Pläne
 
 Die Planerzwingung ist ein nützlicher Mechanismus zur Behandlung von Leistungsproblemen für kritische Abfragen, um sie besser vorhersagbar zu machen. Wie bei Planhinweisen und Planhinweislisten ist das Erzwingen eines Plans keine Garantie dafür, dass er in späteren Ausführungen verwendet wird. Wenn das Datenbankschema sich derart ändert, dass Objekte, auf die der Ausführungsplan verweist, geändert oder gelöscht werden, wird das Erzwingen eines Plans in der Regel scheitern. In diesem Fall greift [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf eine Neukompilierung der Abfrage zurück, während die tatsächliche Ursache für den Fehler beim Erzwingen in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) ersichtlich ist. Die folgende Abfrage gibt Informationen zu erzwungenen Plänen zurück:
 
@@ -413,13 +411,13 @@ WHERE is_forced_plan = 1;
 
 Eine vollständige Liste der Gründe finden Sie unter [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Sie können auch das XEvent **query_store_plan_forcing_failed** verwenden, um Fehler bei der Planerzwingung nachzuverfolgen und zu beheben.
 
-## <a name="Renaming"></a>Vermeiden der Umbenennung von Datenbanken für Abfragen mit erzwungenen Plänen
+## <a name="avoid-renaming-databases-for-queries-with-forced-plans"></a><a name="Renaming"></a> Vermeiden der Umbenennung von Datenbanken bei Abfragen mit erzwungenen Plänen
 
 Ausführungspläne verweisen auf Objekte mithilfe von dreiteiligen Namen wie `database.schema.object`.
 
 Wenn Sie eine Datenbank umbenennen, wird das Erzwingen eines Plans fehlschlagen, wodurch bei allen nachfolgenden Abfrageausführungen eine Neukompilierung durchgeführt wird.
 
-## <a name="Recovery"></a>Verwenden von Ablaufverfolgungsflags auf unternehmenskritischen Servern
+## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> Verwenden von Ablaufverfolgungsflags für unternehmenskritische Server
 
 Die globalen Ablaufverfolgungsflags 7745 und 7752 können verwendet werden, um die Verfügbarkeit von Datenbanken mithilfe des Abfragespeichers zu verbessern. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -434,9 +432,9 @@ Die globalen Ablaufverfolgungsflags 7745 und 7752 können verwendet werden, um d
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [ALTER DATABASE SET-Optionen &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)
-- [Abfragespeicher Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
-- [Abfragespeicher gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
-- [Verwenden von Abfragespeicher mit in-Memory-OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)
-- [Überwachen der Leistung mithilfe Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Leitfaden zur Architektur der Abfrage Verarbeitung](../../relational-databases/query-processing-architecture-guide.md)
+- [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)
+- [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
+- [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
+- [Verwenden des Abfragespeichers mit In-Memory-OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)
+- [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)

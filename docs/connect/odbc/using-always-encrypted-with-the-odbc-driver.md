@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
-ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
+ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77363237"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285844"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -314,7 +314,7 @@ Sie können das Verhalten von Always Encrypted für einzelne Abfragen ändern, w
 
 Rufen Sie zum Steuern des Verhaltens von Always Encrypted für eine Anweisung „SQLSetStmtAttr“ auf, um das Anweisungsattribut `SQL_SOPT_SS_COLUMN_ENCRYPTION` auf einen der folgenden Werte festzulegen:
 
-|value|BESCHREIBUNG|
+|Wert|BESCHREIBUNG|
 |-|-|
 |`SQL_CE_DISABLED` (0)|Always Encrypted ist für die Anweisung deaktiviert.|
 |`SQL_CE_RESULTSETONLY` (1)|Nur Entschlüsselung. Resultsets und Rückgabewerte werden entschlüsselt, und Parameter werden nicht verschlüsselt.|
@@ -390,12 +390,15 @@ Der Treiber unterstützt die Authentifizierung beim Azure Key Vault mithilfe der
 
 - Client-ID/Geheimnis: Bei dieser Methode bestehen die Anmeldeinformationen aus einer Anwendungsclient-ID und einem Anwendungsgeheimnis.
 
+- Verwaltete Identität (17.5.2+): entweder system- oder benutzerseitig zugewiesen; unter [Verwaltete Azure AD-Identitäten für Azure-Ressourcen: Dokumentation](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/) finden Sie weitere Informationen.
+
 Verwenden Sie die folgenden Schlüsselwörter bestehend aus Verbindungszeichenfolgen, um dem Treiber für die Spaltenverschlüsselung die Verwendung der im Azure Key Vault gespeicherten CMKs zu erlauben:
 
 |Anmeldeinformationen| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
 |Benutzername/Kennwort| `KeyVaultPassword`|Benutzerprinzipalname|Kennwort|
 |Client-ID/Geheimnis| `KeyVaultClientSecret`|Client-ID|`Secret`|
+|Verwaltete Identität|`KeyVaultManagedIdentity`|Objekt-ID (optional, nur bei benutzerseitiger Zuweisung)|(nicht angegeben)|
 
 #### <a name="example-connection-strings"></a>Exemplarische Verbindungszeichenfolgen
 
@@ -413,7 +416,23 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
+**Verwaltete Identität (systemseitig zugewiesen)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity
+```
+
+**Verwaltete Identität (benutzerseitig zugewiesen)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
+```
+
 Zum Speichern von CMKs im Azure Key Vault sind keine weiteren Änderungen der ODBC-Anwendung erforderlich.
+
+> [!NOTE]
+> Der Treiber enthält eine Liste von Azure Key Vault-Endpunkten, denen der Treiber vertraut. Ab der Treiberversion 17.5.2 kann diese Liste konfiguriert werden: Legen Sie die `AKVTrustedEndpoints`-Eigenschaft im Treiber oder im DSN-Registrierungsschlüssel ODBCINST.INI oder ODBC.INI (Windows) oder in den Dateiabschnitten `odbcinst.ini` oder `odbc.ini` (Linux/Mac) auf eine durch Semikolons getrennte Liste fest. Wenn Sie die Eigenschaft im DSN festlegen, hat diese Einstellung Vorrang vor einer Einstellung im Treiber. Wenn der Wert mit einem Semikolon beginnt, wird die Standardliste erweitert. Andernfalls wird die Standardliste ersetzt. Die Standardliste (ab 17.5) ist `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
+
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Verwenden des Windows-Zertifikatspeicheranbieters
 
@@ -448,7 +467,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 Der Treiber versucht, mithilfe des von der Plattform definierten Lademechanismus für dynamische Bibliotheken (`dlopen()` unter Linux und macOS, `LoadLibrary()` unter Windows) die vom ValuePtr-Parameter identifizierte Bibliothek zu laden. Anschließend werden alle darin definierten Anbieter der Liste mit Anbietern hinzugefügt, die dem Treiber bekannt sind. Die folgenden Fehler können auftreten:
 
-| Fehler | Beschreibung |
+| Fehler | BESCHREIBUNG |
 |:--|:--|
 |`CE203`|Die dynamische Bibliothek konnte nicht geladen werden.|
 |`CE203`|Das exportierte Symbol „CEKeyStoreProvider“ wurde in der Bibliothek nicht gefunden.|
@@ -514,7 +533,7 @@ Bei einem mithilfe des Attributs `SQL_COPT_SS_CEKEYSTOREDATA` ausgeführten Aufr
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| Argument | Beschreibung |
+| Argument | BESCHREIBUNG |
 |:---|:---|
 |`ConnectionHandle`| [Eingabe] Verbindungshandle. Es muss sich um ein gültiges Verbindungshandle handeln, jedoch kann auf Anbieter, die über ein Verbindungshandle geladen werden, von jedem anderen Handle im selben Vorgang aus zugegriffen werden.|
 |`Attribute`|[Eingabe] Festzulegendes Attribut: die Konstante `SQL_COPT_SS_CEKEYSTOREDATA`.|
@@ -534,7 +553,7 @@ Bei einem mithilfe des Attributs `SQL_COPT_SS_CEKEYSTOREDATA` ausgeführten Aufr
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| Argument | Beschreibung |
+| Argument | BESCHREIBUNG |
 |:---|:---|
 |`ConnectionHandle`|[Eingabe] Verbindungshandle. Es muss sich um ein gültiges Verbindungshandle handeln, jedoch kann auf Anbieter, die über ein Verbindungshandle geladen werden, von jedem anderen Handle im selben Vorgang aus zugegriffen werden.|
 |`Attribute`|[Eingabe] Abzurufendes Attribut: die Konstante `SQL_COPT_SS_CEKEYSTOREDATA`.|
@@ -576,7 +595,7 @@ Gehen Sie bei Verwendung des **bcp**-Hilfsprogramms folgendermaßen vor: Um die 
 
 In der folgenden Tabelle werden die Aktionen beim Verarbeiten einer verschlüsselten Spalte zusammengefasst:
 
-|`ColumnEncryption`|BCP-Richtung|Beschreibung|
+|`ColumnEncryption`|BCP-Richtung|BESCHREIBUNG|
 |----------------|-------------|-----------|
 |`Disabled`|OUT (zum Client)|Ruft Chiffretext ab. Der observierte Datentyp lautet **varbinary(max)** .|
 |`Enabled`|OUT (zum Client)|Ruft Klartext ab. Die Spaltendaten werden vom Treiber entschlüsselt.|
@@ -603,7 +622,7 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 
 ### <a name="connection-attributes"></a>Verbindungsattribute
 
-|Name|type|Beschreibung|  
+|Name|type|BESCHREIBUNG|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Vor dem Herstellen einer Verbindung|`SQL_COLUMN_ENCRYPTION_DISABLE` (0): Always Encrypted wird deaktiviert. <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1): Always Encrypted wird aktiviert.<br> Zeiger auf *type*,*data* string (Version 17.4 und höher): Aktivierung mit Secure Enclave.|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Nach dem Herstellen einer Verbindung|[SET] Es wird versucht, „CEKeystoreProvider“ zu laden.<br>[GET] Ein CEKeystoreProvider-Name wird zurückgegeben.|

@@ -1,5 +1,6 @@
 ---
-title: Nicht mehr unterstützte Datenbank-Engine-Funktion | Microsoft-Dokumentation
+title: Nicht mehr unterstützte Datenbank-Engine-Funktionen
+description: In diesem Artikel erfahren Sie, welche Funktionen und Features der Datenbank-Engine seit SQL Server 2019 (15.x), SQL Server 2016 (13.x) und älteren Versionen nicht mehr zur Verfügung stehen.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -35,19 +36,19 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db10b57b5eda73cb2bb2105f4f99fb6e5cbed733
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 25da4c94448a6527e50fe759e6c75cdbad10b007
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258119"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190535"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema werden die [!INCLUDE[ssDE](../includes/ssde-md.md)] -Funktionen beschrieben, die in [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)]nicht mehr verfügbar sind.  
 
-## <a name="discontinued-features-in-includesssqlv15includessssqlv15-mdmd"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
+## <a name="discontinued-features-in-sssqlv15"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
 
 - Die folgenden datenbankweit gültigen Konfigurationsoptionen werden nicht mehr unterstützt:
 
@@ -60,7 +61,7 @@ Aktuelle Konfigurationsoptionen finden Sie unter [ALTER DATABASE SCOPED CONFIGUR
 >[!NOTE]
 >In [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)] werden alle Funktionen weiterhin unterstützt.
 
-## <a name="discontinued-features-in-includesssql15includessssql15-mdmd"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
+## <a name="discontinued-features-in-sssql15"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
 
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] ist eine 64-Bit-Anwendung. Die 32-Bit-Installation wird eingestellt, obwohl einige Elemente als 32-Bit-Komponenten ausgeführt werden.  
 

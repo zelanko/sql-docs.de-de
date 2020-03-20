@@ -14,12 +14,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9bb0911a0aa678ee160894e6297e5636644bf475
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3e7f0abd6003583858fbf323f96b4cf203236083
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75307656"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286644"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Lektion 1: Grundlagen zur Navigation im DTA
 
@@ -57,7 +57,7 @@ Standardmäßig wird der Datenbankoptimierungsratgeber mit der in der folgenden 
 ![Datenbankoptimierungsratgeber (Standardfenster)](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> Auf der Registerkarte **Sitzungsmonitor** wird der Sitzungsname angezeigt. Er setzt sich aus dem Namen des verbundenen Benutzer sowie aus dem aktuellen Datum und der aktuellen Uhrzeit zusammen. 
+> Auf der Registerkarte **Sitzungsmonitor** wird der Sitzungsname angezeigt. Er setzt sich aus dem Namen des verbundenen Benutzers sowie aus dem aktuellen Datum und der aktuellen Uhrzeit zusammen. 
   
 Beim ersten Öffnen der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers werden zwei Hauptbereiche angezeigt.  
   

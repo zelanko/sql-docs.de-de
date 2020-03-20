@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340692"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287684"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ LOGON-Trigger werden als Reaktion auf das LOGON-Ereignis ausgelöst, das wiederu
   
 ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Syntax  
+## <a name="sql-server-syntax"></a>SQL Server-Syntax  
   
 ``` 
 -- SQL Server Syntax  
@@ -127,7 +127,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-## <a name="syntax"></a>Syntax  
+## <a name="azure-sql-database-syntax"></a>Azure SQL-Datenbank-Syntax  
   
 ``` 
 -- Azure SQL Database Syntax   
@@ -215,7 +215,7 @@ Gibt an, dass der DML-Trigger *anstelle* der auslösenden SQL-Anweisung gestarte
   
 Sie können maximal nur einen INSTEAD OF-Trigger pro INSERT-, UPDATE- oder DELETE-Anweisung für eine Tabelle oder Sicht definieren. Sie können auch Sichten auf Sichten definieren, wobei jede Sicht über einen eigenen INSTEAD OF-Trigger verfügt.  
   
-Sie können nicht INSTEAD OF-Trigger für aktualisierbare Sichten definieren, die WITH CHECK OPTION verwenden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dies löst einen Fehler aus, falls ein INSTEAD OF-Trigger einer aktualisierbaren Sicht hinzugefügt wird, in der WITH CHECK OPTION angegeben ist. Sie entfernen diese Option mithilfe von ALTER VIEW, bevor Sie den INSTEAD OF-Trigger definieren.  
+Sie können nicht INSTEAD OF-Trigger für aktualisierbare Sichten definieren, die WITH CHECK OPTION verwenden. Dies löst einen Fehler aus, falls ein INSTEAD OF-Trigger einer aktualisierbaren Sicht hinzugefügt wird, in der WITH CHECK OPTION angegeben ist. Sie entfernen diese Option mithilfe von ALTER VIEW, bevor Sie den INSTEAD OF-Trigger definieren.  
   
 { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 Gibt die Anweisungen zur Datenänderung an, die den DML-Trigger aktivieren, wenn Sie ihn für diese Tabelle oder Sicht auszuführen versuchen. Geben Sie mindestens eine Option an. Verwenden Sie diese Optionen in der Triggerdefinition in beliebiger Kombination und Reihenfolge.  

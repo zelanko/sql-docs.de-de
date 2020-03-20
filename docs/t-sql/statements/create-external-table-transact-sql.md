@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61c8728fede661a91090d5cb15ee4feed5816e7c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 86702d159d3cc658a3c2e9e31477cca80f1eb6cc
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831977"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112458"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -103,7 +103,7 @@ In SQL Server erstellt die Anweisung CREATE EXTERNAL TABLE den Pfad und den Ordn
 
 Wenn LOCATION als Ordner angegeben wird, ruft eine PolyBase-Abfrage, die aus der externen Tabelle auswählt, Dateien aus dem Ordner und allen Unterordnern ab. PolyBase gibt wie Hadoop keine ausgeblendeten Ordner zurück. Es werden auch keine Dateien zurückgegeben, deren Dateiname mit einem Unterstrich (_) oder einem Punkt (.) beginnt.
 
-In diesem Beispiel gibt eine PolyBase-Abfrage Zeilen aus „mydata.txt“ und „mydata2.txt“ zurück, wenn LOCATION='/webdata/'. „Mydata3.txt“ wird nicht zurückgegeben, da es sich um einen Unterordner eines ausgeblendeten Ordners handelt. Es werden auch keine „_hidden.txt“-Dateien zurückgegeben, da es sich um eine ausgeblendete Datei handelt.
+In diesem Beispiel gibt eine PolyBase-Abfrage Zeilen aus „mydata.txt“ und „mydata2.txt“ zurück, wenn LOCATION='/webdata/'. „Mydata3.txt“ wird nicht zurückgegeben, da es sich um eine Datei eines ausgeblendeten Ordners handelt. Es werden auch keine „_hidden.txt“-Dateien zurückgegeben, da es sich um eine ausgeblendete Datei handelt.
 
 ![Rekursive Daten für externe Tabellen](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Rekursive Daten für externe Tabellen")
 
@@ -881,7 +881,7 @@ Freigegebene Sperre für das SCHEMARESOLUTION-Objekt.
 
 ## <a name="examples"></a>Beispiele
 
-### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>A. Importieren von Daten aus ADLS in Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
+### <a name="a-importing-data-from-adls-into-azure-ssdw"></a>A. Importieren von Daten aus ADLS in Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
 
 ```sql
 

@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: Installieren, aktualisieren und deinstallieren Sie SQL Server unter Linux. In diesem Artikel erhalten Sie Informationen zu Online-, Offline- und unbeaufsichtigten Szenarios.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 03/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 57041b528186bde743abfeec293e696b0155d0e1
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
+ms.sourcegitcommit: efb2bb07700f645b3fbfcb400a0666de01388305
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339318"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319840"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Leitfaden für die Installation von SQL Server unter Linux
 
@@ -38,7 +38,7 @@ Informationen zu weiteren Bereitstellungsszenarios finden Sie unter:
 
 Antworten auf häufig gestellte Fragen finden Sie unter [Häufig gestellte Fragen zu SQL Server für Linux](../linux/sql-server-linux-faq.md).
 
-## <a id="supportedplatforms"></a> Unterstützte Plattformen
+## <a name="supported-platforms"></a><a id="supportedplatforms"></a> Unterstützte Plattformen
 
 SQL Server wird unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) und Ubuntu unterstützt. Es wird auch als Docker-Image unterstützt, das in der Docker-Engine unter Linux oder in Docker für Windows/Mac ausgeführt werden kann.
 
@@ -60,8 +60,8 @@ SQL Server wird unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Ser
 | Plattform | Unterstützte Version(en) | Herunterladen
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [RHEL 8.0 herunterladen](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4 | [SLES v12 herunterladen](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Ubuntu 16.04 herunterladen](http://releases.ubuntu.com/xenial/)
+| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4, SP5 | [SLES v12 herunterladen](https://www.suse.com/products/server)
+| **Ubuntu** | 16.04, 18.04 | [Ubuntu 18.04 herunterladen](http://releases.ubuntu.com/bionic/)
 | **Docker-Engine** | ab 1.8 | [Docker herunterladen](https://www.docker.com/get-started)
 
 ::: moniker-end
@@ -71,7 +71,7 @@ Microsoft unterstützt auch die Bereitstellung und Verwaltung von SQL Server-Con
 > [!NOTE]
 > SQL Server wird unter Linux für die oben aufgeführten Verteilungen getestet und unterstützt. Wenn Sie SQL Server unter einem nicht unterstützten Betriebssystem installieren möchten, finden Sie Informationen zu den Auswirkungen auf die Unterstützung unter [Technical support policy for Microsoft SQL Server (Richtlinie für den technischen Support für Microsoft SQL Server)](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) im Abschnitt **Supportrichtlinie**.
 
-## <a id="system"></a> Systemanforderungen
+## <a name="system-requirements"></a><a id="system"></a> Systemanforderungen
 
 Für SQL Server gelten die folgenden Systemanforderungen unter Linux:
 
@@ -90,11 +90,11 @@ Wenn Sie **NFS-Remotefreigaben (Network File System)** in der Produktion verwend
 - Verwenden Sie nur die Verzeichnisse vom Typ **/var/opt/mssql** in der NFS-Bereitstellung. Andere Dateien, wie z. B. die SQL Server-Systembinärdateien, werden nicht unterstützt.
 - Stellen Sie sicher, dass NFS-Clients beim Einbinden der Remotefreigabe die Option „NOLOCK“ verwenden.
 
-## <a id="repositories"></a> Konfigurieren von Quellrepositorys
+## <a name="configure-source-repositories"></a><a id="repositories"></a> Konfigurieren von Quellrepositorys
 
 Beim Installieren oder Aktualisieren von SQL Server erhalten Sie die aktuelle SQL Server-Version aus Ihrem konfigurierten Microsoft-Repository. In den Schnellstarts wird das Update des **CU**-Repositorys für SQL Server verwendet. Sie können stattdessen jedoch ein **GDR**-Repository konfigurieren. Weitere Informationen zu Repositorys und deren Konfiguration finden Sie unter [Configure repositories for SQL Server on Linux (Konfigurieren von Repository für SQL Server unter Linux)](sql-server-linux-change-repo.md).
 
-## <a id="platforms"></a> Installieren von SQL Server
+## <a name="install-sql-server"></a><a id="platforms"></a> Installieren von SQL Server
 
 Sie können SQL Server 2017 oder SQL Server 2019 unter Linux über die Befehlszeile installieren. Eine ausführliche Anleitung mit den einzelnen Schritten finden Sie jeweils unter den folgenden Schnellstarts:
 
@@ -109,7 +109,7 @@ Sie können SQL Server für Linux auch auf einem virtuellen Azure-Computer ausf�
 
 Nach der Installation sollten Sie zusätzliche Konfigurationsänderungen vornehmen, um eine optimale Leistung zu erzielen. Weitere Informationen finden Sie unter [Bewährte Methoden für die Leistung und Konfigurationsrichtlinien für SQL Server für Linux](sql-server-linux-performance-best-practices.md).
 
-## <a id="upgrade"></a> Update oder Upgrade von SQL Server
+## <a name="update-or-upgrade-sql-server"></a><a id="upgrade"></a> Update oder Upgrade von SQL Server
 
 Wenn Sie das Paket **mssql-server** auf die neueste Version aktualisieren möchten, verwenden Sie je nach Plattform einen der folgenden Befehle:
 
@@ -123,7 +123,7 @@ Mit diesen Befehlen laden Sie das neueste Paket herunter, und die Binärdateien 
 
 Zum Upgraden von SQL Server [ändern Sie zunächst Ihr konfiguriertes Repository](sql-server-linux-change-repo.md) in die gewünschte SQL Server-Version. Verwenden Sie dann denselben **update**-Befehl, um Ihre Version von SQL Server upzugraden. Dies ist nur möglich, wenn der Upgradepfad zwischen den Repositorys unterstützt wird.
 
-## <a id="rollback"></a> Zurücksetzen von SQL Server
+## <a name="rollback-sql-server"></a><a id="rollback"></a> Zurücksetzen von SQL Server
 
 Wenn Sie SQL Server auf eine frühere Version zurücksetzen oder herabstufen möchten, führen Sie die folgenden Schritte aus:
 
@@ -140,7 +140,7 @@ Wenn Sie SQL Server auf eine frühere Version zurücksetzen oder herabstufen mö
 > [!NOTE]
 > Sie können nur auf eine Version innerhalb derselben Hauptversion, z. B. SQL Server 2019, herabstufen.
 
-## <a id="versioncheck"></a> Überprüfen der installierten Version von SQL Server
+## <a name="check-installed-sql-server-version"></a><a id="versioncheck"></a> Überprüfen der installierten Version von SQL Server
 
 Gehen Sie zum Überprüfen Ihrer aktuellen Version und Edition von SQL Server unter Linux folgendermaßen vor:
 
@@ -152,7 +152,7 @@ Gehen Sie zum Überprüfen Ihrer aktuellen Version und Edition von SQL Server un
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
    ```
 
-## <a id="uninstall"></a> Deinstallieren von SQL Server
+## <a name="uninstall-sql-server"></a><a id="uninstall"></a> Deinstallieren von SQL Server
 
 Wenn Sie das Paket **mssql-server** unter Linux entfernen möchten, verwenden Sie je nach Plattform einen der folgenden Befehle:
 
@@ -168,7 +168,7 @@ Durch Entfernen des Pakets werden die generierten Datenbankdateien nicht automat
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="unattended"></a>Unbeaufsichtigtes Installieren
+## <a name="unattended-install"></a><a id="unattended"></a>Unbeaufsichtigtes Installieren
 
 Gehen Sie für eine unbeaufsichtigte Installation folgendermaßen vor:
 
@@ -189,7 +189,7 @@ Ein ausführliches Beispielskript finden Sie in den folgenden Beispielen:
 - [SUSE unattended installation script (Skript für die unbeaufsichtigte Installation von SUSE)](sample-unattended-install-suse.md)
 - [Ubuntu unattended installation script (Skript für die unbeaufsichtigte Installation von Ubuntu)](sample-unattended-install-ubuntu.md)
 
-## <a id="offline"></a> Offlineinstallation
+## <a name="offline-install"></a><a id="offline"></a> Offlineinstallation
 
 Wenn Ihr Linux-Computer keinen Zugriff auf die Onlinerepositorys hat, die in den [Schnellstarts](#platforms) verwendet werden, können Sie die Paketdateien direkt herunterladen. Diese Pakete befinden sich im Microsoft-Repository [https://packages.microsoft.com](https://packages.microsoft.com).
 

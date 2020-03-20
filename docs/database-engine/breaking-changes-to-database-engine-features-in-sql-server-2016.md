@@ -1,7 +1,7 @@
 ---
 title: 'Datenbank-Engine: Breaking Changes | Microsoft-Dokumentation'
 titleSuffix: SQL Server 2016
-description: Breaking Changes an Features der Datenbank-Engine in SQL Server 2016
+description: Erfahren Sie mehr über Änderungen an der Datenbank-Engine in SQL Server 2016 (13.x) und früher, die bei einem Upgrade dazu führen können, dass Funktionen aus vorherigen Versionen nicht mehr funktionieren.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67a37dd07810facf3e18e94dc0f9e552ea05778a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b2003a0adfd2883b83623f5b367e775cc526e052
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75244723"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190578"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Breaking Changes an Features der Datenbank-Engine in SQL Server 2016
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  In diesem Thema werden Breaking Changes in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] und den früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beschrieben. Diese Änderungen können u. U. zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]basieren. Diese Probleme können nach einem Upgrade auftreten.  
+  In diesem Thema werden Breaking Changes in [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] und den früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beschrieben. Diese Änderungen können u. U. zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]basieren. Diese Probleme können nach einem Upgrade auftreten.  
   
-##  <a name="SQL15"></a> Wichtige Änderungen in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
+##  <a name="breaking-changes-in-sssql15"></a><a name="SQL15"></a> Wichtige Änderungen in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
 -   Die Spalte *sample_ms* von `sys.dm_io_virtual_file_stats` wurde aus einem **int**- zu einem **bigint**-Datentyp erweitert.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "75244723"
 
 -   Bei einem niedrigeren Datenbankkompatibilitätsgrad als 130 weisen Vorgänge, die implizite Konvertierungen zwischen bestimmten numerischen und „datetime“-Datentypen durchführen, eine verbesserte Genauigkeit auf und können zu unterschiedlichen konvertierten Werten führen. Dies schließt die Verwendung von Funktionen ein, die Berechnungen wie z. B. `DATEDIFF` und `ROUND` erfordern. Weitere Informationen finden Sie im folgenden [Microsoft-Supportartikel](https://support.microsoft.com/help/4010261).
 
-## <a name="previous-versions"></a> Vorgängerversionen  
+## <a name="previous-versions"></a><a name="previous-versions"></a> Vorgängerversionen  
 
 Informationen zu Breaking Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] und in einigen Vorgängerversionen finden Sie unter [Breaking Changes bei Funktionen der Datenbank-Engine in SQL Server 2014](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014).
 

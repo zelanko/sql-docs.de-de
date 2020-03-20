@@ -5,16 +5,16 @@ description: In diesem Artikel werden die neuesten Updates und bekannten Problem
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 38a1e2381bb3b7730a06af09b807886e18a50d13
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78924705"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286224"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Versionshinweise zu Big Data-Clustern für SQL Server 2019
 
@@ -50,7 +50,7 @@ In diesem Abschnitt werden die Plattformen aufgeführt, die mit [!INCLUDE[big-da
 
 |Plattform|Unterstützte Versionen|
 |---------|---------|
-|`azdata`|Muss dieselbe Nebenversion wie der Server aufweisen (identisch mit der SQL Server-Masterinstanz).<br/><br/>Führen Sie `azdata –-version` aus, um die Version zu überprüfen.<br/><br/>Ab SQL Server 2019 CU2 ist dies Version `15.0.4013`.|
+|`azdata`|Muss dieselbe Nebenversion wie der Server aufweisen (identisch mit der SQL Server-Masterinstanz).<br/><br/>Führen Sie `azdata –-version` aus, um die Version zu überprüfen.<br/><br/>Ab SQL Server 2019 CU3 ist dies Version `15.0.4023`.|
 |Azure Data Studio|Rufen Sie den neuesten Build von [Azure Data Studio](https://aka.ms/getazuredatastudio) ab.|
 
 ## <a name="release-history"></a>Releaseverlauf
@@ -59,6 +59,7 @@ In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[big-data-clusters
 
 | Release               | Version       | Veröffentlichungsdatum |
 |-----------------------|---------------|--------------|
+| [CU3](#cu3)           | 15.0.4023.6    | 12.03.2020   |
 | [CU2](#cu2)           | 15.0.4013.40    | 13.2.2020   |
 | [CU1](#cu1)           | 15.0.4003.23   | 01.07.2020   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
@@ -67,7 +68,22 @@ In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[big-data-clusters
 
 Informationen zum Installieren von Updates finden Sie unter [Upgraden von Big Data-Clustern für SQL Server [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
-## <a id="cu2"></a> CU2 (Februar 2020)
+## <a name="cu3-mar-2020"></a><a id="cu3"></a> CU3 (März 2020)
+
+Kumulatives Update 3-Release (CU3) für SQL Server 2019. Die Version der SQL Server-Datenbank-Engine für dieses Release ist 15.0.4023.6.
+
+|Paketversion | Imagetag |
+|-----|-----|
+|15.0.4023.6 |[2019-CU3-ubuntu-16.04]
+
+### <a name="resolved-issues"></a>Behobene Probleme
+
+Das kumulative Update 3 (CU3) von SQL Server 2019 behebt die folgenden Probleme früherer Releases.
+
+- [Bereitstellung mit privatem Repository](#deployment-with-private-repository)
+- [Beim Upgrade kann aufgrund eines Timeouts ein Fehler auftreten.](#upgrade-may-fail-due-to-timeout)
+
+## <a name="cu2-feb-2020"></a><a id="cu2"></a> CU2 (Februar 2020)
 
 Kumulatives Update 2-Release (CU2) für SQL Server 2019 Die Version der SQL Server-Datenbank-Engine für dieses Release ist 15.0.4013.40.
 
@@ -75,7 +91,7 @@ Kumulatives Update 2-Release (CU2) für SQL Server 2019 Die Version der SQL Ser
 |-----|-----|
 |15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-## <a id="cu1"></a> Kumulatives Update 1 (Januar 2020)
+## <a name="cu1-jan-2020"></a><a id="cu1"></a> Kumulatives Update 1 (Januar 2020)
 
 Dies ist das CU1-Release für SQL Server 2019. Die Version der SQL Server-Datenbank-Engine für dieses Release ist 15.0.4003.23.
 
@@ -83,7 +99,7 @@ Dies ist das CU1-Release für SQL Server 2019. Die Version der SQL Server-Datenb
 |-----|-----|
 |15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-## <a id="rtm"></a> Allgemeine Vertriebsversion 1 (November 2019)
+## <a name="gdr1-nov-2019"></a><a id="rtm"></a> Allgemeine Vertriebsversion 1 (November 2019)
 
 Mit der allgemeinen Vertriebsversion 1 für SQL Server 2019 (GDR1) wird die allgemeine Verfügbarkeit für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)] eingeführt. Die Version der SQL Server-Datenbank-Engine für dieses Release ist 15.0.2070.34.
 
@@ -97,6 +113,8 @@ Mit der allgemeinen Vertriebsversion 1 für SQL Server 2019 (GDR1) wird die allg
 
 ### <a name="deployment-with-private-repository"></a>Bereitstellung mit privatem Repository
 
+- **Betroffene Releases:** Allgemeine Vertriebsversion 1, Kumulatives Update 1 und 2 (CU1 und 2). Gelöst für CU 3.
+
 - **Problem und Kundenbeeinträchtigung:** Beim Upgrade aus einem privaten Repository müssen bestimmte Anforderungen erfüllt werden.
 
 - **Problemumgehung**: Wenn Sie ein privates Repository verwenden, um die Images für die Bereitstellung oder das Upgrade eines BDC vorab abzurufen, stellen Sie sicher, dass sich die aktuellen Buildimages sowie die Zielbuildimages im privaten Repository befinden. Dadurch kann bei Bedarf ein Rollback durchgeführt werden. Wenn Sie die Anmeldeinformationen des privaten Repositorys seit der ursprünglichen Bereitstellung geändert haben, müssen Sie zudem den entsprechenden geheimen Schlüssel in Kubernetes aktualisieren, bevor Sie das Upgrade durchführen. `azdata` bietet keine Unterstützung für das Aktualisieren der Anmeldeinformationen über die Umgebungsvariablen `AZDATA_PASSWORD` und `AZDATA_USERNAME`. Aktualisieren Sie den geheimen Schlüssel mithilfe von [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
@@ -104,6 +122,8 @@ Mit der allgemeinen Vertriebsversion 1 für SQL Server 2019 (GDR1) wird die allg
 Ein Upgrade unter Verwendung unterschiedlicher privater Repositorys für den aktuellen Build und den Zielbuild wird nicht unterstützt.
 
 ### <a name="upgrade-may-fail-due-to-timeout"></a>Beim Upgrade kann aufgrund eines Timeouts ein Fehler auftreten.
+
+- **Betroffene Releases:** Allgemeine Vertriebsversion 1, Kumulatives Update 1 und 2 (CU1 und 2). Gelöst für CU 3.
 
 - **Problem und Kundenbeeinträchtigung:** Beim Upgrade kann aufgrund eines Timeouts ein Fehler auftreten.
 
@@ -132,7 +152,7 @@ Ein Upgrade unter Verwendung unterschiedlicher privater Repositorys für den akt
       kubectl edit configmap controller-upgrade-configmap
       ```
 
-   2.   Bearbeiten Sie die unten aufgeführten Felder:
+   2. Bearbeiten Sie die unten aufgeführten Felder:
 
        **`controllerUpgradeTimeoutInMinutes`** Gibt die Wartezeit in Minuten an, bis der Controller oder die Controllerdatenbank das Upgrade abgeschlossen hat. Der Standardwert ist 5. Aktualisieren Sie diesen Wert auf mindestens 20.
 
@@ -140,7 +160,7 @@ Ein Upgrade unter Verwendung unterschiedlicher privater Repositorys für den akt
 
        **`componentUpgradeTimeoutInMinutes`** : Gibt die Zeitdauer an, in der jede nachfolgende Phase des Upgrades abgeschlossen sein muss.  Der Standardwert ist 30. Aktualisieren Sie diesen Wert auf 45.
 
-   3.   Speichern Sie Ihre Angaben, und schließen Sie die Anwendung.
+   3. Speichern Sie Ihre Angaben, und schließen Sie die Anwendung.
 
    Das unten gezeigte Python-Skript zeigt eine weitere Möglichkeit, um die Timeoutwerte festzulegen:
 

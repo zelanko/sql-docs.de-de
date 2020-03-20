@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 0315f181aad5c61b7d9c5fe7d46f3d81b27c9758
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76a6e99d06061ae581b753ce0edd96a5a82d0f95
+ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73589134"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946723"
 ---
 # <a name="sql-assessment-api"></a>SQL-Bewertungs-API
 
@@ -71,7 +71,7 @@ Gehen Sie zum Einstieg die folgenden Beispiele durch.
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     Sie können hierzu auch das Get-SqlDatabase-Cmdlet verwenden.
 
     ```powershell
@@ -83,14 +83,14 @@ Gehen Sie zum Einstieg die folgenden Beispiele durch.
     ```powershell
     Get-Item SQLSERVER:\SQL\localhost\default | Get-SqlAssessmentItem
     ```
-    
+
     Sie können hierzu auch das Get-SqlDatabase-Cmdlet verwenden.
 
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Get-SqlAssessmentItem
     ```
 
-4. Rufen Sie die Bewertung für die Instanz auf, und speichern Sie die Ergebnisse in einer SQL-Tabelle. In diesem Beispiel wird die Ausgabe des Get-SqlInstance-Cmdlets per Pipe an das Invoke-SqlAssessment-Cmdlet übergeben, dessen Ergebnisse per Pipe an das Write-SqlTableData-Cmdlet übergeben werden. Beachten Sie, dass das Invoke-Assessment-Cmdlet in diesem Beispiel mit dem `-FlattenOutput`-Parameter ausgeführt wird. Durch diesen Parameter ist die Ausgabe für das Write-SqlTableData-Cmdlet geeignet. Fehlt der Parameter, löst das Cmdlet einen Fehler aus.
+4. Rufen Sie die Bewertung für die Instanz auf, und speichern Sie die Ergebnisse in einer SQL-Tabelle. In diesem Beispiel wird die Ausgabe des Get-SqlInstance-Cmdlets per Pipe an das Invoke-SqlAssessment-Cmdlet übergeben, dessen Ergebnisse per Pipe an das Write-SqlTableData-Cmdlet übergeben werden. Das Invoke-Assessment-Cmdlet wird in diesem Beispiel mit dem `-FlattenOutput`-Parameter ausgeführt. Durch diesen Parameter ist die Ausgabe für das Write-SqlTableData-Cmdlet geeignet. Fehlt der Parameter, löst das Cmdlet einen Fehler aus.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' |
@@ -131,7 +131,7 @@ Bestimmte Regeln verfügen über Schwellenwerte, die mit dem aktuellen Wert eine
 Sie können Regelsätze bündeln, indem Sie dem Aufruf der API für die SQL-Bewertung mindestens eine JSON-Datei als Parameter hinzufügen. Ihre Organisation kann solche Dateien schreiben oder von einem Drittanbieter erwerben. So können Sie beispielsweise Ihre JSON-Datei, die bestimmte Regeln aus dem Microsoft-Regelsatz deaktiviert, eine weitere JSON-Datei mit nützlichen Regeln für Ihre Umgebung von einem Branchenexperten und danach eine weitere JSON-Datei verwenden, die einige Schwellenwerte in dieser JSON-Datei ändert.
 
 > [!IMPORTANT]  
->  Es wird dringend davon abgeraten, Regelsätze aus nicht vertrauenswürdigen Quellen zu verwenden. Setzen Sie diese erst ein, wenn Sie sie gründlich untersucht und sich davon überzeugt haben, dass ihre Verwendung sicher ist.
+> Es wird dringend davon abgeraten, Regelsätze aus nicht vertrauenswürdigen Quellen zu verwenden. Setzen Sie diese erst ein, wenn Sie sie gründlich untersucht und sich davon überzeugt haben, dass ihre Verwendung sicher ist.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

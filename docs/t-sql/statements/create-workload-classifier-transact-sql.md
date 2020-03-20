@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/27/2020
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 67f844ff5955f51b0c878f2a3161cc4762834f74
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77429031"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112251"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -43,12 +43,12 @@ Erstellt ein Klassifiziererobjekt für die Verwendung in der Arbeitsauslastungsv
 ```
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    (   WORKLOAD_GROUP = ‘name’  
-    ,   MEMBERNAME = ‘security_account’ 
-[ [ , ] WLM_LABEL = ‘label’ ]  
-[ [ , ] WLM_CONTEXT = ‘context’ ]  
-[ [ , ] START_TIME = ‘HH:MM’ ]  
-[ [ , ] END_TIME = ‘HH:MM’ ]  
+    (   WORKLOAD_GROUP = 'name'  
+    ,   MEMBERNAME = 'security_account' 
+[ [ , ] WLM_LABEL = 'label' ]  
+[ [ , ] WLM_CONTEXT = 'context' ]  
+[ [ , ] START_TIME = 'HH:MM' ]  
+[ [ , ] END_TIME = 'HH:MM' ]  
   
 [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
@@ -64,8 +64,8 @@ WITH
 
  Verfügbare Arbeitsauslastungsgruppen finden Sie in der Katalogansicht [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md).
 
- *MEMBERNAME* ='security_account'*    
- Hierbei handelt es sich um das Sicherheitskonto, das der Rolle hinzugefügt wird.  „Security_account“ ist vom Datentyp „sysname“und hat keinen Standardwert. „Security_account“ kann ein Datenbankbenutzer, eine Datenbankrolle, eine Azure Active Directory-Anmeldung oder eine Azure Active Directory-Gruppe sein.
+ *MEMBERNAME* =  *'security_account'*     
+ Das Sicherheitskonto, das für die Klassifizierung verwendet wird.  „Security_account“ ist vom Datentyp „sysname“und hat keinen Standardwert. „Security_account“ kann ein Datenbankbenutzer, eine Datenbankrolle, eine Azure Active Directory-Anmeldung oder eine Azure Active Directory-Gruppe sein.
  
  *WLM_LABEL*   
  Gibt den Bezeichnungswert an, mit dem eine Anforderung klassifiziert werden kann.  „Label“ ist ein optionaler Parameter vom Typ nvarchar(255).  Verwenden Sie [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label) in der Anforderung, um der Klassifiziererkonfiguration zu entsprechen.
