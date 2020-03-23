@@ -49,7 +49,7 @@ Wenn Sie eine Sortierung für Ihren Server, Ihre Datenbank, Ihre Spalte oder Ihr
     
 Für die optimale Nutzung der Sortierungsunterstützung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollten Sie die in diesem Artikel definierten Begriffe und ihre Verbindung mit den Eigenschaften Ihrer Daten verstehen.    
     
-##  <a name="Terms"></a> Sortierungsbegriffe    
+##  <a name="collation-terms"></a><a name="Terms"></a> Sortierungsbegriffe    
     
 -   [Sortierung](#Collation_Defn) 
     - [Sortierungssätze](#Collation_sets)
@@ -58,7 +58,7 @@ Für die optimale Nutzung der Sortierungsunterstützung in [!INCLUDE[ssNoVersion
 -   [Codepage](#Code_Page_Defn)    
 -   [Sortierreihenfolge](#Sort_Order_Defn)    
     
-###  <a name="Collation_Defn"></a> Sortierung    
+###  <a name="collation"></a><a name="Collation_Defn"></a> Sortierung    
 Eine Sortierung gibt die Bitmuster an, die die jeweiligen Zeichen in einem Dataset darstellen. Sortierungen legen außerdem die Regeln fest, nach denen Daten sortiert und verglichen werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das Speichern von Objekten mit verschiedenen Sortierungen in einer Datenbank. Bei Nicht-Unicode-Spalten gibt die Sortierungseinstellung die Codepage für die Daten und die Zeichen an, die dargestellt werden können. Die Daten, die Sie zwischen Nicht-Unicode-Spalten verschieben, müssen von der Quellcodepage in die Zielcodepage konvertiert werden.    
     
 [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungsergebnisse können unterschiedlich sein, wenn die Anweisung im Kontext verschiedener Datenbanken ausgeführt wird, die jeweils andere Sortierungseinstellungen haben. Wenn möglich, sollte in Unternehmen eine standardisierte Sortierung verwendet werden. Auf diese Weise müssen Sie die Sortierung nicht für jedes Zeichen oder jeden Unicode-Ausdruck angeben. Bei Objekten mit abweichenden Sortierungs- oder Codepageeinstellungen codieren Sie Ihre Abfragen so, dass diese den Regeln der Sortierungspriorität entsprechen. Weitere Informationen finden Sie unter [Rangfolge der Sortierungen (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
@@ -110,7 +110,7 @@ Jede Sortierung setzt sich aus einer Kombination von Suffixen zur Festlegung der
 
 <sup>2</sup> Durch Hinzufügen der UTF-8-Option (\_UTF8) können Sie Unicode-Daten mit UTF-8 codieren. Weitere Informationen finden Sie im Abschnitt [Unterstützung für UTF-8](#utf8) dieses Artikels. 
 
-### <a name="Collation_sets"></a> Sortierungssätze
+### <a name="collation-sets"></a><a name="Collation_sets"></a> Sortierungssätze
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden Sortierungssätze:    
 
@@ -118,10 +118,10 @@ Jede Sortierung setzt sich aus einer Kombination von Suffixen zur Festlegung der
 -  [Binäre Sortierungen](#Binary-collations)
 -  [SQL Server-Sortierungen](#SQL-collations)
     
-#### <a name="Windows-collations"></a> Windows-Sortierreihenfolgen    
+#### <a name="windows-collations"></a><a name="Windows-collations"></a> Windows-Sortierreihenfolgen    
 Windows-Sortierungen definieren Regeln zum Speichern von Zeichendaten, die auf dem zugehörigen Windows-Systemgebietsschema basieren. Bei einer Windows-Sortierung können Sie mithilfe desselben Algorithmus wie für Unicode-Daten einen Vergleich von Nicht-Unicode-Daten implementieren. Die grundlegenden Regeln für die Windows-Sortierung geben vor, welches Alphabet oder welche Sprache verwendet wird, wenn Wörterbuchsortierung angewendet wird. Die Regeln geben auch die Codepage vor, die zum Speichern von Nicht-Unicode-Zeichendaten verwendet wird. Sowohl die Unicode- als auch die Nicht-Unicode-Sortierung sind kompatibel mit Zeichenfolgenvergleichen in einer bestimmten Version von Windows. Dadurch wird die Konsistenz der Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht, und Entwickler erhalten so die Möglichkeit, Zeichenfolgen in ihren Anwendungen mithilfe der gleichen Regeln zu sortieren, die auch in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Weitere Informationen finden Sie unter [Name der Windows-Sortierung (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md).    
     
-#### <a name="Binary-collations"></a> Binäre Sortierungen    
+#### <a name="binary-collations"></a><a name="Binary-collations"></a> Binäre Sortierungen    
 Binäre Sortierungen sortieren Daten basierend auf der Reihenfolge codierter Werte, die vom Gebietsschema und Datentyp definiert werden. Sie beachten die Groß-/Kleinschreibung. Eine binäre Sortierung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert das zu verwendende Gebietsschema sowie die zu verwendende ANSI-Codepage. Dies erzwingt eine binäre Sortierreihenfolge. Da binäre Sortierungen relativ einfach sind, tragen sie dazu bei, die Anwendungsleistung zu verbessern. Bei Nicht-Unicode-Datentypen basieren Datenvergleiche auf den in der ANSI-Codepage definierten Codepunkten. Bei Unicode-Datentypen basieren Datenvergleiche auf den Unicode-Codepunkten. Bei binären Sortierungen von Unicode-Datentypen wird das Gebietsschema bei Datensortierungen nicht berücksichtigt. Beispielsweise führen **Latin_1_General_BIN** und **Japanese_BIN** bei Unicode-Daten zu den gleichen Sortierergebnissen. Weitere Informationen finden Sie unter [Name der Windows-Sortierung (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md).   
     
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt es zwei Arten von binären Sortierungen:
@@ -130,7 +130,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt es zwei Arten v
 
 -  Die neueren **BIN2**-Sortierungen, die einen reinen Vergleich nach Codepunkt implementieren. In einer BIN2-Sortierung werden alle Zeichen entsprechend ihren Codepunkten sortiert. Da die Intel Plattform eine Little-Endian-Architektur aufweist, werden Unicode-Zeichen immer mit vertauschten Bytes gespeichert.     
     
-#### <a name="SQL-collations"></a> SQL Server-Sortierungen    
+#### <a name="sql-server-collations"></a><a name="SQL-collations"></a> SQL Server-Sortierungen    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierungen (SQL_\*) sind hinsichtlich der Sortierreihenfolge mit älteren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompatibel. Die Wörterbuch-Sortierungsregeln für Nicht-Unicode-Daten sind nicht kompatibel mit den von Windows-Betriebssystem bereitgestellten Sortierroutinen. Das Sortieren von Unicode-Daten ist jedoch kompatibel mit einer bestimmten Version der Windows-Sortierregeln. Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierungen unterschiedliche Vergleichsregeln für Nicht-Unicode- und Unicode-Daten verwenden, werden bei Vergleichen derselben Daten, je nach dem zugrunde liegenden Datentyp, unterschiedliche Ergebnisse angezeigt. Weitere Informationen finden Sie unter [Name der SQL Server-Sortierung (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md). 
 
 Die Standardinstallationseinstellung wird während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups durch das Gebietsschema des Betriebssystems bestimmt. Sie können die Sortierung auf Serverebene entweder während des Setups ändern oder, indem Sie das Gebietsschema des Betriebssystems vor der Installation ändern. Aus Gründen der Abwärtskompatibilität ist die Standardsortierung auf die älteste verfügbare Version festgelegt, die einem jeweiligen Gebietsschema zugeordnet ist. Aus diesem Grund wird diese Sortierung nicht immer empfohlen. Um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen optimal zu können, ändern Sie die Standardinstallationseinstellungen für die Verwendung von Windows-Sortierungen. Beispielsweise ist für das Betriebssystem-Gebietsschema „Englisch (USA)“ (Codepage 1252) die Standardsortierung während des Setups **SQL_Latin1_General_CP1_CI_AS**, welche in die nächste entsprechende Windows-Sortierung **Latin1_General_100_CI_AS_SC** geändert werden kann.
@@ -141,7 +141,7 @@ Die Standardinstallationseinstellung wird während des [!INCLUDE[ssNoVersion](..
 > -   Der Anwendungscode ist abhängig vom Verhalten der vorherigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierungen.    
 > -   Sie müssen Zeichendaten speichern, die mehrere Sprachen wiedergeben.    
     
-### <a name="Collation_levels"></a> Sortierungsebenen
+### <a name="collation-levels"></a><a name="Collation_levels"></a> Sortierungsebenen
 Das Festlegen von Sortierungen wird bei einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für die folgenden Ebenen unterstützt:    
 
 -  [Sortierungen auf Serverebene](#Server-level-collations)
@@ -149,7 +149,7 @@ Das Festlegen von Sortierungen wird bei einer Instanz von [!INCLUDE[ssNoVersion]
 -  [Sortierungen auf Spaltenebene](#Column-level-collations)
 -  [Sortierungen auf Ausdrucksebene](#Expression-level-collations)
 
-#### <a name="Server-level-collations"></a> Sortierungen auf Serverebene   
+#### <a name="server-level-collations"></a><a name="Server-level-collations"></a> Sortierungen auf Serverebene   
 Die Standardserversortierung wird während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups festgelegt und als Standardsortierung der Systemdatenbanken und aller Benutzerdatenbanken vorgegeben. 
 
 In der folgenden Tabelle werden die standardmäßig verwendeten Sortierbezeichnungen angezeigt, die vom Gebietsschema des Betriebssystems bestimmt werden, einschließlich der entsprechenden Windows- und SQL-Sprachcode-IDs (LCID):
@@ -275,7 +275,7 @@ In der folgenden Tabelle werden die standardmäßig verwendeten Sortierbezeichnu
 |Litauisch (Litauen)|0x0427|0x0427|Lithuanian_CI_AS|
 |Niedersorbisch (Deutschland)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxemburgisch (Luxemburg)|0x046e|0x0409|Latin1_General_CI_AS|
-|Mazedonisch (Mazedonien, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Mazedonisch (Nordmazedonien)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malaiisch (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malaiisch (Malaysia)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (Indien)|0x044c|0x0439|Auf Serverebene nicht verfügbar|
@@ -388,7 +388,7 @@ Verwenden Sie die folgende integrierte `fn_helpcollations()`-Funktion, um alle v
 SELECT * FROM sys.fn_helpcollations();
 ```
     
-#### <a name="Database-level-collations"></a> Sortierungen auf Datenbankebene    
+#### <a name="database-level-collations"></a><a name="Database-level-collations"></a> Sortierungen auf Datenbankebene    
 Beim Erstellen oder Ändern einer Datenbank können Sie die `COLLATE`-Klausel der `CREATE DATABASE`- oder `ALTER DATABASE`-Anweisung verwenden, um die Standardsortierung für die Datenbank festzulegen. Wenn keine Sortierung angegeben wird, wird die Datenbank der Serversortierung zugeordnet.    
     
 Sie können die Sortierung von Systemdatenbanken nicht ändern, es sei denn, Sie ändern die Sortierung für den Server.
@@ -413,7 +413,7 @@ Sie können die aktuelle Sortierung einer Datenbank abrufen, indem Sie eine Anwe
 SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
 ```
 
-#### <a name="Column-level-collations"></a> Sortierungen auf Spaltenebene    
+#### <a name="column-level-collations"></a><a name="Column-level-collations"></a> Sortierungen auf Spaltenebene    
 Wenn Sie eine Tabelle erstellen oder ändern, können Sie mithilfe der `COLLATE`-Klausel Sortierungen für alle Zeichenfolgenspalten festlegen. Wenn Sie keine Sortierung festlegen, wird der Spalte die Standardsortierung der Datenbank zugewiesen.    
 
 Sie können die Sortierung einer Spalte ändern, indem Sie eine `ALTER TABLE`-Anweisung ähnlich der folgenden verwenden:
@@ -422,23 +422,23 @@ Sie können die Sortierung einer Spalte ändern, indem Sie eine `ALTER TABLE`-An
 ALTER TABLE myTable ALTER COLUMN mycol NVARCHAR(10) COLLATE Greek_CS_AI;
 ```
     
-#### <a name="Expression-level-collations"></a> Sortierungen auf Ausdrucksebene    
+#### <a name="expression-level-collations"></a><a name="Expression-level-collations"></a> Sortierungen auf Ausdrucksebene    
 Sortierungen auf Ausdrucksebene werden zum Zeitpunkt der Ausführung einer Anweisung festgelegt. Sie haben Auswirkungen auf die Art und Weise, wie ein Resultset zurückgegeben wird. Dadurch können `ORDER BY`-Sortierergebnisse gebietsschemaspezifisch sein. Verwenden Sie eine `COLLATE`-Klausel wie die folgende, um Sortierungen auf Ausdrucksebene zu implementieren:    
     
 ```sql    
 SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;    
 ```    
     
-###  <a name="Locale_Defn"></a> Gebietsschema    
+###  <a name="locale"></a><a name="Locale_Defn"></a> Gebietsschema    
 Ein Gebietsschema besteht aus Informationen, die zu einem Ort oder einer Kultur gehören. Diese Informationen können den Namen und Bezeichner der gesprochenen Sprache, die Schrift zum Schreiben der Sprache und kulturelle Konventionen umfassen. Sortierungen können einem oder mehreren Gebietsschemas zugeordnet sein. Weitere Informationen finden Sie unter [Von Microsoft zugewiesene Gebietsschemabezeichner (LCIDs)](https://msdn.microsoft.com/goglobal/bb964664.aspx).    
     
-###  <a name="Code_Page_Defn"></a> Codepage    
+###  <a name="code-page"></a><a name="Code_Page_Defn"></a> Codepage    
 Eine Codepage ist ein geordneter Satz von Zeichen in einem vorgegebenen Skript, in dem ein numerischer Index, oder Codepunktwert, mit jedem Zeichen verbunden ist. Eine Windows-Codepage wird in der Regal als *Zeichensatz* oder *charset* bezeichnet. Codepages werden zur Unterstützung der Zeichensätze und Tastaturlayouts verschiedener Windows-Systemgebietsschemas verwendet.     
  
-###  <a name="Sort_Order_Defn"></a> Sortierreihenfolge    
+###  <a name="sort-order"></a><a name="Sort_Order_Defn"></a> Sortierreihenfolge    
 Die Sortierreihenfolge gibt an, wie Datenwerte sortiert werden. Die Reihenfolge wirkt sich auf die Ergebnisse von Datenvergleichen aus. Daten werden mithilfe von Sortierungen sortiert, die mit Indizes optimiert werden können.    
     
-##  <a name="Unicode_Defn"></a> Unicode-Unterstützung    
+##  <a name="unicode-support"></a><a name="Unicode_Defn"></a> Unicode-Unterstützung    
 Unicode ist ein Standard zum Zuordnen von Codepunkten zu Zeichen. Da dieser Standard entwickelt wurde, um alle Zeichen aus allen Sprachen der Welt zu unterstützen, benötigen Sie keine unterschiedlichen Codepages zur Verarbeitung von verschiedenen Zeichensätzen.
 
 ### <a name="unicode-basics"></a>Grundlagen zu Unicode
@@ -505,7 +505,7 @@ Die folgende Tabelle enthält Informationen zur Verwendung mehrsprachiger Daten 
 |Nicht-Unicode|Unicode|Dies ist keine gute Konfiguration für die Verwendung mehrsprachiger Daten. Sie können keine Unicode-Daten auf den Nicht-Unicode-Server schreiben. Es ist wahrscheinlich, dass Probleme auftreten, wenn Daten an Server gesendet werden, die von der Codepage des Servers nicht erfasst werden.|    
 |Nicht-Unicode|Nicht-Unicode|Dieses Szenario ist bei mehrsprachigen Daten mit zahlreichen Beschränkungen verbunden. Sie können nur eine Codepage verwenden.|    
     
-##  <a name="Supplementary_Characters"></a> Ergänzende Zeichen    
+##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> Ergänzende Zeichen    
 Das Unicode Consortium hat jedem Zeichen einen eindeutigen Codepunkt zugeordnet, der einem Wert im Bereich von 000000 bis 10FFFF entspricht. Die am häufigsten verwendeten Zeichen haben Codepunktwerte im Bereich von 000000 bis 00FFFF (65.535 Zeichen), die in ein 8-Bit- oder 16-Bit-Wort im Arbeitsspeicher und auf dem Datenträger passen. Dieser Bereich wird in der Regel als der Basic Multilingual Plane (BMP) festgelegt. 
 
 Aber das Unicode Consortium hat 16 zusätzliche „Ebenen“ von Zeichen eingerichtet, die jeweils genauso groß sind wie die BMP. Durch diese Definition kann Unicode 1.114.112 Zeichen (d. h. 2<sup>16</sup> × 17 Zeichen) innerhalb des Codepunktbereichs von 000000 bis 10FFFF darstellen. Zeichen mit Codepunktwerten größer als 00FFFFFF erfordern zwei bis vier aufeinanderfolgende 8-Bit-Wörter (UTF-8) oder zwei aufeinanderfolgende 16-Bit-Wörter (UTF-16). Diese Zeichen, die sich außerhalb der BMP befinden, werden als *ergänzende Zeichen*bezeichnet, und die zusätzlichen aufeinanderfolgenden 8-Bit- oder 16-Bit-Wörter werden als *Ersatzzeichenpaare*bezeichnet. Weitere Informationen zu ergänzenden Zeichen, Ersatzzeichen und Ersatzzeichenpaaren finden Sie im [Unicode-Standard](http://www.unicode.org/standard/standard.html).    
@@ -544,7 +544,7 @@ In der folgenden Tabelle wird das Verhalten einiger Zeichenfolgenfunktionen und 
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|Gibt einen UTF-16-Codepunkt im Bereich von 0 bis 0x10FFFF zurück.|Gibt einen UCS-2-Codepunkt im Bereich von 0 bis 0xFFFF zurück.|    
 |[Einzelnes zu suchendes Zeichen](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Platzhalterzeichen - nicht zu suchende(s) Zeichen](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Ergänzende Zeichen werden für alle Platzhaltervorgänge unterstützt.|Ergänzende Zeichen werden für diese Platzhaltervorgänge nicht unterstützt. Andere Platzhalteroperatoren werden unterstützt.|    
     
-## <a name="GB18030"></a> GB18030-Unterstützung    
+## <a name="gb18030-support"></a><a name="GB18030"></a> GB18030-Unterstützung    
 GB18030 ist ein separater Standard, der in der Volksrepublik China zur Codierung von chinesischen Schriftzeichen verwendet wird. In GB18030 können Zeichen 1, 2 oder 4 Bytes lang sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Unterstützung für GB18030-codierte Zeichen, indem diese erkannt werden, wenn Sie den Server von einer clientseitigen Anwendung erreichen, und in systemeigene Unicode-Zeichen konvertiert und als solche gespeichert werden. Nachdem sie auf dem Server gespeichert werden, werden sie in darauffolgenden Vorgängen als Unicode-Zeichen behandelt. 
 
 Sie können eine beliebige chinesische Sortierung verwenden. Empfohlen wird die aktuelle Version 100. Alle \_100-Ebenen-Sortierungen unterstützen die linguistische Sortierung mit GB18030-Zeichen. Wenn die Daten ergänzende Zeichen (Ersatzzeichenpaare) enthalten, können Sie Such- und Sortiervorgänge mithilfe der in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verfügbaren SC-Sortierungen optimieren.    
@@ -552,7 +552,7 @@ Sie können eine beliebige chinesische Sortierung verwenden. Empfohlen wird die 
 > [!NOTE]
 > Stellen Sie sicher, dass Ihre Clienttools wie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] die Schriftart Dengxian verwenden, um Zeichenfolgen mit GB18030-codierten Zeichen richtig anzuzeigen.
     
-## <a name="Complex_script"></a> Unterstützung komplexer Skripts    
+## <a name="complex-script-support"></a><a name="Complex_script"></a> Unterstützung komplexer Skripts    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann das Eingeben, Speichern, Ändern und Anzeigen komplexer Skripts unterstützen. Zu komplexen Skripts gehören folgende Typen:    
     
 -   Skripts, die sowohl die Kombination von Text von rechts nach links und Text von links nach rechts enthalten, als auch die Kombination von arabischem und englischem Text.    
@@ -561,7 +561,7 @@ Sie können eine beliebige chinesische Sortierung verwenden. Empfohlen wird die 
     
 Datenbankanwendungen, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interagieren, müssen über Steuerelemente verfügen, die komplexe Skripts unterstützen. Standardmäßige Windows-Formularsteuerelemente, die in verwaltetem Code erstellt werden, sind für komplexe Skripts aktiviert.    
 
-## <a name="Japanese_Collations"></a> In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] hinzugefügte japanische Sortierungen
+## <a name="japanese-collations-added-in--sssqlv14_md"></a><a name="Japanese_Collations"></a> In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] hinzugefügte japanische Sortierungen
  
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] werden neue japanische Sortierungsfamilien unterstützt, bei denen es sich um Abwandlungen verschiedener Optionen (\_CS, \_AS, \_KS, \_WS und \_VSS) handelt. 
 
@@ -578,12 +578,12 @@ Diese Sortierungen werden in Indizes der [!INCLUDE[ssde_md](../../includes/ssde_
 
 <a name="ctp23"></a>
 
-## <a name="utf8"></a> Unterstützung für UTF-8
+## <a name="utf-8-support"></a><a name="utf8"></a> Unterstützung für UTF-8
 Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird die vollständige Unterstützung für die weit verbreitete Zeichencodierung UTF-8 als Import- oder Exportcodierung oder als Sortierung für Zeichenfolgedaten auf Datenbank- und Spaltenebene eingeführt. UTF-8 ist für die Datentypen **char** and **varchar** zulässig und aktiviert, wenn Sie die Sortierung eines Objekts erstellen oder in eine Sortierung ändern, die ein *UTF8*-Suffix aufweist. Ein Beispiel hierfür ist das Ändern von **LATIN1_GENERAL_100_CI_AS_SC** in **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
 
 UTF-8 ist nur für Windows-Sortierungen verfügbar, die ergänzende Zeichen gemäß der Einführung in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] unterstützen. Die Datentypen **nchar** und **nvarchar** ermöglichen nur die UCS-2- oder UTF-16-Codierung und bleiben unverändert.
 
-### <a name="storage_differences"></a> Speicherunterschiede zwischen UTF-8 und UTF-16
+### <a name="storage-differences-between-utf-8-and-utf-16"></a><a name="storage_differences"></a> Speicherunterschiede zwischen UTF-8 und UTF-16
 Das Unicode Consortium hat jedem Zeichen einen eindeutigen Codepunkt zugeordnet, der einem Wert im Bereich von 000000 bis 10FFFF entspricht. Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] stehen sowohl UTF-8- als auch UTF-16-Codierungen zur Darstellung des gesamten Bereichs zur Verfügung:    
 -  Bei der UTF-8-Codierung benötigen Zeichen im ASCII-Bereich (000000 bis 00007F) 1 Byte, die Codepunkte von 000080 bis 0007FF 2 Bytes, die Codepunkte von 000800 bis 00FFFF 3 Bytes und die Codepunkte von 0010000 bis 0010FFFFFF 4 Bytes. 
 -  Bei der UTF-16-Codierung benötigen die Codepunkte von 000000 bis 00FFFF 2 Bytes und die Codepunkte von 0010000 bis 0010FFFF 4 Bytes. 
@@ -616,7 +616,7 @@ Bevor Sie entscheiden, ob Sie UTF-8- oder UTF-16-Codierung für eine Datenbank o
 
 Weitere Überlegungen zur finden Sie unter [Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
-### <a name="converting"></a> Konvertieren in UTF-8
+### <a name="converting-to-utf-8"></a><a name="converting"></a> Konvertieren in UTF-8
 Da das *n* in [CHAR(*n*) und VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) oder in [NCHAR(*n*) und NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) die Größe des Bytespeichers und nicht die Anzahl der Zeichen definiert, die gespeichert werden können, ist es wichtig, die Größe des Datentyps zu ermitteln, in den konvertiert werden soll, um das Abschneiden von Daten zu verhindern. 
 
 Nehmen wir zum Beispiel eine Spalte, die als **NVARCHAR(100)** definiert ist und in der 180 Bytes japanischer Zeichen gespeichert werden. In diesem Beispiel werden die Spaltendaten derzeit mithilfe von UCS-2 oder UTF-16 codiert, wobei 2 Bytes pro Zeichen verwendet werden. Das Umstellen des Spaltentyps in **VARCHAR(200)** reicht nicht aus, um das Abschneiden von Daten zu verhindern, da der neue Datentyp nur 200 Bytes speichern kann, in UTF-8 codierte japanische Zeichen jedoch 3 Bytes benötigen. Daher muss die Spalte als **VARCHAR(270)** definiert werden, um Datenverluste durch das Abschneiden von Daten zu vermeiden.
@@ -627,7 +627,7 @@ Verwenden Sie eine der in [Festlegen oder Ändern der Spaltensortierung](../../r
 
 Informationen zum Ändern der Datenbanksortierung, sodass neue Objekte die Datenbanksortierung standardmäßig erben können, oder zum Ändern der Serversortierung, sodass neue Datenbanken die Systemsortierung standardmäßig erben können, finden Sie im Abschnitt [Verwandte Aufgaben](#Related_Tasks) in diesem Artikel. 
 
-##  <a name="Related_Tasks"></a> Related tasks    
+##  <a name="related-tasks"></a><a name="Related_Tasks"></a> Related tasks    
     
 |Aufgabe|Thema|    
 |----------|-----------|    
@@ -638,7 +638,7 @@ Informationen zum Ändern der Datenbanksortierung, sodass neue Objekte die Daten
 |Beschreibt, wie Transact-SQL-Anweisungen geschrieben werden, die die Übertragung von einer Sprache in eine andere verbessern, oder wie mehrere Sprachen einfacher unterstützt werden.|[Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
 |Beschreibt, wie die Sprache von Fehlermeldungen und die bevorzugte Verwendungs- und Anzeigeweise von Datums-, Zeit-, und Währungsdaten geändert werden.|[Festlegen einer Sitzungssprache](../../relational-databases/collations/set-a-session-language.md)|    
     
-##  <a name="Related_Content"></a> Related content    
+##  <a name="related-content"></a><a name="Related_Content"></a> Related content    
 Weitere Informationen finden Sie in folgenden verwandten Inhalten:
 * [Bewährte Vorgehensweisen zur Sortierungsänderung bei SQL Server](https://go.microsoft.com/fwlink/?LinkId=113891)  
 * [Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)
