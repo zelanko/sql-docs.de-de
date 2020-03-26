@@ -198,7 +198,7 @@ GO
   
  Wenn im LIKE-Muster auf ein Escapezeichen kein Zeichen folgt, ist das Muster nicht gültig, und das LIKE-Muster gibt FALSE zurück. Wenn es sich beim Zeichen nach einem Escapezeichen nicht um ein Platzhalterzeichen handelt, wird das Escapezeichen verworfen und das folgende Zeichen als reguläres Zeichen im Muster behandelt. Zu diesen Platzhalterzeichen gehören das Prozentzeichen (%), der Unterstrich (_) und die linke eckige Klammer ([), wenn sie in doppelte eckige Klammern ([ ]) eingeschlossen sind. Innerhalb doppelter eckiger Klammern ([ ]) können Escapezeichen verwendet werden; dem Caretzeichen (^), dem Bindestrich (-) sowie der rechten eckigen Klammer (]) kann ein Escapezeichen vorangestellt werden.  
   
- 0x0000 (**char(0)** ) ist ein nicht definiertes Zeichen in Windows-Sortierungen und darf in LIKE nicht enthalten sein.  
+ 0x0000 (**char(0)**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und darf in LIKE nicht enthalten sein.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -316,7 +316,7 @@ ORDER BY LastName ASC, FirstName ASC;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
  Im folgenden Beispiel werden alle Mitarbeiter in der `DimEmployee`-Tabelle mit Telefonnummern gefunden, die mit `612` beginnen.  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. Verwenden von LIKE mit dem Platzhalterzeichen _  
- Im folgenden Beispiel werden alle Telefonnummern in der `6`-Tabelle gefunden, die eine Vorwahl aufweisen, die mit `2` beginnt und mit `DimEmployee` endet. Das Platzhalterzeichen % wird am Ende des Suchmusters eingefügt, um alle folgenden Zeichen im Spaltenwert für Telefonnummern abzugleichen.  
+ Im folgenden Beispiel werden alle Telefonnummern in der `DimEmployee`-Tabelle gefunden, die eine Vorwahl aufweisen, die mit `6` beginnt und mit `2` endet. Das Platzhalterzeichen % wird am Ende des Suchmusters eingefügt, um alle folgenden Zeichen im Spaltenwert für Telefonnummern abzugleichen.  
   
 ```sql  
 -- Uses AdventureWorks  
