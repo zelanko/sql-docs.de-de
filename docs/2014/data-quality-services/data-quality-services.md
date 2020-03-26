@@ -12,7 +12,7 @@ ms.author: lle
 manager: craigg
 ms.openlocfilehash: 09d57d0b1b0ac00cbad6f4d8dab1e2afad790d37
 ms.sourcegitcommit: c30a2def43c86860aeec69d3e3029f2296544b13
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "78175519"
