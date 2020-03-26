@@ -44,7 +44,7 @@ ms.locfileid: "79286664"
 
  Vollständige Informationen zu nicht unterstützten Konstrukten sowie Informationen zu Umgehungslösungen zu einigen der nicht unterstützten Funktionen in nativ kompilierten Modulen finden Sie unter [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)(Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren). Weitere Informationen zu nicht unterstützten Funktionen finden Sie unter [Von In-Memory-OLTP nicht unterstützte Transact-SQL-Konstrukte](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
-##  <a name="qsancsp"></a> Abfrageoberfläche in nativen Modulen  
+##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> Abfrageoberfläche in nativen Modulen  
 
 Die folgenden Abfragekonstrukte werden unterstützt:  
 
@@ -142,7 +142,7 @@ Eine Konstante in der **TOP** -Klausel führt jedoch im Vergleich zur Verwendung
 Diese Einschränkungen für nativ kompilierte [!INCLUDE[tsql](../../includes/tsql-md.md)] gelten nicht für den interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen.  
 
 
-##  <a name="dml"></a> Datenänderung  
+##  <a name="data-modification"></a><a name="dml"></a> Datenänderung  
 
 Die folgenden DML-Anweisungen werden unterstützt.  
 
@@ -154,7 +154,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 
 -   WHERE wird zusammen mit UPDATE- und DELETE-Anweisungen unterstützt.  
 
-##  <a name="cof"></a> Sprachkonstrukte zur Ablaufsteuerung  
+##  <a name="control-of-flow-language"></a><a name="cof"></a> Sprachkonstrukte zur Ablaufsteuerung  
  Die folgenden Sprachkonstrukte zur Ablaufsteuerung werden unterstützt.  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -175,7 +175,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 
 -   BEGIN ATOMIC (auf der äußeren Ebene der gespeicherten Prozedur). Weitere Informationen finden Sie unter [ATOMIC-Blöcke](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
 
-##  <a name="so"></a> Unterstützte Operatoren  
+##  <a name="supported-operators"></a><a name="so"></a> Unterstützte Operatoren  
  Die folgenden Operatoren werden unterstützt.  
 
 -   [Vergleichsoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (z.B. >, \<, >=, und <=)  
@@ -194,7 +194,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
     - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]  
       Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] wird der APPLY-Operator in nativ kompilierten Modulen unterstützt.
 
-##  <a name="bfncsp"></a> Integrierte Funktionen in nativ kompilierten Modulen  
+##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> Integrierte Funktionen in nativ kompilierten Modulen  
  Die folgenden Funktionen werden in Einschränkungen in speicheroptimierten Tabellen und in nativ kompilierten T-SQL-Modulen unterstützt.  
 
 -   [Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md) (alle)  
@@ -223,12 +223,12 @@ Die folgenden DML-Anweisungen werden unterstützt.
 
 -   Die Ausführungen nativer Module können geschachtelt werden.
 
-##  <a name="auditing"></a> Überwachen  
+##  <a name="auditing"></a><a name="auditing"></a> Überwachen  
  Überwachung auf Prozedurebene wird für systemintern kompilierte gespeicherte Prozeduren unterstützt.  
 
  Weitere Informationen zur Überwachung finden Sie unter [Erstellen einer Serverüberwachung und Datenbanküberwachungsspezifikation](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
 
-##  <a name="tqh"></a> Tabellen- und Abfragehinweise  
+##  <a name="table-and-query-hints"></a><a name="tqh"></a> Tabellen- und Abfragehinweise  
  Folgende werden unterstützt:  
 
 -   INDEX-, FORCESCAN- und FORCESEEK-Hinweise, entweder in der Tabellenhinweissyntax oder in der [OPTION-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) der Abfrage. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
@@ -241,7 +241,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 
  Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
 
-##  <a name="los"></a> Einschränkungen bei der Sortierung  
+##  <a name="limitations-on-sorting"></a><a name="los"></a> Einschränkungen bei der Sortierung  
  Sie können mehr als 8.000 Zeilen in einer Abfrage sortieren, die [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) verwendet. Ohne die [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) kann [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) eine Sortierung von bis zu 8.000 Zeilen durchführen (weniger Zeilen, falls es Verknüpfungen gibt).  
 
  Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die folgende Fehlermeldung angezeigt: **Meldung 41398, Ebene 16, Status 1, Prozedur *\<Prozedurname>* , Zeile *\<Zeilennummer>* Der Operator TOP kann maximal 8192 Zeilen zurückgeben; *\<Zahl>* wurden angefordert.**  
