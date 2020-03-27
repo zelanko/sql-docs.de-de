@@ -185,12 +185,12 @@ GO
 |Symbol|Bedeutung|  
 |------------|-------------|  
 |LIKE '5[%]'|5 %|  
-|LIKE '[_]n'|_n|  
+|LIKE '[\_]n'|_n|  
 |LIKE '[a-cdf]'|a, b, c, d oder f|  
 |LIKE '[-acdf]'|-, a, c, d oder f|  
 |LIKE '[ [ ]'|[|  
 |LIKE ']'|]|  
-|LIKE 'abc[_]d%'|abc_d und abc_de|  
+|LIKE 'abc[\_]d%'|abc_d und abc_de|  
 |LIKE 'abc[def]'|abcd, abce und abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>Mustervergleich mit der ESCAPE-Klausel  
@@ -198,7 +198,7 @@ GO
   
  Wenn im LIKE-Muster auf ein Escapezeichen kein Zeichen folgt, ist das Muster nicht gültig, und das LIKE-Muster gibt FALSE zurück. Wenn es sich beim Zeichen nach einem Escapezeichen nicht um ein Platzhalterzeichen handelt, wird das Escapezeichen verworfen und das folgende Zeichen als reguläres Zeichen im Muster behandelt. Zu diesen Platzhalterzeichen gehören das Prozentzeichen (%), der Unterstrich (_) und die linke eckige Klammer ([), wenn sie in doppelte eckige Klammern ([ ]) eingeschlossen sind. Innerhalb doppelter eckiger Klammern ([ ]) können Escapezeichen verwendet werden; dem Caretzeichen (^), dem Bindestrich (-) sowie der rechten eckigen Klammer (]) kann ein Escapezeichen vorangestellt werden.  
   
- 0x0000 (**char(0)**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und darf in LIKE nicht enthalten sein.  
+ 0x0000 (**char(0)** ) ist ein nicht definiertes Zeichen in Windows-Sortierungen und darf in LIKE nicht enthalten sein.  
   
 ## <a name="examples"></a>Beispiele  
   
