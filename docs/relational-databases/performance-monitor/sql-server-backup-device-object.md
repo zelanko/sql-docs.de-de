@@ -14,10 +14,10 @@ ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 93302a5b9645784b3b326229545f92de0dce56f8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987203"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server, Sicherungsmedium-Objekt
@@ -27,7 +27,7 @@ ms.locfileid: "67987203"
   
  In dieser Tabelle wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsindikator **Sicherungsmedium** beschrieben.  
   
-|Sicherungsmedium-Leistungsindikatoren von SQL Server|Beschreibung|  
+|Sicherungsmedium-Leistungsindikatoren von SQL Server|BESCHREIBUNG|  
 |---------------------------------------|-----------------|  
 |**Mediumsdurchsatz Bytes/Sekunde**|Durchsatz von Lese-/Schreibvorgängen für ein Sicherungsmedium. Dieser Leistungsindikator ist nur vorhanden, während der Sicherungs- oder Wiederherstellungsvorgang ausgeführt wird.|  
   

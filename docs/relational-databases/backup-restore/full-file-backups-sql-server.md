@@ -20,10 +20,10 @@ ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939613"
 ---
 # <a name="full-file-backups-sql-server"></a>Vollständige Dateisicherungen (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "67939613"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vorteile von Dateisicherungen  
+##  <a name="benefits-of-file-backups"></a><a name="Benefits"></a> Vorteile von Dateisicherungen  
  Dateisicherungen bieten gegenüber Datenbanksicherungen folgende Vorteile:  
   
 -   Durch das Verwenden von Dateisicherungen kann die Wiederherstellung beschleunigt werden, da Sie nicht die gesamte Datenbank, sondern nur die beschädigten Dateien wiederherstellen.  
@@ -58,13 +58,13 @@ ms.locfileid: "67939613"
   
 -   Dateisicherungen ermöglichen im Vergleich zu vollständigen Datenbanksicherungen eine höhere Flexibilität bei der Zeitplanung und beim Umgang mit Medien. Beispielsweise kann es vorkommen, dass bei sehr umfangreichen Datenbanken vollständige Datenbanksicherungen nicht mehr zu bewältigen sind. Die höhere Flexibilität von Datei- oder Dateigruppensicherungen ist auch für umfangreiche Datenbanken hilfreich, die Daten mit unterschiedlichen Updatemerkmalen enthalten.  
   
-##  <a name="Disadvantages"></a> Nachteile von Dateisicherungen  
+##  <a name="disadvantages-of-file-backups"></a><a name="Disadvantages"></a> Nachteile von Dateisicherungen  
   
 -   Der wichtigste Nachteil von Dateisicherungen im Vergleich zu vollständigen Datenbanksicherungen ist der zusätzliche Verwaltungsaufwand. Das Verwalten und Nachverfolgen eines vollständigen Sicherungssatzes kann sehr zeitaufwändig sein, wodurch die Speicherplatzanforderungen von vollständigen Datenbanksicherungen möglicherweise aufgehoben werden.  
   
 -   Durch einen Medienfehler wird möglicherweise eine gesamte Datenbank nicht mehr wiederherstellbar, wenn keine Sicherung der beschädigten Datei vorhanden ist. Sie müssen deshalb einen vollständigen Dateisicherungssatz verwalten sowie – für das vollständige und massenprotokollierte Wiederherstellungsmodell – eine oder mehrere Protokollsicherungen, die mindestens das Intervall zwischen der ersten vollständigen Dateisicherung und der letzten vollständigen Dateisicherung abdecken.  
   
-##  <a name="Overview"></a> Übersicht zu Dateisicherungen  
+##  <a name="overview-of-file-backups"></a><a name="Overview"></a> Übersicht zu Dateisicherungen  
  Mit einer vollständigen Dateisicherung werden alle Daten in einer oder mehreren Dateien oder Dateigruppen gesichert. Standardmäßig beinhalten Dateisicherungen genügend Protokolldatensätze, um einen Rollforward der Datei bis zum Ende des Sicherungsvorgangs auszuführen.  
   
  Das Sichern einer schreibgeschützte Datei oder Dateigruppe ist bei jedem Wiederherstellungsmodell gleich. Beim vollständigen Wiederherstellungsmodell entspricht ein vollständiger Satz vollständiger Dateisicherungen zusammen mit ausreichend vielen Protokollsicherungen, die alle Dateisicherungen umfassen, einer vollständigen Datenbanksicherung.  
@@ -87,7 +87,7 @@ ms.locfileid: "67939613"
 > [!NOTE]  
 >  Beim vollständigen Wiederherstellungsmodell müssen Sie beim Wiederherstellen einer Dateisicherung mit Lese-/Schreibzugriff einen Rollforward für das Transaktionsprotokoll ausführen, um die Konsistenz der Datei mit dem Rest der Datenbank sicherzustellen. Um einen Rollforward für viele Transaktionsprotokollsicherungen zu vermeiden, sollten Sie differenzielle Dateisicherungen verwenden. Weitere Informationen finden Sie unter [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So erstellen Sie eine Datei- oder Dateigruppensicherung**  
   
 -   [Sichern von Dateien und Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "67939613"
 ## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Sicherung und Wiederherstellung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Dateiwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Dateiwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   

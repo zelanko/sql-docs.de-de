@@ -19,10 +19,10 @@ ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68063166"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Vorbereiten des Massenimports von Daten (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "68063166"
   
 -   Erlangen Sie die erforderlichen Berechtigungen für Ihr Benutzerkonto.  
   
-     Das Benutzerkonto, in dem Sie das Hilfsprogramm **bcp**, die BULK INSERT-Anweisung oder die INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung verwenden, muss über die erforderlichen Berechtigungen für die Tabelle verfügen (zugewiesen vom Tabellenbesitzer). Weitere Informationen zu den Berechtigungen, die von jeder Methode benötigt werden, finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)und [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+     Das Benutzerkonto, in dem Sie das Hilfsprogramm **bcp** , die BULK INSERT-Anweisung oder die INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung verwenden, muss über die erforderlichen Berechtigungen für die Tabelle verfügen (zugewiesen vom Tabellenbesitzer). Weitere Informationen zu den Berechtigungen, die von jeder Methode benötigt werden, finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)und [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 -   Verwenden Sie das massenprotokollierte Wiederherstellungsmodell.  
   

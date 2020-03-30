@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67999434"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Primärschlüssel- und Fremdschlüsseleinschränkungen
@@ -36,7 +36,7 @@ ms.locfileid: "67999434"
   
  [Verwandte Aufgaben](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> PRIMARY KEY-Einschränkungen  
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> PRIMARY KEY-Einschränkungen  
  Eine Tabelle verfügt normalerweise über eine Spalte oder eine Kombination aus Spalten, die Werte enthalten, die jede Zeile in der Tabelle eindeutig identifizieren. Diese Spalte oder Kombination aus Spalten wird als Primärschlüssel (PK, Primary Key) der Tabelle bezeichnet und erzwingt die Entitätsintegrität der Tabelle. Da PRIMARY KEY-Einschränkungen eindeutige Daten garantieren, werden sie häufig für eine Identitätsspalte definiert.  
   
  Wenn Sie eine PRIMARY KEY-Einschränkung für eine Tabelle angeben, erzwingt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Eindeutigkeit der Daten, indem automatisch ein eindeutiger Index für die Primärschlüsselspalten erstellt wird. Der Index ermöglicht darüber hinaus den schnellen Zugriff auf Daten, wenn der Primärschlüssel in Abfragen verwendet wird. Wenn eine PRIMARY KEY-Einschränkung für mehrere Spalten definiert wird, können Werte innerhalb einer Spalte dupliziert werden; jede Kombination aus den Werten aller Spalten, die in der Definition der PRIMARY KEY-Einschränkung enthalten sind, muss jedoch eindeutig sein.  
@@ -57,7 +57,7 @@ ms.locfileid: "67999434"
   
 -   Wenn ein Primärschlüssel für eine Spalte eines CLR-benutzerdefinierten Typs definiert wird, muss die Implementierung des Typs eine binäre Sortierreihenfolge unterstützen.  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints  
  Ein Fremdschlüssel (FS) ist eine Spalte oder eine Kombination von Spalten, mit deren Hilfe eine Verknüpfung zwischen den Daten in zwei Tabellen eingerichtet und erzwungen wird, um die Daten zu steuern, die in der Fremdschlüsseltabelle gespeichert werden können. In einem Fremdschlüsselverweis wird zwischen zwei Tabellen ein Link erstellt, wenn eine Spalte bzw. mehrere Spalten einer Tabelle auf die Spalte bzw. Spalten mit dem Primärschlüsselwert einer anderen Tabelle verweisen. Diese Spalte wird zu einem Fremdschlüssel in der zweiten Tabelle.  
   
  Nehmen Sie beispielsweise an, die **Sales.SalesOrderHeader** -Tabelle weist eine Fremdschlüsselverknüpfung zur **Sales.SalesPerson** -Tabelle auf, da eine logische Beziehung zwischen „Sales Orders“ (Kaufaufträgen) und „Sales People“ (Vertriebsmitarbeiter) besteht. Die **SalesPersonID** -Spalte der **SalesOrderHeader** -Tabelle stimmt mit der Primärschlüsselspalte der **SalesPerson** -Tabelle überein. Die **SalesPersonID** -Spalte der **SalesOrderHeader** -Tabelle ist der Fremdschlüssel für die **SalesPerson** -Tabelle. Wenn Sie diese Fremdschlüsselbeziehung erstellen, kann ein Wert für **SalesPersonID** nicht in die **SalesOrderHeader** -Tabelle eingefügt werden, wenn er nicht bereits in der **SalesPerson** -Tabelle vorhanden ist.  
@@ -118,7 +118,7 @@ ms.locfileid: "67999434"
   
 -   Eine Tabelle mit einem INSTEAD OF-Trigger kann nicht gleichzeitig eine REFERENCES-Klausel aufweisen, die eine kaskadierende Aktion angibt. Ein AFTER-Trigger in einer Tabelle, die das Ziel einer kaskadierenden Aktion ist, kann jedoch eine INSERT-, UPDATE- oder DELETE-Anweisung in einer anderen Tabelle oder Sicht ausführen, die einen für dieses Objekt definierten INSTEAD OF-Trigger auslöst.  
   
-##  <a name="Tasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="Tasks"></a> Verwandte Aufgaben  
  In der folgenden Tabelle sind die PRIMARY KEY- und FOREIGN KEY-Einschränkungen zugeordneten häufigen Tasks aufgeführt.  
   
 |Aufgabe|Thema|  

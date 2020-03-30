@@ -28,10 +28,10 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67912614"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
@@ -89,7 +89,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 -   CONTROL SERVER- oder ALTER ANY DATABASE-Berechtigung für die Datenbank, in der die Partitionsfunktion erstellt wird.  
   
-##  <a name="BKMK_examples"></a> Beispiele  
+##  <a name="examples"></a><a name="BKMK_examples"></a> Beispiele  
   
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. Erstellen einer RANGE LEFT-Partitionsfunktion für eine int-Spalte  
  Mit der folgenden Partitionsfunktion wird eine Tabelle oder ein Index in vier Partitionen partitioniert.  
@@ -117,7 +117,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
   
 |Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**Werte**|**col1** \< `1`|**col1** >= `1` UND **col1** \< `100`|**col1** >= `100` UND **col1**\<`1000`|**col1** >= `1000`| 
+|**Werte**|**col1** \< `1`|**col1** >= `1` UND **col1** \< `100`|**col1** >= `100` UND **col1** \< `1000`|**col1** >= `1000`| 
   
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. Erstellen einer RANGE RIGHT-Partitionsfunktion für eine datetime-Spalte  
  Die folgende Partitionsfunktion partitioniert eine Tabelle oder einen Index in 12 Partitionen, d.h. eine für die Menge an Werten eines jeden Monats des Jahres in einer **datetime**-Spalte.  

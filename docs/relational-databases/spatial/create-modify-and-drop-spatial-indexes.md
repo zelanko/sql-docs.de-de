@@ -18,10 +18,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048709"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Erstellen, Ändern und Löschen von räumlichen Indizes
@@ -33,9 +33,9 @@ ms.locfileid: "68048709"
 > [!NOTE]  
 >  Weitere Informationen zur Beziehung zwischen räumlichen Indizes und Partitionen und Dateigruppen finden Sie im Abschnitt mit Hinweisen unter [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
-##  <a name="creating"></a> Erstellen, Ändern und Löschen von räumlichen Indizes  
+##  <a name="creating-modifying-and-dropping-spatial-indexes"></a><a name="creating"></a> Erstellen, Ändern und Löschen von räumlichen Indizes  
   
-###  <a name="create"></a> So erstellen Sie einen räumlichen Index  
+###  <a name="to-create-a-spatial-index"></a><a name="create"></a> So erstellen Sie einen räumlichen Index  
  **So erstellen Sie einen räumlichen Index mit Transact-SQL**  
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68048709"
 5.  Wählen Sie den neuen Index aus der Liste **Ausgewählter räumlicher Index** aus, und legen Sie im Raster rechts die Eigenschaften für den räumlichen Index fest. Informationen zu den Eigenschaften finden Sie unter [Dialogfeld 'Räumliche Indizes' &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
   
   
-###  <a name="alter"></a> So ändern Sie einen räumlichen Index  
+###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> So ändern Sie einen räumlichen Index  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "68048709"
 -   [Verschieben eines vorhandenen Indexes in eine andere Dateigruppe](../../relational-databases/indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a> So löschen Sie einen räumlichen Index  
+###  <a name="to-drop-a-spatial-index"></a><a name="drop"></a> So löschen Sie einen räumlichen Index  
  **So löschen Sie einen räumlichen Index mit Transact-SQL**  
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68048709"
 4.  Klicken Sie auf **Löschen**.  
   
   
-##  <a name="restrictions"></a> Erstellen, Ändern und Löschen von räumlichen Indizes  
+##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> Erstellen, Ändern und Löschen von räumlichen Indizes  
  Ein räumlicher Index kann nur für eine Spalte des Typs **Geometrie** oder **Geografie**erstellt werden.  
   
 ### <a name="table-and-view-restrictions"></a>Einschränkungen für Tabellen und Sichten  

@@ -11,10 +11,10 @@ ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c25e68d0e03442cc8cb493aea91c9ae09b175def
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916379"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
@@ -30,7 +30,7 @@ mixed PDO::getAttribute ( $attribute )
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$attribute:* eines der unterstützten Attribute. Eine Liste der unterstützten Attribute finden Sie bei den Anmerkungen.  
+*$attribute*: Eines der unterstützten Attribute. Eine Liste der unterstützten Attribute finden Sie bei den Anmerkungen.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Im Erfolgsfall wird der Wert einer Verbindungsoption, eines vordefinierten PDO-Attributs, oder eines benutzerdefinierten Treiberattributs zurückgegeben. Gibt bei einem Fehler NULL zurück.  
@@ -38,7 +38,7 @@ Im Erfolgsfall wird der Wert einer Verbindungsoption, eines vordefinierten PDO-A
 ## <a name="remarks"></a>Bemerkungen  
 Die nachfolgende Tabelle enthält die Liste mit den unterstützten Attributen:  
   
-|attribute|Verarbeitet von|Unterstützte Werte|Beschreibung|  
+|attribute|Verarbeitet von|Unterstützte Werte|BESCHREIBUNG|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Dies gibt an, ob die Spaltennamen entweder groß oder klein geschrieben sein sollen. PDO::CASE_LOWER erzwingt die Schreibung der Spaltennamen in Kleinbuchstaben, PDO::CASE_NATURAL belässt die Spaltennamen so wie sie aus der Datenbank zurückgegeben wurden und PDO::CASE_UPPER erzwingt die Schreibung der Spaltennamen in Großbuchstaben.<br /><br />Die Standardeinstellung ist PDO::CASE_NATURAL.<br /><br />Dieses Attribut kann auch mit PDO::setAttribute eingerichtet werden.|  
 |PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Array von Zeichenfolgen|Beschreibt die Version des Treibers und der verbundenen Bibliotheken Gibt ein Array mit den folgenden Elementen zurück: ODBC-Version (*Hauptversion*.*Nebenversion*), Name und Version der nativen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Client-DLL, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-Version (*Hauptversion*.*Nebenversion*.*Buildnummer*.*Revision*)|  

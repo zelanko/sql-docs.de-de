@@ -25,10 +25,10 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67894789"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
@@ -73,7 +73,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert den Cursor implizit in einen anderen Typ, wenn die Klauseln in *select_statement* in Konflikt mit der Funktionalität des angeforderten Cursortyps stehen.  
   
  READ ONLY  
- Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `UPDATE`- oder `DELETE`-Anweisung nicht in einer `WHERE CURRENT OF`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
+ Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `WHERE CURRENT OF`- oder `UPDATE`-Anweisung nicht in einer `DELETE`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
   
  UPDATE [OF *column_name* [ **,** ...*n*]]  
  Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF <column_name> [, <... n>] angegeben wird, können nur in den aufgeführten Spalten Änderungen vorgenommen werden. Wenn `UPDATE` ohne Spaltenliste angegeben wird, können alle Spalten aktualisiert werden.  
@@ -91,7 +91,7 @@ Gibt an, dass der Bereich des Cursors global zur Verbindung ist. Auf den Cursorn
 >  Wird weder `GLOBAL` noch `LOCAL` angegeben, wird der Standard durch die Einstellung der Datenbankoption **default to local cursor** gesteuert.  
   
 FORWARD_ONLY  
-Gibt an, dass der Cursor von der ersten bis zur letzten Zeile nur vorwärts bewegt werden kann. `FETCH NEXT` ist die einzige unterstützte Abrufoption. Alle INSERT-, UPDATE- und DELETE-Anweisungen, die vom aktuellen Benutzer ausgeführt werden (oder von anderen Benutzern committet werden), die sich auf Zeilen im Resultset auswirken, sind beim Abrufen der Zeilen sichtbar. Da mit dem Cursor nicht zurück gescrollt werden kann, sind Änderungen, die an Zeilen in der Datenbank vorgenommen wurden, nachdem die jeweilige Zeile abgerufen wurde, über den Cursor nicht sichtbar. Vorwärtscursor sind standardmäßig dynamisch, d. h. dass alle Änderungen ermittelt werden, während die aktuelle Zeile verarbeitet wird. Damit kann der Cursor schneller gestartet werden, und Updates an den zugrunde liegenden Tabellen können im Resultset angezeigt werden. Obwohl Vorwärtscursor das Zurückscrollen nicht unterstützen, können Anwendungen zum Anfang des Resultsets zurückkehren, indem der Cursor beendet und erneut gestartet wird. Wenn `FORWARD_ONLY` ohne eines der Schlüsselwörter `STATIC`, `KEYSET` oder `DYNAMIC` angegeben wird, ist der Cursor ein dynamischer Cursor. Wenn weder `FORWARD_ONLY` noch `SCROLL` angegeben wird, wird standardmäßig `FORWARD_ONLY` verwendet, es sei denn, die Schlüsselwörter `STATIC`, `KEYSET` oder `DYNAMIC` werden angegeben. Die Cursor `STATIC`, `KEYSET` und `DYNAMIC` sind standardmäßig auf `SCROLL` festgelegt. Anders als bei Datenbank-APIs wie ODBC und ADO, wird `FORWARD_ONLY` für die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Cursor `STATIC`, `KEYSET` und `DYNAMIC` unterstützt.  
+Gibt an, dass der Cursor von der ersten bis zur letzten Zeile nur vorwärts bewegt werden kann. `FETCH NEXT` ist die einzige unterstützte Abrufoption. Alle INSERT-, UPDATE- und DELETE-Anweisungen, die vom aktuellen Benutzer ausgeführt werden (oder von anderen Benutzern committet werden), die sich auf Zeilen im Resultset auswirken, sind beim Abrufen der Zeilen sichtbar. Da mit dem Cursor nicht zurück gescrollt werden kann, sind Änderungen, die an Zeilen in der Datenbank vorgenommen wurden, nachdem die jeweilige Zeile abgerufen wurde, über den Cursor nicht sichtbar. Vorwärtscursor sind standardmäßig dynamisch, d. h. dass alle Änderungen ermittelt werden, während die aktuelle Zeile verarbeitet wird. Damit kann der Cursor schneller gestartet werden, und Updates an den zugrunde liegenden Tabellen können im Resultset angezeigt werden. Obwohl Vorwärtscursor das Zurückscrollen nicht unterstützen, können Anwendungen zum Anfang des Resultsets zurückkehren, indem der Cursor beendet und erneut gestartet wird. Wenn `FORWARD_ONLY` ohne eines der Schlüsselwörter `STATIC`, `KEYSET` oder `DYNAMIC` angegeben wird, ist der Cursor ein dynamischer Cursor. Wenn weder `FORWARD_ONLY` noch `SCROLL` angegeben wird, wird standardmäßig `FORWARD_ONLY` verwendet, es sei denn, die Schlüsselwörter `STATIC`, `KEYSET` oder `DYNAMIC` werden angegeben. Die Cursor `STATIC`, `KEYSET` und `DYNAMIC` sind standardmäßig auf `SCROLL` festgelegt. Anders als bei Datenbank-APIs wie ODBC und ADO, wird `FORWARD_ONLY` für die `STATIC`-Cursor `KEYSET`, `DYNAMIC` und [!INCLUDE[tsql](../../includes/tsql-md.md)] unterstützt.  
    
  STATIC  
 Legt fest, dass der Cursor das Resultset immer so anzeigt, wie es war, als der Cursor gestartet wurde, und erstellt eine temporäre Kopie der Daten, die vom Cursor verwendet werden. Alle Anforderungen an den Cursor werden von dieser temporären Tabelle in der **tempdb** beantwortet. Aus diesem Grund werden INSERT-, UPDATE- und DELETE-Anweisungen für Basistabellen nicht in den Daten widergespiegelt, die durch Abrufvorgänge an diesen Cursor zurückgegeben werden, und der Cursor erkennt keine Änderungen an der Mitgliedschaft, der Reihenfolge oder den Werten des Resultsets, nachdem er geöffnet wurde. Statische Cursor können ihre eigenen UPDATE-, DELETE- und INSERT-Anweisungen erkennen, obwohl dies nicht erforderlich ist. Angenommen ein statischer Cursor ruft eine Zeile ab, und eine andere Anwendung aktualisiert diese Zeile dann. Wenn die Anwendung die Zeile erneut vom statischen Cursor abruft, sind die erkannten Werte unverändert, obwohl die andere Anwendung Änderungen vorgenommen hat. Alle Arten des Scrollens werden unterstützt. 
@@ -115,7 +115,7 @@ Gibt einen `FORWARD_ONLY`-, `READ_ONLY`-Cursor mit aktivierten Leistungsoptimier
 > `FAST_FORWARD` und `FORWARD_ONLY` können nicht in der gleichen `DECLARE CURSOR`-Anweisung verwendet werden.  
   
 READ_ONLY  
-Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `UPDATE`- oder `DELETE`-Anweisung nicht in einer `WHERE CURRENT OF`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
+Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `WHERE CURRENT OF`- oder `UPDATE`-Anweisung nicht in einer `DELETE`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
   
 SCROLL_LOCKS  
 Gibt an, dass positionierte Updates oder Löschungen durch den Cursor garantiert erfolgreich sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sperrt die Zeilen, während sie in den Cursor eingelesen werden, um ihre Verfügbarkeit für spätere Änderungen sicherzustellen. `SCROLL_LOCKS` kann nicht angegeben werden, wenn `FAST_FORWARD` oder `STATIC` ebenfalls angegeben ist.  
@@ -156,7 +156,7 @@ Ein Verweis auf Cursornamen ist nur von anderen [!INCLUDE[tsql](../../includes/t
   
 Nach der Deklaration eines Cursors können die Eigenschaften des Cursors mithilfe der folgenden gespeicherten Systemprozeduren bestimmt werden:  
   
-|Gespeicherte Systemprozeduren|Beschreibung|  
+|Gespeicherte Systemprozeduren|BESCHREIBUNG|  
 |------------------------------|-----------------|  
 |**sp_cursor_list**|Gibt eine Liste der in der Verbindung aktuell sichtbaren Cursor und ihrer Attribute zurück.|  
 |**sp_describe_cursor**|Beschreibt die Attribute eines Cursors, z. B. ob es sich um einen Vorwärtscursor oder einen Scrollcursor handelt.|  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68017660"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE- und CHECK-Einschränkungen
@@ -34,7 +34,7 @@ ms.locfileid: "68017660"
   
  [Verwandte Aufgaben](#Tasks)  
   
-##  <a name="Unique"></a> UNIQUE-Einschränkungen  
+##  <a name="unique-constraints"></a><a name="Unique"></a> UNIQUE-Einschränkungen  
  Einschränkungen sind Regeln, die von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] für Sie erzwungen werden. Mithilfe von UNIQUE-Einschränkungen können Sie z. B. sicherstellen, dass keine doppelten Werte in bestimmte Spalten eingegeben werden können, die nicht Teil eines Primärschlüssels sind. Obwohl sowohl eine UNIQUE-Einschränkung als auch eine PRIMARY KEY-Einschränkung Eindeutigkeit erzwingt, sollte eine UNIQUE-Einschränkung anstelle einer PRIMARY KEY-Einschränkung verwendet werden, wenn Sie die Eindeutigkeit einer Spalte bzw. einer Kombination von Spalten erzwingen möchten, die nicht den Primärschlüssel darstellt.  
   
  Im Gegensatz zu PRIMARY KEY-Einschränkungen lassen UNIQUE-Einschränkungen den Wert NULL zu. Wie bei jedem Wert, der in einer UNIQUE-Einschränkung enthalten ist, ist jedoch nur ein NULL-Wert pro Spalte zulässig. Auf eine UNIQUE-Einschränkung kann durch eine FOREIGN KEY-Einschränkung verwiesen werden.  
@@ -43,7 +43,7 @@ ms.locfileid: "68017660"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] erstellt automatisch einen UNIQUE-Index, um die Anforderung an die Eindeutigkeit für die UNIQUE-Einschränkung zu erzwingen. Wenn ein Versuch unternommen wird, eine doppelte Zeile einzufügen, gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Fehlermeldung zurück, die darauf hinweist, dass die UNIQUE-Einschränkung verletzt wurde, und fügt die Zeile der Tabelle nicht hinzu. Standardmäßig wird ein eindeutiger nicht gruppierter Index erstellt, um die UNIQUE-Einschränkung zu erzwingen, es sei denn, ein gruppierter Index wird explizit angegeben.  
   
-##  <a name="Check"></a> CHECK-Einschränkungen  
+##  <a name="check-constraints"></a><a name="Check"></a> CHECK-Einschränkungen  
  CHECK-Einschränkungen erzwingen die Domänenintegrität, indem sie die Werte begrenzen, die in einer oder mehreren Spalten zulässig sind. Sie können eine CHECK-Einschränkung mit jedem logischen (booleschen) Ausdruck erstellen, der basierend auf den logischen Operatoren TRUE oder FALSE zurückgibt. Es ist z. B. möglich, den Bereich der Werte für eine **Gehalts** -Spalte zu begrenzen, indem eine CHECK-Einschränkung erstellt wird, die nur Daten zwischen 15.000 $ und 100.000 $ zulässt. Auf diese Weise wird verhindert, dass Daten eingegeben werden können, die außerhalb des normalen Einkommensbereichs liegen. Der logische Ausdruck würde wie folgt aussehen: `salary >= 15000 AND salary <= 100000`.  
   
  Sie können mehrere CHECK-Einschränkungen auf eine einzelne Spalte anwenden. Es ist auch möglich, eine einzelne CHECK-Einschränkung auf mehrere Spalten anzuwenden, indem die Einschränkung auf Tabellenebene erstellt wird. So könnte z. B. eine CHECK-Einschränkung für mehrere Spalten verwendet werden, um sicherzustellen, dass jede Zeile mit dem Wert **USA** in der **country_region** -Spalte auch einen aus zwei Zeichen bestehenden Wert in der **state** -Spalte aufweist. Auf diese Weise können mehrere Bedingungen an einer Stelle überprüft werden.  
@@ -87,7 +87,7 @@ DELETE CheckTbl WHERE col1 = 10;
   
  Die `DELETE` -Anweisung wird erfolgreich ausgeführt, obwohl die `CHECK` -Einschränkung angibt, dass die `CheckTbl` -Tabelle über mindestens `1` Zeile verfügen muss.  
   
-##  <a name="Tasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="Tasks"></a> Verwandte Aufgaben  
   
 > [!NOTE]  
 >  Wenn die Tabelle zur Replikation veröffentlicht ist, müssen Sie mit der Transact-SQL-Anweisung [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder mit SMO (SQL Server Management Objects) Schemaänderungen ausführen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  

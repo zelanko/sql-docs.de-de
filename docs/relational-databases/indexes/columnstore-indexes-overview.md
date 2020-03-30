@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70009406"
 ---
 # <a name="columnstore-indexes-overview"></a>Columnstore-Indizes: Übersicht
@@ -90,7 +90,7 @@ Ein nicht gruppierter Columnstore-Index ermöglicht operative Echtzeitanalyse, b
 #### <a name="batch-mode-execution"></a>Batchmodusausführung
 Die Batchmodusausführung ist eine Methode zur Abfrageverarbeitung, die zum gleichzeitigen Abfragen mehrerer Zeilen verwendet wird. Die Batchmodusausführung ist eng in das Columnstore-Speicherformat integriert und für dieses optimiert. Die Batchmodusausführung wird auch als *vektorbasierte* oder *vektorisierte* Ausführung bezeichnet. Abfragen von Columnstore-Indizes verwenden die Batchmodusausführung, die die Abfrageleistung in der Regel um das Zwei- bis Vierfache steigert. Weitere Informationen finden Sie im [Handbuch zur Architektur der Abfrageverarbeitung](../query-processing-architecture-guide.md#execution-modes). 
   
-##  <a name="benefits"></a> Warum sollte ich einen Columnstore-Index verwenden?  
+##  <a name="why-should-i-use-a-columnstore-index"></a><a name="benefits"></a> Warum sollte ich einen Columnstore-Index verwenden?  
 Ein Columnstore-Index kann eine sehr hohe Datenkomprimierung bieten, normalerweise etwa zehnfach. Dadurch werden die Speicherkosten für ein Data Warehouse erheblich reduziert. Für Analysezwecke bietet der Columnstore-Index eine weitaus bessere Leistung als ein B-Strukturindex. Columnstore-Indizes stellen das bevorzugte Datenspeicherformat für Data Warehouse- und Analyseworkloads dar. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie Columnstore-Indizes für Echtzeitanalysen Ihrer Betriebsarbeitsauslastung verwenden.  
   
 Gründe für die hohe Geschwindigkeit von Columnstore-Indizes:  

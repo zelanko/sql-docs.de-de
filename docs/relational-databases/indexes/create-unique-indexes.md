@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67898597"
 ---
 # <a name="create-unique-indexes"></a>Erstellen eindeutiger Indizes
@@ -53,9 +53,9 @@ ms.locfileid: "67898597"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Benefits"></a> Vorteile eines eindeutigen Indexes  
+###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> Vorteile eines eindeutigen Indexes  
   
 -   Eindeutige Indizes für mehrere Spalten stellen sicher, dass jede Kombination der Werte in der indizierten Spalte eindeutig ist. Wenn z. B. ein eindeutiger Index für eine Kombination der Spalten **LastName**, **FirstName**und **MiddleName** erstellt wird, können keine zwei Zeilen in der Tabelle dieselbe Kombination der Werte in diesen Spalten aufweisen.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67898597"
   
 -   Eindeutige Indizes stellen weitere hilfreiche Informationen für den Abfrageoptimierer bereit, der effizientere Ausführungspläne erstellen kann.  
   
-###  <a name="Implementations"></a> Typische Implementierungen  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> Typische Implementierungen  
  Eindeutige Indizes werden auf folgende Weise implementiert:  
   
 -   **PRIMARY KEY- oder UNIQUE-Einschränkung**  
@@ -86,18 +86,18 @@ ms.locfileid: "67898597"
   
      Zum Erstellen einer indizierten Sicht wird ein eindeutiger gruppierter Index für mindestens eine Spalte der Sicht definiert. Diese Sicht wird ausgeführt und das Resultset auf der Blattebene des Indexes gespeichert, so wie auch Tabellendaten in einem gruppierten Index gespeichert werden. Weitere Informationen finden Sie unter [Erstellen von indizierten Sichten](../../relational-databases/views/create-indexed-views.md).  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Ein eindeutiger Index, die UNIQUE-Einschränkung oder die PRIMARY KEY-Einschränkung kann nicht erstellt werden, wenn in den Daten doppelte Schlüsselwerte vorhanden sind.  
   
 -   Ein eindeutiger, nicht gruppierter Index kann eingeschlossene Nichtschlüsselspalten enthalten. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>So erstellen Sie einen eindeutigen Index mit dem Tabellen-Designer  
   
@@ -151,7 +151,7 @@ ms.locfileid: "67898597"
   
 10. Klicken Sie im Dialogfeld **Neuer Index** auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>So erstellen Sie einen eindeutigen Index auf einer Tabelle  
   

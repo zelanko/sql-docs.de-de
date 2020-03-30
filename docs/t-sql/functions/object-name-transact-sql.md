@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a18b99d8e4700a840fa3cdc98af492bc0193bbaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67914727"
 ---
 # <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
@@ -132,7 +132,7 @@ FROM sys.dm_db_index_operational_stats(null, null, null, null);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-object_name-in-a-where-clause"></a>D: Verwenden von OBJECT_NAME in einer WHERE-Klausel  
  Das folgende Beispiel gibt Spalten aus der `sys.objects`-Katalogsicht für das durch `OBJECT_NAME` in der `WHERE`-Klausel der `SELECT`-Anweisung angegebene Objekt zurück. (Ihre Objektnummer wird sich von der im untenstehenden Beispiel unterscheiden (hier: 274100017).)  Wenn Sie dieses Beispiel testen möchten, suchen Sie nach einer gültigen Objektnummer, indem Sie `SELECT name, object_id FROM sys.objects;` in Ihrer Datenbank ausführen.)  

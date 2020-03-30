@@ -16,10 +16,10 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041352"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Transaktionsprotokollsicherungen (SQL Server)
@@ -32,7 +32,7 @@ Es empfiehlt sich, Protokollsicherungen häufig auszuführen, damit auf diese We
  
 In der Regel erstellt ein Datenbankadministrator von Zeit zu Zeit eine vollständige Datenbanksicherung, z. B. einmal pro Woche, sowie optional in kürzeren Abständen eine Reihe von differenziellen Datenbanksicherungen, z. B. täglich. Unabhängig von den Datenbanksicherungen sichert der Datenbankadministrator das Transaktionsprotokoll sehr häufig. Der optimale Abstand zwischen Sicherungen ist abhängig von Faktoren wie der Wichtigkeit der Daten, der Größe der Datenbank und der Arbeitsauslastung des Servers. Weitere Informationen zur Implementierung einer guten Strategie finden Sie in diesem Thema unter [Empfehlungen](#Recommendations). 
    
-##  <a name="LogBackupSequence"></a> Funktionsweise einer Protokollsicherungssequenz  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a> Funktionsweise einer Protokollsicherungssequenz  
  Die Sequenz der Transaktionsprotokollsicherungen ( *Protokollkette* ) ist unabhängig von den Datensicherungen. Stellen Sie sich z. B. folgende Ereignissequenz vor.  
   
 |Time|Ereignis|  
@@ -45,7 +45,7 @@ In der Regel erstellt ein Datenbankadministrator von Zeit zu Zeit eine vollstän
   
  Die um 20:00 Uhr erstellte Transaktionsprotokollsicherung enthält Transaktionsprotokolldatensätze von 16:00 Uhr bis 20:00 Uhr, die den Zeitpunkt der Erstellung der vollständigen Datenbanksicherung um 18:00 Uhr umfassen. Die Transaktionsprotokollsicherungen wurden von der anfänglichen vollständigen Datenbanksicherung, die um 20:00 Uhr erstellt wurde, bis zur letzten Sicherung des Transaktionsprotokolls, die um 20:00 Uhr erstellt wurde, durchgehend durchgeführt. Informationen zum Anwenden dieser Protokollsicherungen finden Sie im Beispiel unter [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-##  <a name="Recommendations"></a> Empfehlungen  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Wenn ein Transaktionsprotokoll beschädigt wird, gehen die Änderungen seit der letzten gültigen Sicherung verloren. Daher empfehlen wir dringend, Protokolldateien auf einem fehlertoleranten Datenträger zu speichern.  
   
@@ -61,7 +61,7 @@ In der Regel erstellt ein Datenbankadministrator von Zeit zu Zeit eine vollstän
 > Um die Anzahl der zum Wiederherstellen benötigten Protokollsicherungen zu begrenzen, ist es wichtig, Daten regelmäßig zu sichern. Beispielsweise können Sie eine wöchentliche vollständige Datenbanksicherung und tägliche differenzielle Datenbanksicherungen planen.  
 > Nicht vergessen: Denken Sie bei der Implementierung Ihrer Wiederherstellungsstrategie an die erforderliche [RTO](https://wikipedia.org/wiki/Recovery_time_objective) und [RPO](https://wikipedia.org/wiki/Recovery_point_objective) und insbesondere an den Zeitplan für die vollständige differenzielle Datenbanksicherung.
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So erstellen Sie eine Transaktionsprotokollsicherung**  
   
 -   [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  

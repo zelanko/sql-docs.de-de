@@ -13,10 +13,10 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006356"
 ---
 # <a name="database-mirroring-operating-modes"></a>Betriebsmodi der Datenbankspiegelung
@@ -27,7 +27,7 @@ ms.locfileid: "68006356"
 >  Eine Einführung in die Datenbankspiegelung finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
   
-##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
  In diesem Abschnitt werden einige Begriffe eingeführt, die für dieses Thema wichtig sind.  
   
  Modus mit hoher Leistung  
@@ -68,13 +68,13 @@ ms.locfileid: "68006356"
   
 -   [Antworten auf Fehler des Prinzipalservers](#WhenPrincipalFails)  
   
-###  <a name="WhenUseHighPerf"></a> Wann eignet sich der Modus für hohe Leistung?  
+###  <a name="when-is-high-performance-mode-appropriate"></a><a name="WhenUseHighPerf"></a> Wann eignet sich der Modus für hohe Leistung?  
  Der Modus für hohe Leistung kann bei der Wiederherstellung im Notfall hilfreich sein, wenn der Prinzipalserver und der Spiegelserver durch eine beträchtliche Distanz voneinander getrennt sind und wenn kleine Fehler den Prinzipalserver nicht beeinträchtigen sollen.  
   
 > [!NOTE]  
 >  Protokollversand kann eine Ergänzung zur Datenbankspiegelung darstellen und ist eine empfehlenswerte Alternative zur asynchronen Datenbankspiegelung. Informationen zu den Vorteilen des Protokollversands finden Sie unter [Lösungen mit hoher Verfügbarkeit &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md). Informationen zum Verwenden des Protokollversands mit Datenbankspiegelung finden Sie unter [Datenbankspiegelung und Protokollversand &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  
   
-###  <a name="WitnessImpactOnHighPerf"></a> Auswirkung eines Zeugen im Modus für hohe Leistung  
+###  <a name="the-impact-of-a-witness-on-high-performance-mode"></a><a name="WitnessImpactOnHighPerf"></a> Auswirkung eines Zeugen im Modus für hohe Leistung  
  Wenn Sie Transact-SQL zum Konfigurieren des Modus für hohe Leistung verwenden und die SAFETY-Eigenschaft auf OFF festgelegt ist, sollte unbedingt auch für die WITNESS-Eigenschaft OFF festgelegt sein. Ein Zeuge kann im Modus für hohe Leistung vorhanden sein, er stellt jedoch keinen Vorteil, sondern ein Risiko dar.  
   
  Wenn der Zeuge von der Sitzung getrennt wird und einer der Partner ausfällt, ist die Datenbank nicht mehr verfügbar. Dies ist darauf zurückzuführen, dass die Sitzung ein aus mindestens zwei Serverinstanzen bestehendes Quorum benötigt, wenn ein Zeuge festgelegt ist, obwohl der Modus für hohe Leistung keinen Zeugen erfordert. Wenn die Sitzung das Quorum verliert, kann sie die Datenbank nicht bedienen.  
@@ -88,7 +88,7 @@ ms.locfileid: "68006356"
 > [!NOTE]  
 >  Weitere Informationen zu den Quorumtypen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
-###  <a name="WhenPrincipalFails"></a> Antworten auf Fehler des Prinzipalservers  
+###  <a name="responding-to-failure-of-the-principal"></a><a name="WhenPrincipalFails"></a> Antworten auf Fehler des Prinzipalservers  
  Bei einem Fehler des Prinzipalservers hat der Datenbankbesitzer folgende Möglichkeiten:  
   
 -   Die Datenbank nicht verfügbar belassen, bis der Prinzipalserver wieder verfügbar ist.  
@@ -108,7 +108,7 @@ ms.locfileid: "68006356"
   
      Durch das Erzwingen des Dienstes nimmt der Spiegelserver die Rolle des Prinzipalservers an und bietet die Datenbankkopie den Clients an. Wenn der Dienst erzwungen wird, gehen alle Transaktionsprotokolle verloren, die der Prinzipalserver noch nicht an den Spiegelserver gesendet hat. Deshalb sollten Sie das Erzwingen des Dienstes für Situationen vorbehalten, in denen ein möglicher Datenverlust akzeptabel ist und die sofortige Verfügbarkeit der Datenbank von entscheidender Bedeutung ist. Informationen zur Funktionsweise des erzwungenen Diensts und zu bewährten Methoden für dessen Verwendung finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-##  <a name="Sync"></a> Synchrone Datenbankspiegelung (Modus für hohe Sicherheit)  
+##  <a name="synchronous-database-mirroring-high-safety-mode"></a><a name="Sync"></a> Synchrone Datenbankspiegelung (Modus für hohe Sicherheit)  
  In diesem Abschnitt wird die Funktionsweise der synchronen Datenbankspiegelung beschrieben, einschließlich der alternativen Modi für hohe Sicherheit (mit automatischem Failover und ohne automatischem Failover). Außerdem enthält der Abschnitt Informationen zur Rolle des Zeugen beim automatischen Failover.  
   
  Wenn die Transaktionssicherheit auf FULL festgelegt ist, wird die Datenbank-Spiegelungssitzung im Modus für hohe Sicherheit und – nach einer Synchronisierungsphase zu Beginn – synchron ausgeführt. In diesem Abschnitt werden die Details der Datenbank-Spiegelungssitzungen beschrieben, die für den synchronen Vorgang konfiguriert werden.  
@@ -142,14 +142,14 @@ ms.locfileid: "68006356"
   
 -   [Modus für hohe Sicherheit mit automatischem Failover](#HighSafetyWithAutoFailover)  
   
-###  <a name="HighSafetyWithOutAutoFailover"></a> Modus für hohe Sicherheit ohne automatisches Failover  
+###  <a name="high-safety-mode-without-automatic-failover"></a><a name="HighSafetyWithOutAutoFailover"></a> Modus für hohe Sicherheit ohne automatisches Failover  
  Die folgende Abbildung veranschaulicht die Konfiguration des Modus für hohe Sicherheit ohne automatisches Failover. Die Konfiguration besteht nur aus den zwei Partnern.  
   
  ![Partnerkommunikation ohne Zeugen](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "Partnerkommunikation ohne Zeugen")  
   
  Wenn die Partner verbunden sind und die Datenbank bereits synchronisiert ist, wird das manuelle Failover unterstützt. Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalserverinstanz in Betrieb und wird ungeschützt ausgeführt (d. h., ohne die Spiegelung der Daten). Wenn der Prinzipalserver ausfällt, wird die Spiegelung unterbrochen, der Dienst kann aber auf dem Spiegelserver erzwungen werden (mit möglichem Datenverlust). Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)herunter.  
   
-###  <a name="HighSafetyWithAutoFailover"></a> Modus für hohe Sicherheit mit automatischem Failover  
+###  <a name="high-safety-mode-with-automatic-failover"></a><a name="HighSafetyWithAutoFailover"></a> Modus für hohe Sicherheit mit automatischem Failover  
  Automatisches Failover bietet Hochverfügbarkeit, indem sichergestellt wird, dass die Datenbank trotz Ausfall eines Servers weiterhin bedient wird. Zur Unterstützung eines automatischen Failovers muss die Sitzung eine dritte Serverinstanz besitzen, den *Zeugen*, der sich idealerweise auf einem dritten Computer befindet. Die folgende Abbildung veranschaulicht die Konfiguration einer Sitzung im Modus für hohe Sicherheit mit automatischem Failover.  
   
  ![Zeuge und die zwei Partner einer Sitzung](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "Zeuge und die zwei Partner einer Sitzung")  
@@ -177,7 +177,7 @@ ms.locfileid: "68006356"
 > [!NOTE]  
 >  Wenn zu erwarten ist, dass der Zeuge für einen signifikanten Zeitraum getrennt bleiben wird, sollten Sie den Zeugen vorübergehend aus der Sitzung entfernen, bis er wieder verfügbar ist.  
   
-##  <a name="TsqlSettingsAndOpModes"></a> Transact-SQL-Einstellungen und Betriebsmodi für die Datenbankspiegelung  
+##  <a name="transact-sql-settings-and-database-mirroring-operating-modes"></a><a name="TsqlSettingsAndOpModes"></a> Transact-SQL-Einstellungen und Betriebsmodi für die Datenbankspiegelung  
  In diesem Abschnitt wird eine Datenbank-Spiegelungssitzung im Hinblick auf die ALTER DATABASE-Einstellungen und die Status der gespiegelten Datenbank und des Zeugen (sofern vorhanden) beschrieben. Der Abschnitt ist für Benutzer bestimmt, die Datenbankspiegelungen primär oder ausschließlich mit [!INCLUDE[tsql](../../includes/tsql-md.md)]anstelle von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwalten.  
   
 > [!TIP]  
@@ -191,7 +191,7 @@ ms.locfileid: "68006356"
   
 -   [Faktoren, die sich auf das Verhalten beim Verlust des Prinzipalservers auswirken](#FactorsOnLossOfPrincipal)  
   
-###  <a name="TxnSafetyAndWitness"></a> Auswirkungen der Transaktionssicherheit und des Zeugenstatus auf den Betriebsmodus  
+###  <a name="how-transaction-safety-and-witness-state-affect-the-operating-mode"></a><a name="TxnSafetyAndWitness"></a> Auswirkungen der Transaktionssicherheit und des Zeugenstatus auf den Betriebsmodus  
  Der Betriebsmodus einer Sitzung wird durch die Kombination ihrer Transaktionssicherheitseinstellungen und dem Status des Zeugen bestimmt. Der Datenbankbesitzer kann jederzeit die Transaktionssicherheitsstufe ändern und den Zeugen hinzufügen oder entfernen.  
   
  **In diesem Abschnitt:**  
@@ -200,7 +200,7 @@ ms.locfileid: "68006356"
   
 -   [Zeugenstatus](#WitnessState)  
   
-####  <a name="TxnSafety"></a> Transaction Safety  
+####  <a name="transaction-safety"></a><a name="TxnSafety"></a> Transaction Safety  
  Bei der Transaktionssicherheit handelt es sich um eine spiegelungsspezifische Datenbankeigenschaft, die bestimmt, ob eine Datenbank-Spiegelungssitzung synchron oder asynchron betrieben wird. Es gibt zwei Sicherheitsstufen: FULL und OFF.  
   
 -   SAFETY FULL  
@@ -219,7 +219,7 @@ ms.locfileid: "68006356"
   
  Der Datenbankbesitzer kann die Transaktionssicherheitsstufe jederzeit ändern.  
   
-####  <a name="WitnessState"></a> Der Zeugenstatus  
+####  <a name="the-state-of-the-witness"></a><a name="WitnessState"></a> Der Zeugenstatus  
  Wenn ein Zeuge festgelegt wurde, ist ein Quorum erforderlich, sodass der Zeugenstatus stets wichtig ist.  
   
  Falls er vorhanden ist, weist der Zeuge einen von zwei Status auf:  
@@ -244,10 +244,10 @@ ms.locfileid: "68006356"
   
  **Wenn ein Zeuge im Modus für hohe Leistung vorhanden ist, nimmt er nicht an der Sitzung teil. Um die Datenbank verfügbar zu machen, müssen jedoch eine Verbindung mit mindestens zwei Serverinstanzen bestehen bleiben. Daher wird empfohlen, die WITNESS-Eigenschaft in Sitzungen im Modus für hohe Leistung auf OFF festgelegt zu lassen. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
-###  <a name="ViewWitness"></a> Anzeigen der Sicherheitseinstellung und des Status des Zeugen  
+###  <a name="viewing-the-safety-setting-and-state-of-the-witness"></a><a name="ViewWitness"></a> Anzeigen der Sicherheitseinstellung und des Status des Zeugen  
  Verwenden Sie zum Anzeigen der Sicherheitseinstellung und des Status des Zeugen für eine Datenbank die **sys.database_mirroring** -Katalogsicht. Die wichtigen Spalten sind die folgenden:  
   
-|Faktor|Spalten|Beschreibung|  
+|Faktor|Spalten|BESCHREIBUNG|  
 |------------|-------------|-----------------|  
 |Transaktionssicherheit|**mirroring_safety_level** oder **mirroring_safety_level_desc**|Transaktionssicherheitseinstellung für Updates der Spiegeldatenbank:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= Datenbank ist nicht online.|  
 |Ist ein Zeuge vorhanden?|**mirroring_witness_name**|Servername des Datenbankspiegelungszeugen oder NULL. Damit wird angegeben, das kein Zeuge vorhanden ist.|  
@@ -261,7 +261,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
  Weitere Informationen zu dieser Katalogsicht finden Sie unter [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
-###  <a name="FactorsOnLossOfPrincipal"></a> Faktoren, die sich auf das Verhalten beim Verlust des Prinzipalservers auswirken  
+###  <a name="factors-affecting-behavior-on-loss-of-the-principal-server"></a><a name="FactorsOnLossOfPrincipal"></a> Faktoren, die sich auf das Verhalten beim Verlust des Prinzipalservers auswirken  
  Die folgende Tabelle bietet eine Übersicht über die kombinierten Auswirkungen der Transaktionssicherheitseinstellung, des Status der Datenbank sowie des Zeugenstatus auf das Verhalten einer Spiegelungssitzung beim Verlust des Prinzipalservers.  
   
 |Transaktionssicherheit|Gespiegelter Status der gespiegelten Datenbank|Zeugenstatus|Verhalten beim Verlust des Prinzipals|  
@@ -271,7 +271,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 |OFF|SUSPENDED oder DISCONNECTED|NULL (kein Zeuge)|Die Ausführung des Diensts wird auf dem Spiegelserver erzwungen (mit möglichem Datenverlust).|  
 |FULL|SYNCHRONIZING oder SUSPENDED|NULL (kein Zeuge)|Die Ausführung des Diensts wird auf dem Spiegelserver erzwungen (mit möglichem Datenverlust).|  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Hinzufügen oder Ersetzen eines Datenbank-Spiegelungszeugen &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   

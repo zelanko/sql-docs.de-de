@@ -13,17 +13,17 @@ ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c86ab8b3f29699e807c61b571832c106ab235710
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68018891"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Zugreifen auf FileTables mit Transact-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Beschreibt, wie die Befehle der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Datenbearbeitungssprache (Data Manipulation Language, DML) mit FileTables funktionieren.  
   
-##  <a name="BasicsInsert"></a> INSERT-Vorgänge in FileTables  
+##  <a name="insert-operations-on-filetables"></a><a name="BasicsInsert"></a> INSERT-Vorgänge in FileTables  
  Die folgenden Überlegungen gelten für **INSERT** -Vorgänge in FileTables:  
   
 -   Alle Dateiattributspalten besitzen NOT NULL-Einschränkungen. Wenn Werte nicht explizit festgelegt werden, werden entsprechende Standardwerte angegeben.  
@@ -32,7 +32,7 @@ ms.locfileid: "68018891"
   
 -   Die Anwendung kann **path_locator** für eine Datei oder ein Verzeichnis abrufen, indem in der Funktion [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) der Dateisystempfad angegeben wird.  
   
-##  <a name="BasicsUpdate"></a> UPDATE-Vorgänge in FileTables  
+##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> UPDATE-Vorgänge in FileTables  
  Die folgenden Überlegungen gelten für **UPDATE** -Vorgänge in FileTables:  
   
 -   Aktualisierungen an benutzerdefinierten Daten sind zulässig.  
@@ -41,14 +41,14 @@ ms.locfileid: "68018891"
   
 -   Aktualisierungen können an den FILESTREAM-Daten in der Spalte **file_stream** ohne Auswirkungen auf die anderen Spalten, einschließlich Timestamps, vorgenommen werden.  
   
-##  <a name="BasicsDelete"></a> DELETE-Vorgänge in FileTables  
+##  <a name="delete-operations-on-filetables"></a><a name="BasicsDelete"></a> DELETE-Vorgänge in FileTables  
  Die folgenden Überlegungen gelten für **DELETE** -Vorgänge in FileTables:  
   
 -   Durch Löschen einer Zeile wird auch die entsprechende Datei oder das entsprechende Verzeichnis aus dem Dateisystem entfernt.  
   
 -   Das Löschen einer Zeile schlägt fehl, wenn die Zeile einem Verzeichnis entspricht, das andere Dateien oder Verzeichnisse enthält.  
   
-##  <a name="BasicsConstraints"></a> Einschränkungen, die für DML-Vorgänge in FileTables erzwungen werden  
+##  <a name="constraints-that-are-enforced-for-dml-operations-on-filetables"></a><a name="BasicsConstraints"></a> Einschränkungen, die für DML-Vorgänge in FileTables erzwungen werden  
  Systemdefinierte Einschränkungen stellen sicher, dass DML-Aktionen nicht die Integrität der Dateinamespacehierarchie beeinträchtigen. Zu den Einschränkungen, die erzwungen werden, gehören Folgende:  
   
 -   Wenn Sie **name** der Datei oder des Verzeichnisses festgelegt oder geändert haben:  

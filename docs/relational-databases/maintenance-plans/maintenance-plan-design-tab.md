@@ -15,10 +15,10 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115743"
 ---
 # <a name="maintenance-plan-design-tab"></a>Wartungsplan (Registerkarte Entwurf)
@@ -69,7 +69,7 @@ ms.locfileid: "68115743"
   
  Nachdem ein Wartungstask auf der Entwurfsoberfläche platziert ist, können seine Eigenschaften je nach Bedarf bearbeitet werden. So wird beispielsweise die für einen Task Datenbank sichern relevante Datenbank erst angegeben, nachdem der Task dem Plan hinzugefügt wurde. Die Tasks auf der Entwurfsoberfläche, die nicht ordnungsgemäß konfiguriert sind, enthalten ein rotes Symbol mit einem weißen x.  
   
- Wenn Sie einem Plan einen Wartungstask hinzufügen möchten, ziehen Sie das Symbol des Tasks aus der Toolbox **Wartungsplantasks** in die Planentwurfsoberfläche, oder doppelklicken Sie in der Toolbox auf den Task, wodurch dieser Task der derzeit aktiven Designeroberfläche hinzugefügt wird. Klicken Sie im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Menü **Ansicht** auf **Toolbox**, wenn die Toolbox **Wartungsplantasks** nicht sichtbar ist. Erweitern Sie den Knoten **Wartungsplantasks** im Bereich **Toolbox** .  
+ Wenn Sie einem Plan einen Wartungstask hinzufügen möchten, ziehen Sie das Symbol des Tasks aus der Toolbox **Wartungsplantasks** in die Planentwurfsoberfläche, oder doppelklicken Sie in der Toolbox auf den Task, wodurch dieser Task der derzeit aktiven Designeroberfläche hinzugefügt wird. Klicken Sie im **-Menü** Ansicht**auf**Toolbox[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], wenn die Toolbox **Wartungsplantasks** nicht sichtbar ist. Erweitern Sie den Knoten **Wartungsplantasks** im Bereich **Toolbox** .  
   
  Wenn Sie einen Task aus einem Plan entfernen möchten, wählen Sie den Task in der Designeroberfläche aus, und drücken Sie die **ENTF** -TASTE, oder klicken Sie mit der rechten Maustaste auf den Task, und klicken Sie auf **Löschen**.  
   

@@ -13,10 +13,10 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68057891"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Konfigurieren des Protokollversands (SQL Server)
@@ -42,20 +42,20 @@ ms.locfileid: "68057891"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 -   Die primäre Datenbank muss das vollständige oder massenprotokollierte Wiederherstellungsmodell verwenden. Durch Umstellen der Datenbank auf die einfache Wiederherstellung ist der Protokollversand nicht mehr funktionsfähig.  
   
 -   Vor der Konfiguration des Protokollversands müssen Sie eine Freigabe erstellen, um die Transaktionsprotokollsicherungen dem sekundären Server zur Verfügung zu stellen. Es handelt sich dabei um eine Freigabe des Verzeichnisses, in dem die Transaktionsprotokollsicherungen generiert werden. Wenn Sie z.B. die Transaktionsprotokolle im Verzeichnis C:\data\tlogs\\sichern, können Sie die Freigabe \\\\*primaryserver*\tlogs dieses Verzeichnisses erstellen.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Die gespeicherten Prozeduren für den Protokollversand erfordern die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-configure-log-shipping"></a>So konfigurieren Sie den Protokollversand  
   
@@ -126,7 +126,7 @@ ms.locfileid: "68057891"
   
 28. Klicken Sie im Dialogfeld **Datenbankeigenschaften** auf **OK** , um den Konfigurationsprozess zu starten.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-configure-log-shipping"></a>So konfigurieren Sie den Protokollversand  
   
@@ -150,7 +150,7 @@ ms.locfileid: "68057891"
   
 10. Aktivieren Sie auf dem sekundären Server den Kopier- und den Wiederherstellungsauftrag. Weitere Informationen finden sie unter [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Aktualisieren des Protokollversands auf SQL Server 2016 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

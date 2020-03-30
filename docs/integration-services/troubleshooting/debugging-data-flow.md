@@ -17,10 +17,10 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295118"
 ---
 # <a name="debugging-data-flow"></a>Debuggen des Datenflusses
@@ -65,7 +65,7 @@ ms.locfileid: "71295118"
   
  In der folgenden Tabelle wird die Farbcodierung beschrieben.  
   
-|Color|Beschreibung|  
+|Color|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Keine Farbe|Wartet auf den Aufruf durch die Datenfluss-Engine.|  
 |Gelb|Führt eine Transformation aus, extrahiert Daten oder lädt Daten.|  
@@ -73,7 +73,7 @@ ms.locfileid: "71295118"
 |Rot|Wurde mit Fehlern ausgeführt.|  
 
 ## <a name="analysis-of-data-flow"></a>Analyse des Datenflusses
-  Mit der **SSISDB**-Datenbanksicht [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) lässt sich der Datenfluss von Paketen analysieren. In dieser Sicht wird immer dann eine Zeile angezeigt, wenn eine Datenflusskomponente Daten an eine Downstreamkomponente sendet. Anhand der Informationen können Sie ein tieferes Verständnis der Zeilen erhalten, die an jede Komponente gesendet werden.  
+  Mit der [SSISDB](../../integration-services/system-views/catalog-execution-data-statistics.md)-Datenbanksicht **catalog.execution_data_statistics** lässt sich der Datenfluss von Paketen analysieren. In dieser Sicht wird immer dann eine Zeile angezeigt, wenn eine Datenflusskomponente Daten an eine Downstreamkomponente sendet. Anhand der Informationen können Sie ein tieferes Verständnis der Zeilen erhalten, die an jede Komponente gesendet werden.  
   
 > [!NOTE]  
 >  Der Protokollierungsgrad muss auf **Ausführlich** festgelegt werden, um Informationen mit der catalog.execution_data_statistics-Sicht aufzuzeichnen.  
@@ -183,7 +183,7 @@ order by source_component_name desc
   
 8.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern**, um das aktualisierte Paket zu speichern.  
 
-## <a name="add_viewer"></a> Hinzufügen eines Daten-Viewers zu einem Datenfluss
+## <a name="add-a-data-viewer-to-a-data-flow"></a><a name="add_viewer"></a> Hinzufügen eines Daten-Viewers zu einem Datenfluss
   In diesem Thema wird beschrieben, wie ein Daten-Viewer in einem Datenfluss hinzugefügt und konfiguriert wird. Ein Daten-Viewer zeigt Daten an, die sich zwischen zwei Datenflusskomponenten bewegen. Ein Daten-Viewer kann z. B. die Daten anzeigen, die von einer Datenquelle extrahiert werden, bevor die Daten von einer Transformation im Datenfluss geändert werden.  
   
  Ein Pfad verbindet Komponenten in einem Datenfluss, indem die Ausgabe einer Datenflusskomponente mit der Eingabe einer anderen Komponente verbunden wird.  

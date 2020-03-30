@@ -11,10 +11,10 @@ ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80a3f907e4606201255d0442d136f77c9b31dd40
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76940467"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
@@ -29,16 +29,16 @@ bool PDO::setAttribute ( $attribute, $value );
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$attribute*: Das festzulegende Attribut Eine Liste der unterstützten Attribute finden Sie bei den Hinweisen.  
+*$attribute*: festzulegendes Attribut Eine Liste der unterstützten Attribute finden Sie bei den Hinweisen.  
   
-*$value*: Der Wert (gemischter Typ)  
+*$value*: Der Wert (gemischter Typ).  
   
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  
   
 ## <a name="remarks"></a>Bemerkungen  
   
-|attribute|Verarbeitet von|Unterstützte Werte|Beschreibung|  
+|attribute|Verarbeitet von|Unterstützte Werte|BESCHREIBUNG|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Legt fest, ob die Spaltennamen in Groß- oder Kleinbuchstaben geschrieben werden.<br /><br />PDO::CASE_LOWER bewirkt, das die Spaltennamen in Kleinbuchstaben geschrieben werden.<br /><br />PDO::CASE_NATURAL (der Standard) zeigt die Spaltennamen so an, wie sie aus der Datenbank zurückgegeben werden.<br /><br />PDO::CASE_UPPER bewirkt das die Spaltennamen in Großbuchstaben geschrieben werden.<br /><br />Dieses Attribut kann mit PDO::setAttribute eingerichtet werden.|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|Siehe PDO-Dokumentation.|Siehe PDO-Dokumentation.|  

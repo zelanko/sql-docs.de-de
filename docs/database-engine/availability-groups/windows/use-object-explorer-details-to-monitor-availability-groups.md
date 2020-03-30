@@ -16,10 +16,10 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013631"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Überwachen von Verfügbarkeitsgruppen anhand der Details im Objekt-Explorer
@@ -30,10 +30,10 @@ ms.locfileid: "68013631"
 >  Informationen zum Verwenden des Bereichs mit Details zum Objekt-Explorer finden Sie unter [Detailbereich des Objekt-Explorers](../../../ssms/object/object-explorer-details-pane.md).  
   
   
-##  <a name="Prerequisites"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Sie müssen mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Serverinstanz) verbunden sein, die entweder das primäre Replikat oder ein sekundäres Replikat hostet.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So überwachen Sie Verfügbarkeitsgruppen, Verfügbarkeitsreplikate und Verfügbarkeitsdatenbanken**  
   
 1.  Klicken Sie im Menü **Ansicht**auf **Details zum Objekt-Explorer** , oder drücken Sie F7.  
@@ -54,13 +54,13 @@ ms.locfileid: "68013631"
   
          Um Vorgänge auf mehreren Verfügbarkeitsdatenbanken auszuführen, wählen Sie diese aus, und klicken Sie mit der rechten Maustaste, um ein Kontextmenü zu öffnen, das die verfügbaren Befehle auflistet.  
   
-##  <a name="AvGroupsDetails"></a> Verfügbarkeitsgruppendetails  
+##  <a name="availability-groups-details"></a><a name="AvGroupsDetails"></a> Verfügbarkeitsgruppendetails  
  Im Detailbildschirm **Verfügbarkeitsgruppen** werden die folgenden Spalten angezeigt:  
   
  **Name**  
  Führt die Listenerordner **Verfügbarkeitsreplikate**, **Verfügbarkeitsdatenbanken**und **Verfügbarkeitsgruppe** der ausgewählten Verfügbarkeitsgruppe auf.  
   
-##  <a name="AvReplicaDetails"></a> Verfügbarkeitsreplikatdetails  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Verfügbarkeitsreplikatdetails  
  Im Detailbildschirm **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:  
   
  **Serverinstanz**  
@@ -101,7 +101,7 @@ ms.locfileid: "68013631"
 > [!NOTE]  
 >  Informationen zu Leistungsindikatoren für Verfügbarkeitsreplikate finden Sie unter [SQL Server, Verfügbarkeitsreplikat](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> Verfügbarkeitsdatenbank-Details  
+##  <a name="availability-database-details"></a><a name="AvDbDetails"></a> Verfügbarkeitsdatenbank-Details  
  Im Detailbildschirm **Verfügbarkeitsdatenbank** werden die folgenden Eigenschaften der Verfügbarkeitsdatenbanken in einer bestimmten Verfügbarkeitsgruppe angezeigt:  
   
  **Name**  

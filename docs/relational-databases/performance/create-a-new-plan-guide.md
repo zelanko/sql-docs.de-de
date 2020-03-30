@@ -15,10 +15,10 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946967"
 ---
 # <a name="create-a-new-plan-guide"></a>Erstellen einer neuen Planhinweisliste
@@ -27,7 +27,7 @@ Planhinweislisten beeinflussen die Abfrageoptimierung, indem Abfragehinweise ode
 
 Eine Planhinweisliste wendet entweder einen festen Abfrageplan und/oder Abfragehinweise auf eine Abfrage an.
   
-##  <a name="Restrictions"></a> Einschränkungen  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
 -   Die Argumente für sp_create_plan_guide müssen in der angezeigten Reihenfolge bereitgestellt werden. Wenn Sie Werte für die Parameter von **sp_create_plan_guide**angeben, müssen entweder alle oder überhaupt keine Parameternamen explizit angegeben werden. Wird z.B. **@name =** angegeben, müssen auch **@stmt =** , **@type =** usw. angegeben werden. Ebenso dürfen, wenn **@name =** nicht angegeben und nur der Parameterwert bereitgestellt wird, die übrigen Parameterwerte ebenfalls nicht angegeben und nur ihre Werte bereitgestellt werden. Argumentnamen dienen nur zu Beschreibungszwecken, zum besseren Verständnis der Syntax. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft nicht, ob der angegebene Parametername mit dem Namen des Parameters an der Position übereinstimmt, an der der Name verwendet wird.  
   
 -   Sie können mehr als eine Planhinweisliste des Typs OBJECT oder SQL für dieselbe Abfrage und den Batch oder das Modul erstellen. Es kann jedoch nur jeweils eine Planhinweisliste aktiviert sein.  
@@ -36,10 +36,10 @@ Eine Planhinweisliste wendet entweder einen festen Abfrageplan und/oder Abfrageh
   
 -   Das Löschen oder Ändern einer Funktion, einer gespeicherten Prozedur oder eines DML-Triggers, auf die bzw. den in einer Planhinweisliste verwiesen wird, verursacht einen Fehler. Auch der Versuch, eine Tabelle mit einem Trigger zu löschen, auf den eine Planhinweisliste verweist, führt zu einem Fehler.  
 
-##  <a name="Permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Um eine Planhinweisliste vom Typ OBJECT zu erstellen, benötigen Sie ALTER-Berechtigung für das Objekt, auf das verwiesen wird. Um eine Planhinweisliste vom Typ SQL oder TEMPLATE zu erstellen, benötigen Sie ALTER-Berechtigung für die aktuelle Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Erstellen einer Planhinweisliste mit SSMS  
+##  <a name="create-a-plan-guide-using-ssms"></a><a name="SSMSProcedure"></a> Erstellen einer Planhinweisliste mit SSMS  
 1.  Klicken Sie auf das Pluszeichen, um die Datenbank zu erweitern, in der Sie eine Planhinweisliste erstellen möchten, und klicken Sie dann auf das Pluszeichen, um den Ordner **Programmierbarkeit** zu erweitern.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Planhinweislisten**, und wählen Sie **Neue Planhinweisliste** aus. ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
@@ -70,7 +70,7 @@ Eine Planhinweisliste wendet entweder einen festen Abfrageplan und/oder Abfrageh
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
-##  <a name="TsqlProcedure"></a> Erstellen einer Planhinweisliste mit T-SQL  
+##  <a name="create-a-plan-guide-using-t-sql"></a><a name="TsqlProcedure"></a> Erstellen einer Planhinweisliste mit T-SQL  
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  

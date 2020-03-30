@@ -18,10 +18,10 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47e3c79bacbd75ca6761bdb250b05084caf2832
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991728"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Typen von Clientverbindungen zu Replikaten in einer Always On-Verfügbarkeitsgruppe
@@ -35,7 +35,7 @@ ms.locfileid: "67991728"
 > [!NOTE]  
 >  Weitere Informationen über den Verfügbarkeitsgruppenlistener, der Verbindungsanforderungen von Clients verarbeitet, finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="ConnectAccessForSecondary"></a> Von der sekundären Rolle unterstützte Verbindungszugriffstypen  
+##  <a name="types-of-connection-access-supported-by-the-secondary-role"></a><a name="ConnectAccessForSecondary"></a> Von der sekundären Rolle unterstützte Verbindungszugriffstypen  
  Die sekundäre Rolle unterstützt die folgenden drei Alternativen für Clientverbindungen:  
   
  Keine Verbindungen  
@@ -51,7 +51,7 @@ ms.locfileid: "67991728"
   
  Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)besitzen.  
   
-##  <a name="ConnectAccessForPrimary"></a> Von der primären Rolle unterstützte Verbindungszugriffstypen  
+##  <a name="types-of-connection-access-supported-by-the-primary-role"></a><a name="ConnectAccessForPrimary"></a> Von der primären Rolle unterstützte Verbindungszugriffstypen  
  Die primäre Rolle unterstützt die folgenden zwei Alternativen für Clientverbindungen:  
   
  Alle Verbindungen sind zugelassen  
@@ -64,7 +64,7 @@ ms.locfileid: "67991728"
   
  Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)besitzen.  
   
-##  <a name="HowConnectionAccessAffectsConnectivity"></a> Auswirkungen der Verbindungszugriffskonfiguration auf die Clientkonnektivität  
+##  <a name="how-the-connection-access-configuration-affects-client-connectivity"></a><a name="HowConnectionAccessAffectsConnectivity"></a> Auswirkungen der Verbindungszugriffskonfiguration auf die Clientkonnektivität  
  Die Verbindungszugriffseinstellungen eines Replikats bestimmen, ob ein Verbindungsversuch fehlschlägt oder erfolgreich ist. In der folgenden Tabelle wird für jede Verbindungszugriffseinstellung zusammengefasst, ob ein bestimmter Verbindungsversuch erfolgreich ist oder fehlschlägt.  
   
 |Replikatrolle|Auf Replikat unterstützter Verbindungszugriff|Verbindungsabsicht|Ergebnis des Verbindungsversuchs|  
@@ -93,7 +93,7 @@ ms.locfileid: "67991728"
   
  In der Regel treten in diesem Beispielszenario Failover nur zwischen den Replikaten mit synchronem Commit auf, und sofort nach dem Failover können Anwendungen für beabsichtigte Lesevorgänge erneut eine Verbindung mit einem der sekundären Replikate mit asynchronem Commit herstellen. Bei einem Notfall im Hauptrechencenter gehen jedoch beide Replikate mit synchronem Commit verloren. Der Datenbankadministrator am Satellitenstandort reagiert, indem er ein erzwungenes manuelles Failover zu einem sekundären Replikat mit asynchronem Commit ausführt. Die sekundären Datenbanken auf dem verbleibenden sekundären Replikat werden vom erzwungenen Failover angehalten und dadurch für schreibgeschützte Arbeitsauslastungen nicht verfügbar. Das für Lese-/Schreibverbindungen konfigurierte neue primäre Replikat verhindert, dass die Arbeitsauslastung für beabsichtigte Lesevorgänge mit der Auslastung für Lese-/Schreibzugriff konkurriert. Dies bedeutet, dass bis der Datenbankadministrator die sekundären Datenbanken auf dem verbleibenden sekundären Replikat mit asynchronem Commit fortsetzt, Clients für beabsichtigte Lesevorgänge keine Verbindung mit einem Verfügbarkeitsreplikat herstellen können.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67991728"
   
 -   [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

@@ -14,10 +14,10 @@ ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bf2451fbebb26bd8b9f47bcfe25c34e741e98eea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093388"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, Speicher-Manager-Objekt
@@ -31,7 +31,7 @@ ms.locfileid: "68093388"
 ## <a name="memory-manager-counters"></a>Speicher-Manager-Leistungsindikatoren  
  In dieser Tabelle werden die Leistungsindikatoren des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-**Speicher-Managers** beschrieben.  
   
-|Speicher-Manager-Leistungsindikatoren von SQL Server|Beschreibung|  
+|Speicher-Manager-Leistungsindikatoren von SQL Server|BESCHREIBUNG|  
 |----------------------------------------|-----------------|  
 |**Verbindungsspeicher (KB)**|Gibt den Gesamtumfang des dynamischen Arbeitsspeichers an, den der Server für die Aufrechterhaltung von Verbindungen verwendet.|  
 |**Datenbankcachespeicher (KB)**|Gibt den Umfang des Arbeitsspeichers an, den der Server derzeit für den Datenbankseitencache verwendet.|  
@@ -39,10 +39,10 @@ ms.locfileid: "68093388"
 |**Freier Arbeitsspeicher (KB)**|Gibt den Umfang des zugesicherten Arbeitsspeichers an, der derzeit nicht vom Server verwendet wird.|  
 |**Zugewiesener Arbeitsbereichsspeicher (KB)**|Gibt den Gesamtumfang des Arbeitsspeichers an, der derzeit dem Ausführen von Prozessen, z. B. Hash-, Sortier-, Massenkopier- und Indexerstellungsvorgängen, zugewiesen ist.|  
 |**Sperrblöcke**|Gibt die aktuelle Anzahl der Sperrblöcke an, die auf dem Server verwendet werden. Wird regelmäßig aktualisiert. Ein Sperrblock stellt eine einzelne gesperrte Ressource, wie z. B. eine Tabelle, Seite oder Zeile, dar.|  
-|**Zugeordnete Sperrblöcke**|Gibt die aktuelle Anzahl der zugeordneten Sperrblöcke an. Beim Starten des Servers hängen die Anzahl der zugeordneten Sperrblöcke und die Anzahl der zugeordneten Sperrenbesitzerblöcke von der Konfigurationsoption **Sperren** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab. Wenn mehr Sperrblöcke benötigt werden, steigt der Wert.|  
+|**Zugeordnete Sperrblöcke**|Gibt die aktuelle Anzahl der zugeordneten Sperrblöcke an. Beim Starten des Servers hängen die Anzahl der zugeordneten Sperrblöcke und die Anzahl der zugeordneten Sperrenbesitzerblöcke von der Konfigurationsoption [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sperren**in** ab. Wenn mehr Sperrblöcke benötigt werden, steigt der Wert.|  
 |**Sperrspeicher (KB)**|Gibt den Gesamtumfang des dynamischen Arbeitsspeichers an, den der Server für Sperren verwendet.|  
 |**Sperrenbesitzerblöcke**|Gibt die Anzahl der Sperrenbesitzerblöcke an, die zurzeit auf dem Server verwendet werden. Wird regelmäßig aktualisiert. Ein Sperrenbesitzerblock stellt den Besitz einer Sperre für ein Objekt durch einen einzelnen Thread dar. Wenn also drei Threads jeweils über eine freigegebene Sperre (S) für eine Seite verfügen, liegen drei Sperrenbesitzerblöcke vor.|  
-|**Zugeordnete Sperrenbesitzerblöcke**|Gibt die aktuelle Anzahl der zugeordneten Sperrenbesitzerblöcke an. Beim Starten des Servers hängen die Anzahl der zugeordneten Sperrenbesitzerblöcke und die Anzahl der zugeordneten Sperrblöcke von der Konfigurationsoption **Sperren** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab. Wenn mehr Sperrenbesitzerblöcke benötigt werden, steigt der Wert dynamisch an.|  
+|**Zugeordnete Sperrenbesitzerblöcke**|Gibt die aktuelle Anzahl der zugeordneten Sperrenbesitzerblöcke an. Beim Starten des Servers hängen die Anzahl der zugeordneten Sperrenbesitzerblöcke und die Anzahl der zugeordneten Sperrblöcke von der Konfigurationsoption [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sperren**in** ab. Wenn mehr Sperrenbesitzerblöcke benötigt werden, steigt der Wert dynamisch an.|  
 |**Protokollpoolspeicher (KB)**|Die Gesamtkapazität des dynamischen Speichers, den der Server für den Protokollpool verwendet.| 
 |**Maximaler Arbeitsbereichsspeicher (KB)**|Gibt den maximalen Umfang des Arbeitsspeichers an, der für das Ausführen von Prozessen, z. B. Hash-, Sortier,- Massenkopier- und Indexerstellungsvorgängen, zur Verfügung steht.|  
 |**Ausstehende Speicherzuweisungen**|Gibt die Gesamtanzahl der Prozesse an, die erfolgreich eine Zuweisung für Arbeitsbereichsspeicher erhalten haben.|  

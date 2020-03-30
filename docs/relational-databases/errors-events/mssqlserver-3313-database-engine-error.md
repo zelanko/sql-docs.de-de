@@ -12,10 +12,10 @@ ms.assetid: a244227b-8553-42df-9435-034f906c4c74
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 37f4a65aa023952232e2237a1c4ac38887af1cb3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67908374"
 ---
 # <a name="mssqlserver_3313"></a>MSSQLSERVER_3313
@@ -40,7 +40,7 @@ Falls dieser Fehler für **tempdb**auftritt, wird die [!INCLUDE[ssNoVersion](../
 ## <a name="user-action"></a>Benutzeraktion  
 Dieser Fehler kann auf vorübergehende Systemschwierigkeiten zurückzuführen sein, die beim Versuch, die Serverinstanz zu starten oder eine Datenbank wiederherzustellen, aufgetreten sind. Es kann jedoch auch ein dauerhafter Fehler vorliegen, der bei jedem Versuch auftritt, die Datenbank zu starten. Um Informationen zur Ursache zu erhalten, überprüfen Sie das Windows-Ereignisprotokoll auf einen vorangehenden Fehler, der Aufschluss über den aktuellen Fehler geben könnte.  
   
-Bei Auftreten dieses Fehlerzustands generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der Regel drei Dateien im Ordner **LOG** von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Datei „SQLDump*nnnn*.txt“ enthält weiterführende Diagnoseinformationen zu den Fehlern, einschließlich Details zur Transaktion und zur Seite, auf der das Problem aufgetreten ist. Diese Informationen werden in der Regel vom Produktsupportteam genutzt, um die Fehlerursache zu analysieren.  
+Bei Auftreten dieses Fehlerzustands generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der Regel drei Dateien im Ordner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]LOG**von**. Die Datei „SQLDump*nnnn*.txt“ enthält weiterführende Diagnoseinformationen zu den Fehlern, einschließlich Details zur Transaktion und zur Seite, auf der das Problem aufgetreten ist. Diese Informationen werden in der Regel vom Produktsupportteam genutzt, um die Fehlerursache zu analysieren.  
   
 Um Informationen zur Ursache dieses Auftretens von Fehler 3313 zu erhalten, überprüfen Sie das Windows-Ereignisprotokoll auf einen vorangehenden Fehler, der Aufschluss über den aktuellen Fehler geben könnte. Die entsprechende Benutzeraktion hängt davon ab, ob die Informationen im Windows-Ereignisprotokoll angeben, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehler durch eine vorübergehende Bedingung oder einen dauerhaften Fehler verursacht wurde. Informationen zu den Benutzeraktionen zum Beheben von Fehler 3313 finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   

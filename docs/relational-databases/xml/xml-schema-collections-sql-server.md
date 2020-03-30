@@ -22,10 +22,10 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68096821"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML-Schemaauflistungen (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "68096821"
   
  Die XML-Schemaauflistung können Sie auch verwenden, um XML-Variablen, -Parameter und -Spalten zu typisieren.  
   
-##  <a name="ddl"></a> DDL zum Verwalten von Schemaauflistungen  
+##  <a name="ddl-for-managing-schema-collections"></a><a name="ddl"></a> DDL zum Verwalten von Schemaauflistungen  
  Sie können XML-Schemaauflistungen in der Datenbank erstellen und Variablen und Spalten des **xml** -Typs zuordnen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet die folgenden DDL-Anweisungen zum Verwalten von Schemaauflistungen:  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) Importiert die Schemakomponenten in eine Datenbank.  
@@ -61,7 +61,7 @@ ms.locfileid: "68096821"
   
  Zum Löschen der Schemaauflistung verwenden Sie die DROP XML SCHEMA COLLECTION-Anweisung. Diese Anweisung löscht alle in der Auflistung enthaltenen Schemas und entfernt das Auflistungsobjekt. Beachten Sie, dass zum Löschen einer Schemaauflistung zuerst die unter [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md) beschriebenen Bedingungen erfüllt sein müssen.  
   
-##  <a name="components"></a> Grundlegendes zu Schemakomponenten  
+##  <a name="understanding-schema-components"></a><a name="components"></a> Grundlegendes zu Schemakomponenten  
  Wenn Sie die CREATE XML SCHEMA COLLECTION-Anweisung verwenden, werden verschiedene Schemakomponenten in die Datenbank importiert. Zu den Schemakomponenten gehören Schemaelemente, -attribute und -typdefinitionen. Wenn Sie die DROP XML SCHEMA COLLECTION-Anweisung verwenden, wird die komplette Schemaauflistung entfernt.  
   
  CREATE XML SCHEMA COLLECTION speichert die Schemakomponenten in verschiedenen Systemtabellen.  
@@ -131,7 +131,7 @@ ms.locfileid: "68096821"
 |**targetNamespace**|Zum Zielnamespace gehörende Informationen zu den Komponenten werden in den Metadaten gespeichert.|  
 | &nbsp; | &nbsp; |
   
-##  <a name="perms"></a> Berechtigungen für eine XML-Schemaauflistung  
+##  <a name="permissions-on-an-xml-schema-collection"></a><a name="perms"></a> Berechtigungen für eine XML-Schemaauflistung  
  Sie müssen über die entsprechenden Berechtigungen verfügen, um die folgenden Aufgaben durchführen zu können:  
   
 -   Erstellen/Laden der XML-Schemaauflistung  
@@ -160,7 +160,7 @@ ms.locfileid: "68096821"
   
      Dieses Thema erläutert das Verweigern von Berechtigungen zum Erstellen einer XML-Schemaauflistung sowie das Verweigern von Berechtigungen für ein XML-Schemaauflistungsobjekt.  
   
-##  <a name="info"></a> Abrufen von Informationen zu XML-Schemas und -Schemaauflistungen  
+##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> Abrufen von Informationen zu XML-Schemas und -Schemaauflistungen  
  XML-Schemaauflistungen sind in der Katalogsicht sys.xml_schema_collections aufgeführt. Die XML-Schemaauflistung "sys" wird durch das System definiert. Sie enthält die vordefinierten Namespaces, die in allen benutzerdefinierten XML-Schemaauflistungen verwendet werden können, ohne dass sie explizit geladen werden müssen. Diese Auflistung enthält die Namespaces für xml, xs, xsi, fn und xdt. Zwei weitere Katalogsichten sind sys.xml_schema_namespaces, die alle Namespaces innerhalb jeder Schemaauflistung aufführt, und sys.xml_components, die alle XML-Schemakomponenten innerhalb jedes XML-Schemas aufführt.  
   
  Die integrierte Funktion **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, ergibt eine **xml**-Datentypinstanz. Diese Instanz enthält XML-Schemafragmente für Schemas, die in einer XML-Schemaauflistung enthalten sind, mit Ausnahme der vordefinierten XML-Schemas.  

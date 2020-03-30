@@ -11,10 +11,10 @@ ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7908655954c0f93bd697599ed0d6c809e97d080f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76916365"
 ---
 # <a name="pdoquote"></a>PDO::quote
@@ -30,9 +30,9 @@ string PDO::quote( $string[, $parameter_type ] )
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*string*: Die zu zitierende Zeichenfolge  
+$*string*: Die zu zitierende Zeichenfolge.  
   
-$*parameter_type*: Ein optionales Symbol (ganze Zahl), das den Datentyp angibt  Der Standardwert ist PDO::PARAM_STR.  
+$*parameter_type:* Ein optionales Symbol (ganze Zahl), das den Datentyp angibt.  Der Standardwert ist PDO::PARAM_STR.  
 
 In PHP 7.2 wurden neue PDO-Konstanten eingeführt, für die Unterstützung der [Bindung von Unicode- und Nicht-Unicode-Zeichenfolgen](https://wiki.php.net/rfc/extended-string-types-for-pdo). Unicode-Zeichenfolgen können in Anführungszeichen stehen, mit einem „N“ als Präfix, d. h. N'string' anstatt 'string'.
 

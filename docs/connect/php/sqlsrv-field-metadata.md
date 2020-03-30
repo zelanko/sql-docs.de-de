@@ -17,10 +17,10 @@ ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76939571"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
@@ -36,12 +36,12 @@ sqlsrv_field_metadata( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$stmt:* Eine Anweisungsressource für die Feldmetadaten gesucht werden.  
+*$stmt*: Eine Anweisungsressource für die Feldmetadaten gewünscht werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Ein **Array** von Arrays oder **false**. Das Array besteht aus einem Array für jedes Feld im Resultset. Jedes Teilarray hat Schlüssel, wie in der unten stehenden Tabelle beschrieben. Falls beim Abrufen der Feldmetadaten ein Fehler auftritt, wird **false** zurückgegeben.  
   
-|Key|Beschreibung|  
+|Key|BESCHREIBUNG|  
 |-------|---------------|  
 |Name|Name der Spalte, der das Feld entspricht|  
 |type|Numerischer Wert, der einem SQL-Typ entspricht|  
@@ -50,7 +50,7 @@ Ein **Array** von Arrays oder **false**. Das Array besteht aus einem Array für 
 |Skalieren|Die Skalierung für die Typen mit variabler Skalierung (numeric, decimal, datetime2, datetimeoffset und time). **NULL** für andere SQL Server-Datentypen.|  
 |Nullable|Ein Aufzählungswert, der anzeigt, ob die Spalte NULL-Werte zulässt (**SQLSRV_NULLABLE_YES**) oder nicht (**SQLSRV_NULLABLE_NO**), oder ob diese Eigenschaft nicht bekannt ist (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
-Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes Teilarray (weiter Informationen zu diesen Typen finden Sie in der Dokumentation zu SQL Server):   
+Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes Teilarray (weiter Informationen zu diesen Typen finden Sie in der Dokumentation zu SQL Server):  
   
 |SQL Server 2008-Datentyp|type|Min/Max Genauigkeit|Min/Max Skalierung|Size|  
 |-----------------------------|--------|----------------------|------------------|--------|  
@@ -75,12 +75,12 @@ Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes T
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
 |SMALLINT|SQL_SMALLINT (5)|||2 Bytes|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
-|sql_variant|SQL_SS_VARIANT (-150)|||Variable|  
+|sql_variant|SQL_SS_VARIANT (-150)|||variable|  
 |text|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |timestamp|SQL_BINARY (-2)|||8 Byte|  
 |TINYINT|SQL_TINYINT (-6)|||1 Byte|  
-|udt|SQL_SS_UDT (-151)|||Variable|  
+|udt|SQL_SS_UDT (-151)|||variable|  
 |UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
 |varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  
 |varchar|SQL_VARCHAR (12)|||0 < *n* < 8000 <sup>1</sup>|  
@@ -128,7 +128,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>Klassifizierungsmetadaten zu Vertraulichkeitsdaten
 
-Ab Version 5.8.0 ist die neue Option `DataClassification` verfügbar, damit Benutzer in Microsoft SQL Server 2019 mithilfe von `sqlsrv_field_metadata` auf die [Klassifizierungsmetadaten zu Vertraulichkeitsdaten](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4) zugreifen können. Hierfür wird der Microsoft ODBC Driver 17.4.2 oder höher benötigt.
+Ab Version 5.8.0 ist die neue Option `DataClassification` verfügbar, damit Benutzer in Microsoft SQL Server 2019 mithilfe von [ auf die ](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)Klassifizierungsmetadaten zu Vertraulichkeitsdaten`sqlsrv_field_metadata` zugreifen können. Hierfür wird der Microsoft ODBC Driver 17.4.2 oder höher benötigt.
 
 Die Option `DataClassification` entspricht standardmäßig `false`. Wenn sie jedoch auf `true` festgelegt wird, wird das von `sqlsrv_field_metadata` zurückgegebene Array mit den Klassifizierungsmetadaten zu Vertraulichkeitsdaten aufgefüllt, falls vorhanden. 
 

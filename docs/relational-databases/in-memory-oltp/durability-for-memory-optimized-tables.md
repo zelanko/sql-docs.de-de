@@ -11,10 +11,10 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67942806"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Dauerhaftigkeit für speicheroptimierte Tabellen
@@ -41,7 +41,7 @@ ms.locfileid: "67942806"
   
  Wenn eine Zeile gelöscht oder aktualisiert wird, wird die Zeile in der Datendatei nicht entfernt oder direkt geändert. Stattdessen werden die gelöschten Zeilen in einem anderen Typ von Datei, der Änderungsdatei, nachverfolgt. Updatevorgänge werden für jede einzelne Zeile als Tupel von Lösch- und Einfügevorgängen verarbeitet. Dadurch werden zufällige E/A-Vorgänge für die Datendatei verhindert.  
  
-   Größe: Auf Computern mit einer Arbeitsspeicherkapazität über 16 GB beträgt die Größe jeder Datendatei ungefähr 128 MB, und auf Computern mit einer Arbeitsspeicherkapazität bis 16 GB beträgt die Größe 16 MB. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] kann der Modus für große Prüfpunkte verwendet werden, wenn SQL Server das Speichersubsystem für ausreichend schnell hält. Im Modus für große Prüfpunkte haben die Datendateien eine Größe von 1 GB. So wird für Arbeitsauslastungen mit hohem Durchsatz eine höhere Effizienz im Speichersubsystem möglich.  
+   Größe: Auf Computern mit einer Arbeitsspeicherkapazität über 16 GB beträgt die Größe jeder Datendatei ungefähr 128 MB, und auf Computern mit einer Arbeitsspeicherkapazität bis 16 GB beträgt die Größe 16 MB. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] kann der Modus für große Prüfpunkte verwendet werden, wenn SQL Server das Speichersubsystem für ausreichend schnell hält. Im Modus für große Prüfpunkte haben die Datendateien eine Größe von 1 GB. So wird für Arbeitsauslastungen mit hohem Durchsatz eine höhere Effizienz im Speichersubsystem möglich.  
    
 ### <a name="the-delta-file"></a>Die Änderungsdatei  
  Jeder Datendatei ist eine entsprechende Änderungsdatei zugeordnet, die den gleichen Transaktionsbereich besitzt und die gelöschten Zeilen nachverfolgt, die von Transaktionen im Transaktionsbereich eingefügt wurden. Die Daten- und Änderungsdatei wird als Prüfpunktdateipaar (CFP, Checkpoint File Pair) bezeichnet. Sie stellt die Zuordnungs- und die Zuordnungsaufhebungseinheit sowie die Einheit für Zusammenführungsvorgänge dar. Beispielsweise werden in einer Änderungsdatei, die dem Transaktionsbereich (100, 200) entspricht, gelöschte Zeilen gespeichert, die von Transaktionen im Bereich (100, 200) eingefügt wurden. Genau wie bei Datendateien wird auf Änderungsdateien sequenziell zugegriffen.  
@@ -86,7 +86,7 @@ ms.locfileid: "67942806"
   
  In einem Hintergrundthread werden alle geschlossenen CFPs mithilfe einer Zusammenführungsrichtlinie ausgewertet und dann eine oder mehrere Zusammenführungsanforderungen für die qualifizierenden CFPs initiiert. Diese Zusammenführungsanforderungen werden vom Offline-Prüfpunktthread verarbeitet. Die Auswertung der Zusammenführungsrichtlinie erfolgt in regelmäßigen Abständen sowie beim Schließen eines Prüfpunkts.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zusammenführungsrichtlinie  
+### <a name="ssnoversion-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zusammenführungsrichtlinie  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert die folgende Zusammenführungsrichtlinie:  
   
 -   Eine Zusammenführung wird geplant, wenn mindestens zwei aufeinanderfolgende CFPs konsolidiert werden können, nachdem gelöschte Zeilen berücksichtigt wurden, sodass die resultierenden Zeilen in einem CFP der Zielgröße Platz finden. Die Zielgröße der Daten- und Änderungsdateien entspricht den oben beschriebenen ursprünglichen Größenvorgaben.  

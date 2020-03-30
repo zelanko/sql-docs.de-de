@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292178"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -149,13 +149,13 @@ ms.locfileid: "71292178"
   
 -   [Festlegen von Optionen auf der Registerkarte "Spalten"](#mapping)  
   
-###  <a name="open"></a> Öffnen des Ziel-Editors für Rohdatendateien  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Öffnen des Ziel-Editors für Rohdatendateien  
   
 1.  Fügen Sie das Rohdatendatei-Ziel in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einem [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Paket hinzu.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Komponente, und klicken Sie anschließend auf **Bearbeiten**.  
   
-###  <a name="connection"></a> Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"  
  **Zugriffsmodus**  
  Wählen Sie aus, wie der Dateiname angegeben wird. Wählen Sie **Dateiname** aus, um den Dateinamen und Pfad direkt einzugeben, oder **Dateiname aus Variable** , um eine Variable anzugeben, die den Dateinamen enthält.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "71292178"
   
  Wenn Sie auf **Anfängliche Rohdatendatei generieren**klicken, wird ein Meldungsfeld angezeigt. Klicken Sie auf **OK** , um die Erstellung der Datei fortzusetzen. Klicken Sie auf **Abbrechen** , um eine andere Liste von Spalten auf der Seite **Spalten** auszuwählen.  
   
-###  <a name="mapping"></a> Festlegen von Optionen auf der Registerkarte "Spalten"  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Festlegen von Optionen auf der Registerkarte "Spalten"  
  **Verfügbare Eingabespalten**  
  Wählen Sie mindestens eine Eingabespalte aus, die in die Rohdatendatei geschrieben werden soll.  
   
@@ -191,13 +191,13 @@ ms.locfileid: "71292178"
   
 -   [Festlegen von Optionen auf der Registerkarte "Spalten"](#mapping)  
   
-###  <a name="open"></a> Öffnen des Ziel-Editors für Rohdatendateien  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Öffnen des Ziel-Editors für Rohdatendateien  
   
 1.  Fügen Sie das Rohdatendatei-Ziel in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einem [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Paket hinzu.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Komponente, und klicken Sie anschließend auf **Bearbeiten**.  
   
-###  <a name="connection"></a> Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"  
  **Zugriffsmodus**  
  Wählen Sie aus, wie der Dateiname angegeben wird. Wählen Sie **Dateiname** aus, um den Dateinamen und Pfad direkt einzugeben, oder **Dateiname aus Variable** , um eine Variable anzugeben, die den Dateinamen enthält.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "71292178"
   
  Wenn Sie auf die Schaltfläche klicken, wird eine Liste der Spalten angezeigt. Sie können auf "Abbrechen" klicken und die Spalten ändern, oder klicken Sie auf "OK", um das Erstellen der Datei fortzusetzen.  
   
-###  <a name="mapping"></a> Festlegen von Optionen auf der Registerkarte "Spalten"  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Festlegen von Optionen auf der Registerkarte "Spalten"  
  **Verfügbare Eingabespalten**  
  Wählen Sie mindestens eine Eingabespalte aus, die in die Rohdatendatei geschrieben werden soll.  
   

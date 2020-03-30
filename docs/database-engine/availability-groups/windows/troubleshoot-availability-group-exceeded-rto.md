@@ -10,10 +10,10 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013754"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Problembehandlung: Verfügbarkeitsgruppe hat RTO überschritten
@@ -28,7 +28,7 @@ ms.locfileid: "68013754"
   
 2.  [Ein Wiederholungsthread gerät aufgrund von Ressourcenkonflikten in den Rückstand.](#BKMK_CONTENTION)  
   
-##  <a name="BKMK_REDOBLOCK"></a> Eine meldende Workload verhindert die Ausführung des Wiederholungsthreads.  
+##  <a name="reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> Eine meldende Workload verhindert die Ausführung des Wiederholungsthreads.  
  Der Wiederholungsthread auf dem sekundären Replikat wird durch eine lang andauernde schreibgeschützte Abfrage an der Durchführung von Änderungen an der Datendefinitionssprache (DDL) gehindert.  
   
 ### <a name="explanation"></a>Erklärung  
@@ -44,7 +44,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  Sie können die Ausführung der meldenden Workload abschließen. An diesem Punkt ist die Blockierung des Wiederholungsthreads aufgehoben. Alternativ können Sie die Blockierung des Wiederholungsthreads sofort aufheben, indem Sie den Befehl [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) für die blockierende Sitzungs-ID ausführen.  
   
-##  <a name="BKMK_CONTENTION"></a> Ein Wiederholungsthread gerät aufgrund von Ressourcenkonflikten in den Rückstand.  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_CONTENTION"></a> Ein Wiederholungsthread gerät aufgrund von Ressourcenkonflikten in den Rückstand.  
  Eine umfangreiche meldende Workload auf dem sekundären Replikat hat das sekundäre Replikat verlangsamt, weshalb der Wiederholungsthread in den Rückstand geraten ist.  
   
 ### <a name="explanation"></a>Erklärung  
