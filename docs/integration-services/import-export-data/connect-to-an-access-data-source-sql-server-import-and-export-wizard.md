@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296294"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Access-Datenquelle (SQL Server-Import/Export-Assistent)
@@ -71,7 +71,7 @@ Wenn Access nicht in der Liste der Datenquellen angezeigt wird, sollten Sie übe
 > [!NOTE]
 > Sie müssen SQL Server installieren, um die 64-Bit-Version des SQL Server-Import/Export-Assistenten verwenden zu können. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen und installieren daher auch nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten.
 
-## <a name="officeDownloads"></a>Herunterladen von Dateien zum Herstellen einer Verbindung mit Access  
+## <a name="get-the-files-you-need-to-connect-to-access"></a><a name="officeDownloads"></a>Herunterladen von Dateien zum Herstellen einer Verbindung mit Access  
 Sie müssen möglicherweise die Konnektivitätskomponenten für Microsoft Office-Datenquellen (einschließlich Access und Excel) herunterladen, wenn diese nicht bereits installiert sind. Laden Sie die neueste Version der Konnektivitätskomponenten für Access- und Excel-Dateien hier herunter: [Microsoft Access Database Engine 2016 – Weitervertreibbare Komponente](https://www.microsoft.com/download/details.aspx?id=54920).
   
 Die aktuelle Version der Komponenten dient zum Öffnen von Dateien, die in früheren Versionen von Access erstellt wurden.
@@ -82,7 +82,7 @@ Wenn Sie über ein Office 365-Abonnement verfügen, stellen Sie sicher, dass Sie
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="database_password"></a> Ist die Datenbankdatei kennwortgeschützt?
+## <a name="is-the-database-file-password-protected"></a><a name="database_password"></a> Ist die Datenbankdatei kennwortgeschützt?
 In einigen Fällen ist eine Access-Datenbank kennwortgeschützt, verwendet jedoch keine Informationsdatei für die Arbeitsgruppe. Alle Benutzer müssen das gleiche Kennwort angeben, es muss jedoch kein Benutzername eingegeben werden. Führen Sie zum Bereitstellen eines Datenbankkennworts die folgenden Schritte aus:
 
 1.  Klicken Sie auf der Seite **Datenquelle auswählen** oder **Ziel auswählen** auf die Schaltfläche **Erweitert**, um das Dialogfeld **Datenlinkeigenschaften** zu öffnen.  
