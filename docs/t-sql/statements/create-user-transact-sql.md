@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056814"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -231,7 +231,7 @@ DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*
 >  *DEFAULT_LANGUAGE* wird nur für Benutzer von eigenständigen Datenbanken verwendet.  
   
 SID = *sid*  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Gilt nur für Benutzer mit Kennwörtern ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung) in einer eigenständigen Datenbank. Gibt die SID des neuen Datenbankbenutzers an. Wenn diese Option nicht ausgewählt wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch ein SID zugewiesen. Erstellen Sie mit dem SID-Parameter Benutzer in mehreren Datenbanken, die die gleiche Identität (SID) aufweisen. Dies ist beim Erstellen von Benutzern in mehreren Datenbanken für die Vorbereitung eines Always On-Failovers hilfreich. Fragen Sie zum Bestimmen der SID eines Benutzers sys.database_principals ab.  
   
@@ -277,7 +277,7 @@ Beim Erstellen des Benutzers in der verwalteten Azure SQL-Datenbank-Instanz muss
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
-##  <a name="SyntaxSummary"></a> Syntaxzusammenfassung  
+##  <a name="syntax-summary"></a><a name="SyntaxSummary"></a> Syntaxzusammenfassung  
  **Benutzer mit Anmeldenamen in der master-Datenbank**  
   
  Die folgende Liste enthält mögliche Syntaxen für Benutzer auf Basis von Anmeldenamen. Die Standardschemaoptionen sind nicht aufgeführt.  
@@ -376,7 +376,7 @@ GO
 ### <a name="c-creating-a-database-user-from-a-certificate"></a>C. Erstellen eines Datenbankbenutzers über ein Zertifikat  
  Im folgenden Beispiel wird der Datenbankbenutzer `JinghaoLiu` über das `CarnationProduction50`-Zertifikat erstellt.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 ```  
 USE AdventureWorks2012;  
@@ -388,7 +388,7 @@ CREATE USER JinghaoLiu FOR CERTIFICATE CarnationProduction50;
 GO   
 ```  
   
-###  <a name="withoutLogin"></a> D. Erstellen und Verwenden eines Benutzers ohne Anmeldename  
+###  <a name="d-creating-and-using-a-user-without-a-login"></a><a name="withoutLogin"></a> D. Erstellen und Verwenden eines Benutzers ohne Anmeldename  
  Im folgenden Beispiel wird ein `CustomApp`-Datenbankbenutzer erstellt, dem kein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename zugeordnet wird. Anschließend wird einem Benutzer die `adventure-works\tengiz0`-Berechtigung zugewiesen, um die Identität des `CustomApp`-Benutzers anzunehmen.  
   
 ```  
@@ -415,7 +415,7 @@ GO
 ### <a name="e-creating-a-contained-database-user-with-password"></a>E. Erstellen eines Benutzers einer eigenständigen Datenbank mit Kennwort  
  Im folgenden Beispiel wird der Benutzer einer eigenständigen Datenbank mit Kennwort erstellt. Dieses Beispiel kann nur in einer eigenständigen Datenbank ausgeführt werden.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. Dieses Beispiel funktioniert in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], wenn DEFAULT_LANGUAGE entfernt wird.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. Dieses Beispiel funktioniert in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], wenn DEFAULT_LANGUAGE entfernt wird.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -430,7 +430,7 @@ GO
 ### <a name="f-creating-a-contained-database-user-for-a-domain-login"></a>F. Erstellen eines Benutzers einer eigenständigen Datenbank für eine Domänenanmeldung  
  Im folgenden Beispiel wird ein Benutzer für eine eigenständige Datenbank mit dem Anmeldenamen „Fritz“ in der Domäne „Contoso“ erstellt. Dieses Beispiel kann nur in einer eigenständigen Datenbank ausgeführt werden.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -442,7 +442,7 @@ GO
 ### <a name="g-creating-a-contained-database-user-with-a-specific-sid"></a>G. Erstellen eines Benutzers einer eigenständigen Datenbank mit einer bestimmten SID  
  Im folgenden Beispiel wird ein authentifizierter SQL Server-Benutzer einer eigenständigen Datenbank mit dem Namen CarmenW erstellt. Dieses Beispiel kann nur in einer eigenständigen Datenbank ausgeführt werden.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
 ```  
 USE AdventureWorks2012 ;  

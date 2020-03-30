@@ -40,10 +40,10 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095702"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
@@ -54,16 +54,16 @@ ms.locfileid: "74095702"
   
 -   **So konfigurieren Sie Datenbank-E-Mails mithilfe von:**  [dem Assistenten zum Konfigurieren von Datenbank-E-Mail](#DBWizard), [Vorlagen](#Template)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Verwenden Sie die Option **DatabaseMail XPs** , um Datenbank-E-Mail auf diesem Server zu aktivieren. Weitere Informationen finden Sie im Referenzthema [Database Mail XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Zum Aktivieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker in einer Datenbank ist eine Datenbanksperrung erforderlich. Wurde Service Broker in **msdb**deaktiviert, müssen Sie zum Aktivieren von Datenbank-E-Mails zuerst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beenden, damit Service Broker die erforderliche Sperre abrufen kann.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Sie müssen zum Konfigurieren von Datenbank-E-Mails ein Mitglied der festen Serverrolle **sysadmin** sein. Zum Senden von Datenbank-E-Mail muss der Benutzer ein Mitglied der **DatabaseMailUserRole** -Datenbankrolle in der **msdb** -Datenbank sein.  
   
-##  <a name="DBWizard"></a> Verwenden des Assistenten zum Konfigurieren von Datenbank-E-Mail  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="DBWizard"></a> Verwenden des Assistenten zum Konfigurieren von Datenbank-E-Mail  
  **So konfigurieren Sie Datenbank-E-Mails mit einem Assistenten**  
   
 1.  Erweitern Sie im Objekt-Explorer den Knoten für die Instanz, für die Sie Datenbank-E-Mails konfigurieren möchten.  
@@ -100,7 +100,7 @@ ms.locfileid: "74095702"
   
     -   [Seite "Test-E-Mail senden"](#TestEmail)  
   
-###  <a name="Welcome"></a> Willkommensseite  
+###  <a name="welcome-page"></a><a name="Welcome"></a> Willkommensseite  
  Diese Seite beschreibt die Schritte zum Konfigurieren von Datenbank-E-Mails.  
   
  **Diese Seite nicht mehr anzeigen** – Aktivieren Sie diese Option, um die Willkommensseite künftig nicht mehr anzuzeigen.  
@@ -111,7 +111,7 @@ ms.locfileid: "74095702"
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="ConfigTask"></a> Konfigurationsaufgabe auswählen  
+###  <a name="select-configuration-task"></a><a name="ConfigTask"></a> Konfigurationsaufgabe auswählen  
  Geben Sie auf der Seite **Konfigurationsaufgabe auswählen** die Aufgabe an, die Sie bei jeder Verwendung des Assistenten ausführen. Wenn Sie Ihre Entscheidung vor dem Beenden des Assistenten ändern, können Sie mithilfe der Schaltfläche **Zurück** zu dieser Seite zurückkehren und eine andere Aufgabe auswählen.  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ ms.locfileid: "74095702"
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="NewAccount"></a> Seite "Neues Konto"  
+###  <a name="new-account-page"></a><a name="NewAccount"></a> Seite "Neues Konto"  
  Auf dieser Seite können Sie ein neues Konto für Datenbank-E-Mails erstellen. Ein Konto für Datenbank-E-Mails enthält Informationen für das Senden von E-Mails an einen SMTP-Server.  
   
  Ein Konto für Datenbank-E-Mails enthält Informationen, mit deren Hilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] E-Mail-Nachrichten an einen SMTP-Server gesendet werden. Jedes Konto enthält Informationen für einen E-Mail-Server.  
@@ -182,7 +182,7 @@ ms.locfileid: "74095702"
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="ExistingAccount"></a> Seite "Vorhandenes Konto verwalten"  
+###  <a name="manage-existing-account-page"></a><a name="ExistingAccount"></a> Seite "Vorhandenes Konto verwalten"  
  Mithilfe dieser Seite können Sie ein vorhandenes Datenbank-E-Mail-Konto verwalten.  
   
  **Kontoname**  
@@ -232,7 +232,7 @@ ms.locfileid: "74095702"
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="NewProfile"></a> Seite "Neues Profil"  
+###  <a name="new-profile-page"></a><a name="NewProfile"></a> Seite "Neues Profil"  
  Auf dieser Seite können Sie ein Profil für Datenbank-E-Mails erstellen. Ein Datenbank-E-Mail-Profil ist eine Auflistung von Datenbank-E-Mail-Konten. In Fällen, wo ein E-Mail-Server nicht erreichbar ist, sorgen Profile für mehr Zuverlässigkeit, indem sie alternative Datenbank-E-Mail-Konten bereitstellen. Es ist mindestens ein Datenbank-E-Mail-Konto erforderlich. Weitere Informationen zum Festlegen der Prioritäten von Datenbank-E-Mail-Konten im Profil finden Sie unter [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).  
   
  Mithilfe der Schaltflächen **Nach oben** und **Nach unten** ändern Sie die Reihenfolge, in der die Datenbank-E-Mail-Konten verwendet werden. Diese Reihenfolge wird durch einen Wert namens Sequenznummer festgelegt. **Nach oben** verringert die Sequenznummer und **Nach unten** erhöht die Sequenznummer. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil von Datenbank-E-Mail verwendet werden. Für eine neue E-Mail-Nachricht beginnt Datenbank-E-Mail mit dem Konto mit der niedrigsten Sequenznummer. Wenn dieses Konto fehlschlägt, verwendet Datenbank-E-Mail das Konto mit der nächsthöheren Sequenznummer usw., bis entweder Datenbank-E-Mail die Nachricht erfolgreich versendet oder das Konto mit der höchsten Sequenznummer fehlschlägt. Wenn das Konto mit der höchsten Sequenznummer fehlschlägt, unterbricht Datenbank-E-Mail den Versuch, die E-Mail zu versenden, für den Zeitraum, der im Datenbank-E-Mail-Parameter **AccountRetryDelay** festgelegt ist. Verwenden Sie den **AccountRetryAttempts** -Parameter, um zu konfigurieren, wie oft der externe Mailprozess versuchen soll, die E-Mail mithilfe der einzelnen Konten des angegebenen Profils zu versenden. Sie können die Parameter **AccountRetryDelay** und **AccountRetryAttempts** auf der Seite **Systemparameter konfigurieren** des Assistenten zum Konfigurieren von Datenbank-E-Mail konfigurieren.  
@@ -260,7 +260,7 @@ ms.locfileid: "74095702"
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="ExistingProfile"></a> Seite "Vorhandenes Profil verwalten"  
+###  <a name="manage-existing-profile-page"></a><a name="ExistingProfile"></a> Seite "Vorhandenes Profil verwalten"  
  Mit dieser Seite können Sie ein vorhandenes Datenbank-E-Mail-Profil verwalten. Ein Datenbank-E-Mail-Profil ist eine Auflistung von Datenbank-E-Mail-Konten. In Fällen, wo ein E-Mail-Server nicht erreichbar ist, sorgen Profile für mehr Zuverlässigkeit, indem sie alternative Datenbank-E-Mail-Konten bereitstellen. Es ist mindestens ein Datenbank-E-Mail-Konto erforderlich. Weitere Informationen zum Festlegen der Prioritäten von Datenbank-E-Mail-Konten im Profil finden Sie unter [Create a Database Mail Profile](../../relational-databases/database-mail/create-a-database-mail-profile.md).  
   
  Mithilfe der Schaltflächen **Nach oben** und **Nach unten** ändern Sie die Reihenfolge, in der die Datenbank-E-Mail-Konten verwendet werden. Diese Reihenfolge wird durch einen Wert namens Sequenznummer festgelegt. **Nach oben** verringert die Sequenznummer und **Nach unten** erhöht die Sequenznummer. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil von Datenbank-E-Mail verwendet werden. Für eine neue E-Mail-Nachricht beginnt Datenbank-E-Mail mit dem Konto mit der niedrigsten Sequenznummer. Wenn dieses Konto fehlschlägt, verwendet Datenbank-E-Mail das Konto mit der nächsthöheren Sequenznummer usw., bis entweder Datenbank-E-Mail die Nachricht erfolgreich versendet oder das Konto mit der höchsten Sequenznummer fehlschlägt. Wenn das Konto mit der höchsten Sequenznummer fehlschlägt, unterbricht Datenbank-E-Mail den Versuch, die E-Mail zu versenden, für den Zeitraum, der im Datenbank-E-Mail-Parameter **AccountRetryDelay** festgelegt ist. Verwenden Sie den **AccountRetryAttempts** -Parameter, um zu konfigurieren, wie oft der externe Mailprozess versuchen soll, die E-Mail mithilfe der einzelnen Konten des angegebenen Profils zu versenden. Sie können die Parameter **AccountRetryDelay** und **AccountRetryAttempts** auf der Seite **Systemparameter konfigurieren** des Assistenten zum Konfigurieren von Datenbank-E-Mail konfigurieren.  
@@ -300,7 +300,7 @@ ms.locfileid: "74095702"
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="AddAccount"></a> Add Account to Profile Page  
+###  <a name="add-account-to-profile-page"></a><a name="AddAccount"></a> Add Account to Profile Page  
  Verwenden Sie diese Seite, um das dem Profil hinzuzufügende Konto auszuwählen. Wählen Sie ein vorhandenes Konto aus dem Feld **Kontoname** , oder klicken Sie auf **Neues Konto**.  
   
  **Kontoname**  
@@ -317,7 +317,7 @@ ms.locfileid: "74095702"
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="AccountsProfiles"></a> Seite zum Verwalten von Konten und Profilen  
+###  <a name="manage-accounts-and-profiles-page"></a><a name="AccountsProfiles"></a> Seite zum Verwalten von Konten und Profilen  
  Verwenden Sie diese Seite, um eine Aufgabe zum Verwalten eines Profils oder Kontos auszuwählen.  
   
  **Neues Konto erstellen**  
@@ -334,7 +334,7 @@ ms.locfileid: "74095702"
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="ProfileSecurityPublic"></a> Option "Profilsicherheit verwalten", Registerkarte "Öffentlich"  
+###  <a name="manage-profile-security-public-tab"></a><a name="ProfileSecurityPublic"></a> Option "Profilsicherheit verwalten", Registerkarte "Öffentlich"  
  Verwenden Sie diese Seite zum Konfigurieren eines öffentlichen Profils.  
   
  Profile sind entweder öffentlich oder privat. Auf ein privates Profil können nur bestimmte Benutzer oder Rollen zugreifen. Mit einem öffentlichen Profil kann jeder Benutzer oder jede Rolle mit Zugriff auf die Mailhostdatenbank (**msdb**) E-Mails mithilfe dieses Profils senden.  
@@ -355,7 +355,7 @@ ms.locfileid: "74095702"
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="ProfileSecurityPrivate"></a> Option "Profilsicherheit verwalten", Registerkarte "Privat"  
+###  <a name="manage-profile-security-private-tab"></a><a name="ProfileSecurityPrivate"></a> Option "Profilsicherheit verwalten", Registerkarte "Privat"  
  Verwenden Sie diese Seite zum Konfigurieren eines privaten Profils.  
   
  Profile sind entweder öffentlich oder privat. Auf ein privates Profil können nur bestimmte Benutzer oder Rollen zugreifen. Mit einem öffentlichen Profil kann jeder Benutzer oder jede Rolle mit Zugriff auf die Mailhostdatenbank (**msdb**) E-Mails mithilfe dieses Profils senden.  
@@ -379,7 +379,7 @@ ms.locfileid: "74095702"
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="SystemParameters"></a> Systemparameter konfigurieren  
+###  <a name="configure-system-parameters"></a><a name="SystemParameters"></a> Systemparameter konfigurieren  
  Verwenden Sie diese Seite, um Systemparameter für die Datenbank-E-Mail festzulegen. Zeigen Sie die Systemparameter und den aktuellen Wert der einzelnen Parameter an. Wählen Sie einen Parameter aus, um eine kurze Beschreibung im Informationsbereich anzuzeigen.  
   
  **Wiederholungsversuche für das Konto**  
@@ -413,12 +413,12 @@ ms.locfileid: "74095702"
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="CompleteWizard"></a> Seite "Assistenten abschließen"  
+###  <a name="complete-the-wizard-page"></a><a name="CompleteWizard"></a> Seite "Assistenten abschließen"  
  Mithilfe dieser Seite können Sie die Aktionen überprüfen, die der **Assistent zum Konfigurieren von Datenbank-E-Mail** ausführt. Bis zum Abschließen des Assistenten werden keine Änderungen angewendet.  
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-###  <a name="TestEmail"></a> Send Test E-Mail Page  
+###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a> Send Test E-Mail Page  
  Verwenden Sie die Seite **Test-E-Mail senden von** _<Instanzname>_ , um eine E-Mail mithilfe des angegebenen Datenbank-E-Mail-Profils zu senden. Nur Mitglieder der festen Serverrolle **sysadmin** können Test-E-Mails über diese Seite senden.  
   
  **Datenbank-E-Mail-Profil**  
@@ -443,7 +443,7 @@ ms.locfileid: "74095702"
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
-##  <a name="Template"></a> Vorlagen  
+##  <a name="using-templates"></a><a name="Template"></a> Vorlagen  
  **So erstellen Sie ein Datenbank-E-Mail-Konfigurationsskript**  
   
 1.  Wählen Sie im Menü **Ansicht** den **Vorlagen-Explorer**aus.  

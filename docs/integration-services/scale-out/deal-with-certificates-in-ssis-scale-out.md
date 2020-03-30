@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67896962"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Verwalten von Zertifikaten für SQL Server Integration Services Scale Out
@@ -29,7 +29,7 @@ SSIS Scale Out verwendet zwei Zertifikate, um die Kommunikation zwischen dem Sca
 
 In der Regel wird das Scale Out-Masterzertifikat während der Installation des Scale Out-Masters konfiguriert.
 
-Auf der Seite **Integration Services Scale Out-Konfiguration – Masterknoten** des SQL Server-Installationsassistenten können Sie entweder ein neues selbstsigniertes SSL-Zertifikat erstellen oder ein vorhandenes SSL-Zertifikat verwenden.
+Auf der Seite **Integration Services Scale Out-Konfiguration – Masterknoten** des SQL Server-Installations-Assistenten können Sie entweder ein neues selbstsigniertes SSL-Zertifikat erstellen oder ein vorhandenes SSL-Zertifikat verwenden.
 
 ![Masterkonfiguration](media/master-config.PNG)
 
@@ -81,7 +81,7 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 ```
 
 #### <a name="3-update-the-scale-out-master-service-configuration-file"></a>3. Aktualisieren Sie die Konfigurationsdatei des Scale Out-Masterdiensts
-Aktualisieren Sie die Konfigurationsdatei des Scale Out Masterdiensts (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) auf dem Masterknoten. Aktualisieren Sie **SSLCertThumbprint** auf den Fingerabdruck des neuen SSL-Zertifikats.
+Aktualisieren Sie die Konfigurationsdatei des Scale Out-Masterdiensts (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) auf dem Masterknoten. Aktualisieren Sie **SSLCertThumbprint** auf den Fingerabdruck des neuen SSL-Zertifikats.
 
 #### <a name="4-restart-the-scale-out-master-service"></a>4. Starten Sie den Scale Out-Masterdienst neu.
 
@@ -96,9 +96,9 @@ Aktualisieren Sie die Konfigurationsdatei des Scale Out-Workerdiensts (`\<drive\
 
 c.  Starten Sie den Scale Out-Workerdienst neu.
 
-## <a name="scale-out-worker-certificate"></a>Scale Out Worker-Zertifikat
+## <a name="scale-out-worker-certificate"></a>Scale Out-Workerzertifikat
 
-Das Scale Out Worker-Zertifikat wird automatisch bei der Installation des Scale Out-Workers installiert. 
+Das Scale Out-Workerzertifikat wird automatisch bei der Installation des Scale Out-Workers installiert. 
 
 ### <a name="change-the-scale-out-worker-certificate"></a>Ändern des Scale Out-Workerzertifikats
 

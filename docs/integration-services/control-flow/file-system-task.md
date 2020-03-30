@@ -16,10 +16,10 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294125"
 ---
 # <a name="file-system-task"></a>Task Dateisystem
@@ -36,7 +36,7 @@ ms.locfileid: "71294125"
 ## <a name="predefined-file-system-operations"></a>Vordefinierte Dateisystemvorgänge  
  Der Task Dateisystem enthält vordefinierte Vorgänge. In der folgenden Tabelle werden diese Vorgänge beschrieben.  
   
-|Vorgang|Beschreibung|  
+|Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Verzeichnis kopieren|Kopiert einen Ordner zwischen Speicherorten.|  
 |Datei kopieren|Kopiert eine Datei zwischen Speicherorten.|  
@@ -58,7 +58,7 @@ ms.locfileid: "71294125"
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>Verfügbare benutzerdefinierte Protokolleinträge für den Task 'Dateisystem'  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Task "Dateisystem" beschrieben. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**FileSystemOperation**|Berichtet den vom Task durchgeführten Vorgang. Der Protokolleintrag wird geschrieben, wenn der Dateisystemvorgang begonnen wird, und schließt Informationen über die Quelle und das Ziel ein.|  
   
@@ -99,7 +99,7 @@ ms.locfileid: "71294125"
  **IsDestinationPathVariable**  
  Geben Sie an, ob der Zielpfad in einer Variablen gespeichert ist. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Wahr**|Der Zielpfad ist in einer Variablen gespeichert. Wenn Sie diesen Wert auswählen, wird die dynamische Option **DestinationVariable**angezeigt.|  
 |**False**|Der Zielpfad wird in einem Dateiverbindungs-Manager angegeben. Bei Auswahl dieses Wertes wird die dynamische Option **DestinationConnection**angezeigt.|  
@@ -119,7 +119,7 @@ ms.locfileid: "71294125"
  **Vorgang**  
  Wählen Sie den auszuführenden Dateisystemvorgang aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Verzeichnis kopieren**|Kopieren Sie ein Verzeichnis. Bei Auswahl dieses Wertes werden die dynamischen Optionen für eine Quelle und ein Ziel angezeigt.|  
 |**Datei kopieren**|Kopieren Sie eine Datei. Bei Auswahl dieses Wertes werden die dynamischen Optionen für eine Quelle und ein Ziel angezeigt.|  
@@ -135,7 +135,7 @@ ms.locfileid: "71294125"
  **IsSourcePathVariable**  
  Geben Sie an, ob der Zielpfad in einer Variablen gespeichert ist. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value||  
+|Wert||  
 |-----------|-|  
 |**Wahr**|Der Zielpfad ist in einer Variablen gespeichert. Bei Auswahl dieses Wertes wird die dynamische Option **SourceVariable**angezeigt.|  
 |**False**|Der Zielpfad wird in einem Dateiverbindungs-Manager angegeben. Wenn Sie diesen Wert auswählen, wird die dynamische Option **DestinationVariable**angezeigt.|  

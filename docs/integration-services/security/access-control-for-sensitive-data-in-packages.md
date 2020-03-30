@@ -24,10 +24,10 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288184"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Zugriffssteuerung für vertrauliche Daten in Paketen
@@ -86,7 +86,7 @@ ms.locfileid: "79288184"
   
 3.  Nach dem Bereitstellen der Pakete in der Produktionsumgebung kann das Betriebsteam die bereitgestellten Pakete erneut verschlüsseln, indem ein neues, nur dem Betriebsteam bekanntes sicheres Kennwort zugewiesen wird. Die bereitgestellten Pakete können auch verschlüsselt werden, indem **EncryptSensitiveWithUserKey** oder **EncryptAllWithUserKey**ausgewählt wird und die lokalen Anmeldeinformationen des Kontos verwendet werden, mit dem die Pakete ausgeführt werden.  
 
-## <a name="set_protection"></a> Festlegen oder Ändern der Schutzebene von Paketen
+## <a name="set-or-change-the-protection-level-of-packages"></a><a name="set_protection"></a> Festlegen oder Ändern der Schutzebene von Paketen
   Wenn der Zugriff auf den Inhalt von Paketen und die darin enthaltenen vertraulichen Werte, z. B. Kennwörter, gesteuert werden soll, legen Sie den Wert der **ProtectionLevel** -Eigenschaft fest. Zum Erstellen des Projekts müssen die in einem Projekt enthaltenen Pakete die gleiche Schutzebene wie das Projekt aufweisen. Wenn Sie die **ProtectionLevel** -Eigenschafteneinstellung für das Projekt ändern, müssen Sie die Eigenschafteneinstellung für die Pakete manuell aktualisieren.  
   
  Eine Übersicht über die Sicherheitsfeatures in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] finden Sie unter [Sicherheitsübersicht &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
@@ -136,7 +136,7 @@ ms.locfileid: "79288184"
   
          Wenn Sie einen ähnlichen Befehl in einer Batchdatei verwenden, geben Sie den Dateiplatzhalter "%f" in der Batchdatei als "%%f" ein.  
 
-## <a name="protection_dialog"></a> Dialogfeld „Paket- und Projektschutzebene“
+## <a name="package-project-protection-level-dialog-box"></a><a name="protection_dialog"></a> Dialogfeld „Paket- und Projektschutzebene“
   Verwenden Sie das Dialogfeld **Paketschutzebene** , um die Schutzebene eines Pakets zu aktualisieren. Die Schutzebene bestimmt die Methode, das Kennwort oder den Benutzerschlüssel und den Bereich des Paketschutzes. Der Schutz kann alle Daten oder nur vertrauliche Daten einschließen.  
   
  Zum Verständnis der Anforderungen und Optionen für die Paketsicherheit finden Sie weitere Informationen unter [Sicherheitsübersicht &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
@@ -151,7 +151,7 @@ ms.locfileid: "79288184"
  **Kennwort erneut eingeben**  
  Geben Sie das Kennwort erneut ein.  
 
-## <a name="password_dialog"></a> Dialogfeld „Paketkennwort“
+## <a name="package-password-dialog-box"></a><a name="password_dialog"></a> Dialogfeld „Paketkennwort“
   Verwenden Sie das Dialogfeld **Paketkennwort** , um ein Kennwort für ein verschlüsseltes Paket bereitzustellen. Sie müssen ein Kennwort bereitstellen, wenn das Paket die Schutzebene **Sensible Daten mit einem Kennwort verschlüsseln**oder **Alle Daten mit einem Kennwort verschlüsseln** verwendet.  
   
 ### <a name="options"></a>Tastatur  

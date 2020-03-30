@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 436d65965fa0fa114f1891293972141f1373a696
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68037171"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Herstellen einer Verbindung mit dem SSIS-Katalog (SSISDB) in Azure
@@ -48,7 +48,7 @@ Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management
 
 2. **Stellen Sie eine Verbindung mit dem Server her**. Geben Sie im Dialogfeld **Mit Server verbinden** die folgenden Informationen ein:
 
-   | Einstellung       | Vorgeschlagener Wert | Beschreibung | 
+   | Einstellung       | Vorgeschlagener Wert | BESCHREIBUNG | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servertyp** | Datenbank-Engine | Dieser Wert ist erforderlich. |
    | **Servername** | Der vollqualifizierte Servername | Der Name muss das folgende Format aufweisen: **mysqldbserver.database.windows.net**. |

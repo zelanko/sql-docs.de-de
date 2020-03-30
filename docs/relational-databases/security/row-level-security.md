@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288974"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
@@ -43,7 +43,7 @@ Implementieren Sie RLS, indem Sie die [CREATE SECURITY POLICY](../../t-sql/state
 > [!NOTE]
 > Azure SQL Data Warehouse unterstützt nur Filterprädikate. Blockprädikate werden in Azure SQL Data Warehouse derzeit nicht unterstützt.
 
-## <a name="Description"></a> Beschreibung
+## <a name="description"></a><a name="Description"></a> Beschreibung
 
 RLS unterstützt zwei Arten von Sicherheitsprädikaten.  
   
@@ -89,7 +89,7 @@ RLS unterstützt zwei Arten von Sicherheitsprädikaten.
   
 - An den APIs für Massenvorgänge, einschließlich BULK INSERT, sind keine Änderungen erfolgt. Dies bedeutet, dass BLOCK-Prädikate des Typs AFTER INSERT für Masseneinfügevorgänge genauso wie für herkömmliche Einfügevorgänge gelten.  
   
-## <a name="UseCases"></a> Einsatzgebiete
+## <a name="use-cases"></a><a name="UseCases"></a> Einsatzgebiete
 
  Hier sind Entwurfsbeispiele dazu, wie RLS verwendet werden kann:  
   
@@ -103,7 +103,7 @@ RLS unterstützt zwei Arten von Sicherheitsprädikaten.
   
  Formaler ausgedrückt führt RLS eine prädikatbasierte Zugriffssteuerung ein. Sie ermöglicht eine flexible, zentrale und prädikatbasierte Auswertung. Das Prädikat kann auf Metadaten oder beliebigen anderen Kriterien basieren, die der Administrator für geeignet hält. Das Prädikat wird als Kriterium verwendet, um zu bestimmen, ob der Benutzer über die entsprechenden Zugriffsberechtigungen für die Daten basierend auf den Benutzerattributen verfügt. Mithilfe der prädikatbasierten Zugriffssteuerung kann eine bezeichnerbasierte Zugriffssteuerung implementiert werden.  
   
-## <a name="Permissions"></a> Berechtigungen
+## <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
 
  Für das Erstellen, Ändern oder Löschen von Sicherheitsrichtlinien ist die **ALTER ANY SECURITY POLICY** -Berechtigung erforderlich. Für das Erstellen oder Löschen einer Sicherheitsrichtlinie ist bei dem Schema die **ALTER** -Berechtigung erforderlich.  
   
@@ -119,7 +119,7 @@ RLS unterstützt zwei Arten von Sicherheitsprädikaten.
   
  Wenn eine Sicherheitsrichtlinie mit `SCHEMABINDING = OFF`erstellt wird, benötigen die Benutzer zum Abfragen der Zieltabelle die  **SELECT** - oder **EXECUTE** -Berechtigung für die Prädikatfunktion und alle weiteren Tabellen, Sichten oder Funktionen, die innerhalb der Prädikatfunktion verwendet werden. Wenn eine Sicherheitsrichtlinie mit `SCHEMABINDING = ON` erstellt wird (Standard), werden diese Berechtigungsprüfungen umgangen, wenn Benutzer die Zieltabelle abfragen.  
   
-## <a name="Best"></a> Bewährte Methoden  
+## <a name="best-practices"></a><a name="Best"></a> Bewährte Methoden  
   
 - Es wird dringend empfohlen, ein separates Schema für die RLS-Objekte zu erstellen: Prädikatfunktionen und Sicherheitsrichtlinien. So lassen sich die Berechtigungen, die für diese speziellen Objekte erforderlich sind, von den Zieltabellen trennen. Eine weitere Trennung für verschiedene Richtlinien und Prädikatfunktionen ist möglicherweise in mehrinstanzenfähigen Datenbanken erforderlich, aber nicht als Standardeinstellung für jeden Fall.
   
@@ -141,7 +141,7 @@ RLS unterstützt zwei Arten von Sicherheitsprädikaten.
   
 - Prädikatfunktionen dürfen verkettete Zeichenfolgen nicht mit **NULL** vergleichen, da dieses Verhalten von der Option [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) beeinflusst wird.  
 
-## <a name="SecNote"></a>Sicherheitshinweis: Seitenkanalangriffe
+## <a name="security-note-side-channel-attacks"></a><a name="SecNote"></a>Sicherheitshinweis: Seitenkanalangriffe
 
 ### <a name="malicious-security-policy-manager"></a>Schädliche Sicherheitsrichtlinien-Manager
 
@@ -151,7 +151,7 @@ Es ist wichtig zu beachten, dass ein schädlicher Sicherheitsrichtlinien-Manager
 
 Es ist möglich, die Offenlegung von Informationen durch die Verwendung von sorgfältig erstellten Abfragen zu verursachen. Beispiel: `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` würde einen schädlichen Benutzer wissen lassen, dass das Gehalt von John Doe 100.000 USD beträgt. Auch wenn ein Sicherheitsprädikat eingerichtet ist, um zu verhindern, dass ein schädlicher Benutzer die Gehälter anderer Personen direkt abfragen kann, kann der Benutzer bestimmen, wann die Abfrage eine Division-durch-Null-Ausnahme zurückgibt.  
 
-## <a name="Limitations"></a> Featureübergreifende Kompatibilität
+## <a name="cross-feature-compatibility"></a><a name="Limitations"></a> Featureübergreifende Kompatibilität
 
  Im Allgemeinen funktioniert Sicherheit auf Zeilenebene featureübergreifend wie erwartet. Es gibt jedoch einige Ausnahmen. In diesem Abschnitt finden Sie verschiedene Hinweise und Vorsichtsmaßnahmen bei Verwenden von Sicherheit auf Zeilenebene mit bestimmten anderen Features von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -177,9 +177,9 @@ Es ist möglich, die Offenlegung von Informationen durch die Verwendung von sorg
   
 - **Temporale Tabellen:** Temporale Tabellen sind mit RLS kompatibel. Sicherheitsprädikate für die aktuelle Tabelle werden jedoch nicht automatisch in die Verlaufstabelle repliziert. Um eine Sicherheitsrichtlinie auf die aktuellen und Verlaufstabellen anzuwenden, müssen Sie für jede Tabelle ein Sicherheitsprädikat einzeln hinzufügen.  
   
-## <a name="CodeExamples"></a> Beispiele  
+## <a name="examples"></a><a name="CodeExamples"></a> Beispiele  
   
-### <a name="Typical"></a> A. Szenario für Benutzer, die sich bei der Datenbank authentifizieren
+### <a name="a-scenario-for-users-who-authenticate-to-the-database"></a><a name="Typical"></a> A. Szenario für Benutzer, die sich bei der Datenbank authentifizieren
 
  In diesem Beispiel werden drei Benutzer und eine Tabelle erstellt, die sechs Zeilen enthält. Anschließend werden eine Inline-Tabellenwertfunktion und eine Sicherheitsrichtlinie für die Tabelle erstellt. Im Beispiel wird gezeigt, wie ausgewählte Anweisungen für verschiedene Benutzer gefiltert werden.  
   
@@ -301,7 +301,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="external"></a> B. Szenarien für die Verwendung von Sicherheit auf Zeilenebene in einer externen Azure SQL Data Warehouse-Tabelle
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. Szenarien für die Verwendung von Sicherheit auf Zeilenebene in einer externen Azure SQL Data Warehouse-Tabelle
 
 In diesem kurzen Beispiel werden drei Benutzer und eine externe Tabelle mit sechs Zeilen erstellt. Anschließend werden eine Inline-Tabellenwertfunktion und eine Sicherheitsrichtlinie für die externe Tabelle erstellt. Im Beispiel wird gezeigt, wie ausgewählte Anweisungen für verschiedene Benutzer gefiltert werden.
 
@@ -418,7 +418,7 @@ DROP LOGIN Sales2;
 DROP LOGIN Manager;
 ```
 
-### <a name="MidTier"></a> C. Szenario für Benutzer, die sich über eine Middle-Tier Application mit der Datenbank verbinden
+### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. Szenario für Benutzer, die sich über eine Middle-Tier Application mit der Datenbank verbinden
 
 > [!NOTE]
 > In diesem Beispiel wird die Funktionalität zum Blockieren von Prädikaten für Azure SQL Data Warehouse momentan nicht unterstützt, sodass das Einfügen von Zeilen für die falsche Benutzer-ID bei Azure SQL Data Warehouse nicht blockiert wird.

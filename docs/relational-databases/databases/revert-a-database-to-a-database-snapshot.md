@@ -14,10 +14,10 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909509"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme
@@ -34,9 +34,9 @@ ms.locfileid: "72909509"
   
 -   **Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme mit:**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Die Wiederherstellung wird unter folgenden Bedingungen nicht unterstützt:  
   
 -   Für die Datenbank sind mehrere Momentaufnahmen vorhanden. Für die Wiederherstellung darf nur eine Momentaufnahme für die Datenbank vorhanden sein, auf der Sie die Wiederherstellung durchführen möchten.  
@@ -67,7 +67,7 @@ ms.locfileid: "72909509"
   
 -   Durch das Wiederherstellen werden alle Volltextkataloge gelöscht.  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Stellen Sie sicher, dass die Quelldatenbank und die Datenbank-Momentaufnahme die folgenden Voraussetzungen erfüllen:  
   
 -   Vergewissern Sie sich, dass die Datenbank nicht beschädigt wurde.  
@@ -79,12 +79,12 @@ ms.locfileid: "72909509"
   
 -   Löschen Sie alle anderen Momentaufnahmen, die derzeit für die Datenbank vorhanden sind. Weitere Informationen finden Sie unter [Löschen einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)angefügt werden.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Alle Benutzer, die über RESTORE DATABASE-Berechtigungen für die Quelldatenbank verfügen, können diese in dem Zustand zum Zeitpunkt der Erstellung der Datenbank-Momentaufnahme wiederherstellen.  
   
-##  <a name="TsqlProcedure"></a> So stellen Sie eine Datenbank aus einer Datenbank-Momentaufnahme wieder her (Transact-SQL)  
+##  <a name="how-to-revert-a-database-to-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> So stellen Sie eine Datenbank aus einer Datenbank-Momentaufnahme wieder her (Transact-SQL)  
  **So stellen Sie eine Datenbank aus zu einer Datenbank-Momentaufnahme wieder her**  
   
 > [!NOTE]  
@@ -118,14 +118,14 @@ ms.locfileid: "72909509"
   
 6.  Sie haben die Option, die wiederhergestellte Datenbank zu sichern; dies empfiehlt sich besonders, wenn das vollständige (oder das massenprotokollierte) Wiederherstellungsmodell für die Datenbank verwendet wird. Weitere Informationen zum Sichern einer Datenbank finden Sie unter [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
 
-###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Dieser Abschnitt enthält die folgenden Beispiele für das Wiederherstellen einer Datenbank aus einer Datenbank-Momentaufnahme:  
   
 -   A. [Wiederherstellen einer Momentaufnahme für die AdventureWorks-Datenbank](#Reverting_AW)  
   
 -   B. [Wiederherstellen einer Momentaufnahme für die Sales-Datenbank](#Reverting_Sales)  
   
-####  <a name="Reverting_AW"></a> A. Wiederherstellen einer Momentaufnahme für die AdventureWorks-Datenbank  
+####  <a name="a-reverting-a-snapshot-on-the-adventureworks-database"></a><a name="Reverting_AW"></a> A. Wiederherstellen einer Momentaufnahme für die AdventureWorks-Datenbank  
  In diesem Beispiel wird davon ausgegangen, dass derzeit in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank nur eine Momentaufnahme vorhanden ist. Das Beispiel, mit dem die Momentaufnahme erstellt wird, zu dem die Datenbank hier wiederhergestellt wird, finden Sie unter [Erstellen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
@@ -136,7 +136,7 @@ DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
 GO  
 ```  
   
-####  <a name="Reverting_Sales"></a> B. Wiederherstellen einer Momentaufnahme für die Sales-Datenbank  
+####  <a name="b-reverting-a-snapshot-on-the-sales-database"></a><a name="Reverting_Sales"></a> B. Wiederherstellen einer Momentaufnahme für die Sales-Datenbank  
  In diesem Beispiel wird davon ausgegangen, dass derzeit zwei Momentaufnahmen für die **Sales** -Datenbank vorhanden sind: **sales_snapshot0600** und **sales_snapshot1200**. Durch dieses Beispiel wird die ältere Momentaufnahme gelöscht und die Datenbank mithilfe der aktuelleren Momentaufnahme wiederhergestellt.  
   
  Den Code zum Erstellen der Beispieldatenbank und der Momentaufnahmen, für die dieses Beispiel gilt, finden Sie wie folgt:  
@@ -158,7 +158,7 @@ RESTORE DATABASE Sales FROM DATABASE_SNAPSHOT = 'sales_snapshot1200';
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

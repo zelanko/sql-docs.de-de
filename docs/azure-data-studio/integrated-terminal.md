@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959539"
 ---
 # <a name="integrated-terminal"></a>Integriertes Terminal
@@ -87,13 +87,13 @@ Die Schriftart und die Zeilenhöhe für das integrierte Terminal können Sie mit
 * `terminal.integrated.fontSize`
 * `terminal.integrated.lineHeight`
 
-## <a id="key-bindings"></a>Tastenzuordnungen für das Terminal
+## <a name="terminal-key-bindings"></a><a id="key-bindings"></a>Tastenzuordnungen für das Terminal
 
 Der Befehl **Ansicht: Integriertes Terminal umschalten** ist der Tastenkombination **STRG+`** zugeordnet, sodass Sie das Panel des integrierten Terminals schnell ein- und ausblenden können.
 
 Im Folgenden finden Sie die Tastenkombinationen zum schnellen Navigieren im integrierten Terminal:
 
-|Key|Get-Help|  
+|Schlüssel|Get-Help|  
 |---|---|  
 |**STRG+\`**|Integriertes Terminal anzeigen|  
 |**STRG+UMSCHALT+\`**|Neues Terminal erstellen|  

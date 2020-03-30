@@ -17,10 +17,10 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258879"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "75258879"
   Zum Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung kann ein Client entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Wenn sie für eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank konfiguriert sind, unterstützen beide Datenzugriffsanbieter die Datenbankspiegelung. Informationen zu Programmierüberlegungen in Bezug auf das Verwenden einer gespiegelten Datenbank finden Sie unter [Verwenden der Datenbankspiegelung](../../relational-databases/native-client/features/using-database-mirroring.md). Zusätzlich muss die aktuelle Prinzipalserverinstanz verfügbar sein, und der Anmeldename des Clients muss auf der Serverinstanz erstellt worden sein. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)aus. Sofern eine Zeugenserverinstanz vorhanden ist, werden Clientverbindungen mit einer Datenbank-Spiegelungssitzung ohne Beteiligung dieser Instanz hergestellt.  
   
   
-##  <a name="InitialConnection"></a> Herstellen der Anfangsverbindung mit einer Datenbank-Spiegelungssitzung  
+##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> Herstellen der Anfangsverbindung mit einer Datenbank-Spiegelungssitzung  
  Für die Anfangsverbindung mit einer gespiegelten Datenbank muss ein Client eine Verbindungszeichenfolge bereitstellen, die zumindest den Namen einer Serverinstanz nennt. Dieser erforderliche Servername sollte die aktuelle Prinzipalserverinstanz identifizieren und wird auch als *erster Partnername*bezeichnet.  
   
  Optional kann in der Verbindungszeichenfolge auch der Name einer anderen Serverinstanz bereitgestellt werden, um die aktuelle Spiegelserverinstanz zu identifizieren, die dann verwendet wird, wenn der erste Partner während des ersten Verbindungsversuchs nicht verfügbar ist. Der zweite Name wird auch als *Failoverpartnername*bezeichnet.  
@@ -155,7 +155,7 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a> Algorithmus für zu wiederholende Verbindungsversuche (für TCP/IP-Verbindungen)  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> Algorithmus für zu wiederholende Verbindungsversuche (für TCP/IP-Verbindungen)  
  Wenn beide Partnernamen im Cache vorhanden sind, hält der Datenzugriffsanbieter für eine TCP/IP-Verbindung an einem Verbindungswiederholungsalgorithmus fest. Dies gilt sowohl beim Herstellen der ersten Verbindung mit der Sitzung als auch beim erneuten Herstellen der Verbindung, nachdem eine bereits hergestellte Verbindung verloren ging. Sobald eine Verbindung geöffnet wurde, wird zum Ausführen der vor der Anmeldung und während der Anmeldung erforderlichen Schritte zusätzliche Zeit benötigt.  
   
 > [!NOTE]  
@@ -204,7 +204,7 @@ Server=123.34.45.56,4724;
   
  ![Wiederholungsverzögerungsalgorithmus](../../database-engine/database-mirroring/media/dbm-retry-delay-algorithm.gif "Wiederholungsverzögerungsalgorithmus")  
   
-##  <a name="Reconnecting"></a> Erneutes Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> Erneutes Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung  
  Wenn eine bereits bestehende Verbindung mit einer Datenbank-Spiegelungssitzung aus irgendeinem Grund ausfällt, z. B. wegen eines Datenbank-Spiegelungsfailovers, und die Anwendung versucht, erneut eine Verbindung mit dem ersten Server herzustellen, kann der Datenzugriffsanbieter versuchen, die Verbindung mit dem im Clientcache enthaltenen Namen des Failoverpartners herzustellen. Die Verbindung wird jedoch nicht automatisch wiederhergestellt. Die Anwendung muss über den Fehler informiert werden. Anschließend muss die Anwendung die fehlgeschlagene Verbindung schließen und eine neue Verbindung mit den gleichen Attributen für die Verbindungszeichenfolge öffnen. An diesem Punkt leitet der Datenzugriffsanbieter die Verbindung an den Failoverpartner um. Wenn die durch diesen Namen identifizierte Serverinstanz aktuell als Prinzipalserver fungiert, ist der Verbindungsversuch im Allgemeinen erfolgreich. Wenn unklar ist, ob für eine Transaktion ein Commit oder ein Rollback ausgeführt wurde, muss die Anwendung wie bei einer erneuten Verbindung zu einer eigenständigen Serverinstanz den Status der Transaktion überprüfen.  
   
  Das erneute Herstellen einer Verbindung ähnelt der ursprünglichen Verbindung, für die in der Verbindungszeichenfolge der Name eines Failoverpartners angegeben wurde. Wenn der erste Verbindungsversuch nicht gelingt, werden abwechselnd mit dem Namen des ersten Partners und mit dem Namen des Failoverpartners weitere Verbindungsversuche unternommen, bis der Client entweder eine Verbindung mit dem Prinzipalserver herstellt oder beim Datenzugriffsanbieter ein Timeout auftritt.  
@@ -225,7 +225,7 @@ Server=123.34.45.56,4724;
   
 ##  <a name="Benefits"></a>   
   
-##  <a name="StalePartnerName"></a> Auswirkungen eines veralteten Failoverpartnernamens  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> Auswirkungen eines veralteten Failoverpartnernamens  
  Der Failoverpartner kann vom Datenbankadministrator jederzeit geändert werden. Deshalb kann es vorkommen, dass ein vom Client bereitgestellter Failoverpartnername nicht mehr auf dem neuesten Stand ist oder als *veraltet*betrachtet werden kann. Angenommen, ein Failoverpartner namens Partner_B wird durch eine andere Serverinstanz, Partner_C, ersetzt. Stellt nun ein Client Partner_B als Failoverpartnernamen bereit, gilt dieser Name als veraltet. Bei Bereitstellung eines veralteten Failoverpartnernamens durch den Client verhält sich der Datenzugriffsanbieter genau so, als wäre durch den Client überhaupt kein Failoverpartnername bereitgestellt worden.  
   
  Im folgenden Beispiel verwendet ein Client eine Verbindungszeichenfolge für vier aufeinander folgende Verbindungsversuche. Dabei wird in der Verbindungszeichenfolge als erster Partnername Partner_A und als Failoverpartnername Partner_B angegeben:  

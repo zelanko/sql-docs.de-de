@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0445fb83a1ee4c4e2a991df8e698f24988454d19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727676"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Python-Spracherweiterung in SQL Server
@@ -35,7 +35,7 @@ Die Anaconda-Distribution, die mit einer bestimmten Datenbank-Engine verknüpft 
 
 Python-Pakete, die von Microsoft für parallele und verteilte Workloads hinzugefügt wurden, umfassen die folgenden Bibliotheken.
 
-| Bibliothek | Beschreibung |
+| Bibliothek | BESCHREIBUNG |
 |---------|-------------|
 | [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Unterstützt Datenquellenobjekte sowie die Exploration, Manipulation, Transformation und Visualisierung von Daten. Unterstützt die Erstellung von Remotecomputekontexten sowie verschiedene skalierbare Machine Learning-Modelle wie **rxLinMod**. Weitere Informationen finden Sie unter [revoscalepy (Python-Modul in SQL Server)](../python/ref-py-revoscalepy.md).  |
 | [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Enthält Algorithmen für das maschinelle Lernen, die hinsichtlich Geschwindigkeit und Genauigkeit optimiert wurden, sowie Inline-Transformationen für die Arbeit mit Text und Bildern. Weitere Informationen finden Sie unter [microsoftml (Python-Modul in SQL Server)](../python/ref-py-microsoftml.md). |

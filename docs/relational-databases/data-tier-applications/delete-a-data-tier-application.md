@@ -19,10 +19,10 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07a4d09e55999c9e6f85e059f576c1460baf750a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71823561"
 ---
 # <a name="delete-a-data-tier-application"></a>Löschen einer Datenebenenanwendung
@@ -42,7 +42,7 @@ ms.locfileid: "71823561"
 |Datenbank trennen|Die zugeordnete Datenbank wird getrennt. Die Instanz der Datenbank-Engine kann nicht auf die Datenbank verweisen, die Daten und Protokolldateien bleiben jedoch intakt.|  
 |Datenbank löschen|Die zugeordnete Datenbank wird gelöscht. Die Daten und Protokolldateien werden gelöscht.|  
   
-###  <a name="LimitationsRestrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Einschränkungen  
  Nach dem Löschen einer DAC gibt es keinen automatischen Mechanismus zum Wiederherstellen der Metadaten der DAC-Definition oder -Datenbank. Es hängt von der Löschoption ab, wie Sie die DAC-Instanz manuell neu erstellen können.  
   
 |Option|Wiederherstellen der DAC-Instanz|  
@@ -54,10 +54,10 @@ ms.locfileid: "71823561"
 > [!WARNING]  
 >  Wenn Sie eine DAC-Instanz wiederherstellen, indem Sie eine DAC von einer wiederhergestellten oder erneut angefügten Datenbank registrieren, werden einige Teile der ursprünglichen DAC, z. B. die Richtlinie zur Serverauswahl, nicht neu erstellt.  
   
-###  <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Eine DAC kann nur von Mitgliedern der festen Serverrollen **sysadmin** bzw. **serveradmin** oder vom Datenbankbesitzer gelöscht werden. Außerdem kann das integrierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministratorkonto mit der Bezeichnung **sa** zum Starten des Assistenten verwendet werden.  
   
-##  <a name="UsingDeleteDACWizard"></a> Verwenden des Assistenten zum Löschen von Datenebenenanwendungen  
+##  <a name="using-the-delete-data-tier-application-wizard"></a><a name="UsingDeleteDACWizard"></a> Verwenden des Assistenten zum Löschen von Datenebenenanwendungen  
  **So löschen Sie eine DAC mithilfe eines Assistenten**  
   
 1.  Erweitern Sie im **Objekt-Explorer**den Knoten für die Instanz, die die zu löschende DAC enthält.  
@@ -78,7 +78,7 @@ ms.locfileid: "71823561"
   
     4.  [Datenebenenanwendung löschen](#Delete_datatier_application)  
   
-##  <a name="Introduction"></a> Seite "Einführung"  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite werden die Schritte zum Löschen einer Datenebenenanwendung beschrieben.  
   
  **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Seite in Zukunft nicht mehr angezeigt wird.  
@@ -89,7 +89,7 @@ ms.locfileid: "71823561"
   
  [Verwenden des Assistenten zum Löschen von Datenebenenanwendungen](#UsingDeleteDACWizard)  
   
-##  <a name="Choose_method"></a> Seite "Methode auswählen"  
+##  <a name="choose-method-page"></a><a name="Choose_method"></a> Seite "Methode auswählen"  
  Auf dieser Seite können Sie die Option zum Behandeln der der zu löschenden DAC zugeordneten Datenbank angeben.  
   
  **Registrierung löschen** – Entfernt die Metadaten, die die Datenebenenanwendung definieren, während die zugeordnete Datenbank intakt bleibt.  
@@ -110,7 +110,7 @@ ms.locfileid: "71823561"
   
  [Verwenden des Assistenten zum Löschen von Datenebenenanwendungen](#UsingDeleteDACWizard)  
   
-##  <a name="Summary"></a> Seite "Zusammenfassung"  
+##  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Verwenden Sie diese Seite, um die Aktionen zu überprüfen, die der Assistent beim Löschen der DAC-Instanz ausführt.  
   
  **Überprüfen Sie Ihre Auswahl** – Überprüfen Sie die DAC, Datenbank und Löschmethode, die im Feld angezeigt werden. Wenn die Informationen richtig sind, wählen Sie entweder **Weiter** oder **Fertig stellen** aus, um die DAC zu löschen. Falls die DAC und die Datenbankinformationen nicht richtig sind, klicken Sie auf **Abbrechen** und wählen dann die richtige DAC aus. Wenn die Löschmethode nicht richtig ist, wählen Sie **Zurück** aus, um zur Seite **Methode auswählen** zurückzukehren, und wählen eine andere Methode aus.  
@@ -123,7 +123,7 @@ ms.locfileid: "71823561"
   
  [Verwenden des Assistenten zum Löschen von Datenebenenanwendungen](#UsingDeleteDACWizard)  
   
-##  <a name="Delete_datatier_application"></a> Seite "Datenebenenanwendung löschen"  
+##  <a name="delete-data-tier-application-page"></a><a name="Delete_datatier_application"></a> Seite "Datenebenenanwendung löschen"  
  Auf dieser Seite wird angegeben, ob der Löschvorgang erfolgreich war oder fehlgeschlagen ist.  
   
  **Die DAC wird gelöscht** – Gibt an, ob die Aktionen zum Löschen der DAC-Instanz erfolgreich waren oder fehlgeschlagen sind. Überprüfen Sie die Informationen, um zu bestimmen, ob die einzelnen Aktionen erfolgreich waren oder fehlgeschlagen sind. Für alle Aktionen, die fehlerhaft waren, ist in der Spalte **Ergebnis** ein Link enthalten. Klicken Sie auf den Link, um einen Bericht des für diese Aktion aufgetretenen Fehlers anzuzeigen.  
@@ -134,7 +134,7 @@ ms.locfileid: "71823561"
   
  [Verwenden des Assistenten zum Löschen von Datenebenenanwendungen](#UsingDeleteDACWizard)  
   
-##  <a name="DeleteDACPowerShell"></a> PowerShell  
+##  <a name="using-powershell"></a><a name="DeleteDACPowerShell"></a> PowerShell  
 
 1. Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz fest, die die zu löschende DAC enthält.  
   

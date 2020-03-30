@@ -47,10 +47,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287924"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
@@ -331,7 +331,7 @@ DELAYED_DURABILITY = { OFF | ON }
   
  Weitere Informationen finden Sie im Thema [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md).  
 
-## <a name="Simple"></a> Einfache Beispiele
+## <a name="simple-examples"></a><a name="Simple"></a> Einfache Beispiele
 
 Hier finden Sie zwei Beispiele, die Ihnen den Einstieg erleichtern:  
 `SELECT DB_NAME() AS ThisDB;` gibt den Namen der aktuellen Datenbank zurück.  
@@ -464,7 +464,7 @@ GO
   
  Bei gespeicherten CLR-Prozeduren müssen Sie der Besitzer der Assembly sein, auf die in der EXTERNAL NAME-Klausel verwiesen wird, oder über die **REFERENCES**-Berechtigung für diese Assembly verfügen.  
   
-##  <a name="mot"></a> CREATE PROCEDURE und speicheroptimierte Tabellen  
+##  <a name="create-procedure-and-memory-optimized-tables"></a><a name="mot"></a> CREATE PROCEDURE und speicheroptimierte Tabellen  
  Auf speicheroptimierte Tabellen kann am effizientesten über traditionell und nativ kompilierte gespeicherte Prozeduren zugegriffen werden. Native Prozeduren sind in den meisten Fällen die effizientere Methode.
 Weitere Informationen finden Sie unter [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
@@ -487,7 +487,7 @@ GO
   
  Eine Besprechung der Programmierbarkeit von nativ kompilierten gespeicherten Prozeduren, dem unterstützten Abfragenoberflächenbereich und der Operatoren finden Sie unter [Unterstützte Features für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
-## <a name="Examples"></a> Beispiele  
+## <a name="examples"></a><a name="Examples"></a> Beispiele  
   
 |Category|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
@@ -499,7 +499,7 @@ GO
 |[Erzwingen der erneuten Kompilierung der Prozedur](#Recompile)|WITH RECOMPILE|  
 |[Festlegen des Sicherheitskontexts](#Security)|EXECUTE AS|  
   
-###  <a name="BasicSyntax"></a> Grundlegende Syntax  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Grundlegende Syntax  
  Anhand von Beispielen in diesem Abschnitt wird die grundlegende Funktion der CREATE PROCEDURE-Anweisung mithilfe der mindestens erforderlichen Syntax veranschaulicht.  
   
 #### <a name="a-creating-a-simple-transact-sql-procedure"></a>A. Erstellen einer einfachen Transact-SQL-Prozedur  
@@ -558,7 +558,7 @@ AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO  
 ```  
   
-###  <a name="Parameters"></a> Übergeben von Parametern  
+###  <a name="passing-parameters"></a><a name="Parameters"></a> Übergeben von Parametern  
  Die Beispiele in diesem Abschnitt veranschaulichen, wie die Eingabe- und Ausgabeparameter zum Übergeben von Werten von und an eine gespeicherte Prozedur verwendet werden.  
   
 #### <a name="d-creating-a-procedure-with-input-parameters"></a>D: Erstellen einer Prozedur mit Eingabeparametern  
@@ -766,7 +766,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-###  <a name="Modify"></a> Ändern von Daten mithilfe einer gespeicherten Prozedur  
+###  <a name="modifying-data-by-using-a-stored-procedure"></a><a name="Modify"></a> Ändern von Daten mithilfe einer gespeicherten Prozedur  
  In den Beispielen in diesem Abschnitt wird gezeigt, wie Daten in Tabellen oder Sichten eingefügt oder geändert werden, indem eine DML-Anweisung (Data Manipulation Language, Datenbearbeitungssprache) in die Definition der Prozedur eingeschlossen wird.  
   
 #### <a name="i-using-update-in-a-stored-procedure"></a>I. Verwenden von UPDATE in einer gespeicherten Prozedur  
@@ -790,7 +790,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-###  <a name="Error"></a> Fehlerbehandlung  
+###  <a name="error-handling"></a><a name="Error"></a> Fehlerbehandlung  
  Die Beispiele in diesem Abschnitt veranschaulichen Methoden zur Behandlung von Fehlern, die bei der Ausführung der gespeicherten Prozedur auftreten können.  
   
 #### <a name="j-using-trycatch"></a>J. Verwenden von TRY...CATCH  
@@ -865,7 +865,7 @@ EXEC Production.uspDeleteWorkOrder 15;
 DROP PROCEDURE Production.uspDeleteWorkOrder;  
 ```  
   
-###  <a name="Encrypt"></a> Verbergen der Prozedurdefinition  
+###  <a name="obfuscating-the-procedure-definition"></a><a name="Encrypt"></a> Verbergen der Prozedurdefinition  
  In den Beispielen dieses Abschnitts wird gezeigt, wie die Definition der gespeicherten Prozedur verborgen wird.  
   
 #### <a name="k-using-the-with-encryption-option"></a>K. Verwenden der WITH ENCRYPTION-Option  
@@ -911,7 +911,7 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  NULL  
  ```  
   
-###  <a name="Recompile"></a> Erzwingen der erneuten Kompilierung der Prozedur  
+###  <a name="forcing-the-procedure-to-recompile"></a><a name="Recompile"></a> Erzwingen der erneuten Kompilierung der Prozedur  
  In den Beispielen dieses Abschnitts wird die WITH RECOMPILE-Klausel verwendet, um das erneute Kompilieren der Prozedur bei jeder Ausführung zu erzwingen.  
   
 #### <a name="l-using-the-with-recompile-option"></a>L. Verwenden der WITH RECOMPILE-Option  
@@ -934,7 +934,7 @@ AS
     WHERE v.Name LIKE @Name;  
 ```  
   
-###  <a name="Security"></a> Festlegen des Sicherheitskontexts  
+###  <a name="setting-the-security-context"></a><a name="Security"></a> Festlegen des Sicherheitskontexts  
  Die Beispiele dieses Abschnitts verwenden die EXECUTE AS-Klausel zum Festlegen des Sicherheitskontexts, in dem die gespeicherte Prozedur ausgeführt wird.  
   
 #### <a name="m-using-the-execute-as-clause"></a>M. Verwenden der EXECUTE AS-Klausel  

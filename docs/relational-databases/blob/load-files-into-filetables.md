@@ -15,17 +15,17 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: de6e6a237c0aa80e2793f33373ec664dfe93f953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908707"
 ---
 # <a name="load-files-into-filetables"></a>Laden von Dateien in FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Beschreibt, wie Dateien in FileTables geladen und migriert werden.  
   
-##  <a name="BasicsLoadNew"></a> Laden oder Migrieren von Dateien in FileTables  
+##  <a name="loading-or-migrating-files-into-a-filetable"></a><a name="BasicsLoadNew"></a> Laden oder Migrieren von Dateien in FileTables  
  Die Methode, die Sie zum Laden oder Migrieren von Dateien in eine FileTable auswählen, ist davon abhängig, wo die Dateien aktuell gespeichert sind.  
   
 |Aktueller Speicherort von Dateien|Optionen für die Migration|  
@@ -33,7 +33,7 @@ ms.locfileid: "72908707"
 |Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat keine Informationen über die Dateien.|Da eine FileTable im Windows-Dateisystem als Ordner angezeigt wird, können Sie Dateien mithilfe einer der verfügbaren Methoden zum Verschieben oder Kopieren von Dateien ganz einfach in eine neue FileTable laden. Zu diesen Methoden gehören Windows-Explorer, Befehlszeilenoptionen, einschließlich „xcopy“ und „robocopy“, sowie benutzerdefinierte Skripts oder Anwendungen.<br /><br /> Sie können einen vorhandenen Ordner nicht in eine FileTable konvertieren.|  
 |Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine Tabelle von Metadaten, die Zeiger auf die Dateien enthält.|Der erste Schritt besteht darin, die Dateien mithilfe einer der oben erwähnten Methoden zu verschieben oder zu kopieren.<br /><br /> Der zweite Schritt besteht darin, die vorhandene Tabelle von Metadaten so zu aktualisieren, dass diese auf den neuen Speicherort der Dateien zeigt.<br /><br /> Weitere Informationen finden Sie unter [Example: Migrieren von Dateien aus dem Dateisystem in eine Dateitabelle](#HowToMigrateFiles) in diesem Artikel.|  
   
-###  <a name="HowToLoadNew"></a> Vorgehensweise: Laden von Dateien in eine Dateitabelle  
+###  <a name="how-to-load-files-into-a-filetable"></a><a name="HowToLoadNew"></a> Vorgehensweise: Laden von Dateien in eine Dateitabelle  
 Sie können die folgenden Methoden verwenden, um Dateien in eine FileTable zu laden:  
   
 -   Drag & Drop von Dateien aus den Quellordnern in den neuen FileTable-Ordner in Windows-Explorer.  
@@ -42,7 +42,7 @@ Sie können die folgenden Methoden verwenden, um Dateien in eine FileTable zu la
   
 -   Schreiben Sie eine benutzerdefinierte Anwendung in C# oder Visual Basic.NET, um die Dateien zu verschieben oder zu kopieren. Rufen Sie Methoden aus dem Namespace **System.IO** auf.  
   
-###  <a name="HowToMigrateFiles"></a> Beispiel: Migrieren von Dateien aus dem Dateisystem in eine Dateitabelle  
+###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a> Beispiel: Migrieren von Dateien aus dem Dateisystem in eine Dateitabelle  
  In diesem Szenario werden die Dateien im Dateisystem gespeichert, und Sie verfügen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über eine Tabelle mit Metadaten, die Zeiger auf die Dateien enthält. Sie möchten die Dateien in eine FileTable verschieben und den ursprünglichen UNC-Pfad für jede Datei in den Metadaten durch den FileTable-UNC-Pfad ersetzen. Die Funktion [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) hilft Ihnen, dieses Ziel zu erreichen.  
   
  Nehmen Sie für dieses Beispiel an, dass eine Datenbanktabelle, **PhotoMetadata**, vorhanden ist, die Daten zu Fotos enthält. Diese Tabelle enthält eine Spalte **UNCPath** des Typs **varchar**(512), der den tatsächlichen UNC-Pfad zu einer JPG-Datei enthält.  
@@ -77,7 +77,7 @@ UPDATE PhotoMetadata
     SET pathlocator = GetPathLocator(UNCPath);  
 ```  
   
-##  <a name="BasicsBulkLoad"></a> Massenladen von Dateien in eine FileTable  
+##  <a name="bulk-loading-files-into-a-filetable"></a><a name="BasicsBulkLoad"></a> Massenladen von Dateien in eine FileTable  
  Eine FileTable verhält sich bei Massenvorgängen wie eine normale Tabelle, jedoch mit folgenden Merkmalen:  
   
  Eine FileTable weist systemdefinierte Einschränkungen auf, die sicherstellen, dass die Integrität des Datei- und Verzeichnisnamespace erhalten bleibt. Diese Einschränkungen müssen für die Daten überprüft werden, die mit einem Massenvorgang in die FileTable geladen wurden. Da einige Masseneinfügungsvorgänge das Ignorieren der Tabelleneinschränkungen zulassen, werden folgende Anforderungen erzwungen.  
@@ -98,7 +98,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) mit IGNORE_CONSTRAINTS-Klausel.  
   
-###  <a name="HowToBulkLoad"></a> Vorgehensweise: Massenladen von Dateien in eine Dateitabelle  
+###  <a name="how-to-bulk-load-files-into-a-filetable"></a><a name="HowToBulkLoad"></a> Vorgehensweise: Massenladen von Dateien in eine Dateitabelle  
  Sie können verschiedene Methoden zum Massenladen von Dateien in eine FileTable verwenden:  
   
 -   **bcp**  
@@ -121,7 +121,7 @@ UPDATE PhotoMetadata
   
  Informationen zum Deaktivieren der FileTable-Einschränkungen finden Sie unter [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="disabling"></a> Vorgehensweise: Deaktivieren von Dateitabellen-Einschränkungen zum Massenladen  
+###  <a name="how-to-disable-filetable-constraints-for-bulk-loading"></a><a name="disabling"></a> Vorgehensweise: Deaktivieren von Dateitabellen-Einschränkungen zum Massenladen  
  Um Dateien in einem Massenvorgang in eine FileTable zu laden und dabei den Aufwand zu vermeiden, die systemdefinierten Einschränkungen zu erzwingen, können Sie die Einschränkungen vorübergehend deaktivieren. Weitere Informationen finden Sie unter [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

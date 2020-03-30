@@ -17,10 +17,10 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75253590"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "75253590"
   
  Verwenden Sie zum Kopieren eines Zertifikats zu einem anderen System eine sichere Kopiermethode. Seien Sie äußerst vorsichtig, um Ihre Zertifikate zu schützen.  
   
-##  <a name="ExampleH2"></a> Beispiel  
+##  <a name="example"></a><a name="ExampleH2"></a> Beispiel  
  Das folgende Beispiel zeigt, welche Aktionen für einen der Partner ausgeführt werden müssen, der auf HOST_A gespeichert ist. In diesem Beispiel sind die beiden Partner die Standardserverinstanzen auf drei Computersystemen. Die beiden Serverinstanzen werden in nicht vertrauenswürdigen Windows-Domänen ausgeführt, daher ist zertifikatbasierte Authentifizierung erforderlich.  
   
  HOST_A übernimmt die anfängliche Prinzipalrolle, während die Spiegelrolle von HOST_B übernommen wird.  
@@ -62,7 +62,7 @@ ms.locfileid: "75253590"
   
 4.  [Konfigurieren der Spiegelungspartner](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> Konfigurieren ausgehender Verbindungen  
+###  <a name="configuring-outbound-connections"></a><a name="ConfiguringOutboundConnections"></a> Konfigurieren ausgehender Verbindungen  
  **So konfigurieren Sie Host_A für ausgehende Verbindungen**  
   
 1.  Erstellen Sie in der master-Datenbank den Datenbankhauptschlüssel, sofern erforderlich.  
@@ -156,7 +156,7 @@ ms.locfileid: "75253590"
   
  [&#91;Anfang des Beispiels&#93;](#ExampleH2)  
   
-###  <a name="ConfigureInboundConnections"></a> Konfigurieren eingehender Verbindungen  
+###  <a name="configuring-inbound-connections"></a><a name="ConfigureInboundConnections"></a> Konfigurieren eingehender Verbindungen  
  **So konfigurieren Sie Host_A für eingehende Verbindungen**  
   
 1.  Erstellen Sie auf HOST_A einen Anmeldenamen für HOST_B.  
@@ -233,7 +233,7 @@ ms.locfileid: "75253590"
 ### <a name="creating-the-mirror-database"></a>Erstellen der Spiegeldatenbank  
  Weitere Informationen zum Erstellen einer Spiegeldatenbank finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
   
-###  <a name="ConfigureMirroringPartners"></a> Konfigurieren der Spiegelungspartner  
+###  <a name="configuring-the-mirroring-partners"></a><a name="ConfigureMirroringPartners"></a> Konfigurieren der Spiegelungspartner  
   
 1.  Legen Sie für die Spiegelserverinstanz auf HOST_B die Serverinstanz auf HOST_A als Partner fest (hierdurch wird sie zur ersten Prinzipalserverinstanz): Ersetzen Sie `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`durch eine gültige Netzwerkadresse. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
@@ -267,7 +267,7 @@ ms.locfileid: "75253590"
   
  [&#91;Anfang des Beispiels&#93;](#ExampleH2)  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

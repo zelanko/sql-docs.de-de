@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251071"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Gewusst wie: Durchführen eines Upgrades für eine benutzerdefinierten Visual Studio 2010-Testbedingung von einem älteren Release auf SQL Server Data Tools
@@ -27,7 +27,7 @@ Zur Verwendung einer Testbedingung, die in einer Version vor SQL Server Data Too
   
 -   [Installieren der Testbedingung mit durchgeführtem Upgrade](#ApplytheNewRegistrationProcess)  
   
-## <a name="UpdateReferences"></a>Aktualisieren von Verweisen  
+## <a name="update-references"></a><a name="UpdateReferences"></a>Aktualisieren von Verweisen  
 So aktualisieren Sie die Projektverweise  
   
 1.  Nur für Visual Basic: Klicken Sie im **Projektmappen-Explorer** auf **Alle Dateien anzeigen**.  
@@ -81,7 +81,7 @@ So aktualisieren Sie die Projektverweise
   
 Die Testbedingung verwendet nun Assemblyverweise für SQL Server-Komponententests.  
   
-## <a name="UpdateClassAttributesandTypeReference"></a>Aktualisieren von Klassenattributen und Typverweisen  
+## <a name="update-class-attributes-and-type-references"></a><a name="UpdateClassAttributesandTypeReference"></a>Aktualisieren von Klassenattributen und Typverweisen  
 Ersetzen Sie die älteren Klassenattribute für die Komponententests durch ein neues Attribut. Die Erweiterbarkeit von SQL Server-Komponententests basiert jetzt auf MEF (Managed Extensibility Framework). Außerdem müssen einige Typverweise aktualisiert werden.  
   
 ### <a name="update-class-attributes"></a>Aktualisieren von Klassenattributen  
@@ -128,7 +128,7 @@ Einige Typnamen wurden im Komponententestframework von SQL Server geändert. Um 
 |-----------------|-----------------|  
 |`ExecutionResult`|`SqlExecutionResult`|  
   
-## <a name="ApplytheNewRegistrationProcess"></a>Installieren der Testbedingung mit durchgeführtem Upgrade  
+## <a name="install-the-upgraded-test-condition"></a><a name="ApplytheNewRegistrationProcess"></a>Installieren der Testbedingung mit durchgeführtem Upgrade  
 In Datenbankkomponententests früherer Versionen war es u. U. erforderlich, die Testbedingung im globalen Assemblycache zu installieren oder eine XML-Datei mit den Assemblyinformationen zu erstellen. In den Komponententests von SQL Server sind diese zusätzlichen Schritte nicht mehr erforderlich. (Weitere Informationen finden Sie unter [Kompilieren des Projekts und Installieren der Testbedingung](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx).  
   
 Stellen Sie sicher, dass die Assembly signiert und kompiliert ist, nachdem Sie die Verweise aktualisiert haben.  

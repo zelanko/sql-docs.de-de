@@ -14,10 +14,10 @@ ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866003"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>E-Mail-Einstellungen – Einheitlicher Modus von Reporting Services (Konfigurations-Manager)
@@ -48,7 +48,7 @@ Gehen Sie wie folgt vor, um einen Berichtsserver für die E-Mail-Übermittlung z
 > [!NOTE] 
 > E-Mail-Einstellungen für den Berichtsserver basieren auf CDO (Collaboration Data Objects). Ausführlichere Informationen zu bestimmten Einstellungen finden Sie in der CDO-Produktdokumentation.
 
-## <a name="a-namersconfigmanconfigure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Konfigurieren der Berichtsserver-E-Mail mit dem Konfigurations-Manager für Reporting Services
+## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Konfigurieren der Berichtsserver-E-Mail mit dem Konfigurations-Manager für Reporting Services
 
 1. Starten Sie den Reporting Services-Konfigurations-Manager, und stellen Sie eine Verbindung mit der Berichtsserverinstanz her.
 

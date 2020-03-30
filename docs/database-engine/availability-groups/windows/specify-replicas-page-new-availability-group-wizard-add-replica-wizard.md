@@ -15,10 +15,10 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822562"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
@@ -32,7 +32,7 @@ ms.locfileid: "74822562"
 |[Sicherungseinstellungen](#BackupPreferencesTab)|Geben Sie mit dieser Registerkarte die Sicherungseinstellungen für die Verfügbarkeitsgruppe als Ganzes und die Sicherungsprioritäten für die einzelnen Verfügbarkeitsreplikate an.|  
 |[Listener](#Listener)|Verwenden Sie diese Registerkarte (falls verfügbar), um einen Verfügbarkeitsgruppenlistener zu erstellen. Standardmäßig wird kein Listener erstellt.<br /><br /> Diese Registerkarte ist nur verfügbar, wenn Sie den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]ausführen.<br/><br/>DHCP ist deaktiviert, wenn der Clustertyp EXTERNAL oder NONE ist. |  
   
-##  <a name="ReplicasTab"></a> Registerkarte "Replikate"  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> Registerkarte "Replikate"  
  **Serverinstanz**  
  Zeigt den Namen der Serverinstanz an, die als Host für das Verfügbarkeitsreplikat fungiert.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74822562"
  **Replikat entfernen**  
  Klicken Sie, um das ausgewählte sekundäre Replikat aus der Verfügbarkeitsgruppe zu entfernen.  
   
-##  <a name="EndpointsTab"></a> Registerkarte "Endpunkte"  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a> Registerkarte "Endpunkte"  
  Für jede Serverinstanz, die ein Verfügbarkeitsreplikat hostet, zeigt die Registerkarte **Endpunkte** ggf. tatsächliche Werte des vorhandenen Datenbankspiegelungs-Endpunkts an bzw. empfohlene Werte für einen potenziellen neuen Endpunkt, der die Windows-Authentifizierung verwenden würde. Sowohl für vorhandene als auch für potenzielle Endpunkte enthält das Raster für die Endpunktwerte die folgenden Informationen:  
   
  **Servername**  
@@ -107,7 +107,7 @@ ms.locfileid: "74822562"
   
      Wenn Sie die Seite **Verfügbarkeitsreplikate angeben** geöffnet lassen, während Sie Endpunkte konfigurieren, kehren Sie zur Registerkarte **Endpunkte** zurück, und klicken Sie auf **Aktualisieren** , um das Raster **Endpunktwerte** zu aktualisieren.  
   
-##  <a name="BackupPreferencesTab"></a> Registerkarte "Sicherungseinstellungen"  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> Registerkarte "Sicherungseinstellungen"  
  Wählen Sie eine der folgenden Optionen aus, um anzugeben, wo Sicherungen erfolgen sollen:  
   
  **Sekundär bevorzugen**  
@@ -137,7 +137,7 @@ ms.locfileid: "74822562"
  **Replikat ausschließen**  
  Mit dieser Option wird verhindert, dass dieses Verfügbarkeitsreplikat je zum Ausführen von Sicherungen ausgewählt wird. Dies ist zum Beispiel für ein Remoteverfügbarkeitsreplikat hilfreich, für das keine Failover bei Sicherungen auftreten sollen.  
   
-##  <a name="Listener"></a> Registerkarte "Listener"  
+##  <a name="listener-tab"></a><a name="Listener"></a> Registerkarte "Listener"  
  Geben Sie die Einstellung für einen[Verfügbarkeitsgruppenlistener](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)an, der einen Clientverbindungspunkt bereitstellt. Folgende Werte sind möglich:  
   
  **Jetzt keinen Verfügbarkeitsgruppenlistener erstellen**  
@@ -195,7 +195,7 @@ ms.locfileid: "74822562"
 >  -   Bitten Sie den Netzwerkadministrator, die IP-Adresse des Listeners zur exklusiven Verwendung zu reservieren. Geben Sie den DNS-Hostnamen des Listeners an Anwendungsentwickler weiter, damit diese den Namen in Verbindungszeichenfolgen zum Anfordern von Clientverbindungen mit dieser Verfügbarkeitsgruppe verwenden.  
 > -   Geben Sie den DNS-Hostnamen des Listeners an Anwendungsentwickler weiter, damit diese den Namen in Verbindungszeichenfolgen zum Anfordern von Clientverbindungen mit dieser Verfügbarkeitsgruppe verwenden.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Verwenden des Assistenten für Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   

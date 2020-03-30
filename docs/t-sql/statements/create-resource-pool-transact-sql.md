@@ -20,10 +20,10 @@ ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2830c7ae4166ee0b71b1ddfb9de953c57be2452d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982685"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
@@ -72,12 +72,12 @@ MAX_CPU_PERCENT = *value*
 Gibt die maximale durchschnittliche CPU-Bandbreite an, die allen Anforderungen im Ressourcenpool zugewiesen wird, wenn CPU-Konflikte bestehen. *value* ist eine ganze Zahl mit dem Standardwert 100. Der zulässige Bereich für *value* liegt zwischen 1 und 100.  
   
 CAP_CPU_PERCENT =*value*   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
 Legt eine feste Obergrenze für die CPU-Bandbreite fest, die für alle Anforderungen im Ressourcenpool gilt. Beschränkt die maximale CPU-Bandbreitenstufe auf den angegebenen Wert. *value* ist eine ganze Zahl mit dem Standardwert 100. Der zulässige Bereich für *value* liegt zwischen 1 und 100.  
   
 AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}      
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
 Fügt den Ressourcenpool an bestimmte Zeitplanungsmodule an. Der Standardwert ist AUTO.  
   
@@ -100,12 +100,12 @@ MAX_MEMORY_PERCENT =*value*
 Gibt den gesamten Serverspeicher an, der für Anforderungen in diesem Ressourcenpool verwendet werden kann. *value* ist eine ganze Zahl mit dem Standardwert 100. Der zulässige Bereich für *value* liegt zwischen 1 und 100.  
   
 MIN_IOPS_PER_VOLUME =*value*    
-**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
   
 Gibt die minimalen E/A-Vorgänge pro Sekunde (IOPS) pro Datenträgervolume an, die für den Ressourcenpool reserviert werden sollen. Der zulässige Bereich für *value* liegt zwischen 0 und 2^31-1 (2.147.483.647). 0 gibt an, dass kein minimaler Schwellenwert für den Pool gilt. Die Standardeinstellung ist 0.  
   
 MAX_IOPS_PER_VOLUME =*value*    
-**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
   
 Gibt die maximalen E/A-Vorgänge pro Sekunde (IOPS) pro Datenträgervolume an, die für den Ressourcenpool zulässig sein sollen. Der zulässige Bereich für *value* liegt zwischen 0 und 2^31-1 (2.147.483.647). 0 gibt einen unbegrenzten Schwellenwert für den Pool an. Die Standardeinstellung ist 0.  
   
@@ -139,7 +139,7 @@ GO
 
 Legen Sie die CAP_CPU_PERCENT auf eine feste Obergrenze von 30 % fest, und legen Sie AFFINITY SCHEDULER auf einen Bereich von 0 bis 63, 128 bis 191 fest. 
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  
@@ -157,7 +157,7 @@ WITH (
 
 Legen Sie MIN_IOPS_PER_VOLUME auf 20 und MAX_IOPS_PER_VOLUME auf 100 fest. Diese Werte bestimmen die physischen E/A-Lese- und Schreibvorgänge, die für den Ressourcenpool verfügbar sind.  
   
-**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  

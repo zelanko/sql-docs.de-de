@@ -21,10 +21,10 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293932"
 ---
 # <a name="send-mail-task"></a>Mail senden (Task)
@@ -64,7 +64,7 @@ ms.locfileid: "71293932"
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den Task 'Mail senden'  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task 'Mail senden' aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|Zeigt an, dass das Senden einer E-Mail-Nachricht begonnen wurde.|  
 |**SendMailTaskEnd**|Zeigt an, dass das Senden einer E-Mail-Nachricht beendet wurde.|  
@@ -130,7 +130,7 @@ ms.locfileid: "71293932"
  **MessageSourceType**  
  Wählen Sie den Quelltyp der Nachricht aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legen Sie für die Quelle den Nachrichtentext fest. Bei Auswahl dieses Wertes wird die dynamische Option **MessageSource**angezeigt.|  
 |**Dateiverbindung**|Legen Sie für die Quelle die Datei fest, die den Nachrichtentext enthält. Bei Auswahl dieses Wertes wird die dynamische Option **MessageSource**angezeigt.|  

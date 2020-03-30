@@ -13,10 +13,10 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078567"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)
@@ -100,17 +100,17 @@ ms.locfileid: "77078567"
   
  Weitere Informationen über Karten finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Schrittweise Anweisungen dazu, wie Sie einem Bericht eine Karte hinzufügen, finden Sie unter [ Tutorial: Kartenbericht (Berichts-Generator)](../../reporting-services/tutorial-map-report-report-builder.md).  
   
-##  <a name="SpatialDataSource"></a> Quelle räumlicher Daten auswählen  
+##  <a name="choose-a-source-of-spatial-data"></a><a name="SpatialDataSource"></a> Quelle räumlicher Daten auswählen  
  Geben Sie auf dieser Seite die räumliche Datenquelle an, und legen Sie fest, welche räumlichen Daten eingeschlossen werden sollen. Räumliche Daten können aus dem Kartenkatalog, einer ESRI-Shape-Datei oder einer Datasetabfrage stammen, die räumliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten aus einer Datenbank von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher angibt.  
   
  Sie können für jede Ebene dieselbe Quelle oder eine andere Quelle räumlicher Daten verwenden, aber Sie müssen bei jedem Hinzufügen einer Ebene die Quelle angeben. Wenn die räumlichen Daten aus dem Kartenkatalog oder aus einer ESRI-Shape-Datei stammen, ist die räumliche Datenquelle kein separates Berichtselement. Sie wird nicht im Berichtsdatenbereich angezeigt.  
   
-###  <a name="SpatialData"></a> Was sind räumliche Daten?  
+###  <a name="what-is-spatial-data"></a><a name="SpatialData"></a> Was sind räumliche Daten?  
  Räumliche Daten enthalten Koordinaten, die geografische oder geometrische Elemente definieren. Auf einer Karte definieren räumliche Daten *Kartenelemente*: Polygone, die Bereiche oder Formen definieren, Linien, die Routen oder Pfade definieren, und Punkte, die Marker oder Ortsmarken (Pushpins) definieren. Räumliche Daten werden in einem Binärformat in der Datenquelle gespeichert und werden als Sätze von Koordinaten angegeben. Ein Punkt wird z. B. durch eine x- und y-Koordinate (X Y) dargestellt, eine Linie durch zwei Sätze von Koordinaten ((X1 Y1), (X2 Y2)) und ein Polygon durch vier oder mehr Sätze von Koordinaten, wobei der erste und letzte Satz von Koordinaten gleich sind ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1)).  
   
  Weitere Informationen finden Sie in der Dokumentation zum verwendeten Typ räumlicher Daten.  
   
-###  <a name="MapGallery"></a> What is the map gallery?  
+###  <a name="what-is-the-map-gallery"></a><a name="MapGallery"></a> What is the map gallery?  
  Der Kartenkatalog enthält Karten aus Berichten, die sich im Kartenkatalogordner für die Berichterstellungsumgebung befinden. Karten aus dem Katalog ermöglichen es, dem Bericht schnell eine Karte hinzuzufügen. Die vordefinierten Karten im Katalog werden von einem Kartenanbieter bereitgestellt.  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ ms.locfileid: "77078567"
   
  Um den Kartenkatalog zu erweitern, können Sie Berichte im Kartenkatalogverzeichnis hinzufügen oder entfernen sowie Ordner hinzufügen, um die Karten zu verwalten. Weitere Informationen finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-###  <a name="Shapefile"></a> What is an ESRI shapefile?  
+###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
  Eine ESRI-Shape-Datei ist ein Satz von Dateien mit Daten, die dem Shape-Dateiformat des Environmental Systems Research Institute, Inc. (ESRI) für räumliche Daten entsprechen. Die Gruppe von Dateien enthält im Allgemeinen die Datei *\<Dateiname>* .shp, die die räumlichen Daten und eine Unterstützungsdatei enthält, in der Regel *\<Dateiname>* .dbf.  
   
  Wenn Sie eine Shape-Datei als räumliche Datenquelle angeben und sie sich auf dem lokalen Computer befindet, werden die räumlichen Daten automatisch in den Bericht eingebettet. Um räumliche Daten aus einer ESRI-Datei dynamisch zu verwenden, gehen Sie wie folgt vor:  
@@ -127,10 +127,10 @@ ms.locfileid: "77078567"
   
  Fügen Sie im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]dem Berichtsprojekt die SHP-Datei und die DBF-Datei hinzu, und geben Sie dann den Namen der SHP-Datei als räumliche Datenquelle an.  
   
-###  <a name="GetShapefiles"></a> Wo finde ich ESRI-Shape-Dateien?  
+###  <a name="where-can-i-get-esri-shapefiles"></a><a name="GetShapefiles"></a> Wo finde ich ESRI-Shape-Dateien?  
  ESRI-Shape-Dateien sind im Web verfügbar. Weitere Informationen finden Sie unter [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814).  
   
-###  <a name="SqlServerSpatial"></a> Was ist eine SQL Server-Abfrage nach räumlichen Daten?  
+###  <a name="what-is-a-sql-server-spatial-query"></a><a name="SqlServerSpatial"></a> Was ist eine SQL Server-Abfrage nach räumlichen Daten?  
  Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfrage nach räumlichen Daten ist eine Datasetabfrage, in der Daten vom Datentyp "SQLGeometry" oder "SQLGeography" aus einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank angegeben werden.  
   
 > [!NOTE]  
@@ -140,7 +140,7 @@ ms.locfileid: "77078567"
   
  Weitere Informationen finden Sie unter [Räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
-##  <a name="MapView"></a> Optionen für räumliche Daten und Kartenansicht auswählen  
+##  <a name="choose-spatial-data-and-map-view-options"></a><a name="MapView"></a> Optionen für räumliche Daten und Kartenansicht auswählen  
  Auf dieser Seite können Sie die folgenden Optionen festlegen:  
   
 -   Legen Sie den Ansichtmittelpunkt und die Zoomstufe für die räumlichen Daten fest, die Sie auf der vorherigen Assistentenseite ausgewählt haben. Die Ansicht, die Sie festlegen, gilt für die gesamte Karte.  
@@ -153,12 +153,12 @@ ms.locfileid: "77078567"
   
 -   Geben Sie an, ob ein Hintergrund aus [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing-Kartenkacheln eingeschlossen werden soll.  
   
-###  <a name="Viewport"></a> Was ist die Kartenansicht oder der Viewport?  
+###  <a name="what-is-the-map-view-or-viewport"></a><a name="Viewport"></a> Was ist die Kartenansicht oder der Viewport?  
  Der Kartenviewport definiert den Kartenbereich, der für alle Ebenen im Bericht angezeigt werden soll.  
   
  Standardmäßig werden die Farbskala und die Entfernungsskala im Viewport angezeigt, und die Kartenlegende wird außerhalb des Viewports angezeigt. Sie können diese Optionen für den Viewport ändern, nachdem Sie den Assistenten abgeschlossen haben.  
   
-###  <a name="Resolution"></a> Was sind Kartenauflösung und Optimierung?  
+###  <a name="what-is-map-resolution-and-optimization"></a><a name="Resolution"></a> Was sind Kartenauflösung und Optimierung?  
  Indem Sie die Auflösung für räumliche Daten ändern, die Linien oder Polygone darstellen, geben Sie an, wie ausführlich die Karte gezeichnet werden soll. Benötigen Sie beispielsweise für Luftbilder eines Bereichs eine Granularität von bis zu hundert Metern der Erdoberfläche, oder reichen anderthalb Kilometer?  
   
  Wenn räumliche Daten in den Bericht eingebettet werden, werden bei höherer Auflösung mehr Elemente benötigt, um Details zu zeichnen. Wenn die räumlichen Daten nicht in den Bericht eingebettet werden, bedeutet eine höhere Auflösung, dass der Berichtsprozessor bei jedem Anzeigen des Berichts mehr Zeit braucht, um die Linien für die Karte zu berechnen.  
@@ -167,14 +167,14 @@ ms.locfileid: "77078567"
   
  Wenn Sie den Schieberegler anpassen, werden die Vorschaudaten im Assistentenbereich aktualisiert, um Ihnen eine Vorstellung von den Auswirkungen zu geben. Nachdem Sie dem Bericht die Karte hinzugefügt haben, können Sie diesen Wert anpassen, indem Sie Kartenviewport-Optionen ändern.  
   
-###  <a name="Embed"></a> Was wird bei der Einbettung räumlicher Daten ausgeführt?  
+###  <a name="what-does-embedding-spatial-data-do"></a><a name="Embed"></a> Was wird bei der Einbettung räumlicher Daten ausgeführt?  
  Wenn Sie Kartenelemente oder Bing-Kartenkacheln in einen Bericht einbetten, werden die räumlichen Daten in der Berichtsdefinition gespeichert.  
   
  Ein Bericht mit einer Karte kann räumliche Daten oder Bing-Kartenkacheln verwenden, die entweder dynamisch bei der Berichtsverarbeitung abgerufen werden oder zur Entwurfszeit abgerufen und in die Berichtsdefinition eingebettet werden. Eingebettete Kartenelemente können die Größe der Berichtsdefinition bedeutend erhöhen, aber reduzieren die Zeit, die erforderlich ist, um die Karte im Bericht anzuzeigen. Dynamische Kartenelemente verringern die Größe der Berichtsdefinition, aber erhöhen die Zeit, die erforderlich ist, um den Kartenbericht zu verarbeiten und anzuzeigen.  
   
  Bei einem guten Berichtsentwurf müssen Sie den Zielkonflikt zwischen statischen und dynamischen Kartendaten bewerten und von Fall zu Fall das richtige Gleichgewicht suchen. Im Allgemeinen bedeuten mehr Daten, dass die Berichtsdefinition und der kompilierte Bericht mehr Speicher auf dem Berichtsserver erfordern und dass die Verarbeitungszeiten länger sind. Es ist immer eine bewährte Methode, räumliche Daten zuzuschneiden und andere Berichtsdaten einzuschränken, um nur das einzuschließen, was für den Bericht benötigt wird.  
   
-###  <a name="Tiles"></a> Was ist ein Hintergrund aus Bing-Kartenkacheln?  
+###  <a name="what-is-a-bing-map-tile-background"></a><a name="Tiles"></a> Was ist ein Hintergrund aus Bing-Kartenkacheln?  
  Um der Karte einen geografischen Bildhintergrund hinzuzufügen, aktivieren Sie die Option für den Bing-Kartenkachelhintergrund. Der Berichtsprozessor lädt Kacheln von Bing Maps Web Services für den Kartenbereich und die Auflösung herunter, die Sie auf dieser Assistentenseite angeben. Sie können einen der folgenden Kacheltypen angeben:  
   
 -   **Straße.** Zeigt ein Straßenkartenformat mit weißem Hintergrund an.  
@@ -189,12 +189,12 @@ ms.locfileid: "77078567"
   
  Weitere Informationen zu anderen Möglichkeiten, eine Kachelebene anzupassen, finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-##  <a name="Visualization"></a> Kartenvisualisierung auswählen  
+##  <a name="choose-map-visualization"></a><a name="Visualization"></a> Kartenvisualisierung auswählen  
  Wählen Sie auf dieser Seite den Typ der Karte oder Kartenebene aus, den bzw. die Sie dem Bericht hinzufügen möchten. Bei der ersten Ausführung des Assistenten fügen Sie dem Bericht eine Karte und die erste Kartenebene hinzu. Eine Karte kann mehrere Kartenebenen enthalten. Jede Kartenebene zeigt einen bestimmten Typ räumlicher Daten an: Polygone, Linien oder Punkte.  
   
  Welchen Kartentyp Sie auswählen, hängt vom Zweck der Karte und von den verfügbaren Daten ab.  
   
-###  <a name="MapType"></a> Was ist der Unterschied zwischen einer Standardkarte, einer Blasendiagrammkarte und einer analytischen Karte?  
+###  <a name="what-is-the-difference-among-a-basic-map-a-bubble-map-and-an-analytical-map"></a><a name="MapType"></a> Was ist der Unterschied zwischen einer Standardkarte, einer Blasendiagrammkarte und einer analytischen Karte?  
  Ein **Standardkarte** zeigt nur Orte an. Sie können die Farben der Bereiche als Schattierungen auf der Karte verändern, aber die Farbe stellt keine analytischen Datenwerte dar.  
   
  Eine **Blasendiagrammkarte** stellt den relativen Wert für ein einzelnes analytisches Datenaggregat als Blasengröße dar, z. B. den Umsatz pro Laden. Sie können Blasendiagrammkarten für Polygone oder für Punkte erstellen. Legen Sie für Polygone die Polygonmittelpunkteigenschaften fest; legen Sie für Punkte die Markereigenschaften fest.  
@@ -203,29 +203,29 @@ ms.locfileid: "77078567"
   
  Weitere Informationen finden Sie unter [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
-##  <a name="AnalyticalData"></a> Analytisches Dataset auswählen  
+##  <a name="choose-the-analytical-dataset"></a><a name="AnalyticalData"></a> Analytisches Dataset auswählen  
  Geben Sie auf dieser Seite an, wo die analytischen Daten abgerufen werden sollen, die auf dieser Kartenebene angezeigt werden.  
   
  Um Berichtsdaten oder analytische Daten vor dem Kartenhintergrund anzuzeigen, müssen Sie angeben, wo sich die Daten befinden und wie sie mit den räumlichen Daten in Beziehung stehen. Die Daten können aus einem vorhandenen Berichtsdataset oder aus einem neuen Dataset stammen, für das Sie eine Abfrage erstellen. Vorhandene analytische Daten können in der ESRI-Shape-Datei enthalten sein, die die räumlichen Daten enthält.  
   
-###  <a name="Diff"></a> Was ist der Unterschied zwischen räumlichen Daten und analytischen Daten?  
+###  <a name="what-is-the-difference-between-spatial-data-and-analytical-data"></a><a name="Diff"></a> Was ist der Unterschied zwischen räumlichen Daten und analytischen Daten?  
  Räumliche Daten bestehen aus Sätzen von Koordinaten, die Punkte, Linien und Polygone angeben. Kartenelemente basieren auf räumlichen Daten.  
   
  Analytische Daten sind numerische Daten oder Kategoriedaten, die Sie verwenden können, um die Darstellung der Karte zu verändern. Analytische Daten können aus einem Berichtsdataset stammen oder in die räumlichen Daten aus einer Karte im Kartenkatalog oder einer ESRI-Shape-Datei eingeschlossen sein.  
   
-##  <a name="SpecifyMatchFields"></a> Angeben der Übereinstimmungsfelder  
+##  <a name="specify-the-match-fields"></a><a name="SpecifyMatchFields"></a> Angeben der Übereinstimmungsfelder  
  Erstellen Sie auf dieser Seite eine Beziehung zwischen den räumlichen Daten und analytischen Daten.  
   
-###  <a name="MatchFields"></a> Was sind Übereinstimmungsfelder?  
+###  <a name="what-are-match-fields"></a><a name="MatchFields"></a> Was sind Übereinstimmungsfelder?  
  Mithilfe von Übereinstimmungsfeldern kann der Berichtsprozessor eine Beziehung zwischen den analytischen Daten und den räumlichen Daten erstellen. Übereinstimmungsfelder geben eindeutige Werte innerhalb der analytischen Daten an. Möglicherweise ist z. B. der Ladenname innerhalb der Daten nicht eindeutig; deshalb sollten Sie sowohl einen Ort als auch den Ladennamen angeben.  
   
-##  <a name="ThemeandVisualization"></a> Farbdesign und Datenvisualisierung auswählen  
+##  <a name="choose-color-theme-and-data-visualization"></a><a name="ThemeandVisualization"></a> Farbdesign und Datenvisualisierung auswählen  
  Um anzugeben, wie die Daten auf dem Kartenhintergrund dargestellt werden sollen, geben Sie auf dieser Seite das Kartendesign, die darzustellenden Felder sowie die veränderlichen Eigenschaften an: Farbe, Größe und/oder Markertyp.  
   
-###  <a name="Theme"></a> Wozu dient das Design?  
+###  <a name="what-does-the-theme-do"></a><a name="Theme"></a> Wozu dient das Design?  
  Das Design, das Sie auswählen, legt Standardwerte für Farbe, Rahmen und Schriftart fest. Sie können diese Optionen ändern, nachdem Sie den Assistenten abgeschlossen haben.  
   
-###  <a name="Legends"></a> Wozu dienen die Legenden und Skalen in der Kartenvorschau?  
+###  <a name="what-are-the-legends-and-scales-in-map-preview-for"></a><a name="Legends"></a> Wozu dienen die Legenden und Skalen in der Kartenvorschau?  
  Legenden helfen dem Benutzer, die auf einer Karte angezeigten Daten zu interpretieren. Eine Karte stellt einen Farbbereich, eine Entfernungsskala und eine Legende bereit.  
   
 -   **Farbbereich.** Der Farbbereich zeigt eine Farbleiste mit einer Skala an, die eine Orientierungshilfe für die Datenintervalle bietet, die vom Berichtsprozessor auf der Grundlage der für die Ebene angegebenen Regeln bestimmt werden.  
@@ -234,7 +234,7 @@ ms.locfileid: "77078567"
   
 -   **Legende.** Die Legende enthält eine Orientierungshilfe für die Bedeutung von Farben, Größen und Markertypen auf einer Karte. Standardmäßig werden mit allen Regeln für alle Ebenen Datenintervalle in der ersten Legende angezeigt. Sie können diese Legende anpassen und Legenden hinzufügen, nachdem Sie dem Bericht die Karte hinzugefügt haben.  
   
-###  <a name="Rules"></a> Was sind Regeln?  
+###  <a name="what-are-rules"></a><a name="Rules"></a> Was sind Regeln?  
  Regeln sind Berechnungen, mit denen der Berichtsprozessor analytische Daten in Bereiche unterteilt. Sie können für jede Ebene unterschiedliche Regeln angeben. Welche Art von Regeln Sie angeben können, hängt vom Typ der räumlichen Daten in der Ebene ab:  
   
 -   **Polygone.** Sie können Farbregeln angeben.  

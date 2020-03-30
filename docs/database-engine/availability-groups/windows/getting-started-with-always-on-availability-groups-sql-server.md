@@ -14,10 +14,10 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7e0e50e22fc257b3a8429e556fe7fd2cec2c97d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68017501"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Erste Schritte mit Always On-Verfügbarkeitsgruppen
@@ -26,21 +26,21 @@ ms.locfileid: "68017501"
 Dieses Thema enthält eine Einführung in die Schritte zum Konfigurieren von Instanzen von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] für die Unterstützung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sowie zum Erstellen, Verwalten und Überwachen von Verfügbarkeitsgruppen.  
   
   
-##  <a name="RecommendedReading"></a> Empfohlene Lektüre  
+##  <a name="recommended-reading"></a><a name="RecommendedReading"></a> Empfohlene Lektüre  
  Bevor Sie die erste Verfügbarkeitsgruppe erstellen, empfiehlt es sich, die folgenden Themen zu lesen:  
   
 -   [Übersicht zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
 -   [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
-##  <a name="ConfigSI"></a> Configuring an Instance of SQL Server to Support Always On Availability Groups  
+##  <a name="configuring-an-instance-of-sql-server-to-support-always-on-availability-groups"></a><a name="ConfigSI"></a> Configuring an Instance of SQL Server to Support Always On Availability Groups  
   
 ||Schritt|Links|  
 |------|----------|-----------|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]aktivieren.** Die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Funktion muss für jede Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aktiviert werden, die an einer Verfügbarkeitsgruppe teilnehmen soll.<br /><br /> **Voraussetzungen:**  Beim Hostcomputer muss es sich um einen WSFC-Knoten (Windows Server Failover Clustering) handeln.<br /><br /> Informationen zu den weiteren Voraussetzungen finden Sie unter „Voraussetzungen und Einschränkungen für SQL Server-Instanzen“ in [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)aktivieren.|[Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**Datenbankspiegelungs-Endpunkt erstellen (sofern nicht vorhanden).** Stellen Sie sicher, dass jede Serverinstanz einen [Datenbankspiegelungs-Endpunkt](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md). Die Serverinstanz empfängt über diesen Endpunkt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Verbindungen von anderen Serverinstanzen.|So bestimmen Sie, ob ein Datenbankspiegelungs-Endpunkt vorhanden ist: <br />                    [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)<br /><br /> **Für die Windows-Authentifizierung**.  So erstellen Sie einen Datenbankspiegelungs-Endpunkt:<br /><br /> [Assistent für neue Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server-PowerShell](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **Für die Zertifikatauthentifizierung**. So erstellen Sie einen Datenbankspiegelungs-Endpunkt mit[Transact-SQL](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
-##  <a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
+##  <a name="creating-and-configuring-a-new-availability-group"></a><a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
   
 ||Schritt|Links|  
 |------|----------|-----------|  
@@ -52,7 +52,7 @@ Dieses Thema enthält eine Einführung in die Schritte zum Konfigurieren von Ins
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**Geben Sie den DNS-Hostnamen der Listener für Entwickler an.**  Entwickler müssen diesen DNS-Namen in den Verbindungszeichenfolgen zur Weiterleitung von Verbindungsanforderungen an den Verfügbarkeitsgruppenlistener angeben. Weitere Informationen finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)wichtig sind.|„Nachverfolgung: Nach dem Erstellen eines Verfügbarkeitsgruppenlisteners“ unter [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**Konfigurieren Sie, wohin Sicherungsaufträge.**  Wenn Sie Sicherungen für sekundäre Datenbanken ausführen möchten, müssen Sie ein Sicherungsauftragsskript erstellen, das die Einstellung für automatisierte Sicherungen berücksichtigt. Erstellen Sie ein Skript für jede Datenbank in der Verfügbarkeitsgruppe auf jeder Serverinstanz, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hostet.|„Nachverfolgung: Nach dem Konfigurieren einer Sicherung auf sekundären Replikaten“ unter [Konfigurieren der Sicherung auf Verfügbarkeitsreplikaten &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)|  
   
-##  <a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
+##  <a name="managing-availability-groups-replicas-and-databases"></a><a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
   
 > [!NOTE]  
 >  Weitere Informationen zu Eigenschaften von Verfügbarkeitsgruppen und Replikaten finden Sie unter [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md).  
@@ -72,7 +72,7 @@ Dieses Thema enthält eine Einführung in die Schritte zum Konfigurieren von Ins
 |Führen Sie die Problembehandlung für das Hinzufügen von Dateien aus. Dies kann erforderlich sein, wenn die primäre Datenbank und eine sekundäre Datenbank unterschiedliche Dateipfade aufweisen.|[Problembehandlung bei einem fehlgeschlagenen Vorgang zum Hinzufügen einer Datei](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|  
 |Ändern Sie Eigenschaften von Verfügbarkeitsreplikaten.|[Ändern des Verfügbarkeitsmodus](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)<br /><br /> [Ändern des Failovermodus](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)<br /><br /> [Konfigurieren der Sicherungspriorität (und der Einstellung für automatisierte Sicherungen)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)<br /><br /> [Konfigurieren des schreibgeschützten Zugriffs](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)<br /><br /> [Konfigurieren des schreibgeschützten Routings](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)<br /><br /> [Ändern des Sitzungstimeouts](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)|  
   
-##  <a name="MonitorAGsEtc"></a> Überwachen von Verfügbarkeitsgruppen  
+##  <a name="monitoring-availability-groups"></a><a name="MonitorAGsEtc"></a> Überwachen von Verfügbarkeitsgruppen  
  Sie können zum Überwachen der Eigenschaften und des Status einer Always On-Verfügbarkeitsgruppe die folgenden Tools verwenden:  
   
 |Tool|Kurzbeschreibung|Links|  
@@ -84,7 +84,7 @@ Dieses Thema enthält eine Einführung in die Schritte zum Konfigurieren von Ins
 |Systemmonitor|Das Leistungsobjekt **SQL Server:Verfügbarkeitsreplikat** enthält Leistungsindikatoren, die Informationen zu Verfügbarkeitsreplikaten bereitstellen.|[SQL Server, Verfügbarkeitsreplikat](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |Systemmonitor|Das Leistungsobjekt **SQL Server:Datenbankreplikat** beinhaltet Leistungsindikatoren, die Informationen zu den sekundären Verfügbarkeitsdatenbanken eines bestimmten sekundären Replikats bereitstellen.<br /><br /> Das **SQLServer:Databases** -Objekt in SQL Server enthält u. a. Leistungsindikatoren zum Überwachen von Transaktionsprotokollaktivitäten. Die folgenden Indikatoren sind besonders für die Überwachung der Transaktionsprotokollaktivität von Verfügbarkeitsdatenbanken relevant: **Schreibzeit für Protokollleerungen (ms)** , **Protokollleerungen/Sekunde**, **Protokollpool-Cachefehler/Sekunde**, **Protokollpool-Datenträgerlesevorgänge/Sekunde** und **Protokollpoolanforderungen/Sekunde**.|[SQL Server, Datenbankreplikat](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   **Einführungsvideo zu Always On:**  [Microsoft SQL Server Code-Named „Denali“ Always On Series, Part 1: Introducing the Next Generation High Availability Solution (Microsoft SQL Server, Codename „Denali“ – Always On-Reihe, Teil 1: Einführung in die nächste Generation von Lösungen mit Hochverfügbarkeit)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

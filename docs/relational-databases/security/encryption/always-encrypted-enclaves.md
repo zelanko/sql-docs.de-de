@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558027"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
@@ -139,7 +139,7 @@ Die folgenden Sicherheitsaspekte sind für Always Encrypted mit Secure Enclaves 
 - Die Verschlüsselung einer Spalte mit zufälliger Verschlüsselung mit einem Enclave-fähigen CEK kann dazu führen, dass die Reihenfolge der in der Spalte gespeicherten Daten verloren geht, da solche Spalten Bereichsvergleiche unterstützen. Wenn beispielsweise eine verschlüsselte Spalte, die Gehälter von Mitarbeitern enthält, einen Index verwendet, könnte ein böswilliger DBA den Index scannen, um den maximalen verschlüsselten Wert für das Gehalt zu finden und eine Person mit dem maximalen Gehalt zu identifizieren (vorausgesetzt, der Name der Person ist nicht verschlüsselt). 
 - Wenn Sie Always Encrypted verwenden, um sensible Daten vor unbefugtem Zugriff durch DBAs zu schützen, sollten Sie die Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel nicht an die DBAs weitergeben. Ein DBA kann Indizes auf verschlüsselten Spalten verwalten, ohne direkten Zugriff auf die Schlüssel zu haben, indem er den Cache der Spaltenverschlüsselungsschlüssel innerhalb der Enclave nutzt.
 
-## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> Überlegungen zu Verfügbarkeitsgruppen und Datenbankmigration
+## <a name="considerations-for-availability-groups-and-database-migration"></a><a name="anchorname-1-considerations-availability-groups-db-migration"></a> Überlegungen zu Verfügbarkeitsgruppen und Datenbankmigration
 
 Bei der Konfiguration einer Always On-Verfügbarkeitsgruppe, die für die Unterstützung von Abfragen mit Enclaves erforderlich ist, müssen Sie sicherstellen, dass alle SQL Server-Instanzen, die die Datenbanken in der Verfügbarkeitsgruppe hosten, Always Encrypted mit Secure Enclaves unterstützen und eine Enclave konfiguriert ist. Wenn die primäre Datenbank Enclaves unterstützt, eine sekundäre Replik jedoch nicht, schlägt jede Abfrage fehl, die versucht, die Funktionalität von Always Encrypted mit Secure Enclaves zu nutzen.
 

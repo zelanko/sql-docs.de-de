@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 2412bfb8bcd3cacc2db2702879353b92e328b09a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727384"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>Was ist eine eigenständige Machine Learning Server- oder R Server-Instanz in SQL Server?
@@ -30,7 +30,7 @@ In SQL Server 2016 heißt dieses Feature **R Server (Standalone)** und schließ
 
 SQL Server 2016 unterstützt nur R. SQL Server-2017 unterstützt R und Python. In der folgenden Tabelle sind die in den einzelnen Versionen enthaltenen Features beschrieben.
 
-| Komponente | Beschreibung |
+| Komponente | BESCHREIBUNG |
 |-----------|-------------|
 | R-Pakete | [**RevoScaleR**](ref-r-revoscaler.md) ist die Hauptbibliothek für skalierbare R-Skripts mit Funktionen zur Datenmanipulation, -transformation, -visualisierung und -analyse.  <br/>[**MicrosoftML**](ref-r-microsoftml.md) stellt Machine Learning-Algorithmen zur Erstellung von benutzerdefinierten Modellen für die Text-, Bild- und Stimmungsanalyse bereit. <br/>[**sqlRUtils**](ref-r-sqlrutils.md) bietet Hilfsfunktionen zum Einfügen von R-Skripts in eine gespeicherte T-SQL-Prozedur, Registrieren dieser gespeicherten Prozedur bei einer Datenbank und Ausführen der gespeicherten Prozedur aus einer R-Entwicklungsumgebung.<br/>[**mrsdeploy**](operationalization-with-mrsdeploy.md) bietet die Bereitstellung von Webdiensten (nur in SQL Server 2017). <br/>[**olapR**](ref-r-olapr.md) dient der Angabe von MDX-Abfragen in R.|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) ist die Open-Source-Distribution für R von Microsoft. Das Paket und der Interpreter sind enthalten. Verwenden Sie immer die im Setup enthaltene Version von MRO. |

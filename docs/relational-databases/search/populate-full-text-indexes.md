@@ -25,17 +25,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903880"
 ---
 # <a name="populate-full-text-indexes"></a>Auffüllen von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Das Erstellen und Verwalten eines Volltextindexes umfasst das Auffüllen des Indexes mithilfe eines Prozesses, der als *Auffüllung* (oder auch als *Crawl*) bezeichnet wird.  
   
-##  <a name="types"></a> Types of population  
+##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 Ein Volltextindex unterstützt die folgenden Auffüllungstypen:
 -   **Vollständige** Auffüllung
 -   Automatische oder manuelle Auffüllung basierend auf der **Änderungsnachverfolgung**
@@ -171,7 +171,7 @@ In einigen Fällen führt die Anforderung für eine inkrementelle Auffüllung zu
   
  Führen Sie mithilfe der `START INCREMENTAL POPULATION`-Klausel eine `ALTER FULLTEXT INDEX`-Anweisung aus, um eine inkrementelle Auffüllung auszuführen.  
   
-###  <a name="create"></a> Erstellen oder Ändern eines Zeitplans für die inkrementelle Auffüllung   
+###  <a name="create-or-change-a-schedule-for-incremental-population"></a><a name="create"></a> Erstellen oder Ändern eines Zeitplans für die inkrementelle Auffüllung   
   
 1.  Erweitern Sie in Management Studio im Objekt-Explorer den Server.  
   
@@ -208,7 +208,7 @@ In einigen Fällen führt die Anforderung für eine inkrementelle Auffüllung zu
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 
-##  <a name="crawl"></a> Beheben von Fehlern in einer Volltextauffüllung (Durchforstung)  
+##  <a name="troubleshoot-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a> Beheben von Fehlern in einer Volltextauffüllung (Durchforstung)  
 Tritt während eines Durchforstungsvorgangs ein Fehler auf, wird von der Durchforstungsprotokollfunktion der Volltextsuche ein Durchforstungsprotokoll erstellt und gewartet. Dabei handelt es sich um eine Nur-Text-Datei. Jedes Durchforstungsprotokoll gehört zu einem bestimmten Volltextkatalog. Standardmäßig befinden sich Durchforstungsprotokolle für eine bestimmte Instanz (in diesem Beispiel die Standardinstanz) im Ordner `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.
  
 Das Benennungsschema für Durchforstungsprotokolldateien lautet folgendermaßen:  

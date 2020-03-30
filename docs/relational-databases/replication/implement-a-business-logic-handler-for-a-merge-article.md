@@ -20,10 +20,10 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322147"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementieren eines Geschäftslogikhandlers für einen Mergeartikel
@@ -52,7 +52,7 @@ ms.locfileid: "75322147"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> Verwenden der Replikationsprogrammierung  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> Verwenden der Replikationsprogrammierung  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>So erstellen Sie einen Geschäftslogikhandler und stellen ihn bereit  
   
@@ -60,7 +60,7 @@ ms.locfileid: "75322147"
   
 2.  Fügen Sie Verweise auf das Projekt für die folgenden Namespaces hinzu.  
   
-    |Assemblyverweis|Location|  
+    |Assemblyverweis|Position|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (Standardinstallation)|  
     |<xref:System.Data>|GAC (Komponente von .NET Framework)|  
@@ -114,7 +114,7 @@ ms.locfileid: "75322147"
   
 1.  Führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie dabei **\@publication**, **\@article**, den Wert **article_resolver** für **\@property** und den Anzeigenamen des Geschäftslogikhandlers für **\@value** an.  
   
-###  <a name="TsqlExample"></a> Beispiele (Replikationsprogrammierung)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> Beispiele (Replikationsprogrammierung)  
  In diesem Beispiel wird ein Geschäftslogikhandler gezeigt, der ein Überwachungsprotokoll erstellt.  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  
@@ -125,7 +125,7 @@ ms.locfileid: "75322147"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../relational-databases/replication/codesnippet/tsql/implement-a-business-log_3.sql)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
   
 #### <a name="to-create-a-business-logic-handler"></a>So erstellen Sie einen Geschäftslogikhandler  
   
@@ -133,7 +133,7 @@ ms.locfileid: "75322147"
   
 2.  Fügen Sie Verweise auf das Projekt für die folgenden Namespaces hinzu.  
   
-    |Assemblyverweis|Location|  
+    |Assemblyverweis|Position|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (Standardinstallation)|  
     |<xref:System.Data>|GAC (Komponente von .NET Framework)|  
@@ -220,7 +220,7 @@ ms.locfileid: "75322147"
   
 6.  Legen Sie den Anzeigenamen des Geschäftslogikhandlers für <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>fest. Dies ist der Wert der <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> -Eigenschaft, die beim Registrieren des Geschäftslogikhandlers angegeben wird.  
   
-###  <a name="PShellExample"></a> Beispiele (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Beispiele (RMO)  
  Dieses Beispiel zeigt einen Geschäftslogikhandler, der Informationen über Einfüge-, Update- und Löschvorgänge auf dem Abonnenten protokolliert.  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  

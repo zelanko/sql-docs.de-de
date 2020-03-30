@@ -15,17 +15,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084022"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Verwalten der Größe der Transaktionsprotokolldatei
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Dieses Thema enthält Informationen zum Überwachen der Größe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionsprotokolls, Verkleinern des Transaktionsprotokolls, Hinzufügen zu oder Vergrößern einer Transaktionsprotokolldatei, Optimieren der Wachstumsrate des **tempdb**-Transaktionsprotokolls und Steuern der Vergrößerung einer Transaktionsprotokolldatei.  
 
-##  <a name="MonitorSpaceUse"></a>Überwachen der Belegung des Protokollspeicherplatzes  
+##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>Überwachen der Belegung des Protokollspeicherplatzes  
 Überwachen Sie mithilfe von [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) die Belegung des Protokollspeicherplatzes. Diese DMV gibt Informationen zum derzeit belegten Protokollspeicherplatz zurück und zeigt an, wann das Transaktionsprotokoll abgeschnitten werden muss. 
 
 Informationen zur aktuellen Größe einer Protokolldatei, ihrer maximalen Größe sowie der für die Datei festgelegten automatischen Vergrößerungsoption können Sie auch den Spalten **size**, **max_size** und **growth** für die betreffende Protokolldatei in [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) entnehmen.  
@@ -33,7 +33,7 @@ Informationen zur aktuellen Größe einer Protokolldatei, ihrer maximalen Größ
 > [!IMPORTANT]
 > Achten Sie darauf, den Protokolldatenträger nicht zu überlasten. Stellen Sie sicher, dass der Protokollspeicher den [IOPS](https://wikipedia.org/wiki/IOPS)-Anforderungen und Anforderungen an niedrige Latenzen für Ihre Transaktionslast gerecht wird. 
   
-##  <a name="ShrinkSize"></a> Verkleinern der Protokolldateigröße  
+##  <a name="shrink-log-file-size"></a><a name="ShrinkSize"></a> Verkleinern der Protokolldateigröße  
  Sie müssen zum Reduzieren der physischen Größe einer physischen Protokolldatei die Protokolldatei verkleinern. Dies ist nützlich, wenn Sie wissen, dass eine Transaktionsprotokolldatei nicht verwendeten Speicherplatz enthält. Sie können eine Protokolldatei nur dann verkleinern, wenn die Datenbank online und mindestens eine [virtuelle Protokolldatei (Virtual Log File, VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) verfügbar ist. In einigen Fällen ist eine Verkleinerung des Protokolls möglicherweise erst nach der nächsten Protokollkürzung möglich.  
   
 > [!NOTE]
@@ -60,7 +60,7 @@ Beim Verkleinern einer Protokolldatei werden [VLFs](../../relational-databases/s
   
 -   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (Informationen finden Sie in den Spalten **size**, **max_size** und **growth** für die Protokolldateien.)  
   
-##  <a name="AddOrEnlarge"></a> Hinzufügen oder Vergrößern einer Protokolldatei  
+##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a> Hinzufügen oder Vergrößern einer Protokolldatei  
 Sie können Speicherplatz schaffen, indem Sie entweder die vorhandene Protokolldatei vergrößern (sofern der Speicherplatz dies zulässt) oder der Datenbank eine neue Protokolldatei hinzufügen, wofür normalerweise ein anderer Datenträger verwendet wird. Eine Transaktionsprotokolldatei ist ausreichend, es sei denn, der Protokollspeicherplatz und der Speicherplatz auf dem Volume, auf dem die Protokolldatei gespeichert ist, sind ausgeschöpft.   
   
 -   Sie können der Datenbank eine Protokolldatei hinzufügen, indem Sie die `ADD LOG FILE`-Klausel der `ALTER DATABASE`-Anweisung verwenden. Durch das Hinzufügen einer Protokolldatei kann das Protokoll vergrößert werden.  
@@ -68,12 +68,12 @@ Sie können Speicherplatz schaffen, indem Sie entweder die vorhandene Protokolld
 
 Weitere Informationen finden Sie in diesem Thema unter [Empfehlungen](#Recommendations).
     
-##  <a name="tempdbOptimize"></a> Optimieren der Größe des tempdb-Transaktionsprotokolls  
+##  <a name="optimize-tempdb-transaction-log-size"></a><a name="tempdbOptimize"></a> Optimieren der Größe des tempdb-Transaktionsprotokolls  
  Beim Neustarten einer Serverinstanz wird das Transaktionsprotokoll der **tempdb** -Datenbank auf seine ursprüngliche Größe (vor einer automatischen Größenerweiterung) zurückgesetzt. Dies kann eine Leistungsminderung des **tempdb** -Transaktionsprotokolls zur Folge haben. 
  
  Der damit verbundene Verwaltungsaufwand lässt sich vermeiden, indem Sie nach dem Starten oder erneuten Starten der Serverinstanz die Größe des **tempdb** -Transaktionsprotokolls erhöhen. Weitere Informationen finden Sie unter [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
-##  <a name="ControlGrowth"></a> Steuern einer Transaktionsprotokolldatei  
+##  <a name="control-transaction-log-file-growth"></a><a name="ControlGrowth"></a> Steuern einer Transaktionsprotokolldatei  
  Sie können die [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)-Anweisung verwenden, um die Vergrößerung einer Transaktionsprotokolldatei zu steuern. Beachten Sie Folgendes:  
   
 -   Verwenden Sie die Option `SIZE`, um die aktuelle Dateigröße in KB-, MB-, GB- und TB-Einheiten zu ändern.  
@@ -82,7 +82,7 @@ Weitere Informationen finden Sie in diesem Thema unter [Empfehlungen](#Recommend
 
 Weitere Informationen finden Sie in diesem Thema unter [Empfehlungen](#Recommendations).
 
-## <a name="Recommendations"></a> Empfehlungen
+## <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen
 Es folgen einige allgemeine Empfehlungen für die Arbeit mit Transaktionsprotokolldateien:
 
 -   Das mit der Option `FILEGROWTH` festgelegte automatische Vergrößerungsinkrement (autogrow) des Transaktionsprotokolls muss groß genug sein, um den Anforderungen der Workloadtransaktionen immer einen Schritt voraus sein. Die Schrittweite für die Dateivergrößerung sollte für eine Protokolldatei stets groß genug sein, um häufige Erweiterungen zu vermeiden. Ein guter Anhaltspunkt für die korrekte Anpassung der Größe eines Transaktionsprotokolls ist die Überwachung der Menge der Protokolldaten, die in folgenden Zeiträumen belegt werden:

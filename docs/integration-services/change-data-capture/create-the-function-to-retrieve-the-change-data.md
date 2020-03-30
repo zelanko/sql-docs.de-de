@@ -13,10 +13,10 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72251986"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Erstellen der Funktion zum Abrufen der Änderungsdaten
@@ -210,7 +210,7 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>Abrufen weiterer Metadaten mit den Änderungsdaten  
  Obwohl die zuvor gezeigte vom Benutzer erstellte Tabellenwert-Funktion nur die **__$operation**-Spalte verwendet, gibt die **cdc.fn_cdc_get_net_changes_<Aufzeichnungsinstanz>** -Funktion für jede Änderungszeile vier Metadatenspalten zurück. Wenn Sie diese Werte in Ihrem Datenfluss verwenden möchten, können Sie diese als zusätzliche Spalten aus der Tabellenwert-Wrapperfunktion zurückgeben.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|LSN, die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Wenn beispielsweise bei einem Updatevorgang in der Quelltabelle zwei unterschiedliche Zeilen geändert werden, enthält die Änderungstabelle vier Zeilen (zwei mit den alten Werten und zwei mit den neuen Werten), die jeweils denselben **__$start_lsn** -Wert aufweisen.|  
 |**__$seqval**|**binary(10)**|Sequenzwert, mit dem Zeilenänderungen in einer Transaktion sortiert werden.|  

@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 42250d8edbd646f9bd89f3663f2591b3404fe05f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68007940"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutorial: Bereitstellen und Ausführen eines SSIS-Pakets in Azure
@@ -54,7 +54,7 @@ Beachten Sie diese beiden wichtigen Punkte. Diese Schritte werden in der folgend
 
 2. **Stellen Sie eine Verbindung mit dem Server her**. Geben Sie im Dialogfeld **Mit Server verbinden** die folgenden Informationen ein:
 
-   | Einstellung       | Vorgeschlagener Wert | Beschreibung | 
+   | Einstellung       | Vorgeschlagener Wert | BESCHREIBUNG | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servertyp** | Datenbank-Engine | Dieser Wert ist erforderlich. |
    | **Servername** | Der vollqualifizierte Servername | Der Name muss das folgende Format aufweisen: **mysqldbserver.database.windows.net**. Falls Sie den Servernamen benötigen, finden Sie ihn mithilfe der Anweisungen unter [Connect to the SSISDB Catalog database on Azure (Herstellen einer Verbindung mit der SSIS-Katalogdatenbank in Azure)](ssis-azure-connect-to-catalog-database.md). |

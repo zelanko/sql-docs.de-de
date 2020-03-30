@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73049908"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Versionierungssystem für die SQL-Dokumentation
@@ -113,7 +113,7 @@ Im folgenden ungewöhnlichen Szenario wird erklärt, was passiert, wenn Sie auf 
 
 Der folgende Artikel wurde neu für SQL Server 2017 hinzugefügt. In diesem Artikel werden die Features beschrieben, die in Version 2017 von SQL Server hinzugefügt wurden. Die meisten oder alle dieser neuen Features gehören auch zu Version 2019. Dies sind die Attribute des Artikels.
 
-| attribute | value |
+| attribute | Wert |
 | :-------- | :---- |
 | Titel | Neues in SQL Server 2017 |
 | Monikerbereich | `>= sql-server-2017 || = sqlallproducts-allversions` |
@@ -130,13 +130,13 @@ Anhand der grundlegenden `https`-Adresse wird in der folgenden Tabelle erläuter
 | `sql-server-2019` | Dasselbe würde für Wert `sql-server-2017` gelten, außer, dass der Parameter und die Versionskontrolle auf 2019 gesetzt werden. |
 | &nbsp; | &nbsp; |
 
-### <a name="anchor-allsql-hidenothing"></a> Alle SQL-Produkte: Nichts ausblenden, spezieller Moniker
+### <a name="all-sql---hide-nothing-special-moniker"></a><a name="anchor-allsql-hidenothing"></a> Alle SQL-Produkte: Nichts ausblenden, spezieller Moniker
 
 Es gibt einen speziellen Moniker für **Alle SQL-Produkte**, und seine einzige Version lautet **Nichts ausblenden**. Dieser Moniker dient internen Testzwecken und ist zur Überprüfung bestimmter Änderungen bestimmt. Wenn dieser Moniker von einem Kunden verwendet wird, sind die angezeigten Inhalte wahrscheinlich eher irreführend als informativ.
 
 Einige Artikel enthalten Informationen zu mehreren Versionen von SQL Server. Jeder reguläre Moniker blendet versionierte Abschnitte aus, in denen ggf. Informationen enthalten sind, die für die Monikerversion ungenau, verwirrend oder widersprüchlich sind. Der spezielle Moniker für **Alle SQL-Produkte** zeigt alle Versionsabschnitte an, und es ist möglicherweise nicht ersichtlich, dass ggf. falsche Informationen angezeigt werden.
 
-## <a name="anchor-message-unavailable-for-moniker"></a> Meldung: Die angeforderte Seite ist für den \<Moniker\> nicht verfügbar.
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> Meldung: Die angeforderte Seite ist für den \<Moniker\> nicht verfügbar.
 
 Das folgende Szenario führt zur Anzeige einer Informationsmeldung am oberen Rand der :::no-loc text="Docs":::-Webseite:
 

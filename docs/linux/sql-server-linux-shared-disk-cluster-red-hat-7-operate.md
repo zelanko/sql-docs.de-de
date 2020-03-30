@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558525"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Ausführen einer RHEL-Failoverclusterinstanz für SQL Server
@@ -39,7 +39,7 @@ Das folgende Diagramm veranschaulicht die Komponenten in einem Linux-Cluster mit
 
 Weitere Informationen zur Clusterkonfiguration, den Optionen für Ressourcen-Agents und der Verwaltung finden Sie in der [Referenzdokumentation von RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
-## <a name = "failManual"></a>Durchführen eines manuellen Clusterfailovers
+## <a name="failover-cluster-manually"></a><a name = "failManual"></a>Durchführen eines manuellen Clusterfailovers
 
 Der Befehl `resource move` erstellt eine Einschränkung, die die Ressource zwingt, auf dem Zielknoten zu starten.  Nachdem der Befehl `move` ausgeführt wurde, entfernt die ausführende Ressource `clear` die Einschränkung, sodass die Ressource erneut verschoben oder ein automatisches Failover für die Ressource durchgeführt werden kann. 
 
@@ -210,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 Für die Behandlung von Problemen mit dem Cluster kann es hilfreich sein, zu verstehen, wie die drei Daemons bei der Verwaltung von Clusterressourcen zusammenarbeiten. 
 
-| Daemon | Beschreibung 
+| Daemon | BESCHREIBUNG 
 | ----- | -----
 | Corosync | Ermöglicht Quorum-Mitgliedschaft und Messaging zwischen Clusterknoten
 | Pacemaker | Baut auf Corosync auf und bietet Zustandsautomaten für Ressourcen 

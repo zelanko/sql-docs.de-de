@@ -15,10 +15,10 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012164"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Benutzeroptionen
@@ -44,13 +44,13 @@ ms.locfileid: "68012164"
   
 -   **Nachverfolgung:**  [Nach dem Konfigurieren der Konfigurationsoption „Benutzeroptionen“](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   In der folgenden Tabelle werden die Konfigurationswerte für **Benutzeroptionen**aufgeführt und beschrieben. Nicht alle Konfigurationswerte sind miteinander kompatibel. ANSI_NULL_DFLT_ON und ANSI_NULL_DFLT_OFF können beispielsweise nicht gleichzeitig festgelegt werden.  
   
-    |value|Konfiguration|Beschreibung|  
+    |Wert|Konfiguration|BESCHREIBUNG|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|Steuert die zwischenzeitliche oder verzögerte Einschränkungsüberprüfung.|  
     |2|IMPLICIT_TRANSACTIONS|Steuert bei Verbindungen zu dblib-Netzwerkbibliotheken, ob bei Ausführung einer Anweisung implizit eine Transaktion gestartet wird. Die Einstellung IMPLICIT_TRANSACTIONS wirkt sich weder auf ODBC- noch auf OLE DB-Verbindungen aus.|  
@@ -70,12 +70,12 @@ ms.locfileid: "68012164"
   
 -   Die Bitpositionen in **Benutzeroptionen** sind mit den Positionen in @@OPTIONS identisch. Jede Verbindung verfügt über eine eigene @@OPTIONS-Funktion, die die Konfigurationsumgebung darstellt. Bei der Anmeldung bei einer Instanz von \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erhält ein Benutzer eine Standardumgebung, die @@OPTIONS den aktuellen Wert von **Benutzeroptionen** zuweist. Das Ausführen von SET-Anweisungen für **Benutzeroptionen** wirkt sich ausschließlich auf den entsprechenden Wert in der @@OPTIONS-Funktion der Sitzung aus. Alle Verbindungen, die nach der Änderung dieser Einstellung erstellt werden, erhalten den neuen Wert.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>So konfigurieren Sie die Konfigurationsoption "Benutzeroptionen"  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68012164"
   
      Standardmäßig sind keine Benutzeroptionen konfiguriert.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>So konfigurieren Sie die Konfigurationsoption "Benutzeroptionen"  
   
@@ -107,7 +107,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Konfigurationsoption „Benutzeroptionen“  
+##  <a name="follow-up-after-you-configure-the-user-options-configuration-option"></a><a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Konfigurationsoption „Benutzeroptionen“  
  Die Einstellung tritt ohne Neustarten des Servers sofort in Kraft.  
   
 ## <a name="see-also"></a>Weitere Informationen  

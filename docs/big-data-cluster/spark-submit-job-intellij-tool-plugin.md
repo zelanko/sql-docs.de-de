@@ -11,10 +11,10 @@ ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244083"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Übermitteln von Spark-Aufträgen auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ
@@ -140,7 +140,7 @@ Stellen Sie sicher, dass die Voraussetzungen von „WINUTILS.exe“ erfüllt sin
 
 4. Geben Sie die folgenden Werte an, und klicken Sie anschließend auf **OK**:
 
-    |Eigenschaft |value |
+    |Eigenschaft |Wert |
     |----|----|
     |„Job main class“ (Hauptklasse des Auftrags)|Der Standardwert ist die Hauptklasse der ausgewählten Datei. Sie können eine andere Klasse auswählen, indem Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) klicken.|
     |Umgebungsvariablen|Stellen Sie sicher, dass für HADOOP_HOME der richtige Wert festgelegt ist.|
@@ -174,7 +174,7 @@ Spark Livy Interactive Session Console(Scala) wird nur für IntelliJ 2018.2 und
 
 4. Geben Sie die folgenden Werte an, und klicken Sie anschließend auf **OK**:
 
-    |Eigenschaft |value |
+    |Eigenschaft |Wert |
     |----|----|
     |„Spark clusters (Linux only)“ (Spark-Cluster (nur Linux))|Wählen Sie den Big-Data-Cluster für SQL Server aus, auf dem Sie Ihre Anwendung ausführen möchten.|
     |„Main class name“ (Name der Hauptklasse)|Der Standardwert ist die Hauptklasse der ausgewählten Datei. Sie können eine andere Klasse auswählen, indem Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) klicken.|

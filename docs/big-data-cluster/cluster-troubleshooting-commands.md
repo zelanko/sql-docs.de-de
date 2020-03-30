@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70153630"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Überwachung und Problembehandlung von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>Überwachung und Problembehandlung von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -98,7 +98,7 @@ Sie können die Protokolle für Container abrufen, die in einem Pod ausgeführt 
 kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
-## <a id="services"></a> Abrufen des Status von Diensten
+## <a name="get-status-of-services"></a><a id="services"></a> Abrufen des Status von Diensten
 
 Führen Sie den folgenden Befehl aus, um ausführliche Informationen zu den Big-Data-Clusterdiensten abzurufen. Diese Informationen umfassen den Typ und die IP-Adressen, die den entsprechenden Diensten und Ports zugeordnet sind. Beachten Sie, dass Big-Data-Clusterdienste für SQL Server in einem neuen Namespace erstellt werden, der zur Clusterbootstrapzeit basierend auf dem in der Konfigurationsdatei der Bereitstellung angegebenen Clusternamen erstellt wird.
 
@@ -114,7 +114,7 @@ kubectl get svc -n mssql-cluster
 
 Die folgenden Dienste unterstützen externe Verbindungen mit dem Big-Data-Cluster:
 
-| Dienst | Beschreibung |
+| Dienst | BESCHREIBUNG |
 |---|---|
 | **master-svc-external** | Bietet Zugriff auf die Masterinstanz.<br/>(**EXTERNAL-IP,31433** und der **SA**-Benutzer) |
 | **controller-svc-external** | Unterstützt Tools und Clients, die den Cluster verwalten. |
@@ -138,7 +138,7 @@ Im folgenden Beispiel werden ausführliche Informationen zum Dienst **master-svc
 kubectl describe service master-svc-external -n mssql-cluster
 ```
 
-## <a id="copy"></a> Kopieren von Dateien
+## <a name="copy-files"></a><a id="copy"></a> Kopieren von Dateien
 
 Wenn Sie Dateien aus dem Container auf Ihren lokalen Computer kopieren müssen, verwenden Sie den Befehl `kubectl cp` mit der folgenden Syntax:
 
@@ -152,7 +152,7 @@ Auf ähnliche Weise können Sie `kubectl cp` verwenden, um Dateien vom lokalen C
 kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <container_name>  -n <namespace_name>
 ```
 
-### <a id="copyfrom"></a> Kopieren von Dateien aus einem Container
+### <a name="copy-files-from-a-container"></a><a id="copyfrom"></a> Kopieren von Dateien aus einem Container
 
 Im folgenden Beispiel werden die SQL Server-Protokolldateien aus dem Container in den `~/temp/sqlserverlogs`-Pfad auf dem lokalen Computer (in diesem Beispiel handelt es sich bei dem lokalen Computer um einen Linux-Client) kopiert:
 
@@ -160,7 +160,7 @@ Im folgenden Beispiel werden die SQL Server-Protokolldateien aus dem Container i
 kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sqlserverlogs
 ```
 
-### <a id="copyinto"></a> Kopieren von Dateien in Container
+### <a name="copy-files-into-container"></a><a id="copyinto"></a> Kopieren von Dateien in Container
 
 Im folgenden Beispiel wird die Datei **AdventureWorks2016CTP3.bak** vom lokalen Computer in den Container der SQL Server-Masterinstanz (`mssql-server`) im Pod `master-0` kopiert. Die Datei wird in das `/tmp`-Verzeichnis in den Container kopiert. 
 
@@ -168,7 +168,7 @@ Im folgenden Beispiel wird die Datei **AdventureWorks2016CTP3.bak** vom lokalen 
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
 ```
 
-## <a id="forcedelete"></a> Erzwingen des Löschens eines Pods
+## <a name="force-delete-a-pod"></a><a id="forcedelete"></a> Erzwingen des Löschens eines Pods
  
 Es wird nicht empfohlen, das Löschen eines Pods zu erzwingen. Zum Testen der Verfügbarkeit, Resilienz oder Datenpersistenz können Sie mit dem Befehl `kubectl delete pods` einen Pod löschen, um einen Podfehler zu simulieren.
 
@@ -182,7 +182,7 @@ Im folgenden Beispiel wird der Speicherpoolpod `storage-0-0` gelöscht:
 kubectl delete pods storage-0-0 -n mssql-cluster --grace-period=0 --force
 ```
 
-## <a id="getip"></a> Abrufen einer Pod-IP-Adresse
+## <a name="get-pod-ip"></a><a id="getip"></a> Abrufen einer Pod-IP-Adresse
  
 Für die Problembehandlung müssen Sie möglicherweise die IP-Adresse des Knotens abrufen, auf dem der Pod derzeit ausgeführt wird. Verwenden Sie den Befehl `kubectl get pods` mit der folgenden Syntax, um die IP-Adresse abzurufen:
 

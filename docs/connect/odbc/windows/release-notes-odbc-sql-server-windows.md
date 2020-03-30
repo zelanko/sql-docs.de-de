@@ -11,16 +11,14 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 95d3002ff9dd32bc4070cfb541ebd54edbc70b7c
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.openlocfilehash: e9210592e4c4e347662dc0ec534d511be4fa2e95
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79090507"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80345428"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Versionshinweise für Microsoft ODBC Driver for SQL Server für Windows
-
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 In diesem Artikel mit Versionshinweisen werden die Neuerungen für Microsoft ODBC Driver for SQL Server unter Windows beschrieben.
 

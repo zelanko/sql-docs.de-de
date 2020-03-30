@@ -35,10 +35,10 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76929111"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einem anderen Server
@@ -59,7 +59,7 @@ ms.locfileid: "76929111"
   
  Wenn Sie die Datenbank für eine Anwendung in eine andere Serverinstanz verschieben, müssen Sie alle Metadaten der abhängigen Entitäten und Objekte in den Datenbanken **master** und **msdb** der Zielserverinstanz neu erstellen. Wenn für eine Datenbankanwendung beispielsweise Trigger auf Serverebene verwendet werden, genügt es nicht, die Datenbank im neuen System lediglich anzufügen oder wiederherzustellen. Die Datenbank funktioniert nicht wie erwartet, wenn Sie die Metadaten für diese Trigger in der **master** -Datenbank nicht manuell neu erstellen.  
   
-##  <a name="information_entities_and_objects"></a> Informationen, Entitäten und Objekte, die außerhalb der Benutzerdatenbanken gespeichert werden  
+##  <a name="information-entities-and-objects-that-are-stored-outside-of-user-databases"></a><a name="information_entities_and_objects"></a> Informationen, Entitäten und Objekte, die außerhalb der Benutzerdatenbanken gespeichert werden  
  Im restlichen Teil dieses Artikels die potenziellen Probleme zusammengefasst, die eine Datenbank betreffen können, die auf einer anderen Serverinstanz bereitgestellt werden soll. Möglicherweise müssen Sie einen oder mehrere Typen von Informationen, Entitäten oder Objekten neu erstellen, die in der folgenden Liste aufgeführt sind. Klicken Sie zum Anzeigen einer Zusammenfassung auf den Link für das Element.  
   
 -   [Serverkonfigurationseinstellungen](#server_configuration_settings)  
@@ -96,13 +96,13 @@ ms.locfileid: "76929111"
   
 -   [Trigger (auf Serverebene)](#triggers)  
   
-##  <a name="server_configuration_settings"></a> Server Configuration Settings  
+##  <a name="server-configuration-settings"></a><a name="server_configuration_settings"></a> Server Configuration Settings  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden wichtige Dienste und Funktionen selektiv installiert und gestartet. Auf diese Weise wird die angreifbare Oberfläche eines Systems verringert. Bei neuen Installationen sind viele Funktionen in der Standardkonfiguration nicht aktiviert. Wenn die Datenbank von einem standardmäßig deaktivierten Dienst oder Funktion abhängig ist, muss dieser Dienst bzw. diese Funktion auf der Zielserverinstanz aktiviert werden.  
   
  Weitere Informationen zu diesen Einstellungen sowie Informationen zum Aktivieren oder Deaktivieren dieser Einstellungen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
   
-##  <a name="credentials"></a> Anmeldeinformationen  
+##  <a name="credentials"></a><a name="credentials"></a> Anmeldeinformationen  
  Anmeldeinformationen sind in einem Datensatz gespeichert, in dem die Authentifizierungsinformationen enthalten sind, die zum Herstellen einer Verbindung mit einer Ressource außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erforderlich sind. Die meisten Anmeldeinformationen bestehen aus einem Windows-Anmeldenamen und -Kennwort.  
   
  Weitere Informationen zu diesem Feature finden Sie unter [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
@@ -110,7 +110,7 @@ ms.locfileid: "76929111"
 > **HINWEIS:** Für Proxykonten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents werden Anmeldeinformationen verwendet. Die ID der von einem Proxykonto verwendeten Anmeldeinformationen kann anhand der [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) -Systemtabelle festgestellt werden.  
   
   
-##  <a name="cross_database_queries"></a> Cross-Database Queries  
+##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a> Cross-Database Queries  
  Die Datenbankoptionen DB_CHAINING und TRUSTWORTHY sind standardmäßig auf OFF festgelegt. Ist eine dieser Optionen für die ursprüngliche Datenbank auf ON festgelegt, müssen Sie die betreffende Option u. U. auch auf der Zielserverinstanz aktivieren. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  Durch Anfüge- und Trennvorgänge wird die datenbankübergreifende Besitzverkettung für die Datenbank deaktiviert. Informationen zum Aktivieren der Verkettung finden Sie unter [Datenbankübergreifende Besitzverkettung (Serverkonfigurationsoption)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
@@ -118,14 +118,14 @@ ms.locfileid: "76929111"
  Weitere Informationen finden Sie auch unter [Einrichten der TRUSTWORTHY-Eigenschaft für eine Spiegeldatenbank &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
   
-##  <a name="database_ownership"></a> Database Ownership  
+##  <a name="database-ownership"></a><a name="database_ownership"></a> Database Ownership  
  Wenn eine Datenbank auf einem anderen Computer wiederhergestellt wird, wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename oder der Windows-Benutzer, der den Wiederherstellungsvorgang initiiert, automatisch zum Besitzer der neuen Datenbank. Nach dem Wiederherstellen der Datenbank kann der Systemadministrator oder der neue Datenbankbesitzer den Datenbankbesitz ändern.  
   
-##  <a name="distributed_queries_and_linked_servers"></a> Verteilte Abfragen und Verbindungsserver  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> Verteilte Abfragen und Verbindungsserver  
  Verteilte Abfragen und Verbindungsserver werden für OLE DB-Anwendungen unterstützt. Verteilte Abfragen greifen auf Daten von mehreren heterogenen Datenquellen auf demselben oder auf unterschiedlichen Computern zu. Durch die Konfiguration von Verbindungsservern ist es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglich, Befehle für OLE DB-Datenquellen auf Remoteservern auszuführen. Weitere Informationen zu diesen Features finden Sie unter [Verbindungsserver &#40;Datenbank-Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
   
-##  <a name="encrypted_data"></a> Encrypted Data  
+##  <a name="encrypted-data"></a><a name="encrypted_data"></a> Encrypted Data  
  Wenn die Datenbank, die Sie auf einer anderen Serverinstanz verfügbar machen, verschlüsselte Daten enthält und wenn der Datenbank-Hauptschlüssel durch den Diensthauptschlüssel auf dem ursprünglichen Server geschützt wird, muss die Verschlüsselung des Diensthauptschlüssels u. U. neu erstellt werden. Der *Datenbank-Hauptschlüssel* ist ein symmetrischer Schlüssel, der zum Schützen von privaten Schlüsseln von Zertifikaten und asymmetrischen Schlüsseln in einer verschlüsselten Datenbank verwendet wird. Beim Erstellen wird der Datenbank-Hauptschlüssel mithilfe des Triple DES-Algorithmus und eines vom Benutzer angegebenen Kennworts verschlüsselt.  
   
  Um die automatische Entschlüsselung des Datenbank-Hauptschlüssels auf einer Serverinstanz zu ermöglichen, wird eine Kopie dieses Schlüssels mit dem Diensthauptschlüssel verschlüsselt. Diese verschlüsselte Kopie wird sowohl in der Datenbank als auch in der **master**-Datenbank gespeichert. In der Regel wird die in **master** gespeicherte Kopie im Hintergrund aktualisiert, sobald der Hauptschlüssel geändert wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, den Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel der Instanz zu entschlüsseln. Wenn beim Entschlüsseln ein Fehler auftritt, wird der Anmeldeinformationsspeicher von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Anmeldeinformationen des Hauptschlüssels durchsucht, die dieselbe Familien-GUID wie die Datenbank aufweisen, für die der Hauptschlüssel benötigt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den Datenbank-Hauptschlüssel mit allen übereinstimmenden Anmeldeinformationen zu entschlüsseln, bis die Entschlüsselung erfolgreich ausgeführt wurde oder keine Anmeldeinformationen mehr vorhanden sind. Ein Hauptschlüssel, der nicht mit dem Diensthauptschlüssel verschlüsselt ist, muss mithilfe der OPEN MASTER KEY-Anweisung und eines Kennworts geöffnet werden.  
@@ -143,11 +143,11 @@ ms.locfileid: "76929111"
 -   [Erstellen identischer symmetrischer Schlüssel auf zwei Servern](../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-##  <a name="user_defined_error_messages"></a> User-defined Error Messages  
+##  <a name="user-defined-error-messages"></a><a name="user_defined_error_messages"></a> User-defined Error Messages  
  Benutzerdefinierte Fehlermeldungen sind in der [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) -Katalogsicht enthalten. Diese Katalogsicht wird in der **master**-Datenbank gespeichert. Wenn eine Datenbankanwendung benutzerdefinierte Fehlermeldungen verwenden muss und die Datenbank auf einer anderen Serverinstanz bereitgestellt wird, können Sie mit [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) diese Fehlermeldungen auf der Zielserverinstanz hinzufügen.  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Ereignisbenachrichtigungen und Windows Management Instrumentation (WMI)-Ereignisse (auf Serverebene)  
+##  <a name="event-notifications-and-windows-management-instrumentation-wmi-events-at-server-level"></a><a name="event_notif_and_wmi_events"></a> Ereignisbenachrichtigungen und Windows Management Instrumentation (WMI)-Ereignisse (auf Serverebene)  
   
 ### <a name="server-level-event-notifications"></a>Ereignisbenachrichtigungen auf Serverebene  
  Ereignisbenachrichtigungen auf Serverebene werden in **msdb**gespeichert. Wenn eine Datenbankanwendung von einer Ereignisbenachrichtigung auf Serverebene abhängt, muss diese Ereignisbenachrichtigung daher auf der Zielserverinstanz neu erstellt werden. Die Ereignisbenachrichtigungen auf einer Serverinstanz werden in der [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) -Katalogsicht angezeigt. Weitere Informationen finden Sie unter [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
@@ -175,7 +175,7 @@ ms.locfileid: "76929111"
 -   Wenn sich der Initiatordienst in der gespiegelten Datenbank befindet, muss der Zieldienst eine gespiegelte Route zum Initiator zurück aufweisen, damit Bestätigungen und Antworten übermittelt werden können. Der Initiator kann jedoch eine normale Route zum Ziel besitzen.  
   
   
-##  <a name="extended_stored_procedures"></a> Extended Stored Procedures  
+##  <a name="extended-stored-procedures"></a><a name="extended_stored_procedures"></a> Extended Stored Procedures  
   
 > **WICHTIG!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die [CLR-Integration](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
@@ -189,7 +189,7 @@ ms.locfileid: "76929111"
  Weitere Informationen finden Sie unter [GRANT (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) und [REVOKE (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   
   
-##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
+##  <a name="full-text-engine-for-sql-server-properties"></a><a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
  Die Eigenschaften für die Volltext-Engine werden mit [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)festgelegt. Stellen Sie sicher, dass die Zielserverinstanz die erforderlichen Einstellungen für diese Eigenschaften aufweist. Weitere Informationen zu diesen Eigenschaften finden Sie unter [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md).  
   
  Wenn die [Wörtertrennungs- und Wortstammerkennungs](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) -Komponente oder die [Filterkomponente](../../relational-databases/search/configure-and-manage-filters-for-search.md) auf der ursprünglichen Serverinstanz und der Zielserverinstanz jeweils unterschiedliche Versionen haben, weisen die Volltextindizierung und die Volltextabfragen möglicherweise ein anderes Verhalten auf. Ebenso wird der [Thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) in instanzspezifischen Dateien gespeichert. Sie müssen entweder eine Kopie dieser Dateien in einen entsprechenden Speicherort auf der Zielserverinstanz übertragen oder die Dateien auf der neuen Instanz erneut erstellen.  
@@ -203,7 +203,7 @@ ms.locfileid: "76929111"
 -   [Datenbankspiegelung und Volltextkataloge &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
 
   
-##  <a name="jobs"></a> Aufträge  
+##  <a name="jobs"></a><a name="jobs"></a> Aufträge  
  Wenn die Datenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträge verwendet, müssen Sie diese auf der Zielserverinstanz neu erstellen. Aufträge sind von der jeweiligen Umgebung abhängig. Wenn Sie vorhaben, einen vorhandenen Auftrag auf der Zielserverinstanz neu zu erstellen, müssen Sie die Zielserverinstanz ggf. so ändern, dass sie mit der Umgebung dieses Auftrags auf der ursprünglichen Serverinstanz übereinstimmt. Die folgenden Umgebungsfaktoren sind dabei von Bedeutung:  
   
 -   Der vom Auftrag verwendete Anmeldename  
@@ -255,7 +255,7 @@ ms.locfileid: "76929111"
  Es wird empfohlen, zunächst ein Skript für einen einfachen Auftrag zu erstellen, den Auftrag für einen anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst neu zu erstellen und dann den Auftrag auszuführen, um zu sehen, ob er sich wie gewünscht verhält. Auf diese Weise können Sie Inkompatibilitäten feststellen und versuchen, diese zu lösen. Wenn ein durch Skript erstellter Auftrag in der neuen Umgebung nicht wie beabsichtigt ausgeführt wird, sollten Sie einen äquivalenten Auftrag erstellen, der in der betreffenden Umgebung ordnungsgemäß ausgeführt wird.  
   
 
-##  <a name="logins"></a> Anmeldungen  
+##  <a name="logins"></a><a name="logins"></a> Anmeldungen  
  Für die Anmeldung bei einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename erforderlich. Dieser Anmeldename wird bei der Authentifizierung verwendet, die überprüft, ob der Prinzipal eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen kann. Ein Datenbankbenutzer, für den ein entsprechender [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename auf einer Serverinstanz nicht oder falsch definiert ist, kann sich bei der Instanz nicht anmelden. Diese Benutzer werden als *verwaiste Benutzer* der Datenbank dieser Serverinstanz bezeichnet. Ein Datenbankbenutzer kann zu einem verwaisten Benutzer werden, wenn die Datenbank auf einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz wiederhergestellt, an eine andere SQL Server-Instanz angefügt oder auf eine andere Instanz kopiert wird.  
   
  Zum Erstellen eines Skripts für einige oder für alle Objekte in der ursprünglichen Kopie der Datenbank können Sie den Assistenten zum Generieren von SQL Server-Skripts verwenden und im Dialogfeld **Skriptoptionen auswählen** die Option **Skripterstellung für Anmeldungen** auf **True**festlegen.  
@@ -263,7 +263,7 @@ ms.locfileid: "76929111"
 > **HINWEIS:** Informationen zum Einrichten von Anmeldenamen für eine gespiegelte Datenbank finden Sie unter [Einrichten von Anmeldekonten für die Datenbankspiegelung oder Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) und [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
-##  <a name="permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="permissions"></a> Berechtigungen  
  Möglicherweise werden die folgenden Berechtigungstypen beeinflusst, wenn eine Datenbank auf einer anderen Serverinstanz verfügbar gemacht wird.  
   
 -   GRANT-, REVOKE- oder DENY-Berechtigungen für Systemobjekte  
@@ -312,21 +312,21 @@ ms.locfileid: "76929111"
 Die TRUSTWORTHY-Datenbankeigenschaft gibt an, ob diese Instanz von SQL Server die Datenbank und ihre Inhalte als vertrauenswürdig einstuft. Wenn eine Datenbank angefügt wird, ist diese Option standardmäßig und aus Sicherheitsgründen auf OFF festgelegt, selbst wenn sie im ursprünglichen Server auf ON festgelegt ist. Weitere Informationen zu dieser Eigenschaft finden Sie unter [TRUSTWORTHY-Datenbankeigenschaft](../security/trustworthy-database-property.md), und Informationen zum Ändern dieser Option auf ON finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
 
 
-##  <a name="replication_settings"></a> Replication Settings  
+##  <a name="replication-settings"></a><a name="replication_settings"></a> Replication Settings  
  Wenn Sie eine Sicherungskopie einer replizierten Datenbank auf einem anderen Server bzw. in einer anderen Datenbank wiederherstellen, können Replikationseinstellungen nicht beibehalten werden. In diesem Fall müssen nach der Wiederherstellung der Sicherungskopien sämtliche Veröffentlichungen und Abonnements neu erstellt werden. Um diesen Vorgang zu vereinfachen, können Sie für die aktuellen Replikationseinstellungen und auch für das Aktivieren und Deaktivieren der Replikation Skripts erstellen. Damit Sie diese Skripts beim Neuerstellen der Replikationseinstellungen verwenden können, kopieren Sie diese Skripts, und ändern Sie die Verweise auf die Servernamen passend für die Zielserverinstanz.  
   
  Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von replizierten Datenbanken](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md), [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md) und [Protokollversand und Replikation &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
   
-##  <a name="sb_applications"></a> Service Broker Applications  
+##  <a name="service-broker-applications"></a><a name="sb_applications"></a> Service Broker Applications  
  Viele Aspekte einer [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Anwendung werden zusammen mit der Datenbank verschoben. Einige Aspekte der Anwendung müssen jedoch erneut erstellt oder am neuen Speicherort neu konfiguriert werden.  Standardmäßig und aus Sicherheitsgründen sind die Optionen für *is_broker_enabled* und *is_honoor_broker_priority_on* auf OFF festgelegt, wenn eine Datenbank aus einem anderen Server angefügt wird. Informationen darüber, wie diese Optionen auf ON festgelegt werden, finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
   
-##  <a name="startup_procedures"></a> Startup Procedures  
+##  <a name="startup-procedures"></a><a name="startup_procedures"></a> Startup Procedures  
  Eine Autostartprozedur ist eine gespeicherte Prozedur, die für die automatische Ausführung markiert ist und bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Wenn die Datenbank von irgendwelchen Autostartprozeduren abhängt, müssen Sie diese auf der Zielserverinstanz definieren und so konfigurieren, dass sie beim Start automatisch ausgeführt werden.  
 
   
-##  <a name="triggers"></a> Triggers (at Server Level)  
+##  <a name="triggers-at-server-level"></a><a name="triggers"></a> Triggers (at Server Level)  
  DDL-Trigger lösen gespeicherte Prozeduren als Reaktion auf verschiedene DDL-Ereignisse (Data Definition Language, Datendefinitionssprache) aus. Diese Ereignisse entsprechen in erster Linie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die mit den Schlüsselwörtern CREATE, ALTER und DROP beginnen. Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können ebenfalls DDL-Trigger auslösen.  
   
  Informationen zu dieser Funktion finden Sie unter [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  

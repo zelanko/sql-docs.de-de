@@ -10,10 +10,10 @@ author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
 ms.openlocfilehash: dc70690bfe3d3d95171c885707b5a195c31b2fc1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75233916"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Verwenden von Always Encrypted mit dem Microsoft .NET-Datenanbieter für SQL Server
@@ -289,7 +289,7 @@ Vorgang zum Abrufen eines Spaltenverschlüsselungsschlüssels:
 
 Der **Microsoft .NET-Datenanbieter für SQL Server** enthält die folgenden integrierten Spaltenhauptschlüssel-Speicheranbieter, die mit den bestimmten Anbieternamen vorab registriert wurden (um den Anbieter zu suchen).
 
-| Klasse | Beschreibung | Anbietername (Suche) |
+| Klasse | BESCHREIBUNG | Anbietername (Suche) |
 |:---|:---|:---|
 |[SqlColumnEncryptionCertificateStoreProvider-Klasse](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Ein Anbieter für den Windows-Zertifikatspeicher. | MSSQL_CERTIFICATE_STORE |
 |[SqlColumnEncryptionCngProvider-Klasse](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | Ein Anbieter für einen Schlüsselspeicher, der die [Microsoft Cryptography API unterstützt: Next Generation (CNG) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal). Üblicherweise handelt es sich bei einem solchen Speicher um ein Hardwaresicherheitsmodul – ein physisches Gerät, das digitale Schlüssel schützt und verwaltet und die kryptografische Verarbeitung bereitstellt. | MSSQL_CNG_STORE |
@@ -539,7 +539,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 **Assembly:** Microsoft.Data.SqlClient.dll
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |:---|:---|
 |[SqlColumnEncryptionCertificateStoreProvider-Klasse](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider)|Ein Schlüsselspeicheranbieter für den Windows-Zertifikatspeicher.|
 |[SqlColumnEncryptionCngProvider-Klasse](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider)|Eine Schlüsselspeicheranbieter für die Microsoft Cryptography-API: Next Generation (CNG).|

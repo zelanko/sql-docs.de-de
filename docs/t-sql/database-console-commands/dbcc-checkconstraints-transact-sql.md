@@ -24,10 +24,10 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982396"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
@@ -105,7 +105,7 @@ Es ist nicht möglich, constraint_name oder constraint_id angeben, um nur tempor
 ## <a name="result-sets"></a>Resultsets  
 DBCC CHECKCONSTRAINTS gibt ein Rowset mit folgenden Spalten zurück.
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |Tabellenname|**varchar**|Der Name der Tabelle.|  
 |Constraint Name|**varchar**|Name der verletzten Einschränkung.|  

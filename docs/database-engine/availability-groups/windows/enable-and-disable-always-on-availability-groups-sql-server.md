@@ -16,10 +16,10 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77e07cd5493220f14b177292e9065c355fca866f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000171"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Aktivieren oder Deaktivieren des Features für Always On-Verfügbarkeitsgruppen
@@ -31,7 +31,7 @@ ms.locfileid: "68000171"
 >  Wenn Sie einen WSFC-Cluster löschen und neu erstellen, müssen Sie die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] für jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deaktivieren und erneut aktivieren, auf der auf dem ursprünglichen WSFC-Cluster ein Verfügbarkeitsreplikat gehostet wurde.  
   
   
-##  <a name="Prerequisites"></a> Voraussetzungen zum Aktivieren von AlwaysOn-Verfügbarkeitsgruppen  
+##  <a name="prerequisites-for-enabling-always-on-availability-groups"></a><a name="Prerequisites"></a> Voraussetzungen zum Aktivieren von AlwaysOn-Verfügbarkeitsgruppen  
   
 -   Die Serverinstanz muss sich auf einem WSFC-Knoten (Windows Server Failover Clustering) befinden.  
   
@@ -41,14 +41,14 @@ ms.locfileid: "68000171"
   
  Informationen zu zusätzlichen Voraussetzungen zum Erstellen und Konfigurieren von Verfügbarkeitsgruppen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-## <a name="Permissions"></a> Berechtigungen  
+## <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Während AlwaysOn-Verfügbarkeitsgruppen auf einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]aktiviert sind, verfügt die Serverinstanz über Vollzugriff auf den WSFC-Cluster.  
 
  Erfordert auf dem lokalen Computer die Mitgliedschaft in der Gruppe **Administrator** und Vollzugriff auf den WSFC-Cluster. Wenn Sie AlwaysOn mit PowerShell aktivieren, öffnen Sie das Eingabeaufforderungsfenster unter Verwendung der Option **Als Administrator ausführen** .  
   
  Erfordert, dass von Active Directory Objekte erstellt und Objektberechtigungen verwaltet werden.  
   
-##  <a name="IsEnabled"></a> Bestimmen, ob AlwaysOn-Verfügbarkeitsgruppen aktiviert sind  
+##  <a name="determine-whether-always-on-availability-groups-is-enabled"></a><a name="IsEnabled"></a> Bestimmen, ob AlwaysOn-Verfügbarkeitsgruppen aktiviert sind  
   
 -   [SQL Server Management Studio](#SSMS1Procedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68000171"
   
 -   [PowerShell](#PowerShell1Procedure)  
   
-###  <a name="SSMS1Procedure"></a> Verwenden von SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMS1Procedure"></a> Verwenden von SQL Server Management Studio  
  **So ermitteln Sie, ob AlwaysOn-Verfügbarkeitsgruppen aktiviert sind**  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Serverinstanz, und klicken Sie auf **Eigenschaften**.  
@@ -67,7 +67,7 @@ ms.locfileid: "68000171"
   
     -   **False**, wenn AlwaysOn-Verfügbarkeitsgruppen deaktiviert sind.  
   
-###  <a name="Tsql1Procedure"></a> Verwenden von Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="Tsql1Procedure"></a> Verwenden von Transact-SQL  
  **So ermitteln Sie, ob AlwaysOn-Verfügbarkeitsgruppen aktiviert sind**  
   
 1.  Verwenden Sie die folgende [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md) -Anweisung:  
@@ -85,7 +85,7 @@ ms.locfileid: "68000171"
     > [!NOTE]  
     >  Weitere Informationen zur **IsHadrEnabled** -Servereigenschaft finden Sie unter [SERVERPROPERTY &#40;Transact-SQL&#41;](../../../t-sql/functions/serverproperty-transact-sql.md)unterstützt.  
   
-###  <a name="PowerShell1Procedure"></a> PowerShell  
+###  <a name="using-powershell"></a><a name="PowerShell1Procedure"></a> PowerShell  
  **So ermitteln Sie, ob AlwaysOn-Verfügbarkeitsgruppen aktiviert sind**  
   
 1.  Legen Sie die Serverinstanz als Standard fest (**cd**), auf der Sie ermitteln möchten, ob [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert ist.  
@@ -103,14 +103,14 @@ ms.locfileid: "68000171"
   
 -   [SQL Server PowerShell-Anbieter](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="EnableAOAG"></a> Aktivieren von AlwaysOn-Verfügbarkeitsgruppen  
+##  <a name="enable-always-on-availability-groups"></a><a name="EnableAOAG"></a> Aktivieren von AlwaysOn-Verfügbarkeitsgruppen  
  **So aktivieren Sie AlwaysOn mit der folgenden Option:**  
   
 -   [SQL Server-Konfigurations-Manager](#SQLCM2Procedure)  
   
 -   [PowerShell](#PScmd2Procedure)  
   
-###  <a name="SQLCM2Procedure"></a> Verwenden des SQL Server-Konfigurations-Managers  
+###  <a name="using-sql-server-configuration-manager"></a><a name="SQLCM2Procedure"></a> Verwenden des SQL Server-Konfigurations-Managers  
  **So aktivieren Sie Always On-Verfügbarkeitsgruppen**  
   
 1.  Stellen Sie eine Verbindung mit dem WSFC-Knoten (Windows Server Failover Cluster) her, auf dem die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz gehostet wird, auf der Sie Always On-Verfügbarkeitsgruppen aktivieren möchten.  
@@ -127,7 +127,7 @@ ms.locfileid: "68000171"
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Konfigurations-Manager speichert die Änderung. Dann müssen Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst manuell neu starten. Dies ermöglicht die Auswahl einer für die Geschäftsanforderungen optimalen Neustartzeit. Wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst neu gestartet wird, wird AlwaysOn aktiviert, und die **IsHadrEnabled** -Servereigenschaft wird auf 1 festgelegt.  
   
-###  <a name="PScmd2Procedure"></a> SQL Server PowerShell  
+###  <a name="using-sql-server-powershell"></a><a name="PScmd2Procedure"></a> SQL Server PowerShell  
  **So aktivieren Sie AlwaysOn**  
   
 1.  Wechseln Sie in das Verzeichnis einer Serverinstanz (**cd**), die Sie für AlwaysOn-Verfügbarkeitsgruppen aktivieren möchten.  
@@ -143,14 +143,14 @@ ms.locfileid: "68000171"
   
 -   [SQL Server PowerShell-Anbieter](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-####  <a name="ExmplEnable-SqlHadrServic"></a> Beispiel: Enable-SqlAlwaysOn  
+####  <a name="example-enable-sqlalwayson"></a><a name="ExmplEnable-SqlHadrServic"></a> Beispiel: Enable-SqlAlwaysOn  
  Durch den folgenden PowerShell-Befehl wird [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] auf einer Instanz von SQL Server (*Computer*\\*Instanz*) aktiviert.  
   
 ```  
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
 ```  
   
-##  <a name="DisableAOAG"></a> Deaktivieren von AlwaysOn-Verfügbarkeitsgruppen  
+##  <a name="disable-always-on-availability-groups"></a><a name="DisableAOAG"></a> Deaktivieren von AlwaysOn-Verfügbarkeitsgruppen  
   
 -   **Vor dem Deaktivieren von AlwaysOn:**  
   
@@ -167,14 +167,14 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 > [!IMPORTANT]  
 >  Deaktivieren Sie AlwaysOn jeweils nur auf einer Serverinstanz. Warten Sie nach der Deaktivierung von AlwaysOn-Verfügbarkeitsgruppen, bis der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst neu gestartet wurde, bevor Sie mit einer anderen Serverinstanz fortfahren.  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
  Bevor Sie AlwaysOn auf einer Serverinstanz deaktivieren, sollten Sie wie folgt vorgehen:  
   
 1.  Wenn das primäre Replikat einer Verfügbarkeitsgruppe, die beibehalten werden soll, derzeit auf einer Serverinstanz gehostet wird, sollten Sie nach Möglichkeit manuell ein Failover für die Verfügbarkeitsgruppe zum synchronisierten sekundären Replikat ausführen. Weitere Informationen finden Sie unter [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
 2.  Entfernen Sie alle lokalen sekundären Replikate. Weitere Informationen finden Sie unter [Entfernen eines sekundären Replikats aus einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md).  
   
-###  <a name="SQLCM3Procedure"></a> Verwenden des SQL Server-Konfigurations-Managers  
+###  <a name="using-sql-server-configuration-manager"></a><a name="SQLCM3Procedure"></a> Verwenden des SQL Server-Konfigurations-Managers  
  **So deaktivieren Sie AlwaysOn**  
   
 1.  Stellen Sie eine Verbindung mit dem WSFC-Knoten (Windows Server Failover Cluster)her, auf dem die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz gehostet wird, auf der Sie Always On-Verfügbarkeitsgruppen deaktivieren möchten.  
@@ -189,7 +189,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 5.  Es wird empfohlen, dass Sie die Informationen unter [Nächster Schritt: Nach dem Deaktivieren von Always On](#FollowUp) weiter unten in diesem Thema lesen.  
   
-###  <a name="PScmd3Procedure"></a> SQL Server PowerShell  
+###  <a name="using-sql-server-powershell"></a><a name="PScmd3Procedure"></a> SQL Server PowerShell  
  **So deaktivieren Sie AlwaysOn**  
   
 1.  Wechseln Sie in das Verzeichnis (**cd**) einer derzeit aktivierten Serverinstanz, die Sie für AlwaysOn-Verfügbarkeitsgruppen deaktivieren möchten.  
@@ -211,7 +211,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 -   [SQL Server PowerShell-Anbieter](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-###  <a name="FollowUp"></a>Nächster Schritt: Nach dem Deaktivieren von Always On  
+###  <a name="follow-up-after-disabling-always-on"></a><a name="FollowUp"></a>Nächster Schritt: Nach dem Deaktivieren von Always On  
  Nachdem Sie AlwaysOn-Verfügbarkeitsgruppen deaktiviert haben, muss die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] neu gestartet werden. Die Serverinstanz wird vom SQL-Konfigurations-Manager automatisch neu gestartet. Wenn Sie jedoch das **Disable-SqlAlwaysOn** -Cmdlet verwendet haben, müssen Sie die Serverinstanz manuell neu starten. Weitere Informationen finden Sie unter [sqlservr Application](../../../tools/sqlservr-application.md).  
   
  Auf der neu gestarteten Serverinstanz:  
@@ -232,7 +232,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 4.  Die sekundären Datenbanken übernehmen den Status RESTORING. Sie können sie entweder löschen oder sie mit RESTORE WITH RECOVERY wiederherstellen. Wiederhergestellte Datenbanken nehmen jedoch nicht mehr an der Datensynchronisierung für Verfügbarkeitsgruppen teil.  
   
-##  <a name="WhenCmdletRestartsSQL"></a> Wann startet ein Cmdlet den SQL Server-Dienst neu?  
+##  <a name="when-does-a-cmdlet-restart-the-sql-server-service"></a><a name="WhenCmdletRestartsSQL"></a> Wann startet ein Cmdlet den SQL Server-Dienst neu?  
  Auf einer aktuell ausgeführten Serverinstanz kann die Verwendung von **Enable-SqlAlwaysOn** oder **Disable-SqlAlwaysOn** zum Ändern der aktuellen Always On-Einstellung zu einem Neustart des SQL Server-Diensts führen. Das Neustartverhalten hängt von den folgenden Bedingungen ab:  
   
 |-NoServiceRestart-Parameter angegeben|-Force-Parameter angegeben|Wurde der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst neu gestartet?|  

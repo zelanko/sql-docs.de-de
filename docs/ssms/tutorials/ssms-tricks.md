@@ -20,10 +20,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245510"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Tipps und Tricks zur Verwendung von SQL Server Management Studio (SSMS)
@@ -231,7 +231,7 @@ Der Pfad für Ihr SQL Server-Fehlerprotokoll kann abhängig von Ihren Konfigurat
 
 6. Öffnen Sie die Datei „errorlog.log“ in Notepad. 
 
-## <a name="determine-sql-server-name"></a>Suchen des Namens der SQL Server-Instanz
+## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>Suchen des Namens der SQL Server-Instanz
 
 Es gibt mehrere Optionen, den Namen Ihres SQL-Servers zu finden, bevor oder nachdem eine Verbindung mit SQL Server hergestellt wurde.  
 

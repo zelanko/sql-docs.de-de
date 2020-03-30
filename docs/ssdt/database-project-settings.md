@@ -41,10 +41,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241684"
 ---
 # <a name="database-project-settings"></a>Datenbankprojekteinstellungen
@@ -81,10 +81,10 @@ Mit Datenbankprojekteinstellungen werden Aspekte der Datenbank-, Debug- und Buil
   
 3.  Klicken Sie auf die Registerkarte **Projekteinstellungen** . Jetzt können Sie die allgemeinen Eigenschaften der Eigenschaften des Datenbankprojekts konfigurieren. Im linken Fensterbereich sind verschiedene Registerkarten (für unterschiedliche Kategorien) verfügbar.  
   
-## <a name="bkmk_proj_settings"></a>Projekteinstellungen  
+## <a name="project-settings"></a><a name="bkmk_proj_settings"></a>Projekteinstellungen  
 Die Einstellungen in der folgenden Tabelle gelten für alle Konfigurationen dieses Datenbankprojekts.  
   
-|Feld|Standardwert|Beschreibung|  
+|Feld|Standardwert|BESCHREIBUNG|  
 |---------|-----------------|---------------|  
 |Zielplattform|Microsoft SQL Server 2012|Gibt die Version von SQL Server an, die das Ziel dieses Datenbankprojekts ist.|  
 |Erweiterte Transact\-SQL-Überprüfung für gemeinsame Objekte aktivieren|Nicht aktiviert, wenn Sie ein neues Projekt erstellen.<br /><br />Aktiviert, wenn Sie ein Projekt aus dem SQL Server-Objekt-Explorer erstellen, das mit SQL Azure verbunden ist, eine SQL Azure-Datenbank in das Projekt importieren oder die Zielplattform eines Projekts in SQL Azure ändern.|Wenn diese Option aktiviert ist, werden Fehler im Projekt, dessen Überprüfung durch den SQL Server-Compiler fehlgeschlagen ist, gemeldet. Wenn Sie die Zielplattform in SQL Azure ändern, wird die erweiterte Überprüfung aktiviert. Die Option wird nicht deaktiviert, wenn Sie die Zielplattform ändern.<br /><br />Sie können diese Option für andere Versionen von SQL Server aktivieren, die Überprüfung ist jedoch auf teilweise eigenständige Datenbanken von Microsoft SQL Server 2012 sowie auf SQL Azure beschränkt. Nicht die gesamte Transact\-SQL-Syntax wird für alle Versionen von SQL Server unterstützt.<br /><br />Weitere Informationen finden Sie unter [Erweiterte Transact-SQL-Überprüfung](#bkmk_evf) weiter unten in diesem Thema.|  
@@ -97,7 +97,7 @@ Die Einstellungen in der folgenden Tabelle gelten für alle Konfigurationen dies
 |Groß-/Kleinschreibung für Bezeichner überprüfen|ja|Gibt an, ob bei der Erstellung des Projekts die Groß-/Kleinschreibung für Bezeichner in den SQL-Objekten im Projekt überprüft wird. Diese Option wird auf Datenbankprojekte angewendet, in denen eine Sortierung mit Berücksichtigung der Groß- und Kleinschreibung für die Datenbank angegeben wird.|  
 |Datenbankeinstellungen|Standardeinstellungen, die auf den Standardkonfigurationseinstellungen für eine Datenbank basieren|Beispiele für Einstellungen, die angegeben werden können, sind Einstellungen für die Sortierungsmethode und Datenbankebenen für eine SQL Server-Datenbank.|  
   
-## <a name="bkmk_evf"></a>Erweiterte Transact-SQL-Überprüfung  
+## <a name="extended-transact-sql-verification"></a><a name="bkmk_evf"></a>Erweiterte Transact-SQL-Überprüfung  
   
 > [!IMPORTANT]  
 > Die Funktion zur erweiterten Transact-SQL-Überprüfung wird aus der nächsten Featureversion von SQL Server Data Tools und dem nächsten Hauptrelease von Visual Studio entfernt.  
@@ -156,12 +156,12 @@ Die erweiterte Überprüfungsfunktion kann auch verwendet werden, wenn eine Date
 ### <a name="special-considerations-for-collations"></a>Spezielle Überlegungen zu Sortierungen  
 Weitere Informationen zu Sortierungen in teilweise eigenständigen Datenbanken finden Sie unter [Sortierungen in eigenständigen Datenbanken](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
   
-## <a name="bkmk_sqlclr"></a>SQLCLR  
+## <a name="sqlclr"></a><a name="bkmk_sqlclr"></a>SQLCLR  
 Weitere Informationen zu den Assemblyoptionen finden Sie unter [Dialogfeld "Assemblyinformationen"](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
   
 Weitere Informationen zum Signieren finden Sie im Abschnitt **Signieren von Assemblys** im Thema [Seite "Signierung", Projekt-Designer](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
   
-## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR- und SQLCLR-Build  
+## <a name="sqlclr-and-sqlclr-build"></a><a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR- und SQLCLR-Build  
 Die Eigenschaftenseiten **SQLCLR** und **SQLCLR Build** enthalten viele Einstellungen zum Verwenden von SQL CLR-Objekten im Projekt. Insbesondere enthält die Eigenschaftenseite **SQLCLR** eine Berechtigungsstufeneinstellung zum Festlegen von Berechtigungen für die SQLCLR-Assembly. Sie enthält außerdem die Einstellung „DDL generieren“, um zu steuern, ob DDL (Dynamic Data Language) für die dem Projekt hinzugefügten SQLCLR-Objekte generiert wird. Die Eigenschaftenseite **SQLCLR Build** enthält alle Compileroptionen, die Sie festlegen können, um die Kompilierung des SQLCLR-Codes im Projekt zu konfigurieren.  
   
 Die Eigenschaftenseite **SQLCLR Build** enthält erweiterte Buildeinstellungen zum Erstellen von SQL CLR-Objekten. Je nach der für die Programmierung der SQL CLR-Objekte verwendeten Sprache (VB oder C#) sind unterschiedliche Optionen verfügbar.  
@@ -171,7 +171,7 @@ Die Eigenschaftenseite **SQLCLR Build** enthält erweiterte Buildeinstellungen z
 2.  Wenn das Objekt in VB geschrieben ist, können Sie zunächst in der Dropdownliste **Sprache** "VB" auswählen und dann auf die Schaltfläche **Erweitert** klicken. Beschreibungen für VB-Optionen finden Sie unter [Dialogfeld „Erweiterte Compilereinstellungen“ (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx).  
   
 
-## <a name="bkmk_build"></a>Build  
+## <a name="build"></a><a name="bkmk_build"></a>Build  
 Sie können für jedes Datenbankprojekt in der Projektmappe eine Buildkonfiguration auswählen. Standardmäßig ist eine einzige Konfiguration vorhanden, Sie können jedoch benutzerdefinierte Konfigurationen hinzufügen. Dies empfiehlt sich beispielsweise, wenn Sie eine benutzerdefinierte Konfiguration benötigen, in der Sie die Datenbank immer löschen und neu erstellen können. In Projektmappen mit unterschiedlichen Projekttypen können Sie eine benutzerdefinierte Projektmappenkonfiguration erstellen, die für jedes Projekt eine bestimmte Buildkonfiguration enthält.  
   
 #### <a name="to-specify-a-build-configuration-for-a-solution"></a>So geben Sie eine Buildkonfiguration für eine Projektmappe an  
@@ -190,33 +190,33 @@ Sie können für jedes Datenbankprojekt in der Projektmappe eine Buildkonfigurat
   
 Die Einstellungen in der folgenden Tabelle gelten für alle Buildkonfigurationen dieses Datenbankprojekts.  
   
-|Feld|Standardwert|Beschreibung|  
+|Feld|Standardwert|BESCHREIBUNG|  
 |---------|-----------------|---------------|  
 |Buildausgabepfad|bin\Debug\|Gibt an, wo die Buildausgabe generiert wird, wenn Sie das Datenbankprojekt erstellen oder bereitstellen. Einen relativen Pfad müssen Sie relativ zum Pfad des Datenbankprojekts angeben. Wenn der Pfad nicht vorhanden, wird er erstellt.|  
 |Name der Buildausgabedatei|*DatabaseProjectName*|Gibt den Namen für die Ausgabe an, die beim Erstellen des Datenbankprojekts generiert wird.|  
 |Transact\-SQL-Warnungen als Fehler behandeln|Nein|Gibt an, ob eine Transact\-SQL-Warnung dazu führen soll, dass der Build- und Bereitstellungsprozess abgebrochen wird. Wenn dieses Kontrollkästchen deaktiviert ist, werden Warnungen angezeigt, Erstellung und Bereitstellung werden aber fortgesetzt. Diese Einstellung ist für das Projekt, nicht für den Benutzer, spezifisch und wird in der SQLPROJ-Datei gespeichert.|  
 |Transact\-SQL-Warnungen unterdrücken|Leer|Gibt eine durch Kommas oder Semikolons getrennte Liste mit Warnungsnummern an, die unterdrückte Warnungen bezeichnen.<br /><br />Unterdrückte Warnungen werden nicht im Fenster **Fehlerliste** angezeigt und wirken sich nicht auf den Erfolg des Buildvorgangs aus, auch nicht bei aktiviertem Kontrollkästchen **Transact\-SQL-Warnungen als Fehler behandeln**.|  
   
-## <a name="bkmk_sqlcmd_variables"></a>SQLCMD-Variablen  
+## <a name="sqlcmd-variables"></a><a name="bkmk_sqlcmd_variables"></a>SQLCMD-Variablen  
 In SQL Server-Datenbankprojekten können Sie mit SQLCMD-Variablen angeben, dass die dynamische Ersetzung für das Debuggen und Veröffentlichen verwendet werden soll. Sie geben den Variablennamen und die Variablenwerte ein, und während des Buildvorgangs werden die Werte ersetzt. Wenn keine lokalen Werte vorhanden sind, wird der Standardwert verwendet. Durch die Eingabe dieser Variablen in den Projekteigenschaften werden sie automatisch beim Veröffentlichen angeboten, und sie werden in Veröffentlichungsprofilen gespeichert. Sie können die Projektwerte der Variablen in der Veröffentlichung über die Schaltfläche "Werte laden" aufrufen.  
   
 Vergewissern Sie sich, dass die richtigen Variablen in den Projekteigenschaften eingegeben sind, denn diese Variablen werden nicht anhand eines Skripts im Projekt überprüft, und die im Skript verwendeten Variablen werden nicht automatisch aufgefüllt.  
   
 Außerdem können Sie durch die Veröffentlichung über die Befehlszeile diese Werte in der Befehlszeile oder mit einem Profil überschreiben.  
   
-## <a name="bkmk_build_events"></a>Buildereignisse  
+## <a name="build-events"></a><a name="bkmk_build_events"></a>Buildereignisse  
 Mit dieser Einstellung können Sie eine Befehlszeile angeben, die vor der Ausführung des Buildvorgangs ausgeführt wird, sowie eine Befehlszeile, die nach Abschluss des Buildvorgangs ausgeführt wird.  
   
-|Feld|Standardwert|Beschreibung|  
+|Feld|Standardwert|BESCHREIBUNG|  
 |---------|-----------------|---------------|  
 |Befehlszeile für Präbuildereignis|Keine|Gibt die vor der Erstellung des Projekts auszuführende Befehlszeile an. Klicken Sie auf **Präbuild bearbeiten**, um die Befehlszeile zu ändern.|  
 |Befehlszeile für Postbuildereignis|Keine|Gibt die nach der Erstellung des Projekts auszuführende Befehlszeile an. Klicken Sie auf **Postbuild bearbeiten**, um die Befehlszeile zu ändern.|  
 |Postbuildereignis ausführen|Bei erfolgreichem Erstellen|Gibt an, ob die Postbuildbefehlszeile immer, nur bei erfolgreicher Erstellung oder nur dann ausgeführt werden soll, wenn die Projektausgabe (das Buildskript) durch die Erstellung aktualisiert wurde.|  
   
-## <a name="bkmk_debug"></a>Debuggen  
+## <a name="debug"></a><a name="bkmk_debug"></a>Debuggen  
 Mit diesen Einstellungen können Sie das Debuggen des Datenbankprojekts steuern.  
   
-|Feld|Standardwert|Beschreibung|  
+|Feld|Standardwert|BESCHREIBUNG|  
 |---------|-----------------|---------------|  
 |Startvorgang|Keine|Gibt ein Skript oder externes Programm an, das beim Debuggen des Projekts ausgeführt werden soll.|  
 |Zielverbindungszeichenfolge|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|Gibt die Verbindungsinformationen für den Datenbankserver an, der für die angegebene Buildkonfiguration verwendet werden soll. Die Standardverbindungszeichenfolge bezieht sich auf eine dynamisch erstellte SQL Server LocalDB-Instanz und -Datenbank.|  
@@ -227,10 +227,10 @@ Mit diesen Einstellungen können Sie das Debuggen des Datenbankprojekts steuern.
 |CLR-Typen nicht mit ALTER ASSEMBLY-Anweisungen aktualisieren|Nein|Gibt an, ob CLR (Common Language Runtime)-Typen mit ALTER ASSEMBLY-Anweisungen aktualisiert werden oder ob stattdessen das Objekt, das den CLR-Typ instanziiert, gelöscht und beim Bereitstellen von Änderungen neu erstellt wird.|  
 |Erweitert...|Nein|Befehlsschaltfläche, die Ihnen das Angeben von Optionen ermöglicht, die Ereignisse und das Verhalten der Bereitstellung steuern.|  
   
-## <a name="bkmk_ref_paths"></a>Verweispfade  
+## <a name="reference-paths"></a><a name="bkmk_ref_paths"></a>Verweispfade  
 Sie können diese Seite verwenden, um Servervariablen und Datenbankvariablen zu definieren, die einem datenbankübergreifenden Verweis zugeordnet sind. Außerdem können Sie die Werte dieser Variablen angeben. Weitere Informationen finden Sie unter [Verwenden von Verweisen in Datenbankprojekten](https://msdn.microsoft.com/library/bb386242.aspx).  
   
-## <a name="bkmk_code_analysis"></a>Codeanalyse  
+## <a name="code-analysis"></a><a name="bkmk_code_analysis"></a>Codeanalyse  
 Mithilfe der Codeanalyse können Sie potenzielle Probleme in den Skripts ermitteln, z. B. Entwurfs-, Benennungs- und Leistungsprobleme. Regeln für Datenbankprojekte sind in vordefinierten Regelsätzen organisiert, die auf bestimmte Bereiche abzielen. Sie können die einzelnen Regeln auf der Registerkarte **Codeanalyse** der Eigenschaftenseite **Projekteigenschaften** aktivieren oder deaktivieren. Auf derselben Registerkarte können Sie festlegen, dass die Codeanalyse bei jedem Erstellen eines Projekts automatisch ausgeführt werden soll. Zudem können Sie angeben, ob Warnungen als Fehler behandelt werden sollen.  
   
 Um die Codeanalyse manuell auszuführen, klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie auf **Codeanalyse ausführen** aus. Warnungen der Codeanalyse werden im Fenster **Fehlerliste** aufgelistet. Sie können auf eine Warnung doppelklicken, um zum Quellcode zu navigieren, der das betreffende Problem enthält. Außerdem können Sie über das Kontextmenü **Hilfe zu Fehlern anzeigen** weitere Informationen und mögliche Korrekturen für eine Warnung aufrufen. Weitere Informationen zur Codeanalyse finden Sie unter [Analysieren von Datenbankcode zum Verbessern der Codequalität](https://msdn.microsoft.com/library/dd172133.aspx).  

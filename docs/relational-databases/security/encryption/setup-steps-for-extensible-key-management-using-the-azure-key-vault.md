@@ -15,10 +15,10 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557490"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server-TDE): Setupschritte
@@ -238,7 +238,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
  > Der Schlüsseltresor unterstützt mehrere Versionen eines Schlüssels unter dem gleichen Namen, für vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector verwendete Schlüssel sollte aber weder Versionierung noch Rollover ausgeführt werden. Wenn der Administrator den Schlüssel für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselung wieder verwenden möchte, sollte ein neuer Schlüssel mit einem anderen Namen im Tresor erstellt und zum Verschlüsseln des Datenverschlüsselungsschlüssels verwendet werden.  
    
   
-## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>Teil III: Installieren des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors  
+## <a name="part-iii-install-the-ssnoversion-connector"></a>Teil III: Installieren des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors  
  Laden Sie den SQL Server-Connector aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700)herunter. (Dies sollte vom Administrator des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Computers ausgeführt werden.)  
 
 > [!NOTE]  
@@ -262,7 +262,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
 -   [C. Fehlercodeerläuterungen für SQL Server-Connector](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>Teil IV: Konfigurieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="part-iv-configure-ssnoversion"></a>Teil IV: Konfigurieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Einen Hinweis zu den mindestens erforderlichen Berechtigungsstufen für jede Aktion in diesem Abschnitt finden Sie unter [B. Häufig gestellte Fragen (FAQ)](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
   
 1.  **Starten Sie „sqlcmd.exe“ oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio**  

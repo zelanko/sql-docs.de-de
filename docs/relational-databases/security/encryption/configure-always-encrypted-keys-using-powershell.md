@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594466"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>Bereitstellen von Always Encrypted-Schlüsseln mithilfe von PowerShell
@@ -27,7 +27,7 @@ Eine Übersicht über die Always Encrypted-Schlüsselverwaltung, einschließlich
 Informationen darüber, wie Sie die Arbeit mit dem SQL Server-PowerShell-Modul beginnen, finden Sie unter [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 
-## <a name="KeyProvisionWithoutRoles"></a> Schlüsselbereitstellung ohne Rollentrennung
+## <a name="key-provisioning-without-role-separation"></a><a name="KeyProvisionWithoutRoles"></a> Schlüsselbereitstellung ohne Rollentrennung
 
 Die in diesem Abschnitt beschriebene Schlüsselbereitstellungsmethode unterstützt keine Rollentrennung zwischen Sicherheitsadministratoren und Datenbankadministratoren (DBAs). Einige der unten aufgeführten Schritten kombinieren Vorgänge auf physischen Schlüsseln mit Vorgängen mit Schlüsselmetadaten. Daher wird diese Bereitstellungsmethode für Organisationen empfohlen, die das DevOps-Modell verwenden, oder für Fälle, in denen die Datenbank in der Cloud gehostet wird und das primäre Ziel ist, Cloudadministratoren (nicht jedoch lokalen DBAs) den Zugriff auf sensible Daten zu verweigern. Die Methode wird nicht empfohlen, wenn DBAs zu potenziellen Angreifer gehören oder wenn DBAs nicht über Zugriff auf sensible Daten verfügen sollen.
 
@@ -164,7 +164,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## <a name="KeyProvisionWithRoles"></a> Schlüsselbereitstellung mit Rollentrennung
+## <a name="key-provisioning-with-role-separation"></a><a name="KeyProvisionWithRoles"></a> Schlüsselbereitstellung mit Rollentrennung
 
 Dieser Abschnitt enthält die Schritte zum Konfigurieren einer Verschlüsselung, mit der Sicherheitsadministratoren nicht über Zugriff auf die Datenbank verfügen, und Datenbankadministratoren nicht über Zugriff auf den Schlüsselspeicher oder Nur-Text-Schlüssel verfügen.
 

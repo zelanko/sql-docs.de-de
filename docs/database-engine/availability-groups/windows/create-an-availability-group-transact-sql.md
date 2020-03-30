@@ -13,10 +13,10 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a9f888f651a7c5471014b151d60b0ad3844578b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252971"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Erstellen einer Always On-Verfügbarkeitsgruppe mit Transact-SQL (T-SQL)
@@ -30,17 +30,17 @@ ms.locfileid: "75252971"
 >  Als Alternative zur Verwendung von [!INCLUDE[tsql](../../../includes/tsql-md.md)]können Sie den Assistenten zum Erstellen einer Verfügbarkeitsgruppe oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Cmdlets verwenden. Weitere Informationen finden Sie unter [Verwenden des Assistenten für Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)[Verwenden des Dialogfelds „Neue Verfügbarkeitsgruppe“ &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)[Erstellen einer Verfügbarkeitsgruppe &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
 
   
-## <a name="PrerequisitesRestrictions"></a> Voraussetzungen, Einschränkungen und Empfehlungen  
+## <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a> Voraussetzungen, Einschränkungen und Empfehlungen  
   
 -   Überprüfen Sie vor dem Erstellen einer Verfügbarkeitsgruppe, ob sich die Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die Verfügbarkeitsreplikate hosten, auf verschiedenen WSFC-Konten (Windows Server Failover Clustering) des gleichen WSFC-Failoverclusters befinden. Stellen Sie außerdem sicher, dass alle Serverinstanzen alle anderen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Voraussetzungen erfüllen. Für weitere Informationen empfehlen wir Ihnen dringend [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
   
   
-##  <a name="Permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL zum Erstellen und Konfigurieren einer Verfügbarkeitsgruppe 
+##  <a name="using-transact-sql-to-create-and-configure-an-availability-group"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL zum Erstellen und Konfigurieren einer Verfügbarkeitsgruppe 
 
-###  <a name="SummaryTsqlStatements"></a> Zusammenfassung von Tasks und entsprechenden Transact-SQL-Anweisungen  
+###  <a name="summary-of-tasks-and-corresponding-transact-sql-statements"></a><a name="SummaryTsqlStatements"></a> Zusammenfassung von Tasks und entsprechenden Transact-SQL-Anweisungen  
  In der folgenden Tabelle sind die grundlegenden Tasks aufgeführt, die zum Erstellen und Konfigurieren einer Verfügbarkeitsgruppe erforderlich sind, und es ist angegeben, welche [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen für diese Tasks zu verwenden sind. Die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Tasks müssen in der Reihenfolge ausgeführt werden, in der sie in der Tabelle dargestellt sind.  
   
 |Aufgabe|Transact-SQL-Anweisung(en)|Wo soll der Task ausgeführt werden? **&#42;**|  
@@ -67,7 +67,7 @@ ms.locfileid: "75252971"
   
 5.  Verknüpfen Sie alle neuen sekundären Datenbanken mit der Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)mit einer Always On-Verfügbarkeitsgruppe verknüpft wird.  
   
-##  <a name="ExampleConfigAGWinAuth"></a> Beispiel: Konfigurieren einer Verfügbarkeitsgruppe, die die Windows-Authentifizierung verwendet  
+##  <a name="example-configuring-an-availability-group-that-uses-windows-authentication"></a><a name="ExampleConfigAGWinAuth"></a> Beispiel: Konfigurieren einer Verfügbarkeitsgruppe, die die Windows-Authentifizierung verwendet  
  In diesem Beispiel wird eine Beispiel- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Konfigurationsprozedur erstellt, die [!INCLUDE[tsql](../../../includes/tsql-md.md)] zum Einrichten von Datenbankspiegelungs-Endpunkten, die die Windows-Authentifizierung verwenden, sowie zum Erstellen und Konfigurieren einer Verfügbarkeitsgruppe und deren sekundärer Datenbanken verwendet.  
   
  Dieses Beispiel enthält folgende Abschnitte:  
@@ -78,7 +78,7 @@ ms.locfileid: "75252971"
   
 -   [Vollständiges Codebeispiel für Beispielkonfigurationsprozedur](#CompleteCodeExample)  
   
-###  <a name="PrerequisitesForExample"></a> Erforderliche Komponenten für die Verwendung der Beispielkonfigurationsprozedur  
+###  <a name="prerequisites-for-using-the-sample-configuration-procedure"></a><a name="PrerequisitesForExample"></a> Erforderliche Komponenten für die Verwendung der Beispielkonfigurationsprozedur  
  Diese Beispielprozedur weist die folgenden Anforderungen auf:  
   
 -   Die Serverinstanzen müssen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützen. Weitere Informationen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)zu unterstützen.  
@@ -118,7 +118,7 @@ ms.locfileid: "75252971"
   
  [&#91;Anfang des Beispiels&#93;](#ExampleConfigAGWinAuth)  
   
-###  <a name="SampleProcedure"></a> Beispielkonfigurationsprozedur  
+###  <a name="sample-configuration-procedure"></a><a name="SampleProcedure"></a> Beispielkonfigurationsprozedur  
  In dieser Beispielkonfiguration wird das Verfügbarkeitsreplikat auf zwei eigenständigen Serverinstanzen erstellt, deren Dienstkonten unter unterschiedlichen – aber vertrauenswürdigen – Domänen (`DOMAIN1` und `DOMAIN2`) ausgeführt werden.  
   
  In der folgenden Tabelle finden Sie eine Zusammenfassung der in dieser Beispielkonfiguration verwendeten Werte.  
@@ -290,10 +290,10 @@ ms.locfileid: "75252971"
   
     ```  
   
-###  <a name="CompleteCodeExample"></a> Vollständiges Codebeispiel für Beispielkonfigurationsprozedur  
+###  <a name="complete-code-example-for-sample-configuration-procedure"></a><a name="CompleteCodeExample"></a> Vollständiges Codebeispiel für Beispielkonfigurationsprozedur  
  Im folgenden Beispiel werden die Codebeispiele aus allen Schritten der Beispielkonfigurationsprozedur zusammengeführt. In der folgenden Tabelle werden die in diesem Codebeispiel verwendeten Platzhalterwerte zusammengefasst. Weitere Informationen zu den Schritten in diesem Codebeispiel finden Sie unter [Erforderliche Komponenten für die Verwendung der Beispielkonfigurationsprozedur](#PrerequisitesForExample) und [Beispielkonfigurationsprozedur](#SampleProcedure)weiter oben in diesem Thema.  
   
-|Platzhalter|Beschreibung|  
+|Platzhalter|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|Fiktive Sicherungsfreigabe.|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|Sicherungsdatei für MyDb1.|  
@@ -446,7 +446,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So konfigurieren Sie Verfügbarkeitsgruppen- und Replikateigenschaften**  
   
 -   [Ändern des Verfügbarkeitsmodus eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -505,7 +505,7 @@ GO
   
 -   [Problembehandlung bei einem fehlgeschlagenen Vorgang zum Hinzufügen einer Datei &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   **Blogs:**  
   

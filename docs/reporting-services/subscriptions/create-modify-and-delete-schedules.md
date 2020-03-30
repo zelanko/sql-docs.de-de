@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140214"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -52,7 +52,7 @@ Berichts- und abonnementspezifische Zeitpläne werden beim Löschen eines Berich
 
 Ein abgelaufener berichtsspezifischer Zeitplan bleibt weiterhin mit dem Bericht verbunden. Durch Überprüfen des Enddatums können Sie ermitteln, ob ein Zeitplan abgelaufen ist. Ein abgelaufener freigegebener Zeitplan verbleibt in der Liste Freigegebene Zeitpläne. Das Feld Status zeigt an, ob der Zeitplan abgelaufen ist. Sie können den Zeitplan wiederherstellen, indem Sie das Enddatum des Zeitplans verlängern, oder Sie löschen den Zeitplanverweis, wenn er nicht mehr benötigt wird.
 
-## <a name="bkmk_native"></a> Erstellen, Löschen oder Ändern eines freigegebenen Zeitplans (Webportal)
+## <a name="create-delete-or-modify-a-shared-schedule-web-portal"></a><a name="bkmk_native"></a> Erstellen, Löschen oder Ändern eines freigegebenen Zeitplans (Webportal)
  Beim Erstellen und Ändern eines Zeitplans werden Optionen festgelegt, die bestimmen, wann der Zeitplan ausgeführt wird.
 
  Einen Zeitplan können Sie jederzeit erstellen oder ändern. Wenn jedoch ein Zeitplan vor Abschluss Ihrer Änderungen ausgeführt wird, wird die vorherige Version des Zeitplans verwendet. Der geänderte Zeitplan wird erst nach dem Speichern wirksam.
@@ -114,7 +114,7 @@ Klicken Sie auf **Abbrechen**.
 
  Wenn Sie einen freigegebenen Zeitplan löschen, der von mehreren Berichten und Abonnements verwendet wird, erstellt der Berichtsserver für Berichte und Abonnements, die vorher den freigegebenen Zeitplan verwendet haben, eigene Zeitpläne. Jeder dieser neuen Zeitpläne enthält das Datum, die Zeit und die Wiederholungsoption, die in dem freigegebenen Zeitplan angegeben wurden.
 
-##  <a name="bkmk_sharepoint"></a> Erstellen und Verwalten von freigegebenen Zeitplänen (SharePoint-Modus)
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Erstellen und Verwalten von freigegebenen Zeitplänen (SharePoint-Modus)
  Sie müssen ein Websiteadministrator sein, um freigegebene Zeitpläne auf einer SharePoint-Website erstellen, ändern oder löschen zu können.
 
  Sie können einen bestimmten Zeitplan an seinem beschreibenden Namen identifizieren. Wenn kein Name angegeben ist, wird ein Standardname erstellt, der auf Fakten zum Zeitplan (z. B. sein Serienmuster oder Datum und Uhrzeit der Ausführung) basiert.

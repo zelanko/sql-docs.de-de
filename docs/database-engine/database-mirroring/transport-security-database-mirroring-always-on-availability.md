@@ -21,10 +21,10 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252747"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen
@@ -40,7 +40,7 @@ ms.locfileid: "75252747"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Authentication"></a> Authentifizierung  
+##  <a name="authentication"></a><a name="Authentication"></a> Authentifizierung  
  Unter Authentifizierung versteht man den Prozess, mit dem überprüft wird, ob es sich bei einem Benutzer wirklich um die Person handelt, die der Benutzer angeblich ist. Verbindungen zwischen Datenbank-Spiegelungsendpunkten erfordern die Authentifizierung. Verbindungsanforderungen von einem Partner oder ggf. einem Zeugen müssen authentifiziert werden.  
   
  Der für Datenbankspiegelung oder [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] von einer Serverinstanz verwendete Authentifizierungstyp ist eine Eigenschaft des Endpunkts der Datenbankspiegelung. Für Datenbankspiegelungs-Endpunkte sind zwei Arten von Transportsicherheit verfügbar: Windows-Authentifizierung (die Security Support Provider Interface (SSPI)) oder zertifikatbasierte Authentifizierung.  
@@ -64,7 +64,7 @@ ms.locfileid: "75252747"
   
  Eine Serverinstanz verwendet den privaten Schlüssel ihres eigenen Zertifikats, um bei einem Verbindungsaufbau ihre Identität einzurichten. Die Serverinstanz, die die Verbindungsanforderung empfängt, verwendet den öffentlichen Schlüssel des Absenderzertifikats, um die Identität des Absenders zu authentifizieren. Angenommen es gibt z. B. zwei Serverinstanzen, Server_A und Server_B. Von Server_A wird ein privater Schlüssel zur Verschlüsselung des Verbindungsheaders verwendet, bevor eine Verbindungsanforderung an Server_B gesendet wird. Von Server_B wird der öffentliche Schlüssel des Zertifikats von Server_A verwendet, um den Verbindungsheader zu entschlüsseln. Wenn der entschlüsselte Header richtig ist, weiß Server_B, dass der Header von Server_A verschlüsselt wurde, und die Verbindung wird authentifiziert. Wenn der entschlüsselte Header nicht richtig ist, erkennt Server_B, dass die Verbindungsanforderung nicht authentisch ist, und verweigert den Verbindungsaufbau.  
   
-##  <a name="DataEncryption"></a> Datenverschlüsselung  
+##  <a name="data-encryption"></a><a name="DataEncryption"></a> Datenverschlüsselung  
  Standardmäßig setzt ein Datenbank-Spiegelungsendpunkt die Verschlüsselung der über Spiegelungsverbindungen gesendeten Daten voraus. In diesem Fall kann der Endpunkt nur Verbindungen mit Endpunkten herstellen, die ebenfalls mit Verschlüsselung arbeiten. Sofern Sie nicht garantieren können, dass Ihr Netzwerk sicher ist, wird empfohlen, das Verschlüsseln bei Verbindungen zur Datenbankspiegelung vorauszusetzen. Allerdings können Sie die Verschlüsselung auch deaktivieren oder festlegen, dass die Verschlüsselung zwar unterstützt wird, jedoch nicht erforderlich ist. Bei deaktivierter Verschlüsselung werden die Daten niemals verschlüsselt, und der Endpunkt kann keine Verbindung mit einem Endpunkt herstellen, der die Verschlüsselung erfordert. Wenn die Verschlüsselung unterstützt wird, werden die Daten nur dann verschlüsselt, wenn der gegenüberliegende Endpunkt die Verschlüsselung unterstützt oder erfordert.  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ ms.locfileid: "75252747"
   
  Sie können auch die Verschlüsselungsalgorithmen steuern, die von einem Endpunkt verwendet werden können, indem Sie einen der folgenden Werte für die ALGORITHM-Option in einer CREATE ENDPOINT- oder ALTER ENDPOINT-Anweisung angeben:  
   
-|ALGORITHM-Wert|Beschreibung|  
+|ALGORITHM-Wert|BESCHREIBUNG|  
 |---------------------|-----------------|  
 |RC4|Gibt an, dass der Endpunkt den RC4-Algorithmus verwenden muss. Dies ist die Standardoption.<br /><br /> <strong>\*\* Warnung \*\*</strong> Der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.|  
 |AES|Gibt an, dass der Endpunkt den AES-Algorithmus verwenden muss.|  
@@ -88,7 +88,7 @@ ms.locfileid: "75252747"
   
  Informationen zur [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax zum Angeben der Verschlüsselung finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So konfigurieren Sie die Transportsicherheit für einen Datenbankspiegelung-Endpunkt**  
   
 -   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

@@ -11,10 +11,10 @@ ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 039b36c2092d9e08e81802e441f42587be66445c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298159"
 ---
 # <a name="ole-db-custom-properties"></a>Benutzerdefinierte Eigenschaften für OLE DB
@@ -28,7 +28,7 @@ ms.locfileid: "71298159"
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der OLE DB-Quelle beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|Der zum Zugreifen auf die Datenbank verwendete Modus. Die möglichen Werte sind **Geöffnetes Rowset**, **Geöffnetes Rowset aus Variable**, **SQL-Befehl**und **SQL-Befehl aus Variable**. Der Standardwert ist **Geöffnetes Rowset**.|  
 |AlwaysUseDefaultCodePage|Boolean|Ein Wert, der angibt, ob der Wert der **DefaultCodePage** -Eigenschaft für jede Spalte verwendet werden soll, oder ob versucht werden soll, die Codepage aus dem Gebietsschema der einzelnen Spalten abzuleiten. Der Standardwert dieser Eigenschaft ist **False**.|  
@@ -53,7 +53,7 @@ ms.locfileid: "71298159"
 > [!NOTE]  
 >  Die hier aufgelisteten FastLoad-Optionen (FastLoadKeepIdentity, FastLoadKeepNulls und FastLoadOptions) entsprechen den Eigenschaften mit ähnlichen Bezeichnungen der **IRowsetFastLoad** -Schnittstelle, die vom Microsoft OLE DB Provider for SQL Server (SQLOLEDB) bereitgestellt wird. Weitere Informationen finden Sie unter IRowsetFastLoad in der MSDN Library.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Ganze Zahl (Enumeration)|Ein Wert, der angibt, wie das Ziel auf seine Zieldatenbank zugreift.<br /><br /> Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> <br /><br /> **OpenRowset** (0): Sie geben den Namen einer Tabelle oder Ansicht an.<br /><br /> **OpenRowset from Variable** (1): Sie geben den Namen einer Variablen an, die den Namen einer Tabelle oder Ansicht enthält.<br /><br /> **OpenRowset Using Fastload** (3): Sie geben den Namen einer Tabelle oder Ansicht an.<br /><br /> **OpenRowset Using Fastload from Variable** (4): Sie geben den Namen einer Variablen an, die den Namen einer Tabelle oder Ansicht enthält.<br /><br /> **SQL Command** (2): Sie geben eine SQL-Anweisung an.|  
 |AlwaysUseDefaultCodePage|Boolean|Ein Wert, der angibt, ob der Wert der **DefaultCodePage** -Eigenschaft für jede Spalte verwendet werden soll, oder ob versucht werden soll, die Codepage aus dem Gebietsschema der einzelnen Spalten abzuleiten. Der Standardwert dieser Eigenschaft ist **False**.|  

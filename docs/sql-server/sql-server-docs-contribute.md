@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286324"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Mitwirken an der SQL Server-Dokumentation
@@ -30,7 +30,7 @@ Wenn Sie zur Dokumentation beitragen möchten, stehen Ihnen zwei Hauptworkflows 
 
 Alle öffentlichen Beiträge werden vom SQL-Inhaltsteam auf technische Richtigkeit und Konsistenz geprüft. 
 
-## <a id="githubui"></a> Bearbeiten von Inhalten im Browser
+## <a name="edit-in-your-browser"></a><a id="githubui"></a> Bearbeiten von Inhalten im Browser
 
 Sie können im Browser einfache Änderungen an SQL Server-Inhalten vornehmen und diese dann an Microsoft übermitteln. Weitere Informationen finden Sie im [Leitfaden für Mitwirkende der Microsoft-Dokumentation: Übersicht](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
 
@@ -51,7 +51,7 @@ Die folgende GIF-Datei veranschaulicht den gesamten Ablauf zur Übermittlung von
 
 ![SQL-Dokumentation bearbeiten](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-## <a id="tools"></a> Lokales Bearbeiten von Inhalten mit Tools
+## <a name="edit-locally-with-tools"></a><a id="tools"></a> Lokales Bearbeiten von Inhalten mit Tools
 
 Eine weitere Bearbeitungsoption besteht darin, das **sql-docs**- oder **azure-docs**-Repository zu forken und es lokal auf dem Computer zu klonen. Anschließend können Sie mithilfe eines Markdown-Editors und eines Git-Clients die Änderungen übermitteln. Dieser Workflow eignet sich für Bearbeitungen, die komplexer sind oder mehrere Dateien betreffen. Außerdem ist er gut für Mitwirkende geeignet, die häufig Beiträge bei docs.microsoft.com einreichen.
 

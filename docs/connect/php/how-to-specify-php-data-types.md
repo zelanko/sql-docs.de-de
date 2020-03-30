@@ -14,10 +14,10 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae00c01e962da05015a5132608915fc9d70258f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936399"
 ---
 # <a name="how-to-specify-php-data-types"></a>Gewusst wie: Festlegen von PHP-Datentypen
@@ -99,7 +99,7 @@ sqlsrv_close( $conn);
   
 Im Beispiel sorgt der Abruf des zweiten Feldes (*ReviewDate*) als Zeichenfolge für die Millisekunden-Genauigkeit des SQL Server-Datentyps DATETIME. Standardmäßig wird der SQL Server-Datentyp DATETIME als PHP-DateTime-Objekt abgerufen, wobei die Millisekunden-Genauigkeit verloren geht.  
   
-Das vierte Feld (*Comments*) wird zu Vorführungszwecken als Stream abgerufen. Standardmäßig wird der SQL Server-Datentyp „nvarchar(3850)“ als eine Zeichenfolge abgerufen. Dies ist für die meisten Situationen akzeptabel.   
+Das vierte Feld (*Comments*) wird zu Vorführungszwecken als Stream abgerufen. Standardmäßig wird der SQL Server-Datentyp „nvarchar(3850)“ als eine Zeichenfolge abgerufen. Dies ist für die meisten Situationen akzeptabel.  
   
 > [!NOTE]  
 > Die [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) -Funktion bietet eine Möglichkeit, Feldinformationen inklusive Feldtypinformationen zu erhalten bevor eine Abfrage durchgeführt wird.  

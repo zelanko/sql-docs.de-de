@@ -11,10 +11,10 @@ ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d99bf6118af71981ad2f45b5c7b722b458cc158c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970754"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement-Elemente
@@ -36,7 +36,7 @@ ms.locfileid: "67970754"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|Fügt dem Befehlsbatch für dieses Statement-Objekt einen Parametersatz hinzu.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Bricht die SQL-Anweisung ab, die derzeit von diesem Statement-Objekt ausgeführt wird.|  

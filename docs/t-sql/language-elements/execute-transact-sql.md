@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981953"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -361,7 +361,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="context-switching"></a>Kontextwechsel  
  Mithilfe der `AS { LOGIN | USER } = ' name '`-Klausel können Sie den Ausführungskontext einer dynamischen Anweisung wechseln. Wenn der Kontextwechsel als `EXECUTE ('string') AS <context_specification>` angegeben wird, ist die Dauer des Kontextwechsels auf den Bereich der ausgeführten Abfrage beschränkt.  
   
-###  <a name="_user"></a> Angeben eines Benutzer- oder Anmeldenamens  
+###  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Angeben eines Benutzer- oder Anmeldenamens  
  Der in `AS { LOGIN | USER } = ' name '` angegebene Benutzer oder Anmeldename muss als Prinzipal in sys.database_principals bzw. sys.server_principals vorhanden sein. Andernfalls wird für die Anweisung ein Fehler gemeldet. Zudem müssen für den Prinzipal IMPERSONATE-Berechtigungen erteilt worden sein. Falls der Aufrufer nicht der Datenbankbesitzer oder ein Mitglied der festen Serverrolle sysadmin ist, muss der Prinzipal sogar dann vorhanden sein, wenn der Benutzer als Windows-Gruppenmitglied auf die Datenbank oder Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreift. Stellen Sie sich z. B. folgende Bedingungen vor:  
   
 -   Die CompanyDomain\SQLUsers-Gruppe verfügt über Zugriff auf die Sales-Datenbank.  
@@ -658,7 +658,7 @@ WITH RESULT SETS
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="example-o-basic-procedure-execution"></a>Beispiel O: Ausführung einfacher Prozeduren  
  Ausführen einer gespeicherten Prozedur:  

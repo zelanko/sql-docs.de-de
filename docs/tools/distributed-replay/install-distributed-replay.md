@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74992183"
 ---
 # <a name="install-distributed-replay"></a>Installieren von Distributed Replay
@@ -29,7 +29,7 @@ Sie können Distributed Replay auf eine von drei Weisen installieren:
   
 -   [Installieren von Distributed Replay mithilfe einer Konfigurationsdatei](#bkmk_configuration_file)  
   
-##  <a name="bkmk_wizard"></a> Installieren von Distributed Replay über den Installations-Assistenten  
+##  <a name="install-distributed-replay-from-the-installation-wizard"></a><a name="bkmk_wizard"></a> Installieren von Distributed Replay über den Installations-Assistenten  
  Installieren Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Features mit dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installations-Assistenten. Beachten Sie Folgendes, bevor Sie sich für ein Verzeichnis für die Installation der Funktionen entscheiden:  
   
 -   Sie können das Verwaltungstool auf demselben Computer wie den Distributed Replay-Controller oder auf anderen Computern installieren.  
@@ -116,7 +116,7 @@ Sie können Distributed Replay auf eine von drei Weisen installieren:
   
     1.  Auf 32-Bit-Computern ist der Standardinstallationspfad **C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  Auf 64-Bit-Computern ist der Standardinstallationspfad **C:\Programme (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**.  
+    2.  Auf 64-Bit-Computern ist der Standardinstallationspfad **C:\Programme (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\** .  
   
 9. Wenn Sie fertig sind, klicken Sie auf **Weiter**.  
   
@@ -136,7 +136,7 @@ Sie können Distributed Replay auf eine von drei Weisen installieren:
 ### <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Sie müssen über Administratorberechtigungen verfügen, um eine der Distributed Replay-Funktionen zu installieren. Nur bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung mit sysadmin-Berechtigungen können der sysadmin-Serverrolle des Testservers die Clientdienstkonten hinzugefügt werden. Weitere Informationen zu Sicherheitsüberlegungen für Distributed Replay finden Sie unter [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-##  <a name="bkmk_command_prompt"></a> Installieren von Distributed Replay von der Eingabeaufforderung  
+##  <a name="install-distributed-replay-from-the-command-prompt"></a><a name="bkmk_command_prompt"></a> Installieren von Distributed Replay von der Eingabeaufforderung  
  Wenn Sie eine neue Distributed Replay-Instanz mithilfe der Eingabeaufforderung installieren, können Sie angeben, welche Funktionen installiert und wie diese konfiguriert werden sollen. Die Installation an der Eingabeaufforderung unterstützt das Installieren, Reparieren, Aktualisieren und Deinstallieren der Distributed Replay Utility-Komponenten. Beim Installieren über die Eingabeaufforderung unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des /Q-Parameters den vollständigen stillen Modus.  
   
 > [!NOTE]  
@@ -156,7 +156,7 @@ Sie können Distributed Replay auf eine von drei Weisen installieren:
   
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für die Installation.  
   
-|Parameter|Beschreibung|Unterstützte Werte|  
+|Parameter|BESCHREIBUNG|Unterstützte Werte|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Optional**|Dienstkonto für den Distributed Replay Controller-Dienst.|Überprüft Konto und Kennwort.|  
 |/CTLRSVCPASSWORD<br /><br /> **Optional**|Kennwort für das Distributed Replay Controller-Dienstkonto.|Überprüft Konto und Kennwort.|  
@@ -182,7 +182,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CTLR /IAcceptSQLServerLicenseTerms /C
 setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CLTSVCACCOUNT="domain\svcuser" /CLTSVCPASSWORD="password" /CLTSTARTUPTYPE=Automatic /CLTCTLRNAME=ControllerMachineName /CLTWORKINGDIR="C:\WorkingDir" /CLTRESULTDIR="C:\ResultDir  
 ```  
   
-##  <a name="bkmk_configuration_file"></a> Installieren von Distributed Replay mithilfe einer Konfigurationsdatei  
+##  <a name="install-distributed-replay-using-a-configuration-file"></a><a name="bkmk_configuration_file"></a> Installieren von Distributed Replay mithilfe einer Konfigurationsdatei  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup bietet die Möglichkeit, eine Konfigurationsdatei auf der Grundlage von Benutzereingaben und Systemstandards zu generieren. Wenn Sie angeben, dass die Verwaltungstools installiert werden sollen, können Sie mithilfe der Konfigurationsdatei die drei Distributed Replay-Komponenten bereitstellen (Verwaltungstool, Distributed Replay Controller und Distributed Replay Client). Unterstützt werden das Installieren, Reparieren und Deinstallieren der Distributed Replay-Komponenten.  
   
  Setup unterstützt die Verwendung der Konfigurationsdatei nur in der Befehlszeile. Die Verarbeitungsreihenfolge der Parameter während der Verwendung der Konfigurationsdatei wird im Folgenden erläutert:  

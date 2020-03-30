@@ -47,10 +47,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74249727"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
@@ -556,7 +556,7 @@ In diesem Abschnitt werden die folgenden grundlegenden Sicherungskonzepte erläu
 > [!NOTE]
 > Eine Einführung in die Sicherung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [Übersicht über Sicherungen](../../relational-databases/backup-restore/backup-overview-sql-server.md).
 
-### <a name="Backup_Types"></a> Sicherungstypen
+### <a name="backup-types"></a><a name="Backup_Types"></a> Sicherungstypen
 
 Die unterstützten Sicherungstypen sind vom Wiederherstellungsmodell der Datenbank abhängig, und zwar wie folgt:
 
@@ -579,14 +579,14 @@ Die unterstützten Sicherungstypen sind vom Wiederherstellungsmodell der Datenba
 
 - Eine *Kopiesicherung* ist eine besondere vollständige Sicherung oder Protokollsicherung, die von der normalen Sequenz konventioneller Sicherungen unabhängig ist. Verwenden Sie zum Erstellen einer Kopiesicherung die Option COPY_ONLY in der BACKUP-Anweisung. Weitere Informationen finden Sie unter [Kopiesicherungen](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
 
-### <a name="Tlog_Truncation"></a> Kürzung des Transaktionsprotokolls
+### <a name="transaction-log-truncation"></a><a name="Tlog_Truncation"></a> Kürzung des Transaktionsprotokolls
 
 Um das schnelle Auffüllen des Transaktionsprotokolls einer Datenbank zu vermeiden, sind routinemäßige Sicherungen von entscheidender Bedeutung. Die Protokollkürzung erfolgt beim einfachen Wiederherstellungsmodell automatisch, wenn die Datenbank gesichert wurde, und beim vollständigen Wiederherstellungsmodell, wenn das Transaktionsprotokoll gesichert wurde. Manchmal kann der Kürzungsprozess jedoch verzögert werden. Informationen zu Faktoren, die eine Protokollkürzung verzögern können, finden Sie unter [Das Transaktionsprotokoll](../../relational-databases/logs/the-transaction-log-sql-server.md).
 
 > [!NOTE]
 > Die Optionen `BACKUP LOG WITH NO_LOG` und `WITH TRUNCATE_ONLY` werden nicht mehr unterstützt. Wechseln Sie zum einfachen Wiederherstellungsmodell, wenn Sie zur Wiederherstellung das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden und die Protokollsicherungskette aus einer Datenbank entfernen müssen. Weitere Informationen finden Sie unter [Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).
 
-### <a name="Formatting_Media"></a>Formatieren von Sicherungsmedien
+### <a name="formatting-backup-media"></a><a name="Formatting_Media"></a>Formatieren von Sicherungsmedien
 
 Sicherungsmedien werden durch eine BACKUP-Anweisung formatiert, und zwar nur dann, wenn eine der folgenden Bedingungen zutrifft:
 
@@ -594,7 +594,7 @@ Sicherungsmedien werden durch eine BACKUP-Anweisung formatiert, und zwar nur dan
 - Das Medium ist leer.
 - Mit dem Vorgang wird ein Anschlussband geschrieben.
 
-### <a name="Backup_Devices_and_Media_Sets"></a>Arbeiten mit Sicherungsmedien und Mediensätzen
+### <a name="working-with-backup-devices-and-media-sets"></a><a name="Backup_Devices_and_Media_Sets"></a>Arbeiten mit Sicherungsmedien und Mediensätzen
 
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>Sicherungsmedien in Stripesetmedien
 Bei einem *Stripeset* handelt es sich um eine Gruppe von Datenträgerdateien, für die die Daten in Blöcke aufgeteilt und in einer festen Reihenfolge verteilt werden. Die Anzahl der in einem Stripeset verwendeten Sicherungsmedien muss gleich bleiben (es sei denn, die Medien werden mit `FORMAT` neu initialisiert).
@@ -653,13 +653,13 @@ Wenn für jeden Spiegel mehrere Medien aufgeführt sind, bestimmt die Reihenfolg
 
 Weitere Informationen über gespiegelte Mediensätze finden Sie unter [Gespiegelte Sicherungsmediensätze](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md). Weitere Informationen über Mediensätze und Medienfamilien finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).
 
-### <a name="Restoring_Backups"></a>Wiederherstellen von SQL Server-Sicherungen
+### <a name="restoring-sql-server-backups"></a><a name="Restoring_Backups"></a>Wiederherstellen von SQL Server-Sicherungen
 
 Sie können die [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)-Anweisung von [!INCLUDE[tsql](../../includes/tsql-md.md)] oder die **Restore**-Tasks von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um eine Datenbank wiederherzustellen und optional wieder online zu schalten, oder um eine Datei oder Dateigruppe wiederherzustellen. Weitere Informationen finden Sie unter [Übersicht über Wiederherstellungsvorgänge](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
-## <a name="Additional_Considerations"></a>Weitere Überlegungen zu BACKUP-Optionen
+## <a name="additional-considerations-about-backup-options"></a><a name="Additional_Considerations"></a>Weitere Überlegungen zu BACKUP-Optionen
 
-### <a name="Interactions_SKIP_etc"></a>Interaktion von SKIP, NOSKIP, INIT und NOINIT
+### <a name="interaction-of-skip-noskip-init-and-noinit"></a><a name="Interactions_SKIP_etc"></a>Interaktion von SKIP, NOSKIP, INIT und NOINIT
 
 In dieser Tabelle werden die Interaktionen zwischen den Optionen { **NOINIT** | INIT } und { **NOSKIP** | SKIP } beschrieben.
 
@@ -737,7 +737,7 @@ Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **
 
 Besitz- und Berechtigungsprobleme im Zusammenhang mit der physischen Datei des Sicherungsmediums können den Sicherungsvorgang beeinträchtigen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss über Lese- und Schreibberechtigungen für das Medium verfügen. Das Konto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, muss Schreibberechtigungen haben. Allerdings prüft die gespeicherte Prozedur [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), die den Systemtabellen einen Eintrag für ein Sicherungsmedium hinzufügt, nicht die Dateizugriffsberechtigungen. Solche Probleme mit der physischen Datei des Sicherungsmediums treten möglicherweise erst auf, wenn auf die physische Ressource zugegriffen wird, um einen Sicherungs- oder Wiederherstellungsvorgang auszuführen.
 
-## <a name="examples"></a> Beispiele
+## <a name="examples"></a><a name="examples"></a> Beispiele
 
 Dieser Abschnitt enthält folgende Beispiele:
 
@@ -755,7 +755,7 @@ Dieser Abschnitt enthält folgende Beispiele:
 > [!NOTE]
 > In den Themen über die Vorgehensweisen bei der Sicherung sind weitere Beispiele aufgeführt. Weitere Informationen finden Sie unter [Übersicht über Sicherungen](../../relational-databases/backup-restore/backup-overview-sql-server.md).
 
-### <a name="backing_up_db"></a> A. Sichern einer vollständigen Datenbank
+### <a name="a-backing-up-a-complete-database"></a><a name="backing_up_db"></a> A. Sichern einer vollständigen Datenbank
 
 Im folgenden Beispiel wird die [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]-Datenbank in einer Datenträgerdatei gesichert.
 
@@ -766,7 +766,7 @@ BACKUP DATABASE AdventureWorks2012
 GO
 ```
 
-### <a name="backing_up_db_and_log"></a> B. Sichern der Datenbank und des Protokolls
+### <a name="b-backing-up-the-database-and-log"></a><a name="backing_up_db_and_log"></a> B. Sichern der Datenbank und des Protokolls
 
 Im folgenden Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank gesichert, in der standardmäßig das einfache Wiederherstellungsmodell verwendet wird. Zum Unterstützen der Protokollsicherungen wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank für die Verwendung des vollständigen Wiederherstellungsmodells geändert.
 
@@ -804,7 +804,7 @@ GO
 > [!NOTE]
 > Für eine Produktionsdatenbank sollte das Protokoll regelmäßig gesichert werden. Protokollsicherungen sollten möglichst häufig ausgeführt werden, damit ein ausreichender Schutz vor Datenverlusten besteht.
 
-### <a name="full_file_backup"></a> C. Erstellen einer vollständigen Dateisicherung der sekundären Dateigruppen
+### <a name="c-creating-a-full-file-backup-of-the-secondary-filegroups"></a><a name="full_file_backup"></a> C. Erstellen einer vollständigen Dateisicherung der sekundären Dateigruppen
 
 Im folgenden Beispiel wird eine vollständige Dateisicherung von jeder Datei der beiden sekundären Dateigruppen erstellt.
 
@@ -817,7 +817,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="differential_file_backup"></a> D. Erstellen einer differenziellen Dateisicherung der sekundären Dateigruppen
+### <a name="d-creating-a-differential-file-backup-of-the-secondary-filegroups"></a><a name="differential_file_backup"></a> D. Erstellen einer differenziellen Dateisicherung der sekundären Dateigruppen
 
 Im folgenden Beispiel wird eine differenzielle Dateisicherung von jeder Datei der beiden sekundären Dateigruppen erstellt.
 
@@ -832,7 +832,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="create_single_family_mirrored_media_set"></a> E. Erstellen eines gespiegelten Mediensatzes für eine Medienfamilie und Sichern auf einen gespiegelten Mediensatz für eine Medienfamilie
+### <a name="e-creating-and-backing-up-to-a-single-family-mirrored-media-set"></a><a name="create_single_family_mirrored_media_set"></a> E. Erstellen eines gespiegelten Mediensatzes für eine Medienfamilie und Sichern auf einen gespiegelten Mediensatz für eine Medienfamilie
 
 Im folgenden Beispiel wird ein gespiegelter Mediensatz erstellt, der eine einzelne Medienfamilie und vier Spiegel umfasst. Auf diese wird die [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]-Datenbank gesichert.
 
@@ -847,7 +847,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet0';
 ```
 
-### <a name="create_multifamily_mirrored_media_set"></a> F. Erstellen eines gespiegelten Mediensatzes für mehrere Medienfamilien und Sichern auf einen gespiegelten Mediensatz für mehrere Medienfamilien
+### <a name="f-creating-and-backing-up-to-a-multifamily-mirrored-media-set"></a><a name="create_multifamily_mirrored_media_set"></a> F. Erstellen eines gespiegelten Mediensatzes für mehrere Medienfamilien und Sichern auf einen gespiegelten Mediensatz für mehrere Medienfamilien
 
 Im folgenden Beispiel wird ein gespiegelter Mediensatz erstellt, in dem jeder Spiegel zwei Medienfamilien enthält. Im Beispiel wird dann die [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]-Datenbank auf beide Spiegel gesichert.
 
@@ -860,7 +860,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet1';
 ```
 
-### <a name="existing_mirrored_media_set"></a> G. Sichern auf einen vorhandenen gespiegelten Mediensatz
+### <a name="g-backing-up-to-an-existing-mirrored-media-set"></a><a name="existing_mirrored_media_set"></a> G. Sichern auf einen vorhandenen gespiegelten Mediensatz
 
 Im folgenden Beispiel wird ein Sicherungssatz an den Mediensatz angefügt, der im vorherigen Beispiel erstellt wurde.
 
@@ -876,7 +876,7 @@ WITH
 > [!NOTE]
 > Die Standardeinstellung NOINIT wird hier zur Verdeutlichung gezeigt.
 
-### <a name="creating_compressed_backup_new_media_set"></a> H. Erstellen einer komprimierter Sicherung in einem neuen Mediensatz
+### <a name="h-creating-a-compressed-backup-in-a-new-media-set"></a><a name="creating_compressed_backup_new_media_set"></a> H. Erstellen einer komprimierter Sicherung in einem neuen Mediensatz
 
 Im folgenden Beispiel wird das Medium formatiert, wobei ein neuer Mediensatz angelegt wird, und eine vollständige, komprimierte Sicherung der [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]-Datenbank wird erstellt.
 
@@ -887,7 +887,7 @@ WITH
     COMPRESSION;
 ```
 
-### <a name="url"></a> I. Sichern in den Microsoft Azure BLOB-Speicherdienst
+### <a name="i-backing-up-to-the-microsoft-azure-blob-storage-service"></a><a name="url"></a> I. Sichern in den Microsoft Azure BLOB-Speicherdienst
 
 In dem Beispiel wird eine vollständige Sicherung der `Sales`-Datenbank in den Microsoft Azure BLOB-Speicherdienst ausgeführt. Der Speicherkontoname lautet `mystorageaccount`. Der Container heißt `myfirstcontainer`. Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, Lösch- und Auflistungsrechten erstellt. Die Anmeldeinformation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`https://mystorageaccount.blob.core.windows.net/myfirstcontainer` wurde mit einer Shared Access Signature (SAS) erstellt, die der gespeicherten Zugriffsrichtlinie zugeordnet ist. Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherung in Microsoft Azure Blob Storage finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) und [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
@@ -897,7 +897,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
-### <a name="backup_progress"></a> J. Überwachen des Fortschritts von BACKUP-Anweisungen
+### <a name="j-track-the-progress-of-backup-statement"></a><a name="backup_progress"></a> J. Überwachen des Fortschritts von BACKUP-Anweisungen
 
 Die folgende Abfrage gibt Informationen zu den aktuell ausgeführten BACKUP-Anweisungen zurück:
 ```sql
@@ -1095,7 +1095,7 @@ Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **
 
 Besitz- und Berechtigungsprobleme im Zusammenhang mit der URL können den Sicherungsvorgang beeinträchtigen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss über Lese- und Schreibberechtigungen für das Medium verfügen. Das Konto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, muss Schreibberechtigungen haben.
 
-## <a name="examples"></a> Beispiele
+## <a name="examples"></a><a name="examples"></a> Beispiele
 
 In dem Beispiel wird eine COPY_ONLY-Sicherung von `Sales` in Microsoft Azure Blob Storage ausgeführt. Der Speicherkontoname lautet `mystorageaccount`. Der Container heißt `myfirstcontainer`. Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, Lösch- und Auflistungsrechten erstellt. Die Anmeldeinformation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`https://mystorageaccount.blob.core.windows.net/myfirstcontainer` wurde mit einer Shared Access Signature (SAS) erstellt, die der gespeicherten Zugriffsrichtlinie zugeordnet ist. Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherung in Microsoft Azure Blob Storage finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) und [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
@@ -1254,7 +1254,7 @@ Diese dynamischen Verwaltungssichten enthalten Informationen über alle Sicherun
 
 Das DATABASE-Objekt wird mit einer ExclusiveUpdate-Sperre gesperrt.
 
-## <a name="Security"></a> Sicherheit
+## <a name="security"></a><a name="Security"></a> Sicherheit
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Sicherungen werden nicht auf dem Gerät gespeichert. Daher ist Ihr IT-Team zuständig für das Verwalten aller Aspekte der Sicherheit von Sicherungen. Dazu gehört beispielsweise die Verwaltung der Sicherheit der Sicherungsdaten, der Sicherheit der Server, auf denen Sicherungen gespeichert werden, und der Sicherheit der Netzwerkinfrastruktur, die die Sicherungsserver mit der [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Appliance verbinden.
 

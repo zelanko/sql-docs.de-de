@@ -42,10 +42,10 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4046228f4b0d37e72949f9bc87eac13786e6bba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291133"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
@@ -76,12 +76,12 @@ ms.locfileid: "71291133"
 ### <a name="transformations-without-custom-properties"></a>Transformationen ohne benutzerdefinierte Eigenschaften  
  Die folgenden Transformationen verfügen nicht über benutzerdefinierte Eigenschaften auf Komponenten-, Eingabe- oder Ausgabeebene: [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md), [Multicast Transformation](../../../integration-services/data-flow/transformations/multicast-transformation.md) und [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md). Sie verwenden nur die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
-##  <a name="aggregate"></a> Benutzerdefinierte Eigenschaften der Transformation für das Aggregieren  
+##  <a name="aggregate-transformation-custom-properties"></a><a name="aggregate"></a> Benutzerdefinierte Eigenschaften der Transformation für das Aggregieren  
  Die Transformation für das Aggregieren verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für das Aggregieren. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|Integer|Ein Wert zwischen 1 und 100, der den Prozentsatz angibt, um den der Arbeitsspeicher während der Aggregation erweitert werden kann. Der Standardwert dieser Eigenschaft ist **25**.|  
 |CountDistinctKeys|Integer|Ein Wert, der die genaue Anzahl unterschiedlicher Werte angibt, die durch die Aggregation geschrieben werden können. Wenn ein CountDistinctScale-Wert angegeben wird, hat der Wert in CountDistinctKeys Vorrang.|  
@@ -91,14 +91,14 @@ ms.locfileid: "71291133"
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der Ausgabe der Transformation für das Aggregieren beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |Schlüssel|Integer|Ein Wert, der die genaue Anzahl der GROUP BY-Schlüssel angibt, die durch die Aggregation geschrieben werden können. Wenn ein KeyScale-Wert angegeben wird, hat der Wert in „Keys“ Vorrang.|  
 |KeyScale|Ganze Zahl (Enumeration)|Ein Wert, der beschreibt, wie viele GROUP BY-Schlüsselwerte ungefähr von der Aggregation geschrieben werden können. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Niedrig** (1):Gibt bis zu 500.000 Schlüsselwerte an.<br /><br /> **Mittel** (2): Gibt bis zu 5 Millionen Schlüsselwerte an.<br /><br /> **Hoch** (3): Gibt mehr als 25 Millionen Schlüsselwerte an.<br /><br /> **Keine Angabe** (0): Gibt an, dass kein KeyScale-Wert verwendet wird.|  
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für das Aggregieren beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |AggregationColumnId|Integer|Die **LineageID** einer Spalte, die an der GROUP BY-Funktion oder der Aggregatfunktion teilnimmt.|  
 |AggregationComparisonFlags|Integer|Ein Wert, der angibt, wie die Transformation für das Aggregieren Zeichenfolgendaten in einer Spalte vergleicht. Weitere Informationen finden Sie unter [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
@@ -111,12 +111,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Aggregate Transformation](../../../integration-services/data-flow/transformations/aggregate-transformation.md).  
   
-##  <a name="audit"></a> Benutzerdefinierte Eigenschaften der Überwachungstransformation  
+##  <a name="audit-transformation-custom-properties"></a><a name="audit"></a> Benutzerdefinierte Eigenschaften der Überwachungstransformation  
  Die Überwachungstransformation verfügt lediglich über die Eigenschaften, die allen Datenflusskomponenten auf Komponentenebene gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Überwachungstransformation. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |LineageItemSelected|Ganze Zahl (Enumeration)|Das für die Ausgabe ausgewählte Überwachungsobjekt. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **GUID der Ausführungsinstanz** (0)<br /><br /> **Startzeit der Ausführung** (4)<br /><br /> **Computername** (5)<br /><br /> **Paket-ID** (1)<br /><br /> **Paketname** (2)<br /><br /> **Task-ID** (8)<br /><br /> **Taskname** (7)<br /><br /> **Benutzername** (6)<br /><br /> **Versions-ID** (3)|  
   
@@ -124,12 +124,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Überwachungstransformation](../../../integration-services/data-flow/transformations/audit-transformation.md).  
   
-##  <a name="cachetransform"></a> Benutzerdefinierte Eigenschaften der Transformation für Cachetransformation  
+##  <a name="cache-transform-transformation-custom-properties"></a><a name="cachetransform"></a> Benutzerdefinierte Eigenschaften der Transformation für Cachetransformation  
  Die Transformation für Cachetransformation verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die Eigenschaften der Transformation für Cachetransformation. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |ConnectionManager|String|Gibt den Namen des Verbindungs-Managers an.|  
 |ValidateExternalMetadata|Boolean|Gibt an, ob die Cachetransformation zur Entwurfszeit mit externen Datenquellen überprüft wird. Wenn die Eigenschaft auf **False**festgelegt wird, erfolgt zur Laufzeit eine Überprüfung anhand externer Datenquellen.<br /><br /> Der Standardwert lautet **True**.|  
@@ -137,12 +137,12 @@ ms.locfileid: "71291133"
 |InputColumns|String|Eine Liste der ausgewählten Eingabespalten.|  
 |CacheColumnName|String|Gibt den Namen der Spalte an, die einer ausgewählten Eingabespalte zugeordnet wird.<br /><br /> Der Name der Spalte in der CacheColumnName-Eigenschaft muss mit dem Namen der entsprechenden Spalte übereinstimmen, die auf der Seite **Spalten** des **Editors für den Cacheverbindungs-Manager**aufgelistet ist.<br /><br /> Weitere Informationen finden Sie unter [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).|  
   
-##  <a name="charmap"></a> Benutzerdefinierte Eigenschaften der Transformation zum Zuordnen der Zeichen  
+##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> Benutzerdefinierte Eigenschaften der Transformation zum Zuordnen der Zeichen  
  Die Transformation zum Zuordnen der Zeichen verfügt lediglich über die Eigenschaften, die allen Datenflusskomponenten auf Komponentenebene gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation zum Zuordnen der Zeichen. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|Ein Wert, der die **LineageID** der Eingabespalte angibt, die die Quelle der Ausgabespalte ist.|  
 |MapFlags|Ganze Zahl (Enumeration)|Ein Wert, der die Zeichenfolgenvorgänge angibt, die die Transformation zum Zuordnen der Zeichen für die Spalte ausführt. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Byteumkehrung** (2)<br /><br /> **Normale Breite** (6)<br /><br /> **Halbe Breite** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Linguistische Schreibweise** (7)<br /><br /> **Kleinbuchstaben** (0)<br /><br /> **Chinesisch (vereinfacht)** (8)<br /><br /> **Chinesisch (traditionell)** (9)<br /><br /> **Großbuchstaben** (1)|  
@@ -151,12 +151,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Character Map Transformation](../../../integration-services/data-flow/transformations/character-map-transformation.md).  
   
-##  <a name="condsplit"></a> Benutzerdefinierte Eigenschaften der Transformation für bedingtes Teilen  
+##  <a name="conditional-split-transformation-custom-properties"></a><a name="condsplit"></a> Benutzerdefinierte Eigenschaften der Transformation für bedingtes Teilen  
  Die Transformation für bedingtes Teilen verfügt lediglich über die Eigenschaften, die allen Datenflusskomponenten auf Komponentenebene gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabe der Transformation für bedingtes Teilen. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |EvaluationOrder|Integer|Ein Wert, der die Position einer Bedingung, die einer Ausgabe zugeordnet ist, in der Liste der Bedingungen angibt, die die Transformation für bedingtes Teilen auswertet. Die Bedingungen werden vom niedrigsten bis zum höchsten Wert ausgewertet.|  
 |Ausdruck|String|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch Herkunftsbezeichner dargestellt.|  
@@ -167,12 +167,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
   
-##  <a name="copymap"></a> Benutzerdefinierte Eigenschaften der Transformation für das Kopieren von Spalten  
+##  <a name="copy-column-transformation-custom-properties"></a><a name="copymap"></a> Benutzerdefinierte Eigenschaften der Transformation für das Kopieren von Spalten  
  Die Transformation für das Kopieren von Spalten verfügt lediglich über die Eigenschaften, die allen Datenflusskomponenten auf Komponentenebene gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für das Kopieren von Spalten. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |copyColumnId|Integer|Die **LineageID** der Eingabespalte, aus der die Ausgabespalte kopiert wird.|  
   
@@ -180,12 +180,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Copy Column Transformation](../../../integration-services/data-flow/transformations/copy-column-transformation.md).  
   
-##  <a name="dataconv"></a> Benutzerdefinierte Eigenschaften der Transformation für Datenkonvertierung  
+##  <a name="data-conversion-transformation-custom-properties"></a><a name="dataconv"></a> Benutzerdefinierte Eigenschaften der Transformation für Datenkonvertierung  
  Die Transformation für Datenkonvertierung verfügt lediglich über die Eigenschaften, die allen Datenflusskomponenten auf Komponentenebene gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Datenkonvertierung. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |FastParse|Boolean|Ein Wert, der angibt, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] oder die gebietsschemabezogenen Standardanalyseroutinen verwendet. Der Standardwert dieser Eigenschaft ist **False**. Weitere Informationen finden Sie unter [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) und [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). erforderlich.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Datenkonvertierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |SourceInputColumnLineageId|Integer|Die **LineageID** der Eingabespalte, die die Quelle der Ausgabespalte ist.|  
@@ -194,12 +194,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
-##  <a name="dmquery"></a> Benutzerdefinierte Eigenschaften der Transformation für Data Mining-Abfragen  
+##  <a name="data-mining-query-transformation-custom-properties"></a><a name="dmquery"></a> Benutzerdefinierte Eigenschaften der Transformation für Data Mining-Abfragen  
  Die Transformation für Data Mining-Abfragen verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Data Mining-Abfragen. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|Der eindeutige Bezeichner des Verbindungsobjekts.|  
 |ASConnectionString|String|Die Verbindungszeichenfolge zu einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Projekt oder einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenbank.|  
@@ -213,12 +213,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Data Mining Query Transformation](../../../integration-services/data-flow/transformations/data-mining-query-transformation.md).  
   
-##  <a name="derived"></a> Benutzerdefinierte Eigenschaften der Transformation für abgeleitete Spalten  
+##  <a name="derived-column-transformation-custom-properties"></a><a name="derived"></a> Benutzerdefinierte Eigenschaften der Transformation für abgeleitete Spalten  
  Die Transformation für abgeleitete Spalten verfügt lediglich über die Eigenschaften, die allen Datenflusskomponenten auf Komponentenebene gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten und Ausgabespalten der Transformation für abgeleitete Spalten. Wenn Sie die abgeleitete Spalte als neue Spalte hinzufügen, gelten diese benutzerdefinierten Eigenschaften für die neue Ausgabespalte. Wenn Sie den Inhalt einer vorhandenen Eingabespalte durch die abgeleiteten Ergebnisse ersetzen, gelten diese benutzerdefinierten Eigenschaften für die vorhandene Eingabespalte. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |Ausdruck|String|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch die **LineageID** -Eigenschaft für die Spalte dargestellt.|  
 |FriendlyExpression|String|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch ihre Namen dargestellt.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
@@ -227,12 +227,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Transformation für abgeleitete Spalten](../../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
-##  <a name="extract"></a> Benutzerdefinierte Eigenschaften der Transformation für das Exportieren von Spalten  
+##  <a name="export-column-transformation-custom-properties"></a><a name="extract"></a> Benutzerdefinierte Eigenschaften der Transformation für das Exportieren von Spalten  
  Die Transformation für das Exportieren von Spalten verfügt lediglich über die Eigenschaften, die allen Datenflusskomponenten auf Komponentenebene gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für das Exportieren von Spalten. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |AllowAppend|Boolean|Ein Wert, der angibt, ob die Transformation Daten an eine vorhandene Datei anhängt. Der Standardwert dieser Eigenschaft ist **False**.|  
 |ForceTruncate|Boolean|Ein Wert, der angibt, ob die Transformation eine vorhandene Datei vor dem Schreiben der Daten abschneidet. Der Standardwert dieser Eigenschaft ist **False**.|  
@@ -243,12 +243,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Export Column Transformation](../../../integration-services/data-flow/transformations/export-column-transformation.md).  
   
-##  <a name="insert"></a> Benutzerdefinierte Eigenschaften der Transformation für das Importieren von Spalten  
+##  <a name="import-column-transformation-custom-properties"></a><a name="insert"></a> Benutzerdefinierte Eigenschaften der Transformation für das Importieren von Spalten  
  Die Transformation für das Importieren von Spalten verfügt lediglich über die Eigenschaften, die allen Datenflusskomponenten auf Komponentenebene gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für das Importieren von Spalten. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |ExpectBOM|Boolean|Ein Wert, der angibt, ob die Transformation zum Importieren von Spalten eine Bytereihenfolge-Marke (BOM) erwartet. Eine BOM wird nur bei Daten vom DT_NTEXT-Datentyp erwartet.|  
 |FileDataColumnID|Integer|Ein Wert, der die Spalte identifiziert, die die Daten enthält, die von der Transformation in den Datenfluss eingefügt werden. In der Spalte mit den einzufügenden Daten hat diese Eigenschaft den Wert 0; in der Spalte mit den Quelldateipfaden enthält diese Eigenschaft die **LineageID** der Spalte mit den einzufügenden Daten.|  
@@ -257,12 +257,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Import Column Transformation](../../../integration-services/data-flow/transformations/import-column-transformation.md).  
   
-##  <a name="fgroup"></a> Benutzerdefinierte Eigenschaften der Transformation für Fuzzygruppierung  
+##  <a name="fuzzy-grouping-transformation-custom-properties"></a><a name="fgroup"></a> Benutzerdefinierte Eigenschaften der Transformation für Fuzzygruppierung  
  Die Transformation für Fuzzygruppierung verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Fuzzygruppierung. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |Trennzeichen|String|Die von der Transformation verwendeten Tokentrennzeichen. Zu den Standardtrennzeichen zählen folgende Zeichen: Leerzeichen ( ), Komma (,), Punkt (.), Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppeltes gerades Anführungszeichen ("), einfaches gerades Anführungszeichen ('), kaufmännisches Und-Zeichen (&), Schrägstrich (/), umgekehrter Schrägstrich (\\), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als (\<), größer als (>), öffnende eckige Klammer ([), schließende eckige Klammer (]), öffnende geschweifte Klammer ({), schließende geschweifte Klammer (}), senkrechter Strich (&#124;), Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
 |Exhaustive|Boolean|Ein Wert, der angibt, ob jeder Eingabedatensatz mit jedem anderen Eingabedatensatz verglichen wird. Der Wert von **True** wird meistens zu Debugzwecken verwendet. Der Standardwert dieser Eigenschaft ist **False**.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Fuzzygruppierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
@@ -271,7 +271,7 @@ ms.locfileid: "71291133"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für Fuzzygruppierung. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |ExactFuzzy|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob die Transformation eine Fuzzyübereinstimmung oder eine genaue Übereinstimmung ausführt. Die gültigen Werte sind **Genau** und **Fuzzy**. Der Standardwert für diese Eigenschaft ist **Fuzzy**.|  
 |FuzzyComparisonFlags|Ganze Zahl (Enumeration)|Ein Wert, der angibt, wie die Transformation die Zeichenfolgendaten in einer Spalte vergleicht. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
@@ -281,7 +281,7 @@ ms.locfileid: "71291133"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Fuzzygruppierung. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |ColumnType|Ganze Zahl (Enumeration)|Ein Wert, der den Typ der Ausgabespalte identifiziert. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Nicht definiert** (0)<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Ähnlichkeit** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Kanonisch**(6)|  
 |InputID|Integer|Die **LineageID** der entsprechenden Eingabespalte.|  
@@ -290,12 +290,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md).  
   
-##  <a name="flookup"></a> Benutzerdefinierte Eigenschaften der Transformation für Fuzzysuche  
+##  <a name="fuzzy-lookup-transformation-custom-properties"></a><a name="flookup"></a> Benutzerdefinierte Eigenschaften der Transformation für Fuzzysuche  
  Die Transformation für Fuzzysuche verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Fuzzysuche. Alle Eigenschaften außer **ReferenceMetadataXML** haben Lese-/Schreibzugriff.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Gibt an, ob eine Kopie der Verweistabelle für die Indexerstellung der Fuzzysuche und nachfolgende Suchen erstellt werden soll. Der Standardwert dieser Eigenschaft ist **True**.|  
 |Trennzeichen|String|Die Trennzeichen, die von der Transformation verwendet werden, um Spaltenwerte mit Token zu versehen. Zu den Standardtrennzeichen zählen folgende Zeichen: Leerzeichen ( ), Komma (,), Punkt (.), Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppeltes gerades Anführungszeichen ("), einfaches gerades Anführungszeichen ('), kaufmännisches Und-Zeichen (&), Schrägstrich (/), umgekehrter Schrägstrich (\\), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als (\<), größer als (>), öffnende eckige Klammer ([), schließende eckige Klammer (]), öffnende geschweifte Klammer ({), schließende geschweifte Klammer (}), senkrechter Strich (&#124;). Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
@@ -312,7 +312,7 @@ ms.locfileid: "71291133"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für Fuzzysuche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |FuzzyComparisonFlags|Integer|Ein Wert, der angibt, wie die Transformation die Zeichenfolgendaten in einer Spalte vergleicht. Weitere Informationen finden Sie unter [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
 |FuzzyComparisonFlagsEx|Ganze Zahl (Enumeration)|Ein Wert, der angibt, welche erweiterten Vergleichsflags die Transformation verwendet. Die Werte können **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**, und **NoMapping**umfassen. **NoMapping** kann nicht mit anderen Flags verwendet werden.|  
@@ -325,7 +325,7 @@ ms.locfileid: "71291133"
 > [!NOTE]  
 >  Für Ausgabespalten, die Pass-Through-Werte aus den entsprechenden Eingabespalten enthalten, ist CopyFromReferenceColumn leer, und SourceInputColumnLineageID enthält die **LineageID** der entsprechenden Eingabespalte. Für Ausgabespalten, die Suchergebnisse enthalten, enthält CopyFromReferenceColumn den Namen der Suchspalte, und SourceInputColumnLineageID ist leer.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |ColumnType|Ganze Zahl (Enumeration)|Ein Wert, der den Typ der Ausgabespalte für Spalten ermittelt, die die Transformation der Ausgabe hinzufügt. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Nicht definiert** (0)<br /><br /> **Ähnlichkeit** (1)<br /><br /> **Vertrauen** (2)<br /><br /> **ColumnSimilarity** (3)|  
 |CopyFromReferenceColumn|String|Ein Wert, der den Namen der Spalte in der Verweistabelle angibt, die den Wert in einer Ausgabetabelle bereitstellt.|  
@@ -335,12 +335,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md).  
   
-##  <a name="lookup"></a> Benutzerdefinierte Eigenschaften der Transformation für Suche  
+##  <a name="lookup-transformation-custom-properties"></a><a name="lookup"></a> Benutzerdefinierte Eigenschaften der Transformation für Suche  
  Die Transformation für Suche verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Suche. Alle Eigenschaften außer **ReferenceMetadataXML** haben Lese-/Schreibzugriff.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |CacheType|Ganze Zahl (Enumeration)|Der Cachetyp für die Suchtabelle. Die Werte sind **Vollständig** (0), **Teilweise** (1) und **Keine** (2). Der Standardwert dieser Eigenschaft ist **Full**.|  
 |DefaultCodePage|Integer|Die zu verwendende Standardcodepage, wenn keine Codepageinformationen aus der Datenquelle verfügbar sind.|  
@@ -354,14 +354,14 @@ ms.locfileid: "71291133"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für Suche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |CopyFromReferenceColumn|String|Der Name der Spalte in der Verweistabelle, aus der eine Spalte kopiert wird.|  
 |JoinToReferenceColumns|String|Der Name der Spalte in der Verweistabelle, mit der eine Quellspalte verknüpft wird.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Suche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |CopyFromReferenceColumn|String|Der Name der Spalte in der Verweistabelle, aus der eine Spalte kopiert wird.|  
   
@@ -369,12 +369,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-##  <a name="mjoin"></a> Benutzerdefinierte Eigenschaften der Transformation für Zusammenführungsjoin  
+##  <a name="merge-join-transformation-custom-properties"></a><a name="mjoin"></a> Benutzerdefinierte Eigenschaften der Transformation für Zusammenführungsjoin  
  Die Transformation für Zusammenführungsjoin verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Zusammenführungsjoin.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |JoinType|Ganze Zahl (Enumeration)|Gibt an, ob es sich bei dem Join um einen inneren (2), linken äußeren (1) oder vollständigen Join (0) handelt.|  
 |MaxBuffersPerInput|Integer|Der Wert der **MaxBuffersPerInput** -Eigenschaft muss nicht mehr konfiguriert werden, da Microsoft Änderungen vorgenommen hat, die das Risiko einer übermäßigen Arbeitsspeicherbelegung bei der Transformation für Zusammenführungsjoins reduzieren. Dieses Problem trat in einigen Fällen auf, wenn durch die Eingaben des Zusammenführungsjoins unregelmäßige Daten erzeugt wurden.|  
@@ -383,7 +383,7 @@ ms.locfileid: "71291133"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Zusammenführungsjoin. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |InputColumnID|Integer|Die **LineageID** der Eingabespalte, aus der Daten in diese Ausgabespalte kopiert werden.|  
   
@@ -391,12 +391,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md).  
   
-##  <a name="oledbcmd"></a> Benutzerdefinierte Eigenschaften der Transformation für OLE DB-Befehl  
+##  <a name="ole-db-command-transformation-custom-properties"></a><a name="oledbcmd"></a> Benutzerdefinierte Eigenschaften der Transformation für OLE DB-Befehl  
  Die Transformation für OLE DB-Befehl verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für OLE DB-Befehl.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |CommandTimeout|Integer|Die maximale Ausführungsdauer in Sekunden, bevor ein Timeout für den SQL-Befehl eintritt. Der Wert **0** gibt einen unbegrenzten Zeitraum an. Der Standardwert dieser Eigenschaft ist **0**.|  
 |DefaultCodePage|Integer|Die zu verwendende Codepage, wenn keine Codepageinformationen aus der Datenquelle verfügbar sind.|  
@@ -404,7 +404,7 @@ ms.locfileid: "71291133"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der externen Spalten der Transformation für OLE DB-Befehl. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |DBParamInfoFlag|Ganze Zahl (Bitmaske)|Eine Gruppe von Flags, die Parametereigenschaften beschreiben. Weitere Informationen finden Sie unter DBPARAMFLAGSENUM in der OLE DB-Dokumentation in der MSDN Library.|  
   
@@ -412,19 +412,19 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [OLE DB Command Transformation](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
-##  <a name="percent"></a> Benutzerdefinierte Eigenschaften der Transformation für Prozentwert-Stichproben  
+##  <a name="percentage-sampling-transformation-custom-properties"></a><a name="percent"></a> Benutzerdefinierte Eigenschaften der Transformation für Prozentwert-Stichproben  
  Die Transformation für Prozentwert-Stichproben verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Prozentwert-Stichproben.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |SamplingSeed|Integer|Der vom Zufallszahlen-Generator verwendete Ausgangswert. Der Standardwert dieser Eigenschaft ist **0**und gibt an, dass die Transformation eine Taktanzahl verwendet.|  
 |SamplingValue|Integer|Die Größe der Stichprobe als Prozentwert der Quelle.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgaben der Transformation für Prozentwert-Stichproben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |Aktiviert|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. In der ausgewählten Ausgabe ist „Ausgewählt“ auf **True**festgelegt, in der nicht ausgewählten Ausgabe auf **False**.|  
   
@@ -432,34 +432,34 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Percentage Sampling Transformation](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md).  
   
-##  <a name="pivot"></a> Benutzerdefinierte Eigenschaften der Transformation für Pivot  
+##  <a name="pivot-transformation-custom-properties"></a><a name="pivot"></a> Benutzerdefinierte Eigenschaften der Transformation für Pivot  
  Die folgende Tabelle beschreibt die benutzerdefinierten Komponenteneigenschaften der Pivottransformation.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |**PassThroughUnmatchedPivotKeyts**|Boolean|Legen Sie den Wert auf **True** fest, um die Pivottransformation zu konfigurieren, um Zeilen zu ignorieren, die nicht erkannte Werte in der Spalte "Pivotschlüssel" enthalten, und alle Pivotschlüsselwerte zu einer Protokollmeldung auszugeben, wenn das Paket ausgeführt wird.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für Pivot. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |PivotUsage|Ganze Zahl (Enumeration)|Ein Wert, der die Rolle einer Spalte angibt, wenn das Dataset pivotiert wird.<br /><br /> **0**:<br />                      Die Spalte ist nicht pivotiert, und die Spaltenwerte werden über die Transformationsausgabe übergeben.<br /><br /> **1**:<br />                      Die Spalte ist Teil des festgelegten Schlüssels, der mindestens eine Zeile als Teil eines Datasets identifiziert. Alle Eingabezeilen mit demselben festgelegten Schlüssel werden zu einer einzigen Ausgabezeile zusammengefasst.<br /><br /> **2**:<br />                      Die Spalte ist eine Pivotspalte. Mindestens eine Spalte wird von jedem Spaltenwert erstellt.<br /><br /> **3**:<br />                      Die Werte aus dieser Spalte werden in Spalten platziert, die als Ergebnis des Pivotvorgangs erstellt werden.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Pivot. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |PivotKeyValue|String|Einer der möglichen Werte aus der Spalte, der durch den Wert seiner PivotUsage-Eigenschaft als Pivotschlüssel markiert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
 |SourceColumn|Integer|Die **LineageID** einer Eingabespalte, die einen pivotierten Wert oder -1 enthält. Der Wert -1 gibt an, dass die Spalte nicht in einem Pivotvorgang verwendet wird.|  
   
  Weitere Informationen finden Sie unter [Pivot Transformation](../../../integration-services/data-flow/transformations/pivot-transformation.md).  
   
-##  <a name="rowcount"></a> Benutzerdefinierte Eigenschaften der Transformation für Zeilenanzahl  
+##  <a name="row-count-transformation-custom-properties"></a><a name="rowcount"></a> Benutzerdefinierte Eigenschaften der Transformation für Zeilenanzahl  
  Die Transformation für Zeilenanzahl verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Zeilenanzahl. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |VariableName|String|Der Name der Variablen, die die Zeilenanzahl enthält.|  
   
@@ -467,25 +467,25 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Row Count Transformation](../../../integration-services/data-flow/transformations/row-count-transformation.md).  
   
-##  <a name="rowsamp"></a> Benutzerdefinierte Eigenschaften der Transformation für Zeilenstichproben  
+##  <a name="row-sampling-transformation-custom-properties"></a><a name="rowsamp"></a> Benutzerdefinierte Eigenschaften der Transformation für Zeilenstichproben  
  Die Transformation für Zeilenstichproben verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Zeilenstichproben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |SamplingSeed|Integer|Der vom Zufallszahlen-Generator verwendete Ausgangswert. Der Standardwert dieser Eigenschaft ist **0**und gibt an, dass die Transformation eine Taktanzahl verwendet.|  
 |SamplingValue|Integer|Die Zeilenanzahl der Stichprobe.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgaben der Transformation für Zeilenstichproben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |Aktiviert|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. In der ausgewählten Ausgabe ist „Ausgewählt“ auf **True**festgelegt, in der nicht ausgewählten Ausgabe auf **False**.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Zeilenstichproben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|Ein Wert, der die **LineageID** der Eingabespalte angibt, die die Quelle der Ausgabespalte ist.|  
   
@@ -493,12 +493,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md).  
   
-##  <a name="script"></a> Benutzerdefinierte Eigenschaften der Skriptkomponente  
+##  <a name="script-component-custom-properties"></a><a name="script"></a> Benutzerdefinierte Eigenschaften der Skriptkomponente  
  Die Skriptkomponente verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind. Unabhängig davon, ob die Skriptkomponente als Quelle, Transformation oder Ziel fungiert, sind die gleichen benutzerdefinierten Eigenschaften verfügbar.  
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der Skriptkomponente beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |ReadOnlyVariables|String|Eine durch Trennzeichen getrennte Liste von Variablen für den schreibgeschützten Zugriff durch die Skriptkomponente.|  
 |ReadWriteVariables|String|Eine durch Trennzeichen getrennte Liste von Variablen für den Lese-/Schreibzugriff durch die Skriptkomponente.|  
@@ -507,12 +507,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Script Component](../../../integration-services/data-flow/transformations/script-component.md).  
   
-##  <a name="scd"></a> Benutzerdefinierte Eigenschaften der Transformation für langsam veränderliche Dimensionen  
+##  <a name="slowly-changing-dimension-transformation-custom-properties"></a><a name="scd"></a> Benutzerdefinierte Eigenschaften der Transformation für langsam veränderliche Dimensionen  
  Die Transformation für langsam veränderliche Dimensionen verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für langsam veränderliche Eigenschaften. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |CurrentRowWhere|String|Die WHERE-Klausel in der SELECT-Anweisung, die die aktuelle Zeile aus Zeilen mit demselben Geschäftsschlüssel auswählt.|  
 |EnableInferredMember|Boolean|Ein Wert, der angibt, ob Updates abgeleiteter Elemente erkannt werden. Der Standardwert dieser Eigenschaft ist **True**.|  
@@ -525,7 +525,7 @@ ms.locfileid: "71291133"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für langsam veränderliche Dimensionen. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |ColumnType|Ganze Zahl (Enumeration)|Der Updatetyp der Spalte. Die Werte sind: **Veränderliches Attribut** (2), **Festes Attribut** (4), **Verlaufsattribut** (3) **Schlüssel** (1) und **Andere** (0).|  
   
@@ -533,26 +533,26 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
-##  <a name="sort"></a> Benutzerdefinierte Eigenschaften der Transformation zum Sortieren  
+##  <a name="sort-transformation-custom-properties"></a><a name="sort"></a> Benutzerdefinierte Eigenschaften der Transformation zum Sortieren  
  Die Transformation zum Sortieren verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation zum Sortieren. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |EliminateDuplicates|Boolean|Gibt an, ob die Transformation doppelte Zeilen aus der Transformationsausgabe entfernt. Der Standardwert dieser Eigenschaft ist **False**.|  
 |MaximumThreads|Integer|Enthält die maximale Anzahl an Threads, die die Transformation zum Sortieren verwenden kann. Der Wert **0** gibt eine unendliche Anzahl an Threads an. Der Standardwert dieser Eigenschaft ist **0**.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation zum Sortieren. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |NewComparisonFlags|Ganze Zahl (Bitmaske)|Ein Wert, der angibt, wie die Transformation die Zeichenfolgendaten in einer Spalte vergleicht. Weitere Informationen finden Sie unter [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
 |NewSortKeyPosition|Integer|Ein Wert, der die Sortierreihenfolge der Spalte angibt. Der Wert 0 gibt an, dass die Daten in dieser Spalte nicht sortiert werden.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation zum Sortieren. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |SortColumnID|Integer|Die **LineageID** einer Sortierspalte.|  
   
@@ -560,12 +560,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Sort Transformation](../../../integration-services/data-flow/transformations/sort-transformation.md).  
   
-##  <a name="textract"></a> Benutzerdefinierte Eigenschaften der Transformation für Ausdrucksextrahierung  
+##  <a name="term-extraction-transformation-custom-properties"></a><a name="textract"></a> Benutzerdefinierte Eigenschaften der Transformation für Ausdrucksextrahierung  
  Die Transformation für Ausdrucksextrahierung verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Ausdrucksextrahierung. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|--------------|-----------------|  
 |FrequencyThreshold|Integer|Ein numerischer Wert, der angibt, wie oft ein Ausdruck auftreten muss, bevor er extrahiert wird. Der Standardwert dieser Eigenschaft ist **2**.|  
 |IsCaseSensitive|Boolean|Ein Wert, der angibt, ob beim Extrahieren von Nomen und nominalen Ausdrücken die Groß-/Kleinschreibung berücksichtigt wird. Der Standardwert dieser Eigenschaft ist **False**.|  
@@ -580,12 +580,12 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Term Extraction Transformation](../../../integration-services/data-flow/transformations/term-extraction-transformation.md).  
   
-##  <a name="tlookup"></a> Benutzerdefinierte Eigenschaften der Transformation für Ausdruckssuche  
+##  <a name="term-lookup-transformation-custom-properties"></a><a name="tlookup"></a> Benutzerdefinierte Eigenschaften der Transformation für Ausdruckssuche  
  Die Transformation für Ausdruckssuche verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Ausdruckssuche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |IsCaseSensitive|Boolean|Ein Wert, der angibt, ob ein Vergleich mit Beachtung der Groß-/Kleinschreibung auf die Übereinstimmung des Texts in der Eingabespalte und den Suchbegriff angewendet wird. Der Standardwert dieser Eigenschaft ist **False**.|  
 |RefTermColumn|String|Der Name der Spalte, die die Suchausdrücke enthält.|  
@@ -593,13 +593,13 @@ ms.locfileid: "71291133"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für Ausdruckssuche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |InputColumnType|Integer|Ein Wert, der die Verwendung der Spalte angibt. Gültige Werte sind 0 für eine Pass-Through-Spalte, 1 für eine Suchspalte und 2 für eine Spalte, die sowohl eine Pass-Through-Spalte als auch eine Suchspalte ist.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Ausdruckssuche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |CustomLineageID|Integer|Die **LineageID** der entsprechenden Eingabespalte, wenn der **InputColumnType** dieser Spalte 0 oder 2 ist.|  
   
@@ -607,7 +607,7 @@ ms.locfileid: "71291133"
   
  Weitere Informationen finden Sie unter [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md).  
   
-##  <a name="unpivot"></a> Benutzerdefinierte Eigenschaften der Entpivotierungstransformation  
+##  <a name="unpivot-transformation-custom-properties"></a><a name="unpivot"></a> Benutzerdefinierte Eigenschaften der Entpivotierungstransformation  
  Die Entpivotierungstransformation verfügt lediglich über die Eigenschaften, die allen Datenflusskomponenten auf Komponentenebene gemeinsam sind.  
   
 > [!NOTE]  
@@ -615,14 +615,14 @@ ms.locfileid: "71291133"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Entpivotierungstransformation. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|Integer|Die **LineageID** der Ausgabespalte, der die Eingabespalte zugeordnet wird. Ein Wert von -1 gibt an, dass die Eingabespalte keiner Ausgabespalte zugeordnet wird.|  
 |PivotKeyValue|String|Ein Wert, der in eine Transformationsausgabespalte kopiert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.<br /><br /> In dem in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)beschriebenen Entpivotierungsszenario sind die Pivotwerte die Textwerte Ham, Coke, Milk, Beer und Chips. Diese werden in der neuen Produktspalte, die durch die **Name der Pivotschlüsselwert-Spalte** -Option festgelegt wird, als Textwerte angezeigt.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Entpivotierungstransformation. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |PivotKey|Boolean|Gibt an, ob die Werte in der **PivotKeyValue** -Eigenschaft von Eingabespalten in diese Ausgabespalte geschrieben werden.<br /><br /> In dem in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)beschriebenen Entpivotierungsszenario lautete der Name der Pivotwertspalte **Product** und bezieht sich auf die neue **Product** -Spalte, in der die Pivotierung der Spalten Ham, Coke, Milk, Beer und Chips aufgehoben wird.|  
   

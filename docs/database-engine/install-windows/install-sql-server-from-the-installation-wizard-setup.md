@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76934192"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installieren von SQL Server über den Installations-Assistenten (Setup)
@@ -50,7 +50,7 @@ Bevor Sie die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
-###  <a name="bkmk_ga_instalpatch"></a> Installieren einer Patchanforderung
+###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> Installieren einer Patchanforderung
 
 Microsoft hat ein Problem erkannt, das die Runtime-Binärdateien von Microsoft Visual C++ 2013 betrifft, die von SQL Server 2016 und 2017 als erforderliche Komponente installiert werden. Ein Update ist verfügbar, um dieses Problem zu beheben. Wenn dieses Update der Runtime-Binärdateien von Visual C++ nicht installiert wird, können bei SQL Server in bestimmten Szenarios Stabilitätsprobleme auftreten. Bevor Sie SQL Server installieren, sollten Sie entsprechend den Anweisungen unter [Versionsanmerkungen zu SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) vorgehen, um festzustellen, ob Ihr Computer einen Patch für die Runtime-Binärdateien von Visual C++ benötigt. 
 

@@ -10,10 +10,10 @@ ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0ed3134e26bc2ed0f581a722de50526a49fb9e3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68126035"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Deinstallieren und Entfernen von Master Data Services
@@ -23,7 +23,7 @@ ms.locfileid: "68126035"
   
  Um Datenverluste oder Auswirkungen auf andere Computer im System zu verhindern, werden bestimmte Elemente vom Deinstallationsvorgang nicht entfernt oder geändert. Überprüfen Sie anhand der folgenden Tabelle, welche Elemente beibehalten und welche Elemente entfernt werden sollten.  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |----------|-----------------|  
 |Ordner und Dateien|Beim Deinstallationsvorgang werden die meisten Ordner und Dateien aus dem Installationspfad entfernt.<br /><br /> Die Ordner Master Data Services und MDSTempDir werden durch den Deinstallationsvorgang jedoch nicht aus dem Installationspfad gelöscht. Nach Abschluss der Deinstallation können Sie diese Ordner manuell aus dem Dateisystem löschen. Weitere Informationen finden Sie unter [Ordner- und Dateiberechtigungen &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Assemblys|Der Deinstallationsvorgang entfernt [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Assemblys aus dem Global Assembly Cache (GAC).|  

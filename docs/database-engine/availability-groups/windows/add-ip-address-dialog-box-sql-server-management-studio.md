@@ -13,10 +13,10 @@ ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 10ead33635c1fc1e263252ec3ae0a3f86b173679
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822094"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>Dialogfeld IP-Adresse hinzufügen (SQL Server Management Studio)
@@ -26,7 +26,7 @@ ms.locfileid: "74822094"
 ## <a name="prerequisites"></a>Voraussetzungen  
  Bevor Sie beginnen, einem Verfügbarkeitsgruppenlistener Subnetze hinzuzufügen, stellen Sie sicher, dass Sie die IP-Adresse für jedes Subnetz und bei einer IPv4-Adresse die Subnetzmaske kennen.  
   
-##  <a name="PageOptions"></a> Optionen für "IP-Adresse hinzufügen"  
+##  <a name="add-ip-address-options"></a><a name="PageOptions"></a> Optionen für "IP-Adresse hinzufügen"  
  **Subnetz**  
  Verwenden Sie die Dropdownliste, um eine Adresse für das Subnetz auszuwählen, das Sie dem Verfügbarkeitsgruppenlistener hinzufügen. Standardmäßig besitzt ein Subnetz sowohl eine IPv4-Adresse als auch eine IPv6-Adresse. Beim ersten Verwenden des Dialogfelds **IP-Adresse hinzufügen** zeigt die Dropdownliste **Subnetz** beide Subnetzadressen für jedes Subnetz an, das ein Replikat für die Verfügbarkeitsgruppe hostet. Um dem Listener ein angegebenes Subnetz hinzuzufügen, wählen Sie eine der Subnetzadressen aus.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74822094"
  **Abbrechen**  
  Klicken Sie, um die Auswahl abzubrechen und zum Dialogfeld **Neuer Verfügbarkeitsgruppenlistener** oder zur Registerkarte **Listener** zurückzukehren, ohne eine statische IP-Adresse für ein Subnetz hinzuzufügen.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   

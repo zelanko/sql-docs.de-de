@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014679"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Überwachen der Leistung von Always On-Verfügbarkeitsgruppen
@@ -436,16 +436,16 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
  Sie können zur Überprüfen der Auswertungsergebnisse den Auftragsverlauf einsehen. Fehler bei der Auswertung werden auch im Windows-Anwendungsprotokoll (in der Ereignisanzeige) mit der Ereignis-ID 34052 erfasst. Sie können auch den SQL Server-Agent für das Senden von Warnungen für Richtlinienfehler konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren von Warnungen zur Benachrichtigung von Richtlinienadministratoren bei Richtlinienfehlern](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md).  
   
-##  <a name="BKMK_SCENARIOS"></a> Leistungsbezogene Problembehandlungsszenarien  
+##  <a name="performance-troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> Leistungsbezogene Problembehandlungsszenarien  
  Die folgende Tabelle enthält die allgemeinen leistungsbezogenen Problembehandlungsszenarien.  
   
-|Szenario|Beschreibung|  
+|Szenario|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[Problembehandlung: Verfügbarkeitsgruppe hat RTO überschritten](troubleshoot-availability-group-exceeded-rto.md)|Nach einem automatischen Failover oder einem geplanten manuellen Failover ohne Datenverlust überschreitet die Failoverzeit die RTO. Ein anderer Fall: Wenn Sie die Failoverzeit eines sekundären Replikats im synchronen Commitmodus (z.B. eines Partners für das automatische Failover) einschätzen, stellen Sie fest, dass diese Ihre RTO überschreitet.|  
 |[Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten](troubleshoot-availability-group-exceeded-rpo.md)|Nachdem Sie ein erzwungenes manuelles Failover ausgeführt haben, ist der Datenverlust größer als Ihre RPO. Ein anderer Fall: Wenn Sie den möglichen Datenverlust eines sekundäres Replikats im asynchronen Commitmodus berechnen, stellen Sie fest, dass dieser Ihre RPO überschreitet.|  
 |[Problembehandlung: Änderungen am primären Replikat spiegeln sich nicht im sekundären Replikat wider](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Die Clientanwendung führt erfolgreich ein Update für das primäre Replikat durch, wobei jedoch die Abfrage des sekundären Replikats ergibt, dass die Änderung nicht widergespiegelt wird.|  
   
-##  <a name="BKMK_XEVENTS"></a> Nützliche erweiterte Ereignisse  
+##  <a name="useful-extended-events"></a><a name="BKMK_XEVENTS"></a> Nützliche erweiterte Ereignisse  
  Für die Behandlung von Problemen mit Replikaten im Zustand **Wird synchronisiert** sind folgende erweiterte Ereignisse nützlich.  
   
 |Veranstaltungsname|Category|Channel|Verfügbarkeitsreplikat|  

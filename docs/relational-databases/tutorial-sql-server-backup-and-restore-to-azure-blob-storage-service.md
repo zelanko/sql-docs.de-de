@@ -11,10 +11,10 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165523"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Schnellstart: Sicherung und Wiederherstellung von SQL Server mit dem Azure Blob Storage-Dienst
@@ -122,7 +122,7 @@ Erstellen Sie auf der grafischen Benutzeroberfläche von SQL Server Management S
 ## <a name="back-up-database"></a>Datenbank sichern
 In diesem Schritt sichern Sie die Datenbank `SQLTestDB` in Ihrem Azure Blob Storage-Konto, indem Sie entweder die grafische Benutzeroberfläche von SQL Server Management Studio oder Transact-SQL (T-SQL) verwenden. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Wenn der Assistent **Datenbank sichern** nicht bereits geöffnet ist, erweitern Sie im **Objekt-Explorer** von [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) den Knoten **Datenbanken**.
 1. Klicken Sie mit der rechten Maustaste auf Ihre neue `SQLTestDB`-Datenbank, bewegen Sie den Mauszeiger über **Tasks**, und wählen Sie dann **Sichern...** aus, um den Assistenten **Datenbank sichern** zu starten. 
@@ -141,7 +141,7 @@ In diesem Schritt sichern Sie die Datenbank `SQLTestDB` in Ihrem Azure Blob Stor
    > Sie können die Transact-SQL hinter diesem Befehl als Skript ausgeben, indem Sie **Skript** oben im Assistenten **Datenbank sichern** auswählen: ![Befehl „Skript“](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Sichern Sie Ihre Datenbank mithilfe von Transact-SQL, indem Sie den folgenden Befehl ausführen: 
 
@@ -160,12 +160,12 @@ GO
 ## <a name="delete-database"></a>Datenbank löschen
 In diesem Schritt löschen Sie die Datenbank, bevor Sie die Wiederherstellung durchführen. Dieser Schritt ist nur für die Zwecke dieses Tutorials erforderlich, bei normalen Datenbank-Verwaltungsverfahren aber eher unwahrscheinlich. Sie können diesen Schritt überspringen. Dann müssen Sie jedoch entweder den Namen der Datenbank während der Wiederherstellung in eine verwaltete Instanz ändern oder den Wiederherstellungsbefehl `WITH REPLACE` ausführen, um die Datenbank erfolgreich lokal wiederherzustellen. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Erweitern Sie im **Objekt-Explorer** den Knoten **Datenbanken**, klicken Sie mit der rechten Maustaste auf die `SQLTestDB`-Datenbank, und wählen Sie „Löschen“ aus, um den Assistenten **Objekt löschen** zu starten. 
 1. Klicken Sie bei einer verwalteten Instanz auf **OK**, um die Datenbank zu löschen. Aktivieren Sie lokal das Kontrollkästchen neben **Bestehende Verbindungen schließen**, und klicken Sie dann auf **OK**, um die Datenbank zu löschen. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Löschen Sie die Datenbank, indem Sie den folgenden Transact-SQL-Befehl ausführen:
 
@@ -192,7 +192,7 @@ GO
 ## <a name="restore-database"></a>Datenbank wiederherstellen 
 In diesem Schritt stellen Sie die Datenbank entweder über die grafische Benutzeroberfläche von SQL Server Management Studio oder mit Transact-SQL wieder her. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Klicken Sie in SQL Server Management Studio im **Objekt-Explorer** mit der rechten Maustaste auf den Knoten **Datenbanken**, und wählen Sie dann **Datenbank wiederherstellen** aus. 
 1. Klicken Sie auf **Gerät** und dann auf die Auslassungspunkte (...), um das Gerät zu wählen. 
@@ -216,7 +216,7 @@ In diesem Schritt stellen Sie die Datenbank entweder über die grafische Benutze
 1. Klicken Sie auf **OK**, um das Dialogfeld **Sicherungsmedien auswählen** zu schließen. 
 1. Klicken Sie auf **OK**, um die Datenbank wiederherzustellen. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Um Ihre lokale Datenbank aus Azure Blob Storage wiederherzustellen, ändern Sie den folgenden Transact-SQL-Befehl so, dass Sie Ihr eigenes Speicherkonto verwenden, und führen Sie ihn dann in einem neuen Abfragefenster aus. 
 

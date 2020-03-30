@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 068b7aa3c068b10b787b99bba26c12a2b680bcd3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727405"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Leistungsoptimierung für R Services: Ergebnisse und Ressourcen
@@ -41,7 +41,7 @@ In dieser Fallstudie testete das Entwicklungsteam von SQL Server R Services die 
 3. Auf die Kopien der Tabelle wurden verschiedene Änderungen angewendet, um SQL Server-Funktionen wie Seitenkomprimierung, Zeilenkomprimierung, Indizierung, Spaltendatenspeicher usw. zu testen.
 4. Die Leistung wurde jeweils vor und nach jeder Optimierung gemessen.
 
-| Tabellenname| Beschreibung|
+| Tabellenname| BESCHREIBUNG|
 |------|------|
 | *airline* | Aus der ursprünglichen XDF-Datei mithilfe von `rxDataStep` konvertierte Daten.|                          |
 | *airlineWithIntCol*   | *DayOfWeek* konvertiert in eine Ganzzahl anstatt in eine Zeichenfolge. Fügt auch eine *rowNum*-Spalte hinzu.|

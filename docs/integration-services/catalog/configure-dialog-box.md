@@ -15,10 +15,10 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299009"
 ---
 # <a name="configure-dialog-box"></a>Konfigurieren (Dialogfeld)
@@ -36,7 +36,7 @@ ms.locfileid: "71299009"
   
 -   [Festlegen der Optionen auf der Seite 'Verweise'](#references)  
   
-##  <a name="open_dialog"></a> Öffnen des Dialogfelds 'Konfigurieren'  
+##  <a name="open-the-configure-dialog-box"></a><a name="open_dialog"></a> Öffnen des Dialogfelds 'Konfigurieren'  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server her.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71299009"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Paket oder Projekt, und klicken Sie anschließend auf **Konfigurieren**.  
   
-##  <a name="parameter"></a> Festlegen der Optionen auf der Seite 'Parameter'  
+##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> Festlegen der Optionen auf der Seite 'Parameter'  
  Verwenden Sie die Seite **Parameter** , um Parameternamen und Werte anzuzeigen und die Werte zu ändern.  
   
  Wählen Sie den Bereich der Parameter aus, der in den Registerkarten **Parameter** und **Verbindungs-Manager** in der Dropdownliste **Bereich** angezeigt wird.  
@@ -80,7 +80,7 @@ ms.locfileid: "71299009"
  **Wert**  
  Listet den Wert auf, der der Verbindungs-Manager-Eigenschaft zugewiesen ist. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Wert im Dialogfeld **Parameterwert festlegen** zu ändern. Sie können einen Literalwert eingeben, eine Umgebungsvariable mit dem zu verwendenden Wert zuordnen oder den Standardwert aus dem Paket verwenden.  
   
-##  <a name="references"></a> Festlegen der Optionen auf der Seite 'Verweise'  
+##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> Festlegen der Optionen auf der Seite 'Verweise'  
  Verwenden Sie die Seite **Verweise** , um Umgebungsverweise hinzuzufügen und zu entfernen und um auf Umgebungseigenschaften zuzugreifen.  
   
  In einer Umgebung werden Laufzeitwerte für Pakete festgelegt, die in den auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitgestellten Projekten enthalten sind.  

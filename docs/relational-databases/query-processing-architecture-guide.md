@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288384"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510201"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist
 4. Die relationale Engine beginnt mit der Ausführung des Ausführungsplans. Während der Verarbeitung von Schritten, für die Daten aus den Basistabellen erforderlich sind, fordert die relationale Engine an, dass die Speicher-Engine die Daten aus den Rowsets übergibt, die durch die relationale Engine angefordert wurden.
 5. Die relationale Engine transformiert die Daten, die von der Speicher-Engine zurückgegeben werden, in das für das Resultset definierte Format und gibt das Resultset an den Client zurück.
 
-### <a name="ConstantFolding"></a> Reduktion konstanter Ausdrücke und Auswertung von Ausdrücken 
+### <a name="constant-folding-and-expression-evaluation"></a><a name="ConstantFolding"></a> Reduktion konstanter Ausdrücke und Auswertung von Ausdrücken 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wertet bestimmte konstante Ausdrücke frühzeitig aus, um die Abfrageleistung zu steigern. Dies wird als Reduktion konstanter Ausdrücke bezeichnet. Eine Konstante ist ein [!INCLUDE[tsql](../includes/tsql-md.md)]-Literal, z. B. `3`, `'ABC'`, `'2005-12-31'`, `1.0e3` und `0x12345678`.
 
 #### <a name="foldable-expressions"></a>Zur Kompilierzeit reduzierbare Ausdrücke
@@ -181,7 +181,7 @@ Wird für diese Abfrage die `PARAMETERIZATION`-Datenbankoption nicht auf `FORCED
 
 Wenn `dbo.f` jedoch eine skalare benutzerdefinierte Funktion ist, wird der Ausdruck  `dbo.f(100)` nicht zur Kompilierzeit reduziert, da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keine benutzerdefinierten Funktionen zur Kompilierzeit reduziert, auch wenn sie deterministisch sind. Weitere Informationen zur Parametrisierung finden Sie unter [Erzwungene Parametrisierung](#ForcedParam) weiter unten in diesem Artikel.
 
-#### <a name="ExpressionEval"></a>Auswertung von Ausdrücken 
+#### <a name="expression-evaluation"></a><a name="ExpressionEval"></a>Auswertung von Ausdrücken 
 Außerdem werden bestimmte Ausdrücke, die zwar nicht zur Kompilierzeit ausgewertet werden, deren Argumente jedoch zur Kompilierzeit bekannt sind – unabhängig davon, ob es sich bei den Argumenten um Parameter oder Konstanten handelt – hinsichtlich der Größe ihrer Resultsets (Kardinalität) geschätzt. Dieser Vorgang ist ein Bestandteil des Abfrageoptimierers.
 
 Insbesondere werden folgende integrierte Funktionen und spezielle Operatoren zur Kompilierzeit ausgewertet, wenn alle diesbezüglichen Eingaben bekannt sind: `UPPER`, `LOWER`, `RTRIM`, `DATEPART( YY only )`, `GETDATE`, `CAST` und `CONVERT`. Die folgenden Operatoren werden ebenfalls zur Kompilierzeit ausgewertet, wenn alle diesbezüglichen Eingaben bekannt sind:
@@ -550,9 +550,9 @@ GO
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -573,9 +573,9 @@ GO
 Überprüfen Sie nochmal, was Sie im Plancache ermitteln können. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -599,10 +599,10 @@ GO
 Überprüfen Sie nochmal, was Sie im Plancache ermitteln können. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -690,7 +690,7 @@ Die `recompile_cause`-Spalte von `sql_statement_recompile` xEvent enthält einen
 > [!NOTE]
 > Wenn die Datenbankoption `AUTO_UPDATE_STATISTICS` auf `ON` festgelegt wird, werden Abfragen neu kompiliert, wenn sie Tabellen oder indizierte Sichten betreffen, deren Statistiken aktualisiert wurden oder deren Kardinalitäten sich seit der letzten Ausführung signifikant geändert haben. Dieses Verhalten gilt für standardmäßige benutzerdefinierte Tabellen, temporäre Tabellen und die durch DML-Trigger erstellten eingefügten und gelöschten Tabellen. Wenn sich sehr viele Neukompilierungen auf die Abfrageleistung auswirken, können Sie diese Einstellung in `OFF`ändern. Wenn die `AUTO_UPDATE_STATISTICS`-Datenbankoption auf `OFF` festgelegt wird, werden auf der Grundlage von Statistiken oder wegen Änderungen der Kardinalität keine Neukompilierungen durchgeführt, mit Ausnahme der durch DML `INSTEAD OF`-Trigger erstellten eingefügten und gelöschten Tabellen. Da diese Tabellen in „tempdb“ erstellt wurden, hängt die Neukompilierung von Abfragen, die auf diese Tabellen zugreifen, von der `AUTO_UPDATE_STATISTICS` -Einstellung in „tempdb“ ab. Beachten Sie, dass, auch wenn diese Einstellung auf `OFF` festgelegt ist, Abfragen in früheren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Versionen als 2005 weiterhin auf der Grundlage der Kardinalitätsänderungen in den durch DML-Trigger eingefügten und gelöschten Tabellen noch mal kompiliert werden.
 
-### <a name="PlanReuse"></a> Parameter und Wiederverwendung von Ausführungsplänen
+### <a name="parameters-and-execution-plan-reuse"></a><a name="PlanReuse"></a> Parameter und Wiederverwendung von Ausführungsplänen
 Durch die Verwendung von Parametern, einschließlich der Parametermarkierungen in ADO-, OLE DB- und ODBC-Anwendungen, kann die Wiederverwendbarkeit von Ausführungsplänen erhöht werden. 
 
 > [!WARNING] 
@@ -758,7 +758,7 @@ WHERE AddressID = 1 + 2;
 
 Sie kann jedoch nach den Regeln der einfachen Parametrisierung parametrisiert werden. Wenn die erzwungene Parametrisierung einen Fehler erzeugt, wird anschließend die einfache Parametrisierung versucht.
 
-### <a name="SimpleParam"></a> Einfache Parametrisierung
+### <a name="simple-parameterization"></a><a name="SimpleParam"></a> Einfache Parametrisierung
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird durch das Verwenden von Parametern oder Parametermarkierungen in Transact-SQL-Anweisungen die Fähigkeit der relationalen Engine verbessert, neue [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen vorhandenen, zuvor kompilierten Ausführungsplänen zuzuordnen.
 
 > [!WARNING] 
@@ -793,7 +793,7 @@ Beim Standardverhalten der einfachen Parametrisierung parametrisiert [!INCLUDE[s
 
 Alternativ können Sie angeben, dass eine einzelne Abfrage und alle anderen Abfragen, die in ihrer Syntax gleichwertig sind, und lediglich in ihren Parameterwerten abweichen, parametrisiert werden. 
 
-### <a name="ForcedParam"></a> Erzwungene Parametrisierung
+### <a name="forced-parameterization"></a><a name="ForcedParam"></a> Erzwungene Parametrisierung
 Sie können das standardmäßige Parametrisierungsverhalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die einfache Parametrisierung, überschreiben, indem Sie angeben, dass alle `SELECT`-, `INSERT`-, `UPDATE`- und `DELETE`-Anweisungen in einer Datenbank mit bestimmten Einschränkungen parametrisiert werden sollen. Die erzwungene Parametrisierung wird aktiviert, indem die `PARAMETERIZATION` -Option in der `FORCED` -Anweisung auf `ALTER DATABASE` festgelegt wird. Indem sie die Frequenz von Anweisungskompilierungen und -neukompilierungen verringert, kann die erzwungene Parametrisierung die Leistungsfähigkeit bestimmter Datenbanken erhöhen. Dabei handelt es sich im Allgemeinen um Datenbanken, die einer großen Anzahl gleichzeitiger Abfragen ausgesetzt sind, wie z. B. Point-of-Sale-Anwendungen.
 
 Wenn die `PARAMETERIZATION` -Option auf `FORCED`festgelegt ist, werden während der Kompilierung der Abfrage alle Literalwerte in `SELECT`-, `INSERT`-, `UPDATE`- oder `DELETE` -Anweisungen, ungeachtet der Form, in der sie übergeben wurden, in Parameter konvertiert. Ausnahmen bilden Literalwerte in folgenden Abfragekonstruktionen: 
@@ -842,7 +842,7 @@ Beim Parametrisieren von Literalwerten konvertiert [!INCLUDE[ssNoVersion](../inc
 * Binäre Literale werden bei der Parametrisierung in varbinary(8000)-Werte konvertiert, wenn das Literal 8.000 Bytes nicht überschreitet. Wenn es 8.000 Bytes überschreitet, wird es in einen varbinary(max)-Wert konvertiert.
 * Literale vom Typ „money“ werden bei der Parametrisierung in money-Werte konvertiert.
 
-#### <a name="ForcedParamGuide"></a> Richtlinien für die Verwendung der erzwungenen Parametrisierung
+#### <a name="guidelines-for-using-forced-parameterization"></a><a name="ForcedParamGuide"></a> Richtlinien für die Verwendung der erzwungenen Parametrisierung
 Berücksichtigen Sie Folgendes, wenn Sie die `PARAMETERIZATION` -Option auf FORCED festlegen:
 
 * Die erzwungene Parametrisierung konvertiert die literalen Konstanten einer Abfrage, sobald diese kompiliert wird, tatsächlich in Parameter. Daher ist es möglich, dass der Abfrageoptimierer nicht die optimalen Abfragepläne auswählt. Insbesondere verringert sich die Wahrscheinlichkeit, dass der Abfrageoptimierer eine Übereinstimmung zwischen der Abfrage und der richtigen indizierten Sicht oder dem Index für eine berechnete Spalte findet. Außerdem wählt der Abfrageoptimierer möglicherweise auch für Abfragen für partitionierte Tabellen und verteilte partitionierte Sichten nicht optimale Abfragepläne aus. Die erzwungene Parametrisierung sollte deshalb nicht in Umgebungen verwendet werden, die sich stark auf indexierte Sichten oder Indizes für berechnete Spalten stützen. Im Allgemeinen sollte die `PARAMETERIZATION FORCED` -Option nur von erfahrenen Datenbankadministratoren verwendet werden, und auch dann nur, wenn diese sichergestellt haben, dass die erzwungene Parametrisierung die Leistung der Datenbank nicht beeinträchtigt.
@@ -894,7 +894,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bietet das Vorbereiten
 * Die Anwendung kann steuern, wann der Ausführungsplan erstellt, und wann er wiederverwendet werden soll.
 * Das Vorbereiten/Ausführen-Modell kann auf andere Datenbanken portiert werden, einschließlich früherer Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a name="ParamSniffing"></a> Parameterermittlung
+### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> Parameterermittlung
 Die „Parameterermittlung“ bezieht sich auf einen Prozess, wobei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die aktuellen Parameter während der Kompilierung oder Neukompilierung ermittelt und diese an den Abfrageoptimierer übermittelt, sodass sie zum Generieren potenziell effizienter Abfrageausführungspläne verwendet werden können.
 
 Parameterwerte werden während der Kompilierung oder Neukompilierung für die folgenden Batchtypen ermittelt:
@@ -903,7 +903,7 @@ Parameterwerte werden während der Kompilierung oder Neukompilierung für die fo
 -  Abfragen, die über „sp_executesql“ übermittelt werden 
 -  Vorbereitete Abfragen
 
-Weitere Informationen zur Problembehandlung bei fehlerhafter Parameterermittlung finden Sie unter [Problembehandlung bei Abfragen mit parameterempfindlichem Abfrageausführungsplan](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems).
+Weitere Informationen zur Problembehandlung bei fehlerhafter Parameterermittlung finden Sie unter [Problembehandlung bei Abfragen mit parameterempfindlichem Abfrageausführungsplan](/azure/sql-database/sql-database-monitor-tune-overview).
 
 > [!NOTE]
 > Für Abfragen, die den `RECOMPILE`-Hinweis verwenden, werden jeweils die Parameterwerte und aktuellen Werte der lokalen Variablen ermittelt. Die ermittelten Werte (der Parameter und lokalen Variablen) sind die, die an dem Ort direkt vor der Anweisung mit dem `RECOMPILE`-Hinweis vorhanden sind. Im Gegensatz dazu werden bei Parametern die Werte, die innerhalb des Batchaufrufs übermittelt werden, nicht geprüft.
@@ -945,7 +945,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ver
 * Ein serieller Ausführungsplan wird für die betreffende Abfrage als schneller erachtet als jeder mögliche parallele Ausführungsplan.
 * Die Abfrage enthält skalare oder relationale Operatoren, die nicht parallel ausgeführt werden können. Bestimmte Operatoren können verursachen, dass ein Abschnitt des Ausführungsplans oder der gesamte Plan im seriellen Modus ausgeführt wird.
 
-### <a name="DOP"></a> Grad der Parallelität
+### <a name="degree-of-parallelism"></a><a name="DOP"></a> Grad der Parallelität
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erkennt automatisch den am besten geeigneten Grad an Parallelität für jede Instanz einer parallelen Abfrageausführung oder eines DDL-Indizierungsvorgangs (Data Definition Language). Dazu werden die folgenden Kriterien untersucht: 
 
 1. Wird [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem **Computer mit mehreren Mikroprozessoren (oder CPUs) ausgeführt** wie z. B. auf einem symmetrischen Multiprozessorcomputer (Symmetric Multiprocessing, SMP)? Nur Computer mit mehreren CPUs können parallele Abfragen verwenden. 
@@ -1285,12 +1285,12 @@ Die oben aufgeführten Beispiele sind einfache Beschreibungen der Arbeitsthreadz
 
 Ein weiteres Beispiel: Die Tabelle weist vier Partitionen in Spalte A mit Grenzpunkten (10, 20, 30) sowie einen Index in Spalte B auf, und für die Abfrage wird folgende Prädikatklausel verwendet: `WHERE B IN (50, 100, 150)`. Da die Tabellenpartitionen auf den A-Werten basieren, können die B-Werte in allen Tabellenpartitionen enthalten sein. Somit sucht der Abfrageprozessor in jeder der vier Tabellenpartitionen nach jedem der drei B-Werte (50, 100, 150). Der Abfrageprozessor weist Arbeitsthreads proportional zu, sodass alle zwölf Abfragesuchläufe parallel ausgeführt werden können.
 
-|Tabellenpartitionen auf Grundlage der Spalte A |Suche in allen Tabellenpartitionen nach B-Spaltenwerten |
+|Tabellenpartitionen auf Grundlage der Spalte A    |Suche in allen Tabellenpartitionen nach B-Spaltenwerten |
 |----|----|
-|Tabellenpartition 1: A < 10   |B=50, B=100, B=150 |
-|Tabellenpartition 2: A >= 10 AND A < 20   |B=50, B=100, B=150 |
-|Tabellenpartition 3: A >= 20 AND A < 30   |B=50, B=100, B=150 |
-|Tabellenpartition 4: A >= 30  |B=50, B=100, B=150 |
+|Tabellenpartition 1: A < 10     |B=50, B=100, B=150 |
+|Tabellenpartition 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
+|Tabellenpartition 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
+|Tabellenpartition 4: A >= 30     |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>Bewährte Methoden
 
@@ -1374,7 +1374,7 @@ SET STATISTICS XML OFF;
 GO
 ```
 
-##  <a name="Additional_Reading"></a> Zusätzliches Lesematerial  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Zusätzliches Lesematerial  
  [Referenz zu logischen und physischen Showplanoperatoren](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)  
  [Bewährte Methoden für den Abfragespeicher](../relational-databases/performance/best-practice-with-the-query-store.md)  

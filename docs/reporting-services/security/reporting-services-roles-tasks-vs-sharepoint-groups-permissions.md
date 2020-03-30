@@ -17,10 +17,10 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2200027e65978ea0af8cdcc100cda830e8a35881
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75240617"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services-Rollen/Tasks im Vergleich zu SharePoint-Gruppen/Berechtigungen
@@ -38,7 +38,7 @@ ms.locfileid: "75240617"
   
 -   [Vergleich zwischen Tasks im einheitlichen Modus und SharePoint-Berechtigungen](#bkmk_compare_tasks_permissions)  
   
-##  <a name="bkmk_compare_tools_terms"></a> Vergleich zwischen Berechtigungstools und zugehöriger Terminologie  
+##  <a name="compare-permission-tools-and-terminology"></a><a name="bkmk_compare_tools_terms"></a> Vergleich zwischen Berechtigungstools und zugehöriger Terminologie  
  **Einheitlicher Modus :** Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berechtigungsobjekte im nativen Modus (Rollen und Tasks) werden in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellt und im Berichts-Manager für einzelne Benutzer konfiguriert.  
   
  **SharePoint-Modus:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Der SharePoint-Modus nutzt die SharePoint-Berechtigungsfeatures. SharePoint-Gruppen und -Berechtigungen werden auf der folgenden Seite für **Siteeinstellungen** verwaltet.  
@@ -53,7 +53,7 @@ ms.locfileid: "75240617"
   
  Weitere Informationen zu SharePoint-Berechtigungen finden Sie unter [Berechtigungsstufen und Berechtigungen](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) und [Bestimmen von Berechtigungsstufen und Gruppen in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
-##  <a name="bkmk_compare_roles_groups"></a> Vergleich zwischen Rollen im einheitlichen Modus und SharePoint-Gruppen  
+##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> Vergleich zwischen Rollen im einheitlichen Modus und SharePoint-Gruppen  
  Die folgende Tabelle enthält eine Gegenüberstellung der vordefinierten Rollendefinitionen in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus und der SharePoint-Standardgruppen. Wenn die SharePoint-Gruppen nicht mit der von Ihnen gewünschten Rolle übereinstimmen, können Sie eine benutzerdefinierte Gruppe erstellen und in SharePoint Berechtigungsstufen zuweisen.  
   
  **Hinweis**: Die verfügbaren SharePoint-Standardgruppen hängen von der Websitevorlage ab, mit der die SharePoint-Website erstellt wurde.  
@@ -68,7 +68,7 @@ ms.locfileid: "75240617"
 |-|Verwenden Sie die Gruppe **Anzeigende Benutzer** , um Berechtigungen zum Anzeigen gerenderter Berichte zu erteilen. Mitglieder der Gruppe **Anzeigende Benutzer** sind nicht in der Lage, den Inhalt von Berichtselementen herunterzuladen oder anzuzeigen.<br /><br /> **Hinweis:** Ab SQL Server 2012 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] hat die Gruppe **Viewers** (Anzeigende Benutzer) keine Berechtigungen zur Erstellung von Abonnements.|  
 |**Systembenutzer** und **Systemadministrator**|Diese Rollen sind für einen Berichtsserver, der im SharePoint-Modus ausgeführt wird, nicht erforderlich. **Systembenutzer** und **Systemadministrator** entsprechen den SharePoint-Berechtigungen auf Farm- oder Webanwendungsebene. Der Berichtsserver stellt keine Funktionalität bereit, die eine Autorisierung auf dieser Ebene erfordert.|  
   
-##  <a name="bkmk_compare_tasks_permissions"></a> Vergleich zwischen Tasks im einheitlichen Modus und SharePoint-Berechtigungen  
+##  <a name="comparing-native-mode-tasks-and-sharepoint-permissions"></a><a name="bkmk_compare_tasks_permissions"></a> Vergleich zwischen Tasks im einheitlichen Modus und SharePoint-Berechtigungen  
  Die folgende Tabelle enthält eine Gegenüberstellung der Tasks von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus und SharePoint-Berechtigungen. In der Spalte **Typ** ist angegeben, ob sich der Task im einheitlichen Modus auf eine Systemrolle oder Standardrolle und zugehörige Elemente bezieht. Mit Systemrollen werden Berechtigungen auf Systemebene verwaltet, beispielsweise freigegebene Zeitpläne.  
   
 |Task im einheitlichen Modus|Rollentyp|Entsprechende SharePoint-Berechtigung|  

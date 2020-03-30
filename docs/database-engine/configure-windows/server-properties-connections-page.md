@@ -13,10 +13,10 @@ ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 15ab408465890a13fc6e87efd2f2e15e8f8a7fad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025489"
 ---
 # <a name="server-properties---connections-page"></a>Servereigenschaften (Seite „Verbindungen“)
@@ -34,7 +34,7 @@ ms.locfileid: "68025489"
  **Default connection options**  
  Gibt die Standardverbindungsoptionen an, die in der folgenden Tabelle beschrieben werden.  
   
-|Konfigurationsoption|Beschreibung|  
+|Konfigurationsoption|BESCHREIBUNG|  
 |--------------------------|-----------------|  
 |**Verzögerte Einschränkungsüberprüfung deaktivieren**|Steuert die zwischenzeitliche oder verzögerte Einschränkungsüberprüfung.|  
 |**Implizite Transaktionen**|Steuert den impliziten Start einer Transaktion, wenn eine Anweisung ausgeführt wird.|  

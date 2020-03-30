@@ -14,10 +14,10 @@ ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6485a99d759d4c4b09ec2b78946f7e1aecd46204
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67986979"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server, Statistiken für das Broker-TO (Objekt)
@@ -28,7 +28,7 @@ ms.locfileid: "67986979"
   
  In der folgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
   
-|Leistungsindikatoren für "Statistiken für das Broker-TO" in SQL Server|Beschreibung|  
+|Leistungsindikatoren für "Statistiken für das Broker-TO" in SQL Server|BESCHREIBUNG|  
 |----------------------------------------------|-----------------|  
 |**Mittlere Länge der Batchschreibvorgänge**|Die durchschnittliche Anzahl von Übertragungsobjekten, die in einem Batch gespeichert wurden.|  
 |**Mittlere Schreibdauer für Batch (ms)**|Die durchschnittliche Anzahl von Millisekunden, die zur Speicherung eines Batches von Übertragungsobjekten erforderlich waren.|  

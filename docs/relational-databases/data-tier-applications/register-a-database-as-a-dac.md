@@ -19,10 +19,10 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134677"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrieren einer Datenbank als eine DAC
@@ -36,15 +36,15 @@ ms.locfileid: "68134677"
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Beim Registrierungsprozess wird eine DAC-Definition erstellt, die die Objekte in der Datenbank definiert. Eine DAC-Instanz setzt sich aus der Kombination von DAC-Definition und Datenbank zusammen. Bei der Registrierung einer Datenbank als DAC in einer Instanz der Datenbank-Engine wird die registrierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann im Knoten **Bereitgestellte Datenebenenanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Hilfsprogramm-Explorer**von** vorhanden und wird auf der Detailseite **Bereitgestellte Datenebenenanwendungen** aufgeführt.  
   
-###  <a name="LimitationsRestrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Einschränkungen  
  Die DAC-Registrierung kann nur für eine Datenbank in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) oder höher ausgeführt werden. Die DAC-Registrierung ist nicht möglich, wenn eine DAC bereits für die Datenbank registriert ist. Wenn die Datenbank durch Bereitstellung einer DAC erstellt wurde, kann der **Assistent zum Registrieren von Datenschichtanwendungen**beispielsweise nicht ausgeführt werden.  
   
  Es kann keine DAC registriert werden, wenn die Datenbank Objekte, die in einer DAC nicht unterstützt werden, oder enthaltene Benutzer enthält. Weitere Informationen zu den in einer DAC unterstützten Objekttypen finden Sie unter [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Registrieren einer DAC in einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] sind mindestens die ALTER ANY LOGIN-Berechtigung und die VIEW DEFINITION-Berechtigung im Datenbankbereich sowie SELECT-Berechtigungen für **sys.sql_expression_dependencies**und die Mitgliedschaft in der festen Serverrolle **dbcreator** erforderlich. Mitglieder der festen Serverrolle **sysadmin** oder des integrierten SQL Server-Systemadministratorkontos **sa** sind ebenfalls zum Registrieren einer DAC berechtigt. Zum Registrieren einer DAC, die keine Anmeldungen in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] enthält, müssen Sie Mitglied der Rollen **dbmanager** oder **serveradmin** sein. Zum Registrieren einer DAC, die Anmeldungen in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] enthält, müssen Sie Mitglied der Rollen **loginmanager** oder **serveradmin** sein.  
   
-##  <a name="UsingRegisterDACWizard"></a> Verwenden des Assistenten zum Registrieren von Datenebenenanwendungen  
+##  <a name="using-the-register-data-tier-application-wizard"></a><a name="UsingRegisterDACWizard"></a> Verwenden des Assistenten zum Registrieren von Datenebenenanwendungen  
  **So registrieren Sie eine DAC mithilfe eines Assistenten**  
   
 1.  Erweitern Sie im **Objekt-Explorer**den Knoten für die Instanz, die die Datenbank enthält, die als DAC registriert werden soll.  
@@ -63,7 +63,7 @@ ms.locfileid: "68134677"
   
     4.  [Seite "DAC registrieren"](#Register)  
   
-##  <a name="Introduction"></a> Seite "Einführung"  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite werden die Schritte zum Registrieren einer Datenebenenanwendung beschrieben.  
   
  **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Seite in Zukunft nicht mehr angezeigt wird.  
@@ -74,7 +74,7 @@ ms.locfileid: "68134677"
   
  [Verwenden des Assistenten zum Registrieren von Datenebenenanwendungen](#UsingRegisterDACWizard)  
   
-##  <a name="Set_properties"></a> Seite "Eigenschaften festlegen"  
+##  <a name="set-properties-page"></a><a name="Set_properties"></a> Seite "Eigenschaften festlegen"  
  Verwenden Sie diese Seite, um Eigenschaften auf DAC-Ebene anzugeben, z. B. den Anwendungsnamen und die Version.  
   
  **Anwendungsname** – Eine Zeichenfolge mit dem Namen, der die DAC-Definition identifiziert. Das Feld enthält den Namen der Datenbank.  
@@ -91,7 +91,7 @@ ms.locfileid: "68134677"
   
  [Verwenden des Assistenten zum Registrieren von Datenebenenanwendungen](#UsingRegisterDACWizard)  
   
-##  <a name="Summary"></a> Seite "Überprüfung und Zusammenfassung"  
+##  <a name="validation-and-summary-page"></a><a name="Summary"></a> Seite "Überprüfung und Zusammenfassung"  
  Verwenden Sie diese Seite, um die Aktionen zu überprüfen, die der Assistent beim Registrieren der DAC ausführt. Die Seite durchläuft drei Statusübergänge, während überprüft wird, ob eine DAC aus den in der Datenbank enthaltenen Objekten erstellt werden kann.  
   
  [Verwenden des Assistenten zum Registrieren von Datenebenenanwendungen](#UsingRegisterDACWizard)  
@@ -131,7 +131,7 @@ ms.locfileid: "68134677"
   
  [Verwenden des Assistenten zum Registrieren von Datenebenenanwendungen](#UsingRegisterDACWizard)  
   
-##  <a name="Register"></a> Seite "DAC registrieren"  
+##  <a name="register-dac-page"></a><a name="Register"></a> Seite "DAC registrieren"  
  Auf dieser Seite wird angegeben, ob der Registrierungsvorgang erfolgreich war oder fehlgeschlagen ist.  
   
  **Die DAC wird registriert** – Gibt an, ob die einzelnen Aktionen zum Registrieren der DAC erfolgreich waren oder ob ein Fehler aufgetreten ist. Überprüfen Sie die Informationen, um zu bestimmen, ob die einzelnen Aktionen erfolgreich waren oder fehlgeschlagen sind. Für alle Aktionen, die fehlerhaft waren, ist in der Spalte **Ergebnis** ein Link enthalten. Klicken Sie auf den Link, um einen Bericht des für diese Aktion aufgetretenen Fehlers anzuzeigen.  
@@ -142,7 +142,7 @@ ms.locfileid: "68134677"
   
  [Verwenden des Assistenten zum Registrieren von Datenebenenanwendungen](#UsingRegisterDACWizard)  
   
-##  <a name="RegisterDACPowerShell"></a> Registrieren einer DAC mit PowerShell  
+##  <a name="register-a-dac-using-powershell"></a><a name="RegisterDACPowerShell"></a> Registrieren einer DAC mit PowerShell  
  **So registrieren Sie eine DAC mithilfe der Methode „Register()“ in einem PowerShell-Skript**  
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz fest, die die als DAC zu registrierende Datenbank enthält.  

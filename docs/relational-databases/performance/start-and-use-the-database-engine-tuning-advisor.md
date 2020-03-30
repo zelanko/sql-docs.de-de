@@ -19,17 +19,17 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983272"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie der Datenbankoptimierungsratgeber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gestartet und verwendet wird. Informationen zum Anzeigen der Ergebnisse und Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
-##  <a name="Initialize"></a> Initialisieren des Datenbankoptimierungsratgebers  
+##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> Initialisieren des Datenbankoptimierungsratgebers  
  Bei der ersten Verwendung muss ein Benutzer, der Mitglied der festen Serverrolle **sysadmin** ist, den Datenbankoptimierungsratgeber starten. Das liegt daran, dass mehrere Systemtabellen in der Datenbank **msdb** erstellt werden müssen, um das Optimieren von Vorgängen zu unterstützen. Die Initialisierung ermöglicht darüber hinaus Benutzern, die Mitglieder der festen Datenbankrolle **db_owner** sind, Arbeitsauslastungen für Tabellen in Datenbanken zu optimieren, die sie besitzen.  
   
  Ein Benutzer mit Systemadministratorberechtigungen muss eine der folgenden Aktionen ausführen.  
@@ -38,7 +38,7 @@ ms.locfileid: "73983272"
   
 -   Verwenden Sie das Hilfsprogramm **dta** , um die erste Arbeitsauslastung zu optimieren. Weitere Informationen hierzu finden Sie unter [Verwenden des dta-Hilfsprogramms](#dta) an späterer Stelle in diesem Thema.  
   
-##  <a name="Start"></a> Starten Sie den Datenbankoptimierungsratgeber  
+##  <a name="start-the-database-engine-tuning-advisor"></a><a name="Start"></a> Starten Sie den Datenbankoptimierungsratgeber  
  Sie können die grafische Benutzeroberfläche (GUI, Graphical User Interface) des Datenbankoptimierungsratgebers auf verschiedene Arten starten, um in einer Reihe von Szenarien das Optimieren von Datenbanken zu unterstützen. Zu den unterschiedlichen Startmöglichkeiten des Datenbankoptimierungsratgebers gehören Folgende: über das Menü **Start** , über das Menü **Extras** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], über den Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]und über das Menü **Extras** in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Wenn Sie den Datenbankoptimierungsratgeber zum ersten Mal starten, wird das Dialogfeld **Verbindung mit Server herstellen** angezeigt, in dem Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angeben können, zu der Sie eine Verbindung herstellen möchten.  
   
 > [!WARNING]  
@@ -62,7 +62,7 @@ ms.locfileid: "73983272"
   
 1.  Klicken Sie in SQL Server Profiler im Menü **Extras** auf **Datenbankoptimierungsratgeber**.  
   
-##  <a name="Create"></a> Erstellen einer Arbeitsauslastung  
+##  <a name="create-a-workload"></a><a name="Create"></a> Erstellen einer Arbeitsauslastung  
  Die Arbeitsauslastung besteht aus einer Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die für eine oder mehrere Datenbanken ausgeführt werden, die Sie optimieren möchten. Der Datenbankoptimierungsratgeber analysiert diese Arbeitsauslastungen, um Indizes oder Partitionsstrategien zu empfehlen, die die Abfrageleistung Ihres Servers verbessern.  
   
  Sie können mit einer der folgenden Methoden ein neue Arbeitsauslastung erstellen.  
@@ -71,7 +71,7 @@ ms.locfileid: "73983272"
 
       ||  
       |-|  
-      |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.|  
+      |**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.|  
 
   
 -   Verwenden Sie den Plancache als Arbeitsauslastung. Dadurch können Sie die manuelle Erstellung einer Auslastung vermeiden. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Optimieren einer Datenbank](#Tune) .  
@@ -85,7 +85,7 @@ ms.locfileid: "73983272"
   
 -   Arbeitsauslastungen können ebenfalls in eine XML-Eingabedatei eingebettet werden, in der Sie auch für jedes Ereignis eine Gewichtung angeben können. Weitere Informationen zum Bestimmen eingebetteter Arbeitslasten finden Sie weiter unten in diesem Thema unter [Erstellen einer XML-Eingabedatei](#XMLInput) .  
   
-###  <a name="SSMS"></a> So erstellen Sie Transact-SQL-Skriptarbeitsauslastungen  
+###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> So erstellen Sie Transact-SQL-Skriptarbeitsauslastungen  
   
 1.  Starten Sie den Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73983272"
   
 3.  Speichern Sie die Datei mit der Erweiterung **SQL**. Die Datenbankoptimierungsratgeber-GUI und das Befehlszeilen-Hilfsprogramm **dta** können dieses [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript als Arbeitsauslastung verwenden.  
   
-###  <a name="Profiler"></a> So erstellen Sie Arbeitsauslastungen für Ablaufverfolgungsdateien und -tabellen  
+###  <a name="to-create-trace-file-and-trace-table-workloads"></a><a name="Profiler"></a> So erstellen Sie Arbeitsauslastungen für Ablaufverfolgungsdateien und -tabellen  
   
 1.  Starten Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] mithilfe einer der folgenden Methoden:  
   
@@ -140,7 +140,7 @@ ms.locfileid: "73983272"
   
  Der Datenbankoptimierungsratgeber optimiert nun die neue Arbeitsauslastung, da in der Ablaufverfolgung keine Anmeldeinformationen angegeben sind. Wenn **LoginName** für eine Anweisung nicht vorhanden ist, optimiert der Datenbankoptimierungsratgeber diese Anweisung, indem er die Identität des Benutzers annimmt, der die Optimierungssitzung gestartet hat (ein Mitglied der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **db_owner** ).  
   
-##  <a name="Tune"></a> Optimieren einer Datenbank  
+##  <a name="tune-a-database"></a><a name="Tune"></a> Optimieren einer Datenbank  
  Optimieren Sie eine Datenbank mithilfe der GUI des Datenbankoptimierungsratgebers oder des Hilfsprogramms **dta** .  
   
 > [!NOTE]  
@@ -149,10 +149,10 @@ ms.locfileid: "73983272"
 ### <a name="use-the-database-engine-tuning-advisor-graphical-user-interface"></a>Verwenden der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers  
  Auf der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers können Sie eine Datenbank mithilfe des Plancache oder mithilfe von Arbeitsauslastungsdateien oder -tabellen optimieren Mit der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers können Sie die Ergebnisse Ihrer aktuellen Optimierungssitzung und die Ergebnisse voriger Optimierungssitzungen mühelos anzeigen. Weitere Informationen zu den Benutzeroberflächenoptionen finden Sie später in diesem Thema unter [Benutzeroberflächenbeschreibungen](#UI) . Weitere Informationen zum Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
 
-####  <a name="PlanCache"></a> So optimieren Sie eine Datenbank mit dem Abfragespeicher
+####  <a name="to-tune-a-database-by-using-the-query-store"></a><a name="PlanCache"></a> So optimieren Sie eine Datenbank mit dem Abfragespeicher
 Weitere Informationen finden Sie unter [Tuning Database Using Workload from Query Store (Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher)](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
   
-####  <a name="PlanCache"></a> So optimieren Sie eine Datenbank mit dem Plancache  
+####  <a name="to-tune-a-database-by-using-the-plan-cache"></a><a name="PlanCache"></a> So optimieren Sie eine Datenbank mit dem Plancache  
   
 1.  Starten Sie den Datenbankoptimierungsratgeber, und melden Sie sich bei einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Starten des Datenbankoptimierungsratgebers](#Start) .  
   
@@ -221,7 +221,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
 > [!NOTE]  
 >  Das Anhalten des Datenbankoptimierungsratgebers wird nicht unterstützt. Wenn Sie auf die Symbolleistenschaltfläche **Analyse starten** klicken, nachdem Sie auf eine der beiden Symbolleistenschaltflächen **Analyse beenden** oder **Analyse beenden (mit Empfehlungen)** geklickt haben, startet der Datenbankoptimierungsratgeber eine neue Optimierungssitzung.  
   
-###  <a name="dta"></a> Verwenden des dta-Hilfsprogramms  
+###  <a name="use-the-dta-utility"></a><a name="dta"></a> Verwenden des dta-Hilfsprogramms  
  Das Hilfsprogramm [dta](../../tools/dta/dta-utility.md) stellt eine ausführbare Datei für Eingabeaufforderungen zur Verfügung, mit der Datenbanken optimiert werden können. Sie können auf diese Weise den Datenbankoptimierungsratgeber in Batchdateien und Skripts verwenden. Das Hilfsprogramm **dta** akzeptiert Plancacheeinträge, Ablaufverfolgungsdateien und -tabellen sowie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts als Arbeitsauslastung. Außerdem akzeptiert es XML-Eingaben, die dem XML-Schema des Datenbankoptimierungsratgebers entsprechen. Dieses Schema steht auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=43100)zur Verfügung.  
   
  Beachten Sie Folgendes, bevor Sie eine Arbeitsauslastung mit dem Hilfsprogramm **dta** optimieren:  
@@ -305,7 +305,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
 5.  Wenn das Hilfsprogramm die Optimierung der Arbeitsauslastung abgeschlossen hat, können Sie die Ergebnisse von Optimierungssitzungen über die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers anzeigen. Alternativ können Sie über die Option **-ox** auch angeben, dass die Optimierungsempfehlungen in eine XML-Datei geschrieben werden sollen. Weitere Informationen finden Sie unter [dta Utility](../../tools/dta/dta-utility.md).  
   
-##  <a name="XMLInput"></a> Erstellen einer XML-Eingabedatei  
+##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a> Erstellen einer XML-Eingabedatei  
  Wenn Sie mit der XML-Entwicklung bereits gut vertraut sind, können Sie XML-Formatdateien erstellen, mit denen der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber Arbeitsauslastungen optimieren kann. Um diese XML-Dateien zu erstellen, verwenden Sie Ihre bevorzugten XML-Tools, und bearbeiten Sie eine Beispieldatei, oder generieren Sie eine Instanz des XML-Schemas für den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber.  
   
  Das XML-Schema für den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Optimierungsratgeber ist in Ihrer Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an folgendem Speicherort verfügbar:  
@@ -331,7 +331,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
 > [!NOTE]  
 >  Wenn Sie eine Inlinearbeitsauslastung verwenden möchten (d.h. eine Arbeitsauslastung, die direkt in der XML-Eingabedatei angegeben wird), verwenden Sie das [Beispiel für eine XML-Eingabedatei mit Inlinearbeitsauslastung &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
-##  <a name="UI"></a> Benutzeroberflächenbeschreibungen  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> Benutzeroberflächenbeschreibungen  
   
 ### <a name="tools-menuoptions-page"></a>Extras (Menü)/Optionen (Seite)  
  Mit diesem Dialogfeld können Sie allgemeine Konfigurationsparameter für den Datenbankoptimierungsratgeber angeben.  

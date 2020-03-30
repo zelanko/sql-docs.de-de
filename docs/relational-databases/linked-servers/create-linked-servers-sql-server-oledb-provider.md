@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095996"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Verteilte Microsoft SQL Server-Abfragen: OLE DB-Konnektivität
@@ -610,7 +610,7 @@ Eine Liste aller von SQL Server verwendeten OLE DB-Schnittstellen finden Sie unt
 
 Microsoft SQL Server bietet die stabilsten Tools für den Zugriff auf Daten aus heterogenen Datenquellen. Durch grundlegende Kenntnisse im Umgang mit den von SQL Server verfügbar gemachten OLE DB-Schnittstellen haben Entwickler ein hohes Maß an Kontrolle und Optionen hinsichtlich verteilter Abfragen.
 
-## <a name="appendixa"></a> Von SQL Server verwendete OLE DB-Schnittstellen
+## <a name="ole-db-interfaces-consumed-by-sql-server"></a><a name="appendixa"></a> Von SQL Server verwendete OLE DB-Schnittstellen
 
 In der folgenden Tabelle werden alle OLE DB-Schnittstellen aufgelistet, die von SQL Server verwendet werden. Die Spalte „Erforderlich“ gibt an, ob die Schnittstelle Teil der minimalen von SQL Server benötigten OLE DB-Funktionalität oder optional ist. Wenn eine angegebene Schnittstelle nicht als erforderlich markiert ist, kann SQL Server zwar auch weiterhin auf den Anbieter zugreifen, aber einige bestimmte SQL Server-Funktionalitäten und Optimierungen sind dann für den Anbieter nicht möglich.
 
@@ -654,7 +654,7 @@ Im Fall der optionalen Schnittstellen gibt die Spalte „Szenarien“ ein oder m
 >[!NOTE]
 >Die `Index`-, `Command`- und `Error`-Objekte sind nicht obligatorisch. Wenn diese jedoch unterstützt werden, sind die aufgelisteten Schnittstellen obligatorisch (wie in der Spalte „Erforderlich“ angegeben).
 
-## <a name="appendixb"></a>SQL-Teilmengen zum Generieren von Remoteabfragen
+## <a name="sql-subset-used-for-generating-remote-queries"></a><a name="appendixb"></a>SQL-Teilmengen zum Generieren von Remoteabfragen
 
 Die SQL-Teilmenge, die der SQL Server-Abfrageprozessor für einen SQL-Befehlsanbieter generiert, hängt (wie von der `DBPROP_SQLSUPPORT`-Eigenschaft angegeben) von der vom Anbieter unterstützten Syntaxebene ab.
 
@@ -794,7 +794,7 @@ digit ::= 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9
 
 period ::= . 
 
-## <a name="appendixc"></a>SQL Server-spezifische Eigenschaften
+## <a name="sql-server-specific-properties"></a><a name="appendixc"></a>SQL Server-spezifische Eigenschaften
 
 ```
 enum SQLPROPERTIES

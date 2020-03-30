@@ -24,10 +24,10 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68039059"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -89,7 +89,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle finden Sie eine Beschreibung der Informationen des Resultsets:
   
-|Statistik|Beschreibung|  
+|Statistik|BESCHREIBUNG|  
 |---|---|
 |**Gescannte Seiten**|Anzahl der Seiten in der Tabelle oder im Index.|  
 |**Gescannte Blöcke**|Anzahl der Blöcke in der Tabelle oder im Index.|  
@@ -110,7 +110,7 @@ Wenn *table_id* und FAST angegeben sind, gibt DBCC SHOWCONTIG ein Resultset mit 
   
 Wenn TABLERESULTS angegeben ist, gibt DBCC SHOWCONTIG die neun in der ersten Tabelle beschriebenen Spalten sowie die folgenden Spalten zurück.
   
-|Statistik|Beschreibung|  
+|Statistik|BESCHREIBUNG|  
 |---|---|
 |**Objektnamen**|Der Name der verarbeiteten Tabelle oder Sicht.|  
 |**ObjectID**|ID des Objektnamens.|  

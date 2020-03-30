@@ -15,10 +15,10 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f4a4a91c4703bd4634f471e3d6bc0b9b4baf2305
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908888"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt (vollständiges Wiederherstellungsmodell)
@@ -33,7 +33,7 @@ ms.locfileid: "72908888"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Wiederherstellen einer SQL Server-Datenbank zu einem bestimmten Zeitpunkt mit:**  
   
@@ -41,22 +41,22 @@ ms.locfileid: "72908888"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Verwenden von STANDBY zum Finden eines unbekannten Zeitpunkts  
   
 -   Frühes Angeben des Zeitpunkts in einer Wiederherstellungssequenz  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Ist die wiederherzustellende Datenbank nicht vorhanden, muss der Benutzer über CREATE DATABASE-Berechtigungen verfügen, um RESTORE ausführen zu können. Ist die Datenbank vorhanden, werden RESTORE-Berechtigungen standardmäßig den Mitgliedern der festen Serverrollen **sysadmin** und **dbcreator** sowie dem Besitzer (**dbo**) der Datenbank erteilt (für die Option FROM DATABASE_SNAPSHOT ist die Datenbank immer vorhanden).  
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So stellen Sie eine Datenbank bis zu einem Zeitpunkt wieder her**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der entsprechenden Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie die Serverstruktur.  
@@ -80,7 +80,7 @@ ms.locfileid: "72908888"
   
          Klicken Sie nach dem Hinzufügen der gewünschten Medien zum Listenfeld **Sicherungsmedien** auf **OK** , um zur Seite **Allgemein** zurückzukehren.  
   
-         Wählen Sie im Listenfeld **Quelle: Gerät: Datenbank** den Namen der Datenbank aus, die wiederhergestellt werden soll.  
+         Wählen Sie im Listenfeld **Quelle: Sicherungsmedium: Datenbank** den Namen der Datenbank aus, die wiederhergestellt werden soll.  
   
          **Hinweis** Diese Liste ist nur verfügbar, wenn **Sicherungsmedium** ausgewählt wird. Nur Datenbanken mit Sicherungen auf dem ausgewählten Medium stehen zur Verfügung.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72908888"
   
 14. Wählen Sie **Bestätigung vor Wiederherstellen jeder einzelnen Sicherung** aus, wenn Sie zwischen jedem Wiederherstellungsvorgang zur Bestätigung aufgefordert werden möchten. Dies ist in der Regel nur bei großen Datenbanken und bei der gewünschten Überwachung des Status des Wiederherstellungsvorgangs erforderlich.  
 
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **Voraussetzungen**  
   
  Die Wiederherstellung zu einem bestimmten Zeitpunkt erfolgt immer aus einer Protokollsicherung. In jeder RESTORE LOG-Anweisung der Wiederherstellungssequenz müssen Sie den Zielzeitpunkt oder die Transaktion in einer identischen STOPAT-Klausel angeben. Als Voraussetzung für eine Zeitpunktwiederherstellung müssen Sie zuerst eine vollständige Datenbanksicherung wiederherstellen, deren Endpunkt vor dem Zielwiederherstellungszeitpunkt liegt. Diese vollständige Datenbanksicherung kann älter als die letzte vollständige Datenbanksicherung sein, solange Sie dann jede nachfolgende Protokollsicherung wiederherstellen, bis zu und einschließlich der Protokollsicherung, die den Zielzeitpunkt enthält.  
@@ -159,7 +159,7 @@ ms.locfileid: "72908888"
     > [!NOTE]  
     >  Die Optionen RECOVERY und STOPAT. Wenn die Transaktionsprotokollsicherung den geforderten Zeitpunkt nicht enthält (z. B. wenn der angegebene Zeitpunkt hinter dem Zeitpunkt liegt, bis zu dem das Transaktionsprotokoll reicht), wird eine Warnung erzeugt, und die Datenbank wird nicht wiederhergestellt.  
   
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  Im folgenden Beispiel wird eine Datenbank in den am `12:00 AM` um `April 15, 2020` bestehenden Status wiederhergestellt und ein Wiederherstellungsvorgang gezeigt, der mehrere Protokollsicherungen umfasst. Auf dem Sicherungsmedium ( `AdventureWorksBackups`) ist die wiederherzustellende vollständige Datenbanksicherung der dritte Sicherungssatz (`FILE = 3`), die erste Protokollsicherung ist der vierte Sicherungssatz (`FILE = 4`), und die zweite Protokollsicherung ist der fünfte Sicherungssatz (`FILE = 5`).  
   
 > [!IMPORTANT]  
@@ -182,7 +182,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   

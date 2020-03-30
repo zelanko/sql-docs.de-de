@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190389"
 ---
 # <a name="get-started-with-big-data-clusters-2019"></a>Erste Schritte mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -38,11 +38,11 @@ Sehen Sie sich dieses 9-minütige Video an, um einen Überblick über die Bereit
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
 
 
-## <a id="tools"></a> Clienttools
+## <a name="client-tools"></a><a id="tools"></a> Clienttools
 
 Für die Bereitstellung von Big-Data-Clustern benötigen Sie eine Reihe von bestimmten Clienttools. Installieren Sie die folgenden Tools, bevor Sie Big-Data-Cluster für Kubernetes bereitstellen:
 
-| Tool | Beschreibung |
+| Tool | BESCHREIBUNG |
 |---|---|
 | **azdata** | Zur Bereitstellung und Verwaltung von Big-Data-Clustern. |
 | **kubectl** | Zur Erstellung und Verwaltung des zugrunde liegenden Kubernetes-Clusters. |
@@ -70,7 +70,7 @@ Nach der Konfiguration von Kubernetes stellen Sie mit dem Befehl `azdata bdc cre
 - Bei einer vollständig unbeaufsichtigten Installation können Sie alle weiteren Einstellungen in Umgebungsvariablen übergeben. Weitere Informationen hierzu finden Sie unter [Unbeaufsichtigte Bereitstellungen](deployment-guidance.md#unattended).
 
 
-## <a id="scripts"></a>Bereitstellungsskripts
+## <a name="deployment-scripts"></a><a id="scripts"></a>Bereitstellungsskripts
 
 Mithilfe von Bereitstellungsskripts können Sie Kubernetes und Big-Data-Cluster in einem einzigen Schritt bereitstellen. Häufig enthalten Bereitstellungsskripts auch Standardwerte für die Einstellungen von Big-Data-Clustern. Sie können ein Bereitstellungsskript auch anpassen, indem Sie Ihre eigene Version erstellen, mit der die Bereitstellung des Big-Data-Clusters anders konfiguriert wird.
 

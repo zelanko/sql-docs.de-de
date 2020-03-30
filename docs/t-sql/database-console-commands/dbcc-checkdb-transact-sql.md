@@ -35,10 +35,10 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982420"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -213,7 +213,7 @@ Standardmäßig führt DBCC CHECKDB eine parallele Überprüfung von Objekten au
 ## <a name="understanding-dbcc-error-messages"></a>Grundlegendes zu DBCC-Fehlermeldungen    
 Nach der Fertigstellung des Befehls DBCC CHECKDB wird eine Meldung in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll geschrieben. Falls der DBCC-Befehl erfolgreich ausgeführt wird, gibt die Meldung den Erfolg und die Dauer der Ausführung an. Falls der DBCC-Befehl vor Abschluss der Überprüfung aufgrund eines Fehlers beendet wird, gibt die Meldung die Beendigung des Befehls, einen Statuswert sowie die Dauer der Ausführung an. In der folgenden Tabelle sind die Statuswerte aufgeführt und beschrieben, die in der Meldung enthalten sein können.
     
-|State|Beschreibung|    
+|State|BESCHREIBUNG|    
 |-----------|-----------------|    
 |0|Fehlernummer 8930 wurde ausgelöst. Dies weist auf eine Beschädigung der Metadaten hin, die zur Beendigung des DBCC-Befehls geführt hat.|    
 |1|Fehlernummer 8967 wurde ausgelöst. Ein interner DBCC-Fehler ist aufgetreten.|    

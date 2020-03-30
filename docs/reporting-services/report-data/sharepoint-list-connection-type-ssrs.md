@@ -9,10 +9,10 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4822b70912e847a2cc03a951468171d76ae63597
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081391"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint-Listenverbindungstyp (SSRS)
@@ -23,14 +23,14 @@ Wenn Sie Daten aus einer Microsoft SharePoint-Liste in den Bericht einschließen
 
 Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
 
-##  <a name="Connection"></a> Verbindungszeichenfolge  
+##  <a name="connection-string"></a><a name="Connection"></a> Verbindungszeichenfolge  
  Die Verbindungszeichenfolge für eine SharePoint-Liste ist die URL zur SharePoint-Website oder -Unterwebsite, z. B. `https://MySharePointWeb/MySharePointSite` oder `https://MySharePointWeb/MySharePointSite/Subsite`.  
   
  Im Abfrage-Designer werden automatisch die SharePoint-Listen angezeigt, für die Sie ausreichende Zugriffsberechtigungen besitzen.  
   
  Weitere Beispiele für Verbindungszeichenfolgen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-##  <a name="Credentials"></a> Anmeldeinformationen  
+##  <a name="credentials"></a><a name="Credentials"></a> Anmeldeinformationen  
  Anmeldeinformationen sind erforderlich, um Abfragen auszuführen und den Bericht lokal oder vom Berichtsserver aus in der Vorschau anzuzeigen. Nachdem Sie den Bericht veröffentlicht haben, müssen Sie eventuell die Anmeldeinformationen für die Datenquelle ändern, sodass die Berechtigungen zum Abrufen der Daten beim Ausführen des Berichts auf dem Berichtsserver gültig sind. Die von dieser Datenerweiterung unterstützten Anmeldeinformationstypen hängen von der SharePoint-Technologiekonfiguration für die als Datenquelle verwendete SharePoint-Liste ab.  
   
  In den folgenden Tabellen wird das Verhalten beim Abrufen von Anmeldeinformationen für die SharePoint-Listenerweiterung erläutert, und zwar bei der Verbindung mit der SharePoint-Liste einer lokalen Farm oder einer SharePoint-Remoteliste.  
@@ -73,7 +73,7 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
  Weitere Informationen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](specify-credential-and-connection-information-for-report-data-sources.md) und [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-##  <a name="Query"></a> Abfragen  
+##  <a name="queries"></a><a name="Query"></a> Abfragen  
  Erstellen Sie auf Grundlage der Datenquelle ein neues Dataset, und öffnen Sie dann den entsprechenden Abfrage-Designer, um eine Abfrage zu entwerfen. Weitere Informationen finden Sie unter [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
  Der grafische Abfrage-Designer für SharePoint-Listen zeigt vier Bereiche an:  
@@ -151,10 +151,10 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
  Alle Felder für die Liste "Tasks" werden in den Abfrageergebnissen zurückgegeben.  
   
-##  <a name="Parameters"></a> Parameter  
+##  <a name="parameters"></a><a name="Parameters"></a> Parameter  
  Parameter werden von dieser Datenerweiterung nicht unterstützt.  
   
-##  <a name="HowTo"></a> Themen zur Vorgehensweise  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Themen zur Vorgehensweise  
  Dieser Abschnitt enthält schrittweise Anweisungen zum Arbeiten mit Datenverbindungen, Datenquellen und Datasets.  
   
  [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -163,7 +163,7 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
  [Hinzufügen eines Filters zu einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a> Verwandte Abschnitte  
+##  <a name="related-sections"></a><a name="Related"></a> Verwandte Abschnitte  
  Diese Abschnitte der Dokumentation enthalten umfassende grundlegende Informationen zu Berichtsdaten sowie Informationen zum Definieren, Anpassen und Verwenden der mit Daten zusammenhängenden Teile eines Berichts.  
   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

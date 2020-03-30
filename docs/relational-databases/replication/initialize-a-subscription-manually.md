@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 85d4d245ae71adbd6b1c534381c7683b676d7fbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288211"
 ---
 # <a name="initialize-a-subscription-manually"></a>Manuelles Initialisieren eines Abonnements
@@ -27,13 +27,13 @@ ms.locfileid: "76288211"
   In diesem Thema wird beschrieben, wie ein Abonnement manuell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]initialisiert wird. Obwohl die Anfangsmomentaufnahme normalerweise zum Initialisieren eines Abonnements verwendet wird, können Abonnements für Veröffentlichungen ohne eine Momentaufnahme initialisiert werden. Voraussetzung dafür ist allerdings, dass der Abonnent das Schema und die Ausgangsdaten bereits besitzt.  
   
 
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Wenn es zwischen dem Zeitpunkt, zu dem die Daten und das Schema auf den Abonnenten kopiert wurden, und dem Zeitpunkt, zu dem das Abonnement manuell initialisiert wurde, auf einer Datenbank, die mit einer Transaktionsreplikation veröffentlicht wurde, zu einer Aktivität gekommen ist, kann es passieren, dass Änderungen, die sich aus dieser Aktivität ergeben, nicht auf den Abonnenten repliziert werden.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Um ein Abonnement für eine Veröffentlichung manuell zu initialisieren, kopieren Sie das Schema (und in der Regel auch einige Daten) in die Abonnementdatenbank. Das Schema und die Daten sollten mit der Veröffentlichungsdatenbank übereinstimmen. Geben Sie anschließend im Assistenten für neue Abonnements auf der Seite **Abonnements initialisieren** an, dass für das Abonnement kein Schema und keine Daten erforderlich sind. Weitere Informationen zum Zugreifen auf diesen Assistenten finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) und [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)initialisiert wird.  
   
  Beim ersten Synchronisieren des Abonnements werden die für die Replikation erforderlichen Objekte und Metadaten in die Abonnementdatenbank kopiert.  
@@ -44,7 +44,7 @@ ms.locfileid: "76288211"
   
 2.  Deaktivieren Sie im Assistenten für neue Abonnements auf der Seite **Abonnements initialisieren** das Kontrollkästchen **Initialisieren** . Wiederholen Sie diesen Schritt für alle Abonnements, bei denen nur die Replikationsobjekte und -metadaten kopiert werden sollen.  
 
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Abonnements können manuell mit gespeicherten Replikationsprozeduren initialisiert werden.  
   
 #### <a name="to-manually-initialize-a-pull-subscription-to-a-transactional-publication"></a>So wird ein Pullabonnement für eine Transaktionsveröffentlichung manuell initialisiert  

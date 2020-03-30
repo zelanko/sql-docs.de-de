@@ -12,10 +12,10 @@ ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c411048c247224f0d1af95329480f24d9b6ccdad
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193883"
 ---
 # <a name="rendering-extensions-overview"></a>Übersicht über Renderingerweiterungen
@@ -26,7 +26,7 @@ ms.locfileid: "63193883"
   
  In der folgenden Tabelle werden die Renderingerweiterungen beschrieben, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten sind.  
   
-|Name der Erweiterung|Beschreibung|  
+|Name der Erweiterung|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |**XML**|Rendert einen Bericht im XML-Format. Der Bericht wird in einem Browser geöffnet. Weitere Umwandlungen, die auf dieses XML-Format angewandt werden, können eine kosteneffiziente Methode darstellen, die Entwicklung einer eigenen Renderingerweiterung zu vermeiden.|  
 |**CSV**|Rendert einen Bericht in einem durch Trennzeichen getrennten Format. Der Bericht wird in einem Anzeigetool für Dateien im CSV-Format geöffnet.|  

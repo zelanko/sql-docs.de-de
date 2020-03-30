@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6c33925b1a518cb975ebd427c252d0538cfb6ed2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287645"
 ---
 # <a name="delete-a-publication"></a>Löschen einer Veröffentlichung
@@ -37,7 +37,7 @@ ms.locfileid: "76287645"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Verwenden Sie zum Löschen von Veröffentlichungen den Ordner **Lokale Veröffentlichungen** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-delete-a-publication"></a>So löschen Sie eine Veröffentlichung  
@@ -48,7 +48,7 @@ ms.locfileid: "76287645"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, die Sie löschen möchten, und klicken Sie dann auf **Löschen**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Veröffentlichungen können programmgesteuert mit gespeicherten Replikationsprozeduren gelöscht werden. Welche gespeicherten Prozeduren Sie verwenden, hängt vom Typ der zu löschenden Veröffentlichung ab.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "76287645"
   
 3.  (Optional) Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) aus, um alle verbleibenden Replikationsmetadaten aus der Abonnementdatenbank zu entfernen.  
   
-###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Dieses Beispiel zeigt, wie eine Transaktionsveröffentlichung entfernt und die Transaktionsveröffentlichung für eine Datenbank deaktiviert wird. In diesem Beispiel wird davon ausgegangen, dass alle Abonnements vorher entfernt wurden. Weitere Informationen finden Sie unter [Delete a Pull Subscription](../../../relational-databases/replication/delete-a-pull-subscription.md) oder [Delete a Push Subscription](../../../relational-databases/replication/delete-a-push-subscription.md).  
   
  [!code-sql[HowTo#sp_droppublication](../../../relational-databases/replication/codesnippet/tsql/delete-a-publication_1.sql)]  
@@ -93,7 +93,7 @@ ms.locfileid: "76287645"
   
  [!code-sql[HowTo#sp_dropmergepublication](../../../relational-databases/replication/codesnippet/tsql/delete-a-publication_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Sie können Veröffentlichungen mithilfe von Replikationsverwaltungsobjekten (RMO) programmgesteuert löschen. Welche RMO-Klassen Sie zum Entfernen von Veröffentlichungen verwenden, hängt vom Typ der zu entfernenden Veröffentlichung ab.  
   
 #### <a name="to-remove-a-snapshot-or-transactional-publication"></a>So entfernen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung  
@@ -144,7 +144,7 @@ ms.locfileid: "76287645"
   
 7.  Trennen Sie die Verbindung.  
   
-###  <a name="PShellExample"></a> Beispiele (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Beispiele (RMO)  
  Im folgenden Beispiel wird eine Transaktionsveröffentlichung gelöscht. Wenn für diese Datenbank keine anderen Transaktionsveröffentlichungen vorhanden sind, werden Transaktionsveröffentlichungen zudem deaktiviert.  
   
  [!code-cs[HowTo#rmo_DropTranPub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpub)]  

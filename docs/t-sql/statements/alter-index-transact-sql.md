@@ -47,10 +47,10 @@ author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75924963"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -644,12 +644,12 @@ Auf Mehrprozessorcomputern werden für `ALTER INDEX REBUILD`, wie bei anderen Ab
 > [!IMPORTANT]
 > Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigruppe, in der er enthalten ist, eine Offline- oder schreibgeschützte Dateigruppe ist. Wenn das Schlüsselwort ALL angegeben ist und mindestens ein Index in einer Offline- oder schreibgeschützten Dateigruppe enthalten ist, erzeugt die Anweisung einen Fehler.  
   
-## <a name="rebuilding-indexes"></a> Neuerstellen von Indizes  
+## <a name="rebuilding-indexes"></a><a name="rebuilding-indexes"></a> Neuerstellen von Indizes  
 Beim Neuerstellen eines Indexes wird der Index gelöscht und neu erstellt. Bei diesem Vorgang wird die Fragmentierung entfernt, Speicherplatz wird freigegeben, indem die Seiten auf der Grundlage der angegebenen oder vorhandenen Füllfaktoreinstellung komprimiert werden, und die Indexzeilen werden in aufeinanderfolgenden Seiten neu geordnet. Wenn ALL angegeben ist, werden alle Indizes der Tabelle in einer einzelnen Transaktion gelöscht und neu erstellt. Fremdschlüsseleinschränkungen müssen nicht im Voraus gelöscht werden. Wenn Indizes mit mindestens 128 Blöcken neu erstellt werden, verzögert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die tatsächlichen aufgehobenen Seitenzuordnungen sowie deren zugeordnete Sperren, bis für die Transaktion ein Commit ausgeführt wird.  
  
 Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
   
-## <a name="reorganizing-indexes"></a> Neuorganisieren von Indizes
+## <a name="reorganizing-indexes"></a><a name="reorganizing-indexes"></a> Neuorganisieren von Indizes
 Das Neuorganisieren eines Indexes beansprucht minimale Systemressourcen. Dabei wird die Blattebene von gruppierten und nicht gruppierten Indizes in Tabellen und Sichten defragmentiert, indem die Blattebenenseiten physisch neu geordnet werden, damit sie mit der logischen Reihenfolge der Blattknoten von links nach rechts übereinstimmen. Durch das Neuorganisieren werden die Indexseiten auch komprimiert. Die Komprimierung basiert auf dem vorhandenen Füllfaktorwert. 
   
 Wenn `ALL` angegeben ist, werden relationale Indizes, sowohl gruppierte als auch nicht gruppierte, und XML-Indizes der Tabelle neu organisiert. Bei Angabe von ALL gelten einige Einschränkungen, die Sie in der Definition für ALL in diesem Artikel im Abschnitt „Argumente“ finden.  
@@ -659,7 +659,7 @@ Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Ind
 > [!IMPORTANT]
 > Bei einer Azure SQL Data Warehouse-Tabelle mit einem sortierten gruppierten Columnstore-Index werden mit `ALTER INDEX REORGANIZE` die Daten nicht neu sortiert. Verwenden Sie `ALTER INDEX REBUILD` zum Neusortieren der Daten.
   
-## <a name="disabling-indexes"></a> Deaktivieren von Indizes  
+## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> Deaktivieren von Indizes  
 Durch das Deaktivieren eines Indexes wird der Benutzerzugriff auf den Index sowie auf die zugrunde liegenden Tabellendaten gruppierter Indizes verhindert. Die Indexdefinition bleibt im Systemkatalog erhalten. Beim Deaktivieren eines nicht gruppierten oder gruppierten Indexes in einer Sicht werden die Indexdaten physisch gelöscht. Durch das Deaktivieren eines gruppierten Indexes wird der Benutzerzugriff auf die Daten verhindert; die Daten bleiben jedoch in der B-Struktur unverwaltet, bis der Index gelöscht oder neu erstellt wird. Führen Sie eine Abfrage für die **is_disabled**-Spalte in der **sys.indexes**-Katalogsicht aus, um den Status eines aktivierten oder deaktivierten Index anzuzeigen.  
   
 Befindet sich eine Tabelle in einer Transaktionsreplikationsveröffentlichung, können die Indizes, die mit Primärschlüsselspalten verknüpft sind, nicht deaktiviert werden, weil diese Indizes von der Replikation benötigt werden. Wenn Sie einen Index deaktivieren möchten, müssen Sie zuerst die Tabelle aus der Veröffentlichung löschen. Weitere Informationen finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
@@ -682,7 +682,7 @@ Wenn beim Festlegen der Optionen für Zeilen- oder Seitensperren ALL angegeben i
 |ALLOW_PAGE_LOCKS = ON|Für den Heap und alle zugeordneten nicht gruppierten Indizes.|  
 |ALLOW_PAGE_LOCKS = OFF|Vollständig für die nicht gruppierten Indizes. Dies bedeutet, dass für die nicht gruppierten Indizes keine Seitensperren zulässig sind. Beim Heap sind nur gemeinsame Sperren (S, Shared), Updatesperren (U, Update) und exklusive Sperren (X, Exclusive) für die Seite unzulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann weiterhin eine beabsichtigte Seitensperre (IS, IU oder IX) für interne Zwecke abrufen.|  
   
-## <a name="online-index-operations"></a> Onlineindexvorgänge  
+## <a name="online-index-operations"></a><a name="online-index-operations"></a> Onlineindexvorgänge  
 Wenn Sie einen Index neu erstellen, und die ONLINE-Option ist auf ON festgelegt, sind die zugrunde liegenden Objekte, die Tabellen und zugeordneten Indizes für Abfragen und Datenänderungen verfügbar. Sie können auch einen Teil eines Indexes online neu erstellen, der sich in einer einzelnen Partition befindet. Exklusive Tabellensperren werden während des Änderungsprozesses nur für einen kurzen Zeitraum aufrechterhalten.  
   
 Das Neuorganisieren eines Indexes wird stets online durchgeführt. Bei dem Prozess werden Sperren nicht dauerhaft aufrechterhalten; daher werden Abfragen oder Updates, die ausgeführt werden, nicht blockiert.  
@@ -695,7 +695,7 @@ Gleichzeitige Onlineindexvorgänge können in derselben Tabelle oder Tabellenpar
   
 Alle anderen gleichzeitig durchgeführten Onlineindexvorgänge erzeugen einen Fehler. Sie können beispielsweise nicht zwei oder mehr Indizes zur gleichen Zeit für dieselbe Tabelle neu erstellen bzw. beim Neuerstellen eines vorhandenen Indexes keinen neuen Index für dieselbe Tabelle erstellen.  
 
-### <a name="resumable-indexes"></a>Fortsetzbare Indexvorgänge
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a>Fortsetzbare Indexvorgänge
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 

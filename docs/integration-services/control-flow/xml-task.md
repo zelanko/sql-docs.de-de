@@ -17,10 +17,10 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca59166f994a0bd982c2f00c5c60c39207e9e02a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293660"
 ---
 # <a name="xml-task"></a>XML-Task
@@ -58,7 +58,7 @@ ms.locfileid: "71293660"
 ## <a name="predefined-xml-operations"></a>Vordefinierte XML-Vorgänge  
  Der XML-Task schließt vordefinierte Vorgänge zum Verwenden von XML-Dokumenten ein. In der folgenden Tabelle werden diese Vorgänge beschrieben.  
   
-|Vorgang|Beschreibung|  
+|Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Diff|Vergleicht zwei XML-Dokumente miteinander. Diff verwendet das XML-Quelldokument als Basisdokument und vergleicht es mit einem zweiten XML-Dokument, stellt die Unterschiede fest und schreibt diese in ein XML-Diffgram-Dokument. Dieser Vorgang schließt Eigenschaften zum Anpassen des Vergleichs ein.|  
 |Merge|Führt zwei XML-Dokumente zusammen. Der Merge-Vorgang verwendet das XML-Quelldokument als Basisdokument und fügt diesem den Inhalt eines zweiten Dokuments hinzu. Bei diesem Vorgang kann ein Mergespeicherort innerhalb des Basisdokuments angegeben werden.|  
@@ -72,7 +72,7 @@ ms.locfileid: "71293660"
   
  Der Diff-Vorgang enthält Optionen, mit denen der XML-Vergleich angepasst wird. In der folgenden Tabelle werden diese Optionen beschrieben.  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**IgnoreComments**|Dieser Wert gibt an, ob Kommentarknoten verglichen werden.|  
 |**IgnoreNamespaces**|Dieser Wert gibt an, ob der Namespace-URI (Uniform Resource Identifier) eines Elements und dessen Attributnamen verglichen werden. Falls diese Option auf **true**festgelegt ist, werden zwei Elemente mit dem gleichen lokalen Namen, aber einem unterschiedlichen Namespace, als identisch betrachtet.|  
@@ -115,7 +115,7 @@ ms.locfileid: "71293660"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den XML-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den XML-Task beschrieben. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**XMLOperation**|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|  
   
@@ -149,7 +149,7 @@ ms.locfileid: "71293660"
  **OperationType**  
  Wählen Sie den Vorgangstyp aus der Liste aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Überprüfen**|Überprüft das XML-Dokument mithilfe eines DTD-(Document Type Definition-) bzw. XSD-(XML Schema Definition-)Schemas. Nach Auswahl dieser Option werden die dynamischen Optionen im Bereich **Validate**angezeigt.|  
 |**XSLT**|Führt XSL-Transformationen in XML-Dokumenten aus. Nach Auswahl dieser Option werden die dynamischen Optionen im Bereich **XSLT**angezeigt.|  
@@ -161,7 +161,7 @@ ms.locfileid: "71293660"
  **SourceType**  
  Hiermit wählen Sie den Quelltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
@@ -197,7 +197,7 @@ ms.locfileid: "71293660"
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
@@ -205,7 +205,7 @@ ms.locfileid: "71293660"
  **ValidationType**  
  Wählen Sie den Überprüfungstyp aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**DTD**|Verwenden Sie eine Dokumenttypdefinition (DTD).|  
 |**XSD**|Verwenden Sie eine XML-Schemadefinition (XSD). Nach Auswahl dieser Option werden die dynamischen Optionen im Bereich **ValidationType**angezeigt.|  
@@ -222,7 +222,7 @@ ms.locfileid: "71293660"
  **SecondOperandType**  
  Wählen Sie den Quelltyp des zweiten XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
@@ -260,7 +260,7 @@ ms.locfileid: "71293660"
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
@@ -268,7 +268,7 @@ ms.locfileid: "71293660"
  **SecondOperandType**  
  Wählen Sie den Quelltyp des zweiten XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
@@ -306,7 +306,7 @@ ms.locfileid: "71293660"
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
@@ -314,7 +314,7 @@ ms.locfileid: "71293660"
  **SecondOperandType**  
  Wählen Sie den Quelltyp des zweiten XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
@@ -337,7 +337,7 @@ ms.locfileid: "71293660"
  **XPathOperation**  
  Wählen Sie den XPath-Ergebnistyp aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Auswertung**|Gibt die Ergebnisse einer XPath-Funktion zurück.|  
 |**Node list**|Gibt die ausgewählten Knoten als XML-Fragment zurück.|  
@@ -349,7 +349,7 @@ ms.locfileid: "71293660"
  **XPathStringSourceType**  
  Hiermit wählen Sie den Quelltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
@@ -386,7 +386,7 @@ ms.locfileid: "71293660"
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
@@ -394,7 +394,7 @@ ms.locfileid: "71293660"
  **SecondOperandType**  
  Wählen Sie den Zieltyp des zweiten XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
@@ -417,7 +417,7 @@ ms.locfileid: "71293660"
  **DiffAlgorithm**  
  Wählen Sie den Vergleichsalgorithmus aus, der beim Vergleich von Dokumenten verwendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Automatisch**|Wenn Sie diese Option auswählen, wird vom XML-Task bestimmt, ob der schnelle oder der genaue Algorithmus verwendet wird.|  
 |**Fast**|Wenn diese Option ausgewählt ist, wird ein schneller, aber weniger genauer Vergleichsalgorithmus verwendet.|  
@@ -426,7 +426,7 @@ ms.locfileid: "71293660"
  **Diff Options**  
  Legen Sie die Vergleichsoptionen fest, die auf den Vergleichsvorgang angewendet werden sollen. Die Optionen sind in der folgenden Tabelle aufgeführt.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|Geben Sie an, ob XML-Deklaration verglichen werden soll.|  
 |**IgnoreDTD**|Geben Sie an, ob die Dokumenttypdefinition (DTD) ignoriert werden soll.|  
@@ -461,7 +461,7 @@ ms.locfileid: "71293660"
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
@@ -469,7 +469,7 @@ ms.locfileid: "71293660"
  **SecondOperandType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
@@ -507,7 +507,7 @@ ms.locfileid: "71293660"
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legt als Quelle eine Variable fest, die das XML-Dokument enthält.|  
@@ -515,7 +515,7 @@ ms.locfileid: "71293660"
  **SecondOperandType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  

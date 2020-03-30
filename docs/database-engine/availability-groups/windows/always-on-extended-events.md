@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991562"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Konfigurieren erweiterter Ereignisse für Always On-Verfügbarkeitsgruppen
@@ -25,7 +25,7 @@ ms.locfileid: "67991562"
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
    
-##  <a name="BKMK_alwayson_health"></a> Alwayson_health-Sitzung  
+##  <a name="alwayson_health-session"></a><a name="BKMK_alwayson_health"></a> Alwayson_health-Sitzung  
  Die alwayson_health-Sitzung mit den erweiterten Ereignissen wird automatisch beim Erstellen der Verfügbarkeitsgruppe erstellt und erfasst eine Teilmenge verwandter Ereignisse der Verfügbarkeitsgruppe. Diese Sitzung ist als nützliches und praktisches Tool vorkonfiguriert, mit dem Sie schnell die ersten Schritte bei der Behandlung von Problemen mit einer Verfügbarkeitsgruppe durchführen können. Der Assistent zum Erstellen von Verfügbarkeitsgruppen startet automatisch die Sitzung für jedes beteiligte Verfügbarkeitsreplikat, das im Assistenten konfiguriert ist.  
   
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 Informationen zu einigen der von alwayson_health abgedeckten Ereignisse finden Sie in der [Referenz zu erweiterten Ereignissen](always-on-extended-events.md#BKMK_Reference).  
 
 
-##  <a name="BKMK_Debugging"></a> Erweiterte Ereignisse zum Debuggen  
+##  <a name="extended-events-for-debugging"></a><a name="BKMK_Debugging"></a> Erweiterte Ereignisse zum Debuggen  
  Neben den von der Alwayson_health-Sitzung abgedeckten erweiterten Ereignissen definiert SQL Server eine große Bandbreite an Debugereignissen für Verfügbarkeitsgruppen. Um diese zusätzlichen erweiterten Ereignisse in einer Sitzung nutzen zu können, führen Sie die folgenden Verfahren aus:  
   
 1.  Erweitern Sie im **Objekt-Explorer** die Knoten **Verwaltung**, **Erweiterte Ereignisse** und **Sitzungen**.  
@@ -57,7 +57,7 @@ Informationen zu einigen der von alwayson_health abgedeckten Ereignisse finden S
   
 7.  Wenn Sie mit der Sitzung fertig sind, klicken Sie auf **OK**, um sie zu schließen. Stellen Sie sicher, dass die Sitzung gestartet wurde, damit sie die von Ihnen ausgewählten Ereignisse erfasst.  
   
-##  <a name="BKMK_Reference"></a> Referenz zu erweiterten Ereignissen von Always On-Verfügbarkeitsgruppen  
+##  <a name="always-on-availability-groups-extended-events-reference"></a><a name="BKMK_Reference"></a> Referenz zu erweiterten Ereignissen von Always On-Verfügbarkeitsgruppen  
  In diesem Abschnitt werden einige der erweiterten Ereignisse beschrieben, die zum Überwachen der Verfügbarkeitsgruppen verwendet werden.  
   
  [availability_replica_state_change](#BKMK_availability_replica_state_change)  
@@ -76,12 +76,12 @@ Informationen zu einigen der von alwayson_health abgedeckten Ereignisse finden S
   
  [error_reported (1480): Änderung von Datenbankreplikatsrollen](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
+###  <a name="availability_replica_state_change"></a><a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Tritt auf, wenn der Status eines Verfügbarkeitsreplikats geändert wurde. Dieses Ereignis kann durch Erstellen einer Verfügbarkeitsgruppe oder Verknüpfen eines Verfügbarkeitsreplikats ausgelöst werden. Es eignet sich für die Diagnose eines fehlerhaften automatischen Failovers. Zudem können damit auch die Failoverschritte nachverfolgt werden.  
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Column|Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |Name|availability_replica_state_change|  
 |Category|Always On|  
@@ -89,7 +89,7 @@ Informationen zu einigen der von alwayson_health abgedeckten Ereignisse finden S
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|Beschreibung|  
+|Name|Type_name|BESCHREIBUNG|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe.|  
@@ -107,12 +107,12 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
+###  <a name="availability_group_lease_expired"></a><a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
  Tritt auf, wenn bei dem Cluster und der Verfügbarkeitsgruppe ein Konnektivitätsproblem auftritt und die Leasedauer abgelaufen ist. Dieses Ereignis zeigt an, dass die Konnektivität zwischen der Verfügbarkeitsgruppe und dem zugrunde liegenden WSFC-Cluster getrennt ist. Wenn das Konnektivitätsproblem beim primären Replikat auftritt, kann das Ereignis ein automatisches Failover auslösen oder dazu führen, dass die Verfügbarkeitsgruppe offline geschaltet wird.  
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Column|Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |Name|availability_group_lease_expired|  
 |Category|Always On|  
@@ -120,7 +120,7 @@ GO
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|Beschreibung|  
+|Name|Type_name|BESCHREIBUNG|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe.|  
@@ -135,12 +135,12 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
+###  <a name="availability_replica_automatic_failover_validation"></a><a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
  Tritt auf, wenn das automatische Failover die Bereitschaft eines Verfügbarkeitsreplikats als primärem Replikat überprüft, und anzeigt, ob das Zielverfügbarkeitsreplikat als neues primäres Replikat bereit ist. Beispielsweise gibt die Failoverüberprüfung „false“ zurück, wenn nicht alle Datenbanken synchronisiert oder verknüpft sind. Dieses Ereignis ist für die Bereitstellung eines Single Point of Failure bei einem Failover konzipiert. Diese Informationen sind für den Datenbankadministrator von Interesse, insbesondere im Hinblick auf automatische Failover, da ein automatisches Failover ein unbeaufsichtigter Vorgang ist. Der Datenbankadministrator kann das Ereignis überprüfen, um festzustellen, warum bei einem automatischen Failover ein Fehler aufgetreten ist.  
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
 |Category|Always On|  
@@ -148,7 +148,7 @@ GO
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|Beschreibung|  
+|Name|Type_name|BESCHREIBUNG|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe.|  
@@ -174,10 +174,10 @@ GO
   
 ```  
   
-###  <a name="BKMK_error_reported"></a> error_reported (mehrere Fehlernummern): bei Transport- oder Verbindungsproblemen  
+###  <a name="error_reported-multiple-error-numbers-for-transport-or-connection-issues"></a><a name="BKMK_error_reported"></a> error_reported (mehrere Fehlernummern): bei Transport- oder Verbindungsproblemen  
  Jedes gefilterte Ereignis zeigt an, dass ein Konnektivitätsproblem beim Transport- oder Datenbankspiegelungsendpunkt, von dem diese Verfügbarkeitsgruppe abhängig ist, aufgetreten ist.  
   
-|Column|Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |Name|error_reported<br /><br /> Zu filternde Zahlen: 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
 |Category|errors|  
@@ -185,7 +185,7 @@ GO
   
 #### <a name="error-numbers-to-filter"></a>Zu filternde Fehlernummern  
   
-|Fehlernummer|Beschreibung|  
+|Fehlernummer|BESCHREIBUNG|  
 |------------------|-----------------|  
 |35201|Bei dem Versuch, eine Verbindung mit dem Verfügbarkeitsreplikat '%ls' herzustellen, ist ein Timeout aufgetreten.|  
 |35202|Für die Verfügbarkeitsgruppe '%ls' wurde erfolgreich eine Verbindung zwischen dem Verfügbarkeitsreplikat '%ls' mit der ID [%ls] und dem mit der ID [%ls] hergestellt.  Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.|  
@@ -235,12 +235,12 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
+###  <a name="data_movement_suspend_resume"></a><a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
  Tritt auf, wenn die Datenbankverschiebung eines Datenbankreplikats angehalten oder fortgesetzt wird.  
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Column|Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |Name|data_movement_suspend_resume|  
 |Category|Immer aktiviert|  
@@ -250,7 +250,7 @@ GO
   
 ||||  
 |-|-|-|  
-|Name|Type_name|Beschreibung|  
+|Name|Type_name|BESCHREIBUNG|  
 |availability_group_id|guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe, falls vorhanden.|  
 |availability_replica_id|guid|Die ID des Verfügbarkeitsreplikats.|  
@@ -278,12 +278,12 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
+###  <a name="alwayson_ddl_executed"></a><a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
  Tritt auf, wenn eine DLL-Anweisung (Data Definition Language, Datendefinitionssprache) einer Verfügbarkeitsgruppe ausgeführt wird, einschließlich einer CREATE-, ALTER- oder DROP-Anweisung. Die Hauptaufgabe des Ereignisses besteht darin, ein Problem mit einer Benutzeraktion für ein Verfügbarkeitsreplikat oder den Ausgangspunkt einer operativen Aktion anzugeben, an die im Anschluss ein Runtimeproblem auftritt (z.B. ein manuelles Failover, ein erzwungenes Failover, eine angehaltene Datenverschiebung oder eine fortgesetzte Datenverschiebung).  
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Column|Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |Name|alwayson_ddl_execution|  
 |Category|Always On|  
@@ -291,7 +291,7 @@ GO
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|Beschreibung|  
+|Name|Type_name|BESCHREIBUNG|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe.|  
@@ -311,12 +311,12 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
+###  <a name="availability_replica_manager_state"></a><a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
  Tritt auf, wenn der Status des Verfügbarkeitsreplikat-Managers geändert wurde. Dieses Ereignis gibt den Heartbeat des Verfügbarkeitsreplikat-Managers an. Wenn sich der Verfügbarkeitsreplikat-Manager nicht in einem fehlerfreien Zustand befindet, fallen alle Verfügbarkeitsreplikate in der SQL Server-Instanz aus.  
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Column|Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |Name|availability_replica_manager_state_change|  
 |Category|Always On|  
@@ -324,7 +324,7 @@ GO
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|Beschreibung|  
+|Name|Type_name|BESCHREIBUNG|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|Der aktuelle Status des Verfügbarkeitsreplikat-Managers.<br /><br /> Online<br /><br /> Offline<br /><br /> WaitingForClusterCommunication|  
   
@@ -342,12 +342,12 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_error_reported_1480"></a> error_reported (1480): Änderung von Datenbankreplikatsrollen  
+###  <a name="error_reported-1480-database-replica-role-change"></a><a name="BKMK_error_reported_1480"></a> error_reported (1480): Änderung von Datenbankreplikatsrollen  
  Dieses gefilterte error_reported-Ereignis tritt asynchron auf, nachdem eine Verfügbarkeitsreplikatsrolle geändert wurde. Es gibt an, bei welcher Verfügbarkeitsdatenbank die erwartete Rolle während des Failoverprozesses nicht geändert werden konnte.  
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Column|Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |Name|error_reported<br /><br /> Fehlernummer 1480: The REPLICATION_TYPE_MSG database "DATABASE_NAME" is changing roles from "OLD_ROLE" to "NEW_ROLE" due to REASON_MSG (Bei der REPLICATION_TYPE_MSG-Datenbank „DATABASE_NAME“ werden aufgrund von REASON_MSG Rollen von „OLD_ROLE“ in „NEW_ROLE“ geändert)|  
 |Category|errors|  

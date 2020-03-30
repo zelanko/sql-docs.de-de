@@ -29,10 +29,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981904"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL-Syntaxkonventionen (Transact-SQL)
@@ -84,7 +84,7 @@ Wenn Sie auf ein bestimmtes Objekt verweisen, müssen Sie nicht immer den Server
   
 Um Zwischenknoten wegzulassen, verwenden Sie Punkte, um diese Positionen anzuzeigen. In der folgenden Tabelle sind die gültigen Formate für Objektnamen aufgeführt.  
   
-|Objektverweisformat|Beschreibung|  
+|Objektverweisformat|BESCHREIBUNG|  
 |-----------------------------|-----------------|  
 |_server_._database_._schema_._object_|Vierteiliger Name.|  
 |_server_._database_.._object_|Der Schemaname wird weggelassen.|  

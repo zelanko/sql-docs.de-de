@@ -11,10 +11,10 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: e97f535dedd2b6ee25abfc886d1f08272697c549
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287504"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Konfigurieren von SQL Server-Containerimages in Docker
@@ -54,7 +54,7 @@ In diesem Artikel zur Konfiguration werden zusätzliche Anwendungsfälle beschri
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="rhel"></a> Ausführen von RHEL-basierten Containerimages
+## <a name="run-rhel-based-container-images"></a><a id="rhel"></a> Ausführen von RHEL-basierten Containerimages
 
 Die Dokumentation für SQL Server-Containerimages für Linux bezieht sich auf Ubuntu-basierte Container. Ab SQL Server 2019 können Sie auch RHEL-basierte Container (Red Hat Enterprise Linux) verwenden. Ändern Sie das Containerrepository in allen Docker-Befehlen von **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** in **mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8**.
 
@@ -73,7 +73,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="production"></a> Ausführen von Produktionscontainerimages
+## <a name="run-production-container-images"></a><a id="production"></a> Ausführen von Produktionscontainerimages
 
 Im Schnellstart im vorherigen Abschnitt wird die kostenlose Developer Edition von SQL Server über Docker Hub ausgeführt. Die meisten Angaben gelten weiterhin, wenn Sie Produktionscontainerimages wie für die Enterprise-, Standard- und Web-Edition ausführen möchten. Es gibt jedoch einige Unterschiede, die im Folgenden erläutert werden.
 
@@ -210,7 +210,7 @@ sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
 sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
 
-## <a id="customcontainer"></a> Erstellen eines benutzerdefinierten Containers
+## <a name="create-a-customized-container"></a><a id="customcontainer"></a> Erstellen eines benutzerdefinierten Containers
 
 Sie können ein eigenes [Dockerfile](https://docs.docker.com/engine/reference/builder/#usage) erstellen, um einen benutzerdefinierten SQL Server-Container zu erstellen. Weitere Informationen finden Sie in [dieser Demo, in der SQL Server und eine Node-Anwendung kombiniert werden](https://github.com/twright-msft/mssql-node-docker-demo-app). Wenn Sie ein eigenes Dockerfile erstellen, sollten Sie auf den Vordergrundprozess achten, da dieser die Lebensdauer des Containers bestimmt. Wenn dieser beendet wird, wird der Container heruntergefahren. Wenn Sie beispielsweise ein Skript ausführen und SQL Server starten möchten, sollten Sie sicherstellen, dass der SQL Server-Prozess der Befehl ganz rechts ist. Alle anderen Befehle werden im Hintergrund ausgeführt. Dies wird mit dem folgenden Befehl in einem Dockerfile veranschaulicht:
 
@@ -220,7 +220,7 @@ Sie können ein eigenes [Dockerfile](https://docs.docker.com/engine/reference/bu
 
 Wenn Sie die Befehle im vorherigen Beispiel rückgängig gemacht haben, wird der Container heruntergefahren, wenn das Skript „do-my-sql-commands.sh“ abgeschlossen wird.
 
-## <a id="persist"></a> Beibehalten von Daten
+## <a name="persist-your-data"></a><a id="persist"></a> Beibehalten von Daten
 
 Die SQL Server-Konfigurationsänderungen und -Datenbankdateien werden im Container beibehalten, auch wenn Sie den Container mit `docker stop` und `docker start` neu starten. Wenn Sie den Container jedoch mit `docker rm` entfernen, werden sämtliche Inhalte des Containers gelöscht, einschließlich SQL Server und Ihrer Datenbanken. Im folgenden Abschnitt wird erläutert, wie **Datenvolumes** verwendet werden, um Ihre Datenbankdateien beizubehalten, auch wenn die zugeordneten Container gelöscht werden.
 
@@ -368,7 +368,7 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```PowerShell
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
-## <a id="tz"></a> Konfigurieren der Zeitzone
+## <a name="configure-the-timezone"></a><a id="tz"></a> Konfigurieren der Zeitzone
 
 Konfigurieren Sie die Umgebungsvariable `TZ`, um SQL Server mit einer bestimmten Zeitzone in einem Linux-Container auszuführen. Führen Sie den Befehl `tzselect` über eine Linux-Bash-Eingabeaufforderung aus, um den richtigen Zeitzonenwert zu ermitteln:
 
@@ -425,7 +425,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 ```
 ::: moniker-end
 
-## <a id="tags"></a> Ausführen eines bestimmten SQL Server-Containerimages
+## <a name="run-a-specific-sql-server-container-image"></a><a id="tags"></a> Ausführen eines bestimmten SQL Server-Containerimages
 
 In manchen Fällen möchten Sie nicht das neueste SQL Server-Containerimage verwenden. Mithilfe der folgenden Schritte können Sie ein bestimmtes SQL Server-Containerimage ausführen:
 
@@ -449,7 +449,7 @@ In manchen Fällen möchten Sie nicht das neueste SQL Server-Containerimage verw
 
 Diese Schritte können auch zum Herabstufen eines vorhandenen Containers verwendet werden. Sie können beispielsweise einen Rollback oder ein Downgrade für einen Container ausführen, um Probleme zu beheben oder Tests durchzuführen. Zum Herabstufen eines ausgeführten Containers müssen Sie eine Persistenzmethode für den Datenordner verwenden. Führen Sie die Schritte durch, die im [Abschnitt zu Upgrades](#upgrade) beschrieben werden, aber geben Sie den Tagnamen der älteren Version an, wenn Sie den neuen Container ausführen.
 
-## <a id="version"></a> Überprüfen der Containerversion
+## <a name="check-the-container-version"></a><a id="version"></a> Überprüfen der Containerversion
 
 Führen Sie folgenden Befehl aus, um die SQL Server-Version in einem ausgeführten Docker-Container zu ermitteln. Ersetzen Sie `<Container ID or name>` durch die Zielcontainer-ID oder den Namen. Ersetzen Sie `<YourStrong!Passw0rd>` durch das SQL Server-Kennwort für die SA-Anmeldung.
 
@@ -505,7 +505,7 @@ Packages
   sqlagent.sfp                  14.0.3029.16
 ```
 
-## <a id="upgrade"></a> Aktualisieren von SQL Server in Containern
+## <a name="upgrade-sql-server-in-containers"></a><a id="upgrade"></a> Aktualisieren von SQL Server in Containern
 
 Wenn Sie das Containerimage mit Docker aktualisieren möchten, müssen Sie zunächst das Tag für das Release des Upgrades ermitteln. Rufen Sie diese Version mit dem Befehl `docker pull` aus der Registrierung ab:
 
@@ -528,7 +528,7 @@ Dadurch wird das SQL Server-Image für neu erstellte Container aktualisiert. SQL
 
 1. Entfernen Sie den alten Container optional mit `docker rm`.
 
-## <a id="buildnonrootcontainer"></a> Erstellen und Ausführen von SQL Server 2017-Containern ohne Root-Berechtigung
+## <a name="build-and-run-non-root-sql-server-2017-containers"></a><a id="buildnonrootcontainer"></a> Erstellen und Ausführen von SQL Server 2017-Containern ohne Root-Berechtigung
 
 Führen Sie die folgenden Schritte aus, um einen SQL Server 2017-Container zu erstellen, der als `mssql`Nicht-Root-Benutzer gestartet wird.
 
@@ -566,7 +566,7 @@ Führen Sie `whoami` aus, um den Benutzer zurückzugeben, der innerhalb des Cont
 whoami
 ```
 
-## <a id="nonrootuser"></a> Ausführen eines Containers als anderer Nicht-Root-Benutzer auf dem Host
+## <a name="run-container-as-a-different-non-root-user-on-the-host"></a><a id="nonrootuser"></a> Ausführen eines Containers als anderer Nicht-Root-Benutzer auf dem Host
 
 Um den SQL Server-Container als anderer Nicht-Root-Benutzer auszuführen, fügen Sie dem Befehl „docker run“ das Flag „-u“ hinzu. Der Container ohne Root-Berechtigung hat die Einschränkung, dass er als Teil der Root-Gruppe ausgeführt werden muss, es sei denn, es wird ein Volume für „/var/opt/mssql“ bereitgestellt, auf das der Nicht-Root-Benutzer zugreifen kann. Die Root-Gruppe gewährt dem Nicht-Root-Benutzer keine zusätzlichen Root-Berechtigungen.
 
@@ -603,7 +603,7 @@ Sie können SQL Server mit einem benutzerdefinierten Benutzer oder einer benutze
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
-## <a id="storagepermissions"></a> Konfigurieren von persistenten Speicherberechtigungen für Container ohne Root-Berechtigung
+## <a name="configure-persistent-storage-permissions-for-non-root-containers"></a><a id="storagepermissions"></a> Konfigurieren von persistenten Speicherberechtigungen für Container ohne Root-Berechtigung
 
 Um dem Nicht-Root-Benutzer den Zugriff auf DB-Dateien zu ermöglichen, die sich auf bereitgestellten Volumes befinden, stellen Sie sicher, dass der Benutzer bzw. die Gruppe, unter der Sie den Container ausführen, auf den persistenten Dateispeicher zugreifen kann.  
 
@@ -632,7 +632,7 @@ Dies kann der standardmäßig festgelegte Nicht-Root-Benutzer oder ein anderer N
 chown -R 10001:0 <database file dir>
 ```
 
-## <a id="changefilelocation"></a> Ändern des Standardspeicherorts der Datei
+## <a name="change-the-default-file-location"></a><a id="changefilelocation"></a> Ändern des Standardspeicherorts der Datei
 
 Fügen Sie die Variable `MSSQL_DATA_DIR` hinzu, um Ihr Datenverzeichnis in Ihrem `docker run`-Befehl zu ändern, und stellen Sie dann ein Volume an dem Speicherort bereit, auf den der Benutzer Ihres Containers Zugriff hat.
 
@@ -640,7 +640,7 @@ Fügen Sie die Variable `MSSQL_DATA_DIR` hinzu, um Ihr Datenverzeichnis in Ihrem
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
-## <a id="troubleshooting"></a> Problembehandlung
+## <a name="troubleshooting"></a><a id="troubleshooting"></a> Problembehandlung
 
 In den folgenden Abschnitten finden Sie Vorschläge zur Problembehandlung bei der Ausführung von SQL Server in Containern.
 
@@ -760,7 +760,7 @@ Wenn Sie Docker mit SQL Server-Verfügbarkeitsgruppen verwenden, gibt es zwei zu
 
 - Legen Sie den Containerhostnamen mit dem Parameter `-h YOURHOSTNAME` des Befehls `docker run` explizit fest. Dieser Hostname wird verwendet, wenn Sie die Verfügbarkeitsgruppe konfigurieren. Wenn Sie ihn nicht mit `-h` angeben, wird standardmäßig die Container-ID verwendet.
 
-### <a id="errorlogs"></a> Setup- und Fehlerprotokolle für SQL Server
+### <a name="sql-server-setup-and-error-logs"></a><a id="errorlogs"></a> Setup- und Fehlerprotokolle für SQL Server
 
 Sie finden Sie Setup- und Fehlerprotokolle für SQL Server unter **/var/opt/mssql/log**. Wenn der Container nicht ausgeführt wird, starten Sie diesen zunächst. Verwenden Sie dann eine interaktive Eingabeaufforderung, um die Protokolle zu überprüfen.
 

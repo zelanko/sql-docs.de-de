@@ -16,10 +16,10 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093595"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
@@ -36,13 +36,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet markierte Funktionen** beschrieben.
 
-|**SQL Server-Leistungsindikator „Als veraltet markierte Funktionen“**|Beschreibung|  
+|**SQL Server-Leistungsindikator „Als veraltet markierte Funktionen“**|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Verwendung**|Funktionsverwendung seit letztem SQL Server-Start.|
   
  In der folgenden Tabelle werden die Instanzen des „SQL Server:Als veraltet markierte Funktionen“-Leistungsindikators beschrieben.  
   
-|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|Beschreibung|  
+|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|BESCHREIBUNG|  
 |------------------------------------------------------|-----------------|  
 |'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|Ein Bezeichner wurde gefunden, der keine anderen Zeichen als # enthielt. Verwenden Sie mindestens ein zusätzliches Zeichen. Tritt einmal pro Kompilierung auf.|  
 |Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie die Syntax durch `SELECT column_list FROM` *<Funktionsname>* `()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  

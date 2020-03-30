@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67948246"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -161,7 +161,7 @@ TOP kann nicht mit OFFSET und FETCH im gleichen Abfrageausdruck (im gleichen Abf
 |[Einschließen von gleichwertigen Werten](#tie)|WITH TIES|  
 |[Beschränken der von DELETE, INSERT oder UPDATE betroffenen Zeilen](#DML)|DELETE • INSERT • UPDATE|  
   
-###  <a name="BasicSyntax"></a> Grundlegende Syntax  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Grundlegende Syntax  
 Anhand von Beispielen in diesem Abschnitt wird die grundlegende Funktion der ORDER BY-Klausel mithilfe der mindestens erforderlichen Syntax veranschaulicht.  
   
 #### <a name="a-using-top-with-a-constant-value"></a>A. Verwenden von TOP mit einem konstanten Wert  
@@ -206,7 +206,7 @@ ORDER BY HireDate DESC;
 GO    
 ```  
   
-###  <a name="tie"></a> Einschließen von gleichwertigen Werten  
+###  <a name="including-tie-values"></a><a name="tie"></a> Einschließen von gleichwertigen Werten  
   
 #### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. Einschließen von Zeilen mit identischen Werten wie vorangehende Zeilen mit WITH TIES  
 Im folgenden Beispiel werden die obersten `10` Prozent aller Mitarbeiter mit dem höchsten Gehalt abgerufen und in absteigender Reihenfolge nach der Höhe des Gehalts zurückgegeben. Durch Angeben von `WITH TIES` wird sichergestellt, dass alle Mitarbeiter mit einem Gehalt, das dem niedrigsten zurückgegebenen Gehalt (der letzten Zeile) entspricht, ebenfalls im Resultset enthalten sind, auch wenn dadurch `10` Prozent der Mitarbeiter überschritten werden.  
@@ -225,7 +225,7 @@ ORDER BY Rate DESC;
 GO    
 ```  
   
-###  <a name="DML"></a> Beschränken der von DELETE, INSERT oder UPDATE betroffenen Zeilen  
+###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a> Beschränken der von DELETE, INSERT oder UPDATE betroffenen Zeilen  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Verwenden von TOP, um die Anzahl der zu löschenden Zeilen einzuschränken  
 Wenn Sie eine TOP (*n*)-Klausel mit DELETE verwenden, wird der Löschvorgang für eine nicht definierte Auswahl von *n* Zeilen ausgeführt. Das heißt, die DELETE-Anweisung wählt eine beliebige Anzahl (*n*) von Zeilen aus, die die in der WHERE-Klausel definierten Kriterien erfüllen. Im folgenden Beispiel werden `20` Zeilen mit einem Fälligkeitsdatum vor dem 1. Juli 2002 aus der Tabelle `PurchaseOrderDetail` gelöscht.  
@@ -315,7 +315,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Im folgenden Beispiel werden die obersten 31 Zeilen zurückgegeben, die den Abfragekriterien entsprechen. Mit der **ORDER BY**-Klausel wird sichergestellt, dass es sich bei den 31 zurückgegebenen Zeilen um die ersten 31 Zeilen (basierend auf einer alphabetischen Sortierung der Spalte `LastName`) handelt.  
   
 Verwenden Sie **TOP**, ohne WITH TIES anzugeben.  

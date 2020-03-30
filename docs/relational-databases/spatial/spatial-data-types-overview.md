@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048521"
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
@@ -28,7 +28,7 @@ ms.locfileid: "68048521"
 Es gibt zwei Typen von räumlichen Daten. Der **geometry** -Datentyp unterstützt planare bzw. euklidische Daten (flache Erdabbildung). Der **geometry** -Datentyp entspricht der Version 1.1.0. der Simple Features for SQL-Spezifikation des Open Geospatial Consortium (OGC) und ist auch mit SQL MM (ISO-Standard) kompatibel.
 Zudem unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den **geography** -Datentyp, der ellipsenförmige Daten speichert (runde Erdabbildung), z.B. GPS-Breiten- und -Längenkoordinaten.
 
-##  <a name="objects"></a> Räumliche Datenobjekte  
+##  <a name="spatial-data-objects"></a><a name="objects"></a> Räumliche Datenobjekte  
 Der **geometry** -Datentyp und der **geography** -Datentyp unterstützen 16 räumliche Datenobjekte bzw. Instanztypen. Nur elf dieser Instanztypen sind jedoch *instanziierbar*. Sie können diese Instanzen erstellen und Sie in einer Datenbanken bearbeiten (oder instanziieren). Diese Instanzen leiten bestimmte Eigenschaften von ihren übergeordneten Datentypen ab, die sie als **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** oder als mehrere Instanzen von **geometry** oder **geography** in einer **GeometryCollection**auszeichnen. Der**Geography** -Typ verfügt über einen zusätzlichen Instanztyp **FullGlobe**.  
 
 Die nachfolgende Abbildung stellt die **geometry** -Hierarchie dar, auf der der **geometry** -Datentyp und der **geography** -Datentyp basieren. Die instanziierbaren Typen von **geometry** und **geography** sind in Blau dargestellt.  
@@ -53,7 +53,7 @@ Zu Auflistungstypen gehören:
 -   [MultiPolygon](../../relational-databases/spatial/multipolygon.md)  
 -   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
-##  <a name="differences"></a> Unterschiede zwischen den geometry- und geography-Datentypen  
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> Unterschiede zwischen den geometry- und geography-Datentypen  
 Die beiden Typen von räumlichen Daten verhalten sich oft ganz ähnlich. Es gibt aber einige wichtige Unterschiede in Bezug darauf, wie Daten gespeichert und bearbeitet werden.  
 
 ### <a name="how-connecting-edges-are-defined"></a>Definieren von verbindenden Rändern  
@@ -86,7 +86,7 @@ Weitere Informationen zu den OGC-Spezifikationen finden Sie in den folgenden The
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
 -   [OGC Specifications, Simple Feature Access Part 2: SQL Options (OGC-Spezifikationen, Simple Feature Access, Teil 2: SQL-Optionen)](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
-##  <a name="circular"></a> Kreisbogensegmente  
+##  <a name="circular-arc-segments"></a><a name="circular"></a> Kreisbogensegmente  
 Drei instanziierbare Typen können Kreisbogensegmente verwenden: **CircularString**, **CompoundCurve** und **CurvePolygon**.  Ein Kreisbogensegment wird von drei Punkten in einer zweidimensionalen Ebene definiert; der dritte Punkt darf nicht mit dem ersten Punkt identisch sein.  
 
 In Abbildung A und B sind typische Kreisbogensegmente dargestellt. Beachten Sie, dass jeder der drei Punkte auf dem Umkreis eines Kreises liegt.  

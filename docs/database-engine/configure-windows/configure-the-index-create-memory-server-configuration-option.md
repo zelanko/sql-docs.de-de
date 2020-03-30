@@ -13,10 +13,10 @@ ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 289610b05757a1b2e94f27164b8f43464d49c227
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012608"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Speicher für Indexerstellung
@@ -42,9 +42,9 @@ ms.locfileid: "68012608"
   
 -   **Nachverfolgung:**  [Nach dem Konfigurieren der Option „Speicher für Indexerstellung“](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Die Einstellung der Option **[Min. Arbeitsspeicher pro Abfrage](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** hat Vorrang vor der Option **Speicher für Indexerstellung**. Wenn Sie beide Optionen ändern und der Wert von **index create memory** (Speicher für Indexerstellung) den Wert von **min memory per query**(Min. Arbeitsspeicher pro Abfrage) unterschreitet, werden die Werte zwar festgelegt, es wird jedoch eine Warnmeldung ausgegeben. Eine ähnliche Warnmeldung erhalten Sie auch während der Ausführung.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68012608"
   
 -   Die tatsächliche Speicherkapazität, die für das Betriebssystem und die Hardwareplattform, auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, verwendet werden kann, wird durch den Ausführungswert dieser Option nicht überschritten.  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Experten geändert werden.  
   
@@ -60,12 +60,12 @@ ms.locfileid: "68012608"
 
 -   Auf einem Produktionssystem wird ein Index in der Regel sehr selten erstellt; diese Aufgabe wird stattdessen häufig als Auftrag zur Ausführung außerhalb der Geschäftszeiten geplant. Wenn Indizes selten und außerhalb der Hauptgeschäftszeiten erstellt werden, kann die Indexerstellungsleistung daher durch Erhöhen von **Speicher für Indexerstellung** verbessert werden. Sie sollten die Konfigurationsoption **[Min. Arbeitsspeicher pro Abfrage](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** jedoch auf einen niedrigen Wert festlegen, sodass der Indexerstellungsauftrag gestartet wird, auch wenn der angeforderte Arbeitsspeicher nicht verfügbar ist.
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-configure-the-index-create-memory-option"></a>So konfigurieren Sie die Option "Speicher für Indexerstellung"  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68012608"
   
      Sie können mit der Option **Speicher für Indexerstellung** den Umfang an Speicherplatz steuern, der für Sortiervorgänge bei der Indexerstellung verwendet wird. Bei der Option **Speicher für Indexerstellung** handelt es sich um eine selbstkonfigurierende Option, die in den meisten Fällen ohne weitere Anpassung funktionieren sollte. Wenn Sie jedoch Schwierigkeiten beim Erstellen von Indizes feststellen, sollten Sie den Wert dieser Option abweichend vom Ausführungswert erhöhen. Das Sortieren von Abfragen wird über die Option **Min. Arbeitsspeicher pro Abfrage** gesteuert.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-configure-the-index-create-memory-option"></a>So konfigurieren Sie die Option "Speicher für Indexerstellung"  
   
@@ -101,7 +101,7 @@ GO
   
  Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Option „Speicher für Indexerstellung“  
+##  <a name="follow-up-after-you-configure-the-index-create-memory-option"></a><a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Option „Speicher für Indexerstellung“  
  Die Einstellung tritt ohne Neustarten des Servers sofort in Kraft.  
   
 ## <a name="see-also"></a>Weitere Informationen  

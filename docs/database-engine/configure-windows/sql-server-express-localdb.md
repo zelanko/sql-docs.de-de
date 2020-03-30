@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 355cb8b80e4a27a7f58bb42dd37ca9b91059fa25
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: 3eedcac9715dec28d3a0ee785effa450d7309c89
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77479725"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80342912"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -33,7 +33,7 @@ Bei der Installation von LocalDB wird ein minimalen Satz von Dateien kopiert, de
 
 ## <a name="try-it-out"></a>Probieren Sie es aus! 
 
-- Um SQL Server Express LocalDB herunterzuladen und zu installieren, navigieren Sie zur Seite **[Downloads für SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)** . LocalDB ist eine Funktion, die Sie während der Installation auswählen. Sie ist verfügbar, wenn Sie die Medien herunterladen. Wenn Sie die Medien herunterladen, wählen Sie **Express Advanced** oder das LocalDB-Paket aus. Im **Visual Studio-Installer** können Sie SQL Server Express LocalDB als Teil der Workload **.NET-Desktopentwicklung** oder als einzelne Komponente installieren.
+- Um SQL Server Express LocalDB herunterzuladen und zu installieren, navigieren Sie zur Seite **[Downloads für SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB ist eine Funktion, die Sie während der Installation auswählen. Sie ist verfügbar, wenn Sie die Medien herunterladen. Wenn Sie die Medien herunterladen, wählen Sie **Express Advanced** oder das LocalDB-Paket aus. Im **Visual Studio-Installer** können Sie SQL Server Express LocalDB als Teil der Workload **.NET-Desktopentwicklung** oder als einzelne Komponente installieren.
 
  >[!TIP]
  > Sie können LocalDB auch als Teil von Visual Studio installieren. Wählen Sie während der Installation von Visual Studio die Workload **.NET-Desktopentwicklung** aus, in der SQL Server Express LocalDB enthalten ist.

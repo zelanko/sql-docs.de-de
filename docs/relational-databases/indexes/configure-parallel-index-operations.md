@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 627fa6a19c88507034bfbd8a7236b94e17242851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908125"
 ---
 # <a name="configure-parallel-index-operations"></a>Konfigurieren von Parallelindexvorgängen
@@ -48,15 +48,15 @@ Auf Systemen mit mehreren Prozessoren, auf denen [!INCLUDE[ssNoVersion](../../in
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Mit der Anzahl der Prozessoren, die vom Abfrageoptimierer verwendet wird, kann zumeist eine optimale Leistung gewährleistet werden. Allerdings können bestimmte Vorgänge, wie das Erstellen, erneute Erstellen oder Löschen sehr großer Indizes die Ressourcen stark beanspruchen, wodurch während des Indexvorgangs möglicherweise nicht genügend Ressourcen für andere Anwendungen und Datenbankvorgänge verfügbar sind. Wenn dieses Problem auftritt, können Sie die zum Ausführen der Indexanweisung verwendete maximale Anzahl von Prozessoren manuell konfigurieren, indem Sie die Anzahl von Prozessoren für den Indexvorgang verringern.  
   
 -   Die MAXDOP-Indexoption überschreibt die Max. Grad an Parallelität-Konfigurationsoption, jedoch nur für die Abfrage, die diese Option angibt. In der folgenden Tabelle werden die gültigen ganzzahligen Werte aufgelistet, die mit der Max. Grad an Parallelität-Konfigurationsoption und der MAXDOP-Indexoption angegeben werden können.  
   
-    |value|Beschreibung|  
+    |Wert|BESCHREIBUNG|  
     |-----------|-----------------|  
     |0|Gibt an, dass der Server die Anzahl der CPUs festlegt, die verwendet werden, abhängig von der aktuellen Systemarbeitsauslastung. Dies ist die Standardeinstellung und die empfohlene Einstellung.|  
     |1|Unterdrückt das Generieren paralleler Pläne. Die Operationen werden dann nacheinander, also seriell ausgeführt.|  
@@ -78,10 +78,10 @@ Auf Systemen mit mehreren Prozessoren, auf denen [!INCLUDE[ssNoVersion](../../in
   
 -   Die Arbeitsspeicheranforderungen für partitionierte Indexvorgänge, bei denen eine Sortierung erforderlich ist, können größer sein, wenn der Abfrageoptimierer Grade an Parallelität beim Erstellungsvorgang verwendet. Je höher der Grad der Parallelität ist, desto höher ist der Speicherbedarf. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
-###  <a name="Security"></a> <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Security"></a> <a name="Permissions"></a> Berechtigungen  
  Erfordert die `ALTER`-Berechtigung für die Tabelle oder Sicht.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>So legen Sie den maximalen Grad an Parallelität für einen Index fest  
   
@@ -101,7 +101,7 @@ Auf Systemen mit mehreren Prozessoren, auf denen [!INCLUDE[ssNoVersion](../../in
   
 8.  Klicken Sie auf **OK**.  
 
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>So legen Sie den maximalen Grad an Parallelität für einen vorhandenen Index fest  
   

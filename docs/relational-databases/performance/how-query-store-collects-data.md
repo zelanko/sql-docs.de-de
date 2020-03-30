@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71974361"
 ---
 # <a name="how-query-store-collects-data"></a>Erfassen von Daten im Abfragespeicher
@@ -31,7 +31,7 @@ Die Funktionsweise des SQL Server-Abfragespeichers ähnelt der von Flugdatenschr
  ![Sichten des Abfragespeicherprozesses](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **Sichtbeschreibungen**  
   
-|Sicht|Beschreibung|  
+|Sicht|BESCHREIBUNG|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Stellt eindeutige Abfragetexte dar, die in der Datenbank ausgeführt wurden. Kommentare und Leerzeichen vor und nach dem Abfragetext werden ignoriert. Kommentare und Leerzeichen im Text werden nicht ignoriert. Jede Anweisung im Batch generiert einen separaten Abfragetexteintrag.|  
 |**sys.query_context_settings**|Stellt eindeutige Kombinationen von Einstellungen dar, die sich auf Pläne auswirken, mit denen Abfragen ausgeführt werden. Derselbe Abfragetext, der mit unterschiedlichen Einstellungen zur Planauswirkung ausgeführt wurde, erzeugt separate Abfrageeinträge im Abfragespeicher, da `context_settings_id` Teil des Abfrageschlüssels ist.|  

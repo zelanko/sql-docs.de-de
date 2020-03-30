@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287134"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio
@@ -77,7 +77,7 @@ Zusätzlich zu den oben aufgeführten Berechtigungen benötigen Sie zum Entschl�
 
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
-## <a name="en-dis"></a> Aktivieren und Deaktivieren von Always Encrypted für eine Datenbankverbindung   
+## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a><a name="en-dis"></a> Aktivieren und Deaktivieren von Always Encrypted für eine Datenbankverbindung   
 Wenn Sie in SSMS eine Verbindung mit einer Datenbank herstellen, können Sie Always Encrypted für die Datenbankverbindung entweder aktivieren oder deaktivieren. Always Encrypted ist standardmäßig deaktiviert. 
 
 Durch Aktivieren von Always Encrypted für eine Datenbankverbindung wird der .NET Framework-Datenanbieter für SQL Server, der von SQL Server Management Studio verwendet wird, aufgefordert, die folgenden Aufgaben transparent auszuführen:   
@@ -106,7 +106,7 @@ So aktivieren (oder deaktivieren) Sie Always Encrypted:
 > 2.    Wählen Sie **Verbindung** > **Verbindung ändern...** aus. Dadurch wird das Dialogfeld **Verbindung mit Server herstellen** für die aktuelle Verbindung für das Abfrage-Editor-Fenster geöffnet. 
 > 2.    Aktivieren oder deaktivieren Sie Always Encrypted, indem Sie die oben stehenden Schritte ausführen, und klicken Sie auf **Verbinden**.  
    
-## <a name="param"></a>Parametrisierung für Always Encrypted   
+## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Parametrisierung für Always Encrypted   
  
 „Parametrisierung für Always Encrypted“ ist ein Feature in SQL Server Management Studio, das Transact-SQL-Variablen automatisch in Abfrageparameter (Instanzen der [„SqlParameter“-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)) konvertiert. (Erfordert mindestens SSMS Version 17.0) Dies ermöglicht dem zugrunde liegenden .NET Framework-Datenanbieter für SQL Server das Erkennen von Daten für verschlüsselte Spalten und das Verschlüsseln dieser Daten, ehe sie an die Datenbank gesendet werden. 
   

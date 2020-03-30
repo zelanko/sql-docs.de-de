@@ -11,10 +11,10 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 700aa5adb410c7718667bf05313f18636be01a69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75557945"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Ausführen von Windows PowerShell-Schritten in SQL Server-Agent
@@ -37,13 +37,13 @@ Es gibt mehrere Typen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 - Verwenden Sie einen Auftragsschritt an einer Eingabeaufforderung, um &lt;ui&gt;PowerShell.exe&lt;/ui&gt; auszuführen, und geben Sie ein Skript an, das das **sqlps** -Modul importiert.
 
-### <a name="LimitationsRestrictions"></a> Warnung zur Arbeitsspeichernutzung
+### <a name="caution-about-memory-consumption"></a><a name="LimitationsRestrictions"></a> Warnung zur Arbeitsspeichernutzung
 
 Jeder Auftragsschritt des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Agents, der PowerShell mit dem Modul **sqlps** ausführt, startet einen Prozess, der etwa **20 MB** Arbeitsspeicher in Anspruch nimmt. Die gleichzeitige Ausführung einer großen Anzahl von Windows PowerShell-Auftragsschritten kann sich negativ auf die Leistung auswirken.  
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="PShellJob"></a> Erstellen eines PowerShell-Auftragsschritts  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a> Erstellen eines PowerShell-Auftragsschritts  
  **So erstellen Sie einen PowerShell-Auftragsschritt**  
   
 1.  Erweitern Sie **SQL Server-Agent**, erstellen Sie einen neuen Auftrag, oder klicken Sie mit der rechten Maustaste auf einen vorhandenen Auftrag, und klicken Sie dann auf **Eigenschaften**. Weitere Informationen zum Erstellen eines Auftrags finden Sie unter [Erstellen von Aufträgen](../ssms/agent/create-jobs.md).  
@@ -60,7 +60,7 @@ Jeder Auftragsschritt des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   
 7.  Klicken Sie auf die Seite **Erweitert** , um die folgenden Optionen für den Auftragsschritt festzulegen: welche Aktion bei der erfolgreichen oder fehlerhaften Ausführung des Auftragsschrittes jeweils auszuführen ist, wie oft der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent versuchen soll, den Auftragsschritt auszuführen, und wie viele Wiederholungsversuche unternommen werden sollen.  
   
-##  <a name="CmdExecJob"></a> Erstellen eines Eingabeaufforderungs-Auftragsschritts  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a> Erstellen eines Eingabeaufforderungs-Auftragsschritts  
  **So erstellen Sie einen CmdExec-Auftragsschritt**  
   
 1.  Erweitern Sie **SQL Server-Agent**, erstellen Sie einen neuen Auftrag, oder klicken Sie mit der rechten Maustaste auf einen vorhandenen Auftrag, und klicken Sie dann auf **Eigenschaften**. Weitere Informationen zum Erstellen eines Auftrags finden Sie unter [Erstellen von Aufträgen](../ssms/agent/create-jobs.md).  

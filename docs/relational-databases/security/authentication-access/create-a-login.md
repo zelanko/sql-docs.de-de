@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75776388"
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
@@ -35,7 +35,7 @@ ms.locfileid: "75776388"
 
   In diesem Thema wird beschrieben, wie eine Anmeldung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] oder [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird. Ein Anmeldename ist die Identität von Personen oder Prozessen, die eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen.  
   
-##  <a name="Background"></a> Hintergrund  
+##  <a name="background"></a><a name="Background"></a> Hintergrund  
  Eine Anmeldung ist ein Sicherheitsprinzipal oder eine Entität, die von einem sicheren System authentifiziert werden kann. Benutzer benötigen einen Anmeldenamen, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen zu können. Sie können auf Grundlage eines Windows-Prinzipals (z. B. ein Domänenbenutzer oder eine Windows-Domänengruppe) eine Anmeldung erstellen, oder Sie können eine Anmeldung erstellen, die nicht auf einem Windows-Prinzipal (z. B. eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung) basiert.  
   
 > **HINWEIS:** Für die Verwendung der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung muss [!INCLUDE[ssDE](../../../includes/ssde-md.md)] die Authentifizierung im gemischten Modus verwenden. Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../../relational-databases/security/choose-an-authentication-mode.md).  
@@ -44,13 +44,13 @@ ms.locfileid: "75776388"
   
 > **HINWEIS:** Wenn eine Anmeldung eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellt, wird die Identität in der Masterdatenbank überprüft. Verwenden Sie eigenständige Datenbankbenutzer, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] -Verbindungen auf Datenbankebene zu authentifizieren. Eine Anmeldung ist nicht erforderlich, wenn Sie eigenständige Datenbankbenutzer verwenden. Eine eigenständige Datenbank ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (und der Masterdatenbank), der die Datenbank hostet, isoliert ist. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt eigenständige Datenbankbenutzer sowohl für die Windows- als auch für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung. Kombinieren Sie bei Verwendung von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]eigenständige Datenbankbenutzer mit den Firewallregeln auf Datenbankebene. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-##  <a name="Security"></a> Sicherheit  
+##  <a name="security"></a><a name="Security"></a> Sicherheit  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erfordert die **ALTER ANY LOGIN** -Berechtigung oder die **ALTER LOGIN** -Berechtigung für den Server.  
   
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] erfordert die Mitgliedschaft in der Rolle **loginmanager** .  
   
-##  <a name="SSMSProcedure"></a> Erstellen einer Anmeldung mit SSMS  
+##  <a name="create-a-login-using-ssms"></a><a name="SSMSProcedure"></a> Erstellen einer Anmeldung mit SSMS  
   
   
 1.  Erweitern Sie im Objekt-Explorer den Ordner der Serverinstanz, in dem Sie eine neue Anmeldung erstellen möchten.  
@@ -226,7 +226,7 @@ ms.locfileid: "75776388"
  **SQL Server-Authentifizierung**  
  Das Kontrollkästchen **Anmeldung ist gesperrt** ist nur verfügbar, wenn der ausgewählte Anmeldename die Verbindung mithilfe der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung herstellt, und wenn der Anmeldename gesperrt ist. Diese Einstellung ist schreibgeschützt. Führen Sie ALTER LOGIN mit der Option UNLOCK aus, wenn Sie die Sperre für eine Anmeldung aufheben möchten.  
   
-##  <a name="TsqlProcedure"></a> Erstellen einer Anmeldung mit Windows-Authentifizierung über T-SQL  
+##  <a name="create-a-login-using-windows-authentication-using-t-sql"></a><a name="TsqlProcedure"></a> Erstellen einer Anmeldung mit Windows-Authentifizierung über T-SQL  
   
  
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
@@ -263,7 +263,7 @@ ms.locfileid: "75776388"
   
  Weitere Informationen finden Sie unter [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md).  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Erforderliche Schritte nach dem Erstellen eines Anmeldenamens  
+##  <a name="follow-up-steps-to-take-after-you-create-a-login"></a><a name="FollowUp"></a>Nächster Schritt: Erforderliche Schritte nach dem Erstellen eines Anmeldenamens  
  Nach der Erstellung eines Anmeldenamens kann dieser zwar eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen, er verfügt jedoch nicht unbedingt über ausreichende Berechtigungen, um damit sinnvolle Aufgaben ausführen zu können. Die folgende Liste enthält Links zu häufigen Anmeldeaktionen.  
   
 -   Informationen darüber, wie ein Anmeldename einer Datenbankrolle beitreten kann, finden Sie unter [Verknüpfen einer Rolle](../../../relational-databases/security/authentication-access/join-a-role.md).  

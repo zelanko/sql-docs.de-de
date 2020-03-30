@@ -23,10 +23,10 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70176267"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -96,10 +96,10 @@ ms.locfileid: "70176267"
  **[Gespiegelter Mediensatz](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)**  
  Mehrere Kopien (Spiegel) eines Mediensatzes.  
   
-##  <a name="BackupCompression"></a> Sicherungskomprimierung  
+##  <a name="backup-compression"></a><a name="BackupCompression"></a> Sicherungskomprimierung  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] können Sicherungen komprimiert werden, und ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ist die Wiederherstellung komprimierter Sicherungen möglich. Weitere Informationen finden Sie unter [Sicherungskomprimierung &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a>  Einschränkungen für Sicherungsvorgänge 
+##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  Einschränkungen für Sicherungsvorgänge 
  Eine Sicherung kann erfolgen, während die Datenbank online ist und verwendet wird. Es gelten dabei jedoch folgende Einschränkungen.  
   
 ### <a name="cannot-back-up-offline-data"></a>Offline-Daten können nicht gesichert werden  
@@ -128,7 +128,7 @@ ms.locfileid: "70176267"
   
  Wenn sich ein Sicherungsvorgang mit einem Dateiverwaltungsvorgang oder einem Verkleinerungsvorgang überschneidet, tritt ein Konflikt auf. Unabhängig davon, welcher am Konflikt beteiligte Vorgang zuerst begonnen hat, wartet der zweite Vorgang auf das Timeout der Sperre, die vom ersten Vorgang festgelegt wurde. (Der Timeoutzeitraum wird durch eine Timeouteinstellung für die Sitzung gesteuert.) Wenn die Sperre während des Timeoutzeitraums aufgehoben wird, wird der zweite Vorgang fortgesetzt. Wenn das Timeout für die Sperre eintritt, erzeugt der zweite Vorgang einen Fehler.  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **Sicherungsgeräte und -medien**  
   
 -   [Definieren eines logischen Sicherungsmediums für eine Datenträgerdatei &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287944"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
@@ -124,7 +124,7 @@ Der folgenden Tabelle können Sie entnehmen, ob ein bestimmter Typ Speicherbeleg
 |Threadstapel-Arbeitsspeicher|Ja|Ja|
 |Direkte Belegungen von Windows|Ja|Ja|
 
-## <a name="dynamic-memory-management"></a> Dynamische Arbeitsspeicherverwaltung
+## <a name="dynamic-memory-management"></a><a name="dynamic-memory-management"></a> Dynamische Arbeitsspeicherverwaltung
 Die Arbeitsspeicherverwaltung von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ruft standardmäßig so viel Arbeitsspeicher wie nötig ab, ohne dass es dabei zu einem Speicherengpass auf dem System kommt. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet dazu die für Arbeitsspeicherbenachrichtigungen verfügbaren APIs in Microsoft Windows.
 
 Bei dynamischer Verwendung des Arbeitsspeichers von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird der im System verfügbare Arbeitsspeicher in regelmäßigen Abständen abgefragt. Bei Beibehaltung dieses freien Arbeitsspeichers werden Auslagerungsvorgänge durch das Betriebssystem verhindert. Wenn weniger freier Arbeitsspeicher vorhanden ist, gibt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Arbeitsspeicher für das Betriebssystem frei. Wenn mehr Arbeitsspeicher frei ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auch mehr Speicher reservieren. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fügt Arbeitsspeicher nur dann hinzu, wenn durch die Arbeitsauslastung mehr Arbeitsspeicher erforderlich ist. Bei einem ruhenden Server wird die Größe seines virtuellen Adressraums nicht vergrößert.  
@@ -203,7 +203,7 @@ Sie können mithilfe der Konfigurationsoption *Min. Arbeitsspeicher pro Abfrage*
 >    
 > Empfehlungen zur Verwendung dieser Konfiguration finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Min. Arbeitsspeicher pro Abfrage“](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
 
-### <a name="memory-grant-considerations"></a>Überlegungen zur Arbeitsspeicherzuweisung
+### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>Überlegungen zur Arbeitsspeicherzuweisung
 Für die **Zeilenmodusausführung** kann die ursprüngliche Arbeitsspeicherzuweisung nicht überschritten werden. Wenn mehr Arbeitsspeicher als ursprünglich zugewiesen erforderlich ist, um **Hash-** oder **Sortiervorgänge** durchzuführen, laufen diese auf den Datenträger über. Ein überlaufender Hashvorgang wird von einer Arbeitsdatei in tempDB unterstützt, während ein überlaufender Sortiervorgang von einer [Arbeitstabelle](../relational-databases/query-processing-architecture-guide.md#worktables) unterstützt wird.   
 
 Ein Überlauf, der während eines Sortiervorgangs auftritt, wird als [Sortierwarnung](../relational-databases/event-classes/sort-warnings-event-class.md) bezeichnet. Sortierwarnungen zeigen an, dass der Arbeitsspeicher für Sortiervorgänge nicht ausreicht. Darin sind keine Sortiervorgänge eingeschlossen, die die Indexerstellung beinhalten, sondern nur Sortiervorgänge innerhalb einer Abfrage (z.B. eine `ORDER BY`-Klausel in einer `SELECT`-Anweisung).

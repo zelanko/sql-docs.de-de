@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 5bb28692ee8e4b9cc70554b2589025db57291fc7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286528"
 ---
 # <a name="create-a-publication"></a>Create a Publication
@@ -43,21 +43,21 @@ ms.locfileid: "76286528"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Veröffentlichungs- und Artikelnamen dürfen folgende Zeichen nicht enthalten: % , \* , [ , ] , | , : , " , ? , ' , \ , / , < , >. Wenn Objekte in der Datenbank eines dieser Zeichen enthalten, und Sie die Objekte replizieren möchten, müssen Sie einen Artikelnamen angeben, der sich von dem Objektnamen im Dialogfeld **Artikeleigenschaften - \<Article>** unterscheidet. Dieses Dialogfeld ist im Assistenten auf der Seite **Artikel** verfügbar.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Mit dem Assistenten für neue Veröffentlichung erstellen Sie Veröffentlichungen und definieren Artikel. Rufen Sie nach der Erstellung einer Veröffentlichung das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** auf, um die Eigenschaften anzuzeigen und zu ändern. Weitere Informationen zum Erstellen von Veröffentlichungen aus einer Oracle-Datenbank finden Sie unter [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>So erstellen Sie eine Veröffentlichung und definieren Artikel  
   
-1.  Stellen Sie in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Herausgeber her, und erweitern Sie dann den Serverknoten.  
+1.  Stellen Sie in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.  
   
 2.  Erweitern Sie den Ordner **Replikation** , und klicken Sie dann mit der rechten Maustaste auf den Ordner **Lokale Veröffentlichungen** .  
   
@@ -97,7 +97,7 @@ ms.locfileid: "76286528"
   
     -   Angeben eines Namens für die Veröffentlichung.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Veröffentlichungen können programmgesteuert mit gespeicherten Replikationsprozeduren erstellt werden. Welche gespeicherten Prozeduren Sie verwenden, hängt vom Typ der zu erstellenden Veröffentlichung ab.  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>So erstellen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung  
@@ -148,7 +148,7 @@ ms.locfileid: "76286528"
   
 5.  Starten Sie den Auftrag des Momentaufnahme-Agents, um die Anfangsmomentaufnahme für diese Veröffentlichung zu generieren. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel wird eine Transaktionsveröffentlichung erstellt. Anhand von Skriptvariablen werden Windows-Anmeldeinformationen übergeben, die zur Erstellung von Aufträgen für den Momentaufnahme-Agent und den Protokolllese-Agent erforderlich sind.  
   
  [!code-sql[HowTo#sp_AddTranPub](../../../relational-databases/replication/codesnippet/tsql/create-a-publication_1.sql)]  
@@ -157,7 +157,7 @@ ms.locfileid: "76286528"
   
  [!code-sql[HowTo#sp_AddMergePub](../../../relational-databases/replication/codesnippet/tsql/create-a-publication_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Sie können Veröffentlichungen mithilfe von Replikationsverwaltungsobjekten (RMO) programmgesteuert erstellen. Welche RMO-Klassen Sie zum Erstellen von Veröffentlichungen verwenden, hängt vom Typ der zu erstellenden Veröffentlichung ab.  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>So erstellen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung  
@@ -237,7 +237,7 @@ ms.locfileid: "76286528"
   
 6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> -Methode auf, um den Momentaufnahme-Agentauftrag für die Veröffentlichung zu erstellen.  
   
-###  <a name="PShellExample"></a> Beispiele (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Beispiele (RMO)  
  In diesem Beispiel wird die AdventureWorks-Datenbank für Transaktionsveröffentlichung aktiviert, ein Protokolllese-Agentauftrag definiert und die AdvWorksProductTran-Veröffentlichung erstellt. Für diese Veröffentlichung muss ein Artikel definiert sein. Die Anmeldeinformationen für das Windows-Konto, die für die Erstellung des Protokolllese- und des Momentaufnahme-Agentauftrags erforderlich sind, werden zur Laufzeit übergeben. Informationen darüber, wie RMO verwendet wird, um Momentaufnahme- und Transaktionsartikel zu definieren, finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
  [!code-cs[HowTo#rmo_CreateTranPub](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpub)]  

@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: Informationen zur Verwendung von SQL-Notebooks in Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; maghan; sstein
+ms.reviewer: achatter; alayu; maghan; mikeray
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.openlocfilehash: 0cefd49b539c967a77faaa566fce9958182cc5df
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575379"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448444"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Verwenden von Notebooks in Azure Data Studio
 
@@ -32,14 +32,14 @@ In Azure Data Studio können Sie auch F1 drücken und auf **Neue Verbindung** k
 
 Es gibt mehrere Möglichkeiten, ein neues Notebook zu starten.
 
-1. Navigieren Sie in Azure Data Studio zum **Menü „Datei“** , und klicken Sie dann auf **New Notebook** (Neues Notebook).
+* Navigieren Sie in Azure Data Studio zum **Menü „Datei“** , und klicken Sie dann auf **New Notebook** (Neues Notebook).
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-2. Klicken Sie mit der rechten Maustaste auf die **SQL Server**-Verbindung, und starten Sie dann **New Notebook** (Neues Notebook). 
+* Klicken Sie mit der rechten Maustaste auf die **SQL Server**-Verbindung, und starten Sie dann **New Notebook** (Neues Notebook).
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-3. Öffnen Sie die Befehlspalette (**STRG+UMSCHALT+P**), und geben Sie dann **New Notebook** (Neues Notebook) ein. Eine neue Datei mit dem Namen `Notebook-1.ipynb` wird geöffnet.
+* Öffnen Sie die Befehlspalette (**STRG+UMSCHALT+P**), und geben Sie dann **New Notebook** (Neues Notebook) ein. Eine neue Datei mit dem Namen `Notebook-1.ipynb` wird geöffnet.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Unterstützte Kernel und Anfügen an Kontext
 
@@ -81,7 +81,7 @@ Nachdem die Installation erfolgreich abgeschlossen wurde, werden unter „Task H
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
-|Kernel|Beschreibung
+|Kernel|BESCHREIBUNG
 |:-----|:-----
 | SQL-Kernel | Schreiben Sie SQL-Code für Ihre relationale Datenbank.
 |PySpark3- und PySpark-Kernel| Schreiben Sie Python-Code mithilfe von Spark-Computing aus dem Cluster.

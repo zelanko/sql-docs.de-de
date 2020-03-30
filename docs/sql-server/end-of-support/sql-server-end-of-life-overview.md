@@ -10,10 +10,10 @@ ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: =sql-server-previousversions||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: a774b93d60a2a44e419b362ae2efe2309bf9b2ab
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75776462"
 ---
 # <a name="sql-server-end-of-support-options"></a>Optionen für SQL Server bei Ende des Supports 
@@ -167,7 +167,7 @@ Wenn Sie die Wartung auslagern, Kosten senken und künftige Upgrades vermeiden m
 - **Flexibilität:** Eine Einzeldatenbank eignet sich besonders gut für Cloudanwendungen, wenn Entwicklerproduktivität und die schnelle Markteinführung neuer Lösungen entscheidend sind oder externer Zugriff erforderlich ist.  
 - **Allgemeine Features**: Die am häufigsten verwendeten [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Features sind verfügbar, aber nicht so viele wie bei einer verwalteten Azure SQL-Datenbank-Instanz.  
 - **Schnelle Bereitstellung**: Sie können eine Einzeldatenbank schnell bereitstellen. 
-- **Skalierbarkeit:** Sie können je nach Bedarf für Ihr Unternehmen schnell und einfach eine zentrale Hoch- und Herunterskalierung vornehmen, was zusätzliche Kosteneinsparungen bringt. 
+- **Skalierbarkeit:** Sie können je nach Bedarf für Ihr Unternehmen schnell und einfach eine Hoch- und Herunterskalierung vornehmen, was zusätzliche Kosteneinsparungen bringt. 
 - **Verfügbarkeit:** Die Kosten des Diensts umfassen sowohl Speicher als auch Hochverfügbarkeit, wobei eine Verfügbarkeit von 99,995 % garantiert wird.  
 - **Automatisierung**: Patches und Sicherungen werden automatisch ausgeführt, sodass Sie wertvolle Wartungszeit sparen können.  
 - **Intelligent Insights**: Verschaffen Sie sich mithilfe der integrierten Informationsanalyse einen Einblick in die Leistung Ihrer Datenbank.  
@@ -206,7 +206,7 @@ Wenn Sie die Vorteile hinsichtlich Auslagerung von Wartung und Kosten nutzen mö
 - **Kosten**: Sie können Kosten sparen, indem Sie die Wartung von Software und Hardware auslagern.  
 - **Per Lift & Shift migrieren**: Sie können Ihre gesamte lokale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz per Lift & Shift in eine verwaltete Instanz migrieren, einschließlich aller Datenbanken und mit minimalen oder sogar ohne Datenbankänderungen. 
 - **Features**: Der Funktionsumfang einer verwalteten Instanz entspricht weitgehend dem einer lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], z. B. datenbankübergreifende Abfragen, Veröffentlichung und Verteilung von Transaktionsreplikationen, SQL-Auftragsplanung und CLR-Unterstützung. 
-- **Skalierbarkeit:** Alle Datenbanken innerhalb einer verwalteten Instanz teilen sich Ressourcen, und es ist jederzeit möglich, ohne Ausfallzeiten eine zentrale Hoch- und Herunterskalierung vorzunehmen.   
+- **Skalierbarkeit:** Alle Datenbanken innerhalb einer verwalteten Instanz teilen sich Ressourcen, und es ist jederzeit möglich, ohne Ausfallzeiten eine Hoch- und Herunterskalierung vorzunehmen.   
 - **Automatisierung**: Patches und Sicherungen werden automatisch ausgeführt, sodass Sie wertvolle Wartungszeit einsparen können.  
 - **Verfügbarkeit:** Die Kosten des Diensts umfassen sowohl Speicher als auch Hochverfügbarkeit, wobei eine Verfügbarkeit von 99,99 % garantiert wird.  
 - **Intelligent Insights**: Verschaffen Sie sich mithilfe der integrierten Informationsanalyse einen Einblick in die Leistung Ihrer Datenbanken.  
@@ -257,7 +257,7 @@ Erwägen Sie Azure Table Storage, um teilweise strukturierte Daten in Petabyte-G
 
 Azure Table Storage bietet die folgenden Vorteile:
 - Sie können Ihre Apps und Ihr Tabellenschema weiterentwickeln, ohne die Daten offline nehmen zu müssen.
-- Sie können zentral hochskalieren, ohne Ihr Dataset horizontal partitionieren zu müssen.
+- Sie können hochskalieren, ohne Ihr Dataset horizontal partitionieren zu müssen.
 - Sie erhalten geografisch redundanten Speicher, der Daten über mehrere Regionen repliziert.
 
 ## <a name="lifecycle-dates"></a>Lebenszyklustermine

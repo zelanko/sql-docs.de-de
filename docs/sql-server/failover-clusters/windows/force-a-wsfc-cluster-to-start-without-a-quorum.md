@@ -14,10 +14,10 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258141"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Erzwingen des Starts eines Clusters ohne Quorum
@@ -30,15 +30,15 @@ ms.locfileid: "75258141"
   
 -   **Nachverfolgung:**  [Nächster Schritt: Nach dem Erzwingen des Clusterstarts ohne ein Quorum](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
  Ohne anderslautende Angaben sind die in diesem Thema beschriebenen Prozeduren anwendbar, wenn sie von einem beliebigen Knoten im WSFC-Cluster ausgeführt werden.  Sie erzielen jedoch u. U. bessere Ergebnisse und vermeiden Netzwerkprobleme, indem Sie diese Schritte von dem Knoten ausführen, von dem aus der Start ohne Quorum erzwungen werden soll.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Der Benutzer muss einem Domänenkonto entsprechen, das Mitglied der lokalen Administratorgruppe an jedem Knoten des WSFC-Clusters ist.  
   
-##  <a name="FailoverClusterManagerProcedure"></a> Verwenden des Failovercluster-Managers  
+##  <a name="using-failover-cluster-manager"></a><a name="FailoverClusterManagerProcedure"></a> Verwenden des Failovercluster-Managers  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>So erzwingen Sie den Start eines Clusters ohne Quorum  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75258141"
   
 4.  Bestätigen Sie im Zusammenfassungsbereich, dass der aktuelle Wert für die **Quorumkonfiguration** folgendermaßen lautet:  **Warnung: Cluster wird im Status „ForceQuorum“ ausgeführt.**  
   
-##  <a name="PowerShellProcedure"></a> Verwenden von PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Verwenden von PowerShell  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>So erzwingen Sie den Start eines Clusters ohne Quorum  
   
@@ -83,7 +83,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ```  
   
-##  <a name="CommandPromptProcedure"></a> Verwenden von Net.exe  
+##  <a name="using-netexe"></a><a name="CommandPromptProcedure"></a> Verwenden von Net.exe  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>So erzwingen Sie den Start eines Clusters ohne Quorum  
   
@@ -103,7 +103,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erzwingen des Clusterstarts ohne ein Quorum  
+##  <a name="follow-up-after-forcing-cluster-to-start-without-a-quorum"></a><a name="FollowUp"></a>Nächster Schritt: Nach dem Erzwingen des Clusterstarts ohne ein Quorum  
   
 -   NodeWeight-Werte sind neu zu bewerten und zu konfigurieren, um vor der erneuten Onlineschaltung anderer Knoten ein neues Quorum korrekt erstellen zu können. Andernfalls wird für den Cluster u. U. wieder der Offlinemodus aktiviert.  
   
@@ -121,7 +121,7 @@ net.exe start clussvc /forcequorum
   
      [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](../../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

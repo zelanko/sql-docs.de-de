@@ -16,10 +16,10 @@ ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321230"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln
@@ -45,13 +45,13 @@ ms.locfileid: "75321230"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Wenn Sie einen logischen Datensatz hinzufügen, ändern oder löschen, nachdem Abonnements für die Veröffentlichung initialisiert wurden, müssen Sie eine neue Momentaufnahme generieren und alle Abonnements nach vorgenommener Änderung erneut initialisieren. Weitere Informationen zum Ändern von Eigenschaften finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Zum Definieren logischer Datensätze steht Ihnen das Dialogfeld **Join hinzufügen** zur Verfügung, das über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** verfügbar ist. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
  Logische Datensätze können nur dann im Dialogfeld **Join hinzufügen** definiert werden, wenn sie auf einen Joinfilter in einer Mergeveröffentlichung angewendet werden und die Veröffentlichung die Anforderungen für die Verwendung vorausberechneter Partitionen erfüllt. Wenn Sie logische Datensätze definieren möchten, die nicht auf Joinfilter angewendet werden, und die Konflikterkennung und -lösung auf der Ebene des logischen Datensatzes festlegen möchten, müssen Sie gespeicherte Prozeduren verwenden.  
@@ -84,7 +84,7 @@ ms.locfileid: "75321230"
   
     -   Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Zeilen filtern** bzw. im Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** im Bereich **Gefilterte Tabellen** den betreffenden Filter aus, und klicken Sie dann auf **Löschen**. Wenn der Joinfilter, den Sie löschen möchten, mit anderen Joins erweitert ist, werden diese Joins beim Löschen des Filters selbst ebenfalls gelöscht.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Sie können logische Datensatzbeziehungen zwischen Artikeln programmgesteuert mithilfe gespeicherter Replikationsprozeduren angeben.  
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>So definieren Sie eine logische Datensatzbeziehung ohne einen zugeordneten Joinfilter  
@@ -146,12 +146,12 @@ ms.locfileid: "75321230"
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)aus. Geben Sie **\@publication**, den Namen eines der an der Beziehung beteiligten Artikels für **\@article** und den Namen der Beziehung aus Schritt 1 für **\@filtername** an.  
   
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  Im folgenden Beispiel werden vorausberechnete Partitionen für eine vorhandene Veröffentlichung aktiviert und ein logischer Datensatz erstellt, der die zwei neuen Artikel für die Tabellen `SalesOrderHeader` und `SalesOrderDetail` umfasst.  
   
  [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../relational-databases/replication/codesnippet/tsql/define-a-logical-record-_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
   
 > [!NOTE]  
 >  Bei der Mergereplikation können Sie auch angeben, dass Konflikte auf der Ebene logischer Datensätze nachverfolgt und gelöst werden. Diese Optionen können mit RMO jedoch nicht festgelegt werden.  
@@ -196,7 +196,7 @@ ms.locfileid: "75321230"
   
 10. Wiederholen Sie die Schritte 8 und 9 für jede weitere logische Datensatzbeziehung in der Veröffentlichung.  
   
-###  <a name="PShellExample"></a> Beispiel (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Beispiel (RMO)  
  In diesem Beispiel wird ein logischer Datensatz erstellt, der die zwei neuen Artikel für die Tabellen `SalesOrderHeader` und `SalesOrderDetail` umfasst.  
   
  [!code-cs[HowTo#rmo_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createlogicalrecord)]  

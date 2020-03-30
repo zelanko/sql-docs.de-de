@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d18661fadb12167fd0a443758cced1188401750
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727334"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>SQL Server-Konfiguration für die Verwendung mit R
@@ -196,7 +196,7 @@ Wenn Sie an den Details zum Definieren einer gespeicherten Prozedur für die Bew
 
 ### <a name="concurrent-scoring-using-resource-groups"></a>Gleichzeitige Bewertung mithilfe von Ressourcengruppen
 
-Um das Bewertungsproblem zentral hochzuskalieren, empfiehlt es sich, den Zuordnen/Reduzieren-Ansatz zu übernehmen, bei dem Millionen von Elementen in mehrere Batches aufgeteilt werden. Anschließend werden mehrere Bewertungsaufträge gleichzeitig ausgeführt. In diesem Framework werden die Batches in verschiedenen CPU-Gruppen verarbeitet, und die Ergebnisse werden gesammelt und in die Datenbank zurückgeschrieben.
+Um das Bewertungsproblem hochzuskalieren, empfiehlt es sich, den Zuordnen/Reduzieren-Ansatz zu übernehmen, bei dem Millionen von Elementen in mehrere Batches aufgeteilt werden. Anschließend werden mehrere Bewertungsaufträge gleichzeitig ausgeführt. In diesem Framework werden die Batches in verschiedenen CPU-Gruppen verarbeitet, und die Ergebnisse werden gesammelt und in die Datenbank zurückgeschrieben.
 
 Dieser Ansatz wird im Szenario zum Abgleich von Lebensläufen verwendet. Die Ressourcenkontrolle in SQL Server ist jedoch für die Implementierung dieses Ansatzes von entscheidender Bedeutung. Durch das Einrichten von Workloadgruppen für Aufträge externer Skripts können Sie R-Bewertungsaufträge an verschiedene Prozessorgruppen weiterleiten und einen schnelleren Durchsatz erreichen.
 

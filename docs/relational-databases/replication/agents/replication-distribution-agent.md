@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68770751"
 ---
 # <a name="replication-distribution-agent"></a>Replikationsverteilungs-Agent
@@ -137,7 +137,7 @@ distrib [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Die Ebene der SSL-Verschlüsselung (Secure Sockets Layer), die vom Verteilungs-Agent beim Herstellen von Verbindungen verwendet wird.  
   
-|Wert von EncryptionLevel|Beschreibung|  
+|Wert von EncryptionLevel|BESCHREIBUNG|  
 |---------------------------|-----------------|  
 |**0**|Gibt an, dass SSL nicht verwendet wird.|  
 |**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
@@ -172,7 +172,7 @@ distrib [-?]
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  Gibt den Umfang des Verlaufs an, der während eines Verteilungsvorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
   
-|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Beschreibung|  
+|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
 |**0**|Statusmeldungen werden entweder an der Konsole ausgegeben oder in eine Ausgabedatei geschrieben. Verlaufsdatensätze werden nicht in der Verteilungsdatenbank protokolliert.|  
 |**1**|Standard. Aktualisieren Sie immer eine vorherige Verlaufsmeldung mit dem gleichen Status (Start, Status, Erfolg usw.). Wenn kein vorheriger Datensatz mit dem gleichen Status vorhanden ist, fügen Sie einen neuen Datensatz ein.|  
@@ -251,7 +251,7 @@ distrib [-?]
  **-SubscriberType** [ **0**| **1**| **3**]  
  Gibt den Typ der vom Verteilungs-Agent verwendeten Abonnentenverbindung an.  
   
-|Wert von SubscriberType|Beschreibung|  
+|Wert von SubscriberType|BESCHREIBUNG|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|ODBC-Datenquelle (ODBC data source)|  

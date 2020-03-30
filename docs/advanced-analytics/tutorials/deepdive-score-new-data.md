@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 26f5c7b56298e6a3bd5f1fa9d8bc1d4db79d60af
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947191"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Bewerten neuer Daten (SQL Server- und RevoScaleR-Tutorial)
@@ -51,7 +51,7 @@ In diesem Tutorial erfahren Sie, wie Sie das logistische Regressionsmodell verwe
     ```
     Zu diesem Zeitpunkt ist die Tabelle noch nicht erstellt worden. Diese Anweisung definiert lediglich einen Datencontainer.
      
-3. Überprüfen Sie den aktuellen Computekontext mithilfe von **rxGetComputeContext()**, und legen Sie ihn bei Bedarf auf den Server fest.
+3. Überprüfen Sie den aktuellen Computekontext mithilfe von **rxGetComputeContext()** , und legen Sie ihn bei Bedarf auf den Server fest.
   
     ```R
     rxSetComputeContext(sqlCompute)

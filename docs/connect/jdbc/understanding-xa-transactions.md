@@ -11,10 +11,10 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286514"
 ---
 # <a name="understanding-xa-transactions"></a>Grundlegendes zu XA-Transaktionen
@@ -116,7 +116,7 @@ Sie können die derzeit auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 3. Legen Sie die Protokollfunktion wie im Codebeispiel im nächsten Abschnitt fest. Suchen Sie in der Ausgabeprotokolldatei nach "Server-XA-DLL-Version ...".  
 
-### <a name="BKMK_ServerSide"></a>Konfigurieren von serverseitigen Timeouteinstellungen für den automatischen Rollback nicht vorbereiteter Transaktionen  
+### <a name="configuring-server-side-timeout-settings-for-automatic-rollback-of-unprepared-transactions"></a><a name="BKMK_ServerSide"></a>Konfigurieren von serverseitigen Timeouteinstellungen für den automatischen Rollback nicht vorbereiteter Transaktionen  
 
 > [!WARNING]  
 > Diese serverseitige Option wurde im Microsoft JDBC-Treiber 4.2 (und höher) für SQL Server neu eingeführt. Um das aktualisierte Verhalten zu verwenden, stellen Sie sicher, dass sqljdbc_xa.dll auf dem Server aktualisiert wurde. Weitere Informationen zum Festlegen von clientseitigen Timeouts finden Sie unter [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  

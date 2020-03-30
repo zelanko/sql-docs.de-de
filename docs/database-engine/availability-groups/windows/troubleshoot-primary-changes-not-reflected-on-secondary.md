@@ -11,10 +11,10 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243011"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Bestimmen, warum Änderungen an primären Replikaten nicht in sekundären Replikat einer Always On-Verfügbarkeitsgruppe angezeigt werden
@@ -50,7 +50,7 @@ ms.locfileid: "75243011"
 In den folgenden Abschnitten werden die häufigsten Ursachen für das Problem beschrieben, dass sich Änderungen am primären Replikat bei schreibgeschützten Abfragen nicht im sekundären Replikat widerspiegeln.  
 
 
-##  <a name="BKMK_OLDTRANS"></a> Lang andauernde aktive Transaktionen  
+##  <a name="long-running-active-transactions"></a><a name="BKMK_OLDTRANS"></a> Lang andauernde aktive Transaktionen  
  Eine lang andauernde Transaktion auf dem primären Replikat verhindert, dass die Updates für das sekundäre Replikat gelesen werden.  
   
 ### <a name="explanation"></a>Erklärung  
@@ -59,7 +59,7 @@ In den folgenden Abschnitten werden die häufigsten Ursachen für das Problem be
 ### <a name="diagnosis-and-resolution"></a>Diagnose und Lösung  
  Verwenden Sie auf dem primären Replikat [DBCC OPENTRAN &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md), um die ältesten aktiven Transaktionen anzuzeigen und herauszufinden, ob ein Rollback für diese ausgeführt werden kann. Sobald ein Rollback für die ältesten aktiven Transaktionen und eine Synchronisierung mit dem sekundären Replikat ausgeführt wurde, können Leseworkloads auf dem sekundären Replikat Updates in der Verfügbarkeitsdatenbank bis zum Anfang der zum jeweiligen Zeitpunkt ältesten aktiven Transaktion sehen.  
   
-##  <a name="BKMK_LATENCY"></a> Eine hohe Netzwerklatenz oder ein niedriger Netzwerkdurchsatz führt zur Protokollanhäufung beim primären Replikat.  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> Eine hohe Netzwerklatenz oder ein niedriger Netzwerkdurchsatz führt zur Protokollanhäufung beim primären Replikat.  
  Eine hohe Netzwerklatenz oder ein niedriger Durchsatz kann dazu führen, dass Protokolle nicht schnell genug an das sekundäre Replikat gesendet werden.  
   
 ### <a name="explanation"></a>Erklärung  
@@ -92,7 +92,7 @@ In den folgenden Abschnitten werden die häufigsten Ursachen für das Problem be
   
  Versuchen Sie zur Behandlung dieses Problems, ein Upgrade für Ihre Netzwerkbandbreite durchzuführen oder unnötigen Netzwerkdatenverkehr zu beseitigen oder zu verringern.  
   
-##  <a name="BKMK_REDOBLOCK"></a> Eine andere meldende Workload verhindert die Ausführung des Wiederholungsthreads.  
+##  <a name="another-reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> Eine andere meldende Workload verhindert die Ausführung des Wiederholungsthreads.  
  Der Wiederholungsthread auf dem sekundären Replikat wird durch eine lang andauernde schreibgeschützte Abfrage an der Durchführung von Änderungen an der Datendefinitionssprache (DDL) gehindert. Bevor weitere Updates für die Leseworkload verfügbar gemacht werden können, muss die Blockierung des Wiederholungsthreads aufgehoben werden.  
   
 ### <a name="explanation"></a>Erklärung  
@@ -108,7 +108,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  Sie können die Ausführung der meldenden Workload abschließen. An diesem Punkt ist die Blockierung des Wiederholungsthreads aufgehoben. Alternativ können Sie die Blockierung des Wiederholungsthreads sofort aufheben, indem Sie den Befehl [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) für die blockierende Sitzungs-ID ausführen.  
   
-##  <a name="BKMK_REDOBEHIND"></a> Ein Wiederholungsthread gerät aufgrund von Ressourcenkonflikten in den Rückstand.  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_REDOBEHIND"></a> Ein Wiederholungsthread gerät aufgrund von Ressourcenkonflikten in den Rückstand.  
  Eine umfangreiche meldende Workload auf dem sekundären Replikat hat das sekundäre Replikat verlangsamt, weshalb der Wiederholungsthread in den Rückstand geraten ist.  
   
 ### <a name="explanation"></a>Erklärung  

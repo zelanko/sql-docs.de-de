@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67950350"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
@@ -312,7 +312,7 @@ ORDER BY MaximumRate DESC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. Verwenden einer SELECT-Anweisung mit einem CASE-Ausdruck  
  Innerhalb einer SELECT-Anweisung können mit dem komplexen CASE-Ausdruck Werte im Resultset basierend auf den Vergleichsergebnissen ersetzt werden. Im folgenden Beispiel wird ein CASE-Ausdruck verwendet, um die Anzeige von Produktkategorien so zu ändern, dass sie leichter verständlich werden. Wenn ein Wert nicht vorhanden ist, wird der Text „Not for sale“ (Nicht zu verkaufen) angezeigt.  

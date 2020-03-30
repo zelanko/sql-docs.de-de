@@ -13,10 +13,10 @@ ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936435"
 ---
 # <a name="how-to-perform-transactions"></a>Gewusst wie: Ausführen von Transaktionen
@@ -61,7 +61,7 @@ Die Schritte zum Ausführen einer Transaktion können wie folgt zusammengefasst 
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>BESCHREIBUNG  
 Im folgenden Beispiel werden mehrere Abfragen im Rahmen einer Transaktion ausgeführt. Wenn alle Abfragen erfolgreich sind, wird die Transaktion committet. Wenn eine der Abfragen fehlschlägt, wird für die Transaktion ein Rollback ausgeführt.  
   
 Das Beispiel versucht, einen Verkaufsauftrag aus der *Sales.SalesOrderDetail* -Tabelle zu löschen und die Lagerbestände der Produkte in der *Product.ProductInventory* -Tabelle für jedes Produkt im Verkaufsauftrag anzupassen. Diese Abfragen werden in eine Transaktion aufgenommen, weil alle Abfragen erfolgreich ausgeführt werden müssen, damit die Datenbank den Status der Aufträge und die Verfügbarkeit von Produkten korrekt widerspiegelt.  

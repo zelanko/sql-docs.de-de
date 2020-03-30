@@ -17,10 +17,10 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 309fb584db245ee3da6b67e475a4881347f39bd5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294209"
 ---
 # <a name="data-profiling-task"></a>Datenprofilerstellungs-Task
@@ -53,7 +53,7 @@ ms.locfileid: "71294209"
   
  Die folgenden fünf Profile analysieren einzelne Spalten.  
   
-|Profile, die einzelne Spalten analysieren|Beschreibung|  
+|Profile, die einzelne Spalten analysieren|BESCHREIBUNG|  
 |----------------------------------------------|-----------------|  
 |Verteilungsprofil für Spaltenlänge|Meldet alle eindeutigen Längen der Zeichenfolgenwerte in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jede Länge repräsentiert.<br /><br /> Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil einer Spalte mit den Codes der US-amerikanischen Bundesstaaten, die zwei Zeichen lang sein sollen, und entdecken Werte, die länger als zwei Zeichen sind.|  
 |Profil für Spalten-NULL-Verhältnis|Meldet den Prozentsatz der NULL-Werte in der ausgewählten Spalte.<br /><br /> Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. ein unerwartet hohes Verhältnis der NULL-Werte in einer Spalte. Beispiel: Sie erstellen ein Profil der Spalte für die Postleitzahl und entdecken einen unerwartet hohen Prozentsatz an fehlenden Codes.|  
@@ -63,7 +63,7 @@ ms.locfileid: "71294209"
   
  Die folgenden drei Profile analysieren einzelne Spalten oder Beziehungen zwischen Spalten und Tabellen.  
   
-|Profile, die mehrere Spalten analysieren|Beschreibung|  
+|Profile, die mehrere Spalten analysieren|BESCHREIBUNG|  
 |--------------------------------------------|-----------------|  
 |Kandidatenschlüsselprofil|Meldet, ob eine Spalte oder eine Gruppe von Spalten ein Schlüssel oder ein ungefährer Schlüssel für die ausgewählte Tabelle ist.<br /><br /> Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. doppelte Werte in einer potenziellen Schlüsselspalte.|  
 |Funktionales Abhängigkeitsprofil|Meldet, in welchem Maß die Werte in einer Spalte (die abhängige Spalte) von den Werten in einer Spalte oder einer Gruppe von Spalten (der determinanten Spalte) abhängig sind.<br /><br /> Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil der Abhängigkeit zwischen einer Spalte, die US-amerikanische Zip Codes enthält, und einer Spalte mit US-amerikanischen Bundesstaaten. Die gleiche Postleitzahl sollte immer denselben Bundesstaat aufweisen, doch das Profil entdeckt Verstöße gegen dieses Abhängigkeitsverhältnis.|  
@@ -115,7 +115,7 @@ ms.locfileid: "71294209"
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Verfügbare benutzerdefinierte Meldungen für den Datenprofilerstellungs-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Datenprofilerstellungs-Task aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|Stellt beschreibende Informationen zum Taskstatus zur Verfügung. Nachrichten beinhalten folgende Informationen:<br /><br /> Start der Anforderungsverarbeitung<br /><br /> Abfragestart<br /><br /> Query End<br /><br /> Beenden der Anforderungsverarbeitung|  
   

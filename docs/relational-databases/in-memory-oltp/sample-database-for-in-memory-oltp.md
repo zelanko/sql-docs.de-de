@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258784"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Beispieldatenbank für In-Memory OLTP
@@ -43,13 +43,13 @@ ms.locfileid: "75258784"
   
 -   [Arbeitsspeicher- und Datenträgernutzung im Beispiel](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 -   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten SQL Server mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für In-Memory-OLTP finden Sie in folgendem Blogbeitrag: [Aspekte zur Hardware für In-Memory-OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md).
 
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installieren des auf AdventureWorks basierenden InMemory OLTP-Beispiels  
+##  <a name="installing-the-in-memory-oltp-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installieren des auf AdventureWorks basierenden InMemory OLTP-Beispiels  
  Führen Sie die folgenden Schritte aus, um das Beispiel zu installieren:  
   
 1.  Laden Sie „AdventureWorks2016CTP3.bak“ und „SQLServer2016CTP3Samples.zip“ von [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) in einen lokalen Ordner herunter, z.B. C:\temp.  
@@ -80,7 +80,7 @@ ms.locfileid: "75258784"
   
 3.  Entpacken Sie die Datei „SQLServer2016CTP3Samples.zip“ in einen lokalen Ordner, um die Beispielskripts und die Arbeitsauslastung anzuzeigen. Informationen zum Ausführen der Arbeitsauslastung finden Sie in der Datei „In-Memory OLTP\readme.txt“.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Beschreibung der Beispieltabellen und -prozeduren  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a> Beschreibung der Beispieltabellen und -prozeduren  
  Im Beispiel werden neue Tabellen für Produkte und Verkaufsaufträge auf Grundlage vorhandener AdventureWorks-Tabellen erstellt. Das Schema der neuen Tabellen entspricht bis auf die nachfolgend beschriebenen Unterschiede dem der vorhandenen Tabellen.  
   
  Die neuen speicheroptimierten Tabellen haben das Suffix „_inmem“. Zusätzlich umfasst das Beispiel entsprechende Tabellen mit dem Suffix „_ondisk“. Mithilfe dieser Tabellen können 1:1-Vergleiche zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen im System angestellt werden.  
@@ -309,7 +309,7 @@ Die Onlinedokumentation bietet weitere Informationen zu folgenden Themen:
   
     -   Die zum Ausführen der Integritätsprüfungen erforderliche T-SQL-Anweisung wird mithilfe der Hilfsprozeduren dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck und dbo.GenerateUQCheck generiert.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Leistungsmessungen anhand der exemplarischen Arbeitsauslastung  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Leistungsmessungen anhand der exemplarischen Arbeitsauslastung  
  OSTRESS ist ein Befehlszeilentool, das vom Microsoft CSS SQL Server-Supportteam entwickelt wurde. Mit diesem Tool können Abfragen ausgeführt oder gespeicherte Prozeduren parallel aufgerufen werden. Sie können die Anzahl der Threads zur parallelen Ausführung einer bestimmten T-SQL-Anweisung konfigurieren und angeben, wie oft die Anweisung in diesem Thread ausgeführt werden soll. OSTRESS bündelt die Threads und führt die Anweisung in allen Threads gleichzeitig aus. Nachdem die Ausführung aller Threads beendet wurde, meldet OSTRESS die zur Beendigung sämtlicher Threads benötigte Dauer.  
   
 ### <a name="installing-ostress"></a>Installieren von OSTRESS  
@@ -434,7 +434,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  Es wird empfohlen, die Arbeitsauslastung nach jedem Durchgang zurückzusetzen. Da bei dieser Arbeitsauslastung nur Einfügungen stattfinden, wird bei jedem Durchgang mehr Arbeitsspeicher belegt. Durch das Zurücksetzen wird verhindert, dass der Arbeitsspeicher knapp wird. Der Abschnitt [Arbeitsspeichernutzung nach dem Ausführen der Arbeitsauslastung](#Memoryutilizationafterrunningtheworkload)enthält Informationen darüber, wie viel Arbeitsspeicher nach einer Ausführung belegt ist.  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Problembehandlung bei langsamer Testausführung  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> Problembehandlung bei langsamer Testausführung  
  Die Testergebnisse variieren normalerweise je nach Hardware und dem im Testlauf verwendeten Parallelitätsgrad. Wenn die Ergebnisse nicht wie erwartet ausfallen, sollten Sie folgende Punkte überprüfen:  
   
 -   Anzahl gleichzeitiger Transaktionen: Wenn die Arbeitsauslastung in einem einzelnen Thread ausgeführt wird, liegt der Leistungsgewinn bei In-Memory OLTP wahrscheinlich unter dem zweifachen Wert. Latchkonflikte stellen nur bei einem hohen Parallelitätsgrad ein wirkliches Problem dar.  
@@ -447,10 +447,10 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
     -   Symptom: Wenn die CPU-Auslastung beim Ausführen der Arbeitsauslastung für speicheroptimierte Tabellen nicht nahe 100 % liegt oder unregelmäßige Spitzen aufweist, kann ein Engpass bei E/A-Protokollvorgängen vorliegen. Sie können die Ursache im Ressourcenmonitor anhand der Warteschlangenlänge für das Protokolllaufwerk ermitteln.  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Arbeitsspeicher- und Datenträgernutzung im Beispiel  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a> Arbeitsspeicher- und Datenträgernutzung im Beispiel  
  Im Folgenden wird beschrieben, wie viel Arbeitsspeicher und Datenträgerspeicher für die Beispieldatenbank benötigt wird. Außerdem sind die Ergebnisse aufgeführt, die auf einem Testserver mit 16 logischen Kernen ermittelt wurden.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Arbeitsspeichernutzung für speicheroptimierte Tabellen  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> Arbeitsspeichernutzung für speicheroptimierte Tabellen  
   
 #### <a name="overall-utilization-of-the-database"></a>Gesamtnutzung der Datenbank  
  Mithilfe der folgenden Abfrage kann die gesamte Arbeitsspeichernutzung für In-Memory OLTP im System ermittelt werden.  
@@ -505,7 +505,7 @@ WHERE t.type='U'
   
  Hier fällt auf, dass die den Indizes zugeordnete Arbeitsspeicherkapazität deutlich über der Kapazität der Tabellendaten liegt. Dies liegt daran, dass die Datengröße für die Hashindizes im Beispiel vorab auf einen höheren Wert festgelegt wurde. Da Hashindizes über eine feste Größe verfügen, wachsen sie nicht mit der Größe der Daten in der Tabelle mit.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Arbeitsspeichernutzung nach dem Ausführen der Arbeitsauslastung  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a> Arbeitsspeichernutzung nach dem Ausführen der Arbeitsauslastung  
  Nach 10 Millionen eingefügten Verkaufsaufträgen stellt sich die Arbeitsspeichernutzung insgesamt wie folgt dar:  
   
 ```sql

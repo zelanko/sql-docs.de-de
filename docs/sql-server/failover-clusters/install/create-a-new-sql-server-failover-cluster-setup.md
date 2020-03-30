@@ -17,10 +17,10 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7d66a12e545374196a2fa6a8833bcbf159c1c9c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230475"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Erstellen eines neuen SQL Server-Failoverclusters (Setup)
@@ -227,7 +227,7 @@ ms.locfileid: "75230475"
     >   
     >  Die zu installierende [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Edition muss für alle Knoten in einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster übereinstimmen. Wenn Sie einem vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster einen neuen Knoten hinzufügen, müssen Sie angeben, dass die Edition mit der Edition des vorhandenen Failoverclusters übereinstimmt.  
   
-##  <a name="prepare"></a> Vorbereiten  
+##  <a name="prepare"></a><a name="prepare"></a> Vorbereiten  
   
 #### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Schritt 1 für die erweiterte bzw. Enterprise-Failoverclusterinstallation: Vorbereiten  
   

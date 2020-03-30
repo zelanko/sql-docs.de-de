@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70155691"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
@@ -27,7 +27,7 @@ SQL Server 2014 SP2 enthält Rollups von veröffentlichten Hotfixes für SQL Ser
 
 ### <a name="performance-and-scalability-improvements-in-sp2"></a>Verbesserte Leistung und Skalierbarkeit in SP2
 
-|Funktion|Beschreibung|Weitere Informationen finden Sie unter|
+|Funktion|BESCHREIBUNG|Weitere Informationen finden Sie unter|
 |---|---|---|
 |Automatische Soft-NUMA-Partitionierung|Sie können Soft-NUMA automatisch auf Systemen konfigurieren, die über mindestens 8 CPUs pro NUMA-Knoten verfügen.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |Pufferpoolerweiterung|Ermöglicht eine Skalierung des SQL Server-Pufferpools über 8 TB hinaus.|[Pufferpoolerweiterung](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
@@ -38,7 +38,7 @@ SQL Server 2014 SP2 enthält Rollups von veröffentlichten Hotfixes für SQL Ser
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>Verbesserte Unterstützung und Diagnose in SP2
 
-|Funktion|Beschreibung|Weitere Informationen finden Sie unter|
+|Funktion|BESCHREIBUNG|Weitere Informationen finden Sie unter|
 |---|---|---|
 |Protokollierung des Always On-Zeitlimits|Für Leasezeitlimit-Nachrichten wurde eine neue Protokollierungsfunktion hinzugefügt, mit der die aktuelle Zeit und die Zeiten für die erwartete Erneuerung protokolliert werden. |[Improved Always On Availability Group Lease Timeout Diagnostics (Verbesserte Leasezeitlimit-Diagnose bei Always On-Verfügbarkeitsgruppe)](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
 |Always On-XEvents und -Leistungsindikatoren|Neue Always On-XEvents und -Leistungsindikatoren zur Verbesserung der Diagnose von Problemen mit Always On in Bezug auf die Wartezeit bei der Problembehandlung. |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) und [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
@@ -115,7 +115,7 @@ Die falsche Version von StreamInsight.msi und StreamInsightClient.msi befindet s
   
 **Problemumgehung:** Laden Sie die korrekte Version von der [Downloadseite für das SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709) herunter, und installieren Sie sie.  
   
-### <a name="ProdDoc"></a>Produktdokumentation (RTM)
+### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>Produktdokumentation (RTM)
   
 Inhalte zum Berichts-Generator und PowerPivit sind nicht in allen Sprachen verfügbar. 
 
@@ -148,7 +148,7 @@ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]waren diese Inhalte in TechNet 
   
 **Problemumgehung:** Keine.  
   
-### <a name="DBEngine"></a>Datenbank-Engine (RTM)
+### <a name="database-engine-rtm"></a><a name="DBEngine"></a>Datenbank-Engine (RTM)
   
 #### <a name="changes-made-for-standard-edition-in-sql-server-2014-rtm"></a>An der Standard Edition in SQL Server 2014 RTM vorgenommene Änderungen  
 SQL Server 2014 Standard weist die folgenden Änderungen auf:  
@@ -288,7 +288,7 @@ Wenn das Problem mit nicht übereinstimmenden instance_id-Werten bei Ihnen berei
   
     `update` sysdac_history_internal `set` instance_id = '\<Wert aus Schritt 3\>' `where` \<Ausdruck, der den zu aktualisierenden Zeilen entspricht\>  
   
-### <a name="SSRS"></a>Reporting Services (RTM)
+### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>Der SQL Server 2012 Reporting Services-Berichtsserver im einheitlichen Modus kann nicht parallel mit SharePoint-Komponenten von SQL Server 2014 Reporting Services ausgeführt werden  
 **Problem:** Der Windows-Dienst [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im nativen Modus „SQL Server Reporting Services“ (ReportingServicesService.exe) kann nicht gestartet werden, wenn auf demselben Server SharePoint-Komponenten von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installiert sind.  
@@ -334,7 +334,7 @@ Weitere Informationen finden Sie unter [Tipps &amp; Tricks und Problembehandlung
   
 Weitere Informationen finden Sie unter [Tipps, Tricks und Problembehandlung für SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
-### <a name="AzureVM"></a>SQL Server 2014 RTM auf Azure Virtual Machines  
+### <a name="sql-server-2014-rtm-on-azure-virtual-machines"></a><a name="AzureVM"></a>SQL Server 2014 RTM auf Azure Virtual Machines  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>Der Assistent zum Hinzufügen von Azure-Replikaten gibt beim Konfigurieren eines Verfügbarkeitsgruppenlisteners in Azure einen Fehler zurück.  
 **Problem:** Wenn eine Verfügbarkeitsgruppe über einen Listener verfügt, gibt der Assistent zum Hinzufügen von Azure-Replikaten beim Versuch, den Listener in Azure zu konfigurieren, einen Fehler zurück.  
@@ -349,7 +349,7 @@ Grund für dieses Problem ist, dass Verfügbarkeitsgruppenlistenern in jedem Sub
   
 2.  Nachdem der Assistent beendet ist, müssen Sie die Konfiguration des Listeners in Azure, wie in [Listenerkonfiguration für AlwaysOn-Verfügbarkeitsgruppen in Azure](https://msdn.microsoft.com/library/dn376546.aspx) beschrieben, abschließen.  
   
-### <a name="SSAS"></a>Analysis Services (RTM)
+### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services (RTM)
   
 #### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2010-new-farm-configured-with-sql-server-2014"></a>Für eine neue SharePoint 2010-Farm, die mit SQL Server 2014 konfiguriert ist, muss MSOLAP.5 heruntergeladen, installiert und registriert werden.  
 **Problem:**  
@@ -394,7 +394,7 @@ Grund für dieses Problem ist, dass Verfügbarkeitsgruppenlistenern in jedem Sub
   
 -    Wenn Sie einen Zeitplan zur Datenaktualisierung für eine Arbeitsmappe aktualisieren und die serialisierte Länge des Aktualisierungszeitplans geringer als der ursprüngliche Zeitplan ist, wird die Puffergröße nicht ordnungsgemäß aktualisiert, und die neuen Zeitplaninformationen werden mit den alten Zeitplaninformationen zusammengeführt, wodurch der Zeitplan beschädigt wird.  
   
-### <a name="DQS"></a>Data Quality Services (RTM)
+### <a name="data-quality-services-rtm"></a><a name="DQS"></a>Data Quality Services (RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>Data Quality Services werden in Master Data Services nicht versionsübergreifend unterstützt.  
 **Problem:** Folgende Szenarios werden nicht unterstützt:  
@@ -405,7 +405,7 @@ Grund für dieses Problem ist, dass Verfügbarkeitsgruppenlistenern in jedem Sub
   
 **Problemumgehung:** Master Data Services, die Datenbank der Datenbank-Engine und Data Quality Services müssen dieselbe Version aufweisen.  
   
-### <a name="UA"></a>Probleme bei Upgrade Advisor (RTM)
+### <a name="upgrade-advisor-issues-rtm"></a><a name="UA"></a>Probleme bei Upgrade Advisor (RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 Upgrade Advisor meldet irrelevante Upgradeprobleme für SQL Server Reporting Services.  
 **Problem:** Der im Lieferumfang von SQL Server 2014 enthaltene SQL Server Upgrade Advisor (SSUA) meldet bei der Analyse eines SQL Server Reporting Services-Servers fälschlicherweise mehrere Fehler.  

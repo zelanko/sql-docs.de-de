@@ -13,10 +13,10 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 8f66feb78bb789bf976d6b44b025af20c6575ee6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306656"
 ---
 # <a name="sqllogship-application"></a>Anwendung sqllogship
@@ -54,7 +54,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-verboselevel** _level_  
  Gibt die Ebene der dem Protokollversandverlauf hinzugefügten Meldungen an. *level* entspricht einer der folgenden ganzen Zahlen:  
   
-|Ebene|Beschreibung|  
+|Ebene|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Keine Ausgabe von Ablaufverfolgungs- oder Debugmeldungen|  
 |1|Ausgabe von Fehlerbehandlungsmeldungen|  

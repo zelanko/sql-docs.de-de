@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f74883ab152ca1552d1193f204fc0af3a72cdb8f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287232"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Anzeigen und Ändern von Replikationssicherheitseinstellungen
@@ -46,20 +46,20 @@ ms.locfileid: "76287232"
   
 -   **Nachverfolgung:**  [Nach dem Ändern der Replikationssicherheitseinstellungen](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Welche gespeicherten Prozeduren Sie verwenden, hängt vom Typ des Agents und vom Typ der Serververbindung ab.  
   
 -   Welche RMO-Klassen und -Eigenschaften verwendet werden, hängt vom Agenttyp und vom Typ der Serververbindung ab.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Aus Sicherheitsgründen werden die eigentlichen Werte der Kennwörter in Resultsets maskiert, die von den gespeicherten Replikationsprozeduren zurückgegeben werden.  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Sie können die Sicherheitseinstellungen in den folgenden Dialogfeldern anzeigen und ändern:  
   
 1.  Im Dialogfeld **Replikationskennwörter aktualisieren** , das über den Ordner **Replikation** von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verfügbar ist. Wenn Sie das Kennwort eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - oder Windows-Kontos auf einem Server der Replikationstopologie ändern, verwenden Sie am besten dieses Dialogfeld, anstatt die Kennwörter jedes Agents, der dieses Konto verwendet, einzeln zu aktualisieren. Wenn jedoch Agents dasselbe Konto auf mehreren Servern verwenden, müssen Sie mit jedem Server eine Verbindung herstellen und das Kennwort ändern. Das Kennwort wird überall aktualisiert, wo es die Replikation verwendet. Das Kennwort wird nicht an anderen Orten, wie z. B. auf Verbindungsservern, aktualisiert.  
@@ -243,7 +243,7 @@ ms.locfileid: "76287232"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 > [!IMPORTANT]  
 >  In allen der folgenden Prozeduren sollte der Benutzer nach Möglichkeit aufgefordert werden, zur Laufzeit Sicherheitsanmeldeinformationen einzugeben. Wenn Sie Anmeldeinformationen in einer Skriptdatei speichern, müssen Sie die Datei schützen, um unberechtigtem Zugriff vorzubeugen.  
@@ -414,7 +414,7 @@ ms.locfileid: "76287232"
   
 2.  Führen Sie auf jedem Verteiler, der diesen Remoteverteiler verwendet, [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) aus, und geben Sie dabei das Kennwort aus Schritt 1 für `@password` an.  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
@@ -561,14 +561,14 @@ ms.locfileid: "76287232"
   
     -   *PublisherSecurity* - A <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> -Objekt, das den Typ des Sicherheitsmodus, der vom sofort aktualisierbaren Abonnenten beim Verbindungsaufbau mit dem Verleger verwendet wird, und die Anmeldeinformationen für die Verbindung angibt.  
   
-###  <a name="PShellExample"></a> Beispiel (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Beispiel (RMO)  
  In diesem Beispiel werden der für die Anmeldung angegebene Wert überprüft und alle auf dem Server für die Replikation gespeicherten Kennwörter für die angegebene Windows-Anmeldung bzw. SQL Server-Anwendung geändert.  
   
  [!code-cs[HowTo#rmo_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changeserverpasswords)]  
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Ändern der Replikationssicherheitseinstellungen  
+##  <a name="follow-up-after-you-modify-replication-security-settings"></a><a name="FollowUp"></a>Nächster Schritt: Nach dem Ändern der Replikationssicherheitseinstellungen  
  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
 ## <a name="see-also"></a>Weitere Informationen  

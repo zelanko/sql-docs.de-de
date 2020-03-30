@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68077442"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Erstellen und Konfigurieren einer Verfügbarkeitsgruppe für SQL Server für Linux
@@ -324,7 +324,7 @@ In diesem Abschnitt wird gezeigt, wie mithilfe von SSMS mit dem neuen Verfügbar
 
 2.  Klicken Sie im Dialogfeld „Einführung“ auf **Weiter**.
 
-3.  Geben Sie im Dialogfeld „Optionen der Verfügbarkeitsgruppe angeben“ einen Namen für die Verfügbarkeitsgruppe ein, und wählen Sie in der Dropdownliste den Clustertyp „EXTERN“ oder „KEINE“ aus. „Extern“ sollte verwendet werden, wenn Pacemaker bereitgestellt wird. „Keine“ ist für spezialisierte Szenarios wie horizontale Leseskalierung. Die Auswahl der Option für die Integritätserkennung auf Datenbankebene ist optional. Weitere Informationen zu dieser Option finden Sie unter [Availability group database level health detection failover option (Failoveroption für die Integritätserkennung auf Datenbankebene in einer Verfügbarkeitsgruppe)](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Klicken Sie auf **Weiter**.
+3.  Geben Sie im Dialogfeld „Optionen der Verfügbarkeitsgruppe angeben“ einen Namen für die Verfügbarkeitsgruppe ein, und wählen Sie in der Dropdownliste den Clustertyp „EXTERN“ oder „KEINE“ aus. „Extern“ sollte verwendet werden, wenn Pacemaker bereitgestellt wird. „Keine“ ist für spezialisierte Szenarios wie Leseaufskalierung. Die Auswahl der Option für die Integritätserkennung auf Datenbankebene ist optional. Weitere Informationen zu dieser Option finden Sie unter [Availability group database level health detection failover option (Failoveroption für die Integritätserkennung auf Datenbankebene in einer Verfügbarkeitsgruppe)](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Klicken Sie auf **Weiter**.
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 

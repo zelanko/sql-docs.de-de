@@ -16,10 +16,10 @@ ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255981"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)
@@ -46,9 +46,9 @@ ms.locfileid: "75255981"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Requirements"></a> Anforderungen  
+###  <a name="requirements"></a><a name="Requirements"></a> Anforderungen  
   
 -   Die Prinzipalserver- und Spiegelserverinstanz müssen unter derselben Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden. Obwohl der Spiegelserver eine höhere SQL Server-Version aufweisen darf, wird diese Konfiguration nur für einen sorgfältig geplanten Upgradeprozess empfohlen. In einer solchen Konfiguration laufen Sie Gefahr, ein automatisches Failover auszuführen, bei dem die Datenverschiebung automatisch angehalten wird, da Daten nicht zu einer niedrigeren SQL Server-Version verschoben werden können. Weitere Informationen finden Sie unter [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
@@ -64,13 +64,13 @@ ms.locfileid: "75255981"
   
 -   Stellen Sie sicher, dass das System, auf dem die Spiegeldatenbank erstellt werden soll, ein Laufwerk mit ausreichend Speicherplatz für die Spiegeldatenbank besitzen muss.  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Die **master**-, **msdb**-, **temp**- oder **model** -Systemdatenbanken können nicht gespiegelt werden.  
   
 -   Sie können keine Datenbank spiegeln, die einer [AlwaysOn-Verfügbarkeitsgruppe](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)angehört.  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Verwenden Sie entweder die letzte vollständige Datenbanksicherung oder eine aktuelle differenzielle Datenbanksicherung der Prinzipaldatenbank.  
   
@@ -87,22 +87,22 @@ ms.locfileid: "75255981"
   
 -   Bei einer Produktionsdatenbank erstellen Sie die Sicherung stets auf einem separaten Medium.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  TRUSTWORTHY wird beim Sichern einer Datenbank auf OFF festgelegt. Deshalb ist TRUSTWORTHY bei einer neuen Spiegeldatenbank immer OFF. Muss die Datenbank nach einem Failover vertrauenswürdig sein, sind zusätzliche Installationsschritte erforderlich. Weitere Informationen finden Sie unter [Einrichten der TRUSTWORTHY-Eigenschaft für eine Spiegeldatenbank &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)vorbereiten.  
   
  Informationen zum Aktivieren der automatischen Verschlüsselung des Datenbank-Hauptschlüssels einer Spiegeldatenbank finden Sie unter [Einrichten einer verschlüsselten Spiegeldatenbank](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Datenbankbesitzer oder Systemadministrator.  
   
-##  <a name="PrepareToRestartMirroring"></a> So bereiten Sie eine vorhandene Spiegeldatenbank auf das erneute Starten der Spiegelung vor  
+##  <a name="to-prepare-an-existing-mirror-database-to-restart-mirroring"></a><a name="PrepareToRestartMirroring"></a> So bereiten Sie eine vorhandene Spiegeldatenbank auf das erneute Starten der Spiegelung vor  
  Wenn die Spiegelung entfernt wurde und die Spiegeldatenbank sich weiterhin im RECOVERING-Status befindet, können Sie die Spiegelung erneut starten.  
   
 1.  Erstellen Sie mindestens eine Protokollsicherung auf der Prinzipaldatenbank. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)bezeichnet) gesichert werden.  
   
 2.  Verwenden Sie auf der Spiegeldatenbank RESTORE WITH NORECOVERY, um alle Protokollsicherungen wiederherzustellen, die seit dem Entfernen der Spiegelung auf der Prinzipaldatenbank erstellt wurden. Weitere Informationen finden Sie unter [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)vorbereiten.  
   
-##  <a name="CombinedProcedure"></a> So bereiten Sie eine neue Spiegeldatenbank vor  
+##  <a name="to-prepare-a-new-mirror-database"></a><a name="CombinedProcedure"></a> So bereiten Sie eine neue Spiegeldatenbank vor  
  **So bereiten Sie eine Spiegeldatenbank vor**  
   
 > [!NOTE]  
@@ -137,7 +137,7 @@ ms.locfileid: "75255981"
   
     -   [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  Bevor Sie eine Datenbank-Spiegelungssitzung starten können, müssen Sie die Spiegeldatenbank erstellen. Dies sollte vor dem Starten der Spiegelungssitzung erfolgen.  
   
  In diesem Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank verwendet, in der standardmäßig das einfache Wiederherstellungsmodell verwendet wird.  
@@ -237,7 +237,7 @@ ms.locfileid: "75255981"
   
  Ein vollständiges Beispiel für das Einrichten von Datenbankspiegelung, Anzeigen der Sicherheitseinrichtung, Vorbereiten der Spiegeldatenbank, Einrichten der Partner und Hinzufügen eines Zeugen finden Sie unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)vorbereiten.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach der Vorbereitung einer Spiegeldatenbank  
+##  <a name="follow-up-after-preparing-a-mirror-database"></a><a name="FollowUp"></a>Nächster Schritt: Nach der Vorbereitung einer Spiegeldatenbank  
   
 1.  Wenn seit dem letzten RESTORE LOG-Vorgang Protokollsicherungen vorgenommen wurden, müssen Sie jede zusätzliche Protokollsicherung mit RESTORE WITH NORECOVERY manuell anwenden.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "75255981"
   
 4.  Muss die Datenbank nach einem Failover vertrauenswürdig sein, sind zusätzliche Installationsschritte nach dem Beginn der Spiegelung erforderlich. Weitere Informationen finden Sie unter [Einrichten der TRUSTWORTHY-Eigenschaft für eine Spiegeldatenbank &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)vorbereiten.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

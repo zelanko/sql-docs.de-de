@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75952481"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Anheften von paginierten Reporting Services-Berichtselementen an Dashboards in Power BI
@@ -28,7 +28,7 @@ ms.locfileid: "75952481"
 
 Sie können ein lokales, paginiertes [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Berichtselement als Kachel an ein Dashboard im [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]-Dienst anheften.   Zum Anheften muss der Administrator den Berichtsserver zuerst in Azure Active Directory und [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]integrieren.  
   
-##  <a name="bkmk_requirements_to_pin"></a> Anforderungen für das Anheften  
+##  <a name="requirements-to-pin"></a><a name="bkmk_requirements_to_pin"></a> Anforderungen für das Anheften  
   
 -   Der Berichtsserver muss für die [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Integration konfiguriert sein. Weitere Informationen finden Sie unter [Berichtsserverintegration für Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)integrieren. Wenn der Berichtsserver noch nicht konfiguriert wurde, wird die Schaltfläche **An Power BI-Dashboard anheften** nicht in der Berichts-Viewer-Symbolleiste angezeigt.  
   
@@ -44,7 +44,7 @@ Sie können ein lokales, paginiertes [!INCLUDE[ssRSnoversion](../includes/ssrsno
  
     Weitere Informationen finden Sie im Abschnitt „Konfigurieren von gespeicherten Anmeldeinformationen für eine berichtsspezifische Datenquelle (einheitlicher Modus)“ unter [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
-##  <a name="bkmk_supported_items"></a> Elemente, die angeheftet werden können  
+##  <a name="items-you-can-pin"></a><a name="bkmk_supported_items"></a> Elemente, die angeheftet werden können  
  Die folgenden Berichtselemente können an ein [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard angeheftet werden.  Sie können keine Elemente anheften, die in einen Datenbereich geschachtelt sind. Sie können z. B. kein Element anheften, das in eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Tabelle oder -Liste geschachtelt ist.  
   
 -   Diagramme  
@@ -54,7 +54,7 @@ Sie können ein lokales, paginiertes [!INCLUDE[ssRSnoversion](../includes/ssrsno
 -   Elemente müssen sich im Hauptteil des Berichts befinden.  Sie können keine Elemente aus dem Seitenkopf oder Seitenfuß anheften.  
 -   Sie können einzelne Elemente anheften, die sich in einem allgemeinen Rechteck befinden, aber Sie können sie nicht als eine Gruppe anheften.  
   
-##  <a name="bkmk_to_pin"></a> So heften Sie ein Berichtselement an  
+##  <a name="to-pin-a-report-item"></a><a name="bkmk_to_pin"></a> So heften Sie ein Berichtselement an  
   
 1. Stellen Sie sicher, dass Sie bei [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]angemeldet sind. Wählen Sie im [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]-Webportal das Menüelement **Meine Einstellungen** aus, und melden Sie sich an. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](my-settings-for-power-bi-integration-web-portal.md).
 
@@ -78,7 +78,7 @@ Sie können ein lokales, paginiertes [!INCLUDE[ssRSnoversion](../includes/ssrsno
   
 6. Wählen Sie **Schließen** aus, um zur normalen Sicht des Berichts zurückzukehren.  
   
-##  <a name="bkmk_in_the_dashboard"></a> Im Dashboard
+##  <a name="in-the-dashboard"></a><a name="bkmk_in_the_dashboard"></a> Im Dashboard
 
 Nachdem das Berichtselement an das Dashboard angeheftet wurde, sieht die Kachel wie jede andere Dashboardkachel aus, und es ist nicht erkennbar, dass sie ursprünglich aus [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]stammt. Die folgende Liste fasst zusammen, wie die Kacheleigenschaften aus dem Berichtselement aufgefüllt werden.  
   
@@ -94,7 +94,7 @@ Im [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard verhält sich d
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
-##  <a name="bkmk-troubleshoot"></a> Problembehandlung  
+##  <a name="troubleshoot-issues"></a><a name="bkmk-troubleshoot"></a> Problembehandlung  
   
 -   **Die [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]-Schaltfläche wird nicht auf der Berichts-Viewer-Symbolleiste angezeigt:**  Dies weist darauf hin, dass der Berichtsserver nicht in [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] integriert wurde. Weitere Informationen finden Sie unter [Berichtsserverintegration für Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)integrieren.  
   
@@ -106,7 +106,7 @@ Im [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard verhält sich d
   
 -   **Angeheftete Elemente zeigen veraltete Daten** in einem [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard an, und die Daten wurden noch nie aktualisiert.  Das Problem besteht darin, dass der Bericht nicht für die Verwendung gespeicherter Anmeldeinformationen konfiguriert ist. Ein Bericht muss gespeicherte Anmeldeinformationen verwenden, da beim Anheften eines Berichtselements ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Abonnement zum Verwalten des Aktualisierungszeitplans der Kacheln erstellt wird. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Abonnements: Erfordern gespeicherte Anmeldeinformationen. Wenn Sie die Seite **Meine Abonnements** überprüfen, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
   
-    „Power BI-Übermittlungsfehler: Dashboard: SSRS-Elemente, Visual: Image3, Fehler: Die aktuelle Aktion kann nicht abgeschlossen werden.  Die Datenquellen-Anmeldeinformationen des Benutzers entsprechen nicht die Anforderungen zum Ausführen dieses Berichts oder freigegebenen Datasets. Entweder sind die Datenquellen-Anmeldeinformationen des Benutzers nicht in der Berichtsserverdatenbank gespeichert oder die Datenquelle des Benutzers ist so konfiguriert, dass keine Anmeldeinformationen erforderlich sind, aber das Konto für die unbeaufsichtigte Ausführung nicht angegeben ist. (rsInvalidDataSourceCredentialSetting)"
+    „Power BI-Übermittlungsfehler: Dashboard: SSRS-Elemente, Visual: Image3, Fehler: Die aktuelle Aktion kann nicht abgeschlossen werden. Die Datenquellen-Anmeldeinformationen des Benutzers entsprechen nicht die Anforderungen zum Ausführen dieses Berichts oder freigegebenen Datasets. Entweder sind die Datenquellen-Anmeldeinformationen des Benutzers nicht in der Berichtsserverdatenbank gespeichert oder die Datenquelle des Benutzers ist so konfiguriert, dass keine Anmeldeinformationen erforderlich sind, aber das Konto für die unbeaufsichtigte Ausführung nicht angegeben ist. (rsInvalidDataSourceCredentialSetting)"
   
 -   **Angelaufene Power BI-Anmeldeinformationen:**  Gehen Sie folgendermaßen vor, wenn die folgende Fehlermeldung angezeigt wird, wenn Sie versuchen ein Element anzuheften. Klicken Sie im [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]auf **Meine Einstellungen** und anschließend auf der Seite „Meine Einstellungen“ auf **Anmelden**. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   
@@ -118,7 +118,7 @@ Im [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard verhält sich d
 
 -   **Kacheln in Power BI-Apps zeigen veraltete Daten:** Wenn Sie ein Reporting Services-Berichtselement an ein Dashboard anheften und dieses Dashboard dann in einer App verteilen, wird das angeheftete Berichtselement in diesem Dashboard nicht aktualisiert. 
 
-##  <a name="bkmk_subscription_management"></a> Abonnementverwaltung  
+##  <a name="subscription-management"></a><a name="bkmk_subscription_management"></a> Abonnementverwaltung  
  Neben den im Abschnitt zur Problembehandlung beschriebenen abonnementbezogenen Problemen sind die folgenden Informationen bei der Verwaltung von [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]-bezogenen Abonnements hilfreich.
   
 -   **Elementname wurde geändert:** Wird ein angeheftetes Berichtselement umbenannt oder gelöscht, wird die [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]-Kachel nicht mehr aktualisiert, und es wird eine Fehlermeldung ähnlich der folgenden angezeigt.  Wenn Sie das Element wieder in den ursprünglichen Namen umbenennen, wird das Abonnement wieder gestartet und die Kachel entsprechend dem Abonnementzeitplan aktualisiert.  

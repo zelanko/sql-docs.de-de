@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082611"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Karten (Berichts-Generator und SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "77082611"
 > [!NOTE]  
 >  Karten können getrennt von einem Bericht als Berichtsteile gespeichert werden. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="Process"></a> Hinzufügen einer Karte zum Bericht  
+##  <a name="adding-a-map-to-your-report"></a><a name="Process"></a> Hinzufügen einer Karte zum Bericht  
  Führen Sie die folgenden allgemeinen Schritte aus, um dem Bericht eine Karte hinzuzufügen:  
   
 -   Bestimmen Sie, welche analytischen Daten angezeigt werden sollen und welche Arten von räumlichen Daten Sie benötigen. Um beispielsweise in einer Blasendiagrammkarte den relativen Jahresumsatz pro Laden anzuzeigen, benötigen Sie als analytische Daten den Namen und den Umsatz jedes Ladens sowie als räumliche Daten den Namen und den Standort des Ladens zur Ermittlung des Breiten- und Längengrads.  
@@ -49,7 +49,7 @@ ms.locfileid: "77082611"
   
  Weitere Informationen finden Sie unter [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
-##  <a name="AddingData"></a> Hinzufügen von Daten zu einer Karte  
+##  <a name="adding-data-to-a-map"></a><a name="AddingData"></a> Hinzufügen von Daten zu einer Karte  
  Eine Karte enthält zwei Arten von Daten: räumliche Daten und analytische Daten. Räumliche Daten definieren die Darstellung der Karte, während analytische Daten die Werte enthalten, die der Karte zugeordnet sind. Räumliche Daten definieren beispielsweise die Positionen von Städten in einem Bereich, während analytische Daten die Einwohnerzahl jeder Stadt bereitstellen.  
   
  Eine Karte muss räumliche Daten aufweisen; analytische Daten sind optional. Sie können beispielsweise eine Karte hinzufügen, die nur die Standorte von Läden in einer Stadt anzeigt.  
@@ -136,12 +136,12 @@ ms.locfileid: "77082611"
   
  In diesem Beispiel reicht der Städtename allein nicht aus, um die Auffüllung eindeutig zu identifizieren. Beispielsweise gibt es in den USA viele Städte mit dem Namen Albany. Um eine bestimmte Stadt anzugeben, müssen Sie zusätzlich zum Namen der Stadt den Wert für "Area" angeben.  
   
-##  <a name="Viewport"></a> Grundlegendes zum Kartenviewport  
+##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> Grundlegendes zum Kartenviewport  
  Nachdem Sie Kartendaten für einen Bericht angegeben haben, können Sie den Anzeigebereich der Karte einschränken, indem Sie einen *Kartenviewport*angeben. Standardmäßig ist der Viewport der gleiche Bereich wie die gesamte Karte. Um die Karte zuzuschneiden, können Sie den Mittelpunkt, die Zoomstufe sowie maximale und minimale Koordinaten angeben, die den Bereich definieren, den Sie in den Bericht einschließen möchten. Um die Anzeige der Karte im Bericht zu verbessern, können Sie die Legenden, Entfernungsskala und Farbskala außerhalb des Viewports verschieben. Die folgende Abbildung zeigt einen Viewport:  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
-##  <a name="TileLayer"></a> Hinzufügen einer Ebene mit Bing-Kartenkacheln  
+##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> Hinzufügen einer Ebene mit Bing-Kartenkacheln  
  Sie können eine Ebene für Bing-Kartenkacheln hinzufügen, die einen geografischen Hintergrund für die aktuelle vom Viewport definierte Kartenansicht bereitstellen. Um eine Kachelebene hinzuzufügen, müssen Sie als Koordinatensystem **Geografisch** und als Projektion **Mercator**eingeben. Kacheln, die mit dem Viewportmittelpunkt und der Zoomstufe übereinstimmen, die Sie auswählen, werden automatisch aus Bing Maps Web Services abgerufen.  
   
  Sie können die Ebene anpassen, indem Sie die folgenden Optionen angeben:  
@@ -162,7 +162,7 @@ ms.locfileid: "77082611"
   
  Weitere Informationen zu Kacheln finden Sie im Thema zum [Bing-Kartenkachelsystem](https://go.microsoft.com/fwlink/?linkid=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
-##  <a name="MapLayers"></a> Grundlegendes zu Kartenebenen und Kartenelementen  
+##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a> Grundlegendes zu Kartenebenen und Kartenelementen  
  Eine Karte kann mehrere Ebenen enthalten. Es stehen drei Arten von Ebenen zur Verfügung. Auf jeder Ebene wird ein Typ räumlicher Daten angezeigt:  
   
 -   **Polygonebene.** Zeigt Umrisse von Bereichen oder Marker für den Polygonmittelpunkt an, der automatisch für jedes Polygon berechnet wird.  
@@ -208,7 +208,7 @@ ms.locfileid: "77082611"
   
  Weitere Informationen finden Sie unter [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
-##  <a name="Legends"></a> Grundlegendes zu Kartenlegenden, Farbskala und Entfernungsskala  
+##  <a name="understanding-map-legends-color-scale-and-distance-scale"></a><a name="Legends"></a> Grundlegendes zu Kartenlegenden, Farbskala und Entfernungsskala  
  Sie können dem Bericht unterschiedliche Legenden hinzufügen, um Benutzern die Interpretation einer Karte zu erleichtern. Karten können die folgenden Elemente einschließen:  
   
 -   **Legenden.** Sie können mehrere Legenden erstellen. Elemente, die in einer Legende aufgeführt sind, werden automatisch anhand der Regeln generiert, die Sie für Kartenelemente auf jeder Ebene angeben. Für jede Regel geben Sie die Legende an, die verwendet werden soll, um die zugehörigen Elemente anzuzeigen. Auf diese Weise können Sie Elemente aus mehreren Ebenen derselben Legende oder unterschiedlichen Legenden zuweisen.  
@@ -219,14 +219,14 @@ ms.locfileid: "77082611"
   
  Sie können die Legenden, Farbskala und Entfernungsskala an diskreten Orten innerhalb oder außerhalb des Viewports positionieren. Weitere Informationen finden Sie unter [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Troubleshooting"></a> Problembehandlung für Karten  
+##  <a name="troubleshooting-maps"></a><a name="Troubleshooting"></a> Problembehandlung für Karten  
  Kartenberichte verwenden räumliche und analytische Daten aus unterschiedlichen Datenquellen. Für die Daten jeder Kartenebene können andere Quellen verwendet werden. Für die Anzeigeeigenschaften für jede Ebene gilt eine bestimmte Rangfolge auf der Grundlage von Ebeneneigenschaften, Regeln und Kartenelementeigenschaften.  
   
  Wenn ein Kartenbericht nicht wie gewünscht angezeigt wird, sind zahlreiche Probleme als Ursache möglich. Damit Sie jedes Problem leichter isolieren und verstehen können, sollten Sie jeweils nur mit einer Ebene arbeiten. Verwenden Sie den Kartenbereich, um eine Ebene auszuwählen und ihre Sichtbarkeit mühelos umzuschalten.  
   
  Weitere Informationen zu Problemen bei Kartenberichten finden Sie unter [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
-##  <a name="HowTo"></a> Themen zur Vorgehensweise  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Themen zur Vorgehensweise  
  Dieser Abschnitt enthält Verfahren, die schrittweise zeigen, wie Sie mit Karten und Kartenebenen in Berichten arbeiten.  
   
 -   [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
@@ -235,7 +235,7 @@ ms.locfileid: "77082611"
   
 -   [Hinzufügen benutzerdefinierter Orte zu einer Karte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="Section"></a> In diesem Abschnitt  
  [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

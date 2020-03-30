@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13c20f7fb8cd282251c734df1a4bb7b3adab3712
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909615"
 ---
 # <a name="shrink-a-database"></a>Verkleinern einer Datenbank
@@ -50,9 +50,9 @@ ms.locfileid: "72909615"
   
 -   **Nachverfolgung:**  [Verkleinern einer Datenbank](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Die Datenbank kann nicht unter die Mindestgröße der Datenbank verkleinert werden. Die Mindestgröße stellt die Größe dar, die bei der ursprünglichen Erstellung der Datenbank angegeben wurde, bzw. die letzte explizite Größe, die bei einer Dateigrößenänderung, z. B. mit DBCC SHRINKFILE, festgelegt wurde. Wenn z. B. eine Datenbank ursprünglich mit einer Größe von 10 MB erstellt und auf 100 MB vergrößert wurde, kann die Datenbank höchstens auf 10 MB verkleinert werden, auch wenn alle Daten in der Datenbank gelöscht wurden.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72909615"
   
 -   Bei DBCC SHRINKDATABASE tritt ein Fehler auf, wenn ein speicheroptimierter xVelocity-columnstore-Index gefunden wird. Vor dem Aufeinandertreffen mit dem columnstore-Index erledigte Arbeiten werden erfolgreich durchgeführt, die Datenbank ist daher möglicherweise kleiner. Zum Abschließen von DBCC SHRINKDATABASE deaktivieren Sie alle columnstore-Indizes, bevor Sie DBCC SHRINKDATABASE ausführen, und erstellen die columnstore-Indizes dann neu.  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Zum Anzeigen des aktuellen freien (nicht zugeordneten) Speicherplatzes in der Datenbank. Weitere Informationen finden Sie unter [Anzeigen von Informationen zum Daten- und Protokollspeicherplatz einer Datenbank](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
@@ -74,12 +74,12 @@ ms.locfileid: "72909615"
   
     -   Legen Sie die Datenbankoption AUTO_SHRINK nicht auf ON fest, es sei denn, besondere Anforderungen machen dies erforderlich.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-shrink-a-database"></a>So verkleinern Sie eine Datenbank  
   
@@ -106,7 +106,7 @@ ms.locfileid: "72909615"
   
 4.  Klicken Sie auf **OK**.  
 
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>So verkleinern Sie eine Datenbank  
   
@@ -118,7 +118,7 @@ ms.locfileid: "72909615"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Verkleinern einer Datenbank  
+##  <a name="follow-up-after-you-shrink-a-database"></a><a name="FollowUp"></a>Nächster Schritt: Nach dem Verkleinern einer Datenbank  
  Die zum Verkleinern einer Datei verschobenen Daten können an beliebigen freien Platz in der Datei verschoben werden. Dies führt zur Indexfragmentierung und kann die Leistung von Abfragen, die einen Bereich des Indexes suchen, verlangsamen. Zur Vermeidung von Fragmentierung sollten die Dateiindizes nach der Verkleinerung neu erstellt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  

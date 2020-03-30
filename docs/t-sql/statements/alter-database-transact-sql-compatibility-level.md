@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288664"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
@@ -121,7 +121,7 @@ Den empfohlenen Workflow für ein Upgrade des Kompatibilitätsgrads finden Sie u
 ## <a name="compatibility-levels-and-stored-procedures"></a>Kompatibilitätsgrade und gespeicherte Prozeduren
 Wenn eine gespeicherte Prozedur ausgeführt wird, verwendet sie den aktuellen Kompatibilitätsgrad der Datenbank, in der sie definiert ist. Wenn die Kompatibilitätseinstellung einer Datenbank geändert wird, werden alle zugehörigen gespeicherten Prozeduren automatisch entsprechend neu kompiliert.
 
-## <a name="backwardCompat"></a> Verwenden des Kompatibilitätsgrads für Abwärtskompatibilität
+## <a name="using-compatibility-level-for-backward-compatibility"></a><a name="backwardCompat"></a> Verwenden des Kompatibilitätsgrads für Abwärtskompatibilität
 Die Einstellung [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) bietet Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Bezug auf das Verhalten von [!INCLUDE[tsql](../../includes/tsql-md.md)] und der Abfrageoptimierung. Dies gilt allerdings ausschließlich für die angegebene Datenbank und nicht für den gesamten Server.  
 
 Beginnend mit dem Kompatibilitätsmodus 130 wurden alle neuen Fixes und Features, die Auswirkungen auf einen Abfrageplan haben, ausdrücklich nur zum neuen Kompatibilitätsmodus hinzugefügt. Dadurch sollte das Risiko während der Upgrades minimiert werden, die durch Leistungseinbußen aufgrund von Abfrageplanänderungen entstanden sind, die möglicherweise auf neue Verhaltensweisen der Abfrageoptimierung zurückgeführt werden können.      

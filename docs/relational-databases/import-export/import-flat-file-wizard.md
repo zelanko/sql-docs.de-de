@@ -13,10 +13,10 @@ ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190792"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistent zum Importieren von Flatfiles in SQL
@@ -37,7 +37,7 @@ Um noch mehr über die Verbesserung der Benutzerfreundlichkeit des Assistenten z
 ## <a name="prerequisites"></a>Voraussetzungen
 Dieses Feature ist nur in SQL Server Management Studio (SSMS) v17.3 oder höher verfügbar. Stellen Sie sicher, dass Sie die neueste Version verwenden. Die neueste Version ist [hier](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) zu finden.
  
-## <a id="started"></a>Erste Schritte
+## <a name="getting-started"></a><a id="started"></a>Erste Schritte
 Um den Assistenten zum Importieren von Flatfiles aufzurufen, gehen Sie folgendermaßen vor:
 
 1. Öffnen Sie **SQL Server Management Studio**.

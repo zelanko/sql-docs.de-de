@@ -20,16 +20,16 @@ ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 228cb40e1c0f40d9525ca83129878d30b722b910
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893425"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung  
 Es gibt verschiedene Methoden zum Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Die in diesem Artikel beschriebenen Ansätze reichen vom Deaktivieren eines Abonnements bis hin zum Unterbrechen der Datenquellenverbindung. Nicht alle Ansätze sind mit beiden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Servermodi möglich. In den folgenden Tabellen werden die Methoden und unterstützten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Servermodi zusammengefasst:  
   
-##  <a name="bkmk_top"></a> Inhalt dieses Artikels  
+##  <a name="in-this-article"></a><a name="bkmk_top"></a> Inhalt dieses Artikels  
   
 ||Unterstützter Servermodus|  
 |-|---------------------------|  
@@ -40,7 +40,7 @@ Es gibt verschiedene Methoden zum Deaktivieren oder Anhalten der Berichts- und A
 |[Entfernen von Berechtigungen zur Abonnementverwaltung aus Rolle (einheitlicher Modus)](#bkmk_remove_manage_subscriptions_permission)|Einheitlicher Modus|  
 |[Deaktivieren von Übermittlungserweiterungen](#bkmk_disable_extensions)|Einheitlicher und SharePoint-Modus|  
   
-##  <a name="bkmk_disable_subscription"></a>Aktivieren und Deaktivieren von Abonnements  
+##  <a name="enable-and-disable-subscriptions"></a><a name="bkmk_disable_subscription"></a>Aktivieren und Deaktivieren von Abonnements  
   
 >[!TIP]  
 >Neu in SQL 2016 Reporting Services: *Aktivieren und Deaktivieren von Abonnements*. Neue Optionen der Benutzeroberfläche ermöglichen Ihnen ein schnelles Aktivieren und Deaktivieren von Abonnements. Die deaktivierten Abonnements behalten ihre anderen Konfigurationseigenschaften, z. B. den Zeitplan, bei und können leicht erneut aktiviert werden. Sie können Abonnements auch programmgesteuert aktivieren und deaktivieren oder überwachen, welche Abonnements deaktiviert werden.  
@@ -117,14 +117,14 @@ ForEach ($subscription in $subscriptions)
 }  
 ```  
   
-##  <a name="bkmk_pause_schedule"></a> Anhalten eines freigegebenen Zeitplans  
+##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> Anhalten eines freigegebenen Zeitplans  
  Wenn ein Bericht oder ein Abonnement mit einem freigegebenen Zeitplan ausgeführt wird, können Sie den Zeitplan anhalten, um die Verarbeitung zu verhindern. Alle Berichts- und Abonnementverarbeitungen, die durch den Zeitplan gesteuert werden, werden zurückgestellt, bis der Zeitplan fortgesetzt wird.  
   
 -   **SharePoint-Modus:** ![SharePoint-Einstellungen](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen"): Wählen Sie unter **Standorteinstellungen** die Option **Freigegebene Zeitpläne verwalten** aus. Wählen Sie den Zeitplan aus, und klicken Sie auf **Ausgewählte Zeitpläne anhalten**.  
   
 -   **Einheitlicher Modus :** Klicken Sie im Webportal auf der oberen Menüleiste auf die Schaltfläche **Einstellungen** ![Schaltfläche „Einstellungen“](media/ssrs-portal-settings-gear.png), und wählen Sie aus dem Dropdownmenü die Option **Standorteinstellungen** aus. Wählen Sie die Registerkarte **Zeitpläne** aus, um die Seite „Zeitpläne“ anzuzeigen. Aktivieren Sie die Kontrollkästchen neben den Zeitplänen, die Sie aktivieren oder deaktivieren möchten, und klicken Sie auf die Schaltfläche **Aktivieren** bzw. **Deaktivieren**, um die gewünschte Aktion auszuführen. Die Statusspalte wird entsprechend in „Aktiviert“ bzw. „Deaktiviert“ aktualisiert.  
   
-##  <a name="bkmk_disable_shared_datasource"></a> Deaktivieren einer freigegebenen Datenquelle  
+##  <a name="disable-a-shared-data-source"></a><a name="bkmk_disable_shared_datasource"></a> Deaktivieren einer freigegebenen Datenquelle  
  Ein Vorteil des Verwendens freigegebener Datenquellen ist, dass Sie diese deaktivieren können, um die Ausführung eines Berichts oder eines datengesteuerten Abonnements zu verhindern. Durch das Deaktivieren einer freigegebenen Datenquelle wird die Verbindung des Berichts mit der externen Quelle getrennt. Die deaktivierte Datenquelle steht für keine Berichte und Abonnements zur Verfügung.  
   
  Beachten Sie, dass der Bericht weiterhin geladen wird, selbst wenn die Datenquelle nicht verfügbar ist. Der Bericht enthält keine Daten, aber Benutzer mit entsprechenden Berechtigungen haben Zugriff auf die Eigenschaftenseiten, Sicherheitseinstellungen, den Berichtsverlauf und die Abonnementinformationen für den Bericht.  
@@ -133,12 +133,12 @@ ForEach ($subscription in $subscriptions)
   
 -   **Einheitlicher Modus :** Um eine freigegebene Datenquelle auf einem Berichtsserver im einheitlichen Modus zu deaktivieren, öffnen Sie die Datenquelle im Webportal, und deaktivieren Sie das Kontrollkästchen **Diese Datenquelle aktivieren**.  
   
-##  <a name="bkmk_modify_role_assignment"></a> Ändern von Rollenzuweisungen zum Verhindern des Zugriffs auf einen Bericht (einheitlicher Modus)  
+##  <a name="modify-role-assignments-to-prevent-access-to-a-report-native-mode"></a><a name="bkmk_modify_role_assignment"></a> Ändern von Rollenzuweisungen zum Verhindern des Zugriffs auf einen Bericht (einheitlicher Modus)  
 Eine Möglichkeit, um einen Bericht nicht verfügbar zu machen, ist das vorübergehende Entfernen der Rollenzuweisung, die den Zugriff auf den Bericht bereitstellt. Diese Vorgehensweise kann für alle Berichte unabhängig von der Art der Datenquellenverbindung verwendet werden. Dabei ist nur der Bericht betroffen. Die Ausführung anderer Berichte oder Elemente ist davon nicht betroffen.  
   
  Öffnen Sie die Seite **Sicherheit** des Berichts im Webportal, um die Rollenzuweisung zu entfernen. Falls der Bericht die Sicherheit von einem übergeordneten Bericht erbt, können Sie **Sicherheit anpassen** und anschließend im Dialogfeld **Elementsicherheit** die Option **Bestätigen** auswählen, um eine restriktive Sicherheitsrichtlinie zu erstellen, die Rollenzuweisungen für den Zugriff auf breiter Basis ausklammert (entfernen Sie z.B. eine Rollenzuweisung, die jedem Benutzer den Zugriff ermöglicht, und behalten Sie die Rollenzuweisung, die einer kleinen Benutzergruppe den Zugriff ermöglicht, wie z.B. Administratoren).  
   
-##  <a name="bkmk_remove_manage_subscriptions_permission"></a> Entfernen von Berechtigungen zur Abonnementverwaltung aus Rolle (einheitlicher Modus)  
+##  <a name="remove-manage-subscription-permissions-from-role-native-mode"></a><a name="bkmk_remove_manage_subscriptions_permission"></a> Entfernen von Berechtigungen zur Abonnementverwaltung aus Rolle (einheitlicher Modus)  
  Entfernen Sie den Task **Einzelne Abonnements verwalten** aus der Rolle, um zu verhindern, dass Benutzer Abonnements erstellen. Wenn Sie diesen Task entfernen, sind die Abonnementseiten nicht verfügbar. Im Webportal scheint die Seite Meine Abonnements leer zu sein (kann nicht gelöscht werden), selbst wenn zuvor Abonnements enthalten waren. Das Entfernen von Tasks im Zusammenhang mit Abonnements verhindert, dass Benutzer Abonnements erstellen und ändern. Vorhandene Abonnements werden dadurch jedoch nicht gelöscht. Vorhandene Abonnements werden so lange weiter ausgeführt, bis Sie sie löschen. So entfernen Sie die Berechtigung:  
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
@@ -156,7 +156,7 @@ Eine Möglichkeit, um einen Bericht nicht verfügbar zu machen, ist das vorüber
 7.  Wählen Sie **OK** aus, um die Änderungen zu übernehmen.
 
   
-##  <a name="bkmk_disable_extensions"></a> Deaktivieren von Übermittlungserweiterungen  
+##  <a name="disable-delivery-extensions"></a><a name="bkmk_disable_extensions"></a> Deaktivieren von Übermittlungserweiterungen  
  Alle auf einem Berichtsserver installierten Übermittlungserweiterungen sind für jeden Benutzer verfügbar, der Berechtigungen zum Erstellen eines Abonnements für einen vorhandenen Bericht hat. Die folgenden Übermittlungserweiterungen sind verfügbar und werden automatisch konfiguriert:  
   
 -   Windows-Dateifreigabe  

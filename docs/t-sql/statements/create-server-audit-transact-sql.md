@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983004"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
@@ -89,7 +89,7 @@ CREATE SERVER AUDIT audit_name
  Gibt die maximale Anzahl der Dateien an, die im Dateisystem zusätzlich zur aktuellen Datei beibehalten werden. Der Wert *MAX_ROLLOVER_FILES* muss eine Ganzzahl oder UNLIMITED sein. Der Standardwert ist UNLIMITED. Dieser Parameter wird ausgewertet, sobald die Überwachung neu gestartet wird (z.B. wenn die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] neu gestartet oder die Überwachung deaktiviert und wieder aktiviert wird) oder wenn eine neue Datei benötigt wird, da MAXSIZE erreicht wurde. Wenn die Anzahl der Dateien bei der Auswertung des Werts von *MAX_ROLLOVER_FILES* die Einstellung für *MAX_ROLLOVER_FILES* überschreitet, wird die älteste Datei gelöscht. Wenn die Einstellung für *MAX_ROLLOVER_FILES* 0 lautet, wird folglich bei jeder Auswertung der Einstellung für *MAX_ROLLOVER_FILES* eine neue Datei erstellt. Bei der Auswertung der Einstellung für *MAX_ROLLOVER_FILES* wird nur eine Datei automatisch gelöscht. Wenn der Wert von *MAX_ROLLOVER_FILES* also sinkt, verringert sich die Anzahl der Dateien nur dann, wenn alte Dateien manuell gelöscht werden. Der Maximalwert für die Anzahl der Dateien beträgt 2.147.483.647.  
   
  MAX_FILES =*integer*  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Gibt die maximale Anzahl von Überwachungsdateien an, die erstellt werden können. Führt kein Rollover zur ersten Datei aus, wenn die Grenze erreicht wird. Wenn die MAX_FILES-Grenze erreicht wird, schlägt jede Aktion fehl, die zusätzliche Überwachungsereignisse nach sich zieht.  
   
@@ -110,18 +110,18 @@ Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
  FAIL_OPERATION  
  Datenbankaktionen schlagen fehl, wenn sie überwachte Ereignisse verursachen. Aktionen, die keine überwachten Ereignisse verursachen, können fortgesetzt werden, es können jedoch keine überwachten Ereignisse auftreten. Bei der Überwachung wird weiterhin versucht, Ereignisse zu protokollieren. Sie wird fortgesetzt, wenn die Fehlerbedingung aufgelöst wurde. Verwenden Sie diese Option, wenn die Beibehaltung einer vollständigen Überwachung wichtiger als der Vollzugriff auf [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist.  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.
 
  AUDIT_GUID =*uniqueidentifier*  
  Um Szenarien, wie beispielsweise Datenbankspiegelung unterstützen zu können, benötigt eine Überwachung einen bestimmten GUID, der dem GUID in der gespiegelten Datenbank entspricht. Der GUID kann, nachdem die Überwachung erstellt wurde, nicht mehr geändert werden.  
   
  predicate_expression  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Gibt den Prädikatausdruck an, mit dessen Hilfe bestimmt wird, ob ein Ereignis verarbeitet werden muss. Die Länge von Prädikatausdrücken ist auf 3000 Zeichen beschränkt, wodurch die Länge von Zeichenfolgenargumenten eingeschränkt wird.  
   
  event_field_name  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Ist der Name des Ereignisfelds, das die Prädikatquelle identifiziert. Überwachungsfelder werden in [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) beschrieben. Mit Ausnahme von `file_name`, `audit_file_offset` und `event_time` können alle Felder gefiltert werden.  
 
@@ -136,12 +136,12 @@ Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 
  number  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Ein numerischer Typ einschließlich **decimal**. Einschränkungen stellen der verfügbare physische Speicher oder eine Zahl dar, die zu groß ist, um als 64-Bit-Ganzzahl dargestellt werden zu können.  
   
  ' string '  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Entweder eine ANSI- oder Unicode-Zeichenfolge, die vom Prädikatvergleich verlangt wird. Für die Prädikatvergleichsfunktionen wird keine implizite Zeichenfolgentypkonvertierung ausgeführt. Die Übergabe des falschen Typs führt zu einem Fehler.  
   
@@ -174,7 +174,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     WITH ( QUEUE_DELAY = 1000,  ON_FAILURE = SHUTDOWN);  
 ```  
   
-###  <a name="ExampleWhere"></a> C. Erstellen einer Serverüberwachung, die eine WHERE-Klausel enthält  
+###  <a name="c-creating-a-server-audit-containing-a-where-clause"></a><a name="ExampleWhere"></a> C. Erstellen einer Serverüberwachung, die eine WHERE-Klausel enthält  
  Im folgenden Beispiel werden eine Datenbank, ein Schema und zwei Tabellen für das Beispiel erstellt. Die Tabelle mit dem Namen `DataSchema.SensitiveData` enthält vertrauliche Daten. Der Zugriff auf die Tabelle muss bei der Überwachung aufgezeichnet werden. Die Tabelle `DataSchema.GeneralData` beinhaltet keine vertraulichen Daten. Die Datenbank-Überwachungsspezifikation überwacht den Zugriff auf alle Objekte im `DataSchema`-Schema. Die Serverüberwachung wird mit einer WHERE-Klausel erstellt, die die Serverüberwachung ausschließlich auf die `SensitiveData`-Tabelle beschränkt. Bei der Serverüberwachung wird angenommen, dass unter `C:\SQLAudit` ein Überwachungsordner vorhanden ist.  
   
 ```sql  

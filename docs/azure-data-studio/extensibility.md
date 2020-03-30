@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: b263c3890ab9a03295212c723adad4a431fbf04f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76928009"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Erste Schritte mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]-Erweiterbarkeit
+# <a name="getting-started-with-name-sos-extensibility"></a>Erste Schritte mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]-Erweiterbarkeit
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] verfügt über mehrere Erweiterbarkeitsmechanismen, um die Benutzeroberfläche anzupassen und diese Anpassungen der gesamten Benutzercommunity zur Verfügung zu stellen. Die Kern der [!INCLUDE[name-sos](../includes/name-sos.md)]-Plattform basiert auf Visual Studio Code, sodass die meisten Erweiterbarkeits-APIs von Visual Studio Code verfügbar sind. Außerdem haben wir zusätzliche Erweiterbarkeitspunkte für Aktivitäten bereitgestellt, die für die Datenverwaltung spezifisch sind.
 

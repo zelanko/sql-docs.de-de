@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286064"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
@@ -35,14 +35,14 @@ Bevor Sie einen Big-Data-Cluster für SQL Server 2019 bereitstellen können, mü
 - Azure Data Studio
 - [Datenvirtualisierungserweiterung](../azure-data-studio/data-virtualization-extension.md) für Azure Data Studio
 
-## <a id="prereqs"></a> Anforderungen an Kubernetes
+## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Anforderungen an Kubernetes
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] benötigen für den Server und Client mindestens die Kubernetes-Version v1.13 (kubectl).
 
 > [!NOTE]
 > Die Kubernetes-Nebenversionen von Server und Client dürfen nach oben oder unten höchstens um die Zahl 1 abweichen. Weitere Informationen finden Sie unter [Kubernetes-Versionshinweise und SKU-Richtlinien für Versionsabweichungen](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
-### <a id="kubernetes"></a> Einrichten des Kubernetes-Clusters
+### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Einrichten des Kubernetes-Clusters
 
 Wenn Sie bereits über einen Kubernetes-Cluster verfügen, der die oben genannten Anforderungen erfüllt, können Sie direkt mit dem [Bereitstellungsschritt](#deploy) fortfahren. In diesem Abschnitt werden grundlegende Kubernetes-Kenntnisse vorausgesetzt.  Ausführliche Informationen finden Sie in der [Kubernetes-Dokumentation](https://kubernetes.io/docs/home).
 
@@ -75,13 +75,13 @@ Für die meisten Big Data-Cluster-Bereitstellungen ist persistenter Speicher erf
 
 Bei einer Bereitstellung in AKS müssen Sie keinen Speicher einrichten. AKS bietet integrierte Speicherklassen mit dynamischer Bereitstellung. Sie können die Speicherklasse (`default` oder `managed-premium`) in der Bereitstellungskonfigurationsdatei anpassen. Für die integrierten Profile wird eine `default`-Speicherklasse verwendet. Wenn Sie eine Bereitstellung auf einem Kubernetes-Cluster durchführen, der mit `kubeadm` bereitgestellt wurde, müssen Sie sicherstellen, dass ausreichend Speicher für einen Cluster des gewünschten Umfangs verfügbar und konfiguriert ist. Wenn Sie die Nutzung Ihres Speichers konfigurieren möchten, sollten Sie das tun, bevor Sie fortfahren. Weitere Informationen finden Sie unter [Datenpersistenz mit SQL Server-Big Data-Clustern in Kubernetes](concept-data-persistence.md).
 
-## <a id="deploy"></a> Übersicht über die Bereitstellung
+## <a name="deployment-overview"></a><a id="deploy"></a> Übersicht über die Bereitstellung
 
 Die meisten Einstellungen für Big-Data-Cluster werden in einer JSON-Konfigurationsdatei für Bereitstellungen definiert. Sie können ein Standardbereitstellungsprofil für AKS und Kubernetes-Cluster, die mit `kubeadm` erstellt wurden, verwenden. Alternativ können Sie auch eine eigene Konfigurationsdatei für Bereitstellungen während der Einrichtung anpassen. Aus Sicherheitsgründen werden Authentifizierungseinstellungen mithilfe von Umgebungsvariablen übermittelt.
 
 In den folgenden Abschnitten finden Sie weitere Informationen darüber, wie Sie Bereitstellungen von Big-Data-Clustern konfigurieren. Außerdem lernen Sie Beispiele für übliche Anpassungen kennen. Sie können jederzeit die benutzerdefinierte Konfigurationsdatei für Bereitstellungen mit einem Editor wie beispielsweise VS Code bearbeiten.
 
-## <a id="configfile"></a> Standardkonfigurationen
+## <a name="default-configurations"></a><a id="configfile"></a> Standardkonfigurationen
 
 Die Bereitstellungsoptionen für Big-Data-Cluster werden in JSON-Konfigurationsdateien definiert. Sie können mit der Anpassung der Clusterbereitstellung über die integrierten Bereitstellungsprofile beginnen, die in `azdata`verfügbar sind. 
 
@@ -125,7 +125,7 @@ In diesem Szenario werden Sie aufgefordert, Informationen wie Kennwörter anzuge
 > [!IMPORTANT]
 > Der Standardname für den Big Data-Cluster ist `mssql-cluster`. Sie benötigen diesen, um `kubectl`-Befehle ausführen zu können, mit denen der Kubernetes-Namespace mithilfe des `-n`-Parameters angeben wird.
 
-## <a id="customconfig"></a> Benutzerdefinierte Konfigurationen
+## <a name="custom-configurations"></a><a id="customconfig"></a> Benutzerdefinierte Konfigurationen
 
 Es ist auch möglich, die Bereitstellung an die Workloads anzupassen, die Sie ausführen möchten. Beachten Sie, dass Sie die Skalierung (Anzahl der Replikate) oder Speichereinstellungen für Big Data-Cluster-Dienste nach den Bereitstellungen nicht ändern können. Daher müssen Sie die Bereitstellungskonfiguration sorgfältig planen, um Kapazitätsprobleme zu vermeiden. Führen Sie die folgenden Schritte aus, um die Bereitstellung anzupassen:
 
@@ -165,7 +165,7 @@ Es ist auch möglich, die Bereitstellung an die Workloads anzupassen, die Sie au
 
 > Weitere Informationen zur Struktur einer Konfigurationsdatei für Bereitstellungen finden Sie in der zugehörigen [Referenzdokumentation](reference-deployment-config.md). Weitere Konfigurationsbeispiele finden Sie unter [Konfigurieren von Bereitstellungseinstellungen für Big-Data-Cluster](deployment-custom-configuration.md).
 
-## <a id="env"></a> Umgebungsvariablen
+## <a name="environment-variables"></a><a id="env"></a> Umgebungsvariablen
 
 Die folgenden Umgebungsvariablen werden für Sicherheitseinstellungen verwendet, die nicht in einer Konfigurationsdatei für Bereitstellungen gespeichert werden. Beachten Sie, dass Docker-Einstellungen mit Ausnahme der Anmeldeinformationen in der Konfigurationsdatei festgelegt werden können.
 
@@ -208,11 +208,11 @@ Beachten Sie die folgenden Richtlinien:
 - Setzen Sie das Kennwort immer in doppelte Anführungszeichen, wenn es Sonderzeichen enthält. Sie können für `AZDATA_PASSWORD` eine beliebige Zeichenfolge festlegen. Das Kennwort muss jedoch ausreichend komplex sein und darf nicht die Zeichen `!`, `&` oder `'` enthalten. Doppelte Anführungszeichen können nur in Bash-Befehlen als Trennzeichen verwendet werden.
 - Die `AZDATA_USERNAME`-Anmeldung ist ein Systemadministrator auf der SQL Server-Masterinstanz und wird bei der Einrichtung erstellt. Nach dem Erstellen Ihres SQL Server-Containers wird die von Ihnen festgelegte `AZDATA_PASSWORD` Umgebungsvariable sichtbar, wenn Sie sie in dem Container ausführen`echo $AZDATA_PASSWORD`. Es wird empfohlen, dass Sie das Kennwort aus Sicherheitsgründen ändern.
 
-## <a id="unattended"></a>Unbeaufsichtigtes Installieren
+## <a name="unattended-install"></a><a id="unattended"></a>Unbeaufsichtigtes Installieren
 
 Bei einer unbeaufsichtigten Bereitstellung müssen Sie alle erforderlichen Umgebungsvariablen festlegen, eine Konfigurationsdatei verwenden und den Befehl `azdata bdc create` mit dem `--accept-eula yes`-Parameter aufrufen. Die Beispiele im vorherigen Abschnitt veranschaulichen die Syntax für eine unbeaufsichtigte Installation.
 
-## <a id="monitor"></a> Überwachen der Bereitstellung
+## <a name="monitor-the-deployment"></a><a id="monitor"></a> Überwachen der Bereitstellung
 
 Während des Clusterbootstraps wird der Bereitstellungsstatus im Befehlsfenster des Clients zurückgegeben. Im Verlauf des Bereitstellungsprozesses sollten mehrere Wartemeldungen für den Controllerpod angezeigt werden:
 
@@ -239,7 +239,7 @@ Cluster deployed successfully.
 > [!TIP]
 > Der Standardname für den bereitgestellten Big-Data-Cluster ist `mssql-cluster`, falls er nicht durch eine benutzerdefinierte Konfiguration geändert wird.
 
-## <a id="endpoints"></a> Abrufen von Endpunkten
+## <a name="retrieve-endpoints"></a><a id="endpoints"></a> Abrufen von Endpunkten
 
 Nachdem das Bereitstellungsskript erfolgreich ausgeführt wurde, können Sie die Adressen der externen Endpunkte für den Big Data-Cluster mithilfe der folgenden Schritte abrufen.
 
@@ -293,7 +293,7 @@ Sie können auch alle Dienstendpunkte, die für den Cluster bereitgestellt wurde
 kubectl get svc -n <your-big-data-cluster-name>
 ```
 
-## <a id="status"></a> Überprüfen des Clusterstatus
+## <a name="verify-the-cluster-status"></a><a id="status"></a> Überprüfen des Clusterstatus
 
 Nach der Bereitstellung können Sie den Status des Clusters mit dem Befehl [azdata bdc status show](reference-azdata-bdc-status.md) überprüfen.
 
@@ -423,7 +423,7 @@ Sql: ready                                                                      
 
 Zusätzlich zu `azdata` können Sie auch Azure Data Studio verwenden, um Endpunkt- und Statusinformationen zu ermitteln. Weitere Informationen darüber, wie Sie mit `azdata` und Azure Data Studio den Clusterstatus abrufen können, finden Sie unter [Anzeigen des Status eines Big Data-Clusters](view-cluster-status.md).
 
-## <a id="connect"></a> Herstellen einer Verbindung mit dem Cluster
+## <a name="connect-to-the-cluster"></a><a id="connect"></a> Herstellen einer Verbindung mit dem Cluster
 
 Weitere Informationen darüber, wie Sie eine Verbindung mit dem Big-Data-Cluster herstellen, finden Sie unter [Herstellen einer Verbindung mit einem Big-Data-Cluster für SQL Server über Azure Data Studio](connect-to-big-data-cluster.md).
 

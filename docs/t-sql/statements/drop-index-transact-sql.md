@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982165"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -174,7 +174,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ **)**  | _filegroup\_name_ |  **"** default **"**  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] unterstützt „default“ als Dateigruppenname.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] unterstützt „default“ als Dateigruppenname.  
   
  Gibt einen Speicherort an, an den die Datenzeilen verschoben werden, die sich zurzeit auf der Blattebene des gruppierten Index befinden. Die Daten werden in einen Heap an den neuen Speicherort verschoben. Als neuen Speicherort können Sie entweder ein Partitionsschema oder eine Dateigruppe angeben, das Partitionsschema oder die Dateigruppe muss jedoch bereits vorhanden sein. MOVE TO ist für indizierte Sichten oder nicht gruppierte Indizes nicht gültig. Wird kein Partitionsschema oder keine Dateigruppe angegeben, dann befindet sich die daraus resultierende Tabelle entsprechend der Definition für den gruppierten Index im Partitionsschema oder in der Dateigruppe.  
   
@@ -188,7 +188,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
  Für den Spaltennamen im Schema gibt es keine Beschränkung auf die Spalten in der Indexdefinition. Jede beliebige Spalte in der Basistabelle kann angegeben werden.  
   
  *filegroup_name*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt eine Dateigruppe als Speicherort für die resultierende Tabelle an. Wird kein Speicherort angegeben und ist die Tabelle nicht partitioniert, dann wird die resultierende Tabelle in die Dateigruppe aufgenommen, in der sich der gruppierte Index befindet. Die Dateigruppe muss bereits vorhanden sein.  
   
@@ -199,7 +199,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt werden, wie in MOVE TO **"** default **"** oder MOVE TO **[** default **]** . Wenn **"** default **"** angegeben ist, muss die QUOTED_IDENTIFIER-Option in der aktuellen Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"** }  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt einen Speicherort an, an den die FILESTREAM-Tabelle verschoben wird, die sich zurzeit auf der Blattebene des gruppierten Index befindet. Die Daten werden in einen Heap an den neuen Speicherort verschoben. Als neuen Speicherort können Sie entweder ein Partitionsschema oder eine Dateigruppe angeben, das Partitionsschema oder die Dateigruppe muss jedoch bereits vorhanden sein. FILESTREAM ON ist für indizierte Sichten oder nicht gruppierte Indizes unzulässig. Wird kein Partitionsschema angegeben, werden die Daten in demselben Partitionsschema platziert, das für den gruppierten Index definiert war.  
   
@@ -301,7 +301,7 @@ GO
 ### <a name="d-dropping-a-clustered-index-online-and-moving-the-table-to-a-new-filegroup"></a>D: Onlinelöschen eines gruppierten Indexes und Verschieben der Tabelle in eine neue Dateigruppe  
  Im folgenden Beispiel wird ein gruppierter Index online gelöscht, und die daraus resultierende Tabelle (Heap) wird in die Dateigruppe `NewGroup` verschoben, wofür die `MOVE TO` -Klausel verwendet wird. Die Katalogsichten `sys.indexes`, `sys.tables`und `sys.filegroups` werden abgefragt, um die Platzierung von Index und Tabelle in den Dateigruppen vor und nach der Verschiebung zu prüfen. (Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie die Syntax DROP INDEX IF EXISTS verwenden.)  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 ```  
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.  
@@ -374,7 +374,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
 ### <a name="g-dropping-a-clustered-index-on-a-filestream-table"></a>G. Löschen eines gruppierten Indexes in einer FILESTREAM-Tabelle  
  Im folgenden Beispiel wird ein gruppierter Index online gelöscht, und die daraus resultierende Tabelle (Heap) und die FILESTREAM-Daten werden in das `MyPartitionScheme`-Partitionsschema verschoben, wofür die `MOVE TO`-Klausel und die `FILESTREAM ON`-Klausel verwendet werden.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 ```  
 DROP INDEX PK_MyClusteredIndex   

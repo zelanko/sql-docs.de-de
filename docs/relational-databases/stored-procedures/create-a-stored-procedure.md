@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 73aee045b57ca7fde08c24adca4a3d4267d06c61
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934072"
 ---
 # <a name="create-a-stored-procedure"></a>Erstellen einer gespeicherten Prozedur
@@ -32,17 +32,17 @@ In diesem Thema wird das Erstellen einer gespeicherten [!INCLUDE[tsql](../../inc
   
 -   **So erstellen Sie eine Prozedur mithilfe von:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die CREATE PROCEDURE-Berechtigung in der Datenbank und die ALTER-Berechtigung auf dem Schema, in dem die Prozedur erstellt wird.  
   
-##  <a name="Procedures"></a> So erstellen Sie eine gespeicherte Prozedur  
+##  <a name="how-to-create-a-stored-procedure"></a><a name="Procedures"></a> So erstellen Sie eine gespeicherte Prozedur  
  Sie können eine der folgenden Anwendungen verwenden:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So erstellen Sie eine Prozedur im Objekt-Explorer**  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
@@ -55,11 +55,11 @@ In diesem Thema wird das Erstellen einer gespeicherten [!INCLUDE[tsql](../../inc
   
 5.  Geben Sie im Dialogfeld **Werte für Vorlagenparameter angeben** die folgenden Werte für die angezeigten Parameter ein.  
   
-    |Parameter|value|  
+    |Parameter|Wert|  
     |---------------|-----------|  
     |Autor|*Ihr Name*|  
     |Erstellt am|*Das heutige Datum*|  
-    |Beschreibung|Gibt Mitarbeiterdaten zurück.|  
+    |BESCHREIBUNG|Gibt Mitarbeiterdaten zurück.|  
     |Prozedurname|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|**nvarchar**(50)|  
@@ -92,7 +92,7 @@ In diesem Thema wird das Erstellen einer gespeicherten [!INCLUDE[tsql](../../inc
 > [!WARNING]  
 >  Überprüfen Sie alle Benutzereingaben. Verketten Sie keine Benutzereingaben, bevor Sie sie überprüft haben. Führen Sie niemals Befehle aus, die sich aus nicht überprüften Benutzereingaben zusammensetzen.  
   
-###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So erstellen Sie eine Prozedur im Abfrage-Editor**  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  

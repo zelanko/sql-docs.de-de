@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892587"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Upgraden von PowerPivot für SharePoint
@@ -58,7 +58,7 @@ ms.locfileid: "68892587"
   
 -   Das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerPivot.msi**) wird parallel zu den Vorgängerversionen installiert. Das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Add-In wird z.B. im Ordner `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`installiert.  
   
-##  <a name="bkmk_prereq"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Voraussetzungen  
  **Berechtigungen**  
   
 -   Sie müssen Farmadministrator sein, um für eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Installation ein Upgrade durchzuführen. Sie müssen lokaler Administrator sein, um SQL Server-Setup auszuführen.  
@@ -75,7 +75,7 @@ ms.locfileid: "68892587"
   
 -   Wenn in der vorhandenen Installation SharePoint 2010 ausgeführt wird, installieren Sie SharePoint 2010 Service Pack 2, bevor Sie ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Weitere Informationen finden Sie unter [Service Pack 2 für Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Verwenden Sie den PowerShell-Befehl `(Get-SPfarm).BuildVersion.ToString()` , um die Version zu überprüfen. Eine Zuordnung von Buildversion und Freigabedatum finden Sie unter [SharePoint 2010-Buildnummern](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
   
-##  <a name="bkmk_uprgade_sharepoint2013"></a> Aktualisieren einer vorhandenen SharePoint 2013-Farm  
+##  <a name="upgrade-an-existing-sharepoint-2013-farm"></a><a name="bkmk_uprgade_sharepoint2013"></a> Aktualisieren einer vorhandenen SharePoint 2013-Farm  
  Gehen Sie wie folgt vor, um ein Upgrade für eine [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Bereitstellung in SharePoint 2013 auszuführen:  
   
  ![Upgrade von PowerPivot für SharePoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "Upgrade von PowerPivot für SharePoint 2013")  
@@ -139,7 +139,7 @@ ms.locfileid: "68892587"
   
 5.  Überprüfen Sie, ob das Upgrade erfolgreich ausgeführt wurde, indem Sie die Schritte nach dem Upgrade durchführen und die Version der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server in der Farm überprüfen. Weitere Informationen finden Sie unter [Überprüfungstasks nach dem Upgrade](#verify) in diesem Artikel und im folgenden Abschnitt.  
   
-##  <a name="bkmk_uprgade_sharepoint2010"></a> Aktualisieren einer vorhandenen SharePoint 2010-Farm  
+##  <a name="upgrade-an-existing-sharepoint-2010-farm"></a><a name="bkmk_uprgade_sharepoint2010"></a> Aktualisieren einer vorhandenen SharePoint 2010-Farm  
  Um ein Upgrade für eine [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Bereitstellung in SharePoint 2010 auszuführen, gehen Sie wie folgt vor:  
   
  ![Upgrade von PowerPivot für SharePoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "Upgrade von PowerPivot für SharePoint 2010")  
@@ -231,13 +231,13 @@ ms.locfileid: "68892587"
   
      Überprüfen Sie bei allen anderen Fehlern die ULS-Protokolle. Weitere Informationen finden Sie unter [Konfigurieren und Anzeigen der SharePoint-Protokolldateien und -Diagnoseprotokollierung &#40;Power Pivot für SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
   
-##  <a name="bkmk_workbooks"></a> Arbeitsmappen  
+##  <a name="workbooks"></a><a name="bkmk_workbooks"></a> Arbeitsmappen  
  Beim Upgrade eines Servers werden die auf ihm laufenden [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen nicht unbedingt upgegradet. Ältere Arbeitsmappen, die in der vorherigen Version von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel erstellt worden sind, können auch weiterhin unter Verwendung der im diesem vorherigen Release verfügbaren Funktionen verwendet werden. Arbeitsmappen bleiben funktionsbereit, da ein aktualisierter Server die Version vom OLE DB-Anbieter für Analysis Services besitzt, die ein Teil der vorherigen Installation war.  
   
-##  <a name="bkmk_datarefresh"></a> Datenaktualisierung  
+##  <a name="data-refresh"></a><a name="bkmk_datarefresh"></a> Datenaktualisierung  
  Das Upgrade wirkt sich auf Datenaktualisierungsvorgänge aus. Die geplante Datenaktualisierung ist auf dem Server nur für Arbeitsmappen mit derselben Serverversion verfügbar. Wenn Sie Arbeitsmappen der früheren Version hosten, funktioniert die Datenaktualisierung ggf. nicht mehr für diese Arbeitsmappen. Um die Datenaktualisierung erneut zu aktivieren, müssen Sie die Arbeitsmappen aktualisieren. Sie können jede Arbeitsmappe manuell in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel upgraden oder das automatische Upgrade für die Datenaktualisierungsfunktion in SharePoint 2010 aktivieren. Das automatische Upgrade aktualisiert eine Arbeitsmappe vor dem Ausführen der Datenaktualisierung auf die aktuelle Version, was dazu führt, dass der Zeitplan für Datenaktualisierungsvorgänge eingehalten wird.  
   
-##  <a name="bkmk_verify_versions"></a> Überprüfen der Versionen von PowerPivot-Komponenten und -Diensten  
+##  <a name="verify-the-versions-of-power-pivot-components-and-services"></a><a name="bkmk_verify_versions"></a> Überprüfen der Versionen von PowerPivot-Komponenten und -Diensten  
  Alle [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst- und Analysis Services-Instanzen müssen die gleiche Version aufweisen. Um sicherzustellen, dass alle Serverkomponenten über die gleiche Version verfügen, überprüfen Sie die Versionsinformationen auf folgende Punkte:  
   
 ### <a name="verify-the-version-of-power-pivot-solutions-and-the-power-pivot-system-service"></a>Überprüfen der Version von PowerPivot-Lösungen und des PowerPivot-Systemdiensts  
@@ -312,14 +312,14 @@ Get-PowerPivotSystemService
   
 3.  Überprüfen Sie, ob Sie über die Version 13.0.\<Buildnummer> verfügen.  
   
-##  <a name="geminifarm"></a> Upgraden von mehreren PowerPivot für SharePoint-Servern in einer SharePoint-Farm  
+##  <a name="upgrading-multiple-power-pivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a> Upgraden von mehreren PowerPivot für SharePoint-Servern in einer SharePoint-Farm  
  In einer Topologie mit mehreren Servern, in der sich mehr als ein [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Server befindet, müssen alle Serverinstanzen und -komponenten der gleichen Version entsprechen. Der Server, auf dem die neueste Version der Software ausgeführt wird, bestimmt die Ebene aller Server in der Farm. Wenn Sie nur einige der Server aktualisieren, sind die Server, auf denen frühere Versionen der Software ausgeführt werden, nicht mehr verfügbar, bis sie ebenfalls aktualisiert werden.  
   
  Nachdem Sie den ersten Server aktualisiert haben, sind zusätzliche Server, die noch nicht aktualisiert worden sind, **nicht mehr verfügbar**. Verfügbarkeit wird wiederhergestellt, wenn alle Server auf der gleichen Ebene laufen.  
   
  SQL Server-Setup führt ein Upgrade der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungsdateien auf dem physischen Computer durch. Um jedoch ein Upgrade der von der Farm verwendeten Lösungen durchzuführen, müssen Sie das in einem vorherigen Abschnitt dieses Artikels beschriebene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Konfigurationstool verwenden.  
   
-##  <a name="qfe"></a> Anwenden eines QFEs auf eine PowerPivot-Instanz in der Farm  
+##  <a name="applying-a-qfe-to-a-power-pivot-instance-in-the-farm"></a><a name="qfe"></a> Anwenden eines QFEs auf eine PowerPivot-Instanz in der Farm  
  Durch das Patchen eines [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Server werden vorhandene Programmdateien auf eine neuere Version aktualisiert, die eine Lösung für ein bestimmtes Problem enthält. Wenn ein QFE für eine Topologie mit mehreren Servern übernommen wird, gibt es keinen primären Server, mit dem Sie beginnen müssen. Sie können mit jedem beliebigen Server beginnen, sofern das gleiche QFE auch für alle anderen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server in der Farm übernommen wird.  
   
  Beim Anwenden des QFEs müssen Sie auch einen Konfigurationsschritt ausführen, durch den die Serverversionsinformationen in der Konfigurationsdatenbank der Farm aktualisiert werden. Die Version des gepatchten Servers wird zur neuen erwarteten Version für die Farm. Solange das QFE nicht angewendet und für alle Computer konfiguriert wurde, können die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Instanzen, die nicht über das QFE verfügen, keine Anforderungen für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten verarbeiten.  
@@ -343,7 +343,7 @@ Get-PowerPivotSystemService
   
  In der Zentraladministration können Sie auf der Seite **Produkt- und Patchinstallationsstatus überprüfen** im Abschnitt Update- und Patchverwaltung die Versionsinformationen für Dienste in der Farm überprüfen.  
   
-##  <a name="verify"></a> Überprüfungstasks nach dem Upgrade  
+##  <a name="post-upgrade-verification-tasks"></a><a name="verify"></a> Überprüfungstasks nach dem Upgrade  
  Führen Sie nach dem Abschließen des Upgrades die folgenden Schritte durch, um zu prüfen, ob der Server funktionstüchtig ist.  
   
 |Aufgabe|Link|  

@@ -22,10 +22,10 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ade0d29ed20bb8b39d9ac2a1762977abe24d8f65
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293514"
 ---
 # <a name="ado-net-source"></a>ADO NET-Quelle
@@ -115,7 +115,7 @@ ms.locfileid: "71293514"
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |Tabelle oder Sicht|Rufen Sie Daten aus einer Tabelle oder Sicht in der [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Datenquelle ab.|  
 |SQL-Befehl|Rufen Sie mit SQL-Abfrage Daten aus der [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Datenquelle ab.|  

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 883f554c214809260f69392ad072b1971a34f2da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287821"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor
@@ -58,7 +58,7 @@ ms.locfileid: "76287821"
   
 -   [Festlegen der Schwellenwerte und Warnungen für eine Momentaufnahmeveröffentlichung](#Snapshot)  
   
-##  <a name="Transactional"></a> So legen Sie die Schwellenwerte und Warnungen für eine Transaktionsveröffentlichung fest  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a> So legen Sie die Schwellenwerte und Warnungen für eine Transaktionsveröffentlichung fest  
   
 1.  Erweitern Sie im linken Bereich eine Verlegergruppe, erweitern Sie einen Verleger, und klicken Sie dann auf eine Veröffentlichung.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76287821"
   
 5.  Klicken Sie auf **Schließen**.  
   
-##  <a name="Merge"></a> Festlegen der Schwellenwerte und Warnungen für eine Mergeveröffentlichung  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a> Festlegen der Schwellenwerte und Warnungen für eine Mergeveröffentlichung  
   
 1.  Erweitern Sie im linken Bereich eine Verlegergruppe, erweitern Sie einen Verleger, und klicken Sie dann auf eine Veröffentlichung.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "76287821"
   
 5.  Klicken Sie auf **Schließen**.  
   
-##  <a name="Snapshot"></a> Festlegen der Schwellenwerte und Warnungen für eine Momentaufnahmeveröffentlichung  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a> Festlegen der Schwellenwerte und Warnungen für eine Momentaufnahmeveröffentlichung  
   
 1.  Erweitern Sie im linken Bereich eine Verlegergruppe, erweitern Sie einen Verleger, und klicken Sie dann auf eine Veröffentlichung.  
   

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286914"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server für Linux mit dem mssql-conf-Tool
@@ -90,7 +90,7 @@ ms.locfileid: "79286914"
 
 * In den Beispielen wird für die Ausführung von mssql-conf der vollständige Pfad **/opt/mssql/bin/mssql-conf** verwendet. Wenn Sie zu diesem Pfad navigieren, müssen Sie mssql-conf im aktuellen Verzeichnis **./mssql-conf** ausführen.
 
-## <a id="agent"></a> Aktivieren des SQL Server-Agents
+## <a name="enable-sql-server-agent"></a><a id="agent"></a> Aktivieren des SQL Server-Agents
 
 Durch die Einstellung **sqlagent.enabled** wird der [SQL Server-Agent](sql-server-linux-run-sql-server-agent-job.md) aktiviert. Standardmäßig ist der SQL Server-Agent deaktiviert. Wenn **sqlagent.enabled** nicht in der Einstellungsdatei „mssql.conf“ vorhanden ist, wird von SQL Server intern angenommen, dass der SQL Server-Agent deaktiviert ist.
 
@@ -108,7 +108,7 @@ Führen Sie die folgenden Schritte aus, um diese Einstellung zu ändern:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="collation"></a> Ändern der SQL Server-Sortierung
+## <a name="change-the-sql-server-collation"></a><a id="collation"></a> Ändern der SQL Server-Sortierung
 
 Mit der Option **set-collation** kann ein anderer unterstützter Sortierungswert angegeben werden.
 
@@ -128,7 +128,7 @@ Mit der Option **set-collation** kann ein anderer unterstützter Sortierungswert
 
 Führen Sie die [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)-Funktion aus, um eine Liste der unterstützten Sortierungen anzuzeigen: `SELECT Name from sys.fn_helpcollations()`.
 
-## <a id="customerfeedback"></a> Konfigurieren von Einstellungen für Kundenfeedback
+## <a name="configure-customer-feedback"></a><a id="customerfeedback"></a> Konfigurieren von Einstellungen für Kundenfeedback
 
 Mit der Einstellung **telemetry.customerfeedback** können Sie festlegen, ob SQL Server Feedback an Microsoft sendet. Standardmäßig ist dieser Wert für alle Editionen auf **true** festgelegt. Führen Sie die folgenden Befehle aus, um den Wert zu ändern:
 
@@ -149,7 +149,7 @@ Mit der Einstellung **telemetry.customerfeedback** können Sie festlegen, ob SQL
 
 Weitere Informationen finden Sie unter [Kundenfeedback für SQL Server für Linux](sql-server-linux-customer-feedback.md) und [SQL Server-Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkID=868444).
 
-## <a id="datadir"></a> Ändern des Standardspeicherorts für das Verzeichnis der Datenbank- oder Protokolldateien
+## <a name="change-the-default-data-or-log-directory-location"></a><a id="datadir"></a> Ändern des Standardspeicherorts für das Verzeichnis der Datenbank- oder Protokolldateien
 
 Mit den Einstellungen **filelocation.defaultdatadir** und **filelocation.defaultlogdir** können Sie den Speicherort festlegen, an dem die neuen Datenbank- und Protokolldateien erstellt werden. Der Standardspeicherort ist /var/opt/mssql/data. Führen Sie die folgenden Schritte aus, um diese Einstellungen zu ändern:
 
@@ -187,7 +187,7 @@ Mit den Einstellungen **filelocation.defaultdatadir** und **filelocation.default
 1. Auch dieser Befehl setzt voraus, dass das Verzeichnis /tmp/log vorhanden ist und dem Benutzer sowie der Gruppe **mssql** zugeordnet ist.
 
 
-## <a id="masterdatabasedir"></a> Ändern des Standardspeicherorts für das Verzeichnis der Masterdatenbank-Dateien
+## <a name="change-the-default-master-database-file-directory-location"></a><a id="masterdatabasedir"></a> Ändern des Standardspeicherorts für das Verzeichnis der Masterdatenbank-Dateien
 
 Mit der Einstellung **filelocation.masterdatafile** und **filelocation.masterlogfile** können Sie einen anderen Speicherort festlegen, an dem die SQL Server-Engine nach Masterdatenbank-Dateien sucht. Der Standardspeicherort ist /var/opt/mssql/data.
 
@@ -238,7 +238,7 @@ Führen Sie die folgenden Schritte aus, um diese Einstellungen zu ändern:
    > [!NOTE]
    > Wenn SQL Server die Dateien „master.mdf“ und „mastlog.ldf“ nicht im angegebenen Verzeichnis findet, wird eine auf Vorlagen basierende Kopie der Systemdatenbanken automatisch im angegebenen Verzeichnis erstellt. Anschließend wird SQL Server gestartet. Metadaten wie Benutzerdatenbanken, Serveranmeldungen, Serverzertifikate, Verschlüsselungsschlüssel, SQL Server-Agent-Aufträge oder alte Systemadministrator-Anmeldekennwörter werden jedoch nicht in der neuen Masterdatenbank aktualisiert. Wenn Sie die vorhandenen Metadaten weiterhin verwenden möchten, müssen Sie SQL Server anhalten, die alten Dateien „master.mdf“ und „mastlog.ldf“ an den angegebenen Speicherort verschieben und SQL Server anschließend neu starten.
  
-## <a id="masterdatabasename"></a> Ändern der Masterdatenbank-Dateinamen
+## <a name="change-the-name-of-master-database-files"></a><a id="masterdatabasename"></a> Ändern der Masterdatenbank-Dateinamen
 
 Mit der Einstellung **filelocation.masterdatafile** und **filelocation.masterlogfile** können Sie einen anderen Speicherort festlegen, an dem die SQL Server-Engine nach Masterdatenbank-Dateien sucht. Außerdem können Sie damit den Namen der Masterdatenbank- und Protokolldateien ändern. 
 
@@ -273,7 +273,7 @@ Führen Sie die folgenden Schritte aus, um diese Einstellungen zu ändern:
    sudo systemctl start mssql-server
    ```
 
-## <a id="dumpdir"></a> Ändern des Standardspeicherorts für das Speicherabbildverzeichnis
+## <a name="change-the-default-dump-directory-location"></a><a id="dumpdir"></a> Ändern des Standardspeicherorts für das Speicherabbildverzeichnis
 
 Mit der Einstellung **filelocation.defaultdumpdir** können Sie einen anderen Standardspeicherort festlegen, an dem die Speicher- und SQL-Abbilder erstellt werden, wenn es zu einem Absturz kommt. Standardmäßig werden diese Dateien im Verzeichnis /var/opt/mssql/log erstellt.
 
@@ -304,7 +304,7 @@ Verwenden Sie die folgenden Befehle, um einen neuen Speicherort festzulegen:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="errorlogdir"></a> Ändern des Standardspeicherorts für das Verzeichnis der Fehlerprotokolldateien
+## <a name="change-the-default-error-log-file-directory-location"></a><a id="errorlogdir"></a> Ändern des Standardspeicherorts für das Verzeichnis der Fehlerprotokolldateien
 
 Mit der Einstellung **filelocation.errorlogfile** können Sie einen anderen Speicherort festlegen, an dem Dateien für Fehlerprotokolle, Standardprofiler-Ablaufverfolgungen, XE-Systemintegritätssitzungen und Hekaton-XE-Sitzungen erstellt werden. Der Standardspeicherort ist /var/opt/mssql/log. Das Verzeichnis, in dem die SQL-Fehlerprotokolldatei abgelegt wird, wird zum Standardverzeichnis für andere Protokolle.
 
@@ -336,7 +336,7 @@ Gehen Sie wie folgt vor, um diese Einstellungen zu ändern:
    ```
 
 
-## <a id="backupdir"></a> Ändern des Standardspeicherorts für das Sicherungsverzeichnis
+## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> Ändern des Standardspeicherorts für das Sicherungsverzeichnis
 
 Mit der Einstellung **filelocation.defaultbackupdir** können Sie einen anderen Standardspeicherort festlegen, an dem Sicherungsdateien erstellt werden. Standardmäßig werden diese Dateien im Verzeichnis /var/opt/mssql/data erstellt.
 
@@ -367,7 +367,7 @@ Verwenden Sie die folgenden Befehle, um einen neuen Speicherort festzulegen:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="coredump"></a> Festlegen der Einstellungen für Kernspeicherabbilder
+## <a name="specify-core-dump-settings"></a><a id="coredump"></a> Festlegen der Einstellungen für Kernspeicherabbilder
 
 Wenn in einem SQL Server-Prozess eine Ausnahme auftritt, erstellt SQL Server ein Speicherabbild.
 
@@ -400,14 +400,14 @@ Die Erfassung in der ersten Phase wird durch die Einstellung **coredump.coredump
     | **filtered** | Für „filtered“ wird ein subtraktionsbasierter Entwurf verwendet, bei dem sämtlicher Speicher im Prozess erfasst wird, falls er nicht explizit ausgeschlossen wird. Interne Vorgänge in SQL PAL und in der Hostumgebung werden berücksichtigt. Bestimmte Bereiche werden jedoch nicht im Speicherabbild erfasst.
     | **full** | Durch „full“ wird ein vollständiges Prozessspeicherabbild erstellt, das sämtliche Bereiche in **/proc/$pid/maps** einschließt. Dieser Vorgang wird nicht durch die Einstellung **coredump.captureminiandfull** gesteuert. |
 
-## <a id="dbmail"></a> Festlegen des Standardprofils von Datenbank-E-Mails für SQL Server für Linux
+## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> Festlegen des Standardprofils von Datenbank-E-Mails für SQL Server für Linux
 
 Mit der Einstellung **sqlpagent.databasemailprofile** können Sie das Standardprofil von Datenbank-E-Mails für E-Mail-Benachrichtigungen festlegen.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
-## <a id="hadr"></a> Hochverfügbarkeit
+## <a name="high-availability"></a><a id="hadr"></a> Hochverfügbarkeit
 
 Mit der Option **hadr.hadrenabled** können Sie Verfügbarkeitsgruppen auf Ihrer SQL Server-Instanz aktivieren. Mit dem folgenden Befehl wird die Einstellung **hadr.hadrenabled** auf 1 festgelegt, wodurch Verfügbarkeitsgruppen aktiviert werden. Sie müssen SQL Server neu starten, damit die Einstellung übernommen wird.
 
@@ -422,7 +422,7 @@ Wie Sie diese Einstellung für Verfügbarkeitsgruppen nutzen, wird in den folgen
 - [Konfigurieren von Leseskalierungs-Verfügbarkeitsgruppen für SQL Server für Linux](sql-server-linux-availability-group-configure-rs.md)
 
 
-## <a id="localaudit"></a> Festlegen des Verzeichnisses für lokale Überwachungen
+## <a name="set-local-audit-directory"></a><a id="localaudit"></a> Festlegen des Verzeichnisses für lokale Überwachungen
 
 Mit der Einstellung **telemetry.userrequestedlocalauditdirectory** werden lokale Überwachungen aktiviert. Zusätzlich können Sie das Verzeichnis festlegen, in dem die Protokolle für lokale Überwachungen erstellt werden.
 
@@ -453,7 +453,7 @@ Mit der Einstellung **telemetry.userrequestedlocalauditdirectory** werden lokale
 
 Weitere Informationen finden Sie unter [Kundenfeedback für SQL Server für Linux](sql-server-linux-customer-feedback.md).
 
-## <a id="lcid"></a> Ändern des SQL Server-Gebietsschemas
+## <a name="change-the-sql-server-locale"></a><a id="lcid"></a> Ändern des SQL Server-Gebietsschemas
 
 Mit der Einstellung **language.lcid** können Sie ein anderes SQL Server-Gebietsschema festlegen. Dazu nutzen geben Sie einen der unterstützten Gebietsschemabezeichner (LCID) an. 
 
@@ -469,7 +469,7 @@ Mit der Einstellung **language.lcid** können Sie ein anderes SQL Server-Gebiets
    sudo systemctl restart mssql-server
    ```
 
-## <a id="memorylimit"></a> Festlegen des Arbeitsspeicherlimits
+## <a name="set-the-memory-limit"></a><a id="memorylimit"></a> Festlegen des Arbeitsspeicherlimits
 
 Mit der Einstellung **memory.memorylimitmb** können Sie festlegen, wie viel verfügbarer physischer Speicher (in MB) für SQL Server bereitgestellt wird. Der Standardwert ist 80 % des physischen Speichers.
 
@@ -487,7 +487,7 @@ Mit der Einstellung **memory.memorylimitmb** können Sie festlegen, wie viel ver
 
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="msdtc"></a> Konfigurieren von MS DTC
+## <a name="configure-msdtc"></a><a id="msdtc"></a> Konfigurieren von MS DTC
 
 Mit den Einstellungen **network.rpcport** und **distributedtransaction.servertcpport** können Sie den Microsoft Distributed Transaction Coordinator (MS DTC) konfigurieren. Führen Sie die folgenden Befehle aus, um diese Einstellungen zu ändern:
 
@@ -530,7 +530,7 @@ Für mssql-conf sind einige weitere Einstellungen verfügbar, mit denen Sie MS D
 ::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-eula"></a> Akzeptieren der Lizenzbedingungen für ML Services
+## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> Akzeptieren der Lizenzbedingungen für ML Services
 
 Wenn Sie der Datenbank-Engine [R- oder Python-Pakete für maschinelles Lernen](sql-server-linux-setup-machine-learning.md) hinzufügen möchten, müssen Sie die Lizenzbedingungen für die Open-Source-Verteilungen von R und Python akzeptieren. In der folgenden Tabelle werden alle verfügbaren Befehle oder Optionen aufgelistet, die sich auf die mlservices-Lizenzbedingungen beziehen. Für R und Python wird je nach Installation der gleiche Lizenzbedingungsparameter verwendet.
 
@@ -560,7 +560,7 @@ accepteulaml = Y
 :::moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-outbound-access"></a> Aktivieren des Zugriffs auf ausgehenden Netzwerkdatenverkehr
+## <a name="enable-outbound-network-access"></a><a id="mlservices-outbound-access"></a> Aktivieren des Zugriffs auf ausgehenden Netzwerkdatenverkehr
 
 In [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) haben R-, Python- und Java-Erweiterungen standardmäßig keinen Zugriff auf ausgehenden Netzwerkdatenverkehr. Sie können mit mssql-conf die boolesche Eigenschaft „outboundnetworkaccess“ festlegen, um ausgehende Anforderungen zu aktivieren.
 
@@ -587,7 +587,7 @@ outboundnetworkaccess = 1
 ```
 :::moniker-end
 
-## <a id="tcpport"></a> Ändern des TCP-Ports
+## <a name="change-the-tcp-port"></a><a id="tcpport"></a> Ändern des TCP-Ports
 
 Mit der Einstellung **network.tcpport** können Sie einen anderen TCP-Port festlegen, auf dem SQL Server nach Verbindungen lauscht. In der Standardeinstellung ist dies der Port 1433. Führen Sie die folgenden Befehle aus, um den Port zu ändern:
 
@@ -609,7 +609,7 @@ Mit der Einstellung **network.tcpport** können Sie einen anderen TCP-Port festl
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
    ```
 
-## <a id="tls"></a> Festlegen von TLS-Einstellungen
+## <a name="specify-tls-settings"></a><a id="tls"></a> Festlegen von TLS-Einstellungen
 
 Mit den folgenden Optionen können Sie TLS für eine SQL Server-Instanz konfigurieren, die unter Linux ausgeführt wird.
 
@@ -624,7 +624,7 @@ Mit den folgenden Optionen können Sie TLS für eine SQL Server-Instanz konfigur
 
 Ein Beispiel für die Verwendung der TLS-Einstellungen finden Sie unter [Verschlüsseln von SQL Server für Linux-Verbindungen](sql-server-linux-encrypted-connections.md).
 
-## <a id="traceflags"></a> Aktivieren oder Deaktivieren von Ablaufverfolgungsflags
+## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> Aktivieren oder Deaktivieren von Ablaufverfolgungsflags
 
 Mit der Option **traceflag** können Sie Ablaufverfolgungsflags für den Start des SQL Server-Diensts aktivieren oder deaktivieren. Verwenden Sie die folgenden Befehle, um ein Ablaufverfolgungsflag zu aktivieren oder zu deaktivieren:
 
@@ -679,7 +679,7 @@ sudo cat /var/opt/mssql/mssql.conf
 Wenn in der Datei bestimmte Einstellungen nicht aufgeführt sind, werden für diese die Standardwerte verwendet. Der nächste Abschnitt enthält eine **mssql.conf**-Beispieldatei.
 
 
-## <a id="mssql-conf-format"></a> mssql.conf-Format
+## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> mssql.conf-Format
 
 Die Datei **/var/opt/mssql/mssql.conf**, deren Inhalt weiter unten aufgeführt ist, enthält für jede Einstellung ein Beispiel. Sie können dieses Format verwenden, um bei Bedarf Änderungen an der Datei **mssql.conf** manuell vorzunehmen. Wenn Sie so vorgehen, müssen Sie SQL Server neu starten, damit die Änderungen übernommen werden. Wenn Sie die Datei **mssql.conf** mit Docker verwenden möchten, muss Docker [die Daten dauerhaft speichern](sql-server-linux-configure-docker.md). Fügen Sie dazu zuerst Ihrem Hostverzeichnis eine vollständige **mssql.conf**-Datei hinzu, und führen Sie dann den Container aus. Ein Beispiel hierfür finden Sie unter [Kundenfeedback](sql-server-linux-customer-feedback.md).
 

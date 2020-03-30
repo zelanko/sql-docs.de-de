@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
 ms.openlocfilehash: 145ca5c64223e4d16b327e4caf23458a479b87a9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74491912"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Startseite für die Clientprogrammierung in Microsoft SQL Server
@@ -198,7 +198,7 @@ Einige andere Konnektivitätstreiber verwenden intern ODBC.
 Bei den ODBC-Inhalten in diesem Abschnitt geht es hauptsächlich um den Zugriff auf SQL Server oder Azure SQL-Datenbank über C++. In der folgenden Tabelle finden Sie eine allgemeine Übersicht über die wichtigsten Dokumentationsmaterialien für ODBC.
 
 
-| Bereich | Unterbereich | Beschreibung |
+| Bereich | Unterbereich | BESCHREIBUNG |
 | :--- | :------ | :---------- |
 | [ODBC für C++](./odbc/index.md) | Hauptseite unserer Dokumentation. |
 | [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Informationen zur Verwendung von ODBC auf den Linux- oder MacOS-Betriebssystemen. |
@@ -251,7 +251,7 @@ Sie können Python für die Interaktion mit SQL Server verwenden.
 
 #### <a name="documentation"></a>Dokumentation
 
-| Bereich | Beschreibung |
+| Bereich | BESCHREIBUNG |
 | :--- | :---------- |
 | [Python für SQL Server](./python/index.md) | Hauptseite unserer Dokumentation. |
 | [pymssql-Treiber](./python/pymssql/index.md) | Microsoft wartet und testet den pymssql-Treiber nicht.<br /><br />Der pymssql-Verbindungstreiber ist eine einfache Schnittstelle für SQL-Datenbanken, die in Python-Programmen verwendet wird. pymssql setzt auf FreeTDS auf, um eine Python-Datenbank-API-Schnittstelle (PEP-249) zu Microsoft SQL Server bereitzustellen. |

@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903853"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Erstellen und Verwalten von Volltextkatalogen
@@ -26,7 +26,7 @@ Ein Volltextkatalog ist ein logischer Container für eine Gruppe von Volltextind
 
 Ein Volltextkatalog ist ein virtuelles Objekt und gehört keiner Dateigruppe an.
   
-##  <a name="creating"></a> Erstellen eines Volltextkatalogs  
+##  <a name="create-a-full-text-catalog"></a><a name="creating"></a> Erstellen eines Volltextkatalogs  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Erstellen eines Volltextkatalogs mit Transact-SQL
 Verwenden Sie [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Beispiel:
@@ -52,7 +52,7 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="props"></a> Abrufen der Eigenschaften eines Volltextkatalogs  
+##  <a name="get-the-properties-of-a-full-text-catalog"></a><a name="props"></a> Abrufen der Eigenschaften eines Volltextkatalogs  
 Verwenden Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion **FULLTEXTCATALOGPROPERTY**, um den Wert verschiedener Eigenschaften des Volltextkatalogs abzurufen. Weitere Informationen finden Sie unter [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 
 Führen Sie z.B. die folgende Abfrage zum Abrufen der Anzahl der Indizes im Volltextkatalog `Catalog1` aus.
@@ -66,7 +66,7 @@ GO
   
 In der folgenden Tabelle sind die Eigenschaften aufgeführt, die sich auf Volltextkataloge beziehen. Diese Informationen sind für die Verwaltung und Problembehandlung der Volltextsuche möglicherweise hilfreich. 
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Einstellung für die Unterscheidung nach Akzent.|
 |**ImportStatus**|Gibt an, ob der Volltextkatalog importiert wird.|  
@@ -77,7 +77,7 @@ In der folgenden Tabelle sind die Eigenschaften aufgeführt, die sich auf Vollte
 |**PopulateStatus**|Gibt den Auffüllungsstatus an.<br /><br /> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**UniqueKeyCount**|Anzahl der eindeutigen Schlüssel im Volltextkatalog.| 
 
-##  <a name="rebuildone"></a> Erneutes Erstellen eines Volltextkatalogs  
+##  <a name="rebuild-a-full-text-catalog"></a><a name="rebuildone"></a> Erneutes Erstellen eines Volltextkatalogs  
 
 Führen Sie die Transact-SQL-Anweisung [ALTER FULLTEXT CATALOG... REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md) aus, oder führen Sie folgende Schritte in SQL Server Management Studio (SSMS) aus.
@@ -92,7 +92,7 @@ Führen Sie die Transact-SQL-Anweisung [ALTER FULLTEXT CATALOG... REBUILD](
   
 5.  Klicken Sie im Dialogfeld **Volltextkatalog neu erstellen** auf **Schließen**.  
    
-##  <a name="rebuildall"></a> Erneutes Erstellen aller Volltextkataloge für eine Datenbank  
+##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> Erneutes Erstellen aller Volltextkataloge für eine Datenbank  
 
 1.  Erweitern Sie in SSMS im Objekt-Explorer den Server, erweitern Sie **Datenbanken**, und erweitern Sie die Datenbank, die die erneut zu erstellenden Volltextkataloge enthält.  
   
@@ -106,7 +106,7 @@ Führen Sie die Transact-SQL-Anweisung [ALTER FULLTEXT CATALOG... REBUILD](
   
   
   
-##  <a name="removing"></a> Entfernen eines Volltextkatalogs aus einer Datenbank  
+##  <a name="remove-a-full-text-catalog-from-a-database"></a><a name="removing"></a> Entfernen eines Volltextkatalogs aus einer Datenbank  
 
 Führen Sie die Transact-SQL-Anweisung [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) aus, oder führen Sie die folgenden Schritte in SQL Server Management Studio (SSMS) aus.

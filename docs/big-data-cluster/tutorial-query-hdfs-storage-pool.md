@@ -11,10 +11,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: cf20e6b02e67655b7347a2a53d1e62501d357f30
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75226482"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Abfragen von HDFS in einem Big-Data-Cluster für SQL Server
@@ -36,7 +36,7 @@ Dieses 7-minütige Video führt Sie durch die Abfrage von HDFS-Daten in einem Bi
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-HDFS-data-inside-SQL-Server-big-data-cluster/player?WT.mc_id=dataexposed-c9-niner]
 
-## <a id="prereqs"></a> Voraussetzungen
+## <a name="prerequisites"></a><a id="prereqs"></a> Voraussetzungen
 
 - [Big-Data-Tools](deploy-big-data-tools.md)
    - **kubectl**

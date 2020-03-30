@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 237ec09347ab139aabcc9f475f5e3b64aba0f054
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73633001"
 ---
 # <a name="create-a-workload-group"></a>Erstellen einer Arbeitsauslastungsgruppe
@@ -28,9 +28,9 @@ ms.locfileid: "73633001"
   
 -   **Erstellen einer Arbeitsauslastungsgruppe mit:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="LimitationsRestrictions"></a> Einschränkungen
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Einschränkungen
 
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
@@ -38,11 +38,11 @@ ms.locfileid: "73633001"
   
  Bei der Indexerstellung darf mehr Arbeitsbereichsspeicher verwendet werden, als ursprünglich zugewiesen, um eine bessere Leistung zu erzielen. Die Ressourcenkontrolle unterstützt diese besondere Behandlung, die ursprüngliche und alle weiteren Speicherzuweisungen werden jedoch durch die Einstellungen für Arbeitsauslastungsgruppe und Ressourcenpool begrenzt.  
   
-###  <a name="Permissions"></a> Berechtigungen
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
 
  Zum Erstellen einer Arbeitsauslastungsgruppe ist die CONTROL SERVER-Berechtigung erforderlich.  
   
-##  <a name="CreRPProp"></a> Erstellen einer Arbeitsauslastungsgruppe in SQL Server Management Studio
+##  <a name="create-a-workload-group-using-sql-server-management-studio"></a><a name="CreRPProp"></a> Erstellen einer Arbeitsauslastungsgruppe in SQL Server Management Studio
 
  **So erstellen Sie Arbeitsauslastungsgruppen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73633001"
   
 7.  Klicken Sie auf **OK**, um die Änderungen zu speichern.  
 
-##  <a name="CreRPTSQL"></a> Erstellen einer Arbeitsauslastungsgruppe mit Transact-SQL  
+##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreRPTSQL"></a> Erstellen einer Arbeitsauslastungsgruppe mit Transact-SQL  
  **So erstellen Sie Arbeitsauslastungsgruppen in [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Führen Sie die CREATE WORKLOAD GROUP-Anweisung aus, und geben Sie dabei die festzulegenden Eigenschaftswerte an.  

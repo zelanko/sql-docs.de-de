@@ -10,10 +10,10 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-mabarw
 ms.openlocfilehash: 3edba0cde94d8661eed053319142ce7f84a70613
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265168"
 ---
 # <a name="idle-connection-resiliency"></a>Resilienz von Verbindungen im Leerlauf
@@ -23,7 +23,7 @@ Die [Verbindungsresilienz](../odbc/windows/connection-resiliency-in-the-windows-
 
 Die Verbindungsresilienz ist mit zwei Verbindungsschlüsselwörtern implementiert, die zu Verbindungszeichenfolgen hinzugefügt werden können: **ConnectRetryCount** und **ConnectRetryInterval**.
 
-|Schlüsselwort|Werte|Standard|Beschreibung|
+|Schlüsselwort|Werte|Standard|BESCHREIBUNG|
 |-|-|-|-|
 |**ConnectRetryCount**| Ganze Zahl von 0 bis 255|1|Die maximale Anzahl von Versuchen zum Wiederherstellen einer unterbrochenen Verbindung, bevor aufgegeben wird. Standardmäßig wird nur ein Versuch unternommen, eine Verbindung nach einer Unterbrechung wiederherzustellen. Der Wert 0 bedeutet, dass kein Wiederherstellungsversuch unternommen wird.|
 |**ConnectRetryInterval**| Ganze Zahl von 1 bis 60|1| Die Zeit in Sekunden zwischen den Versuchen zum Wiederherstellen einer Verbindung. Die Anwendung versucht sofort nach dem Erkennen einer unterbrochenen Verbindung, diese wiederherzustellen, und wartet dann die mit **ConnectRetryInterval** angegebene Anzahl von Sekunden, bevor sie es erneut versucht. Dieses Schlüsselwort wird ignoriert, wenn **ConnectRetryCount** gleich 0 ist.

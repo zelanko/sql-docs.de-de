@@ -11,10 +11,10 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74833582"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>SQL Server-Datendateien in Microsoft Azure
@@ -109,7 +109,7 @@ Weitere Informationen finden Sie unter [Verwalten des anonymen Lesezugriffs auf 
 - SQL Server auf einem virtuellen Azure-Computer: Wenn Sie [SQL Server auf einem virtuellen Azure-Computer installieren](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), installieren Sie SQL Server 2016, oder aktualisieren Sie Ihre vorhandene Instanz. Sie können auch einen neuen virtuellen Computer in Azure erstellen, indem Sie ein Plattformimage von SQL Server 2016 verwenden.
 
   
-###  <a name="bkmk_Limitations"></a> Einschränkungen  
+###  <a name="limitations"></a><a name="bkmk_Limitations"></a> Einschränkungen  
   
 - In der aktuellen Version dieser Funktion wird das Speichern von **FileStream** -Daten im Azure-Speicher nicht unterstützt. Sie können **FileStream**-Daten in einer Datenbank speichern, die auch in Azure Storage gespeicherte Datendateien enthält. Allerdings müssen alle FileStream-Datendateien im lokalen Speicher gespeichert werden.  Da sich FileStream-Daten im lokalen Speicher befinden müssen, können sie nicht mit Azure Storage zwischen Computern verschoben werden. Aus diesem Grund empfehlen wir, weiterhin [herkömmliche Techniken](../../relational-databases/blob/move-a-filestream-enabled-database.md) zum Verschieben von FileStream-Daten zwischen verschiedenen Computern zu verwenden.  
   
@@ -154,7 +154,7 @@ Weitere Informationen finden Sie unter [Verwalten des anonymen Lesezugriffs auf 
 
 - Die neue **int** -Spalte **credential_id**in der **sys.master_files** -Systemsicht. Die Spalte **credential_id** ermöglicht die Rückverweisung von Azure Storage-Datendateien auf `sys.credentials`, um die dafür erstellten Anmeldeinformationen abzurufen. Sie können die Spalte zur Problembehandlung verwenden, etwa wenn Anmeldeinformationen nicht gelöscht werden können, weil sie von einer Datenbankdatei verwendet werden.  
   
-##  <a name="bkmk_Troubleshooting"></a> Problembehandlung für SQL Server-Datendateien in Microsoft Azure  
+##  <a name="troubleshooting-for-sql-server-data-files-in-microsoft-azure"></a><a name="bkmk_Troubleshooting"></a> Problembehandlung für SQL Server-Datendateien in Microsoft Azure  
  Um Fehler aufgrund von nicht unterstützten Funktionen oder Einschränkungen zu vermeiden, sollten Sie sich zunächst unter [Einschränkungen](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations)informieren.  
   
  In der folgenden Liste sind Fehler aufgeführt, die bei Verwendung von SQL Server-Datendateien mit dem Azure-Speicher auftreten können.  

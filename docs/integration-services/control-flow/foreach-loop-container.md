@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298299"
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
@@ -205,7 +205,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **Enumerator**  
  Wählen Sie den Enumeratortyp aus der Liste aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Foreach-Datei-Enumerator**|Zählt Dateien auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Datei-Enumerator** die dynamischen Optionen angezeigt.|  
 |**Foreach-Element-Enumerator**|Zählt Werte in einem Element auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Element-Enumerator** die dynamischen Optionen angezeigt.|  
@@ -347,7 +347,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **DocumentSourceType**  
  Hiermit wählen Sie den Quelltyp des XML-Dokuments aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
@@ -367,7 +367,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **EnumerationType**  
  Hiermit wählen Sie einen Enumerationstyp aus der Liste aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Navigator**|Die Enumeration erfolgt mithilfe eines XPathNavigator.|  
 |**Node**|Zählt Knoten auf, die von einem XPath-Vorgang zurückgegeben wurden.|  
@@ -377,7 +377,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **OuterXPathStringSourceType**  
  Hiermit wählen Sie den Quelltyp der XPath-Zeichenfolge aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar: 
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
@@ -400,7 +400,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **InnerXPathStringSourceType**  
  Hiermit wählen Sie den Quelltyp der inneren XPath-Zeichenfolge aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direkteingabe**|Legt ein XML-Dokument als Quelle fest.|  
 |**Dateiverbindung**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
@@ -433,7 +433,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
   
  **Verwandte Themen:** [Das Dialogfeld „SMO-Enumeration auswählen“](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
-####  <a name="ForeachHDFSFile"></a> Enumerator = Foreach-HDFS-Datei-Enumerator  
+####  <a name="enumerator--foreach-hdfs-file-enumerator"></a><a name="ForeachHDFSFile"></a> Enumerator = Foreach-HDFS-Datei-Enumerator  
  Der **Foreach-HDFS-Datei-Enumerator** ermöglicht einem SSIS-Paket das Aufzählen von HDFS-Dateien am angegebenen HDFS-Speicherort. Der Name jeder HDFS-Datei kann in einer Variablen gespeichert und in Tasks innerhalb des Foreach-Schleifencontainers verwendet werden.  
   
  **Hadoop-Verbindungs-Manager**  
@@ -457,7 +457,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
   
  Erstellen oder wählen Sie auf der Seite **Variablenzuordnungen** eine Variable zum Speichern des Namens der aufgezählten HDFS-Datei.  
   
-####  <a name="ForeachAzureBlob"></a> Enumerator = Foreach-Azure-Blob-Enumerator  
+####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> Enumerator = Foreach-Azure-Blob-Enumerator  
  Der **Azure-Blob-Enumerator** ermöglicht einem SSIS-Paket das Aufzählen von Blobdateien am angegebenen Blobspeicherort. Sie können den Namen der aufgezählten Blobdatei in einer Variablen speichern und in Tasks innerhalb des Foreach-Schleifencontainers verwenden.  
   
  Der **Azure-Blob-Enumerator** ist eine Komponente des SQL Server Integration Services (SSIS) Feature Pack für Azure für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Laden Sie das Feature Pack [hier](https://go.microsoft.com/fwlink/?LinkID=626967)herunter.  
@@ -482,7 +482,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **Blobzeitraumfilter „von/bis“**  
  Geben Sie einen Filter für den Zeitraum an. Es werden Dateien aufgezählt, die nach **TimeRangeFrom**, aber vor **TimeRangeTo** geändert wurden. 
 
-####  <a name="ForeachAdlsFile"></a> Enumerator = Foreach-ADLS-Datei-Enumerator 
+####  <a name="enumerator--foreach-adls-file-enumerator"></a><a name="ForeachAdlsFile"></a> Enumerator = Foreach-ADLS-Datei-Enumerator 
 Der **ADLS-Datei-Enumerator** ermöglicht einem SSIS-Paket das Aufzählen von Dateien in Azure Data Lake Store. Sie können den vollständigen Pfad der aufgezählten Datei (mit einem Schrägstrich `/` als Präfix) in einer Variablen speichern und den Dateipfad in Tasks im Foreach-Schleifencontainer verwenden.
   
 **AzureDataLakeConnection**  
@@ -497,7 +497,7 @@ Gibt einen Dateinamensfilter an. Nur Dateien, deren Namen dem angegebenen Muster
 **SearchRecursively**  
 Gibt an, ob im angegebenen Verzeichnis rekursiv gesucht werden soll.  
 
-####  <a name="ForeachBlobFsFile"></a> Enumerator = Foreach-Data Lake Storage Gen2-Datei-Enumerator 
+####  <a name="enumerator--foreach-data-lake-storage-gen2-file-enumerator"></a><a name="ForeachBlobFsFile"></a> Enumerator = Foreach-Data Lake Storage Gen2-Datei-Enumerator 
 Der **Foreach-Data Lake Storage Gen2-Datei-Enumerator** ermöglicht einem SSIS-Paket das Aufzählen von Dateien in Azure Data Lake Storage Gen2.
 
 **AzureStorageConnection**  

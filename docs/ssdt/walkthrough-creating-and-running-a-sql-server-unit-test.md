@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242700"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests
@@ -42,7 +42,7 @@ Nachdem durch einen der Komponententests ein Fehler in einer gespeicherten Proze
 ## <a name="prerequisites"></a>Voraussetzungen  
 Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie in der Lage sein, eine Verbindung mit einem Datenbankserver (bzw. LocalDB-Datenbank) herzustellen, auf dem bzw. der Sie über Berechtigungen zum Erstellen und Bereitstellen einer Datenbank verfügen. Weitere Informationen finden Sie unter [Erforderliche Berechtigungen für Datenbankfunktionen von Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
-## <a name="CreateScript"></a>Erstellen eines Skripts, das ein Datenbankschema enthält  
+## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>Erstellen eines Skripts, das ein Datenbankschema enthält  
   
 #### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>So erstellen Sie ein Skript, aus dem ein Schema importiert werden kann  
   
@@ -222,7 +222,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie in der Lage se
   
     Als Nächstes erstellen Sie ein Datenbankprojekt und importieren das Schema aus dem erstellten Skript.  
   
-## <a name="CreateProjectAndImport"></a>Erstellen eines Datenbankprojekts und Importieren eines Schemas  
+## <a name="create-a-database-project-and-import-a-schema"></a><a name="CreateProjectAndImport"></a>Erstellen eines Datenbankprojekts und Importieren eines Schemas  
   
 #### <a name="to-create-a-database-project"></a>So erstellen Sie ein Datenbankprojekt  
   
@@ -263,10 +263,10 @@ Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie in der Lage se
   
 2.  Suchen Sie im **SQL Server-Objekt-Explorer** die Datenbank unter dem Knoten „Projekte“.  
   
-## <a name="DeployDBProj"></a>Bereitstellen in LocalDB  
+## <a name="deploying-to-localdb"></a><a name="DeployDBProj"></a>Bereitstellen in LocalDB  
 Wenn Sie F5 drücken, wird die Datenbank standardmäßig auf einer LocalDB-Datenbank bereitgestellt (bzw. veröffentlicht). Sie können den Datenbankpfad ändern, indem Sie auf der Eigenschaftenseite des Projekts die Registerkarte „Debuggen“ öffnen und die Verbindungszeichenfolge ändern.  
   
-## <a name="CreateDBUnitTests"></a>Erstellen von SQL Server-Komponententests  
+## <a name="create-sql-server-unit-tests"></a><a name="CreateDBUnitTests"></a>Erstellen von SQL Server-Komponententests  
   
 #### <a name="to-create-a-sql-server-unit-test-for-the-stored-procedures"></a>So erstellen Sie einen SQL Server-Komponententest für die gespeicherten Prozeduren  
   
@@ -297,7 +297,7 @@ Wenn Sie F5 drücken, wird die Datenbank standardmäßig auf einer LocalDB-Daten
   
     Das Testprojekt wird erstellt, und der SQL Server-Komponententest-Designer wird angezeigt. Als Nächstes aktualisieren Sie die Testlogik im Transact\-SQL-Skript der Komponententests.  
   
-## <a name="DefineTestLogic"></a>Definieren einer Testlogik  
+## <a name="define-test-logic"></a><a name="DefineTestLogic"></a>Definieren einer Testlogik  
 Die sehr einfache Datenbank enthält die beiden Tabellen „Customer“ und „Order“. Sie aktualisieren die Datenbank mithilfe der folgenden gespeicherten Prozeduren:  
   
 -   uspNewCustomer: Diese gespeicherte Prozedur fügt der Tabelle „Customer“ einen Datensatz hinzu, durch den die Spalten „YTDOrders“ und „YTDSales“ des Kunden auf 0 (null) festgelegt werden.  
@@ -699,7 +699,7 @@ Zu Testbeginn wird davon ausgegangen, dass die Datenbank einen fehlerfreien Zust
   
     Nun können Sie die Tests ausführen.  
   
-## <a name="RunTests"></a>Ausführen von SQL Server-Komponententests  
+## <a name="run-sql-server-unit-tests"></a><a name="RunTests"></a>Ausführen von SQL Server-Komponententests  
   
 #### <a name="to-run-the-sql-server-unit-tests"></a>So führen Sie SQL Server-Komponententests aus  
   
@@ -755,7 +755,7 @@ Zu Testbeginn wird davon ausgegangen, dass die Datenbank einen fehlerfreien Zust
   
     Der Test verläuft erfolgreich.  
   
-## <a name="NegativeTest"></a>Hinzufügen eines negativen Komponententests  
+## <a name="add-a-negative-unit-test"></a><a name="NegativeTest"></a>Hinzufügen eines negativen Komponententests  
 Sie können einen negativen Komponententest erstellen, um zu überprüfen, ob ein Test fehlschlägt, wenn er fehlschlagen sollte. Beispiel: Wenn Sie versuchen, eine bereits ausgeführte Bestellung zu stornieren, sollte dieser Test fehlschlagen. In diesem Teil der exemplarischen Vorgehensweise erstellen Sie einen negativen Komponententest für die gespeicherte Prozedur „Sales.uspCancelOrder“.  
   
 Zum Erstellen und Überprüfen eines negativen Tests führen Sie folgende Aufgaben aus:  

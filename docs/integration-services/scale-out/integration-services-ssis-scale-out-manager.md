@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082129"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out-Manager
@@ -33,7 +33,7 @@ Es gibt zwei Möglichkeiten, den Scale Out-Manager zu öffnen.
 
 Klicken Sie in Objekt-Explorer mit der rechten Maustaste auf **SSISDB**, und wählen Sie **Scale Out verwalten** aus.
 
-![Zentrales Hochskalieren verwalten](media/manage-scale-out.PNG)
+![Aufskalieren verwalten](media/manage-scale-out.PNG)
 
 > [!NOTE]
 > Es wird empfohlen, SSMS als Administrator auszuführen, da Sie für einige Verwaltungsoptionen für Scale Out wie das Hinzufügen eines Scale Out-Workers Administratorrechte benötigen.
@@ -95,7 +95,7 @@ Aktivieren Sie das Kontrollkästchen **Bestätigen**, und klicken Sie dann auf *
 Wählen Sie einen Scale Out-Worker aus, und klicken Sie im unteren Bereich der Liste „Scale Out-Worker“ auf **-** , um einen Scale Out-Worker zu löschen.
 
 ### <a name="enable-or-disable-a-scale-out-worker"></a>Aktivieren oder Deaktivieren eines Scale Out-Workers
-Wählen Sie einen Scale Out-Worker aus, und klicken Sie auf die Schaltfläche **Worker aktivieren** oder **Worker deaktivieren**, um einen Scale Out-Worker zu aktivieren bzw. zu deaktivieren. Wenn der Worker online ist, ändert sich dessen Status, der im Scale Out-Manager angezeigt wird, umgehend.
+Wählen Sie einen Scale Out-Worker aus, und klicken Sie auf die Schaltfläche **Worker aktivieren** oder **Worker deaktivieren**, um einen Scale Out-Worker zu aktivieren bzw. zu deaktivieren. Wenn der Worker online ist, ändert sich dessen Status, der im Scale Out-Manager angezeigt wird.
 
 ## <a name="edit-a-scale-out-worker-description"></a>Bearbeiten der Beschreibung eines Scale Out-Workers
 Wählen Sie einen Scale Out-Worker aus, und klicken Sie auf die Schaltfläche **Bearbeiten**, um die Beschreibung eines Scale Out-Workers zu bearbeiten. Klicken Sie auf **Speichern**, nachdem Sie die Beschreibung vollständig bearbeitet haben.

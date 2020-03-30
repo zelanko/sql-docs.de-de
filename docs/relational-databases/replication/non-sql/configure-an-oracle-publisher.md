@@ -13,10 +13,10 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907189"
 ---
 # <a name="configure-an-oracle-publisher"></a>Konfigurieren eines Oracle-Verlegers
@@ -89,7 +89,7 @@ ms.locfileid: "72907189"
   
  Im Oracle Universal Installer müssen Sie folgende Informationen angeben:  
   
-|Information|Beschreibung|  
+|Information|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |Oracle-Homeverzeichnis|Der Pfad zum Installationsverzeichnis für die Oracle-Software. Übernehmen Sie die Standardeinstellung (C:\oracle\ora90 oder Ähnliches), oder geben Sie einen anderen Pfad ein. Weitere Informationen zum Oracle-Homeverzeichnis finden Sie im Abschnitt zu Überlegungen zum Oracle-Homeverzeichnis weiter unten in diesem Thema.|  
 |Oracle-Homeverzeichnisname|Alias für den Pfad zum Oracle-Homeverzeichnis.|  
@@ -97,7 +97,7 @@ ms.locfileid: "72907189"
   
  Wenn der Oracle Universal Installer abgeschlossen ist, konfigurieren Sie die Netzwerkkonnektivität mit Net Configuration Assistant. Zur Konfiguration der Netzwerkkonnektivität müssen Sie vier Informationen eingeben. Der Oracle-Datenbankadministrator, der die Netzwerkkonfiguration beim Einrichten der Datenbank und der Überwachung (Listener) konfiguriert, kann Ihnen diese Informationen geben, falls Sie sie nicht selbst besitzen. Führen Sie folgende Schritte aus:  
   
-|Aktion|Beschreibung|  
+|Aktion|BESCHREIBUNG|  
 |------------|-----------------|  
 |Identifizieren Sie die Datenbank.|Es gibt zwei Methoden, mit denen Sie die Datenbank identifizieren können. Die erste Methode besteht darin, die Oracle SID (System Identifier) zu verwenden. Die SID ist in jeder Oracle-Version verfügbar. Die zweite Methode besteht darin, den Dienstnamen zu verwenden, der ab Oracle Version 8.0 verfügbar ist. Beide Methoden basieren auf einem Wert, der beim Erstellen der Datenbank konfiguriert wird. Wichtig ist dabei, dass Sie bei der Clientnetzwerkkonfiguration dieselbe Benennungsmethode verwenden wie der Administrator beim Konfigurieren des Listeners der Datenbank.|  
 |Identifizieren Sie den Datenbankalias.|Für den Zugriff auf die Oracle-Datenbank müssen Sie einen Netzwerkalias angeben. Dieser Alias muss auch angegeben werden, wenn Sie die Oracle-Datenbank auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler als Verleger identifizieren. Der Netzwerkalias ist im Wesentlichen ein Zeiger auf die während der Erstellung der Datenbank konfigurierte Remote-SID bzw. den Service Name. In manchen Oracle-Versionen und -Produkten wird er u. a. auch als "Net Service Name" oder "TNS Alias" bezeichnet. SQL*Plus fordert bei der Anmeldung zur Eingabe dieses Netzwerkalias als Parameter "Host String" auf.|  

@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727344"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Häufig gestellte Fragen zu Upgrade und Installation für SQL Server-Machine Learning oder R Server
@@ -92,7 +92,7 @@ Der Upgradevorgang läuft in der Regel folgendermaßen ab:
 
 Das Deinstallieren einer Vorabversion der SQL Server-Machine Learning-Komponenten kann ein komplexer Vorgang sein, der möglicherweise das Ausführen eines bestimmten Skripts erfordert. Wenden Sie sich an den technischen Support, um Unterstützung zu erhalten.
 
-###  <a name="bkmk_Uninstall"></a> Deinstallation vor dem Ausführen eines Upgrades von einer älteren Version von Microsoft R Server
+###  <a name="uninstall-prior-to-upgrading-from-an-older-version-of-microsoft-r-server"></a><a name="bkmk_Uninstall"></a> Deinstallation vor dem Ausführen eines Upgrades von einer älteren Version von Microsoft R Server
 
 Wenn Sie eine Vorabversion von Microsoft R Server installiert haben, müssen Sie diese deinstallieren, bevor Sie auf eine neuere Version aktualisieren können.
 

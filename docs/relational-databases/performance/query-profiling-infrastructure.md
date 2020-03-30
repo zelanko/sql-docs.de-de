@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77705905"
 ---
 # <a name="query-profiling-infrastructure"></a>Profilerstellungsinfrastruktur für Abfragen
@@ -50,7 +50,7 @@ Die folgenden Methoden zum globalen Erfassen von Ausführungsplaninformationen f
 
 Wenn Sie eine erweiterte Ereignissitzung ausführen, die das Ereignis *query_post_execution_showplan* verwendet, dann wird die [sys.dm_exec_query_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)-DMV ebenfalls mit Daten aufgefüllt. Dies ermöglicht Live-Abfragestatistiken für alle Sitzungen, indem der [Aktivitätsmonitor](../../relational-databases/performance-monitor/activity-monitor.md) verwendet oder die DMV direkt abgefragt wird. Weitere Informationen finden Sie unter [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md).
 
-## <a name="lwp"></a> Die einfache Profilerstellungsinfrastruktur für die Abfrageausführungsstatistik
+## <a name="the-lightweight-query-execution-statistics-profiling-infrastructure"></a><a name="lwp"></a> Die einfache Profilerstellungsinfrastruktur für die Abfrageausführungsstatistik
 
 Beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wurde eine neue *einfache Profilerstellungsinfrastruktur für die Abfrageausführungsstatistik* (oder **einfache Profilerstellung**) eingeführt. 
 

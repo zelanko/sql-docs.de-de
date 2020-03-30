@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256865"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Upgraden von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -162,7 +162,7 @@ Für Big Data-Cluster, die vor SQL Server 2019 GDR1 bereitgestellt wurden, ist k
    > [!IMPORTANT]
    > Für jedes Release ändert sich der Pfad zur `n-1`-Version von `azdata`. Auch wenn Sie zuvor `azdata` installiert haben, müssen Sie vor dem Erstellen des neuen Clusters vom aktuellen Pfad aus neu installieren.
 
-### <a id="azdataversion"></a> Überprüfen der azdata-Version
+### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> Überprüfen der azdata-Version
 
 Vergewissern Sie sich vor dem Bereitstellen eines neuen Big Data-Clusters, dass Sie die neueste Version von `azdata` mit dem `--version`-Parameter verwenden:
 

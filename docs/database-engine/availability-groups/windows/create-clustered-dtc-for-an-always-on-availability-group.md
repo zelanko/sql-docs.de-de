@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72586766"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Erstellen einer gruppierten DTC-Ressource für eine Always On-Verfügbarkeitsgruppe
@@ -332,7 +332,7 @@ GO
 > 
 > Die einzige Möglichkeit zum Aktivieren von DTC-Unterstützung für eine Verfügbarkeitsgruppe besteht darin, eine Verfügbarkeitsgruppe über Transact-SQL zu erstellen.
  
-## <a name="ClusterDTC"></a>8.  Vorbereiten von Clusterressourcen
+## <a name="8--prepare-cluster-resources"></a><a name="ClusterDTC"></a>8.  Vorbereiten von Clusterressourcen
 
 In diesem Skript werden die DTC-abhängigen Ressourcen vorbereitet: Datenträger und IP.  Der freigegebene Speicher wird dem Windows-Cluster hinzugefügt.  Es werden Netzwerkressourcen erstellt, und dann wird der DTC erstellt und als Ressource für die Verfügbarkeitsgruppe deklariert.  Führen Sie das folgende PowerShell-Skript auf `SQLNODE1` aus. Vielen Dank an [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) für das Skript.
 
@@ -479,7 +479,7 @@ $nodes = (Get-ClusterNode).Name;
 }
 ```  
 
-## <a name="11--cycle-the-includessnoversionincludesssnoversion-mdmd-service-for-each-instance"></a>11.  Beenden und Neustarten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Diensts für jede Instanz
+## <a name="11--cycle-the-ssnoversion-service-for-each-instance"></a>11.  Beenden und Neustarten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Diensts für jede Instanz
 
 Wenn der gruppierte DTC-Dienst vollständig konfiguriert ist, müssen Sie jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]in der Verfügbarkeitsgruppe beenden und neu starten, um sicherzustellen, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für die Nutzung dieses DTC-Diensts registriert ist.
 

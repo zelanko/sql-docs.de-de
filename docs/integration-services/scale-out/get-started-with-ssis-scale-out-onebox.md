@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: a2d6929277b7d024e45daaefd5cb41dccd495c63
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082161"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Erste Schritte mit Integration Services (SSIS) Scale Out auf einem einzelnen Computer
@@ -58,14 +58,14 @@ Im Dialogfeld **Katalog erstellen** ist standardmäßig die Option **Diesen Serv
 ## <a name="4-enable-a-scale-out-worker"></a>4. Aktivieren des Scale Out-Workers
 Klicken Sie in SSMS auf **SSISDB**, und wählen Sie **Scale Out verwalten** aus. 
 
-![Zentrales Hochskalieren verwalten](media/manage-scale-out.PNG)
+![Aufskalieren verwalten](media/manage-scale-out.PNG)
 
 Die App „Integration Services Scale Out-Manager“ wird geöffnet. Weitere Informationen finden Sie unter [Scale Out-Manager](integration-services-ssis-scale-out-manager.md).
 
 Wechseln Sie zu **Worker-Manager**, und wählen Sie den gewünschten Worker aus, um einen Scale Out-Worker zu aktivieren. Einige Worker sind standardmäßig deaktiviert. Klicken Sie zur Aktivierung des ausgewählten Workers auf **Worker aktivieren**.
 
-## <a name="5-run-packages-in-scale-out"></a>5. Ausführen von Paketen in horizontaler Hochskalierung
+## <a name="5-run-packages-in-scale-out"></a>5. Ausführen von Paketen in Scale Out
 Jetzt können Sie SSIS-Pakete in Scale Out ausführen. Weitere Informationen finden Sie unter [Run Packages in Integration Services (SSIS) Scale Out (Ausführen von Paketen für Scale Out mit SQL Server Integration Services (SSIS))](run-packages-in-integration-services-ssis-scale-out.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
--   [Hinzufügen eines SSIS Scale Out-Workers mit dem Scale Out-Manager](add-scale-out-worker.md)
+-   [Hinzufügen eines Scale Out-Workers mit dem Scale Out-Manager](add-scale-out-worker.md)

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 027373f9ff65d02c6bc2fb49079be3e1eda817bb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68050910"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Anzeigen der Abhängigkeiten einer gespeicherten Prozedur
@@ -30,13 +30,13 @@ ms.locfileid: "68050910"
   
 -   **So zeigen Sie die Abhängigkeiten einer Prozedur an mit:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Systemfunktion: **dm_sql_referencing_entities**  
  Erfordert die CONTROL-Berechtigung für die Entität, auf die verwiesen wird, und die SELECT-Berechtigung für sys.dm_sql_referencing_entities. Wenn es sich bei der Entität, auf die verwiesen wird, um eine Partitionsfunktion handelt, ist die CONTROL-Berechtigung für die Datenbank erforderlich. Standardmäßig wird die SELECT-Berechtigung der public-Rolle erteilt.  
   
@@ -46,14 +46,14 @@ ms.locfileid: "68050910"
  Objektkatalogsicht: **sql_expression_dependencies**  
  Erfordert die VIEW DEFINITION-Berechtigung für die Datenbank und die SELECT-Berechtigung für sys.sql_expression_dependencies für die Datenbank. Standardmäßig wird die SELECT-Berechtigung nur Mitgliedern der festen Datenbankrolle db_owner gewährt. Wenn einem anderen Benutzer die SELECT-Berechtigung und die VIEW DEFINITION-Berechtigung erteilt werden, kann dieser Berechtigte alle Abhängigkeiten in der Datenbank anzeigen.  
   
-##  <a name="Procedures"></a> So zeigen Sie die Abhängigkeiten einer gespeicherten Prozedur an  
+##  <a name="how-to-view-the-dependencies-of-a-stored-procedure"></a><a name="Procedures"></a> So zeigen Sie die Abhängigkeiten einer gespeicherten Prozedur an  
  Sie können eine der folgenden Anwendungen verwenden:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So zeigen Sie die Abhängigkeiten von einer Prozedur im Objekt-Explorer an**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
@@ -68,7 +68,7 @@ ms.locfileid: "68050910"
   
 6.  Klicken Sie auf **OK**.  
   
-###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So zeigen Sie die Abhängigkeiten einer Prozedur im Abfrage-Editor an**  
   
  Systemfunktion: **dm_sql_referencing_entities**  

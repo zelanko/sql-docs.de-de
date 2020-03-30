@@ -14,10 +14,10 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b0bd7ad95fcda039c6fd5a9299f4339d35b8a619
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67564130"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services-Konfigurationsdateien
@@ -34,7 +34,7 @@ ms.locfileid: "67564130"
   
 -   [Überblick über Konfigurationsdateien (SharePoint-Modus)](#bkmk_config_file_Summary_sharepoint_mode)  
   
-##  <a name="bkmk_config_file_Summary_native_mode"></a> Überblick über Konfigurationsdateien (einheitlicher Modus)  
+##  <a name="summary-of-configuration-files-native-mode"></a><a name="bkmk_config_file_Summary_native_mode"></a> Überblick über Konfigurationsdateien (einheitlicher Modus)  
  Die nachstehende Tabelle enthält eine Beschreibung der Speicherorte von Konfigurationseinstellungen. Die meisten Konfigurationseinstellungen werden in Konfigurationsdateien gespeichert, die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthalten sind. Standardmäßig wird folgendes Installationsverzeichnis verwendet:  
   
 ```
@@ -45,7 +45,7 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
   depending on the SSRS version
 ```  
   
-|Gespeichert in:|BESCHREIBUNG|Location|  
+|Gespeichert in:|BESCHREIBUNG|Position|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|Speichert die Konfigurationseinstellungen für Funktionsbereiche des Berichtsserverdiensts: der Berichts-Manager oder das Webportal, der Report Server-Webdienst und Hintergrundverarbeitung. Weitere Informationen zu den einzelnen Einstellungen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Speichert die Codezugriffs-Sicherheitsrichtlinien für die Servererweiterungen. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
@@ -57,7 +57,7 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
 |RSReportDesigner.config|Speichert Konfigurationseinstellungen für den Berichts-Designer. Weitere Informationen finden Sie unter [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<Laufwerk>:\Programme\Microsoft Visual Studio 10\Common7\IDE\PrivateAssemblies.|  
 |RSPreviewPolicy.config|Speichert die Codezugriffs-Sicherheitsrichtlinien für die Servererweiterungen, die während der Berichtsvorschau verwendet werden. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|C:\Programme\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssembliesr|  
   
-##  <a name="bkmk_config_file_Summary_sharepoint_mode"></a> Überblick über Konfigurationsdateien (SharePoint-Modus)  
+##  <a name="summary-of-configuration-files-sharepoint-mode"></a><a name="bkmk_config_file_Summary_sharepoint_mode"></a> Überblick über Konfigurationsdateien (SharePoint-Modus)  
  Die folgende Tabelle enthält eine Beschreibung der Konfigurationsdateien, die für einen Berichtsserver im SharePoint-Modus verwendet werden. Die meisten Konfigurationseinstellungen werden in Datenbanken der SharePoint-Dienstanwendung gespeichert. Weitere Informationen finden Sie unter [Reporting Services-SharePoint-Dienst und -Dienstanwendungen](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
   
  Standardmäßig wird das folgende Installationsverzeichnis für den SharePoint-Modus verwendet:  
@@ -67,7 +67,7 @@ Install path
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   
-|Gespeichert in:|Beschreibung|Location|  
+|Gespeichert in:|BESCHREIBUNG|Position|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|Speichert die Konfigurationseinstellungen für Funktionsbereiche des Berichtsserverdiensts: der Berichts-Manager oder das Webportal, der Report Server-Webdienst und Hintergrundverarbeitung. Weitere Informationen zu den einzelnen Einstellungen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Speichert die Codezugriffs-Sicherheitsrichtlinien für die Servererweiterungen. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  

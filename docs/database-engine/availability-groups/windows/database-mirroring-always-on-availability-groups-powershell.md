@@ -15,10 +15,10 @@ ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d8cc91d628c365d4f9092ca24a8b4df06f17adf2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252901"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>Erstellen eines Datenbankspiegelungsendpunkts für eine Verfügbarkeitsgruppe mithilfe von PowerShell
@@ -28,20 +28,20 @@ ms.locfileid: "75252901"
   
 
   
-##  <a name="Permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die CREATE ENDPOINT-Berechtigung oder die Mitgliedschaft in der festen Serverrolle "sysadmin". Weitere Informationen finden Sie unter [GRANT (Endpunktberechtigungen) &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
 
 > [!IMPORTANT]  
 >  Der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.  
   
-##  <a name="PowerShellProcedure"></a> PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
  **So erstellen Sie einen Datenbankspiegelungs-Endpunkt**  
   
 1.  Wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, für die Sie den Datenbankspiegelungs-Endpunkt erstellen möchten.  
   
 2.  Verwenden Sie das Cmdlet **New-SqlHadrEndpoint** , um den Endpunkt zu erstellen und verwenden Sie dann **Set-SqlHadrEndpoint** , um den Endpunkt zu starten.  
   
-###  <a name="PShellExample"></a> Beispiel (PowerShell)  
+###  <a name="example-powershell"></a><a name="PShellExample"></a> Beispiel (PowerShell)  
  Mit den folgenden PowerShell-Befehlen wird ein Datenbankspiegelungs-Endpunkt auf einer Instanz von SQL Server erstellt (*Computer*\\*Instanz*). Der Endpunkt verwendet Port 5022.  
   
 > [!IMPORTANT]  
@@ -56,7 +56,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 ```  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So konfigurieren Sie einen Datenbankspiegelungs-Endpunkt**  
   
 -   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

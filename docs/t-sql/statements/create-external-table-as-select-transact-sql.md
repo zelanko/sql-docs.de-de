@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68073143"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  Die Datenbank meldet alle Java-Fehler, die während des Datenexports auf der externen Datenquelle auftreten.  
   
-##  <a name="GeneralRemarks"></a> Allgemeine Hinweise  
+##  <a name="general-remarks"></a><a name="GeneralRemarks"></a> Allgemeine Hinweise  
  Nachdem die CETAS-Anweisung abgeschlossen ist, können Sie [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen für die externe Tabelle ausführen. Diese Vorgänge importieren Daten für die Dauer der Abfrage in die Datenbank, sofern für den Import nicht die CREATE TABLE AS SELECT-Anweisung verwendet wird.  
   
  Der Name und die Definition der externen Tabelle werden in den Metadaten der Datenbank gespeichert. Die Daten werden in der externen Datenquelle gespeichert.  
@@ -189,7 +189,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="locking"></a>Sperren  
  Akzeptiert eine gemeinsame Sperre für das SCHEMARESOLUTION-Objekt.  
   
-##  <a name="Examples"></a> Beispiele  
+##  <a name="examples"></a><a name="Examples"></a> Beispiele  
   
 ### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. Erstellen einer Hadoop-Tabelle mithilfe von CREATE EXTERNAL TABLE AS SELECT (CETAS)  
  Im folgenden Beispiel wird mithilfe der Spaltendefinitionen und Daten aus der Quelltabelle `dimCustomer` eine neue externe Tabelle mit dem Namen `hdfsCustomer` erstellt.  

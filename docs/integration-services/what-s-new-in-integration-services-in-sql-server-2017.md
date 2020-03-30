@@ -11,10 +11,10 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2baea8e71a3730a100eda8971ad70a28f1a97773
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296470"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Neuigkeiten in Integration Services in SQL Server 2017
@@ -60,7 +60,7 @@ Sie können nun SSIS-Projekte und -Pakete für SQL Server 2012 bis 2017 in Visua
 ### <a name="new-and-changed-features-in-scale-out-for-ssis"></a>Neue und geänderte Funktionen in Scale Out für SSIS
 
 -   Scale Out-Master unterstützt jetzt Hochverfügbarkeit. Sie können Always On für SSISDB aktivieren und das Windows Server-Failoverclustering für den Server einrichten, der den Dienst „Scale Out-Master“ hostet. Indem Sie diese Änderung auf den Scale Out-Master anwenden, vermeiden Sie eine einzelne Fehlerquelle und ermöglichen Hochverfügbarkeit für die gesamte Scale Out-Bereitstellung.
--   Die Failoverbehandlung der Ausführungsprotokolle aus Scale-Out-Workern wurde verbessert. Die Ausführungsprotokolle werden auf dem lokalen Datenträger beibehalten, falls der Scale Out-Worker unerwartet beendet wird. Bei einem Neustart des Workers werden die beibehaltenen Protokolle erneut geladen und in SSISDB gespeichert.
+-   Die Failoverbehandlung der Ausführungsprotokolle aus Scale Out-Workern wurde verbessert. Die Ausführungsprotokolle werden auf dem lokalen Datenträger beibehalten, falls der Scale Out-Worker unerwartet beendet wird. Bei einem Neustart des Workers werden die beibehaltenen Protokolle erneut geladen und in SSISDB gespeichert.
 -   Der Parameter *runincluster* der gespeicherten Prozedur **[catalog].[create_execution]** wird hinsichtlich Konsistenz und Lesbarkeit in *runinscaleout* umbenannt. Die Änderung des Parameternamens hat folgende Auswirkungen:
     -   Wenn Skripts zum Ausführen von Paketen in Scale Out vorhanden sind, müssen Sie den Parameternamen von *runincluster* in *runinscaleout* ändern, damit die Skripts in RC1 funktionieren.
     -   SQL Server Management Studio (SSMS) 17.1 und frühere Versionen können die Ausführung des Pakets in Scale Out in RC1 nicht auslösen. Die Fehlermeldung lautet: " *@runincluster* is not a parameter for procedure **create_execution** (ist kein Parameter für die Prozedur create_execution)." Dieses Problem wurde in der nächsten Version von SSMS, (Version 17.2) behoben. Version 17.2 und spätere SSMS-Versionen unterstützen den neuen Parameternamen und die Paketausführung in Scale Out. Bis SSMS Version 17.2 verfügbar ist, können Sie als Problemumgehung Ihre vorhandene Version von SSMS verwenden, um das Paketausführungsskript zu generieren. Ändern Sie anschließend im Skript den Namen des Parameters *runincluster* in *runinscaleout*, und führen Sie das Skript aus.
@@ -101,13 +101,13 @@ In SQL Server 2017 CTP 1.1 gibt es keine neuen SSIS-Funktionen.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-10"></a>Neues in SSIS in SQL Server 2017 CTP 1.0
 
-### <a name="scale-out-for-ssis"></a>Horizontale Hochskalierung für SSIS
+### <a name="scale-out-for-ssis"></a>Scale Out für SSIS
 
-Die Funktion zum horizontalen Skalieren macht es viel einfacher, [!INCLUDE[ssIS_md](../includes/ssis-md.md)] auf mehreren Computern auszuführen. 
+Das Scale Out-Feature macht es viel einfacher, [!INCLUDE[ssIS_md](../includes/ssis-md.md)] auf mehreren Computern auszuführen. 
    
-Nach dem Installieren des Masters und der Worker für horizontales Hochskalieren kann das Paket automatisch für die Ausführung auf verschiedenen Workern verteilt werden. Wenn die Ausführung unerwartet abbricht, wird sie automatisch wiederholt. Ferner können alle Ausführungen und Worker zentral mithilfe des Masters verwaltet werden.
+Nach dem Installieren des Scale Out-Masters und der Worker kann das Paket automatisch für die Ausführung auf verschiedenen Workern verteilt werden. Wenn die Ausführung unerwartet abbricht, wird sie automatisch wiederholt. Ferner können alle Ausführungen und Worker zentral mithilfe des Masters verwaltet werden.
    
-Weitere Informationen finden Sie unter [Horizontale Hochskalierung für Integration Services (SSIS)](../integration-services/scale-out/integration-services-ssis-scale-out.md).
+Weitere Informationen finden Sie unter [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
    
 ### <a name="support-for-microsoft-dynamics-online-resources"></a>Unterstützung für Onlineressourcen von Microsoft Dynamics
 

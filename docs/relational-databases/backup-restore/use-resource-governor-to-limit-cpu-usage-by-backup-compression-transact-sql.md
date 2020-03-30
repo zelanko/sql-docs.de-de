@@ -17,10 +17,10 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245412"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "75245412"
 > [!IMPORTANT]  
 >  In einem Szenario für Ressourcenkontrolle kann die Klassifizierung der Sitzungen auf einem Benutzernamen, einem Anwendungsnamen oder einem beliebigen anderen Element basieren, anhand dessen Verbindungen voneinander unterschieden werden können. Weitere Informationen finden Sie unter [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) und [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
   
-##  <a name="Top"></a> Dieses Thema enthält die folgenden Szenarien, die nacheinander dargestellt werden:  
+##  <a name="this-topic-contains-the-following-set-of-scenarios-which-are-presented-in-sequence"></a><a name="Top"></a> Dieses Thema enthält die folgenden Szenarien, die nacheinander dargestellt werden:  
   
 1.  [Einrichten einer Anmeldung und eines Benutzers für Vorgänge mit niedriger Priorität](#setup_login_and_user)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75245412"
   
 4.  [Komprimieren von Sicherungen in einer Sitzung mit CPU-Grenzwert](#creating_compressed_backup)  
   
-##  <a name="setup_login_and_user"></a> Einrichten einer Anmeldung und eines Benutzers für Vorgänge mit niedriger Priorität  
+##  <a name="setting-up-a-login-and-user-for-low-priority-operations"></a><a name="setup_login_and_user"></a> Einrichten einer Anmeldung und eines Benutzers für Vorgänge mit niedriger Priorität  
  Für das Szenario in diesem Thema sind eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung und ein zugehöriger Benutzer für Vorgänge mit niedriger Priorität erforderlich. Mithilfe des Benutzernamens werden die in der Anmeldung ausgeführten Sitzungen klassifiziert und an eine Arbeitsauslastungsgruppe der Ressourcenkontrolle weitergeleitet, die die CPU-Nutzung einschränkt.  
   
  Im folgenden Verfahren werden die Schritte zum Einrichten einer Anmeldung und eines Benutzers zu diesem Zweck beschrieben. Darauf folgt das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Beispiel „Beispiel A: Einrichten einer Anmeldung und eines Benutzers (Transact-SQL).“  
@@ -102,7 +102,7 @@ GO
   
  [&#91;Nach oben&#93;](#Top)  
   
-##  <a name="configure_RG"></a> Konfigurieren der Ressourcenkontrolle zum Einschränken der CPU-Nutzung  
+##  <a name="configuring-resource-governor-to-limit-cpu-usage"></a><a name="configure_RG"></a> Konfigurieren der Ressourcenkontrolle zum Einschränken der CPU-Nutzung  
   
 > [!NOTE]  
 >  Stellen Sie sicher, dass die Ressourcenkontrolle aktiviert ist. Weitere Informationen finden Sie unter [Aktivieren der Ressourcenkontrolle](../../relational-databases/resource-governor/enable-resource-governor.md).  
@@ -240,7 +240,7 @@ GO
   
  [&#91;Nach oben&#93;](#Top)  
   
-##  <a name="verifying"></a> Überprüfen der Klassifizierung der aktuellen Sitzung (Transact-SQL)  
+##  <a name="verifying-the-classification-of-the-current-session-transact-sql"></a><a name="verifying"></a> Überprüfen der Klassifizierung der aktuellen Sitzung (Transact-SQL)  
  Melden Sie sich optional als der Benutzer an, den Sie in der Klassifizierungsfunktion angegeben haben, und überprüfen Sie die Sitzungsklassifizierung durch Ausgeben der folgenden [SELECT](../../t-sql/queries/select-transact-sql.md) -Anweisung im Objekt-Explorer:  
   
 ```sql  
@@ -260,7 +260,7 @@ GO
   
  [&#91;Nach oben&#93;](#Top)  
   
-##  <a name="creating_compressed_backup"></a> Komprimieren von Sicherungen in einer Sitzung mit CPU-Grenzwert  
+##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> Komprimieren von Sicherungen in einer Sitzung mit CPU-Grenzwert  
  Melden Sie sich zum Erstellen einer komprimierten Sicherung in einer Sitzung mit maximalem CPU-Grenzwert als der Benutzer an, der in der Klassifizierungsfunktion angegeben ist. Geben Sie im Sicherungsbefehl entweder WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) an, oder wählen Sie **Sicherung komprimieren** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) aus. Informationen zum Erstellen einer komprimierten Datenbanksicherung finden Sie unter [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Beispiel C: Erstellen einer komprimierten Sicherung (Transact-SQL)  

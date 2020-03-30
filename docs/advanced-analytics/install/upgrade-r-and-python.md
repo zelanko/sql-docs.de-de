@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69634553"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Upgrade von Machine Learning-Komponenten (R und Python) in SQL Server-Instanzen
@@ -106,7 +106,7 @@ Zusammengefasst umfasst die Bindung folgende Schritte:
 
 In puncto Benutzererfahrung ist die Technologie und deren Handhabung unverändert. Der einzige Unterschied besteht darin, dass es neuere und möglicherweise zusätzliche Pakete gibt, die ursprünglich nicht über SQL Server verfügbar waren.
 
-## <a name="bkmk_BindWizard"></a>Binden an MLS über das Setup
+## <a name="bind-to-mls-using-setup"></a><a name="bkmk_BindWizard"></a>Binden an MLS über das Setup
 
 Beim Microsoft Machine Learning-Setup werden die vorhandenen Funktionen und die SQL Server-Version erkannt und ein Hilfsprogramm namens SqlBindR.exe aufgerufen, um die Bindung zu ändern. Intern ist SqlBindR an das Setup gekoppelt und wird indirekt verwendet. Später können Sie SqlBindR direkt über die Befehlszeile aufrufen, um bestimmte Optionen auszuführen.
 
@@ -210,7 +210,7 @@ In den folgenden Anweisungen wird beschrieben, wie Sie die Dateien für eine Off
 
 1. Führen Sie die ServerSetup.exe-Datei aus, und befolgen Sie die Anweisungen auf dem Bildschirm, um die Installation abzuschließen.
 
-## <a name="bkmk_BindCmd"></a>Befehlszeilenvorgänge
+## <a name="command-line-operations"></a><a name="bkmk_BindCmd"></a>Befehlszeilenvorgänge
 
 Nachdem Sie Microsoft Machine Learning Server ausgeführt haben, können Sie das Befehlszeilenprogramm „SqlBindR.exe“ für weitere Bindungsvorgänge verwenden. Wenn Sie sich beispielsweise entscheiden, eine Bindung aufzuheben, können Sie entweder das Setup erneut ausführen oder aber das Befehlszeilenprogramm verwenden. Außerdem können Sie dieses Tool verwenden, um die Kompatibilität und Verfügbarkeit der Instanz zu überprüfen.
 
@@ -229,7 +229,7 @@ Nachdem Sie Microsoft Machine Learning Server ausgeführt haben, können Sie das
 
 4. Wenn das Upgrade abgeschlossen ist, starten Sie den Launchpad-Dienst neu, der mit einer beliebigen aktualisierten Instanz verknüpft ist.
 
-## <a name="bkmk_Unbind"></a>Wiederherstellen oder Aufheben der Bindung einer Instanz
+## <a name="revert-or-unbind-an-instance"></a><a name="bkmk_Unbind"></a>Wiederherstellen oder Aufheben der Bindung einer Instanz
 
 Sie können eine gebundene Instanz in einer Erstinstallation von R- und Python-Komponenten wiederherstellen, die beim SQL Server-Setup eingerichtet wurden. Zum Wiederherstellen der SQL Server-Wartung sind drei Schritte erforderlich:
 
@@ -243,7 +243,7 @@ Sie können eine gebundene Instanz in einer Erstinstallation von R- und Python-K
 
 Es gibt zwei Möglichkeiten, um die Bindung aufzuheben: Sie können das Setup erneut ausführen oder das Befehlszeilenprogramm „SqlBindR“ verwenden.
 
-#### <a name="bkmk_wizunbind"></a> Aufheben der Bindung über das Setup
+#### <a name="unbind-using-setup"></a><a name="bkmk_wizunbind"></a> Aufheben der Bindung über das Setup
 
 1. Navigieren Sie zum Installationsprogramm für Machine Learning Server. Wenn Sie das Installationsprogramm bereits entfernt haben, müssen Sie es ggf. wieder herunterladen oder von einem anderen Computer kopieren.
 2. Stellen Sie sicher, dass Sie das Installationsprogramm auf dem Computer ausführen, auf dem sich die Instanz befindet, deren Bindung Sie aufheben möchten.
@@ -252,7 +252,7 @@ Es gibt zwei Möglichkeiten, um die Bindung aufzuheben: Sie können das Setup er
 4. Akzeptieren Sie die Lizenzbedingungen. Auch bei der Installation müssen Sie Ihre Zustimmung zu den Lizenzbedingungen geben.
 5. Klicken Sie auf **Fertig stellen**. Der Prozess dauert eine Weile.
 
-#### <a name="bkmk_cmdunbind"></a> Aufheben der Bindung über die Befehlszeile
+#### <a name="unbind-using-the-command-line"></a><a name="bkmk_cmdunbind"></a> Aufheben der Bindung über die Befehlszeile
 
 1. Öffnen Sie eine Eingabeaufforderung, und navigieren Sie zu dem Ordner, der **sqlbindr.exe** enthält, wie im vorherigen Abschnitt beschrieben.
 
@@ -284,7 +284,7 @@ Möglicherweise haben Sie der Paketbibliothek andere Open-Source- oder Drittanbi
 
 ### <a name="parameters"></a>Parameter
 
-|Name|Beschreibung|
+|Name|BESCHREIBUNG|
 |------|------|
 |*list*| Zeigt eine Liste aller SQL-Datenbankinstanz-IDs auf dem aktuellen Computer an|
 |*bind*| Aktualisiert die angegebene SQL-Datenbankinstanz auf die neueste Version von R Server und stellt sicher, dass die Instanz automatisch zukünftige Upgrades von R Server erhält|

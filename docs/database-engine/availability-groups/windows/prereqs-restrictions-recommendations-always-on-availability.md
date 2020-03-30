@@ -20,10 +20,10 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76831935"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen
@@ -34,7 +34,7 @@ ms.locfileid: "76831935"
 > [!IMPORTANT]  
 >  Vor der Bereitstellung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]wird empfohlen, dieses Thema vollständig zu lesen.  
     
-##  <a name="DotNetHotfixes"></a> .NET-Hotfixes, die Always On-Verfügbarkeitsgruppen unterstützen  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> .NET-Hotfixes, die Always On-Verfügbarkeitsgruppen unterstützen  
  Abhängig von den [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Komponenten und -Funktionen, die Sie mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]verwenden, müssen Sie möglicherweise zusätzliche in der folgenden Tabelle angegebene .NET-Hotfixes installieren. Die Hotfixes können in beliebiger Reihenfolge installiert werden.  
   
 ||Abhängige Funktion|Hotfix|Link|  
@@ -42,7 +42,7 @@ ms.locfileid: "76831935"
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Hotfix für .NET 3.5 SP1 fügt dem SQL-Client Unterstützung für die Always On-Funktionen „Read-intent“, „readonly“ und „multisubnetfailover“ hinzu. Der Hotfix muss auf allen [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Berichtsservern installiert werden.|KB 2654347: [Hotfix for .Net 3.5 SP1 to add support for Always On features (Hotfix für .NET 3.5 SP1 zum Hinzufügen der Unterstützung von Always On-Features)](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
-###  <a name="SystemRequirements"></a> Prüfliste: Anforderungen (Windows-System)  
+###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> Prüfliste: Anforderungen (Windows-System)  
  Zur Unterstützung der Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] muss gewährleistet sein, dass jeder Computer, der an mindestens einer Verfügbarkeitsgruppe teilnehmen soll, die folgenden wesentlichen Anforderungen erfüllt:  
   
 ||Anforderung|Link|  
@@ -56,7 +56,7 @@ ms.locfileid: "76831935"
 > [!IMPORTANT]  
 >  Stellen Sie zudem sicher, dass Ihre Umgebung ordnungsgemäß zum Herstellen einer Verbindung mit einer Verfügbarkeitsgruppe konfiguriert wird. Weitere Informationen finden Sie unter [Always On-Clientkonnektivität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-##  <a name="ComputerRecommendations"></a> Empfehlungen für Computer, die Verfügbarkeitsreplikate (Windows-System) hosten  
+##  <a name="recommendations-for-computers-that-host-availability-replicas-windows-system"></a><a name="ComputerRecommendations"></a> Empfehlungen für Computer, die Verfügbarkeitsreplikate (Windows-System) hosten  
   
 -   **Vergleichbare Systeme:**  Für eine bestimmte Verfügbarkeitsgruppe sollten alle Verfügbarkeitsreplikate auf vergleichbaren Systemen ausgeführt werden, die identische Arbeitslasten bewältigen können.  
   
@@ -64,18 +64,18 @@ ms.locfileid: "76831935"
   
 -   **Genügend freien Speicherplatz:**  Jeder Computer, auf dem eine Serverinstanz ein Verfügbarkeitsreplikat hostet, muss über ausreichend Speicherplatz für alle Datenbanken in der Verfügbarkeitsgruppe verfügen. Bedenken Sie, dass sekundäre Datenbanken in gleichem Maße zunehmen wie ihre entsprechenden primären Datenbanken.  
   
-###  <a name="PermissionsWindows"></a> Berechtigungen (Windows-System)  
+###  <a name="permissions-windows-system"></a><a name="PermissionsWindows"></a> Berechtigungen (Windows-System)  
  Zur Verwaltung eines WSFC muss der Benutzer Systemadministrator auf jedem Clusterknoten sein.  
   
  Weitere Informationen über das Konto zum Verwalten des Clusters finden Sie unter [Appendix A: Failover Cluster Requirements (Anhang A: Failoverclusteranforderungen)](https://technet.microsoft.com/library/dd197454.aspx).  
   
-###  <a name="RelatedTasksWindows"></a> Verwandte Aufgaben (Windows-System)  
+###  <a name="related-tasks-windows-system"></a><a name="RelatedTasksWindows"></a> Verwandte Aufgaben (Windows-System)  
   
 |Aufgabe|Link|  
 |----------|----------|  
 |Legen Sie den HostRecordTTL-Wert fest.|[Ändern des HostRecordTTL (Verwenden von Windows PowerShell)](#ChangeHostRecordTTLps)|  
   
-####  <a name="ChangeHostRecordTTLps"></a> Ändern des HostRecordTTL (Verwenden von Windows PowerShell)  
+####  <a name="change-the-hostrecordttl-using-windows-powershell"></a><a name="ChangeHostRecordTTLps"></a> Ändern des HostRecordTTL (Verwenden von Windows PowerShell)  
   
 1.  Öffnen Sie das PowerShell-Fenster über **Als Administrator ausführen**.  
   
@@ -105,14 +105,14 @@ ms.locfileid: "76831935"
   
 -   [Clusterressourcenbefehle und entsprechende Windows PowerShell-Cmdlets](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-###  <a name="RelatedContentWS"></a> Verwandte Inhalte (Windows-System)  
+###  <a name="related-content-windows-system"></a><a name="RelatedContentWS"></a> Verwandte Inhalte (Windows-System)  
   
 -   [Konfigurieren von DNS-Einstellungen in einem Failovercluster für mehrere Standorte](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
 -   [DNS-Registrierung mit Netzwerknamenressource](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
-##  <a name="ServerInstance"></a> Voraussetzungen und Einschränkungen für SQL Server-Instanzen  
+##  <a name="sql-server-instance-prerequisites-and-restrictions"></a><a name="ServerInstance"></a> Voraussetzungen und Einschränkungen für SQL Server-Instanzen  
  Jede Verfügbarkeitsgruppe erfordert einen Satz Failoverpartner, die als *Verfügbarkeitsreplikate*bezeichnet und von Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gehostet werden. Bei einer angegebenen Serverinstanz kann es sich um eine *eigenständige Instanz* oder eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*Failovercluster-Instanz* (FCI) handeln.  
   
  **In diesem Abschnitt:**  
@@ -127,7 +127,7 @@ ms.locfileid: "76831935"
   
 -   [Verwandte Inhalte](#RelatedContentSI)  
   
-###  <a name="PrerequisitesSI"></a> Prüfliste: Voraussetzungen (Serverinstanz)  
+###  <a name="checklist-prerequisites-server-instance"></a><a name="PrerequisitesSI"></a> Prüfliste: Voraussetzungen (Serverinstanz)  
   
 ||Voraussetzung|Links|  
 |-|------------------|-----------|  
@@ -141,7 +141,7 @@ ms.locfileid: "76831935"
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Bevor Datenbanken, die FILESTREAM verwenden, zu einer Verfügbarkeitsgruppe hinzugefügt werden, stellen Sie sicher, dass FILESTREAM auf jeder Serverinstanz, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hostet, aktiviert worden ist.|[Aktivieren und Konfigurieren von FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Bevor eigenständige Datenbanken einer Verfügbarkeitsgruppe hinzugefügt werden, muss gewährleistet sein, dass die Serveroption **eigenständige Datenbankauthentifizierung** auf jeder Serverinstanz, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hostet, auf **1** festgelegt wurde.|[Contained Database Authentication (Serverkonfigurationsoption)](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
-###  <a name="ThreadUsage"></a> Threadverwendung durch Verfügbarkeitsgruppen  
+###  <a name="thread-usage-by-availability-groups"></a><a name="ThreadUsage"></a> Threadverwendung durch Verfügbarkeitsgruppen  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] stellt die folgenden Anforderungen an Arbeitsthreads:  
   
 -   Auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz im Leerlauf verwendet [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 0 Threads.  
@@ -166,14 +166,14 @@ ms.locfileid: "76831935"
   
  Weitere Informationen finden Sie unter [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (Always On – HADRON-Lernreihe: Nutzung des Arbeitspools für HADRON-fähige Datenbanken)](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (ein CSS-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Engineer-Blogbeitrag).  
   
-###  <a name="PermissionsSI"></a> Berechtigungen (Serverinstanz)  
+###  <a name="permissions-server-instance"></a><a name="PermissionsSI"></a> Berechtigungen (Serverinstanz)  
   
 |Aufgabe|Erforderliche Berechtigungen|  
 |----------|--------------------------|  
 |Erstellen des Endpunktes für die Datenbankspiegelung|Erfordert die CREATE ENDPOINT-Berechtigung oder die Mitgliedschaft in der festen Serverrolle **sysadmin** .  Erfordert zudem die CONTROL ON ENDPOINT-Berechtigung. Weitere Informationen finden Sie unter [GRANT (Endpunktberechtigungen) &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).|  
 |Aktivieren von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|Erfordert auf dem lokalen Computer die Mitgliedschaft in der Gruppe **Administrator** und Vollzugriff auf den WSFC.|  
   
-###  <a name="RelatedTasksSI"></a> Verwandte Aufgaben (Serverinstanz)  
+###  <a name="related-tasks-server-instance"></a><a name="RelatedTasksSI"></a> Verwandte Aufgaben (Serverinstanz)  
   
 |Aufgabe|Artikel|  
 |----------|-----------|  
@@ -181,19 +181,19 @@ ms.locfileid: "76831935"
 |Erstellen des Datenbankspiegelungs-Endpunkts (falls noch nicht vorhanden)|[Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [Erstellen eines Datenbankspiegelungs-Endpunkts für Always On-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)|  
 |Aktivieren von Verfügbarkeitsgruppen|[Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
   
-###  <a name="RelatedContentSI"></a> Verwandte Inhalte (Serverinstanz)  
+###  <a name="related-content-server-instance"></a><a name="RelatedContentSI"></a> Verwandte Inhalte (Serverinstanz)  
   
 -   [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (Always On – HADRON-Lernreihe: Nutzung des Arbeitspools für HADRON-fähige Datenbanken)](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
-##  <a name="NetworkConnect"></a> Empfehlungen zur Netzwerkkonnektivität  
+##  <a name="network-connectivity-recommendations"></a><a name="NetworkConnect"></a> Empfehlungen zur Netzwerkkonnektivität  
  Es wird dringend empfohlen, für die Kommunikation zwischen WSFC-Knoten die gleichen Netzwerkverbindungen zu verwenden wie für die Kommunikation zwischen Verfügbarkeitsreplikaten.  Bei Verwendung separater Netzwerkverbindungen kann ein unerwartetes Verhalten auftreten, wenn einige Verbindungen (wenn auch nur vorübergehend) ausfallen.  
   
  Damit eine Verfügbarkeitsgruppe automatisches Failover unterstützt, muss das sekundäre Replikat, das dem automatischen Failoverpartner entspricht, beispielsweise den Status SYNCHRONIZED aufweisen. Wenn bei der Netzwerkverbindung mit dem sekundären Replikat (wenn auch nur vorübergehend) ein Fehler auftritt, wechselt das Replikat in den Status UNSYNCHRONIZED und wird erst nach Wiederherstellen der Verbindung erneut synchronisiert. Wenn der WSFC ein automatisches Failover anfordert, während das sekundäre Replikat nicht synchronisiert ist, findet kein automatisches Failover statt.  
   
-##  <a name="ClientConnSupport"></a> Unterstützung für Clientkonnektivität  
+##  <a name="client-connectivity-support"></a><a name="ClientConnSupport"></a> Unterstützung für Clientkonnektivität  
  Weitere Informationen zur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Unterstützung für Clientkonnektivität finden Sie unter [Always On-Clientkonnektivität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-##  <a name="FciArLimitations"></a> Voraussetzungen und Einschränkungen zum Hosten eines Verfügbarkeitsreplikats mithilfe einer SQL Server-Failoverclusterinstanz (FCI)  
+##  <a name="prerequisites-and-restrictions-for-using-a-sql-server-failover-cluster-instance-fci-to-host-an-availability-replica"></a><a name="FciArLimitations"></a> Voraussetzungen und Einschränkungen zum Hosten eines Verfügbarkeitsreplikats mithilfe einer SQL Server-Failoverclusterinstanz (FCI)  
  **In diesem Abschnitt:**  
   
 -   [Einschränkungen](#RestrictionsFCI)  
@@ -204,7 +204,7 @@ ms.locfileid: "76831935"
   
 -   [Verwandte Inhalte](#RelatedContentFCIs)  
   
-###  <a name="RestrictionsFCI"></a> Einschränkungen (FCIs)  
+###  <a name="restrictions-fcis"></a><a name="RestrictionsFCI"></a> Einschränkungen (FCIs)  
   
 > [!NOTE]  
 > Failoverclusterinstanzen unterstützen freigegebene Clustervolumes (Cluster Shared Volumes, CSVs). Weitere Informationen zu CSVs finden Sie unter [Grundlegendes zu freigegebenen Clustervolumes in einem Failovercluster](https://technet.microsoft.com/library/dd759255.aspx).  
@@ -221,13 +221,13 @@ ms.locfileid: "76831935"
   
 -   **Ändern des FCI-Netzwerknamens:**  Falls Sie den Netzwerknamen einer FCI ändern müssen, die ein Verfügbarkeitsreplikat hostet, müssen Sie das Replikat aus seiner Verfügbarkeitsgruppe entfernen und das Replikat dann wieder der Verfügbarkeitsgruppe hinzufügen. Sie können das primäre Replikat nicht entfernen. Wenn Sie daher eine FCI umbenennen, die das primäre Replikat hostet, sollten Sie ein Failover zu einem sekundären Replikat ausführen und dann das vorherige primäre Replikat entfernen und wieder hinzufügen. Beachten Sie, dass durch Umbenennen einer FCI möglicherweise die URL ihres Datenbankspiegelungs-Endpunkts geändert wird. Stellen Sie beim Hinzufügen des Replikats sicher, dass Sie die aktuelle Endpunkt-URL angeben.  
   
-###  <a name="PrerequisitesFCI"></a> Prüfliste: Voraussetzungen (FCIs)  
+###  <a name="checklist-prerequisites-fcis"></a><a name="PrerequisitesFCI"></a> Prüfliste: Voraussetzungen (FCIs)  
   
 ||Voraussetzung|Link|  
 |-|------------------|----------|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Stellen Sie sicher, dass jede SQL Server-Failoverclusterinstanz (FCI) den erforderlichen gemeinsam verwendeten Speicher laut Standardinstallation der SQL Server-Failoverclusterinstanz besitzt.||  
   
-###  <a name="RelatedTasksFCIs"></a> Verwandte Aufgaben (FCIs)  
+###  <a name="related-tasks-fcis"></a><a name="RelatedTasksFCIs"></a> Verwandte Aufgaben (FCIs)  
   
 |Aufgabe|Artikel|  
 |----------|-----------|  
@@ -235,13 +235,13 @@ ms.locfileid: "76831935"
 |Direktes Upgrade des vorhandenen SQL Server-Failoverclusters|[Aktualisieren einer SQL Server-Failoverclusterinstanz &#40;Setup&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Beibehalten des vorhandenen SQL Server-Failoverclusters|[Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
   
-###  <a name="RelatedContentFCIs"></a> Verwandte Inhalte (FCIs)  
+###  <a name="related-content-fcis"></a><a name="RelatedContentFCIs"></a> Verwandte Inhalte (FCIs)  
   
 -   [Failoverclustering und Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
 -   [Always On-Architekturhandbuch: Erstellen einer Lösung für Hochverfügbarkeit und Notfallwiederherstellung unter Verwendung von Failoverclusterinstanzen und Verfügbarkeitsgruppen](https://technet.microsoft.com/library/jj215886.aspx)  
   
-##  <a name="PrerequisitesForAGs"></a> Voraussetzungen und Einschränkungen für Verfügbarkeitsdatenbanken  
+##  <a name="availability-group-prerequisites-and-restrictions"></a><a name="PrerequisitesForAGs"></a> Voraussetzungen und Einschränkungen für Verfügbarkeitsdatenbanken  
  **In diesem Abschnitt:**  
   
 -   [Einschränkungen](#RestrictionsAG)  
@@ -252,7 +252,7 @@ ms.locfileid: "76831935"
   
 -   [Verwandte Aufgaben](#RelatedTasksAGs)  
   
-###  <a name="RestrictionsAG"></a> Einschränkungen (Verfügbarkeitsgruppen)  
+###  <a name="restrictions-availability-groups"></a><a name="RestrictionsAG"></a> Einschränkungen (Verfügbarkeitsgruppen)  
   
 -   **Verfügbarkeitsreplikate müssen auf verschiedenen Knoten eines WSFC gehostet werden:**  Für eine bestimmte Verfügbarkeitsgruppe müssen Verfügbarkeitsreplikate von Serverinstanzen gehostet werden, die in anderen Knoten desselben WSFC ausgeführt werden. Die einzige Ausnahme besteht darin, dass sich eine Verfügbarkeitsgruppe während der Migration zu einem anderen Cluster vorübergehend auf zwei Cluster erstrecken kann.  
   
@@ -273,14 +273,14 @@ ms.locfileid: "76831935"
   
     -   Verwenden Sie den Failovercluster-Manager nicht, um Failover für Verfügbarkeitsgruppen auszuführen. Sie müssen [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwenden.  
   
-###  <a name="RequirementsAG"></a> Voraussetzungen (Verfügbarkeitsgruppen)  
+###  <a name="prerequisites-availability-groups"></a><a name="RequirementsAG"></a> Voraussetzungen (Verfügbarkeitsgruppen)  
  Beim Erstellen oder Neukonfigurieren einer Verfügbarkeitsgruppenkonfiguration müssen Sie folgende Anforderungen einhalten.  
   
-||Voraussetzung|Beschreibung|  
+||Voraussetzung|BESCHREIBUNG|  
 |-|------------------|-----------------|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Wenn Sie planen, eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz (FCI) zu verwenden, um ein Verfügbarkeitsreplikat zu hosten, muss gewährleistet sein, dass Sie die FCI-Einschränkungen verstehen und dass die FCI-Anforderungen erfüllt werden.|[Voraussetzungen und Einschränkungen für das Hosten eines Verfügbarkeitsreplikats mithilfe einer SQL Server-Failoverclusterinstanz (FCI)](#FciArLimitations) (weiter oben in diesem Artikel)|  
   
-###  <a name="SecurityAG"></a> Sicherheit (Verfügbarkeitsgruppen)  
+###  <a name="security-availability-groups"></a><a name="SecurityAG"></a> Sicherheit (Verfügbarkeitsgruppen)  
   
 -   Die Sicherheit wird vom WSFC vererbt. WSFC bieten zwei Sicherheitsebenen mit der Granularität eines kompletten Clusters:  
   
@@ -304,7 +304,7 @@ ms.locfileid: "76831935"
 |Ändern einer Verfügbarkeitsgruppe|Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.<br /><br /> Außerdem erfordert das Verknüpfen einer Datenbank mit einer Verfügbarkeitsgruppe die Mitgliedschaft in der festen **db_owner** -Datenbankrolle.|  
 |Löschen einer Verfügbarkeitsgruppe|Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung. Um eine Verfügbarkeitsgruppe zu löschen, die nicht am lokalen Replikatspeicherort gehostet wird, benötigen Sie die CONTROL SERVER-Berechtigung oder die CONTROL-Berechtigung für diese Verfügbarkeitsgruppe.|  
   
-###  <a name="RelatedTasksAGs"></a> Verwandte Aufgaben (Verfügbarkeitsgruppen)  
+###  <a name="related-tasks-availability-groups"></a><a name="RelatedTasksAGs"></a> Verwandte Aufgaben (Verfügbarkeitsgruppen)  
   
 |Aufgabe|Artikel|  
 |----------|-----------|  
@@ -313,7 +313,7 @@ ms.locfileid: "76831935"
 |Erstellen eines Verfügbarkeitsgruppenlisteners|[Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |Löschen einer Verfügbarkeitsgruppe|[Entfernen einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)|  
   
-##  <a name="PrerequisitesForDbs"></a> Voraussetzungen und Einschränkungen für Verfügbarkeitsdatenbanken  
+##  <a name="availability-database-prerequisites-and-restrictions"></a><a name="PrerequisitesForDbs"></a> Voraussetzungen und Einschränkungen für Verfügbarkeitsdatenbanken  
  Damit einer Verfügbarkeitsgruppe eine Datenbank hinzugefügt werden kann, muss sie folgenden Voraussetzungen und Einschränkungen entsprechen:  
   
  **In diesem Abschnitt:**  
@@ -328,7 +328,7 @@ ms.locfileid: "76831935"
   
 -   [Verwandte Aufgaben](#RelatedTasksADb)  
   
-###  <a name="RequirementsDb"></a> Prüfliste: Anforderungen (Verfügbarkeitsdatenbanken)  
+###  <a name="checklist-requirements-availability-databases"></a><a name="RequirementsDb"></a> Prüfliste: Anforderungen (Verfügbarkeitsdatenbanken)  
  Damit eine Datenbank einer Verfügbarkeitsgruppe hinzugefügt zu werden, müssen folgende Bedingungen für die Datenbank zutreffen:  
   
 ||Requirements (Anforderungen)|Link|  
@@ -348,7 +348,7 @@ ms.locfileid: "76831935"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] funktioniert mit jedem unterstützten Datenbank-Kompatibilitätsgrad.  
   
-###  <a name="RestrictionsDb"></a> Einschränkungen (Verfügbarkeitsdatenbanken)  
+###  <a name="restrictions-availability-databases"></a><a name="RestrictionsDb"></a> Einschränkungen (Verfügbarkeitsdatenbanken)  
   
 -   Falls sich der Dateipfad (einschließlich des Laufwerkbuchstabens) einer sekundären Datenbank vom Pfad der entsprechenden primären Datenbank unterscheidet, gelten folgende Einschränkungen.  
   
@@ -363,13 +363,13 @@ ms.locfileid: "76831935"
   
 -   Sie können keine Datenbank löschen, die aktuell einer Verfügbarkeitsgruppe angehört.  
   
-###  <a name="TDEdbs"></a> Nachverfolgung für TDE-geschützte Datenbanken  
+###  <a name="follow-up-for-tde-protected-databases"></a><a name="TDEdbs"></a> Nachverfolgung für TDE-geschützte Datenbanken  
  Wenn Sie die transparente Datenverschlüsselung (TDE) verwenden, muss das Zertifikat oder der asymmetrische Schlüssel zum Erstellen und Entschlüsseln weiterer Schlüssel auf jeder Serverinstanz, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hostet, identisch sein. Weitere Informationen finden Sie unter [Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
   
-###  <a name="PermissionsDbs"></a> Berechtigungen (Verfügbarkeitsdatenbanken)  
+###  <a name="permissions-availability-databases"></a><a name="PermissionsDbs"></a> Berechtigungen (Verfügbarkeitsdatenbanken)  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-###  <a name="RelatedTasksADb"></a> Verwandte Aufgaben (Verfügbarkeitsdatenbanken)  
+###  <a name="related-tasks-availability-databases"></a><a name="RelatedTasksADb"></a> Verwandte Aufgaben (Verfügbarkeitsdatenbanken)  
   
 |Aufgabe|Artikel|  
 |----------|-----------|  
@@ -377,7 +377,7 @@ ms.locfileid: "76831935"
 |Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe (manuell)|[Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)|  
 |Ändern der Anzahl der Verfügbarkeitsdatenbanken|[Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)<br /><br /> [Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)<br /><br /> [Entfernen einer primären Datenbank aus einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)|  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

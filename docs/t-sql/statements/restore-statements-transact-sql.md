@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73530931"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE-Anweisungen (Transact-SQL)
@@ -382,7 +382,7 @@ Die RESTORE-Anweisung kann auch für folgende Wiederherstellungen verwendet werd
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält Tabellen mit Sicherungs- und Wiederherstellungsverlauf, in denen die Sicherungs- und Wiederherstellungsaktivität für jede Serverinstanz nachverfolgt wird. Beim Ausführen einer Wiederherstellung werden auch die Tabellen mit Sicherungsverläufen geändert. Informationen zu diesen Tabellen finden Sie unter [Sicherungsverlauf und Headerinformationen](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).
 
-## <a name="REPLACEoption"></a> Auswirkung der REPLACE-Option
+## <a name="replace-option-impact"></a><a name="REPLACEoption"></a> Auswirkung der REPLACE-Option
 REPLACE sollte selten und nur nach sorgfältiger Überlegung verwendet werden. Die Wiederherstellung verhindert normalerweise, dass eine Datenbank versehentlich durch eine andere Datenbank überschrieben wird. Wenn die in einer RESTORE-Anweisung angegebene Datenbank bereits auf dem aktuellen Server vorhanden ist und sich die angegebene GUID der Datenbankfamilie von der im Sicherungssatz aufgezeichneten GUID der Datenbankfamilie unterscheidet, wird die Datenbank nicht wiederhergestellt. Dies ist ein wichtiges Sicherheitselement.
 
 Die Option REPLACE überschreibt verschiedene wichtige Sicherheitsprüfungen, die die Wiederherstellung normalerweise ausführt. Folgende Prüfungen werden überschrieben:
@@ -434,7 +434,7 @@ Ist die wiederherzustellende Datenbank nicht vorhanden, muss der Benutzer über 
 
 RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle `db_owner` nicht über RESTORE-Berechtigungen.
 
-## <a name="examples"></a> Beispiele
+## <a name="examples"></a><a name="examples"></a> Beispiele
 
 Bei allen Beispielen wird davon ausgegangen, dass eine vollständige Datenbanksicherung ausgeführt wurde.
 
@@ -455,7 +455,7 @@ Die Beispiele zu RESTORE schließen Folgendes ein:
 > [!NOTE]
 > Weitere Beispiele finden Sie in den Artikeln zur Vorgehensweisen zur Wiederherstellung, die unter [Übersicht über Wiederherstellungsvorgänge](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md) aufgelistet sind.
 
-### <a name="restoring_full_db"></a> A. Wiederherstellen einer vollständigen Datenbank
+### <a name="a-restoring-a-full-database"></a><a name="restoring_full_db"></a> A. Wiederherstellen einer vollständigen Datenbank
 
 Im folgenden Beispiel wird eine vollständige Datenbanksicherung vom logischen Sicherungsmedium `AdventureWorksBackups` wiederhergestellt. Ein Beispiel für das Erstellen dieses Mediums finden Sie unter [Sicherungsmedien](../../relational-databases/backup-restore/backup-devices-sql-server.md).
 
@@ -469,7 +469,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Anfang der Beispiele&#93;](#examples)
 
-### <a name="restoring_full_n_differential_db_backups"></a> B. Wiederherstellung von vollständigen und von differenziellen Datenbanksicherungen
+### <a name="b-restoring-full-and-differential-database-backups"></a><a name="restoring_full_n_differential_db_backups"></a> B. Wiederherstellung von vollständigen und von differenziellen Datenbanksicherungen
 
 Im folgenden Beispiel wird eine vollständige Datenbanksicherung und anschließend eine differenzielle Sicherung vom `Z:\SQLServerBackups\AdventureWorks2012.bak`-Sicherungsmedium wiederhergestellt, das beide Sicherungen enthält. Die vollständige Datenbanksicherung, die wiederhergestellt werden soll, ist der sechste Sicherungssatz auf dem Medium (`FILE = 6`). Die differenzielle Sicherung ist der neunte Sicherungssatz auf dem Medium (`FILE = 9`). Sobald die differenzielle Sicherung wiederhergestellt wird, wird die Datenbank wiederhergestellt.
 
@@ -486,7 +486,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Anfang der Beispiele&#93;](#examples)
 
-### <a name="restoring_db_using_RESTART"></a> C. Wiederherstellen einer Datenbank mit der RESTART-Syntax
+### <a name="c-restoring-a-database-using-restart-syntax"></a><a name="restoring_db_using_RESTART"></a> C. Wiederherstellen einer Datenbank mit der RESTART-Syntax
 
 Im folgenden Beispiel wird die Option `RESTART` zum Neustart eines `RESTORE`-Vorgangs verwendet, der durch einen Stromausfall des Servers unterbrochen wurde.
 
@@ -501,7 +501,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Anfang der Beispiele&#93;](#examples)
 
-### <a name="restoring_db_n_move_files"></a> D. Wiederherstellen einer Datenbank und Verschieben von Dateien
+### <a name="d-restoring-a-database-and-move-files"></a><a name="restoring_db_n_move_files"></a> D. Wiederherstellen einer Datenbank und Verschieben von Dateien
 
 Im folgenden Beispiel wird eine vollständige Datenbank und ein Transaktionsprotokoll wiederhergestellt. Anschließend wird die wiederhergestellte Datenbank in das Verzeichnis `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` verschoben.
 
@@ -520,7 +520,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;Anfang der Beispiele&#93;](#examples)
 
-### <a name="copying_db_using_bnr"></a> E. Kopieren einer Datenbank mithilfe von BACKUP und RESTORE
+### <a name="e-copying-a-database-using-backup-and-restore"></a><a name="copying_db_using_bnr"></a> E. Kopieren einer Datenbank mithilfe von BACKUP und RESTORE
 
 Im folgenden Beispiel werden die Anweisungen `BACKUP` und `RESTORE` verwendet, um eine Kopie der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank zu erstellen. Die `MOVE`-Anweisung bewirkt, dass die Daten- und die Protokolldatei an den angegebenen Speicherorten wiederhergestellt werden. Die `RESTORE FILELISTONLY`-Anweisung wird verwendet, um die Anzahl und die Namen der Dateien der Datenbank zu bestimmen, die wiederhergestellt werden. Die neue Kopie der Datenbank erhält den Namen `TestDB`. Weitere Informationen finden Sie unter [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).
 
@@ -540,7 +540,7 @@ GO
 
 [&#91;Anfang der Beispiele&#93;](#examples)
 
-### <a name="restoring_to_pit_using_STOPAT"></a> F. Wiederherstellen eines bestimmten Zeitpunkts mithilfe von STOPAT
+### <a name="f-restoring-to-a-point-in-time-using-stopat"></a><a name="restoring_to_pit_using_STOPAT"></a> F. Wiederherstellen eines bestimmten Zeitpunkts mithilfe von STOPAT
 
 Im folgenden Beispiel wird eine Datenbank in den am `12:00 AM` um `April 15, 2020` bestehenden Status wiederhergestellt und ein Wiederherstellungsvorgang gezeigt, der mehrere Protokollsicherungen umfasst. Auf dem Sicherungsmedium ( `AdventureWorksBackups`) ist die wiederherzustellende vollständige Datenbanksicherung der dritte Sicherungssatz (`FILE = 3`), die erste Protokollsicherung ist der vierte Sicherungssatz (`FILE = 4`), und die zweite Protokollsicherung ist der fünfte Sicherungssatz (`FILE = 5`).
 
@@ -562,7 +562,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 
 [&#91;Anfang der Beispiele&#93;](#examples)
 
-### <a name="restoring_transaction_log_to_mark"></a> G. Wiederherstellen eines Transaktionsprotokolls bis zu einer Markierung
+### <a name="g-restoring-the-transaction-log-to-a-mark"></a><a name="restoring_transaction_log_to_mark"></a> G. Wiederherstellen eines Transaktionsprotokolls bis zu einer Markierung
 
 Im folgenden Beispiel wird das Transaktionsprotokoll bis zur Markierung in der markierten Transaktion mit dem Namen `ListPriceUpdate`wiederhergestellt.
 
@@ -601,7 +601,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;Anfang der Beispiele&#93;](#examples)
 
-### <a name="restoring_using_TAPE"></a> H. Wiederherstellen mit der TAPE-Syntax
+### <a name="h-restoring-using-tape-syntax"></a><a name="restoring_using_TAPE"></a> H. Wiederherstellen mit der TAPE-Syntax
 
 Im folgenden Beispiel wird eine vollständige Datenbanksicherung von einem `TAPE`-Sicherungsmedium wiederhergestellt.
 
@@ -612,7 +612,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Anfang der Beispiele&#93;](#examples)
 
-### <a name="restoring_using_FILE_n_FG"></a> I. Wiederherstellen mithilfe der FILE- und FILEGROUP-Syntax
+### <a name="i-restoring-using-file-and-filegroup-syntax"></a><a name="restoring_using_FILE_n_FG"></a> I. Wiederherstellen mithilfe der FILE- und FILEGROUP-Syntax
 
 Im folgenden Beispiel wird eine Datenbank mit dem Namen `MyDatabase` wiederhergestellt, die über zwei Dateien, eine sekundäre Dateigruppe und ein Transaktionsprotokoll verfügt. Für die Datenbank wird das vollständige Wiederherstellungsmodell verwendet.
 
@@ -656,7 +656,7 @@ GO
 
 [&#91;Anfang der Beispiele&#93;](#examples)
 
-### <a name="reverting_from_db_snapshot"></a> J. Wiederherstellen aus einer Datenbank-Momentaufnahme
+### <a name="j-reverting-from-a-database-snapshot"></a><a name="reverting_from_db_snapshot"></a> J. Wiederherstellen aus einer Datenbank-Momentaufnahme
 
 Im folgenden Beispiel wird eine Datenbank aus einer Datenbank-Momentaufnahme wiederhergestellt. In diesem Beispiel wird davon ausgegangen, dass derzeit in der Datenbank nur eine Momentaufnahme vorhanden ist. Ein Beispiel zum Erstellen dieser Datenbankmomentaufnahme finden Sie unter [Erstellen einer Datenbankmomentaufnahme](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).
 
@@ -673,7 +673,7 @@ Weitere Informationen finden Sie unter [Wiederherstellen einer Datenbank zu eine
 
 [&#91;Anfang der Beispiele&#93;](#examples)
 
-### <a name="Azure_Blob"></a> K. Wiederherstellen aus dem Microsoft Azure BLOB-Speicherdienst
+### <a name="k-restoring-from-the-microsoft-azure-blob-storage-service"></a><a name="Azure_Blob"></a> K. Wiederherstellen aus dem Microsoft Azure BLOB-Speicherdienst
 
 Die drei folgenden Beispiele umfassen die Verwendung des Microsoft Azure-Speicherdiensts. Der Speicherkontoname lautet `mystorageaccount`. Der Container für Datendateien heißt `myfirstcontainer`. Der Container für Sicherungsdateien heißt `mysecondcontainer`. Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, Lösch- und Auflistungsrechten für jeden Container erstellt. Die SQL Server Anmeldeinformationen wurden mit einer gespeicherten Zugriffssignatur erstellt, die der gespeicherten Zugriffsrichtlinie zugeordnet ist. Spezifische Informationen zur Sicherung und Wiederherstellung von SQL Server in Microsoft Azure Blob Storage finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
@@ -814,11 +814,11 @@ GRANT CREATE ANY DATABASE TO [mylogin];
 
 RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle `db_owner` nicht über RESTORE-Berechtigungen.
 
-## <a name="examples"></a> Beispiele
+## <a name="examples"></a><a name="examples"></a> Beispiele
 
 In den folgenden Beispiele wird eine Kopiesicherung der Datenbank aus einer URL wiederhergestellt, und es werden Anmeldeinformationen erstellt.
 
-### <a name="restore-mi-database"></a> A. Wiederherstellen einer Datenbank aus vier Sicherungsmedien
+### <a name="a-restore-database-from-four-backup-devices"></a><a name="restore-mi-database"></a> A. Wiederherstellen einer Datenbank aus vier Sicherungsmedien
 
 ```sql
 
@@ -842,7 +842,7 @@ Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
 ```
 
-### <a name="restore-mi-database-variables"></a> B. Wiederherstellen einer per Variable angegebenen Datenbank
+### <a name="b-restore-database-specified-via-variable"></a><a name="restore-mi-database-variables"></a> B. Wiederherstellen einer per Variable angegebenen Datenbank
 
 ```sql
 DECLARE @db_name sysname = 'WideWorldImportersStandard';
@@ -852,7 +852,7 @@ RESTORE DATABASE @db_name
 FROM URL = @url
 ```
 
-### <a name="restore-mi-database-progress"></a> C. Nachverfolgen des Fortschritts einer RESTORE-Anweisung
+### <a name="c-track-progress-of-restore-statement"></a><a name="restore-mi-database-progress"></a> C. Nachverfolgen des Fortschritts einer RESTORE-Anweisung
 
 ```sql
 SELECT query = a.text, start_time, percent_complete,

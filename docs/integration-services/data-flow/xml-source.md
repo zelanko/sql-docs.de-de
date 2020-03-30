@@ -20,10 +20,10 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d766d6a36dbe8f91f2c2fd42433093b298935b48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71290842"
 ---
 # <a name="xml-source"></a>XML-Quelle
@@ -97,7 +97,7 @@ ms.locfileid: "71290842"
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |XML-Dateispeicherort|Ruft Daten aus einer XML-Datei ab.|  
 |XML-Datei aus Variable|Gibt den XML-Dateinamen in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  

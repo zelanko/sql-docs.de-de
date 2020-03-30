@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68698308"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>PowerShell-Cmdlet für die Migrationsauswertung
@@ -57,7 +57,7 @@ Es gibt Syntaxaspekte, auf die hingewiesen werden sollte. Wenn Sie den Parameter
 
 Wenn Sie `-InputObject`_nicht_ angeben, dann müssen Sie umgekehrt `-Server` und `-Database` angeben. Wenn Sie `-Server` angeben, haben Sie die Möglichkeit, den Bereich einzuschränken, indem Sie entweder `-Schema` oder `-Object` oder beides angeben.
 
-| Parametername | Beschreibung |
+| Parametername | BESCHREIBUNG |
 | :------------- | :---------- |
 | Datenbank | Der Name der SQL Server-Zieldatenbank. Obligatorisch, wenn `-Server` obligatorisch ist.<br/><br/> Optional in SQLPS. |
 | FolderPath | Der Ordner, in dem das Cmdlet die generierten Berichte speichern soll.<br/><br/> Erforderlich. |
@@ -111,7 +111,7 @@ Die Namen der Berichtsdateien tragen die Dateierweiterung **.html**. Beispielswe
 
 Die HTML-Datei besteht größtenteils aus einer zweispaltige Tabelle mit den folgenden Kopfzeilen:
 
-- Beschreibung
+- BESCHREIBUNG
 - Überprüfungsergebnis
 
 Nun folgt ein tatsächliches Beispiel für den HTML-Bericht für eine Tabelle.
@@ -176,7 +176,7 @@ Nun folgt ein tatsächliches Beispiel für den HTML-Bericht für eine Tabelle.
 
 Die Tabelle sieht ungefähr wie folgt aus.
 
-| Beschreibung | Überprüfungsergebnis |
+| BESCHREIBUNG | Überprüfungsergebnis |
 | :---------- | :---------------- |
 | Für diese Tabelle sind keine nicht unterstützten Datentypen definiert. | Erfolgreich |
 | Für diese Tabelle sind keine Sparsespalten definiert. | Erfolgreich |

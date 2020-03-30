@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288237"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Arbeiten mit Replikations-Agent-Profilen
@@ -65,9 +65,9 @@ ms.locfileid: "76288237"
   
 -   **Nachverfolgung:**  [Nach dem Ändern der Agentparameter](#FollowUp)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
-###  <a name="Access_SSMS"></a> So greifen Sie auf das Dialogfeld Agentprofile in SQL Server Management Studio zu  
+###  <a name="to-access-the-agent-profiles-dialog-box-from-sql-server-management-studio"></a><a name="Access_SSMS"></a> So greifen Sie auf das Dialogfeld Agentprofile in SQL Server Management Studio zu  
   
 1.  Klicken Sie im Dialogfeld **Verteilereigenschaften - \<Distributor>** auf der Seite **Allgemein** auf **Profilstandards**.  
 
@@ -81,7 +81,7 @@ ms.locfileid: "76288237"
   
     2.  Klicken Sie bei Verteilungs-Agent- oder Merge-Agent-Profilen auf der Registerkarte **Alle Abonnements** mit der rechten Maustaste auf ein Abonnement, und klicken Sie dann auf **Agentprofil**. Klicken Sie bei anderen Agents auf der Registerkarte **Agents** mit der rechten Maustaste auf den Agent, und klicken Sie dann auf **Agentprofil**.  
   
-###  <a name="Specify_SSMS"></a> So geben Sie ein Profil für einen Agent an  
+###  <a name="to-specify-a-profile-for-an-agent"></a><a name="Specify_SSMS"></a> So geben Sie ein Profil für einen Agent an  
   
 1.  Wenn im Dialogfeld **Agentprofile** Profile für mehrere Agents angezeigt werden, wählen Sie einen Agent aus.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "76288237"
   
 3.  Wenn Sie angeben möchten, dass dieses Profil von allen Agents des ausgewählten Typs für vorhandene Veröffentlichungen oder Abonnements verwendet werden soll, klicken Sie auf **Vorhandene Agents ändern**.  
   
-###  <a name="Modify_SSMS"></a> So zeigen Sie einem Profil zugeordnete Parameter an und bearbeiten Sie die Parameter  
+###  <a name="to-view-and-edit-the-parameters-associated-with-a-profile"></a><a name="Modify_SSMS"></a> So zeigen Sie einem Profil zugeordnete Parameter an und bearbeiten Sie die Parameter  
   
 1.  Wenn im Dialogfeld **Agentprofile** Profile für mehrere Agents angezeigt werden, wählen Sie einen Agent aus.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "76288237"
   
 4.  Klicken Sie auf **Schließen**.  
   
-###  <a name="Create_SSMS"></a> So erstellen Sie ein benutzerdefiniertes Profil  
+###  <a name="to-create-a-user-defined-profile"></a><a name="Create_SSMS"></a> So erstellen Sie ein benutzerdefiniertes Profil  
   
 1.  Wenn im Dialogfeld **Agentprofile** Profile für mehrere Agents angezeigt werden, wählen Sie einen Agent aus.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "76288237"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-###  <a name="Delete_SSMS"></a> So löschen Sie ein benutzerdefiniertes Profil  
+###  <a name="to-delete-a-user-defined-profile"></a><a name="Delete_SSMS"></a> So löschen Sie ein benutzerdefiniertes Profil  
   
 1.  Wenn im Dialogfeld **Agentprofile** Profile für mehrere Agents angezeigt werden, wählen Sie einen Agent aus.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "76288237"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
-###  <a name="Create_tsql"></a> So erstellen Sie ein neues Agentprofil  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_tsql"></a> So erstellen Sie ein neues Agentprofil  
   
 1.  Führen Sie auf dem Verteiler [sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md) aus. Geben Sie **\@name**, den Wert **1** für **\@profile_type** und einen der folgenden Werte für **\@agent_type** an:  
   
@@ -154,7 +154,7 @@ ms.locfileid: "76288237"
   
 2.  Nach der Erstellung des neuen Profils können Sie Standardparameter hinzufügen, entfernen oder ändern, um das Profil anzupassen.  
   
-###  <a name="Modify_tsql"></a> So ändern Sie ein vorhandenes Agentprofil  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_tsql"></a> So ändern Sie ein vorhandenes Agentprofil  
   
 1.  Führen Sie auf dem Verteiler [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) aus. Geben Sie für **\@agent_type** einen der folgenden Werte an:  
   
@@ -185,7 +185,7 @@ ms.locfileid: "76288237"
   
     -   Führen Sie auf dem Verteiler [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) aus. Geben Sie für **\@profile_id** den Profilbezeichner aus Schritt 1, für **\@parameter_name** den Namen eines gültigen Parameters, der hinzugefügt werden soll, und für **\@parameter_value** den Wert des Parameters an.  
   
-###  <a name="Delete_tsql"></a> So löschen Sie ein Agentprofil  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_tsql"></a> So löschen Sie ein Agentprofil  
   
 1.  Führen Sie auf dem Verteiler [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) aus. Geben Sie für **\@agent_type** einen der folgenden Werte an:  
   
@@ -203,7 +203,7 @@ ms.locfileid: "76288237"
   
 2.  Führen Sie auf dem Verteiler [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md) aus. Geben Sie für **\@profile_id** den Profilbezeichner aus Schritt 1 an.  
   
-###  <a name="Synch_tsql"></a> So verwenden Sie während der Synchronisierung Agentprofile  
+###  <a name="to-use-agent-profiles-during-synchronization"></a><a name="Synch_tsql"></a> So verwenden Sie während der Synchronisierung Agentprofile  
   
 1.  Führen Sie auf dem Verteiler [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) aus. Geben Sie für **\@agent_type** einen der folgenden Werte an:  
   
@@ -223,14 +223,14 @@ ms.locfileid: "76288237"
   
 3.  Wenn der Agent von der Eingabeaufforderung gestartet wird, geben Sie den in Schritt 1 ermittelten Wert **profile_name** nach dem **-ProfileName** -Befehlszeilenparameter an.  
   
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel werden ein benutzerdefiniertes Profil für den Merge-Agent mit der Bezeichnung **custom_merge**erstellt, der Wert des **-UploadReadChangesPerBatch** -Parameters geändert, ein neuer **-ExchangeType** -Parameter hinzugefügt und Informationen zu dem Profil, das erstellt wird, zurückgegeben.  
   
  [!code-sql[HowTo#sp_addagentprofileparam](../../../relational-databases/replication/codesnippet/tsql/work-with-replication-ag_1.sql)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von RMO  
+##  <a name="using-rmo"></a><a name="RMOProcedure"></a> Verwenden von RMO  
   
-###  <a name="Create_RMO"></a> So erstellen Sie ein neues Agentprofil  
+###  <a name="to-create-a-new-agent-profile"></a><a name="Create_RMO"></a> So erstellen Sie ein neues Agentprofil  
   
 1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie eine Instanz der <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "76288237"
   
 6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> -Methode auf, um das Profil einem vorhandenen Auftrag des Replikations-Agents zuzuordnen. Übergeben Sie den Namen der Verteilungsdatenbank für *distributionDBName* und die ID des Auftrags für *agentID*.  
   
-###  <a name="Modify_RMO"></a> So ändern Sie ein vorhandenes Agentprofil  
+###  <a name="to-modify-an-existing-agent-profile"></a><a name="Modify_RMO"></a> So ändern Sie ein vorhandenes Agentprofil  
   
 1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie eine Instanz der <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "76288237"
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - ändert die Einstellung eines vorhandenen Parameters im Profil, wobei *name* der Name des Agentparameters und *newValue* der Wert ist, in den der Parameter geändert wird. Rufen Sie zum Aufzählen aller aktuellen Agentparameter, die für das Profil definiert sind, die <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> -Methode auf. Diese Methode gibt eine <xref:System.Collections.ArrayList> von <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> -Objekten zurück, die den vorhandenen Parameter für dieses Profil darstellen. Rufen Sie zum Aufzählen aller unterstützten Einstellungen für den Agentparameter die <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> -Methode auf. Diese Methode gibt eine <xref:System.Collections.ArrayList> von <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> -Objekten zurück, die die unterstützten Werte für alle Parameter darstellen.  
   
-###  <a name="Delete_RMO"></a> So löschen Sie ein Agentprofil  
+###  <a name="to-delete-an-agent-profile"></a><a name="Delete_RMO"></a> So löschen Sie ein Agentprofil  
   
 1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie eine Instanz der <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
@@ -286,7 +286,7 @@ ms.locfileid: "76288237"
   
 5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> -Methode auf, um das benutzerdefinierte Profil, das durch dieses Objekt dargestellt wird, vom Server zu entfernen.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Ändern der Agentparameter  
+##  <a name="follow-up-after-changing-agent-parameters"></a><a name="FollowUp"></a>Nächster Schritt: Nach dem Ändern der Agentparameter  
 Die Änderungen der Agentparameter treten in Kraft, wenn der Agent das nächste Mal gestartet wird. Wenn der Agent ständig ausgeführt wird, müssen Sie den Agent beenden und neu starten. Ab SQL Server 2017 CU3 treten einige Änderungen an Agentparametern in Kraft, ohne dass die Agents neu gestartet werden müssen. 
   
 ## <a name="see-also"></a>Weitere Informationen  

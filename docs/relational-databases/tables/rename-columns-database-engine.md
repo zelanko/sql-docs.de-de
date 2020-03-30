@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92844b0a512129400e5f676f054fc68c68b26ccc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082581"
 ---
 # <a name="rename-columns-database-engine"></a>Umbenennen von Spalten (Datenbank-Engine)
@@ -42,19 +42,19 @@ Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INC
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Vorbereitungen
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen
 
-### <a name="Restrictions"></a> Einschränkungen
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen
 
 Durch die Umbenennung einer Spalte werden nicht automatisch auch die Verweise auf diese Spalte umbenannt. Sie müssen Objekte, die auf die umbenannte Spalte verweisen, manuell ändern. Wenn Sie z. B. eine Tabellenspalte umbenennen und in einem Trigger auf diese Spalte verwiesen wird, müssen Sie den Trigger ändern, sodass er den neuen Spaltennamen wiedergibt. Verwenden Sie [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) , um Abhängigkeiten vom Objekt aufzulisten, bevor Sie es umbenennen.
 
-### <a name="Security"></a> Sicherheit
+### <a name="security"></a><a name="Security"></a> Sicherheit
 
-#### <a name="Permissions"></a> Berechtigungen
+#### <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
 
 Erfordert die ALTER-Berechtigung für das Objekt.
 
-## <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio
 
 ### <a name="to-rename-a-column-using-object-explorer"></a>So benennen Sie eine Spalte mit Objekt-Explorer um
 
@@ -71,7 +71,7 @@ Erfordert die ALTER-Berechtigung für das Objekt.
 > [!NOTE]
 > Sie können den Spaltennamen auch auf der Registerkarte **Spalteneigenschaften** ändern. Wählen Sie die Spalte aus, deren Name geändert werden soll, und geben Sie für **Name**einen neuen Wert ein.
 
-## <a name="TsqlProcedure"></a> Verwenden von Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL
 
 **So benennen Sie eine Spalte um**
 

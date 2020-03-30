@@ -13,10 +13,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77147383"
 ---
 # <a name="url-access-parameter-reference"></a>Referenz für URL-Zugriffsparameter
@@ -29,7 +29,7 @@ ms.locfileid: "77147383"
 > Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
   
 
-##  <a name="bkmk_htmlviewer"></a> Befehle des HTML-Viewers (rc:)
+##  <a name="html-viewer-commands-rc"></a><a name="bkmk_htmlviewer"></a> Befehle des HTML-Viewers (rc:)
  - HTML-Viewer-Befehle werden verwendet, um den HTML-Viewer auszuwählen, und sind mit dem Präfix *rc:* versehen:
   
 -   **Toolbar**: Zeigt die Symbolleiste an oder blendet sie aus. Wenn der Wert dieses Parameters **FALSE**ist, werden alle verbleibenden Optionen ignoriert. Wenn Sie diesen Parameter weglassen, wird die Symbolleiste automatisch für Renderingformate angezeigt, die sie unterstützen. Der Standardwert dieses Parameters ist **true**.
@@ -113,7 +113,7 @@ ms.locfileid: "77147383"
   
 -   **Geräteinformationseinstellungen:** Hiermit wird eine Geräteinformationseinstellung im Format `rc:tag=value` festgelegt, wobei *tag* dem Namen einer für die gerade verwendete Renderingerweiterung spezifischen Geräteinformationseinstellung entspricht. (Informationen finden Sie in der Beschreibung des Parameters *Format*.) Sie können z. B. die Geräteinformationseinstellung *OutputFormat* für die IMAGE-Renderingerweiterung verwenden, um den Bericht mithilfe der folgenden Parameter in der URL-Zugriffszeichenfolge in ein JPEG-Bild zu rendern: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Weitere Informationen zu allen erweiterungsspezifischen Geräteinformationseinstellungen finden Sie im Artikel [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).
   
-##  <a name="bkmk_reportserver"></a> Befehle des Berichtsservers (rs:)
+##  <a name="report-server-commands-rs"></a><a name="bkmk_reportserver"></a> Befehle des Berichtsservers (rs:)
  Befehle des Berichtsservers werden mit dem Präfix *rs:* versehen und zum Auswählen des Berichtsservers verwendet:
   
 -   **Befehl**: Führt eine Aktion auf einem Katalogelement aus. Dies ist abhängig von dessen Elementtyp. Der Standardwert wird vom Typ des Katalogelements bestimmt, auf den in der URL-Zugriffszeichenfolge verwiesen wird. Gültige Werte sind:
@@ -264,7 +264,7 @@ ms.locfileid: "77147383"
   
 -   **ShowHideToggle**: Schaltet das Ein-/Ausblenden eines Abschnitts im Bericht um. Geben Sie eine positive ganze Zahl an, um den Abschnitt anzugeben, der umgeschaltet werden soll.
   
-##  <a name="bkmk_webpart"></a> Befehle des Berichts-Viewer-Webparts (rv:)
+##  <a name="report-viewer-web-part-commands-rv"></a><a name="bkmk_webpart"></a> Befehle des Berichts-Viewer-Webparts (rv:)
  Die folgenden reservierten Berichtsparameternamen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden zum Auswählen des in SharePoint integrierten Berichts-Viewer-Webparts verwendet. Diese Parameternamen haben das Präfix *rv:* . Für Berichts-Viewer-Webparts kann auch der Parameter *rs:ParameterLanguage* verwendet werden.
   
 -   **Toolbar**: Steuert die Symbolleistenanzeige des Bericht-Viewer-Webparts. Der Standardwert ist **Full**. Mögliche Werte:

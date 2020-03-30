@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094495"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen
@@ -30,20 +30,20 @@ ms.locfileid: "74094495"
   
 -   **Archivieren von Datenbank-E-Mail-Nachrichten und -Protokollen mithilfe von:**  [SQL Server-Agent](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Die neuen Tabellen zum Speichern der Archivdaten können sich in einer speziellen Archivdatenbank befinden. Alternativ können die Zeilen in eine Textdatei exportiert werden.  
    
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
  Für die Verwendung in einer Produktionsumgebung sollten Sie eine zusätzliche Fehlerprüfung einfügen und eine E-Mail-Nachricht an Operatoren senden, wenn beim Auftrag ein Fehler auftritt.  
   
   
-###  <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen Mitglied der festen Serverrolle **sysadmin** sein, um die in diesem Thema beschriebenen gespeicherten Prozeduren auszuführen.  
   
   
-###  <a name="Process_Overview"></a> Übersicht über den Prozess  
+###  <a name="overview-of-the-process"></a><a name="Process_Overview"></a> Übersicht über den Prozess  
   
 -   Die erste Prozedur erstellt den Auftrag "Datenbank-E-Mail archivieren" in den folgenden Schritten:  
   

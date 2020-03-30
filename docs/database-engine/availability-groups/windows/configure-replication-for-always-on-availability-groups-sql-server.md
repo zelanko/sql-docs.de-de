@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72689658"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Konfigurieren der Replikation mit Always On-Verfügbarkeitsgruppen
@@ -27,7 +27,7 @@ ms.locfileid: "72689658"
 
   Die Konfiguration der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation und von Always On-Verfügbarkeitsgruppen umfasst sieben Schritte. Jeder dieser Schritte wird in den folgenden Abschnitten detailliert beschrieben.  
   
-##  <a name="step1"></a> 1. Konfigurieren der Datenbankveröffentlichungen und Abonnements  
+##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1. Konfigurieren der Datenbankveröffentlichungen und Abonnements  
  **Konfigurieren des Verteilers**  
   
  Die Verteilungsdatenbank kann nicht in eine Verfügbarkeitsgruppe mit SQL Server 2012 und SQL Server 2014 eingefügt werden. Das Einfügen der Verteilungsdatenbank in eine Verfügbarkeitsgruppe wird erst ab SQL 2016 unterstützt. Weitere Informationen finden Sie unter [Konfigurieren einer Verteilungsdatenbank in einer Verfügbarkeitsgruppe](../../../relational-databases/replication/configure-distribution-availability-group.md).
@@ -98,7 +98,7 @@ ms.locfileid: "72689658"
   
 3.  Erstellen Sie die Replikationsveröffentlichung, Artikel und Abonnements. Weitere Informationen zum Konfigurieren der Replikation finden Sie unter "Veröffentlichen von Daten und Datenbankobjekten".  
   
-##  <a name="step2"></a> 2. Konfigurieren der Always On-Verfügbarkeitsgruppe  
+##  <a name="2-configure-the-always-on-availability-group"></a><a name="step2"></a> 2. Konfigurieren der Always On-Verfügbarkeitsgruppe  
  Erstellen Sie beim vorgesehenen primären Replikat die Veröffentlichungsgruppe, und ordnen Sie ihr die veröffentlichte (oder zu veröffentlichende) Datenbank als Elementdatenbank zu. Wenn Sie den Verfügbarkeitsgruppen-Assistenten verwenden, können Sie es entweder dem Assistenten erlauben, die sekundären Replikatdatenbanken zum ersten Mal zu synchronisieren, oder Sie können die Initialisierung mit Sicherung und Wiederherstellung manuell ausführen.  
   
  Erstellen Sie einen DNS-Listener für die Verfügbarkeitsgruppe, die von den Replikations-Agents verwendet wird, um eine Verbindung mit dem aktuellen Primären herzustellen. Der angegebene Listenername wird als Umleitungsziel für das aus ursprünglichem Verleger und veröffentlichter Datenbank bestehende Paar verwendet. Wenn Sie die Verfügbarkeitsgruppe beispielsweise mithilfe von DDL konfigurieren, kann das folgende Codebeispiel zur Angabe eines Verfügbarkeitsgruppenlisteners für eine vorhandene Verfügbarkeitsgruppe mit dem Namen `MyAG` verwendet werden:  
@@ -111,7 +111,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  Weitere Informationen finden Sie unter [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md).  
 
   
-##  <a name="step3"></a> 3. Stellen Sie sicher, dass alle sekundären Replikathosts für die Replikation konfiguriert wurden.  
+##  <a name="3-ensure-that-all-of-the-secondary-replica-hosts-are-configured-for-replication"></a><a name="step3"></a> 3. Stellen Sie sicher, dass alle sekundären Replikathosts für die Replikation konfiguriert wurden.  
  Überprüfen Sie bei jedem sekundären Replikathost, ob [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] so konfiguriert wurde, dass die Replikation unterstützt wird. Die folgende Abfrage kann auf jedem sekundären Replikathost ausgeführt werden, um zu bestimmen, ob die Replikation installiert wurde:  
   
 ```  
@@ -124,7 +124,7 @@ SELECT @installed;
   
  Wenn *\@installed* gleich 0 ist, muss die Replikation der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installation hinzugefügt werden.  
   
-##  <a name="step4"></a> 4. Konfigurieren des sekundären Replikathosts als Replikationsverleger  
+##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a> 4. Konfigurieren des sekundären Replikathosts als Replikationsverleger  
  Ein sekundäres Replikat kann nicht als Replikationsverleger oder Neuverleger fungieren, aber die Replikation kann so konfiguriert werden, dass das sekundäre Replikat nach einem Failover die Rolle übernehmen kann. Konfigurieren Sie beim Verteiler die Verteilung für jeden sekundären Replikathost. Geben Sie die Verteilungsdatenbank und das Arbeitsverzeichnis an, die angegeben wurden, als der ursprüngliche Verleger dem Verteiler hinzugefügt wurde. Wenn Sie gespeicherte Prozeduren zum Konfigurieren der Verteilung verwenden, führen Sie **sp_adddistpublisher** aus, um die Remoteverleger dem Verteiler zuzuordnen. Wenn *\@login* und *\@password* für den ursprünglichen Verleger verwendet wurden, geben Sie die gleichen Werte für die einzelnen sekundären Replikathosts an, die Sie als Verleger hinzufügen.  
   
 ```  
@@ -151,7 +151,7 @@ EXEC sys.sp_addlinkedserver
     @server = 'MySubscriber';  
 ```  
   
-##  <a name="step5"></a> 5. Umleiten des ursprünglichen Verlegers zum Namen des Verfügbarkeitsgruppenlisteners  
+##  <a name="5-redirect-the-original-publisher-to-the-ag-listener-name"></a><a name="step5"></a> 5. Umleiten des ursprünglichen Verlegers zum Namen des Verfügbarkeitsgruppenlisteners  
  Führen Sie auf dem Verteiler in der Verteilungsdatenbank die gespeicherte Prozedur **sp_redirect_publisher** aus, um den ursprünglichen Verleger und dem Namen des Verfügbarkeitsgruppenlisteners der Verfügbarkeitsgruppe die veröffentlichte Datenbank zuzuordnen.  
   
 ```  
@@ -163,7 +163,7 @@ EXEC sys.sp_redirect_publisher
     @redirected_publisher = 'MyAGListenerName';  
 ```  
   
-##  <a name="step6"></a> 6. Ausführen der gespeicherten Prozedur zur Replikationsüberprüfung, um die Konfiguration zu überprüfen  
+##  <a name="6-run-the-replication-validation-stored-procedure-to-verify-the-configuration"></a><a name="step6"></a> 6. Ausführen der gespeicherten Prozedur zur Replikationsüberprüfung, um die Konfiguration zu überprüfen  
  Führen Sie auf dem Verteiler in der Verteilungsdatenbank die gespeicherte Prozedur **sp_validate_replica_hosts_as_publishers** aus, um zu überprüfen, ob alle Replikathosts bereits so konfiguriert worden sind, um als Verleger für die veröffentlichte Datenbank zu fungieren.  
   
 ```  
@@ -189,10 +189,10 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
  Dieses Verhalten wird erwartet. Sie müssen das Vorhandensein der Abonnentenservereinträge bei diesen sekundären Replikathosts überprüfen, indem Sie die sysserver-Einträge im Host direkt abfragen.  
   
-##  <a name="step7"></a> 7. Hinzufügen des ursprünglichen Verlegers zum Replikationsmonitor  
+##  <a name="7-add-the-original-publisher-to-replication-monitor"></a><a name="step7"></a> 7. Hinzufügen des ursprünglichen Verlegers zum Replikationsmonitor  
  Fügen Sie dem Replikationsmonitor bei jedem Verfügbarkeitsgruppenreplikat den ursprünglichen Verleger hinzu.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **Replikation**  
   
 -   [Warten einer Always On-Veröffentlichungsdatenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  

@@ -4,18 +4,18 @@ ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
-description: Die Word-Renderingerweiterung rendert paginierte Berichte Format von  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). Das Format ist Office Open XML.
+description: Die Word-Renderingerweiterung rendert paginierte Berichte im Microsoft Word-Format (.docx). Das Format ist Office Open XML.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 75df880cf51df8670671331ddd6de2738b0bba54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8b0085829346cd09f813e62fe50b1ce22f85b7f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079414"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342877"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
 
@@ -30,14 +30,14 @@ ms.locfileid: "77079414"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItemsWord"></a> Berichtselemente in Word  
+##  <a name="report-items-in-word"></a><a name="ReportItemsWord"></a> Berichtselemente in Word  
  In Word exportierte Berichte werden als geschachtelte Tabelle angezeigt, in der der Berichtshauptteil dargestellt wird. Ein Tablix-Datenbereich wird als geschachtelte Tabelle gerendert, die die Struktur des Datenbereichs im Bericht widerspiegelt. Textfelder und Rechtecke werden jeweils als Zelle innerhalb der Tabelle gerendert. Der Textfeldwert wird in der Zelle angezeigt.  
   
  Bilder, Diagramme, Datenbalken, Sparklines, Karten, Indikatoren und Messgeräte werden als statische Bilder innerhalb einer Tabellenzelle gerendert. Links und Drillthroughlinks zu diesen Berichtselementen werden gerendert. Zuordnungen und Bereiche, auf die innerhalb eines Diagramms geklickt werden kann, werden nicht unterstützt.  
   
  Spaltenberichte im Newsletterformat werden nicht in Word gerendert. Der Berichtshauptteil, Seitenhintergrundbilder und Farben werden nicht gerendert.  
   
-##  <a name="Pagination"></a> Paginierung  
+##  <a name="pagination"></a><a name="Pagination"></a> Paginierung  
  Nachdem der Bericht in Word geöffnet wurde, wird er auf Grundlage des Seitenformats erneut paginiert. Durch die erneute Paginierung können Seitenumbrüche an unerwünschten Stellen eingefügt werden. In einigen Fällen kann der exportierte Bericht zwei aufeinander folgende Seitenumbrüche in einer Zeile oder hinzugefügte leere Seiten enthalten. Sie können versuchen, die Paginierung von Word zu ändern, indem Sie die Seitenränder anpassen.  
   
  Dieser Renderer unterstützt nur logische Seitenumbrüche.  
@@ -50,7 +50,7 @@ ms.locfileid: "77079414"
   
  Beim Rendern wird der Bericht auf die erforderliche Breite (maximal 22 Zoll) geändert, um den Inhalt anzuzeigen. Die minimale Breite des Berichts basiert auf der RDL-Width-Eigenschaft im Bereich „Eigenschaften“.  
   
-##  <a name="DocumentProperties"></a> Dokumenteigenschaften  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> Dokumenteigenschaften  
  Der Word-Renderer schreibt die folgenden Metadaten in die DOCX-Datei.  
   
 |Berichtselementeigenschaften|BESCHREIBUNG|  
@@ -59,7 +59,7 @@ ms.locfileid: "77079414"
 |Autor des Berichts|Autor|  
 |Berichtsbeschreibung|Kommentare|  
   
-##  <a name="ReportHeadersFooters"></a> Seitenkopfzeilen und -fußzeilen  
+##  <a name="page-headers-and-footers"></a><a name="ReportHeadersFooters"></a> Seitenkopfzeilen und -fußzeilen  
  Kopf- und Fußzeilen werden als Kopf- und Fußzeilenbereiche in Word gerendert. Wenn eine Berichtsseitennummer oder ein Ausdruck, der die Gesamtzahl der Berichtsseiten angibt, in der Kopf- oder Fußzeile erscheint, wird diese bzw. dieser in ein Word-Feld übersetzt, sodass die genaue Seitenzahl im gerenderten Bericht angezeigt wird. Wenn die Kopf- oder Fußzeilenhöhe im Bericht festgelegt wird, kann Word diese Einstellung nicht unterstützen. Die PrintOnFirstPage-Eigenschaft kann unter bestimmten Umständen angeben, ob in einer Kopf- bzw. Fußzeile auf der ersten Seite eines Berichts Text enthalten ist. Wenn der gerenderte Bericht mehrere Seiten umfasst und jede Seite lediglich einen einzelnen Abschnitt enthält, können Sie PrintOnFirstPage auf FALSE festlegen, und der Text wird auf der ersten und letzten Seite unterdrückt. Andernfalls ist der Text enthalten, unabhängig vom Wert der PrintOnFirstPage-Eigenschaft.  
   
  Der Word-Renderer analysiert alle Ausdrücke in Kopf- und Fußzeilen, wenn Berichte nach Word exportiert werden. Viele Ausdrücke werden erfolgreich analysiert, und die erwarteten Werte werden in den Kopf- und Fußzeilen aller Berichtseiten angezeigt.  
@@ -78,7 +78,7 @@ ms.locfileid: "77079414"
   
  Um dieses Problem zu umgehen, verwenden Sie mehrere Textausführungen statt eines komplexen Ausdrucks, wenn Sie Ausdrücke in Fuß- und Kopfzeilen verwenden. Die folgenden beiden Ausdrücke sind äquivalent. Der Erste ist ein komplexer Ausdruck, der Zweite verwendet Textausführungen. Der Word-Renderer analysiert nur den zweiten Ausdruck erfolgreich.  
   
-##  <a name="Interactivity"></a> Interaktivität  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interaktivität  
  Einige interaktive Elemente werden in Word unterstützt. Im Folgenden werden spezifische Funktionsweisen beschrieben.  
   
 ### <a name="show-and-hide"></a>Einblenden und Ausblenden  
@@ -96,7 +96,7 @@ ms.locfileid: "77079414"
 ### <a name="bookmarks"></a>Lesezeichen  
  Lesezeichen im Bericht werden als Word-Lesezeichen gerendert. Lesezeichenlinks werden als Links zu den Lesezeichenbezeichnungen innerhalb des Dokuments gerendert. Lesezeichenbezeichnungen müssen weniger als 40 Zeichen lang sein. Das einzige Sonderzeichen, das in einer Lesezeichenbezeichnung verwendet werden kann, ist ein Unterstrich (_). Nicht unterstützte Sonderzeichen werden aus dem Namen der Lesezeichenbezeichnung entfernt. Wenn der Name mehr als 40 Zeichen umfasst, wird er gekürzt. Bei doppelt vorhandenen Lesezeichennamen im Bericht werden die Lesezeichen nicht in Word gerendert.  
   
-##  <a name="WordStyleRendering"></a> Rendern von Formaten in Word  
+##  <a name="word-style-rendering"></a><a name="WordStyleRendering"></a> Rendern von Formaten in Word  
  Im Folgenden wird kurz beschrieben, wie Formate in Word gerendert werden.  
   
 ### <a name="color-palette"></a>Farbpalette  
@@ -105,7 +105,7 @@ ms.locfileid: "77079414"
 ### <a name="border"></a>Rahmen  
  Rahmen für Berichtselemente, mit Ausnahme des Seitenrands, werden als Word-Tabellenzellrahmen gerendert.  
   
-##  <a name="SquigglyLines"></a> Wellenlinien in exportierten Berichten  
+##  <a name="squiggly-lines-in-exported-reports"></a><a name="SquigglyLines"></a> Wellenlinien in exportierten Berichten  
  Exportierte Berichtsdaten und -konstanten, die in Word angezeigt werden, können mit roten der grünen Wellenlinien unterlegt sein. Die roten Wellenlinien weisen auf Rechtschreibfehler, die grünen Wellenlinien auf Grammatikfehler hin. Dieser Fall tritt immer dann ein, wenn Berichte Wörter enthalten, die nicht die Korrekturhilferichtlinien (Rechtschreibung und Grammatik) der angegebenen Bearbeitungssprache in Word erfüllen. So werden z. B. englische Spaltentitel mit hoher Wahrscheinlichkeit mit roten Wellenlinien unterlegt, wenn der Bericht mit einer spanischen Word-Version gerendert wird. Rechtschreibfehler sind in Berichten häufiger anzutreffen als Grammatikfehler, da Berichte in der Regel nur kurze Texte und keine vollständigen Sätze oder Absätze enthalten.  
   
  Die Wellenlinien in den Berichten suggerieren, dass der Bericht Fehler enthält, was aber meistens nicht der Fall ist. Sie können die Wellenlinien entfernen, indem Sie die Korrekturhilfensprache für den Bericht ändern. Um die Sprache für die Korrekturhilfen zu ändern, wählen Sie den Inhalt des Berichts aus, und geben Sie anschließend die gewünschte Sprache an. Sie können den gesamten Inhalt oder nur einen Teil des Inhalts auswählen. In Word befindet sich die Sprachoption **Sprache für die Korrekturhilfen festlegen** im Bereich **Sprache** auf der Registerkarte **Überprüfen** . Nachdem Sie den Inhalt aktualisiert haben, müssen Sie das Dokument neu speichern.  
@@ -121,7 +121,7 @@ ms.locfileid: "77079414"
 > [!NOTE]  
 >  Wenn Sie die Bearbeitungssprache in den **Microsoft Office-Spracheinstellungen** oder im Dialogfeld **Word-Optionen** in Word ändern, gilt die Änderung für alle Office-Programme.  
   
-##  <a name="WordLimitations"></a> Beschränkungen in Word  
+##  <a name="word-limitations"></a><a name="WordLimitations"></a> Beschränkungen in Word  
  Die folgenden Beschränkungen gelten für [!INCLUDE[ofprword](../../includes/ofprword-md.md)]:  
   
 -   Word-Tabellen unterstützen maximal 63 Spalten. Wenn Sie einen Bericht mit mehr als 63 Spalten erstellen und versuchen, diesen zu rendert, wird die Tabelle von Word geteilt. Die zusätzlichen Spalten werden angrenzend an die im Hauptteil des Berichts angezeigten 63 Spalten platziert. Daher werden die Berichtsspalten möglicherweise nicht in der erwarteten Reihenfolge angezeigt.  
@@ -138,7 +138,7 @@ ms.locfileid: "77079414"
   
 -   Wenn Text nach Word exportiert wird, kann der Text mit Schriftdekorationen bei einigen Schriftarten zu unerwarteten oder fehlenden Symbolen im gerenderten Bericht führen.  
   
-##  <a name="WordBenefits"></a> Vorteile der Verwendung des Word-Renderers  
+##  <a name="benefits-of-using-the-word-renderer"></a><a name="WordBenefits"></a> Vorteile der Verwendung des Word-Renderers  
  Der Word-Renderer ermöglicht nicht nur den Zugriff auf die neuen Funktionen, die in [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx-Dateien für exportierte Berichte verfügbar sind, sondern stellt mit dem *.docx-Format meistens auch kleinere Dateien zur Verfügung. Die mit dem Word-Renderer exportierten Berichte sind normalerweise deutlich kleiner als die gleichen Berichte, die mit dem Word 2003-Renderer exportiert werden.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Abwärtskompatibilität exportierter Berichte  
@@ -146,7 +146,7 @@ ms.locfileid: "77079414"
   
  Wenn Sie den Kompatibilitätsmodus deaktivieren und einen Bericht erneut speichern, kann sich das Berichtslayout auf unerwartete Weise ändern.  
   
-##  <a name="AvailabilityWord"></a> Der Word 2003-Renderer  
+##  <a name="the-word-2003-renderer"></a><a name="AvailabilityWord"></a> Der Word 2003-Renderer  
   
 > [!IMPORTANT]  
 >  Die [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003-Renderingerweiterung (.doc) ist veraltet. Weitere Informationen finden Sie unter [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
@@ -186,7 +186,7 @@ ms.locfileid: "77079414"
 ### <a name="differences-between-the-word-and-word-2003-renderers"></a>Unterschiede zwischen dem Word-Renderer und dem Word 2003-Renderer  
  Es gibt keinen visuellen Unterschied zwischen Berichten, die mit dem Word- bzw. Word 2003-Renderer gerendert werden. Möglicherweise fallen Ihnen jedoch kleinere Unterschiede zwischen dem Word- und dem Word 2003-Format auf.  
   
-##  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Geräteinformationseinstellungen  
  Sie können einige Standardeinstellungen für diesen Renderer ändern, beispielsweise Hyperlinks und Drillthroughlinks auslassen oder alle Elemente erweitern, die unabhängig vom ursprünglichen Status des Elements beim Rendern aktiviert bzw. deaktiviert werden können. Ändern Sie dazu die Geräteinformationseinstellungen. Weitere Informationen finden Sie unter [Word Device Information Settings](../../reporting-services/word-device-information-settings.md).  
 
 ## <a name="next-steps"></a>Nächste Schritte

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6fcb4245d4efff00002dea9b490312792e0d83d6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 7346ee3eb347a756de40a7f7527bbf84ecf2f41c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286104"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216469"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installieren von SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ Microsoft hat ein Problem bei der speziellen Version von Microsoft VC++ 2013 Run
 
 <a name="bkmk2016top"></a>
 
-## <a name="run-setup"></a>Ausführen von 'Setup'
+## <a name="run-setup"></a>Ausführen von Setup
 
 Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.
 

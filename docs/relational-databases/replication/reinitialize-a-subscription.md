@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70846514"
 ---
 # <a name="reinitialize-a-subscription"></a>Erneutes Initialisieren eines Abonnements
@@ -30,7 +30,7 @@ ms.locfileid: "70846514"
 
 
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Das erneute Initialisieren eines Abonnements ist ein zweistufiger Prozess:  
   
 1.  Zunächst müssen die Abonnements für eine Veröffentlichung, die erneut initialisiert werden sollen, *gekennzeichnet* werden. Das Kennzeichnen der Abonnements für die erneute Initialisierung erfolgt im Dialogfeld **Abonnements erneut initialisieren**, das über die Ordner **Lokale Veröffentlichungen** und **Lokale Abonnements** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbar ist. Abonnements können darüber hinaus auch auf der Registerkarte **Alle Abonnements** und über den Veröffentlichungsknoten im Replikationsmonitor als erneut zu initialisieren gekennzeichnet werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md). Beim Kennzeichnen eines Abonnements für die erneute Initialisierung können Sie zwischen den folgenden Optionen auswählen:  
@@ -98,7 +98,7 @@ ms.locfileid: "70846514"
   
 3.  Wählen Sie im Dialogfeld **Abonnements erneut initialisieren** die gewünschten Optionen aus, und klicken Sie dann auf **Für erneute Initialisierung kennzeichnen**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Abonnements können mithilfe von gespeicherten Replikationsprozeduren programmgesteuert erneut initialisiert werden. Welche gespeicherte Prozedur verwendet wird, hängt dem Typ des Abonnements (d. h. Push- oder Pullabonnement) und vom Typ der Veröffentlichung ab, zu der das Abonnement gehört.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>So initialisieren Sie ein Pullabonnement für eine Transaktionsveröffentlichung erneut  
@@ -157,7 +157,7 @@ ms.locfileid: "70846514"
   
      Weitere Informationen finden Sie unter [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Einzelne Abonnements können für die erneute Initialisierung markiert werden, sodass während der nächsten Synchronisierung eine neue Momentaufnahme angewendet wird. Abonnements können mithilfe von Replikationsverwaltungsobjekten (RMO) programmgesteuert erneut initialisiert werden. Die zu verwendenden Klassen hängen Typ der Veröffentlichung, zu der das Abonnement gehört, und dem Typ des Abonnements ab (d. h. Push- oder Pullabonnement).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>So initialisieren Sie ein Pullabonnement für eine Transaktionsveröffentlichung erneut  
@@ -226,7 +226,7 @@ ms.locfileid: "70846514"
   
 5.  Synchronisieren Sie das Pushabonnement. Weitere Informationen finden Sie unter [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-###  <a name="PShellExample"></a> Beispiele (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Beispiele (RMO)  
  Im folgenden Beispiel wird ein Pullabonnement für eine Transaktionsveröffentlichung erneut initialisiert.  
   
  [!code-cs[HowTo#rmo_ReinitTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_reinittranpullsub)]  

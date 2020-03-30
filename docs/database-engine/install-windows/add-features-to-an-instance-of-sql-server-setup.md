@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68051200"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Hinzufügen von Funktionen zu einer Instanz von SQL Server (Setup)
@@ -40,7 +40,7 @@ ms.locfileid: "68051200"
   
 ## <a name="procedures"></a>Prozeduren  
   
-#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>Informationen zum Hinzufügen einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>Informationen zum Hinzufügen einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Legen Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsmedium ein. Doppelklicken Sie im Stammordner auf setup.exe. Bei einer Installation über eine Netzwerkfreigabe navigieren Sie zum Stammordner der Freigabe, und doppelklicken Sie auf setup.exe. Wenn das Dialogfeld zum Einrichten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angezeigt wird, [!INCLUDE[clickOK](../../includes/clickok-md.md)] , um die erforderlichen Komponenten zu installieren, und klicken Sie auf **Abbrechen** , um die Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] abzubrechen.  
   

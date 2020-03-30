@@ -12,10 +12,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76971223"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Installieren von SQL Server-Spracherweiterungen unter Linux
@@ -86,7 +86,7 @@ Für sämtliche betriebssystemspezifischen Installationsanweisungen ist die *hö
 
 Auf einem mit dem Internet verbundenen Gerät werden Pakete unabhängig von der Datenbank-Engine mithilfe des Paketinstallationsprogramms für das betreffende Betriebssystem heruntergeladen und installiert. Die folgende Tabelle enthält alle verfügbaren Pakete.
 
-| Paketname | Gilt für | Beschreibung |
+| Paketname | Gilt für | BESCHREIBUNG |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | Alle Sprachen | Verwendetes Erweiterbarkeitsframework für die Java-Spracherweiterung |
 |mssql-server-extensibility-java | Java | Verwendetes Erweiterbarkeitsframework für die Java-Spracherweiterung, enthält außerdem eine unterstützte Java-Runtime |
@@ -297,7 +297,7 @@ mssql-server-extensibility-java-15.0.1000
 
 In Bezug auf die [Ressourcengovernance](../t-sql/statements/create-external-resource-pool-transact-sql.md) besteht zwar zwischen Linux und Windows Parität für externe Ressourcenpools, aber die Statistiken für [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) haben derzeit unterschiedliche Einheiten unter Linux. 
  
-| Spaltenname   | Beschreibung | Wert unter Linux | 
+| Spaltenname   | BESCHREIBUNG | Wert unter Linux | 
 |---------------|--------------|---------------|
 |peak_memory_kb | Der maximale Speicher, der für den Ressourcenpool verwendet wird. | Unter Linux wird diese Statistik dem CGroups-Speichersubsystem entnommen. Dabei lautet der Wert „memory.max_usage_in_bytes“. |
 |write_io_count | Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Resource Governor-Statistiken ausgegeben wurden. | Unter Linux wird diese Statistik dem CGroups-Speichersubsystem „blkio“ entnommen. Dabei lautet der Wert der Zeile für die Schreibvorgänge „blkio.throttle.io_serviced“. | 

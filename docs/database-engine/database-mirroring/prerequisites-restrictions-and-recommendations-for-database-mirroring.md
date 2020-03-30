@@ -20,10 +20,10 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1f6a1c47cf5672cdf0f9a22be6a252cfc8cdbe87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244368"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Voraussetzungen, Einschränkungen und Empfehlungen für die Datenbankspiegelung
@@ -35,13 +35,13 @@ ms.locfileid: "75244368"
  In diesem Thema werden die Voraussetzungen und Empfehlungen zum Einrichten der Datenbankspiegelung beschrieben. Eine Einführung in die Datenbankspiegelung finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
   
-##  <a name="DbmSupport"></a> Unterstützung der Datenbankspiegelung  
+##  <a name="support-for-database-mirroring"></a><a name="DbmSupport"></a> Unterstützung der Datenbankspiegelung  
  Informationen zur unterstützten Datenbankspiegelung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
  Beachten Sie, dass die Datenbankspiegelung mit jedem unterstützten Datenbank-Kompatibilitätsgrad funktioniert. Informationen zu den unterstützten Kompatibilitätsgraden finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
   
-##  <a name="Prerequisites"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 -   Damit eine Spiegelungssitzung eingerichtet werden kann, müssen die Partner und ggf. der Zeuge unter derselben Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "75244368"
     >  Wurde die Datenbankspiegelung beendet, bevor Sie einen Neustart ausführen konnten, müssen alle nachfolgend in der Prinzipaldatenbank erstellten Protokollsicherungen auf die Spiegeldatenbank angewendet werden.  
   
   
-##  <a name="Restrictions"></a> Einschränkungen  
+##  <a name="restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Es können nur Benutzerdatenbanken können gespiegelt werden. Die Datenbanken **master**, **msdb**, **tempdb**und **model** können nicht gespiegelt werden.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75244368"
 -   Die Datenbankspiegelung wird weder für datenbankübergreifende Transaktionen noch für verteilte Transaktionen unterstützt. Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
   
-##  <a name="RecommendationsForPartners"></a> Empfehlungen für das Konfigurieren von Partnerservern  
+##  <a name="recommendations-for-configuring-partner-servers"></a><a name="RecommendationsForPartners"></a> Empfehlungen für das Konfigurieren von Partnerservern  
   
 -   Die Partner sollten auf vergleichbaren Systemen ausgeführt werden, die identische Arbeitsauslastungen bewältigen können.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75244368"
 -   Es wird bewusst auf Stellungnahmen zum Zuverlässigkeitsgrad von WANs (Wide-Area Networks) für die Datenbankspiegelung im Hochsicherheitsmodus verzichtet. Wenn Sie sich jedoch für die Verwendung der Datenbankspiegelung im Hochsicherheitsmodus über ein WAN entschieden haben, sollten Sie vorsichtig sein, wenn Sie einer Sitzung einen Zeugen hinzufügen, da ein automatisches Failover auftreten kann. Weitere Informationen hierzu finden Sie unter [Empfehlungen für das Bereitstellen der Datenbankspiegelung](#RecommendationsForDeploying)weiter unten in diesem Thema.  
   
   
-##  <a name="RecommendationsForDeploying"></a> Empfehlungen für das Bereitstellen der Datenbankspiegelung  
+##  <a name="recommendations-for-deploying-database-mirroring"></a><a name="RecommendationsForDeploying"></a> Empfehlungen für das Bereitstellen der Datenbankspiegelung  
  Eine optimale Leistung bei der Datenbankspiegelung wird über den asynchronen Betrieb erzielt. Bei einer Spiegelungssitzung, die im synchronen Betrieb ausgeführt wird, treten Leistungsverzögerungen auf, wenn große Mengen an Transaktionsprotokolldaten generiert werden.  
   
  In Testumgebungen ist es sinnvoll, alle Betriebsmodi zu überprüfen, um das Verhalten der Datenbankspiegelung beurteilen zu können. Bevor Sie jedoch die Spiegelung in einer Produktionsumgebung bereitstellen, müssen Sie sicherstellen, dass Sie wissen, wie das Netzwerk in der Realität funktioniert.  
