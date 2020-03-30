@@ -11,10 +11,10 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: d35c339798b4385cb903d8a4a83f13184bbf4db3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72381748"
 ---
 # <a name="sql-server-login-dialog-box"></a>Dialogfeld „SQL Server-Anmeldung“
@@ -32,9 +32,9 @@ Wenn Sie versuchen, eine Verbindung herzustellen, ohne ausreichend Informationen
 ![Screenshot des Dialogfelds „SQL Server-Anmeldung“](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>Tastatur
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |---   |---        |
-|Server|Der Name einer SQL Server-Instanz in Ihrem Netzwerk. Wählen Sie einen Server-/Instanzennamen aus der Liste aus, oder geben Sie den Server-/Instanzennamen in das Feld **Server** ein. Optional können Sie mit dem **SQL Server-Konfigurations-Manager** einen Serveralias auf dem Clientcomputer erstellen und diesen Namen in das Feld **Server** eingeben. <br/><br/>Sie können „(local)“ eingeben, wenn Sie den gleichen Computer wie SQL Server verwenden. Sie können anschließend eine Verbindung mit einer lokalen Instanz von SQL Server herstellen, selbst wenn eine nicht vernetzte Version von SQL Server ausgeführt wird.<br/><br/>Weitere Informationen zu Servernamen für verschiedene Netzwerktypen finden Sie unter [Installation von SQL Server](https://go.microsoft.com/fwlink/?linkid=2067541).|
+|Server|Hier geben Sie den Namen einer SQL Server-Instanz in Ihrem Netzwerk ein. Wählen Sie einen Server-/Instanzennamen aus der Liste aus, oder geben Sie den Server-/Instanzennamen in das Feld **Server** ein. Optional können Sie mit dem **SQL Server-Konfigurations-Manager** einen Serveralias auf dem Clientcomputer erstellen und diesen Namen in das Feld **Server** eingeben. <br/><br/>Sie können „(local)“ eingeben, wenn Sie den gleichen Computer wie SQL Server verwenden. Sie können anschließend eine Verbindung mit einer lokalen Instanz von SQL Server herstellen, selbst wenn eine nicht vernetzte Version von SQL Server ausgeführt wird.<br/><br/>Weitere Informationen zu Servernamen für verschiedene Netzwerktypen finden Sie unter [Installation von SQL Server](https://go.microsoft.com/fwlink/?linkid=2067541).|
 |Authentifizierungsmodus|Sie können in der Dropdownliste die folgenden Authentifizierungsoptionen auswählen:<br/><ul><li>`Windows Authentication:` Authentifizierung gegenüber SQL Server über die Anmeldeinformationen des Windows-Kontos, das aktuell angemeldet ist.</li><li>`SQL Server Authentication:` Authentifizierung über eine Anmelde-ID und ein Kennwort.</li><li>`Active Directory - Integrated:` Integrierte Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus kann auch für die Windows-Authentifizierung gegenüber SQL Server verwendet werden.</li><li>`Active Directory - Password:` Authentifizierung mit Benutzer-ID und Kennwort über eine Azure Active Directory-Identität.</li><li>`Active Directory - Universal with MFA support:` Interaktive Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus unterstützt die Azure Multi-Factor Authentication (MFA).</li></ul>|
 |Server-SPN|Wenn Sie eine vertrauenswürdige Verbindung verwenden, können Sie einen Dienstprinzipalnamen (SPN) für den Server angeben.|
 |Login ID|Gibt die Anmelde-ID an, die für die Verbindung verwendet werden soll. Das Textfeld „Anmelde-ID“ ist nur aktiviert, wenn `Authentication Mode` auf `SQL Server Authentication`, `Active Directory - Password` oder `Active Directory - Universal with MFA support` festgelegt ist.|

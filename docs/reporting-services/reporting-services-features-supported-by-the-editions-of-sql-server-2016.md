@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
 ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76516601"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>Von den SQL Server-Editionen unterstützte SQL Server Reporting Services-Features
@@ -27,7 +27,7 @@ In diesem Thema sind die Microsoft SQL Server Reporting Services-Features (SSRS)
  - [Neues in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
  - [Von den SQL Server-Editionen unterstützte Features](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
-##  <a name="SSRS"></a> SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="SSRS"></a> SQL Server Reporting Services  
 
 Informationen über Funktionen, die von den Evaluation- und Developer-Editionen unterstützt werden, finden Sie in der folgenden Tabelle in der Spalte für die SQL Server-Edition Enterprise.
 
@@ -83,7 +83,7 @@ Informationen über Funktionen, die von den Evaluation- und Developer-Editionen 
 |Express mit Advanced Services|Express mit Advanced Services (nur lokal)|  
 |Auswertung|Auswertung|  
   
-##  <a name="BIC"></a> Business Intelligence-Clients  
+##  <a name="business-intelligence-clients"></a><a name="BIC"></a> Business Intelligence-Clients  
 Die folgenden Softwareclientanwendungen sind im Microsoft Download Center verfügbar. Mit diesen Anwendungen können Sie Business Intelligence-Dokumente erstellen, die mit einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz ausgeführt werden. Wenn Sie diese Dokumente in einer Serverumgebung hosten, verwenden Sie eine Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die diesen Dokumenttyp unterstützt. In der folgenden Tabelle wird dargestellt, welche [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Editionen die Serverfunktionen zum Hosten der in den Clientanwendungen erstellten Dokumente besitzen.  
   
 |Name des Tools|Enterprise|Standard|Web|Express mit Advanced Services|Entwickler|  

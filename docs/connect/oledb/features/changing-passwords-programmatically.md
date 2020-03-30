@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989132"
 ---
 # <a name="changing-passwords-programmatically"></a>Programmgesteuertes Ändern von Kennwörtern
@@ -43,14 +43,14 @@ ms.locfileid: "67989132"
 |SQL Server-Fehlercode|Fehlermeldung|  
 |---------------------------|-------------------|  
 |15113|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortüberprüfung. Das Konto ist gesperrt.|  
-|18463|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort kann zurzeit nicht verwendet werden.|  
-|18464|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort ist zu kurz und erfüllt daher nicht die Anforderungen der Richtlinie.|  
-|18465|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort ist zu lang und erfüllt daher nicht die Anforderungen der Richtlinie.|  
-|18466|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort ist nicht komplex genug und erfüllt daher nicht die Anforderungen der Windows-Richtlinie.|  
-|18467|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Das Kennwort erfüllt nicht die Anforderungen der Kennwortfilter-DLL.|  
-|18468|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler beim Ändern des Kennworts. Unerwarteter Fehler während der Kennwortüberprüfung.|  
-|18487|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort für das Konto ist abgelaufen.|  
-|18488|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort für das Konto muss geändert werden.|  
+|18463|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort kann zurzeit nicht verwendet werden.|  
+|18464|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort ist zu kurz und erfüllt daher nicht die Anforderungen der Richtlinie.|  
+|18465|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort ist zu lang und erfüllt daher nicht die Anforderungen der Richtlinie.|  
+|18466|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort ist nicht komplex genug und erfüllt daher nicht die Anforderungen der Windows-Richtlinie.|  
+|18467|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Das Kennwort erfüllt nicht die Anforderungen der Kennwortfilter-DLL.|  
+|18468|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Fehler bei der Kennwortänderung. Unerwarteter Fehler während der Kennwortüberprüfung.|  
+|18487|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort des Kontos ist abgelaufen.|  
+|18488|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort des Kontos muss geändert werden.|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQL Server  
  Der OLE DB-Treiber für SQL Server unterstützt das Ablaufen von Kennwörtern über eine Benutzeroberfläche und programmgesteuert.  

@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: ed7fa07959715ac6c08b8799c5579e90939f87c2
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896270"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server-Features und ADO.NET
@@ -30,22 +30,22 @@ Weitere Informationen finden Sie unter [Entwicklung (Datenbank-Engine)](https://
 Beschreibt das Auflisten aktiver Instanzen von SQL Server 2000.  
   
 [Anbieterstatistiken für SQL Server](provider-statistics-sql-server.md)  
-Beschreibt die Unterstützung für das Abrufen von SQL Server-Laufzeitstatistiken  
+Informationen zur Unterstützung des Abrufens von SQL Server-Laufzeitstatistiken.  
   
 [SQL Server Express-Benutzerinstanzen](sql-server-express-user-instances.md)  
-Beschreibt die Unterstützung für SQL Server Express-Benutzerinstanzen  
+Beschreibung der Unterstützung für SQL Server Express-Benutzerinstanzen.  
   
 [Datenbankspiegelung in SQL Server](database-mirroring-sql-server.md)  
-Beschreibt die Funktion zum Spiegeln von Datenbanken  
+Beschreibt die Funktionsweise der Datenbankspiegelung.  
 
 [Die Kontextverbindung](context-connection.md)  
 Beschreibt die Kontextverbindung  
   
 [Abfragebenachrichtigungen in SQL Server](query-notifications-sql-server.md)  
-Beschreibt, wie .NET-Anwendungen Benachrichtigungen von SQL Server anfordern können, wenn sich Daten geändert haben  
+Beschreibt, wie .NET-Anwendungen Benachrichtigungen von SQL Server anfordern können, wenn sich Daten geändert haben.  
   
 [Momentaufnahmenisolation in SQL Server](snapshot-isolation-sql-server.md)  
-Beschreibt die Unterstützung der Momentaufnahmenisolation, eines Mechanismus für die Zeilenversionsverwaltung zum Reduzieren von Blockierungen in Transaktionsanwendungen  
+Beschreibung der Unterstützung der Momentaufnahmenisolation, eines Mechanismus für die Zeilenversionsverwaltung zum Verringern von Blockierungen in Transaktionsanwendungen.  
   
 [SqlClient-Unterstützung für Hochverfügbarkeit, Notfallwiederherstellung](sqlclient-support-high-availability-disaster-recovery.md)  
 Beschreibt die SqlClient-Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung bei (Always On-)Verfügbarkeitsgruppen  
@@ -53,7 +53,7 @@ Beschreibt die SqlClient-Unterstützung für Hochverfügbarkeit und Notfallwiede
 [SqlClient-Unterstützung für LocalDB](sqlclient-support-localdb.md)  
 Beschreibt die SqlClient-Unterstützung für LocalDB-Datenbanken
 
-[SqlClient-Unterstützung](sqlclient-support-always-encrypted.md) für Always Encrypted  
+[SqlClient-Unterstützung für Always Encrypted](sqlclient-support-always-encrypted.md)  
 Beschreibt die SqlClient-Unterstützung für das Feature „Always Encrypted“
 
 ## <a name="next-steps"></a>Nächste Schritte

@@ -18,10 +18,10 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b252a53acd98a0c5b445166ffcf3fa4328dd646f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293144"
 ---
 # <a name="data-flow"></a>Datenfluss
@@ -101,7 +101,7 @@ ms.locfileid: "71293144"
 ### <a name="sources-available-for-download"></a>Quellen, die zum Download zur Verfügung stehen  
  In der folgenden Tabelle sind zusätzliche Quellen aufgeführt, die Sie von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Website herunterladen können.  
   
-|`Source`|Beschreibung|  
+|`Source`|BESCHREIBUNG|  
 |------------|-----------------|  
 |Oracle-Quelle|Die Oracle-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity umfasst auch einen Verbindungs-Manager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
 |SAP BI-Quelle|Die SAP BI-Quelle ist die Quellkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für SAP BI enthält außerdem einen Verbindungsmanager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
@@ -112,7 +112,7 @@ ms.locfileid: "71293144"
 ## <a name="transformations"></a>Transformationen  
  Die Funktionalität von Transformationen variiert erheblich. Mit Transformationen können Aufgaben wie z. B. das Aktualisieren, Zusammenfassen, Bereinigen, Zusammenführen und Verteilen von Daten ausgeführt werden. Sie können Werte in Spalten ändern, Werte in Tabellen nachschlagen, Daten bereinigen und Spaltenwerte aggregieren.  
   
- Die Eingaben und Ausgaben einer Transformation definieren die Spalten von ein- und ausgehenden Daten. Abhängig vom Vorgang, der für die Daten ausgeführt wird, weisen manche Transformationen eine einzige Eingabe und mehrere Ausgaben auf, während andere Transformationen mehrere Eingaben und eine einzige Ausgabe aufweisen. Transformationen können außerdem Fehlerausgaben enthalten, mit denen Informationen zum aufgetretenen Fehler sowie die fehlerhaften Daten bereitgestellt werden; beispielsweise Zeichenfolgendaten, die nicht in einen Integerdatentyp konvertiert werden konnten. Mit dem Objektmodell von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] wird die Anzahl von Eingaben, regulären Ausgaben und Fehlerausgaben, die Transformationen enthalten, nicht eingeschränkt. Sie können benutzerdefinierte Transformationen erstellen, die eine beliebige Kombination aus mehreren Eingaben, regulären Ausgaben und Fehlerausgaben implementieren.  
+ Die Eingaben und Ausgaben einer Transformation definieren die Spalten von ein- und ausgehenden Daten. Abhängig vom Vorgang, der für die Daten ausgeführt wird, weisen manche Transformationen eine einzige Eingabe und mehrere Ausgaben auf, während andere Transformationen mehrere Eingaben und eine einzige Ausgabe aufweisen. Transformationen können außerdem Fehlerausgaben enthalten, mit denen Informationen zum aufgetretenen Fehler sowie die fehlerhaften Daten bereitgestellt werde; beispielsweise Zeichenfolgendaten, die nicht in einen integer-Datentyp konvertiert werden konnten. Mit dem Objektmodell von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] wird die Anzahl von Eingaben, regulären Ausgaben und Fehlerausgaben, die Transformationen enthalten, nicht eingeschränkt. Sie können benutzerdefinierte Transformationen erstellen, die eine beliebige Kombination aus mehreren Eingaben, regulären Ausgaben und Fehlerausgaben implementieren.  
   
  Die Eingabe einer Transformation ist als mindestens eine Eingabespalte definiert. Manche [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Transformationen können auch auf externe Spalten als Eingabe verweisen. Beispielsweise enthält die Eingabe der Transformation für OLE DB-Befehl externe Spalten. Eine Ausgabespalte ist eine Spalte, die von der Transformation dem Datenfluss hinzugefügt wird. Reguläre Ausgaben und Fehlerausgaben enthalten Ausgabespalten. Diese Ausgabespalten dienen wiederum als Eingabespalten für die nächste Komponente im Datenfluss, entweder eine andere Transformation oder ein Ziel.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "71293144"
 ### <a name="destinations-available-for-download"></a>Ziele, die zum Herunterladen zur Verfügung stehen  
  In der folgenden Tabelle sind zusätzliche Ziele aufgeführt, die Sie von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Website herunterladen können.  
   
-|`Source`|Beschreibung|  
+|`Source`|BESCHREIBUNG|  
 |------------|-----------------|  
 |Oracle-Ziel|Das Oracle-Ziel ist die Zielkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity enthält auch einen Verbindungs-Manager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
 |SAP BI-Ziel|Das SAP BI-Ziel ist die Zielkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connectors für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für SAP BI enthält auch einen Verbindungsmanager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
@@ -182,7 +182,7 @@ ms.locfileid: "71293144"
  Quellen haben Ausgaben, Ziele haben Eingaben, und Transformationen haben Eingaben und Ausgaben. Darüber hinaus kann für viele Datenflusskomponenten die Verwendung einer Fehlerausgabe konfiguriert werden.  
   
 ### <a name="inputs"></a>Eingaben  
- Ziele und Transformationen weisen Eingaben auf. Eine Eingabe enthält mindestens eine Eingabespalte, die auf externe Spalten verweisen kann, falls für die Datenflusskomponente die Verwendung externer Spalten konfiguriert wurde. Eingaben können zur Überwachung und Steuerung des Datenflusses konfiguriert werden: Beispielsweise können Sie angeben, ob die Komponente bei einem Fehler abgebrochen, der Fehler ignoriert oder Fehlerzeilen an die Fehlerausgabe umgeleitet werden sollen. Darüber hinaus können Sie der Eingabe eine Beschreibung zuweisen oder den Eingabenamen aktualisieren. Im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer werden Eingaben im Dialogfeld **Erweiterter Editor** konfiguriert. Weitere Informationen zu **Erweiterter Editor** finden Sie unter [Integration Services User Interface](../../integration-services/integration-services-user-interface.md).  
+ Ziele und Transformationen weisen Eingaben auf. Eine Eingabe enthält mindestens eine Eingabespalte, die auf externe Spalten verweisen kann, falls für die Datenflusskomponente die Verwendung externer Spalten konfiguriert wurde. Eingaben können so konfiguriert werden, dass sie den Datenfluss überwachen und steuern. Beispielsweise können Sie angeben, ob die Komponente bei einem Fehler abgebrochen, der Fehler ignoriert oder Fehlerzeilen an die Fehlerausgabe umgeleitet werden sollen. Darüber hinaus können Sie der Eingabe eine Beschreibung zuweisen oder den Eingabenamen aktualisieren. Im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer werden Eingaben im Dialogfeld **Erweiterter Editor** konfiguriert. Weitere Informationen zu **Erweiterter Editor** finden Sie unter [Integration Services User Interface](../../integration-services/integration-services-user-interface.md).  
   
 ### <a name="outputs"></a>Ausgaben  
  Quellen und Transformationen weisen immer Ausgaben auf. Eine Ausgabe enthält mindestens eine Ausgabespalte, die auf externe Spalten verweisen kann, falls für die Datenflusskomponente die Verwendung externer Spalten konfiguriert wurde. Für Ausgaben kann konfiguriert werden, dass sie Informationen bereitstellen, die für die Downstreamverarbeitung von Daten hilfreich sind. Beispielsweise können Sie anzeigen, ob die Ausgabe sortiert werden soll. Außerdem können Sie für die Ausgabe eine Beschreibung bereitstellen oder den Ausgabenamen aktualisieren. Im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer werden Ausgaben im Dialogfeld **Erweiterter Editor** konfiguriert.  

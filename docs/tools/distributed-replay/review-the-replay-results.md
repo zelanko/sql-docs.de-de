@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 03c6f6e0bcb58037e362ffd4b3ad20914fd9c328
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306946"
 ---
 # <a name="review-the-replay-results"></a>Überprüfen der Wiedergabeergebnisse
@@ -60,7 +60,7 @@ Nachdem das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVe
 ## <a name="column-descriptions-for-result-trace"></a>Beschreibungen der Spalten für das Ergebnis der Ablaufverfolgung  
  In der folgenden Tabelle werden die Spalten der Ergebnisdaten der Ablaufverfolgung beschrieben.  
   
-|Name der Datenspalte|Datentyp|Beschreibung|Column ID|  
+|Name der Datenspalte|Datentyp|BESCHREIBUNG|Column ID|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|Der Name der Ereignisklasse.|1|  
 |EventSequence|**bigint**|Für Anbieterfehler sowie interne Fehler und Warnungen ist dies die Sequenz der Ereignisaufzeichnung, die dem Fehler bzw. der Warnung entspricht.<br /><br /> Für alle anderen Ereignisklassen ist dies die Sequenz des Ereignisses in den ursprünglichen Ablaufverfolgungsdaten.|2|  

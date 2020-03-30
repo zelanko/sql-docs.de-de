@@ -11,10 +11,10 @@ ms.assetid: 6ebf385c-ddb0-4c53-9dc6-7df0d3740b04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4021a6a5c550ea9674c0bf699462eece1d9c2f9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993043"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
@@ -30,7 +30,7 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*column_number:* Bei diesem Parameter handelt es sich um einen optionalen Integer, der eine nullbasierte Spaltennummer angibt. Der Standardwert ist 0 (die erste Spalte in der Zeile).  
+$*column_number*: Eine optionale ganze Zahl, die die nullbasierte Spaltennummer angibt. Der Standardwert ist 0 (die erste Spalte in der Zeile).  
   
 ## <a name="return-value"></a>Rückgabewert  
 Eine Spalte oder „false“, wenn keine weiteren Zeilen vorhanden sind.  

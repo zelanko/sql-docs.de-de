@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574019"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Beispiele für URLs von Elementen auf einem Berichtsserver (SharePoint-Modus)
@@ -100,7 +100,7 @@ ms.locfileid: "65574019"
 |Der Beispielbericht „Company Sales“ im Ordner **Documents/Doc** einer [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] - oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Instanz.|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
 |Der Beispielbericht "Company Sales" im Ordner **Report Center** einer [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] - oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Instanz.|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
-##  <a name="publishingToDocLib"></a> Veröffentlichen in einer SharePoint-Bibliothek über ein Erstellungstool  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> Veröffentlichen in einer SharePoint-Bibliothek über ein Erstellungstool  
  Wenn Sie ein Berichterstellungstool zum Veröffentlichen von Berichten und zugehörigen Dateien in einer Bibliothek verwenden, werden die Dateien überprüft, bevor sie hinzugefügt werden. Wenn Sie Berichte und zugehörige Dateien mithilfe der **Upload** -Aktion in einer SharePoint-Bibliothek hochladen, erfolgt keine Überprüfung. Sie wissen erst, ob die Datei gültig ist, wenn Sie den Bericht verwalten, bearbeiten oder ausführen und somit auf ihn zugreifen.  
   
 > [!NOTE]  

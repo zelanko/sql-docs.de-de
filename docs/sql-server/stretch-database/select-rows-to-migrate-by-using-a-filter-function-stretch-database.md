@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844551"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Auswählen von Zeilen für die Migration mit einer Filterfunktion (Stretch Database)
@@ -197,7 +197,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="addafterwiz"></a>Hinzufügen einer Filterfunktion nach dem Ausführen des Assistenten  
+## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>Hinzufügen einer Filterfunktion nach dem Ausführen des Assistenten  
   
 Wenn Sie eine Funktion verwenden möchten, die Sie im Assistenten **zum Aktivieren von Stretch für eine Datenbank** nicht erstellen können, können Sie die **ALTER TABLE** -Anweisung ausführen, um nach Beenden des Assistenten eine Funktion anzugeben. Bevor eine Funktion angewendet werden kann, müssen Sie jedoch die Datenmigration anhalten, die bereits in Bearbeitung ist, und migrierte Daten zurückbringen. (Weitere Informationen dazu, warum dies notwendig ist, finden Sie im Abschnitt [Ersetzen einer vorhandenen Filterfunktion](#replacePredicate)).
   
@@ -492,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
   
  Wenn die Funktion ein nicht leeres Ergebnis für die Zeile zurückgibt, ist die Zeile für die Migration geeignet.  
   
-## <a name="replacePredicate"></a>Ersetzen einer vorhandenen Filterfunktion  
+## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>Ersetzen einer vorhandenen Filterfunktion  
  Sie können eine zuvor angegebene Filterfunktion ersetzen, indem Sie die **ALTER TABLE** -Anweisung erneut ausführen und einen neuen Wert für den Parameter **FILTER_PREDICATE** angeben. Beispiel:  
   
 ```sql  

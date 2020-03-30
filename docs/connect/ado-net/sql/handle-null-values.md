@@ -1,6 +1,6 @@
 ---
 title: Behandlung von NULL-Werten
-description: Veranschaulicht, wie Sie in SQL Server und .NET mit NULL-Werten arbeiten.
+description: Veranschaulicht, wie Sie mit GUID- und uniqueidentifier-Werten in SQL Server und .NET arbeiten.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 2bcd54ab83429b1f7961480210c12eb546a2aa70
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896736"
 ---
 # <a name="handling-null-values"></a>Behandlung von NULL-Werten

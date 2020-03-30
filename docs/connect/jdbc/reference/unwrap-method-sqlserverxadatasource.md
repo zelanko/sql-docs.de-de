@@ -11,10 +11,10 @@ ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f7406bce05278cad83b28b14f95a241b3eff026
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67986044"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>unwrap-Methode (SQLServerXADataSource)
@@ -45,9 +45,9 @@ public <T> T unwrap(Class<T> iface)
   
  Von den Anwendungen muss möglicherweise auf [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifische JDBC-API-Erweiterungen zugegriffen werden. Die unwrap-Methode unterstützt das Entpacken in öffentliche, von diesem Objekt erweiterte Klassen, wenn von den Klassen Herstellererweiterungen verfügbar gemacht werden.  
   
- Durch die [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)-Klasse wird die [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)-Klasse erweitert, die durch die [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)-Klasse erweitert wird. Wenn diese Methode aufgerufen wird, wird das Objekt in die folgenden Klassen aufgeschlüsselt: [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) und [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
+ Durch die [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)-Klasse wird die [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)-Klasse erweitert, die durch die [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)-Klasse erweitert wird. Beim Aufrufen dieser Methode wird das Objekt in die folgenden Klassen entpackt: [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) und [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
- Weitere Informationen finden Sie im Artikel [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerXADataSource-Methoden](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   

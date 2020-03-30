@@ -11,10 +11,10 @@ ms.assetid: 60ec0499-1c2a-4476-9e32-03b9d698fe54
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 305c178c066edead818f58c3e7cdbc9229588e2f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983775"
 ---
 # <a name="getdatetimeoffset-sqlserverresultset"></a>getDateTimeOffset (SQLServerResultSet)
@@ -24,7 +24,7 @@ ms.locfileid: "67983775"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[getDateTimeOffset-Methode (int)](../../../connect/jdbc/reference/getdatetimeoffset-int-sqlserverresultset.md)|Ruft den Wert der angegebenen Spalte unter Berücksichtigung des Parameterindexes als [DateTimeOffset-Klassenobjekt](../../../connect/jdbc/reference/datetimeoffset-class.md) in Java ab.|  
 |[getDateTimeOffset (java.lang.string)](../../../connect/jdbc/reference/getdatetimeoffset-java-lang-string-sqlserverresultset.md)|Ruft den Wert der angegebenen Spalte unter Berücksichtigung des Parameterindexes als [DateTimeOffset-Klassenobjekt](../../../connect/jdbc/reference/datetimeoffset-class.md) in Java ab.|  

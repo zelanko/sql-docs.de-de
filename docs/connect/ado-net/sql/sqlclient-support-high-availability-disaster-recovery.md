@@ -1,6 +1,6 @@
 ---
 title: SqlClient-Unterstützung für Hochverfügbarkeit, Notfallwiederherstellung
-description: Beschreibt die SqlClient-Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung bei (Always On-)Verfügbarkeitsgruppen.
+description: Beschreibt die SqlClient-Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung bei (Always On-)Verfügbarkeitsgruppen
 ms.date: 08/15/2019
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.prod: sql
@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: a7aa6a28a64e35c13c135e509b758a1636b3f896
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896286"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient-Unterstützung für Hochverfügbarkeit, Notfallwiederherstellung
@@ -59,7 +59,7 @@ Befolgen Sie beim Herstellen einer Verbindung mit einem Server in einer Verfügb
   
 - Ein Verbindungsversuch mit einer mit mehr als 64 IP-Adressen konfigurierten SQL Server-Instanz verursacht einen Verbindungsfehler.  
   
-- Das Verhalten einer Anwendung, die die Verbindungseigenschaft `MultiSubnetFailover` verwendet, wird nicht vom Authentifizierungstyp beeinflusst: SQL Server-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
+- Das Verhalten einer Anwendung, die die `MultiSubnetFailover`-Verbindungseigenschaft verwendet, wird nicht vom Authentifizierungstyp beeinflusst: SQL Server-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
   
 - Vergrößern Sie den Wert von `Connect Timeout`, um eine ausreichende Failoverzeit zu konfigurieren und die Anzahl der Verbindungsherstellungsversuche der Anwendung zu reduzieren.  
   

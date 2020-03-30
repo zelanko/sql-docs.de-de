@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68941142"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Berichtsparameter (Berichts-Generator und Berichts-Designer)
@@ -33,9 +33,9 @@ ms.locfileid: "68941142"
 
 In diesem Thema werden die allgemeinen Einsatzbereiche von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsparametern, die einstellbaren Eigenschaften und vieles mehr beschrieben. Mithilfe von Berichtsparametern können Sie Berichtsdaten steuern, eine Verbindung zwischen verwandten Berichten herstellen und die Berichtspräsentation anpassen. Sie können Berichtsparameter in paginierten Berichten verwenden, die Sie in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] und im Berichts-Designer erstellen, und auch in mobilen Berichten, die Sie in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] erstellen. Erfahren Sie mehr über [Berichtsparameterkonzepte](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
 
-Weitere Informationen zum Hinzufügen eines Parameters zu einem Bericht finden Sie unter [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41; (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
+Wenn Sie einem Bericht einen Parameter selbst hinzufügen möchten, lesen Sie unter [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)erstellen.  
 
-## <a name="bkmk_Common_Uses_for_Parameters"></a> Allgemeine Verwendungsmöglichkeiten für Parameter
+## <a name="common-uses-for-parameters"></a><a name="bkmk_Common_Uses_for_Parameters"></a> Allgemeine Verwendungsmöglichkeiten für Parameter
 
  Im Folgenden sind einige der häufigsten Verwendungsmöglichkeiten für Parameter aufgeführt.  
   
@@ -67,7 +67,7 @@ Weitere Informationen zum Hinzufügen eines Parameters zu einem Bericht finden S
   
     Weitere Informationen finden Sie unter [Verweise auf Parametersammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
   
-## <a name="UserInterface"></a> Anzeigen eines Berichts mit Parametern
+## <a name="viewing-a-report-with-parameters"></a><a name="UserInterface"></a> Anzeigen eines Berichts mit Parametern
 
 Wenn Sie einen Bericht mit Parametern anzeigen, werden auf der Berichts-Viewer-Symbolleiste alle Parameter angezeigt, sodass Sie interaktiv Werte angeben können. Die folgende Abbildung zeigt den Parameterbereich für einen Bericht mit den Parametern @ReportMonth, @ReportYear, @EmployeeID, @ShowAll, @ExpandTableRows, @CategoryQuota uns @SalesDate.  
 
@@ -85,7 +85,7 @@ Wenn Sie einen Bericht mit Parametern anzeigen, werden auf der Berichts-Viewer-S
   
 6. **Bericht anzeigen**  Klicken Sie auf **Bericht anzeigen** , um nach der Eingabe von Parameterwerten den Bericht auszuführen. Wurden für alle Parameter Standardwerte festgelegt, wird der Bericht beim erstmaligen Anzeigen automatisch ausgeführt.  
   
-## <a name="bkmk_Create_Parameters"></a> Erstellen von Parametern
+## <a name="creating-parameters"></a><a name="bkmk_Create_Parameters"></a> Erstellen von Parametern
 
 Es gibt verschiedene Möglichkeiten zum Erstellen von Berichtsparametern.
   
@@ -142,11 +142,11 @@ Erstellen Sie einen Parameter manuell aus dem Berichtsdatenbereich. Sie können 
   
 - Führen Sie den Bericht aus, ohne zuvor einen Parameterwert auswählen zu müssen, da ein Standardwert für den Parameter erstellt wurde.  
   
-## <a name="bkmk_Report_Parameters"></a> Berichtsparametereigenschaften
+## <a name="report-parameter-properties"></a><a name="bkmk_Report_Parameters"></a> Berichtsparametereigenschaften
 
  Sie können die Berichtsparametereigenschaften über das Dialogfeld Berichtseigenschaften ändern. Die folgende Tabelle enthält die Eigenschaften, die für die einzelnen Parameter festgelegt werden können:  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |Name|Geben Sie einen Namen für den Parameter ein. (Beachten Sie dabei die Groß- und Kleinschreibung.) Der Name muss mit einem Buchstaben beginnen und Buchstaben, Zahlen und einen Unterstrich (_) umfassen. Er darf keine Leerzeichen enthalten. Bei automatisch generierten Parametern stimmt der Name mit dem Parameter in der Datasetabfrage überein. Manuell erstellte Parameter ähneln standardmäßig der Zeichenfolge „ReportParameter1“.|  
 |Prompt|Der Text, der auf der Berichts-Viewer-Symbolleiste neben dem Parameter angezeigt wird.|  
@@ -161,7 +161,7 @@ Erstellen Sie einen Parameter manuell aus dem Berichtsdatenbereich. Sie können 
 |Standardwerte|Legen Sie Standardwerte aus einer Abfrage oder aus einer statischen Liste fest.<br /><br /> Besitzt jeder Parameter einen Standardwert, wird der Bericht beim erstmaligen Anzeigen automatisch ausgeführt.|  
 |Erweitert|Legen Sie das Berichtsdefinitionsattribut **UsedInQuery**fest. Dies ist ein Wert, mit dem angegeben wird, ob sich dieser Parameter direkt oder indirekt auf die Daten in einem Bericht auswirkt.<br /><br /> **Aktualisierungszeitpunkt automatisch bestimmen**<br /> Wählen Sie diese Option aus, wenn der Wert vom Berichtsprozessor festgelegt werden soll. Der Wert ist **True** , wenn der Berichtsprozessor eine Datasetabfrage mit einem direkten oder indirekten Verweis auf diesen Parameter findet oder wenn der Bericht Unterberichte enthält.<br /><br /> **Immer aktualisieren**<br /> Wählen Sie diese Option aus, wenn der Berichtsparameter direkt oder indirekt in einer Datasetabfrage oder einem Parameterausdruck verwendet wird. Diese Option legt **UsedInQuery** auf True fest.<br /><br /> **Nie aktualisieren**<br /> Wählen Sie diese Option aus, wenn der Berichtsparameter nicht direkt oder indirekt in einer Datasetabfrage oder einem Parameterausdruck verwendet wird. Diese Option legt **UsedInQuery** auf False fest.<br /><br /> **Vorsicht**: Verwenden Sie **Nie aktualisieren** mit Vorsicht. Auf dem Berichtsserver wird **UsedInQuery** verwendet, um Cacheoptionen für Berichtsdaten und gerenderte Berichte sowie Parameteroptionen für Momentaufnahmeberichte steuern zu können. Wenn Sie **Nie aktualisieren** falsch festgelegt haben, können falsche Berichtsdaten oder Berichte zwischengespeichert werden oder inkonsistente Daten in Momentaufnahmeberichten entstehen. Weitere Informationen finden Sie unter [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md).|  
   
-##  <a name="bkmk_Dataset_Parameters"></a> Datasetabfrage  
+##  <a name="dataset-query"></a><a name="bkmk_Dataset_Parameters"></a> Datasetabfrage  
  Um Daten in der Datasetabfrage zu filtern, können Sie eine Einschränkungsklausel einschließen, mit der die abgerufenen Daten begrenzt werden. Geben Sie dazu die Werte ein, die im Resultset eingeschlossen oder daraus ausgeschlossen werden sollen.  
   
  Verwenden Sie den Abfrage-Designer für die Datenquelle, um eine parametrisierte Abfrage zu erstellen.  
@@ -170,7 +170,7 @@ Erstellen Sie einen Parameter manuell aus dem Berichtsdatenbereich. Sie können 
   
 -   Für Abfragen, die auf einer mehrdimensionalen Datenquelle wie Microsoft SQL Server Analysis Services, SAP NetWeaver BI oder Hyperion Essbase basieren, können Sie angeben, ob ein Parameter auf Basis eines Filters erstellt werden soll, den Sie im Abfrage-Designer angeben. Weitere Informationen finden Sie unter [Abfrageentwurfstools (SSRS)](../report-data/query-design-tools-ssrs.md) im Thema über den entsprechenden Abfrage-Designer für die Datenerweiterung.  
   
-##  <a name="bkmk_Manage_Parameters"></a> Parameterverwaltung für einen veröffentlichten Bericht  
+##  <a name="parameter-management-for-a-published-report"></a><a name="bkmk_Manage_Parameters"></a> Parameterverwaltung für einen veröffentlichten Bericht  
  Wenn Sie einen Bericht entwerfen, werden Berichtsparameter in der Berichtsdefinition gespeichert. Wenn Sie einen Bericht veröffentlichen, werden Berichtsparameter getrennt von der Berichtsdefinition gespeichert und verwaltet.  
   
  Für einen veröffentlichten Bericht können Sie Folgendes verwenden:  
@@ -193,7 +193,7 @@ Erstellen Sie einen Parameter manuell aus dem Berichtsdatenbereich. Sie können 
   
  Die Optionen für die Berichtsausführung können die Verarbeitung von Parametern beeinflussen. Für einen Bericht, der als Momentaufnahme ausgeführt wird, sind keine Parameter zulässig, die von einer Abfrage abgeleitet sind, außer die Abfrage enthält Standardwerte für die Parameter.  
   
-##  <a name="bkmk_Parameters_Subscription"></a> Parameter für ein Abonnement  
+##  <a name="parameters-for-a-subscription"></a><a name="bkmk_Parameters_Subscription"></a> Parameter für ein Abonnement  
  Sie können ein Abonnement bedarfsgesteuert oder für eine Momentaufnahme definieren und Parameterwerte angeben, die während der Abonnementverarbeitung verwendet werden sollen.  
   
 -   **Bedarfsgesteuerter Bericht**  Für einen bedarfsgesteuerten Bericht können Sie einen Parameterwert angeben, der sich von dem veröffentlichten Wert unterscheidet, der für den Bericht aufgeführt ist. Angenommen, ein Telefonservicebericht verwendet den Parameter *Time Period* , um Kundendienstanforderungen für den aktuellen Tag, die aktuelle Woche oder den aktuellen Monat zurückzugeben. Wenn der Standardparameterwert für den Bericht auf **today**festgelegt ist, kann Ihr Abonnement mithilfe eines anderen Parameterwertes (z.B. **week** oder **month**) einen Bericht mit wöchentlichen oder monatlichen Zahlen erstellen.  
@@ -209,7 +209,7 @@ Erstellen Sie einen Parameter manuell aus dem Berichtsdatenbereich. Sie können 
   
  Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-##  <a name="bkmk_Parameters_Security"></a> Parameter und das Sichern von Daten  
+##  <a name="parameters-and-securing-data"></a><a name="bkmk_Parameters_Security"></a> Parameter und das Sichern von Daten  
  Gehen Sie beim Verteilen von parametrisierten Berichten, die vertrauliche Informationen enthalten, mit Vorsicht vor. Ein Benutzer kann auf einfache Weise einen Berichtsparameter durch einen anderen Wert ersetzen. Dies führt dazu, dass unbeabsichtigt Informationen veröffentlicht werden.  
   
  Eine sichere Alternative zum Verwenden von Parametern für Mitarbeiterdaten oder persönliche Daten besteht darin, Daten basierend auf Ausdrücken auszuwählen, die das **UserID** -Feld aus der Users-Auflistung enthalten. Die Users-Auflistung stellt eine Methode bereit, um die Identität des Benutzers, der den Bericht ausführt, abzurufen und diese Identität zum Abrufen von benutzerspezifischen Daten zu verwenden.  
@@ -221,9 +221,9 @@ Erstellen Sie einen Parameter manuell aus dem Berichtsdatenbereich. Sie können 
 >   
 >  Um das Risiko der versehentlichen Ausführung schädlicher Skripts zu minimieren, sollten gerenderte Berichte nur aus vertrauenswürdigen Quellen geöffnet werden. Weitere Informationen zum Schützen von Berichten finden Sie unter [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md).  
 
-##  <a name="bkmk_Related_Topics"></a> Verwandte Abschnitte  
+##  <a name="related-sections"></a><a name="bkmk_Related_Topics"></a> Verwandte Abschnitte  
 
- [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41; (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
+ [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [Report Parameters Concepts (Berichtsparameterkonzepte)](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   

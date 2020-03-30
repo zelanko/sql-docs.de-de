@@ -20,10 +20,10 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258969"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Arbeiten mit mehreren Versionen und Instanzen von SQL Server
@@ -64,7 +64,7 @@ Sie können frühere Versionen von SQL Server auf einem Computer aktualisieren, 
 
  Bestimmte Komponenten werden von allen Instanzen aller installierten Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam genutzt. Wenn Sie unterschiedliche Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer parallel installieren, werden diese Komponenten automatisch auf die neueste Version aktualisiert. Solche Komponenten werden im Allgemeinen automatisch deinstalliert, wenn die letzte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deinstalliert wird.
   
- Beispiele: der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser und Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer.
+ Beispiele: der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser und Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer.
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>Von allen Instanzen derselben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -76,7 +76,7 @@ Beispiele: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCL
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen, die die gleiche Haupt- und Nebenversion aufweisen, nutzen Komponenten gemeinsam.
   
-Beispiel: .
+Beispiel: Unterstützungsdateien für Setup.
   
 ### <a name="components-specific-to-an-instance-of-ssnoversion"></a>Für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

@@ -17,10 +17,10 @@ ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93c7ec396d3388a2de6c0d6518fc516de7156f35
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68014951"
 ---
 # <a name="sqlsrv_rows_affected"></a>sqlsrv_rows_affected
@@ -36,7 +36,7 @@ sqlsrv_rows_affected( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$stmt:* Hierbei handelt es sich um eine Anweisungsressource, die einer ausgeführten Anweisung entspricht.  
+*$stmt*: Eine Anweisungsressource, die einer ausgeführten Anweisung entspricht.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Eine ganze Zahl, die die Anzahl der Zeilen angibt, die durch die zuletzt ausgeführte Anweisung geändert wurden. Wenn keine Zeilen geändert wurden, wird Null (0) zurückgegeben. Wenn keine Informationen über die Anzahl der geänderten Zeilen verfügbar sind, wird die negative Eins (-1) zurückgegeben. Wenn ein Fehler beim Abrufen der geänderten Zeilen aufgetreten ist, wird **false** zurückgegeben.  

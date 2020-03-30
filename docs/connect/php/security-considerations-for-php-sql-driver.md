@@ -13,10 +13,10 @@ ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992889"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQL Server
@@ -39,7 +39,7 @@ Wenn Sie eine Verbindung mithilfe der Windows-Authentifizierung herstellen, soll
 Sie sollten immer verschlüsselte Verbindungen verwenden, wenn der SQL Server sensible Daten empfangen/senden soll. Informationen zum Aktivieren verschlüsselter Verbindungen finden Sie unter [How to Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager) (Aktivieren von verschlüsselten Verbindungen für die Datenbank-Engine (SQL Server-Konfigurations-Manager))](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Zum Herstellen einer sicheren Verbindung mit dem [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], verwenden Sie das Attribut „Encrypt connection“ beim Verbinden mit dem Server. Weitere Informationen zu Verbindungsattributen finden Sie unter [Connection Options](../../connect/php/connection-options.md).  
   
 ## <a name="use-parameterized-queries"></a>Verwenden parametrisierter Abfragen  
-Verwenden Sie parametrisierte Abfragen, um das Risiko von Angriffen durch Einschleusung von SQL-Befehlen zu senken. Beispiele für die Ausführung parametrisierter Abfragen finden Sie unter [Vorgehensweise: Ausführen parametrisierter Abfragen](../../connect/php/how-to-perform-parameterized-queries.md).  
+Verwenden Sie parametrisierte Abfragen, um das Risiko von Angriffen durch Einschleusung von SQL-Befehlen zu senken. Beispiele für die Ausführung parametrisierter Abfragen finden Sie unter [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md).  
   
 Weitere Informationen zu Angriffen durch Einschleusung von SQL-Befehlen und Sicherheitsüberlegungen dazu finden Sie unter [Einschleusen von SQL-Befehlen](https://msdn.microsoft.com/library/ms161953.aspx).  
   

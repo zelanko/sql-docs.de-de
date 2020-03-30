@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843786"
 ---
 # <a name="limitations-for-stretch-database"></a>Einschränkungen für Stretch Database
@@ -26,7 +26,7 @@ ms.locfileid: "73843786"
 
   Erfahren Sie mehr zu Einschränkungen für Stretch-aktivierten Tabellen und zu Einschränkungen, die derzeit verhindern, Stretch für eine Tabelle zu aktivieren.  
   
-##  <a name="Caveats"></a> Einschränkungen für Tabellen, für die Stretch aktiviert ist  
+##  <a name="limitations-for-stretch-enabled-tables"></a><a name="Caveats"></a> Einschränkungen für Tabellen, für die Stretch aktiviert ist  
   
 Die folgenden Einschränkungen für Stretch-aktivierte Tabellen sind zu beachten.  
   
@@ -43,7 +43,7 @@ Die folgenden Einschränkungen für Stretch-aktivierte Tabellen sind zu beachten
   
 -   Filter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Indizes werden nicht an die Remotetabelle weitergegeben.  
   
-##  <a name="Limitations"></a> Einschränkungen, die Sie derzeit vom Aktivieren von Stretch für eine Tabelle abhalten  
+##  <a name="limitations-that-currently-prevent-you-from-enabling-stretch-for-a-table"></a><a name="Limitations"></a> Einschränkungen, die Sie derzeit vom Aktivieren von Stretch für eine Tabelle abhalten  
    
  Die folgenden Elemente verhindern derzeit die Aktivierung von Stretch für eine Tabelle.  
   

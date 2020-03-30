@@ -11,16 +11,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28c3a442f89813a4ce93ded9035c1bc16f9e47c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972843"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource"></a>setServerPreparedStatementDiscardThreshold-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Diese Methode legt den Wert der Verbindungseigenschaft serverPreparedStatementDiscardThreshold fest. Mit dieser Einstellung steuern Sie, wie viele ausstehende Aktionen zum Verwerfen von Prepared Statements (sp_unprepare) pro Verbindung vorhanden sein dürfen, bevor ein Aufruf zum Bereinigen der ausstehenden Handles auf dem Server ausgeführt wird. Wenn diese Eigenschaft auf „<= 1“ festgelegt ist, werden unprepare-Aktionen sofort nach Abschluss der Prepared Statements ausgeführt. Wenn die Eigenschaft auf „>1“ festgelegt ist, werden diese Aufrufe in einem Batch zusammengefasst, um einen durch zu häufiges Aufrufen von „sp_unprepare“ entstehenden Overhead zu vermeiden.
+  Diese Methode legt den Wert der Verbindungseigenschaft serverPreparedStatementDiscardThreshold fest. Mit dieser Einstellung steuern Sie, wie viele ausstehende Aktionen zum Verwerfen vorbereiteter Anweisungen (sp_unprepare) pro Verbindung vorhanden sein dürfen, bevor ein Aufruf zum Bereinigen der ausstehenden Handles auf dem Server ausgeführt wird. Wenn diese Eigenschaft auf „<= 1“ festgelegt ist, werden unprepare-Aktionen sofort nach Abschluss der Prepared Statements ausgeführt. Wenn die Eigenschaft auf „>1“ festgelegt ist, werden diese Aufrufe in einem Batch zusammengefasst, um einen durch zu häufiges Aufrufen von „sp_unprepare“ entstehenden Overhead zu vermeiden.
  
 ## <a name="syntax"></a>Syntax  
   
@@ -31,13 +31,13 @@ public void setServerPreparedStatementDiscardThreshold(int enablePrepareOnFirstP
 #### <a name="parameters"></a>Parameter  
  *serverPreparedStatementDiscardThreshold*  
   
- Der neue Wert der Verbindungseigenschaft **serverPreparedStatementDiscardThreshold**  
+ Der neue Wert der Verbindungseigenschaft **serverPreparedStatementDiscardThreshold**.  
 
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode ist über den JDCB-Treiber, Version 6.4 und höher verfügbar.
+ Diese Methode ist über Version 6.4 und höher des JDCB-Treibers verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

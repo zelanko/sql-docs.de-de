@@ -11,10 +11,10 @@ ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ed9b10ad9e9a927789505c7d7327c6cf4d1ff3c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027941"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>JDBC 4.3-Kompatibilität für den JDBC-Treiber
@@ -28,7 +28,7 @@ Ab Version 6.4 ist der JDBC-Treiber für SQL Server JAVA 9-kompatibel und lös
 
 Mit dem Release des JDBC-Treibers 7.0 für SQL Server ist der Treiber nun JAVA 10-kompatibel und unterstützt die unten aufgeführten APIs. Der Treiber löst `SQLFeatureNotSupportedException` für andere, nicht implementierte Methoden von JDBC 4.3-Spezifikationen aus.
 
-|Neue API|Beschreibung|Bemerkenswerte Implementierungsdetails|  
+|Neue API|BESCHREIBUNG|Bemerkenswerte Implementierungsdetails|  
 |-----------------|-----------------|-------------------------------|  
 |void java.sql.connection.beginRequest()|Weist den Treiber darauf hin, dass eine Anforderung, eine unabhängige Arbeitseinheit, auf dieser Verbindung beginnt. Weitere Informationen finden Sie unter [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Speichert die Werte der Verbindungsfelder, die über öffentliche API-Methoden geändert werden können: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`, `statementPoolingCacheSize`, `disableStatementPooling`, `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall`, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
 |void java.sql.connection.endRequest()|Weist den Treiber darauf hin, dass eine Anforderung, eine unabhängige Arbeitseinheit, abgeschlossen wurde. Weitere Informationen finden Sie unter [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--).|Beendet Anweisungen, die während der Arbeitseinheit erstellt wurden, und führt ein Rollback für alle ausstehenden Transaktionen durch. Die Methode setzt auch die Änderungen an den oben aufgeführten Verbindungsfeldern zurück.|

@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: fd1b41a9744c112fcafc8968bad7abc5ac9aa4c4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256309"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>Behandeln von Problemen bei SQL Server-Datenbankkomponententests
@@ -27,13 +27,13 @@ Möglicherweise stoßen Sie auf die in diesem Thema beschriebenen Probleme, wenn
   
 -   [Timeouts beim Ausführen von Datenbankkomponententests](#TimeoutsDuringUnitTests)  
   
-## <a name="UnitTestingAndAppConfigChanges"></a>Komponententests und ignorierte Änderungen an „App.Config“ beim Ausführen von Komponententests  
+## <a name="unit-testing-and-appconfig-changes-ignored-when-you-run-unit-tests"></a><a name="UnitTestingAndAppConfigChanges"></a>Komponententests und ignorierte Änderungen an „App.Config“ beim Ausführen von Komponententests  
 Wenn Sie die Datei "App.Config" im Testprojekt ändern, müssen Sie das Testprojekt neu erstellen, bevor die Änderungen wirksam werden. Diese Änderungen schließen auch diejenigen ein, die Sie an „App.Config“ im Dialogfeld **SQL Server-Testkonfiguration** vorgenommen haben. Wenn Sie das Testprojekt nicht neu erstellen, werden die Änderungen beim Ausführen der Komponententests nicht übernommen.  
   
-## <a name="DatabaseDeploymentInUnitTests"></a>Datenbankbereitstellung auf unerwartetem Ziel beim Ausführen von Komponententests  
+## <a name="database-deployment-to-unexpected-target-when-you-run-unit-tests"></a><a name="DatabaseDeploymentInUnitTests"></a>Datenbankbereitstellung auf unerwartetem Ziel beim Ausführen von Komponententests  
 Wenn Sie eine Datenbank von einem Datenbankprojekt bereitstellen und Komponententests ausführen, wird die Datenbank anhand der Informationen der Verbindungszeichenfolge bereitgestellt, die in der Konfiguration der Komponententests angegeben sind. Die in den Debugeigenschaften des Datenbankprojekts angegebenen Verbindungsinformationen werden für diese Aufgabe nicht verwendet. So können Sie die SQL Server-Komponententests für andere Instanzen derselben Datenbank ausführen.  
   
-## <a name="TimeoutsDuringUnitTests"></a>Timeouts beim Ausführen von Datenbankkomponententests  
+## <a name="timeouts-when-you-run-database-unit-tests"></a><a name="TimeoutsDuringUnitTests"></a>Timeouts beim Ausführen von Datenbankkomponententests  
 Wenn Ihre Datenbankkomponententests aufgrund eines Timeouts fehlschlagen, können Sie den Zeitraum des Timeouts verlängern, indem Sie die Datei "App.Config" in Ihrem Testprojekt aktualisieren. Der in der Verbindungszeichenfolge angegebene Timeout für die Verbindung gibt die Wartezeit an, wenn der Komponententest eine Verbindung zum Server herstellt. Das Befehlstimeout, das direkt in der Datei „App.Config“ definiert werden muss, gibt die Wartezeit an, wenn der Komponententest das Transact\-SQL-Skript ausführt. Wenn Sie bei der Ausführung lang andauernder Komponententests auf Probleme stoßen, versuchen Sie, den Wert des Befehlstimeouts im entsprechenden Kontextelement zu erhöhen. Um beispielsweise ein Befehlstimeout von 120 Sekunden für das Element **PrivilegedContext** anzugeben, aktualisieren Sie die Datei „app.config“ wie folgt:  
   
 ```  

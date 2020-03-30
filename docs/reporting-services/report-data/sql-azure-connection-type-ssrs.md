@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081762"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure-Verbindungstyp (SSRS)
@@ -31,7 +31,7 @@ Weitere Informationen finden Sie unter [Microsoft Azure SQL-Datenbank auf docs.m
   
 Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="Connection"></a> Verbindungszeichenfolge
+## <a name="connection-string"></a><a name="Connection"></a> Verbindungszeichenfolge
 
 Wenn Sie eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] herstellen, stellen Sie eine Verbindung mit einem Datenbankobjekt in der Cloud her. Wie Onsitedatenbanken kann die gehostete Datenbank mehrere Schemas mit mehreren Tabellen, Sichten und gespeicherte Prozeduren enthalten. Sie geben das zu verwendende Datenbankobjekt im Abfrage-Designer an. Wenn Sie in der Verbindungszeichenfolge keine Datenbank angeben, wird eine Verbindung mit der Standarddatenbank hergestellt, die Ihnen vom Administrator zugewiesen wurde.  
   
@@ -45,7 +45,7 @@ Außerdem verwenden Sie das Dialogfeld **Datenquelleneigenschaften**, um Anmelde
   
 Weitere Informationen und Beispiele für Verbindungszeichenfolgen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
-## <a name="Credentials"></a> Anmeldeinformationen
+## <a name="credentials"></a><a name="Credentials"></a> Anmeldeinformationen
 
 Die Windows-Authentifizierung (integrierte Sicherheit) wird nicht unterstützt. Wenn Sie versuchen, mithilfe der Windows-Authentifizierung eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] herzustellen, tritt ein Fehler auf. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] unterstützt nur die SQL Server-Authentifizierung (Benutzername und Kennwort). Benutzer müssen daher jedes Mal Anmeldeinformationen (Benutzername und Kennwort) eingeben, wenn sie eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)]herstellen.  
   
@@ -59,7 +59,7 @@ Auf einem Berichterstellungsclient sind die folgenden Optionen zum Angeben von A
   
 Weitere Informationen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oder [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](specify-credential-and-connection-information-for-report-data-sources.md).  
   
-## <a name="Query"></a> Abfragen
+## <a name="queries"></a><a name="Query"></a> Abfragen
 
 Mit einer Abfrage wird angegeben, welche Daten für ein Berichtsdataset abgerufen werden sollen. Die Feldauflistung für ein Dataset wird mit den Spalten aus dem Resultset einer Abfrage aufgefüllt. Wenn die Abfrage mehrere Resultsets zurückgibt, verarbeitet der Bericht nur das erste Resultset, das durch eine Abfrage abgerufen wird. Obwohl einige Unterschiede zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bestehen, z. B. die Größe unterstützter Datenbanken, ähnelt das Schreiben von Abfragen für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]weitgehend dem Schreiben von Abfragen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken. Einige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen (z.B. BACKUP) werden in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nicht unterstützt. Diese Anweisungen werden allerdings in Berichtsabfragen nicht verwendet. Weitere Informationen finden Sie unter [SQL Server-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).  
   
@@ -81,7 +81,7 @@ Weitere Informationen finden Sie unter [Benutzeroberfläche des relationalen Abf
   
 Der in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwendete grafische Abfrage-Designer bietet integrierte Unterstützung für das Gruppieren und für Aggregate, sodass Sie Abfragen schreiben können, durch die nur Zusammenfassungsdaten abgerufen werden. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sprachfunktionen sind die GROUP BY-Klausel, das DISTINCT-Schlüsselwort und Aggregate wie SUM und COUNT. Der textbasierte Abfrage-Designer bietet vollständige Unterstützung für die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sprache, einschließlich Gruppieren und Aggregate. Weitere Informationen über [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
-### <a name="QueryText"></a> Verwenden des Abfragetyps "Text"
+### <a name="using-query-type-text"></a><a name="QueryText"></a> Verwenden des Abfragetyps "Text"
 
 Im textbasierten Abfrage-Designer geben Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehle ein, um die Daten in einem Dataset zu definieren. Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage werden z. B. die Namen aller Mitarbeiter ausgewählt, die Marketingassistenten sind:
 
@@ -108,7 +108,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 Bei der Ausführung der Abfrage werden automatisch Berichtsparameter erstellt, die den Abfrageparametern entsprechen. Weitere Informationen finden Sie unter [Abfrageparameter](#Parameters) weiter unten in diesem Thema.  
   
-### <a name="QueryStoredProcedure"></a> Verwenden des Abfragetyps "StoredProcedure"
+### <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a> Verwenden des Abfragetyps "StoredProcedure"
 
 Zum Angeben einer gespeicherte Prozedur für eine Datasetabfrage stehen Ihnen folgende Methoden zur Verfügung:  
   
@@ -126,7 +126,7 @@ Falls eine gespeicherte Prozedur einen Parameter mit einem Standardwert enthält
   
 Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren (Datenbank-Engine)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
   
-## <a name="Parameters"></a> Parameter
+## <a name="parameters"></a><a name="Parameters"></a> Parameter
 
 Wenn Abfragetext Abfragevariablen oder gespeicherte Prozeduren mit Eingabeparametern enthält, werden die entsprechenden Abfrageparameter für das Dataset und Berichtsparameter für den Bericht automatisch generiert. Der Abfragetext darf keine DECLARE-Anweisung für jede Abfragevariable enthalten.  
   
@@ -140,7 +140,7 @@ WHERE EmployeeID = (@EmpID)
 
 Jeder Berichtsparameter ist standardmäßig vom Datentyp "Text" und verfügt über ein automatisch erstelltes Dataset, mit dem eine Dropdownliste verfügbarer Werte bereitgestellt wird. Die Standardwerte müssen möglicherweise nach dem Erstellen der Berichtsparameter geändert werden. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)" basiert.  
 
-## <a name="Remarks"></a> Hinweise
+## <a name="remarks"></a><a name="Remarks"></a> Hinweise
   
 ###### <a name="alternate-data-extensions"></a>Alternative Datenerweiterungen
 
@@ -167,7 +167,7 @@ Dieses Szenario wird unterstützt, wenn Sie die folgenden Elemente ordnungsgemä
 
 ::: moniker-end
 
-## <a name="HowTo"></a> Themen zur Vorgehensweise
+## <a name="how-to-topics"></a><a name="HowTo"></a> Themen zur Vorgehensweise
 
 Dieser Abschnitt enthält schrittweise Anweisungen zum Arbeiten mit Datenverbindungen, Datenquellen und Datasets.  
   
@@ -177,7 +177,7 @@ Dieser Abschnitt enthält schrittweise Anweisungen zum Arbeiten mit Datenverbind
   
 [Hinzufügen eines Filters zu einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-## <a name="Related"></a> Verwandte Abschnitte
+## <a name="related-sections"></a><a name="Related"></a> Verwandte Abschnitte
 
 Diese Abschnitte der Dokumentation enthalten umfassende grundlegende Informationen zu Berichtsdaten und Informationen zum Definieren, Entwerfen, Anpassen und Verwenden der mit Daten zusammenhängenden Teile eines Berichts.  
   

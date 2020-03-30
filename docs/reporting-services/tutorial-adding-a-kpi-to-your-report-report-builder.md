@@ -9,10 +9,10 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041886"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines KPIs zu einem Bericht (Berichts-Generator)
@@ -32,7 +32,7 @@ Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Table"></a>1. Erstellen eines Tabellenberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Table"></a>1. Erstellen eines Tabellenberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten  
 In diesem Abschnitt wählen Sie eine freigegebene Datenquelle aus, erstellen ein eingebettetes Dataset und zeigen die Daten in einer Tabelle an.  
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>So erstellen Sie eine Tabelle mit einem eingebetteten Dataset  
@@ -99,7 +99,7 @@ In diesem Abschnitt wählen Sie eine freigegebene Datenquelle aus, erstellen ein
 
 11. Klicken Sie auf **Weiter**.  
   
-## <a name="CompleteWizard"></a>2. Organisieren von Daten und Auswählen des Layouts im Assistenten  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2. Organisieren von Daten und Auswählen des Layouts im Assistenten  
 Der Tabellen- oder Matrix-Assistent stellt ein erstes Design für die Darstellung von Daten bereit. Im Vorschaufenster des Assistenten können Sie das Ergebnis der Datengruppierung visualisieren, bevor Sie den Tabellen- oder Matrixentwurf abschließen.  
   
 ### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>So organisieren Sie Daten in Gruppen und wählen ein Layout aus 
@@ -173,7 +173,7 @@ Erweitern Sie die Spalten, und legen Sie das Format für die Datums- und Währun
  
 ![Berichts-Generator-KPI-Zahlen-formatieren](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
-## <a name="BackgroundColors"></a>3. Anzeigen eines KPI mithilfe von Hintergrundfarben  
+## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. Anzeigen eines KPI mithilfe von Hintergrundfarben  
 Hintergrundfarben können für einen Ausdruck festgelegt werden, der beim Ausführen des Berichts ausgewertet wird.  
   
 ### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>So zeigen Sie den aktuellen Status eines KPI mit Hintergrundfarben an  
@@ -198,7 +198,7 @@ In der Teilergebniszeile, die den Umsatz für eine Unterkategorie anzeigt, ist d
 
 ![Berichts-Generator-KPI-Farben](../reporting-services/media/report-builder-kpi-colors.png)
   
-## <a name="Gauge"></a>4. Anzeigen eines KPI mit einem Messgerät  
+## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. Anzeigen eines KPI mit einem Messgerät  
 Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Tutorial wird ein horizontales lineares Messgerät verwendet, da es aufgrund seiner Form und Einfachheit auch dann leicht zu lesen ist, wenn es klein ist und innerhalb einer Tabellenzelle verwendet wird. Weitere Informationen finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>So zeigen Sie den aktuellen Status eines KPI mit einem Messgerät an  
@@ -253,7 +253,7 @@ Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Tutor
   
 ![Berichts-Generator-KPI-linear](../reporting-services/media/report-builder-linear-kpi.png) 
   
-## <a name="Indicator"></a>5. Anzeigen eines KPI mit einem Indikator  
+## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. Anzeigen eines KPI mit einem Indikator  
 Indikatoren sind kleine einfache Messgeräte, die Datenwerte auf einen Blick darstellen. Aufgrund ihrer Größe und Einfachheit werden Indikatoren oft in Tabellen und Matrizen verwendet. Weitere Informationen finden Sie unter [Indikatoren (Berichts-Generator und SSRS)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>So zeigen Sie den aktuellen Status eines KPI mit einem Indikator an  
@@ -288,7 +288,7 @@ Indikatoren sind kleine einfache Messgeräte, die Datenwerte auf einen Blick dar
 
 ![Berichts-Generator-KPI-Ampel](../reporting-services/media/report-builder-kpi-stoplight.png)
   
-## <a name="Title"></a>6. Hinzufügen eines Berichtstitels  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Hinzufügen eines Berichtstitels  
 Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel in eine Berichtskopfzeile einfügen oder, wenn der Bericht keine Kopfzeile enthält, in einem Textfeld am oberen Rand des Berichtshauptteils. In diesem Abschnitt verwenden Sie das Textfeld, das automatisch am oberen Rand des Berichtshauptteils platziert wird.  
   
 Sie können die Textdarstellung weiter verbessern, indem Sie verschiedene Schriftschnitte, Größen und Farben für Ausdrücke und einzelne Zeichen des Texts anwenden. Weitere Informationen finden Sie unter [Formatieren von Text in einem Textfeld (Berichts-Generator und SSRS)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -303,7 +303,7 @@ Sie können die Textdarstellung weiter verbessern, indem Sie verschiedene Schrif
   
 4.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-## <a name="Save"></a>7. Speichern des Berichts  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. Speichern des Berichts  
 Speichern Sie den Bericht auf einem Berichtsserver oder auf Ihrem Computer. Wenn Sie den Bericht nicht auf dem Berichtsserver speichern, ist eine Reihe von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen nicht verfügbar, z. B. Berichtsteile und Unterberichte.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver  

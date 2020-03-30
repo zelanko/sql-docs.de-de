@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber| Microsoft-Dokumentation'
+title: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem SQLSRV-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,13 +12,13 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68264567"
 ---
-# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdo_sqlsrv-driver"></a>Gewusst wie: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber
+# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdo_sqlsrv-driver"></a>Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Diese Funktion wurde in Version 5.6.0 hinzugefügt und ist nur gültig, wenn Sie den PDO_SQLSRV-Treiber für die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] verwenden.

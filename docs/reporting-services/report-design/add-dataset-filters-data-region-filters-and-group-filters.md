@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65582052"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern
@@ -25,12 +25,12 @@ ms.locfileid: "65582052"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="When"></a> Verwenden von Filtern  
+##  <a name="choosing-when-to-set-a-filter"></a><a name="When"></a> Verwenden von Filtern  
  Legen Sie Filter für Berichtselemente fest, wenn die Daten nicht in der Quelle gefiltert werden können. Verwenden Sie Berichtsfilter z. B., wenn die Datenquelle keine Abfrageparameter unterstützt, wenn Sie gespeicherte Prozeduren ausführen müssen und die Abfrage nicht bearbeiten können oder wenn durch eine parametrisierte Berichtsmomentaufnahme individuelle Daten für verschiedene Benutzer angezeigt werden.  
   
  Berichtsdaten können vor oder nach dem Abrufen für ein Berichtsdataset abgerufen wurden. Ändern Sie die Abfrage für jedes Dataset, wenn Sie Daten vor dem Abrufen filtern möchten. Wenn Sie Daten in der Abfrage filtern, filtern Sie damit die Daten in der Datenquelle. Auf diese Weise wird die Menge der Daten reduziert, die in einem Bericht abgerufen und verarbeitet werden muss. Um Daten nach dem Abrufen zu filtern, erstellen Sie im Bericht Filterausdrücke. Sie können Filterausdrücke für ein Dataset, einen Datenbereich oder eine Gruppe (einschließlich der Detailgruppen) festlegen. Außerdem können Sie Parameter in Filterausdrücke einbinden, um das Filtern von Daten für bestimmte Werte oder Benutzer zu ermöglichen. Sie können z. B. nach einem Wert filtern, der Benutzer identifiziert, die den Bericht anzeigen.  
   
-##  <a name="Where"></a> Filterposition  
+##  <a name="choosing-where-to-set-a-filter"></a><a name="Where"></a> Filterposition  
  Die Position eines Filters wird durch die Ziele vorgegeben, die Sie mit dem Bericht verfolgen. Zur Laufzeit werden Filter vom Berichtsprozessor in der folgenden Reihenfolge angewendet: zuerst auf das Dataset, dann auf den Datenbereich und anschließend auf die Gruppe (in der Reihenfolge von oben nach unten in jeder Gruppenhierarchie). Bei einer Tabelle, Matrix oder Liste werden Filter für Zeilen- und Spaltengruppen sowie für angrenzende Gruppen unabhängig voneinander angewendet. Bei Diagrammen werden Filter für Kategorie- und Reihengruppen unabhängig voneinander angewendet. Wenn der Berichtsprozessor die Filter anwendet, werden alle Filtergleichungen in der Reihenfolge angewendet, in der sie für die einzelnen Berichtselemente auf der Seite **Filter** im Dialogfeld **Eigenschaften** definiert sind. Dies entspricht der Kombination der Filter durch Boolesche AND-Operationen.  
   
  Die folgende Liste zeigt die unterschiedlichen Auswirkungen von Filtern, die für verschiedene Berichtselemente festgelegt werden:  
@@ -47,7 +47,7 @@ ms.locfileid: "65582052"
   
  Zurück zum Anfang  
   
-##  <a name="FilterEquations"></a> Grundlegendes zur Filtergleichung  
+##  <a name="understanding-a-filter-equation"></a><a name="FilterEquations"></a> Grundlegendes zur Filtergleichung  
  Zur Laufzeit konvertiert der Berichtsprozessor den Wert in den angegebenen Datentyp und vergleicht dann anhand des festgelegten Operators Ausdruck und Wert. In der folgenden Liste werden die einzelnen Bestandteile der Filtergleichung beschrieben:  
   
 -   **Ausdruck** : Definiert das Filterelement. Im Allgemeinen handelt es sich hierbei um ein Datasetfeld.  

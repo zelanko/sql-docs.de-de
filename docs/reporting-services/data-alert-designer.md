@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571596"
 ---
 # <a name="data-alert-designer"></a>Datenwarnungs-Designer
@@ -54,7 +54,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
   
  Zum Öffnen des Datenwarnungs-Designers klicken Sie auf der Berichtssymbolleiste im Menü **Aktionen** auf die Option **Neue Datenwarnung** . Wenn Sie die Option **Neue Datenwarnung** nicht sehen, ist der Bericht zur Verwendung von gespeicherten Anmeldeinformationen nicht konfiguriert. Sie können den Typ der Anmeldeinformationen aktualisieren, indem Sie die Berichtsdatenquelle der SharePoint-Bibliothek aktualisieren.  
   
-##  <a name="AlertDesigner"></a> Benutzeroberfläche des Datenwarnungs-Designers  
+##  <a name="data-alert-designer-user-interface"></a><a name="AlertDesigner"></a> Benutzeroberfläche des Datenwarnungs-Designers  
  Der Datenwarnungs-Designer ist in verschiedene Bereiche unterteilt. Der Bereich, in dem Sie den Berichtsdatenfeed auswählen, der Bereich, in dem Sie einfache oder komplexe Bedingungen erstellen, indem Sie Bedingungen Regeln hinzufügen, usw. Das folgende Bild zeigt die Bereiche im Datenwarnungs-Designer an.  
   
  ![Bereiche auf der Benutzeroberfläche des Warnungs-Designers](../reporting-services/media/rs-alertdesigner.gif "Bereiche auf der Benutzeroberfläche des Warnungs-Designers")  
@@ -176,7 +176,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
   
  Weitere Informationen zum Generieren der E-Mail finden Sie unter [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md).  
   
-##  <a name="CreateAlert"></a> Erstellen einer Datenwarnungsdefinition  
+##  <a name="create-a-data-alert-definition"></a><a name="CreateAlert"></a> Erstellen einer Datenwarnungsdefinition  
  Wenn Ihnen die SharePoint-Berechtigungen "Elemente anzeigen" und "Warnungen erstellen" gewährt werden und erstellt werden, können Sie eine Datenwarnungsdefinition für jeden Bericht erstellen, den Sie anzeigen können. Dabei wird vorausgesetzt, dass der betreffende Bericht gespeicherte Anmeldeinformationen oder keine Anmeldeinformationen verwendet. Sie führen den Bericht über eine SharePoint-Bibliothek aus. Die für Sie verfügbaren Daten, die Sie im Datenwarnungs-Designer verwenden können, stammen aus dem Bericht. Wenn der Bericht parametrisiert wird, müssen Sie den Bericht möglicherweise mithilfe anderer Parameterwerte erstellen, um sicherzustellen, dass die Daten, an denen Sie interessiert sind, im Bericht enthalten sind. Nachdem der Bericht geöffnet ist, klicken Sie auf der Berichtssymbolleiste im Menü **Aktionen** auf die Option **Neue Datenwarnung** , um den Datenwarnungs-Designer zu öffnen. Das folgende Bild zeigt das Öffnen des Datenwarnungs-Designers.  
   
  ![Öffnen des Warnungs-Designers über die SharePoint-Bibliothek](../reporting-services/media/rs-openalertdesigneriw.gif "Öffnen des Warnungs-Designers über die SharePoint-Bibliothek")  
@@ -184,7 +184,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
  Weitere Informationen finden Sie unter [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
   
-##  <a name="SaveAlert"></a> Speichern einer Datenwarnungsdefinition  
+##  <a name="save-a-data-alert-definition"></a><a name="SaveAlert"></a> Speichern einer Datenwarnungsdefinition  
  Der Datenwarnungs-Designer zeigt die URL der Website an, auf der die Datenwarnungsdefinition gespeichert wird. Datenwarnungsdefinitionen werden immer auf derselben Website wie die Berichte gespeichert.  
   
 > [!NOTE]  
@@ -193,7 +193,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
  Die Warnungsdefinition wird vor dem Speichern überprüft. Alle Fehler müssen korrigiert werden, bevor die Warnungsdefinition gespeichert werden kann. Weitere Informationen finden Sie unter [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
   
-##  <a name="EditAlert"></a> Bearbeiten einer Datenwarnungsdefinition  
+##  <a name="edit-a-data-alert-definition"></a><a name="EditAlert"></a> Bearbeiten einer Datenwarnungsdefinition  
  Nach dem Speichern der Datenwarnungsdefinition können Sie diese im Datenwarnungs-Designer erneut öffnen und dann bearbeiten. Sie können Regeln und Klauseln hinzufügen, ändern oder löschen und den Zeitplan sowie die E-Mail-Einstellungen ändern. Wenn der von der Warnung verwendete Berichtsdatenfeed geändert wurde und die Felder nicht mehr bereitstellt, auf die die Warnungsregeln verweisen, oder wenn die Datentypen oder andere Metadaten der Felder geändert wurden, ist die Warnungsdefinition nicht mehr gültig und muss korrigiert werden, bevor sie erneut gespeichert werden kann. Wenn Sie einen anderen Datenfeed verwenden möchten, müssen Sie eine neue Warnungsdefinition erstellen.  
   
  Um eine Datenwarnungsdefinition zu bearbeiten, klicken Sie im Datenwarnungs-Manager mit der rechten Maustaste auf die gewünschte Definition, und klicken Sie anschließend auf **Bearbeiten**. Das folgende Bild zeigt das Kontextmenü einer Datenwarnung im Datenwarnungs-Manager.  
@@ -203,7 +203,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
  Weitere Informationen finden Sie unter [Bearbeiten einer Datenwarnung im Warnungs-Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
   
-##  <a name="HowTo"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="HowTo"></a> Verwandte Aufgaben  
  In diesem Abschnitt sind die Prozeduren zum Erstellen und Bearbeiten von Warnungen aufgeführt.  
   
 -   [Edit a Data Alert in Alert Designer (Bearbeiten einer Datenwarnung im Warnungs-Designer)](../reporting-services/edit-a-data-alert-in-alert-designer.md)  

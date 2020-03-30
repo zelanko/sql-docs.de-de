@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e8c5fbecb8892639e5e4e0cb608c3c4de0447508
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896014"
 ---
 # <a name="windows-applications-using-callbacks"></a>Verwenden von Rückrufen in Windows-Anwendungen
@@ -25,7 +25,7 @@ ms.locfileid: "78896014"
 
 In den meisten asynchronen Verarbeitungsszenarien möchten Sie einen Datenbankvorgang starten und andere Prozesse fortsetzen, ohne auf den Abschluss des Datenbankvorgangs warten zu müssen. In vielen Szenarien muss jedoch nach Abschluss des Datenbankvorgangs noch etwas erfolgen. In einer Windows-Anwendung beispielsweise ermöglicht das Delegieren des Vorgangs mit langer Ausführungszeit an einen Hintergrundthread, dass der Benutzeroberflächenthread reaktionsfähig bleibt. Wenn der Datenbankvorgang jedoch abgeschlossen ist, möchten Sie die Ergebnisse zum Ausfüllen des Formulars verwenden. Diese Art von Szenario lässt sich am besten mit einem Rückruf umsetzen.  
   
-Sie definieren einen Rückruf, indem Sie in der Methode <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> oder <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> einen <xref:System.AsyncCallback>-Delegaten angeben. Der Delegat wird aufgerufen, wenn der Vorgang abgeschlossen ist. Sie können an den Delegaten einen Verweis auf den <xref:Microsoft.Data.SqlClient.SqlCommand> selbst übergeben, wodurch der Zugriff auf das <xref:Microsoft.Data.SqlClient.SqlCommand>-Objekt und der Aufruf der entsprechenden `End`-Methode problemlos möglich ist, ohne dass eine globale Variable verwendet werden muss.  
+Sie definieren einen Rückruf, indem Sie in der Methode <xref:System.AsyncCallback>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> oder <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> einen <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>-Delegaten angeben. Der Delegat wird aufgerufen, wenn der Vorgang abgeschlossen ist. Sie können an den Delegaten einen Verweis auf den <xref:Microsoft.Data.SqlClient.SqlCommand> selbst übergeben, wodurch der Zugriff auf das <xref:Microsoft.Data.SqlClient.SqlCommand>-Objekt und der Aufruf der entsprechenden `End`-Methode problemlos möglich ist, ohne dass eine globale Variable verwendet werden muss.  
   
 ## <a name="example"></a>Beispiel  
 Die folgende Windows-Anwendung veranschaulicht die Verwendung der <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>-Methode, bei der (zum Emulieren eines Befehls mit langer Ausführungszeit) eine Transact-SQL-Anweisung mit einer Verzögerung von einigen Sekunden ausgeführt wird.  

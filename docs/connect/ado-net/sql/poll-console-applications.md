@@ -1,6 +1,6 @@
 ---
 title: Abrufen in Konsolenanwendungen
-description: Dieser Artikel enthält ein Beispiel zur Verwendung von Abrufen, um in einer Konsolenanwendung auf den Abschluss der Ausführung eines asynchronen Befehls zu warten. Diese Technik eignet sich auch in Klassenbibliotheken oder anderen Anwendungen ohne Benutzeroberfläche.
+description: Enthält ein Beispiel, das die Verwendung von Abrufen demonstriert, um in einer Konsolenanwendung auf den Abschluss der Ausführung eines asynchronen Befehls zu warten. Diese Technik eignet sich auch in einer Klassenbibliothek oder einer anderen Anwendung ohne Benutzerschnittstelle.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 89bcaa6d6e92ccde2d1c151b493c26fe1279d89f
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896644"
 ---
 # <a name="polling-in-console-applications"></a>Abrufen in Konsolenanwendungen

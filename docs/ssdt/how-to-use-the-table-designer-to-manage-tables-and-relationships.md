@@ -15,13 +15,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75226825"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Gewusst wie: Verwalten von Tabellen und Beziehungen mithilfe des Tabellen-Designers
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Vorgehensweise: Verwalten von Tabellen und Beziehungen mithilfe des Tabellen-Designers
 
 Der Tabellen-Designer bietet gemeinsam mit dem Transact\-SQL-Editor eine visuelle Oberfläche zum Erstellen und Bearbeiten von Tabellenstrukturen, einschließlich tabellenspezifischer Programmierobjekte, für SQL Server-Datenbanken.  Er wird gestartet, wenn Sie eine neue Tabelle für eine verbundene Datenbank oder ein Projekt erstellen oder wenn Sie im SQL Server-Objekt-Explorer oder Projektmappen-Explorer auf eine Tabelle doppelklicken, um sie zu bearbeiten.  
   
@@ -57,5 +57,5 @@ Der Designer besteht aus dem Spaltenraster, dem Skriptbereich und dem Kontextber
     Beachten Sie, dass das Erstellen und Bearbeiten von Datenbankentitäten für ein Offlineprojekt auf die gleiche Weise wie für eine verbundene Datenbank erfolgt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Vorgehensweise: Erstellen von Datenbankobjekten mit dem Tabellen-Designer](../ssdt/how-to-create-database-objects-using-table-designer.md)  
+[Gewusst wie: Erstellen von Datenbankobjekten mit dem Tabellen-Designer](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

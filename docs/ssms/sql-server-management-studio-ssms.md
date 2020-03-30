@@ -17,10 +17,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
 ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76037181"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>Was ist SQL Server Management Studio (SSMS)?
@@ -37,7 +37,7 @@ ms.locfileid: "76037181"
 
 ## <a name="sql-server-management-studio-components"></a>Komponenten von SQL Server Management Studio  
   
-|Beschreibung|Komponente|  
+|BESCHREIBUNG|Komponente|  
 |---------------|---------|  
 |Die Verwendung des **Objekt-Explorers** zum Anzeigen und Verwalten aller Objekte in mindestens einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Objekt-Explorers](../ssms/object/object-explorer.md)|  
 |So wird der **Vorlagen-Explorer** zum Erstellen und Verwalten von Dateien mit Textbausteinen verwendet, die Sie zum Beschleunigen der Entwicklung von Abfragen und Skripts verwenden.|[Template Explorer](../ssms/template/template-explorer.md)|  

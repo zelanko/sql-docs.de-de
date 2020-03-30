@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7b617ecdbf2977372dbb006baaec4c791b988ef8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988905"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Unterstützung von Sparsespalten im OLE DB-Treiber für SQL Server
@@ -56,11 +56,11 @@ ms.locfileid: "67988905"
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>Massenkopierunterstützung (BCP) für Spalten mit geringer Dichte  
  In OLE DB sind keine Änderungen an der BCP-API für die Sparsespalten oder **column_set**-Funktionen vorgenommen werden.  
   
- Wenn eine Tabelle einen **column_set** aufweist, werden Sparsespalten nicht wie unterschiedliche Spalten behandelt. Die Werte aller Sparsespalten sind im Wert des **column_set** enthalten, der auf dieselbe Art und Weise wie eine XML-Spalte exportiert wird, d. h. als **varbinary(max)**, wenn er als Binärtyp gebunden ist, oder als **nvarchar(max)**, wenn er als **char**-Typ oder **wchar**-Typ gebunden ist. Beim Importieren muss der **column_set**-Wert dem Schema des **column_set** entsprechen.  
+ Wenn eine Tabelle einen **column_set** aufweist, werden Sparsespalten nicht wie unterschiedliche Spalten behandelt. Die Werte aller Sparsespalten sind im Wert des **column_set** enthalten, der auf dieselbe Art und Weise wie eine XML-Spalte exportiert wird, d. h. als **varbinary(max)** , wenn er als Binärtyp gebunden ist, oder als **nvarchar(max)** , wenn er als **char**-Typ oder **wchar**-Typ gebunden ist. Beim Importieren muss der **column_set**-Wert dem Schema des **column_set** entsprechen.  
   
  Bei **queryout**-Vorgängen gibt es keine Änderungen in der Behandlung von Spalten, auf die explizit verwiesen wird. **column_set**-Spalten weisen das gleiche Verhalten auf wie XML-Spalten, und die Sparseeigenschaft hat keine Auswirkungen auf die Behandlung von benannten Sparsespalten.  
   
- Wenn jedoch **queryout** für das Exportieren verwendet wird, und Sie über den Namen auf Sparsespalten verweisen, die Elemente des Sparsespaltensatzes sind, können Sie keinen direkten Import in eine Spalte mit gleicher Struktur durchführen. Dies liegt daran, dass BCP Metadaten verwendet, die konsistent mit einem **select \***-Vorgang für den Import sind, und **column_set**-Elementspalten diesen Metadaten nicht zuordnen kann. Damit **column_set**-Elementspalten einzeln importiert werden können, müssen Sie eine Ansicht für die Tabelle definieren, die auf die gewünschten **column_set**-Spalten verweist. Darüber hinaus müssen Sie den Importvorgang über die Ansicht ausführen.  
+ Wenn jedoch **queryout** für das Exportieren verwendet wird, und Sie über den Namen auf Sparsespalten verweisen, die Elemente des Sparsespaltensatzes sind, können Sie keinen direkten Import in eine Spalte mit gleicher Struktur durchführen. Dies liegt daran, dass BCP Metadaten verwendet, die konsistent mit einem **select \*** -Vorgang für den Import sind, und **column_set**-Elementspalten diesen Metadaten nicht zuordnen kann. Damit **column_set**-Elementspalten einzeln importiert werden können, müssen Sie eine Ansicht für die Tabelle definieren, die auf die gewünschten **column_set**-Spalten verweist. Darüber hinaus müssen Sie den Importvorgang über die Ansicht ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL-Server](../../oledb/oledb-driver-for-sql-server.md)  

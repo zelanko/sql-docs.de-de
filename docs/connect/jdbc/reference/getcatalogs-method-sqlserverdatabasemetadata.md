@@ -16,10 +16,10 @@ ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 786f55e436b9582eaed875f8c7cd265b1d3e2cc5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953454"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs-Methode (SQLServerDatabaseMetaData)
@@ -44,11 +44,11 @@ public java.sql.ResultSet getCatalogs()
  Diese getCatalogs-Methode wird von der getCatalogs-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  
->  Sie sollten in SQL Azure eine Verbindung mit der Datenbank herstellen, um **SQLServerDatabaseMetaData.getCatalogs** aufzurufen. SQL Azure unterstützt nicht die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank. **SQLServerDatabaseMetaData.getCatalogs** verwendet die Ansicht „sys.databases“, um die Kataloge abzurufen. Erläuterung zum Verhalten von **SQLServerDatabaseMetaData.getCatalogs** in SQL Azure finden Sie im Abschnitt „Berechtigungen“ des Artikels [sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md).  
+>  Sie sollten in SQL Azure eine Verbindung mit der Datenbank herstellen, um **SQLServerDatabaseMetaData.getCatalogs** aufzurufen. SQL Azure unterstützt nicht die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank. **SQLServerDatabaseMetaData.getCatalogs** verwendet die Ansicht „sys.databases“, um die Kataloge abzurufen. Erläuterung zum Verhalten von [SQLServerDatabaseMetaData.getCatalogs](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) in SQL Azure finden Sie im Abschnitt „Berechtigungen“ des Artikels **sys.database_usage (Azure SQL Database)** .  
   
  Das von der getCatalogs-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   
-|Name|type|Beschreibung|  
+|Name|type|BESCHREIBUNG|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Name des Katalogs, einschließlich der Systemdatenbanken in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
   

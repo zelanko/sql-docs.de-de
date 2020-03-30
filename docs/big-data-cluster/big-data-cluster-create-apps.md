@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253148"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>Bereitstellen einer App in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -46,7 +46,7 @@ Die folgenden Typen von Apps werden unterstützt:
 
 In SQL Server 2019 können Sie Ihre Anwendung erstellen, löschen, beschreiben, initialisieren, auflisten und aktualisieren. In der folgenden Tabelle werden die Befehle für die Anwendungsbereitstellung beschrieben, die Sie mit **azdata** verwenden können.
 
-|Get-Help |Beschreibung |
+|Get-Help |BESCHREIBUNG |
 |:---|:---|
 |`azdata login` | Anmelden bei einem Big Data-Cluster für SQL Server |
 |`azdata app create` | Erstellen einer Anwendung. |
@@ -110,7 +110,7 @@ Dabei wird vorausgesetzt, dass Sie die Anwendung im `addpy`-Ordner gespeichert h
 
 Um diese Beispiel-App bereitzustellen, erstellen Sie die folgenden Dateien in einem Verzeichnis mit dem Namen `addpy`:
 
-- `add.py`. Kopieren Sie den folgenden Python-Code in diese Datei:
+- [https://login.microsoftonline.com/consumers/](`add.py`). Kopieren Sie den folgenden Python-Code in diese Datei:
    ```py
    #add.py
   def add(x, y):
@@ -118,7 +118,7 @@ Um diese Beispiel-App bereitzustellen, erstellen Sie die folgenden Dateien in ei
     return result
   result=add(x,y)
    ```
-- `spec.yaml`. Kopieren Sie den folgenden Code in diese Datei:
+- [https://login.microsoftonline.com/consumers/](`spec.yaml`). Kopieren Sie den folgenden Code in diese Datei:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
@@ -294,6 +294,6 @@ azdata app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Im Artikel [Nutzen von Anwendungen auf Big Data-Clustern](big-data-cluster-consume-apps.md) erfahren Sie, wie Sie Apps, die in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] bereitgestellt wurden, in Ihre eigenen Anwendungen integrieren können. Weitere Beispiele finden Sie außerdem unter den [Beispielen zur App-Bereitstellung](https://aka.ms/sql-app-deploy).
+Im Artikel [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]Nutzen von Anwendungen auf Big Data-Clustern[ erfahren Sie, wie Sie Apps, die in ](big-data-cluster-consume-apps.md) bereitgestellt wurden, in Ihre eigenen Anwendungen integrieren können. Weitere Beispiele finden Sie außerdem unter den [Beispielen zur App-Bereitstellung](https://aka.ms/sql-app-deploy).
 
 Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie unter [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

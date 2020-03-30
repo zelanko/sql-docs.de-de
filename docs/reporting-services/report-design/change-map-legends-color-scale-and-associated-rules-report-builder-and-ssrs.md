@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581733"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln (Berichts-Generator und SSRS)
@@ -51,11 +51,11 @@ ms.locfileid: "65581733"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
-##  <a name="Viewport"></a> So ändern Sie die Position einer Legende in Bezug zum Viewport  
+##  <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a><a name="Viewport"></a> So ändern Sie die Position einer Legende in Bezug zum Viewport  
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>So ändern Sie die Position einer Legende in Bezug zum Viewport  
   
-1.  Klicken Sie in der Entwurfsansicht mit der rechten Maustaste auf die Legende, und öffnen Sie die Seite _\<<Berichtselement>_**Eigenschaften**.  
+1.  Klicken Sie in der Entwurfsansicht mit der rechten Maustaste auf die Legende, und öffnen Sie die Seite _\<<Berichtselement>_ **Eigenschaften**.  
   
 2.  Klicken Sie in **Position**auf den Ort, der angibt, wo die Legende relativ zum Viewport angezeigt wird.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "65581733"
     > [!NOTE]  
     >  In der Vorschau werden die zu skalierenden Kartenlegenden und Farbskalen nur angezeigt, wenn es Ergebnisse von den Regeln gibt, die sich auf diese Legende beziehen. Wenn keine anzuzeigenden Elemente vorhanden sind, wird die Legende nicht im gerenderten Bericht angezeigt.  
   
-##  <a name="MapLegend"></a> So ändern Sie das Layout einer Kartenlegende  
+##  <a name="to-change-the-layout-of-a-map-legend"></a><a name="MapLegend"></a> So ändern Sie das Layout einer Kartenlegende  
   
 #### <a name="to-change-the-layout-of-a-map-legend"></a>So ändern Sie das Layout einer Kartenlegende  
   
@@ -76,19 +76,19 @@ ms.locfileid: "65581733"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="MapLegendTitle"></a> So blenden Sie einen Kartenlegendentitel ein oder aus  
+##  <a name="to-show-or-hide-a-map-legend-title"></a><a name="MapLegendTitle"></a> So blenden Sie einen Kartenlegendentitel ein oder aus  
   
 #### <a name="to-show-or-hide-a-map-legend-title"></a>So blenden Sie einen Kartenlegendentitel ein oder aus  
   
 -   Klicken Sie auf der Entwurfsoberfläche mit der rechten Maustaste auf die Kartenlegende, und klicken Sie anschließend auf **Legendentitel anzeigen**.  
   
-##  <a name="ColorScaleTitle"></a> So blenden Sie einen Farbskalatitel ein oder aus  
+##  <a name="to-show-or-hide-a-color-scale-title"></a><a name="ColorScaleTitle"></a> So blenden Sie einen Farbskalatitel ein oder aus  
   
 #### <a name="to-show-or-hide-a-color-scale-title"></a>So blenden Sie einen Farbskalatitel ein oder aus  
   
 -   Klicken Sie auf der Entwurfsoberfläche mit der rechten Maustaste auf die Farbskala, und klicken Sie anschließend auf **Farbskalatitel anzeigen**.  
   
-##  <a name="MoveItems"></a> So verschieben Sie Elemente aus der ersten Legende  
+##  <a name="to-move-items-out-of-the-first-legend"></a><a name="MoveItems"></a> So verschieben Sie Elemente aus der ersten Legende  
  Erstellen Sie beliebig viele weitere Legenden, aktualisieren Sie dann die Regeln für jede Kartenebene, und legen Sie fest, in welcher Legende die Regelergebnisse angezeigt werden sollen.  
   
 #### <a name="to-create-a-new-legend"></a>So erstellen Sie eine neue Legende  
@@ -101,7 +101,7 @@ ms.locfileid: "65581733"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_**Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
   
 3.  Klicken Sie auf **Legende**.  
   
@@ -109,13 +109,13 @@ ms.locfileid: "65581733"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TemplateStyle"></a> So verändern Sie Kartenelementfarben auf Grundlage eines Vorlagenstils  
+##  <a name="to-vary-map-element-colors-based-on-a-template-style"></a><a name="TemplateStyle"></a> So verändern Sie Kartenelementfarben auf Grundlage eines Vorlagenstils  
   
 #### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>So verändern Sie Kartenelementfarben auf Grundlage eines Vorlagenstils  
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_**Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
   
 3.  Klicken Sie auf **Vorlagenstil anwenden**.  
   
@@ -123,13 +123,13 @@ ms.locfileid: "65581733"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorPalette"></a> So verändern Sie Kartenelementfarben auf Grundlage der Farbpalette  
+##  <a name="to-vary-map-element-colors-based-on-color-palette"></a><a name="ColorPalette"></a> So verändern Sie Kartenelementfarben auf Grundlage der Farbpalette  
   
 #### <a name="to-vary-map-element-colors-based-on-color-palette"></a>So verändern Sie Kartenelementfarben auf Grundlage der Farbpalette  
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_**Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
   
 3.  Klicken Sie auf **Daten mithilfe der Farbpalette anzeigen**.  
   
@@ -141,13 +141,13 @@ ms.locfileid: "65581733"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorRanges"></a> So verändern Sie Kartenelementfarben auf Grundlage des Farbbereichs  
+##  <a name="to-vary-map-element-colors-based-on-color-ranges"></a><a name="ColorRanges"></a> So verändern Sie Kartenelementfarben auf Grundlage des Farbbereichs  
   
 #### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>So verändern Sie Kartenelementfarben auf Grundlage des Farbbereichs  
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_**Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
   
 3.  Klicken Sie auf **Daten mithilfe von Farbbereichen anzeigen**.  
   
@@ -163,13 +163,13 @@ ms.locfileid: "65581733"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="CustomColors"></a> So verändern Sie Kartenelementfarben auf Grundlage benutzerdefinierter Farben  
+##  <a name="to-vary-map-element-colors-based-on-custom-colors"></a><a name="CustomColors"></a> So verändern Sie Kartenelementfarben auf Grundlage benutzerdefinierter Farben  
   
 #### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>So verändern Sie Kartenelementfarben auf Grundlage benutzerdefinierter Farben  
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_**Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
   
 3.  Klicken Sie auf **Daten mithilfe benutzerdefinierter Farben anzeigen**.  
   
@@ -181,15 +181,15 @@ ms.locfileid: "65581733"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DistributionOptions"></a> So legen Sie Verteilungsoptionen für eine Legende fest  
+##  <a name="to-set-distribution-options-for-a-legend"></a><a name="DistributionOptions"></a> So legen Sie Verteilungsoptionen für eine Legende fest  
   
 #### <a name="to-set-distribution-options-for-a-legend"></a>So legen Sie Verteilungsoptionen für eine Legende fest  
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_**Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
   
-3.  Wählen Sie die Option **Daten mithilfe von \<Regeltyp> anzeigen** aus. Um Verteilungsoptionen zu verwenden, müssen Sie Bereiche auf der Seite **Verteilung** auf Grundlage analytischer Daten erstellen, die der Ebene zugeordnet sind.  
+3.  Wählen Sie die Option **Daten mithilfe von** Regeltyp> anzeigen\< aus. Um Verteilungsoptionen zu verwenden, müssen Sie Bereiche auf der Seite **Verteilung** auf Grundlage analytischer Daten erstellen, die der Ebene zugeordnet sind.  
   
 4.  Klicken Sie auf **Verteilung**.  
   
@@ -213,15 +213,15 @@ ms.locfileid: "65581733"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="RuleLegend"></a> So ändern Sie den Inhalt einer Regellegende  
+##  <a name="to-change-the-contents-of-a-rule-legend"></a><a name="RuleLegend"></a> So ändern Sie den Inhalt einer Regellegende  
   
 #### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>So ändern Sie den Inhalt einer Farb-, Größen-, Breiten- oder Markertyplegende  
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_**Regel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Regel**.  
   
-3.  Überprüfen Sie, ob die Option **Daten mithilfe von \<*Regeltyp*> anzeigen** aktiviert ist.  
+3.  Überprüfen Sie, ob die Option **Daten mithilfe von** \<Regeltyp *> anzeigen* aktiviert ist.  
   
 4.  Überprüfen Sie in **Datenfeld**, ob die analytischen Daten, die Sie auf der Ebene visuell darstellen, ausgewählt sind.  
   
@@ -234,15 +234,15 @@ ms.locfileid: "65581733"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorScale"></a> So ändern Sie den Inhalt der Farbskala  
+##  <a name="to-change-the-contents-of-the-color-scale"></a><a name="ColorScale"></a> So ändern Sie den Inhalt der Farbskala  
   
 #### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>So ändern Sie den Inhalt der Farbskala oder einer Farblegende  
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_**Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
   
-3.  Aktivieren Sie die zu verwendende Farbregeloption. Wenn Sie Elemente in einer Kartenlegende oder einer Farbskala anzeigen möchten, müssen Sie eine der Optionen für **Daten mithilfe von \<Regeltyp> anzeigen** aktivieren.  
+3.  Aktivieren Sie die zu verwendende Farbregeloption. Wenn Sie Elemente in einer Kartenlegende oder einer Farbskala anzeigen möchten, müssen Sie eine der Optionen für **Daten mithilfe von** Regeltyp> anzeigen\< aktivieren.  
   
 4.  Überprüfen Sie in **Datenfeld**, ob die analytischen Daten, die Sie auf der Ebene visuell darstellen, ausgewählt sind.  
   
@@ -255,26 +255,26 @@ ms.locfileid: "65581733"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="HideItems"></a> So entfernen Sie alle Elemente aus einer Legende  
+##  <a name="to-remove-all-items-from-a-legend"></a><a name="HideItems"></a> So entfernen Sie alle Elemente aus einer Legende  
   
 #### <a name="to-hide-items-based-on-a-rule"></a>So blenden Sie Elemente basierend auf einer Regel aus  
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_**Regel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Regel**.  
   
 3.  Klicken Sie auf **Legende**.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ChangeFormatItems"></a> So ändern Sie das Format des Inhalts einer Legende  
+##  <a name="to-change-the-format-of-content-in-a-legend"></a><a name="ChangeFormatItems"></a> So ändern Sie das Format des Inhalts einer Legende  
  Legen Sie Legendenoptionen für die zugeordnete Regel der Kartenlegende fest.  
   
 #### <a name="to-change-the-format-of-content-in-a-legend"></a>So ändern Sie das Format des Inhalts einer Legende  
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_**Regel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Regel**.  
   
 3.  Klicken Sie auf **Legende**.  
   

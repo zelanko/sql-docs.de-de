@@ -11,17 +11,17 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 9c2275e94d30560ae1173a12bfdcc6bfdc1eecb4
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895885"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Schreiben von sicherem dynamischem SQL in SQL Server
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-Bei der Einschleusung von SQL-Befehlen gibt ein böswilliger Benutzer anstelle gültiger Eingaben Transact-SQL-Anweisungen ein. Wenn die Eingabe ohne Überprüfung direkt an den Server weitergegeben wird und die Anwendung den eingeschleusten Code versehentlich ausführt, kann der Angriff Daten beschädigen oder zerstören.  
+Bei der Einschleusung von SQL-Befehlen gibt ein böswilliger Benutzer anstelle gültige Eingaben Transact-SQL-Anweisungen ein. Wenn die Eingabe ohne Überprüfung direkt an den Server weitergegeben wird und die Anwendung den eingeschleusten Code versehentlich ausführt, kann der Angriff Daten beschädigen oder zerstören.  
   
 Sie sollten jede Prozedur, die SQL-Anweisungen erstellt, nach Injection-Anfälligkeiten überprüfen, denn SQL Server führt alle empfangenen gültigen Abfragen aus. Auch parametrisierte Daten können von einem technisch versierten Angreifer manipuliert werden. Wenn Sie dynamisches SQL verwenden, stellen Sie sicher, dass Sie Ihre Befehle parametrisieren und Parameterwerte niemals direkt in die Abfragezeichenfolge einschließen.  
   
@@ -46,7 +46,7 @@ Hier einige nützliche Leitlinien:
   
 - In Multi-Tier-Umgebungen sollten alle Daten vor dem Zugang zu einer vertrauensvollen Zone überprüft werden.  
   
-- Folgende Zeichenfolge dürfen in Feldern, aus denen Dateiname erstellt werden können, nicht zugelassen werden: AUX, CLOCK$, COM1 bis COM8, CON, CONFIG$, LPT1 bis LPT8, NUL und PRN.  
+- Akzeptieren Sie in Feldern, aus denen Dateinamen erstellt werden können, keine der folgenden Zeichenfolgen: AUX, CLOCK$, COM1 bis COM8, CON, CONFIG$, LPT1 bis LPT8, NUL und PRN.  
   
 - Verwenden Sie <xref:Microsoft.Data.SqlClient.SqlParameter>-Objekte mit gespeicherten Prozeduren und Befehlen, um eine Typ- und Längenüberprüfung durchzuführen.  
   

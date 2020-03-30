@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246486"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Gewusst wie: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Vorgehensweise: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird
 
 Sie können Komponententests so anpassen, dass sie im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt werden. Bei diesem Ansatz können Sie für alle vom Test durchgeführten Änderungen ein Rollback ausführen, nachdem der Test beendet wurde. Die Vorgehensweise wird in folgenden Verfahren erläutert:  
   
@@ -108,7 +108,7 @@ In diesem Beispiel verwenden Sie zusammen mit dem [System.Transactions.Transacti
     ```  
   
     > [!NOTE]  
-    > Bei Verwendung von Visual Basic müssen Sie (neben `Imports Microsoft.VisualStudio.TestTools.UnitTesting`, `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTesting` und `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTest.Conditions`) `Imports System.Transactions` hinzufügen. Bei Verwendung von Visual C# müssen Sie (neben den `using`-Anweisungen für Microsoft.VisualStudio.TestTools, Microsoft.VisualStudio.TeamSystem.Data.UnitTesting und Microsoft.VisualStudio.TeamSystem.Data.UnitTesting.Conditions) `using System.Transactions` hinzufügen. Außerdem müssen Sie diesen Assemblys einen Verweis auf das Projekt hinzufügen.  
+    > Bei Verwendung von Visual Basic müssen Sie (neben `Imports System.Transactions`, `Imports Microsoft.VisualStudio.TestTools.UnitTesting` und `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTesting`) `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTest.Conditions` hinzufügen. Bei Verwendung von Visual C# müssen Sie (neben den `using System.Transactions`-Anweisungen für Microsoft.VisualStudio.TestTools, Microsoft.VisualStudio.TeamSystem.Data.UnitTesting und Microsoft.VisualStudio.TeamSystem.Data.UnitTesting.Conditions) `using` hinzufügen. Außerdem müssen Sie diesen Assemblys einen Verweis auf das Projekt hinzufügen.  
   
 ## <a name="to-create-a-transaction-for-all-test-methods-in-a-test-class"></a>So erstellen Sie eine Transaktion für alle Testmethoden in einer Testklasse  
   
@@ -156,7 +156,7 @@ In diesem Beispiel verwenden Sie zusammen mit dem [System.Transactions.Transacti
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>So starten Sie den Distributed Transaction Coordinator-Dienst  
-In einigen Verfahren in diesem Thema werden Typen in der System.Transactions-Assembly verwendet. Bevor Sie diese Verfahren ausführen, müssen Sie sicherstellen, dass der Distributed Transaction Coordinator-Dienst auf dem Computer ausgeführt wird, auf dem die Komponententests laufen. Andernfalls wird bei dem Test ein Fehler mit der folgenden Fehlermeldung ausgelöst: "Test method *ProjectName*.*TestName*.*MethodName* threw exception: System.Data.SqlClient.SqlException: MSDTC ist auf dem Server *Computername* nicht verfügbar“.  
+In einigen Verfahren in diesem Thema werden Typen in der System.Transactions-Assembly verwendet. Bevor Sie diese Verfahren ausführen, müssen Sie sicherstellen, dass der Distributed Transaction Coordinator-Dienst auf dem Computer ausgeführt wird, auf dem die Komponententests laufen. Andernfalls tritt bei den Tests ein Fehler mit folgender Fehlermeldung auf: „Die Testmethode *Projektname*.*Testname*.*Methodenname* hat eine Ausnahme ausgelöst: System.Data.SqlClient.SqlException: MS DTC auf dem Server "*Computername*" ist nicht verfügbar.“  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>So starten Sie den Distributed Transaction Coordinator-Dienst  
   

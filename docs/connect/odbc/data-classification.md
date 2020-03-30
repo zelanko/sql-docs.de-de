@@ -14,10 +14,10 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72041130"
 ---
 # <a name="data-classification"></a>Datenklassifizierung
@@ -243,7 +243,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="bkmk-version"></a>Unterstützte Version
+## <a name="supported-version"></a><a name="bkmk-version"></a>Unterstützte Version
 Der Microsoft ODBC-Treiber 17.2 ermöglicht das Abrufen von Datenklassifizierungsinformationen über `SQLGetDescField`, wenn `FieldIdentifier` auf `SQL_CA_SS_DATA_CLASSIFICATION` festgelegt ist (1237). 
 
 Ab Microsoft ODBC-Treiber 17.4.1.1 kann die von einem Server unterstütze Version der Datenklassifizierung mithilfe von `SQLGetDescField` unter Verwendung des Feldbezeichners `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238) abgerufen werden. In 17.4.1.1 ist die unterstützte Datenklassifizierungsversion auf 2 festgelegt.

@@ -11,10 +11,10 @@ ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89126d696f7210132adb5ef10ec557604ebc543f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993125"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
@@ -30,11 +30,11 @@ bool PDOStatement::bindValue($parameter, $value[, $data_type]);
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*parameter:* Ein (gemischter) Parameterbezeichner Ein Parametername (:name) für eine Anweisung, die benannte Platzhalter verwendet. Für eine vorbereitete Anweisung mit der Fragezeichensyntax stellt dieser den 1-basierten Index des Parameters dar.
+$*parameter*: Ein (gemischter) Parameterbezeichner. Ein Parametername (:name) für eine Anweisung, die benannte Platzhalter verwendet. Für eine vorbereitete Anweisung mit der Fragezeichensyntax stellt dieser den 1-basierten Index des Parameters dar.
   
-$*value:* Der (gemischte) Wert, der an den Parameter gebunden wird  
+$*value*: Der (gemischte) Wert, der an den Parameter gebunden wird.  
   
-$*data_type:* Der optionale Datentyp (Integer), der durch die Konstante PDO::PARAM_* dargestellt wird Der Standardwert ist PDO::PARAM_STR.  
+$*data_type*: Der optionale Datentyp (Integer), der durch die Konstante PDO::PARAM_* dargestellt wird. Der Standardwert ist PDO::PARAM_STR.  
   
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  

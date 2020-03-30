@@ -13,10 +13,10 @@ ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578347"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus
@@ -48,7 +48,7 @@ ms.locfileid: "65578347"
   
 -   [So löschen Sie ein Abonnement](#bkmk_to_delete_subscription)  
   
-##  <a name="bkmk_subscription_requirements"></a> Allgemeine Anforderungen für Abonnements  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_subscription_requirements"></a> Allgemeine Anforderungen für Abonnements  
  Wenn Sie ein Abonnement erstellen möchten, müssen für den Bericht gespeicherte Anmeldeinformationen verwendet werden, und Sie müssen über die Berechtigung zum Anzeigen des Berichts und zum Erstellen von Warnungen verfügen.  
   
  Wenn Sie ein Abonnement erstellen, können Sie ein Ausgabedateiformat auswählen. Nicht alle Berichte funktionieren in jedem Format optimal. Bevor Sie ein Format in einem Abonnement auswählen, sollten Sie den Bericht öffnen und ihn in verschiedene Formate exportieren, um zu überprüfen, ob er wie erwartet angezeigt wird.  
@@ -64,7 +64,7 @@ ms.locfileid: "65578347"
   
  Die Ausgabeformate, die Sie für ein Abonnement auswählen, basieren auf Renderingerweiterungen, die auf dem Berichtsserver installiert sind. Sie können nur Ausgabeformate auswählen, die von den Renderingerweiterungen auf dem Berichtsserver unterstützt werden.  
   
-###  <a name="bkmk_tosharepoint_library"></a> So erstellen Sie ein Abonnement für die Übermittlung eines Berichts an eine SharePoint-Bibliothek  
+###  <a name="to-create-a-subscription-to-deliver-a-report-to-a-sharepoint-library"></a><a name="bkmk_tosharepoint_library"></a> So erstellen Sie ein Abonnement für die Übermittlung eines Berichts an eine SharePoint-Bibliothek  
   
 1.  Wechseln Sie zu einer SharePoint-Bibliothek, die den Bericht enthält.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65578347"
   
 10. Geben Sie unter **Parameter**die Werte an, die Sie beim Verarbeiten des Abonnements für den Bericht verwenden möchten, wenn Sie ein Abonnement für einen parametrisierten Bericht erstellen möchten. Der Parameter-Abschnitt ist auf dieser Seite nicht sichtbar, wenn der Bericht, den Sie auswählen, keine Parameter enthält. Weitere Informationen zu Parametern finden Sie unter [Festlegen von Parametern für einen veröffentlichten Bericht &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_sharedfolder"></a> So erstellen Sie ein Abonnement für die Übermittlung an freigegebene Ordner  
+###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> So erstellen Sie ein Abonnement für die Übermittlung an freigegebene Ordner  
   
 1.  Wechseln Sie zu einer SharePoint-Bibliothek, die den Bericht enthält.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "65578347"
   
 12. Geben Sie unter **Parameter**die Werte an, die Sie beim Verarbeiten des Abonnements für den Bericht verwenden möchten, wenn Sie ein Abonnement für einen parametrisierten Bericht erstellen möchten. Weitere Informationen zu Parametern finden Sie unter [Festlegen von Parametern für einen veröffentlichten Bericht &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_email"></a> So erstellen Sie ein Abonnement für die Berichtsserver-E-Mail-Übermittlung  
+###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> So erstellen Sie ein Abonnement für die Berichtsserver-E-Mail-Übermittlung  
   
 1.  Wechseln Sie zu einer SharePoint-Bibliothek, die den Bericht enthält.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "65578347"
   
 10. Geben Sie unter **Parameter**die Werte an, die Sie beim Verarbeiten des Abonnements für den Bericht verwenden möchten, wenn Sie ein Abonnement für einen parametrisierten Bericht erstellen möchten. Weitere Informationen zu Parametern finden Sie unter [Festlegen von Parametern für einen veröffentlichten Bericht &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_to_modify_subscription"></a> So zeigen Sie ein Abonnement an oder ändern es  
+###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> So zeigen Sie ein Abonnement an oder ändern es  
   
 1.  Wechseln Sie zu einer SharePoint-Bibliothek, die den Bericht enthält.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "65578347"
   
 3.  Alle Abonnements werden durch den Übermittlungstyp identifiziert. Klicken Sie auf den Abonnementtyp, um die vorhandenen Eigenschaften anzuzeigen und zu ändern.  
   
-###  <a name="bkmk_to_delete_subscription"></a> So löschen Sie ein Abonnement  
+###  <a name="to-delete-a-subscription"></a><a name="bkmk_to_delete_subscription"></a> So löschen Sie ein Abonnement  
   
 1.  Wechseln Sie zu einer SharePoint-Bibliothek, die den Bericht enthält.  
   

@@ -11,10 +11,10 @@ ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027620"
 ---
 # <a name="troubleshooting-connectivity"></a>Behandlung von Konnektivitätsproblemen
@@ -26,7 +26,7 @@ ms.locfileid: "69027620"
   
 -   TCP/IP ist für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht aktiviert, oder es wurde ein falscher Server oder eine falsche Portnummer angegeben. Überprüfen Sie, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an dem angegebenen Server und Port mit TCP/IP lauscht. In diesem Fall wird eine ähnliche Ausnahme wie die folgende gemeldet: "Fehler bei der Anmeldung. Es konnte keine TCP/IP-Verbindung zum Host hergestellt werden." die auf einen der folgenden Fehler hinweist:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist installiert, aber TCP/IP wurde nicht mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bzw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Configuration Manager für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher als Netzwerkprotokoll für [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] installiert.  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist installiert, aber TCP/IP wurde nicht mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bzw. [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Configuration Manager für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und höher als Netzwerkprotokoll für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] installiert.  
   
     -   TCP/IP ist als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokoll installiert, lauscht aber nicht an dem in der JDBC-Verbindungs-URL angegebenen Port. Der Standardport ist 1433. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann aber bei der Produktinstallation für das Lauschen an einem beliebigen Port konfiguriert werden. Vergewissern Sie sich, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an Port 1433 lauscht. Sollte der Port geändert worden sein, vergewissern Sie sich, dass der in der JDBC-Verbindungs-URL angegebene Port dem geänderten Port entspricht. Weitere Informationen zu JDBC-Verbindungs-URLs finden Sie unter [Erstellen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md).  
   

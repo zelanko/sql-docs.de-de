@@ -10,16 +10,16 @@ ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73d4a0ee4c5db4059dfe5ceac908b92d41ab8a45
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198237"
 ---
 # <a name="model-methods---report-server-web-service"></a>Modellmethoden – Berichtsserver-Webdienst
   Sie können Modelle mithilfe dieser Methoden verwalten.  
   
-|Methode|Aktion|  
+|Methode|Action|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.GenerateModel%2A>|Generiert auf Grundlage einer freigegebenen Datenquelle ein Standardmodell.|  
 |<xref:ReportService2010.ReportingService2010.GetModelItemPermissions%2A>|Ruft die Benutzerberechtigungen ab, die dem Modellelement zugeordnet sind.|  

@@ -11,10 +11,10 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: d92555fba1d9e0a380ffdc9051817ddfae9ca4b7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72381757"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Universal Data Link (UDL)-Konfiguration
@@ -29,7 +29,7 @@ Geben Sie auf der Registerkarte „Verbindung“ an, wie Sie über den Microsoft
 
 Diese Registerkarte „Verbindung“ ist anbieterspezifisch und zeigt nur die Verbindungseigenschaften an, die für den Microsoft OLE DB-Treiber für SQL Server erforderlich sind.
 
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |---   |---        |
 |Wählen Sie einen Servernamen aus, oder geben Sie ihn ein.|Wählen Sie den Namen eines Servers aus der Dropdownliste, oder geben Sie den Speicherort des Servers ein, auf dem sich die gewünschte Datenbank befindet. Das Auswählen der Datenbank auf dem Server ist eine separate Aktion. Aktualisieren Sie die Liste, indem Sie auf „Aktualisieren“ klicken.
 |Geben Sie Informationen zum Anmelden am Server ein|Sie können in der Dropdownliste die folgenden Authentifizierungsoptionen auswählen: <ul><li>`Windows Authentication:` Authentifizierung gegenüber SQL Server über die Anmeldeinformationen des Windows-Kontos, das aktuell angemeldet ist.</li><li>`SQL Server Authentication:` Authentifizierung über eine Anmelde-ID und ein Kennwort.</li><li>`Active Directory - Integrated:` Integrierte Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus kann auch für die Windows-Authentifizierung gegenüber SQL Server verwendet werden.</li><li>`Active Directory - Password:` Authentifizierung mit Benutzer-ID und Kennwort über eine Azure Active Directory-Identität.</li><li>`Active Directory - Universal with MFA support:` Interaktive Authentifizierung mit einer Azure Active Directory-Identität. Dieser Modus unterstützt die Azure Multi-Factor Authentication (MFA).</li></ul>|
@@ -50,7 +50,7 @@ Auf der Registerkarte „Erweitert“ können zusätzliche Initialisierungseigen
 
 ![Screenshot der OLE DB-Seiten für Datenverbindungen – Registerkarte „Erweitert“](../media/data-link-pages-advanced-tab.png)
 
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |---   |---        |
 | Connect timeout | Gibt den Zeitraum (in Sekunden) an, den der Microsoft OLE DB-Treiber für SQL Server wartet, bis die Initialisierung abgeschlossen wurde. Wenn es bei der Initialisierung zu einem Timeout kommt, wird ein Fehler zurückgegeben, und die Verbindung wird nicht hergestellt.|
 

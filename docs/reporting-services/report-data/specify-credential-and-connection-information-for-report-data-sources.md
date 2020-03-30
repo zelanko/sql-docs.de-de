@@ -28,10 +28,10 @@ ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244563"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen
@@ -147,7 +147,7 @@ ms.locfileid: "75244563"
 ## <a name="user-name-and-password-login"></a>Anmeldung mit Benutzername und Kennwort  
  Wenn Sie **Diesen Benutzernamen und dieses Kennwort verwenden**auswählen, müssen Benutzername und Kennwort für den Zugriff auf die Datenquelle angegeben werden. Bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank sind dies möglicherweise die Anmeldeinformationen für eine Datenbankanmeldung. Die Anmeldeinformationen werden zur Authentifizierung an die Datenquelle übergeben.  
   
-##  <a name="DataSourceConfigurationConnections"></a> Datenquellenkonfiguration und Netzwerkverbindungen  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> Datenquellenkonfiguration und Netzwerkverbindungen  
  Die folgende Tabelle zeigt, wie bei bestimmten Kombinationen von Anmeldeinformationstypen und Datenverarbeitungserweiterungen Verbindungen hergestellt werden. Wenn Sie eine benutzerdefinierte Datenverarbeitungserweiterung verwenden, lesen Sie unter [Angeben von Verbindungen für benutzerdefinierte Datenverarbeitungserweiterungen](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md)nach.  
   
 |**Typ**|**Kontext für Netzwerkverbindung**|**Datenquellentypen**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  

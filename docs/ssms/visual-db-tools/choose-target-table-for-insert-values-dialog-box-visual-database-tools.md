@@ -15,10 +15,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 83d6eb87f7a51a916d2d90e21692e0d7fc899252
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255542"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>Zieltabelle für eingefügte Ergebnisse auswählen (Dialogfeld) (Visual Database Tools)

@@ -11,10 +11,10 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247293"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio-Komponenten und -Konfiguration
@@ -44,14 +44,14 @@ In diesem Abschnitt werden die verschiedenen Fensterkomponenten beschrieben, die
 
     ![Das Menü „Ansicht“](media/ssms-configuration/viewmenu.png)
 
-* **Objekt-Explorer** (F8): Der Objekt-Explorer enthält eine Strukturansicht aller Datenbankobjekte eines Servers. Diese Ansicht enthält die Datenbanken von SQL Server-Datenbank-Engine, SQL Server Analysis Services, SQL Server Reporting Services und SQL Server Integration Services. Der Objekt-Explorer umfasst Informationen zu allen Servern, mit denen eine Verbindung besteht. 
+* **Objekt-Explorer** (F8): Objekt-Explorer enthält eine Strukturansicht aller Datenbankobjekte eines Servers. Diese Ansicht enthält die Datenbanken von SQL Server-Datenbank-Engine, SQL Server Analysis Services, SQL Server Reporting Services und SQL Server Integration Services. Der Objekt-Explorer umfasst Informationen zu allen Servern, mit denen eine Verbindung besteht. 
 
     ![Objekt-Explorer](media/ssms-configuration/objectexplorer.png)
-* **Abfragefenster** (STRG+N): Geben Sie nach dem Auswählen von **Neue Abfrage** Ihre Transact-SQL-Abfragen (T-SQL-Abfragen) in diesem Fenster ein. Die Ergebnisse Ihrer Abfrage werden hier ebenfalls angezeigt.
+* **Abfragefenster** (STRG+N): Geben Sie Ihre Transact-SQL-Abfragen (T-SQL) in dem Fenster ein, das geöffnet wird, wenn Sie auf die Schaltfläche **Neue Abfrage** klicken. Die Ergebnisse Ihrer Abfrage werden hier ebenfalls angezeigt.
 
     ![Fenster „Neue Abfrage“](media/ssms-configuration/newquery.png)
 
-* **Eigenschaften** (F4): Die Ansicht „Eigenschaften“ wird angezeigt, wenn das Abfragefenster geöffnet ist. Die Ansicht zeigt die grundlegenden Eigenschaften der Abfrage an. Es werden beispielsweise der Startzeitpunkt einer Abfrage, die Anzahl zurückgegebener Zeilen und Verbindungsdetails angezeigt.  
+* **Eigenschaften** (F4): Die Ansicht „Eigenschaften“ wird angezeigt, wenn das Abfragefenster geöffnet wurde. Die Ansicht zeigt die grundlegenden Eigenschaften der Abfrage an. Es werden beispielsweise der Startzeitpunkt einer Abfrage, die Anzahl zurückgegebener Zeilen und Verbindungsdetails angezeigt.  
 
     ![Eigenschaften](media/ssms-configuration/properties.png)
 

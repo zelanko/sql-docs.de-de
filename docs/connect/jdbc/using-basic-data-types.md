@@ -11,10 +11,10 @@ ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026514"
 ---
 # <a name="using-basic-data-types"></a>Verwenden von Standarddatentypen
@@ -68,7 +68,7 @@ Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!
   
 (1) Zur Verwendung von java.sql.Time mit dem Zeittyp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf „false“ festlegen.  
   
-(2) Sie können mit der [DateTimeOffset-Klasse](../../connect/jdbc/reference/datetimeoffset-class.md) programmgesteuert auf die Werte von **datetimeoffset** zugreifen.  
+(2) Sie können mit der **DateTimeOffset-Klasse** programmgesteuert auf die Werte von [datetimeoffset](../../connect/jdbc/reference/datetimeoffset-class.md) zugreifen.  
   
 Die folgenden Abschnitte enthalten Beispiele für die Verwendung des JDBC-Treibers und der Standarddatentypen. Ein ausführlicheres Beispiel für die Verwendung der Standarddatentypen in einer Java-Anwendung finden Sie unter [Standarddatentypen – Beispiel](../../connect/jdbc/basic-data-types-sample.md).  
   

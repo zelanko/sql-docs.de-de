@@ -16,10 +16,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257934"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
@@ -31,7 +31,7 @@ ms.locfileid: "75257934"
 
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt, die in *als*Jobs[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bezeichnet werden.  
 
-## <a name="Benefits"></a>Vorteile des SQL Server-Agents 
+## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>Vorteile des SQL Server-Agents 
 
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Auftragsinformationen. Aufträge enthalten mindestens einen Auftragsschritt. Jeder Schritt umfasst einen eigenen Task, z.B. das Sichern einer Datenbank.  
   
@@ -40,7 +40,7 @@ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent kann einen A
 > [!NOTE]  
 > Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst ist standardmäßig deaktiviert, wenn [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert ist, sofern der Benutzer nicht explizit festgelegt hat, dass der Dienst automatisch gestartet werden soll.  
   
-## <a name="Components"></a>Komponenten des SQL Server-Agents  
+## <a name="sql-server-agent-components"></a><a name="Components"></a>Komponenten des SQL Server-Agents  
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet die folgenden Komponenten, um die auszuführenden Aufgaben, den Zeitpunkt der Ausführung und die Meldung erfolgreicher bzw. fehlgeschlagener Aufgaben zu definieren.  
   
 ### <a name="jobs"></a>Jobs  
@@ -114,7 +114,7 @@ Um Operatoren Benachrichtigungen per E-Mail oder Pager zu senden, müssen Sie de
   
 Ein Operator kann auch als Alias für eine Gruppe von Personen definiert werden. In diesem Fall werden alle Mitglieder dieses Alias zur selben Zeit benachrichtigt. Weitere Informationen finden Sie unter [Operatoren](../../ssms/agent/operators.md).  
   
-## <a name="Security"></a>Sicherheit beim Verwalten des SQL Server-Agents  
+## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Sicherheit beim Verwalten des SQL Server-Agents  
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet die festen Datenbankrollen **SQLAgentUserRole**, **SQLAgentReaderRole** und **SQLAgentOperatorRole** in der **msdb**-Datenbank, um den Zugriff auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent für Benutzer zu steuern, die keine Mitglieder der festen Serverrolle **sysadmin** sind. Neben diesen festen Datenbankrollen können Datenbankadministratoren mithilfe von Subsystemen und Proxys sicherstellen, dass jeder Auftragsschritt mit den mindestens erforderlichen Berechtigungen ausgeführt wird.  
   
 ### <a name="roles"></a>Rollen  

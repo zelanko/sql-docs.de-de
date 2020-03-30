@@ -13,10 +13,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243520"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Verwenden von Testbedingungen in SQL Server-Komponententests
@@ -75,7 +75,7 @@ Nicht festgelegte Parameter werden ignoriert. Sie übergeben diese Parameter an 
   
 Ein Beispiel dafür, wie erwartete Ausnahmen und ein negativer SQL Server-Komponententest verwendet werden, finden Sie unter [Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
-## <a name="SpecifyDataChecksum"></a>Angeben einer Datenprüfsumme  
+## <a name="specifying-a-data-checksum"></a><a name="SpecifyDataChecksum"></a>Angeben einer Datenprüfsumme  
 Um den SQL Server-Komponententest-Designer anzuzeigen, doppelklicken Sie im **Projektmappen-Explorer** auf die Quellcodedatei eines Komponententests.  
   
 Nachdem Sie dem Datenbankkomponententest die Testbedingung „Datenprüfsumme“ hinzugefügt haben, müssen Sie die erwartete Prüfsumme mithilfe des folgenden Verfahrens konfigurieren:  
@@ -107,7 +107,7 @@ Nachdem Sie dem Datenbankkomponententest die Testbedingung „Datenprüfsumme“
   
     In der Spalte **Wert** der Testbedingung wird der Wert der erwarteten Prüfsumme angezeigt.  
   
-## <a name="SpecifyExpectedSchema"></a>Angeben eines erwarteten Schemas  
+## <a name="specifying-an-expected-schema"></a><a name="SpecifyExpectedSchema"></a>Angeben eines erwarteten Schemas  
 Nachdem Sie einem SQL Server-Komponententest die Testbedingung „Erwartetes Schema“ hinzugefügt haben, müssen Sie das erwartete Schema mithilfe des folgenden Verfahrens konfigurieren:  
   
 #### <a name="to-specify-an-expected-schema"></a>So geben Sie ein erwartetes Schema an  

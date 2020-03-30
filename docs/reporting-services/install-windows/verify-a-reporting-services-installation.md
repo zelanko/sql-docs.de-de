@@ -15,10 +15,10 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0628f715be90586e851fee55301e8c82032739c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593927"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Überprüfen einer Installation von Reporting Services
@@ -29,7 +29,7 @@ ms.locfileid: "73593927"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
-##  <a name="bkmk_sharepointmode"></a> Überprüfen der SharePoint-Modus-Installation  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> Überprüfen der SharePoint-Modus-Installation  
   
 ### <a name="to-verify-the-reporting-services-service"></a>So überprüfen Sie Reporting Services  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73593927"
 
 ::: moniker-end
   
-##  <a name="bkmk_nativemode"></a> Überprüfen einer Installation im einheitlichen Modus  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a> Überprüfen einer Installation im einheitlichen Modus  
  Wenn Sie einen Berichtsserver im einheitlichen Modus anhand der Standardkonfiguration installieren, wird der Server durch das Setup installiert und bereitgestellt. Um festzustellen, ob der Berichtsserver durch das Setup bereitgestellt wurde, führen Sie einige wenige einfache Tests aus. Um diese Schritte ausführen zu können, müssen Sie ein lokaler Administrator sein. Um weitere Benutzer für das Ausführen der Tests zu aktivieren, konfigurieren Sie für diese Benutzer den Berichtsserverzugriff.  
   
 ### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>So überprüfen Sie, ob der Berichtsserver installiert ist und ausgeführt wird  
@@ -92,7 +92,7 @@ ms.locfileid: "73593927"
   
 4.  Führen Sie Berichte aus, um die Berichtsservervorgänge zu testen. Für diesen Schritt können Sie einen Beispielbericht aus einem Lernprogramm erstellen. Weitere Informationen finden Sie unter [Erstellen eines einfachen Tabellenberichts (SSRS-Tutorial)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
-### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>So überprüfen Sie, ob der [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] installiert ist und ausgeführt wird  
+### <a name="to-verify-that-the-ssrswebportal-is-installed-and-running"></a>So überprüfen Sie, ob der [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] installiert ist und ausgeführt wird  
   
 1.  Öffnen Sie einen Browser, und geben Sie die Webportal-URL in der Adressleiste ein. Die Adresse besteht aus dem Servernamen und dem Namen des virtuellen Verzeichnisses, das Sie beim Setup für den [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] oder im Konfigurations-Manager für Reporting Services auf der Seite „Webportal-URL“ angegeben haben. Standardmäßig ist das virtuelle [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] -Verzeichnis entsprechend **Reports**. Mit der folgenden URL können Sie die [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] -Installation überprüfen:  
   

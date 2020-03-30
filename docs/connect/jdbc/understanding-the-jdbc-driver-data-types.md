@@ -11,10 +11,10 @@ ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8daea8b477be13dd7b267a17ddf5f960868f579
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027274"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Grundlegendes zu den Datentypen des JDBC-Treibers
@@ -29,7 +29,7 @@ Die Themen in diesem Abschnitt beschreiben die Verwendung der grundlegenden und 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-| Thema                                                                                                                                            | Beschreibung                                                                                                                                                                                                                                                          |
+| Thema                                                                                                                                            | BESCHREIBUNG                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Verwenden von Standarddatentypen](../../connect/jdbc/using-basic-data-types.md)                                                                           | Beschreibt die grundlegenden JDBC-Datentypen. Umfasst Beispiele zum Arbeiten mit den Datentypen mithilfe von Resultsets, parametrisierten Abfragen und gespeicherten Prozeduren.                                                                                                        |
 | [Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | Beschreibt die Generierung von Datumsangaben durch den JDBC-Treiber.                                                                                                                                                                                                                       |

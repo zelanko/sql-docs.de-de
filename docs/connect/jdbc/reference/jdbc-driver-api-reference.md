@@ -11,10 +11,10 @@ ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04cbe39698a99fbde43043b70bb9b1f0e5887f58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977001"
 ---
 # <a name="jdbc-driver-api-reference"></a>API-Referenz für den JDBC-Treiber
@@ -71,7 +71,7 @@ Die Dokumentation für die JDBC-Version 6.0 und einige spätere Versionen sind e
 
 ## <a name="interfaces"></a>Schnittstellen  
   
-|Schnittstellenname|Beschreibung|  
+|Schnittstellenname|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |[ISQLServerCallableStatement-Schnittstelle](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|Mit dieser Klasse kann der gespeicherte Prozedurname angegeben werden, der mit Eingabe- und Ausgabeparametern aufgerufen wird.|  
 |[ISQLServerConnection-Schnittstelle](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Stellt eine JDBC-Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank dar.|  
@@ -85,7 +85,7 @@ Die Dokumentation für die JDBC-Version 6.0 und einige spätere Versionen sind e
   
 ## <a name="classes"></a>Klassen  
   
-|Klassenname|Beschreibung|  
+|Klassenname|BESCHREIBUNG|  
 |----------------|-----------------|  
 |[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|Stellt ein Objekt vom Typ "microsoft.sql.DateTimeOffset" dar.|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|Stellt ein BLOB (Binary Large Object) dar.|  

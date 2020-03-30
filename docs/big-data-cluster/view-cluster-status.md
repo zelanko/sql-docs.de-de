@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531589"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Anzeigen des Status eines Big-Data-Clusters 
@@ -22,7 +22,7 @@ ms.locfileid: "73531589"
 
 In diesem Artikel wird beschrieben, wie Sie auf die Dienstendpunkte zugreifen und den Status von Big Data-Clusterkomponenten für SQL Server anzeigen. Sie können sowohl Azure Data Studio als auch **azdata** verwenden. Beide Verfahren werden in diesem Artikel erläutert.
 
-## <a id="datastudio"></a> Verwenden von Azure Data Studio
+## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Verwenden von Azure Data Studio
 
 Nachdem Sie den neuesten **Insider-Build** von [Azure Data Studio](https://aka.ms/getazuredatastudio) heruntergeladen haben, können Sie mithilfe des Dashboards des Big-Data-Clusters für SQL Server Dienstendpunkte sowie den Status eines Big-Data-Clusters anzeigen. Einige der unten aufgeführten Features sind erstmals im Insider-Build von Azure Data Studio verfügbar.
 
@@ -55,7 +55,7 @@ In der Dienstendpunkttabelle werden auch mehrere Dashboards für die Überwachun
 
 Sie können direkt auf diese Links klicken. Sie müssen sich beim Zugriff auf diese Dashboards authentifizieren. Geben Sie für die Dashboards „Metriken“ und „Protokolle“ die Controller-Administratoranmeldeinformationen an, die Sie zum Zeitpunkt der Bereitstellung mithilfe der Umgebungsvariablen **AZDATA_USERNAME** und **AZDATA_PASSWORD** festlegen. Spark-Dashboards verwenden Gateway-Anmeldeinformationen (Knox): entweder AD-Identität in einem Cluster, der in AD oder **Root**-Benutzer integriert ist, und **AZDATA_PASSWORD**, wenn die Standardauthentifizierung in Ihrem Cluster verwendet wird. 
 
-### <a id="notebook"></a> Notebook für den Clusterstatus
+### <a name="cluster-status-notebook"></a><a id="notebook"></a> Notebook für den Clusterstatus
 
 1. Sie können auch den Clusterstatus des Big-Data-Clusters anzeigen, indem Sie das Notebook für den Clusterstatus starten. Klicken Sie auf die Aufgabe **Clusterstatus**, um das Notebook zu starten.
 

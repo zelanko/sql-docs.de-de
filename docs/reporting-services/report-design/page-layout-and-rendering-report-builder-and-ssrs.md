@@ -9,10 +9,10 @@ ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082449"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Seitenlayout und Rendering (Berichts-Generator und SSRS)
@@ -24,7 +24,7 @@ Erfahren Sie mehr über [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md
   
  Die besten Ergebnisse für exportierte Berichte zu erhalten, ist oft ein iterativer Prozess; Sie erstellen und zeigen den Bericht im Berichts-Generator oder Berichts-Designer in der Vorschau an, exportieren den Bericht in das bevorzugte Format, überprüfen den exportierten Bericht und nehmen dann Änderungen am Bericht vor.  
     
-##  <a name="PageLayout"></a> Berichtselemente  
+##  <a name="report-items"></a><a name="PageLayout"></a> Berichtselemente  
  Berichtselemente sind Layoutelemente, die verschiedenen Typen von Berichtsdaten zugeordnet werden. 
  
 * Tabelle, Matrix, Liste, Diagramm und Messgerät sind Datenbereichsberichtselemente, die jeweils mit einem Berichtsdataset verknüpft sind. Wenn der Bericht verarbeitet wird, wird der Datenbereich auf der Berichtsseite zur Seite und nach unten erweitert, um Daten anzuzeigen. 
@@ -44,14 +44,14 @@ Ein Bericht kann auch Unterberichte enthalten.
   
  Ein Bericht kann mehrere Seiten umfassen, wobei Kopf- und Fußzeile auf jeder Seite wiederholt werden. Ein Bericht kann grafische Elemente wie Bilder und Linien sowie eine Reihe von Schriftarten, Farben und Formaten enthalten, die auf Ausdrücken basieren können.  
   
-##  <a name="ReportSections"></a> Berichtsabschnitte  
+##  <a name="report-sections"></a><a name="ReportSections"></a> Berichtsabschnitte  
  Ein Bericht besteht aus drei Hauptabschnitten: einer optionalen *Kopfzeile* , einer optionalen *Fußzeile* und einem Berichtshauptteil. Die Kopf- und die Fußzeile des *Berichts* stellen keine separaten Abschnitte dar, sondern bestehen aus den Berichtselementen, die am Anfang und am Ende des Berichts stehen. Die Kopf- und die Fußzeile wiederholen denselben Inhalt oben und unten auf jeder Seite des Berichts. Sie können Bilder, Textfelder und Linien in Kopf- und Fußzeilen einfügen. Im Hauptteil des Berichts können Sie alle verfügbaren Typen von Berichtselementen einfügen.  
   
  Sie können Eigenschaften für Berichtselemente festlegen, um sie anfänglich auf der Seite auszublenden oder anzuzeigen. Sie können Sichtbarkeitseigenschaften für Zeilen, Spalten oder Gruppen für Datenbereiche erstellen und Umschaltflächen einrichten, über die die Benutzer interaktiv Berichtsdaten anzeigen und ausblenden können. Sie können Sichtbarkeit oder ursprüngliche Sichtbarkeit mit Ausdrücken festlegen, einschließlich Ausdrücke, die auf Berichtsparametern basieren.  
   
  Wenn ein Bericht verarbeitet wird, werden die Berichtsdaten mit den Berichtslayoutelementen kombiniert, und die kombinierten Daten werden an einen Berichtsrenderer gesendet. Der Renderer folgt vordefinierten Regeln für die Berichtselementerweiterung und bestimmt, wie viele Daten auf jede Seite passen. Um einen übersichtlichen Bericht zu entwerfen, der für den Renderer, den Sie verwenden möchten, optimiert ist, müssen Sie die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="RenderingExtensions"></a> Renderer  
+##  <a name="renderers"></a><a name="RenderingExtensions"></a> Renderer  
  Reporting Services schließt einen Satz von Renderern ein, die auch als Renderingerweiterungen bezeichnet werden, mit denen Sie Berichte in andere Formate exportieren können. Es stehen drei Arten von Renderern zur Verfügung:  
   
 -   **Datenrenderer** : Datenrenderer entfernen alle Formatierungs- und Layoutinformationen aus dem Bericht und zeigen nur die Daten an. Die mithilfe dieser Option erstellte Datei kann zum Importieren der Rohberichtsdaten in einen anderen Dateityp verwendet werden, z. B. Excel, eine andere Datenbank, eine XML-Datennachricht oder eine benutzerdefinierte Anwendung. Die verfügbaren Datenrenderer sind: CSV und XML.  
@@ -65,7 +65,7 @@ Ein Bericht kann auch Unterberichte enthalten.
   
  Wenn Sie einen Bericht im Berichts-Generator oder Berichts-Designer in der Vorschau anzeigen oder einen Bericht auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver ausführen, wird der Bericht immer zuerst in HTML gerendert. Nachdem Sie den Bericht ausgeführt haben, können Sie ihn in andere Dateiformate exportieren. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)kennen.  
   
-##  <a name="RenderingBehaviors"></a> Renderingverhalten  
+##  <a name="rendering-behaviors"></a><a name="RenderingBehaviors"></a> Renderingverhalten  
  Abhängig vom Renderer, den Sie auswählen, werden bestimmte Regeln beim Rendern des Berichts angewendet. Wie sich Berichtselemente auf einer Seite zusammenfügen, wird durch die Kombination folgender Faktoren bestimmt:  
   
 -   Renderingregeln.  
@@ -78,7 +78,7 @@ Ein Bericht kann auch Unterberichte enthalten.
   
  Weitere Informationen finden Sie unter [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
    
-##  <a name="Pagination"></a> Paginierung  
+##  <a name="pagination"></a><a name="Pagination"></a> Paginierung  
  Paginierung bezieht sich auf die Anzahl der Seiten in einem Bericht und wie Berichtselemente auf diesen Seiten angeordnet werden. Die Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ändert sich abhängig von der Renderingerweiterung, die Sie zum Anzeigen und Übermitteln des Berichts verwenden, sowie von den Seitenumbruchseinstellungen, die Sie für den Bericht konfiguriert haben.  
   
  Um einen übersichtlichen Bericht für Ihre Benutzer zu entwerfen, der für den Renderer, mit dem Sie den Bericht übermitteln möchten, optimiert ist, müssen Sie die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen. Die Paginierung hat typischerweise keine Auswirkungen auf Berichte, die mit den Erweiterungen für **Datenrenderer** und **Renderer mit weichem Seitenumbruch** exportiert werden. Wenn Sie eine Datenrenderingerweiterung verwenden, wird der Bericht als Tabellenrowset in einem XML- oder CSV-Format gerendert. Um sicherzustellen, dass die exportierten Berichtsdaten verwendet werden können, müssen Sie die Regeln für das Rendering eines vereinfachten Tabellenrowsets verstehen.  
@@ -87,7 +87,7 @@ Ein Bericht kann auch Unterberichte enthalten.
   
  Die**Renderer mit hartem Seitenumbruch** haben die größten Auswirkungen auf das Berichtslayout und die physische Seitengröße. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
    
-##  <a name="HowTo"></a> Themen zur Vorgehensweise  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Themen zur Vorgehensweise  
  In diesem Abschnitt werden Prozeduren aufgelistet, die Ihnen Schritt für Schritt das Arbeiten mit der Paginierung in Berichten erklären.  
   
 -   [Hinzufügen eines Seitenumbruchs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)  
@@ -102,7 +102,7 @@ Ein Bericht kann auch Unterberichte enthalten.
   
 -   [Ausblenden einer Seitenkopf- oder Seitenfußzeile auf der ersten oder letzten Seite &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> In diesem Abschnitt  
  Die folgenden Themen enthalten weitere Informationen zu Seitenlayout und Rendering.  
   
  [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

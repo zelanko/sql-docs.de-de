@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241699"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Vergleichen und Synchronisieren von Daten in einer oder mehreren Tabellen anhand von Daten aus einer Verweisdatenbank
@@ -27,9 +27,9 @@ Sie können Daten in zwei Datenbanken vergleichen, aber keine Datenbankprojekt- 
   
 Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Vorgehensweise: Vergleichen und Synchronisieren von Daten aus zwei Datenbanken](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
+-   [Gewusst wie: Vergleichen und Synchronisieren der Daten von zwei Datenbanken](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
--   [Vorgehensweise: Anzeigen von Datenunterschieden](../ssdt/how-to-view-data-differences.md)  
+-   [Gewusst wie: Anzeigen von Datenunterschieden](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Bei einem Vergleich der Daten in einer Tabelle oder Sicht muss die Tabelle oder Sicht in der Quelldatenbank einige Attribute mit einer Tabelle oder Sicht in der Zieldatenbank gemeinsam haben. Tabellen und Sichten, die die folgenden Kriterien nicht erfüllen, werden nicht verglichen und auch nicht auf der zweiten Seite des Assistenten **Neuer Datenvergleich** angezeigt:  
@@ -49,11 +49,11 @@ Jedes Objekt besitzt einen Schlüssel oder Index, der bestimmt, welchen anderen 
 ## <a name="common-tasks"></a>Allgemeine Aufgaben  
 In diesem Abschnitt werden allgemeine Aufgaben für dieses Szenario beschrieben.  
   
-**Festlegen von Optionen zum Steuern des Datenvergleichs:** Beim Vergleich von Daten können Sie problemlos Identitätsspalten ignorieren sowie Trigger und Fremdschlüssel deaktivieren. Außerdem können Sie Primärschlüssel, Indizes und eindeutige Einschränkungen aus dem Updateskript entfernen.  
+**Festlegen von Optionen zum Steuern des Datenvergleichs**: Beim Vergleich von Daten können Sie problemlos Identitätsspalten ignorieren sowie Trigger und Fremdschlüssel deaktivieren. Außerdem können Sie Primärschlüssel, Indizes und eindeutige Einschränkungen aus dem Updateskript entfernen.  
   
-**Vergleichen Sie Daten in Tabellen, und aktualisieren Sie gegebenenfalls das Ziel, sodass es der Quelle entspricht:** Nachdem Sie eine Quell- und eine Zieldatenbank angegeben und den Vergleich ausgeführt haben, können Sie die Ergebnisse im Fenster **Datenvergleich** anzeigen. Sie können nicht nur Details zu den Unterschieden anzeigen, sondern auch das Updateskript, mit dessen Hilfe Sie die Daten synchronisieren können. Nach Ermittlung der Unterschiede zwischen den beiden Datenbanken können Sie eine Aktion für die einzelnen Unterschiede angeben. So können Sie das Ziel aktualisieren oder das Updateskript in den Transact\-SQL-Editor oder in eine Datei exportieren. Das Exportieren des Skripts kann hilfreich sein, um es vor dem Anwenden der Änderungen zu überprüfen oder von einer anderen Person überprüfen zu lassen.  
+**Vergleichen von Daten in Tabellen und optionales Aktualisieren des Ziels, sodass es der Quelle entspricht**: Nachdem Sie eine Quell- und eine Zieldatenbank angegeben und den Vergleich ausgeführt haben, können Sie die Ergebnisse im Fenster **Datenvergleich** anzeigen. Sie können nicht nur Details zu den Unterschieden anzeigen, sondern auch das Updateskript, mit dessen Hilfe Sie die Daten synchronisieren können. Nach Ermittlung der Unterschiede zwischen den beiden Datenbanken können Sie eine Aktion für die einzelnen Unterschiede angeben. So können Sie das Ziel aktualisieren oder das Updateskript in den Transact\-SQL-Editor oder in eine Datei exportieren. Das Exportieren des Skripts kann hilfreich sein, um es vor dem Anwenden der Änderungen zu überprüfen oder von einer anderen Person überprüfen zu lassen.  
   
-## <a name="UnderstandingDataCompareResults"></a>Grundlegendes zu Vergleichsergebnissen  
+## <a name="understanding-comparison-results"></a><a name="UnderstandingDataCompareResults"></a>Grundlegendes zu Vergleichsergebnissen  
 In der folgenden Tabelle werden die fünf Spalten im Fenster **Datenvergleich** beschrieben.  
   
 |Column|Notizen|  
@@ -69,5 +69,5 @@ Nach dem Klicken auf eine Tabelle oder Sicht im Fenster **Datenvergleich** werde
   
 ## <a name="see-also"></a>Weitere Informationen  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
-[Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   
