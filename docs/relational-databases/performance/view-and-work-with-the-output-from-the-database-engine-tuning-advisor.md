@@ -27,10 +27,10 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165483"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers (DTA)
@@ -39,7 +39,7 @@ ms.locfileid: "74165483"
 
   Wenn der Datenbankoptimierungsratgeber Datenbanken optimiert, erstellt er Zusammenfassungen, Empfehlungen, Berichte und Optimierungsprotokolle. Sie können die Optimierungsprotokollausgabe dazu verwenden, Probleme bei Optimierungssitzungen des Datenbankoptimierungsratgebers zu beheben. Mithilfe der Zusammenfassungen, Empfehlungen und Berichte können Sie bestimmen, ob Sie Optimierungsempfehlungen implementieren oder die Optimierung fortsetzen möchten, bis Sie die Abfrageleistungsverbesserungen erreicht haben, die Sie für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation benötigen. Informationen über die Verwendung des Datenbankoptimierungsratgebers zum Erstellen von Arbeitslasten und zum Optimieren einer Datenbank finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-##  <a name="View"></a> Anzeigen der Optimierungsausgabe  
+##  <a name="view-tuning-output"></a><a name="View"></a> Anzeigen der Optimierungsausgabe  
  Die folgenden Verfahren beschreiben das Anzeigen von Optimierungsempfehlungen, -zusammenfassungen, -berichten und -protokollen mithilfe der grafischen Benutzeroberfläche (GUI, Graphical User Interface) des Datenbankoptimierungsratgebers. Weitere Informationen zu den Benutzeroberflächenoptionen finden Sie später in diesem Thema unter [Benutzeroberflächenbeschreibungen](#UI) .  
   
  Sie können die GUI auch dazu verwenden, die Optimierungsausgabe anzuzeigen, die vom Befehlszeilen-Hilfsprogramm **dta** generiert wird.  
@@ -85,7 +85,7 @@ ms.locfileid: "74165483"
   
      Wenn alle Ereignisse in der Optimierungssitzung vom Datenbankoptimierungsratgeber analysiert wurden, wird eine Meldung angezeigt, die angibt, dass das Optimierungsprotokoll für die Sitzung leer ist. Wenn **Optimierungsprotokoll speichern** auf der Registerkarte **Allgemein** nicht aktiviert wurde, als die Optimierungssitzung ursprünglich ausgeführt wurde, wird dies in einer Meldung angezeigt.  
   
-##  <a name="Implement"></a> Implementieren von Optimierungsempfehlungen  
+##  <a name="implement-tuning-recommendations"></a><a name="Implement"></a> Implementieren von Optimierungsempfehlungen  
  Die Empfehlungen des Datenbankoptimierungsratgebers können manuell oder im Rahmen der Optimierungssitzung automatisch implementiert werden. Wenn Sie die Optimierungsergebnisse vor der Implementierung noch überprüfen möchten, verwenden Sie die GUI des Datenbankoptimierungsratgebers. Anschließend können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, die der Datenbankoptimierungsratgeber als Ergebnis der Analyse einer Arbeitsauslastung ausgibt, manuell auszuführen und die Empfehlungen zu implementieren. Falls Sie die Ergebnisse nicht überprüfen müssen, bevor Sie sie implementieren, können Sie die Option **-a** mit dem Eingabeaufforderungs-Hilfsprogramm **dta** verwenden. Dadurch werden die Optimierungsempfehlungen automatisch vom Hilfsprogramm implementiert, nachdem Ihre Arbeitslast analysiert wurde. Im Rahmen der folgenden Verfahren wird erklärt, wie die beiden Oberflächen des Datenbankoptimierungsratgebers bei der Implementierung der Optimierungsempfehlungen verwendet werden.  
   
 #### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>So implementieren Sie die Optimierungsempfehlungen manuell über die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers  
@@ -120,7 +120,7 @@ ms.locfileid: "74165483"
   
 3.  Drücken Sie die EINGABETASTE.  
   
-##  <a name="Analysis"></a> Ausführen von explorativen Analysen  
+##  <a name="perform-exploratory-analysis"></a><a name="Analysis"></a> Ausführen von explorativen Analysen  
  Die vom Benutzer angegebene Konfigurationsfunktion des Datenbankoptimierungsratgebers ermöglicht es Datenbankadministratoren, explorative Analysen auszuführen. Mithilfe dieser Funktion geben Datenbankadministroren einen gewünschten physischen Datenbankentwurf für den Datenbankoptimierungsratgeber an. Danach können sie die Leistungsauswirkungen dieses Entwurfs bewerten, ohne diesen zu implementieren. Vom Benutzer angegebene Konfigurationen werden sowohl von der grafischen Benutzeroberfläche (GUI) des Datenbankoptimierungsratgebers als auch vom Befehlszeilen-Hilfsprogramm unterstützt. Jedoch stellt das Befehlszeilen-Hilfsprogramm die größte Flexibilität bereit.  
   
  Wenn Sie die GUI des Datenbankoptimierungsratgebers verwenden, können Sie die Auswirkungen der Implementierung einer Untergruppe einer Optimierungsempfehlung des Datenbankoptimierungsratgebers auswerten. Sie können jedoch zum Auswerten mit dem Datenbankoptimierungsratgeber keine hypothetischen physischen Entwurfsstrukturen hinzufügen.  
@@ -184,7 +184,7 @@ ms.locfileid: "74165483"
   
 7.  Wiederholen Sie die Schritte 6 und 7, bis Sie die hypothetische Konfiguration erstellen, mit der die erforderlichen Abfrageleistungsverbesserungen erzielt werden. Dann können Sie die neue Konfiguration implementieren. Weitere Informationen finden Sie unter [Implementieren von Optimierungsempfehlungen](#Implement) weiter oben in diesem Thema.  
   
-##  <a name="ReviewEvaluateClone"></a> Überprüfen, Auswerten und Klonen von Optimierungssitzungen  
+##  <a name="review-evaluate-and-clone-tuning-sessions"></a><a name="ReviewEvaluateClone"></a> Überprüfen, Auswerten und Klonen von Optimierungssitzungen  
  Der Datenbankoptimierungsratgeber erstellt jeweils eine neue Optimierungssitzung, wenn Sie die Auswirkungen einer Arbeitsauslastung auf die Datenbank(en) analysieren. Sie können den **Sitzungsmonitor** der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers dazu verwenden, alle Optimierungssitzungen anzuzeigen und neu zu laden, die für eine bestimmte Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wurden. Dadurch, dass Ihnen alle vorhandenen Optimierungssitzungen zur Verfügung stehen, werden Ihnen die folgenden Operationen erleichtert: Klonen von Sitzungen auf der Grundlage vorhandener Sitzungen, Bearbeiten bestehender Optimierungsempfehlungen und Auswerten der bearbeiteten Sitzungen mit dem Datenbankoptimierungsratgeber sowie Ausführen von Optimierungen in regelmäßigen Abständen zur Überwachung des physischen Entwurfs der Datenbanken. So können Sie Datenbanken beispielsweise einmal im Monat optimieren.  
   
  Bevor Sie die Optimierungssitzungen für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]überprüfen können, müssen Sie durch das Optimieren von Arbeitsauslastungen mit dem Datenbankoptimierungsratgeber Optimierungssitzungen erstellen. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
@@ -242,7 +242,7 @@ ms.locfileid: "74165483"
   
 6.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Analyse starten** , um die Auswirkungen auf die Arbeitsauslastung wie bei jeder anderen Optimierungssitzung zu analysieren. Nachdem der Datenbankoptimierungsratgeber den Vorgang beendet hat, können Sie die Ergebnisse dieser Sitzung wie für jede andere Sitzung anzeigen.  
   
-##  <a name="UI"></a> Benutzeroberflächenbeschreibungen  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> Benutzeroberflächenbeschreibungen  
   
 ### <a name="sessions-monitor"></a>Sitzungsmonitor  
  Der**Sitzungsmonitor** zeigt Informationen zu Sitzungen an, die im Datenbankoptimierungsratgeber geöffnet sind. Wählen Sie einen Sitzungsnamen in **Sitzungsmonitor**aus, um Informationen zur Sitzung im Eigenschaftenfenster anzuzeigen.  

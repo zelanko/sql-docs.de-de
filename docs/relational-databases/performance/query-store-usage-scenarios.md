@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288454"
 ---
 # <a name="query-store-usage-scenarios"></a>Verwendungsszenarien für den Abfragespeicher
@@ -110,7 +110,7 @@ Der Plan verwendet nach der Erstellung des fehlenden Index (plan_id = 15, unten 
   
 Auf der Grundlage der Analyse ist wohl wahrscheinlich, dass Sie den Index beibehalten möchten, da sich die Abfrageleistung verbessert hat.  
   
-## <a name="CEUpgrade"></a> Aufrechterhalten einer stabilen Leistung während des Upgrades auf das neuere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="keep-performance-stability-during-the-upgrade-to-newer-ssnoversion"></a><a name="CEUpgrade"></a> Aufrechterhalten einer stabilen Leistung während des Upgrades auf das neuere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 Vor [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]waren Benutzer dem Risiko einer nachlassenden Leistung während des Upgrades auf die neueste Plattformversion ausgesetzt. Der Grund liegt darin, dass die neueste Version des Abfrageoptimierers sofort aktiviert wurde, sobald neue Teile installiert wurden.  
   
 Seit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sind alle Änderungen des Abfrageoptimierers an den neuesten [Datenbank-Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) gebunden, sodass Pläne nicht sofort im Moment des Upgrades geändert werden, sondern erst, wenn ein Benutzer `COMPATIBILITY_LEVEL` auf die neuste Version aktualisiert. Diese Möglichkeit gibt Ihnen in Kombination mit dem Abfragespeicher ein großes Maß an Kontrolle über die Abfrageleistung im Upgradeprozess. Der empfohlene Upgradeworkflow ist in der folgenden Abbildung dargestellt:  

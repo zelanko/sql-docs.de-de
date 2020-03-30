@@ -11,10 +11,10 @@ ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a3e056e60eeab6dfdb79a448b4fc95bf1c01f50
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298936"
 ---
 # <a name="set-parameter-value-dialog-box"></a>Parameterwert festlegen (Dialogfeld)
@@ -30,7 +30,7 @@ ms.locfileid: "71298936"
   
 -   [Konfigurieren der Optionen](#option)  
   
-##  <a name="open_dialog"></a> Öffnen des Dialogfelds 'Parameterwert festlegen'  
+##  <a name="open-the-set-parameter-value-dialog-box"></a><a name="open_dialog"></a> Öffnen des Dialogfelds 'Parameterwert festlegen'  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server her.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "71298936"
   
 4.  Klicken Sie mit der rechten Maustaste auf ein Paket oder ein Projekt, wählen Sie **Konfigurieren**, und klicken Sie dann auf der Registerkarte **Parameter** oder auf der Registerkarte **Verbindungs-Manager** auf die Schaltfläche mit den Auslassungspunkten.  
   
-##  <a name="option"></a> Konfigurieren der Optionen  
+##  <a name="configure-the-options"></a><a name="option"></a> Konfigurieren der Optionen  
  **Parameter**  
  Listet den Namen des Parameters auf.  
   

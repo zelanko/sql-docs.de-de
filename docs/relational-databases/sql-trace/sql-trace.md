@@ -11,10 +11,10 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68133241"
 ---
 # <a name="sql-trace"></a>SQL-Ablaufverfolgung
@@ -73,7 +73,7 @@ Die folgenden Begriffe beschreiben die Schlüsselkonzepte der SQL-Ablaufverfolgu
 ## <a name="use-data-columns-to-describe-returned-events"></a>Verwenden von Datenspalten zum Beschreiben zurückgegebener Ereignisse  
 Die SQL-Ablaufverfolgung verwendet Datenspalten in der Ablaufverfolgungsausgabe, um Ereignisse zu beschreiben, die beim Ausführen der Ablaufverfolgung zurückgegeben werden. In der folgenden Tabelle werden die Datenspalten von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] beschrieben, die mit den von der SQL-Ablaufverfolgung verwendeten Datenspalten identisch sind. Außerdem wird auf die Spalten verwiesen, die standardmäßig ausgewählt sind.  
   
-|Datenspalte|Spaltennummer|Beschreibung|  
+|Datenspalte|Spaltennummer|BESCHREIBUNG|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName**|10|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem Namen des Programms.|  
 |**BigintData1**|52|Ein Wert (Datentyp**bigint** ), der von der Ereignisklasse abhängt, die in der Ablaufverfolgung angegeben ist.|  

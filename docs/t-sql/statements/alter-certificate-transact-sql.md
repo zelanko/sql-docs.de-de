@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e333a149ca50531be3eb89b8b9d249ea4d5996b9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75871120"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
@@ -87,7 +87,7 @@ ALTER CERTIFICATE certificate_name
  Wird nur ein Dateiname angegeben, wird die Datei in den Standardordner für Benutzerdaten für die Instanz gespeichert. Bei diesem Ordner kann es sich (muss aber nicht) um den Ordner „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA“ handeln. Für SQL Server Express LocalDB entspricht der Standardordner für Benutzerdaten für die Instanz dem von der Umgebungsvariable `%USERPROFILE%` angegebenen Pfad für das Konto, mit dem die Instanz erstellt wurde.  
   
  BINARY = '*private_key_bits*'  
- **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Private Schlüsselbits, die als binäre Konstante angegeben sind. Diese Bits können in verschlüsselter Form vorhanden sein. Bei Verschlüsselung muss der Benutzer ein Entschlüsselungskennwort bereitstellen. Kennwortrichtlinienüberprüfungen werden für dieses Kennwort nicht ausgeführt. Die privaten Schlüsselbits müssen in einem PVK-Dateiformat vorliegen.  
   

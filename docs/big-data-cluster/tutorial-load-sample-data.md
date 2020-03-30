@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831412"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Laden von Beispieldaten in einen Big Data-Cluster für SQL Server
@@ -34,11 +34,11 @@ In diesem Tutorial wird erläutert, wie Sie ein Skript zum Laden von Beispieldat
    - **sqlcmd**
    - **curl**
  
-## <a id="sampledata"></a> Laden von Beispieldaten
+## <a name="load-sample-data"></a><a id="sampledata"></a> Laden von Beispieldaten
 
 In den folgenden Schritten wird ein Bootstrapskript zum Herunterladen einer SQL Server-Datenbanksicherung und zum Laden der Daten in ihren Big Data-Cluster verwendet. Zur einfachen Verwendung wurden diese Schritte in [Windows](#windows)- und [Linux](#linux)-Abschnitte aufgeteilt. Wenn Sie lediglich Benutzername und Kennwort als Authentifizierungsmechanismus verwenden möchten, legen Sie die Umgebungsvariablen AZDATA_USERNAME und AZDATA_PASSWORD fest, bevor Sie das Skript ausführen. Andernfalls stellt das Skript die Verbindung zur SQL Server-Masterinstanz und zum Knox-Gateway mithilfe der integrierten Authentifizierung her. Außerdem muss der jeweilige DNS-Name der Endpunkte angegeben werden, damit die integrierte Authentifizierung verwendet werden kann.
 
-## <a id="windows"></a> Windows
+## <a name="windows"></a><a id="windows"></a> Windows
 
 In den folgenden Schritten wird beschrieben, wie Sie einen Windows-Client verwenden, um die Beispieldaten in ihren Big Data-Cluster zu laden.
 
@@ -61,7 +61,7 @@ In den folgenden Schritten wird beschrieben, wie Sie einen Windows-Client verwen
 
 1. Das Bootstrapskript erfordert die folgenden Positionsparameter für Ihren Big Data-Cluster:
 
-   | Parameter | Beschreibung |
+   | Parameter | BESCHREIBUNG |
    |---|---|
    | <CLUSTER_NAMESPACE> | Der Name, den Sie Ihrem Big Data-Cluster gegeben haben. |
    | <SQL_MASTER_ENDPOINT> | Dieser Parameter steht für den DNS-Namen oder die IP-Adresse Ihrer Masterinstanz. |
@@ -76,7 +76,7 @@ In den folgenden Schritten wird beschrieben, wie Sie einen Windows-Client verwen
    .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
-## <a id="linux"></a> Linux
+## <a name="linux"></a><a id="linux"></a> Linux
 
 In den folgenden Schritten wird beschrieben, wie Sie einen Linux-Client verwenden, um die Beispieldaten in ihren Big Data-Cluster zu laden.
 
@@ -95,7 +95,7 @@ In den folgenden Schritten wird beschrieben, wie Sie einen Linux-Client verwende
 
 1. Das Bootstrapskript erfordert die folgenden Positionsparameter für Ihren Big Data-Cluster:
 
-   | Parameter | Beschreibung |
+   | Parameter | BESCHREIBUNG |
    |---|---|
    | <CLUSTER_NAMESPACE> | Der Name, den Sie Ihrem Big Data-Cluster gegeben haben. |
    | <SQL_MASTER_ENDPOINT> | Dieser Parameter steht für den DNS-Namen oder die IP-Adresse Ihrer Masterinstanz. |

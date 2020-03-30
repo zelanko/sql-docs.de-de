@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094566"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
@@ -84,7 +84,7 @@ ms.locfileid: "74094566"
   
     -   [Ergebnisse (Seite)](#Results)  
   
-###  <a name="Introduction"></a> Seite "Einführung"  
+###  <a name="introduction-page"></a><a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite werden die Schritte für den Assistenten zum Importieren von Datenebenenanwendungen beschrieben.  
   
  **Optionen**  
@@ -95,7 +95,7 @@ ms.locfileid: "74094566"
   
 -   **Abbrechen**: Bricht den Vorgang ab und schließt den Assistenten.  
   
-###  <a name="Import_settings"></a> Importeinstellungen (Seite)  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> Importeinstellungen (Seite)  
  Verwenden Sie diese Seite, um den Speicherort der zu importierenden BACPAC-Datei anzugeben.  
   
 -   **Vom lokalen Datenträger importieren**: Klicken Sie auf **Durchsuchen...** , um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
@@ -106,7 +106,7 @@ ms.locfileid: "74094566"
   
      Um fortzufahren, geben Sie die zu importierende BACPAC-Datei an, und klicken Sie dann auf **Öffnen**.  
   
-###  <a name="Database_settings"></a> Datenbankeinstellungen (Seite)  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> Datenbankeinstellungen (Seite)  
  Auf dieser Seite können Sie Einzelheiten zu der Datenbank angeben, die erstellt wird.  
   
  **Für eine lokale Instanz von SQL Server:**  
@@ -129,15 +129,15 @@ ms.locfileid: "74094566"
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
-###  <a name="Summary"></a> Seite "Zusammenfassung"  
+###  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Verwenden Sie diese Seite, um die angegebene Quelle und die Zieleinstellungen für den Vorgang zu überprüfen. Klicken Sie auf **Fertig stellen**, um den Importvorgang mithilfe der angegebenen Einstellungen abzuschließen. Klicken Sie auf **Abbrechen**, um den Importvorgang abzubrechen und den Assistenten zu beenden.  
   
-###  <a name="Progress"></a> Status (Seite)  
+###  <a name="progress-page"></a><a name="Progress"></a> Status (Seite)  
  Auf dieser Seite wird eine Statusanzeige angezeigt, die den Status des Vorgangs anzeigt. Klicken Sie auf die Option **Details anzeigen** , um ausführliche Informationen anzuzeigen.  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
-###  <a name="Results"></a> Ergebnisse (Seite)  
+###  <a name="results-page"></a><a name="Results"></a> Ergebnisse (Seite)  
  Auf dieser Seite wird angegeben, ob die Vorgänge zum Importieren und Erstellen der Datenbank erfolgreich waren oder ob Fehler bei den einzelnen Aktionen auftraten. Für alle Aktionen, die fehlerhaft waren, ist in der Spalte **Ergebnis** ein Link enthalten. Klicken Sie auf den Link, um einen Bericht des für diese Aktion aufgetretenen Fehlers anzuzeigen.  
   
  Klicken Sie auf **Schließen** , um den Assistenten zu schließen.  

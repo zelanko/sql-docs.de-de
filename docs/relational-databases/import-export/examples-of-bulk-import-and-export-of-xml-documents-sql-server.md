@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401586"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Beispiele für den Massenimport und -export von XML-Dokumenten (SQL Server)
@@ -61,7 +61,7 @@ Weitere Informationen finden Sie in den nachfolgenden Themen.
   
 -  [E. Massenexport von XML-Daten](#bulk_export_xml_data)  
   
-## <a name="binary_byte_stream"></a>Massenimport von XML-Daten als binärer Bytedatenstrom  
+## <a name="bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a>Massenimport von XML-Daten als binärer Bytedatenstrom  
  Geben Sie beim Massenimportieren von XML-Daten aus einer Datei mit einer Codierungsdeklaration, die Sie anwenden möchten, die Option SINGLE_BLOB in der OPENROWSET(BULK...)-Klausel an. Mit der Option SINGLE_BLOB stellen Sie sicher, dass der XML-Parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Daten gemäß dem in der XML-Deklaration angegebenen Codierungsschema importiert.  
   
 #### <a name="sample-table"></a>Beispieltabelle  
@@ -108,7 +108,7 @@ SELECT * FROM OPENROWSET(
   
  [&#91;Nach oben&#93;](#top)  
   
-##  <a name="existing_row"></a> Massenimport von XML-Daten in eine vorhandene Zeile  
+##  <a name="bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> Massenimport von XML-Daten in eine vorhandene Zeile  
  In diesem Beispiel wird der `OPENROWSET` -Massenrowsetanbieter verwendet, um eine XML-Instanz einer vorhandenen Zeile bzw. vorhandenen Zeilen in der Beispieltabelle `T`hinzuzufügen.  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ GO
   
  [&#91;Nach oben&#93;](#top)  
   
-## <a name="file_contains_dtd"></a> Massenimport von XML-Daten aus einer Datei, die eine DTD enthält  
+## <a name="bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> Massenimport von XML-Daten aus einer Datei, die eine DTD enthält  
   
 > [!IMPORTANT]  
 >  Es wird nicht empfohlen, die Unterstützung für DTDs (Document Type Definitions) zu aktivieren, es sei denn, dies ist in Ihrer XML-Umgebung erforderlich. Das Aktivieren der DTD-Unterstützung erhöht die Angriffsfläche Ihres Servers, und kann ihn einem Denial-of-Service-Angriff aussetzen. Wenn Sie die Unterstützung von DTDs aktivieren müssen, können Sie dieses Sicherheitsrisiko reduzieren, indem Sie ausschließlich vertrauenswürdige XML-Dokumente verarbeiten.  
@@ -189,7 +189,7 @@ INSERT T1
   
  [&#91;Nach oben&#93;](#top)  
   
-## <a name="field_terminator_in_format_file"></a> Explizites Angeben des Feldabschlusszeichens mithilfe einer Formatdatei  
+## <a name="specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> Explizites Angeben des Feldabschlusszeichens mithilfe einer Formatdatei  
  Im folgenden Beispiel wird gezeigt, wie das XML-Dokument `Xmltable.dat`per Massenimport importiert wird.  
   
 #### <a name="sample-data-file"></a>Beispieldatendatei  
@@ -252,7 +252,7 @@ GO
   
  [&#91;Nach oben&#93;](#top)  
   
-## <a name="bulk_export_xml_data"></a> Massenexport von XML-Daten  
+## <a name="bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> Massenexport von XML-Daten  
  Im folgenden Beispiel werden XML-Daten mithilfe von [bcp](../../tools/bcp-utility.md) per Massenexport aus der im vorherigen Beispiel erstellten Tabelle exportiert. Dabei wird dieselbe XML-Formatdatei verwendet. Im folgenden `bcp` -Befehl stellen `<server_name>` und `<instance_name>` Platzhalter dar, die durch die entsprechenden Werte ersetzt werden müssen:  
   
 ```cmd

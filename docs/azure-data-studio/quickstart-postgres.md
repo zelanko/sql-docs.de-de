@@ -11,13 +11,13 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71127252"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Herstellen einer Verbindung mit PostgreSQL und Abfragen von Daten mit PostgreSQL mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-postgresql-using-name-sos"></a>Schnellstart: Herstellen einer Verbindung mit PostgreSQL und Abfragen von Daten mit PostgreSQL mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 In dieser Schnellstartanleitung erfahren Sie, wie Sie mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung mit Postgres herstellen und anschließend SQL-Anweisungen verwenden, um die Datenbank *tutorialdb* zu erstellen und abzufragen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -43,7 +43,7 @@ Um diesen Schnellstart abzuschließen, benötigen Sie [!INCLUDE[name-sos](../inc
 
    ![Bildschirm „Neue Verbindung“](media/quickstart-postgresql/new-connection-screen.png)  
 
-   | Einstellung       | Beispielwert | Beschreibung |
+   | Einstellung       | Beispielwert | BESCHREIBUNG |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servername** | localhost | Der vollqualifizierte Servername |
    | **Benutzername** | postgres | Der Benutzername, mit dem Sie sich anmelden möchten. |

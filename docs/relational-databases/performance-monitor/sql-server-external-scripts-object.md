@@ -16,10 +16,10 @@ ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 36093a4cd91943b3db214dcb9cdeb55bda7399c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093500"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, Externes Skript-Objekt
@@ -29,7 +29,7 @@ ms.locfileid: "68093500"
   
  In dieser Tabelle werden die **External Scripts**-Zähler in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschrieben.  
   
-|Leistungsindikatoren für externe SQL Server-Skripts|Beschreibung|  
+|Leistungsindikatoren für externe SQL Server-Skripts|BESCHREIBUNG|  
 |------------------------------------------|-----------------|  
 |**Execution Errors**|Die Anzahl von Fehlern beim Ausführen externer Skripts.|  
 |**Implied Auth. Anmeldungen**|Die Anzahl von Anmeldungen über Satellitenprozesse, die über die implizite Authentifizierung authentifiziert wurden.|  

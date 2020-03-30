@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981707"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER-Klausel (Transact-SQL)
@@ -127,7 +127,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Gibt an, dass die Werte in der angegebenen Spalte in aufsteigender oder absteigender Reihenfolge sortiert werden sollen. ASC ist die Standardsortierreihenfolge. NULL-Werte werden als die niedrigsten Werte behandelt, die möglich sind.  
   
  ROWS | RANGE  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
   
  Grenzt die Zeilen innerhalb der Partition weiter ein, indem Start- und Endpunkte innerhalb der Partition angegeben werden. Dies erfolgt durch die Angabe einer Reihe von Zeilen unter Berücksichtigung der aktuellen Zeile – entweder anhand der logischen oder physischen Zuordnung. Die physische Zuordnung wird erreicht, indem die ROWS-Klausel verwendet wird.  
   
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 >  ROWS oder RANGE erfordert die Angabe der ORDER BY-Klausel. Wenn ORDER BY mehrere Reihenfolgenausdrücke enthält, berücksichtigt CURRENT ROW FOR RANGE beim Ermitteln der aktuellen Zeile alle Spalten in der ORDER BY-Liste.  
   
  UNBOUNDED PRECEDING  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Gibt an, dass das Fenster bei der ersten Zeile der Partition startet. UNBOUNDED PRECEDING kann nur als Fensterstartpunkt angegeben werden.  
   
@@ -145,17 +145,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Wird mit \<unsigned value specification> angegeben, um die Anzahl der Zeilen oder Werte anzugeben, die der aktuellen Zeile vorausgehen sollen. Diese Spezifikation ist für RANGE nicht zulässig.  
   
  CURRENT ROW  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
   
  Gibt an, dass das Fenster bei Verwendung mit ROWS oder auf Basis des aktuellen Werts bei Verwendung mit RANGE bei der aktuellen Zeile startet oder endet. CURRENT ROW kann als Start- und Endpunkt angegeben werden.  
   
  BETWEEN \<window frame bound > AND \<window frame bound >  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
   
  Wird mit ROWS oder RANGE verwendet, um den unteren Grenzpunkt (Startpunkt) oder oberen Grenzpunkt (Endpunkt) des Fensters anzugeben. \<window frame bound> definiert den Startgrenzpunkt, und \<window frame bound> definiert den Endgrenzpunkt. Die Obergrenze kann nicht kleiner als die Untergrenze sein.  
   
  UNBOUNDED FOLLOWING  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
   
  Gibt an, dass das Fenster bei der letzten Zeile der Partition endet. UNBOUNDED FOLLOWING kann nur als Fensterendpunkt angegeben werden. Beispielsweise definiert RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING ein Fenster, das mit der aktuellen Zeile startet und mit der letzten Zeile der Partition endet.  
   
@@ -163,7 +163,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Wird mit \<unsigned value specification> angegeben, um die Anzahl der Zeilen oder Werte anzugeben, die der aktuellen Zeile folgen sollen. Wenn \<unsigned value specification> FOLLOWING als Fensterstartpunkt angegeben ist, muss der Endpunkt \<unsigned value specification>FOLLOWING lauten. Beispielsweise definiert ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING ein Fenster, das mit der zweiten Zeile startet, die der aktuellen Zeile folgt, und mit der zehnten Zeile endet, die der aktuellen Zeile folgt. Diese Spezifikation ist für RANGE nicht zulässig.  
   
  unsigned integer literal  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Ist ein positives ganzzahliges Literal (einschließlich 0), das die Anzahl an Zeilen oder Werten angibt, die der aktuellen Zeile oder dem aktuellen Wert vorausgehen oder folgen. Diese Spezifikation ist nur für ROWS gültig.  
   
@@ -390,7 +390,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ### <a name="d-specifying-the-rows-clause"></a>D: Angeben der ROWS-Klausel  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Im folgenden Beispiel wird die ROWS-Klausel verwendet, um ein Fenster zu definieren, über das die Zeilen als aktuelle Zeile und die *N*-Anzahl an Zeilen, die folgen, berechnet werden (eine Zeile in diesem Beispiel).  
   
@@ -453,7 +453,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-the-over-clause-with-the-row_number-function"></a>E. Verwenden der OVER-Klausel mit der ROW_NUMBER-Funktion  
  Im folgenden Beispiel wird ROW_NUMBER für die Vertriebsmitarbeiter (basierend auf der zugewiesenen Sollvorgabe für den Verkauf) zurückgegeben.  

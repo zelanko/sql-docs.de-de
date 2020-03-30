@@ -18,10 +18,10 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014706"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Überwachen von Verfügbarkeitsgruppen (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "68014706"
 >  Viele dieser Sichten können mithilfe ihre ID-Spalten verknüpft werden, um Informationen aus mehreren Sichten in einer einzelnen Abfrage zurückzugeben.  
   
   
-##  <a name="Permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Katalogsichten erfordern die VIEW ANY DEFINITION-Berechtigung für die Serverinstanz. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Verwaltungssichten erfordern die VIEW SERVER STATE-Berechtigung für den Server.  
   
-##  <a name="AoAgFeatureOnSI"></a> Überwachen der Funktion AlwaysOn-Verfügbarkeitsgruppen auf einer Serverinstanz  
+##  <a name="monitoring-the-always-on-availability-groups-feature-on-a-server-instance"></a><a name="AoAgFeatureOnSI"></a> Überwachen der Funktion AlwaysOn-Verfügbarkeitsgruppen auf einer Serverinstanz  
  Verwenden Sie zum Überwachen der [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Funktion auf einer Serverinstanz folgende integrierte Funktion:  
   
  [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md) -Funktion  
@@ -43,7 +43,7 @@ ms.locfileid: "68014706"
   
  **Spaltennamen:** IsHadrEnabled, HadrManagerStatus  
   
-##  <a name="WSFC"></a> Überwachen von Verfügbarkeitsgruppen auf dem WSFC-Cluster  
+##  <a name="monitoring-availability-groups-on-the-wsfc-cluster"></a><a name="WSFC"></a> Überwachen von Verfügbarkeitsgruppen auf dem WSFC-Cluster  
  Verwenden Sie zum Überwachen des WSFC-Clusters (Windows Server-Failoverclustering), der eine für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]aktivierte lokale Serverinstanz hostet, die folgenden Sichten:  
   
  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "68014706"
   
  Informationen zu WSFC-Cluster und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) und [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
-##  <a name="AvGroups"></a> Überwachen von Verfügbarkeitsgruppen  
+##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a> Überwachen von Verfügbarkeitsgruppen  
  Verwenden Sie zum Überwachen der Verfügbarkeitsgruppen, für die die Serverinstanz ein Verfügbarkeitsreplikat hostet, die folgenden Sichten:  
   
  [sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "68014706"
   
  **Spaltennamen:** group_id, primary_replica, primary_recovery_health, primary_recovery_health_desc, secondary_recovery_health, secondary_recovery_health_desc, synchronization_health, synchronization_health_desc  
   
-##  <a name="AvReplicas"></a> Überwachen von Verfügbarkeitsreplikaten  
+##  <a name="monitoring-availability-replicas"></a><a name="AvReplicas"></a> Überwachen von Verfügbarkeitsreplikaten  
  Verwenden Sie zum Überwachen von Verfügbarkeitsreplikaten die folgenden Sichten und Systemfunktion:  
   
  [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)  
@@ -134,7 +134,7 @@ ms.locfileid: "68014706"
 > [!NOTE]  
 >  Weitere Informationen zu Leistungsindikatoren für Verfügbarkeitsreplikate (das **SQLServer:Verfügbarkeitsreplikat**  -Leistungsobjekt) finden Sie unter [SQL Server, Verfügbarkeitsreplikat](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbs"></a> Überwachen von Verfügbarkeitsdatenbanken  
+##  <a name="monitoring-availability-databases"></a><a name="AvDbs"></a> Überwachen von Verfügbarkeitsdatenbanken  
  Verwenden Sie zum Überwachen von Verfügbarkeitsdatenbanken die folgenden Sichten:  
   
  [sys.availability_databases_cluster](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)  
@@ -171,7 +171,7 @@ ms.locfileid: "68014706"
 > [!NOTE]  
 >  Informationen zu den [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Leistungsindikatoren für Verfügbarkeitsdatenbanken (das **SQLServer:Datenbankreplikat** -Leistungsobjekt) finden Sie unter [SQL Server, Datenbankreplikat](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Verwenden Sie zum Überwachen der Transaktionsprotokollaktivität in Verfügbarkeitsdatenbanken die folgenden Indikatoren des **SQLServer:Datenbanken**-Leistungsobjekts: **Schreibzeit für Protokollleerungen (ms)** , **Protokollleerungen/Sekunde**, **Protokollpool-Cachefehler/Sekunde**, **Protokollpool-Datenträgerlesevorgänge/Sekunde** und **Protokollpoolanforderungen/Sekunde**. Weitere Informationen finden Sie unter [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
-##  <a name="AGlisteners"></a> Überwachen von Verfügbarkeitsgruppenlistenern  
+##  <a name="monitoring-availability-group-listeners"></a><a name="AGlisteners"></a> Überwachen von Verfügbarkeitsgruppenlistenern  
  Zum Überwachen der Verfügbarkeitsgruppenlistener auf Subnetzen des WSFC-Clusters verwenden Sie die folgenden Sichten:  
   
  [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  
@@ -193,7 +193,7 @@ ms.locfileid: "68014706"
   
  Informationen zu Verfügbarkeitsgruppenlistenern finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **Überwachungsaufgaben für AlwaysOn-Verfügbarkeitsgruppen:**  
   
 -   [Verwenden der Details zum Objekt-Explorer zum Überwachen von Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)  

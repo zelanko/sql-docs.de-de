@@ -9,10 +9,10 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041201"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
@@ -26,7 +26,7 @@ Geschätzte Zeit zum Bearbeiten dieses Tutorials: 20 Minuten
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateTable"></a>1. Erstellen eines Berichts mithilfe eines Assistenten  
+## <a name="1-create-a-report-using-a-wizard"></a><a name="CreateTable"></a>1. Erstellen eines Berichts mithilfe eines Assistenten  
 Erstellen eines Tabellenberichts mithilfe des Tabellen- oder Matrixassistenten. Zwei Modi stehen zur Auswahl: Berichtsentwurf und Entwurf von freigegebenen Datasets. Im Berichtsentwurfsmodus legen Sie im Berichtsdatenbereich Daten und auf der Entwurfsoberfläche das Berichtslayout fest. Im Entwurfsmodus für freigegebene Datasets erstellen Sie Datasetabfragen, die für andere Benutzer freigegeben werden. In diesem Lernprogramm verwenden Sie den Berichtsentwurfsmodus.  
   
 ### <a name="to-create-a-report"></a>So erstellen Sie einen Bericht  
@@ -41,7 +41,7 @@ Erstellen eines Tabellenberichts mithilfe des Tabellen- oder Matrixassistenten. 
   
 3.  Wählen Sie im rechten Bereich **Tabellen- oder Matrix-Assistent**.  
   
-## <a name="DataConnection"></a>1a. Angeben einer Datenverbindung im Tabellen-Assistenten  
+## <a name="1a-specify-a-data-connection-in-the-table-wizard"></a><a name="DataConnection"></a>1a. Angeben einer Datenverbindung im Tabellen-Assistenten  
 Eine Datenverbindung enthält die Informationen zum Herstellen einer Verbindung mit einer externen Datenquelle, z. B. einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank. Normalerweise erhalten Sie die Verbindungsinformationen und den zu verwendenden Anmeldeinformationstyp vom Datenquellenbesitzer. Sie können zum Angeben einer Datenverbindung eine freigegebene Datenquelle vom Berichtsserver verwenden oder eine eingebettete Datenquelle erstellen, die nur in diesem Bericht verwendet wird.  
   
 In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Informationen zur Verwendung von freigegebenen Datenquellen finden Sie unter [Alternative Verfahren zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -76,7 +76,7 @@ In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Info
   
 9. Klicken Sie auf **Weiter**.  
   
-## <a name="Query"></a>1b. Erstellen einer Abfrage im Tabellen-Assistenten  
+## <a name="1b-create-a-query-in-the-table-wizard"></a><a name="Query"></a>1b. Erstellen einer Abfrage im Tabellen-Assistenten  
 In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten Abfrage verwenden oder ein eingebettetes Dataset erstellen, das nur in diesem Bericht verwendet wird. In diesem Lernprogramm erstellen Sie ein eingebettetes Dataset.  
   
 > [!NOTE]  
@@ -132,7 +132,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 4.  Klicken Sie auf **Weiter**.  
   
-## <a name="Groups"></a>1c. Gruppieren von Daten im Tabellen-Assistenten  
+## <a name="1c-organize-data-into-groups-in-the-table-wizard"></a><a name="Groups"></a>1c. Gruppieren von Daten im Tabellen-Assistenten  
 Durch das Auswählen von Feldern für die Gruppierung entwerfen Sie eine Tabelle mit Zeilen und Spalten, in denen Detaildaten und aggregierte Daten angezeigt werden.  
   
 ### <a name="to-organize-data-into-groups"></a>So gruppieren Sie Daten  
@@ -159,7 +159,7 @@ Durch das Auswählen von Feldern für die Gruppierung entwerfen Sie eine Tabelle
   
 6.  Klicken Sie auf **Weiter**.  
   
-## <a name="Subtotals"></a>1d. Hinzufügen von Teilergebnis- und Ergebniszeilen im Tabellen-Assistenten  
+## <a name="1d-add-subtotal-and-total-rows-in-the-table-wizard"></a><a name="Subtotals"></a>1d. Hinzufügen von Teilergebnis- und Ergebniszeilen im Tabellen-Assistenten  
 Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatieren, in denen Aggregatwerte für die Felder angezeigt werden. Sie können auswählen, ob alle Daten angezeigt werden oder der Benutzer gruppierte Daten interaktiv erweitern und reduzieren kann.  
   
 ### <a name="to-add-subtotals-and-totals"></a>So fügen Sie Teilergebnisse und Summen hinzu  
@@ -186,7 +186,7 @@ Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatier
   
 Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält 5 Spalten und 5 Zeilen. Der Bereich „Zeilengruppen“ umfasst drei Zeilengruppen: SalesDate, Subcategory und Details. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
-## <a name="FormatCurrency"></a>2. Formatieren von Daten als Währung  
+## <a name="2-format-data-as-currency"></a><a name="FormatCurrency"></a>2. Formatieren von Daten als Währung  
 Die Zusammenfassungsdaten für das Feld "Sales" werden standardmäßig als eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen.   
   
 ### <a name="to-format-a-currency-field"></a>So formatieren Sie ein Währungsfeld  
@@ -203,7 +203,7 @@ Die Zusammenfassungsdaten für das Feld "Sales" werden standardmäßig als eine 
   
 Die Zusammenfassungswerte für "Sales" werden als Währung angezeigt.  
   
-## <a name="FormatDate"></a>3. Formatieren von Daten als Datum  
+## <a name="3-format-data-as-date"></a><a name="FormatDate"></a>3. Formatieren von Daten als Datum  
 Im Feld „SalesDate“ werden standardmäßig sowohl Datum als auch Uhrzeit angezeigt. Durch entsprechende Formatierung kann auch nur das Datum angezeigt werden.  
   
 ### <a name="to-format-a-date-field-as-the-default-format"></a>So formatieren Sie ein Datumsfeld als Standardformat  
@@ -242,7 +242,7 @@ Die "SalesDate"-Werte werden im Standarddatumsformat angezeigt.
   
 Der Wert von „SalesDate“ wird mit dem Namen des Monats anstelle der Zahl für den Monat angezeigt.  
   
-## <a name="Width"></a>4. Ändern der Spaltenbreite  
+## <a name="4-change-column-widths"></a><a name="Width"></a>4. Ändern der Spaltenbreite  
 Standardmäßig enthält jede Zelle in einer Tabelle ein Textfeld. Textfelder werden beim Rendern der Seite entsprechend dem anzuzeigenden Text vertikal erweitert. Im gerenderten Bericht werden alle Zeilen auf die Höhe des größten gerenderten Textfelds in der Zeile vergrößert. Die Höhe der Zeile auf der Entwurfsoberfläche hat keinen Einfluss auf die Höhe der Zeile im gerenderten Bericht.  
   
 Um die Höhe der Zeilen zu reduzieren, vergrößern Sie die Spaltenbreite, sodass der erwartete Inhalt der Textfelder in der Spalte in einer Zeile untergebracht werden kann.  
@@ -259,7 +259,7 @@ Um die Höhe der Zeilen zu reduzieren, vergrößern Sie die Spaltenbreite, sodas
   
 4.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
-## <a name="Title"></a>5. Hinzufügen eines Berichtstitels  
+## <a name="5-add-a-report-title"></a><a name="Title"></a>5. Hinzufügen eines Berichtstitels  
 Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel in eine Berichtskopfzeile einfügen oder, wenn der Bericht keine Kopfzeile enthält, in einem Textfeld am oberen Rand des Berichtshauptteils. In diesem Lernprogramm verwenden Sie das Textfeld, das automatisch am oberen Rand des Berichtshauptteils platziert wird.  
   
 Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftschnitte, Größen und Farben für Ausdrücke und einzelne Zeichen des Texts angewendet werden. Weitere Informationen finden Sie unter [Formatieren von Text in einem Textfeld (Berichts-Generator und SSRS)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -282,7 +282,7 @@ Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftsch
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>6. Speichern des Berichts  
+## <a name="6-save-the-report"></a><a name="Save"></a>6. Speichern des Berichts  
 Speichern Sie den Bericht auf einem Berichtsserver oder auf Ihrem Computer. Wenn Sie den Bericht nicht auf dem Berichtsserver speichern, ist eine Reihe von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen nicht verfügbar, z. B. Berichtsteile und Unterberichte.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver  
@@ -311,7 +311,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
   
 4.  Klicken Sie auf **Speichern**.  
   
-## <a name="Export"></a>7. Exportieren des Berichts  
+## <a name="7-export-the-report"></a><a name="Export"></a>7. Exportieren des Berichts  
 Berichte können in verschiedene Formate exportiert werden, z.B. Microsoft Excel- und CSV-Dateien. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)kennen.  
   
 In diesem Lernprogramm exportieren Sie den Bericht nach Excel, und Sie legen eine Eigenschaft für den Bericht fest, um einen benutzerdefinierten Namen für das Arbeitsmappenregister anzugeben.  

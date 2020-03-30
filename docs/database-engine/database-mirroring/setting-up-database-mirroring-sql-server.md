@@ -13,10 +13,10 @@ ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 43c964db4c0231d15101f58b7af088bc239fe152
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048089"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Einrichten der Datenbankspiegelung (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "68048089"
 >  Es empfiehlt sich, die Konfiguration der Datenbankspiegelung außerhalb der Spitzenbetriebszeiten durchzuführen, da sich die Konfiguration auf die Leistung auswirken kann.  
   
   
-##  <a name="PrepareInstances"></a> Vorbereiten einer Serverinstanz zum Hosten eines Spiegelservers  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> Vorbereiten einer Serverinstanz zum Hosten eines Spiegelservers  
  Für jede Datenbank-Spiegelungssitzung gilt:  
   
 1.  Prinzipalserver, Spiegelserver und Zeuge müssen ggf. von separaten Serverinstanzen gehostet werden, die auf getrennten Hostsystemen ausgeführt werden. Jede der Serverinstanzen erfordert einen Datenbankspiegelungs-Endpunkt. Wenn Sie einen Datenbankspiegelungs-Endpunkt erstellen müssen, stellen Sie sicher, dass die anderen Serverinstanzen darauf zugreifen können.  
@@ -48,7 +48,7 @@ ms.locfileid: "68048089"
   
 3.  Legen Sie auf der Serverinstanz, auf der die Spiegeldatenbank gehostet wird, die übrigen Umgebungseinstellungen fest, die für die gespiegelte Datenbank erforderlich sind. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="EstablishUsingWinAuthentication"></a> Übersicht: Einrichten einer Datenbank-Spiegelungssitzung  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> Übersicht: Einrichten einer Datenbank-Spiegelungssitzung  
  Die grundlegenden Schritte zum Einrichten einer Spiegelungssitzung lauten wie folgt:  
   
 1.  Erstellen Sie die Spiegeldatenbank, indem Sie die folgenden Sicherungen mithilfe von RESTORE WITH NORECOVERY für jeden Wiederherstellungsvorgang wiederherstellen:  
@@ -98,7 +98,7 @@ ms.locfileid: "68048089"
 >  Ein Beispiel für die Verwendung von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten einer Datenbank-Spiegelungssitzung mithilfe der zertifikatbasierten Sicherheit finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
   
-##  <a name="InThisSection"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> In diesem Abschnitt  
  [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
  Fasst die Schritte zum Erstellen einer Spiegeldatenbank oder zum Vorbereiten einer Spiegeldatenbank vor dem Fortsetzen einer angehaltenen Sitzung zusammen. Darüber hinaus werden Links zu Themen zur Vorgehensweise bereitgestellt.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68048089"
  [Einrichten von Anmeldekonten für die Datenbankspiegelung oder Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
  Beschreibt, wie eine Anmeldung für eine Remoteserverinstanz erstellt wird, die ein anderes Konto als die lokale Serverinstanz verwendet.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **SQL Server Management Studio**  
   
 -   [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

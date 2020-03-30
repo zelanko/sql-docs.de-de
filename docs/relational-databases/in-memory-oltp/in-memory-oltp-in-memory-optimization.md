@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401651"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>In-Memory-OLTP und Arbeitsspeicheroptimierung
@@ -47,7 +47,7 @@ Eine detailliertere Übersicht über In-Memory-OLTP und die Szenarien, in denen 
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Dieser Abschnitt enthält die folgenden Themen:  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Tauchen Sie direkt in In-Memory-OLTP ein.|
 |[Übersicht und Verwendungsszenarien](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Übersicht über die Aufgaben von In-Memory-OLTP und die Szenarien, die hinsichtlich Leistung davon profitieren.|
@@ -84,7 +84,7 @@ Dieser Abschnitt enthält Links zu anderen Websites, die Informationen zu In-Mem
   
 -   [In-Memory-OLTP-Blog](https://go.microsoft.com/fwlink/?LinkId=311696)  
 
-## <a name="anchorname-17minute-video"></a>17-minütiges Video, indiziert
+## <a name="17-minute-video-indexed"></a><a name="anchorname-17minute-video"></a>17-minütiges Video, indiziert
 
 - _Videotitel:_ &nbsp; **In-Memory-OLTP in SQL Server 2016**
 - _Veröffentlichungsdatum:_ &nbsp; 10.03.2019, auf `YouTube.com`.
@@ -103,7 +103,7 @@ Die folgenden allgemeinen Schritte sind im Video zu sehen:
 2. Als nächstes sehen wir eine speicheroptimierte Version der Tabelle, die mit wenigen Mausklicks erstellt und in SQL Server Management Studio („SSMS. exe“) mit Daten aufgefüllt wird.
 3. Anschließend wird die Demo mit der speicheroptimierten Tabelle erneut ausgeführt. Es wird eine enorme Geschwindigkeitsverbesserung gemessen.
 
-### <a name="anchorname-index-17minute-video"></a>Index für jeden Abschnitt im Video
+### <a name="index-to-each-section-in-the-video"></a><a name="anchorname-index-17minute-video"></a>Index für jeden Abschnitt im Video
 
 | Link zu Zeitmarken | Titel des Abschnitts |
 | :------------- | :------------ |

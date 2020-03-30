@@ -13,10 +13,10 @@ ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72305072"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ausführen von Paketen in SSIS Scale Out (SQL Server Integration Services)
@@ -32,17 +32,17 @@ Nachdem Sie Pakete auf dem Integration Services-Server bereitgestellt haben, kö
 
 -   [Aufträge des SQL Server-Agents](#sql_agent)
 
-## <a name="scale_out_dialog"></a> Ausführen von Paketen über das Dialogfeld „Paket in Scale Out ausführen“
+## <a name="run-packages-with-the-execute-package-in-scale-out-dialog-box"></a><a name="scale_out_dialog"></a> Ausführen von Paketen über das Dialogfeld „Paket in Scale Out ausführen“
 
 1. Öffnen Sie das Dialogfeld „Paket in Scale Out ausführen“.
 
-    Stellen Sie in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Integration Services-Server her. Erweitern Sie im Objekt-Explorer die Struktur, um die Knoten unter **Integration Services-Kataloge**anzuzeigen. Klicken Sie mit der rechten Maustaste auf den **SSISDB** -Knoten oder auf das Projekt oder Paket, das Sie ausführen möchten, und klicken Sie dann auf **In horizontaler Hochskalierung ausführen**.
+    Stellen Sie in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Integration Services-Server her. Erweitern Sie im Objekt-Explorer die Struktur, um die Knoten unter **Integration Services-Kataloge**anzuzeigen. Klicken Sie mit der rechten Maustaste auf den **SSISDB**-Knoten oder auf das Projekt oder Paket, das Sie ausführen möchten, und klicken Sie dann auf **In Scale Out ausführen**.
 
 2. Wählen Sie Pakete aus, und legen Sie die Optionen fest.
 
     Wählen Sie auf der Seite **Paketauswahl** mindestens ein Paket aus, das ausgeführt werden soll. Legen Sie für jedes Paket die Umgebung, Parameter, Verbindungs-Manager und erweiterte Optionen fest. Klicken Sie auf ein Paket, um diese Optionen festzulegen.
     
-    Legen Sie auf der Registerkarte **Erweitert** die Scale Out-Option **Wiederholungsanzahl** fest, um zu bestimmen, wie oft versucht werden soll, ein Paket auszuführen, wenn ein Fehler auftritt.
+    Legen Sie auf der Registerkarte **Erweitert** die Aufskalierungsoption **Wiederholungsanzahl** fest, um zu bestimmen, wie oft versucht werden soll, ein Paket auszuführen, wenn ein Fehler auftritt.
 
     > [!NOTE]
     > Die Option **Bei Fehler Abbild sichern** funktioniert nur, wenn das Konto, unter dem der Scale Out-Workerdienst ausgeführt wird, einem Administrator auf dem lokalen Computer zugeordnet ist.
@@ -61,7 +61,7 @@ Nachdem Sie Pakete auf dem Integration Services-Server bereitgestellt haben, kö
 
     Klicken Sie auf **OK** , um die Paketausführungen zu starten. Um den Ausführungsbericht für ein Paket anzuzeigen, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf das Paket, klicken Sie auf **Berichte**, klicken Sie auf **Alle Ausführungen**, und suchen Sie nach der Ausführung.
     
-## <a name="stored_proc"></a> Ausführen von Paketen mit gespeicherten Prozeduren
+## <a name="run-packages-with-stored-procedures"></a><a name="stored_proc"></a> Ausführen von Paketen mit gespeicherten Prozeduren
 
 1.  Erstellen Sie Ausführungen.
 
@@ -124,7 +124,7 @@ Nachdem Sie diesen Standardausführungsmodus festgelegt haben, müssen Sie den *
 
 Um den Standardausführungsmodus wieder auf den Modus ohne Scale Out zurückzusetzen, damit die Pakete nicht mehr standardmäßig im Scale Out-Modus ausgeführt werden, legen Sie den **serverweiten Standardausführungsmodus** auf **Server** fest.
 
-## <a name="sql_agent"></a> Ausführen eines Pakets in einem SQL Server-Agent-Auftrag
+## <a name="run-package-in-sql-server-agent-job"></a><a name="sql_agent"></a> Ausführen eines Pakets in einem SQL Server-Agent-Auftrag
 In einem SQL Server-Agent-Auftrag können Sie im Rahmen des Auftrags ein SSIS-Paket ausführen. Legen Sie den Standardausführungsmodus auf **Scale Out** fest, um das Paket in Scale Out auszuführen. Nachdem der Standardausführungsmodus auf **Scale Out** festgelegt wurde, werden Pakete in SQL-Agent-Aufträgen in Scale Out ausgeführt.
 
 ## <a name="next-steps"></a>Nächste Schritte

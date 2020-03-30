@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727588"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installieren von R- und Python-Komponenten für SQL Server für maschinelles Lernen über die Befehlszeile
@@ -48,7 +48,7 @@ Das Argument FEATURES ist ebenso erforderlich wie Lizenzbedingungen.
 Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des /Q-Parameters den vollständigen stillen Modus oder mithilfe des /QS-Parameters den einfachen stillen Modus. Mithilfe des /QS-Schalters wird nur der Fortschritt angezeigt, es sind jedoch keine Eingaben möglich. Außerdem werden beim Auftreten von Fehlern keine Fehlermeldungen angezeigt. Der /QS-Parameter wird nur unterstützt, wenn /Action=install angegeben wurde.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-| Argumente | Beschreibung |
+| Argumente | BESCHREIBUNG |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installiert die datenbankinterne Version: SQL Server R Services (datenbankintern).  |
 | /FEATURES = SQL_SHARED_MR | Installiert das R-Feature für die eigenständige Version: SQL Server R Server (eigenständig). Ein eigenständiger Server ist ein „freigegebenes Feature“, das nicht an eine Datenbank-Engine-Instanz gekoppelt ist.|
@@ -59,7 +59,7 @@ Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNo
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-| Argumente | Beschreibung |
+| Argumente | BESCHREIBUNG |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installiert die datenbankinterne Version: SQL Server Machine Learning Services (datenbankintern).  |
 | /FEATURES = SQL_INST_MR | Koppeln Sie dieses Argument mit AdvancedAnalytics. Installiert das (datenbankinterne) R-Feature, einschließlich Microsoft R Open und der proprietären R-Pakete. |
@@ -74,7 +74,7 @@ Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNo
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-| Argumente | Beschreibung |
+| Argumente | BESCHREIBUNG |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installiert die datenbankinterne Version: SQL Server Machine Learning Services (datenbankintern).  |
 | /FEATURES = SQL_INST_MR | Koppeln Sie dieses Argument mit AdvancedAnalytics. Installiert das (datenbankinterne) R-Feature, einschließlich Microsoft R Open und der proprietären R-Pakete. |
@@ -89,7 +89,7 @@ Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNo
 | MPYCACHEDIRECTORY | Für die zukünftige Verwendung reserviert. Verwenden Sie %TEMP%, um die CAB-Dateien für die Python-Komponente zur Installation auf Computern zu speichern, die nicht über eine Internetverbindung verfügen. |
 ::: moniker-end
 
-## <a name="indb"></a> Installation von datenbankinternen Instanzen
+## <a name="in-database-instance-installations"></a><a name="indb"></a> Installation von datenbankinternen Instanzen
 
 Datenbankinterne Analysen sind für Datenbank-Engine-Instanzen verfügbar, um das **AdvancedAnalytics**-Feature hinzufügen zu können. Sie können eine Datenbank-Engine-Instanz mit Advanced Analytics installieren oder das Feature [zu einer vorhandenen Instanz hinzufügen](#add-existing). 
 
@@ -138,7 +138,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a> Konfiguration nach der Installation (erforderlich)
+## <a name="post-install-configuration-required"></a><a name="post-install"></a> Konfiguration nach der Installation (erforderlich)
 
 Gilt nur für datenbankinterne Installationen.
 
@@ -159,7 +159,7 @@ Zum Abschließen der Installation müssen zwei weitere Aufgaben ausgeführt werd
 1. SQL Server R Services: Aktivieren Sie externe Skripts, um dieses Feature verwenden zu können. Führen Sie als Nächstes die Anweisungen unter [Installieren von SQL Server R Services (datenbankintern)](sql-r-services-windows-install.md) aus. 
 ::: moniker-end
 
-## <a name="add-existing"></a> Hinzufügen von Advanced Analytics zu einer vorhandenen Datenbank-Engine-Instanz
+## <a name="add-advanced-analytics-to-an-existing-database-engine-instance"></a><a name="add-existing"></a> Hinzufügen von Advanced Analytics zu einer vorhandenen Datenbank-Engine-Instanz
 
 Wenn Sie einer vorhandenen Datenbank-Engine-Instanz datenbankinterne Advanced Analytics-Funktionen hinzufügen, geben Sie den Instanznamen an. Wenn Sie z. B. zuvor eine Datenbank-Engine für SQL Server 2017 oder höher und Python installiert haben, können Sie diesen Befehl verwenden, um R hinzuzufügen.
 
@@ -168,7 +168,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
 
-## <a name="silent"></a> Automatische Installation
+## <a name="silent-install"></a><a name="silent"></a> Automatische Installation
 
 Eine automatische Installation unterdrückt die Suche nach Speicherorten von CAB-Dateien. Aus diesem Grund müssen Sie den Speicherort angeben, an dem CAB-Dateien entpackt werden sollen. Für Python müssen sich CAB-Dateien im Ordner *%TEMP%* befinden. Bei R können Sie den Ordnerpfad im entsprechenden temporären Verzeichnis festlegen.
  
@@ -179,7 +179,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /MRCACHEDIRECTORY=%temp% 
 ```
 
-## <a name="shared-feature"></a> Eigenständige Serverinstallationen
+## <a name="standalone-server-installations"></a><a name="shared-feature"></a> Eigenständige Serverinstallationen
 
 Ein eigenständiger Server ist ein „freigegebenes Feature“, das nicht an eine Datenbank-Engine-Instanz gekoppelt ist. Das folgende Beispiel zeigt eine gültige Syntax für die Installation des eigenständigen Servers.
 

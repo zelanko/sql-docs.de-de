@@ -16,10 +16,10 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f68227bb3f88996ee8a4f5ea60c9cdd88f4f765a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095402"
 ---
 # <a name="work-with-change-data-sql-server"></a>Arbeiten mit Änderungsdaten (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "74095402"
   
  Zur Unterstützung bei der Ermittlung der geeigneten LSN-Werte für die Abfrage einer TVF stehen mehrere Funktionen zur Verfügung. Die Funktion [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) gibt die kleinste LSN des Gültigkeitsintervalls einer Aufzeichnungsinstanz zurück. Beim Gültigkeitsintervall handelt es sich um das Zeitintervall, in dem Änderungsdaten aktuell für Aufzeichnungsinstanzen verfügbar sind. Die Funktion [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) gibt die größte LSN im Gültigkeitsintervall zurück. Mit den Funktionen [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) und [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) können LSN-Werte auf einer konventionellen Zeitachse dargestellt werden. Da Change Data Capture geschlossene Abfrageintervalle verwendet, ist es in einigen Fällen erforderlich, den nächsten LSN-Wert in einer Folge zu generieren, um sicherzustellen, dass Änderungen in aufeinander folgenden Abfragefenstern nicht doppelt vorkommen. Die Funktionen [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) und [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) sind nützlich, wenn ein LSN-Wert inkrementell angepasst werden soll.  
   
-##  <a name="LSN"></a> Überprüfen von LSN-Grenzwerten  
+##  <a name="validating-lsn-boundaries"></a><a name="LSN"></a> Überprüfen von LSN-Grenzwerten  
  Es wird empfohlen, die LSN-Grenzwerte zu überprüfen, bevor sie in einer TVF-Abfrage verwendet werden. Bei NULL-Endpunkten oder Endpunkten, die außerhalb des Gültigkeitsintervalls einer Aufzeichnungsinstanz liegen, gibt eine Change Data Capture-TVF einen Fehler zurück.  
   
  Beispielsweise wird der folgende Fehler für alle Änderungen einer Abfrage zurückgegeben, wenn ein das Abfrageintervall definierender Parameter ungültig ist, außerhalb des gültigen Bereichs liegt oder die Zeilenfilteroption ungültig ist.  
@@ -63,7 +63,7 @@ ms.locfileid: "74095402"
 > [!NOTE]  
 >  Um Change Data Capture-Vorlagen in SQL Server Management Studio aufzurufen, öffnen Sie das Menü **Ansicht** , klicken Sie auf **Vorlagen-Explorer**, erweitern Sie **SQL Server-Vorlagen** , und erweitern Sie anschließend den Ordner **Change Data Capture** .  
   
-##  <a name="Functions"></a> Abfragefunktionen  
+##  <a name="query-functions"></a><a name="Functions"></a> Abfragefunktionen  
  Abhängig von den Eigenschaften der nachverfolgten Quelltabelle und der Konfiguration der Aufzeichnungsinstanz werden entweder eine oder zwei TVFs für die Abfrage von Änderungsdaten generiert.  
   
 -   Die Funktion [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) gibt alle Änderungen zurück, die für das angegebene Intervall aufgetreten sind. Diese Funktion wird immer generiert. Die zurückgegebenen Einträge werden immer sortiert, zunächst nach der LSN des Transaktionscommits der Änderung und dann nach einem Wert, mit dem innerhalb der Transaktion eine Reihenfolge für die Änderung festgelegt wird. Abhängig von der gewählten Zeilenfilteroption werden bei Updates die Endzeile (Zeilenfilteroption "all") oder der neue und der alte Wert (Zeilenfilteroption "all update old") zurückgegeben.  
@@ -77,7 +77,7 @@ ms.locfileid: "74095402"
   
  Die von einer Abfragefunktion zurückgegebene Updatemaske ist eine kompakte Darstellung aller mit einer Zeile der Änderungsdaten verbundenen Spaltenänderungen. In der Regel werden diese Informationen nur für eine kleine Teilmenge der aufgezeichneten Spalten benötigt. Es stehen Funktionen zur Verfügung, die helfen, Informationen aus der Maske in einer Form zu extrahieren, die direkt von Anwendungen verwendet werden kann. Die Funktion [sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) gibt die Ordnungsposition einer benannten Spalte für eine gegebene Aufzeichnungsinstanz zurück, während die Funktion [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) die Parität des Bits in der angegebenen Maske zurückgibt, basierend auf der Ordnungsposition, die im Funktionsaufruf übergeben wurde. Zusammen ermöglichen diese Funktionen, Informationen effizient aus der Updatemaske zu extrahieren und sie mit der Anforderung von Änderungsdaten zurückzugeben. Die Verwendung dieser Funktionen wird in der Vorlage "Enumerate Net Changes Using All With Mask" veranschaulicht.  
   
-##  <a name="Scenarios"></a> Szenarios für Abfragefunktionen  
+##  <a name="query-function-scenarios"></a><a name="Scenarios"></a> Szenarios für Abfragefunktionen  
  In den folgenden Abschnitten werden häufige Szenarios für die Abfrage von Change Data Capture-Daten beschrieben, die die Verwendung der Abfragefunktionen "cdc.fn_cdc_get_all_changes_<capture_instance>" und "cdc.fn_cdc_get_net_changes_<capture_instance>" erläutern.  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>Abfragen aller Änderungen im Gültigkeitsintervall der Aufzeichnungsinstanz  

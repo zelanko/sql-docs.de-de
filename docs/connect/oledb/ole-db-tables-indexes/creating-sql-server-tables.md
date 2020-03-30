@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 57c561ed4086221a956c12804f4d90893dc6d2a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994058"
 ---
 # <a name="creating-sql-server-tables"></a>Erstellen von SQL Server-Tabellen
@@ -54,7 +54,7 @@ ms.locfileid: "67994058"
   
  Spalteneigenschaften in DBCOLUMNDESC werden wie folgt interpretiert.  
   
-|Eigenschafts-ID|Beschreibung|  
+|Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |DBPROP_COL_AUTOINCREMENT|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE, Beschreibung: Legt die Identitätseigenschaft für die erstellte Spalte fest. Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist die IDENTITY-Eigenschaft für eine einzelne Spalte innerhalb einer Tabelle gültig. Wenn Sie die Eigenschaft für mehrere Spalten auf VARIANT_TRUE festlegen, wird ein Fehler gemeldet, wenn der OLE DB-Treiber für SQL Server versucht, die Tabelle auf dem Server zu erstellen.<br /><br /> Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Identitätseigenschaft ist nur für **integer**-, **numeric**- und **decimal**-Typen gültig wenn der Dezimalstellenwert 0 (null) ist. Wenn Sie die Eigenschaft für eine Spalte eines anderen Datentyps auf VARIANT_TRUE festlegen, wird ein Fehler gemeldet, wenn der OLE DB-Treiber für SQL Server versucht, die Tabelle auf dem Server zu erstellen.<br /><br /> Der OLE DB-Treiber für SQL Server gibt DB_S_ERRORSOCCURRED zurück, wenn sowohl DBPROP_COL_AUTOINCREMENT als auch DBPROP_COL_NULLABLE den Wert VARIANT_TRUE haben und *dwOption* von DBPROP_COL_NULLABLE nicht DBPROPOPTIONS_REQUIRED ist. DB_E_ERRORSOCCURRED wird zurückgegeben, wenn sowohl DBPROP_COL_AUTOINCREMENT als auch DBPROP_COL_NULLABLE den Wert VARIANT_TRUE haben und *dwOption* von DBPROP_COL_NULLABLE gleich DBPROPOPTIONS_REQUIRED ist. Die Spalte wird mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Identitätseigenschaft definiert, und das DBPROP_COL_NULLABLE *dwStatus*-Element wird auf DBPROPSTATUS_CONFLICTING festgelegt.|  
 |DBPROP_COL_DEFAULT|R/W: Lesen/Schreiben<br /><br /> Standardwert: Keine<br /><br /> Beschreibung: Erstellt eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DEFAULT-Einschränkung für die Spalte.<br /><br /> Das *vValue* DBPROP-Element kann verschiedenen Typen entsprechen. Das *vValue.vt*-Element sollte einen Typ angeben, der mit dem Datentyp der Spalte kompatibel ist. Beispielsweise ist BSTR N/A als Standardwert für eine Spalte geeignet, die als DBTYPE_WSTR definiert ist. Wenn Sie denselben Standard für eine Spalte festlegen, die als DBTYPE_R8 definiert ist, wird ein Fehler gemeldet, wenn der OLE DB-Treiber für SQL Server versucht, die Tabelle auf dem Server zu erstellen.|  
@@ -66,7 +66,7 @@ ms.locfileid: "67994058"
   
  Wenn der Consumer **ITableDefinition::CreateTable** aufruft, interpretiert der OLE DB Treiber für SQL Server Tabelleneigenschaften wie folgt.  
   
-|Eigenschafts-ID|Beschreibung|  
+|Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |DBPROP_TBL_TEMPTABLE|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE, Beschreibung: Standardmäßig erstellt der OLE DB-Treiber für SQL Server Tabellen, die durch den Consumer benannt sind. Bei Festlegung auf VARIANT_TRUE generiert der OLE DB-Treiber für SQL Server einen temporären Tabellennamen für den Consumer. Der Consumer legt den *pTableID*-Parameter von **CreateTable** auf NULL fest. Der *ppTableID*-Parameter muss einen gültigen Zeiger enthalten.|  
   

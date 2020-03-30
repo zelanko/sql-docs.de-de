@@ -13,10 +13,10 @@ ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: b4b322231f546871d5581de470fdc894ed4fe41e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68099261"
 ---
 # <a name="delete-a-workload-group"></a>Löschen von Arbeitsauslastungsgruppen
@@ -27,10 +27,10 @@ ms.locfileid: "68099261"
   
 -   **So löschen Sie eine Arbeitsauslastungsgruppe mit:**  [dem Objekt-Explorer](#DelWGObjEx), [Resource Governor-Eigenschaften](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Sie können keine Arbeitsauslastungsgruppe löschen, die aktive Sitzungen enthält.  
   
-###  <a name="LimitationsRestrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Einschränkungen  
  Falls eine Arbeitsauslastungsgruppe aktive Sitzungen enthält, tritt beim Löschen bzw. Verschieben der Arbeitsauslastungsgruppe in einen anderen Ressourcenpool ein Fehler auf, wenn Sie die ALTER RESOURCE GOVERNOR RECONFIGURE-Anweisung aufrufen, um die Änderung zu übernehmen. Führen Sie eine der folgenden Aktionen aus, um dieses Problem zu umgehen:  
   
 -   Warten Sie, bis die Verbindungen für alle Sitzungen der entsprechenden Gruppe geschlossen wurden, und führen Sie dann die ALTER RESOURCE GOVERNOR RECONFIGURE-Anweisung noch einmal aus.  
@@ -39,10 +39,10 @@ ms.locfileid: "68099261"
   
 -   Starten Sie den Server neu. Nach Abschluss des Neustarts wird die gelöschte Gruppe nicht erstellt und die neue Ressourcenpoolzuordnung wird von einer verschobenen Gruppe verwendet.  
   
-###  <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Löschen einer Arbeitsauslastungsgruppe ist die CONTROL SERVER-Berechtigung erforderlich.  
   
-##  <a name="DelWGObjEx"></a> Löschen einer Arbeitsauslastungsgruppe im Objekt-Explorer  
+##  <a name="delete-a-workload-group-using-object-explorer"></a><a name="DelWGObjEx"></a> Löschen einer Arbeitsauslastungsgruppe im Objekt-Explorer  
  **So löschen Sie eine Arbeitsauslastungsgruppe im Objekt-Explorer**  
   
 1.  Öffnen Sie in[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Objekt-Explorer und erweitern Sie rekursiv den Knoten **Verwaltung** bis einschließlich zum Eintrag **Ressourcenpools**.  
@@ -53,7 +53,7 @@ ms.locfileid: "68099261"
   
 4.  Im Fenster **Objekt löschen** wird die Arbeitsauslastungsgruppe in der Liste **Zu löschendes Objekt** aufgeführt. Um die Arbeitsauslastungsgruppe zu löschen, klicken Sie auf **OK**.  
   
-##  <a name="DelWGRGProp"></a> Löschen einer Arbeitsauslastungsgruppe über die Eigenschaften der Ressourcenkontrolle  
+##  <a name="delete-a-workload-group-using-resource-governor-properties"></a><a name="DelWGRGProp"></a> Löschen einer Arbeitsauslastungsgruppe über die Eigenschaften der Ressourcenkontrolle  
  **So löschen Sie eine Arbeitsauslastungsgruppe auf der Seite "Eigenschaften der Ressourcenkontrolle"**  
   
 1.  Erweitern Sie im Objekt-Explorer den Knoten **Verwaltung** so lange, bis der Eintrag **Ressourcenpools**angezeigt wird.  
@@ -64,7 +64,7 @@ ms.locfileid: "68099261"
   
 4.  Um die Arbeitsauslastungsgruppe zu löschen, klicken Sie auf **OK**.  
   
-##  <a name="DelWGTSQL"></a> Löschen einer Arbeitsauslastungsgruppe mit Transact-SQL  
+##  <a name="delete-a-workload-group-using-transact-sql"></a><a name="DelWGTSQL"></a> Löschen einer Arbeitsauslastungsgruppe mit Transact-SQL  
  **So löschen Sie eine Arbeitsauslastungsgruppe mit Transact-SQL**  
   
 1.  Führen Sie die **DROP WORKLOAD GROUP** -Anweisung aus, die den Namen der zu löschenden Arbeitsauslastungsgruppe angeben.  

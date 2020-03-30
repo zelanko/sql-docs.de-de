@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 892b18ac9780054cafe90d62569afb63f8261b3e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68742981"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE-Anweisungen - FILELISTONLY (Transact-SQL)
@@ -86,7 +86,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Resultsets  
  Ein Client kann mit RESTORE FILELISTONLY eine Liste der in einem Sicherungssatz enthaltenen Dateien abrufen. Diese Informationen werden als Resultset zurückgegeben, das eine Zeile für jede Datei enthält.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Logischer Name der Datei.|  
 |PhysicalName|**nvarchar(260)**|Physischer Name oder Betriebssystemname der Datei.|  

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73707916"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (R-Bibliothek in SQL Server)
@@ -55,7 +55,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ## <a name="1-machine-learning-algorithms"></a>1: Machine Learning-Algorithmen
 
-| Funktionsname | Beschreibung |
+| Funktionsname | BESCHREIBUNG |
 |---------------|-------------|
 |[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | Implementierung von FastRank, effiziente Implementierung des Gradient Boosting-MART-Algorithmus.  |
 |[rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | Implementierung der zufälligen Gesamtstruktur und der Gesamtstruktur nach Quantilregression mit [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees).  |
@@ -69,7 +69,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ## <a name="2-transformation-functions"></a>2: Transformationsfunktionen
 
-| Funktionsname | Beschreibung |
+| Funktionsname | BESCHREIBUNG |
 |---------------|-------------|
 |[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | Erstellt eine Spalte mit einem einzelnen Vektorwert aus mehreren Spalten.  |
 |[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | Erstellt einen Indikatorvektor durch Kategorietransformation mit einem Wörterbuch.  |
@@ -87,7 +87,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ## <a name="3-scoring-and-training-functions"></a>3: Bewertungs- und Trainingsfunktionen
 
-| Funktionsname | Beschreibung |
+| Funktionsname | BESCHREIBUNG |
 |---------------|-------------|
 |[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | Führt die Bewertungsbibliothek entweder in SQL Server mithilfe der gespeicherten Prozedur oder über R-Code aus, um eine Echtzeitbewertung und dadurch eine wesentlich schnellere Vorhersageleistung zu erzielen.|
 |[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | Wandelt Daten von einem Eingabedataset in ein Ausgabedataset um.|
@@ -96,7 +96,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ## <a name="4-loss-functions-for-classification-and-regression"></a>4: Verlustfunktionen zur Klassifizierung und Regression
 
-| Funktionsname | Beschreibung |
+| Funktionsname | BESCHREIBUNG |
 |---------------|-------------|
 |[expLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Spezifikationen für eine Verlustfunktion für exponentielle Klassifizierungen. | 
 |[logLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Spezifikationen für eine Verlustfunktion für Protokollklassifizierungen.  |
@@ -107,14 +107,14 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ## <a name="5-feature-selection-functions"></a>5: Funktionsauswahlfunktionen
 
-| Funktionsname | Beschreibung |
+| Funktionsname | BESCHREIBUNG |
 |---------------|-------------|
 |[minCount](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mincount) | Spezifikation für die Funktionsauswahl im Anzahlmodus. |
 |[mutualInformation](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mutualinformation) | Spezifikation für die Funktionsauswahl im Transinformationsmodus. |
 
 ## <a name="6-ensemble-modeling-functions"></a>6: Ensemble-Modellierungsfunktionen
 
-| Funktionsname | Beschreibung |
+| Funktionsname | BESCHREIBUNG |
 |---------------|-------------|
 |[fastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/fasttrees) | Erstellt eine Liste mit dem Funktionsnamen und den Argumenten zum Trainieren eines schnellen Strukturmodells mit [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
 |[fastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | Erstellt eine Liste mit dem Funktionsnamen und den Argumenten zum Trainieren eines schnellen Gesamtstrukturmodells mit [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
@@ -124,14 +124,14 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 ## <a name="7-neural-networking-functions"></a>7: Neuronale Netzwerkfunktionen
 
-| Funktionsname | Beschreibung |
+| Funktionsname | BESCHREIBUNG |
 |---------------|-------------|
 |[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Gibt Optimierungsalgorithmen für den Machine Learning-Algorithmus [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) an.|
 
 
 ## <a name="8-package-state-functions"></a>8: Paketstatusfunktionen
 
-| Funktionsname | Beschreibung |
+| Funktionsname | BESCHREIBUNG |
 |---------------|-------------|
 |[rxHashEnv](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxHashEnv) | Umgebungsobjekt zum Speichern des paketweiten Status. |
 

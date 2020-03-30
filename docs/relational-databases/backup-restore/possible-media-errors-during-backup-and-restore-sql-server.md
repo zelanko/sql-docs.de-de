@@ -24,10 +24,10 @@ ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a94825fe0af3820ab7f39ca25a104242e21bda8c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258651"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Mögliche Medienfehler während der Sicherung und Wiederherstellung (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "75258651"
 >  Gespiegelte Sicherungen bieten bis zu fünf Kopien (Spiegel) eines Mediensatzes, womit alternative Kopien für die Wiederherstellung zur Verfügung gestellt werden, die durch beschädigte Medien ausgelöst wurden. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Gespiegelte Sicherungsmediensätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)noch nicht kennen.  
   
   
-##  <a name="BckChecksums"></a> Sicherungsprüfsummen  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> Sicherungsprüfsummen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden drei Prüfsummentypen unterstützt: eine Prüfsumme auf Seiten, eine Prüfsumme in Protokollblöcken und eine Sicherungsprüfsumme. Beim Generieren einer Sicherungsprüfsumme wird von BACKUP überprüft, ob die aus der Datenbank gelesenen Daten mit Prüfsummen oder Indikatoren für zerrissene Seiten konsistent sind, die möglicherweise in der Datenbank vorhanden sind.  
   
  Von der BACKUP-Anweisung wird optional eine Sicherungsprüfsumme auf dem Sicherungsdatenstrom berechnet. Wenn Seitenprüfsummen oder Informationen zu zerrissenen Seiten auf einer gegebenen Seite vorhanden sind, wird von BACKUP während der Seitensicherung die Prüfsumme, der Status für zerrissene Seiten und die Seiten-ID für die Seite überprüft. Beim Erstellen einer Sicherungsprüfsumme werden von Sicherungsvorgängen keine Prüfsummen zu Seiten hinzugefügt. Seiten werden so gesichert, wie sie in der Datenbank vorgefunden werden, und bleiben durch die Sicherung unverändert.  
@@ -75,7 +75,7 @@ ms.locfileid: "75258651"
   
 4.  Es wird eine Meldung ausgegeben, dass die Sicherung erfolgreich generiert wurde, aber Seitenfehler enthält.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So aktivieren oder deaktivieren Sie Sicherungsprüfsummen**  
   
 -   [Aktivieren oder deaktivieren von Sicherungsprüfsummen während der Sicherung oder Wiederherstellung &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

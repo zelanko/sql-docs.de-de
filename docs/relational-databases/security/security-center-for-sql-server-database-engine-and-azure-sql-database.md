@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9bf5e128b054bbea218c6b791666f5698c24c37d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557705"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
@@ -35,7 +35,7 @@ ms.locfileid: "75557705"
   
  ![security-center-legend](../performance/media/security-center-legend.PNG "security-center-legend")  
   
-##  <a name="Who"></a> Authentifizierung: Wer sind Sie?  
+##  <a name="authentication-who-are-you"></a><a name="Who"></a> Authentifizierung: Wer sind Sie?  
   
 |||  
 |-|-|  
@@ -43,7 +43,7 @@ ms.locfileid: "75557705"
 |**Wo authentifiziert?**<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") In der Masterdatenbank: Anmeldenamen und Datenbankbenutzer<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") In der Benutzerdatenbank: Eigenständige Datenbankbenutzer|Authentifizierung bei der Masterdatenbank (Anmeldenamen und Datenbankbenutzer)<br /><br /> [Erstellen eines SQL Server-Anmeldenamens](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [Verwalten von Datenbanken und Anmeldungen in Azure SQL-Datenbank](https://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [Erstellen eines Datenbankbenutzers](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> Authentifizierung bei einer Benutzerdatenbank<br /><br /> [Eigenständige Datenbankbenutzer – Generieren einer portablen Datenbank](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
 |**Verwenden anderer Identitäten**<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Anmeldeinformationen<br /><br /> ![Sicherheitscenter-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Ausführen unter anderem Anmeldenamen<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Ausführen als anderer Datenbankbenutzer|[Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [Ausführen unter anderem Anmeldenamen](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [Ausführen als anderer Datenbankbenutzer](../../t-sql/statements/execute-as-transact-sql.md)|  
   
-##  <a name="What"></a> Autorisierung: Was können Sie tun?  
+##  <a name="authorization-what-can-you-do"></a><a name="What"></a> Autorisierung: Was können Sie tun?  
   
 |||  
 |-|-|  
@@ -51,7 +51,7 @@ ms.locfileid: "75557705"
 |**Sicherheit durch Rollen**<br /><br /> ![Sicherheitscenter-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Rollen auf Serverebene<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Rollen auf Datenbankebene|[Rollen auf Serverebene](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md)|  
 |**Einschränken des Datenzugriffs auf ausgewählte Datenelemente**<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Einschränken des Datenzugriffs mit Ansichten/Verfahren<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Sicherheit auf Zeilenebene<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Dynamische Datenmaskierung<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Signierte Objekte|Einschränken des Datenzugriffs mit [Ansichten](../../relational-databases/views/views.md) und [Verfahren](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)<br /><br /> [Sicherheit auf Zeilenebene (SQL Server)](../../relational-databases/security/row-level-security.md)<br /><br /> [Sicherheit auf Zeilenebene (Azure SQL-Datenbank)](https://msdn.microsoft.com/library/azure/dn765131.aspx)<br /><br /> [Dynamische Datenmaskierung (SQL Server)](../../relational-databases/security/dynamic-data-masking.md)<br /><br /> [Dynamische Datenmaskierung (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [Signierte Objekte](../../t-sql/statements/add-signature-transact-sql.md)|  
   
-##  <a name="Encrypt"></a> Verschlüsselung: Speichern geheimer Schlüssel  
+##  <a name="encryption-storing-secret-data"></a><a name="Encrypt"></a> Verschlüsselung: Speichern geheimer Schlüssel  
   
 |||  
 |-|-|  
@@ -59,14 +59,14 @@ ms.locfileid: "75557705"
 |**Verschlüsseln von Quellen**<br /><br /> ![Sicherheitscenter-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Erweiterbares Schlüsselverwaltungsmodul<br /><br /> ![Sicherheitscenter-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Im Azure Schlüsseltresor gespeicherte Schlüssel<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Always Encrypted|[Erweiterbares Schlüsselverwaltungsmodul](../../relational-databases/security/encryption/extensible-key-management-ekm.md)<br /><br /> [Im Azure Schlüsseltresor gespeicherte Schlüssel](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)<br /><br /> [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)|  
 |**Spalte, Daten und Schlüsselverschlüsselung**<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Verschlüsseln durch Zertifikat<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Verschlüsseln mit symmetrischem Schlüssel<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Verschlüsseln mit asymmetrischem Schlüssel<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Verschlüsseln durch Passphrase|[Verschlüsseln durch Zertifikat](../../t-sql/functions/encryptbycert-transact-sql.md)<br /><br /> [Verschlüsseln mit asymmetrischem Schlüssel](../../t-sql/functions/encryptbyasymkey-transact-sql.md)<br /><br /> [Verschlüsseln mit symmetrischem Schlüssel](../../t-sql/functions/encryptbykey-transact-sql.md)<br /><br /> [Verschlüsseln durch Passphrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md)<br /><br /> [Verschlüsseln einer Datenspalte](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-##  <a name="Connect"></a> Verbindungssicherheit: Einschränken und Schützen  
+##  <a name="connection-security-restricting-and-securing"></a><a name="Connect"></a> Verbindungssicherheit: Einschränken und Schützen  
   
 |||  
 |-|-|  
 |**Firewallschutz**<br /><br /> ![Sicherheitscenter-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Windows-Firewalleinstellungen<br /><br /> ![Sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure Service-Firewalleinstellungen<br /><br /> ![Sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Datenbank-Firewalleinstellungen|[Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)<br /><br /> [Azure SQL-Datenbank-Firewalleinstellungen](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)<br /><br /> [Azure Service-Firewalleinstellungen](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|  
 |**Verschlüsseln von Daten in Transit**<br /><br /> ![Sicherheitscenter-beide](../performance/media/security-center-both.png "Sicherheitscenter – beide") Erzwungene SSL-Verbindungen<br /><br /> ![Sicherheitscenter-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Optionale SSL-Verbindungen|[Secure Sockets Layer für die Datenbank-Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [Secure Sockets Layer für SQL-Datenbank](https://msdn.microsoft.com/library/azure/ff394108.aspx)<br /><br /> [TLS 1.2-Unterstützung für Microsoft SQL Server](https://support.microsoft.com/kb/3135244)|  
   
-##  <a name="Audit"></a> Überwachung: Aufzeichnen des Zugriffs  
+##  <a name="auditing-recording-access"></a><a name="Audit"></a> Überwachung: Aufzeichnen des Zugriffs  
   
 |||  
 |-|-|  
@@ -74,7 +74,7 @@ ms.locfileid: "75557705"
 |**Benutzerdefinierte Überwachung**<br /><br /> ![Sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "Sicherheitscenter – beide") Trigger|Benutzerdefinierte Überwachungsimplementierung: Erstellen von [DDL-Triggern](../../relational-databases/triggers/ddl-triggers.md) und [DML-Triggern](../../relational-databases/triggers/dml-triggers.md)|  
 |**Compliance**<br /><br /> ![Sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "Sicherheitscenter – beide") Kompatibilität|SQL Server:<br />                        [Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL-Datenbank:<br />                        [Microsoft Azure Trust Center: Compliance nach Features](https://azure.microsoft.com/support/trust-center/services/)|  
   
-##  <a name="SQLInjection"></a> SQL Injection  
+##  <a name="sql-injection"></a><a name="SQLInjection"></a> SQL Injection  
  Bei der Einschleusung von SQL-Befehlen wird ein bösartiger Code in Zeichenfolgen eingefügt, die später zur Analyse und Ausführung an [!INCLUDE[ssDE](../../includes/ssde-md.md)] übergeben werden. Sie sollten jede Prozedur, die SQL-Anweisungen erstellt, nach Injection-Anfälligkeiten überprüfen, denn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt alle empfangenen gültigen Abfragen aus. Alle Datenbanksysteme unterliegen einem gewissen Risiko für die Einschleusung von SQL-Befehlen, und viele der Sicherheitslücken entstehen in der Anwendung, die [!INCLUDE[ssDE](../../includes/ssde-md.md)]abfragt. Sie können Angriffe, die das Ziel haben, SQL-Befehle einzuschleusen, abwehren, indem Sie gespeicherte Prozeduren und parametrisierte Befehle verwenden, dynamisches SQL vermeiden und die Berechtigungen aller Benutzer einschränken.  Weitere Informationen finden Sie unter [Einschleusung von SQL-Befehlen](../../relational-databases/security/sql-injection.md).  
   
  Zusätzliche Links für Anwendungsprogrammierer:  

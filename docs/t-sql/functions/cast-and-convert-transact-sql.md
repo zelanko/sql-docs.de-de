@@ -36,10 +36,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286944"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
@@ -338,7 +338,7 @@ Bei einem [Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-
 
 Ein Upgrade der Datenbank auf Kompatibilitätsgrad 110 und höher ändert keine Benutzerdaten, die auf dem Datenträger gespeichert wurden. Sie müssen diese Daten entsprechend manuell korrigieren. Haben Sie beispielsweise SELECT INFO zum Erstellen einer Tabelle von einer Quelle verwendet, die einen Ausdruck für eine berechnete Spalte (oben beschrieben) beinhaltet, werden die Daten mit dem Format 0 anstelle der Definition der berechneten Spalte an sich gespeichert. Sie müssen diese Daten manuell aktualisieren, um sie an das Format 121 anzupassen.
   
-## <a name="BKMK_examples"></a> Beispiele  
+## <a name="examples"></a><a name="BKMK_examples"></a> Beispiele  
   
 ### <a name="a-using-both-cast-and-convert"></a>A. Verwenden von CAST und CONVERT  
 In diesen Beispielen werden die Namen der Produkte abgerufen, deren Listenpreis mit der Ziffer `3` beginnt. Die `ListPrice`-Werte werden in `int`-Werte konvertiert.
@@ -714,7 +714,7 @@ Im folgenden Beispiel werden zuerst `GETDATE()`-Werte verwendet. `CONVERT` wird 
 |130|`SELECT CONVERT(nvarchar, GETDATE(), 130)`|22 ذو الحجة 1440  1:39:17.090P|
 |131|`SELECT CONVERT(nvarchar, GETDATE(), 131)`|22/12/1440  1:39:17.090PM|
 
-### <a name="precedence-example"></a> K. Auswirkungen der Datentyprangfolge in zulässigen Konvertierungen  
+### <a name="k-effects-of-data-type-precedence-in-allowed-conversions"></a><a name="precedence-example"></a> K. Auswirkungen der Datentyprangfolge in zulässigen Konvertierungen  
 Im folgenden Beispiel wird eine Variable des Typs varchar definiert. Dieser wird dann ein Integerwert zugewiesen. Anschließend wird eine SELECT-Anweisung für die Verkettung der Variablen mit einer Zeichenfolge ausgeführt.
 
 ```sql

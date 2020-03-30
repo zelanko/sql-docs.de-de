@@ -16,10 +16,10 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093604"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Datenbanken-Objekt
@@ -30,7 +30,7 @@ ms.locfileid: "68093604"
   
  In dieser Tabelle werden die **Datenbanken** -Leistungsindikatoren von SQL Server beschrieben.  
   
-|Datenbanken-Leistungsindikatoren von SQL Server|Beschreibung|  
+|Datenbanken-Leistungsindikatoren von SQL Server|BESCHREIBUNG|  
 |-----------------------------------|-----------------|  
 |**Aktive Transaktionen**|Anzahl von aktiven Transaktionen für die Datenbank.|  
 |**Durchschn. Abstand von EOL/LP-Anforderung**|Durchschnittlicher Abstand in Byte vom Ende des Protokolls nach Protokollpoolanforderung für Anforderungen in der letzten VLF.| 

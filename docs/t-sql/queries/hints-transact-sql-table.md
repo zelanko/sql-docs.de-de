@@ -37,10 +37,10 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981765"
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
@@ -192,7 +192,7 @@ Gibt an, dass der Abfrageoptimierer nur einen Indexsuchvorgang als Zugriffspfad 
   
 Der FORCESEEK-Hinweis kann folgendermaßen angegeben werden:  
   
-|Syntax|Beispiel|Beschreibung|  
+|Syntax|Beispiel|BESCHREIBUNG|  
 |------------|-------------|-----------------|  
 |Ohne Index oder INDEX-Hinweis|`FROM dbo.MyTable WITH (FORCESEEK)`|Der Abfrageoptimierer berücksichtigt nur Indexsuchvorgänge für den Zugriff auf die Tabelle oder Sicht über einen beliebigen relevanten Index.|  
 |Mit einem INDEX-Hinweis kombiniert|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|Der Abfrageoptimierer berücksichtigt nur Indexsuchvorgänge für den Zugriff auf die Tabelle oder Sicht über den angegebenen Index.|  
@@ -317,7 +317,7 @@ SERIALIZABLE
 Entspricht der Option HOLDLOCK. Verstärkt die Einschränkung von freigegebenen Sperren, indem sie aufrechterhalten werden, bis eine Transaktion abgeschlossen ist (anstatt die freigegebene Sperre aufzuheben, sobald die benötigte Tabelle oder Datenseite nicht mehr gebraucht wird, ganz gleich, ob die Transaktion abgeschlossen ist oder nicht). Der Scan wird mit derselben Sperrsemantik wie eine Transaktion durchgeführt, die auf der Isolationsstufe SERIALIZABLE ausgeführt wird. Weitere Informationen zu Isolationsstufen in SQL Server finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 SNAPSHOT  
-**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher. 
+**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher. 
   
 Auf die speicheroptimierte Tabelle wird unter der SNAPSHOT-Isolation zugegriffen. SNAPSHOT kann nur mit speicheroptimierten Tabellen verwendet werden (nicht mit datenträgerbasierten Tabellen). Weitere Informationen finden Sie unter [Einführung in speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -329,7 +329,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
 SPATIAL_WINDOW_MAX_CELLS = *integer*  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
 Gibt die maximale Anzahl der Zellen an, die für die Mosaikbearbeitung eines geometry- oder geography-Objekts verwendet werden sollen. *number* muss einen Wert zwischen 1 und 8192 aufweisen.  
   
 Mit dieser Option können Sie die Ausführungszeit von Abfragen optimieren, indem Sie den Zusammenhang zwischen der Ausführungszeit des primären und des sekundären Filters kontrollieren. Ein höherer Wert verringert die Ausführungszeit des sekundären Filters, erhöht jedoch die Ausführungszeit des primären Filters. Ein niedrigerer Wert verringert die Ausführungszeit des primären Filters, erhöht jedoch die Ausführungszeit des sekundären Filters. Bei räumlichen Daten mit größerer Dichte sollte ein höherer Wert durch bessere Angleichung an den primären Filter und Verringerung der Ausführungszeit des sekundären Filters in einer niedrigeren Ausführungszeit resultieren. Bei Daten mit geringer Dichte verringert ein niedrigerer Wert die Ausführungszeit des primären Filters.  

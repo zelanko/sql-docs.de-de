@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 2140c54c8954006c4285eaccbb59f2f0c4964577
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77074498"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sssqlv14-md"></a>Wichtige Änderungen an Funktionen der Datenbank-Engine in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "77074498"
   
 -  Die Algorithmen MD2, MD4, MD5, SHA und SHA-1 sind ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] veraltet. Bis [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] werden selbstsignierte Zertifikate mit SHA-1 erstellt. Ab [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] werden selbstsignierte Zertifikate mit SHA-256 erstellt.
 
-## <a name="previous-versions"></a> Vorgängerversionen  
+## <a name="previous-versions"></a><a name="previous-versions"></a> Vorgängerversionen  
 
 - [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 

@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71713270"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Konfigurieren von verteilten Transaktionen für Always On-Verfügbarkeitsgruppen
@@ -102,7 +102,7 @@ ALTER AVAILABILITY GROUP MyaAG
       );
 ```
 
-## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Verteilte Transaktionen – Technisches Prinzip
+## <a name="distributed-transactions---technical-concepts"></a><a name="distTran"/>Verteilte Transaktionen – Technisches Prinzip
 
 Bei einer verteilten Transaktion sind mindestens zwei Datenbanken beteiligt. Der DTC als Transaktionsmanager koordiniert die Transaktion zwischen SQL Server-Instanzen und anderen Datenquellen. Jeder Instanz der [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]-Datenbank-Engine kann als Ressourcenmanager operieren. Wenn bei einer Verfügbarkeitsgruppe die Einstellung `DTC_SUPPORT = PER_DB` verwendet wird, können die Datenbanken als Ressourcenmanager operieren. Weitere Informationen finden Sie in der MS DTC-Dokumentation.
 

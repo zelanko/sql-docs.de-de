@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f8eba07362ac5780d1d7790d5553aaa397b7847e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245088"
 ---
 # <a name="connect-to-the-teradata-source"></a>Stellen Sie eine Verbindung mit der Teradata-Quelle her.
@@ -40,10 +40,10 @@ Die Teradata-Quelle unterstützt Parallelität, wobei Exportaufträge auf die gl
 
 Die benutzerdefinierten Eigenschaften der Teradata-Quelle sind in der folgenden Tabelle aufgeführt. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.
 
-|Eigenschaftenname|Datentyp|Beschreibung|
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|
 |:-|:-|:-|
 |AccessMode|Ganze Zahl (Enumeration)|Der zum Zugreifen auf die Datenbank verwendete Modus. Die möglichen Werte sind *Tabellenname* und *SQL-Befehl*. Der Standardwert ist *Tabellenname*.|
-|BlockSize|Integer|Die Blockgröße in Bytes, die beim Zurückgeben von Daten an den Client verwendet wird. Der Standardwert ist 1.048.576 (1 MB). Der Mindestwert ist 256 Bytes. Der Höchstwert ist 16.775.168 Bytes.<br> Diese Eigenschaft befindet sich im Bereich **Erweiterter Editor**.|
+|BlockSize|Integer|Die Blockgröße in Bytes, die beim Zurückgeben von Daten an den Client verwendet wird. Der Standardwert ist 1.048.576 MB (1 MB). Der Mindestwert ist 256 Bytes. Der Höchstwert ist 16.7751.68 Bytes.<br> Diese Eigenschaft befindet sich im Bereich **Erweiterter Editor**.|
 |BufferMaxSize|Integer|Die maximale Gesamtgröße des von der GetBuffer-Funktion zurückgegebenen Datenpuffers. Diese Größe muss ausreichend sein, um mindestens eine Datenzeile, einschließlich Zeilenkopf, eigentlicher Datenzeile und Puffernachspann, aufzunehmen. Die standardmäßige maximale Gesamtgröße des Datenpuffers ist 16.775.552 Bytes. <br>Weitere Informationen finden Sie unter [Exportieren von Daten aus einer Teradata-Datenbank mithilfe von GetBuffer](https://docs.teradata.com/reader/TvVKKmxaBAoyETJZD8zz_g/oaxiwNJmnCa6UctY4k498w).|
 |BufferMode|Boolean|Der Standardwert ist *True*. Wenn die PutBuffer-Funktion verwendet wird, muss der Wert *True* sein. Diese Eigenschaft befindet sich im Bereich **Erweiterter Editor**.|
 |DataEncryption|Boolean|Der Standardwert ist *False*. Wenn der Wert *True* ist, wird die vollständige Sicherheitsverschlüsselung verwendet.|
@@ -104,14 +104,14 @@ Wählen Sie im Bereich **Verbindungs-Manager** die Instanz des Teradata-Verbindu
 
 * Wählen Sie die Methode zum Auswählen von Daten aus der Quelle. Die Optionen sind in der folgenden Tabelle aufgeführt:
 
-    |Option|Beschreibung|
+    |Option|BESCHREIBUNG|
     |:-|:-|
     |Tabellenname – TPT-Export|Ruft Daten aus einer Tabelle oder Sicht in der Teradata-Datenquelle ab. Wenn diese Option ausgewählt ist, wählen Sie in der Liste eine verfügbare Tabelle oder Sicht für **Name der Tabelle oder Sicht** aus.|
     |SQL-Befehl – TPT-Export|Ruft mit einer SQL-Abfrage Daten aus der Teradata-Datenquelle ab. Bei Auswahl dieser Option geben Sie anhand einer der folgenden Methoden eine Abfrage ein: <ul><li>Geben Sie den Text der SQL-Abfrage im Feld **SQL-Befehlstext** ein.</li><li>Wählen Sie **Durchsuchen** aus, um die SQL-Abfrage aus einer Textdatei zu laden.</li><li>Wählen Sie **Abfrage analysieren** aus, um die Syntax des Abfragetexts zu überprüfen.</li></ul>|
 
 **Vorschau**
 
-* Wählen Sie **Vorschau** aus, um (max.) die ersten 200 Zeilen der Daten anzuzeigen, die aus der ausgewählten Tabelle bzw. Sicht extrahiert wurden.
+* Wählen **Vorschau** aus, um (max.) die ersten 200 Zeilen der Daten anzuzeigen, die aus der ausgewählten Tabelle bzw. Sicht extrahiert wurden.
 
 ## <a name="the-columns-pane"></a>Der Bereich „Spalten“
 

@@ -11,10 +11,10 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8389d11868108725a676e9196861c7302241a407
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75546551"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
@@ -33,7 +33,7 @@ Diese Lektion enthält die folgenden Aufgaben:
   
 -   [Herstellen einer Verbindung mithilfe des SQL Server-Browserdiensts](#browser)  
   
-## <a name="protocols"></a>Aktivieren von Protokollen  
+## <a name="enabling-protocols"></a><a name="protocols"></a>Aktivieren von Protokollen  
 Aus Sicherheitsgründen werden [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], Developer und Evaluation nur mit begrenzter Netzwerkkonnektivität installiert. Verbindungen mit [!INCLUDE[ssDE](../includes/ssde-md.md)] können von Tools hergestellt werden, die auf demselben Computer ausgeführt werden. Von anderen Computern aus ist dies jedoch nicht möglich. Wenn Sie beabsichtigen, Ihre Entwicklungsarbeiten auf demselben Computer auszuführen, auf dem auch das [!INCLUDE[ssDE](../includes/ssde-md.md)]installiert ist, müssen keine zusätzlichen Protokolle aktiviert werden. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] stellt eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] mithilfe des Shared Memory-Protokoll her. Dieses Protokoll ist bereits aktiviert.  
   
 Wenn Sie planen, die Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] von einem anderen Computer herzustellen, müssen Sie ein Protokoll aktivieren, z. B. TCP/IP.  
@@ -64,7 +64,7 @@ Wenn Sie planen, die Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] von
     > [!NOTE]  
     > Wenn Sie Änderungen an Netzwerkprotokollen vorgenommen haben, müssen Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Dienst neu starten. Dieser Schritt wird in der nächsten Aufgabe ausgeführt.  
 
-## <a name="port"></a>Konfigurieren eines festen Ports  
+## <a name="configuring-a-fixed-port"></a><a name="port"></a>Konfigurieren eines festen Ports  
 Zum Erhöhen der Sicherheit wird die Windows-Firewall von Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]und Windows 7 aktiviert. Um von einem anderen Computer eine Verbindung mit dieser Instanz herzustellen, müssen Sie einen Kommunikationsport in der Firewall öffnen. Die Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] lauscht an Port 1433; aus diesem Grund ist es nicht erforderlich, einen festen Port zu konfigurieren. Benannte Instanzen, einschließlich [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , lauschen jedoch an dynamischen Ports. Bevor Sie einen Port in der Firewall öffnen können, müssen Sie [!INCLUDE[ssDE](../includes/ssde-md.md)] so konfigurieren, dass an einem bestimmten Port gelauscht wird, der als fester oder statischer Port bezeichnet wird. Andernfalls wird von [!INCLUDE[ssDE](../includes/ssde-md.md)] bei jedem Start möglicherweise ein anderer Port überwacht. Weitere Informationen zu Firewalls, den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf Datenbank-Engine, Analysis Services, Reporting Services und Integration Services auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
@@ -86,7 +86,7 @@ Zum Erhöhen der Sicherheit wird die Windows-Firewall von Windows Server 2008, [
   
 7.  Klicken Sie im rechten Bereich mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]und anschließend auf **Neu starten**. Nach dem Neustart lauscht [!INCLUDE[ssDE](../includes/ssde-md.md)] am Port **49172**.  
   
-## <a name="firewall"></a>Öffnen von Ports in der Firewall  
+## <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>Öffnen von Ports in der Firewall  
 Durch Firewallsysteme kann der nicht autorisierte Zugriff auf Computerressourcen verhindert werden. Um bei aktivierter Firewall von einem anderen Computer eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] herzustellen, müssen Sie einen Port in der Firewall öffnen.  
   
 > [!IMPORTANT]  
@@ -112,7 +112,7 @@ Nachdem Sie [!INCLUDE[ssDE](../includes/ssde-md.md)] so konfiguriert haben, dass
   
 Weitere Informationen zur Konfiguration der Firewall, einschließlich Anweisungen für [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Weitere Informationen zu den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf Datenbank-Engine, Analysis Services, Reporting Services und Integration Services auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-## <a name="otherComp"></a>Herstellen einer Verbindung mit dem Datenbankmodul von einem anderen Computer  
+## <a name="connecting-to-the-database-engine-from-another-computer"></a><a name="otherComp"></a>Herstellen einer Verbindung mit dem Datenbankmodul von einem anderen Computer  
 Nachdem Sie [!INCLUDE[ssDE](../includes/ssde-md.md)] für das Lauschen an einem festen Port konfiguriert und diesen Port in der Firewall geöffnet haben, können Sie jetzt von einem anderen Computer eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] herstellen.  
   
 Wenn der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst auf dem Servercomputer ausgeführt wird und die Firewall den UDP-Port 1434 geöffnet hat, kann die Verbindung mithilfe des Computer- und des Instanznamens hergestellt werden. Aus Sicherheitsgründen wird in unserem Beispiel der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst nicht verwendet.  
@@ -130,7 +130,7 @@ Wenn der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst 
   
 4.  Bestätigen Sie im Feld **Authentifizierung** die **Windows-Authentifizierung**, und klicken Sie anschließend auf **Verbinden**.  
   
-## <a name="browser"></a>Herstellen einer Verbindung mithilfe des SQL Server-Browserdiensts  
+## <a name="connecting-using-the-sql-server-browser-service"></a><a name="browser"></a>Herstellen einer Verbindung mithilfe des SQL Server-Browserdiensts  
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst lauscht auf eingehende Anforderungen für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Ressourcen und stellt Informationen zu den auf dem Computer installierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen bereit. Wenn der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst ausgeführt wird, können Benutzer Verbindungen mit benannten Instanzen herstellen, indem sie den Computer- und Instanznamen angeben, anstatt den Computernamen und die Portnummer. Da der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser nicht authentifizierte UDP-Anforderungen empfängt, ist er während der Installation nicht immer eingeschaltet. Eine Beschreibung des Diensts und eine Erklärung dazu, wann er eingeschaltet ist, finden Sie unter [SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
   
 Um den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser zu verwenden, müssen Sie dieselben Schritte wie zuvor ausführen und UDP-Port 1434 in der Firewall öffnen.  

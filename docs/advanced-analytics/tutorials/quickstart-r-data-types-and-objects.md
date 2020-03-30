@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83bb4fa7861feaccd2ff430ca10f80ef0bc5b10a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76916404"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380801"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Schnellstart: Datenstrukturen, Datentypen und Objekte bei Verwendung von R in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Warum sind die Ergebnisse so unterschiedlich?
 
 Die Antwort kann normalerweise mit dem R-Befehl `str()` ermittelt werden. Fügen Sie die Funktion `str(object_name)` an einer beliebigen Stelle in Ihrem R-Skript hinzu, damit das Datenschema des angegebenen R-Objekts als Informationsnachricht zurückgegeben wird. Nachrichten finden Sie unter **Nachrichten**, im Bereich des Visual Studio-Code oder unter der **Nachrichten**-Registerkarte in SSMS.
 
-Um zu ermitteln, warum Beispiel 1 und Beispiel 2 solch unterschiedliche Ergebnisse haben, fügen Sie die Zeile `str(OutputDataSet)` am Ende der _@script_ -Variablendefinition in jeder Anweisung, wie folgt ein:
+Fügen Sie die Zeile `str(OutputDataSet)` wie folgt am Ende der Variablen `@script` in jeder Anweisung ein, um zu ermitteln, warum Beispiel 1 und 2 so unterschiedliche Ergebnisse aufweisen:
 
 **Beispiel 1 mit hinzugefügter str-Funktion**
 

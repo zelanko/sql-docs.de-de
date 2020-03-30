@@ -1,5 +1,5 @@
 ---
-title: Scale-Out-Unterstützung für Hochverfügbarkeit über eine SQL Server-Failoverclusterinstanz | Microsoft-Dokumentation
+title: Scale Out-Unterstützung für Hochverfügbarkeit über eine SQL Server-Failoverclusterinstanz | Microsoft-Dokumentation
 description: In diesem Artikel wird beschrieben, wie Sie SSIS Scale Out für Hochverfügbarkeit mit einer SQL Server-Failoverclusterinstanz konfigurieren.
 ms.custom: performance
 ms.date: 04/10/2018
@@ -11,13 +11,13 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: ba171a1ec1082bbcedd77bd5c7bb7a666efd3d04
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903797"
 ---
-# <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale-Out-Unterstützung für Hochverfügbarkeit über eine SQL Server-Failoverclusterinstanz
+# <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out-Unterstützung für Hochverfügbarkeit über eine SQL Server-Failoverclusterinstanz
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -73,7 +73,7 @@ Installieren Sie den Scale Out-Worker auf den Workerknoten. Geben Sie bei der In
 Installieren Sie das Workerzertifikat auf allen Knoten im SQL Server-Failovercluster. Weitere Informationen finden Sie unter [Installieren des Clientzertifikats für den Scale Out-Worker](walkthrough-set-up-integration-services-scale-out.md#InstallCert).
 
 > [!NOTE]
-> Der Scale Out-Manager hat den SQL Server-Failovercluster nicht unterstützt. Wenn Sie den Scale Out Manager verwenden, um den Scale Out-Worker hinzuzufügen, müssen Sie weiterhin das Workerzertifikat manuell auf allen Masterknoten installieren.
+> Der Scale Out-Manager hat den SQL Server-Failovercluster nicht unterstützt. Wenn Sie den Scale Out-Manager verwenden, um den Scale Out-Worker hinzuzufügen, müssen Sie weiterhin das Workerzertifikat manuell auf allen Masterknoten installieren.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen finden Sie in den folgenden Artikeln:

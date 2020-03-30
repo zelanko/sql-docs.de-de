@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294190"
 ---
 # <a name="execute-package-task"></a>Paket ausführen (Task)
@@ -137,13 +137,13 @@ ms.locfileid: "71294190"
   
 -   [Festlegen der Optionen auf der Seite "Parameterbindungen"](#parameter)  
   
-###  <a name="open"></a> Öffnen des Editors für den Task "Paket ausführen"  
+###  <a name="open-the-execute-package-task-editor"></a><a name="open"></a> Öffnen des Editors für den Task "Paket ausführen"  
   
 1.  Öffnen Sie in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ein [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Projekt, das einen Task „Paket ausführen“ enthält.  
   
 2.  Klicken Sie im SSIS-Designer mit der rechten Maustaste auf den Task, und klicken Sie dann auf **Bearbeiten**.  
   
-###  <a name="general"></a> Festlegen der Optionen auf der Seite „Allgemein“  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Festlegen der Optionen auf der Seite „Allgemein“  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task "Paket ausführen" an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "71294190"
  **Beschreibung**  
  Geben Sie eine Beschreibung des Tasks "Paket ausführen" ein.  
   
-###  <a name="package"></a> Festlegen der Optionen auf der Seite "Paket"  
+###  <a name="set-the-options-on-the-package-page"></a><a name="package"></a> Festlegen der Optionen auf der Seite "Paket"  
  **ReferenceType**  
  Wählen Sie **Projektverweis** für untergeordnete Pakete im Projekt aus. Wählen Sie **Externer Verweis** für untergeordnete Pakete aus, die sich außerhalb des Pakets befinden.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "71294190"
  **Location**  
  Wählen Sie den Speicherort des untergeordneten Pakets aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**SQL Server**|Legt den Speicherort als Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fest.|  
 |**Dateisystem**|Legen Sie als Speicherort das Dateisystem fest.|  
@@ -207,7 +207,7 @@ ms.locfileid: "71294190"
  **PackageNameReadOnly**  
  Zeigt den Paketnamen an.  
   
-###  <a name="parameter"></a> Festlegen der Optionen auf der Seite "Parameterbindungen"  
+###  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a> Festlegen der Optionen auf der Seite "Parameterbindungen"  
  Sie können Werte aus dem übergeordneten Paket oder dem Projekt an das untergeordnete Paket übergeben. Das Projekt muss das Projektbereitstellungsmodell verwenden, und das untergeordnete Paket muss im gleichen Projekt enthalten sein wie das übergeordnete Paket.  
   
  Weitere Informationen zum Konvertieren eines Projekts in das Projektbereitstellungsmodell finden Sie unter [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md) (Bereitstellen von SQL Server Integration Services-Projekten und -Paketen [SSIS]).  

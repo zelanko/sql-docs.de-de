@@ -11,10 +11,10 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75608029"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer ODBC-Datenquelle (SQL Server-Import/Export-Assistent)
@@ -65,7 +65,7 @@ Im nächsten Schritt stellen Sie die Verbindungsinformationen für Ihren ODBC-Tr
 
 Wenn Sie eine Verbindungszeichenfolge eingegeben haben, werden auf den Seiten **Datenquelle auswählen** oder **Ziel auswählen** sämtliche Verbindungsinformationen angezeigt, die der Assistent zum Herstellen einer Verbindung mit der Datenquelle verwenden wird, z.B. Server- und Datenbankname und Authentifizierungsmethode. Wenn Sie einen DSN eingeben, werden diese Informationen nicht angezeigt.
 
-## <a name="odbc_dsn"></a> Option 1: Bereitstellen eines DSN
+## <a name="option-1---provide-a-dsn"></a><a name="odbc_dsn"></a> Option 1: Bereitstellen eines DSN
 Wenn Sie die Verbindungsinformationen über einen Datenquellennamen bereitstellen möchten, verwenden Sie das Applet **ODBC-Datenquellen-Administrator**, um den Namen des bestehenden DSN zu finden oder einen neuen zu erstellen.
 1.  Suchen Sie im Startmenü oder in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)** . Wenn Sie nur über einen 32-Bit-Treiber verfügen oder Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)** .
 2.  Starten Sie das Applet. Das Fenster **ODBC-Datenquellen-Administrator** wird geöffnet. Das Applet sieht wie folgt aus.
@@ -88,7 +88,7 @@ Wenn Sie die Verbindungsinformationen über einen Datenquellennamen bereitstelle
     
 8.  Gehen Sie zurück zum Assistenten, und geben Sie den Datenquellennamen in das Feld **DSN** oder auf den Seiten **Datenquelle auswählen** oder **Ziel auswählen** ein. Fahren Sie mit dem nächsten Schritt des Assistenten fort.
 
-## <a name="odbc_connstring"></a> Option 2: Bereitstellen einer Verbindungszeichenfolge
+## <a name="option-2---provide-a-connection-string"></a><a name="odbc_connstring"></a> Option 2: Bereitstellen einer Verbindungszeichenfolge
 Wenn Sie die Verbindungsinformationen über eine Verbindungszeichenfolge bereitstellen möchten, lesen Sie diesem Artikel, um zu erfahren, wie Sie die notwendige Verbindungzeichenfolge abrufen.
 
 In diesem Beispiel wir die folgende Verbindungszeichenfolge verwendet, die eine Verbindung mit Microsoft SQL Server herstellt. Das hier verwendete Datenbankbeispiel ist **WideWorldImporters**, und es wird auf dem lokalen Computer eine Verbindung zu SQL Server hergestellt.

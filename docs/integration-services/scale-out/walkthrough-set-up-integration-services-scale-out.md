@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288744"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Exemplarische Vorgehensweise: Einrichten von SQL Server Integration Services (SSIS) Scale Out
@@ -43,7 +43,7 @@ Richten Sie (SSIS-) Scale Out für [!INCLUDE[ssISnoversion_md](../../includes/ss
 
 * [Aktivieren des Scale Out-Workers](#EnableWorker)
 
-## <a name="InstallMaster"></a> Installieren des Scale Out-Masters
+## <a name="install-scale-out-master"></a><a name="InstallMaster"></a> Installieren des Scale Out-Masters
 
 Zum Einrichten des Scale Out-Masters müssen Sie die Datenbank-Engine-Dienste [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] installieren. Für die Einrichtung von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] müssen Sie die Komponente „Scale Out-Master“ von SSIS installieren. 
 
@@ -91,7 +91,7 @@ Führen Sie die Anweisungen aus, die unter [Installieren von SQL Server von der 
     > [!NOTE]
     > Wenn der Scale Out-Master nicht zusammen mit der Datenbank-Engine installiert wurde und diese eine benannte Instanz darstellt, müssen Sie `SqlServerName` nach der Installation in der Dienstkonfigurationsdatei des Scale Out-Masters konfigurieren. Weitere Informationen finden Sie unter [Scale Out-Master](integration-services-ssis-scale-out-master.md).
 
-## <a name="InstallWorker"></a> Installieren des Scale Out-Workers
+## <a name="install-scale-out-worker"></a><a name="InstallWorker"></a> Installieren des Scale Out-Workers
  
 Installieren Sie [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] und dessen Komponente „Scale Out-Worker“ im [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Setup, um den Scale Out-Worker einzurichten.
 
@@ -142,20 +142,20 @@ Führen Sie die Anweisungen aus, die unter [Installieren von SQL Server von der 
     -   `/ISWORKERSVCMASTER` (optional)
     -   `/ISWORKERSVCCERT` (optional)
  
-## <a name="InstallCert"></a> Installieren des Clientzertifikats für Scale Out-Worker
+## <a name="install-scale-out-worker-client-certificate"></a><a name="InstallCert"></a> Installieren des Clientzertifikats für Scale Out-Worker
 
 Während der Installation des Scale Out-Workers wird automatisch ein Workerzertifikat auf dem Computer installiert. Außerdem wird unter `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` ein entsprechendes Clientzertifikat („SSISScaleOutWorker.cer“) installiert. Damit der Scale Out-Master vom Scale Out-Worker authentifiziert werden kann, müssen Sie dieses Clientzertifikat zum Stammspeicher des lokalen Computers mit dem Scale Out-Master hinzufügen.
   
 Doppelklicken Sie auf die CER-Datei, und klicken Sie dann im Dialogfeld „Zertifikat“ auf **Zertifikat installieren**, um das Clientzertifikat zum Stammspeicher hinzuzufügen. Der **Zertifikatimport-Assistent** wird geöffnet.  
 
-## <a name="Firewall"></a> Öffnen des Firewallports
+## <a name="open-firewall-port"></a><a name="Firewall"></a> Öffnen des Firewallports
 
 Öffnen Sie in der Windows-Firewall auf dem Computer mit dem Scale Out-Master den Port, der während der Installation des Scale Out-Masters angegeben wurde sowie den Port von SQL Server (standardmäßig 1433).
 
 > [!Note]
 > Nachdem Sie den Firewallport geöffnet haben, müssen Sie den Dienst für den Scale Out-Worker neu starten.
     
-## <a name="Start"></a> Starten der SQL Server Scale Out-Master- und -Workerdienste
+## <a name="start-sql-server-scale-out-master-and-worker-services"></a><a name="Start"></a> Starten der SQL Server Scale Out-Master- und -Workerdienste
 
 Wenn Sie bei der Installation den Starttyp der Dienste nicht auf **Automatisch** festgelegt haben, starten Sie die folgenden Dienste:
 
@@ -163,18 +163,18 @@ Wenn Sie bei der Installation den Starttyp der Dienste nicht auf **Automatisch**
 
 -   SQL Server Integration Services Scale Out-Worker 14.0 (SSISScaleOutWorker140)
 
-## <a name="EnableMaster"></a> Aktivieren des Scale Out-Masters
+## <a name="enable-scale-out-master"></a><a name="EnableMaster"></a> Aktivieren des Scale Out-Masters
 
 Klicken Sie im Dialogfeld **Katalog erstellen** auf **Diesen Server als SSIS Scale Out-Master aktivieren**, wenn Sie den SSISDB-Katalog in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] erstellen.
 
 Nach dem Erstellen des Katalogs können Sie den Scale Out-Master mithilfe des [Scale Out-Managers](integration-services-ssis-scale-out-manager.md) aktivieren.
 
-## <a name="EnableAuth"></a> Aktivieren des SQL Server-Authentifizierungsmodus
+## <a name="enable-sql-server-authentication-mode"></a><a name="EnableAuth"></a> Aktivieren des SQL Server-Authentifizierungsmodus
 Wenn Sie die [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Authentifizierung während der Installation der Datenbank-Engine nicht aktiviert haben, aktivieren Sie den SQL Server-Authentifizierungsmodus für die [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Instanz, die den SSISDB-Katalog hostet. 
 
 Paketausführung wird nicht blockiert, wenn SQL Server-Authentifizierung deaktiviert ist. Allerdings kann das Ausführungsprotokoll nicht in SSISDB schreiben.
 
-## <a name="EnableWorker"></a> Aktivieren des Scale Out-Workers
+## <a name="enable-scale-out-worker"></a><a name="EnableWorker"></a> Aktivieren des Scale Out-Workers
 
 Sie können den Scale Out-Worker mithilfe des [Scale Out-Managers](integration-services-ssis-scale-out-manager.md), der eine grafische Benutzeroberfläche bereitstellt, oder mithilfe einer gespeicherten Prozedur aktivieren.
 

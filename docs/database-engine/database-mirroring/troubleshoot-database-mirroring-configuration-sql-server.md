@@ -17,10 +17,10 @@ ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 17eccc8ce90743e49ced2db863bc85e9d297a1a5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822517"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Problembehandlung für die Datenbankspiegelungskonfiguration (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "74822517"
 |[Starten der Spiegelung mit Transact-SQL](#StartDbm)|Beschreibt, welche Reihenfolge für ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** -Anweisungen eingehalten werden muss.|  
 |[Datenbankübergreifende Transaktionen](#CrossDbTxns)|Ein automatisches Failover kann zu einer automatischen und möglicherweise falschen Auflösung von unsicheren Transaktionen führen. Aus diesem Grund werden datenbankübergreifende Transaktionen von der Datenbankspiegelung nicht unterstützt.|  
   
-##  <a name="Accounts"></a> Konten  
+##  <a name="accounts"></a><a name="Accounts"></a> Konten  
  Die Konten, unter denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, müssen ordnungsgemäß konfiguriert sein.  
   
 1.  Verfügen die Konten über die richtigen Berechtigungen?  
@@ -53,7 +53,7 @@ ms.locfileid: "74822517"
   
 2.  Wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Dienst unter dem lokalen Systemkonto ausgeführt, müssen Sie Zertifikate für die Authentifizierung verwenden. Weitere Informationen finden Sie unter [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a>Endpoints  
+##  <a name="endpoints"></a><a name="Endpoints"></a>Endpoints  
  Endpunkte müssen ordnungsgemäß konfiguriert sein.  
   
 1.  Stellen Sie sicher, dass jede Serverinstanz (Prinzipalserver, Spiegelserver und ggf. Zeuge) über einen Endpunkt der Datenbankspiegelung verfügt. Weitere Informationen finden Sie unter [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) und, je nach Form der Authentifizierung, entweder unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) oder [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
@@ -110,13 +110,13 @@ ms.locfileid: "74822517"
   
     ```  
   
-##  <a name="SystemAddress"></a> Systemadresse  
+##  <a name="system-address"></a><a name="SystemAddress"></a> Systemadresse  
  Für den Systemnamen einer Serverinstanz in einer Datenbank-Spiegelungskonfiguration können Sie jeden beliebigen Namen verwenden, der das System eindeutig bezeichnet. Die Serveradresse kann ein Systemname sein (wenn sich die Systeme in derselben Domäne befinden), ein vollqualifizierter Domänenname oder eine IP-Adresse (vorzugsweise eine statische IP-Adresse). Bei Verwendung des vollqualifizierten Domänennamens ist eine problemfreie Funktionsweise sichergestellt. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="network-access"></a><a name="NetworkAccess"></a> Network Access  
  Jede Serverinstanz muss über TCP auf die Ports der anderen Serverinstanz bzw. der anderen Serverinstanzen zugreifen können. Dies ist insbesondere von Bedeutung, wenn sich die Serverinstanzen in unterschiedlichen Domänen befinden, die sich nicht vertrauen (nicht vertrauenswürdige Domänen). Damit wird ein Großteil der Kommunikation zwischen den Serverinstanzen eingeschränkt.  
   
-##  <a name="MirrorDbPrep"></a> Mirror Database Preparation  
+##  <a name="mirror-database-preparation"></a><a name="MirrorDbPrep"></a> Mirror Database Preparation  
  Überprüfen Sie, ob die Spiegeldatenbank für die Spiegelung vorbereitet ist, unabhängig davon, ob Sie die Spiegelung zum ersten Mal starten oder nach dem Entfernen der Spiegelung erneut starten.  
   
  Stellen Sie bei der Erstellung der Spiegeldatenbank auf dem Spiegelserver sicher, dass Sie die Sicherung der Prinzipaldatenbank wiederherstellen, wobei Sie mit WITH NORECOVERY denselben Datenbanknamen angeben. Darüber hinaus müssen alle Protokollsicherungen, die nach dieser Sicherung erstellt wurden, ebenfalls mithilfe von WITH NORECOVERY angewendet werden.  
@@ -130,7 +130,7 @@ ms.locfileid: "74822517"
   
  Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
   
-##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
+##  <a name="failed-create-file-operation"></a><a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  Damit eine Datei ohne Auswirkung auf eine Spiegelungssitzung hinzugefügt werden kann, muss der Pfad der Datei auf beiden Servern vorhanden sein. Wenn Sie die Datenbankdateien bei der Erstellung der Spiegeldatenbank verschieben, kann bei einem später durchgeführten Vorgang zum Hinzufügen einer Datei in der Spiegeldatenbank ein Fehler auftreten oder die Spiegelung wird möglicherweise angehalten.  
   
  So beheben Sie das Problem:  
@@ -143,7 +143,7 @@ ms.locfileid: "74822517"
   
  Weitere Informationen finden Sie unter [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md), or [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
-##  <a name="StartDbm"></a> Starten der Spiegelung mit Transact-SQL  
+##  <a name="starting-mirroring-by-using-transact-sql"></a><a name="StartDbm"></a> Starten der Spiegelung mit Transact-SQL  
  Die Reihenfolge, in der ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** -Anweisungen ausgegeben werden, ist von großer Bedeutung.  
   
 1.  Die erste Anweisung muss auf dem Spiegelserver ausgeführt werden. Wird diese Anweisung ausgegeben, versucht der Spiegelserver nicht, Kontakt zu anderen Serverinstanzen aufzunehmen. Stattdessen weist der Spiegelserver die Datenbank an, so lange zu warten, bis der Prinzipalserver Kontakt mit dem Spiegelserver aufgenommen hat.  
@@ -155,7 +155,7 @@ ms.locfileid: "74822517"
 > [!NOTE]  
 >  Informationen zum Verwenden von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um Spiegelung zu starten, finden Sie unter [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
-##  <a name="CrossDbTxns"></a> Datenbankübergreifende Transaktionen  
+##  <a name="cross-database-transactions"></a><a name="CrossDbTxns"></a> Datenbankübergreifende Transaktionen  
  Wenn eine Datenbank im Modus für hohe Sicherheit mit automatischem Failover gespiegelt wird, kann ein automatisches Failover zu einer automatischen und möglicherweise falschen Auflösung von unsicheren Transaktionen führen. Falls auf einer der Datenbanken ein automatisches Failover stattfindet, während für eine datenbankübergreifende Transaktion gerade ein Commit ausgeführt wird, können zwischen den Datenbanken logische Inkonsistenzen auftreten.  
   
  Zu den Typen datenbankübergreifender Transaktionen, auf die sich ein automatisches Failover auswirken kann, zählen:  

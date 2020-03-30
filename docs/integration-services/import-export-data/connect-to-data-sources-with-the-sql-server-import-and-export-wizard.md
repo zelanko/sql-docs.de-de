@@ -10,10 +10,10 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4598eba24c44bddb66ef97120d4c1decc9ca7d63
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903937"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Verbinden mit Datenquellen mit dem SQL Server-Import/Export-Assistenten
@@ -40,7 +40,7 @@ Klicken Sie auf einen der Links, um mehr über das Herstellen einer Verbindung m
 ## <a name="connect-to-other-data-providers"></a>Herstellen einer Verbindung mit anderen Datenanbietern
 Weitere Informationen zum Herstellen einer Verbindung mit einer Datenquelle, die hier nicht aufgeführt ist, finden Sie unter [The Connection Strings Reference (Verweis auf Verbindungszeichenfolgen)](https://www.connectionstrings.com/). Auf dieser Website eines Drittanbieters sind Beispielverbindungszeichenfolgen aufgelistet, und es werden Angaben zu Datenanbietern und den erforderlichen Verbindungsinformationen bereitgestellt.
 
-## <a name="related"></a> Verwandte Tasks und Inhalte  
+## <a name="related-tasks-and-content"></a><a name="related"></a> Verwandte Tasks und Inhalte  
 Im Folgenden werden einige weitere grundlegenden Tasks aufgelistet.
 -   **Sehen Sie sich ein kurzes Beispiel zur Funktionsweise des Assistenten an.**
 

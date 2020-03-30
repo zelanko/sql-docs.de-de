@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 987217c1afe07b5e917f415b9a5bc0d784ab7c6d
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903772"
 ---
 # <a name="troubleshoot-scale-out"></a>Problembehandlung in Scale Out
@@ -32,14 +32,14 @@ Führen Sie die unten aufgeführten Schritte nacheinander aus, bis Ihr Problem g
 ### <a name="symptoms"></a>Symptome 
 -   Der Scale Out-Master kann keine Verbindung mit SSISDB herstellen. 
 
--   Die Master-Eigenschaften können im Scale Out-Manager nicht angezeigt werden.
+-   Die Mastereigenschaften können im Scale Out-Manager nicht angezeigt werden.
 
 -   Die Mastereigenschaften werden in der Ansicht `[catalog].[master_properties]` nicht aufgefüllt.
 
 ### <a name="solution"></a>Lösung
 1.  Überprüfen Sie, ob Scale Out aktiviert ist.
 
-    Führen Sie im Objekt-Explorer von SSMS einen Rechtsklick auf **SSISDB** aus, und überprüfen Sie, ob das **Feature Scale Out aktiviert ist**.
+    Führen Sie im Objekt-Explorer von SSMS einen Rechtsklick auf **SSISDB** aus, und überprüfen Sie, ob das **Scale Out-Feature aktiviert ist**.
 
     ![Scale Out ist aktiviert](media/isenabled.PNG)
 

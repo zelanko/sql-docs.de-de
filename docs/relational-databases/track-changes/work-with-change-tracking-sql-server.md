@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 905c1dc08c2d2e766425b62d7e0a920730ae2b41
-ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78256995"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Verwenden der Änderungsnachverfolgung (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "78256995"
 
   Anwendungen, die die Änderungsnachverfolgung verwenden, müssen in der Lage sein,  Überarbeitungen abzurufen, diese auf einen anderen Datenspeicher anzuwenden und die Quelldatenbank zu aktualisieren. In diesem Thema wird beschrieben, wie diese Tasks ausgeführt werden. Zudem wird beschrieben, welche Rolle die Änderungsnachverfolgung spielt, wenn ein Failover auftritt und eine Datenbank von einer Sicherung wiederhergestellt werden muss.  
   
-##  <a name="Obtain"></a> Abrufen von Änderungen mithilfe der Änderungsnachverfolgungsfunktionen  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> Abrufen von Änderungen mithilfe der Änderungsnachverfolgungsfunktionen  
  Beschreibt, wie mithilfe der Änderungsnachverfolgungsfunktionen Änderungen und Informationen zu den in einer Datenbank vorgenommenen Änderungen abgerufen werden können.  
   
 ### <a name="about-the-change-tracking-functions"></a>Informationen zu Änderungsnachverfolgungsfunktionen  
@@ -295,7 +295,7 @@ Die Aktivierung von Momentaufnahmeisolation und Änderungsnachverfolgung in ders
 > [!NOTE]  
 >  Zur Auswahl des richtigen Ansatzes für die Anwendung, wenn Sie die Änderungsnachverfolgung (oder benutzerdefinierte Nachverfolgungsmechanismen) verwenden, sind umfangreiche Analysen erforderlich. Aus diesem Grund ist es viel einfacher, die Momentaufnahmeisolation zu verwenden.  
   
-##  <a name="Handles"></a> Handhabung der Änderungen an einer Datenbank durch die Änderungsnachverfolgung  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a> Handhabung der Änderungen an einer Datenbank durch die Änderungsnachverfolgung  
  Einige Anwendungen, die die Änderungsnachverfolgung verwenden, führen die bidirektionale Synchronisierung mit einem anderen Datenspeicher aus. Das heißt, der andere Datenspeicher wird mit den in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank vorgenommenen Änderungen aktualisiert, und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank wird mit den in dem anderen Datenspeicher vorgenommenen Änderungen aktualisiert.  
   
  Zur Aktualisierung der lokalen Datenbank mit Änderungen von einem anderen Datenspeicher muss die Anwendung die folgenden Vorgänge ausführen:  
@@ -414,7 +414,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  Es besteht die Möglichkeit, dass die bei der Momentaufnahmetransaktion aktualisierte Zeile bereits in einer anderen Transaktion aktualisiert wurde, nachdem die Momentaufnahmetransaktion gestartet wurde. In diesem Fall tritt ein Momentaufnahmeisolations-Updatekonflikt auf und bewirkt, dass die Transaktion beendet wird. Wiederholen Sie in diesem Fall das Update. Dies führt dann dazu, dass ein Änderungsnachverfolgungskonflikt erkannt wird und keine Zeilen geändert werden.  
   
-##  <a name="DataRestore"></a> Änderungsnachverfolgung und Datenwiederherstellung  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a> Änderungsnachverfolgung und Datenwiederherstellung  
  Bei Anwendungen, für die eine Synchronisierung erforderlich ist, muss der Fall berücksichtigt werden, dass eine für die Änderungsnachverfolgung aktivierte Datenbank eine frühere Version der Daten wiederherstellt. Dies kann auftreten, wenn eine Datenbank aus einer Sicherung wiederhergestellt wird, wenn ein Failover zu einer asynchronen Spiegeldatenbank besteht oder wenn beim Protokollversand ein Fehler auftritt. Das folgende Beispiel veranschaulicht dieses Szenario:  
   
 1.  Für Tabelle T1 werden Änderungen nachverfolgt, und die minimal gültige Version für die Tabelle ist 50.  

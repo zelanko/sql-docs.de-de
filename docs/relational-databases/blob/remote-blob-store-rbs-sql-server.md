@@ -14,10 +14,10 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258185"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "75258185"
  Wenn Sie RBS verwenden, sollten Sie in regelmäßigen Abständen den symmetrischen Schlüssel des Anmeldeinformationsspeichers drehen. Dies ist eine allgemeine bewährte Sicherheitsmethode, um organisationsweite Sicherheitsrichtlinien zu erfüllen.  Eine Möglichkeit, den symmetrischen Schlüssel des RBS-Anmeldeinformationsspeichers zu rotieren, ist die Verwendung des [unten aufgeführten Skripts](#Key_rotation) in der RBS-Datenbank.  Mit diesem Skript können Sie auch zu stärkeren Verschlüsselungsstärkeeigenschaften migrieren, z.B. Algorithmus oder Schlüssellänge. Sichern Sie Ihre Datenbank vor der Schlüsselrotation.  Am Ende des Skripts finden Sie einige Überprüfungsschritte.  
 Wenn Ihre Sicherheitsrichtlinien verschiedene Schlüsseleigenschaften (z.B. Algorithmus oder Schlüssellänge) aus den angebotenen benötigen, kann das Skript als Vorlage verwendet werden. Ändern Sie die Schlüsseleigenschaften an zwei Stellen: 1) die Erstellung des temporären Schlüssels, 2) die Erstellung des permanenten Schlüssels.  
   
-##  <a name="rbsresources"></a> RSB-Ressourcen  
+##  <a name="rbs-resources"></a><a name="rbsresources"></a> RSB-Ressourcen  
   
  **RSB-Beispiele**  
  In den auf [CodePlex](https://go.microsoft.com/fwlink/?LinkId=210190) verfügbaren RSB-Beispielen wird veranschaulicht, wie Sie eine RBS-Anwendung entwickeln und einen benutzerdefinierten RBS-Anbieter installieren.  
@@ -90,7 +90,7 @@ Wenn Ihre Sicherheitsrichtlinien verschiedene Schlüsseleigenschaften (z.B. Algo
  **RBS-Blog**  
  Der [RBS-Blog](https://go.microsoft.com/fwlink/?LinkId=210315) bietet zusätzliche Informationen, durch die Sie RBS besser verstehen, bereitstellen und verwalten können.  
   
-##  <a name="Key_rotation"></a> Skript zur Schlüsselrotation  
+##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> Skript zur Schlüsselrotation  
  In diesem Beispiel wird eine gespeicherte Prozedur namens `sp_rotate_rbs_symmetric_credential_key` erstellt, um den aktuell verwendeten symmetrischen Schlüssel des RBS-Anmeldeinformationsspeichers  
 durch einen Schlüssel Ihrer Wahl zu ersetzen.  Sie sollten dies tun, wenn eine Sicherheitsrichtlinie   
 die regelmäßige Rotation von Schlüsseln erfordert oder der Algorithmus besondere Anforderungen hat.  

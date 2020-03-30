@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5a5124519bd95ec02e93a007d9881ec80814cfc8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989322"
 ---
 # <a name="components-of-ole-db-driver-for-sql-server"></a>Komponenten des OLE DB-Treibers für SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "67989322"
 
   Der OLE DB-Treiber für SQL Server enthält die folgenden Komponenten:  
 
-|Komponente|Beschreibung|  
+|Komponente|BESCHREIBUNG|  
 |---------------|-----------------|  
 |msoledbsql.dll|Die DLL-Datei (Dynamic Link Library), die alle Funktionen des OLE DB-Treibers für SQL Server enthält|  
 |msoledbsqlr.rll|Die zugehörige Ressourcendatei für die Bibliothek des OLE DB-Treibers für SQL Server|   

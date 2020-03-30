@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
 ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75884054"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Herstellen einer Verbindung mit und Abfragen von SQL Server mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-name-sos"></a>Schnellstart: Herstellen einer Verbindung mit und Abfragen von SQL Server mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 In dieser Schnellstartanleitung erfahren Sie, wie Sie mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung mit SQL Server herstellen und anschließend Transact-SQL-Anweisungen (T- SQL) verwenden, um die in [!INCLUDE[name-sos](../includes/name-sos-short.md)]-Tutorials verwendete *TutorialDB* zu erstellen.
 

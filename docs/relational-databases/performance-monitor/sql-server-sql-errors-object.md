@@ -14,19 +14,19 @@ ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: b5f4b6a6d12f8f4eee929dfca59906fc418bfcd8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995663"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server, SQL-Fehler-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Durch das Objekt **SQLServer:SQL Errors** in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Indikatoren zum Überwachen von **SQL-Fehlern**zur Verfügung gestellt.  
   
- Diese Tabelle enthält eine Beschreibung der **SQL Errors**-Zähler in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Diese Tabelle enthält eine Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Errors **-Zähler in** .  
   
-|Leistungsindikatoren von SQL-Fehler bei SQL Server|Beschreibung|  
+|Leistungsindikatoren von SQL-Fehler bei SQL Server|BESCHREIBUNG|  
 |------------------------------------|-----------------|  
 |**Fehler/Sekunde**|Anzahl der Fehler/Sekunde.|  
   

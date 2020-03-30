@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 417bf44993ffc850da03d090e36c29cae472c104
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015833"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen (OLE DB)
@@ -83,7 +83,7 @@ ms.locfileid: "68015833"
 ## <a name="bcp-types-in-msoledbsqlh"></a>BCP-Typen in msoledbsql.h  
  Die folgenden Typen werden in msoledbsql.h definiert. Diese Typen werden mit dem Parameter *eUserDataType* von IBCPSession::BCPColFmt in OLE DB übergeben.  
   
-|Dateispeichertyp|Datentyp in der Hostdatei|Für die Verwendung mit IBCPSession::BCPColFmt in msoledbsql.h einzugeben|value|  
+|Dateispeichertyp|Datentyp in der Hostdatei|Für die Verwendung mit IBCPSession::BCPColFmt in msoledbsql.h einzugeben|Wert|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  

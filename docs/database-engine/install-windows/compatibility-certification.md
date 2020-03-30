@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73632933"
 ---
 # <a name="compatibility-certification"></a>Kompatibilitätszertifizierung
@@ -31,7 +31,7 @@ ms.locfileid: "73632933"
 
 Die Kompatibilitätszertifizierung ermöglicht es Unternehmen, für eine lokale, cloudbasierte oder edgebasierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank ein Upgrade vorzunehmen und diese zu erneuern, um Risiken im Zusammenhang mit der Anwendungskompatibilität zu vermeiden. 
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] (sowie verwaltete Instanzen) basieren auf derselben [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Mithilfe dieser gemeinsam verwendeten [!INCLUDE[ssde_md](../../includes/ssde_md.md)] kann eine Benutzerdatenbank problemlos von einer lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] migriert werden. Der Anwendungscode wird dabei in der Datenbank als [!INCLUDE[tsql](../../includes/tsql-md.md)] ausgeführt und funktioniert weiterhin so wie auf dem Quellsystem.
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sowie verwaltete Instanzen) basieren auf derselben [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. Mithilfe dieser gemeinsam verwendeten [!INCLUDE[ssde_md](../../includes/ssde_md.md)] kann eine Benutzerdatenbank problemlos von einer lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] migriert werden. Der Anwendungscode wird dabei in der Datenbank als [!INCLUDE[tsql](../../includes/tsql-md.md)] ausgeführt und funktioniert weiterhin so wie auf dem Quellsystem.
 
 Bei einem neuen Release von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Standardkompatibilitätsgrad auf die Version der [!INCLUDE[ssDE](../../includes/ssde-md.md)] festgelegt. Der Kompatibilitätsgrad vorheriger Versionen wird jedoch beibehalten, um die Kompatibilität mit vorhandenen Anwendungen sicherzustellen. Diese Kompatibilitätsmatrix finden Sie unter [Argumente](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats).
 Eine Anwendung, die für eine bestimmte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version zertifiziert wurde und deswegen mit dieser kompatibel ist, besitzt daher gleichzeitig eine Zertifizierung für den Standardkompatibilitätsgrad dieser Version.
@@ -57,7 +57,7 @@ Solange für eine Anwendung keine Verbesserungen genutzt werden müssen, die nur
 
 Für Neuentwicklungen oder für den Fall, dass eine bestehende Anwendung neue Features wie die [intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md) sowie neuen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code nutzen muss, sollten Sie ein Upgrade auf den neuesten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren Datenbank-Kompatibilitätsgrad planen und Ihre Anwendung so zertifizieren, dass sie mit diesem Kompatibilitätsgrad verwendet werden kann. Ausführlichere Informationen zu einem Upgrade des Datenbank-Kompatibilitätsgrads finden Sie unter [Bewährte Methoden zum Aktualisieren des Datenbank-Kompatibilitätsgrads](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level).
    
-### <a name="queryplan_shape"></a> Gründe für die Form des Abfrageplans      
+### <a name="why-query-plan-shape"></a><a name="queryplan_shape"></a> Gründe für die Form des Abfrageplans      
 Die Abfrageplanform bezieht sich auf die visuelle Darstellung der verschiedenen Operatoren, die einen Abfrageplan bilden. Dies schließt Operatoren wie Suchvorgänge, Scans, Joins und Sortierungen sowie die Verbindungen zwischen diesen ein, die den Datenfluss und die Reihenfolge der Vorgänge angeben, die ausgeführt werden müssen, um das gewünschte Resultset zu erzeugen. Die Abfrageplanform wird durch den Abfrageoptimierer bestimmt.
 
 Um die Abfrageleistung während eines Upgrades vorhersagbar zu halten, besteht eines der grundlegenden Ziele darin sicherzustellen, dass dieselbe Abfrageplanform verwendet wird. Dies kann erreicht werden, indem der Datenbank-Kompatibilitätsgrad nicht unmittelbar nach einem Upgrade geändert wird, auch wenn die zugrundeliegende [!INCLUDE[ssde_md](../../includes/ssde_md.md)] über unterschiedliche Versionen verfügt. Wenn im Ökosystem der Abfrageausführung nichts anderes geändert wird, z. B. bedeutende Änderungen an verfügbaren Ressourcen oder die Datenverteilung in den zugrundeliegenden Daten, sollte die Leistung einer Abfrage unverändert bleiben. 
@@ -69,7 +69,7 @@ Weitere Informationen finden Sie im [Handbuch zur Architektur der Abfrageverarbe
 ## <a name="compatibility-certification-benefits"></a>Nutzen der Kompatibilitätszertifizierung
 Die Datenbankzertifizierung auf Grundlage der Kompatibilität ist in mehrfacher Hinsicht sinnvoller als eine Zertifizierung, die auf Versionsbezeichnungen basiert:
 
--  **Entkopplung der Anwendungszertifizierung von der Plattform:** Für Anwendungen, die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen ausführen müssen, sind wegen der gemeinsam verwendeten [!INCLUDE[ssde_md](../../includes/ssde_md.md)] keine unterschiedlichen Zertifizierungsprozesse für Azure und lokale Umgebungen erforderlich.
+-  **Entkopplung der Anwendungszertifizierung von der Plattform:** Für Anwendungen, die [!INCLUDE[ssde_md](../../includes/ssde_md.md)]-Abfragen ausführen müssen, sind wegen der gemeinsam verwendeten [!INCLUDE[tsql](../../includes/tsql-md.md)] keine unterschiedlichen Zertifizierungsprozesse für Azure und lokale Umgebungen erforderlich.
 -  **Verringerung der Upgraderisiken:** Bei der Modernisierung von Datenbankplattformen können die Upgradezyklen für die Anwendungs- und Datenbankebene getrennt werden, was zu weniger Ausfallzeiten und einem verbesserten Change Management führt.
 -  **Upgrade ohne Codeänderungen:** Bei einem Upgrade auf eine neue Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] sind keine Codeänderungen erforderlich, wenn der Kompatibilitätsgrad und das Quellsystem beibehalten werden. Eine Rezertifizierung ist erst erforderlich, wenn die Anwendung Verbesserungen nutzen muss, die nur von höheren Datenbank-Kompatibilitätsgraden bereitgestellt werden.
 - **Verbesserte Verwaltbarkeit und Skalierbarkeit:** Eine Anpassung von Anwendungen ist nicht erforderlich. Außerdem werden Verbesserungen nicht durch den Datenbank-Kompatibilitätsgrad eingeschränkt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält beispielsweise folgende Optimierungen: 

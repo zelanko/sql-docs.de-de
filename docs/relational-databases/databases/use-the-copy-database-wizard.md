@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127119"
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
@@ -49,7 +49,7 @@ Der Assistent zum Kopieren von Datenbanken verschiebt oder kopiert Datenbanken u
 -   Zeitpunkt zum Verschieben oder Kopieren der Datenbank(en) planen.  
   
 
-##  <a name="Restrictions"></a> Einschränkungen  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Der Assistent zum Kopieren von Datenbanken ist nicht in der Express Edition verfügbar.  
   
@@ -81,7 +81,7 @@ Der Assistent zum Kopieren von Datenbanken verschiebt oder kopiert Datenbanken u
 > **WICHTIG!** Die Methode zum **Trennen und Anfügen** bewirkt, dass für den Besitz der Quell- und Zieldatenbank die Anmeldung festgelegt wird, die den **Assistenten zum Kopieren der Datenbank**ausführt.  Informationen zum Ändern des Besitzes einer Datenbank finden Sie unter [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) .
   
   
-##  <a name="Prerequisites"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
 -   Stellen Sie sicher, dass SQL Server-Agent auf dem Zielserver gestartet wird.  
 
 -   Stellen Sie sicher, dass die Daten- und Protokolldateiverzeichnisse auf dem Quellserver über den Zielserver erreicht werden können.
@@ -90,7 +90,7 @@ Der Assistent zum Kopieren von Datenbanken verschiebt oder kopiert Datenbanken u
 
 > **WICHTIG!** Unter der Methode zum **Trennen und Anfügen** -Methode tritt ein Fehler beim Kopieren oder Verschieben auf, wenn kein Integration Services-Proxykonto verwendet wird.  In bestimmten Situationen wird die Quelldatenbank nicht erneut an den Quellserver angefügt und alle NTFS-Sicherheitsberechtigungen werden aus den Daten- und Protokolldateien entfernt.  Navigieren Sie in diesem Fall zu den Dateien, wenden Sie die entsprechenden Berechtigungen erneut an, und fügen Sie die Datenbank anschließend erneut an Ihre Instanz von SQL Server an.
   
-##  <a name="Recommendations"></a> Empfehlungen  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Um die optimale Leistung einer aktualisierten Datenbank sicherzustellen, führen Sie [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (Statistikupdate) für die aktualisierte Datenbank aus.  
   
@@ -98,10 +98,10 @@ Der Assistent zum Kopieren von Datenbanken verschiebt oder kopiert Datenbanken u
   
 
   
-###  <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen auf dem Quell- und Zielserver ein Mitglied der festen Serverrolle **sysadmin** sein.  
   
-##  <a name="Overview"></a> Seiten des Assistenten zum Kopieren von Datenbanken 
+##  <a name="the-copy-database-wizard-pages"></a><a name="Overview"></a> Seiten des Assistenten zum Kopieren von Datenbanken 
 Starten Sie den **Assistenten zum Kopieren von Datenbanken** in SQL Server Management Studio über den **Objekt-Explorer** , und erweitern Sie dann die Option **Datenbanken**.  Klicken Sie mit der rechten Maustaste auf eine Datenbank, zeigen Sie auf **Tasks**, und klicken Sie dann auf **Datenbank kopieren**.  Wenn die Seite **Willkommen des Assistenten zum Kopieren von Datenbanken** angezeigt wird, klicken Sie auf **Weiter**.
 
 
@@ -295,7 +295,7 @@ Zeigt eine Zusammenfassung der ausgewählten Optionen an.  Klicken Sie auf **Zur
 -    **Meldung**  
 Stellt alle von jedem Schritt zurückgegebenen Meldungen bereit.
 
-##  <a name="Examples"></a> Beispiele
+##  <a name="examples"></a><a name="Examples"></a> Beispiele
 ### <a name="common-steps"></a>**Allgemeine Schritte** 
 Unabhängig davon, ob Sie sich für **Verschieben** oder **Kopieren**, **Trennen und Anfügen** oder **SMO**entscheiden, sind die unten aufgeführten fünf Schritte identisch.  Aus Gründen der Übersichtlichkeit sind die Schritte hier einmal aufgelistet und alle Beispiele beginnen mit **Schritt 6**.
 
@@ -384,12 +384,12 @@ In diesem Beispiel wird die `Sales` -Datenbank als `SalesCopy` auf derselben Ins
 14. Starten Sie den neu erstellten SQL Server-Agentauftrag `SalesCopy weekly refresh`manuell.  Überprüfen Sie den Auftragsverlauf, und stellen Sie sicher, dass `SalesCopy` jetzt auf der Instanz vorhanden ist.
 
   
-##  <a name="FollowUp"></a> Nächster Schritt: Nach dem Upgrade einer Datenbank  
+##  <a name="follow-up-after-upgrading-a-database"></a><a name="FollowUp"></a> Nächster Schritt: Nach dem Upgrade einer Datenbank  
  Nachdem Sie mithilfe des Assistenten zum Kopieren von Datenbanken eine Datenbank von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben, ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **Volltextupgrade-Option** . Wenn die Upgradeoption auf **Importieren** oder **Neu erstellen**festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf **Importieren**festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Informationen zum Anzeigen oder Ändern der Einstellung der Eigenschaft **Volltextupgrade-Option** finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank auf 90 festgelegt, wird er auf 100 erhöht, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]entspricht. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
  
- ## <a name="Post"></a> Überlegungen nach dem Kopieren oder Verschieben
+ ## <a name="post-copy-or-move-considerations"></a><a name="Post"></a> Überlegungen nach dem Kopieren oder Verschieben
  Erwägen Sie die Ausführung der folgenden Schritte nach dem **Kopieren** oder **Verschieben**:
 -    Besitzer der Datenbank(en) ändern, wenn die Methode zum Trennen und Anfügen verwendet wird.
 -    Serverobjekte auf dem Quellserver nach dem **Verschieben**löschen.

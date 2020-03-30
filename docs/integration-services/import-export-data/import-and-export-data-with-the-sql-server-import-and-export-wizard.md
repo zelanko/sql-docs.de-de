@@ -23,10 +23,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e8838c92e2af7ca79ad1aa69972e46be0a1f64c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287434"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten
@@ -45,7 +45,7 @@ Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes
     \- oder \-
 -   **Beispiel** Sehen Sie sich ein einfaches Beispiel auf der Seite [Get started with this simple example of the Import and Export Wizard (Erste Schritte mit diesem einfachen Beispiel für den Import/Export-Assistenten)](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md) an, um einen schnellen Überblick über die verschiedenen Bildschirme in einer typischen Sitzung zu erhalten.  
 
-##  <a name="wizardSources"></a> Welche Quellen und Ziele können verwendet werden?  
+##  <a name="what-sources-and-destinations-can-i-use"></a><a name="wizardSources"></a> Welche Quellen und Ziele können verwendet werden?  
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent kann Daten in und aus den Datenquellen kopieren, die in der folgenden Tabelle aufgeführt sind. Sie müssen möglicherweise zusätzliche Dateien herunterladen und installieren, um eine Verbindung mit einigen dieser Datenquellen herstellen zu können.
  
 | Datenquelle | Muss ich weitere Dateien herunterladen? |
@@ -87,7 +87,7 @@ Weitere Informationen zum Herstellen einer Verbindung mit einer Datenquelle, die
 > [!TIP]
 > Drücken Sie auf einer beliebigen Seite oder in einem beliebigen Dialogfeld des Assistenten F1, um die Dokumentation für die aktuelle Seite anzuzeigen.   
   
-##  <a name="wizardSSIS"></a> Der Assistent verwendet SQL Server Integration Services (SSIS)  
+##  <a name="the-wizard-uses-sql-server-integration-services-ssis"></a><a name="wizardSSIS"></a> Der Assistent verwendet SQL Server Integration Services (SSIS)  
  Der Assistent verwendet SQL Server Integration Services (SSIS) zum Kopieren von Daten. SSIS ist ein Tool zum Extrahieren, Transformieren und Laden von Daten (ETL). Auf den Seiten des Assistenten wird Terminologie von SSIS verwendet.
   
  In SSIS ist das **Paket**die Basiseinheit. Der Assistent erstellt ein SSIS-Paket im Arbeitsspeicher, während Sie die Seiten des Assistenten durchlaufen und Optionen festlegen.    

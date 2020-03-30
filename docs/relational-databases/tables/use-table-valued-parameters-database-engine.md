@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72796640"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Verwenden von Tabellenwertparameter (Datenbank-Engine)
@@ -43,7 +43,7 @@ Tabellenwertparameter entsprechen Parameterarrays in OLE DB und ODBC, bieten jed
 
 [Beispiel](#Example)
 
-## <a name="Benefits"></a> Vorteile
+## <a name="benefits"></a><a name="Benefits"></a> Vorteile
 
 Der Bereich eines Tabellenwertparameters entspricht wie auch bei anderen Parametern der gespeicherten Prozedur, der Funktion oder dem dynamischen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Text. Ebenso entspricht der Bereich einer Tabellentypvariablen dem Bereich einer beliebigen lokalen Variablen, die mit einer DECLARE-Anweisung erstellt wurde. Sie können Tabellenwertvariablen in dynamischen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen deklarieren und diese Variablen dann als Tabellenwertparameter an gespeicherte Prozeduren und Funktionen übergeben.
 
@@ -58,10 +58,10 @@ Tabellenwertparameter bieten mehr Flexibilität und in einigen Fällen auch eine
 - Ermöglichen die Angabe von Sortierreihenfolge und eindeutigen Schlüsseln über den Client
 - Werden bei der Verwendung in einer gespeicherten Prozedur wie eine temporäre Tabelle zwischengespeichert. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]werden Tabellenwertparameter auch für parametrisierte Abfragen zwischengespeichert.
 
-## <a name="Permissions"></a> Berechtigungen
+## <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
 Um eine Instanz eines benutzerdefinierten Tabellentyps zu erstellen oder eine gespeicherte Prozedur mit einem Tabellenwertparameter aufzurufen, muss der Benutzer über die EXECUTE-Berechtigung für den Typ oder für das Schema bzw. die Datenbank, das/die den Typ enthält, verfügen.
 
-## <a name="Restrictions"></a> Einschränkungen
+## <a name="restrictions"></a><a name="Restrictions"></a> Einschränkungen
 
 Für Tabellenwertparameter gelten die folgenden Einschränkungen:
 
@@ -69,7 +69,7 @@ Für Tabellenwertparameter gelten die folgenden Einschränkungen:
 - Tabellenwertparameter müssen als READONLY-Eingabeparameter an [!INCLUDE[tsql](../../includes/tsql-md.md)] -Routinen übergeben werden. Für Tabellenwertparameter im Hauptteil einer Routine können keine DML-Vorgänge wie UPDATE, DELETE oder INSERT durchgeführt werden.
 - Tabellenwertparameter können nicht als Ziel einer SELECT INTO-Anweisung oder einer INSERT EXEC-Anweisung verwendet werden. Tabellenwertparameter können in der FROM-Klausel von SELECT INTO oder in der Zeichenfolge oder gespeicherten Prozedur von INSERT EXEC enthalten sein.
 
-## <a name="BulkInsert"></a> Tabellenwertparameter und BULK INSERT-Vorgänge
+## <a name="table-valued-parameters-vs-bulk-insert-operations"></a><a name="BulkInsert"></a> Tabellenwertparameter und BULK INSERT-Vorgänge
 
 Die Verwendung von Tabellenwertparametern ist mit anderen Methoden zur Verwendung setbasierter Variablen vergleichbar. Sehr große Datasets können mit Tabellenwertparametern jedoch häufig schneller verarbeitet werden. Im Vergleich zu Massenvorgängen, bei denen die Startkosten höher sind, eignen sich Tabellenwertparameter optimal zum Einfügen von weniger als 1000 Zeilen.
 
@@ -77,7 +77,7 @@ Wiederverwendete Tabellenparameter nutzen den Zwischenspeicher für temporäre T
 
 Tabellenwertparameter eignen sich mindestens so gut wie vergleichbare Parameterarray-Implementierungen.
 
-## <a name="Example"></a> Beispiel
+## <a name="example"></a><a name="Example"></a> Beispiel
 
 Im folgenden Beispiel wird [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet. Es zeigt, wie Sie einen Tabellenwertparameter erstellen, eine Variable deklarieren, die darauf verweist, Daten in die Parameterliste einfügen und die Werte dann an eine gespeicherte Prozedur in der AdventureWorks-Datenbank übergeben.
 

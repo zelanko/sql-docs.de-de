@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 1e2fff64739942539fd4fc34c736e32578555f93
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015350"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Eigenschaften und Verhaltensweisen von Rowsets
@@ -29,7 +29,7 @@ ms.locfileid: "68015350"
 
   Dies sind die Eigenschaften von Rowsets im OLE DB-Treiber für SQL Server.  
   
-|Eigenschafts-ID|Beschreibung|  
+|Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |DBPROP_ABORTPRESERVE|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Das Verhalten eines Rowsets, nachdem ein Abbruchvorgang von dieser Eigenschaft bestimmt wurde.<br /><br /> VARIANT_FALSE: Der OLE DB-Treiber für SQL Server markiert Rowsets nach einem Abbruchvorgang als ungültig. Die Funktionalität des Rowsetobjekts ist beinahe verloren. Es werden nur **IUnknown**-Vorgänge und die Freigabe ausstehender Zeilen- und Accessorhandles unterstützt.<br /><br /> VARIANT_TRUE: Der OLE DB-Treiber für SQL Server behält ein gültiges Rowset bei.|  
 |DBPROP_ACCESSORDER|R/W: Lesen/Schreiben<br /><br /> Standardwert: DBPROPVAL_AO_RANDOM<br /><br /> Beschreibung: Reihenfolge des Zugriffs. Die Reihenfolge, in der auf die Spalten im Rowset zugegriffen werden muss.<br /><br /> DBPROPVAL_AO_RANDOM: Auf die Spalte kann in beliebiger Reihenfolge zugegriffen werden.<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: Auf als Speicherobjekte gebundene Spalten kann nur in einer sequenziellen, von der Spaltenordnungszahl bestimmten Reihenfolge zugegriffen werden.<br /><br /> DBPROPVAL_AO_SEQUENTIAL: Auf alle Spalten muss in einer sequenziellen, von der Spaltenordnungszahl bestimmten Reihenfolge zugegriffen werden.|  
@@ -91,7 +91,7 @@ ms.locfileid: "68015350"
   
  Der OLE DB-Treiber für SQL Server definiert den anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERROWSET wie in dieser Tabelle dargestellt.  
   
-|Eigenschafts-ID|Beschreibung|  
+|Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |SSPROP_COLUMN_ID|Spalte: ColumnID<br /><br /> R/W: Schreibgeschützt<br /><br /> Typ: VT_U12 &#124; VT_ARRAY<br /><br /> Standardwert: VT_EMPTY<br /><br /> Beschreibung: Ein Array ganzzahliger Werte, die die Ordnungsposition (1-basiert) der Ergebnisspalte einer COMPUTE-Klausel innerhalb der aktuellen [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT-Anweisung darstellen. Dies ist die OLE DB-Treiber für SQL Server-Entsprechung des ODBC SQL_CA_SS_COLUMN_ID-Attributs.|  
 |SSPROP_DEFERPREPARE|Spalte: Nein<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standardwert: VARIANT_TRUE<br /><br /> Beschreibung: VARIANT_TRUE: Bei der vorbereiteten Ausführung wird die Befehlsvorbereitung verzögert, bis **ICommand::Execute** aufgerufen oder ein Metaeigenschaftenvorgang ausgeführt wird. Wenn die Eigenschaft festgelegt ist auf<br /><br /> VARIANT_FALSE: Die Anweisung wird vorbereitet, wenn **ICommandPrepare::Prepare** ausgeführt wird.|  

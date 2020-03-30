@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843777"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Überwachen und Behandeln von Problemen der Datenmigration (Stretch Database)
@@ -33,10 +33,10 @@ ms.locfileid: "73843777"
   
  ![Stretch-Database-Monitor](../../sql-server/stretch-database/media/stretch-monitor.PNG "Stretch-Database-Monitor")  
   
-##  <a name="Migration"></a> Überprüfen des Status der Datenmigration in einer dynamischen Verwaltungsansicht  
+##  <a name="check-the-status-of-data-migration-in-a-dynamic-management-view"></a><a name="Migration"></a> Überprüfen des Status der Datenmigration in einer dynamischen Verwaltungsansicht  
  Öffnen Sie die dynamische Verwaltungssicht **sys.dm_db_rda_migration_status** , um anzuzeigen, wie viele Batches und Datenzeilen migriert wurden. Weitere Informationen finden Sie unter [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
-##  <a name="Firewall"></a> Problembehandlung der Datenmigration  
+##  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> Problembehandlung der Datenmigration  
  **Zeilen aus meiner Stretch-aktivierten Tabelle werden nicht zu Azure migriert. Wo liegt das Problem?**  
  Es gibt mehrere Probleme, die die Migration beeinflussen können. Überprüfen Sie folgende Aspekte.  
   

@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286844"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Bewährte Methoden für die Leistung und Konfigurationsrichtlinien für SQL Server für Linux
@@ -31,7 +31,7 @@ Es wird empfohlen, nach der Installation von SQL Server für Linux die folgende
 
 - **Verwenden von PROCESS AFFINITY für Knoten und/oder CPUs**
 
-   Es wird empfohlen, `ALTER SERVER CONFIGURATION` zu verwenden, um `PROCESS AFFINITY` für alle **NUMANODE**-Elemente und/oder CPUs festzulegen, die Sie für SQL Server (in der Regel für alle Knoten und CPUs) unter Linux verwenden. Die Prozessoraffinität hilft dabei, das Verhalten von Linux und SQL effizient zu planen. Die Verwendung der Option **NUMANODE** ist die einfachste Methode. Beachten Sie, dass Sie **PROCESS AFFINITY** auch dann verwenden sollten, wenn auf Ihrem Computer nur ein einzelner NUMA-Knoten vorhanden ist.  Weitere Informationen zum Festlegen von **PROCESS AFFINITY** finden Sie in der Dokumentation zu [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md).
+   Es wird empfohlen, `ALTER SERVER CONFIGURATION` zu verwenden, um `PROCESS AFFINITY` für alle **NUMANODE**-Elemente und/oder CPUs festzulegen, die Sie für SQL Server (in der Regel für alle Knoten und CPUs) unter Linux verwenden. Die Prozessoraffinität hilft dabei, das Verhalten von Linux und SQL effizient zu planen. Die Verwendung der Option **NUMANODE** ist die einfachste Methode. Beachten Sie, dass Sie **PROCESS AFFINITY** auch dann verwenden sollten, wenn auf Ihrem Computer nur ein einzelner NUMA-Knoten vorhanden ist.  Weitere Informationen zum Festlegen von [PROCESS AFFINITY](../t-sql/statements/alter-server-configuration-transact-sql.md) finden Sie in der Dokumentation zu **ALTER SERVER CONFIGURATION**.
 
 - **Konfigurieren mehrerer tempdb-Datendateien**
 
@@ -61,7 +61,7 @@ Für das Linux-Betriebssystem werden die folgenden Einstellungen empfohlen, um b
 
 In der folgenden Tabelle finden Sie Empfehlungen für die CPU-Einstellungen:
 
-| Einstellung | Wert | Weitere Informationen |
+| Einstellung | value | Weitere Informationen |
 |---|---|---|
 | CPU frequency governor (Kontrolle der CPU-Häufigkeit) | Leistung | Dokumentation zum Befehl **cpupower** |
 | ENERGY_PERF_BIAS | Leistung | Dokumentation zum Befehl **x86_energy_perf_policy** |
@@ -70,7 +70,7 @@ In der folgenden Tabelle finden Sie Empfehlungen für die CPU-Einstellungen:
 
 In der folgenden Tabelle finden Sie Empfehlungen für die Datenträgereinstellungen:
 
-| Einstellung | Wert | Weitere Informationen |
+| Einstellung | value | Weitere Informationen |
 |---|---|---|
 | disk readahead | 4096 | Dokumentation zum Befehl **blockdev** |
 | sysctl-Einstellungen | kernel.sched_min_granularity_ns = 10.000.000<br/>kernel.sched_wakeup_granularity_ns = 15.000.000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | Dokumentation zum Befehl **sysctl** |

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947278"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Szenarios für Data Science und Lösungsvorlagen
@@ -96,7 +96,7 @@ Jede Lösung umfasst Beispieldaten, R- oder Python-Code und gespeicherte SQL-Pro
 **Anwendung:** Diese Vorlage nutzt SQL Server R Services, um den Elektrizitätsbedarf vorherzusagen. Das für die Vorhersage verwendete Modell ist ein zufälliges Regressionsmodell mit Gesamtstruktur. Dieses basiert auf **rxDForest**, einem hochleistungsfähigen Machine-Learning-Algorithmus, der in Microsoft R Server enthalten ist. Die Lösung umfasst einen Bedarfs-Simulator sowie alle erforderlichen R- und T-SQL-Codes, um ein Modell zu trainieren sowie gespeicherte Prozeduren, die Sie zum Generieren und Melden von Vorhersagen verwenden können. 
 
 
-## <a name="bkmk_HowTo"></a>Verwenden der Vorlagen
+## <a name="how-to-use-the-templates"></a><a name="bkmk_HowTo"></a>Verwenden der Vorlagen
 
 Zum Herunterladen der Dateien in den einzelnen Vorlagen können Sie GitHub-Befehle verwenden, oder Sie öffnen den Link und klicken auf **Download Zip** (Herunterladen der ZIP-Dateien), um alle Dateien auf Ihrem Computer zu speichern.  Wenn die Projektmappe heruntergeladen wurde, enthält sie in der Regel folgende Ordner:
   

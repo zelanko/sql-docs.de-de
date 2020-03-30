@@ -14,10 +14,10 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1f42630e101a60c9d3265ab96a5b126551eeaff0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991588"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On-Verfügbarkeitsgruppen: Interoperabilität (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "67991588"
 
 In diesem Thema wird die Interoperabilität von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit anderen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Funktionen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]dokumentiert.
 
-## <a name="Interop"></a> Features, die mit Always On-Verfügbarkeitsgruppen zusammenwirken
+## <a name="features-that-interoperate-with-always-on-availability-groups"></a><a name="Interop"></a> Features, die mit Always On-Verfügbarkeitsgruppen zusammenwirken
 
 In der folgenden Tabelle sind [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Funktionen aufgeführt, die in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]zusammenarbeiten. Ein Link in der Spalte **Weitere Informationen** weist darauf hin, dass zusätzliche Überlegungen zur Interoperabilität einer bestimmten Funktion vorhanden sind.
 
@@ -46,20 +46,20 @@ In der folgenden Tabelle sind [!INCLUDE[ssNoVersion](../../../includes/ssnoversi
 |Service Broker|[Service Broker mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md)|
 |SQL Server-Agent|&nbsp;|
 
-## <a name="restrictions"></a> Features, die mit Einschränkungen mit Always On-Verfügbarkeitsgruppen zusammenwirken
+## <a name="features-that-interoperate-with-always-on-availability-groups-with-restrictions"></a><a name="restrictions"></a> Features, die mit Einschränkungen mit Always On-Verfügbarkeitsgruppen zusammenwirken
 
 Die folgenden Features wirken mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unter bestimmten Einschränkungen zusammen. Weitere Informationen finden Sie in den verknüpften Themen.
 
 - Datenbankübergreifende Transaktionen/verteilte Transaktionen ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] und Windows Server 2016). Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 - Der [Systemdatensammler für Abfragestatistiken](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) kann nicht zuverlässig in einer Umgebung mit nicht lesbaren sekundären Replikaten ausgeführt werden. Zur Verwendung des Systemdatensammler für Abfragestatistiken müssen Sie für alle sekundären Verfügbarkeitsgruppenreplikate den [Lesezugriff](configure-read-only-access-on-an-availability-replica-sql-server.md) erlauben. 
 
-## <a name="NoInterop"></a> Funktionen, die nicht mit Always On-Verfügbarkeitsgruppen zusammenwirken
+## <a name="features-that-do-not-interoperate-with-always-on-availability-groups"></a><a name="NoInterop"></a> Funktionen, die nicht mit Always On-Verfügbarkeitsgruppen zusammenwirken
 
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] funktioniert nicht in Verbindung mit folgenden Funktionen:
 
 - Datenbankspiegelung Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
-## <a name="RelatedContent"></a> Verwandte Inhalte
+## <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte
 
 - **Blogs:**
 

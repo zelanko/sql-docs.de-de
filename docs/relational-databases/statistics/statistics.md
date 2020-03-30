@@ -24,23 +24,23 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286734"
 ---
 # <a name="statistics"></a>Statistik
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen oder den Abfrageentwurf ändern, um optimale Ergebnisse zu erzielen. Dieses Thema enthält eine Erläuterung von Statistikkonzepten sowie Richtlinien zur effektiven Verwendung von Abfrageoptimierungsstatistiken.  
   
-##  <a name="DefinitionQOStatistics"></a> Komponenten und Konzepte  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> Komponenten und Konzepte  
 ### <a name="statistics"></a>Statistik  
  Statistiken zur Abfrageoptimierung sind Blobs (Binary Large Objects), die statistische Informationen über die Verteilung von Werten in Spalten einer Tabelle oder indizierten Sicht enthalten. Der Abfrageoptimierer verwendet diese Statistiken, um die *Kardinalität* oder Anzahl von Zeilen im Abfrageergebnis zu schätzen. Diese *Kardinalitätsschätzungen* ermöglichen es dem Abfrageoptimierer, einen hochwertigen Abfrageplan zu erstellen. Beispielsweise kann der Abfrageoptimierer, abhängig von Ihren Prädikaten, Kardinalitätsschätzungen verwenden, um statt des ressourcenintensiveren Operators „Index Scan“ den Operator „Index Seek“ auszuwählen, wenn auf diese Weise die Abfrageleistung verbessert werden kann.  
   
  Jedes Statistikobjekt wird für eine Liste mit mindestens einer Tabellenspalte erstellt und enthält ein *Histogramm*, das die Verteilung von Werten in der ersten Spalte anzeigt. Statistikobjekte, die sich auf mehrere Spalten beziehen, enthalten außerdem statistische Informationen über die spaltenübergreifende Korrelation von Werten. Diese Korrelationsstatistiken oder *Dichten*werden von der Anzahl unterschiedlicher Zeilen mit Spaltenwerten abgeleitet. 
 
-#### <a name="histogram"></a> Histogramm  
+#### <a name="histogram"></a><a name="histogram"></a> Histogramm  
 Ein **Histogramm** misst die Häufigkeit des Vorkommens für jeden unterschiedlichen Wert in einem Dataset. Der Abfrageoptimierer berechnet ein Histogramm für die Spaltenwerte in der ersten Schlüsselspalte des Statistikobjekts und wählt die Spaltenwerte aus, indem statistische Zeilenstichproben entnommen werden oder indem ein vollständiger Scan aller Zeilen in der Tabelle oder Sicht ausgeführt wird. Wenn das Histogramm anhand einer Gruppe von Zeilenstichproben erstellt wird, handelt es sich bei der gespeicherten Gesamtzahl von Zeilen und unterschiedlichen Werten um Schätzungen, die keine ganzen Zahlen sein müssen.
 
 > [!NOTE]
@@ -50,9 +50,9 @@ Zum Erstellen des Histogramms sortiert der Abfrageoptimierer die Spaltenwerte, b
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt das **Histogramm** aus den sortierten Spaltenwerten in drei Schritten:
 
-- **Initialisierung des Histogramms:** Im ersten Schritt wird eine Wertesequenz verarbeitet, die am Anfang der sortierten Menge beginnt, und bis zu 200 Werte von *range_high_key*, *equal_rows*, *range_rows* und *distinct_range_rows* werden erfasst (*range_rows* und *distinct_range_rows* sind in diesem Schritts immer 0). Der erste Schritt ist abgeschlossen, wenn alle Eingaben erschöpft sind oder 200 Werte gefunden wurden. 
-- **Scannen mit Bucketzusammenführung:** Jeder zusätzliche Wert aus der führenden Spalte des Statistikschlüssels wird im zweiten Schritt in sortierter Reihenfolge verarbeitet. Jeder nachfolgende Wert wird entweder zum letzten Bereich hinzugefügt, oder es wird am Ende ein neuer Bereich erstellt (dies ist möglich, weil die Eingabewerte sortiert sind). Wenn ein neuer Bereich erstellt wird, wird ein Paar der vorhandenen benachbarten Bereiche zu einem einzelnen Bereich reduziert. Dieses Bereichspaar wird ausgewählt, um den Verlust von Informationen zu minimieren. Diese Methode verwendet einen Algorithmus für die *maximale Differenz*, um die Anzahl von Schritten im Histogramm zu minimieren und gleichzeitig die Differenz zwischen den Begrenzungswerten zu maximieren. Die Anzahl von Schritten nach dem Reduzieren von Bereichen bleibt in diesem Schritt bei 200.
-- **Konsolidierung des Histogramms:** Im dritten Schritt können weitere Bereiche reduziert werden, wenn dabei keine erhebliche Menge an Informationen verloren geht. Die Anzahl von Histogrammschritten kann geringer sein als die Anzahl unterschiedlicher Werte, auch bei Spalten mit weniger als 200 Grenzpunkten. Wenn jede Spalte mehr als 200 eindeutige Werte enthält, kann das Histogramm daher weniger als 200 Schritte enthalten. Für eine Spalte, die nur aus eindeutigen Werten besteht, enthält das konsolidierte Histogramm mindestens drei Schritte.
+- **Initialisierung des Histogramms:** Im ersten Schritt wird eine Wertesequenz verarbeitet, die am Anfang der sortierten Menge beginnt, und bis zu 200 Werte von *range_high_key*, *equal_rows*, *range_rows*, und *distinct_range_rows* werden erfasst (*range_rows* und *distinct_range_rows* sind während dieses Schritts immer 0). Der erste Schritt ist abgeschlossen, wenn alle Eingaben erschöpft sind oder 200 Werte gefunden wurden. 
+- **Scannen mit Bucketzusammenführung:** Jeder zusätzliche Wert aus der führenden Spalte des Statistikschlüssels wird im zweiten Schritt in sortierter Reihenfolge verarbeitet. Jeder nachfolgende Wert wird entweder zum letzten Bereich hinzugefügt, oder es wird am Ende ein neuer Bereich erstellt (dies ist möglich, da die Eingabewerte sortiert sind). Wenn ein neuer Bereich erstellt wird, wird ein Paar der vorhandenen benachbarten Bereiche zu einem einzelnen Bereich reduziert. Dieses Bereichspaar wird ausgewählt, um den Verlust von Informationen zu minimieren. Diese Methode verwendet einen Algorithmus für die *maximale Differenz*, um die Anzahl von Schritten im Histogramm zu minimieren und gleichzeitig die Differenz zwischen den Begrenzungswerten zu maximieren. Die Anzahl von Schritten nach dem Reduzieren von Bereichen bleibt in diesem Schritt bei 200.
+- **Konsolidierung des Histogramms:** Im dritten Schritt können weitere Bereiche reduziert werden, wenn keine erhebliche Menge an Informationen verloren geht. Die Anzahl von Histogrammschritten kann geringer sein als die Anzahl unterschiedlicher Werte, auch bei Spalten mit weniger als 200 Grenzpunkten. Wenn jede Spalte mehr als 200 eindeutige Werte enthält, kann das Histogramm daher weniger als 200 Schritte enthalten. Für eine Spalte, die nur aus eindeutigen Werten besteht, enthält das konsolidierte Histogramm mindestens drei Schritte.
 
 > [!NOTE]
 > Wenn das Histogramm mithilfe eines Beispiels statt mit der Option „Fullscan“ erstellt wurde, werden die Werte von *equal_rows*, *range_rows*, *distinct_range_rows* und *average_range_rows* geschätzt und müssen keine ganzen Zahlen sein.
@@ -68,7 +68,7 @@ Für jeden der vorherigen Histogrammschritt gilt:
   
 -   Gepunktete Linien stellen die als Stichprobe entnommenen Werte dar, die zum Schätzen der Gesamtanzahl der unterschiedlichen Werte im Bereich (*distinct_range_rows*) verwendet werden, sowie die Gesamtanzahl der Werte im Bereich (*range_rows*). Der Abfrageoptimierer verwendet *range_rows* und *distinct_range_rows*, um *average_range_rows* zu berechnen. Die als Stichprobe entnommenen Werte werden nicht gespeichert.   
   
-#### <a name="density"></a>Dichtevektor  
+#### <a name="density-vector"></a><a name="density"></a>Dichtevektor  
 Die **Dichte** enthält Informationen zur Anzahl von Duplikaten in einer bestimmten Spalte oder Spaltekombination und wird als 1/(Anzahl der unterschiedlichen Werte) berechnet. Der Abfrageoptimierer verwendet Dichten, um Kardinalitätsschätzungen für Abfragen zu erweitern, die mehrere Spalten aus derselben Tabelle oder indizierten Sicht zurückgeben. Bei einer Verringerung der Dichte erhöht sich die Selektivität eines Werts. In einer Tabelle für Autos stammen z. B. viele Autos von demselben Hersteller, jedes Auto verfügt jedoch über eine eindeutige Fahrzeugnummer. Ein Index für das VIN-Objekt weist eine höhere Selektivität auf als ein Index für den Hersteller, da „VIN“ eine niedrigere Dichte als „Hersteller“ aufweist. 
 
 > [!NOTE]
@@ -88,7 +88,7 @@ Der Dichtevektor enthält eine Dichte für jedes Präfix von Spalten im Statisti
 ### <a name="statistics-options"></a>Statistikoptionen  
  Anhand von drei Optionen können Sie festlegen, wann und wie Statistiken erstellt und aktualisiert werden. Diese Optionen werden nur auf Datenbankebene festgelegt.  
   
-#### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS (Option)  
+#### <a name="auto_create_statistics-option"></a><a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS (Option)  
  Ist die [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics)-Option zum automatischen Erstellen von Statistiken aktiviert, erstellt der Abfrageoptimierer nach Bedarf Statistiken für einzelne Spalten im Abfrageprädikat, um Kardinalitätsschätzungen für den Abfrageplan zu verbessern. Diese Statistiken für einzelne Spalten werden für Spalten erstellt, die noch nicht über ein [Histogramm](#histogram) in einem vorhandenen Statistikobjekt verfügen. Durch die AUTO_CREATE_STATISTICS-Option wird nicht festgelegt, ob Statistiken für Indizes erstellt werden. Durch diese Option werden auch keine gefilterten Statistiken generiert. Sie gilt ausschließlich für Statistiken für einzelne Spalten der gesamten Tabelle.  
   
  Erstellt der Abfrageoptimierer Statistiken als Ergebnis der Verwendung der AUTO_CREATE_STATISTICS-Option, beginnt der Statistikname mit `_WA`. Mithilfe der folgenden Abfrage können Sie bestimmen, ob der Abfrageoptimierer Statistiken für eine Abfrageprädikatsspalte erstellt hat.  
@@ -153,9 +153,9 @@ Weitere Informationen zur Steuerung von AUTO_UPDATE_STATISTICS finden Sie unter 
 * Statistiken, die für interne Tabellen erstellt wurden.  
 * Statistiken, die mit räumlichen Indizes oder XML-Indizes erstellt wurden.  
   
-**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher. 
+**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher. 
   
-## <a name="CreateStatistics"></a> Zeitpunkt der Erstellung von Statistiken  
+## <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> Zeitpunkt der Erstellung von Statistiken  
  Der Abfrageoptimierer erstellt bereits Statistiken in der folgenden Weise:  
   
 1.  Bei der Indexerstellung berechnet der Abfrageoptimierer Statistiken für Indizes, die sich auf Tabellen oder Sichten beziehen. Diese Statistiken werden für die Schlüsselspalten des Indexes erstellt. Wenn es sich um einen gefilterten Index handelt, erstellt der Abfrageoptimierer gefilterte Statistiken für die gleiche Teilmenge von Zeilen, die für den gefilterten Index angegeben wurden. Weitere Informationen zu gefilterten Indizes finden Sie unter [Erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md) und [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
@@ -202,7 +202,7 @@ In diesem Beispiel verfügt das Statistikobjekt `LastFirst` über Dichten für d
 ### <a name="query-selects-from-a-subset-of-data"></a>Abfrage wählt aus einer Teilmenge von Daten aus  
 Wenn der Abfrageoptimierer Statistiken für einzelne Spalten und Indizes erstellt, berechnet er Statistiken für die Werte sämtlicher Zeilen. Wenn bei Abfragen aus einer Teilmenge von Zeilen ausgewählt wird und diese Teilmenge über eine eindeutige Datenverteilung verfügt, können Abfragepläne durch gefilterte Statistiken verbessert werden. Sie können gefilterte Statistiken erstellen, indem Sie die [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)-Anweisung mit der [WHERE](../../t-sql/queries/where-transact-sql.md)-Klausel verwenden, um den Filterprädikatausdruck zu definieren.  
   
-Beispielsweise gehört durch die Verwendung von [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] jedes Produkt in der `Production.Product`-Tabelle zu einer von vier Kategorien in der `Production.ProductCategory`-Tabelle: Fahrräder, Bauteile, Bekleidung und Zubehör. Jede Kategorie verfügt über eine andere Datenverteilung für das Gewicht: Die Gewichte der Fahrräder reichen von 13,77 bis 30,0, die Gewichte der Bauteile reichen von 2,12 bis 1050,00 mit einigen NULL-Werten, die Gewichte der Bekleidung sind alle NULL, und die Gewichte des Zubehörs sind ebenfalls NULL.  
+Durch die Verwendung von [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] beispielsweise gehört jedes Produkt in der `Production.Product`-Tabelle zu einer von vier Kategorien in der `Production.ProductCategory`-Tabelle: Fahrräder, Bauteile, Bekleidung und Zubehör. Jede Kategorie verfügt über eine andere Datenverteilung für das Gewicht: Die Gewichte der Fahrräder reichen von 13,77 bis 30,0, die Gewichte der Bauteile reichen von 2,12 bis 1050,00 mit einigen NULL-Werten, die Gewichte der Bekleidung sind alle NULL, und die Gewichte des Zubehörs sind ebenfalls NULL.  
   
 Bei den Fahrrädern liefern gefilterte Statistiken dem Abfrageoptimierer zu allen Fahrradgewichten genauere Statistikdaten und können die Abfrageplanqualität im Vergleich zu Tabellenstatistiken oder nicht vorhandenen Statistiken für die Weight-Spalte verbessern. Die Spalte mit dem Fahrradgewicht eignet sich besonders für gefilterte Statistiken, jedoch weniger für einen gefilterten Index, wenn nur relativ wenige Suchen nach Gewichtsangaben ausgeführt werden. Die Leistungsvorteile, die gefilterte Indizes bei der Suche bieten, können die zusätzlichen Kosten für Wartung und Speicher, die mit der Implementierung eines gefilterten Indexes in der Datenbank verbunden sind, jedoch nicht aufwiegen.  
   
@@ -242,7 +242,7 @@ Nur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann temporäre St
   
  Da temporäre Statistiken in **tempdb**gespeichert werden, werden durch einen Neustart des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts alle temporären Statistiken entfernt.  
     
-## <a name="UpdateStatistics"></a>Zeitpunkt der Statistikaktualisierung  
+## <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a>Zeitpunkt der Statistikaktualisierung  
  Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, und aktualisiert sie, sobald sie für einen Abfrageplan benötigt werden. In einigen Fällen können Sie den Abfrageplan und damit die Abfrageleistung verbessern, indem Sie Statistiken häufiger aktualisieren, als dies bei Aktivierung von [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) der Fall ist. Sie können Statistiken mit der UPDATE STATISTICS-Anweisung oder der gespeicherten Prozedur sp_updatestats aktualisieren.  
   
  Durch das Update von Statistiken wird sichergestellt, dass Abfragen anhand aktueller Statistiken kompiliert werden. Dies führt jedoch dazu, dass Abfragen neu kompiliert werden. Es empfiehlt sich, Statistiken nicht zu oft zu aktualisieren und die Vorteile optimierter Abfragepläne gegen den Zeitaufwand für die Neukompilierung von Abfragen abzuwägen. Die Entscheidung hängt von der verwendeten Anwendung ab.  
@@ -277,7 +277,7 @@ Nur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann temporäre St
 
 Nutzen Sie Lösungen wie [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), um die Indexdefragmentierung und das Aktualisieren der Statistiken für eine oder mehrere Datenbanken automatisch zu verwalten. Dieser Vorgang entscheidet unter anderem anhand des Fragmentierungsgrads automatisch, ob ein Index neu organisiert oder neu erstellt wird und aktualisiert Statistiken mit einem linearen Schwellenwert.
   
-##  <a name="DesignStatistics"></a> Abfragen mit effektiver Verwendung von Statistiken  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> Abfragen mit effektiver Verwendung von Statistiken  
  Bestimmte Abfrageimplementierungen, z. B. lokale Variablen und komplexe Ausdrücke im Abfrageprädikat, können zu suboptimalen Abfrageplänen führen. Sie können dies verhindern, indem Sie Abfrageentwurfsrichtlinien für die effektive Verwendung von Statistiken befolgen. Weitere Informationen zu Abfrageprädikaten finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
  Zur Optimierung von Abfrageplänen können Sie Abfrageentwurfsrichtlinien anwenden, die Statistiken effektiv einsetzen, um *Kardinalitätsschätzungen* für Ausdrücke, Variablen und Funktionen in Abfrageprädikaten zu verbessern. Wenn der Abfrageoptimierer den Wert eines Ausdrucks, einer Variablen oder Funktion nicht kennt, weiß er nicht, welchen Wert er im Histogramm suchen soll. Folglich kann nicht die beste Kardinalitätsschätzung aus dem Histogramm abgerufen werden. Für alle als Stichprobe entnommenen Zeilen im Histogramm verwendet der Abfrageoptimierer stattdessen die durchschnittliche Anzahl von Zeilen pro eindeutigem Wert als Basis für die Kardinalitätsschätzung. Dies führt zu suboptimalen Kardinalitätsschätzungen und kann die Abfrageleistung beeinträchtigen. Weitere Informationen zu Histogrammen finden Sie im Abschnitt [Histogramm](#histogram) auf dieser Seite oder unter [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md).

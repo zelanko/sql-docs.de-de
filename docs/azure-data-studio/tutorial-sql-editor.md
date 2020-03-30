@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957034"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten – [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>Tutorial: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten – [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Das Erstellen und Ausführen von Abfragen, gespeicherten Prozeduren, Skripts usw. sind die Hauptaufgaben von Datenbankexperten. Dieses Tutorial veranschaulicht die wichtigsten Funktionen im T-SQL-Editor zum Erstellen von Datenbankobjekten.
 

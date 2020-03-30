@@ -21,35 +21,35 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821948"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie ein geplantes manuelles Failover oder ein erzwungenes manuelles Failover (ein erzwungenes Failover) in einer Always On-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausgeführt wird. Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Bei einem Failover zu einem sekundären Replikat im Status SYNCHRONIZED führt der Assistent ein geplantes manuelles Failover (ohne Datenverlust) aus. Bei einem Failover zu einem sekundären Replikat im Status UNSYNCHRONIZED oder NOT SYNCHRONIZING führt der Assistent ein erzwungenes manuelles Failover aus, ein sogenanntes *erzwungenes Failover* (mit möglichem Datenverlust). Bei beiden Formen des manuellen Failovers geht das sekundäre Replikat, mit dem die Verbindung besteht, in die primäre Rolle über. Bei einem geplanten manuellen Failover wird aktuell das frühere primäre Replikat in die sekundäre Rolle überführt. Nach einem erzwungenen Failover geht das frühere primäre Replikat, sobald es online geschaltet wird, in die sekundäre Rolle über.  
 
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Bevor Ihrem ersten geplanten manuellen Failovers, gehen Sie zum Abschnitt „Vorbereitungen“ unter [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)ausgeführt wird.  
   
  Vor dem ersten erzwungenen Failover lesen Sie die Abschnitte „Vorbereitungen“ und „Nachverfolgung: Wichtige Aufgaben nach einem erzwungenen Failover“ unter [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)ausgeführt wird.  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Ein Failoverbefehl gibt einen Wert zurück, sobald das sekundäre Zielreplikat den Befehl akzeptiert hat. Die Datenbankwiederherstellung tritt jedoch asynchron auf, nachdem die Verfügbarkeitsgruppe aufgehört hat, ein Failover auszuführen.  
     
-###  <a name="Prerequisites"></a> Voraussetzungen für die Verwendung des Assistenten für das Failover von Verfügbarkeitsgruppen  
+###  <a name="prerequisites-for-using-the-failover-availability-group-wizard"></a><a name="Prerequisites"></a> Voraussetzungen für die Verwendung des Assistenten für das Failover von Verfügbarkeitsgruppen  
   
 -   Es muss eine Verbindung mit der Serverinstanz bestehen, die ein aktuell verfügbares Verfügbarkeitsreplikat hostet.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So verwenden Sie den Assistenten für das Failover von Verfügbarkeitsgruppen**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die ein sekundäres Replikat der Verfügbarkeitsgruppe hostet, für die ein Failover ausgeführt werden muss, und erweitern Sie die Serverstruktur.  
@@ -93,7 +93,7 @@ ms.locfileid: "74821948"
   
  Die Hilfe zu anderen Seiten dieses Assistenten gilt auch für einen oder mehrere andere Assistenten für Always On-Verfügbarkeitsgruppen und wird in separaten F1-Hilfethemen dokumentiert.  
   
-###  <a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
+###  <a name="select-new-primary-replica-page"></a><a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
  In diesem Abschnitt werden die Optionen der Seite **Neues primäres Replikat auswählen** beschrieben. Auf dieser Seite wählen Sie das sekundäre Replikat (Failoverziel) aus, zu dem ein Failover für die Verfügbarkeitsgruppe durchgeführt wird. Dieses Replikat wird das neue primäre Replikat.  
   
 #### <a name="page-options"></a>Seitenoptionen  
@@ -159,7 +159,7 @@ ms.locfileid: "74821948"
  **Abbrechen**  
  Klicken Sie, um den Assistenten abzubrechen. Wenn Sie den Assistenten auf der Seite **Neues primäres Replikat auswählen** abbrechen, wird dieser beendet, ohne dass Aktionen ausgeführt werden.  
   
-###  <a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
+###  <a name="confirm-potential-data-loss-page"></a><a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
  In diesem Abschnitt werden die Optionen der Seite **Potenziellen Datenverlust bestätigen** beschrieben, die nur angezeigt wird, wenn Sie ein erzwungenes Failover ausführen. Dieses Thema wird nur für den [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]verwendet. Auf dieser Seite können Sie angeben, ob Sie einen möglichen Datenverlust in Kauf nehmen möchten, um ein Failover für die Verfügbarkeitsgruppe zu erzwingen.  
   
 #### <a name="confirm-potential-data-loss-options"></a>Optionen für 'Potenziellen Datenverlust bestätigen'  
@@ -171,7 +171,7 @@ ms.locfileid: "74821948"
  **Abbrechen**  
  Klicken Sie, um den Assistenten abzubrechen. Wenn Sie den Assistenten auf der Seite **Potenziellen Datenverlust bestätigen** abbrechen, wird dieser beendet, ohne dass eine Aktion ausgeführt wird.  
   
-###  <a name="ConnectToReplica"></a> Connect to Replica Page  
+###  <a name="connect-to-replica-page"></a><a name="ConnectToReplica"></a> Connect to Replica Page  
  In diesem Abschnitt werden die Optionen der Seite **Verbindung mit Replikat herstellen** des [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]beschrieben. Diese Seite wird nur angezeigt, wenn keine Verbindung mit dem sekundären Zielreplikat besteht. Verwenden Sie diese Seite, um eine Verbindung mit dem sekundären Replikat herzustellen, das Sie als neues primäres Replikat ausgewählt haben.  
   
 #### <a name="page-options"></a>Seitenoptionen  

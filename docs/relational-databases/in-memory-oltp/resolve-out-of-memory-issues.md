@@ -11,10 +11,10 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908450"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)
@@ -31,7 +31,7 @@ ms.locfileid: "72908450"
 |[Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist](#bkmk_PageAllocFailure)|Erläutert, wie Sie bei der Fehlermeldung „Seitenbelegungen für die Datenbank „ *\<Datenbankname>* “ sind aufgrund unzureichenden Arbeitsspeichers im Ressourcenpool „ *\<Ressourcenpoolname>* “ nicht zulässig“ vorgehen. … nicht zugelassen“ vorgehen, wenn ausreichend Arbeitsspeicher für den Vorgang verfügbar ist.|
 |[Bewährte Methoden zum Verwenden von In-Memory OLTP in einer Umgebung mit virtuellen Computern](#bkmk_VMs)|Zu berücksichtigende Punkte beim Verwenden von In-Memory-OLTP in einer virtualisierten Umgebung.|
   
-##  <a name="bkmk_resolveRecoveryFailures"></a> Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung  
+##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung  
  Beim Versuch der Wiederherstellung einer Datenbank erhalten Sie möglicherweise die folgende Fehlermeldung: „Fehler beim Wiederherstellen der Datenbank *\<Datenbankname* aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool *Ressourcenpoolname\<* .“ Dies gibt an, dass der Server nicht genügend verfügbaren Arbeitsspeicher zum Wiederherstellen der Datenbank hat. 
    
 Der Server, auf dem Sie eine Datenbank wiederherstellen, muss genügend verfügbaren Arbeitsspeicher für die speicheroptimierten Tabellen in der Datenbanksicherung besitzen. Andernfalls wird die Datenbank nicht online geschaltet und als fehlerverdächtig markiert.  
@@ -70,19 +70,19 @@ Hat der Server genügend physischen Arbeitsspeicher, aber dieser Fehler tritt we
 -   Erhöhen Sie **Max. Serverarbeitsspeicher**.  
     Informationen zum Konfigurieren von **Max. Serverarbeitsspeicher** finden Sie unter dem Thema [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
-##  <a name="bkmk_recoverFromOOM"></a> Beheben von Beeinträchtigungen der Arbeitsauslastung durch wenig oder unzureichenden Arbeitsspeicher  
+##  <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a><a name="bkmk_recoverFromOOM"></a> Beheben von Beeinträchtigungen der Arbeitsauslastung durch wenig oder unzureichenden Arbeitsspeicher  
  Grundsätzlich sind Situationen mit wenig oder unzureichendem Arbeitsspeicher zu vermeiden. Häufig lassen sich OOM-Situationen durch eine durchdachte Planung und Überwachung vermeiden. Aber auch die beste Planung schützt nicht vor unvorhersehbaren Ereignissen, die zu knappem oder unzureichendem Arbeitsspeicher führen können. Eine OOM-Bedingung kann in zwei Schritten behoben werden:  
   
 1.  [Öffnen einer DAC (dedizierte Administratorverbindung)](#bkmk_openDAC)  
   
 2.  [Korrekturmaßnahme](#bkmk_takeCorrectiveAction)  
 
-###  <a name="bkmk_openDAC"></a> Öffnen einer DAC (dedizierte Administratorverbindung)  
+###  <a name="open-a-dac-dedicated-administrator-connection"></a><a name="bkmk_openDAC"></a> Öffnen einer DAC (dedizierte Administratorverbindung)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC) zur Verfügung. Mit der DAC können Administratoren auf eine ausgeführte Instanz der SQL Server-Datenbank-Engine zugreifen, um Probleme auf dem Server zu beheben, selbst wenn der Server auf andere Clientverbindungen nicht reagiert. Die DAC wird mithilfe des Hilfsprogramms `sqlcmd` und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aufgerufen.  
   
  Hilfe zum Verwenden von DAC mithilfe von SSMS oder `sqlcmd` finden Sie unter [Diagnoseverbindung für Datenbankadministratoren](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).  
   
-###  <a name="bkmk_takeCorrectiveAction"></a> Korrekturmaßnahme  
+###  <a name="take-corrective-action"></a><a name="bkmk_takeCorrectiveAction"></a> Korrekturmaßnahme  
  Um die OOM-Bedingung zu beheben, müssen Sie entweder vorhandenen Arbeitsspeicher freigeben, indem Sie die Arbeitsspeichernutzung reduzieren, oder den Tabellen im Arbeitsspeicher mehr Arbeitsspeicherkapazität zur Verfügung stellen.  
   
 #### <a name="free-up-existing-memory"></a>Freigeben von vorhandenem Arbeitsspeicher  
@@ -135,14 +135,14 @@ GO
 >  Wenn der Server auf einem virtuellen Computer ausgeführt wird und nicht dediziert ist, legen Sie den Wert von MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT auf denselben Wert fest.   
 > Weitere Informationen finden Sie im Thema [Verwenden von In-Memory-OLTP in einer Umgebung mit virtuellen Computern](#bkmk_VMs).  
   
-##  <a name="bkmk_PageAllocFailure"></a> Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist  
+##  <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a><a name="bkmk_PageAllocFailure"></a> Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist  
  Wenn Sie die Fehlermeldung `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.` im Fehlerprotokoll erhalten, obwohl der verfügbare physische Arbeitsspeicher zum Zuordnen der Seite ausreichend ist, kann dies daran liegen, dass die Ressourcenkontrolle deaktiviert ist. Wenn die Ressourcenkontrolle deaktiviert ist, führt MEMORYBROKER_FOR_RESERVE zu einem künstlichen Mangel an Arbeitsspeicher.  
   
  Um dieses Problem zu beheben, müssen Sie die Ressourcenkontrolle aktivieren.  
   
  Weitere Informationen zu Einschränkungen sowie Anweisungen zum Aktivieren des Resource Governors mit dem Objekt-Explorer, über Eigenschaften des Resource Governors oder mit Transact-SQL finden Sie unter [Aktivieren des Resource Governors](../../relational-databases/resource-governor/enable-resource-governor.md) .  
  
-## <a name="bkmk_VMs"></a> Verwenden von In-Memory-OLTP in einer Umgebung mit virtuellen Computern
+## <a name="best-practices-using-in-memory-oltp-in-a-vm-environment"></a><a name="bkmk_VMs"></a> Verwenden von In-Memory-OLTP in einer Umgebung mit virtuellen Computern
 Servervirtualisierung kann durch eine verbesserte Anwendungsbereitstellung, Wartung, Verfügbarkeit sowie Sicherungs- und Wiederherstellungsprozesse das IT-Kapital und die Betriebskosten Ihres Unternehmens senken und die IT-Effizienz steigern. Dank der neuesten technologischen Entwicklungen können komplexe Datenbankarbeitslasten mithilfe der Virtualisierung leichter konsolidiert werden. Dieses Thema enthält bewährte Methoden zur Verwendung von SQL Server In-Memory-OLTP in einer virtualisierten Umgebung.
 
 ### <a name="memory-pre-allocation"></a>Vorabbelegung von Arbeitsspeicher

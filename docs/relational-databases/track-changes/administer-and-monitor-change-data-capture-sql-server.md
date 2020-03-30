@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095315"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74095315"
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie Sie Change Data Capture verwalten und überwachen können.  
   
-## <a name="Capture"></a> Aufzeichnungsauftrag
+## <a name="capture-job"></a><a name="Capture"></a> Aufzeichnungsauftrag
 
 Der Aufzeichnungsauftrag wird durch Ausführen der parameterlosen gespeicherten Prozedur `sp_MScdc_capture_job` initiiert. Diese gespeicherte Prozedur beginnt mit dem Extrahieren der konfigurierten Werte für `maxtrans`, `maxscans`, `continuous` und `pollinginterval` für den Aufzeichnungsauftrag aus msdb.dbo.cdc_jobs. Diese konfigurierten Werte werden dann als Parameter an die gespeicherte Prozedur `sp_cdc_scan` übergeben. Diese werden verwendet, um `sp_replcmds` zum Ausführen des Protokollscans aufzurufen.  
   
@@ -71,7 +71,7 @@ Im kontinuierlichen Modus wird durch den Aufzeichnungsauftrag das kontinuierlich
 
 Sie können für den Aufzeichnungsauftrag statt eines festen Abrufintervalls zusätzliche Logik anwenden, um zu bestimmen, ob sofort ein neuer Scan beginnen soll oder ob vor einem neuen Scan ein Ruhezustand erzwungen wird. Die Wahl kann einfach auf der Uhrzeit basieren. Z. B. können sehr lange Ruhezustände während Spitzenzeiten erzwungen werden. Es sind auch Abrufintervalle von 0 zum Tagesende möglich, wenn die Verarbeitungsvorgänge des Tages abgeschlossen und die Vorgänge der Nacht vorbereitet werden müssen. Der Status des Aufzeichnungsprozesses kann außerdem überwacht werden, um zu bestimmen, wann alle Transaktionen, für die bis Mitternacht ein Commit ausgeführt wurde, gescannt und in Änderungstabellen abgelegt worden sind. Dies beendet den Aufzeichnungsauftrag, der durch einen geplanten täglichen Neustart neu gestartet wird. Durch Ersetzen des übermittelten Auftragsschritts, der `sp_cdc_scan` aufruft, durch einen Aufruf eines benutzerspezifischen Wrappers für `sp_cdc_scan` kann durch wenig zusätzlichen Aufwand ein hochgradig angepasstes Verhalten erzielt werden.  
 
-## <a name="Cleanup"></a> Cleanupauftrag
+## <a name="cleanup-job"></a><a name="Cleanup"></a> Cleanupauftrag
 
 Dieser Abschnitt enthält Informationen darüber, wie der Change Data Capture-Cleanupauftrag funktioniert.  
   
@@ -90,7 +90,7 @@ Wenn ein Cleanup ausgeführt wird, wird die Untergrenzenmarkierung für alle Auf
 
  Die Anpassungsmöglichkeiten für den Cleanupauftrag bestehen in der Strategie, die verwendet wird, um zu bestimmen, welche Einträge in der Änderungstabelle verworfen werden sollen. Im übermittelten Cleanupauftrag wird nur eine zeitbasierte Strategie unterstützt. In diesem Fall wird die neue Untergrenzenmarkierung durch Subtrahieren der zulässigen Beibehaltungsdauer von der Commitzeit der letzten verarbeiteten Transaktion berechnet. Da die zugrunde liegenden Cleanupprozeduren auf `lsn` statt auf Zeit basieren, kann eine beliebige Anzahl von Strategien verwendet werden, um den kleinsten `lsn` zu bestimmen, der in den Änderungstabellen bewahrt werden soll. Nur einige von diesen sind streng zeitbasiert. Es könnte z. B. Wissen über die Clients zum Bereitstellen einer Sicherung verwendet werden, wenn nachfolgende Prozesse, die Zugriff auf die Änderungstabellen erfordern, nicht ausgeführt werden können. Obwohl die Standardstrategie denselben `lsn` für das Cleanup aller Änderungstabellen der Datenbank verwendet, kann auch die zugrunde liegende Cleanupprozedur für das Cleanup auf Aufzeichnungsinstanzebene aufgerufen werden.  
 
-## <a name="Monitor"></a> Überwachen des Change Data Capture-Prozesses
+## <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> Überwachen des Change Data Capture-Prozesses
 
 Indem Sie den Change Data Capture-Prozess überwachen, können Sie ermitteln, ob Änderungen korrekt und mit einer akzeptablen Latenzzeit in die Änderungstabellen geschrieben werden. Das Überwachen kann Ihnen auch dabei helfen, jegliche Fehler zu identifizieren, die auftreten könnten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über zwei dynamische Verwaltungssichten, womit Sie Change Data Capture überwachen können: [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) und [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
   
@@ -176,7 +176,7 @@ Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datensam
   
 4. Greifen Sie in dem Data Warehouse, das Sie in Schritt 1 konfiguriert haben, auf die Tabelle custom_snapshots.cdc_log_scan_data zu. Diese Tabelle stellt eine Verlaufs-Momentaufnahme der Daten von Protokollscansitzungen bereit. Sie können diese Daten verwenden, um die Latenzzeit, den Durchsatz und andere Leistungskennzahlen in Abhängigkeit der Zeit zu analysieren.  
 
-## <a name="ScriptUpgrade"></a> Skriptupgrademodus
+## <a name="script-upgrade-mode"></a><a name="ScriptUpgrade"></a> Skriptupgrademodus
 
 Wenn Sie kumulative Updates oder Service Packs auf eine Instanz anwenden, kann die Instanz beim erneuten Starten im Skriptupgrademodus gestartet werden. In diesem Modus führt SQL Server einen Schritt zum Analysieren und Aktualisieren von internen CDC-Tabellen aus, wodurch Objekte wie Indizes in Capture-Tabellen gegebenenfalls neu erstellt werden. Abhängig von der Menge der enthaltenen Daten kann dieser Schritt einige Zeit in Anspruch nehmen oder hohen Transaktionsprotokollverbrauch für aktivierte CDC-Datenbanken verursachen.
 

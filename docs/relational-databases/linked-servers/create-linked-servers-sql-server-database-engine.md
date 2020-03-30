@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761894"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbank-Engine)
@@ -29,24 +29,24 @@ ms.locfileid: "76761894"
 
   In diesem Thema wird die Erstellung eines Verbindungsservers und das Zugreifen auf Daten von einem anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erläutert. Durch Erstellen eines Verbindungsservers können Sie mit Daten aus mehreren Quellen arbeiten. Der Verbindungsserver muss keine weitere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein, allerdings ist dies ein gängiges Szenario.  
   
-##  <a name="Background"></a> Hintergrund  
+##  <a name="background"></a><a name="Background"></a> Hintergrund  
  Ein Verbindungsserver ermöglicht den Zugriff auf verteilte, heterogene Abfragen für OLE DB-Datenquellen. Nach der Erstellung eines Verbindungsservers können für den Server verteilte Abfragen ausgeführt werden, und Abfragen können Tabellen von mehreren Datenquellen verknüpfen. Wenn der Verbindungsserver als Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]definiert wird, können remote gespeicherte Prozeduren ausgeführt werden.  
   
  Die Funktionen und erforderlichen Argumente des Verbindungsservers können erheblich abweichen. In diesem Thema werden typische Beispiele aufgeführt, allerdings werden nicht alle Optionen beschrieben. Weitere Informationen finden Sie unter [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) erläutert.  
   
-##  <a name="Security"></a> Sicherheit  
+##  <a name="security"></a><a name="Security"></a> Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Wenn Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwenden, ist die Berechtigung **ALTER ANY LINKED SERVER** auf dem Server oder die Mitgliedschaft in der festen Serverrolle **setupadmin** erforderlich. Wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwenden, ist die Berechtigung **CONTROL SERVER** oder die Mitgliedschaft in der festen Serverrolle **sysadmin** erforderlich.  
   
-##  <a name="Procedures"></a> So erstellen Sie einen Verbindungsserver  
+##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> So erstellen Sie einen Verbindungsserver  
  Sie können eine der folgenden Anwendungen verwenden:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>So erstellen Sie einen Verbindungsserver für eine andere Instanz von SQL Server anhand von SQL Server Management Studio  
   
@@ -197,7 +197,7 @@ ms.locfileid: "76761894"
      **Unterstützt 'Like'-Operator**  
      Gibt an, dass der Anbieter Anfragen unterstützt, die das LIKE-Schlüsselwort verwenden.  
   
-###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Verwenden Sie zum Erstellen eines Verbindungsservers mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] die Anweisungen [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md), [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md) und [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) .  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>So erstellen Sie einen Verbindungsserver für eine andere Instanz von SQL Server anhand von Transact-SQL  
@@ -225,7 +225,7 @@ ms.locfileid: "76761894"
   
     ```  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach der Erstellung eines Verbindungsservers zu unternehmende Schritte  
+##  <a name="follow-up-steps-to-take-after-you-create-a-linked-server"></a><a name="FollowUp"></a> Nachverfolgung: Nach der Erstellung eines Verbindungsservers zu unternehmende Schritte  
   
 #### <a name="to-test-the-linked-server"></a>So testen Sie den Verbindungsserver  
   

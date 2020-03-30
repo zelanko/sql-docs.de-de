@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc2d749f3963f0828a70bc1506581f5bd2a35a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75246228"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char und varchar (Transact-SQL)
@@ -74,7 +74,7 @@ Wenn OFF für SET ANSI_PADDING festgelegt ist, während CREATE TABLE oder ALTER 
 > Jede varchar(max)- oder nvarchar(max)-Spalte, die ungleich NULL ist, erfordert 24 Byte an zusätzlicher fester Verteilung, die während eines Sortiervorgangs hinsichtlich des Zeilenlimits von 8.060 Byte gelten. Dies kann zur Erstellung einer impliziten Beschränkung der Anzahl der varchar(max)- oder nvarchar(max)-Spalten führen, die ungleich NULL sind und in einer Tabelle erstellt werden können.
 Beim Erstellen der Tabelle (außerhalb der üblichen Warnung darüber, dass die maximale Zeilengröße das zulässige Maximum von 8.060 Byte überschreitet) oder beim Einfügen der Daten wird kein spezieller Fehler ausgegeben. Diese große Zeilengröße kann während einiger normaler Vorgänge Fehler verursachen (z. B. Fehler 512). Dazu gehören z. B. die Aktualisierung eines gruppierten Indexschlüssels oder das Sortieren des vollständigen Spaltensatzes. Diese Fehler können nur beim Ausführen eines Vorgangs auftreten.
 
-## <a name="_character"></a> Konvertieren von Zeichendaten
+## <a name="converting-character-data"></a><a name="_character"></a> Konvertieren von Zeichendaten
 
 Werden Zeichenausdrücke in einen Zeichendatentyp mit einer anderen Größe konvertiert, dann werden Werte, die für den neuen Datentyp zu lang sind, abgeschnitten. Der **uniqueidentifier**-Typ wird bei der Konvertierung von Zeichenausdrücken als Zeichentyp behandelt und unterliegt daher den Kürzungsregeln für die Konvertierung in einen Zeichentyp. Weitere Informationen finden Sie im Abschnitt "Beispiele" weiter unten.
 

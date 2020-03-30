@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287394"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Legacy-Paketbereitstellung (SSIS)
@@ -427,7 +427,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Fertig stellen**  
  Erstellen Sie die Konfiguration, und beenden Sie den **Paketkonfigurations-Assistenten**.  
 
-## <a name="child"></a> Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket
+## <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a><a name="child"></a> Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket
   In diesem Verfahren wird das Erstellen einer Paketkonfiguration beschrieben, die den Konfigurationstyp der übergeordneten Variablen verwendet. Durch diesen Konfigurationstyp kann ein untergeordnetes Paket, das von einem übergeordneten Paket ausgeführt wird, auf eine Variable im übergeordneten Element zugreifen.  
   
 > [!NOTE]  

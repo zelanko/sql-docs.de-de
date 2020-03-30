@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74200399"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Bekannte Probleme in SQL Server-Machine Learning Services
@@ -125,7 +125,7 @@ Dieses Problem wurde in der endgültigen Produktversion behoben. Außerdem gilt 
 
 **Anwendungsbereich:** SQL Server 2017 mit Python
 
-### <a name="bkmk_sqlbindr"></a> Warnung vor einer inkompatiblen Version beim Herstellen einer Verbindung mit einer älteren Version von SQL Server R Services von einem Client mithilfe von [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="warning-of-incompatible-version-when-you-connect-to-an-older-version-of-sql-server-r-services-from-a-client-by-using-sssqlv14_md"></a><a name="bkmk_sqlbindr"></a> Warnung vor einer inkompatiblen Version beim Herstellen einer Verbindung mit einer älteren Version von SQL Server R Services von einem Client mithilfe von [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 Wenn Sie R-Code in einem SQL Server 2016-Computekontext ausführen, wird möglicherweise folgende Fehlermeldung angezeigt:
 
@@ -332,7 +332,7 @@ Wenn Sie größere Modelle verwenden müssen, sind die folgenden Problemumgehung
 
     Nachdem Sie FileTable aktiviert haben, um das Modell zu schreiben, erhalten Sie mithilfe der FileTable-API einen Pfad von SQL, und dann schreiben Sie das Modell aus dem Code in diesen Speicherort. Wenn Sie das Modell lesen müssen, erhalten Sie den Pfad von SQL, und Sie können das Modell mit dem Pfad aus dem Skript abrufen. Weitere Informationen finden Sie unter [Zugreifen auf FileTables mit Datei-E/A-APIs](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
 
-### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>7. Löschen von Arbeitsbereichen vermeiden, wenn Sie R-Code in einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Computekontext ausführen
+### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-ssnoversion-compute-context"></a>7. Löschen von Arbeitsbereichen vermeiden, wenn Sie R-Code in einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Computekontext ausführen
 
 Wenn Sie einen R-Befehl verwenden, um Objekte aus Ihrem Arbeitsbereich zu entfernen, während R-Code in einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Computekontext ausgeführt wird, oder wenn Sie den Arbeitsbereich im Rahmen eines R-Skripts löschen, das mit [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) aufgerufen wird, erhalten Sie möglicherweise die folgende Fehlermeldung: *Arbeitsbereichsobjekt revoScriptConnection wurde nicht gefunden*.
 

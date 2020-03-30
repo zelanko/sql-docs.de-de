@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710323"
 ---
 # <a name="create-a-full-database-backup"></a>Erstellen einer vollständigen Datenbanksicherung
@@ -30,32 +30,32 @@ In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes
 
 Informationen zur SQL Server-Sicherung im Azure Blob Storage-Dienst finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage-Dienst](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) und [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
-## <a name="Restrictions"></a> Einschränkungen
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen
 
 - Die `BACKUP`-Anweisung ist in einer expliziten oder impliziten Transaktion nicht zulässig.
 - Sicherungen, die mit aktuelleren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt werden, können in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht wiederhergestellt werden.
 
 Sehen Sie sich eine Übersicht und einen tieferen Einblick in Sicherungskonzepte und -tasks unter [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) an, bevor Sie fortfahren.
 
-## <a name="Recommendations"></a> Empfehlungen
+## <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen
 
 - Wenn eine Datenbank größer wird, ist zum Abschließen von vollständigen Datenbanksicherungen mehr Zeit und mehr Speicherplatz erforderlich. Bei einer großen Datenbank bietet es sich an, eine vollständige Datenbanksicherung durch mehrere [differenzielle Datenbanksicherungen](../../relational-databases/backup-restore/differential-backups-sql-server.md) zu ergänzen.
 - Ein Schätzwert der Größe einer vollständigen Datenbanksicherung kann mithilfe der gespeicherten Systemprozedur [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) ermittelt werden.
 - Standardmäßig wird bei jedem erfolgreichen Sicherungsvorgang dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und dem Systemereignisprotokoll ein Eintrag hinzugefügt. Wenn Sie regelmäßig eine Sicherung durchführen, kumulieren diese Erfolgsmeldungen schnell und führen so zu großen Fehlerprotokollen! Dadurch kann sich die Suche nach anderen Meldungen erschweren. In solchen Fällen können Sie diese Sicherungsprotokolleinträge mithilfe des Ablaufverfolgungsflags 3226 unterdrücken, wenn keines der Skripts von diesen Einträgen abhängig ist. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-## <a name="Security"></a> Sicherheit
+## <a name="security"></a><a name="Security"></a> Sicherheit
 
 Bei einer Datenbanksicherung ist **TRUSTWORTHY** auf „OFF“ festgelegt. Weitere Informationen zum Festlegen von **TRUSTWORTHY** auf „ON“ finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden die **PASSWORD**- und **MEDIAPASSWORD**-Optionen nicht mehr für die Erstellung von Sicherungen verwendet. Sie können jedoch immer noch mit Kennwörtern erstellte Sicherungen wiederherstellen.
 
-## <a name="Permissions"></a> Berechtigungen
+## <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
 
 Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **db_owner** und **db_backupoperator** verfügen standardmäßig über `BACKUP DATABASE`- und `BACKUP LOG`-Berechtigungen.
 
  Besitz- und Berechtigungsprobleme im Zusammenhang mit der physischen Datei des Sicherungsmediums können den Sicherungsvorgang beeinträchtigen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst muss über Lese- und Schreibberechtigungen für das Medium verfügen. Das Konto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst ausgeführt wird, muss daher Schreibberechtigungen für das Sicherungsmedium aufweisen. Allerdings prüft die gespeicherte Prozedur [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), die den Systemtabellen einen Eintrag für ein Sicherungsmedium hinzufügt, nicht die Dateizugriffsberechtigungen. Infolgedessen treten solche Probleme mit der physischen Datei des Sicherungsmediums möglicherweise erst auf, wenn auf die physische Ressource zugegriffen wird, um einen Sicherungs- oder Wiederherstellungsvorgang auszuführen.
 
-## <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio
 
 > [!NOTE]
 > Wenn Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen Sicherungstask angeben, können Sie das entsprechende [BACKUP](../../t-sql/statements/backup-transact-sql.md)-Skript von [!INCLUDE[tsql](../../includes/tsql-md.md)] generieren, indem Sie auf die Schaltfläche **Skript** klicken und ein Ziel für das Skript auswählen.
@@ -240,7 +240,7 @@ Wenn Sie noch keinen Azure-Blobcontainer in einem Speicherkonto haben, erstellen
 
 1. Wenn die Sicherung erfolgreich abgeschlossen wurde, klicken Sie auf **OK**, um das Dialogfeld „SQL Server Management Studio“ zu schließen.
 
-## <a name="TsqlProcedure"></a> Verwenden von Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL
 
 Erstellen Sie eine vollständige Datenbanksicherung, indem Sie die `BACKUP DATABASE`-Anweisung ausführen, und geben Sie dabei Folgendes an:
 
@@ -251,7 +251,7 @@ Die grundlegende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax zum Erstell
 
  BACKUP DATABASE *database* TO *backup_device* [ **,** ...*n* ] [ WITH *with_options* [ **,** ...*o* ] ] ;
 
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |------------|-----------------|
 |*database*|Die Datenbank, für die eine Sicherungskopie erstellt werden soll.|
 |*Sicherungsmedium* [ **,** ...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> { DISK &#124; TAPE } **=** _physical\_backup\_device\_name_<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.|
@@ -278,7 +278,7 @@ Verwenden Sie alternativ die **FORMAT**-Option, um die Sicherungsmedien zu forma
  > [!IMPORTANT]
  > Gehen Sie mit der **FORMAT**-Klausel der `BACKUP`-Anweisung äußerst vorsichtig um, denn sie zerstört alle zuvor auf dem Sicherungsmedium gespeicherten Sicherungen.
 
-### <a name="TsqlExample"></a> Beispiele
+### <a name="examples"></a><a name="TsqlExample"></a> Beispiele
 
 Erstellen Sie für die folgenden Beispiele mit dem folgenden Transact-SQL-Code eine Testdatenbank:
 
@@ -361,7 +361,7 @@ BACKUP DATABASE SQLTestDB
 GO
 ```
 
-## <a name="PowerShellProcedure"></a> PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell
 
 Verwenden Sie das **Backup-SqlDatabase** -Cmdlet. Um ausdrücklich anzugeben, dass dies eine vollständige Datenbanksicherung ist, geben Sie den **-BackupAction**-Parameter mit dessen Standardwert **Database** an. Dieser Parameter ist bei vollständigen Datenbanksicherungen optional.
 
@@ -402,7 +402,7 @@ $backupFile = $container + '/' + $fileName
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential
 ```
 
-## <a name="RelatedTasks"></a> Related tasks
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks
 
 - [Erstellen einer vollständigen Datenbanksicherung (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 - [Erstellen einer differenziellen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)

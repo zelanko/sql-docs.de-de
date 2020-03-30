@@ -14,17 +14,17 @@ ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 63995b32f91419ef59184251299b5238d553905a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822575"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Seite „Optionen der Verfügbarkeitsgruppe angeben“ für eine Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema werden die Optionen der Seite **Namen der Verfügbarkeitsgruppe angeben** beschrieben. Dieses Thema wird sowohl von [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] als auch von [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]verwendet.  
   
-##  <a name="PageOptions"></a> Angeben der Optionen für Verfügbarkeitsgruppen  
+##  <a name="specify-availability-group-options"></a><a name="PageOptions"></a> Angeben der Optionen für Verfügbarkeitsgruppen  
  **Name der Verfügbarkeitsgruppe**  
  Geben Sie den Namen der Verfügbarkeitsgruppe an. Geben Sie für eine neue Verfügbarkeitsgruppe einen gültigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Bezeichner an, der in allen Verfügbarkeitsgruppen im Windows Server-Failovercluster (WSFC) eindeutig ist. Die maximale Länge eines Verfügbarkeitsgruppennamens beträgt 128 Zeichen.  
 
@@ -47,7 +47,7 @@ ms.locfileid: "74822575"
 
 Select Databases Page (New Availability Group Wizard and Add Database Wizard)  
   
-##  <a name="LaunchWiz"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Verwandte Aufgaben  
   
 -   [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

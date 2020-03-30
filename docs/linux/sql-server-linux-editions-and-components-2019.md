@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
 ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288554"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2019 unter Linux
@@ -77,7 +77,7 @@ Informationen zu den Funktionen (Features), die von der Developer, Enterprise Co
 
 Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
-##  <a name="Cross-BoxScaleLimits"></a> Skalierungsgrenzen  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> Skalierungsgrenzen  
   
 |Funktion|Enterprise|Standard|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,7 +90,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 <sup>1</sup> Die Enterprise Edition mit einer Lizenzierung auf der Grundlage von Serverlizenz + Clientzugriffslizenz (CAL) (für neue Verträge nicht verfügbar) ist auf maximal 20 Kerne pro SQL Server-Instanz beschränkt. Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen. Weitere Informationen finden Sie unter [Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
-##  <a name="RDBMSHA"></a> RDBMS: Hochverfügbarkeit  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> RDBMS: Hochverfügbarkeit  
   
 |Funktion|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -118,7 +118,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 
 <sup>3</sup> Bei der Standard Edition werden Basis-Verfügbarkeitsgruppen unterstützt. Eine Basis-Verfügbarkeitsgruppe unterstützt zwei Replikate mit einer Datenbank. Weitere Informationen über Basis-Verfügbarkeitsgruppen finden Sie unter [Basis-Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
-##  <a name="RDBMSSP"></a> RDBMS: Skalierbarkeit und Leistung  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> RDBMS: Skalierbarkeit und Leistung  
   
 |Funktion|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
@@ -143,7 +143,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 
 <sup>1</sup> Die Größe der In-Memory OLTP-Daten und des Columnstore-Segmentcaches sind auf die Größe des Arbeitsspeichers beschränkt, die von der Edition im Bereich Kapazitätsgrenzen festgelegt wird. Den maximale Grad an Parallelität ist beschränkt. Der Grad an Prozessparallelität (Degree of Parallelism, DOP) für eine Indexerstellung ist auf 2 DOP für die Standard Edition und auf 1 DOP für die Web und die Express Edition beschränkt. Dies gilt für Columnstore-Indizes, die über datenträgerbasierte Tabellen und speicheroptimierte Tabellen erstellt wurden.
 
-##  <a name="RDBMSS"></a> RDBMS: Sicherheit  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a> RDBMS: Sicherheit  
   
 |Funktion|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
@@ -157,7 +157,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Eigenständige Datenbanken|Ja|Ja|Ja|Ja| 
 |Verschlüsselung von Sicherungen|Ja|Ja|Nein|Nein|  
 
-##  <a name="RDBMSM"></a> RDBMS: Verwaltbarkeit  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> RDBMS: Verwaltbarkeit  
   
 |Funktion|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
@@ -176,7 +176,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Parallele Konsistenzprüfung|Ja|Nein|Nein|Nein| 
 |SQL Server-Steuerungspunkt für das Hilfsprogramm|Ja|Nein|Nein|Nein|    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |Funktion|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -197,11 +197,11 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 
 <sup>1</sup> Die Aufskalierung mit mehreren Computeknoten erfordert einen Hauptknoten.
 
-## <a name="IS"></a> Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
 Informationen über die Features von Integration Services (SSIS), die von den einzelnen Editionen von [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [Von den SQL Server-Editionen unterstützte Integration Services-Funktionen](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
-##  <a name="SLS"></a> Räumliche und ortsbezogene Dienste  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a> Räumliche und ortsbezogene Dienste  
   
 |Funktionsname|Enterprise|Standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -210,7 +210,7 @@ Informationen über die Features von Integration Services (SSIS), die von den ei
 |Erweiterte räumliche Bibliotheken|Ja|Ja|Ja|Ja|   
 |Importieren/Exportieren räumlicher Industriestandard-Datenformate|Ja|Ja|Ja|Ja|   
 
-## <a name="Unsupported"></a> Nicht unterstützte Features und Dienste
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> Nicht unterstützte Features und Dienste
 
 Die folgenden Features und Dienste stehen für SQL Server 2019 für Linux nicht zur Verfügung. Die Unterstützung dieser Features wird im Laufe der Zeit ausgeweitet.
 

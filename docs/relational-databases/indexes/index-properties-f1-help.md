@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68476301"
 ---
 # <a name="index-properties-f1-help"></a>Indexeigenschaften (F1-Hilfe)
@@ -43,7 +43,7 @@ ms.locfileid: "68476301"
   
  [Indexeigenschaften auf der Seite "Filter"](#Filter)  
   
-##  <a name="General"></a> Indexeigenschaften auf der Seite "Allgemein"  
+##  <a name="index-properties-general-page"></a><a name="General"></a> Indexeigenschaften auf der Seite "Allgemein"  
  Auf der Seite Allgemein können Sie die Indexeigenschaften für die ausgewählte Tabelle oder Sicht anzeigen und ändern. Die Optionen für jede Seite ändern sich möglicherweise abhängig vom ausgewählten Indextyp.  
   
  **Tabellenname**  
@@ -55,7 +55,7 @@ ms.locfileid: "68476301"
  Zeigt den Namen des Indexes an. Dieses Feld ist bei einem vorhandenen Index schreibgeschützt. Wenn ein neuer Index erstellt wird, geben Sie den Namen des Indexes an.  
   
  **Indextyp**  
- Gibt den Indextyp an. Gibt bei neuen Indizes den Indextyp an, der beim Öffnen des Dialogfelds ausgewählt ist. Indizes können folgende Typen aufweisen: **Gruppiert**, **Nicht gruppiert**, **Primäre XML**, **Sekundäre XML**, **Räumlich**, **Gruppierter Columnstore** oder **Nicht gruppierter Columnstore**.  
+ Gibt den Indextyp an. Gibt bei neuen Indizes den Indextyp an, der beim Öffnen des Dialogfelds ausgewählt ist. Indizes können folgende Typen aufweisen: **Gruppiert**, **Nicht gruppiert**, **Primäre XML**, **Sekundäre XML**, **Räumlich**, **Gruppierter Columnstore**oder **Nicht gruppierter Columnstore**.  
   
  **Hinweis** Es ist nur ein gruppierter Index pro Tabelle zulässig. Pro Tabelle ist nur ein speicheroptimierter xVelocity-columnstore-Index zulässig.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68476301"
  **Eingeschlossene Spalten**  
  Nimmt Nichtschlüsselspalten in den nicht gruppierten Index auf. Mit dieser Option können Sie die aktuellen Indexgrenzwerte hinsichtlich der Gesamtgröße eines Indexschlüssels und der maximalen Anzahl der Spalten in einem Indexschlüssel umgehen, indem Sie Spalten auf Blattebene eines nicht gruppierten Indexes als Nichtschlüsselspalten hinzufügen. Weitere Informationen finden Sie unter [Erstellen von Indizes mit eingeschlossenen Spalten](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
-##  <a name="Columns"></a> (Index-)spalten auswählen (Dialogfeld)  
+##  <a name="select-index-columns-dialog-box"></a><a name="Columns"></a> (Index-)spalten auswählen (Dialogfeld)  
  Mithilfe dieser Seite können Sie der Seite **Indexeigenschaften, Allgemein** beim Erstellen oder Ändern eines Indexes Spalten hinzufügen.  
   
  **Kontrollkästchen**  
@@ -134,7 +134,7 @@ ms.locfileid: "68476301"
  **NULL-Werte zulassen**  
  Zeigt **Ja** an, wenn die Tabellendefinition für die Spalte NULL-Werte zulässt. Zeigt **Nein** an, wenn die Tabellendefinition für die Spalte keine NULL-Werte zulässt.  
 
-##  <a name="Options"></a> Optionen auf der Seite „Optionen“
+##  <a name="options-page-options"></a><a name="Options"></a> Optionen auf der Seite „Optionen“
  Auf dieser Seite können Sie verschiedene Indexoptionen anzeigen und ändern.
 
 ### <a name="general-options"></a>Allgemeine Optionen
@@ -203,7 +203,7 @@ Der Prozentsatz des mit „fillfactor“ angegebenen freien Speicherplatzes wird
 Die Zwischenebenenseiten sind nahezu vollständig aufgefüllt. Allerdings ist ausreichend Speicherplatz vorhanden, um mindestens eine Zeile in der maximal für den Index möglichen Größe aufzunehmen, wenn der Schlüsselsatz auf den Zwischenseiten berücksichtigt wird.
 
 
-##  <a name="Storage"></a> Optionen auf der Seite "Speicher"  
+##  <a name="storage-page-options"></a><a name="Storage"></a> Optionen auf der Seite "Speicher"  
  Auf dieser Seite können Sie Dateigruppen- bzw. Partitionsschemaeigenschaften für den ausgewählten Index anzeigen und ändern. Zeigt nur Optionen in Zusammenhang mit dem Indextyp an.  
   
  **Dateigruppe**  
@@ -234,7 +234,7 @@ Die Zwischenebenenseiten sind nahezu vollständig aufgefüllt. Allerdings ist au
 > [!NOTE]  
 >  Wenn die Tabellenspalte eine berechnete Spalte ist, wird unter **Spaltendatentyp** „berechnete Spalte“ angezeigt.  
   
-##  <a name="Spatial"></a> Indexoptionen auf der Seite "Räumlich"  
+##  <a name="spatial-page-index-options"></a><a name="Spatial"></a> Indexoptionen auf der Seite "Räumlich"  
  Auf der Seite **Räumlich** können Sie die Werte der räumlichen Eigenschaften anzeigen oder angeben. Weitere Informationen finden Sie unter [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ### <a name="bounding-box"></a>Umgebendes Feld  
@@ -292,7 +292,7 @@ Die Zwischenebenenseiten sind nahezu vollständig aufgefüllt. Allerdings ist au
  **Ebene 4**  
  Die Dichte des Rasters der vierten Ebene.  
   
-##  <a name="Filter"></a> Seite "Filter"  
+##  <a name="filter-page"></a><a name="Filter"></a> Seite "Filter"  
  Auf dieser Seite können Sie das Filterprädikat für einen gefilterten Index eingeben. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  **Filterausdruck**  
