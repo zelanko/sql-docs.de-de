@@ -29,10 +29,10 @@ ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68055957"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
@@ -62,7 +62,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie ALTER XML SCHEMA COLLECTION zum Einfügen neuer XML-Schemas, deren Namespaces noch nicht in der XML-Schemaauflistung vorhanden sind, oder zum Hinzufügen neuer Komponenten zu vorhandenen Namespaces in der Auflistung.  
   
- Im folgenden Beispiel wird dem vorhandenen Namespace `https://MySchema/test_xml_schema` in der Collection `MyColl` ein neues \<Element> hinzugefügt.  
+ Im folgenden Beispiel wird dem vorhandenen Namespace \< in der Collection `https://MySchema/test_xml_schema` ein neues `MyColl`Element> hinzugefügt.  
   
 ```  
 -- First create an XML schema collection.  

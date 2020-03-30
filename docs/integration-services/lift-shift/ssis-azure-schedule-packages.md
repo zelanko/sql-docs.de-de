@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 4217acf163e8603c5993cfa8ade4207c9a79c6cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054564"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Planen der Ausführung von in Azure bereitgestellten SSIS-Paketen
@@ -36,13 +36,13 @@ Sie können die Ausführung von SSIS-Paketen planen, die im SSISDB-Katalog eines
 - [Indirektes Planen eines Pakets als Teil einer Azure Data Factory-Pipeline](#activity)
 
 
-## <a name="ssms"></a> Planen eines Pakets mit SSMS
+## <a name="schedule-a-package-with-ssms"></a><a name="ssms"></a> Planen eines Pakets mit SSMS
 
 In SQL Server Management Studio (SSMS) können Sie mit der rechten Maustaste auf ein Paket klicken, das in der SSIS-Katalogdatenbank SSISDB bereitgestellt wird, und **Zeitplan** auswählen, um das Dialogfeld **Neuer Zeitplan** zu öffnen. Weitere Informationen finden Sie unter [Planen der Ausführung von SSIS-Paketen in Azure mit SSMS](ssis-azure-schedule-packages-ssms.md).
 
 Dieses Feature erfordert SQL Server Management Studio, Version 17.7 oder höher. Die neueste Version von SSMS können Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) abrufen.
 
-## <a name="elastic"></a> Planen eines Pakets mit SQL-Datenbank für elastische Aufträge
+## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> Planen eines Pakets mit SQL-Datenbank für elastische Aufträge
 
 Weitere Informationen zu elastischen Aufträgen auf SQL-Datenbank finden Sie unter [Verwalten von Scale Out-Clouddatenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
@@ -88,7 +88,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
     @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
 ```
 
-## <a name="agent"></a> Lokales Planen eines Pakets mit SQL Server-Agent
+## <a name="schedule-a-package-with-sql-server-agent-on-premises"></a><a name="agent"></a> Lokales Planen eines Pakets mit SQL Server-Agent
 
 Weitere Informationen zu SQL Server-Agent finden Sie unter [SQL Server Agent Jobs for Packages (Aufträge für SQL Server-Agent für Pakete)](../packages/sql-server-agent-jobs-for-packages.md).
 
@@ -160,7 +160,7 @@ Erstellen Sie mithilfe eines Auftragsschritts einen Auftrag, der die gespeichert
 
 6.  Stellen Sie die Konfiguration und die Planung des Auftrags fertig.
 
-## <a name="activity"></a> Planen eines Pakets als Teil einer Azure Data Factory-Pipeline
+## <a name="schedule-a-package-as-part-of-an-azure-data-factory-pipeline"></a><a name="activity"></a> Planen eines Pakets als Teil einer Azure Data Factory-Pipeline
 
 Sie können ein Paket indirekt planen, indem Sie einen Trigger verwenden, um eine Azure Data Factory-Pipeline auszuführen, die ein SSIS-Paket ausführt.
 

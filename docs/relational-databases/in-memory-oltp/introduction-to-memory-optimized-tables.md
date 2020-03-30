@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68050200"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Einführung in speicheroptimierte Tabellen
@@ -69,11 +69,11 @@ Auf speicheroptimierte Tabellen kann am effizientesten mit systemintern kompilie
 
 Die folgenden Faktoren beeinflussen die Leistungsvorteile, die mit In-Memory OLTP erreicht werden können:  
   
-*Kommunikation:* Eine Anwendung mit vielen Aufrufen kurzer gespeicherter Prozeduren erzielt möglicherweise einen kleineren Leistungszuwachs als eine Anwendung, bei der weniger Aufrufe und zusätzliche Funktionen in jede gespeicherte Prozedur implementiert sind.  
+*Kommunikation:* Eine Anwendung mit vielen Aufrufen kurzer gespeicherter Prozeduren erzielt möglicherweise einen kleineren Leistungszuwachs als eine Anwendung, bei der weniger Aufrufe und zusätzliche Funktionen in jeder gespeicherten Prozedur implementiert sind.  
   
-*[!INCLUDE[tsql](../../includes/tsql-md.md)] Ausführung:* In-Memory OLTP gewährleistet die beste Leistung bei systemintern kompilierten gespeicherten Prozeduren im Gegensatz zu interpretierten gespeicherten Prozeduren oder Abfrageausführungen. Dies kann einen Vorteil gegenüber dem Zugriff auf speicheroptimierte Tabellen aus solchen gespeicherten Prozeduren bieten.  
+*[!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausführung:* In-Memory OLTP gewährleistet die beste Leistung bei systemintern kompilierten gespeicherten Prozeduren im Gegensatz zu interpretierten gespeicherten Prozeduren oder Abfrageausführungen. Dies kann einen Vorteil gegenüber dem Zugriff auf speicheroptimierte Tabellen aus solchen gespeicherten Prozeduren bieten.  
   
-*Bereichsscan im Vergleich zur Punktsuche* Speicheroptimierte, nicht gruppierte Indizes unterstützen Bereichsscans und sortierte Scans. Bei Punktsuchen erzielen Sie mit speicheroptimierten Hashindizes eine bessere Leistung als mit speicheroptimierten, nicht gruppierten Indizes. Speicheroptimierte, nicht gruppierte Indizes weisen eine bessere Leistung auf als datenträgerbasierte Indizes.
+*Bereichsscan im Vergleich zu Punktsuche:* Speicheroptimierte, nicht gruppierte Indizes unterstützen Bereichsscans und sortierte Scans. Bei Punktsuchen erzielen Sie mit speicheroptimierten Hashindizes eine bessere Leistung als mit speicheroptimierten, nicht gruppierten Indizes. Speicheroptimierte, nicht gruppierte Indizes weisen eine bessere Leistung auf als datenträgerbasierte Indizes.
 
 - Ab SQL Server 2016 kann der Abfrageplan für eine speicheroptimierte Tabelle die Tabelle parallel scannen. Dies verbessert die Leistung von Analyseabfragen.
   - Hashindizes können seit SQL Server 2016 auch parallel gescannt werden.
@@ -82,7 +82,7 @@ Die folgenden Faktoren beeinflussen die Leistungsvorteile, die mit In-Memory OLT
   
 *Indexvorgänge:* Indexvorgänge werden nicht protokolliert und sind nur im Arbeitsspeicher vorhanden.  
   
-*Parallelität:* Anwendungen, deren Leistung durch Parallelität auf Engine-Ebene wie Latchkonflikte oder Blockierungen beeinträchtigt wird, verzeichnen eine erhebliche Leistungssteigerung, wenn die Anwendung auf In-Memory OLTP umgestellt wird.  
+*Parallelität:* Anwendungen, deren Leistung durch Parallelität auf Engine-Ebene wie Latchkonflikte oder Blockierungen beeinträchtigt wird, verzeichnen eine erhebliche Leistungssteigerung, wenn die Anwendung auf In-Memory-OLTP umgestellt wird.  
   
 In der folgenden Tabelle werden die Leistungs- und Skalierbarkeitsprobleme, die häufig in relationalen Datenbanken auftreten, zusammen mit einer möglichen Leistungssteigerung durch In-Memory OLTP aufgeführt.  
   
@@ -91,7 +91,7 @@ In der folgenden Tabelle werden die Leistungs- und Skalierbarkeitsprobleme, die 
 |Leistung<br /><br /> Intensive Ressourcennutzung (CPU, E/A, Netzwerk oder Arbeitsspeicher)|CPU<br /> Durch systemintern kompilierte gespeicherte Prozeduren kann die CPU-Nutzung erheblich gesenkt werden, da sie deutlich weniger Anweisungen als interpretierte gespeicherte Prozeduren benötigen, um eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung auszuführen.<br /><br /> In-Memory OLTP kann die erforderlichen Hardwareinvestitionen bei horizontal skalierten Arbeitsauslastungen reduzieren, da ein Server so potenziell den Durchsatz von fünf bis 10 Servern erzielen kann.<br /><br /> E/A<br /> Wenn bei der Verarbeitung ein E/A-Engpass aufgrund der Verarbeitung von Daten oder Indexseiten auftritt, lässt sich dieser durch In-Memory OLTP u. U. reduzieren. Zudem wird der Prüfpunktalgorithmus von In-Memory OLTP-Objekten kontinuierlich durchgeführt und führt nicht zu einem plötzlichen Anstieg von E/A-Vorgängen. Wenn jedoch das Workingset der leistungskritischen Tabellen zu groß für den Arbeitsspeicher ist, steigert In-Memory OLTP nicht die Leistung, da dieser Datenbanktyp speicherresidente Daten benötigt. Wenn bei der Protokollierung ein E/A-Engpass auftritt, kann In-Memory OLTP diesen Engpass verringern, da weniger Protokollierungsaktivität durchgeführt wird. Wenn eine oder mehrere speicheroptimierte Tabellen als nicht dauerhafte Tabellen konfiguriert sind, können Sie dadurch die Protokollierung für Daten eliminieren.<br /><br /> Arbeitsspeicher<br /> In-Memory OLTP bietet keine Leistungssteigerung. In-Memory OLTP kann den Arbeitsspeicher zusätzlich belasten, da die Objekte speicherresident sein müssen.<br /><br /> Netzwerk<br /> In-Memory OLTP bietet keine Leistungssteigerung. Die Daten müssen von der Datenebene an die Anwendungsebene übertragen werden.|  
 |Skalierbarkeit<br /><br /> Die meisten Skalierungsprobleme bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anwendungen werden durch Parallelitätsprobleme wie Konflikten bei Sperren, Latches und Spinlocks verursacht.|Latchkonflikte<br /> Ein typisches Szenario ist ein Konflikt auf der letzten Seite eines Indexes, wenn Zeilen gleichzeitig in Schlüsselreihenfolge einfügt werden. Da In-Memory OLTP beim Datenzugriff keine Latches verwendet, werden Skalierbarkeitsprobleme aufgrund von Latchkonflikten vollständig eliminiert.<br /><br /> Spinlock-Konflikt<br /> Da In-Memory OLTP beim Datenzugriff keine Latches verwendet, werden Skalierbarkeitsprobleme aufgrund von Spinlock-Konflikten vollständig eliminiert.<br /><br /> Konflikte aufgrund von Sperren<br /> Wenn in der Datenbankanwendung Blockierungen zwischen Lese- und Schreibvorgängen auftreten, werden diese Blockierungsprobleme durch In-Memory OLTP beseitigt, da es eine neue Art der optimistischen Nebenläufigkeitssteuerung für die Implementierung der Transaktionsisolationsstufen verwendet. In-Memory OLTP verwendet nicht TempDB, um Zeilenversionen zu speichern.<br /><br /> Wenn das Skalierungsproblem durch einen Konflikt zwischen zwei Schreibvorgängen verursacht wird, etwa zwei Transaktionen, die gleichzeitig dieselbe Zeile zu aktualisieren versuchen, führt In-Memory OLTP eine Transaktion erfolgreich durch und beendet die andere. Die fehlgeschlagene Transaktion muss zur Wiederholung explizit oder implizit erneut gesendet werden. In beiden Fällen müssen Sie Änderungen an der Anwendung vornehmen.<br /><br /> Wenn in der Anwendung häufig Konflikte zwischen zwei Schreibvorgängen auftreten, wird der Wert der optimistischen Sperre verringert. Die Anwendung ist für In-Memory OLTP nicht geeignet. Die meisten OLTP-Anwendungen weisen keine Schreibkonflikte auf, sofern diese nicht durch Sperrenausweitung verursacht werden.|  
   
-##  <a name="rls"></a> Sicherheit auf Zeilenebene in speicheroptimierten Tabellen  
+##  <a name="row-level-security-in-memory-optimized-tables"></a><a name="rls"></a> Sicherheit auf Zeilenebene in speicheroptimierten Tabellen  
 
 [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) wird für speicheroptimierte Tabellen unterstützt. Richtlinien für die Sicherheit auf Zeilenebene werden auf speicheroptimierte Tabellen im Wesentlichen auf die gleiche Weise wie auf datenträgerbasierte Tabellen angewendet. Der einzige Unterschied ist, dass die als Sicherheitsprädikate verwendeten Inline-Tabellenwertfunktionen systemintern kompiliert (mit der Option WITH NATIVE_COMPILATION erstellt) werden müssen. Weitere Informationen finden Sie unter [Row-Level Security](../../relational-databases/security/row-level-security.md#Limitations) (Sicherheit auf Zeilenebene) im Abschnitt [Cross-Feature Compatibility](../../relational-databases/security/row-level-security.md) (Funktionsübergreifende Kompatibilität).  
   

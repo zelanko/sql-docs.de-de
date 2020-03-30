@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909693"
 ---
 # <a name="indexes-on-computed-columns"></a>Indizes in berechneten Spalten
@@ -115,7 +115,7 @@ Die **IsPrecise** -Eigenschaft der COLUMNPROPERTY-Funktion teilt mit, ob der Aus
 > [!NOTE]
 > Durch Festlegen von ANSI_WARNINGS auf ON wird implizit ARITHABORT auf ON festgelegt, wenn der Kompatibilitätsgrad der Datenbank auf 90 oder höher festgelegt ist.  
   
-## <a name="BKMK_persisted"></a> Erstellen von Indizes für persistente berechnete Spalten  
+## <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> Erstellen von Indizes für persistente berechnete Spalten  
 
 Manchmal können Sie eine berechnete Spalte erstellen, die mit einem deterministischen, aber unpräzisen Ausdruck definiert ist. Dies ist möglich, wenn die Spalte in der CREATE TABLE- oder ALTER TABLE-Anweisung als PERSISTED gekennzeichnet ist.
 
