@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70155112"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank
@@ -25,14 +25,14 @@ In diesem Artikel werden Probleme behandelt, die auftreten können, wenn über d
   
 - [SQL Azure-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [Vorgehensweise: Herstellen einer Verbindung mit SQL Azure mithilfe von JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [How to: Connect to SQL Azure Using JDBC (Vorgehensweise: Herstellen einer Verbindung mit SQL Azure mithilfe von JDBC)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [Connecting using Azure Active Directory Authentication (Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung)](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>Details
 
 Wenn Sie eine Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]-Instanz herstellen, sollten Sie die Masterdatenbank auswählen, um **SQLServerDatabaseMetaData.getCatalogs** aufzurufen.  
-Die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank wird von [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] nicht unterstützt. **SQLServerDatabaseMetaData.getCatalogs** verwendet die Ansicht „sys.databases“, um Kataloge abzurufen. Erläuterung zum Verhalten von **SQLServerDatabaseMetaData.getCatalogs** in einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]-Instanz finden Sie im Abschnitt „Berechtigungen“ des Artikels [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+Die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank wird von [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] nicht unterstützt. **SQLServerDatabaseMetaData.getCatalogs** verwendet die Ansicht „sys.databases“, um Kataloge abzurufen. Erläuterung zum Verhalten von [SQLServerDatabaseMetaData.getCatalogs](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) in einer **-Instanz finden Sie im Abschnitt „Berechtigungen“ des Artikels** sys.databases (Transact-SQL)[!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## <a name="connections-dropped"></a>Getrennte Verbindungen
 

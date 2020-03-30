@@ -11,10 +11,10 @@ ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ddd61d15e3c363766c7e49b8e9045b60a7be164
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025794"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Verwenden von Anweisungen mit dem JDBC-Treiber
@@ -35,7 +35,7 @@ Der JDBC-Treiber umfasst drei Klassen zum Abrufen von Daten aus einer [!INCLUDE[
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
-| Thema                                                                                                    | Beschreibung                                                                                                                                            |
+| Thema                                                                                                    | BESCHREIBUNG                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Verwenden von Anweisungen mit SQL](../../connect/jdbc/using-statements-with-sql.md)                             | Beschreibt die Verwendung von SQL-Anweisungen mit dem JDBC-Treiber, um Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zu verarbeiten.    |
 | [Verwenden von Anweisungen mit gespeicherten Prozeduren](../../connect/jdbc/using-statements-with-stored-procedures.md) | Beschreibt die Verwendung von gespeicherten Prozeduren mit dem JDBC-Treiber, um Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zu verarbeiten. |

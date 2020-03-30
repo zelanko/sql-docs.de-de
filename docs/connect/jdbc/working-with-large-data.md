@@ -11,10 +11,10 @@ ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aab60ed1db5d7749c4edbc52fcad4bebddf93d52
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025462"
 ---
 # <a name="working-with-large-data"></a>Arbeiten mit umfangreichen Daten
@@ -31,7 +31,7 @@ Der **adaptive**-Wert ist der Standardpuffermodus, und der JDBC-Treiber puffert 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-| Thema                                                                                                                      | Beschreibung                                                              |
+| Thema                                                                                                                      | BESCHREIBUNG                                                              |
 | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [Beispiel zum Lesen umfangreicher Daten](../../connect/jdbc/reading-large-data-sample.md)                                               | Beschreibt die Verwendung einer SQL-Anweisung zum Abrufen von Daten mit umfangreichen Werten.       |
 | [Beispiel zum Lesen umfangreicher Daten mit gespeicherten Prozeduren](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) | Beschreibt das Abrufen eines umfangreichen CallableStatement OUT-Parameterwerts. |

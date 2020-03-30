@@ -9,10 +9,10 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b273ef327b666c7c660349657fa9ca9eabe9f4a4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570999"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Erweiterter Schutz für die Authentifizierung mit Reporting Services
@@ -107,13 +107,13 @@ SSRS unterstützt und erzwingt erweiterten Schutz, der im Betriebssystem aktivie
   
  Wenn die Überprüfung der Konfigurationseinstellungen fehlschlägt, werden die Authentifizierungstypen **RSWindowsNTLM**, **RSWindowsKerberos** und **RSWindowsNegotiate** auf dem Berichtsserver deaktiviert.  
   
-###  <a name="ConfigurationSettings"></a> Konfigurationseinstellungen für den erweiterten Schutz der Reporting Services  
+###  <a name="configuration-settings-for-reporting-services-extended-protection"></a><a name="ConfigurationSettings"></a> Konfigurationseinstellungen für den erweiterten Schutz der Reporting Services  
  In der folgenden Tabelle sind Informationen zu den Konfigurationseinstellungen in der Datei **rsreportserver.config** für erweiterten Schutz bereitgestellt.  
   
-|Einstellung|Beschreibung|  
+|Einstellung|BESCHREIBUNG|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|Gibt den Grad der Erzwingung des erweiterten Schutzes an. Gültige Werte sind:<br /><br /> **Off**: Standard. Gibt keine Kanal- oder Dienstbindungsüberprüfung an.<br /><br /> **Zulassen** unterstützt erweiterten Schutz, erfordert ihn aber nicht.  Gibt Folgendes an:<br /><br /> – Erweiterter Schutz wird für Clientanwendungen, die unter Betriebssystemen ausgeführt werden, die erweiterten Schutz unterstützen, erzwungen. Die Art, wie Schutz erzwungen wird, wird durch die Einstellung **RsWindowsExtendedProtectionScenario**festgelegt.<br /><br /> – Die Authentifizierung ist für Anwendungen zulässig, die unter Betriebssystemen ausgeführt werden, die keinen erweiterten Schutz unterstützen.<br /><br /> **Erfordern** gibt Folgendes an:<br /><br /> – Erweiterter Schutz wird für Clientanwendungen, die unter Betriebssystemen ausgeführt werden, die erweiterten Schutz unterstützen, erzwungen.<br /><br /> – Die Authentifizierung ist **nicht** für Anwendungen zulässig, die unter Betriebssystemen ohne Unterstützung von erweitertem Schutz ausgeführt werden.|  
-|**RsWindowsExtendedProtectionScenario**|Gibt an, welche Arten des erweiterten Schutzes überprüft werden: Kanalbindung, Dienstbindung oder beides. Gültige Werte sind:<br /><br /> **Proxy**: Standard. Gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung, wenn ein Kanalbindungstoken vorhanden ist.<br /><br /> – Dienstbindung wird erzwungen.<br /><br /> **Beliebig** gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung sowie eine Kanalbindung sind nicht erforderlich.<br /><br /> – Dienstbindung wird erzwungen.<br /><br /> **Direkt** gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung, wenn ein CBT vorhanden ist, eine SSL-Verbindung zum aktuellen Dienst vorhanden ist und das CBT für die SSL-Verbindung dem CBT des NTLM-, Kerberos- oder Negotiate-Tokens entspricht.<br /><br /> – Dienstbindung wird nicht erzwungen.<br /><br /> <br /><br /> Hinweis: Die Einstellung **RsWindowsExtendedProtectionScenario** wird ignoriert, wenn **RsWindowsExtendedProtectionLevel** den Wert **OFF** aufweist.|  
+|**RSWindowsExtendedProtectionLevel**|Gibt den Grad der Erzwingung des erweiterten Schutzes an. Gültige Werte sind:<br /><br /> **Aus:** Standard. Gibt keine Kanal- oder Dienstbindungsüberprüfung an.<br /><br /> **Zulassen** unterstützt erweiterten Schutz, erfordert ihn aber nicht.  Gibt Folgendes an:<br /><br /> – Erweiterter Schutz wird für Clientanwendungen, die unter Betriebssystemen ausgeführt werden, die erweiterten Schutz unterstützen, erzwungen. Die Art, wie Schutz erzwungen wird, wird durch die Einstellung **RsWindowsExtendedProtectionScenario**festgelegt.<br /><br /> – Die Authentifizierung ist für Anwendungen zulässig, die unter Betriebssystemen ausgeführt werden, die keinen erweiterten Schutz unterstützen.<br /><br /> **Erfordern** gibt Folgendes an:<br /><br /> – Erweiterter Schutz wird für Clientanwendungen, die unter Betriebssystemen ausgeführt werden, die erweiterten Schutz unterstützen, erzwungen.<br /><br /> – Die Authentifizierung ist **nicht** für Anwendungen zulässig, die unter Betriebssystemen ohne Unterstützung von erweitertem Schutz ausgeführt werden.|  
+|**RsWindowsExtendedProtectionScenario**|Gibt an, welche Arten des erweiterten Schutzes überprüft werden: Kanalbindung, Dienstbindung oder beide. Gültige Werte sind:<br /><br /> **Proxy:** Standard. Gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung, wenn ein Kanalbindungstoken vorhanden ist.<br /><br /> – Dienstbindung wird erzwungen.<br /><br /> **Beliebig** gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung sowie eine Kanalbindung sind nicht erforderlich.<br /><br /> – Dienstbindung wird erzwungen.<br /><br /> **Direkt** gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung, wenn ein CBT vorhanden ist, eine SSL-Verbindung zum aktuellen Dienst vorhanden ist und das CBT für die SSL-Verbindung dem CBT des NTLM-, Kerberos- oder Negotiate-Tokens entspricht.<br /><br /> – Dienstbindung wird nicht erzwungen.<br /><br /> <br /><br /> Hinweis: Die Einstellung **RsWindowsExtendedProtectionScenario** wird ignoriert, wenn **RsWindowsExtendedProtectionLevel** den Wert **Aus**aufweist.|  
   
  Beispieleinträge in der Konfigurationsdatei **rsreportserver.config** :  
   
@@ -142,7 +142,7 @@ SSRS unterstützt und erzwingt erweiterten Schutz, der im Betriebssystem aktivie
 ### <a name="hosts-collection-sources"></a>Hosts-Auflistungsquellen.  
  In der folgenden Tabelle sind die potenziellen Quellen für die Hosts-Auflistung aufgeführt.  
   
-|Typ der Quelle|Beschreibung|  
+|Typ der Quelle|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |ComputernameDnsDomäne|Der Name der dem lokalen Computer zugewiesenen DNS-Domäne. Wenn der lokale Computer ein Knoten in einem Cluster ist, wird der DNS-Domänenname des virtuellen Clusterservers verwendet.|  
 |ComputernameDnsVollqualifiziert|Der vollqualifizierte DNS-Name, der den lokalen Computer eindeutig identifiziert. Dieser Name ist eine Kombination des DNS-Hostnamens und des DNS-Domänennamens und verwendet die Form *Hostname*.*Domänenname*. Wenn der lokale Computer ein Knoten in einem Cluster ist, wird der vollqualifizierte DNS-Domänenname des virtuellen Clusterservers verwendet.|  
@@ -166,7 +166,7 @@ SSRS unterstützt und erzwingt erweiterten Schutz, der im Betriebssystem aktivie
 [Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [Übersicht über den erweiterten Schutz für die Authentifizierung (möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkID=177943)   
 [Integrierte Windows-Authentifizierung unter Verwendung von „Erweiterter Schutz“](https://go.microsoft.com/fwlink/?LinkId=179922)   
-[Microsoft-Sicherheitsempfehlung: Erweiterter Schutz für die Authentifizierung](https://go.microsoft.com/fwlink/?LinkId=179923)   
+[Microsoft-Sicherheitsempfehlung: Erweiterter Schutz für die Authentifizierung (möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [Berichtsserverdienst-Ablaufverfolgungsprotokoll](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [SetExtendedProtectionSettings-Methode &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

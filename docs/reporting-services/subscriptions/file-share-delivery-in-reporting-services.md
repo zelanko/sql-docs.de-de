@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72278231"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Dateifreigabeübermittlung in Reporting Services
@@ -25,7 +25,7 @@ ms.locfileid: "72278231"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Einheitlicher Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
  **In diesem Thema:**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "72278231"
   
 -   [Dateioptionen](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> Merkmale der an freigegebene Ordner übermittelten Berichte  
+##  <a name="characteristics-reports-delivered-to-shared-folders"></a><a name="bkmk_Characteristics"></a> Merkmale der an freigegebene Ordner übermittelten Berichte  
   
 -   Im Gegensatz zu Berichten, die von einem Berichtsserver gehostet und verwaltet werden, handelt es sich bei Berichten, die an einen freigegebenen Ordner übermittelt werden, um statische Dateien.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72278231"
   
 -   Wenn Sie die interaktiven Funktionen bei einem übermittelten Bericht erhalten möchten, müssen Sie die E-Mail-Übermittlung verwenden. Die E-Mail-Nachricht enthält einen Link zum Bericht auf dem Berichtsserver. Benutzer können die interaktiven Features verwenden. Weitere Informationen finden Sie unter [E-Mail-Übermittlung in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
-##  <a name="bkmk_target_folders"></a> Zielordner  
+##  <a name="target-folders"></a><a name="bkmk_target_folders"></a> Zielordner  
  Wenn Sie ein Abonnement definieren, das die Dateifreigabeübermittlung verwendet, müssen Sie einen vorhandenen Ordner als Zielordner angeben. Der Berichtsserver erstellt keine Ordner im Dateisystem. Auf den angegebenen Ordner muss über eine Netzwerkverbindung zugegriffen werden können.  
   
  Überprüfen Sie, ob Benutzer, die die Berichte im freigegebenen Order **anzeigen** , über Leseberechtigungen verfügen.  
@@ -60,12 +60,12 @@ ms.locfileid: "72278231"
   
  Beachten Sie beim Erstellen des Ordners die erforderlichen Verbindungslimits. Für den Berichtsserver sind zwei Verbindungen erforderlich. Sie müssen jedoch genügend Verbindungen einfügen, um weitere Benutzer aufnehmen zu können, die Berichte im freigegebenen Ordner öffnen möchten.  
   
-##  <a name="bkmk_file_formats"></a> Dateiformate  
+##  <a name="file-formats"></a><a name="bkmk_file_formats"></a> Dateiformate  
  Berichte können in einer Vielzahl von Dateiformaten gerendert werden, z. B. in HTML, DOCX oder Excel. Um einen Bericht in einem bestimmten Dateiformat zu speichern, wählen Sie das entsprechende Renderingformat aus, wenn Sie Ihr Abonnement erstellen. Beispielsweise wird durch Auswählen von **Excel** der Bericht als [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Datei gespeichert. Sie können zwar ein beliebiges unterstütztes Renderingformat auswählen, manche Formate eignen sich jedoch besser zum Rendern einer Datei.  
   
  Wenn Sie die Dateifreigabeübermittlung verwenden, wählen Sie ein Format aus, das den Bericht in einer einzigen Datei übermittelt, bei dem alle Bilder und der zugehörige Inhalt im Bericht enthalten sind. Passende Formate sind Webarchiv, PDF, TIFF und Excel. Verwenden Sie wenn möglich nicht HTML 4.0. Wenn Ihr Bericht Bilder enthält, werden sie beim HTML 4.0-Format nicht in die Datei eingefügt.  
   
-##  <a name="bkmk_file_options"></a> Dateioptionen  
+##  <a name="file-options"></a><a name="bkmk_file_options"></a> Dateioptionen  
  Wenn Sie ein Dateifreigabeabonnement erstellen, können Sie konfigurieren, wie der Dateiname erstellt wird und ob die Datei frühere Versionen des Berichts überschreibt. Ein vollqualifizierter Dateiname besteht aus drei Teilen: einem Namen, einer Erweiterung sowie Text oder einer Zahl, der bzw. die an den Namen angefügt wird, um einen eindeutigen Dateinamen zu erzeugen.  
   
  **Dateiname:** Der Dateiname basiert auf dem Namen des Quellberichts. Sie können jedoch im Abonnement einen benutzerdefinierten Namen bereitstellen. Die Erweiterung ist optional, aber wenn Sie sie angeben, erstellt der Berichtsserver eine dem Renderingformat entsprechende Erweiterung.  

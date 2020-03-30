@@ -11,10 +11,10 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: “”
 ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256995"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Erforderliche Berechtigungen für SQL Server Data Tools
@@ -35,7 +35,7 @@ Bevor Sie eine Aktion für eine Datenbank in Visual Studio ausführen können, m
   
 -   [Berechtigungen für SQL CLR-Projekte (SQL Server Common Language Runtime)](#SQLCLRPermissions)  
   
-## <a name="DatabaseCreationAndDeploymentPermissions"></a>Berechtigungen zum Erstellen oder Bereitstellen einer Datenbank  
+## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>Berechtigungen zum Erstellen oder Bereitstellen einer Datenbank  
 Zum Erstellen oder Bereitstellen einer Datenbank müssen Sie über folgende Berechtigungen verfügen.  
   
 |||  
@@ -51,10 +51,10 @@ Zum Erstellen oder Bereitstellen einer Datenbank müssen Sie über folgende Bere
   
 Weitere Informationen finden Sie in der SQL Server-Onlinedokumentation.  
   
-## <a name="DatabaseRefactoringPermissions"></a> Berechtigungen zum Umgestalten einer Datenbank  
+## <a name="permissions-to-refactor-a-database"></a><a name="DatabaseRefactoringPermissions"></a> Berechtigungen zum Umgestalten einer Datenbank  
 Eine *Datenbankumgestaltung* findet nur innerhalb des Datenbankprojekts statt. Sie müssen berechtigt sein, das Datenbankprojekt zu verwenden. Sie benötigen erst dann Berechtigungen für eine Zieldatenbank, wenn Sie Änderungen daran bereitstellen.  
   
-## <a name="DatabaseUnitTestingPermissions"></a>Berechtigungen zum Ausführen von Komponententests in einer SQL Server-Datenbank  
+## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>Berechtigungen zum Ausführen von Komponententests in einer SQL Server-Datenbank  
 Zum Durchführen von Komponententests für eine Datenbank müssen Sie über folgende Berechtigungen verfügen.  
   
 |||  
@@ -66,10 +66,10 @@ Zum Durchführen von Komponententests für eine Datenbank müssen Sie über folg
 |Bereitstellen von Datenbankänderungen vor Ausführung von Tests|Sie müssen die Datenbankverbindung für den privilegierten Kontext verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren der Ausführung von SQL Server-Komponententests](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
 |Generieren von Daten vor Ausführung von Tests|Sie müssen die Datenbankverbindung für den privilegierten Kontext verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren der Ausführung von SQL Server-Komponententests](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
   
-## <a name="DataGenerationPermissions"></a>Berechtigungen zum Generieren von Daten  
+## <a name="permissions-to-generate-data"></a><a name="DataGenerationPermissions"></a>Berechtigungen zum Generieren von Daten  
 Sie müssen die Berechtigungen **INSERT** und **SELECT** für die Objekte in der Zieldatenbank besitzen, um Testdaten mithilfe des Datengenerators zu generieren. Wenn Sie vor der Datengenerierung eine Bereinigung durchführen, müssen Sie außerdem die **DELETE**-Berechtigungen für die Objekte in der Zieldatenbank besitzen. Um die Spalte **IDENTITY** in einer Tabelle zurückzusetzen, müssen Sie Besitzer der Tabelle oder Mitglied der Rolle „db_owner“ oder „db_ddladmin“ sein.  
   
-## <a name="SchemaAndDataComparePermissions"></a>Berechtigungen zum Vergleichen von Schemas und Daten  
+## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>Berechtigungen zum Vergleichen von Schemas und Daten  
 Zum Vergleichen von Schemas oder Daten müssen Sie über folgende Berechtigungen verfügen.  
   
 |||  
@@ -82,10 +82,10 @@ Zum Vergleichen von Schemas oder Daten müssen Sie über folgende Berechtigungen
   
 Weitere Informationen finden Sie in der SQL Server-Onlinedokumentation.  
   
-## <a name="Transact-SQLEditorPermissions"></a>Berechtigungen zum Ausführen des Transact\-SQL-Editors  
+## <a name="permissions-to-run-the-transact-sql-editor"></a><a name="Transact-SQLEditorPermissions"></a>Berechtigungen zum Ausführen des Transact\-SQL-Editors  
 Welche Aktionen Sie im Transact\-SQL-Editor ausführen können, hängt von Ihrem Ausführungskontext für die Zieldatenbank ab.  
   
-## <a name="SQLCLRPermissions"></a>Berechtigungen für SQL Server-CLR-Projekte (SQL Server Common Language Runtime)  
+## <a name="permissions-for-sql-server-common-language-run-time-projects"></a><a name="SQLCLRPermissions"></a>Berechtigungen für SQL Server-CLR-Projekte (SQL Server Common Language Runtime)  
 Die folgende Tabelle enthält die Berechtigungen, die Sie besitzen müssen, um CLR-Projekte bereitzustellen oder zu debuggen:  
   
 |Aktionen|Erforderliche Berechtigungen|  

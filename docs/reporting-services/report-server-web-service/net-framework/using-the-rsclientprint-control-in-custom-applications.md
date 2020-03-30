@@ -15,10 +15,10 @@ ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f352c393f1386dae1839a76a4fd6e5a2553a54c3
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198557"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Verwenden des RSClientPrint-Steuerelements in benutzerdefinierten Anwendungen
@@ -40,7 +40,7 @@ ms.locfileid: "79198557"
     
   
 ## <a name="rsprintclient-overview"></a>Übersicht über RSPrintClient  
- Vom Steuerelement wird ein benutzerdefiniertes Dialogfeld zum Drucken angezeigt, das die in Dialogfeldern zum Drucken üblichen Funktionen enthält. Dazu zählen Druckvorschau, Seitenauswahl zum Angeben bestimmter Seiten und Bereiche, Seitenränder und Ausrichtung. Das Steuerelement ist in eine CAB-Datei verpackt. Der Text im Dialogfeld **Drucken** ist in allen Sprachen lokalisiert, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt werden. Das ActiveX-Steuerelement **RSPrintClient** druckt den Bericht mithilfe der Bildrenderingerweiterung (EMF). Es werden die folgenden EMF-Geräteinformationen verwendet: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight und PageWidth. Andere Einstellungen für Geräteinformationen werden für Bildrendering nicht unterstützt.  
+ Vom Steuerelement wird ein benutzerdefiniertes Dialogfeld zum Drucken angezeigt, das die in Dialogfeldern zum Drucken üblichen Funktionen enthält. Dazu zählen Druckvorschau, Seitenauswahl zum Angeben bestimmter Seiten und Bereiche, Seitenränder und Ausrichtung. Das Steuerelement ist in eine CAB-Datei verpackt. Der Text im Dialogfeld **Drucken** ist in allen Sprachen lokalisiert, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt werden. Das ActiveX-Steuerelement **RSPrintClient** druckt den Bericht mithilfe der Bildrenderingerweiterung (EMF). Die folgenden EMF-Geräteinformationen werden verwendet: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight und PageWidth. Andere Einstellungen für Geräteinformationen werden für Bildrendering nicht unterstützt.  
   
 ### <a name="language-support"></a>Sprachunterstützung  
  Das Drucksteuerelement stellt Text in der Benutzeroberfläche in unterschiedlichen Sprachen bereit und akzeptiert Eingabewerte mit einer Kalibrierung für unterschiedliche Maßsysteme. Welches Sprach- und Maßsystem verwendet wird, wird durch die Eigenschaften **Culture** und **UICulture** bestimmt. Beide Eigenschaften akzeptieren LCID-Werte. Wenn Sie einen LCID-Wert für eine Sprache angeben, die eine Variante einer unterstützten Sprache ist, wird die Sprache verwendet, die am nächsten zu Ihrer Angabe liegt. Falls Sie einen LCID-Wert angeben, der nicht unterstützt wird und auch keine enge Übereinstimmung mit einem anderen LCID-Wert aufweist, wird Englisch (Vereinigte Staaten) verwendet.  
@@ -71,8 +71,8 @@ ms.locfileid: "79198557"
 |MarginBottom|Double|RW|Berichteinstellung|Ruft den unteren Rand ab bzw. legt ihn fest. Wird kein Wert vom Entwickler festgelegt oder im Bericht angegeben, wird 12,2 Millimeter als Standardwert verwendet.|  
 |PageWidth|Double|RW|Berichteinstellung|Ruft die Seitenbreite ab bzw. legt sie fest. Wird kein Wert vom Entwickler oder in der Berichtsdefinition festgelegt, wird 215,9 Millimeter als Standardwert verwendet.|  
 |PageHeight|Double|RW|Berichteinstellung|Ruft die Seitenhöhe ab bzw. legt sie fest. Wird kein Wert vom Entwickler oder in der Berichtsdefinition festgelegt, wird 279,4 Millimeter als Standardwert verwendet.|  
-|Kultur|Int32|RW|Browsergebietsschema|Gibt den Gebietsschemabezeichner (LCID) an. Mit diesem Wert wird die Maßeinheit für die Benutzereingaben bestimmt. Wenn ein Benutzer z.B. **3** eingibt, wird der Wert in Millimetern gemessen, falls die Sprache auf Französisch festgelegt wird. Ist die Sprache auf Englisch (Vereinigte Staaten) festgelegt, wird Zoll verwendet. Gültige Werte: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 und 3082.|  
-|UICulture|String|RW|Clientkultur|Gibt die Zeichenfolgenlokalisierung des Dialogfelds an. Der Text im Dialogfeld „Drucken“ wird in die folgenden Sprachen übersetzt: Chinesisch (vereinfacht), Chinesisch (traditionell), Englisch, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch und Spanisch. Gültige Werte: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 und 3082.|  
+|Kultur|Int32|RW|Browsergebietsschema|Gibt den Gebietsschemabezeichner (LCID) an. Mit diesem Wert wird die Maßeinheit für die Benutzereingaben bestimmt. Wenn ein Benutzer z.B. **3** eingibt, wird der Wert in Millimetern gemessen, falls die Sprache auf Französisch festgelegt wird. Ist die Sprache auf Englisch (Vereinigte Staaten) festgelegt, wird Zoll verwendet. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|UICulture|String|RW|Clientkultur|Gibt die Zeichenfolgenlokalisierung des Dialogfelds an. Der Text im Dialogfeld Drucken ist in folgende Sprachen lokalisiert: Vereinfachtes Chinesisch, Traditionelles Chinesisch, Englisch, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch und Spanisch. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Boolean|RW|False|Gibt an, ob das Steuerelement einen GET-Befehl für den Berichtsserver ausgibt, um eine Verbindung für das Drucken außerhalb der Sitzung zu initiieren.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Festlegen der Authenticate-Eigenschaft  

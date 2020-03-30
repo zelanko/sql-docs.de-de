@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027841"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Vorbereitetes Caching von Anweisungsmetadaten für den JDBC-Treiber
@@ -37,9 +37,9 @@ Eine weitere Änderung, die von 6.1.6-preview eingeführt wurde, ist, dass der T
 
  **SQLServerConnection**
  
-|Methode „New“|Beschreibung|  
+|Methode „New“|BESCHREIBUNG|  
 |-----------|-----------------|  
-|int getDiscardedServerPreparedStatementCount()|Gibt die Anzahl der aktuell ausstehenden Aktionen zum Rückgängigmachen der Vorbereitung für vorbereitete Anweisungen zurück.|
+|int getDiscardedServerPreparedStatementCount()|Gibt die Anzahl der aktuell ausstehenden unprepare-Aktionen für ausstehende Prepared Statements zurück|
 |void closeUnreferencedPreparedStatementHandles()|Erzwingt, dass Anforderungen zum Rückgängigmachen der Vorbereitung für ausstehende verworfene vorbereitete Anweisungen ausgeführt werden.|
 |boolean getEnablePrepareOnFirstPreparedStatementCall()|Gibt das Verhalten einer bestimmten Verbindungsinstanz an. Bei „false“ ruft die erste Ausführung „sp_executesql“ auf und bereitet keine Anweisung vor. Sobald die zweite Ausführung erfolgt, ruft diese „sp_prepexec“ auf und richtet tatsächlich ein Handle für vorbereitete Anweisungen ein. Bei den folgenden Ausführungen wird „sp_execute“ aufgerufen. Dadurch ist „sp_unprepare“ nicht mehr für den Abschluss einer vorbereiteten Anweisung erforderlich, falls diese nur einmal ausgeführt wird. Der Standardwert für diese Option kann durch Aufrufen von setDefaultEnablePrepareOnFirstPreparedStatementCall() geändert werden.|
 |void setEnablePrepareOnFirstPreparedStatementCall(boolescher Wert)|Mit dieser Methode geben Sie das Verhalten einer bestimmten Verbindungsinstanz an. Bei „false“ ruft die erste Ausführung „sp_executesql“ auf und bereitet keine Anweisung vor. Sobald die zweite Ausführung erfolgt, ruft diese „sp_prepexec“ auf und richtet tatsächlich ein Handle für vorbereitete Anweisungen ein. Bei den folgenden Ausführungen wird „sp_execute“ aufgerufen. Dadurch ist „sp_unprepare“ nicht mehr für den Abschluss einer vorbereiteten Anweisung erforderlich, falls diese nur einmal ausgeführt wird.|
@@ -48,10 +48,10 @@ Eine weitere Änderung, die von 6.1.6-preview eingeführt wurde, ist, dass der T
 
  **SQLServerDataSource**
  
-|Methode „New“|Beschreibung|  
+|Methode „New“|BESCHREIBUNG|  
 |-----------|-----------------|  
 |void setEnablePrepareOnFirstPreparedStatementCall(boolesch enablePrepareOnFirstPreparedStatementCall)|Wenn diese Konfiguration „false“ ist, ruft die erste Ausführung einer vorbereiteten Anweisung „sp_executesql“ auf und erstellt keine vorbereitete Anweisung. Sobald die zweite Ausführung erfolgt, ruft diese „sp_prepexec“ auf und richtet tatsächlich ein Handle für eine vorbereitete Anweisung ein. Bei den folgenden Ausführungen wird „sp_execute“ aufgerufen. Dadurch ist „sp_unprepare“ nicht mehr für den Abschluss einer vorbereiteten Anweisung erforderlich, falls diese nur einmal ausgeführt wird.|
-|boolean getEnablePrepareOnFirstPreparedStatementCall()|Wenn diese Konfiguration „false“ zurückgibt, ruft die erste Ausführung einer vorbereiteten Anweisung „sp_executesql“ auf und erstellt keine vorbereitete Anweisung. Sobald die zweite Ausführung erfolgt, ruft diese „sp_prepexec“ auf und richtet tatsächlich ein Handle für eine vorbereitete Anweisung ein. Bei den folgenden Ausführungen wird „sp_execute“ aufgerufen. Dadurch ist sp_unprepare nicht mehr für den Abschluss einer vorbereiteten Anweisung erforderlich, falls die Anweisung nur einmal ausgeführt wird.|
+|boolean getEnablePrepareOnFirstPreparedStatementCall()|Wenn diese Konfiguration „false“ zurückgibt, ruft die erste Ausführung einer vorbereiteten Anweisung „sp_executesql“ auf und erstellt keine vorbereitete Anweisung. Sobald die zweite Ausführung erfolgt, ruft diese „sp_prepexec“ auf und richtet tatsächlich ein Handle für eine vorbereitete Anweisung ein. Bei den folgenden Ausführungen wird „sp_execute“ aufgerufen. Dadurch ist „sp_unprepare“ nicht mehr für den Abschluss einer vorbereiteten Anweisung erforderlich, falls diese nur einmal ausgeführt wird.|
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|Mit dieser Einstellung steuern Sie, wie viele ausstehende Aktionen zum Verwerfen vorbereiteter Anweisungen (sp_unprepare) pro Verbindung vorhanden sein dürfen, bevor ein Aufruf zum Bereinigen der ausstehenden Handles auf dem Server ausgeführt wird. Wenn diese Einstellung <= 1 ist, werden Aktionen zum Rückgängigmachen der Vorbereitung sofort nach Abschluss der vorbereiteten Anweisung ausgeführt. Wenn die Einstellung auf {@literal >} 1 festgelegt ist, werden diese Aufrufe in einem Batch zusammengefasst, um den Aufwand zu häufiger Aufrufe von „sp_unprepare“ zu vermeiden.|
 |int getServerPreparedStatementDiscardThreshold()|Mit dieser Einstellung steuern Sie, wie viele ausstehende Aktionen zum Verwerfen vorbereiteter Anweisungen (sp_unprepare) pro Verbindung vorhanden sein dürfen, bevor ein Aufruf zum Bereinigen der ausstehenden Handles auf dem Server ausgeführt wird. Wenn diese Einstellung <= 1 ist, werden Aktionen zum Rückgängigmachen der Vorbereitung sofort nach Abschluss der vorbereiteten Anweisung ausgeführt. Wenn die Einstellung auf {@literal >} 1 festgelegt ist, werden diese Aufrufe in einem Batch zusammengefasst, um den Aufwand zu häufiger Aufrufe von „sp_unprepare“ zu vermeiden.|
 
@@ -69,23 +69,23 @@ Beispiel: `connection.setStatementPoolingCacheSize(10)`
 
  **SQLServerConnection**
  
-|Methode „New“|Beschreibung|  
+|Methode „New“|BESCHREIBUNG|  
 |-----------|-----------------|  
-|void setDisableStatementPooling(boolescher Wert)|Diese Methode legt das Anweisungspooling auf „true“ oder „false“ fest.|
+|void setDisableStatementPooling(boolescher Wert)|Diese Methode legt das Anweisungspooling auf TRUE oder FALSE fest.|
 |boolean getDisableStatementPooling()|Gibt „true“ zurück, wenn das Anweisungspooling deaktiviert ist.|
 |void setStatementPoolingCacheSize(int-Wert)|Legt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung fest. Bei einem kleineren Wert als 1 wird kein Cache verwendet.|
-|int getStatementPoolingCacheSize()|Gibt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung zurück. Bei einem kleineren Wert als 1 wird kein Cache verwendet.|
-|int getStatementHandleCacheEntryCount()|Gibt die aktuelle Anzahl von Handles für vorbereitete Anweisungen zurück, die in einem Pool zusammengefasst sind.|
+|int getStatementPoolingCacheSize()|Gibt die Größe des Caches für Prepared Statements für diese Verbindung zurück Bei einem kleineren Wert als 1 wird kein Cache verwendet.|
+|int getStatementHandleCacheEntryCount()|Gibt die aktuelle Anzahl von Handles für Prepared Statements zurück, die in einem Pool zusammengefasst sind|
 |boolean isPreparedStatementCachingEnabled()|Gibt zurück, ob für diese Verbindung Anweisungspooling aktiviert ist|
 
  **SQLServerDataSource**
  
-|Methode „New“|Beschreibung|  
+|Methode „New“|BESCHREIBUNG|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolesch disableStatementPooling)|Legt das Anweisungspooling auf „true“ oder „false“ fest.|
 |boolean getDisableStatementPooling()|Gibt „true“ zurück, wenn das Anweisungspooling deaktiviert ist.|
 |void setStatementPoolingCacheSize(int statementPoolingCacheSize)|Legt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung fest. Bei einem kleineren Wert als 1 wird kein Cache verwendet.|
-|int getStatementPoolingCacheSize()|Gibt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung zurück. Bei einem kleineren Wert als 1 wird kein Cache verwendet.|
+|int getStatementPoolingCacheSize()|Gibt die Größe des Caches für Prepared Statements für diese Verbindung zurück Bei einem kleineren Wert als 1 wird kein Cache verwendet.|
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  

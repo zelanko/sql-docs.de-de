@@ -17,13 +17,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: ac10530cf2fa3831a26733e7470b6bd107d17121
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244239"
 ---
-# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Gewusst wie: Vornehmen von Änderungen an Datenbankobjekten durch Umbenennen und Refactoring
+# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Gewusst wie: Vornehmen von Änderungen an Datenbankobjekten durch Umbenennen und Umgestalten
 
 Mit dem Kontextmenü „Umgestalten“ im Transact\-SQL-Editor können Sie ein Objekt umbenennen oder in ein anderes Schema verschieben. Außerdem können Sie eine Vorschau aller betroffenen Bereiche anzeigen, bevor Sie einen Commit für die Änderung ausführen. Mithilfe des Menüs „Umgestalten“ können Sie auch alle Verweise auf Datenbankobjekte vollständig qualifizieren, und Sie können Platzhalterzeichen in `SELECT`-Anweisungen im Datenbankprojekt erweitern.  
   

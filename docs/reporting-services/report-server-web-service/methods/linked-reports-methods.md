@@ -13,16 +13,16 @@ ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a474b4b3cb3a9973fc4fdaf14e7179cc73a2d2de
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198247"
 ---
 # <a name="linked-reports-methods"></a>Methoden für verknüpfte Berichte
   Sie können diese Methoden verwenden, um verknüpfte Elemente zu erstellen und zu verwalten.  
   
-|Methode|Aktion|  
+|Methode|Action|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateLinkedItem%2A>|Fügt der Berichtsserver-Datenbank ein neues verknüpftes Element hinzu.|  
 |<xref:ReportService2010.ReportingService2010.GetItemLink%2A>|Gibt den Namen des Elements zurück, dessen Elementdefinition für das angegebene verknüpfte Element verwendet wird.|  

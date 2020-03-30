@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
 ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68255171"
 ---
 # <a name="configure-report-builder-access"></a>Konfigurieren des Berichts-Generator-Zugriffs
@@ -101,7 +101,7 @@ Nachdem Sie die Rollenzuweisungen erstellt haben, sind die Benutzer zu Folgendem
 
     4. Geben Sie im Feld Beschreibung eine Rollenbeschreibung ein, damit die Benutzer im Webportal wissen, wozu ihre Rolle dient.  
 
-    5. Fügen Sie die folgenden Aufgaben hinzu: **Berichte lesen**, **Berichte anzeigen**, **Modelle anzeigen**, **Ressourcen anzeigen**, **Ordner anzeigen** und **Einzelne Abonnements verwalten**.  
+    5. Fügen Sie die folgenden Aufgaben hinzu: **Berichte lesen**, **Berichte anzeigen**, **Modelle anzeigen**, **Ressourcen anzeigen**, **Ordner anzeigen**und **Einzelne Abonnements verwalten**.  
 
     6. Klicken Sie auf **OK** , um die Rolle zu speichern.  
 

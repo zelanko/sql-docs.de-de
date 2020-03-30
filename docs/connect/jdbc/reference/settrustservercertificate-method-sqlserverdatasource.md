@@ -16,10 +16,10 @@ ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd4059c3562d679e4f5f8bfdd133ca69a62c1fd2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972209"
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>setTrustServerCertificate-Methode (SQLServerDataSource)
@@ -40,7 +40,7 @@ public void setTrustServerCertificate(boolean trustServerCertificate)
  **TRUE**, wenn das SSL-Serverzertifikat (Secure Sockets Layer) bei der Verschlüsselung der Kommunikationsebene über SSL automatisch als vertrauenswürdig eingestuft werden soll. Andernfalls lautet der Wert **false**.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn die trustServerCertificate-Eigenschaft auf **true** festgelegt ist, wird dem SSL-Zertifikat von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatisch vertraut, wenn die Kommunikationsschicht mit SSL verschlüsselt ist. Anders gesagt: Das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-SSL-Zertifikat wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] nicht überprüft. Der Standardwert ist **false**.  
+ Wenn die trustServerCertificate-Eigenschaft auf **true** festgelegt ist, wird dem SSL-Zertifikat von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatisch vertraut, wenn die Kommunikationsschicht mit SSL verschlüsselt ist. Anders gesagt: Das [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-SSL-Zertifikat wird von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht überprüft. Der Standardwert ist **false**.  
   
  Ist die trustServerCertificate-Eigenschaft auf **false** festgelegt, wird das SSL-Zertifikat des Servers von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] überprüft.  
   

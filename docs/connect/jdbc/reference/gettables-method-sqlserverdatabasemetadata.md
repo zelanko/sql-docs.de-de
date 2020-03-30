@@ -16,10 +16,10 @@ ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8dfd7f14d6006f5a41a7cd2a9b0cae4933804fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979212"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables-Methode (SQLServerDatabaseMetaData)
@@ -65,7 +65,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
   
  Das von der getTables-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|type|Beschreibung|  
+|Name|type|BESCHREIBUNG|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Name der Datenbank, in der sich die angegebene Tabelle befindet.|  
 |TABLE_SCHEM|**String**|Der Tabellenschemaname.|  

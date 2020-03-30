@@ -16,10 +16,10 @@ ms.assetid: 3ee26412-43d2-404b-bc05-ffd0fc75805c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e82f85941899fc05fc8fdf35cd7ae65870100ef3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983579"
 ---
 # <a name="getdouble-method-javalangstring-sqlserverresultset"></a>getDouble-Methode (java.lang.String) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public double getDouble(java.lang.String columnName)
  Eine **Zeichenfolge**, die den Spaltennamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **double**-Wert  
+ Ein **Double**-Wert  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

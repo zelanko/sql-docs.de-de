@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7915b9fb74f05057e05eef022d7f9b0e4ccdd21f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989248"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Aktualisieren einer Anwendung von SQL Server 2005 Native Client
@@ -30,7 +30,7 @@ ms.locfileid: "67989248"
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 war im Lieferumfang von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] enthalten. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 war im Lieferumfang von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] enthalten.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 war im Lieferumfang von [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] enthalten. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 war im Lieferumfang von [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] enthalten.  
 
-|Geändertes Verhalten im OLE DB-Treiber für SQL Server im Vergleich zu [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client|Beschreibung|  
+|Geändertes Verhalten im OLE DB-Treiber für SQL Server im Vergleich zu [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client|BESCHREIBUNG|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB füllt nur Zahlen bis zur definierten Anzahl von Dezimalstellen auf.|In Konvertierungen, bei denen Daten an den Server gesendet werden, füllt der OLE DB-Treiber für SQL Server nachfolgende Nullen in Daten nur bis zur maximalen Länge von **datetime**-Werten auf. In SQL Server Native Client 9.0 wurden Zahlen bis zu 9 Stellen aufgefüllt.|  
 |Überprüfen Sie DBTYPE_DBTIMESTAMP auf ICommandWithParameter::SetParameterInfo.|Der OLE DB-Treiber für SQL Server implementiert die OLE DB-Anforderung, dass *bScale* in ICommandWithParameter::SetParameterInfo für DBTYPE_DBTIMESTAMP auf Sekundenbruchteile genau festgelegt wird.|  

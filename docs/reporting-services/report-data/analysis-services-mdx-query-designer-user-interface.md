@@ -15,10 +15,10 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 41d02ba0cd1dc9067bd6425895e53d9a949fd0d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573267"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services
@@ -62,7 +62,7 @@ ms.locfileid: "65573267"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Symbolleiste des grafischen MDX-Abfrage-Designers im Entwurfsmodus  
  Die Symbolleiste des Abfrage-Designers stellt Schaltflächen bereit, die Ihnen beim Entwurf von MDX-Abfragen mit der grafischen Oberfläche helfen. In der folgenden Tabelle sind die Schaltflächen und ihre Funktionen aufgeführt.  
   
-|Taste|Beschreibung|  
+|Taste|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Als Text bearbeiten**|Nicht aktiviert für diesen Datenquellentyp.|  
 |**Importieren**|Importieren einer vorhandenen Abfrage aus einer Berichtsdefinitionsdatei (.rdl) im Dateisystem. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
@@ -70,11 +70,11 @@ ms.locfileid: "65573267"
 |![Zur DMX-Abfragesprachenansicht wechseln](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Zur DMX-Abfragesprachenansicht wechseln")|Wechselt zum DMX-Befehlstyp.|  
 |![Ergebnisdaten aktualisieren](../../reporting-services/report-data/media/rsqdicon-refresh.gif "Ergebnisdaten aktualisieren")|Aktualisieren von Metadaten aus der Datenquelle.|  
 |![Berechnetes Element hinzufügen](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Berechnetes Element hinzufügen")|Zeigt das Dialogfeld **Generator für berechnete Elemente** an.|  
-|![Zum Anzeigen von leeren Zellen umschalten](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Zum Anzeigen von leeren Zellen umschalten")|Schaltet zwischen dem Anzeigen und Nichtanzeigen von leeren Zellen im Datenbereich um. (Dies entspricht dem Verwenden der NON EMPTY-Klausel in MDX.)|  
+|![Zum Anzeigen von leeren Zellen umschalten](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Leere Zellen anzeigen/nicht anzeigen")|Schaltet zwischen dem Anzeigen und Nichtanzeigen von leeren Zellen im Datenbereich um. (Dies entspricht dem Verwenden der NON EMPTY-Klausel in MDX.)|  
 |![Abfrage automatisch ausführen](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Abfrage automatisch ausführen")|Bei jeder Änderung wird die Abfrage automatisch ausgeführt, und das Ergebnis wird angezeigt. Die Ergebnisse werden im Datenbereich angezeigt.|  
 |![Aggregationen anzeigen (Schaltfläche)](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "Aggregationen anzeigen (Schaltfläche)")|Zeigt Aggregationen im Datenbereich an.|  
 |![Löschen](../../reporting-services/report-data/media/rsqdicon-delete.gif "Löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|  
-|![Dialogfeld „Abfrageparameter“ (Symbol)](../../reporting-services/report-data/media/iconqueryparameter.gif "Dialogfeld „Abfrageparameter“ (Symbol)")|Anzeigen des Dialogfelds **Abfrageparameter** . Bei der Angabe von Werten für einen Abfrageparameter wird automatisch ein Berichtsparameter mit demselben Namen erstellt. Der Wert des Abfrageparameters wird auf einen Ausdruck festgelegt, der auf den Berichtsparameter verweist.|  
+|![Symbol für das Dialogfeld „Abfrageparameter“](../../reporting-services/report-data/media/iconqueryparameter.gif "Dialogfeld „Abfrageparameter“ (Symbol)")|Anzeigen des Dialogfelds **Abfrageparameter** . Bei der Angabe von Werten für einen Abfrageparameter wird automatisch ein Berichtsparameter mit demselben Namen erstellt. Der Wert des Abfrageparameters wird auf einen Ausdruck festgelegt, der auf den Berichtsparameter verweist.|  
 |![Abfrage vorbereiten (Schaltfläche)](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "Abfrage vorbereiten (Schaltfläche)")|Bereitet die Abfrage vor.|  
 |![Abfrage ausführen](../../reporting-services/report-data/media/rsqdicon-run.gif "Abfrage ausführen")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|  
 |![Abfrage abbrechen](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Abfrage abbrechen")|Abbrechen der Abfrage.|  
@@ -109,7 +109,7 @@ ms.locfileid: "65573267"
   
 -   **Berechnetes Element hinzufügen** (![Berechnetes Element hinzufügen](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Berechnetes Element hinzufügen"))  
   
--   **Leere Zellen anzeigen** (![Zum Anzeigen von leeren Zellen umschalten](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Zum Anzeigen von leeren Zellen umschalten"))  
+-   **Leere Zellen anzeigen** (![Schaltfläche zum ein-/ausblenden leerer Zellen](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Leere Zellen anzeigen/nicht anzeigen"))  
   
 -   **AutoExecute** (![Abfrage automatisch ausführen](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Abfrage automatisch ausführen"))  
   

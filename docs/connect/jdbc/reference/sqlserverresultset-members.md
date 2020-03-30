@@ -11,10 +11,10 @@ ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970563"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet-Elemente
@@ -27,7 +27,7 @@ ms.locfileid: "67970563"
   
 ## <a name="fields"></a>Felder  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|Dient zum Angeben eines Typs der optimistischen Nebenläufigkeit (Lese-/Schreibzugriff) für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ohne Zeilensperre.|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|Dient zum Angeben eines Typs der optimistischen Nebenläufigkeit (Lese-/Schreibzugriff) für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ohne Zeilensperre.|  
@@ -40,13 +40,13 @@ ms.locfileid: "67970563"
   
 ## <a name="inherited-fields"></a>Geerbte Felder  
   
-|Klasse geerbt von:|Beschreibung|  
+|Klasse geerbt von:|BESCHREIBUNG|  
 |---------------------------|-----------------|  
 |java.sql.ResultSet|CLOSE_CURSORS_AT_COMMIT, CONCUR_READ_ONLY, CONCUR_UPDATABLE, FETCH_FORWARD, FETCH_REVERSE, FETCH_UNKNOWN, HOLD_CURSORS_OVER_COMMIT, TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE|  
   
 ## <a name="methods"></a>Methoden  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[absolute](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|Versetzt den Cursor in die angegebene Zeile in diesem [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|Versetzt den Cursor an eine Position nach der letzten Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts.|  

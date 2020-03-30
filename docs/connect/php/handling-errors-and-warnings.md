@@ -11,10 +11,10 @@ ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2765df415cd4e45469f48c30dc2c0937361ce3aa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015071"
 ---
 # <a name="handling-errors-and-warnings"></a>Behandeln von Fehlern und Warnungen
@@ -26,10 +26,10 @@ Die Themen in diesem Abschnitt bieten Informationen zur Fehlerbehandlung und War
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |---------|---------------|  
-|[Vorgehensweise: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|Demonstriert, wie Konfigurationseinstellungen für die Behandlung von Fehlern und Warnungen geändert werden können.|  
-|[Vorgehensweise: Fehlerbehandlung und Warnungen bei Verwendung des SQLSRV-Treibers](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|Demonstriert, wie man mit Fehlern und Warnungen getrennt umgehen sollte.|  
+|[Gewusst wie: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|Demonstriert, wie Konfigurationseinstellungen für die Behandlung von Fehlern und Warnungen geändert werden können.|  
+|[Gewusst wie: Behandeln von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|Demonstriert, wie man mit Fehlern und Warnungen getrennt umgehen sollte.|  
   
 ## <a name="reference"></a>Verweis  
 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727468"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils
@@ -21,7 +21,7 @@ ms.locfileid: "73727468"
 
 In diesem Artikel werden die Schritte beschrieben, in denen Sie R-Code so konvertieren, dass er als gespeicherte T-SQL-Prozedur ausgeführt werden kann. Zum Erzielen bestmöglicher Ergebnisse kann es erforderlich sein, dass Ihr Code ein wenig geändert wird, damit sichergestellt ist, dass alle Eingaben parametrisiert werden können.
 
-## <a name="bkmk_rewrite"></a>Schritt 1: Erneutes Generieren eines R-Skripts
+## <a name="step-1-rewrite-r-script"></a><a name="bkmk_rewrite"></a>Schritt 1: Erneutes Generieren eines R-Skripts
 
 Damit Sie die besten Ergebnisse erzielen, sollten Sie Ihren R-Code erneut generieren, um ihn in einer einzelnen Funktion zu kapseln.
 
@@ -145,7 +145,7 @@ Das Aufrufen der vorbereiteten gespeicherten SQL-Prozedur läuft insgesamt wie f
 2. Definieren Sie eine Abfrage ( `$query` ) für jeden Parameter, oder legen Sie einen Wert ( `$value` ) für jeden Parameter fest.
 3. Verwenden Sie `executeStoredProcedure` , um die gespeicherte Prozedur aus der R-Entwicklungsumgebung auszuführen. Übergeben Sie dazu die Liste der Eingabeparameterobjekte, die Sie festgelegt haben.
 
-## <a name = "samples"></a>Beispiel
+## <a name="example"></a><a name = "samples"></a>Beispiel
 
 In diesem Beispiel werden die Vorher-Nachher-Versionen eines R-Skripts gezeigt, das Daten aus einer SQL Server-Datenbank abruft, einige Transformationen an den Daten durchführt und sie in einer anderen Datenbank speichert.
 

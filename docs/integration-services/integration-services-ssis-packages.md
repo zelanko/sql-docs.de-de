@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296185"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services-Pakete (SSIS)
@@ -88,7 +88,7 @@ ms.locfileid: "71296185"
 ## <a name="custom-log-entries-available-on-the-package"></a>Verfügbare benutzerdefinierte Protokolleinträge für Pakete  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für Pakete aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**PackageStart**|Zeigt den Beginn der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
 |**PackageEnd**|Zeigt den Abschluss der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  

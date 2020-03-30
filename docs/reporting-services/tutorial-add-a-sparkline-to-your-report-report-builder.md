@@ -9,13 +9,13 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043178"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
 
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]-Tutorial erstellen Sie eine einfache Tabelle mit einem Sparkline-Diagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht.   
   
@@ -23,12 +23,12 @@ Sparklines und Datenbalken sind einfache, kleine Diagramme, die zahlreiche Infor
   
 ![Berichts-Generator-Sparkline-fertig](../reporting-services/media/report-builder-sparkline-final.png)  
      
-Geschätzte Zeit zum Bearbeiten dieses Tutorials: 30 Minuten  
+Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateTable"></a>1. Erstellen eines Berichts mit einer Tabelle  
+## <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1. Erstellen eines Berichts mit einer Tabelle  
   
 1.  [Starten Sie den Berichts-Generator](../reporting-services/report-builder/start-report-builder.md) entweder von Ihrem Computer, über das [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Webportal oder über den integrierten SharePoint-Modus.  
   
@@ -71,7 +71,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 13. Klicken Sie auf **Weiter**.  
   
-## <a name="Query"></a>2. Erstellen eines Abfrage- und Tabellenlayouts im Tabellen-Assistenten  
+## <a name="2-create-a-query-and-table-layout-in-the-table-wizard"></a><a name="Query"></a>2. Erstellen eines Abfrage- und Tabellenlayouts im Tabellen-Assistenten  
 In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten Abfrage verwenden oder ein eingebettetes Dataset erstellen, das nur in Ihrem Bericht verwendet wird. In diesem Lernprogramm erstellen Sie ein eingebettetes Dataset.  
   
 > [!NOTE]  
@@ -160,7 +160,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 15. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
 
-### <a name="FormatCurrency"></a>2a. Formatieren von Daten als Währung  
+### <a name="2a-format-data-as-currency"></a><a name="FormatCurrency"></a>2a. Formatieren von Daten als Währung  
 Die Zusammenfassungsdaten für das Feld **Sales** werden standardmäßig als eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen. Ändern Sie die Einstellung der Option **Platzhalterformate** , um formatierte Textfelder und Platzhaltertext als Beispielwerte anzuzeigen.  
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
@@ -177,7 +177,7 @@ Die Zusammenfassungsdaten für das Feld **Sales** werden standardmäßig als ein
     
     ![Berichts-Generator-Schaltfläche-Platzhalterwert](../reporting-services/media/report-builder-placeholder-value-button.png)
    
-### <a name="FormatDates"></a>2b. Formatieren von Daten als Datumsangaben (optional)  
+### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. Formatieren von Daten als Datumsangaben (optional)  
 Im Feld **SalesDate** werden standardmäßig sowohl Datums- als auch Zeitangaben angezeigt. Durch entsprechende Formatierung kann auch nur das Datum angezeigt werden.  
   
 1.  Klicken Sie auf die Zelle, die `[SalesDate]`enthält.  
@@ -190,7 +190,7 @@ Im Feld **SalesDate** werden standardmäßig sowohl Datums- als auch Zeitangaben
   
 Die Werte für **SalesDate** werden im Standarddatumsformat angezeigt und die zusammenfassenden Werte für **Sales** als Währung.   
   
-## <a name="Sparkline"></a>3. Hinzufügen einer Sparkline    
+## <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3. Hinzufügen einer Sparkline    
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
@@ -224,7 +224,7 @@ Die Werte für **SalesDate** werden im Standarddatumsformat angezeigt und die zu
   
      ![Berichts-Generator-Sparkline-falsch-ausgerichtet](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
-## <a name="AlignSparklines"></a>4. Vertikales und horizontales Ausrichten der Sparklines  
+## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. Vertikales und horizontales Ausrichten der Sparklines  
 Sparklines sind schwierig zu lesen, wenn nicht durchgängig der gleiche Maßstab verwendet wird. Sowohl die horizontale als auch die vertikale Achse muss mit dem Rest übereinstimmen.  
    
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
@@ -251,7 +251,7 @@ Nun sind alle Balken in jeder Sparkline und an den Balken der anderen Sparklines
   
 ![Berichts-Generator-Sparkline-ausgerichtet](../reporting-services/media/report-builder-sparkline-aligned.png)
   
-## <a name="Width"></a>7. Ändern der Spaltenbreite (optional)  
+## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. Ändern der Spaltenbreite (optional)  
 Standardmäßig enthält jede Zelle in einer Tabelle ein Textfeld. Textfelder werden beim Rendern der Seite entsprechend dem anzuzeigenden Text vertikal erweitert. Im gerenderten Bericht werden alle Zeilen auf die Höhe des größten gerenderten Textfelds in der Zeile vergrößert. Die Höhe der Zeile auf der Entwurfsoberfläche hat keinen Einfluss auf die Höhe der Zeile im gerenderten Bericht.  
   
 Um die Höhe der Zeilen zu reduzieren, vergrößern Sie die Spaltenbreite, sodass der erwartete Inhalt der Textfelder in der Spalte in einer Zeile untergebracht werden kann.  
@@ -266,7 +266,7 @@ Um die Höhe der Zeilen zu reduzieren, vergrößern Sie die Spaltenbreite, sodas
   
 4.  Klicken Sie auf **Ausführen** , um den Bericht als Vorschau anzuzeigen und zu ermitteln, ob er breit genug ist.  
   
-## <a name="Title"></a>8. Hinzufügen eines Berichtstitels (optional)  
+## <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8. Hinzufügen eines Berichtstitels (optional)  
 Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel in eine Berichtskopfzeile einfügen oder, wenn der Bericht keine Kopfzeile enthält, in einem Textfeld am oberen Rand des Berichtshauptteils. In diesem Lernprogramm verwenden Sie das Textfeld, das automatisch am oberen Rand des Berichtshauptteils platziert wird.  
   
 Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftschnitte, Größen und Farben für Ausdrücke und einzelne Zeichen des Texts angewendet werden. Weitere Informationen finden Sie unter [Formatieren von Text in einem Textfeld (Berichts-Generator und SSRS)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -285,7 +285,7 @@ Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftsch
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>9. Speichern des Berichts  
+## <a name="9-save-the-report"></a><a name="Save"></a>9. Speichern des Berichts  
 Speichern Sie den Bericht auf einem Berichtsserver oder auf Ihrem Computer. Wenn Sie den Bericht nicht auf dem Berichtsserver speichern, ist eine Reihe von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen nicht verfügbar, z. B. Berichtsteile und Unterberichte.  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver  

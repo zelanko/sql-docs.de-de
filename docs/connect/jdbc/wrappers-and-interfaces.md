@@ -11,10 +11,10 @@ ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a74f5ccd8a36527dd7c37fc02150d11be632ba9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025580"
 ---
 # <a name="wrappers-and-interfaces"></a>Wrapper und Schnittstellen
@@ -77,7 +77,7 @@ Die folgenden Schnittstellen wurden hinzugefügt:
 
 ## <a name="example"></a>Beispiel
 
-### <a name="description"></a>Beschreibung
+### <a name="description"></a>BESCHREIBUNG
 
 In diesem Beispiel wird veranschaulicht, wie der Zugriff auf eine [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-spezifische Funktion über ein DataSource-Objekt erfolgt. Die Klasse „DataSource“ wurde möglicherweise von einem Anwendungsserver umschlossen. Für den Zugriff auf die JDBC-Treiber-spezifische Funktion oder Konstante können Sie die Datenquelle in eine ISQLServerDataSource-Schnittstelle entpacken und die darin deklarierten Funktionen verwenden.
 

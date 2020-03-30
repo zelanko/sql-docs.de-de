@@ -12,10 +12,10 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265143"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber)
@@ -66,7 +66,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example---format-the-output-parameter"></a>Beispiel: Formatieren des Ausgabeparameters
-Wenn ein Dezimal- oder numerisches Feld als [Ausgabeparameter](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md) zurückgegeben wird, wird der zurückgegebene Wert als reguläre varchar-Zeichenfolge betrachtet. Bei Angabe von SQLSRV_SQLTYPE_DECIMAL oder SQLSRV_SQLTYPE_NUMERIC können Benutzer jedoch `FormatDecimals` auf „true“ festlegen, um sicherzustellen, dass beim numerischen Zeichenfolgenwert keine führenden Nullen fehlen. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Ausgabeparametern mit dem SQLSRV-Treiber](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
+Wenn ein Dezimal- oder numerisches Feld als [Ausgabeparameter](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md) zurückgegeben wird, wird der zurückgegebene Wert als reguläre varchar-Zeichenfolge betrachtet. Bei Angabe von SQLSRV_SQLTYPE_DECIMAL oder SQLSRV_SQLTYPE_NUMERIC können Benutzer jedoch `FormatDecimals` auf „true“ festlegen, um sicherzustellen, dass beim numerischen Zeichenfolgenwert keine führenden Nullen fehlen. Weitere Informationen finden Sie unter [Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
 
 Das folgende Beispiel zeigt, wie der Ausgabeparameter einer gespeicherten Prozedur formatiert wird, der einen Dezimalwert (8,4) zurückgibt.
 

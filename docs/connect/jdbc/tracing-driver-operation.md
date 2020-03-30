@@ -11,10 +11,10 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027592"
 ---
 # <a name="tracing-driver-operation"></a>Ablaufverfolgung für Treibervorgänge
@@ -39,7 +39,7 @@ ms.locfileid: "69027592"
   
  Die verfügbaren Protokolliergrade für öffentliche Protokollierungskategorien werden in der folgenden Tabelle beschrieben:  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |SEVERE|Der höchste Protokolliergrad, der schwerwiegende Fehler kennzeichnet. Im JDBC-Treiber wird dieser Grad für Fehler und Ausnahmen verwendet.|  
 |WARNING|Kennzeichnet ein mögliches Problem.|  
@@ -53,21 +53,21 @@ ms.locfileid: "69027592"
   
  Die verfügbaren Protokolliergrade für interne Protokollierungskategorien werden in der folgenden Tabelle beschrieben:  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |SEVERE|Der höchste Protokolliergrad, der schwerwiegende Fehler kennzeichnet. Im JDBC-Treiber wird dieser Grad für Fehler und Ausnahmen verwendet.|  
 |WARNING|Kennzeichnet ein mögliches Problem.|  
 |INFO|Stellt informative Meldungen bereit.|  
 |FINE|Stellt Ablaufverfolgungsinformationen einschließlich grundlegender Informationen zum Erstellen und Löschen von Objekten. Außerdem alle von den öffentlichen Methoden ausgelösten Ausnahmen.|  
-|FINER|Stellt ausführliche Ablaufverfolgungsinformationen einschließlich aller Ein- und Ausstiegspunkte von öffentlichen Methoden mit den zugeordneten Parameterdatentypen und allen öffentlichen Eigenschaften für öffentliche Klassen bereit. Außerdem Eingabeparameter, Ausgabeparameter und Methodenrückgabewerte mit Ausnahme der Rückgabewerttypen CLOB, BLOB, NCLOB, Reader und \<stream>.<br /><br /> In Version 1.2 des JDBC-Treibers waren die folgenden Protokollierungskategorien vorhanden, die auch den Protokolliergrad FINE aufweisen: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA und [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Diese wurden ab Version 2.0 auf den Grad FINER hochgestuft.|  
-|FINEST|Stellt sehr ausführliche Ablaufverfolgungsinformationen bereit. Dieser Grad ist der niedrigste Protokolliergrad.<br /><br /> In Version 1.2 des JDBC-Treibers waren die folgenden Protokollierungskategorien vorhanden, die auch den Protokolliergrad FINEST aufweisen: TDS.DATA und TDS.TOKEN. Diese behalten ab Version 2.0 den Protokolliergrad FINEST bei.|  
+|FINER|Stellt ausführliche Ablaufverfolgungsinformationen einschließlich aller Ein- und Ausstiegspunkte von öffentlichen Methoden mit den zugeordneten Parameterdatentypen und allen öffentlichen Eigenschaften für öffentliche Klassen bereit. Außerdem Eingabeparameter, Ausgabeparameter und Methodenrückgabewerte mit Ausnahme der Rückgabewerttypen CLOB, BLOB, NCLOB, Reader und \<stream>.<br /><br /> In Version 1.2 des JDBC-Treibers waren die folgenden Protokollierungskategorien vorhanden, die auch den Protokolliergrad FINE aufweisen: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA und [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Diese wurden ab Version 2.0 auf den Grad FINER hochgestuft.|  
+|FINEST|Stellt sehr ausführliche Ablaufverfolgungsinformationen bereit. Dieser Grad ist der niedrigste Protokolliergrad.<br /><br /> In Version 1.2 von JDBC Driver waren die folgenden Protokollierungskategorien vorhanden, die auch den Protokolliergrad FINEST aufweisen: TDS.DATA und TDS.TOKEN. Diese behalten ab Version 2.0 den Protokolliergrad FINEST bei.|  
 |OFF|Schaltet die Protokollierung aus.|  
 |ALL|Aktiviert die Protokollierung aller Meldungen.|  
   
 ## <a name="logging-categories"></a>Protokollierungskategorien  
  Wenn Sie ein Logger-Objekt erstellen, müssen Sie an das Objekt die benannte Entität oder Kategorie übergeben, zu der Protokollinformationen ermittelt werden sollen. Der JDBC-Treiber unterstützt die folgenden öffentlichen Protokollierungskategorien, die alle im com.microsoft.sqlserver.jdbc-Treiberpaket definiert sind.  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |Verbindung|Protokolliert Meldungen in der Klasse [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Die Anwendungen können den Protokolliergrad auf FINER festlegen.|  
 |-Anweisung.|Protokolliert Meldungen in der Klasse [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Die Anwendungen können den Protokolliergrad auf FINER festlegen.|  
@@ -77,7 +77,7 @@ ms.locfileid: "69027592"
   
  Ab Version 2.0 des Microsoft JDBC-Treibers stellt der Treiber auch das com.microsoft.sqlserver.jdbc.internals-Paket bereit, das die Protokollierungsunterstützung für die folgenden internen Protokollierungskategorien enthält.  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |AuthenticationJNI|Mit dieser Kategorie werden Meldungen zu Problemen mit der integrierten Windows-Authentifizierung protokolliert (wenn die Verbindungseigenschaft **authenticationScheme** implizit oder explizit auf **NativeAuthentication** festgelegt ist).<br /><br /> Die Anwendungen können den Protokolliergrad auf FINER und FINE festlegen.|  
 |SQLServerConnection|Protokolliert Meldungen in der Klasse [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Die Anwendungen können den Protokolliergrad auf FINE und FINER festlegen.|  

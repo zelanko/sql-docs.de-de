@@ -9,10 +9,10 @@ ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 776c8ab4b133a8655ce42c5b5c3d996360c71322
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578823"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm
@@ -37,7 +37,7 @@ ms.locfileid: "65578823"
 ## <a name="displaying-multiple-data-ranges-using-scale-breaks"></a>Anzeigen von mehreren Datenbereichen mit Skalierungsunterbrechungen  
  Wenn Sie eine Skalierungsunterbrechung aktivieren, berechnet das Diagramm, an welcher Stelle im Diagramm eine Linie gezeichnet werden soll. Zwischen den Bereichen muss eine ausreichende Trennung bestehen, damit eine Skalierungsunterbrechung gezeichnet werden kann. Standardmäßig kann eine Skalierungsunterbrechung nur hinzugefügt werden, wenn eine Trennung zwischen den Datenbereichen eines Diagramms mindestens 25 % ausmacht.  
   
- ![Diagramm mit Skalierungsunterbrechungslinie](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "Diagramm mit Skalierungsunterbrechungslinie")  
+ ![Diagramm mit Skalierungsunterbrechung](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "Diagramm mit Skalierungsunterbrechung")  
   
 > [!NOTE]  
 >  Sie können nicht angeben, an welcher Stelle im Diagramm eine Skalierungsunterbrechung platziert werden soll. Sie können jedoch ändern, wie die Skalierungsunterbrechung berechnet wird. Dies wird weiter unten in diesem Thema beschrieben.  

@@ -17,10 +17,10 @@ ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f94c20c8aa6cf603c6588586e072813682b2ce68
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992700"
 ---
 # <a name="sqlsrv_get_config"></a>sqlsrv_get_config
@@ -36,7 +36,7 @@ sqlsrv_get_config( string $setting )
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$setting*: Dies ist die Konfigurationseinstellung, für die der Wert zurückgegeben wird. Eine Liste der konfigurierbaren Einstellungen finden Sie unter [sqlsrv_configure](../../connect/php/sqlsrv-configure.md).  
+*$setting*: Die Konfigurationseinstellung für die der Wert zurückgegeben wird. Eine Liste der konfigurierbaren Einstellungen finden Sie unter [sqlsrv_configure](../../connect/php/sqlsrv-configure.md).  
   
 ## <a name="return-value"></a>Rückgabewert  
 Der Wert der Einstellung, angegeben durch den *$setting* -Parameter. Wenn eine ungültige Einstellung angegeben wird, wird **false** zurückgegeben und ein Fehler wird zur Fehlersammlung hinzugefügt.  

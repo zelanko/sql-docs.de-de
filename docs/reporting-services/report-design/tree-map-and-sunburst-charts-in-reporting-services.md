@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68259366"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Treemap- und Sunburst-Diagramme in Reporting Services 
 
 Die SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Treemap- und Sunburst-Visualisierungselemente sind ausgezeichnet für die visuelle Darstellung von hierarchischen Daten geeignet. In diesem Artikel wird dargestellt, wie Sie ein Treemap- oder Sunburst-Diagramm zu einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht hinzufügen. Außerdem beinhaltet er eine AdventureWorks-Beispielabfrage, um Sie bei den ersten Schritten zu unterstützen.  
   
-##  <a name="bkmk_treemap_chart"></a> Treemap-Diagramm  
+##  <a name="treemap-chart"></a><a name="bkmk_treemap_chart"></a> Treemap-Diagramm  
 
 In einem Treemap-Diagramm wird die Diagrammfläche in Rechtecke unterteilt, die die verschiedenen Ebenen und die relative Größe der Datenhierarchie darstellen. Die Darstellung ähnelt dem Geäst eines Baums, das am Stamm beginnt und sich in immer feinere Zweige aufspaltet. Jedes Rechteck wird in kleinere Rechtecke aufgespalten, die die nächste Hierarchieebene darstellen. Die größten Rechtecke des Treemap-Diagramms werden mit dem größten Rechteck in der oberen linken Ecke des Diagramms angeordnet. Diese Rechtecke stellen die oberste Hierarchieebene dar. Die Rechtecke sind nach absteigender Hierarchie angeordnet, und das kleinste Rechteck befindet sich in der unteren rechten Ecke.  Innerhalb eines Rechtecks sind die Rechtecke ebenfalls der Hierarchie entsprechend von oben links nach unten rechts angeordnet.  
 
@@ -45,7 +45,7 @@ In der folgenden Abbildung eines Beispiel-Treemap-Diagramms ist das Gebiet „So
     * **Kategoriegruppen** (in der folgenden Reihenfolge):
         1. CategoryName
         2. SubcategoryName
-    * **Seriengruppen**: TerritoryName  
+    * **Reihengruppen**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -67,7 +67,7 @@ In der folgenden Abbildung eines Beispiel-Treemap-Diagramms ist das Gebiet „So
   
 7. Die Anzahl der angezeigten Beschriftungswerte wird durch die Größe der Schriftart, die Gesamtgröße der Diagrammfläche und die Größe der jeweiligen Rechtecke beeinflusst. Um weitere Bezeichnungen anzuzeigen, ändern Sie die **LineTotal**-Eigenschaft **Bezeichnungsschriftart** von **8 Punkt** (standardmäßig eingestellt) in **10 Punkt**.  
 
-##  <a name="bkmk_sunburst_chart"></a> Sunburst-Diagramm  
+##  <a name="sunburst-chart"></a><a name="bkmk_sunburst_chart"></a> Sunburst-Diagramm  
 
 In einem Sunburst-Diagramm wird die Hierarchie durch eine Reihe von Kreisen dargestellt. Die höchste Ebene der Hierarchie liegt im Zentrum, während die niedrigsten Hierarchieebene Ringe sind, die außerhalb des Zentrums angezeigt werden.  Die unterste Hierarchieebene befindet sich im äußersten Ring.  
   
@@ -91,7 +91,7 @@ In einem Sunburst-Diagramm wird die Hierarchie durch eine Reihe von Kreisen darg
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **Seriengruppen**: TerritoryName  
+    * **Reihengruppen**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -107,7 +107,7 @@ In einem Sunburst-Diagramm wird die Hierarchie durch eine Reihe von Kreisen darg
 
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
 
-##  <a name="bkmk_sample_data"></a> AdventureWorks-Beispieldaten
+##  <a name="sample-adventureworks-data"></a><a name="bkmk_sample_data"></a> AdventureWorks-Beispieldaten
 
 Dieser Abschnitt enthält eine Beispielabfrage und die grundlegenden Schritte zum Erstellen einer Datenquelle und eines Datasets in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Wenn Ihr Bericht bereits eine Datenquelle und ein Dataset enthält, können Sie diesen Abschnitt überspringen.  
   
@@ -115,7 +115,7 @@ Die Abfrage gibt detaillierte AdventureWorks-Daten zu Verkaufsaufträgen mit Dat
   
 1. **Rufen Sie die Daten ab**.  
   
-     Die Abfrage in diesem Abschnitt basiert auf der AdventureWorks-Datenbank, die von GitHub heruntergeladen werden kann: [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases) (Vollständige Datenbanksicherung von AdventureWorks 2016).  
+     Die Abfrage in diesem Abschnitt basiert auf der AdventureWorks-Datenbank, die unter [AdventureWorks 2016 full database backup (Vollständige Datenbanksicherung von AdventureWorks 2016 )](https://github.com/Microsoft/sql-server-samples/releases) auf GitHub heruntergeladen werden kann.  
 
 2. **Erstellen Sie eine Datenquelle**.  
   
@@ -180,4 +180,4 @@ Die Abfrage gibt detaillierte AdventureWorks-Daten zu Verkaufsaufträgen mit Dat
 
 * [Tutorial: Treemaps in Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [Treemap: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [Treemap: Visualisierungs-Apps von Microsoft Research Data für Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

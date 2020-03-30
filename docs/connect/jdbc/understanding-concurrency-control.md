@@ -11,10 +11,10 @@ ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027639"
 ---
 # <a name="understanding-concurrency-control"></a>Grundlegendes zur Parallelitätssteuerung
@@ -28,7 +28,7 @@ ms.locfileid: "69027639"
 ## <a name="remarks"></a>Bemerkungen  
  Der JDBC-Treiber unterstützt die folgenden Parallelitätstypen:  
   
-|Parallelitätstyp|Merkmale|Anzahl von Zeilensperren|Beschreibung|  
+|Parallelitätstyp|Merkmale|Anzahl von Zeilensperren|BESCHREIBUNG|  
 |----------------------|---------------------|---------------|-----------------|  
 |CONCUR_READ_ONLY|Nur Leseberechtigung|Nein|Updates über den Cursor sind nicht zulässig; es werden keine Sperren für die Zeilen aufrechterhalten, aus denen das Resultset besteht.|  
 |CONCUR_UPDATABLE|Optimistic Read Write|Nein|Die Datenbank geht davon aus, dass Zeilenkonflikte unwahrscheinlich, aber möglich sind. Zeilenintegrität wird mit einem Timestampvergleich geprüft.|  
@@ -39,7 +39,7 @@ ms.locfileid: "69027639"
 ## <a name="result-sets-that-are-not-updateable"></a>Nicht aktualisierbare Resultsets  
  Ein aktualisierbares Resultset ist ein Resultset, in dem Zeilen eingefügt, aktualisiert und gelöscht werden können. In den folgenden Fällen kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen aktualisierbaren Cursor erstellen. Die generierte Ausnahme lautet "Das Resultset kann nicht aktualisiert werden".  
   
-|Ursache|Beschreibung|Problembehandlung|  
+|Ursache|BESCHREIBUNG|Problembehandlung|  
 |-----------|-----------------|------------|  
 |Anweisung wurde nicht mit JDBC 2.0-Syntax (oder neuer) erstellt|In JDBC 2.0 wurden neue Methoden eingeführt, um Anweisungen zu erstellen. Bei der Verwendung von JDBC 1.0-Syntax ist das Resultset standardmäßig schreibgeschützt.|Geben Sie den Resultsettyp und die Parallelität beim Erstellen der Anweisung an.|  
 |Anweisung wurde mit TYPE_SCROLL_INSENSITIVE erstellt|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt einen statischen Momentaufnahmencursor. Dieser ist von den zugrunde liegenden Tabellenzeilen getrennt, um den Cursor vor Zeilenudpates durch andere Benutzer zu schützen.|Verwenden Sie TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC oder TYPE_FORWARD_ONLY mit CONCUR_UPDATABLE, um das Erstellen eines statischen Cursors zu vermeiden.|  

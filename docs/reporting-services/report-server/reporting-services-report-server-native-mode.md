@@ -13,10 +13,10 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826903"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services-Berichtsserver (einheitlicher Modus)
@@ -36,7 +36,7 @@ ms.locfileid: "66826903"
   
 -   [Verweisen auf eine Bildressource von einem Bericht](#bkmk_referenceimage)  
   
-##  <a name="bkmk_sum"></a> Zusammenfassung des einheitlichen Modus  
+##  <a name="summary-of-native-mode"></a><a name="bkmk_sum"></a> Zusammenfassung des einheitlichen Modus  
  Eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation im einheitlichen Modus besteht aus mehreren serverseitigen Funktionen, die Sie verwalten und warten müssen. Zu den Serverfunktionen gehören folgende:  
   
 -   Der Berichtsserver-Webdienst, der innerhalb des Berichtsserverdiensts ausgeführt wird.  
@@ -53,7 +53,7 @@ ms.locfileid: "66826903"
   
 -   Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf einem Domänencontroller installieren, müssen Sie der Domänenadministrator sein.  
   
-##  <a name="bkmk_managecontent"></a> Verwalten von Inhalt  
+##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> Verwalten von Inhalt  
  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bezieht sich die Inhaltsverwaltung auf die Verwaltung von Berichten, Modellen, Ordnern, Ressourcen und freigegebenen Datenquellen. Diese Elemente können jeweils unabhängig voneinander über Eigenschaften und Sicherheitseinstellungen verwaltet werden. Alle Elemente können an einen anderen Speicherort im Ordnernamespace des Berichtsservers verschoben werden. Zur effektiven Verwaltung der Elemente muss Ihnen bekannt sein, welche Aufgaben von einem Inhalts-Manager ausgeführt werden.  
   
 > [!NOTE]  
@@ -75,11 +75,11 @@ ms.locfileid: "66826903"
   
 -   Ausgleichen der Anforderungen hinsichtlich der Verarbeitung von Berichten auf dem Server und Angeben der Berichte, die bei Bedarf ausgeführt werden bzw. die aus dem Cache geladen werden.  
   
- Die Berechtigung zum Ausführen von Verwaltungsaufgaben wird über zwei vordefinierte Rollen bereitgestellt: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind. Weitere Informationen zu diesen vordefinierten Rollen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ Die Berechtigung, Verwaltungsaufgaben auszuführen, wird durch zwei vordefinierte Rollen bereitgestellt: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind. Weitere Informationen zu diesen vordefinierten Rollen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
  Tools zum Verwalten von Berichtsserverinhalt schließen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] bzw. das Webportal ein. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ermöglicht es Ihnen, Standards festzulegen und Funktionen zu aktivieren. Das Webportal wird verwendet, um Benutzern Zugriff auf Berichtsserverelemente und -vorgänge zu gewähren und Berichte und andere Inhaltstypen sowie alle freigegebenen Elemente und Berichtsverteilungsfunktionen anzuzeigen und zu verwenden.  
   
-##  <a name="bkmk_manageresources"></a> Schützen und Verwalten einer Ressource  
+##  <a name="securing-and-managing-a-resource"></a><a name="bkmk_manageresources"></a> Schützen und Verwalten einer Ressource  
  Eine Ressource ist ein verwaltetes Element, das auf einem Berichtsserver gespeichert wird, jedoch nicht vom Berichtsserver verarbeitet wird. In der Regel stellt eine Ressource externen Inhalt für die Benutzerberichterstattung bereit. Beispiele sind ein Bild in einer JPG-Datei oder eine HTML-Datei, die die in einem Bericht verwendeten Geschäftsregeln beschreibt. Die JPG- oder HTML-Datei wird auf dem Berichtsserver gespeichert, wobei der Berichtsserver die Datei jedoch direkt an den Browser weiterleitet, ohne sie zuerst zu verarbeiten.  
   
  Um einem Berichtsserver eine Ressource hinzuzufügen, laden Sie eine Datei hoch oder veröffentlichen sie:  
@@ -95,7 +95,7 @@ ms.locfileid: "66826903"
   
  Ressourcen sind neben Berichten, freigegebenen Datenquellen, freigegebenen Zeitplänen und Ordnern als benannte Objekte in der Ordnerhierarchie des Berichtservers vorhanden. Sie können nach Ressourcen suchen, sie anzeigen, sichern und Einstellungen festlegen, wie es für jedes andere auf einem Berichtsserver gespeicherte Objekt möglich ist. Zum Anzeigen oder Verwalten einer Ressource muss Ihre Rollenzuweisung die Aufgaben zum Anzeigen und Verwalten von Ressourcen umfassen.  
   
-##  <a name="bkmk_referenceimage"></a> Verweisen auf eine Bildressource von einem Bericht  
+##  <a name="referencing-an-image-resource-from-a-report"></a><a name="bkmk_referenceimage"></a> Verweisen auf eine Bildressource von einem Bericht  
  Ressourcen können ein Bild enthalten, auf das Sie in einem Bericht verweisen. Wenn die Berichtsanforderungen die Verwendung von externen Bildern umfassen, ziehen Sie die folgenden Vorteile beim Speichern des Bilds als Ressource in Betracht:  
   
 -   Zentrale Speicherung in der Berichtsserver-Datenbank: Wenn Sie die Berichtsserver-Datenbank und ihren Inhalt auf einen anderen Computer übertragen, wird das externe Bild im Bericht beibehalten. Sie müssen keine Bilddateien nachverfolgen, die auf einem Datenträger auf unterschiedlichen Computern gespeichert sind.  

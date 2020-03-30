@@ -11,10 +11,10 @@ ms.assetid: 504d7d06-0227-45e1-8b01-899c3e6006e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05844a45de654be91375ed2539c6510bd1592d29
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998837"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader"></a>updateNCharacterStream-Methode (java.lang.String, java.io.Reader)
@@ -45,7 +45,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 ## <a name="remarks"></a>Bemerkungen  
  Diese updateNCharacterStream-Methode wird von der updateNCharacterStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Diese Methode übergibt Unicode-Zeichen aus einem Reader-Objekt an ausgewählte **nchar**-, **nvarchar(max)** -, **ntext**- und **xml**-Spalten. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  
+ Diese Methode übergibt Unicode-Zeichen aus einem Reader-Objekt an ausgewählte Spalten vom Typ **nchar**-, **nvarchar(max)** -, **ntext**- und **xml**. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [updateNCharacterStream-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   

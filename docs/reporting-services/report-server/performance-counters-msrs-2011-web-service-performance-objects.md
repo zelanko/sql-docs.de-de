@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893453"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Leistungsindikatoren für MSRS 2011-Webdienstleistungsobjekte
@@ -41,12 +41,12 @@ ms.locfileid: "68893453"
   
 -   [Zurückgeben von Listen mithilfe von PowerShell-Cmdlets](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> Leistungsindikatoren für den MSRS 2011-Webdienst  
+##  <a name="msrs-2011-web-service-performance-counters"></a><a name="bkmk_webservice"></a> Leistungsindikatoren für den MSRS 2011-Webdienst  
  Mit dem **MSRS 2011 Web Service** -Leistungsobjekt wird die Berichtsserverleistung überwacht. Dieses Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen der Verarbeitung auf einem Berichtsserver, die in der Regel über interaktive Vorgänge zum Anzeigen von Berichten gestartet wird. Bei der Einrichtung dieses Leistungsindikators können Sie diesen auf alle Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] anwenden oder spezifische Instanzen auswählen. Diese Leistungsindikatoren werden zurückgesetzt, sobald [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] den Berichtsserver-Webdienst beendet.  
   
  In der folgenden Tabelle werden die im **MSRS 2011 Web Service** -Leistungsobjekt enthaltenen Leistungsindikatoren aufgelistet.  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Aktive Sitzungen**|Die Anzahl der aktiven Sitzungen. Dieser Leistungsindikator stellt eine kumulierte Anzahl aller durch Berichtsausführungen generierten Browsersitzungen bereit, unabhängig davon, ob sie noch aktiv sind.<br /><br /> Der Leistungsindikator wird verringert, wenn Sitzungsdatensätze entfernt werden. Standardmäßig werden Sitzungen nach einer Inaktivität von zehn Minuten entfernt.|  
 |**Cachetreffer/Sekunde**|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Die Anforderungen gelten für erneut gerenderte Berichte und nicht für Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Siehe **Gesamtanzahl der Cachetreffer** weiter unten in diesem Thema.)|  
@@ -71,7 +71,7 @@ ms.locfileid: "68893453"
 |**Ausgeführte Berichte gesamt**|Die Gesamtzahl der erfolgreich ausgeführten Berichte, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, sobald der Berichtsserver-Webdienst von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] beendet wird.|  
 |**Anforderungen insgesamt**|Die Gesamtzahl der Anforderungen an den Berichtsserver, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, sobald der Berichtsserver-Webdienst von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] beendet wird.|  
   
-##  <a name="bkmk_windowsservice"></a> Leistungsindikatoren für den MSRS 2011-Windows-Dienst  
+##  <a name="msrs-2011-windows-service-performance-counters"></a><a name="bkmk_windowsservice"></a> Leistungsindikatoren für den MSRS 2011-Windows-Dienst  
  Mit dem **MSRS 2011 Windows Service** -Leistungsobjekt wird der Berichtsserver-Windows-Dienst überwacht. Das Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen der Berichtsverarbeitung, die über geplante Vorgänge gestartet wird. Zu geplanten Vorgängen zählen Abonnierung und Übermittlung, Momentaufnahmen zur Berichtsausführung und der Berichtsverlauf. Bei der Einrichtung dieses Leistungsindikators können Sie diesen auf alle Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] anwenden oder spezifische Instanzen auswählen.  
   
  In der folgenden Tabelle werden die im **MSRS 2011 Windows Service** -Leistungsobjekt enthaltenen Leistungsindikatoren aufgelistet.  
@@ -110,7 +110,7 @@ ms.locfileid: "68893453"
 |**Anforderungen insgesamt**|Die Gesamtzahl der erfolgreich ausgeführten Berichte, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, wenn die Anwendungsdomäne wiederverwendet wird.|  
 |**Updates von Momentaufnahmen gesamt**|Die Gesamtanzahl der Updates für Berichtsausführungs-Momentaufnahmen.|  
   
-##  <a name="bkmk_powershell"></a> Zurückgeben von Listen mithilfe von PowerShell-Cmdlets  
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> Zurückgeben von Listen mithilfe von PowerShell-Cmdlets  
  ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") Das folgende Windows PowerShell-Skript gibt die Indikatorensätze zurück, bei denen CounterSetName mit „msr“ beginnt:  
   
 ```  

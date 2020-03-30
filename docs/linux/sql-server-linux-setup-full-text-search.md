@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874767"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installieren der SQL Server-Volltextsuche unter Linux
@@ -30,7 +30,7 @@ Installieren der SQL Server-Volltextsuche für Ihre Plattform:
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Installation unter RHEL</a>
+## <a name=""></a><a name="RHEL">Installation unter RHEL</a>
 
 Verwenden Sie zum Installieren von **mssql-server-fts** unter Red Hat Enterprise Linux (RHEL) die folgenden Befehle. 
 
@@ -47,7 +47,7 @@ sudo yum update mssql-server-fts
 
 Wenn Sie eine Offlineinstallation benötigen, suchen Sie in den [Versionshinweisen](sql-server-linux-release-notes.md) nach der Downloadmöglichkeit für das Volltextsuche-Paket. Führen Sie dann die im Artikel [Installieren von SQL Server](sql-server-linux-setup.md#offline) beschriebenen Schritte für die Offlineinstallation aus.
 
-## <a name="ubuntu">Installation unter Ubuntu</a>
+## <a name=""></a><a name="ubuntu">Installation unter Ubuntu</a>
 
 Verwenden Sie zum Installieren von **mssql-server-fts** unter Ubuntu die folgenden Befehle. 
 
@@ -65,7 +65,7 @@ sudo apt-get install -y mssql-server-fts
 
 Wenn Sie eine Offlineinstallation benötigen, suchen Sie in den [Versionshinweisen](sql-server-linux-release-notes.md) nach der Downloadmöglichkeit für das Volltextsuche-Paket. Führen Sie dann die im Artikel [Installieren von SQL Server](sql-server-linux-setup.md#offline) beschriebenen Schritte für die Offlineinstallation aus.
 
-## <a name="SLES">Installation unter SLES</a>
+## <a name=""></a><a name="SLES">Installation unter SLES</a>
 
 Verwenden Sie zum Installieren von **mssql-server-fts** unter SUSE Linux Enterprise Server (SLES) die folgenden Befehle. 
 
@@ -142,7 +142,7 @@ Bei der Volltextsuche werden [Wörtertrennungen](../relational-databases/search/
 | Urdu | 1056 |
 | Vietnamesisch | 1066 |
 
-## <a id="filters"></a> Filter
+## <a name="filters"></a><a id="filters"></a> Filter
 
 Die Volltextsuche funktioniert auch mit Text, der in Binärdateien gespeichert ist. In diesem Fall ist jedoch ein installierter Filter erforderlich, um die Datei zu verarbeiten. Weitere Informationen über Filter finden Sie unter [Konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 

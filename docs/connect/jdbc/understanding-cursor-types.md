@@ -11,10 +11,10 @@ ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ea30d2280ffea4c2ccf09d1f884a03751ed843
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027489"
 ---
 # <a name="understanding-cursor-types"></a>Grundlegendes zu Cursortypen
@@ -35,12 +35,12 @@ ms.locfileid: "69027489"
 > [!NOTE]  
 >  Eine umfassende Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursortypen finden Sie im Thema „Cursortypen (Datenbank-Engine)“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
- Die JDBC-Spezifikation stellt Unterstützung für Vorwärtscursor und scrollfähige Cursor bereit, die Änderungen durch andere Aufträge berücksichtigen oder nicht berücksichtigen können und schreibgeschützt oder aktualisierbar sein können. Diese Funktionalität wird von der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bereitgestellt.  
+ Die JDBC-Spezifikation stellt Unterstützung für Vorwärtscursor und scrollfähige Cursor bereit, die Änderungen durch andere Aufträge berücksichtigen oder nicht berücksichtigen können und schreibgeschützt oder aktualisierbar sein können. Diese Funktionalität wird von der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]SQLServerResultSet[-Klasse von ](../../connect/jdbc/reference/sqlserverresultset-class.md) bereitgestellt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Der JDBC-Treiber unterstützt die folgenden Cursortypen:  
   
-|Resultset<br /><br /> (Cursor) Typ|SQL Server-Cursortyp|Merkmale|select<br /><br /> Methode|Antwort<br /><br /> Pufferung|Beschreibung|  
+|Resultset<br /><br /> (Cursor) Typ|SQL Server-Cursortyp|Merkmale|select<br /><br /> Methode|Antwort<br /><br /> Pufferung|BESCHREIBUNG|  
 |------------------------------------|----------------------------|---------------------|-----------------------|----------------------------|-----------------|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|–|Vorwärtscursor, schreibgeschützt|direct|Voll|Die Anwendung muss ein Pass-Through (vorwärts) für das Resultset ausführen. Dies ist das Standardverhalten und entspricht einem TYPE_SS_DIRECT_FORWARD_ONLY-Cursor. Der Treiber liest das gesamte Resultset während der Ausführung der Anweisung aus dem Server in einen Speicher.|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|–|Vorwärtscursor, schreibgeschützt|direct|adaptive|Die Anwendung muss ein Pass-Through (vorwärts) für das Resultset ausführen. Das Verhalten entspricht dem Verhalten eines TYPE_SS_DIRECT_FORWARD_ONLY-Cursors. Der Treiber liest Zeilen vom Server, wenn die Anwendung sie anfordert, und minimiert so die Speicherauslastung auf Clientseite.|  

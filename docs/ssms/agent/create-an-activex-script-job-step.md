@@ -16,10 +16,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: de89d261fd63cf1895016b2a994c5ac77740cce6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258497"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
@@ -36,7 +36,7 @@ In diesem Artikel wird beschrieben, wie Sie einen Auftragsschritt des [!INCLUDE[
   
     [Einschränkungen](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicherheit](#Security)  
   
 -   **So erstellen Sie einen Transact-SQL-Auftragsschritt mit**  
   
@@ -48,13 +48,13 @@ In diesem Artikel wird beschrieben, wie Sie einen Auftragsschritt des [!INCLUDE[
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
-### <a name="Restrictions"></a>Einschränkungen  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Einschränkungen  
 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="security"></a><a name="Security"></a>Sicherheit  
 Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Verwenden von SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-an-activex-script-job-step"></a>So erstellen Sie einen ActiveX-Skript-Auftragsschritt  
   
@@ -76,7 +76,7 @@ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agen
   
 9. Klicken Sie auf die Seite **Erweitert** , um die folgenden Optionen für den Auftragsschritt festzulegen: welche Aktion bei der erfolgreichen oder fehlerhaften Ausführung des Auftragsschrittes jeweils auszuführen ist, wie oft der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent versuchen soll, den Auftragsschritt auszuführen, und wie viele Wiederholungsversuche unternommen werden sollen.  
   
-## <a name="TSQL"></a>Verwenden von Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Verwenden von Transact-SQL  
   
 #### <a name="to-create-an-activex-script-job-step"></a>So erstellen Sie einen ActiveX-Skript-Auftragsschritt  
   
@@ -109,7 +109,7 @@ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agen
   
 Weitere Informationen finden Sie unter [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
-## <a name="SMO"></a>Verwendung von SQL Server Management Objects  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Verwendung von SQL Server Management Objects  
 **So erstellen Sie einen ActiveX-Skript-Auftragsschritt**  
   
 Verwenden Sie die **JobStep** -Klasse indem Sie eine von Ihnen ausgewählte Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell verwenden.  

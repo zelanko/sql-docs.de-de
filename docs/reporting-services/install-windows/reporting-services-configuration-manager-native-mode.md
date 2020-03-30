@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593784"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services-Konfigurations-Manager (einheitlicher Modus)
@@ -29,7 +29,7 @@ Sie konfigurieren [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
 > [!NOTE]
 > Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich. Mit der [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Version beginnend, wird der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager nicht entworfen, um SharePoint-Modusberichtsserver zu verwalten. Der SharePoint-Modus wird verwaltet und wird mit der SharePoint-Zentraladministration und PowerShell-Skripts konfiguriert.  
   
-##  <a name="bkmk_scenarios"></a> Szenarien für die Verwendung des Reporting Services-Konfigurations-Managers  
+##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> Szenarien für die Verwendung des Reporting Services-Konfigurations-Managers  
  Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie die folgenden Aufgaben ausführen:  
   
 -   Konfigurieren des Berichtsserver-Dienstkontos. Das Konto wird während der Installation konfiguriert, kann aber mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager geändert werden, wenn Sie das Kennwort aktualisieren oder ein anderes Konto verwenden möchten.  
@@ -48,7 +48,7 @@ Sie konfigurieren [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
   
  Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie keinen Berichtsserverinhalt verwalten, zusätzliche Funktionen aktivieren oder Zugriff auf den Server gewähren. Eine vollständige Bereitstellung setzt voraus, dass Sie auch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwenden, um zusätzliche Features zu aktivieren oder Standardwerte zu ändern, sowie das Webportal, um Benutzerzugriff auf den Server zu gewähren.
 
-##  <a name="bkmk_requirements"></a> Anforderungen
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> Anforderungen
 
 Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager ist versionsspezifisch. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, der mit dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wird, können keine früheren Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]konfiguriert werden. Wenn Sie frühere und aktuelle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Versionen parallel auf einem Computer ausführen, müssen Sie die jeweilige Version des Reporting Services-Konfigurations-Managers verwenden, um Einstellungen für die entsprechende Instanz vorzunehmen.  
 
@@ -64,13 +64,13 @@ Um den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurat
 
 Konfigurations-Manager für Reporting Services wird bei der Installation von SQL Server Reporting Services automatisch installiert.
 
-##  <a name="bkmk_start_configuration_manager"></a> So starten Sie den Reporting Services-Konfigurations-Manager
+##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> So starten Sie den Reporting Services-Konfigurations-Manager
 
 1.  Führen Sie den folgenden Schritt aus, der für Ihre jeweilige Version von Microsoft Windows geeignet ist:
 
     - Geben Sie im Windows-Startbildschirm **Reporting** ein, und wählen Sie in den Suchergebnissen **Konfigurations-Manager für Reporting Services** aus.
 
-    - Wählen Sie im **Startmenü****Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]und anschließend auf **Konfigurationstools**.
+    - Wählen Sie im **Startmenü** **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]und anschließend auf **Konfigurationstools**.
 
          Wenn Sie eine Berichtsserver-Instanz einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]konfigurieren möchten, öffnen Sie den Programmordner für diese Version. Zeigen Sie beispielsweise auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] anstelle von [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , um die Konfigurationstools für Serverkomponenten von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] zu öffnen.
 

@@ -16,10 +16,10 @@ ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33f5e25d45f1e08c30f3094a9200291de9510150
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979106"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>getTime-Methode (int, java.util.Calendar)
@@ -45,7 +45,7 @@ public java.sql.Time getTime(int index,
  Ein Calendar-Objekt  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Time-Objekt.  
+ Ein Time-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028894"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise
@@ -63,7 +63,7 @@ Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der 
   
 Erfahren Sie mehr über [freigegebene Datenquellen in Reporting Services](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
    
-## <a name="shared-dataset">Erstellen eines freigegebenen Datasets</a>  
+## <a name=""></a><a name="shared-dataset">Erstellen eines freigegebenen Datasets</a>  
   
 Verwenden Sie ein vorhandenes [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Clienttool, z. B. Berichts-Designer in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], um das freigegebene Dataset zu erstellen.  In dieser exemplarischen Vorgehensweise wird [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]verwendet. [Installieren Sie Berichts-Generator](../install-windows/install-report-builder.md), oder starten Sie das Tool in Ihrem Webportal. Sie erstellen drei Datasets, und zwar jeweils eine für den KPI-Wert, den KPI-Trend und eine mit weiteren Feldern für den mobilen Reporting Services-Bericht.     
   
@@ -93,7 +93,7 @@ Verwenden Sie ein vorhandenes [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversi
    
 Nun können Sie das Dataset als Grundlage für Ihre KPIs und mobilen Berichte nutzen.  Sie können mehrere Datasets für die gleiche Datenquelle erstellen. Sie können auch mehrere KPIs und mobile Berichte für diese freigegebene Datasets erstellen.   
   
-## <a name="create-KPI">Erstellen eines KPI</a>  
+## <a name=""></a><a name="create-KPI">Erstellen eines KPI</a>  
 Sie erstellen KPIs direkt im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal.    
   
 1. Klicken Sie im Webportal rechts oben auf **Neu** > **Neuer KPI**.   
@@ -133,7 +133,7 @@ Sie erstellen KPIs direkt im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversio
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="create-mobile-report">Create a Reporting Services mobile report (Erstellen eines mobilen Berichts in Reporting Services)</a>  
+## <a name=""></a><a name="create-mobile-report">Erstellen eines mobilen Berichts in Reporting Services</a>  
    
 Zum Erstellen eines mobilen Reporting Services-Berichts [installieren Sie Publisher für mobile Berichte von SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766)oder starten das Tool im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal. 
 

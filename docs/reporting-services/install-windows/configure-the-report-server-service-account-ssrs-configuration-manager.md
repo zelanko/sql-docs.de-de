@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 12/04/2019
 ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866023"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Konfigurieren des Berichtsserver-Dienstkontos (SSRS-Konfigurations-Manager)
@@ -78,7 +78,7 @@ ms.locfileid: "74866023"
 |**Lokaler Dienst**|**Lokaler Dienst** ist ein integriertes Konto, das einem authentifizierten lokalen Windows-Benutzerkonto entspricht. Bei Diensten, die unter dem Konto **Lokaler Dienst** ausgeführt werden, erfolgt der Zugriff auf Netzwerkressourcen als NULL-Sitzung ohne Anmeldeinformationen. Dieses Konto ist nicht für Bereitstellungsszenarien im Intranet geeignet, bei denen eine Verbindung zwischen dem Berichtsserver und einer Remoteberichtsserver-Datenbank oder einem Netzwerkdomänencontroller hergestellt werden muss, um einen Benutzer vor dem Öffnen eines Berichts oder vor dem Verarbeiten eines Abonnements zu authentifizieren.|  
 |**Lokales System**|**Lokales System** ist ein Konto mit weit reichenden Berechtigungen, das für die Ausführung eines Berichtsservers nicht erforderlich ist. Verwenden Sie dieses Konto nicht für Berichtsserverinstallationen. Wählen Sie stattdessen ein Domänenkonto oder einen **Netzwerkdienst** aus.|  
   
-## <a name="localaccounts"></a> Überlegungen zur Verwendung lokaler Konten
+## <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a> Überlegungen zur Verwendung lokaler Konten
 
  Die vorrangige Überlegung im Hinblick auf die Verwendung lokaler Konten ist, ob der Berichtsserver auf Remotedatenbankserver, Mailserver und Domänencontroller zugreifen muss. Wenn Sie den Berichtsserver als lokales Windows-Benutzerkonto, lokalen Dienst oder lokales System konfigurieren, müssen bestimmte Überlegungen bei anderen Konfigurationseinstellungen sowie bei der Erstellung und Übermittlung von Abonnements berücksichtigt werden:  
   

@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581130"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)
@@ -33,7 +33,7 @@ ms.locfileid: "65581130"
   
 -   [So bearbeiten Sie eine Reporting Services-Konfigurationsdatei](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> Lesen und Verwenden von Konfigurationswerten  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> Lesen und Verwenden von Konfigurationswerten  
  Ein Berichtsserver liest die Konfigurationsdateien beim Starten des Diensts und bei jedem Speichern der Konfigurationsdatei. Neue und überarbeitete Werte werden in einer neuen Anwendungsdomäne wirksam, nachdem die aktuelle Anwendungsdomäne abgelaufen ist. Wenn möglich werden Anforderungen, die in der aktuellen Anwendungsdomäne noch verarbeitet werden, noch abgeschlossen. Einige Einstellungen erfordern jedoch einen unmittelbaren Wiederverwendungsvorgang der Anwendungsdomäne. In diesem Fall werden alle Anforderungen, die gerade verarbeitet werden, in einer neuen Anwendungsdomäne neu gestartet.  
   
  Wenn der Berichtsserver einen ungültigen Wert entdeckt, schreibt er einen Fehler in das Windows-Anwendungsprotokoll und startet dann nicht oder verwendet den Standardwert, abhängig vom Fehler.  
@@ -44,13 +44,13 @@ ms.locfileid: "65581130"
   
  Alle Konfigurationsdateiänderungen werden einschließlich erfolgreicher Änderungen im Ablaufverfolgungsprotokoll des Berichtsservers aufgezeichnet. Nur Fehler werden im Ereignisprotokolldatei der Anwendung protokolliert.  
   
-##  <a name="bkmk_default_values"></a> Informationen zu Standardwerten  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> Informationen zu Standardwerten  
  Die meisten Konfigurationseinstellungen haben Standardwerte, die intern im Berichtsserver festgelegt sind. Der Berichtsserver verwendet diese Werte, wenn ein benutzerdefinierter Wert ungültig oder nicht angegeben ist. Wenn ein Standardwert wegen einer fehlerhaften Konfigurationseinstellung verwendet werden muss, wird ein Fehler in das Ablaufverfolgungsprotokoll geschrieben.  
   
-##  <a name="bkmk_delete_config_settings"></a> Löschen von Konfigurationseinstellungen  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> Löschen von Konfigurationseinstellungen  
  Bei Konfigurationseinstellungen, die Standardwerte aufweisen, hat die Löschung der Einstellung aus der Konfigurationsdatei keinerlei Auswirkungen. Die meisten Konfigurationseinstellungen werden tatsächlich intern definiert und konfiguriert. Wenn Sie ein Element aus der Konfigurationsdatei löschen, ist die interne Kopie nach wie vor vorhanden, und es wird der dafür definierte Standardwert verwendet.  
   
-##  <a name="bkmk_edit_configuation_file"></a> So bearbeiten Sie eine Reporting Services-Konfigurationsdatei  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> So bearbeiten Sie eine Reporting Services-Konfigurationsdatei  
   
 1.  Suchen Sie die Konfigurationsdatei, die Sie bearbeiten möchten:  
   

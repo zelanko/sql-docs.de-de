@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 315d6cad8ee643cc64a3b331ee321372a70c7824
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028431"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Azure Key Vault-Beispielversion 6.2.2
@@ -22,7 +22,7 @@ ms.locfileid: "69028431"
 
 ## <a name="sample-application-using-azure-key-vault-feature"></a>Beispielanwendung mit Azure Key Vault-Feature
 
-Diese Anwendung ist mit den JDBC-Treibern 6.2.2 und 6.4.0, Azure Key Vault (Version 1.0.0), Adal4j (Version 1.4.0) und den jeweiligen Abhängigkeiten ausführbar.  Die zugrunde liegenden Abhängigkeiten können aufgelöst werden, indem Sie diese Bibliotheken wie [hier](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) beschrieben der POM-Datei des Projekts hinzufügen:
+Diese Anwendung ist mit den JDBC-Treibern 6.2.2 und 6.4.0, Azure Key Vault (Version 1.0.0), Adal4j (Version 1.4.0) und den jeweiligen Abhängigkeiten ausführbar.  Die zugrunde liegenden Abhängigkeiten können aufgelöst werden, indem Sie diese Bibliotheken so wie [hier](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) beschrieben der POM-Datei des Projekts hinzufügen:
 
 ```java
 import java.net.URISyntaxException;

@@ -22,10 +22,10 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f71a288994afb76d1237f303edfc926116f5962e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68040331"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
@@ -49,7 +49,7 @@ Der Benutzer, die Rolle oder die Anwendungsrolle, dem bzw. der Berechtigungen f�
 Der Name einer Sperrressource, der von der Clientanwendung angegeben wird. Die Anwendung muss sicherstellen, dass der Ressourcenname eindeutig ist. Der angegebene Name wird intern als Hashwert codiert, der intern im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann.  *resource_name* ist vom Datentyp **nvarchar(255)** und besitzt keinen Standardwert. *resource_name* unterliegt dem Binärvergleich. Daher muss die Groß-/Kleinschreibung unabhängig von den Sortierungseinstellungen der aktuellen Datenbank berücksichtigt werden.
   
 **'** *lock_mode* **'**  
-Der abzurufende Sperrmodus für eine spezifische Ressource. *lock_mode* ist vom Datentyp **nvarchar(32)** und verfügt nicht über einen Standardwert. Für *lock_mode* sind die folgenden Werte möglich: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
+Der abzurufende Sperrmodus für eine spezifische Ressource. *lock_mode* ist vom Datentyp **nvarchar(32)** und verfügt nicht über einen Standardwert. *lock_mode* kann folgende Werte aufweisen: **Shared**, **Update**, **IntentShared**, **IntentExclusive** und **Exclusive**.
   
 **'** *lock_owner* **'**  
 Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)** . Der Wert kann **Transaktion** (Standard) oder **Sitzung** entsprechen. Wird der Standard oder **Transaction** explizit angegeben, muss APPLOCK_TEST aus einer Transaktion heraus ausgeführt werden.

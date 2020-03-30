@@ -16,10 +16,10 @@ ms.assetid: 72b5c4a5-1382-4b2c-80a0-47c97c5f52d3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81623f6495540e70ae44755228b0c309df957b4f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976132"
 ---
 # <a name="preparestatement-method-javalangstring-int"></a>prepareStatement-Methode (java.lang.String, int[])
@@ -45,7 +45,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
  Ein Array von int-Elementen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein PreparedStatement-Objekt  
+ Dies ist ein PreparedStatement-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

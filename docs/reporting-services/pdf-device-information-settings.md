@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5442980dd2f67cf72e301a82ae3730f90a173116
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 10633ef2ed778a7b7c3d5bcd64ee006cefe24752
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70911326"
 ---
 # <a name="pdf-device-information-settings"></a>PDF-Geräteinformationseinstellungen
@@ -28,7 +28,6 @@ ms.locfileid: "70911326"
 |**ColumnSpacing**|Der für den Bericht gewünschte Spaltenabstand. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**DpiX**|Die Auflösung des Ausgabegeräts in x-Richtung.|  
 |**DpiY**|Die Auflösung des Ausgabegeräts in y-Richtung.|  
-|**EmbedFonts**|Gibt an, ob Schriftarten in die PDF-Datei eingebettet werden, die zwar größer ist, bei der aber Berichtsschriftarten für alle Clients richtig gerendert werden. Der Wert **None** (Keine) deaktiviert die Schriftarteinbettung.|  
 |**EndPage**|Die letzte Seite des zu rendernden Berichts. Der Standardwert ist der Wert für **StartPage**.|  
 |**HumanReadablePDF**|Gibt an, ob eine nicht komprimierte PDF-Datei gerendert werden soll. Eine solche Datei ist zwar größer, aber in einem Nur-Text-Editor besser lesbar. Der Standardwert ist **false.**|  
 |**MarginBottom**|Der für den Bericht gewünschte Wert für den unteren Rand in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert gefolgt von „in“ angeben (z. B. „1in“). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  

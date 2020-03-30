@@ -11,10 +11,10 @@ ms.assetid: c8cc4636-01e9-4dc8-a40c-728337ca08f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 336192ffefd750ba3e817ba1b961fd3726d9a6e6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981414"
 ---
 # <a name="getnstring-method-int-sqlserverresultset"></a>getNString-Methode (int) (SQLServerResultSet)
@@ -43,7 +43,7 @@ public java.lang.String getNString(int columnIndex)
 ## <a name="remarks"></a>Bemerkungen  
  Diese getNString-Methode wird von der getNString-Methode in der java.sql.SQLServerResultSet-Schnittstelle angegeben.  
   
- Mit dieser Methode kann der Wert einer Spalte vom Typ **nvarchar**, **nchar**, **nvarchar(max)**, **ntext** oder **xml** in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts abgerufen werden. Beim Versuch, mit dieser Methode Werte anderer Datentypen abzurufen, wird eine Ausnahme ausgelöst.  
+ Mit dieser Methode kann der Wert einer Spalte vom Typ **nvarchar**, **nchar**, **nvarchar(max)** , **ntext** oder **xml** in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts abgerufen werden. Beim Versuch, mit dieser Methode Werte anderer Datentypen abzurufen, wird eine Ausnahme ausgelöst.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getNString-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

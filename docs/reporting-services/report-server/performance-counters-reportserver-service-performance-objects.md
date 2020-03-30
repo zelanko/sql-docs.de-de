@@ -12,10 +12,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893439"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Leistungsindikatoren: ReportServer-Dienst, Leistungsobjekte
@@ -36,7 +36,7 @@ ms.locfileid: "68893439"
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
-##  <a name="bkmk_ReportServer"></a> ReportServer:Service-Leistungsindikatoren (Berichtsserver im einheitlichen Modus)  
+##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> ReportServer:Service-Leistungsindikatoren (Berichtsserver im einheitlichen Modus)  
  Das **ReportServer:Service** -Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen HTTP-bezogener und speicherbezogener Ereignisse für eine Berichtsserverinstanz. Dieses Leistungsobjekt erscheint einmalig pro [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz auf dem Computer, und Sie können für jede Instanz Indikatoren zum Leistungsobjekt hinzufügen oder aus dem Leistungsobjekt löschen. Leistungsindikatoren für die Standardinstanz werden im Format **ReportServer:Service**angezeigt. Indikatoren für benannte Instanzen werden im Format **ReportServer$\<***Instanzname***>:Service** angezeigt.  
   
  Das **ReportServer:Service** -Leistungsobjekt wurde in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] eingeführt. Es bietet eine Teilmenge an Indikatoren, die in IIS (Internetinformationsdienste; Internet Information Services) und [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] in früheren Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthalten waren. Diese neuen Leistungsindikatoren sind spezifisch für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], und sie verfolgen HTTP-bezogene Ereignisse für den Berichtsserver nach, wie Anforderungen, Verbindungen und Anmeldeversuche. Darüber hinaus schließt dieses Leistungsobjekt Leistungsindikatoren für die Nachverfolgung von Speicherverwaltungsereignissen ein.  
@@ -49,7 +49,7 @@ ms.locfileid: "68893439"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Aktive Verbindungen**|Die Anzahl der Verbindungen, die aktuell auf dem Server aktiv sind.|  
 |**Gesamtanzahl der empfangenen Bytes**|Die Anzahl der vom Server empfangenen Bytes. Dieser Leistungsindikator zählt die Rohbytes, die insgesamt vom Berichts-Manager und Berichtsserver empfangen wurden.|  
@@ -73,7 +73,7 @@ ms.locfileid: "68893439"
 |**Anforderungen/s**|Die Anzahl der Anforderungen, die pro Sekunde verarbeitet werden. Dieser Wert stellt den aktuellen Durchsatz der Anwendung dar.|  
 |**Tasks in Warteschlange**|Die Anzahl der Tasks, die darauf warten, dass ein Thread für die Verarbeitung zur Verfügung steht. Jede Anforderung, die an den Berichtsserver gestellt wird, entspricht einer oder mehreren Tasks. Dieser Leistungsindikator stellt nur die Anzahl an Tasks dar, die für die Verarbeitung bereit sind. Er enthält nicht die Anzahl an Tasks, die derzeit ausgeführt werden.|  
   
-##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (Berichtsserver im SharePoint-Modus)  
+##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (Berichtsserver im SharePoint-Modus)  
  Das **ReportServerSharePoint:Service**-Leistungsobjekt wurde in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]hinzugefügt.  
   
  ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") Das folgende Windows PowerShell-Skript gibt die Liste der Leistungsindikatoren für CounterSetName zurück.  
@@ -82,13 +82,13 @@ ms.locfileid: "68893439"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Auslastungsstatus des Arbeitsspeichers**||  
 |**Umfang der Arbeitsspeicherverringerung**||  
 |**Memory Shrink Notifications/Sec**||  
   
-##  <a name="bkmk_powershell"></a> Zurückgeben von Listen mithilfe von PowerShell-Cmdlets  
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> Zurückgeben von Listen mithilfe von PowerShell-Cmdlets  
  ![PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") Das folgende Windows PowerShell-Skript gibt die Liste der Leistungsindikatoren für CounterSetName "ReportServerSharePoint:Service" zurück.  
   
 ```  

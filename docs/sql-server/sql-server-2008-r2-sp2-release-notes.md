@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 9625b8f37d69a8360859c8fd17a207b696234b9f
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79112366"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
@@ -55,9 +55,9 @@ Bestimmen Sie mithilfe der folgenden Tabelle, welche Datei heruntergeladen und i
 |Keine 64-Bit-Installation von SQL Server 2008 R2 Management Studio|Installation von SQL Server 2008 R2 Management Studio einschließlich SP2|SQLManagementStudio_x64_ENU.exe über [diesen Link](https://go.microsoft.com/fwlink/p/?LinkId=251791) zur Installation der kostenlosen SQL Server 2008 R2 SP2 Management Studio Express Edition.|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 Setup verursacht u. U. einen Fehler, wenn "SQAGTRES.dll" von einem anderen Prozess gesperrt wurde  
-**Problem:** Ein SQL Server-Setupvorgang kann mit diesem Fehler fehlschlagen: `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` Die Grundursache liegt daran, dass „C:\Windows\system32\SQAGTRES.DLL“ von einem anderen Prozess gesperrt wurde und folglich von Setup nicht aktualisiert werden konnte.  
+**Problem:** Bei einem Setupvorgang von SQL Server kann dieser Fehler auftreten: `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` Die Grundursache besteht darin, dass „C:\Windows\system32\SQAGTRES.DLL“ von einem anderen Prozess gesperrt ist und Setup die Datei nicht aktualisieren konnte.  
   
-**Problemumgehung**: Benennen Sie „C:\Windows\system32\SQAGTRES.DLL“ vorübergehend beispielsweise in „C:\Windows\system32\SQAGTRES_old.DLL“ um, und wählen Sie dann für die Fehlermeldung in Setup die Option „Wiederholen“ aus. Auf diese Weise kann Setup fortgesetzt werden. Nach einem Neustart können Sie die temporäre Datei C:\Windows\system32\SQAGTRES_old.DLL löschen.  
+**Problemumgehung:** Benennen Sie „C:\Windows\system32\SQAGTRES.DLL“ vorübergehend beispielsweise in „C:\Windows\system32\SQAGTRES_old.DLL“ um, und wählen Sie dann für die Fehlermeldung in Setup die Option „Wiederholen“ aus. Auf diese Weise kann Setup fortgesetzt werden. Nach einem Neustart können Sie die temporäre Datei C:\Windows\system32\SQAGTRES_old.DLL löschen.  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0 Bekannte Probleme, die in diesem Service Pack behoben wurden  
 Eine vollständige Liste von Fehlern und bekannten Problemen, die in diesem Service Pack behoben wurden, finden Sie in diesem [Master KB-Artikel](https://support.microsoft.com/kb/2630455).  

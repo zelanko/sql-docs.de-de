@@ -9,10 +9,10 @@ ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e65c3ca2bd6866ede2eb9924f8465e5b66d37c0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079017"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase-Verbindungstyp (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77079017"
   
  Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Verbindungszeichenfolge  
+##  <a name="connection-string"></a><a name="Connection"></a> Verbindungszeichenfolge  
  In der Verbindungszeichenfolge im folgenden Beispiel wird eine [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle auf einem Server mit Port 13080 und XML für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA) über das Internet mit SOAP angegeben, um eine Verbindung mit einem Beispielkatalog herzustellen:  
   
 ```  
@@ -30,7 +30,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Weitere Informationen über Beispiele für Verbindungszeichenfolgen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Credentials"></a> Anmeldeinformationen  
+##  <a name="credentials"></a><a name="Credentials"></a> Anmeldeinformationen  
  Anmeldeinformationen sind erforderlich, um Abfragen auszuführen und den Bericht lokal oder vom Berichtsserver aus in der Vorschau anzuzeigen.  
   
  Nachdem Sie den Bericht veröffentlicht haben, müssen Sie eventuell die Anmeldeinformationen für die Datenquelle ändern, sodass die Berechtigungen zum Abrufen der Daten beim Ausführen des Berichts auf dem Berichtsserver gültig sind.  
@@ -38,7 +38,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
-##  <a name="Query"></a> Abfragen  
+##  <a name="queries"></a><a name="Query"></a> Abfragen  
  Zum Angeben einer Abfrage stehen Ihnen folgende Methoden zur Auswahl:  
   
 -   Erstellen Sie eine Abfrage interaktiv. Verwenden Sie den grafischen Abfrage-Designer im Entwurfs- oder Abfragemodus, um die Metadaten in der externen Datenquelle zu durchsuchen und eine Abfrage in der MDX-Syntax (Multidimensional Expressions) zu generieren.  
@@ -56,14 +56,14 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Die [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenverarbeitungserweiterung unterstützt erweiterte Datasetfeldeigenschaften. Bei diesen Eigenschaften handelt es sich um Werte, die in der externen Datenquelle verfügbar sind, aber nicht im Berichtsdatenbereich angezeigt werden. Weitere Informationen finden Sie an späterer Stelle dieses Themas unter [Erweiterte Feldeigenschaften](#Extended) .  
   
   
-##  <a name="Parameters"></a> Abfrageparameter  
+##  <a name="query-parameters"></a><a name="Parameters"></a> Abfrageparameter  
 
  Erstellen Sie im Filterbereich des Abfrage-Designers einen Filter, und markieren Sie ihn als Parameter, um Abfrageparameter einzuschließen. Für jeden Filter wird automatisch ein Dataset erstellt, um die verfügbaren Werte bereitzustellen. Diese Datasets werden standardmäßig nicht im Berichtsdatenbereich angezeigt. Weitere Informationen finden Sie unter [Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).
 
  Alle Berichtsparameter sind standardmäßig vom Datentyp **Text**. Die Standardwerte müssen möglicherweise nach dem Erstellen der Berichtsparameter geändert werden. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)" basiert.  
   
   
-##  <a name="Extended"></a> Erweiterte Feldeigenschaften  
+##  <a name="extended-field-properties"></a><a name="Extended"></a> Erweiterte Feldeigenschaften  
  Die [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenverarbeitungserweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu **Value** und **IsMissing** verwendete Eigenschaften, die von der Datenverarbeitungserweiterung für ein Datasetfeld definiert werden. Erweiterte Eigenschaften umfassen vordefinierte Eigenschaften und benutzerdefinierte Eigenschaften. Bei vordefinierten Eigenschaften handelt es sich um Eigenschaften, die von mehreren Datenquellen gemeinsam verwendet werden. Benutzerdefinierte Eigenschaften gelten jeweils nur für eine Datenquelle.  
   
  Erweiterte Feldeigenschaften werden im Berichtsdatenbereich nicht als Elemente angezeigt, die in das Berichtslayout gezogen werden können. Ziehen Sie stattdessen das übergeordnete Feld der Eigenschaft in den Bericht, und ändern Sie anschließend die Standardeigenschaft von **Value** in die gewünschte Eigenschaft.  
@@ -105,13 +105,13 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |**FORMAT_STRING**|**String**|Bei Definition für ein Measure ist dies der als String-Typ verfügbare **FormattedValue** .|  
   
   
-##  <a name="Remarks"></a> Hinweise  
+##  <a name="remarks"></a><a name="Remarks"></a> Hinweise  
  Nicht alle Berichtsübermittlungsmodi werden von diesem Datenanbieter unterstützt. Die Übermittlung von Berichten über datengesteuerte Abonnements wird für diese Datenverarbeitungserweiterung nicht unterstützt. Weitere Informationen finden Sie unter [Verwenden einer externen Datenquelle für Abonnentendaten &#40;datengesteuertes Abonnement&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md). 
   
  Weitere Informationen finden Sie unter [Verwenden von SQL Server 2005 Reporting Services mit Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970).  
   
   
-##  <a name="HowTo"></a> Themen zur Vorgehensweise  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Themen zur Vorgehensweise  
  Dieser Abschnitt enthält schrittweise Anweisungen zum Arbeiten mit Datenverbindungen, Datenquellen und Datasets:  
   
  [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -121,7 +121,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Hinzufügen eines Filters zu einem Dataset &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> Verwandte Abschnitte  
+##  <a name="related-sections"></a><a name="Related"></a> Verwandte Abschnitte  
  Diese Abschnitte der Dokumentation enthalten umfassende grundlegende Informationen zu Berichtsdaten sowie Informationen zum Definieren, Anpassen und Verwenden der mit Daten zusammenhängenden Teile eines Berichts.  
   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

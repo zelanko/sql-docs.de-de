@@ -17,10 +17,10 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b05b7ffa40bb5b44c9dd3a5fa0d320cfadba0a43
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294062"
 ---
 # <a name="integration-services-containers"></a>SQL Server Integration Services-Container
@@ -41,7 +41,7 @@ ms.locfileid: "71294062"
 ## <a name="container-types"></a>Containertypen  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt vier verschiedene Containertypen zum Erstellen von Paketen bereit. In der folgenden Tabelle sind die Containertypen aufgeführt.  
   
-|Container|Beschreibung|  
+|Container|BESCHREIBUNG|  
 |---------------|-----------------|  
 |[Foreach-Schleifencontainer](../../integration-services/control-flow/foreach-loop-container.md)|Führt eine Ablaufsteuerung wiederholt mithilfe eines Enumerators aus.|  
 |[For-Schleifencontainer](../../integration-services/control-flow/for-loop-container.md)|Führt eine Ablaufsteuerung wiederholt durch Testen einer Bedingung aus.|  
@@ -53,7 +53,7 @@ ms.locfileid: "71294062"
 ### <a name="summary-of-container-properties"></a>Zusammenfassung der Containereigenschaften  
  Alle Containertypen haben einen Teil der Eigenschaften gemeinsam. Wenn Sie Pakete mithilfe des grafischen Tools erstellen, das von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellt wird, werden im Eigenschaftenfenster die folgenden Eigenschaften für die Foreach-Schleife, die For-Schleife und die Sequenzcontainer aufgelistet. Die Eigenschaften für den Host-Container des Tasks werden als Teil des Tasks konfiguriert, den der Host für den Task kapselt. Sie legen die Eigenschaften des Tasks für den Host fest, wenn Sie den Task konfigurieren.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**DelayValidation**|Ein boolescher Wert, der angibt, ob die Überprüfung des Containers bis zur Ausführungszeit ausgesetzt wird. Der Standardwert dieser Eigenschaft ist **False**.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
 |**Beschreibung**|Die Containerbeschreibung. Die Eigenschaft enthält eine Zeichenfolge, die aber möglicherweise leer ist.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
@@ -65,7 +65,7 @@ ms.locfileid: "71294062"
 |**ForcedExecutionValueType**|Der Datentyp von **ForcedExecutionValue**. Der Standardwert dieser Eigenschaft ist **Int32**.|  
 |**ForceExecutionResult**|Ein Wert, der das Ergebnis der erzwungenen Ausführung des Pakets oder Containers angibt. Mögliche Werte sind **None**, **Success**, **Failure**und **Completion**. Der Standardwert dieser Eigenschaft ist **None**.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
 |**ForceExecutionValue**|Ein boolescher Wert, der angibt, ob ein bestimmter optionaler Ausführungswert des Containers erzwungen werden soll. Der Standardwert dieser Eigenschaft ist **False**.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
-|**ID**|Der Container-GUID, der dem Paket beim Erstellen zugewiesen wird. Diese Eigenschaft ist schreibgeschützt.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
+|**ID**|Der Container-GUID, der dem Paket beim Erstellen zugewiesen wird. Diese Eigenschaft ist schreibgeschützt.<br /><br /> [https://login.microsoftonline.com/consumers/](<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>).|  
 |**IsolationLevel**|Die Isolationsstufe der Containertransaktion. Mögliche Werte sind **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead** **Serializable**und **Snapshot**. Der Standardwert dieser Eigenschaft ist **Serializable**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |**LocaleID**|Ein Microsoft Win32-Gebietsschema. Der Standardwert dieser Eigenschaft ist das Gebietsschema des Betriebssystems auf dem lokalen Computer.<br /><br /> Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
 |**LoggingMode**|Ein Wert, der das Protokollierungsverhalten des Containers angibt. Mögliche Werte sind **Disabled**, **Enabled**und **UseParentSetting**. Der Standardwert dieser Eigenschaft ist **UseParentSetting**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  

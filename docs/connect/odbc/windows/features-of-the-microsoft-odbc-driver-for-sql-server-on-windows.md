@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: 6e3f7929c17b161d3534474d3d9ad99e559714d2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69653806"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funktionen von Microsoft ODBC Driver for SQL Server on Windows
@@ -29,9 +29,9 @@ Weitere Informationen finden Sie unter [Registrierungseinträge für ODBC-Kompon
 
 Die `REG_SZ`-Werte lauten wie folgt:
 
-- `KeepAlive` steuert, wie häufig TCP ein keep-alive-Paket sendet, um zu überprüfen, ob eine Verbindung im Leerlauf noch reagiert. Der Standardwert ist 30 Sekunden.
+- `KeepAlive` steuert, wie häufig TCP ein Keep-Alive-Paket sendet, um zu überprüfen, ob eine Verbindung im Leerlauf noch reagiert. Der Standardwert ist 30 Sekunden.
 
-- `KeepAliveInterval` bestimmt das Intervall, das zwischen den erneuten Übertragungen von „keep-alive“ liegt, bis eine Antwort empfangen wird. Der Standardwert beträgt 1 Sekunde.
+- `KeepAliveInterval` bestimmt das Intervall, das zwischen den erneuten Keep-Alive-Übertragungen liegt, bis eine Antwort empfangen wird. Der Standardwert beträgt 1 Sekunde.
 
 
 
@@ -51,7 +51,7 @@ Diese Version des ODBC-Treibers für [!INCLUDE[ssNoVersion](../../../includes/ss
   
 ### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>bcp.exe -l – Option zur Angabe eines Anmeldetimeouts
  
-Die Option „-I“ gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor für eine `bcp.exe`-Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Timeout eintritt. Das standardmäßige Anmeldetimeout beträgt 15 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `bcp.exe` eine Fehlermeldung. Der Wert 0 gibt ein unendliches Timeout an. Ein Anmeldungstimeout von weniger als 10 Sekunden ist nicht zuverlässig.  
+Die Option „-I“ gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor für eine `bcp.exe`-Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Timeout eintritt. Das Standardanmeldetimeout beträgt 15 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `bcp.exe` eine Fehlermeldung. Der Wert 0 steht für ein unendliches Timeout. Ein Anmeldungstimeout von weniger als 10 Sekunden ist nicht zuverlässig.  
   
 ### <a name="driver-aware-connection-pooling"></a>Treiberfähiges Verbindungspooling  
 Der ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt [treiberfähiges Verbindungspooling](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Weitere Informationen finden Sie unter [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: kenvh
 ms.openlocfilehash: 63681ee474d4993e248bf02dcabd9065317ffa39
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028063"
 ---
 # <a name="fips-mode"></a>FIPS-Modus
@@ -85,7 +85,7 @@ Konfigurieren Sie Verbindungseigenschaften wie in der folgenden Tabelle gezeigt,
 
 #### <a name="properties"></a>Eigenschaften 
 
-|Eigenschaft|type|Standard|Beschreibung|Notizen|
+|Eigenschaft|type|Standard|BESCHREIBUNG|Notizen|
 |---|---|---|---|---|
 |encrypt|Boolesche Werte ["TRUE / FALSE"]|„FALSE“|In einer JVM-Umgebung mit aktiviertem FIPS sollte die encrypt-Eigenschaft **true** lauten.||
 |TrustServerCertificate|Boolesche Werte ["TRUE / FALSE"]|„FALSE“|Für FIPS muss der Benutzer die Zertifikatkette validieren, daher sollte der Wert **false** für diese Eigenschaft verwendet werden. ||

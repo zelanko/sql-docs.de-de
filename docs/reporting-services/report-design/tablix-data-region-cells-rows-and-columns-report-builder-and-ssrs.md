@@ -15,10 +15,10 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252397"
 ---
 # <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Zellen, Zeilen und Spalten in einem Tablix-Datenbereich (Berichts-Generator und SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "75252397"
 ### <a name="row-and-column-handles"></a>Zeilen- und Spaltenhandles  
  Wenn Sie einen Tablix-Datenbereich auswählen, geben die Grafiken der Zeilen- und Spaltenhandles den Zweck der jeweiligen Zeile bzw. Spalte an. Handles geben Zeilen und Spalten an, die sich in einer Gruppe oder außerhalb einer Gruppe befinden. In der folgenden Tabelle wird eine Vielzahl angezeigter Handles aufgelistet.  
   
-|Symbol|Beschreibung|  
+|Symbol|BESCHREIBUNG|  
 |----------|-----------------|  
 |![Zeilenhandle mit 3 parallelen Linien für Detailzeile](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Zeilenhandle mit 3 parallelen Linien für Detailzeile")|Nur die Detailgruppe in der Zeilengruppenhierarchie|  
 |![Zeilenhandle für die Detailzeile und eine äußeren Gruppe](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Zeilenhandle für die Detailzeile und eine äußeren Gruppe")|Eine äußere Gruppe und die untergeordnete Detailgruppe|  

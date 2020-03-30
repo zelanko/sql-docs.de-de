@@ -11,10 +11,10 @@ ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bd284f6fb8021164aa3edf6aa31761b7483406e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028257"
 ---
 # <a name="updating-large-data-sample"></a>Beispiel zum Aktualisieren umfangreicher Daten
@@ -40,7 +40,7 @@ Zum Ausführen dieser Beispielanwendung benötigen Sie Zugriff auf die [!INCLUDE
 
 Im folgenden Beispielcode wird eine Verbindung mit der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Datenbank hergestellt. Danach wird ein Statement-Objekt erstellt und mithilfe der [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)-Methode überprüft, ob das Statement-Objekt ein Wrapper für die angegebene [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse ist. Die [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)-Methode wird für den Zugriff auf treiberspezifische Antwortpuffermethoden verwendet.
 
-Dann wird der Antwortpuffermodus mithilfe der [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Methode der [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse auf **Adaptiv** festgelegt und veranschaulicht, wie der Modus für die adaptive Pufferung abgerufen wird.
+Dann wird der Antwortpuffermodus mithilfe der **setResponseBuffering**-Methode der [SQLServerStatement](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Klasse auf [Adaptiv](../../../connect/jdbc/reference/sqlserverstatement-class.md) festgelegt und veranschaulicht, wie der Modus für die adaptive Pufferung abgerufen wird.
 
 Anschließend wird die SQL-Anweisung ausgeführt, und die zurückgegebenen Daten werden in ein aktualisierbares [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt eingefügt.
 

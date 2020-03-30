@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
 ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190722"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>Einführung in Berichtsdaten in SQL Server Reporting Services (SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "74190722"
 6.  **Externe Datenquellen:** Rufen Sie Daten aus relationalen Datenbanken, mehrdimensionalen Datenbanken, SharePoint-Listen oder Webdiensten ab.  
 
 
-##  <a name="BkMk_ReportDataTerms"></a> Definieren von Begriffen  
+##  <a name="defining-terms"></a><a name="BkMk_ReportDataTerms"></a> Definieren von Begriffen  
   
 - **Datenverbindung.** Wird auch als *Datenquelle*. Eine Datenverbindung umfasst einen Namen und Verbindungseigenschaften, die vom Verbindungstyp abhängen. Programmbedingt enthält eine Datenverbindung keine Anmeldeinformationen. Eine Datenverbindung gibt nicht an, welche Daten aus der externen Datenquelle abgerufen werden sollen. Geben Sie hierzu beim Erstellen eines Datasets eine Abfrage an.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74190722"
   
 - **Anmeldeinformationen.** Anmeldeinformationen sind die Authentifizierungsinformationen, die für den Zugriff auf externe Daten bereitgestellt werden müssen.  
   
-##  <a name="BkMk_ReportDataTips"></a> Tipps zum Angeben von Berichtsdaten
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> Tipps zum Angeben von Berichtsdaten
 
  Die folgenden Informationen helfen Ihnen beim Entwerfen Ihrer Berichtsdaten-Strategie.  
   

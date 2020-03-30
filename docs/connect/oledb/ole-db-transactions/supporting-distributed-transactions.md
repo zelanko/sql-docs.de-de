@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 22527cdfa08907dfdf120ef32c918ecb9eaf86bb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993978"
 ---
 # <a name="supporting-distributed-transactions"></a>Unterstützen von verteilten Transaktionen
@@ -38,12 +38,12 @@ ms.locfileid: "67993978"
   
  Für verteilte Transaktionen implementiert der OLE DB-Treiber für SQL Server **ITransactionJoin::JoinTransaction**-Parameter wie folgt.  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Ein Zeiger auf ein MS DTC-Transaktionsobjekt|  
 |*IsoLevel*|Wird vom OLE DB-Treiber für SQL Server ignoriert Die Isolationsstufe für MS DTC-koordinierte Transaktionen wird festgelegt, wenn der Consumer vom MS DTC ein Transaktionsobjekt abruft.|  
 |*IsoFlags*|Muss den Wert 0 (null) haben. Der OLE DB-Treiber für SQL Server gibt XACT_E_NOISORETAIN zurück, wenn ein anderer Wert vom Consumer angegeben wird.|  
-|*POtherOptions*|Wenn nicht NULL, fordert der OLE DB-Treiber für SQL Server das Optionsobjekt von der Schnittstelle an. Der OLE DB-Treiber für SQL Server gibt XACT_E_NOTIMEOUT zurück, wenn das *ulTimeout*-Element des Optionsobjekts nicht NULL ist. Der OLE DB-Treiber für SQL Server ignoriert den Wert des *szDescription*-Elements.|  
+|*POtherOptions*|Wenn nicht NULL, fordert der OLE DB-Treiber für SQL Server das Optionsobjekt von der Schnittstelle an. Der OLE DB-Treiber für SQL Server gibt XACT_E_NOTIMEOUT zurück, wenn das *ulTimeout*-Element des Optionsobjekts nicht 0 (null) ist. Der OLE DB-Treiber für SQL Server ignoriert den Wert des *szDescription*-Elements.|  
   
  In diesem Beispiel wird eine Transaktion mit MS DTC koordiniert.  
   

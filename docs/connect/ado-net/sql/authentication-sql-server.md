@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 13676265a7e468065506c31bc2362baf25612512
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897048"
 ---
 # <a name="authentication-in-sql-server"></a>Authentifizierung in SQL Server
@@ -85,7 +85,7 @@ Wenn die Authentifizierung im gemischten Modus erforderlich ist, müssen Sie SQL
 ## <a name="external-resources"></a>Externe Ressourcen  
 Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
-|Resource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[Principals](../../../relational-databases/security/authentication-access/principals-database-engine.md)|Beschreibt Anmeldungen und andere Sicherheitsprinzipale in SQL Server.|  
   

@@ -15,10 +15,10 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573652"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services
@@ -57,7 +57,7 @@ ms.locfileid: "65573652"
   
 2.  Klicken Sie auf der Symbolleiste auf **Entwurf** , um in den Abfragemodus zu wechseln.  
   
-3.  Klicken Sie auf der MDX-Abfrage-Designer-Symbolleiste auf **Abfrageparameter** (![Symbol für das Dialogfeld „Abfrageparameter“](../../reporting-services/report-data/media/iconqueryparameter.gif "Symbol für das Dialogfeld „Abfrageparameter“")). Das Dialogfeld Abfrageparameter wird geöffnet.  
+3.  Klicken Sie auf der MDX-Abfrage-Designer-Symbolleiste auf **Abfrageparameter** (![Symbol für das Dialogfeld „Abfrageparameter“](../../reporting-services/report-data/media/iconqueryparameter.gif "Dialogfeld „Abfrageparameter“ (Symbol)")). Das Dialogfeld Abfrageparameter wird geöffnet.  
   
 4.  Klicken Sie in der Spalte **Parameter** auf **\<Parameter eingeben>** , und geben Sie dann den Namen eines Parameters ein.  
   

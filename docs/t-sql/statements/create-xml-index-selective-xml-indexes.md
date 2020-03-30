@@ -13,10 +13,10 @@ ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f5e9e831677a2779c908a0ec4b3afa5b27f7fff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68058487"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (selektive XML-Indizes)
@@ -65,7 +65,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
 )  
 ```  
   
-##  <a name="Arguments"></a>Argumente  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumente  
  *index_name*  
  Der Name des neuen zu erstellenden Indexes. Indexnamen müssen innerhalb einer Tabelle eindeutig sein, können aber innerhalb einer Datenbank mehrfach vorkommen. Indexnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   

@@ -16,10 +16,10 @@ ms.assetid: ad538a76-983f-4175-9481-9e7fa9480c71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61f978432deffbddbee3e0413aeba54b9c1c4635
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978858"
 ---
 # <a name="gettimestamp-method-int-sqlserverresultset"></a>getTimestamp-Methode (int) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public java.sql.Timestamp getTimestamp(int columnIndex)
  Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Dies ist ein Timestamp-Objekt:  
+ Ein Timestamp-Objekt  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

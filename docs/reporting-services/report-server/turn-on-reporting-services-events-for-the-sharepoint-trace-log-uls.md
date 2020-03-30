@@ -9,10 +9,10 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893242"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)
@@ -35,10 +35,10 @@ ms.locfileid: "68893242"
   
 -   [Speicherort des Ablaufverfolgungsprotokolls](#bkmk_trace)  
   
-##  <a name="bkmk_general"></a> Allgemeine ULS-Protokollempfehlungen  
+##  <a name="general-uls-log-recommendations"></a><a name="bkmk_general"></a> Allgemeine ULS-Protokollempfehlungen  
  In der folgenden Tabelle werden Ereigniskategorien und -ebenen aufgelistet, die für die Überwachung einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Umgebung empfohlen werden. Wenn ein Ereignis protokolliert wird, enthält jeder Eintrag den Zeitpunkt der Protokollierung, den Prozessnamen und die Thread-ID.  
   
-|Category|Ebene|Beschreibung|  
+|Category|Ebene|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |Datenbank|Ausführlich|Protokolliert Ereignisse, die Datenbankzugriff einschließen.|  
 |Allgemein|Ausführlich|Protokolliert Ereignisse, die Zugriff auf die folgenden Elemente einschließen:<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webseiten<br /><br /> Berichts-Viewer-HTTP-Handler<br /><br /> Zugriff auf Bericht (RDL-Dateien)<br /><br /> Datenquellen (RSDS-Dateien)<br /><br /> URLs auf der SharePoint-Website (SMDL-Dateien)|  
@@ -46,7 +46,7 @@ ms.locfileid: "68893242"
 |Topologie|Ausführlich|Protokolliert aktuelle Benutzerinformationen.|  
 |Webparts|Ausführlich|Protokolliert Ereignisse, die Zugriff auf den Berichts-Viewer-Webpart einschließen.|  
   
-##  <a name="bkmk_turnon"></a> So aktivieren bzw. deaktivieren Sie Reporting Services-Ereignisse in der Reporting Services-Kategorie  
+##  <a name="to-turn-on-and-off-reporting-services-events-in-the-reporting-services-category"></a><a name="bkmk_turnon"></a> So aktivieren bzw. deaktivieren Sie Reporting Services-Ereignisse in der Reporting Services-Kategorie  
   
 1.  In der SharePoint 2010-Zentraladministration  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68893242"
 > [!NOTE]  
 >  Die Option **Unwichtigstes, im Ereignisprotokoll aufzuzeichnendes Ereignis** wird von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]nicht unterstützt. Die Option wird ignoriert.  
   
-##  <a name="bkmk_recommended"></a> Empfohlene Konfiguration  
+##  <a name="recommended-configuration"></a><a name="bkmk_recommended"></a> Empfohlene Konfiguration  
  Die folgenden Protokollierungsoptionen werden als Standardkonfiguration empfohlen:  
   
 -   **HTTP-Redirector**  
@@ -80,16 +80,16 @@ ms.locfileid: "68893242"
 Get-SPDiagnosticConfig  
 ```  
   
-##  <a name="bkmk_readentries"></a> Lesen der Protokolleinträge  
+##  <a name="reading-the-logs-entries"></a><a name="bkmk_readentries"></a> Lesen der Protokolleinträge  
  Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Einträge im Protokoll werden wie folgt formatiert.  
   
 1.  **Produkt: SQL Server Reporting Services**  
   
-2.  **Kategorie:** Bei auf den Server bezogenen Ereignissen steht am Anfang des Namens die Zeichenfolge „Berichtsserver“. Beispiel: „Laufzeit für Berichtsserverwarnungen“. Diese Ereignisse werden auch in den Protokolldateien des Berichtsservers protokolliert.  
+2.  **Kategorie** : Auf den Server bezogene Ereignisse weisen am Anfang des Namens die Zeichenfolge „Berichtsserver“ auf. Beispiel: „Laufzeit für Berichtsserverwarnungen“. Diese Ereignisse werden auch in den Protokolldateien des Berichtsservers protokolliert.  
   
-3.  **Kategorie:** Auf eine Web-Front-End-Komponente bezogene oder von einer Web-Front-End-Komponente kommunizierte Ereignisse enthalten nicht die Zeichenfolge „Berichtsserver“. Beispiel: „Dienstanwendungsproxy – Laufzeit für Berichtsserverwarnungen“. Die WFE-Einträge enthalten CorrelationID, die Servereinträge jedoch nicht.  
+3.  **Kategorie**: Auf eine Web-Front-End-Komponente bezogene oder von einer Web-Front-End-Komponente kommunizierte Ereignisse enthalten nicht die Zeichenfolge „Berichtsserver“. Beispiel: „Dienstanwendungsproxy – Laufzeit für Berichtsserverwarnungen“. Die WFE-Einträge enthalten CorrelationID, die Servereinträge jedoch nicht.  
   
-##  <a name="bkmk_list"></a> Liste der SQL Server Reporting Services-Ereignisse  
+##  <a name="list-of-sql-server-reporting-services-events"></a><a name="bkmk_list"></a> Liste der SQL Server Reporting Services-Ereignisse  
  Die folgende Tabelle enthält eine Liste der Ereignisse in der SQL Server Reporting Services-Kategorie:  
   
 |Bereichsname|Beschreibung oder Beispieleinträge|  
@@ -124,7 +124,7 @@ Get-SPDiagnosticConfig
 |Berichtsserveranbieter||  
 |Berichtsserverrendering||  
 |Berichtsserver-Berichtsvorschau||  
-|Berichtsserver-Ressourcenhilfsprogramm|Beispieleinträge:<br /><br /> Start-SKU für MediumReporting-Dienste: Auswertung<br /><br /> MediumEvaluation-Kopie: noch 180 Tage|  
+|Berichtsserver-Ressourcenhilfsprogramm|Beispieleinträge:<br /><br /> Start-SKU für MediumReporting-Dienste: Auswertung<br /><br /> MediumEvaluation-Kopie: noch 180 Tage|  
 |Laufende Berichtsserveraufträge||  
 |Laufende Berichtsserveranforderungen||  
 |Berichtsserverplan||  
@@ -137,7 +137,7 @@ Get-SPDiagnosticConfig
 |Proxy für Dienstanwendung||  
 |Gemeinsamer Dienst|Beispieleinträge:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting-Zugriff auf Inhaltsdatenbanken.<br /><br /> MediumProvisioning-Instanzen für ReportingWebServiceApplication<br /><br /> MediumProcessing-Dienstkontoänderung für ReportingWebServiceApplication<br /><br /> MediumSetting-Datenbankberechtigungen.|  
   
-##  <a name="bkmk_powershell"></a> Anzeigen einer Protokolldatei mit PowerShell  
+##  <a name="view-a-log-file-with-powershell"></a><a name="bkmk_powershell"></a> Anzeigen einer Protokolldatei mit PowerShell  
  ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") Sie können PowerShell verwenden, um sich eine Liste der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-bezogenen Ereignisse aus einer ULS-Protokolldatei zurückgeben zu lassen. Geben Sie über die SharePoint 2010-Verwaltungsshell folgenden Befehl ein, um eine gefilterte Liste mit den Zeilen der ULS-Protokolldatei „UESQL11SPOINT-20110606-1530.log“ zurückzugeben, die „**sql server reporting services**“ enthalten:  
   
 ```  
@@ -148,7 +148,7 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Weitere Informationen zum Anzeigen von Protokolldaten mithilfe von PowerShell finden Sie unter [Anzeigen von Diagnoseprotokollen (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx).  
   
-##  <a name="bkmk_trace"></a> Speicherort des Ablaufverfolgungsprotokolls  
+##  <a name="trace-log-location"></a><a name="bkmk_trace"></a> Speicherort des Ablaufverfolgungsprotokolls  
  Die Protokolldateien der Ablaufverfolgung befinden sich normalerweise im Ordner **C:\Programme\Common files\Microsoft Shared\Web Server Extensions\14\logs** . Sie können jedoch den Pfad auf der Seite **Diagnoseprotokollierung** der SharePoint-Zentraladministration überprüfen und ggf. ändern.  
   
  Weitere Informationen und Anweisungen zur Konfiguration der Diagnoseprotokollierung auf einem SharePoint-Server in der SharePoint 2010-Zentraladministration finden Sie unter [Konfigurieren von Einstellungen für die Diagnoseprotokollierung (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  

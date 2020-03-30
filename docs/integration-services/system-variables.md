@@ -17,10 +17,10 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0b29d0e74d25739b72e712080d2f379ae3be437
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296728"
 ---
 # <a name="system-variables"></a>Systemvariablen
@@ -35,7 +35,7 @@ ms.locfileid: "71296728"
 ## <a name="system-variables-for-packages"></a>Systemvariablen für Pakete  
  In der folgenden Tabelle werden die Systemvariablen beschrieben, die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] für Pakete bereitstellt.  
   
-|Systemvariable|Datentyp|Beschreibung|  
+|Systemvariable|Datentyp|BESCHREIBUNG|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|Das Handle für ein Windows-Ereignisobjekt, das der Task signalisieren kann, um anzugeben, dass das Ausführen des Tasks beendet werden soll.|  
 |**ContainerStartTime**|Datetime|Die Startzeit für den Container.|  
@@ -63,14 +63,14 @@ ms.locfileid: "71296728"
 ## <a name="system-variables-for-containers"></a>Systemvariablen für Container  
  In der folgenden Tabelle werden die Systemvariablen beschrieben, die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] für For-Schleifencontainer, Foreach-Schleifencontainer und Sequenzcontainer bereitstellt.  
   
-|Systemvariable|Datentyp|Beschreibung|Container|  
+|Systemvariable|Datentyp|BESCHREIBUNG|Container|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|Das Gebietsschema, das vom Container verwendet wird.|For-Schleifencontainer<br /><br /> Foreach-Schleifencontainer<br /><br /> Sequenzcontainer|  
   
 ## <a name="system-variables-for-tasks"></a>Systemvariablen für Tasks  
  In der folgenden Tabelle werden die Systemvariablen beschrieben, die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] für Tasks bereitstellt.  
   
-|Systemvariable|Datentyp|Beschreibung|  
+|Systemvariable|Datentyp|BESCHREIBUNG|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|Der Name des Tasks.|  
 |**LocaleId**|Int32|Das Gebietsschema, das vom Task verwendet wird.|  
@@ -81,7 +81,7 @@ ms.locfileid: "71296728"
 ## <a name="system-variables-for-event-handlers"></a>Systemvariablen für Ereignishandler  
  In der folgenden Tabelle werden die Systemvariablen beschrieben, die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] für Ereignishandler bereitstellt. Nicht alle Variablen sind für alle Ereignishandler verfügbar.  
   
-|Systemvariable|Datentyp|Beschreibung|Ereignishandler|  
+|Systemvariable|Datentyp|BESCHREIBUNG|Ereignishandler|  
 |---------------------|---------------|-----------------|-------------------|  
 |**Abbrechen**|Boolean|Gibt an, ob das Ausführen des Ereignishandlers bei einem Fehler, einer Warnung oder beim Abbruch einer Abfrage beendet wird.|OnError-Ereignishandler<br /><br /> OnWarning-Ereignishandler<br /><br /> OnQueryCancel-Ereignishandler|  
 |**ErrorCode**|Int32|Der Fehlerbezeichner.|OnError-Ereignishandler<br /><br /> OnInformation-Ereignishandler<br /><br /> OnWarning-Ereignishandler|  
@@ -93,7 +93,7 @@ ms.locfileid: "71296728"
 |**ProgressCountHigh**|Int32|Der obere Bereich eines 64-Bit-Werts, der die Gesamtanzahl von Vorgängen angibt, die vom OnProgress-Ereignis verarbeitet wurden.|OnProgress-Ereignishandler|  
 |**ProgressCountLow**|Int32|Der untere Bereich eines 64-Bit-Werts, der die Gesamtanzahl von Vorgängen angibt, die vom OnProgress-Ereignis verarbeitet wurden.|OnProgress-Ereignishandler|  
 |**ProgressDescription**|String|Die Beschreibung des Status.|OnProgress-Ereignishandler|  
-|**Propagate**|Boolean|Gibt an, ob das Ereignis an einen Ereignishandler auf höherer Ebene weitergegeben wird.<br /><br /> Hinweis: Der Wert der **Propagate**-Variablen wird während der Überprüfung des Pakets ignoriert. Wenn Sie **Propagate** in einem untergeordneten Paket auf **FALSE** festlegen, wird ein Ereignis dennoch an das übergeordnete Paket weitergegeben.|Alle Ereignishandler|  
+|**Propagate**|Boolean|Gibt an, ob das Ereignis an einen Ereignishandler auf höherer Ebene weitergegeben wird.<br /><br /> Hinweis: Der Wert der **Propagate** -Variablen wird während der Überprüfung des Pakets ignoriert. Wenn Sie **Propagate** in einem untergeordneten Paket auf **FALSE** festlegen, wird ein Ereignis dennoch an das übergeordnete Paket weitergegeben.|Alle Ereignishandler|  
 |**SourceDescription**|String|Die Beschreibung der ausführbaren Datei in dem Ereignishandler, der das Ereignis ausgelöst hat.|Alle Ereignishandler|  
 |**SourceID**|String|Der eindeutige Bezeichner der ausführbaren Datei in dem Ereignishandler, der das Ereignis ausgelöst hat.|Alle Ereignishandler|  
 |**SourceName**|String|Der Name der ausführbaren Datei in dem Ereignishandler, der das Ereignis ausgelöst hat.|Alle Ereignishandler|  

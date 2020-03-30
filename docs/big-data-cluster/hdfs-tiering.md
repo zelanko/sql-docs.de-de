@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190400"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Konfigurieren von HDFS-Tiering in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -57,7 +57,7 @@ Wir unterstützen das Herstellen einer Verbindung mit Azure Data Lake Storage Ge
 - [Vorgehensweise: Einbinden von ADLS Gen2 für HDFS-Tiering in einen Big Data-Cluster](hdfs-tiering-mount-adlsgen2.md)
 - [Vorgehensweise: Einbinden von S3 für HDFS-Tiering in einen Big Data-Cluster](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> Einschränkungen und bekannte Probleme
+## <a name="known-issues-and-limitations"></a><a id="issues"></a> Einschränkungen und bekannte Probleme
 
 Die folgende Liste enthält bekannte Probleme und aktuelle Einschränkungen bei der Verwendung von HDFS-Tiering in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]:
 

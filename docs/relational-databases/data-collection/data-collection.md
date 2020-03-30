@@ -14,10 +14,10 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68140746"
 ---
 # <a name="data-collection"></a>Datensammlung
@@ -111,7 +111,7 @@ ms.locfileid: "68140746"
   
 ## <a name="things-you-can-do"></a>Was Sie tun können  
   
-|Beschreibung|Thema|  
+|BESCHREIBUNG|Thema|  
 |----------------------|-----------|  
 |Verwalten von unterschiedlichen Aspekten der Datensammlung, wie z.B. das Aktivieren oder Deaktivieren der Datensammlung, das Ändern einer Sammlungssatzkonfiguration oder das Anzeigen von Daten im Verwaltungs-Data Warehouse.|[Verwalten von Datensammlungen](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Verwenden von Berichten, um Informationen zum Überwachen der Systemkapazität und zur Behandlung von Problemen mit der Systemleistung abzurufen.|[Berichte der Systemdaten-Sammlungssätze](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  

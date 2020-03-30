@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68053573"
 ---
 # <a name="query-with-full-text-search"></a>Abfragen mit Volltextsuche
@@ -31,7 +31,7 @@ Verwenden Sie zum Schreiben von Volltextabfragen die Prädikate **CONTAINS** und
 -   Verwenden Sie **CONTAINS** und **CONTAINSTABLE**, um Wörter und Ausdrücke zuzuordnen.
 -   Verwenden Sie **FREETEXT** und **FREETEXTTABLE**,um eine Bedeutung, aber keinen genauen Wortlaut zuzuordnen.
 
-## <a name="examples_simple"></a> Beispiele für alle Prädikate und Funktionen
+## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> Beispiele für alle Prädikate und Funktionen
 
 In den folgenden Beispielen wird die Beispieldatenbank Adventure Works verwendet. Informationen zum endgültigen Release von Adventure Works finden Sie unter [Adventure Works Databases and Scripts for SQL Server 2016 CTP3 (Adventure Works-Datenbanken und -Skripte für SQL Server 2016 CTP3)](https://www.microsoft.com/download/details.aspx?id=49502). Sie müssen zusätzlich die Volltextsuche einrichten, um die Beispielabfragen auszuführen. Weitere Informationen finden Sie unter [Erste Schritte mit der Volltextsuche](get-started-with-full-text-search.md). 
 
@@ -172,9 +172,9 @@ Abfragen, die eine dieser Funktionen verwenden, geben auch wie im Folgenden darg
 
 **Weitere Informationen:** Weitere Informationen zur Syntax und den Argumenten dieser Funktionen finden Sie unter [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) und [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).
 
-## <a name="examples_specific"></a> Bestimmte Suchvorgangsarten
+## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> Bestimmte Suchvorgangsarten
 
-###  <a name="Simple_Term"></a>Suchen Sie nach einem bestimmten Wort oder Ausdruck (einfacher Begriff)  
+###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a>Suchen Sie nach einem bestimmten Wort oder Ausdruck (einfacher Begriff)  
  Sie können in einer Tabelle mithilfe von [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)oder [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) nach einem bestimmten Wort oder Ausdruck suchen. Wenn Sie z.B. die Tabelle **ProductReview** in der Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nach allen Kommentaren zu einem Produkt mit dem Begriff „learning curve“ durchsuchen möchten, können Sie das CONTAINS-Prädikat wie folgt verwenden:  
   
 ```sql
@@ -197,7 +197,7 @@ So ist z. B. "croissant" ein Wort, während "café au lait" ein Ausdruck ist. So
 
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) und [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) suchen nach einer genauen Entsprechung für den Ausdruck. [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) und [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) teilen den Ausdruck in separate Wörter auf.
 
-###  <a name="Prefix_Term"></a>Suche nach einem Wort mit einem Präfix (Präfixbegriff)  
+###  <a name="search-for-a-word-with-a-prefix-prefix-term"></a><a name="Prefix_Term"></a>Suche nach einem Wort mit einem Präfix (Präfixbegriff)  
  Sie können [CONTAINS](../../t-sql/queries/contains-transact-sql.md) oder [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) verwenden, um nach Wörtern oder Ausdrücken mit einem angegebenen Präfix zu suchen. Alle Einträge in der Spalte, die Text enthalten und mit dem angegebenen Präfix beginnen, werden zurückgegeben. So suchen Sie beispielsweise nach allen Zeilen die das Präfix `top`enthalten, z. B. `top``ple`, `top``ping`und `top`. Die Abfrage sieht folgendermaßen aus:  
   
 ```sql  
@@ -224,7 +224,7 @@ Ein *Präfixbegriff* ist eine Zeichenfolge, die einem Wort vorangestellt ist, um
 
 Die Präfixsuche wird durch [CONTAINS](../../t-sql/queries/contains-transact-sql.md) und [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) unterstützt.
   
-###  <a name="Inflectional_Generation_Term"></a>Suchen nach Flexionsformen eines bestimmten Worts (Generierungsbegriff)  
+###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a>Suchen nach Flexionsformen eines bestimmten Worts (Generierungsbegriff)  
 Sie können mithilfe von [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)oder [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) nach allen unterschiedlichen Zeiten und Konjugationen eines Verbs oder sowohl die Singular- als auch die Pluralform eines Substantivs (Flexionssuche) bzw. nach Synonymen eines bestimmten Worts (Thesaurussuche) suchen.  
   
 Im folgenden Beispiel wird nach einer Form von „foot“ („foot“, „feet“ usw.) in der `Comments` -Spalte der `ProductReview`-Tabelle in der `AdventureWorks`-Datenbank gesucht: 
@@ -267,7 +267,7 @@ Suchen Sie beispielsweise die Zeilen, in denen sich das Wort „ice“ in der N�
 
 Weitere Informationen zur NEAR-Suche finden Sie unter [Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR](search-for-words-close-to-another-word-with-near.md).
 
-###  <a name="Weighted_Term"></a>Suchen Sie nach Wörtern oder Ausdrücken mit gewichteten Werten (gewichteter Begriff)  
+###  <a name="search-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a>Suchen Sie nach Wörtern oder Ausdrücken mit gewichteten Werten (gewichteter Begriff)  
 Sie können [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) verwenden, um nach Wörtern oder Ausdrücken zu suchen und einen Gewichtungswert anzugeben. Die Gewichtung, gemessen als eine Zahl von 0,0 bis 1,0, gibt die Bedeutung für jedes Wort und jeden Ausdruck in einer Gruppe von Wörtern und Ausdrücken an. Der Gewichtungswert 0.0 ist der niedrigste, und 1.0 ist der höchste mögliche Wert.  
   
 Im folgenden Beispiel ist eine Abfrage dargestellt, die mithilfe von Gewichtungen nach allen Kundenadressen sucht, in denen Text, der mit der Zeichenfolge „Bay“ beginnt, entweder „Street“ oder „View“ enthält. Die Zeilen, die mehrere der angegebenen Wörter enthalten, erhalten einen höheren Rang in den Ergebnissen.  
@@ -297,7 +297,7 @@ Sie können beispielsweise in einer Abfrage, in der nach mehreren Begriffen gesu
 
 Die Suche nach dem gewichteten Begriff wird durch [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) unterstützt.
 
-##  <a name="Using_Boolean_Operators"></a> Verwenden der booleschen Operatoren AND, OR und NOT
+##  <a name="use-and-or-and-not-boolean-operators"></a><a name="Using_Boolean_Operators"></a> Verwenden der booleschen Operatoren AND, OR und NOT
  
 Das CONTAINS-Prädikat und die CONTAINSTABLE-Funktion verwenden dieselben Suchbedingungen. Beide unterstützen das Kombinieren mehrerer Suchbegriffe mit booleschen Operatoren – AND, OR, und NOT –, um logische Operationen auszuführen. Mit AND können Sie z.B. Zeilen suchen, die sowohl „Latte“ als auch „New York-style bagel“ enthalten. Mit AND NOT können Sie z.B. Zeilen suchen, die zwar „Bagel“, aber nicht „cream cheese“ enthalten.  
   
@@ -319,7 +319,7 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-##  <a name="Additional_Considerations"></a> Groß-/Kleinschreibung, Stoppwörter, Sprache und Thesaurus
+##  <a name="case-stopwords-language-and-thesaurus"></a><a name="Additional_Considerations"></a> Groß-/Kleinschreibung, Stoppwörter, Sprache und Thesaurus
 
  Beim Schreiben von Volltextabfragen können Sie auch die folgenden Optionen angeben:
   
@@ -331,7 +331,7 @@ GO
   
 -   **Thesaurus**. FREETEXT- und FREETEXTTABLE-Abfragen verwenden standardmäßig den Thesaurus. CONTAINS und CONTAINSTABLE unterstützen ein optionales THESAURUS-Argument. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](configure-and-manage-thesaurus-files-for-full-text-search.md).
   
-##  <a name="tokens"></a>Überprüfen Sie die Ergebnisse der Tokenisierung
+##  <a name="check-the-tokenization-results"></a><a name="tokens"></a>Überprüfen Sie die Ergebnisse der Tokenisierung
 
 Nachdem Sie eine entsprechende Kombination aus Wörtertrennung, Thesaurus und Stoppliste auf eine Abfrage angewendet haben, können Sie sehen, wie die Volltextsuche die Ergebnisse zerlegt, indem Sie die dynamische Verwaltungssicht **sys.dm_fts_parser** verwenden. Weitere Informationen finden Sie unter [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   

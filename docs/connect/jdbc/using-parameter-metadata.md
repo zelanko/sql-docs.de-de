@@ -11,10 +11,10 @@ ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80ff8cebcc4141e8363c25f83821cb4924e6c46a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026075"
 ---
 # <a name="using-parameter-metadata"></a>Verwenden von Parametermetadaten
@@ -32,8 +32,8 @@ Im folgenden Beispiel wird eine offene Verbindung zur [!INCLUDE[ssSampleDBnormal
 > [!NOTE]  
 > Bei der Verwendung der SQLServerParameterMetaData-Klasse mit Prepared Statements gibt es einige Einschränkungen.
 >
-> **Bei Microsoft-JDBC-Treiber 6.0 (oder höher) für SQL Server:** Bei SQL Server 2008 oder 2008 R2 unterstützt der JDBC-Treiber SELECT-, DELETE-, INSERT- und UPDATE-Anweisungen. Diese Anweisungen dürfen jedoch keine Unterabfragen und/oder Joins enthalten.
+> **Mit Microsoft JDBC-Treiber 6.0 (oder höher) für SQL Server:** Bei SQL Server 2008 oder 2008 R2 unterstützt der JDBC-Treiber SELECT-, DELETE-, INSERT- und UPDATE-Anweisungen. Diese Anweisungen dürfen jedoch keine Unterabfragen und/oder Joins enthalten.
 
 Auch MERGE-Abfragen werden bei SQL Server 2008 oder 2008 R2 nicht für die SQLServerParameterMetaData-Klasse unterstützt. Bei SQL Server 2012 und höheren werden Parametermetadaten in komplexen Abfragen unterstützt.
 
-Das Abrufen von Parametermetadaten für verschlüsselte Spalten wird nicht unterstützt. **Bei Microsoft JDBC-Treiber 4.1 oder 4.2 für SQL Server:** Der JDBC-Treiber SELECT-, DELETE-, INSERT- und UPDATE-Anweisungen. Diese Anweisungen dürfen jedoch keine Unterabfragen und/oder Joins enthalten. Auch MERGE-Abfragen werden nicht für die SQLServerParameterMetaData-Klasse unterstützt.
+Das Abrufen von Parametermetadaten für verschlüsselte Spalten wird nicht unterstützt. **Mit Microsoft-JDBC-Treiber 4.1 oder 4.2 für SQL Server:** Der JDBC-Treiber unterstützt SELECT-, DELETE-, INSERT- und UPDATE-Anweisungen. Diese Anweisungen dürfen jedoch keine Unterabfragen und/oder Joins enthalten. Auch MERGE-Abfragen werden nicht für die SQLServerParameterMetaData-Klasse unterstützt.

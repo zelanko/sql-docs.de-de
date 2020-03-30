@@ -12,10 +12,10 @@ ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27290272b72b27d3bb051da4e7d9a8df202461c5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993457"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Gewusst wie: Abrufen von Eingabe- und Ausgabeparametern mit dem SQLSRV-Treiber
@@ -30,7 +30,7 @@ In diesem Thema wird veranschaulicht, wie der SQLSRV-Treiber verwendet wird, um 
 Im folgenden Beispiel wird eine gespeicherte Prozedur aufgerufen, die genommene Urlaubsstunden von den verfügbaren Urlaubsstunden eines bestimmten Mitarbeiters subtrahiert. Die Variable, die die genommenen Urlaubsstunden darstellt, *$vacationHrs*, wird an die gespeicherte Prozedur als Eingabeparameter übergeben. Nach der Aktualisierung der verfügbaren Urlaubsstunden verwendet die gespeicherte Prozedur den gleichen Parameter, um die Anzahl der verbleibenden Urlaubsstunden zurückzugeben.  
   
 > [!NOTE]  
-> Initialisieren von *$vacationHrs* auf 4 setzt den Rückgabetyp „PHPTYPE auf“ „Integer“ zurück. Um Datentypintegrität sicherzustellen, sollten Eingabe-/Ausgabeparameter vor dem Aufruf der gespeicherten Prozedur initialisiert oder der gewünschte Typ für PHPTYPE angegeben werden. Informationen zum Angeben des PHPTYPE finden Sie unter [Vorgehensweise: Festlegen von PHP-Datentypen](../../connect/php/how-to-specify-php-data-types.md).  
+> Initialisieren von *$vacationHrs* auf 4 setzt den Rückgabetyp „PHPTYPE auf“ „Integer“ zurück. Um Datentypintegrität sicherzustellen, sollten Eingabe-/Ausgabeparameter vor dem Aufruf der gespeicherten Prozedur initialisiert oder der gewünschte Typ für PHPTYPE angegeben werden. Informationen zum Angeben des PHPTYPE finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 Da die gespeicherte Prozedur zwei Ergebnisse zurückgibt, muss [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) aufgerufen werden, nachdem die gespeicherte Prozedur ausgeführt wurde, um den Wert des Ausgabeparameters verfügbar zu machen. Nach dem Aufruf von **sqlsrv_next_result** enthält $*vacationHrs* den Wert des Ausgabeparameters, der von der gespeicherten Prozedur zurückgegeben wird.  
   
@@ -152,9 +152,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>Weitere Informationen  
-[Vorgehensweise: Angeben der Parameterrichtung mit dem SQLSRV-Treiber](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[Gewusst wie: Angeben der Parameterrichtung mit dem SQLSRV-Treiber](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[Vorgehensweise: Abrufen von Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
 [Abrufen von Daten](../../connect/php/retrieving-data.md)  
   

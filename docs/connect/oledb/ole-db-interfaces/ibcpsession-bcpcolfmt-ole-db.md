@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994577"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -78,7 +78,7 @@ HRESULT BCPColFmt(
  Der Feldindex in der Datendatei des Benutzers  
   
  *eUserDataType*[in]  
- Der Felddatentyp in der Datendatei des Benutzers. Die verfügbaren Datentypen sind in der Headerdatei für den OLE DB-Treiber für SQL Server (msoledbsql.h) im BCP_TYPE_XXX-Format aufgeführt, z. B. BCP_TYPE_SQLINT4. Ist der BCP_TYPE_DEFAULT-Wert festgelegt, versucht der Anbieter den gleichen Typ zu verwenden wie der Tabellen- oder Sichtspaltentyp. Wenn das **eUserDataType**-Argument BCP_TYPE_SQLDECIMAL oder BCP_TYPE_SQLNUMERIC lautet, gilt für Massenkopiervorgänge aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in eine Datei:  
+ Der Felddatentyp in der Datendatei des Benutzers. Die verfügbaren Datentypen sind in der Headerdatei für den OLE DB-Treiber für SQL Server (msoledbsql.h) im BCP_TYPE_XXX-Format aufgeführt, z. B. BCP_TYPE_SQLINT4. Ist der BCP_TYPE_DEFAULT-Wert festgelegt, versucht der Anbieter den gleichen Typ zu verwenden wie der Tabellen- oder Sichtspaltentyp. Wenn das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eUserDataType **-Argument BCP_TYPE_SQLDECIMAL oder BCP_TYPE_SQLNUMERIC lautet, gilt für Massenkopiervorgänge aus**  in eine Datei:  
   
 -   Wenn die Quellspalte nicht dezimal oder numerisch ist, werden die Standardgenauigkeit und die Standardanzahl von Dezimalstellen verwendet.  
   

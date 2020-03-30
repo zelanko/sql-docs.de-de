@@ -11,16 +11,16 @@ ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028229"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Wenn Sie ein java.sql.Time-Objekt oder den java.sql.Types.TIME-JDBC-Typ zum Festlegen eines Parameters verwenden, können Sie konfigurieren, wie der java.sql.Time-Wert an den Server gesendet wird: als **time**- oder als **datetime**-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typ.  
+  Wenn Sie ein java.sql.Time-Objekt oder den java.sql.Types.TIME-JDBC-Typ zum Festlegen eines Parameters verwenden, können Sie konfigurieren, wie der java.sql.Time-Wert an den Server gesendet wird: als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]time **- oder als** datetime **-** -Typ.  
   
  Dies trifft zu, wenn eine der folgenden Methoden verwendet wird:  
   
@@ -50,9 +50,9 @@ ms.locfileid: "69028229"
   
  Gehen Sie wie folgt vor, um zu gewährleisten, dass die Anwendung unabhängig vom Standardwert der Verbindungseigenschaft **sendTimeAsDatetime** weiterhin funktioniert:  
   
--   Verwenden Sie java.sql.Time, wenn Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **time** verwenden.  
+-   Verwenden Sie java.sql.Time, wenn Sie den **-Datentyp** time[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden.  
   
--   Verwenden Sie java.sql.Timestamp beim Arbeiten mit den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen **datetime**, **smalldatetime** und **datetime2**.  
+-   Verwenden Sie java.sql.Timestamp beim Arbeiten mit den **-Datentypen** datetime **,** smalldatetime**und**datetime2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 SendTimeAsDatetime muss für verschlüsselte Spalten den Wert FALSE aufweisen, da verschlüsselte Spalten die Konvertierung von time in datetime nicht unterstützen. Beginnend mit Microsoft JDBC-Treiber 6.0 für SQL Server verfügt die SQLServerConnection-Klasse über die folgenden beiden Methoden, um den Wert der sendTimeAsDatetime-Eigenschaft festzulegen bzw. abzurufen.
 

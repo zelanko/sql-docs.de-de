@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b8caa58c178f68ebcf773fcef8f18509b85ad24a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74908750"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Python-Tutorials für SQL Server Machine Learning Services
@@ -29,7 +29,7 @@ In diesem Artikel werden die Python-Tutorials und -Schnellstarts für [SQL Serve
 
 ## <a name="python-tutorials"></a>Python-Tutorials
 
-| Lernprogramm | Beschreibung |
+| Lernprogramm | BESCHREIBUNG |
 |-|-|
 | [Vorhersagen für einen Skiverleih mit linearer Regression](python-ski-rental-linear-regression.md) | Verwenden Sie Python und die lineare Regression, um die Anzahl der Skiausleihen vorherzusagen. Bereiten Sie mithilfe von Notebooks in Azure Data Studio Daten vor und trainieren Sie das Modell, und verwenden Sie T-SQL für die Modellimplementierung. |
 | [Kategorisierung von Kunden mit K-Means-Clustering](python-clustering-model.md) | Verwenden Sie Python, um ein K-Means-Clusteringmodell zum Kategorisieren von Kunden zu entwickeln und bereitzustellen. Bereiten Sie mithilfe von Notebooks in Azure Data Studio Daten vor und trainieren Sie das Modell, und verwenden Sie T-SQL für die Modellimplementierung. |
@@ -40,7 +40,7 @@ In diesem Artikel werden die Python-Tutorials und -Schnellstarts für [SQL Serve
 
 Wenn SQL Server Machine Learning Services noch Neuland für Sie sind, können Sie auch die Python-Schnellstarts ausprobieren.
 
-| Schnellstart | Beschreibung |
+| Schnellstart | BESCHREIBUNG |
 |-|-|
 | [„Hallo Welt“ in Python und SQL Server](quickstart-python-create-script.md) | Erfahren Sie mehr über die Grundlagen zum Abrufen von Python in T-SQL mithilfe von [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
 | [Verarbeiten von Datentypen und Objekten mithilfe von Python in SQL Server](quickstart-python-data-structures.md) | Dieser Schnellstart zeigt, wie mit den Python-Pandas-Paketen in SQL Server Datenstrukturen verarbeitet werden. |

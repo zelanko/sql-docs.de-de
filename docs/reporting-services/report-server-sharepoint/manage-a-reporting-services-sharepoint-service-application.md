@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580088"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Verwalten einer Reporting Services-SharePoint-Dienstanwendung
@@ -34,7 +34,7 @@ ms.locfileid: "65580088"
   
 2.  Klicken Sie neben dem Namen der Dienstanwendung oder auf die Spalte **Typ** . Dadurch wird die gesamte Zeile ausgewählt. Klicken Sie anschließend im SharePoint-Menüband auf **Eigenschaften** .  
   
- Weitere Informationen zu Dienstanwendungseigenschaften finden Sie unter [Schritt 3: Erstellen einer Reporting Services-Dienstanwendung](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+ Weitere Informationen zu Dienstanwendungseigenschaften finden Sie unter [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 ## <a name="open-service-application-management-pages"></a>Öffnen der Verwaltungsseiten von Dienstanwendungen
 
@@ -109,7 +109,7 @@ ms.locfileid: "65580088"
 > [!IMPORTANT]  
 >  Aus Sicherheitsgründen empfiehlt es sich, den Reporting Services-Verschlüsselungsschlüssel in regelmäßigen Abständen zu ändern. Ein guter Zeitpunkt, um den Schlüssel zu ändern, liegt direkt im Anschluss an ein größeres Versionsupgrade von Reporting Services. Indem der Schlüssel nach einem Upgrade geändert wird, lassen sich zusätzliche Dienstunterbrechungen, die durch eine Änderung des Reporting Services-Verschlüsselungsschlüssels außerhalb des Upgradezyklus verursacht würden, minimieren.  
   
-|Seite|Beschreibung|  
+|Seite|BESCHREIBUNG|  
 |----------|-----------------|  
 |Sichern des Verschlüsselungsschlüssels|1.) Geben Sie in die Felder **Kennwort:** und **Kennwort bestätigen:** ein Kennwort ein, und klicken Sie auf **Exportieren**. Eine Warnung wird angezeigt, wenn das eingegebene Kennwort nicht den Komplexitätsanforderungen der Domänenrichtlinie entspricht.<br /><br /> 2.) Sie werden aufgefordert, einen Dateispeicherort zum Speichern der Schlüsseldatei anzugeben. Speichern Sie ggf. die Schlüsseldatei auf einem separaten Computer und nicht auf dem Computer, auf dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ausgeführt wird. Der Standarddateiname entspricht dem Namen der Dienstanwendung.|  
 |Wiederherstellen von Verschlüsselungsschlüsseln|1.) Geben Sie den Speicherort der Schlüsseldatei in das Feld **Dateispeicherort** ein, oder navigieren Sie zum Speicherort.<br /><br /> 2.) Geben Sie im Feld **Kennwort** das Kennwort ein, mit dem die Verschlüsselungsdatei gesichert wurde.<br /><br /> 3.) Klicken Sie auf **OK**.|  

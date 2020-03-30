@@ -11,17 +11,17 @@ ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 267605b6a89f323570cfacfc66517b028ef716a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025475"
 ---
 # <a name="working-with-a-connection"></a>Arbeiten mit einer Verbindung
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Die folgenden Abschnitte enthalten Beispiele für die verschiedenen Möglichkeiten, um mit der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank herzustellen.
+Die folgenden Abschnitte enthalten Beispiele für die verschiedenen Möglichkeiten, um mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLServerConnection[-Klasse von ](../../connect/jdbc/reference/sqlserverconnection-class.md) eine Verbindung mit einer [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Datenbank herzustellen.
 
 > [!NOTE]  
 > Wenn beim Herstellen von Verbindungen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem JDBC-Treiber Probleme auftreten, finden Sie unter [Behandlung von Verbindungsproblemen](../../connect/jdbc/troubleshooting-connectivity.md) Vorschläge zum Beheben der Probleme.

@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c2671b3df6432e63c0e0b36a24bade60286f72a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015682"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB-API-Unterstützung für Datums- und Uhrzeit-Erweiterungen
@@ -24,7 +24,7 @@ ms.locfileid: "68015682"
 
   Die folgenden OLE DB-APIs unterstützen die erweiterten Funktionen für Datum und Uhrzeit.  
   
-|Funktion|Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
 |IAccessor::CreateAccessor|Ein Flag wird zur DBBINDING-Struktur hinzugefügt, damit Anwendungen zwischen den Werten **datetime**, **datetime2** und **smalldatetime** unterscheiden können. Weitere Informationen finden Sie unter [Parameter and Rowset Metadata (Parameter- und Rowsetmetadaten)](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
 |IBCPSession::BCPColFmt|Weitere Informationen finden Sie unter [Bulk Copy Changes for Enhanced Date and Time Types &#40;OLE DB&#41; (Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen &#40;OLE DB&#41;)](../../oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md).|  

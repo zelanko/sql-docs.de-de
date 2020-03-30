@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10a2411f26315a7c0cf50e9eca4daec45567fab4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73049829"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Übersicht über den JDBC-Treiber
@@ -33,7 +33,7 @@ Die JDBC-Treiberversionen 4.x sind veraltet. Die Unterstützung von 4.x wurde v
 
 Die Themen in diesem Abschnitt enthalten eine allgemeine Übersicht über den JDBC-Treiber, u. a. die notwendigen Systemanforderungen, Verwendungsmöglichkeiten und Verweise auf weitere Informationen.  
 
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Herunterladen des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Links zum Herunterladen des Microsoft JDBC-Treibers für SQL Server|  
 |[Versionshinweise für den JDBC-Treiber](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|Beschreibt die neuen Funktionen in der aktuellen Version des Microsoft JDBC-Treibers|  

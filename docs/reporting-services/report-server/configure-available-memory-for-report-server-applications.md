@@ -12,10 +12,10 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67564026"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen
@@ -64,7 +64,7 @@ ms.locfileid: "67564026"
   
  In der folgenden Tabelle werden die Einstellungen **WorkingSetMaximum**, **WorkingSetMinimum**, **MemorySafetyMargin**und **MemoryThreshold** beschrieben. Die Konfigurationseinstellungen werden in der Datei [RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)angegeben.  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**WorkingSetMaximum**|Gibt einen Arbeitsspeicherschwellenwert an, ab dem keine neuen Speicherbelegungsanforderungen für Berichtsserveranwendungen mehr möglich sind.<br /><br /> Standardmäßig legt der Berichtsserver die Einstellung **WorkingSetMaximum** auf den gesamten verfügbaren Arbeitsspeicher auf dem Computer fest. Dieser Wert wird erkannt, wenn der Dienst gestartet wird.<br /><br /> Diese Einstellung ist nicht in der Datei RSReportServer.config vorhanden, es sei denn, Sie fügen sie manuell ein. Wenn Sie möchten, dass der Berichtsserver weniger Arbeitsspeicher beansprucht, können Sie der Datei RSReportServer.config dieses Element und einen entsprechenden Wert hinzufügen. Gültige Werte sind 0 bis zu einer maximalen ganzen Zahl. Dieser Wert wird in Kilobyte angegeben.<br /><br /> Nach Erreichen des Werts für **WorkingSetMaximum** nimmt der Berichtsserver keine neuen Anforderungen mehr an. Zurzeit ausgeführte Anforderungen werden aber abgeschlossen. Neue Anforderungen werden nur angenommen, wenn die Arbeitsspeicherverwendung unter den durch **WorkingSetMaximum**angegebenen Wert fällt.<br /><br /> Wenn vorhandene Anforderungen auch nach Erreichen des Werts für **WorkingSetMaximum** zusätzlichen Arbeitsspeicher beanspruchen, werden alle Anwendungsdomänen wiederverwendet. Weitere Informationen finden Sie unter [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md).|  
 |**WorkingSetMinimum**|Gibt eine Untergrenze für die Ressourcenbeanspruchung an. Der Berichtsserver gibt nur Speicher frei, wenn die allgemeine Speicherauslastung unter dieser Grenze liegt.<br /><br /> Standardmäßig wird der Wert bei Dienststart berechnet. In der Regel beträgt die anfängliche Speicherbelegungsanforderung 60 Prozent von **WorkingSetMaximum**.<br /><br /> Diese Einstellung ist nicht in der Datei RSReportServer.config vorhanden, es sei denn, Sie fügen sie manuell ein. Wenn Sie diesen Wert anpassen möchten, müssen Sie der Datei RSReportServer.config das **WorkingSetMinimum** -Element hinzufügen. Gültige Werte sind 0 bis zu einer maximalen ganzen Zahl. Dieser Wert wird in Kilobyte angegeben.|  

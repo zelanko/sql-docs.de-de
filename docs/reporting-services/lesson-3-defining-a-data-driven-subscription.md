@@ -9,20 +9,20 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826855"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lektion 3: Definieren eines datengesteuerten Abonnements
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 In dieser Lektion des [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Tutorials verwenden Sie die datengesteuerten Abonnementseiten des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Webportals, um eine Verbindung mit einer Abonnementdatenquelle herzustellen, um eine Abfrage zu erstellen, die Abonnementdaten abruft, und um das Resultset den Berichts- und Übermittlungsoptionen zuzuordnen.  
   
 > [!NOTE]  
 > Prüfen Sie vor dem Starten, dass der **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent** ausgeführt wird. Ist dies nicht der Fall, können Sie das Abonnement nicht speichern.  Sie können dies überprüfen, indem Sie den [SQL Server-Konfigurations-Manager](../relational-databases/sql-server-configuration-manager.md) öffnen.
 In dieser Lektion wird davon ausgegangen, dass Sie Lektion 1 und Lektion 2 abgeschlossen haben und dass die Berichtsdatenquelle gespeicherte Anmeldeinformationen verwendet.  Weitere Informationen finden Sie unter [Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
   
-## <a name="bkmk_startwizard"></a>Starten des Assistenten für datengesteuertes Abonnement  
+## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>Starten des Assistenten für datengesteuertes Abonnement  
   
 1.  Klicken Sie im [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Webportal auf **Home**, und navigieren Sie zum Ordner mit dem Bericht **Sales Orders** .  
   
@@ -82,7 +82,7 @@ Geben Sie folgende Werte an:
 Parameter  |Wertquelle  | Wert/Feld  
 ---------|---------|---------
 **Dateiname**     |Wert aus Dataset abrufen | Order     
-**Pfad**     | Wert eingeben  | Geben Sie als Wert den Namen einer öffentlichen Dateifreigabe ein, für die Sie Schreibberechtigungen besitzen (z.B. `\\mycomputer\public\myreports`). 
+**Path**     | Wert eingeben  | Geben Sie als Wert den Namen einer öffentlichen Dateifreigabe ein, für die Sie Schreibberechtigungen besitzen (z.B. `\\mycomputer\public\myreports`). 
 **Renderformat** | Wert aus Dataset abrufen | Format
 **Schreibmodus**| Wert eingeben| Automatisch inkrementieren    
 **Dateierweiterung** |Wert eingeben |True

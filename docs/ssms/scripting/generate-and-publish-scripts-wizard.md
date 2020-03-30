@@ -44,10 +44,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253900"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
@@ -61,17 +61,17 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Die Quell- und Zieldatenbank können sich auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] befinden, die mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher ausgeführt wird.  
   
-###  <a name="PubHostSvc"></a> Veröffentlichen in einem gehosteten Dienst  
+###  <a name="publishing-to-a-hosted-service"></a><a name="PubHostSvc"></a> Veröffentlichen in einem gehosteten Dienst  
  Der **Assistent zum Generieren und Veröffentlichen von Skripts** kann nicht nur zum Erstellen von Skripts, sondern auch zum Veröffentlichen einer Datenbank in einem bestimmten gehosteten SQL Server-Webdienst verwendet werden. Das SQL Server Hosting Toolkit stellt auf der CodePlex-Website Datenbank-Veröffentlichungsdienste als freigegebenes Quellprojekt zur Verfügung. Das Projekt für Datenbank-Veröffentlichungsdienste kann von Webhostinganbietern zum Erstellen einer Gruppe von Webdiensten verwendet werden, mit denen deren Kunden Datenbanken problemlos für den Webdienst bereitstellen können. Weitere Informationen zum Herunterladen des SQL Server Hosting Toolkits finden Sie unter [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025).  
   
  Aktivieren Sie zum Veröffentlichen einer Datenbank in einem Webhostingdienst auf der Seite **Skripterstellungsoptionen festlegen** des Assistenten die Option **In Webdienst veröffentlichen** .  
   
-###  <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Veröffentlichen einer Datenbank ist mindestens die Mitgliedschaft in der festen Datenbankrolle db_ddladmin in der Ursprungsdatenbank erforderlich. Zum Veröffentlichen eines Datenbankskripts in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Hostinganbieter ist mindestens die Mitgliedschaft in der festen Datenbankrolle db_ddladmin auf der Zieldatenbank erforderlich.  
   
  Außerdem muss bei der Veröffentlichung mit dem Assistenten ein Benutzername mit zugehörigem Kennwort für den Zugriff auf das Konto beim Hostinganbieter angegeben werden. Die Zieldatenbank muss auf dem Hostinganbieter erstellt werden, bevor die Quelldatenbank veröffentlicht wird. Durch die Veröffentlichung werden Objekte in der bestehenden Datenbank überschrieben.  
   
-##  <a name="GenPubScriptWiz"></a> Verwenden des Assistenten zum Generieren und Veröffentlichen von Skripts  
+##  <a name="using-the-generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> Verwenden des Assistenten zum Generieren und Veröffentlichen von Skripts  
  **So erstellen und veröffentlichen Sie ein Skript**  
   
 1.  Erweitern Sie im **Objekt-Explorer**den Knoten für die Instanz, die die Datenbank enthält, für die ein Skript erstellt werden soll.  
@@ -92,14 +92,14 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
     -   [Seite "Zusammenfassung"](#Summary)   
     -   [Seite "Skripts speichern oder veröffentlichen"](#SavePubScripts)  
   
-###  <a name="Introduction"></a> Seite "Einführung"  
+###  <a name="introduction-page"></a><a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite werden die Schritte zum Generieren oder Veröffentlichen eines Skripts beschrieben.  
   
  **Diese Seite nicht mehr anzeigen** – Diese Seite wird beim nächsten Starten des **Assistenten zum Generieren und Veröffentlichen von Skripts**übersprungen.  
   
   ![Seite "Einführung"](media/generate-and-publish-scripts-wizard/intro.png)
   
-###  <a name="ChooseObjects"></a> Seite "Objekte auswählen"  
+###  <a name="choose-objects-page"></a><a name="ChooseObjects"></a> Seite "Objekte auswählen"  
  Wählen Sie auf dieser Seite aus, welche Objekte in die von diesem Assistenten generierten Skripts eingeschlossen werden sollen. Auf der folgenden Seite des Assistenten können Sie diese Skripts am Speicherort Ihrer Wahl speichern oder sie verwenden, um Datenbankobjekte an einen Remotewebhostinganbieter zu veröffentlichen, bei dem die [SQL Server-Datenbank-Veröffentlichungsdienste](https://go.microsoft.com/fwlink/?LinkId=142025)installiert sind.  
   
  **Option „Skript für gesamte Datenbank erstellen“** – Klicken Sie hier, um Skripts für alle Objekte in der Datenbank zu generieren und ein Skript für die Datenbank selbst einzuschließen. 
@@ -116,7 +116,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
 
    ![Skriptspezifisch](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
-###  <a name="SetScriptOpt"></a> Seite "Skripterstellungsoptionen festlegen"  
+###  <a name="set-scripting-options-page"></a><a name="SetScriptOpt"></a> Seite "Skripterstellungsoptionen festlegen"  
  Auf dieser Seite können Sie angeben, ob Skripts vom Assistenten am ausgewählten Speicherort gespeichert werden, oder ob damit Datenbankobjekte bei einem Remotewebhostinganbieter veröffentlicht werden. Für die Veröffentlichung müssen Sie Zugriff auf einen Webdienst haben, der mithilfe des Webdiensts "Datenbank-Veröffentlichungsdienste" installiert wird.  
   
  **Optionen** – Wenn der Assistent Skripts an einem Speicherort Ihrer Wahl speichern soll, wählen Sie **Skripts an einem bestimmten Speicherort speichern**aus. Sie können die Skripts später für eine Datenbank-Engine-Instanz oder für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ausführen. Wenn der Assistent die Datenbankobjekte in einem Remote-Webhostinganbieter veröffentlichen soll, wählen Sie **In Webdienst veröffentlichen**aus.  
@@ -141,7 +141,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 -   **Zieldatenbank** – Wählt die Zieldatenbank aus, in der Sie die von Ihnen ausgewählten Objekte veröffentlichen möchten. Sie müssen vor dem Auswählen einer Zieldatenbank einen Anbieter auswählen.  
   
-###  <a name="AdvScriptOpt"></a> Seite "Erweiterte Skripterstellungsoptionen"  
+###  <a name="advanced-scripting-options-page"></a><a name="AdvScriptOpt"></a> Seite "Erweiterte Skripterstellungsoptionen"  
  Verwenden Sie diese Seite, um festzulegen, wie dieser Assistent Skripts generieren soll. Es sind viele verschiedene Optionen verfügbar. Die Optionen werden abgeblendet dargestellt, wenn sie von der SQL Server- oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Version, die in **Datenbank-Engine-Typ** angegeben ist, nicht unterstützt werden.  
 
 ![Erweiterte Optionen](media/generate-and-publish-scripts-wizard/advanced.png)
@@ -214,7 +214,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 -   **Skripterstellung für eindeutige Schlüssel** – Dient zur Skripterstellung für eindeutige Schlüssel für Tabellen. Mit eindeutigen Schlüsseln kann verhindert werden, dass doppelte Daten eingegeben werden. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
-###  <a name="MgProviders"></a> Seite "Anbieter verwalten"  
+###  <a name="manage-providers-page"></a><a name="MgProviders"></a> Seite "Anbieter verwalten"  
  In diesen Dialogfeld können Sie Verbindungen mit Hostinganbietern anzeigen, hinzufügen, bearbeiten, löschen oder testen. Ein Hostinganbieter gibt die Verbindungsinformationen für einen Webdienst an, der auf der CodePlex-Website vom Server Hosting Toolkit aus mithilfe des Projekts für Datenbank-Veröffentlichungsdienste erstellt wurde.  
   
  **Konfigurierte Anbieter** – Listet den Namen und die **Webdienstadresse** aller gespeicherten Hostinganbieter auf.  
@@ -231,7 +231,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
  **Abbrechen** – Macht alle Änderungen rückgängig, die Sie im Dialogfeld **Hostinganbieter** vorgenommen haben.  
   
-###  <a name="AdvPubOpts"></a> Seite "Erweiterte Veröffentlichungsoptionen"  
+###  <a name="advanced-publishing-options-page"></a><a name="AdvPubOpts"></a> Seite "Erweiterte Veröffentlichungsoptionen"  
  Verwenden Sie diese Seite, um festzulegen, wie dieser Assistent eine Datenbank veröffentlichen soll. Es sind viele verschiedene Optionen verfügbar. Die Optionen werden abgeblendet dargestellt, wenn sie von der SQL Server- oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Version, die in **Datenbank-Engine-Typ** angegeben ist, nicht unterstützt werden.  
 
   ![Erweitertes Veröffentlichen](media/generate-and-publish-scripts-wizard/advancedpublish.png)
@@ -288,7 +288,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 9. **Datenkomprimierungsoptionen veröffentlichen** – Schließt Datenkomprimierungsoptionen in den Veröffentlichungsprozess ein, wenn sie in der Ursprungsdatenbank oder den Tabellen in der Ursprungsdatenbank konfiguriert werden. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
-###  <a name="ProvConfig"></a> Seite "Anbieterkonfiguration"  
+###  <a name="provider-configuration-page"></a><a name="ProvConfig"></a> Seite "Anbieterkonfiguration"  
  Mithilfe dieses Dialogfelds können Sie Hostinganbieter-Einstellungen anzeigen oder ändern. Mithilfe dieses Dialogfeld können Sie folgende Aufgaben ausführen:  
   
 -   Anzeigen, Hinzufügen oder Bearbeiten der Verbindungsinformationen für einen Hostinganbieter.  
@@ -321,12 +321,12 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
  **Abbrechen** – Verwirft alle in diesem Dialogfeld vorgenommenen Änderungen und kehrt zum Assistenten zurück.  
   
-###  <a name="Summary"></a> Seite "Zusammenfassung"  
+###  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Auf dieser Seite sind die Optionen zusammengefasst, die Sie in diesem Assistenten ausgewählt haben. Um eine Option zu ändern, klicken Sie auf **Zurück**. Um mit der Generierung von Skripts zu beginnen, die gespeichert oder veröffentlicht werden, klicken Sie auf **Weiter**.  
   
  **Überprüfen Sie Ihre Auswahl** – Zeigt die auf den einzelnen Seiten des Assistenten getroffene Auswahl an. Erweitern Sie einen Knoten, um die auf der betreffenden Seite ausgewählten Optionen anzuzeigen.  
   
-###  <a name="SavePubScripts"></a> Seite "Skripts speichern oder veröffentlichen"  
+###  <a name="save-or-publish-scripts-page"></a><a name="SavePubScripts"></a> Seite "Skripts speichern oder veröffentlichen"  
  Mithilfe dieser Seite können Sie den Status des Assistenten überwachen.  
   
  **Details** – Zeigen Sie die Spalte **Aktion** an, um den Status des Assistenten anzuzeigen. Nach der Generierung speichert der Assistent die Skripts in einer Datei oder verwendet sie zum Veröffentlichen in einem Webdienst, abhängig von Ihrer Auswahl. Wenn diese Schritte abgeschlossen sind, klicken Sie auf den Wert in der Spalte **Ergebnis** , um das Ergebnis des entsprechenden Schritts anzuzeigen.  

@@ -11,10 +11,10 @@ ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb7e9e37d568659a71917df66016f2333ed4be46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76918799"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
@@ -30,7 +30,7 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$conn*: die nullbasierte Nummer (ganze Zahl) der Spalte, deren Metadaten Sie abrufen möchten  
+*$conn* (ganze Zahl): Die nullbasierte Nummer der Spalte, deren Metadaten Sie abrufen möchten.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Ein assoziatives Array (Schlüssel und Wert), das die Metadaten für die Spalte enthält. Im Abschnitt „Anmerkungen“ finden Sie eine Beschreibung für die Felder im Array.  
@@ -71,7 +71,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>Klassifizierungsmetadaten zu Vertraulichkeitsdaten
 
-Ab Version 5.8.0 ist ein neues Anweisungsattribut `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` verfügbar, damit Benutzer in Microsoft SQL Server 2019 mithilfe von `PDOStatement::getColumnMeta` auf die [Klassifizierungsmetadaten zu Vertraulichkeitsdaten](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4) zugreifen können. Hierfür wird der Microsoft ODBC Driver 17.4.2 oder höher benötigt.
+Ab Version 5.8.0 ist ein neues Anweisungsattribut `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` verfügbar, damit Benutzer in Microsoft SQL Server 2019 mithilfe von [ auf die ](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)Klassifizierungsmetadaten zu Vertraulichkeitsdaten`PDOStatement::getColumnMeta` zugreifen können. Hierfür wird der Microsoft ODBC Driver 17.4.2 oder höher benötigt.
 
 Beachten Sie, dass das Attribut `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` standardmäßig auf `false` festgelegt ist. Wird es jedoch auf `true` festgelegt, wird das zuvor erwähnte Arrayfeld (`flags`) mit den Klassifizierungsmetadaten zu Vertraulichkeitsdaten befüllt, falls vorhanden. 
 

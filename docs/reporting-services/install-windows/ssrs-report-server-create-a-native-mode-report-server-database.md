@@ -13,10 +13,10 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866333"
 ---
 # <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)
@@ -32,7 +32,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
   
  Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der Standardkonfiguration für den einheitlichen Modus installiert haben, wurde die Berichtsserver-Datenbank automatisch während der Installation der Berichtsserver-Instanz erstellt und konfiguriert. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie die von Setup automatisch konfigurierten Einstellungen anzeigen bzw. ändern.  
   
-##  <a name="rsdbrequirements"></a> Vorbereitungen  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> Vorbereitungen  
  Das Erstellen bzw. die Konfiguration einer Berichtsserver-Datenbank erfolgt in mehreren Schritten. Bevor Sie die Berichtsserver-Datenbank erstellen, sollten Sie sich überlegen, wie Sie die folgenden Elemente angeben möchten:  
   
  **Datenbankserver auswählen**  

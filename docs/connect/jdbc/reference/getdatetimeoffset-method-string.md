@@ -11,10 +11,10 @@ ms.assetid: fedb1d75-0c3d-4eb3-ae65-da0e153265cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d831ff519f72fb5b68cec3c7dc359f1d54106c0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983793"
 ---
 # <a name="getdatetimeoffset-method-string"></a>getDateTimeOffset-Methode (Zeichenfolge)
@@ -37,13 +37,13 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String sCol)
  Der Name eines Parameters.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Objekt der [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)-Klasse  
+ Ein [DateTimeOffset-Klassenobjekt](../../../connect/jdbc/reference/datetimeoffset-class.md)  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Sie können mit [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md) einen Parameterwert der Klasse [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) festlegen.  
+ Sie können mit [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) einen Parameterwert der Klasse [DateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md) festlegen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getDateTimeOffset-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   

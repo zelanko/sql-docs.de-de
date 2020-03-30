@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63294659"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator)
@@ -27,7 +27,7 @@ Ungefähre Dauer dieses Lernprogramms: 20 Minuten.
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Voraussetzungen finden Sie unter [Voraussetzungen für Tutorials](../reporting-services/prerequisites-for-tutorials-report-builder.md). 
   
-## <a name="CreateMatrix"></a>1. Erstellen eines Matrixberichts und eines Datasets mit dem Assistenten für neue Tabellen oder Matrix  
+## <a name="1-create-a-matrix-report-and-dataset-from-the-new-table-or-matrix-wizard"></a><a name="CreateMatrix"></a>1. Erstellen eines Matrixberichts und eines Datasets mit dem Assistenten für neue Tabellen oder Matrix  
 In diesem Abschnitt wählen Sie eine freigegebene Datenquelle aus, erstellen ein eingebettetes Dataset und zeigen die Daten in einer Matrix an.  
   
 > [!NOTE]  
@@ -94,7 +94,7 @@ In diesem Abschnitt wählen Sie eine freigegebene Datenquelle aus, erstellen ein
 
 11. Klicken Sie auf **Weiter**.  
   
-## <a name="Groups"></a>2. Organisieren von Daten und Auswählen des Layouts mit dem Tabellen- oder Matrix-Assistenten  
+## <a name="2-organize-data-and-choose-layout-from-the-new-table-or-matrix-wizard"></a><a name="Groups"></a>2. Organisieren von Daten und Auswählen des Layouts mit dem Tabellen- oder Matrix-Assistenten  
 Stellen Sie mithilfe des Assistenten einen Startentwurf für die Anzeige von Daten bereit. Im Vorschaufenster des Assistenten können Sie das Ergebnis der Datengruppierung visualisieren, bevor Sie den Matrixentwurf abschließen.  
   
 1.  Ziehen Sie auf der Seite **Felder anordnen** „Territory“ von **Verfügbare Felder** nach **Zeilengruppen**.  
@@ -145,7 +145,7 @@ Stellen Sie mithilfe des Assistenten einen Startentwurf für die Anzeige von Dat
 
 ![Berichts-Generator-Matrix-erweitern](../reporting-services/media/report-builder-expand-matrix.png)
   
-## <a name="FormatData"></a>3. Formatieren von Daten  
+## <a name="3-format-data"></a><a name="FormatData"></a>3. Formatieren von Daten  
 Standardmäßig wird in den Zusammenfassungsdaten für das Feld Sales eine allgemeine Zahl angezeigt, wohingegen im Feld SalesDate sowohl Datums- als auch Uhrzeitangaben angezeigt werden. In diesem Abschnitt formatieren Sie das Feld „Sales“, um die Zahl als Währung anzuzeigen und das Feld „SalesDate“, um nur das Datum anzuzeigen. Ändern Sie die Einstellung der Option **Platzhalterformate** , um formatierte Textfelder und Platzhaltertext als Beispielwerte anzuzeigen.  
   
 ### <a name="to-format-fields"></a>So formatieren Sie Felder  
@@ -170,7 +170,7 @@ Standardmäßig wird in den Zusammenfassungsdaten für das Feld Sales eine allge
   
 In den Datumswerten werden nur Datumsangaben angezeigt, und die Umsatzwerte werden als Währung angezeigt.  
   
-## <a name="AdjacentGroup"></a>4. Hinzufügen einer angrenzenden Spaltengruppe  
+## <a name="4-add-adjacent-column-group"></a><a name="AdjacentGroup"></a>4. Hinzufügen einer angrenzenden Spaltengruppe  
 Sie können Zeilen- und Spaltengruppen in Beziehungen über- und untergeordneter Objekte oder angrenzend in Beziehungen gleichgeordneter Objekte schachteln.  
   
 In diesem Abschnitt fügen Sie eine Spaltengruppe hinzu, die an die Spaltengruppe „Subcategory“ grenzt, kopieren Zellen, um die neue Spaltengruppe aufzufüllen, und verwenden anschließend einen Ausdruck, um den Wert der Spaltengruppenkopfzeile zu erstellen.  
@@ -216,7 +216,7 @@ Der Bericht enthält Spalten mit der Bezeichnung "Montag" und "Dienstag". Das Da
 > [!NOTE]  
 > Wenn die Daten andere Tage einschließen würden, würde der Bericht auch Spalten für diese Tage enthalten. Jede Spalte besitzt die Spaltenüberschrift **Sales**und den Gesamtumsatz nach Gebiet.  
   
-## <a name="Width"></a>5. Ändern der Spaltenbreite  
+## <a name="5-change-column-widths"></a><a name="Width"></a>5. Ändern der Spaltenbreite  
 Ein Bericht, der eine Matrix enthält, wird bei der Ausführung normalerweise horizontal und vertikal erweitert. Die Steuerung der horizontalen Erweiterung ist besonders wichtig, wenn Sie beabsichtigen, den Bericht in Formate wie z. B. Microsoft Word oder Adobe PDF zu exportieren, die für gedruckte Berichte verwendet werden. Wenn sich der Bericht horizontal über mehrere Seiten erstreckt, ist der gedruckte Bericht schwer verständlich. Um die horizontale Erweiterung zu minimieren, können Sie die Breite der Spalten so anpassen, dass die Daten darin ohne Zeilenumbruch angezeigt werden. Sie können auch Spalten umbenennen, damit ihre Titel der Breite entsprechen, die zum Anzeigen der Daten erforderlich ist.  
   
 ### <a name="to-rename-and-resize-the-columns"></a>So benennen Sie Spalten um und ändern deren Größe  
@@ -245,7 +245,7 @@ Ein Bericht, der eine Matrix enthält, wird bei der Ausführung normalerweise ho
   
 Die Spalten mit Mengen sind nun schmaler und mit „QTY“ benannt.  
   
-## <a name="MergeCells"></a>6. Verbinden von Matrixzellen  
+## <a name="6-merge-matrix-cells"></a><a name="MergeCells"></a>6. Verbinden von Matrixzellen  
 Der Eckenbereich befindet sich oben links in der Matrix. Abhängig von der Anzahl der Zeilen- und Spaltengruppen in der Matrix unterscheidet sich die Anzahl der Zellen im Eckenbereich. Die in diesem Lernprogramm erstellte Matrix enthält vier Zellen in ihrem Eckenbereich. Die Zellen werden in zwei Zeilen und zwei Spalten angeordnet und spiegeln die Tiefe der Zeilen- und Spaltengruppenhierarchien wider. Die vier Zellen werden nicht in diesem Bericht verwendet und zu einer Zelle verbunden.  
   
 ### <a name="to-merge-matrix-cells"></a>So verbinden Sie Matrixzellen  
@@ -268,7 +268,7 @@ Der Eckenbereich befindet sich oben links in der Matrix. Abhängig von der Anzah
   
 Die Zelle in der oberen Ecke der Matrix wird nicht mehr angezeigt. 
   
-## <a name="HeaderTitle"></a>7. Hinzufügen eines Berichtskopfs und -titels  
+## <a name="7-add-a-report-header-and-report-title"></a><a name="HeaderTitle"></a>7. Hinzufügen eines Berichtskopfs und -titels  
 Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel in eine Berichtskopfzeile einfügen oder, wenn der Bericht keine Kopfzeile enthält, in einem Textfeld am oberen Rand des Berichtshauptteils. In diesem Lernprogramm entfernen Sie das Textfeld am Anfang des Berichts und fügen der Kopfzeile einen Titel hinzu.  
   
 ### <a name="to-add-a-report-header-and-report-title"></a>So fügen Sie eine Berichtskopfzeile und einen Berichtstitel hinzu  
@@ -293,7 +293,7 @@ Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel 
   
 Der Bericht enthält einen Berichtstitel in der Kopfzeile des Berichts.  
   
-## <a name="Save"></a>8. Speichern des Berichts  
+## <a name="8-save-the-report"></a><a name="Save"></a>8. Speichern des Berichts  
 Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek oder auf dem Computer speichern.  
   
 Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn Sie keinen Zugriff auf einen Berichtsserver besitzen, speichern Sie den Bericht auf dem Computer.  
@@ -324,7 +324,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
   
 4.  Klicken Sie auf **Speichern**.  
   
-## <a name="RotateTextBox"></a>9. (Optional) Drehen des Textfelds um 270 Grad  
+## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9. (Optional) Drehen des Textfelds um 270 Grad  
 Ein Bericht mit Matrizen kann bei der Ausführung horizontal und vertikal erweitert werden. Durch vertikales Drehen der Textfelder oder um 270 Grad können Sie in horizontaler Richtung Platz sparen. Der gerenderte Bericht ist in diesem Fall schmäler und passt beim Exportieren in ein Format wie Microsoft Word mit einer höheren Wahrscheinlichkeit auf eine gedruckte Seite.  
   
 In einem Textfeld kann Text auch horizontal und vertikal (von oben nach unten) angezeigt werden. Weitere Informationen finden Sie unter [Textfelder (Berichts-Generator und SSRS)](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  

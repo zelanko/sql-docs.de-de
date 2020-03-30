@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 206bd656c1300a6436298c426697f6c1d47a9e86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028385"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Diese [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-Beispielanwendung veranschaulicht, wie Sie in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von Getter-Methoden für Resultsets „Informationen zur SQL-Datenermittlung und -klassifizierung“ aus Tabellen abrufen können, die solche Informationen enthalten.
+In diesem Anwendungsbeispiel für [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] wird veranschaulicht, wie Sie Gettermethoden für Resultsets verwenden können, um Informationen zur SQL-Datenermittlung und -klassifizierung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] abzurufen.
   
 Die Codedatei für dieses Beispiel heißt „DataDiscoveryAndClassification.java“ und befindet sich unter dem folgenden Pfad:  
 

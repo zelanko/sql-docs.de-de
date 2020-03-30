@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d07cb3c62e0779a517a3441bef7bc01fbdbce037
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015480"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
@@ -73,7 +73,7 @@ HRESULT BCPSetBulkMode (
   
  In der folgenden Tabelle sind die Konstanten für den *property* -Parameter aufgelistet.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Gibt den Zeichenausgabemodus an.<br /><br /> Entspricht sowohl der Option -c in BCP.EXE als auch IBCPSession::BCPColFmt, wobei die *eUserDataType*-Eigenschaft auf **BCP_TYPE_SQLCHARACTER** festgelegt ist.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Gibt den Unicode-Ausgabemodus an.<br /><br /> Entspricht sowohl der Option -w in BCP.EXE als auch IBCPSession::BCPColFmt, wobei die *eUserDataType*-Eigenschaft auf **BCP_TYPE_SQLNCHAR** festgelegt ist.|  

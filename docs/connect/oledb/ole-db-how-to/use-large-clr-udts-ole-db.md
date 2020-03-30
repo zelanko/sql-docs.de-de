@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 07a3023f61f26bbc4850eaa495f134d87c6a61c0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994610"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Verwenden von großen CLR-UDTs (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994610"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In diesem Beispiel wird gezeigt, wie Zeilen mit umfangreichen benutzerdefinierten Typen aus einem Resultset abgerufen werden. Weitere Informationen finden Sie unter [Große benutzerdefinierte CLR-Typen &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md). Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder höher ausgeführt.  
+  In diesem Beispiel wird gezeigt, wie Zeilen mit umfangreichen benutzerdefinierten Typen aus einem Resultset abgerufen werden. Weitere Informationen finden Sie unter [Große CLR-benutzerdefinierte Typen &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md). Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder höher ausgeführt.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel umfasst zwei Projekte. Ein Projekt erstellt eine Assembly (DLL) aus C#-Quellcode. Diese Assembly enthält den CLR-Typ. Der Datenbank wird eine Tabelle hinzugefügt. Eine Spalte in der Tabelle ist von einem in der Assembly definierten Typ. Standardmäßig wird in diesem Beispiel die master-Datenbank verwendet. Das zweite Projekt ist eine systemeigene C-Anwendung, die Daten aus der Tabelle liest.  

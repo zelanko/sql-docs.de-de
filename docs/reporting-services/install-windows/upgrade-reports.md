@@ -17,10 +17,10 @@ ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082285"
 ---
 # <a name="upgrade-reports-ssrs"></a>Upgraden von Berichten (SSRS)
@@ -37,7 +37,7 @@ Berichtsdefinitionsdateien (RDL) werden auf folgende Weise automatisch aktualisi
   
  Weitere Informationen zu neuen Features für [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] finden Sie unter [Neues in SQL Server Reporting Services (SSRS)](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
-##  <a name="bkmk_versionsupported"></a> Vom Upgrade unterstützte Versionen  
+##  <a name="versions-supported-by-upgrade"></a><a name="bkmk_versionsupported"></a> Vom Upgrade unterstützte Versionen  
  Berichte, die in einer vorherigen Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellt wurden, können aktualisiert werden. Dazu gehören die folgenden Versionen:  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
@@ -48,7 +48,7 @@ Berichtsdefinitionsdateien (RDL) werden auf folgende Weise automatisch aktualisi
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
-##  <a name="bkmk_rdlfiles"></a> Berichtsdefinitionsdateien (RDL-Dateien) und Berichts-Designer  
+##  <a name="report-definition-rdl-files-and-report-designer"></a><a name="bkmk_rdlfiles"></a> Berichtsdefinitionsdateien (RDL-Dateien) und Berichts-Designer  
  Eine Berichtsdefinitionsdatei schließt einen Verweis auf den RDL-Namespace ein, der die Version des Berichtsdefinitionsschemas angibt, das zur Überprüfung der RDL-Datei verwendet wird.  
   
  Wenn Sie eine RDL-Datei im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]öffnen und der Bericht für einen vorherigen Namespace erstellt wurde, erstellt der Berichts-Designer automatisch eine Sicherungsdatei und aktualisiert den Bericht auf den aktuellen Namespace. Dies ist die einzige Möglichkeit, wie Sie eine Berichtsdefinitionsdatei aktualisieren können.  
@@ -59,30 +59,30 @@ Berichtsdefinitionsdateien (RDL) werden auf folgende Weise automatisch aktualisi
   
  Informationen zum Ermitteln des aktuellen RDL-Schemas für einen Bericht, einen Berichtsserver oder den Berichts-Designer finden Sie unter [Suchen der Berichtsdefinitions-Schemaversion &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
-##  <a name="bkmk_publishedreports_and_snapshots"></a> Veröffentlichte Berichte und Berichtsmomentaufnahmen  
+##  <a name="published-reports-and-report-snapshots"></a><a name="bkmk_publishedreports_and_snapshots"></a> Veröffentlichte Berichte und Berichtsmomentaufnahmen  
  Bei der ersten Verwendung versucht der Berichtsserver, vorhandene veröffentlichte Berichte und Berichtsmomentaufnahmen auf das neue Berichtsdefinitionsschema zu aktualisieren, ohne dass Sie etwas unternehmen müssen. Es wird versucht, das Upgrade auszuführen, wenn der Benutzer einen Bericht oder eine Berichtsmomentaufnahme anzeigt bzw. wenn der Berichtsserver ein Abonnement verarbeitet. Die Berichtsdefinition wird nicht ersetzt, sondern weiterhin auf dem Berichtsserver im ursprünglichen Schema gespeichert. Wenn ein Bericht nicht automatisch aktualisiert werden kann, wird er im Abwärtskompatibilitätsmodus ausgeführt.  
   
-##  <a name="bkmk_backcompat"></a> Abwärtskompatibilitätsmodus  
+##  <a name="backward-compatibility-mode"></a><a name="bkmk_backcompat"></a> Abwärtskompatibilitätsmodus  
  Berichte, die erfolgreich aktualisiert wurden, werden vom [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsprozessor verarbeitet. Wenn für einen Bericht nicht automatisch ein Upgrade durchgeführt werden kann, wird er vom Berichtsprozessor für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Abwärtskompatibilitätsmodus verarbeitet. Ein Bericht kann nicht von beiden Berichtsprozessoren verarbeitet werden. Bei der ersten Verwendung wird ein Bericht entweder erfolgreich aktualisiert oder für den Abwärtskompatibilitätsmodus markiert.  
   
  Nur der [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsprozessor unterstützt neue Funktionen. Wenn ein Bericht nicht aktualisiert werden kann, können Sie zwar den gerenderten Bericht anzeigen, die neuen Funktionen sind jedoch nicht verfügbar. Um die neuen Funktionen nutzen zu können, muss ein Bericht erfolgreich aktualisiert werden.  
   
-##  <a name="bkmk_subreports"></a> Aktualisieren eines Berichts mit Unterberichten  
+##  <a name="upgrading-a-report-with-subreports"></a><a name="bkmk_subreports"></a> Aktualisieren eines Berichts mit Unterberichten  
  Wenn ein Bericht Unterberichte enthält, kann einer von vier möglichen Zustände während des Upgrades auftreten:  
   
 -   Der Hauptbericht und alle Unterberichte können erfolgreich aktualisiert werden. Sie werden vom [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsprozessor verarbeitet.  
   
 -   Der Hauptbericht und alle Unterberichte können nicht aktualisiert werden. Sie werden vom Berichtsprozessor für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verarbeitet.  
   
--   Der Hauptbericht kann aktualisiert werden, aber ein oder mehrere Unterberichte können nicht aktualisiert werden. Der Hauptbericht wird zwar vom Berichtsprozessor für [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] verarbeitet, aber der gerenderte Bericht zeigt die Meldung "Error: Subreport could not be processed" (Fehler: Der Unterbericht konnte nicht verarbeitet werden) an der Stelle an, an der der Unterbericht, der nicht upgegradet werden konnte, normalerweise angezeigt werden würde.  
+-   Der Hauptbericht kann aktualisiert werden, aber ein oder mehrere Unterberichte können nicht aktualisiert werden. Der Hauptbericht wird vom [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsprozessor verarbeitet. Im gerenderten Bericht wird jedoch an der Stelle, an der der Unterbericht angezeigt würde, der nicht aktualisiert werden konnte, die Meldung angezeigt: "Fehler: Unterbericht konnte nicht verarbeitet werden".  
   
--   Der Hauptbericht kann nicht aktualisiert werden, aber ein oder mehrere Unterberichte können aktualisiert werden. Der Hauptbericht wird zwar vom Berichtsprozessor für [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] verarbeitet, aber der gerenderte Bericht zeigt die Meldung "Error: Subreport could not be processed" (Fehler: Der Unterbericht konnte nicht verarbeitet werden) an dem Ort an, an dem der Unterbericht normalerweise angezeigt werden würde.  
+-   Der Hauptbericht kann nicht aktualisiert werden, aber ein oder mehrere Unterberichte können aktualisiert werden. Der Hauptbericht wird vom [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsprozessor verarbeitet. Im gerenderten Bericht wird jedoch an der Stelle, an der der Unterbericht angezeigt würde, die Meldung angezeigt: "Fehler: Unterbericht konnte nicht verarbeitet werden".  
   
- Wenn die Fehlermeldung „Error: Subreport could not be processed" (Fehler: Der Unterbericht konnte nicht verarbeitet werden) angezeigt wird, müssen Sie die Definition des Hauptberichts oder des Unterberichts ändern, sodass alle Berichte von derselben Version des Berichtsprozessors verarbeitet werden können.  
+ Wenn die Fehlermeldung "Fehler: Unterbericht konnte nicht verarbeitet werden" angezeigt wird, müssen Sie die Definition des Hauptberichts oder des Unterberichts ändern, sodass alle Berichte von der gleichen Version des Berichtsprozessors verarbeitet werden können.  
   
  Für Drillthroughberichte gilt diese Einschränkung nicht, da sie als unabhängige Berichte verarbeitet werden.  
   
-##  <a name="bkmk_CRIs"></a> Aktualisieren eines Berichts mit benutzerdefinierten Berichtselementen  
+##  <a name="upgrading-a-report-with-custom-report-items"></a><a name="bkmk_CRIs"></a> Aktualisieren eines Berichts mit benutzerdefinierten Berichtselementen  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]- oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichte können benutzerdefinierte Berichtselemente (Custom Report Item, CRI) enthalten, die von Softwaredrittanbietern bereitgestellt und vom Systemadministrator auf dem Computer zur Berichtserstellung und auf dem Berichtsserver installiert wurden. Berichte, die CRIs enthalten, können auf die folgenden Weisen aktualisiert werden:  
   
 -   Ein [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]- oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver wird auf einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]-Berichtsserver aktualisiert. Auf dem Berichtsserver veröffentlichte Berichte werden automatisch bei der ersten Verwendung aktualisiert.  
@@ -108,14 +108,14 @@ Berichtsdefinitionsdateien (RDL) werden auf folgende Weise automatisch aktualisi
 |--------------|----------------------------------|  
 |CRIs von Drittanbietern|Es wird kein Upgrade durchgeführt.<br /><br /> Verarbeitung erfolgt durch den [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]- oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsprozessor.|  
   
-###  <a name="OpeningaReport"></a> Öffnen eines Berichts mit CRIs im Berichts-Designer  
+###  <a name="opening-a-report-with-cris-in-report-designer"></a><a name="OpeningaReport"></a> Öffnen eines Berichts mit CRIs im Berichts-Designer  
  Wenn Sie einen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]- oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht mit CRIs im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] öffnen, wird der Bericht auf das neue Berichtsdefinitionsschema aktualisiert. Abhängig von den im Bericht enthaltenen CRIs wird eine der folgenden Aktionen ausgeführt:  
   
 -   Es wurden CRIs von Drittanbietern erkannt. Wenn die auf dem Computer zur Berichtserstellung installierte CRI-Version nicht mit dem neuen RDL-Schema kompatibel ist, wird in der Entwurfsoberfläche ein Textfeld mit einem roten X angezeigt. Sie müssen sich an Ihren Systemadministrator wenden, um neue Versionen der CRIs von Drittanbietern zu installieren, die mit dem neuen RDL-Schema kompatibel sind.  
   
  Ein vorhandener Bericht lässt sich nur dadurch mit dem neuen Berichtsdefinitionsschema aktualisieren, dass er nach dem Upgrade in der Berichterstellungsumgebung gespeichert wird.  
   
-###  <a name="bkmk_convertCRIdialog"></a> CRI konvertieren (Dialogfeld)  
+###  <a name="convert-cri-dialog-box"></a><a name="bkmk_convertCRIdialog"></a> CRI konvertieren (Dialogfeld)  
  Dieser Bericht enthält benutzerdefinierte Berichtselemente (Custom Report Item, CRI) mit nicht unterstützten Funktionen. CRIs sind Erweiterungen der Berichtsdefinitionssprache (Report Definition Language, RDL) zur Unterstützung benutzerdefinierter Objekte, die Daten in einem Bericht anzeigen. CRIs umfassen Entwurfszeit- und Laufzeitkomponenten, die von Drittanbietern bereitgestellt werden.  
   
 > [!NOTE]  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 16466f509383ec407dafcd5a9cf61b324a7c4b52
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71951570"
 ---
 # <a name="uninstall-reporting-services"></a>Deinstallieren von Reporting Services
@@ -39,7 +39,7 @@ ms.locfileid: "71951570"
   
 -   **Temporäre Berichtsserver-Datenbank:** ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB  
   
--   **Datenbank für Berichtsserverwarnungen:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
+-   **Berichtsserver-Warnungsdatenbank:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
   
 ### <a name="uninstall-the-add-in-for-sharepoint-products"></a>Deinstallation des Add-Ins für SharePoint-Produkte.  
  Wenn Sie das Add-In von einem Computer deinstallieren, können Sie auswählen, ob Sie nur die Dateien entfernen möchten oder auch die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktion von der Farm entfernen möchten. Informationen zur Deinstallation des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins für SharePoint-Produkte finden Sie unter [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  

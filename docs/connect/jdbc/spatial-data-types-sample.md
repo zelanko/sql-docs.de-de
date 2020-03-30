@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e0557030bdec7b566a69696a8fd50cb543a7fc1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027687"
 ---
 # <a name="spatial-data-types-sample"></a>Beispiel für räumliche Datentypen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Diese [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Beispielanwendung veranschaulicht, wie räumliche Datentypen (Geometrie (Geometry) und Geografie (Geography)) erstellt, eingefügt und abgerufen werden.
+Diese [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Beispielanwendung veranschaulicht, wie räumliche Datentypen („Geometry“ und „Geography“) erstellt, eingefügt und abgerufen werden.
   
 Die Codedatei für dieses Beispiel heißt „SpatialDataTypes.java“ und befindet sich im folgenden Pfad:  
 
@@ -37,11 +37,11 @@ Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „m
   
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel erstellt der Beispielcode eine Tabelle mit dem Namen SpatialDataTypesTable_JDBC_Sample, die die Spalten „Geometry“ und „Geography“ enthält.
+Im folgenden Beispiel erstellt der Beispielcode eine Tabelle mit dem Namen „SpatialDataTypesTable_JDBC_Sample“, die die Spalten „Geometry“ und „Geography“ enthält.
 
 Im Beispiel werden zunächst die Objekte „Geometry“ und „Geography“ aus einem WKT (Well-Known-Text) erstellt, der einen Punkt darstellt. Dabei wird eine SQLServerPreparedStatement-Klasse mit einer parametrisierten Abfrage verwendet, um die Daten den einzelnen Spalten entsprechend zuzuordnen.
 
-Abschließend fügt das Beispiel die Daten in die Tabelle ein und ruft sie ab. Die Daten werden in Form von WKT angezeigt.
+Abschließend fügt das Beispiel die Daten in die Tabelle ein und ruft sie ab. Die Daten werden im WKT-Format angezeigt.
 
 ```java
 import java.sql.Connection;

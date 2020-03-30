@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579004"
 ---
 # <a name="manage-a-running-process"></a>Verwalten eines ausgeführten Prozesses
@@ -64,7 +64,7 @@ ms.locfileid: "65579004"
   
 -   [Programmgesteuertes Verwalten von Aufträgen](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a> Anzeigen und Abbrechen von Aufträgen (einheitlicher Modus)  
+##  <a name="view-and-cancel-jobs-native-mode"></a><a name="bkmk_native"></a> Anzeigen und Abbrechen von Aufträgen (einheitlicher Modus)  
  Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zum Anzeigen oder Abbrechen eines auf dem Berichtsserver ausgeführten Auftrags verwenden. Zum Abrufen einer Liste mit Aufträgen, die aktuell ausgeführt werden, oder zum Abrufen des aktuellen Auftragsstatus aus der Berichtsserver-Datenbank müssen Sie die Seite aktualisieren. Wenn Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine Verbindung zum Berichtsserver herstellen, können Sie einen Auftragsordner öffnen, um eine Liste der Berichte anzuzeigen, die aktuell auf dem Berichtsservercomputer bearbeitet werden. Statusinformationen zu jedem Auftrag werden auf der Seite Auftragseigenschaften angezeigt. Sie können Statusinformationen für alle Aufträge anzeigen lassen, indem Sie das Dialogfeld Berichtsserveraufträge abbrechen öffnen.  
   
  Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zum Anzeigen oder Abbrechen eines auf dem Berichtsserver ausgeführten Auftrags verwenden. Zum Abrufen einer Liste mit Aufträgen, die aktuell ausgeführt werden, oder zum Abrufen des aktuellen Auftragsstatus aus der Berichtsserver-Datenbank müssen Sie die Seite aktualisieren. Wenn Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine Verbindung zum Berichtsserver herstellen, können Sie einen Auftragsordner öffnen, um eine Liste der Berichte anzuzeigen, die aktuell auf dem Berichtsservercomputer bearbeitet werden. Statusinformationen zu jedem Auftrag werden auf der Seite Auftragseigenschaften angezeigt. Sie können Statusinformationen für alle Aufträge anzeigen lassen, indem Sie das Dialogfeld Berichtsserveraufträge abbrechen öffnen.  
@@ -98,7 +98,7 @@ ms.locfileid: "65579004"
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Konfigurieren von Frequenzeinstellungen für den Abruf des Auftragsstatus  
  Ein Auftrag, der gerade ausgeführt wird, wird in der temporären Datenbank des Berichtsservers gespeichert. Durch Ändern der Konfigurationseinstellungen in der Datei RSReportServer.config können Sie steuern, wie oft der Berichtsserver nach Aufträgen, die verarbeitet werden, scannt, sowie das Intervall festlegen, nach dem der Status eines ausgeführten Auftrags von Neu in Wird ausgeführt geändert wird. Die Einstellung **RunningRequestsDbCycle** gibt an, wie oft der Berichtsserver nach ausgeführten Prozessen scannt. Standardmäßig werden die Statusinformationen alle 60 Sekunden aufgezeichnet. Die Einstellung **RunningRequestsAge** gibt das Intervall an, nach dem der Status eines Auftrags von "Neu" in "Wird ausgeführt" geändert wird.  
   
-##  <a name="bkmk_sharepoint"></a> Anzeigen und Abbrechen von Aufträgen (SharePoint-Modus)  
+##  <a name="view-and-cancel-jobs-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Anzeigen und Abbrechen von Aufträgen (SharePoint-Modus)  
  Die Verwaltung von Aufträgen in einer SharePoint-Modusbereitstellung wird für jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung abgeschlossen, indem die SharePoint-Zentraladministration verwendet wird.  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>So verwalten Sie Aufträge im SharePoint-Modus  
@@ -113,7 +113,7 @@ ms.locfileid: "65579004"
   
 5.  Klicken Sie alternativ auf das Feld für den Auftrag, und klicken Sie auf **Löschen** , um den Auftrag abzubrechen. Durch das Löschen des Auftrags wird nicht das Abonnement gelöscht.  
   
-##  <a name="bkmk_programmatically"></a> Programmgesteuertes Verwalten von Aufträgen  
+##  <a name="managing-jobs-programmatically"></a><a name="bkmk_programmatically"></a> Programmgesteuertes Verwalten von Aufträgen  
  Sie können Aufträge programmgesteuert oder mit einem Skript verwalten. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>verwalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  

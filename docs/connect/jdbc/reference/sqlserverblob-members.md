@@ -11,10 +11,10 @@ ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81ce2d655214de3d31eb233deb4de2b1c3ae49f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971955"
 ---
 # <a name="sqlserverblob-members"></a>SQLServerBlob-Elemente
@@ -24,7 +24,7 @@ ms.locfileid: "67971955"
   
 ## <a name="constructors"></a>Konstruktoren  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|Initialisiert eine neue Instanz der SQLServerBlob-Klasse.|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67971955"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|Mit dieser Methode werden das BLOB sowie die von diesem verwendeten Ressourcen freigegeben.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|Gibt einen Eingabedatenstrom zum Lesen von Daten aus dem BLOB zurück.|  

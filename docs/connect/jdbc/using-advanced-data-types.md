@@ -11,10 +11,10 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027010"
 ---
 # <a name="using-advanced-data-types"></a>Verwenden von erweiterten Datentypen
@@ -47,17 +47,17 @@ Die folgenden Abschnitte enthalten Beispiele für die Verwendung des JDBC-Treibe
 Der JDBC-Treiber implementiert alle Methoden der java.sql.Blob-, java.sql.Clob- und java.sql.NClob-Schnittstellen.  
   
 > [!NOTE]  
-> CLOB-Werte können mit Datentypen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (oder höher) mit umfangreichen Werten verwendet werden. CLOB-Typen können spezifisch mit den Datentypen **varchar(max)** und **nvarchar(max)**, BLOB-Typen mit den Datentypen **varbinary(max)** und **image** und NCLOB-Typen können mit den Datentypen **ntext** und **nvarchar(max)** verwendet werden.  
+> CLOB-Werte können mit Datentypen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (oder höher) mit umfangreichen Werten verwendet werden. CLOB-Typen können spezifisch mit den Datentypen **varchar(max)** und **nvarchar(max)** , BLOB-Typen mit den Datentypen **varbinary(max)** und **image** und NCLOB-Typen können mit den Datentypen **ntext** und **nvarchar(max)** verwendet werden.  
 
 ## <a name="large-value-data-types"></a>Datentypen mit umfangreichen Werten
 
-In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] war bei der Verarbeitung von Datentypen mit umfangreichen Werten eine besondere Behandlung erforderlich. Datentypen mit umfangreichen Werten sind solche, die die maximale Zeilengröße von 8 KB überschreiten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt einen maximalen Bezeichner für die Datentypen **varchar**, **nvarchar** und **varbinary** ein, um das Speichern von Werten in der Größenordnung von bis zu 2^31 Byte zu ermöglichen. Tabellenspalten und [!INCLUDE[tsql](../../includes/tsql-md.md)]-Variablen können den Datentyp **varchar(max)**, **nvarchar(max)** oder **varbinary(max)** angeben.  
+In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] war bei der Verarbeitung von Datentypen mit umfangreichen Werten eine besondere Behandlung erforderlich. Datentypen mit umfangreichen Werten sind solche, die die maximale Zeilengröße von 8 KB überschreiten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt einen maximalen Bezeichner für die Datentypen **varchar**, **nvarchar** und **varbinary** ein, um das Speichern von Werten in der Größenordnung von bis zu 2^31 Byte zu ermöglichen. Tabellenspalten und [!INCLUDE[tsql](../../includes/tsql-md.md)]-Variablen können den Datentyp **varchar(max)** , **nvarchar(max)** oder **varbinary(max)** angeben.  
 
 Die Verarbeitung von Typen mit umfangreichen Werten umfasst hauptsächlich das Abrufen aus einer Datenbank sowie das Hinzufügen zu einer Datenbank. Die folgenden Abschnitte beschreiben die verschiedenen Verfahren für diese Aufgaben.  
 
 ### <a name="retrieving-large-value-types-from-a-database"></a>Abrufen von Typen mit umfangreichen Werten aus einer Datenbank
 
-Beim Abrufen eines nicht binären Datentyps mit umfangreichen Werten aus einer Datenbank, z.B. dem Datentyp **varchar(max)**, besteht eine Vorgehensweise darin, diese Daten als Zeichendatenstrom zu lesen. Im folgenden Beispiel werden Daten mit der [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)-Methode der [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse aus der Datenbank abgerufen und als Resultset zurückgegeben. Anschließend werden die Daten mit umfangreichen Werten mit der [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)-Methode der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse aus dem Resultset gelesen.  
+Beim Abrufen eines nicht binären Datentyps mit umfangreichen Werten aus einer Datenbank, z.B. dem Datentyp **varchar(max)** , besteht eine Vorgehensweise darin, diese Daten als Zeichendatenstrom zu lesen. Im folgenden Beispiel werden Daten mit der [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)-Methode der [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse aus der Datenbank abgerufen und als Resultset zurückgegeben. Anschließend werden die Daten mit umfangreichen Werten mit der [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)-Methode der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse aus dem Resultset gelesen.  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -68,7 +68,7 @@ Reader reader = rs.getCharacterStream(2);
 > [!NOTE]
 > Dieselbe Vorgehensweise kann für die Datentypen **text**, **ntext** und **nvarchar(max)** verwendet werden.  
 
-Beim Abrufen eines binären Datentyps mit umfangreichen Werten aus einer Datenbank, z.B. dem Datentyp **varbinary (max)**, stehen Ihnen mehrere Vorgehensweisen zur Verfügung. Die effizienteste Vorgehensweise besteht darin, die Daten als Binärdatenstrom zu lesen, wie z. B.:  
+Beim Abrufen eines binären Datentyps mit umfangreichen Werten aus einer Datenbank, z.B. dem Datentyp **varbinary (max)** , stehen Ihnen mehrere Vorgehensweisen zur Verfügung. Die effizienteste Vorgehensweise besteht darin, die Daten als Binärdatenstrom zu lesen, wie z. B.:  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -103,7 +103,7 @@ pstmt.executeUpdate();
 > [!NOTE]  
 > Diese Vorgehensweise kann auch für Werte verwendet werden, die in den Spalten **text**, **ntext** und **nvarchar(max)** gespeichert werden.  
 
-Wenn auf dem Server eine Bildbibliothek vorhanden ist und alle binären Bilddateien in eine **varchar(max)**-Spalte geladen werden müssen, besteht die effizienteste Methode des JDBC-Treibers darin, Datenströme wie folgt direkt zu verwenden:  
+Wenn auf dem Server eine Bildbibliothek vorhanden ist und alle binären Bilddateien in eine **varchar(max)** -Spalte geladen werden müssen, besteht die effizienteste Methode des JDBC-Treibers darin, Datenströme wie folgt direkt zu verwenden:  
 
 ```java
 try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Col2) VALUES(?,?)")) { 
@@ -122,7 +122,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### <a name="modifying-large-value-types-in-a-database"></a>Ändern von Typen mit umfangreichen Werten in einer Datenbank
 
-In den meisten Fällen wird empfohlen, zum Aktualisieren oder Ändern von umfangreichen Werten in der Datenbank mit [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehlen wie `UPDATE`, `WRITE` und `SUBSTRING` Parameter über die Klassen [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) zu übergeben.  
+In den meisten Fällen wird empfohlen, zum Aktualisieren oder Ändern von umfangreichen Werten in der Datenbank mit [-Befehlen wie ](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), [ und ](../../connect/jdbc/reference/sqlservercallablestatement-class.md) Parameter über die Klassen [!INCLUDE[tsql](../../includes/tsql-md.md)]SQLServerPreparedStatement`UPDATE` und `WRITE`SQLServerCallableStatement`SUBSTRING` zu übergeben.  
 
 Wenn Sie in einer umfangreichen Textdatei ein Wort ersetzen müssen, z.B. in einer archivierten HTML-Datei, können Sie ein Clob-Objekt wie folgt verwenden:  
 

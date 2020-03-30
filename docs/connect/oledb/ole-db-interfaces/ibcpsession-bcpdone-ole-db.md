@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9df2726898fdbd3d877296d4da67738c3f792234
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994556"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -37,7 +37,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
- Nach dem Aufruf der **BCPDone**-Methode kann kein weiterer Vorgang für die [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)-Schnittstelle aufgerufen werden. Die einzige Möglichkeit besteht darin, die [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)-Methode aufzurufen, um einen neuen Massenkopiervorgang zu initiieren. Dies gleicht dem Aufruf der [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md)-Methode.  
+ Nach dem Aufruf der [BCPDone](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)-Methode kann kein weiterer Vorgang für die **IBCPSession**-Schnittstelle aufgerufen werden. Die einzige Möglichkeit besteht darin, die [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)-Methode aufzurufen, um einen neuen Massenkopiervorgang zu initiieren. Dies gleicht dem Aufruf der [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md)-Methode.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  S_OK  

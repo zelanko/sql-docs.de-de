@@ -11,12 +11,12 @@ ms.reviewer: alayu, sstein, maghan
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 75f5f396d8d8e1a593967a304891c6158fbe4bc9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0363c91021baccb3ed8afd9d9dc41c23f807abac
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76516501"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216449"
 ---
 # <a name="mssql-cli-command-line-query-tool-for-sql-server-preview"></a>Befehlszeilenabfrage-Tool „mssql-cli“ für SQL Server (Vorschau)
 
@@ -26,7 +26,7 @@ ms.locfileid: "76516501"
 
 ## <a name="install-mssql-cli"></a>Installieren des Tools „mssql-cli“
 
-Ausführliche Installationsanweisungen finden Sie im [Installationshandbuch](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md). Wenn Sie PIP verwenden können, können Sie die Installation mithilfe des folgenden Befehls durchführen:
+Ausführliche Installationsanweisungen finden Sie im [Installationshandbuch](https://github.com/dbcli/mssql-cli/tree/master/doc/installation). Wenn Sie PIP verwenden können, können Sie die Installation mithilfe des folgenden Befehls durchführen:
 
 ```$ pip install mssql-cli```
 
@@ -35,7 +35,7 @@ Ausführliche Installationsanweisungen finden Sie im [Installationshandbuch](htt
 Die Dokumentation zum Tool „mssql-cli“ finden Sie im [GitHub-Repository zu mssql-cli](https://github.com/dbcli/mssql-cli).
 
 - [Hauptseite/Info](https://github.com/dbcli/mssql-cli)
-- [Installationsleitfaden](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md)
+- [Installationsleitfaden](https://github.com/dbcli/mssql-cli/tree/master/doc/installation)
 - [Benutzerhandbuch](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
 
 Weitere Dokumentationen finden Sie im [doc-Ordner](https://github.com/dbcli/mssql-cli/tree/master/doc).

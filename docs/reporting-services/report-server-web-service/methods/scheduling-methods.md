@@ -15,16 +15,16 @@ ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 087e2111987de00b347c400ce7255cb7f9eee97e
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198337"
 ---
 # <a name="scheduling-methods"></a>Zeitplanmethoden
   Sie können diese Methoden verwenden, um freigegebene Zeitpläne für die Berichtsausführung und -übermittlung zu erstellen und zu verwalten und die vom Berichtsserver verwendeten Aktualisierungspläne zwischenzuspeichern.  
   
-|Methode|Aktion|  
+|Methode|Action|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateCacheRefreshPlan%2A>|Erstellt einen Cacheaktualisierungsplan für ein Element.|  
 |<xref:ReportService2010.ReportingService2010.CreateSchedule%2A>|Erstellt einen neuen freigegebenen Zeitplan.|  

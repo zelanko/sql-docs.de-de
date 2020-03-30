@@ -22,10 +22,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 29aaab523b3a754c65b1b7a0312ceb5ea122f2d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68419317"
 ---
 # <a name="working-with-query-notifications"></a>Arbeiten mit Abfragebenachrichtigungen
@@ -79,7 +79,7 @@ Der OLE DB-Treiber für SQL Server unterstützt Benachrichtigungen von Consumern
 
 Der OLE DB-Treiber für SQL Server fügt dem `DBPROPSET_SQLSERVERROWSET`-Eigenschaftensatz die folgenden neuen Eigenschaften hinzu, um Abfragebenachrichtigungen mit OLE DB zu unterstützen.
 
-|Name|type|Beschreibung|
+|Name|type|BESCHREIBUNG|
 |----------|----------|-----------------|
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Die Anzahl der Sekunden, die die Abfragebenachrichtigung aktiv bleiben soll.<br /><br /> Der Standardwert ist 432.000 Sekunden (5 Tage). Der Mindestwert ist 1 Sekunde und der Höchstwert 2^31-1 Sekunden.|
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Der Text der Benachrichtigung. Dieser ist benutzerdefiniert und weist kein vordefiniertes Format auf.<br /><br /> Standardmäßig ist die Zeichenfolge leer. Geben Sie eine Nachricht mithilfe von 1 bis 2.000 Zeichen an.|

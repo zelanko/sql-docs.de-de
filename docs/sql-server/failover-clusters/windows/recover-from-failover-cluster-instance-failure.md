@@ -16,10 +16,10 @@ ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821992"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Wiederherstellen nach einem Fehler der Failoverclusterinstanz
@@ -30,7 +30,7 @@ ms.locfileid: "74821992"
   
 -   [Wiederherstellen nach einem Softwarefehler](#Scenario2)  
   
-##  <a name="Scenario1"></a> Wiederherstellen nach einem irreparablen Fehler  
+##  <a name="recover-from-an-irreparable-failure"></a><a name="Scenario1"></a> Wiederherstellen nach einem irreparablen Fehler  
  Führen Sie zur Wiederherstellung nach einem irreparablen Fehler folgende Schritte aus. Der Hardwarefehler kann z. B. durch einen Fehler eines Datenträgercontrollers oder des Betriebssystems verursacht werden. In diesem Fall wird der Fehler durch einen Hardwarefehler in Knoten 1 eines Clusters mit zwei Knoten verursacht.  
   
 1.  Nach dem Fehler bei Knoten 1 führt die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI ein Failover auf Knoten 2 aus.  
@@ -47,7 +47,7 @@ ms.locfileid: "74821992"
   
 7.  Führen Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup aus, um der FCI Knoten 1 hinzuzufügen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-##  <a name="Scenario2"></a> Wiederherstellen nach einem behebbaren Fehler  
+##  <a name="recover-from-a-reparable-failure"></a><a name="Scenario2"></a> Wiederherstellen nach einem behebbaren Fehler  
  Führen Sie zur Wiederherstellung nach einem behebbaren Fehler die folgenden Schritte aus. In diesem Fall wird der Fehler dadurch verursacht, dass Knoten 1 ausgefallen oder offline, aber nicht unwiderruflich fehlerhaft ist. Die Ursache könnte beispielsweise ein Betriebssystem- oder Hardwarefehler oder ein Fehler in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz selbst sein.  
   
 1.  Nach dem Fehler bei Knoten 1 führt die FCI ein Failover auf Knoten 2 aus.  

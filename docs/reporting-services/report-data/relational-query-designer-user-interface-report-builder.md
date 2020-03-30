@@ -15,10 +15,10 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593382"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator)
@@ -66,10 +66,10 @@ ms.locfileid: "73593382"
  [Abfrageergebnisse](#QueryResults)  
  Zeigt Beispieldaten für das Resultset für die automatisch generierte Abfrage an.  
   
-###  <a name="DatabaseView"></a> Bereich Datenbanksicht  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> Bereich Datenbanksicht  
  Im Bereich Datenbanksicht werden die Metadaten für Datenbankobjekte angezeigt, zu deren Anzeige Sie berechtigt sind. Diese Berechtigung wird von der Datenquellenverbindung und den Anmeldeinformationen bestimmt. In der hierarchischen Sicht werden Datenbankobjekte nach Datenbankschema angeordnet angezeigt. Erweitern Sie den Knoten für jedes Schema, um Tabellen, Sichten, gespeicherte Prozeduren und Tabellenwertfunktionen anzuzeigen. Erweitern Sie die Tabelle oder Sicht, um die einzelnen Spalten anzuzeigen.  
   
-###  <a name="SelectedFields"></a> Bereich Ausgewählte Felder  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> Bereich Ausgewählte Felder  
  Der Bereich "Ausgewählte Felder" enthält die Felder im Berichtsdataset und die Gruppen und Aggregate, die in die Abfrage eingeschlossen werden sollen.  
   
  Die folgenden Optionen werden angezeigt:  
@@ -93,7 +93,7 @@ ms.locfileid: "73593382"
   
  In der folgenden Tabelle sind die Aggregate einschließlich einer kurzen Beschreibung aufgelistet.  
   
-|Aggregat|Beschreibung|  
+|Aggregat|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Avg|Gibt den Mittelwert der Werte in einer Gruppe zurück. Implementiert das SQL AVG-Aggregat.|  
 |Anzahl|Gibt die Anzahl von Elementen in einer Gruppe zurück. Implementiert das SQL COUNT-Aggregat.|  
@@ -114,14 +114,14 @@ ms.locfileid: "73593382"
 |Var Distinct|Gibt eindeutige statistische Varianzen zurück. Implementiert eine Kombination des VAR-Aggregats und des DISTINCT-Schlüsselworts.|  
 |VarP Distinct|Gibt eindeutige statistische Varianzen zurück. Implementiert eine Kombination des VARP-Aggregats und des DISTINCT-Schlüsselworts.|  
   
-###  <a name="FunctionParameters"></a> Bereich Funktionsparameter  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> Bereich Funktionsparameter  
  Der Bereich Funktionsparameter zeigt die Parameter für eine gespeicherte Prozedur oder Tabellenwertfunktion an. Die folgenden Spalten werden angezeigt:  
   
 -   **Parametername** zeigt den Namen des Parameters an, der von der gespeicherten Prozedur oder Tabellenwertfunktion definiert wird.  
   
 -   **Wert** wird für den Parameter verwendet, wenn die Abfrage zur Laufzeit ausgeführt wird, um Daten abzurufen, die im Bereich Abfrageergebnisse angezeigt werden sollen. Dieser Wert wird nicht verwendet, wenn der Bericht zur Laufzeit ausgeführt wird.  
   
-###  <a name="Relationships"></a> Bereich Beziehungen  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> Bereich Beziehungen  
  Im Bereich "Beziehungen" werden die Joinbeziehungen angezeigt. Die Beziehungen können automatisch von den Fremdschlüsseleinschränkungen erkannt werden, die aus den Datenbankmetadaten abgerufen werden, oder Sie können diese manuell erstellen.  
   
  Die folgenden Optionen werden angezeigt:  
@@ -153,13 +153,13 @@ ms.locfileid: "73593382"
   
 -   **Linke Tabelle** Zeigt den Namen der ersten Tabelle an, die ein Teil einer Joinbeziehung ist.  
   
--   **Jointyp** Zeigt den Typ der SQL-Anweisung JOIN an, die in der automatisch generierten Abfrage verwendet wird. Wenn eine Fremdschlüsseleinschränkung erkannt wird, wird standardmäßig INNER JOIN verwendet. Andere Jointypen können LEFT JOIN oder RIGHT JOIN sein. Wenn keiner dieser Jointypen zutrifft, wird in der Spalte **Jointyp****Nicht verbunden**angezeigt. Für nicht verknüpfte Tabellen werden keine CROSS JOIN-Joins erstellt; stattdessen müssen Sie Beziehungen manuell erstellen, indem Sie Spalten in der linken und rechten Tabelle verknüpfen.  
+-   **Jointyp** Zeigt den Typ der SQL-Anweisung JOIN an, die in der automatisch generierten Abfrage verwendet wird. Wenn eine Fremdschlüsseleinschränkung erkannt wird, wird standardmäßig INNER JOIN verwendet. Andere Jointypen können LEFT JOIN oder RIGHT JOIN sein. Wenn keiner dieser Jointypen zutrifft, wird in der Spalte **Jointyp** **Nicht verbunden**angezeigt. Für nicht verknüpfte Tabellen werden keine CROSS JOIN-Joins erstellt; stattdessen müssen Sie Beziehungen manuell erstellen, indem Sie Spalten in der linken und rechten Tabelle verknüpfen.  
   
 -   **Rechte Tabelle** Zeigt den Namen der zweiten Tabelle in der Joinbeziehung an.  
   
 -   **Joinfelder** listet Paare von verknüpften Felder auf. Wenn eine Beziehung mehrere Joinbedingungen umfasst, werden die Joinfelderpaare durch Kommas (,) getrennt.  
   
-###  <a name="AppliedFilters"></a> Bereich Angewendete Filter  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Bereich Angewendete Filter  
  Im Bereich "Angewendete Filter" werden die Kriterien angezeigt, mit denen die Anzahl von Datenzeilen begrenzt wird, die zur Laufzeit abgerufen werden. In diesem Bereich angegebene Kriterien werden verwendet, um eine SQL-WHERE-Klausel zu generieren. Wenn Sie die Parameteroption auswählen, wird automatisch ein Berichtsparameter erstellt. Mit Berichtsparametern, die auf Abfrageparametern basieren, kann ein Benutzer Werte für die Abfrage angeben, um die Daten in dem Bericht zu steuern.  
   
  Die folgenden Spalten werden angezeigt:  
@@ -172,7 +172,7 @@ ms.locfileid: "73593382"
   
 -   **Parameter** Zeigt die Option an, mit der ein Abfrageparameter der Abfrage hinzugefügt werden kann. Verwenden Sie die Dataseteigenschaften, um die Beziehung zwischen Abfrageparameter und Berichtsparameter anzuzeigen.  
   
-###  <a name="QueryResults"></a> Bereich Abfrageergebnisse  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Bereich Abfrageergebnisse  
  Im Bereich Abfrageergebnisse werden die Ergebnisse für die automatisch generierte Abfrage angezeigt, die mit den Auswahlen in den anderen Bereichen angegeben wird. Die Spalten im Resultset entsprechen den Feldern, die Sie im Bereich Ausgewählte Felder angeben. Die Zeilendaten werden mit den Filtern begrenzt, die Sie im Bereich Angewendete Filter angeben. Falls die Abfrage Aggregate enthält, enthält das Resultset die neuen Aggregatspalten. Wenn die Spalte **Color** z. B. mit dem Count-Aggregat aggregiert wird, enthalten die Abfrageergebnisse eine neue Spalte ein. Diese Spalte erhält standardmäßig den Namen **Count_Color**.  
   
  Diese Daten stellen Werte aus der Datenquelle zum Zeitpunkt der Abfrageausführung dar. Die Daten werden nicht in der Berichtsdefinition gespeichert. Die eigentlichen Daten in dem Bericht werden bei der Verarbeitung des Berichts abgerufen.  
@@ -182,7 +182,7 @@ ms.locfileid: "73593382"
 ### <a name="graphical-query-designer-toolbar"></a>Symbolleiste für den grafischen Abfrage-Designer  
  Die Symbolleiste des relationalen Abfrage-Designers stellt die folgenden Schaltflächen bereit, mit denen Sie eine Abfrage angeben oder die Ergebnisse der Abfrage anzeigen können.  
   
-|Taste|Beschreibung|  
+|Taste|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Als Text bearbeiten**|Wechselt zum textbasierten Abfrage-Designer, um die automatisch generierte Abfrage anzuzeigen oder die Abfrage zu ändern.|  
 |**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Die Dateitypen SQL und RDL werden unterstützt.|  

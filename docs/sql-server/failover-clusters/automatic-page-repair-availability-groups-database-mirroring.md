@@ -17,10 +17,10 @@ ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822641"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung)
@@ -44,10 +44,10 @@ ms.locfileid: "74822641"
   
 -   [Vorgehensweise: Anzeigen von automatischen Seitenreparatur-Versuchen](#ViewAPRattempts)  
   
-##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
+##  <a name="error-types-that-cause-an-automatic-page-repair-attempt"></a><a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
  Bei der automatischen Seitenreparatur bei einer Datenbankspiegelung werden nur Seiten in einer Datendatei repariert, bei denen bei einem Vorgang einer der in der folgenden Tabelle aufgeführten Fehler aufgetreten ist.  
   
-|Fehlernummer|Beschreibung|Instanzen, die zu einer automatischen Seitenreparatur führen|  
+|Fehlernummer|BESCHREIBUNG|Instanzen, die zu einer automatischen Seitenreparatur führen|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|Maßnahme wird nur ergriffen, wenn das Betriebssystem eine zyklische Redundanzprüfung (CRC, Redundancy Check) ausgeführt hat, bei der in den Daten ein Fehler gefunden wurde.|ERROR_CRC. Der Wert des Betriebssystems für diesen Fehler ist 23.|  
 |824|Logische Fehler.|Logische Datenfehler, z. B. unterbrochener Schreibvorgang oder fehlerhafte Prüfsumme auf einer Seite.|  
@@ -56,7 +56,7 @@ ms.locfileid: "74822641"
  Um aktuelle CRC-Fehler vom Typ 823 und Fehler vom Typ 824 anzuzeigen, rufen Sie die Tabelle [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) in der [msdb](../../relational-databases/databases/msdb-database.md) -Datenbank auf.  
 
   
-##  <a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
+##  <a name="page-types-that-cannot-be-automatically-repaired"></a><a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
  Die automatische Seitenreparatur kann die folgenden Steuerelementseitentypen nicht reparieren:  
   
 -   Dateiheaderseite (Seiten-ID 0).  
@@ -66,7 +66,7 @@ ms.locfileid: "74822641"
 -   Zuordnungsseiten: GAM-Seiten (Global Allocation Map), SGAM-Seiten (Shared Global Allocation Map) und PFS-Seiten (Page Free Space).  
   
  
-##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
+##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
  In der Prinzipaldatenbank/primären Datenbank wird die automatische Seitenreparatur nur ausgeführt, wenn sich die Datenbank im Status SYNCHRONIZED befindet und der Prinzipalserver/primäre Server noch Protokolldatensätze für die Datenbank an den Spiegelserver/sekundären Server sendet. Im Prinzip werden bei einer automatischen Seitenreparatur die folgenden Aktionen in dieser Reihenfolge ausgeführt:  
   
 1.  Wenn in der Prinzipaldatenbank/primären Datenbank auf einer Datenseite ein Lesefehler auftritt, fügt der Prinzipalserver/primäre Server in die Tabelle [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) eine Zeile mit dem entsprechenden Fehlerstatus ein. Zur Datenbankspiegelung fordert der Prinzipalserver dann eine Kopie der Seite vom Spiegelserver aus an. Für [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]überträgt der primäre Server die Anforderung an alle sekundären Server und ruft die Seite vom Server ab, der als Erster antwortet. In der Anforderung werden die Seiten-ID und die LSN angegeben, die sich derzeit am Ende des geleerten Protokolls befindet. Die Seite wird mit *Wiederherstellung steht aus*gekennzeichnet. Das bedeutet, dass während der automatischen Seitenreparatur kein Zugriff auf die Seite möglich ist. Bei dem Versuch, während der Seitenreparatur auf die Seite zuzugreifen, wird der Fehler 829 (<localizedText>Wiederherstellung steht aus</localizedText>) ausgegeben.  
@@ -80,7 +80,7 @@ ms.locfileid: "74822641"
 5.  Wenn durch den Seiten-E/A-Fehler [verzögerte Transaktionen](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)verursacht wurden, versucht der Prinzipalserver/primäre Server nach der Reparatur der Seite, diese Transaktionen aufzulösen.  
   
  
-##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
+##  <a name="handling-io-errors-on-the-mirrorsecondary-database"></a><a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
  E/A-Fehler auf Datenseiten, die auf der Spiegeldatenbank/sekundären Datenbank auftreten, werden im Allgemeinen von Datenbankspiegelung und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]auf dieselbe Weise behandelt.  
   
 1.  Falls der Spiegel bei der Datenbankspiegelung beim Wiederholen eines Protokolldatensatzes einen oder mehrere Seiten-E/A-Fehler feststellt, wird die Spiegelungssitzung in den Status SUSPENDED versetzt. Falls ein sekundäres Replikat bei [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]beim Wiederholen eines Protokolldatensatzes ein oder mehrere Seiten-E/A-Fehler feststellt, wird die sekundäre Datenbank in den Status SUSPENDED versetzt. Zu diesem Zeitpunkt fügt der Spiegelserver/sekundäre Server in die Tabelle **suspect_pages** eine Zeile mit dem entsprechenden Fehlerstatus ein. Der Spiegelserver/sekundäre Server fordert dann eine Kopie der Seite vom Prinzipalserver/primären Server an.  
@@ -92,11 +92,11 @@ ms.locfileid: "74822641"
      Wenn ein Spiegelserver/sekundärer Server eine vom Prinzipalserver/primären Server angeforderte Seite nicht erhält, tritt bei der automatischen Seitenreparatur ein Fehler auf. Bei der Datenbankspiegelung bleibt die Spiegelungssitzung angehalten. Bei [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]bleibt die sekundäre Datenbank angehalten. Wenn die Spiegelungssitzung oder sekundäre Datenbank manuell fortgesetzt wird, werden die beschädigten Seiten während der nächsten Synchronisierungsphase erneut gefunden.  
   
  
-##  <a name="DevBP"></a> Developer Best Practice  
+##  <a name="developer-best-practice"></a><a name="DevBP"></a> Developer Best Practice  
  Eine automatische Seitenreparatur ist ein asynchroner Prozess, der im Hintergrund ausgeführt wird. Daher tritt bei einem Datenbankvorgang, bei dem eine nicht lesbare Seite angefordert wird, ein Fehler auf, und der Fehlercode für den Zustand wird zurückgegeben, der den Fehler ausgelöst hat. Beim Entwickeln einer Anwendung für eine gespiegelte Datenbank oder eine Verfügbarkeitsdatenbank sollten Sie Ausnahmen für fehlerhafte Vorgänge abfangen. Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlercode 823, 824 oder 829 lautet, sollten Sie den Vorgang später wiederholen.  
   
 
-##  <a name="ViewAPRattempts"></a> Vorgehensweise: View Automatic Page-Repair Attempts (Vorgehensweise: Anzeigen von automatischen Seitenreparaturversuchen)  
+##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
  Die folgenden dynamischen Verwaltungssichten geben Zeilen für die letzten automatischen Seitenreparatur-Versuche auf einer angegebenen Verfügbarkeitsdatenbank oder gespiegelten Datenbank mit einem Maximum von 100 Zeilen pro Datenbank zurück.  
   
 -   **Always On-Verfügbarkeitsgruppen:**  
