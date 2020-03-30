@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 ms.openlocfilehash: 3a9c24e046c9fa6dfeba338a28b0aa4ff3a86782
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251347"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>Download erweiterter SQL Server-Features und -Tools
@@ -26,7 +26,7 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 
 ## <a name="analysis-services"></a>Analysis Services
 
-| Funktion | Beschreibung |
+| Funktion | BESCHREIBUNG |
 |----|-----|
 | [Analysis Services-Clientbibliotheken](https://go.microsoft.com/fwlink/?LinkID=853574) |Die Microsoft Analysis Services-Clientbibliotheken kapseln Anwendungsprogrammierschnittstelle (APIs) ein, um Anfragen und Antworten mit Microsoft SQL Server Analysis Services 2005 oder höher, Microsoft Azure Analysis Services und Microsoft Power BI zu authentifizieren und auszutauschen.<br><br> Microsoft Analysis Services-Clientbibliotheken enthalten die folgenden Setup-Pakete: </br> Microsoft Analysis Services ADOMD.NET </br> Der Microsoft Analysis Services OLE DB-Anbieter (MSOLAP) </br> Microsoft Analysis Management Objects (AMO) |
 | [NuGetAnalysisSrvs](https://www.nuget.org/profiles/NuGetAnalysisSrvs) | NuGet für Analysis Services |
@@ -34,14 +34,14 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 
 ## <a name="azure"></a>Azure
 
-| Funktion | Beschreibung |
+| Funktion | BESCHREIBUNG |
 |----|-----|
 | [SQL Server Backup to Windows Azure Tool](https://go.microsoft.com/fwlink/?LinkID=391033) | Mit dem Microsoft SQL Server Backup to Windows Azure Tool können Sicherungen im Windows Azure-Blob-Speicher erstellt werden. Außerdem verschlüsselt und komprimiert das Tool lokal oder in der Cloud gespeicherte SQL Server-Sicherungen. |
 |||
 
 ## <a name="command-line-programming-and-t-sql"></a>Befehlszeile, Programmierung und T-SQL
 
-| Funktion | Beschreibung |
+| Funktion | BESCHREIBUNG |
 |----|-----|
 | [Befehlszeilen-Hilfsprogramme für SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | Mit dem Hilfsprogramm SQLCMD können Benutzer Transact-SQL-Batches senden und Rowsetinformationen von SQL Server-Instanzen ausgeben. |
 | [Treiber für PHP für Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=239640) | Die Microsoft-Treiber für PHP für SQL Server sind PHP 5-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten aus PHP-Skripts ermöglichen. |
@@ -49,13 +49,13 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 | [SQL Server Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=56508) | Das SQL Server Data-Tier Application (DAC) Framework ist eine Komponente, die auf .NET Framework basiert und Anwendungslebenszyklus-Dienste zur Datenbankentwicklung und -verwaltung bietet. |
 | [SQL Server Semantic Language Statistics](https://docs.microsoft.com/sql/relational-databases/search/install-and-configure-semantic-search) | Die Datenbank für die semantische Sprachstatistik ist eine erforderliche Komponente für die statistische semantische Suchfunktion in Microsoft SQL Server. |
 | [SQL Server Shared Management Objects](https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide) | Bei SQL Server Management Objects (SMO) handelt es sich um ein Objektmodell von .NET Framework, mit dem Softwareentwickler clientseitige Anwendungen zur Verwaltung von SQL Server-Objekten und -Diensten erstellen können. |
-| [System-CLR-Typen](https://go.microsoft.com/fwlink/?linkid=2108808) | Das Paket mit den SQL Server-System-CLR-Typen umfasst die Komponenten zur Implementierung der neuen Geometrie-, Geografie- und Hierarchie-ID-Typen in SQL Server. **Hinweis: Für diese Komponente ist außerdem der [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** erforderlich. |
+| [System-CLR-Typen](https://go.microsoft.com/fwlink/?linkid=2108808) | Das Paket mit den SQL Server-System-CLR-Typen umfasst die Komponenten zur Implementierung der neuen Geometrie-, Geografie- und Hierarchie-ID-Typen in SQL Server. **Hinweis: Für diese Komponente ist außerdem [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** erforderlich. |
 | [Windows PowerShell-Erweiterungen für Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-powershell?view=sql-server-2017) | Die Microsoft Windows PowerShell-Erweiterungen umfassen einen Anbieter und verschiedene Cmdlets, mit denen Administratoren und Entwickler PowerShell-Skripts zum Verwalten von SQL Server-Instanzen erstellen können. |
 |||
 
 ## <a name="database-engine"></a>Datenbank-Engine
 
-| Funktion | Beschreibung |
+| Funktion | BESCHREIBUNG |
 |----|-----|
 | [Befehlszeilen-Hilfsprogramme für SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | Mit dem Hilfsprogramm SQLCMD können Benutzer Transact-SQL-Batches senden und Rowsetinformationen von SQL Server-Instanzen ausgeben. |
 | [Remote Blob Store](https://go.microsoft.com/fwlink/?linkid=2109005) | Bei SQL Server Remote Blob Store (RBS) handelt es sich um eine Methode zum Speichern von unstrukturierten Daten-BLOBs in einem externen inhaltsadressierbaren Datenspeicher. Die Komponente umfasst eine clientseitige DLL, die mit einer Benutzeranwendung verknüpft ist, sowie eine Reihe gespeicherter Prozeduren, die auf dem SQL Server installiert werden. |
@@ -64,7 +64,7 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 
 ## <a name="integration-services"></a>Integration Services
 
-| Funktion | Beschreibung |
+| Funktion | BESCHREIBUNG |
 |----|-----|
 | [Integration Services Feature Pack für Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis) | Das Microsoft Integration Services Feature Pack für Azure bietet Tools für die Nutzung von Integration Services für die Verbindungsherstellung mit Azure Stack. |
 | [Integration Services-Feature Pack für die neueste Version von SQL Server](https://www.microsoft.com/download/details.aspx?id=100303) | Diese eigenständigen Pakete erweitern die neueste Version von Microsoft SQL Server Integration Services. |
@@ -72,21 +72,21 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 
 ## <a name="kerberos"></a>Kerberos
 
-| Funktion | Beschreibung |
+| Funktion | BESCHREIBUNG |
 |----|-----|
 | [Kerberos Configuration Manager für Microsoft SQL Server](https://www.microsoft.com/download/details.aspx?id=39046) | Die Kerberos-Authentifizierung bietet eine äußerst sichere Methode zum Authentifizieren von Client- und Serverentitäten (Sicherheitsprinzipalen) in einem Netzwerk. |
 |||
 
 ## <a name="master-data-services"></a>Master Data Services
 
-| Funktion | Beschreibung |
+| Funktion | BESCHREIBUNG |
 |----|-----|
 | [Master Data Services-Add-In für Microsoft Excel](https://go.microsoft.com/fwlink/?LinkID=390972) | Beim Master Data Services (MDS)-Add-In für Microsoft Excel handelt es sich um ein Datenverwaltungstool, das zahlreiche einfache und effiziente Verwaltungsfunktionen für Masterdaten bietet. |
 |||
 
 ## <a name="providers-and-drivers"></a>Anbieter und Treiber
 
-| Funktion | Beschreibung |
+| Funktion | BESCHREIBUNG |
 |----|-----|
 | [ODBC-Treiber für Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=852531) | Die Microsoft ODBC-Treiber für SQL Server bieten native Konnektivität zwischen Windows/UNIX und Microsoft SQL Server/Microsoft Azure SQL-Datenbank. |
 | [OLE DB-Anbieter für DB2 für Microsoft SQL Server](https://docs.microsoft.com/host-integration-server/db2oledbv/installing-data-provider-version-6-0) | Der Microsoft OLE DB-Anbieter für DB2 v5.0 bietet verschiedene Technologien und Tools, mit denen wichtige Daten, die in IBM DB2-Datenbanken gespeichert sind, in neue Projektmappen integriert werden können. SQL Server-Entwickler und -Administratoren können den Datenanbieter mit Integration Services, Analysis Services, der Replikation, Reporting Services und dem Prozessor für verteilte Abfragen verwenden. Lesen Sie den Abschnitt zur Installation des Datenanbieters in der Produktdokumentation, die online oder als Download zur Verfügung steht. |
@@ -94,7 +94,7 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 
 ## <a name="reporting-services"></a>Reporting Services
 
-| Funktion | Beschreibung |
+| Funktion | BESCHREIBUNG |
 |----|-----|
 | [Report Builder (Berichts-Generator)](https://www.microsoft.com/download/details.aspx?id=53613) | Der Berichts-Generator stellt eine produktive Berichterstellungsumgebung für IT-Fachleute und Poweruser bereit. Es werden alle Berichterstellungsfunktionen von SQL Server Reporting Services unterstützt. |
 | [ Reporting Services-Add-In für Microsoft SharePoint](https://docs.microsoft.com/sql/reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products)| Das Reporting Services-Add-In für Microsoft SharePoint-Technologien ermöglicht Ihnen die Integration von Reporting Services-Features in die auf Zusammenarbeit ausgelegte SharePoint-Umgebung. |
@@ -104,7 +104,7 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 
 ## <a name="sql-server-data-tools"></a>SQL Server Data Tools
 
-| Funktion | Beschreibung |
+| Funktion | BESCHREIBUNG |
 |----|-----|
 | [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| SQL Server Data Tools ist ein modernes Entwicklungstool für relationale SQL Server-Datenbanken, Azure SQL-Datenbanken, IS-Pakete (Integration Services), AS-Datenmodelle (Analysis Services) und RS-Berichte (Reporting Services). Mit SSDT lassen sich Datenbanken und andere Inhaltstypen für SQL Server entwerfen und bereitstellen – und zwar ebenso einfach wie eine Anwendung in Visual Studio.|
 |||

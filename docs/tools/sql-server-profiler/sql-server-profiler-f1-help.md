@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
 ms.openlocfilehash: 24375bafa9123c5bba4adf83fce81427f39722e4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307851"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler-Dialogfelder
@@ -59,9 +59,9 @@ Mithilfe der Registerkarte **Ereignisauswahl** im Dialogfeld **Ablaufverfolgungs
 
 ## <a name="trace-template-properties"></a>Eigenschaften der Ablaufverfolgungsvorlage 
 ### <a name="new-general-tab"></a>Neu (die Registerkarte „Allgemein“)
-Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie neue Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen erstellen. Zeigen Sie im Menü **Datei** von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auf **Vorlagen**, und klicken Sie dann auf **Neu**, um dieses Dialogfeld zu öffnen.
+Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie neue Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen erstellen. Zeigen Sie im Menü [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Datei**von** auf **Vorlagen**, und klicken Sie dann auf **Neu**, um dieses Dialogfeld zu öffnen.
 
-|Element|Beschreibung
+|Element|BESCHREIBUNG
 |---|---
 |**Servertyp auswählen**|Geben Sie den Servertyp an, für den die Vorlage verwendet wird.  
 |**Name der neuen Vorlage**|Geben Sie einen aussagekräftigen Namen für die Vorlage an.  
@@ -69,7 +69,7 @@ Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Abl
 |**Als Standardvorlage für den ausgewählten Servertyp verwenden**|Verwenden Sie diese Vorlage standardmäßig für alle Ablaufverfolgungen, die für diesen Servertyp erstellt werden.  
 
 ### <a name="edit-general-tab"></a>Bearbeiten (die Registerkarte „Allgemein“)
- Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie vorhandene Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen anzeigen oder bearbeiten. Sie können dieses Dialogfeld aufrufen, indem Sie erst im Menü **Datei** von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auf **Vorlagen** und dann auf **Vorlage bearbeiten** klicken.  
+ Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie vorhandene Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen anzeigen oder bearbeiten. Sie können dieses Dialogfeld aufrufen, indem Sie erst im Menü [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Datei**von** auf **Vorlagen** und dann auf **Vorlage bearbeiten** klicken.  
 
 |Element|BESCHREIBUNG
 |---|---
@@ -109,7 +109,7 @@ Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Abl
 Mithilfe der Registerkarte **Ereignisauswahl** im Dialogfeld **Eigenschaften der Ablaufverfolgungsvorlage** können Sie die Spalteneigenschaften der Ablaufverfolgung anzeigen oder Datenspalten aus der Ablaufverfolgung entfernen.  
 Öffnen Sie eine Ablaufverfolgungsdatei, um dieses Fenster anzuzeigen. Klicken Sie dann im Menü **Datei** auf **Eigenschaften**und dann auf die Registerkarte **Ereignisauswahl** .  
 
-|Element|Beschreibung
+|Element|BESCHREIBUNG
 |---|---
 |Spalte**Ereignisse**|Zeigt verfolgte Ereignisse an, die nach Ereigniskategorien geordnet sind. Zunächst sind alle Ereignisse in der Ablaufverfolgung ausgewählt. Die Ereignisse können ausgewählt werden, indem das Kontrollkästchen oder eine Datenspalte für ein Ereignis aktiviert wird. Wenn das Ereigniskästchen aktiviert ist, werden alle für dieses Ereignis verfügbaren Datenspalten ausgewählt. Wenn die Datenspalte für ein Ereignis aktiviert ist, wird das Ereignis automatisch aktiviert und mit ihm alle weiteren erforderlichen Spalten. Wenn Sie eine Ablaufverfolgungsdatei oder -tabelle anzeigen, können Sie per Deaktivierung von Ereignissen oder Datenspalten die Menge der angezeigten Daten im Ablaufverfolgungsfenster zur besseren Übersicht reduzieren. Sie können auch Spaltenfilter ändern, um die Menge der sichtbaren Daten im Ablaufverfolgungsfenster zu reduzieren. Weitere Informationen zu Ereignisklassen finden Sie unter [Ereignisklassen in SQL Server – Referenz](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Datenspalten|Zeigt Datenspalten der Ablaufverfolgung an. Alle relevanten Datenspalten in der Ablaufverfolgung sind standardmäßig für jedes in die Verfolgung einbezogene Ereignis aktiviert.  
@@ -146,7 +146,7 @@ Wenn Sie alle Indikatoren für ein Leistungsobjekt auswählen möchten, setzen S
 Verwenden Sie das Dialogfeld **Allgemeine Optionen** , um die folgenden Optionen anzuzeigen oder anzugeben.  
 ### <a name="display-options"></a>Anzeigeoptionen  
 
-|Element|Beschreibung
+|Element|BESCHREIBUNG
 |---|---
 |**Schriftartname**|Zeigt den Namen der Schriftart an, die im Ergebnisraster der Ablaufverfolgung verwendet wird.  
 |**Schriftgrad**|Zeigt die Größe der Schrift an, die im Ergebnisraster der Ablaufverfolgung verwendet wird.  
@@ -156,14 +156,14 @@ Verwenden Sie das Dialogfeld **Allgemeine Optionen** , um die folgenden Optionen
 
 ### <a name="tracing-options"></a>Ablaufverfolgungsoptionen  
 
-|Element|Beschreibung
+|Element|BESCHREIBUNG
 |---|---
 |**Ablaufverfolgung sofort nach dem Herstellen der Verbindung starten**|Startet eine Ablaufverfolgung mithilfe der Standardvorlage, sobald eine Verbindung hergestellt ist.  
 |**Ablaufverfolgungsdefinition bei Änderung der Anbieterversion aktualisieren**|Wendet die neueste Ablaufverfolgungsdefinition auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, wenn der Anbieter aktualisiert wird. Diese Option ist standardmäßig nicht aktiviert. Dadurch ist [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] gezwungen, die Ablaufverfolgungsdefinition beim Server abzufragen und, sofern diese vorhanden ist, die Datei auf dem Datenträger neu zu erstellen.  
 
 ### <a name="file-rollover-options"></a>Dateirolloveroptionen  
 
-|Element|Beschreibung
+|Element|BESCHREIBUNG
 |---|---
 |**Alle Rolloverdateien nacheinander ohne Eingabeaufforderung laden**|Lädt die Rolloverdateien automatisch, wenn eine Ablaufverfolgungsdatei geöffnet wird. Wenn mehrere Dateien bei der Ablaufverfolgung erstellt wurden, werden bei Auswahl dieser Option alle Rolloverdateien automatisch geladen.  
 |**Bestätigung vor dem Laden von Rolloverdateien**|Legt fest, dass Sie beim Öffnen einer Ablaufverfolgungsdatei von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zur Bestätigung aufgefordert werden, bevor eine Rolloverdatei hinzugefügt wird.  
@@ -192,7 +192,7 @@ In Microsoft SQL Server Profiler und im Optimierungsratgeber von Microsoft SQL S
 ## <a name="destination-table"></a>Zieltabelle
 Mithilfe des Dialogfelds **Zieltabelle** können Sie angeben, in welcher Tabelle die Ablaufverfolgung gespeichert werden soll.  
 
-|Element|Beschreibung
+|Element|BESCHREIBUNG
 |---|---
 |**SQL Server**|Gibt die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, zu der zurzeit eine Verbindung besteht. Dieses Feld wird automatisch ausgefüllt und kann nicht aktualisiert werden. Wenn Sie den Server ändern möchten, klicken Sie auf **Abbrechen** , und stellen Sie eine Verbindung zu der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, in der die Ablaufverfolgungstabelle gespeichert werden soll.  
 |**Datenbank**|Geben Sie die Datenbank an, in der die Ablaufverfolgungstabelle gespeichert werden soll.  
@@ -268,9 +268,9 @@ Mithilfe des Dialogfelds **Filter bearbeiten** können Sie Filter für Datenspal
  >Für Spalten mit Zeichenfolgendaten werden die Filterkriterien als Zeichenfolgenwert LIKE oder NOT LIKE angezeigt.  
 
 ## <a name="select-template-name"></a>Vorlagennamen auswählen
-Mit dem Dialogfeld **Vorlagenname auswählen** können Sie eine vorhandene [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsvorlage auswählen und in eine Datei auf dem Betriebssystem exportieren. Darüber hinaus können Sie dieses Dialogfeld dazu verwenden, beim Bearbeiten einer vorhandenen Ablaufverfolgungsvorlage einen anderen Namen auszuwählen oder einzugeben, unter dem die Ablaufverfolgungsvorlage gespeichert werden soll. Sie können beim Exportieren einer Vorlage auf dieses Dialogfeld zugreifen, indem Sie im Menü **Datei** von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auf **Vorlagen** zeigen, und dann auf **Vorlage exportieren** klicken. Um beim Ändern des Namens einer Vorlage auf dieses Dialogfeld zuzugreifen, zeigen Sie im Menü **Datei** auf **Vorlagen**und auf **Vorlage bearbeiten**, und klicken Sie dann auf **Speichern unter**.  
+Mit dem Dialogfeld **Vorlagenname auswählen** können Sie eine vorhandene [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsvorlage auswählen und in eine Datei auf dem Betriebssystem exportieren. Darüber hinaus können Sie dieses Dialogfeld dazu verwenden, beim Bearbeiten einer vorhandenen Ablaufverfolgungsvorlage einen anderen Namen auszuwählen oder einzugeben, unter dem die Ablaufverfolgungsvorlage gespeichert werden soll. Sie können beim Exportieren einer Vorlage auf dieses Dialogfeld zugreifen, indem Sie im Menü [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Datei**von** auf **Vorlagen** zeigen, und dann auf **Vorlage exportieren** klicken. Um beim Ändern des Namens einer Vorlage auf dieses Dialogfeld zuzugreifen, zeigen Sie im Menü **Datei** auf **Vorlagen**und auf **Vorlage bearbeiten**, und klicken Sie dann auf **Speichern unter**.  
 
-|Element|Beschreibung
+|Element|BESCHREIBUNG
 |---|---
 |**Servertyp**|Wählen Sie den Servertyp aus, auf dem Sie eine Vorlage auswählen möchten. Diese Option ist nur beim Exportieren einer Vorlage verfügbar.  
 |**Vorlagenname**|Geben Sie einen neuen Vorlagennamen ein, oder wählen Sie einen Vorlagennamen aus der Liste aus. Beim Exportieren in eine Vorlage können Sie nur einen Vorlagennamen aus der Liste auswählen. 

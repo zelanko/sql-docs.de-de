@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63295591"
 ---
 # <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
@@ -31,7 +31,7 @@ Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Setup"></a>1. Erstellen eines Tabellenberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. Erstellen eines Tabellenberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten  
 In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ein Dataset. Für den Entwurf der Tabelle werden nur einige wenige Felder verwendet. Nach Fertigstellung des Assistenten werden Sie manuell Spalten hinzufügen. Der Assistent erleichtert das Layout der Tabelle.  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
   
 17. Klicken Sie auf **Fertig stellen**.  
   
-## <a name="UpdateNames"></a>2. Aktualisieren der Standardnamen der Datenquelle und des Datensets  
+## <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. Aktualisieren der Standardnamen der Datenquelle und des Datensets  
   
 ### <a name="to-update-the-default-name-of-the-data-source"></a>So aktualisieren Sie den Standardnamen der Datenquelle  
   
@@ -146,7 +146,7 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Concatenate"></a>3. Anzeigen des Anfangsbuchstabens des Vornamens und des Nachnamens  
+## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Anzeigen des Anfangsbuchstabens des Vornamens und des Nachnamens  
 In diesem Abschnitt verwenden Sie die **Left** -Funktion und den Operator zum **Verketten** ( **&** ) in einem Ausdruck, der zu einem Anfangsbuchstaben des Vornamens und dem Nachnamen ausgewertet wird. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.   
   
 1.  Klicken Sie mit der rechten Maustaste auf die Spalte **StateProvince** , zeigen Sie auf **Spalte einfügen**und klicken Sie auf **Links**.  
@@ -191,7 +191,7 @@ In diesem Abschnitt verwenden Sie die **Left** -Funktion und den Operator zum **
   
 12. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
 
-## <a name="DateFormat"></a>(optional) Formatieren der Datums- und Währungsspalten und der Kopfzeile  
+## <a name="optional-format-the-date-and-currency-columns-and-header-row"></a><a name="DateFormat"></a>(optional) Formatieren der Datums- und Währungsspalten und der Kopfzeile  
 In diesem Abschnitt formatieren Sie die Spalte **Last Purchase** , die Datumsangaben enthält, und die Spalte „YTDPurchase“, die Währungsangaben enthält. Sie werden auch die Kopfzeile formatieren.  
   
 ### <a name="to-format-the-date-column"></a>So formatieren Sie die Datumsspalte  
@@ -227,7 +227,7 @@ So sieht der vorläufige Bericht mit den formatierten Datumsangaben und Spaltenh
 ![Berichts-Generator-Ausdruck-Tutorial-Vorschau-formatiert](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
-## <a name="Gender"></a>4. Verwenden von Farben für die Differenzierung nach Geschlechtern  
+## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4. Verwenden von Farben für die Differenzierung nach Geschlechtern  
 In diesem Abschnitt fügen Sie Farben hinzu, um das Geschlecht einer Person anzuzeigen. Sie fügen eine neue Spalte für die Farbanzeige hinzu. Anschließend legen Sie fest, welche Farbe auf Grundlage des Werts im Feld für das Geschlecht in der Spalte angezeigt wird.  
   
 Um bei der Erstellung eines gebänderten Berichts die Farbe beizubehalten, die Sie in dieser Tabellenzelle angewendet haben, müssen Sie ein Rechteck und diesem dann die Hintergrundfarbe hinzufügen.  
@@ -309,7 +309,7 @@ Um bei der Erstellung eines gebänderten Berichts die Farbe beizubehalten, die S
 
     ![Berichts-Generator-Ausdruck-Tutorial-Vorschau-formatierte-M-W-Spalte](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
-## <a name="Lookup"></a>5. Suchen des CountryRegion-Namens  
+## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5. Suchen des CountryRegion-Namens  
 In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **Lookup** -Funktion, um den Namen des Lands/der Region anstelle des Bezeichners des Lands/der Region anzuzeigen.  
   
 ### <a name="to-create-the-countryregion-dataset"></a>So erstellen Sie das CountryRegion-Dataset  
@@ -379,7 +379,7 @@ In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **
   
 11. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-## <a name="Count"></a>6. Ermitteln der vergangenen Tage seit dem letzten Kauf  
+## <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. Ermitteln der vergangenen Tage seit dem letzten Kauf  
 In diesem Abschnitt fügen Sie eine Spalte hinzu und verwenden anschließend die **Now** -Funktion oder die integrierte globale `ExecutionTime` -Variable, um die Anzahl der Tage seit dem letzten Einkauf (ab heute) eines Kunden zu berechnen.  
   
 ### <a name="to-add-the-days-ago-column"></a>So fügen Sie die Spalte "Vor (n) Tagen)" hinzu  
@@ -419,7 +419,7 @@ In diesem Abschnitt fügen Sie eine Spalte hinzu und verwenden anschließend die
 
 11. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-## <a name="Indicator"></a>7. Verwenden eines Indikators zur Anzeige des Umsatzvergleichs  
+## <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. Verwenden eines Indikators zur Anzeige des Umsatzvergleichs  
 In diesem Abschnitt fügen Sie eine neue Spalte hinzu und verwenden einen Indikator, um anzuzeigen, ob die Einkäufe im laufenden Jahr oberhalb oder unterhalb des Durchschnitts liegen. Die Funktion **Round** entfernt die Dezimalstellen aus den Werten.  
   
 Das Konfigurieren des Indikators und seiner Zustände erfordert viele Schritte. Wenn Sie möchten, können Sie gleich zu der Prozedur „So konfigurieren Sie den Indikator“ wechseln und die fertigen Ausdrücke aus diesem Tutorial kopieren und in das Dialogfeld **Ausdruck** einfügen.  
@@ -514,7 +514,7 @@ Das Konfigurieren des Indikators und seiner Zustände erfordert viele Schritte. 
 
     ![Berichts-Generator-Ausdruck-Tutorial-Vorschauindikator](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
-## <a name="GreenBar"></a>8. Erstellen eines gebänderten Berichts  
+## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8. Erstellen eines gebänderten Berichts  
 Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen können, die abwechselnd auf die Zeilen im Bericht angewendet wird und diesen zu eine gebänderten Bericht machen.  
   
 ### <a name="to-add-a-parameter"></a>So fügen Sie einen Parameter hinzu  
@@ -611,7 +611,7 @@ Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen 
     
     ![Berichts-Generator-Ausdruck-Tutorial-Vorschau-gebändert](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
-## <a name="Title"></a>Hinzufügen eines Berichtstitels (optional)  
+## <a name="optional-add-a-report-title"></a><a name="Title"></a>Hinzufügen eines Berichtstitels (optional)  
 Hinzufügen eines Titels zu einem Bericht  
   
 ### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
@@ -630,7 +630,7 @@ Hinzufügen eines Titels zu einem Bericht
   
 3.  Wählen Sie eine Farbe für die nicht weißen Bänder im Bericht aus, und klicken Sie auf **Bericht anzeigen**.  
   
-## <a name="Save"></a>Sichern des Berichts (optional)  
+## <a name="optional-save-the-report"></a><a name="Save"></a>Sichern des Berichts (optional)  
 Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek oder auf dem Computer speichern. Weitere Informationen finden Sie unter [Speichern von Berichten &#40;Berichts-Generator&#41;](../reporting-services/report-builder/saving-reports-report-builder.md).  
   
 In diesem Tutorial speichern Sie den Bericht auf einem Berichtsserver. Wenn Sie keinen Zugriff auf einen Berichtsserver besitzen, speichern Sie den Bericht auf dem Computer.  

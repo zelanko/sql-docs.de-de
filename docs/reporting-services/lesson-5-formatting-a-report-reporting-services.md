@@ -9,17 +9,17 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65105929"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lektion 5: Formatieren eines Berichts (Reporting Services)
 
 Nachdem Sie dem Sales Orders-Bericht einen Datenbereich sowie einige Felder hinzugefügt haben, können Sie die Felder für Datum und Währung sowie die Spaltenköpfe formatieren.
 
-## <a name="bkmk_format_date"></a>Formatieren des Datums
+## <a name="format-the-date"></a><a name="bkmk_format_date"></a>Formatieren des Datums
 
 Im Feldausdruck „Datum“ werden standardmäßig Datums- und Uhrzeitinformationen angezeigt. Durch entsprechende Formatierung kann auch nur das Datum angezeigt werden.
 
@@ -30,7 +30,7 @@ Im Feldausdruck „Datum“ werden standardmäßig Datums- und Uhrzeitinformatio
 5. Klicken Sie auf **OK**, um das Format zu übernehmen.
 6. Zeigen Sie eine Vorschau des Berichts an, um die Formatänderung am Feld `[Date]` zu sehen, und wechseln Sie dann zurück zur Entwurfsansicht.
 
-## <a name="bkmk_format_currency"></a>Formatieren der Währung
+## <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>Formatieren der Währung
 
 Im Feldausdruck „LineTotal“ wird eine Zahl im Standardzahlenformat angezeigt. Sie können das Feld formatieren, um die Zahl als Währung anzuzeigen.
 
@@ -44,7 +44,7 @@ Im Feldausdruck „LineTotal“ wird eine Zahl im Standardzahlenformat angezeigt
 5. Klicken Sie auf **OK**, um das Format zu übernehmen.
 6. Zeigen Sie eine Vorschau des Berichts an, um die Änderung an der Ausdrucksspalte `[LineTotal]` zu sehen, und wechseln Sie dann zurück zur Entwurfsansicht.  
 
-## <a name="bkmk_change_textstyle"></a>Ändern von Textart und Spaltenbreite
+## <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>Ändern von Textart und Spaltenbreite
 
 Sie können dem Bericht weitere Formatierungen hinzufügen, indem Sie die Kopfzeile markieren und die Breite der Datenspalten anpassen.
 
@@ -65,7 +65,7 @@ Sie können dem Bericht weitere Formatierungen hinzufügen, indem Sie die Kopfze
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In dieser Lektion haben Sie erfolgreich Spaltenüberschriften und Feldausdrücke formatiert. Als Nächstes erfahren Sie, wie Sie dem Bericht Gruppierungen und Gesamtwerte hinzufügen. Fahren Sie fort mit [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
+In dieser Lektion haben Sie erfolgreich Spaltenüberschriften und Feldausdrücke formatiert. Als Nächstes erfahren Sie, wie Sie dem Bericht Gruppierungen und Gesamtwerte hinzufügen. Weiter mit [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 

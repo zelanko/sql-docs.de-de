@@ -16,10 +16,10 @@ ms.assetid: a15ee185-f433-4915-9c75-5ebd90c758fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 702abdf51c74ff3c6170a09c481f00f9d266fac7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952724"
 ---
 # <a name="getconnection-method-sqlserverdatasource"></a>getConnection-Methode (SQLServerDataSource)
@@ -29,7 +29,7 @@ ms.locfileid: "67952724"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[getConnection ()](../../../connect/jdbc/reference/getconnection-method.md)|Stellt eine Verbindung mit der Datenquelle her, für die dieses [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)-Objekt steht.|  
 |[getConnection (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/getconnection-method-java-lang-string-java-lang-string.md)|Stellt anhand des Benutzernamens und des Kennworts eine Verbindung mit der Datenquelle her, für die dieses [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)-Objekt steht.|  

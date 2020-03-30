@@ -20,10 +20,10 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5ebbda456c402372e7505968414bc044eec87ec4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082148"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt-Hilfsprogramm (SSRS)
@@ -83,7 +83,7 @@ rskeymgmt {-?}
   
  Für **rskeymgmt -a**wird der in der Datei gespeicherte Wert des symmetrischen Schlüssels auf die Berichtsserverinstanz angewendet.  
   
- **-p**  *Kennwort*  
+ **-p** *password*  
  (Erforderlich für **-f**) Gibt das Kennwort an, das zum Sichern oder Anwenden eines symmetrischen Schlüssels verwendet wird. Dieser Wert muss angegeben sein.  
   
  **-i**  
@@ -145,7 +145,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Eine Berichtsserverbereitstellung für horizontales Skalieren bezeichnet ein Bereitstellungsmodell, bei dem mehrere Berichtsserverinstanzen dieselbe Berichtsserver-Datenbank gemeinsam nutzen. Eine Berichtsserver-Datenbank kann von jeder Berichtsserverinstanz verwendet werden, die ihre symmetrischen Schlüssel in der Datenbank speichert. Wenn eine Berichtsserver-Datenbank beispielsweise Schlüsselinformationen für drei Berichtsserverinstanzen enthält, werden alle drei Instanzen als Mitglieder derselben Bereitstellung für horizontales Skalieren betrachtet.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Verknüpfen von Berichtsserverinstanzen auf demselben Computer  
- Sie können eine Bereitstellung für horizontales Skalieren von mehreren Berichtsserverinstanzen aus erstellen, die auf demselben Computer installiert sind. Legen Sie die Argumente **-u** und **-v** nicht fest, wenn Sie Berichtsserverinstanzen verknüpfen, die lokal installiert sind. Die Argumente **-u** und **-v** werden nur verwendet, wenn Sie eine Instanz von einem Remotecomputer aus hinzufügen. Wenn Sie die Argumente angeben, erhalten Sie folgenden Fehler: „Benutzeranmeldeinformationen können für lokale Verbindungen nicht verwendet werden.“  
+ Sie können eine Bereitstellung für horizontales Skalieren von mehreren Berichtsserverinstanzen aus erstellen, die auf demselben Computer installiert sind. Legen Sie die Argumente **-u** und **-v** nicht fest, wenn Sie Berichtsserverinstanzen verknüpfen, die lokal installiert sind. Die Argumente **-u** und **-v** werden nur verwendet, wenn Sie eine Instanz von einem Remotecomputer aus hinzufügen. Wenn Sie die Argumente festlegen, wird die folgende Fehlermeldung angezeigt: "Benutzeranmeldeinformationen können nicht für lokale Verbindungen verwendet werden."  
   
  Das folgende Beispiel veranschaulicht die Syntax für eine Bereitstellung für horizontales Skalieren mithilfe mehrerer lokaler Instanzen. In diesem Beispiel ist \<**initializedinstance**> der Name einer Instanz, die bereits für die Verwendung der Berichtsserver-Datenbank initialisiert wurde, und \<**newinstance**> ist der Name der Instanz, die der Bereitstellung hinzugefügt werden soll:  
   

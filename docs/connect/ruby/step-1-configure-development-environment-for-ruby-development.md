@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für die Ruby-Entwicklung | Microsoft-Dokumentation'
+title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für Ruby-Entwicklung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38af92d3cb0354bc4b75131a349f6a1c26e90490
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992460"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für die Ruby-Entwicklung
@@ -43,7 +43,7 @@ a. Doppelklicken Sie auf die Datei. Sie werden gefragt, wohin die Dateien extrah
 b. Klicken Sie auf die Schaltfläche „...“, und wählen Sie „C:\DevKit“ aus. Möglicherweise müssen Sie diesen Ordner zuerst erstellen, indem Sie auf „Neuen Ordner erstellen“ klicken.  
 c. Klicken Sie auf „OK“ und dann auf „Extrahieren“, um die Dateien zu extrahieren.  
   
-5. **Öffnen von „cmd.exe“**  
+5. **Öffnen Sie „cmd.exe“.**  
   
 6. **Installieren des DevKit für Ruby**  
 ```  
@@ -59,7 +59,7 @@ c. Klicken Sie auf „OK“ und dann auf „Extrahieren“, um die Dateien zu ex
   
 ## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
-1. **Öffnen eines Terminals**  
+1. **Öffnen Sie ein Terminal.**  
   
 2. **Installieren von Ruby Version Manager (rvm) und Voraussetzungen**  
 ```  
@@ -92,9 +92,9 @@ Installieren Sie beispielsweise Version 2.3.0 von Ruby:
   
 Beachten Sie, dass Ruby unter Mac OS X bereits vorinstalliert ist, da das Betriebssystem eine Abhängigkeit aufweist.    
   
-1.  **Öffnen eines Terminals**  
+1.  **Öffnen Sie ein Terminal.**  
   
-2. **Installieren des Homebrew-Paket-Managers**  
+2. **Installieren Sie den Homebrew-Paket-Manager.**  
 ```  
 > ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 ```  

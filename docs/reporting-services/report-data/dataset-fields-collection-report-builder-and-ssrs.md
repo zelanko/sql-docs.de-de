@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b33041f7debc2ad75268973867c72e073459f1de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77077779"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Datasetfeldauflistung (Berichts-Generator und SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77077779"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Fields"></a> Datasetfelder und Abfragen  
+##  <a name="dataset-fields-and-queries"></a><a name="Fields"></a> Datasetfelder und Abfragen  
  Datasetfelder werden über den Befehl zur Datasetabfrage und über von Ihnen definierte berechnete Felder angegeben. Die Auflistung von Feldern, die Sie im Bericht sehen, hängt von Ihrem Typ des Datasets ab:  
   
 -   **Freigegebenes Dataset.** Die Feldauflistung ist die Liste von Feldern für die Abfrage in der Definition des freigegebenen Datasets zu der Zeit, zu der Sie dem Bericht das freigegebene Dataset direkt hinzugefügt haben oder einen Berichtsteil hinzugefügt haben, der das freigegebene Dataset enthielt. Die lokale Feldauflistung ändert sich nicht, wenn sich die freigegebene Datasetdefinition auf dem Berichtsserver ändert. Um die lokale Feldauflistung zu aktualisieren, müssen Sie die Liste für das lokale freigegebene Dataset aktualisieren.  
@@ -59,7 +59,7 @@ ms.locfileid: "77077779"
 >  Nicht alle **Field** -Eigenschaften können für alle Datenquellen verwendet werden. Die **Value** - und die **IsMissing** -Eigenschaft werden für alle Datenquellen definiert. Weitere vordefinierte Eigenschaften (zum Beispiel **Key**, **UniqueName**und **ParentUniqueName** für mehrdimensionale Datenquellen) werden nur unterstützt, wenn die Datenquelle diese Eigenschaften bereitstellt. Benutzerdefinierte Eigenschaften werden von einigen Datenanbietern unterstützt. Weitere Informationen finden Sie in den entsprechenden Themen zu erweiterten Feldeigenschaften für den Datenquellentyp unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Ein Beispiel einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquelle finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
-##  <a name="Defaults"></a> Grundlegendes zu Standardausdrücken für Felder  
+##  <a name="understanding-default-expressions-for-fields"></a><a name="Defaults"></a> Grundlegendes zu Standardausdrücken für Felder  
  Bei einem Textfeld kann es sich um ein Textfeld-Berichtselement im Text des Berichts oder um ein Textfeld in einer Zelle eines Tablix-Datenbereichs handeln. Wenn Sie ein Feld mit einem Textfeld verknüpfen, gibt die Position des Textfelds den Standardausdruck für den Feldverweis vor. Im Hauptteil des Berichts muss ein Textfeldwert-Ausdruck ein Aggregat und ein Dataset angeben. Wenn im Bericht nur ein Dataset vorhanden ist, wird dieser Standardausdruck für Sie erstellt. Die Standardaggregatfunktion für numerische Felder ist Sum. Das Standardaggregat für nicht numerische Felder ist First.  
   
  In einem Tablix-Datenbereich hängt der Standardfeldausdruck von den Zeilen- und Gruppenmitgliedschaften des Textfelds ab, dem Sie das Feld hinzufügen. Der Feldausdruck für das Feld Sales lautet `[Sales]`, wenn Sie dieses einem Textfeld in der Detailzeile einer Tabelle hinzufügen. Wenn Sie dasselbe Feld einem Textfeld in einem Gruppenkopf hinzufügen, lautet der Standardausdruck `(Sum[Sales])`. Dies liegt daran, dass der Gruppenkopf zusammenfassende Werte für die Gruppe anzeigt, keine Detailwerte. Beim Ausführen des Berichts wertet der Berichtsprozessor die einzelnen Ausdrücke aus und ersetzt das Ergebnis im Bericht.  
@@ -67,7 +67,7 @@ ms.locfileid: "77077779"
  Weitere Informationen zu Ausdrücken finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
   
-##  <a name="DataTypes"></a> Felddatentypen  
+##  <a name="field-data-types"></a><a name="DataTypes"></a> Felddatentypen  
  Beim Erstellen eines Datasets kann es sein, dass die Datentypen der Felder einer Datenquelle nicht genau den Datentypen entsprechen, die in einem Bericht verwendet werden. Datentypen durchlaufen in der Regel eine oder zwei Zuordnungsebenen. Gegebenenfalls ordnet die Datenverarbeitungserweiterung bzw. der Datenanbieter die Datentypen der Datenquelle CLR-Datentypen (Common Language Runtime) zu. Die Datentypen, die von den Datenverarbeitungserweiterungen zurückgegeben werden, werden einer Teilmenge der CLR-Datentypen (Common Language Runtime) von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]zugeordnet.  
   
  Unter der Datenquelle werden die Daten als Datentypen gespeichert, die von der Datenquelle unterstützt werden. Bei Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank muss es sich zum Beispiel um einen der unterstützten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen handeln, z. B. **nvarchar** oder **datetime**. Wenn Sie Daten aus einer Datenquelle abrufen, durchlaufen die Daten eine Datenverarbeitungserweiterung oder einen Datenanbieter, die bzw. der dem Datenquellentyp zugeordnet ist. Je nach Datenverarbeitungserweiterung können Daten von den Datentypen, die von der Datenquelle verwendet werden, in Datentypen konvertiert werden, die von der Datenverarbeitungserweiterung unterstützt werden. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Datentypen, die von der mit [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]installierten CLR (Common Language Runtime) unterstützt werden. Der Datenanbieter ändert die Zuordnung der einzelnen Spalten des Resultsets vom systemeigenen Datentyp in einen CLR (Common Language Runtime)-Datentyp für [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
@@ -89,7 +89,7 @@ ms.locfileid: "77077779"
   
      Die Datentypen, die der Berichtsprozessor für die neuen Datums- und Uhrzeittypen verwendet, die mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eingeführt werden, sind in der folgenden Tabelle aufgeführt:  
   
-    |SQL-Datentyp|CLR-Datentyp|Beschreibung|  
+    |SQL-Datentyp|CLR-Datentyp|BESCHREIBUNG|  
     |-------------------|-------------------|-----------------|  
     |**Date**|**DateTime**|Nur Datum|  
     |**Time**|**TimeSpan**|Nur Uhrzeit|  
@@ -101,7 +101,7 @@ ms.locfileid: "77077779"
  Weitere Informationen zum Einschließen von Verweisen auf ein Datasetfeld aus einem Ausdruck finden Sie unter [Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
   
-##  <a name="MissingFields"></a> Erkennen von fehlenden Feldern zur Laufzeit  
+##  <a name="detecting-missing-fields-at-run-time"></a><a name="MissingFields"></a> Erkennen von fehlenden Feldern zur Laufzeit  
  Wenn der Bericht verarbeitet wird, sind im Resultset für ein Dataset möglicherweise nicht für alle angegebenen Spalten Werte enthalten, da die Spalten in der Datenquelle nicht mehr vorhanden sind. Über die Feldeigenschaft „IsMissing“ können Sie ermitteln, ob zur Laufzeit Werte für ein Feld zurückgegeben wurden. Weitere Informationen finden Sie unter [Verweise auf Datasetfeld-Auflistungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
   
   

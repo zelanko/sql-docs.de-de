@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: abe874a50e8534291a67393dfaf3485c96405b02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015854"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Datentypzuordnung zu ITableDefinition
@@ -48,7 +48,7 @@ ms.locfileid: "68015854"
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
 |DBTYPE_STR|**char**, **varchar**, **text** oder **varchar(max)**|Der OLE DB-Treiber für SQL Server untersucht die *ulColumnSize*-Elemente der DBCOLUMNDESC-Struktur. Basierend auf dem Wert und der Version der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ordnet der OLE DB-Treiber für SQL Server den Typ zu **text** hinzu.<br /><br /> Wenn der Wert von *ulColumnSize* kleiner ist als die maximale Länge einer Spalte eines Datentyps für Multibyte-Zeichendaten ist, dann überprüft der OLE DB-Treiber für SQL Server das Element *rgPropertySets* von DBCOLUMNDESC. Falls „VARIANT_TRUE“ der Wert für „DBPROP_COL_FIXEDLENGTH“ ist, ordnet der OLE DB-Treiber für SQL Server den Typ zu **char** hinzu. Falls der Wert der Eigenschaft „VARIANT_FALSE“ ist, ordnet der OLE DB-Treiber für SQL Server den Typ zu **varchar** hinzu. In jedem Fall bestimmt das Element *ulColumnSize* der DBCOLUMNDESC-Struktur die Breite der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalte, die erstellt wird.|  
-|DBTYPE_UDT|**UDT**|Die folgenden Informationen werden von **DBCOLUMNDESC**-Strukturen verwendet, die von **ITableDefinition::CreateTable** verwendet werden, wenn UDT-Spalten erforderlich sind:<br /><br /> *pwSzTypeName* wird ignoriert.<br /><br /> *rgPropertySets* muss wie im Abschnitt zu **DBPROPSET_SQLSERVERCOLUMN** unter [Verwenden von benutzerdefinierten Typen](../../oledb/features/using-user-defined-types.md) beschrieben einen **DBPROPSET_SQLSERVERCOLUMN**-Eigenschaftensatz umfassen.|  
+|DBTYPE_UDT|**UDT**|Die folgenden Informationen werden von **DBCOLUMNDESC**-Strukturen verwendet, die von **ITableDefinition::CreateTable** verwendet werden, wenn UDT-Spalten erforderlich sind:<br /><br /> *pwSzTypeName* wird ignoriert.<br /><br /> *rgPropertySets* muss wie im Abschnitt zu **DBPROPSET_SQLSERVERCOLUMN** unter **Verwenden von benutzerdefinierten Typen** beschrieben einen [DBPROPSET_SQLSERVERCOLUMN](../../oledb/features/using-user-defined-types.md)-Eigenschaftensatz umfassen.|  
 |DBTYPE_UI1|**tinyint**||  
 |DBTYPE_VARIANT|**sql_variant**||
 |DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** oder **nvarchar(max)**|Der OLE DB-Treiber für SQL Server untersucht die *ulColumnSize*-Elemente der DBCOLUMNDESC-Struktur. Basierend auf dem Wert ordnet der OLE DB-Treiber für SQL Server den Typ zu **ntext** hinzu.<br /><br /> Wenn der Wert von *ulColumnSize* kleiner ist als die maximale Länge einer Spalte eines Datentyps für Unicode-Zeichendaten ist, dann überprüft der OLE DB-Treiber für SQL Server das Element *rgPropertySets* von DBCOLUMNDESC. Falls „VARIANT_TRUE“ der Wert für „DBPROP_COL_FIXEDLENGTH“ ist, ordnet der OLE DB-Treiber für SQL Server den Typ zu **nchar** hinzu. Falls der Wert der Eigenschaft „VARIANT_FALSE“ ist, ordnet der OLE DB-Treiber für SQL Server den Typ zu **nvarchar** hinzu. In jedem Fall bestimmt das Element *ulColumnSize* der DBCOLUMNDESC-Struktur die Breite der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalte, die erstellt wird.|  

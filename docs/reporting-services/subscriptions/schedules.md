@@ -16,10 +16,10 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578097"
 ---
 # <a name="schedules"></a>Zeitpläne
@@ -34,7 +34,7 @@ ms.locfileid: "65578097"
  Freigegebene Zeitpläne sind leichter zu verwalten und ermöglichen Ihnen eine größere Flexibilität in der Verwaltung geplanter Vorgänge. So besteht beispielsweise die Möglichkeit, freigegebene Zeitpläne zu beenden und fortzusetzen. Wenn Sie der Ansicht sind, dass zu viele geplante Vorgänge gleichzeitig ausgeführt werden, können Sie mehrere freigegebene Zeitpläne erstellen, die zu verschiedenen Zeitpunkten ausgeführt werden, und anschließend die Zeitplaninformationen entsprechend der Verarbeitungslast auf dem Berichtsserver anpassen.  
   
   
-##  <a name="bkmk_whatyoucando"></a> Verwenden von Zeitplänen  
+##  <a name="what-you-can-do-with-schedules"></a><a name="bkmk_whatyoucando"></a> Verwenden von Zeitplänen  
  Sie können das [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und den [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] im einheitlichen Modus und Seiten für die SharePoint-Websiteverwaltung im SharePoint-Modus verwenden, um Zeitpläne zu erstellen und zu verwalten. Ihre Möglichkeiten:  
   
 -   Planen der Berichtsübermittlung in einem standardmäßigen oder datengesteuerten Abonnement.  
@@ -56,7 +56,7 @@ ms.locfileid: "65578097"
 > [!NOTE]  
 >  Zeitplanvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
-##  <a name="bkmk_compare"></a> Vergleichen von freigegebenen und berichtsspezifischen Zeitplänen  
+##  <a name="comparing-shared-and-report-specific-schedules"></a><a name="bkmk_compare"></a> Vergleichen von freigegebenen und berichtsspezifischen Zeitplänen  
  Beide Typen von Zeitplänen führen zum selben Ergebnis.  
   
 -   **Freigegebene Zeitpläne** sind portable, für verschiedene Zwecke ausgerichtete Elemente, die einsatzbereite Zeitplaninformationen enthalten. Da freigegebene Zeitpläne Elemente auf Systemebene darstellen, sind zum Erstellen eines freigegebenen Zeitplans Berechtigungen auf Systemebene erforderlich. Deshalb erstellt normalerweise ein Berichtsserveradministrator oder Inhalts-Manager die freigegebenen Zeitpläne, die auf dem Berichtsserver verfügbar sind. Freigegebene Zeitpläne werden mit dem Webportal oder mit SharePoint-Websiteeinstellungen auf dem Berichtsserver gespeichert und verwaltet.  
@@ -71,14 +71,14 @@ ms.locfileid: "65578097"
   
 -   **Berichtsspezifische Zeitpläne** werden im Kontext eines bestimmten Berichts, Abonnements oder eines bestimmten Vorgangs für die Berichtsausführung definiert, um den Ablaufzeitpunkt des Caches oder Momentaufnahmeupdates zu bestimmen. Diese Zeitpläne werden inline erstellt, wenn Sie ein Abonnement definieren oder Eigenschaften zur Berichtsausführung festlegen. Erstellen Sie einen berichtsspezifischen Zeitplan, wenn ein freigegebener Zeitplan nicht die benötigte Häufigkeits- oder Wiederholungsoption bereitstellt. Einen berichtsspezifischen Zeitplan müssen Sie manuell bearbeiten, um zu verhindern, dass der Bericht ausgeführt wird. Berichtsspezifische Zeitpläne können von einzelnen Benutzern erstellt werden.  
   
-##  <a name="bkmk_configuredatasources"></a> Konfigurieren der Datenquellen  
+##  <a name="configure-the-data-sources"></a><a name="bkmk_configuredatasources"></a> Konfigurieren der Datenquellen  
  Bevor Sie die Daten- oder Abonnementverarbeitung für einen Bericht planen können, müssen Sie die Berichtsdatenquelle so konfigurieren, dass sie gespeicherte Anmeldeinformationen oder das Konto für die unbeaufsichtigte Berichtsverarbeitung verwendet. Wenn Sie gespeicherte Anmeldeinformationen verwenden, können Sie nur einen Satz von Anmeldeinformationen speichern. Diese werden von allen Benutzern verwendet, die den Bericht ausführen. Bei den Anmeldeinformationen kann es sich um ein Windows-Benutzerkonto oder ein Datenbank-Benutzerkonto handeln.  
   
  Bei dem Konto für die unbeaufsichtigte Berichtsverarbeitung handelt es sich um ein spezielles Konto, das auf dem Berichtsserver konfiguriert wird. Es wird vom Berichtsserver für das Herstellen einer Verbindung mit Remotecomputern verwendet, wenn für einen geplanten Vorgang der Abruf einer externen Datei oder eine Verarbeitung erforderlich ist. Wenn Sie das Konto konfigurieren, können Sie es zum Herstellen einer Verbindung mit externen Datenquellen verwenden, die einem Bericht Daten bereitstellen.  
   
  Wenn Sie gespeicherte Anmeldeinformationen oder das Konto für die unbeaufsichtigte Berichtsverarbeitung angeben möchten, bearbeiten Sie die Datenquelleneigenschaften des Berichts. Wenn der Bericht eine freigegebene Datenquelle verwendet, bearbeiten Sie stattdessen die freigegebene Datenquelle.  
   
-##  <a name="bkmk_credentials"></a> Speichern von Anmeldeinformationen und Verarbeitungskonten  
+##  <a name="store-credentials-and-processing-accounts"></a><a name="bkmk_credentials"></a> Speichern von Anmeldeinformationen und Verarbeitungskonten  
  Ihre Arbeitsweise mit Zeitplänen hängt von Aufgaben ab, die Bestandteil Ihrer Rollenzuweisung sind. Bei der Verwendung vordefinierter Rollen können Inhalts-Manager und Systemadministratoren beliebige Zeitpläne erstellen und verwalten. Wenn Sie benutzerdefinierte Rollenzuweisungen verwenden, muss die Rollenzuweisung Aufgaben für geplante Vorgänge enthalten.  
   
 |Aufgabe|Verwendete Aufgabe|Vordefinierte Rollen im einheitlichen Modus|Gruppen im SharePoint-Modus|  
@@ -90,7 +90,7 @@ ms.locfileid: "65578097"
   
  Weitere Informationen zur Sicherheit im einheitlichen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Modus finden Sie unter [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md), [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) und [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md). Informationen zum SharePoint-Modus finden Sie unter [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
-##  <a name="bkmk_how_scheduling_works"></a> Funktionsweise des Prozessors für Zeitplanung und Übermittlung  
+##  <a name="how-scheduling-and-delivery-processing-works"></a><a name="bkmk_how_scheduling_works"></a> Funktionsweise des Prozessors für Zeitplanung und Übermittlung  
  Der Prozessor für Zeitplanung und Übermittlung stellt die folgenden Funktionen bereit:  
   
 -   Verwaltet eine Warteschlange von Ereignissen und Benachrichtigungen in der Berichtsserver-Datenbank. In einer Bereitstellung für dezentrales Skalieren ist die Warteschlange für alle Berichtsserver freigegeben.  
@@ -115,19 +115,19 @@ ms.locfileid: "65578097"
   
  Reporting Services verwaltet eine Ereigniswarteschlange für alle geplanten Vorgänge. Die Warteschlange wird in regelmäßigen Abständen nach neuen Ereignissen abgefragt. Standardmäßig wird die Warteschlange alle 10 Sekunden überprüft. Sie können das Intervall ändern, indem Sie in der Datei „RSReportServer.config“ die Konfigurationseinstellungen **PollingInterval**, **IsNotificationService**und **IsEventService** ändern. Im SharePoint-Modus wird ebenfalls die Datei „RSreporserver.config“ für diese Einstellungen verwendet, und die Werte gelten für alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendungen. Weitere Informationen finden Sie unter [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
-##  <a name="bkmk_serverdependencies"></a> Serverabhängigkeiten  
+##  <a name="server-dependencies"></a><a name="bkmk_serverdependencies"></a> Serverabhängigkeiten  
  Für den Prozessor für Zeitplanung und Übermittlung müssen der Berichtsserverdienst und der SQL Server-Agent gestartet sein. Die Funktion für die Verarbeitung von Zeitplanung und Übermittlung muss über die **ScheduleEventsAndReportDeliveryEnabled** -Eigenschaft des Facets **Oberflächenkonfiguration für Reporting Services** in der richtlinienbasierten Verwaltung aktiviert werden. Sowohl der SQL Server-Agent als auch der Berichtsserverdienst müssen ausgeführt werden, damit geplante Vorgänge auftreten.  
   
 > [!NOTE]  
 >  Mit dem Facet **Oberflächenkonfiguration für Reporting Services** können geplante Vorgänge vorübergehend oder dauerhaft beendet werden. Obwohl Sie benutzerdefinierte Übermittlungserweiterungen erstellen und bereitstellen können, ist der Prozessor für Zeitplanung und Übermittlung an sich nicht erweiterbar. Sie können die Weise, wie er Ereignisse und Benachrichtigungen verwaltet, nicht ändern. Weitere Informationen zu Deaktivieren von Funktionen finden Sie in die im Abschnitt **Geplante Ereignisse und Übermittlung** von [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
   
-###  <a name="bkmk_stoppingagent"></a> Auswirkungen beim Beenden des SQL Server-Agents  
+###  <a name="effects-of-stopping-the-sql-server-agent"></a><a name="bkmk_stoppingagent"></a> Auswirkungen beim Beenden des SQL Server-Agents  
  Die geplante Berichtsverarbeitung verwendet standardmäßig den SQL Server-Agent. Wenn Sie den Dienst anhalten, werden keine neuen Verarbeitungsanforderungen zur Warteschlange hinzugefügt, außer Sie fügen sie programmgesteuert mithilfe der <xref:ReportService2010.ReportingService2010.FireEvent%2A> -Methode hinzu. Wenn Sie den Dienst neu starten, werden die Aufträge, die die Berichtsverarbeitungsanforderungen erstellen, fortgesetzt. Der Berichtsserver versucht nicht, Berichtsverarbeitungsaufträge neu zu erstellen, die möglicherweise in der Vergangenheit aufgetreten sind, während der SQL Server-Agent offline war. Wenn Sie den SQL Server-Agent für eine Woche anhalten, sind alle für diese Woche geplanten Vorgänge verloren.  
   
 > [!NOTE]  
 >  Die Funktionen, die der SQL Server-Agent für Reporting Services bereitstellt, können durch einen benutzerdefinierten Code ersetzt werden, der die <xref:ReportService2010.ReportingService2010.FireEvent%2A> -Methode verwendet, um der Warteschlange geplante Ereignisse hinzuzufügen.  
   
-###  <a name="bkmk_stoppingservice"></a> Auswirkungen beim Beenden des Berichtsserverdienstes  
+###  <a name="effects-of-stopping-the-report-server-service"></a><a name="bkmk_stoppingservice"></a> Auswirkungen beim Beenden des Berichtsserverdienstes  
  Wenn Sie den Berichtsserverdienst beenden, fährt der SQL Server-Agent fort, Berichtsverarbeitungsanforderungen der Warteschlange hinzuzufügen. Statusinformationen des SQL Server-Agents zeigen an, dass der Auftrag erfolgreich war. Da der Berichtsserverdienst jedoch beendet war, findet keine Berichtsverarbeitung statt. Die Anforderungen werden in der Warteschlange gesammelt, bis Sie den Berichtsserverdienst neu starten. Sobald Sie den Berichtsserverdienst neu gestartet haben, werden alle Berichtsverarbeitungsanforderungen, die sich in der Warteschlange befinden, nacheinander verarbeitet.  
   
 ## <a name="see-also"></a>Weitere Informationen  

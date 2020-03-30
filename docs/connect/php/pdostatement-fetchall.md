@@ -11,10 +11,10 @@ ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bd53aedf65bd1e7935c7e51eb90fb78d65d2bed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936033"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
@@ -30,11 +30,11 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*fetch_style*: Dies ist ein Symbol (ganze Zahl), welches das Format der Daten aus der Zeile angibt. Unter [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) finden Sie eine Liste der Werte. PDO::FETCH_COLUMN ist ebenfalls zulässig. PDO::FETCH_BOTH ist der Standard.  
+$*fetch_style:* Ein ganzzahliges Symbol, das das Format der Zeilendaten angibt. Unter [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) finden Sie eine Liste der Werte. PDO::FETCH_COLUMN ist ebenfalls zulässig. PDO::FETCH_BOTH ist der Standard.  
   
-$*column_index*: Dies ist ein ganzzahliger Wert, der die zurückzugebende Spalte darstellt, falls für $*fetch_style* PDO::FETCH_COLUMN festgelegt ist. Der Standardwert ist 0.  
+$*column_index:* Ein ganzzahliger Wert, der die zurückzugebende Spalte darstellt, falls für $*fetch_style* PDO::FETCH_COLUMN festgelegt ist. Der Standardwert ist 0.  
   
-$*ctor_args*: Dies ist ein Array der Parameter für einen Klassenkonstruktor, wenn für $*fetch_style* PDO::FETCH_CLASS oder PDO::FETCH_OBJ festgelegt ist.  
+$*ctor_args:* Ein Array der Parameter für einen Klassenkonstruktor, wenn für $*fetch_style* PDO::FETCH_CLASS oder PDO::FETCH_OBJ festgelegt ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Ein Array der verbleibenden Zeilen im Resultset oder „false“ falls der Methodenaufruf fehlschlägt.  

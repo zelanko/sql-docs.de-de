@@ -11,10 +11,10 @@ ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac090ad8831397bf31c0911ab8a8db21486528db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015115"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Cursortypen (SQLSRV-Treiber)
@@ -27,7 +27,7 @@ Wenn Sie ein Resultset mit [sqlsrv_query](../../connect/php/sqlsrv-query.md) ode
   
 Sie können ein Resultset mit einem scrollbaren Cursor erstellen, mit dem Sie in beliebiger Reihenfolge auf alle Zeilen im Resultset zugreifen können. In den folgenden Tabellen sind die Werte aufgeführt, die an die **Scrollable**-Option in „sqlsrv_query“ oder „sqlsrv_prepare“ übergeben werden können.  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |----------|---------------|  
 |SQLSRV_CURSOR_FORWARD|Hiermit können Sie beginnend bei der ersten Zeile um jeweils eine Zeile vorrücken, bis das Ende des Resultsets erreicht ist.<br /><br />Dies ist der Standardcursortyp.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) gibt einen Fehler für Resultsets zurück, die mit diesem Cursortyp erstellt wurden.<br /><br />**forward** ist die abgekürzte Form von SQLSRV_CURSOR_FORWARD.|  
 |SQLSRV_CURSOR_STATIC|Hiermit können Sie in beliebiger Reihenfolge auf Zeilen zugreifen, aber die Änderungen in der Datenbank werden nicht widergespiegelt.<br /><br />**static** ist die abgekürzte Form von SQLSRV_CURSOR_STATIC.|  
@@ -42,7 +42,7 @@ Nach dem Erstellen eines Resultsets können Sie [sqlsrv_fetch](../../connect/php
   
 In der folgenden Tabelle werden die Werte beschrieben, die Sie im Parameter *row* angeben können.  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|Gibt die nächste Zeile an. Dies ist der Standardwert, wenn Sie den *row*-Parameter nicht für ein scrollbares Resultset festlegen.|  
 |SQLSRV_SCROLL_PRIOR|Gibt die Zeile vor der aktuellen Zeile an.|  

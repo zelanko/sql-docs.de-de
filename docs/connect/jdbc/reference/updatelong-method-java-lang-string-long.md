@@ -16,10 +16,10 @@ ms.assetid: f6003706-35de-42b1-8f23-899a388adb5b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 932035288f74c582620108db697cb898c59159bc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67999164"
 ---
 # <a name="updatelong-method-javalangstring-long"></a>updateLong-Methode (java.lang.String, long)
@@ -42,7 +42,7 @@ public void updateLong(java.lang.String columnName,
   
  *x*  
   
- Ein **long**-Wert.  
+ Ein **long**-Wert  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

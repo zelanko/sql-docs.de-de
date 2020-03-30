@@ -16,10 +16,10 @@ ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e666496383b738b11f20cd9b3d7e3a76e8613416
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198311"
 ---
 # <a name="creating-the-web-service-proxy"></a>Erstellen des Webdienstproxys
@@ -117,7 +117,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials;
   
 ```  
   
- Sie können dem Berichtsserver-Webdienstverweis auch eine **using**-Anweisung (in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] eine **Import**-Anweisung) hinzufügen. Wenn Sie diese Direktive verwenden, müssen die Typen im Namespace nicht vollqualifiziert sein. Hierfür fügen Sie dieser Datei den folgenden Code hinzu:  
+ Sie können dem Berichtsserver-Webdienstverweis auch eine **using**-Anweisung (in **eine**Import[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]-Anweisung) hinzufügen. Wenn Sie diese Direktive verwenden, müssen die Typen im Namespace nicht vollqualifiziert sein. Hierfür fügen Sie dieser Datei den folgenden Code hinzu:  
   
 ```vb  
 Import myNamespace.myReferenceName  

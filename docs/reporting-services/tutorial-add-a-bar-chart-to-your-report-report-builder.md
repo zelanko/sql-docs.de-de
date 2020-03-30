@@ -9,10 +9,10 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041181"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
@@ -30,14 +30,14 @@ Die folgende Abbildung zeigt das zu erstellende Balkendiagramm mit den Umsätzen
   
  
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Das erste Tutorial dieser Reihe enthält Schrittanleitungen zum Navigieren zu einem Berichtsserver, zum Erstellen eines Datasets und zum Auswählen einer Datenquelle: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Erstellen eines Datasets und zum Auswählen einer Datenquelle finden Sie im ersten Tutorial dieser Reihe unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Erstellen eines Diagrammberichts mithilfe des Diagramm-Assistenten  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. Erstellen eines Diagrammberichts mithilfe des Diagramm-Assistenten  
 Darin erstellen Sie ein eingebettetes Dataset, wählen eine freigegebene Datenquelle aus, und erstellen mithilfe des Diagramm-Assistenten ein Balkendiagramm.  
   
 > [!NOTE]  
@@ -87,13 +87,13 @@ Darin erstellen Sie ein eingebettetes Dataset, wählen eine freigegebene Datenqu
   
 9. Klicken Sie auf **Weiter**.  
   
-## <a name="ChartType"></a>2. Erstellen eines Balkendiagramms  
+## <a name="2-create-a-bar-chart"></a><a name="ChartType"></a>2. Erstellen eines Balkendiagramms  
  
 1.  Das Säulendiagramm ist der Standarddiagrammtyp der Seite **Diagrammtyp auswählen** .  
   
 2.  Klicken Sie auf **Balken**und anschließend auf **Weiter**.  
   
-    Auf der Seite **Diagrammfelder anordnen** stehen im Bereich **Verfügbare Felder** vier Felder zur Verfügung: FirstName, LastName, SalesYear2015 und SalesYear2014.  
+    Auf der Seite **Diagrammfelder anordnen** stehen im Bereich **Verfügbare Felder** vier Felder zur Verfügung: „FirstName“, „LastName“, „SalesYear2015“ und „SalesYear2014“.  
   
 3.  Ziehen Sie "LastName" in den Bereich "Kategorien".  
   
@@ -113,7 +113,7 @@ Darin erstellen Sie ein eingebettetes Dataset, wählen eine freigegebene Datenqu
   
 Das Balkendiagramm zeigt die Umsätze der einzelnen Vertriebsmitarbeiter in den Jahren 2014 und 2015 an. Die Balkenlänge entspricht dem jeweiligen Gesamtumsatz.  
   
-## <a name="AllValues"></a>3. Anzeigen aller Namen auf der vertikalen Achse  
+## <a name="3-display-all-the-names-on-the-vertical-axis"></a><a name="AllValues"></a>3. Anzeigen aller Namen auf der vertikalen Achse  
 Standardmäßig werden auf der vertikalen Achse nur einige der Werte angezeigt. Sie können das Diagramm so ändern, dass alle Kategorien angezeigt werden.  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
@@ -129,7 +129,7 @@ Standardmäßig werden auf der vertikalen Achse nur einige der Werte angezeigt. 
 > [!NOTE]  
 > Wenn Sie die Namen der Vertriebsmitarbeiter auf der vertikalen Achse nicht lesen können, können Sie das Diagramm vergrößern oder die Formatierungsoptionen für die Achsenbezeichnungen ändern.  
   
-### <a name="CategoryExpression"></a>Anzeigen der Nachnamen und Vornamen auf der vertikalen Achse  
+### <a name="display-last-name-and-first-name-on-vertical-axis"></a><a name="CategoryExpression"></a>Anzeigen der Nachnamen und Vornamen auf der vertikalen Achse  
 Sie können den Kategorieausdruck so ändern, dass die Nach- und Vornamen der einzelnen Vertriebsmitarbeiter angezeigt werden.  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
@@ -155,7 +155,7 @@ Sollten beim Ausführen des Berichts keine Vornamen angezeigt werden, können Si
 > [!NOTE]  
 > Wenn Sie die Namen der Vertriebsmitarbeiter auf der vertikalen Achse nicht lesen können, können Sie das Diagramm vergrößern oder die Formatierungsoptionen für die Achsenbezeichnungen ändern.  
   
-## <a name="Sort"></a>4. Ändern der Sortierreihenfolge der vertikalen Achse  
+## <a name="4-change-the-sort-order-on-the-vertical-axis"></a><a name="Sort"></a>4. Ändern der Sortierreihenfolge der vertikalen Achse  
 Beim Sortieren der Daten eines Diagramms wird die Reihenfolge der Werte auf der Kategorieachse geändert.  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
@@ -176,7 +176,7 @@ Beim Sortieren der Daten eines Diagramms wird die Reihenfolge der Werte auf der 
   
 Die Namen auf der horizontalen Achse werden von den höchsten bis zu den niedrigsten Umsätzen im Jahr 2015 sortiert, **Zeng** steht also ganz oben.  
   
-## <a name="Legend"></a>5. Verschieben der Legende  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5. Verschieben der Legende  
 Um die Lesbarkeit der Diagrammwerte zu verbessern, können Sie gegebenenfalls die Diagrammlegende verschieben. So können Sie zum Beispiel in einem Balkendiagramm mit einer horizontalen Anordnung der Balken die Legende oberhalb oder unterhalb des Diagrammbereichs platzieren. Dann bleibt horizontal mehr Platz für die Balken.  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>So zeigen Sie die Legende unterhalb des Diagrammbereichs eines Balkendiagramms an  
@@ -195,17 +195,17 @@ Um die Lesbarkeit der Diagrammwerte zu verbessern, können Sie gegebenenfalls di
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-## <a name="ChartTitle"></a>6. Benennen des Diagramms  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. Benennen des Diagramms  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Markieren Sie am oberen Diagrammrand den Text **Diagrammtitel**, und geben Sie anschließend Folgendes ein: **Umsätze für 2014 und 2015**.  
+2.  Markieren Sie am oberen Diagrammrand den Text **Diagrammtitel** , und geben Sie anschließend den Text **Umsätze für 2014 und 2015**ein.  
   
 3.  Legen Sie bei ausgewähltem Titel im Bereich „Eigenschaften“ folgende Werte fest: **Farbe** auf **Schwarz** und **Schriftgrad** auf **12 pt**. 
   
 4.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-## <a name="Horizontal"></a>7. Formatieren und Beschriften der horizontalen Achse  
+## <a name="7-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>7. Formatieren und Beschriften der horizontalen Achse  
 Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen Format angezeigt, dessen Größe automatisch an die Diagrammgröße angepasst wird. Sie können es in das Währungsformat ändern.  
    
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
@@ -226,13 +226,13 @@ Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen
   
 7.  Geben Sie im Feld **Achsentitel** den Text **Sales in thousands** ein, und drücken Sie die EINGABETASTE.  
 
-    >**Hinweis:** Während der Eingabe sieht es so aus, als würde sich das Feld „Achsentitel“ auf der vertikalen Achse befinden. Wenn Sie jedoch die EINGABETASTE drücken, wird es zur horizontalen Achse verschoben.
+    >**Hinweis:** Während Sie tippen, erscheint es so, als würde sich das Feld „Achsentitel“ auf der vertikalen Achse befinden. Wenn Sie jedoch die EINGABETASTE drücken, wird es zur horizontalen Achse verschoben.
   
 9. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
 Auf der horizontalen Achse des Berichts werden die Umsätze als Währung in Tausendern ohne Dezimalstellen angezeigt.  
   
-## <a name="Filter"></a>8. Hinzufügen eines Filters zum Anzeigen der fünf besten Werte  
+## <a name="8-add-a-filter-to-display-the-top-five-values"></a><a name="Filter"></a>8. Hinzufügen eines Filters zum Anzeigen der fünf besten Werte  
 Sie können dem Diagramm einen Filter hinzufügen, um anzugeben, welche Daten des Datasets ein- oder ausgeschlossen werden sollen.   
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
@@ -261,7 +261,7 @@ Sollten die Ergebnisse nicht gefiltert werden, wenn Sie den Bericht ausführen, 
   
 Im Diagramm werden die Namen der fünf besten Vertriebsmitarbeiter gemäß den Umsatzdaten des Jahres 2015 angezeigt.  
   
-## <a name="Title"></a>9. Hinzufügen eines Berichtstitels  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9. Hinzufügen eines Berichtstitels  
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
@@ -281,7 +281,7 @@ Im Diagramm werden die Namen der fünf besten Vertriebsmitarbeiter gemäß den U
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-## <a name="Save"></a>10. Speichern des Berichts  
+## <a name="10-save-the-report"></a><a name="Save"></a>10. Speichern des Berichts  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   

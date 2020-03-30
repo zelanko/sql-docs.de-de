@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
 ms.openlocfilehash: 90ccb4084f9dc2a2a2cd1da4f51281df147524c6
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78937670"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Entwickeln mit REST-APIs für Reporting Services
@@ -32,10 +32,10 @@ Ein REST-API-Anforderung/Antwort-Paar kann in fünf Komponenten gegliedert werde
 
 * Der **Anforderungs-URI**, der aus `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}` besteht. Obwohl der Header der Anforderungsnachricht den Anforderungs-URI enthält, erwähnen wir ihn an dieser Stelle extra, da es für viele Sprachen und Frameworks erforderlich ist, diesen separat der Anforderungsnachricht zu entnehmen.
 
-    * URI-Schema: Gibt das Protokoll an, das zum Übertragen der Anforderung verwendet wird. Zum Beispiel: `http` oder `https`.
-    * URI-Host: Gibt den Domänennamen oder die IP-Adresse des Servers an, auf dem der REST-Dienstendpunkt gehostet wird. Zum Beispiel: `myserver.contoso.com`.
-    * Ressourcenpfad: Gibt die Ressource oder die Ressourcenauflistung an, die möglicherweise mehrere Segmente enthält, die vom Dienst zur Bestimmung der Auswahl dieser Ressourcen verwendet werden. Beispielsweise kann `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` verwendet werden, um angegebene Eigenschaften für CatalogItem zu verwenden.
-    * Abfragezeichenfolge (optional): Stellt zusätzliche, einfache Parameter wie die API-Version oder die Kriterien der Ressourcenauswahl bereit.
+    * URI-Schema: gibt das Protokoll an, das zum Übertragen der Anforderung verwendet wird. Zum Beispiel: `http` oder `https`.
+    * URI-Host: gibt den Domänennamen oder die IP-Adresse des Servers an, auf dem die REST-Dienstendpunkte gehostet werden. Zum Beispiel: `myserver.contoso.com`.
+    * Ressourcenpfad: gibt die Ressource oder die Ressourcenauflistung an, die möglicherweise mehrere Segmente enthalten, die vom Dienst zur Bestimmung der Auswahl dieser Ressourcen verwendet werden. Beispielsweise kann `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` verwendet werden, um angegebene Eigenschaften für CatalogItem zu verwenden.
+    * Abfragezeichenfolge (optional): stellt zusätzliche, einfache Parameter wie die API-Version oder die Kriterien der Ressourcenauswahl bereit.
 
 * Nachrichtenheaderfelder mit HTTP-Anforderungen:
 

@@ -14,10 +14,10 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580037"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website
@@ -56,7 +56,7 @@ ms.locfileid: "65580037"
  Ein Serveradministrator oder Administrator einer Websitesammlung kann bestimmte Optionen festlegen, um zu bestimmen, ob andere Besitzer Berechtigungen festlegen können. Je nach der Ihnen zugewiesenen Berechtigungsebene können Sie möglicherweise keine SharePoint-Gruppen oder Berechtigungsebenen erstellen oder anpassen.  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>Verwenden vordefinierter SharePoint-Gruppen und Berechtigungsebenen  
- In der Produktdokumentation zu [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] wird empfohlen, SharePoint-Standardgruppen zu verwenden (d. h. **Besitzer** von *Websitename*, **Member** von *Websitename* und **Besucher** von *Websitename*) und Berechtigungen auf der Websiteebene zuzuweisen. Den meisten Benutzern sollten Sie Berechtigungen als Member der Gruppen **Besucher** von *Websitename* oder **Member** von *Websitename* zuweisen. Berechtigungen für die übergeordnete Website werden von der gesamten Websitehierarchie geerbt. Die Vererbung der Berechtigungen können Sie für bestimmte Elemente unterbrechen, für die zusätzliche Einschränkungen erforderlich sind.  
+ In der Produktdokumentation zu [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] wird empfohlen, SharePoint-Standardgruppen zu verwenden (d. h. *Besitzer* von **Websitename**, *Member* von **Websitename** und *Besucher* von **Websitename**) und Berechtigungen auf der Websiteebene zuzuweisen. Den meisten Benutzern sollten Sie Berechtigungen als Member der Gruppen *Besucher* von **Websitename** oder *Member* von **Websitename** zuweisen. Berechtigungen für die übergeordnete Website werden von der gesamten Websitehierarchie geerbt. Die Vererbung der Berechtigungen können Sie für bestimmte Elemente unterbrechen, für die zusätzliche Einschränkungen erforderlich sind.  
   
  Den aufgeführten SharePoint-Gruppen sind die folgenden vordefinierten Berechtigungsebenen zugeordnet:  
   

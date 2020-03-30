@@ -11,10 +11,10 @@ ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd0c32d753abf6b907e35daa91851acdd286f417
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500050"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Designer für SharePoint-Listenabfragen (Berichts-Generator)
@@ -54,15 +54,15 @@ ms.locfileid: "66500050"
  [Abfrageergebnisse](#QueryResults)  
  Zeigt Beispieldaten für das Resultset für die automatisch generierte Abfrage an.  
   
-###  <a name="DatabaseView"></a> Bereich "SharePoint-Listen"  
+###  <a name="sharepoint-lists-pane"></a><a name="DatabaseView"></a> Bereich "SharePoint-Listen"  
  Im Bereich "SharePoint-Listen" werden die Metadaten für Datenbankobjekte angezeigt, zu deren Anzeige Sie berechtigt sind. Diese Berechtigungen werden durch die Datenquellenverbindung und die Anmeldeinformationen bestimmt. In der hierarchischen Sicht werden Datenbankobjekte nach Datenbankschema angeordnet angezeigt. Erweitern Sie den Knoten für jedes Schema, um Tabellen, Sichten, gespeicherte Prozeduren und Tabellenwertfunktionen anzuzeigen. Erweitern Sie die Tabelle oder Sicht, um die einzelnen Spalten anzuzeigen.  
   
-###  <a name="SelectedFields"></a> Bereich Ausgewählte Felder  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> Bereich Ausgewählte Felder  
  Im Bereich "Ausgewählte Felder" werden die Listenelementfelder angezeigt, die Sie für SharePoint-Listenelemente auswählen. Die Felder, die in diesem Bereich angezeigt werden, werden zur Feldauflistung für das Berichtsdataset. Nachdem Sie ein Dataset und eine Abfrage erstellt haben, verwenden Sie den Berichtsdatenbereich, um die Feldauflistung für ein Berichtsdataset anzuzeigen. Diese Felder stellen die Daten dar, die Sie in Tabellen, Diagrammen und anderen Berichtselementen bei der Anzeige eines Berichts anzeigen können.  
   
  Aktivieren oder deaktivieren Sie im Bereich "SharePoint-Listen" die Kontrollkästchen für die Tabellen- oder Sichtfelder, um diesem Bereich Felder hinzuzufügen bzw. Felder zu entfernen.  
   
-###  <a name="AppliedFilters"></a> Bereich Angewendete Filter  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Bereich Angewendete Filter  
  Im Bereich "Angewendete Filter" werden die Kriterien angezeigt, mit denen die Anzahl von Datenzeilen begrenzt wird, die zur Laufzeit abgerufen werden. In diesem Bereich angegebene Kriterien werden verwendet, um eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -WHERE-Klausel zu generieren. Wenn Sie die Parameteroption auswählen, wird automatisch ein Berichtsparameter erstellt. Mit Berichtsparametern, die auf Abfrageparametern basieren, kann ein Benutzer Werte für die Abfrage angeben, um die Daten in dem Bericht zu steuern.  
   
  Die folgenden Spalten werden angezeigt:  
@@ -75,7 +75,7 @@ ms.locfileid: "66500050"
   
 -   **Parameter** Zeigt die Option an, mit der ein Abfrageparameter der Abfrage hinzugefügt werden kann. Verwenden Sie die Dataseteigenschaften, um die Beziehung zwischen Abfrageparameter und Berichtsparameter anzuzeigen.  
   
-###  <a name="QueryResults"></a> Bereich Abfrageergebnisse  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Bereich Abfrageergebnisse  
  Im Bereich Abfrageergebnisse werden die Ergebnisse für die automatisch generierte Abfrage angezeigt, die mit den Auswahlen in den anderen Bereichen angegeben wird. Die Spalten im Resultset entsprechen den Feldern, die Sie im Bereich Ausgewählte Felder angeben. Die Zeilendaten werden mit den Filtern begrenzt, die Sie im Bereich Angewendete Filter angeben.  
   
  Diese Daten stellen Werte aus der Datenquelle zum Zeitpunkt der Abfrageausführung dar. Die Daten werden nicht in der Berichtsdefinition gespeichert. Die eigentlichen Daten in dem Bericht werden bei der Verarbeitung des Berichts abgerufen.  
@@ -85,7 +85,7 @@ ms.locfileid: "66500050"
 ### <a name="graphical-query-designer-toolbar"></a>Symbolleiste für den grafischen Abfrage-Designer  
  Die Symbolleiste des relationalen Abfrage-Designers stellt die folgenden Schaltflächen bereit, mit denen Sie eine Abfrage angeben oder die Ergebnisse der Abfrage anzeigen können.  
   
-|Taste|Beschreibung|  
+|Taste|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Als Text bearbeiten**|Wechselt zum textbasierten Abfrage-Designer, um die automatisch generierte Abfrage anzuzeigen oder die Abfrage zu ändern.|  
 |**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Die Dateitypen SQL und RDL werden unterstützt.|  

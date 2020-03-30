@@ -15,10 +15,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241584"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Vorgehensweise: Vergleichen und Synchronisieren der Daten von zwei Datenbanken
@@ -41,7 +41,7 @@ Weitere Informationen finden Sie unter [Vergleichen und Synchronisieren von Date
 > [!NOTE]  
 > Sie können auch das *Schema* von zwei Datenbanken oder von zwei Versionen der gleichen Datenbank vergleichen. Weitere Informationen finden Sie unter [Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
-## <a name="CompareDatabaseData"></a>Vergleichen von Datenbankdaten  
+## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>Vergleichen von Datenbankdaten  
   
 #### <a name="to-compare-data-by-using-the-new-data-comparison-wizard"></a>So vergleichen Sie Daten mithilfe des Datenvergleichs-Assistenten  
   
@@ -87,7 +87,7 @@ Weitere Informationen finden Sie unter [Vergleichen und Synchronisieren von Date
   
     Die Daten in der angegebenen Quell- und Zieldatenbank werden verglichen. Die Ergebnisse erscheinen in einer Datenvergleichssitzung. Weitere Informationen zum Anzeigen von Ergebnissen oder zum Synchronisieren von Daten finden Sie unter [Anzeigen von Datenunterschieden](#ViewDifferences) bzw. unter [Synchronisieren von Datenbankdaten](#Synchronize).  
   
-## <a name="ViewDifferences"></a>Anzeigen von Datenunterschieden  
+## <a name="viewing-data-differences"></a><a name="ViewDifferences"></a>Anzeigen von Datenunterschieden  
 Nach dem Vergleich der Daten in zwei Datenbanken werden beim Datenvergleich alle verglichenen *Datenbankobjekte* sowie deren Status aufgeführt. Sie können auch Ergebnisse für die Datensätze in den einzelnen Objekten (gruppiert nach Status) anzeigen. Weitere Informationen zu den Zustandsbezeichnungen finden Sie unter [Vergleichen und Synchronisieren von Daten in einer oder mehreren Tabellen anhand von Daten aus einer Verweisdatenbank](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 Nachdem Sie sich die Unterschiede angesehen haben, können Sie einige oder alle unterschiedlichen, fehlenden oder neuen Objekte oder Datensätze des Ziels aktualisieren, sodass sie der Quelle entsprechen. Weitere Informationen finden Sie unter [Synchronisieren von Datenbankdaten](#Synchronize).  
@@ -102,7 +102,7 @@ Nachdem Sie sich die Unterschiede angesehen haben, können Sie einige oder alle 
   
     -   Wenn Sie Ergebnisse für Datensätze innerhalb eines bestimmten Objekts anzeigen möchten, klicken Sie im Hauptergebnisbereich auf das gewünschte Objekt, und klicken Sie anschließend im Bereich mit der Datensatzansicht auf eine Registerkarte. Jede Registerkarte zeigt sämtliche Datensätze innerhalb des Objekts, die einen bestimmten Status besitzen: Unterschiedliche Datensätze, Nur in der Quelle, Nur im Ziel oder Identische Datensätze. Die Daten sind nach Datensatz und Spalte sortiert.  
   
-## <a name="Synchronize"></a>Synchronisieren von Datenbankdaten  
+## <a name="synchronizing-database-data"></a><a name="Synchronize"></a>Synchronisieren von Datenbankdaten  
 Nach dem Vergleich der Daten in zwei Datenbanken können Sie die Datenbanken synchronisieren, indem Sie das Ziel ganz oder teilweise aktualisieren, sodass es der Quelle entspricht. Sie können Daten aus zwei Arten von Datenbankobjekten vergleichen: Tabellen und Sichten.  
   
 #### <a name="to-update-target-data-by-using-the-write-updates-command"></a>So aktualisieren Sie Zieldaten mithilfe des Befehls "Updates schreiben"  

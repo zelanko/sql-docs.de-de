@@ -8,10 +8,10 @@ ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
 ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244401"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Konfigurieren eines Berichtsservers in einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich)
@@ -40,7 +40,7 @@ ms.locfileid: "75244401"
 |6|Konfigurieren Sie **Hostname** und **UrlRoot** so, dass die IP des virtuellen Servers des NLB-Clusters verwendet wird.|[So konfigurieren Sie HostName und UrlRoot](#SpecifyingVirtualServerName) in diesem Thema.|  
 |7|Überprüfen Sie, ob der Zugriff auf die Server mit dem angegebenen Hostnamen möglich ist.|[Überprüfen des Zugriffs auf Berichtsserver](#Verify) in diesem Thema.|  
   
-## <a name="ViewState"></a> Vorgehensweise: Konfigurieren der Anzeigestatusüberprüfung
+## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> Vorgehensweise: Konfigurieren der Anzeigestatusüberprüfung
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Cluster müssen Sie die Anzeigestatusüberprüfung konfigurieren, sodass Benutzer interaktive HTML-Berichte anzeigen können.  Dies müssen Sie für den Berichtsserver-Webdienst durchführen.
@@ -92,7 +92,7 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
 
 ::: moniker-end
 
-## <a name="SpecifyingVirtualServerName"></a> So konfigurieren Sie HostName und UrlRoot
+## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> So konfigurieren Sie HostName und UrlRoot
 
  Wenn Sie eine Berichtsserverbereitstellung für horizontales Skalieren in einem NLB-Cluster konfigurieren möchten, müssen Sie den Namen eines einzelnen virtuellen Servers definieren, der einen einzelnen Zugriffspunkt für den Servercluster bietet. Registrieren Sie den Namen dieses virtuellen Servers dann beim DNS-Server in der Umgebung.  
   
@@ -122,7 +122,7 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
   
 6. Wiederholen Sie diese Schritte jeweils in der Datei RSReportServer.config für alle Berichtsserver in der Bereitstellung für horizontales Skalieren.  
   
-## <a name="Verify"></a> Überprüfen des Zugriffs auf Berichtsserver
+## <a name="verify-report-server-access"></a><a name="Verify"></a> Überprüfen des Zugriffs auf Berichtsserver
 
  Überprüfen Sie, ob Sie auf die Bereitstellung für horizontales Skalieren über den Namen des virtuellen Servers (z.B. `https://MyVirtualServerName/reportserver` und `https://MyVirtualServerName/reports`) zugreifen können.  
   

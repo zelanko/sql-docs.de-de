@@ -9,13 +9,13 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63042973"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatieren von Text (Berichts-Generator)
+# <a name="tutorial-format-text-report-builder"></a>Lernprogramm: Formatieren von Text (Berichts-Generator)
 
 In diesem Tutorial formatieren Sie in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht Text auf verschiedene Weise. Sie können mit unterschiedlichen Formaten experimentieren. 
 
@@ -25,12 +25,12 @@ Nach dem Einrichten des leeren Berichts mit der Datenquelle und dem Dataset kön
   
 In einem Schritt machen Sie absichtlich einen Fehler, um dadurch erkennen zu können, warum es sich um einen Fehler handelt. Anschließend beheben Sie den Fehler, um den gewünschten Effekt zu erreichen.  
     
-Geschätzte Zeit zum Bearbeiten dieses Tutorials: 20 Minuten  
+Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateReport"></a>Erstellen eines leeren Berichts mit einer Datenquelle und einem Dataset  
+## <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>Erstellen eines leeren Berichts mit einer Datenquelle und einem Dataset  
   
 ### <a name="to-create-a-blank-report"></a>So erstellen Sie einen leeren Bericht  
   
@@ -67,7 +67,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 2.  Vergewissern Sie sich, dass die Datenquelle **TextDataSource**ist.  
   
-3.  Geben Sie im Feld **Name** Folgendes ein: **TextDataset.**  
+3.  Geben Sie im Feld **Name** Folgendes ein: **TextDataset**.  
   
 4.  Überprüfen Sie, ob der Abfragetyp **Text** ausgewählt ist, und klicken Sie anschließend auf **Abfrage-Designer**.  
   
@@ -119,7 +119,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
 
 9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="AddField"></a>Hinzufügen eines Felds zur Berichtsentwurfsoberfläche  
+## <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>Hinzufügen eines Felds zur Berichtsentwurfsoberfläche  
 Wenn Sie möchten, dass ein Feld aus dem Dataset in einem Bericht erscheint, werden Sie möglicherweise zunächst versuchen, das Feld direkt auf die Entwurfsoberfläche zu ziehen. Diese Übung zeigt auf, warum dies nicht funktioniert und wie stattdessen vorzugehen ist.  
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>So fügen Sie dem Bericht ein Feld hinzu (und erhalten das falsche Ergebnis)  
@@ -174,7 +174,7 @@ Wenn Sie möchten, dass ein Feld aus dem Dataset in einem Bericht erscheint, wer
   
 7.  Wählen Sie das Listenfeld aus, und drücken Sie die ENTF-TASTE.  
   
-## <a name="AddTable"></a>Hinzufügen einer Tabelle zur Berichtsentwurfsoberfläche  
+## <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>Hinzufügen einer Tabelle zur Berichtsentwurfsoberfläche  
 Erstellen Sie diese Tabelle, damit Sie Hyperlinks und den gedrehten Text an einer bestimmten Stelle ablegen können.   
   
 1.  Klicken Sie auf der Registerkarte **Einfügen** auf **Tabelle** > **Tabellen-Assistent**.  
@@ -209,7 +209,7 @@ Erstellen Sie diese Tabelle, damit Sie Hyperlinks und den gedrehten Text an eine
     
     ![Berichts-Generator-Format-eine-Gesamt](../reporting-services/media/report-builder-format-one-total.png)
   
-## <a name="AddHyperlink"></a>Hinzufügen eines Links zum Bericht  
+## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Hinzufügen eines Links zum Bericht  
 In diesem Abschnitt fügen Sie dem Text in der Tabelle aus dem vorherigen Abschnitt einen Link hinzu.  
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
@@ -234,7 +234,7 @@ In diesem Abschnitt fügen Sie dem Text in der Tabelle aus dem vorherigen Abschn
   
 10. Klicken Sie auf einen Link. Wenn der Computer mit dem Internet verbunden ist, wird vom Browser ein Hilfethema zu Berichts-Generator geöffnet.  
   
-## <a name="RotateText"></a>Drehen von Text im Bericht  
+## <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>Drehen von Text im Bericht  
 In diesem Abschnitt drehen Sie Text in der Tabelle aus den vorherigen Abschnitten.  
  
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
@@ -260,7 +260,7 @@ Nun verläuft der Text in der `[Territory]` -Zelle in den Zellen vertikal von un
 
 ![Berichts-Generator-Format-270 Grad-drehen](../reporting-services/media/report-builder-format-rotate-270.png)
 
-## <a name="FormatCurrency"></a>Formatieren von Währung  
+## <a name="format-currency"></a><a name="FormatCurrency"></a>Formatieren von Währung  
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
@@ -280,7 +280,7 @@ Im Bericht werden nun formatierte Daten angezeigt, und die Lesbarkeit wurde verb
 
 ![Bericht-Erstellen-Format-Bericht](../reporting-services/media/report-build-format-report.png)
     
-## <a name="FormatHTML"></a>Anzeigen von Text mit HTML-Formatierung  
+## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Anzeigen von Text mit HTML-Formatierung  
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
@@ -322,7 +322,7 @@ Der Text im Textfeld wird als Überschrift, Absatz und Aufzählung angezeigt.
   
 ![Berichts-Generator-Format-HTML](../reporting-services/media/report-builder-format-html.png)
 
-## <a name="Save"></a>Speichern des Berichts  
+## <a name="save-the-report"></a><a name="Save"></a>Speichern des Berichts  
 Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek oder auf dem Computer speichern.  
   
 Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn Sie keinen Zugriff auf einen Berichtsserver besitzen, speichern Sie den Bericht auf dem Computer.  
@@ -355,7 +355,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Es gibt in Berichts-Generator viele Möglichkeiten, um Text zu formatieren. [Tutorial: Erstellen eines Freiformberichts](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
+Es gibt in Berichts-Generator viele Möglichkeiten, um Text zu formatieren. Das [Tutorial: Erstellen eines Freiformberichts](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
 
 [Tutorials für den Bericht-Generator](../reporting-services/report-builder-tutorials.md) 
 [Formatieren von Berichtselementen](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

@@ -28,10 +28,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256319"
 ---
 # <a name="transact-sql-editor-options"></a>Optionen des Transact-SQL-Editors
@@ -42,9 +42,9 @@ Dieses Thema enthält Informationen zu einigen der Optionen des Transact-SQL-Edi
   
 [Abfrageergebnisse](#QueryResults)  
   
-## <a name="QueryExecution"></a>Abfrageausführung  
+## <a name="query-execution"></a><a name="QueryExecution"></a>Abfrageausführung  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |------------|---------------|  
 |**SET ROWCOUNT**|Der Standardwert 0 zeigt an, dass SQL Server so lange auf die Ergebnisse wartet, bis alle Ergebnisse übermittelt sind. Geben Sie einen Wert größer 0 an, wenn die Abfrage von SQL Server nach Übermittlung einer bestimmten Anzahl von Zeilen abgebrochen werden soll. Geben Sie SET ROWCOUNT 0 an, um diese Option zu deaktivieren (sodass alle Zeilen zurückgegeben werden).|  
 |**SET TEXTSIZE**|Der Standardwert von 2.147.483.647 Bytes zeigt an, dass SQL Server ein vollständiges Datenfeld bereitstellt, das maximal der Größe von text-, ntext-, nvarchar(max)- und varchar(max)-Datenfeldern entspricht. Dies hat keine Auswirkungen auf den XML-Datentyp. Geben Sie eine kleinere Zahl an, um Ergebnisse mit großen Werten zu beschränken. Spalten, deren Größe die angegebene Zahl übersteigt, werden abgeschnitten.|  
@@ -70,9 +70,9 @@ Dieses Thema enthält Informationen zu einigen der Optionen des Transact-SQL-Edi
 |**SET ANSI_WARNINGS**|Gibt das SQL-92-Standardverhalten für verschiedene Fehlerbedingungen an. Weitere Informationen finden Sie unter [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758).|  
 |**SET ANSI_NULLS**|Gibt das SQL-92-kompatible Verhalten für den Gleichheits- ( **=** ) und den Ungleichheits-Vergleichsoperator ( **<>** ) bei Verwendung von NULL-Werten an. Weitere Informationen finden Sie unter [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
   
-## <a name="QueryResults"></a>Abfrageergebnisse  
+## <a name="query-results"></a><a name="QueryResults"></a>Abfrageergebnisse  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |------------|---------------|  
 |**Abfrage in das Resultset einschließen**|Gibt den Text der Abfrage als Teil des Resultsets zurück.|  
 |**Spaltenheader beim Kopieren oder Speichern der Ergebnisse einschließen**|Schließt Spaltenheader (Titel) ein, wenn Ergebnisse in die Zwischenablage kopiert oder in einer Datei gespeichert werden. Deaktivieren Sie dieses Kontrollkästchen, wenn Sie nur die Ergebnisdaten und nicht die Spaltenheader speichern oder kopieren möchten.|  

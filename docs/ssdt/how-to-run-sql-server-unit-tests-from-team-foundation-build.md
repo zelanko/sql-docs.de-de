@@ -11,19 +11,19 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244293"
 ---
-# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Gewusst wie: Ausführen von SQL Server-Komponententests aus Team Foundation Build
+# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Vorgehensweise: Ausführen von SQL Server-Komponententests aus Team Foundation Build
 
 Sie können Team Foundation Build verwenden, um SQL Server-Komponententests im Rahmen eines Buildüberprüfungstests (Build Verification Test, BVT) auszuführen. Komponententests können so konfiguriert werden, dass sie die Datenbank bereitstellen, Testdaten generieren und ausgewählte Tests ausführen. Wenn Sie mit Team Foundation Build nicht vertraut sind, sollten Sie die folgenden Informationen lesen, bevor Sie die Schritte in diesem Thema ausführen:  
   
 -   [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Vorgehensweise: Konfigurieren und Ausführen von geplanten Tests nach dem Erstellen der Anwendung](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Gewusst wie: Konfigurieren und Ausführen von geplanten Tests nach dem Erstellen der Anwendung](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
 -   [Erstellen oder Bearbeiten einer Builddefinition](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
@@ -67,7 +67,7 @@ Wenn Sie Komponententests auf einem Buildcomputer ausführen, sind die Komponent
   
 Zur Lösung dieser Probleme müssen Sie einen Überschreibungsabschnitt in der Datei app.config angeben, durch den app.config mit einer Konfigurationsdatei überschrieben wird, die spezifisch für die Team Foundation Build-Umgebung ist. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Ändern des Testprojekts](#ModifyTestProject).  
   
-## <a name="ConfigureX64"></a>Konfigurieren von Testeinstellungen zum Ausführen von SQL Server-Komponententests unter einem x64-Build-Agent  
+## <a name="configure-test-settings-to-run-sql-server-unit-tests-on-an-x64-build-agent"></a><a name="ConfigureX64"></a>Konfigurieren von Testeinstellungen zum Ausführen von SQL Server-Komponententests unter einem x64-Build-Agent  
 Bevor Sie Komponententests unter einem x64-Build-Agent ausführen können, müssen Sie die Testeinstellungen konfigurieren, um die Hostprozessplattform zu wechseln.  
   
 #### <a name="to-specify-the-host-process-platform"></a>So geben Sie die Hostprozessplattform an  
@@ -84,7 +84,7 @@ Bevor Sie Komponententests unter einem x64-Build-Agent ausführen können, müss
   
 5.  Klicken Sie auf **Anwenden**.  
   
-## <a name="CreateATestList"></a>Zuweisen von Tests zu einer Testkategorie (optional)  
+## <a name="assign-tests-to-a-test-category-optional"></a><a name="CreateATestList"></a>Zuweisen von Tests zu einer Testkategorie (optional)  
 Wenn Sie eine Builddefinition zum Ausführen von Komponententests erstellen, geben Sie normalerweise mindestens eine Testkategorie an. Alle Tests in den angegebenen Kategorien werden zusammen mit dem Build ausgeführt.  
   
 #### <a name="to-assign-tests-to-a-test-category"></a>So weisen Sie einer Testkategorie Tests zu  
@@ -101,7 +101,7 @@ Wenn Sie eine Builddefinition zum Ausführen von Komponententests erstellen, geb
   
     Die neue Testkategorie wird dem Test zugewiesen und den anderen Tests über ihre Eigenschaften zur Verfügung gestellt.  
   
-## <a name="ModifyTestProject"></a>Ändern des Testprojekts  
+## <a name="modify-the-test-project"></a><a name="ModifyTestProject"></a>Ändern des Testprojekts  
 Team Foundation Build erstellt standardmäßig eine Konfigurationsdatei aus der Datei app.config des Projekts, wenn das Komponententestprojekt erstellt wird. Der Pfad zum Datenbankprojekt wird als relativer Pfad in der Datei „app.config“ gespeichert. Die relativen Pfade, die in Visual Studio funktionieren, sind nicht kompatibel, weil Team Foundation Build die erstellten Dateien – je nachdem, wo die Komponententests ausgeführt werden – an verschiedenen Orten ablegt. Zusätzlich enthält die Datei app.config die Verbindungszeichenfolgen, in denen die zu testende Datenbank angegeben ist. Darüber hinaus benötigen Sie eine separate Datei app.config für Team Foundation Build, wenn die Komponententests eine Verbindung mit einer anderen Datenbank als der Datenbank herstellen müssen, die bei der Erstellung des Testprojekts verwendet wurde. Durch die in den folgenden Schritten vorgenommenen Änderungen können Sie das Testprojekt und den Buildserver so einrichten, dass Team Foundation Build eine andere Konfiguration verwendet.  
   
 > [!IMPORTANT]  
@@ -205,7 +205,7 @@ Team Foundation Build erstellt standardmäßig eine Konfigurationsdatei aus der 
   
     Als Nächstes checken Sie die Projektmappe in die Versionskontrolle ein.  
   
-## <a name="CheckInTheTestList"></a>Einchecken der Projektmappe  
+## <a name="check-in-the-solution"></a><a name="CheckInTheTestList"></a>Einchecken der Projektmappe  
 In dieser Prozedur checken Sie alle Dateien der Projektmappe ein. Diese Dateien enthalten die Testmetadatendatei der Projektmappe, in der die Testkategoriezuweisungen und -tests enthalten sind. Sobald Sie Testinhalt hinzufügen, löschen, neu anordnen oder ändern, wird die Testmetadatendatei automatisch anhand dieser Änderungen aktualisiert.  
   
 > [!NOTE]  
@@ -234,7 +234,7 @@ In dieser Prozedur checken Sie alle Dateien der Projektmappe ein. Diese Dateien 
   
     Die Tests stehen Team Foundation Build zur Verfügung. Sie können jetzt eine Builddefinition erstellen, in der die auszuführenden Tests enthalten sind.  
   
-## <a name="CreateBuildDef"></a>Erstellen einer Builddefinition  
+## <a name="create-a-build-definition"></a><a name="CreateBuildDef"></a>Erstellen einer Builddefinition  
   
 #### <a name="to-create-a-build-definition"></a>So erstellen Sie eine Builddefinition  
   
@@ -264,11 +264,11 @@ In dieser Prozedur checken Sie alle Dateien der Projektmappe ein. Diese Dateien 
   
 10. Geben Sie in der Gruppe **Standard** unter **Automatisierte Tests** die Tests an, die Sie ausführen möchten. Standardmäßig werden die Tests ausgeführt, die in der Projektmappe in Dateien mit dem Namen „\*test\*.dll“ enthalten sind.  
   
-11. Klicken Sie im Menü **Datei** auf *Projektname* **speichern**.  
+11. Klicken Sie im Menü **Datei** auf **Projektname** *speichern*.  
   
     Die Builddefinition ist jetzt erstellt. Als Nächstes ändern Sie das Testprojekt.  
   
-## <a name="RunBuild"></a>Ausführen der neuen Builddefinition  
+## <a name="run-the-new-build-definition"></a><a name="RunBuild"></a>Ausführen der neuen Builddefinition  
   
 #### <a name="to-run-the-new-build-type"></a>So führen Sie den neuen Buildtyp aus  
   

@@ -11,16 +11,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a90d00957310c64f908816198a47e4c3ba7293b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979512"
 ---
 # <a name="getstatementpoolingcachesize-method-sqlserverdatasource"></a>getStatementPoolingCacheSize-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Diese Methode gibt den Wert der Verbindungseigenschaft **statementPoolingCacheSize** zurück. Sie gibt die Größe des Prepared Statement-Caches für diese Verbindung zurück. 0 (null) bedeutet, dass das Zwischenspeichern nicht aktiviert ist.
+  Diese Methode gibt den Wert der Verbindungseigenschaft **statementPoolingCacheSize** zurück. Gibt die Größe des Caches für Prepared Statements für diese Verbindung zurück 0 (null) bedeutet, dass das Zwischenspeichern nicht aktiviert ist.
   
 ## <a name="syntax"></a>Syntax  
   

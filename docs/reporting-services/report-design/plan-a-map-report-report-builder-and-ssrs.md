@@ -9,10 +9,10 @@ ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0b90397a154836f41659aba858f55e28502e2741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082418"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planen eines Kartenberichts (Berichts-Generator und SSRS)
@@ -21,7 +21,7 @@ Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Vers
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a> Angeben des Zweckes der Karte  
+##  <a name="specify-the-purpose-of-the-map"></a><a name="MapPurpose"></a> Angeben des Zweckes der Karte  
  Ein gut entworfener Bericht stellt Informationen bereit, die Benutzern helfen, sich ihren Anliegen zu widmen. Um eine nützliche, leicht verständliche Kartenansicht zu erstellen, entscheiden Sie, welchen Fragen Sie mit der Karte beantworten wollen. Sie können beispielsweise auf einer Karte die folgenden Arten von Daten visuell darstellen, um Marktchanchen zu identifizieren:  
   
 -   Anteilige Verkäufe in jedem Laden.  
@@ -34,7 +34,7 @@ Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Vers
   
  Nachdem Sie den Zweck der Kartenansicht identifiziert haben, müssen Sie analysieren, welche Daten Sie benötigen. Analytische Daten stammen aus Berichtsdatasets. Standortdaten stammen aus räumlichen Datenquellen, die Sie angeben müssen.  
   
-##  <a name="Data"></a> Angeben der räumlichen und analytischen Daten  
+##  <a name="specify-the-spatial-and-analytical-data"></a><a name="Data"></a> Angeben der räumlichen und analytischen Daten  
  Sie müssen angeben, welche räumlichen und analytischen Daten Sie benötigen.  
   
  Analytische Daten können aus einem Berichtsdataset, aus Beispieldaten einer Karte aus dem Kartenkatalog oder aus analytischen Daten, die in den räumlichen Daten einer ESRI-Shape-Datei enthalten sind, stammen.  
@@ -92,7 +92,7 @@ Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Vers
   
  Wenn Sie die räumliche Datenquelle, die räumlichen Daten, die analytische Datenquelle, die analytischen Daten und die Übereinstimmungsfelder identifiziert haben, sind Sie bereit, zu entscheiden, welcher Typ von Karte dem Bericht hinzugefügt werden soll.  
   
-##  <a name="MapType"></a> Auswählen eines Kartentyps  
+##  <a name="choose-a-map-type"></a><a name="MapType"></a> Auswählen eines Kartentyps  
  Bei der Ausführung des Karten-Assistenten fügen Sie dem Bericht eine Karte und die erste Kartenebene hinzu. Mit dem Assistenten können Sie dem Bericht einen der folgenden Typen von Karten hinzufügen:  
   
 -   Eine Standardkarte, die Standorte ohne zugeordnete analytische Daten anzeigt.  
@@ -118,7 +118,7 @@ Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Vers
   
  Sie können die Anzeige oder die Datenoptionen für jede Ebene unabhängig anpassen. Weitere Informationen zum Anpassen einer Karte nach Ausführung des Assistenten finden Sie unter [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a> Planen von Legenden  
+##  <a name="plan-for-legends"></a><a name="Legend"></a> Planen von Legenden  
  Um den Benutzern die Interpretation einer Karte zu erleichtern, können Sie mehrere Kartenlegenden, eine Farbskala und eine Entfernungsskala hinzufügen. Planen Sie beim Entwerfen einer Karte, wo die Legenden angezeigt werden sollen. Sie können die folgenden Informationen zu jeder Legende angeben:  
   
 -   **Ort der Legende.** Legenden können beispielsweise innerhalb oder außerhalb des Viewports angezeigt werden, sowie an 12 diskreten Orten relativ zum Viewport.  
@@ -135,7 +135,7 @@ Gute Berichte enthalten Informationen, die als Grundlage für Aktionen oder Vers
   
  Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md) und [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Embedding"></a> Finden eines Gleichgewichts zwischen Definitionsgröße und Verarbeitungszeit des Berichts  
+##  <a name="balance-report-definition-size-and-report-processing-time"></a><a name="Embedding"></a> Finden eines Gleichgewichts zwischen Definitionsgröße und Verarbeitungszeit des Berichts  
  Um Berichte für Karten gut zu entwerfen, müssen Sie ein Gleichgewicht zwischen den Optionen finden, die die Leistung und die Definitionsgröße des Berichts steuern. Kartenelemente, die auf räumlichen Daten oder Bing-Kartenkacheln basieren, können statisch sein und in die Berichtsdefinition eingebettet werden oder dynamisch sein und bei jeder Verarbeitung des Berichts erstellt werden. Sie müssen die Zielkonflikte für statische und dynamische Kartendaten bewerten und das für Ihre Situation angemessene Gleichgewicht suchen. Beachten Sie die folgenden Informationen, um diese Entscheidung zu treffen:  
   
 -   Eingebettete Kartenelemente können die Größe der Berichtsdefinition bedeutend erhöhen, aber reduzieren die Zeit, die erforderlich ist, um die Karte im Bericht anzuzeigen. Möglicherweise gelten für den Berichtsserver Größenbeschränkungen, die Sie berücksichtigen müssen.  

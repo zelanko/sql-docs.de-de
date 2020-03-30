@@ -11,10 +11,10 @@ ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a77d0b930b15d287a010e141c256c9bf311dc303
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081802"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator und SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "77081802"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Overview"></a> Grundlegendes zu Berichtsdatasets und Abfragen  
+##  <a name="understanding-report-datasets-and-queries"></a><a name="Overview"></a> Grundlegendes zu Berichtsdatasets und Abfragen  
  Ein Berichtsdataset enthält einen Abfragebefehl, der für die externe Datenquelle ausführt wird und angibt, welche Daten abgerufen werden sollen. Zum Erstellen des Abfragebefehls verwenden Sie den Abfrage-Designer, der mit der Datenerweiterung für die externe Datenquelle verknüpft ist. Im Abfrage-Designer können Sie den Abfragebefehl ausführen und ein Resultset anzeigen. Das Resultset ist ein rechteckiges Rowset, das Spaltennamen und Zeilen mit der gleichen Anzahl von Werten in jeder Zeile hat. Hierarchische Daten, die auch als *unregelmäßige Hierarchien*bezeichnet werden, werden nicht unterstützt. Die Spaltennamen werden als eine Liste von Datasetfeldern in der Berichtsdefinition gespeichert.  
   
  Nachdem Sie dem Bericht Datasets hinzugefügt haben, ziehen Sie Felder aus den entsprechenden Feldauflistungen im Berichtsdatenbereich in Tabellen, Diagramme und andere Berichtselemente, die Sie zum Entwerfen des Berichtslayouts verwenden. Weitere Informationen zum Arbeiten mit Feldern finden Sie unter [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
@@ -111,7 +111,7 @@ ms.locfileid: "77081802"
   
  Nur die Dateitypen SQL und RDL werden unterstützt. Multidimensional Expression-Abfragen (MDX), Data Mining Prediction-Abfragen (DMX) und Modellabfragen (SMQL) können nur mit dem entsprechenden Abfrage-Designer generiert werden.  
   
-##  <a name="Compare"></a> Vergleichen und Erstellen von freigegebene Datasets und eingebetteten Datasets  
+##  <a name="comparing-and-creating-shared-datasets-and-embedded-datasets"></a><a name="Compare"></a> Vergleichen und Erstellen von freigegebene Datasets und eingebetteten Datasets  
  Ein eingebettetes Dataset wird in einem Bericht oder einem veröffentlichten Berichtsteil definiert. Änderungen am eingebetteten Dataset wirken sich nur auf diesen Bericht oder diesen Berichtsteil aus.  
   
  Ein freigegebenes Dataset wird auf einem Berichtsserver oder einer SharePoint-Website definiert, basiert auf einer freigegebenen Datenquelle und kann von mehreren Berichten und Berichtsteilen verwendet werden. Änderungen an der Definition eines freigegebenen Datasets wirken sich auf alle Berichte und alle Berichtsteile, die es verwenden, aus.  
@@ -151,7 +151,7 @@ ms.locfileid: "77081802"
   
  Weitere Informationen zum Erstellen von Datasets finden Sie unter [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) und [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md) in der [Reporting Services-Dokumentation](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
-##  <a name="SortGroupFilter"></a> Filtern, Sortieren und Gruppieren von Daten in einem Dataset  
+##  <a name="filtering-sorting-and-grouping-data-in-a-dataset"></a><a name="SortGroupFilter"></a> Filtern, Sortieren und Gruppieren von Daten in einem Dataset  
  Die Daten in einem Dataset stammen aus einer externen Datenquelle, für die ein Abfragebefehl ausgeführt wurde. Die Abfragebefehlssyntax für eine Datenerweiterung bestimmt, ob Daten sortiert oder gruppiert werden können. Das Sortierend und Gruppieren findet in der Abfrage statt, bevor die Daten für einen Bericht abgerufen werden. Das Filtern findet statt, nachdem die Daten für einen Bericht abgerufen wurden.  
   
  Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
@@ -173,7 +173,7 @@ ms.locfileid: "77081802"
 ### <a name="grouping-data-in-a-dataset"></a>Gruppieren von Daten in einem Dataset  
  Sie können keine Daten in einem Dataset gruppieren. Um Daten in einem Dataset zu aggregieren, können Sie den Abfragebefehl so bearbeiten, dass Aggregate berechnet werden, bevor die Daten für einen Bericht abgerufen werden. Diese Werte werden als *Serveraggregate*bezeichnet. Verwenden Sie in Ausdrücken die Aggregatfunktion, um diese Werte als vorausberechnete Aggregate zu identifizieren. Weitere Informationen finden Sie unter [Aggregatfunktion &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
-##  <a name="Parameters"></a> Verwenden von Parametern und Datasets  
+##  <a name="using-parameters-and-datasets"></a><a name="Parameters"></a> Verwenden von Parametern und Datasets  
  Für eine eingebettete Datasetabfrage mit Abfragevariablen werden automatisch entsprechende Abfrageparameter und entsprechende Berichtsparameter erstellt. Beim Ausführen des Berichts wird der Wert des Berichtsparameters mit dem Datasetabfrageparameter verknüpft. Auf diese Weise schließt der Abfragebefehl, der für die externe Datenquelle ausgeführt wird, die Werte ein, die für Berichtsparameter angegeben werden. Berichtsparameter ermöglichen einem Benutzer, die Daten auszuwählen, die im Bericht angezeigt werden sollen. Auf der Seite „Dataseteigenschaften (Dialogfeld), Parameter“ können Sie einsehen, wie Abfrage- und Berichtsparameter miteinander verknüpft sind.  
   
  Bei einem freigegebenen Dataset sind Abfrageparameter Teil der Definition des freigegebenen Datasets, die auf dem Berichtsserver unabhängig von einem Bericht verwaltet werden kann. In der folgenden Liste ist die Unterstützung für Abfrageparameterwerte aufgeführt:  
@@ -195,10 +195,10 @@ ms.locfileid: "77081802"
 ### <a name="displaying-hidden-datasets"></a>Anzeigen ausgeblendeter Datasets  
  Wenn Sie für einige mehrdimensionale Datenquellen eine parametrisierte Abfrage erstellen, werden Datasets, die gültige Werte für den Parameter bereitstellen, automatisch erstellt. Bei einigen Abfrage-Designern führen Sie dies durch, indem Sie Filter festlegen und anschließend die Option zum Erstellen von Parametern auswählen. Standardmäßig werden diese Datasets nicht im Berichtsdatenbereich angezeigt, sie können jedoch eingeblendet werden. Weitere Informationen finden Sie unter [Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
-##  <a name="Maps"></a> Verwenden von Karten und Datasets  
+##  <a name="using-maps-and-datasets"></a><a name="Maps"></a> Verwenden von Karten und Datasets  
  Wenn Sie eine Karte in den Bericht einschließen, müssen Sie räumliche Daten bereitstellen. Räumliche Daten können aus einem Berichtsdataset, aus einer Karte im Kartenkatalog oder aus ESRI-Shape-Dateien stammen. Räumliche Daten aus einem Bericht oder aus einer ESRI-Shape-Datei werden im Berichtsdatenbereich nicht als Dataset angezeigt. Weitere Informationen finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-##  <a name="Multiple"></a> Anzeigen von Daten aus mehreren Datasets  
+##  <a name="displaying-data-from-multiple-datasets"></a><a name="Multiple"></a> Anzeigen von Daten aus mehreren Datasets  
  Ein Bericht enthält i. d. R. mehr als ein Dataset. In der folgenden Liste ist die Verwendung von Datasets in einem Bericht beschrieben:  
   
 -   Sie zeigen die Daten aus jedem Dataset mithilfe eines separaten Datenbereichs an. Weitere Informationen finden Sie unter [Data Regions and Maps (Report Builder and SSRS) (Datenbereiche und Karten (Berichts-Generator und SSRS))](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
@@ -211,10 +211,10 @@ ms.locfileid: "77081802"
   
 -   Detaildaten aus mehreren Datasets in einem einzelnen Datenbereich können nicht angezeigt werden. Jedoch können Sie für mehrere Datasets innerhalb eines Datenbereichs Werte von Aggregat- oder integrierten Funktionen anzeigen. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md). Wenn Sie Detaildaten aus mehreren Datasets zu einem Datenbereich kombinieren müssen, muss die Abfrage so umgeschrieben werden, dass die Daten als einzelnes Dataset abgerufen werden.  
   
-##  <a name="NoRows"></a> Anzeigen einer Meldung, wenn keine Datenzeilen verfügbar sind  
+##  <a name="displaying-a-message-when-no-rows-of-data-are-available"></a><a name="NoRows"></a> Anzeigen einer Meldung, wenn keine Datenzeilen verfügbar sind  
  Wenn während der Berichtsverarbeitung die Abfrage für ein Dataset ausgeführt wird, enthält das Resultset möglicherweise keine Zeilen. Im gerenderten Bericht wird ein mit einem leeren Dataset verknüpfter Datenbereich als leerer Datenbereich angezeigt. Sie können Text angeben, der im gerenderten Bericht anstelle des leeren Datenbereichs angezeigt werden soll. Wenn die Abfragen für sämtliche Datasets zur Laufzeit keine Daten zurückgeben, können Sie auch eine Meldung für Unterberichte festlegen. Weitere Informationen finden Sie unter [Festlegen einer Meldung über fehlende Daten für einen Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="Options"></a> Festlegen von Datasetoptionen  
+##  <a name="setting-dataset-options"></a><a name="Options"></a> Festlegen von Datasetoptionen  
  Bei Datenquellen, die internationale Daten unterstützen, müssen Sie möglicherweise die Eigenschaften für ein Dataset anpassen, die sich auf die Sortierreihenfolge, internationale Zeicheneigenschaften und Berücksichtigung der Groß- und Kleinschreibung auswirken. Zu diesen Eigenschaften zählen Groß-/Kleinschreibung, Kanatyp, Breite, Akzent und Sortierung. Weitere Informationen zum Festlegen dieser Eigenschaften finden Sie unter [Dataset Properties Dialog Box, Options (Report Builder) (Dataseteigenschaften (Dialogfeld), Optionen (Berichts-Generator))](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

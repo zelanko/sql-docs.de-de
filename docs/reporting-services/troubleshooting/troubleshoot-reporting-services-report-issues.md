@@ -9,10 +9,10 @@ ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573879"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Problembehandlung bei Reporting Services-Problemen mit Berichten
@@ -34,7 +34,7 @@ Wenn Sie einen veröffentlichten Bericht im Berichts-Manager anzeigen, wird mög
   
 Melden Sie sich zum Anzeigen der Aufrufliste als lokaler Administrator am Berichtsserver an, klicken Sie mit der rechten Maustaste auf die Seite im Berichts-Manager, und klicken Sie dann auf **Quelltext anzeigen**. Die Aufrufliste enthält den ausführlichen Kontext für die Fehlermeldung.  
   
-## <a name="use-includessmanstudiofullincludesssmanstudiofullmd-to-verify-queries-and-credentials"></a>Verwenden von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] zum Überprüfen von Abfragen und Anmeldeinformationen  
+## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>Verwenden von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] zum Überprüfen von Abfragen und Anmeldeinformationen  
 Sie können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] komplexe Abfragen überprüfen, bevor Sie sie in den Bericht einschließen.   
   
 Weitere Informationen finden Sie in den Artikeln zum [Database Engine (Datenbankmodul)-Abfrage-Editor](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) und zum [Verwalten von Objekten mithilfe des Objekt-Explorers](~/ssms/object/manage-objects-by-using-object-explorer.md).  

@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 1029d9a0121b23963ccfc12582bd9d9cc7fd6cd6
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896589"
 ---
 # <a name="single-bulk-copy-operations"></a>Einzelne Massenkopiervorgänge
@@ -50,7 +50,7 @@ Dies sind die allgemeinen Schritte zum Durchführen eines Massenkopiervorgangs:
 >  Wir empfehlen die Verwendung gleicher Datentypen für Quell- und Zielspalten. Wenn die Datentypen nicht übereinstimmen, versucht **SqlBulkCopy**, die einzelnen Quellwerte anhand der vom <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A> angewendeten Regeln in den Zieldatentyp zu konvertieren. Konvertierungen wirken sich negativ auf die Leistung aus und können außerdem zu unerwarteten Fehlern führen. Beispielsweise kann ein Datentyp `Double` in den meisten Fällen in den Datentyp `Decimal` konvertiert werden, aber nicht immer.  
   
 ## <a name="example"></a>Beispiel  
-Die folgende Konsolenanwendung zeigt das Laden von Daten mithilfe der Klasse <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. In diesem Beispiel werden in der SQL Server-Datenbank **AdventureWorks** unter Verwendung von <xref:Microsoft.Data.SqlClient.SqlDataReader> Daten aus der Tabelle **Production.Product** in eine ähnliche Tabelle derselben Datenbank kopiert.  
+Die folgende Konsolenanwendung zeigt das Laden von Daten mithilfe der Klasse <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. In diesem Beispiel werden in der SQL Server-Datenbank <xref:Microsoft.Data.SqlClient.SqlDataReader>AdventureWorks**unter Verwendung von** Daten aus der Tabelle **Production.Product** in eine ähnliche Tabelle derselben Datenbank kopiert.  
   
 > [!IMPORTANT]
 >  Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Massenkopierbeispiel-Einrichtung](bulk-copy-example-setup.md) beschrieben erstellt haben. Der angegebene Code dient nur zur Demonstration der Syntax für die Verwendung von **SqlBulkCopy**. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung `INSERT … SELECT` zum Kopieren der Daten einfacher und schneller.  

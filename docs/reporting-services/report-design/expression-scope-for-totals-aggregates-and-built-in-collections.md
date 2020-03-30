@@ -9,10 +9,10 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579813"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen
@@ -41,7 +41,7 @@ ms.locfileid: "65579813"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DataScope"></a> Grundlegendes zu Datenbereichen und Datenhierarchie  
+##  <a name="understanding-data-scope-and-data-hierarchy"></a><a name="DataScope"></a> Grundlegendes zu Datenbereichen und Datenhierarchie  
  Ein Datenbereich gibt einen Satz von Berichtsdaten an. Der Datenbereich hat eine natürliche Hierarchie mit einer inhärenten Einschlussbeziehung. Bereiche, die sich in der Hierarchie auf einer höheren Stufe befinden, enthalten Sie Bereiche, die sich auf einer niedrigeren Hierarchiestufe befinden. Die folgende Liste von Datenbereichen beschreibt die Hierarchie in der Reihenfolge von den meisten Daten zu den wenigsten Daten:  
   
 -   **Datasets, nachdem Datasetfilter angewendet wurden** Geben das mit dem Datenbereich oder einem Berichtselement im Hauptteil des Berichts verknüpfte Berichtsdataset an. Die für die Aggregation verwendeten Daten stammen aus dem Berichtsdataset, nachdem Datasetfilter angewendet wurden. Bei freigegebenen Datasets sind dies die Filter in der freigegebenen Datasetdefinition und die Filter in der freigegebenen Datasetinstanz im Bericht.  
@@ -56,7 +56,7 @@ ms.locfileid: "65579813"
   
  Das Verständnis von enthaltenden und enthaltenen Bereichen ist beim Schreiben von Ausdrücken mit Aggregatfunktionen von Bedeutung.  
   
-##  <a name="Aggregates"></a> Zellenbereich und Ausdrücke  
+##  <a name="cell-scope-and-expressions"></a><a name="Aggregates"></a> Zellenbereich und Ausdrücke  
  Wenn Sie einen Bereich bestimmen, geben Sie dem Berichtsprozessor die Daten an, die für eine Aggregatberechnung verwendet werden sollen. Abhängig vom Ausdruck und dem Speicherort des Ausdrucks können die gültigen Bereiche *enthaltende Bereiche*(sogenannte übergeordnete Bereiche) oder *enthaltene Bereiche*(sogenannte untergeordnete oder geschachtelte Bereiche) sein. Normalerweise können Sie keine einzelne Gruppeninstanz in einer Aggregatberechnung angeben. Sie können ein Aggregat für alle Gruppeninstanzen angeben.  
   
  Da der Berichtsprozessor Daten aus einem Berichtsdataset mit dem Tablix-Datenbereich kombiniert, wertet er Gruppenausdrücke aus und erstellt die Zeilen und die Spalten, die benötigt werden, um die Gruppeninstanzen darzustellen. Der Wert der Ausdrücke in den Textfeldern der einzelnen Tablix-Zellen werden im Kontext des Zellenbereichs ausgewertet. Abhängig von der Tablix-Struktur kann eine Zelle mehreren Zeilengruppen und Spaltengruppen angehören. Bei Aggregatfunktionen können Sie mit einem der folgenden Bereiche angeben, welcher Bereich verwendet werden soll:  
@@ -77,7 +77,7 @@ ms.locfileid: "65579813"
   
  In jedem Thema zu Aggregatfunktionen werden die Bereiche aufgeführt, die für die jeweilige Verwendung zutreffen. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-##  <a name="Examples"></a> Beispielaggregatausdrücke für einen Tabellendatenbereich  
+##  <a name="example-aggregate-expressions-for-a-table-data-region"></a><a name="Examples"></a> Beispielaggregatausdrücke für einen Tabellendatenbereich  
  Es bedarf einiger Übung, wenn Ausdrücke geschrieben werden sollen, die außerhalb der Standardbereiche liegen. Befassen Sie sich mit der folgenden Abbildung und Tabelle, um die verschiedenen Bereiche besser zu verstehen. In der Abbildung wird jede Zelle in einer Tabelle mit Verkaufsinformationen, in der die Menge der verkauften Artikel pro Jahr und Quartal sowie nach Vertriebsgebiet angegeben wird, bezeichnet. Beachten Sie die visuellen Hinweise zu den Zeilen- und Spaltenhandles, die die Struktur der Zeilen- und Spaltengruppen anzeigen und damit geschachtelte Gruppen angeben. Die Tabelle verfügt über die folgende Struktur:  
   
 -   Eine Tabellenkopfzeile mit der Eckzelle und drei Zeilen, die die Kopfzeilen der Spaltengruppe enthalten  
@@ -117,7 +117,7 @@ ms.locfileid: "65579813"
  Weitere Informationen zur Interpretation visueller Hinweise für Tablix-Datenbereiche finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Weitere Informationen zum Tablix-Datenbereich finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Weitere Informationen zu Ausdrücken und Aggregaten finden Sie unter [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
   
-##  <a name="Sparklines"></a> Synchronisieren von Skalen für Sparklines  
+##  <a name="synchronizing-scales-for-sparklines"></a><a name="Sparklines"></a> Synchronisieren von Skalen für Sparklines  
  Um Werte über einen Zeitraum auf der horizontalen Achse mit einem Sparklinediagramm zu vergleichen, das in eine Tabelle oder Matrix geschachtelt ist, können Sie die Werte der Kategoriegruppen synchronisieren. Dies wird als Ausrichten von Achsen bezeichnet. Wenn Sie die Option zum Ausrichten von Achsen auswählen, werden im Bericht automatisch die Mindest- und Höchstwerte einer Achse festgelegt. Zudem werden Platzhalter für Aggregatwerte bereitgestellt, die nicht in jeder Kategorie vorhanden sind. Dadurch werden die Werte in der Sparkline über alle Kategorien hinweg aufgereiht, sodass Sie die Werte für jede Zeile aggregierter Daten vergleichen können. Wenn Sie diese Option auswählen, ändern Sie den Bereich der Ausdrucksauswertung zum *Domänenbereich*. Mit dem Festlegen des Domänenbereich für ein geschachteltes Diagramm werden indirekt auch die Farbzuweisungen der einzelnen Kategorien in der Legende gesteuert.  
   
  Angenommen, Sie haben eine Sparkline, die wöchentliche Trends anzeigt, und ein Ort verfügt über Umsatzdaten von 3 Monaten, während ein anderer Ort über Umsatzdaten von 12 Monaten verfügt. Ohne die Synchronisierung der Skala würde der erste Ort nur drei Balken aufweisen, die wesentlich breiter sind und insgesamt genau so viel Platz belegen wie die Balken der 12 Monate des zweiten Orts.  
@@ -125,13 +125,13 @@ ms.locfileid: "65579813"
  Weitere Informationen finden Sie unter [Ausrichten von Diagrammdaten in einer Tabelle oder einer Matrix &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
   
-##  <a name="Indicators"></a> Synchronisieren von Bereichen für Indikatoren  
+##  <a name="synchronizing-ranges-for-indicators"></a><a name="Indicators"></a> Synchronisieren von Bereichen für Indikatoren  
  Um die Datenwerte anzugeben, die für einen Indikatorsatz verwendet werden sollen, müssen Sie einen Bereich angeben. Abhängig vom Layout des Datenbereichs, der den Indikator enthält, geben Sie einen Bereich oder einen enthaltenden Bereich an. In einer Gruppenkopfzeile, die Kategorieverkäufen zugeordnet ist, kann etwa eine Reihe von Pfeilen (nach oben, nach unten, zur Seite) Umsatzwerte in Relation zu einem Schwellenwert angeben. Der enthaltende Bereich ist der Name der Tabelle oder Matrix mit den Indikatoren.  
   
  Weitere Informationen finden Sie unter [Festlegen des Synchronisierungsbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md).  
   
   
-##  <a name="Page"></a> Angeben von Bereichen im Seitenkopf oder Seitenfuß  
+##  <a name="specifying-scopes-from-the-page-header-or-page-footer"></a><a name="Page"></a> Angeben von Bereichen im Seitenkopf oder Seitenfuß  
  Um Daten anzuzeigen, die auf jeder Seite eines Berichts anders sind, fügen Sie einem Berichtselement Ausdrücke hinzu. Das Berichtselement muss sich auf einer gerenderten Seite befinden. Da ein Bericht in Seiten aufgeteilt wird, während er gerendert wird, kann nur während des Rendervorgangs bestimmt werden, welche Elemente auf einer Seite bestehen. Beispielsweise verfügt eine Zelle in einer Detailzeile über ein Textfeld, das viele Instanzen auf einer Seite aufweist.  
   
  Aus diesem Grund gibt es eine globale Auflistung mit dem Namen ReportItems. Sie entspricht dem Satz von Textfeldern auf der aktuellen Seite.  
@@ -139,7 +139,7 @@ ms.locfileid: "65579813"
  Weitere Informationen finden Sie unter [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md) und [Verweise auf ReportItems-Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md).  
   
   
-##  <a name="Toggles"></a> Angeben eines Elements zum Ein-/Ausschalten für Drilldown und bedingte Sichtbarkeit  
+##  <a name="specifying-a-toggle-item-for-drilldown-and-conditional-visibility"></a><a name="Toggles"></a> Angeben eines Elements zum Ein-/Ausschalten für Drilldown und bedingte Sichtbarkeit  
  Umschaltflächen sind Bilder mit Plus- oder Minuszeichen, die einem Textfeld hinzugefügt werden. Wenn ein Benutzer darauf klickt, werden andere Berichtselemente ein- oder ausgeblendet. Auf der Seite **Sichtbarkeit** der meisten Berichtselementeigenschaften können Sie angeben, welchem Berichtselement die Umschaltfläche hinzugefügt werden soll. Das Element zum Ein-/Ausschalten muss sich in einem hierarchisch höheren enthaltenden Bereich befinden als das Element, das ein- oder ausgeblendet werden soll.  
   
  In einem Tablix-Datenbereich können Sie einen Drilldowneffekt erstellen, bei dem Sie auf ein Textfeld klicken, um die Tabelle zu erweitern und weitere Daten anzuzeigen. Dazu müssen Sie die Eigenschaft **Sichtbarkeit** in der Gruppe festlegen und als Umschaltfläche ein Textfeld in einer Gruppenüberschrift, die einer enthaltenden Gruppe zugeordnet ist, auswählen.  
@@ -147,13 +147,13 @@ ms.locfileid: "65579813"
  Weitere Informationen finden Sie unter [Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
   
   
-##  <a name="Sort"></a> Angeben eines Sortierungsausdrucks zum Synchronisieren der Sortierreihenfolge  
+##  <a name="specifying-a-sort-expression-to-synchronize-sort-order"></a><a name="Sort"></a> Angeben eines Sortierungsausdrucks zum Synchronisieren der Sortierreihenfolge  
  Wenn Sie einer Tabellenspalte eine interaktive Sortierschaltfläche hinzufügen, können Sie die Sortierung für mehrere Elemente mit einem gemeinsamen enthaltenden Bereich synchronisieren. Sie können z. B. einer Spaltenüberschrift in einer Matrix eine Sortierschaltfläche hinzufügen und den enthaltenden Bereich als Namen des Datasets angeben, das an die Matrix gebunden ist. Wenn ein Benutzer auf die Sortierschaltfläche klickt, werden außer den Matrixzeilen auch die Diagrammreihengruppen der Diagramme sortiert, die an das gleiche Datset gebunden sind. Auf diese Weise können alle Datenbereiche, die von diesem Dataset abhängig sind, mit der gleichen Sortierreihenfolge synchronisiert werden.  
   
  Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
   
-##  <a name="Nulls"></a> Unterdrücken von NULL- oder 0-Werten zur Laufzeit  
+##  <a name="suppressing-null-or-zero-values-in-a-cell"></a><a name="Nulls"></a> Unterdrücken von NULL- oder 0-Werten zur Laufzeit  
  In zahlreichen Berichten kann bei Berechnungen für Gruppen eine Vielzahl an Zellen mit dem Wert 0 (null) oder NULL erstellt werden. Wenn Sie Ihren Bericht übersichtlicher gestalten möchten, können Sie einen Ausdruck zum Zurückgeben von Leerräumen hinzufügen, wenn der Aggregatwert 0 (null) ist. Weitere Informationen finden Sie unter „Beispiele zur Unterdrückung von NULL- oder 0-Werten“ in [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
   

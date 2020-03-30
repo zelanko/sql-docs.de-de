@@ -9,10 +9,10 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd0268916173f4e2b9d3f6c096fceb6787d18487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078678"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Erstellen einer Matrix (Berichts-Generator und SSRS)
@@ -20,12 +20,12 @@ ms.locfileid: "77078678"
   
  Nach dem anfänglichen Entwurf können Sie die Entwicklung einer Matrix fortsetzen, um die Anzeigefunktionen für Benutzer zu optimieren. Weitere Informationen finden Sie unter [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- Eine schnelle Einführung in Matrizen finden Sie unter [Tutorial: Erstellen eines Matrixberichts &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)  
+ Um schnell mit Matrizen zu beginnen, gehen Sie unter [Tutorial: Erstellen eines Matrixberichts &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
   
 > [!NOTE]  
 >  Sie können Listen in einem Bericht als Berichtsteile getrennt veröffentlichen. Erfahren Sie mehr über [Berichtsteile (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="AddingMatrix"></a> Hinzufügen einer Matrix zum Bericht  
+##  <a name="adding-a-matrix-to-your-report"></a><a name="AddingMatrix"></a> Hinzufügen einer Matrix zum Bericht  
  Fügen Sie der Entwurfsoberfläche über die Registerkarte "Einfügen" auf dem Menüband eine Matrix hinzu. Sie haben die Möglichkeit, eine Matrix mit dem Tabellen- oder Matrix-Assistenten hinzuzufügen. Dabei werden auch eine Datenquellenverbindung und ein Dataset erstellt und auf Grundlage der Matrixvorlage die Matrix konfiguriert bzw. eine Matrix hinzugefügt.  
   
 > [!NOTE]  
@@ -45,12 +45,12 @@ ms.locfileid: "77078678"
   
  In Vorschau wird die Matrix erweitert, um die Zeilengruppen- und Spaltengruppenwerte anzuzeigen. In den Zellen werden Zusammenfassungswerte angezeigt, wie in der folgenden Abbildung dargestellt.  
   
- ![Vorschau für gerenderte Matrix mit ausgeklappten Gruppen](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Vorschau für gerenderte Matrix mit ausgeklappten Gruppen")  
+ ![Vorschau für gerenderte Matrix mit erweiterten Gruppen](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Vorschau für gerenderte Matrix mit erweiterten Gruppen")  
   
  Die zu Beginn verwendete Matrix ist eine Vorlage auf Grundlage des Tablix-Datenbereichs. Sie können den Matrixentwurf auch weiterentwickeln, indem Sie geschachtelte oder angrenzende Zeilengruppen oder Spaltengruppen oder sogar Detailzeilen hinzufügen. Weitere Informationen finden Sie unter [Untersuchen der Flexibilität eines Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
   
-##  <a name="AddingParentGroupChild"></a> Hinzufügen einer übergeordneten Gruppe oder untergeordneten Gruppe zu einer Matrix  
+##  <a name="adding-a-parent-group-or-child-group-to-a-matrix"></a><a name="AddingParentGroupChild"></a> Hinzufügen einer übergeordneten Gruppe oder untergeordneten Gruppe zu einer Matrix  
  Wenn Sie eine Gruppe anhand eines einzelnen Datasetfelds hinzufügen möchten, ziehen Sie das Feld aus dem Berichtsdatenbereich in den entsprechenden Bereich "Zeilengruppen" oder "Spaltengruppen" des Bereichs "Gruppierung". Legen Sie das Feld in der Gruppenhierarchie ab, um seine Beziehung mit vorhandenen Gruppen festzulegen. Legen Sie es oberhalb einer vorhandenen Gruppe ab, um eine übergeordnete Gruppe zu erstellen, oder legen Sie es unterhalb einer Gruppe ab, um eine untergeordnete Gruppe zu erstellen.  
   
  Wenn Sie ein Feld im Bereich **Gruppierung** ablegen, werden mehrere Aktionen ausgeführt:  
@@ -78,7 +78,7 @@ ms.locfileid: "77078678"
  Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)-Ausdruck dar.  
   
   
-##  <a name="AddingAdjacentGroup"></a> Hinzufügen einer angrenzenden Gruppe zu einer Matrix  
+##  <a name="adding-an-adjacent-group-to-a-matrix"></a><a name="AddingAdjacentGroup"></a> Hinzufügen einer angrenzenden Gruppe zu einer Matrix  
  Wenn Sie anhand eines einzelnen Datasetfelds eine angrenzende Gruppe hinzufügen möchten, verwenden Sie das Kontextmenü im Gruppierungsbereich. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Die folgende Abbildung zeigt eine auf der Geografie basierende Gruppe und eine auf dem Jahr basierende angrenzende Gruppe.  
   
  ![Angrenzende Spaltengruppen für „Geography“ (Geografie) und „Year“ (Jahr)](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Angrenzende Spaltengruppen für „Geography“ (Geografie) und „Year“ (Jahr)")  

@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041396"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
@@ -35,7 +35,7 @@ Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Erstellen eines Diagrammberichts mithilfe des Diagramm-Assistenten  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. Erstellen eines Diagrammberichts mithilfe des Diagramm-Assistenten  
 In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes Dataset zu erstellen, eine freigegebene Datenquelle auszuwählen, und ein Säulendiagramm zu erstellen.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes
   
 9. Klicken Sie auf **Weiter**.  
   
-## <a name="ChartType"></a>2. Auswählen des Diagrammtyps  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Auswählen des Diagrammtyps  
 Sie können aus mehreren vordefinierten Diagrammtypen auswählen und anschließend das Diagramm ändern, nachdem Sie den Assistenten abgeschlossen haben.  
   
 ### <a name="to-add-a-column-chart"></a>So fügen Sie einem Bericht ein Säulendiagramm hinzu  
@@ -114,7 +114,7 @@ Sie können aus mehreren vordefinierten Diagrammtypen auswählen und anschließe
 
 Beachten Sie, dass im Diagramm nicht jede Kategorie auf der horizontalen Achse beschriftet ist. Standardmäßig werden nur Bezeichnungen aufgenommen, die neben die Achse passen. 
   
-## <a name="Horizontal"></a>3. Formatieren eines Datums auf der horizontalen Achse  
+## <a name="3-format-a-date-on-the-horizontal-axis"></a><a name="Horizontal"></a>3. Formatieren eines Datums auf der horizontalen Achse  
 Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen Format angezeigt, dessen Größe automatisch an die Diagrammgröße angepasst wird.  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
@@ -159,7 +159,7 @@ Im Diagramm werden die Bezeichnungen gedreht.
 
 ![Berichts-Generator-Säulendiagramm-1-Rotieren-der-X-Achse-Vorschau](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
-## <a name="Legend"></a>5. Verschieben der Legende  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5. Verschieben der Legende  
 Die Legende wird automatisch auf Basis der Kategorie- und Reihendaten erstellt. Sie können die Legende unter den Diagrammbereich eines Säulendiagramms verschieben.  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
@@ -176,7 +176,7 @@ Die Legende wird automatisch auf Basis der Kategorie- und Reihendaten erstellt. 
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-## <a name="ChartTitle"></a>6. Benennen des Diagramms  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. Benennen des Diagramms  
     
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
@@ -184,7 +184,7 @@ Die Legende wird automatisch auf Basis der Kategorie- und Reihendaten erstellt. 
   
 3.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-## <a name="Vertical"></a>7. Formatieren und Beschriften der vertikalen Achse  
+## <a name="7-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>7. Formatieren und Beschriften der vertikalen Achse  
 Standardmäßig werden die Werte auf der vertikalen Achse in einem allgemeinen Format angezeigt, dessen Größe automatisch an die Diagrammgröße angepasst wird.   
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
@@ -235,7 +235,7 @@ Sie sehen, dass nur einige der Bezeichnungen auf der X-Achse angezeigt werden. I
     
     Jetzt zeigt das Diagramm alle seine Bezeichnungen an.
   
-## <a name="Average"></a>9. Hinzufügen eines gleitenden Durchschnitts mit einer berechneten Reihe  
+## <a name="9-add-a-moving-average-with-a-calculated-series"></a><a name="Average"></a>9. Hinzufügen eines gleitenden Durchschnitts mit einer berechneten Reihe  
 
 Ein gleitender Durchschnitt ist ein Mittelwert der Daten in der Reihe, die über einen Zeitraum berechnet wird. Der gleitende Durchschnitt kann Trends erkennen.
   
@@ -261,7 +261,7 @@ Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den 
 
 ![Berichts-Generator-Säulendiagramm-gleitender-Durchschnitt](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
-## <a name="Title"></a>10. Hinzufügen eines Berichtstitels  
+## <a name="10-add-a-report-title"></a><a name="Title"></a>10. Hinzufügen eines Berichtstitels  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
@@ -283,7 +283,7 @@ Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den 
   
 7.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-## <a name="Save"></a>11. Speichern des Berichts  
+## <a name="11-save-the-report"></a><a name="Save"></a>11. Speichern des Berichts  
   
 ### <a name="to-save-the-report"></a>So speichern Sie den Bericht  
   

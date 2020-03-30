@@ -11,10 +11,10 @@ ms.assetid: d3c0fb5d-ca05-43f7-9f38-fba6cf3705c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4dd548fcd6342e4c69ea9acc1614d0bc899f7d4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67985323"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream-long"></a>updateBinaryStream-Methode (java.lang.String, java.io.InputStream, long)
@@ -38,7 +38,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
   
  *x*  
   
- Dies ist ein InputStream-Objekt.  
+ Ein InputStream-Objekt  
   
  *length*  
   

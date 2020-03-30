@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843773"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Wiederherstellen von Stretch-aktivierten Datenbanken (Stretch Database)
@@ -58,7 +58,7 @@ Um eine gelöschte Azure-Datenbank im Azure-Portal in dem Zustand wiederherzuste
 5. Geben Sie einen neuen **Datenbanknamen** an, und klicken Sie auf **Erstellen**.
 6. Der Wiederherstellungsvorgang für die Datenbank beginnt und kann mithilfe von **BENACHRICHTIGUNGEN**überwacht werden.
 
-## <a name="reconnect"></a>Wiederherstellen der Verbindung zwischen der SQL Server-Datenbank und der Azure-Remotedatenbank
+## <a name="restore-the-connection-between-the-sql-server-database-and-the-remote-azure-database"></a><a name="reconnect"></a>Wiederherstellen der Verbindung zwischen der SQL Server-Datenbank und der Azure-Remotedatenbank
 
 1.  Wenn Sie eine Verbindung mit einer wiederhergestellten Azure-Datenbank herstellen möchten, die einen anderen Namen hat oder sich in einer anderen Region befindet, müssen Sie die gespeicherte Prozedur [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) ausführen, um die Verbindung mit der vorherigen Azure-Datenbank zu trennen.  
   

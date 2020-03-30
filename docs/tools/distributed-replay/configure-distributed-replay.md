@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: cbc59ea90a962b105d4ac4fd4aa0e6d10f3ba7d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307047"
 ---
 # <a name="configure-distributed-replay"></a>Konfigurieren von Distributed Replay
@@ -30,14 +30,14 @@ ms.locfileid: "75307047"
   
 -   [Wiedergabekonfigurationsdatei](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> Controllerkonfigurationsdatei: DReplayController.config  
+##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> Controllerkonfigurationsdatei: DReplayController.config  
  Beim Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller-Diensts wird der Protokolliergrad aus der Controllerkonfigurationsdatei `DReplayController.config`geladen. Diese Datei befindet sich in dem Ordner, in dem Sie den Distributed Replay Controller-Dienst installiert haben:  
   
  **\<Controllerinstallationspfad>\DReplayController.config**  
   
  Der in der Controllerkonfigurationsdatei angegebene Protokolliergrad enthält die folgenden Informationen:  
   
-|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Erforderlich|  
+|Einstellung|XML-Element|BESCHREIBUNG|Zulässige Werte|Erforderlich|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Protokolliergrad|`<LoggingLevel>`|Gibt den Protokolliergrad für den Controllerdienst an.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Nein. Standardmäßig lautet der Wert `CRITICAL`.|  
   
@@ -51,14 +51,14 @@ ms.locfileid: "75307047"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> Clientkonfigurationsdatei: DReplayClient.config  
+##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> Clientkonfigurationsdatei: DReplayClient.config  
  Beim Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Clientdiensts werden Konfigurationseinstellungen aus der Clientkonfigurationsdatei `DReplayClient.config`geladen. Diese Datei befindet sich auf jedem Client in dem Ordner, in dem Sie den Distributed Replay-Clientdienst installiert haben:  
   
  **\<Clientinstallationspfad>\DReplayClient.config**  
   
  In der Clientkonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
-|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Erforderlich|  
+|Einstellung|XML-Element|BESCHREIBUNG|Zulässige Werte|Erforderlich|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Controller|`<Controller>`|Gibt den Computernamen des Controllers an. Der Client versucht, sich durch Herstellen einer Verbindung mit dem Controller bei der Distributed Replay Utility-Umgebung zu registrieren.|Sie können mit "`localhost`" oder "`.`" auf den lokalen Computer verweisen.|Nein. Standardmäßig versucht der Client, sich bei der Controllerinstanz zu registrieren, die lokal ("`.`") ausgeführt wird, sofern sie vorhanden ist.|  
 |Clientarbeitsverzeichnis|`<WorkingDirectory>`|Der lokale Pfad auf dem Client, unter dem die Dispatchdateien gespeichert werden.<br /><br /> Die Dateien in diesem Verzeichnis werden bei der nächsten Wiedergabe überschrieben.|Ein vollständiger Verzeichnisname, der mit dem Laufwerkbuchstaben beginnt.|Nein. Wenn kein Wert angegeben ist, werden die Dispatchdateien am selben Speicherort wie die Standardclientkonfigurationsdatei gespeichert. Wenn ein Wert angegeben wird und dieser Ordner nicht auf dem Client vorhanden ist, wird der Clientdienst nicht gestartet.|  
@@ -78,7 +78,7 @@ ms.locfileid: "75307047"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> Vorverarbeitungskonfigurationsdatei: DReplay.exe.preprocess.config  
+##  <a name="preprocess-configuration-file-dreplayexepreprocessconfig"></a><a name="PreprocessConfig"></a> Vorverarbeitungskonfigurationsdatei: DReplay.exe.preprocess.config  
  Wenn Sie das Verwaltungstool verwenden, um die Vorverarbeitungsphase zu initiieren, lädt das Verwaltungstool die Vorverarbeitungseinstellungen aus der Vorverarbeitungskonfigurationsdatei `DReplay.exe.preprocess.config`.  
   
  Verwenden Sie die Standardkonfigurationsdatei oder den Parameter **-c** des Verwaltungstools, um den Speicherort einer geänderten Vorverarbeitungskonfigurationsdatei anzugeben. Weitere Informationen zur Verwendung der Vorverarbeitungsoption des Verwaltungstools finden Sie unter [Vorverarbeitungsoption &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "75307047"
   
  Die Vorverarbeitungskonfigurationseinstellungen werden in XML-Elementen angegeben, die untergeordnete Elemente des `<PreprocessModifiers>` -Elements in der Vorverarbeitungskonfigurationsdatei sind. Dazu gehören folgende Einstellungen:  
   
-|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Erforderlich|  
+|Einstellung|XML-Element|BESCHREIBUNG|Zulässige Werte|Erforderlich|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Systemsitzungsaktivitäten einschließen|`<IncSystemSession>`|Gibt an, ob Systemsitzungsaktivitäten während der Aufzeichnung in die Wiedergabe eingeschlossen werden.|`Yes` &#124; `No`|Nein. Standardmäßig lautet der Wert `No`.|  
 |Maximale Leerlaufzeit|`<MaxIdleTime>`|Legt die maximale Leerlaufzeit auf eine absolute Zahl (in Sekunden) fest.|Eine ganze Zahl >= -1.<br /><br /> `-1` gibt an, dass der ursprüngliche Wert in der ursprünglichen Ablaufverfolgungsdatei unverändert bleibt.<br /><br /> `0` gibt an, dass zu einem beliebigen Zeitpunkt Aktivitäten erfolgen.|Nein. Standardmäßig lautet der Wert `-1`.|  
@@ -107,7 +107,7 @@ ms.locfileid: "75307047"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a> Wiedergabekonfigurationsdatei: DReplay.exe.replay.config  
+##  <a name="replay-configuration-file-dreplayexereplayconfig"></a><a name="ReplayConfig"></a> Wiedergabekonfigurationsdatei: DReplay.exe.replay.config  
  Wenn Sie das Verwaltungstool verwenden, um die Ereigniswiedergabephase zu initiieren, lädt das Verwaltungstool die Wiedergabeeinstellungen aus der Wiedergabekonfigurationsdatei `DReplay.exe.replay.config`.  
   
  Verwenden Sie die Standardkonfigurationsdatei oder den Parameter **-c** des Verwaltungstools, um den Speicherort einer geänderten Wiedergabekonfigurationsdatei anzugeben. Weitere Informationen zur Verwendung der Wiedergabeoption des Verwaltungstools finden Sie unter [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
@@ -121,9 +121,9 @@ ms.locfileid: "75307047"
 ### <a name="replayoptions-element"></a>\<ReplayOptions> Element  
  Im `<ReplayOptions>` -Element der Wiedergabekonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
-|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Erforderlich|  
+|Einstellung|XML-Element|BESCHREIBUNG|Zulässige Werte|Erforderlich|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (der Testserver)|`<Server>`|Gibt den Namen des Servers und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt werden soll.|*Servername*[\\*Instanzname*]<br /><br /> Sie können zum Darstellen des lokalen Hosts nicht "`localhost`" oder "`.`" verwenden.|Nein, wenn der Servername bereits mit dem _target server_-Parameter **-s** für die **replay**-Option des Verwaltungstools angegeben wurde.|  
+|Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (der Testserver)|`<Server>`|Gibt den Namen des Servers und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt werden soll.|*Servername*[\\*Instanzname*]<br /><br /> Sie können zum Darstellen des lokalen Hosts nicht "`localhost`" oder "`.`" verwenden.|Nein, wenn der Servername bereits mit dem **target server**-Parameter _-s_ für die **replay**-Option des Verwaltungstools angegeben wurde.|  
 |Sequenzierungsmodus|`<SequencingMode>`|Gibt den für die Ereignisplanung verwendeten Modus an.|`synchronization` &#124; `stress`|Nein. Standardmäßig lautet der Wert `stress`.|  
 |Belastungsskalagranularität|`<StressScaleGranularity>`|Gibt an, ob im Belastungsmodus alle Verbindungen auf dem Dienstprofilbezeichner (Service Profile Identifier, SPID) zusammen (SPID) oder unabhängig voneinander (Verbindung) skaliert werden sollen.|SPID &#124; Verbindung|Ja. Standardmäßig lautet der Wert `SPID`.|  
 |Verbindungszeitskala|`<ConnectTimeScale>`|Wird verwendet, um die Verbindungszeit im Belastungsmodus zu skalieren.|Eine ganze Zahl zwischen `1` und `100`.|Nein. Standardmäßig lautet der Wert `100`.|  
@@ -136,7 +136,7 @@ ms.locfileid: "75307047"
 ### <a name="outputoptions-element"></a>\<OutputOptions> Element  
  Im `<OutputOptions>` -Element der Wiedergabekonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
-|Einstellung|XML-Element|Beschreibung|Zulässige Werte|Erforderlich|  
+|Einstellung|XML-Element|BESCHREIBUNG|Zulässige Werte|Erforderlich|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Zeilenanzahl aufzeichnen|`<RecordRowCount>`|Gibt an, ob die Zeilenanzahl für jedes Resultset aufgezeichnet werden soll.|`Yes` &#124; `No`|Nein. Standardmäßig lautet der Wert `Yes`.|  
 |Resultset aufzeichnen|`<RecordResultSet>`|Gibt an, ob der Inhalt aller Resultsets aufgezeichnet werden soll.|`Yes` &#124; `No`|Nein. Standardmäßig lautet der Wert `No`.|  

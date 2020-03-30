@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 4475e4b8a71b4abcf4e1c2324a49e03a8bb64fbb
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896670"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Multiple Active Result Sets (MARS)
@@ -28,7 +28,7 @@ MARS (mehrere aktive Resultsets) ist ein Feature, mit dem mehrere Batches über 
 Enthält eine Erläuterung zum Verwenden von MARS mit SQL Server.  
   
 [Bearbeiten von Daten](manipulate-data.md)  
-Stellt Beispiele zum Programmieren von MARS-Anwendungen bereit  
+Beispiele für das Programmieren von MARS-Anwendungen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 [Asynchrone Vorgänge](asynchronous-operations.md)  

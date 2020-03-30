@@ -11,10 +11,10 @@ ms.author: v-dapugl
 author: david-puglielli
 manager: v-mabarw
 ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941084"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>Verwenden von Always Encrypted mit Secure Enclaves mit den PHP-Treibern für SQL Server
@@ -46,9 +46,9 @@ In den folgenden Beispielen, eines für SQLSRV und eines für PDO_SQLSRV, wird e
 
 - Bei der Verschlüsselung einer Tabelle mit `ALTER TABLE` darf nur eine Spalte für jeden Aufruf von `ALTER TABLE` verschlüsselt werden, sodass mehrere Aufrufe erforderlich sind, um mehrere Spalten zu verschlüsseln.
 - Wenn der Vergleichsschwellenwert als Parameter für den Vergleich der Typen char und nchar übergeben wird, muss die Spaltenbreite im entsprechenden `SQLSRV_SQLTYPE_*` angegeben werden. Andernfalls wird der Fehler `HY104`, `Invalid precision value` zurückgegeben.
-- Für den Musterabgleich muss die Sortierung mithilfe der `COLLATE`-Klausel als `Latin1_General_BIN2` angegeben werden.
-- Wenn die Musterabgleichzeichenfolge als Parameter für den Abgleich der Typen char und nchar übergeben wird, muss der an `sqlsrv_query` oder `sqlsrv_prepare` übergebene `SQLSRV_SQLTYPE_*` die Länge der abzugleichenden Zeichenfolge und nicht die Größe der Spalte angeben. Der Grund ist, dass die Typen char und nchar am Ende der Zeichenfolge Leerzeichen auffüllen. Wenn Sie z. B. die Zeichenfolge `%abc%` mit einer char(10)-Spalte abgleichen, geben Sie `SQLSRV_SQLTYPE_CHAR(5)` an. Wenn Sie stattdessen `SQLSRV_SQLTYPE_CHAR(10)` angeben, gleicht die Abfrage `%abc%     ` (mit fünf angefügten Leerzeichen) ab. Alle Daten in der Spalte mit weniger als fünf angefügten Leerzeichen stimmen nicht überein (daher würde `abcdef` nicht mit `%abc%` übereinstimmen, da vier vorhanden sind). Verwenden Sie bei Unicode-Zeichenfolgen die Funktionen `mb_strlen` oder `iconv_strlen`, um die Anzahl der Zeichen abzurufen.
-- Die PDO-Schnittstelle erlaubt nicht die Angabe der Länge eines Parameters. Geben Sie stattdessen in `PDOStatement::bindParam` die Länge 0 oder `null` an. Wenn die Länge explizit auf einen anderen Wert festgelegt wird, wird der Parameter als Ausgabeparameter behandelt.
+- Für den Musterabgleich muss die Sortierung mithilfe der `Latin1_General_BIN2`-Klausel als `COLLATE` angegeben werden.
+- Wenn die Musterabgleichzeichenfolge als Parameter für den Abgleich der Typen char und nchar übergeben wird, muss der an `SQLSRV_SQLTYPE_*` oder `sqlsrv_query` übergebene `sqlsrv_prepare` die Länge der abzugleichenden Zeichenfolge und nicht die Größe der Spalte angeben. Der Grund ist, dass die Typen char und nchar am Ende der Zeichenfolge Leerzeichen auffüllen. Wenn Sie z. B. die Zeichenfolge `%abc%` mit einer char(10)-Spalte abgleichen, geben Sie `SQLSRV_SQLTYPE_CHAR(5)` an. Wenn Sie stattdessen `SQLSRV_SQLTYPE_CHAR(10)` angeben, gleicht die Abfrage `%abc%     ` (mit fünf angefügten Leerzeichen) ab. Alle Daten in der Spalte mit weniger als fünf angefügten Leerzeichen stimmen nicht überein (daher würde `abcdef` nicht mit `%abc%` übereinstimmen, da vier vorhanden sind). Verwenden Sie bei Unicode-Zeichenfolgen die Funktionen `mb_strlen` oder `iconv_strlen`, um die Anzahl der Zeichen abzurufen.
+- Die PDO-Schnittstelle erlaubt nicht die Angabe der Länge eines Parameters. Geben Sie stattdessen in `null` die Länge 0 oder `PDOStatement::bindParam` an. Wenn die Länge explizit auf einen anderen Wert festgelegt wird, wird der Parameter als Ausgabeparameter behandelt.
 - Der Musterabgleich funktioniert in Always Encrypted nicht für Typen, die keine Zeichenfolgen sind.
 - Auf eine Fehlerüberprüfung wird aus Gründen der Übersichtlichkeit verzichtet. 
 

@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77173609"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Azure Kubernetes Service für die Bereitstellung von Big-Data-Clustern für SQL Server
@@ -161,7 +161,7 @@ Wählen Sie die neuste für Ihren Cluster verfügbare Version aus. Notieren Sie 
    kubectl get nodes
    ```
 
-## <a id="troubleshoot"></a> Problembehandlung
+## <a name="troubleshooting"></a><a id="troubleshoot"></a> Problembehandlung
 
 Wenn Sie die oben genannten Befehle verwenden und Probleme beim Erstellen einer AKS-Instanz auftreten sollten, probieren Sie Folgendes aus:
 

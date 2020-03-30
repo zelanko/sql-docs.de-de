@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: aea8e0ecbb542645f0553e8bf34172381f37929b
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896632"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>SQL Server-Datenvorgänge in ADO.NET
@@ -34,7 +34,7 @@ In diesem Artikel wird beschrieben, wie Sie mehr als eine <xref:Microsoft.Data.S
 Beschreibt das Ausführen asynchroner Datenbankoperationen mithilfe einer API, die auf der Grundlage des von .NET Framework verwendeten asynchronen Modells entwickelt wurde.  
   
 [Tabellenwertparameter](table-valued-parameters.md)  
-In diesem Artikel wird die Verwendung von Tabellenwertparametern beschrieben, die in SQL Server 2008 eingeführt wurden.  
+Beschreibt die Verwendung von Tabellenwertparametern, die in SQL Server 2008 eingeführt wurden.  
   
 ## <a name="next-steps"></a>Nächste Schritte
 - [SQL Server und ADO.NET](index.md)

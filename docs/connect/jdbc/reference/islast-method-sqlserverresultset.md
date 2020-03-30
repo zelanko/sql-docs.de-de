@@ -16,10 +16,10 @@ ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 840d1183794a5d69ad108aef8eee9ef7aedffe4b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977613"
 ---
 # <a name="islast-method-sqlserverresultset"></a>isLast-Methode (SQLServerResultSet)
@@ -35,7 +35,7 @@ public boolean isLast()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der Wert **TRUE** wird zurückgegeben, wenn der Cursor in der letzten Zeile liegt. Der Wert **FALSE** wird zurückgegeben, wenn der Cursor sich an einer beliebigen anderen Position befindet oder wenn das Resultset keine Zeilen enthält.  
+ Der Wert **TRUE** wird zurückgegeben, wenn der Cursor in der letzten Zeile liegt. Der Wert **FALSE** wird zurückgegeben, wenn sich der Cursor an einer beliebigen anderen Position befindet oder wenn das Resultset keine Zeilen enthält.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

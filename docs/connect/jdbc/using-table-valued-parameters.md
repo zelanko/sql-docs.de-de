@@ -11,10 +11,10 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77575333"
 ---
 # <a name="using-table-valued-parameters"></a>Verwenden von Tabellenwertparametern
@@ -35,7 +35,7 @@ Für den Zugriff auf Spaltenwerte in Tabellenwertparametern können Standard-SEL
 | Resource                                                                                                             | BESCHREIBUNG                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [Tabellenwertparameter (Datenbankmodul)](https://go.microsoft.com/fwlink/?LinkId=98363) in der SQL Server-Onlinedokumentation | Beschreibt, wie Sie Tabellenwertparameter erstellen und verwenden.                             |
-| [Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkId=98364) in der SQL Server-Onlinedokumentation.                  | Beschreibt die benutzerdefinierten Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden. |
+| [Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkId=98364) in der SQL Server-Onlinedokumentation                  | Beschreibt die benutzerdefinierten Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden. |
 | Der Abschnitt [Microsoft SQL Server-Datenbank-Engine](https://go.microsoft.com/fwlink/?LinkId=120507) von CodePlex.        | Enthält Beispiele, in denen die Verwendung von SQL Server-Features und -Funktionalität veranschaulicht wird.  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Übergeben mehrerer Zeilen in früheren Versionen von SQL Server  
@@ -88,7 +88,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 
 ## <a name="limitations-of-table-valued-parameters"></a>Einschränkungen bei Tabellenwertparametern
 
-Für Tabellenwertparameter gelten verschiedene Einschränkungen:  
+Bei Verwendung von Tabellenwertparametern müssen eine Reihe von Einschränkungen berücksichtigt werden:  
   
 - Tabellenwertparameter können nicht an benutzerdefinierte Funktionen übergeben werden.  
   

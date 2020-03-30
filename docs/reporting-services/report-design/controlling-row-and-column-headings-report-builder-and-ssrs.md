@@ -10,10 +10,10 @@ ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245359"
 ---
 # <a name="control-row--column-headings-report-builder--ssrs"></a>Steuern von Zeilen- und Spaltenüberschriften (Berichts-Generator und SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "75245359"
   
  Bei Tablix-Datenbereichen mit Zeilengruppen- oder Spaltengruppenbereichen steuern Sie die zugeordneten Zeilen und Spalten, indem Sie die Eigenschaften des Tablix-Datenbereichs festlegen. In allen anderen Fällen steuern Sie die Zeilen und Spalten, indem Sie im Eigenschaftenbereich für das ausgewählte Tablix-Element die entsprechenden Eigenschaften festlegen. Schritt-für-Schritt-Anweisungen finden Sie unter [Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md) und [Sichtbarhalten von Kopfzeilen beim Scrollen durch einen Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
   
-##  <a name="Top"></a> Beispiele  
+##  <a name="examples"></a><a name="Top"></a> Beispiele  
  Die häufigsten Beispiele für Tablix-Datenbereiche sind eine Matrix, eine Tabelle ohne Gruppen, eine Tabelle mit einer Zeilengruppe und einer Zeilengruppen-Kopfzeile sowie Tabellen mit einer Zeilengruppe ohne Zeilengruppen-Kopfzeile. Um das Wiederholen oder das Fixieren der Kopfzeilen zu steuern, müssen Sie ermitteln, ob die Zeilen oder Spalten, die Sie steuern möchten, einer Gruppenkopfzeile im Zeilengruppen- oder im Spaltengruppenbereich zugeordnet sind.  
   
  In den folgenden Abschnitten finden Sie Beispiele für häufige Layouts eines Tablix-Datenbereichs:  
@@ -58,7 +58,7 @@ ms.locfileid: "75245359"
   
 -   [Tabelle mit Zeilengruppen, jedoch ohne Zeilengruppenbereich](#TableRowGroupsNoGroupHeader)  
   
-###  <a name="Matrix"></a> Matrix  
+###  <a name="matrix"></a><a name="Matrix"></a> Matrix  
  In der Standardeinstellung verfügt eine einfache Matrix über eine Zeilengruppe und eine Spaltengruppe. Die folgende Abbildung zeigt eine Matrix mit einer Zeilengruppe für die Kategorie und einer Spaltengruppe für die Geografie:  
   
  ![Matrix mit Zeilengruppe „Category“ (Kategorie) und Spaltengruppe „Geography“ (Geografie)](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matrix mit Zeilengruppe „Category“ (Kategorie) und Spaltengruppe „Geography“ (Geografie)")  
@@ -73,7 +73,7 @@ ms.locfileid: "75245359"
   
  [Zurück zum Anfang](#Top)  
   
-###  <a name="TableNoGroups"></a> Tabelle ohne Zeilengruppen  
+###  <a name="table-with-no-row-groups"></a><a name="TableNoGroups"></a> Tabelle ohne Zeilengruppen  
  In der Standardeinstellung enthält eine einfache Tabelle ohne Gruppen die Detailgruppe. Die folgende Abbildung zeigt eine Tabelle, in der Kategorie, Bestellnummer und Umsatzdaten angezeigt werden:  
   
  ![Entwurf, Tabelle mit einer statischen und einer dynamischen Zeile](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "Entwurf, Tabelle mit einer statischen und einer dynamischen Zeile")  
@@ -94,7 +94,7 @@ ms.locfileid: "75245359"
   
  [Zurück zum Anfang](#Top)  
   
-###  <a name="TableRowGroupsGroupHeader"></a> Tabelle mit Zeilengruppen und einem Zeilengruppenbereich  
+###  <a name="table-with-row-groups-and-a-row-group-area"></a><a name="TableRowGroupsGroupHeader"></a> Tabelle mit Zeilengruppen und einem Zeilengruppenbereich  
  Wenn Sie einer einfachen Tabelle eine Zeilengruppe hinzufügen, wird der Tabelle auf der Entwurfsoberfläche ein Zeilegruppenbereich hinzugefügt. In der folgenden Abbildung ist eine Tabelle mit einer Zeilengruppe auf der Grundlage einer Kategorie dargestellt:  
   
  ![Entwurf, Tabelle mit einer Zeilengruppe und Details](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "Entwurf, Tabelle mit einer Zeilengruppe und Details")  
@@ -111,11 +111,11 @@ ms.locfileid: "75245359"
   
  ![Zeilengruppen, Erweiterter Modus mit statischen Elementen](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Zeilengruppen, Erweiterter Modus mit statischen Elementen")  
   
- Es werden die folgenden Tablix-Elemente aufgelistet: **Statisch**, (**Statisch**), Kategorie und (**Details**). Ein Tablix-Element mit Klammern () zeigt an, dass keine zugehörige Gruppenkopfzeile vorhanden ist. Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste statische Tablix-Element aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
+ Es werden vier Tablix-Elemente aufgelistet: **Statisch**, (**Statisch**), Kategorie und (**Details**). Ein Tablix-Element mit Klammern () zeigt an, dass keine zugehörige Gruppenkopfzeile vorhanden ist. Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste statische Tablix-Element aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
   
  [Zurück zum Anfang](#Top)  
   
-###  <a name="TableRowGroupsNoGroupHeader"></a> Tabelle mit Zeilengruppen ohne Zeilengruppenbereich  
+###  <a name="table-with-row-groups-and-no-row-group-area"></a><a name="TableRowGroupsNoGroupHeader"></a> Tabelle mit Zeilengruppen ohne Zeilengruppenbereich  
  Eine Tabelle kann aus verschiedenen Gründen Zeilengruppen ohne Zeilengruppenbereich enthalten. Dies ist der Fall, wenn Sie beispielsweise die folgenden beiden Vorgehensweisen anwenden:  
   
 -   Sie beginnen mit einer Tabelle mit Zeilengruppen und einem Zeilegruppenbereich und löschen die Spalten für den Zeilengruppenbereich. Löschen Sie nur die Spalten und nicht die Gruppen. Ein denkbares Szenario hierfür wäre ein Tabellenformat, dass lediglich ein einfaches Raster enthalten soll.  
@@ -138,7 +138,7 @@ ms.locfileid: "75245359"
   
  ![Zeilengruppen, erweitert, ohne Gruppenheader](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Zeilengruppen, erweitert, ohne Gruppenheader")  
   
- Im Bereich „Zeilengruppen“ werden die folgenden Tablix-Elemente aufgeführt: (**Statisch**), (Kategorie), (**Statisch**) und (**Details**). Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste Tablix-Element (**Statisch**) aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
+ Im Bereich Zeilengruppen werden die folgenden Tablix-Elemente aufgelistet: (**Statisch**), (Kategorie), (**Statisch**) und (**Details**). Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste Tablix-Element (**Statisch**) aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
   
  [Zurück zum Anfang](#Top)  
   

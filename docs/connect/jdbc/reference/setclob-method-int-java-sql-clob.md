@@ -16,10 +16,10 @@ ms.assetid: 68d49f2c-fd8d-4abb-bfdc-e7b0fbd9a9da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: abbd62ffbd256334511a30ae89091618ec37abf9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974563"
 ---
 # <a name="setclob-method-int-javasqlclob"></a>setClob-Methode (int, java.sql.Clob)
@@ -42,7 +42,7 @@ public final void setClob(int parameterIndex,
   
  *clobValue*  
   
- Ein CLOB-Objekt  
+ Dies ist ein CLOB-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

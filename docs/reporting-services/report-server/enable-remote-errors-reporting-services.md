@@ -12,10 +12,10 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593870"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Aktivieren von Remotefehlern (Reporting Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73593870"
   
 -   [Ändern der ConfigurationInfo-Tabelle (Einheitlicher Modus)](#bkmk_ConfigurationInfo)  
   
-##  <a name="bkmk_sharepoint"></a> Aktivieren von Remotefehlern für den SharePoint-Modus  
+##  <a name="enable-remote-errors-for-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Aktivieren von Remotefehlern für den SharePoint-Modus  
  Es gibt zwei verschiedene Prozeduren zum Aktivieren von Remotefehlern für den SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Die Prozedur ist für die beiden verschiedenen Berichtsserverarchitekturen unterschiedlich. Die neuere, auf dem SharePoint-Dienst basierende Architektur, die in der [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Version eingeführt wurde, verwendet eine Einstellung, die für jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung konfiguriert werden kann. Die ältere Architektur verwendet eine einzelne Einstellung auf Websiteebene.  
   
 #### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Aktivieren von Remotefehlern für eine Reporting Services-Dienstanwendung  
@@ -60,7 +60,7 @@ ms.locfileid: "73593870"
   
 5.  Klicken Sie auf **OK**  
   
-##  <a name="bkmk_mgtStudio"></a> Aktivieren von Remotefehlern durch SQL Server Management Studio (Einheitlicher Modus)  
+##  <a name="enable-remote-errors-through-sql-server-management-studio-native-mode"></a><a name="bkmk_mgtStudio"></a> Aktivieren von Remotefehlern durch SQL Server Management Studio (Einheitlicher Modus)  
   
 1.  Starten Sie Management Studio, und stellen Sie eine Verbindung mit einer Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73593870"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_script"></a> Aktivieren von Remotefehlern per Skript (Einheitlicher Modus)  
+##  <a name="enable-remote-errors-through-script-native-mode"></a><a name="bkmk_script"></a> Aktivieren von Remotefehlern per Skript (Einheitlicher Modus)  
   
 1.  Erstellen Sie eine Textdatei, und kopieren Sie das folgende Skript in die Datei.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "73593870"
   
 6.  Weitere Informationen finden Sie unter [Hilfsprogramm RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
   
-##  <a name="bkmk_ConfigurationInfo"></a> Ändern der ConfigurationInfo-Tabelle (Einheitlicher Modus)  
+##  <a name="modifying-the-configurationinfo-table-native-mode"></a><a name="bkmk_ConfigurationInfo"></a> Ändern der ConfigurationInfo-Tabelle (Einheitlicher Modus)  
   
 > [!NOTE]  
 >  Sie können die **ConfigurationInfo** -Tabelle in der Berichtsserver-Datenbank bearbeiten, um **EnableRemoteErrors** auf **True**festzulegen. Wenn der Berichtsserver jedoch aktiv verwendet wird, sollten Sie nach Möglichkeit SQL Server Management Studio oder ein Skript zum Ändern der Einstellungen verwenden. Wenn Sie die Einstellung in der Datenbank ändern, müssen Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst neu starten, bevor die Änderungen wirksam werden.  

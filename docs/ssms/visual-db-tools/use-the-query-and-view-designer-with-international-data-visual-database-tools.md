@@ -24,10 +24,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 8b2bd268bd46240b5954851946c7546a7f2dbb34
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246028"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Verwenden des Abfrage- und Sicht-Designers bei internationalen Daten (Visual Database Tools)
@@ -60,4 +60,4 @@ Sie können DBCS-Zeichen für Literalwerte und für Namen von Datenbankobjekten,
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[Design Queries and Views How-to Topics (Artikel zum Entwerfen von Abfragen und Sichten)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
+[Themen zur Vorgehensweise: Entwerfen von Abfragen und Ansichten](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)

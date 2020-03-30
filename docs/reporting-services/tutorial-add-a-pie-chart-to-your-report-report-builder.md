@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041246"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
@@ -34,7 +34,7 @@ Ungefähre Dauer dieses Lernprogramms: 10 Minuten
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Chart"></a>1. Erstellen eines Kreisdiagramms im Diagramm-Assistenten  
+## <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. Erstellen eines Kreisdiagramms im Diagramm-Assistenten  
 In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes Dataset zu erstellen, eine freigegebene Datenquelle auszuwählen, und ein Kreisdiagramm zu erstellen.  
 
   
@@ -77,7 +77,7 @@ In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes
   
 9. Klicken Sie auf **Weiter**.  
   
-## <a name="ChartType"></a>2. Auswählen des Diagrammtyps  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Auswählen des Diagrammtyps  
 Sie können aus einer Vielzahl vordefinierter Diagrammtypen auswählen.  
 
   
@@ -103,7 +103,7 @@ Im Bericht wird das Kreisdiagramm mit acht Slices angezeigt, eines für jedes Pr
 
 ![Berichts-Generator-Kreisdiagramm-erste-Vorschau](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
-## <a name="Percentages"></a>3. Anzeigen von Prozentsätzen in jedem Slice  
+## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Anzeigen von Prozentsätzen in jedem Slice  
 Sie können für jeden Slice des Kreisdiagramms den Prozentsatz des Slices im Vergleich zum gesamten Kreis anzeigen.  
 
   
@@ -130,7 +130,7 @@ Im Bericht wird der Prozentsatz am gesamten Kreis für jeden Kreisslice angezeig
 
 ![Berichts-Generator-Kreisdiagramm-Vorschau-Prozente](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
-## <a name="CombineSlices"></a>4. Kombinieren von kleinen Slices zu einem Slice  
+## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. Kombinieren von kleinen Slices zu einem Slice  
 Drei der Slices im Kreis sind relativ klein. Sie können mehrere kleine Slices zu einem größeren „Other“-Slice kombinieren, durch das alle drei Slices dargestellt werden.  
 
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
@@ -155,7 +155,7 @@ In der Legende wird die Kategorie „Other“ jetzt angezeigt. Im neuen Kreissli
 
 ![Berichts-Generator-Kreisdiagramm-beginnt-bei-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
-## <a name="DrawingEffect"></a>5. Beginnen der Kreisdiagrammwerte bei 0° 
+## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. Beginnen der Kreisdiagrammwerte bei 0° 
 
 Standardmäßig beginnt bei Kreisdiagrammen der erste Wert im Dataset bei 90 Grad zur Oberseite des Kreises versetzt. Dies wird im Kreisdiagramm in den vorherigen Abschnitten angezeigt.
 
@@ -173,7 +173,7 @@ Jetzt sind die Segmente des Kreisdiagramms in alphabetischer Reihenfolge, beginn
 
 ![Berichts-Generator-Kreisdiagramm-Beginn-oben](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
-## <a name="Title"></a>6. Hinzufügen eines Berichtstitels  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Hinzufügen eines Berichtstitels  
   
 Da das Kreisdiagramm die einzige Visualisierung im Bericht ist, muss für das Diagramm kein eigener Titel vergeben werden. Der Berichtstitel reicht völlig aus.
   
@@ -197,7 +197,7 @@ Da das Kreisdiagramm die einzige Visualisierung im Bericht ist, muss für das Di
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-## <a name="Save"></a>7. Speichern des Berichts  
+## <a name="7-save-the-report"></a><a name="Save"></a>7. Speichern des Berichts  
   
 ### <a name="to-save-the-report"></a>So speichern Sie den Bericht  
   

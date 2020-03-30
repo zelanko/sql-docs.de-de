@@ -16,10 +16,10 @@ ms.assetid: c5cc562f-2c5a-4fdb-a552-dfb08c2bf0ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb479f471f4df2a90521ec0f47d8d5396881f53f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981078"
 ---
 # <a name="getobject-method-sqlservercallablestatement"></a>getObject-Methode (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67981078"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[getObject (int)](../../../connect/jdbc/reference/getobject-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als Objekt in der Programmiersprache Java ab.|  
 |[getObject (int, java.util.Map)](../../../connect/jdbc/reference/getobject-method-int-java-util-map.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes und unter Verwendung des angegebenen Map-Objekts als Objekt in der Programmiersprache Java ab.|  

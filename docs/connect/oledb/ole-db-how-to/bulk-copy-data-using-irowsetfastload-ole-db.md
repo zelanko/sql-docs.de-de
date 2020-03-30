@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 926cc4f4d3dd1f3022c2b653a32f12ee58492b24
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015641"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Massenkopieren von Daten mithilfe von IRowsetFastLoad (OLE DB)
@@ -29,7 +29,7 @@ ms.locfileid: "68015641"
 
   In diesem Beispiel wird die Verwendung von IRowsetFastLoad für das Massenkopieren von Datensätzen in eine Tabelle gezeigt.  
   
- Der Benutzer teilt dem OLE DB-Treiber für SQL Server mit, dass ein Massenkopiervorgang durchgeführt werden soll, indem er die treiberspezifische Eigenschaft SSPROP_ENABLEFASTLOAD des OLE DB-Treibers für SQL Server auf VARIANT_TRUE festlegt. Wenn diese Eigenschaft für die Datenquelle festgelegt wurde, erstellt der Benutzer eine OLE DB-Treiber für SQL Server-Sitzung. Diese neue Sitzung ermöglicht dem Benutzer Zugriff auf **IRowsetFastLoad**.  
+ Der Benutzer teilt dem OLE DB-Treiber für SQL Server mit, dass ein Massenkopiervorgang durchgeführt werden soll, indem er die treiberspezifische Eigenschaft SSPROP_ENABLEFASTLOAD des OLE DB-Treibers für SQL Server auf VARIANT_TRUE festlegt. Wenn diese Eigenschaft für die Datenquelle festgelegt wurde, erstellt der Consumer eine OLE DB-Treiber für SQL Server-Sitzung. Diese neue Sitzung ermöglicht dem Benutzer Zugriff auf **IRowsetFastLoad**.  
   
  Es ist ein vollständiges Beispiel verfügbar, das die Verwendung von **IRowsetFastLoad** zum Massenkopieren der Datensätze in eine Tabelle veranschaulicht. In diesem Beispiel werden der Tabelle **IRFLTable** 10 Datensätze hinzugefügt. Sie müssen die Tabelle **IRFLTable** in der Datenbank erstellen.  
   

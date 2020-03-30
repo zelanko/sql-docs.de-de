@@ -11,10 +11,10 @@ ms.assetid: 705a0494-b5e2-43db-940a-1b8cec550cdb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 293667d8e3e06fb5eda7a74fdeed58c89fb0f1ae
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972960"
 ---
 # <a name="setsendtimeasdatetime-method-sqlserverdatasource"></a>setSendTimeAsDatetime-Methode (SQLServerDataSource)
@@ -34,7 +34,7 @@ public void setSendTimeAsDatetime(boolean sendTimeAsDateTime)
 #### <a name="parameters"></a>Parameter  
  *sendTimeAsDateTime*  
   
- Ein boolescher Wert. Wenn TRUE, werden java.sql.Time-Werte als **datetime**-Typen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an den Server zurückgegeben. Wenn FALSE, werden java.sql.Time-Werte als **time**-Typen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an den Server zurückgegeben.  
+ Ein boolescher Wert. Wenn TRUE, werden java.sql.Time-Werte als [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime **-Typen von**  an den Server zurückgegeben. Wenn FALSE, werden java.sql.Time-Werte als [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]time **-Typen von**  an den Server zurückgegeben.  
   
 ## <a name="remarks"></a>Bemerkungen  
  [SQLServerDataSource.getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md) gibt die Einstellung der Verbindungseigenschaft **sendTimeAsDatetime** zurück.  

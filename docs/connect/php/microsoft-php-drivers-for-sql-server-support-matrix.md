@@ -11,10 +11,10 @@ author: David-Engel
 ms.author: genemi
 manager: ''
 ms.openlocfilehash: c542a77c3a7cfbbe9c54786116e3e9e800a3dda0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76917807"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Unterstützungsmatrix für Microsoft-PHP-Treiber für SQL Server
@@ -36,10 +36,10 @@ Die folgenden Microsoft PHP-Treiber werden bis zum angegebenen Supportende unter
 |Microsoft PHP-Treiber 5.8 für SQL Server|5.8|31. Januar 2025|
 |Microsoft PHP-Treiber 5.6 für SQL Server|5.6|21. Februar 2024|
 |Microsoft PHP-Treiber 5.3 für SQL Server|5.3|20. Juli 2023|
-|Microsoft PHP-Treiber 5.2 für SQL Server|5,2|9. Februar 2023|
-|Microsoft PHP-Treiber 4.3 für SQL Server|4.3|6. Juli 2022|
+|Microsoft PHP-Treiber 5.2 für SQL Server|5,2|9\. Februar 2023|
+|Microsoft PHP-Treiber 4.3 für SQL Server|4.3|6\. Juli 2022|
 |Microsoft PHP-Treiber 4.0 für SQL Server|4,0|11. Juli 2021|
-|Microsoft PHP-Treiber 3.2 für SQL Server|3.2|9. März 2020|
+|Microsoft PHP-Treiber 3.2 für SQL Server|3.2|9\. März 2020|
 | &nbsp; | &nbsp; | &nbsp; |
 
 Die folgenden Microsoft PHP-Treiber werden nicht mehr unterstützt.
@@ -47,7 +47,7 @@ Die folgenden Microsoft PHP-Treiber werden nicht mehr unterstützt.
 |Treibername|Version des Treiberpakets|Ende des grundlegenden Supports|
 |-|:-:|-|
 |Microsoft PHP-Treiber 3.1 für SQL Server|3.1|12. Dezember 2019|
-|Microsoft PHP-Treiber 3.0 für SQL Server|3.0|6. März 2017|
+|Microsoft PHP-Treiber 3.0 für SQL Server|3.0|6\. März 2017|
 |Microsoft PHP-Treiber 2.0 für SQL Server|2.0|10. August 2015|
 |Microsoft PHP-Treiber 1.0 für SQL Server|1.0|28. August 2014|
 | &nbsp; | &nbsp; | &nbsp; |

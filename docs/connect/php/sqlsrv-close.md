@@ -17,10 +17,10 @@ ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4610cfd971c7de8f729902bc09237b47e19dad
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935816"
 ---
 # <a name="sqlsrv_close"></a>sqlsrv_close
@@ -36,7 +36,7 @@ sqlsrv_close( resource $conn )
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$conn:* Die Verbindung, die geschlossen werden soll.  
+*$conn*: Die Verbindung, die geschlossen werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Der boolesche Wert **true** , außer die Funktion wird mit einem ungültigen Parameter aufgerufen. Wenn die Funktion mit einem ungültigen Parameter aufgerufen wird, wird **false** zurückgegeben.  

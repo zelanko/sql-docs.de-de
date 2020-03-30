@@ -18,10 +18,10 @@ ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866317"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
@@ -34,7 +34,7 @@ ms.locfileid: "74866317"
  Mit unbeaufsichtigter Berichtsverarbeitung wird jede Berichtsausführung bezeichnet, die durch ein Ereignis (entweder ein geplantes Ereignis oder ein Datenaktualisierungsereignis) und nicht durch eine Benutzeranforderung ausgelöst wird. Der Berichtsserver verwendet das Konto für die unbeaufsichtigte Berichtsverarbeitung, um sich am Computer anzumelden, der die externe Datenquelle hostet. Dieses Konto ist erforderlich, da die Anmeldeinformationen des für den Berichtsserver verwendeten Dienstkontos nie für Verbindungen mit anderen Computern verwendet werden.  
   
 > [!IMPORTANT]  
->  Das Konfigurieren des Kontos ist optional. Wenn Sie es jedoch nicht konfigurieren, beschränken Sie die Möglichkeiten zur Verbindung mit einigen Datenquellen und können möglicherweise keine Imagedateien von Remotecomputern abrufen. Wenn Sie das Konto konfigurieren, müssen Sie es auf dem neuesten Stand halten. Beim nächsten Verarbeiten eines Berichts tritt insbesondere dann der folgende Fehler auf, wenn Sie das Ablaufen eines Kennworts zulassen oder die Kontoinformationen in Active Directory geändert werden: "Logon failed (rsLogonFailed) Logon failure: unknown user name or bad password." (Fehler bei der Anmeldung (rsLogonFailed) Anmeldefehler: Unbekannter Benutzername oder falsches Kennwort.) Die ordnungsgemäße Verwaltung des Kontos für die unbeaufsichtigte Berichtsverarbeitung ist wesentlich, auch wenn Sie nie externe Images abrufen oder Verbindungsanforderungen an externe Computer senden. Wenn Sie das Konto konfigurieren und dann doch nicht verwenden, können Sie es löschen und so routinemäßige Kontoverwaltungsaufgaben vermeiden.  
+>  Das Konfigurieren des Kontos ist optional. Wenn Sie es jedoch nicht konfigurieren, beschränken Sie die Möglichkeiten zur Verbindung mit einigen Datenquellen und können möglicherweise keine Imagedateien von Remotecomputern abrufen. Wenn Sie das Konto konfigurieren, müssen Sie es auf dem neuesten Stand halten. Besonders, wenn Sie das Ablaufen eines Kennworts zulassen oder wenn die Kontoinformationen in Active Directory geändert werden, tritt bei der nächsten Verarbeitung eines Berichts der folgende Fehler auf: "Fehler bei der Anmeldung (rsLogonFailed) Anmeldefehler: unbekannter Name oder falsches Kennwort." Die ordnungsgemäße Verwaltung des Kontos für die unbeaufsichtigte Berichtsverarbeitung ist wesentlich, auch wenn Sie nie externe Images abrufen oder Verbindungsanforderungen an externe Computer senden. Wenn Sie das Konto konfigurieren und dann doch nicht verwenden, können Sie es löschen und so routinemäßige Kontoverwaltungsaufgaben vermeiden.  
   
 ## <a name="how-to-configure-the-account"></a>Konfigurieren des Kontos  
  Sie müssen ein Domänenbenutzerkonto verwenden. Damit das Konto seinen Zweck erfüllt, sollte es nicht mit dem Konto identisch sein, unter dem Report Server-Webdienst ausgeführt wird. Verwenden Sie unbedingt ein Konto mit minimalen Berechtigungen (Nur-Lese-Zugriff mit Berechtigungen für Netzwerkverbindungen ist ausreichend) und eingeschränktem Zugriff auf die Computer, die Datenquellen und Ressourcen für den Berichtsserver bereitstellen.  
@@ -48,11 +48,11 @@ ms.locfileid: "74866317"
 3.  Geben Sie das Konto und das Kennwort ein, geben Sie das Kennwort erneut ein, und klicken Sie anschließend auf **Anwenden**.  
   
 ### <a name="using-rsconfig-utility"></a>Verwendung des RSCONFIG-Hilfsprogramms  
- Eine andere Möglichkeit, das Konto festzulegen, bietet das **rsconfig** -Hilfsprogramm. Verwenden Sie zum Angeben des Kontos das **-e** -Argument von **rsconfig**. Die Angabe des **-e** -Arguments für **rsconfig** bewirkt, dass das Hilfsprogramm die Kontoinformationen in die Konfigurationsdatei schreibt. Sie müssen keinen Pfad zu RSReportServer.Config angeben. Führen Sie folgende Schritte aus, um das Konto zu konfigurieren.  
+ Eine andere Möglichkeit, das Konto festzulegen, bietet das **rsconfig** -Hilfsprogramm. Verwenden Sie zum Angeben des Kontos das **-e** -Argument von **rsconfig**. Die Angabe des **-e** -Arguments für **rsconfig** bewirkt, dass das Hilfsprogramm die Kontoinformationen in die Konfigurationsdatei schreibt. Sie müssen keinen Pfad zur Datei RSreportserver.config angeben. Führen Sie die folgenden Schritte aus, um das Konto zu konfigurieren.  
   
 1.  Erstellen Sie ein Domänenkonto, oder wählen Sie ein Domänenkonto aus, das auf Computer und Server zugreifen kann, die Daten oder Dienste für einen Berichtsserver bereitstellen. Sie sollten ein Konto verwenden, das über beschränkte Berechtigungen verfügt (z. B. Nur-Lese-Zugriff).  
   
-2.  Öffnen Sie eine Eingabeaufforderung: Klicken Sie im Menü **Start** auf **Ausführen**, geben Sie **cmd** ein, und klicken Sie dann auf **OK**.  
+2.  Öffnen Sie eine Eingabeaufforderung: Klicken Sie im **Startmenü** auf **Ausführen**, geben Sie **cmd**ein, und klicken Sie anschließend auf **OK**.  
   
 3.  Geben Sie den folgenden Befehl ein, um das Konto in einer lokalen Berichtsserverinstanz zu konfigurieren:  
   

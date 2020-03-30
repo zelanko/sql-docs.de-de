@@ -16,10 +16,10 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce5ddca1cb39d7d4f375232e3588900b5b1ebe6a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570598"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung
@@ -51,7 +51,7 @@ ms.locfileid: "65570598"
   
  Die Berechtigung "Benutzerinformationen durchsuchen" ermöglicht dem Berichtsserver die Rückgabe von Informationen zum Ersteller des Elements und zum Benutzer, der das Element zuletzt geändert hat. Ohne diese Berechtigung gibt der Berichtsserver die folgenden Fehler zurück. Bei Suchvorgängen lautet der Fehler: „SharePoint-Fehler beim Berichtsserver. ---> System.UnauthorizedAccessException: Der Zugriff wird verweigert.“ Bei Veröffentlichungsvorgängen lautet der Fehler: „The permissions granted to user ‘\<domain>\\<user\>' are insufficient for performing this operation.“ (Die dem Benutzer '<Domain>\<Benutzer>' erteilten Berechtigungen reichen zum Ausführen des Vorgangs nicht aus.)  
   
-##  <a name="permissionReports"></a> Berechtigungen zum Anzeigen und Verwalten von Berichten  
+##  <a name="permissions-for-viewing-and-managing-reports"></a><a name="permissionReports"></a> Berechtigungen zum Anzeigen und Verwalten von Berichten  
  Berechtigungen für Berichtsdefinitionen werden über Listenberechtigungen für die Bibliothek definiert, die den Bericht enthält. Sie können Berechtigungen jedoch für einzelne Berichte festlegen, wenn Sie den Zugriff einschränken möchten. Die folgende Tabelle enthält eine Liste von Aufgaben und der Berechtigungen, die diese jeweils unterstützen.  
   
 |Aufgabe|Berechtigung|  
@@ -69,7 +69,7 @@ ms.locfileid: "65570598"
 |Löschen von Momentaufnahmen im Berichtsverlauf und Löschen bestimmter Versionen von Berichtsdefinitionen, die über einen Zeitraum ausgecheckt und geändert wurden.|**Versionen löschen** für die Bibliothek, die den Bericht enthält, für den Sie den Berichtsverlauf löschen.|  
 |Anzeigen von Momentaufnahmen im Berichtsverlauf und Anzeigen bestimmter Versionen von Berichtsdefinitionen, die über einen Zeitraum ausgecheckt und geändert wurden.|**Versionen anzeigen** für die Bibliothek, die den Bericht enthält.|  
   
-##  <a name="permissionReportBuilder"></a> Berechtigungen zum Erstellen von Berichten und zum Verwenden des Berichts-Generators  
+##  <a name="permissions-for-creating-reports-and-using-report-builder"></a><a name="permissionReportBuilder"></a> Berechtigungen zum Erstellen von Berichten und zum Verwenden des Berichts-Generators  
  Der Berichts-Generator ist ein Berichterstellungstool, das Sie zum Erstellen von Ad-hoc-Berichten verwenden können. Der Berichts-Generator verwendet Berichtsmodelle als Datenquelle, um das Ad-hoc-Durchsuchen von Daten zu unterstützen. Sie können ein Modell im Berichts-Generator laden, um einen Bericht zu erstellen, das Modell ausführen, durch die Daten im Modell klicken und den Bericht optional in einer Bibliothek speichern. Benutzer mit ausreichenden Berechtigungen können den Bericht anschließend öffnen und außerdem das Ad-hoc-Durchsuchen von Daten ausführen.  
   
 > [!NOTE]  
@@ -90,7 +90,7 @@ ms.locfileid: "65570598"
   
  Die Berechtigungen zum Erstellen und Verwenden von Abonnements oder Berichtsverläufen und zum Festlegen von Berichts- oder Datenverarbeitungsoptionen für einen Bericht des Berichts-Generators sind identisch mit den Berechtigungen zum Ausführen der gleichen Aktionen für standardmäßige Berichtsdefinitionsdateien.  
   
-##  <a name="permissionSharedSchedules"></a> Berechtigungen zum Erstellen und Verwalten freigegebener Zeitpläne  
+##  <a name="permissions-for-creating-and-managing-shared-schedules"></a><a name="permissionSharedSchedules"></a> Berechtigungen zum Erstellen und Verwalten freigegebener Zeitpläne  
  Freigegebene Zeitpläne sind keine Dokumente, die in einer Bibliothek gespeichert werden. Deshalb sind für das Erstellen und Verwalten dieser Zeitpläne Websiteberechtigungen erforderlich. Sie können den Zugriff nicht auf bestimmte freigegebene Zeitpläne einschränken. Jeder freigegebene Zeitplan, den Sie erstellen, ist für jeden Benutzer verfügbar, der die Berechtigung zum Öffnen für die gesamte Website besitzt.  
   
  Die folgende Tabelle enthält eine Liste von Aufgaben und Berechtigungen zum Erstellen, Verwalten und Verwenden freigegebener Zeitpläne:  
@@ -100,7 +100,7 @@ ms.locfileid: "65570598"
 |Erstellen, Bearbeiten oder Löschen eines freigegebenen Zeitplans.|**Website verwalten** für die Website.|  
 |Auswählen eines freigegebenen Zeitplans für die Abonnementverarbeitung oder das Abrufen von Daten.|**Öffnen** für die Website, die die Bibliothek enthält.|  
   
-##  <a name="permissionSubscriptions"></a> Berechtigungen zum Erstellen und Verwalten von Abonnements  
+##  <a name="permissions-for-creating-and-managing-subscriptions"></a><a name="permissionSubscriptions"></a> Berechtigungen zum Erstellen und Verwalten von Abonnements  
  Mit SharePoint wird eine Abhängigkeit zwischen Abonnement und Anzeigeberechtigungen erzwungen. Sie können einen Bericht nicht abonnieren, für den Sie keine Berechtigung zum Anzeigen besitzen. Wenn Sie Berechtigungen zum Abonnieren eines Berichts erteilen, werden automatisch auch Anzeigeberechtigungen erteilt.  
   
  Die folgende Tabelle enthält eine Liste von Aufgaben und Berechtigungen zum Erstellen, Verwalten und Verwenden von Abonnements:  
@@ -111,7 +111,7 @@ ms.locfileid: "65570598"
 |Auswählen eines freigegebenen Zeitplans für die Verwendung mit dem Abonnement.|**Öffnen** für die Website, die die Bibliothek enthält.|  
 |Erstellen, Bearbeiten oder Löschen aller Abonnements auf einer Website.|**Benachrichtigungen verwalten** für die Website.|  
   
-##  <a name="permissionDataSources"></a> Berechtigungen zum Erstellen und Verwalten von freigegebenen Datenquellen und Berichtsmodellen  
+##  <a name="permissions-for-creating-and-managing-shared-data-sources-and-report-models"></a><a name="permissionDataSources"></a> Berechtigungen zum Erstellen und Verwalten von freigegebenen Datenquellen und Berichtsmodellen  
  Eine freigegebene Datenquellendatei (RSDS) enthält Datenquellen-Verbindungsinformationen, die von mehreren Berichten und Modellen verwendet werden können. Für Standardberichte ist die Verwendung einer RSDS-Datei zum Angeben von Datenquellen-Verbindungsinformationen optional. Für modellgesteuerte Berichte ist die Verwendung einer RSDS-Datei erforderlich. Ein Berichtsmodell verwendet immer eine RSDS-Datei zum Herstellen von Verbindungen mit externen Datenquellen.  
   
  Sie können Eigenschaften für freigegebene Datenquellen festlegen, die bestimmen, ob einzelne Benutzer freigegebene Datenquellen anzeigen oder verwalten können. Berechtigungen zum Anzeigen oder Verwalten einer freigegebenen Datenquelle unterscheiden sich von Berechtigungen zum Anzeigen von Berichten. Sie können einen Bericht anzeigen, der eine RSDS-Datei verwendet, ohne die Berechtigung zum Anzeigen der RSDS-Datei selbst zu haben.  

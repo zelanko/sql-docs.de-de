@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: f51e5326d29d7edd6a518c02f7042cc9ed104b4f
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895954"
 ---
 # <a name="table-valued-parameters"></a>Tabellenwertparameter
@@ -32,7 +32,7 @@ Für den Zugriff auf Spaltenwerte in Tabellenwertparametern können Standard-SEL
   
 Weitere Informationen zu Tabellenwertparametern finden Sie in den folgenden Ressourcen.  
   
-|Resource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[Tabellenwertparameter (Datenbankmodul)](https://go.microsoft.com/fwlink/?LinkId=98363) in der SQL Server-Onlinedokumentation|Beschreibt, wie Sie Tabellenwertparameter erstellen und verwenden.|  
 |[Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkId=98364) in der SQL Server-Onlinedokumentation|Beschreibt die benutzerdefinierten Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden.|  
@@ -118,8 +118,8 @@ SqlParameter tvpParam = insertCommand.Parameters.AddWithValue("@tvpNewCategories
 tvpParam.SqlDbType = SqlDbType.Structured;  
 ```  
   
-## <a name="passing"></a> Übergeben eines Tabellenwertparameters an eine gespeicherte Prozedur  
-In diesem Beispiel wird veranschaulicht, wie Daten aus Tabellenwertparametern an eine gespeicherte Prozedur übergeben werden. Der Code extrahiert hinzugefügte Zeilen mithilfe der <xref:System.Data.DataTable.GetChanges%2A>-Methode in eine neue <xref:System.Data.DataTable>. Im Code wird dann ein <xref:Microsoft.Data.SqlClient.SqlCommand> definiert, wobei für die Eigenschaft <xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> der Wert <xref:System.Data.CommandType.StoredProcedure> festgelegt wird. Der <xref:Microsoft.Data.SqlClient.SqlParameter> wird mit der <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>-Methode aufgefüllt und für <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> wird `Structured` festgelegt. Anschließend wird der <xref:Microsoft.Data.SqlClient.SqlCommand> mit der Methode <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> ausgeführt.  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> Übergeben eines Tabellenwertparameters an eine gespeicherte Prozedur  
+In diesem Beispiel wird veranschaulicht, wie Daten aus Tabellenwertparametern an eine gespeicherte Prozedur übergeben werden. Der Code extrahiert hinzugefügte Zeilen mithilfe der <xref:System.Data.DataTable>-Methode in eine neue <xref:System.Data.DataTable.GetChanges%2A>. Im Code wird dann ein <xref:Microsoft.Data.SqlClient.SqlCommand> definiert, wobei für die Eigenschaft <xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> der Wert <xref:System.Data.CommandType.StoredProcedure> festgelegt wird. Der <xref:Microsoft.Data.SqlClient.SqlParameter> wird mit der <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>-Methode aufgefüllt und für <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> wird `Structured` festgelegt. Anschließend wird der <xref:Microsoft.Data.SqlClient.SqlCommand> mit der Methode <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> ausgeführt.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  

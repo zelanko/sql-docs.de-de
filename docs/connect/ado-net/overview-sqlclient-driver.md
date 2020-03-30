@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 0831e307ca0868cd80d92d22f6077070ca1730ea
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897092"
 ---
 # <a name="overview-of-the-sqlclient-driver"></a>Übersicht über den SqlClient-Treiber
@@ -30,7 +30,7 @@ ms.locfileid: "78897092"
   
 |Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Einführung in den Namespace „Microsoft.Data.SqlClient“](introduction-microsoft-data-sqlclient-namespace.md)|Einführungsseite für den Namespace Microsoft.Data.SqlClient|  
+|[Einführung in den Namespace „Microsoft.Data.SqlClient“](introduction-microsoft-data-sqlclient-namespace.md)|Die Einführungsseite für den Namespace Microsoft.Data.SqlClient.|  
 |[Herunterladen des Microsoft SqlClient-Datenanbieters für SQL Server](download-microsoft-sqlclient-data-provider.md)|Downloadseite für ADO.NET und den Microsoft SqlClient-Datenanbieter für SQL Server|  
 |[Lebenszyklus der SqlClient-Treiberunterstützung](sqlclient-driver-support-lifecycle.md)|Seite mit Informationen zum Support-Lebenszyklus des Produkts|  
 |[Suchen von zusätzlichen Informationen zum SqlClient-Treiber](find-additional-sqlclient-driver-information.md)|Seite mit nützlichen Informationen zum Treiber|  

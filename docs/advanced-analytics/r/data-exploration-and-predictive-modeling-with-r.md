@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6b336404d3b69e31ffb6f1a2aa82ade04804eb9e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78172203"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Datensuche und Vorhersagemodellierung mit R in SQL Server
@@ -68,9 +68,9 @@ Zusätzlich zu den proprietären R-Bibliotheken in Microsoft Azure Machine Learn
 
 Laden Sie Microsoft R Client herunter, wenn Sie R-Lösungen entwickeln. Dieser kostenlose Download enthält die Bibliotheken, die Sie für die Unterstützung von Remotecomputekontexten und skalierbarer Algorithmen benötigen:
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Eine Verteilung der R-Runtime und einige Pakete, z. B. die mathematische Kernelbibliothek von Intel, die die Leistung von R-Standardvorgängen steigern.  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Eine Verteilung des R-Laufzeitmoduls und einer Reihe von Paketen, z.B. die mathematische Kernelbibliothek von Intel, die die Leistung von R-Standardfunktionen steigern.  
   
-+ **RevoScaleR:** Ein R-Paket, mit dem Sie Berechnungen auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verlagern können. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. Es enthält auch einen Satz von allgemeinen R-Funktionen, die neu gestaltet wurden, um eine bessere Leistung und Skalierbarkeit zu bieten. Sie können diese verbesserten Funktionen am Präfix **rx** erkennen. Darüber hinaus sind verbesserte Datenanbieter für eine Vielzahl von Quellen enthalten; diese Funktionen haben das Präfix **Rx**.
++ **RevoScaleR:** Ein R-Paket, mit dem Sie Berechnungen auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verlagern können. [https://login.microsoftonline.com/consumers/]([!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]). Es enthält auch einen Satz von allgemeinen R-Funktionen, die neu gestaltet wurden, um eine bessere Leistung und Skalierbarkeit zu bieten. Sie können diese verbesserten Funktionen am Präfix **rx** erkennen. Darüber hinaus sind verbesserte Datenanbieter für eine Vielzahl von Quellen enthalten; diese Funktionen haben das Präfix **Rx**.
 
 Sie können alle Windows-basierten Code-Editoren verwenden, die R unterstützen, z. B. [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] oder RStudio. Der Download von [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] umfasst zudem allgemeine Befehlszeilentools für R, z.B. „RGui.exe.“
 

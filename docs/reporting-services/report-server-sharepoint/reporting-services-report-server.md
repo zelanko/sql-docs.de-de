@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67038013"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Vergleich zwischen nativen Berichtsservern und SharePoint-Berichtsservern in Reporting Services
@@ -27,7 +27,7 @@ Erfahren Sie mehr über den Hauptteil der [!INCLUDE[ssNoVersion](../../includes/
 
 Ein Reporting Services-Berichtsserver wird in einem von zwei Bereitstellungsmodi ausgeführt: dem einheitlichen Modus oder dem SharePoint-Modus. Einen Vergleich der Features finden Sie im Abschnitt [Funktionsvergleich zwischen SharePoint und einheitlichem Modus](#feature-comparison-of-sharepoint-and-native-mode) .  
   
- **Installation:** Informationen zur Installation von Reporting Services finden Sie im Artikel [Installieren von SQL Server Reporting Services](../install-windows/install-reporting-services.md).
+ **Installation:** Informationen zur Installation von Reporting Services finden Sie im Artikel zur [Reporting Services-Installation](../install-windows/install-reporting-services.md).
 
 ## <a name="overview-of-report-server-modes"></a>Übersicht über Berichtsservermodi
 
@@ -97,7 +97,7 @@ Ein Reporting Services-Berichtsserver wird in einem von zwei Bereitstellungsmodi
   
  ![Funktionale SSRS SharePoint-Architektur](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "Funktionale SSRS SharePoint-Architektur")  
   
-||Beschreibung|  
+||BESCHREIBUNG|  
 |-|-----------------|  
 |**(1)**|Webserver oder Web-Front-Ends (WFE). Das Reporting Services-Add-In muss auf jedem Webserver installiert sein, von dem aus Sie die Webanwendungsfunktionen nutzen möchten, beispielsweise Berichte oder Reporting Services-Verwaltungsseiten für Tasks (z.B. das Verwalten von Datenquellen oder Abonnements) anzeigen.|  
 |**(2)**|Mit dem Add-In werden URL- und SOAP-Endpunkte für die Kommunikation der Clients mit den Anwendungsservern über den Reporting Services-Dienstproxy installiert.|  
@@ -122,7 +122,7 @@ Ein Reporting Services-Berichtsserver wird in einem von zwei Bereitstellungsmodi
   
 |type|Standard|  
 |----------|-------------|  
-|Authentifizierung|Eine Standard-Berichtsserverinstanz unterstützt die Windows-Authentifizierung, einschließlich Identitätswechsel- und Delegationsfunktionen, falls diese in Ihrer Domäne aktiviert sind.|  
+|Authentication|Eine Standard-Berichtsserverinstanz unterstützt die Windows-Authentifizierung, einschließlich Identitätswechsel- und Delegationsfunktionen, falls diese in Ihrer Domäne aktiviert sind.|  
 |Datenverarbeitung|Eine Standard-Berichtsserverinstanz bietet Datenverarbeitungserweiterungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-, Oracle-, Hyperion Essbase-, SAPBW-, OLE DB-, Parallel Data Warehouse- und ODBC-Datenquellen.|  
 |Darstellung|Eine Standard-Berichtsserverinstanz bietet Renderingerweiterungen für die Dateiformate HTML, Excel, CSV, XML, Word und PDF sowie für SharePoint-Listen und Bilddateien.|  
 |Lieferung|Eine Standard-Berichtsserverinstanz schließt eine E-Mail-Übermittlungserweiterung und eine Dateifreigabe-Übermittlungserweiterung ein. Falls der Berichtsserver für die SharePoint-Integration konfiguriert ist, können Sie eine Übermittlungserweiterung verwenden, die Berichte in eine SharePoint-Bibliothek speichert.|  

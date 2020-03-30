@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578776"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche
@@ -33,7 +33,7 @@ ms.locfileid: "65578776"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SummaryCharacteristics"></a> Zusammenfassung der Merkmale  
+##  <a name="summary-of-characteristics"></a><a name="SummaryCharacteristics"></a> Zusammenfassung der Merkmale  
  In der folgenden Tabelle werden die unterschiedlichen Merkmale zusammengefasst. Details werden in separaten Abschnitten an späterer Stelle dieses Thema erläutert. Die Drilldownaktion ist nicht in diesen Vergleichen enthalten, da diese Ein- und Ausblendeaktion auf alle Berichtselemente angewendet werden kann.  
   
 |Merkmal|Unterbericht|Drillthrough ausführen|geschachtelt|  
@@ -48,36 +48,36 @@ ms.locfileid: "65578776"
 |Anzeige|Im Hauptbericht|In einem anderen Bericht|Im Hauptbericht|  
   
   
-##  <a name="Details"></a> Details der Merkmale  
+##  <a name="details-of-characteristics"></a><a name="Details"></a> Details der Merkmale  
   
-###  <a name="Datasets"></a> Verwendete Datasets  
+###  <a name="datasets-they-use"></a><a name="Datasets"></a> Verwendete Datasets  
  Unterberichte und Drillthroughberichte können das gleiche Dataset wie der Hauptbericht oder ein anderes Dataset verwenden. Geschachtelte Datenbereiche verwenden das gleiche Dataset.  
   
-###  <a name="RetrieveData"></a> Abrufen von Daten  
+###  <a name="retrieving-data"></a><a name="RetrieveData"></a> Abrufen von Daten  
  Unterberichte und geschachtelte Datenbereiche rufen Daten zur gleichen Zeit ab wie der Hauptbericht. Bei Drillthroughberichten ist dies nicht der Fall. Jeder Drillthroughbericht ruft Daten ab, wenn ein Benutzer auf den jeweiligen Link klickt. Dies ist von Bedeutung, wenn die Daten für den Hauptbericht und den untergeordneten Bericht zur gleichen Zeit abgerufen werden müssen.  
   
-###  <a name="ProcessRender"></a> Verarbeiten und Rendern  
+###  <a name="processing-and-rendering"></a><a name="ProcessRender"></a> Verarbeiten und Rendern  
  Ein Unterbericht wird als Teil des Hauptberichts verarbeitet. Wenn Sie z. B. einer Tabellenzelle in der Detailzeile einen Unterbericht mit Bestellinformationen hinzufügen, wird der Unterbericht einmal pro Zeile der Tabelle verarbeitet und als Teil des Hauptberichts gerendert. Ein Drillthroughbericht wird nur verarbeitet und gerendert, wenn Benutzer im zusammenfassenden Hauptbericht auf den Drillthroughlink klicken.  
   
-###  <a name="Performance"></a> Leistung  
+###  <a name="performance"></a><a name="Performance"></a> Leistung  
  Mitunter ist ein Datenbereich einem Unterbericht vorzuziehen. Dies ist insbesondere dann der Fall, wenn der Unterbericht nicht von mehreren Berichten verwendet wird. Da auf dem Berichtsserver jede Instanz eines Unterberichts als separater Bericht verarbeitet wird, wirkt sich dies u. U. negativ auf die Leistung aus. Datenbereiche bieten weitgehend dieselbe Funktionalität und Flexibilität wie Unterberichte, aber mit besserer Leistung. Drillthroughberichte bieten ebenfalls eine bessere Leistung als Unterberichte, da sie nicht alle Daten zur gleichen Zeit wie der Hauptbericht abrufen.  
   
-###  <a name="Parameters"></a> Verwendung von Parametern  
+###  <a name="use-of-parameters"></a><a name="Parameters"></a> Verwendung von Parametern  
  Drillthroughberichte und Unterberichte verfügen in der Regel über Berichtsparameter, die angeben, welche Berichtsdaten angezeigt werden sollen. Wenn Sie z. B. auf eine Bestellnummer im Hauptbericht klicken, wird ein Drillthroughbericht geöffnet, der unter Verwendung der Bestellnummer als Parameter alle Daten zu dieser Bestellnummer anzeigt. Beim Erstellen des Links im Hauptbericht geben Sie Werte an, die als Parameter für den Drillthroughbericht übergeben werden.  
   
  Zum Erstellen eines Drillthroughberichts oder Unterberichts müssen Sie zuerst den Zieldrillthroughbericht oder -unterbericht entwerfen und dann eine Drillthroughaktion erstellen oder den Verweis auf den Hauptbericht hinzufügen.  
   
-###  <a name="Reusability"></a> Wiederverwendbarkeit  
+###  <a name="reusability"></a><a name="Reusability"></a> Wiederverwendbarkeit  
  Unterberichte und Drillthroughberichte sind separate Berichte. Folglich können sie in einer Reihe von Berichten verwendet oder als eigenständige Berichte angezeigt werden. Geschachtelte Datenbereiche sind nicht wiederverwendbar. Sie können nicht als Berichtsteile gespeichert werden, da sie in einem Datenbereich geschachtelt sind. Sie können den Datenbereich speichern, in denen sie als Berichtsteil enthalten sind, aber nicht den geschachtelten Datenbereich.  
   
-###  <a name="Location"></a> Speicherort  
+###  <a name="location"></a><a name="Location"></a> Speicherort  
  Da Unterberichte und Drillthroughberichte separate Berichte sind, werden sie außerhalb des Hauptberichts gespeichert. Unterberichte können auf demselben oder einem anderen Berichtsserver gespeichert werden, Drillthroughberichte müssen sich jedoch auf demselben Berichtsserver befinden. Geschachtelte Datenbereiche sind Teil des Hauptberichts.  
   
-###  <a name="Display"></a> Anzeige  
+###  <a name="display"></a><a name="Display"></a> Anzeige  
  Unterberichte und geschachtelte Datenbereiche werden im Hauptbericht angezeigt. Drillthroughberichte werden als eigenständige Berichte angezeigt.  
   
   
-##  <a name="InThisSection"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> In diesem Abschnitt  
  [Drillthroughberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  Erläutert die Berichte, die geöffnet werden, wenn ein Benutzer in einem Hauptbericht auf einen Link klickt.  
   

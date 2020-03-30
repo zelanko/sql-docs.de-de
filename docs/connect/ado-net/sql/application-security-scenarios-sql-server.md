@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 76ed05f39cba61ea7f26deaef6cd38552b11f199
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897080"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Anwendungssicherheitsszenarios in SQL Server
@@ -37,7 +37,7 @@ Angriffe durch Rechteerweiterungen treten auf, wenn ein Benutzer die Berechtigun
 ### <a name="probing-and-intelligent-observation"></a>Probing und intelligente Beobachtung  
 Bei einem Probing-Angriff können die von einer Anwendung generierten Fehlermeldungen verwendet werden, um nach Sicherheitslücken zu suchen. Implementieren Sie im gesamten prozeduralen Code eine Fehlerbehandlung, um zu verhindern, dass SQL Server-Fehlerinformationen an den Endbenutzer zurückgegeben werden.  
   
-### <a name="authentication"></a>Authentifizierung  
+### <a name="authentication"></a>Authentication  
 Ein Angriff durch Einschleusung einer Verbindungszeichenfolge kann bei Verwendung von SQL Server-Anmeldungen auftreten, bei denen Verbindungszeichenfolgen zur Laufzeit basierend auf Benutzereingaben generiert werden. Wenn die Verbindungszeichenfolge nicht auf gültige Schlüsselwortkombinationen geprüft wird, kann ein Angreifer zusätzliche Zeichen einfügen und möglicherweise auf vertrauliche Daten oder andere Ressourcen auf dem Server zugreifen. Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn Sie SQL Server-Anmeldungen nutzen müssen, verwenden Sie <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>, um Verbindungszeichenfolgen zur Laufzeit zu erstellen und zu überprüfen.  
   
 ### <a name="passwords"></a>Kennwörter  

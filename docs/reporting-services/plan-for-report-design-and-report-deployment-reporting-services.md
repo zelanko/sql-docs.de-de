@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581246"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planen von Berichtsentwurf und -bereitstellung | Reporting Services
@@ -22,7 +22,7 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
   
  RDL-Dateien werden im Berichts-Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] -Projekten erstellt, sowie im Berichts-Generator. RDLC-Dateien werden mit den ReportViewer-Steuerelementen erstellt, die in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]enthalten sind.
   
-##  <a name="bkmk_rdl_schema_versions"></a> RDL-Schemaversionen  
+##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> RDL-Schemaversionen  
  In der folgenden Tabelle sind alle verfügbaren Schemaversionen und die in diesem Thema verwendeten Abkürzungen der Schemaversionen aufgeführt:  
   
 |Abkürzung|Schemaversion|  
@@ -43,14 +43,14 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
   
  Weitere Informationen zu ReportViewer-Steuerelementen finden Sie unter [ReportViewer-Steuerelemente (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
-##  <a name="bkmk_report_server_rdl_schema_support"></a> Unterstützung von Berichtsservern und RDL-Schemas  
+##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> Unterstützung von Berichtsservern und RDL-Schemas  
  Eine Berichtsdefinitionsdatei kann wie folgt auf einem [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] -Berichtsserver bereitgestellt werden:  
   
--   **Berichts-Designer:** Stellen Sie einen Bericht aus dem Berichts-Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] bereit.  
+-   **Berichts-Designer:** Stellen Sie einen Bericht im Berichts-Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]bereit.  
   
--   **Berichts-Generator:** Speichern Sie einen Bericht aus dem Berichts-Generator auf dem Berichtsserver.  
+-   **Report-Generator:** Speichern Sie einen Bericht aus dem Berichts-Generator auf dem Berichtsserver.  
   
--   **Webportal:** Laden Sie einen Bericht aus dem [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] auf einen Berichtsserver im einheitlichen Modus hoch.  
+-   **Webportal:** Laden Sie einen Bericht aus dem [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]auf einen Berichtsserver im einheitlichen Modus hoch.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -82,7 +82,7 @@ Wechseln Sie in einer Bereitstellung im SharePoint-Modus zur Dokumentbibliothek,
   
  Weitere Informationen über Berichtsupgrades und die unterstützten Schemaversionen finden Sie unter [Aktualisieren von Berichten](../reporting-services/install-windows/upgrade-reports.md).  
   
-##  <a name="bkmk_report_authoring_and_deployment"></a> Unterstützung von Berichterstellung und -bereitstellung  
+##  <a name="report-authoring-and-deployment-support"></a><a name="bkmk_report_authoring_and_deployment"></a> Unterstützung von Berichterstellung und -bereitstellung  
  Berichterstellungsumgebungen sind der Berichts-Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] -Projekten sowie der Berichts-Generator. Berichterstellungsumgebungen bieten viele Arten der Unterstützung für Berichtsupgrades, den Berichtsentwurf, die Berichtsvorschau im lokalen Modus, die Berichtsvorschau auf dem Berichtsserver sowie die Berichtsbereitstellung.  
   
  In der folgenden Tabelle wird die Unterstützung für das Erstellen und Bereitstellen von Berichtsdefinitionen für unterschiedliche Schemaversionen zusammengefasst:  
@@ -101,7 +101,7 @@ Wechseln Sie in einer Bereitstellung im SharePoint-Modus zur Dokumentbibliothek,
   
 -   [SQL Server Data Tools für Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md)  
   
-##  <a name="bkmk_reportviewer"></a> ReportViewer-Steuerelemente  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a> ReportViewer-Steuerelemente  
  Ein [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer-Steuerelement kann einen RDLC-Bericht im lokalen Vorschaumodus oder im Remotemodus anzeigen; das Steuerelement kann eine RDL-Datei anzeigen, die auf einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver gehostet wird. In der folgenden Tabelle sind die RDL-Versionen aufgelistet, die von den ReportViewer-Steuerelementen für die lokale Verarbeitung (.rdlc) unterstützt werden. Informationen zur serverseitigen RDL-Unterstützung finden Sie im Abschnitt [Unterstützung von Berichtsservern und RDL-Schemas](#bkmk_report_server_rdl_schema_support).  
   
 |ReportViewer-Steuerelement im Produkt|RDL-Version für lokale Vorschau|  

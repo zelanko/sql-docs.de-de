@@ -18,10 +18,10 @@ ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 333a3b0c6434415c573907bdf0bdbf3e9667afcd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992881"
 ---
 # <a name="sqlsrv_begin_transaction"></a>sqlsrv_begin_transaction
@@ -43,7 +43,7 @@ sqlsrv_begin_transaction( resource $conn)
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$conn*: Die Verbindung, der die Transaktion zugeordnet ist  
+*$conn*: Die Verbindung, der die Transaktion zugeordnet ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Ein boolescher Wert: **true** , wenn die Transaktion erfolgreich gestartet wurde. Andernfalls lautet der Wert **false**.  
@@ -126,7 +126,7 @@ Da wir uns auf die Überwachung des Transaktionsverhaltens konzentrieren, sind T
 ## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Vorgehensweise: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
+[Gewusst wie: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
 
 [Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md) 
   

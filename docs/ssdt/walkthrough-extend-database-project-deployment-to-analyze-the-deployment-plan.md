@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242682"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu analysieren
@@ -41,7 +41,7 @@ Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
 > [!NOTE]  
 > Diese exemplarische Vorgehensweise ist für Benutzer gedacht, die bereits mit den SQL-Funktionen von SSDT vertraut sind. Außerdem wird von Ihnen erwartet, dass Sie mit den grundlegenden Visual Studio-Konzepten vertraut sind, wie etwa dem Erstellen einer Klassenbibliothek und dem Verwenden des Code-Editor zum Hinzufügen von Code zu einer Klasse.  
   
-## <a name="CreateDeploymentContributor"></a>Erstellen eines Bereitstellungs-Contributors  
+## <a name="create-a-deployment-contributor"></a><a name="CreateDeploymentContributor"></a>Erstellen eines Bereitstellungs-Contributors  
 Zum Erstellen eines Bereitstellungs-Contributors führen Sie folgende Aufgaben aus:  
   
 -   Erstellen Sie ein Klassenbibliotheksprojekt, und fügen Sie die erforderlichen Verweise hinzu.  
@@ -554,7 +554,7 @@ Zum Erstellen eines Bereitstellungs-Contributors führen Sie folgende Aufgaben a
   
 Als Nächstes müssen Sie die Assembly installieren, damit sie geladen wird, wenn Sie SQL-Projekte erstellen und bereitstellen.  
   
-## <a name="InstallDeploymentContributor"></a>Installieren eines Bereitstellungs-Contributors  
+## <a name="install-a-deployment-contributor"></a><a name="InstallDeploymentContributor"></a>Installieren eines Bereitstellungs-Contributors  
 Zum Installieren eines Bereitstellungs-Contributors müssen Sie die Assembly und die zugehörige PDB-Datei in den Erweiterungsordner kopieren.  
   
 #### <a name="to-install-the-mydeploymentcontributor-assembly"></a>So installieren Sie die MyDeploymentContributor-Assembly  
@@ -563,7 +563,7 @@ Zum Installieren eines Bereitstellungs-Contributors müssen Sie die Assembly und
   
 -   Kopieren Sie die Assemblydatei **MyDeploymentContributor.dll** aus dem Ausgabeverzeichnis in das Verzeichnis „%Programme%\Microsoft SQL Server\110\DAC\Bin\Extensions“. Der Pfad Ihrer kompilierten DLL-Datei lautet standardmäßig IhrProjektmappenpfad\IhrProjektpfad\bin\Debug oder IhrProjektmappenpfad\IhrProjektpfad\bin\Release.  
   
-## <a name="TestDeploymentContributor"></a>Testen eines Bereitstellungs-Contributors  
+## <a name="test-your-deployment-contributor"></a><a name="TestDeploymentContributor"></a>Testen eines Bereitstellungs-Contributors  
 Zum Testen eines Bereitstellungs-Contributors führen Sie folgende Aufgaben aus:  
   
 -   Fügen Sie der SQLPROJ-Datei, die Sie bereitzustellen planen, Eigenschaften hinzu.  
