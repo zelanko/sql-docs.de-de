@@ -17,10 +17,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286576"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Arbeiten mit Excel-Dateien mit dem Skripttask
@@ -36,7 +36,7 @@ ms.locfileid: "71286576"
 > [!TIP]  
 >  Wenn Sie einen Task erstellen möchten, den Sie in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
 
-##  <a name="configuring"></a> Konfigurieren eines Pakets zum Testen der Beispiele  
+##  <a name="configuring-a-package-to-test-the-samples"></a><a name="configuring"></a> Konfigurieren eines Pakets zum Testen der Beispiele  
  Sie können ein einzelnes Paket konfigurieren, um alle Beispiele in diesem Thema zu testen. In den Beispielen werden oft die gleichen Paketvariablen und die gleichen [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Klassen verwendet.  
   
 ### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>So konfigurieren Sie ein Paket zur Verwendung mit den in diesem Thema beschriebenen Beispielen  
@@ -69,7 +69,7 @@ ms.locfileid: "71286576"
   
 5.  Verwenden Sie im Dialogfeld **Optionen** auf der Seite **Allgemein** die Option **Skriptsprache**, um die Standardskriptsprache für die Skriptkomponente festzulegen. Weitere Informationen finden Sie unter [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Beschreibung zu Beispiel 1: Überprüfen, ob eine Excel-Datei vorhanden ist  
+##  <a name="example-1-description-check-whether-an-excel-file-exists"></a><a name="example1"></a> Beschreibung zu Beispiel 1: Überprüfen, ob eine Excel-Datei vorhanden ist  
  In diesem Beispiel wird überprüft, ob die von der `ExcelFile`-Variable angegebene Excel-Arbeitsmappendatei vorhanden ist. Daraufhin wird der boolesche Wert der `ExcelFileExists`-Variable auf das Ergebnis festgelegt. Sie können diesen booleschen Wert im Workflow des Pakets zur Verzweigung verwenden.  
   
 ### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
@@ -139,7 +139,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Beschreibung zu Beispiel 2: Überprüfen, ob eine Excel-Tabelle vorhanden ist  
+##  <a name="example-2-description-check-whether-an-excel-table-exists"></a><a name="example2"></a> Beschreibung zu Beispiel 2: Überprüfen, ob eine Excel-Tabelle vorhanden ist  
  In diesem Beispiel wird überprüft, ob das in der `ExcelTable`-Variable angegebene Excel-Arbeitsblatt bzw. der benannte Bereich in der Excel-Arbeitsmappendatei vorhanden ist, die in der `ExcelFile`-Variable angegeben wurde. Daraufhin wird der boolesche Wert der `ExcelTableExists`-Variable auf das Ergebnis festgelegt. Sie können diesen booleschen Wert im Workflow des Pakets zur Verzweigung verwenden.  
   
 ### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
@@ -246,7 +246,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Beschreibung zu Beispiel 3: Abrufen einer Liste der Excel-Dateien in einem Ordner  
+##  <a name="example-3-description-get-a-list-of-excel-files-in-a-folder"></a><a name="example3"></a> Beschreibung zu Beispiel 3: Abrufen einer Liste der Excel-Dateien in einem Ordner  
  In diesem Beispiel wird ein Array mit der Liste der Excel-Dateien aus dem Ordner gefüllt, der im Wert der `ExcelFolder`-Variable angegeben wurde. Das Array wird daraufhin in die `ExcelFiles`-Variable kopiert. Mithilfe des Foreach-Enumerators für Daten aus Variablen können die Dateien in dem Array durchlaufen werden.  
   
 ### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
@@ -318,7 +318,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Alternative Lösung  
  Anstelle eines Skripttasks können Sie zum Sammeln einer Liste von Excel-Arbeitsmappen in einem Array auch den Foreach-Dateienumerator verwenden, um alle Excel-Dateien in einem Ordner zu durchlaufen. Weitere Informationen finden Sie unter [Loop through Excel Files and Tables by Using a Foreach Loop Container (Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer)](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-##  <a name="example4"></a> Beschreibung zu Beispiel 4: Abrufen einer Liste der Tabellen in einer Excel-Datei  
+##  <a name="example-4-description-get-a-list-of-tables-in-an-excel-file"></a><a name="example4"></a> Beschreibung zu Beispiel 4: Abrufen einer Liste der Tabellen in einer Excel-Datei  
  In diesem Beispiel wird ein Array mit der Liste der Arbeitsmappen und benannten Bereiche in der Excel-Arbeitsmappendatei gefüllt, der im Wert der `ExcelFile`-Variable angegeben wurde. Das Array wird daraufhin in die `ExcelTables`-Variable kopiert. Mithilfe des Foreach-Enumerators für Daten aus Variablen können die Tabellen in dem Array durchlaufen werden.  
   
 > [!NOTE]  
@@ -430,7 +430,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Alternative Lösung  
  Anstelle eines Skripttasks können Sie zum Sammeln einer Liste von Excel-Arbeitsmappen in einem Array auch den Enumerator für das Foreach-ADO.NET-Schemarowset verwenden, um alle Tabellen (d. h. Arbeitsmappen und benannte Bereiche) in einer Excel-Arbeitsmappendatei zu durchlaufen. Weitere Informationen finden Sie unter [Loop through Excel Files and Tables by Using a Foreach Loop Container (Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer)](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-##  <a name="testing"></a> Anzeigen der Ergebnisse dieser Beispiele  
+##  <a name="displaying-the-results-of-the-samples"></a><a name="testing"></a> Anzeigen der Ergebnisse dieser Beispiele  
  Wenn Sie alle Beispiele dieses Themas im selben Paket konfiguriert haben, können Sie alle Skripttasks mit einem zusätzlichen Skripttask verbinden, der die Ausgaben aller Beispiele anzeigt.  
   
 ### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>So konfigurieren Sie einen Skripttask zum Anzeigen der Ausgabe der in diesem Thema behandelten Beispiele  
