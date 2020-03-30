@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Besitzketten und Kontextwechsel'
+title: 'Tutorial: Ownership Chains and Context Switching'
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0c5b79da02f8b78601db8691c83e6782f83b8b0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095679"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Besitzketten und Kontextwechsel
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Anhand des Szenarios in diesem Lernprogramm werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sicherheitskonzepte verdeutlicht, die Besitzketten und Kontextwechsel umfassen.  
   
@@ -52,7 +52,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 Weitere Informationen zum Wiederherstellen einer Datenbank in SQL Server Management Studio finden Sie unter [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Konfigurieren der Umgebung  
-Verwenden Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sowie den folgenden Code, um die Datenbank `AdventureWorks2017` zu öffnen. Vergewissern Sie sich mithilfe der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung `CURRENT_USER`, dass der Benutzer „dbo“ als Kontext angezeigt wird.  
+Verwenden Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sowie den folgenden Code, um die Datenbank `AdventureWorks2017` zu öffnen. Vergewissern Sie sich mithilfe der `CURRENT_USER`-Anweisung [!INCLUDE[tsql](../includes/tsql-md.md)], dass der Benutzer „dbo“ als Kontext angezeigt wird.  
   
 ```sql
 USE AdventureWorks2017;  
@@ -210,7 +210,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## <a name="CompleteExample"></a>Vollständiges Beispiel  
+## <a name="complete-example"></a><a name="CompleteExample"></a>Vollständiges Beispiel  
 In diesem Abschnitt wird der vollständige Beispielcode angezeigt.  
   
 > [!NOTE]  

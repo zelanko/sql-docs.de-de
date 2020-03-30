@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 2b8909ca44ef6de5f162521234b0bdfa20d5c9ea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056089"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>DDL, Funktionen, gespeicherte Prozeduren und Sichten für Volltextsuche
@@ -26,7 +26,7 @@ ms.locfileid: "74056089"
   
  Die Liste der Datenbankobjekte, die die semantische Suche unterstützen, finden Sie unter [Semantic Search DDL, Functions, Stored Procedures, and Views](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md).  
   
-##  <a name="ddl"></a> Transact-SQL-DDL-Anweisungen (Data Definition Language, Datendefinitionssprache)  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL-DDL-Anweisungen (Data Definition Language, Datendefinitionssprache)  
   
 -   [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74056089"
   
 -   [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)  
   
-##  <a name="func"></a> Systemprädikate und Funktionen  
+##  <a name="system-predicates-and-functions"></a><a name="func"></a> Systemprädikate und Funktionen  
   
 -   [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "74056089"
   
 -   [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
   
-##  <a name="meta"></a> Systemmetadatenfunktionen  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> Systemmetadatenfunktionen  
   
 -   [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74056089"
   
 -   [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  
   
-##  <a name="proc"></a> Gespeicherte Systemprozeduren  
+##  <a name="system-stored-procedures"></a><a name="proc"></a> Gespeicherte Systemprozeduren  
   
 -   [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "74056089"
   
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
   
-##  <a name="cat"></a> Systemsichten: Katalogsichten  
+##  <a name="system-views---catalog-views"></a><a name="cat"></a> Systemsichten: Katalogsichten  
   
 -   [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "74056089"
   
 -   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
-##  <a name="dmv"></a> Systemsichten: Dynamische Verwaltungssichten  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> Systemsichten: Dynamische Verwaltungssichten  
   
 -   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md)  
   

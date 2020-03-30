@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981713"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY-Klausel (Transact-SQL)
@@ -209,7 +209,7 @@ ORDER BY SchemaName + ''; -- wrong
 |[Beschränken der Anzahl der zurückgegebenen Zeilen](#Offset)|OFFSET • FETCH|  
 |[Verwenden von ORDER BY mit UNION, EXCEPT und INTERSECT](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a> Grundlegende Syntax  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Grundlegende Syntax  
  Anhand von Beispielen in diesem Abschnitt wird die grundlegende Funktion der ORDER BY-Klausel mithilfe der mindestens erforderlichen Syntax veranschaulicht.  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Angeben einer einzelnen Spalte, die in der Auswahlliste definiert ist  
@@ -260,7 +260,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a> Angeben der auf- und absteigenden Sortierreihenfolge  
+###  <a name="specifying-ascending-and-descending-sort-order"></a><a name="SortOrder"></a> Angeben der auf- und absteigenden Sortierreihenfolge  
   
 #### <a name="a-specifying-a-descending-order"></a>A. Angeben einer absteigenden Reihenfolge  
  Im folgenden Beispiel wird das Resultset anhand der numerischen `ProductID`-Spalte in absteigender Reihenfolge sortiert.  
@@ -298,7 +298,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a> Angeben einer Sortierung  
+###  <a name="specifying-a-collation"></a><a name="Collation"></a> Angeben einer Sortierung  
  Im folgenden Beispiel wird gezeigt, wie sich die Reihenfolge, in der die Abfrageergebnisse zurückgegeben werden, durch Angeben einer Sortierung in der ORDER BY-Klausel ändern kann. Es wird eine Tabelle mit einer Spalte erstellt, bei deren Sortierung weder die Groß- und Kleinschreibung beachtet noch nach Akzent unterschieden wird. Werte werden mit Groß- und Kleinschreibung sowie unterschiedlichen Akzenten eingefügt. Da in der ORDER BY-Klausel keine Sortierung angegeben wurde, wird von der ersten Abfrage die Sortierung der Spalte beim Sortieren der Werte verwendet. In der zweiten Abfrage wird in der ORDER BY-Klausel eine Sortierung angegeben, bei der die Groß- und Kleinschreibung beachtet und Akzente unterschieden werden; dadurch ändert sich die Reihenfolge, in der die Zeilen zurückgegeben werden.  
   
 ```sql
@@ -319,7 +319,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a> Angeben einer bedingten Reihenfolge  
+###  <a name="specifying-a-conditional-order"></a><a name="Case"></a> Angeben einer bedingten Reihenfolge  
  In den folgenden Beispielen wird der CASE-Ausdruck in einer ORDER BY-Klausel verwendet, um die Sortierreihenfolge der Zeilen auf Grundlage eines angegebenen Spaltenwerts bedingt zu bestimmen. Im ersten Beispiel wird der Wert in der `SalariedFlag`-Spalte der `HumanResources.Employee`-Tabelle ausgewertet. Mitarbeiter, deren `SalariedFlag` auf 1 festgelegt wurde, werden nach `BusinessEntityID` in absteigender Folge zurückgegeben. Mitarbeiter, deren `SalariedFlag` auf 0 festgelegt wurde, werden nach `BusinessEntityID` in aufsteigender Folge zurückgegeben. Im zweiten Beispiel wird das Resultset nach der `TerritoryName`-Spalte sortiert, wenn die `CountryRegionName`-Spalte gleich 'United States' ist, und bei allen anderen Zeilen nach `CountryRegionName`.  
   
 ```sql
@@ -340,7 +340,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a> Verwenden von ORDER BY in einer Rangfolgefunktion  
+###  <a name="using-order-by-in-a-ranking-function"></a><a name="Rank"></a> Verwenden von ORDER BY in einer Rangfolgefunktion  
  Im folgenden Beispiel wird die ORDER BY-Klausel in den Rangfolgefunktionen ROW_NUMBER, RANK, DENSE_RANK und NTILE verwendet.  
   
 ```sql
@@ -361,7 +361,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a> Beschränken der Anzahl der zurückgegebenen Zeilen  
+###  <a name="limiting-the-number-of-rows-returned"></a><a name="Offset"></a> Beschränken der Anzahl der zurückgegebenen Zeilen  
  In den folgenden Beispielen wird die Anzahl der Zeilen, die von einer Abfrage zurückgegeben werden, mit OFFSET und FETCH eingeschränkt.  
   
 **Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -489,7 +489,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-###  <a name="Union"></a> Verwenden von ORDER BY mit UNION, EXCEPT und INTERSECT  
+###  <a name="using-order-by-with-union-except-and-intersect"></a><a name="Union"></a> Verwenden von ORDER BY mit UNION, EXCEPT und INTERSECT  
  Wenn eine Abfrage die Operatoren UNION, EXCEPT oder INTERSECT verwendet, muss die ORDER BY-Klausel am Ende der Anweisung angegeben werden, und die Ergebnissen der kombinierten Abfragen werden sortiert. Im folgenden Beispiel werden alle Produkte zurückgegeben, die rot oder gelb sind, und die kombinierte Liste wird anhand der Spalte `ListPrice` sortiert.  
   
 ```sql
@@ -506,7 +506,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Das folgende Beispiel veranschaulicht ein Resultset sortiert nach der numerischen `EmployeeKey`-Spalte in aufsteigender Reihenfolge.  
   
 ```sql

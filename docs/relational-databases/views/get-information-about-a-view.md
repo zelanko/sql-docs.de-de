@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909892"
 ---
 # <a name="get-information-about-a-view"></a>Abrufen von Informationen zu einer Sicht
@@ -48,14 +48,14 @@ ms.locfileid: "72909892"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Für die Verwendung von `sp_helptext` zum Zurückgeben der Definition einer Sicht ist die Mitgliedschaft in der Rolle **Öffentlich** erforderlich. Für die Verwendung von `sys.sql_expression_dependencies` zur Suche aller Abhängigkeiten von einer Sicht sind die Berechtigung VIEW DEFINITION für die Datenbank und die Berechtigung SELECT auf `sys.sql_expression_dependencies` für die Datenbank erforderlich. Systemobjektdefinitionen, wie die in SELECT OBJECT_DEFINITION zurückgegebenen Systemobjektdefinitionen, sind öffentlich sichtbar.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Abrufen von Sichteigenschaften mit Objekt-Explorer  
   
@@ -177,7 +177,7 @@ ms.locfileid: "72909892"
   
 4.  Wählen Sie **Objekte, von denen [Sichtname] abhängt** aus, um die Objekte anzuzeigen, auf die von der Sicht verwiesen wird.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>So rufen Sie die Definition und die Eigenschaften einer Sicht ab  
   

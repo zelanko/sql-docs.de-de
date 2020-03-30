@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3cc48298aadc027509adb9d0abf5f5057e0c4fef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055977"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>Formatdateien zum Importieren oder Exportieren von Daten (SQL Server)
@@ -29,12 +29,12 @@ Beim Massenimportieren bzw. -exportieren von Daten in eine bzw. aus einer [!INCL
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt zwei Typen von Formatdateien: XML- und Nicht-XML-Formatdateien. Sowohl Nicht-XML-Formatdateien als auch XML-Formatdateien enthalten Beschreibungen jedes Felds in einer Datendatei. XML-Formatdateien enthalten darüber hinaus auch Beschreibungen der entsprechenden Tabellenspalten. Im Allgemeinen sind XML-Formatdateien und Nicht-XML-Formatdateien austauschbar. Es empfiehlt sich jedoch, für neue Formatdateien die XML-Syntax zu verwenden, weil sich im Vergleich zu Nicht-XML-Formatdateien mehrere Vorteile ergeben. Weitere Informationen finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).
 
-## <a name="Benefits"></a> Vorteile von Formatdateien
+## <a name="benefits-of-format-files"></a><a name="Benefits"></a> Vorteile von Formatdateien
 
 - Formatdateien stellen ein flexibles System für das Schreiben von Datendateien bereit, die für die Kompatibilität mit anderen Datenformaten und zum Lesen von Datendateien aus anderen Softwareprogrammen nur geringfügig oder gar nicht bearbeitet werden müssen.
 - Durch Verwenden einer Formatdatei ist es möglich, Daten per Massenimport zu kopieren, ohne überflüssige Daten hinzufügen oder löschen oder vorhandene Daten in der Datendatei neu anordnen zu müssen. Formatdateien sind besonders hilfreich, wenn Felder in der Datendatei und Spalten in der Tabelle nicht übereinstimmen.
 
-## <a name="ExamplesOfFFs"></a> Beispiele für Formatdateien
+## <a name="examples-of-format-files"></a><a name="ExamplesOfFFs"></a> Beispiele für Formatdateien
 
 Die folgenden Beispiele zeigen das Layout einer Nicht-XML-Formatdatei und einer XML-Formatdatei. Diese Formatdateien entsprechen der `HumanResources.myTeam` -Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank. Diese Tabelle enthält vier Spalten: `EmployeeID`, `Name`, `Title`und `ModifiedDate`.
 
@@ -87,7 +87,7 @@ Die Formatdatei enthält Folgendes:
 
 Weitere Informationen finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md). 
 
-## <a name="WhenFFrequired"></a> Wann ist eine Formatdatei erforderlich?
+## <a name="when-is-a-format-file-required"></a><a name="WhenFFrequired"></a> Wann ist eine Formatdatei erforderlich?
 
 - Eine INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung erfordert stets eine Formatdatei.
 - Für **bcp** oder BULK INSERT ist in einfachen Situationen das Verwenden einer Formatdatei optional und selten notwendig. In komplexen Massenimportsituationen ist jedoch oft eine Formatdatei erforderlich.
@@ -107,7 +107,7 @@ Formatdateien sind in folgenden Fällen erforderlich:
 > [!NOTE]
 > Wenn keine Formatdatei vorhanden und für einen **bcp** -Befehl ein Datenformatschalter angegeben ist ( **-n**, **-c**, **-w**oder **-N**) oder für einen BULK INSERT-Vorgang die Option DATAFILETYPE angegeben ist, wird das angegebene Datenformat als Standardmethode zum Interpretieren der Felder der Datendatei verwendet.
 
-## <a name="RelatedTasks"></a> Verwandte Aufgaben
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben
 
 - [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)
 - [Massenimport von Daten mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)

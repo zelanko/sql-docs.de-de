@@ -13,10 +13,10 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 232ecd6278070d928db7485e93e8498adfc70a9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941138"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL)
@@ -38,18 +38,18 @@ ms.locfileid: "76941138"
   
 -   [Aktualisieren der primären Instanz](#UpgradePrimary)  
   
-##  <a name="Prerequisites"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Lesen Sie die folgenden wichtigen Informationen, bevor Sie beginnen:  
   
--   [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Überprüfen Sie, ob ein Upgrade von Ihrer Version des Windows-Betriebssystems und Ihrer SQL Server-Version auf SQL Server 2016 möglich ist. Sie können beispielsweise nicht direkt von einer SQL Server 2005-Instanz auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]upgraden.  
+-   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Prüfen Sie, dass Sie von Ihrer Version des Windows-Betriebssystems und Ihrer Version des SQL Servers auf SQL Server 2016 upgraden können. Sie können beispielsweise nicht direkt von einer SQL Server 2005-Instanz auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]upgraden.  
   
--   [Auswählen einer Upgrademethode für die Datenbank-Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Wählen Sie basierend auf Ihrer Prüfung der unterstützten Versions- und Editionsupgrades sowie basierend auf den anderen in Ihrer Umgebung installierten Komponenten die passende Upgrademethode und die passenden Upgradeschritte aus, um das Upgrade der Komponenten in der richtigen Reihenfolge durchzuführen.  
+-   [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Wählen Sie die passende Upgrademethode und die Schritte aus, die sowohl auf Ihrer Betrachtung der unterstützten Version und Editionsupgrades als auch auf den anderen in Ihrer Umgebung installierten Komponenten basieren, um die Komponenten in der richtigen Reihenfolge upzugraden.  
   
--   [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Überprüfen Sie die Anmerkungen zu dieser Version, die bekannten Upgradeprobleme und die Prüfliste vor dem Upgrade. Entwickeln und testen Sie dann den Upgradeplan.  
+-   [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Überprüfen Sie die Anmerkungen zu dieser Version, die bekannten Upgradeprobleme und die Prüfliste vor dem Upgrade. Entwickeln und testen Sie den Upgradeplan.  
   
--   [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
+-   [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
   
-##  <a name="ProtectData"></a> Datensicherung vor dem Upgrade  
+##  <a name="protect-your-data-before-the-upgrade"></a><a name="ProtectData"></a> Datensicherung vor dem Upgrade  
  Als bewährte Methode wird empfohlen, dass Sie die Daten vor einem Protokollversandupgrade schützen.  
   
  **So schützen Sie die Daten**  
@@ -63,12 +63,12 @@ ms.locfileid: "76941138"
 > [!IMPORTANT]  
 >  Stellen Sie sicher, dass auf Ihrem primären Server für die erwartete Dauer des Upgrades der sekundären Instanzen ausreichend Speicherplatz für die Protokollsicherungskopien verfügbar ist.  Bei einem Failover zu einer sekundären Instanz gilt dasselbe für die sekundäre Instanz (die neue primäre Instanz).  
   
-##  <a name="UpgradeMonitor"></a> Aktualisieren der (optionalen) Überwachungsserverinstanz  
+##  <a name="upgrading-the-optional-monitor-server-instance"></a><a name="UpgradeMonitor"></a> Aktualisieren der (optionalen) Überwachungsserverinstanz  
  Die Überwachungsserverinstanz, sofern vorhanden, kann jederzeit aktualisiert werden. Der optionale Überwachungsserver muss jedoch nicht aktualisiert werden, wenn Sie die primären und sekundären Server aktualisieren.  
   
  Während der Aktualisierung des Überwachungsservers ist die Protokollversandkonfiguration weiterhin in Betrieb, ihr Status wird allerdings nicht in den Tabellen auf dem Überwachungsserver aufgezeichnet. Warnungen, die ggf. konfiguriert wurden, werden während der Aktualisierung des Überwachungsservers nicht ausgelöst. Nach der Aktualisierung können Sie die Überwachungstabellen aktualisieren, indem Sie die gespeicherte Systemprozedur [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md) ausführen.   Weitere Informationen zu einem Überwachungsserver finden Sie unter [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-##  <a name="UpgradeSecondaries"></a> Aktualisieren der sekundären Serverinstanzen  
+##  <a name="upgrading-the-secondary-server-instances"></a><a name="UpgradeSecondaries"></a> Aktualisieren der sekundären Serverinstanzen  
  Der Upgradevorgang erfordert die Aktualisierung der sekundären Serverinstanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , bevor die primäre Serverinstanz aktualisiert wird. Aktualisieren Sie immer zuerst die sekundären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen. Der Protokollversand wird während des Upgradevorgangs weiter ausgeführt, weil die aktualisierten sekundären Serverinstanzen die Protokollsicherungen der primären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Serverinstanz weiterhin wiederherstellen. Wenn die primäre Serverinstanz vor der sekundären Serverinstanz aktualisiert wird, tritt beim Protokollversand ein Fehler auf, weil eine auf einer neueren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellte Sicherung nicht auf einer älteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wiederhergestellt werden kann. Sie können die sekundären Instanzen gleichzeitig oder nacheinander aktualisieren. Es müssen jedoch alle sekundären Instanzen aktualisiert worden sein, bevor die primäre Instanz aktualisiert wird, um einen Fehler beim Protokollversand zu vermeiden.  
   
  Während des Upgrades der sekundären Serverinstanz werden die Kopier- und Wiederherstellungsaufträge des Protokollversands nicht ausgeführt. Nicht wiederhergestellte Sicherungen von Transaktionsprotokollen sammeln sich daher auf der primären Instanz an. Daher muss ausreichend Speicherplatz für diese nicht wiederhergestellten Sicherungen vorhanden sein. Die Menge der angehäuften Daten hängt von der Häufigkeit der geplanten Sicherungen auf der primären Serverinstanz und der Reihenfolge ab, mit der die sekundären Instanzen aktualisiert werden. Wenn ein getrennter Überwachungsserver konfiguriert wurde, werden möglicherweise Warnungen ausgegeben, die anzeigen, dass über einen längeren Zeitraum als das konfigurierte Intervall hinweg keine Wiederherstellungsvorgänge ausgeführt wurden.  
@@ -81,7 +81,7 @@ ms.locfileid: "76941138"
 > [!IMPORTANT]  
 >  Die RESTORE WITH STANDBY-Option wird für Datenbanken, die eine Aktualisierung erfordern, nicht unterstützt. Wenn eine aktualisierte sekundäre Datenbank mithilfe von RESTORE WITH STANDBY konfiguriert wurde, können Transaktionsprotokolle nach einer Aktualisierung nicht wiederhergestellt werden. Um den Protokollversand auf dieser sekundären Datenbank fortzusetzen, müssen Sie ihn auf diesem Standbyserver erneut einrichten. Weitere Informationen über die STANDBY-Option finden Sie unter [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-##  <a name="UpgradePrimary"></a> Aktualisieren der primären Serverinstanz  
+##  <a name="upgrading-the-primary-server-instance"></a><a name="UpgradePrimary"></a> Aktualisieren der primären Serverinstanz  
  Da der Protokollversand in erster Linie eine Notfallwiederherstellungslösung ist, wird im einfachsten und gängigsten Szenario ein direktes Upgrade der primären Instanz durchgeführt, wobei die Datenbank während dieses Upgrades nicht verfügbar ist. Sobald der Server aktualisiert wurde, wird die Datenbank automatisch online geschaltet. Daraufhin wird sie automatisch aktualisiert. Nachdem die Datenbank aktualisiert wurde, werden die Protokollversandaufträge fortgesetzt.  
   
 > [!NOTE]  

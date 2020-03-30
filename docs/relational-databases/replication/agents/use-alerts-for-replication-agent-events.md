@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 829c8e5e6f4207e721c4fa57b7cb012146e2762d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288262"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Verwenden von Warnungen für Replikations-Agentereignisse
@@ -62,7 +62,7 @@ ms.locfileid: "76288262"
 ### <a name="framework-for-automating-responses"></a>Framework für automatische Antworten  
  Wenn eine Warnung auftritt, sind in der Regel die einzigen Informationen, mit deren Hilfe Sie verstehen können, was die Warnung auslöste und welche entsprechende Maßnahme ergriffen werden sollte, in der Warnmeldung enthalten. Eine Analyse dieser Informationen kann sich als fehleranfällig und zeitraubend erweisen. Die Replikation vereinfacht automatische Antworten, da in der **sysreplicationalerts** -Systemtabelle zusätzliche Informationen zur Warnung bereitgestellt werden. Diese Informationen sind bereits so analysiert, dass sie einfach in benutzerdefinierten Programmen verwendet werden können.  
   
- Wenn z. B. die Daten in der **Sales.SalesOrderHeader** -Tabelle auf dem Abonnenten A die Gültigkeitsüberprüfung nicht bestehen, löst [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Warnmeldung 20574 aus, in der Sie über dieses Fehlschlagen benachrichtigt werden. Sie empfangen die folgende Meldung: „Fehler bei der Datenüberprüfung für das Abonnement des Abonnenten 'A' für den 'SalesOrderHeader'-Artikel in der 'MyPublication'-Veröffentlichung.“  
+ Wenn z. B. die Daten in der **Sales.SalesOrderHeader** -Tabelle auf dem Abonnenten A die Gültigkeitsüberprüfung nicht bestehen, löst [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Warnmeldung 20574 aus, in der Sie über dieses Fehlschlagen benachrichtigt werden. Sie empfangen die folgende Meldung: "Fehler bei der Datenüberprüfung für das Abonnement des Abonnenten 'A', für den 'SalesOrderHeader'-Artikel in der in der 'MyPublication'-Veröffentlichung."  
   
  Wenn Sie eine Antwort basierend auf dieser Meldung erstellen, müssen Sie den Namen des Abonnenten, den Artikelnamen, den Veröffentlichungsnamen und den Fehler aus der Meldung manuell analysieren. Da der Verteilungs-Agent und der Merge-Agent aber die gleichen Informationen in **sysreplicationalerts** schreiben, zusammen mit Details wie Agenttyp, Zeitpunkt der Warnung, Veröffentlichungsdatenbank und Veröffentlichungstyp, kann der Antwortauftrag die relevanten Informationen direkt aus der Tabelle abfragen. Obwohl die genaue Zeile nicht einer spezifischen Warnungsinstanz zugeordnet werden kann, kann die **status** -Spalte in der Tabelle zum Nachverfolgen der Diensteinträge verwendet werden. Die Einträge in dieser Tabelle werden während der Beibehaltungsdauer für den Verlauf beibehalten.  
   

@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056184"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz
@@ -31,7 +31,7 @@ ms.locfileid: "74056184"
   
 -   Konfigurieren einer Benutzerdatenbank für die Volltextsuche. Dies beinhaltet das Erstellen von Volltextkatalogen für die Datenbank und die Definition eines Volltextindexes für jede Tabelle oder indizierte Sicht, für die Volltextabfragen ausgeführt werden sollen.  
   
-##  <a name="props"></a> Anzeigen oder Ändern von Servereigenschaften für die Volltextsuche  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> Anzeigen oder Ändern von Servereigenschaften für die Volltextsuche  
  Sie können die Eigenschaften für die Volltextsuche einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen.  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>So zeigen Sie Servereigenschaften für die Volltextsuche an und ändern diese  
@@ -69,7 +69,7 @@ ms.locfileid: "74056184"
         > [!NOTE]  
         >  Die Option für das Volltextupgrade kann auch mit der [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** -Aktion festgelegt werden.  
   
-##  <a name="metadata"></a> Anzeigen zusätzlicher Volltextservereigenschaften  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> Anzeigen zusätzlicher Volltextservereigenschaften  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen können verwendet werden, um die Werte verschiedener Eigenschaften der Volltextsuche auf Serverebene abzurufen. Diese Informationen sind für die Verwaltung und Problembehandlung der Volltextsuche hilfreich.  
   
  In der folgenden Tabelle werden die Volltexteigenschaften einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Serverinstanz und die zugehörigen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktionen aufgeführt.  
@@ -81,7 +81,7 @@ ms.locfileid: "74056184"
 |**LoadOSResources**|Gibt an, ob Wörtertrennungen und Filter des Betriebssystems mit dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registriert und verwendet werden.|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|Gibt an, ob ausschließlich signierte Binärdateien von der Volltext-Engine geladen werden.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> Überwachen der Volltextsuchaktivität  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> Überwachen der Volltextsuchaktivität  
  Verschiedene dynamische Verwaltungssichten und -funktionen eignen sich für die Überwachung von Volltextsuchaktivitäten auf einer Serverinstanz.  
   
  **So zeigen Sie Informationen über Volltextkataloge mit Auffüllungsaktivitäten an**  

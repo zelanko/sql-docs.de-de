@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73729864"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
@@ -106,7 +106,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  *column_name*  
  Der Name einer Tabellenspalte.
 
-### <a name="ColumnOptions"></a> Spaltenoptionen
+### <a name="column-options"></a><a name="ColumnOptions"></a> Spaltenoptionen
 
  `COLLATE` *Windows_collation_name*  
  Gibt die Sortierung für den Ausdruck an. Bei der Sortierung muss es sich um eine von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützte Windows-Sortierung handeln. Eine Liste mit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützten Windows-Sortierungen finden Sie unter [Name der Windows-Sortierung (Transact-SQL)](windows-collation-name-transact-sql.md).  
@@ -122,7 +122,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  | *constraint_name* | Der optionale Name für die Einschränkung. Der Einschränkungsname ist innerhalb der Datenbank eindeutig. Der Name kann in anderen Datenbanken wiederverwendet werden. |
  | *constant_expression* | Der Standardwert für die Spalte. Bei dem Ausdruck muss es sich um einen Literalwert oder eine Konstante handeln. Folgende konstanten Ausdrücke sind beispielsweise zulässig: `'CA'`, `4`. Folgende konstante Ausdrücke sind unzulässig: `2+3`, `CURRENT_TIMESTAMP`. |
   
-### <a name="TableOptions"></a> Tabellenstrukturoptionen
+### <a name="table-structure-options"></a><a name="TableOptions"></a> Tabellenstrukturoptionen
 
 Einen Leitfaden zum Auswählen des Tabellentyps finden Sie unter [Indizieren von Tabellen in SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/).
   
@@ -137,7 +137,7 @@ Speichert die Tabelle als gruppierten Columnstore-Index. Der gruppierte Columnst
  
  `LOCATION = USER_DB` Diese Option ist veraltet. Sie ist syntaktisch zulässig, aber nicht mehr erforderlich, und hat keine Auswirkungen auf das Verhalten.   
   
-### <a name="TableDistributionOptions"></a> Tabellenverteilungsoptionen
+### <a name="table-distribution-options"></a><a name="TableDistributionOptions"></a> Tabellenverteilungsoptionen
 
 Informationen zum Auswählen der besten Verteilungsmethode und zur Verwendung von verteilten Tabellen finden Sie unter [Leitfaden für das Entwerfen verteilter Tabellen in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
@@ -147,7 +147,7 @@ Informationen zum Auswählen der besten Verteilungsmethode und zur Verwendung vo
 
 `DISTRIBUTION = REPLICATE` Speichert in jedem Computeknoten eine Kopie der Tabelle. Bei [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] wird die Tabelle in einer Verteilungsdatenbank auf den einzelnen Computeknoten gespeichert. Bei [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] wird die Tabelle in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateigruppe gespeichert, die sich über den gesamten Computeknoten erstreckt. Dies ist das Standardverhalten für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-### <a name="TablePartitionOptions"></a> Tabellenpartitionsoptionen
+### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> Tabellenpartitionsoptionen
 Einen Leitfaden zur Verwendung von Tabellenpartitionen finden Sie unter [Partitionieren von Tabellen in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
  `PARTITION` (*partition_column_name*`RANGE` [`LEFT` | `RIGHT`] `FOR VALUES` ([*boundary_value* [,...*n*]]))   
@@ -155,7 +155,7 @@ Erstellt eine oder mehrere Tabellenpartitionen. Diese Partitionen sind horizonta
 
 | Argument | Erklärung |
 | -------- | ----------- |
-|*partition_column_name*| Gibt die Spalte an, die von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] zum Partitionieren der Zeilen verwendet wird. Diese Spalte kann einen beliebigen Datentyp aufweisen. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sortiert die Werte der Partitionsspalte in aufsteigender Reihenfolge. Die Sortierung vom niedrigsten zum höchsten Wert erfolgt in der `RANGE`-Spezifikation von `LEFT` nach `RIGHT`. |  
+|*partition_column_name*| Gibt die Spalte an, die von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] zum Partitionieren der Zeilen verwendet wird. Diese Spalte kann einen beliebigen Datentyp aufweisen. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sortiert die Werte der Partitionsspalte in aufsteigender Reihenfolge. Die Sortierung vom niedrigsten zum höchsten Wert erfolgt in der `LEFT`-Spezifikation von `RIGHT` nach `RANGE`. |  
 | `RANGE LEFT` | Gibt den Begrenzungswert an, der zur Partition auf der linken Seite (niedrigere Werte) gehört. Die Standardeinstellung ist LEFT. |
 | `RANGE RIGHT` | Gibt den Begrenzungswert an, der zur Partition auf der rechten Seite (höhere Werte) gehört. | 
 | `FOR VALUES` ( *boundary_value* [,...*n*] ) | Gibt die Begrenzungswerte für die Partition an. *boundary_value* ist ein konstanter Ausdruck. Er darf nicht NULL sein. Er muss entweder dem Datentyp *partition_column_name* entsprechen oder implizit in diesen Datentyp konvertierbar sein. Er darf bei der impliziten Konvertierung nicht abgeschnitten werden, sodass die Größe und Dezimalstellen des Werts nicht mehr dem Datentyp von *partition_column_name* entsprechen.<br></br><br></br>Wenn Sie die `PARTITION`-Klausel, aber keinen Begrenzungswert angeben, erstellt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] eine partitionierte Tabelle mit einer Partition. Ggf. können Sie die Tabelle später in zwei Partitionen teilen.<br></br><br></br>Wenn Sie einen Begrenzungswert angeben, weist die resultierende Tabelle zwei Partitionen auf, eine für die im Vergleich zum Begrenzungswert niedrigeren Werte und eine für die im Vergleich zum Begrenzungswert höheren Werte. Wenn Sie eine Partition in eine nicht partitionierte Tabelle verschieben, empfängt die nicht partitionierte Tabelle die Daten, jedoch sind in den Metadaten keine Partitionsbegrenzungen enthalten.| 
@@ -172,7 +172,7 @@ Benutzer können die Spalte **column_store_order_ordinal** in **sys.index_column
 
 Weitere Informationen finden Sie unter [Leistungsoptimierung mit einem gruppierten Columnstore-Index](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci).   
 
-### <a name="DataTypes"></a> Datentyp
+### <a name="data-type"></a><a name="DataTypes"></a> Datentyp
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] unterstützt die am häufigsten verwendeten Datentypen. Im Folgenden finden Sie eine Liste der unterstützten Datentypen mit entsprechenden Informationen und Angaben zum Speicherplatz in Byte. Ausführlichere Informationen zu Datentypen und deren Verwendung finden Sie unter [Tabellendatentypen in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
@@ -356,7 +356,7 @@ CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION 
 <a name="ExamplesColumn"></a>   
 ## <a name="examples-for-columns"></a>Beispiele für Spalten
 
-### <a name="ColumnCollation"></a> A. Festlegen einer Spaltensortierung 
+### <a name="a-specify-a-column-collation"></a><a name="ColumnCollation"></a> A. Festlegen einer Spaltensortierung 
  Im folgenden Beispiel wird die Tabelle `MyTable` mit zwei verschiedenen Spaltensortierungen erstellt. Standardmäßig weist die Spalte `mycolumn1` die Standardsortierung Latin1_General_100_CI_AS_KS_WS auf. Die Spalte `mycolumn2` weist die Sortierung Frisian_100_CS_AS auf.  
   
 ```sql
@@ -368,7 +368,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```  
   
-### <a name="DefaultConstraint"></a> B. Festlegen einer DEFAULT-Einschränkung für eine Spalte
+### <a name="b-specify-a-default-constraint-for-a-column"></a><a name="DefaultConstraint"></a> B. Festlegen einer DEFAULT-Einschränkung für eine Spalte
 
  Im folgenden Beispiel ist die Syntax zum Festlegen eines Standardwerts für eine Spalte dargestellt. Die Spalte colA weist eine Standardeinschränkung mit dem Namen constraint_colA und den Standardwert 0 auf.  
   
@@ -385,7 +385,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>Beispiele für temporäre Tabellen
 
-### <a name="TemporaryTable"></a> C. Erstellen einer lokalen temporären Tabelle  
+### <a name="c-create-a-local-temporary-table"></a><a name="TemporaryTable"></a> C. Erstellen einer lokalen temporären Tabelle  
  Im folgenden Beispiel wird eine lokale temporäre Tabelle namens #myTable erstellt. In der Tabelle wird mit einem dreiteiligen Namen angegeben, der mit einem # beginnt.
   
 ```sql
@@ -406,7 +406,7 @@ WITH
 <a name="ExTableStructure"></a>  
 ## <a name="examples-for-table-structure"></a>Beispiele für die Tabellenstruktur
 
-### <a name="ClusteredColumnstoreIndex"></a> D. Erstellen einer Tabelle mit einem gruppierten Columnstore-Index  
+### <a name="d-create-a-table-with-a-clustered-columnstore-index"></a><a name="ClusteredColumnstoreIndex"></a> D. Erstellen einer Tabelle mit einem gruppierten Columnstore-Index  
  Im folgende Beispiel wird eine verteilte Tabelle mit einem gruppierten Columnstore-Index erstellt. Jede Verteilung wird als Columnstore gespeichert.  
   
  Der gruppierte Columnstore-Index hat keine Auswirkung auf die Verteilung der Daten, da die Daten immer zeilenweise verteilt werden. Der gruppierte Columnstore-Index bestimmt jedoch, wie die Daten in den einzelnen Verteilungen gespeichert werden.  
@@ -425,7 +425,7 @@ WITH
 ;  
 ```  
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> E. Erstellen eines sortierten gruppierten Columnstore-Index
+### <a name="e-create-an-ordered-clustered-columnstore-index"></a><a name="OrderedClusteredColumnstoreIndex"></a> E. Erstellen eines sortierten gruppierten Columnstore-Index
 
 Das folgende Beispiel zeigt, wie ein sortierter gruppierter Columnstore-Index erstellt wird. Der Index ist nach SHIPDATE sortiert.
 
@@ -439,7 +439,7 @@ SELECT * FROM ext_Lineitem
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>Beispiele für die Tabellenverteilung
 
-### <a name="RoundRobin"></a> F. Erstellen einer ROUND_ROBIN-Tabelle  
+### <a name="f-create-a-round_robin-table"></a><a name="RoundRobin"></a> F. Erstellen einer ROUND_ROBIN-Tabelle  
  Im folgenden Beispiel wird eine ROUND_ROBIN-Tabelle mit drei Spalten und ohne Partitionen erstellt. Die Daten werden in allen Verteilungen verteilt. Die Tabelle wird mit einem gruppierten Columnstore-Index erstellt, der im Vergleich zu einem Heap oder einem gruppierten Rowstore-Index eine bessere Leistung und Datensicherung gewährleistet.  
   
 ```sql
@@ -452,7 +452,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> G. Erstellen einer mittels Hash verteilten Tabelle
+### <a name="g-create-a-hash-distributed-table"></a><a name="HashDistributed"></a> G. Erstellen einer mittels Hash verteilten Tabelle
 
  Im folgenden Beispiel wird dieselbe Tabelle wie im vorherigen Beispiel erstellt. Allerdings werden bei dieser Tabelle die Zeilen (in der `id`-Spalte) gezielt verteilt statt wie bei einer ROUND_ROBIN-Tabelle zufällig verteilt. Die Tabelle wird mit einem gruppierten Columnstore-Index erstellt, der im Vergleich zu einem Heap oder einem gruppierten Rowstore-Index eine bessere Leistung und Datensicherung gewährleistet.  
   
@@ -470,7 +470,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> H. Erstellen einer replizierten Tabelle  
+### <a name="h-create-a-replicated-table"></a><a name="Replicated"></a> H. Erstellen einer replizierten Tabelle  
  Im folgenden Beispiel wird eine replizierte Tabelle ähnlich wie im vorherigen Beispiel erstellt. Replizierte Tabellen werden vollständig auf alle Computeknoten kopiert. Dank dieser Kopie auf allen Computeknoten wird die Anzahl der Datenverschiebungen für Abfragen reduziert. Dieses Beispiel wird mit einem CLUSTERED INDEX erstellt, wodurch eine bessere Datenkomprimierung als bei einem Heap erzielt wird. Ein Heap enthält möglicherweise nicht genügend Zeilen, um eine gute CLUSTERED COLUMNSTORE INDEX-Komprimierung zu erreichen.  
   
 ```sql
@@ -490,7 +490,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Beispiele für Tabellenpartitionen
 
-###  <a name="PartitionedTable"></a> I. Erstellen einer partitionierten Tabelle
+###  <a name="i-create-a-partitioned-table"></a><a name="PartitionedTable"></a> I. Erstellen einer partitionierten Tabelle
 
  Im folgenden Beispiel wird dieselbe Tabelle wie in Beispiel A erstellt, jedoch mit einer RANGE LEFT-Partitionierung für die `id`-Spalte. Es werden vier Partitionsbegrenzungswerte angegeben, sodass sich fünf Partitionen ergeben.  
   
@@ -525,7 +525,7 @@ WITH
 - Partition 4: 30 <= col < 40
 - Partition 5: 40 <= col  
   
-### <a name="OnePartition"></a> J. Erstellen einer partitionierten Tabelle mit einer Partition
+### <a name="j-create-a-partitioned-table-with-one-partition"></a><a name="OnePartition"></a> J. Erstellen einer partitionierten Tabelle mit einer Partition
 
  Im folgende Beispiel wird eine partitionierte Tabelle mit einer Partition erstellt. Es wird kein Begrenzungswert angegeben, sodass sich nur eine Partition ergibt.  
   
@@ -542,7 +542,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> K. Erstellen einer Tabelle mit Datumspartitionierung
+### <a name="k-create-a-table-with-date-partitioning"></a><a name="DatePartition"></a> K. Erstellen einer Tabelle mit Datumspartitionierung
 
  Im folgenden Beispiel wird eine neue Tabelle mit dem Namen `myTable` mit Partitionierung in einer `date`-Spalte erstellt. Durch die Verwendung von RANGE RIGHT und Datumsangaben für die Begrenzungswerte werden in alle Partitionen die Daten eines Monats eingefügt.  
   

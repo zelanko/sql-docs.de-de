@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e1f9d94f1ddf6f6d3e9a8ce73a263790acc516de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76259388"
 ---
 # <a name="create-primary-keys"></a>Erstellen von Primärschlüsseln
@@ -26,23 +26,23 @@ ms.locfileid: "76259388"
 
 Sie können mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen Primärschlüssel in [!INCLUDE[tsql](../../includes/tsql-md.md)]definieren. Beim Erstellen eines Primärschlüssels wird je nach Spezifikation automatisch ein zugehöriger eindeutiger, gruppierter Index oder ein nicht gruppierter Index erstellt.
 
-## <a name="BeforeYouBegin"></a> Vorbereitungen
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen
 
-### <a name="Restrictions"></a> Einschränkungen
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen
 
 - Eine Tabelle kann nur eine PRIMARY KEY-Einschränkung enthalten.
 
 - Alle Spalten, für die eine PRIMARY KEY-Einschränkung definiert wurde, müssen als NOT NULL definiert sein. Falls weder NULL noch NOT NULL angegeben ist, wird für alle Spalten, auf die eine PRIMARY KEY-Einschränkung angewendet wird, die NULL-Zulässigkeit auf NOT NULL festgelegt.
 
-### <a name="Security"></a> Sicherheit
+### <a name="security"></a><a name="Security"></a> Sicherheit
 
-#### <a name="Permissions"></a> Berechtigungen
+#### <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
 
 Zum Erstellen einer neuen Tabelle mit einem primären Schlüssel sind die CREATE TABLE-Berechtigung für die Datenbank und die ALTER-Berechtigung für das Schema erforderlich, in dem die Tabelle erstellt wird.
 
 Zum Erstellen eines Primärschlüssels für eine vorhandene Tabelle ist die ALTER-Berechtigung für die Tabelle erforderlich.
 
-## <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio
 
 ### <a name="to-create-a-primary-key"></a>So erstellen Sie einen Primärschlüssel
 
@@ -59,7 +59,7 @@ Wenn ein Primärschlüssel aus mehreren Spalten besteht, können Werte in einer 
 
 Wenn Sie einen Verbundschlüssel definieren, stimmt die Spaltenreihenfolge im Primärschlüssel mit der Spaltenreihenfolge überein, die in der Tabelle angezeigt wird. Sie können die Spaltenreihenfolge jedoch nach Erstellen des Primärschlüssels ändern. Weitere Informationen finden Sie unter [Ändern von Primärschlüsseln](../../relational-databases/tables/modify-primary-keys.md).
 
-## <a name="TsqlProcedure"></a> Verwenden von Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL
 
 ### <a name="to-create-a-primary-key-in-an-existing-table"></a>So erstellen Sie einen Primärschlüssel in einer vorhandenen Tabelle
 

@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112272"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services-Verbindungen (SSIS)
@@ -144,13 +144,13 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   Beide Versionen des Anbieters verfügen über die gleiche ID. Um anzugeben, ob die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Laufzeit eine verfügbare 64-Bit-Version des Anbieters verwenden soll, müssen Sie die Run64BitRuntime-Eigenschaft des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekts festlegen. Ist die Run64BitRuntime-Eigenschaft auf **TRUE** festgelegt, wird über die Laufzeit der 64-Bit-Anbieter gefunden und verwendet. Ist die Run64BitRuntime-Eigenschaft jedoch auf **FALSE** festgelegt, wird über die Laufzeit der 32-Bit-Anbieter gefunden und verwendet. Weitere Informationen zu Eigenschaften, die Sie in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekten festlegen können, finden Sie unter [Integration Services- (SSIS) und Studio-Umgebungen](https://msdn.microsoft.com/library/ms140028.aspx).   
 
 ## <a name="add-a-connection-manager"></a>Hinzufügen eines Verbindungs-Managers
-###  <a name="wizard"></a> Hinzufügen eines Verbindungs-Managers beim Erstellen eines Pakets  
+###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> Hinzufügen eines Verbindungs-Managers beim Erstellen eines Pakets  
   
 -   Verwenden des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import-/Export-Assistenten  
   
      Die Assistenten helfen Ihnen nicht nur bei dem Erstellen und Konfigurieren eines Verbindungs-Managers, sondern auch beim Erstellen und Konfigurieren der Quellen und Ziele, die einen Verbindungs-Manager verwenden. Weitere Informationen finden Sie unter [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-###  <a name="package"></a> Hinzufügen eines Verbindungs-Managers zu einem vorhandenen Paket  
+###  <a name="add-a-connection-manager-to-an-existing-package"></a><a name="package"></a> Hinzufügen eines Verbindungs-Managers zu einem vorhandenen Paket  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
@@ -194,7 +194,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-###  <a name="project"></a> Hinzufügen eines Verbindungs-Manager auf Projektebene  
+###  <a name="add-a-connection-manager-at-the-project-level"></a><a name="project"></a> Hinzufügen eines Verbindungs-Manager auf Projektebene  
   
 1.  Öffnen Sie das [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Projekt in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -243,14 +243,14 @@ Im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** können Sie den Verbindun
  **Add (Hinzufügen)**  
  Geben Sie mithilfe des Editors für den jeweiligen Verbindungstyp die Eigenschaften der Verbindung an.  
    
-##  <a name="parameter"></a> Erstellen eines Parameters für eine Verbindungs-Manager-Eigenschaft  
+##  <a name="create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a> Erstellen eines Parameters für eine Verbindungs-Manager-Eigenschaft  
   
 1.  Klicken Sie mit der rechten Maustaste im Bereich **Verbindungs-Manager** auf den Verbindungs-Manager, für den Sie einen Parameter erstellen möchten, und klicken Sie anschließend auf **Parametrisieren**.  
   
 2.  Konfigurieren Sie die Parametereinstellungen im Dialogfeld **Parametrisieren** . Weitere Informationen finden Sie unter [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## <a name="delete-a-connection-manager"></a>Löschen eines Verbindungs-Managers 
-###  <a name="DeletePackageLevel"></a> Löschen eines Verbindungs-Managers aus einem Paket  
+###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> Löschen eines Verbindungs-Managers aus einem Paket  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
@@ -270,7 +270,7 @@ Im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** können Sie den Verbindun
   
 5.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-###  <a name="DeleteProjectLevel"></a> Löschen eines gemeinsam genutzten Verbindungs-Managers (Verbindungs-Manager auf Projektebene)  
+###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> Löschen eines gemeinsam genutzten Verbindungs-Managers (Verbindungs-Manager auf Projektebene)  
   
 1.  Klicken Sie mit der rechten Maustaste auf den Verbindungs-Manager unter dem Knoten **Verbindungs-Manager** im Fenster des **Projektmappen-Explorers** , und klicken Sie anschließend auf **Löschen**, um einen Verbindungs-Manager auf Projektebene zu löschen. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zeigt die folgende Warnmeldung an:  
   

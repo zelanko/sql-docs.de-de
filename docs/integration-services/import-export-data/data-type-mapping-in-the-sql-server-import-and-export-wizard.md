@@ -10,10 +10,10 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1610f98d77ba4a762a63f3ccf5a445393537d36b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296337"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten
@@ -23,7 +23,7 @@ ms.locfileid: "71296337"
 
  Im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten können Sie den Namen, den Datentyp und die Datentypeigenschaften von Spalten in neuen Zieltabellen und -dateien festlegen. Allerdings können Sie keine benutzerdefinierten Konvertierungen für Spaltenwerte angeben. Daher ist die integrierte Zuordnung von Datentypen von der Quelle zum Ziel wichtig.  
   
-##  <a name="wizardMapping"></a> Wie ordnet der Assistent Datentypen zwischen Quelle und Ziel zu?
+##  <a name="how-does-the-wizard-map-data-types-between-source-and-destination"></a><a name="wizardMapping"></a> Wie ordnet der Assistent Datentypen zwischen Quelle und Ziel zu?
 Der Assistent verwendet die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installierten Zuordnungsdateien, um Datentypen aus einem Datenbanksystem oder einer Datenbankversion einem anderen System bzw. einer anderen Version zuzuordnen. Beispielsweise ist eine Zuordnung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen zu Oracle-Datentypen möglich. Standardmäßig werden die Zuordnungsdateien im XML-Format in den folgenden Ordnern installiert.
 -   **C:\Programme\Microsoft SQL Server\130\DTSMappingFiles\\** (für 64 Bit)
 -   **C:\Programme (x86)\Microsoft SQL Server\130\DTSMappingFiles\\** (für 32 Bit)  

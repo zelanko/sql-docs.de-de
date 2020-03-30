@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412728"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demo: Leistungsverbesserungen von In-Memory OLTP
@@ -32,7 +32,7 @@ Eine umfassendere Darstellung der potenziellen Leistungssteigerungen von In-Memo
 ## <a name="code-example"></a>Codebeispiel  
  Diese jeweiligen Schritte werden in den nächsten Unterabschnitten beschrieben.  
   
-### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>Schritt 1a: Voraussetzung bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="step-1a-prerequisite-if-using-ssnoversion"></a>Schritt 1a: Voraussetzung bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Die Schritte in diesem ersten Unterabschnitt gelten nur, wenn Sie mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]arbeiten, nicht mit [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Gehen Sie folgendermaßen vor:  
   
 1.  Verwenden Sie SQL Server Management Studio (SSMS.exe), um eine Verbindung mit Ihrem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen. Alternativ können Sie jedes Tool nehmen, das wie „SSMS.exe“ funktioniert.  
@@ -58,7 +58,7 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Schritt 1b: Voraussetzung bei Verwendung von [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-sssdsfull"></a>Schritt 1b: Voraussetzung bei Verwendung von [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
  Dieser Unterabschnitt gilt nur, wenn Sie [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]verwenden. Gehen Sie folgendermaßen vor:  
   
 1.  Entscheiden Sie, welche vorhandene Testdatenbank Sie für das Codebeispiel verwenden möchten.  

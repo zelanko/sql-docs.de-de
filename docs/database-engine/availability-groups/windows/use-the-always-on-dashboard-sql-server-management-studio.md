@@ -16,10 +16,10 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822674"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Verwenden des Dashboards „AlwaysOn-Verfügbarkeitsgruppen“ (SQL Server Management Studio)
@@ -85,7 +85,7 @@ ms.locfileid: "74822674"
 > [!TIP]  
 >  Klicken Sie auf die Spaltenüberschriften, um die Verfügbarkeitsgruppeninformationen nach dem Namen der Verfügbarkeitsgruppe, primärer Instanz, Failovermodus oder Problem zu sortieren.  
   
-##  <a name="AvGroupDetails"></a> Verfügbarkeitsgruppendetails  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a> Verfügbarkeitsgruppendetails  
  Die folgenden Detailinformationen werden für die Verfügbarkeitsgruppe angezeigt, die Sie im Zusammenfassungsbildschirm auswählen:  
   
  **Status der Verfügbarkeitsgruppe**  
@@ -104,7 +104,7 @@ ms.locfileid: "74822674"
  **Clusterstatus**  
  Name und Zustand des Clusters, auf dem die Instanz des verbundenen Servers und die Verfügbarkeitsgruppe ein Elementknoten ist.  
   
-##  <a name="AvReplicaDetails"></a> Verfügbarkeitsreplikatdetails  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Verfügbarkeitsreplikatdetails  
 
 Beim Verbinden mit dem primären Replikat **Verfügbarkeitsreplikatdetails** werden Informationen von allen Replikaten in der Verfügbarkeitsgruppe angezeigt. Beim Verbinden mit einem sekundären Replikat werden in der Anzeige nur Informationen vom verbundenen Replikat dargestellt.  
 

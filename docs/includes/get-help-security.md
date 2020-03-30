@@ -1,4 +1,4 @@
-##  <a name="info-tippngmediainfo-tippng-get-help"></a>![info-tip.png](media/info-tip.png) Hilfe erhalten
+##  <a name="info-tippng-get-help"></a>![info-tip.png](media/info-tip.png) Hilfe erhalten
 
 - [UserVoice: Vorschlag zur Verbesserung von SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 - [SQL Server-Sicherheit – MSDN-Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)

@@ -19,10 +19,10 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71680980"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>SQL Server Integration Services-Projekte und Projektmappen (SSIS)
@@ -31,7 +31,7 @@ ms.locfileid: "71680980"
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die Entwicklung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen bereit.  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Pakete werden in Projekten gespeichert. Sie müssen [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) installieren, um [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekte zu erstellen und zu verwenden. Weitere Informationen finden Sie unter [Installieren von Integration Services](../integration-services/install-windows/install-integration-services.md).  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Pakete werden in Projekten gespeichert. Sie müssen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]SQL Server Data Tools[ installieren, um ](../ssdt/download-sql-server-data-tools-ssdt.md)-Projekte zu erstellen und zu verwenden. Weitere Informationen finden Sie unter [Installieren von Integration Services](../integration-services/install-windows/install-integration-services.md).  
   
  Wenn Sie ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]erstellen, enthält das Dialogfeld **Neues Projekt** die Vorlage **Integration Services-Projekt** . Diese Projektvorlage erstellt ein neues Projekt, das ein einzelnes Paket enthält.
   
@@ -68,7 +68,7 @@ ms.locfileid: "71680980"
   
  In der folgende Tabelle werden die Ordner in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt beschrieben.  
   
-|Ordner|Beschreibung|  
+|Ordner|BESCHREIBUNG|  
 |------------|-----------------|
 |Verbindungs-Manager|Enthält Projektverbindungs-Manager. Weitere Informationen finden Sie unter [Integration Services-Verbindungen (SSIS)](../integration-services/connection-manager/integration-services-ssis-connections.md).|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Pakete|Enthält Pakete. Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../integration-services/integration-services-ssis-packages.md).|  

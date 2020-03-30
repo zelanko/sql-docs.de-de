@@ -26,17 +26,17 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909177"
 ---
 # <a name="backup-devices-sql-server"></a>Sicherungsmedien (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Während eines Sicherungsvorgangs in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank werden die gesicherten Daten (die *Sicherung*) auf ein physisches Sicherungsmedium geschrieben. Dieses physische Sicherungsmedium wird initialisiert, wenn die erste Sicherung in einem Mediensatz darauf geschrieben wird. Die Sicherungen auf einem Satz von einem oder mehreren Sicherungsmedien bilden einen einzelnen Mediensatz.  
    
-##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
  Sicherungsdatenträger  
  Eine Festplatte oder ein anderes Datenträgerspeichermedium, die bzw. das eine oder mehrere Sicherungsdateien enthält. Eine Sicherungsdatei ist eine reguläre Betriebssystemdatei.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72909177"
  SQL Server-Sicherungen können nicht nur auf einen Datenträger oder ein Band geschrieben werden, sondern auch in den Azure Blob Storage-Dienst.  
  
   
-##  <a name="DiskBackups"></a> Verwenden von Datenträgersicherungsmedien  
+##  <a name="using-disk-backup-devices"></a><a name="DiskBackups"></a> Verwenden von Datenträgersicherungsmedien  
   
  Wenn sich eine Datenträgerdatei füllt, während bei einem Sicherungsvorgang dem Mediensatz eine Sicherung hinzugefügt wird, kann die Sicherungsvorgang nicht bis zum Ende ausgeführt werden. Die maximale Größe einer Sicherungsdatei wird durch den freien Speicherplatz auf dem Datenträgermedium bestimmt. Die geeignete Größe für ein Datenträgersicherungsmedium hängt daher von der Größe Ihrer Sicherungen ab.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "72909177"
 >
 >Wenn sich Datenbankdateien und Sicherungsdateien auf demselben Medium befinden und ein Fehler auftritt, stehen die Datenbank und die Sicherungen nicht mehr zur Verfügung. Wenn Sie die Daten und die Sicherungen auf separaten Medien speichern, wird auch die E/A-Leistung für die produktive Nutzung der Datenbank sowie für das Schreiben von Sicherungen optimiert.
   
-##  <a name="BackupFileUsingPhysicalName"></a> Angeben einer Sicherungsdatei unter Verwendung des physischen Namens (Transact-SQL)  
+##  <a name="specify-a-backup-file-using-its-physical-name-transact-sql"></a><a name="BackupFileUsingPhysicalName"></a> Angeben einer Sicherungsdatei unter Verwendung des physischen Namens (Transact-SQL)  
  Die grundlegende [BACKUP](../../t-sql/statements/backup-transact-sql.md) -Syntax zum Angeben einer Sicherungsdatei mithilfe des Namens des physischen Mediums lautet wie folgt:  
   
  BACKUP DATABASE *Name der Datenbank*  
@@ -90,7 +90,7 @@ RESTORE DATABASE AdventureWorks2012
 ```  
   
   
-##  <a name="BackupFileDiskPath"></a> Angeben des Dateipfads für die Datenträgersicherung 
+##  <a name="specify-the-disk-backup-file-path"></a><a name="BackupFileDiskPath"></a> Angeben des Dateipfads für die Datenträgersicherung 
  Wenn Sie eine Sicherungsdatei angeben, sollten Sie den vollständigen Pfad und den Dateinamen angeben. Wenn Sie beim Sichern der Datei nur den Dateinamen oder einen relativen Pfad angeben, wird die Sicherungsdatei im Standardsicherungsverzeichnis gespeichert. Das Standardsicherungsverzeichnis lautet „C:\Programme\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup“, wobei mit *n* die Nummer der Serverinstanz angegeben wird. Das Standardsicherungsverzeichnis für die Standardserverinstanz lautet daher „C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup“.  
   
  Für eine eindeutige Zuordnung (insbesondere in Skripts) empfiehlt sich die explizite Angabe des Pfads für das Sicherungsverzeichnis in allen DISK-Klauseln. Wenn Sie den Abfrage-Editor verwenden, ist dieser Aspekt weniger wichtig. In diesem Fall, wenn Sie sicherstellen können, dass sich die Sicherungsdatei im Standardsicherungsverzeichnis befindet, können Sie die Pfadangabe in der DISK-Klausel auslassen. Beispielsweise wird die `BACKUP` -Datenbank mithilfe der folgenden [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Anweisung im Standardsicherungsverzeichnis gesichert.  
@@ -104,7 +104,7 @@ GO
 > **HINWEIS:** Der Standardspeicherort wird im **BackupDirectory** -Registrierungsschlüssel unter **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**gespeichert.  
   
    
-###  <a name="NetworkShare"></a> Sichern in einer Netzwerkfreigabedatei  
+###  <a name="back-up-to-a-network-share-file"></a><a name="NetworkShare"></a> Sichern in einer Netzwerkfreigabedatei  
  Damit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf eine Datei auf einem Remotedatenträger zugreifen kann, muss das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto Zugriff auf die Netzwerkfreigabe haben. Dazu gehören auch Berechtigungen, die erforderlich sind, damit Sicherungsvorgänge auf die Netzwerkfreigabe schreiben und Wiederherstellungsvorgänge die Sicherungsdaten auf der Netzwerkfreigabe lesen können. Die Verfügbarkeit von Netzlaufwerken und Berechtigungen hängt von dem Kontext ab, in dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird:  
   
 -   Zum Sichern eines Netzlaufwerks, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Kontext eines Domänenbenutzerkontos ausgeführt wird, muss das freigegebene Laufwerk in der Sitzung, in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, als Netzlaufwerk zugeordnet sein. Wenn Sie Sqlservr.exe über die Befehlszeile starten, werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sämtliche Netzlaufwerke angezeigt, die Sie in Ihrer Anmeldesitzung zugeordnet haben.  
@@ -127,7 +127,7 @@ GO
 ```  
   
  
-##  <a name="TapeDevices"></a> Verwenden von Bandgeräten  
+##  <a name="using-tape-devices"></a><a name="TapeDevices"></a> Verwenden von Bandgeräten  
   
 > **HINWEIS:** Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.  
    
@@ -141,7 +141,7 @@ GO
   
 -   Wenn ein Bandsicherungsmedium während des Sicherungsvorgangs gefüllt wird, jedoch noch weitere Daten geschrieben werden müssen, fordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Einlegen eines neues Bands auf, und setzt danach den Sicherungsvorgang fort.  
   
-##  <a name="BackupTapeUsingPhysicalName"></a> Angeben eines Sicherungsbands unter Verwendung des physischen Namens (Transact-SQL)  
+##  <a name="specify-a-backup-tape-using-its-physical-name-transact-sql"></a><a name="BackupTapeUsingPhysicalName"></a> Angeben eines Sicherungsbands unter Verwendung des physischen Namens (Transact-SQL)  
  Die grundlegende [BACKUP](../../t-sql/statements/backup-transact-sql.md) -Syntax zum Angeben eines Sicherungsbands mithilfe des physischen Gerätenamens des Bandlaufwerks lautet wie folgt:  
   
  BACKUP { DATABASE | LOG } *Name der Datenbank*  
@@ -162,7 +162,7 @@ GO
   
  FROM TAPE **=** { **'** _Name des physischen Sicherungsmediums_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
-###  <a name="TapeOptions"></a> Bandspezifische BACKUP- und RESTORE-Optionen (Transact-SQL)  
+###  <a name="tape-specific-backup-and-restore-options-transact-sql"></a><a name="TapeOptions"></a> Bandspezifische BACKUP- und RESTORE-Optionen (Transact-SQL)  
  Zur Vereinfachung der Bandverwaltung bietet die BACKUP-Anweisung die folgenden bandspezifischen Optionen:  
   
 -   { NOUNLOAD | **UNLOAD** }  
@@ -175,7 +175,7 @@ GO
   
 > **HINWEIS:** Weitere Informationen zur Syntax und den Argumenten von BACKUP finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Weitere Informationen zur Syntax und den Argumenten von RESTORE finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) und [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-###  <a name="OpenTapes"></a> Verwalten von offenen Bändern  
+###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a> Verwalten von offenen Bändern  
  Führen Sie eine Abfrage auf die dynamische Verwaltungssicht [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) aus, um eine Liste der offenen Bandmedien und den Status von Einbindungsanforderungen anzuzeigen. In dieser Sicht werden alle offenen Bänder angezeigt. Dies umfasst auch die gerade verwendeten Bänder, die sich bis zum nächsten BACKUP- oder RESTORE-Vorgang vorübergehend im Leerlauf befinden.  
   
  Wenn ein Band versehentlich offen geblieben ist, kann es am schnellsten mithilfe des folgenden Befehls freigegeben werden: RESTORE REWINDONLY FROM TAPE **=** _Name des Sicherungsmediums_. Weitere Informationen finden Sie unter [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
@@ -184,7 +184,7 @@ GO
 ## <a name="using-the-azure-blob-storage-service"></a>Verwenden des Azure Blob Storage-Dienst  
  SQL Server-Sicherungen können in den Azure Blob Storage-Dienst geschrieben werden.  Weitere Informationen zum Verwenden des Azure Blob Storage-Diensts für Sicherungen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-##  <a name="LogicalBackupDevice"></a> Verwenden eines logischen Sicherungsmediums  
+##  <a name="use-a-logical-backup-device"></a><a name="LogicalBackupDevice"></a> Verwenden eines logischen Sicherungsmediums  
  Ein *logisches Sicherungsmedium* ist ein optionaler, benutzerdefinierter Name, der auf ein bestimmtes, physisches Sicherungsmedium (Datenträgerdatei oder Bandlaufwerk) verweist. Ein logisches Sicherungsmedium gibt Ihnen beim Verweisen auf das entsprechende physische Sicherungsmedium die Möglichkeit zur Dereferenzierung.  
   
  Zum Definieren eines logischen Sicherungsmediums muss einem physischen Medium ein logischer Name zugeordnet werden. Beispielsweise kann ein logisches Medium (AdventureWorksBackups) so definiert werden, dass es auf die Datei „Z:\SQLServerBackups\AdventureWorks2012.bak“ oder das Bandlaufwerk „ \\\\.\tape0“ verweist. In Sicherungs- und Wiederherstellungsbefehlen kann dann AdventureWorksBackups anstelle von DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' or TAPE = '\\\\.\tape0' als Sicherungsmedium angegeben werden.  
@@ -209,19 +209,19 @@ GO
   
 2.  Definieren eines neuen logischen Sicherungsmediums, für das der Name des ursprünglichen logischen Sicherungsmediums verwendet wird, für das jedoch eine Zuordnung zu einem anderen physischen Sicherungsmedium erfolgt. Logische Sicherungsmedien sind besonders nützlich zum Identifizieren von Bandsicherungsmedien.  
 
-##  <a name="MirroredMediaSets"></a> Gespiegelte Sicherungsmediensätze  
+##  <a name="mirrored-backup-media-sets"></a><a name="MirroredMediaSets"></a> Gespiegelte Sicherungsmediensätze  
  Die Spiegelung von Sicherungsmediensätzen mindert die Auswirkungen von Funktionsstörungen bei Sicherungsmedien. Diese Funktionsstörungen sind besonders schwerwiegend, da Sicherungen im Hinblick auf den Verlust von Daten die letzte Schutzmaßnahme darstellen. Mit zunehmendem Umfang einer Datenbank nimmt auch die Wahrscheinlichkeit für einen Fehler bei einem Sicherungsgerät oder -medium zu, in dessen Folge eine Sicherung schließlich nicht mehr wiederhergestellt werden kann. Aufgrund der mit der Spiegelung von Sicherungsmedien bereitgestellten Redundanz für das physische Sicherungsmedium erhöht sich die Zuverlässigkeit von Sicherungen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Gespiegelte Sicherungsmediensätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)noch nicht kennen.  
   
 > **HINWEIS:** Gespiegelte Sicherungsmediensätze werden nur in [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] und höheren Versionen unterstützt.  
   
   
-##  <a name="Archiving"></a> Archivieren von SQL Server-Sicherungen  
+##  <a name="archive-sql-server-backups"></a><a name="Archiving"></a> Archivieren von SQL Server-Sicherungen  
  Datenträgersicherungen sollten mithilfe eines Hilfsprogramms für die Dateisystemsicherung archiviert und die Archive außerhalb des Standorts aufbewahrt werden. Das Verwenden eines Datenträgers hat den Vorteil, dass Sie die archivierten Sicherungen über das Netzwerk auf einen Datenträger außerhalb des Standorts schreiben können. Der Azure Blob Storage-Dienst kann als externe Archivierungsfunktion genutzt werden.  Sie können entweder die Datenträgersicherungen hochladen, oder Sie können die Sicherungen direkt in den Azure Blob Storage-Dienst schreiben.  
   
  Eine weitere verbreitete Archivierungsmethode besteht darin, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen auf einen lokalen Sicherungsdatenträger zu schreiben, auf Band zu archivieren und die Bänder außerhalb des Standorts aufzubewahren.  
 
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **So geben Sie ein Datenträgermedium an (SQL Server Management Studio)**  
   
 -   [Angeben eines Datenträgers oder ein Bands als Sicherungsziel &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095425"
 ---
 # <a name="track-data-changes-sql-server"></a>Nachverfolgen von Datenänderungen (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "74095425"
 |Ob Spalte geändert wurde|Ja|Ja|  
 |DML-Typ|Ja|Ja|  
   
-##  <a name="Capture"></a> Change Data Capture  
+##  <a name="change-data-capture"></a><a name="Capture"></a> Change Data Capture  
  Change Data Capture stellt Änderungsverlaufsinformationen für Benutzertabellen bereit, indem sowohl die Tatsache, dass DML-Änderungen vorgenommen wurden, als auch die geänderten Daten erfasst werden. Die Änderungen werden über einen asynchronen Prozess durch Lesen des Transaktionsprotokolls erfasst, der keine großen Auswirkungen auf die Systemleistung hat.  
   
  Wie in der folgenden Abbildung gezeigt, werden die an Benutzertabellen vorgenommenen Änderungen in entsprechenden Änderungstabellen aufgezeichnet. Diese Änderungstabellen stellen eine Übersicht über den Änderungsverlauf dar. Die von [ bereitgestellten ](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)Change Data Capture[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen ermöglichen die einfache und systematische Verarbeitung der Änderungsdaten.  
@@ -137,7 +137,7 @@ ms.locfileid: "74095425"
   
  Sie können [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) verwenden, um Change Data Capture aus einer wiederhergestellten oder angefügten Datenbank zu entfernen.  
   
-##  <a name="Tracking"></a> Änderungsnachverfolgung  
+##  <a name="change-tracking"></a><a name="Tracking"></a> Änderungsnachverfolgung  
  Bei der Änderungsnachverfolgung wird die Tatsache erfasst, dass Zeilen in einer Tabelle geändert wurden. Die geänderten Daten werden nicht erfasst. Hierdurch können Anwendungen die geänderten Zeilen ermitteln, wobei die aktuellen Zeilendaten direkt von den Benutzertabellen abgerufen werden. Im Hinblick auf den Verlauf ist die Änderungsnachverfolgung also nicht so aussagekräftig wie Change Data Capture. Der Vorteil für die Anwendungen, die keine Verlaufsinformationen erfordern, liegt darin, dass viel weniger Speicherplatz benötigt wird, da die Änderungsdaten nicht aufgezeichnet werden. Zur Nachverfolgung der Änderungen wird ein synchroner Nachverfolgungsmechanismus verwendet. Dieser wurde so konzipiert, dass er sich minimal auf die Leistung der DML-Vorgänge auswirkt.  
   
  Die folgende Abbildung zeigt ein Synchronisierungsszenario, in dem die Verwendung der Änderungsnachverfolgung vorteilhaft ist. In diesem Szenario erfordert eine Anwendung folgende Informationen: alle Zeilen in der Tabelle, die seit der letzten Synchronisierung der Tabelle geändert wurden, und nur die aktuellen Zeilendaten. Da zur Nachverfolgung der Änderungen ein synchroner Mechanismus verwendet wird, kann eine Anwendung die bidirektionale Synchronisierung anwenden und eventuelle Konflikte zuverlässig ermitteln.  

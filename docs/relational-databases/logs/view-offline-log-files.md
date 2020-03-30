@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908559"
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
@@ -46,7 +46,7 @@ ms.locfileid: "72908559"
   
 -   [SqlErrorLogFile Class](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (Dieses Thema veranschaulicht das Abrufen von Informationen zu allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokolldateien für eine angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
-##  <a name="BeforeYouBegin"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Berechtigungen  
  Wenn Sie eine Verbindung mit einer Offlineprotokolldatei herstellen möchten, müssen Sie auf dem lokalen und dem Remotecomputer über die folgenden Berechtigungen verfügen:  
   
 -   Lesezugriff auf den **Root\Microsoft\SqlServer\ComputerManagement12** -WMI-Namespace. Standardmäßig verfügt jeder Benutzer durch die Berechtigung Konto aktivieren über Lesezugriff. Weitere Informationen finden Sie im Verfahren "So überprüfen Sie WMI-Berechtigungen" weiter unten in diesem Abschnitt.  

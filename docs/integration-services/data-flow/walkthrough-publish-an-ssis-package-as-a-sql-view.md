@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71297738"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216896"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht
 
@@ -85,7 +85,7 @@ ms.locfileid: "71297738"
   
     2.  Befolgen Sie im Assistenten die Anweisungen, um das Projekt im SSIS-Katalog auf dem lokalen Datenbankserver bereitzustellen. Im folgenden Beispiel wird **Power BI** als Ordnername und **SSISPackagePublishing** als Projektname im SSIS-Katalog verwendet.  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Schritt 2: Verwenden des SSIS-Datenfeedveröffentlichungs-Assistenten zum Veröffentlichen des SSIS-Pakets als eine SQL-Ansicht  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Schritt 2: Verwenden des SSIS-Datenfeedveröffentlichungs-Assistent zum Veröffentlichen des SSIS-Pakets als eine SQL-Ansicht  
  In diesem Schritt verwenden Sie den SSIS-Datenfeedveröffentlichungs-Assistent (SQL Server Integration Services), um das SSIS-Paket als Sicht in einer SQL Server-Datenbank zu veröffentlichen. Die Ausgabedaten des Pakets können durch Abfragen dieser Sicht genutzt werden.  
   
  Der SSIS-Datenfeedveröffentlichungs-Assistent erstellt einen Verbindungsserver mithilfe des OLE DB-Anbieters für SSIS (SSISOLEDB) und anschließend eine SQL-Ansicht, die aus einer Abfrage auf den Verbindungsserver besteht. Diese Abfrage umfasst den Ordnernamen, den Projektnamen und den Paketnamen im SSIS-Katalog.  
@@ -104,7 +104,7 @@ ms.locfileid: "71297738"
   
          ![Datenfeedveröffentlichungs-Assistent: Seite für Paketeinstellungen](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Datenfeedveröffentlichungs-Assistent: Seite für Paketeinstellungen")  
   
-    2.  Klicken Sie neben dem Pfadfeld auf **Durchsuchen**, durchsuchen Sie den SSIS-Katalog, wählen Sie das zu veröffentlichende SSIS-Paket aus (Beispiel: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**), und klicken Sie dann auf **OK**.  
+    2.  Klicken Sie neben dem Pfadfeld auf **Durchsuchen** , durchsuchen Sie den SSIS-Katalog, wählen Sie das zu veröffentlichende SSIS-Paket aus (Beispiel: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**), und klicken Sie dann auf **OK**.  
   
          ![Datenfeedveröffentlichungs-Assistent: Suchen nach Paket](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Datenfeedveröffentlichungs-Assistent: Suchen nach Paket")  
   
@@ -150,7 +150,7 @@ ms.locfileid: "71297738"
   
      ![Datenfeedveröffentlichungs-Assistent: Seite „Zusammenfassung“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Datenfeedveröffentlichungs-Assistent: Seite „Zusammenfassung“")  
   
-     Die Ausgabedaten des Pakets können jetzt durch Ausführen der folgenden SQL-Anweisung für die Datenbank „TestDB“ abgefragt werden: SELECT * FROM [SSISPackageView].  
+     Die Ausgabedaten des Pakets können jetzt durch Ausführen der folgenden SQL-Anweisung für die TestDB-Datenbank abgefragt werden: SELECT * FROM [SSISPackageView].  
   
 9. Klicken Sie auf **Bericht speichern**, um diesen Bericht als XML-Datei zu speichern.  
   
@@ -266,8 +266,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
 -   Linke und rechte eckige Klammern ([ und ]): Diese Zeichen werden verwendet, um führende/nachstehende Leerzeichen anzugeben. Der Eintrag „[ einige Leerzeichen ]“ stellt z. B. die Zeichenfolge „ einige Leerzeichen “ mit einem führenden und einem nachstehenden Leerzeichen dar. Wenn diese Zeichen selbst in der Abfrageklausel verwendet werden, müssen sie mit Escapezeichen versehen werden. Beispiel: \\[ und \\].  
   
 -   Schrägstrich (\\): Jeder in der Abfrageklausel verwendete Schrägstrich (\) muss mit Escapezeichen versehen werden. Beispiel: \\\ wird in der Abfrageklausel als \ ausgewertet.  
-  
- Schrägstrich (\\): Jeder in der Abfrageklausel verwendete Schrägstrich (\) muss mit Escapezeichen versehen werden. Beispiel: \\\ wird in der Abfrageklausel als \ ausgewertet.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenstreamingziel](../../integration-services/data-flow/data-streaming-destination.md)   

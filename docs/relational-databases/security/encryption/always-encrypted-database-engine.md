@@ -18,10 +18,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254830"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
@@ -93,7 +93,7 @@ Führen Sie folgende Schritte durch, um die Spalte erfolgreich zu aktualisieren:
  >[!IMPORTANT]
  > In diesem Szenario werden die Daten entschlüsselt, sobald sie zurück an den Server gesendet werden, da die Zielspalte einen regulären Varchar-Typ darstellt, der verschlüsselte Daten nicht akzeptiert. 
   
-## <a name="selecting--deterministic-or-randomized-encryption"></a> Auswählen der deterministischen oder zufälligen Verschlüsselung  
+## <a name="selecting-deterministic-or-randomized-encryption"></a><a name="selecting--deterministic-or-randomized-encryption"></a> Auswählen der deterministischen oder zufälligen Verschlüsselung  
  Die Datenbank-Engine wird nie auf Grundlage von Klartextdaten ausgeführt, die in verschlüsselten Spalten gespeichert sind, doch es unterstützt einige Abfragen für verschlüsselte Daten je nach Verschlüsselungstyp für die Spalte. Always Encrypted unterstützt zwei Arten von Verschlüsselung: die zufällige und die deterministische Verschlüsselung.  
   
 - Die deterministische Verschlüsselung generiert immer denselben verschlüsselten Wert für jeden angegebenen Klartextwert. Die deterministische Verschlüsselung ermöglicht die Punktsuche, Gleichheitsverknüpfung, Gruppierung und Indizierung in verschlüsselten Spalten. Sie erlaubt jedoch auch, dass nicht autorisierte Benutzer Informationen zu verschlüsselten Werten erraten, indem sie die Muster in der verschlüsselten Spalte untersucht, insbesondere wenn es eine kleine Anzahl von möglichen verschlüsselten Werten wie TRUE/FALSE oder die Region Norden/Süden/Osten/Westen gibt. Die deterministische Verschlüsselung muss eine Spaltensortierung mit einer binary2-Sortierreihenfolge für Zeichenspalten verwenden.

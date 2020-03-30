@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981931"
 ---
 # <a name="create-a-database-user"></a>Erstellen eines Datenbankbenutzers
@@ -38,7 +38,7 @@ ms.locfileid: "73981931"
   
  Sie können einen Datenbankbenutzer erstellen, entweder mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-##  <a name="Understanding"></a> Grundlegendes zu den Benutzertypen  
+##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> Grundlegendes zu den Benutzertypen  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] bietet sechs Optionen für die Erstellung eines Datenbankbenutzers. Die folgenden Grafik zeigt die sechs Optionen im grünen Kasten, und gibt an, wofür sie stehen.  
   
  ![Benutzertypen](../../../relational-databases/security/authentication-access/media/typesofusers.png "Benutzertypen")  
@@ -56,17 +56,17 @@ ms.locfileid: "73981931"
   
 > **TIPP:** Für Personen innerhalb Ihrer Organisation ist die Windows-Authentifizierung eine bessere Wahl, da sie sich kein zusätzliches Kennwort merken müssen, und weil die Windows-Authentifizierung zusätzliche Sicherheitsfeatures, wie z.B. Kerberos bietet.  
   
-##  <a name="Restrictions"></a> Hintergrund  
+##  <a name="background"></a><a name="Restrictions"></a> Hintergrund  
  Ein Benutzer ist ein Sicherheitsprinzipal auf Datenbankebene. Anmeldungen müssen einem Datenbankbenutzer zugeordnet werden, damit eine Verbindung zu einer Datenbank hergestellt werden kann. Eine Anmeldung kann unterschiedlichen Datenbanken als unterschiedliche Benutzer zugeordnet werden, aber kann nur als ein Benutzer in jeder Datenbank zugeordnet werden. In einer teilweise eigenständigen Datenbank kann ein Benutzer erstellt werden, der über keinen Anmeldenamen verfügt. Weitere Informationen zu eigenständigen Datenbankbenutzern finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Wenn in einer Datenbank Gastbenutzer aktiviert sind, kann eine Anmeldung, die keinem Datenbankbenutzer zugeordnet ist, als Gastbenutzer auf die Datenbank zugreifen.  
   
 > **WICHTIG!** Gastbenutzer sind normalerweise deaktiviert. Aktivieren Sie Gastbenutzer nur, wenn es notwendig ist.  
   
  Als Sicherheitsprinzipalen können Benutzern Berechtigungen gewährt werden. Die Datenbank ist der Bereich eines Benutzers. Um eine bestimmte Datenbank mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu verbinden, muss ein Anmeldename einem Datenbankbenutzer zugeordnet werden. Die Berechtigungen innerhalb der Datenbank werden dem Datenbankbenutzer, nicht dem Anmeldenamen, gewährt bzw. verweigert.  
   
-##  <a name="Permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die **ALTER ANY USER** -Berechtigung in der Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Erstellen eines Benutzers ohne Kennwort  
+##  <a name="create-a-user-with-ssms"></a><a name="SSMSProcedure"></a> Erstellen eines Benutzers ohne Kennwort  
   
  
 1.  Erweitern Sie im Objekt-Explorer den Ordner **Datenbanken** .  
@@ -140,7 +140,7 @@ ms.locfileid: "73981931"
      **Löschen**  
      Entfernt die ausgewählte erweiterte Eigenschaft.  
   
-##  <a name="TsqlProcedure"></a> Erstellen eines Benutzers mit T-SQL  
+##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> Erstellen eines Benutzers mit T-SQL  
     
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   

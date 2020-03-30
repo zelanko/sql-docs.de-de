@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401705"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
@@ -132,7 +132,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  Mithilfe der Verbindungseinstellungen können Sie eine Verbindung mit der SMP-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen. Dabei sind Benutzername und Kennwortdaten SSL-geschützt, die eigentlichen Daten werden jedoch unverschlüsselt gesendet. In diesem Fall könnte ein böswilliger Benutzer den Text der CREATE REMOTE TABLE-Anweisung abfangen, der den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzernamen und das Kennwort für die Anmeldung bei der SMP-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz enthält. Um dieses Risiko zu vermeiden, verwenden Sie die Verschlüsselung von Daten für die Verbindung mit der SMP-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz.  
   
-##  <a name="Examples"></a> Beispiele  
+##  <a name="examples"></a><a name="Examples"></a> Beispiele  
   
 ### <a name="a-creating-a-remote-table"></a>A. Erstellen einer Remotetabelle  
  In diesem Beispiel wird eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SMP-Remotetabelle, die `MyOrdersTable` heißt, in der Datenbank `OrderReporting` und dem Schema `Orders` erstellt. Die `OrderReporting`-Datenbank befindet sich auf einem Server mit dem Namen `SQLA`, der am Standardport 1433 lauscht. Die Verbindung mit dem Server verwendet die Anmeldeinformationen des Benutzers `David`, dessen Kennwort `e4n8@3` lautet.  

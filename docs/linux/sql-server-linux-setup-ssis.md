@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 0f400667e73effb73ff41c3c7270e3f89a2ca0da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76162641"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installieren von SQL Server Integration Services (SSIS) unter Linux
@@ -26,7 +26,7 @@ SQL Server Integration Services lässt sich auf folgenden Plattformen installier
 - [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a> Installieren von SSIS unter Ubuntu
+## <a name="install-ssis-on-ubuntu"></a><a name="ubuntu"></a> Installieren von SSIS unter Ubuntu
 
 Wenn Sie das **mssql-server-is**-Paket unter Ubuntu installieren möchten, führen Sie die folgenden Schritte aus:
 
@@ -118,7 +118,7 @@ Führen Sie den folgenden Befehl aus, um **mssql-server-is** zu entfernen:
 sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a> Installieren von SSIS unter RHEL
+## <a name="install-ssis-on-rhel"></a><a name="RHEL"></a> Installieren von SSIS unter RHEL
 Wenn Sie das **mssql-server-is**-Paket unter RHEL installieren möchten, führen Sie die folgenden Schritte aus:
 
 <!--SQL Server 2017 on Linux-->
@@ -214,7 +214,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>Umgebungsvariablen für die unbeaufsichtigte Installation
 
-| Umgebungsvariable | Beschreibung |
+| Umgebungsvariable | BESCHREIBUNG |
 |---|---|
 | ACCEPT_EULA | Akzeptiert die SQL Server-Lizenzbedingungen bei Festlegung auf einen beliebigen Wert wie „Y“.|
 | SSIS_PID | Legt die SQL Server-Edition oder den Product Key fest. Die folgenden Werte sind möglich:<ul><li>Auswertung</li><li>Entwickler</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>Ein Product Key</li></ul>Wenn Sie einen Product Key angeben, muss der er das Format *#####* - *#####* - *#####* - *#####* - *#####* haben, wobei *#* für einen Buchstaben oder eine Ziffer stehen kann.  |

@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594416"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Konfigurieren von Always Encrypted mithilfe von PowerShell
@@ -35,7 +35,7 @@ Sie können PowerShell verwenden, um Always Encrypted-Schlüssel mit oder ohne R
 Installieren Sie das [SqlServer-Modul](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) auf einem sicheren Computer, der NICHT der Hostcomputer Ihrer SQL Server-Instanz ist. Das Modul kann direkt aus dem PowerShell-Katalog installiert werden.  In den [Downloadanweisungen](../../../ssms/download-sql-server-ps-module.md) finden Sie weitere Informationen.
 
 
-## <a name="importsqlservermodule"></a> Importieren des SqlServer-Moduls 
+## <a name="importing-the-sqlserver-module"></a><a name="importsqlservermodule"></a> Importieren des SqlServer-Moduls 
 
 So laden Sie das SqlServer-Modul:
 
@@ -49,7 +49,7 @@ In diesem Beispiel wird das SqlServer-Modul geladen.
 Import-Module "SqlServer" 
 ```
 
-## <a name="connectingtodatabase"></a> Herstellen einer Verbindung mit einer Datenbank
+## <a name="connecting-to-a-database"></a><a name="connectingtodatabase"></a> Herstellen einer Verbindung mit einer Datenbank
 
 Einige der Always Encrypted-Cmdlets arbeiten mit Daten oder Metadaten in der Datenbank und erfordern, dass Sie zuerst eine Verbindung mit der Datenbank herstellen. Es werden zwei Methoden empfohlen, um bei der Konfiguration von Always Encrypted mithilfe des SqlServer-Moduls eine Verbindung mit einer Datenbank herzustellen: 
 1. Stellen Sie mithilfe des Cmdlets **Get-SqlDatabase** eine Verbindung her.
@@ -117,7 +117,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 - [Verschlüsseln, erneutes Verschlüsseln oder Entschlüsseln von Spalten mit Always Encrypted mithilfe von PowerShell](configure-column-encryption-using-powershell.md)
 
 
-##  <a name="aecmdletreference"></a> Referenz zu Always Encrypted-Cmdlets
+##  <a name="always-encrypted-cmdlet-reference"></a><a name="aecmdletreference"></a> Referenz zu Always Encrypted-Cmdlets
 
 Die folgenden PowerShell-Cmdlets sind für Always Encrypted verfügbar:
 

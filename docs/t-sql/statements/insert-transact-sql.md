@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982225"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -411,7 +411,7 @@ In Parallel Data Warehouse ist die ORDER BY-Klausel in VIEWS, CREATE TABLE AS SE
   
  Zum Ausführen von INSERT mit der Option BULK der OPENROWSET-Funktion müssen Sie Mitglied der festen Serverrolle **sysadmin** oder der festen Serverrolle **bulkadmin** sein.  
   
-##  <a name="InsertExamples"></a> Beispiele  
+##  <a name="examples"></a><a name="InsertExamples"></a> Beispiele  
   
 |Category|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
@@ -424,7 +424,7 @@ In Parallel Data Warehouse ist die ORDER BY-Klausel in VIEWS, CREATE TABLE AS SE
 |[Überschreiben des Standardverhaltens des Abfrageoptimierers mithilfe von Hinweisen](#TableHints)|Tabellenhinweise|  
 |[Erfassen der Ergebnisse der INSERT-Anweisung](#CaptureResults)|OUTPUT-Klausel|  
   
-###  <a name="BasicSyntax"></a> Grundlegende Syntax  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Grundlegende Syntax  
  Anhand von Beispielen in diesem Abschnitt wird die grundlegende Funktion der INSERT-Anweisung mithilfe der mindestens erforderlichen Syntax veranschaulicht.  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. Einfügen einer einzelnen Datenzeile  
@@ -453,7 +453,7 @@ INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,
 VALUES (N'Square Yards', N'Y2', GETDATE());  
 ```  
   
-###  <a name="ColumnValues"></a> Behandeln von Spaltenwerten  
+###  <a name="handling-column-values"></a><a name="ColumnValues"></a> Behandeln von Spaltenwerten  
  In den Beispielen in diesem Abschnitt werden Methoden zum Einfügen von Werten in Spalten erläutert, die mit einer IDENTITY-Eigenschaft und einem DEFAULT-Wert oder mit Datentypen wie **uniqueidentifier** oder Spalten eines benutzerdefinierten Typs definiert werden.  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D: Einfügen von Daten in eine Tabelle mit Spalten, die Standardwerte enthalten  
@@ -529,7 +529,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
 ```  
   
-###  <a name="OtherTables"></a> Einfügen von Daten aus anderen Tabellen  
+###  <a name="inserting-data-from-other-tables"></a><a name="OtherTables"></a> Einfügen von Daten aus anderen Tabellen  
  Anhand von Beispielen in diesem Abschnitt werden Methoden zum Einfügen von Zeilen aus einer Tabelle in eine andere Tabelle gezeigt.  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. Verwenden der SELECT- und EXECUTE-Option zum Einfügen von Daten aus anderen Tabellen  
@@ -666,7 +666,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.SalesYTD DESC;  
 ```  
   
-###  <a name="TargetObjects"></a> Angeben von Zielobjekten, die keine Standardtabellen sind  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> Angeben von Zielobjekten, die keine Standardtabellen sind  
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen durch Angeben einer Sicht oder Tabellenvariablen eingefügt werden.  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. Einfügen von Daten durch Angeben einer Sicht  
@@ -712,7 +712,7 @@ SELECT * FROM @MyTableVar;
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Einfügen von Zeilen in eine Remotetabelle  
+###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> Einfügen von Zeilen in eine Remotetabelle  
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen mit einem [Verbindungsserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) oder einer [Rowsetfunktion](../../t-sql/functions/rowset-functions-transact-sql.md) in eine Remotezieltabelle eingefügt werden, um auf die Remotetabelle zu verweisen.  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. Einfügen von Daten in eine Remotetabelle mithilfe eines Verbindungsservers  
@@ -804,7 +804,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-###  <a name="BulkLoad"></a> Massenladen von Daten aus Tabellen oder Datendateien  
+###  <a name="bulk-loading-data-from-tables-or-data-files"></a><a name="BulkLoad"></a> Massenladen von Daten aus Tabellen oder Datendateien  
  In den Beispielen in diesem Abschnitt werden zwei Methoden zum Massenladen von Daten in eine Tabelle mithilfe der INSERT-Anweisung vorgestellt.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. Einfügen von Daten mit minimaler Protokollierung in einen Heap  
@@ -864,7 +864,7 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a> Überschreiben des Standardverhaltens des Abfrageoptimierers mithilfe von Hinweisen  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> Überschreiben des Standardverhaltens des Abfrageoptimierers mithilfe von Hinweisen  
  In den Beispielen in diesem Abschnitt wird gezeigt, wie mit [Tabellenhinweisen](../../t-sql/queries/hints-transact-sql-table.md) beim Verarbeiten der INSERT-Anweisung zeitweise das Standardverhalten des Abfrageoptimierers überschrieben wird.  
   
 > [!CAUTION]  
@@ -881,7 +881,7 @@ INSERT INTO Production.Location WITH (XLOCK)
 VALUES ( N'Final Inventory', 15.00, 80.00);  
 ```  
   
-###  <a name="CaptureResults"></a> Erfassen der Ergebnisse der INSERT-Anweisung  
+###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> Erfassen der Ergebnisse der INSERT-Anweisung  
  In den Beispielen in diesem Abschnitt wird gezeigt, wie mit der [OUTPUT-Klausel](../../t-sql/queries/output-clause-transact-sql.md) Informationen aus jeder von einer INSERT-Anweisung betroffenen Zeile bzw. Ausdrücke, die auf jeder Zeile basieren, zurückgegeben werden. Diese Ergebnisse können an die verarbeitende Anwendung zurückgegeben werden, die sie z. B. für Bestätigungen, Archivierungen und andere Anwendungsanforderungen verwendet.  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>T. Verwenden von OUTPUT mit einer INSERT-Anweisung  

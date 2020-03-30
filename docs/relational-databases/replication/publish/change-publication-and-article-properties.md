@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: fe3d184b1a64dded731c0746a8264b4dc5809dd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286637"
 ---
 # <a name="change-publication-and-article-properties"></a>Ändern von Veröffentlichungs- und Artikeleigenschaften
@@ -30,7 +30,7 @@ ms.locfileid: "76286637"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Veröffentlichungseigenschaften für die Momentaufnahme- und Transaktionsreplikation  
   
-|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
+|BESCHREIBUNG|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
 |-----------------|----------------------|----------------|------------------|  
 |Ändern des Momentaufnahmeformats|**sp_changepublication**|**sync_method**|Neue Momentaufnahme|  
 |Ändern des Momentaufnahmespeicherorts|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Neue Momentaufnahme|  
@@ -44,7 +44,7 @@ ms.locfileid: "76286637"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Artikeleigenschaften für die Momentaufnahme- und Transaktionsreplikation  
   
-|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
+|BESCHREIBUNG|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels|**sp_droparticle**|Alle Parameter|Artikel können vor dem Erstellen von Abonnements gelöscht werden. Bei Verwendung von gespeicherten Prozeduren kann ein Abonnement eines Artikels gelöscht werden; wird dagegen [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwendet, muss das gesamte Abonnement gelöscht, neu erstellt und synchronisiert werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Ändern eines Spaltenfilters|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
@@ -62,7 +62,7 @@ ms.locfileid: "76286637"
   
 ## <a name="publication-properties-for-merge-replication"></a>Veröffentlichungseigenschaften für die Mergereplikation  
   
-|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
+|BESCHREIBUNG|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
 |-----------------|----------------------|----------------|------------------|  
 |Ändern des Momentaufnahmeformats|**sp_changemergepublication**|**sync_mode**|Neue Momentaufnahme|  
 |Ändern des Momentaufnahmespeicherorts|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Neue Momentaufnahme|  
@@ -81,7 +81,7 @@ ms.locfileid: "76286637"
   
 ## <a name="article-properties-for-merge-replication"></a>Artikeleigenschaften für die Mergereplikation  
   
-|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
+|BESCHREIBUNG|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels, der den zuletzt parametrisierten Filter in der Veröffentlichung enthält|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Löschen eines Artikels, der einem Joinfilter oder einem logischen Datensatz übergeordnet ist (mit der Nebenwirkung, dass der Join gelöscht wird).|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  

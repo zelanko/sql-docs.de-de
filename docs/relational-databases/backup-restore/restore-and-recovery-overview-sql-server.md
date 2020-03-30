@@ -22,10 +22,10 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288574"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Übersicht über Wiederherstellungsvorgänge (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "79288574"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung und -Wiederherstellung funktioniert unter allen unterstützten Betriebssystemen. Informationen zu den unterstützten Betriebssystemen finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Informationen zur Unterstützung von Sicherungskopien früherer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen finden Sie im Kapitel [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)im Abschnitt „Kompatibilitätsunterstützung“.  
   
-##  <a name="RestoreScenariosOv"></a> Übersicht über Wiederherstellungsszenarien  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a> Übersicht über Wiederherstellungsszenarien  
  Ein *Wiederherstellungsszenario* in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist ein Prozess, der die Datenbank aus Daten von mindestens einer Sicherungskopie wiederherstellt. Die unterstützten Wiederherstellungsszenarien sind vom Wiederherstellungsmodell der Datenbank und der Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]abhängig.  
   
  In der folgenden Tabelle werden die für die verschiedenen Wiederherstellungsmodelle unterstützten Wiederherstellungsszenarien eingeführt.  
@@ -85,7 +85,7 @@ Zum Ausführen einer Datenbankwiederherstellung führt das [!INCLUDE[ssde_md](..
   
 -   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist es u. U. möglich, dass während des Datei- oder Seitenwiederherstellungsprozesses andere Daten der Datenbank online bleiben.  
 
-## <a name="TlogAndRecovery"></a> Wiederherstellung und das Transaktionsprotokoll
+## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> Wiederherstellung und das Transaktionsprotokoll
 Für die meisten Wiederherstellungsszenarien ist es erforderlich, eine Transaktionsprotokollsicherung anzuwenden und dem [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die Ausführung des **Wiederherstellungsprozesses** zu ermöglichen, damit die Datenbank online geschaltet wird. Wiederherstellung ist der Prozess, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für alle Datenbanken verwendet wird, damit diese im Hinblick auf Transaktionen in einem konsistenten bzw. fehlerfreien Zustand starten.
 
 Im Falle eines Ausfalls oder bei einem sonstigen nicht ordnungsgemäßen Herunterfahren, bleiben die Datenbanken möglicherweise in einem Status, in dem einige Änderungen nicht vom Puffercache in die Datendateien geschrieben wurden, einige Änderungen von unvollständigen Transaktionen jedoch bereits in den Datendateien vorgenommen wurden. Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird, führt sie basierend auf dem letzten [Datenbankprüfpunkt](../../relational-databases/logs/database-checkpoints-sql-server.md) eine Wiederherstellung der einzelnen Datenbanken aus, die drei Phasen umfasst:
@@ -105,7 +105,7 @@ Informationen zum Fortschritt der einzelnen Phasen der Datenbankwiederherstellun
 > [!NOTE]
 > Um die Verfügbarkeit von Datenbanken in einer Unternehmensumgebung zu maximieren, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition eine Datenbank nach der Rollforwardphase online schalten, während die Rollbackphase noch ausgeführt wird. Dies wird als schnelle Wiederherstellung bezeichnet.
 
-##  <a name="RMsAndSupportedRestoreOps"></a> Wiederherstellungsmodelle und unterstützte Wiederherstellungsvorgänge  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a> Wiederherstellungsmodelle und unterstützte Wiederherstellungsvorgänge  
  Die für eine Datenbank verfügbaren Wiederherstellungsvorgänge hängen vom Wiederherstellungsmodell ab. In der folgenden Tabelle finden Sie eine Zusammenfassung, ob und in welchem Ausmaß die verschiedenen Wiederherstellungsmodelle ein bestimmtes Wiederherstellungsszenario unterstützen.  
   
 |Wiederherstellungsvorgang|Vollständiges Wiederherstellungsmodell|Massenprotokolliertes Wiederherstellungsmodell|Einfaches Wiederherstellungsmodell|  
@@ -123,7 +123,7 @@ Informationen zum Fortschritt der einzelnen Phasen der Datenbankwiederherstellun
 > [!IMPORTANT]  
 > Unabhängig vom Wiederherstellungsmodell einer Datenbank kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung nicht in eine [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Version wiederhergestellt werden, die älter als die Version ist, mit der die Sicherung erstellt wurde.  
   
-## <a name="RMsimpleScenarios"></a> Wiederherstellungsszenarien mit dem einfachen Wiederherstellungsmodell  
+## <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a> Wiederherstellungsszenarien mit dem einfachen Wiederherstellungsmodell  
  Bei Verwendung des einfachen Wiederherstellungsmodells unterliegen Wiederherstellungsvorgänge den folgenden Einschränkungen:  
   
 -   Die Dateiwiederherstellung und die schrittweise Wiederherstellung stehen nur für schreibgeschützte sekundäre Dateigruppen zur Verfügung. Informationen zu diesen Wiederherstellungsszenarien finden Sie unter [Dateiwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md) und [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
@@ -137,7 +137,7 @@ Informationen zum Fortschritt der einzelnen Phasen der Datenbankwiederherstellun
 > [!IMPORTANT]  
 > Unabhängig vom Wiederherstellungsmodell einer Datenbank kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung nicht mit einer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wiederhergestellt werden, die älter als die Version ist, mit der die Sicherung erstellt wurde.  
   
-##  <a name="RMblogRestore"></a> Wiederherstellen mit dem massenprotokollierten Wiederherstellungsmodell  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a> Wiederherstellen mit dem massenprotokollierten Wiederherstellungsmodell  
  In diesem Abschnitt werden Aspekte der Wiederherstellung behandelt, die sich nur auf das massenprotokollierte Wiederherstellungsmodell beziehen, das als Zusatz zum vollständigen Wiederherstellungsmodell gedacht ist.  
   
 > [!NOTE]  
@@ -164,21 +164,21 @@ Informationen zum Fortschritt der einzelnen Phasen der Datenbankwiederherstellun
   
  Informationen zum Ausführen einer Onlinewiederherstellung finden Sie unter [Onlinewiederherstellungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
-##  <a name="DRA"></a> Datenbankwiederherstellungsberater (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> Datenbankwiederherstellungsberater (SQL Server Management Studio)  
 Der Datenbankwiederherstellungsberater erleichtert das Erstellen von Wiederherstellungsplänen, durch die optimale folgerichtige Wiederherstellungssequenzen implementiert werden. Viele bekannte Probleme mit der Datenbankwiederherstellung und von Kunden angeforderte Erweiterungen wurden behoben. Mit dem Datenbankwiederherstellungsberater werden u. a. folgende wichtige Erweiterungen eingeführt:  
   
--   **Wiederherstellungsplan-Algorithmus:**  Der zum Erstellen von Wiederherstellungsplänen verwendete Algorithmus wurde erheblich verbessert, insbesondere bei komplexen Wiederherstellungsszenarios. Viele Grenzfälle, einschließlich Verzweigungszenarien in Zeitpunktwiederherstellungen, werden effizienter als in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]behandelt.  
+-   **Wiederherstellungsplan-Algorithmus:**  Der zum Erstellen von Wiederherstellungsplänen verwendete Algorithmus wurde erheblich verbessert, insbesondere bei komplexen Wiederherstellungsszenarien. Viele Grenzfälle, einschließlich Verzweigungszenarien in Zeitpunktwiederherstellungen, werden effizienter als in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]behandelt.  
   
--   **Zeitpunktwiederherstellungen:**  Der Wiederherstellungsberater für Datenbanken vereinfacht erheblich das Wiederherstellen von Datenbanken zu einem bestimmten Zeitpunkt. Die Unterstützung für Zeitpunktwiederherstellungen wird durch eine visuelle Sicherungszeitachse deutlich verbessert. Diese visuelle Zeitachse macht es möglich, einen geeigneten Zeitpunkt als Zielwiederherstellungspunkt zum Wiederherstellen einer Datenbank zu ermitteln. Die Zeitachse erleichtert das Durchlaufen eines verzweigten Wiederherstellungspfads (ein Pfad, der Wiederherstellungsverzweigungen umfasst). Ein angegebener Zeitpunktwiederherstellungsplan schließt automatisch die Sicherungen ein, die für das Wiederherstellen zum Zielzeitpunkt (Datum und Uhrzeit) relevant sind. Informationen finden Sie unter [Wiederherstellen einer SQL Server-Datenbank auf einen Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Zeitpunktwiederherstellungen:**  Der Datenbankwiederherstellungsberater vereinfacht erheblich das Wiederherstellen von Datenbanken zu einem bestimmten Zeitpunkt. Die Unterstützung für Zeitpunktwiederherstellungen wird durch eine visuelle Sicherungszeitachse deutlich verbessert. Diese visuelle Zeitachse macht es möglich, einen geeigneten Zeitpunkt als Zielwiederherstellungspunkt zum Wiederherstellen einer Datenbank zu ermitteln. Die Zeitachse erleichtert das Durchlaufen eines verzweigten Wiederherstellungspfads (ein Pfad, der Wiederherstellungsverzweigungen umfasst). Ein angegebener Zeitpunktwiederherstellungsplan schließt automatisch die Sicherungen ein, die für das Wiederherstellen zum Zielzeitpunkt (Datum und Uhrzeit) relevant sind. Informationen finden Sie unter [Wiederherstellen einer SQL Server-Datenbank auf einen Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
 Weitere Informationen zum Datenbankwiederherstellungsberater finden Sie in den folgenden Blogs zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltbarkeit:  
   
--   [Wiederherstellungsberater: Einführung](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Wiederherstellungsberater: Eine Einführung](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
 -   [Wiederherstellungsberater: Verwenden von SSMS zum Erstellen/Wiederherstellen von Teilungssicherungen](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
 
-## <a name="adr"></a> Verbesserte Wiederherstellung von Datenbanken
-Die [verbesserte Wiederherstellung von Datenbanken](/azure/sql-database/sql-database-accelerated-database-recovery/) ist in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verfügbar. Durch die verbesserte Wiederherstellung von Datenbanken wird die Verfügbarkeit von Datenbanken enorm verbessert, insbesondere bei zeitintensiven Transaktionen. Hierfür wurde der [Wiederherstellungsprozess](#TlogAndRecovery) der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vollständig überarbeitet. Eine Datenbank, für die die verbesserte Wiederherstellung von Datenbanken aktiviert wurde, wird nach einem Failover oder einem nicht sauberen Herunterfahren deutlich schneller wiederhergestellt. Ist diese Option aktiviert, wird bei der verbesserten Wiederherstellung von Datenbanken auch das Rollback von abgebrochenen Transaktionen mit langer Ausführungszeit deutlich schneller.
+## <a name="accelerated-database-recovery"></a><a name="adr"></a> Verbesserte Wiederherstellung von Datenbanken
+Die [verbesserte Wiederherstellung von Datenbanken](/azure/sql-database/sql-database-accelerated-database-recovery/) ist in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verfügbar. Durch die verbesserte Wiederherstellung von Datenbanken wird die Verfügbarkeit von Datenbanken enorm verbessert, insbesondere bei zeitintensiven Transaktionen. Hierfür wurde der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Wiederherstellungsprozess[ der ](#TlogAndRecovery) vollständig überarbeitet. Eine Datenbank, für die die verbesserte Wiederherstellung von Datenbanken aktiviert wurde, wird nach einem Failover oder einem nicht sauberen Herunterfahren deutlich schneller wiederhergestellt. Ist diese Option aktiviert, wird bei der verbesserten Wiederherstellung von Datenbanken auch das Rollback von abgebrochenen Transaktionen mit langer Ausführungszeit deutlich schneller.
 
 Sie können die datenbankbasierte beschleunigte Wiederherstellung für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] mithilfe der folgenden Syntax aktivieren:
 
@@ -189,7 +189,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
 > [!NOTE]
 > Die verbesserte Wiederherstellung von Datenbanken bei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] standardmäßig aktiviert.
 
-## <a name="RelatedContent"></a> Weitere Ressourcen  
+## <a name="see-also"></a><a name="RelatedContent"></a> Weitere Ressourcen  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)      
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     

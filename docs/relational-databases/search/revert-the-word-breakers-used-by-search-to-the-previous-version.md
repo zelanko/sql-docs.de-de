@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055183"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version (SQL Server-Suche)
@@ -34,7 +34,7 @@ ms.locfileid: "74055183"
   
  Allgemeine Informationen zur Wörtertrennung und Wortstammerkennung finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-##  <a name="overview"></a> Übersicht über das Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
+##  <a name="overview-of-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="overview"></a> Übersicht über das Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
  Die Anweisungen zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen hängen von der Sprache ab. In der folgenden Tabelle werden die drei Sätze von Aktionen zusammengefasst, die möglicherweise erforderlich sind, um zur früheren Version der Komponenten zurückzuwechseln.  
   
 |Aktuelle Datei|Vorherige Datei|Anzahl betroffener Sprachen|Aktion für Dateien|Aktion für Registrierungseinträge|  
@@ -50,7 +50,7 @@ ms.locfileid: "74055183"
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
-##  <a name="nl6nl6"></a> Sprachen, für die der Dateiname sowohl für die aktuelle als auch die vorherige Wörtertrennung NaturalLanguage6.dll ist  
+##  <a name="languages-for-which-the-file-name-of-both-the-current-and-previous-word-breaker-is-naturallanguage6dll"></a><a name="nl6nl6"></a> Sprachen, für die der Dateiname sowohl für die aktuelle als auch die vorherige Wörtertrennung NaturalLanguage6.dll ist  
  Für die Sprachen in der folgenden Tabelle ist der Dateiname sowohl für die aktuelle als auch die vorherige Wörtertrennung NaturalLanguage6.dll. Um diese Komponenten wiederherzustellen, müssen Sie NaturalLanguage6.dll mit einer anderen Version der gleichen Datei überschreiben. Sie müssen keine Registrierungseinträge ändern, da sich die Registrierungseinträge für diese Version nicht geändert haben.  
   
 > [!WARNING]  
@@ -97,7 +97,7 @@ ms.locfileid: "74055183"
   
  Die obige Tabelle ist nach der Spalte "Abkürzung" alphabetisch sortiert.  
   
-###  <a name="nl6nl6revert"></a> So stellen Sie die vorherigen Komponenten wieder her  
+###  <a name="to-revert-to-the-previous-components"></a><a name="nl6nl6revert"></a> So stellen Sie die vorherigen Komponenten wieder her  
   
 1.  Navigieren Sie zum Ordner "Binn", der oben beschrieben wurde.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "74055183"
   
 4.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
 
-###  <a name="nl6nl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
+###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
   
 1.  Navigieren Sie zum Speicherort, an dem Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von NaturalLanguage6.dll gesichert haben.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "74055183"
   
 3.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
-##  <a name="newnl6"></a> Sprachen, für die nur der Dateiname der vorherigen Wörtertrennung NaturalLanguage6.dll ist  
+##  <a name="languages-for-which-the-file-name-of-the-previous-word-breaker-only-is-naturallanguage6dll"></a><a name="newnl6"></a> Sprachen, für die nur der Dateiname der vorherigen Wörtertrennung NaturalLanguage6.dll ist  
  Für die Sprachen in der folgenden Tabelle unterscheidet sich der Dateiname für die vorherige Wörtertrennung vom Dateinamen der neuen Version. Der vorherige Dateiname ist NaturalLanguage6.dll. Um zur früheren Version wiederherzustellen, müssen Sie die aktuelle Version von NaturalLanguage6.dll mit einer früheren Version der gleichen Datei überschreiben. Sie müssen auch einen Satz von Registrierungseinträgen ändern, um die vorherige oder aktuelle Version der Komponenten anzugeben.  
   
 > [!WARNING]  
@@ -141,7 +141,7 @@ ms.locfileid: "74055183"
   
  Verwenden Sie die folgenden Anweisungen zusammen mit der Liste der Werte im Abschnitt [Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen](#newnl6values).  
   
-###  <a name="newnl6revert"></a> So stellen Sie die vorherigen Komponenten wieder her  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnl6revert"></a> So stellen Sie die vorherigen Komponenten wieder her  
   
 1.  Navigieren Sie zum Ordner "Binn", der oben beschrieben wurde.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "74055183"
   
 10. Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
-###  <a name="newnl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
+###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
   
 1.  Navigieren Sie zum Speicherort, an dem Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von NaturalLanguage6.dll gesichert haben.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "74055183"
   
 8.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
-###  <a name="newnl6values"></a> Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnl6values"></a> Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
  Verwenden Sie die folgende Liste von Dateinamen und Registrierungseinträgen zusammen mit den Anweisungen im vorangehenden Abschnitt. Verwenden Sie die vorherigen Werte, um die frühere Version wiederherzustellen, oder verwenden Sie die aktuellen Werte, um die aktuelle Version der Komponenten wiederherzustellen.  
   
  Die folgende Liste ist alphabetisch nach der für jede Sprache verwendeten Abkürzung sortiert.  
@@ -253,7 +253,7 @@ ms.locfileid: "74055183"
 |Aktuelle CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
 |Aktueller Dateiname|MSWB7.dll|MSWB7.dll|  
   
-##  <a name="newnew"></a> Sprachen, für die weder der vorherige noch der aktuelle Dateiname NaturalLanguage6.dll ist  
+##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> Sprachen, für die weder der vorherige noch der aktuelle Dateiname NaturalLanguage6.dll ist  
  Für die Sprachen in der folgenden Tabelle unterscheiden sich die Dateinamen der vorherigen Wörtertrennungen und Wortstammerkennungen von den Dateinamen der neuen Versionen. Weder der vorherige noch der aktuelle Dateiname ist NaturalLanguage6.dll. Sie müssen keine Dateien ersetzen, da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setup sowohl die aktuellen als auch die früheren Versionen der Komponenten in den Ordner "Binn" kopiert. Sie müssen jedoch einen Satz von Registrierungseinträgen ändern, um die vorherige oder aktuelle Version der Komponenten anzugeben.  
   
  **Liste betroffener Sprachen**  
@@ -271,7 +271,7 @@ ms.locfileid: "74055183"
   
  Verwenden Sie die folgenden Anweisungen zusammen mit der Liste der Werte im Abschnitt [Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen](#newnewvalues).  
   
-###  <a name="newnewrevert"></a> So stellen Sie die vorherigen Komponenten wieder her  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnewrevert"></a> So stellen Sie die vorherigen Komponenten wieder her  
   
 1.  Entfernen Sie die Dateien für die aktuelle Version der Komponenten nicht aus dem Ordner "Binn".  
   
@@ -295,7 +295,7 @@ ms.locfileid: "74055183"
   
 7.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
-###  <a name="newnewrestore"></a> So stellen Sie die vorherigen Komponenten wieder her  
+###  <a name="to-restore-the-previous-components"></a><a name="newnewrestore"></a> So stellen Sie die vorherigen Komponenten wieder her  
   
 1.  Entfernen Sie die Dateien für die vorherige Version der Komponenten nicht aus dem Ordner "Binn".  
   
@@ -319,7 +319,7 @@ ms.locfileid: "74055183"
   
 7.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
-###  <a name="newnewvalues"></a> Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnewvalues"></a> Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
  Verwenden Sie die folgende Liste von Dateinamen und Registrierungseinträgen zusammen mit den Anweisungen im vorangehenden Abschnitt. Verwenden Sie die vorherigen Werte, um die frühere Version wiederherzustellen, oder verwenden Sie die aktuellen Werte, um die aktuelle Version der Komponenten wiederherzustellen.  
   
  Die folgende Liste ist alphabetisch nach der für jede Sprache verwendeten Abkürzung sortiert.  

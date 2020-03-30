@@ -11,17 +11,17 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 19a8597136f073d609c7a9cc77ce8e2b73c72004
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71688288"
 ---
 # <a name="backup-encryption"></a>Verschlüsseln der Sicherung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Dieses Thema bietet eine Übersicht über die Verschlüsselungsoptionen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen. Es enthält Details zur Verwendung, zu den Vorteilen und empfohlenen Vorgehensweisen beim Verschlüsseln bei der Sicherung.  
 
-## <a name="Overview"></a> Übersicht  
+## <a name="overview"></a><a name="Overview"></a> Übersicht  
  Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]verfügt SQL Server über die Möglichkeit, die Daten beim Erstellen einer Sicherung zu verschlüsseln. Durch das Angeben des Verschlüsselungsalgorithmus und der Verschlüsselung (ein Zertifikat oder ein asymmetrischer Schlüssel) beim Erstellen einer Sicherung können Sie eine verschlüsselte Sicherungsdatei anlegen. Alle Speicherziele − lokaler und Windows Azure-Speicher − werden unterstützt. Außerdem können Verschlüsselungsoptionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] -Vorgänge konfiguriert werden. Dies ist eine neue Funktion, die in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]eingeführt wurde.  
   
  Um während der Sicherung eine Verschlüsselung durchzuführen, müssen Sie einen Verschlüsselungsalgorithmus und eine Verschlüsselungsmethode angeben, um den Verschlüsselungsschlüssel zu sichern. Folgende Verschlüsselungsoptionen werden unterstützt:  
@@ -37,7 +37,7 @@ ms.locfileid: "71688288"
   
  Wenn Sie eine Sicherung von einer TDE-verschlüsselten Datenbank wiederherstellen, sollte das TDE-Zertifikat auf der Instanz verfügbar sein, auf der die Wiederherstellung erfolgen soll.  
   
-##  <a name="Benefits"></a> Vorteile  
+##  <a name="benefits"></a><a name="Benefits"></a> Vorteile  
   
 1. Das Verschlüsseln der Datenbanksicherungen trägt zum Schutz der Daten bei: SQL Server bietet die Option, die Sicherungsdaten beim Erstellen einer Sicherung zu verschlüsseln.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71688288"
   
 1. Sie können Verschlüsselungsschlüssel in EKM-Anbieter (Extended Key Management) integrieren.  
  
-##  <a name="Prerequisites"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Voraussetzungen zum Verschlüsseln einer Sicherung:  
   
 1. **Erstellen eines Datenbank-Hauptschlüssels für die Masterdatenbank:** Der Datenbank-Hauptschlüssel ist ein symmetrischer Schlüssel, der zum Schützen von in der Datenbank vorhandenen privaten Schlüsseln von Zertifikaten und asymmetrischen Schlüsseln verwendet wird. Weitere Informationen finden Sie unter [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "71688288"
     > [!IMPORTANT]  
     >  Nur asymmetrische Schlüssel, die sich in einer erweiterten Schlüsselverwaltung (Extended Key Management, EKM) befinden, werden unterstützt.  
   
-##  <a name="Restrictions"></a> Einschränkungen  
+##  <a name="restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Folgende Einschränkungen gelten für die Verschlüsselungsoptionen:  
   
 - Wenn Sie einen asymmetrischen Schlüssel verwenden, um die Sicherungsdaten zu verschlüsseln, werden nur asymmetrische Schlüssel, die sich im EKM-Anbieter befinden, unterstützt.  
@@ -70,14 +70,14 @@ ms.locfileid: "71688288"
   
 - Das Anfügen an einen vorhandenen Sicherungssatz wird für verschlüsselte Sicherungen nicht unterstützt.  
 
-##  <a name="Permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
 
 Verwenden Sie die Berechtigung **VIEW DEFINITION** auf dem Zertifikat oder dem asymmetrischen Schlüssel, der zur Verschlüsselung der Datenbanksicherung verwendet wird, um eine Sicherung zu verschlüsseln oder aus einer verschlüsselten Sicherung wiederherzustellen.  
   
 > [!NOTE]  
 > Der Zugriff auf das TDE-Zertifikat ist nicht erforderlich, um eine durch TDE geschützte Datenbank zu sichern oder wiederherzustellen.  
   
-## <a name="Methods"></a> Methoden zur Sicherungsverschlüsselung  
+## <a name="backup-encryption-methods"></a><a name="Methods"></a> Methoden zur Sicherungsverschlüsselung  
  Die folgenden Abschnitte enthalten eine kurze Einführung in die Schritte zum Verschlüsseln der Daten während der Sicherung. Eine vollständige exemplarische Vorgehensweise der einzelnen Schritte, die Sie beim Verschlüsseln der Sicherung mithilfe von Transact-SQL ausführen, finden Sie unter [Erstellen einer verschlüsselten Sicherung](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
 ### <a name="using-sql-server-management-studio"></a>Verwendung von SQL Server Management Studio  
@@ -115,7 +115,7 @@ $encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorTy
 Backup-SqlDatabase -ServerInstance . -Database "<myDatabase>" -BackupFile "<myDatabase>.bak" -CompressionOption On -EncryptionOption $encryptionOption  
 ```  
   
-##  <a name="RecommendedPractices"></a> Empfohlene Vorgehensweisen  
+##  <a name="recommended-practices"></a><a name="RecommendedPractices"></a> Empfohlene Vorgehensweisen  
  Erstellen Sie eine Sicherung des Verschlüsselungszertifikats und der Schlüssel an einem anderen Speicherort als dem lokalen Computer, auf dem die Instanz installiert ist. Zur Wiederherstellung in Notfallszenarien sollten Sie eine Sicherung des Zertifikats oder des Schlüssels an einem anderen Ort aufbewahren. Sie können eine verschlüsselte Sicherung nicht ohne das Zertifikat wiederherstellen, das verwendet wird, um die Sicherung zu verschlüsseln.  
   
  Zur Wiederherstellung einer verschlüsselten Sicherung sollte das ursprüngliche Zertifikat, das beim Erstellen der Sicherung mit übereinstimmendem Fingerabdruck verwendet wurde, auf der Instanz verfügbar sein, auf der die Wiederherstellung erfolgt. Deshalb sollte das Zertifikat beim Ablauf nicht verlängert oder geändert werden. Die Verlängerung kann zum Aktualisieren des Zertifikats führen, was die Änderung des Fingerabdrucks auslöst, sodass das Zertifikat für die Sicherungsdatei ungültig wird. Das Konto, unter dem die Wiederherstellung ausgeführt wird, sollte über die VIEW DEFINITION-Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel verfügen, das bzw. der für die Verschlüsselung während der Sicherung verwendet wird.  
@@ -124,7 +124,7 @@ Backup-SqlDatabase -ServerInstance . -Database "<myDatabase>" -BackupFile "<myDa
   
  Wenn TDE für die Datenbank aktiviert wurde, wählen Sie andere Zertifikate oder asymmetrische Schlüssel zum Verschlüsseln der Datenbank und der Sicherung aus, um die Sicherheit zu erhöhen.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 |Thema/Aufgabe|BESCHREIBUNG|  
 |-----------------|-----------------|  

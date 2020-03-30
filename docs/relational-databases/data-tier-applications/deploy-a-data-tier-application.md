@@ -22,10 +22,10 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190116"
 ---
 # <a name="deploy-a-data-tier-application"></a>Bereitstellen einer Datenebenenanwendung
@@ -114,7 +114,7 @@ Im Folgenden erfahren Sie mehr über einige Seiten des Assistenten:
   
  **Pfad und Name der Protokolldatei** : Geben Sie den vollständigen Pfad- und Dateinamen für die Protokolldatei an. Das Feld wird mit dem Standardpfad und -dateinamen aufgefüllt. Bearbeiten Sie die Zeichenfolge im Feld, um den Standardeintrag zu ändern, oder verwenden Sie die Schaltfläche **Durchsuchen** , um zum Ordner zu navigieren, in dem die Protokolldatei abgelegt werden soll.  
   
-###  <a name="Summary"></a> Seite "Zusammenfassung"  
+###  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Verwenden Sie diese Seite, um die Aktionen zu überprüfen, die der Assistent beim Bereitstellen der DAC ausführt.  
   
  **Die folgenden Einstellungen werden zur Bereitstellung der DAC verwendet.** – Überprüfen Sie die angezeigten Informationen darauf, ob die ergriffenen Maßnahmen richtig sind. Im Fenster werden das ausgewählte DAC-Paket und der für die bereitgestellte DAC-Instanz ausgewählte Name angezeigt. Im Fenster werden auch die Einstellungen angezeigt, die beim Erstellen der mit der DAC verbundenen Datenbank verwendet werden.  

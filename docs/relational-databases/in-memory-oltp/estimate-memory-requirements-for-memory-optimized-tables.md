@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412685"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
@@ -52,7 +52,7 @@ Wenn eine aktive Arbeitsauslastung vorliegt, ist zusätzlicher Arbeitsspeicher e
   
 - [Arbeitsspeicher für zukünftiges Wachstum](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="bkmk_ExampleTable"></a> Beispiel für eine speicheroptimierte Tabelle  
+###  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> Beispiel für eine speicheroptimierte Tabelle  
 
 Betrachten Sie das folgende speicheroptimierte Tabellenschema:
   
@@ -83,7 +83,7 @@ GO
 
 Mithilfe dieses Schemas wird der minimale Arbeitsspeicherbedarf dieser speicheroptimierten Tabelle bestimmt.  
   
-###  <a name="bkmk_MemoryForTable"></a> Arbeitsspeicher für die Tabelle  
+###  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> Arbeitsspeicher für die Tabelle  
 
 Eine Zeile einer speicheroptimierten Tabelle umfasst drei Teile:
   
@@ -102,7 +102,7 @@ Im Folgenden eine Größenberechnung für 5.000.000 (5 Millionen) Zeilen in eine
   
 Aus den vorherigen Berechnungen ergibt sich für jede Zeile in der speicheroptimierten Tabelle eine Größe von 24 + 32 + 200 oder 256 Bytes.  Da sie 5 Million Zeilen enthält, belegt die Tabelle 5.000.000 * 256 Bytes oder 1.280.000.000 Bytes, also ungefähr 1,28 GB.  
   
-###  <a name="bkmk_IndexMeemory"></a> Arbeitsspeicher für Indizes  
+###  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> Arbeitsspeicher für Indizes  
 
 #### <a name="memory-for-each-hash-index"></a>Arbeitsspeicher für jeden Hashindex  
   
@@ -165,7 +165,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="bkmk_MemoryForRowVersions"></a> Arbeitsspeicher für die Zeilenversionsverwaltung
+###  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> Arbeitsspeicher für die Zeilenversionsverwaltung
 
 Um Sperren zu vermeiden, nutzt In-Memory OLTP beim Aktualisieren oder Löschen von Zeilen optimistische Nebenläufigkeit. Dies bedeutet, dass bei jedem Zeilenupdate eine zusätzliche Version der Zeile erstellt wird. Außerdem erfolgen Löschungen auf logischer Ebene – die vorhandene Zeile wird als gelöscht markiert, aber nicht sofort entfernt. Das System hält alte Zeilenversionen (einschließlich gelöschter Zeilen) verfügbar, bis alle Transaktionen, die eine bestimmte Version möglicherweise verwenden, abgeschlossen wurden. 
   
@@ -181,13 +181,13 @@ Danach wird der Arbeitsspeicherbedarf für veraltete Zeilen geschätzt, indem di
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="bkmk_TableVariables"></a> Arbeitsspeicher für Tabellenvariablen
+###  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> Arbeitsspeicher für Tabellenvariablen
   
 Der für eine Tabellenvariable verwendete Arbeitsspeicher wird erst freigegeben, wenn die Tabellenvariable den Gültigkeitsbereich verlässt. Gelöschte Zeilen, einschließlich der während eines Updates gelöschten Zeilen, aus einer Tabellenvariablen unterliegen nicht der Garbage Collection. Es wird erst Arbeitsspeicher freigegeben, wenn die Tabellenvariable den Bereich verlässt.  
   
 Tabellenvariablen, die in einem umfangreichen SQL-Batch und nicht in einem Prozedurbereich definiert und in zahlreichen Transaktionen verwendet werden, können viel Arbeitsspeicher beanspruchen. Da sie nicht von der Garbage Collection bereinigt werden, können gelöschte Zeilen in einer Tabellenvariablen viel Arbeitsspeicher beanspruchen und die Leistung beeinträchtigen, da Lesevorgänge auch die gelöschten Zeilen durchlaufen müssen.  
   
-###  <a name="bkmk_MemoryForGrowth"></a> Arbeitsspeicher für zukünftiges Wachstum
+###  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> Arbeitsspeicher für zukünftiges Wachstum
 
 Mit den oben aufgeführten Berechnungen wird der Arbeitsspeicherbedarf für die derzeit bestehende Tabelle geschätzt. Zusätzlich zu diesem Arbeitsspeicher müssen Sie einplanen, dass die Tabelle anwächst, und ausreichend Arbeitsspeicher für zukünftiges Wachstum vorsehen.  Wenn Sie beispielsweise ein zehnprozentiges Wachstum erwarten, müssen Sie die oben ermittelten Ergebnisse mit 1,1 multiplizieren, um den insgesamt erforderlichen Arbeitsspeicher für die Tabelle zu erhalten.  
   

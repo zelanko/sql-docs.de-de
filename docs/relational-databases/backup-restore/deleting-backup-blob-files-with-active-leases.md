@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908934"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Löschen von Blob-Sicherungsdateien mit aktiven Leases
@@ -42,7 +42,7 @@ In den folgenden Schritten wird beschrieben, wie nach einem fehlerhaften Sicheru
   
 1. **Löschen des Blobs:** Um ein Blob mit einer aktiven Lease zu löschen, müssen Sie zunächst die Lease unterbrechen.  
 
-###  <a name="Code_Example"></a> Beispiel für ein PowerShell-Skript  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a> Beispiel für ein PowerShell-Skript  
   
 > [!IMPORTANT]
 > Bei Verwendung von PowerShell 2.0 können Probleme beim Laden der Assembly Microsoft.WindowsAzure.Storage.dll auftreten. Es wird empfohlen, ein Upgrade von [PowerShell](https://docs.microsoft.com/powershell/) auszuführen, um das Problem zu beheben. Lassen Sie die .NET 2.0- und .NET 4.0-Assemblys zur Laufzeit laden. Dazu können Sie auch die folgende Problemumgehung verwenden, um die Datei powershell.exe.config zu erstellen bzw. eine bereits vorhandene Datei mit folgendem Code zu ändern:  

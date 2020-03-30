@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73064683"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
@@ -218,7 +218,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ```  
   
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D: Erstellen von drei Prioritätsebenen für einen Zieldienst mithilfe von Diensten  
- Unterstützt ein System, das drei Leistungsstufen bietet: Gold (hoch), Silber (mittel) und Bronze (niedrig). Es gibt einen Vertrag, aber jede Ebene weist einen separaten Initiatordienst auf. Alle Initiatordienste kommunizieren mit einem zentralen Zieldienst.  
+ Unterstützt ein System, das drei Leistungsebenen bereitstellt: Gold (hoch), Silver (mittel) und Bronze (niedrig). Es gibt einen Vertrag, aber jede Ebene weist einen separaten Initiatordienst auf. Alle Initiatordienste kommunizieren mit einem zentralen Zieldienst.  
   
 ```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
@@ -260,7 +260,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ```  
   
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. Erstellen von drei Prioritätsebenen für mehrere Dienste mithilfe von Verträgen  
- Unterstützt ein System, das drei Leistungsstufen bietet: Gold (hoch), Silber (mittel) und Bronze (niedrig). Jede Ebene weist einen separaten Vertrag auf. Diese Prioritäten werden für alle Dienste übernommen, auf die von Konversationen verwiesen wird, die die Verträge verwenden.  
+ Unterstützt ein System, das drei Leistungsebenen bereitstellt: Gold (hoch), Silver (mittel) und Bronze (niedrig). Jede Ebene weist einen separaten Vertrag auf. Diese Prioritäten werden für alle Dienste übernommen, auf die von Konversationen verwiesen wird, die die Verträge verwenden.  
   
 ```sql  
 CREATE BROKER PRIORITY GoldPriority  

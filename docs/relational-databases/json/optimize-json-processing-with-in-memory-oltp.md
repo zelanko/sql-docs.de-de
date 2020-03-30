@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74096077"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Optimieren der JSON-Verarbeitung mit In-Memory-OLTP
@@ -46,7 +46,7 @@ Mithilfe der in SQL Server- und Azure SQL-Datenbanken enthaltenen neuen Funktion
  - [Indizieren Sie Werte](#index) in JSON-Dokumenten mithilfe von speicheroptimierten Indizes.
  - [Führen Sie für SQL-Abfragen eine native Kompilierung durch](#compile), in denen Werte aus JSON-Dokumenten verwendet werden, oder formatieren Sie Ergebnisse als JSON-Text.
 
-## <a name="validate"></a> Überprüfen von JSON-Spalten
+## <a name="validate-json-columns"></a><a name="validate"></a> Überprüfen von JSON-Spalten
 Mithilfe von SQL Server- und Azure SQL-Datenbanken können Sie nativ kompilierte CHECK-Einschränkungen hinzufügen, mit denen der in einer Zeichenfolgenspalte gespeicherte Inhalt von JSON-Dokumenten überprüft werden kann. Mit nativ kompilierten JSON CHECK-Einschränkungen können Sie sicherstellen, dass in Ihren speicheroptimierten Tabellen gespeicherter JSON-Text ordnungsgemäß formatiert wird.
 
 Im folgenden Beispiel wird eine `Product`-Tabelle mit einer JSON-Spalte `Tags` erstellt. Die `Tags`-Spalte weist eine CHECK-Einschränkung auf, die die `ISJSON`-Funktion verwendet, um den JSON-Text in der Spalte zu überprüfen.
@@ -75,7 +75,7 @@ ALTER TABLE xtp.Product
         CHECK (ISJSON(Data)=1)
 ```
 
-## <a name="computedcol"></a> Verfügbarmachen von JSON-Werte mithilfe von berechneten Spalten
+## <a name="expose-json-values-using-computed-columns"></a><a name="computedcol"></a> Verfügbarmachen von JSON-Werte mithilfe von berechneten Spalten
 Mithilfe von berechneten Spalten können Sie Werte aus JSON-Text verfügbar machen und auf diese Werte zugreifen, ohne dass der Wert aus dem JSON-Text erneut abgerufen, erneut ausgewertet und ohne dass die JSON-Struktur erneut analysiert wird. Derartig verfügbar gemachte Werte sind mit einer starken Typisierung versehen und in den berechneten Spalten physisch persistent. Auf JSON-Werte kann mithilfe von permanent berechneten Spalten schneller zugegriffen werden als der direkte Zugriff auf Werte im JSON-Dokument.
 
 Im folgenden Beispiel werden die beiden folgenden Werte aus der JSON `Data`-Spalte verfügbar gemacht:
@@ -100,7 +100,7 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-## <a name="index"></a> Indexwerte in JSON-Spalten
+## <a name="index-values-in-json-columns"></a><a name="index"></a> Indexwerte in JSON-Spalten
 Bei SQL Server- und Azure SQL-Datenbank können Sie Werte in JSON-Spalten mithilfe von speicheroptimierten Indizes indizieren. Indizierte JSON-Werte müssen wie im vorherigen Beispiel mithilfe von berechneten Spalten verfügbar gemacht und mit einer starken Typisierung versehen werden.
 
 Werte in JSON-Spalten können sowohl mit Standard-NONCLUSTERED- als auch mit HASH-Indizes indiziert werden.
@@ -131,7 +131,7 @@ ALTER TABLE Product
         WITH (BUCKET_COUNT=20000)
 ```
 
-## <a name="compile"></a> Native Kompilierung von JSON-Abfragen
+## <a name="native-compilation-of-json-queries"></a><a name="compile"></a> Native Kompilierung von JSON-Abfragen
 Wenn Ihre Prozeduren, Funktionen und Trigger Abfragen enthalten, die die integrierte JSON-Funktion verwenden, verbessert die native Kompilierung die Leistung dieser Abfragen und vermindert die für deren Ausführung erforderlichen CPU-Zyklen.
 
 Im folgenden Beispiel ist eine nativ kompilierte Prozedur dargestellt, die verschiedene JSON-Funktionen enthält: **JSON_VALUE**, **OPENJSON** und **JSON_MODIFY**.

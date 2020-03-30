@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e9d1139619f64aa9ff1be53711019fdbdf6637
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909300"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
@@ -26,9 +26,9 @@ ms.locfileid: "72909300"
 > [!IMPORTANT]  
 >  Um eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten räumlichen Funktionen (z.B. Funktionen, die räumliche Indizes beeinflussen) zu erhalten, laden Sie das Whitepaper [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Neue räumliche Funktionen in SQL Server 2012) herunter.  
   
-##  <a name="about"></a> Informationen zu räumlichen Indizes  
+##  <a name="about-spatial-indexes"></a><a name="about"></a> Informationen zu räumlichen Indizes  
   
-###  <a name="decompose"></a> Zerlegen von indiziertem Raum in eine Rasterhierarchie  
+###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Zerlegen von indiziertem Raum in eine Rasterhierarchie  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden räumliche Indizes mithilfe von B-Strukturen erstellt; das heißt, dass die Indizes die zweidimensionalen räumlichen Daten in der linearen Reihenfolge der B-Strukturen darstellen müssen. Bevor Daten in einen räumlichen Index eingelesen werden, implementiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] daher eine einheitliche hierarchische Zerlegung des Raums. Während der Indexerstellung wird der Raum in eine vier Ebenen umfassende *Rasterhierarchie* *zerlegt*. Diese Ebenen werden als *Ebene 1* (die oberste Ebene), *Ebene 2*, *Ebene 3*und *Ebene 4*bezeichnet.  
   
  Auf jeder nachfolgenden Ebene wird die ihr übergeordnete Ebene weiter zerlegt, sodass jede Zelle der übergeordneten Ebene ein vollständiges Raster der nächsten Ebene enthält. Auf einer gegebenen Ebene verfügen alle Raster an beiden Achsen über die gleiche Anzahl von Zellen (beispielweise 4&nbsp;x&nbsp;4 oder 8&nbsp;x&nbsp;8), und die Zellen sind alle gleich groß.  
@@ -62,7 +62,7 @@ ms.locfileid: "72909300"
 > [!NOTE]  
 >  Die Rasterdichten eines räumlichen Index sind in den Spalten level_1_grid, level_2_grid, level_3_grid und level_4_grid der [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) -Katalogsicht sichtbar, wenn der Datenbank-Kompatibilitätsgrad auf 100 oder niedriger festgelegt wird. Die Mosaikschemaoptionen **GEOMETRY_AUTO_GRID**/**GEOGRAPHY_AUTO_GRID** füllen diese Spalten nicht auf. Die sys.spatial_index_tessellations-Katalogsicht enthält **NULL** -Werte für diese Spalten, wenn die automatischen Rasteroptionen verwendet werden.  
   
-###  <a name="tessellation"></a> Mosaik  
+###  <a name="tessellation"></a><a name="tessellation"></a> Mosaik  
  Nach der Zerlegung eines indizierten Raums in eine Rasterhierarchie werden die Daten anhand des räumlichen Indexes zeilenweise aus der räumlichen Spalte gelesen. Nachdem die Daten für ein räumliches Objekt (bzw. eine räumliche Instanz) gelesen wurden, wird unter Verwendung des räumlichen Index ein *Mosaikprozess* für dieses Objekt durchgeführt. Durch den Mosaikprozess wird das Objekt in die Rasterhierarchie eingepasst, indem das Objekt der Menge von Rasterzellen zugeordnet wird, die es berührt (*berührte Zellen*). Auf Ebene 1 der Rasterhierarchie beginnend, verläuft der Mosaikprozess *breitenorientiert* über der Ebene. Potenziell kann der Prozess über alle vier Ebenen fortgesetzt werden, wobei zu einem Zeitpunkt jeweils nur eine Ebene bearbeitet werden kann.  
   
  Ergebnis des Mosaikprozesses ist eine Menge berührter Zellen, die im räumlichen Index für das betreffende Objekt verzeichnet sind. Durch das Verweisen auf diese aufgezeichneten Zellen kann mit dem räumlichen Index die Position des Objekts im Raum relativ zu anderen Objekten der räumlichen Spalte, die ebenfalls im Index gespeichert sind, bestimmt werden.  
@@ -108,11 +108,11 @@ ms.locfileid: "72909300"
 #### <a name="deepest-cell-rule"></a>Tiefste-Zelle-Regel  
  Bei der Tiefste-Zelle-Regel wird die Tatsache genutzt, dass jede Zelle einer untergeordneten Ebene zu der ihr übergeordneten Zelle gehört: Eine Zelle auf Ebene 4 gehört zu einer Zelle auf Ebene 3, eine Zelle auf Ebene 3 gehört zu einer Zelle auf Ebene 2, und eine Zelle auf Ebene 2 gehört zu einer Zelle auf Ebene 1. Zum Beispiel gehört ein Objekt, das zu Zelle 1.1.1.1 gehört, auch zu Zelle 1.1.1, Zelle 1.1 und Zelle 1. Die Kenntnis solcher Beziehungen in der Zellenhierarchie wurde in den Abfrageprozessor integriert. Daher müssen nur die Zellen der tiefsten Ebene im Index verzeichnet werden, sodass im Index nur die minimale Menge an Informationen gespeichert werden muss.  
   
- In der folgenden Abbildung wird ein relativ kleines rautenförmiges Polygon durch den Mosaikprozess unterteilt. Für den Index wird der vordefinierte Zellen-pro-Objekt-Grenzwert 16 verwendet, die bei diesem kleinen Objekt nicht erreicht wird. Deshalb wird der Mosaikprozess bis zu Ebene 4 fortgesetzt. Das Polygon befindet sich in den folgenden Zellen der Ebene 1 bis Ebene 3: 4, 4.4 und 4.4.10 und 4.4.14. Bei Verwendung der Tiefste-Zelle-Regel zählt das Mosaik jedoch nur die 12 Zellen auf Ebene 4: 4.4.10.13-15 und 4.4.14.1-3, 4.4.14.5-7 und 4.4.14.9-11.  
+ In der folgenden Abbildung wird ein relativ kleines rautenförmiges Polygon durch den Mosaikprozess unterteilt. Für den Index wird der vordefinierte Zellen-pro-Objekt-Grenzwert 16 verwendet, die bei diesem kleinen Objekt nicht erreicht wird. Deshalb wird der Mosaikprozess bis zu Ebene 4 fortgesetzt. Das Polygon befindet sich in den folgenden Zellen der Ebene 1 bis Ebene 3: 4, 4.4, 4.4.10 und 4.4.14. Bei Verwendung der Tiefste-Zelle-Regel zählt das Mosaik jedoch nur die 12 Zellen auf Ebene 4: 4.4.10.13-15, 4.4.14.1-3, 4.4.14.5-7 und 4.4.14.9-11.  
   
  ![Tiefste-Zelle-Optimierung](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "Tiefste-Zelle-Optimierung")  
   
-###  <a name="schemes"></a> Mosaikschemas  
+###  <a name="tessellation-schemes"></a><a name="schemes"></a> Mosaikschemas  
  Das Verhalten eines räumlichen Indexes hängt teilweise von seinem *Mosaikschema*ab. Das Mosaikschema ist datentypspezifisch. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden zwei Mosaikschemas für räumliche Indizes unterstützt:  
   
 -   Das*Geometrieraster-Mosaikschema*, das als Schema für den **geometry** -Datentyp vorgesehen ist.  
@@ -178,10 +178,10 @@ ms.locfileid: "72909300"
   
  ![Geografieraster der Ebene 1](../../relational-databases/spatial/media/spndx-geodetic-level1grid.gif "Geografieraster der Ebene 1")  
   
-##  <a name="methods"></a> Von räumlichen Indizes unterstützte Methoden  
+##  <a name="methods-supported-by-spatial-indexes"></a><a name="methods"></a> Von räumlichen Indizes unterstützte Methoden  
   
-###  <a name="geometry"></a> Von räumlichen Indizes unterstützte geometry-Methoden  
- Unter bestimmten Bedingungen unterstützen räumliche Indizes die folgenden mengenorientierten geometry-Methoden: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() und STWithin(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel oder JOIN ON-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
+###  <a name="geometry-methods-supported-by-spatial-indexes"></a><a name="geometry"></a> Von räumlichen Indizes unterstützte geometry-Methoden  
+ Räumliche Indizes unterstützen unter bestimmten Bedingungen die folgenden mengenorientierten geometry-Methoden: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() und STWithin(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel oder JOIN ON-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
   
  *geometrie1*.*Methodenname*(*geometrie2*)*Vergleichsoperator**gültige_Zahl*  
   
@@ -205,7 +205,7 @@ ms.locfileid: "72909300"
   
 -   *geometry1*.[STWithin](../../t-sql/spatial-geometry/stwithin-geometry-data-type.md)(*geometry2*)= 1  
   
-###  <a name="geography"></a> Von räumlichen Indizes unterstützte geography-Methoden  
+###  <a name="geography-methods-supported-by-spatial-indexes"></a><a name="geography"></a> Von räumlichen Indizes unterstützte geography-Methoden  
  Unter bestimmten Bedingungen unterstützen räumliche Indizes die folgenden mengenorientierten geography-Methoden: STIntersects(),STEquals() und STDistance(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
   
  *geographie1*.*Methodenname*(*geographie2*)*Vergleichsoperator**gültige_Zahl*  

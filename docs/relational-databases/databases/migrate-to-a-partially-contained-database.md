@@ -13,10 +13,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908087"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -33,7 +33,7 @@ ms.locfileid: "72908087"
   
 -   [Migrieren von Benutzern zu Benutzern eigenständiger Datenbanken](#users)  
   
-##  <a name="prepare"></a> Vorbereiten auf das Migrieren einer Datenbank  
+##  <a name="preparing-to-migrate-a-database"></a><a name="prepare"></a> Vorbereiten auf das Migrieren einer Datenbank  
  Überprüfen Sie die folgenden Punkte, wenn Sie eine Datenbank zum teilweise eigenständigen Datenbankmodell migrieren möchten.  
   
 -   Machen Sie sich mit dem teilweise eigenständigen Datenbankmodell vertraut. Weitere Informationen finden Sie unter [Contained Databases](../../relational-databases/databases/contained-databases.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "72908087"
   
 -   Überwachen Sie das **database_uncontained_usage** -XEvent, um festzustellen, ob nicht enthaltene Funktionen verwendet werden.  
   
-##  <a name="enable"></a> Aktivieren enthaltener Datenbanken  
+##  <a name="enable-contained-databases"></a><a name="enable"></a> Aktivieren enthaltener Datenbanken  
  Enthaltene Datenbanken müssen für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz aktiviert sein, bevor sie erstellt werden können.  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Aktivieren von enthaltenen Datenbanken mit Transact-SQL  
@@ -70,7 +70,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="convert"></a> Konvertieren einer Datenbank in eine teilweise eigenständige Datenbank  
+##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> Konvertieren einer Datenbank in eine teilweise eigenständige Datenbank  
  Eine Datenbank wird in eine enthaltene Datenbank konvertiert, indem die **CONTAINMENT** -Option geändert wird.  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Konvertieren einer Datenbank in eine teilweise eigenständige Datenbank mit Transact-SQL  
@@ -92,7 +92,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="users"></a> Migrieren von Benutzern zu Benutzern eigenständiger Datenbanken  
+##  <a name="migrating-users-to-contained-database-users"></a><a name="users"></a> Migrieren von Benutzern zu Benutzern eigenständiger Datenbanken  
  Im folgenden Beispiel werden alle Benutzer, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldungen basieren, in Benutzer enthaltener Datenbanken mit Kennwörtern migriert. Nicht berücksichtigt werden Anmeldungen, die nicht aktiviert sind. Das Beispiel muss in der enthaltenen Datenbank ausgeführt werden.  
   
 ```sql  

@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287474"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "79287474"
 -   Hashjoins   
 -   Adaptive Joins (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
-## <a name="fundamentals"></a> Grundlegende Informationen zu Joins
+## <a name="join-fundamentals"></a><a name="fundamentals"></a> Grundlegende Informationen zu Joins
 Mithilfe von Joins können Sie Daten aus zwei oder mehr Tabellen basierend auf logischen Beziehungen zwischen den Tabellen abrufen. Joins zeigen an, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten aus einer Tabelle zum Auswählen der Zeilen in einer anderen Tabelle verwenden soll.    
 
 Eine Joinbedingung definiert die Beziehung zweier Tabellen in einer Abfrage auf folgende Art:    
@@ -108,7 +108,7 @@ Die meisten Abfragen, die einen Join verwenden, können in eine Unterabfrage (ei
 > `SELECT * FROM t1 JOIN t2 ON SUBSTRING(t1.textcolumn, 1, 20) = SUBSTRING(t2.textcolumn, 1, 20)` führt z.B. einen inneren Join zwischen zwei Tabellen auf den ersten 20 Zeichen jeder Textspalte in den Tabellen t1 und t2 aus.   
 > Außerdem können ntext- oder text-Spalten aus zwei Tabellen verglichen werden, indem die Längen der Spalten mithilfe einer `WHERE`-Klausel wie im folgenden Beispiel verglichen werden: `WHERE DATALENGTH(p1.pr_info) = DATALENGTH(p2.pr_info)`.
 
-## <a name="nested_loops"></a> Grundlegendes zu Nested Loops-Joins
+## <a name="understanding-nested-loops-joins"></a><a name="nested_loops"></a> Grundlegendes zu Nested Loops-Joins
 Wenn eine Joineingabe klein (weniger als 10 Zeilen) und die andere Joineingabe relativ umfangreich ist und indizierte Joinspalten aufweist, ist ein indizierter Nested Loops-Join der schnellste Joinvorgang, da sie mit dem geringsten E/A-Aufkommen und den wenigsten Vergleichen auskommen. 
 
 Der Join geschachtelter Schleifen, auch *geschachtelte Iteration* genannt, verwendet eine Joineingabe als äußere Eingabetabelle (im grafischen Ausführungsplan als obere Eingabe dargestellt) und eine zweite Joineingabe als innere (untere) Eingabetabelle. Die äußere Schleife verarbeitet die äußere Eingabetabelle zeilenweise. Die innere Schleife wird für jede äußere Zeile ausgeführt und sucht übereinstimmende Zeilen in der inneren Eingabetabelle.   
@@ -119,7 +119,7 @@ Ein Nested Loops-Join ist besonders wirksam, wenn die äußere Eingabe klein und
 
 Wenn das „OPTIMIZED“-Attribut eines Operators für Joins geschachtelter Schleifen auf **True**festgelegt ist, bedeutet dies, dass ein optimierter Join geschachtelter Schleifen (oder eine Sortierung im Batchmodus) verwendet wird, um E/A-Vorgänge zu minimieren, wenn die innere Tabelle groß ist, unabhängig davon, ob sie parallelisiert wird oder nicht. Das Vorhandensein dieser Optimierung in einem bestimmten Plan ist beim Analysieren eines Ausführungsplans möglicherweise nicht offensichtlich, da die Sortierung selbst ein verborgener Vorgang ist. Wenn jedoch in der Plan-XML nach dem Attribut „OPTIMIZED“ gesucht wird, deutet dies darauf hin, dass der Join geschachtelter Schleifen möglicherweise versucht, die Eingabezeilen neu anzuordnen und die E/A-Leistung zu verbessern.
 
-## <a name="merge"></a> Grundlegendes zu Zusammenführungsjoins
+## <a name="understanding-merge-joins"></a><a name="merge"></a> Grundlegendes zu Zusammenführungsjoins
 Sind beide Joineingaben nicht klein, aber nach ihrer Joinspalte sortiert (was beispielsweise der Fall ist, wenn sie beim Scannen sortierter Indizes gewonnen wurden), so ist ein Zusammenführungsjoin der schnellste Joinvorgang. Sind beide Joineingaben umfangreich und etwa gleich groß, so bietet ein Zusammenführungsjoin mit vorherigem Sortiervorgang und ein Hashjoin vergleichbares Leistungsverhalten. Hashjoinvorgänge sind jedoch häufig erheblich schneller, wenn sich beide Eingaben im Umfang deutlich unterscheiden.       
 
 Der Zusammenführungsjoin setzt voraus, dass beide Eingaben nach den Zusammenführungsspalten sortiert sind; diese werden von den Gleichheitsoperatoren des Joinprädikats (in der ON-Klausel) definiert. Der Abfrageoptimierer scannt in der Regel einen Index, falls ein Index für die geeigneten Spalten vorhanden ist, oder platziert einen Sort-Operator unter den Zusammenführungsjoin. In seltenen Fällen treten mehrere Gleichheitsklauseln auf, jedoch werden die Zusammenführungsspalten nur von einigen der verfügbaren Gleichheitsklauseln genommen.    
@@ -132,7 +132,7 @@ Ist ein Residualprädikat vorhanden, so werten alle Zeilen, die dem Zusammenfüh
 
 Der Zusammenführungsjoin ist sehr schnell, kann aber eine teure Wahl darstellen, wenn Sortieroperationen erforderlich sind. Wenn jedoch die Datenmenge umfangreich ist und die gewünschten Daten vorsortiert aus vorhandenen B-Baum-Indizes abgerufen werden können, ist der Zusammenführungsjoin häufig der schnellste Joinalgorithmus.    
 
-## <a name="hash"></a> Grundlegendes zu Hashjoins
+## <a name="understanding-hash-joins"></a><a name="hash"></a> Grundlegendes zu Hashjoins
 Hashjoins können umfangreiche, unsortierte, nicht indizierte Eingaben effizient verarbeiten. Sie sind für Zwischenergebnisse in komplexen Abfragen aus folgenden Gründen nützlich:
 -   Zwischenergebnisse sind nicht indiziert (es sei denn, sie werden explizit auf einem Datenträger gespeichert und dann indiziert) und häufig nicht für den nächste Vorgang im Abfrageplan passend sortiert.
 -   Abfrageoptimierer schätzen nur die Größe von Zwischenergebnissen ab. Weil Schätzungen in komplexen Abfragen sehr ungenau sein können, müssen Algorithmen zum Verarbeiten von Zwischenergebnissen nicht nur effizient sein, sondern auch kontrolliert beendet werden können, wenn ein Zwischenergebnis viel umfangreicher als erwartet ausfällt.   
@@ -145,13 +145,13 @@ Hashjoins werden für viele ergebnismengenorientierte Operationen verwendet: INN
 
 In den folgenden Abschnitten werden verschiedene Typen von Hashjoins beschrieben: arbeitsspeicherinterne Hashjoins, schrittweise Hashjoins und rekursive Hashjoins.    
 
-### <a name="inmem_hash"></a> Arbeitsspeicherinterne Hashjoins
+### <a name="in-memory-hash-join"></a><a name="inmem_hash"></a> Arbeitsspeicherinterne Hashjoins
 Der Hashjoin scannt oder berechnet zuerst die gesamte Erstellungseingabe und erstellt dann eine Hashtabelle im Arbeitsspeicher. Jede Zeile wird in ein Hashbucket eingefügt, abhängig von dem für den Hashschlüssel berechneten Hashwert. Wenn die gesamte Erstellungseingabe kleiner als der verfügbare Arbeitsspeicher ist, können alle Zeilen in die Hashtabelle eingefügt werden. Auf diese Erstellungsphase folgt die Untersuchungsphase. Die gesamte Untersuchungseingabe wird zeilenweise gescannt oder berechnet, und für jede Untersuchungszeile wird der Wert des Hashschlüssels berechnet, das entsprechende Hashbucket wird gescannt, und die Übereinstimmungen werden erzeugt.    
 
-### <a name="grace_hash"></a> GRACE-Hashjoins
+### <a name="grace-hash-join"></a><a name="grace_hash"></a> GRACE-Hashjoins
 Wenn die Erstellungseingabe nicht vollständig in den Arbeitsspeicher passt, wird der Hashjoin in mehreren Schritten durchgeführt. Dies wird als schrittweiser Hashjoin bezeichnet. Jeder Schritt besteht aus einer Erstellungsphase und einer Untersuchungsphase. Zuerst wird die gesamte Erstellungseingabe und Untersuchungseingabe verarbeitet und (durch Anwenden einer Hashfunktion auf die Hashschlüssel) in mehrere Dateien aufgeteilt. Durch Anwenden der Hashfunktion auf die Hashschlüssel wird sichergestellt, dass die zwei zu verknüpfenden Datensätze sich stets in demselben Dateipaar befinden. So wird die Aufgabe, zwei umfangreiche Eingaben zu verknüpfen, auf mehrere kleinere gleichartige Teilaufgaben reduziert. Der Hashjoin wird dann auf jedes Paar partitionierter Dateien angewendet.    
 
-### <a name="recursive_hash"></a> Rekursive Hashjoins
+### <a name="recursive-hash-join"></a><a name="recursive_hash"></a> Rekursive Hashjoins
 Wenn die Erstellungseingabe so umfangreich ist, dass Eingaben für einen standardmäßigen externen Mergeprozess mehrere Mergeebenen erfordern würden, sind mehrere Partitionierungsschritte und mehrere Partitionierungsebenen erforderlich. Sind nur einige Partitionen umfangreich, so sind zusätzliche Partitionierungsschritte nur für diese Partitionen erforderlich. Um alle Partitionierungsschritte möglichst schnell zu machen, werden umfangreiche, asynchrone E/A-Operationen verwendet, sodass bereits ein Thread mehrere Datenträger auslastet.    
 
 > [!NOTE]
@@ -164,7 +164,7 @@ Wenn der Abfrageoptimierer falsch einschätzt, welche Eingabe kleiner ist und da
 > [!NOTE]
 > Der Rollentausch tritt unabhängig von Abfragehinweisen oder von der Struktur auf. Der Rollentausch wird nicht im Abfrageplan angezeigt. Wenn ein solcher Vorgang auftritt, erfolgt er transparent für den Benutzer.
 
-### <a name="hash_bailout"></a> Hashabbruch
+### <a name="hash-bailout"></a><a name="hash_bailout"></a> Hashabbruch
 Der Begriff „Hashabbruch“ wird manchmal zur Beschreibung von GRACE- oder rekursiven Hashjoins verwendet.    
 
 > [!NOTE]
@@ -172,7 +172,7 @@ Der Begriff „Hashabbruch“ wird manchmal zur Beschreibung von GRACE- oder rek
 
 Weitere Informationen zu Hashabbrüchen finden Sie unter [Hash Warning-Ereignisklasse](../../relational-databases/event-classes/hash-warning-event-class.md).    
 
-## <a name="adaptive"></a> Grundlegendes zu adaptiven Joins
+## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> Grundlegendes zu adaptiven Joins
 Mit dem [Batchmodus](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) für adaptive Joins können Sie wählen, ob eine Methode für [Hashjoins](#hash) oder [Joins geschachtelter Schleifen](#nested_loops) zurückgestellt wird. Die Methode wird dann erst **nach** der Überprüfung der ersten Eingabe angewendet. Der Operator für adaptive Joins definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. Daher kann ein Abfrageplan während der Ausführung dynamisch zu einer passenderen Joinstrategie wechseln, ohne dass er erneut kompiliert werden muss. 
 
 > [!TIP]
@@ -291,7 +291,7 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 > [!NOTE]
 > Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfiguration oder einer Ablaufverfolgungsflageinstellung. 
 
-## <a name="nulls_joins"></a> NULL-Werte und Joins
+## <a name="null-values-and-joins"></a><a name="nulls_joins"></a> NULL-Werte und Joins
 Wenn die Spalten der zu verknüpfenden Tabellen NULL-Werte enthalten, werden diese Werte nicht als übereinstimmend angesehen. Das Vorhandensein von NULL-Werten in einer Spalte aus einer der verknüpften Tabellen kann nur mithilfe eines äußeren Joins zurückgegeben werden (wenn die `WHERE`-Klausel keine NULL-Werte ausschließt).     
 
 Es folgen zwei Tabellen, bei denen NULL in der Spalte enthalten ist, die Bestandteil des Joins ist.     
