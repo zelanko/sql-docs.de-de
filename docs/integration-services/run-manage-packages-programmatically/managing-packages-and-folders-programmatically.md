@@ -15,10 +15,10 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a14ae64026443324f7a5dc3f47dcea15f9907f5f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295724"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Programmgesteuerte Verwaltung von Paketen und Ordnern
@@ -28,7 +28,7 @@ ms.locfileid: "71295724"
 
 <a name="top"></a> Beim programmgesteuerten Arbeiten mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen möchten Sie vielleicht feststellen, ob ein einzelnes Paket oder ein einzelner Ordner vorhanden ist, oder Sie möchten die Ordner mit gespeicherten Paketen verwalten. Die <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse des <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace stellt eine Reihe von Methoden bereit, die diese Anforderungen erfüllen.    
     
-##  <a name="exists"></a> Bestimmen, ob ein Paket oder ein Ordner vorhanden ist    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Bestimmen, ob ein Paket oder ein Ordner vorhanden ist    
  Um programmgesteuert zu ermitteln, ob ein gespeichertes Paket vorhanden ist, rufen Sie eine der folgenden Methoden auf, bevor Sie versuchen, das Paket zu laden und auszuführen:    
     
 |Speicherort|Aufzurufende Methode|    
@@ -45,10 +45,10 @@ ms.locfileid: "71295724"
     
  [Nach oben](#top)    
     
-##  <a name="managing"></a> Verwalten von Paketen und Ordnern    
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a> Verwalten von Paketen und Ordnern    
  Die <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse des <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace stellt zusätzliche Methoden zum Verwalten von Paketen und den Ordnern, in denen diese gespeichert sind, bereit.    
     
-###  <a name="managing_rempkg"></a> Entfernen eines Pakets    
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a> Entfernen eines Pakets    
  Rufen Sie zum programmgesteuerten Entfernen eines gespeicherten Pakets eine der folgenden Methoden auf:    
     
 |Speicherort|Aufzurufende Methode|    
@@ -58,7 +58,7 @@ ms.locfileid: "71295724"
     
  [Nach oben](#top)    
     
-###  <a name="managing_create"></a> Erstellen eines Ordners    
+###  <a name="creating-a-folder"></a><a name="managing_create"></a> Erstellen eines Ordners    
  Rufen Sie zum programmgesteuerten Erstellen eines Speicherordners eine der folgenden Methoden auf:    
     
 |Speicherort|Aufzurufende Methode|    
@@ -68,7 +68,7 @@ ms.locfileid: "71295724"
     
  [Nach oben](#top)    
     
-###  <a name="managing_remfldr"></a> Entfernen eines Ordners    
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> Entfernen eines Ordners    
  Rufen Sie zum programmgesteuerten Entfernen eines Speicherordners eine der folgenden Methoden auf:    
     
 |Speicherort|Aufzurufende Methode|    
@@ -78,7 +78,7 @@ ms.locfileid: "71295724"
     
  [Nach oben](#top)    
     
-###  <a name="managing_rename"></a> Umbenennen eines Ordners    
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> Umbenennen eines Ordners    
  Rufen Sie zum programmgesteuerten Umbenennen eines Speicherordners eine der folgenden Methoden auf:    
     
 |Speicherort|Aufzurufende Methode|    

@@ -9,10 +9,10 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fc38e22d7265384e8f16df56ffcab63018ecd4e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080529"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Datentypen in Ausdrücken (Berichts-Generator und SSRS)
@@ -28,12 +28,12 @@ ms.locfileid: "77080529"
   
 |RDL-Typ|CLR-Typen|  
 |--------------|---------------|  
-|String|Standardwert: String<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Standardwert: Boolean|  
-|Integer|Standardwert: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|Datetime|Standardwert: Datetime<br /><br /> DateTimeOffset|  
-|Float|Standardwert: Double<br /><br /> Single, Decimal|  
-|Binary|Standardwert: Byte[]|  
+|String|Standard: String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Standard: Boolesch|  
+|Integer|Standard: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|Datetime|Standard: DateTime<br /><br /> DateTimeOffset|  
+|Float|Standard: Double<br /><br /> Single, Decimal|  
+|Binary|Standard: Byte[]|  
 |Variant|Beliebiger Wert von oben außer Byte []|  
 |VariantArray|Array von Variant|  
 |Serialisierbar|Variant oder Typen, die mit Serializable markiert sind oder ISerializable implementieren.|  
@@ -66,7 +66,7 @@ ms.locfileid: "77080529"
 -   Überprüfen Sie, ob die verwendete Datenverarbeitungserweiterung Metadaten zum Abrufen von vorformatierten Daten enthält. So enthält beispielsweise eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-MDX-Abfrage die erweiterte Eigenschaft FORMATTED_VALUE für Cube-Werte, die bereits während der Verarbeitung des Cubes formatiert wurden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Parameterdatentypen  
- Berichtsparameter müssen einer von fünf Datentypen sein: Boolean, DateTime, Integer, Float oder Text (auch als String bezeichnet). Wenn eine Datasetabfrage Abfrageparameter enthält, werden automatisch Berichtsparameter erstellt und mit den Abfrageparametern verknüpft. Der Standarddatentyp für einen Berichtsparameter lautet String. Wenn Sie den Standarddatentyp eines Berichtsparameters ändern möchten, wählen Sie im Dialogfeld **Berichtsparametereigenschaften** auf der Seite **Allgemein** in der Dropdownliste **Datentyp** den gewünschten Wert aus.  
+ Berichtsparameter müssen einen der folgenden Datentypen aufweisen: Boolesch (Boolean), Datum/Zeit (DateTime), Ganzzahl (Integer), Gleitkomma (Float) oder Text (String). Wenn eine Datasetabfrage Abfrageparameter enthält, werden automatisch Berichtsparameter erstellt und mit den Abfrageparametern verknüpft. Der Standarddatentyp für einen Berichtsparameter lautet String. Wenn Sie den Standarddatentyp eines Berichtsparameters ändern möchten, wählen Sie im Dialogfeld **Berichtsparametereigenschaften** auf der Seite **Allgemein** in der Dropdownliste **Datentyp** den gewünschten Wert aus.  
   
 > [!NOTE]  
 >  Berichtsparameter mit einem DateTime-Datentyp unterstützen keine Millisekunden. Sie können zwar einen Parameter erstellen, der auf Werten mit Millisekunden basiert, in der Dropdownliste mit den verfügbaren Werten kann jedoch kein Wert ausgewählt werden, der Datums- oder Zeitwerte mit Millisekunden enthält.  

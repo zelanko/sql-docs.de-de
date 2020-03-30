@@ -13,10 +13,10 @@ ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9b1715b517f6933a9f904b17ff268fdf7162464d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294898"
 ---
 # <a name="project-versions-dialog-box"></a>Projektversionen (Dialogfeld)
@@ -34,7 +34,7 @@ ms.locfileid: "71294898"
   
 -   [Wiederherstellen einer Projektversion](#restore)  
   
-##  <a name="open_dialog"></a> Öffnen des Dialogfelds "Projektversionen"  
+##  <a name="open-the-project-versions-dialog-box"></a><a name="open_dialog"></a> Öffnen des Dialogfelds "Projektversionen"  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server her.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71294898"
   
  Im Dialogfeld **Projektversionen** wird in der Tabelle **Versionen** die Liste der Versionen des Projekts angezeigt, die auf dem Server bereitgestellt wurden, und zwar mit Bereitstellungsdatum und -zeit der Version, Wiederherstellungsdatum und -zeit der Version (wenn eine Wiederherstellung stattgefunden hat), der Versionsbeschreibung und einem Versionsbezeichner. Die derzeit aktive Version wird durch ein Häkchen in der **aktuellen** Spalte der Tabelle angegeben.  
   
-##  <a name="restore"></a> Wiederherstellen einer Projektversion  
+##  <a name="restore-a-project-version"></a><a name="restore"></a> Wiederherstellen einer Projektversion  
  Um eine frühere Version eines Projekts wiederherzustellen, wählen Sie die Version in der Tabelle **Versionen** aus, und klicken Sie dann auf **Ausgewählte Version wiederherstellen**. Das Projekt wird in der ausgewählten Version wiederhergestellt, und diese Version wird mit einem Häkchen in der **aktuellen** Spalte der Tabelle **Versionen** angegeben.  
   
   

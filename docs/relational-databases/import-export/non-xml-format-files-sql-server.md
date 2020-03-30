@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3581d9247979702a7c1e9af409b43121c4158334
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111892"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Nicht-XML-Formatdateien (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "68111892"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vorteile von Nicht-XML-Formatdateien  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> Vorteile von Nicht-XML-Formatdateien  
   
 -   Sie können eine Nicht-XML-Formatdatei automatisch erstellen, indem Sie die **format** -Option in einem **bcp** -Befehl angeben.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68111892"
 > [!NOTE]  
 >  XML-Formatdateien bieten verschiedene Vorteile gegenüber Nicht-XML-Formatdateien. Weitere Informationen finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
-##  <a name="Structure"></a> Struktur von Nicht-XML-Formatdateien  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> Struktur von Nicht-XML-Formatdateien  
  Bei einer Nicht-XML-Formatdatei handelt es sich um eine Textdatei mit einer speziellen Struktur. Die Nicht-XML-Formatdatei enthält Informationen zu Dateispeichertyp, Präfixlänge, Feldlänge und Feldabschlusszeichen jeder Tabellenspalte.  
   
  In der folgenden Abbildung werden die Felder der Formatdatei in einem Beispiel einer Nicht-XML-Formatdatei gezeigt.  
@@ -79,7 +79,7 @@ ms.locfileid: "68111892"
 > [!NOTE]  
 >  Sie können eine Formatdatei so ändern, dass Sie einen Massenimport aus einer Datendatei ausführen können, in der die Anzahl oder Reihenfolge der Felder von der Anzahl oder Reihenfolge der Tabellenspalten abweicht. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Verwandte Aufgaben](#RelatedTasks) .  
   
-##  <a name="Examples"></a> Beispiel für eine Nicht-XML-Formatdatei  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> Beispiel für eine Nicht-XML-Formatdatei  
  Das folgende Beispiel zeigt eine zuvor erstellte Nicht-XML-Formatdatei (`myDepartmentIdentical-f-c.fmt`). Diese Datei beschreibt ein Zeichendatenfeld für jede Spalte in der `HumanResources.Department` -Tabelle der `AdventureWorks2012` -Beispieldatenbank.  
   
  Die generierte Formatdatei `myDepartmentIdentical-f-c.fmt`enthält die folgenden Informationen:  
@@ -96,7 +96,7 @@ ms.locfileid: "68111892"
 > [!NOTE]  
 >  Eine Abbildung der Felder der Formatdatei in Bezug auf diese Nicht-XML-Formatdatei finden Sie unter [Struktur von Nicht-XML-Formatdateien](#Structure)weiter oben in diesem Thema.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   

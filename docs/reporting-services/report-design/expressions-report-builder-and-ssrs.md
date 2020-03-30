@@ -9,10 +9,10 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cff1f3e79c383dbcbfe365ab36d9fa6912d6e28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080360"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Ausdrücke (Berichts-Generator und SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "77080360"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Types"></a> Grundlegendes zu einfachen und komplexen Ausdrücken  
+##  <a name="understanding-simple-and-complex-expressions"></a><a name="Types"></a> Grundlegendes zu einfachen und komplexen Ausdrücken  
  Ausdrücke beginnen mit einem Gleichheitszeichen (=) und werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] geschrieben. Ausdrücke können eine Kombination aus Konstanten, Operatoren und Verweisen auf integrierte Werte (Felder, Auflistungen und Funktionen) und auf externen oder benutzerdefinierten Code enthalten.  
   
  Mithilfe von Ausdrücken können die Werte zahlreicher Berichtselementeigenschaften angegeben werden. Die häufigsten Eigenschaften sind Werte für Textfelder und Platzhaltertext. Wenn ein Textfeld nur einen Ausdruck enthält, entspricht der Ausdruck normalerweise dem Wert der Textfeldeigenschaft. Wenn ein Textfeld mehrere Ausdrücke enthält, entspricht jeder Ausdruck dem Wert eines Platzhaltertexts im Textfeld.  
@@ -56,7 +56,7 @@ ms.locfileid: "77080360"
   
  Weitere Informationen finden Sie unter [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
-## <a name="DisplayText"></a> Grundlegendes zu Präfixsymbolen in einfachen Ausdrücken  
+## <a name="understanding-prefix-symbols-in-simple-expressions"></a><a name="DisplayText"></a> Grundlegendes zu Präfixsymbolen in einfachen Ausdrücken  
 
 Einfache Ausdrücke verwenden Symbole, um anzugeben, ob ein Verweis für ein Feld, einen Parameter, eine integrierte Auflistung oder die ReportItems-Auflistung gilt. In der folgenden Tabelle sind Beispiele für Anzeige- und Ausdruckstext aufgeführt:  
   
@@ -67,7 +67,7 @@ Einfache Ausdrücke verwenden Symbole, um anzugeben, ob ein Verweis für ein Fel
 |Integrierte Felder|`[&ReportName]`|`=Globals!ReportName.Value`|  
 |Für Anzeigetext verwendete Literalzeichen|`\[Sales\]`|`[Sales]`|  
   
-##  <a name="References"></a> Schreiben komplexer Ausdrücke  
+##  <a name="writing-complex-expressions"></a><a name="References"></a> Schreiben komplexer Ausdrücke  
  Ausdrücke können Verweise auf Funktionen, Operatoren, Konstanten, Felder, Parameter, Elemente aus integrierten Auflistungen sowie auf eingebetteten benutzerdefinierten Code oder benutzerdefinierte Assemblys enthalten.  
   
 > [!NOTE]
@@ -83,7 +83,7 @@ Einfache Ausdrücke verwenden Symbole, um anzugeben, ob ein Verweis für ein Fel
 |[Integrierte Berichts- und Aggregatfunktionen](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)|Beschreibt die integrierten Funktionen, z. B. `Sum` oder `Previous`, auf die Sie von einem Ausdruck aus zugreifen können.|`=Previous(Sum(Fields!Sales.Value))`|  
 |[Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Beschreibt, wie Sie auf die integrierten CLR-Klassen <xref:System.Math> und <xref:System.Convert>, andere CLR-Klassen, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Laufzeitbibliotheksfunktionen oder Methoden aus einer externen Assembly zugreifen können.<br /><br /> Beschreibt, wie Sie auf benutzerdefinierten Code zugreifen können, der in den Bericht eingebettet ist oder der sowohl auf dem Berichtsclient als auch auf dem Berichtsserver als benutzerdefinierte Assembly kompiliert und installiert wird.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
-##  <a name="Valid"></a> Überprüfen von Ausdrücken  
+##  <a name="validating-expressions"></a><a name="Valid"></a> Überprüfen von Ausdrücken  
  Wenn Sie einen Ausdruck für eine bestimmte Berichtselementeigenschaft erstellen, sind die in einem Ausdruck verwendbaren Verweise von den Werten abhängig, die die Berichtselementeigenschaft annehmen kann, sowie vom Bereich, in dem die Eigenschaft ausgewertet wird. Beispiel:  
   
 -   Der [Sum]-Ausdruck berechnet standardmäßig die Summe der Daten, die sich zum Zeitpunkt der Ausdrucksauswertung im Ausdrucksbereich befinden. Bei einer Tabellenzelle hängt der Bereich von Mitgliedschaften in Zeilen- und Spaltengruppen ab. Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)-Ausdruck dar.  
@@ -94,7 +94,7 @@ Einfache Ausdrücke verwenden Symbole, um anzugeben, ob ein Verweis für ein Fel
   
  Weitere Informationen finden Sie unter [Ausdrucksreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)-Ausdruck dar.  
   
-##  <a name="Section"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="Section"></a> In diesem Abschnitt  
  [Hinzufügen eines Ausdrucks &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
   
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
@@ -110,6 +110,6 @@ Einfache Ausdrücke verwenden Symbole, um anzugeben, ob ein Verweis für ein Fel
 -   [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 -   [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
--   [Tutorial: Einführung in Ausdrücke](Tutorial:%20Introducing%20Expressions.md)
+-   [Tutorial: Introducing Expressions (Tutorial: Einführung in Ausdrücke)](Tutorial:%20Introducing%20Expressions.md)
 -   [Berichtsbeispiele (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

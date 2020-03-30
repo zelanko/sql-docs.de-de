@@ -14,10 +14,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294873"
 ---
 # <a name="validate-dialog-box"></a>Dialogfeld 'Überprüfen'
@@ -35,7 +35,7 @@ ms.locfileid: "71294873"
   
 -   [Festlegen der Optionen auf der Seite "Allgemein"](#general)  
   
-##  <a name="open_dialog"></a> Öffnen des Dialogfelds "Überprüfen"  
+##  <a name="open-the-validate-dialog-box"></a><a name="open_dialog"></a> Öffnen des Dialogfelds "Überprüfen"  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server her.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71294873"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Projekt oder Paket, und wählen Sie **Überprüfen**aus.  
   
-##  <a name="general"></a> Festlegen der Optionen auf der Seite "Allgemein"  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Festlegen der Optionen auf der Seite "Allgemein"  
  **Umgebung**  
  Wählen Sie die Umgebung aus, die Sie verwenden möchten, um das Projekt oder Paket zu überprüfen.  
   

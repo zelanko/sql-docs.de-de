@@ -9,10 +9,10 @@ ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8ca2ef5b2c605d2eb1ca73d05e897919869a435f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081230"
 ---
 # <a name="report-builder-functions---lookup-function"></a>Funktionen des Berichts-Generators: Lookup-Funktion
@@ -57,7 +57,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Der Ergebnisausdruckswert wird zurückgegeben.  
   
- Verwenden Sie [LookupSet-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-lookupset-function.md), um mehrere Werte für einen einzelnen Namen oder ein Schlüsselfeld abzurufen, für das eine 1:n-Beziehung vorhanden ist. Verwenden Sie die [Multilookup-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-multilookup-function.md), um **Lookup** für mehrere Werte aufzurufen.  
+ Verwenden Sie [LookupSet-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-lookupset-function.md), um mehrere Werte für einen einzelnen Namen oder ein Schlüsselfeld abzurufen, für das eine 1:n-Beziehung vorhanden ist. Verwenden Sie die **Multilookup-Funktion (Berichts-Generator und SSRS)** , um [Lookup](../../reporting-services/report-design/report-builder-functions-multilookup-function.md) für mehrere Werte aufzurufen.  
   
  Es gelten folgende Einschränkungen:  
   

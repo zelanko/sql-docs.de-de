@@ -15,10 +15,10 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 80bf829afcbc93e397e8ea797f22905b3b55c0cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295771"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerating Available Packages Programmatically
@@ -28,7 +28,7 @@ ms.locfileid: "71295771"
 
   <a name="top"></a> Wenn Sie programmgesteuert mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen arbeiten, möchten Sie vielleicht bestimmen, ob ein einzelnes Paket oder ein einzelner Ordner vorhanden ist, oder die gespeicherten Pakete auflisten, die zum Laden und Ausführen verfügbar sind. Die <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse des <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace stellt eine Reihe von Methoden bereit, die diese Anforderungen erfüllen.    
     
-##  <a name="exists"></a> Bestimmen, ob ein Paket oder ein Ordner vorhanden ist    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Bestimmen, ob ein Paket oder ein Ordner vorhanden ist    
  Um programmgesteuert zu ermitteln, ob ein gespeichertes Paket vorhanden ist, rufen Sie eine der folgenden Methoden auf, bevor Sie versuchen, es zu laden und auszuführen:    
     
 |Speicherort|Aufzurufende Methode|    
@@ -45,7 +45,7 @@ ms.locfileid: "71295771"
     
  [Nach oben](#top)    
     
-##  <a name="listing"></a> Auflisten verfügbarer Pakete    
+##  <a name="enumerating-available-packages"></a><a name="listing"></a> Auflisten verfügbarer Pakete    
  Rufen Sie eine der folgenden Methoden auf, um eine Liste von gespeicherten Paketen programmgesteuert abzurufen:    
     
 |Speicherort|Aufzurufende Methode|    
@@ -55,7 +55,7 @@ ms.locfileid: "71295771"
     
  Die folgenden Beispiele sind Konsolenanwendungen, die die Verwendung dieser Methoden veranschaulichen.    
     
-###  <a name="listing_store"></a> Beispiel (SSIS-Paketspeicher)    
+###  <a name="example-ssis-package-store"></a><a name="listing_store"></a> Beispiel (SSIS-Paketspeicher)    
  Verwenden Sie die <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A>-Methode, um im SSIS-Paketspeicher gespeicherte Pakete aufzulisten. Die Standardspeicherorte, die vom SSIS-Paketspeicher verwaltet werden, sind "Dateisystem" und "MSDB". Sie können zusätzliche logische Ordner innerhalb dieser Speicherorte erstellen.    
     
 ```vb    
@@ -161,7 +161,7 @@ namespace EnumeratePackagesSSIS_CS
     
  [Nach oben](#top)    
     
-###  <a name="listing_sql"></a> Beispiel (SQL Server)    
+###  <a name="example-sql-server"></a><a name="listing_sql"></a> Beispiel (SQL Server)    
  Verwenden Sie die <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A>-Methode, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete aufzulisten, die in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind.    
     
 ```vb    

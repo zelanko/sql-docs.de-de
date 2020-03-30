@@ -22,10 +22,10 @@ ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 53b1495299dd3a71843ceaa1ad3a43464c374210
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080518"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "77080518"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Map"></a> Ändern von Optionen für die Karte  
+##  <a name="change-options-for-the-map"></a><a name="Map"></a> Ändern von Optionen für die Karte  
  Auf einem Kartenberichtselement können Sie Folgendes steuern:  
   
 -   Fügen Sie mehrere Titel hinzu.  
@@ -69,7 +69,7 @@ ms.locfileid: "77080518"
   
  Um diese Optionen zu ändern, klicken Sie mit der rechten Maustaste auf die Karte, klicken Sie auf **Karte**, und ändern Sie die Optionen.  
   
-##  <a name="Viewport"></a> Ändern von Optionen für den Viewport  
+##  <a name="change-options-for-the-viewport"></a><a name="Viewport"></a> Ändern von Optionen für den Viewport  
  Verwenden Sie die Viewportoptionen, um die Sicht der Karte zu ändern, die im Bericht angezeigt wird.  
   
  Die Quelle räumlicher Daten könnte mehr Bereiche bereitstellen, als Sie im Bericht angezeigt werden müssen. Sie können den Mittelpunkt, die Zoomstufe mithilfe des Viewports festlegen, und den Bereich für die Karte zuzuschneiden.  
@@ -88,7 +88,7 @@ ms.locfileid: "77080518"
   
  Um diese Optionen zu ändern, klicken Sie mit der rechten Maustaste auf den Kartenviewport, und verwenden Sie die Seite [Eigenschaften des Kartenviewports (Dialogfeld), Allgemein](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) sowie verknüpfte Seiten.  
   
-##  <a name="Legends"></a> Ändern von Optionen für die Legenden  
+##  <a name="change-options-for-the-legends"></a><a name="Legends"></a> Ändern von Optionen für die Legenden  
  Legenden helfen Benutzern, die Daten auf einer Karte zu interpretieren.  
   
  Standardmäßig fügen alle Regeln, die Sie auf einer Ebene angeben, Elemente zur ersten Legende hinzu. Außerdem zeigen alle Farbregeln Werte in der Farbskala an.  
@@ -99,7 +99,7 @@ ms.locfileid: "77080518"
   
  Weitere Informationen finden Sie unter [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Layer"></a> Ändern von Optionen für die Ebene  
+##  <a name="change-options-for-the-layer"></a><a name="Layer"></a> Ändern von Optionen für die Ebene  
  Um die Ebenen für eine Karte anzuzeigen, klicken Sie zum Auswählen auf die Karte. Das Kartenfenster wird angezeigt. Um Optionen für eine Ebene zu ändern, klicken Sie mit der rechten Maustaste auf die Ebene, und verwenden Sie das Kontextmenü.  
   
  Eine Ebene kann einer von drei Typen auf Grundlage der räumlichen Daten sein, die von der räumlichen Datenquelle zurückgegeben werden: eine Polygonebene, eine Linienebene oder eine Punktebene.  
@@ -116,14 +116,14 @@ ms.locfileid: "77080518"
   
  Weitere Informationen zu Ebenen finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-##  <a name="DataGrouping"></a> Ändern der Datengruppierung für die Ebene  
+##  <a name="change-data-grouping-for-the-layer"></a><a name="DataGrouping"></a> Ändern der Datengruppierung für die Ebene  
  Sie können anpassen, wie räumliche Daten für Ihre eigenen Formen angepasst werden. Zum Festlegen der Gruppeneigenschaften für eine Ebene wählen Sie die Ebene im Kartenbereich aus, und klicken Sie im Bereich „Eigenschaften“ der Ebene auf **Gruppieren**. Klicken Sie dann auf die Auslassungspunkte (...), um die Gruppeneigenschaften zu öffnen. In diesem Dialogfeld können Sie Gruppenausdrücke angeben, Gruppenvariablen erstellen und für die Gruppierung verwendete Daten filtern.  
   
  Der Gruppenausdruck gibt an, wie analytische Daten, die zu räumlichen Daten in einer Beziehung stehen, für jedes Kartenelement in der Ebene aggregiert werden. Standardmäßig ist der Gruppenausdruck der Satz von Übereinstimmungsfeldern, der für die Beziehung zwischen den räumlichen Daten und den analytischen Daten angegeben wurden. Beispielsweise enthalten für eine Blasendiagrammkarte, die Orte und Einwohnerzahlen für ein Land oder einen Bereich anzeigt, die Übereinstimmungsfelder Ortsnamen [City] und Bereichsnamen [Region], da es mehrere Orte mit dem gleichen Namen geben kann. Der entsprechende Gruppenausdruck schließt zwei Felder ein: [City] und [Region].  
   
- Weitere Informationen finden Sie unter [ Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991) (Kartentipps: Importieren von Shape-Dateien in SQL Server und Aggregieren von räumlichen Daten).  
+ Weitere Informationen finden Sie unter [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991)(Kartentipps: Importieren von Shape-Dateien in SQL Server und Anpassen räumlicher Daten).  
   
-##  <a name="MapElements"></a> Ändern von Optionen für die Kartenelemente auf der Ebene  
+##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> Ändern von Optionen für die Kartenelemente auf der Ebene  
  Kartenelemente sind die Punkte, Linien oder Polygone auf einer Ebene, die auf den räumlichen Daten basieren. Für Kartenelemente können die folgenden Optionen festgelegt werden. Diese Optionen gelten für alle Kartenelemente auf der Ebene, egal ob sie eingebettet werden oder nicht:  
   
 -   Bezeichnungen, Sichtbarkeit der Bezeichnung, Bezeichnungsoffset, und Formatierung.  
@@ -138,7 +138,7 @@ ms.locfileid: "77080518"
   
  Um diese Optionen zu ändern, klicken Sie mit der rechten Maustaste auf das Kartenelement, und verwenden Sie das eingebettete Eigenschaftendialogfeld. Verwenden Sie beispielsweise für ein eingebettetes Polygon die Seite Allgemein und entsprechende Seiten des Dialogfelds Eigenschaften für eingebettete Polygone der Karte.  
   
-##  <a name="Precedence"></a> Grundlegendes zur Reihenfolge der Anzeigeoption  
+##  <a name="understanding-display-option-precedence"></a><a name="Precedence"></a> Grundlegendes zur Reihenfolge der Anzeigeoption  
  Wenn Sie die Darstellung eines Punkts, einer Linie oder eines Polygons auf einer Kartenebene steuern möchten, müssen Sie verstehen, wie Anzeigeoptionen festgelegt werden können und welche Optionen Vorrang haben. Die folgenden Anzeigeoptionen sind aufsteigend von der niedrigsten zur höchsten Priorität aufgelistet. Höhere Anzeigeoptionen überschreiben niedrigere Anzeigeoptionen in dieser Liste:  
   
 -   Ebenenoptionen  

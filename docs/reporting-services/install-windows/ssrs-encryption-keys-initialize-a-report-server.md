@@ -15,10 +15,10 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 264159f4c892cc688b15293c0e4283fc46520720
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080828"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS-Verschlüsselungsschlüssel: Initialisieren eines Berichtsservers
@@ -26,7 +26,7 @@ ms.locfileid: "77080828"
   
  Verschlüsselungsschlüssel basieren teilweise auf den Profilinformationen des Berichtsserverdiensts. Wenn Sie die Benutzeridentität ändern, mit der Sie den Berichtsserverdienst ausführen, müssen Sie die Schlüssel entsprechend aktualisieren. Wenn Sie das Reporting Services-Konfigurationstool verwenden, um Ihre Identität zu ändern, wird dieser Schritt automatisch für Sie erledigt.  
   
- Falls die Initialisierung fehlschlägt, sendet der Berichtsserver einen **RSReportServerNotActivated** -Fehler als Antwort auf Benutzer- und Dienstanforderungen zurück. In diesem Fall müssen Sie möglicherweise die Problembehandlung für das System oder die Serverkonfiguration ausführen. Weitere Informationen finden Sie im Artikel [SSRS: Beheben von Problemen und Fehlern bei Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) in TechNet Wiki.  
+ Falls die Initialisierung fehlschlägt, sendet der Berichtsserver einen **RSReportServerNotActivated** -Fehler als Antwort auf Benutzer- und Dienstanforderungen zurück. In diesem Fall müssen Sie möglicherweise die Problembehandlung für das System oder die Serverkonfiguration ausführen. Weitere Informationen finden Sie im Technet-Wiki unter [SSRS: Troubleshoot issues and errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (SSRS: Beheben von Problemen und Fehlern bei Reporting Services).  
   
 ## <a name="overview-of-the-initialization-process"></a>Übersicht über den Initialisierungsprozess  
  Der Initialisierungsprozess erstellt und speichert einen symmetrischen Schlüssel, der zur Verschlüsselung verwendet wird. Der symmetrische Schlüssel wird von den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Kryptografiediensten erstellt und anschließend vom Berichtsserverdienst verwendet, um Daten zu ver- und entschlüsseln. Der symmetrische Schlüssel selbst wird mit einem asymmetrischen Schlüssel verschlüsselt.  
@@ -48,7 +48,7 @@ ms.locfileid: "77080828"
   
  Die ersten Schritte zum Initialisieren eines Berichtsservers zur Bereitstellung für horizontales Skalieren stimmen mit den ersten drei Schritten überein, die die Initialisierung einer Kombination aus einem einzelnen Server und einer Datenbank beschreiben.  
   
- Der Initialisierungsprozess für eine Bereitstellung für horizontales Skalieren unterscheidet sich darin, wie der Berichtsserver den symmetrischen Schlüssel abruft. Wenn der erste Server initialisiert ist, ruft er von Windows den symmetrischen Schlüssel ab. Wenn der zweite Server während der Konfiguration der Bereitstellung für horizontales Skalieren initialisiert wird, ruft er den symmetrischen Schlüssel vom Berichtsserverdienst ab, der bereits initialisiert ist. Die erste Berichtsserverinstanz verwendet den öffentlichen Schlüssel der zweiten Instanz, um eine verschlüsselte Kopie des symmetrischen Schlüssels für die zweite Berichtsserverinstanz zu erstellen. Der symmetrische Schlüssel wird an keinem Punkt dieses Prozesses als Nur-Text offen gelegt  
+ Der Initialisierungsprozess für eine Bereitstellung für das Aufskalieren unterscheidet sich darin, wie der Berichtsserver den symmetrischen Schlüssel abruft. Wenn der erste Server initialisiert ist, ruft er von Windows den symmetrischen Schlüssel ab. Wenn der zweite Server während der Konfiguration der Bereitstellung für horizontales Skalieren initialisiert wird, ruft er den symmetrischen Schlüssel vom Berichtsserverdienst ab, der bereits initialisiert ist. Die erste Berichtsserverinstanz verwendet den öffentlichen Schlüssel der zweiten Instanz, um eine verschlüsselte Kopie des symmetrischen Schlüssels für die zweite Berichtsserverinstanz zu erstellen. Der symmetrische Schlüssel wird an keinem Punkt dieses Prozesses als Nur-Text offen gelegt  
   
 ## <a name="how-to-initialize-a-report-server"></a>Initialisieren eines Berichtsservers  
   

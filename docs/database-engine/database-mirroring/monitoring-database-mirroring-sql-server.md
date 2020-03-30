@@ -14,10 +14,10 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70212287"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Überwachen der Datenbankspiegelung (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "70212287"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="MonitoringStatus"></a> Überwachen des Spiegelungsstatus  
+##  <a name="monitoring-mirroring-status"></a><a name="MonitoringStatus"></a> Überwachen des Spiegelungsstatus  
  Zum Einrichten und Verwalten der Überwachung für eine oder mehrere gespiegelte Datenbanken auf einer Serverinstanz können Sie entweder den Datenbanküberwachungs-Monitor oder die gespeicherten Systemprozeduren von **dbmmonitor** verwenden. Sie können eine gespiegelte Datenbank während einer Spiegelungssitzung überwachen, um zu überprüfen, ob und auf welche Weise ein Datenfluss stattfindet.  
   
  Die Überwachung einer gespiegelten Datenbank ermöglicht Ihnen insbesondere Folgendes:  
@@ -63,7 +63,7 @@ ms.locfileid: "70212287"
   
      Wenn eine neue Statuszeile einen Wert enthält, der einen Schwellenwert überschreitet, wird ein Informationsereignis an das Windows-Ereignisprotokoll gesendet. Ein Systemadministrator kann dann manuell Warnmeldungen basierend auf diesen Ereignissen konfigurieren. Weitere Informationen finden Sie unter [Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
-###  <a name="tools_for_monitoring_dbm_status"></a> Tools zum Überwachen des Datenbank-Spiegelungsstatus  
+###  <a name="tools-for-monitoring-database-mirroring-status"></a><a name="tools_for_monitoring_dbm_status"></a> Tools zum Überwachen des Datenbank-Spiegelungsstatus  
  Der Status der Spiegelung kann entweder mithilfe des Datenbanküberwachungs-Monitors oder der gespeicherten Systemprozedur **sp_dbmmonitorresults** überwacht werden. Mit diesen Tools können sowohl Systemadministratoren, d.h., Mitglieder der festen Serverrolle **sysadmin** , als auch Benutzer, die von einem Systemadministrator der festen Datenbankrolle **dbm_monitor** in der **msdb** -Datenbank hinzugefügt wurden, die Datenbankspiegelung für jede gespiegelte Datenbank auf der lokalen Serverinstanz überwachen. Bei beiden Tools kann ein Systemadministrator den Spiegelungsstatus auch manuell aktualisieren.  
   
 > [!NOTE]  
@@ -138,7 +138,7 @@ ms.locfileid: "70212287"
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>Löschen des Auftrags für den Datenbankspiegelungs-Monitor  
  Der als **Auftrag für den Datenbankspiegelungs-Monitor**bezeichnete Auftrag für die Überwachung der Datenbankspiegelung bleibt so lange bestehen, bis er gelöscht wird. Der Überwachungsauftrag muss vom Systemadministrator verwaltet werden. Der **Auftrag für den Datenbankspiegelungs-Monitor**kann mit **sp_dbmmonitordropmonitoring**gelöscht werden. Weitere Informationen finden Sie unter [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md).  
   
-###  <a name="perf_metrics_of_dbm_monitor"></a> Auf dem Datenbankspiegelungs-Monitor angezeigter Status  
+###  <a name="status-displayed-by-the-database-mirroring-monitor"></a><a name="perf_metrics_of_dbm_monitor"></a> Auf dem Datenbankspiegelungs-Monitor angezeigter Status  
  Auf der Seite **Status** des Datenbankspiegelungs-Monitors werden die Partner beschrieben sowie der Status der Spiegelungssitzung. Der Status umfasst Werte der Leistungsmetrik, z. B. den Zustand des Transaktionsprotokolls und weitere Informationen, mit denen gegenwärtig die Zeit zum Abschließen eines Failovers und die Gefahr des Datenverlusts abgeschätzt werden kann, wenn die Sitzung nicht synchronisiert wird. Zusätzlich enthält die Seite **Status** Angaben zum Status der Spiegelungssitzung sowie allgemeine Sitzungsinformationen.  
   
 > [!NOTE]  
@@ -248,7 +248,7 @@ ms.locfileid: "70212287"
   
     -   Hohe Sicherheit mit automatischem Failover (synchron)  
   
-##  <a name="AdditionalSources"></a> Zusätzliche Informationsquellen zu gespiegelten Datenbanken  
+##  <a name="additional-sources-of-information-about-a-mirrored-database"></a><a name="AdditionalSources"></a> Zusätzliche Informationsquellen zu gespiegelten Datenbanken  
  Zusätzlich zur Verwendung des Datenbankspiegelungs-Monitors und dbmmonitor-basierter gespeicherter Prozeduren zur Überwachung einer gespiegelten Datenbank und zum Einrichten von Warnungen für überwachte Leistungsvariablen bietet [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Katalogsichten, Leistungsindikatoren und Ereignisbenachrichtigungen für die Datenbankspiegelung.  
   
  **In diesem Abschnitt:**  
@@ -259,7 +259,7 @@ ms.locfileid: "70212287"
   
 -   [Ereignisbenachrichtigungen für die Datenbankspiegelung](#DbmEventNotif)  
   
-###  <a name="DbmMetadata"></a> Metadaten für die Datenbankspiegelung  
+###  <a name="database-mirroring-metadata"></a><a name="DbmMetadata"></a> Metadaten für die Datenbankspiegelung  
  Jede Datenbank-Spiegelungssitzung wird in Metadaten beschrieben, die mithilfe der folgenden Katalogsichten oder dynamischen Verwaltungssichten offengelegt werden:  
   
 -   **sys.database_mirroring**  
@@ -280,7 +280,7 @@ ms.locfileid: "70212287"
   
      Weitere Informationen finden Sie unter [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md).  
   
-###  <a name="DbmPerfCounters"></a> Leistungsindikatoren für die Datenbankspiegelung  
+###  <a name="database-mirroring-performance-counters"></a><a name="DbmPerfCounters"></a> Leistungsindikatoren für die Datenbankspiegelung  
  Mit Leistungsindikatoren können Sie die Leistung der Datenbankspiegelung überwachen. Beispielsweise können Sie den Indikator **Transaktionsverzögerung** untersuchen, um festzustellen, ob die Datenbankspiegelung Auswirkungen auf die Leistung des Prinzipalservers hat, oder Sie können die Indikatoren **Wiederholungswarteschlange** und **Protokollsende-Warteschlange** untersuchen, um festzustellen, wie gut die Spiegeldatenbank mit der Prinzipaldatenbank Schritt halten kann. Mit dem Leistungsindikator **Gesendete Protokollbytes/Sekunde** können Sie überwachen, wie viele Protokollbytes pro Sekunde gesendet wurden.  
   
  In den Systemmonitoren auf beiden Partnern sind Leistungsindikatoren im Datenbankspiegelungs-Leistungsobjekt verfügbar (**SQLServer:Datenbankspiegelung**). Weitere Informationen finden Sie unter [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md).  
@@ -289,7 +289,7 @@ ms.locfileid: "70212287"
   
 -   [Starten des Systemmonitors &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
-###  <a name="DbmEventNotif"></a> Ereignisbenachrichtigungen für die Datenbankspiegelung  
+###  <a name="database-mirroring-event-notifications"></a><a name="DbmEventNotif"></a> Ereignisbenachrichtigungen für die Datenbankspiegelung  
  Bei einer Ereignisbenachrichtigung handelt es sich um eine spezielle Art von Datenbankobjekt. Ereignisbenachrichtigungen werden als Antwort auf eine Vielzahl von Transact-SQL DDL-Anweisungen (Data Definition Language) und Ereignissen der SQL-Ablaufverfolgung ausgeführt; sie senden Informationen zu Server- und Datenbankereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst.  
   
  Die folgenden Ereignisse stehen für die Datenbankspiegelung zur Verfügung:  
@@ -302,7 +302,7 @@ ms.locfileid: "70212287"
   
      Sie meldet Überwachungsmeldungen, die mit der Transportsicherheit bei der Datenbankspiegelung verbunden sind. Weitere Informationen finden Sie unter [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

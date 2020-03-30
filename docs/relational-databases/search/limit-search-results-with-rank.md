@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132278"
 ---
 # <a name="limit-search-results-with-rank"></a>Einschränken von Suchergebnissen mit RANK
@@ -36,7 +36,7 @@ ms.locfileid: "68132278"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordnet die Übereinstimmungen nach Rang und gibt nur die angegebene Anzahl Zeilen zurück. Diese Einschränkung kann zu einer deutlichen Leistungssteigerung führen. So wird z. B. eine Abfrage, die normalerweise 100.000 Zeilen aus einer Tabelle mit 1 Million Zeilen zurückgeben würde, bedeutend schneller verarbeitet, wenn nur die obersten 100 Zeilen angefordert werden.  
   
-##  <a name="examples"></a> Beispiele zur Verwendung von RANK zum Einschränken der Suchergebnisse  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> Beispiele zur Verwendung von RANK zum Einschränken der Suchergebnisse  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>Beispiel A: Suchen nach ausschließlich den obersten drei Übereinstimmungen  
  Im folgenden Beispiel werden mit CONTAINSTABLE nur die obersten drei Übereinstimmungen zurückgegeben.  
@@ -91,7 +91,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> Ordnen von Suchabfrageergebnissen nach Rang  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> Ordnen von Suchabfrageergebnissen nach Rang  
  Die Volltextsuche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann eine optionale Bewertung (einen Rangwert) generieren, die die Relevanz der von einer Volltextabfrage zurückgegebenen Daten angibt. Dieser Rangwert wird für jede Zeile berechnet und als Sortierkriterium verwendet, um das Resultset einer bestimmten Abfrage nach Relevanz zu sortieren. Die Rangwerte geben lediglich eine relative Relevanzreihenfolge der Zeilen im Resultset an. Die tatsächlichen Werte sind nicht von Bedeutung und unterscheiden sich i. d. R. bei jeder Ausführung der Abfrage. Der Rangwert hat keinerlei abfrageüberschreitende Bedeutung.  
   
 ### <a name="statistics-for-ranking"></a>Statistiken für die Rangfolge  

@@ -16,17 +16,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091435"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-Formatdateien (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt ein XML-Schema bereit, das die Syntax für das Schreiben von *XML-Formatdateien* definiert, die zum Übertragen von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle per Massenimport verwendet werden. XML-Formatdateien müssen sich an dieses Schema halten, das in XSDL (XML Schema Definition Language) definiert ist. XML-Formatdateien werden nur unterstützt, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tools zusammen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client installiert werden.  
   
- Eine XML-Formatdatei kann mit dem Befehl **bcp**, einer BULK INSERT-Anweisung oder einer INSERT ... SELECT \* FROM OPENROWSET(BULK...)-Anweisung verwendet werden. Mithilfe des **bcp** -Befehls können Sie automatisch eine XML-Formatdatei für eine Tabelle generieren. Weitere Informationen finden Sie unter [bcp Utility](../../tools/bcp-utility.md).  
+ Eine XML-Formatdatei kann mit dem Befehl **bcp** , einer BULK INSERT-Anweisung oder einer INSERT ... SELECT \* FROM OPENROWSET(BULK...)-Anweisung verwendet werden. Mithilfe des **bcp** -Befehls können Sie automatisch eine XML-Formatdatei für eine Tabelle generieren. Weitere Informationen finden Sie unter [bcp Utility](../../tools/bcp-utility.md).  
   
 > [!NOTE]  
 >  Zwei Typen von Formatdateien werden zum Massenexportieren und -importieren unterstützt: *Nicht-XML-Formatdateien* und *XML-Formatdateien*. XML-Formatdateien bieten eine flexible und leistungsfähige Alternative zu Nicht-XML-Formatdateien. Informationen zu Nicht-XML-Formatdateien finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "68091435"
   
 -   [Verwandte Inhalte](#RelatedContent)  
   
-##  <a name="BenefitsOfXmlFFs"></a> Vorteile von XML-Formatdateien  
+##  <a name="benefits-of-xml-format-files"></a><a name="BenefitsOfXmlFFs"></a> Vorteile von XML-Formatdateien  
   
 -   XML-Formatdateien sind selbstbeschreibend, wodurch das Lesen, Erstellen und Erweitern erleichtert wird. Sie können vom Benutzer gelesen werden, sodass dieser nachvollziehen kann, wie Daten bei Massenvorgängen interpretiert werden.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68091435"
     > [!NOTE]  
     >  Beim **bcp** -Befehl und der BULK INSERT-Anweisung ist eine Zieltabelle erforderlich, die mithilfe der Zieltabellenspalten die Typkonvertierung durchführt.  
   
-##  <a name="StructureOfXmlFFs"></a> Struktur von XML-Formatdateien  
+##  <a name="structure-of-xml-format-files"></a><a name="StructureOfXmlFFs"></a> Struktur von XML-Formatdateien  
  XML-Formatdateien definieren, ebenso wie Nicht-XML-Formatdateien, das Format und die Struktur der Datenfelder in einer Datendatei und ordnen diese Datenfelder den Spalten in einer einzigen Zieltabelle zu.  
   
  Eine XML-Formatdatei besteht aus zwei Hauptkomponenten: \<RECORD> und \<ROW>:  
@@ -97,7 +97,7 @@ ms.locfileid: "68091435"
   
      Jedes \<COLUMN>-Element kann jeweils nur einem Feld in der Datendatei zugeordnet werden. Die Reihenfolge der \<COLUMN>-Elemente im \<ROW>-Element definiert, in welcher Reihenfolge diese durch den Massenvorgang zurückgegeben werden. Die XML-Formatdatei weist jedem \<COLUMN>-Element einen lokalen Namen zu, der keine Verbindung zu der Spalte in der Zieltabelle des Massenimportvorgangs aufweist.  
   
-##  <a name="SchemaSyntax"></a> Schemasyntax für XML-Formatdateien  
+##  <a name="schema-syntax-for-xml-format-files"></a><a name="SchemaSyntax"></a> Schemasyntax für XML-Formatdateien  
  Dieser Abschnitt enthält eine Zusammenfassung der Elemente und Attribute des XML-Schemas für XML-Formatdateien. Die Syntax einer Formatdatei ist unabhängig von der Richtung des Vorgangs, die Syntax ist also für Massenexport und Massenimport identisch. Darüber hinaus wird in diesem Abschnitt dargestellt, wie \<ROW>- und \<COLUMN>-Elemente beim Massenimportieren verwendet werden und wie der xsi:type-Wert eines Elements in ein Dataset eingefügt wird.  
   
  Unter [Beispiele für XML-Formatdateien](#SampleXmlFFs)weiter unten in diesem Thema können Sie die Syntax mit tatsächlichen XML-Formatdateien vergleichen.  
@@ -115,7 +115,7 @@ ms.locfileid: "68091435"
   
 -   [Einfügen des xsi:type-Werts in ein Dataset](#PutXsiTypeValueIntoDataSet)  
   
-###  <a name="BasicSyntax"></a> Basissyntax des XML-Schemas  
+###  <a name="basic-syntax-of-the-xml-schema"></a><a name="BasicSyntax"></a> Basissyntax des XML-Schemas  
  Diese Syntaxanweisungen zeigen nur die Elemente (\<BCPFORMAT>, \<RECORD>, \<FIELD>, \<ROW> und \<COLUMN>) und deren grundlegende Attribute an.  
   
  \<BCPFORMAT ...>  
@@ -149,7 +149,7 @@ ms.locfileid: "68091435"
   
 -   [Attribute des \<COLUMN>-Elements](#AttrOfColumnElement) (und [Xsi:type-Werte des \<COLUMN>-Elements](#XsiTypeValuesOfCOLUMN))  
   
-####  <a name="SchemaElements"></a> Schema-Elemente  
+####  <a name="schema-elements"></a><a name="SchemaElements"></a> Schema-Elemente  
  In diesem Abschnitt werden die Funktionen aller Elemente dargestellt, die das XML-Schema für XML-Formatdateien definiert. Die Attribute werden in separaten Abschnitten weiter unten in diesem Thema beschrieben.  
   
  \<BCPFORMAT>  
@@ -176,7 +176,7 @@ ms.locfileid: "68091435"
  \</BCPFORMAT>  
  Ist erforderlich, um die Formatdatei zu beenden.  
   
-####  <a name="AttrOfFieldElement"></a> Attribute des \<FIELD>-Elements  
+####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a> Attribute des \<FIELD>-Elements  
  In diesem Abschnitt werden die Attribute des \<FIELD>-Elements beschrieben, die in der folgenden Schemasyntax zusammengefasst sind:  
   
  <FIELD  
@@ -209,7 +209,7 @@ ms.locfileid: "68091435"
 |COLLATION **="** _collationName_ **"**|COLLATION ist nur für Zeichenfelder zulässig. Eine Liste der SQL-Sortierungsnamen finden Sie unter [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Optional|  
 |TERMINATOR **= "** _terminator_ **"**|Dieses Attribut gibt das Abschlusszeichen eines Datenfelds an. Als Abschlusszeichen kann jedes beliebige Zeichen verwendet werden. Es muss sich jedoch um ein eindeutiges Zeichen handeln, das nicht Teil der Daten ist.<br /><br /> Standardmäßig wird das Tabstoppzeichen (dargestellt als \t) als Abschlusszeichen verwendet. Um eine Absatzmarke darzustellen, verwenden Sie \r\n.|Wird nur mit einem xsi:type von Zeichendaten verwendet, die dieses Attribut erfordern.|  
   
-#####  <a name="XsiTypeValuesOfFIELD"></a> Xsi:type-Werte des \<FIELD>-Elements  
+#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a> Xsi:type-Werte des \<FIELD>-Elements  
  Der xsi:type-Wert ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp für eine Instanz eines Elements identifiziert. Weitere Informationen finden Sie unter "Einfügen des xsi:type-Werts in ein Dataset" weiter unten in diesem Abschnitt.  
   
  Der xsi:type-Wert des \<FIELD>-Elements unterstützt die folgenden Datentypen.  
@@ -227,7 +227,7 @@ ms.locfileid: "68091435"
   
  Weitere Informationen zu [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
-####  <a name="AttrOfColumnElement"></a> Attribute des \<COLUMN>-Elements  
+####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a> Attribute des \<COLUMN>-Elements  
  In diesem Abschnitt werden die Attribute des \<COLUMN>-Elements beschrieben, die in der folgenden Schemasyntax zusammengefasst sind:  
   
  <COLUMN  
@@ -252,17 +252,17 @@ ms.locfileid: "68091435"
   
  Ein Feld wird mithilfe der folgenden Attribute einer Spalte in der Zieltabelle zugeordnet:  
   
-|COLUMN-Attribut|Beschreibung|Optional /<br /><br /> Erforderlich|  
+|COLUMN-Attribut|BESCHREIBUNG|Optional /<br /><br /> Erforderlich|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="** _fieldID_ **"**|Gibt die ID des Felds an, das der Spalte zugeordnet wird.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> wird \<FIELD ID **="** _fieldID_ **"** /> zugeordnet.|Erforderlich|  
 |NAME = "*columnName*"|Gibt den Namen der Spalte im Rowset an, die durch die Formatdatei dargestellt wird. Dieser Spaltenname wird verwendet, um die Spalte im Resultset zu identifizieren; er muss nicht dem in der Zieltabelle verwendeten Spaltennamen entsprechen.|Erforderlich|  
-|xsi **:** type **="** _ColumnType_ **"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp der Instanz des Elements identifiziert. Der Wert von *ColumnType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.<br /><br /> Hinweis: Mögliche Werte für *ColumnType* und die zugehörigen Attribute werden in der \<COLUMN>-Elementtabelle im Abschnitt [Xsi:type-Werte des &lt;COLUMN&gt;-Elements](#XsiTypeValuesOfCOLUMN) aufgelistet.|Optional|  
+|xsi **:** type **="** _ColumnType_ **"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp der Instanz des Elements identifiziert. Der Wert von *ColumnType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.<br /><br /> Hinweis: Mögliche Werte für *ColumnType* sowie die zugehörigen Attribute werden in der \<COLUMN>-Elementtabelle im Abschnitt [Xsi:type-Werte des &lt;COLUMN&gt;-Elements](#XsiTypeValuesOfCOLUMN) aufgelistet.|Optional|  
 |LENGTH **="** _n_ **"**|Definiert die Länge für eine Instanz mit einem Datentyp fester Länge. LENGTH wird nur verwendet, wenn es sich bei xsi:type um einen Zeichenfolgen-Datentyp handelt.<br /><br /> Der Wert von *n* muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Zeichenfolgen-Datentyp ist)|  
 |PRECISION **="** _n_ **"**|Gibt die Anzahl der Stellen einer Zahl an. Beispielsweise hat die Zahl 123,45 eine Genauigkeit von 5.<br /><br /> Der Wert muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
 |SCALE **="** _int_ **"**|Gibt die Anzahl der Stellen rechts vom Dezimaltrennzeichen einer Zahl an. Beispielsweise verfügt die Zahl 123,45 über 2 Dezimalstellen.<br /><br /> Der Wert muss eine ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|Gibt an, ob eine Spalte NULL-Werte verarbeiten kann. Dieses Attribut ist unabhängig von FIELDS. Falls die Spalte jedoch nicht NULLABLE ist und für ein Feld NULL (d. h. kein Wert) angegeben wurde, tritt ein Laufzeitfehler auf.<br /><br /> Das NULLABLE-Attribut wird nur verwendet, wenn Sie eine einfache SELECT FROM OPENROWSET (BULK...)-Anweisung ausführen.|Optional (verfügbar für jeden beliebigen Datentyp)|  
   
-#####  <a name="XsiTypeValuesOfCOLUMN"></a> Xsi:type-Werte des \<COLUMN>-Elements  
+#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a> Xsi:type-Werte des \<COLUMN>-Elements  
  Der xsi:type-Wert ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp für eine Instanz eines Elements identifiziert. Weitere Informationen finden Sie unter "Einfügen des xsi:type-Werts in ein Dataset" weiter unten in diesem Abschnitt.  
   
  Das \<COLUMN>-Element unterstützt native SQL-Datentypen wie folgt:  
@@ -277,11 +277,11 @@ ms.locfileid: "68091435"
 |Zeichenfolge|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**und **SQLNVARCHAR**|Keine.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Verwenden Sie in der Formatdatei einen der folgenden Datentypen für den Massenexport oder -import von SQLXML-Daten: SQLCHAR oder SQLVARYCHAR (die Daten werden in der Clientcodepage oder in der Codepage, die durch die Sortierung impliziert wird, gesendet), SQLNCHAR oder SQLNVARCHAR (die Daten werden als Unicode gesendet) oder SQLBINARY oder SQLVARYBIN (die Daten werden ohne Konvertierung gesendet).  
+>  Verwenden Sie in Ihrer Formatdatei einen der folgenden Datentypen, um einen Massenexport oder -import von SQLXML-Daten auszuführen: SQLCHAR oder SQLVARYCHAR (die Daten werden in der Clientcodepage oder in der Codepage, die durch die Sortierung impliziert wird, gesendet), SQLNCHAR oder SQLNVARCHAR (die Daten werden als Unicode gesendet) oder SQLBINARY oder SQLVARYBIN (die Daten werden ohne Konvertierung gesendet).  
   
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
-###  <a name="HowUsesROW"></a> Verwenden des \<ROW>-Elements beim Massenimportieren  
+###  <a name="how-bulk-import-uses-the-row-element"></a><a name="HowUsesROW"></a> Verwenden des \<ROW>-Elements beim Massenimportieren  
  Das \<ROW>-Element wird in bestimmten Kontexten ignoriert. Ob sich das \<ROW>-Element auf einen Massenimportvorgang auswirkt, hängt davon ab, wie der Vorgang durchgeführt wird:  
   
 -   Befehl **bcp**  
@@ -297,7 +297,7 @@ ms.locfileid: "68091435"
     > [!NOTE]  
     >  Die OPENROWSET BULK-Klausel erfordert eine Formatdatei (beachten Sie, dass eine Konvertierung vom Datentyp des Felds in den Datentyp der Spalte nur mit einer XML-Formatdatei möglich ist).  
   
-###  <a name="HowUsesColumn"></a> Verwenden des \<COLUMN>-Elements beim Massenimportieren  
+###  <a name="how-bulk-import-uses-the-column-element"></a><a name="HowUsesColumn"></a> Verwenden des \<COLUMN>-Elements beim Massenimportieren  
  Um einen Massenimport von Daten in eine Tabelle durchzuführen, ordnen die \<COLUMN>-Elemente in einer Formatdatei den Tabellenspalten ein Datendateifeld zu, indem sie folgende Angaben machen:  
   
 -   Die Position jedes Felds innerhalb einer Zeile in der Datendatei.  
@@ -308,7 +308,7 @@ ms.locfileid: "68091435"
   
  Entsprechend ordnet beim Massenexportieren von Daten aus einer Tabelle jedes \<COLUMN>-Element in der Formatdatei die Spalte aus der Eingabetabellenzeile dem entsprechenden Feld in der Ausgabedatendatei zu.  
   
-###  <a name="PutXsiTypeValueIntoDataSet"></a> Einfügen des xsi:type-Werts in ein Dataset  
+###  <a name="putting-the-xsitype-value-into-a-data-set"></a><a name="PutXsiTypeValueIntoDataSet"></a> Einfügen des xsi:type-Werts in ein Dataset  
  Wird ein XML-Dokument durch die XSD-Sprache (XML Schema Definition) überprüft, wird der xsi:type-Wert nicht in das Dataset eingefügt. Sie können die xsi:type-Informationen jedoch in das Dataset einfügen, indem Sie die XML-Formatdatei in ein XML-Dokument laden (z. B. `myDoc`), wie durch den folgenden Codeausschnitt veranschaulicht:  
   
 ```cs
@@ -322,7 +322,7 @@ for(int i=0;i<ColumnList.Count;i++)
 }  
 ```  
   
-##  <a name="SampleXmlFFs"></a> Beispiele für XML-Formatdateien  
+##  <a name="sample-xml-format-files"></a><a name="SampleXmlFFs"></a> Beispiele für XML-Formatdateien  
  Dieser Abschnitt enthält Informationen zum Verwenden von XML-Formatdateien in verschiedenen Situationen, u. a. ein [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] -Beispiel.  
   
 > [!NOTE]  
@@ -347,10 +347,10 @@ for(int i=0;i<ColumnList.Count;i++)
 > [!NOTE]  
 >  Informationen zum Erstellen einer Formatdatei finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
-###  <a name="OrderCharFieldsSameAsCols"></a> A. Gleiches Anordnen von Zeichendatenfeldern und Tabellenspalten  
+###  <a name="a-ordering-character-data-fields-the-same-as-table-columns"></a><a name="OrderCharFieldsSameAsCols"></a> A. Gleiches Anordnen von Zeichendatenfeldern und Tabellenspalten  
  Das folgende Beispiel zeigt eine XML-Formatdatei, die eine Datendatei beschreibt, in der drei Felder mit Zeichendaten enthalten sind. Die Formatdatei ordnet die Datendatei einer Tabelle zu, die drei Spalten enthält. Die Datenfelder entsprechen den Spalten der Tabelle eins zu eins.  
   
- **Tabelle (Zeile):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **Tabelle (Zeile):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
  **Datendatei (Datensatz):** Age\<tab>Firstname\<tab>Lastname\<return>  
   
@@ -385,10 +385,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  Ein entsprechendes [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Beispiel finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
-###  <a name="OrderFieldsAndColsDifferently"></a> B. Unterschiedliches Anordnen von Datenfeldern und Tabellenspalten  
+###  <a name="b-ordering-data-fields-and-table-columns-differently"></a><a name="OrderFieldsAndColsDifferently"></a> B. Unterschiedliches Anordnen von Datenfeldern und Tabellenspalten  
  Das folgende Beispiel zeigt eine XML-Formatdatei, die eine Datendatei beschreibt, in der drei Felder mit Zeichendaten enthalten sind. Die Formatdatei ordnet die Datendatei einer Tabelle zu, die drei Spalten enthält, die anders angeordnet sind als die Felder der Datendatei.  
   
- **Tabelle (Zeile):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **Tabelle (Zeile):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
  **Datendatei (Datensatz):** Age\<tab>Lastname\<tab>Firstname\<return>  
   
@@ -420,10 +420,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  Ein entsprechendes [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Beispiel finden Sie unter [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
   
-###  <a name="OmitField"></a> C. Auslassen eines Datenfelds  
+###  <a name="c-omitting-a-data-field"></a><a name="OmitField"></a> C. Auslassen eines Datenfelds  
  Das folgende Beispiel zeigt eine XML-Formatdatei, die eine Datendatei beschreibt, in der vier Felder mit Zeichendaten enthalten sind. Die Formatdatei ordnet die Datendatei einer Tabelle zu, die drei Spalten enthält. Das zweite Datenfeld entspricht keiner Tabellenspalte.  
   
- **Tabelle (Zeile):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **Tabelle (Zeile):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
  **Datendatei (Datensatz):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
   
@@ -460,7 +460,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  Ein entsprechendes [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Beispiel finden Sie unter [Auslassen eines Datenfelds mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md).  
   
-###  <a name="MapXSItype"></a> D. Zuordnen von \<FIELD> xsi:type zu \<COLUMN> xsi:type  
+###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> D. Zuordnen von \<FIELD> xsi:type zu \<COLUMN> xsi:type  
  Das folgende Beispiel zeigt verschiedene Typen von Feldern und ihre Zuordnungen zu Spalten.  
   
 ```xml
@@ -497,7 +497,7 @@ xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 </BCPFORMAT>  
 ```  
   
-###  <a name="MapXMLDataToTbl"></a> E. Zuordnen von XML-Daten zu einer Tabelle  
+###  <a name="e-mapping-xml-data-to-a-table"></a><a name="MapXMLDataToTbl"></a> E. Zuordnen von XML-Daten zu einer Tabelle  
  Im folgenden Beispiel wird eine leere zweispaltige Tabelle (`t_xml`) erstellt, in der die erste Spalte dem `int` -Datentyp und die zweite Spalte dem `xml` -Datentyp zugeordnet ist.  
   
 ```sql
@@ -521,7 +521,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </BCPFORMAT>  
 ```  
   
-###  <a name="ImportFixedFields"></a> F. Importieren von Feldern mit fester Länge oder fester Breite  
+###  <a name="f-importing-fixed-length-or-fixed-width-fields"></a><a name="ImportFixedFields"></a> F. Importieren von Feldern mit fester Länge oder fester Breite  
  Im folgenden Beispiel werden Felder mit einer festen Länge bzw. Breite von jeweils `10` und `6` Zeichen beschrieben. Die Formatdatei stellt diese Feldlängen bzw. -breiten als `LENGTH="10"` und `LENGTH="6"`dar. Jede Zeile der Datendatei endet mit einer Kombination von Wagenrücklauf/Zeilenvorschub, {CR}{LF}, was in der Formatdatei als `TERMINATOR="\r\n"`dargestellt wird.  
   
 ```xml
@@ -541,7 +541,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </BCPFORMAT>  
 ```  
   
-###  <a name="AdditionalExamples"></a> Zusätzliche Beispiele  
+###  <a name="additional-examples"></a><a name="AdditionalExamples"></a> Zusätzliche Beispiele  
  Die folgenden Themen enthalten weitere Beispiele sowohl für Nicht-XML-Dateien als auch für XML-Formatdateien:  
   
 -   [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
@@ -550,7 +550,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   
@@ -562,7 +562,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  

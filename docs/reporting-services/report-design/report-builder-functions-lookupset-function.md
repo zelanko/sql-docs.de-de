@@ -9,10 +9,10 @@ ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f30c2747a384a49282be0208e28d6153570299c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081220"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funktionen des Berichts-Generators: LookupSet-Funktion
@@ -57,7 +57,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Der Satz von Ergebnisausdruckswerten wird zurückgegeben.  
   
- Verwenden Sie die [Lookup-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-lookup-function.md), um einen einzelnen Wert aus einem Dataset mit Name-Wert-Paaren für einen angegebenen Namen abzurufen, wenn eine 1:1-Beziehung besteht. Verwenden Sie die [Multilookup-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-multilookup-function.md), um **Lookup** für mehrere Werte aufzurufen.  
+ Verwenden Sie die [Lookup-Funktion (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-builder-functions-lookup-function.md), um einen einzelnen Wert aus einem Dataset mit Name-Wert-Paaren für einen angegebenen Namen abzurufen, wenn eine 1:1-Beziehung besteht. Verwenden Sie die **Multilookup-Funktion (Berichts-Generator und SSRS)** , um [Lookup](../../reporting-services/report-design/report-builder-functions-multilookup-function.md) für mehrere Werte aufzurufen.  
   
  Es gelten folgende Einschränkungen:  
   

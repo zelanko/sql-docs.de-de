@@ -14,10 +14,10 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286384"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus)
@@ -42,11 +42,11 @@ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verweist die Inh
   
 -   Gleichen Sie Berichtsverarbeitungsanforderungen für den Server ab. Planen Sie dazu die Berichtsverarbeitung und geben Sie an, welche bei Bedarf auszuführen bzw. aus dem Cache zu laden sind.  
   
--   Gewähren Sie anhand von vordefinierten Rollen die Berechtigung zum Durchführen von Verwaltungsaufgaben: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind.  
+-   Gewähren Sie anhand von vordefinierten Rollen die Berechtigung zum Ausführen von Verwaltungsaufgaben: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind.  
   
 Tools zum Verwalten von Berichtsserverinhalt umfassen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und das Webportal. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ermöglicht es Ihnen, Standards festzulegen und Funktionen zu aktivieren. Das Webportal wird verwendet, um Benutzern Zugriff auf Berichtsserverelemente und -vorgänge zu gewähren und Berichte und andere Inhaltstypen sowie alle freigegebenen Elemente und Berichtsverteilungsfunktionen anzuzeigen und zu verwenden. Das Webportal ist eine aktualisierte Website, die einen Großteil der Funktionalität des veralteten Berichts-Managers bietet. Weitere Informationen finden Sie unter [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md).  
   
-##  <a name="bkmk_ReportServerItems"></a> Berichtsserverelemente  
+##  <a name="report-server-items"></a><a name="bkmk_ReportServerItems"></a> Berichtsserverelemente  
  Zu Berichtsserverelementen gehören Berichte, freigegebene Datenquellen, freigegebene Datasets, Berichtsteile, Ressourcen (Elemente, die auf einem Berichtsserver gespeichert, jedoch nicht von diesem verarbeitet werden) und Ordner. Elemente können von anderen Elementen abhängen. Beispielsweise kann ein Bericht von den freigegebenen Datenquellen abhängen, auf die er verweist. Wenn Sie ein abhängiges Element verschieben, aktualisiert der Berichtsserver die Verweisinformationen automatisch.  
   
  Sie können Berichtsserverelemente an andere Speicherorte in der Ordnerhierarchie des Berichtsservers verschieben. Beim Verschieben eines Elements werden auch alle zugehörigen Eigenschaften (einschließlich Sicherheitseinstellungen) an den neuen Speicherort verschoben. Wenn Sie einen Ordner verschieben, werden gleichzeitig alle in diesem Ordner enthaltenen Elemente verschoben.  
@@ -60,7 +60,7 @@ Tools zum Verwalten von Berichtsserverinhalt umfassen [!INCLUDE[ssManStudio](../
 
  Nicht alle Elemente, mit denen Sie arbeiten, können verschoben werden. Elemente, die einem Bericht zugeordnet sind, z. B. Abonnements oder ein Berichtsverlauf, können nicht verschoben werden. Diese Elemente werden mit den zugehörigen Berichten verschoben. Auch Elemente wie freigegebene Zeitpläne, die außerhalb der Ordnerhierarchie vorhanden sind, können nicht verschoben werden. Sie können ohne die entsprechende Berechtigung keine Elemente verschieben. Die Berechtigung zum Verschieben eines Elements wird erteilt, wenn folgende Tasks in Ihrer Rollenzuweisung für das entsprechende Element ausgewählt sind: „Berichte verwalten“, „Ordner verwalten“ und „Datenquellen verwalten“.  
   
-##  <a name="bkmk_Folders"></a> Ordner  
+##  <a name="folders"></a><a name="bkmk_Folders"></a> Ordner  
  Eine Ordnerhierarchie wird für die Adressierung von Elementen verwendet, die von einem Berichtsserver gespeichert und verwaltet werden.  Standardmäßig besteht die Ordnerstruktur aus einem Stammknoten (Home) und reservierten Ordnern, die die optionale Funktion "Meine Berichte" unterstützen. Zusätzliche Ordner sind benutzerdefiniert. Berichtsserverordner sind hilfreich, falls Sie dieselbe Ebene des Zugriffs auf mehrere Elemente gewähren möchten. Berechtigungen, die Sie für den Ordner festlegen, können von Elementen im Ordner sowie von zusätzlichen verzweigten Ordnern geerbt werden. Sie können beispielsweise einen Ordnersatz unter dem Ordner "Home" erstellen, Teamberechtigungen für jeden Ordner zuweisen und dann Teammitgliedern ermöglichen, Ordner unter dem Teamordner je nach Bedarf anzupassen.  
   
  Bei Verwendung eines Browsers für die direkte Verbindung mit einem Berichtsserver entspricht der Stammknoten der Ordnerstruktur dem Namen des virtuellen Berichtsserververzeichnisses. Über den Stammknoten können Sie Ordner je nach Bedarf erstellen, ändern und löschen, um den Berichtsserverinhalt zu organisieren. Sie können Inhalt zu einem Ordner hinzufügen, Elemente zwischen Ordnern verschieben, Ordnernamen oder Speicherorte ändern sowie nicht mehr benötigte Ordner löschen.  
@@ -115,7 +115,7 @@ Tools zum Verwalten von Berichtsserverinhalt umfassen [!INCLUDE[ssManStudio](../
   
  Die Sichtbarkeit eines Elements in einem Ordner hängt sowohl von den Rollenzuweisungen (d. h. Berechtigung zum Anzeigen eines Elements) als auch von den Anzeigeoptionen für den jeweiligen Ordner ab. Im Webportal können Sie die Seite Inhalt auf Listenansicht oder Detailansicht festlegen. In einigen Fällen kann ein Bericht oder ein Element in der Listenansicht ausgeblendet sein. Zeigen Sie einen Ordner unbedingt in der Detailansicht an, bevor Sie seinen Inhalt löschen.  
   
-##  <a name="bkmk_Resources"></a> Ressourcen  
+##  <a name="resources"></a><a name="bkmk_Resources"></a> Ressourcen  
  Eine Ressource ist ein verwaltetes Element, das auf einem Berichtsserver gespeichert wird, jedoch nicht vom Berichtsserver verarbeitet wird. In der Regel stellt eine Ressource externen Inhalt für die Benutzerberichterstattung bereit. Beispiele beinhalten ein Bild als JPG-Datei, eine ESRI-Shape-Datei mit räumlichen Daten oder eine HTML-Datei mit einer Beschreibung der in einem Bericht verwendeten Geschäftsregeln. Die JPG-, SHP- oder HTML-Datei wird auf dem Berichtsserver gespeichert, wobei der Berichtsserver die Datei jedoch direkt an den Browser weiterleitet, ohne sie zuerst zu verarbeiten. Weitere Informationen finden Sie unter [Bilder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) und im Abschnitt „Hinzufügen von Daten zu einer Karte“ im [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Hinzufügen und Anzeigen einer Ressource  
@@ -144,7 +144,7 @@ Tools zum Verwalten von Berichtsserverinhalt umfassen [!INCLUDE[ssManStudio](../
   
  Weitere Informationen finden Sie unter [Aktualisieren einer Ressource (Webportal)](../../reporting-services/report-server/update-a-resource-report-manager.md).  
   
-##  <a name="bkmk_MyReports"></a> Meine Berichte  
+##  <a name="my-reports"></a><a name="bkmk_MyReports"></a> Meine Berichte  
  Der Ordner Meine Berichte ist ein persönlicher Arbeitsbereich für jeden Benutzer, der sich bei einem Berichtsserver mit einem gültigen Domänenkonto anmeldet. Dieser spezielle Ordner bietet Speicherplatz für derzeit bearbeitete Berichte, für Berichte, die nicht für die allgemeine Weitergabe gedacht sind, oder für Berichte, die für einen speziellen Zweck geändert wurden. Es ist nicht möglich, die Anzahl oder die Größe der im Ordner Meine Berichte gespeicherten Elemente einzuschränken oder einen Ordner Meine Berichte für Benutzer freizugeben.  
   
  Meine Berichte ordnet den Namen eines virtuellen Ordners, der für jeden Benutzer sichtbar ist (Meine Berichte) einem Masterordner Benutzerordner und einem eindeutigen Unterordner basierend auf dem Benutzernamen zu. Wenn ein Benutzer auf seinen Ordner Meine Berichte zugreift, wird der Benutzer in Wirklichkeit an seinen Unterordner unter Benutzerordner weitergeleitet. Jeder Unterordner enthält Speicherplatz für die Berichte und Elemente, die ein Benutzer zu seinem Ordner "Meine Berichte" hinzufügt. Im Webportal werden „Meine Berichte“ auf der Stammebene nicht angezeigt. Sie müssen dazu in den Ordner „Benutzer“ wechseln.  

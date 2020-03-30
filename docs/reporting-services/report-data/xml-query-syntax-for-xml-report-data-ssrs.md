@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081348"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML-Abfragesyntax für XML-Berichtsdaten (SSRS)
@@ -61,7 +61,7 @@ ms.locfileid: "77081348"
 |XML-Dokument, das Standardwerte verwendet.|*No query*.<br /><br /> Der Elementpfad wird vom XML-Dokument selbst abgeleitet und ist von Namespaces unabhängig.|  
   
 > [!NOTE]  
->  Im ersten Webdienstbeispiel wird der Inhalt des Berichtsservers aufgeführt, der die <xref:ReportService2006.ReportingService2006.ListChildren%2A> -Methode Diese Abfrage können Sie ausführen, indem Sie eine neue Datenquelle erstellen und die Verbindungszeichenfolge auf `https://localhost/reportserver/reportservice2006.asmx` festlegen. Die Methode <xref:ReportService2006.ReportingService2006.ListChildren%2A> akzeptiert zwei Parameter: **Item** und **Recursive**. Legen Sie den Standardwert für **Item** auf **/** und für **Recursive** auf **1**fest.  
+>  Im ersten Webdienstbeispiel wird der Inhalt des Berichtsservers aufgeführt, der die <xref:ReportService2006.ReportingService2006.ListChildren%2A> -Methode Diese Abfrage können Sie ausführen, indem Sie eine neue Datenquelle erstellen und die Verbindungszeichenfolge auf `https://localhost/reportserver/reportservice2006.asmx` festlegen. Die <xref:ReportService2006.ReportingService2006.ListChildren%2A> -Methode akzeptiert zwei Parameter: **Item** und **Recursive**. Legen Sie den Standardwert für **Item** auf **/** und für **Recursive** auf **1**fest.  
   
 ## <a name="specifying-namespaces"></a>Angeben von Namespaces  
  Verwenden Sie das XML- **Query** -Element zum Angeben der in den XML-Daten der Datenquelle verwendeten Namespaces. In der folgenden XML-Abfrage wird der Namespace **sales**verwendet. Die XML- **ElementPath** -Knoten für `sales:LineItems` und `sales:LineItem` verwenden den Namespace **sales**.  

@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485235"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Aktivieren oder Deaktivieren der Remoteverwaltung von R-Paketen für SQL Server
@@ -31,7 +31,7 @@ Das [Aktivieren](#bkmk_enable) dieser Funktion ist ein zweistufiger von einem Da
 
 Das [Deaktivieren](#bkmk_disable) der Paketverwaltungsfunktion erfordert ebenfalls mehrere Schritte. Sie entfernen Pakete und Berechtigungen auf Datenbankebene (einmal pro Datenbank) und entfernen dann die Rollen vom Server (einmal pro Instanz).
 
-## <a name="bkmk_enable"></a> Aktivieren der Paketverwaltung
+## <a name="enable-package-management"></a><a name="bkmk_enable"></a> Aktivieren der Paketverwaltung
 
 1. Öffnen Sie in SQL Server eine Eingabeaufforderung mit erhöhten Rechten, und navigieren Sie zum Ordner mit dem Hilfsprogramm RegisterRExt.exe. Der Standardspeicherort ist `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
@@ -76,7 +76,7 @@ Das [Deaktivieren](#bkmk_disable) der Paketverwaltungsfunktion erfordert ebenfal
 
 Nachdem Sie diese Funktion aktiviert haben, können Sie die RevoScaleR-Funktion verwenden, um auf einem R-Remoteclient Pakete zu installieren oder zu deinstallieren.
 
-## <a name="bkmk_disable"></a> Deaktivieren der Paketverwaltung
+## <a name="disable-package-management"></a><a name="bkmk_disable"></a> Deaktivieren der Paketverwaltung
 
 1. Führen Sie an einer Eingabeaufforderung mit erhöhten Rechten erneut das Hilfsprogramm RegisterRExt aus, und deaktivieren Sie die Paketverwaltung auf Datenbankebene:
 

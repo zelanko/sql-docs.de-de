@@ -9,10 +9,10 @@ ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081320"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funktionen des Berichts-Generators: Referenz zu Aggregatfunktionen
@@ -47,7 +47,7 @@ ms.locfileid: "77081320"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CalculatingAggregates"></a> Integrierte Aggregatfunktionen  
+##  <a name="built-in-aggregate-functions"></a><a name="CalculatingAggregates"></a> Integrierte Aggregatfunktionen  
  Die folgenden integrierten Funktionen berechnen Summenwerte für einen Satz von numerischen Daten ungleich null im Standardbereich oder im benannten Bereich.  
   
 |**Function**|**Beschreibung**|  
@@ -66,7 +66,7 @@ ms.locfileid: "77081320"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird")Zurück zum Anfang  
   
-##  <a name="Restrictions"></a> Einschränkungen bei integrierten Feldern, Auflistungen und Aggregatfunktionen  
+##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> Einschränkungen bei integrierten Feldern, Auflistungen und Aggregatfunktionen  
  In der folgenden Tabelle werden Einschränkungen für Berichtspositionen zusammengefasst, auf deren Grundlage Sie Ausdrücke hinzufügen können, die Verweise auf globale integrierte Auflistungen enthalten.  
   
 |Position im Bericht|Felder|Parameter|Berichtselemente|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> Dataset|Variables|RenderFormat|  
@@ -103,7 +103,7 @@ ms.locfileid: "77081320"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird")Zurück zum Anfang  
   
-##  <a name="NestedRestrictions"></a> Beschränkungen bei geschachtelten Aggregaten  
+##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> Beschränkungen bei geschachtelten Aggregaten  
  In der folgenden Tabelle finden Sie Einschränkungen, auf deren Grundlage Aggregatfunktionen andere Aggregatfunktionen als geschachtelte Aggregate angeben können.  
   
 |Kontext|RunningValue|RowNumber|First (Erster)<br /><br /> Last (Letzter)|Previous|Sum und andere Vorsortierungsfunktionen|ReportItem-Aggregate|Suchfunktionen|Aggregatfunktion|  
@@ -120,7 +120,7 @@ ms.locfileid: "77081320"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird")Zurück zum Anfang  
   
-##  <a name="CalculatingRunningValues"></a> Berechnen von ausgeführten Werten  
+##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> Berechnen von ausgeführten Werten  
  Die folgenden integrierten Funktionen berechnen ausgeführte Werte für einen Satz von Daten. **RowNumber** gleicht **RunningValue** darin, dass der ausgeführte Wert für eine Anzahl zurückgegeben wird, die für jede Zeile innerhalb des enthaltenen Bereichs inkrementiert wird. Der Bereichsparameter für diese Funktionen muss einen enthaltenden Bereich angeben, der steuert, wann der Zähler neu gestartet wird.  
   
 |**Function**|**Beschreibung**|  
@@ -130,7 +130,7 @@ ms.locfileid: "77081320"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird")Zurück zum Anfang  
   
-##  <a name="RetrievingRowCounts"></a> Abrufen von Zeilenanzahlen  
+##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> Abrufen von Zeilenanzahlen  
  Die folgende integrierte Funktion berechnet die Anzahl von Zeilen im angegebenen Bereich. Verwenden Sie diese Funktion, um alle Zeilen zu zählen, einschließlich Zeilen mit NULL-Werten.  
   
 |**Function**|**Beschreibung**|  
@@ -139,7 +139,7 @@ ms.locfileid: "77081320"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird")Zurück zum Anfang  
   
-##  <a name="LookupFunctions"></a> Nachschlagen von Werten aus einem anderen Dataset  
+##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> Nachschlagen von Werten aus einem anderen Dataset  
  Die folgenden Suchfunktionen rufen Werte aus einem angegebenen Dataset ab.  
   
 |**Function**|**Beschreibung**|  
@@ -150,7 +150,7 @@ ms.locfileid: "77081320"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird")Zurück zum Anfang  
   
-##  <a name="RetrievingPostsortValues"></a> Abrufen von sortierungsabhängigen Werten  
+##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> Abrufen von sortierungsabhängigen Werten  
  Die folgenden integrierten Funktionen geben den ersten, letzten oder vorherigen Wert innerhalb eines gegebenen Bereichs zurück. Diese Funktionen hängen von der Sortierreihenfolge der Datenwerte ab. Verwenden Sie diese Funktionen, um beispielsweise den ersten und den letzten Wert auf einer Seite zu suchen, um Seitenkopfzeilen im Wörterbuchformat zu erstellen. Verwenden Sie **Previous** , um einen Wert in einer Zeile mit dem Wert der vorherigen Zeile innerhalb eines bestimmten Bereichs zu vergleichen, beispielsweise, um jährliche Prozentwerte in einer Tabelle zu finden.  
   
 |**Function**|**Beschreibung**|  
@@ -161,7 +161,7 @@ ms.locfileid: "77081320"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird")Zurück zum Anfang  
   
-##  <a name="RetrievingServerAggregates"></a> Abrufen von Serveraggregaten  
+##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> Abrufen von Serveraggregaten  
  Die folgende integrierte Funktion ruft benutzerdefinierte Aggregate vom Datenanbieter ab. Mithilfe eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquellentyps können Sie beispielsweise Aggregate, die auf dem Datenquellenserver berechnet wurden, für die Verwendung in einer Gruppenkopfzeile abrufen.  
   
 |**Function**|**Beschreibung**|  
@@ -170,7 +170,7 @@ ms.locfileid: "77081320"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird")Zurück zum Anfang  
   
-##  <a name="TestingforScope"></a> Testen für Bereich  
+##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> Testen für Bereich  
  Die folgende integrierte Funktion testet den aktuellen Kontext eines Berichtselements, um festzustellen, ob dieses Mitglied eines bestimmten Bereichs ist.  
   
 |Funktion|BESCHREIBUNG|  
@@ -179,10 +179,10 @@ ms.locfileid: "77081320"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird")Zurück zum Anfang  
   
-##  <a name="RetrievingRecursiveLevel"></a> Abrufen von rekursiven Ebenen  
+##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> Abrufen von rekursiven Ebenen  
  Die folgende integrierte Funktion ruft die aktuelle Ebene ab, wenn eine rekursive Hierarchie verarbeitet wird. Verwenden Sie das Ergebnis dieser Funktion mit der Eigenschaft **Padding** in einem Textfeld, um für eine rekursive Gruppe die Einzugsebene in einer visuellen Hierarchie zu steuern. Weitere Informationen finden Sie unter [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-|Funktion|Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|Gibt die aktuelle Ebene in einer rekursiven Hierarchie zurück.|  
   

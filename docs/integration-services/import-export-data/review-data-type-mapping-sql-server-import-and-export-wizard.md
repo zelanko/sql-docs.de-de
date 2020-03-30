@@ -12,10 +12,10 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296264"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Datentypzuordnung überprüfen (SQL Server-Import/Export-Assistent)
@@ -47,7 +47,7 @@ In diesem Beispiel werden die Ergebnisse der Abfrage, die der Benutzer angegeben
   
  In der folgenden Tabelle werden die Spalten in der Liste **Tabelle** beschrieben.  
   
-|Column|Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |(Quellsymbol)|Gibt die Wahrscheinlichkeit des Erfolgs für die Datentypkonvertierungen an:<br /> - Ein **grünes** Häkchen gibt an, dass der Assistent erwartet, dass alle Datentypkonvertierungen für diese Tabelle erfolgreich sind.<br />- Ein **gelbes** Warnsymbol gibt an, dass Sie die einzelnen Konvertierungen überprüfen sollten, die der Assistent ausführt. Um diese Konvertierungen zu prüfen, wählen Sie die Tabelle aus und prüfen dann die Konvertierungen für einzelne Spalten in der Liste **Datentypzuordnung** .<br />- Ein **rotes** Fehlersymbol gibt an, dass der Assistent einige der Konvertierungen für diese Tabelle nicht zuverlässig ausführen kann.|  
 |**Quelle**|Der Name der Quelltabelle.|  

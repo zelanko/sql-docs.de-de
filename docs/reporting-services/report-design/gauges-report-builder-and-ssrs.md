@@ -157,10 +157,10 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6fb9864d97975b15711ec9cc1264251e8aac8c76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082124"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Messgeräte (Berichts-Generator und SSRS)
@@ -178,12 +178,12 @@ ms.locfileid: "77082124"
   
  ![Diagramm mit Messgerätelementen](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagramm mit Messgerätelementen")  
   
- Weitere Informationen zu Messgeräten als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Weitere Informationen zur Verwendung von Messgeräten als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Sie können Messgeräten in einem Bericht als Berichtsteile getrennt veröffentlichen. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-##  <a name="GaugeTypes"></a> Messgerättypen  
+##  <a name="gauge-types"></a><a name="GaugeTypes"></a> Messgerättypen  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt zwei Messgerättypen bereit: radiale und lineare Messgeräte. Das radiale Messgerät normalerweise dazu verwendet, Daten als Geschwindigkeit auszudrücken. Das lineare Messgerät wird verwendet, um die Daten als Temperatur- oder Skalierungswert auszudrücken.  
   
  Die Hauptunterschiede zwischen den zwei Typen bestehen in der Gesamtform des Messgeräts und den verfügbaren Messgerätzeigern. Radiale Messgeräte sind rund oder kreisförmig und ähneln Tachometern. Die Messgerätzeiger sind oft Nadeln, können jedoch auch Marker oder Balken sein.  
@@ -198,15 +198,15 @@ ms.locfileid: "77082124"
   
  ![rs_Radialmessgerät](../../reporting-services/report-design/media/rs-radialgauge.gif "rs_Radialmessgerät")  
   
- Optionen für radiale Messgeräte: „Radial“, „Radial mit kleinem Messgerät“, „Zwei Skalen“, „90 Grad Nordost“, „90 Grad Nordwest“, „90 Grad Südwest“, „90 Grad Südost“, „180 Grad Nord“, „180 Grad Süd“, „180 Grad West“, „180 Grad Ost“ und „Messgerät“.  
+ Optionen für radiale Messgeräte: "Radial", "Radial mit kleinem Messgerät", "Zwei Skalen", "90 Grad Nordost", "90 Grad Nordwest", "90 Grad Südwest", "90 Grad Südost", "180 Grad Nord", "180 Grad Süd", "180 Grad West", "180 Grad Ost" und "Messgerät".  
   
  **Lineares Messgerät**  
   
  ![rs_Linearmessgerät](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_Linearmessgerät")  
   
- Optionen für lineare Messgeräte: „Horizontal“, „Vertikal“, „Mehrere Balkenzeiger“, „Zwei Skalen“, „Drei Farbbereiche“, „Logarithmisch“, „Thermometer“, „Thermometer Fahrenheit/Celsius“ und „Lineardiagramm“.  
+ Optionen für lineare Messgeräte: "Horizontal", "Vertikal", "Mehrere Balkenzeiger", "Zwei Skalen", "Drei Farbbereiche", "Logarithmisch", "Thermometer", "Thermometer Fahrenheit/Celsius" und "Lineardiagramm".  
   
-##  <a name="AddingData"></a> Hinzufügen von Daten zu einem Messgerät  
+##  <a name="adding-data-to-a-gauge"></a><a name="AddingData"></a> Hinzufügen von Daten zu einem Messgerät  
  Ziehen Sie nach dem Hinzufügen des Messgeräts zur Entwurfsoberfläche ein Datasetfeld in den Messgerätdatenbereich. Das Messgerät aggregiert standardmäßig Feldwerte in einen Wert, der auf dem Messgerät angezeigt wird. Dieser Wert wird mit der Value-Eigenschaft an den Zeiger angefügt. Abhängig vom Datentyp des Felds verwendet das Messgerät das SUM- oder COUNT-Aggregat. Wenn Sie numerische Daten verwenden, die zum Hinzufügen geeignet sind, verwendet das Messgerät die SUM-Funktion. Andernfalls verwendet es das COUNT-Aggregat. Der Wert des Zeigers kann ein anderes Aggregat oder kein Aggregat verwenden.  
   
  Sie können eine Gruppierung für das Messgerät festlegen, sodass einzelne Gruppen oder einzelne Zeilen auf dem Messgerät angezeigt werden. Beim Anwenden von Gruppierung oder Filterung zeigt das Messgerät anhand des Zeigerwerts die letzte Gruppe bzw. Zeile im zurückgegebenen Dataset an.  
@@ -248,7 +248,7 @@ ms.locfileid: "77082124"
   
  Möglicherweise möchten Sie dem Messgerät eine Gruppe hinzufügen, z. B. wenn Sie mehrere Messgeräte in einer Tabelle oder Liste anzeigen und nach Gruppen aggregierte Daten anzeigen möchten. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="PositioningData"></a> Positionieren von Elementen in einem Messgerät  
+##  <a name="positioning-elements-in-a-gauge"></a><a name="PositioningData"></a> Positionieren von Elementen in einem Messgerät  
  Der Messgerätbereich ist der Container der obersten Ebene, der mindestens ein Messgerät enthält. Sie können das Dialogfeld **Messgerätbereichseigenschaften** anzeigen, indem Sie auf eine Stelle direkt neben dem Messgerät klicken. Jedes Messgerät enthält wiederum mehrere Messgerätelemente: eine Messgerätskala, einen Messbereich und einen Messgerätzeiger. Wenn Sie das Messgerät verwenden, müssen Sie sich mit der Messung von Elementen im Messgerätbereich vertraut machen, um die Größe und Position dieser Elemente ändern zu können.  
   
 ### <a name="understanding-size-and-position-measurements"></a>Grundlegendes zu Größen- und Positionsmaßen  
@@ -275,7 +275,7 @@ ms.locfileid: "77082124"
 ### <a name="maintaining-aspect-ratio-on-a-linear-gauge"></a>Beibehalten des Seitenverhältnisses auf einem linearen Messgerät  
  Radiale Messgeräte weisen eine Kreisform auf, daher behält dieser Messgerättyp die Breiten- und Höhenwerte normalerweise bei. Bei einem linearen Messgerät, das eine rechteckige Form aufweist, ist das Verhältnis zwischen Breite und Höhe dagegen meist ungleich 1. Das Seitenverhältnis eines Messgeräts ist das Verhältnis aus der Breite und der Höhe, das bei Größenänderungen des Messgeräts beibehalten werden soll. Wenn dieser Wert beispielsweise auf 2 festgelegt ist, ist die Breite des Messgeräts stets doppelt so groß wie dessen Höhe. Dieses Verhältnis wird bei jeder Größenänderung beibehalten. Zum Festlegen des Seitenverhältnisses können Sie im Dialogfeld **Lineare Messgeräteigenschaften** die AspectRatio-Eigenschaft angeben.  
   
-##  <a name="HowTo"></a> Themen zur Vorgehensweise  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Themen zur Vorgehensweise  
  In diesem Abschnitt werden Vorgehensweisen aufgeführt, mit denen die Arbeit mit Messgeräten in Berichten Schritt für Schritt erläutert werden. Außerdem erfahren Sie, wie Daten zur effektiven Anzeige in Messgeräte aufgenommen werden und wie Messgeräte und ihre Elemente hinzugefügt und konfiguriert werden.  
   
 -   [Hinzufügen eines Messgeräts zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
@@ -286,7 +286,7 @@ ms.locfileid: "77082124"
   
 -   [Festlegen eines Bilds als Zeiger auf einem Messgerät (Berichts-Generator und SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
   
-##  <a name="InThisSection"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> In diesem Abschnitt  
  In den folgenden Themen finden Sie zusätzliche Informationen zum Arbeiten mit Messgeräten.  
   
 |||  

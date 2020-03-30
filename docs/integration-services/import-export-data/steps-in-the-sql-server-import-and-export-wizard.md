@@ -10,10 +10,10 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a6fb370c80af6221812b88d3694a230dc206f7b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296207"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Schritte im SQL Server-Import/Export-Assistenten
@@ -43,7 +43,7 @@ Um einen schnellen Überblick über die verschiedenen Bildschirme in einer typis
 > [!TIP]
 > Drücken Sie auf einer beliebigen Seite oder in einem beliebigen Dialogfeld des Assistenten F1, um die Dokumentation für die aktuelle Seite anzuzeigen.
 
-## <a name="related"></a> Verwandte Tasks und Inhalte  
+## <a name="related-tasks-and-content"></a><a name="related"></a> Verwandte Tasks und Inhalte  
 Im Folgenden werden einige weitere grundlegenden Tasks aufgelistet.
 -   **Sehen Sie sich ein kurzes Beispiel zur Funktionsweise des Assistenten an.**
 

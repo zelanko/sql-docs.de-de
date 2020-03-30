@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285128"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Quellabfrage angeben (SQL Server-Import/Export-Assistent)
@@ -59,7 +59,7 @@ Wenn Ihre Datenquelle Excel ist, gehen Sie zu [Bereitstellen einer Datenabfrage 
  **Durchsuchen**  
  Suchen Sie mithilfe des Dialogfelds **Öffnen** eine Datei, die den Text einer SQL-Abfrage enthält. Durch das Auswählen einer Datei wird der Test aus der Datei in das Textfeld **SQL-Anweisung** kopiert.  
  
-## <a name="excelQueries"></a> Bereitstellen einer Datenabfrage für Excel
+## <a name="provide-a-source-query-for-excel"></a><a name="excelQueries"></a> Bereitstellen einer Datenabfrage für Excel
 
 > [!IMPORTANT]
 > Ausführliche Informationen über das Herstellen einer Verbindung mit Excel-Dateien sowie Einschränkungen und bekannte Probleme beim Laden von Daten aus oder in Excel-Dateien finden Sie unter [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md).

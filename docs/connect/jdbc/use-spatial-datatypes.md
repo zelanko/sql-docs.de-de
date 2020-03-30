@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f133fa066ef2c486cf7bb40c5b653c99e077bc46
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026946"
 ---
 # <a name="using-spatial-datatypes"></a>Verwenden von räumlichen Datentypen
@@ -87,14 +87,14 @@ Dies sind die neuen öffentlichen APIs, die mit dieser Erweiterung in den Klasse
 
 ### <a name="sqlserverpreparedstatement"></a>SQLServerPreparedStatement
 
-|Methode|Beschreibung|
+|Methode|BESCHREIBUNG|
 |:------|:----------|
 |void setGeometry(int n, Geometry x)| Legt den angegebenen Parameter auf das angegebene microsoft.sql.Geometry-Klassenobjekt fest.
 |void setGeography(int n, Geography x)| Legt den angegebenen Parameter auf das angegebene microsoft.sql.Geography-Klassenobjekt fest.
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
-|Methode|Beschreibung|
+|Methode|BESCHREIBUNG|
 |:------|:----------|
 |Geometry getGeometry(int colunIndex)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses ResultSet-Objekts als com.microsoft.sqlserver.jdbc.Geometry-Objekt in der Programmiersprache Java zurück.
 |Geometry getGeometry(String columnName)| Gibt den Wert der angegebenen Spalte in der aktuellen Zeile dieses ResultSet-Objekts als com.microsoft.sqlserver.jdbc.Geometry-Objekt in der Programmiersprache Java zurück.
@@ -103,7 +103,7 @@ Dies sind die neuen öffentlichen APIs, die mit dieser Erweiterung in den Klasse
 
 ### <a name="geometry"></a>Geometrie
 
-|Methode|Beschreibung|
+|Methode|BESCHREIBUNG|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| Konstruktor für eine Geometry-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium), die um alle von der Instanz getragenen Z- und M-Werte (Höhe/Measure) erweitert wurde.
 |Geometry STGeomFromWKB(byte[] wkb)| Konstruktor für eine Geometry-Instanz aus einer Darstellung des Typs „Open Geospatial-Konsortium (OGC) Well-Known Binary (WKB)“.
@@ -128,7 +128,7 @@ Dies sind die neuen öffentlichen APIs, die mit dieser Erweiterung in den Klasse
 
 ### <a name="geography"></a>Gebiet
 
-|Methode|Beschreibung|
+|Methode|BESCHREIBUNG|
 |:------|:----------|
 |Geography STGeomFromText(String wkt, int SRID)| Konstruktor für eine Geography-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium), die um alle von der Instanz getragenen Z- und M-Werte (Höhe/Measure) erweitert wurde.
 |Geography STGeomFromWKB(byte[] wkb)| Konstruktor für eine Geography-Instanz aus einer Darstellung des Typs „Open Geospatial-Konsortium (OGC) Well-Known Binary (WKB)“.

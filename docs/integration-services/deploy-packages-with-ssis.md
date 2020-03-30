@@ -21,10 +21,10 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b873c611c0e997c5033c2efed341f93e0ec5aa5e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71290726"
 ---
 # <a name="deploy-packages-with-ssis"></a>Bereitstellen von Paketen mit SSIS
@@ -52,7 +52,7 @@ Es ist Ziel dieses Lernprogramms, die Komplexität von Bereitstellungsproblemen 
 Die beste Möglichkeit, die neuen Tools, Steuerfunktionen und Features von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] kennenzulernen, ist, sie einzusetzen. Dieses Lernprogramm führt Sie schrittweise durch die Erstellung eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts und das anschließende Hinzufügen der Pakete und weiterer erforderlicher Dateien zum Projekt. Wenn das Projekt vollständig ist, erstellen Sie ein Bereitstellungspaket, kopieren es zum Zielcomputer und installieren dann die Pakete auf dem Zielcomputer.    
     
 ## <a name="prerequisites"></a>Voraussetzungen    
-Dieses Tutorial wendet sich an Benutzer, die bereits mit grundlegenden Dateisystemvorgängen vertraut sind, aber nur über begrenzte Kenntnisse in Bezug auf die neuen Features von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verfügen. Um die grundlegenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Konzepte besser zu verstehen, deren Sie sich in diesem Lernprogramm bedienen, sollten Sie zuerst das folgende [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Tutorial durchgehen: [SSIS: Erstellen eines einfachen ETL-Pakets](../integration-services/ssis-how-to-create-an-etl-package.md).    
+Dieses Tutorial wendet sich an Benutzer, die bereits mit grundlegenden Dateisystemvorgängen vertraut sind, aber nur über begrenzte Kenntnisse in Bezug auf die neuen Features von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verfügen. Um die grundlegenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Konzepte besser zu verstehen, deren Sie sich in diesem Tutorial bedienen, sollten Sie zuerst die folgenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tutorials ausführen: [SSIS-Tutorials: Erstellen eines einfachen ETL-Pakets](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>Auf dem Quellcomputer
 
@@ -62,7 +62,7 @@ Auf dem Computer, auf dem Sie das Bereitstellungspaket erstellen, **müssen die 
 
 - Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Informationen zum Download der Beispieldaten sowie der Lektionspakete als ZIP-Datei finden Sie unter [Tutorial für SQL Server Integration Services: Erstellen eines einfachen ETL-Pakets](https://www.microsoft.com/download/details.aspx?id=56827). Die meisten Dateien in der ZIP-Datei sind schreibgeschützt, um unbeabsichtigte Änderungen zu verhindern. Um die Ausgabe in eine Datei zu schreiben oder zu ändern, müssen Sie unter Umständen das Nur-Lese-Attribut in den Dateieigenschaften deaktivieren.
 
--   Die Beispieldatenbank **AdventureWorks2014**. Laden Sie `AdventureWorks2014.bak` von der GitHub-Website[AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunter, und stellen Sie die Sicherung wieder her, um die Datenbank **AdventureWorks2014** herunterzuladen.  
+-   Die Beispieldatenbank **AdventureWorks2014**. Laden Sie  **von der GitHub-Website**AdventureWorks sample databases`AdventureWorks2014.bak` herunter, und stellen Sie die Sicherung wieder her, um die Datenbank [AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunterzuladen.  
 
 -   Sie müssen die Berechtigung zum Erstellen und Löschen von Tabellen in der AdventureWorks-Datenbank haben.
     
@@ -76,7 +76,7 @@ Auf dem Computer, auf dem Sie die Pakete bereitstellen, **müssen die folgenden 
 
 - Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Informationen zum Download der Beispieldaten sowie der Lektionspakete als ZIP-Datei finden Sie unter [Tutorial für SQL Server Integration Services: Erstellen eines einfachen ETL-Pakets](https://www.microsoft.com/download/details.aspx?id=56827). Die meisten Dateien in der ZIP-Datei sind schreibgeschützt, um unbeabsichtigte Änderungen zu verhindern. Um die Ausgabe in eine Datei zu schreiben oder zu ändern, müssen Sie unter Umständen das Nur-Lese-Attribut in den Dateieigenschaften deaktivieren.
 
--   Die Beispieldatenbank **AdventureWorks2014**. Laden Sie `AdventureWorks2014.bak` von der GitHub-Website[AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunter, und stellen Sie die Sicherung wieder her, um die Datenbank **AdventureWorks2014** herunterzuladen.  
+-   Die Beispieldatenbank **AdventureWorks2014**. Laden Sie  **von der GitHub-Website**AdventureWorks sample databases`AdventureWorks2014.bak` herunter, und stellen Sie die Sicherung wieder her, um die Datenbank [AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunterzuladen.  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md):    
     
@@ -92,7 +92,7 @@ Wenn Sie die Pakete auf demselben Computer bereitstellen möchten wie dem, auf d
 [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 In dieser Lektion beginnen Sie mit der Bereitstellung einer ETL-Lösung, indem Sie ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt erstellen und diesem die Pakete und weitere erforderliche Dateien hinzufügen.    
     
-[Lektion 2: Erstellen des Bereitstellungspakets in SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
+[Lektion 2: Erstellen des Bereitstellungspakets in SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 In dieser Lektion erstellen Sie ein Bereitstellungshilfsprogramm und überprüfen, ob das Bereitstellungspaket die notwendigen Dateien enthält.    
     
 [Lektion 3: Installieren von SSIS-Paketen](../integration-services/lesson-3-install-ssis-packages.md)    
