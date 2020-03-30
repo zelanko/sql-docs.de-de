@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082563"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Angeben von berechneten Spalten in einer Tabelle
@@ -40,22 +40,22 @@ Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabe
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Vorbereitungen
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen
 
-### <a name="Limitations"></a> Einschränkungen
+### <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Einschränkungen
 
 - Eine berechnete Spalte kann nicht als DEFAULT- oder FOREIGN KEY-Einschränkungsdefinition oder mit einer NOT NULL-Einschränkungsdefinition verwendet werden. Eine berechnete Spalte kann jedoch als Schlüsselspalte in einem Index oder als Teil einer PRIMARY KEY- oder UNIQUE-Einschränkung verwendet werden, wenn der Wert der berechneten Spalte durch einen deterministischen Ausdruck definiert ist und der Datentyp des Ergebnisses in Indexspalten zulässig ist. Falls die Tabelle z. B. die Spalten "a" und "b" vom Datentyp int aufweist, kann die berechnete Spalte "a + b" indiziert werden. Dagegen kann die berechnete Spalte "a + DATEPART(dd, GETDATE())" nicht indiziert werden, da sich der Wert in späteren Aufrufen ändern kann.
 - Eine berechnete Spalte kann nicht das Ziel einer INSERT- oder UPDATE-Anweisung sein.
 
-### <a name="Security"></a> Sicherheit
+### <a name="security"></a><a name="Security"></a> Sicherheit
 
-#### <a name="Permissions"></a> Berechtigungen
+#### <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
 
 Erfordert die ALTER-Berechtigung für die Tabelle.
 
-## <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio
 
-### <a name="NewColumn"></a> So fügen Sie eine neue berechnete Spalte hinzu
+### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> So fügen Sie eine neue berechnete Spalte hinzu
 
 1. Erweitern Sie in **Objekt-Explorer**die Tabelle, der Sie die neue berechnete Spalte hinzufügen möchten. Klicken Sie mit der rechten Maustaste auf **Spalten** , und wählen Sie **Neue Spalte**aus.
 2. Geben Sie den Spaltennamen ein, und akzeptieren Sie den Standarddatentyp (**nchar**(10)). [!INCLUDE[ssDE](../../includes/ssde-md.md)] ermittelt den Datentyp der berechneten Spalte, indem die Regeln zur Rangfolge von Datentypen auf Ausdrücke angewendet werden, die in der Formel angegeben wurden. Wenn die Formel beispielsweise auf eine Spalte vom Typ **money** und eine Spalte vom Typ **int**verweist, weist die berechnete Spalte den Typ **money** auf, da dieser Datentyp die höhere Rangfolge hat. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).
@@ -75,7 +75,7 @@ Erfordert die ALTER-Berechtigung für die Tabelle.
 2. Klicken Sie mit der rechten Maustaste auf die Spalte, für die Sie die Formel einer berechneten Spalte angeben möchten, und klicken Sie auf **Löschen**. Klicken Sie auf **OK**.
 3. Fügen Sie eine neue Spalte hinzu, und geben Sie die Formel der berechneten Spalte an, indem Sie die vorangehenden Schritte ausführen, um eine neue berechnete Spalte hinzuzufügen.
 
-## <a name="TsqlProcedure"></a> Verwenden von Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL
 
 ### <a name="to-add-a-computed-column-when-creating-a-table"></a>So fügen Sie eine berechnete Spalte beim Erstellen einer Tabelle hinzu
 

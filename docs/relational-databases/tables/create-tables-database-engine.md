@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ce6bea9e9f99cd5db4559c6f4b1d966e809f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123710"
 ---
 # <a name="create-tables-database-engine"></a>Erstellen von Tabellen (Datenbank-Engine)
@@ -27,7 +27,7 @@ ms.locfileid: "68123710"
   
 
   
-##  <a name="Permissions"></a> Überprüfen Sie zuerst Ihre Berechtigungen!  
+##  <a name="check-your-permissions-first"></a><a name="Permissions"></a> Überprüfen Sie zuerst Ihre Berechtigungen!  
 Für diesen Task benötigen Sie die CREATE TABLE-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema, in dem die Tabelle erstellt wird.  
   
  Wenn in der CREATE TABLE-Anweisung Spalten als CLR-benutzerdefinierter Typ definiert sind, ist entweder der Besitz des Typs oder die REFERENCES-Berechtigung für den Typ erforderlich.  
@@ -63,13 +63,13 @@ Für diesen Task benötigen Sie die CREATE TABLE-Berechtigung in der Datenbank u
   
      Weitere Informationen zu Schemas finden Sie unter [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
   
-9. Klicken Sie im Menü **Datei** auf *Tabellenname* **speichern**.  
+9. Klicken Sie im Menü **Datei** auf **Tabellenname** *speichern*.  
   
 10. Geben Sie im Dialogfeld **Namen auswählen** einen Namen für die Tabelle ein, und klicken Sie auf **OK**.  
   
 11. Zum Anzeigen der neuen Tabelle erweitern Sie im **Objekt-Explorer**den Knoten **Tabellen** und drücken **F5** , um die Objektliste zu aktualisieren. Die neue Tabelle wird in der Tabellenliste angezeigt.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 ## <a name="using-query-editor"></a>Verwenden des Abfrage-Editors  
   

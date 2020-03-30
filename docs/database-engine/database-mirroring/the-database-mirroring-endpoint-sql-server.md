@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68047988"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Der Datenbankspiegelungs-Endpunkt (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "68047988"
 >  Die Datenbankspiegelungsfunktion wird in zukünftigen Versionen von Microsoft SQL Server nicht mehr bereitgestellt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, die derzeit Datenbankspiegelung verwenden. Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
   
-##  <a name="ServerNetworkAddress"></a> Server-Netzwerkadressen  
+##  <a name="server-network-address"></a><a name="ServerNetworkAddress"></a> Server-Netzwerkadressen  
  Die Netzwerkadresse einer Serverinstanz (die *Server-Netzwerkadresse* oder *Endpunkt-URL*) enthält die Portnummer des zugehörigen Endpunkts sowie den System- und Domänennamen des entsprechenden Hostcomputers. Die Portnummer identifiziert eindeutig eine bestimmte Serverinstanz.  
   
  In der folgenden Abbildung wird veranschaulicht, wie zwei Serverinstanzen auf demselben Server eindeutig identifiziert werden. Die Server-Netzwerkadressen beider Serverinstanzen enthalten denselben Systemnamen, `MYSYSTEM`, und Domänennamen, `Adventure-Works.MyDomain.com`. Damit das System Verbindungen an eine Serverinstanz routen kann, enthält eine Server-Netzwerkadresse die dem Spiegelungsendpunkt einer bestimmten Serverinstanz zugeordnete Portnummer.  
@@ -57,7 +57,7 @@ ms.locfileid: "68047988"
 >  Ein bereits verwendeter Datenbankspiegelungs-Endpunkt darf nicht neu konfiguriert werden. Die Serverinstanzen verwenden die Endpunkte der anderen Instanzen, um sich einen Überblick über die Status der anderen Systeme zu verschaffen. Wird der Endpunkt neu konfiguriert, ist ein erneutes Starten möglich, was von den anderen Serverinstanzen als Fehler aufgefasst werden könnte. Dies ist vor allem im Modus für den automatischen Failovermodus wichtig, bei dem das Neukonfigurieren des Endpunkts auf einem Partner zur Ausführung eines Failovers führen könnte.  
   
   
-##  <a name="EndpointAuthenticationTypes"></a> Bestimmen des Authentifizierungstyps für einen Datenbankspiegelungs-Endpunkt  
+##  <a name="determining-the-authentication-type-for-a-database-mirroring-endpoint"></a><a name="EndpointAuthenticationTypes"></a> Bestimmen des Authentifizierungstyps für einen Datenbankspiegelungs-Endpunkt  
  Es ist wichtig zu wissen, dass durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonten der Serverinstanzen bestimmt wird, welchen Typ von Authentifizierung Sie für die Datenbankspiegelungs-Endpunkte verwenden können:  
   
 -   Wenn jede Serverinstanz unter einem Domänendienstkonto ausgeführt wird, können Sie die Windows-Authentifizierung für Ihre Datenbankspiegelungs-Endpunkte verwenden. Falls alle Serverinstanzen unter demselben Domänenbenutzerkonto ausgeführt werden, sind die richtigen Benutzeranmeldenamen automatisch in beiden **master** -Datenbanken vorhanden. Dadurch wird die Sicherheitskonfiguration für die Verfügbarkeitsdatenbanken vereinfacht und wird somit empfohlen.  
@@ -74,7 +74,7 @@ ms.locfileid: "68047988"
      Es gibt keine automatische Methode zum Konfigurieren der Datenbankspiegelungssicherheit mithilfe von Zertifikaten. Sie müssen entweder die CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder das PowerShell-Cmdlet **New-SqlHadrEndpoint** verwenden. Weitere Informationen finden Sie unter [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md). Informationen zum Aktivieren der Zertifikatauthentifizierung auf einer Serverinstanz finden Sie unter [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So konfigurieren Sie einen Datenbankspiegelungs-Endpunkt**  
   
 -   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

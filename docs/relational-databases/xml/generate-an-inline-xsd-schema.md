@@ -19,10 +19,10 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67943159"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generieren eines XSD-Inlineschemas
@@ -392,7 +392,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Beachten Sie im XSD-Inlineschema, dass für das <`Col`>-Element, das Col2 entspricht, minOccurs auf 0 festgelegt wurde.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Fall 3: Beide Elemente unterschiedlicher Typen und entsprechender Spalten dürfen NULL sein  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Fall 3: Beide Elemente eines unterschiedlichen Typs und entsprechender Spalten dürfen NULL sein  
  Die folgende Abfrage wird für die gleiche Tabelle angegeben, die auch in Fall 2 gezeigt wurde:  
   
 ```  

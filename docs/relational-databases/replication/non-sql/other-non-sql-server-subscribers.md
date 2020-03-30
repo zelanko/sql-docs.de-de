@@ -13,15 +13,15 @@ ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dce8d383ca01fd205645a18f7aa181d12cff4675
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68110952"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Andere Nicht-SQL Server-Abonnenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Eine Liste der von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] unterstützten Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten finden Sie unter [Nicht-SQL Server-Abonnenten](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Dieses Thema enthält Informationen zu den Anforderungen für ODBC-Treiber und OLE DB-Anbieter.  
+  Eine Liste der von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützten Nicht-[!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Abonnenten finden Sie unter [Nicht-SQL Server-Abonnenten](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Dieses Thema enthält Informationen zu den Anforderungen für ODBC-Treiber und OLE DB-Anbieter.  
   
 ## <a name="odbc-driver-requirements"></a>Anforderungen für ODBC-Treiber  
  Der ODBC-Treiber muss folgende Voraussetzungen erfüllen:  

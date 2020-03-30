@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 790d756479f4111d6c3b40d05643ec788527473c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054783"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Installieren von SQL Server mithilfe einer Konfigurationsdatei
@@ -67,18 +67,18 @@ FEATURES=SQL,Tools
     > [!NOTE]  
     >  Die Setupinfrastruktur schreibt alle entsprechenden Parameter für die Aktionen, die ausgeführt wurden, mit Ausnahme vertraulicher Daten wie Kennwörter. Der /IAcceptSQLServerLicenseTerms-Parameter wird auch nicht in die Konfigurationsdatei geschrieben und erfordert entweder eine Änderung der Konfigurationsdatei oder die Angabe eines Werts an der Eingabeaufforderung. Weitere Informationen finden Sie unter [Installieren von SQL Server über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Zusätzlich wird bei booleschen Parametern, bei denen der Wert normalerweise nicht über die Eingabeaufforderung angegeben wird, ein Wert eingefügt. 
   
-## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>Verwenden der Konfigurationsdatei zur Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-ssnoversion"></a>Verwenden der Konfigurationsdatei zur Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 Sie können die Konfigurationsdatei nur bei Befehlszeileninstallationen verwenden. 
   
 > [!NOTE]  
 > Wenn Sie Änderungen an der Konfigurationsdatei vornehmen müssen, empfiehlt es sich, eine Kopie zu erstellen und mit dieser zu arbeiten. 
   
-### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>So installieren Sie eine eigenständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz mithilfe einer Konfigurationsdatei  
+### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>So installieren Sie eine eigenständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz mithilfe einer Konfigurationsdatei  
   
 -   Führen Sie die Installation über die Eingabeaufforderung aus, und geben Sie die ConfigurationFile.ini mithilfe des *ConfigurationFile* -Parameters an. 
   
-### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>So verwenden Sie eine Konfigurationsdatei zum Vorbereiten und Abschließen eines Images einer eigenständigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz (SysPrep)  
+### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>So verwenden Sie eine Konfigurationsdatei zum Vorbereiten und Abschließen eines Images einer eigenständigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz (SysPrep)  
   
 1. So bereiten Sie eine oder mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor und konfigurieren sie auf dem gleichen Computer. 
   
@@ -96,7 +96,7 @@ Sie können die Konfigurationsdatei nur bei Befehlszeileninstallationen verwende
   
     -   Die abgeschlossene Imagekonfigurationsdatei kann mit dem Windows-Image zum Automatisieren der Konfiguration der vorbereiteten Instanzen gespeichert werden. 
   
-### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>So installieren Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster mithilfe der Konfigurationsdatei  
+### <a name="how-to-install-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>So installieren Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster mithilfe der Konfigurationsdatei  
   
 1. Option für die integrierte Installation (Erstellen Sie auf einem Knoten einen Failovercluster mit einem einzelnen Knoten, und führen Sie für zusätzliche Knoten AddNode auf den Knoten aus):  
   
@@ -118,11 +118,11 @@ Sie können die Konfigurationsdatei nur bei Befehlszeileninstallationen verwende
   
     -   Sie können dann diese ConfigurationFile.ini-Datei angeben, um den Failovercluster abzuschließen. 
   
-### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>So fügen Sie mithilfe der Konfigurationsdatei einen Knoten zu einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster hinzu oder entfernen diesen  
+### <a name="how-to-add-or-remove-a-node-to-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>So fügen Sie mithilfe der Konfigurationsdatei einen Knoten zu einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster hinzu oder entfernen diesen  
   
 -   Wenn Sie über eine Konfigurationsdatei verfügen, mit der bereits ein Knoten zu einem Failovercluster hinzugefügt oder daraus entfernt wurde, können Sie diese Datei erneut zum Hinzufügen oder Entfernen zusätzlicher Knoten verwenden. 
   
-### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>So aktualisieren Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster mithilfe der Konfigurationsdatei  
+### <a name="how-to-upgrade-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>So aktualisieren Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster mithilfe der Konfigurationsdatei  
   
 1. Führen Sie das Upgrade für den passiven Knoten aus, und zeichnen Sie die Datei ConfigurationFile.ini auf. Sie können dazu entweder das tatsächliche Upgrade ausführen oder am Ende den Vorgang beenden, ohne das tatsächliche Update auszuführen. 
   

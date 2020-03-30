@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295693"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifizieren der Quelle von Paketen mit digitalen Signaturen
@@ -47,7 +47,7 @@ ms.locfileid: "71295693"
   
 > **HINWEIS** : Der optionale Registrierungswert **BlockedSignatureStates** kann eine Einstellung angeben, die restriktiver ist als die Option für die digitale Signatur, die in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder in der **dtexec** -Befehlszeile festgelegt wurde. In dieser Situation überschreibt die restriktivere Registrierungseinstellung die andere Einstellung.  
 
-## <a name="registry"></a> Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts
+## <a name="implement-a-signing-policy-by-setting-a-registry-value"></a><a name="registry"></a> Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts
   Sie können einen optionalen Registrierungswert zum Verwalten einer Organisationsrichtlinie verwenden, um signierte und nicht signierte Pakete zu laden. Wenn Sie diesen Registrierungswert verwenden, müssen Sie ihn auf jedem Computer erstellen, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ausgeführt werden und auf dem Sie die Richtlinie durchsetzen möchten. Nachdem der Registrierungswert festgelegt wurde, überprüft oder verifiziert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Signaturen vor dem Laden der Pakete.  
   
  Die Prozedur in diesem Thema beschreibt, wie Sie den optionalen DWORD-Wert **BlockedSignatureStates** zum Registrierungsschlüssel HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS hinzufügen. Der Datenwert in **BlockedSignatureStates** bestimmt, ob ein Paket blockiert werden soll, wenn es eine nicht vertrauenswürdige Signatur, eine ungültige Signatur oder keine Signatur aufweist. Hinsichtlich des Status der zum Signieren von Paketen verwendeten Signaturen werden für den Registrierungswert **BlockedSignatureStates** folgende Definitionen verwendet:  
@@ -92,7 +92,7 @@ ms.locfileid: "71295693"
   
 9. Klicken Sie im Menü **Datei** auf **Beenden**.    
 
-## <a name="cert"></a> Signieren eines Pakets mit einem digitalen Zertifikat
+## <a name="sign-a-package-by-using-a-digital-certificate"></a><a name="cert"></a> Signieren eines Pakets mit einem digitalen Zertifikat
   In diesem Thema wird beschrieben, wie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket mit einem digitalen Zertifikat signiert wird. Mit einer digitalen Signatur in Verbindung mit anderen Einstellungen können Sie verhindern, dass ein ungültiges Paket geladen und ausgeführt wird.  
   
  Bevor Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket signieren können, müssen Sie folgende Schritte ausführen:  
@@ -137,7 +137,7 @@ ms.locfileid: "71295693"
   
      Obwohl das Paket signiert wurde, müssen Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nun so konfigurieren, dass die digitale Signatur vor dem Laden des Pakets geprüft oder verifiziert wird.  
 
-## <a name="signing_dialog"></a> Benutzeroberflächen-Verweis zum Dialogfeld „Digitale Signatur“
+## <a name="digital-signing-dialog-box-ui-reference"></a><a name="signing_dialog"></a> Benutzeroberflächen-Verweis zum Dialogfeld „Digitale Signatur“
   Mithilfe des Dialogfelds **Digitale Signatur** können Sie ein Paket mit einer digitalen Signatur signieren oder die Signatur löschen. Das Dialogfeld **Digitale Signatur** steht in **unter der Option** Digitale Signatur **im Menü** SSIS [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]zur Verfügung.  
   
  Weitere Informationen finden Sie unter [Signieren eines Pakets mit einem digitalen Zertifikat](#cert).  

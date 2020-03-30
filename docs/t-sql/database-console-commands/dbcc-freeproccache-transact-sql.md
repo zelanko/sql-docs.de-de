@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101906"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -121,21 +121,21 @@ Gilt für: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[
 Gilt für: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - Erfordert die Mitgliedschaft in der festen Serverrolle DB_OWNER.  
 
-## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Allgemeine Hinweise zu [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="general-remarks-for-sssdw-and-sspdw"></a>Allgemeine Hinweise zu [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Viele DBCC FREEPROCCACHE-Befehle können gleichzeitig ausgeführt werden.
 In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] kann das Löschen des Plancaches eine vorübergehende Abnahme der Abfrageleistung verursachen, da eingehende Abfragen einen neuen Plan kompilieren, statt einen zuvor zwischengespeicherten Plan zu verwenden. 
 
 DBCC FREEPROCCACHE (COMPUTE) bewirkt nur, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfragen neu kompiliert werden, wenn sie auf den Compute-Knoten ausgeführt werden. Es führt nicht dazu, dass [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] den parallelen Abfrageplan kompilieren, der auf dem Control-Knoten generiert wird.
 DBCC FREEPROCCACHE kann während der Ausführung abgebrochen werden.
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Einschränkungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Einschränkungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC FREEPROCCACHE kann nicht ohne eine Transaktion ausgeführt werden.
 DBCC FREEPROCCACHE wird in EXPLAIN-Anweisungen nicht unterstützt.
   
-## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Metadaten für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="metadata-for-sssdw-and-sspdw"></a>Metadaten für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Der Systemsicht sys.pdw_exec_requests wird eine neue Zeile hinzugefügt, wenn DBCC FREEPROCCACHE ausgeführt wird.
 
-## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Beispiele: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="examples-ssnoversion"></a>Beispiele: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. Löschen eines Abfrageplans im Plancache  
 Im folgenden Beispiel wird ein Abfrageplan im Plancache gelöscht, indem das Abfrageplanhandle angegeben wird. Um sicherzustellen, dass die Beispielabfrage im Plancache vorhanden ist, wird die Abfrage zuerst ausgeführt. Durch Abfrage der dynamischen Verwaltungssichten `sys.dm_exec_cached_plans` und `sys.dm_exec_sql_text` wird das Planhandle für die Abfrage ermittelt. 
@@ -187,7 +187,7 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D: Beispiele für die grundlegende DBCC FREEPROCCACHE-Syntax  
 Im folgende Beispiel werden alle vorhandenen Abfrageplancaches aus den Compute-Knoten entfernt. Obwohl der Kontext auf „UserDbSales“ festgelegt ist, werden die Abfrageplan-Caches des Compute-Knotens für alle Datenbanken entfernt. Die WITH NO_INFOMSGS-Klausel verhindert, dass Informationsmeldungen in den Ergebnissen angezeigt werden.  

@@ -16,10 +16,10 @@ ms.assetid: c0ed63bb-5ebe-4155-9f91-8fbfeac9c3b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b02292225d0f0be0529537f369c2fa760d677486
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983592"
 ---
 # <a name="getdouble-method-int"></a>getDouble-Methode (int)
@@ -40,7 +40,7 @@ public double getDouble(int index)
  Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **double**-Wert  
+ Ein **Double**-Wert  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

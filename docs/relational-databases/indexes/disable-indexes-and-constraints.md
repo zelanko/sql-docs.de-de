@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68107146"
 ---
 # <a name="disable-indexes-and-constraints"></a>Deaktivieren von Indizes und Einschränkungen
@@ -50,9 +50,9 @@ ms.locfileid: "68107146"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Der Index wird nicht beibehalten, während er deaktiviert ist.  
   
@@ -88,12 +88,12 @@ ms.locfileid: "68107146"
   
 -   Durch Erstellen eines neuen gruppierten Indexes werden zuvor deaktivierte nicht gruppierte Indizes aktiviert. Weitere Informationen finden Sie unter [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Ausführen von ALTER INDEX benötigen Sie mindestens die ALTER-Berechtigung auf der Tabelle bzw. Sicht.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>So deaktivieren Sie einen Index  
   
@@ -162,7 +162,7 @@ ms.locfileid: "68107146"
   
 -   Klicken Sie auf den Link, um ein Dialogfeld mit dem vollständigen Fehler anzuzeigen.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>So deaktivieren Sie einen Index  
   

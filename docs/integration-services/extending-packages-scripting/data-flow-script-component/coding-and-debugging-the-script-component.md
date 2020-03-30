@@ -22,10 +22,10 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286547"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codieren und Debuggen der Skriptkomponente
@@ -65,7 +65,7 @@ ms.locfileid: "71286547"
   
     -   Eine **Variables**-Collectionklasse mit Verweisen zu den Variablen, die im **Transformations-Editor für Skripterstellung** auf der Seite **Skript** in den Eigenschaften **ReadOnlyVariable** und **ReadWriteVariables** eingegeben wurden.  
   
--   Das **BufferWrapper**-Projektelement enthält eine Klasse, die für jede auf der Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skripterstellung** konfigurierte Eingabe und Ausgabe von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> erbt. Jede dieser Klassen enthält typisierte Accessoreigenschaften, die mit den konfigurierten Eingabe- und Ausgabespalten übereinstimmen, sowie die Datenflusspuffer, in denen sich diese Spalten befinden.  
+-   Das **BufferWrapper**-Projektelement enthält eine Klasse, die für jede auf der Seite <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>Eingaben und Ausgaben**des**Transformations-Editors für Skripterstellung**konfigurierte Eingabe und Ausgabe von** erbt. Jede dieser Klassen enthält typisierte Accessoreigenschaften, die mit den konfigurierten Eingabe- und Ausgabespalten übereinstimmen, sowie die Datenflusspuffer, in denen sich diese Spalten befinden.  
   
  Weitere Informationen zur Verwendung dieser Objekte, Methoden und Eigenschaften finden Sie unter [Understanding the Script Component Object Model (Grundlegendes zum Objektmodell der Skriptkomponente)](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md). Informationen darüber, wie die Methoden und Eigenschaften dieser Klassen in einem bestimmten Skriptkomponententyp zu verwenden sind, finden Sie unter [Additional Script Component Examples (Zusätzliche Skriptkomponentenbeispiele)](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Die Beispielthemen enthalten auch vollständige Codebeispiele.  
   

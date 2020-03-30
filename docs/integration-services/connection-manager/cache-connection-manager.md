@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294446"
 ---
 # <a name="cache-connection-manager"></a>Cacheverbindungs-Manager
@@ -67,7 +67,7 @@ ms.locfileid: "71294446"
   
  Das Dialogfeld **Editor für den Cacheverbindungs-Manager** schließt die folgenden Registerkarten ein:  
   
-###  <a name="generaltab"></a> Registerkarte Allgemein  
+###  <a name="general-tab"></a><a name="generaltab"></a> Registerkarte Allgemein  
  Geben Sie auf der Registerkarte **Allgemein** des Dialogfelds **Editor für den Cacheverbindungs-Manager** an, ob der Cache aus einer Datei gelesen werden soll oder ob der Cache in einer Datei gespeichert werden soll.  
   
 #### <a name="options"></a>Tastatur  
@@ -98,7 +98,7 @@ ms.locfileid: "71294446"
  **Metadaten aktualisieren**  
  Löschen Sie die Spaltenmetadaten im Cacheverbindungsmanager, und füllen Sie den Cacheverbindungs-Manager erneut mit Spaltenmetadaten aus einer bestimmten Cachedatei auf.  
   
-###  <a name="columnstab"></a> Registerkarte 'Spalten'  
+###  <a name="columns-tab"></a><a name="columnstab"></a> Registerkarte 'Spalten'  
  Auf der Registerkarte **Spalten** des Dialogfelds **Editor für den Cacheverbindungs-Manager** können Sie die Eigenschaften jeder Spalte im Cache konfigurieren.  
   
 #### <a name="options"></a>Tastatur  

@@ -18,17 +18,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021219"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 In diesem Thema werden einige häufige Ursachen für eine geringe Leistung für Volltextindizes und -Abfragen beschrieben. Darüber hinaus werden einige Vorschläge für das Verringern dieser Probleme und das Verbessern der Leistung gemacht.
   
-##  <a name="causes"></a> Common causes of performance issues
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>Probleme mit Hardware
 Die Leistung für Volltextindizes und Volltextabfragen wird von den Hardwareressourcen wie Arbeitsspeicher, Datenträgergeschwindigkeit, CPU-Geschwindigkeit und Computerarchitektur beeinflusst.  
 
@@ -57,7 +57,7 @@ Der Hauptgrund für eine eingeschränkte Leistung beim Erstellen von Volltextind
   
     Die Masterzusammenführung einer großen Datenmenge kann eine Transaktion mit langer Ausführungszeit erzeugen und das Abschneiden des Transaktionsprotokolls während des Prüfpunkts verzögern. In diesem Fall kann das Transaktionsprotokoll unter dem vollständigen Wiederherstellungsmodell erheblich anwachsen. Sie sollten sicherstellen, dass das Transaktionsprotokoll vor dem Reorganisieren eines großen Volltextindexes in einer Datenbank, die das vollständige Wiederherstellungsmodell verwendet, genügend Speicherplatz für eine Transaktion mit langer Laufzeit bietet. Weitere Informationen finden Sie unter [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
-##  <a name="tuning"></a> Optimieren der Leistung von Volltextindizes  
+##  <a name="tune-the-performance-of-full-text-indexes"></a><a name="tuning"></a> Optimieren der Leistung von Volltextindizes  
 Sie können die Leistung Ihrer Volltextindizes mit den folgenden bewährten Methoden maximieren:  
   
 -   Um alle Prozessoren oder Kerne maximal zu nutzen, setzen Sie [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) '**max full-text crawl ranges**' auf die Anzahl der CPUs des Systems fest. Informationen zu dieser Konfigurationsoption finden Sie unter [Max. Bereich für Volltextdurchforstung (Serverkonfigurationsoption)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
@@ -70,7 +70,7 @@ Sie können die Leistung Ihrer Volltextindizes mit den folgenden bewährten Meth
 
 -   Wenn Sie eine inkrementelle Auffüllung basierend auf einer timestamp-Spalte verwenden, erstellen Sie einen zweiten Index in einer **timestamp**-Spalte, wenn Sie die Leistung der inkrementellen Auffüllung verbessern möchten.  
   
-##  <a name="full"></a> Beheben von Leistungsproblemen bei vollständiger Auffüllung  
+##  <a name="troubleshoot-the-performance-of-full-populations"></a><a name="full"></a> Beheben von Leistungsproblemen bei vollständiger Auffüllung  
 ### <a name="review-the-full-text-crawl-logs"></a>Überprüfen Sie die Volltextdurchforstungsprotokolle
  Leistungsprobleme diagnostizieren Sie, indem Sie die Volltextdurchforstungsprotokolle überprüfen.
  
@@ -140,7 +140,7 @@ Wichtige Informationen zu den folgenden Formeln finden Sie in den Notizen unter 
 2.  500 MB ist eine Schätzung des erforderlichen Speichers, der von den anderen Prozessen im System benötigt wird. Wenn das System noch weitere Aufgaben durchführt, sollten Sie diesen Wert entsprechend erhöhen.  
 3.  .*ism_size* wird 8 MB für x64-Plattformen angenommen.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Beispiel: Schätzen der Arbeitsspeicheranforderungen von fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Beispiel: Schätzen der Arbeitsspeicheranforderungen von „fdhost.exe“  
   
  Dieses Beispiel gilt für einen 64-Bit-Computer mit 8 GM RAM und 4 dual-Core-Prozessoren. Die erste Berechnung schätzt den Speicher, der von „fdhost.exe“ benötigt wird: *F*. Die Anzahl der Durchforstungsbereiche beträgt `8`.  
   
@@ -150,7 +150,7 @@ Wichtige Informationen zu den folgenden Formeln finden Sie in den Notizen unter 
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Beispiel: Festlegen des maximalen Serverarbeitsspeichers  
+ #### <a name="example-setting-max-server-memory"></a>Beispiel: Festlegen von "max server memory"  
   
  In diesem Beispiel werden die Anweisungen [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) und [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) von [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet, um **maximalen Serverarbeitsspeicher** auf den Wert festzulegen, der im vorherigen Beispiel für *M* berechnet wurde, also `7052`:  
   
@@ -178,7 +178,7 @@ Es ist wahrscheinlich, dass die Leistung der vollständigen Auffüllungen nicht 
   
      In der folgenden Tabelle sind die relevanten Wartetypen aufgeführt.  
   
-    |Wartetyp|Beschreibung|Mögliche Lösung|  
+    |Wartetyp|BESCHREIBUNG|Mögliche Lösung|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX oder _UP)|Dies kann auf einen E/A-Engpass hinweisen. In diesem Fall ist normalerweise auch eine hohe durchschnittliche Warteschlangenlänge des Datenträgers zu erkennen.|Sie können den E/A-Engpass ggf. reduzieren, indem Sie den Volltextindex in eine andere Dateigruppe auf einem anderen Datenträger verschieben.|  
     |PAGELATCH_EX (oder _UP)|Dies kann auf eine hohe Zahl von Konflikten zwischen Threads hinweisen, die versuchen, in dieselbe Datenbankdatei zu schreiben.|Diese Konflikte können ggf. verringert werden, indem Sie Dateien der Dateigruppe hinzufügen, auf der sich der Volltextindex befindet.|  
@@ -195,7 +195,7 @@ Es ist wahrscheinlich, dass die Leistung der vollständigen Auffüllungen nicht 
   
          Um die Fragmentierung zu reduzieren, können Sie den gruppierten Index neu organisieren oder neu erstellen. Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
-##  <a name="filters"></a> Problembehandlung bei langsamer Indizierung von Dokumenten
+##  <a name="troubleshoot-slow-indexing-of-documents"></a><a name="filters"></a> Problembehandlung bei langsamer Indizierung von Dokumenten
 
 > [!NOTE]
 > Dieser Abschnitt beschreibt ein Problem, das nur Kunden betrifft, die Dokumente indizieren (z.B. Microsoft Word-Dokumente), in die andere Dokumenttypen eingebettet sind.

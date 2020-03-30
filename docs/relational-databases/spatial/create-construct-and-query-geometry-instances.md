@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8f3b5cc1721483534307acf797a58e4dc70b5c81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048735"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Erstellen, Aufbauen und Abfragen von geometry-Instanzen
@@ -36,9 +36,9 @@ ms.locfileid: "68048735"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine Teilmenge des vorhandenen GML 3.1-Standards, der in folgendem Schema definiert ist: [https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959).  
   
-##  <a name="creating"></a> Erstellen oder Konstruieren einer neuen geometry-Instanz  
+##  <a name="creating-or-constructing-a-new-geometry-instance"></a><a name="creating"></a> Erstellen oder Konstruieren einer neuen geometry-Instanz  
   
-###  <a name="existing"></a> Erstellen einer neuen geometry-Instanz aus einer vorhandenen Instanz  
+###  <a name="creating-a-new-geometry-instance-from-an-existing-instance"></a><a name="existing"></a> Erstellen einer neuen geometry-Instanz aus einer vorhandenen Instanz  
  Der **geometry** -Datentyp stellt viele integrierte Methoden zur Verfügung, mit denen neue **geometry** -Instanzen auf der Grundlage vorhandener Instanzen erstellt werden können.  
   
  **So erstellen Sie einen Puffer um eine Geometrie**  
@@ -68,7 +68,7 @@ ms.locfileid: "68048735"
  [STPointOnSurface &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)  
   
   
-###  <a name="wkt"></a> Erstellen einer geometry-Instanz anhand einer WKT-Eingabe (Well-Known Text)  
+###  <a name="constructing-a-geometry-instance-from-well-known-text-input"></a><a name="wkt"></a> Erstellen einer geometry-Instanz anhand einer WKT-Eingabe (Well-Known Text)  
  Der **geometry** -Datentyp bietet mehrere integrierte Methoden zur Erstellung einer Geometrie anhand der WKT-Darstellung von Open Geospatial Consortium (OGC). Der WKT-Standard ist eine Textzeichenfolge, die den Austausch von Geometriedaten in Textform ermöglicht.  
   
  **So erstellen Sie eine beliebige geometry-Instanz anhand einer WKT-Eingabe**  
@@ -98,7 +98,7 @@ ms.locfileid: "68048735"
  [STGeomCollFromText &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stgeomcollfromtext-geometry-data-type.md)  
   
   
-###  <a name="wkb"></a> Erstellen einer geometry-Instanz aus einer WKB-Eingabe (Well-Known Binary)  
+###  <a name="constructing-a-geometry-instance-from-well-known-binary-input"></a><a name="wkb"></a> Erstellen einer geometry-Instanz aus einer WKB-Eingabe (Well-Known Binary)  
  WKB ist ein vom Open Geospatial Consortium spezifiziertes Binärformat, das den Austausch von **geometry** -Daten zwischen einer Clientanwendung und einer SQL-Datenbank ermöglicht. Die folgenden Funktionen akzeptieren die WKB-Eingabe zum Zweck der Erstellung von Geometrien:  
   
  **So erstellen Sie einen beliebigen geometry-Instanztyp anhand einer WKB-Eingabe**  
@@ -126,14 +126,14 @@ ms.locfileid: "68048735"
  [STGeomCollFromWKB &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
   
-###  <a name="gml"></a> Erstellen einer geometry-Instanz anhand einer GML-Texteingabe  
+###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> Erstellen einer geometry-Instanz anhand einer GML-Texteingabe  
  Der **geometry** -Datentyp bietet eine Methode, die eine **geometry** -Instanz aus GML generiert, einer XML-Darstellung geometrischer Objekte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine Teilmenge von GML.  
   
  **So erstellen Sie einen beliebigen geometry-Instanztyp anhand einer GML-Eingabe**  
  [GeomFromGml &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/geomfromgml-geometry-data-type.md)  
   
   
-##  <a name="returning"></a> Zurückgeben von WKT (Well-Known Text) oder WKB (Well-Known Binary) aus einer geometry-Instanz  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geometry-instance"></a><a name="returning"></a> Zurückgeben von WKT (Well-Known Text) oder WKB (Well-Known Binary) aus einer geometry-Instanz  
  Anhand der folgenden Methoden können Sie entweder das WKT- oder das WKB-Format einer **geometry** zurückgeben:  
   
  **So geben Sie eine WKT-Darstellung einer geometry-Instanz zurück**  
@@ -151,10 +151,10 @@ ms.locfileid: "68048735"
  [AsGml &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/asgml-geometry-data-type.md)  
   
   
-##  <a name="querying"></a> Abfragen der Eigenschaften und Verhalten von geometry-Instanzen  
+##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> Abfragen der Eigenschaften und Verhalten von geometry-Instanzen  
  Allee **geometry** -Instanzen verfügen über eine Reihe von Eigenschaften, die über durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Methoden abgerufen werden können. In den folgenden Themen werden die Eigenschaften und Verhalten von geometry-Typen und die Methoden zum Abrufen der einzelnen Eigenschaften und Verhalten beschrieben.  
   
-###  <a name="valid"></a> Gültigkeit, Instanztyp und GeometryCollection-Informationen  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Gültigkeit, Instanztyp und GeometryCollection-Informationen  
  Sobald eine **geometry** -Instanz erstellt wurde, können Sie anhand der folgenden Methoden ermitteln, ob sie wohlgeformt ist, den Instanztyp zurückgeben oder, wenn es sich um eine Collection-Instanz handelt, eine spezifische **geometry** -Instanz zurückgeben.  
   
  **So geben Sie den Instanztyp einer Geometrie zurück**  
@@ -176,7 +176,7 @@ ms.locfileid: "68048735"
  [STGeometryN &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stgeometryn-geometry-data-type.md)STGeometryN (geometry-Datentyp)  
   
   
-###  <a name="number"></a> Anzahl von Punkten  
+###  <a name="number-of-points"></a><a name="number"></a> Anzahl von Punkten  
  Alle nicht leeren **geometry** -Instanzen bestehen aus *Punkten*. Diese Punkte stellen die x- und y-Koordinaten der Ebene dar, auf die die Geometrien gezeichnet werden. **geometry** stellt zahlreiche integrierte Methoden zum Abfragen der Punkte einer Instanz bereit.  
   
  **So geben Sie die Anzahl von Punkten zurück, aus denen eine Instanz besteht**  
@@ -204,7 +204,7 @@ ms.locfileid: "68048735"
  [STCentroid](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)  
   
   
-###  <a name="dimension"></a> Dimension  
+###  <a name="dimension"></a><a name="dimension"></a> Dimension  
  Eine nicht leere **geometry** -Instanz kann null-, ein- oder zweidimensional sein. Nulldimensionale **Geometrien**, wie z.B. **Point** und **MultiPoint**, haben weder Länge noch Fläche. Eindimensionale Objekte, wie z.B. **LineString, CircularString, CompoundCurve**und **MultiLineString**, haben Länge. Zweidimensionale Instanzen, z.B. **Polygon**, **CurvePolygon**und **MultiPolygon**, haben Fläche und Länge. Für leere Instanzen wird als Dimension -1 ausgegeben, und für eine **GeometryCollection** -Auflistung wird eine Fläche ausgegeben, die vom Typ der darin enthaltenen Elemente abhängt.  
   
  **So geben Sie die Dimension einer Instanz zurück**  
@@ -217,14 +217,14 @@ ms.locfileid: "68048735"
  [STArea](../../t-sql/spatial-geometry/starea-geometry-data-type.md)  
   
   
-###  <a name="empty"></a> Empty  
+###  <a name="empty"></a><a name="empty"></a> Empty  
  Eine _empty_**geometry** -Instanz besitzt keine Punkte. Die Länge von leeren **LineString, CircularString**-, **CompoundCurve**- und **MultiLineString** -Instanzen ist 0 (null). Die Fläche von leeren **Polygon**-, **CurvePolygon**- und **MultiPolygon** -Instanzen ist 0 (null).  
   
  **So bestimmen Sie, ob eine Instanz leer ist**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
   
   
-###  <a name="simple"></a> Einfach  
+###  <a name="simple"></a><a name="simple"></a> Einfach  
  Die Geometrie ( **geometry** ) einer Instanz ist *einfach*, wenn sie die beiden folgenden Anforderungen erfüllt:  
   
 -   Keine Abbildung der Instanz darf sich selbst außer an den Endpunkten schneiden.  
@@ -238,7 +238,7 @@ ms.locfileid: "68048735"
  [STIsSimple](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md).  
   
   
-###  <a name="boundary"></a> Begrenzung, Innenbereich und Außenbereich  
+###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> Begrenzung, Innenbereich und Außenbereich  
  Unter dem *Innenbereich* einer **geometry** -Instanz wird der von der Instanz belegte Bereich und unter dem *Außenbereich* wird der nicht von der Instanz bedeckte Bereich verstanden.  
   
  Die*Begrenzung* wird vom OGC wie folgt definiert:  
@@ -264,13 +264,13 @@ SELECT @g.STBoundary().ToString();
  **So geben Sie die Begrenzung einer Instanz zurück**  
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
-###  <a name="envelope"></a> Umschlag  
+###  <a name="envelope"></a><a name="envelope"></a> Umschlag  
  Der *Umschlag* einer **geometry** -Instanz, auch *umgebendes Feld*genannt, ist das an den Achsen ausgerichtete Rechteck, das durch die minimalen und maximalen Koordinaten (X,Y) der Instanz gebildet wird.  
   
  **So geben Sie den Umschlag einer Instanz zurück**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
-###  <a name="closure"></a> Abgeschlossenheit  
+###  <a name="closure"></a><a name="closure"></a> Abgeschlossenheit  
  Eine _geschlossene_**geometry**-Instanz ist eine Abbildung, deren Ausgangs- und Endpunkt identisch ist. Alle**Polygon** -Instanzen gelten als geschlossen. Alle**Point** -Instanzen gelten als nicht geschlossen.  
   
  Ein Ring ist eine einfache, geschlossene **LineString** -Instanz.  
@@ -291,7 +291,7 @@ SELECT @g.STBoundary().ToString();
  [STInteriorRingN](../../t-sql/spatial-geometry/stinteriorringn-geometry-data-type.md)  
   
   
-###  <a name="srid"></a> SRID (Spatial Reference ID)  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> SRID (Spatial Reference ID)  
  Der SRID (Spatial Reference ID) ist ein Bezeichner, der das Koordinatensystem angibt, in dem die **geometry** -Instanz dargestellt wird. Zwei Instanzen mit unterschiedlichen SRIDs können nicht verglichen werden.  
   
  **So können Sie die SRID einer Instanz festlegen oder zurückgeben**  
@@ -300,7 +300,7 @@ SELECT @g.STBoundary().ToString();
 > [!NOTE]
 > Diese Eigenschaft kann geändert werden.  
   
-##  <a name="rel"></a> Bestimmen der Beziehungen zwischen geometry-Instanzen  
+##  <a name="determining-relationships-between-geometry-instances"></a><a name="rel"></a> Bestimmen der Beziehungen zwischen geometry-Instanzen  
  Der **geometry** -Datentyp stellt viele integrierte Methoden zur Verfügung, mit denen die Beziehungen zwischen zwei **geometry** -Instanzen bestimmt werden können.  
   
  **So bestimmen Sie, ob zwei Instanzen die gleiche Punktmenge umfassen**  
@@ -336,10 +336,10 @@ SELECT @g.STBoundary().ToString();
  **So bestimmen Sie die kürzeste Entfernung zwischen Punkten in zwei Geometrien**  
  [STDistance](../../t-sql/spatial-geometry/stdistance-geometry-data-type.md)  
   
-##  <a name="defaultsrid"></a> geometry-Instanzen haben standardmäßig die SRID 0 (null)  
+##  <a name="geometry-instances-default-to-zero-srid"></a><a name="defaultsrid"></a> geometry-Instanzen haben standardmäßig die SRID 0 (null)  
  Der Standard-SRID für **geometry** -Instanzen lautet in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0. Bei räumlichen **geometry** -Daten ist zur Ausführung von Berechnungen des SRID der Räumlichkeitsinstanz nicht erforderlich. Daher können sich Instanzen in einer undefinierten ebenen Fläche befinden. Zur Angabe einer undefinierten ebenen Fläche in Berechnungen mit Methoden des **geometry** -Datentyps wird in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] der SRID 0 verwendet.  
   
-##  <a name="examples"></a> Beispiele  
+##  <a name="examples"></a><a name="examples"></a> Beispiele  
 Die folgenden zwei Beispiele zeigen, wie Geometriedaten hinzugefügt und abgefragt werden.  
   
 ### <a name="example-a"></a>Beispiel A.

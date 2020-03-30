@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70059295"
 ---
 # <a name="create-a-push-subscription"></a>Erstellen eines Pushabonnements
@@ -31,7 +31,7 @@ ms.locfileid: "70059295"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
  
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
 Erstellen Sie mit dem Assistenten für neue Abonnements ein Pushabonnement auf dem Verleger oder Abonnenten. Folgen Sie den Seiten im Assistenten für folgende Aufgaben:  
   
 - Angeben des Verlegers und der Veröffentlichung.  
@@ -74,7 +74,7 @@ Erstellen Sie mit dem Assistenten für neue Abonnements ein Pushabonnement auf d
   
 3. Klicken Sie mit der rechten Maustaste zuerst auf den Ordner **Lokale Abonnements** und anschließend auf **Neue Abonnements**.  
   
-4. Wählen Sie im Assistenten für neue Abonnements auf der Seite **Veröffentlichung** in der Dropdownliste **Verleger** die Option **\<SQL Server-Verleger suchen>** oder **\<Oracle-Verleger suchen>** aus.  
+4. Wählen Sie im Assistenten für neue Abonnements auf der Seite **Veröffentlichung** in der Dropdownliste **Verleger\< die Option** **SQL Server-Verleger suchen>\< oder** **Oracle-Verleger suchen>** aus.  
   
 5. Stellen Sie im Dialogfeld **Verbindung mit Server herstellen** eine Verbindung mit dem Verleger her.  
   
@@ -82,7 +82,7 @@ Erstellen Sie mit dem Assistenten für neue Abonnements ein Pushabonnement auf d
   
 7. Schließen Sie die Seiten im Assistenten für neue Abonnements ab.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
 Sie können Pushabonnements mithilfe von gespeicherten Replikationsprozeduren programmgesteuert erstellen. Die verwendeten gespeicherten Prozeduren hängen vom Typ der Veröffentlichung ab, zu der das Abonnement gehört.  
   
 > [!IMPORTANT]
@@ -150,7 +150,7 @@ Sie können Pushabonnements mithilfe von gespeicherten Replikationsprozeduren pr
 > [!IMPORTANT]
 > Wenn Sie ein Pushabonnement auf einem Verleger mit einem Remoteverteiler erstellen, werden die angegebenen Werte für alle Parameter, einschließlich *job_login* und *job_password*, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Im folgenden Beispiel wird ein Pushabonnement für eine Transaktionsveröffentlichung erstellt. Die Werte für den Anmeldenamen und das Kennwort werden zur Laufzeit mithilfe von **sqlcmd**-Skriptvariablen bereitgestellt.  
   
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_1.sql)]  
@@ -159,7 +159,7 @@ Sie können Pushabonnements mithilfe von gespeicherten Replikationsprozeduren pr
   
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten  
+##  <a name="using-replication-management-objects"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten  
  Sie können Pushabonnements mithilfe von Replikationsverwaltungsobjekten (RMO) programmgesteuert erstellen. Die RMO-Klassen, die Sie zum Erstellen eines Pushabonnements verwenden, hängen vom Typ der Veröffentlichung ab, für die das Abonnement erstellt wird.  
   
 > [!IMPORTANT]
@@ -245,7 +245,7 @@ Sie können Pushabonnements mithilfe von gespeicherten Replikationsprozeduren pr
 > [!IMPORTANT]  
 > Wenn Sie ein Pushabonnement auf einem Verleger mit einem Remoteverteiler erstellen, werden die angegebenen Werte für alle Eigenschaften (einschließlich <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>) als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-###  <a name="PShellExample"></a> Beispiele (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Beispiele (RMO)  
  Im folgenden Beispiel wird ein neues Pushabonnement für eine Transaktionsveröffentlichung erstellt. Die Anmeldeinformationen für das Windows-Konto, mit denen Sie den Verteilungs-Agent-Auftrag ausführen, werden zur Laufzeit übergeben.  
   
  [!code-cs[HowTo#rmo_CreateTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpushsub)]  
