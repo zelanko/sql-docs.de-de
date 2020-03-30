@@ -927,17 +927,17 @@
       href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
     - name: Lastenausgleich von Paketen auf Remoteservern mithilfe des SQL Server-Agents
       href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
-- name: Horizontales Skalieren
+- name: Aufskalieren
   items:
     - name: Übersicht
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: Erste Schritte mit SSIS Scale Out auf einem einzelnen Computer
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: 'Exemplarische Vorgehensweise: Einrichten von horizontaler Hochskalierung für Integration Services'
+    - name: 'Exemplarische Vorgehensweise: Einrichten von Integration Services Scale Out'
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
-    - name: Ausführen von Paketen in horizontaler Hochskalierung
+    - name: Ausführen von Paketen in Scale Out
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
-    - name: Hinzufügen eines SSIS Scale Out-Workers mit dem Manager für horizontales Hochskalieren
+    - name: Hinzufügen eines SSIS Scale Out-Workers mit dem Scale Out-Manager
       href: ../integration-services/scale-out/add-scale-out-worker.md
     - name: Scale Out-Master
       href: ../integration-services/scale-out/integration-services-ssis-scale-out-master.md
@@ -1724,7 +1724,7 @@
       href: ../integration-services/microsoft-connector-for-sap-bw-f1-help.md
     - name: Zertifizierung von SAP
       href: ../integration-services/certification-by-sap.md
-- name: Tutorials
+- name: Lernprogramme
   href: ../integration-services/integration-services-tutorials.md
   items:
     - name: Erstellen eines Pakets

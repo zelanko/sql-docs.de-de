@@ -16,10 +16,10 @@ ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115826"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Optionen des Task 'Datenbank sichern' für Wartungsplan
@@ -38,7 +38,7 @@ ms.locfileid: "68115826"
  Erstellen Sie eine neue Serververbindung, die bei der Ausführung dieses Tasks verwendet werden soll. Das Dialogfeld **Neue Verbindung** wird im Folgenden beschrieben.  
   
  **Datenbanken**  
- Gibt die Datenbanken an, die von dieser Aufgabe betroffen sind. Wenn diese Option ausgewählt ist, enthält die Dropdownliste die folgenden Optionen: **Alle Datenbanken**, **Alle Systemdatenbanken**, **Alle Benutzerdatenbanken**, **Diese Datenbanken**.  
+ Gibt die Datenbanken an, die von dieser Aufgabe betroffen sind. Bei Auswahl dieser Option werden in der Dropdownliste die folgenden Optionen angezeigt: **Alle Datenbanken**, **Alle Systemdatenbanken**, **Alle Benutzerdatenbanken**, **Diese Datenbanken**.  
   
  **Alle Datenbanken**  
  Generiert einen Wartungsplan, der Wartungstasks für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken ausführt.  
@@ -126,7 +126,7 @@ ms.locfileid: "68115826"
  Stellt mithilfe der Windows-Authentifizierung eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] her.  
   
  **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
- Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] her. Diese Option ist nicht verfügbar.  
+ Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her. Diese Option ist nicht verfügbar.  
   
  **Benutzername**  
  Stellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
