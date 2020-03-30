@@ -20,10 +20,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 45f53291d70d08fa75ab158db3911c058fdba5c7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253534"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
@@ -36,18 +36,18 @@ In diesem Thema wird beschrieben, wie Sie Größenbeschränkungen für Auftragsv
   
 -   **Vorbereitungen:**  
   
-    [Security](#Security)  
+    [Sicherheit](#Security)  
   
 -   **So legen Sie Größenbeschränkungen für den Auftragsverlauf fest mit**  
   
     [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Vorbereitungen  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="security"></a><a name="Security"></a>Sicherheit  
 Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Verwenden von SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Verwenden von SQL Server Management Studio  
   
 *So ändern Sie die Größe des Auftragsverlaufsprotokolls basierend auf der Basisgröße:*
   

@@ -22,10 +22,10 @@ ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 518367b32d46f0aff4fd09714839afa76e7009c9
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198497"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Einstellungen der Reporting Services-Übermittlungserweiterungen
@@ -37,7 +37,7 @@ ms.locfileid: "79198497"
 ## <a name="e-mail-delivery-settings"></a>Einstellungen für die E-Mail-Übermittlung  
  In der folgenden Tabelle werden die Einstellungen der E-Mail-Übermittlung für Abonnements aufgeführt, die Berichtsserver-E-Mail verwenden.  
   
-|Einstellung|Wert|  
+|Einstellung|value|  
 |-------------|-----------|  
 |**TO**|Die E-Mail-Adresse, die in der **An**-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Erforderlich.|  
 |**CC**|Die E-Mail-Adresse, die in der **CC**-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Optional.|  
@@ -53,7 +53,7 @@ ms.locfileid: "79198497"
 ## <a name="file-share-delivery-settings"></a>Einstellungen der Dateifreigabeübermittlung  
  In der folgenden Tabelle werden die Einstellungen der Dateifreigabeübermittlung für Abonnements aufgelistet.  
   
-|Einstellung|Wert|  
+|Einstellung|value|  
 |-------------|-----------|  
 |**FILENAME**|Der Name der Datei, die auf dem Datenträger gespeichert wird.|  
 |**FILEEXTN**|Gibt an, ob eine Dateierweiterung für den gerenderten Bericht enthalten sein soll. Der Wert ist entweder **TRUE** oder **FALSE**.|  

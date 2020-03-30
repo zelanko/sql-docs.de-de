@@ -11,10 +11,10 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284359"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Von den SQL Server-Editionen unterstützte Integration Services-Funktionen
@@ -37,7 +37,7 @@ Die SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zu
     
 > [![Download aus dem Evaluation Center](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Laden Sie SQL Server 2016 aus dem Evaluation Center herunter.](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
-## <a name="ISNew"></a> Neue Integration Services-Funktionen in SQL Server 2017
+## <a name="new-integration-services-features-in-sql-server-2017"></a><a name="ISNew"></a> Neue Integration Services-Funktionen in SQL Server 2017
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -49,13 +49,13 @@ Die SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zu
 
 <sup>2</sup> Diese Funktion wird auch in SQL Server 2016 mit Service Pack 1 unterstützt.
 
-## <a name="IEWiz"></a> SQL Server-Import/Export-Assistent
+## <a name="sql-server-import-and-export-wizard"></a><a name="IEWiz"></a> SQL Server-Import/Export-Assistent
 
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |SQL Server-Import/Export-Assistent|Ja|Ja|Ja|Ja|Ja|  
 
-## <a name="IS"></a> Integration Services  
+## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -66,7 +66,7 @@ Die SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zu
 |Hadoop-/HDFS-Connectors und -Tasks|Ja|Ja||||  
 |Grundlegende Datenprofilerstellungs-Tools|Ja|Ja|||| 
 
-## <a name="ISAA"></a>Integration Services – Erweiterte Quellen und Ziele  
+## <a name="integration-services---advanced-sources-and-destinations"></a><a name="ISAA"></a>Integration Services – Erweiterte Quellen und Ziele  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -77,7 +77,7 @@ Die SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zu
 |Ziel für Dimensionsverarbeitung|Ja|||||  
 |Ziel für Partitionsverarbeitung|Ja|||||  
   
-## <a name="ISAT"></a> Integration Services – Erweiterte Tasks und Transformationen  
+## <a name="integration-services---advanced-tasks-and-transformations"></a><a name="ISAT"></a> Integration Services – Erweiterte Tasks und Transformationen  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  

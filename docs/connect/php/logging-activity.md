@@ -13,10 +13,10 @@ ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993331"
 ---
 # <a name="logging-activity"></a>Protokollieren von Aktivitäten
@@ -36,7 +36,7 @@ pdo_sqlsrv.log_severity = <number>
   
 Für**log_severity** sind die folgenden Werte möglich.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |---------|---------------|  
 |0|Die Protokollierung ist deaktiviert (Standardeinstellung, wenn nichts definiert ist).|  
 |-1|Gibt an, dass Fehler, Warnungen und Hinweise protokolliert werden.|  
@@ -61,7 +61,7 @@ Sie können die Protokollierung mit der [sqlsrv_configure](../../connect/php/sql
   
 Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSubsystems** -Einstellung verwendet werden können:  
   
-|Wert (entsprechende ganze Zahl in Klammern)|Beschreibung|  
+|Wert (entsprechende ganze Zahl in Klammern)|BESCHREIBUNG|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Aktiviert die Protokollierung aller Subsysteme.|  
 |SQLSRV_LOG_SYSTEM_OFF(0)|Deaktiviert die Protokollierung. Dies ist die Standardoption.|  
@@ -92,7 +92,7 @@ Nachdem die Protokollierung aktiviert wurde, müssen Sie angeben, was protokolli
   
 Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSeverity** -Einstellung verwendet werden können:  
   
-|Wert (entsprechende ganze Zahl in Klammern)|Beschreibung|  
+|Wert (entsprechende ganze Zahl in Klammern)|BESCHREIBUNG|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Gibt an, dass Fehler, Warnungen und Hinweise protokolliert werden.|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|Gibt an, dass Fehler protokolliert werden Dies ist die Standardoption.|  

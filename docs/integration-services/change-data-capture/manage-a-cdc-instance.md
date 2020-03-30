@@ -13,10 +13,10 @@ ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f145b536072314594af473488bc0b933c443230e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294691"
 ---
 # <a name="manage-a-cdc-instance"></a>Verwalten einer CDC-Instanz
@@ -69,20 +69,20 @@ ms.locfileid: "71294691"
  **Status**  
  Diese Registerkarte enthält Informationen und Statistiken zum aktuellen Status der CDC-Instanz. Sie liefert die folgenden Informationen.  
   
--   **Status:** Ein Symbol, das den aktuellen Status der CDC-Instanz angibt. Die Status sind unten beschrieben.  
+-   **Status**: Ein Symbol, das den aktuellen Status für die CDC-Instanz angibt. Die Status sind unten beschrieben.  
   
     |||  
     |-|-|  
-    |![Fehler](../../integration-services/change-data-capture/media/error.gif "Fehler")|**Error**. Die Oracle CDC-Instanz wird nicht ausgeführt, da ein nicht wiederholbarer Fehler aufgetreten ist. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Falsch konfiguriert**: Es ist ein Konfigurationsfehler aufgetreten, der einen manuellen Eingriff erfordert.<br /><br /> **Password Required**: Für die Oracle CDC-Instanz wurde kein Kennwort festgelegt, oder das Kennwort ist nicht gültig.<br /><br /> **Unerwartet**: Alle anderen nicht behebbaren Fehler.|  
-    |![Okay](../../integration-services/change-data-capture/media/okay.gif "Okay")|**Wird ausgeführt:** Die CDC-Instanz wird ausgeführt und verarbeitet Änderungsdatensätze. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Idle**: Alle Änderungsdatensätze wurden verarbeitet und in den Zieländerungstabellen gespeichert. Es sind keine aktiven Transaktionen mehr vorhanden.<br /><br /> **Processing**: Es werden Änderungsdatensätze verarbeitet, die noch nicht in die Änderungstabellen geschrieben wurden.|  
-    |![Beenden](../../integration-services/change-data-capture/media/stop.gif "Beenden")|**Beendet:** Die CDC-Instanz wird nicht ausgeführt. Der Status Beendet gibt an, dass die CDC-Instanz auf normale Weise beendet wurde.|  
-    |![Angehalten](../../integration-services/change-data-capture/media/paused.gif "Angehalten")|**Paused**: Die CDC-Instanz wird ausgeführt, aber die Verarbeitung wurde aufgrund eines wiederholbaren Fehlers angehalten. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Getrennt**: Die Verbindung mit der Oracle-Quelldatenbank kann nicht hergestellt werden. Die Verarbeitung wird fortgesetzt, nachdem die Verbindung wiederhergestellt wurde.<br /><br /> **Storage**: Der Speicher ist voll. Die Verarbeitung wird fortgesetzt, wenn zusätzlicher Speicher verfügbar wird.<br /><br /> **Logger**: Die Protokollierung ist mit Oracle verbunden, kann aber die Oracle-Transaktionsprotokolle aufgrund eines vorübergehenden Problems nicht lesen, weil z.B. ein erforderliches Transaktionsprotokoll nicht verfügbar ist.|  
+    |![Fehler](../../integration-services/change-data-capture/media/error.gif "Fehler")|**Error**. Die Oracle CDC-Instanz wird nicht ausgeführt, da ein nicht wiederholbarer Fehler aufgetreten ist. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Misconfigured**: Es ist ein Konfigurationsfehler aufgetreten, der einen manuellen Eingriff erfordert.<br /><br /> **Kennwort erforderlich**: Für die Oracle CDC-Instanz wurde kein Kennwort festgelegt, oder das Kennwort ist nicht gültig.<br /><br /> **Unerwartet**: Alle anderen nicht behebbaren Fehler.|  
+    |![Okay](../../integration-services/change-data-capture/media/okay.gif "Okay")|**Wird ausgeführt:** Die CDC-Instanz wird ausgeführt und verarbeitet Änderungsdatensätze. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Im Leerlauf**: Alle Änderungsdatensätze wurden verarbeitet und in den Zieländerungstabellen gespeichert. Es sind keine aktiven Transaktionen mehr vorhanden.<br /><br /> **Processing**: Es werden Änderungsdatensätze verarbeitet, die noch nicht in die Änderungstabellen geschrieben wurden.|  
+    |![Beenden](../../integration-services/change-data-capture/media/stop.gif "Beenden")|**Beendet**: Die CDC-Instanz wird nicht ausgeführt. Der Status Beendet gibt an, dass die CDC-Instanz auf normale Weise beendet wurde.|  
+    |![Angehalten](../../integration-services/change-data-capture/media/paused.gif "Angehalten")|**Angehalten**: Die CDC-Instanz wird ausgeführt, aber die Verarbeitung wurde aufgrund eines wiederholbaren Fehlers angehalten. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Getrennt**: Die Verbindung zur Oracle-Quelldatenbank kann nicht hergestellt werden. Die Verarbeitung wird fortgesetzt, nachdem die Verbindung wiederhergestellt wurde.<br /><br /> **Speicher**: Der Speicher ist voll. Die Verarbeitung wird fortgesetzt, wenn zusätzlicher Speicher verfügbar wird.<br /><br /> **Logger**: Die Protokollierung ist mit Oracle verbunden, kann aber die Oracle-Transaktionsprotokolle aufgrund eines vorübergehenden Problems nicht lesen, weil z. B. ein erforderliches Transaktionsprotokoll nicht verfügbar ist.|  
   
 -   **Detailed Status**: Der aktuelle Unterstatus.  
   
 -   **Status Message**: Weitere Informationen zum aktuellen Status.  
   
--   **Timestamp**: Die Uhrzeit im UTC-Format, zu der der CDC-Status zuletzt aus der Statustabelle gelesen wurde.  
+-   **Zeitstempel**: Die Uhrzeit im UTC-Format, zu der der CDC-Status zuletzt aus der Statustabelle gelesen wurde.  
   
 -   **Currently Processing**: In diesem Abschnitt können Sie die folgenden Informationen überwachen.  
   
@@ -90,17 +90,17 @@ ms.locfileid: "71294691"
   
     -   **Last change timestamp**: Die Ortszeit der letzten Änderung, die für die Oracle CDC-Instanz in den Transaktionsprotokollen der Oracle-Quelldatenbank sichtbar ist. Hierbei werden Informationen zur aktuellen Latenzzeit der CDC-Instanz beim Lesen des Oracle-Transaktionsprotokolls bereitgestellt.  
   
-    -   **Transaction log head CN**: Die letzte Änderungsnummer (CN), die aus dem Oracle-Transaktionsprotokoll gelesen wurde.  
+    -   **Transaction log head CN:** Die letzte Änderungsnummer (CN), die aus dem Oracle-Transaktionsprotokoll gelesen wurde.  
   
-    -   **Transaction log tail CN**: Die Änderungsnummer zum Wiederherstellen oder Neustarten der CDC-Instanz. Die Oracle CDC-Instanz greift auf diese Position zurück, falls ein Neustart durchgeführt wird oder ein anderer Fehler auftritt (einschließlich Clusterfailover).  
+    -   **Transaction log tail CN**: Die Änderungsnummer zur Wiederherstellung oder zum Neustarten der CDC-Instanz. Die Oracle CDC-Instanz greift auf diese Position zurück, falls ein Neustart durchgeführt wird oder ein anderer Fehler auftritt (einschließlich Clusterfailover).  
   
-    -   **Current CN**: Die letzte Änderungsnummer (SCN) in der Oracle-Quelldatenbank (nicht das Transaktionsprotokoll).  
+    -   **Current CN:** Die letzte Änderungsnummer (SCN) in der Oracle-Quelldatenbank (nicht das Transaktionsprotokoll).  
   
-    -   **Active transactions**: Die aktuelle Anzahl von Oracle-Quelltransaktionen, die von der Oracle CDC-Instanz verarbeitet werden und für die noch keine Entscheidung getroffen wurde (Commit/Rollback).  
+    -   **Aktive Transaktionen:** Die aktuelle Anzahl von Oracle-Quelltransaktionen, die von der Oracle CDC-Instanz verarbeitet werden und für die noch keine Entscheidung getroffen wurde (Commit/Rollback).  
   
-    -   **Staged transactions**: Die aktuelle Anzahl von Oracle-Quelltransaktionen, die für die Tabelle [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) bereitgestellt werden.  
+    -   **Bereitgestellte Transaktionen:** Die aktuelle Anzahl von Oracle-Quelltransaktionen, die für die Tabelle [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) bereitgestellt werden.  
   
--   **Counters**: In diesem Abschnitt können Sie die folgenden Informationen überwachen.  
+-   **Indikatoren**: In diesem Abschnitt können Sie die folgenden Informationen überwachen.  
   
     -   **Completed transactions**: Die Anzahl der Transaktionen, die seit der letzten Zurücksetzung der CDC-Instanz abgeschlossen wurden. Dies schließt keine Transaktionen ein, die keine relevanten Tabellen enthalten.  
   

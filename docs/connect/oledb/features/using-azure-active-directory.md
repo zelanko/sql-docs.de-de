@@ -10,10 +10,10 @@ ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
 ms.openlocfilehash: b459877be731da11b33d13772bbf186ecf72198c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285804"
 ---
 # <a name="using-azure-active-directory"></a>Verwenden von Azure Active Directory
@@ -47,7 +47,7 @@ Zur Unterstützung der Azure Active Directory-Authentifizierung wurden die folge
 |Verbindungszeichenfolgen-Schlüsselwort|Verbindungseigenschaft|BESCHREIBUNG|
 |---               |---                |---        |
 |Access Token|SSPROP_AUTH_ACCESS_TOKEN|Gibt ein Zugriffstoken für die Authentifizierung gegenüber Azure Active Directory an. |
-|Authentifizierung|SSPROP_AUTH_MODE|Gibt die zu verwendende Authentifizierungsmethode an.|
+|Authentication|SSPROP_AUTH_MODE|Gibt die zu verwendende Authentifizierungsmethode an.|
 
 Weitere Informationen zu den neuen Schlüsselwörtern/Eigenschaften finden Sie auf den folgenden Seiten:
 - [Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)

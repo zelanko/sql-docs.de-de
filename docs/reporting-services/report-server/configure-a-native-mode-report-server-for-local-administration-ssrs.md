@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080892"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)
@@ -57,19 +57,19 @@ ms.locfileid: "77080892"
   
 -   [Weitere Informationen](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview"></a> Übersicht der Konfigurationsänderungen  
+##  <a name="overview-of-configuration-changes"></a><a name="bkmk_configuraiton_overview"></a> Übersicht der Konfigurationsänderungen  
  Durch die folgenden Konfigurationsänderungen wird der Server so konfiguriert, dass Berichtsserverinhalte und -vorgänge mit Standardbenutzerberechtigungen verwaltet werden können:  
   
 -   Fügen Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URLs zu vertrauenswürdigen Websites hinzu. Internet Explorer wird unter den aufgelisteten Betriebssystemen standardmäßig im **geschützten Modus**ausgeführt. Diese Funktion verhindert, dass Browseranforderungen Prozesse auf hoher Ebene erreichen, die auf demselben Computer ausgeführt werden. Sie können den geschützten Modus für die Berichtsserveranwendungen deaktivieren, indem Sie sie als vertrauenswürdige Sites hinzufügen.  
   
 -   Erstellen Sie Rollenzuweisungen, die Ihnen als Berichtsserveradministrator die Berechtigung zur Verwaltung von Inhalt und Vorgängen verleihen, ohne die Funktion **Als Administrator ausführen** in Internet Explorer verwenden zu müssen. Durch das Erstellen von Rollenzuweisungen für Ihr Windows-Benutzerkonto erhalten Sie Zugriff auf einen Berichtsserver mit Inhalts-Manager- und Systemadministratorberechtigungen durch explizite Rollenzuweisungen, die die vordefinierten, integrierten Rollenzuweisungen ersetzen, die von Reporting Services erstellt werden.  
   
-##  <a name="bkmk_configure_local_server"></a> So konfigurieren Sie den lokalen Berichtsserver und die Webportalverwaltung  
+##  <a name="to-configure-local-report-server-and-web-portal-administration"></a><a name="bkmk_configure_local_server"></a> So konfigurieren Sie den lokalen Berichtsserver und die Webportalverwaltung  
  Führen Sie die Konfigurationsschritte in diesem Abschnitt aus, wenn beim Navigieren zu einem lokalen Berichtsserver eine mit der folgenden vergleichbare Fehlermeldung angezeigt wird:  
   
 -   Der Benutzer `'Domain\[user name]`' verfügt nicht über die erforderlichen Berechtigungen. Stellen Sie sicher, dass ausreichende Berechtigungen erteilt und die Einschränkungen der Windows-Benutzerkontensteuerung (UAC) behandelt wurden.  
   
-###  <a name="bkmk_site_settings"></a> Browsereinstellungen für vertrauenswürdige Sites  
+###  <a name="trusted-site-settings-in-the-browser"></a><a name="bkmk_site_settings"></a> Browsereinstellungen für vertrauenswürdige Sites  
   
 1.  Öffnen Sie ein Browserfenster mit "Als Administrator ausführen"-Berechtigungen. Klicken Sie im Menü **Start** mit der rechten Maustaste auf **Internet Explorer**, und wählen Sie dann **Als Administrator ausführen** aus.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "77080892"
   
 12. Klicken Sie auf **OK**.  
   
-###  <a name="bkmk_configure_folder_settings"></a> Ordnereinstellungen des Webportals  
+###  <a name="web-portal-folder-settings"></a><a name="bkmk_configure_folder_settings"></a> Ordnereinstellungen des Webportals  
   
 1.  Klicken Sie im Webportal auf der Startseite auf **Ordner verwalten**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "77080892"
   
 6.  Klicken Sie auf **OK**.  
   
-###  <a name="bkmk_configure_site_settings"></a> Siteeinstellungen des Webportals  
+###  <a name="web-portal-site-settings"></a><a name="bkmk_configure_site_settings"></a> Siteeinstellungen des Webportals  
   
 1.  Öffnen Sie den Browser mit Administratorprivilegien, und navigieren Sie zum Webportal (`https://<server name>/reports`).  
   
@@ -115,7 +115,7 @@ ms.locfileid: "77080892"
   
     ![Zahnradsymbol](../media/ssrsgearmenu.png)erforderlich.
     >[!TIP]  
-    >**Hinweis:** Wenn die Option **Siteeinstellungen** nicht angezeigt wird, schließen Sie den Browser, öffnen Sie ihn mit Administratorberechtigungen nochmals, und navigieren Sie zum Webportal.  
+    >**Hinweis:** Wenn die Option **Siteeinstellungen** nicht angezeigt wird, schließen Sie den Browser, öffnen Sie ihn mit Administratorberechtigungen erneut, und navigieren Sie zum Webportal.  
   
 3.  Wählen Sie auf der Seite „Siteeinstellungen“ die Option **Sicherheit** aus, und wählen Sie dann **Gruppe oder Benutzer hinzufügen** aus.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "77080892"
   
 8. Öffnen Sie das Webportal in Internet Explorer erneut, ohne **Als Administrator ausführen**zu verwenden.  
   
-##  <a name="bkmk_configure_ssms"></a> So konfigurieren Sie SQL Server Management Studio (SSMS) für die lokale Verwaltung des Berichtsservers  
+##  <a name="to-configure-sql-server-management-studio-ssms-for-local-report-server-administration"></a><a name="bkmk_configure_ssms"></a> So konfigurieren Sie SQL Server Management Studio (SSMS) für die lokale Verwaltung des Berichtsservers  
  Standardmäßig ist es nur möglich, auf alle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbaren Berichtsservereigenschaften zuzugreifen, wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit Administratorprivilegien starten.  
   
  **So konfigurieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** , sodass [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht jedes Mal mit erweiterten Berechtigungen gestartet werden muss:  
@@ -152,7 +152,7 @@ ms.locfileid: "77080892"
   
  Wenn Sie jetzt [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] öffnen und nicht explizit **Als Administrator ausführen** auswählen, haben Sie Zugriff auf die Berichtsservereigenschaften.  
   
-##  <a name="bkmk_configure_ssdt"></a> So konfigurieren Sie SQL Server Data Tools (SSDT) für die Veröffentlichung auf einem lokalen Berichtsserver  
+##  <a name="to-configure-sql-server-data-tools-ssdt-to-publish-to-a-local-report-server"></a><a name="bkmk_configure_ssdt"></a> So konfigurieren Sie SQL Server Data Tools (SSDT) für die Veröffentlichung auf einem lokalen Berichtsserver  
  Wenn Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] unter einem der im ersten Abschnitt dieses Themas aufgeführten Betriebssysteme installiert haben und SSDT mit einem lokalen Berichtsserver im einheitlichen Modus interagieren soll, treten Berechtigungsfehler auf, sofern Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nicht mit erweiterten Berechtigungen öffnen oder Reporting Services-Rollen konfigurieren. Wenn Sie nicht über ausreichende Berechtigungen verfügen, können z. B. folgende Probleme auftreten:  
   
 -   Beim Versuch, Berichtselemente auf dem lokalen Berichtsserver bereitzustellen, wird im Fenster **Fehlerliste** eine Fehlermeldung wie die folgende angezeigt:  
@@ -171,7 +171,7 @@ Sie können jetzt Berichte und andere Elemente auf einem lokalen Berichtsserver 
   
 -   Weitere Informationen finden Sie in den Abschnitten [Ordnereinstellungen des Webportals](#bkmk_configure_folder_settings) und [Siteeinstellungen des Webportals](#bkmk_configure_site_settings) weiter oben in diesem Thema.  
   
-##  <a name="bkmk_addiitonal_informaiton"></a> Zusätzliche Informationen  
+##  <a name="additional-information"></a><a name="bkmk_addiitonal_informaiton"></a> Zusätzliche Informationen  
  Ein weiterer häufiger Konfigurationsschritt in Verbindung mit der Verwaltung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] besteht darin, Port 80 in der Windows-Firewall zu öffnen, um den Zugriff auf den Berichtsservercomputer zu ermöglichen. Anweisungen finden Sie unter [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

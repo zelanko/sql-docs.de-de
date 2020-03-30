@@ -15,10 +15,10 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67285043"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Überwachen von Reporting Services-Abonnements
@@ -38,12 +38,12 @@ ms.locfileid: "67285043"
   
 -   [Verwalten inaktiver Abonnements](#bkmk_manage_inactive)  
   
-##  <a name="bkmk_native_mode"></a> Benutzeroberfläche des einheitlichen Modus  
+##  <a name="native-mode-user-interface"></a><a name="bkmk_native_mode"></a> Benutzeroberfläche des einheitlichen Modus  
  Einzelne [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Benutzer können den Status eines Abonnements auf der Seite **Meine Abonnements** oder der Registerkarte **Abonnements** im Webportal überwachen. Abonnementseiten enthalten Spalten mit dem Status des Abonnements und mit Informationen, wann das Abonnement zuletzt ausgeführt wurde. Statusmeldungen werden aktualisiert, wenn das Abonnement zur Verarbeitung ansteht. Falls dieser Vorgang niemals ausgelöst wird (z. B. wenn eine Momentaufnahme zur Berichtsausführung niemals aktualisiert oder ein Zeitplan niemals ausgeführt wird), wird die Statusmeldung nicht aktualisiert.  
   
  Die folgende Tabelle enthält die möglichen Werte für die Spalte **Status** .  
   
-|Status|Beschreibung|  
+|Status|BESCHREIBUNG|  
 |------------|-----------------|  
 |Neues Abonnement|Wird beim Erstellen des Abonnements angezeigt.|  
 |Inaktiv|Dieser Status wird angezeigt, wenn ein Abonnement nicht verarbeitet werden kann. Weitere Informationen finden Sie weiter in diesem Artikel unter „Verwalten inaktiver Abonnements“.|  
@@ -66,7 +66,7 @@ ms.locfileid: "67285043"
 ### <a name="native-mode-log-files"></a>Protokolldateien im einheitlichen Modus  
  Beim Auftreten eines Fehlers während der Übermittlung erfolgt ein Eintrag im Ablaufverfolgungsprotokoll des Berichtsservers.  
   
- Berichtsserveradministratoren können den Abonnementübermittlungsstatus in den Dateien „**reportserverservice_**.log“ überprüfen. Für die E-Mail-Übermittlung schließen Protokolldateien des Berichtsservers eine Aufzeichnung der Verarbeitungs- und Übermittlungsvorgänge für bestimmte E-Mail-Konten ein. Der Standardspeicherort der Protokolldateien lautet:  
+ Berichtsserveradministratoren können den Abonnementübermittlungsstatus in den Dateien „**reportserverservice_** .log“ überprüfen. Für die E-Mail-Übermittlung schließen Protokolldateien des Berichtsservers eine Aufzeichnung der Verarbeitungs- und Übermittlungsvorgänge für bestimmte E-Mail-Konten ein. Der Standardspeicherort der Protokolldateien lautet:  
   
  `C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles`  
   
@@ -76,18 +76,18 @@ ms.locfileid: "67285043"
   
  Es folgt eine Beispielfehlermeldung einer Ablaufverfolgungsprotokolldatei im Zusammenhang mit Abonnements:  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 (EnableExecutionLogging wird gemäß Serversystemeigenschaften auf „TRUE“ initialisiert properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41::) FEHLER: **Fehler beim Senden von E-Mail**. Ausnahme: System.Net.Mail.SmtpException: Für den SMTP-Server ist eine sichere Verbindung erforderlich, oder der Client wurde nicht authentifiziert. Die Serverantwort lautete: 5.7.1 Client wurde nicht auf System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response) authentifiziert.  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging auf TRUE gemäß Serversystemeigenschaften properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **E-Mail-Sendefehler**. Ausnahme: System.Net.Mail.SmtpException: Für den SMTP-Server ist eine sichere Verbindung erforderlich, oder der Client wurde nicht authentifiziert. Die Serverantwort war: 5.7.1 Client wurde nicht auf System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response) authentifiziert.  
   
  Die Protokolldatei enthält keine Informationen, ob der Bericht geöffnet wurde oder ob die Übermittlung tatsächlich erfolgreich war. Eine erfolgreiche Übermittlung bedeutet, dass der Prozessor für Zeitplanung und Übermittlung keine Fehler generiert und der Berichtsserver eine Verbindung zum Mailserver hergestellt hat. Falls für die E-Mail im Postfach des Benutzers eine Fehlermeldung wegen Unzustellbarkeit generiert wird, werden diese Informationen nicht in die Protokolldatei aufgenommen. Weitere Informationen zu Protokolldateien finden Sie unter [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
-##  <a name="bkmk_sharepoint_mode"></a> SharePoint-Modus  
+##  <a name="sharepoint-mode"></a><a name="bkmk_sharepoint_mode"></a> SharePoint-Modus  
  So überwachen Sie ein Abonnement im SharePoint-Modus: Der Abonnementstatus kann auf der Seite **Abonnements verwalten** überwacht werden.  
   
 1.  Navigieren Sie zu der Dokumentbibliothek, die den Bericht enthält.  
   
-2.  Öffnen Sie das Kontextmenü des Berichts (**...**).  
+2.  Öffnen Sie das Kontextmenü des Berichts ( **...** ).  
   
-3.  Wählen Sie die erweiterte Menüoption (**...**) aus.  
+3.  Wählen Sie die erweiterte Menüoption ( **...** ) aus.  
   
 4.  Wählen Sie **Abonnements verwalten**aus.  
   
@@ -97,12 +97,12 @@ ms.locfileid: "67285043"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|Prozess|Bereich|Category|Ebene|Correlation|`Message`|  
-|21.05.2019 14:34:06:15|App-Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Berichtsserver-E-Mail-Erweiterung|Unerwartet|(leer)|**Fehler beim Senden von E-Mail.** Ausnahme: System.Net.Mail.SmtpException: Postfach nicht verfügbar. Die Serverantwort lautete: 5.7.1 Client does not have permissions to send as this sender at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) at System.Net.Mail.SmtpClient.Send(MailMessage message) at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification) (5.7.1 Client ist nicht berechtigt, als dieser Absender zu senden: an System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse), an System.Net.Mail.DataStopCommand.Send(SmtpConnection conn), an System.Net.Mail.SmtpClient.Send(MailMessage message) und an Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification))|  
+|21.05.2019 14:34:06:15|App-Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Berichtsserver-E-Mail-Erweiterung|Unerwartet|(leer)|**Fehler beim Senden von E-Mail.** Ausnahme: System.Net.Mail.SmtpException: Postfach nicht verfügbar. Die Serverantwort war: 5.7.1 Client ist nicht berechtigt, als dieser Absender zu senden  an System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  an System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  an System.Net.Mail.SmtpClient.Send(MailMessage message)  an Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
-##  <a name="bkmk_use_powershell"></a> Verwenden von PowerShell zur Überwachung von Abonnements  
+##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> Verwenden von PowerShell zur Überwachung von Abonnements  
  Beispiele für PowerShell-Skripts, die Sie zum Überprüfen des Status von Abonnements im einheitlichen oder SharePoint-Modus verwenden können, finden Sie unter [Manage Subscription Owners and Run Subscription - PowerShell (PowerShell: Verwalten von Abonnementbesitzern und Ausführen des Abonnements)](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
-##  <a name="bkmk_manage_inactive"></a> Verwalten inaktiver Abonnements  
+##  <a name="managing-inactive-subscriptions"></a><a name="bkmk_manage_inactive"></a> Verwalten inaktiver Abonnements  
  Falls ein Abonnement nicht mehr aktiv ist, sollten Sie es entweder löschen oder erneut aktivieren, indem Sie die zugrunde liegenden Bedingungen auflösen, die die Verarbeitung verhindern. Abonnements können beim Auftreten von Bedingungen, die die Verarbeitung verhindern, deaktiviert werden. Dazu zählen die folgenden Bedingungen:  
   
 -   Entfernen oder Deinstallieren der im Abonnement angegebenen Übermittlungserweiterung.  

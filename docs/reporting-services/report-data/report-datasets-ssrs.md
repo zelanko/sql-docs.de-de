@@ -9,10 +9,10 @@ ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081938"
 ---
 # <a name="report-datasets-ssrs"></a>Berichtsdatasets (SSRS)
@@ -36,12 +36,12 @@ ms.locfileid: "77081938"
   
  Sie können einem Bericht auch Datasets hinzufügen, indem Sie Berichtsteile mit den Datasets hinzufügen, von denen sie abhängig sind. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Informationen zum Erstellen eines Berichts, in dem Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank angezeigt werden, finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Informationen zum Erstellen eines Berichts, der eigene Daten enthält, finden Sie unter [Tutorial: Erstellen eines Quick-Diagrammberichts offline &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Eine Anleitung zum Erstellen eines Berichts, der Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank anzeigt, finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Informationen zum Erstellen eines Berichts, der seine eigenen Daten enthält, finden Sie unter [Tutorial: Erstellen eines Quick-Diagrammberichts offline &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Methods"></a> Hinzufügen von Berichtsdaten  
+##  <a name="adding-report-data"></a><a name="Methods"></a> Hinzufügen von Berichtsdaten  
  Im Berichts-Generator stehen Ihnen folgende Möglichkeiten zum Hinzufügen von Berichtsdaten zur Verfügung.  
   
 -   Fügen Sie dem Bericht Berichtsteile von einem Berichtsserver hinzu. Jeder Berichtsteil ist in sich abgeschlossen und schließt abhängige Datasets ein. Die Datasets sind vordefiniert.  
@@ -76,7 +76,7 @@ ms.locfileid: "77081938"
 -   [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-##  <a name="QuickStart"></a> Hinzufügen von Daten mit Berichtsteilen  
+##  <a name="adding-data-with-report-parts"></a><a name="QuickStart"></a> Hinzufügen von Daten mit Berichtsteilen  
  Berichtsteile enthalten die Datasets, von denen sie abhängen. Diese Datasets werden basierend auf freigegebenen Datenquellen erstellt, die auf dem Berichtsserver verfügbar sind. Wenn Sie dem Bericht im Berichts-Generator einen Berichtsteil hinzufügen, werden die abhängigen Datasets dem Bericht hinzugefügt (ähnlich wie beim manuellen Hinzufügen). Ein vordefiniertes Diagramm enthält z.B. ein Dataset. Zeigen Sie eine Vorschau des Berichts an, um die Daten anzuzeigen.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "77081938"
 -   Weitere Informationen finden Sie unter [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) und [Berichtsteile im Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
   
-##  <a name="Queries"></a> Abfragen und Abfrage-Designer  
+##  <a name="queries-and-query-designers"></a><a name="Queries"></a> Abfragen und Abfrage-Designer  
  Zum Angeben der Daten, die Sie aus einer Datenquelle abrufen möchten, erstellen Sie einen Abfragebefehl. Jeder Datenquellentyp stellt einen zugehörigen *Abfrage-Designer* bereit, mit dessen Hilfe Sie die Abfrage erstellen können. Der Abfrage-Designer kann grafisch oder textbasiert sein. In einem grafischen Abfrage-Designer zeigen Sie Metadaten an, die die Daten in der externen Datenquelle darstellen, und erstellen durch Ziehen von Feldern oder Entitäten in die Abfrageentwurfsoberfläche interaktiv eine Abfrage. In einem textbasierten Abfrage-Designer schreiben oder importieren Sie Abfragen in der Abfragesyntax, die von der externen Datenquelle unterstützt wird.  
   
  Im Abfrage-Designer können Sie die Abfrage ausführen, um Beispieldaten anzuzeigen und die Abfragebefehlssyntax zu überprüfen. Spaltennamen im Resultset werden die Feldnamen, die im Berichtsdatenbereich angezeigt werden. Das Resultset muss ein einzelner Satz von Zeilen und Spalten sein, der die gleiche Anzahl von Werten für jede Datenzeile aufweist. Mehrere Resultsets aus einer einzelnen Abfrage werden nicht unterstützt. Unregelmäßige Hierarchien, die keine konstante Anzahl von Spalten enthalten und für jede Zeile eine andere Anzahl von Datenwerten erzeugen können, werden nicht unterstützt.  
@@ -97,7 +97,7 @@ ms.locfileid: "77081938"
  Die Kommunikation zwischen einer Datenerweiterung und der externen Datenquelle wird von Datenanbietern behandelt. Die Unterstützung der Abfragebefehlssyntax, Abfrageparameter und Datentypen für Werte im Resultset wird von den einzelnen Datenanbietern bestimmt. Weitere Informationen finden Sie im Thema zum jeweiligen Datenerweiterungstyp und unter [Abfrageentwurfstools (SSRS)](query-design-tools-ssrs.md).  
   
   
-##  <a name="HowTo"></a> Themen zur Vorgehensweise  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Themen zur Vorgehensweise  
  [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
@@ -117,10 +117,10 @@ ms.locfileid: "77081938"
  [Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
   
-##  <a name="Section"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="Section"></a> In diesem Abschnitt  
  [Report Parts and Datasets in Report Builder (Berichtsteile und Datasets in Berichts-Generator)](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](specify-credential-and-connection-information-for-report-data-sources.md)  
   

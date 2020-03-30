@@ -13,10 +13,10 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 153de78e01099cf1079c6fe0ad34c15c6d7afc44
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258166"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failoverrichtlinie für Failoverclusterinstanzen
@@ -34,7 +34,7 @@ ms.locfileid: "75258166"
 > [!IMPORTANT]  
 >  Automatische Failover auf und von einer FCI sind in einer Always On-Verfügbarkeitsgruppe nicht zulässig. Ein manuelles Failover auf eine FCI bzw. von einer FCI ist in einer Always On-Verfügbarkeitsgruppe jedoch zulässig.  
   
-##  <a name="Concepts"></a> Übersicht über die Failoverrichtlinie  
+##  <a name="failover-policy-overview"></a><a name="Concepts"></a> Übersicht über die Failoverrichtlinie  
  Der Failoverprozess lässt sich in folgende Schritte gliedern:  
   
 1.  [Überwachen des Integritätsstatus](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md#monitor)  
@@ -43,7 +43,7 @@ ms.locfileid: "75258166"
   
 3.  [Reagieren auf Fehler](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md#respond)  
   
-###  <a name="monitor"></a> Überwachen des Integritätsstatus  
+###  <a name="monitor-the-health-status"></a><a name="monitor"></a> Überwachen des Integritätsstatus  
  Es gibt drei Arten von Integritätsstatus, die für die FCI überwacht werden:  
   
 -   [Status des SQL Server-Diensts](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md#service)  
@@ -52,10 +52,10 @@ ms.locfileid: "75258166"
   
 -   [SQL Server-Komponentendiagnose](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md#component)  
   
-####  <a name="service"></a> Status des SQL Server-Diensts  
+####  <a name="state-of-the-sql-server-service"></a><a name="service"></a> Status des SQL Server-Diensts  
  Der WSFC-Dienst überwacht den Startstatus des SQL Server-Diensts auf dem aktiven FCI-Knoten, um die Beendigung des SQL Server-Diensts zu erkennen.  
   
-####  <a name="instance"></a> Reaktionsfähigkeit der SQL Server-Instanz  
+####  <a name="responsiveness-of-the-sql-server-instance"></a><a name="instance"></a> Reaktionsfähigkeit der SQL Server-Instanz  
  Während des Starts von SQL Server verwendet der WSFC-Dienst die Ressourcen-DLL der SQL Server-Datenbank-Engine, um eine neue Verbindung auf einem separaten Thread zu erstellen, die ausschließlich zum Überwachen des Integritätsstatus verwendet wird. Dadurch wird sichergestellt, dass die SQL-Instanz auch unter höherer Auslastung über die erforderlichen Ressourcen zum Übermitteln ihres Integritätsstatus verfügt. Unter Verwendung dieser dedizierten Verbindung führt SQL Server die gespeicherte Systemprozedur [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) im Wiederholungsmodus aus, um regelmäßig den Integritätsstatus der SQL Server-Komponenten an die Ressourcen-DLL zu übermitteln.  
   
  Die Ressourcen-DLL bestimmt die Reaktionsfähigkeit der SQL-Instanz mithilfe eines Timeouts für die Zustandsüberprüfung. Die HealthCheckTimeout-Eigenschaft definiert, wie lange die Ressourcen-DLL auf eine Antwort von der gespeicherten Prozedur sp_server_diagnostics wartet, bevor der WSFC-Dienst die Meldung erhält, dass die SQL-Instanz nicht reagiert. Diese Eigenschaft kann sowohl mit T-SQL als auch im Failovercluster-Manager-Snap-In konfiguriert werden. Weitere Informationen finden Sie unter [Configure HealthCheckTimeout Property Settings](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md). Nachfolgend wird beschrieben, wie sich diese Eigenschaft auf die Einstellungen bezüglich Timeout und Wiederholungsintervall auswirken:  
@@ -66,7 +66,7 @@ ms.locfileid: "75258166"
   
 -   Wenn die dedizierte Verbindung unterbrochen wird, versucht die Ressourcen-DLL für die durch HealthCheckTimeout angegebene Dauer, eine neue Verbindung mit der SQL-Instanz herzustellen, bevor an den WSFC-Dienst gemeldet wird, dass die SQL-Instanz nicht reagiert.  
   
-####  <a name="component"></a> SQL Server-Komponentendiagnose  
+####  <a name="sql-server-component-diagnostics"></a><a name="component"></a> SQL Server-Komponentendiagnose  
  Die gespeicherte Systemprozedur sp_server_diagnostics sammelt in regelmäßigen Abständen Diagnoseinformationen zu den Komponenten der SQL-Instanz. Die gesammelten Diagnoseinformationen werden als Zeile für die folgenden Komponenten angegeben und an den aufrufenden Thread übergeben.  
   
 1.  System  
@@ -86,7 +86,7 @@ ms.locfileid: "75258166"
 > [!TIP]  
 >  Die gespeicherte Prozedur sp_server_diagnostic wird von der SQL Server Always On-Technologie genutzt und kann in jeder SQL Server-Instanz zur einfacheren Problemerkennung und -behandlung verwendet werden.  
   
-####  <a name="determine"></a> Bestimmen von Fehlern  
+####  <a name="determining-failures"></a><a name="determine"></a> Bestimmen von Fehlern  
  Die Ressourcen-DLL der SQL Server-Datenbank-Engine bestimmt anhand der FailureConditionLevel-Eigenschaft, ob der erkannte Integritätsstatus eine Fehlerbedingung darstellt. Durch die FailureConditionLevel-Eigenschaft wird definiert, welcher erkannte Integritätsstatus zu einem Neustart oder Failover führt. Die unterschiedlichsten Optionen sind verfügbar: So kann beispielsweise nie ein automatischer Neustart oder ein automatisches Failover ausgelöst werden, oder bei jeder möglichen Fehlerbedingung wird immer ein automatischer Neustart bzw. ein automatisches Failover ausgeführt. Weitere Informationen zum Konfigurieren dieser Eigenschaft finden Sie unter [Configure FailureConditionLevel Property Settings](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
   
  Die Fehlerbedingungen werden auf einer ansteigenden Skala festgelegt. Auf der Ebene 1-5 enthält jede Ebene die Bedingungen der vorherigen Ebenen sowie die eigenen Bedingungen. Dies bedeutet, dass die Wahrscheinlichkeit eines Failovers oder Neustarts mit jeder Ebene zunimmt. Die Fehlerbedingungsebenen werden in der folgenden Tabelle beschrieben.  
@@ -104,8 +104,8 @@ ms.locfileid: "75258166"
   
  *Standardwert  
   
-####  <a name="respond"></a> Reagieren auf Fehler  
- Wie der WSFC-Dienst auf die erkannten Fehlerbedingungen reagiert, hängt vom WSFC-Quorumstatus sowie von den Neustart- und Failovereinstellungen der FCI-Ressourcengruppe ab. Wenn die FCI das WSFC-Quorum verloren hat, wird die gesamte FCI offline geschaltet und weist keine Hochverfügbarkeit mehr auf. Wenn die FCI noch über das WSFC-Quorum verfügt, reagiert der WSFC-Dienst u. U. wie folgt: Zunächst wird versucht, den fehlerhaften Knoten neu zu starten, und dann ein Failover ausgeführt, falls die Neustarts nicht erfolgreich sind. Die Neustart- und Failovereinstellungen werden im Failovercluster-Manager-Snap-In konfiguriert. Weitere Informationen zu diesen Einstellungen finden Sie unter [\<Ressource> Eigenschaften: Richtlinien-Registerkarte](https://technet.microsoft.com/library/cc725685.aspx).  
+####  <a name="responding-to-failures"></a><a name="respond"></a> Reagieren auf Fehler  
+ Wie der WSFC-Dienst auf die erkannten Fehlerbedingungen reagiert, hängt vom WSFC-Quorumstatus sowie von den Neustart- und Failovereinstellungen der FCI-Ressourcengruppe ab. Wenn die FCI das WSFC-Quorum verloren hat, wird die gesamte FCI offline geschaltet und weist keine Hochverfügbarkeit mehr auf. Wenn die FCI noch über das WSFC-Quorum verfügt, reagiert der WSFC-Dienst u. U. wie folgt: Zunächst wird versucht, den fehlerhaften Knoten neu zu starten, und dann ein Failover ausgeführt, falls die Neustarts nicht erfolgreich sind. Die Neustart- und Failovereinstellungen werden im Failovercluster-Manager-Snap-In konfiguriert. Weitere Informationen zu diesen Einstellungen finden Sie unter [\<Eigenschaften von <Ressource>: Richtlinien (Registerkarte)](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Informationen zum Verwalten der Quorumintegrität finden Sie unter [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   

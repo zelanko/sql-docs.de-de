@@ -13,10 +13,10 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3c6614425cf8796bd7ec462a62f9410b9ca5857
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936381"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Laden von Microsoft Drivers for PHP for SQL Server
@@ -28,7 +28,7 @@ Sie können die vorab erstellten Treiber für Ihre Plattform von der GitHub-Proj
 
 Unter Linux und macOS können die Treiber auch mithilfe von PECL installiert werden, wie im [Tutorial zur Installation](../../connect/php/installation-tutorial-linux-mac.md) erläutert.
 
-Sie können die Treiber auch aus der Quelle erstellen, wenn Sie das PHP-Buildsystem oder `phpize` verwenden. Wenn Sie die Treiber aus der Quelle erstellen, haben Sie die Möglichkeit, die Treiber statisch in PHP anstatt als freigegebene Erweiterungen zu erstellen, indem Sie beim Erstellen mit PHP dem `./configure`-Befehl `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (unter Linux und macOS) oder `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (unter Windows) hinzufügen. Weitere Informationen zum PHP-Buildsystem und `phpize` finden Sie in der [PHP-Dokumentation](http://php.net/manual/install.php).
+Sie können die Treiber auch aus der Quelle erstellen, wenn Sie das PHP-Buildsystem oder `phpize` verwenden. Wenn Sie die Treiber aus der Quelle erstellen, haben Sie die Möglichkeit, die Treiber statisch in PHP anstatt als freigegebene Erweiterungen zu erstellen, indem Sie beim Erstellen mit PHP dem `--enable-sqlsrv=static --with-pdo_sqlsrv=static`-Befehl `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (unter Linux und macOS) oder `./configure` (unter Windows) hinzufügen. Weitere Informationen zum PHP-Buildsystem und `phpize` finden Sie in der [PHP-Dokumentation](http://php.net/manual/install.php).
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>Verschieben Sie die Treiberdatei in Ihr Erweiterungsverzeichnis  
 Die Treiberdatei muss sich in einem Verzeichnis befinden, in dem die PHP-Runtime sie finden kann. Es ist am einfachsten, die Treiberdatei im standardmäßigen PHP-Erweiterungsverzeichnis zu platzieren. Sie finden das Standardverzeichnis, indem Sie `php -i | sls extension_dir` unter Windows oder `php -i | grep extension_dir` unter Linux/macOS ausführen. Wenn Sie das standardmäßige Erweiterungsverzeichnis nicht verwenden, geben Sie in der PHP-Konfigurationsdatei (php.ini) mit der Option **extension_dir** ein Verzeichnis an. Wenn Sie die Treiberdatei beispielsweise unter Windows im Verzeichnis `c:\php\ext` abgelegt haben, fügen Sie der php.ini-Datei die folgende Zeile hinzu:

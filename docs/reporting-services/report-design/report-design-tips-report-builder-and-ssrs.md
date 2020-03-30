@@ -9,10 +9,10 @@ ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e527b4059e225b012a2fa39cf21033b8af5ab9e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081090"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Berichtsentwurfstipps (Berichts-Generator und SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081090"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DesigningReports"></a> Entwerfen von Berichten  
+##  <a name="designing-reports"></a><a name="DesigningReports"></a> Entwerfen von Berichten  
   
 -   Ein sorgfältig geplanter Bericht vermittelt Informationen, die als Grundlage für Aktionen dienen können. Identifizieren Sie die Fragen, die der Bericht beantworten soll. Behalten Sie diese Fragen im Kopf, wenn Sie den Bericht entwerfen.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "77081090"
   
  Weitere Informationen zu Aspekten, die Sie beim Entwerfen von Berichten berücksichtigen sollten, finden Sie unter [Planen eines Berichts &#40;Berichts-Generator&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
   
-##  <a name="NamingConventions"></a> Benennungskonventionen für Berichte, Datenquellen und Datasets  
+##  <a name="naming-conventions-for-reports-data-sources-and-datasets"></a><a name="NamingConventions"></a> Benennungskonventionen für Berichte, Datenquellen und Datasets  
   
 -   Verwenden Sie Benennungskonventionen für Datenquellen und Datasets, die die Quelle der Daten dokumentieren.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "77081090"
   
 -   Verwenden Sie Unterstriche statt Leerzeichen in Berichtsnamen. Wenn Sie einen Bericht aus dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal herunterladen, werden Leerzeichen durch Unterstriche ersetzt. Wenn Sie die Downloadfunktion verwenden, um Berichte lokal zu speichern, und sie dann in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]einschließen, werden mit Unterstrichen Berichtsabhängigkeiten für Unterberichte und Drillthroughlinks genau beibehalten.  
   
-##  <a name="Data"></a> Arbeiten mit Daten  
+##  <a name="working-with-data"></a><a name="Data"></a> Arbeiten mit Daten  
   
 -   Rufen Sie im ersten Schritt alle Daten ab, mit denen Sie arbeiten möchten, um sie im Berichtsdatenbereich anzuzeigen. Während Sie die Fragen verfeinern, die der Bericht beantworten soll, überlegen Sie sich, wie Sie die Daten in den Berichtsdatasets auf das Notwendige beschränken können.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "77081090"
   
 -   Abhängig von den Anforderungen können Sie Namen und Orte von Berichtsdatenquellen, Datasetabfrage-Befehlstext und Parameterwerte im Bericht anzeigen. Die erste Frage, die viele neue Benutzer haben, richtet sich nach dem Ursprung der Daten. Wenn Sie den Bericht übersichtlicher gestalten möchten, können Sie Textfelder mit diesem Informationstyp bedingt ausblenden und Benutzer entscheiden lassen, ob sie die Informationen anzeigen möchten. Versuchen Sie, diese Informationen auf der letzten Seite des Berichts hinzuzufügen. Legen Sie die Textfeldsichtbarkeit auf Grundlage eines Parameters fest, den der Benutzer ändern kann.  
   
-##  <a name="DesignSurface"></a> Interagieren mit der Berichtsentwurfsoberfläche  
+##  <a name="interacting-with-the-report-design-surface"></a><a name="DesignSurface"></a> Interagieren mit der Berichtsentwurfsoberfläche  
  Die Berichtsentwurfsoberfläche ist nicht WYSIWIG. Wenn Sie Berichtselemente auf der Entwurfsoberfläche platzieren, wirkt sich ihr relativer Speicherort darauf aus, wie die Elemente auf der gerenderten Berichtsseite angezeigt werden. Leerraum wird beibehalten.  
   
 -   Verwenden Sie Ausrichtungslinien und die Layoutschaltflächen, um Elemente auf der Berichtsentwurfsoberfläche auszurichten und anzuordnen. Beispielsweise können Sie die oberen Bereiche oder die Ränder ausgewählter Elemente ausrichten, ein Element an die Größe eines anderen Elements angleichen oder den Abstand zwischen Elementen anpassen.  
@@ -88,7 +88,7 @@ ms.locfileid: "77081090"
   
 -   Um Felder aus dem Berichtsdatenbereich in den Gruppierungsbereich zu ziehen, vermeiden Sie das Ziehen des Felds über andere Berichtselemente auf der Entwurfsoberfläche, da dabei die anderen Objekte ausgewählt werden und die Auswahl des Tablix-Datenbereichs aufgehoben wird. Ziehen Sie das Feld im Berichtsdatenbereich nach unten und dann zum Gruppierungsbereich.  
   
-###  <a name="Selecting"></a> Auswählen von Elementen  
+###  <a name="selecting-items"></a><a name="Selecting"></a> Auswählen von Elementen  
  Um das gewünschte Objekt auf der Berichtsentwurfsoberfläche auszuwählen, verwenden Sie die ESC-Taste, das Rechtsklick-Kontextmenü, den Bereich Eigenschaften, den Gruppierungsbereich.  
   
 -   -   Drücken Sie die ESC-Taste, um den Stapel von Berichtselementen durchzugehen, die den gleichen Platz auf der Entwurfsoberfläche einnehmen.  
@@ -101,31 +101,31 @@ ms.locfileid: "77081090"
   
  In Berichts-Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]können Sie aus der Dropdownliste von Objekten auf der Eigenschaftenbereichs-Symbolleiste oder in der hierarchischen Sicht von Berichtselementen im Fenster Dokumentgliederung auswählen. Sie können Elemente in diesem Bereich auswählen und sehen, welches Element auf der Entwurfsoberfläche ausgewählt wird. Zum Öffnen des Fensters **Dokumentgliederung** zeigen Sie im Menü **Ansicht**auf **Weitere Fenster**, und klicken Sie dann auf Dokumentgliederung.  
   
-##  <a name="ReportItems"></a> Arbeiten mit bestimmten Arten von Berichtselementen  
+##  <a name="working-with-specific-types-of-report-items"></a><a name="ReportItems"></a> Arbeiten mit bestimmten Arten von Berichtselementen  
   
-###  <a name="Parameters"></a> Verwenden von Parametern  
+###  <a name="working-with-parameters"></a><a name="Parameters"></a> Verwenden von Parametern  
   
 -   Der primäre Zweck von Berichtsparametern besteht im Filtern von Daten in der Datenquelle und Abrufen nur der für den Zweck des Berichts benötigten Daten.  
   
 -   Suchen Sie für Berichtsparameter ein Gleichgewicht zwischen möglicher Interaktivität und Unterstützung des Benutzers dabei, die gewünschten Ergebnisse zu erhalten. Sie können z. B. Standardwerte für einen Parameter auf gängige Werte festlegen.  
   
-###  <a name="Text"></a> Arbeiten mit Text  
+###  <a name="working-with-text"></a><a name="Text"></a> Arbeiten mit Text  
   
 -   Wenn Sie mehrere Zeilen in ein Textfeld einfügen, wird der Text als Lauftext hinzugefügt. Jede Textausführung kann nur als Einheit formatiert werden. Um jede Zeile separat zu formatieren, fügen Sie eine neue Zeile ein, indem Sie nach Bedarf die EINGABETASTE in der Textausführung drücken. Sie können dann die Formatierung und Formate auf jede unabhängige Textzeile im Textfeld anwenden.  
   
 -   Sie können Formateigenschaften und Aktionen in einem Textfeld oder einem Platzhaltertext im Textfeld festlegen. Wenn es nur eine Textzeile gibt, ist es effizienter, die Eigenschaften für das Textfeld statt für den Text festzulegen.  
   
-###  <a name="Expressions"></a> Arbeiten mit Ausdrücken  
+###  <a name="working-with-expressions"></a><a name="Expressions"></a> Arbeiten mit Ausdrücken  
   
 -   Machen Sie sich mit einfachen und komplexen Ausdrucksformaten vertraut. Sie können ein einfaches Ausdrucksformat direkt in Textfelder, Eigenschaften im Eigenschaftenbereich oder an Positionen in Dialogfeldern, die einen Ausdruck akzeptieren, eingeben. Weitere Informationen finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
 -   Wenn Sie einen Ausdruck erstellen, hilft es, jeden Teil unabhängig zu erstellen und seinen Wert zu überprüfen. Sie können dann alle Teile in einen abschließenden Ausdruck kombinieren. Eine nützliche Technik ist, ein Textfeld in einer Matrixzelle hinzuzufügen, jeden Teil des Ausdrucks anzuzeigen und bedingte Sichtbarkeit im Textfeld festzulegen. Um die Rahmenart und die Farbe zu steuern, wenn das Textfeld ausgeblendet wird, platzieren Sie zuerst das Textfeld in einem Rechteck, und legen Sie dann die Rahmenart und die Farbe des Rechtecks entsprechend der Matrix fest.  
   
-###  <a name="Indicators"></a> Arbeiten mit Indikatoren  
+###  <a name="working-with-indicators"></a><a name="Indicators"></a> Arbeiten mit Indikatoren  
   
 -   Standardmäßig zeigt ein Indikator mindestens drei Status an. Nachdem Sie einem Bericht einen Indikator hinzugefügt haben, können Sie ihn durch Hinzufügen oder Entfernen des Status konfigurieren. Wählen Sie zur einfacheren Anzeige durch die Benutzer einen Indikator aus, der sich sowohl hinsichtlich der Farbe als auch der Form verändert.  
   
-##  <a name="Rendering"></a> Steuern des Renderns von Berichtselementen auf der Berichtsseite  
+##  <a name="controlling-the-rendering-of-report-items-on-the-report-page"></a><a name="Rendering"></a> Steuern des Renderns von Berichtselementen auf der Berichtsseite  
   
 -   Auf der Berichtsentwurfsoberfläche wachsen Berichtselemente, um den Inhalt aus dem verknüpften Dataset, Ausdruck, Unterbericht oder Text aufzunehmen.  
   

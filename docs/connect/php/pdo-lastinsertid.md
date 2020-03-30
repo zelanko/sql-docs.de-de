@@ -11,10 +11,10 @@ ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2068b4099649b7ebd8aa2bcb4c58aa0d59e123d0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936215"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
@@ -30,7 +30,7 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*name*: Eine optionale Zeichenfolge, mit der Sie den Sequenznamen angeben können 
+$*name*: Eine optionale Zeichenfolge, mit der Sie den Sequenznamen angeben können. 
   
 ## <a name="return-value"></a>Rückgabewert  
 Ist kein Sequenzname angegeben, wird der Bezeichner für die zuletzt hinzugefügte Zeile als Zeichenfolge zurückgegeben.

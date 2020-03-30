@@ -16,17 +16,17 @@ ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70809948"
 ---
 # <a name="database-mail-messaging-objects"></a>Messagingobjekte für Datenbank-E-Mail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Die **msdb** -Datenbank ist die Hostdatenbank der Datenbank-E-Mail. Diese Datenbank enthält die gespeicherten Prozeduren und Messagingobjekte für Datenbank-E-Mail. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] enthält den Assistenten zum Konfigurieren von Datenbank-E-Mail, um Datenbank-E-Mail zu aktivieren, Profile und Konten zu erstellen und zu verwalten sowie Datenbank-E-Mail-Optionen zu konfigurieren.  
   
-##  <a name="ComponentsAndConcepts"></a> Objekte in der **msdb** -Datenbank  
+##  <a name="objects-in-msdb-database"></a><a name="ComponentsAndConcepts"></a> Objekte in der **msdb** -Datenbank  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] muss in der **msdb** -Datenbank aktiviert sein. Allerdings wird für Datenbank-E-Mail kein [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Netzwerk verwendet. Deshalb müssen Benutzer keinen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Endpunkt erstellen, um Datenbank-E-Mail zu verwenden. Für den externen Datenbank-E-Mail-Vorgang wird eine standardmäßige [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindung verwendet, um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu kommunizieren.  
   
  Datenbank-E-Mail legt in der **msdb** -Datenbank die folgenden Objekte offen, wenn Datenbank-E-Mail aktiviert ist.  

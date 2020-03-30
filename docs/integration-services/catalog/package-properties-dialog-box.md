@@ -14,10 +14,10 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 906809946b22012e6a8831017fb57769fc6063b8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298980"
 ---
 # <a name="package-properties-dialog-box"></a>Paketeigenschaften (Dialogfeld)
@@ -35,7 +35,7 @@ ms.locfileid: "71298980"
   
 -   [Konfigurieren der Optionen](#options)  
   
-##  <a name="open_dialog"></a> Öffnen des Dialogfelds "Paketeigenschaften"  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> Öffnen des Dialogfelds "Paketeigenschaften"  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server her.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71298980"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Paket, und wählen Sie **Eigenschaften**aus.  
   
-##  <a name="options"></a> Konfigurieren der Optionen  
+##  <a name="configure-the-options"></a><a name="options"></a> Konfigurieren der Optionen  
  Auf der Seite **Allgemein** können Sie die Eigenschaften des ausgewählten Pakets anzeigen.  
   
  Alle Eigenschaften auf der Seite **Allgemein** sind schreibgeschützt.  

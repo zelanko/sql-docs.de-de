@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242691"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten, um Modellstatistiken zu generieren
 
 Sie können einen Erstellungs-Contributor erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein Datenbankprojekt erstellen. In dieser exemplarischen Vorgehensweise erstellen Sie einen Erstellungs-Contributor mit der Bezeichnung ModelStatistics, von dem Statistiken über das SQL-Datenbankmodell ausgegeben werden, wenn Sie ein Datenbankprojekt erstellen. Da von diesem Erstellungs-Contributor beim Erstellen Parameter übernommen werden, sind einige zusätzliche Schritte erforderlich.  
   
@@ -70,7 +70,7 @@ Während des Erstellungsprozesses werden benutzerdefinierte Contributors aus dem
   
 In diesem Fall muss der erste Parameter des Attributs ein eindeutiger Bezeichner sein. Dieser wird verwendet, um den Contributor in Projektdateien zu kennzeichnen. Die beste Vorgehensweise ist die Kombination des Namespace der Bibliothek (in dieser exemplarischen Vorgehensweise „ExampleContributors“) mit dem Klassennamen (in dieser exemplarischen Vorgehensweise „ModelStatistics“), um den Bezeichner zu produzieren. Sie werden sehen, wie dieser Namespace zum Angeben verwendet wird, dass Ihr Contributor später in der exemplarischen Vorgehensweise verwendet werden soll.  
   
-## <a name="CreateBuildContributor"></a>Erstellen eines Erstellungs-Contributors  
+## <a name="create-a-build-contributor"></a><a name="CreateBuildContributor"></a>Erstellen eines Erstellungs-Contributors  
 Zum Erstellen eines Erstellungs-Contributors führen Sie folgende Aufgaben aus:  
   
 -   Erstellen Sie ein Klassenbibliotheksprojekt, und fügen Sie die erforderlichen Verweise hinzu.  
@@ -452,7 +452,7 @@ Zum Erstellen eines Erstellungs-Contributors führen Sie folgende Aufgaben aus:
   
     Als Nächstes müssen Sie die Assembly installieren, damit sie geladen wird, wenn Sie SQL-Projekte erstellen.  
   
-## <a name="InstallBuildContributor"></a>Installieren des Erstellungs-Contributors  
+## <a name="install-a-build-contributor"></a><a name="InstallBuildContributor"></a>Installieren des Erstellungs-Contributors  
 Zum Installieren eines Erstellungs-Contributors müssen Sie die Assembly und die zugehörige PDB-Datei in den Erweiterungsordner kopieren.  
   
 #### <a name="to-install-the-mybuildcontributor-assembly"></a>So installieren Sie die MyBuildContributor-Assembly  
@@ -464,7 +464,7 @@ Zum Installieren eines Erstellungs-Contributors müssen Sie die Assembly und die
     > [!NOTE]  
     > Der Pfad Ihrer kompilierten DLL-Datei lautet standardmäßig IhrProjektmappenpfad\IhrProjektpfad\bin\Debug oder IhrProjektmappenpfad\IhrProjektpfad\bin\Release.  
   
-## <a name="TestBuildContributor"></a>Ausführen oder Testen eines Erstellungs-Contributors  
+## <a name="run-or-test-your-build-contributor"></a><a name="TestBuildContributor"></a>Ausführen oder Testen eines Erstellungs-Contributors  
 Zum Ausführen oder Testen eines Erstellungs-Contributors führen Sie folgende Aufgaben aus:  
   
 -   Fügen Sie der SQLPROJ-Datei, die Sie zu erstellen planen, Eigenschaften hinzu.  
@@ -525,7 +525,7 @@ Nach dem Durchführen einer dieser Vorgehensweisen können Sie MSBuild verwenden
   
 1.  Klicken Sie in Visual Studio mit der rechten Maustaste auf Ihre Projekt, und wählen Sie „Neu erstellen”. Dadurch wird das Projekt neu erstellt. Sie sollten die generierten Modellstatistiken sehen, die die Ausgabe in der Erstellungsausgabe enthalten und in ModelStatistics.xml gespeichert werden. Beachten Sie, dass Sie möglicherweise im Projektmappen-Explorer „Alle Dateien anzeigen“ wählen müssen, um die XML-Datei zu sehen.  
   
-2.  Öffnen Sie die Eingabeaufforderung von Visual Studio: Klicken Sie im **Startmenü** auf **Alle Programme**, klicken Sie auf **Microsoft Visual Studio <Visual Studio Version>** , auf **Visual Studio-Tools** und dann auf **Visual Studio-Eingabeaufforderung (<Visual Studio Version>)** .  
+2.  Klicken Sie im **Startmenü** auf **Alle Programme**, klicken Sie auf **Microsoft Visual Studio<Visual Studio Version>** , auf **Visual Studio Tools** und dann auf **Visual Studio-Eingabeaufforderung (<Visual Studio Version>)** .  
   
 3.  Navigieren Sie in der Eingabeaufforderung zu dem Ordner, der Ihr SQL-Projekt enthält.  
   
@@ -593,5 +593,5 @@ Sie können weitere Tools erstellen, um die Verarbeitung der Ausgabe-XML-Datei d
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts zum Analysieren des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu analysieren](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

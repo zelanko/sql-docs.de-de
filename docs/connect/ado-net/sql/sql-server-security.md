@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: af4e3ff43499f32d276d27873211330bc28f0cc5
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896274"
 ---
 # <a name="sql-server-security"></a>SQL Server-Sicherheit
@@ -35,7 +35,7 @@ In den Themen in diesem Abschnitt werden die für Entwickler relevanten Sicherhe
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Authentifizierung in SQL Server](authentication-sql-server.md)  
-Beschreibt die Anmeldung und Authentifizierung bei SQL Server und bietet Links zu weiteren Ressourcen. 
+Beschreibt die Anmeldung und Authentifizierung in SQL Server und bietet Links zu weiteren Ressourcen. 
   
 [Anwendungssicherheitsszenarios in SQL Server](application-security-scenarios-sql-server.md)  
 Enthält Themen, in denen verschiedene Anwendungssicherheitsszenarien für ADO.NET- und SQL Server-Anwendungen erläutert werden.  

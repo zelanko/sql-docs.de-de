@@ -14,10 +14,10 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9aee0d7233b5f163a5f9c39f9053b9f0842aa7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298945"
 ---
 # <a name="project-properties-dialog-box"></a>Projekteigenschaften (Dialogfeld)
@@ -37,7 +37,7 @@ ms.locfileid: "71298945"
   
 -   [Festlegen der Optionen auf der Seite "Berechtigungen"](#permissions)  
   
-##  <a name="open_dialog"></a> Öffnen des Dialogfelds "Projekteigenschaften"  
+##  <a name="open-the-project-properties-dialog-box"></a><a name="open_dialog"></a> Öffnen des Dialogfelds "Projekteigenschaften"  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server her.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71298945"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Projekt, und klicken Sie dann auf **Eigenschaften**.  
   
-##  <a name="general"></a> Festlegen der Optionen auf der Seite "Allgemein"  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Festlegen der Optionen auf der Seite "Allgemein"  
  Verwenden Sie die Seite "Allgemein", um Projekteigenschaften anzuzeigen.  
   
  **Name**  
@@ -69,7 +69,7 @@ ms.locfileid: "71298945"
  **Bereitstellungsdatum**  
  Listet das Datum und die Uhrzeit der Bereitstellung oder erneuten Bereitstellung des Projekts auf.  
   
-##  <a name="permissions"></a> Festlegen der Optionen auf der Seite "Berechtigungen"  
+##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> Festlegen der Optionen auf der Seite "Berechtigungen"  
  Auf der Seite **Berechtigungen** können die expliziten Berechtigungen für das Projekt angezeigt oder festgelegt werden.  
   
  Durchsuchen  

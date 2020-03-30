@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253680"
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
@@ -35,11 +35,11 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
 2.  Die dreieckige Schaltfläche für die **Verweisliste** neben dem Feld **Suchen nach** ist jetzt aktiviert. Klicken Sie auf diese Schaltfläche, um eine Liste der am häufigsten verwendeten regulären Ausdrücke anzuzeigen. Wenn Sie ein Element aus dem Ausdrucks-Generator auswählen, wird es in die **Suchen nach** -Zeichenfolge eingefügt.  
   
 > [!NOTE]  
-> Zwischen der Syntax der regulären Ausdrücke, die in **Suchen nach** -Zeichenfolgen verwendet werden können, und der Syntax bei der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Programmierung gibt es bestimmte Unterschiede. So werden z.B. geschweifte Klammern „{}“ bei **Suchen und Ersetzen**für markierte Ausdrücke verwendet. Der Ausdruck "zo{1}" entspricht allen Vorkommen von "zo", gefolgt von der Markierung 1, wie in "Alonzo1" und "Gonzo1". In .NET Framework hingegen wird die Notation {} für Quantifizierer verwendet. Der Ausdruck "zo{1}" entspricht hier allen Vorkommen von "z", gefolgt von genau einem "o", wie in "zone", nicht aber in "zoo".  
+> Zwischen der Syntax der regulären Ausdrücke, die in **Suchen nach** -Zeichenfolgen verwendet werden können, und der Syntax bei der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Programmierung gibt es bestimmte Unterschiede. So werden z.B. geschweifte Klammern „ **“ bei** Suchen und Ersetzen{}für markierte Ausdrücke verwendet. Der Ausdruck "zo{1}" entspricht allen Vorkommen von "zo", gefolgt von der Markierung 1, wie in "Alonzo1" und "Gonzo1". In .NET Framework hingegen wird die Notation {} für Quantifizierer verwendet. Der Ausdruck "zo{1}" entspricht hier allen Vorkommen von "z", gefolgt von genau einem "o", wie in "zone", nicht aber in "zoo".  
   
  Die folgende Tabelle enthält eine Beschreibung der regulären Ausdrücke, die in der **Verweisliste**verfügbar sind.  
   
-|Ausdruck|Syntax|Beschreibung|  
+|Ausdruck|Syntax|BESCHREIBUNG|  
 |----------------|------------|-----------------|  
 |Beliebiges Zeichen|erforderlich.|Entspricht jedem beliebigen einzelnen Zeichen außer einem Zeilenumbruch.|  
 |0 oder mehr|*|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt alle möglichen Übereinstimmungen vor.|  
@@ -61,7 +61,7 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
   
  Die Liste aller regulären Ausdrücke, die in **Suchen und Ersetzen** -Vorgängen zulässig sind, ist zu lang, um in der **Verweisliste**angezeigt werden zu können. Sie können auch einen der folgenden regulären Ausdrücke in eine **Suchen nach** -Zeichenfolge einfügen:  
   
-|Ausdruck|Syntax|Beschreibung|  
+|Ausdruck|Syntax|BESCHREIBUNG|  
 |----------------|------------|-----------------|  
 |Minimal - zero or more|@|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
 |Minimal - one or more|#|Entspricht einem oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
@@ -85,7 +85,7 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
   
  In der folgenden Tabelle ist die Syntax für Übereinstimmungen in Bezug auf Standardeigenschaften von Unicode-Zeichen aufgelistet. Die aus zwei Buchstaben bestehende Abkürzung ist mit der in der Datenbank für Eigenschaften von Unicode-Zeichen identisch. Die Abkürzungen lassen sich als Teil eines Zeichensatzes angeben. So entspricht z. B. der Ausdruck [:Nd:Nl:No] einer beliebigen Ziffer.  
   
-|Ausdruck|Syntax|Beschreibung|  
+|Ausdruck|Syntax|BESCHREIBUNG|  
 |----------------|------------|-----------------|  
 |Großbuchstabe|:Lu|Entspricht einem beliebigen Großbuchstaben. So entspricht :Luhe z. B. "The", aber nicht "the".|  
 |Kleinbuchstabe|:Ll|Entspricht einem beliebigen Kleinbuchstaben. So entspricht :Llhe z. B. "the", aber nicht "The".|  
@@ -120,7 +120,7 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
   
  Neben den Standardeigenschaften von Unicode-Zeichen können auch die folgenden zusätzlichen Eigenschaften als Teil eines Zeichensatzes angegeben werden:  
   
-|Ausdruck|Syntax|Beschreibung|  
+|Ausdruck|Syntax|BESCHREIBUNG|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Entspricht einem beliebigen einzelnen Zeichen. So entspricht :Alhe Wörtern wie "The", "then" und "reached".|  
 |Numeric|:Nu|Entspricht einer beliebigen Zahl oder Ziffer.|  

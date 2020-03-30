@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531981"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Durchführen einer Offlinebereitstellung von Big Data-Clustern für SQL Server
@@ -55,7 +55,7 @@ In den folgenden Schritten wird beschrieben, wie Sie die Containerimages des Big
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
-### <a id="images"></a> Big Data-Cluster-Containerimages
+### <a name="big-data-cluster-container-images"></a><a id="images"></a> Big Data-Cluster-Containerimages
 
 Die folgenden Big Data-Cluster-Containerimages sind für eine Offlineinstallation erforderlich:
 - **mssql-app-service-proxy**
@@ -85,7 +85,7 @@ Die folgenden Big Data-Cluster-Containerimages sind für eine Offlineinstallatio
 - **mssql-ssis-app-runtime**
 
 
-## <a id="automated"></a> Automatisiertes Skript
+## <a name="automated-script"></a><a id="automated"></a> Automatisiertes Skript
 
 Sie können ein automatisiertes Python-Skript verwenden, das automatisch alle benötigten Containerimages pullt und sie in ein privates Repository überträgt.
 
@@ -120,7 +120,7 @@ Sie können ein automatisiertes Python-Skript verwenden, das automatisch alle be
 
 Bereitstellungen von Big Data-Clustern erfordern mehrere Tools, einschließlich **Python**, `azdata`und **kubectl**. Führen Sie die folgenden Schritte aus, um diese Tools auf einem Offlineserver zu installieren.
 
-### <a id="python"></a> Offlineinstallation von Python
+### <a name="install-python-offline"></a><a id="python"></a> Offlineinstallation von Python
 
 1. Laden Sie auf einem Computer mit Internetzugriff eine der folgenden komprimierten Dateien herunter, die Python enthalten:
 
@@ -138,7 +138,7 @@ Bereitstellungen von Big Data-Clustern erfordern mehrere Tools, einschließlich 
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="azdata"></a> Offlineinstallation von azdata
+### <a name="install-azdata-offline"></a><a id="azdata"></a> Offlineinstallation von azdata
 
 1. Führen Sie auf einem Computer mit Internetzugriff und [Python](https://wiki.python.org/moin/BeginnersGuide/Download) den folgenden Befehl aus, um alle `azdata`-Pakete in den aktuellen Ordner herunterzuladen.
 
@@ -154,7 +154,7 @@ Bereitstellungen von Big Data-Clustern erfordern mehrere Tools, einschließlich 
    pip install --no-index --find-links <path-to-packages> -r <path-to-requirements.txt>
    ```
 
-### <a id="kubectl"></a> Offlineinstallation von kubectl
+### <a name="install-kubectl-offline"></a><a id="kubectl"></a> Offlineinstallation von kubectl
 
 Führen Sie die folgenden Schritte aus, um **kubectl** auf einem Offlinecomputer zu installieren.
 

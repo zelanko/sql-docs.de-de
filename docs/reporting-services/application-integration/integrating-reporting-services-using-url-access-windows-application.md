@@ -17,10 +17,10 @@ ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f133f6cf53123ed7c05f7a7181d5c829b45a258d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74796903"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>Integrieren von Reporting Services mithilfe des URL-Zugriffs: Windows-Anwendung
@@ -89,7 +89,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 1.  Erstellen Sie entweder in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] oder in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] eine neue Windows-Anwendung.  
   
-2.  Suchen Sie im Dialogfeld **Toolbox** das <xref:System.Windows.Forms.WebBrowser>-Steuerelement.  
+2.  Suchen Sie im Dialogfeld <xref:System.Windows.Forms.WebBrowser>Toolbox**das**-Steuerelement.  
   
      Wenn **Toolbox** nicht sichtbar ist, können Sie darauf zugreifen, indem Sie im Menüelement **Ansicht** auf **Toolbox** klicken.  
   

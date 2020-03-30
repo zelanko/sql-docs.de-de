@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651953"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen
@@ -30,7 +30,7 @@ ms.locfileid: "62651953"
   
  ![SQL-Agent-Berechtigungen für Dienstanwendungs-Datenbanken](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "SQL-Agent-Berechtigungen für Dienstanwendungs-Datenbanken")  
   
-||Beschreibung|  
+||BESCHREIBUNG|  
 |------|-----------------|  
 |**1**|Die Instanz der SQL Server-Datenbank-Engine, die die Reporting Services-Dienstanwendungsdatenbanken hostet.|  
 |**2**|Die Instanz des SQL Server-Agents für die Instanz der SQL-Datenbank-Engine|  
@@ -57,7 +57,7 @@ ms.locfileid: "62651953"
   
 5.  Klicken Sie auf die Schaltfläche **OK** .  
   
-##  <a name="bkmk_download"></a> So laden Sie das Transact-SQL-Skript herunter  
+##  <a name="to-download-the-transact-sql-script"></a><a name="bkmk_download"></a> So laden Sie das Transact-SQL-Skript herunter  
   
 1.  Klicken Sie in der SharePoint-Zentraladministration in der Gruppe **Anwendungsverwaltung** auf **Dienstanwendungen verwalten**.  
   

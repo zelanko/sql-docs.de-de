@@ -11,10 +11,10 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080276"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)
@@ -27,7 +27,7 @@ In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Simple"></a> Verwenden von einfachen Ausdrücken  
+##  <a name="using-simple-expressions"></a><a name="Simple"></a> Verwenden von einfachen Ausdrücken  
  Auf der Entwurfsoberfläche und in Dialogfeldern werden einfache Ausdrücke in Klammern angezeigt. Ein Datasetfeld wird z. B. als `[ProductID]`angezeigt. Einfache Ausdrücke werden automatisch für Sie erstellt, wenn Sie ein Feld aus einem Dataset auf ein Textfeld ziehen. Es wird ein Platzhalter erstellt, und der Ausdruck definiert den zugrunde liegenden Wert. Sie können Ausdrücke auch direkt in eine Datenbereichszelle oder in ein Textfeld eingeben. Dies ist sowohl auf der Entwurfsoberfläche als auch in einem Dialogfeld möglich (Beispiel: `[ProductID]`).  
   
  In der folgenden Tabelle sind Beispiele dafür aufgeführt, wie Sie einfache Ausdrücke verwenden können. In der Tabelle sind die Funktionen, die festzulegende Eigenschaft, das normalerweise zum Festlegen verwendete Dialogfeld und der Wert der Eigenschaft beschrieben. Sie können den einfachen Ausdruck direkt auf der Entwurfsoberfläche, in einem Dialogfeld oder im Bereich Eigenschaften eingeben. Alternativ dazu können Sie den Ausdruck im Dialogfeld Ausdruck bearbeiten, wie Sie dies auch mit anderen Ausdrücken tun.  
@@ -46,7 +46,7 @@ In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 
 |Verknüpfen eines Abfrageparameters mit einem Berichtsparameter.|Parameterauflistung im Dataset. Dialogfeld **Dataseteigenschaften, Parameter**.|`[@Category]`<br /><br /> `[@Category]`|  
 |Übergeben eines Parameters aus einem Hauptbericht an einen Unterbericht.|Parameterauflistung im Unterbericht. Dialogfeld **Eigenschaften des Unterberichts, Parameter**.|`[@Category]`<br /><br /> `[@Category]`|  
   
-##  <a name="Complex"></a> Verwenden von komplexen Ausdrücken  
+##  <a name="using-complex-expressions"></a><a name="Complex"></a> Verwenden von komplexen Ausdrücken  
  Komplexe Ausdrücke können mehrere integrierte Verweise, Operatoren und Funktionsaufrufe enthalten und werden auf der Entwurfsoberfläche als `<<Expr>>`angezeigt. Um den Ausdruckstext anzuzeigen oder zu ändern, müssen Sie das Dialogfeld **Ausdruck** öffnen oder direkt im Bereich Eigenschaften eine Eingabe vornehmen. In der folgenden Tabelle ist aufgeführt, auf welche Weise Sie einen komplexen Ausdruck verwenden können, um Daten anzuzeigen oder zu organisieren oder die Darstellung des Berichts zu ändern. Dazu zählen auch die festzulegende Eigenschaft, das normalerweise zum Festlegen verwendete Dialogfeld und der Wert der Eigenschaft. Sie können einen Ausdruck direkt in ein Dialogfeld, auf der Entwurfsoberfläche oder im Bereich Eigenschaften eingeben.  
   
 |Funktionalität|Eigenschaft, Kontext und Dialogfeld|Eigenschaftswert|  

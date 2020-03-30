@@ -21,10 +21,10 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef381f9ff470422ed85b81832b1078d6c8767dcf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292885"
 ---
 # <a name="dimension-processing-destination"></a>Ziel für Dimensionsverarbeitung
@@ -73,7 +73,7 @@ ms.locfileid: "71292885"
  **Verarbeitungsmethode**  
  Wählen Sie die Verarbeitungsmethode aus, die auf die in der Liste ausgewählte Dimension angewendet werden soll. Der Standardwert für diese Option ist **Vollständig**.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Hinzufügen (inkrementell)**|Führt eine inkrementelle Verarbeitung der Dimension aus.|  
 |**Vollständig**|Führt eine vollständige Verarbeitung der Dimension aus.|  
@@ -105,7 +105,7 @@ ms.locfileid: "71292885"
  **Schlüsselfehleraktion**  
  Gibt an, wie Datensätze behandelt werden, die unzulässige Schlüsselwerte aufweisen.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Konvertiert den unzulässigen Schlüsselwert in den Wert **UnknownMember** .|  
 |**DiscardRecord**|Verwirft den Datensatz.|  
@@ -122,7 +122,7 @@ ms.locfileid: "71292885"
  **Aktion bei Fehler**  
  Gibt die Aktion an, die bei Erreichen des Fehlergrenzwertes ausgeführt wird, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**StopProcessing**|Beendet die Verarbeitung.|  
 |**StopLogging**|Beendet das Protokollieren der Fehler.|  
@@ -130,7 +130,7 @@ ms.locfileid: "71292885"
  **Schlüssel nicht gefunden**  
  Gibt die Aktion an, die beim Fehler Schlüssel nicht gefunden ausgeführt werden soll. Standardmäßig ist dieser Wert **ReportAndContinue**.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -139,7 +139,7 @@ ms.locfileid: "71292885"
  **Doppelter Schlüssel**  
  Gibt die Aktion an, die beim Fehler Doppelter Schlüssel ausgeführt werden soll. Standardmäßig ist dieser Wert **IgnoreError**.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -148,7 +148,7 @@ ms.locfileid: "71292885"
  **NULL-Schlüssel in unbekanntes Element konvertiert**  
  Gibt die Aktion an, die ausgeführt werden soll, wenn ein NULL-Schlüssel in den Wert **UnknownMember** konvertiert wurde. Standardmäßig ist dieser Wert **IgnoreError**.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -157,7 +157,7 @@ ms.locfileid: "71292885"
  **NULL-Schlüssel nicht zulässig**  
  Gibt die Aktion an, die ausgeführt wird, wenn NULL-Schlüssel unzulässig sind und ein NULL-Schlüssel entdeckt wurde. Standardmäßig ist dieser Wert **ReportAndContinue**.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  

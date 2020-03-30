@@ -16,10 +16,10 @@ ms.assetid: 4454c22a-5e6d-4edb-9ead-d623a174ce59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4762b10d5a465682a5ab6324e9f0992a81dd4d3a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953424"
 ---
 # <a name="getbyte-method-sqlservercallablestatement"></a>getByte-Methode (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953424"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |[getByte (int)](../../../connect/jdbc/reference/getbyte-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als Wert vom Typ **byte** ab.|  
 |[getByte (java.lang.String)](../../../connect/jdbc/reference/getbyte-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als Wert vom Typ **byte** ab.|  

@@ -16,10 +16,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2da0a2f04fa90b2d25dbd68baf7b769d5afdcf8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983636"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverconnection"></a>getDisableStatementPooling-Methode (SQLServerConnection)
@@ -41,7 +41,7 @@ public boolean getDisableStatementPooling()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Bemerkungen  
- Diese Methode ist im JDCB-Treiber ab Version 6.4 verfügbar.
+ Diese Methode ist über Version 6.4 und höher des JDCB-Treibers verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

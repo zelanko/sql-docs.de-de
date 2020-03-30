@@ -11,10 +11,10 @@ ms.assetid: 6daca03f-c60f-4842-b9e3-11d136e78312
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0fdc853608cf1897e97e08aac673aff78df00aef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998546"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>updateNString-Methode (java.lang.String, java.lang.String)
@@ -37,7 +37,7 @@ public void updateNString(java.lang.String columnLabel,
   
  *nString*  
   
- Ein **String**-Objekt  
+ Dies ist ein **String**-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

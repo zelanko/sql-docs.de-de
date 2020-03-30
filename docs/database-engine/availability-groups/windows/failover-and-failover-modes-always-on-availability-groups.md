@@ -16,10 +16,10 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 269ec542c7de83afa9c174ea0bc9221f125f7e64
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67949105"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)
@@ -57,7 +57,7 @@ ms.locfileid: "67949105"
   
 -   [Verwandte Inhalte](#RelatedContent)  
   
-##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
  Automatisches Failover  
  Beim Verlust des primären Replikats tritt automatisch ein Failover statt. Automatisches Failover wird nur unterstützt, wenn das aktuelle primäre Replikat und ein sekundäres Replikat so konfiguriert sind, dass der Failovermodus auf AUTOMATIC festgelegt ist und das sekundäre Replikat derzeit synchronisiert wird.  Wenn der Failovermodus entweder des primären oder des sekundären Replikats MANUAL ist, kann kein automatisches Failover auftreten.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "67949105"
  [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]  
  Innerhalb einer angegebenen Verfügbarkeitsgruppe der Satz aller Verfügbarkeitsreplikate, deren Betriebszustand gerade ONLINE ist, unabhängig vom Verfügbarkeitsmodus und Failovermodus. Der [!INCLUDE[ssFosEntire](../../../includes/ssfosentire-md.md)]wird relevant, wenn gerade kein sekundäres Replikat mit dem primären Replikat SYNCHRONISIERT wird.  
   
-##  <a name="Overview"></a> Übersicht über Failover  
+##  <a name="overview-of-failover"></a><a name="Overview"></a> Übersicht über Failover  
  In der folgenden Tabelle ist zusammengefasst, welche Failovertypen unter unterschiedlichen Verfügbarkeits- und Failovermodi unterstützt werden. Für jede Paarung ergibt sich der effektive Verfügbarkeitsmodus und Failovermodus aus der Schnittmenge der Modi des primären Replikats sowie der Modi eines oder mehrerer sekundärer Replikate.  
   
 ||Asynchroner Commit-Modus|Synchroner Commit-Modus mit manuellem Failovermodus|Synchroner Commit-Modus mit automatischem Failovermodus|  
@@ -95,11 +95,11 @@ ms.locfileid: "67949105"
 ### <a name="failover-sets"></a>Failoversätze  
  Welche Failoverarten für eine bestimmte Verfügbarkeitsgruppe möglich sind, richtet sich nach dem jeweiligen Failoversatz. Ein Failoversatz besteht aus dem primären Replikat und den sekundären Replikaten, die eine bestimmte, im Folgenden beschriebene Failoverart unterstützen:  
   
--   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (optional):**  Ein Paar von Verfügbarkeitsreplikaten (einschließlich des aktuellen primären Replikats) in einer Verfügbarkeitsgruppe, die für den synchronem Commitmodus mit automatischem Failover konfiguriert sind (sofern zutreffend). Ein automatisches Failover ist nur wirksam, wenn das sekundäre Replikat derzeit mit dem primären Replikat synchronisiert wird.  
+-   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (optional):**  Ein Paar von Verfügbarkeitsreplikaten (einschließlich des aktuellen primären Replikats) in einer Verfügbarkeitsgruppe, die für den synchronen Commitmodus mit automatischem Failover (falls zutreffend) konfiguriert sind. Ein automatisches Failover ist nur wirksam, wenn das sekundäre Replikat derzeit mit dem primären Replikat synchronisiert wird.  
   
 -   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (optional):**  Ein Satz von zwei oder drei Verfügbarkeitsreplikaten (einschließlich des aktuellen primären Replikats) in einer Verfügbarkeitsgruppe, die für den synchronen Commitmodus (falls zutreffend) konfiguriert sind. Ein Failover mit synchronem Commit ist nur wirksam, wenn die sekundären Replikate für den manuellen Failovermodus konfiguriert sind und mindestens ein sekundäres Replikat derzeit mit dem primären Replikat synchronisiert wird.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]:**  Innerhalb einer angegebenen Verfügbarkeitsgruppe der Satz aller Verfügbarkeitsreplikate, deren Betriebszustand gerade ONLINE ist, unabhängig vom Verfügbarkeitsmodus und Failovermodus. Der Satz für gesamtes Failover wird relevant, wenn derzeit kein sekundäres Replikat mit dem primären Replikat synchronisiert wird.  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Der Satz aller Verfügbarkeitsreplikate in einer Verfügbarkeitsgruppe, deren Betriebszustand derzeit ONLINE lautet, unabhängig vom Verfügbarkeitsmodus und Failovermodus. Der Satz für gesamtes Failover wird relevant, wenn derzeit kein sekundäres Replikat mit dem primären Replikat synchronisiert wird.  
   
  Wenn Sie ein Verfügbarkeitsreplikat für synchrone Commits mit automatischem Failover konfigurieren, wird das Verfügbarkeitsreplikat Teil von [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Ob jedoch der Satz wirksam wird, hängt vom aktuellen primären Element ab. Die Failovertypen, die tatsächlich zu einem bestimmten Zeitpunkt möglich sind, hängen davon ab, welche Failoversätze aktuell wirksam sind.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "67949105"
   
  ![Wie sich die Konfiguration des primären Replikats auf das Failover auswirkt](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "Wie sich die Konfiguration des primären Replikats auf das Failover auswirkt")  
   
-##  <a name="AutomaticFailover"></a> Automatic Failover  
+##  <a name="automatic-failover"></a><a name="AutomaticFailover"></a> Automatic Failover  
  Ein automatisches Failover verursacht den automatischen Übergang eines qualifizierten sekundären Replikats zur primären Rolle, nachdem das primäre Replikat nicht mehr zur Verfügung steht. Ein automatisches Failover ist am besten geeignet, wenn der WSFC-Knoten, der das primäre Replikat hostet, lokal zum Knoten ist, der das sekundäre Replikat hostet. Das liegt daran, dass die Datensynchronisierung am besten bei niedrigen Nachrichtenlatenzzeiten zwischen Computern funktioniert und weil Clientverbindungen lokal hergestellt werden können.  
   
  **In diesem Abschnitt:**  
@@ -127,7 +127,7 @@ ms.locfileid: "67949105"
   
 -   [So aktivieren Sie ein automatisches Failover](#EnableAutoFo)  
   
-###  <a name="RequiredConditions"></a> Für ein automatisches Failover erforderliche Bedingungen  
+###  <a name="conditions-required-for-an-automatic-failover"></a><a name="RequiredConditions"></a> Für ein automatisches Failover erforderliche Bedingungen  
  Ein automatisches Failover tritt nur unter den folgenden Bedingungen auf:  
   
 -   Ein Satz für automatische Failover ist vorhanden. Dieser Satz besteht aus einem primären und einem sekundären Replikat (dem *Ziel des automatischen Failovers*), die beide für den synchronen Commitmodus konfiguriert sind und auf ein automatisches Failover (AUTOMATIC) festgelegt sind. Wenn das primäre Replikat auf manuelle Failover (MANUAL) festgelegt ist, kann selbst dann kein automatisches Failover ausgeführt werden, wenn ein sekundäres Replikat auf ein automatisches Failover (AUTOMATIC) festgelegt ist.  
@@ -145,7 +145,7 @@ ms.locfileid: "67949105"
   
 -   Das primäre Replikat steht nicht mehr zur Verfügung, und die durch die flexible Failoverrichtlinie definierten Failover-Bedingungsebenen wurden erfüllt. Informationen zu Failover-Bedingungsebenen finden Sie unter [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)ausgetauscht werden.  
   
-###  <a name="HowAutoFoWorks"></a> So funktioniert ein automatisches Failover  
+###  <a name="how-automatic-failover-works"></a><a name="HowAutoFoWorks"></a> So funktioniert ein automatisches Failover  
  Durch ein automatisches Failover wird die folgende Aktionskette ausgelöst:  
   
 1.  Wenn die Serverinstanz, die das aktuelle primäre Replikat hostet, immer noch ausgeführt wird, ändert sie den Status der primären Datenbanken in DISCONNECTED und trennt alle Clientverbindungen.  
@@ -161,7 +161,7 @@ ms.locfileid: "67949105"
   
 4.  Später, wenn die Serverinstanz, die das frühere primäre Replikat hostet, neu gestartet wird, erkennt sie, dass jetzt ein anderes Verfügbarkeitsreplikat die primäre Rolle besitzt. Das frühere primäre Replikat geht in die sekundäre Rolle über, und seine Datenbanken werden sekundäre Datenbanken. Das neue sekundäre Replikat stellt eine Verbindung mit dem aktuellen primären Replikat her und fängt seine Datenbank so schnell wie möglich bis zu den aktuellen primären Datenbanken ab. Sobald das neue sekundäre Replikat seine Datenbanken erneut synchronisiert hat, ist ein neues Failover in umgekehrter Richtung möglich.  
   
-###  <a name="EnableAutoFo"></a> So konfigurieren Sie ein automatisches Failover  
+###  <a name="to-configure-automatic-failover"></a><a name="EnableAutoFo"></a> So konfigurieren Sie ein automatisches Failover  
  Ein Verfügbarkeitsreplikat kann konfiguriert werden, um ein automatisches Failover jederzeit zu unterstützen.  
   
  **To configure automatic failover**  
@@ -172,7 +172,7 @@ ms.locfileid: "67949105"
   
 3.  Ändern Sie optional die flexible Failoverrichtlinie der Verfügbarkeitsgruppe, und geben Sie die Fehlerarten an, durch die ein automatisches Failover verursacht werden kann. Weitere Informationen finden Sie unter [Konfigurieren der flexiblen Failoverrichtlinie zum Steuern der Bedingungen für ein automatisches Failover &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md) und [Failoverrichtlinie für Failoverclusterinstanzen](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)ausgetauscht werden.  
   
-##  <a name="ManualFailover"></a> Geplantes manuelles Failover (ohne Datenverlust)  
+##  <a name="planned-manual-failover-without-data-loss"></a><a name="ManualFailover"></a> Geplantes manuelles Failover (ohne Datenverlust)  
  Bei einem manuellen Failover geht ein synchronisiertes sekundäres Replikat zur primären Rolle über, nachdem ein Datenbankadministrator einen Befehl für ein manuelles Failover auf der Serverinstanz ausgibt, die das sekundäre Zielreplikat hostet. Zur Unterstützung eines manuellen Failovers müssen das sekundäre Replikat und das aktuelle primäre Replikat für den synchronen Commitmodus (falls zutreffend) konfiguriert sein. Jede sekundäre Datenbank auf dem Verfügbarkeitsreplikat muss mit der Verfügbarkeitsgruppe verknüpft und mit der entsprechenden primären Datenbank synchronisiert werden (d. h., das sekundäre Replikat muss synchronisiert werden). Damit wird sichergestellt, dass ein Commit für jede Transaktion, für die ein Commit auf einer früheren primären Datenbank ausgeführt wurde, auch auf der neuen primären Datenbank ausgeführt wurde. Daher sind die neuen primären Datenbanken mit den alten primären Datenbanken identisch.  
   
  In der folgenden Abbildung werden die Phasen eines geplanten Failovers veranschaulicht:  
@@ -193,7 +193,7 @@ ms.locfileid: "67949105"
   
 -   [Aufrechterhalten der Verfügbarkeit während Upgrades](#ManualFailoverDuringUpgrades)  
   
-###  <a name="ManualFailoverConditions"></a> Für ein manuelles Failover erforderliche Bedingungen  
+###  <a name="conditions-required-for-a-manual-failover"></a><a name="ManualFailoverConditions"></a> Für ein manuelles Failover erforderliche Bedingungen  
  Um ein manuelles Failover zu unterstützen, muss das aktuelle primäre Replikat auf den Modus mit synchronem Commit festgelegt werden, und ein sekundäres Replikat muss folgende Bedingungen erfüllen:  
   
 -   Konfiguriert für den Modus mit synchronem Commit.  
@@ -202,7 +202,7 @@ ms.locfileid: "67949105"
   
  Um ein Failover einer Verfügbarkeitsgruppe manuell auszuführen, müssen Sie mit dem sekundären Replikat verbunden sein, das das neue primäre Replikat wird.  
   
-###  <a name="ManualFailoverHowWorks"></a> Funktionsweise eines geplanten manuellen Failovers  
+###  <a name="how-a-planned-manual-failover-works"></a><a name="ManualFailoverHowWorks"></a> Funktionsweise eines geplanten manuellen Failovers  
  Ein geplantes manuelles Failover, das auf dem sekundären Zielreplikat initiiert werden muss, initiiert die folgende Aktionskette:  
   
 1.  Um sicherzustellen, dass keine neuen Benutzertransaktionen auf den ursprünglichen primären Datenbanken auftreten, sendet der WSFC-Cluster eine Anforderung an das primäre Replikat, in den Offlinemodus zu wechseln.  
@@ -223,10 +223,10 @@ ms.locfileid: "67949105"
   
  Nach dem Failover müssen von Clients erneut Verbindungen mit der aktuellen primären Datenbank hergestellt werden. Weitere Informationen finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)wichtig sind.  
   
-###  <a name="ManualFailoverDuringUpgrades"></a> Aufrechterhalten der Verfügbarkeit während Upgrades  
+###  <a name="maintaining-availability-during-upgrades"></a><a name="ManualFailoverDuringUpgrades"></a> Aufrechterhalten der Verfügbarkeit während Upgrades  
  Der Datenbankadministrator für die Verfügbarkeitsgruppen kann die Datenbankverfügbarkeit mithilfe von manuellen Failovers aufrechterhalten, wenn Sie Hardware oder Software aktualisieren. Um eine Verfügbarkeitsgruppe für Softwareupgrades zu verwenden, muss die Serverinstanz und/oder der Computerknoten, der das sekundäre Zielreplikat hostet, die Upgrades bereits empfangen haben. Weitere Informationen finden Sie unter [Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen](../../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
   
-##  <a name="ForcedFailover"></a> Erzwungenes Failover (mit möglichem Datenverlust)  
+##  <a name="forced-failover-with-possible-data-loss"></a><a name="ForcedFailover"></a> Erzwungenes Failover (mit möglichem Datenverlust)  
  Das Erzwingen eines Failovers einer Verfügbarkeitsgruppe (mit möglichem Datenverlust) ist eine Notfallwiederherstellungsmethode, mit der Sie ein sekundäres Replikat als betriebsbereiten Standbyserver verwenden können. Da das Erzwingen eines Failovers zu möglichem Datenverlust führen kann, sollte diese Methode unter Vorbehalt und selten verwendet werden. Es wird empfohlen, das Failover nur dann zu erzwingen, wenn Sie den Dienst für die Verfügbarkeitsdatenbanken sofort wiederherstellen müssen und bereit sind, das Risiko des Datenverlustes in Kauf zu nehmen. Weitere Informationen zu den Voraussetzungen und Empfehlungen zum Erzwingen eines Failovers sowie ein Beispielszenario, in dem zur Wiederherstellung nach einem schwerwiegenden Fehler ein erzwungenes Failover verwendet wird, finden Sie unter [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)ausgetauscht werden.  
   
 > [!WARNING]  
@@ -244,12 +244,12 @@ ms.locfileid: "67949105"
   
 -   [Umgang mit potenziellem Datenverlust](#ForcedFailoverManagingDataLoss)  
   
-###  <a name="ForcedFailoverHowWorks"></a> So funktioniert ein erzwungenes Failover  
+###  <a name="how-forced-failover-works"></a><a name="ForcedFailoverHowWorks"></a> So funktioniert ein erzwungenes Failover  
  Durch ein erzwungenes Failover wird der Wechsel der primären Rolle zu einem Zielreplikat initiiert, dessen Rolle sich im SECONDARY- oder RESOLVING-Status befindet. Das Failoverziel wird zum neuen primären Replikat und stellt seine Datenbankkopien sofort den Clients zur Verfügung. Wenn das frühere primäre Replikat verfügbar wird, geht es in die sekundäre Rolle über, und seine Datenbanken werden sekundäre Datenbanken.  
   
  Alle sekundären Datenbanken (einschließlich der früheren primären Datenbanken, wenn sie verfügbar werden) haben den Status SUSPENDED. In Abhängigkeit früherer Datensynchronisierungsstatus einer angehaltenen sekundären Datenbank empfiehlt es sich möglicherweise, fehlende übergebene Daten für die primäre Datenbank zu retten. Auf einem sekundären Replikat, das für schreibgeschützten Zugriff konfiguriert ist, können Sie die sekundären Datenbanken abfragen, um fehlende Daten manuell zu ermitteln. Danach können Sie [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen ausgeben, um alle notwendigen Änderungen für die neuen primären Datenbanken vorzunehmen.  
   
-###  <a name="ForcedFailoverRisks"></a> Risiken beim Erzwingen des Failovers  
+###  <a name="risks-of-forcing-failover"></a><a name="ForcedFailoverRisks"></a> Risiken beim Erzwingen des Failovers  
  Sie sollten unbedingt bedenken, dass durch das Erzwingen des Failovers Daten verloren gehen können. Zu einem Datenverlust kann es kommen, weil das Zielreplikat nicht mit dem primären Replikat kommunizieren und somit nicht sicherstellen kann, dass die Datenbanken synchronisiert sind. Durch das Erzwingen des Failovers wird eine neue Wiederherstellungsverzweigung gestartet. Da sich die ursprünglichen primären Datenbanken und sekundären Datenbanken auf verschiedenen Wiederherstellungsverzweigungen befinden, enthält jede Datenbank nun Daten, die in der jeweils anderen Datenbank nicht vorhanden sind: Jede ursprüngliche primäre Datenbank enthält die Änderungen, die noch nicht aus der Sendewarteschlange an die frühere sekundäre Datenbank gesendet wurden (die nicht gesendeten Protokolle). Die früheren sekundären Datenbanken enthalten die Änderungen, die nach dem Erzwingen des Failovers vorgenommen wurden.  
   
  Wird das Failover aufgrund eines Fehlers des primären Replikats erzwungen, hängt der potenzielle Datenverlust davon ab, ob Transaktionsprotokolle vor dem Fehler an das sekundäre Replikat gesendet wurden oder nicht. Im asynchronen Commit-Modus besteht immer die Möglichkeit, dass sich nicht gesendete Protokolle ansammeln. Im synchronen Commit-Modus ist dies nur bis zum Synchronisieren der sekundären Datenbanken möglich.  
@@ -262,16 +262,16 @@ ms.locfileid: "67949105"
 |Synchroner Commit|Nein|Ja|  
 |Asynchroner Commit|Nein|Ja|  
   
- Sekundäre Datenbanken verfolgen nur zwei Wiederherstellungsverzweigungen nach. Wenn Sie also mehrere erzwungene Failover ausführen, kann eine sekundäre Datenbank, für die die Datensynchronisierung mit dem vorherigen erzwungenen Failover gestartet wurde, u. U. nicht fortgesetzt werden. In diesem Fall müssen alle sekundären Datenbanken, die nicht fortgesetzt werden können, aus der Verfügbarkeitsgruppe entfernt und der Verfügbarkeitsgruppe wieder hinzugefügt werden, nachdem sie bis zum richtigen Zeitpunkt wiederhergestellt wurden. Fehler 1408 mit dem Status 103 kann in diesem Szenario auftreten (Fehler: 1408, Schweregrad: 16, Status: 103). Da eine Wiederherstellung nicht über mehrere Wiederherstellungsverzweigungen ausgeführt werden kann, sollten Sie unbedingt eine Protokollsicherung erstellen, nachdem Sie mehr als ein erzwungenes Failover ausgeführt haben.  
+ Sekundäre Datenbanken verfolgen nur zwei Wiederherstellungsverzweigungen nach. Wenn Sie also mehrere erzwungene Failover ausführen, kann eine sekundäre Datenbank, für die die Datensynchronisierung mit dem vorherigen erzwungenen Failover gestartet wurde, u. U. nicht fortgesetzt werden. In diesem Fall müssen alle sekundären Datenbanken, die nicht fortgesetzt werden können, aus der Verfügbarkeitsgruppe entfernt und der Verfügbarkeitsgruppe wieder hinzugefügt werden, nachdem sie bis zum richtigen Zeitpunkt wiederhergestellt wurden. Fehler 1408 mit dem Status 103 kann in diesem Szenario beobachtet werden (Fehler: 1408, Schweregrad: 16, Status: 103). Da eine Wiederherstellung nicht über mehrere Wiederherstellungsverzweigungen ausgeführt werden kann, sollten Sie unbedingt eine Protokollsicherung erstellen, nachdem Sie mehr als ein erzwungenes Failover ausgeführt haben.  
   
-###  <a name="WhyFFoPostForcedQuorum"></a> Warum nach Erzwingen des Quorums ein erzwungenes Failover erforderlich ist  
+###  <a name="why-forced-failover-is-required-after-forcing-quorum"></a><a name="WhyFFoPostForcedQuorum"></a> Warum nach Erzwingen des Quorums ein erzwungenes Failover erforderlich ist  
  Nachdem Sie das Quorum (*erzwungenes Quorum*) im WSFC-Cluster erzwungen haben, müssen Sie für jede Verfügbarkeitsgruppe ein Failover erzwingen (mit möglichem Datenverlust). Das Erzwingen eines Failovers ist erforderlich, da der wirkliche Status der WSFC-Clusterwerte verloren gegangen sein könnte. Normale Failover müssen nach einem erzwungenen Quorum verhindert werden, da ein nicht synchronisiertes sekundäres Replikat andernfalls im neu konfigurierten WSFC-Cluster als synchronisiert angezeigt werden könnte.  
   
- Betrachten Sie beispielsweise einen WSFC-Cluster, der eine Verfügbarkeitsgruppe auf drei Knoten hostet:  Knoten A hostet das primäre Replikat, und Knoten B und Knoten C hosten jeweils ein sekundäres Replikat. Knoten C wird vom WSFC-Cluster getrennt, während das lokale sekundäre Replikat SYNCHRONISIERT wird.  Die Knoten A und B weisen weiterhin ein fehlerfreies Quorum auf. Die Verfügbarkeitsgruppe bleibt online. Auf Knoten A akzeptiert das primäre Replikat weiterhin Updates. Auf Knoten B wird das sekundäre Replikat weiterhin mit dem primären Replikat synchronisiert. Das sekundäre Replikat auf Knoten C wird nicht mehr synchronisiert und fällt zunehmend hinter das primäre Replikat zurück. Da Knoten C getrennt wurde, bleibt das Replikat jedoch fälschlicherweise im Status SYNCHRONIZED.  
+ Beispiel: Ein WSFC-Cluster, das eine Verfügbarkeitsgruppe auf drei Knoten hostet: Knoten A hostet das primäre Replikat. Knoten B und Knoten C hosten jeweils ein sekundäres Replikat. Knoten C wird vom WSFC-Cluster getrennt, während das lokale sekundäre Replikat SYNCHRONISIERT wird.  Die Knoten A und B weisen weiterhin ein fehlerfreies Quorum auf. Die Verfügbarkeitsgruppe bleibt online. Auf Knoten A akzeptiert das primäre Replikat weiterhin Updates. Auf Knoten B wird das sekundäre Replikat weiterhin mit dem primären Replikat synchronisiert. Das sekundäre Replikat auf Knoten C wird nicht mehr synchronisiert und fällt zunehmend hinter das primäre Replikat zurück. Da Knoten C getrennt wurde, bleibt das Replikat jedoch fälschlicherweise im Status SYNCHRONIZED.  
   
  Wenn das Quorum verloren geht und dann auf Knoten A erzwungen wird, sollte der Synchronisierungsstatus der Verfügbarkeitsgruppe im WSFC-Cluster richtig sein. Das sekundäre Replikat auf Knoten C sollte den Status UNSYNCHRONIZED aufweisen. Wenn jedoch ein Quorum auf Knoten C erzwungen wird, ist die Synchronisierung der Verfügbarkeitsgruppe falsch. Der Synchronisierungsstatus im Cluster entspricht dem Status, als Knoten C getrennt wurde. Das sekundäre Replikat auf Knoten C weist *fälschlicherweise* den Status SYNCHRONIZED auf. Da geplante manuelle Failover die Sicherheit der Daten gewährleisten, darf eine Verfügbarkeitsgruppe nach dem Erzwingen eines Quorums nicht wieder online geschaltet werden.  
   
-###  <a name="TrackPotentialDataLoss"></a> Möglichen Datenverlust nachverfolgen  
+###  <a name="tracking-potential-data-loss"></a><a name="TrackPotentialDataLoss"></a> Möglichen Datenverlust nachverfolgen  
  Wenn der WSFC-Cluster ein fehlerfreies Quorum aufweist, können Sie das aktuelle Datenverlustrisiko fürDatenbanken einschätzen. Für ein gegebenes sekundäres Replikat hängt das aktuelle Datenverlustrisiko davon ab, wie groß die Verzögerung der lokalen sekundären Datenbanken gegenüber den entsprechenden primären Datenbanken ist. Da die Verzögerung im Verlauf der Zeit variiert, wird empfohlen, den potenziellen Datenverlust für Ihre nicht synchronisierten sekundären Datenbanken regelmäßig nachzuverfolgen. Eine Nachverfolgung der Verzögerung umfasst den Vergleich der LSN des letzten Commits mit der Zeit des letzten Commits für jede primäre Datenbank und ihre sekundären Datenbanken wie folgt:  
   
 1.  Stellen Sie eine Verbindung mit dem primären Replikat her.  
@@ -285,7 +285,7 @@ ms.locfileid: "67949105"
 > [!IMPORTANT]  
 >  Wenn der WSFC-Cluster kein Quorum aufweist oder das Quorum erzwungen wurde, sind **last_commit_lsn** und **last_commit_time** NULL. Weitere Informationen dazu, wie Sie nach der Erzwingung des Quorums Datenverluste vermeiden können, finden Sie unter „Möglichkeiten zum Vermeiden von Datenverlust nach dem Erzwingen eines Quorums“ in [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)ausgetauscht werden.  
   
-###  <a name="ForcedFailoverManagingDataLoss"></a> Umgang mit potenziellem Datenverlust  
+###  <a name="managing-the-potential-data-loss"></a><a name="ForcedFailoverManagingDataLoss"></a> Umgang mit potenziellem Datenverlust  
  Nach einem erzwungenen Failover werden alle sekundären Datenbanken angehalten. Dies schließt die früheren primären Datenbanken ein, nachdem das frühere primäre Replikat wieder online geschaltet wurde und ermittelt, dass es jetzt ein sekundäres Replikat ist. Sie müssen jede angehaltene Datenbank einzeln auf jedem sekundären Replikat manuell fortsetzen.  
   
  Sobald das frühere primäre Replikat verfügbar ist, können Sie versuchen, den potenziellen Datenverlust zu verwalten, falls die Datenbanken unbeschädigt sind. Der jeweilige Ansatz für die Verwaltung des potenziellen Datenverlusts hängt davon ab, ob das ursprüngliche primäre Replikat eine Verbindung mit dem neuen primären Replikat hergestellt hat. Vorausgesetzt, dass das ursprüngliche primäre Replikat auf die neue primäre Instanz zugreifen kann, wird die Verbindung automatisch und transparent wiederhergestellt.  
@@ -319,7 +319,7 @@ ms.locfileid: "67949105"
 > [!WARNING]  
 >  Die Transaktionsprotokollkürzung wird auf einer primären Datenbank verzögert, solange eine ihrer sekundären Datenbanken angehalten ist. Der Synchronisierungszustand eines sekundären Replikats mit synchronem Commit kann auch keinen Übergang zu HEALTHY durchführen, solange alle lokalen Datenbanküberreste angehalten sind.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So konfigurieren Sie das Failoververhalten**  
   
 -   [Ändern des Verfügbarkeitsmodus eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -346,11 +346,11 @@ ms.locfileid: "67949105"
   
 -   [Erzwingen des Starts eines Clusters ohne Quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

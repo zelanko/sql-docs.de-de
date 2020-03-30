@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 4ed8ccbadb27008fb15d9d117d55b5a4d332a8f6
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896631"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>Binäre Daten und Daten mit umfangreichen Werten in SQL Server
@@ -27,10 +27,10 @@ In SQL Server 2008 wurde das FILESTREAM-Attribut eingeführt, das kein Datentyp
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Ändern von Daten mit umfangreichen Werten (max) in ADO.NET](modify-large-value-max-data.md)  
-Beschreibt die Verwendung von Datentypen mit umfangreichen Werten  
+Beschreibt das Arbeiten mit den Datentypen für große Werte.  
   
 [FILESTREAM-Daten](filestream-data.md)  
-Beschreibt die Verwendung von Daten mit umfangreichen Werten, die mit dem FILESTREAM-Attribut in SQL Server 2008 gespeichert wurden  
+Beschreibt, wie Sie mit Daten mit großen Werten arbeiten, die in SQL Server 2008 mit dem FILESTREAM-Attribut gespeichert sind.  
   
 ## <a name="next-steps"></a>Nächste Schritte
 - [SQL Server-Datentypen und ADO.NET](sql-server-data-types.md)

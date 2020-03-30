@@ -12,10 +12,10 @@ ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4767267c1fc88eab6dafe646a0f61e3bd1992de8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284970"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Willkommen beim SQL Server-Import/Export-Assistenten
@@ -44,7 +44,7 @@ Die folgende Abbildung zeigt die Seite **Willkommen beim SQL Server-Import/Expor
 ## <a name="whats-next"></a>Wie geht es weiter?  
  Nach der Begrüßungsseite wird als nächste Seite **Datenquelle auswählen**angezeigt. Auf dieser Seite geben Sie Informationen zur Quelle für Ihre Daten an und darüber, wie Sie eine Verbindung mit dieser herstellen. Weitere Informationen finden Sie unter [Datenquelle auswählen](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
-## <a name="related"></a> Verwandte Tasks und Inhalte  
+## <a name="related-tasks-and-content"></a><a name="related"></a> Verwandte Tasks und Inhalte  
  Im Folgenden werden einige weitere grundlegenden Tasks aufgelistet.
 -   **Sehen Sie sich ein kurzes Beispiel zur Funktionsweise des Assistenten an.**
 

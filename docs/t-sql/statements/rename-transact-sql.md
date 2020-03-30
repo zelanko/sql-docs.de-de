@@ -10,10 +10,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68141272"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
@@ -22,7 +22,7 @@ ms.locfileid: "68141272"
 Benennt eine vom Benutzer erstellte Tabelle in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] um. Benennt eine vom Benutzer erstellte Tabelle oder Datenbank in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] um.
 
 > [!NOTE]
-> Verwenden Sie zum Umbenennen einer Datenbank in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)][ALTER DATABASE (Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Um eine Datenbank in Azure SQL-Datenbank umzubenennen, verwenden Sie die Anweisung [ALTER DATABASE (Azure SQL-Datenbank)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Verwenden Sie die gespeicherte Prozedur [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md), um eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umzubenennen.
+> Verwenden Sie zum Umbenennen einer Datenbank in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)][ALTER DATABASE (Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Um eine Datenbank in Azure SQL-Datenbank umzubenennen, verwenden Sie die Anweisung [ALTER DATABASE (Azure SQL-Datenbank)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Verwenden Sie die gespeicherte Prozedur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_renamedb[, um eine Datenbank in ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md) umzubenennen.
 
 ## <a name="syntax"></a>Syntax
 

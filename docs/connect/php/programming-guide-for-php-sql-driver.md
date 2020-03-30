@@ -11,10 +11,10 @@ ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9470b5e4a9e7283930a38c393a4117333fb0fb08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992928"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server
@@ -24,7 +24,7 @@ Dieser Abschnitt enthält Themen, die Ihnen dabei helfen, Anwendungen mit [!INCL
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |---------|---------------|  
 |[Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)|Beschreibt die Optionen und Verfahren zum Verbinden mit dem SQL Server.|  
 |[Vergleichen von Ausführungsfunktionen](../../connect/php/comparing-execution-functions.md)|Vergleicht die Funktionen, die zum Ausführen einer Abfrage verwendet werden, indem verschiedene Anwendungsfälle für jede einzelne Funktion untersucht werden. Im Besonderen vergleicht dieses Dokument die Ausführung einer einzelnen Abfrage mit der mehrmaligen Ausführung einer vorbereiteten Abfrage.|  

@@ -20,10 +20,10 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578036"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
@@ -71,21 +71,21 @@ ms.locfileid: "65578036"
   
 -   [Verwenden von PowerShell, um Reporting Services-Abonnenten zu ändern und aufzulisten sowie ein Abonnement auszuführen](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
-##  <a name="bkmk_subscription_scenarios"></a> Abonnement- und Übermittlungsszenarien  
+##  <a name="subscription-and-delivery-scenarios"></a><a name="bkmk_subscription_scenarios"></a> Abonnement- und Übermittlungsszenarien  
  Für jedes Abonnement konfigurieren Sie Übermittlungsoptionen, und die verfügbaren Optionen werden entsprechend der von Ihnen gewählten Übermittlungserweiterung bestimmt. Eine Übermittlungserweiterung ist ein Modul, das einige Verteilungsarten unterstützt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält mehrere Bereitsellungserweiterungen und Bereitstellungserweiterungen, die möglicherweise bei Drittanbietern erhältlich sind.  
   
  Wenn Sie Entwickler sind, können Sie benutzerdefinierte Übermittlungserweiterungen erstellen, um zusätzliche Szenarien zu unterstützen. Weitere Informationen finden Sie unter [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
  In der folgenden Tabelle werden häufige Abonnementszenarien für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] beschrieben.  
   
-|Szenario|Beschreibung|  
+|Szenario|BESCHREIBUNG|  
 |--------------|-----------------|  
 |Senden von Berichten als E-Mail|Senden Sie Berichte als E-Mail an einzelne Benutzer und Gruppen. Erstellen Sie ein Abonnement, und geben Sie einen Gruppenalias oder einen E-Mail-Alias für den Empfang eines von Ihnen verteilten Berichts an. Sie können die Abonnementdaten von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zur Laufzeit bestimmen lassen. Wenn Sie den gleichen Bericht an eine Gruppe senden möchten, deren Mitgliederliste sich häufig ändert, können Sie die Abonnementliste mithilfe einer Abfrage zur Laufzeit abrufen.|  
 |Anzeigen von Berichten im Offlinemodus|Benutzer können eines der folgenden Formate für die Abonnementausgabe wählen:<br /><br /> XML-Datei mit Berichtsdaten<br />CSV (durch Trennzeichen getrennt)<br />PDF<br />MHTML (Webarchiv)<br />Microsoft Excel<br />TIFF-Datei<br />Microsoft Word<br /><br /> Berichte, die Sie archivieren möchten, können direkt an einen freigegebenen Ordner gesendet werden, den Sie beispielsweise nachts sichern lassen. Umfangreiche Berichte, die zu lange Ladezeiten im Browser verursachen würden, können in einem Format an einen freigegebenen Ordner gesendet werden, das in einer Desktopanwendung angezeigt werden kann.|  
 |Vorabladen des Caches|Wenn Sie über mehrere Instanzen eines parametrisierten Berichts verfügen oder ein Bericht von zahlreichen Berichtsbenutzern angezeigt werden soll, können Sie Berichte vorab in den Cache laden, um die erforderliche Verarbeitungszeit für die Anzeige des Berichts zu reduzieren.|  
 |Datengesteuerte Berichte|Verwenden Sie datengesteuerte Abonnements, um die Berichtsausgabe, Übermittlungsoptionen und Berichtsparametereinstellungen zur Laufzeit anzupassen. Zur Laufzeit werden die Eingabewerte vom Abonnement mithilfe einer Abfrage aus einer Datenquelle abgerufen. Mithilfe datengesteuerter Abonnements können Sie einen E-Mail-Serienvorgang ausführen, durch den ein Bericht an eine Liste von Abonnenten gesendet wird, die erst während der Verarbeitung des Abonnements ermittelt wird.|  
   
-##  <a name="bkmk_standard_and_datadriven"></a> Standardabonnements und datengesteuerte Abonnements  
+##  <a name="standard-and-data-driven-subscriptions"></a><a name="bkmk_standard_and_datadriven"></a> Standardabonnements und datengesteuerte Abonnements  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt zwei Arten von Abonnements: **Standardabonnements** und **datengesteuerte Abonnements**. Standardabonnements werden von einzelnen Benutzern erstellt und verwaltet. Ein Standardabonnement enthält statische Werte, die während der Abonnementverarbeitung nicht variiert werden können. Für jedes Standardabonnement ist exakt eine Gruppe von Berichtspräsentationsoptionen, Übermittlungsoptionen und Berichtsparametern vorhanden.  
   
  Datengesteuerte Abonnements rufen zur Laufzeit Abonnementinformationen ab, indem sie eine externe Datenquelle abfragen, die Werte für einen Empfänger, Berichtsparameter oder ein Anwendungsformat liefert. Sie können datengesteuerte Abonnements verwenden, wenn Sie eine sehr große Empfängerliste haben oder unterschiedliche Berichtsausgaben für unterschiedliche Empfänger verwenden möchten. Wenn Sie datengesteuerte Abonnements verwenden möchten, müssen Sie über Fachkenntnisse im Erstellen von Abfragen und zur Verwendungsweise von Parametern verfügen. In der Regel werden diese Abonnements von Berichtsserveradministratoren erstellt und verwaltet. Weitere Informationen finden Sie unter  
@@ -94,10 +94,10 @@ ms.locfileid: "65578036"
   
 -   [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
   
-##  <a name="bkmk_subscription_requirements"></a> Abonnementanforderungen  
+##  <a name="subscription-requirements"></a><a name="bkmk_subscription_requirements"></a> Abonnementanforderungen  
  Vor dem Erstellen eines Abonnements für einen Bericht müssen die folgenden Voraussetzungen erfüllt sein:  
   
-|Anforderung|Beschreibung|  
+|Anforderung|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |Berechtigungen|Sie benötigen Zugriff auf den Bericht. Zum Abonnieren eines Berichts benötigen Sie die Berechtigung zum Anzeigen des Berichts.<br /><br /> Für Berichtsserver im einheitlichen Modus wirken sich die folgenden Rollenzuweisungen auf Abonnements aus:<br /><br /> Mit dem Task „Einzelne Abonnements verwalten“ können Benutzer für einen bestimmten Bericht Abonnements erstellen, ändern und löschen. In den vordefinierten Rollen ist dieser Task Teil der Browser- und Berichts-Generator-Rollen. Mit Rollenzuweisungen, die diesen Task enthalten, können Benutzer nur die Abonnements verwalten, die sie oder er erstellt hat.<br />Mit dem Task „Alle Abonnements verwalten“ kann der Benutzer auf alle Abonnements zugreifen und diese ändern. Dieser Task ist für das Erstellen eines datengesteuerten Abonnements erforderlich. In vordefinierten Rollen enthält nur die Inhalts-Manager-Rolle diesen Task.|  
 |Gespeicherte Anmeldeinformationen|Der Bericht muss gespeicherte oder keine Anmeldeinformationen zum Abrufen des Inhalts zur Laufzeit verwenden, um ein Abonnement zu erstellen. Sie können keinen Bericht abonnieren, für den die Verwendung der anonymisierten oder delegierten Anmeldeinformationen des aktuellen Benutzers zum Herstellen einer Verbindung mit einer externen Datenquelle konfiguriert ist. Bei den gespeicherten Anmeldeinformationen kann es sich um ein Windows-Konto oder ein Datenbank-Benutzerkonto handeln. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Außerdem müssen Sie über die Berechtigung verfügen, den Bericht anzuzeigen und einzelne Abonnements zu erstellen. **Geplante Ereignisse und Berichtsübermittlung** muss auf dem Berichtsserver aktiviert sein. Weitere Informationen finden Sie unter [Alt_Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
@@ -105,12 +105,12 @@ ms.locfileid: "65578036"
 |Keine Modellelementsicherheit|Sie können keine mit dem Berichts-Generator erstellten Berichte abonnieren, die ein Modell als Datenquelle verwenden, wenn das Modell Sicherheitseinstellungen für Modellelemente enthält. Diese Einschränkung bezieht sich nur auf Berichte, die Sicherheitseinstellungen für Modellelemente verwenden.|  
 |Parameterwerte|Falls der Bericht Parameter verwendet, muss ein Parameterwert im Bericht selbst oder im Abonnement, das Sie definieren, angegeben werden. Falls im Bericht Standardwerte definiert wurden, können Sie den Standardwert für den Parameterwert festlegen.|  
   
-##  <a name="bkmk_delivery_extensions"></a> Übermittlungserweiterungen  
+##  <a name="delivery-extensions"></a><a name="bkmk_delivery_extensions"></a> Übermittlungserweiterungen  
  Abonnements werden auf dem Berichtsserver verarbeitet und über Übermittlungserweiterungen verteilt, die auf dem Server bereitgestellt werden. Standardmäßig können Sie Abonnements erstellen, die Berichte an einen freigegebenen Ordner oder an eine E-Mailadresse senden. Ist der Berichtsserver für den integrierten SharePoint-Modus konfiguriert, können Sie auch einen Bericht an eine SharePoint-Bibliothek senden.  
   
  Beim Erstellen eines Abonnements kann der Benutzer eine der verfügbaren Übermittlungserweiterungen auswählen, um die Art der Übermittlung zu bestimmen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] beinhaltet die folgenden Übermittlungserweiterungen:  
   
-|Übermittlungserweiterung|Beschreibung|  
+|Übermittlungserweiterung|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |Windows-Dateifreigabe|Übermittelt einen Bericht als statische Anwendungsdatei an einen freigegebenen Ordner, der über das Netzwerk zugänglich ist.|  
 |E-Mail|Übermittelt eine Benachrichtigung oder einen Bericht als E-Mail-Anlage oder URL-Link.|  
@@ -120,7 +120,7 @@ ms.locfileid: "65578036"
 > [!NOTE]  
 >  Die Berichtsübermittlung stellt einen erweiterbaren Bestandteil der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Architektur dar. Drittanbieter können benutzerdefinierte Übermittlungserweiterungen erstellen, um Berichte an andere Speicherorte oder Geräte weiterzuleiten. Weitere Informationen zu benutzerdefinierten Übermittlungserweiterungen finden Sie unter [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
-##  <a name="bkmk_parts_of_subscription"></a> Bestandteile eines Abonnements  
+##  <a name="parts-of-a-subscription"></a><a name="bkmk_parts_of_subscription"></a> Bestandteile eines Abonnements  
  Eine Abonnementdefinition besteht aus den folgenden Bestandteilen:  
   
 -   Ein Zeiger auf einen Bericht, der unbeaufsichtigt ausgeführt werden kann (d. h. ein Bericht, der gespeicherte oder keine Anmeldeinformationen verwendet).  
@@ -139,7 +139,7 @@ ms.locfileid: "65578036"
   
  Abonnementinformationen werden zusammen mit dem jeweiligen Bericht in einer Berichtsserver-Datenbank gespeichert. Abonnements können nicht getrennt vom zugehörigen Bericht verwaltet werden. Beachten Sie, dass Abonnements nicht um Beschreibungen, sonstigen benutzerdefinierten Text oder andere Elemente erweitert werden können. Abonnements dürfen nur die weiter oben aufgeführten Elemente enthalten.  
   
-##  <a name="bkmk_subscription_processing"></a> So werden Abonnements verarbeitet  
+##  <a name="how-subscriptions-are-processed"></a><a name="bkmk_subscription_processing"></a> So werden Abonnements verarbeitet  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält einen Plan- und Bereitstellungsprozessor, der Funktionen zum Planen von Berichten und Bereitstellen der Berichte für die Benutzer umfasst. Der Berichtsserver antwortet auf Ereignisse, die er ständig überwacht. Beim Auftreten eines Ereignisses, das den für ein Abonnement definierten Bedingungen entspricht, liest der Berichtsserver das Abonnement, um zu ermitteln, wie der Bericht verarbeitet und übermittelt werden soll. Der Berichtsserver fordert die Übermittlungserweiterung an, die im Abonnement angegeben ist. Wenn die Übermittlungserweiterung ausgeführt wird, extrahiert der Berichtsserver Übermittlungsinformationen aus dem Abonnement und übergibt sie zur Verarbeitung an die Übermittlungserweiterung.  
   
  Die Übermittlungserweiterung rendert den Bericht in dem im Abonnement definierten Format und übermittelt dann den Bericht oder die Benachrichtigung an den angegebenen Empfänger. Falls ein Bericht nicht zustellbar ist, erfolgt ein entsprechender Eintrag in der Berichtsserver-Protokolldatei. Zum Unterstützen von Wiederholungsvorgängen können Sie den Berichtsserver so konfigurieren, dass die Übermittlung erneut versucht wird, falls der erste Versuch fehlschlägt.  
@@ -167,7 +167,7 @@ ms.locfileid: "65578036"
   
  Bei Momentaufnahme-Updateereignissen wird das geplante Update einer Berichtsmomentaufnahme verwendet, um ein Abonnement auszulösen. Sie können ein Abonnement definieren, das ausgelöst wird, wenn ein Bericht mit neuen Daten aktualisiert wird. Grundlage hierfür sind die Berichtsausführungseigenschaften, die für den Bericht festgelegt wurden.  
   
-##  <a name="bkmk_code"></a> Programmgesteuerte Kontrolle von Abonnements  
+##  <a name="programmatic-control-of-subscriptions"></a><a name="bkmk_code"></a> Programmgesteuerte Kontrolle von Abonnements  
  Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Objektmodell ermöglicht Ihnen, Abonnements und Abonnementverarbeitung programmgesteuert zu überwachen und zu steuern.  Im Folgenden finden Sie Beispiele und erste Schritte:  
   
 -   [Verwenden von PowerShell, um Reporting Services-Abonnenten zu ändern und aufzulisten sowie ein Abonnement auszuführen](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  

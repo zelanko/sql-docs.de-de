@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241566"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Vorgehensweise: Konfigurieren der Ausführung von SQL Server-Komponententests
@@ -32,7 +32,7 @@ Diese Einstellungen steuern, auf welche Weise der Test mit der zu testenden Date
     > [!NOTE]  
     > Tests werden nicht im Projektmappenordner, sondern in einem separaten Ordner auf der lokalen Festplatte ausgeführt. Obwohl verschiedene Aspekte der Testbereitstellung konfiguriert werden können, müssen diese für Komponententests in der Regel nicht konfiguriert werden. Weitere Informationen zur Testbereitstellung finden Sie unter [Ausführen von Tests](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
   
-## <a name="SpecifyConnectionStrings"></a>Angeben von Verbindungszeichenfolgen  
+## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>Angeben von Verbindungszeichenfolgen  
   
 #### <a name="to-specify-database-connection-strings"></a>So geben Sie Datenbankverbindungszeichenfolgen an  
   
@@ -54,7 +54,7 @@ Diese Einstellungen steuern, auf welche Weise der Test mit der zu testenden Date
   
 4.  Erstellen Sie das Testprojekt erneut, um die Konfigurationsänderungen anzuwenden.  
   
-## <a name="DeployingDBSchema"></a>Bereitstellen eines Datenbankschemas  
+## <a name="deploy-a-database-schema"></a><a name="DeployingDBSchema"></a>Bereitstellen eines Datenbankschemas  
   
 #### <a name="to-deploy-to-a-database-the-schema-of-a-database-project"></a>So stellen Sie das Schema eines Datenbankprojekts für eine Datenbank bereit  
   

@@ -10,10 +10,10 @@ helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76761804"
 ---
 # <a name="sql-server-privacy-supplement"></a>Ergänzende Datenschutzbestimmungen zu SQL Server
@@ -46,8 +46,8 @@ Informationen, die auf die Anmeldeinformationen bezogen sind, die zum Sichern vo
 |Szenario |Zugriffsbeschränkungen |Aufbewahrungsanforderungen |
 |---------|---------|---------|
 |Diese Anmeldeinformationen verlassen den Computer des Benutzers nie über Nutzungs- und Diagnosedaten. |- |- |
-|Absturzabbilder können Zugriffssteuerungsdaten enthalten. |- |Absturzabbilder: maximal 30 Tage. |
-|Diese Anmeldeinformationen verlassen den Computer des Benutzers nie über das Nutzungsfeedback, es sei denn, der Kunde fügt sie manuell ein. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. |Benutzerfeedback: maximal 1 Jahr|
+|Absturzabbilder können Zugriffssteuerungsdaten enthalten. |- |Absturzabbilder: Maximal 30 Tage. |
+|Diese Anmeldeinformationen verlassen den Computer des Benutzers nie über das Nutzungsfeedback, es sei denn, der Kunde fügt sie manuell ein. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. |Benutzerfeedback: Maximal 1 Jahr.|
 |&nbsp;|&nbsp;|&nbsp;|
 
 ## <a name="customer-content"></a>Kundeninhalt
@@ -65,8 +65,8 @@ Kundeninhalt bezeichnet Daten, die direkt oder indirekt in Benutzertabellen gesp
 |Szenario  |Zugriffsbeschränkungen  |Aufbewahrungsanforderungen |
 |---------|---------|---------|
 |Diese Daten verlassen den Computer des Benutzers nie über Nutzungs- und Diagnosedaten. |- |- |
-|Absturzabbilder können Kundeninhalt enthalten und an Microsoft ausgegeben werden. |- |Absturzabbilder: maximal 30 Tage. |
-|Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen. |Benutzerfeedback: maximal 1 Jahr |
+|Absturzabbilder können Kundeninhalt enthalten und an Microsoft ausgegeben werden. |- |Absturzabbilder: Maximal 30 Tage. |
+|Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen. |Benutzerfeedback: Maximal 1 Jahr. |
 
 ## <a name="end-user-identifiable-information-euii"></a>Personenbezogene Endbenutzerinformationen (End-User Identifiable Information, EUII)
 
@@ -88,9 +88,9 @@ Daten, die von einem Benutzer stammen oder durch die Verwendung des Produkts ers
 |Szenario  |Zugriffsbeschränkungen  |Aufbewahrungsanforderungen|
 |---------|---------|---------|
 |Diese Daten verlassen den Computer des Benutzers nie über Nutzungs- und Diagnosedaten. |- |- |
-|Absturzabbilder können personenbezogene Endbenutzerinformationen enthalten und an Microsoft ausgegeben werden. |- |Absturzabbilder: maximal 30 Tage |
+|Absturzabbilder können personenbezogene Endbenutzerinformationen enthalten und an Microsoft ausgegeben werden. |- |Absturzabbilder: Maximal 30 Tage. |
 |Die Kunden-ID kann an Microsoft ausgegeben werden, um neue Hybrid- und Cloudfeatures bereitzustellen, die Benutzer abonniert haben. |- |Zurzeit existieren solche Hybrid- oder Cloudfeatures nicht.|
-|Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden.|Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen. |Benutzerfeedback: maximal 1 Jahr |
+|Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden.|Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen. |Benutzerfeedback: Maximal 1 Jahr. |
 
 ## <a name="internet-based-services-data"></a>Daten zu internetbasierten Diensten
 
@@ -132,17 +132,17 @@ Folgende Daten gelten als Systemmetadaten, wenn sie keine Kundeninhalte, Objektm
 - Ereignisnamen und Fehlercodes
 - Hardwareeinstellungen und -identifizierung, z.B. OEM-Hersteller
 
-Microsoft untersucht die Werte von Anwendungsnamen, die von anderen Programmen, die SQL Server verwenden, festgelegt wurden (z. B. SharePoint oder von Drittanbietern zusammengestellte Programme), und schließt diese Informationen in die Systemmetadaten ein, die an Microsoft gesendet werden, wenn die Nutzungsdaten aktiviert sind. Kunden sollten keine persönlichen Daten, wie z.B. personenbezogene Endbenutzerinformationen, in Systemmetadatenfelder platzieren oder Anwendungen zum Speichern von persönlichen Daten in diese Felder eingeben. 
+Microsoft untersucht die Werte von Anwendungsnamen, die von anderen Programmen, die SQL Server verwenden, festgelegt wurden (z.B. SharePoint oder oder von Drittanbietern gepackte Programme), und schließt diese Informationen in die Systemmetadaten ein, die an Microsoft gesendet werden, wenn die Nutzungsdaten aktiviert sind. Kunden sollten keine persönlichen Daten, wie z.B. personenbezogene Endbenutzerinformationen, in Systemmetadatenfelder platzieren oder Anwendungen zum Speichern von persönlichen Daten in diese Felder eingeben. 
 
 ### <a name="permitted-usage-scenarios"></a>Szenarios für die zulässige Verwendung
 
 |Szenario  |Zugriffseinschränkungen  |Aufbewahrungsanforderungen|
 |---------|---------|---------|
 |Können von Microsoft verwendet werden, um Features zu verbessern und bzw. oder Fehler in aktuellen Features zu beheben.|Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. |Mindestens 90 Tage bis maximal 3 Jahre. |
-|Können verwendet werden, um dem Kunden Vorschläge zu machen.  Zum Beispiel können Sie Folgendes vorschlagen: „Ziehen Sie das Feature *X* in Betracht, da es für Ihre Verwendung des Produkts besser geeignet ist.“ |Microsoft kann die Daten für den ursprünglichen Kunden, z.B. über Dashboards, verfügbar machen. |Sicherheitsprotokolle zu Kundendaten: mindestens 3 Jahre - maximal 6 Jahre |
+|Können verwendet werden, um dem Kunden Vorschläge zu machen.  Zum Beispiel können Sie Folgendes vorschlagen: „Ziehen Sie das Feature *X* in Betracht, da es für Ihre Verwendung des Produkts besser geeignet ist.“ |Microsoft kann die Daten für den ursprünglichen Kunden, z.B. über Dashboards, verfügbar machen. |Sicherheitsprotokolle zu Kundendaten: Mindestens 3 Jahre bis maximal 6 Jahre. |
 |Können von Microsoft für die zukünftige Produktplanung verwendet werden. |Microsoft kann diese Informationen mit anderen Hardware- und Softwareanbietern teilen, um die Ausführung derer Produkte im Zusammenspiel mit Microsoft-Software zu verbessern. |Mindestens 90 Tage bis maximal 3 Jahre.|
 |Können von Microsoft verwendet werden, um cloudbasierte Dienste bereitzustellen, die auf den ausgegebenen Nutzungs- und Diagnosedaten basieren. Zum Beispiel ein Kundendashboard, das die Verwendung von Features in allen Installationen von SQL Server in einer Organisation anzeigt. |Microsoft kann die Daten für den ursprünglichen Kunden, z.B. über Dashboards, verfügbar machen. |Mindestens 90 Tage bis maximal 3 Jahre. |
-|Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen. |Benutzerfeedback: maximal 1 Jahr |
+|Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. Microsoft kann die Daten für den ursprünglichen Kunden verfügbar machen. |Benutzerfeedback: Maximal 1 Jahr. |
 |Datenbankname und Anwendungsname werden möglicherweise verwendet, um die Datenbanken und Anwendungen bekannten Kategorien zuzuordnen, z.B. Anwendungen, die Microsoft-Software oder Software von anderen Unternehmen ausführen.|Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt.|Mindestens 90 Tage bis maximal 3 Jahre. |
 
 ## <a name="object-metadata"></a>Objektmetadaten

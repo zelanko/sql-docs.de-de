@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286304"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Sichern von Stretch-fähigen Datenbanken (Stretch Database)
@@ -46,7 +46,7 @@ Der Azure-Dienst SQL Server Stretch Database schützt Ihre Remotedatenbanken min
 ### <a name="azure-reduces-the-risk-of-data-loss-with-geo-redundancy"></a>Azure reduziert das Risiko eines Datenverlusts durch Georedundanz  
 Datenbanksicherungen in Azure werden im georedundanten Azure-Speicher (Read-Access Geo Redundant-Speicher; RA-GRS) gespeichert und sind daher standardmäßig georedundant. Georedundanter Speicher repliziert Ihre Daten in eine sekundäre Region, die Hunderte von Meilen von der primären Region entfernt ist. In primären und sekundären Regionen werden Ihre Daten jeweils dreimal in separaten Fehler- und Upgradedomänen repliziert. Dadurch wird sichergestellt, dass Ihre Daten erhalten bleiben, sogar im Falle eines vollständigen, regionalen Stromausfalls oder eines Notfalls, der eine ganze Region unzugänglich macht.
 
-### <a name="stretchRPO"></a>Stretch Database reduziert das Risiko eines Verlusts Ihrer Azure-Daten, indem migrierte Zeilen vorübergehend beibehalten werden.
+### <a name="stretch-database-reduces-the-risk-of-data-loss-for-your-azure-data-by-retaining-migrated-rows-temporarily"></a><a name="stretchRPO"></a>Stretch Database reduziert das Risiko eines Verlusts Ihrer Azure-Daten, indem migrierte Zeilen vorübergehend beibehalten werden.
 Nachdem Stretch Database relevante Zeilen aus SQL Server zu Azure migriert hat, behält sie diese Zeilen mindestens acht Stunden lang in der Stagingtabelle bei. Wenn Sie eine Sicherungskopie Ihrer Azure-Datenbank wiederherstellen, verwendet Stretch Database die in der Stagingtabelle gespeicherten Zeilen, um die SQL Server- und die Azure-Datenbanken abzustimmen.
 
 Nach der Wiederherstellung einer Ihrer Azure-Datenbanksicherungen müssen Sie die gespeicherte Prozedur [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) ausführen, um eine SQL Server-Datenbank, für die Stretch-Datenbank aktiviert wurde, wieder mit der Azure-Remotedatenbank zu verbinden. Wenn Sie **sys.sp_rda_reauthorize_db** ausführen, stimmt Stretch Database automatisch die SQL Server- und die Azure-Datenbanken ab.

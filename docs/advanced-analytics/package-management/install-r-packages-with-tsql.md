@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: b19b2df1b39bcc88332d60f1389be12b32d7b921
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485265"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Verwenden von T-SQL (CREATE EXTERNAL LIBRARY) zum Installieren von R-Paketen in SQL Server
@@ -35,7 +35,7 @@ Die Anweisung [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/sta
 
 Wenn Sie ein einzelnes Paket installieren, laden Sie das Paket im ZIP-Format herunter.
 
-Aufgrund von Paketabhängigkeiten ist es üblich, mehrere Pakete zu installieren. Wenn ein Paket andere Pakete erfordert, müssen Sie sicherstellen, dass alle anderen Pakete während der Installation aufeinander zugreifen können. Es wird empfohlen, die Tools [miniCRAN](https://andrie.github.io/miniCRAN/) zum Erstellen [eines lokalen Repositorys](create-a-local-package-repository-using-minicran.md) für das Zusammenstellen einer vollständigen Paketsammlung und [igraph](https://igraph.org/r/) zum Analysieren von Paketabhängigkeiten zu verwenden. Das Installieren der falschen Version eines Pakets oder Weglassen einer Paketabhängigkeit kann dazu führen, dass eine CREATE EXTERNAL LIBRARY-Anweisung fehlschlägt. 
+Aufgrund von Paketabhängigkeiten ist es üblich, mehrere Pakete zu installieren. Wenn ein Paket andere Pakete erfordert, müssen Sie sicherstellen, dass alle anderen Pakete während der Installation aufeinander zugreifen können. Es wird empfohlen, die Tools [miniCRAN](create-a-local-package-repository-using-minicran.md) zum Erstellen [eines lokalen Repositorys](https://andrie.github.io/miniCRAN/) für das Zusammenstellen einer vollständigen Paketsammlung und [igraph](https://igraph.org/r/) zum Analysieren von Paketabhängigkeiten zu verwenden. Das Installieren der falschen Version eines Pakets oder Weglassen einer Paketabhängigkeit kann dazu führen, dass eine CREATE EXTERNAL LIBRARY-Anweisung fehlschlägt. 
 
 ## <a name="copy-the-file-to-a-local-folder"></a>Kopieren der Datei in einen lokalen Ordner
 

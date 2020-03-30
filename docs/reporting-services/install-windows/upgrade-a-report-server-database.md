@@ -12,21 +12,21 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65575239"
 ---
 # <a name="upgrade-a-report-server-database"></a>Aktualisieren der Berichtsserver-Datenbank
 
 Die Berichtsserver-Datenbank ermöglicht die Speicherung für mindestens eine Berichtsserverinstanz. Da sich das Berichtsserver-Datenbankschema mit jeder neuen Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ändern kann, muss die Datenbankversion mit der Version der verwendeten Berichtsserverinstanz übereinstimmen. In den meisten Fällen kann eine Berichtsserver-Datenbank automatisch aktualisiert werden, ohne dass Sie aktiv werden müssen.  
   
- **Einheitlicher Modus:** In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (einheitlicher Modus) besteht die Berichtsserver-Datenbank tatsächlich aus zwei Datenbanken mit den Standardnamen „ReportServer“ und „ReportServerTempDB“.  
+ **Einheitlicher Modus:** Bei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus besteht die Berichtsserver-Datenbank tatsächlich aus zwei Datenbanken mit dem Standardnamen „ReportServer“ und „ReportServerTempDB“.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
- **SharePoint-Modus:** Im Reporting Services SharePoint-Modus von SQL Server 2016 entspricht die Berichtsserver-Datenbank tatsächlich einer Sammlung von Datenbanken, die für die einzelnen Instanzen der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstanwendung erstellt werden.  
+ **SharePoint-Modus:** Im Reporting Services SharePoint-Modus von SQL Server 2016 entspricht die Berichtsserver-Datenbank tatsächlich einer Sammlung von Datenbanken, die für die einzelnen Instanzen der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung erstellt werden.  
 
 ::: moniker-end
 

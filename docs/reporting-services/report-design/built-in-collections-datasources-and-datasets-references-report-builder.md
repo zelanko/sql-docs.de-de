@@ -9,10 +9,10 @@ ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2f65020a094258e4d6ee4a3906d29d33438b0783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081458"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>Integrierte Auflistungen: DataSources- und DataSets-Verweise (Berichts-Generator)
@@ -26,7 +26,7 @@ ms.locfileid: "77081458"
   
 |**Variable**|**Typ**|**Beschreibung**|  
 |------------------|--------------|---------------------|  
-|**DataSourceReference**|**String**|Der vollständige Pfad der Datenquellendefinition auf dem Berichtsserver. Sie können eine Liste der von einem Bericht verwendeten Datenquellen im Rahmen eines Berichtsverlaufs mit einbeziehen. Im folgenden Beispiel wird der vollständige Pfad für die Datenquelle mit dem Namen AdventureWorks2012 angezeigt:<br /><br /> `/DataSources/AdventureWorks2012`.|  
+|**DataSourceReference**|**String**|Der vollständige Pfad der Datenquellendefinition auf dem Berichtsserver. Sie können eine Liste der von einem Bericht verwendeten Datenquellen im Rahmen eines Berichtsverlaufs mit einbeziehen. Im folgenden Beispiel wird der vollständige Pfad für die Datenquelle mit dem Namen AdventureWorks2012 angezeigt:<br /><br /> [https://login.microsoftonline.com/consumers/](`/DataSources/AdventureWorks2012`).|  
 |**Typ**|**String**|Der Typ des Datenanbieters für die Datenquelle. Beispiel: `SQL`.|  
   
 ## <a name="datasets"></a>DataSets  

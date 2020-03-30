@@ -8,22 +8,22 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190912"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  Sie müssen zuerst eine *Zeichenfolge* in Ihrer *Datenquelle* erstellen, um Daten in paginierten Berichten von [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] einzuschließen. In diesem Artikel wird beschrieben, wie Sie Datenverbindungszeichenfolgen erstellen. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen. Eine Datenquelle umfasst den Datenquellentyp, Verbindungsinformationen und den Typ der zu verwendenden Anmeldeinformationen. Weitere Informationen finden Sie unter [Einführung in Berichtsdaten in SQL Server Reporting Services (SSRS)](report-data-ssrs.md).
+  Sie müssen zuerst eine [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]Zeichenfolge[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in Ihrer *Datenquelle* erstellen, um Daten in paginierten Berichten von *und* einzuschließen. In diesem Artikel wird beschrieben, wie Sie Datenverbindungszeichenfolgen erstellen. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen. Eine Datenquelle umfasst den Datenquellentyp, Verbindungsinformationen und den Typ der zu verwendenden Anmeldeinformationen. Weitere Informationen finden Sie unter [Einführung in Berichtsdaten in SQL Server Reporting Services (SSRS)](report-data-ssrs.md).
   
-##  <a name="bkmk_DataConnections"></a> Integrierte Datenerweiterungen  
+##  <a name="built-in-data-extensions"></a><a name="bkmk_DataConnections"></a> Integrierte Datenerweiterungen  
  Standarddatenerweiterungen in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthalten Microsoft SQL Server, Microsoft Azure SQL-Datenbank und SQL Server Analysis Services. Eine vollständige Liste der Datenquellen und -versionen, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt, finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-##  <a name="bkmk_connection_examples"></a> Beispiele für häufige Verbindungszeichenfolgen  
+##  <a name="common-connection-string-examples"></a><a name="bkmk_connection_examples"></a> Beispiele für häufige Verbindungszeichenfolgen  
  Verbindungszeichenfolgen sind die Textdarstellung von Verbindungseigenschaften für einen Datenanbieter. In der folgenden Tabelle sind Beispiele von Verbindungszeichenfolgen für verschiedene Datenverbindungstypen aufgeführt.  
  
  > [!NOTE]  
@@ -53,10 +53,10 @@ ms.locfileid: "74190912"
   
  Weitere Informationen zu den Konfigurationen, die zum Herstellen einer Verbindung mit diesen Datenquellentypen erforderlich sind, finden Sie im spezifischen Datenverbindungsartikel unter [Hinzufügen von Daten aus externen Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) oder [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-##  <a name="bkmk_special_password_characters"></a> Sonderzeichen in Kennwörtern  
+##  <a name="special-characters-in-a-password"></a><a name="bkmk_special_password_characters"></a> Sonderzeichen in Kennwörtern  
  Wenn Sie eine ODBC- oder SQL-Datenquelle so konfigurieren, dass nach einem Kennwort gefragt oder das Kennwort in die Verbindungszeichenfolge eingeschlossen wird, und ein Benutzer das Kennwort mit Sonderzeichen wie z. B. Satzzeichen eingibt, können die Sonderzeichen von einigen zugrunde liegenden Datenquellentreibern nicht überprüft werden. Wenn Sie den Bericht verarbeiten, ist die Meldung "Kein zulässiges Kennwort" möglicherweise ein Anzeichen für dieses Problem. Falls die Änderung des Kennworts unmöglich ist, können Sie mit dem Datenbankadministrator vereinbaren, dass die entsprechenden Anmeldeinformationen auf dem Server als Teil eines ODBC-System-Datenquellennamens (Data Source Name, DSN) gespeichert werden. Weitere Informationen finden Sie unter [Eigenschaft „OdbcConnection.ConnectionString“](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring) in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Dokumentation.  
   
-##  <a name="bkmk_Expressions_in_connection_strings"></a> Auf Ausdrücken basierende Verbindungszeichenfolgen  
+##  <a name="expression-based-connection-strings"></a><a name="bkmk_Expressions_in_connection_strings"></a> Auf Ausdrücken basierende Verbindungszeichenfolgen  
  Auf Ausdrücken beruhende Verbindungszeichenfolgen werden zur Laufzeit ausgewertet. Sie können beispielsweise die Datenquelle als Parameter angeben, den Parameterverweis in die Verbindungszeichenfolge einbinden und dem Benutzer das Auswählen einer Datenquelle für den Bericht gestatten. Nehmen Sie beispielsweise an, ein multinationales Unternehmen verfügt über Datenserver in verschiedenen Ländern. Mit einer ausdrucksbasierten Verbindungszeichenfolge kann ein Benutzer, der einen Umsatzbericht ausführt, vor der Ausführung des Berichts eine Datenquelle für ein bestimmtes Land bzw. für eine bestimmte Region auswählen.  
   
  Im folgenden Beispiel wird die Verwendung eines Datenquellenausdrucks in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindungszeichenfolge veranschaulicht. Für das Beispiel wird vorausgesetzt, dass Sie einen Berichtsparameter mit dem Namen `ServerName`erstellt haben:  

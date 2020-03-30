@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286174"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installieren des ersten Berichtsservers im SharePoint-Modus
@@ -31,7 +31,7 @@ ms.locfileid: "79286174"
   
  Die Installation auf einem einzelnen Server ist für Entwicklungs- und Testszenarien geeignet, wird aber für Produktionsumgebungen nicht empfohlen.  
   
-##  <a name="bkmk_singleserver"></a> Beispiel für die Bereitstellung auf einem Server
+##  <a name="example-single-server-deployment"></a><a name="bkmk_singleserver"></a> Beispiel für die Bereitstellung auf einem Server
 
  Die Installation auf einem einzelnen Server ist für Entwicklungs- und Testszenarien geeignet, wird aber für Produktionsumgebungen nicht empfohlen. Eine Umgebung mit einem Server bezieht sich auf einen einzelnen Computer, für den SharePoint und Reporting Services-Komponenten auf demselben Computer installiert sind. Die horizontale Skalierung mit mehreren Reporting Services-Servern wird hier nicht thematisiert.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "79286174"
 > [!TIP]  
 >  Komplexere Bereitstellungsbeispiele finden Sie unter [Bereitstellungstopologien für SQL Server-BI-Funktionen in SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
   
-##  <a name="bkmk_setupaccounts"></a> Setupkonten
+##  <a name="setup-accounts"></a><a name="bkmk_setupaccounts"></a> Setupkonten
 
  In diesem Abschnitt werden die Konten und Berechtigungen beschrieben, die für die wesentlichen Schritte zur Bereitstellung von Reporting Services im SharePoint-Modus verwendet werden.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "79286174"
   
      Eine bewährte Sicherheitsmethode besteht darin, die Administratorkonten der SharePoint-Farm nicht gleichzeitig als Administratorkonten des lokalen Betriebssystems festzulegen. Wenn Sie der lokalen Administratorgruppe während der Installation ein Farmadministratorkonto hinzufügen, wird empfohlen, das Konto nach Ende der Installation aus der lokalen Administratorgruppe zu entfernen.  
   
-##  <a name="bkmk_install_SSRS"></a>Schritt 1: Installieren eines Reporting Services-Berichtsservers im SharePoint-Modus
+##  <a name="step-1-install-reporting-services-report-server-in-sharepoint-mode"></a><a name="bkmk_install_SSRS"></a> Schritt 1: Installieren eines Reporting Services-Berichtsservers im SharePoint-Modus
 
  Mit diesem Schritt installieren Sie Reporting Services im SharePoint-Modus und das Reporting Services-Add-In für SharePoint-Produkte. Abhängig von bereits auf dem Computer installierten Komponenten werden einige der in den folgenden Schritten beschriebenen Installationsseiten u. U. nicht angezeigt.  
  
@@ -163,7 +163,7 @@ ms.locfileid: "79286174"
   
 15. Die Installation dauert mehrere Minuten. Die Seite **Abgeschlossen** wird mit einer Liste der Funktionen und dem Status der einzelnen Funktionen angezeigt. Möglicherweise werden Sie in einem Informationsdialogfeld darauf hingewiesen, dass der Computer neu gestartet werden muss.  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a>Schritt 2: Registrieren und Starten des SharePoint-Diensts für Reporting Services  
+##  <a name="step-2-register-and-start-the-reporting-services-sharepoint-service"></a><a name="bkmk_install_SSRS_sharedservice"></a> Schritt 2: Registrieren und Starten des SharePoint-Dienstes für Reporting Services  
  ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt")  
   
 > [!NOTE]
@@ -209,7 +209,7 @@ ms.locfileid: "79286174"
     > [!IMPORTANT]
     > Angenommen, eine Fehlermeldung mit etwa folgendem Wortlaut wird ausgegeben:  
     >   
-    >     Install-SPRSService: The term 'Install-SPRSService' **is not recognized** as the name of a cmdlet, function, script file, or operable program. (Der Begriff „Install-SPRSService“ wurde nicht als Name eines Cmdlets, einer Funktion, einer Skriptdatei oder eines ausführbaren Programms erkannt.) Prüfen Sie die Schreibweise des Namens bzw. stellen Sie sicher, dass der Pfad korrekt angegeben wurde, und versuchen Sie es erneut.  
+    >     Install-SPRSService: Der Begriff **Install-SPRSService** wurde nicht als Name eines Cmdlets, einer Funktion, einer Skriptdatei oder eines ausführbaren Programms erkannt. Prüfen Sie die Schreibweise des Namens bzw. stellen Sie sicher, dass der Pfad korrekt angegeben wurde, und versuchen Sie es erneut.  
     >
     > Entweder befinden Sie sich in Windows PowerShell anstatt in der SharePoint-Verwaltungsshell, oder Reporting Services ist nicht im SharePoint-Modus installiert. Weitere Informationen zu Reporting Services und PowerShell finden Sie unter [PowerShell-Cmdlets für SharePoint-Modus von Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
@@ -224,7 +224,7 @@ ms.locfileid: "79286174"
     > [!NOTE]  
     >  Wenn der Reporting Services-Dienst im Status **Wird gestartet** bleibt und sich nicht in **Gestartet** ändert, stellen Sie sicher, dass der Dienst der SharePoint 2013-Administration im Windows Server-Manager gestartet wurde.  
   
-##  <a name="bkmk_create_serrviceapplication"></a>Schritt 3: Erstellen einer Reporting Services-Dienstanwendung  
+##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> Schritt 3: Erstellen einer Reporting Services-Dienstanwendung  
  Dieser Abschnitt enthält die Schritte zum Erstellen einer Dienstanwendung und eine Beschreibung der Eigenschaften, wenn Sie eine vorhandene Dienstanwendung überprüfen.  
   
 1.  Klicken Sie in der SharePoint-Zentraladministration in der Gruppe **Anwendungsverwaltung** auf **Dienstanwendungen verwalten**.  
@@ -260,7 +260,7 @@ ms.locfileid: "79286174"
   
 -   Thema [So erstellen Sie eine Reporting Services-Dienstanwendung mit PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
-##  <a name="bkmk_powerview"></a> Schritt 4: Aktivieren des Power View-Websitesammlungsfeatures
+##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> Schritt 4: Aktivieren der Power View-Websitesammlungsfunktion
 
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ist eine Funktion des SQL Server 2016 Reporting Services-Add-Ins für [!INCLUDE[msCoName](../../includes/msconame-md.md)]-SharePoint-Produkte und stellt eine Websitesammlungsfunktion dar. Die Funktion wird für Stammwebsitesammlungen und Websitesammlungen automatisch aktiviert, die nach der Installation des Reporting Services-Add-Ins erstellt wurden. Wenn Sie die Verwendung von [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]planen, sollten Sie sicherstellen, dass die Funktion aktiviert ist.  
   
@@ -284,7 +284,7 @@ ms.locfileid: "79286174"
   
  Diese Prozedur wird pro Websitesammlung abgeschlossen. Weitere Informationen finden Sie unter [Aktivieren der Berichtsserver- und Power View-Integrationsfunktionen in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md).  
   
-##  <a name="bkmk_full_script"></a> Windows PowerShell-Skript für die Schritte 1 bis 4  
+##  <a name="windows-powershell-script-for-steps-1-4"></a><a name="bkmk_full_script"></a> Windows PowerShell-Skript für die Schritte 1 bis 4  
  Das PowerShell-Skript in diesem Abschnitt entspricht dem Abschluss der Schritte 1 bis 4 in den vorangegangenen Schritten. Das Skript führt folgende Schritte aus:  
   
 -   Der Reporting Services-Dienst und der -Dienstproxy werden installiert, und der Dienst wird gestartet.  
@@ -383,10 +383,10 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
   
 ```  
   
-##  <a name="bkmk_additional_config"></a> Zusätzliche Konfiguration  
+##  <a name="additional-configuration"></a><a name="bkmk_additional_config"></a> Zusätzliche Konfiguration  
  In diesem Abschnitt werden zusätzliche Konfigurationsschritte beschrieben, die in den meisten SharePoint-Bereitstellungen wichtig sind.  
   
-###  <a name="bkmk_configure_ECS"></a> Konfigurieren von Excel Services und PowerPivot  
+###  <a name="configure-excel-services-and-power-pivot"></a><a name="bkmk_configure_ECS"></a> Konfigurieren von Excel Services und PowerPivot  
  Wenn Sie Power View-Berichte von [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] in einer Excel 2016- oder Excel 2013-Arbeitsmappe in SharePoint anzeigen möchten, muss Excel Services für die Verwendung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Servers im Power Pivot-Modus konfiguriert werden. 
  
  Für SharePoint 2016 muss ein [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) konfiguriert werden, um Excel Services verwenden zu können. Weitere Informationen finden Sie in den folgenden Whitepapers.
@@ -403,7 +403,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
 
 Darüber hinaus muss das von der Reporting Services-Dienstanwendung verwendete Sicherheitskonto für den Anwendungspool auf dem Analysis Services-Server Administratorrechte aufweisen.
   
-###  <a name="bkmk_provision_agent"></a> Bereitstellen von Abonnements und Warnungen  
+###  <a name="provision-subscriptions-and-alerts"></a><a name="bkmk_provision_agent"></a> Bereitstellen von Abonnements und Warnungen  
  Reporting Services-Abonnements und -Datenwarnungen verlangen möglicherweise die Konfiguration von SQL Server-Agent-Berechtigungen. Wenn eine Fehlermeldung darauf hinweist, dass SQL Server-Agent erforderlich ist, Sie jedoch sichergestellt haben, dass SQL Server-Agent gestartet wurde, müssen Sie die Berechtigungen aktualisieren. Sie können auf der Seite mit der Erfolgsmeldung nach der Dienstanwendungserstellung auf den Link **Abonnements und Warnmeldungen bereitstellen** klicken, um eine andere Seite für die SQL Server-Agent-Bereitstellung aufzurufen. Der Bereitstellungsschritt ist erforderlich, wenn die Bereitstellung über mehrere Computer erfolgt (wenn sich z. B. die SQL Server-Datenbankinstanz auf einem anderen Computer befindet). Weitere Informationen finden Sie unter [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>Konfigurieren von E-Mail-Einstellungen für SSRS-Dienstanwendungen  
@@ -415,7 +415,7 @@ Darüber hinaus muss das von der Reporting Services-Dienstanwendung verwendete S
 ### <a name="activate-the-report-server-file-sync-feature"></a>Aktivieren des Features zur Berichtsserver-Dateisynchronisierung  
  Wenn Benutzer häufig veröffentlichte Berichtselemente direkt in SharePoint-Dokumentbibliotheken hochladen, ist das Feature zur **Berichtsserver-Dateisynchronisierung** auf Websiteebene hilfreich. Die Dateisynchronisierungsfunktion synchronisiert den Berichtsserverkatalog regelmäßiger mit Elementen in Dokumentbibliotheken. Weitere Informationen finden Sie unter [Aktivieren des Features zur Berichtsserver-Dateisynchronisierung in der SharePoint-Zentraladministration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
-##  <a name="bkmk_verify_installation"></a> Überprüfen der Installation  
+##  <a name="verify-the-installation"></a><a name="bkmk_verify_installation"></a> Überprüfen der Installation  
  Im Folgenden werden Schritte und Verfahren vorgeschlagen, um die Reporting Services-Bereitstellung im SharePoint-Modus zu überprüfen.  
   
 -   Weitere Informationen finden Sie im SharePoint-Abschnitt im Thema zur Bereitstellung [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  

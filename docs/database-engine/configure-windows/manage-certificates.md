@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68212740"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Zertifikatverwaltung (SQL Server-Konfigurations-Manager)
@@ -41,7 +41,7 @@ SSL/TLS-Zertifikate werden oft dazu verwendet, den Zugriff auf SQL Server zu sic
 > [!NOTE]
 > Sie können die Zertifikatverwaltung im SQL Server-Konfigurations-Manager mit früheren Versionen von SQL Server verwenden, beginnend mit SQL Server 2008.
 
-##  <a name="provision-single-server-cert"></a>So installieren Sie ein Zertifikat für eine einzelne SQL Server-Instanz  
+##  <a name="to-install-a-certificate-for-a-single-sql-server-instance"></a><a name="provision-single-server-cert"></a>So installieren Sie ein Zertifikat für eine einzelne SQL Server-Instanz  
   
 1. Erweitern Sie im SQL Server-Konfigurations-Manager im Konsolenbereich den Knoten **SQL Server-Netzwerkkonfiguration**.  
   
@@ -54,7 +54,7 @@ SSL/TLS-Zertifikate werden oft dazu verwendet, den Zugriff auf SQL Server zu sic
 5. Klicken Sie auf **Weiter**, um das Zertifikat zu überprüfen. Wenn keine Fehler vorliegen, klicken Sie auf **Weiter**, um das Zertifikat in die lokale Instanz zu importieren.  
   
  
-##  <a name="provision-failover-cluster-cert"></a>So installieren Sie ein Zertifikat in einer Failoverclusterkonfiguration  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a>So installieren Sie ein Zertifikat in einer Failoverclusterkonfiguration  
   
 1. Erweitern Sie im SQL Server-Konfigurations-Manager im Konsolenbereich den Knoten **SQL Server-Netzwerkkonfiguration**.
   
@@ -77,7 +77,7 @@ SSL/TLS-Zertifikate werden oft dazu verwendet, den Zugriff auf SQL Server zu sic
 > [!NOTE]
 > Führen Sie diese Schritte im aktiven Knoten der SQL Server-Failoverclusterinstanz aus. Benutzer müssen über Administratorberechtigungen auf allen Clusterknoten verfügen.
 
-##  <a name="provision-availability-group-cert"></a>So installieren Sie ein Zertifikat in einer Verfügbarkeitsgruppenkonfiguration  
+##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>So installieren Sie ein Zertifikat in einer Verfügbarkeitsgruppenkonfiguration  
   
 1. Erweitern Sie im SQL Server-Konfigurations-Manager im Konsolenbereich den Knoten **SQL Server-Netzwerkkonfiguration**.
   
