@@ -16,22 +16,22 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76285027"
 ---
 # <a name="configure-publishing-and-distribution"></a>Konfigurieren der Veröffentlichung und der Verteilung
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
  In diesem Thema wird beschrieben, wie die Veröffentlichung und die Verteilung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) konfiguriert werden.
 
-##  <a name="BeforeYouBegin"></a> Vorbereitungen 
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen 
 
-###  <a name="Security"></a> Sicherheit 
+###  <a name="security"></a><a name="Security"></a> Sicherheit 
 Weitere Informationen finden Sie unter [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio 
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio 
 Sie konfigurieren die Verteilung mit dem Assistenten für neue Veröffentlichung oder mit dem Verteilungskonfigurations-Assistenten. Rufen Sie nach der Konfiguration des Verteilers das Dialogfeld **Verteilereigenschaften - \<Distributor>** auf, und ändern Sie die Eigenschaften. Verwenden Sie den Verteilungskonfigurations-Assistenten, wenn Sie einen Verteiler so konfigurieren möchten, dass die Mitglieder der festen Datenbankrollen `db_owner` Veröffentlichungen erstellen können, oder wenn Sie einen Remoteverteiler konfigurieren möchten, bei dem es sich nicht um einen Verleger handelt.
 
 #### <a name="to-configure-distribution"></a>So konfigurieren Sie die Verteilung 
@@ -54,7 +54,7 @@ Sie konfigurieren die Verteilung mit dem Assistenten für neue Veröffentlichung
 
   - Erstellen Sie optional ein Skript für die Konfigurationseinstellungen. Weitere Informationen finden Sie unter [Scripting Replication](../../relational-databases/replication/scripting-replication.md).
 
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL 
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL 
 Die Replikationsveröffentlichung und -verteilung kann mit gespeicherten Replikationsprozeduren programmgesteuert konfiguriert werden.
 ### <a name="to-configure-publishing-using-a-local-distributor"></a>So konfigurieren Sie die Veröffentlichung mit einem lokalen Verteiler
 1. Führen Sie [sp_get_distributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md) aus, um zu ermitteln, ob der Server bereits als Verteiler konfiguriert ist.
@@ -85,12 +85,12 @@ Die Replikationsveröffentlichung und -verteilung kann mit gespeicherten Replika
 
 4. Führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) auf dem Verleger aus. Geben Sie die zu veröffentlichende Datenbank für `@dbname`, den Replikationstyp für `@optname` und den Wert „true“ für `@value` an.
 
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL) 
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL) 
 Im folgenden Beispiel wird veranschaulicht, wie die Veröffentlichung und die Verteilung programmgesteuert konfiguriert werden. In diesem Beispiel werden der Name des Servers, der als Verleger konfiguriert wird, und ein lokaler Verteiler mithilfe von Skriptvariablen bereitgestellt. Die Replikationsveröffentlichung und -verteilung kann mit gespeicherten Replikationsprozeduren programmgesteuert konfiguriert werden.
 
 [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/configure-publishing-and_1.sql)] 
 
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO) 
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO) 
 
 #### <a name="to-configure-publishing-and-distribution-on-a-single-server"></a>So konfigurieren Sie Veröffentlichung und Verteilung auf einem einzelnen Server 
 
@@ -159,7 +159,7 @@ Im folgenden Beispiel wird veranschaulicht, wie die Veröffentlichung und die Ve
 > [!IMPORTANT]
 > Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von Windows .NET Framework.
 
-###  <a name="PShellExample"></a> Beispiel (RMO) 
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Beispiel (RMO) 
 Sie können die Veröffentlichung und Verteilung mithilfe von Replikationsverwaltungsobjekten (ROM) programmgesteuert konfigurieren.
 
 [!code-cs[HowTo#rmo_AddDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_adddistpub)] 

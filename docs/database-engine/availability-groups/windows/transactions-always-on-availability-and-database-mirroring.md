@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251236"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transaktionen: Always On-Verfügbarkeitsgruppen und Datenbankspiegelung
@@ -51,7 +51,7 @@ In SQL Server 2016 SP1 und früher werden datenbankübergreifende Transaktionen 
   
 Datenbankübergreifende Transaktionen werden für die Datenbankspiegelung ebenfalls nicht unterstützt.  
   
-##  <a name="dtcsupport"></a> SQL Server 2016 SP1 und früher: Unterstützung für verteilte Transaktionen  
+##  <a name="sql-server-2016-sp1-and-before-support-for-distributed-transactions"></a><a name="dtcsupport"></a> SQL Server 2016 SP1 und früher: Unterstützung für verteilte Transaktionen  
 Verteilte Transaktion werden von Verfügbarkeitsgruppen unterstützt, wenn Datenbanken von unterschiedlichen SQL Server-Instanzen gehostet werden. Dies gilt auch für verteilte Transaktionen zwischen SQL Server-Instanzen und einem anderen DTC-konformen Server.  
  
 Microsoft Distributed Transaction Coordinator (MSDTC oder DTC) ist ein Windows-Dienst, der eine Transaktionsinfrastruktur für verteilte Systeme bereitstellt. Mit MSDTC können Clientanwendungen mehrere Datenquellen in eine Transaktion aufnehmen. Für diese Transaktion wird dann auf allen Servern, die Teil der Transaktion sind, ein Commit ausgeführt. Sie können MSDTC beispielsweise dazu nutzen, um Transaktionen zu koordinieren, die mehrere Datenbanken auf verschiedenen Servern umfassen.

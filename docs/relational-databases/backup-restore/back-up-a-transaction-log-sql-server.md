@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708733"
 ---
 # <a name="back-up-a-transaction-log"></a>Sichern eines Transaktionsprotokolls
@@ -26,17 +26,17 @@ ms.locfileid: "71708733"
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell ein Transaktionsprotokoll sichern.  
 
 ## <a name="before-you-begin"></a>Vorbereitungen
-### <a name="Restrictions"></a> Einschränkungen  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 Die `BACKUP`-Anweisung ist in einer expliziten oder [impliziten](../../t-sql/statements/set-implicit-transactions-transact-sql.md) Transaktion nicht zulässig. Eine explizite Transaktion ist eine Transaktion, in der Sie sowohl den Beginn als auch das Ende explizit definieren.
 
-### <a name="Recommendations"></a> Empfehlungen  
+### <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 - Wenn eine Datenbank das vollständige oder das massenprotokollierte [Wiederherstellungsmodell](recovery-models-sql-server.md) verwendet, muss das Transaktionsprotokoll so oft gesichert werden, dass die Daten geschützt sind und das [Transaktionsprotokoll nicht aufgefüllt wird](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md). Dadurch wird das Protokoll gekürzt, und die Wiederherstellung der Datenbank zu einem bestimmten Zeitpunkt wird unterstützt. 
   
 - Standardmäßig wird bei jedem erfolgreichen Sicherungsvorgang dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und dem Systemereignisprotokoll ein Eintrag hinzugefügt. Wenn Sie das Protokoll regelmäßig sichern, kann die Anzahl dieser Erfolgsmeldungen schnell ansteigen, d.h., es entstehen sehr große Fehlerprotokolle, die das Suchen nach anderen Meldungen erschweren können. In solchen Fällen können Sie diese Protokolleinträge mithilfe des Ablaufverfolgungsflags 3226 unterdrücken, wenn keines der Skripts von diesen Einträgen abhängig ist. Weitere Informationen hierzu finden Sie unter [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
-### <a name="Permissions"></a> Berechtigungen
+### <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
 
 Die erforderlichen Berechtigungen `BACKUP DATABASE` und `BACKUP LOG` werden standardmäßig den Mitgliedern der festen Serverrolle **sysadmin** und den festen Datenbankrollen **db_owner** und **db_backupoperator** gewährt. Überprüfen Sie, ob die richtigen Berechtigungen vorliegen, bevor Sie beginnen.
   
@@ -150,7 +150,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell
 
 Richten Sie den [SQL Server PowerShell-Anbieter ein](../../relational-databases/scripting/sql-server-powershell-provider.md), und verwenden Sie ihn. Verwenden Sie das Cmdlet **Backup-SqlDatabase** , und geben Sie **Log** als Wert für den Parameter **-BackupAction** an.  
   
@@ -160,7 +160,7 @@ Im folgenden Beispiel wird eine Protokollsicherung der `<myDatabase>` -Datenbank
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Log  
 ```
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 - [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

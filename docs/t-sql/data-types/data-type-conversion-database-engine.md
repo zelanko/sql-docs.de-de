@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68697492"
 ---
 # <a name="data-type-conversion-database-engine"></a>Datentypkonvertierung (Datenbank-Engine)
@@ -135,7 +135,7 @@ In der folgenden Tabelle werden die Konvertierungen von [!INCLUDE[ssNoVersion](.
 |**datetime**, **smalldatetime**|**Date**|  
 |Beliebige auf NULL festgelegte Typen|**Variant** wurde auf NULL festgelegt.|  
   
-Alle einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werte mit Ausnahme der **binary**-, **varbinary**- und **image**-Werte werden in einen einzelnen [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Wert konvertiert. Diese Werte werden in ein eindimensionales **Byte()** -Array in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] konvertiert. Dieses Array weist einen Bereich von **Byte (** 0 bis _length_ 1 **)** auf, wobei *length* der Anzahl von Bytes in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werten **binary**, **varbinary** oder **image** entspricht.
+Alle einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werte mit Ausnahme der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]binary **-,** varbinary **- und** image **-Werte werden in einen einzelnen** -Wert konvertiert. Diese Werte werden in ein eindimensionales **Byte()** -Array in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] konvertiert. Dieses Array weist einen Bereich von **Byte (** 0 bis _length_ 1 **)** auf, wobei *length* der Anzahl von Bytes in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werten **binary**, **varbinary** oder **image** entspricht.
   
 Im Folgenden sehen Sie die Konvertierungen von [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen.
   

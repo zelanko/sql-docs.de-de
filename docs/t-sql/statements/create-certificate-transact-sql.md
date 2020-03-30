@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d0f1a4e939a6e61881359f1e13a3bbe84cc8e9f9
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77074440"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
@@ -127,7 +127,7 @@ CREATE CERTIFICATE certificate_name
   
  BINARY = *asn_encoded_certificate*  
  Mit ASN verschlüsselte Zertifikatbytes, die als binäre Konstante angegeben sind.  
- **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  WITH PRIVATE KEY  
  Gibt an, dass der private Schlüssel des Zertifikats in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen wird. Diese Klausel ist ungültig, wenn das Zertifikat aus einer Assembly erstellt wird. Verwenden Sie [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md), um den privaten Schlüssel eines aus einer Assembly erstellten Zertifikats zu laden.  
@@ -139,7 +139,7 @@ CREATE CERTIFICATE certificate_name
 > Diese Option ist weder in einer eigenständigen Datenbank noch in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verfügbar.  
   
  BINARY = *private_key_bits*  
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Private Schlüsselbits, die als binäre Konstante angegeben sind. Diese Bits können in verschlüsselter Form vorhanden sein. Bei Verschlüsselung muss der Benutzer ein Entschlüsselungskennwort bereitstellen. Kennwortrichtlinienüberprüfungen werden für dieses Kennwort nicht ausgeführt. Die privaten Schlüsselbits müssen in einem PVK-Dateiformat vorliegen.  
   
@@ -183,7 +183,7 @@ CREATE CERTIFICATE certificate_name
   
  Sie können über die Funktionen [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) und [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) eine binäre Beschreibung eines Zertifikats erstellen. Ein Beispiel für die Verwendung von **CERTPRIVATEKEY** und **CERTENCODED** zum Kopieren eines Zertifikats in eine andere Datenbank finden Sie in Beispiel B im Artikel [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).  
 
-Die Algorithmen MD2, MD4, MD5, SHA und SHA-1 sind ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] veraltet. Bis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] werden selbstsignierte Zertifikate mit SHA-1 erstellt. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] werden selbstsignierte Zertifikate mit SHA2_256 erstellt.
+Die Algorithmen MD2, MD4, MD5, SHA und SHA-1 sind ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] veraltet. Bis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] werden selbstsignierte Zertifikate mit SHA-1 erstellt. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] werden selbstsignierte Zertifikate mit SHA-256 erstellt.
 
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `CREATE CERTIFICATE`-Berechtigung für die Datenbank. Nur Windows-Anmeldenamen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen und Anwendungsrollen können Zertifikate besitzen. Gruppen und Rollen können keine Zertifikate besitzen.  

@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558630"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On-Verfügbarkeitsgruppen unter Linux
@@ -45,7 +45,7 @@ Lesbare sekundäre Replikate werden nur mit [!INCLUDE[ssenterprise-md](../includ
 
 In [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] wurden Clustertypen für Verfügbarkeitsgruppen eingeführt. Für Linux gibt es zwei gültige Werte: „EXTERNAL“ und „NONE“. Der Clustertyp „EXTERNAL“ bedeutet, dass Pacemaker unterhalb der Verfügbarkeitsgruppe verwendet wird. Wenn Sie den Clustertyp „EXTERNAL“ verwenden, muss auch der Failovermodus auf „External“ festgelegt werden (ebenfalls neu in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]). Das automatische Failover wird unterstützt, aber im Gegensatz zu einem WSFC wird der Failovermodus bei Verwendung von Pacemaker nicht automatisch auf „EXTERNAL“ festgelegt. Im Gegensatz zu einem WSFC wird der Pacemaker-Teil der Verfügbarkeitsgruppe nach der Konfiguration der Verfügbarkeitsgruppe erstellt.
 
-Der Clustertyp „NONE“ bedeutet, dass Pacemaker nicht erforderlich ist und von der Verfügbarkeitsgruppe nicht verwendet wird. Auch wenn Pacemaker auf einem Server konfiguriert wird, werden Verfügbarkeitsgruppen nicht über Pacemaker angezeigt oder verwaltet, wenn der Clustertyp „NONE“ für eine Verfügbarkeitsgruppe festgelegt ist. Der Clustertyp „NONE“ unterstützt nur manuelles Failover von einem primären zu einem sekundären Replikat. Eine Verfügbarkeitsgruppe, die mit „NONE“ erstellt wurde, ist hauptsächlich für das schreibgeschützte Hochskalieren und für Upgrades vorgesehen. Sie könnte zwar für die Notfallwiederherstellung oder die lokale Verfügbarkeit eingesetzt werden, bei denen kein automatisches Failover nötig ist, doch diese Vorgehensweise wird nicht empfohlen. Ohne Pacemaker ist der Listenerverlauf zudem komplexer.
+Der Clustertyp „NONE“ bedeutet, dass Pacemaker nicht erforderlich ist und von der Verfügbarkeitsgruppe nicht verwendet wird. Auch wenn Pacemaker auf einem Server konfiguriert wird, werden Verfügbarkeitsgruppen nicht über Pacemaker angezeigt oder verwaltet, wenn der Clustertyp „NONE“ für eine Verfügbarkeitsgruppe festgelegt ist. Der Clustertyp „NONE“ unterstützt nur manuelles Failover von einem primären zu einem sekundären Replikat. Eine Verfügbarkeitsgruppe, die mit „NONE“ erstellt wurde, ist hauptsächlich für das schreibgeschützte Aufskalieren und für Upgrades vorgesehen. Sie könnte zwar für die Notfallwiederherstellung oder die lokale Verfügbarkeit eingesetzt werden, bei denen kein automatisches Failover nötig ist, doch diese Vorgehensweise wird nicht empfohlen. Ohne Pacemaker ist der Listenerverlauf zudem komplexer.
 
 Der Clustertyp wird in der [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]dynamischen Verwaltungssicht (DMV)`sys.availability_groups` in den Spalten `cluster_type` und `cluster_type_desc` gespeichert.
 

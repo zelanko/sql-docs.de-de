@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67896183"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift
@@ -28,14 +28,14 @@ Sie können Ihre SQL Server Integration Services-Projekte, -Pakete und -Workload
 Das Verschieben Ihrer SSIS-Workload in Azure hat folgende potenzielle Vorteile:
 -   **Verringern Sie Betriebskosten** und den Aufwand der Verwaltung der Infrastruktur, der anfällt, wenn Sie SSIS lokal oder auf virtuellen Azure-Computern ausführen.
 -   **Erhöhen Sie die Hochverfügbarkeit** und die Hochverfügbarkeitsfeatures von Azure und Azure SQL-Datenbank durch die Möglichkeit, mehrere Knoten pro Cluster anzugeben.
--   **Erhöhen Sie die Skalierbarkeit** durch die Möglichkeit, mehrere Kerne pro Knoten (zentrales Hochskalieren) und mehrere Knoten pro Cluster (horizontales Hochskalieren) anzugeben.
+-   **Erhöhen Sie die Skalierbarkeit** durch die Möglichkeit, mehrere Kerne pro Knoten (Hochskalieren) und mehrere Knoten pro Cluster (Aufskalieren) anzugeben.
 
 ## <a name="architecture-of-ssis-on-azure"></a>Architektur von SSIS in Azure
 In der folgenden Tabelle werden die Unterschiede zwischen der lokalen Ausführung von SSIS und SSIS in Azure hervorgehoben.
 
 Der wichtigste Unterschied ist die Trennung des Speichers von Runtime. Azure Data Factory hostet die Runtime-Engine für SSIS-Pakete in Azure. Die Runtime-Engine wird als Azure SSIS Integration Runtime (Azure SSIS IR) bezeichnet. Weitere Informationen finden Sie unter [Azure SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime).
 
-| Location | Storage | Typ | Skalierbarkeit |
+| Position | Storage | Typ | Skalierbarkeit |
 |---|---|---|---|
 | Lokal | SQL Server | Von SQL Server gehostete SSIS-Runtime | SSIS Scale Out (in SQL Server 2017 und höher)<br/><br/>Benutzerdefinierte Projektmappen (in früheren Versionen von SQL Server) |
 | In Azure | SQL-Datenbank oder verwaltete SQL-Datenbank-Instanz | Azure SSIS Integration Runtime, eine Komponente von Azure Data Factory | Skalierungsoptionen für die Azure SSIS Integration Runtime |
@@ -54,7 +54,7 @@ Sie müssen Azure SSIS IR nur einmal bereitstellen. Danach können Sie vertraute
 > [!NOTE]
 > Die Azure-SSIS Integration Runtime ist noch nicht in allen Azure-Regionen verfügbar. Weitere Informationen zu den unterstützten Regionen finden Sie unter [Verfügbare Produkte nach Region – Microsoft Azure](https://azure.microsoft.com/regions/services/).
 
-**Horizontales und zentrales Hochskalieren:** Wenn Sie Azure SSIS IR bereitstellen, können Sie zentral und horizontal hochskalieren, indem Sie Werte für die folgenden Optionen angeben:
+**Hoch- und Aufskalieren:** Wenn Sie Azure SSIS IR bereitstellen, können Sie hoch- und aufskalieren, indem Sie Werte für die folgenden Optionen angeben:
 -   Die Knotengröße (einschließlich der Anzahl von Kernen) und die Anzahl von Knoten im Cluster.
 -   Die vorhandene Instanz von Azure SQL-Datenbank, auf der die SSIS-Katalogdatenbank (SSISDB) gehostet werden soll, und die Dienstebene der Datenbank.
 -   Die maximalen parallelen Ausführungen pro Knoten.

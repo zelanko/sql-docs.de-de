@@ -17,10 +17,10 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67938186"
 ---
 # <a name="remote-servers"></a>Remoteserver
@@ -36,7 +36,7 @@ ms.locfileid: "67938186"
   
  In den meisten Fällen ist es nicht erforderlich, Konfigurationsoptionen für Remoteserver festzulegen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt die Standardeinstellungen auf den lokalen und Remotecomputern für Remoteserververbindungen fest.  
   
- Damit der Zugriff auf Remoteserver funktioniert, muss die Konfigurationsoption **Remotezugriff** auf den lokalen und den Remotecomputern auf 1 festgelegt werden. (Dies ist die Standardeinstellung.)  **Remotezugriff** steuert Anmeldungen von Remoteservern. Diese Konfigurationsoption können Sie entweder mit der gespeicherten Prozedur **sp_configure** von [!INCLUDE[tsql](../../includes/tsql-md.md)] oder mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zurücksetzen. Wenn Sie die Option in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]festlegen möchten, verwenden Sie auf der Seite **Verbindungen** die Option **Remoteverbindungen mit diesem Server zulassen**. Um auf die Seite **Verbindungen** zu gelangen, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Servernamen, und klicken Sie auf **Eigenschaften**. Klicken Sie auf der Seite **Servereigenschaften** auf die Seite **Verbindungen** .  
+ Damit der Zugriff auf Remoteserver funktioniert, muss die Konfigurationsoption **Remotezugriff** auf den lokalen und den Remotecomputern auf 1 festgelegt werden. (Dies ist die Standardeinstellung.)  **Remotezugriff** steuert Anmeldungen von Remoteservern. Diese Konfigurationsoption können Sie entweder mit der gespeicherten Prozedur [!INCLUDE[tsql](../../includes/tsql-md.md)]sp_configure**von** oder mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zurücksetzen. Wenn Sie die Option in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]festlegen möchten, verwenden Sie auf der Seite **Verbindungen** die Option **Remoteverbindungen mit diesem Server zulassen**. Um auf die Seite **Verbindungen** zu gelangen, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Servernamen, und klicken Sie auf **Eigenschaften**. Klicken Sie auf der Seite **Servereigenschaften** auf die Seite **Verbindungen** .  
   
  Sie können eine Remoteserverkonfiguration von einem lokalen Server aus deaktivieren, um den Zugriff auf diesen lokalen Server durch Benutzer des diesem zugeordneten Remoteservers zu verhindern.  
   

@@ -14,10 +14,10 @@ ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 640a24917c1bcb8b7b707308693f658de8dd33e6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70211368"
 ---
 # <a name="create-a-database-mail-account"></a>Erstellen eines Kontos für Datenbank-E-Mail
@@ -30,15 +30,15 @@ ms.locfileid: "70211368"
   
 -   **Nachverfolgung:**  [Nächste Schritte zum Konfigurieren von Datenbank-E-Mail](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 -   Bestimmen Sie den Servernamen und die Portnummer für den SMTP-Server (Simple Mail Transfer Protocol), den Sie zum Senden von E-Mail verwenden. Falls der SMTP-Server eine Authentifizierung erfordert, bestimmen Sie den Benutzernamen und das Kennwort für den SMTP-Server.  
   
 -   Optional können Sie auch den Servertyp und die Portnummer für den Server angeben. Der Servertyp ist für ausgehende E-Mails immer 'SMTP'. Die meisten SMTP-Server verwenden standardmäßig Port 25.  
   
-##  <a name="SSMSProcedure"></a> Verwenden des Assistenten zum Konfigurieren von Datenbank-E-Mail  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> Verwenden des Assistenten zum Konfigurieren von Datenbank-E-Mail  
  **So erstellen Sie ein Konto für Datenbank-E-Mail mithilfe eines Assistenten**  
   
 -   Stellen Sie im Objekt-Explorer eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, auf der Datenbank-E-Mail konfiguriert werden soll, und erweitern Sie die Serverstruktur.  
@@ -55,7 +55,7 @@ ms.locfileid: "70211368"
   
 -   Überprüfen Sie auf der Seite **Assistenten abschließen** die auszuführenden Aktionen, und klicken Sie auf **Fertig stellen** , um die Erstellung des neuen Kontos abzuschließen.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So erstellen Sie ein Konto für Datenbank-E-Mail mithilfe von Transact-SQL**  
   
  Führen Sie die gespeicherte Prozedur **msdb.dbo.sysmail_add_account_sp** aus, um das Konto zu erstellen, und geben Sie die folgenden Informationen an:  
@@ -85,7 +85,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nächste Schritte zum Konfigurieren von Datenbank-E-Mail  
+##  <a name="follow-up-next-steps-to-configuring-the-database-mail"></a><a name="FollowUp"></a>Nächster Schritt: Nächste Schritte zum Konfigurieren von Datenbank-E-Mail  
   
 -   [Erstellen eines Profils für Datenbank-E-Mail](../../relational-databases/database-mail/create-a-database-mail-profile.md)  
   

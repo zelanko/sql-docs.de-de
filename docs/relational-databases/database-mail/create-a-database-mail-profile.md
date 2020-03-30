@@ -15,10 +15,10 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72278312"
 ---
 # <a name="create-a-database-mail-profile"></a>Erstellen eines Profils für Datenbank-E-Mail
@@ -31,18 +31,18 @@ ms.locfileid: "72278312"
   
 -   **So erstellen Sie ein öffentliches Profil für Datenbank-E-Mails:**  [Assistent zum Konfigurieren von Datenbank-E-Mails](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Erstellen Sie mindestens ein Datenbank-E-Mail-Konto für das Profil. Weitere Informationen zum Erstellen von Datenbank-E-Mail-Konten finden Sie unter [Erstellen eines Kontos für Datenbank-E-Mail](../../relational-databases/database-mail/create-a-database-mail-account.md).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Mit einem öffentlichen Profil kann jeder Benutzer mit Zugriff auf die **msdb** -Datenbank E-Mail mithilfe dieses Profils senden. Ein privates Profil kann von einem Benutzer oder einer Rolle verwendet werden. Durch Gewähren des Rollenzugriffs auf Profile wird eine leichter zu verwaltende Architektur geschaffen. Um E-Mail zu senden, müssen Sie Mitglied der **DatabaseMailUserRole** in der **msdb** -Datenbank sein und Zugriff auf mindestens ein Datenbankprofil besitzen.  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Der Benutzer, der die Profilkonten erstellt und gespeicherte Prozeduren ausführt, sollte Mitglied der festen Serverrolle "sysadmin" sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden des Assistenten zum Konfigurieren von Datenbank-E-Mail  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> Verwenden des Assistenten zum Konfigurieren von Datenbank-E-Mail  
  **So erstellen Sie ein Profil für Datenbank-E-Mail**  
   
 -   Stellen Sie im Objekt-Explorer eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, auf der Datenbank-E-Mail konfiguriert werden soll, und erweitern Sie die Serverstruktur.  
@@ -85,7 +85,7 @@ ms.locfileid: "72278312"
   
 ## <a name="using-transact-sql"></a>Verwenden von Transact-SQL  
   
-###  <a name="PrivateProfile"></a> So erstellen Sie private Profile für Datenbank-E-Mail  
+###  <a name="to-create-a-database-mail-private-profile"></a><a name="PrivateProfile"></a> So erstellen Sie private Profile für Datenbank-E-Mail  
   
 -   Stellen Sie eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz her.  
   
@@ -153,7 +153,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
-###  <a name="PublicProfile"></a> So erstellen Sie öffentliches Profil für Datenbank-E-Mail  
+###  <a name="to-create-a-database-mail-public-profile"></a><a name="PublicProfile"></a> So erstellen Sie öffentliches Profil für Datenbank-E-Mail  
   
 -   Stellen Sie eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz her.  
   

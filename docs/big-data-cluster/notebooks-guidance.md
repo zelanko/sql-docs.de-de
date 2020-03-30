@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: ff3f569761b7ba95a64f693f1726df589ce7e579
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244103"
 ---
 # <a name="how-to-use-notebooks-in-sql-server"></a>Verwenden von Notebooks in SQL Server
@@ -102,7 +102,7 @@ Nachdem die Installation erfolgreich abgeschlossen wurde, werden unter „Task H
 
 ![Jupyter-Back-End](media/notebooks-guidance/jupyter-backend.png)
 
-|Kernel|Beschreibung
+|Kernel|BESCHREIBUNG
 |:-----|:-----
 | SQL-Kernel | Schreiben Sie SQL-Code für Ihre relationale Datenbank.
 |PySpark3- und PySpark-Kernel| Schreiben Sie Python-Code mithilfe von Spark-Computing aus dem Cluster.

@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255468"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Berechtigungen: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
@@ -263,7 +263,7 @@ REVOKE
   
 -   Die Anweisung **USE** erfordert keine Berechtigungen. Auf allen Datenbanken können alle Prinzipale die Anweisung **USE** ausführen.  
   
-##  <a name="Examples"></a> Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. Erteilen einer Berechtigung auf Serverebene für einen Anmeldenamen  
  Die folgenden zwei Anweisungen erteilen einem Anmeldenamen eine Berechtigung auf Serverebene.  

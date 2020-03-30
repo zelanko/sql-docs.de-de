@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198407"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lektion 1: Erstellen und Abfragen von Datenbankobjekten
@@ -40,7 +40,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio u
 - Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Wenn Sie keine SQL Server-Instanz haben, erstellen Sie eine. Wählen Sie dazu aus den folgenden Links Ihre Plattform aus. Wenn Sie die SQL-Authentifizierung wählen, verwenden Sie Ihre SQL Server-Anmeldeinformationen.
-- **Windows**: [Herunterladen von Microsoft SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
+- **Windows**: [Herunterladen der SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - **macOS**: [Herunterladen von SQL Server 2017 für Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
 ## <a name="create-a-database"></a>Erstellen einer Datenbank

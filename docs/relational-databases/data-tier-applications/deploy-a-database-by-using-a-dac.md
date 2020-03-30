@@ -20,25 +20,25 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134809"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Bereitstellen einer Datenbank mit DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Verwenden Sie den Assistenten zum **Bereitstellen von Datenbanken auf SQL Azure** , um eine Datenbank zwischen einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz und einem [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] -Server bzw. zwischen zwei [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]-Servern bereitzustellen.  
   
-##  <a name="BeforeBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> Vorbereitungen  
  Der Assistent verwendet die BACPAC-Archivdatei einer Datenebenenanwendung (DAC), um sowohl die Daten als auch die Definitionen von Datenbankobjekten bereitzustellen. Er führt einen DAC-Export von der Quelldatenbank und einen DAC-Import zum Ziel aus.  
   
-###  <a name="DBOptSettings"></a> Datenbankoptionen und -einstellungen  
+###  <a name="database-options-and-settings"></a><a name="DBOptSettings"></a> Datenbankoptionen und -einstellungen  
  Die während der Bereitstellung erstellte Datenbank verfügt standardmäßig über die Standardeinstellungen der CREATE DATABASE-Anweisung. Die Ausnahme besteht darin, dass die Datenbanksortierung und der Kompatibilitätsgrad auf die Werte der Quelldatenbank festgelegt werden.  
   
  Datenbankoptionen wie TRUSTWORTHY, DB_CHAINING und HONOR_BROKER_PRIORITY können nicht im Rahmen des Bereitstellungsprozesses angepasst werden. Physische Eigenschaften, z. B. die Anzahl der Dateigruppen oder die Anzahl und Größe der Dateien, können nicht im Rahmen des Bereitstellungsprozesses geändert werden. Nachdem die Bereitstellung abgeschlossen wurde, können Sie die ALTER DATABASE-Anweisung, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]oder PowerShell für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden, um die Datenbank individuell anzupassen.  
   
-###  <a name="LimitationsRestrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Einschränkungen  
  Der Assistent zum **Bereitstellen von Datenbanken**  unterstützt das Bereitstellen einer Datenbank:  
   
 -   Von einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz auf [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "68134809"
   
  Zur Unterstützung des Assistenten muss auf einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) oder höher ausgeführt werden. Wenn eine Datenbank auf einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz Objekte enthält, die unter [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]nicht unterstützt werden, kann der Assistent nicht zur Bereitstellung der Datenbank auf [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]verwendet werden. Wenn eine Datenbank unter [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] Objekte enthält, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht unterstützt werden, können Sie die Datenbank mithilfe des Assistenten nicht auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen bereitstellen.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Zur Erhöhung der Sicherheit werden die Anmeldenamen für die SQL Server-Authentifizierung ohne Kennwort in einer BACPAC-Exportdatei (DAC) gespeichert. Sobald die BACPAC-Datei importiert wird, wird der Anmeldename als deaktivierter Anmeldename mit einem generierten Kennwort erstellt. Um die Anmeldenamen zu aktivieren, melden Sie sich unter einem Anmeldenamen an, der über die ALTER ANY LOGIN-Berechtigung verfügt, und verwenden ALTER LOGIN, um den Anmeldenamen zu aktivieren und ein neues Kennwort zuzuweisen, das dem Benutzer mitgeteilt werden kann. Dies ist für Anmeldenamen der Windows-Authentifizierung nicht erforderlich, da die zugehörigen Kennwörter nicht von SQL Server verwaltet werden.  
   
 #### <a name="permissions"></a>Berechtigungen  
@@ -59,7 +59,7 @@ ms.locfileid: "68134809"
   
  Der Assistent benötigt DAC-Importberechtigungen für die Zielinstanz oder den Server. Der Anmeldename muss einem Mitglied der festen Serverrolle **sysadmin** , **serveradmin** oder **dbcreator** zugeordnet sein, das über ALTER ANY-LOGIN-Berechtigungen verfügt. Außerdem kann das integrierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministratorkonto mit der Bezeichnung **sa** zum Importieren einer DAC verwendet werden. Um eine DAC mit Anmeldungen bei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] importieren zu können, müssen Sie Mitglied der Rollen "loginmanager" oder "serveradmin" sein. Um eine DAC ohne Anmeldungen bei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] importieren zu können, müssen Sie Mitglied der Rolle "dbmanager" oder "serveradmin" sein.  
   
-##  <a name="UsingDeployDACWizard"></a> Verwenden des Assistenten zum Bereitstellen von Datenbanken  
+##  <a name="using-the-deploy-database-wizard"></a><a name="UsingDeployDACWizard"></a> Verwenden des Assistenten zum Bereitstellen von Datenbanken  
  **So migrieren Sie eine Datenbank mithilfe des Assistenten zum Bereitstellen von Datenbanken**  
   
 1.  Stellen Sie eine Verbindung mit dem Speicherort der Datenbank her, die Sie bereitstellen möchten. Sie können entweder eine [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz oder einen [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] -Server angeben.  
@@ -82,7 +82,7 @@ ms.locfileid: "68134809"
     
     -   [Ergebnisse](#Results)  
   
-##  <a name="Introduction"></a> Seite "Einführung"  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite werden die Schritte des Assistenten zum **Bereitstellen von Datenbanken**  beschrieben.  
   
  **Optionen**  
@@ -93,7 +93,7 @@ ms.locfileid: "68134809"
   
 -   **Abbrechen:** bricht den Vorgang ab und schließt den Assistenten.  
   
-##  <a name="Deployment_settings"></a> Bereitstellungseinstellungen (Seite)  
+##  <a name="deployment-settings-page"></a><a name="Deployment_settings"></a> Bereitstellungseinstellungen (Seite)  
  Auf dieser Seite können Sie den Zielserver angeben sowie Details zur neuen Datenbank bereitstellen.  
   
  **Lokaler Host:**  
@@ -112,13 +112,13 @@ ms.locfileid: "68134809"
   
 -   Geben Sie ein lokales Verzeichnis für die temporäre Datei an, die der BACPAC-Archivdatei entspricht. Beachten Sie, dass die Datei am angegebenen Speicherort erstellt wird und dort verbleibt, nachdem der Vorgang abgeschlossen wurde.  
   
-##  <a name="Summary"></a> Seite "Zusammenfassung"  
+##  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Verwenden Sie diese Seite, um die angegebene Quelle und die Zieleinstellungen für den Vorgang zu überprüfen. Klicken Sie auf **Fertig stellen**, um den Bereitstellungsvorgang mithilfe der angegebenen Einstellungen abzuschließen. Klicken Sie auf **Abbrechen**, um den Bereitstellungsvorgang abzubrechen und den Assistenten zu beenden.  
   
-##  <a name="Progress"></a> Status (Seite)  
+##  <a name="progress-page"></a><a name="Progress"></a> Status (Seite)  
  Auf dieser Seite wird eine Statusanzeige angezeigt, die den Status des Vorgangs anzeigt. Klicken Sie auf die Option **Details anzeigen** , um ausführliche Informationen anzuzeigen.  
   
-##  <a name="Results"></a> Ergebnisse (Seite)  
+##  <a name="results-page"></a><a name="Results"></a> Ergebnisse (Seite)  
  Auf dieser Seite wird angegeben, ob der Bereitstellungsvorgang erfolgreich war oder ob dabei Fehler auftraten, dabei werden die Ergebnisse jeder Aktion angezeigt. Für alle Aktionen, die fehlerhaft waren, ist in der Spalte **Ergebnis** ein Link enthalten. Klicken Sie auf den Link, um einen Bericht des für diese Aktion aufgetretenen Fehlers anzuzeigen.  
   
  Klicken Sie auf **Fertig stellen** , um den Assistenten zu schließen.  

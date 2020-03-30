@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61747c9b7e445990bd285061f63c5497b0f51f85
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68811328"
 ---
 # <a name="modify-unique-constraints"></a>Ändern von UNIQUE-Einschränkungen
@@ -32,7 +32,7 @@ ms.locfileid: "68811328"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So ändern Sie eine UNIQUE-Einschränkung mit:**  
   
@@ -40,14 +40,14 @@ ms.locfileid: "68811328"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-a-unique-constraint"></a>So ändern Sie eine UNIQUE-Einschränkung  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68811328"
   
 5.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
   
-##  <a name="TsqlProcedure"></a> **Ändern einer UNIQUE-Einschränkung**  
+##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **Ändern einer UNIQUE-Einschränkung**  
   
  Um eine UNIQUE-Einschränkung mit Transact-SQL ändern zu können, müssen Sie zuerst die vorhandene UNIQUE-Einschränkung löschen und sie dann mit der neuen Definition neu erstellen. Weitere Informationen finden Sie unter [Delete Unique Constraints](../../relational-databases/tables/delete-unique-constraints.md) und [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).  
   

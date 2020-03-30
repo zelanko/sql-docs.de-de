@@ -18,10 +18,10 @@ ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908970"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Vollständige Datenbankwiederherstellungen (vollständiges Wiederherstellungsmodell)
@@ -41,7 +41,7 @@ Vom Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht ve
 
 Informationen zur Unterstützung von Sicherungskopien früherer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen finden Sie im Kapitel [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)im Abschnitt „Kompatibilitätsunterstützung“.
   
-##  <a name="PointOfFailure"></a> Wiederherstellen einer Datenbank bis zum Zeitpunkt des Fehlers  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a> Wiederherstellen einer Datenbank bis zum Zeitpunkt des Fehlers  
 
  Zum Wiederherstellen einer Datenbank bis zum Zeitpunkt des Auftretens eines Fehlers werden in der Regel die folgenden grundlegenden Schritte ausgeführt:  
   
@@ -69,7 +69,7 @@ Informationen zur Unterstützung von Sicherungskopien früherer [!INCLUDE[ssNoVe
 > [!NOTE]  
 >  Informationen zum Wiederherstellen einer Datenbanksicherung auf einer anderen Serverinstanz finden Sie unter [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
-###  <a name="TsqlSyntax"></a> Grundlegende Transact-SQL-RESTORE-Syntax  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Grundlegende Transact-SQL-RESTORE-Syntax  
  Die grundlegende [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax für die Wiederherstellungssequenz in der vorangehenden Abbildung sieht folgendermaßen aus:  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
@@ -82,7 +82,7 @@ Informationen zur Unterstützung von Sicherungskopien früherer [!INCLUDE[ssNoVe
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> Beispiel: Wiederherstellen bis zum Zeitpunkt des Fehlers (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> Beispiel: Wiederherstellen bis zum Zeitpunkt des Fehlers (Transact-SQL)  
  Im folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Beispiel werden die wesentlichen Optionen in einer Wiederherstellungssequenz veranschaulicht, mit der die Datenbank zum Zeitpunkt des Fehlers wiederhergestellt wird. Im Beispiel wird eine Sicherung des Protokollfragments der Datenbank erstellt. Als Nächstes wird im Beispiel eine vollständige Datenbanksicherung und Protokollsicherung wiederhergestellt. Anschließend wird die Sicherung des Protokollfragments wiederhergestellt. Im Beispiel wird die Datenbank in einem separaten, abschließenden Schritt wiederhergestellt.  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> Wiederherstellen einer Datenbank bis zu einem Punkt in einer Protokollsicherung  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> Wiederherstellen einer Datenbank bis zu einem Punkt in einer Protokollsicherung  
  Beim vollständigen Wiederherstellungsmodell kann eine vollständige Datenbankwiederherstellung in der Regel bis zu einem Zeitpunkt, einer markierten Transaktion oder einer LSN in einer Protokollsicherung wiederhergestellt werden. Wenn jedoch beim massenprotokollierten Wiederherstellungsmodell die Protokollsicherung massenprotokollierte Änderungen enthält, ist die Zeitpunktwiederherstellung nicht möglich.  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>Beispielszenarien für Zeitpunktwiederherstellungen  
@@ -145,7 +145,7 @@ GO
 > [!NOTE]  
 >  Ein Beispiel zum Wiederherstellen eines zu einem bestimmten Zeitpunkt bestehenden Datenbankzustands finden Sie unter [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)im Abschnitt „Kompatibilitätsunterstützung“.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So stellen Sie eine vollständige Datenbanksicherung wieder her**  
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  

@@ -9,10 +9,10 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080840"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Problembehandlung bei Berichten: Kartenberichte (Berichts-Generator und SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "77080840"
  * Melden Sie ein Problem, oder machen Sie einen Vorschlag unter [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
 
   
-##  <a name="Embedded"></a> Probleme bei der Berichtsdefinitionsgröße  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a> Probleme bei der Berichtsdefinitionsgröße  
  Verwenden Sie diesen Abschnitt, um Probleme zu lösen, die sich auf die Berichtsdefinitionsgröße beziehen.  
   
 ## <a name="how-do-i-reduce-the-report-definition-size"></a>Wie reduziere ich die Berichtsdefinitionsgröße?  
@@ -49,7 +49,7 @@ ms.locfileid: "77080840"
   
  Kartenelemente aus einem Bericht im Kartenkatalog werden immer in eine Kartenebene eingebettet.  
   
-##  <a name="Spatial"></a> Probleme bei räumlichen Daten  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a> Probleme bei räumlichen Daten  
  Verwenden Sie diesen Abschnitt, um Probleme zu lösen, die sich auf räumliche Daten beziehen.  
   
 ## <a name="on-the-design-surface-i-see-sample-spatial-data"></a>Auf der Entwurfsoberfläche werden räumliche Beispieldaten angezeigt  
@@ -100,7 +100,7 @@ ms.locfileid: "77080840"
   
 -   Wenn die räumlichen Daten aus einer SQL Server-Datenbank stammen, ändern Sie die Abfrage so, dass sie räumliche Funktionen verwendet, die die Daten auf einen kleineren Bereich beschränken.  
   
-##  <a name="Viewport"></a> Probleme beim Zentrieren und Anzeigen des Viewports  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a> Probleme beim Zentrieren und Anzeigen des Viewports  
  Verwenden Sie diesen Abschnitt, um Probleme zu lösen, die sich auf Viewportoptionen beziehen.  
   
 ## <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>Zentrierung und Ansicht können nicht auf ein eingebettetes Kartenelement festgelegt werden  
@@ -122,7 +122,7 @@ ms.locfileid: "77080840"
   
 -   Betten Sie die räumlichen Daten in den Bericht ein, und löschen Sie die Orte, die Sie nicht einschließen möchten.  
   
-##  <a name="Layers"></a> Probleme bei Ebenen  
+##  <a name="layer-issues"></a><a name="Layers"></a> Probleme bei Ebenen  
  Verwenden Sie diesen Abschnitt, um Probleme zu lösen, die sich auf Ebenenoptionen beziehen.  
   
 ## <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>Mindestens eine Ebene wird nicht in der Karte angezeigt  
@@ -144,7 +144,7 @@ ms.locfileid: "77080840"
 ## <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>Ein auf der Kartenebene festgelegter Filter hat keine Auswirkungen.  
  Um Daten für eine Ebene zu filtern, muss der Datentyp im Filterausdruck angegeben werden. Überprüfen Sie, ob Sie den richtigen zugrunde liegenden Datentyp angegeben haben, damit die Filterformel die angegebene Bedingung ordnungsgemäß auswertet. Weitere Informationen finden Sie unter [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a> Probleme bei Legende, Farbskala und Regeln  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a> Probleme bei Legende, Farbskala und Regeln  
  Verwenden Sie diesen Abschnitt, um Probleme zu lösen, die sich auf Optionen für Regeln, Legende und Farbskala beziehen.  
   
 ## <a name="how-do-i-control-the-values-in-the-map-legend"></a>Wie können die Werte in der Kartenlegende gesteuert werden?  
@@ -175,7 +175,7 @@ ms.locfileid: "77080840"
   
  Um die Farbskala anzuzeigen, geben Sie Farbregeln für eine Ebene oder ein eingebettetes Kartenelement an. Weitere Informationen finden Sie unter [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Tile"></a> Probleme bei Kacheln  
+##  <a name="tile-issues"></a><a name="Tile"></a> Probleme bei Kacheln  
  Verwenden Sie diesen Abschnitt, um Probleme zu lösen, die sich auf Optionen für den Kachelhintergrund beziehen.  
   
 ## <a name="i-cannot-see-the-bing-maps-tile-background"></a>Der Hintergrund aus Bing Map-Kacheln wird nicht angezeigt.  
@@ -196,7 +196,7 @@ ms.locfileid: "77080840"
   
  Um eine Kachelebene ohne Text einzuschließen, wählen Sie die Ansicht **Luftbild** aus.  
   
-##  <a name="Tooltip"></a> Probleme bei QuickInfo und Beschriftung  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a> Probleme bei QuickInfo und Beschriftung  
  Verwenden Sie diesen Abschnitt, um Probleme zu behandeln, die sich auf Bezeichnungs- oder QuickInfo-Optionen beziehen.  
   
 ## <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>Wenn eine Bezeichnung oder eine QuickInfo auf einen Ausdruck festgelegt wird, wird ein Ausdrucksfehler bezüglich eines Datasetbereichs angezeigt.  

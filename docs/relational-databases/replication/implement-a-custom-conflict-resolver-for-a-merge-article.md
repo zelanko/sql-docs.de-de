@@ -18,10 +18,10 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322157"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel
@@ -36,7 +36,7 @@ ms.locfileid: "75322157"
   
      [Ein COM-basierter Konfliktlöser](#COM)  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Sie können einen eigenen benutzerdefinierten Konfliktlöser als gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur in einem Verleger schreiben. Während der Synchronisierung wird diese gespeicherte Prozedur aufgerufen, wenn in einem Artikel, bei dem der Konfliktlöser registriert wurde, Konflikte auftreten. Informationen zur Konfliktzeile werden vom Merge-Agent an die erforderlichen Parameter der Prozedur übermittelt. Auf gespeicherten Prozeduren basierende benutzerdefinierte Konfliktlöser werden immer auf dem Verleger erstellt.  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ms.locfileid: "75322157"
   
 2.  Führen Sie [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, wobei Sie **\@publication**, **\@article**, den Wert **resolver_info** für **\@property** und den Namen der gespeicherten Prozedur, mit der die Konfliktlöserlogik implementiert wird, für **\@value** angeben.  
   
-##  <a name="COM"></a> Verwenden eines COM-basierten benutzerdefinierten Konfliktlösers  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a> Verwenden eines COM-basierten benutzerdefinierten Konfliktlösers  
  Der <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> -Namespace implementiert eine Schnittstelle, mit der Sie eine komplexe Geschäftslogik zum Verarbeiten von Ereignissen und zur Lösung von Konflikten schreiben können, die während der Synchronisierung der Mergereplikation eintreten. Weitere Informationen finden Sie unter [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Sie können auch eine eigene, auf systemeigenem Code basierende benutzerdefinierte Geschäftslogik zur Lösung von Konflikten schreiben. Diese Logik wird mithilfe von Produkten wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ als COM-Komponente konzipiert und in DLLs (Dynamic-Link Libraries) kompiliert. Ein solcher COM-basierter benutzerdefinierter Konfliktlöser muss die **ICustomResolver**-Schnittstelle implementieren, die speziell für die Konfliktlösung entworfen wurde.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>So erstellen und registrieren Sie einen COM-basierten benutzerdefinierten Konfliktlöser  

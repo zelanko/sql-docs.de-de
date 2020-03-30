@@ -14,17 +14,17 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558510"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird die Vorgehensweise zum Schutz einer Datenbank anhand von Transparent Data Encryption (TDE) und das Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] beschrieben. TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten- und Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Datenbank-Verschlüsselungsschlüssel (DEK), der im Startdatensatz der Datenbank gespeichert wird und während der Wiederherstellung zur Verfügung steht. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der **master** -Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.   
    
-##  <a name="Restrictions"></a> Einschränkungen  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Beim Verschieben einer TDE-geschützten Datenbank muss auch das Zertifikat oder der asymmetrische Schlüssel verschoben werden, mit dem der DEK geöffnet wird. Das Zertifikat oder der asymmetrische Schlüssel muss in der **Masterdatenbank** des Zielservers installiert sein, damit von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf die Datenbankdateien zugegriffen werden kann. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "75558510"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server speichert die hier erstellten Dateien standardmäßig in **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** . Die Dateinamen und -orte können individuell abweichen.  
   
-##  <a name="Permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
   
 -   Erfordert **CONTROL DATABASE** -Berechtigung für die **Masterdatenbank** , um den Datenbankhauptschlüssel zu erstellen.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "75558510"
   
 -   Erfordert die **CONTROL DATABASE** -Berechtigung für die verschlüsselte Datenbank und die **VIEW DEFINITION** -Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel, die zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet werden.  
   
-##  <a name="SSMSProcedure"></a> So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a> So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank  
 
 Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mithilfe von SQL Server Management Studio und Transact-SQL erstellen sollten.
   
-###  <a name="SSMSCreate"></a> Verwenden von SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Verwenden von SQL Server Management Studio  
   
 1.  Erstellen Sie einen Datenbank-Hauptschlüssel und ein Zertifikat in der **master** -Datenbank. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
@@ -76,7 +76,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
   
 8.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
 
-###  <a name="TsqlCreate"></a> Verwenden von Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Verwenden von Transact-SQL  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
@@ -136,11 +136,11 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> So verschieben Sie eine durch transparente Datenverschlüsselung geschützte Datenbank 
+##  <a name="to-move-a-database-protected-by-transparent-data-encryption"></a><a name="TsqlProcedure"></a> So verschieben Sie eine durch transparente Datenverschlüsselung geschützte Datenbank 
 
 Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mithilfe von SQL Server Management Studio und Transact-SQL verschieben sollten.
   
-###  <a name="SSMSMove"></a> Verwenden von SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> Verwenden von SQL Server Management Studio  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, die Sie oben verschlüsselt haben, zeigen Sie auf **Tasks**, und wählen Sie **Trennen...** aus.  
   
@@ -251,7 +251,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
      **Meldung**  
      Zeigt entweder eine leere Meldung oder einen „**Datei nicht gefunden**“-Hyperlink an.  
   
-###  <a name="TsqlMove"></a> Verwenden von Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Verwenden von Transact-SQL  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   

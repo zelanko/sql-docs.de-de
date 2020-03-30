@@ -11,10 +11,10 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245427"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server Managed Backup für Microsoft Azure
@@ -34,7 +34,7 @@ ms.locfileid: "75245427"
   
  Sie können die Sicherungen auch verschlüsseln, um die Sicherheitsvorkehrungen zu erhöhen. Außerdem können Sie einen benutzerdefinierten Zeitplan einrichten, um zu steuern, wann die Sicherungen erstellt werden. Weitere Informationen zum Verwenden des Microsoft Azure-Blobspeicherdiensts für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure-Blobspeicherdienst](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-##  <a name="Prereqs"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="Prereqs"></a> Voraussetzungen  
  Microsoft Azure Storage wird von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] zum Speichern der Sicherungsdateien verwendet. Die folgenden Voraussetzungen müssen erfüllt sein:  
   
 |Voraussetzung|BESCHREIBUNG|  
@@ -112,7 +112,7 @@ ms.locfileid: "75245427"
 > SQL Server Managed Backup wird nicht von Proxyservern unterstützt.
 >
   
-##  <a name="support_limits"></a> Unterstützbarkeit  
+##  <a name="supportability"></a><a name="support_limits"></a> Unterstützbarkeit  
  Die folgenden Einschränkungen und Überlegungen hinsichtlich der Unterstützung gelten nur für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
 -   Die Sicherung der Systemdatenbanken **master**, **model**und **msdb** wird unterstützt. Die Sicherung von **tempdb** wird nicht unterstützt. 

@@ -19,10 +19,10 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19d9171278bac69eb8b092d6bc7ec69dcbcb71ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68023708"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Vorbereiten einer sekundären Datenbank auf eine Always On-Verfügbarkeitsgruppe
@@ -35,7 +35,7 @@ In diesem Thema wird erläutert, wie eine Datenbank in [!INCLUDE[ssnoversion](..
 > [!TIP]  
 >  Wenn Sie eine vorhandene Protokollversandkonfiguration haben, können Sie möglicherweise die primäre Datenbank für den Protokollversand zusammen mit mindestens einer sekundären Datenbank in ein primäres Replikat einer Verfügbarkeitsgruppe und mindestens ein sekundäres Replikat konvertieren. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Voraussetzungen für das Migrieren vom Protokollversand zu Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
 
-##  <a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
+##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
   
 -   Stellen Sie sicher, dass das System, auf dem die Datenbank gespeichert werden soll, einen Datenträger mit ausreichend Speicherplatz für die sekundären Datenbanken besitzt.  
   
@@ -49,21 +49,21 @@ In diesem Thema wird erläutert, wie eine Datenbank in [!INCLUDE[ssnoversion](..
   
 -   Nach dem Wiederherstellen der Datenbank müssen Sie alle seit der letzten wiederhergestellten Datensicherung erstellten Protokollsicherungen wiederherstellen (WITH NORECOVERY).  
   
-##  <a name="Recommendations"></a> Empfehlungen  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Bei eigenständigen Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sollte der Dateipfad (einschließlich des Laufwerkbuchstabens) einer sekundären Datenbank nach Möglichkeit mit dem Pfad der entsprechenden primären Datenbank übereinstimmen. Grund: Wenn beim Erstellen einer sekundären Datenbank die Datenbankdateien verschoben werden, tritt beim späteren Hinzufügen einer Datei auf der sekundären Datenbank möglicherweise ein Fehler auf und bewirkt, dass die sekundäre Datenbank angehalten wird.  
   
 -   Vor dem Vorbereiten der sekundären Datenbanken sollten Sie unbedingt geplante Protokollsicherungen auf den Datenbanken in der Verfügbarkeitsgruppe anhalten, bis die Initialisierung sekundärer Replikate abgeschlossen ist.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Beim Sichern einer Datenbank wird die [TRUSTWORTHY-Datenbankeigenschaft](../../../relational-databases/security/trustworthy-database-property.md) auf OFF festgelegt. Deshalb ist TRUSTWORTHY bei einer neu wiederhergestellten Datenbank immer auf OFF festgelegt.  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **db_owner** und **db_backupoperator** verfügen standardmäßig über BACKUP DATABASE- und BACKUP LOG-Berechtigungen. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md).  
   
  Wenn die Datenbank, die wiederhergestellt wird, auf der Serverinstanz nicht vorhanden ist, erfordert die RESTORE-Anweisung CREATE DATABASE-Berechtigungen. Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)nicht wiederhergestellt werden.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 > [!NOTE]  
 >  Wenn die Sicherungs- und Wiederherstellungsdateipfade sowohl auf der Serverinstanz, auf der das primäre Replikat gehostet wird, als auch auf jeder Instanz identisch sind, auf der ein sekundäres Replikat gehostet wird, können Sie sekundäre Replikatdatenbanken mithilfe des [Assistenten für neue Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), des [Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)oder des [Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)erstellen.  
@@ -88,7 +88,7 @@ In diesem Thema wird erläutert, wie eine Datenbank in [!INCLUDE[ssnoversion](..
 > [!NOTE]  
 >  Informationen zum Ausführen dieser Sicherungs- und Wiederherstellungsoptionen finden Sie weiter unten in diesem Abschnitt unter [Verwandte Sicherungs- und Wiederherstellungsaufgaben](#RelatedTasks).  
   
-###  <a name="RelatedTasks"></a> Verwandte Sicherungs- und Wiederherstellungsaufgaben  
+###  <a name="related-backup-and-restore-tasks"></a><a name="RelatedTasks"></a> Verwandte Sicherungs- und Wiederherstellungsaufgaben  
  **So erstellen Sie eine Datenbanksicherung**  
   
 -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
@@ -109,7 +109,7 @@ In diesem Thema wird erläutert, wie eine Datenbank in [!INCLUDE[ssnoversion](..
   
 -   [Wiederherstellen einer Datenbank an einem neuen Speicherort &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So bereiten Sie eine sekundäre Datenbank vor**  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ In diesem Thema wird erläutert, wie eine Datenbank in [!INCLUDE[ssnoversion](..
 > [!NOTE]  
 >  Informationen zum Ausführen dieser Sicherungs- und Wiederherstellungsvorgänge finden Sie weiter unten in diesem Thema unter [Verwandte Sicherungs- und Wiederherstellungsaufgaben](#RelatedTasks).  
   
-###  <a name="ExampleTsql"></a> Beispiel für Transact-SQL  
+###  <a name="transact-sql-example"></a><a name="ExampleTsql"></a> Beispiel für Transact-SQL  
  Im folgenden Beispiel wird eine sekundäre Datenbank vorbereitet. In diesem Beispiel wird die [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] -Beispieldatenbank verwendet, in der standardmäßig das einfache Wiederherstellungsmodell verwendet wird.  
   
 1.  Damit die [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] -Datenbank verwendet werden kann, ändern Sie sie so, dass das vollständige Wiederherstellungsmodell verwendet wird.  
@@ -227,7 +227,7 @@ In diesem Thema wird erläutert, wie eine Datenbank in [!INCLUDE[ssnoversion](..
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
  **So bereiten Sie eine sekundäre Datenbank vor**  
   
 1.  Wenn Sie eine aktuelle Sicherung der primären Datenbank erstellen müssen, wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, die das primäre Replikat hostet.  
@@ -247,7 +247,7 @@ In diesem Thema wird erläutert, wie eine Datenbank in [!INCLUDE[ssnoversion](..
   
 -   [SQL Server PowerShell-Anbieter](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a> Beispiele für Sicherung, Wiederherstellungsskript und Befehl  
+###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a> Beispiele für Sicherung, Wiederherstellungsskript und Befehl  
  Mit den folgenden PowerShell-Befehlen werden eine vollständige Datenbanksicherung und ein Transaktionsprotokoll auf einer Netzwerkfreigabe gesichert und diese Sicherungen von dieser Freigabe wiederhergestellt. In diesem Beispiel wird davon ausgegangen, dass der Dateipfad, unter dem die Datenbank wiederhergestellt wird, mit dem Dateipfad identisch ist, unter dem die Datenbank gesichert wurde.  
   
 ```  
@@ -262,7 +262,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> Nächste Schritte  
+##  <a name="next-steps"></a><a name="FollowUp"></a> Nächste Schritte  
  Um die Konfiguration der sekundären Datenbank abzuschließen, müssen Sie die neu wiederhergestellte Datenbank mit der Verfügbarkeitsgruppe verknüpfen. Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

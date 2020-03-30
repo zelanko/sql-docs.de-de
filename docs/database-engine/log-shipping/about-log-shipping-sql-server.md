@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68057910"
 ---
 # <a name="about-log-shipping-sql-server"></a>Informationen zum Protokollversand (SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "68057910"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vorteile  
+##  <a name="benefits"></a><a name="Benefits"></a> Vorteile  
   
 -   Stellt eine Lösung für die Wiederherstellung im Notfall für eine einzelne primäre Datenbank und eine oder mehrere sekundäre Datenbanken bereit, jede auf einer separaten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68057910"
   
 -   Ermöglicht eine vom Benutzer angegebene Verzögerung zwischen dem Zeitpunkt, zu dem der primäre Server das Protokoll der primären Datenbank sichert, und dem Zeitpunkt, zu dem die sekundären Server die Protokollsicherung wiederherstellen (anwenden) müssen. Eine längere Verzögerung kann nützlich sein, wenn z. B. versehentlich Daten in der primären Datenbank geändert werden. Wenn die versehentliche Änderung schnell bemerkt wird, kann eine Verzögerung es Ihnen ermöglichen, die noch unveränderten Daten von einer sekundären Datenbank abzurufen, bevor die Änderung dort widergespiegelt wird.  
   
-##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
  primären Servers  
  Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die der Produktionsserver ist.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68057910"
 > [!TIP]  
 >  Für jede Warnung müssen Sie eine Warnungsnummer angeben. Stellen Sie sicher auch sicher, dass die Warnung zum Benachrichtigen eines Bedieners konfiguriert ist, wenn eine Warnung ausgelöst wird.  
   
-##  <a name="ComponentsAndConcepts"></a> Übersicht über den Protokollversand  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> Übersicht über den Protokollversand  
  Der Protokollversand besteht aus drei Vorgängen:  
   
 1.  Sichern des Transaktionsprotokolls auf der primären Serverinstanz.  
@@ -128,7 +128,7 @@ ms.locfileid: "68057910"
   
  ![Konfiguration, die Sicherungs-, Kopier- & Wiederherstellungsaufträge anzeigt](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Konfiguration, die Sicherungs-, Kopier- & Wiederherstellungsaufträge anzeigt")  
   
-##  <a name="Interoperability"></a> Interoperabilität  
+##  <a name="interoperability"></a><a name="Interoperability"></a> Interoperabilität  
  Der Protokollversand kann mit den folgenden Funktionen oder Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden:  
   
 -   [Voraussetzungen für das Migrieren vom Protokollversand zu Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "68057910"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] und Datenbankspiegelung schließen sich gegenseitig aus. Eine Datenbank, die für eine dieser Funktionen konfiguriert ist, kann nicht für die andere konfiguriert werden.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Aktualisieren des Protokollversands auf SQL Server 2016 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

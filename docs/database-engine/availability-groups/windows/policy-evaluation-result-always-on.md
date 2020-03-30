@@ -14,10 +14,10 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235441"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>Seite „Ergebnis der Richtlinienauswertung“ (Always On-Dashboard)
@@ -25,7 +25,7 @@ ms.locfileid: "75235441"
 
   Verwenden Sie im AlwaysOn-Dashboard die Seite **Ergebnis der Richtlinienauswertung** , um die aktuellen Richtlinienprobleme anzuzeigen.  
     
-##  <a name="Options"></a> Optionen im Dialogfeld  
+##  <a name="dialog-box-options"></a><a name="Options"></a> Optionen im Dialogfeld  
  **Erkanntes Problem**  
  Zeigt eine Zeile für jedes erkannte Problem an. Das einem Problem zugeordnete Symbol ist ein visueller Indikator, womit der Schweregrad des Problems wie folgt angegeben wird:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75235441"
  **Weitere Informationen**  
  Klicken Sie auf diesen Link, um das Hilfethema für das ausgewählte Problem zu öffnen.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

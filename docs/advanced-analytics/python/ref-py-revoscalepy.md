@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c6de9072c32155446b3ff40df3f81af9073c1090
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73706815"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (Python-Modul in SQL Server)
@@ -52,7 +52,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorien aufgelistet, damit Sie
 
 SQL Server und Python verwenden in bestimmten Fällen unterschiedliche Datentypen. Eine Liste der Zuordnungen zwischen SQL Server- und Python-Datentypen finden Sie unter [Zuordnungen zwischen Python- und SQL Server-Datentypen](python-libraries-and-data-types.md).
 
-| Funktion| Beschreibung|
+| Funktion| BESCHREIBUNG|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  Erstellt ein SQL Server-Computekontextobjekt, um Berechnungen in eine Remoteinstanz zu überführen. Mehrere **revoscalepy**-Funktionen verwenden den Computekontext als Argument. Ein Beispiel für einen Kontextwechsel finden Sie unter [Erstellen eines Modells mithilfe von revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md).|
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | Erstellt ein Datenobjekt basierend auf einer SQL Server-Abfrage oder -Tabelle |
@@ -64,7 +64,7 @@ SQL Server und Python verwenden in bestimmten Fällen unterschiedliche Datentype
 
 ## <a name="2-data-manipulation-etl"></a>2: Datenbearbeitung (ETL)
 
-| Funktion | Beschreibung |
+| Funktion | BESCHREIBUNG |
 |----------|-------------|
 |[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | Importiert Daten in eine XDF-Datei oder einen Datenrahmen|
 |[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | Wandelt Daten von einem Eingabedataset in ein Ausgabedataset um|
@@ -73,7 +73,7 @@ SQL Server und Python verwenden in bestimmten Fällen unterschiedliche Datentype
 
 ## <a name="3-training-and-summarization"></a>3: Schulung und Zusammenfassung
 
-| Funktion| Beschreibung|
+| Funktion| BESCHREIBUNG|
 | ------- | ---------- |
 |[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) | Passt stochastische farbverlaufverstärkte Entscheidungsstrukturen an|
 |[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) | Passt Klassifizierungs- und Regressionsentscheidungswälder an|
@@ -88,7 +88,7 @@ Sie sollten auch die Funktionen in [microsoftml](https://docs.microsoft.com/mach
 
 ## <a name="4-scoring-functions"></a>4: Bewertungsfunktionen
 
-| Funktion| Beschreibung|
+| Funktion| BESCHREIBUNG|
 | ------- | ---------- |
 | [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Generiert Vorhersagen aus einem trainierten Modell|) | Generiert Vorhersagen aus einem trainierten Modell und kann für die Echtzeitbewertung verwendet werden. |
 |[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | Berechnet vorhergesagte Werte und Restwerte mithilfe von rx_lin_mod- und rx_logit-Objekten |

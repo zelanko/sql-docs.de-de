@@ -14,10 +14,10 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866378"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine
@@ -78,7 +78,7 @@ Um zu überprüfen, ob die Instanz ausgeführt wird, sehen Sie sich im SQL Serve
 
 Wenn die Instanz angehalten ist, klicken Sie mit der rechten Maustaste auf die Instanz, und klicken Sie anschließend auf **Starten**. Die Serverinstanz wird gestartet, und der Indikator wird ein grüner Pfeil.
 
-## <a name = "startbrowser"></a> Überprüfen – Ausführung von SQL Server-Browser
+## <a name="verify---sql-server-browser-service-is-running"></a><a name = "startbrowser"></a> Überprüfen – Ausführung von SQL Server-Browser
 
 Der SQL Server-Browserdienst muss ausgeführt werden, um eine Verbindung mit einer benannten Instanz herzustellen. Suchen Sie im Konfigurations-Manager den **SQL Server-Browser**dienst, und vergewissern Sie sich, dass er ausgeführt wird. Wenn er nicht ausgeführt wird, starten Sie ihn. Der SQL Server-Browserdienst ist für Standardinstanzen nicht erforderlich.
 
@@ -129,7 +129,7 @@ Rufen Sie die IP-Adresse des Hostcomputers der Instanz von SQL Server ab.
 
   >SQL Server kann sowohl mit dem IP-Protokoll der Version 4 als auch dem der Version 6 eine Verbindung herstellen. Ihr Netzwerk kann eine oder beide Möglichkeiten zulassen. Die meisten Benutzer fangen an, indem sie die Probleme der **IPv4** -Adresse behandeln. Dies ist kürzer und leichter einzugeben
 
-## <a name = "getTCP"></a>Abrufen des TCP-Ports der SQL Server-Instanz
+## <a name="get-the-sql-server-instance-tcp-port"></a><a name = "getTCP"></a>Abrufen des TCP-Ports der SQL Server-Instanz
 
 In den meisten Fällen stellen Sie eine Verbindung mit der Datenbank-Engine von einem anderen Computer aus her, der das TCP-Protokoll verwendet.
 
@@ -142,7 +142,7 @@ Diese Meldung gibt an, dass diese Instanz von SQL Server an alle IP-Adressen auf
   > [!NOTE]
   > Wahrscheinlich wird `IP address 127.0.0.1` aufgelistet. Diese Adresse wird als „Loopbackadapter-Adresse“ bezeichnet. Nur Prozesse, die sich auf demselben Computer befinden, können damit eine Verbindung herstellen. Sie kann für die Problembehandlung nützlich sein, aber Sie können diese Adresse nicht für Verbindungen von einem anderen Computer aus verwenden.
 
-## <a name = "enableprotocols"></a>Aktivieren von Protokollen
+## <a name="enable-protocols"></a><a name = "enableprotocols"></a>Aktivieren von Protokollen
 
 Bei einigen Installationen von SQL Server ist die Verbindung zur Datenbank-Engine von einem anderen Computer aus nicht aktiviert, es sei denn, ein Administrator verwendet den Konfigurations-Manager, um die Verbindung zu aktivieren. So aktivieren Sie Verbindungen von einem anderen Computer:
 
@@ -150,7 +150,7 @@ Bei einigen Installationen von SQL Server ist die Verbindung zur Datenbank-Engin
 1. Erweitern Sie im linken Bereich des Konfigurations-Managers **SQL Server-Netzwerkkonfiguration**, und wählen Sie anschließend die SQL Server-Instanz, mit der Sie eine Verbindung herstellen möchten. Der rechte Bereich listet die verfügbaren Verbindungsprotokolle auf. Shared Memory ist in der Regel aktiviert. Es kann nur auf demselben Computer verwendet werden, deshalb haben die meisten Installationen Shared Memory aktiviert. Sie verwenden in der Regel TCP/IP, um eine Verbindung mit SQL Server von einem anderen Computer aus herzustellen. Falls TCP/IP nicht aktiviert ist, klicken Sie mit der rechten Maustaste auf **TCP/IP**und anschließend auf **Aktivieren**.
 1. Falls Sie die Aktivierungseinstellung für ein Protokoll geändert haben, starten Sie die Datenbank-Engine erneut. Wählen Sie im linken Bereich **SQL Server-Dienste**aus. Klicken Sie im rechten Bereich mit der rechten Maustaste auf die Instanz der Datenbank-Engine, und klicken Sie anschließend auf **Neu starten**.
 
-## <a name="testTCPIP"></a>Testen der TCP-/IP-Konnektivität
+## <a name="testing-tcpip-connectivity"></a><a name="testTCPIP"></a>Testen der TCP-/IP-Konnektivität
 
 Das Herstellen einer Verbindung mit SQL Server über TCP/IP erfordert, dass Windows die Verbindung herstellen kann. Verwenden Sie das `ping` -Tool zum Testen von TCP.
 

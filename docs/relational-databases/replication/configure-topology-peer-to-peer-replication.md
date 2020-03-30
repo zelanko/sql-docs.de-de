@@ -13,10 +13,10 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67903120"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Topologie konfigurieren (Peer-zu-Peer-Replikation)
@@ -29,7 +29,7 @@ ms.locfileid: "67903120"
 ## <a name="options"></a>Tastatur  
  Die Seite **Topologie konfigurieren** enthält Oberflächenelemente und Optionen, die verfügbar sind, wenn Sie mit der rechten Maustaste auf ein Element klicken. In der folgenden Tabelle werden die einzelnen Oberflächenelemente beschrieben.  
   
-|Oberflächenelement|Beschreibung|  
+|Oberflächenelement|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |Entwurfsoberfläche|Zeigt andere Oberflächenelemente an. Zum Hinzufügen von Elementen klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche.|  
 |![Der erste Knoten einer Topologie](../../relational-databases/replication/media/p2pwizard-firstnode.gif "Der erste Knoten einer Topologie")|Der ursprüngliche Knoten in der Topologie. Neue Knoten werden mit einer Kopie der Veröffentlichungsdatenbank vom ursprünglichen Knoten initialisiert.|  
@@ -63,7 +63,7 @@ ms.locfileid: "67903120"
   
 ### <a name="options-for-each-node"></a>Optionen für einzelne Knoten  
  **Neue Peerverbindung hinzufügen**  
- Fügen Sie eine Verbindung zwischen zwei Knoten hinzu. Wenn Sie z. B. eine Verbindung zwischen Knoten A und Knoten B hinzufügen, fügt die Replikation zwei Abonnements hinzu: Der erste ermöglicht Knoten A, Änderungen von der Veröffentlichung auf Knoten B zu empfangen, und das zweite ermöglicht Knoten B, Änderungen von der Veröffentlichung auf Knoten A zu empfangen.  
+ Fügen Sie eine Verbindung zwischen zwei Knoten hinzu. Wenn Sie z. B. eine Verbindung zwischen Knoten A und Knoten B hinzufügen, werden bei der Replikation zwei Abonnements hinzugefügt. Durch das erste Abonnement wird Knoten A in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten B zu empfangen, während durch das zweite Abonnement Knoten B in die Lage versetzt wird, Änderungen der Veröffentlichung auf Knoten A zu empfangen.  
   
  **Peerknoten löschen**  
  Entfernt einen Knoten aus der Topologie. Wenn Sie z. B. Knoten C entfernen, wird die Veröffentlichung auf diesem Knoten entfernt. Abonnements zwischen Knoten A und Knoten C sowie zwischen Knoten B und Knoten C werden ebenfalls entfernt. Die Datenbank auf Knoten C wird nicht gelöscht, und Veröffentlichung und Verteilung werden nicht deaktiviert.  

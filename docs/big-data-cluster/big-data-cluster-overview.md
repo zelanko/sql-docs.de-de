@@ -9,12 +9,11 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-feedback_product_url: https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/
-ms.openlocfilehash: 69281b0708b2603f232481a5661da111d1b0aae9
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77903769"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
@@ -78,7 +77,7 @@ Sie können [Azure Data Studio](../azure-data-studio/what-is.md) dazu verwenden,
 - Möglichkeit zum Erstellen, Öffnen und Ausführen von Jupyter-kompatiblen Notebooks.
 - Datenvirtualisierungsassistent für eine vereinfachte Erstellung externer Datenquellen (aktiviert durch die **Datenvirtualisierungserweiterung**)
 
-## <a id="architecture"></a> Architektur
+## <a name="architecture"></a><a id="architecture"></a> Architektur
 
 Ein Big-Data-Cluster für SQL Server ist ein Cluster von Linux-Containern, die von [Kubernetes](https://kubernetes.io/docs/concepts/) orchestriert werden.
 
@@ -101,15 +100,15 @@ Das folgende Diagramm zeigt die Komponenten eines Big-Data-Clusters für SQL Ser
 
 ![Übersicht über die Architektur](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> Controller
+### <a name="controller"></a><a id="controlplane"></a> Controller
 
 Der Controller bietet Verwaltungs-und Sicherheitsfunktionen für den Cluster. Er enthält den Verwaltungsdienst, den Konfigurationsspeicher und andere Dienste auf Clusterebene wie Kibana, Grafana und Elasticsearch.
 
-### <a id="computeplane"></a> Computepool
+### <a name="compute-pool"></a><a id="computeplane"></a> Computepool
 
 Der Computepool stellt Rechenressourcen für den Cluster bereit. Er enthält Knoten, auf denen Pods für SQL Server für Linux laufen. Die Pods im Computepool werden für bestimmte Verarbeitungsaufgaben in *SQL-Computeinstanzen* unterteilt. 
 
-### <a id="dataplane"></a> Datenpool
+### <a name="data-pool"></a><a id="dataplane"></a> Datenpool
 
 Der Datenpool wird für Datenpersistenz und zum Zwischenspeichern verwendet. Der Datenpool besteht aus mindestens einem Pod, auf dem SQL Server für Linux ausgeführt wird. Er wird zum Erfassen von Daten aus SQL-Abfragen oder Spark-Aufträgen verwendet. Data Marts für SQL Server-Big-Data-Cluster werden im Datenpool persistent gespeichert. 
 

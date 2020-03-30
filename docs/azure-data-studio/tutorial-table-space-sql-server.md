@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
 ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957014"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutorial: Aktivieren des Erkenntniswidgets zur Nutzung des Tabellenspeicherplatzes mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>Tutorial: Aktivieren des Erkenntniswidgets zur Nutzung des Tabellenspeicherplatzes mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Dieses Tutorial veranschaulicht, wie Sie ein Erkenntniswidget auf dem Datenbankdashboard aktivieren, um die Speicherplatznutzung für alle Tabellen in einer Datenbank auf einen Blick anzuzeigen. In diesem Tutorial lernen Sie Folgendes:
 
@@ -33,7 +33,7 @@ Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* e
 * [Herstellen einer Verbindung mit und Abfragen von SQL Server mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Aktivieren von Verwaltungserkenntnissen auf dem Datenbankendashboard von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>Aktivieren von Verwaltungserkenntnissen auf dem Datenbankendashboard von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] verfügt über ein integriertes Beispielwidget zum Überwachen des Speicherplatzes, der von Tabellen in einer Datenbank genutzt wird.
 

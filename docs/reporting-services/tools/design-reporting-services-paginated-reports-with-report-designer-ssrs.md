@@ -11,10 +11,10 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286164"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Erstellen von paginierten Berichten von Reporting Services mit dem Berichts-Designer (SSRS)
@@ -37,7 +37,7 @@ Berichtsprojekte dienen als Container für Berichtsdefinitionen und Ressourcen. 
  Anhand der Informationen in diesem Thema können Sie paginierte Berichte und verwandte Elemente für ein konkretes Berichtsprojekt in einer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Projektmappe entwerfen. Weitere Informationen zu Projektmappen und mehreren Projekten in SQL Server Data Tools finden Sie unter [Reporting Services in SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
 
   
-##  <a name="bkmk_SharedDataSources"></a> Freigegebene Datenquellen  
+##  <a name="shared-data-sources"></a><a name="bkmk_SharedDataSources"></a> Freigegebene Datenquellen  
  Verwenden Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , um freigegebene Datenquellen für eine Berichtslösung zu definieren und bereitzustellen. Freigegebene Datenquellen können mit den Eigenschaften **OverwriteDataSources** und **TargetDataSourceFolder** unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  Im Berichts-Designer nutzen Sie sowohl den Berichtsdatenbereich als auch den Projektmappen-Explorer, um die in einem Bericht verwendeten Datenquellen zu definieren. Weitere Informationen finden Sie unter [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Sie können Datenquellen, die auf einem Berichtsserver oder einer SharePoint-Website veröffentlicht, aber nicht in die [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] -Projektmappe eingeschlossen wurden, nicht mit [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] öffnen. Verwenden Sie für diese Funktion die [Berichterstellungsumgebung des Berichts-Generators &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md).  
@@ -46,14 +46,14 @@ Berichtsprojekte dienen als Container für Berichtsdefinitionen und Ressourcen. 
   
  Weitere Informationen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
-##  <a name="bkmk_SharedDatasets"></a> Freigegebene Datasets  
+##  <a name="shared-datasets"></a><a name="bkmk_SharedDatasets"></a> Freigegebene Datasets  
  Verwenden Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , um freigegebene Datasets für eine Berichtslösung zu definieren und bereitzustellen. Freigegebene Datasets können mit den Eigenschaften **OverwriteDatasets** und **TargetDatasetFolder** unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  Im Berichts-Designer nutzen Sie sowohl den Berichtsdatenbereich als auch den Projektmappen-Explorer, um die in einem Bericht verwendeten freigegebenen Datasets zu definieren. Weitere Informationen finden Sie unter [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Sie können veröffentlichte Datasets mithilfe von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] nicht direkt von einem Berichtsserver oder einer SharePoint-Website aus öffnen. Verwenden Sie für diese Funktion die [Berichterstellungsumgebung des Berichts-Generators &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md) im Modus für freigegebene Datasets.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ist ein Clienttool. Abfrage-Designern unterstützen Sie beim Erstellen und Testen von Abfrageergebnissen lokale in der Vorschau. Nach der Bereitstellung können Sie freigegebene Datasets unabhängig von den freigegebenen Datenquellen und Berichten verwalten, von denen sie abhängen. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [Abfrageentwurfstools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md) und [Verwalten von freigegebenen Datasets](../../reporting-services/report-data/manage-shared-datasets.md).  
   
-##  <a name="bkmk_Reports"></a> Paginierte Berichte  
+##  <a name="paginated-reports"></a><a name="bkmk_Reports"></a> Paginierte Berichte  
 Paginierte Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werden. Berichte können als eigenständige Berichte, als Unterberichte oder als Ziele für Drillthroughaktionen in Hauptberichten verwendet werden. Mit **TargetReportFolder** und anderen Eigenschaften können Berichte unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 > [!NOTE]  
@@ -84,18 +84,18 @@ Paginierte Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werde
   
      Weitere Informationen finden Sie unter [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md).  
   
-##  <a name="bkmk_ReportParts"></a> Berichtsteile  
+##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a> Berichtsteile  
  Nachdem Sie Tabellen, Diagramme und andere paginierte Berichtselemente in einem Projekt erstellt haben, können Sie sie im Berichts-Designer auf einem Berichtsserver oder einer in einen Berichtsserver integrierten SharePoint-Website als *Berichtsteile* veröffentlichen, damit sie von Ihnen und weiteren Benutzern in anderen Berichten wiederverwendet werden können. Weitere Informationen finden Sie unter [Berichtsteile im Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
  Mit **TargetReportPartFolder** und anderen Eigenschaften können Berichtsteile unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
-##  <a name="bkmk_Resources"></a> Ressourcen  
+##  <a name="resources"></a><a name="bkmk_Resources"></a> Ressourcen  
  Sie können dem Projekt Dateien hinzufügen, die zwar einen Bezug zu dem Bericht haben, aber nicht vom Berichtsserver verarbeitet werden. Sie können z. B. Grafiken für Bilder oder ESRI-Shape-Dateien für räumliche Daten hinzufügen. Weitere Informationen finden Sie unter [Ressourcen](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
-##  <a name="bkmk_ReportLayout"></a> Paginiertes Berichtslayout  
+##  <a name="paginated-report-layout"></a><a name="bkmk_ReportLayout"></a> Paginiertes Berichtslayout  
  Um das Berichtslayout zu erstellen, ziehen Sie Berichtselemente und Datenbereiche aus der Toolbox auf die Entwurfsoberfläche, und ordnen Sie sie entsprechend an. Ziehen Sie Datasetfelder auf die Elemente in der Entwurfsoberfläche, um dem Bericht Daten hinzuzufügen. Wenn Sie Daten in einem Tablix-Datenbereich in Gruppen organisieren möchten, ziehen Sie Datasetfelder in den Bereich für die Gruppierung. Da Berichterstellungstools primär zum Erstellen von Berichtsdefinitionen dienen, sind die Ansätze für den Berichtsentwurf im Berichts-Generator und Report Designer einander sehr ähnlich.  
    
-##  <a name="bkmk_Preview"></a> Anzeigen einer Vorschau eines paginierten Berichts  
+##  <a name="preview-a-paginated-report"></a><a name="bkmk_Preview"></a> Anzeigen einer Vorschau eines paginierten Berichts  
  Verwenden Sie die **Vorschau** , um die Berichtsdaten und den Layoutentwurf zu überprüfen. Wenn Sie eine Vorschau eines Berichts anzeigen, überprüft der Berichtsprozessor das Berichtsdefinitionsschema und die Ausdruckssyntax. Probleme werden im Fenster [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) aufgelistet.  
   
 > [!NOTE]  
@@ -138,7 +138,7 @@ Paginierte Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werde
   
     -   Notwendige Änderungen am Berichtslayout für eine bessere Lesbarkeit im gedruckten Format.  
    
-##  <a name="bkmk_SaveandDeploy"></a> Speichern und Bereitstellen von paginierten Berichten  
+##  <a name="save-and-deploy-paginated-reports"></a><a name="bkmk_SaveandDeploy"></a> Speichern und Bereitstellen von paginierten Berichten  
  Sie können Berichte und andere Projektdateien im Berichts-Designer lokal speichern oder auf einem Berichtsserver oder einer SharePoint-Website bereitstellen. Freigegebene Datenquellen, freigegebene Datasets, Berichte, Berichtsressourcen und Berichtsteile können abhängig von den konfigurierten Projektbereitstellungseigenschaften unabhängig oder zusammen bereitgestellt werden. Weitere Informationen finden Sie unter [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties).  
   
  Beachten Sie, dass Sie Berichte im Berichts-Designer unter Verwendung des Berichtsdefinitionsschemas entwerfen, das von der aktuellen Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]unterstützt wird. Wenn Sie Projektbereitstellungseigenschaften für einen bestimmten Berichtsserver oder eine SharePoint-Website festlegen und den Bericht anschließend speichern, speichert der Berichts-Designer die Berichtsdefinition im Buildverzeichnis in dem Schema, das der Version auf dem Zielberichtsserver entspricht. Um Berichte zu erstellen, die auf einem Berichtsserver einer niedrigeren Version veröffentlicht werden können, löscht der Berichts-Designer Berichtselemente, die im Zielschema nicht vorhanden sind. Dies erfolgt automatisch und ohne Aufforderung. In diesem Fall wird die ursprüngliche Berichtsdefinition im Projektordner beibehalten. Die geänderte Berichtsdefinition, die bereitgestellt wird, befindet sich im Buildordner.  
@@ -159,7 +159,7 @@ Paginierte Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werde
 ### <a name="export-a-paginated-report-to-a-different-file-format"></a>Exportieren eines paginierten Berichts in ein anderes Dateiformat  
  Berichte können in verschiedene Formate exportiert werden. Diese Formate haben Einfluss auf die Funktionsweise einiger Berichtslayouts und interaktiver Funktionen. Weitere Informationen zu Entwurfsüberlegungen zu verschiedenen Ausgabeformaten finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
    
-##  <a name="bkmk_ReportValidationandErrorLevels"></a> Berichtsüberprüfung und Fehlerebenen  
+##  <a name="report-validation-and-error-levels"></a><a name="bkmk_ReportValidationandErrorLevels"></a> Berichtsüberprüfung und Fehlerebenen  
  Berichte werden vor der Vorschau und während der Bereitstellung überprüft. Beim Erstellen von Berichten können verschiedene Erstellungsprobleme auftreten. Berichte können Zeichenfolgen, z. B. Ausdrücke oder Abfragen, enthalten, die mit der von der Projektkonfiguration angegebenen Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht kompatibel sind.  
   
  Verwenden Sie die ErrorLevel-Eigenschaft, um die während der Erstellung angezeigten Warnungen und Fehler zu verwalten. Die ErrorLevel-Eigenschaft kann einen Wert von 0 bis einschließlich 4 enthalten. Durch den Wert wird bestimmt, welche Erstellungsprobleme als Fehler und welche als Warnungen gemeldet werden. Der Standardwert ist 2. Die Warnungen und die Fehler werden in das [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][-Ausgabefenster](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) geschrieben.  

@@ -17,10 +17,10 @@ ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 03911ae4b3addb7a3626b6c9bd0a2c195b719cef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321564"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln
@@ -41,19 +41,19 @@ ms.locfileid: "75321564"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Um einen Joinfilter zu erstellen, muss eine Veröffentlichung mindestens zwei verknüpfte Tabellen enthalten. Verknüpfungsfilterfilter sind eine Erweiterung von Zeilenfiltern. Daher müssen Sie den Zeilenfilter für eine Tabelle definieren, bevor Sie diesen in einer anderen Tabelle um eine Verknüpfung erweitern können. Nach dem Definieren eines Joinfilters können Sie diesen wiederum um einen anderen Joinfilter erweitern, sofern die Veröffentlichung weitere verknüpfte Tabellen enthält.  
   
 -   Wenn Sie einen Verknüpfungsfilter hinzufügen, ändern oder löschen, nachdem Abonnements für die Veröffentlichung initialisiert wurden, müssen Sie eine neue Momentaufnahme generieren und alle Abonnements nach vorgenommener Änderung erneut initialisieren. Weitere Informationen zum Ändern von Eigenschaften finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Joinfilter für Tabellen können sowohl manuell als auch automatisch per Replikation erstellt werden. Die automatische Erstellung erfolgt auf der Basis der für die Tabellen definierten Beziehungen zwischen Fremdschlüsseln und Primärschlüsseln. Weitere Informationen zum automatischen Generieren einer Reihe von Verknüpfungsfiltern finden Sie unter [Automatically Generate a Set of Join Filters Between Merge Articles &#40;SQL Server Management Studio&#41; (Automatischses Generieren einer Reihe von Verküpfungsfiltern zwischen Mergeartikeln &#40;SQL Server Management Studio&#41;)](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Definieren, ändern und löschen Sie Verknüpfungsfilter auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Filterzeilen** im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** . Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-join-filter"></a>So definieren Sie einen Joinfilter  
@@ -103,7 +103,7 @@ ms.locfileid: "75321564"
   
 1.  Wählen Sie auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder der Seite **Filterzeilen** von **Veröffentlichungseigenschaften - \<Veröffentlichung>** einen Filter im Bereich **gefilterte Tabellen**, und klicken Sie dann auf **Löschen**. Wenn der Joinfilter, den Sie löschen möchten, mit anderen Joins erweitert ist, werden diese Joins beim Löschen des Filters selbst ebenfalls gelöscht.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  In diesen Prozeduren wird ein parametrisierter Filter für einen übergeordneten Artikel mit Verknüpfungsfiltern zwischen diesem Artikel und zugehörigen untergeordneten Artikeln gezeigt. Joinfilter können mithilfe gespeicherter Replikationsprozeduren programmgesteuert definiert und geändert werden.  
   
 #### <a name="to-define-a-join-filter-to-extend-an-article-filter-to-related-articles-in-a-merge-publication"></a>So definieren Sie einen Joinfilter, um einen Artikelfilter auf zugehörige Artikel in einer Mergeveröffentlichung zu erweitern  
@@ -127,7 +127,7 @@ ms.locfileid: "75321564"
     > [!CAUTION]  
     >  Legen Sie `@join_unique_key` nur dann auf **1** fest, wenn eine Einschränkung für die verknüpfte Spalte in der zugrunde liegenden Tabelle für den übergeordneten Artikel vorliegt, die die Eindeutigkeit sicherstellt. Wird `@join_unique_key` fälschlicherweise auf **1** festgelegt, kann dies zu einer Nichtkonvergenz der Daten führen.  
   
-###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  In diesem Beispiel wird ein Artikel für eine Mergeveröffentlichung definiert, bei der der `SalesOrderDetail` -Tabellenartikel anhand der `SalesOrderHeader` -Tabelle gefiltert wird, dies selbst mithilfe eines statischen Zeilenfilters gefiltert wird. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  

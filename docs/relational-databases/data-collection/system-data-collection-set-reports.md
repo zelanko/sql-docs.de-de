@@ -20,10 +20,10 @@ ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d171085f34e2a20f9e4b1db809327d078ce08436
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287594"
 ---
 # <a name="system-data-collection-set-reports"></a>Berichte der Systemdaten-Sammlungssätze
@@ -38,7 +38,7 @@ ms.locfileid: "79287594"
   
  Sie können diese Berichte verwenden, um Informationen zum Überwachen der Systemkapazität und zur Behandlung von Problemen mit der Systemleistung abzurufen.  
   
-##  <a name="Disk"></a> Bericht über die Zusammenfassung der Datenträgerverwendung  
+##  <a name="disk-usage-summary-report"></a><a name="Disk"></a> Bericht über die Zusammenfassung der Datenträgerverwendung  
  Der Bericht über die Zusammenfassung der Datenträgerverwendung enthält Daten über die Speicherplatzverwendung aller Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die in den Berichten bereitgestellten Daten werden unter Verwendung des Sammlungssatzes für die Datenträgerverwendung ermittelt, der den generischen T-SQL-Abfragensammlertyp verwendet.  
   
  Sie können auf den Bericht über die Zusammenfassung der Datenträgerverwendung vom Objekt-Explorer aus zugreifen. Erweitern Sie den Ordner **Verwaltung** , klicken Sie mit der rechten Maustaste auf **Datensammlung**, zeigen Sie auf **Berichte**und anschließend auf **Verwaltungs-Data Warehouse**, und klicken Sie auf **Zusammenfassung der Datenträgerverwendung**, um den Bericht anzuzeigen. Weitere Informationen finden Sie unter [Anzeigen eines Sammlungssatzberichts &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "79287594"
 |--------------|----------------|  
 |Index|Der verwendete Speicherplatz für Indexseiten|  
 |Nicht zugeordnet|Der für die Datenbank verfügbare Speicherplatz, der jedoch noch keinem Objekt zugeordnet wurde|  
-|Daten|Der von Datenseiten verwendete Speicherplatz|  
+|Data|Der von Datenseiten verwendete Speicherplatz|  
 |Nicht verwendet|Der Speicherplatz, der mindestens einem Objekt zugeordnet, jedoch noch nicht verwendet wurde|  
   
  Die Speicherplatzverwendung für die Transaktionsprotokolldatei ist als verwendeter und nicht verwendeter Speicherplatz kategorisiert.  
@@ -71,7 +71,7 @@ ms.locfileid: "79287594"
   
  Der von jeder Datendatei in der Datenbank verwendete Speicherplatz wird aufgeführt. Reservierter Speicherplatz ist die Menge von verwendetem Speicherplatz plus dem Speicherplatz, der der Datei zugeordnet, jedoch noch nicht verwendet wurde. Verwendeter Speicherplatz ist der tatsächlich von der Datei momentan verwendete Speicherplatz, ohne den zugeordneten Speicherplatz.  
   
-##  <a name="Query"></a> Bericht "Abfragestatistik - Verlauf"  
+##  <a name="query-statistics-history-report"></a><a name="Query"></a> Bericht "Abfragestatistik - Verlauf"  
  Der Bericht Abfragestatistik - Verlauf enthält Statistiken zur Abfrageausführung. Die Daten in diesem Bericht werden unter Verwendung des Sammlungssatzes für die Abfragestatistik ermittelt, der den Abfrageaktivitäts-Sammlertyp verwendet.  
   
  Sie können auf den Bericht Abfragestatistik - Verlauf über den Objekt-Explorer zugreifen. Erweitern Sie den Ordner **Verwaltung** , klicken Sie mit der rechten Maustaste auf **Datensammlung**, zeigen Sie auf **Berichte**und anschließend auf **Verwaltungs-Data Warehouse**, und klicken Sie auf **Abfragestatistik – Verlauf**, um den Bericht anzuzeigen. Weitere Informationen finden Sie unter [Anzeigen eines Sammlungssatzberichts &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md).  
@@ -88,14 +88,14 @@ ms.locfileid: "79287594"
  Verwenden Sie die Schaltfläche Kalender, um das Startdatum, die Startzeit und die Dauer der Daten anzugeben, über die ein Bericht erstellt werden soll.  
   
 #### <a name="query-statistics-history-report"></a>Bericht "Abfragestatistik - Verlauf"  
- Im Diagramm Erste Abfragen nach CPU gesamt werden die relativen Aufwendungen für jede Abfrage für den ausgewählten Zeitbereich auf der Basis der CPU-Gesamtnutzung dargestellt. Zum Anzeigen einer anderen Sicht der relativen Aufwendungen für jede Abfrage klicken Sie auf einen der Links unter dem Diagramm: **Dauer**, **E/A gesamt**, **Physische Lesevorgänge** oder **Logische Schreibvorgänge**.  
+ Im Diagramm Erste Abfragen nach CPU gesamt werden die relativen Aufwendungen für jede Abfrage für den ausgewählten Zeitbereich auf der Basis der CPU-Gesamtnutzung dargestellt. Zum Anzeigen einer anderen Sicht der relativen Aufwendungen für jede Abfrage klicken Sie auf einen der Links unter dem Diagramm: **Dauer**, **E/A gesamt**, **Physische Lesevorgänge**oder **Logische Schreibvorgänge**.  
   
  In der Tabelle unter dem Diagramm werden weitere Abfragedaten bereitgestellt. Sie enthält den Text für jede grafisch dargestellte Abfrage zusammen mit ausführlichen statistischen Informationen. Beachten Sie, dass die Diagrammbalken aktive Links sind, ebenso wie die einzelnen Abfragen in der Tabelle. Durch Klicken auf einen aktiven Link wird der Unterbericht Abfragedetails für die Abfrage geöffnet.  
   
 #### <a name="query-details-subreport"></a>Unterbericht "Abfragedetails"  
  Der Unterbericht Abfragedetails enthält den gesamten Abfragetext. Der Link **Abfragetext bearbeiten** wird neben der Abfrage angezeigt. Sie können auf diesen Link klicken, um die Abfrage im Abfrage-Editor zu öffnen. In der Tabelle unter der Abfrage wird die Abfrageausführungsstatistik angezeigt, z. B. die durchschnittliche Dauer pro Abfrageausführung.  
   
- Ein Diagramm von Abfrageplänen und die durchschnittliche Dauer pro Ausführung werden angezeigt. Sie können eine andere Ansicht der relativen Kosten für jeden Abfrageplan abrufen, indem Sie auf einen der folgenden Hyperlinks unterhalb des Diagramms klicken: **Dauer**, **Physische Lesevorgänge** oder **Logische Schreibvorgänge**. Die Diagrammlinie ist aktiv, und Sie können auf jeden Punkt klicken, um den Unterbericht Abfrageplandetails zu öffnen.  
+ Ein Diagramm von Abfrageplänen und die durchschnittliche Dauer pro Ausführung werden angezeigt. Sie können eine andere Ansicht der relativen Kosten für jeden Abfrageplan abrufen, indem Sie auf einen der folgenden Hyperlinks unterhalb des Diagramms klicken: **Dauer**, **Physische Lesevorgänge**oder **Logische Schreibvorgänge**. Die Diagrammlinie ist aktiv, und Sie können auf jeden Punkt klicken, um den Unterbericht Abfrageplandetails zu öffnen.  
   
  In der Tabelle unter dem Diagramm werden die ersten zehn Abfragepläne auf Grundlage der CPU-Verwendung pro Ausführung angezeigt. Jede Nummer in der Spalte **Plan #** ist ein aktiver Link, auf den Sie klicken können, um den Unterbericht „Abfrageplandetails“ zu öffnen.  
   
@@ -118,16 +118,16 @@ ms.locfileid: "79287594"
   
  Verwenden Sie die Schaltfläche Kalender, um das Startdatum, die Startzeit und die Dauer der Daten anzugeben, über die ein Bericht erstellt werden soll.  
   
-###  <a name="Server"></a> Bericht "Serveraktivität - Verlauf"  
+###  <a name="server-activity-history-report"></a><a name="Server"></a> Bericht "Serveraktivität - Verlauf"  
  Der Bericht Serveraktivität - Verlauf zeigt die anfängliche Ansicht der Serveraktivität für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Hostbetriebssystem an.  
   
  In der folgenden Tabelle werden die Diagramme beschrieben, mit denen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität und Systemaktivität im Bericht und in den ausführlichen Unterberichten, die über die Diagramme aufrufbar sind, grafisch dargestellt werden.  
   
 |Graph|Berichtsbeschreibung|  
 |-----------|------------------------|  
-|% CPU|Diese Unterberichte werden aufgerufen, indem Sie auf einen beliebigen Punkt auf den Diagrammlinien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder das System im Diagramm % CPU klicken.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : Der Bericht Abfragestatistik - Verlauf enthält ein Diagramm der aufwändigsten Abfragen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In einer Tabelle unter dem Diagramm werden die Abfragen aufgelistet. Sie enthält außerdem statistische Daten für jede Abfrage. Sie können auf eine Abfrage klicken, um weitere Details abzurufen.<br /><br /> **System:** Der Bericht System-CPU-Verwendung enthält ein Diagramm mit dem Prozentsatz der CPU-Zeit pro Prozessor sowie statistische Daten für jeden Prozess im Tabellenformat.|  
-|Speicherauslastung|Diese Unterberichte werden aufgerufen, indem Sie auf einen beliebigen Punkt auf den Diagrammlinien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder das System im Diagramm Speicherauslastung klicken.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Bericht Speicherauslastung enthält Diagramme für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozessspeichernutzung, für Arbeitsspeicher-Leistungsindikatoren, für die interne Arbeitsspeichernutzung nach Typ und eine Tabelle mit Daten zur durchschnittlichen Arbeitsspeichernutzung nach Komponententyp.<br /><br /> **System:** Der Bericht Systemspeicherverwendung enthält Diagramme für die Speicherauslastung, Zwischenspeicher- und Seiten-Trefferquoten und eine Tabelle mit Informationen über das Workingset und die privaten Bytes für jeden Prozess.|  
-|Datenträger-E/A-Nutzung|Diese Unterberichte werden aufgerufen, indem Sie auf einen beliebigen Punkt auf den Diagrammlinien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder das System im Diagramm Datenträger-E/A-Verwendung klicken.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Bericht Datenträger-E/A-Verwendung enthält Diagramme für die Antwortzeit und die Übertragungsrate des Datenträgers. Eine zusätzliche Tabelle bietet Statistiken virtueller Dateien anhand von Datenträger, Datenbank und Datei.<br /><br /> **System:** Der Bericht Systemdatenträgerverwendung enthält Diagramme für die Antwortzeit des Datenträgers, die durchschnittliche Warteschlangenlänge des Datenträgers, die Übertragungsrate des Datenträgers und eine Tabelle mit Informationen über Schreib- und Lesezugriffe für jeden Prozess.|  
+|% CPU|Diese Unterberichte werden aufgerufen, indem Sie auf einen beliebigen Punkt auf den Diagrammlinien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder das System im Diagramm % CPU klicken.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : Der Bericht „Abfragestatistik – Verlauf“ enthält ein Diagramm der aufwändigsten Abfragen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In einer Tabelle unter dem Diagramm werden die Abfragen aufgelistet. Sie enthält außerdem statistische Daten für jede Abfrage. Sie können auf eine Abfrage klicken, um weitere Details abzurufen.<br /><br /> **System**: Der Bericht „System-CPU-Verwendung“ enthält ein Diagramm mit dem Prozentsatz der CPU-Zeit pro Prozessor sowie statistische Daten für jeden Prozess im Tabellenformat.|  
+|Speicherauslastung|Diese Unterberichte werden aufgerufen, indem Sie auf einen beliebigen Punkt auf den Diagrammlinien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder das System im Diagramm Speicherauslastung klicken.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : Der Bericht „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Speicherauslastung“ enthält Diagramme für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozessspeichernutzung, für Arbeitsspeicher-Leistungsindikatoren, für die interne Arbeitsspeichernutzung nach Typ und eine Tabelle mit Daten zur durchschnittlichen Arbeitsspeichernutzung nach Komponententyp.<br /><br /> **System**: Der Bericht „Systemspeicherverwendung“ enthält Diagramme für die Speicherauslastung, Zwischenspeicher- und Seiten-Trefferquoten und eine Tabelle mit Informationen über den Arbeitssatz und die privaten Bytes für jeden Prozess.|  
+|Datenträger-E/A-Nutzung|Diese Unterberichte werden aufgerufen, indem Sie auf einen beliebigen Punkt auf den Diagrammlinien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder das System im Diagramm Datenträger-E/A-Verwendung klicken.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : Der Bericht „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenträger-E/A-Verwendung“ enthält Diagramme für die Antwortzeit und die Übertragungsrate des Datenträgers. Eine zusätzliche Tabelle bietet Statistiken virtueller Dateien anhand von Datenträger, Datenbank und Datei.<br /><br /> **System**: Der Bericht „Systemdatenträgerverwendung“ enthält Diagramme für die Antwortzeit des Datenträgers, die durchschnittliche Warteschlangenlänge des Datenträgers, die Übertragungsrate des Datenträgers und eine Tabelle mit Informationen über Schreib- und Lesezugriffe für jeden Prozess.|  
 |Netzwerkauslastung|Es sind keine weiteren Berichte verfügbar.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgänge|Das Diagramm für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgänge zeigt Wartevorgänge in den Threads, die ausgeführt wurden, nach Kategorie an. Sie können auf einen ausführlichen Bericht zugreifen, indem Sie auf ein beliebiges Segment im Diagramm klicken. Neben der grafischen Darstellung von Statistikdaten zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgängen während eines engeren Zeitrahmens liefert dieser Bericht Informationen über Wartevorgangskategorien im Tabellenformat. Für jede Kategorie, z. B. CPU und deren Unterkategorien, zeigt die Tabelle die Anzahl der Wartevorgänge, die Wartezeit und den Prozentsatz der Gesamtwartezeit an.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität|Verschiedene Aspekte der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität sind über das Diagramm zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität abrufbar. Sie können folgende Berichte durch Klicken auf einen Punkt auf der Diagrammlinie SQL-Kompilierungen/Sekunde abrufen:<br /><br /> <br /><br /> Verbindungen und Sitzungen<br /><br /> Requests<br /><br /> Plancache-Trefferquote<br /><br /> tempdb-Eigenschaften|  
