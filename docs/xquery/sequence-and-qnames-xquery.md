@@ -1,5 +1,5 @@
 ---
-title: Sequence und QNames (XQuery) | Microsoft-Dokumentation
+title: Sequenz und QNames (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbb20c9e14c4e76b8862a23e8d758fcbba94da7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946347"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380781"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Sequenz und QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  Jeder Bezeichner in einer XQuery-Abfrage ist ein QName. Ein QName besteht aus einem Namespacepräfix und einem lokalen Namen. In dieser Implementierung sind die XQuery-Variablennamen QNames, und sie können keine Präfixe besitzen.  
   
- Sehen Sie sich das folgende Beispiel an, in dem eine Abfrage für eine nicht typisierte **XML** -Variable angegeben wird:  
+ Betrachten Sie das folgende Beispiel, in dem eine Abfrage für eine nicht typisierte **XML-Variable** angegeben wird:  
   
 ```  
 DECLARE @x xml;  
@@ -111,7 +111,7 @@ SELECT @x.query('/Root/a');
   
  Im Ausdruck (`/Root/a`) sind `Root` und `a` QNames.  
   
- Im folgenden Beispiel wird eine Abfrage für eine typisierte **XML** -Spalte angegeben. Die Abfrage durchläuft alle \<Schritte> Elemente am ersten Arbeitsplatz Standort.  
+ Im folgenden Beispiel wird eine Abfrage für eine typisierte **XML-Spalte** angegeben. Die Abfrage iteriert \<über alle Schritt> Elemente an der ersten Arbeitsplatzposition.  
   
 ```  
 SELECT Instructions.query('  
@@ -126,9 +126,7 @@ WHERE ProductModelID=7;
   
  Beachten Sie im Abfrageausdruck Folgendes:  
   
--   
-  `AWMI root`, `AWMI:Location`, `AWMI:step` und `$Step` sind jeweils QNames. 
-  `AWMI` ist ein Präfix, und `root`, `Location` und `Step` sind lokale Namen.  
+-   `AWMI root`, `AWMI:Location`, `AWMI:step` und `$Step` sind jeweils QNames. `AWMI` ist ein Präfix, und `root`, `Location` und `Step` sind lokale Namen.  
   
 -   Die `$step`-Variable ist ein QName und besitzt kein Präfix.  
   
@@ -141,16 +139,16 @@ WHERE ProductModelID=7;
 |xdt|http://www.w3.org/2004/07/xpath-datatypes|  
 |fn|http://www.w3.org/2004/07/xpath-functions|  
 |(kein Präfix)|`urn:schemas-microsoft-com:xml-sql`|  
-|sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
+|sqltypes|`https://schemas.microsoft.com/sqlserver/2004/sqltypes`|  
 |Xml|`http://www.w3.org/XML/1998/namespace`|  
 |(kein Präfix)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- Jede Datenbank, die Sie erstellen, verfügt über die **sys** XML Schema Collection. Sie reserviert diese Schemas, sodass auf sie von jeder benutzererstellten XML-Schemaauflistung zugegriffen werden kann.  
+ Jede Datenbank, die Sie erstellen, verfügt über die **sys** XML-Schemaauflistung. Sie reserviert diese Schemas, sodass auf sie von jeder benutzererstellten XML-Schemaauflistung zugegriffen werden kann.  
   
 > [!NOTE]  
->  Diese Implementierung unterstützt das `local` -Präfix nicht, wie in der XQuery http://www.w3.org/2004/07/xquery-local-functions-Spezifikation in beschrieben.  
+>  Diese Implementierung unterstützt `local` das Präfix nicht, wie http://www.w3.org/2004/07/xquery-local-functionsin der XQuery-Spezifikation in beschrieben.  
   
-## <a name="see-also"></a>Weitere Informationen  
- [XQuery-Grundlagen](../xquery/xquery-basics.md)  
+## <a name="see-also"></a>Siehe auch  
+ [XQuery Basics (XQuery-Grundlagen)](../xquery/xquery-basics.md)  
   
   

@@ -15,15 +15,15 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 017292aa073c0b5745f313b61592a5c57199567c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f5f8840e0204847d447ea794e94312221ec1cc72
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66106946"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380791"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML-Abfragesyntax für XML-Berichtsdaten (SSRS)
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Datasets für XML-Datenquellen erstellen. Wenn Sie eine Datenquelle definiert haben, erstellen Sie eine Abfrage für das Dataset. Je nach Typ der XML-Daten, auf die die Datenquelle zeigt, können Sie die Datasetabfrage erstellen, indem Sie eine XML-`Query` oder einen Elementpfad einfügen. Ein XML `Query` -Code beginnt mit einer ** \<Abfrage>** -Tag und enthält Namespaces und XML-Elemente, die je nach Datenquelle variieren. Ein Elementpfad ist von Namespaces unabhängig und gibt die Knoten und Knotenattribute in den zugrunde liegenden XML-Daten an, die mit der XPath-ähnlichen Syntax verwendet werden sollen. Weitere Informationen zu Elementpfaden finden Sie unter [Syntax für Elementpfade für XML-Berichtsdaten (SSRS)](report-data-ssrs.md).  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Datasets für XML-Datenquellen erstellen. Wenn Sie eine Datenquelle definiert haben, erstellen Sie eine Abfrage für das Dataset. Je nach Typ der XML-Daten, auf die die Datenquelle zeigt, können Sie die Datasetabfrage erstellen, indem Sie eine XML-`Query` oder einen Elementpfad einfügen. Ein `Query` XML-Code beginnt mit einem ** \<Query>-Tag** und enthält Namespaces und XML-Elemente, die je nach Datenquelle variieren. Ein Elementpfad ist von Namespaces unabhängig und gibt die Knoten und Knotenattribute in den zugrunde liegenden XML-Daten an, die mit der XPath-ähnlichen Syntax verwendet werden sollen. Weitere Informationen zu Elementpfaden finden Sie unter [Syntax für Elementpfade für XML-Berichtsdaten (SSRS)](report-data-ssrs.md).  
   
  Sie können eine XML-Datenquelle für die folgenden Typen von XML-Daten erstellen:  
   
@@ -87,8 +87,8 @@ ms.locfileid: "66106946"
   
 |XML-Abfrageelement|Resultierende Felder im Dataset|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|Wert A: https://schemas.microsoft.com/...<br /><br /> Wert B: https://schemas.microsoft.com/...<br /><br /> Wert C: https://schemas.microsoft.com/...|  
-|\<xmldp: Abfrage xmlns: xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns: NS = "https://schemas.microsoft.com/..." ><br /><br /> \<xmldp: ElementPath>root {}/NS: Element2/Node\</xmldp: ElementPath><br /><br /> \</xmldp: Abfrage>|Value D<br /><br /> Value E<br /><br /> Value F|  
+|\<Query/>|Wert A: `https://schemas.microsoft.com/..`.<br /><br /> Wert B: `https://schemas.microsoft.com/..`.<br /><br /> Wert C: `https://schemas.microsoft.com/.`..|  
+|\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..." ><br /><br /> \<xmldp:ElementPath>{}Root /ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:>|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML-Dokument: DPNamespace.xml  
  Sie können dieses XML-Dokument kopieren und unter einer URL speichern, auf den der Berichts-Designer zugreifen kann, um es als XML-Datenquelle zu verwenden: z. B. http://localhost/DPNamespace.xml.  
@@ -108,8 +108,8 @@ ms.locfileid: "66106946"
 </Root>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
- [XML-Verbindungstyp &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
- [Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
+## <a name="see-also"></a>Siehe auch  
+ [XML-Verbindungstyp &#40;SSRS-&#41;](xml-connection-type-ssrs.md)   
+ [Reporting Services-Tutorials (SSRS)](../reporting-services-tutorials-ssrs.md)  
   
   
