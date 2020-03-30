@@ -33,10 +33,10 @@ author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75831817"
 ---
 # <a name="collation-and-unicode-support"></a>Unterstützung von Sortierungen und Unicode
@@ -69,7 +69,7 @@ Sie können diese Optionen festlegen, indem Sie sie an den Namen der Sortierung 
 
 In der folgenden Tabelle wird das den verschiedenen Optionen zugeordnete Verhalten beschrieben:    
     
-|Option|Beschreibung|    
+|Option|BESCHREIBUNG|    
 |------------|-----------------|    
 |Unterscheidung nach Groß-/Kleinschreibung (\_CS)|Unterscheidet zwischen Groß- und Kleinbuchstaben. Wenn diese Option aktiviert wird, stehen Kleinbuchstaben in der Sortierreihenfolge vor ihren entsprechenden Großbuchstaben. Wenn diese Option nicht aktiviert wird, wird die Groß- und Kleinschreibung bei der Sortierung nicht berücksichtigt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] betrachtet also beim Sortieren die groß- und die kleingeschriebenen Versionen von Buchstaben als identisch. Sie können die Nichtunterscheidung nach Groß-/Kleinbuchstaben durch Angeben von „\_CI“ explizit auswählen.|   
 |Unterscheidung nach Akzent (\_AS)|Unterscheidet zwischen Zeichen mit Akzent und Zeichen ohne Akzent. Beispielsweise entspricht „a“ nicht „ấ“. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung nicht nach Akzenten unterschieden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] betrachtet also beim Sortieren die Versionen von Buchstaben mit und ohne Akzent als identisch. Sie können die Nichtunterscheidung nach Akzent durch Angeben von „\_AI“ explizit auswählen.|    

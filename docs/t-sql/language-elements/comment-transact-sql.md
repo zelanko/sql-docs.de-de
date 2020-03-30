@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7e9aaab99194646874c0823abb61100cdc524aa
-ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78261704"
 ---
 # <a name="---comment-transact-sql"></a>-- (Kommentar) (Transact-SQL)
@@ -50,7 +50,7 @@ ms.locfileid: "78261704"
 ## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie zwei Bindestriche ( **--** ) für einzeilige oder geschachtelte Kommentare. Kommentare, die mit **--** eingefügt werden, werden von einer neuen Zeile beendet, die durch ein Wagenrücklaufzeichen (U+000A), ein Zeilenvorschubzeichen (U+000D) oder eine Kombination der beiden Zeichen angegeben ist. Es gibt keine Maximallänge für Kommentare. In der folgenden Tabelle sind die Tastenkombinationen aufgeführt, die Sie verwenden können, um Text als Kommentar zu kennzeichnen oder auszukommentieren.
   
-|Aktion|Standard|  
+|Action|Standard|  
 |------------|--------------|  
 |Umwandeln des markierten Texts in einen Kommentar|STRG+K, STRG+C|  
 |Kommentierung des ausgewählten Texts entfernen|STRG+K, STRG+U|  

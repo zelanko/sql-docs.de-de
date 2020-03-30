@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c8f60ee25f00c4b9ba4b7959a6447e11a0f549b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244832"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Unterabfragen (Azure SQL Data Warehouse, Parallel Data Warehouse)
@@ -32,7 +32,7 @@ ms.locfileid: "75244832"
   
 -   [Beispiele: SQL Data Warehouse und Parallel Data Warehouse](#Examples)  
   
-##  <a name="Basics"></a> Grundlagen  
+##  <a name="basics"></a><a name="Basics"></a> Grundlagen  
  Unterabfrage  
  Eine Unterabfrage ist eine Abfrage, die in einer SELECT-, INSERT-, UPDATE- oder DELETE-Anweisung bzw. in einer anderen Unterabfrage geschachtelt ist. Dies wird auch als innere Abfrage oder innerer Select-Ausdruck bezeichnet.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75244832"
  Korrelierte Unterabfrage  
  Eine Unterabfrage, die auf eine Tabelle in der äußeren Abfrage verweist.  
   
-##  <a name="Examples"></a> Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Dieser Abschnitt enthält Beispiele für in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] unterstützte Unterabfragen.  
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>A. TOP und ORDER BY in einer Unterabfrage  

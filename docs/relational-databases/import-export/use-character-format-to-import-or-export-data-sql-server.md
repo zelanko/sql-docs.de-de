@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056335"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Zeichenformats zum Importieren oder Exportieren von Daten (SQL Server)
@@ -40,7 +40,7 @@ Das Zeichenformat verwendet das Zeichendatenformat für alle Spalten. Es ist nü
 
 
   
-## Überlegungen zum Verwenden des Zeichenformats<a name="considerations"></a>
+## <a name="considerations-for-using-character-format"></a>Überlegungen zum Verwenden des Zeichenformats<a name="considerations"></a>
 Beim Verwenden des Zeichenformats sollten Sie Folgendes berücksichtigen:  
   
 -   Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) trennt standardmäßig die Zeichendatenfelder mit dem Tabstoppzeichen und schließt die Datensätze mit einem Neue-Zeile-Zeichen ab.  Weitere Informationen zum Angeben alternativer Abschlusszeichen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
@@ -58,12 +58,12 @@ Beim Verwenden des Zeichenformats sollten Sie Folgendes berücksichtigen:
   
 -   Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) exportiert [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) -Werte in Datendateien im Zeichenformat mit vier Stellen nach dem Dezimaltrennzeichen und ohne Symbole für die Zifferngruppierung, wie z.B. Kommas. So wird z.B. eine [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) -Spalte mit dem Wert 1,234,567.123456 beim Massenkopieren in eine Datendatei als die Zeichenfolge 1234567.1235 massenexportiert.  
   
-## Befehlsoptionen für das Zeichenformat<a name="command_options"></a>  
+## <a name="command-options-for-character-format"></a>Befehlsoptionen für das Zeichenformat<a name="command_options"></a>  
 Sie können Daten im Zeichenformat in eine Tabelle importieren, indem Sie die folgenden Anweisungen verwenden: [BCP](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md). Für einen [bcp](../../tools/bcp-utility.md) -Befehl oder eine [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) -Anweisung können Sie das Datenformat in der Anweisung angeben.  Für eine [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)-Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
   
 Das Zeichenformat wird von den folgenden Befehlsoptionen unterstützt:  
   
-|Get-Help|Option|Beschreibung|  
+|Get-Help|Option|BESCHREIBUNG|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Bewirkt, dass das Hilfsprogramm „bcp“ Zeichendaten verwendet.\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Verwendet das Zeichenformat beim Massenimport von Daten.|  
@@ -74,10 +74,10 @@ Das Zeichenformat wird von den folgenden Befehlsoptionen unterstützt:
 > [!NOTE]
 >  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)erforderlich.
 
-## Beispieltestbedingungen<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Beispieltestbedingungen<a name="etc"></a>  
 Die in diesem Thema beschriebenen Beispiele basieren auf einer Tabelle und einer Formatdatei, die nachstehend definiert werden.
 
-### **Beispieltabelle**<a name="sample_table"></a>
+### <a name="sample-table"></a>**Beispieltabelle**<a name="sample_table"></a>
 Das folgende Skript erstellt eine Testdatenbank sowie eine Tabelle namens `myChar` und füllt die Tabelle mit einigen ursprünglichen Werten auf.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 
 ```sql
@@ -104,7 +104,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **Beispiel einer Nicht-XML-Formatdatei**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**Beispiel einer Nicht-XML-Formatdatei**<a name="nonxml_format_file"></a>
 SQL Server unterstützt zwei Typen von Formatdateien: Nicht-XML- und XML-Format.  Nicht-XML ist das ursprüngliche Format, das von früheren Versionen von SQL Server unterstützt wird.  Ausführliche Informationen finden Sie unter [Nicht-XML-Formatdateien (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Im folgenden Befehl wird das [bcp-Hilfsprogramm](../../tools/bcp-utility.md) verwendet, um die Nicht-XML-Formatdatei `myChar.fmt`zu erstellen, die auf dem Schema von `myChar`basiert.  Geben Sie bei der Ausführung eines [bcp](../../tools/bcp-utility.md) -Befehls zum Erstellen einer Formatdatei das **format** -Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads.  Die Option „format“ erfordert außerdem die Option **-f** .  Zusätzlich wird in diesem Beispiel der Qualifizierer **c** verwendet, um Zeichendaten anzugeben, und **T** , um eine vertrauenswürdige Verbindung anzugeben, für die integrierte Sicherheit verwendet wird.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
 ```cmd
@@ -120,10 +120,10 @@ Notepad D:\BCP\myChar.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## Beispiele<a name="examples"></a>
+## <a name="examples"></a>Beispiele<a name="examples"></a>
 In dem folgenden Beispiel werden die Datenbank und die Formatdateien verwendet, die oben erstellt wurden.
 
-### **Verwenden von bcp und dem Zeichenformat zum Exportieren von Daten**<a name="bcp_char_export"></a>
+### <a name="using-bcp-and-character-format-to-export-data"></a>**Verwenden von bcp und dem Zeichenformat zum Exportieren von Daten**<a name="bcp_char_export"></a>
 Der Schalter **-c** und der **OUT** -Befehl.  Hinweis: Die in diesem Beispiel erstellte Datendatei wird auch in allen nachfolgenden Beispielen verwendet.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
 ```cmd
@@ -133,7 +133,7 @@ REM Review results
 NOTEPAD D:\BCP\myChar.bcp
 ```
 
-### **Verwenden von bcp und dem Zeichenformat zum Importieren von Daten ohne eine Formatdatei**<a name="bcp_char_import"></a>
+### <a name="using-bcp-and-character-format-to-import-data-without-a-format-file"></a>**Verwenden von bcp und dem Zeichenformat zum Importieren von Daten ohne eine Formatdatei**<a name="bcp_char_import"></a>
 Der Schalter **-c** und der **IN** -Befehl.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
 ```cmd
@@ -147,7 +147,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
-### **Verwenden von bcp und dem Zeichenformat zum Importieren von Daten mit einer Nicht-XML-Formatdatei**<a name="bcp_char_import_fmt"></a>
+### <a name="using-bcp-and-character-format-to-import-data-with-a-non-xml-format-file"></a>**Verwenden von bcp und dem Zeichenformat zum Importieren von Daten mit einer Nicht-XML-Formatdatei**<a name="bcp_char_import_fmt"></a>
 Die Schalter **-c** und **-f** switches und **IN** commund.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
 ```cmd
@@ -161,7 +161,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
-### **Verwenden von BULK INSERT und dem Zeichenformat ohne eine Formatdatei**<a name="bulk_char"></a>
+### <a name="using-bulk-insert-and-character-format-without-a-format-file"></a>**Verwenden von BULK INSERT und dem Zeichenformat ohne eine Formatdatei**<a name="bulk_char"></a>
 **DATAFILETYPE** -Argument.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 
 ```sql
@@ -176,7 +176,7 @@ BULK INSERT TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **Verwenden von BULK INSERT und dem Zeichenformat mit einer Nicht-XML-Formatdatei**<a name="bulk_char_fmt"></a>
+### <a name="using-bulk-insert-and-character-format-with-a-non-xml-format-file"></a>**Verwenden von BULK INSERT und dem Zeichenformat mit einer Nicht-XML-Formatdatei**<a name="bulk_char_fmt"></a>
 Argument**FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 
 ```sql
@@ -191,7 +191,7 @@ BULK INSERT TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **Verwenden von OPENROWSET und dem Zeichenformat mit einer Nicht-XML-Formatdatei**<a name="openrowset_char_fmt"></a>
+### <a name="using-openrowset-and-character-format-with-a-non-xml-format-file"></a>**Verwenden von OPENROWSET und dem Zeichenformat mit einer Nicht-XML-Formatdatei**<a name="openrowset_char_fmt"></a>
 Argument**FORMATFILE** .  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 
 ```sql
@@ -207,7 +207,7 @@ INSERT INTO TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
   
-## Verwandte Aufgaben<a name="RelatedTasks"></a>  
+## <a name="related-tasks"></a>Verwandte Aufgaben<a name="RelatedTasks"></a>  
 So verwenden Sie Datenformate für Massenimport oder Massenexport 
   
 -   [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

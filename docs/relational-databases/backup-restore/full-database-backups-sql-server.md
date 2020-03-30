@@ -20,10 +20,10 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68890064"
 ---
 # <a name="full-database-backups-sql-server"></a>Vollständige Datenbanksicherungen (SQL Server)
@@ -46,12 +46,12 @@ ms.locfileid: "68890064"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="DbBuRMs"></a> Datenbanksicherungen im einfachen Wiederherstellungsmodell  
+##  <a name="database-backups-under-the-simple-recovery-model"></a><a name="DbBuRMs"></a> Datenbanksicherungen im einfachen Wiederherstellungsmodell  
  Im einfachen Wiederherstellungsmodell besteht nach jeder Sicherung die Gefahr, dass in der Datenbank Datenverluste auftreten, wenn ein Notfall auftritt. Die Gefahr des Datenverlusts steigt mit jedem Update bis zur nächsten Sicherung, wenn die Gefahr auf null zurückgeht und ein neuer Zyklus der Datenverlustgefahr beginnt. Die Gefahr des Datenverlusts steigt in der Zeit zwischen den Sicherungen. In der folgenden Abbildung wird die Gefahr des Datenverlusts für eine Sicherungsstrategie veranschaulicht, in der nur vollständige Datenbanksicherungen verwendet werden.  
   
  ![Datenverlust zwischen Datenbanksicherungen](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Datenverlust zwischen Datenbanksicherungen")  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>Beispiel ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--tsql"></a>Beispiel ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  Im folgenden Beispiel wird veranschaulicht, wie eine vollständige Datenbanksicherung erstellt wird, indem WITH FORMAT zum Überschreiben aller vorhandenen Sicherungen und zum Erstellen eines neuen Mediensatzes verwendet wird.  
   
 ```  
@@ -62,14 +62,14 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="DbBuRMf"></a> Datenbanksicherungen im vollständigen Wiederherstellungsmodell  
+##  <a name="database-backups-under-the-full-recovery-model"></a><a name="DbBuRMf"></a> Datenbanksicherungen im vollständigen Wiederherstellungsmodell  
  Bei Datenbanken, für die die vollständige und massenprotokollierte Wiederherstellung verwendet wird, sind Datensicherungen erforderlich, aber nicht ausreichend. Transaktionsprotokollsicherungen sind ebenfalls erforderlich. In der folgenden Abbildung wird die einfachste Sicherungsstrategie veranschaulicht, die im vollständigen Wiederherstellungsmodell möglich ist.  
   
  ![Reihen vollständiger Datenbanksicherungen und Protokollsicherungen](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "Reihen vollständiger Datenbanksicherungen und Protokollsicherungen")  
   
  Informationen zum Verwenden von Transaktionsprotokollsicherungen finden Sie unter [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>Beispiel ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--tsql"></a>Beispiel ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  Im folgenden Beispiel wird veranschaulicht, wie eine vollständige Datenbanksicherung erstellt wird, indem WITH FORMAT zum Überschreiben aller vorhandenen Sicherungen und zum Erstellen eines neuen Mediensatzes verwendet wird. Anschließend wird das Transaktionsprotokoll im Beispiel gesichert. In einer realen Situation müssten Sie mehrere reguläre Protokollsicherungen ausführen. Für dieses Beispiel muss die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank auf die Verwendung des vollständigen Wiederherstellungsmodells festgelegt sein.  
   
 ```  
@@ -86,12 +86,12 @@ BACKUP LOG AdventureWorks2012 TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012F
 GO  
 ```  
   
-##  <a name="RestoreDbBu"></a> Verwenden einer vollständigen Datenbanksicherung zum Wiederherstellen der Datenbank  
+##  <a name="use-a-full-database-backup-to-restore-the-database"></a><a name="RestoreDbBu"></a> Verwenden einer vollständigen Datenbanksicherung zum Wiederherstellen der Datenbank  
  Sie können eine gesamte Datenbank in einem Schritt erneut erstellen, indem Sie die Datenbank aus einer vollständigen Datenbanksicherung an einem beliebigen Speicherort wiederherstellen. In der Sicherung ist ein ausreichender Bestandteil des Transaktionsprotokolls enthalten, sodass Sie die Datenbank bis zu dem Zeitpunkt wiederherstellen können, zu dem die Sicherung abgeschlossen war. Die wiederhergestellte Datenbank entspricht dem Zustand der ursprünglichen Datenbank beim Abschluss der Datenbanksicherung, abzüglich aller Transaktionen, für die kein Commit ausgeführt wurde. Bei Verwendung des vollständigen Wiederherstellungsmodells sollten dann alle nachfolgenden Transaktionsprotokollsicherungen wiederhergestellt werden. Wenn die Datenbank wiederhergestellt wurde, wird für Transaktionen ohne Commit ein Rollback ausgeführt.  
   
  Weitere Informationen finden Sie unter [Vollständige Datenbankwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) oder [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So erstellen Sie eine vollständige Datenbanksicherung**  
   
 -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  

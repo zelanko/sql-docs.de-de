@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907533"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung
@@ -38,7 +38,7 @@ ms.locfileid: "72907533"
   
 -   [Problembehandlung bei Arbeitsspeicherproblemen](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
-##  <a name="bkmk_CreateDB"></a> Erstellen einer Beispieldatenbank mit speicheroptimierten Tabellen  
+##  <a name="create-a-sample-database-with-memory-optimized-tables"></a><a name="bkmk_CreateDB"></a> Erstellen einer Beispieldatenbank mit speicheroptimierten Tabellen  
  Sie können diesen Abschnitt überspringen, wenn Sie bereits über eine Datenbank mit speicheroptimierten Tabellen verfügen.  
   
  In den folgenden Schritten wird eine Datenbank mit drei speicheroptimierten Tabellen erstellt, die Sie im weiteren Verlauf dieses Themas verwenden können. Im Beispiel wurde die Datenbank einem Ressourcenpool zugeordnet, um zu steuern, wie viel Arbeitsspeicher von speicheroptimierten Tabellen eingenommen werden kann.  
@@ -125,9 +125,9 @@ ms.locfileid: "72907533"
     GO  
     ```  
   
-##  <a name="bkmk_Monitoring"></a> Überwachen der Arbeitsspeicherverwendung  
+##  <a name="monitoring-memory-usage"></a><a name="bkmk_Monitoring"></a> Überwachen der Arbeitsspeicherverwendung  
   
-###  <a name="bkmk_UsingSSMS"></a> Bei Verwendung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+###  <a name="using-ssmanstudiofull"></a><a name="bkmk_UsingSSMS"></a> Bei Verwendung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Im Lieferumfang sind integrierte Standardberichte enthalten, um den von Tabellen im Arbeitsspeicher beanspruchten Speicherplatz zu überwachen. Sie können auf diese Berichte mithilfe des Objekt-Explorers zugreifen. Mit dem Objekt-Explorer können Sie auch den Arbeitsspeicher überwachen, der von einzelnen speicheroptimierten Tabellen beansprucht wird.  
   
 #### <a name="consumption-at-the-database-level"></a>Verbrauch auf Datenbankebene  
@@ -145,7 +145,7 @@ ms.locfileid: "72907533"
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
-###  <a name="bkmk_UsingDMVs"></a> Verwenden von DMVs  
+###  <a name="using-dmvs"></a><a name="bkmk_UsingDMVs"></a> Verwenden von DMVs  
  Es gibt mehrere DMVs zum Überwachen des durch speicheroptimierte Tabellen, Indizes, Systemobjekte und Laufzeitstrukturen verwendeten Arbeitsspeichers.  
   
 #### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>Arbeitsspeichernutzung durch speicheroptimierte Tabellen und Indizes  
@@ -246,7 +246,7 @@ memory_object_address pages_ in_bytes bytes_used type
   
  Weitere Informationen finden Sie unter [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
-#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>Arbeitsspeichernutzung durch die [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine in der Instanz  
+#### <a name="memory-consumed-by-hek_2-engine-across-the-instance"></a>Arbeitsspeichernutzung durch die [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine in der Instanz  
  Der von der [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine und den speicheroptimierten Objekten belegte Arbeitsspeicher wird auf dieselbe Weise wie jeder andere Arbeitsspeicherconsumer innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verwaltet. Der gesamte von der [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine belegte Arbeitsspeicher wird von Clerks des Typs MEMORYCLERK_XTP nachverfolgt. Rufen Sie mit der folgenden Abfrage den gesamten von der [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine verwendeten Arbeitsspeicher ab.  
   
 ```sql  
@@ -272,10 +272,10 @@ MEMORYCLERK_XTP      Default    64             0
   
  Weitere Informationen finden Sie unter [sys.dm_os_memory_clerks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
   
-##  <a name="bkmk_MemOptObjects"></a> Verwalten des von speicheroptimierten Objekten beanspruchten Arbeitsspeichers  
+##  <a name="managing-memory-consumed-by-memory-optimized-objects"></a><a name="bkmk_MemOptObjects"></a> Verwalten des von speicheroptimierten Objekten beanspruchten Arbeitsspeichers  
  Sie können den insgesamt von speicheroptimierten Tabellen beanspruchten Arbeitsspeicher steuern, indem Sie ihn an einen benannten Ressourcenpool binden, wie im Thema [Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)beschrieben.  
   
-##  <a name="bkmk_Troubleshooting"></a> Problembehandlung bei Arbeitsspeicherproblemen  
+##  <a name="troubleshooting-memory-issues"></a><a name="bkmk_Troubleshooting"></a> Problembehandlung bei Arbeitsspeicherproblemen  
  Die Problembehandlung für den Arbeitsspeicher besteht aus drei Schritten:  
   
 1.  Identifizieren Sie, wie viel Arbeitsspeicher von den Objekten in der Datenbank oder Instanz beansprucht wird. Wie oben beschrieben, können Sie eine Vielzahl von Überwachungstools verwenden, die für speicheroptimierte Tabellen verfügbar sind.  Dies sind beispielsweise die DMVs `sys.dm_db_xtp_table_memory_stats` und `sys.dm_os_memory_clerks`.  

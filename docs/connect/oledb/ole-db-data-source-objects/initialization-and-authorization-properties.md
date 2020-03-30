@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 28923ccb78e3edfa4de7b7e780195a643ec9914e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72381872"
 ---
 # <a name="initialization-and-authorization-properties"></a>Initialisierungs- und Autorisierungseigenschaften
@@ -30,7 +30,7 @@ ms.locfileid: "72381872"
 
   Der OLE DB-Treiber für SQL Server interpretiert Eigenschaften für OLE DB-Initialisierung und -Autorisierung wie folgt:  
   
-|Eigenschafts-ID|Beschreibung|  
+|Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |DBPROP_AUTH_CACHE_AUTHINFO|Der OLE DB-Treiber für SQL Server speichert keine Authentifizierungsinformationen im Cache.<br /><br /> Der OLE DB-Treiber für SQL Server gibt bei einem Versuch, den Eigenschaftswert festzulegen, DB_S_ERRORSOCCURRED zurück. Das *dwStatus*-Element der DBPROP-Struktur gibt DBPROPSTATUS_NOTSUPPORTED an.|  
 |DBPROP_AUTH_ENCRYPT_PASSWORD|Der OLE DB-Treiber für SQL Server verwendet Standard-[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Sicherheitsmechanismen, um Kennwörter zu verbergen.<br /><br /> Der OLE DB-Treiber für SQL Server gibt bei einem Versuch, den Eigenschaftswert festzulegen, DB_S_ERRORSOCCURRED zurück. Das *dwStatus*-Element der DBPROP-Struktur gibt DBPROPSTATUS_NOTSUPPORTED an.|  
@@ -56,7 +56,7 @@ ms.locfileid: "72381872"
   
  Im anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERDBINIT definiert der OLE DB-Treiber für SQL Server diese zusätzlichen Initialisierungseigenschaften.  
   
-|Eigenschafts-ID|Beschreibung|  
+|Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |SSPROP_AUTH_ACCESS_TOKEN<a href="#table1_1"><sup>**1**</sup></a>|Typ: VT_BSTR<br /><br /> R/W: Lesen/Schreiben<br /><br /> Standardwert: VT_EMPTY<br /><br /> Beschreibung: Das zur Authentifizierung bei Azure Active Directory verwendete Zugriffstoken. <br/><br/>**HINWEIS:** Es ist ein Fehler, diese Eigenschaft und die Schlüsselwörter `UID`, `PWD`, `Trusted_Connection` oder `Authentication` für Verbindungszeichenfolgen oder die entsprechenden Eigenschaften/Schlüsselwörter anzugeben.|
 |SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|Typ: VT_BSTR<br /><br /> R/W: Lesen/Schreiben<br /><br /> Standardwert: VT_EMPTY<br /><br /> Beschreibung: Gibt die verwendete SQL- oder Active Directory-Authentifizierung an. Gültige Werte sind:<br/><ul><li>`(not set)`: Der Authentifizierungsmodus wird durch andere Schlüsselwörter bestimmt.</li><li>`(empty string)`: Hebt einen zuvor festgelegten Authentifizierungsmodus auf.</li><li>`ActiveDirectoryPassword:` Authentifizierung mit Benutzer-ID und Kennwort über eine Azure Active Directory-Identität.</li><li>`ActiveDirectoryIntegrated:` Integrierte Authentifizierung mit einer Azure Active Directory-Identität.</li><br/>**HINWEIS:** Das Schlüsselwort `ActiveDirectoryIntegrated` kann auch für die Windows-Authentifizierung gegenüber SQL Server verwendet werden. Es ersetzt die Authentifizierungsschlüsselwörter `Integrated Security` (oder `Trusted_Connection`). Es wird **empfohlen**, dass Anwendungen mit Verwendung der Schlüsselwörter `Integrated Security` (oder `Trusted_Connection`) der zugehörigen Eigenschaften den Wert des Schlüsselwerts `Authentication` (oder der zugehörigen Eigenschaft) auf `ActiveDirectoryIntegrated` festlegen, um ein neues Verhalten für Verschlüsselung und Zertifikatvalidierung zu aktivieren.<br/><br/><li>`ActiveDirectoryInteractive:` Interaktive Authentifizierung mit einer Azure Active Directory-Identität. Diese Methode unterstützt die Azure Multi-Factor Authentication (MFA). </li><li>`ActiveDirectoryMSI:` Authentifizierung über die [verwaltete Dienstidentität (Managed Service Identity, MSI)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). Für eine benutzerseitig zugewiesene Identität muss die Benutzer-ID auf die Objekt-ID der Benutzeridentität festgelegt werden.</li><li>`SqlPassword:` Authentifizierung über eine Benutzer-ID und ein Kennwort.</li><br/>**HINWEIS:** Es wird **empfohlen**, dass Anwendungen mit Verwendung des Authentifizierungssatzes `SQL Server` den Wert des Schlüsselwerts `Authentication` (oder der zugehörigen Eigenschaft) auf `SqlPassword` festlegen, um ein [neues Verhalten für Verschlüsselung und Zertifikatvalidierung](../features/using-azure-active-directory.md#encryption-and-certificate-validation) zu aktivieren.</ul>|

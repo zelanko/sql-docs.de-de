@@ -17,10 +17,10 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557875"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Erstellen einer Server- und Datenbank-Überwachungsspezifikation
@@ -43,24 +43,24 @@ ms.locfileid: "75557875"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Datenbank-Überwachungsspezifikationen sind nicht sicherungsfähige Objekte, die sich in einer gegebenen Datenbank befinden. Wenn eine Datenbank-Überwachungsspezifikation erstellt wird, befindet sich diese in einem deaktivierten Zustand.  
   
  Wenn Sie in einer Benutzerdatenbank eine Datenbank-Überwachungsspezifikation erstellen oder ändern, sollten Sie keine Überwachungsaktionen für Serverbereichsobjekte einschließen, z. B. die Systemsichten. Wenn Objekte mit Serverbereich eingeschlossen sind, wird die Überwachung zwar erstellt. Die Objekte mit Serverbereich sind jedoch nicht enthalten, und es wird kein Fehler zurückgegeben. Verwenden Sie eine Datenbank-Überwachungsspezifikation in der master-Datenbank, um Objekte mit Serverbereich zu überwachen.  
   
  Die Datenbank-Überwachungsspezifikationen befinden sich in der Datenbank, in der sie erstellt werden, mit Ausnahme der Systemdatenbank **tempdb** .  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
   
 -   Benutzer mit der ALTER ANY DATABASE AUDIT-Berechtigung können Datenbank-Überwachungsspezifikationen erstellen und sie an eine beliebige Überwachung binden.  
   
 -   Nachdem eine Datenbank-Überwachungsspezifikation erstellt wurde, kann diese von Prinzipalen mit den Berechtigungen CONTROL SERVER und ALTER ANY DATABASE AUDIT oder von Prinzipalen mit Zugriff auf das sysadmin-Konto angezeigt werden.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>So erstellen Sie eine Serverüberwachung  
   
@@ -106,7 +106,7 @@ ms.locfileid: "75557875"
   
 4.  Nachdem Sie alle Optionen ausgewählt haben, klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>So erstellen Sie eine Serverüberwachung  
   

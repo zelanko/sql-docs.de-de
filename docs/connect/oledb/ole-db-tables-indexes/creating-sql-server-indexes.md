@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ca823023764a691eae0afc1e6df62bab91dd075d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015263"
 ---
 # <a name="creating-sql-server-indexes"></a>Erstellen von SQL Server-Indizes
@@ -44,7 +44,7 @@ ms.locfileid: "68015263"
   
  **CreateIndex** interpretiert Indexeigenschaften wie folgt.  
   
-|Eigenschafts-ID|Beschreibung|  
+|Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |DBPROP_INDEX_AUTOUPDATE|R/W: Lesen/Schreiben<br /><br /> Standardwert: Keine<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt diese Eigenschaft nicht. Versuche, diese Eigenschaft in **CreateIndex** festzulegen, verursachen einen DB_S_ERRORSOCCURRED-Rückgabewert. Das Element *dwStatus* der Eigenschaftsstruktur gibt DBPROPSTATUS_BADVALUE an.|  
 |DBPROP_INDEX_CLUSTERED|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Steuert die Indexgruppierung<br /><br /> VARIANT_TRUE: Der OLE DB-Treiber für SQL Server versucht, einen gruppierten Index für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle zu erstellen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt maximal einen gruppierten Index pro Tabelle.<br /><br /> VARIANT_FALSE: Der OLE DB-Treiber für SQL Server versucht, einen nicht gruppierten Index für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle zu erstellen.|  
@@ -60,7 +60,7 @@ ms.locfileid: "68015263"
   
  Im anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERINDEX definiert der OLE DB-Treiber für SQL Server die folgende Eigenschaft für Datenquelleninformationen.  
   
-|Eigenschafts-ID|Beschreibung|  
+|Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |SSPROP_INDEX_XML|Typ: VT_BOOL (R/W)<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Wenn diese Eigenschaft mit dem Wert VARIANT_TRUE mit IIndexDefinition::CreateIndex angegeben wird, wird ein primärer XML-Index erstellt, der der zu indizierenden Spalte entspricht. Wenn diese Eigenschaft VARIANT_TRUE ist, sollte cIndexColumnDescs 1 sein; andernfalls tritt ein Fehler auf.|  
   

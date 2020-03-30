@@ -9,10 +9,10 @@ ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 546af7322a8aeced15c0593fa2c1fdde5af632cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079635"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Skalen auf einem Messgerät (Berichts-Generator und SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "77079635"
   
  Kurze Anweisungen zum Formatieren von Skalen finden Sie unter [Festlegen eines Mindestwerts oder eines Höchstwerts auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
-##  <a name="DefiningMinMax"></a> Definieren des Mindestwerts, des Höchstwerts und der Intervalle für eine Skala  
+##  <a name="defining-minimum-maximum-and-intervals-on-a-scale"></a><a name="DefiningMinMax"></a> Definieren des Mindestwerts, des Höchstwerts und der Intervalle für eine Skala  
  Auf Messgeräten werden häufig KPIs (Key Performance Indicators) angezeigt, die in Prozentsätzen von 0 bis 100 gemessen werden. Dabei handelt es sich somit um die Standardwerte für den Mindest- und Höchstwert des jeweiligen Messgeräts. Möglicherweise wird von diesen Werten jedoch nicht die gewünschte Werteskala dargestellt. Da keine integrierte Logik vorhanden ist, mit der die vom KPI-Datenfeld dargestellten Werte bestimmt werden, werden der Mindestwert und der Höchstwert vom Messgerät nicht automatisch berechnet. Wenn das KPI-Datenfeld keinen Wert zwischen 0 und 100 enthält, müssen Sie den Mindest- und den Höchstwert explizit festlegen, um einen Kontext für den auf dem Messgerät angezeigten Wert bereitzustellen.  
   
  Die Skala enthält Haupt- und Hilfsteilstriche. Darüber hinaus weist die Skala Bezeichnungen auf, die i. d. R. den Hauptteilstrichen zugeordnet sind. Eine Skala kann beispielsweise Hauptteilstriche bei den Werten 0, 20, 40, 60, 80 und 100 aufweisen. Die Bezeichnungen müssen diesen Teilstrichen entsprechen. Die Differenz zwischen den Bezeichnungswerten wird als Skalaintervall bezeichnet. In diesem Beispiel ist das Skalaintervall auf 20 festgelegt. Sie können die Intervalleigenschaft im Dialogfeld **Radiale Skalierungseigenschaften** oder **Lineare Skalierungseigenschaften** festlegen.  
@@ -47,13 +47,13 @@ ms.locfileid: "77079635"
   
  Der Intervalloffset bestimmt die Anzahl der Einheiten, die bis zur Anzeige der ersten Bezeichnung ausgelassen werden. Das angegebene Intervall wird für alle nachfolgenden Hauptteilstriche und Bezeichnungen auf der Skala verwendet. Wenn der Wert 0 für Bezeichnungs- und Teilstrichintervalle angegeben wird, entspricht dies dem Zurücksetzen des Intervalls auf den Wert "Automatisch".  
   
-##  <a name="ReducingCollisions"></a> Verringern von Bezeichnungskollisionen mit Multiplikatoren  
+##  <a name="reducing-label-collisions-with-multipliers"></a><a name="ReducingCollisions"></a> Verringern von Bezeichnungskollisionen mit Multiplikatoren  
  Wenn die Werte viele Stellen aufweisen, können sie möglicherweise die Lesbarkeit des Messgeräts beeinträchtigen. Mithilfe eines Skalenmultiplikators können Sie die Skalierung der Werte vergrößern oder verkleinern. Beim Angeben eines Skalenmultiplikators wird jeder ursprüngliche Wert auf der Skala vor seiner Anzeige auf der Skala mit dem Multiplikator multipliziert. Wenn Sie die Skalierung der Werte verringern möchten, müssen Sie eine Dezimalzahl angeben. Wenn sich die Skala beispielsweise von 0 bis 10000 erstreckt, Sie jedoch auf dem Messgerät die Zahlen 0 bis 10 anzeigen möchten, können Sie den Multiplikatorwert 0,001 angeben.  
   
 > [!NOTE]  
 >  Durch das Angeben eines Multiplikators wird nicht der tatsächliche Wert des Aggregatfelds, das vom Messgerät verwendet wird, multipliziert. Es werden lediglich die Werte der Bezeichnungen multipliziert, die auf dem Messgerät angezeigt werden, nachdem Mindestwert, Höchstwert und Intervalle definiert wurden. Bei Verwendung eines Multiplikators empfiehlt es sich, die Intervallberechnungen weiterhin automatisch ausführen zu lassen.  
   
-##  <a name="SpecifyingScaleBar"></a> Angeben von Skalabalkenbreite, Skalierungsradius und Skalawinkeln für eine radiale Skala  
+##  <a name="specifying-the-scale-bar-width-radius-and-angles-on-a-radial-scale"></a><a name="SpecifyingScaleBar"></a> Angeben von Skalabalkenbreite, Skalierungsradius und Skalawinkeln für eine radiale Skala  
  Legen Sie im Dialogfeld **Radiale Skalierungseigenschaften** auf der Seite **Layout** die Skalabalkenbreite, den Skalierungsradius sowie den Startwinkel und den Mittelpunktswinkel der Skala fest. Mithilfe dieser Eigenschaften können Sie Größe und Format der Skala anpassen. Wenn Sie beispielsweise die Skalabezeichnungen außerhalb der Skala positionieren, müssen Sie den Radius der Skalierung ändern, damit die Bezeichnungen in das Messgerät passen.  
   
 > [!NOTE]  
@@ -69,7 +69,7 @@ ms.locfileid: "77079635"
   
  Der Mittelpunktswinkel entspricht der Gradzahl (zwischen 0 und 360), um die die Skala gedreht wird. Bei einem Mittelpunktswinkel von 360 Grad wird eine Skala erzeugt, die einen vollständigen Kreis darstellt. Dies ist hilfreich, wenn Sie ein Messgerät entwerfen möchten, das einer Uhr ähnelt.  
   
-##  <a name="PositioningLabels"></a> Positionieren von Bezeichnungen auf einer linearen oder radialen Skala  
+##  <a name="positioning-labels-on-a-linear-or-radial-scale"></a><a name="PositioningLabels"></a> Positionieren von Bezeichnungen auf einer linearen oder radialen Skala  
  Es sind zwei Eigenschaften verfügbar, mit denen die Position von Bezeichnungen bestimmt werden kann. Mit der Eigenschaft zum Bestimmen der Bezeichnungsposition wird angeben, ob die Bezeichnungen innerhalb oder außerhalb des Skalabalkens oder auf dem Skalabalken angezeigt werden. Mit der Eigenschaft zum Angeben des Abstands wird der Abstand der Bezeichnungen von der Skala vom Skalabalken aus festgelegt. Wenn Sie Bezeichnungen innerhalb des Skalabalkens positionieren möchten, geben Sie eine negative Zahl an. Wenn sich die Bezeichnungen beispielsweise außerhalb der Skala befinden und Sie als Abstand von der Skala den Wert 10 festgelegt haben, werden die Bezeichnungen um 10 Einheiten von ihrer normalen Position nach außen verschoben angezeigt, wobei eine Einheit wie folgt definiert ist:  
   
 -   1 % des Messgerätdurchmessers auf einem radialen Messgerät oder  

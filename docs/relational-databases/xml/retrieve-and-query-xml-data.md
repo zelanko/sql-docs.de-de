@@ -14,17 +14,17 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995266"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Abrufen und Abfragen von XML-Daten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   In diesem Thema werden die Abfrageoptionen beschrieben, die für die Abfrage von XML-Daten anzugeben sind. Es beschreibt auch die Teile der XML-Instanzen, die nicht beibehalten werden, wenn sie in Datenbanken gespeichert werden.  
   
-##  <a name="features"></a> Funktionen einer XML-Instanz, die nicht beibehalten werden  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Funktionen einer XML-Instanz, die nicht beibehalten werden  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behält den Inhalt der XML-Instanz bei. Allerdings werden die Aspekte der XML-Instanz nicht beibehalten, die im Hinblick auf das XML-Datenmodell als nicht signifikant betrachtet werden. Das bedeutet, dass eine abgerufene XML-Instanz möglicherweise nicht mit der Instanz identisch ist, die auf dem Server gespeichert wurde, aber die gleichen Informationen enthält.  
   
 ### <a name="xml-declaration"></a>XML-Deklaration  
@@ -87,7 +87,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> Festlegen der erforderlichen Abfrageoptionen  
+##  <a name="setting-required-query-options"></a><a name="query"></a> Festlegen der erforderlichen Abfrageoptionen  
  Beim Abfragen von Spalten oder Variablen des **xml** -Datentyps mithilfe von **xml** -Datentypmethoden müssen die folgenden Optionen wie dargestellt festgelegt werden.  
   
 |SET-Optionen|Erforderliche Werte|  

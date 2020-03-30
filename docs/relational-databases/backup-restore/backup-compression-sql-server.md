@@ -18,10 +18,10 @@ ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cc94b300f007a09aef2c16f11015b39765f5e37a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940838"
 ---
 # <a name="backup-compression-sql-server"></a>Sicherungskomprimierung (SQL Server)
@@ -29,14 +29,14 @@ ms.locfileid: "67940838"
   In diesem Thema wird die Komprimierung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen beschrieben, einschließlich Einschränkungen und Leistungseinbußen bei der Sicherungskomprimierung, Konfiguration der Sicherungskomprimierung sowie Komprimierungsverhältnis.  Die Sicherungskomprimierung wird auf folgenden Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt: Enterprise, Standard und Developer.  Jede Edition von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höhere Versionen können eine komprimierte Sicherung wiederherstellen. 
  
   
-##  <a name="Benefits"></a> Vorteile  
+##  <a name="benefits"></a><a name="Benefits"></a> Vorteile  
   
 -   Da eine komprimierte Sicherung kleiner als eine unkomprimierte Sicherung derselben Daten ist, wird für das Komprimieren einer Sicherung normalerweise weniger Geräte-E/A benötigt, und daher steigt die Sicherungsgeschwindigkeit in der Regel erheblich.  
   
      Weitere Informationen finden Sie unter [Auswirkungen der Sicherungskomprimierung auf die Leistung](#PerfImpact)weiter unten in diesem Thema.  
   
   
-##  <a name="Restrictions"></a> Einschränkungen  
+##  <a name="restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Für komprimierte Sicherungen gelten die folgenden Einschränkungen:  
   
 -   Komprimierte und nicht komprimierte Sicherungen können nicht nebeneinander in einem Mediensatz bestehen.  
@@ -46,7 +46,7 @@ ms.locfileid: "67940838"
 -   Mit "NTbackup" erstellte Sicherungen können nicht auf demselben Band gespeichert werden wie komprimierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen.  
   
   
-##  <a name="PerfImpact"></a> Auswirkungen der Sicherungskomprimierung auf die Leistung  
+##  <a name="performance-impact-of-compressing-backups"></a><a name="PerfImpact"></a> Auswirkungen der Sicherungskomprimierung auf die Leistung  
  Standardmäßig steigt die CPU-Nutzung durch die Komprimierung erheblich, und die bei der Komprimierung zusätzlich verbrauchten CPU-Ressourcen können sich negativ auf gleichzeitige Vorgänge auswirken. Daher ist es u.U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen. Weitere Informationen finden Sie unter [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
   
  Wenn Sie genau wissen möchten, welche Leistung die Sicherungs-E/A erbringt, können Sie die Sicherungs-E/A zu und von den Geräten beurteilen, indem Sie die folgenden Arten von Leistungsindikatoren analysieren:  
@@ -60,7 +60,7 @@ ms.locfileid: "67940838"
  Informationen zu den Windows-Indikatoren finden Sie in der Windows-Hilfe. Informationen zur Arbeit mit SQL Server-Indikatoren finden Sie unter [Verwenden von SQL Server-Objekten](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
    
-##  <a name="CompressionRatio"></a> Berechnen des Komprimierungsverhältnisses einer komprimierten Sicherung  
+##  <a name="calculate-the-compression-ratio-of-a-compressed-backup"></a><a name="CompressionRatio"></a> Berechnen des Komprimierungsverhältnisses einer komprimierten Sicherung  
  Zum Berechnen des Komprimierungsverhältnisses einer Sicherung verwenden Sie die Werte für die Sicherung in den Spalten **backup_size** und **compressed_backup_size** der Verlaufstabelle [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) wie folgt:  
   
  **backup_size**:**compressed_backup_size**  
@@ -90,12 +90,12 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
      Falls die Datenbank bereits komprimiert ist, ändert sich ihre Größe bei einer komprimierten Sicherung unter Umständen kaum oder gar nicht.  
   
   
-##  <a name="Allocation"></a> Speicherplatzzuordnung für die Sicherungsdatei  
+##  <a name="allocation-of-space-for-the-backup-file"></a><a name="Allocation"></a> Speicherplatzzuordnung für die Sicherungsdatei  
  Bei komprimierten Sicherungen ist die Größe der finalen Sicherungsdatei davon abhängig, wie stark die Daten komprimiert werden können, und dies ist erst bekannt, wenn der Sicherungsvorgang abgeschlossen ist.  Wenn eine Datenbank daher mithilfe einer Komprimierung gesichert wird, verwendet die Datenbank-Engine standardmäßig einen Vorabzuordnungsalgorithmus für die Sicherungsdatei. Dieser Algorithmus ordnet der Sicherungsdatei vorab einen vordefinierten Prozentsatz der Größe der Datenbank zu. Wenn während des Sicherungsvorgangs mehr Platz benötigt wird, lässt die Datenbank-Engine die Datei wachsen. Wenn die finale Größe kleiner als der reservierte Platz ist, verkleinert die Datenbank-Engine die Datei am Ende des Sicherungsvorgangs auf die tatsächliche finale Größe der Sicherung.  
   
  Verwenden Sie das Ablaufverfolgungsflag 3042, damit die Sicherungsdatei nur so viel größer werden kann, wie erforderlich, um die finale Größe zu erreichen. Durch das Ablaufverfolgungsflag 3042 wird bewirkt, dass der Sicherungsvorgang den standardmäßigen Vorabzuordnungsalgorithmus für die Sicherungskomprimierung umgeht. Dieses Ablaufverfolgungsflag ist nützlich, wenn Sie Speicherplatz einsparen müssen, indem Sie nur die tatsächliche für die komprimierte Sicherung benötigte Größe zuordnen. Dieses Ablaufverfolgungsflag kann jedoch eine leichte Leistungseinbuße (eine mögliche Verlängerung des Sicherungsvorgangs) verursachen.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Konfigurieren von Sicherungskomprimierung &#40;SQL Server&#41;](../../relational-databases/backup-restore/configure-backup-compression-sql-server.md)  
   

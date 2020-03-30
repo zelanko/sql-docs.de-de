@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68034519"
 ---
 # <a name="service-broker"></a>Service Broker
@@ -106,7 +106,7 @@ FROM ExpenseQueue;
 
 - Ein instanzenübergreifender Service Broker wird nicht unterstützt. 
  - `sys.routes` – Voraussetzung: Wählen Sie die Adresse aus sys.routes. Die Adresse muss für jede Route LOCAL sein. Informationen hierzu finden Sie unter [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
- - `CREATE ROUTE`: `CREATE ROUTE` kann ausschließlich mit dem Wert `LOCAL` für `ADDRESS` verwendet werden. Informationen hierzu finden Sie unter [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+ - `CREATE ROUTE`: `CREATE ROUTE` kann ausschließlich mit dem Wert `ADDRESS` für `LOCAL` verwendet werden. Informationen hierzu finden Sie unter [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
  - `ALTER ROUTE` kann `ALTER ROUTE` mit keiner anderen `ADDRESS` als `LOCAL` verwenden. Informationen hierzu finden Sie unter [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>Nachrichten können an mehrere Zieldienste gesendet werden (Multicast)  

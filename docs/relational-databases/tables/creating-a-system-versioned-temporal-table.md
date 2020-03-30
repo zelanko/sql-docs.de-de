@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165220"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - Die **PERIOD** -Spalten dürfen keine NULL-Werte zulassen, auch wenn keine Angabe zur NULL-Zulässigkeit gemacht wurde. Wenn für **PERIOD**-Spalten explizit angegeben ist, dass NULL-Werte zulässig sind, tritt bei der Anweisung **CREATE TABLE** ein Fehler auf.
 - Das Schema der Verlaufstabelle muss im Hinblick auf Spaltenanzahl, Spaltennamen, Sortierung und Datentypen stets an die aktuelle oder temporale Tabelle angepasst sein.
 - Eine anonyme Verlaufstabelle wird automatisch im gleichen Schema wie die aktuelle oder temporale Tabelle erstellt.
-- Der Name der anonymen Verlaufstabelle weist das folgende Format auf: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* . Das Suffix ist optional und wird nur hinzugefügt, wenn der erste Teil des Tabellennamens nicht eindeutig ist.
+- Der Name der anonymen Verlaufstabelle weist das folgende Format auf: *MSSQL_TemporalHistoryFor_<Objekt-ID_der_aktuellen_temporalen_Tabelle>_[Suffix]* . Das Suffix ist optional und wird nur hinzugefügt, wenn der erste Teil des Tabellennamens nicht eindeutig ist.
 - Die Verlaufstabelle wird als Rowstoretabelle erstellt. Sofern möglich, wird die PAGE-Komprimierung angewendet; andernfalls wird die Verlaufstabelle nicht komprimiert. Einige Tabellenkonfigurationen, z. B. SPARSE-Spalten, lassen beispielsweise keine Komprimierung zu.
 - Für die Verlaufstabelle wird ein gruppierter Standardindex mit einem automatisch generierten Namen im Format *IX_<history_table_name>* erstellt. Der gruppierte Index enthält die **PERIOD** -Spalten (Ende, Anfang).
 - Informationen zum Erstellen der aktuellen Tabelle als speicheroptimierte Tabelle finden Sie unter [Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).

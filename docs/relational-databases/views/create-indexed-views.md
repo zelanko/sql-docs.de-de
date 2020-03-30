@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325512"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
@@ -31,7 +31,7 @@ ms.locfileid: "75325512"
 
 In diesem Artikel wird beschrieben, wie Sie Indizes für eine Sicht erstellen. Der erste Index, der für eine Sicht erstellt wird, muss ein eindeutiger gruppierter Index sein. Nachdem der eindeutige gruppierte Index erstellt wurde, können Sie weitere nicht gruppierte Indizes erstellen. Das Erstellen eines eindeutigen gruppierten Indexes für eine Sicht verbessert die Abfrageleistung, da die Sicht wie eine Tabelle mit einem gruppierten Index in der Datenbank gespeichert wird. Der Abfrageoptimierer kann indizierte Sichten verwenden, um die Abfrageausführung zu beschleunigen. Es ist nicht erforderlich, dass in der Abfrage auf die jeweilige Sicht verwiesen wird, damit der Optimierer diese Sicht als Ersatz berücksichtigt.
 
-## <a name="BeforeYouBegin"></a> Vorbereitungen
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen
 
 Die folgenden Schritte sind zum Erstellen einer indizierten Sicht erforderlich und wichtig für eine erfolgreiche Implementierung der indizierten Sicht:
 
@@ -47,7 +47,7 @@ Die folgenden Schritte sind zum Erstellen einer indizierten Sicht erforderlich u
 >
 > <sup>1</sup> Beispielsweise UPDATE-, DELETE- oder INSERT-Vorgänge
 
-### <a name="Restrictions"></a> Erforderliche SET-Optionen für indizierte Sichten
+### <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a> Erforderliche SET-Optionen für indizierte Sichten
 
 Das Auswerten desselben Ausdrucks kann im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu unterschiedlichen Ergebnissen führen, wenn bei der Ausführung der Abfrage unterschiedliche SET-Optionen aktiviert sind. Wenn die SET-Option `CONCAT_NULL_YIELDS_NULL` auf ON festgelegt ist, gibt beispielsweise der Ausdruck `'abc' + NULL` den Wert `NULL` zurück. Wenn die Option `CONCAT_NULL_YIELDS_NULL` allerdings auf OFF festgelegt ist, ergibt derselbe Ausdruck `'abc'`.
 
@@ -131,13 +131,13 @@ Zusätzlich zu den Anforderungen bzgl. SET-Optionen und deterministischen Funkti
 > [!IMPORTANT]
 > Indizierte Sichten, die temporale Abfragen (Abfragen, die die `FOR SYSTEM_TIME`-Klausel verwenden) überlagern, werden nicht unterstützt.
 
-### <a name="Recommendations"></a> Empfehlungen
+### <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen
 
 Wenn Sie in indizierten Sichten auf **datetime** - und **smalldatetime** -Zeichenfolgenliterale verweisen, wird empfohlen, das Literal mithilfe eines deterministischen Datenformats explizit in den gewünschten Datentyp zu konvertieren. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Weitere Informationen zu deterministischen und nicht deterministischen Ausdrücken finden Sie im Abschnitt [Weitere Überlegungen](#nondeterministic) auf dieser Seite.
 
 Wenn Sie DML (z.B. `UPDATE`, `DELETE` oder `INSERT`) für eine Tabelle ausführen, auf die durch eine große Anzahl von indizierten Sichten oder durch wenige, jedoch sehr komplexe indizierte Sichten verwiesen wird, müssen diese indizierten Sichten während der DML-Ausführung ebenfalls aktualisiert werden. Als Folge daraus kann die DML-Abfrageleistung erheblich beeinträchtigt werden. In einigen Fällen kann kein Abfrageplan erstellt werden. Testen Sie Ihre DML-Abfragen in solchen Fällen, bevor Sie diese für die Produktion verwenden, analysieren Sie den Abfrageplan, und optimieren bzw. vereinfachen Sie die DML-Anweisung.
 
-### <a name="Considerations"></a> Weitere Überlegungen
+### <a name="considerations"></a><a name="Considerations"></a> Weitere Überlegungen
 
 Die Einstellung der Option **large_value_types_out_of_row** der Spalten in einer indizierten Sicht wird von der Einstellung für die entsprechende Spalte in der Basistabelle vererbt. Dieser Wert wird mithilfe von [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)festgelegt. Die Standardeinstellung für Spalten, die auf Grundlage von Ausdrücken erstellt werden, ist 0. Das bedeutet, dass umfangreiche Werte innerhalb der Zeile gespeichert werden.
 
@@ -151,13 +151,13 @@ Indizes für Tabellen und Sichten können deaktiviert werden. Wenn ein gruppiert
 
 <a name="nondeterministic"></a> Ausdrücke, die eine implizite Konvertierung von Zeichenfolgen in **datetime** oder **smalldatetime** umfassen, werden als nicht deterministisch angesehen. Weitere Informationen finden Sie unter [Nicht deterministische Konvertierung von Datumsliteralzeichenfolgen in DATE-Werte](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
 
-### <a name="Security"></a> Sicherheit
+### <a name="security"></a><a name="Security"></a> Sicherheit
 
-#### <a name="Permissions"></a> Berechtigungen
+#### <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
 
 Erfordert die **CREATE VIEW**-Berechtigung in der Datenbank und die **ALTER**-Berechtigung in dem Schema, in dem die Sicht erstellt wird.
 
-## <a name="TsqlProcedure"></a> Verwenden von Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL
 
 ### <a name="to-create-an-indexed-view"></a>So erstellen Sie eine indizierte Sicht
 

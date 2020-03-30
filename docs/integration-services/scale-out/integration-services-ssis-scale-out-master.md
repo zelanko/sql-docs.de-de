@@ -11,13 +11,13 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903807"
 ---
-# <a name="integration-services-ssis-scale-out-master"></a>Master für horizontales Hochskalieren von Integration Services (SSIS)
+# <a name="integration-services-ssis-scale-out-master"></a>Scale Out-Master von Integration Services (SSIS)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -25,7 +25,7 @@ ms.locfileid: "77903807"
 
 Der Scale Out-Master verwaltet das Scale Out-System über den SSISDB-Katalog und den Scale Out-Masterdienst. 
 
-Im SSISDB-Katalog werden alle Informationen für Scale Out-Worker, Pakete und Ausführungen gespeichert. Der Katalog stellt die Schnittstelle bereit, um einen Worker für horizontales Hochskalieren zu aktivieren und Pakete in horizontaler Hochskalierung auszuführen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einrichten von Integration Services-Scale Out](walkthrough-set-up-integration-services-scale-out.md) und [Ausführen von Paketen in SSIS Scale Out (SQL Server Integration Services)](run-packages-in-integration-services-ssis-scale-out.md).
+Im SSISDB-Katalog werden alle Informationen für Scale Out-Worker, Pakete und Ausführungen gespeichert. Der Katalog stellt die Schnittstelle bereit, um einen Scale Out-Worker zu aktivieren und Pakete in Scale Out auszuführen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einrichten von Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md) und [Ausführen von Paketen in SSIS Scale Out (SQL Server Integration Services)](run-packages-in-integration-services-ssis-scale-out.md).
 
 Der Scale Out-Masterdienst ist ein Windows-Dienst, über den die Kommunikation mit Scale Out-Workern erfolgt. Der Dienst gibt über HTTPS den Status von Paketausführungen mit Scale Out-Workern zurück und verarbeitet die Daten in SSISDB. 
 
@@ -54,12 +54,12 @@ Konfigurieren Sie den Scale Out-Masterdienst mithilfe der `<drive>:\Program File
 
 |Konfiguration  |BESCHREIBUNG  |Standardwert  |
 |---------|---------|---------|
-|PortNumber|Die Netzwerkportnummer, die zur Kommunikation mit einem Worker für horizontales Hochskalieren verwendet wird|8391|
-|SSLCertThumbprint|Der Fingerabdruck des SSL-Zertifikats verwendet, mit dem die Kommunikation mit einem Worker für horizontales Hochskalieren geschützt wird|Der Fingerabdruck des SSL-Zertifikats, das bei der Installation von Worker für horizontales Hochskalieren angegeben wurde|
+|PortNumber|Die Netzwerkportnummer, die zur Kommunikation mit einem Scale Out-Worker verwendet wird|8391|
+|SSLCertThumbprint|Der Fingerabdruck des SSL-Zertifikats verwendet, mit dem die Kommunikation mit einem Scale Out-Worker geschützt wird|Der Fingerabdruck des SSL-Zertifikats, das bei der Installation des Scale Out-Masters angegeben wurde|
 |SqlServerName|Der Name der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Instanz, die den SSISDB-Katalog enthält. Zum Beispiel: Servername\\Instanzname.|Der Name der SQL Server-Instanz, mit dem der Scale Out-Master installiert wurde|
 |CleanupCompletedJobsIntervalInMs|Die Zeitspanne für das Bereinigen von abgeschlossenen Ausführungsaufträgen (in Millisekunden)|43200000|
 |DealWithExpiredTasksIntervalInMs|Die Zeitspanne für das Verarbeiten von abgelaufenen Ausführungsaufträgen (in Millisekunden)|300000|
-|MasterHeartbeatIntervalInMs|Das Intervall für den Takt von Master für horizontales Hochskalieren (in Millisekunden) Diese Eigenschaft gibt das Intervall an, in dem der Scale Out-Master seinen Onlinestatus im SSISDB-Katalog aktualisiert.|30.000|
+|MasterHeartbeatIntervalInMs|Das Intervall für den Takt des Scale Out-Masters (in Millisekunden) Diese Eigenschaft gibt das Intervall an, in dem der Scale Out-Master seinen Onlinestatus im SSISDB-Katalog aktualisiert.|30.000|
 |SqlConnectionTimeoutInSecs|Das SQL-Verbindungstimeout in Sekunden, wenn eine Verbindung mit SSISDB hergestellt wird|15|
 ||||    
 

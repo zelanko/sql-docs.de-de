@@ -20,10 +20,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056097"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten
@@ -32,7 +32,7 @@ ms.locfileid: "74056097"
   
  Der zugeordnete [Filter](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) bestimmt, ob die Eigenschaftensuche für einen bestimmten Dokumenttyp möglich ist. Bei einigen Dokumenttypen extrahiert der zugeordnete IFilter einige oder alle für diesen Dokumenttyp definierten Eigenschaften und den Inhalt des Dokumenttextes. Sie können einen Volltextindex konfigurieren, um Eigenschaftensuchen nur für Eigenschaften zu unterstützen, die während der Volltextindizierung von einem IFilter extrahiert werden. Zu den IFilters, die Dokumenteigenschaften extrahieren, zählen die IFilters für Microsoft Office-Dokumenttypen (z. B. DOCX, XLSX und PPTX). Der XML-IFilter gibt dagegen keine Eigenschaften aus.  
   
-##  <a name="How_FTS_Works_with_search_properties"></a> Verwenden von Sucheigenschaften bei der Volltextsuche  
+##  <a name="how-full-text-search-works-with-search-properties"></a><a name="How_FTS_Works_with_search_properties"></a> Verwenden von Sucheigenschaften bei der Volltextsuche  
   
 ### <a name="internal-property-ids"></a>Interne Eigenschaften-IDs  
  Die Volltext-Engine weist jeder registrierten Eigenschaft nach dem Zufallsprinzip eine interne Eigenschaften-ID zu, die die Eigenschaft in der betreffenden Suchliste eindeutig identifiziert und die für diese Sucheigenschaftenliste spezifisch ist. Wenn also eine Eigenschaft mehreren Sucheigenschaftenlisten hinzugefügt wird, weist sie für die einzelnen Listen wahrscheinlich unterschiedliche interne Eigenschaften-IDs auf.  
@@ -56,14 +56,14 @@ ms.locfileid: "74056097"
   
  Eine Eigenschaftenbereich-Volltextabfrage verwendet die internen Eigenschaften-IDs, die für die aktuelle Sucheigenschaftenliste des Volltextindex registriert sind.  
   
-##  <a name="impact"></a> Auswirkungen der Aktivierung der Eigenschaftensuche  
+##  <a name="impact-of-enabling-property-searching"></a><a name="impact"></a> Auswirkungen der Aktivierung der Eigenschaftensuche  
  Das Konfigurieren einen Volltextindex für die Unterstützung der Suche nach einer oder mehreren Eigenschaften führt zu einem leichten Größenzuwachs des Index, entsprechend der in der Sucheigenschaftenliste angegebenen Anzahl von Eigenschaften und dem Inhalt der einzelnen Eigenschaften.  
   
  Beim Testen typischer Korpus von Microsoft Word-, Excel- und PowerPoint-Dokumenten wurde von uns ein Volltextindex konfiguriert, mit dem typische Sucheigenschaften indiziert werden können. Durch das Indizieren dieser Eigenschaften wuchs die Größe des Volltextindex um ca. 5 Prozent. Wir erwarten, dass dieser annähernde Größenzuwachs für die meisten Dokumentkorpus typisch sein wird. Der Größenzuwachs hängt letztlich jedoch von der Menge der Eigenschaftendaten im jeweiligen Dokumentkorpus in Bezug auf die Gesamtmenge der Daten ab.  
   
-##  <a name="creating"></a> Erstellen einer Sucheigenschaftenliste und Aktivieren der Eigenschaftensuche  
+##  <a name="creating-a-search-property-list-and-enabling-property-search"></a><a name="creating"></a> Erstellen einer Sucheigenschaftenliste und Aktivieren der Eigenschaftensuche  
   
-###  <a name="creating_sub"></a> Erstellen von Sucheigenschaftenlisten  
+###  <a name="creating-a-search-property-list"></a><a name="creating_sub"></a> Erstellen von Sucheigenschaftenlisten  
  **So erstellen Sie eine Sucheigenschaftenliste mit Transact-SQL**  
   
  Verwenden Sie die Anweisung [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md), und geben Sie mindestens einen Namen für die Liste an.  
@@ -92,7 +92,7 @@ ms.locfileid: "74056097"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="adding"></a> Hinzufügen von Eigenschaften zu einer Sucheigenschaftenliste  
+###  <a name="adding-properties-to-a-search-property-list"></a><a name="adding"></a> Hinzufügen von Eigenschaften zu einer Sucheigenschaftenliste  
  Für die Eigenschaftensuche muss eine *Sucheigenschaftenliste* erstellt werden. Zudem muss mindestens eine Eigenschaft angegeben werden, die als durchsuchbar festgelegt werden soll. Wenn Sie einer Sucheigenschaftenliste eine Eigenschaft hinzufügen, wird die Eigenschaft für die betreffende Liste registriert. Wenn Sie einer Sucheigenschaftenliste eine Eigenschaft hinzufügen möchten, benötigen Sie die folgenden Werte:  
   
 -   Eigenschaftensatz-GUID  
@@ -141,7 +141,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  Verwenden Sie das Dialogfeld **Eigenschaften der Sucheigenschaftenliste** , um Sucheigenschaften hinzuzufügen und zu entfernen. Die **Sucheigenschaftenlisten** befinden sich im Objekt-Explorer unter dem Knoten **Speicher** der zugehörigen Datenbank.  
   
-###  <a name="associating"></a> Zuordnen einer Sucheigenschaftenliste zu einem Volltextindex  
+###  <a name="associating-a-search-property-list-with-a-full-text-index"></a><a name="associating"></a> Zuordnen einer Sucheigenschaftenliste zu einem Volltextindex  
  Damit ein Volltextindex die Eigenschaftensuche für die in einer Sucheigenschaftenliste registrierten Eigenschaften unterstützt, müssen Sie dem Index die Sucheigenschaftenliste zuordnen und den Index neu auffüllen. Durch das erneute Auffüllen des Volltextindexes werden eigenschaftenspezifische Indexeinträge für Suchbegriffe in den einzelnen registrierten Eigenschaften erstellt.  
   
  Solange der Volltextindex dieser Sucheigenschaftenliste zugeordnet ist, kann in Volltextabfragen mit der PROPERTY-Option des CONTAINS-Prädikats nach Eigenschaften gesucht werden, die für diese Sucheigenschaftenliste registriert sind.  
@@ -156,7 +156,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  Geben Sie auf der Seite **Allgemein** des Dialogfelds **Volltextindex-Eigenschaften** einen Wert für **Sucheigenschaftenliste** an.  
   
-##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Abfragen von Sucheigenschaften mit CONTAINS  
+##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a> Abfragen von Sucheigenschaften mit CONTAINS  
  Die [CONTAINS](../../t-sql/queries/contains-transact-sql.md) -Basissyntax für eine Volltextabfrage mit Eigenschaftenbereich lautet wie folgt:  
   
 ```sql  
@@ -176,9 +176,9 @@ GO
   
  Dieses Beispiel setzt voraus, dass der IFilter für das Dokument die Title-Eigenschaft extrahiert, die Title-Eigenschaft der Sucheigenschaftenliste hinzugefügt wurde und die Sucheigenschaftenliste dem Volltextindex zugeordnet ist.  
   
-##  <a name="managing"></a> Verwalten von Sucheigenschaftenlisten  
+##  <a name="managing-search-property-lists"></a><a name="managing"></a> Verwalten von Sucheigenschaftenlisten  
   
-###  <a name="viewing"></a> Anzeigen und Ändern von Sucheigenschaftenlisten  
+###  <a name="viewing-and-changing-a-search-property-list"></a><a name="viewing"></a> Anzeigen und Ändern von Sucheigenschaftenlisten  
  **So ändern Sie eine Sucheigenschaftenliste mit Transact-SQL**  
   
  Verwenden Sie die Anweisung [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) zum Hinzufügen oder Entfernen von Sucheigenschaften.  
@@ -205,7 +205,7 @@ GO
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="deleting"></a> Löschen von Sucheigenschaftenlisten  
+###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a> Löschen von Sucheigenschaftenlisten  
  Eine Eigenschaftenliste kann nicht aus einer Datenbank gelöscht werden, solange sie einem Volltextindex zugeordnet ist.  
   
  **So löschen Sie eine Sucheigenschaftenliste mit Transact-SQL**  

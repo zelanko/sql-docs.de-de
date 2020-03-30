@@ -15,10 +15,10 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821980"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server)
@@ -33,9 +33,9 @@ ms.locfileid: "74821980"
   
 -   [Verwandte Inhalte](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Bei der Prozedur für erzwungene Quoren wird davon ausgegangen, dass vor dem Quorumfehler ein fehlerfreies Quorum vorhanden war.  
   
 > [!WARNING]  
@@ -43,10 +43,10 @@ ms.locfileid: "74821980"
 >   
 >  Weitere Informationen finden Sie unter  [Windows Server-Failoverclustering (WSFC) mit SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx) und [WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Der Benutzer muss einem Domänenkonto entsprechen, das Mitglied der lokalen Administratorgruppe an jedem Knoten des WSFC-Clusters ist.  
   
-##  <a name="Main"></a> WSFC-Notfallwiederherstellung durch die Prozedur für erzwungene Quoren  
+##  <a name="wsfc-disaster-recovery-through-the-forced-quorum-procedure"></a><a name="Main"></a> WSFC-Notfallwiederherstellung durch die Prozedur für erzwungene Quoren  
  Vergessen Sie nicht, dass bei einem Quorumfehler alle gruppierten Dienste, SQL Server-Instanzen und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]im WSFC-Cluster offline geschaltet werden, da der Cluster in der aktuellen Konfiguration keine Fehlertoleranz auf Knotenebene gewährleisten kann.  Ein Quorumfehler bedeutet, dass fehlerfreie Abstimmungsknoten im WSFC-Cluster nicht mehr dem Quorummodell entsprechen. Einige Knoten sind möglicherweise völlig ausgefallen, und andere haben den WSFC-Dienst möglicherweise nur heruntergefahren und sind, abgesehen vom Verlust der Fähigkeit, mit einem Quorum zu kommunizieren, möglicherweise fehlerfrei.  
   
  Um den WSFC-Cluster wieder online zu schalten, müssen Sie die Ursache für den Quorumfehler in der vorhandenen Konfiguration beheben, die betroffenen Datenbanken nach Bedarf wiederherstellen und die übrigen Knoten im WSFC-Cluster neu konfigurieren, um die verbleibende Clustertopologie widerzuspiegeln.  
@@ -104,7 +104,7 @@ ms.locfileid: "74821980"
   
 8.  **Ausführen einer RPO/RTO-Analyse.** Sie sollten SQL Server-Systemprotokolle, Datenbank-Timestamps und Windows-Ereignisprotokolle analysieren, um die Fehlerursache zu bestimmen und die tatsächlichen Wiederherstellungspunkt- und Wiederherstellungszeitdaten zu dokumentieren.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erzwingen des Starts eines Clusters ohne Quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "74821980"
   
 -   [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

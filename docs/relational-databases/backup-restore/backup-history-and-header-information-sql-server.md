@@ -34,10 +34,10 @@ ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75242590"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Sicherungsverlauf und Headerinformationen (SQL Server)
@@ -65,7 +65,7 @@ ms.locfileid: "75242590"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BnRHistoryTables"></a> Tabellen mit Sicherungs- und Wiederherstellungsverlauf  
+##  <a name="backup-and-restore-history-tables"></a><a name="BnRHistoryTables"></a> Tabellen mit Sicherungs- und Wiederherstellungsverlauf  
  In diesem Abschnitt werden die Verlaufstabellen der **msdb** -Datenbank vorgestellt, in denen die Metadaten für die Sicherung und Wiederherstellung gespeichert werden.  
   
 |Verlaufstabelle|BESCHREIBUNG|  
@@ -82,7 +82,7 @@ ms.locfileid: "75242590"
 > [!NOTE]  
 >  Wenn eine Wiederherstellung ausgeführt wird, werden Änderungen an den Sicherungsverlaufstabellen und an den Wiederherstellungsverlaufstabellen vorgenommen.  
   
-##  <a name="TsqlStatementsForBackupHistory"></a> Transact-SQL-Anweisungen für den Zugriff auf den Sicherungsverlauf  
+##  <a name="transact-sql-statements-for-accessing-backup-history"></a><a name="TsqlStatementsForBackupHistory"></a> Transact-SQL-Anweisungen für den Zugriff auf den Sicherungsverlauf  
  Die Anweisungen zu Wiederherstellungsinformationen korrespondieren mit Informationen, die in bestimmten Sicherungsverlaufstabellen gespeichert sind.  
   
 > [!IMPORTANT]  
@@ -94,7 +94,7 @@ ms.locfileid: "75242590"
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Ruft alle Sicherungsheaderinformationen für alle Sicherungssätze auf einem bestimmten Sicherungsmedium ab. Das Ergebnis der Ausführung von RESTORE HEADERONLY ist ein Resultset.<br /><br /> Weitere Informationen finden Sie im Abschnitt "Anzeigen der Sicherungsheaderinformationen" weiter unten in diesem Thema.|  
 |[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Gibt ein Resultset mit Informationen zu den Sicherungsmedien für ein angegebenes Sicherungsmedium zurück.<br /><br /> Weitere Informationen finden Sie im Abschnitt "Anzeigen der Medienheaderinformationen" weiter unten in diesem Thema.|  
   
-##  <a name="ListDbTlogFiles"></a> Datenbank- und Transaktionsprotokolldateien  
+##  <a name="database-and-transaction-log-files"></a><a name="ListDbTlogFiles"></a> Datenbank- und Transaktionsprotokolldateien  
  Zu den Informationen, die in den Datenbank- und Transaktionsprotokolldateien in einer Sicherung aufgelistet werden, zählen der logische Name, der physische Name, der Dateityp (Datenbank oder Protokoll), die Mitgliedschaft in Dateigruppen, die Dateigröße (in Bytes), die maximal zulässige Dateigröße und die vordefinierte Größe der Dateivergrößerung (in Bytes). Sie können diese nützlichen Informationen in folgenden Fällen verwenden, um die Namen der Dateien in einer Datenbanksicherung vor dem Wiederherstellen der Datenbanksicherung zu bestimmen:  
   
 -   Sie haben einen Datenträger mit einer oder mehreren Dateien für eine Datenbank verloren.  
@@ -105,7 +105,7 @@ ms.locfileid: "75242590"
   
      Durch das Auflisten der gesicherten Dateien können Sie bestimmen, welche Dateien betroffen sind. Die Sicherung enthält beispielsweise eine Datei, die auf Laufwerk E wiederhergestellt werden soll, doch der Zielserver weist kein Laufwerk E auf. Die Datei muss dann an einen anderen Speicherort (beispielsweise Laufwerk Z) verschoben werden, wenn sie wiederhergestellt wird.  
   
-##  <a name="MediaHeader"></a> Medienheaderinformationen  
+##  <a name="media-header-information"></a><a name="MediaHeader"></a> Medienheaderinformationen  
  Der Medienheader zeigt Informationen zum Medium selbst an, jedoch nicht zu den Sicherungen auf dem Medium. Zu den angezeigten Medienheaderinformationen zählen Medienname, Beschreibung, Name der Software, mit der der Medienheader erstellt wurde, und das Erstellungsdatum des Medienheaders.  
   
 > [!NOTE]  
@@ -113,7 +113,7 @@ ms.locfileid: "75242590"
   
  Weitere Informationen finden Sie unter [Vergleich von Medienheader- und Sicherungsheaderinformationen](#CompareMediaHeaderBackupHeader)weiter unten in diesem Thema.  
   
-##  <a name="BackupHeader"></a> Sicherungsheaderinformationen  
+##  <a name="backup-header-information"></a><a name="BackupHeader"></a> Sicherungsheaderinformationen  
  Mit dem Sicherungsheader werden Informationen zu allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungssätzen und zu allen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungssätzen auf dem Medium angezeigt. Zu den angezeigten Informationen zählen die Typen der verwendeten Sicherungsmedien, die Sicherungstypen (beispielsweise Datenbank, Transaktion, Datei oder differenzielle Datenbank) sowie Informationen zum Anfangs- und Enddatum als auch zur Anfangs- und Beendigungszeit der Sicherung. Diese Informationen sind dann nützlich, wenn Sie bestimmen müssen, welcher Sicherungssatz auf dem Band wiederhergestellt werden soll oder welche Sicherungen auf dem Medium enthalten sind.  
   
 > [!NOTE]  
@@ -128,7 +128,7 @@ ms.locfileid: "75242590"
   
  Um einen bestimmten Sicherungssatz wiederherzustellen, müssen Sie die Positionsnummer des wiederherzustellenden Sicherungssatzes angeben. Geben Sie beispielsweise 2 als wiederherzustellenden Sicherungssatz an, um den zweiten Sicherungssatz wiederherzustellen.  
   
-##  <a name="CompareMediaHeaderBackupHeader"></a> Vergleich von Medienheader- und Sicherungsheaderinformationen  
+##  <a name="comparison-of-media-header-and-backup-header-information"></a><a name="CompareMediaHeaderBackupHeader"></a> Vergleich von Medienheader- und Sicherungsheaderinformationen  
  Die folgende Abbildung stellt ein Beispiel für die Unterschiede beim Anzeigen von Sicherungsheader- und Medienheaderinformationen dar. Für das Abrufen des Medienheaders ist lediglich das Auslesen von Informationen vom Anfang des Bands erforderlich. Dagegen ist für das Abrufen des Sicherungsheaders das Scannen des gesamten Bands erforderlich, damit der Header jedes Sicherungssatzes ausgelesen werden kann.  
   
  ![Mediensatz mit drei SQL Server-Sicherungssätzen](../../relational-databases/backup-restore/media/bnr-media-label.gif "Mediensatz mit drei SQL Server-Sicherungssätzen")  
@@ -140,10 +140,10 @@ ms.locfileid: "75242590"
   
  Informationen zum Anzeigen der Sicherungsheaderinformationen für alle Sicherungssätze auf einem Sicherungsmedium finden Sie unter "Anzeigen der Sicherungsheaderinformationen" weiter oben in diesem Thema.  
   
-##  <a name="Verification"></a> Sicherungsüberprüfung  
+##  <a name="backup-verification"></a><a name="Verification"></a> Sicherungsüberprüfung  
  Das Überprüfen von Sicherungen ist zwar nicht erforderlich, aber nützlich. Beim Überprüfen einer Sicherung wird überprüft, ob die Sicherung physisch intakt ist, um sicherzustellen, dass alle Dateien der Sicherung lesbar sind und wiederhergestellt werden können, und ob Sie die Sicherung bei Bedarf wiederherstellen könnten. Es ist wichtig, zu wissen, dass beim Überprüfen einer Sicherung nicht die Struktur der Daten in der Sicherung überprüft wird. Wenn die Sicherung jedoch mit WITH CHECKSUMS erstellt wurde, kann das Überprüfen der Sicherung mit WITH CHECKSUMS gute Hinweise auf die Zuverlässigkeit der Daten in der Sicherung geben.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So löschen Sie alte Zeilen aus Sicherungs- und Wiederherstellungsverlaufstabellen**  
   
 -   [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  

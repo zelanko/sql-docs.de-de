@@ -15,25 +15,25 @@ ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b1a3b5d1dfdf3a5e8556058cee750a4e2e08476a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822441"
 ---
 # <a name="change-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Ändern des Verfügbarkeitsmodus eines Replikats innerhalb einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie der Verfügbarkeitsmodus eines Verfügbarkeitsreplikats in einer Always On-Verfügbarkeitsgruppe in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell geändert wird. Der Verfügbarkeitsmodus ist eine Replikateigenschaft, die steuert, ob das Replikat einen asynchronen oder synchronen Commit ausführt. Der*asynchrone Commitmodus* maximiert die Leistung auf Kosten der Hochverfügbarkeit und unterstützt nur erzwungene manuelle Failovervorgänge (mit möglichem Datenverlust), in der Regel *erzwungenes Failover*genannt. Der*synchrone Commitmodus* bevorzugt Hochverfügbarkeit gegenüber Leistung und unterstützt, sobald das sekundäre Replikat synchronisiert ist, manuelle Failovervorgänge und optional automatische Failovervorgänge.  
     
-##  <a name="Prerequisites"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 Sie müssen mit der Serverinstanz verbunden sein, die das primäre Replikat hostet.  
   
 
-##  <a name="Permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So ändern Sie den Verfügbarkeitsmodus einer Verfügbarkeitsgruppe**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Verfügbarkeitsreplikat hostet, und erweitern Sie die Serverstruktur.  
@@ -46,7 +46,7 @@ Sie müssen mit der Serverinstanz verbunden sein, die das primäre Replikat host
   
 5.  Verwenden Sie im Dialogfeld **Eigenschaften des Verfügbarkeitsreplikats** die Dropdownliste **Verfügbarkeitsmodus** , um den Verfügbarkeitsmodus für dieses Replikat zu ändern.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So ändern Sie den Verfügbarkeitsmodus einer Verfügbarkeitsgruppe**  
   
 1.  Stellen Sie eine Verbindung mit der Serverinstanz her, die das primäre Replikat hostet.  
@@ -78,7 +78,7 @@ Sie müssen mit der Serverinstanz verbunden sein, die das primäre Replikat host
        WITH (FAILOVER_MODE = AUTOMATIC);  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell  
  **So ändern Sie den Verfügbarkeitsmodus einer Verfügbarkeitsgruppe**  
   
 1.  Wechseln Sie mit**cd**in das Verzeichnis der Serverinstanz, die das primäre Replikat hostet.  

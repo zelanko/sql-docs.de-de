@@ -14,10 +14,10 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909524"
 ---
 # <a name="unpack-a-dac-package"></a>Entpacken eines DAC-Pakets
@@ -28,10 +28,10 @@ ms.locfileid: "72909524"
   
 2.  **So entpacken Sie ein DAC-Paket mit:**  [dem Dialogfeld „Unpack Data-Tier Application Dialog“ (Datenebenenanwendung entpacken)](#UnpackDACDial), [dem Untersuchen des Inhalts eines DAC-Pakets](#ExamDACPack)  
 
-##  <a name="Security"></a> Sicherheit  
+##  <a name="security"></a><a name="Security"></a> Sicherheit  
  Das Bereitstellen eines DAC-Pakets aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche DACs können schädlichen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code ausführt oder Fehler verursacht, indem er das Schema ändert. Bevor Sie eine DAC aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, sollten Sie sie auf einer isolierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Testinstanz bereitstellen, die DAC entpacken und den Code, z. B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code, untersuchen.  
   
-##  <a name="UnpackDACDial"></a> Datenebenenanwendung entpacken  
+##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> Datenebenenanwendung entpacken  
  **So entpacken Sie eine DAC-Paketdatei**  
   
 -   Navigieren Sie im **Windows-Explorer**zum Speicherort einer DAC-Paketdatei (.dacpac).  
@@ -48,7 +48,7 @@ ms.locfileid: "72909524"
   
     -   [Nach Ordner suchen](#Browse)  
   
-###  <a name="Unpack"></a> DAC-Paketdatei für Microsoft SQL Server entpacken  
+###  <a name="unpack-microsoft-sql-server-dac-package-file"></a><a name="Unpack"></a> DAC-Paketdatei für Microsoft SQL Server entpacken  
  Verwenden Sie diese Seite, um den Zielordner anzugeben, in dem die entpackten Dateien abgelegt werden sollen, und führen Sie dann den Entpackungsvorgang aus.  
   
  **Dateien werden in diesen Ordner entpackt:** – Geben Sie den vollständigen Pfad zum Ordner der entpackten Dateien an. Wenn der Ordner vorhanden ist und Sie den vollständigen Pfad kennen, geben Sie den Pfad im Feld ein. Klicken Sie andernfalls auf die Schaltfläche **Durchsuchen** , um zu einem Ordner zu navigieren oder einen neuen Ordner zu erstellen.  
@@ -59,7 +59,7 @@ ms.locfileid: "72909524"
   
  **Abbrechen** – Schließt das Dialogfeld, ohne das DAC-Paket zu entpacken.  
   
-###  <a name="Browse"></a> Nach Ordner suchen  
+###  <a name="browse-for-folder"></a><a name="Browse"></a> Nach Ordner suchen  
  Verwenden Sie diese Seite, um den Zielordner für den Entpackungsvorgang auszuwählen. Optional können Sie auch einen neuen Ordner erstellen.  
   
  **Ordnerliste** – Zeigt die Dateihierarchie für den Computer an. Erweitern Sie die Knoten, um zum Ordner zu navigieren, in den das DAC-Paket entpackt werden soll. Klicken Sie auf den Ordner und dann auf **OK**.  
@@ -70,7 +70,7 @@ ms.locfileid: "72909524"
   
  **Abbrechen** – Schließt das Dialogfeld, ohne einen Ordner auszuwählen.  
   
-##  <a name="ExamDACPack"></a> Untersuchen des Inhalts eines DAC-Pakets  
+##  <a name="examine-the-contents-of-a-dac-package"></a><a name="ExamDACPack"></a> Untersuchen des Inhalts eines DAC-Pakets  
  Nachdem Sie das Paket entpackt haben, können Sie die vom Dialogfeld **Datenebenenanwendung entpacken** erzeugten Dateien untersuchen. Das Dialogfeld erstellt die folgenden Dateien im ausgewählten Zielordner:  
   
 1.  Ein Transact-SQL-Skript, das die Anweisungen zum Erstellen der in der DAC definierten Objekte enthält. Der Dateiname ist *DACName*.sql, wobei *DACName* der Name der DAC ist.  

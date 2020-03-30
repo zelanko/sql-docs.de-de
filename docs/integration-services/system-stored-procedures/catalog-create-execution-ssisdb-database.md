@@ -11,10 +11,10 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8076434e550f27ac292eec1b7385fce93d60e3ec
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295550"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (SSISDB-Datenbank)
@@ -65,7 +65,7 @@ Geben Sie an, ob jeder Scale Out-Worker für die Ausführung zugelassen ist.
 
 -   Verwenden Sie den Wert 1, um das Paket mit einem beliebigen Scale Out-Worker auszuführen. Wenn Sie `@useanyworker` auf „true“ setzen, steht jeder Worker, dessen maximale Taskanzahl (wie in der Workerkonfigurationsdatei angegeben) noch nicht erreicht ist, für die Ausführung des Pakets zur Verfügung. Weitere Informationen zur Konfigurationsdatei des Workers finden Sie unter [Integration Services (SSIS) Scale Out-Worker](../scale-out/integration-services-ssis-scale-out-worker.md).
 
--   Verwenden Sie den Wert 0, um anzugeben, dass nicht alle Scale Out-Worker für die Paketausführung zugelassen sind. Wenn Sie `@useanyworker` auf „false“ festlegen, müssen Sie mithilfe des Managers für horizontales Hochskalieren oder durch Aufrufen der gespeicherten Prozedur `[catalog].[add_execution_worker]` die Worker angeben, die zum Ausführen des Pakets zulässig sind. Wenn Sie einen Worker angeben, der bereits ein anderes Paket ausführt, schließt der Worker die Ausführung des aktuellen Pakets ab, bevor er eine weitere Ausführung anfordert.
+-   Verwenden Sie den Wert 0, um anzugeben, dass nicht alle Scale Out-Worker für die Paketausführung zugelassen sind. Wenn Sie `@useanyworker` auf „false“ festlegen, müssen Sie mithilfe des Scale Out-Managers oder durch Aufrufen der gespeicherten Prozedur `[catalog].[add_execution_worker]` die Worker angeben, die zum Ausführen des Pakets zulässig sind. Wenn Sie einen Worker angeben, der bereits ein anderes Paket ausführt, schließt der Worker die Ausführung des aktuellen Pakets ab, bevor er eine weitere Ausführung anfordert.
 
 Dieser Parameter ist optional. Wenn dieser Parameter nicht angegeben wird, wird der Wert auf 1 festgelegt. Das Argument *useanyworker* ist vom Typ **bit**. 
   

@@ -16,10 +16,10 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251284"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Angeben der Endpunkt-URL: Hinzufügen oder Ändern von Verfügbarkeitsreplikaten
@@ -30,7 +30,7 @@ ms.locfileid: "75251284"
 >  Die Begriff "Endpunkt-URL" ist ein Synonym für den Begriff "Servernetzwerkadresse", der von der Datenbankspiegelungsbenutzeroberfläche und in der Dokumentation verwendet wird.  
   
   
-##  <a name="SyntaxOfURL"></a> Syntax für eine Endpunkt-URL  
+##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> Syntax für eine Endpunkt-URL  
  Die Syntax für eine Endpunkt-URL hat folgende Form:  
   
  TCP<strong>://</strong> *\<Systemadresse>* <strong>:</strong> *\<Port>*  
@@ -91,7 +91,7 @@ ms.locfileid: "75251284"
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
-##  <a name="Finding_FQDN"></a> Ermitteln des vollqualifizierten Domänennamens eines Systems  
+##  <a name="finding-the-fully-qualified-domain-name-of-a-system"></a><a name="Finding_FQDN"></a> Ermitteln des vollqualifizierten Domänennamens eines Systems  
  Um den vollqualifizierten Domänennamen eines Systems zu ermitteln, geben Sie an der Windows-Eingabeaufforderung des Systems den folgenden Befehl ein:  
   
  **IPCONFIG /ALL**  
@@ -113,7 +113,7 @@ ms.locfileid: "75251284"
 > [!NOTE]  
 >  Wenn Sie weitere Informationen zu einem vollqualifizierten Domänennamen benötigen, wenden Sie sich an den Systemadministrator.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So konfigurieren Sie einen Datenbankspiegelungs-Endpunkt**  
   
 -   [Erstellen eines Datenbankspiegelungs-Endpunkts für Always On-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
@@ -142,7 +142,7 @@ ms.locfileid: "75251284"
   
 -   [Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

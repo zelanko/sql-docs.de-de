@@ -17,10 +17,10 @@ ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 92e485372bca104ae7c34405f711ced3a6a60a44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75242578"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Vollständige Datenbankwiederherstellungen (einfaches Wiederherstellungsmodell)
@@ -42,7 +42,7 @@ ms.locfileid: "75242578"
 > [!NOTE]  
 >  Informationen zur Unterstützung von Sicherungskopien früherer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen finden Sie im Kapitel [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)im Abschnitt „Kompatibilitätsunterstützung“.  
   
-##  <a name="Overview"></a> Übersicht über die Datenbankwiederherstellung mit dem einfachen Wiederherstellungsmodell  
+##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> Übersicht über die Datenbankwiederherstellung mit dem einfachen Wiederherstellungsmodell  
  Für eine vollständige Datenbankwiederherstellung mit dem einfachen Wiederherstellungsmodell sind nur ein oder zwei [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) -Anweisungen erforderlich, je nachdem, ob Sie eine differenzielle Datenbanksicherung wiederherstellen möchten. Stellen Sie lediglich die letzte Sicherung wieder her, wie in der folgenden Abbildung dargestellt, wenn Sie nur eine vollständige Datenbanksicherung verwenden:  
   
  ![Wiederherstellung nur einer vollständigen Datenbanksicherung](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "Wiederherstellung nur einer vollständigen Datenbanksicherung")  
@@ -54,7 +54,7 @@ ms.locfileid: "75242578"
 > [!NOTE]  
 >  Informationen zum Wiederherstellen einer Datenbanksicherung auf einer anderen Serverinstanz finden Sie unter [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
-###  <a name="TsqlSyntax"></a> Grundlegende Transact-SQL-RESTORE-Syntax  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Grundlegende Transact-SQL-RESTORE-Syntax  
  Die grundlegende [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) -Syntax zur Wiederherstellung einer vollständigen Datenbanksicherung lautet:  
   
  RESTORE DATABASE *database_name* FROM *backup_device* [ WITH NORECOVERY ]  
@@ -66,7 +66,7 @@ ms.locfileid: "75242578"
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
-###  <a name="Example"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="Example"></a> Beispiel (Transact-SQL)  
  Das folgende Beispiel zeigt zunächst, wie die [BACKUP](../../t-sql/statements/backup-transact-sql.md) -Anweisung zum Erstellen einer vollständigen Datenbanksicherung und einer differenziellen Datenbanksicherung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank verwendet wird. Anschließend werden diese Sicherungen im Beispiel nacheinander wiederhergestellt. Die Datenbank wird zu dem Status wiederhergestellt, in dem sie sich beim Abschließen der differenziellen Datenbanksicherung befand.  
   
  Im Beispiel werden die wichtigen Optionen in einer Wiederherstellungssequenz für das Szenario der vollständigen Datenbankwiederherstellung veranschaulicht. Eine *Wiederherstellungssequenz* besteht aus mindestens einem Wiederherstellungsvorgang, mit dessen Hilfe Daten mindestens eine Wiederherstellungsphase durchlaufen. Hierfür unwichtige Syntax und Informationen werden ausgelassen. Wenn Sie eine Datenbank wiederherstellen, wird empfohlen, die Option RECOVERY aus Gründen der Klarheit explizit anzugeben, obwohl das die Standardvorgabe ist.  
@@ -100,7 +100,7 @@ FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So stellen Sie eine vollständige Datenbanksicherung wieder her**  
   
 -   [Wiederherstellen einer Datenbanksicherung unter dem einfachen Wiederherstellungsmodell &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  

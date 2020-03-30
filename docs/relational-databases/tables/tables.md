@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287744"
 ---
 # <a name="tables"></a>Tabellen
@@ -44,7 +44,7 @@ Partitionierte Tabellen sind Tabellen, deren Daten horizontal in Einheiten aufge
 Temporäre Tabellen werden in **tempdb**gespeichert. Es gibt zwei Arten von temporären Tabellen: lokale und globale temporäre Tabellen. Sie unterscheiden sich hinsichtlich ihrer Namen, ihrer Sichtbarkeit und ihrer Verfügbarkeit. Lokale temporäre Tabellen weisen als erstes Zeichen ihres Namens ein einzelnes Nummernzeichen (#) auf. Sie sind nur im Rahmen der aktuellen Verbindung des Benutzers sichtbar und werden gelöscht, sobald der Benutzer die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]trennt. Globale temporäre Tabellen weisen als erste Zeichen ihres Namens zwei Nummernzeichen (##) auf. Nachdem sie erstellt wurden, sind sie für jeden Benutzer sichtbar, und sie werden gelöscht, nachdem alle Benutzer, die auf diese Tabelle verweisen, die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]getrennt haben. 
 
 
-#### <a name="ctp23"></a> Weniger Neukompilierungen für Workloads mit temporären Tabellen für mehrere Bereiche
+#### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> Weniger Neukompilierungen für Workloads mit temporären Tabellen für mehrere Bereiche
 
 Bei allen Datenbank-Kompatibilitätsgraden verringert [!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] die Neukompilierungen für Arbeitsauslastungen mit temporären Tabellen für mehrere Bereiche. Dieses Feature ist in Azure SQL-Datenbank beim Datenbank-Kompatibilitätsgrad 150 für alle Bereitstellungsmodelle ebenfalls aktiviert.  Vor der Einführung dieses Features, konnte das Verweisen auf eine temporäre Tabelle mit einer DML-Anweisung (`SELECT`, `INSERT`, `UPDATE`, `DELETE`) zu einer Neukompilierung der DML-Anweisung bei jeder Ausführung führen, wenn die temporäre Tabelle in einem Batch im äußeren Bereich erstellt wurde. Durch dieses Update führt SQL Server zusätzliche einfache Überprüfungen durch, um unnötige Neukompilierungen zu vermeiden:
 

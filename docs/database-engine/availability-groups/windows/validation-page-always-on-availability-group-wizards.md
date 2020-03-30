@@ -17,10 +17,10 @@ ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f22ac0e249e693b7bcd102f6d9242c601e14331f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821847"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>Seite „Überprüfung“ (Always On-Verfügbarkeitsgruppen-Assistenten)
@@ -28,7 +28,7 @@ ms.locfileid: "74821847"
     
   In diesem Hilfethema werden die Optionen der Seite **Überprüfung** beschrieben. Dieses Thema gilt für [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]und [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie diese Seite, um zu überprüfen, ob die Umgebung alle auf vorherigen Seiten des Assistenten festgelegte Konfigurationsoptionen unterstützt.  
   
-##  <a name="PageOptions"></a> Optionen auf der Seite "Überprüfung"  
+##  <a name="validation-page-options"></a><a name="PageOptions"></a> Optionen auf der Seite "Überprüfung"  
  **Ergebnisse der Verfügbarkeitsgruppenüberprüfung.**  
  Dieses Raster zeigt die Ergebnisse jedes ausgeführten Überprüfungsschritts an. Es gibt folgende Rasterspalten:  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74821847"
  **Ergebnis**  
  Zeigt einen der folgenden Linktexte an. Klicken Sie auf den Link, um weitere Informationen zum Ergebnis eines bestimmten Überprüfungsschritts anzuzeigen.  
   
-|Ergebnis|Beschreibung|  
+|Ergebnis|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Fehler**|Gibt an, dass der Überprüfungsschritt fehlgeschlagen ist. Klicken Sie auf den Link, um die Fehlermeldung anzuzeigen.|  
 |**Übersprungen**|Gibt an, dass der Überprüfungsschritt ausgelassen wurde, da er für die Optionen nicht erforderlich ist. Klicken Sie auf den Link, um die Ursache für das Auslassen eines Schritts anzuzeigen.|  
@@ -48,7 +48,7 @@ ms.locfileid: "74821847"
  **Überprüfung erneut ausführen**  
  Klicken Sie, um die Überprüfungsschritte zu wiederholen, wenn Sie außerhalb des Assistenten als Reaktion auf einen Überprüfungsfehler eine Änderung vornehmen.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

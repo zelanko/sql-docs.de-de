@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8640da8c6363b25342b210043763433a74835691
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68056137"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Löschen oder Deaktivieren von DML-Triggern
@@ -42,9 +42,9 @@ ms.locfileid: "68056137"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Wenn ein Trigger gelöscht wird, wird er aus der aktuellen Datenbank entfernt. Dies hat jedoch keine Auswirkung auf die Tabelle und Daten, auf denen der Trigger basiert. Durch das Löschen einer Tabelle werden automatisch alle Trigger für die Tabelle gelöscht.  
   
@@ -52,14 +52,14 @@ ms.locfileid: "68056137"
   
 -   Durch das Deaktivieren wird ein Trigger nicht gelöscht. Der Trigger ist weiterhin als Objekt in der aktuellen Datenbank vorhanden. Ein deaktivierter Trigger wird jedoch nicht ausgelöst, wenn eine INSERT-, UPDATE- oder DELETE-Anweisung ausgeführt wird, für die er programmiert war. Deaktivierte Trigger können erneut aktiviert werden. Durch das Aktivieren eines Triggers wird dieser nicht neu erstellt. Der Trigger wird auf die gleiche Weise ausgelöst wie bei seiner ursprünglichen Erstellung.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Löschen eines DML-Triggers ist die ALTER-Berechtigung für die Tabelle oder Sicht erforderlich, in der der Trigger definiert ist.  
   
  Zum Deaktivieren oder Aktivieren eines DML-Triggers muss ein Benutzer mindestens die ALTER-Berechtigung für die Tabelle oder Sicht besitzen, für die der Trigger erstellt wurde.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-delete-a-dml-trigger"></a>So löschen Sie einen DML-Trigger  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68056137"
   
 4.  Um den Trigger zu aktivieren, klicken Sie auf **Aktivieren**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-delete-a-dml-trigger"></a>So löschen Sie einen DML-Trigger  
   

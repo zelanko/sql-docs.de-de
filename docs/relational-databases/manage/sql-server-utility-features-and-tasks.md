@@ -18,10 +18,10 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115308"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Funktionen und Tasks im SQL Server-Hilfsprogramm
@@ -31,7 +31,7 @@ ms.locfileid: "68115308"
 ## <a name="benefits-of-the-sql-server-utility"></a>Vorteile des SQL Server-Hilfsprogramms  
  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramm modelliert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-bezogene Entitäten eines Unternehmens in einer einheitlichen Ansicht. Die Blickpunkte des Hilfsprogramm-Explorers und des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) vermitteln Administratoren über eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die als Steuerungspunkt für das Hilfsprogramm (UCP) dient, eine ganzheitliche Sicht auf die Ressourcenintegrität in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die Kombination aus Zusammenfassungsdaten und detaillierten Daten, die im UCP für Richtlinien sowohl für die Unter- als auch für die Überauslastung und für eine Vielzahl von Schlüsselparametern angezeigt werden, eröffnen neue Möglichkeiten der Ressourcenkonsolidierung und erleichtern die Erkennung von Ressourcen, die überausgelastet sind. Integritätsrichtlinien sind konfigurierbar und können angepasst werden, indem der obere oder untere Grenzwert für die Ressourcennutzung geändert wird. Sie können globale Überwachungsrichtlinien ändern oder einzelne Überwachungsrichtlinien für jede Entität konfigurieren, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verwaltet wird.  
   
-##  <a name="typical_scenarios"></a> Erste Schritte mit dem SQL Server-Hilfsprogramm  
+##  <a name="getting-started-with-sql-server-utility"></a><a name="typical_scenarios"></a> Erste Schritte mit dem SQL Server-Hilfsprogramm  
  Am Anfang eines typischen Benutzerszenarios steht die Erstellung eines Steuerungspunkts für das Hilfsprogramm, der den zentralen Ansatzpunkt für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm darstellt. Der UCP stellt eine konsolidierte Sicht der Ressourcenintegrität bereit, die von verwalteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm gesammelt wurde. Registrieren Sie nach der Erstellung des UCP Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm, damit sie vom UCP verwaltet werden können.  
   
  Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und Datenebenenanwendung, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verwaltet wird, kann auf der Grundlage globaler oder individueller Richtliniendefinitionen überwacht werden.  

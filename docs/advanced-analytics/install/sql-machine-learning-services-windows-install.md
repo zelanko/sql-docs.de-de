@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: ee706d160ac94c80fc826ce6d199fd66bc37d1fa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286114"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216489"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installieren von SQL Server Machine Learning Services (Python und R) unter Windows
 
@@ -22,7 +22,7 @@ ms.locfileid: "79286114"
 
 Erfahren Sie, wie Sie SQL Server-Machine Learning Services unter Windows installieren. Sie können Machine Learning Services verwenden, um Python- und R-Skripts in einer Datenbank auszuführen.
 
-## <a name="bkmk_prereqs"> </a> Prüfliste vor der Installation
+## <a name="pre-install-checklist"></a><a name="bkmk_prereqs"> </a> Prüfliste vor der Installation
 
 + Es ist eine Datenbank-Engine-Instanz erforderlich. Sie können nicht nur R- oder Python-Funktionen installieren, aber Sie können diese einer vorhandenen Instanz inkrementell hinzufügen.
 
@@ -59,7 +59,7 @@ Weitere Informationen zu den SQL Server-Editionen, die die Python- und R-Integra
 Weitere Informationen zu den SQL Server-Editionen, die die Python- und R-Integration in Machine Learning Services unterstützen, finden Sie unter [Editionen und unterstützte Funktionen von SQL Server 2019 (15.x)](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15).
 ::: moniker-end
 
-## <a name="run-setup"></a>Ausführen von 'Setup'
+## <a name="run-setup"></a>Ausführen von Setup
 
 Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.
 

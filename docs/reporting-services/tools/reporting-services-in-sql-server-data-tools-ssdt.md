@@ -11,10 +11,10 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68889834"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server-Datentools (SSDT)
@@ -25,14 +25,14 @@ ms.locfileid: "68889834"
   
  Eine Einführung in das Entwerfen von Berichten finden Sie unter [Entwerfen von Berichten mithilfe des Berichts-Designers &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
-##  <a name="bkmk_SolutionsandProjects"></a> Lösungen und Projekte  
+##  <a name="solutions-and-projects"></a><a name="bkmk_SolutionsandProjects"></a> Lösungen und Projekte  
  Ein Berichtsprojekt dient als Container für Berichtsdefinitionen und Ressourcen. Jede Datei im Berichtsprojekt wird bei der Bereitstellung des Projekts auf dem Berichtsserver veröffentlicht. Wenn Sie zum ersten Mal ein Projekt erstellen, wird zusätzlich eine Projektmappe als Container für das Projekt erstellt. Sie können mehrere Projekte zu einer Projektmappe hinzufügen.  
   
   
-##  <a name="bkmk_Configurations"></a> Konfigurationen  
+##  <a name="configurations"></a><a name="bkmk_Configurations"></a> Konfigurationen  
  Wenn Sie mehrere Sätze von Projekteigenschaften für unterschiedliche Bereitstellungsvarianten (etwa Test- und Produktionsberichtsserver im Unternehmen) erstellen möchten, verwenden Sie den Konfigurations-Manager. Weitere Informationen finden Sie unter [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)enthalten.  
   
-##  <a name="bkmk_ReportServerProjects"></a> Berichtsserverprojekte  
+##  <a name="report-server-projects"></a><a name="bkmk_ReportServerProjects"></a> Berichtsserverprojekte  
  Bei der Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]werden die folgenden Projektvorlagen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verfügbar gemacht:  
   
 -   **Berichtsserverprojekt.** Wenn Sie ein Berichtsserverprojekt auswählen, wird der Berichts-Designer geöffnet. Bei einem Berichtsserverprojekt handelt es sich um eine von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] installierte Business Intelligence-Projektvorlage, die über das Dialogfeld **Neues Projekt** aufgerufen werden kann. Weitere Informationen finden Sie unter [Hinzufügen eines neuen oder vorhandenen Berichts zu einem Berichtsprojekt (SSRS)](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md). Eigenschaften von Berichtsserverprojekten gelten für alle Berichte und alle freigegebenen Datenquellen in einem [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Projekt. Zu diesen Eigenschaften zählen die URL für den Berichtsserver sowie die Ordnernamen für Berichte und freigegebene Datenquellen. Verwenden Sie das Dialogfeld **Eigenschaftenseiten für Projekt** , um die aktuellen Eigenschaftenwerte anzuzeigen. Klicken Sie zum Öffnen dieses Dialogfelds im Menü **Projekt** auf **Eigenschaften**.  
@@ -42,10 +42,10 @@ ms.locfileid: "68889834"
  ![Neue Projektvorlagen in SSDT](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "Neue Projektvorlagen in SSDT")  
   
   
-##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenster und Bereiche des Berichts-Designers  
+##  <a name="report-designer-windows-and-panes"></a><a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenster und Bereiche des Berichts-Designers  
  Im Berichts-Designer werden zwei Ansichten unterstützt: **Entwurf** zum Definieren der Berichtsdaten und des Berichtslayouts sowie **Vorschau** zum Anzeigen einer gerenderten Ansicht des Berichts. In jeder Ansicht können Sie mehrere Fenster anzeigen, die Sie beim Entwerfen unterstützen. Außerdem können Sie einen gerenderten Bericht anzeigen.  
   
-###  <a name="bkmk_ReportDataPane"></a> Berichtsdatenbereich  
+###  <a name="report-data-pane"></a><a name="bkmk_ReportDataPane"></a> Berichtsdatenbereich  
  im Berichtsdatenbereich werden integrierte Felder, Datenquellen, Datasets, Feldauflistungen, Berichtsparameter und Bilder angezeigt.  
   
  Verwenden Sie den Berichtsdatenbereich, um Folgendes anzuzeigen:  
@@ -68,7 +68,7 @@ ms.locfileid: "68889834"
 >  Wenn der Berichtsdatenbereich nicht angezeigt wird, klicken Sie in den Entwurfsbereich und dann im Menü **Sicht** auf **Berichtsdaten**. Wenn der Berichtsdatenbereich unverankert ist, können Sie ihn verankern. Weitere Informationen finden Sie unter [Andocken des Berichtsdatenbereichs im Berichts-Designer &#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md).  
   
   
-###  <a name="bkmk_GroupingPane"></a> Gruppierungsbereich  
+###  <a name="grouping-pane"></a><a name="bkmk_GroupingPane"></a> Gruppierungsbereich  
  Verwenden Sie den Gruppierungsbereich, um Gruppen für einen Tablix-Datenbereich zu definieren. Sie können Zeilengruppen und Detailgruppen für Tabellen sowie Zeilen- und Spaltengruppen für Matrizen definieren. Sie können den Gruppierungsbereich nicht verwenden, um Gruppen für Diagramme und andere Datenbereiche zu definieren. Weitere Informationen finden Sie unter [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  Der Gruppierungsbereich unterstützt zwei Modi:  
@@ -85,10 +85,10 @@ ms.locfileid: "68889834"
  Weitere Informationen finden Sie unter [Grouping Pane](../../reporting-services/tools/grouping-pane.md).  
   
   
-###  <a name="bkmk_Toolbox"></a> Toolbox  
+###  <a name="toolbox"></a><a name="bkmk_Toolbox"></a> Toolbox  
  Die Toolbox enthält Berichtselemente, die Sie auf die Entwurfsoberfläche ziehen können. Datenbereiche sind Berichtselemente, die Sie verwenden, um die Daten im Bericht zu organisieren. Tabelle, Matrix, Liste, Diagramm, Messgerät, Datenleiste, Sparkline und Indikator sind Datenbereiche. Andere Berichtselemente schließen Karte, Textfeld, Rechteck, Linie, Bild und Unterbericht ein. Diese Liste kann auch benutzerdefinierte Berichtselemente enthalten, wenn diese vom Systemadministrator installiert und registriert wurden.  
   
-###  <a name="bkmk_PropertiesPane"></a> Eigenschaftenbereich  
+###  <a name="properties-pane"></a><a name="bkmk_PropertiesPane"></a> Eigenschaftenbereich  
  Der Eigenschaftenbereich ist ein Standardfenster von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , in dem die Eigenschaftsnamen und Werte für das aktuell auf der Entwurfsoberfläche ausgewählte Berichtselement angezeigt werden. In den meisten Fällen entsprechen Eigenschaftsnamen den Elementen und Attributen in der RDL-Datei (Report Definition Language, Berichtsdefinitionssprache). Die am häufigsten verwendeten Eigenschaften können im Dialogfeld Eigenschaften für das ausgewählte Element festgelegt werden. Zum Öffnen des entsprechenden Dialogfelds klicken Sie auf die Schaltfläche **Eigenschaftenseiten** auf der Eigenschaftenbereichssymbolleiste. Erfahrene Benutzer können die Eigenschaftenwerte im Eigenschaftenbereich festlegen.  
   
  Verwenden Sie den Eigenschaftenbereich, um Folgendes durchzuführen:  
@@ -102,25 +102,25 @@ ms.locfileid: "68889834"
  Klicken Sie im Menü **Ansicht** auf **Eigenschaftenfenster**, um das Eigenschaftenfenster anzuzeigen. Sie können die Verankerung dieses Bereichs aufheben und ihn an eine andere Stelle im [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]-Fenster verschieben oder auf der Entwurfsoberfläche als Ansicht im Registerkartenformat anzeigen.  
   
   
-###  <a name="bkmk_SolutionExplorer"></a> Projektmappen-Explorer  
+###  <a name="solution-explorer"></a><a name="bkmk_SolutionExplorer"></a> Projektmappen-Explorer  
  Der Projektmappen-Explorer ist eine Standardkomponente von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , die alle Elemente im Projekt anzeigt. Für ein Berichtsserverprojekt umfasst er Ordner zum Organisieren von freigegebenen Datenquellen, freigegebenen Datasets, Berichten und Ressourcen. Berichtselemente werden automatisch alphabetisch sortiert, wenn Sie die Projektmappendatei für ein Projekt öffnen. Um Elementeigenschaften im Eigenschaftenbereich anzuzeigen, wählen Sie das Element aus.  
   
-###  <a name="bkmk_Output"></a> Ausgabe  
+###  <a name="output"></a><a name="bkmk_Output"></a> Ausgabe  
  Im Ausgabefenster werden Verarbeitungsfehler angezeigt, wenn Sie einen Bericht in der Vorschau anzeigen, und Veröffentlichungsfehler, wenn Sie einen Bericht oder eine freigegebene Datenquelle bereitstellen.  
   
  Verwenden Sie die Ausgabe- und Dokumentgliederungsfenster, um Fehler in Ausdrücken zu debuggen.  
   
   
-###  <a name="bkmk_DocumentOutline"></a> Dokumentgliederung  
+###  <a name="document-outline"></a><a name="bkmk_DocumentOutline"></a> Dokumentgliederung  
  Im Dokumentgliederungsfenster wird eine hierarchische Liste aller Berichtselemente angezeigt, die Teil der Berichtsdefinition sind. Zum Öffnen des Dokumentgliederungsbereichs zeigen Sie im Menü **Ansicht** auf **Weitere Fenster** , und klicken Sie dann auf **Dokumentfenster**.  
   
  Verwenden Sie den Dokumentgliederungsbereich, um Textfelder und andere Berichtselemente nach dem Namen zu identifizieren. Wenn Sie ein Element in der Dokumentgliederung auswählen, wird das Element auch auf der Entwurfsoberfläche ausgewählt.  
   
-###  <a name="bkmk_TaskList"></a> Aufgabenliste  
+###  <a name="task-list"></a><a name="bkmk_TaskList"></a> Aufgabenliste  
  Im Fenster Aufgabenliste [!INCLUDE[msCoName](../../includes/msconame-md.md)] werden Erstellungsfehler für nicht unterstützte Funktionen angezeigt, wenn Sie einen Bericht aus einer anderen Anwendung wie  Access importieren.  
   
   
-##  <a name="bkmk_ReportDesignerDesignView"></a> Entwurfsansicht des Berichts-Designers  
+##  <a name="report-designer-design-view"></a><a name="bkmk_ReportDesignerDesignView"></a> Entwurfsansicht des Berichts-Designers  
  Wenn Sie ein Berichtsserverprojekt erstellen, wird der Berichts-Designer standardmäßig in der Entwurfsansicht geöffnet und die Entwurfsoberfläche angezeigt. Die Entwurfsoberfläche enthält standardmäßig den Berichtstext sowie den Berichtshintergrund.  
   
  Das Hintergrund-Kontextmenü enthält Optionen zum Hinzufügen einer Kopf- und Fußzeile. Im Ansicht-Menü finden Sie ein Lineal und den Bereich für die Gruppierung.  
@@ -130,7 +130,7 @@ ms.locfileid: "68889834"
  Um einen Bericht zu entwerfen, können Sie Berichtselemente aus der Toolbox auf die Entwurfsoberfläche ziehen. Im Anschluss können Sie ihre Eigenschaften konfigurieren und ihre Anordnung im Bericht ändern.  
   
   
-##  <a name="bkmk_ReportDesignerPreview"></a> Berichts-Designer-Vorschau  
+##  <a name="report-designer-preview"></a><a name="bkmk_ReportDesignerPreview"></a> Berichts-Designer-Vorschau  
  Verwenden Sie die Vorschau, um einen Bericht auszuführen und den gerenderten Bericht im Berichts-Viewer anzuzeigen. Mit Vorschau werden Berichtsdaten lokal zwischengespeichert. Sie können auch Konfigurationseigenschaften festlegen, um den Bericht in der Debugansicht auszuführen (über einen Browser).  
   
  Wenn Sie einen Bericht in der Vorschau anzeigen, wird vom Berichts-Designer eine Verbindung mit den Berichtsdatenquellen hergestellt und dann werden die Datasetabfragen ausgeführt, die Daten im Cache des lokalen Computers gespeichert, der Bericht verarbeitet, um Daten und Layout zu kombinieren, und der Bericht schließlich gerendert. Sie können den Bericht auf der Registerkarte Vorschau anzeigen oder Projekteigenschaften festlegen, um den Bericht im Debugmodus direkt in einem Browser anzuzeigen.  
@@ -144,10 +144,10 @@ ms.locfileid: "68889834"
 -   **Überwachen des Ausgabebereichs für Fehlermeldungen.** Wenn Sie eine Vorschau für einen Bericht anzeigen und vom Berichtsprozessor ein Problem entdeckt wird, werden Fehlermeldungen in den Ausgabebereich geschrieben.  
   
   
-##  <a name="bkmk_ReportDesignerMenus"></a> Berichts-Designer-Menüs  
+##  <a name="report-designer-menus"></a><a name="bkmk_ReportDesignerMenus"></a> Berichts-Designer-Menüs  
  Wenn in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ein Berichts-Designer-Projekt aktiviert ist, werden der Hauptsymbolleiste die folgenden Symbolleisten hinzugefügt. Die Berichts-Designer-Menüs sind nur in der Entwurfsansicht sichtbar.  
   
-###  <a name="FormatMenu"></a> Menü 'Format'  
+###  <a name="format-menu"></a><a name="FormatMenu"></a> Menü 'Format'  
  Wenn Sie auf der Entwurfsoberfläche ein Element auswählen, enthält das Menü **Format** die folgenden Optionen:  
   
 -   **Vordergrundfarbe** Wählen Sie eine Textfarbe aus. Die Standardtextfarbe ist Schwarz.  
@@ -170,7 +170,7 @@ ms.locfileid: "68889834"
   
 -   **Reihenfolge** Verschieben Sie ausgewählte Objekte in den Hintergrund oder den Vordergrund.  
   
-###  <a name="ReportMenu"></a> Menü 'Bericht'  
+###  <a name="report-menu"></a><a name="ReportMenu"></a> Menü 'Bericht'  
  Wenn sich der Fokus auf der Berichtsentwurfsoberfläche befindet, enthält das Menü **Bericht** die folgenden Optionen:  
   
 -   **Berichtseigenschaften** Wählen Sie diese Option aus, um das Dialogfeld **Berichtseigenschaften** zu öffnen. In diesem Dialogfeld können Sie die allgemeinen Berichtseigenschaften, wie den Namen des Autors und den Rasterabstand zuweisen, und Sie können Eigenschaften für das Berichtslayout, wie die Anzahl der Spalten und die Seitengröße angeben. Sie können darüber hinaus benutzerdefinierten Code, Verweise auf Assemblys und Klassen sowie die Namen der Datenausgabeelemente, Datentransformationen und Datenschemas einschließen.  
@@ -183,7 +183,7 @@ ms.locfileid: "68889834"
   
 -   **Gruppierungsbereich** Dient zum Ein- oder Ausblenden des Gruppierungsbereichs.  
   
-###  <a name="ViewMenu"></a> Menü 'Ansicht'  
+###  <a name="view-menu"></a><a name="ViewMenu"></a> Menü 'Ansicht'  
  Verwenden Sie das Menü **Ansicht** , um die Berichts-Designer-Fenster und Symbolleisten anzuzeigen.  
   
 -   **Fehlerliste** Verwenden Sie diese Option, um Fehler anzuzeigen, die beim Veröffentlichen oder Anzeigen eines Berichts in der Vorschau erkannt wurden.  
@@ -202,7 +202,7 @@ ms.locfileid: "68889834"
   
 -   **Berichtsdaten** Verwenden Sie diese Option, um den Berichtsdatenbereich anzuzeigen, in dem Sie Berichtsparameter, Datenquellen, Datasets und Bilder hinzufügen können.  
   
-###  <a name="ProjectMenu"></a> Menü 'Projekt'  
+###  <a name="project-menu"></a><a name="ProjectMenu"></a> Menü 'Projekt'  
  Verwenden Sie das Menü **Projekt** , um freigegebene Datenquellen und Berichte in einem Projekt zu verwalten. Wenn Sie dem Projekt Elemente hinzufügen oder Elemente daraus entfernen, wird die hierarchische Anzeige der Projektelemente im Projektmappen-Explorer automatisch aktualisiert.  
   
 -   **Neues Element hinzufügen** Fügt dem Projekt eine neue freigegebene Datenquelle oder einen neuen Bericht hinzu.  
@@ -220,7 +220,7 @@ ms.locfileid: "68889834"
 -   **Eigenschaften** Öffnet das Dialogfeld **Eigenschaftenseiten** für dieses Projekt. Weitere Informationen finden Sie auf den [Eigenschaftsseiten für Projekt (Dialogfeld)](../../reporting-services/tools/project-property-pages-dialog-box.md).  
   
   
-##  <a name="bkmk_ReportDesignerToolbars"></a> Berichts-Designer-Symbolleisten  
+##  <a name="report-designer-toolbars"></a><a name="bkmk_ReportDesignerToolbars"></a> Berichts-Designer-Symbolleisten  
  Beim Entwerfen von Berichten stellt Berichts-Designer die folgenden spezialisierten Symbolleisten bereit:  
   
 -   **Bericht** Hiermit können Sie einen Seitenkopf oder -fuß hinzufügen, Berichtseigenschaften festlegen, das Lineal oder den Gruppierungsbereich umschalten oder zoomen, um die Ansicht des Berichts zu wechseln.  
@@ -236,16 +236,16 @@ ms.locfileid: "68889834"
  Steuern Sie über das Menü **Ansicht** , ob diese Symbolleisten angezeigt werden. Andere [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Symbolleisten werden möglicherweise deaktiviert, wenn ihre Funktionalität nicht für Berichts-Designer-Funktionen gilt.  
   
 
-##  <a name="bkmk_SourceControl"></a> Quellcodeverwaltung  
+##  <a name="source-control"></a><a name="bkmk_SourceControl"></a> Quellcodeverwaltung  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] kann in Quellen-Plug-Ins integriert werden. Verwenden Sie im Dialogfeld **Optionen** die Seiten zu Projekten und Projektmappen, um das Plug-In anzugeben und Einstellungen zu konfigurieren:  
   
-##  <a name="bkmk_CustomReportTemplates"></a> Benutzerdefinierte Berichtsvorlagen  
+##  <a name="custom-report-templates"></a><a name="bkmk_CustomReportTemplates"></a> Benutzerdefinierte Berichtsvorlagen  
  Wenn Sie benutzerdefinierte Berichte als Vorlagen für neue Berichte verwenden möchten, kopieren Sie diese einfach in den Ordner ReportProject auf dem Computer mit [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Dieser Ordner befindet sich standardmäßig an folgendem Speicherort: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Wenn Sie dem Berichtsprojekt ein neues Element hinzufügen, wird der benutzerdefinierte Bericht im Vorlagenbereich angezeigt.  
   
  Zudem können Sie dem Berichts-Assistenten benutzerdefinierte Stile hinzufügen.  
   
   
-##  <a name="bkmk_CommandLineSupportForssdt"></a> Befehlszeilenunterstützung für SQL Server-Datentools  
+##  <a name="command-line-support-for-sql-server-data-tools"></a><a name="bkmk_CommandLineSupportForssdt"></a> Befehlszeilenunterstützung für SQL Server-Datentools  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] basiert auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] und der zugrunde liegenden Anwendung „devenv.exe“. Bevor Sie diese Optionen verwenden können, müssen Sie für beide folgenden Elemente gültige Werte festlegen:  
   
 -   Projekteigenschaften für OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder und TargetServerURL.  
@@ -274,12 +274,12 @@ ms.locfileid: "68889834"
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2015\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
   
-##  <a name="bkmk_KeyboardShortcuts"></a> Tastenkombinationen in Reporting Services  
+##  <a name="keyboard-shortcuts-in-reporting-services"></a><a name="bkmk_KeyboardShortcuts"></a> Tastenkombinationen in Reporting Services  
  Verwenden Sie Tastenkombinationen für folgende Aktionen:  
   
 -   Steuern von Fenstern und Modi in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]:  
   
-    |Beschreibung|Tastenkombination|  
+    |BESCHREIBUNG|Tastenkombination|  
     |-----------------|---------------------|  
     |Erstellen des ausgewählten Projekts|CTRL+UMSCHALT+B|  
     |Anzeigen des Eigenschaftenfensters|F4|  
@@ -289,7 +289,7 @@ ms.locfileid: "68889834"
   
 -   Steuern von Elementen auf der Berichtsentwurfsoberfläche:  
   
-    |Beschreibung|Tastenkombination|  
+    |BESCHREIBUNG|Tastenkombination|  
     |-----------------|---------------------|  
     |Fokus von einem Berichtselement zum nächsten Berichtselement verschieben|TAB|  
     |Ausgewähltes Berichtselement verschieben|Pfeiltasten|  

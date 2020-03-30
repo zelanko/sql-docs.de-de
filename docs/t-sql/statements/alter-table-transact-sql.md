@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288304"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -1054,7 +1054,7 @@ Falls Sie Spalten in der ALTER TABLE-Anweisung mit einem benutzerdefinierten CLR
 
 Für das Hinzufügen einer Spalte, durch die die Zeilen der Tabelle aktualisiert werden, ist die **UPDATE**-Berechtigung für die Tabelle erforderlich. Dies gilt beispielsweise für das Hinzufügen einer **NOT NULL**-Spalte mit einem Standardwert oder für das Hinzufügen einer Identitätsspalte zu einer nicht leeren Tabelle.
 
-## <a name="Example_Top"></a> Beispiele
+## <a name="examples"></a><a name="Example_Top"></a> Beispiele
 
 |Category|Funktionssyntaxelemente|
 |--------------|------------------------------|
@@ -1065,7 +1065,7 @@ Für das Hinzufügen einer Spalte, durch die die Zeilen der Tabelle aktualisiert
 |[Deaktivieren und Aktivieren von Einschränkungen und Triggern](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
-### <a name="add"></a>Hinzufügen von Spalten und Einschränkungen
+### <a name="adding-columns-and-constraints"></a><a name="add"></a>Hinzufügen von Spalten und Einschränkungen
 
 Die Beispiele in diesem Abschnitt veranschaulichen das Hinzufügen von Spalten und Einschränkungen zu einer Tabelle.
 
@@ -1295,7 +1295,7 @@ ALTER TABLE Customers ADD
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;
 ```
 
-### <a name="Drop"></a>Löschen von Spalten und Einschränkungen
+### <a name="dropping-columns-and-constraints"></a><a name="Drop"></a>Löschen von Spalten und Einschränkungen
 
 In den Beispielen in diesem Abschnitt wird das Löschen von Spalten und Einschränkungen veranschaulicht.
 
@@ -1380,7 +1380,7 @@ DROP TABLE Person.ContactBackup ;
 
 ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird")[Beispiele](#Example_Top)
 
-### <a name="alter_column"></a> Ändern einer Spaltendefinition
+### <a name="altering-a-column-definition"></a><a name="alter_column"></a> Ändern einer Spaltendefinition
 
 #### <a name="a-changing-the-data-type-of-a-column"></a>A. Ändern des Datentyps einer Spalte
 
@@ -1474,7 +1474,7 @@ ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCR
 GO
 ```
 
-### <a name="alter_table"></a> Ändern einer Tabellendefinition
+### <a name="altering-a-table-definition"></a><a name="alter_table"></a> Ändern einer Tabellendefinition
 
 Die Beispiele in diesem Abschnitt veranschaulichen, wie die Definition einer Tabelle geändert wird.
 
@@ -1592,7 +1592,7 @@ ALTER TABLE Person.Person
 DISABLE CHANGE_TRACKING;
 ```
 
-### <a name="disable_enable"></a>Deaktivieren und Aktivieren von Einschränkungen und Triggern
+### <a name="disabling-and-enabling-constraints-and-triggers"></a><a name="disable_enable"></a>Deaktivieren und Aktivieren von Einschränkungen und Triggern
 
 #### <a name="a-disabling-and-re-enabling-a-constraint"></a>A. Deaktivieren und erneutes Aktivieren einer Einschränkung
 
@@ -1659,7 +1659,7 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO
 ```
 
-### <a name="online"></a>Onlinevorgänge
+### <a name="online-operations"></a><a name="online"></a>Onlinevorgänge
 
 #### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. Onlineindexneuerstellung mit LOW_PRIORITY_WAIT-Optionen
 
@@ -1697,7 +1697,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-### <a name="system_versioning"></a> Zeilenversionsverwaltung
+### <a name="system-versioning"></a><a name="system_versioning"></a> Zeilenversionsverwaltung
 
 Mit den folgenden vier Beispielen können Sie sich mit der Syntax für die Systemversionierung vertraut machen. Weitere Informationen erhalten Sie unter [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).
 

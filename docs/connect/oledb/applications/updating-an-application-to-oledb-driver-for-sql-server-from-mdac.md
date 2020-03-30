@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ad36a17367b14a48810d83137b2887eaa75f6ef1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989260"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Aktualisieren einer Anwendung auf den OLE DB-Treiber für SQL Server über MDAC
@@ -72,7 +72,7 @@ ms.locfileid: "67989260"
 
 -   Der OLE DB-Treiber für SQL Server gibt Synonyme in den Schemarowsets TABLES und TABLE_INFO zurück, wobei der Wert TABLE_TYPE auf SYNONYM gesetzt ist.  
 
--   Rückgabewerte vom Datentyp **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **udt** oder sonstige LOB-Typen (Large Object) können nicht an Clienttreiberversionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] zurückgegeben werden. Wenn Sie diese Typen als Rückgabewerte verwenden möchten, müssen Sie den OLE DB-Treiber für SQL Server verwenden.  
+-   Rückgabewerte vom Datentyp **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **udt** oder sonstige LOB-Typen (Large Object) können nicht an Clienttreiberversionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] zurückgegeben werden. Wenn Sie diese Typen als Rückgabewerte verwenden möchten, müssen Sie den OLE DB-Treiber für SQL Server verwenden.  
 
 -   MDAC lässt die Ausführung folgender Anweisungen beim Start manueller und impliziter Transaktionen zu, während der OLE DB-Treiber für SQL Server diese Möglichkeit nicht bietet. Die Anweisungen müssen im Autocommitmodus ausgeführt werden.  
 

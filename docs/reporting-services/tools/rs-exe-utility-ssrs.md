@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081689"
 ---
 # <a name="rsexe-utility-ssrs"></a>Hilfsprogramm 'RS.exe' (SSRS)
@@ -45,10 +45,10 @@ rs {-?}
 {-t trace}  
 ```  
   
-##  <a name="bkmk_filelocation"></a> Dateispeicherort  
+##  <a name="file-location"></a><a name="bkmk_filelocation"></a> Dateispeicherort  
  **RS.exe** befindet sich unter **\Programme\Microsoft SQL Server\110\Tools\Binn**. Sie können das Hilfsprogramm von einem beliebigen Ordner im Dateisystem ausführen.  
   
-##  <a name="bkmk_arguments"></a>Argumente  
+##  <a name="arguments"></a><a name="bkmk_arguments"></a>Argumente  
  **-?**  
  (Optional) Zeigt die Syntax der **rs** -Argumente an.  
   
@@ -97,10 +97,10 @@ rs {-?}
  **-t**  
  (Optional) Schreibt Fehlermeldungen in das Ablaufverfolgungsprotokoll. Dieses Argument enthält keinen Wert. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-##  <a name="bkmk_permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Berechtigungen  
  Um das Tool ausführen zu können, müssen Sie die Berechtigung besitzen, eine Verbindung mit der Berichtsserverinstanz herzustellen, für die das Skript ausgeführt wird. Durch das Ausführen von Skripts können Sie Änderungen am lokalen Computer oder an einem Remotecomputer durchführen. Sollen Änderungen an einem Berichtsserver durchgeführt werden, der auf einem Remotecomputer installiert ist, geben Sie den Remotecomputer im **-s** -Argument an.  
   
-##  <a name="bkmk_examples"></a> Beispiele  
+##  <a name="examples"></a><a name="bkmk_examples"></a> Beispiele  
  Das folgende Beispiel zeigt, wie die Skriptdatei angegeben wird, die das [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET-Skript und die auszuführenden Webdienstmethoden enthält.  
   
 ```  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c1f860f69ef95af42627d0d2bad869afbb366fc4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68107110"
 ---
 # <a name="enable-indexes-and-constraints"></a>Aktivieren von Indizes und Einschränkungen
@@ -44,9 +44,9 @@ ms.locfileid: "68107110"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Nachdem der Index neu erstellt wurde, müssen alle Einschränkungen, die aufgrund der Deaktivierung des Indexes deaktiviert wurden, manuell aktiviert werden. PRIMARY KEY- und UNIQUE-Einschränkungen werden durch Neuerstellen des zugehörigen Indexes aktiviert. Dieser Index muss neu erstellt (aktiviert) werden, bevor Sie FOREIGN KEY-Einschränkungen aktivieren können, die auf die PRIMARY KEY- oder UNIQUE-Einschränkung verweisen. FOREIGN KEY-Einschränkungen werden mithilfe der ALTER TABLE CHECK CONSTRAINT-Anweisung aktiviert.  
   
@@ -73,12 +73,12 @@ ms.locfileid: "68107110"
 
 -   Beim Neuerstellen von deaktivierten, komprimierten und nicht gruppierten Indizes wird „data_compression“ standardmäßig auf „none“ festgelegt. Dies bedeutet, dass die Indizes nicht komprimiert werden. Dies ist darin begründet, dass die Metadaten von Komprimierungseinstellungen verloren gehen, wenn nicht gruppierte Indizes deaktiviert sind. Zur Umgehung dieses Problems müssen Sie die Datenkomprimierung explizit in der REBUILD-Anweisung angeben.
 
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Bei der Verwendung von DBCC DBREINDEX muss der Benutzer die Tabelle besitzen oder Mitglied der festen Serverrolle **sysadmin** oder der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-enable-a-disabled-index"></a>So aktivieren Sie einen deaktivierten Index  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68107110"
   
  Die folgenden Informationen sind im Dialogfeld **Indizes neu erstellen** verfügbar:  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>So aktivieren Sie einen deaktivierten Index mit ALTER INDEX  
   

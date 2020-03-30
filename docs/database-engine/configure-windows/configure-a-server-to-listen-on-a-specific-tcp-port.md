@@ -18,10 +18,10 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012918"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports
@@ -40,7 +40,7 @@ Da Port 1433 der bekannte Standard für [!INCLUDE[ssNoVersion](../../includes/ss
 >  Nach einem Neustart lauscht die Datenbank-Engine an einem neuen Port. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserdienst überwacht jedoch die Registrierung und meldet die neue Portnummer, sobald die Konfiguration geändert wird, obwohl die Portnummer von der Datenbank-Engine u. U. gar nicht verwendet wird. Starten Sie die Datenbank-Engine erneut, um Konsistenz zu gewährleisten und Verbindungsfehler zu vermeiden.  
   
   
-##  <a name="SSMSProcedure"></a> Verwenden des SQL Server-Konfigurations-Managers  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Verwenden des SQL Server-Konfigurations-Managers  
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>So weisen Sie der SQL Server-Datenbank-Engine einen TCP/IP-Port zu  
   

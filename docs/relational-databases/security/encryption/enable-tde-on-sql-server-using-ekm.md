@@ -16,10 +16,10 @@ ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 2507328ccc1d2a8baa47e97353c17ccc0345d3d7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957434"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>Aktivieren von TDE in SQL Server mithilfe von EKM
@@ -29,9 +29,9 @@ ms.locfileid: "74957434"
  TDE verschlüsselt die Speicherung einer gesamten Datenbank, indem ein symmetrischer Schlüssel verwendet wird, der als Datenbankverschlüsselungsschlüssel bezeichnet wird. Der Verschlüsselungsschlüssel für die Datenbank kann auch mithilfe eines Zertifikats geschützt werden, das mit dem Datenbankhauptschlüssel der Masterdatenbank geschützt wird. Weitere Informationen über das Schützen des Verschlüsselungsschlüssels für die Datenbank mit dem Datenbank-Hauptschlüssel finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md). Informationen zum Konfigurieren von TDE, wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einem virtuellen Azure-Computer ausgeführt wird, finden Sie unter [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Informationen zum Konfigurieren von TDE mithilfe eines Schlüssels im Azure-Schlüsseltresor finden Sie unter [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
 
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Sie müssen ein Benutzer mit hohen Privilegien (z.&#160;B. ein Systemadministrator) sein, um einen Verschlüsselungsschlüssel für die Datenbank erstellen und eine Datenbank verschlüsseln zu können. Dieser Benutzer muss vom EKM-Modul authentifiziert werden können.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "74957434"
   
 -   Die für Ihren EKM-Anbieter erforderlichen Optionen und Parameter können sich von denen im unten angegebenen Codebeispiel unterscheiden. Weitere Informationen erhalten Sie vom Anbieter für erweiterbare Schlüsselverwaltung.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  In diesem Artikel werden die folgenden Berechtigungen verwendet:  
   
 -   Zum Ändern einer Konfigurationsoption und Ausführen der RECONFIGURE-Anweisung muss Ihnen die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
@@ -56,7 +56,7 @@ ms.locfileid: "74957434"
   
 -   Erfordert die CONTROL-Berechtigung für die Datenbank, um die Datenbank zu verschlüsseln.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-enable-tde-using-ekm"></a>So aktivieren Sie TDE unter Verwendung von EKM  
   

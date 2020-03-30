@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68995853"
 ---
 # <a name="permissions-database-engine"></a>Berechtigungen (Datenbank-Engine)
@@ -40,7 +40,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="_conventions"></a> Benennungskonventionen für Berechtigungen  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a> Benennungskonventionen für Berechtigungen  
  Im Folgenden werden die allgemeinen Konventionen beschrieben, die beim Benennen von Berechtigungen befolgt werden:  
   
 -   CONTROL  
@@ -96,7 +96,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 ## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
-##  <a name="_securables"></a> Berechtigungen anwendbar für bestimmte sicherungsfähige Elemente  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a> Berechtigungen anwendbar für bestimmte sicherungsfähige Elemente  
  Die folgende Tabelle enthält eine Liste der wichtigsten Berechtigungsklassen und der sicherungsfähigen Elemente, für die sie erteilt werden können.  
   
 |Berechtigung|Anwendungsbereich|  
@@ -118,7 +118,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 > [!CAUTION]  
 >  Die Standardberechtigungen, die Systemobjekten zum Zeitpunkt der Installation erteilt wurden, werden sorgfältig bezüglich möglicher Bedrohungen ausgewertet und müssen nicht im Rahmen der Härtung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation geändert werden. Alle Änderungen an den Berechtigungen für Systemobjekte können die Funktionalität einschränken oder unterbrechen und potenziell dazu führen, dass Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation einen nicht unterstützten Zustand aufweist.  
   
-##  <a name="_permissions"></a> SQL Server-Berechtigungen  
+##  <a name="sql-server-permissions"></a><a name="_permissions"></a> SQL Server-Berechtigungen  
  Die folgende Tabelle enthält eine vollständige Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Berechtigungen. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] -Berechtigungen sind nur für unterstützte sicherungsfähige Basiselemente verfügbar. Berechtigungen auf Serverebene können in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]nicht gewährt werden, in einigen Fällen sind jedoch stattdessen Datenbankberechtigungen verfügbar.  
   
 |Sicherungsfähiges Basiselement|Spezifische Berechtigungen für sicherungsfähiges Basiselement|Berechtigungstypcode|Sicherungsfähiges Element, das sicherungsfähiges Basiselement enthält|Berechtigung für sicherungsfähiges Containerelement mit spezifischer Berechtigung für sicherungsfähiges Basiselement|  
@@ -361,7 +361,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> Zusammenfassung des Algorithmus zur Berechtigungsprüfung  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Zusammenfassung des Algorithmus zur Berechtigungsprüfung  
  Die Prüfung von Berechtigungen kann sehr komplex sein. Der Algorithmus für die Berechtigungsprüfung umfasst überlappende Gruppenmitgliedschaften und Besitzverkettung, explizite und implizite Berechtigungen und kann von den Berechtigungen für sicherungsfähige Klassen, in denen die sicherungsfähige Entität enthalten ist, beeinflusst werden. Die allgemeine Vorgehensweise des Algorithmus besteht darin, alle relevanten Berechtigungen zu sammeln. Wenn keine blockierende DENY-Anweisung gefunden wird, sucht der Algorithmus nach einer GRANT-Anweisung mit ausreichenden Zugriffsberechtigungen. Der Algorithmus enthält drei wesentliche Elemente, den **Sicherheitskontext**, den **Berechtigungsbereich**und die **erforderlichen Berechtigung**.  
   
 > [!NOTE]  
@@ -423,7 +423,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Ein DENY auf der Tabelle wird mit einem GRANT auf einer Spalte überschrieben. Ein nachfolgendes DENY auf der Tabelle entfernt jedoch das GRANT auf der Spalte. 
   
-##  <a name="_examples"></a> Beispiele  
+##  <a name="examples"></a><a name="_examples"></a> Beispiele  
  In den Beispielen dieses Abschnitts wird veranschaulicht, wie Berechtigungsinformationen abgerufen werden.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Zurückgeben der vollständigen Liste erteilbarer Berechtigungen  
