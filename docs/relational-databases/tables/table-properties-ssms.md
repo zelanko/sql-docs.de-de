@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905952"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -39,7 +39,7 @@ ms.locfileid: "72905952"
   
 4.  [Seite "Speicher"](#Storage)  
 
-##  <a name="GeneralPage"></a> Seite Allgemein  
+##  <a name="general-page"></a><a name="GeneralPage"></a> Seite Allgemein  
  **Datenbank**  
  Name der Datenbank, die diese Tabelle enthält.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72905952"
  **Die Tabelle ist repliziert**  
  Gibt an, ob die Tabelle mit der Replikationsfunktion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere Datenbank repliziert wurde. Mögliche Werte sind **True** und **False**.  
   
-##  <a name="ChangeTracking"></a> Seite "Änderungsnachverfolgung"  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> Seite "Änderungsnachverfolgung"  
  **Änderungsnachverfolgung**  
  Gibt an, ob die Änderungsnachverfolgung für die Tabelle aktiviert ist. Der Standardwert ist **False**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72905952"
   
  Weitere Informationen zur Änderungsnachverfolgung finden Sie unter [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
-##  <a name="FileTable"></a> FileTable-Seite  
+##  <a name="filetable-page"></a><a name="FileTable"></a> FileTable-Seite  
  Zeigt die auf FileTables bezogenen Eigenschaften der Tabelle an. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
  **Sortierung der FileTable-Namensspalte**  
@@ -110,7 +110,7 @@ ms.locfileid: "72905952"
  **Aktivierter FileTable-Namespace**  
  Wenn **True**, gibt dieser Wert an, dass die Tabelle eine FileTable ist. Wenn Sie diesen Wert in **False**ändern, ändern Sie die FileTable in eine gewöhnliche Benutzertabelle. Wenn Sie die Tabelle später wieder in eine FileTable ändern möchten, muss die Tabelle eine FileTable-Konsistenzprüfung bestehen, damit die Konvertierung erfolgreich ist.  
   
-##  <a name="Storage"></a> Seite "Speicher"  
+##  <a name="storage-page"></a><a name="Storage"></a> Seite "Speicher"  
  Zeigt die speicherbezogenen Eigenschaften der ausgewählten Tabelle an.  
   
 ### <a name="compression"></a>Komprimierung  

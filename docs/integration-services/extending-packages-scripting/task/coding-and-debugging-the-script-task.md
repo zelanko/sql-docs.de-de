@@ -22,10 +22,10 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a437704946f379f38aa590ccbf53f240fad94cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296918"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codieren und Debuggen des Skripttasks
@@ -210,7 +210,7 @@ To open Help, press F1.
 >  Sie können Projektverweise in der VSTA-IDE in der **Klassenansicht** oder im **Projektexplorer** anzeigen. Diese Fenster öffnen Sie über das Menü **Ansicht**. Einen neuen Verweis können Sie über das Menü **Projekt**, den **Projektexplorer** oder die **Klassenansicht** hinzufügen.  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>Interagieren mit Paketen im Skripttask  
- Ein Skripttask interagiert mit dem entsprechenden Paket und der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Laufzeit über das globale **Dts**-Objekt, eine Instanz der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>-Klasse, und ihre Elemente.  
+ Ein Skripttask interagiert mit dem entsprechenden Paket und der **-Laufzeit über das globale** Dts<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>-Objekt, eine Instanz der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Klasse, und ihre Elemente.  
   
  Die folgende Tabelle enthält die wichtigsten öffentlichen Elemente der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>-Klasse, die für den Skripttaskcode über das globale **Dts**-Objekt verfügbar gemacht wird. In den Themen in diesem Abschnitt wird die Verwendung dieser Elemente detaillierter erläutert.  
   
@@ -226,7 +226,7 @@ To open Help, press F1.
   
  Die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>-Klasse enthält auch einige öffentliche Elemente, die Sie wahrscheinlich nicht verwenden.  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|Die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>-Eigenschaft ermöglicht einen einfacheren Zugriff auf Variablen. Sie können zwar <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A> verwenden, müssen jedoch explizit Methoden aufrufen, um Variablen für das Lesen und Schreiben zu sperren und die Sperre wieder aufzuheben. Der Skripttask erledigt die Sperrsemantik für Sie, wenn Sie die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>-Eigenschaft verwenden.|  
   

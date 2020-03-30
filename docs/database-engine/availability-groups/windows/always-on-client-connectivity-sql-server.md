@@ -15,10 +15,10 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dcff763612b51918eb13336379c01f1c1ac9e108
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822080"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>Unterstützung für Treiber und Clientkonnektivität für Verfügbarkeitsgruppen
@@ -27,7 +27,7 @@ ms.locfileid: "74822080"
   In diesem Thema werden Überlegungen zur Clientkonnektivität für Always On-Verfügbarkeitsgruppen erläutert, einschließlich Voraussetzungen, Einschränkungen und Empfehlungen für Clientkonfigurationen und Einstellungen.  
   
  
-##  <a name="ClientConnSupport"></a> Unterstützung für Clientkonnektivität  
+##  <a name="client-connectivity-support"></a><a name="ClientConnSupport"></a> Unterstützung für Clientkonnektivität  
  Der folgende Abschnitt enthält Informationen zur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Unterstützung für Clientverbindungen.  
   
  **Treiberunterstützung**  
@@ -52,7 +52,7 @@ ms.locfileid: "74822080"
 > [!IMPORTANT]  
 >  Ein Client muss eine TCP-Verbindungszeichenfolge verwenden, um eine Verbindung mit einem Verfügbarkeitsgruppenlistener herzustellen.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   

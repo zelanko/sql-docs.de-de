@@ -18,10 +18,10 @@ ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288494"
 ---
 # <a name="tempdb-database"></a>TempDB-Datenbank
@@ -46,7 +46,7 @@ Die **tempdb**-Systemdatenbank ist eine globale Ressource, die für alle Benutze
   - Zeilenversionen, die von Datenänderungstransaktionen in einer Datenbank generiert werden, die READ COMMITTED mit Zeilenversionsverwaltung oder Transaktionen der Momentaufnahmeisolation verwendet.  
   - Zeilenversionen, die von Datenänderungstransaktionen für Funktionen, wie z. B. Onlineindexvorgänge, Multiple Active Result Sets (MARS) und AFTER-Trigger, generiert wurden.  
   
-Vorgänge innerhalb von **tempdb** werden minimal protokolliert, sodass ein Rollback für Transaktionen ausgeführt werden kann. **tempdb** wird bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu erstellt, sodass das System immer mit einer bereinigten Kopie der Datenbank startet. Temporäre Tabellen und gespeicherte Prozeduren werden beim Trennen der Verbindung automatisch gelöscht; es sind keine Verbindungen aktiv, wenn das System heruntergefahren wird. Daher wird zwischen den einzelnen Sitzungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nichts in **tempdb** gespeichert. Sicherungs- und Wiederherstellungsvorgänge sind in **tempdb** nicht zulässig.  
+Vorgänge innerhalb von **tempdb** werden minimal protokolliert, sodass ein Rollback für Transaktionen ausgeführt werden kann. **tempdb** wird bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu erstellt, sodass das System immer mit einer bereinigten Kopie der Datenbank startet. Temporäre Tabellen und gespeicherte Prozeduren werden beim Trennen der Verbindung automatisch gelöscht; es sind keine Verbindungen aktiv, wenn das System heruntergefahren wird. Daher wird zwischen den einzelnen Sitzungen von **nichts in**tempdb[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert. Sicherungs- und Wiederherstellungsvorgänge sind in **tempdb** nicht zulässig.  
 
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>Physische Eigenschaften von tempdb in SQL Server
 
@@ -264,7 +264,7 @@ Mit dem folgenden T-SQL-Befehl können Sie überprüfen, ob TempDB speicheroptim
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
 
-Wenn nach dem Aktivieren von speicheroptimierten TempDB-Metadaten aus irgendeinem Grund ein Fehler beim Starten des Servers auftritt, können Sie die Funktion umgehen, indem Sie SQL Server mithilfe der Startoption **-f** in der [Minimalkonfiguration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) starten. Dadurch können Sie die Funktion deaktivieren und SQL Server anschließend im normalen Modus neu starten.
+Wenn nach dem Aktivieren von speicheroptimierten TempDB-Metadaten aus irgendeinem Grund ein Fehler beim Starten des Servers auftritt, können Sie die Funktion umgehen, indem Sie SQL Server mithilfe der Startoption [-f](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) in der **Minimalkonfiguration** starten. Dadurch können Sie die Funktion deaktivieren und SQL Server anschließend im normalen Modus neu starten.
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Kapazitätsplanung für tempdb in SQL Server
 Das Festlegen der angemessenen Größe von tempdb in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Produktionsumgebung hängt von vielen Faktoren ab. Wie bereits zuvor in diesem Artikel beschrieben, schließen diese Faktoren die vorhandene Workload und die verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen ein. Es wird empfohlen, die vorhandene Workload durch Ausführen folgender Aufgaben in einer SQL Server-Testumgebung zu analysieren:

@@ -16,10 +16,10 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 88c43b8d37861e52b5bda5afc0a38753f2b70d6e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321827"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern
@@ -52,13 +52,13 @@ Wenn parametrisierte Zeilenfilter in Mergeveröffentlichungen verwendet werden, 
  Der Momentaufnahme-Agent erstellt für jede Partition Momentaufnahmen. Der Agent wird für vorab generierte Momentaufnahmen und Momentaufnahmen ausgeführt, die vom Abonnenten angefordert werden. Er stellt Verbindungen mit den Anmeldeinformationen her, die beim Erstellen des Auftrags des Momentaufnahme-Agents für die Veröffentlichung angegeben wurden (der Auftrag wird vom Assistenten für neue Veröffentlichung oder von **sp_addpublication_snapshot**erstellt.) Verwenden Sie **sp_changedynamicsnapshot_job**zum Ändern der Anmeldeinformationen. Weitere Informationen finden Sie unter [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  
 
   
-##  <a name="Recommendations"></a> Empfehlungen  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Zur Erstellung einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern müssen Sie zunächst eine Standardmomentaufnahme (Schemamomentaufnahme) erstellen, die alle veröffentlichten Daten und die Abonnentenmetadaten für das Abonnement enthält. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). Nachdem Sie die Schemamomentaufnahme erstellt haben, können Sie den Teil der Momentaufnahme generieren, der die abonnentenspezifische Partition der veröffentlichten Daten enthält.  
   
 -   Wenn das Filtern nach einem oder mehreren Artikeln in der Veröffentlichung nicht überlappende Partitionen ergibt, die für jedes Abonnement eindeutig sind, wird für Metadaten bei jedem Ausführen des Merge-Agents einen Cleanup ausgeführt. Das bedeutet, dass die partitionierte Momentaufnahme schneller abläuft. Bei dieser Methode sollten Sie zulassen, dass Abonnenten das Generieren und Übermitteln von Momentaufnahmen einleiten. 
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Sie können Momentaufnahmen für Partitionen im Dialogfeld **Veröffentlichungseigenschaften -** Veröffentlichung> **auf der Seite \<Datenpartitionen** generieren. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Sie können zulassen, dass Abonnenten die Momentaufnahmegenerierung und -übermittlung starten bzw. Momentaufnahmen generieren.  
   
  Vor der Generierung von Momentaufnahmen für eine oder mehrere Partitionen müssen Sie folgende Aktionen ausführen:  
@@ -103,7 +103,7 @@ Wenn parametrisierte Zeilenfilter in Mergeveröffentlichungen verwendet werden, 
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Mithilfe von gespeicherten Prozeduren und dem Momentaufnahme-Agent können Sie folgende Aktionen durchführen:  
   
 -   Abonnenten das Anfordern der Momentaufnahmegenerierung und -anwendung beim erstmaligen Synchronisieren ermöglichen.  
@@ -200,7 +200,7 @@ Wenn parametrisierte Zeilenfilter in Mergeveröffentlichungen verwendet werden, 
 > [!NOTE]  
 >  Weitere Informationen zur Programmierung von Replikations-Agents finden Sie unter [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  In diesem Beispiel wird eine Mergeveröffentlichung mit parametrisierten Filtern erstellt, bei der die Abonnenten den Momentaufnahmegenerierungsprozess initiieren. Die Werte für **\@job_login** und **\@job_password** werden mithilfe von Skriptvariablen übergeben.  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_1.sql)]  
@@ -272,7 +272,7 @@ PAUSE
   
 ```  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Sie können Replikationsverwaltungsobjekte (RMO) verwenden, um partitionierte Momentaufnahmen mit einem der folgenden Verfahren programmgesteuert zu generieren:  
   
 -   Abonnenten das Anfordern der Momentaufnahmegenerierung und -anwendung beim erstmaligen Synchronisieren ermöglichen.  
@@ -401,7 +401,7 @@ PAUSE
   
 8.  Wiederholen Sie die Schritte 4 - 7 für jeden Abonnenten.  
   
-###  <a name="PShellExample"></a> Beispiele (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Beispiele (RMO)  
  In diesem Beispiel wird eine Mergeveröffentlichung erstellt, die es Abonnenten ermöglicht, die Momentaufnahmegenerierung anzufordern.  
   
  [!code-cs[HowTo#rmo_CreateMergePub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepub)]  

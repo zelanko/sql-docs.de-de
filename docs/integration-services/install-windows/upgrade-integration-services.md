@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68262794"
 ---
 # <a name="upgrade-integration-services"></a>Upgrade von Integration Services
@@ -69,7 +69,7 @@ ms.locfileid: "68262794"
   
  Beim Upgrade können Sie sowohl [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] als auch [!INCLUDE[ssDE](../../includes/ssde-md.md)], nur [!INCLUDE[ssDE](../../includes/ssde-md.md)]oder nur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]aktualisieren. Wenn Sie nur [!INCLUDE[ssDE](../../includes/ssde-md.md)]aktualisieren, bleibt [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] oder höher funktionsbereit, Sie verfügen jedoch nicht über die Funktionalität von [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]. Wenn Sie nur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]aktualisieren, ist [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] voll funktionsbereit, kann jedoch nur Pakete im Dateisystem speichern, es sei denn, auf einem anderen Computer ist eine Instanz von [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] verfügbar.  
   
-## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Aktualisieren von Integration Services und Datenbank-Engine auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-both-integration-services-and-the-database-engine-to-sscurrent"></a>Aktualisieren von Integration Services und Datenbank-Engine auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  In diesem Abschnitt werden die Auswirkungen eines Upgrades mit folgenden Kriterien beschrieben:  
   
 -   Sie aktualisieren sowohl [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] als auch eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -129,7 +129,7 @@ ms.locfileid: "68262794"
   
 -   Bei einer Upgradeinstallation wird [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] standardmäßig so konfiguriert, dass Ereignisse im Zusammenhang mit der Ausführung von Paketen im Anwendungsereignisprotokoll protokolliert werden. Diese Einstellung generiert möglicherweise zu viele Ereignisprotokolleinträge, wenn Sie die Datensammler-Funktion von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]verwenden. Zu den protokollierten Ereignissen gehören EventID 12288 "Paket wurde gestartet" und EventID 12289 "Paket wurde erfolgreich beendet". Um diese beiden Ereignisse nicht mehr im Anwendungsereignisprotokoll zu protokollieren, öffnen Sie die Registrierung zum Bearbeiten. Suchen Sie anschließend in der Registrierung den Knoten „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS“, und ändern Sie den Wert DWORD der Einstellung LogPackageExecutionToEventLog von 1 auf 0.  
   
-## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Upgrade ausschließlich der Datenbank-Engine auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-only-the-database-engine-to-sscurrent"></a>Upgrade ausschließlich der Datenbank-Engine auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  In diesem Abschnitt werden die Auswirkungen eines Upgrades mit folgenden Kriterien beschrieben:  
   
 -   Sie aktualisieren nur eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Das heißt, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz ist nun eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], doch die Instanz von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und die Clienttools stammen aus [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]bzw. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

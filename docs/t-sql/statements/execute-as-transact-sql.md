@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287837"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
@@ -109,7 +109,7 @@ Bei Verwendung außerhalb eines Moduls weist die Anweisung keine Aktion auf.
   
 Sie können einen Ausführungskontextstapel erstellen, indem Sie die EXECUTE AS-Anweisung mehrmals für mehrere Prinzipale aufrufen. Bei Aufruf wechselt die REVERT-Anweisung den Kontext zu dem Anmelde- oder Benutzernamen in der nächsten Ebene des Kontextstapels. Eine Demonstration dieses Verhaltens finden Sie unter [Beispiel A](#_exampleA).  
   
-##  <a name="_user"></a> Angeben eines Benutzer- oder Anmeldenamens  
+##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Angeben eines Benutzer- oder Anmeldenamens  
  Der in EXECUTE AS \<context_specification> angegebene Benutzer- oder Anmeldename muss als Prinzipal entsprechend in **sys.database_principals** oder **sys.server_principals** vorhanden sein. Andernfalls schlägt die EXECUTE AS-Anweisung fehl. Zudem müssen für den Prinzipal IMPERSONATE-Berechtigungen erteilt worden sein. Falls der Aufrufer nicht der Datenbankbesitzer oder ein Mitglied der festen Serverrolle **sysadmin** ist, muss der Prinzipal auch dann vorhanden sein, wenn der Benutzer als Windows-Gruppenmitglied auf die Datenbank oder Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreift. Stellen Sie sich z. B. folgende Bedingungen vor: 
   
 -   Die **CompanyDomain\SQLUsers**-Gruppe verfügt über Zugriff auf die **Sales**-Datenbank.  
@@ -141,7 +141,7 @@ Wenn der Benutzer verwaist ist (der zugeordnete Anmeldename ist nicht mehr vorha
   
 ## <a name="examples"></a>Beispiele  
   
-###  <a name="_exampleA"></a> A. Verwenden von EXECUTE AS und REVERT zum Wechseln des Kontexts  
+###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. Verwenden von EXECUTE AS und REVERT zum Wechseln des Kontexts  
  Im folgenden Beispiel wird ein Kontextausführungsstapel mit mehreren Prinzipalen erstellt. Mit der `REVERT`-Anweisung wird der Ausführungskontext anschließend auf den vorherigen Aufrufer zurückgesetzt. Die `REVERT`-Anweisung wird mehrmals ausgeführt und bewegt sich so durch den Stapel, bis der Ausführungskontext wieder auf den ursprünglichen Aufrufer festgelegt ist.  
   
 ```  

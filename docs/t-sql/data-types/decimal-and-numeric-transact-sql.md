@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71682100"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal und numeric (Transact-SQL)
@@ -65,7 +65,7 @@ In [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen wird eine Konstante m
   
 Wenn Sie eine Konvertierung von **decimal** oder **numeric** in **float** oder **real** vornehmen, kann ein gewisses Maß an Genauigkeit verloren gehen. Wenn Sie eine Konvertierung von **int**, **smallint**, **tinyint**, **float**, **real**, **money** oder **smallmoney** in **decimal** oder **numeric** vornehmen, kann es zu einem Überlauf kommen.
   
-Bei der Konvertierung einer Zahl in einen Wert des Typs **decimal** oder **numeric** mit einer geringeren Genauigkeit und einer geringeren Anzahl von Dezimalstellen wird der Wert standardmäßig von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerundet. Wenn allerdings die Option SET ARITHABORT auf ON festgelegt ist, löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei Auftreten eines Überlaufs einen Fehler aus. Eine Verringerung der Genauigkeit und der Anzahl von Dezimalstellen reicht zum Auslösen eines Fehlers nicht aus.
+Bei der Konvertierung einer Zahl in einen Wert des Typs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]decimal**oder**numeric**mit einer geringeren Genauigkeit und einer geringeren Anzahl von Dezimalstellen wird der Wert standardmäßig von** gerundet. Wenn allerdings die Option SET ARITHABORT auf ON festgelegt ist, löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei Auftreten eines Überlaufs einen Fehler aus. Eine Verringerung der Genauigkeit und der Anzahl von Dezimalstellen reicht zum Auslösen eines Fehlers nicht aus.
   
 Vor [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] ist die Konvertierung von **float**-Werten in **decimal**- oder **numeric**-Werte auf Werte mit einer Genauigkeit von 17 Stellen beschränkt. Jeder **float**-Wert kleiner als 5E-18 (der entweder in der wissenschaftlichen Schreibweise als 5E-18 oder in der Dezimalschreibweise als 0,0000000000000000050000000000000005 festgelegt ist) wird auf 0 (null) abgerundet. Dies stellt ab [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] keine Einschränkung mehr dar.
   

@@ -16,10 +16,10 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79375557"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server-Browserdienst (Datenbank-Engine und SSAS)
@@ -126,7 +126,7 @@ ms.locfileid: "79375557"
  Bei ausgeblendeten Instanzen handelt es sich um Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die nur Verbindungen im freigegebenen Speicherbereich unterstützen. Legen Sie für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]das Flag `HideInstance` fest, um anzugeben, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser nicht mit Informationen zu dieser Serverinstanz reagieren soll.  
   
 ### <a name="using-a-firewall"></a>Verwenden einer Firewall  
- Für die Kommunikation mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst auf einem Server, auf dem eine Firewall verwendet wird, öffnen Sie neben dem von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendeten Port (z. B. 1433) den UDP-Port 1434. Informationen zum Arbeiten mit einer Firewall finden Sie unter „Gewusst wie: Konfigurieren einer Firewall für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zugriff“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+ Für die Kommunikation mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst auf einem Server, auf dem eine Firewall verwendet wird, öffnen Sie neben dem von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendeten Port (z. B. 1433) den UDP-Port 1434. Informationen zum Umgang mit einer Firewall finden Sie unter "Vorgehensweise: Konfigurieren einer Firewall für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zugriff" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Netzwerkprotokolle und Netzwerkbibliotheken](../../sql-server/install/network-protocols-and-network-libraries.md)  

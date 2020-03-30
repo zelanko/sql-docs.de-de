@@ -27,10 +27,10 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77179281"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
@@ -43,7 +43,7 @@ Jede Datenbank weist einen Zähler auf, der für jeden Einfüge- oder Updatevorg
   
 **timestamp** ist das Synonym für den **rowversion**-Datentyp und unterliegt der Verhaltensweise von Datentypsynonymen. Verwenden Sie in DDL-Anweisungen nach Möglichkeit stets **rowversion** anstelle von **timestamp**. Weitere Informationen finden Sie unter [Data Type Synonyms &#40;Transact-SQL&#41; (Synonyme für Datentypen &#40;Transact-SQL&#41;)](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
-Der **timestamp**-Datentyp von [!INCLUDE[tsql](../../includes/tsql-md.md)] unterscheidet sich vom **timestamp**-Datentyp, der im ISO-Standard definiert ist.
+Der [!INCLUDE[tsql](../../includes/tsql-md.md)]timestamp **-Datentyp von**  unterscheidet sich vom **timestamp**-Datentyp, der im ISO-Standard definiert ist.
   
 > [!NOTE]  
 >  Die **timestamp**-Syntax ist veraltet. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-Anschließend können Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Beispielanweisungen verwenden, um während des Updates eine Steuerung durch vollständige Parallelität in der `MyTest`-Tabelle zu implementieren. Das Skript nutzt `<myRv>`, um den **rowversion**-Wert darzustellen, zu dem Sie die Zeile zuletzt gelesen haben. Ersetzen Sie den Wert durch den tatsächlichen **rowversion**-Wert. `0x00000000000007D3` ist ein Beispiel für einen tatsächlichen **rowversion**-Wert.
+Anschließend können Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Beispielanweisungen verwenden, um während des Updates eine Steuerung durch vollständige Parallelität in der `MyTest`-Tabelle zu implementieren. Das Skript nutzt `<myRv>`, um den **rowversion**-Wert darzustellen, zu dem Sie die Zeile zuletzt gelesen haben. Ersetzen Sie den Wert durch den tatsächlichen **rowversion**-Wert. **ist ein Beispiel für einen tatsächlichen**rowversion`0x00000000000007D3`-Wert.
   
 ```sql
 DECLARE @t TABLE (myKey int);  

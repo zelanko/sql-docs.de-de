@@ -18,10 +18,10 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822402"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Auslagern von schreibgeschützten Arbeitsauslastungen auf ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe
@@ -36,7 +36,7 @@ ms.locfileid: "74822402"
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt auch das Umleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge an ein lesbares sekundäres Replikat (*schreibgeschütztes Routing*). Weitere Informationen zum schreibgeschützten Routing finden Sie unter [Verwenden eines Listeners zum Herstellen einer Verbindung mit einem schreibgeschützten sekundären Replikat (schreibgeschütztes Routing)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary).  
   
-##  <a name="bkmk_Benefits"></a> Vorteile  
+##  <a name="benefits"></a><a name="bkmk_Benefits"></a> Vorteile  
  Die Weiterleitung schreibgeschützter Verbindungen an lesbare sekundäre Replikate bietet die folgenden Vorteile:  
   
 -   Entlastet das primäre Replikat von sekundären schreibgeschützten Arbeitsauslastungen, wodurch dessen Ressourcen für unternehmenswichtige Arbeitsauslastungen zur Verfügung stehen. Unternehmenswichtige Lesearbeitsauslastungen oder Arbeitsauslastungen, die keine Latenzen tolerieren, sollten auf dem primären Replikat ausgeführt werden.  
@@ -53,7 +53,7 @@ ms.locfileid: "74822402"
   
 -   DML-Vorgänge sind für Tabellenvariablen datenträgerbasierter und speicheroptimierter Tabellentypen auf dem sekundären Replikat zulässig.  
   
-##  <a name="bkmk_Prerequisites"></a> Voraussetzungen für die Verfügbarkeitsgruppe  
+##  <a name="prerequisites-for-the-availability-group"></a><a name="bkmk_Prerequisites"></a> Voraussetzungen für die Verfügbarkeitsgruppe  
   
 -   **Lesbare sekundäre Replikate (erforderlich)**  
   
@@ -84,7 +84,7 @@ ms.locfileid: "74822402"
 > [!NOTE]  
 >  Weitere Informationen zu Verfügbarkeitsgruppenlistenern und zum schreibgeschützten Routing finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)besitzen.  
   
-##  <a name="bkmk_LimitationsRestrictions"></a> Einschränkungen  
+##  <a name="limitations-and-restrictions"></a><a name="bkmk_LimitationsRestrictions"></a> Einschränkungen  
  Folgende Vorgänge werden nicht vollständig unterstützt:  
   
 -   Sobald für ein lesbares Replikat der Lesezugriff aktiviert ist, können Verbindungsanforderungen für die sekundären Datenbanken angenommen werden. Wenn in einer primären Datenbank jedoch aktive Transaktionen vorhanden sind, sind die Zeilenversionen in der entsprechenden sekundären Datenbank nicht vollständig verfügbar. Für jegliche aktiven Transaktionen, die bei der Konfiguration des sekundären Replikats auf dem primären Replikat vorhanden waren, muss ein Commit oder ein Rollback durchgeführt werden. Bis dieser Prozess abgeschlossen ist, ist die Zuordnung der Transaktionsisolationsstufe auf der sekundären Datenbank unvollständig, und Abfragen werden vorübergehend blockiert.  
@@ -109,7 +109,7 @@ ms.locfileid: "74822402"
 > [!NOTE]  
 >  Wenn Sie die dynamische Verwaltungssicht [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) auf einer Serverinstanz abfragen, die ein lesbares sekundäres Replikat hostet, kann ein REDO-Blockierungsproblem auftreten. Dies kommt daher, dass diese dynamische Verwaltungssicht eine IS-Sperre für die angegebene Benutzertabelle oder Sicht erhält, die Anforderungen von einem REDO-Thread für eine X-Sperre dieser Benutzertabelle oder Sicht blockieren kann.  
   
-##  <a name="bkmk_Performance"></a> Leistungsaspekte  
+##  <a name="performance-considerations"></a><a name="bkmk_Performance"></a> Leistungsaspekte  
  In diesem Abschnitt werden mehrere Überlegungen zur Leistung für lesbare sekundäre Datenbanken erläutert.  
   
  **In diesem Abschnitt:**  
@@ -122,17 +122,17 @@ ms.locfileid: "74822402"
   
 -   [Statistiken für Datenbanken mit schreibgeschütztem Zugriff](#Read-OnlyStats)  
   
-###  <a name="DataLatency"></a> Datenlatenz  
+###  <a name="data-latency"></a><a name="DataLatency"></a> Datenlatenz  
  Das Implementieren von schreibgeschütztem Zugriff auf sekundäre Replikate ist hilfreich, sofern Ihre schreibgeschützten Arbeitsauslastungen eine gewisse Datenlatenz tolerieren können. Führen Sie in Situationen mit inakzeptabler Datenlatenz ggf. schreibgeschützte Arbeitsauslastungen für das primäre Replikat aus.  
   
  Vom primären Replikat werden Protokolldatensätze der Änderungen in der primären Datenbank an die sekundären Replikate gesendet. In der jeweiligen sekundären Datenbank werden die Protokolldatensätze von einem dedizierten REDO-Thread angewendet. In einer schreibgeschützten sekundären Datenbank erscheint eine angegebene Datenänderung erst in den Abfrageergebnissen, wenn der Protokolldatensatz, der die Änderung enthält, auf die sekundäre Datenbank angewendet und für die Transaktion in der primären Datenbank ein Commit ausgeführt wurde.  
   
  Dies weist auf eine gewisse Latenz zwischen den primären und sekundären Replikaten hin, wobei es sich in der Regel nur um wenige Sekunden handelt. In außergewöhnlichen Fällen, beispielsweise bei Netzwerkproblemen, die den Durchsatz reduzieren, kann die Latenz jedoch signifikant werden. Die Latenz nimmt bei E/A-Engpässen und bei angehaltener Datenverschiebung zu. Zur Überwachung einer angehaltenen Datenverschiebung können Sie das [AlwaysOn-Dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) oder die dynamische Verwaltungssicht [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) verwenden.  
   
-####  <a name="bkmk_LatencyWithInMemOLTP"></a> Datenlatenz bei Datenbanken mit speicheroptimierten Tabellen  
+####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> Datenlatenz bei Datenbanken mit speicheroptimierten Tabellen  
  In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] galten besondere Überlegungen zur Datenlatenz für aktive sekundäre Replikate. Informationen dazu finden Sie unter [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Aktive sekundäre Replikate: Lesbare sekundäre Replikate](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). Ab [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] gelten keine Besonderheiten mehr bezüglich der Datenlatenz für speicheroptimierte Tabellen. Die erwartete Datenlatenz für speicheroptimierte Tabellen ist mit der Latenz für datenträgerbasierte Tabellen vergleichbar.  
   
-###  <a name="ReadOnlyWorkloadImpact"></a> Auswirkungen auf schreibgeschützte Arbeitsauslastungen  
+###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> Auswirkungen auf schreibgeschützte Arbeitsauslastungen  
  Wenn Sie ein sekundäres Replikat für schreibgeschützten Zugriff konfigurieren, belegen die schreibgeschützten Arbeitsauslastungen in den sekundären Datenbanken Systemressourcen, z. B. CPU und E/A-Vorgänge (für datenträgerbasierte Tabellen) aus REDO-Threads, insbesondere wenn die schreibgeschützten Arbeitsauslastungen für datenträgerbasierte Tabellen äußerst E/A-intensiv sind. Der Zugriff auf speicheroptimierte Tabellen hat keine Auswirkungen auf die E/A-Leistung, weil alle Zeilen im Arbeitsspeicher enthalten sind.  
   
  Schreibgeschützte Arbeitsauslastungen auf den sekundären Replikaten können zudem Änderungen der Datendefinitionssprache (DDL) blockieren, die durch Protokolldatensätze angewendet werden.  
@@ -146,12 +146,12 @@ ms.locfileid: "74822402"
 > [!NOTE]  
 >  Wird ein REDO-Thread von Abfragen auf dem sekundären Replikat blockiert, wird das XEvent **sqlserver.lock_redo_blocked** ausgelöst.  
   
-###  <a name="bkmk_Indexing"></a> Indizierung  
+###  <a name="indexing"></a><a name="bkmk_Indexing"></a> Indizierung  
  Um schreibgeschützte Arbeitsauslastungen auf den lesbaren sekundären Replikaten zu optimieren, können Sie ggf. Indizes in den Tabellen der sekundären Datenbanken erstellen. Da Sie keine Schema- oder Datenänderungen auf den sekundären Datenbanken vornehmen können, erstellen Sie Indizes in den primären Datenbanken, und lassen Sie die Übertragung der Änderungen auf die sekundäre Datenbank mittels REDO-Prozess zu.  
   
  Zur Überwachung der Indexverwendung auf einem sekundären Replikat fragen Sie die Spalten **user_seeks**, **user_scans**und **user_lookups** der dynamischen Verwaltungssicht [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) ab.  
   
-###  <a name="Read-OnlyStats"></a> Statistiken für Datenbanken mit schreibgeschütztem Zugriff  
+###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> Statistiken für Datenbanken mit schreibgeschütztem Zugriff  
  Statistiken zu Spalten von Tabellen und indizierten Sichten werden verwendet, um Abfragepläne zu optimieren. Bei Verfügbarkeitsgruppen werden Statistiken, die in den primären Datenbanken erstellt und verwaltet werden, automatisch in den sekundären Datenbanken beibehalten, wenn die Transaktionsprotokoll-Datensätze angewendet werden. Für die schreibgeschützte Arbeitsauslastung in den sekundären Datenbanken sind jedoch möglicherweise andere Statistiken als die erforderlich, die in den primären Datenbanken erstellt werden. Da sekundäre Datenbanken jedoch auf schreibgeschützten Zugriff beschränkt sind, können für die sekundären Datenbanken keine Statistiken erstellt werden.  
   
  Zur Behebung dieses Problems erstellt und verwaltet das sekundäre Replikat temporäre Statistiken für sekundäre Datenbanken in **tempdb**. Das Suffix „_readonly_database_statistic“ wird an den Namen temporärer Statistiken angefügt, um die temporären Statistiken von den dauerhaften Statistiken zu unterscheiden, die von der primären Datenbank beibehalten werden.  
@@ -172,20 +172,20 @@ ms.locfileid: "74822402"
   
 -   [Einschränkungen](#StatsLimitationsRestrictions)  
   
-####  <a name="StalePermStats"></a> Veraltete dauerhafte Statistiken in sekundären Datenbanken  
+####  <a name="stale-permanent-statistics-on-secondary-databases"></a><a name="StalePermStats"></a> Veraltete dauerhafte Statistiken in sekundären Datenbanken  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erkennt, wenn dauerhafte Statistiken in einer sekundären Datenbank veraltet sind. Änderungen an den dauerhaften Statistiken können aber nur durch Änderungen an der primären Datenbank vorgenommen werden. Zur Abfrageoptimierung erstellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] temporäre Statistiken für datenträgerbasierte Tabellen in der sekundären Datenbank und verwendet diese Statistiken anstelle der veralteten dauerhaften Statistiken.  
   
  Wenn die dauerhaften Statistiken in der primären Datenbank aktualisiert werden, werden sie automatisch in der sekundären Datenbank dauerhaft gespeichert. Dann verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die aktualisierten dauerhaften Statistiken, die aktueller als die temporären Statistiken sind.  
   
  Wenn die Verfügbarkeitsgruppe ein Failover ausführt, werden temporäre Statistiken auf allen sekundären Replikaten gelöscht.  
   
-####  <a name="StatsLimitationsRestrictions"></a> Einschränkungen  
+####  <a name="limitations-and-restrictions"></a><a name="StatsLimitationsRestrictions"></a> Einschränkungen  
   
 -   Da temporäre Statistiken in **tempdb**gespeichert werden, werden durch einen Neustart des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Diensts alle temporären Statistiken entfernt.  
   
 -   Das Suffix „_readonly_database_statistic“ ist für von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]generierte Statistiken reserviert. Sie können dieses Suffix nicht verwenden, wenn Sie Statistiken in einer primären Datenbank erstellen. Weitere Informationen finden Sie unter [Verwalten von Statistiken für Tabellen in SQL Data Warehouse](../../../relational-databases/statistics/statistics.md).  
   
-##  <a name="bkmk_AccessInMemTables"></a> Zugreifen auf speicheroptimierte Tabellen auf einem sekundären Replikat  
+##  <a name="accessing-memory-optimized-tables-on-a-secondary-replica"></a><a name="bkmk_AccessInMemTables"></a> Zugreifen auf speicheroptimierte Tabellen auf einem sekundären Replikat  
  Mit speicheroptimierten Tabellen können für primäre und sekundäre Replikate dieselben Transaktionsisolationsstufen verwendet werden. Es wird empfohlen, die Isolationsstufe auf Sitzungsebene auf READ COMMITTED und die Datenbankebenenoption auf MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON festzulegen. Beispiel:  
   
 ```sql  
@@ -199,7 +199,7 @@ GO
   
 ```  
   
-##  <a name="bkmk_CapacityPlanning"></a> Aspekte der Kapazitätsplanung  
+##  <a name="capacity-planning-considerations"></a><a name="bkmk_CapacityPlanning"></a> Aspekte der Kapazitätsplanung  
   
 -   Bei datenträgerbasierten Tabellen können lesbare sekundäre Replikate aus zwei Gründen Speicherplatz in **tempdb** beanspruchen:  
   
@@ -220,7 +220,7 @@ GO
     |Ja|Nein|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
     |Ja|Ja|Zeilenversionen und 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
   
-##  <a name="bkmk_RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="bkmk_RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -234,7 +234,7 @@ GO
   
 -   [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   [SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

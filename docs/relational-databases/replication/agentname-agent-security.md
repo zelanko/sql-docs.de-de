@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 039ec0c4401bc9748e1fa04fe89bcb69f055270c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76288160"
 ---
 # <a name="ltagentnamegt-agent-security"></a>&lt;AgentName&gt;-Agent-Sicherheit
@@ -35,23 +35,23 @@ ms.locfileid: "76288160"
  **Verbindung mit Verteiler**  
  Wird bei der Transaktions- und Momentaufnahmereplikation angezeigt. Der Kontext, unter dem die Verbindung mit dem Verteiler hergestellt wird. Lokale Verbindungen werden immer unter dem Kontext des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Kontos hergestellt, das zum Ausführen der Agents verwendet wird:  
   
--   Bei Pushabonnements ist die lokale Verbindung diejenige mit dem Verteiler. Daher wird in diesem Feld immer Folgendes angezeigt: **Impersonate '\<Domain>\\<Login\>'** (Folgende Identität annehmen: „<Domain>\<Anmeldename>“) oder **Impersonate '\<Computer>\\<Login\>'** (Folgende Identität annehmen: „<Computer>\<Anmeldename>“) für Pushabonnements.  
+-   Bei Pushabonnements ist die lokale Verbindung die Verbindung mit dem Verteiler, deshalb wird dieses Feld immer **Impersonate '\<Domain>\\<Login\>'** oder **Impersonate '\<Computer>\\<Login\>'** für Pushabonnements anzeigen.  
   
--   Bei Pullabonnements kann die Verbindung auch unter dem Kontext einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung hergestellt werden. In dem Feld wird eine der folgenden Optionen angezeigt: **Use login '\<Login>'** (Anmeldename verwenden: „<Anmeldename>“), **Impersonate '\<Domain>\\<Login\>'** (Folgende Identität annehmen: „<Domain>\<Anmeldename>“) oder **Impersonate '\<Computer>\\<Login\>'** (Folgende Identität annehmen: <Computer>\<Anmeldename>)“. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, alle Verbindungen unter dem Kontext des Windows-Kontos herzustellen.  
+-   Bei Pullabonnements kann die Verbindung auch unter dem Kontext einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung hergestellt werden. Das Feld zeigt eine der folgenden Angaben **Use login '\<Login>'** , **Impersonate '\<Domain>\\<Login\>'** oder **Impersonate '\<Computer>\\<Login\>'** an. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, alle Verbindungen unter dem Kontext des Windows-Kontos herzustellen.  
   
  **Verbindung mit Verleger &Verteiler**  
  Wird bei Mergereplikation angezeigt. Der Kontext, unter dem die Verbindung mit dem Verleger und Verteiler hergestellt wird. Lokale Verbindungen werden immer unter dem Kontext des Windows-Kontos hergestellt, das zum Ausführen der Agents verwendet wird.  
   
--   Bei Pushabonnements ist die lokale Verbindung diejenige mit dem Verleger und Verteiler. Daher wird in diesem Feld immer Folgendes angezeigt: **Impersonate '\<Domain>\\<Login\>'** (Folgende Identität annehmen: „<Domain>\<Anmeldename>“) oder **Impersonate '\<Computer>\\<Login\>'** (Folgende Identität annehmen: „<Computer>\<Anmeldename>“) für Pushabonnements.  
+-   Bei Pushabonnements ist die lokale Verbindung die Verbindung mit dem Verleger und Verteiler, deshalb zeigt dieses Feld immer **Impersonate '\<Domain>\\<Login\>'** oder **Impersonate '\<Computer>\\<Login\>'** für Pushabonnements an.  
   
--   Bei Pullabonnements kann die Verbindung auch unter dem Kontext einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung hergestellt werden. In dem Feld wird eine der folgenden Optionen angezeigt: **Use login '\<Login>'** (Anmeldename verwenden: „<Anmeldename>“), **Impersonate '\<Domain>\\<Login\>'** (Folgende Identität annehmen: „<Domain>\<Anmeldename>“) oder **Impersonate '\<Computer>\\<Login\>'** (Folgende Identität annehmen: <Computer>\<Anmeldename>)“. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, alle Verbindungen unter dem Kontext des Windows-Kontos herzustellen.  
+-   Bei Pullabonnements kann die Verbindung auch unter dem Kontext einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung hergestellt werden. Das Feld zeigt eine der folgenden Angaben **Use login '\<Login>'** , **Impersonate '\<Domain>\\<Login\>'** oder **Impersonate '\<Computer>\\<Login\>'** an. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, alle Verbindungen unter dem Kontext des Windows-Kontos herzustellen.  
   
  **Verbindung mit Abonnent**  
  Der Kontext, unter dem die Verbindung mit dem Abonnenten hergestellt wird. Lokale Verbindungen werden immer unter dem Kontext des Windows-Kontos hergestellt, das zum Ausführen der Agents verwendet wird.  
   
--   Bei Pullabonnements ist die lokale Verbindung diejenige mit dem Abonnenten. Daher wird in diesem Feld immer Folgendes angezeigt: **Impersonate '\<Domain>\\<Login\>'** (Folgende Identität annehmen: „<Domain>\<Anmeldename>“) oder **Impersonate '\<Computer>\\<Login\>'** (Folgende Identität annehmen: „<Computer>\<Anmeldename>“) für Pushabonnements.  
+-   Bei Pullabonnements ist die lokale Verbindung die Verbindung mit dem Abonnenten, deshalb wird dieses Feld immer **Impersonate '\<Domain>\\<Login\>'** oder **Impersonate '\<Computer>\\<Login\>'** für Pushabonnements anzeigen.  
   
--   Bei Pushabonnements kann die Verbindung auch unter dem Kontext einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung hergestellt werden. In dem Feld wird eine der folgenden Optionen angezeigt: **Use login '\<Login>'** (Anmeldename verwenden: „<Anmeldename>“), **Impersonate '\<Domain>\\<Login\>'** (Folgende Identität annehmen: „<Domain>\<Anmeldename>“) oder **Impersonate '\<Computer>\\<Login\>'** (Folgende Identität annehmen: <Computer>\<Anmeldename>)“. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, alle Verbindungen unter dem Kontext des Windows-Kontos herzustellen.  
+-   Bei Pushabonnements kann die Verbindung auch unter dem Kontext einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung hergestellt werden. Das Feld zeigt eine der folgenden Angaben **Use login '\<Login>'** , **Impersonate '\<Domain>\\<Login\>'** oder **Impersonate '\<Computer>\\<Login\>'** an. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, alle Verbindungen unter dem Kontext des Windows-Kontos herzustellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

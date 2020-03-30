@@ -15,10 +15,10 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 57625308d1d8e9fcca375e33c72f4bdbf9ace222
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286994"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Problembehandlung für die AlwaysOn-Verfügbarkeitsgruppenkonfiguration (SQL Server)
@@ -44,10 +44,10 @@ ms.locfileid: "79286994"
 |[Verwandte Aufgaben](#RelatedTasks)|Enthält eine Liste aufgabenbezogener Themen in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Onlinedokumentation, die besonders relevant für die Problembehandlung an einer Verfügbarkeitsgruppenkonfiguration sind.|  
 |[Verwandte Inhalte](#RelatedContent)|Enthält eine Liste von relevanten Ressourcen außerhalb der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation.|  
   
-##  <a name="IsHadrEnabled"></a> AlwaysOn-Verfügbarkeitsgruppen ist nicht aktiviert  
+##  <a name="always-on-availability-groups-is-not-enabled"></a><a name="IsHadrEnabled"></a> AlwaysOn-Verfügbarkeitsgruppen ist nicht aktiviert  
  Die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] muss auf allen Instanzen von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]aktiviert werden. Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
-##  <a name="Accounts"></a> Konten  
+##  <a name="accounts"></a><a name="Accounts"></a> Konten  
  Die Konten, unter denen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, müssen ordnungsgemäß konfiguriert sein.  
   
 1.  Verfügen die Konten über die richtigen Berechtigungen?  
@@ -58,7 +58,7 @@ ms.locfileid: "79286994"
   
 2.  Wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als integriertes Konto, z. B. Lokales System, Lokaler Dienst oder Netzwerkdienst, oder als Nicht-Domänenkonto ausgeführt wird, müssen Sie Zertifikate zur Endpunktauthentifizierung verwenden. Wenn die Dienstkonten Domänenkonten in derselben Domäne verwenden, können Sie CONNECT-Zugriff für jedes Dienstkonto an allen Replikatspeicherorten gewähren oder Zertifikate verwenden. Weitere Informationen finden Sie unter [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt (Transact-SQL)](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a>Endpoints  
+##  <a name="endpoints"></a><a name="Endpoints"></a>Endpoints  
  Endpunkte müssen ordnungsgemäß konfiguriert sein.  
   
 1.  Stellen Sie sicher, dass jede Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die ein Verfügbarkeitsreplikat hosten wird (jeder *Replikatspeicherort*) einen Datenbankspiegelungs-Endpunkt besitzt. Um festzustellen, ob auf einer bestimmten Serverinstanz bereits ein Datenbankspiegelungs-Endpunkt vorhanden ist, verwenden Sie die Katalogsicht [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) . Weitere Informationen finden Sie unter [Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL) (Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL))](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) oder [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections (Transact-SQL) (Ermöglichen des Verwendens von Zertifikaten für ausgehende Verbindungen für einen Datenbankspiegelungs-Endpunkt (Transact-SQL))](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -111,16 +111,16 @@ ms.locfileid: "79286994"
   
     ```  
   
-##  <a name="SystemName"></a> System Name  
+##  <a name="system-name"></a><a name="SystemName"></a> System Name  
  Für den Systemnamen einer Serverinstanz in einer Endpunkt-URL können Sie jeden beliebigen Namen verwenden, der das System eindeutig bezeichnet. Die Serveradresse kann ein Systemname sein (wenn sich die Systeme in derselben Domäne befinden), ein vollqualifizierter Domänenname oder eine IP-Adresse (vorzugsweise eine statische IP-Adresse). Bei Verwendung des vollqualifizierten Domänennamens ist eine problemfreie Funktionsweise sichergestellt. Weitere Informationen finden Sie unter [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)zu unterstützen.  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="network-access"></a><a name="NetworkAccess"></a> Network Access  
  Jeder Serverinstanz, die ein Verfügbarkeitsreplikat hostet, muss der Zugriff auf den Port aller anderen Serverinstanzen über TCP ermöglicht werden. Dies ist insbesondere von Bedeutung, wenn sich die Serverinstanzen in unterschiedlichen Domänen befinden, die sich nicht vertrauen (nicht vertrauenswürdige Domänen).  
   
-##  <a name="Msg1418"></a> Endpunktzugriff (SQL Server-Fehler 1418)  
+##  <a name="endpoint-access-sql-server-error-1418"></a><a name="Msg1418"></a> Endpunktzugriff (SQL Server-Fehler 1418)  
  In dieser Meldung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird angegeben, dass die in der Endpunkt-URL angegebene Servernetzwerkadresse nicht erreicht werden kann oder nicht vorhanden ist. Es wird vorgeschlagen, den Namen der Netzwerkadresse zu überprüfen und den Befehl erneut auszugeben.  
   
-##  <a name="JoinDbFails"></a> Fehler beim Verknüpfen der Datenbank (SQL Server-Fehler 35250)  
+##  <a name="join-database-fails-sql-server-error-35250"></a><a name="JoinDbFails"></a> Fehler beim Verknüpfen der Datenbank (SQL Server-Fehler 35250)  
  Dieser Abschnitt erläutert die möglichen Ursachen und die Lösung des Fehlers beim Verknüpfen von sekundären Datenbanken mit einer Verfügbarkeitsgruppe aufgrund einer inaktiven Verbindung mit dem primären Replikat.  
   
  **Lösung:**  
@@ -129,10 +129,10 @@ ms.locfileid: "79286994"
   
 2.  Überprüfen Sie, ob das Netzwerkdienstkonto über Verbindungsberechtigung für den Endpunkt verfügt.  
   
-##  <a name="ROR"></a> Schreibgeschütztes Routing funktioniert nicht ordnungsgemäß  
+##  <a name="read-only-routing-is-not-working-correctly"></a><a name="ROR"></a> Schreibgeschütztes Routing funktioniert nicht ordnungsgemäß  
  Überprüfen Sie die folgenden Konfigurationswerteinstellungen und korrigieren Sie sie gegebenenfalls.  
   
-||Am...|Aktion|Kommentare|Link|  
+||Am...|Action|Kommentare|Link|  
 |------|---------|------------|--------------|----------|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|dem aktuellen primären Replikat|Stellen Sie sicher, dass der Listener der Verfügbarkeitsgruppe online ist.|**So überprüfen Sie, ob der Listener online ist:**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **So starten Sie einen Offlinelistener neu:**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|dem aktuellen primären Replikat|Stellen Sie sicher, dass READ_ONLY_ROUTING_LIST nur Serverinstanzen enthält, die ein lesbares sekundäres Replikat hosten.|**So identifizieren Sie lesbare sekundäre Replikate:** sys.availability_replicas (Spalte**econdary_role_allow_connections_desc** )<br /><br /> **So zeigen Sie eine schreibgeschützte Routingliste an:** sys.availability_read_only_routing_lists<br /><br /> **So ändern Sie eine schreibgeschützte Routingliste:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
@@ -141,7 +141,7 @@ ms.locfileid: "79286994"
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|jedem Replikat in read_only_routing_list|Stellen Sie sicher, dass die READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*Systemadresse*<strong>:</strong>*Port*) den richtigen vollqualifizierten Domänennamen (FQDN) und die richtige Portnummer enthält.|-|[Berechnen von „read_only_routing_url“ für AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Clientsystem|Überprüfen Sie, ob der Clienttreiber schreibgeschütztes Routing unterstützt.|-|[AlwaysOn-Clientkonnektivität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
@@ -157,13 +157,13 @@ ms.locfileid: "79286994"
   
 -   [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Get-ClusterLog-Failovercluster-Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

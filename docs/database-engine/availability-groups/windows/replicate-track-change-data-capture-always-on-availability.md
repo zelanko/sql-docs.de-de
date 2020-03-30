@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235392"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433757"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replikation, Änderungsnachverfolgung und Change Data Capture (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation, Change Data Capture (CDC) und Änderungsnachverfolgung (CT) werden unter [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützt. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] bietet Hochverfügbarkeit und zusätzliche Funktionen zur Datenbankwiederherstellung.  
   
-##  <a name="Overview"></a> Übersicht über die Replikation in Verfügbarkeitsgruppen  
+##  <a name="overview-of-replication-with-availability-groups"></a><a name="Overview"></a> Übersicht über die Replikation in Verfügbarkeitsgruppen  
   
-###  <a name="PublisherRedirect"></a> Verlegerumleitung  
+###  <a name="publisher-redirection"></a><a name="PublisherRedirect"></a> Verlegerumleitung  
  Wenn eine veröffentlichte Datenbank [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-fähig ist, wird der Verteiler, der den Agentzugriff auf die Veröffentlichungsdatenbank bereitstellt, mit redirected_publishers-Einträgen konfiguriert. Diese Einträge leiten das ursprünglich konfigurierte Verleger-Datenbank-Paar um und nutzen einen Verfügbarkeitsgruppenlistener-Namen zum Herstellen der Verbindung mit dem Verleger und der Veröffentlichungsdatenbank. Für über den Verfügbarkeitsgruppenlistener-Namen hergestellte Verbindungen kann kein Failover ausgeführt werden. Wenn der Replikations-Agent neu gestartet wird, wird die Verbindung nach dem Failover automatisch an das neue primäre Element umgeleitet.  
   
  In einer Verfügbarkeitsgruppe kann eine sekundäre Datenbank nicht als Verleger fungieren. Erneutes Veröffentlichen wird nur unterstützt, wenn Transaktionsreplikation mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]kombiniert wird.  
@@ -39,7 +39,7 @@ ms.locfileid: "75235392"
 > [!NOTE]  
 >  Der Replikationsmonitor kann den Namen der Veröffentlichungsinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nach einem Failover zu einem sekundären Replikat nicht anpassen und zeigt weiterhin Replikationsinformationen unter dem Namen der ursprünglichen primären Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]an. Nach einem Failover kann kein Überwachungstoken mit dem Replikationsmonitor eingegeben werden, ein mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]auf dem neuen Verleger eingegebenes Überwachungstoken wird jedoch im Replikationsmonitor angezeigt.  
   
-###  <a name="Changes"></a> Allgemeine Änderungen an Replikations-Agents zur Unterstützung von Verfügbarkeitsgruppen  
+###  <a name="general-changes-to-replication-agents-to-support-availability-groups"></a><a name="Changes"></a> Allgemeine Änderungen an Replikations-Agents zur Unterstützung von Verfügbarkeitsgruppen  
  Drei Replikations-Agents wurden geändert, um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]zu unterstützen. Die Protokolllese-, Momentaufnahme- und Merge-Agents wurden geändert, um die Verteilungsdatenbank für den umgeleiteten Verleger abzufragen und den zurückgegebenen Verfügbarkeitsgruppenlistener-Namen zu verwenden, wenn ein umgeleiteter Verleger deklariert wurde, um eine Verbindung mit dem Datenbankverleger herzustellen.  
   
  Wenn die Agents den Verteiler abfragen, um zu bestimmen, ob der ursprüngliche Verleger umgeleitet wurde, wird die Eignung des aktuellen Ziels oder der Umleitung standardmäßig überprüft, bevor der umgeleitete Host an den Agent zurückgegeben wird. Dabei handelt es sich um ein empfohlenes Verhalten. Wenn der Agent jedoch sehr häufig gestartet wird, könnte der mit der gespeicherten Überprüfungsprozedur verbundene Arbeitsaufwand als zu kostenintensiv angesehen werden. Der neue Befehlszeilenschalter *BypassPublisherValidation* wurde sowohl dem Protokollleser als auch der Momentaufnahme und den Merge-Agents hinzugefügt. Wenn der Schalter verwendet wird, wird der umgeleitete Verleger sofort an den Agent zurückgegeben, und die Ausführung der überprüfungsgespeicherten Prozedur wird umgangen.  
@@ -59,7 +59,7 @@ ms.locfileid: "75235392"
   
      Das Ablaufverfolgungsflag 1448 aktiviert den Replikationsprotokollleser, sodass er weitergehen kann, auch wenn die asynchronen sekundären Replikate den Empfang einer Änderung nicht bestätigt haben. Auch wenn dieses Ablaufverfolgungsflag aktiviert ist, wartet der Protokollleser immer auf die synchronen sekundären Replikate. Der Protokollleser geht nicht über "min ack" für die synchronen sekundären Replikate hinaus. Dieses Ablaufverfolgungsflag gilt für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]und nicht nur für eine Verfügbarkeitsgruppe, eine Verfügbarkeitsdatenbank oder eine Protokollleserinstanz. Dieses Ablaufverfolgungsflag wird ohne Neustart sofort wirksam. Es kann im Voraus oder beim Fehlschlagen eines asynchronen sekundären Replikats aktiviert werden.  
   
-###  <a name="StoredProcs"></a> Gespeicherte Prozeduren, die Verfügbarkeitsgruppen unterstützen  
+###  <a name="stored-procedures-supporting-availability-groups"></a><a name="StoredProcs"></a> Gespeicherte Prozeduren, die Verfügbarkeitsgruppen unterstützen  
   
 -   **sp_redirect_publisher**  
   
@@ -81,7 +81,7 @@ ms.locfileid: "75235392"
   
      Diese gespeicherte Prozedur wird immer manuell ausgeführt. Der Aufrufer muss entweder **sysadmin** auf dem Verteiler, **dbowner** der Verteilungsdatenbank oder ein Element der **Veröffentlichungszugriffsliste** einer Veröffentlichung der Verlegerdatenbank sein. Außerdem muss die Anmeldung des Aufrufers eine gültige Anmeldung für alle Hosts des Verfügbarkeitsreplikats sein und über SELECT-Privilegien für die der Verlegerdatenbank zugeordnete Verfügbarkeitsdatenbank verfügen.  
   
-###  <a name="CDC"></a> Change Data Capture  
+###  <a name="change-data-capture"></a><a name="CDC"></a> Change Data Capture  
  Für Change Data Capture (CDC) aktivierte Datenbanken können mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nicht nur sicherstellen, dass die Datenbank auch bei einem Fehler verfügbar bleibt, sondern auch, dass Änderungen der Datenbanktabellen weiterhin überwacht und in den CDC-Änderungstabellen abgelegt werden. Die Reihenfolge, in der CDC und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] konfiguriert werden, ist irrelevant. CDC-fähige Datenbanken können [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]hinzugefügt werden, und Datenbanken, die Mitglieder einer Always On-Verfügbarkeitsgruppe sind, können für CDC aktiviert werden. In beiden Fällen wird die CDC-Konfiguration jedoch immer auf dem aktuellen oder vorgesehenen primären Replikat ausgeführt. CDC verwendet den Protokolllese-Agent. Es gelten die gleichen Einschränkungen wie im Abschnitt **Änderungen des Protokolllese-Agents** weiter oben in diesem Thema beschrieben.  
   
 -   **Sammeln von Änderungen für Change Data Capture ohne Replikation**  
@@ -123,7 +123,7 @@ ms.locfileid: "75235392"
   
     -   Im anderen Szenario wird sichergestellt, dass die Verbindungsanforderungen an das schreibgeschützte sekundäre Replikat weitergeleitet werden.  
   
-     Um nach einem schreibgeschützten sekundären Replikat zu suchen, muss für die Verfügbarkeitsgruppe zudem eine Liste für schreibgeschütztes Routing definiert werden. Weitere Informationen zum Routing des Zugriffs auf lesbare sekundäre Replikate finden Sie unter [So konfigurieren Sie Verfügbarkeitsreplikate für das schreibgeschützte Routing](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConfigureARsForROR).  
+     Um nach einem schreibgeschützten sekundären Replikat zu suchen, muss für die Verfügbarkeitsgruppe zudem eine Liste für schreibgeschütztes Routing definiert werden. Weitere Informationen zum Routing des Zugriffs auf lesbare sekundäre Replikate finden Sie unter [So konfigurieren Sie Verfügbarkeitsreplikate für das schreibgeschützte Routing](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
     > [!NOTE]  
     >  Es tritt eine gewisse Weitergabeverzögerung auf, die mit der Erstellung eines Verfügbarkeitsgruppenlistener-Namens und dessen Verwendung von Clientanwendungen verbunden ist, um auf ein Verfügbarkeitsgruppen-Datenbankreplikat zuzugreifen.  
@@ -177,7 +177,7 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
     - Starten Sie den SQL Server-Dienst auf jeder sekundären Replikatinstanz neu
     - ODER entfernen Sie die Datenbank aus allen sekundären Replikatinstanzen der Verfügbarkeitsgruppe, und fügen Sie diese der Replikatinstanz der Verfügbarkeitsgruppe mithilfe des automatischen oder manuellen Seeding hinzu.
   
-###  <a name="CT"></a> Änderungsnachverfolgung  
+###  <a name="change-tracking"></a><a name="CT"></a> Änderungsnachverfolgung  
  Eine zur Änderungsnachverfolgung (CT) aktivierte Datenbank kann Teil einer Always On-Verfügbarkeitsgruppe sein. Es ist keine zusätzliche Konfiguration erforderlich. Clientanwendungen für die Änderungsnachverfolgung, die die CDC-Tabellenwertfunktionen (TVFs) verwenden, um auf Änderungsdaten zuzugreifen, müssen in der Lage sein, das primäre Replikat nach einem Failover zu suchen. Wenn die Clientanwendung über den Verfügbarkeitsgruppenlistener-Namen eine Verbindung herstellt, werden die Verbindungsanforderungen immer entsprechend an das aktuelle primäre Replikat weitergeleitet.  
   
 > [!NOTE]  
@@ -187,7 +187,7 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
 >   
 >  Für Datenbanken, die Mitglieder eines sekundären Replikats sind (d. h. für sekundäre Datenbanken), wird die Änderungsnachverfolgung nicht unterstützt. Führen Sie Abfragen zur Änderungsnachverfolgung in den Datenbanken im primären Replikat aus.  
   
-##  <a name="Prereqs"></a> Voraussetzungen, Einschränkungen und Überlegungen zum Verwenden der Replikation  
+##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> Voraussetzungen, Einschränkungen und Überlegungen zum Verwenden der Replikation  
  Dieser Abschnitt enthält Überlegungen zum Bereitstellen der Replikation mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]einschließlich Voraussetzungen, Einschränkungen und Empfehlungen.  
   
 ### <a name="prerequisites"></a>Voraussetzungen  
@@ -223,7 +223,7 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
   
 -   Metadaten und Objekte, die außerhalb der Datenbank vorhanden sind, werden nicht an sekundäre Replikate weitergegeben. Das betrifft Benutzernamen, Aufträge, Verbindungsserver usw. Wenn Sie die Metadaten und Objekte in der neuen primären Datenbank nach einem Failover benötigen, müssen Sie diese manuell kopieren. Weitere Informationen finden Sie unter [Verwaltung von Anmeldungen und Aufträgen für die Datenbanken einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)ausgetauscht werden.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **Replikation**  
   
 -   [Konfigurieren der Replikation für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  

@@ -33,10 +33,10 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287984"
 ---
 # <a name="database-files-and-filegroups"></a>Datenbankdateien und Dateigruppen
@@ -199,7 +199,7 @@ Für Dateien und Dateigruppen gelten die folgenden Regeln:
 - Eine Datei kann nur Mitglied einer einzigen Dateigruppe sein.
 - Transaktionsprotokolldateien können niemals Teil einer Dateigruppe sein.
 
-## <a name="Recommendations"></a> Empfehlungen
+## <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen
 Es folgen einige allgemeine Empfehlungen für die Arbeit mit Dateien und Dateigruppen: 
 - Die meisten Datenbanken funktionieren problemlos mit nur einer einzigen Datendatei und einer einzigen Transaktionsprotokolldatei.
 - Wenn Sie mehrere Datendateien verwenden, erstellen Sie eine zweite Dateigruppe für die zusätzlichen Datei und legen diese Dateigruppe als Standarddateigruppe fest. Auf diese Weise enthält die primäre Datei nur die Systemtabellen und -objekte.

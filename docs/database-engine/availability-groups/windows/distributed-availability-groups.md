@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941117"
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
@@ -127,11 +127,11 @@ Nach der Migration ist die sekundäre Verfügbarkeitsgruppe nun die neue primär
 * Benennen Sie den Listener auf der sekundären Verfügbarkeitsgruppe um (und löschen oder benennen Sie den alten Listener auf der ursprünglichen primären Verfügbarkeitsgruppe nach Möglichkeit um), oder erstellen Sie ihn mithilfe des Listeners auf der ursprünglichen primären Verfügbarkeitsgruppe neu, sodass Anwendungen und Benutzer auf die neue Konfiguration zugreifen können.
 * Wenn eine Umbenennung oder Neuerstellung nicht möglich ist, verweisen Sie Anwendungen und Benutzer auf den Listener auf der sekundären Verfügbarkeitsgruppe.
 
-### <a name="scale-out-readable-replicas-with-distributed-availability-groups"></a>Horizontales Hochskalieren von lesbaren Replikaten mit verteilten Verfügbarkeitsgruppen
+### <a name="scale-out-readable-replicas-with-distributed-availability-groups"></a>Aufskalieren von lesbaren Replikaten mit verteilten Verfügbarkeitsgruppen
 
 Eine einzelne verteilte Verfügbarkeitsgruppe kann je nach Bedarf bis zu 16 sekundäre Replikate ausweisen. Sie kann also bis zu 18 Kopien zum Lesen besitzen, einschließlich der zwei primären Replikat der unterschiedlichen Verfügbarkeitsgruppen. Dieser Ansatz bedeutet, dass mehr als eine Website beinahe Echtzeitzugriff haben kann, um Berichte an zahlreiche Anwendungen zu senden.
 
-Verteilte Verfügbarkeitsgruppen bieten Ihnen ein besseres horizontales Hochskalieren einer schreibgeschützten Farm als eine einzige Verfügbarkeitsgruppe. Für das horizontale Hochskalieren von lesbaren Replikaten mit einer verteilten Verfügbarkeitsgruppe gibt es zwei Möglichkeiten:
+Verteilte Verfügbarkeitsgruppen bieten Ihnen ein besseres Aufskalieren einer schreibgeschützten Farm als eine einzige Verfügbarkeitsgruppe. Für das Aufskalieren von lesbaren Replikaten mit einer verteilten Verfügbarkeitsgruppe gibt es zwei Möglichkeiten:
 
 * Sie können das primäre Replikat der sekundären Verfügbarkeitsgruppe in einer verteilten Verfügbarkeitsgruppe verwenden, um eine weitere verteilte Verfügbarkeitsgruppe zu erstellen, obwohl sich die Datenbank nicht um Status „RECOVERY“ befindet.
 * Sie können auch das primäre Replikat der primären Verfügbarkeitsgruppe verwenden, um eine weitere verteilte Verfügbarkeitsgruppe zu erstellen.
@@ -140,7 +140,7 @@ Das heißt, ein primäres Replikat kann Teil von zwei unterschiedlichen verteilt
 
 ![Horizontales Hochskalieren von Lesevorgängen mithilfe von verteilten Verfügbarkeitsgruppen](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-Auf der folgenden Abbildung wird Verfügbarkeitsgruppe 1 (AG 1) als primäres Replikat für zwei verschiedene verteilte Verfügbarkeitsgruppen gezeigt: Distributed AG1 (verteilte Verfügbarkeitsgruppe 1, bestehend aus AG1 und AG2) und Distributed AG 2 (verteilte Verfügbarkeitsgruppe 2, bestehend aus AG1 und AG3).
+Die folgende Abbildung zeigt AG 1 als das primäre Replikat von zwei unterschiedliche verteilte Verfügbarkeitsgruppen: von der verteilten AG 1 (bestehend aus AG 1 und AG 2) und der verteilten AG 2 (bestehend aus AG 1 und AG 3).
 
 
 ![Beispiel: eine weitere Möglichkeit zum horizontalen Hochskalieren von Lesevorgängen mithilfe von verteilten Verfügbarkeitsgruppen]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
@@ -217,7 +217,7 @@ Wie in der folgenden Abbildung dargestellt zeigen sekundäre Replikate in SQL Se
 
 ### <a name="dmv-to-list-all-availability-replica-names"></a>DMV für die Auflistung aller Verfügbarkeitsreplikatnamen
 
-Die gleichen Konzepte gelten, wenn Sie die dynamischen Verwaltungsansichten verwenden. Indem Sie die folgende Abfrage verwenden, können Sie alle Verfügbarkeitsgruppen (reguläre und verteilte) und die enthaltenen Knoten anzeigen lassen. Dieses Ergebnis wird nur angezeigt, wenn Sie das primäre Replikat in einem der WSFC-Cluster abfragen, die in der verteilten Verfügbarkeitsgruppe enthalten sind. Es gibt eine neue Spalte namens `is_distributed` in der dynamischen Verwaltungsansicht `sys.availability_groups`, die den Wert „1“ enthält, wenn es sich bei der Verfügbarkeitsgruppe um eine verteilte Verfügbarkeitsgruppe handelt. Zum Anzeigen dieser Spalte ist Folgendes nötig:
+Die gleichen Konzepte gelten, wenn Sie die dynamischen Verwaltungsansichten verwenden. Indem Sie die folgende Abfrage verwenden, können Sie alle Verfügbarkeitsgruppen (reguläre und verteilte) und die enthaltenen Knoten anzeigen lassen. Dieses Ergebnis wird nur angezeigt, wenn Sie das primäre Replikat in einem der WSFC-Cluster abfragen, die in der verteilten Verfügbarkeitsgruppe enthalten sind. Es gibt eine neue Spalte namens `sys.availability_groups` in der dynamischen Verwaltungsansicht `is_distributed`, die den Wert „1“ enthält, wenn es sich bei der Verfügbarkeitsgruppe um eine verteilte Verfügbarkeitsgruppe handelt. Zum Anzeigen dieser Spalte ist Folgendes nötig:
 
 ```sql
 -- shows replicas associated with availability groups

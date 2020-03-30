@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866109"
 ---
 # <a name="set-or-change-the-database-collation"></a>Festlegen oder Ändern der Datenbanksortierung
@@ -28,7 +28,7 @@ ms.locfileid: "78866109"
 > Das Ändern der Datenbanksortierung ist in Azure SQL-Datenbank nicht ausdrücklich verboten. Das Ändern der Datenbanksortierung erfordert jedoch eine exklusive Sperre für die Datenbank, und durch andere Benutzer- oder Hintergrundprozesse (z. B. für die Sicherung) gehaltene Datenbanksperren könnten eine Änderung der Sortierung verhindern. Bei `ALTER DATABASE COLLATE`-Anweisungen in Azure SQL-Datenbank tritt ein Fehler auf, wenn sie ausgeführt werden, während Hintergrundprozesse auf die Datenbank zugreifen. Wenn Sie Fehler aufgrund von Sperrtimeouts erhalten, müssen Sie die Anweisung wiederholen. 
  
 > [!NOTE]
-> Sobald die Datenbank einmal in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] erstellt wurde, kann sie nicht mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mehr geändert werden. Sie kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)] geändert werden.
+> Sobald die Datenbank einmal in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellt wurde, kann sie nicht mit [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mehr geändert werden. Sie kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)] geändert werden.
 
  **In diesem Thema**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "78866109"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Festlegen oder Ändern der Datenbanksortierung mit:**  
   
@@ -46,17 +46,17 @@ ms.locfileid: "78866109"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Nur-Unicode-Sortierungen unter Windows, können nur mit der COLLATE-Klausel verwendet werden, um auf Spalten- und Ausdrucksebene Sortierungen auf die Datentypen **nchar**, **nvarchar**und **ntext** anzuwenden. Sie können nicht mit der COLLATE-Klausel verwendet werden, um die Sortierung einer Datenbank oder Serverinstanz zu ändern.  
   
 -   Wenn die angegebene Sortierung oder die Sortierung des Objekts, auf das verwiesen wird, eine Codepage verwendet, die nicht von Windows unterstützt wird, zeigt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler an.  
 
--   Sobald die Datenbank einmal in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] erstellt wurde, kann sie nicht mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mehr geändert werden. Sie kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)] geändert werden.
+-   Sobald die Datenbank einmal in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellt wurde, kann sie nicht mit [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mehr geändert werden. Sie kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)] geändert werden.
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 Die Namen der unterstützten Sortierungen finden Sie unter [Name der Windows-Sortierung &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) und [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md). Alternativ können Sie die Systemfunktion [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) verwenden.  
   
@@ -70,14 +70,14 @@ Das Ändern der Datenbanksortierung ändert Folgendes:
   
 Sie können die Sortierung neuer Objekte, die in einer Benutzerdatenbank erstellt werden, mithilfe der `COLLATE`-Klausel der [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung ändern. Diese Anweisung **ändert jedoch nicht** die Sortierung der Spalten in vorhandenen benutzerdefinierten Tabellen. Letztere können mithilfe der `COLLATE`-Klausel der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)-Anweisung geändert werden.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Um eine neue Datenbank zu erstellen, benötigen Sie die Berechtigung `CREATE DATABASE` für die **Masterdatenbank** oder die Berechtigung `CREATE ANY DATABASE` oder `ALTER ANY DATABASE`.  
   
  Zum Ändern der Sortierung einer vorhandenen Datenbank ist die Berechtigung `ALTER` für die Datenbank erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-set-or-change-the-database-collation"></a>So legen Sie die Datenbanksortierung oder ändern sie  
   
@@ -89,7 +89,7 @@ Sie können die Sortierung neuer Objekte, die in einer Benutzerdatenbank erstell
   
 3.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>So legen Sie die Datenbanksortierung fest  
   

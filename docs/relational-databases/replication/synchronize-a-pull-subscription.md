@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 79f24f3115f61b088fce684d0b7ada0bc1d39697
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287041"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Synchronisieren eines Pullabonnements
@@ -36,7 +36,7 @@ ms.locfileid: "76287041"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Abonnements werden durch den Verteilungs-Agent (für Momentaufnahme- und Transaktionsveröffentlichungen) oder durch den Merge-Agent (für Mergeveröffentlichungen) synchronisiert. Agents können kontinuierlich, bei Bedarf oder nach einem Zeitplan ausgeführt werden. Weitere Informationen zum Angeben von Synchronisierungszeitplänen finden Sie unter [Angeben von Synchronisierungszeitplänen](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
  Eine bedarfsgesteuerte Synchronisierung eines Abonnements kann im Ordner **Lokale Abonnements** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausgeführt werden.  
@@ -53,7 +53,7 @@ ms.locfileid: "76287041"
   
 5.  Klicken Sie auf **Schließen**.  
   
-##  <a name="ReplProg"></a> Replication Agents  
+##  <a name="replication-agents"></a><a name="ReplProg"></a> Replication Agents  
  Pullabonnements können programmgesteuert oder nach Bedarf synchronisiert werden, indem die entsprechende ausführbare Datei für den Replikations-Agent an der Eingabeaufforderung aufgerufen wird. Welche ausführbare Datei für den Replikations-Agent aufgerufen wird, hängt vom Typ der Veröffentlichung ab, zu der das Pullabonnement gehört. Weitere Informationen finden Sie unter [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md).  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ ms.locfileid: "76287041"
   
     -   **-SubscriberSecurityMode** = **0**  
   
-###  <a name="TsqlExample"></a> Beispiele (Replikations-Agents)  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> Beispiele (Replikations-Agents)  
  Im folgenden Beispiel wird der Verteilungs-Agent gestartet, um ein Pullabonnement zu synchronisieren. Alle Verbindungen werden mithilfe der Windows-Authentifizierung hergestellt.  
   
 ```  
@@ -181,7 +181,7 @@ SET Publication=AdvWorksSalesOrdersMerge
 -Validate 3  -ParallelUploadDownload 1 ;  
 ```  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Sie können Pullabonnements mit Replikationsverwaltungsobjekten (RMO) und dem Zugriff von verwaltetem Code auf Funktionen des Replikations-Agent programmgesteuert synchronisieren. Die Klassen für die Synchronisierung eines Pullabonnements richten sich nach dem Typ der Veröffentlichung, zu der das Abonnement gehört.  
   
 > [!NOTE]
@@ -241,7 +241,7 @@ SET Publication=AdvWorksSalesOrdersMerge
         > [!NOTE]  
         >  Wenn Sie beim Erstellen des Pullabonnements den Wert **false** for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (den Standard) festgelegt haben, müssen Sie auch <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>und optional <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>sowie <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> angeben, weil die auf den Agentauftrag bezogenen Metadaten für das Abonnement in [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md).  
   
-###  <a name="PShellExample"></a> Beispiele (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Beispiele (RMO)  
  In diesem Beispiel wird ein Pullabonnement mit einer Transaktionsveröffentlichung synchronisiert, wobei der Agent asynchron mit dem Agentauftrag gestartet wird.  
   
 ```csharp  

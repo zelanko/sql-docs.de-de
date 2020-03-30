@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934825"
 ---
 # <a name="upgrade-master-data-services"></a>Aktualisieren von Master Data Services
@@ -38,7 +38,7 @@ ms.locfileid: "67934825"
 > -   Modellbereitstellungspakete können nur in der Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, in der sie erstellt wurden. Sie können keine in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] erstellten Modellbereitstellungspakete für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]bereitstellen.  
 > -   Nachdem Data Quality Services und Master Data Services auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert wurden, wird keine frühere Version des Master Data Services-Add-Ins für Excel mehr funktionieren. Sie können das [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Master Data Services-Add-In für Excel unter [Master Data Services Add-in for Microsoft Excel (Master Data Services-Add-In für Microsoft Excel)](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md) herunterladen.  
   
-##  <a name="fileLocation"></a> Dateispeicherort  
+##  <a name="file-location"></a><a name="fileLocation"></a> Dateispeicherort  
   
 -   In [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] werden die Dateien standardmäßig in *Laufwerk*:\Programme\Microsoft SQL Server\140\Master Data Services installiert.  
 
@@ -50,7 +50,7 @@ ms.locfileid: "67934825"
   
 -   In [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]werden die Dateien standardmäßig in *Laufwerk*:\Programme\Microsoft SQL Server\Master Data Services installiert.  
   
-##  <a name="noengine"></a> Upgrade ohne Datenbankmodulupgrade  
+##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a> Upgrade ohne Datenbankmodulupgrade  
  In diesem Szenario verwenden Sie weiterhin [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], um die MDS-Datenbank zu hosten. Sie müssen jedoch das Schema der MDS-Datenbank aktualisieren und dann eine aktuelle [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] -Webanwendung erstellen, um auf die MDS-Datenbank zuzugreifen. Nach dem Upgrade kann auf die MDS-Datenbank nicht mehr von der früheren Webanwendung aus zugegriffen werden.  
   
  Sie können die aktuelle [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] und eine frühere Version von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] auf demselben Computer installieren. Die Dateien werden in verschiedenen Speicherorten installiert, wie in [Dateispeicherort](#fileLocation)dargestellt.  
@@ -107,7 +107,7 @@ ms.locfileid: "67934825"
   
     3.  Klicken Sie auf **Anwenden**.  
   
-##  <a name="engine"></a> Upgrade mit Datenbankmodulupgrade  
+##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> Upgrade mit Datenbankmodulupgrade  
  In diesem Szenario aktualisieren Sie sowohl die Datenbank-Engine als auch die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Anwendung von einer früheren Version auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
   
  **So upgraden Sie mit dem Upgrade der Datenbank-Engine**  
@@ -118,7 +118,7 @@ ms.locfileid: "67934825"
   
 3.  Führen Sie alle Schritte in [Upgrade ohne Datenbank-Engine-Upgrade](#noengine) aus.  
   
-##  <a name="twocomputer"></a> Upgrade in einem Szenario mit zwei Computern  
+##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> Upgrade in einem Szenario mit zwei Computern  
  In diesem Szenario wird das Upgrade eines Systems durchgeführt, in dem SQL Server auf zwei Computern installiert ist: auf einem ist [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] installiert, auf dem anderen eine frühere Version von [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)].  
   
  Wenn eine frühere Version von [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] installiert ist, verwenden Sie weiterhin diese zum Hosten Ihrer MDS-Datenbank auf einem Computer. Sie müssen jedoch das Schema der MDS-Datenbank aktualisieren und dann die [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]- oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Webanwendung verwenden, um auf die MDS-Datenbank zuzugreifen. Auf die MDS-Datenbank kann nicht mehr von der früheren Version der Webanwendung aus zugegriffen werden.  
@@ -127,7 +127,7 @@ ms.locfileid: "67934825"
   
 -   Führen Sie alle Schritte in [Upgrade ohne Datenbank-Engine-Upgrade](#noengine) aus.  
   
-##  <a name="restore"></a> Upgrade mithilfe einer Wiederherstellung einer Datenbank aus einer Sicherung  
+##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> Upgrade mithilfe einer Wiederherstellung einer Datenbank aus einer Sicherung  
  In diesem Szenario ist entweder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] zusammen mit einer früheren Version auf demselben Computer oder auf zwei unterschiedlichen Computern installiert. Vor dem Upgrade wurde eine Datenbank in einer früheren Version als [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] gesichert und muss nun wiederhergestellt werden.  
   
  **So upgraden Sie mithilfe der Wiederherstellung einer Datenbank aus einer Sicherung**  
@@ -149,9 +149,9 @@ ms.locfileid: "67934825"
 3.  Upgraden Sie das MDS-Datenbankschema, erstellen Sie eine Webanwendung, und ordnen Sie die neue Webanwendung der upgegradeten MDS-Datenbank zu. Anweisungen finden Sie in den Schritten 2 – 4 im Abschnitt [Upgrade ohne Datenbank-Engine-Upgrade](#noengine).  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
- **Problem:** Wenn Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]- oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Webanwendung öffnen, wird die Fehlermeldung „Die Clientversion ist nicht mit der Datenbankversion kompatibel“ angezeigt.  
+ **Problem** : Wenn Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] -Webanwendung öffnen, wird die Fehlermeldung „Die Clientversion ist nicht mit der Datenbankversion kompatibel“ angezeigt.  
   
- **Lösung:** Dieses Problem tritt auf, wenn eine [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]- oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Master Data Manager-Webanwendung versucht, auf eine Datenbank zuzugreifen, die auf [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Master Data Services aktualisiert wurde. Sie müssen stattdessen eine [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Webanwendung verwenden.  
+ **Lösung**: Dieses Problem tritt auf, wenn eine [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]- oder[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Master Data Manager-Webanwendung versucht, auf eine Datenbank zuzugreifen, die auf [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Master Data Services aktualisiert wurde. Sie müssen stattdessen eine [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Webanwendung verwenden.  
   
  Dieses Problem tritt möglicherweise auch auf, wenn Sie beim Upgrade des MDS-Datenbankschemas den **MDS-Anwendungspool** in IIS nicht angehalten und neu gestartet haben. Starten Sie den **MDS-Anwendungspool** neu, um das Problem zu beheben.  
   

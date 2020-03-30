@@ -13,10 +13,10 @@ ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9bcebebf2f426aec660b77699461bdce110f628c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821760"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Anzeigen von Verfügbarkeitsreplikateigenschaften (SQL Server)
@@ -24,7 +24,7 @@ ms.locfileid: "74821760"
   In diesem Thema wird beschrieben, wie die Eigenschaften eines Verfügbarkeitsreplikats für eine Always On-Verfügbarkeitsgruppe unter Verwendung von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]angezeigt werden.  
   
  
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So zeigen Sie die Eigenschaften eines Verfügbarkeitsreplikats an und ändern sie**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Verfügbarkeitsreplikat hostet, und erweitern Sie die Serverstruktur.  
@@ -41,7 +41,7 @@ ms.locfileid: "74821760"
    >Wenn der Clustertyp „NONE“ ist, können Sie den Failovermodus nicht ändern.
   
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So zeigen Sie die Eigenschaften und den Status von Verfügbarkeitsreplikaten an**  
   
  Um die Eigenschaften und den Status von Verfügbarkeitsreplikaten anzuzeigen, verwenden Sie die folgenden Sichten und die folgende Systemfunktion:  
@@ -78,7 +78,7 @@ ms.locfileid: "74821760"
 >  Weitere Informationen zu Leistungsindikatoren für Verfügbarkeitsreplikate (das **SQLServer:Verfügbarkeitsreplikat**  -Leistungsobjekt) finden Sie unter [SQL Server, Verfügbarkeitsreplikat](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So zeigen Sie Informationen zu Verfügbarkeitsgruppen an**  
   
 -   [Anzeigen von Verfügbarkeitsgruppeneigenschaften &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  

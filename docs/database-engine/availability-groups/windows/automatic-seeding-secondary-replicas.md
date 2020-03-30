@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288544"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Verwenden von automatischem Seeding zum Initialisieren eines sekundären Replikats für eine Always On-Verfügbarkeitsgruppe
@@ -46,7 +46,7 @@ Das automatische Seeding ist ein Singlethreadprozess, der bis zu fünf Datenbank
 
 Die Komprimierung kann für das automatische Seeding verwendet werden, ist aber in der Standardeinstellung deaktiviert. Das Aktivieren der Komprimierung reduziert die Netzwerkbandbreite und beschleunigt möglicherweise den Prozess, führt jedoch zu zusätzlichem Prozessoroverhead. Aktivieren Sie das Ablaufverfolgungsflag 9567, um die Komprimierung während des automatischen Seedings zu verwenden. Siehe dazu [Optimieren der Komprimierung für die Verfügbarkeitsgruppe](tune-compression-for-availability-group.md).
 
-## <a name = "disklayout"></a> Datenträgerlayout
+## <a name="disk-layout"></a><a name = "disklayout"></a> Datenträgerlayout
 
 Bis SQL Server 2016 muss der Ordner, in dem die Datenbank durch das automatische Seeding erstellt wird, bereits vorhanden und mit dem Pfad auf dem primären Replikat identisch sein. 
 
@@ -109,7 +109,7 @@ Sobald auf einer Instanz, die zum sekundären Replikat wird, die Verknüpfung er
 
 >Dem lokalen Verfügbarkeitsreplikat der Verfügbarkeitsgruppe „AGName“ wurde nicht die Berechtigung zum Erstellen von Datenbanken erteilt, aber `SEEDING_MODE` ist auf `AUTOMATIC` festgelegt. Verwenden Sie den Befehl `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE`, um das Erstellen von Datenbanken zuzulassen, für die vom primären Verfügbarkeitsreplikat ein Seeding ausgeführt wird.
 
-### <a name = "grantCreate"></a> Erteilen der Berechtigung zum Erstellen von Datenbanken auf dem sekundären Replikat von Verfügbarkeitsgruppen
+### <a name="grant-create-database-permission-on-secondary-replica-to-availability-group"></a><a name = "grantCreate"></a> Erteilen der Berechtigung zum Erstellen von Datenbanken auf dem sekundären Replikat von Verfügbarkeitsgruppen
 
 Erteilen Sie der Verfügbarkeitsgruppe nach dem Hinzufügen die Berechtigung zum Erstellen von Datenbanken auf der sekundären Replikatinstanz von SQL Server. Die Verfügbarkeitsgruppe benötigt die Berechtigung zum Erstellen von Datenbanken, damit das automatische Seeding funktioniert. 
 

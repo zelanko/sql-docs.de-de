@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822253"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74822253"
 >  Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Konzepten finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
   
-##  <a name="WSFC"></a> Windows Server Failover Clustering und Verfügbarkeitsgruppen  
+##  <a name="windows-server-failover-clustering-and-availability-groups"></a><a name="WSFC"></a> Windows Server Failover Clustering und Verfügbarkeitsgruppen  
  Für die Bereitstellung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist ein Windows Server-Failovercluster (WSFC) erforderlich. Um für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert werden zu können, muss sich eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einem WSFC-Knoten befinden, und der WSFC sowie der WSFC-Knoten müssen online sein. Zudem muss sich jedes Verfügbarkeitsreplikat einer bestimmten Verfügbarkeitsgruppe auf einem anderen Knoten desselben WSFC befinden. Die einzige Ausnahme besteht darin, dass sich eine Verfügbarkeitsgruppe während der Migration zu einem anderen WSFC vorübergehend auf zwei Cluster erstrecken kann.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] basiert zur Überwachung und Verwaltung der aktuellen Rollen der Verfügbarkeitsreplikate, die zu einer gegebenen Verfügbarkeitsgruppe gehören, auf dem Windows Server-Failovercluster (WSFC) und bestimmt, wie sich ein Failoverereignis auf die Verfügbarkeitsreplikate auswirkt. Für jede erstellte Verfügbarkeitsgruppe wird eine WSFC-Ressourcengruppe erstellt. Der WSFC überwacht diese Ressourcengruppe, um die Integrität des primären Replikats auszuwerten.  
@@ -49,7 +49,7 @@ ms.locfileid: "74822253"
   
  Informationen zum Ausführen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf WSFC-Knoten sowie zum WSFC-Quorum finden Sie unter [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
-##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failoverclusterinstanzen (FCIs) und Verfügbarkeitsgruppen  
+##  <a name="ssnoversion-failover-cluster-instances-fcis-and-availability-groups"></a><a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failoverclusterinstanzen (FCIs) und Verfügbarkeitsgruppen  
  Sie können auf Serverinstanzebene eine zweite Failoverebene einrichten, indem Sie eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCI zusammen mit dem WSFC implementieren. Ein Verfügbarkeitsreplikat kann von einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder einer FCI-Instanz gehostet werden. Ein Replikat für eine Verfügbarkeitsgruppe kann jeweils nur von einem FCI-Partner gehostet werden. Bei Ausführung eines Verfügbarkeitsreplikats in einer FCI enthält die Liste möglicher Besitzer für die Verfügbarkeitsgruppe nur den aktiven FCI-Knoten.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] hängt von keiner Form eines gemeinsam verwendeten Speichers ab. Falls Sie jedoch eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz (FCI) zum Hosten von mindestens einem Verfügbarkeitsreplikats verwenden, ist für all diese FCIs der standardmäßigen Installation der SQL Server-Failoverclusterinstanz entsprechend gemeinsam verwendeter Speicher erforderlich.  
@@ -97,7 +97,7 @@ ms.locfileid: "74822253"
   
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-FCIs finden Sie unter [Always On-Failoverclusterinstanzen (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-##  <a name="FCMrestrictions"></a> Einschränkungen bei Verwendung des WSFC-Failovercluster-Managers für Verfügbarkeitsgruppen  
+##  <a name="restrictions-on-using-the-wsfc-failover-cluster-manager-with-availability-groups"></a><a name="FCMrestrictions"></a> Einschränkungen bei Verwendung des WSFC-Failovercluster-Managers für Verfügbarkeitsgruppen  
  Verwenden Sie den Failovercluster-Manager nicht zum Bearbeiten von Verfügbarkeitsgruppen, beispielsweise:  
   
 -   Fügen Sie im Clusterdienst (Ressourcengruppe) keine Ressourcen für die Verfügbarkeitsgruppe hinzu, bzw. entfernen Sie keine Ressourcen.  
@@ -109,7 +109,7 @@ ms.locfileid: "74822253"
   >[!WARNING]
   > Die Verwendung des Failovercluster-Managers zum Verschieben einer *Failoverclusterinstanz*, die eine Verfügbarkeitsgruppe hostet, auf einen Knoten, der *bereits* ein Replikat derselben Verfügbarkeitsgruppe hostet, kann zum Verlust des Verfügbarkeitsgruppenreplikats führen, sodass dieses auf dem Zielknoten nicht online geschaltet werden kann. Ein einzelner Knoten eines Failoverclusters kann nicht mehr als ein Replikat für dieselbe Verfügbarkeitsgruppe hosten. Weitere Informationen dazu, wie eine solche Situation eintritt und wie sie gelöst werden kann, finden Sie im Blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Replikat in Verfügbarkeitsgruppe unerwartet gelöscht). 
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   **Blogs:**  
   

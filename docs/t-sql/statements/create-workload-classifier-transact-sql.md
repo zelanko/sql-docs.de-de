@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 67f844ff5955f51b0c878f2a3161cc4762834f74
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112251"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
@@ -36,7 +36,7 @@ Erstellt ein Klassifiziererobjekt für die Verwendung in der Arbeitsauslastungsv
 > [!NOTE]
 > Der Arbeitsauslastungsklassifizierer ersetzt die „sp_addrolemember“-Ressourcenklassenzuweisung.  Führen Sie nach dem Erstellen von Arbeitsauslastungsklassifizierern „sp_droprolemember“ aus, um redundante Ressourcenklassenzuordnungen zu entfernen.
 
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax
 

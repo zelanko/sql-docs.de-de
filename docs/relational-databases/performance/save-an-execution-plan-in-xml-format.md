@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909786"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Speichern eines Ausführungsplans im XML-Format
@@ -68,7 +68,7 @@ ms.locfileid: "72909786"
   
 4.  Klicken Sie im Bereich **Ergebnisse** mit der rechten Maustaste auf den **Microsoft SQL Server XML Showplan** , der den Abfrageplan enthält, und klicken Sie dann auf **Ergebnisse speichern unter**.  
   
-5.  Klicken Sie im Dialogfeld \<Rasterergebnisse ****speichern** bzw.** Ergebnisse **speichern im Feld Dateityp** auf **Alle Dateien (\*.\*)** .  
+5.  Klicken Sie im Dialogfeld **Rasterergebnisse** \<speichern**bzw.** Ergebnisse **speichern im Feld Dateityp** auf **Alle Dateien (\*.\*)** .  
   
 6.  Geben Sie in das Feld **Dateiname** einen Namen im Format \<Name **>.sqlplan** ein, und klicken Sie auf **Speichern**.  
 

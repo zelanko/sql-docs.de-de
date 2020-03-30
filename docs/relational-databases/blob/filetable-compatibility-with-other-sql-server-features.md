@@ -14,17 +14,17 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252710"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Dateitabellenkompatibilität mit anderen SQL Server-Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Beschreibt, wie FileTables mit anderen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]arbeiten.  
   
-##  <a name="alwayson"></a> AlwaysOn-Verfügbarkeitsgruppen und FileTables  
+##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a> AlwaysOn-Verfügbarkeitsgruppen und FileTables  
  Wenn die Datenbank, die FILESTREAM- oder FileTable-Daten enthält, zu einer AlwaysOn-Verfügbarkeitsgruppe gehört:  
   
 -   Die FileTable-Funktionalität wird teilweise von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]unterstützt. Nach einem Failover kann auf dem primären Replikat auf FileTable-Daten zugegriffen werden, nicht jedoch auf FileTable-Daten auf lesbaren sekundären Replikaten.  
@@ -35,26 +35,26 @@ ms.locfileid: "75252710"
   
 -   Bei allen Zugriffen auf FILESTREAM- oder FileTable-Daten über Dateisystem-APIs sollten VNNs statt der Computernamen verwendet werden. Weitere Informationen finden Sie unter [FILESTREAM und FileTable bei AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-##  <a name="OtherPartitioning"></a> Partitionierung und FileTables  
+##  <a name="partitioning-and-filetables"></a><a name="OtherPartitioning"></a> Partitionierung und FileTables  
  Partitionierung wird in FileTables nicht unterstützt. Mit der Unterstützung für mehrere FILESTREAM-Dateigruppen können in den meisten Szenarien reine Skalierungsprobleme behandelt werden, ohne dass hierfür auf die Partitionierung zurückgegriffen werden muss (im Gegensatz zu SQL 2008-FILESTREAMs).  
   
-##  <a name="OtherRepl"></a> Replikation und FileTables  
+##  <a name="replication-and-filetables"></a><a name="OtherRepl"></a> Replikation und FileTables  
  Replikation und verwandte Funktionen (einschließlich Transaktionsreplikation, Mergereplikation, Änderungsdatenaufzeichnung und Änderungsnachverfolgung) werden in FileTables nicht unterstützt.  
   
-##  <a name="OtherIsolation"></a> Transaktionssemantik und FileTables  
+##  <a name="transaction-semantics-and-filetables"></a><a name="OtherIsolation"></a> Transaktionssemantik und FileTables  
  **Windows-Anwendungen**  
  Windows-Anwendungen verstehen keine Datenbanktransaktionen, deshalb stellen Windows-Schreibvorgänge nicht die ACID-Eigenschaften einer Datenbanktransaktion bereit. Daher sind Transaktionsrollbacks und Wiederherstellung bei Windows-Updatevorgängen nicht möglich.  
   
  **Transact-SQL-Anwendungen**  
  Bei TSQL-Anwendungen, die in der FILESTREAM-(file_stream)-Spalte in einer FileTable arbeiten, ist die Isolationssemantik die gleiche wie beim FILESTREAM-Datentyp in einer regulären Benutzertabelle.  
   
-##  <a name="OtherQueryNot"></a> Abfragebenachrichtigungen und FileTables  
+##  <a name="query-notifications-and-filetables"></a><a name="OtherQueryNot"></a> Abfragebenachrichtigungen und FileTables  
  Die Abfrage kann keinen Verweis auf die FILESTREAM-Spalte in der FileTable, in der WHERE-Klausel oder in einem anderen Teil der Abfrage enthalten.  
   
-##  <a name="OtherSelectInto"></a> SELECT INTO und FileTables  
+##  <a name="select-into-and-filetables"></a><a name="OtherSelectInto"></a> SELECT INTO und FileTables  
  SELECT INTO-Anweisungen aus einer FileTable geben die FileTable-Semantik nicht an die erstellte Zieltabelle weiter (genau wie FILESTREAM-Spalten in einer regulären Tabelle). Alle Zieltabellenspalten verhalten sich genau wie normale Spalten. Sie weisen keine ihnen zugeordnete FileTable-Semantik auf.  
   
-##  <a name="OtherTriggers"></a> Trigger und FileTables  
+##  <a name="triggers-and-filetables"></a><a name="OtherTriggers"></a> Trigger und FileTables  
  **DDL-Trigger (Data Definition Language, Datendefinitionssprache)**  
  Es gibt keine besonderen Überlegungen für DDL-Trigger mit FileTables. Normale DDL-Trigger werden für CREATE DATABASE- oder ALTER DATABASE-Vorgänge sowie für CREATE TABLE- oder ALTER TABLE-Vorgänge für FileTables ausgelöst. Trigger können durch Aufrufen der EVENTDATA()-Funktion die tatsächlichen Ereignisdaten abrufen, einschließlich des DDL-Befehlstexts und sonstiger Informationen. Es gibt keine neuen Ereignisse oder Änderungen an dem vorhandenen Eventdata-Schema.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75252710"
   
 -   Bei einer unplanmäßigen Beendigung von Win32-Handles, wie beispielsweise beim expliziten Abbrechen von Win32-Handles durch einen Administrator ODER einen Datenbankabsturz, werden während der Wiederherstellungsvorgänge keine Benutzertrigger ausgeführt, obwohl der FILESTREAM von der unplanmäßig beendeten Win32-Anwendung möglicherweise geändert wurde.  
   
-##  <a name="OtherViews"></a> Sichten und FileTables  
+##  <a name="views-and-filetables"></a><a name="OtherViews"></a> Sichten und FileTables  
  **Ansichten**  
  Eine Sicht kann in einer FileTable genau wie in einer anderen Tabelle erstellt werden. Die folgenden Überlegungen gelten jedoch für eine in einer FileTable erstellten Sicht:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75252710"
  **Indizierte Sichten**  
  Indizierte Sichten können derzeit keine FILESTREAM-Spalten oder berechnete/persistente berechnete Spalten enthalten, die von den FILESTREAM-Spalten abhängig sind. Dieses Verhalten bleibt auch bei in der FileTable definierten Sichten unverändert.  
   
-##  <a name="OtherSnapshots"></a> Momentaufnahmeisolation und FileTables  
+##  <a name="snapshot-isolation-and-filetables"></a><a name="OtherSnapshots"></a> Momentaufnahmeisolation und FileTables  
  Die Read Committed-Momentaufnahme und die Momentaufnahmeisolation basieren auf der Möglichkeit, eine Momentaufnahme der für Leser verfügbaren Daten zu erstellen, selbst wenn für die Daten Updatevorgänge ausgeführt werden. FileTables lassen jedoch nicht transaktionalen Schreibzugriff auf Filestream-Daten zu. Daher gelten die folgenden Einschränkungen für die Verwendung dieser Funktionen in Datenbanken, die FileTables enthalten:  
   
 -   Eine Datenbank, die FileTables enthält, kann so geändert werden, dass RCSI/SI aktiviert wird.  
@@ -112,10 +112,10 @@ ms.locfileid: "75252710"
   
     -   Die Volltextindizierung ist immer erfolgreich, unabhängig von den Datenbankoptionen (READ_COMMITTED_SNAPSHOT oder ALLOW_SNAPSHOT_ISOLATION).  
   
-##  <a name="readsec"></a> Lesbare sekundäre Datenbanken  
+##  <a name="readable-secondary-databases"></a><a name="readsec"></a> Lesbare sekundäre Datenbanken  
  Die gleichen Überlegungen gelten sowohl für lesbare sekundäre Datenbank als auch für Momentaufnahmen. Selbiges ist im vorherigen Abschnitt [Momentaufnahmeisolation und FileTables](#OtherSnapshots)beschrieben.  
   
-##  <a name="CDB"></a> Eigenständige Datenbanken und FileTables  
+##  <a name="contained-databases-and-filetables"></a><a name="CDB"></a> Eigenständige Datenbanken und FileTables  
  Die FILESTREAM-Funktion, von der die FileTable-Funktion abhängt, erfordert einen gewissen Konfigurationsaufwand außerhalb der Datenbank. Daher sind Datenbanken, die FILESTREAM oder FileTable verwenden, nicht vollständig eigenständig.  
   
  Sie können den Einschlusstyp der Datenbank auf PARTIAL festlegen, wenn Sie bestimmte Funktionen eigenständiger Datenbanken verwenden möchten, z. B. eigenständige Benutzer. In diesem Fall müssen Sie jedoch beachten, dass einige Datenbankeinstellungen nicht in der Datenbank enthalten sind und nicht automatisch mit der Datenbank verschoben werden.  

@@ -14,10 +14,10 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5c773ae8db0b9942e23e40fb5f72b989b97ccfcc
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903857"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services-Paket- und Projektparameter (SSIS)
@@ -50,7 +50,7 @@ ms.locfileid: "77903857"
   
  In der folgenden Tabelle sind die Werttypen aufgeführt.  
   
-|Wertname|Beschreibung|Werttyp|  
+|Wertname|BESCHREIBUNG|Werttyp|  
 |----------------|-----------------|-------------------|  
 |Ausführungswert|Der Wert, der einer bestimmten Instanz der Paketausführung zugewiesen wird. Diese Zuweisung überschreibt alle anderen Werte, gilt aber nur für eine einzelne Instanz der Paketausführung.|Literal|  
 |Serverwert|Der Wert, der dem Parameter innerhalb des Projektbereichs zugewiesen wird, nachdem das Projekt auf dem Integration Services-Server bereitgestellt wurde. Dieser Wert überschreibt den Entwurfsstandard.|Literaler oder Umgebungsvariablenverweis|  
@@ -58,7 +58,7 @@ ms.locfileid: "77903857"
   
  Sie können mehreren Paketeigenschaften mithilfe eines einzelnen Parameters einen Wert zuweisen. Einer einzelnen Paketeigenschaft kann nur ein Wert aus einem einzelnen Parameter zugewiesen werden.  
   
-###  <a name="executions"></a> Ausführungen und Parameterwerte  
+###  <a name="executions-and-parameter-values"></a><a name="executions"></a> Ausführungen und Parameterwerte  
  Die *Ausführung* ist ein Objekt, das eine einzelne Instanz der Paketausführung darstellt. Wenn Sie eine Ausführung erstellen, geben Sie alle Details an, die zum Ausführen eines Pakets erforderlich sind, z. B. Ausführungsparameterwerte. Sie können die Parameterwerte vorhandener Ausführungen auch ändern.  
   
  Wenn Sie einen Ausführungsparameterwert explizit festlegen, ist dieser Wert nur auf diese spezielle Instanz der Ausführung anwendbar. Der Ausführungswert wird anstelle eines Serverwerts oder eines Entwurfswerts verwendet. Wenn Sie keinen Ausführungswert explizit festlegen und ein Serverwert angegeben wurde, wird der Serverwert verwendet.  
@@ -217,6 +217,6 @@ Mit dem Bereitstellungs-Assistenten können Sie Serverstandardparameterwerte fes
  Verwenden Sie zum Festlegen von Serverstandardwerten mit Transact-SQL die gespeicherte Prozedur [catalog.set_object_parameter_value &#40;SSISDB-Datenbank&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md). Verwenden Sie zum Anzeigen der aktuellen Serverstandards die Abfrage [catalog.object_parameters &#40;SSISDB-Datenbank&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md). Verwenden Sie zum Löschen von Serverstandardwerten die gespeicherte Prozedur [catalog.clear_object_parameter_value &#40;SSISDB-Datenbank&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md).  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag, [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781), auf mattmasson.com.  
+ Blogeintrag [SSIS-Quicktipp: Erforderliche Parameter](https://go.microsoft.com/fwlink/?LinkId=239781)auf mattmasson.com.  
   
   

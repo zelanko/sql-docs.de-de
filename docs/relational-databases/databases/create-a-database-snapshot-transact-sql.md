@@ -13,10 +13,10 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708286"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Erstellen einer Datenbankmomentaufnahme (Transact-SQL)
@@ -24,9 +24,9 @@ ms.locfileid: "71708286"
   Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmomentaufnahme kann nur mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt werden. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nicht unterstützt.  
   
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Die Quelldatenbank, die ein Wiederherstellungsmodell verwenden kann, muss die folgenden Voraussetzungen erfüllen:  
   
 -   Die Serverinstanz muss eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, die Datenbankmomentaufnahmen unterstützt. Informationen zu unterstützten Datenbank-Momentaufnahmen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "71708286"
 > [!IMPORTANT]
 > Informationen zu anderen bedeutenden Überlegungen finden Sie unter [Datenbank-Momentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)erstellt werden.  
   
-##  <a name="Recommendations"></a> Empfehlungen  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
  In diesem Abschnitt werden die folgenden bewährten Methoden erläutert:  
   
 -   [Bewährte Methode: Benennen von Datenbankmomentaufnahmen](#Naming)  
@@ -51,7 +51,7 @@ ms.locfileid: "71708286"
   
 -   [Bewährte Methode: Clientverbindungen mit einer Datenbankmomentaufnahme](#Client_Connections)  
   
-####  <a name="Naming"></a> Bewährte Methode: Benennen von Datenbankmomentaufnahmen  
+####  <a name="best-practice-naming-database-snapshots"></a><a name="Naming"></a> Bewährte Methode: Benennen von Datenbankmomentaufnahmen  
  Vor dem Erstellen von Momentaufnahmen müssen Sie unbedingt überlegen, wie Sie diese benennen. Jede Datenbankmomentaufnahme erfordert einen eindeutigen Datenbanknamen. Um den Verwaltungsaufwand zu reduzieren, kann der Name einer Momentaufnahme Informationen enthalten, mit denen die Datenbank identifiziert wird:  
   
 -   Der Name der Quelldatenbank.  
@@ -76,21 +76,21 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="Limiting_Number"></a> Bewährte Methode: Beschränken der Anzahl von Datenbankmomentaufnahmen  
+#### <a name="best-practice-limiting-the-number-of-database-snapshots"></a><a name="Limiting_Number"></a> Bewährte Methode: Beschränken der Anzahl von Datenbankmomentaufnahmen  
  Durch das Erstellen einer Reihe von Momentaufnahmen werden im Laufe der Zeit sequenzielle Momentaufnahmen der Quelldatenbank aufgezeichnet. Jede Momentaufnahme wird so lange persistent gespeichert, bis sie explizit gelöscht wird. Durch jede Momentaufnahme nehmen die ursprünglichen Seiten beim Aktualisieren an Größe zu. Deshalb sollten Sie Speicherplatz freigeben, indem Sie eine ältere Momentaufnahme löschen, nachdem eine neue Momentaufnahme erstellt wurde.  
   
 
 **Hinweis!** Wenn Sie zu einer bestimmten Datenbank-Momentaufnahme zurückkehren möchten, müssen Sie alle anderen Momentaufnahmen dieser Datenbank löschen.  
   
-####  <a name="Client_Connections"></a> Bewährte Methode: Clientverbindungen mit einer Datenbankmomentaufnahme  
+####  <a name="best-practice-client-connections-to-a-database-snapshot"></a><a name="Client_Connections"></a> Bewährte Methode: Clientverbindungen mit einer Datenbankmomentaufnahme  
  Zur Verwendung einer Datenbankmomentaufnahme müssen die Clients wissen, wo sie diese finden. Die Benutzer können aus einer Datenbankmomentaufnahme lesen, während eine andere Datenbankmomentaufnahme erstellt oder gelöscht wird. Wenn Sie jedoch eine vorhandenen Momentaufnahme durch eine neue Momentaufnahme ersetzen, müssen Sie Clients an die neue Momentaufnahme umleiten. Die Benutzer können mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]manuell eine Verbindung mit einer Datenbankmomentaufnahme herstellen. Für die Unterstützung einer Produktionsumgebung sollten Sie jedoch eine programmatische Lösung erstellen, die Berichterstellungsclients transparent an die neueste Momentaufnahme der Datenbank weiterleitet.  
   
 
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Jeder Benutzer, der eine Datenbank erstellen kann, kann auch eine Datenbankmomentaufnahme erstellen. Eine Momentaufnahme einer Spiegeldatenbank kann jedoch nur von Mitgliedern der festen Serverrolle **sysadmin** erstellt werden.  
   
-##  <a name="TsqlProcedure"></a> So erstellen Sie eine Datenbankmomentaufnahme (mit Transact-SQL)  
+##  <a name="how-to-create-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> So erstellen Sie eine Datenbankmomentaufnahme (mit Transact-SQL)  
  **So erstellen Sie eine Datenbankmomentaufnahme**  
   
 >  Ein Beispiel für diese Prozedur finden Sie in [Beispiele (Transact-SQL)](#TsqlExample)an späterer Stelle in diesem Abschnitt.  
@@ -120,7 +120,7 @@ AdventureWorks_snapshot_evening
     > [!NOTE]  
     >  Wenn Sie eine Datenbankmomentaufnahme erstellen, darf die CREATE DATABASE-Anweisung weder Protokolldateien noch Offlinedateien, Wiederherstellungsdateien oder außer Kraft gesetzte Dateien enthalten.  
   
-###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
   
 > [!NOTE]  
 >  Die in den Beispielen verwendete Erweiterung `.ss` ist willkürlich.  
@@ -131,7 +131,7 @@ AdventureWorks_snapshot_evening
   
 -   B. [Erstellen einer Momentaufnahme für die Sales-Datenbank](#Creating_on_Sales)
   
-####  <a name="Creating_on_AW"></a> A. Erstellen einer Momentaufnahme für die AdventureWorks-Datenbank  
+####  <a name="a-creating-a-snapshot-on-the-adventureworks-database"></a><a name="Creating_on_AW"></a> A. Erstellen einer Momentaufnahme für die AdventureWorks-Datenbank  
  In diesem Beispiel wird eine Datenbankmomentaufnahme für die `AdventureWorks` -Datenbank erstellt. Der Momentaufnahmename, `AdventureWorks_dbss_1800`, und der Dateiname der entsprechenden Sparsedatei, `AdventureWorks_data_1800.ss`, geben als Erstellungszeit 18:00 Uhr an.  
   
 ```  
@@ -142,7 +142,7 @@ AS SNAPSHOT OF AdventureWorks;
 GO  
 ```  
   
-####  <a name="Creating_on_Sales"></a> B. Erstellen einer Momentaufnahme für die Sales-Datenbank  
+####  <a name="b-creating-a-snapshot-on-the-sales-database"></a><a name="Creating_on_Sales"></a> B. Erstellen einer Momentaufnahme für die Sales-Datenbank  
  In diesem Beispiel wird eine Datenbankmomentaufnahme, `sales_snapshot1200`, für die `Sales` -Datenbank erstellt. Diese Datenbank wurde in dem Beispiel „Erstellen einer Datenbank mit Dateigruppen“ unter [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)erstellt.  
   
 ```  
@@ -165,7 +165,7 @@ AS SNAPSHOT OF Sales;
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Anzeigen einer Datenbank-Momentaufnahme &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   

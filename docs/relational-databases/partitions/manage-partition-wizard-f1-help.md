@@ -24,10 +24,10 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892413"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Assistent zum Verwalten von Partitionen (F1-Hilfe)
@@ -44,7 +44,7 @@ ms.locfileid: "68892413"
   
  Dieser Abschnitt stellt die Informationen bereit, die zum Verwalten, Ändern und Implementieren von Partitionen mit dem **Assistenten zum Verwalten von Partitionen**erforderlich sind.  
   
-##  <a name="Top"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="Top"></a> In diesem Abschnitt  
  Die folgenden Abschnitte stellen Hilfe für die Seiten des **Assistenten zum Verwalten von Partitionen** bereit.  
   
  [Assistent zum Verwalten von Partitionen (Seite 'Partitionsaktion auswählen')](#SelectPartitionAction)  
@@ -63,7 +63,7 @@ ms.locfileid: "68892413"
   
  [Assistent zum Verwalten von Partitionen (Seite 'Status')](#Progress)  
   
-##  <a name="SelectPartitionAction"></a> Partitionsaktion auswählen (Seite)  
+##  <a name="select-partition-action-page"></a><a name="SelectPartitionAction"></a> Partitionsaktion auswählen (Seite)  
  Auf der Seite **Partitionsaktion auswählen** können Sie die Aktion auswählen, die Sie für die Partition ausführen möchten.  
   
 ### <a name="create-a-staging-table"></a>Erstellen einer Stagingtabelle  
@@ -91,7 +91,7 @@ ms.locfileid: "68892413"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="SwitchIn"></a> Partitionseinfügeoptionen auswählen (Seite)  
+##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Partitionseinfügeoptionen auswählen (Seite)  
  Auf der Seite **Partitionseinfügeoptionen auswählen** können Sie die Stagingtabelle erstellen, die Sie in die partitionierte Tabelle einfügen.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
@@ -106,7 +106,7 @@ ms.locfileid: "68892413"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="SwitchOut"></a> Partitionsauslagerungsoptionen auswählen (Seite)  
+##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Partitionsauslagerungsoptionen auswählen (Seite)  
  Auf der Seite **Partitionsauslagerungsoptionen auswählen** können Sie die Partition und die Stagingtabelle für die partitionierten Daten auswählen, die aus der partitionierten Tabelle ausgelagert werden.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
@@ -124,7 +124,7 @@ ms.locfileid: "68892413"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="StagingTableOptions"></a> Stagingtabellenoptionen auswählen (Seite)  
+##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> Stagingtabellenoptionen auswählen (Seite)  
  Auf der Seite **Stagingtabellenoptionen auswählen** können Sie die Stagingtabelle erstellen, die zum Verschieben der partitionierten Daten verwendet werden soll.  
   
  Stagingtabellen müssen sich in der gleichen Dateigruppe der ausgewählten Partition befinden, in der sich auch die Quelltabelle befindet. Der Entwurf der Stagingtabelle muss dem der Quell- und der Zieltabelle entsprechen.  
@@ -146,7 +146,7 @@ ms.locfileid: "68892413"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="OutputOption"></a> Ausgabeoption auswählen (Seite)  
+##  <a name="select-output-option-page"></a><a name="OutputOption"></a> Ausgabeoption auswählen (Seite)  
  Geben Sie auf der Seite **Ausgabeoption auswählen** an, wie Sie die Änderungen für Ihre Partitionen abschließen möchten.  
   
 ### <a name="create-script"></a>Erstellen von Skripts  
@@ -173,7 +173,7 @@ ms.locfileid: "68892413"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="NewJob"></a> Neuer Auftragszeitplan (Seite)  
+##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> Neuer Auftragszeitplan (Seite)  
  Verwenden Sie die Seite **Neuer Auftragszeitplan** , um die Eigenschaften des Zeitplans anzuzeigen und zu ändern.  
   
 ### <a name="options"></a>Tastatur  
@@ -256,7 +256,7 @@ ms.locfileid: "68892413"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="Summary"></a> Seite "Zusammenfassung"  
+##  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Mithilfe der Seite **Zusammenfassung** können Sie die Optionen überprüfen, die Sie auf den vorherigen Seiten ausgewählt haben.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
@@ -265,7 +265,7 @@ ms.locfileid: "68892413"
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="Progress"></a> Status (Seite)  
+##  <a name="progress-page"></a><a name="Progress"></a> Status (Seite)  
  Auf der Seite **Status** können Sie Statusinformationen zu den Aktionen im **Assistenten zum Verwalten von Partitionen**anzeigen. Je nach den im Assistenten ausgewählten Optionen enthält die Seite **Status** eine oder mehrere Aktionen. Im oberen Feld werden der Gesamtstatus des Assistenten und die Anzahl der empfangenen Status-, Fehler- und Warnmeldungen angezeigt.  
   
 ### <a name="options"></a>Tastatur  

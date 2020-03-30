@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68731131"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
@@ -106,7 +106,7 @@ Die **int**-Differenz zwischen *startdate* und *enddate*, ausgedrückt in der du
   
 Beispielsweise gibt `SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` -2 zurück, was darauf hindeutet, dass 2036 ein Schaltjahr sein muss. Dieser Fall bedeutet Folgendes: Wenn wir mit _startdate_ „2036-03-01-01“ beginnen und dann -2 Tage zählen, erreichen wir das _enddate_ „2036-02-28“.
   
-Bei einem Rückgabewert, der sich außerhalb des gültigen Bereichs für **int** (-2,147,483,648 bis + 2,147,483,647) befindet, gibt `DATEDIFF` einen Fehler zurück.  Der maximale Unterschied zwischen *startdate* und *enddate* beträgt für **millisecond** 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden. Für **second** beträgt der maximale Unterschied 68 Jahre, 19 Tage, 3 Stunden, 14 Minuten und 7 Sekunden.
+Bei einem Rückgabewert, der sich außerhalb des gültigen Bereichs für **int** (-2,147,483,648 bis + 2,147,483,647) befindet, gibt `DATEDIFF` einen Fehler zurück.  Der maximale Unterschied zwischen **startdate** und *enddate* beträgt für *millisecond* 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden. Für **second** beträgt der maximale Unterschied 68 Jahre, 19 Tage, 3 Stunden, 14 Minuten und 7 Sekunden.
   
 Wenn *startdate* und *enddate* jeweils nur ein Uhrzeitwert zugewiesen ist und *datepart* kein Zeit-*datepart* ist, gibt `DATEDIFF` 0 (null) zurück.
   
@@ -322,7 +322,7 @@ SELECT @result
 118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 In diesen Beispielen werden verschiedene Typen von Ausdrücken als Argumente für die Parameter *startdate* und *enddate* verwendet.
   
 ### <a name="j-specifying-columns-for-startdate-and-enddate"></a>J. Angeben von Spalten für startdate und enddate  

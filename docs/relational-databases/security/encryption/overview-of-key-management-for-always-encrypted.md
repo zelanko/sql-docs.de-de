@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288734"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Übersicht über die Schlüsselverwaltung für Always Encrypted
@@ -46,7 +46,7 @@ Der Prozess der Schlüsselverwaltung kann in die folgenden grundlegenden Tasks u
 - **Schlüsselrotation** – Ersetzen eines vorhandenen Schlüssels mit einem neuen Schlüssel in regelmäßigen Abständen Sie müssen einen Schlüssel möglicherweise rotieren, wenn er kompromittiert wurde, oder um die Richtlinien und Kompatibilitätsbestimmungen Ihrer Organisation einzuhalten, die die Rotation kryptografischer Schlüssel vorschreiben. 
 
 
-## <a name="KeyManagementRoles"></a> Schlüsselverwaltungsrollen
+## <a name="key-management-roles"></a><a name="KeyManagementRoles"></a> Schlüsselverwaltungsrollen
 
 Es gibt zwei unterschiedliche Rollen von Benutzern, die Always Encrypted-Schlüssel verwalten, und zwar Sicherheits- und Datenbankadministratoren (DBAs):
 

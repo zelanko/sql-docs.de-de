@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908772"
 ---
 # <a name="enable-and-configure-filestream"></a>Aktivieren und Konfigurieren von FILESTREAM
@@ -23,7 +23,7 @@ ms.locfileid: "72908772"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Vor der Verwendung von FILESTREAM müssen Sie FILESTREAM in der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]instanz aktivieren. In diesem Thema erfahren Sie, wie Sie FILESTREAM mit dem SQL Server-Konfigurations-Manager aktivieren.  
   
-##  <a name="enabling"></a> Aktivieren von FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> Aktivieren von FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>So aktivieren und ändern Sie FILESTREAM-Einstellungen  
   
@@ -58,9 +58,9 @@ ms.locfileid: "72908772"
   
 13. Starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst neu.  
 
-##  <a name="best"></a> Bewährte Methoden  
+##  <a name="best-practices"></a><a name="best"></a> Bewährte Methoden  
   
-###  <a name="config"></a> Physische Konfiguration und Verwaltung  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> Physische Konfiguration und Verwaltung  
  Beachten Sie beim Einrichten von FILESTREAM-Speichervolumes die folgenden Richtlinien:  
   
 -   Deaktivieren Sie kurze Dateinamen auf FILESTREAM-Computersystemen. Bei kurzen Dateinamen dauert das Erstellen erheblich länger. Um kurze Dateinamen zu deaktivieren, verwenden Sie das Windows-Hilfsprogramm **fsutil** .  
@@ -84,7 +84,7 @@ ms.locfileid: "72908772"
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
-###  <a name="database"></a> Physischer Datenbankentwurf  
+###  <a name="physical-database-design"></a><a name="database"></a> Physischer Datenbankentwurf  
  Beachten Sie beim Entwerfen einer FILESTREAM-Datenbank die folgenden Richtlinien:  
   
 -   FILESTREAM-Spalten müssen von einer entsprechenden **uniqueidentifier**ROWGUID-Spalte begleitet werden. Diese Arten von Tabellen müssen auch über einen eindeutigen Index verfügen. In der Regel ist dieser Index kein gruppierter Index. Wenn die Geschäftslogik für Datenbanken einen gruppierten Index erfordert, müssen Sie sicherstellen, dass die im Index gespeicherten Werte nicht zufällig sind. Zufallswerte bewirken, dass der Index neu sortiert wird, sobald in der Tabelle eine Zeile hinzugefügt oder entfernt wird.  

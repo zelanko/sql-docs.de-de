@@ -23,10 +23,10 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056474"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "74056474"
 > [!NOTE]  
 >  Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent für die Verwendung eines der Systemdienstkonten (Lokales System, Netzwerkdienst oder Lokaler Dienst) konfiguriert ist und das Verwaltungs-Data Warehouse auf einer anderen Instanz als der Datensammler erstellt wird, müssen Sie die Sammlungssätze so konfigurieren, dass sie einen Proxy zum Hochladen von Daten in das Verwaltungs-Data Warehouse verwenden.  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Konfigurieren des Verwaltungs-Data Warehouses auf einer einzelnen oder mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>Konfigurieren des Verwaltungs-Data Warehouses auf einer einzelnen oder mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74056474"
   
 6.  Wiederholen Sie Schritt 5, bis alle Datenbankinstanzen, die den Datensammler verwenden, so konfiguriert sind, dass sie Daten in das gemeinsam verwendete Verwaltungs-Data Warehouse hochladen.  
 
-####  <a name="Wizard"></a> Assistent für die Konfiguration des Verwaltungs-Data Warehouses  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> Assistent für die Konfiguration des Verwaltungs-Data Warehouses  
  **Willkommensseite**  
   
  Die Willkommensseite ist die Anfangsseite des Assistenten für die Konfiguration der Datensammlung. Die Anzeige dieser Seite ist optional.  

@@ -23,10 +23,10 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f865a560cb530060cf8f2f0a2f0a6208fcc924ed
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298594"
 ---
 # <a name="flat-file-connection-manager"></a>Verbindungs-Manager für Flatfiles
@@ -110,7 +110,7 @@ ms.locfileid: "71298594"
  **Format**  
  Gibt an, ob die Datei Formatierung mit Trennzeichen, fester Breite oder rechtem Flatterrand verwendet.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Durch Trennzeichen getrennt|Die Trennung von Spalten erfolgt durch Trennzeichen. Welche Trennzeichen dies sind, wird auf der Seite **Spalten** angegeben.|  
 |Feste Breite|Spalten haben eine feste Breite.|  
@@ -125,7 +125,7 @@ ms.locfileid: "71298594"
  **Kopfzeilentrennzeichen**  
  Wählen Sie aus einer Liste mit Trennzeichen für Kopfzeilen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Kopfzeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Kopfzeilen dient ein Wagenrücklauf.|  
@@ -159,7 +159,7 @@ ms.locfileid: "71298594"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -173,7 +173,7 @@ ms.locfileid: "71298594"
  **Spaltentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Spaltentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  
@@ -220,7 +220,7 @@ ms.locfileid: "71298594"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -250,12 +250,12 @@ ms.locfileid: "71298594"
  **Konfigurieren Sie die Eigenschaften für jede Spalte.**  
  Wählen Sie eine Spalte im linken Bereich, um im rechten Bereich ihre Eigenschaften anzuzeigen. In der folgenden Tabelle werden die Datentypeigenschaften beschrieben. Einige der aufgeführten Eigenschaften können nur für einige Flatfileformate konfiguriert werden.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**ColumnType**|Gibt an, ob eine Spalte getrennt ist, eine feste Breite hat bzw. einen unregelmäßigen rechten Rand aufweist. Diese Eigenschaft ist schreibgeschützt. Bei Dateien mit rechtem Flatterrand haben die Spalten mit Ausnahme der letzten Spalte eine feste Breite. Die Trennung der letzten Spalte erfolgt mit einem Zeilentrennzeichen.|  
 |**OutputColumnWidth**|Geben Sie einen Wert an, der als Anzahl von Bytes gespeichert werden soll; bei Unicode-Dateien entspricht dieser Wert einer Zeichenanzahl. Im Datenflusstask dient dieser Wert dem Festlegen der Breite der Ausgabespalte für die Flatfilequelle. Im Objektmodell heißt diese Eigenschaft MaximumWidth.|  
 |**DataType**|Wählen Sie eine Option aus der Liste der verfügbaren Datentypen aus. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).|  
-|**TextQualified**|Geben Sie an, ob Textdaten in Textqualifiziererzeichen eingeschlossen sind, z. B. in Anführungszeichen.<br /><br /> True: Die Textdaten in der Flatfile sind gekennzeichnet. False: Die Textdaten in der Flatfile sind NICHT gekennzeichnet.|  
+|**TextQualified**|Geben Sie an, ob Textdaten in Textqualifiziererzeichen eingeschlossen sind, z. B. in Anführungszeichen.<br /><br /> True: Die Textdaten in der Flatfile sind gekennzeichnet. False: Die Textdaten in der Flatfile sind nicht gekennzeichnet.|  
 |**Name**|Geben Sie einen beschreibenden Spaltennamen an. Wenn Sie keinen Namen eingeben, wird in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] automatisch ein Name im Format Spalte 0, Spalte 1 usw. erstellt.|  
 |**DataScale**|Gibt die Skala numerischer Daten an. Skala heißt in diesem Fall die Anzahl der Dezimalstellen. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Wählen Sie eine Option aus der Liste der verfügbaren Spaltentrennzeichen aus. Dabei sollten Sie Spaltentrennzeichen auswählen, deren Auftreten als Zeichen im Text unwahrscheinlich ist. Bei Spalten fester Breite wird dieser Wert ignoriert.<br /><br /> **{CR}{LF}** . Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.<br /><br /> **{CR}** . Als Trennzeichen für Spalten dient ein Wagenrücklauf.<br /><br /> **{LF}** . Als Trennzeichen für Spalten dient ein Zeilenvorschub.<br /><br /> **Semikolon {;}** . Als Trennzeichen für Spalten dient ein Semikolon.<br /><br /> **Doppelpunkt {:}** . Als Trennzeichen für Spalten dient ein Doppelpunkt.<br /><br /> **Komma {,}** . Als Trennzeichen für Spalten dient ein Komma.<br /><br /> **Tabulator {t}** . Als Trennzeichen für Spalten dient ein Tabulator.<br /><br /> **Senkrechter Strich {&#124;}** . Als Trennzeichen für Spalten dient ein senkrechter Strich.|  
@@ -265,7 +265,7 @@ ms.locfileid: "71298594"
  **Neu**  
  Durch Klicken auf **Neu**fügen Sie eine neue Spalte hinzu. Die neue Spalten wird beim Klicken auf **Neu** standardmäßig am Ende der Liste hinzugefügt. Ferner sind für die Schaltfläche folgende, über die Dropdownliste auswählbare Optionen verfügbar.  
   
-|value|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Spalte hinzufügen**|Fügt am Ende der Liste eine neue Spalte hinzu.|  
 |**Einfügen vor**|Fügt vor der ausgewählten Spalte eine neue Spalte ein.|  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243622"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "75243622"
   
  Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Always On FAQ for SQL Server 2012 (Häufig gestellte Fragen zu Always On für SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768))).  
 
-##  <a name="bkmk_requirements"></a> Anforderungen für die Verwendung von Reporting Services und Always On-Verfügbarkeitsgruppen  
+##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Anforderungen für die Verwendung von Reporting Services und Always On-Verfügbarkeitsgruppen  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und Power BI-Berichtsserver verwenden .NET Framework 4.0 und unterstützen die Verwendung der Verbindungszeichenfolgen-Eigenschaften von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit Datenquellen.  
   
  Um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 und früher zu verwenden, müssen Sie einen Hotfix für .NET 3.5 SP1 herunterladen und installieren. Der Hotfix fügt Unterstützung für Funktionen des SQL Client für Verfügbarkeitsgruppen und Unterstützung der Verbindungszeichenfolgeneigenschaften **ApplicationIntent** und **MultiSubnetFailover**hinzu. Wenn der Hotfix nicht auf jedem Computer installiert ist, der einen Berichtsserver hostet, dann sehen Benutzer, die versuchen, Berichte in der Vorschau anzuzeigen, eine Fehlermeldung wie die Folgende, und die Fehlermeldung wird in das Ablaufverfolgungsprotokoll des Berichtsservers geschrieben:  
@@ -46,7 +46,7 @@ ms.locfileid: "75243622"
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Konfigurationsdateien wie **RSreportserver.config** werden nicht als Teil der [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Funktion unterstützt. Wenn Sie manuelle Änderungen an einer Konfigurationsdatei auf einem der Berichtsserver vornehmen, müssen Sie die Replikate manuell aktualisieren.  
   
-##  <a name="bkmk_reportdatasources"></a> Berichtsdatenquellen und Verfügbarkeitsgruppen  
+##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> Berichtsdatenquellen und Verfügbarkeitsgruppen  
  Das Verhalten von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Datenquellen auf Grundlage von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] kann abhängig davon variieren, wie der Administrator die Verfügbarkeitsgruppenumgebung konfiguriert hat.  
   
  Um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] für Berichtsdatenquellen zu verwenden, müssen Sie die Berichtsdatenquellenverbindungszeichenfolge konfigurieren, um die Verfügbarkeitsgruppe *DNS-Name des Listeners*zu verwenden. Die folgenden Datenquellen werden unterstützt:  
@@ -91,7 +91,7 @@ ms.locfileid: "75243622"
   
  Wenn ein schreibgeschütztes sekundäres Replikat als [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Datenquelle verwendet wird, muss sichergestellt werden, dass die Datenupdatewartezeit die Anforderungen der Berichtsbenutzer erfüllt.  
   
-##  <a name="bkmk_reportdesign"></a> Berichtsentwurf und Verfügbarkeitsgruppen  
+##  <a name="report-design-and-availability-groups"></a><a name="bkmk_reportdesign"></a> Berichtsentwurf und Verfügbarkeitsgruppen  
  Beim Entwerfen von Berichten in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] oder eines Berichtsprojekts in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]kann ein Benutzer eine Berichtsdatenquellenverbindungszeichenfolge so konfigurieren, dass sie von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]bereitgestellte Verbindungseigenschaften enthält. Die Unterstützung für die neuen Verbindungseigenschaften hängt davon ab, wo ein Benutzer den Bericht in der Vorschau anzeigt.  
   
 -   **Lokale Vorschau:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] und [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verwenden .NET Framework 4.0 und unterstützen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Verbindungszeichenfolgen-Eigenschaften.  
@@ -100,7 +100,7 @@ ms.locfileid: "75243622"
   
 > **Fehlermeldung:** „Das Schlüsselwort wird nicht unterstützt: ‚applicationintent‘“  
   
-##  <a name="bkmk_reportserverdatabases"></a> Berichtsserver-Datenbanken und Verfügbarkeitsgruppen  
+##  <a name="report-server-databases-and-availability-groups"></a><a name="bkmk_reportserverdatabases"></a> Berichtsserver-Datenbanken und Verfügbarkeitsgruppen  
  Reporting Services und Power BI-Berichtsserver bieten eingeschränkte Unterstützung für die Verwendung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit Berichtsserver-Datenbanken. Die Berichtsserver-Datenbanken können in Verfügbarkeitsgruppen als Teil eines Replikats konfiguriert werden, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet bei einem Failover jedoch nicht automatisch ein anderes Replikat für die Berichtsserver-Datenbanken. Die Verwendung von MultiSubnetFailover mit den Berichtsserver-Datenbanken wird nicht unterstützt.  
   
  Manuelle Aktionen oder benutzerdefinierte Automatisierungsskripts müssen verwendet werden, um das Failover und die Wiederherstellung abzuschließen. Bis diese Aktionen abgeschlossen sind, funktionieren einige Funktionen des Berichtsservers möglicherweise nicht ordnungsgemäß nach dem [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Failover.  
@@ -108,7 +108,7 @@ ms.locfileid: "75243622"
 > [!NOTE]  
 >  Wenn Sie Failover und Notfallwiederherstellung für die Berichtsserver-Datenbanken planen, sollten Sie immer eine Kopie des Berichtsserververschlüsselungsschlüssels sichern.  
   
-###  <a name="bkmk_differences_in_server_mode"></a> Unterschiede zwischen dem einheitlichen Modus und dem SharePoint-Modus  
+###  <a name="differences-between-sharepoint-native-mode"></a><a name="bkmk_differences_in_server_mode"></a> Unterschiede zwischen dem einheitlichen Modus und dem SharePoint-Modus  
  Dieser Abschnitt fasst die Unterschiede bei der Interaktion von Berichtsservern im SharePoint-Modus und im einheitlichen Modus mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]zusammen.  
   
  Ein SharePoint-Berichtsserver erstellt für jede **-Dienstanwendung, die Sie erstellen,** 3 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Datenbanken. Die Verbindung mit den Berichtsserver-Datenbanken im SharePoint-Modus wird in der SharePoint-Zentraladministration konfiguriert, wenn Sie die Dienstanwendung erstellen. Die Standardnamen der Datenbanken enthalten eine GUID für die Dienstanwendung. Datenbanknamen für einen SharePoint-Modusberichtsserver können beispielsweise wie folgt aussehen:  
@@ -134,7 +134,7 @@ ms.locfileid: "75243622"
 > -   Der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Synchronisierungsvorgang erkennt Unterschiede zwischen der Liste der Elemente in der Inhaltsdatenbank und den Berichtsserver-Datenbanken.  
 > -   Der Synchronisierungsvorgang löscht oder aktualisiert Elemente in der Inhaltsdatenbank.  
   
-###  <a name="bkmk_prepare_databases"></a> Vorbereiten von Berichtsserver-Datenbanken für Verfügbarkeitsgruppen  
+###  <a name="prepare-report-server-databases-for-availability-groups"></a><a name="bkmk_prepare_databases"></a> Vorbereiten von Berichtsserver-Datenbanken für Verfügbarkeitsgruppen  
  Im Folgenden sind die grundlegenden Schritte zum Vorbereiten und Hinzufügen der Berichtsserver-Datenbanken zu einer [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]beschrieben:  
   
 -   Erstellen Sie die Verfügbarkeitsgruppe, und konfigurieren Sie einen *DNS-Namen des Listeners*.  
@@ -147,7 +147,7 @@ ms.locfileid: "75243622"
   
 -   Aktualisieren Sie die Datenbankverbindung, um den DNS-Namen des Listeners zu verwenden. Ändern Sie den **Berichtsserver-Datenbanknamen** für Berichtsserver im einheitlichen Modus im [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager. Ändern Sie den **Datenbankservernamen** für den SharePoint-Modus für die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienstanwendung(en).  
   
-###  <a name="bkmk_steps_to_complete_failover"></a> Schritte zum Abschluss der Notfallwiederherstellung von Berichtsserver-Datenbanken  
+###  <a name="steps-to-complete-disaster-recovery-of-report-server-databases"></a><a name="bkmk_steps_to_complete_failover"></a> Schritte zum Abschluss der Notfallwiederherstellung von Berichtsserver-Datenbanken  
  Die folgenden Schritte müssen nach einem [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Failover zu einem sekundären Replikat ausgeführt werden:  
   
 1.  Beenden Sie die Instanz des SQL Agent-Diensts, der von der primären Datenbank-Engine verwendet wurde, das die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Datenbanken hostet.  
@@ -164,7 +164,7 @@ ms.locfileid: "75243622"
   
 5.  Stellen Sie sicher, dass Berichte für das neue primäre Replikat ausgeführt werden können.  
   
-###  <a name="bkmk_failover_behavior"></a> Berichtsserververhalten, wenn ein Failover auftritt  
+###  <a name="report-server-behavior-when-a-failover-occurs"></a><a name="bkmk_failover_behavior"></a> Berichtsserververhalten, wenn ein Failover auftritt  
  Bei einem Failover der Berichtsserver-Datenbanken in einer Berichtsserverumgebung, die für die Verwendung des neuen primären Replikats aktualisiert wurde, entstehen funktionale Probleme, die sich aus dem Failover und dem Wiederherstellungsvorgang ergeben. Die Auswirkungen dieser Probleme hängen von der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Last zum Zeitpunkt des Failovers und von der Länge der Zeit ab, die die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] zum Failover auf ein sekundäres Replikat benötigt und die der Berichtsserver-Administrator zum Aktualisieren der Berichtsumgebung für die Verwendung des neuen primären Replikats braucht.  
   
 -   Die Ausführung der Hintergrundverarbeitung tritt möglicherweise mehr als einmal auf. Dies liegt an der Wiederholungslogik und der Unfähigkeit des Berichtsservers, die geplante Arbeit während des Failoverzeitraums als abgeschlossen zu markieren.  

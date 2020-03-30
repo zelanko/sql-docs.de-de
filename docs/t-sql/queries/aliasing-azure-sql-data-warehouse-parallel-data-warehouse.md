@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244764"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)
@@ -42,7 +42,7 @@ object_source [ AS ] alias
  *alias*  
  Der gewünschte temporäre Verweisname für die Tabelle oder Spalte. Alle gültigen Objektnamen können verwendet werden. Weitere Informationen finden Sie unter „Object Naming Rules“ (Objektbenennungsregeln) in [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Das folgende Beispiel zeigt eine Abfrage mit mehreren Joins. In diesem Beispiel wird das Aliasing sowohl von Tabellen als auch von Spalten veranschaulicht.  
   
 -   Spaltenaliasing: In diesem Beispiel wird sowohl Spalten als auch Ausdrücken, die Spalten in der ausgewählten Liste haben, ein Alias zugeordnet. `SalesTerritoryRegion AS SalesTR` stellt einen einfachen Spaltenalias dar. `Sum(SalesAmountQuota) AS TotalSales` veranschaulicht  

@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055948"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon
@@ -31,7 +31,7 @@ Der SQL-Volltextfilterdaemon-Startprogrammdienst wird von der SQL Server-Volltex
   
 Der SQL-Volltextfilterdaemon-Startprogrammdienst ist ein instanzabhängiger Dienst, dem eine bestimmte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugeordnet ist. Das Startprogramm für SQL-Volltextfilterdaemon verteilt die Dienstkontoinformationen an jeden Filterdaemon-Hostprozess, den es startet.  
 
-##  <a name="setting"></a>Legen Sie das Dienstkonto fest  
+##  <a name="set-the-service-account"></a><a name="setting"></a>Legen Sie das Dienstkonto fest  
   
 1.  Zeigen Sie im Menü **Start** auf **Programme**, erweitern Sie [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie anschließend auf **SQL Server 2016-Konfigurations-Manager**.  
   
@@ -43,7 +43,7 @@ Der SQL-Volltextfilterdaemon-Startprogrammdienst ist ein instanzabhängiger Dien
   
 ![Prozesseigenschaften des Startprogramms für SQL-Volltextfilterdaemon](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   
-##  <a name="error"></a>Beheben Sie den Fehler des SQL-Volltextfilterdaemon-Startprogrammdiensts, wenn er nicht startet  
+##  <a name="troubleshoot-the-sql-full-text-filter-daemon-launcher-service-if-it-doesnt-start"></a><a name="error"></a>Beheben Sie den Fehler des SQL-Volltextfilterdaemon-Startprogrammdiensts, wenn er nicht startet  
  Wenn der Volltextfilterdaemon-Startprogrammdienst nicht startet, überprüfen Sie die folgenden möglichen Ursachen:  
   
 ### <a name="permissions-issues"></a>Berechtigungsprobleme

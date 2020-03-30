@@ -157,7 +157,7 @@ FCIs können für die Notfallwiederherstellung verwendet werden. Wie bei einer n
 ### <a name="log-shipping"></a>Protokollversand
 Der Protokollversand ist eine der ältesten Methoden für die Bereitstellung der Notfallwiederherstellung für SQL Server-Datenbanken. Der Protokollversand wird häufig zusammen mit Verfügbarkeitsgruppen und FCIs verwendet, um eine kosteneffektive und einfachere Notfallwiederherstellung bereitzustellen, wenn andere Optionen wegen der Umgebung, der administrativen Fähigkeiten oder des Budgets zu anspruchsvoll sind. Ähnlich wie bei der Hochverfügbarkeit für den Protokollverstand wird bei vielen Umgebungen das Laden eines Transaktionsprotokolls verzögert, um menschliche Fehler zu erfassen.
 
-## <a name = "Migrations"></a> Migrationen und Upgrades
+## <a name="migrations-and-upgrades"></a><a name = "Migrations"></a> Migrationen und Upgrades
 
 Beim Bereitstellen neuer Instanzen oder beim Aktualisieren von alten kann ein Unternehmen keinen langen Ausfall tolerieren. In diesem Abschnitt wird erläutert, wie die Verfügbarkeitsfunktionen von SQL Server verwendet werden können, um die Ausfallzeit bei einem geplanten Architekturwechsel, einem Serverwechsel, einer Plattformänderung (z.B. Windows Server zu Linux oder umgekehrt) oder während des Patchens zu minimieren.
 
@@ -224,7 +224,7 @@ Wenn eine Verfügbarkeitsgruppe mit dem Clustertyp „Keiner“ konfiguriert ist
 
 Da der Protokollversand nur auf Sicherung und Wiederherstellung basiert, gibt es keine Unterschiede zwischen den Datenbanken, Dateistrukturen usw. für SQL Server unter Windows Server oder Linux. Dies bedeutet, dass der Protokollversand zwischen einer Windows Server-basierten Installation von SQL Server und einer Linux-basierten konfiguriert werden kann und ebenfalls zwischen Linux-Verteilungen. Alles andere bleibt unverändert. Es muss allerdings berücksichtigt werden, dass der Protokollversand, genau wie eine Verfügbarkeitsgruppe, nicht funktioniert, wenn die Quelle sich auf einer höheren Hauptversion von SQL Server befindet als das Ziel, das sich auf einer früheren Version von SQL Server befindet. 
 
-## <a name = "ReadScaleOut"></a> Schreibgeschützt
+## <a name="read-scale"></a><a name = "ReadScaleOut"></a> Schreibgeschützt
 
 Seit sekundäre Replikate in SQL Server 2012 eingeführt wurden, können diese für schreibgeschützte Abfragen verwendet werden. Es gibt zwei Möglichkeiten, wie dies mit einer Verfügbarkeitsgruppe erzielt werden kann: Indem direkter Zugriff auf das sekundäre Replikat gewährt wird oder indem das [schreibgeschützte Routing konfiguriert wird](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), wofür die Verwendung eines Listeners erforderlich ist.  In SQL Server 2016 wurde die Möglichkeit eingeführt, einen Lastenausgleich für schreibgeschützte Verbindungen über den Listener vorzunehmen, indem ein Roundrobin-Algorithmus verwendet wird. Dadurch können schreibgeschützte Anforderungen über alle lesbaren Replikate verteilt werden. 
 

@@ -11,10 +11,10 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822047"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Überwachung und Problembehandlung bei Verfügbarkeitsgruppen
@@ -23,7 +23,7 @@ ms.locfileid: "74822047"
  Da Verfügbarkeitsgruppen eine integrierte Technologie darstellen, sind viele der auftretenden Probleme möglicherweise Anzeichen für andere Probleme in Ihrem Datenbanksystem. Einige Probleme werden durch Einstellungen in einer Verfügbarkeitsgruppe verursacht, z.B. eine angehaltene Verfügbarkeitsdatenbank. Darüber hinaus können Probleme mit anderen Aspekten von SQL Server auftreten, z.B. SQL Server-Einstellungen und Bereitstellungen von Datenbankdateien, sowie systemische Leistungsprobleme, die unabhängig von der Verfügbarkeit bestehen. Dennoch können andere Probleme außerhalb von SQL Server auftreten, z.B. Probleme mit Netzwerk-E/As, TCP/IP, Active Directory und Windows Server Failover Clustering (WSFC). Oftmals muss bei Problemen, die sich bei einer Verfügbarkeitsgruppe, einem Replikat oder einer Datenbank abzeichnen, an mehreren Technologien Korrekturen vorgenommen werden, um die Ursache zu ermitteln.  
   
   
-##  <a name="BKMK_SCENARIOS"></a> Problembehandlungsszenarien  
+##  <a name="troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> Problembehandlungsszenarien  
  Die folgende Tabelle enthält Links zu allgemeinen Problembehandlungsszenarien für Verfügbarkeitsgruppen. Sie werden nach den jeweiligen Szenariotypen kategorisiert, z.B. Konfiguration, Clientkonnektivität, Failover und Leistung.  
   
 |Szenario|Szenariotyp|BESCHREIBUNG|  
@@ -37,7 +37,7 @@ ms.locfileid: "74822047"
 |[Problembehandlung: Änderungen am primären Replikat spiegeln sich nicht im sekundären Replikat wider](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Leistung|Die Clientanwendung führt erfolgreich ein Update für das primäre Replikat durch, wobei jedoch die Abfrage des sekundären Replikats ergibt, dass die Änderung nicht widergespiegelt wird.|  
 |[Problembehandlung: Hoher HADR_SYNC_COMMIT-Wartetyp mit Always On-Verfügbarkeitsgruppen](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|Leistung|Wenn HADR_SYNC_COMMIT ungewöhnlich lang ist, besteht ein Leistungsproblem beim Datenverschiebungsfluss oder der Protokollfestschreibung für ein sekundäres Replikat.|  
 
-##  <a name="BKMK_TOOLS"></a> Hilfreiche Tools für die Problembehandlung  
+##  <a name="useful-tools-for-troubleshooting"></a><a name="BKMK_TOOLS"></a> Hilfreiche Tools für die Problembehandlung  
  Bei der Konfiguration oder Ausführung von Verfügbarkeitsgruppen können Sie mithilfe verschiedener Tools unterschiedliche Arten von Problemen diagnostizieren. Die folgende Tabelle enthält Links zu nützlichen Informationen über die Tools.  
   
 |Tool|BESCHREIBUNG|  
@@ -53,7 +53,7 @@ ms.locfileid: "74822047"
 |Always On-Leistungsindikatoren|Überwachen die im Systemmonitor dargestellte Verfügbarkeitsgruppenaktivität und sind für die Leistungsoptimierung geeignet. Weitere Informationen finden Sie unter [SQL Server-Verfügbarkeitsreplikat](~/relational-databases/performance-monitor/sql-server-availability-replica.md) und [SQL Server-Datenbankreplikat](~/relational-databases/performance-monitor/sql-server-database-replica.md).|  
 |[Always On-Ringpuffer](always-on-ring-buffers.md)|Erfassen Warnungen innerhalb des SQL Server-Systems für die interne Diagnose und können zum Debuggen von Problemen im Zusammenhang mit Verfügbarkeitsgruppen verwendet werden.|  
   
-##  <a name="BKMK_MONITOR"></a> Überwachen von Verfügbarkeitsgruppen  
+##  <a name="monitoring-availability-groups"></a><a name="BKMK_MONITOR"></a> Überwachen von Verfügbarkeitsgruppen  
  Der ideale Zeitpunkt, um ein Problem mit einer Verfügbarkeitsgruppe zu behandeln, bevor ein Problem ein Failover erfordert, unabhängig davon, ob dieses automatisch oder manuell erfolgt. Dies kann erreicht werden, indem die Leistungsmetriken der Verfügbarkeitsgruppe überwacht und Warnungen gesendet werden, wenn die Verfügbarkeitsreplikate außerhalb der Beschränkungen Ihrer Vereinbarung zum Servicelevel (SLA) ausgeführt werden. Wenn ein sekundäres Replikat im synchronen Commitmodus beispielsweise Leistungsprobleme aufweist, die dazu führen, dass sich die geschätzte Failoverzeit verlängert, sollten Sie nicht bis zum Auftreten eines automatischen Failovers warten. Anderenfalls werden Sie feststellen, dass die Failoverzeit Ihre Recovery Time Objective überschreitet.  
   
  Da Verfügbarkeitsgruppen zu Hochverfügbarkeits- und Notfallwiederherstellungslösungen gehören, stellen die wichtigsten zu überwachenden Leistungsmetriken die geschätzte Failoverzeit (Ihre Recovery Time Objective, RTO, betreffend) und der potenzielle Datenverlust bei einem Notfall (Ihre Recovery Point Objective, RPO, betreffend) dar. Sie können diese Metriken anhand der Daten erfassen, die SQL Server zu einem bestimmten Zeitpunkt verfügbar macht, sodass Sie über Probleme mit den HADR-Funktionen (High Availability Disaster Recovery) Ihres Systems benachrichtigt werden, bevor tatsächlich Fehlerereignisse auftreten. Aus diesem Grund ist es wichtig, sich mit dem Datensynchronisierungsprozess von Verfügbarkeitsgruppen vertraut zu machen und die entsprechenden Metriken zu erfassen.  

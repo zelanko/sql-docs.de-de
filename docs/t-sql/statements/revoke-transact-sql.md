@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74909029"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
@@ -159,7 +159,7 @@ In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die I
   
  Empfänger der CONTROL SERVER-Berechtigung, z. B. Mitglieder der festen Serverrolle sysadmin, können jede Berechtigung für ein beliebiges sicherungsfähiges Element auf dem Server aufheben. Empfänger der CONTROL SERVER-Berechtigung in einer Datenbank, z. B. Mitglieder der festen Datenbankrolle db_owner, können jede Berechtigung für ein beliebiges sicherungsfähiges Element in der Datenbank aufheben. Empfänger der CONTROL-Berechtigung in einem Schema können jede Berechtigung für jedes Objekt im Schema aufheben.  
   
-##  <a name="securable"></a> Für sicherungsfähige Elemente spezifische Syntax  
+##  <a name="securable-specific-syntax"></a><a name="securable"></a> Für sicherungsfähige Elemente spezifische Syntax  
  In der folgenden Tabelle sind die sicherungsfähigen Elemente und Themen aufgeführt, in denen die für ein sicherungsfähiges Element spezifische Syntax beschrieben wird.  
   
 |Sicherungsfähiges Element|Thema|  

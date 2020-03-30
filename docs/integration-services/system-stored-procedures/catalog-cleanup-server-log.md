@@ -11,10 +11,10 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b80b346c426ae68a1c6b0750bca112417861f51e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288074"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
@@ -78,7 +78,7 @@ catalog.cleanup_server_log
   
      Sie können auch den Bereich oder die Ebene (Ausführung bzw. Projekt) angeben und festlegen, wie viele Schlüssel gelöscht werden sollen. Die Standardbatchgröße zum Löschen beträgt 1000. Wenn Sie die Ebene auf 2 festlegen, werden die Schlüssel und Zertifikate nur gelöscht, wenn zugehörige Projekte gelöscht wurden.  
   
- Weitere Informationen finden Sie in den folgenden Wissensdatenbankartikeln: [FIX: Leistungsprobleme bei der Verwendung von SSISDB als Bereitstellungsspeicher in SQL Server 2012](https://support.microsoft.com/kb/2972285)  
+ Weitere Informationen finden Sie im folgenden Knowledge Base-Artikel: [FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012 (Fehlerbehebung: Probleme mit der Leistung bei der Verwendung von SSISDB als Bereitstellungsspeicher in SQL Server 2012)](https://support.microsoft.com/kb/2972285).  
   
 ## <a name="example"></a>Beispiel  
  Mithilfe des folgenden Beispiels wird die gespeicherte „cleanup_server_log“-Prozedur aufgerufen.  

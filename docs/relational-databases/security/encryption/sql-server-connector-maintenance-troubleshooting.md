@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557935"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server-Connector – Verwaltung und Problembehandlung
@@ -25,7 +25,7 @@ ms.locfileid: "75557935"
   Dieses Thema enthält ergänzende Informationen zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector. Weitere Informationen zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector finden Sie unter [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault.](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) und [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
   
-##  <a name="AppendixA"></a> A. Wartungsanweisungen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector  
+##  <a name="a-maintenance-instructions-for-ssnoversion-connector"></a><a name="AppendixA"></a> A. Wartungsanweisungen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector  
   
 ### <a name="key-rollover"></a>Schlüsselrollover  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75557935"
     GO  
     ```  
   
-### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>Upgrade des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors  
+### <a name="upgrade-of-ssnoversion-connector"></a>Upgrade des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors  
 
 Die Versionen 1.0.0.440 und älter wurden ersetzt und werden nicht länger in Produktionsumgebungen unterstützt. Die Versionen 1.0.1.0 und neuer werden in Produktionsumgebungen unterstützt. Richten Sie sich nach den folgenden Anweisungen, um ein Upgrade auf die neueste im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) verfügbare Version auszuführen.
 
@@ -138,7 +138,7 @@ Wenn Sie aktuell Version 1.0.0.440 oder älter verwenden, führen Sie diese Schr
   
 8.  Nachdem Sie bestätigt haben, dass das Update funktioniert, können Sie den alten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectorordner löschen (wenn Sie sich in Schritt 3 dazu entschlossen haben, ihn umzubenennen statt zu deinstallieren).  
   
-### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Ändern des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstprinzipals  
+### <a name="rolling-the-ssnoversion-service-principal"></a>Ändern des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstprinzipals  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet in Azure Active Directory erstellte Dienstprinzipale als Anmeldeinformationen zum Zugriff auf den Schlüsseltresor.  Der Dienstprinzipal verfügt über eine Client-ID und einen Authentifizierungsschlüssel.  Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen werden der **VaultName**, die **Client-ID**und der **Authentifizierungsschlüssel**festgelegt.  Der **Authentifizierungsschlüssel** ist für einen bestimmten Zeitraum (ein oder zwei Jahre) gültig.   Vor Ablauf des Zeitraums muss für den Dienstprinzipal ein neuer Schlüssel in Azure AD generiert werden.  Anschließend müssen die Anmeldeinformationen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]geändert werden.    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] verwaltet einen Cache für die Anmeldeinformationen in der aktuellen Sitzung. Wenn also Anmeldeinformationen geändert werden, sollte [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] neu gestartet werden.  
   
 ### <a name="key-backup-and-recovery"></a>Schlüsselsicherung und -wiederherstellung  
@@ -156,7 +156,7 @@ Zusammengefasst ergeben sich folgende Schritte:
 Schlüsselsicherungen können übergreifend über Azure-Regionen wiederhergestellt werden, sofern sie in der gleichen geografischen Region oder nationalen Cloud bleiben: USA, Kanada, Japan, Australien, Indien, APAC, Europa, Brasilien, China, US-Regierung oder Deutschland.  
   
   
-##  <a name="AppendixB"></a> B. Häufig gestellte Fragen  
+##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. Häufig gestellte Fragen  
 ### <a name="on-azure-key-vault"></a>Zum Azure-Schlüsseltresor  
   
 **Wie funktionieren Schlüsselvorgänge mit Azure Key Vault?**  
@@ -165,7 +165,7 @@ Schlüsselsicherungen können übergreifend über Azure-Regionen wiederhergestel
  **Was ist ein Schlüssel-URI?**  
  Jeder Schlüssel im Azure Key Vault weist einen Uniform Resource Identifier (URI) auf, den Sie in Ihrer Anwendung verwenden können, um auf den Schlüssel zu verweisen. Verwenden Sie zum Abrufen der aktuellen Version das Format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` und zum Abrufen einer bestimmten Version das Format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` .  
   
-### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>Zur Konfiguration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="on-configuring-ssnoversion"></a>Zur Konfiguration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 **Auf welche Endpunkte benötigt der SQL Server-Connector Zugriff?** Der Connector kommuniziert mit zwei Endpunkten, die der Positivliste hinzugefügt werden müssen. Der einzige Port, der für die ausgehende Kommunikation mit diesen anderen Diensten erforderlich ist, lautet 443 für Https:
 -  Login.microsoftonline.com/*:443
@@ -203,7 +203,7 @@ Der Connector verwendet die Proxykonfigurationseinstellungen von Internet Explor
 
 Weitere Informationen zu Active Directory finden Sie unter [Beziehung zwischen Azure-Abonnements und Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)
   
-##  <a name="AppendixC"></a> C. Erläuterungen zu Fehlercodes für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector  
+##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. Erläuterungen zu Fehlercodes für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector  
  **Anbieterfehlercodes:**  
   
 Fehlercode  |Symbol  |BESCHREIBUNG    

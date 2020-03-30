@@ -14,10 +14,10 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908882"
 ---
 # <a name="online-restore-sql-server"></a>Onlinewiederherstellungen [SQL Server]
@@ -63,7 +63,7 @@ ms.locfileid: "72908882"
     > [!NOTE]  
     >  Die Datei kann auch vor der Wiederherstellungssequenz manuell offline geschaltet werden. Weitere Informationen finden Sie unter "Offlineschalten einer Datenbank oder Datei" weiter unten in diesem Thema.  
   
-##  <a name="taking_db_or_file_offline"></a> Offlineschalten einer Datenbank oder Datei  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> Offlineschalten einer Datenbank oder Datei  
  Wenn Sie keine Onlinewiederherstellung verwenden möchten, können Sie die Datenbank offline schalten, bevor Sie die Wiederherstellungssequenz starten. Dazu können Sie eine der folgenden Methoden verwenden:  
   
 -   Bei jedem Wiederherstellungsmodell können Sie die Datenbank offline schalten, indem Sie die folgende [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) -Anweisung verwenden:  
@@ -95,7 +95,7 @@ ms.locfileid: "72908882"
   
 -   [Beispiel: Onlinewiederherstellung einer schreibgeschützten Datei &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Wiederherstellen von Dateien und Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

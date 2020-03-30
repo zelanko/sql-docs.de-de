@@ -11,10 +11,10 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251133"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service
@@ -35,7 +35,7 @@ ms.locfileid: "75251133"
   
 -   **Verwalten von SQL Server-Sicherungen in Microsoft Azure:** Konfigurieren Sie SQL Server, um die Sicherungsstrategie zu verwalten und Sicherungen für eine einzelne oder mehrere Datenbanken zu planen oder um Standardwerte auf Instanzebene festzulegen. Diese Funktion wird als **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** bezeichnet. Weitere Informationen finden Sie unter [SQL Server Managed Backup für Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Diese Funktion ist in SQL Server 2014 oder höher verfügbar.  
   
-## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Vorteile bei der Verwendung von Microsoft Azure Blob-Dienst für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen  
+## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-ssnoversion-backups"></a>Vorteile bei der Verwendung von Microsoft Azure Blob-Dienst für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen  
   
 -   Flexible, zuverlässige und unbegrenzte externe Speicherung: Die Speicherung von Sicherungen im Microsoft Azure Blob-Dienst ist eine bequeme, flexible und benutzerfreundliche Möglichkeit, Daten extern zu speichern. Das Einrichten eines Offsitespeichers für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen muss nicht schwieriger sein als das Bearbeiten vorhandener Skripts/Aufträge. Die räumliche Entfernung zwischen Offsitespeicher und Produktionsdatenbank ist in der Regel so groß, dass ein Notfall niemals Auswirkungen auf beide Standorte hat. Indem Sie den BLOB-Speicher auf geografisch verteilte Standorte replizieren, erhalten Sie bei einem Notfall, der die gesamte Region betreffen könnte, eine zusätzliche Schutzebene. Darüber hinaus sind Sicherungen an jedem Standort jederzeit verfügbar und können problemlos für die Wiederherstellung genutzt werden.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75251133"
   
 -   Kostenvorteile: Sie zahlen nur für den genutzten Dienst. Die Option kann genauso kosteneffizient wie eine externe Sicherungs-/Archivierungslösung sein. Weitere Informationen und Links finden Sie im Abschnitt [Überlegungen zur Abrechnung in Microsoft Azure](#Billing) .  
   
-##  <a name="Billing"></a> Überlegungen zur Abrechnung in Microsoft Azure:  
+##  <a name="microsoft-azure-billing-considerations"></a><a name="Billing"></a> Überlegungen zur Abrechnung in Microsoft Azure:  
  Auf Grundlage der Speicherkosten für Microsoft Azure können Sie die Kosten für die Erstellung und Speicherung von Sicherungen in Microsoft Azure ableiten.  
   
  Der [Microsoft Azure-Preisrechner](https://go.microsoft.com/fwlink/?LinkId=277060) unterstützt Sie bei der Kostenschätzung.  

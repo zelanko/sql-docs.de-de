@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548281"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -226,7 +226,7 @@ DELETE
 |[Löschen von Zeilen aus einer Remotetabelle](#RemoteTables)|Verbindungsserver • OPENQUERY-Rowsetfunktion • OPENDATASOURCE-Rowsetfunktion|  
 |[Erfassen der Ergebnisse der DELETE-Anweisung](#CaptureResults)|OUTPUT-Klausel|  
   
-###  <a name="BasicSyntax"></a> Grundlegende Syntax  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Grundlegende Syntax  
  Anhand von Beispielen in diesem Abschnitt wird die grundlegende Funktion der DELETE-Anweisung mithilfe der mindestens erforderlichen Syntax veranschaulicht.  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>A. Verwenden von DELETE ohne WHERE-Klausel  
@@ -237,7 +237,7 @@ DELETE FROM Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-###  <a name="LimitRows"></a> Beschränken von zu löschenden Zeilen  
+###  <a name="limiting-the-rows-deleted"></a><a name="LimitRows"></a> Beschränken von zu löschenden Zeilen  
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie die Anzahl von Zeilen beschränkt wird, die gelöscht werden.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Löschen einer Reihe von Zeilen mithilfe der WHERE-Klausel  
@@ -335,7 +335,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Löschen von Zeilen aus einer Remotetabelle  
+###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> Löschen von Zeilen aus einer Remotetabelle  
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen mit einem [Verbindungsserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) oder einer [Rowsetfunktion](../../t-sql/functions/rowset-functions-transact-sql.md) aus einer Remotezieltabelle gelöscht werden, um auf die Remotetabelle zu verweisen. Eine Remotetabelle ist auf einem anderen Server oder in einer anderen Instanz von SQL Server vorhanden.  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
@@ -386,7 +386,7 @@ DELETE FROM OPENDATASOURCE('SQLNCLI',
 WHERE DepartmentID = 17;'  
 ```  
   
-###  <a name="CaptureResults"></a> Erfassen der Ergebnisse der DELETE-Anweisung  
+###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> Erfassen der Ergebnisse der DELETE-Anweisung  
   
 #### <a name="i-using-delete-with-the-output-clause"></a>I. Verwenden von DELETE mit der OUTPUT-Klausel  
  Im folgenden Beispiel wird gezeigt, wie die Ergebnisse einer `DELETE`-Anweisung in einer Tabellenvariablen in der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] gespeichert werden.  
@@ -431,7 +431,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="k-delete-all-rows-from-a-table"></a>K. Löschen aller Zeilen einer Tabelle  
  Im folgenden Beispiel werden alle Zeilen aus der `Table1`-Tabelle gelöscht, da keine WHERE-Klausel verwendet wird, um die Anzahl der gelöschten Zeilen zu begrenzen.  

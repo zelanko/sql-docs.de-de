@@ -21,10 +21,10 @@ ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12af8c813fd61b4f4c9040d72e19173ef810e80f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76909790"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
@@ -86,7 +86,7 @@ DEFAULT <xml_namespace_uri>
   
 -   Das XML-Namespacepräfix `xsi` kann nicht erneut deklariert werden, wenn die ELEMENTS XSINIL-Direktive für die Abfrage verwendet wird.  
 
--   Es muss nicht deklariert werden, dass 'http://www.w3.org/2001/XMLSchema-instance ' den XSI-Standardnamespace verwendet soll. Dieser wird vom XML/XPATH-Prozessor implizit hinzugefügt, wenn er nicht angegeben wurde, und XPATH-Ausdrücke können das Präfix „xsi“ verwenden, solange das Schema 'http://www.w3.org/2001/XMLSchema-instance ' ordnungsgemäß im XML-Dokument deklariert wurde.
+-   Es muss nicht deklariert werden, dass 'http://www.w3.org/2001/XMLSchema-instance ' den XSI-Standardnamespace verwendet soll. Dieser wird vom XML/XPATH-Prozessor implizit hinzugefügt, wenn er nicht angegeben wurde, und XPATH-Ausdrücke können das Präfix „xsi“ verwenden, solange das Schema http://www.w3.org/2001/XMLSchema-instance ordnungsgemäß im XML-Dokument deklariert wurde.
 
 -   URI-Zeichenfolgenwerte werden gemäß der aktuellen Datenbanksortierungs-Codepage verschlüsselt und intern in Unicode übersetzt.  
   

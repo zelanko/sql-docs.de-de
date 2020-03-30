@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288064"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Einschränkungen und bekannte Probleme bei SSIS unter Linux
@@ -36,7 +36,7 @@ Die folgenden Features werden in diesem Release von SSIS unter Linux nicht unter
 
 Weitere Einschränkungen und bekannte Probleme mit SSIS unter Linux finden Sie in den [Versionshinweisen](sql-server-linux-release-notes.md#ssis).
 
-## <a name="components"></a> Unterstützte und nicht unterstützte Komponenten
+## <a name="supported-and-unsupported-components"></a><a name="components"></a> Unterstützte und nicht unterstützte Komponenten
 
 Die folgenden integrierten Integration Services-Komponenten werden unter Linux unterstützt. Für einige von ihnen gelten Einschränkungen auf der Linux-Plattform. Integrierte Komponenten, die hier nicht aufgeführt sind, werden unter Linux nicht unterstützt.
 

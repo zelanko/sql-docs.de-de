@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710765"
 ---
 # <a name="validate-replicated-data"></a>Überprüfen von replizierten Daten
@@ -259,7 +259,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
   
      Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) oder [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Die Replikation ermöglicht Ihnen mithilfe von Replikationsverwaltungsobjekten (RMO), programmgesteuert zu überprüfen, ob die Daten auf dem Abonnenten mit den Daten auf dem Verleger übereinstimmen. Welche Objekte Sie verwenden, hängt vom Typ der Replikationstopologie ab. Für die Transaktionsreplikation ist eine Überprüfung aller Abonnements für eine Veröffentlichung erforderlich.  
   
 > [!NOTE]  
@@ -309,7 +309,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
   
 5.  Führen Sie für das Abonnement den Merge-Agent aus, um die Überprüfung zu starten, oder warten Sie die nächste geplante Ausführung des Agents ab. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) und [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). Das Ergebnis der Überprüfung wird in den Agentverlauf geschrieben. Diesen können Sie mithilfe des Replikationsmonitors anzeigen. Weitere Informationen finden Sie unter [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md).  
   
-###  <a name="RMOExample"></a> Beispiel (RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a> Beispiel (RMO)  
  In diesem Beispiel werden alle Abonnements für eine Transaktionsveröffentlichung für die Zeilenanzahlüberprüfung gekennzeichnet.  
   
  [!code-cs[HowTo#rmo_ValidateTranPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  

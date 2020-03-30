@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3ee098b61c233bb3012ab1505553873c30edd5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095878"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
@@ -115,7 +115,7 @@ DEALLOCATE Employee_Cursor;
 GO 
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-simple-while-loop"></a>C: Einfache WHILE-Schleife  
  Im folgenden Beispiel verdoppelt die `$300`-Schleife die Preise und wählt dann den Höchstpreis aus, wenn der durchschnittliche Listenpreis eines Produkts unter `WHILE` liegt. Ist der Höchstpreis niedriger als oder gleich `$500`, wird die `WHILE`-Schleife erneut gestartet und der Preis erneut verdoppelt. Diese Schleife verdoppelt die Preise so lange, bis der Höchstpreis mehr als `$500` beträgt; dann wird die `WHILE`-Schleife beendet.  

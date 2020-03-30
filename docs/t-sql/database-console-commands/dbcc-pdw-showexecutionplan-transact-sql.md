@@ -13,10 +13,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68809841"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
@@ -57,7 +57,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 Erfordert die VIEW-SERVER-STATE-Berechtigung auf die Anwendung.
   
-## <a name="examples-includesssdwincludessssdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
+## <a name="examples-sssdw"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
 ### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. Grundlegende DBCC-PDW_SHOWEXECUTIONPLAN-Syntax  
  Wenn Sie die obenstehende Abfrage auf einer [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Instanz ausführen, müssen Sie diese verändern, um auch distribution_id auszuwählen.  
@@ -75,7 +75,7 @@ Dadurch wird für jede aktiv ausgeführte Verteilung eine SPID zurückgegeben. W
 DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );  
 ```  
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. Grundlegende DBCC-PDW_SHOWEXECUTIONPLAN-Syntax  
  Die Abfrage, die zu lange ausgeführt wird, führt entweder einen Vorgang für einen DMS-Abfrageplan oder für einen SQL-Abfrageplan aus.  
   

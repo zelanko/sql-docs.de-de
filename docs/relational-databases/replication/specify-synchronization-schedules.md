@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287127"
 ---
 # <a name="specify-synchronization-schedules"></a>Angeben von Synchronisierungszeitplänen
@@ -39,7 +39,7 @@ ms.locfileid: "76287127"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Geben Sie Synchronisierungszeitpläne im Assistenten für neue Abonnements auf der Seite **Synchronisierungszeitplan** an. Weitere Informationen zum Zugreifen auf diesen Assistenten finden Sie unter [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md) und [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
  Ändern Sie die Synchronisierungszeitpläne im Dialogfeld **Eigenschaften des Auftragszeitplans** . Dieses Dialogfeld ist in **über den Ordner** Aufträge [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und im Detailfenster des Agents im Replikationsmonitor verfügbar. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -82,7 +82,7 @@ ms.locfileid: "76287127"
   
 4.  Klicken Sie im Fenster **Abonnement <Abonnementname>** auf **Aktion**, und klicken Sie dann auf **\<AgentName> Auftragseigenschaften**.  
   
-5.  Klicken Sie im Dialogfeld **Auftragseigenschaften - \<JobName>** auf der Seite **Zeitpläne** auf **Bearbeiten**.  
+5.  Klicken Sie im Dialogfeld **Auftragseigenschaften -** JobName> **auf der Seite \<Zeitpläne** auf **Bearbeiten**.  
   
 6.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
@@ -104,7 +104,7 @@ ms.locfileid: "76287127"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Auftrag für den Verteilungs-Agent oder Merge-Agent, der dem Abonnement zugeordnet ist, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie im Dialogfeld **Auftragseigenschaften - \<JobName>** auf der Seite **Zeitpläne** auf **Bearbeiten**.  
+4.  Klicken Sie im Dialogfeld **Auftragseigenschaften -** JobName> **auf der Seite \<Zeitpläne** auf **Bearbeiten**.  
   
 5.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
@@ -126,7 +126,7 @@ ms.locfileid: "76287127"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Auftrag für den Verteilungs-Agent oder Merge-Agent, der dem Abonnement zugeordnet ist, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie im Dialogfeld **Auftragseigenschaften - \<JobName>** auf der Seite **Zeitpläne** auf **Bearbeiten**.  
+4.  Klicken Sie im Dialogfeld **Auftragseigenschaften -** JobName> **auf der Seite \<Zeitpläne** auf **Bearbeiten**.  
   
 5.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
@@ -140,7 +140,7 @@ ms.locfileid: "76287127"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Sie können Synchronisierungszeitpläne mit gespeicherten Replikationsprozeduren programmgesteuert definieren. Welche gespeicherten Prozeduren Sie verwenden, hängt vom Typ der Replikation und vom Typ des Abonnements (Pull oder Push) ab.  
   
  Ein Zeitplan wird durch die folgenden Zeitplanungsparameter definiert, deren Verhalten von [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) geerbt wird:  
@@ -189,7 +189,7 @@ ms.locfileid: "76287127"
   
 2.  Führen Sie auf dem Abonnenten [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)aus. Geben Sie **\@subscriber**, **\@subscriber_db**, **\@publication** und die Windows-Anmeldeinformationen, unter denen der Merge-Agent auf dem Abonnenten ausgeführt wird, für **\@job_name** und **\@job_password** an. Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Merge-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Die Replikation verwendet den SQL Server-Agent, um Aufträge für regelmäßig auftretende Aktivitäten wie die Momentaufnahmegenerierung und die Abonnementsynchronisierung zu planen. Sie können Replikationsverwaltungsobjekte (RMO) programmgesteuert verwenden, um Zeitpläne für Replikations-Agentaufträge anzugeben.  
   
 > [!NOTE]  
@@ -319,7 +319,7 @@ ms.locfileid: "76287127"
   
 3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> -Methode auf, um das Abonnement zu erstellen.  
   
-###  <a name="PShellExample"></a> Beispiel (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Beispiel (RMO)  
  In diesem Beispiel werden ein Pushabonnement für eine Mergeveröffentlichung erstellt und der Zeitplan angegeben, mit dem das Abonnement synchronisiert wird.  
   
  [!code-cs[HowTo#rmo_CreateMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepushsub)]  

@@ -15,10 +15,10 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235340"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Seite „Anfängliche Datensynchronisierung auswählen“ (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
@@ -28,7 +28,7 @@ ms.locfileid: "75235340"
   
  Die möglichen Optionen sind **Automatisches Seeding**, **Vollständige Datenbank- und Protokollsicherung**, **Nur verknüpfen** oder **Anfängliche Datensynchronisierung überspringen**. Stellen Sie vor dem Auswählen von **Automatischem Seeding**, **Vollständig** oder **Nur verknüpfen** sicher, dass die Umgebung die Voraussetzungen erfüllt.  
     
-##  <a name="Recommendations"></a> Empfehlungen  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Halten Sie Protokollsicherungstasks für die primären Datenbanken während der anfänglichen Datensynchronisierung an.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "75235340"
   
      Wenn die Sicherungs- und Wiederherstellungsvorgänge besondert gesichert sein müssen, wird empfohlen, dass Sie die Option **Nur verknüpfen** oder **Anfängliche Datensynchronisierung überspringen** aktivieren.  
   
-## <a name="Auto"></a> Automatisches Seeding
+## <a name="automatic-seeding"></a><a name="Auto"></a> Automatisches Seeding
  
  SQL Server erstellt die sekundären Replikate für jede Datenbank in der Gruppe automatisch. Automatisches Seeding erfordert, dass die Pfade für Daten- und Protokolldateien für jede SQL Server-Instanz der Gruppe identisch sind. Verfügbar auf [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] und höher. Siehe [Automatically initialize Always On Availability group (Automatisches Initialisieren der Always On-Verfügbarkeitsgruppe)](automatically-initialize-always-on-availability-group.md).
 
-##  <a name="Full"></a> Vollständige Datenbank- und Protokollsicherung 
+##  <a name="full-database-and-log-backup"></a><a name="Full"></a> Vollständige Datenbank- und Protokollsicherung 
  Für jede primäre Datenbank werden mit der Option **Vollständige Datenbank- und Protokollsicherung** mehrere Vorgänge in einem Workflow ausgeführt: Erstellen einer vollständigen und Protokollsicherung der primären Datenbank, Erstellen der entsprechenden sekundären Datenbanken durch Wiederherstellen dieser Sicherungen auf jeder Serverinstanz, die ein sekundäres Replikat hostet, und Verknüpfen jeder sekundären Datenbank mit der Verfügbarkeitsgruppe.  
   
  Aktivieren Sie diese Option nur, wenn die Umgebung die folgenden Voraussetzungen zum Verwenden der vollständigen anfänglichen Datensynchronisierung erfüllt und der Assistent die Datensynchronisierung automatisch starten soll.  
@@ -75,18 +75,18 @@ ms.locfileid: "75235340"
 > [!IMPORTANT]  
 >  Die Protokollsicherungen sind Teil der Protokollsicherungskette. Speichern Sie ihre Sicherungsdateien ordnungsgemäß.  
   
-##  <a name="Joinonly"></a> Nur verknüpfen  
+##  <a name="join-only"></a><a name="Joinonly"></a> Nur verknüpfen  
  Aktivieren Sie diese Option nur, wenn die neuen sekundären Datenbanken bereits auf jeder Serverinstanz vorhanden sind, die ein sekundäres Replikat für die Verfügbarkeitsgruppe hostet. Informationen zum Vorbereiten von sekundären Datenbanken finden Sie weiter unten in diesem Abschnitt unter [So bereiten Sie sekundäre Datenbanken manuell vor](#PrepareSecondaryDbs).  
   
  Wenn Sie **Nur verknüpfen**auswählen, versucht der Assistent, jede vorhandene sekundäre Datenbank mit der Verfügbarkeitsgruppe zu verknüpfen.  
   
-## <a name="Skip"></a> Anfängliche Datensynchronisierung überspringen  
+## <a name="skip-initial-data-synchronization"></a><a name="Skip"></a> Anfängliche Datensynchronisierung überspringen  
  Aktivieren Sie diese Option, wenn Sie eigene Datenbank- und Protokollsicherungen für jede primäre Datenbank ausführen und diese auf jeder Serverinstanz, die ein sekundäres Verfügbarkeitsreplikat hostet, wiederherstellen möchten. Nach dem Beenden des Assistenten müssen Sie jede sekundäre Datenbank auf jedem sekundären Replikat verknüpfen.  
   
 > [!NOTE]  
 >  Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PrepareSecondaryDbs"></a> So bereiten Sie sekundäre Datenbanken manuell vor  
+##  <a name="to-prepare-secondary-databases-manually"></a><a name="PrepareSecondaryDbs"></a> So bereiten Sie sekundäre Datenbanken manuell vor  
  Sie können sekundäre Datenbanken unabhängig von einem [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Assistenten mit einer der beiden folgenden Methoden vorbereiten:  
   
 -   Stellen Sie manuell mit RESTORE WITH NORECOVERY eine aktuelle Datenbanksicherung der primären Datenbank wieder her, und stellen Sie dann jede nachfolgende Protokollsicherung mit RESTORE WITH NORECOVERY wieder her. Wenn die primären und sekundären Datenbanken unterschiedliche Dateipfade aufweisen, müssen Sie die WITH MOVE-Option verwenden. Führen Sie diese Wiederherstellungssequenz auf jeder Serverinstanz aus, die ein sekundäres Replikat für die Verfügbarkeitsgruppe hostet.  Sie können diese Sicherungs- und Wiederherstellungsvorgänge mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell ausführen.  
@@ -110,7 +110,7 @@ ms.locfileid: "75235340"
   
  Sie können auch alle sekundären Datenbanken vorbereiten, bevor Sie den Assistenten ausführen. Anschließend wählen Sie auf der Seite **Anfängliche Datensynchronisierung angeben** des Assistenten die Option **Nur verknüpfen** aus, damit der Assistent versucht, die neuen sekundären Datenbanken automatisch mit der Verfügbarkeitsgruppe zu verknüpfen.  
   
-##  <a name="LaunchWiz"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Verwandte Aufgaben  
   
 -   [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

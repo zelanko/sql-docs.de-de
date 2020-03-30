@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257612"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes
@@ -29,7 +29,7 @@ ms.locfileid: "75257612"
   
  Weitere Informationen über selektive XML-Indizes finden Sie unter [Selektive XML-Indizes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
-##  <a name="untyped"></a> Grundlegendes zu XQuery- und SQL Server-Typen in nicht typisiertem XML  
+##  <a name="understanding-xquery-and-sql-server-types-in-untyped-xml"></a><a name="untyped"></a> Grundlegendes zu XQuery- und SQL Server-Typen in nicht typisiertem XML  
  Selektive XML-Indizes unterstützen zwei Typsysteme: XQuery-Typen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Typen. Der indizierte Pfad kann verwendet werden, um entweder eine Entsprechung für einen XQuery-Ausdruck oder um eine Entsprechung für den Rückgabetyp der value()-Methode des XML-Datentyps zu finden.  
   
 -   Wenn ein zu indizierender Pfad nicht kommentiert ist oder mit dem XQUERY-Schlüsselwort kommentiert ist, entspricht der Pfad einem XQuery-Ausdruck. Es gibt zwei Varianten von XQUERY-kommentierten Knotenpfaden:  
@@ -135,7 +135,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ```  
   
   
-##  <a name="typed"></a> Grundlegendes zu selektiver XML-Indexunterstützung für typisiertes XML  
+##  <a name="understanding-selective-xml-index-support-for-typed-xml"></a><a name="typed"></a> Grundlegendes zu selektiver XML-Indexunterstützung für typisiertes XML  
  Typisiertes XML in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist ein Schema, das einem bestimmten XML-Dokument zugeordnet ist. Das Schema definiert die Gesamtdokumentstruktur und Typen von Knoten. Ist ein Schema vorhanden, wendet der selektive XML-Index die Schemastruktur an, wenn der Benutzer Pfade höher stuft. Daher ist es nicht notwendig, die XQUERY-Typen für Pfade anzugeben.  
   
  Ein selektiver XML-Index unterstützt die folgenden XSD-Typen:  
@@ -209,7 +209,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  Weitere Informationen zu Optimierungshinweisen finden Sie unter [Angeben von Optimierungshinweisen](#hints).  
   
-##  <a name="paths"></a> Angeben von Pfaden  
+##  <a name="specifying-paths"></a><a name="paths"></a> Angeben von Pfaden  
  Mit einem selektiven XML-Index können Sie nur eine Teilmenge der Knoten aus den gespeicherten XML-Daten, die für die voraussichtlich durchgeführten Abfragen relevant sind, indizieren. Wenn die Teilmenge der relevanten Knoten viel kleiner als die Gesamtzahl der Knoten im XML-Dokument ist, speichert der selektive XML-Index nur die relevanten Knoten. Um von einem selektiven XML-Index profitieren zu können, identifizieren Sie die richtige Teilmenge der Knoten für die Indizierung.  
   
 ### <a name="choosing-the-nodes-to-index"></a>Auswählen der zu indizierenden Knoten  
@@ -345,7 +345,7 @@ WHERE T.xmldata.exist('
 |**/a/b/c/d/e/g**|Das Vorhandensein des Knotens `g` wird von der exist()-Methode ausgewertet.|  
   
   
-##  <a name="hints"></a> Angeben von Optimierungshinweisen  
+##  <a name="specifying-optimization-hints"></a><a name="hints"></a> Angeben von Optimierungshinweisen  
  Sie können optionale Optimierungshinweise verwenden, um zusätzliche Mappingdetails für einen Knoten anzugeben, der von einem selektiven XML-Index indiziert wird. Sie können z. B. den Datentyp und die Kardinalität des Knotens sowie bestimmte Informationen zur Struktur der Daten angeben. Diese zusätzlichen Informationen unterstützen eine bessere Zuordnung. Sie ermöglichen darüber hinaus eine Verbesserungen der Leistung und Speichereinsparungen oder sogar beides.  
   
  Die Verwendung von Optimierungshinweisen ist optional. Sie können stets die Standardzuordnungen übernehmen, die zuverlässig sind, möglicherweise jedoch keine optimale Leistung und Speicher bereitstellen.  
@@ -416,7 +416,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Wenn eine vorhandene Zeichenfolge länger als der angegebene Wert für MAXLENGTH ist, kommt es beim Einfügen dieses Werts zu einem Fehler.  
   
   
-##  <a name="sample"></a> Beispiel-XML-Dokument für Beispiele  
+##  <a name="sample-xml-document-for-examples"></a><a name="sample"></a> Beispiel-XML-Dokument für Beispiele  
  Auf das folgende Beispiel-XML-Dokument wird in den Beispielen in diesem Thema verwiesen:  
   
 ```xml  

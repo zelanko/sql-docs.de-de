@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d3a0a9b09696959ba14c97c237e9e8ef9927db6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982924"
 ---
 # <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
@@ -63,7 +63,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 ## <a name="remarks"></a>Bemerkungen  
  IS_MEMBER gibt folgende Werte zurück.  
   
-|Rückgabewert|Beschreibung|  
+|Rückgabewert|BESCHREIBUNG|  
 |------------------|-----------------|  
 |0|Der aktuelle Benutzer ist kein Mitglied von *group* oder *role*.|  
 |1|Der aktuelle Benutzer ist ein Mitglied von *group* oder *role*.|  

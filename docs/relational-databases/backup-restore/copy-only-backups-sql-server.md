@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941034"
 ---
 # <a name="copy-only-backups"></a>Kopiesicherungen
@@ -37,7 +37,7 @@ Eine *Kopiesicherung* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 - Protokollkopiesicherungen (nur vollständiges und massenprotokolliertes Wiederherstellungsmodell)  
 
-     Eine Protokollkopiesicherung behält den vorhandenen Protokollarchivpunkt bei und wirkt sich daher nicht auf die Sequenz von regulären Protokollsicherungen aus. Protokollkopiesicherungen sind normalerweise nicht nötig. Erstellen Sie stattdessen eine neue routinemäßige Protokollsicherung (mithilfe von WITH NORECOVERY), und verwenden Sie dann diese Sicherung zusammen mit allen vorherigen Protokollsicherungen, die für die Wiederherstellungssequenz erforderlich sind. Eine Protokollkopiesicherung ist manchmal jedoch auch für das Ausführen einer Onlinewiederherstellung nützlich. Ein Beispiel dafür finden Sie unter [Beispiel: Onlinewiederherstellung einer Datei mit Lese-/Schreibzugriff &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md).  
+     Eine Protokollkopiesicherung behält den vorhandenen Protokollarchivpunkt bei und wirkt sich daher nicht auf die Sequenz von regulären Protokollsicherungen aus. Protokollkopiesicherungen sind normalerweise nicht nötig. Erstellen Sie stattdessen eine neue routinemäßige Protokollsicherung (mithilfe von WITH NORECOVERY), und verwenden Sie dann diese Sicherung zusammen mit allen vorherigen Protokollsicherungen, die für die Wiederherstellungssequenz erforderlich sind. Eine Protokollkopiesicherung ist manchmal jedoch auch für das Ausführen einer Onlinewiederherstellung nützlich. Siehe auch [Beispiel: Onlinewiederherstellung einer Datei mit Lese-/Schreibzugriff &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md).  
 
      Nach einer Kopiesicherung wird das Transaktionsprotokoll nie abgeschnitten.  
   
@@ -50,7 +50,7 @@ Eine *Kopiesicherung* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion
  Kopiesicherungen können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell erstellt werden.  
 
 ### <a name="examples"></a>Beispiele  
-###  <a name="SSMSProcedure"></a> A. Verwendung von SQL Server Management Studio  
+###  <a name="a-using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> A. Verwendung von SQL Server Management Studio  
 In diesem Beispiel wird eine Kopiesicherung der `Sales` -Datenbank auf dem Datenträger im standardmäßigen Sicherungsspeicherort gesichert.
 
 1. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.
@@ -61,7 +61,7 @@ In diesem Beispiel wird eine Kopiesicherung der `Sales` -Datenbank auf dem Daten
 
 1. Klicken Sie auf **OK**.
 
-###  <a name="TsqlProcedure"></a>B. Verwenden von Transact-SQL  
+###  <a name="b-using-transact-sql"></a><a name="TsqlProcedure"></a>B. Verwenden von Transact-SQL  
 In diesem Beispiel wird eine Kopiesicherung der `Sales` -Datenbank über den COPY_ONLY-Parameter erstellt.  Eine Kopiesicherung des Transaktionsprotokolls wird ebenfalls erstellt.
 
 ```sql
@@ -78,13 +78,13 @@ WITH COPY_ONLY;
 > COPY_ONLY ist wirkungslos, wenn gleichzeitig die Option DIFFERENTIAL angegeben wird.  
 
   
-###  <a name="PowerShellProcedure"></a>C. PowerShell  
+###  <a name="c-using-powershell"></a><a name="PowerShellProcedure"></a>C. PowerShell  
 In diesem Beispiel wird eine Kopiesicherung der `Sales` -Datenbank über den -CopyOnly-Parameter erstellt.  
 ```powershell
 Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile 'E:\BAK\Sales_Copy.bak' -CopyOnly
 ```  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So erstellen Sie eine vollständige oder Protokollsicherung**  
   
 - [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  

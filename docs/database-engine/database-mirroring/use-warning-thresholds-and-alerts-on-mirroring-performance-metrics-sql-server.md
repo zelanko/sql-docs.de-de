@@ -19,10 +19,10 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74820905"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74820905"
  Nachdem für eine gespiegelte Datenbank die Überwachung eingerichtet wurde, können vom Systemadministrator für mehrere Schlüsselleistungsmetriken Warnungsschwellenwerte konfiguriert werden. Administratoren können für diese Metriken und andere Datenbank-Spiegelungsereignisse auch Warnungsmeldungen konfigurieren.  
   
   
-##  <a name="PerfMetricsAndWarningThresholds"></a> Leistungsmetriken und Warnungsschwellenwerte  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a> Leistungsmetriken und Warnungsschwellenwerte  
  In der folgenden Tabelle werden die Leistungsmetriken, für die Warnungen konfiguriert werden können, zusammen mit den entsprechenden Warnungsschwellenwerten und der entsprechende Bezeichnung des Datenbanküberwachungs-Monitors aufgelistet.  
   
 |Leistungsmetrik|Schwellenwert für Warnung|Bezeichnung des Datenbankspiegelungs-Monitors|  
@@ -44,7 +44,7 @@ ms.locfileid: "74820905"
   
  Für jede dieser Leistungsmetrik kann vom Systemadministrator ein Schwellenwert für eine gespiegelte Datenbank angegeben werden. Weitere Informationen finden Sie unter [Einrichten und Verwalten von Schwellenwerten für Warnungen](#SetUpManageWarningThresholds)weiter unten in diesem Thema.  
   
-##  <a name="SetUpManageWarningThresholds"></a> Einrichten und Verwalten von Schwellenwerten für Warnungen  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a> Einrichten und Verwalten von Schwellenwerten für Warnungen  
  Ein Systemadministrator kann einen oder mehrere Warnungsschwellenwerte für die wichtigsten Leistungsmetriken für die Spiegelung konfigurieren. Es wird empfohlen, einen Schwellenwert für eine bestimmte Warnung jeweils auf beiden Partnern festzulegen, um sicherzustellen, dass bei einem Failover der Datenbank die Warnung beibehalten wird. Der geeignete Schwellenwert für jeden der Partner hängt von den Leistungsmöglichkeiten des betreffenden Partnersystems ab.  
   
  Warnungsschwellenwerte können mit einem der folgenden Tools konfiguriert und verwaltet werden:  
@@ -80,7 +80,7 @@ ms.locfileid: "74820905"
 >   
 >  Thema.  
   
-##  <a name="UseAlerts"></a> Verwenden von Warnmeldungen für eine gespiegelte Datenbank  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a> Verwenden von Warnmeldungen für eine gespiegelte Datenbank  
  Eine wichtige Komponente der Überwachung einer gespiegelten Datenbank ist das Konfigurieren von Warnmeldungen für bedeutsame bei der Datenbankspiegelung auftretende Ereignisse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert die folgenden Typen von Datenbank-Spiegelungsereignissen:  
   
 -   Leistungsschwellenwert-Ereignisse  
@@ -101,7 +101,7 @@ ms.locfileid: "74820905"
 > [!IMPORTANT]  
 >  Für alle Spiegelungssitzungen wird dringend empfohlen, die Datenbank so zu konfigurieren, dass bei jedem Statusänderungsereignis eine Warnmeldung gesendet wird. Sofern eine Statusänderung nicht als Ergebnis einer manuellen Konfigurationsänderung erwartet wird, muss davon ausgegangen werden, dass ein Ereignis aufgetreten ist, das Ihre Daten gefährden kann. Um den Schutz der Daten sicherzustellen, müssen Sie die Ursache einer unerwarteten Statusänderung herausfinden und beheben.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So erstellen Sie eine Warnung mit SQL Server Management Studio**  
   
 -   [Erstellen einer Warnung mithilfe einer Fehlernummer](../../ssms/agent/create-an-alert-using-an-error-number.md)  

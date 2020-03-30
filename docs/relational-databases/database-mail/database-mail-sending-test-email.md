@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906071"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Senden einer Test-E-Mail mit Datenbank-E-Mail  
@@ -55,7 +55,7 @@ Sie müssen Mitglied der festen Serverrolle „sysadmin“ sein, um das Dialogfe
     ```
 
 
-##  <a name="RelatedContent"></a> Siehe auch 
+##  <a name="see-also"></a><a name="RelatedContent"></a> Siehe auch 
   
 -   [Konfigurationsobjekte für Datenbank-E-Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)
 -   [Messagingobjekte für Datenbank-E-Mail](../../relational-databases/database-mail/database-mail-messaging-objects.md)

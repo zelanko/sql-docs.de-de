@@ -17,17 +17,17 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 09fb423dc4d3685b22c67b2a86a74443633ba74a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78370543"
 ---
 # <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   Ebenso wie Funktionen in Programmiersprachen sind auch benutzerdefinierte Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Routinen, die Parameter annehmen, eine Aktion ausführen (z. B. eine komplexe Berechnung) und das Ergebnis dieser Aktion als Wert zurückgeben können. Der Rückgabewert kann ein einzelner Skalarwert oder ein Resultset sein.  
    
-##  <a name="Benefits"></a> Benutzerdefinierte Funktionen  
+##  <a name="user-defined-functions"></a><a name="Benefits"></a> Benutzerdefinierte Funktionen  
 Gründe für die Verwendung benutzerdefinierter Funktionen 
   
 -   Modulare Programmierung.  
@@ -47,7 +47,7 @@ Gründe für die Verwendung benutzerdefinierter Funktionen
 > [!IMPORTANT]
 > Benutzerdefinierte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen in Abfragen können nur auf einem einzelnen Thread (serieller Ausführungsplan) ausgeführt werden. Daher verhindert die Verwendung benutzerdefinierter Funktionen eine parallele Abfrageverarbeitung. Weitere Informationen zur parallelen Abfrageverarbeitung finden Sie im [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
   
-##  <a name="FunctionTypes"></a> Funktionstypen  
+##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> Funktionstypen  
 **Skalarfunktion**  
  Benutzerdefinierte Skalarfunktionen geben einen einzelnen Datenwert des definierten Datentyps in einer RETURNS-Klausel zurück. Bei einer Inlineskalarfunktion ist der zurückgegebene Skalarwert das Ergebnis einer einzelnen Anweisung. Bei einer aus mehreren Anweisungen bestehenden Skalarfunktion kann der Hauptteil der Funktion eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen enthalten, die den einzelnen Wert zurückgeben. Der Rückgabetyp kann ein beliebiger Datentypen mit Ausnahme von **text**, **ntext**, **image**, **cursor**und **timestamp**sein. 
  **[Beispiele.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
@@ -58,7 +58,7 @@ Gründe für die Verwendung benutzerdefinierter Funktionen
 **Systemfunktionen**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt viele Systemfunktionen bereit, mit denen Sie eine Vielzahl von Vorgängen ausführen können. Sie können nicht geändert werden. Weitere Informationen finden Sie unter [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [Systemgespeicherte Funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md) und [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-##  <a name="Guidelines"></a> Richtlinien  
+##  <a name="guidelines"></a><a name="Guidelines"></a> Richtlinien  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]-Fehler, die dazu führen, dass eine Anweisung abgebrochen und mit der nächsten Anweisung fortgefahren wird (z.B. Trigger oder gespeicherte Prozeduren), werden innerhalb einer Funktion anders behandelt. In Funktionen bewirken solche Fehler, dass die Ausführung der Funktion beendet wird. Dies hat wiederum zur Folge, dass die Anweisung abgebrochen wird, die die Funktion aufgerufen hat.  
   
  Die Anweisungen in einem `BEGIN...END`-Block dürfen keine Nebeneffekte haben. Nebeneffekte von Funktionen sind dauerhafte Änderungen am Status einer Ressource, deren Gültigkeitsbereich außerhalb der Funktion liegt, wie z. B. Änderungen an einer Datenbanktabelle. Die einzigen Änderungen, die von den Anweisungen in der Funktion vorgenommen werden dürfen, sind Änderungen an lokalen Objekten der Funktion, wie z. B. lokale Cursor oder Variablen. Änderungen an Datenbanktabellen, Cursorvorgänge außerhalb der Funktion, das Senden von E-Mails, das Ausführen einer Katalogänderung und das Generieren eines Resultsets, das an den Benutzer zurückgegeben wird, sind Beispiele für Aktionen, die in einer Funktion nicht ausgeführt werden können.  
@@ -71,7 +71,7 @@ Gründe für die Verwendung benutzerdefinierter Funktionen
 > [!IMPORTANT]   
 > Weitere Informationen und Leistungsüberlegungen zu benutzerdefinierten Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &#40;Datenbank-Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
   
-##  <a name="ValidStatements"></a> Gültige Anweisungen in einer Funktion  
+##  <a name="valid-statements-in-a-function"></a><a name="ValidStatements"></a> Gültige Anweisungen in einer Funktion  
 Die folgenden Anweisungstypen sind in einer Funktion zulässig:  
   
 -   `DECLARE`-Anweisungen zum Definieren von lokalen Datenvariablen und lokalen Cursorn für die Funktion.  
@@ -103,7 +103,7 @@ Die folgenden Anweisungstypen sind in einer Funktion zulässig:
 |@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
- Die folgenden nicht deterministischen integrierten Funktionen können in benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen **nicht** verwendet werden.  
+ Die folgenden nicht deterministischen integrierten Funktionen können in benutzerdefinierten **-Funktionen** nicht[!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet werden.  
   
 |||  
 |-|-|  
@@ -112,7 +112,7 @@ Die folgenden Anweisungstypen sind in einer Funktion zulässig:
   
  Eine Liste der deterministischen und nicht deterministischen integrierten Systemfunktionen finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-##  <a name="SchemaBound"></a> Schemagebundene Funktionen  
+##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> Schemagebundene Funktionen  
  `CREATE FUNCTION` unterstützt eine `SCHEMABINDING`-Klausel, die die Funktion an das Schema von Objekten bindet, auf die verwiesen wird, wie z.B. Tabellen, Sichten und andere benutzerdefinierte Funktionen. Der Versuch, ein Objekt zu ändern oder zu löschen, auf das von einer schemagebundenen Funktion verwiesen wird, erzeugt einen Fehler.  
   
  Die folgenden Bedingungen müssen erfüllt sein, um `SCHEMABINDING` in [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) angeben zu können:  
@@ -125,10 +125,10 @@ Die folgenden Anweisungstypen sind in einer Funktion zulässig:
   
  Mit `ALTER FUNCTION` können Sie die Schemabindung entfernen. Die `ALTER FUNCTION`-Anweisung sollte die Funktion neu definieren, ohne `WITH SCHEMABINDING` anzugeben.  
   
-##  <a name="Parameters"></a> Angeben von Parametern  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a> Angeben von Parametern  
  Eine benutzerdefinierte Funktion verwendet null oder mehr Eingabeparameter und gibt einen Skalarwert oder eine Tabelle zurück. Eine Funktion kann maximal 1024 Eingabeparameter haben. Wenn ein Parameter der Funktion über einen Standardwert verfügt, muss beim Aufrufen der Funktion das DEFAULT-Schlüsselwort angegeben werden, um den Standardwert zu erhalten. In diesem Punkt gibt es einen Unterschied zu den Parametern einer benutzerdefinierten gespeicherten Prozedur. Fehlt im Aufruf einer benutzerdefinierten gespeicherten Prozedur ein Parameter, der einen Standardwert hat, wird automatisch dieser Standardwert verwendet. Benutzerdefinierte Funktionen unterstützen keine Ausgabeparameter.  
   
-##  <a name="Tasks"></a> Weitere Beispiele!  
+##  <a name="more-examples"></a><a name="Tasks"></a> Weitere Beispiele!  
   
 |||  
 |-|-|  

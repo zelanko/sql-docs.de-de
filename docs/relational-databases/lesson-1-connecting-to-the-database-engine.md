@@ -11,10 +11,10 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73032996"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine
@@ -27,7 +27,7 @@ Diese Lektion enthält die folgenden Aufgaben:
 - [Herstellen einer Verbindung mit Management Studio](#connect)  
 - [Autorisieren zusätzlicher Verbindungen](#additional) 
 
-## <a name="tools">Tools für die ersten Schritte</a> 
+## <a name=""></a><a name="tools">Tools für die ersten Schritte</a> 
 - Im Lieferumfang von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sind eine Vielzahl von Tools enthalten. In diesem Thema wird beschrieben, welche Tools Sie zuerst benötigen und wie das richtige Tool für den Auftrag ausgewählt wird. Auf alle Tools kann über das Menü **Start** zugegriffen werden. Einige Tools wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]werden nicht standardmäßig installiert. Die Tools müssen als Teil der Clientkomponenten während der Ausführung des Setupprogramms installiert werden. Eine vollständige Beschreibung der unten aufgeführten Tools finden Sie, indem Sie in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation danach suchen. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] enthält nur eine Teilmenge der Tools.  
 
 ### <a name="basic-tools"></a>Haupttools
@@ -46,7 +46,7 @@ Die Beispieldatenbanken und Beispiele werden nicht standardmäßig mit [!INCLUDE
 - Tippen Sie in aktuellen Versionen von Windows auf der **Startseite** **Configuration Manager** ein, und klicken Sie anschließend auf **SQL Server *Version* Configuration Manager**.   
 - Wenn Sie eine ältere Version von Windows verwenden, zeigen Sie im **Startmenü** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie anschließend auf **SQL Server-Konfigurations-Manager**.  
 
-## <a name="connect"></a>Herstellen einer Verbindung mit Management Studio  
+## <a name="connecting-with-management-studio"></a><a name="connect"></a>Herstellen einer Verbindung mit Management Studio  
 - Es ist sehr einfach, mithilfe von Tools, die auf demselben Computer ausgeführt werden, eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] herzustellen, wenn Sie den Namen der Instanz kennen und wenn Sie die Verbindung als Mitglied der lokalen Administratorengruppe auf dem Computer herstellen. Die folgenden Vorgänge müssen auf dem Computer ausgeführt werden, der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]hostet.  
 
 > [!NOTE]  
@@ -85,7 +85,7 @@ Mindestens ein Administratorkonto wurde ausgewählt, als [!INCLUDE[ssNoVersion_m
 > [!NOTE]
 > In diesem Tutorial wird davon ausgegangen, dass Sie neu bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sind und keine besonderen Probleme beim Herstellen einer Verbindung haben. Dies sollte für die meisten Benutzer ausreichen, und so wird das Tutorial einfach gehalten. Detaillierte Schritte zur Fehlerbehebung finden Sie unter [Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
 
-## <a name="additional"></a>Autorisieren zusätzlicher Verbindungen  
+## <a name="authorizing-additional-connections"></a><a name="additional"></a>Autorisieren zusätzlicher Verbindungen  
 Nachdem Sie eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als Administrator hergestellt haben, besteht eine Ihrer ersten Aufgaben darin, Verbindungen für andere Benutzer zu autorisieren. Dazu erstellen Sie eine Anmeldung und erteilen dieser Anmeldung die Berechtigung, als Benutzer auf eine Datenbank zuzugreifen. Eine Anmeldung kann entweder eine Anmeldung mit Windows-Authentifizierung sein, die Windows-Anmeldeinformationen verwendet, oder eine Anmeldung mit SQL Server-Authentifizierung, die die Authentifizierungsinformationen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] speichert und von Ihren Windows-Anmeldeinformationen unabhängig ist. Verwenden Sie nach Möglichkeit immer Windows-Authentifizierung.
 
 > [!TIP]

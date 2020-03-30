@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708685"
 ---
 # <a name="back-up-files-and-filegroups"></a>Sichern von Dateien und Dateigruppen
@@ -29,9 +29,9 @@ ms.locfileid: "71708685"
   
 Weitere Informationen finden Sie unter [Vollständige Dateisicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) und [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
 
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 - Die BACKUP-Anweisung ist nicht in einer expliziten oder implizierten Transaktion zulässig.  
   
@@ -39,11 +39,11 @@ Weitere Informationen finden Sie unter [Vollständige Dateisicherungen &#40;SQL 
   
 Weitere Informationen zu Einschränkungen finden Sie unter [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
-###  <a name="Recommendations"></a> Empfehlungen
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen
   
 Standardmäßig wird bei jedem erfolgreichen Sicherungsvorgang dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und dem Systemereignisprotokoll ein Eintrag hinzugefügt. Wenn Sie das Protokoll regelmäßig sichern, kann die Anzahl dieser Erfolgsmeldungen schnell ansteigen, d. h., es entstehen sehr große Fehlerprotokolle, die das Suchen nach anderen Meldungen erschweren können. In solchen Fällen können Sie diese Protokolleinträge mithilfe des Ablaufverfolgungsflags 3226 ausblenden, wenn keines der Skripts von diesen Einträgen abhängig ist. Weitere Informationen hierzu finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
-###  <a name="Permissions"></a> Berechtigungen
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
 
 Mitglieder der festen Serverrolle `BACKUP DATABASE`sysadmin`BACKUP LOG` und der festen Datenbankrollen **db_owner** und **db_backupoperator** verfügen standardmäßig über **- und** -Berechtigungen.  
   
@@ -154,7 +154,7 @@ Bei Verwendung des vollständigen Wiederherstellungsmodells müssen Sie auch das
 
 Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)bezeichnet) gesichert werden.  
   
-###  <a name="TsqlExample"></a> Beispiele
+###  <a name="examples"></a><a name="TsqlExample"></a> Beispiele
 In den folgenden Beispielen werden eine oder mehrere Dateien der sekundären Dateigruppen der `Sales` -Datenbank gesichert. Für diese Datenbank wird das vollständige Wiederherstellungsmodell verwendet, und es sind die folgenden sekundären Dateigruppen vorhanden:  
   
 - Eine Dateigruppe namens `SalesGroup1` mit den Dateien `SGrp1Fi1` und `SGrp1Fi2`.  
@@ -199,7 +199,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-## <a name="PowerShellProcedure"></a> PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell
 
 Richten Sie den [SQL Server PowerShell-Anbieter ein](../../relational-databases/scripting/sql-server-powershell-provider.md), und verwenden Sie ihn.
   

@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257658"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
@@ -27,7 +27,7 @@ Dieses Thema beschreibt das Erstellen, Auffüllen und Verwalten von Volltextindi
 ## <a name="prerequisite---create-a-full-text-catalog"></a>Voraussetzung: Erstellen eines Volltextkatalogs
 Bevor Sie einen Volltextindex erstellen können, müssen Sie einen Volltextkatalog erstellen. Der Katalog ist ein virtueller Container für ein oder mehrere Volltextindizes. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Volltextkatalogen](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
   
-##  <a name="tasks"></a> Erstellen, Ändern oder Löschen eines Volltextindexes  
+##  <a name="create-alter-or-drop-a-full-text-index"></a><a name="tasks"></a> Erstellen, Ändern oder Löschen eines Volltextindexes  
 ### <a name="create-a-full-text-index"></a>Erstellen eines Volltextindexes  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
@@ -48,7 +48,7 @@ Der Vorgang, bei dem ein Volltextindex erstellt und verwaltet wird, wird als *Au
 
 Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).
 
-##  <a name="view"></a> Anzeigen der Eigenschaften eines Volltextindexes
+##  <a name="view-the-properties-of-a-full-text-index"></a><a name="view"></a> Anzeigen der Eigenschaften eines Volltextindexes
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Anzeigen der Eigenschaften eines Volltextindexes mit Transact-SQL
 
 |Katalogsicht oder dynamische Verwaltungssicht|BESCHREIBUNG|  
@@ -80,7 +80,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] um vorgenommene Änderungen zu speichern und das Dialogfeld **Volltextindexeigenschaften** zu schließen.  
   
-##  <a name="props"></a> Anzeigen der Eigenschaften von indizierten Tabellen und Spalten  
+##  <a name="view-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a> Anzeigen der Eigenschaften von indizierten Tabellen und Spalten  
  Mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen, z. B. OBJECTPROPERTYEX, können verwendet werden, um den Wert verschiedener Eigenschaften der Volltextindizierung abzurufen. Diese Informationen sind für die Verwaltung und Problembehandlung der Volltextsuche hilfreich.  
   
  Die folgende Tabelle enthält die Volltexteigenschaften, die sich auf indizierte Tabellen und Spalten beziehen, sowie die zugehörigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen.  
@@ -102,7 +102,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
 |**TableFulltextPopulateStatus**|Der Auffüllungsstatus einer Volltexttabelle.|OBJECTPROPERTYEX|  
 |**TableHasActiveFulltextIndex**|Gibt an, ob eine Tabelle über einen aktiven Volltextindex verfügt.|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a> Abrufen von Informationen zur Volltextschlüsselspalte  
+##  <a name="get-info-about-the-full-text-key-column"></a><a name="key"></a> Abrufen von Informationen zur Volltextschlüsselspalte  
  Normalerweise müssen die Ergebnisse von CONTAINSTABLE- oder FREETEXTTABLE-Rowsetwertfunktionen mit der Basistabelle verknüpft werden. In solchen Fällen müssen Sie den Namen der eindeutigen Schlüsselspalte kennen. Sie können abfragen, ob ein bestimmter eindeutiger Index als Volltextschlüssel verwendet wird, und anschließend den Bezeichner der Volltextschlüsselspalte abrufen.  
   
 ### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Überprüfen, ob ein bestimmter eindeutiger Index als Volltextschlüsselspalte verwendet wird  
@@ -183,7 +183,7 @@ Zum Erstellen eines Volltextindexes für eine **varbinary(max)** -Spalte benöti
   
  Weitere Informationen zum Indizieren und Abfragen einer **xml**-Spalte finden Sie unter [Verwenden der Volltextsuche mit XML-Spalten](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
-##  <a name="disable"></a> Deaktivieren oder Reaktivieren der Volltextindizierung für eine Tabelle   
+##  <a name="disable-or-re-enable-full-text-indexing-for-a-table"></a><a name="disable"></a> Deaktivieren oder Reaktivieren der Volltextindizierung für eine Tabelle   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind standardmäßig alle von Benutzern erstellten Datenbanken volltextfähig. Zudem wird eine einzelne Tabelle automatisch für die Volltextindizierung aktiviert, sobald ein Volltextindex für die Tabelle erstellt wird und dem Index eine Spalte hinzugefügt wird. Eine Tabelle wird für die Volltextindizierung automatisch deaktiviert, wenn die letzte Spalte aus dem Volltextindex der Tabelle entfernt wird.  
   
  Für eine Tabelle mit einem Volltextindex können Sie mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Tabelle für die Volltextindizierung manuell deaktivieren und erneut aktivieren.  
@@ -194,7 +194,7 @@ Zum Erstellen eines Volltextindexes für eine **varbinary(max)** -Spalte benöti
   
 3.  Wählen Sie **Volltextindex**aus, und klicken Sie anschließend auf **Volltextindizierung deaktivieren** oder **Volltextindizierung aktivieren**.  
   
-##  <a name="remove"></a> Entfernen eines Volltextindexes aus einer Tabelle  
+##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a> Entfernen eines Volltextindexes aus einer Tabelle  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle mit dem Volltextindex, den Sie löschen möchten  
   

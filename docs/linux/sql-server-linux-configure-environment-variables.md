@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558371"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Konfigurieren von SQL Server-Einstellungen mit Umgebungsvariablen unter Linux
@@ -44,7 +44,7 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, um SQL Server 201
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Umgebungsvariable | Beschreibung |
+| Umgebungsvariable | BESCHREIBUNG |
 |-----|-----|
 | **ACCEPT_EULA** | Legen Sie für die Variable **ACCEPT_EULA** einen beliebigen Wert fest, um Ihre Zustimmung zum [End-User Licensing Agreement (Benutzerlizenzvertrag)](https://go.microsoft.com/fwlink/?LinkId=746388) zu geben. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
 | **MSSQL_SA_PASSWORD** | Konfigurieren des Benutzerkennworts des Systemadministrators. |
@@ -61,14 +61,14 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, um SQL Server 201
 | **MSSQL_ENABLE_HADR** | Aktivieren der Verfügbarkeitsgruppe. Beispielsweise bedeutet „1“ aktiviert und „0“ deaktiviert. |
 | **MSSQL_AGENT_ENABLED** | Aktivieren des SQL Server-Agents. Beispielsweise bedeutet „true“ aktiviert und „false“ deaktiviert. Standardmäßig ist der Agent deaktiviert.  |
 | **MSSQL_MASTER_DATA_FILE** | Festlegen des Speicherorts der Masterdatenbankdatei. Muss bis zur ersten Ausführung von SQL Server als **master.mdf** benannt werden. |
-| **MSSQL_MASTER_LOG_FILE** | Festlegen des Speicherorts der Masterdatenbank-Protokolldatei. Muss bis zur ersten Ausführung von SQL Server als **mastlog.ldf** benannt werden. |
+| **MSSQL_MASTER_LOG_FILE** | Festlegen des Speicherorts der Masterdatenbank-Protokolldatei. Muss bis zur ersten Ausführung von SQL Server als **mastlog.mdf** benannt werden. |
 | **MSSQL_ERROR_LOG_FILE** | Festlegen des Speicherorts der Protokolldateien. |
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Umgebungsvariable | Beschreibung |
+| Umgebungsvariable | BESCHREIBUNG |
 |-----|-----|
 | **ACCEPT_EULA** | Legen Sie für die Variable **ACCEPT_EULA** einen beliebigen Wert fest, um Ihre Zustimmung zum [End-User Licensing Agreement (Benutzerlizenzvertrag)](https://go.microsoft.com/fwlink/?LinkId=746388) zu geben. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
 | **MSSQL_SA_PASSWORD** | Konfigurieren des Benutzerkennworts des Systemadministrators. |
@@ -85,7 +85,7 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, um SQL Server 201
 | **MSSQL_ENABLE_HADR** | Aktivieren der Verfügbarkeitsgruppe. Beispielsweise bedeutet „1“ aktiviert und „0“ deaktiviert. |
 | **MSSQL_AGENT_ENABLED** | Aktivieren des SQL Server-Agents. Beispielsweise bedeutet „true“ aktiviert und „false“ deaktiviert. Standardmäßig ist der Agent deaktiviert.  |
 | **MSSQL_MASTER_DATA_FILE** | Festlegen des Speicherorts der Masterdatenbankdatei. Muss bis zur ersten Ausführung von SQL Server als **master.mdf** benannt werden. |
-| **MSSQL_MASTER_LOG_FILE** | Festlegen des Speicherorts der Masterdatenbank-Protokolldatei. Muss bis zur ersten Ausführung von SQL Server als **mastlog.ldf** benannt werden. |
+| **MSSQL_MASTER_LOG_FILE** | Festlegen des Speicherorts der Masterdatenbank-Protokolldatei. Muss bis zur ersten Ausführung von SQL Server als **mastlog.mdf** benannt werden. |
 | **MSSQL_ERROR_LOG_FILE** | Festlegen des Speicherorts der Protokolldateien. |
 
 ::: moniker-end

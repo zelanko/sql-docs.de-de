@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78176690"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
@@ -329,7 +329,7 @@ GO
 > [!IMPORTANT]
 >  Die Datentypen **ntext**, **text** und **image** werden in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)und [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
-### <a name="updating-lobs"></a> Aktualisieren von Datentypen mit umfangreichen Werten  
+### <a name="updating-large-value-data-types"></a><a name="updating-lobs"></a> Aktualisieren von Datentypen mit umfangreichen Werten  
  Mit der **.** WRITE **-Klausel (** _expression_ **,** @_Offset_ **,** @_Length_ **)** können Sie ein partielles oder vollständiges Update der Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** ausführen. 
  
  Bei dem Teilupdate einer Spalte des Datentyps **varchar(max)** werden z. B. möglicherweise nur die ersten 200 Bytes der Spalte gelöscht (200 Zeichen bei der Verwendung von ASCII-Zeichen) oder geändert, während bei einem vollständigen Update alle Daten in der Spalte gelöscht oder geändert würden. Updates mit **.WRITE**, bei denen neue Daten eingefügt oder angefügt werden, werden minimal protokolliert, wenn das Wiederherstellungsmodell für die Datenbank auf „Massenprotokolliert“ oder „Einfach“ festgelegt ist. Die minimale Protokollierung wird nicht verwendet, wenn vorhandene Werte aktualisiert werden. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
@@ -346,7 +346,7 @@ Es wird empfohlen, Daten in Blockgrößen einzufügen bzw. zu aktualisieren, die
   
 Wenn in einer OUTPUT-Klausel auf die von der **\.WRITE**-Klausel geänderte Spalte verwiesen wird, wird der vollständige Wert der Spalte – entweder das vorherige Image in **deleted.** _column\_name_ oder das endgültige Image in **inserted.** _column\_name_ – an die angegebene Spalte in der Tabellenvariable zurückgegeben. Weitere Informationen finden Sie unten im Beispiel R.  
   
-Verwenden Sie [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md), um die gleiche Funktionalität der **\.WRITE**-Klausel mit anderen Zeichen- oder binären Datentypen zu erzielen.  
+Verwenden Sie **STUFF &#40;Transact-SQL&#41;\., um die gleiche Funktionalität der** [WRITE](../../t-sql/functions/stuff-transact-sql.md)-Klausel mit anderen Zeichen- oder binären Datentypen zu erzielen.  
   
 ### <a name="updating-user-defined-type-columns"></a>Aktualisieren von Spalten mit benutzerdefiniertem Datentyp  
  Sie können Werte in benutzerdefinierten Spalten auf eine der folgenden Arten aktualisieren:  
@@ -470,7 +470,7 @@ ID     Value
   
  UPDATE-Berechtigungen werden standardmäßig Mitgliedern der festen Serverrolle `sysadmin` und der festen Datenbankrollen `db_owner` und `db_datawriter` sowie Tabellenbesitzern erteilt. Mitglieder der Rollen `sysadmin`, `db_owner` und `db_securityadmin` sowie der Tabellenbesitzer können Berechtigungen an andere Benutzer übertragen.  
   
-##  <a name="UpdateExamples"></a> Beispiele  
+##  <a name="examples"></a><a name="UpdateExamples"></a> Beispiele  
   
 |Category|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
@@ -486,7 +486,7 @@ ID     Value
 |[Erfassen der Ergebnisse der UPDATE-Anweisung](#CaptureResults)|OUTPUT-Klausel|  
 |[Verwenden von UPDATE in anderen Anweisungen](#Other)|Gespeicherte Prozeduren • TRY...CATCH|  
   
-###  <a name="BasicSyntax"></a> Grundlegende Syntax  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Grundlegende Syntax  
  Anhand von Beispielen in diesem Abschnitt wird die grundlegende Funktion der UPDATE-Anweisung mithilfe der mindestens erforderlichen Syntax veranschaulicht.  
   
 #### <a name="a-using-a-simple-update-statement"></a>A. Verwenden einer einfachen UPDATE-Anweisung  
@@ -510,7 +510,7 @@ SET Bonus = 6000, CommissionPct = .10, SalesQuota = NULL;
 GO  
 ```  
   
-###  <a name="LimitingValues"></a> Eingrenzen der zu aktualisierenden Zeilen  
+###  <a name="limiting-the-rows-that-are-updated"></a><a name="LimitingValues"></a> Eingrenzen der zu aktualisierenden Zeilen  
  Die Beispiele in diesem Abschnitt veranschaulichen Methoden, mit denen die Anzahl der von der UPDATE-Anweisung betroffenen Zeilen eingegrenzt werden kann.  
   
 #### <a name="c-using-the-where-clause"></a>C. Verwenden der WHERE-Klausel  
@@ -598,7 +598,7 @@ DEALLOCATE complex_cursor;
 GO  
 ```  
   
-###  <a name="ColumnValues"></a> Festlegen von Spaltenwerten  
+###  <a name="setting-column-values"></a><a name="ColumnValues"></a> Festlegen von Spaltenwerten  
  Die Beispiele in diesem Abschnitt veranschaulichen das Update von Spalten mithilfe von berechneten Werten, Unterabfragen und DEFAULT-Werten.  
   
 #### <a name="g-specifying-a-computed-value"></a>G. Angeben eines berechneten Werts  
@@ -664,7 +664,7 @@ SET CostRate = DEFAULT
 WHERE CostRate > 20.00;  
 ```  
   
-###  <a name="TargetObjects"></a> Angeben von Zielobjekten, die keine Standardtabellen sind  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> Angeben von Zielobjekten, die keine Standardtabellen sind  
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen durch Angeben einer Sicht, eines Tabellenalias oder einer Tabellenvariablen aktualisiert werden.  
   
 #### <a name="k-specifying-a-view-as-the-target-object"></a>K. Angeben einer Sicht als Zielobjekt  
@@ -721,7 +721,7 @@ ORDER BY EmpID;
 GO  
 ```  
   
-###  <a name="OtherTables"></a> Aktualisieren von Daten auf Grundlage von Daten aus anderen Tabellen  
+###  <a name="updating-data-based-on-data-from-other-tables"></a><a name="OtherTables"></a> Aktualisieren von Daten auf Grundlage von Daten aus anderen Tabellen  
  Anhand von Beispielen in diesem Abschnitt werden Methoden zum Aktualisieren von Zeilen auf Grundlage von Informationen in einer anderen Tabelle gezeigt.  
   
 #### <a name="n-using-the-update-statement-with-information-from-another-table"></a>N. Verwenden der UPDATE-Anweisung mit Informationen aus einer anderen Tabelle  
@@ -760,7 +760,7 @@ SET SalesYTD = SalesYTD +
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Aktualisieren von Zeilen in einer Remotetabelle  
+###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> Aktualisieren von Zeilen in einer Remotetabelle  
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen in einer Remotezieltabelle mit einem [Verbindungsserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) oder einer [Rowsetfunktion](../../t-sql/functions/rowset-functions-transact-sql.md) aktualisiert werden, um auf die Remotetabelle zu verweisen.  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. Aktualisieren von Daten in einer Remotetabelle mithilfe eines Verbindungsservers  
@@ -804,7 +804,7 @@ UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=
 SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
 ```
 
-###  <a name="LOBValues"></a> Aktualisieren von Large Object-Datentypen  
+###  <a name="updating-large-object-data-types"></a><a name="LOBValues"></a> Aktualisieren von Large Object-Datentypen  
  Anhand von Beispielen in diesem Abschnitt werden Methoden zum Aktualisieren von Werten in Spalten gezeigt, die mit LOB-Datentypen (Large Object) definiert sind.  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R. Verwenden von UPDATE mit .WRITE zum Ändern von Daten in einer nvarchar(max)-Spalte  
@@ -907,7 +907,7 @@ SET [Chart] = CAST('Xray 1' as varbinary(max))
 WHERE [SerialNumber] = 2;  
 ```  
   
-###  <a name="UDTs"></a> Aktualisieren benutzerdefinierter Typen  
+###  <a name="updating-user-defined-types"></a><a name="UDTs"></a> Aktualisieren benutzerdefinierter Typen  
  In den folgenden Beispielen werden Werte in Spalten eines CLR-benutzerdefinierten Typs (UDT) geändert. Es werden drei Methoden gezeigt. Weitere Informationen zu benutzerdefinierten Spalten finden Sie unter [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 #### <a name="v-using-a-system-data-type"></a>V. Verwenden eines Systemdatentyps  
@@ -937,7 +937,7 @@ SET Location.X = 23.5
 WHERE Name = 'Anchorage';  
 ```  
   
-###  <a name="TableHints"></a> Überschreiben des Standardverhaltens des Abfrageoptimierers mithilfe von Hinweisen  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> Überschreiben des Standardverhaltens des Abfrageoptimierers mithilfe von Hinweisen  
  In den Beispielen in diesem Abschnitt wird gezeigt, wie mit Tabellen- und Abfragehinweisen beim Verarbeiten der UPDATE-Anweisung zeitweise das Standardverhalten des Abfrageoptimierers überschrieben wird.  
   
 > [!CAUTION]  
@@ -975,7 +975,7 @@ GO
 EXEC Production.uspProductUpdate 'BK-%';  
 ```  
   
-###  <a name="CaptureResults"></a> Erfassen der Ergebnisse der UPDATE-Anweisung  
+###  <a name="capturing-the-results-of-the-update-statement"></a><a name="CaptureResults"></a> Erfassen der Ergebnisse der UPDATE-Anweisung  
  In den Beispielen in diesem Abschnitt wird gezeigt, wie mit der [OUTPUT-Klausel](../../t-sql/queries/output-clause-transact-sql.md) Informationen bzw. Ausdrücke aus den einzelnen von einer UPDATE-Anweisung betroffenen Zeilen zurückgegeben werden. Diese Ergebnisse können an die verarbeitende Anwendung zurückgegeben werden, die sie z. B. für Bestätigungen, Archivierungen und andere Anwendungsanforderungen verwendet.  
   
 #### <a name="aa-using-update-with-the-output-clause"></a>AA. Verwenden von UPDATE mit der OUTPUT-Klausel  
@@ -1009,7 +1009,7 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-###  <a name="Other"></a> Verwenden von UPDATE in anderen Anweisungen  
+###  <a name="using-update-in-other-statements"></a><a name="Other"></a> Verwenden von UPDATE in anderen Anweisungen  
  In Beispielen in diesem Abschnitt wird die Verwendung von UPDATE in anderen Anweisungen veranschaulicht.  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>AB. Verwenden von UPDATE in einer gespeicherten Prozedur  

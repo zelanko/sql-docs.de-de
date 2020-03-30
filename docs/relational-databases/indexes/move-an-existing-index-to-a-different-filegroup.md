@@ -17,10 +17,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906381"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Verschieben eines vorhandenen Indexes in eine andere Dateigruppe
@@ -34,7 +34,7 @@ ms.locfileid: "72906381"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Verschieben eines vorhandenen Indexes in eine andere Dateigruppe mit:**  
   
@@ -42,20 +42,20 @@ ms.locfileid: "72906381"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Bei Tabellen mit gruppiertem Index wird beim Verschieben des gruppierten Index in eine neue Dateigruppe auch die Tabelle in diese Dateigruppe verschoben.  
   
 -   Mit einer UNIQUE- oder PRIMARY KEY-Einschränkung mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]erstellte Indizes können nicht verschoben werden. Verwenden Sie zum Verschieben dieser Indizes die [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) -Anweisung mit der Option (DROP_EXISTING=ON) in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>So verschieben Sie einen vorhandenen Index mit dem Tabellen-Designer in eine andere Dateigruppe  
   
@@ -143,7 +143,7 @@ ms.locfileid: "72906381"
 > [!NOTE]  
 >  Wird ein Wert angegeben, der über der Anzahl der verfügbaren CPUs liegt, wird die tatsächliche Anzahl der CPUs verwendet.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>So verschieben Sie einen vorhandenen Index in eine andere Dateigruppe  
   
