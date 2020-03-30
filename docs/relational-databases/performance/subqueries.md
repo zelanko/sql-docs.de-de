@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113283"
 ---
 # <a name="subqueries-sql-server"></a>Unterabfragen (SQL Server)
@@ -39,7 +39,7 @@ FROM Sales.SalesOrderHeader AS Ord;
 GO
 ```
 
-## <a name="fundamentals"></a> Grundlegende Informationen zu Unterabfragen
+## <a name="subquery-fundamentals"></a><a name="fundamentals"></a> Grundlegende Informationen zu Unterabfragen
 Eine Unterabfrage wird auch innere Abfrage oder innere SELECT-Anweisung genannt, während die Anweisung mit einer Unterabfrage als äußere Abfrage oder äußere SELECT-Anweisung bezeichnet wird.   
 
 Viele [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die Unterabfragen einschließen, können auch als Joins formuliert werden. Andere Fragestellungen können nur mithilfe von Unterabfragen formuliert werden. In [!INCLUDE[tsql](../../includes/tsql-md.md)] gibt es normalerweise keinen Leistungsunterschied zwischen einer Anweisung, die eine Unterabfrage enthält, und einer semantisch gleichbedeutenden Version ohne Unterabfrage. In manchen Fällen, in denen das Vorhandensein bestimmter Daten überprüft werden muss, wird mit einem Join jedoch eine bessere Leistung erzielt. Denn ansonsten muss die geschachtelte Abfrage für jedes einzelne Ergebnis der äußeren Abfrage verarbeitet werden, damit die Entfernung von Duplikaten sichergestellt ist. In solchen Fällen erzielt ein Join bessere Ergebnisse. Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die mit einer Unterabfrage erstellt wurde, und eine `SELECT`-Anweisung, die mit einem Join erstellt wurde. Beide geben dasselbe Resultset zurück:
@@ -92,7 +92,7 @@ Es gibt drei grundlegende Arten von Unterabfragen. Arten:
 -   Unterabfragen, die mit einem nicht geänderten Vergleichsoperator eingeleitet werden und einen einzelnen Wert zurückgeben müssen.
 -   Unterabfragen, die mit `EXISTS` eingeleitete Tests auf Vorhandensein bestimmter Daten darstellen.
 
-## <a name="rules"></a> Regeln für Unterabfragen
+## <a name="subquery-rules"></a><a name="rules"></a> Regeln für Unterabfragen
 Eine Unterabfrage unterliegt den folgenden Beschränkungen: 
 -   Die Auswahlliste einer mit einem Vergleichsoperator eingeleiteten Unterabfrage darf nur einen einzigen Ausdruck oder Spaltennamen einschließen (außer bei `EXISTS` und `IN`, die sich auf Anweisungen mit `SELECT *` bzw. auf eine Liste beziehen).   
 -   Wenn die `WHERE`-Klausel einer äußeren Abfrage einen Spaltennamen einschließt, muss sie mit der Spalte in der Auswahlliste der Unterabfrage verknüpfbar sein (kompatible Datentypen).   
@@ -104,7 +104,7 @@ Eine Unterabfrage unterliegt den folgenden Beschränkungen:
 -   Eine mit einer Unterabfrage erstellte Sicht kann nicht aktualisiert werden.   
 -   Die Auswahlliste einer mit `EXISTS` eingeleiteten Unterabfrage besitzt laut Vereinbarung ein Sternchen (\*) statt eines einzelnen Spaltennamens. Die Regeln für eine mit `EXISTS` eingeleitete Unterabfrage entsprechen den Regeln für eine standardmäßige Auswahlliste, da eine mit `EXISTS` eingeleitete Unterabfrage einen Test auf das Vorhandensein bestimmter Daten erstellt und keine Daten, sondern TRUE oder FALSE zurückgibt.   
 
-## <a name="qualifying"></a> Qualifizieren von Spaltennamen in Unterabfragen
+## <a name="qualifying-column-names-in-subqueries"></a><a name="qualifying"></a> Qualifizieren von Spaltennamen in Unterabfragen
 Im folgenden Beispiel wird die *BusinessEntityID*-Spalte in der `WHERE`-Klausel der äußeren Abfrage implizit durch den Tabellennamen in der `FROM`-Klausel der äußeren Abfrage (*Sales.Store*) qualifiziert. Der Verweis auf *CustomerID* in der Auswahlliste der Unterabfrage wird durch die `FROM`-Klausel der Unterabfrage qualifiziert, also durch die *Sales.Customer*-Tabelle.
 
 ```sql
@@ -140,7 +140,7 @@ Es empfiehlt sich immer, den Tabellennamen explizit anzugeben, und es ist immer 
 > [!IMPORTANT]
 > Wenn in einer Unterabfrage auf eine Spalte verwiesen wird, die nicht in der Tabelle vorhanden ist, auf die in der `FROM`-Klausel der Unterabfrage verwiesen wird, die jedoch in einer Tabelle vorhanden ist, auf die durch die `FROM`-Klausel der äußeren Abfrage verwiesen wird, wird die Abfrage ohne Fehler ausgeführt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qualifiziert die Spalte in der Unterabfrage implizit mit dem Tabellennamen in der äußeren Abfrage.   
 
-## <a name="nesting"></a> Mehrere Schachtelungsebenen
+## <a name="multiple-levels-of-nesting"></a><a name="nesting"></a> Mehrere Schachtelungsebenen
 Eine Unterabfrage kann selbst wiederum eine oder mehrere Unterabfragen beinhalten. In einer Anweisung können beliebig viele Unterabfragen geschachtelt sein.   
 
 Die folgende Abfrage sucht die Namen aller Mitarbeiter, die im Vertrieb arbeiten.   
@@ -202,7 +202,7 @@ ON e.BusinessEntityID = s.BusinessEntityID;
 GO
 ```
 
-## <a name="correlated"></a> Korrelierte Unterabfragen
+## <a name="correlated-subqueries"></a><a name="correlated"></a> Korrelierte Unterabfragen
 Viele Abfragen können ausgewertet werden, indem die Unterabfrage einmal ausgeführt wird und der Ergebniswert oder die -werte in die `WHERE`-Klausel der äußeren Abfrage eingesetzt werden. In Abfragen mit einer korrelierten Unterabfrage (auch wiederholte Unterabfrage genannt) hängt die Unterabfrage für ihre Werte von der äußeren Abfrage ab. Das bedeutet, dass die Unterabfrage wiederholt ausgeführt wird, und zwar einmal für jede Zeile, die von der äußeren Abfrage ausgewählt werden könnte.
 Diese Abfrage ruft eine Instanz des Vor- und Nachnamens der einzelnen Mitarbeiter ab, für die die Prämie in der *SalesPerson*-Tabelle 5000 beträgt und für die die Mitarbeiter-IDs in der *Employee*-Tabelle und der *SalesPerson*-Tabelle übereinstimmen.
 
@@ -259,7 +259,7 @@ Da dies falsch ist, wird die Zeile zu `Syed Abbas` nicht in die Ergebnisse einge
 
 Korrelierte Unterabfragen können auch Tabellenwertfunktionen in die `FROM`-Klausel einschließen, indem ein Verweis auf Spalten aus einer Tabelle in der äußeren Abfrage als ein Argument der Tabellenwertfunktion erfolgt. In diesem Fall wird die Tabellenwertfunktion für jede Zeile in der äußeren Abfrage entsprechend der Unterabfrage bewertet.    
   
-## <a name="types"></a> Arten von Unterabfragen
+## <a name="subquery-types"></a><a name="types"></a> Arten von Unterabfragen
 Unterabfragen können an vielen Stellen angegeben werden: 
 -   Mit Aliasnamen. Weitere Informationen finden Sie unter [Unterabfragen mit Aliasnamen](#aliases).
 -   Mit `IN` oder `NOT IN`. Weitere Informationen finden Sie unter [Unterabfragen mit IN](#in) und [Unterabfragen mit NOT IN](#notin).
@@ -269,7 +269,7 @@ Unterabfragen können an vielen Stellen angegeben werden:
 -   Mit `EXISTS` oder `NOT EXISTS`. Weitere Informationen finden Sie unter [Unterabfragen mit EXISTS](#exists) und [Unterabfragen mit NOT EXISTS](#notexists).
 -   Anstelle von Ausdrücken. Weitere Informationen finden Sie unter [Anstelle von Ausdrücken verwendete Unterabfragen](#expression).
 
-### <a name="aliases"></a> Unterabfragen mit Aliasnamen
+### <a name="subqueries-with-aliases"></a><a name="aliases"></a> Unterabfragen mit Aliasnamen
 Viele Anweisungen, in denen die Unterabfrage und die äußere Abfrage auf dieselbe Tabelle verweisen, können als Selbstjoin (Verknüpfungen einer Tabelle mit sich selbst) ausgedrückt werden. Beispielsweise können die Adressen von Mitarbeitern aus einem bestimmten Bundesstaat mit einer Unterabfrage gesucht werden:   
 
 ```sql
@@ -326,7 +326,7 @@ GO
 
 Explizite Aliasnamen machen deutlich, dass ein Verweis auf *Person.Address* in der Unterabfrage eine andere Bedeutung als der Verweis in der äußeren Abfrage hat.   
 
-### <a name="in"></a> Unterabfragen mit IN
+### <a name="subqueries-with-in"></a><a name="in"></a> Unterabfragen mit IN
 Das Ergebnis einer mit `IN` (oder mit `NOT IN`) eingeleiteten Unterabfrage entspricht einer Liste aus 0 oder mehr Werten. Sobald die Unterabfrage Ergebnisse zurückgibt, werden diese von der äußeren Abfrage verwendet.    
 Die folgende Abfrage sucht die Namen aller Wheel-Produkte, die Adventure Works Cycles herstellt.     
 
@@ -468,7 +468,7 @@ GO
 
 Ein Join kann immer als Unterabfrage ausgedrückt werden. Demgegenüber kann eine Unterabfrage zwar häufig, jedoch nicht immer als Join ausgedrückt werden. Die Ursache hierfür liegt in der Symmetrie von Joins: Sie können die Tabellen A und B in beliebiger Reihenfolge verknüpfen und erhalten immer dieselben Ergebnisse. Dies gilt nicht, wenn eine Unterabfrage verwendet wird.    
 
-### <a name="notin"></a> Unterabfragen mit NOT IN
+### <a name="subqueries-with-not-in"></a><a name="notin"></a> Unterabfragen mit NOT IN
 Auch Unterabfragen, die mit dem NOT IN-Schlüsselwort eingeleitet werden, geben eine Liste aus null oder mehr Werten zurück.   
 Die folgende Abfrage sucht die Namen aller Produkte, die keine fertigen Fahrräder sind.   
 
@@ -488,7 +488,7 @@ GO
 
 Diese Anweisung kann nicht in einen Join konvertiert werden. Der analoge Join mit Ungleich hat eine andere Bedeutung: Sie sucht die Namen von Produkten, die sich in einer Unterkategorie befinden, die nicht fertige Fahrräder sind.      
 
-### <a name="upsert"></a> Unterabfragen in den Anweisungen UPDATE, DELETE und INSERT
+### <a name="subqueries-in-update-delete-and-insert-statements"></a><a name="upsert"></a> Unterabfragen in den Anweisungen UPDATE, DELETE und INSERT
 Unterabfragen können in den Anweisungen `UPDATE`, `DELETE`, `INSERT` und `SELECT` der Datenbearbeitungssprache (Data Manipulation Language, DML) geschachtelt werden.    
 
 Das folgende Beispiel verdoppelt den Wert in der *ListPrice*-Spalte der *Production.Product*-Tabelle. Die Unterabfrage in der `WHERE`-Klausel verweist auf die *Purchasing.ProductVendor*-Tabelle, um die in der *Product*-Tabelle aktualisierten Zeilen auf die zu beschränken, die von *BusinessEntity* 1540 angegeben wurden.
@@ -518,7 +518,7 @@ INNER JOIN Purchasing.ProductVendor AS pv
 GO   
 ```
 
-### <a name="comparison"></a> Unterabfragen mit Vergleichsoperatoren
+### <a name="subqueries-with-comparison-operators"></a><a name="comparison"></a> Unterabfragen mit Vergleichsoperatoren
 Unterabfragen können mit einem der folgenden Vergleichsoperatoren eingeleitet werden: (=, < >, >, > =, <, ! >, ! < oder < =).   
 
 Eine Unterabfrage, die mit einem unveränderten Vergleichsoperator (dem nicht `ANY` oder `ALL` folgt) eingeleitet wird, darf keine Werteliste zurückgeben, wie Unterabfragen mit `IN`, sondern muss einen einzelnen Wert zurückgeben. Wenn eine solche Unterabfrage mehrere Werte zurückgibt, wird von SQL Server eine Fehlermeldung angezeigt.    
@@ -569,7 +569,7 @@ WHERE ListPrice >
 GO
 ```
 
-### <a name="comparison_modified"></a> Mit ANY, SOME oder ALL modifizierte Vergleichsoperatoren
+### <a name="comparison-operators-modified-by-any-some-or-all"></a><a name="comparison_modified"></a> Mit ANY, SOME oder ALL modifizierte Vergleichsoperatoren
 Vergleichsoperatoren, die eine Unterabfrage einleiten, können mit den Schlüsselwörtern ALL oder ANY geändert werden. SOME ist eine ISO-Standard-Entsprechung für `ANY`.     
 
 Mit einem geänderten Vergleichsoperator eingeleitete Unterabfragen geben eine Liste aus 0 oder mehr Werten zurück und können eine `GROUP BY`- oder `HAVING`-Klausel einschließen. Diese Unterabfragen können auch mit `EXISTS` ausgedrückt werden.     
@@ -667,7 +667,7 @@ Aus demselben Grund enthalten die Ergebnisse keinen der Kunden, wenn Sie in dies
 
 Sie erhalten dieselben Ergebnisse mit dem Operator `<>ALL`, der mit `NOT IN` identisch ist.   
 
-### <a name="exists"></a> Unterabfragen mit EXISTS
+### <a name="subqueries-with-exists"></a><a name="exists"></a> Unterabfragen mit EXISTS
 Unterabfragen, die mit dem `EXISTS`-Schlüsselwort eingeleitet werden, dienen als Test auf das Vorhandensein bestimmter Daten. Die `WHERE`-Klausel der äußeren Abfrage testet, ob die von der Unterabfrage zurückgegebenen Zeilen vorhanden sind. Die Unterabfrage gibt keine tatsächlichen Daten zurück, sondern lediglich den Wert TRUE oder FALSE.   
 
 Die Syntax einer mit EXISTS eingeleiteten Unterabfrage lautet wie folgt:   
@@ -735,7 +735,7 @@ WHERE ProductSubcategoryID IN
 GO
 ```   
 
-### <a name="notexists"></a> Unterabfragen mit NOT EXISTS
+### <a name="subqueries-with-not-exists"></a><a name="notexists"></a> Unterabfragen mit NOT EXISTS
 `NOT EXISTS` funktioniert auf dieselbe Weise wie `EXISTS`, mit der Ausnahme, dass die umgebende `WHERE`-Klausel nur erfüllt wird, wenn von der Unterabfrage keine Zeilen zurückgegeben werden.    
 
 Um beispielsweise die Namen von Produkten zu finden, die sich nicht in der Unterkategorie Wheels befinden:   
@@ -754,7 +754,7 @@ WHERE NOT EXISTS
 GO
 ```   
 
-### <a name="expression"></a> Anstelle von Ausdrücken verwendete Unterabfragen
+### <a name="subqueries-used-in-place-of-an-expression"></a><a name="expression"></a> Anstelle von Ausdrücken verwendete Unterabfragen
 In [!INCLUDE[tsql](../../includes/tsql-md.md)] kann eine Unterabfrage überall dort in `SELECT`-, `UPDATE`-, `INSERT`- und `DELETE`-Anweisungen verwendet werden, wo auch ein Ausdruck verwendet werden kann. Eine Ausnahme stellen `ORDER BY`-Listen dar.    
 
 Das folgende Beispiel veranschaulicht, wie Sie diese Erweiterung verwenden können. Diese Abfrage ermittelt die Preise aller Mountainbike-Produkte, ihren Durchschnittspreis sowie die Differenz zwischen dem Preis jedes einzelnen Mountainbikes und dem Durchschnittspreis.    

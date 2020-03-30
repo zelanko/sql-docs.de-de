@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 05a5e9c01e46a83e0ba6a2bc206fd6f10328e9c6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093378"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
@@ -35,7 +35,7 @@ ms.locfileid: "68093378"
 > [!NOTE]  
 >  Um für einen Volltextindex eine Spaltensprache anzugeben, verwenden Sie beim Angeben der Spalte die Klausel *language_term* . Weitere Informationen finden Sie unter [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md) und [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
-##  <a name="langsupp"></a> Sprachunterstützung in Volltextsuche  
+##  <a name="language-support-in-full-text-search"></a><a name="langsupp"></a> Sprachunterstützung in Volltextsuche  
  Dieser Abschnitt enthält eine Einführung in die Wörtertrennung und Wortstammerkennung und beschreibt, wie die Volltextsuche die LCID der Spaltensprache verwendet.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>Einführung in Wörtertrennung und Wortstammerkennung  
@@ -74,7 +74,7 @@ ms.locfileid: "68093378"
 >  Die LCID wird für alle Datentypen verwendet, die für die Volltextindizierung geeignet sind (z.&nbsp;B. **char** oder **nchar**). Auch wenn die Sortierreihenfolge einer Spalte vom Typ **char**, **varchar**oder **text** auf eine andere Sprache als die von der LCID vorgegebenen festgelegt ist, wird die LCID während der Volltextindizierung und -abfrage dieser Spalten trotzdem verwendet.  
   
   
-##  <a name="breaking"></a> Worttrennung  
+##  <a name="word-breaking"></a><a name="breaking"></a> Worttrennung  
  Bei der Wörtertrennung wird der zu indizierende Text an den sprachspezifischen Wortgrenzen zerlegt. Aus diesem Grund unterscheidet sich das Wörtertrennungsverhalten für die einzelnen Sprachen. Wenn Sie eine Sprache „x“ verwenden, um mehrere Sprachen {x, y und z} zu indizieren, kann es ggf. zu unerwartetem Verhalten und Ergebnissen kommen. Ein Bindestrich (-) oder ein Komma (,) kann z. B. ein Wörtertrennungselement sein, das in einer Sprache verworfen wird, in einer anderen Sprache jedoch beibehalten wird. Außerdem kann ggf. auch unerwartetes Verhalten bei der Wortstammerkennung auftreten, da ein Wort für verschiedene Sprachen unterschiedliche Stämme aufweisen kann. Im Englischen sind Wortgrenzen z.&nbsp;B. meist Leerzeichen oder Satzzeichen. In anderen Sprachen, z.&nbsp;B. Deutsch, können dabei Wörter oder Zeichen kombiniert werden. Daher sollte die gewählte Spaltensprache die Sprache sein, die voraussichtlich in den Zeilen der Spalte gespeichert wird.  
   
 ### <a name="western-languages"></a>Westliche Sprachen  
@@ -99,11 +99,11 @@ ms.locfileid: "68093378"
      Wenn Sie Nur-Text-Inhalte verwenden, können Sie diese in den Datentyp **xml** konvertieren und Sprachtags hinzufügen, die für ein Dokument oder einen Dokumentabschnitt jeweils die entsprechende Sprache angeben. Dazu müssen Sie vor der Volltextindizierung jedoch die Sprache kennen.  
   
   
-##  <a name="stemming"></a> Wortstammerkennung  
+##  <a name="stemming"></a><a name="stemming"></a> Wortstammerkennung  
  Ein weiterer Aspekt, den Sie beim Wählen der Spaltensprache berücksichtigen sollten, ist die Wortstammerkennung. Als*Wortstammerkennung* wird bei Volltextabfragen die Suche nach allen Flexionsformen eines Worts in einer bestimmten Sprache bezeichnet. Wenn Sie zum Verarbeiten mehrerer Sprachen eine generische Wörtertrennung verwenden, funktioniert die Wortstammerkennung nur für die Sprache, die für die Spalte angegeben ist, jedoch nicht für andere in der Spalte enthaltene Sprachen. Die Wortstammerkennung für Deutsch funktioniert beispielsweise nicht für Englisch oder Spanisch usw. Dies kann sich je nach Sprache, die Sie zur Abfragezeit auswählen, auf Rückrufvorgänge auswirken.  
   
   
-##  <a name="type"></a> Auswirkung des Spaltentyps auf Volltextsuche  
+##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Auswirkung des Spaltentyps auf Volltextsuche  
  Ein weiterer Aspekt bei der Wahl der Sprache ist die Art und Weise, wie die Daten dargestellt werden. Für Daten, die nicht in **varbinary(max)** -Spalten gespeichert sind, erfolgt keine spezielle Filterung. Stattdessen durchläuft der Text die Worteinheitenerkennungs-Komponente i. A. unverändert.  
   
  Die Wörtertrennung ist außerdem hauptsächlich für die Verarbeitung von geschriebenem Text konzipiert. Für Text mit speziellen Auszeichnungen (wie z. B. HTML) wird möglicherweise keine große linguistische Genauigkeit bei der Indizierung und Suche erreicht. In diesem Fall haben Sie zwei Möglichkeiten. Die bevorzugte Methode besteht darin, die Textdaten in einer **varbinary(max)** -Spalte zu speichern und den Dokumenttyp anzugeben, sodass die Daten gefiltert werden können. Ist dies nicht machbar, können Sie u.&nbsp;U. die neutrale Wörtertrennung verwenden und ggf. den Füllwortlisten Markupdaten (wie "br" in HTML) hinzufügen.  
@@ -112,7 +112,7 @@ ms.locfileid: "68093378"
 >  Eine sprachbasierte Wortstammerkennung ist nicht möglich, wenn Sie die neutrale Sprache angeben.  
   
   
-##  <a name="nondef"></a> Angeben einer nicht standardmäßigen Spaltensprache in einer Volltextabfrage  
+##  <a name="specifying-a-non-default-column-level-language-in-a-full-text-query"></a><a name="nondef"></a> Angeben einer nicht standardmäßigen Spaltensprache in einer Volltextabfrage  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]analysiert eine Volltextsuche standardmäßig die Abfrageausdrücke, indem die Sprache verwendet wird, die für die einzelnen Spalten angegeben ist, die in der Volltextklausel enthalten sind. Um dieses Verhalten zu überschreiben, geben Sie zur Abfragezeit eine nicht standardmäßige Sprache an. Für unterstützte Sprachen mit installierten Ressourcen können Sie die LANGUAGE *language_term* Klausel einer [CONTAINS](../../t-sql/queries/contains-transact-sql.md)-, [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-, [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)- oder [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) -Abfrage verwenden, um die Sprache anzugeben, die für die Abfrageausdrücke in Bezug auf Wörtertrennung, Wortstammerkennung, Thesaurus und Stoppwörter genutzt wird.  
   
   

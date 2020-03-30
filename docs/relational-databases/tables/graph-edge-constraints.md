@@ -17,10 +17,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
 ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70873885"
 ---
 # <a name="edge-constraints"></a>Edgeeinschränkungen
@@ -29,7 +29,7 @@ ms.locfileid: "70873885"
 
 Edgeeinschränkungen können verwendet werden, um die Datenintegrität und eine spezifische Semantik in den Edgetabellen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Graph-Datenbank zu erzwingen.
 
-## <a name="Connection"></a> Edgeeinschränkungen
+## <a name="edge-constraints"></a><a name="Connection"></a> Edgeeinschränkungen
 
 Im ersten Release der Graph-Features wurde für die Endpunkt des Edge durch die Edgetabellen nichts erzwungen. Anders gesagt: Ein Edge in einer Graph-Datenbank konnte unabhängig vom Knotentyp eine Verbindung von jedem Knoten mit jedem Knoten herstellen.
 
