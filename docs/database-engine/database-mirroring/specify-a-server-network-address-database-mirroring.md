@@ -17,10 +17,10 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252762"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Angeben einer Servernetzwerkadresse (Datenbankspiegelung)
@@ -30,7 +30,7 @@ ms.locfileid: "75252762"
  Bevor Sie einen Port in einer Server-Netzwerkadresse angeben können, muss der Endpunkt der Datenbankspiegelung auf der Serverinstanz vorhanden sein. Weitere Informationen finden Sie unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
   
-##  <a name="Syntax"></a> Syntax für eine Server-Netzwerkadresse  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Syntax für eine Server-Netzwerkadresse  
  Die Syntax für eine Server-Netzwerkadresse lautet:  
   
  TCP<strong>://</strong> *\<Systemadresse>* <strong>:</strong> *\<Port>*  
@@ -121,7 +121,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a> Beispiele  
+##  <a name="examples"></a><a name="Examples"></a> Beispiele  
  Im folgenden Beispiel wird die Server-Netzwerkadresse für eine Serverinstanz auf einem Computersystem namens `REMOTESYSTEM3` in einer anderen Domäne dargestellt. Die Domäneninformationen lauten `NORTHWEST.ADVENTURE-WORKS.COM`, und der Port des Datenbank-Spiegelungsendpunkts ist `7025`. Auf der Grundlage dieser Beispielkomponenten lautet die Server-Netzwerkadresse:  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -130,7 +130,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74564795"
 ---
 # <a name="recompile-a-stored-procedure"></a>Erneutes Kompilieren einer gespeicherten Prozedur
@@ -38,9 +38,9 @@ ms.locfileid: "74564795"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Wenn eine Prozedur zum ersten Mal kompiliert oder erneut kompiliert wird, wird der Abfrageplan der Prozedur für den aktuellen Status der Datenbank und die darin enthaltenen Objekte optimiert. Werden bedeutende Änderungen an den Daten oder der Struktur einer Datenbank vorgenommen, wird der Abfrageplan der Prozedur bei der erneuten Kompilierung für diese Änderungen aktualisiert und optimiert. Dies kann die Verarbeitungsleistung der Prozedur verbessern.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "74564795"
   
 -   Wenn bei bestimmten Abfragen in einer Prozedur regelmäßig untypische oder temporäre Werte verwendet werden, kann die Prozedurleistung verbessert werden, indem der RECOMPILE-Abfragehinweis in diesen Abfragen verwendet wird. Da anstelle der vollständigen Prozedur nur die Abfragen mit dem Abfragehinweis erneut kompiliert werden, wird das Verhalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bei der erneuten Kompilierung auf Anweisungsebene imitiert. Zusätzlich zu den aktuellen Parameterwerten der Prozedur verwendet der RECOMPILE-Abfragehinweis beim Kompilieren der Anweisung auch die Werte von lokalen Variablen in der gespeicherten Prozedur. Weitere Informationen finden Sie unter [Abfragehinweis (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  **WITH RECOMPILE** -Option  
  Wenn diese Option beim Erstellen der Prozedurdefinition verwendet wird, erfordert sie die CREATE PROCEDURE-Berechtigung für die Datenbank und die ALTER-Berechtigung für das Schema, in dem die Prozedur erstellt wird.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74564795"
  Gespeicherte Systemprozedur**sp_recompile**  
  Erfordert die ALTER-Berechtigung für die angegebene Prozedur.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
 
 1. Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   

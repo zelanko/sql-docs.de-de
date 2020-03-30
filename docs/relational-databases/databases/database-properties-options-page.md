@@ -13,10 +13,10 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286744"
 ---
 # <a name="database-properties-options-page"></a>Datenbankeigenschaften (Seite Optionen)
@@ -29,7 +29,7 @@ ms.locfileid: "79286744"
  Geben Sie die Sortierung der Datenbank durch eine Auswahl aus der Liste an. Weitere Informationen finden Sie unter [Festlegen oder Ändern der Datenbanksortierung](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Wiederherstellungsmodell**  
- Geben Sie eines der folgenden Modelle für die Wiederherstellung der Datenbank an: **Full** (Vollständig), **Bulk-Logged** (Massenprotokolliert) oder **Simple** (Einfach). Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Geben Sie eines der folgenden Modelle für die Wiederherstellung der Datenbank an: **Vollständig**, **Massenprotokolliert**oder **Einfach**. Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Kompatibilitätsgrad**  
  Geben Sie die letzte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die von der Datenbank unterstützt wird. Mögliche Werte finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Wenn eine SQL Server-Datenbank aktualisiert wird, wird der Kompatibilitätsgrad für diese Datenbank nach Möglichkeit beibehalten oder wird auf den mindestens erforderlichen Grad geändert, der von der neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt wird. 
@@ -131,7 +131,7 @@ Wenn Sie eine Verbindung mit Azure SQL-Datenbank hergestellt haben, finden Sie i
  Geben Sie den Verzeichnisnamen für die FILESTREAM-Daten an, die der ausgewählten Datenbank zugeordnet sind.  
   
  **Nicht transaktionsgebundener FILESTREAM-Zugriff**  
- Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten an, die in Dateitabellen gespeichert sind: **OFF**, **READ_ONLY** oder **FULL**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten an, die in FileTables gespeichert sind: **OFF**, **READ_ONLY**oder **FULL**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Sonstiges  
 **Zulassen der Momentaufnahmeisolation**  

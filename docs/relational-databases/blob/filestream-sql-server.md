@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287284"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
@@ -75,7 +75,7 @@ Nur das Konto, unter dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 > [!NOTE]
 > SQL-Anmeldungen funktionieren nicht mit FILESTREAM-Containern. Nur NTFS- oder ReFS-Authentifizierung funktioniert mit FILESTREAM-Containern.
 
-## <a name="dual"></a> Zugreifen auf BLOB-Daten mit Transact-SQL und Dateisystem-Streamingzugriff
+## <a name="accessing-blob-data-with-transact-sql-and-file-system-streaming-access"></a><a name="dual"></a> Zugreifen auf BLOB-Daten mit Transact-SQL und Dateisystem-Streamingzugriff
 
 Nachdem Daten in einer FILESTREAM-Spalte gespeichert wurden, können Sie über [!INCLUDE[tsql](../../includes/tsql-md.md)] -Transaktionen oder mithilfe von Win32-APIs auf die Dateien zugreifen.  
   

@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056373"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Angeben der Präfixlänge in Datendateien mittels bcp (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "74056373"
 > [!IMPORTANT]  
 >  Beim Verwenden des systemeigenen Formats sollten Sie anstelle von Feldabschlusszeichen eher Längenpräfixe verwenden. Systemeigene Formatdaten können zu Konflikten mit Abschlusszeichen führen, weil eine Datendatei im systemeigenen Format im internen binären Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert wird.  
   
-##  <a name="PrefixLengthsExport"></a> Präfixlängen für den Massenexport  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> Präfixlängen für den Massenexport  
   
 > [!NOTE]  
 >  Der Standardwert, der beim Exportieren eines Felds an der Eingabeaufforderung für die Präfixlänge bereitgestellt wird, bezeichnet die effizienteste Präfixlänge für das Feld.  
@@ -86,7 +86,7 @@ ms.locfileid: "74056373"
   
  \*Die Datentypen **ntext**, **text**und **image** werden in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen **nvarchar(max)** , **varchar(max)** und **varbinary(max)** .  
   
-##  <a name="PrefixLengthsImport"></a> Präfixlängen für den Massenimport  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Präfixlängen für den Massenimport  
  Wenn Daten massenimportiert werden, entspricht die Präfixlänge dem Wert, der beim ursprünglichen Erstellen der Datendatei angegeben wurde. Wenn die Datendatei nicht mit einem **bcp** -Befehl erstellt wurde, sind wahrscheinlich keine Längenpräfixzeichen vorhanden. In diesem Fall sollten Sie 0 als Präfixlänge angeben.  
   
 > [!NOTE]  

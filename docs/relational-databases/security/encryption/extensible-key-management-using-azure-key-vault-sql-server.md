@@ -18,10 +18,10 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558050"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server)
@@ -29,9 +29,9 @@ ms.locfileid: "75558050"
 
   Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault ermöglicht der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verschlüsselung die Verwendung des Azure Key Vault-Diensts als Anbieter für die [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) zum Schutz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verschlüsselungsschlüsseln.  
   
- In diesem Thema wird der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector beschrieben. Weitere Informationen finden Sie unter [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md), [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)und [SQL Server-Connector Wartung &amp; Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)(SQL Server Connector Wartung &amp; Problembehandlung).  
+ In diesem Thema wird der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector beschrieben. Weitere Informationen finden Sie unter [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md), [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)und [SQL Server-Connector Wartung & Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)(SQL Server Connector Wartung &amp;amp; Problembehandlung).  
   
-##  <a name="Uses"></a> Was ist die erweiterbare Schlüsselverwaltung (EKM, Extensible Key Management) und warum sollte sie verwendet werden?  
+##  <a name="what-is-extensible-key-management-ekm-and-why-use-it"></a><a name="Uses"></a> Was ist die erweiterbare Schlüsselverwaltung (EKM, Extensible Key Management) und warum sollte sie verwendet werden?  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt verschiedene Arten von Verschlüsselung bereit, die beim Verschlüsseln von sensiblen Daten nützlich sind, einschließlich [Transparente Datenverschlüsselung &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md), [Verschlüsselung auf Spaltenebene](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) und [Sicherungsverschlüsselung](../../../relational-databases/backup-restore/backup-encryption.md). In all diesen Fällen werden die Daten in dieser traditionellen Schlüsselhierarchie mit einem symmetrischen Datenverschlüsselungsschlüssel (DEK, Data Encrpytion Key) verschlüsselt. Der symmetrische Datenverschlüsselungsschlüssel wird außerdem geschützt durch Verschlüsselung mit einer Hierarchie von Schlüsseln, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gespeichert sind. Die Alternative zu diesem Modell ist das EKM-Anbietermodell. Die Verwendung der EKM-Anbieterarchitektur ermöglicht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die Datenverschlüsselungsschlüssel mithilfe eines asymmetrischen Schlüssels zu schützen, der außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einem externen Kryptografieanbieter gespeichert ist. Dieses Modell fügt eine zusätzliche Sicherheitsschicht hinzu und trennt die Verwaltung von Schlüsseln und Daten.  
    
  Das folgende Bild stellt die traditionelle Hierarchie zur Dienst-/Schlüsselverwaltung dem Azure Key Vault-System gegenüber.  

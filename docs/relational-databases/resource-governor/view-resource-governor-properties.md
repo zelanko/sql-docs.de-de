@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903907"
 ---
 # <a name="view-resource-governor-properties"></a>Anzeigen der Eigenschaften der Ressourcenkontrolle
@@ -25,7 +25,7 @@ ms.locfileid: "72903907"
 
   Auf der Seite Eigenschaften der Ressourcenkontrolle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie Ressourcenkontrollentitäten erstellen oder konfigurieren, z. B. Ressourcenpools und Arbeitsauslastungsgruppen.  
   
- ##  <a name="BeforeYouBegin"></a> Verwandte Themen 
+ ##  <a name="related-topics"></a><a name="BeforeYouBegin"></a> Verwandte Themen 
  Neben dem Anzeigen der Eigenschaften von Ressourcenkontrollentitäten können Sie auf der Seite **Eigenschaften der Ressourcenkontrolle** mehrere Konfigurationstasks ausführen. Weitere Informationen finden Sie in den folgenden Themen:  
   
 -   [Aktivieren der Ressourcenkontrolle](../../relational-databases/resource-governor/enable-resource-governor.md)  
@@ -48,10 +48,10 @@ ms.locfileid: "72903907"
   
  Sie können feststellen, ob eine ausstehende Konfiguration vorliegt, indem Sie die dynamische Verwaltungssicht [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) abfragen, um den aktuellen Status von is_configuration_pending zu erhalten.  
   
-##  <a name="Permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Anzeigen der Ressourcenkontrolleigenschaften ist die VIEW SERVER STATER-Berechtigung erforderlich. Für die Konfigurationstasks für die Ressourcenkontrolle ist die CONTROL SERVER-Berechtigung erforderlich.  
   
-##  <a name="ViewRGProp"></a> Seite „Eigenschaften von Resource Governor“  
+##  <a name="resource-governor-properties-page"></a><a name="ViewRGProp"></a> Seite „Eigenschaften von Resource Governor“  
  **So zeigen Sie Resource Governor-Eigenschaften auf der Seite „Eigenschaften von Resource Governor“ in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  Öffnen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Objekt-Explorer, und erweitern Sie den Knoten **Verwaltung** rekursiv, bis **Ressourcenkontrolle**angezeigt wird.  
@@ -62,7 +62,7 @@ ms.locfileid: "72903907"
   
 4.  Klicken Sie auf **OK**, um Änderungen zu speichern.  
 
-##  <a name="RGProp"></a> Resource Governor properties  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a> Resource Governor properties  
  **Der Name der Klassifizierungsfunktion**  
  Geben Sie die Klassifizierungsfunktion durch Auswahl aus der Liste an.  
   

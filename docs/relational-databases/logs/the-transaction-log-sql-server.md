@@ -15,10 +15,10 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287804"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
@@ -67,7 +67,7 @@ In einem **Protokollversandszenario** sendet der primäre Server das aktive Tran
 
 In einem **Datenbankspiegelungsszenario** wird jedes Update einer Datenbank (der Prinzipaldatenbank) sofort in einer separaten vollständigen Kopie der Datenbank (der Spiegeldatenbank) reproduziert. Die Prinzipalserverinstanz sendet jeden Protokolldatensatz sofort an die Spiegelserverinstanz, die die eingehenden Protokolldatensätze auf die Spiegeldatenbank anwendet, um kontinuierlich ein Rollforward dafür auszuführen. Weitere Informationen finden Sie unter [Datenbankspiegelung](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
-##  <a name="Characteristics"></a>Merkmale von Transaktionsprotokollen
+##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>Merkmale von Transaktionsprotokollen
 Merkmale der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Transaktionsprotokolle: 
 -  Das Transaktionsprotokoll wird als eine separate oder mehrere Dateien in der Datenbank implementiert. Der Protokollcache wird getrennt vom Puffercache für Datenseiten verwaltet, woraus sich ein einfacher, schneller und zuverlässiger Code innerhalb des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]s ergibt. Weitere Informationen finden Sie unter [Physische Architektur des Transaktionsprotokolls](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
 
@@ -79,7 +79,7 @@ Merkmale der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Trans
 
 Informationen zur Transaktionsprotokollarchitektur und den internen Gegebenheiten finden Sie im [Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 
-##  <a name="Truncation"></a> Kürzung des Transaktionsprotokolls  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> Kürzung des Transaktionsprotokolls  
 Durch das Kürzen des Protokolls wird in der Protokolldatei Speicherplatz freigegeben, der vom Transaktionsprotokoll erneut verwendet werden kann. Sie müssen regelmäßig das Transaktionsprotokoll abschneiden, damit es nicht den vorgesehenen Speicherplatz belegt. Verschiedene Faktoren können die Protokollkürzung verzögern, daher ist die Überwachung der Protokollgröße wichtig. Einige Vorgänge lassen sich minimal protokollieren, um deren Auswirkung auf die Größe des Transaktionsprotokolls zu reduzieren.  
  
 Durch die Protokollkürzung werden inaktive [virtuelle Protokolldateien (Virtual Log Files, VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) aus dem logischen Transaktionsprotokoll einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank gelöscht, wodurch Speicherplatz im logischen Protokoll zur Wiederverwendung durch das physische Transaktionsprotokoll freigegeben wird. Wird ein Transaktionsprotokoll nicht gekürzt, füllt sich dadurch der gesamte Speicherplatz des Datenträgers auf, der den zugehörigen physischen Protokolldateien zugeordnet ist.  
@@ -95,7 +95,7 @@ Um zu vermeiden, dass nur noch wenig Speicherplatz vorhanden ist, erfolgt die K�
 > Die Protokollkürzung verringert nicht die Größe einer physischen Protokolldatei. Sie müssen zum Reduzieren der physischen Größe einer physischen Protokolldatei die Protokolldatei verkleinern. Informationen zum Verkleinern der Größe der physischen Protokolldatei finden Sie unter [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > Berücksichtigen Sie jedoch die [Faktoren, die die Protokollkürzung verzögern können](#FactorsThatDelayTruncation). Wenn der Speicherplatz nach einer Protokollverkleinerung wieder benötigt wird, vergrößert sich das Transaktionsprotokoll wieder und führt bei der Protokollvergrößerung infolgedessen zu einem Leistungsoverhead.
   
-##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  Bleiben Protokolldatensätze lange aktiv, verzögert sich die Transaktionsprotokollkürzung. Dabei kann sich das Transaktionsprotokoll auffüllen, wie bereits oben erwähnt wurde.  
   
 > [!IMPORTANT]
@@ -122,7 +122,7 @@ Um zu vermeiden, dass nur noch wenig Speicherplatz vorhanden ist, erfolgt die K�
 |14|OTHER_TRANSIENT|Dieser Wert wird derzeit nicht verwendet.|  
 |16|XTP_CHECKPOINT|Es muss ein In-Memory OLTP-Prüfpunkt ausgeführt werden. Für speicheroptimierte Tabellen wird ein automatischer Prüfpunkt erstellt, wenn die Transaktionsprotokolldatei seit dem letzten Prüfpunkt größer als 1,5 GB geworden ist (bezieht sich sowohl auf datenträgerbasierte als auch auf speicheroptimierte Tabellen).<br /> Weitere Informationen finden Sie unter [Prüfpunktvorgang für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md) und [Protokollierungs- und Prüfpunktprozess für speicheroptimierte Tabellen] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
-##  <a name="MinimallyLogged"></a> Vorgänge, für die eine minimale Protokollierung verfügbar ist  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> Vorgänge, für die eine minimale Protokollierung verfügbar ist  
 Bei der*minimalen Protokollierung* werden nur die Informationen protokolliert, die zum Wiederherstellen der Transaktion ohne Unterstützung der Zeitpunktwiederherstellung erforderlich sind. In diesem Thema werden die Vorgänge aufgeführt, die unter dem massenprotokollierten [Wiederherstellungsmodell](../backup-restore/recovery-models-sql-server.md) minimal protokolliert werden (sowie unter dem einfachen Wiederherstellungsmodell, es sei denn, es wird eine Sicherung ausgeführt).  
   
 > [!NOTE]
@@ -133,7 +133,7 @@ Bei der*minimalen Protokollierung* werden nur die Informationen protokolliert, d
   
  Die folgenden Vorgänge, die unter dem vollständigen Wiederherstellungsmodell vollständig protokolliert werden, werden unter dem einfachen und massenprotokollierten Wiederherstellungsmodell minimal protokolliert:  
   
--   Massenimportvorgänge ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Weitere Informationen zur minimalen Protokollierung eines Massenimports in eine Tabelle finden Sie unter [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Massenimportvorgänge ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)und [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Weitere Informationen zur minimalen Protokollierung eines Massenimports in eine Tabelle finden Sie unter [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Wenn die Transaktionsreplikation aktiviert ist, werden `BULK INSERT`-Vorgänge auch unter dem massenprotokollierten Wiederherstellungsmodell vollständig protokolliert.  
   
@@ -159,7 +159,7 @@ Wenn die Transaktionsreplikation aktiviert ist, werden `SELECT INTO`-Vorgänge a
   
     -   Neuerstellungen neuer Heaps mit [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (falls zutreffend). Aufhebungen von Indexseitenzuordnungen während eines `DROP INDEX`-Vorgangs werden **immer** vollständig protokolliert.
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **Verwalten des Transaktionsprotokolls**  
   
 -   [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

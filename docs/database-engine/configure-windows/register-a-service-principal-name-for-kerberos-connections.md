@@ -17,10 +17,10 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257510"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen
@@ -43,7 +43,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos-Konfigurations-Manager für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ist ein Diagnosetool zur Behebung Kerberos-bezogener Verbindungsprobleme bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Microsoft Kerberos-Konfigurations-Manager für SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
-##  <a name="Role"></a> Die Rolle des Dienstprinzipalnamens bei der Authentifizierung  
+##  <a name="the-role-of-the-spn-in-authentication"></a><a name="Role"></a> Die Rolle des Dienstprinzipalnamens bei der Authentifizierung  
  Wenn eine Anwendung eine Verbindung öffnet und die Windows-Authentifizierung verwendet, übergibt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computernamen, -Instanznamen und optional einen SPN. Wenn die Verbindung einen Dienstprinzipalnamen übergibt, wird dieser ohne Änderungen verwendet.  
   
  Wenn die Verbindung keinen Dienstprinzipalnamen übergibt, wird ein Standard-Dienstprinzipalname basierend auf verwendetem Protokoll, Servernamen und Instanzennamen erstellt.  
@@ -57,7 +57,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  Die bevorzugte Methode für die Authentifizierung von Benutzern bei SQL Server ist Windows-Authentifizierung. Clients, die Windows-Authentifizierung verwenden, werden mit NTLM oder Kerberos authentifiziert. In einer Active Directory-Umgebung wird immer zuerst Kerberos-Authentifizierung ausgeführt. Die Kerberos-Authentifizierung ist für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Clients, die Named Pipes verwenden, nicht verfügbar.  
   
-##  <a name="Permissions"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Beim Starten des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Diensts versucht dieser, den Dienstprinzipalnamen (Service Principal Name, SPN) zu registrieren. Wenn das Konto, das SQL Server startet, nicht über die Berechtigung zum Registrieren eines SPN in den Active Directory-Domänendiensten verfügt, schlägt dieser Aufruf fehl, und im Anwendungsereignisprotokoll sowie im SQL Server-Fehlerprotokoll wird eine Warnmeldung protokolliert. Um den SPN zu registrieren, muss [!INCLUDE[ssDE](../../includes/ssde-md.md)] unter einem integrierten Konto, z. B. einem lokalen System (nicht empfohlen) oder NETWORK SERVICE, oder unter einem Konto mit Berechtigung zum Registrieren eines SPN, z. B. einem Domänenadministratorkonto, ausgeführt werden. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter dem Betriebssystem  [!INCLUDE[win7](../../includes/win7-md.md)] oder  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] ausgeführt wird, können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit einem virtuellen Konto oder einem verwalteten Dienstkonto (MSA) ausführen. Sowohl virtuelle Konten als auch MSAs können einen SPN registrieren. Wird unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kein solches Konto ausgeführt, wird der SPN beim Starten nicht registriert, sodass der Domänenadministrator den SPN manuell registrieren muss.  
   
 > [!NOTE]  
@@ -65,7 +65,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  Weitere Informationen sind unter [Implementieren von eingeschränkter Kerberos-Delegierung mit SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)verfügbar  
   
-##  <a name="Formats"></a> SPN-Formate  
+##  <a name="spn-formats"></a><a name="Formats"></a> SPN-Formate  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]wurde das SPN-Format geändert, um die Kerberos-Authentifizierung unter TCP/IP, Named Pipes und Shared Memory zu unterstützen. Die folgenden SPN-Formate für benannte und Standardinstanzen werden unterstützt.  
   
 **Benannte Instanz**  
@@ -102,14 +102,14 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!NOTE]  
 > Bei TCP/IP-Verbindungen, bei denen der TCP-Port im SPN enthalten ist, muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das TCP-Protokoll für einen Benutzer aktivieren, um mithilfe der Kerberos-Authentifizierung eine Verbindung herzustellen. 
 
-##  <a name="Auto"></a> Automatische SPN-Registrierung  
+##  <a name="automatic-spn-registration"></a><a name="Auto"></a> Automatische SPN-Registrierung  
  Beim Starten einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den SPN für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst zu registrieren. Wird die Instanz beendet, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Registrierung des SPN wieder aufzuheben. Bei TCP/IP-Verbindungen wird der SPN im folgenden Format registriert: *MSSQLSvc/\<FQDN>* : *\<tcpport>* . Sowohl benannte Instanzen als auch die Standardinstanz werden als *MSSQLSvc* registriert, wobei der *\<tcpport>* -Wert zur Unterscheidung der Instanzen dient.  
   
  Bei anderen Verbindungen, die Kerberos unterstützen, wird der SPN im Format *MSSQLSvc/\<FQDN>* / *\<Instanzname>* für eine benannte Instanz registriert. Die Standardinstanz wird im folgenden Format registriert: *MSSQLSvc/\<FQDN>* .  
   
  Die Registrierung bzw. die Aufhebung der Registrierung eines SPN muss möglicherweise manuell durchgeführt werden, wenn der Dienst nicht über die Berechtigungen für diese Aktionen verfügt.  
   
-##  <a name="Manual"></a> Manuelle SPN-Registrierung  
+##  <a name="manual-spn-registration"></a><a name="Manual"></a> Manuelle SPN-Registrierung  
 Um den SPN manuell zu registrieren, muss der Administrator das Setspn.exe-Tool verwenden, das mit den Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] -Supporttools geliefert wird. Weitere Informationen finden Sie im KB-Artikel [Supporttools in Windows Server 2003 Service Pack 1](https://support.microsoft.com/kb/892777) .  
   
 Setspn.exe ist ein Befehlszeilentool, mit dem Sie die SPN-Verzeichniseigenschaft lesen, ändern und löschen können. Mit diesem Tool können Sie auch die aktuellen SPN anzeigen, die Standard-SPN des Kontos zurücksetzen und zusätzliche SPN hinzufügen oder löschen.  
@@ -133,7 +133,7 @@ Verwenden Sie für eine benannte Instanz Folgendes:
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
 ```  
   
-##  <a name="Client"></a> Clientverbindungen  
+##  <a name="client-connections"></a><a name="Client"></a> Clientverbindungen  
  Clienttreiber unterstützen vom Benutzer angegebene SPN. Wenn jedoch kein SPN angegeben wurde, wird er auf der Grundlage des Clientverbindungstyps automatisch erstellt. Bei einer TCP-Verbindung wird ein SPN im Format *MSSQLSvc*/*FQDN*:[*port*] sowohl für benannte als auch für Standardinstanzen verwendet.  
   
 Für Verbindungen mit Named Pipes und gemeinsam genutzten Speicherbereichen wird für eine benannte Instanz ein SPN im Format *MSSQLSvc/\<FQDN>:\<Instanzname>* und für die Standardinstanz *MSSQLSvc/\<FQDN>* verwendet.  
@@ -154,7 +154,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```  
   
-##  <a name="Defaults"></a> Authentifizierungsstandardwerte  
+##  <a name="authentication-defaults"></a><a name="Defaults"></a> Authentifizierungsstandardwerte  
  In der folgenden Tabelle werden die Authentifizierungsstandardwerte beschrieben, die auf Grundlage von SPN-Registrierungsszenarios verwendet werden.  
   
 |Szenario|Authentifizierungsmethode|  
@@ -167,7 +167,7 @@ WHERE session_id = @@SPID;
 > [!NOTE]  
 > "Richtig" bedeutet in diesem Fall, dass es sich bei dem Konto, das dem registrierten SPN zugeordnet ist, um das Konto handelt, unter dem der SQL Server-Dienst ausgeführt wird.  
   
-##  <a name="Comments"></a> Kommentare  
+##  <a name="comments"></a><a name="Comments"></a> Kommentare  
  Die dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC) verwendet einen auf Instanznamen basierenden SPN. Die Kerberos-Authentifizierung kann mit einer DAC verwendet werden, wenn dieser SPN erfolgreich registriert wurde. Alternativ kann ein Benutzer den Kontonamen als SPN festlegen.  
   
  Wenn die SPN-Registrierung beim Starten fehlschlägt, wird dieser Fehler im Fehlerprotokoll von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgezeichnet, und der Startvorgang wird fortgesetzt.  

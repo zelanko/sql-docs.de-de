@@ -15,10 +15,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056203"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
@@ -29,7 +29,7 @@ Der Thesaurusvergleich erfolgt für alle [FREETEXT](../../t-sql/queries/freetext
   
 Ein Thesaurus der Volltextsuche ist eine XML-Textdatei.
   
-##  <a name="tasks"></a> In Thesaurus enthaltene Funktionen  
+##  <a name="whats-in-a-thesaurus"></a><a name="tasks"></a> In Thesaurus enthaltene Funktionen  
  Bevor bei Volltextsuchabfragen nach Synonymen in einer bestimmten Sprache gesucht werden kann, müssen Sie Thesauruszuordnungen (Synonyme) für diese Sprache definieren. Jeder Thesaurus muss manuell konfiguriert werden, um Folgendes zu definieren:  
   
 -   Erweiterungssatz  
@@ -46,10 +46,10 @@ Ein Thesaurus der Volltextsuche ist eine XML-Textdatei.
   
      Bei einem Thesaurus werden bei allen Suchmustern diakritische Zeichen – beispielsweise Tilde ( **~** ), Akut-Akzentzeichen ( **&acute;** ) oder Umlaut ( **&uml;** ) – entweder berücksichtigt oder nicht berücksichtigt (d.h., es erfolgt eine *Unterscheidung nach Akzent*, oder es erfolgt *keine Unterscheidung nach Akzent*). Angenommen, Sie haben in einer Volltextsuchabfrage angegeben, dass das Suchmuster „caf&eacute;“ durch ein anderes Muster ersetzt werden soll. Wenn im Thesaurus nicht nach Akzent unterschieden wird, ersetzt die Volltextsuche die Muster „caf&eacute;“ und „cafe“. Wenn im Thesaurus nach Akzent unterschieden wird, ersetzt die Volltextsuche nur das Muster „caf&eacute;“. Standardmäßig wird bei einem Thesaurus nicht nach Akzent unterschieden.  
   
-##  <a name="initial_thesaurus_files"></a> Thesaurus-Standarddateien
+##  <a name="default-thesaurus-files"></a><a name="initial_thesaurus_files"></a> Thesaurus-Standarddateien
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Satz von XML-Thesaurusdateien bereit, und zwar eine für jede unterstützte Sprache. Diese Dateien sind im Wesentlichen leer. Sie enthalten nur die XML-Hauptstruktur, die alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Thesaurusdateien aufweisen, sowie einen auskommentierten Beispielthesaurus.  
   
-##  <a name="location"></a> Speicherort der Thesaurusdateien  
+##  <a name="location-of-thesaurus-files"></a><a name="location"></a> Speicherort der Thesaurusdateien  
  Der Standardspeicherort der Thesaurusdateien lautet folgendermaßen:  
   
      <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
@@ -79,12 +79,12 @@ Sie können den Speicherort und den Namen einer Thesaurusdatei ändern, indem Si
   
  Die globale Thesaurusdatei entspricht der neutralen Sprache mit LCID 0. Dieser Wert kann nur von Administratoren geändert werden.  
 
-##  <a name="how_queries_use_tf"></a> Verwenden des Thesaurus durch Volltextabfragen  
+##  <a name="how-full-text-queries-use-the-thesaurus"></a><a name="how_queries_use_tf"></a> Verwenden des Thesaurus durch Volltextabfragen  
 Für jede Thesaurusabfrage wird zuerst ein sprachspezifischer Thesaurus und dann der globale Thesaurus verwendet.
 1.  Zuerst wird die sprachspezifische Datei gesucht und (falls erforderlich) zur Verarbeitung geladen. Die Abfrage wird um die durch die Erweiterungssatz- und Ersetzungssatz-Regeln in der Thesaurusdatei angegebenen Synonyme erweitert. 
 2.  Anschließend werden diese Schritte für den globalen Thesaurus wiederholt. Wenn für einen Begriff in der sprachspezifischen Thesaurusdatei bereits eine Übereinstimmung gefunden wurde, werden die globalen Synonyme des Begriffs ignoriert.  
 
-##  <a name="structure"></a> Struktur einer Thesaurusdatei  
+##  <a name="structure-of-a-thesaurus-file"></a><a name="structure"></a> Struktur einer Thesaurusdatei  
  Jede Thesaurusdatei definiert einen XML-Container, dessen ID `Microsoft Search Thesaurus` lautet, sowie einen Kommentar, `<!--` … `-->`, der einen Beispielthesaurus enthält. Der Thesaurus wird in einem `<thesaurus>`-Element definiert, das Beispiele für die untergeordneten Elemente enthält, in denen die Einstellung für diakritische Zeichen, Erweiterungssätze und Ersetzungssätze definiert werden.
 
 Eine typische leere Thesaurusdatei enthält den folgenden XML-Text:  
@@ -115,7 +115,7 @@ Eine typische leere Thesaurusdatei enthält den folgenden XML-Text:
 </XML>  
 ```
 
-### <a name="expansion"></a> XML structure of an expansion set  
+### <a name="xml-structure-of-an-expansion-set"></a><a name="expansion"></a> XML structure of an expansion set  
   
  Jeder Erweiterungssatz ist in ein `<expansion>`-Element eingeschlossen. Innerhalb dieses Elements geben Sie eine oder mehrere Substitutionen in einem `<sub>`-Element an. Im Erweiterungssatz können Sie eine Gruppe von Substitutionen angeben, die Synonyme zueinander sind.  
   
@@ -131,7 +131,7 @@ Der Erweiterungssatzabschnitt für das oben genannte Beispiel würde wie folgt a
 </expansion>  
 ```  
   
-### <a name="replacement"></a> XML structure of a replacement set  
+### <a name="xml-structure-of-a-replacement-set"></a><a name="replacement"></a> XML structure of a replacement set  
   
 Jeder Ersetzungssatz ist in ein `<replacement>`-Element eingeschlossen. Innerhalb dieses Elements können Sie ein oder mehrere Muster in einem `<pat>`-Element und keine oder beliebig viele Substitutionen in `<sub>`-Elementen (einem pro Synonym) angeben. Sie können ein durch einen Substitutionssatz zu ersetzendes Muster angeben. Muster und Substitutionen können ein Wort oder eine Wortfolge enthalten. Wenn für ein Muster keine Substitution angegeben wird, ist die Wirkung dieselbe, als würde das Muster aus der Benutzerabfrage entfernt.  
   
@@ -178,7 +178,7 @@ Die Einstellung eines Thesaurus für diakritische Zeichen wird in einem einzelne
 > [!NOTE]  
 >  Diese Einstellung kann nur ein einziges Mal in der Datei vorgenommen werden und gilt für alle Suchmuster in der Datei. Diese Einstellung kann nicht für einzelne Muster angegeben werden.  
 
-##  <a name="editing"></a> Bearbeiten einer Thesaurusdatei  
+##  <a name="edit-a-thesaurus-file"></a><a name="editing"></a> Bearbeiten einer Thesaurusdatei  
 Der Thesaurus für eine bestimmte Sprache kann durch Bearbeiten der zugehörigen Thesaurusdatei (einer XML-Datei) konfiguriert werden. Beim Setup werden leere Thesaurusdateien installiert, die nur den `<xml>`-Container und ein auskommentiertes Beispiel für ein `<thesaurus`>-Element enthalten. Damit Volltextsuchabfragen, mit denen nach Synonymen gesucht wird, ordnungsgemäß ausgeführt werden, müssen Sie ein tatsächliches `<thesaurus`>-Element erstellen, das eine Gruppe von Synonymen definiert. Sie können zwei Formen von Synonymen definieren, nämlich Erweiterungssätze und Ersetzungssätze.  
 
 ### <a name="edit-a-thesaurus-file"></a>Bearbeiten einer Thesaurusdatei  

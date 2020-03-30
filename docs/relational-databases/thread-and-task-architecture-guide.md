@@ -15,10 +15,10 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287354"
 ---
 # <a name="thread-and-task-architecture-guide"></a>Handbuch zur Thread- und Taskarchitektur
@@ -36,7 +36,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist eine **Anforderung
 
 Ein **Task** stellt die Arbeitseinheit dar, die abgeschlossen werden muss, um die Anforderung zu erfüllen. Ein oder mehrere Tasks können einer einzelnen Anforderung zugewiesen werden. Parallele Anforderungen weisen mehrere aktive Tasks auf, die gleichzeitig statt seriell ausgeführt werden. Eine seriell ausgeführte Anforderung hat zu einem bestimmten Zeitpunkt nur einen aktiven Task. Tasks existieren während ihrer gesamten Lebensdauer in verschiedenen Zuständen. Weitere Informationen zu Zuständen von Tasks finden Sie unter [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Tasks im Zustand SUSPENDED warten darauf, dass Ressourcen, die für ihre Ausführung benötigt werden, verfügbar werden. Weitere Informationen zu wartenden Tasks finden Sie unter [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
-Ein **Arbeitsthread** in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], auch bekannt als Worker oder Thread, ist eine logische Darstellung eines Betriebssystemthreads. Bei der Ausführung serieller Anforderungen erzeugt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Worker, um den aktiven Task auszuführen. Bei der Ausführung paralleler Anforderungen im [Zeilenmodus](../relational-databases/query-processing-architecture-guide.md#execution-modes) weist die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Worker zu, der die untergeordneten Worker koordiniert, die für die Ausführung der ihnen zugewiesenen Tasks zuständig sind. Die Anzahl der Arbeitsthreads, die für jeden Task erzeugt werden, hängt von folgenden Faktoren ab:
+Ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Arbeitsthread**in**, auch bekannt als Worker oder Thread, ist eine logische Darstellung eines Betriebssystemthreads. Bei der Ausführung serieller Anforderungen erzeugt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Worker, um den aktiven Task auszuführen. Bei der Ausführung paralleler Anforderungen im [Zeilenmodus](../relational-databases/query-processing-architecture-guide.md#execution-modes) weist die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Worker zu, der die untergeordneten Worker koordiniert, die für die Ausführung der ihnen zugewiesenen Tasks zuständig sind. Die Anzahl der Arbeitsthreads, die für jeden Task erzeugt werden, hängt von folgenden Faktoren ab:
 -   Ob die Anforderung entsprechend der Bestimmung durch den Abfrageoptimierer für Parallelität geeignet war.
 -   Wie hoch der tatsächlich verfügbare [Grad an Parallelität (Degree Of Parallelism, DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) im System basierend auf der aktuellen Last ist. Dies kann vom geschätzten DOP abweichen, der auf der Serverkonfiguration des maximalen Grads an Parallelität (MAXDOP) basiert. So kann beispielsweise die Serverkonfiguration für MAXDOP 8 sein, aber der zur Laufzeit verfügbare DOP kann nur 2 sein, was die Abfrageleistung beeinträchtigt. 
 

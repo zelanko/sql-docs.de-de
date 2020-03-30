@@ -20,10 +20,10 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2bb7f9186ba44c094a54c4e44e7d54b29bc30ed0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908827"
 ---
 # <a name="restore-pages-sql-server"></a>Wiederherstellung von Seiten (SQL Server)
@@ -49,14 +49,14 @@ ms.locfileid: "72908827"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="WhenUseful"></a> Wann ist eine Seitenwiederherstellung sinnvoll?  
+###  <a name="when-is-a-page-restore-useful"></a><a name="WhenUseful"></a> Wann ist eine Seitenwiederherstellung sinnvoll?  
  Eine Seitenwiederherstellung ist zum Reparieren einzelner beschädigter Seiten vorgesehen. Die Wiederherstellung weniger Einzelseiten erfolgt möglicherweise schneller als eine Dateiwiederherstellung, sodass sich die Menge der Daten reduziert, die während der Wiederherstellung offline sind. Wenn Sie jedoch mehrere Seiten in einer Datei wiederherstellen müssen, erweist sich die Wiederherstellung der vollständigen Datei in der Regel als effizienter. Wenn auf einem Gerät sehr viele Seiten beschädigt sind, kann das ein Hinweis auf einen Gerätefehler sein. In diesem Fall sollten Sie die Datei nach Möglichkeit an einem anderen Speicherort wiederherstellen und das Gerät reparieren.  
   
  Nicht für alle Fehler für einzelne Seiten ist eine Wiederherstellung erforderlich. In zwischengespeicherten Daten, z. B. einem sekundären Index, kann ein Problem auftreten, das durch das Neuberechnen der Daten behoben werden kann. Wenn der Datenbankadministrator beispielsweise einen sekundären Index löscht und erneut erstellt, werden die beschädigten Daten, obwohl sie repariert sind, nicht als solche in der [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) -Tabelle angezeigt.  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Die Seitenwiederherstellung gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken, für die das vollständige oder massenprotokollierte Wiederherstellungsmodell verwendet wird. Die Seitenwiederherstellung wird nur für Dateigruppen mit Lese-/Schreibzugriff unterstützt.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72908827"
   
          Die bewährte Methode zum Ausführen einer Seitenwiederherstellung besteht darin, für die Datenbank das vollständige Wiederherstellungsmodell festzulegen und eine Protokollsicherung zu versuchen. Wenn die Protokollsicherung ausgeführt werden kann, können Sie die Seitenwiederherstellung fortsetzen. Wenn die Protokollsicherung fehlschlägt, geht entweder die Arbeit seit der letzten Protokollsicherung verloren, oder Sie müssen versuchen, DBCC mit der Option REPAIR_ALLOW_DATA_LOSS auszuführen.  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Szenarien für die Seitenwiederherstellung  
   
@@ -99,14 +99,14 @@ ms.locfileid: "72908827"
   
      Wenn Sie die nachfolgenden Protokollsicherungen wiederherstellen, werden diese nur auf Datenbankdateien angewendet, die mindestens eine Seite enthalten, die wiederhergestellt wird. Es muss eine ununterbrochene Kette von Protokollsicherungen auf die letzte vollständige oder differenzielle Wiederherstellung angewendet werden, um die Dateigruppe, in der die Seite enthalten ist, auf den Stand der aktuellen Protokolldatei zu bringen. Wie bei der Dateiwiederherstellung wird die Rollforwardgruppe auch bei der Seitenwiederherstellung durch einen einzelnen Protokollwiederholungsschritt weitergegeben. Damit die Seitenwiederherstellung erfolgreich ist, müssen die wiederhergestellten Seiten zu einem Status wiederhergestellt werden, der mit der Datenbank konsistent ist.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Ist die wiederherzustellende Datenbank nicht vorhanden, muss der Benutzer über CREATE DATABASE-Berechtigungen verfügen, um RESTORE ausführen zu können. Ist die Datenbank vorhanden, werden RESTORE-Berechtigungen standardmäßig den Mitgliedern der festen Serverrollen **sysadmin** und **dbcreator** sowie dem Besitzer (**dbo**) der Datenbank erteilt (für die Option FROM DATABASE_SNAPSHOT ist die Datenbank immer vorhanden).  
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Ab [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Seitenwiederherstellungen.  
   
 #### <a name="to-restore-pages"></a>So stellen Sie Seiten wieder her  
@@ -165,7 +165,7 @@ ms.locfileid: "72908827"
   
 7.  Um die im Seitenraster aufgeführten Seiten wiederherzustellen, klicken Sie auf **OK**.  
 
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Zum Angeben einer Seite in einer RESTORE DATABASE-Anweisung benötigen Sie die Datei-ID der Datei, die die Seite enthält, und die Seiten-ID der Seite. Die erforderliche Syntax lautet wie folgt:  
   
  `RESTORE DATABASE <database_name>`  
@@ -203,7 +203,7 @@ ms.locfileid: "72908827"
     > [!NOTE]  
     >  Diese Sequenz erfolgt analog zur Dateiwiederherstellungssequenz. Seiten- und Dateiwiederherstellungen können beide als Bestandteil derselben Sequenz ausgeführt werden.  
   
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  Im folgenden Beispiel werden vier beschädigte Seiten der Datei `B` mit `NORECOVERY`wiederhergestellt. Anschließend werden zwei Protokollsicherungen mit `NORECOVERY`angewendet, gefolgt von der Sicherung des Protokollfragments, die mit `RECOVERY`wiederhergestellt wird. Im folgenden Beispiel wird eine Onlinewiederherstellung ausgeführt. In diesem Beispiel lautet die Datei-ID der Datei `B` : `1`. Die Seiten-IDs der beschädigten Seiten lauten `57`, `202`, `916`und `1016`.  
   
 ```sql  

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: 21b25edb34d89cb9ef3629955dd06a357a8607a2
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198281"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Docker-Container in Linux
@@ -407,7 +407,7 @@ Nachdem Sie Ihre Datenbank in einem Container wiederhergestellt haben, können S
 
 ## <a name="use-the-persisted-data"></a>Verwenden der persistenten Daten
 
-Zum Schutz Ihrer Daten können Sie neben Datenbanksicherungen auch Datenvolumecontainer verwenden. Zu Beginn dieses Tutorials haben Sie mit dem Parameter `-v sql1data:/var/opt/mssql` den Container **sql1** erstellt. Im Datenvolumecontainer **sql1data** werden die Daten aus **/var/opt/mssql** auch dann weiterhin gespeichert, wenn der Container gelöscht wird. Führen Sie die folgenden Schritte aus, um den Container **sql1** vollständig zu entfernen und anschließend einen neuen Container namens **sql2** mit den persistenten Daten zu erstellen.
+Zum Schutz Ihrer Daten können Sie neben Datenbanksicherungen auch Datenvolumecontainer verwenden. Zu Beginn dieses Tutorials haben Sie mit dem Parameter **den Container**sql1`-v sql1data:/var/opt/mssql` erstellt. Im Datenvolumecontainer **sql1data** werden die Daten aus **/var/opt/mssql** auch dann weiterhin gespeichert, wenn der Container gelöscht wird. Führen Sie die folgenden Schritte aus, um den Container **sql1** vollständig zu entfernen und anschließend einen neuen Container namens **sql2** mit den persistenten Daten zu erstellen.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
