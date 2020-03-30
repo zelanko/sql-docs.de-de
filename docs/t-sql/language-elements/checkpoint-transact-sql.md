@@ -27,10 +27,10 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 ms.openlocfilehash: d662eb333ae932370c09847319cb69a5deb4773e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67950335"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
@@ -59,7 +59,7 @@ CHECKPOINT [ checkpoint_duration ]
   
  Die Auswirkungen auf die Leistung durch *checkpoint_duration* hängen von der Anzahl der modifizierten Seiten, der Aktivität im System und der angegebenen tatsächlichen Dauer ab. Wenn der Prüfpunkt z.B. normalerweise innerhalb von 120 Sekunden abgeschlossen wird, wird durch Angabe eines *checkpoint_duration*-Werts von 45 Sekunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dazu veranlasst, mehr Ressourcen für den Prüfpunkt zur Verfügung zu stellen, als gemäß der Standardeinstellung zugewiesen sind. Durch Angabe eines *checkpoint_duration*-Werts von 180 Sekunden würde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hingegen dazu veranlasst, weniger Ressourcen zuzuweisen als standardmäßig vorgesehen. Im Allgemeinen steigt durch einen niedrigen Wert für *checkpoint_duration* die Ressourcenmenge, die einem Prüfpunkt zugewiesen wird, während die einem Prüfpunkt zugeordneten Ressourcen bei einem hohen Wert für *checkpoint_duration* abnehmen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schließt einen Prüfpunkt nach Möglichkeit immer ab, und die CHECKPOINT-Anweisung wird unmittelbar nach Abschluss eines Prüfpunkts zurückgegeben. Aus diesem Grund kann ein Prüfpunkt sowohl vor Ablauf des angegebenen Zeitraumes abgeschlossen werden als auch länger als angegeben benötigen.  
   
-##  <a name="Security"></a> Sicherheit  
+##  <a name="security"></a><a name="Security"></a> Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Die CHECKPOINT-Berechtigungen sind standardmäßig Mitgliedern der festen Serverrolle **sysadmin** und der festen Datenbankrolle **db_owner** und **db_backupoperator** zugewiesen und nicht übertragbar.  

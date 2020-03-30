@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084102"
 ---
 # <a name="control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit
@@ -90,7 +90,7 @@ ms.locfileid: "68084102"
     
 ## <a name="how-to-control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit    
     
-###  <a name="bkmk_DbControl"></a> Steuerung auf Datenbankebene    
+###  <a name="database-level-control"></a><a name="bkmk_DbControl"></a> Steuerung auf Datenbankebene    
  Der Datenbankadministrator kann mithilfe der folgenden Anweisung steuern, ob Benutzer die verzögerte Transaktionsdauerhaftigkeit in einer Datenbank nutzen können. Sie müssen die Einstellung für verzögerte Dauerhaftigkeit mit ALTER DATABASE festlegen.    
     
 ```sql    
@@ -106,7 +106,7 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  **FORCED**    
  Mit dieser Einstellung wird jede Transaktion, für die in der Datenbank ein Commit ausgeführt wird, zu einer verzögert dauerhaften Transaktion. Unabhängig davon, ob für die Transaktion vollständige Dauerhaftigkeit (DELAYED_DURABILITY = OFF) oder keine Einstellung angegeben wird, wird sie zu einer verzögert dauerhaften Transaktion. Diese Einstellung ist hilfreich, wenn die verzögerte Transaktionsdauerhaftigkeit für eine Datenbank von Nutzen ist und Sie keinen Anwendungscode ändern möchten.    
     
-###  <a name="CompiledProcControl"></a> Steuerung auf Atomic-Blockebene: nativ kompilierte gespeicherte Prozeduren    
+###  <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a><a name="CompiledProcControl"></a> Steuerung auf Atomic-Blockebene: nativ kompilierte gespeicherte Prozeduren    
  Folgender Code wird in den Atomic-Block eingefügt.    
     
 ```sql    
@@ -141,7 +141,7 @@ END
 |**DELAYED_DURABILITY = OFF**|Atomic-Block startet eine neue vollständig dauerhafte Transaktion.|Atomic-Block erstellt einen Sicherungspunkt in der vorhandenen Transaktion und startet dann die neue Transaktion.|    
 |**DELAYED_DURABILITY = ON**|Atomic-Block startet eine neue verzögert dauerhafte Transaktion.|Atomic-Block erstellt einen Sicherungspunkt in der vorhandenen Transaktion und startet dann die neue Transaktion.|    
     
-###  <a name="bkmk_T-SQLControl"></a> Steuerung auf COMMIT-Ebene: [!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="commit-level-control--tsql"></a><a name="bkmk_T-SQLControl"></a> Steuerung auf COMMIT-Ebene: [!INCLUDE[tsql](../../includes/tsql-md.md)]    
  Da die COMMIT-Syntax erweitert ist, kann die verzögerte Transaktionsdauerhaftigkeit erzwungen werden. Wenn für DELAYED_DURABILITY auf Datenbankebene DISABLED oder FORCED festgelegt wird (siehe oben), wird diese COMMIT-Option ignoriert.    
     
 ```sql    
@@ -172,7 +172,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
     
 -   Durch Ausführen der gespeicherten Systemprozedur `sp_flush_log`. Durch diese Prozedur wird erzwungen, dass die Protokolldatensätze aller vorherigen verzögert dauerhaften Transaktionen, für die ein Commit ausgeführt wurde, auf den Datenträger geleert werden. Weitere Informationen finden Sie unter [sys.sp_flush_log &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md).    
     
-##  <a name="bkmk_OtherSQLFeatures"></a> Verzögerte Dauerhaftigkeit und andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen    
+##  <a name="delayed-durability-and-other-ssnoversion-features"></a><a name="bkmk_OtherSQLFeatures"></a> Verzögerte Dauerhaftigkeit und andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen    
  **Änderungsnachverfolgung und Change Data Capture**    
  Alle Transaktionen mit Änderungsnachverfolgung sind vollständig dauerhaft. Eine Transaktion verfügt über die Eigenschaft für das Nachverfolgen von Änderungen, wenn sie Schreibvorgänge in Tabellen ausführt, für die die Änderungsnachverfolgung aktiviert ist. Die Verwendung der verzögerten Dauerhaftigkeit wird für Datenbanken, die Change Data Capture (CDC) verwenden, nicht unterstützt.    
     
@@ -197,13 +197,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Protokollsicherung**    
  In die Sicherung werden nur Transaktionen aufgenommen, die in dauerhafte Transaktionen konvertiert wurden.    
     
-##  <a name="bkmk_DataLoss"></a> Wann können Daten verloren gehen?    
+##  <a name="when-can-i-lose-data"></a><a name="bkmk_DataLoss"></a> Wann können Daten verloren gehen?    
  Wenn Sie verzögerte Dauerhaftigkeit in einer der Tabellen implementieren, sollten Sie beachten, dass es unter bestimmten Umständen zu Datenverlust kommen kann. Falls kein Datenverlust hinnehmbar ist, sollten Sie auf die verzögerte Dauerhaftigkeit in Tabellen verzichten.    
     
 ### <a name="catastrophic-events"></a>Notfälle    
  Bei Notfällen wie beispielsweise einem Serverabsturz gehen die Daten für alle Transaktionen, für die ein Commit ausgeführt wurde, aber die noch nicht auf dem Datenträger gespeichert wurden, verloren. Verzögert dauerhafte Transaktionen werden auf dem Datenträger gespeichert, sobald eine vollständig dauerhafte Transaktion für eine Tabelle in der Datenbank ausgeführt wird (dauerhaft speicheroptimiert oder datenträgerbasiert), oder wenn `sp_flush_log` aufgerufen wird. Bei Verwendung von verzögert dauerhaften Transaktionen sollten Sie eine kleine Tabelle in der Datenbank erstellen, die Sie regelmäßig aktualisieren, oder Sie rufen regelmäßig `sp_flush_log` auf, um alle ausstehenden Transaktionen, für die ein Commit ausgeführt wurde, zu speichern. Das Transaktionsprotokoll wird ebenfalls geleert, sobald es voll ist, aber dies ist schwer vorherzusagen und kaum zu steuern.    
     
-### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herunterfahren und Neustart    
+### <a name="ssnoversion-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herunterfahren und Neustart    
  Für die verzögerte Dauerhaftigkeit macht es keinen Unterschied, ob das Herunterfahren unerwartet erfolgt oder das Herunterfahren/Neustarten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geplant ist. Wie bei Notfällen sollten Sie mit Datenverlusten rechnen. Beim geplanten Herunterfahren/Neustarten werden möglicherweise einige Transaktionen, die noch nicht auf dem Datenträger festgeschrieben wurden, zuerst auf dem Datenträger gespeichert, aber dies lässt sich nicht planen. Planen Sie so, als ob beim Herunterfahren/Neustarten (ob geplant oder ungeplant) die Daten genauso wie bei unvorhersehbaren Notfällen verloren gehen.    
     
 ## <a name="see-also"></a>Weitere Informationen    

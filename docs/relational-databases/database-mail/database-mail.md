@@ -15,10 +15,10 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d9a354b23a751a657ca10acc7e6cc19c6b586b4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68137415"
 ---
 # <a name="database-mail"></a>Datenbank-E-Mail
@@ -28,7 +28,7 @@ ms.locfileid: "68137415"
 > [!NOTE] 
 > Datenbank-E-Mail ist in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und in der [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) verfügbar, aber nicht in Azure SQL-Datenbank Singleton und Pools für elastische Datenbanken. 
 
-##  <a name="Benefits"></a> Vorteile der Verwendung von Datenbank-E-Mail  
+##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> Vorteile der Verwendung von Datenbank-E-Mail  
  Datenbank-E-Mail zeichnet sich durch Zuverlässigkeit, Skalierbarkeit, Sicherheit sowie Unterstützbarkeit aus.  
   
 ### <a name="reliability"></a>Zuverlässigkeit  
@@ -45,15 +45,15 @@ ms.locfileid: "68137415"
   
 -   Übermittlung im Hintergrund: Datenbank-E-Mail stellt die Übermittlung im Hintergrund bzw. asynchrone Übermittlung bereit. Wenn Sie zum Senden einer Nachricht **sp_send_dbmail** aufrufen, fügt Datenbank-E-Mail eine Anforderung zu einer [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlange hinzu. Die gespeicherte Prozedur liefert sofort eine Rückgabe. Die externe E-Mail-Komponente empfängt die Anforderung und übermittelt die E-Mail-Nachricht.  
   
--   Mehrere Profile: Mit Datenbank-E-Mail können Sie innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz mehrere Profile erstellen. Wahlweise können Sie auch das Profil auswählen, mit dem Datenbank-E-Mail Nachrichten senden soll.  
+-   Mehrere Profile: Mit Datenbank-E-Mail können Sie innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz mehrere Profile erstellen. Wahlweise können Sie auch das Profil auswählen, mit dem Datenbank-E-Mail Nachrichten senden soll.  
   
 -   Mehrere Konten: Alle Profile können mehrere Failoverkonten enthalten. Sie können verschiedene Profile mit verschiedenen Konten konfigurieren, um E-Mail-Nachrichten über mehrere E-Mail-Server zu verteilen.  
   
--   64-Bit-Kompatibilität: Datenbank-E-Mail wird in 64-Bit-Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vollständig unterstützt.  
+-   64-Bit-Kompatibilität: Datenbank-E-Mail wird in 64-Bit-Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vollständig unterstützt.  
   
 ### <a name="security"></a>Sicherheit  
   
--   Standardmäßig deaktiviert: Um die Oberfläche von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu verringern, sind die gespeicherten Prozeduren von Datenbank-E-Mail standardmäßig deaktiviert.  
+-   Standardmäßig deaktiviert: Um die Oberfläche von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu verringern, sind die gespeicherten Prozeduren von Datenbank-E-Mail standardmäßig deaktiviert.  
   
 -   E-Mail-Sicherheit: Zum Senden von Datenbank-E-Mail müssen Sie Mitglied der **DatabaseMailUserRole** -Datenbankrolle in der **msdb** -Datenbank sein.  
   
@@ -67,22 +67,22 @@ ms.locfileid: "68137415"
   
 ### <a name="supportability"></a>Unterstützbarkeit  
   
--   Integrierte Konfiguration: Datenbank-E-Mail verwaltet auch die Informationen zu E-Mail-Konten in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Mailprofile müssen daher nicht in einer externen Clientanwendung verwaltet werden. Der Assistent zum Konfigurieren von Datenbank-E-Mail stellt eine geeignete Benutzeroberfläche zum Konfigurieren von Datenbank-E-Mail bereit. Sie können die Konfigurationen für Datenbank-E-Mail auch mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellen und verwalten.  
+-   Integrierte Konfiguration: Datenbank-E-Mail verwaltet die Informationen für E-Mail-Konten in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Mailprofile müssen daher nicht in einer externen Clientanwendung verwaltet werden. Der Assistent zum Konfigurieren von Datenbank-E-Mail stellt eine geeignete Benutzeroberfläche zum Konfigurieren von Datenbank-E-Mail bereit. Sie können die Konfigurationen für Datenbank-E-Mail auch mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellen und verwalten.  
   
 -   Anmeldung. Datenbank-E-Mail protokolliert die E-Mail-Aktivität in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dem Microsoft Windows-Anwendungsereignisprotokoll und in Tabellen in der **msdb** -Datenbank.  
   
--   Überwachung: Datenbank-E-Mail speichert Kopien von Nachrichten und Anlagen, die innerhalb der **msdb**-Datenbank gesendet wurden. Sie können die Verwendung von Datenbank-E-Mail auf einfache Weise überwachen und die gespeicherten Nachrichten überprüfen.  
+-   Überwachung: Datenbank-E-Mail speichert Kopien von Nachrichten und Anlagen, die innerhalb der **msdb** -Datenbank gesendet wurden. Sie können die Verwendung von Datenbank-E-Mail auf einfache Weise überwachen und die gespeicherten Nachrichten überprüfen.  
   
 -   Unterstützung von HTML: Mit Datenbank-E-Mail können Sie E-Mail im HTML-Format senden.  
   
   
-##  <a name="VisualElement"></a> Architektur der Datenbank-E-Mail  
+##  <a name="database-mail-architecture"></a><a name="VisualElement"></a> Architektur der Datenbank-E-Mail  
  Datenbank-E-Mail wurde basierend auf einer Warteschlangenarchitektur entwickelt, in der Service Broker-Technologien zum Einsatz kommen. Wenn Benutzer **sp_send_dbmail**ausführen, fügt die gespeicherte Prozedur ein Element in die E-Mail-Warteschlange ein und erstellt einen Datensatz, in dem die E-Mail-Nachricht enthalten ist. Durch das Einfügen des neuen Eintrags in die E-Mail-Warteschlange wird der externe Prozess von Datenbank-E-Mail (DatabaseMail.exe) gestartet. Der externe Prozess liest die E-Mail-Informationen und sendet die E-Mail-Nachricht an den entsprechenden E-Mail-Server bzw. an mehrere E-Mail-Server. Der externe Prozess fügt für das Ergebnis des Sendevorgangs ein Element in die Statuswarteschlange ein. Durch das Einfügen des neuen Eintrags in die Statuswarteschlange wird eine interne gespeicherte Prozedur gestartet, mit der der Status der E-Mail-Nachricht aktualisiert wird. Zusätzlich zum Speichern der gesendeten (oder nicht gesendeten) E-Mail-Nachricht werden von Datenbank-E-Mail auch alle E-Mail-Anhänge in den Systemtabellen gespeichert. In den Sichten von Datenbank-E-Mail wird der Status der Nachrichten zur Problembehandlung gezeigt. Die Warteschlange von Datenbank-E-Mail kann mithilfe gespeicherter Prozeduren verwaltet werden.  
   
  ![msdb sendet Nachrichten an einen SMTP-Mailserver](../../relational-databases/database-mail/media/databasemail.gif "msdb sendet Nachrichten an einen SMTP-Mailserver")  
   
   
-##  <a name="ComponentsAndConcepts"></a> Einführung in Datenbank-E-Mail-Komponenten  
+##  <a name="introduction-to-database-mail-components"></a><a name="ComponentsAndConcepts"></a> Einführung in Datenbank-E-Mail-Komponenten  
  In Datenbank-E-Mail sind die folgenden Hauptkomponenten enthalten:  
   
 -   Konfigurations- und Sicherheitskomponenten  
@@ -115,7 +115,7 @@ ms.locfileid: "68137415"
 -   Ein geplanter Task, z. B. eine Datenbanksicherung oder ein Replikationsereignis, wird erfolgreich durchgeführt oder erzeugt einen Fehler. Sie können mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Mail beispielsweise Operatoren benachrichtigen, wenn ein Fehler bei der Verarbeitung am Monatsende auftritt.  
   
   
-##  <a name="RelatedContent"></a> Siehe auch  
+##  <a name="see-also"></a><a name="RelatedContent"></a> Siehe auch  
   
 -   [Konfigurationsobjekte für Datenbank-E-Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   
