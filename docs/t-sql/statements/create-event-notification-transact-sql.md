@@ -24,10 +24,10 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902811"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
@@ -51,7 +51,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 ## <a name="arguments"></a>Argumente  
  *event_notification_name*  
- Der Name der Ereignisbenachrichtigung. Der Name der Ereignisbenachrichtigung muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und innerhalb des Bereichs, in dem sie erstellt wurden, eindeutig sein: SERVER, DATABASE oder *object_name*.  
+ Der Name der Ereignisbenachrichtigung. Der Name der Ereignisbenachrichtigung muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und innerhalb seines Bereichs (SERVER, DATABASE oder *object_name*) eindeutig sein.  
   
  SERVER  
  Wendet den Bereich der Ereignisbenachrichtigung auf die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an. Ist dieser Bereich angegeben, wird die Benachrichtigung jedes Mal ausgelöst, wenn das angegebene Ereignis in der FOR-Klausel irgendwo in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auftritt.  

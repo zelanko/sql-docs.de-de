@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285864"
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
@@ -122,13 +122,13 @@ Zwischen Windows und mehreren Versionen der iconv-Bibliothek unter Linux und mac
 
 Im ODBC-Treiber 13 und 13.1 werden Daten beschädigt, wenn UTF-8-Mehrbytezeichen oder UTF-16-Ersatzzeichen auf SQLPutData-Puffer aufgeteilt werden. Für das Streamen von SQLPutData, verwenden Sie Puffer, die nicht in partiellen Zeichencodierungen enden. Diese Einschränkung wurde mit dem Version 17 des ODBC-Treibers entfernt.
 
-## <a name="bkmk-openssl"></a>OpenSSL
+## <a name="openssl"></a><a name="bkmk-openssl"></a>OpenSSL
 Ab Version 17.4 lädt der Treiber OpenSSL dynamisch, sodass diese Software auf Systemen mit Version 1.0 oder 1.1 ausgeführt werden kann, ohne dass separate Treiberdateien erforderlich sind. Wenn mehrere OpenSSL-Versionen vorhanden sind, versucht der Treiber, die neueste zu laden. Der Treiber unterstützt derzeit OpenSSL 1.0.x und 1.1.x.
 
 > [!NOTE]  
 > Es können Konflikte auftreten, wenn die Anwendung, die den Treiber verwendet (oder eine ihrer Komponenten), mit einer anderen Version von OpenSSL verknüpft ist oder dynamisch eine andere Version von OpenSSL lädt. Wenn im System mehrere OpenSSL-Versionen vorhanden sind und eine Anwendung OpenSSL verwendet, müssen Sie unbedingt sicherstellen, dass die von der Anwendung und vom Treiber geladene Version übereinstimmen. Fehler könnten den Arbeitsspeicher beeinträchtigen, daher macht sich ein solcher Konflikt möglicherweise nicht auf offensichtliche oder konsistente Weise bemerkbar.
 
-## <a name="bkmk-alpine"></a>Alpine Linux
+## <a name="alpine-linux"></a><a name="bkmk-alpine"></a>Alpine Linux
 Zum Zeitpunkt der Erstellung dieser Dokumentation beträgt die Standardstapelgröße in MUSL 128K. Dies ist für die grundlegenden ODBC-Treiberfunktionen ausreichend, aber je nach Zweck der Anwendung kann dieser Grenzwert schnell überschritten werden – insbesondere dann, wenn der Treiber aus mehreren Threads aufgerufen wird. Es empfiehlt sich, eine ODBC-Anwendung unter Alpine Linux mit `-Wl,-z,stack-size=<VALUE IN BYTES>` zu kompilieren, um die Stapelgröße zu erhöhen. Zur Referenz: Die Standardstapelgröße in den meisten GLIBC-Systemen beträgt 2 MB.
 
 ## <a name="additional-notes"></a>Weitere Hinweise  

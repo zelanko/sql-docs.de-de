@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: 8b0d52f5405e3519b861b7642264460b316acd03
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307843"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler-Vorlagen
@@ -51,7 +51,7 @@ Mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] können Sie Vo
 ## <a name="default-template"></a>Standardvorlage  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] bestimmt automatisch die Vorlage **Standard** , die standardmäßig für neue Ablaufverfolgungen verwendet wird. Sie können jedoch statt der Standardvorlage eine beliebige andere vordefinierte oder benutzerdefinierte Vorlage verwenden. Um die Standardvorlage zu ändern, aktivieren Sie im Dialogfeld **Eigenschaften der Ablaufverfolgungsvorlage** auf der Registerkarte **Allgemein** das Kontrollkästchen **Als Standardvorlage für den ausgewählten Servertyp verwenden** , wenn Sie eine Vorlage erstellen oder bearbeiten.  
   
- Klicken Sie im [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] im Menü **Datei** auf **Vorlagen** und dann auf **Neue Vorlage** oder **Vorlage bearbeiten**, um zum Dialogfeld **Eigenschaften der Ablaufverfolgungsvorlage** zu navigieren.  
+ Klicken Sie im **im Menü**Datei[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auf **Vorlagen** und dann auf **Neue Vorlage** oder **Vorlage bearbeiten**, um zum Dialogfeld **Eigenschaften der Ablaufverfolgungsvorlage** zu navigieren.  
   
 > [!NOTE]  
 >  Die Standardvorlage gilt speziell für einen bestimmten Servertyp. Wenn Sie die Standardvorlage für einen Servertyp ändern, sind andere Servertypen davon nicht betroffen. Weitere Informationen zum Festlegen einer Standardvorlage für einen bestimmten Server finden Sie unter [Festlegen der Standardeinstellungen für Ablaufverfolgungsdefinitionen &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md).  

@@ -29,10 +29,10 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048149"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
@@ -157,7 +157,7 @@ Partition scheme 'myRangePS4' has been created successfully. 'test5fg' is marked
   
  Falls die `myRangePF4`-Partitionsfunktion geändert wird, um eine Partition hinzuzufügen, erhält die `test5fg`-Dateigruppe die neu erstellte Partition.  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>E. Erstellen eines Partitionsschemas, das ausschließlich für PRIMARY verwendet wird (für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] wird nur PRIMARY unterstützt)
+### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>E. Erstellen eines Partitionsschemas, das ausschließlich für PRIMARY verwendet wird (für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] wird nur PRIMARY unterstützt)
 
  Im folgenden Beispiel wird eine Partitionsfunktion zum Partitionieren einer Tabelle oder eines Indexes in vier Partitionen erstellt. Anschließend wird ein Partitionsschema erstellt, das festlegt, dass alle Partitionen in der PRIMARY-Dateigruppe erstellt werden.  
   

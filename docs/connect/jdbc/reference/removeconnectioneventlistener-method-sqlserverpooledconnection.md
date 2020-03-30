@@ -16,10 +16,10 @@ ms.assetid: 46902e89-f512-40af-a2d9-a896f03d1200
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b9d2980b86704efe7e611878d373e0dd9b5cb7fa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975748"
 ---
 # <a name="removeconnectioneventlistener-method-sqlserverpooledconnection"></a>removeConnectionEventListener-Methode (SQLServerPooledConnection)
@@ -37,7 +37,7 @@ public void removeConnectionEventListener(javax.sql.ConnectionEventListener list
 #### <a name="parameters"></a>Parameter  
  *listener*  
   
- Ein ConnectionEventListener-Objekt  
+ Dies ist ein ConnectionEventListener-Objekt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Diese removeConnectionEventListener-Methode wird von der removeConnectionEventListener-Methode in der javax.sql.PooledConnection-Schnittstelle angegeben.  

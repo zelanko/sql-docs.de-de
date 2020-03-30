@@ -12,20 +12,19 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 617a4e01b3fd4f8dcbc6d929c2a26d483f2fa1ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e2337434a48e92ddc28af52cc3481951eafe66d3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66108860"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380701"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Konfigurieren einer URL (SSRS-Konfigurations-Manager)
   Bevor Sie den Berichts-Manager oder den Report Server-Webdienst verwenden können, müssen Sie mindestens eine URL für jede Anwendung konfigurieren. Die Konfiguration der URLs ist obligatorisch, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Modus zur ausschließlichen Installation von Dateien installiert haben (also durch Auswahl der Option **Server installieren, jedoch nicht konfigurieren** auf der Seite mit den Berichtsserver-Installationsoptionen im Installations-Assistenten). Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der Standardkonfiguration installiert haben, sind die URLs bereits für jede Anwendung konfiguriert. Falls Sie mit einem Berichtsserver arbeiten, der für den integrierten SharePoint-Modus konfiguriert ist, und Sie die URL des Berichtsserver-Webdienstes mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool aktualisieren, müssen Sie auch die URL in der SharePoint-Zentraladministration aktualisieren.  
   
  Verwenden Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool zur Konfiguration der URLs: Alle Teile der URL werden in diesem Tool definiert. Im Gegensatz zu früheren Versionen bieten die Websites des Internetinformationsdienste-Managers (IIS) keinen Zugriff mehr auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen.  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet Standardwerte, die in den meisten Bereitstellungszenarien gut funktionieren, einschließlich parallelen Bereitstellungen mit anderen Webdiensten und -anwendungen. Standard-URLs beinhalten Instanznamen, wodurch das Risiko von URL-Konflikten bei Ausführung mehrerer Berichtsserverinstanzen auf demselben Computer minimiert wird.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet Standardwerte, die in den meisten Bereitstellungszenarien gut funktionieren, einschließlich parallelen Bereitstellungen mit anderen Webdiensten und -anwendungen. Standard-URLs beinhalten Instanznamen, wodurch das Risiko von URL-Konflikten bei Ausführung mehrerer Berichtsserverinstanzen auf demselben Computer minimiert wird.  
   
  Dieses Thema enthält Anweisungen für die folgenden Aufgaben:  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66108860"
   
 -   Legen Sie erweiterte URL-Eigenschaften fest, um zusätzliche URLs zu definieren.  
   
- Weitere Informationen zur Speicherung und Beibehaltung von URLs sowie zu Interoperabilitätsproblemen finden Sie unter [Informationen zu URL-Reservierungen und-Registrierungen &#40;SSRS Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md) und [Installieren von Reporting Services und Internetinformationsdienste nebeneinander &#40;SSRS ](install-reporting-and-internet-information-services-side-by-side.md)im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einheitlichen Modus&#41;in der-Online Dokumentation. Beispiele für URLs, die häufig in Reporting Services-Installationen verwendet werden, finden Sie unter [Beispiele für URLs](#URLExamples) in diesem Thema.  
+ Weitere Informationen zur Speicherung und Verwaltung von URLs oder Interoperabilitätsproblemen finden Sie unter Informationen zu [URL-Reservierungen und Registrierung &#40;SSRS Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md) und Installieren von Reporting Services und [Internetinformationsdiensten Side-by-Side &#40;SSRS Native Mode&#41;](install-reporting-and-internet-information-services-side-by-side.md)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. Beispiele für URLs, die häufig in Reporting Services-Installationen verwendet werden, finden Sie unter [Beispiele für URLs](#URLExamples) in diesem Thema.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  Bevor Sie eine URL erstellen oder ändern, beachten Sie folgende Punkte:  
@@ -64,17 +63,17 @@ ms.locfileid: "66108860"
   
 4.  Geben Sie die IP-Adresse an, die den Berichtsservercomputer im Netzwerk eindeutig identifiziert. Wenn Sie einen Hostheader angeben oder weitere URLs für dieselbe Anwendungsinstanz definieren möchten, müssen Sie auf **Erweitert**klicken. Anweisungen zur Einrichtung erweiterter Eigenschaften für die URL finden Sie weiter unten in diesem Thema. Verwenden Sie andernfalls die Seite **Webdienst-URL** , um eine Auswahl aus folgenden Werten zu treffen:  
   
-    -   **Alle zugewiesenen** gibt an, dass alle IP-Adressen, die dem Computer zugewiesen sind, in einer URL verwendet werden können, die auf eine Berichts Serveranwendung verweist. Dieser Wert umfasst auch Host-Anzeigenamen (z. B. Computernamen), die durch einen Domänennamenserver in eine IP-Adresse aufgelöst werden können, die dem Computer zugewiesen ist. Dies ist der Standardwert für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL.  
+    -   Der Wert**Alle zugewiesenen** gibt an, dass alle IP-Adressen, die dem Computer zugewiesen sind, in einer URL verwendet werden können, die auf eine Berichtsserveranwendung verweist. Dieser Wert umfasst auch Host-Anzeigenamen (z. B. Computernamen), die durch einen Domänennamenserver in eine IP-Adresse aufgelöst werden können, die dem Computer zugewiesen ist. Dies ist der Standardwert für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL.  
   
-    -   **Alle nicht zugewiesenen** gibt an, dass der Berichts Server alle Anforderungen empfängt, die nicht von einer anderen Anwendung verarbeitet wurden. Sie sollten diese Option vermeiden. Wenn Sie diese Option auswählen, kann eine andere Anwendung, die eine stärkere URL-Reservierung aufweist, Anforderungen abfangen, die für den Berichtsserver gedacht waren.  
+    -   Mit**Alle nicht zugewiesenen** wird angegeben, dass der Berichtsserver alle Anforderungen erhält, die nicht von einer anderen Anwendung bearbeitet werden. Sie sollten diese Option vermeiden. Wenn Sie diese Option auswählen, kann eine andere Anwendung, die eine stärkere URL-Reservierung aufweist, Anforderungen abfangen, die für den Berichtsserver gedacht waren.  
   
-    -   **127.0.0.1** ist die IPv4-Adresse, die für den Zugriff auf localhost verwendet wird. Sie unterstützt die lokale Verwaltung auf dem Berichtsservercomputer. Wenn Sie nur diesen Wert auswählen, haben nur Benutzer, die lokal auf dem Berichtsservercomputer angemeldet sind, Zugriff auf die Anwendung.  
+    -   **127.0.0.1** ist die für den Zugriff auf localhost verwendete IPv4-Adresse. Sie unterstützt die lokale Verwaltung auf dem Berichtsservercomputer. Wenn Sie nur diesen Wert auswählen, haben nur Benutzer, die lokal auf dem Berichtsservercomputer angemeldet sind, Zugriff auf die Anwendung.  
   
-    -   **:: 1** ist die Loopback Adresse im IPv6-Format.  
+    -   **::1** ist die Loopback-Adresse im IPv6-Format.  
   
-    -   Bestimmte IP-Adressen werden ebenfalls in dieser Liste angezeigt. IP-Adressen können in den Formaten IPv4 und IPv6 vorliegen *Nnn. nnn. nnn. nnn* ist die 32-Bit-IPv4-Adresse einer Netzwerkadapter Karte auf dem Computer. IPv6-Adressen sind 128-Bit-Adressen mit acht 4-Byte-Feldern, die durch Doppelpunkte getrennt sind: \<Präfix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   Bestimmte IP-Adressen werden ebenfalls in dieser Liste angezeigt. IP-Adressen können in den Formaten IPv4 und IPv6 vorliegen *Nnn.nnn.nnn.nnn* ist die 32-Bit-IPv4-Adresse einer Netzwerkadapterkarte auf dem Computer. IPv6-Adressen sind 128-Bit, mit acht 4-Byte-Feldern, die durch Doppelpunkte getrennt sind: \<Präfix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
-         Wenn Sie über mehrere Karten verfügen oder wenn Ihr Netzwerk sowohl IPv4- als auch IPv6-Adressen unterstützt, werden Ihnen mehrere IP-Adressen angezeigt. Wenn Sie nur eine einzige IP-Adresse auswählen, wird der Anwendungszugriff auf genau diese IP-Adresse (und jeden Hostnamen, den ein Domänennamenserver dieser Adresse zuordnet) beschränkt. Sie können localhost nicht für den Zugriff auf einen Berichtsserver verwenden, und Sie können nicht die IP-Adressen anderer Netzwerkadapterkarten verwenden, die auf den Berichtsservercomputer installiert sind. Normalerweise wählen Sie diesen Wert aus, weil Sie mehrere URL-Reservierungen konfigurieren, die auch explizite IP-Adressen oder Hostnamen angeben (z. B. einen für eine Netzwerkadapterkarte für Intranetverbindungen und einen zweiten für Extranetverbindungen).  
+         Wenn Sie über mehrere Karten verfügen oder wenn Ihr Netzwerk sowohl IPv4- als auch IPv6-Adressen unterstützt, werden Ihnen mehrere IP-Adressen angezeigt. Wenn Sie nur eine einzige IP-Adresse auswählen, wird der Anwendungszugriff auf genau diese IP-Adresse (und jeden Hostnamen, den ein Domänennamenserver dieser Adresse zuordnet) beschränkt. Sie können mit localhost nicht auf einen Berichtsserver zugreifen, und Sie können nicht die IP-Adressen der anderen Netzwerkkarten verwenden, die auf dem Berichtsservercomputer installiert sind. Normalerweise wählen Sie diesen Wert aus, weil Sie mehrere URL-Reservierungen konfigurieren, die auch explizite IP-Adressen oder Hostnamen angeben (z. B. einen für eine Netzwerkadapterkarte für Intranetverbindungen und einen zweiten für Extranetverbindungen).  
   
 5.  Geben Sie den Port an. Port 80 ist der Standard für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unter [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] und Windows Server 2008, da er gemeinsam mit anderen Anwendungen genutzt werden kann. Wenn Sie eine benutzerdefinierte Portnummer verwenden möchten, müssen Sie sie immer in der URL angeben, die für den Zugriff auf den Berichtsserver verwendet wird. Mit folgenden Verfahren können Sie nach einem verfügbaren Port suchen:  
   
@@ -96,7 +95,7 @@ ms.locfileid: "66108860"
   
 10. Testen Sie die URL, indem Sie auf den Link im Abschnitt **URLs** der Seite klicken. Beachten Sie, dass die Berichtsserver-Datenbank erstellt und konfiguriert werden muss, bevor Sie die URL testen können. Anweisungen finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)](ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
-11. Wenn Ihr Berichtsserver für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, konfigurieren Sie außerdem die URL für den Berichtsserver-Webdienst in der SharePoint-Zentraladministration. Weitere Informationen zum Aktualisieren der URL des Berichts Server-Webdiensts in der SharePoint-zentral Administration finden Sie unter [Konfiguration und Verwaltung eines Berichts Servers &#40;Reporting Services SharePoint-Modus&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) und [Reporting Services Berichts Server &#40;SharePoint-Modus&#41;](../reporting-services-report-server-sharepoint-mode.md).  
+11. Wenn Ihr Berichtsserver für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, konfigurieren Sie außerdem die URL für den Berichtsserver-Webdienst in der SharePoint-Zentraladministration. Weitere Informationen zum Aktualisieren der Berichtsserver-Webdienst-URL in sharePoint Central Administration finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;Reporting Services SharePoint Mode&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) und Reporting Services Report Server &#40;[SharePoint Mode&#41;](../reporting-services-report-server-sharepoint-mode.md).  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>So erstellen Sie eine URL-Reservierung für den Berichts-Manager  
   
@@ -104,7 +103,7 @@ ms.locfileid: "66108860"
   
 2.  Klicken Sie auf **Berichts-Manager-URL**.  
   
-3.  Geben Sie das virtuelle Verzeichnis an. Der Berichts-Manager lauscht auf derselben IP-Adresse und demselben Port wie der Report Server-Webdienst. Wenn Sie den Berichts-Manager so konfiguriert haben, dass er auf einen anderen Berichtsserver-Webdienst verweist, müssen Sie die URL-Einstellungen des Berichts-Managers in der Datei RSReportServer.config überprüfen. Anweisungen finden Sie unter [Konfigurieren von Berichts-Manager &#40;](../report-server/configure-web-portal.md) im einheitlichen Modus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]&#41;in der-Online Dokumentation.  
+3.  Geben Sie das virtuelle Verzeichnis an. Der Berichts-Manager lauscht auf derselben IP-Adresse und demselben Port wie der Report Server-Webdienst. Wenn Sie den Berichts-Manager so konfiguriert haben, dass er auf einen anderen Berichtsserver-Webdienst verweist, müssen Sie die URL-Einstellungen des Berichts-Managers in der Datei RSReportServer.config überprüfen. Anweisungen finden Sie unter [Konfigurieren des Berichts-&#40;Systemmodus&#41;](../report-server/configure-web-portal.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 4.  Wenn Sie ein SSL-Zertifikat installiert haben, können Sie es auswählen, um festzulegen, dass alle Anforderungen an den Berichts-Manager über HTTPS geleitet werden.  
   
@@ -117,9 +116,9 @@ ms.locfileid: "66108860"
 ## <a name="setting-advanced-properties-to-specify-additional-urls"></a>Festlegen der erweiterten Eigenschaften zur Angabe zusätzlicher URLs  
  Sie können mehrere URLs für den Report Server-Webdienst oder den Berichts-Manager reservieren, indem Sie verschiedene Ports bzw. Hostnamen angeben (entweder eine IP-Adresse oder ein Hostheader-Name, den ein Domänennamenserver in eine IP-Adresse auflösen kann, die dem Computer zugewiesen ist). Indem Sie mehrere URLs erstellen, können Sie verschiedene Zugriffspfade zur gleichen Berichtsserverinstanz einrichten. Um beispielsweise Intranet- und Extranet-Zugriff auf einen Berichtsserver zu aktivieren, könnten Sie die Standard-URL für den Zugriff im gesamten Intranet und einen weiteren vollqualifizierten Hostnamen für Extranetzugriff verwenden:  
   
--   http://myserver01/reportserver  
+-   `http://myserver01/reportserver`
   
--   http://www.adventure-works.com/reportserver  
+-   `http://www.adventure-works.com/reportserver`  
   
  Sie können nicht mehrere Namen für virtuelle Verzeichnisse für dieselbe Anwendungsinstanz festlegen. Jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungsinstanz wird genau einem Namen für virtuelle Verzeichnisse zugeordnet. Wenn mehrere Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Computer vorliegen, sollte der Name für das virtuelle Verzeichnis für eine Anwendung den Instanznamen beinhalten, um sicherzustellen, dass jede Anforderung ihr vorgesehenes Ziel erreicht.  
   
@@ -140,7 +139,7 @@ ms.locfileid: "66108860"
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>URLs für mehrere Berichtsserverinstanzen auf demselben Computer.  
  Wenn Sie URLs für mehrere Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]reservieren, sollten Sie Benennungskonventionen einhalten, um Namenskonflikte zu vermeiden. Weitere Informationen finden Sie unter [URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen &#40;SSRS-Konfigurations-Manager&#41;](url-reservations-for-multi-instance-report-server-deployments.md).  
   
-##  <a name="URLExamples"></a>Beispiele für URL-Konfigurationen  
+##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> Beispiele für URL-Konfigurationen  
  In der folgenden Liste sind einige Beispiele für Berichtsserver-URLs aufgeführt:  
   
 -   http://localhost/reportserver  
@@ -151,9 +150,9 @@ ms.locfileid: "66108860"
   
 -   http://sales01:8080/reportserver  
   
--   https://sales.adventure-works.com/reportserver  
+-   `https://sales.adventure-works.com/reportserver`  
   
--   https://www.adventure-works.com:8080/reportserver01  
+-   `https://www.adventure-works.com:8080/reportserver01`  
   
  Für den Zugriff auf den Berichts-Manager verwendete URLs weisen ein ähnliches Format auf und werden i. d. R. unter derselben Website erstellt, die den Berichtsserver hostet. Der einzige Unterschied ist der Name des virtuellen Verzeichnisses (in diesem Fall lautet er **reports** , Sie können jedoch einen beliebigen Namen konfigurieren):  
   
@@ -165,12 +164,12 @@ ms.locfileid: "66108860"
   
 -   http://sales01:8080/reports  
   
--   https://sales.adventure-works.com/reports  
+-   `https://sales.adventure-works.com/reports`  
   
--   https://www.adventure-works.com:8080/reports  
+-   `https://www.adventure-works.com:8080/reports`  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Reporting Services Configuration Manager &#40;nativer Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

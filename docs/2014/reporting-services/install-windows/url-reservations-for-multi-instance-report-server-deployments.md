@@ -1,5 +1,5 @@
 ---
-title: URL-Reservierungen für Berichts Server Bereitstellungen mit mehreren Instanzen (SSRS Configuration Manager) | Microsoft-Dokumentation
+title: URL-Reservierungen für Multi-Instanz-Berichtsserverbereitstellungen (SSRS Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f49a13fa50254e4c485a228d506b49e14d190959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c91db169984bbb2969a8339ed20e8e6bc5b804b6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66108623"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380691"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen (SSRS-Konfigurations-Manager)
   Wenn Sie mehrere Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Computer installieren, müssen Sie überlegen, wie Sie die URL-Reservierungen für die einzelnen Instanzen definieren. Innerhalb jeder Instanz müssen Sie dem Berichtsserver-Webdienst und dem Berichts-Manager mindestens jeweils eine URL-Reservierung zuweisen. Der gesamte Reservierungssatz muss in HTTP.SYS eindeutig sein.  
@@ -42,13 +42,13 @@ ms.locfileid: "66108623"
 |Standard-Berichtsserverinstanz (MSSQLSERVER)|ReportServer_MyNamedInstance|Eindeutigkeit|  
 |----------------------------------------------------|-----------------------------------|----------------|  
 |http://+:80/reportserver|http://+:8888/reportserver|Jede Instanz lauscht auf einem anderen Port.|  
-|http://www.contoso.com/reportserver|http://SRVR-46/reportserver|Jede Instanz reagiert auf einen anderen Servernamen (vollqualifizierter Domänenname und Computername).|  
+|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Jede Instanz reagiert auf einen anderen Servernamen (vollqualifizierter Domänenname und Computername).|  
   
 ## <a name="uniqueness-requirements"></a>Eindeutigkeitsanforderungen  
  Die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendeten zugrunde liegenden Technologien erzwingen Anforderungen für eindeutige Namen. HTTP.SYS erfordert, dass alle URLs innerhalb des Repositorys eindeutig sind. Zum Erstellen einer eindeutigen URL können Sie den Portnamen, den Hostnamen oder den Namen des virtuellen Verzeichnisses ändern. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] erfordert, dass alle Anwendungsidentitäten innerhalb eines Prozesses eindeutig sind. Diese Anforderung wirkt sich auf die Namen virtueller Verzeichnisse aus. Sie legt fest, dass innerhalb einer Berichtsserverinstanz keine identischen Verzeichnisnamen zulässig sind.  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Konfigurieren von Berichtsserver-URLs &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

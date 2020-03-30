@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024480"
 ---
 # <a name="utility-explorer-f1-help"></a>Hilfsprogramm-Explorer (F1-Hilfe)
@@ -167,17 +167,17 @@ ms.locfileid: "68024480"
   
 -   Bereitstellungsdatum  
   
--   Trustworthy (Vertrauenswürdig): (True oder False)  
+-   Vertrauenswürdig: (True oder False)  
   
 -   Sortierung  
   
 -   Kompatibilitätsgrad: (z. B. Version100)  
   
--   Encryption Enabled (Verschlüsselung aktiviert): (True oder False)  
+-   Verschlüsselung aktiviert: (True oder False)  
   
--   Recovery Model (Wiederherstellungsmodus): (Simple (Einfach), Full (Vollständig) oder Bulk-Logged (Massenprotokolliert))  
+-   Wiederherstellungsmodell: (SIMPLE, FULL oder BULK_LOGGED)  
   
--   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Registerkarte CPU-Auslastung  
  Die Registerkarte CPU-Auslastung enthält Vergleichsdiagramme mit Verlaufsdaten für die Datenebenenanwendung und die CPU-Auslastung des Computers.  
@@ -244,17 +244,17 @@ ms.locfileid: "68024480"
   
 -   Bereitstellungsdatum  
   
--   Trustworthy (Vertrauenswürdig): (True oder False)  
+-   Vertrauenswürdig: (True oder False)  
   
 -   Sortierung  
   
 -   Kompatibilitätsgrad: (z. B. Version100)  
   
--   Encryption Enabled (Verschlüsselung aktiviert): (True oder False)  
+-   Verschlüsselung aktiviert: (True oder False)  
   
--   Recovery Model (Wiederherstellungsmodus): (Simple (Einfach), Full (Vollständig) oder Bulk-Logged (Massenprotokolliert))  
+-   Wiederherstellungsmodell: (SIMPLE, FULL oder BULK_LOGGED)  
   
--   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Details zu verwalteten Instanzen (SQL Server-Hilfsprogramm)
  Die Informationen in der Listenansicht Verwaltete Instanzen des Hilfsprogramm-Explorers enthalten Auslastungsdaten für einzelne Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Verlaufsdaten zur CPU-Auslastung sowie Details zur Speicherplatzauslastung auf Dateiebene. Zudem können Sie hier Richtlinienschwellenwerte anzeigen und aktualisieren. Richtlinienschwellenwerte können auf der Ebene von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen, per Computer, für Datenbank- und Protokolldateien sowie auf der Ebene von Speichervolumes gesteuert werden. Darüber hinaus können Sie Eigenschaftendetails für einzelne verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anzeigen.  
@@ -307,17 +307,17 @@ ms.locfileid: "68024480"
   
 -   SQL Server-Edition:  
   
--   Clustered (Gruppiert): (True oder False)  
+-   Gruppiert: (True oder False)  
   
 -   Sicherungsverzeichnis:  
   
 -   Sortierung:  
   
--   Case Sensitive (Beachtet Groß-/Kleinschreibung): (True oder False)  
+-   Unterscheidung nach Groß-/Kleinschreibung (True oder False)  
   
 -   Sprache:  
   
--   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Registerkarte CPU-Auslastung  
  Die Registerkarte CPU-Auslastung enthält Vergleichsdiagramme mit Verlaufsdaten für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und die CPU-Auslastung des Computers.  
@@ -404,13 +404,13 @@ ms.locfileid: "68024480"
   
 -   SQL Server-Edition:  
   
--   Clustered (Gruppiert): (True oder False)  
+-   Gruppiert: (True oder False)  
   
 -   Sicherungsverzeichnis:  
   
 -   Sortierung:  
   
--   Case Sensitive (Beachtet Groß-/Kleinschreibung): (True oder False)  
+-   Unterscheidung nach Groß-/Kleinschreibung (True oder False)  
   
 -   Sprache:  
 
@@ -486,9 +486,9 @@ Verwenden Sie die Registerkarten der Hilfsprogrammverwaltung zum Verwalten von R
  Konfigurationsinformationen für das Hilfsprogramm-Data Warehouse  
  Die folgenden Konfigurationseinstellungen sind in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht konfigurierbar:  
   
--   UMDW name (UMDW-Name): Sysutility_mdw_\<GUID>_DATA.  
+-   UMDW-Name: Sysutility_mdw_\<GUID>_DATA.  
   
--   Collection set upload frequency (Uploadhäufigkeit des Sammlungssatzes): Every 15 minutes (Alle 15 Minuten).  
+-   Uploadfrequenz für den Sammlungssatz: Alle 15 Minuten  
   
  Das UMDW-Verzeichnis ist konfigurierbar: \<Systemlaufwerk>:\Programme\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, wobei \<Systemlaufwerk> normalerweise Laufwerk C:\ entspricht. Die Protokolldatei UMDW_\<GUID>_LOG befindet sich im selben Verzeichnis.  
   

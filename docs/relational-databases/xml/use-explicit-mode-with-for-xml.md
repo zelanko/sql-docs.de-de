@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68001797"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Verwenden des EXPLICIT-Modus mit FOR XML
@@ -66,14 +66,14 @@ ms.locfileid: "68001797"
         <Customer cid="C1" name="Janine">  
         ```  
   
-    -   In der zweiten Zeile werden der **Tag** -Wert 2 und der **Parent** -Wert 1 aufgeführt. Folglich wird dem <`Customer`>-Element das untergeordnete <`Order`>-Element hinzugefügt.  
+    -   In der zweiten Zeile werden der **Tag** -Wert 2 und der **Parent** -Wert 1 aufgeführt. Folglich wird dem <`Order`>-Element das untergeordnete <`Customer`>-Element hinzugefügt.  
   
         ```  
         <Customer cid="C1" name="Janine">  
            <Order id="O1" date="1/20/1996">  
         ```  
   
-    -   In den nächsten beiden Zeilen werden der **Tag** -Wert 3 und der **Parent** -Wert 2 aufgeführt. Folglich werden dem <`Order`>-Element die beiden untergeordneten <`OrderDetail`>-Elemente hinzugefügt.  
+    -   In den nächsten beiden Zeilen werden der **Tag** -Wert 3 und der **Parent** -Wert 2 aufgeführt. Folglich werden dem <`OrderDetail`>-Element die beiden untergeordneten <`Order`>-Elemente hinzugefügt.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -82,7 +82,7 @@ ms.locfileid: "68001797"
               <OrderDetail id="OD2" pid="P2"/>  
         ```  
   
-    -   Die letzte Zeile identifiziert die **Tag** -Nummer 2 und die **Parent** -Tagnummer 1. Folglich wird dem übergeordneten <`Customer`>-Element ein weiteres untergeordnetes <`Order`>-Element hinzugefügt.  
+    -   Die letzte Zeile identifiziert die **Tag** -Nummer 2 und die **Parent** -Tagnummer 1. Folglich wird dem übergeordneten <`Order`>-Element ein weiteres untergeordnetes <`Customer`>-Element hinzugefügt.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -150,23 +150,23 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Beispiel: Abrufen von Informationen zu Mitarbeitern](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
--   [Beispiel: Angeben der ELEMENT-Anweisung](../../relational-databases/xml/example-specifying-the-element-directive.md)  
+-   [Beispiel: Angeben der ELEMENT-Direktive](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
--   [Beispiel: Angeben der ELEMENTXSINIL-Anweisung](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Beispiel: Angeben der ELEMENTXSINIL-Direktive](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
 -   [Beispiel: Erstellen von gleichgeordneten Elementen im EXPLICIT-Modus](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Beispiel: Angeben der ID- und IDREF-Anweisungen](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Beispiel: Angeben der ID- und der IDREF-Direktive](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Beispiel: Angeben der ID- und IDREFS-Anweisungen](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Beispiel: Angeben der ID- und der IDREFS-Direktive](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Beispiel: Angeben der HIDE-Anweisung](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [Beispiel: Angeben der HIDE-Direktive](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [Beispiel: Angeben der ELEMENT-Anweisung und Entitätscodierung](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Beispiel: Angeben der ELEMENT-Direktive und Entitätscodierung](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Beispiel: Angeben der CDATA-Anweisung](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
+-   [Beispiel: Angeben der CDATA-Direktive](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   
--   [Beispiel: Angeben der XMLTEXT-Anweisung](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
+-   [Beispiel: Angeben der XMLTEXT-Direktive](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   

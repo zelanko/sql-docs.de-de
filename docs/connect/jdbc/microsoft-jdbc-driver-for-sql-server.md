@@ -11,10 +11,10 @@ ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc81bae599bcd9e401aad7e610a7c43ed1a0dcec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027886"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC-Treiber für SQL Server
@@ -27,16 +27,16 @@ Der Microsoft JDBC-Treiber für SQL Server wurde auf Kompatibilität mit wichtig
   
 ## <a name="getting-started"></a>Erste Schritte  
 
-* [Schritt 1: Konfigurieren der Entwicklungsumgebung für die Java-Entwicklung](step-1-configure-development-environment-for-java-development.md)  
-* [Schritt 2: Erstellen einer SQL-Datenbank für die Java-Entwicklung](step-2-create-a-sql-database-for-java-development.md)  
-* [Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [Step 1: Configure development environment for Java development (Schritt 1: Konfigurieren der Entwicklungsumgebung für Java-Entwicklung)](step-1-configure-development-environment-for-java-development.md)  
+* [Step 2: Create a SQL database for Java development (Schritt 2: Erstellen einer SQL-Datenbank für die Java-Entwicklung)](step-2-create-a-sql-database-for-java-development.md)  
+* [Step 3: Proof of concept connecting to SQL using Java (Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Java)](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>Dokumentation  
 
 * [Erste Schritte](getting-started-with-the-jdbc-driver.md)
 * [Übersicht](overview-of-the-jdbc-driver.md)  
 * [Programmierhandbuch](programming-guide-for-jdbc-sql-driver.md)
-* [Security](securing-jdbc-driver-applications.md)  
+* [Sicherheit](securing-jdbc-driver-applications.md)  
 * [Leistung und Zuverlässigkeit](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [Problembehandlung](diagnosing-problems-with-the-jdbc-driver.md)
 * [Codebeispiele](sample-jdbc-driver-applications.md)

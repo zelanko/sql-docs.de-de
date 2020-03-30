@@ -16,10 +16,10 @@ ms.assetid: 164532be-7ed6-40fa-a273-dece4c8d72c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5106bddd6cf71401be0f4a71dfaaf0406901a6cd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981246"
 ---
 # <a name="getobject-method-int-javautilmap"></a>getObject-Methode (int, java.util.Map)
@@ -45,7 +45,7 @@ public java.lang.Object getObject(int index,
   
  *map*  
   
- Dies ist ein Map-Objekt.  
+ Ein Map-Objekt  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein **Object**-Wert.  

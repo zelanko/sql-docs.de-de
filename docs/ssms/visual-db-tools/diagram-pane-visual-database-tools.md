@@ -17,10 +17,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 9ba8a064256541ffc756ef37fe01f1205e6bc243
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251897"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Diagrammbereich (Visual Database Tools)
@@ -65,7 +65,7 @@ Jedes Rechteck zeigt die Datenspalten für die Tabelle bzw. das Tabellenwertobje
   
 In der folgenden Tabelle werden die verwendeten Kontrollkästchen und Symbole für die einzelnen Tabellen bzw. Tabellenwertobjekte erläutert.  
   
-|Kontrollkästchen oder Symbol|Beschreibung|  
+|Kontrollkästchen oder Symbol|BESCHREIBUNG|  
 |-----------------------|---------------|  
 |![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools (Symbol)")<br /><br />![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools (Symbol)")<br /><br />![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools (Symbol)")<br /><br />![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools (Symbol)")|Gibt an, ob eine Datenspalte im Resultset der Abfrage enthalten ist oder nicht (SELECT-Abfrage) oder ob sie in einer UPDATE-, INSERT FROM-, MAKE TABLE- oder INSERT INTO-Abfrage verwendet wird. Wählen Sie die Spalte aus, um sie in die Ergebnisse aufzunehmen. Wenn **(Alle Spalten)** ausgewählt ist, werden in der Ausgabe alle Datenspalten angezeigt.<br /><br />Das mit dem Kontrollkästchen verwendete Symbol ändert sich entsprechend dem Typ der erstellten Abfrage. Beim Erstellen einer DELETE-Abfrage können Sie keine einzelnen Spalten auswählen.|  
 |![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools (Symbol)")<br /><br />![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Datenspalte zum Sortieren der Abfrageergebnisse verwendet wird (d. h. Teil einer ORDER BY-Klausel ist). Das Symbol wird als A-Z bei aufsteigender oder als Z-A bei absteigender Sortierreihenfolge dargestellt.|  
@@ -81,7 +81,7 @@ Wenn die Abfrage einen Join enthält, wird eine Joinlinie zwischen den verknüpf
   
 Die Form des Symbols in der Mitte der Joinlinie zeigt an, wie die Tabellen oder Objekte mit Tabellenstruktur verknüpft sind. Wenn die Joinklausel einen anderen Operator als "gleich" (=) verwendet, wird der Operator im Symbol der Joinlinie angezeigt. In der folgenden Tabelle werden die in Joinlinien verwendeten Symbole aufgelistet.  
   
-|Joinliniensymbol|Beschreibung|  
+|Joinliniensymbol|BESCHREIBUNG|  
 |------------------|---------------|  
 |![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools (Symbol)")|Innerer Join (erstellt mit einem Gleichheitszeichen).|  
 |![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools (Symbol)")|Innerer Join mit dem Operator "größer als". (Der im Symbol der Joinlinie angezeigte Operator gibt den im Join verwendeten Operator wieder.)|  
@@ -91,7 +91,7 @@ Die Form des Symbols in der Mitte der Joinlinie zeigt an, wie die Tabellen oder 
   
 Symbole an den Enden der Joinlinie zeigen den Jointyp an. In der folgenden Tabelle werden die Jointypen und die an den Enden der Joinlinien verwendeten Symbole aufgelistet.  
   
-|Symbole an den Enden der Joinlinien|Beschreibung|  
+|Symbole an den Enden der Joinlinien|BESCHREIBUNG|  
 |-----------------------------|---------------|  
 |![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools (Symbol)")|1:1-Join|  
 |![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools (Symbol)")|1:n-Join|  
