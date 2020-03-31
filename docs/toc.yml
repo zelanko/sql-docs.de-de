@@ -707,7 +707,7 @@
                   href: database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md
                 - name: Anzeigen von Listenereigenschaften
                   href: database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md
-            - name: Vorgang
+            - name: Betrieb
               items:
                 - name: Hinzufügen einer Datenbank
                   items:
@@ -751,6 +751,8 @@
                   href: database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md
                 - name: Anzeigen der Integrität mit Richtlinien
                   href: database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+                - name: Verbinden mit Listener
+                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
         - name: Konzepte
           items:
             - name: Konfiguration
@@ -789,12 +791,12 @@
                   href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
             - name: Konnektivität
               items:
-                - name: Clientverbindung
+                - name: Listener
+                  href: database-engine/availability-groups/windows/availability-group-listener-overview.md
+                - name: Clientverbindungstypen
                   href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
-                - name: Clientkonnektivität
+                - name: Treiber- und Clientunterstützung
                   href: database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
-                - name: 'Listener, Clients und Failover'
-                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
             - name: Interoperabilität
               items:
                 - name: 'Replikation, CT und CDC'
@@ -1719,7 +1721,7 @@
               href: relational-databases/tables/disable-check-constraints-for-replication.md
             - name: Deaktivieren von Einschränkungen mit INSERT und UPDATE
               href: relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md
-        - name: Temporäre Tabellen
+        - name: Temporale Tabellen
           href: relational-databases/tables/temporal-tables.md
           items:
             - name: Erstellen und Verwalten
@@ -4196,7 +4198,7 @@
           items:
             - name: SQL Server 2019
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
-            - name: SQL Server 2017 und früher
+            - name: SQL Server 2016 und 2017
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: Sicherheitshinweise
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
@@ -6166,15 +6168,6 @@
                       href: relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md
         - name: Transaktionsprotokollverwaltung
           items:
-            - name: Protokolldatei-Viewer
-              href: relational-databases/logs/log-file-viewer.md
-              items:
-                - name: Öffnen
-                  href: relational-databases/logs/open-log-file-viewer.md
-                - name: Offline anzeigen
-                  href: relational-databases/logs/view-offline-log-files.md
-                - name: F1-Hilfe
-                  href: relational-databases/logs/log-file-viewer-f1-help.md
             - name: Transaktionsprotokoll
               href: relational-databases/logs/the-transaction-log-sql-server.md
               items:
@@ -8401,6 +8394,15 @@
               href: ssms/ssms-utility.md
             - name: Tastenkombinationen für SQL Server Management Studio
               href: ssms/sql-server-management-studio-keyboard-shortcuts.md
+            - name: Protokolldatei-Viewer
+              href: relational-databases/logs/log-file-viewer.md
+              items:
+                - name: F1-Hilfe
+                  href: relational-databases/logs/log-file-viewer-f1-help.md
+                - name: Öffnen
+                  href: relational-databases/logs/open-log-file-viewer.md
+                - name: Offline anzeigen
+                  href: relational-databases/logs/view-offline-log-files.md
             - name: SQL Server-Agent
               items:
                 - name: SQL Server-Agent
@@ -9842,7 +9844,7 @@
             - name: Installieren von SQL Server-Machine Learning Services
               href: linux/sql-server-linux-setup-machine-learning.md
             - name: Installieren von SQL Server Machine Learning Services (Python und R) unter Docker
-              href: linux/sql-server-setup-machine-learning-docker.md
+              href: linux/sql-server-linux-setup-machine-learning-docker.md
             - name: Installieren von SQL Server-Spracherweiterungen
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: Konfigurieren von Repositorys
@@ -14243,7 +14245,7 @@
               href: relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md
             - name: sys.sp_rda_test_connection
               href: relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md
-        - name: Temporäre Tabellen
+        - name: Temporale Tabellen
           items:
             - name: sys.sp_cleanup_temporal_history
               href: relational-databases/system-stored-procedures/temporal-table-sys-sp-cleanup-temporal-history.md
@@ -17068,5 +17070,3 @@
               href: xquery/string-search-in-xquery.md
             - name: Handhabung von Namespaces in XQuery
               href: xquery/handling-namespaces-in-xquery.md
-- name: Unterstützung der Wissensdatenbank
-  href: kb-support/toc.yml
