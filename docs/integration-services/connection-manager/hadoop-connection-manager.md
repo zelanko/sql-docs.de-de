@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903787"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop-Verbindungs-Manager
@@ -69,7 +69,7 @@ Es gibt zwei Möglichkeiten, um die lokale Umgebung für die Verwendung der Kerb
 -   Option 1: [Einbinden des SSIS-Computers in den Kerberos-Bereich](#kerberos-join-realm)
 -   Option 2: [Aktivieren von gegenseitiger Vertrauensstellung zwischen der Windows-Domäne und dem Kerberos-Bereich](#kerberos-mutual-trust)
 
-### <a name="kerberos-join-realm"></a>Option 1: Einbinden des SSIS-Computers in den Kerberos-Bereich
+### <a name="option-1-join-the-ssis-computer-to-the-kerberos-realm"></a><a name="kerberos-join-realm"></a>Option 1: Einbinden des SSIS-Computers in den Kerberos-Bereich
 
 #### <a name="requirements"></a>Anforderungen:
 
@@ -99,7 +99,7 @@ Gehen Sie auf dem SSIS-Computer wie folgt vor:
         kdc = <your_kdc_server_address>
     ```
 
-### <a name="kerberos-mutual-trust"></a>Option 2: Aktivieren von gegenseitiger Vertrauensstellung zwischen der Windows-Domäne und dem Kerberos-Bereich
+### <a name="option-2-enable-mutual-trust-between-the-windows-domain-and-the-kerberos-realm"></a><a name="kerberos-mutual-trust"></a>Option 2: Aktivieren von gegenseitiger Vertrauensstellung zwischen der Windows-Domäne und dem Kerberos-Bereich
 
 #### <a name="requirements"></a>Anforderungen:
 -   Der Gatewaycomputer muss in eine Windows-Domäne eingebunden werden.
