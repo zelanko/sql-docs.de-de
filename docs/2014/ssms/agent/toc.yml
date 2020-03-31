@@ -257,7 +257,7 @@
       href: job-properties-new-job-general-page.md
     - name: 'Auftragseigenschaften: Neuer Auftrag (Seite „Schritte“)'
       href: job-properties-new-job-steps-page.md
-    - name: 'Job Properties: New Job (Schedules Page)'
+    - name: 'Auftragseigenschaften: Neuer Auftrag (Seite „Zeitpläne“)'
       href: job-properties-new-job-schedules-page.md
     - name: 'Auftragseigenschaften: Neuer Auftrag (Seite „Warnungen“)'
       href: job-properties-new-job-alerts-page.md
@@ -267,11 +267,11 @@
       href: job-properties-new-job-targets-page.md
     - name: Eigenschaften für Auftragskategorien und neue Auftragskategorie
       href: job-categories-properties-new-job-category.md
-    - name: 'Auftragskategorien: Auftragskategorien verwalten'
+    - name: 'Auftragskategorien: Verwalten von Auftragskategorien'
       href: job-categories-manage-job-categories.md
-    - name: 'Auftragsschritt-Eigenschaften: Neuer Auftragsschritt (Seite „Allgemein“)'
+    - name: 'Auftragsschritteigenschaften: Neuer Auftragsschritt (Seite „Allgemein“)'
       href: job-step-properties-new-job-step-general-page.md
-    - name: 'Auftragsschritt-Eigenschaften: Neuer Auftragsschritt (Seite „Erweitert“)'
+    - name: 'Auftragsschritteigenschaften: Neuer Auftragsschritt (Seite „Erweitert“)'
       href: job-step-properties-new-job-step-advanced-page.md
     - name: Zeitplan für Auftrag auswählen
       href: pick-schedule-for-job.md
@@ -289,7 +289,7 @@
       href: alert-properties-new-alert-general-page.md
     - name: Warnungseigenschaften/Neue Warnung (Seite Antwort)
       href: alert-properties-new-alert-response-page.md
-    - name: 'Warnungseigenschaften: Neue Warnung (Seite „Optionen“)'
+    - name: 'Eigenschaften von Warnungen: Neue Warnung (Seite „Optionen“)'
       href: alert-properties-new-alert-options-page.md
     - name: Warnungseigenschaften (Seite Verlauf)
       href: alert-properties-history-page.md

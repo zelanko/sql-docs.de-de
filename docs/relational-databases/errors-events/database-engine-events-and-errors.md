@@ -10,10 +10,10 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3ed6d0a694370cf6dbaa14ea861bf3d0d6c618f7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287244"
 ---
 # <a name="database-engine-errors"></a>Fehler der Datenbank-Engine
@@ -4940,15 +4940,15 @@ ORDER BY message_id
 |   11108   |   16  |   Nein  |   Der Anbieter konnte eine erforderliche Eigenschaft nicht unterstützen. |
 |   11109   |   16  |   Nein  |   Der Anbieter unterstützt keinen Indexscan für diese Datenquelle.    |
 |   11201   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil der FROM-Dienstname fehlt. Nachrichtenabsender: "%ls". |
-|   11202   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der FROM-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'. |
+|   11202   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der FROM-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'. |
 |   11203   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil die FROM-Broker-Instanz fehlt. Nachrichtenabsender: "%ls". |
-|   11204   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil die FROM-Broker-Instanz die maximale Größe von %d Bytes überschreitet. Broker-Instanz: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'.   |
+|   11204   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil die FROM-Broker-Instanz die maximale Größe von %d Bytes überschreitet. Broker-Instanz: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'.   |
 |   11205   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienstname fehlt. Nachrichtenabsender: '%ls'.  |
-|   11206   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'.   |
+|   11206   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienstname die maximale Größe von %d Bytes überschreitet. Dienstname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'.   |
 |   11207   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Dienstvertragsname fehlt. Nachrichtenabsender: '%ls'.    |
-|   11208   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Dienstvertragsname die maximale Größe von %d Bytes überschreitet. Vertragsname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'. |
+|   11208   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Dienstvertragsname die maximale Größe von %d Bytes überschreitet. Vertragsname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'. |
 |   11209   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil die Konversations-ID keiner aktiven Konversation zugeordnet werden konnte. Nachrichtenabsender: "%ls".  |
-|   11210   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienst nicht gefunden wurde. Dienstname: '%.*ls'. Nachrichtenabsender: &amp;'%ls&amp;'.  |
+|   11210   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der TO-Dienst nicht gefunden wurde. Dienstname: '%.*ls'. Nachrichtenabsender: &'%ls&amp;amp;'.  |
 |   11211   |   16  |   Nein  |   Diese Nachricht wurde gelöscht, weil der Benutzer nicht die Berechtigung für den Zugriff auf die Zieldatenbank besitzt. Datenbank-ID: %d. Nachrichtenabsender: &amp;quot;%ls&amp;quot;.    |
 |   11212   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil der Konversationsendpunkt bereits geschlossen wurde.  |
 |   11213   |   16  |   Nein  |   Diese Nachricht konnte nicht übermittelt werden, weil sie nicht die erste Nachricht in der Konversation ist.  |

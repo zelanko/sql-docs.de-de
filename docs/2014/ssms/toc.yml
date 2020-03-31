@@ -257,7 +257,7 @@
   href: menu-help/sql-server-management-studio-menu-help.md
 - name: SQL Server-Agent +
   href: agent/sql-server-agent.md
-- name: 'Lernprogramm: SQL Server Management Studio'
+- name: 'Tutorial: SQL Server Management Studio'
   href: tutorials/tutorial-sql-server-management-studio.md
   items:
     - name: 'Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio'

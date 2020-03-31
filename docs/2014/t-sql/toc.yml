@@ -1,4 +1,4 @@
-- name: 'Lernprogramm: Schreiben von Transact-SQL-Anweisungen'
+- name: 'Tutorial: Schreiben von Transact-SQL-Anweisungen'
   href: tutorial-writing-transact-sql-statements.md
   items:
     - name: 'Lektion 1: Erstellen von Datenbankobjekten'

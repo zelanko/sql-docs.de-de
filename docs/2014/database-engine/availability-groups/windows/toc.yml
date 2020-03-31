@@ -221,7 +221,7 @@
       items:
         - name: Eigenschaften des Verfügbarkeitsreplikats (Seite Allgemein)
           href: availability-replica-properties-general-page.md
-        - name: 'Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe (Seite Sicherungseinstellungen)'
+        - name: 'Eigenschaften von Verfügbarkeitsgruppen: Neue Verfügbarkeitsgruppe (Seite Sicherungseinstellungen)'
           href: availability-group-properties-new-availability-group-backup-preferences-page.md
     - name: Assistent für Verfügbarkeitsgruppen
       items:

@@ -224,7 +224,7 @@
       href: extending-packages-scripting/extending-packages-with-scripting.md
 - name: Integration Services-Lernprogramme
   href: integration-services-tutorials.md
-- name: 'SSIS-Lernprogramm: Erstellen eines einfachen ETL-Pakets'
+- name: 'SSIS-Tutorial: Erstellen eines einfachen ETL-Pakets'
   href: ssis-how-to-create-an-etl-package.md
   items:
     - name: 'Lektion 1: Erstellen des Projekts und Basispakets'
@@ -240,70 +240,70 @@
           href: lesson-1-4-adding-a-data-flow-task-to-the-package.md
         - name: 'Schritt 5: Hinzufügen und Konfigurieren der Flatfilequelle'
           href: lesson-1-5-adding-and-configuring-the-flat-file-source.md
-        - name: 'Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen'
+        - name: 'Schritt 6: Hinzufügen und Konfigurieren der Transformationen zum Suchen'
           href: lesson-1-6-adding-and-configuring-the-lookup-transformations.md
         - name: 'Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Ziels'
           href: lesson-1-7-adding-and-configuring-the-ole-db-destination.md
-        - name: 'Schritt 8: Vereinfachen des Layouts des Lektion 1-Pakets'
+        - name: "Schritt 8: Vereinfachen des Layouts des Pakets aus Lektion\_1"
           href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
-        - name: 'Schritt 9: Testen des Lektion 1-Lernprogrammpakets'
+        - name: "Schritt 9: Testen des Tutorialpakets aus Lektion\_1"
           href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
     - name: 'Lektion 2: Hinzufügen von Schleifen'
       href: lesson-2-adding-looping-with-ssis.md
       items:
-        - name: 'Schritt 1: Kopieren des Pakets aus Lektion 1'
+        - name: "Schritt 1: Kopieren des Pakets aus Lektion\_1"
           href: lesson-2-1-copying-the-lesson-1-package.md
         - name: 'Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers'
           href: lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
         - name: 'Schritt 3: Ändern des Flatfile-Verbindungs-Managers'
           href: lesson-2-3-modifying-the-flat-file-connection-manager.md
-        - name: 'Schritt 4: Testen des Lektion 2-Tutorialpakets'
+        - name: "Schritt 4: Testen des Tutorialpakets aus Lektion\_2"
           href: lesson-2-4-testing-the-lesson-2-tutorial-package.md
     - name: 'Lektion 3: Hinzufügen der Protokollierung'
       href: lesson-3-add-logging-with-ssis.md
       items:
-        - name: 'Schritt 1: Kopieren des Pakets aus Lektion 2'
+        - name: "Schritt 1: Kopieren des Pakets aus Lektion\_2"
           href: lesson-3-1-copying-the-lesson-2-package.md
         - name: 'Schritt 2: Hinzufügen und Konfigurieren der Protokollierung'
           href: lesson-3-2-adding-and-configuring-logging.md
-        - name: 'Schritt 3: Testen des Lektion 3-Tutorialpakets'
+        - name: "Schritt 3: Testen des Tutorialpakets aus Lektion\_3"
           href: lesson-3-3-testing-the-lesson-3-tutorial-package.md
     - name: 'Lektion 4: Hinzufügen der Fehlerflussumleitung'
       href: lesson-4-add-error-flow-redirection-with-ssis.md
       items:
-        - name: 'Schritt 1: Kopieren des Pakets aus Lektion 3'
+        - name: "Schritt 1: Kopieren des Pakets aus Lektion\_3"
           href: lesson-4-1-copying-the-lesson-3-package.md
         - name: 'Schritt 2: Erstellen einer beschädigten Datei'
           href: lesson-4-2-creating-a-corrupted-file.md
-        - name: 'Schritt 3: Hinzufügen von Fehlerflussumleitungen'
+        - name: 'Schritt 3: Hinzufügen der Fehlerflussumleitung'
           href: lesson-4-3-adding-error-flow-redirection.md
         - name: 'Schritt 4: Hinzufügen eines Flatfileziels'
           href: lesson-4-4-adding-a-flat-file-destination.md
-        - name: 'Schritt 5: Testen des Lektion 4-Lernprogrammpakets'
+        - name: "Schritt 5: Testen des Tutorialpakets aus Lektion\_4"
           href: lesson-4-5-testing-the-lesson-4-tutorial-package.md
     - name: 'Lektion 5: Hinzufügen von Paketkonfigurationen für das Paketbereitstellungsmodell'
       href: lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
       items:
-        - name: 'Schritt 1: Kopieren des Pakets aus Lektion 4'
+        - name: "Schritt 1: Kopieren des Pakets aus Lektion\_4"
           href: lesson-5-1-copying-the-lesson-4-package.md
         - name: 'Schritt 2: Aktivieren und Konfigurieren von Paketkonfigurationen'
           href: lesson-5-2-enabling-and-configuring-package-configurations.md
-        - name: 'Schritt 3: Ändern des Directory-Eigenschaftskonfigurationswertes'
+        - name: 'Schritt 3: Ändern des Konfigurationswerts der Directory-Eigenschaft'
           href: lesson-5-3-modifying-the-directory-property-configuration-value.md
-        - name: 'Schritt 4: Testen des Lektion 5-Lernprogrammpakets'
+        - name: "Schritt 4: Testen des Tutorialpakets aus Lektion\_5"
           href: lesson-5-4-testing-the-lesson-5-tutorial-package.md
     - name: 'Lektion 6: Verwenden von Parametern mit dem Projektbereitstellungsmodell'
       href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
       items:
-        - name: 'Schritt 1: Kopieren des Pakets aus Lektion 5'
+        - name: "Schritt 1: Kopieren des Pakets aus Lektion\_5"
           href: lesson-6-1-copying-the-lesson-5-package.md
-        - name: 'Schritt 2: Converting the Project to the Project Deployment Model (Konvertieren des Projekts in das Projektbereitstellungsmodell)'
+        - name: 'Schritt 2: Konvertieren des Projekts in das Projektbereitstellungsmodell'
           href: lesson-6-2-converting-the-project-to-the-project-deployment-model.md
-        - name: 'Schritt 3: Testen des Pakets aus Lektion 6'
+        - name: "Schritt 3: Testen des Pakets aus Lektion\_6"
           href: lesson-6-3-testing-the-lesson-6-package.md
-        - name: 'Schritt 4: Bereitstellen des Pakets aus Lektion 6'
+        - name: "Schritt 4: Bereitstellen des Pakets aus Lektion\_6"
           href: lesson-6-4-deploying-the-lesson-6-package.md
-- name: 'SSIS-Lernprogramm: Bereitstellen von Paketen'
+- name: 'SSIS-Tutorial: Bereitstellen von Paketen'
   href: deploy-packages-with-ssis.md
   items:
     - name: 'Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets'
@@ -322,7 +322,7 @@
     - name: 'Lektion 2: Erstellen des Bereitstellungspakets'
       href: lesson-2-create-the-deployment-bundle-in-ssis.md
       items:
-        - name: 'Schritt 1: Erstellen des Bereitstellungs-Hilfsprogramms'
+        - name: 'Schritt 1: Erstellen des Bereitstellungshilfsprogramms'
           href: lesson-2-1-building-the-deployment-utility.md
         - name: 'Schritt 2: Überprüfen des Bereitstellungspakets'
           href: lesson-2-2-verifying-the-deployment-bundle.md

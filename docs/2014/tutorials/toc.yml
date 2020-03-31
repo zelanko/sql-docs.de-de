@@ -1,6 +1,6 @@
 - name: Lernprogramme für SQL Server 2014
   href: tutorials-for-sql-server-2014.md
-- name: 'Tutorial: Schreiben von Transact-SQL-Anweisungen +'
+- name: 'Tutorial: Schreiben von Transact-SQL-Anweisungen'
   href: ../t-sql/tutorial-writing-transact-sql-statements.md
 - name: Data Mining-Lernprogramme
   href: ../analysis-services/data-mining-tutorials-analysis-services.md
@@ -64,7 +64,7 @@
           items:
             - name: Erstellen einer Projektmappe und einer Datenquelle
               href: creating-a-solution-and-data-source-intermediate-data-mining-tutorial.md
-        - name: 'Lektion 2: Erstellen eines Planungserstellungsszenarios'
+        - name: 'Lektion 2: Erstellen eines Vorhersageszenarios'
           href: lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md
           items:
             - name: Hinzufügen einer Datenquellensicht für Vorhersagen
@@ -118,7 +118,7 @@
               href: creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md
             - name: Erstellen von Vorhersagen für ein Sequenzclustermodell
               href: create-predictions-on-model-intermediate-data-mining-tutorial.md
-        - name: 'Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen'
+        - name: 'Lektion 5: Erstellen von neuronalen Netzwerkmodellen und logistischen Regressionsmodellen'
           href: lesson-5-build-models-intermediate-data-mining-tutorial.md
           items:
             - name: Hinzufügen einer Datenquellensicht für Callcenterdaten
@@ -131,7 +131,7 @@
               href: add-logistic-regression-model-to-call-center-intermediate-data-mining.md
             - name: Erstellen von Vorhersagen für Callcentermodelle (Data Mining-Lernprogramm für Fortgeschrittene)
               href: create-predictions-call-center-models-intermediate-data-mining-tutorial.md
-    - name: 'Erstellen und Abfragen von Data Mining-Modellen mit DMX: Lernprogramme'
+    - name: 'Erstellen und Abfragen von Data Mining-Modellen mit DMX: Tutorials'
       href: create-query-data-mining-models-dmx-tutorials.md
       items:
         - name: Bike Buyer-Lernprogramm zur DMX-Abfragesprache
@@ -163,7 +163,7 @@
           items:
             - name: 'Lektion 1: Erstellen eines Miningmodells und einer Miningstruktur für eine Zeitreihe'
               href: lesson-1-creating-a-time-series-mining-model-and-mining-structure.md
-            - name: 'Lektion 2: Hinzufügen von Miningmodellen zur Zeitreihen-Miningstruktur'
+            - name: 'Lektion 2: Hinzufügen von Miningmodellen zur Miningstruktur für Zeitreihen'
               href: lesson-2-adding-mining-models-to-the-time-series-mining-structure.md
             - name: 'Lektion 3: Verarbeiten der Zeitreihenstruktur und -modelle'
               href: lesson-3-processing-the-time-series-structure-and-models.md
@@ -181,13 +181,13 @@
           href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
         - name: 'Lektion 2: Angeben von Verbindungsinformationen'
           href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-        - name: 'Lektion 3: Definieren eines Datasets für den Tabellenbericht'
+        - name: 'Lektion 3: Lektion 3: Definieren eines Datasets für den Tabellenbericht'
           href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-        - name: 'Lektion 4: Hinzufügen einer Tabelle zum Bericht'
+        - name: 'Lektion 4: Lektion 4: Hinzufügen einer Tabelle zum Bericht'
           href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-        - name: 'Lektion 5: Formatieren eines Berichts'
+        - name: 'Lektion 5: Lektion 5: Formatieren eines Berichts'
           href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-        - name: 'Lesson 6: Adding Grouping and Totals'
+        - name: 'Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten'
           href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
     - name: Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
       href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
@@ -196,12 +196,12 @@
           href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
         - name: 'Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle'
           href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-        - name: 'Lesson 3: Defining a Data-Driven Subscription'
+        - name: 'Lektion 3: Definieren eines datengesteuerten Abonnements'
           href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
     - name: Erstellen eines Drillthroughberichts (RDLC) mit Parametern mithilfe von ReportViewer (SSRS-Lernprogramm)
       href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
       items:
-        - name: 'Lektion 1: Erstellen einer neuen Website'
+        - name: 'Lektion 1: Erstellen Sie eine neue Website'
           href: ../reporting-services/lesson-1-create-a-new-web-site.md
         - name: 'Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht'
           href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
@@ -217,7 +217,7 @@
           href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
         - name: 'Lektion 8: Erstellen eines Datenfilters'
           href: ../reporting-services/lesson-8-create-a-data-filter.md
-        - name: 'Lesson 9: Build and Run the Application'
+        - name: 'Lektion 9: Erstellen und Ausführen der Anwendung'
           href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: 'Zugreifen auf den Berichtsserver-Webdienst mithilfe von Visual Basic oder Visual C# (SSRS-Lernprogramm)'
       href: access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md
@@ -226,14 +226,14 @@
           href: lesson-1-creating-the-web-service-client-project.md
         - name: 'Lektion 2: Hinzufügen eines Webverweises'
           href: lesson-2-adding-a-web-reference.md
-        - name: 'Lektion 3: Zugreifen auf den Webdienst'
+        - name: 'Lektion 3: Zugriff auf den Webdienst'
           href: lesson-3-accessing-the-web-service.md
         - name: 'Lektion 4: Ausführen der Anwendung (VB/VC#)'
           href: lesson-4-running-the-application-vb-vcsharp.md
     - name: 'Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert wurden (SSRS-Lernprogramm)'
       href: updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md
       items:
-        - name: 'Lektion 1: Erstellen des RDL-Schema-Projekts in Visual Studio'
+        - name: 'Lektion 1: Erstellen des RDL-Schemaprojekts in Visual Studio'
           href: lesson-1-create-the-rdl-schema-visual-studio-project.md
         - name: 'Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des XSD-Tools'
           href: lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md
@@ -243,7 +243,7 @@
           href: lesson-4-update-the-report-definition-programmatically.md
         - name: 'Lektion 5: Veröffentlichen der Berichtsdefinition auf dem Berichtsserver'
           href: lesson-5-publish-the-report-definition-to-the-report-server.md
-        - name: 'Lektion 6: Ausführen der RDL-Schema-Anwendung (VB/C#)'
+        - name: 'Lektion 6: Ausführen der RDL-Schemaanwendung (VB/C#)'
           href: lesson-6-run-the-rdl-schema-application-vb-csharp.md
     - name: Lernprogramme (Berichts-Generator)
       href: ../reporting-services/report-builder-tutorials.md
@@ -252,31 +252,31 @@
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
         - name: Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)
           href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: 'Lernprogramm: Erstellen eines einfachen Tabellenberichts'
+        - name: 'Tutorial: Erstellen eines einfachen Tabellenberichts'
           href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
-        - name: 'Lernprogramm: Erstellen eines Matrixberichts'
+        - name: 'Tutorial: Erstellen eines Matrixberichts'
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
-        - name: 'Lernprogramm: Erstellen eines Freiformberichts'
+        - name: 'Tutorial: Erstellen eines Freiformberichts'
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: 'Lernprogramm: Formatieren von Text (Berichts-Generator)'
+        - name: 'Tutorial: Formatieren von Text (Berichts-Generator)'
           href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: 'Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)'
+        - name: 'Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
         - name: 'Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
         - name: 'Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: 'Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)'
+        - name: 'Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 'Lernprogramm: Hinzufügen eines KPIs zu einem Bericht'
+        - name: 'Tutorial: Hinzufügen einer KPI zu einem Bericht'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: 'Lernprogramm: Kartenbericht'
+        - name: 'Tutorial: Kartenbericht'
           href: ../reporting-services/tutorial-map-report-report-builder.md
-        - name: 'Lernprogramm: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)'
+        - name: 'Tutorial: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
-        - name: 'Lernprogramm: Erstellen von Drillthrough- und Hauptberichten'
+        - name: 'Tutorial: Erstellen von Drillthrough- und Hauptberichten'
           href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
-        - name: 'Lernprogramm: Einführung in Ausdrücke'
+        - name: 'Tutorial: Einführung in Ausdrücke'
           href: ../reporting-services/tutorial-introducing-expressions.md
 - name: Enterprise Information Management-Lernprogramme
   href: enterprise-information-management-tutorials.md
@@ -284,116 +284,116 @@
     - name: 'Enterprise Information Management mit SSIS, MDS und DQS [Lernprogramm]'
       href: 'enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md'
       items:
-        - name: 'Lektion 1: Erstellen der DQS-Wissensdatenbank ''Suppliers'''
+        - name: 'Lektion 1: Erstellen der DQS-Wissensdatenbank „Suppliers“'
           href: lesson-1-creating-the-suppliers-dqs-knowledge-base.md
           items:
-            - name: 'Aufgabe 1: Erstellen einer Wissensdatenbank und von Domänen'
+            - name: "Aufgabe\_1: Erstellen von Wissensdatenbanken und Domänen"
               href: task-1-creating-a-knowledge-base-and-domains.md
-            - name: 'Aufgabe 2: Manuelles Hinzufügen von Domänenwerten'
+            - name: "Aufgabe\_2: Manuelles Hinzufügen von Domänenwerten"
               href: task-2-adding-domain-values-manually.md
-            - name: 'Aufgabe 3: Importieren von Domänenwerten aus einer Excel-Datei'
+            - name: "Aufgabe\_3: Importieren von Domänenwerten aus einer Excel-Datei"
               href: task-3-importing-domain-values-from-an-excel-file.md
-            - name: 'Aufgabe 4: Festlegen von Domänenregeln'
+            - name: "Aufgabe\_4: Festlegen von Domänenregeln"
               href: task-4-setting-domain-rules.md
-            - name: 'Aufgabe 5: Festlegung begriffsbasierter Beziehungen'
+            - name: "Aufgabe\_5: Festlegen begriffsbasierter Beziehungen"
               href: task-5-setting-term-based-relationships.md
-            - name: 'Aufgabe 6: Festlegen von Synonymen'
+            - name: "Aufgabe\_6: Festlegen von Synonymen"
               href: task-6-setting-synonyms.md
-            - name: 'Aufgabe 7: Erstellen einer Verbunddomänenregel'
+            - name: "Aufgabe\_7: Erstellen einer Verbunddomäne"
               href: task-7-creating-a-composite-domain.md
-            - name: 'Aufgabe 8: Erstellen einer Verbunddomänenregel'
+            - name: "Aufgabe\_8: Erstellen einer Verbunddomänenregel"
               href: task-8-creating-a-composite-domain-rule.md
-            - name: 'Aufgabe 9: Konfigurieren eines Reference Data Service'
+            - name: "Aufgabe\_9: Konfigurieren eines Verweisdatendiensts"
               href: task-9-configuring-a-reference-data-service.md
-            - name: 'Aufgabe 10: Konfigurieren der Verbunddomäne, um Reference Data Service zu verwenden'
+            - name: "Aufgabe\_10: Konfigurieren der Verbunddomäne für die Verwendung von Verweisdatendiensten"
               href: task-10-configuring-composite-domain-to-use-reference-data-service.md
-            - name: 'Aufgabe 11: Veröffentlichen der Wissensdatenbank'
+            - name: "Aufgabe\_11: Veröffentlichen der Wissensdatenbank"
               href: task-11-publishing-the-knowledge-base.md
-            - name: 'Aufgabe 12: Ermitteln von Wissen (Wissensermittlung)'
+            - name: "Aufgabe\_12: Wissensermittlung"
               href: task-12-discovering-knowledge-knowledge-discovery.md
-        - name: 'Aufgabe 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank ''Suppliers'''
+        - name: 'Lektion 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank „Suppliers“'
           href: lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md
           items:
-            - name: 'Aufgabe 1: Erstellen eines Data Quality-Projekts'
+            - name: "Aufgabe\_1: Erstellen eines Data Quality-Projekts"
               href: task-1-creating-a-data-quality-project.md
-            - name: 'Aufgabe 2: Zuordnen von Excel-Spalten zu DQS-Domänen'
+            - name: "Aufgabe\_2: Zuordnen von Excel-Spalten zu DQS-Domänen"
               href: task-2-mapping-excel-columns-to-dqs-domains.md
-            - name: 'Aufgabe 3: Bereinigung von Daten anhand der Wissensdatenbank ''Suppliers'''
+            - name: "Aufgabe\_3: Bereinigung von Daten anhand der Wissensdatenbank „Suppliers“"
               href: task-3-cleansing-data-against-the-suppliers-knowledge-base.md
-            - name: 'Aufgabe 4: Verwalten und Anzeigen der Ergebnisse'
+            - name: "Aufgabe\_4: Verwalten und Anzeigen der Ergebnisse"
               href: task-4-manaing-and-viewing-results.md
-            - name: 'Aufgabe 5: Exportieren der Bereinigungsergebnisse in eine Excel-Datei'
+            - name: "Aufgabe\_5: Exportieren der Bereinigungsergebnisse in eine Excel-Datei"
               href: task-5-exporting-cleansing-results-to-an-excel-file.md
-            - name: 'Aufgabe 6: Importieren von Werten aus dem Cleanse Supplier List-Projekt'
+            - name: "Aufgabe\_6: Importieren von Werten aus dem Cleanse Supplier List-Projekt"
               href: task-6-importing-values-from-the-cleanse-supplier-list-project.md
-        - name: 'Lektion 3: Abgleich von Daten, um Duplikate aus der Lieferantenliste zu entfernen'
+        - name: 'Lektion 3: Abgleich von Daten zur Entfernung von Duplikaten aus der Lieferantenliste'
           href: lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md
           items:
-            - name: 'Aufgabe 1: Definieren einer Abgleichsrichtlinie'
+            - name: "Aufgabe\_1: Definieren einer Abgleichrichtlinie"
               href: task-1-defining-a-matching-policy.md
-            - name: 'Aufgabe 2: Testen und Veröffentlichen der Abgleichsrichtlinie'
+            - name: "Aufgabe\_2: Testen und Veröffentlichen der Abgleichrichtlinie"
               href: task-2-testing-and-publishing-the-matching-policy.md
-            - name: 'Aufgabe 3: Erstellen und Ausführen eines Data Quality-Projekts für den Abgleich'
+            - name: "Aufgabe\_3: Erstellen und Ausführen eines Data Quality-Projekts für Abgleiche"
               href: task-3-creating-and-running-a-data-quality-project-for-matching.md
-            - name: 'Aufgabe 4: Exportieren der Ergebnisse der Abgleichsaktivität in eine Excel-Datei'
+            - name: "Aufgabe\_4: Exportieren der Ergebnisse der Abgleichaktivität in eine Excel-Datei"
               href: task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md
         - name: 'Lektion 4: Speichern von Lieferantendaten in MDS'
           href: lesson-4-storing-supplier-data-in-mds.md
           items:
-            - name: 'Aufgabe 1: Erstellen des Modells ''Suppliers'' mit Master Data Manager'
+            - name: "Aufgabe\_1: Erstellen des Modells „Suppliers“ mit dem Master Data Manager"
               href: task-1-creating-suppliers-model-using-master-data-manager.md
-            - name: 'Aufgabe 2: Hochladen von Lieferantendaten in MDS mithilfe des MDS-Add-Ins für Excel'
+            - name: "Aufgabe\_2: Hochladen von Lieferantendaten in MDS mithilfe des MDS-Add-Ins für Excel"
               href: task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md
-            - name: 'Aufgabe 3: Überprüfen der Daten im Master Data Manager'
+            - name: "Aufgabe\_3: Überprüfen der Daten im Master Data Manager"
               href: task-3-verifying-the-data-in-master-data-manager.md
-            - name: 'Aufgabe 4 (optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz Daten'
+            - name: "Aufgabe\_4 (optional): Kombination, Abgleich und Veröffentlichung eines neuen Datensatzes"
               href: task-4-optional-combining-matching-and-publishing-new-set-of-data.md
-            - name: 'Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel'
+            - name: "Aufgabe\_5: Erstellen eines domänenbasierten Attributs aus Excel"
               href: task-5-creating-a-domain-based-attribute-from-excel.md
-            - name: 'Aufgabe 6: Überprüfen, ob das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wird'
+            - name: "Aufgabe\_6: Überprüfen, ob das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wurde"
               href: task-6-verify-domain-based-attribute-master-data-manager.md
-            - name: 'Aufgabe 7: Anzeigen von Updates, die mit Master Data Manager in Excel durchgeführt wurden'
+            - name: "Aufgabe\_7: Anzeigen von Updates, die mit Master Data Manager in Excel durchgeführt wurden"
               href: task-7-viewing-updates-made-using-master-data-manager-in-excel.md
-            - name: 'Aufgabe 8: Hinzufügen eines neuen Werts für die Entität ''State'' in Excel'
+            - name: "Aufgabe\_8: Hinzufügen eines neuen Werts für die Entität „State“ in Excel"
               href: task-8-adding-a-new-value-for-state-entity-in-excel.md
-            - name: 'Aufgabe 9: Erstellen einer abgeleiteten Hierarchie mithilfe von Master Data Manager'
+            - name: "Aufgabe\_9: Erstellen einer abgeleiteten Hierarchie mithilfe des Master Data Manager"
               href: task-9-creating-a-derived-hierarchy-using-master-data-manager.md
         - name: 'Lektion 5: Automatisierung der Bereinigung und des Abgleich mit SSIS'
           href: lesson-5-automating-the-cleansing-and-matching-using-ssis.md
           items:
-            - name: 'Aufgabe 1 (Voraussetzung): Entfernen von Lieferantendaten in MDS'
+            - name: "Aufgabe\_1 (Voraussetzung): Entfernen von Lieferantendaten aus MDS"
               href: task-1-prerequisite-removing-supplier-data-in-mds.md
-            - name: 'Aufgabe 2 (optional): Erstellen einer MDS-Abonnementsicht mithilfe von Master Data Manager'
+            - name: "Aufgabe\_2 (optional): Erstellen einer MDS-Abonnementsicht mithilfe des Master Data Manager"
               href: task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md
-            - name: 'Aufgabe 3 (optional): Überprüfung der Abonnementsichten'
+            - name: "Aufgabe\_3 (optional): Überprüfung der Abonnementsichten"
               href: task-3-optional-reviewing-the-subscription-views.md
-            - name: 'Aufgabe 4: Erstellen eines SSIS-Projekts mit SQL Server Data Tools'
+            - name: "Aufgabe\_4: Erstellen eines SSIS-Projekts mit SQL Server Data Tools"
               href: task-4-creating-an-ssis-project-using-sql-server-data-tools.md
-            - name: 'Aufgabe 5: Hinzufügen eines Datenflusstasks'
+            - name: "Aufgabe\_5: Hinzufügen eines Datenflusstasks"
               href: task-5-adding-data-flow-task.md
-            - name: 'Aufgabe 6: Hinzufügen der Excel-Quelle zum Datenfluss'
+            - name: "Aufgabe\_6: Hinzufügen der Excel-Quelle zum Datenfluss"
               href: task-6-adding-excel-source-to-the-data-flow.md
-            - name: 'Aufgabe 7: Hinzufügen der Transformation für DQS-Bereinigung zum Datenfluss'
+            - name: "Aufgabe\_7: Hinzufügen der Transformation für DQS-Bereinigung zum Datenfluss"
               href: task-7-adding-dqs-cleansing-transform-to-the-data-flow.md
-            - name: 'Aufgabe 8: Hinzufügen einer Transformation ''Bedingtes Teilen'', um die Bereinigungsausgabe zu teilen'
+            - name: "Aufgabe\_8: Hinzufügen der Transformation „Bedingtes Teilen“ zur Teilung der Bereinigungsausgabe"
               href: task-8-adding-conditional-split-transform-to-split-cleansing-output.md
-            - name: 'Aufgabe 9: Hinzufügen der Transformation UNION ALL, um richtige und korrigierte Datensätze zu kombinieren'
+            - name: "Aufgabe\_9: Hinzufügen der Transformation UNION ALL zur Kombination richtiger und korrigierter Datensätze"
               href: task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md
-            - name: 'Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung, um Duplikate zu identifizieren'
+            - name: "Aufgabe\_10: Hinzufügen der Transformation für Fuzzygruppierung zur Identifizierung von Duplikaten"
               href: task-10-adding-fuzzy-group-transform-to-identify-duplicates.md
-            - name: 'Aufgabe 11: Hinzufügen der Transformation ''Bedingtes Teilen'', um Duplikate zu filtern'
+            - name: "Aufgabe\_11: Hinzufügen der Transformation „Bedingtes Teilen“ zur Filterung von Duplikaten"
               href: task-11-adding-conditional-split-transform-to-filter-duplicates.md
-            - name: 'Aufgabe 12: Hinzufügen der Transformation ''Abgeleitete Spalten'', um für MDS erforderliche Spalten hinzuzufügen'
+            - name: "Aufgabe\_12: Hinzufügen der Transformation „Abgeleitete Spalten“ zum Hinzufügen der für MDS erforderlichen Spalten"
               href: task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md
-            - name: 'Aufgabe 13: Hinzufügen von OLE DB-Ziels, um Daten in die MDS-Stagingtabelle zu schreiben'
+            - name: "Aufgabe\_13: Hinzufügen von OLE DB-Zielen zum Schreiben von Daten in die MDS-Stagingtabelle"
               href: task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md
-            - name: 'Aufgabe 14: Hinzufügen von Execute SQL Task zur Ablaufsteuerung, um die gespeicherte Prozedur für MDS auszuführen'
+            - name: "Aufgabe\_14: Hinzufügen des Tasks „SQL ausführen“ zur Ablaufsteuerung, um die gespeicherte Prozedur für MDS auszuführen"
               href: task-14-add-execute-to-control-flow-run-mds-stored-procedure.md
-            - name: 'Aufgabe 15: Erstellen und Ausführen des SSIS-Projekts'
+            - name: "Aufgabe\_15: Erstellen und Ausführen des SSIS-Projekts"
               href: task-15-building-and-running-the-ssis-project.md
-            - name: 'Aufgabe 16: Überprüfung mit Master Data Manager'
+            - name: "Aufgabe\_16: Überprüfung mit dem Master Data Manager"
               href: task-16-verifying-with-master-data-manager.md
-            - name: 'Aufgabe 17: Überprüfung des DQS-Bereinigungsprojekts, das vom SSIS-Paket erstellt wurde'
+            - name: "Aufgabe\_17: Überprüfung des vom SSIS-Paket erstellten DQS-Bereinigungsprojekts"
               href: task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md
         - name: Zusammenfassung
           href: conclusion.md

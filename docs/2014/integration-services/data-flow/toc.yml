@@ -385,7 +385,7 @@
   items:
     - name: Installieren und Deinstallieren der OData-Quellkomponente
       href: ../install-and-uninstall-odata-source-component.md
-    - name: 'Lernprogramm: Verwenden der OData-Quelle'
+    - name: 'Tutorial: Verwenden der OData-Quelle'
       href: tutorial-using-the-odata-source.md
     - name: Ändern einer OData-Quellabfrage zur Laufzeit
       href: modify-odata-source-query-at-runtime.md
