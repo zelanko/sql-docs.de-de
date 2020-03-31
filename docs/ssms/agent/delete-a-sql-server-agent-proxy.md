@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6c05f4e2739b2683ecb74a1aa65e98de85e36bb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246344"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
@@ -31,9 +31,9 @@ ms.locfileid: "75246344"
 
 In diesem Thema wird beschrieben, wie Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]löschen können.  
   
-## <a name="BeforeYouBegin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Vorbereitungen  
   
-### <a name="Restrictions"></a>Einschränkungen  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Einschränkungen  
   
 -   Wenn Sie das Proxykonto eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents löschen, sollten Sie sicherstellen, dass der Proxy keine Verweise auf aktive Auftragsschritte enthält. Um nach Auftragsschritten zu suchen, die auf den Proxy verweisen, klicken Sie mit der rechten Maustaste auf den Proxy. Klicken Sie auf **Eigenschaften**, und wählen Sie im Dialogfeld **Eigenschaften von _Proxyname_-Proxykonto** die Seite **Verweise** aus. Beim Löschen eines Proxys können Sie im Dialogfeld **Objekt löschen** die Auftragsschritte, die diesen Proxy verwenden, neu zuweisen.  
   
@@ -43,12 +43,12 @@ In diesem Thema wird beschrieben, wie Sie ein [!INCLUDE[ssNoVersion](../../inclu
   
 -   Wenn die Anmeldung für den Benutzer Zugriffsrecht auf den Proxy hat, oder der Benutzer zu einer Rolle mit Zugriffsrechten auf den Proxy gehört, kann der Benutzer den Proxy in einem Auftragsschritt verwenden.  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="security"></a><a name="Security"></a>Sicherheit  
   
-#### <a name="Permissions"></a>Berechtigungen  
+#### <a name="permissions"></a><a name="Permissions"></a>Berechtigungen  
 Nur Mitglieder der festen Serverrolle **sysadmin** können Proxykonten erstellen, ändern oder löschen.  
   
-## <a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
   
 #### <a name="to-delete-a-sql-server-agent-proxy-account"></a>So löschen Sie ein SQL Server-Agent-Proxykonto  
   
@@ -66,7 +66,7 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Proxykonten erstellen
   
 7.  Klicken Sie auf **OK**.  
   
-## <a name="TsqlProcedure"></a>Verwenden von Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Verwenden von Transact-SQL  
   
 #### <a name="to-delete-a-sql-server-agent-proxy-account"></a>So löschen Sie ein SQL Server-Agent-Proxykonto  
   

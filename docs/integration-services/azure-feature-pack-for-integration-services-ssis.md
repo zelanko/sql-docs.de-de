@@ -14,10 +14,10 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
-ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/24/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77568083"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack für Integration Services (SSIS)
@@ -200,7 +200,7 @@ Hierbei handelt es sich um eine ausschließlich für SQL Server 2019 veröffent
 
 #### <a name="bugfixes"></a>Fehlerbehebungen
 
-1. Beim Ausführen in Visual Studio 2019 mit SQL Server 2019 als Ziel kann es bei flexiblen Dateitasks/Quellen/Zielen zu folgender Fehlermeldung kommen: „Es wurde versucht, auf ein Element zuzugreifen, dessen Typ mit dem Array nicht kompatibel ist.“
+1. Beim Ausführen in Visual Studio 2019 mit SQL Server 2019 als Ziel kann es bei flexiblen Dateitasks/Quellen/Zielen zu folgender Fehlermeldung kommen: `Attempted to access an element as a type incompatible with the array.`
 1. Beim Ausführen in Visual Studio 2019 mit SQL Server 2019 als Ziel kann es bei flexiblen Dateitasks/Zielen bei Verwendung des ORC-/Parquet-Formats zu folgender Fehlermeldung kommen: `Microsoft.DataTransfer.Common.Shared.HybridDeliveryException: An unknown error occurred. JNI.JavaExceptionCheckException.` (Microsoft.DataTransfer.Common.Shared.HybridDeliveryException: Unbekannter Fehler. JNI.JavaExceptionCheckException.).
 
 ### <a name="version-1160"></a>Version 1.16.0

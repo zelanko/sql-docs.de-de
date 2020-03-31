@@ -11,10 +11,10 @@ ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cff4228404690147d97a44f6f5dd43b1a180153c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71713292"
 ---
 # <a name="connecting-with-encryption"></a>Herstellen von Verbindungen mit einer Verschlüsselung
@@ -33,7 +33,7 @@ String connectionUrl =
      "encrypt=true;trustServerCertificate=true";  
 ```  
   
- Wenn die Eigenschaften **encrypt** und **trustServerCertificate** auf **FALSE** festgelegt sind, wird von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Überprüfung des TLS-Zertifikats für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt. Das Überprüfen des Serverzertifikats ist Teil des TLS-Handshakes und stellt sicher, dass es sich bei dem Server tatsächlich um den Server handelt, mit dem eine Verbindung hergestellt werden soll. Zum Überprüfen des Serverzertifikats müssen die Vertrauensinformationen zur Verbindungszeit explizit mithilfe der **trustStore**-Verbindungseigenschaft und der **trustStorePassword**-Verbindungseigenschaft oder implizit mithilfe des Standardvertrauensspeichers der zugrunde liegenden Java Virtual Machine (JVM) übermittelt werden.  
+ Wenn die **encrypt**-Eigenschaft auf **TRUE** und die **trustServerCertificate**-Eigenschaft auf **FALSE** festgelegt ist, wird von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Überprüfung des TLS-Zertifikats für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt. Das Überprüfen des Serverzertifikats ist Teil des TLS-Handshakes und stellt sicher, dass es sich bei dem Server tatsächlich um den Server handelt, mit dem eine Verbindung hergestellt werden soll. Zum Überprüfen des Serverzertifikats müssen die Vertrauensinformationen zur Verbindungszeit explizit mithilfe der **trustStore**-Verbindungseigenschaft und der **trustStorePassword**-Verbindungseigenschaft oder implizit mithilfe des Standardvertrauensspeichers der zugrunde liegenden Java Virtual Machine (JVM) übermittelt werden.  
   
  Die **trustStore**-Eigenschaft gibt den Pfad (einschließlich des Dateinamens) der trustStore-Zertifikatsdatei an. Diese enthält die Liste der Zertifikate, denen der Client vertraut. Die **trustStorePassword**-Eigenschaft gibt das Kennwort an, das verwendet wird, um die Integrität der trustStore-Daten zu überprüfen. Weitere Informationen zur Verwendung des Standardvertrauensspeichers von JVM finden Sie unter [Konfigurieren des Clients für die Verschlüsselung](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
   

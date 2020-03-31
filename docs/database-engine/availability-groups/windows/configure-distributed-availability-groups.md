@@ -11,10 +11,10 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77146303"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Konfigurieren verteilter Always On-Verfügbarkeitsgruppen  
@@ -217,14 +217,14 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
-## <a name="failover"></a> Verknüpfen der Datenbank auf dem sekundären Replikat der zweiten Verfügbarkeitsgruppe
+## <a name="join-the-database-on-the-secondary-of-the-second-availability-group"></a><a name="failover"></a> Verknüpfen der Datenbank auf dem sekundären Replikat der zweiten Verfügbarkeitsgruppe
 Nachdem die Datenbank auf dem sekundären Replikat der zweiten Verfügbarkeitsgruppe in einen Wiederherstellungsstatus versetzt wurde, müssen Sie sie manuell mit der Verfügbarkeitsgruppe verknüpfen.
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```
   
-## <a name="failover"></a> Failover auf eine sekundäre Verfügbarkeitsgruppe  
+## <a name="fail-over-to-a-secondary-availability-group"></a><a name="failover"></a> Failover auf eine sekundäre Verfügbarkeitsgruppe  
 
 Zurzeit wird nur manuelles Failover unterstützt. So führen Sie ein manuelles Failover für eine verteilte Verfügbarkeitsgruppe aus:
 

@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 869ee9f88d8cb52f10fbb9120b6815868f7de5fe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68094952"
 ---
 # <a name="create-a-server-role"></a>Erstellen einer Serverrolle
@@ -42,14 +42,14 @@ ms.locfileid: "68094952"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Serverrollen kann keine Berechtigung für sicherungsfähige Elemente auf Datenbankebene gewährt werden. Informationen zum Erstellen von Datenbankrollen finden Sie unter [CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
   
 -   Erfordert die CREATE SERVER ROLE-Berechtigung oder die Mitgliedschaft in der festen sysadmin-Serverrolle.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68094952"
   
     -   Um einer Serverrolle eine andere Serverrolle als Besitzer zuzuweisen, ist die Mitgliedschaft in der Empfängerserverrolle oder die ALTER-Berechtigung für diese Serverrolle erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-new-server-role"></a>So erstellen Sie eine neue Serverrolle  
   
@@ -85,7 +85,7 @@ ms.locfileid: "68094952"
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-new-server-role"></a>So erstellen Sie eine neue Serverrolle  
   

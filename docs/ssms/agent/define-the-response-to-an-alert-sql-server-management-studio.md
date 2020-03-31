@@ -17,10 +17,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8dd80ad63be8446371328e154b7d18d1f8faa7de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256019"
 ---
 # <a name="define-the-response-to-an-alert"></a>Definieren der Reaktion auf eine Warnung
@@ -32,9 +32,9 @@ ms.locfileid: "75256019"
 
 In diesem Artikel wird beschrieben, wie die Reaktion von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Warnungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] definiert wird.  
   
-## <a name="BeforeYouBegin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Vorbereitungen  
   
-### <a name="Restrictions"></a>Einschränkungen  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Einschränkungen  
   
 -   Die Pager- und **net send** -Optionen werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr im [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
   
@@ -42,12 +42,12 @@ In diesem Artikel wird beschrieben, wie die Reaktion von [!INCLUDE[msCoName](../
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="security"></a><a name="Security"></a>Sicherheit  
   
-#### <a name="Permissions"></a>Berechtigungen  
+#### <a name="permissions"></a><a name="Permissions"></a>Berechtigungen  
 Nur Mitglieder der festen Serverrolle **sysadmin** können die Antwort auf eine Warnung definieren.  
   
-## <a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
   
 #### <a name="to-define-the-response-to-an-alert"></a>So definieren Sie die Antwort auf eine Warnung  
   
@@ -67,7 +67,7 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können die Antwort auf eine 
   
 8.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-## <a name="TsqlProcedure"></a>Verwenden von Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Verwenden von Transact-SQL  
   
 #### <a name="to-define-the-response-to-an-alert"></a>So definieren Sie die Antwort auf eine Warnung  
   

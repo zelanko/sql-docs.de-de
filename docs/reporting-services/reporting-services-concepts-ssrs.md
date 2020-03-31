@@ -9,18 +9,18 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078182"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Konzepte von Reporting Services (SSRS)
   In diesem Artikel werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Konzepte zusammengefasst.  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]Gilt für:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (einheitlicher Modus) | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SharePoint-Modus)   
+ **[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Einheitlicher Modus | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Modus   
   
-##  <a name="bkmk_ReportServerConcepts"></a> Berichtsserverkonzepte  
+##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> Berichtsserverkonzepte  
  Ein Berichtsserver ist ein Computer, auf dem eine Instanz von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installiert ist. Ein Berichtsserver speichert intern Elemente, wie z.B. paginierte und mobile Berichte, berichtsbezogene Elemente und Ressourcen, Zeitpläne und Abonnements. Ein Berichtsserver kann als eigenständiger einzelner Server oder als skalierbare Farm konfiguriert werden, oder er kann in SharePoint Server integriert werden. Sie interagieren durch den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Webdienst, WMI-Anbieter, URL-Zugriff oder programmgesteuert durch Skripts mit Berichtsserverelementen. Die Art und Weise, in der Sie mit einem Berichtsserver interagieren, hängt von der Bereitstellungstopologie und der Konfiguration ab.  
   
 ### <a name="native-mode-report-servers"></a>Berichtsserver im einheitlichen Modus
@@ -59,7 +59,7 @@ ms.locfileid: "77078182"
  Die Liste der Tools für die Interaktion mit dem Berichtsserver finden Sie unter [Reporting Services-Tools](../reporting-services/tools/reporting-services-tools.md).  
   
   
-##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> Berichte und verwandte Elementkonzepte  
+##  <a name="reports-and-related-item-concepts"></a><a name="bkmk_ReportsandRelatedItemConcepts"></a> Berichte und verwandte Elementkonzepte  
 ### <a name="reports-and-report-definitions"></a>Berichte und Berichtsdefinitionen
 
 
@@ -145,7 +145,7 @@ Sie erstellen mobile Reporting Services-Berichte (RSMOBILE-Dateien) im Publisher
  Eine Datenwarnung ist ein in einer Warnungsdatenbank intern gespeichertes Element. Eine Datenwarnungsdefinition umfasst die Information, welche Daten aus vorhandenen Berichtsdatenfeeds verwendet werden sollen, welche Bedingungen erfüllt werden müssen, einen Zeitplan und Empfänger für die Warnung. Datenwarnungen sind nur in Berichten verfügbar, die auf einem in SharePoint Server integrierten Berichtsserver veröffentlicht wurden. Datenwarnungen sind auf einer systemeigenen Berichtsserverinstallation nicht verfügbar. Weitere Informationen finden Sie unter [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md).  
   
   
-##  <a name="bkmk_TypesofReports"></a> Typen von paginierten Reporting Services-Berichten  
+##  <a name="types-of-reporting-services-paginated-reports"></a><a name="bkmk_TypesofReports"></a> Typen von paginierten Reporting Services-Berichten  
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]kann der Begriff *Bericht* für einen bestimmten Typ von Berichtsserverelement, für einen Layoutentwurf oder einen Lösungsentwurf gelten. Ein einzelner paginierter Reporting Services-Bericht kann Eigenschaften von mehr als einem Typ aufweisen; z.B. kann ein Bericht gleichzeitig ein eigenständiger Bericht, ein von einem Hauptbericht referenzierter Unterbericht, das Ziel eines Drillthroughberichts in einem anderen Hauptbericht und ein verknüpfter Bericht sein.  
   
 ### <a name="drilldown-reports"></a>Drilldownberichte 
@@ -183,7 +183,7 @@ Sie erstellen mobile Reporting Services-Berichte (RSMOBILE-Dateien) im Publisher
  Ein aktualisierter Bericht ist eine veröffentlichte Berichtsdefinition, die in ein neueres Schema konvertiert wird, wenn ein Berichtsserver von einer Version von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] auf eine neuere Version aktualisiert wird. Die ursprüngliche Berichtsdefinition wird beibehalten. Der Bericht wird im Arbeitsspeicher aktualisiert, kompiliert, und die kompilierte Version wird intern gespeichert. Weitere Informationen finden Sie unter [Aktualisieren von Reporting Services-Berichten](../reporting-services/install-windows/upgrade-reports.md).  
   
   
-##  <a name="bkmk_StagesofReports"></a> Phasen von paginierten Reporting Services-Berichten  
+##  <a name="stages-of-reporting-services-paginated-reports"></a><a name="bkmk_StagesofReports"></a> Phasen von paginierten Reporting Services-Berichten  
  Eine Berichtsdefinition kann erstellt, veröffentlicht oder gespeichert, kompiliert, verarbeitet, zwischengespeichert, gerendert, angezeigt, exportiert und als Verlauf gespeichert werden. Wenn Sie einen Bericht ausführen, verarbeitet der Berichtsserver den Bericht in drei Schritten. Zu diesen Schritten gehört die Berichtsverarbeitung, die Datenverarbeitung und das Rendering. Daten- und Berichtsverarbeitung werden in einer Berichtsdefinition ausgeführt. Die Ergebnisse liegen in einem internen Zwischenformat vor. Berichte im Zwischenformat werden nachfolgend in einem bestimmten Anzeigeformat gerendert. Das folgende Diagramm zeigt die Phasen und Elemente der Berichtsverarbeitung.  
   
  ![report processing diagram](../reporting-services/media/report-execution.gif "Diagramm für die Berichtsverarbeitung")  

@@ -29,10 +29,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78280902"
 ---
 # <a name="bcp-utility"></a>Hilfsprogramms bcp
@@ -168,7 +168,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > Es wird empfohlen, für jede Spalte in einer Formatdatei einen Sortierungsnamen anzugeben, außer wenn die 65001-Option Priorität vor der Angabe von Sortierung/Codepage haben soll.
   
-|Codepagewert|Beschreibung|  
+|Codepagewert|BESCHREIBUNG|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Standardcodepage, die vom Client verwendet wird. Die Standardcodepage, die verwendet wird, wenn **-C** nicht angegeben wird.|  
@@ -441,7 +441,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
  **-x**<a name="x"></a>  
  Bei Verwendung mit den Optionen **format** und **-f** *Formatdatei* wird anstelle der standardmäßigen, nicht auf XML basierenden Formatdatei eine XML-basierte Formatdatei generiert. Beim Importieren oder Exportieren von Daten hat **-x** keine Funktion. Wird die Option weder mit **format** noch mit **-f** *Formatdatei*verwendet, wird ein Fehler generiert.  
 
-## Hinweise<a name="remarks"></a>
+## <a name="remarks"></a>Hinweise<a name="remarks"></a>
 
 - Der **bcp** 13.0-Client wird bei der Installation der [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Tools installiert. Wenn sowohl Tools für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] als auch für eine frühere Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]installiert sind, verwenden Sie, abhängig von der Reihenfolge der Werte in der PATH-Umgebungsvariablen, möglicherweise den früheren **bcp** -Client anstelle des **bcp** 13.0-Clients. Diese Umgebungsvariable definiert die Verzeichnisse, in denen von Windows nach ausführbaren Dateien gesucht wird. Führen Sie über die Windows-Befehlszeile den Befehl **bcp /v** oder **bcp -v** aus, um zu ermitteln, welche Version Sie verwenden. Weitere Informationen dazu, wie Sie den Befehlspfad in der PATH-Umgebungsvariablen festlegen, finden Sie unter [Umgebungsvariablen](https://docs.microsoft.com/windows/win32/shell/user-environment-variables). Alternativ können Sie die Windows-Hilfe nach „Umgebungsvariablen“ durchsuchen.
 

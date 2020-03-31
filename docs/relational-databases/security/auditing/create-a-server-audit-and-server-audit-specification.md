@@ -19,10 +19,10 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75952468"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation
@@ -43,17 +43,17 @@ ms.locfileid: "75952468"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Eine Überwachung muss vorhanden sein, bevor Sie eine Serverüberwachungsspezifikation für sie erstellen. Wenn eine Serverüberwachungsspezifikation erstellt wird, befindet sie sich im deaktivierten Zustand.  
   
 -   Die CREATE SERVER AUDIT-Anweisung liegt im Bereich einer Transaktion. Wird ein Rollback für die Transaktion ausgeführt, so wird auch für die Anweisung ein Rollback durchgeführt.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
   
 -   Um eine Serverüberwachung zu erstellen, zu ändern oder zu löschen, benötigen Prinzipale die ALTER ANY SERVER AUDIT-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "75952468"
   
 -   Sobald eine Serverüberwachungsspezifikation erstellt wurde, kann sie von Prinzipalen mit den folgenden Berechtigungen eingesehen werden: CONTROL SERVER oder ALTER ANY SERVER AUDIT. Außerdem kann sie von Prinzipalen eingesehen werden, die über das „sysadmin“-Konto oder expliziten Zugriff auf die Überwachung verfügen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>So erstellen Sie eine Serverüberwachung  
   
@@ -156,7 +156,7 @@ ms.locfileid: "75952468"
   
 3.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>So erstellen Sie eine Serverüberwachung  
   

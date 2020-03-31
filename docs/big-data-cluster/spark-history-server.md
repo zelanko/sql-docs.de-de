@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d81732079ddc549bb7a04abad938fc551eeed84a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243936"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Debuggen und Diagnostizieren von Spark-Anwendungen in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Spark History Server
@@ -157,7 +157,7 @@ Wählen Sie die Auftrags-ID aus, und klicken Sie im Menü des Tools auf **Graph*
 ## <a name="diagnosis-tab-in-spark-history-server"></a>Die Registerkarte „Diagnosis“ (Diagnose) in Spark History Server
 Wählen Sie die Auftrags-ID aus, und klicken Sie im Toolmenü auf **Diagnosis** (Diagnose), um die Ansicht der Auftragsdiagnose aufzurufen. Die Registerkarte „Diagnosis“ (Diagnose) umfasst die folgenden weiteren Registerkarten: **Data Skew** (Datenschiefe), **Time Skew** (Zeitabweichung) und **Executor Usage Analysis** (Analyse zur Executorauslastung).
     
-+ Diese Registerkarten können Sie einzeln auswählen und überprüfen.
++ Überprüfen Sie die **Datenschiefe**, **Zeitabweichung** und **Executor-Nutzungsanalyse**, indem Sie die entsprechenden Registerkarten auswählen.
 
     ![Registerkarten unter „Diagnosis“ (Diagnose)](./media/apache-azure-spark-history-server/sparkui-diagnosis-tabs.png)
 

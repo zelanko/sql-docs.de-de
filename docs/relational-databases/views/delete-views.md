@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a0b11b2d6fa897b99276f75fb74e2c41e25db904
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123473"
 ---
 # <a name="delete-views"></a>Löschen von Sichten
@@ -41,20 +41,20 @@ ms.locfileid: "68123473"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Wenn Sie eine Sicht löschen, werden die Definition der Sicht sowie weitere Informationen zur Sicht aus dem Systemkatalog entfernt. Alle Berechtigungen für die Sicht werden ebenfalls gelöscht.  
   
 -   Eine mithilfe von `DROP TABLE` gelöschte Sicht in einer Tabelle muss explizit mit `DROP VIEW`gelöscht werden.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert entweder die ALTER-Berechtigung für SCHEMA oder die CONTROL-Berechtigung für OBJECT.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-delete-a-view-from-a-database"></a>So löschen Sie eine Sicht aus einer Datenbank  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68123473"
     > [!IMPORTANT]  
     >  Klicken Sie im Dialogfeld **Objekt löschen** auf **Abhängigkeiten anzeigen**, um das Dialogfeld _Sichtname_ **-Abhängigkeiten** zu öffnen. Es werden alle Objekte angezeigt, die von der Sicht abhängig sind, und alle Objekte, von denen die Sicht abhängig ist.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-delete-a-view-from-a-database"></a>So löschen Sie eine Sicht aus einer Datenbank  
   

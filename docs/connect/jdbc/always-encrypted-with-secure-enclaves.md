@@ -11,10 +11,10 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
 ms.openlocfilehash: 441adf8e3623f06bfa98718ebc6c01c314c94828
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004709"
 ---
 # <a name="using-always-encrypted-with-the-secure-enclaves"></a>Verwenden von Always Encrypted mit Secure Enclaves
@@ -40,7 +40,7 @@ Folgen Sie diesem [Tutorial](../../relational-databases/security/tutorial-gettin
 
 **enclaveAttestationProtocol:** das Protokoll des Nachweisdiensts Der einzige derzeit unterstützte Wert ist **HGS** (Host-Überwachungsdienst).
 
-Benutzer müssen **columnEncryptionSetting** aktivieren und **beide** der oben genannten Verbindungszeichenfolgen-Eigenschaften richtig festlegen, um Always Encrypted mit Secure Enclaves aus dem Microsoft JDBC-Treiber für SQL Server zu aktivieren.
+Benutzer müssen **columnEncryptionSetting** aktivieren und **beide** der oben genannten Verbindungszeichenfolgen-Eigenschaften richtig festlegen, um Always Encrypted mit Secure Enclaves aus dem [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] zu aktivieren.
 
 ## <a name="working-with-secure-enclaves"></a>Arbeiten mit Secure Enclaves
 Wenn die Verbindungseigenschaften der Enclaves richtig festgelegt wurden, arbeitet das Feature transparent. Der Treiber stellt automatisch fest, ob für die Abfrage Secure Enclaves erforderlich sind. Enclave-Berechnungen werden beispielsweise bei den folgenden Abfragen ausgelöst. Den Datenbank- und Tabellenaufbau finden Sie unter [Tutorial: Always Encrypted mit Secure Enclaves mithilfe von SSMS](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md).
@@ -78,7 +78,7 @@ try (Connection c = DriverManager.getConnection(URL);Statement s = c.createState
 ```
 
 ## <a name="java-8-users"></a>Benutzer von Java 8
-Für dieses Feature ist der Signaturalgorithmus RSASSA-PSA erforderlich. Dieser Algorithmus wurde in JDK 11 hinzugefügt, aber nicht auf JDK 8 zurückportiert. Benutzer, die dieses Feature mit der Version des Microsoft JDBC-Treibers für SQL Server für JDK 8 verwenden möchten, müssen entweder einen eigenen Anbieter laden, der den Signaturalgorithmus RSASSA-PSA unterstützt, oder die optionale BouncyCastleProvider-Abhängigkeit integrieren. Diese Abhängigkeit wird später entfernt, wenn der Signaturalgorithmus auf JDK 8 zurückportiert wird oder der Support-Lebenszyklus von JDK 8 endet.
+Für dieses Feature ist der Signaturalgorithmus RSASSA-PSA erforderlich. Dieser Algorithmus wurde in JDK 11 hinzugefügt, aber nicht auf JDK 8 zurückportiert. Benutzer, die dieses Feature mit der Version des [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwenden möchten, müssen entweder einen eigenen Anbieter laden, der den Signaturalgorithmus RSASSA-PSA unterstützt, oder die optionale BouncyCastleProvider-Abhängigkeit integrieren. Diese Abhängigkeit wird später entfernt, wenn der Signaturalgorithmus auf JDK 8 zurückportiert wird oder der Support-Lebenszyklus von JDK 8 endet.
 
 ## <a name="see-also"></a>Weitere Informationen
 [Verwenden von Always Encrypted mit dem JDBC-Treiber](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  

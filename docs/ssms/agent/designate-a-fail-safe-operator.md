@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1c56acaa84b26192d766097294a5ab2bfd31ab8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242453"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Bestimmen eines Ausfallsicherheitsoperators
@@ -32,9 +32,9 @@ ms.locfileid: "75242453"
 
 Ein Ausfallsicherheitsoperator ist ein Benutzer, der die Warnungen empfängt, wenn der vorgesehene Operator nicht erreichbar ist. In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] konfigurieren, dass der Ausfallsicherheitsoperator in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Warnbenachrichtigungen des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents empfängt.  
   
-## <a name="BeforeYouBegin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Vorbereitungen  
   
-### <a name="Restrictions"></a>Einschränkungen  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Einschränkungen  
   
 -   Die Pager- und **net send** -Optionen werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr im [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
   
@@ -42,12 +42,12 @@ Ein Ausfallsicherheitsoperator ist ein Benutzer, der die Warnungen empfängt, we
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="security"></a><a name="Security"></a>Sicherheit  
   
-#### <a name="Permissions"></a>Berechtigungen  
+#### <a name="permissions"></a><a name="Permissions"></a>Berechtigungen  
 Nur Mitglieder der festen Serverrolle **sysadmin** können Ausfallsicherheitsoperatoren bestimmen.  
   
-## <a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
   
 #### <a name="to-designate-a-fail-safe-operator"></a>So bestimmen Sie einen Ausfallsicherheitsoperator  
   

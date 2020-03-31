@@ -28,10 +28,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77544934"
 ---
 # <a name="sqlcmd-utility"></a>SQLCMD-Hilfsprogramm
@@ -745,7 +745,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
   
  Die Rückgabewerte −1 bis −99 sind für SQL Server reserviert. **sqlcmd** definiert die folgenden zusätzlichen Rückgabewerte:  
   
-|Rückgabewerte|Beschreibung|  
+|Rückgabewerte|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |-100|Vor dem Auswählen des Rückgabewerts ist ein Fehler aufgetreten.|  
 |-101|Beim Auswählen eines Rückgabewerts wurden keine Zeilen gefunden.|  
@@ -867,7 +867,7 @@ Wenn Sie die EINGABETASTE drücken, wird folgende Informationsmeldung ausgegeben
   
  Obwohl die `BusinessEntityID`-Spalte nur vier Zeichen breit ist, wurde sie erweitert, um den längeren Spaltennamen aufzunehmen. Standardmäßig wird die Ausgabe mit dem 80. Zeichen beendet. Dies kann geändert werden, indem Sie die Option **-w** verwenden oder die SQLCMDCOLWIDTH-Skriptvariable festlegen.  
   
-###  <a name="OutputXML"></a> XML-Ausgabeformat  
+###  <a name="xml-output-format"></a><a name="OutputXML"></a> XML-Ausgabeformat  
  Die XML-Ausgabe, die sich aus der FOR XML-Klausel ergibt, wird unformatiert in einem fortlaufenden Datenstrom ausgegeben.  
   
  Verwenden Sie den Befehl `:XML ON`, wenn Sie eine Ausgabe im XML-Format erwarten.  
@@ -884,7 +884,7 @@ Wenn Sie die EINGABETASTE drücken, wird folgende Informationsmeldung ausgegeben
 > [!NOTE]  
 >  Der `:XML`-Befehl unterstützt die SET STATISTICS XML-Anweisung nicht.  
   
-###  <a name="OutputJSON"></a> JSON-Ausgabeformat  
+###  <a name="json-output-format"></a><a name="OutputJSON"></a> JSON-Ausgabeformat  
  Verwenden Sie den Befehl `:XML ON`, wenn Sie eine Ausgabe im JSON-Format erwarten. Andernfalls enthält die Ausgabe sowohl den Spaltennamen als auch den JSON-Text. Diese Ausgabe ist kein gültiger JSON-Code.  
   
  Verwenden Sie den folgenden Befehl, um den XML-Modus zu deaktivieren: `:XML OFF`.  
