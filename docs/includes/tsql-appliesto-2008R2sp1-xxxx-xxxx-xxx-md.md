@@ -1,1 +1,1 @@
-<Token>**Gilt für:** ![Ja](media/yes.png)SQL Server ![Nein](media/no.png)Azure SQL-Datenbank ![Nein](media/no.png)Azure Synapse Analytics (SQL DW) ![Nein](media/no.png)Parallel Data Warehouse </Token>
+<Token>**GILT ZU:** ![](media/yes-icon.png)Ja ![](media/no-icon.png)SQL Server ![](media/no-icon.png)Keine Azure SQL-Datenbank Keine ![Azure](media/no-icon.png)Synapse Analytics (SQL DW) Kein paralleles Data Warehouse</Token>

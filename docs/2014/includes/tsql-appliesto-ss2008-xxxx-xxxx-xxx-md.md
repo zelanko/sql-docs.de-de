@@ -1,1 +1,1 @@
-**Dieses Thema gilt für:** ![Ja](media/yes.png "ja")SQL Server \(\) ![ab 2008 Nein, keine Azure](media/no.png "nein")SQL ![-Datenbank Azure SQL Data Warehouse keine parallel](media/no.png "nein")Data Warehouse ![](media/no.png "nein")
+**THIS TOPIC APPLIES TO:** ![ja](media/yes-icon.png "ja")SQL Server \(ab 2008\) ![keine](media/no-icon.png "nein")Azure SQL-Datenbank ![kein](media/no-icon.png "nein")Azure SQL Data Warehouse ![kein](media/no-icon.png "nein")Parallel Data Warehouse

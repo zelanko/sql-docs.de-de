@@ -7,29 +7,29 @@ ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
 manager: jroth
-ms.reviewer: “”
+ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 02/09/2017
-ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/27/2020
+ms.openlocfilehash: 097a024622dd7550ec3dabac1c1fac2a35dfe4b3
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241699"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402626"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Vergleichen und Synchronisieren von Daten in einer oder mehreren Tabellen anhand von Daten aus einer Verweisdatenbank
 
-Sie können die Daten in einer *Quelldatenbank* und einer *Zieldatenbank* vergleichen und angeben, welche Tabellen verglichen werden sollen. Anschließend können Sie die Daten prüfen und entscheiden, welche Änderungen Sie synchronisieren möchten. Sie können entweder das Ziel aktualisieren, um die Datenbanken zu synchronisieren, oder das Updateskript in den Transact\-SQL-Editor oder in eine Datei exportieren.  
+Sie können die Daten in einer *Quelldatenbank* und einer *Zieldatenbank* vergleichen und angeben, welche Tabellen verglichen werden sollen. Die Daten können überprüft werden, um zu bestimmen, welche Änderungen synchronisiert werden sollen. Sie können dann entweder das Ziel aktualisieren, um die Datenbanken zu synchronisieren, oder das Updateskript in den Transact\-SQL-Editor oder in eine Datei exportieren.  
   
 So können Sie beispielsweise Datenbanken synchronisieren, um einen Stagingserver mit einer Kopie der Produktionsdaten zu aktualisieren. Auch können Sie einzelne oder mehrere Tabellen synchronisieren, um sie mit Referenzdaten aus einer anderen Datenbank zu versehen. Darüber hinaus können Sie Daten vor und nach dem Ausführen von Tests vergleichen, um einen zusätzlichen Überprüfungsschritt einzubauen.  
   
 Sie können Daten in zwei Datenbanken vergleichen, aber keine Datenbankprojekt- oder DACPAC-Datei für einen Vergleich angeben, da diese keine Daten enthalten.  
   
-Dieser Abschnitt enthält die folgenden Themen:  
+Dieser Abschnitt enthält die folgenden Informationsbereiche:  
   
--   [Gewusst wie: Vergleichen und Synchronisieren der Daten von zwei Datenbanken](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
+-   [Vorgehensweise: Vergleichen und Synchronisieren von Daten aus zwei Datenbanken](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
--   [Gewusst wie: Anzeigen von Datenunterschieden](../ssdt/how-to-view-data-differences.md)  
+-   [Vorgehensweise: Anzeigen von Datenunterschieden](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Bei einem Vergleich der Daten in einer Tabelle oder Sicht muss die Tabelle oder Sicht in der Quelldatenbank einige Attribute mit einer Tabelle oder Sicht in der Zieldatenbank gemeinsam haben. Tabellen und Sichten, die die folgenden Kriterien nicht erfüllen, werden nicht verglichen und auch nicht auf der zweiten Seite des Assistenten **Neuer Datenvergleich** angezeigt:  
@@ -44,14 +44,14 @@ Bei einem Vergleich der Daten in einer Tabelle oder Sicht muss die Tabelle oder 
   
 -   Eine Tabelle kann nur dann mit einer Sicht verglichen werden, wenn beide den gleichen Namen besitzen.  
   
-Jedes Objekt besitzt einen Schlüssel oder Index, der bestimmt, welchen anderen Objekten es entspricht. Tabellen und Sichten können jedoch mehrere Primärschlüssel, eindeutige Indizes oder eindeutige Einschränkungen besitzen. Daher empfiehlt es sich unter Umständen anzugeben, welcher Schlüssel oder Index bzw. welche Einschränkung verwendet werden soll.  
+Jedes Objekt besitzt einen Schlüssel oder Index, der bestimmt, welchen anderen Objekten es entspricht. Tabellen und Sichten können mehrere Primärschlüssel, eindeutige Indizes oder eindeutige Einschränkungen besitzen. Daher empfiehlt es sich unter Umständen anzugeben, welcher Schlüssel oder Index bzw. welche Einschränkung verwendet werden soll.  
   
 ## <a name="common-tasks"></a>Allgemeine Aufgaben  
 In diesem Abschnitt werden allgemeine Aufgaben für dieses Szenario beschrieben.  
   
-**Festlegen von Optionen zum Steuern des Datenvergleichs**: Beim Vergleich von Daten können Sie problemlos Identitätsspalten ignorieren sowie Trigger und Fremdschlüssel deaktivieren. Außerdem können Sie Primärschlüssel, Indizes und eindeutige Einschränkungen aus dem Updateskript entfernen.  
+**Festlegen von Optionen zum Steuern des Datenvergleichs:** Beim Vergleich von Daten können Sie problemlos Identitätsspalten ignorieren sowie Trigger und Fremdschlüssel deaktivieren. Außerdem können Sie Primärschlüssel, Indizes und eindeutige Einschränkungen aus dem Updateskript entfernen.  
   
-**Vergleichen von Daten in Tabellen und optionales Aktualisieren des Ziels, sodass es der Quelle entspricht**: Nachdem Sie eine Quell- und eine Zieldatenbank angegeben und den Vergleich ausgeführt haben, können Sie die Ergebnisse im Fenster **Datenvergleich** anzeigen. Sie können nicht nur Details zu den Unterschieden anzeigen, sondern auch das Updateskript, mit dessen Hilfe Sie die Daten synchronisieren können. Nach Ermittlung der Unterschiede zwischen den beiden Datenbanken können Sie eine Aktion für die einzelnen Unterschiede angeben. So können Sie das Ziel aktualisieren oder das Updateskript in den Transact\-SQL-Editor oder in eine Datei exportieren. Das Exportieren des Skripts kann hilfreich sein, um es vor dem Anwenden der Änderungen zu überprüfen oder von einer anderen Person überprüfen zu lassen.  
+**Vergleichen Sie Daten in Tabellen, und aktualisieren Sie gegebenenfalls das Ziel, sodass es der Quelle entspricht:** Nachdem Sie eine Quell- und eine Zieldatenbank angegeben und den Vergleich ausgeführt haben, zeigen Sie die Ergebnisse im Fenster **Datenvergleich** an. Sie können nicht nur Details zu den Unterschieden anzeigen, sondern auch das Updateskript, mit dessen Hilfe Sie die Daten synchronisieren können. Nach Ermittlung der Unterschiede zwischen den beiden Datenbanken können Sie eine Aktion für die einzelnen Unterschiede angeben. So können Sie das Ziel aktualisieren oder das Updateskript in den Transact\-SQL-Editor oder in eine Datei exportieren. Das Exportieren des Skripts kann hilfreich sein, um es vor dem Anwenden der Änderungen zu überprüfen oder von einer anderen Person überprüfen zu lassen.  
   
 ## <a name="understanding-comparison-results"></a><a name="UnderstandingDataCompareResults"></a>Grundlegendes zu Vergleichsergebnissen  
 In der folgenden Tabelle werden die fünf Spalten im Fenster **Datenvergleich** beschrieben.  
@@ -69,5 +69,5 @@ Nach dem Klicken auf eine Tabelle oder Sicht im Fenster **Datenvergleich** werde
   
 ## <a name="see-also"></a>Weitere Informationen  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
-[Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   
