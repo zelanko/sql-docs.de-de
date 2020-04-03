@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 660ac899b1cf649bcc431bf10e2f9b18ca12cbc4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12922974abd63412b381989d4f6587a9d336ccfe
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "73637942"
+ms.locfileid: "80402579"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Behandlung von Problemen mit Paketausführungstools
 
@@ -30,7 +30,7 @@ ms.locfileid: "73637942"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Funktionen und Tools, die Sie zur Behandlung von Problemen beim Ausführen von Paketen nach deren Fertigstellung und Bereitstellung verwenden können.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] stellt zur Entwurfszeit Breakpoints zum Unterbrechen der Paketausführung, das Statusfenster sowie Daten-Viewer zum Überwachen der Daten beim Durchlaufen des Datenflusses zur Verfügung. Bei der Ausführung von bereitgestellten Paketen sind diese Funktionen jedoch nicht verfügbar. Folgende Haupttechniken zum Behandeln von Problemen mit bereitgestellten Paketen sind verfügbar:  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] stellt zur Entwurfszeit Breakpoints zum Anhalten der Paketausführung, des Statusfensters und der Daten-Viewer bereit. Breakpoints ermöglichen es Ihnen, Ihre Daten beim Durchlaufen des Datenflusses zu überwachen. Bei der Ausführung von bereitgestellten Paketen sind diese Features jedoch nicht verfügbar. Folgende Haupttechniken zum Behandeln von Problemen mit bereitgestellten Paketen sind verfügbar:  
   
 -   Abfangen und Behandeln von Paketfehlern mithilfe von Ereignishandlern  
   
@@ -45,20 +45,20 @@ ms.locfileid: "73637942"
 -   **Erneutes Ausführen von Paketen ab dem Punkt, an dem der Fehler aufgetreten ist, mithilfe von Prüfpunkten**. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Abfangen und Behandeln von Paketfehlern mithilfe von Ereignishandlern  
- Sie können auf viele Ereignisse, die vom Paket und den Objekten im Paket ausgelöst wurden, mit Ereignishandlern reagieren.  
+ Mit Ereignishandlern ist es möglich, auf Ereignisse zu reagieren, die vom Paket und den Paketobjekten ausgelöst werden.  
   
--   **Erstellen eines Ereignishandlers für das OnError-Ereignis**. Sie können im Ereignishandler den Task <ui>Mail senden</ui> verwenden, um einen Administrator über den Fehler zu benachrichtigen. Mit einem Skripttask und benutzerdefinierter Logik können Sie Systeminformationen zur Problembehandlung abrufen, oder Sie können einen Cleanup der temporären Ressourcen und unvollständigen Ausgaben durchführen. Weitere Informationen finden Sie unter [Integration Services-Ereignishandler &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
+-   **Erstellen eines Ereignishandlers für das OnError-Ereignis**. Im Ereignishandler können Sie einen Administrator mithilfe des Tasks „Mail senden“ über den Fehler benachrichtigen. Mit einem Skripttask und benutzerdefinierter Logik können Sie Systeminformationen zur Problembehandlung oder zum Bereinigen temporärer Ressourcen und unvollständiger Ausgaben abrufen. Weitere Informationen finden Sie unter [Integration Services-Ereignishandler &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
   
 ## <a name="troubleshoot-bad-data-by-using-error-outputs"></a>Behebung von Problemen mit fehlerhaften Daten mithilfe von Fehlerausgaben  
  Sie können die bei vielen Datenflusskomponenten verfügbare Fehlerausgabe verwenden, um Zeilen mit Fehlern an ein anderes Ziel zur späteren Analyse weiterzuleiten. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).  
   
 -   **Aufzeichnen von fehlerhaften Daten mithilfe von Fehlerausgaben**. Senden Sie Zeilen, die Fehler enthalten, an eine anderes Ziel, z.B. an eine Fehlertabelle oder eine Textdatei. Die Fehlerausgabe fügt automatisch zwei numerische Spalten mit der Nummer des Fehlers, der zum Abweisen der Zeile führte, und der ID der Spalte, in welcher der Fehler auftrat, hinzu.  
   
--   **Hinzufügen von beschreibenden Informationen zu den Fehlerausgaben**. Fügen Sie zusätzlich zu den beiden von der Fehlerausgabe bereitgestellten numerischen Bezeichnern die Fehlermeldung und den Spaltennamen hinzu, um die Analyse der Fehlerausgabe zu vereinfachen. Ein Beispiel, wie diese beiden zusätzlichen Spalten mithilfe von Skripts hinzugefügt werden, finden Sie unter [Erweitern einer Fehlerausgabe mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+-   **Hinzufügen von beschreibenden Informationen zu den Fehlerausgaben**. Fügen Sie zusätzlich zu den beiden von der Fehlerausgabe bereitgestellten numerischen Bezeichnern die Fehlermeldung und den Spaltennamen hinzu, um die Eindeutigkeit der Fehlerausgabe zu erhöhen. Ein Beispiel, wie diese beiden zusätzlichen Spalten mithilfe von Skripts hinzugefügt werden, finden Sie unter [Erweitern einer Fehlerausgabe mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
 -   **Sie können die Spaltennamen auch abrufen, indem Sie das DiagnosticEx-Ereignis protokollieren**. Dieses Ereignis schreibt eine Herkunftszuordnung für den Datenfluss in das Protokoll. Sie können den Spaltennamen dann in dieser Herkunftszuordnung nachschlagen, und zwar anhand des von einer Fehlerausgabe erfassten Spaltenbezeichners.  Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).  
   
-     Der Wert der Meldungsspalte für **DiagnosticEx** ist XML-Text. Fragen Sie zum Anzeigen des Meldungstexts für eine Paketausführung die Sicht [catalog.operation_messages &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) ab. Beachten Sie, dass Leerraum in der XML-Ausgabe beim **DiagnosticEx** -Ereignis nicht beibehalten wird, um die Größe des Protokolls zu verringern. Kopieren Sie das Protokoll in einen XML-Editor wie z.B. Visual Studio, der XML-Formatierung und Syntaxhervorhebung unterstützt, um die Lesbarkeit zu verbessern.  
+     Der Wert der Meldungsspalte für **DiagnosticEx** ist XML-Text. Fragen Sie zum Anzeigen des Meldungstexts für eine Paketausführung die Sicht [catalog.operation_messages &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) ab. Beachten Sie, dass Leerzeichen in der XML-Ausgabe des Ereignisses **DiagnosticEx** nicht beibehalten werden, um die Größe des Protokolls zu verringern. Kopieren Sie das Protokoll in einen XML-Editor wie z.B. Visual Studio, der XML-Formatierung und Syntaxhervorhebung unterstützt, um die Lesbarkeit zu verbessern.  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Behandlung von Problemen bei der Paketausführung mithilfe von Vorgangsberichten  
  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sind Standardvorgangsberichte verfügbar, um Sie zu unterstützen, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete, die im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog bereitgestellt werden, zu überwachen. Sie können die Berichte zu Paketen verwenden, um den Status und Verlauf von Paketen anzuzeigen und ggf. die Ursache von Fehlern zu identifizieren.  
@@ -69,7 +69,7 @@ ms.locfileid: "73637942"
  Sie können eine Reihe von SSISDB-Datenbanksichten abfragen, um die Paketausführung und andere Informationen zu Vorgängen zu überwachen. Weitere Informationen finden Sie unter [Überwachen der Ausführung von Paketen und anderen Vorgängen](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Behebung von Problemen bei der Paketausführung mithilfe der Protokollierung  
- Sie können die meisten Vorgänge beim Ausführen von Paketen durch Aktivieren der Protokollierung nachverfolgen. Bei der Protokollierung werden Informationen zu angegebenen Ereignissen zur späteren Analyse aufgezeichnet und in einer Datenbanktabelle, einer Flatfile, einer XML-Datei oder einem anderen unterstützten Ausgabeformat gespeichert.  
+ Sie können die meisten Vorgänge beim Ausführen von Paketen mithilfe der Protokollierung nachverfolgen. Protokollanbieter erfassen Informationen zu den angegebenen Ereignissen zur späteren Analyse und speichern diese Informationen in einem von mehreren unterstützten Formaten.  Zu den unterstützten Protokollanbieterformaten gehören Datenbanktabellen, Flatfiles und XML-Dateien.  
   
 -   **Aktivieren der Protokollierung**. Sie können die Protokollierungsausgabe optimieren, indem Sie nur die Ereignisse und Informationen auswählen, die Sie aufzeichnen möchten. Weitere Informationen finden Sie unter [Integration Services-Protokollierung (SSIS)](../performance/integration-services-ssis-logging.md).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "73637942"
   
     2.  **Hinzufügen von Überwachungsinformationen zum Datenfluss**. Sie können mit der Überwachungstransformation Informationen zu Zeilen im Datenfluss hinzufügen, die Daten zur Paketausführung enthalten, durch die die betreffende Zeile erstellt oder geändert wurde. Die Überwachungstransformation stellt neun Arten von Informationen bereit, wie z.B. PackageName und ExecutionInstanceGUID. Weitere Informationen finden Sie unter [Überwachungstransformation](../../integration-services/data-flow/transformations/audit-transformation.md). Wenn Sie zu Überwachungszwecken jede Zeile mit benutzerdefinierten Informationen versehen möchten, können Sie diese Informationen mithilfe einer Transformation für abgeleitete Spalten den Zeilen im Datenfluss hinzufügen. Weitere Informationen finden Sie unter [Transformation für abgeleitete Spalten](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
-    3.  **Erwägen der Aufzeichnung von Zeilenanzahldaten**. Erwägen Sie, eine separate Tabelle mit Informationen zur Zeilenanzahl zu erstellen, in der jede Paketausführungsinstanz über ihre ExecutionID identifiziert wird. Verwenden Sie die Transformation für Zeilenanzahl, um an wichtigen Stellen im Datenfluss die Zeilenanzahl in einer Reihe von Variablen zu speichern. Verwenden Sie den Task 'SQL ausführen', um nach Beendigung des Datenflusses die Variablenreihe zur späteren Analyse und Berichterstattung in eine Zeile der Tabelle einzufügen.  
+    3.  **Erwägen der Aufzeichnung von Zeilenanzahldaten**. Erwägen Sie, eine separate Tabelle mit Informationen zur Zeilenanzahl zu erstellen, in der jede Paketausführungsinstanz über ihre ExecutionID identifiziert wird. Verwenden Sie die Transformation für Zeilenanzahl, um an wichtigen Stellen im Datenfluss die Zeilenanzahl in einer Reihe von Variablen zu speichern. Fügen Sie den Task „SQL ausführen“ hinzu, um die Variablenreihe zur späteren Analyse und Berichterstellung in eine Zeile der Tabelle einzufügen.  
   
      Weitere Informationen zu dieser Methode finden Sie im Abschnitt „ETL Auditing and Logging“ im [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73637942"
 ## <a name="troubleshoot-run-time-validation-issues"></a>Behandlung von Problemen bei der Überprüfung zur Laufzeit  
  Es kann vorkommen, dass Sie keine Verbindung mit den Datenquellen herstellen können oder Teile des Pakets erst nach der Ausführung von vorausgehenden Tasks im Paket zur Laufzeit überprüft werden können. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt die folgenden Funktionen bereit, mit denen Sie die Überprüfungsfehler, die in solchen Fällen ausgelöst werden, vermeiden können:  
   
--   **Konfigurieren der DelayValidation-Eigenschaft für Paketelemente, die beim Laden des Pakets noch nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern beim Laden des Pakets können Sie für Paketelemente, deren Konfigurationen zu diesem Zeitpunkt noch nicht gültig sind, **DelayValidation** auf **True** festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die **DelayValidation** -Eigenschaft kann auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden.  
+-   **Konfigurieren der Eigenschaft „DelayValidation“ für bekannte ungültige Paketelemente:** Legen Sie **DelayValidation** auf **TRUE** fest, um Validierungsfehler für Paketelemente mit bekannten Konfigurationsproblemen zu vermeiden. Ein Beispiel hierfür wäre ein Paket, das einen Datenflusstask enthält, der eine Zieltabelle verwendet, die erst zur Laufzeit durch den Task „SQL ausführen“ erstellt wird. Die **DelayValidation** -Eigenschaft kann auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden.  
   
      Die **DelayValidation** -Eigenschaft kann für einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten festgelegt werden. Sie erreichen ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> -Eigenschaft einzelner Datenflusskomponenten auf **FALSE**. Wenn jedoch der Wert dieser Eigenschaft auf **false**festgelegt ist, erkennt die Komponente keine Änderungen der Metadaten externer Datenquellen. Wenn der Wert auf **true**festgelegt ist, können Sie mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> -Eigenschaft Blockierungsprobleme vermeiden, die durch Sperren in der Datenbank verursacht werden, insbesondere wenn das Paket Transaktionen verwendet.  
   
@@ -107,10 +107,7 @@ ms.locfileid: "73637942"
 -   **Einige Datenanbieter sind auf der 64-Bit-Plattform nicht verfügbar**. Insbesondere ist keine 64-Bit-Version des [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieters für Jet verfügbar, der zum Herstellen von Verbindungen mit Excel- oder Access-Datenquellen benötigt wird.  
   
 ## <a name="troubleshoot-errors-without-a-description"></a>Behandlung von Fehlern ohne Beschreibung  
- Wenn ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Fehler ohne zugehörige Beschreibung auftritt, können Sie die Beschreibung zu dem Fehler anhand seiner Fehlernummer in der Liste unter [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md) nachschlagen. Die Liste enthält zurzeit keine Informationen zur Problembehandlung.  
+ Wenn ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Fehler ohne zugehörige Beschreibung auftritt, können Sie diese unter [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md) nachschlagen. Die Liste enthält zurzeit keine Informationen zur Problembehandlung.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Debuggen des Datenflusses](../../integration-services/troubleshooting/debugging-data-flow.md)  
-  
-## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546)(Hinzufügen des Fehlerspaltennamens zu einer Fehlerausgabe) auf dougbert.com.  
+ [Debuggen des Datenflusses](../../integration-services/troubleshooting/debugging-data-flow.md)

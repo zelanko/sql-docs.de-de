@@ -1,5 +1,6 @@
 ---
 title: Überwachung und Problembehandlung für PolyBase | Microsoft-Dokumentation
+description: Troubleshooting von PolyBase, Verwenden dieser Sichten und DMVs. Aufrufen eines PolyBase-Abfrageplans, Überwachen von Knoten in einer PolyBase-Gruppe und Einrichten der Hochverfügbarkeit für Hadoop-Namenknoten.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -14,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 171527b02674a5a02420f5cb002fddd7e7f31ac6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909630"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216050"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Überwachung und Problembehandlung für PolyBase
 
@@ -33,7 +34,7 @@ Verwenden Sie die hier aufgelisteten Katalogsichten, um PolyBase-Vorgänge zu ve
 
 |||  
 |-|-|  
-|Sicht|Beschreibung|  
+|Sicht|BESCHREIBUNG|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Identifiziert externe Tabellen.|  
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifiziert externe Datenquellen.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifiziert externe Dateiformate.|  

@@ -1,5 +1,6 @@
 ---
 title: Behandeln von Ausnahmen in Reporting Services | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Ausnahmen verarbeiten, die in Reporting Services auftreten, damit Sie eine angemessene Aktion bestimmen können, die in Ihren Anwendungen als nächster Schritt ausgeführt werden soll.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7fbf4c9d89d35f4fbb437a41c691f7f8c6578b9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e29de3a0c6b622de2abb411f36a815d7071f16d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63028567"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216329"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Behandeln von Ausnahmen in Reporting Services
   Wenn eine Anforderung auf den Reporting Services-SOAP-API-Client nicht durchgeführt werden kann, gibt der Berichtsserver eine Fehlermeldung statt der erwarteten Ergebnisse des Aufrufs aus. Wenn ein Aufruf nicht durchgeführt werden kann, wird eine Fehlermeldung für den Berichtsserver-Webdienst als ein SOAP-**Fault**-XML-Element zurückgegeben. Das wichtigste Beschreibungselement des Fehlers ist das **detail**-Element, das alle vom Berichtsserver gelieferten Fehlerdaten sowie weitere Fehlerdaten des Webdiensts enthält. Die wichtigste Information im **detail**-Element ist der Fehlercode des Berichtsservers. Auf der Grundlage der Meldung und des Fehlercodes können Sie bestimmen, welche Aktion als Nächstes in Ihren Anwendungen vorgenommen werden muss. Weitere Informationen zu SOAP-Fehlern finden Sie im World Wide Web Consortium (W3C) auf der Website unter http://www.w3.org/TR/SOAP.  

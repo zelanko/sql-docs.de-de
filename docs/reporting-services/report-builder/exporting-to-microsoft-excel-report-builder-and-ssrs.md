@@ -1,5 +1,6 @@
 ---
 title: Exportieren nach Microsoft Excel (Berichts-Generator) | Microsoft-Dokumentation
+description: Im Berichts-Generator rendert die Excel-Renderingerweiterung einen paginierten Bericht im Office Open XML-Format für die Verwendung mit Microsoft Excel.
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b067dea118592a58b87a9da50ba31d4ee2897cfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 865caa0938aa89feacbb5e330eb38f292039446c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079579"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342891"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   Die Excel-Renderingerweiterung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendert einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht im [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Format (XLSX). Mit der Excel-Renderingerweiterung spiegelt die Breite von Spalten in Excel die Breite von Spalten in Berichten genauer wider.  
@@ -29,7 +30,7 @@ ms.locfileid: "77079579"
 >   
 >  Um das Risiko der versehentlichen Ausführung schädlicher Skripts zu minimieren, sollten gerenderte Berichte nur aus vertrauenswürdigen Quellen geöffnet werden. Weitere Informationen zum Schützen von Berichten finden Sie unter [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md).  
   
-##  <a name="ExcelLimitations"></a> Einschränkungen in Excel  
+##  <a name="excel-limitations"></a><a name="ExcelLimitations"></a> Einschränkungen in Excel  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] Einschränkungen für exportierte Berichte. Die wichtigsten Einschränkungen sind folgende:  
   
 -   Die maximale Spaltenbreite ist auf 255 Zeichen bzw. 1726,5 Punkte beschränkt. Der Renderer prüft nicht, ob die Spaltenbreite unterhalb der Grenze liegt.  
@@ -178,7 +179,7 @@ ms.locfileid: "77079579"
   
  Da der Bericht die Zeilenhöhe explizit festlegt, wirkt sich die Standardzeilenhöhe nur auf Zeilen aus, deren Größe beim Export nach Excel automatisch geändert wird.  
   
-##  <a name="ReportItemsExcel"></a> Berichtselemente in Excel  
+##  <a name="report-items-in-excel"></a><a name="ReportItemsExcel"></a> Berichtselemente in Excel  
  Rechtecke, Unterberichte, der Hauptteil des Berichts und Datenbereiche werden als Bereich von Excel-Zellen gerendert. Textfelder, Bilder, Diagramme, Datenbalken, Sparklines, Karten, Messgeräte und Indikatoren müssen innerhalb einer Excel-Zelle gerendert werden. Abhängig vom Layout des restlichen Berichts kann diese möglicherweise zusammengeführt werden.  
   
  Bilder, Diagramme, Sparklines, Datenbalken, Karten, Messgeräte, Indikatoren und Zeilen werden innerhalb einer Excel-Zelle positioniert, befinden sich jedoch eine Ebene über dem Zellenraster. Linien werden als Zellrahmen gerendert.  
@@ -192,7 +193,7 @@ ms.locfileid: "77079579"
   
  Wenn keine Übereinstimmungen gefunden werden, verwendet Excel die Standardseitengröße für den Drucker. Falls die Papierbreite kleiner als die Papierhöhe ist, wird die Ausrichtung auf "Hochformat" festgelegt, andernfalls auf "Querformat".  
   
-##  <a name="WorksheetTabNames"></a> Namen von Registern in Arbeitsblättern  
+##  <a name="worksheet-tab-names"></a><a name="WorksheetTabNames"></a> Namen von Registern in Arbeitsblättern  
  Wenn Sie einen Bericht nach Excel exportieren, werden die durch Seitenumbruch erstellten Berichtsseiten in andere Arbeitsblätter exportiert. Wenn Sie einen ursprünglichen Seitennamen für den Bericht bereitgestellt haben, erhält jedes Arbeitsblatt der Excel-Arbeitsmappe standardmäßig diesen Namen. Der Name wird auf der Registerkarte des Arbeitsblattes angezeigt. Da jedoch jedes Arbeitsblatt in einer Arbeitsmappe einen eindeutigen Namen haben muss, wird eine ganze Zahl (beginnend bei 1 und jeweils um 1 erhöht) an den ursprünglichen Seitennamen aller zusätzlichen Arbeitsblätter angefügt. Wenn der ursprüngliche Seitenname z. B. **Verkaufbericht nach Geschäftsjahr**ist, würde das zweite Arbeitsblatt **Verkaufbericht nach Geschäftsjahr1**und das dritte Arbeitsblatt **Verkaufbericht nach Geschäftsjahr2**genannt werden.  
   
  Wenn alle mit Seitenumbrüchen erstellte Berichtsseiten neue Seitennamen angeben, erhält auch jedes Arbeitsblatt den entsprechenden Seitennamen. Diese Seitennamen sind jedoch möglicherweise nicht eindeutig. Wenn Seitennamen nicht eindeutig sind, werden die Arbeitsblätter auf die gleiche Weise wie ursprünglichen Seitennamen benannt. Wenn z. B. der Seitenname von zwei Gruppen **Verkäufe für NW**ist, erhält eine Registerkarte des Arbeitsblattes den Namen **Verkäufe für NW**und die andere den Namen **Verkäufe für NW1**.  
@@ -201,17 +202,17 @@ ms.locfileid: "77079579"
   
  Reporting Services stellt Eigenschaften bereit, die für Berichte, Datenbereiche, Gruppen und Rechtecke festgelegt werden können. So können Sie Berichte erstellen, die mit Ihren bevorzugten Einstellungen nach Excel exportiert werden können. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="DocumentProperties"></a> Dokumenteigenschaften  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> Dokumenteigenschaften  
  Der Excel-Renderer schreibt die folgenden Metadaten in die Excel-Datei.  
   
 |Berichtselementeigenschaften|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
 |Erstellt|Datum und Zeit der Berichtsausführung als Datums-/Uhrzeitwert im ISO-Format.|  
 |Autor|Autor des Berichts|  
-|Beschreibung|Berichtsbeschreibung|  
+|BESCHREIBUNG|Berichtsbeschreibung|  
 |LastSaved|Datum und Zeit der Berichtsausführung als Datums-/Uhrzeitwert im ISO-Format.|  
   
-##  <a name="PageHeadersFooters"></a> Seitenkopfzeilen und -fußzeilen  
+##  <a name="page-headers-and-footers"></a><a name="PageHeadersFooters"></a> Seitenkopfzeilen und -fußzeilen  
  Abhängig von der Einstellung Geräteinformationen SimplePageHeaders kann der Seitenkopf auf zwei Arten gerendert werden: Er kann entweder oben auf jedem Arbeitsblattzellenraster oder im eigentlichen Excel-Arbeitsblatt-Kopfzeilenabschnitt gerendert werden. Standardmäßig wird der Seitenkopf zum Zellenraster auf dem Excel-Arbeitsblatt gerendert.  
   
  Der Seitenfuß wird unabhängig vom Wert der Einstellung SimplePageHeaders immer auf dem eigentlichen Excel-Arbeitsblatt-Footerabschnitt gerendert.  
@@ -227,7 +228,7 @@ ms.locfileid: "77079579"
   
  Aufgrund von Einschränkungen in Excel können in Excel-Kopf- und -Fußzeilenabschnitten ausschließlich Textfelder als Berichtselement angezeigt werden.  
   
-##  <a name="Interactivity"></a> Interaktivität  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interaktivität  
  Einige interaktive Elemente werden in Excel unterstützt. Im Folgenden werden spezifische Funktionsweisen beschrieben.  
   
 ### <a name="show-and-hide"></a>Einblenden und Ausblenden  
@@ -262,7 +263,7 @@ ms.locfileid: "77079579"
 ### <a name="bookmarks"></a>Lesezeichen  
  Lesezeichenlinks in Textfeldern werden in der Zelle als Excel-Hyperlinks gerendert, in die der Text gerendert wird. Lesezeichenlinks für Bilder und Diagramme werden beim Rendern als Excel-Hyperlinks auf dem Bild gerendert. Durch Klicken auf das Lesezeichen wird zur Excel-Zelle gewechselt, in der das mit Lesezeichen versehene Berichtselement gerendert wird.  
   
-##  <a name="ConditionalFormat"></a> Ändern von Berichten zur Laufzeit  
+##  <a name="changing-reports-at-run-time"></a><a name="ConditionalFormat"></a> Ändern von Berichten zur Laufzeit  
  Wenn ein Bericht in mehrere Formate gerendert werden muss und kein Berichtslayout erstellt werden kann, das in allen erforderlichen Formaten wunschgemäß Rendervorgänge ausführt, verwenden Sie ggf. das integrierte globale Objekt von "RenderFormat", um die Darstellung des Berichts zur Laufzeit bedingt zu ändern. Dadurch können Berichtselemente abhängig vom verwendeten Renderer ausgeblendet oder angezeigt werden, um die besten Ergebnisse in den einzelnen Formaten zu erhalten. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

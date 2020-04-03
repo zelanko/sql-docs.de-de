@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Schnelles Erstellen eines Diagrammberichts offline (Berichts-Generator) | Microsoft-Dokumentation'
+description: In diesem Tutorial erstellen Sie mit dem Berichts-Generator ein Kreisdiagramm in einem paginierten Reporting Services-Bericht. Anschließend fügen Sie Prozentwerte hinzu und nehmen Änderungen am Kreisdiagramm vor.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41e26cbdeaa794ebae01371207d7ff7847619dc2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67037960"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290745"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator)
 
@@ -30,7 +31,7 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
 ## <a name="prerequisites"></a>Voraussetzungen  
  Sowohl bei Verwendung von XML-Daten als auch bei einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage benötigen Sie Zugriff auf den Berichts-Generator. Sie können [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver starten (entweder im nativem Modus oder im integrierten SharePoint-Modus), oder Sie können [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] aus dem Microsoft Download Center herunterladen. Weitere Informationen finden Sie unter [Installieren des Berichts-Generators](../../reporting-services/install-windows/install-report-builder.md).  
   
-##  <a name="TwoWays"></a> Zwei Möglichkeiten zum Absolvieren des Lernprogramms  
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a> Zwei Möglichkeiten zum Absolvieren des Lernprogramms  
   
 -   [Erstellen des Kreisdiagramms mit XML-Daten](#CreatePieChartXML)  
   
@@ -50,7 +51,7 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
   
  [Erstellen des Kreisdiagramms mit einer Transact-SQL-Abfrage, die Daten enthält](#CreatePieQueryData)  
   
-##  <a name="CreatePieChartXML"></a> Erstellen des Kreisdiagramms mit XML-Daten  
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a> Erstellen des Kreisdiagramms mit XML-Daten  
   
 1.  [Starten Sie den Berichts-Generator](../../reporting-services/report-builder/start-report-builder.md) aus dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal, vom Berichtsserver im integrierten SharePoint-Modus oder von Ihrem Computer.  
   
@@ -137,7 +138,7 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
   
 18. Fahren Sie mit [Nach der Ausführung des Assistenten](#AfterWizard) in diesem Artikel fort, um Ihr Kreisdiagramm weiter zu ändern.  
   
-##  <a name="CreatePieQueryData"></a> Erstellen des Kreisdiagramms mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage  
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a> Erstellen des Kreisdiagramms mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage  
   
 1.  [Starten Sie den Berichts-Generator](../../reporting-services/report-builder/start-report-builder.md) aus dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal, vom Berichtsserver im integrierten SharePoint-Modus oder von Ihrem Computer.  
   
@@ -187,7 +188,7 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
   
 15. Klicken Sie auf der Registerkarte **Home** des Menübands auf **Ausführen** , um das tatsächliche Kreisdiagramm anzuzeigen.  
  
-##  <a name="AfterWizard"></a> Nach der Ausführung des Assistenten  
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> Nach der Ausführung des Assistenten  
  Nachdem Sie den Kreisdiagrammbericht erstellt haben, können Sie etwas experimentieren. Klicken Sie auf der Registerkarte **Ausführen** des Menübands auf **Entwurf**, um das Diagramm weiter ändern zu können.  
   
 ## <a name="make-the-chart-bigger"></a>Vergrößern des Diagramms  
@@ -219,7 +220,7 @@ Beachten Sie, dass sich die Entwurfsoberfläche beim Ziehen vergrößert.
   
  Weitere Informationen zum Anpassen von Diagrammbezeichnungen und -legenden finden Sie unter [Anzeigen von Prozentwerten in einem Kreisdiagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) sowie unter [Ändern des Texts eines Legendenelements &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
-##  <a name="WhatsNext"></a> Wie geht es weiter?  
+##  <a name="whats-next"></a><a name="WhatsNext"></a> Wie geht es weiter?  
  Nachdem Sie nun Ihren ersten Bericht in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]erstellt haben, können Sie die anderen Tutorials durcharbeiten und die ersten Berichte mit Ihren eigenen Daten erstellen. Zur Ausführung von [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] müssen Sie berechtigt sein, mithilfe einer *Verbindungszeichenfolge*, durch die die Verbindung mit der Datenquelle hergestellt wird, auf Ihre Datenquellen (beispielsweise Datenbanken) zuzugreifen. Der Systemadministrator hat diese Informationen und kann Ihnen bei der Einrichtung helfen.  
   
  Zur Bearbeitung der anderen Tutorials benötigen Sie den Namen einer SQL Server-Instanz sowie Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. Auch dabei können Sie sich an den Systemadministrator wenden.  

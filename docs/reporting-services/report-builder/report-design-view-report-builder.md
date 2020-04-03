@@ -1,5 +1,6 @@
 ---
 title: Entwurfsansicht für Berichte (Berichts-Generator) | Microsoft-Dokumentation
+description: Dieser Artikel erklärt die Steuerelemente im Berichts-Generator-Fenster, die Sie zum Hinzufügen, Auswählen und Organisieren Ihrer Berichtsressourcen und zum Verändern der Berichtselementeigenschaften verwenden.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ca82e7fa0a302c4156c56c2e5ff66ad0cc49da99
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190044"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290867"
 ---
 # <a name="report-design-view-report-builder"></a>Berichtsentwurfsansicht (Berichts-Generator)
   Das Fenster des Berichts-Generators ist so aufgebaut, dass Sie Berichtsressourcen einfach anordnen und schnell die gewünschten paginierten Berichte erstellen können. Die Entwurfsoberfläche befindet sich in der Mitte des Fensters. Das Menüband und die Bereiche befinden sind um die Entwurfsoberfläche angeordnet. Auf der Entwurfsoberfläche können Sie die Berichtselemente hinzufügen und anordnen. Dieser Artikel erklärt die Bereiche, die Sie zum Hinzufügen, Auswählen und Organisieren Ihrer Berichtsressoucen und zum Verändern der Berichtselementeigenschaften verwenden.  
@@ -47,13 +48,13 @@ ms.locfileid: "74190044"
   
 8.  Aktueller Berichtsstatusbalken  
   
-##  <a name="Ribbon"></a> Parameterbereich  
+##  <a name="parameters-pane"></a><a name="Ribbon"></a> Parameterbereich  
  Mithilfe von Berichtsparametern können Sie Berichtsdaten steuern, eine Verbindung zwischen verwandten Berichten herstellen und die Berichtspräsentation anpassen. Der Parameter-Bereich bietet ein flexibles Layout für die Berichtsparameter.  
   
  Erfahren Sie mehr über [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
-##  <a name="RptDesignSurface"></a> Berichtsentwurfsoberfläche  
+##  <a name="the-report-design-surface"></a><a name="RptDesignSurface"></a> Berichtsentwurfsoberfläche  
  Die Berichtsentwurfsoberfläche des Berichts-Generators ist der Hauptarbeitsbereich zum Entwerfen der Berichte. Fügen Sie der Entwurfsoberfläche Berichtselemente wie Datenbereiche, Unterberichte, Textfelder, Bilder, Rechtecke und Linien aus dem Menüband oder dem Berichtsteilkatalog hinzu, um sie in den Bericht einzufügen. Dort können Sie den Berichtselementen Gruppen, Ausdrücke, Parameter, Filter, Aktionen, Sichtbarkeit und Formatierung hinzufügen.  
   
  Sie können auch folgende Eigenschaften ändern:  
@@ -75,7 +76,7 @@ ms.locfileid: "74190044"
 >  Aktivieren Sie auf der Registerkarte **Ansicht** das Kontrollkästchen **Lineal**, um das Lineal anzuzeigen.  
   
   
-##  <a name="ReptDataPane"></a> The Report Data Pane  
+##  <a name="the-report-data-pane"></a><a name="ReptDataPane"></a> The Report Data Pane  
  Im Berichtsdatenbereich des Berichts-Generators definieren Sie die für einen Bericht benötigten Berichtsdaten und -ressourcen, bevor Sie mit dem Entwurf des Berichtslayouts beginnen. Sie können dem Berichtsdatenbereich z. B. Datenquellen, Datasets, berechnete Felder, Berichtsparameter und Bilder hinzufügen.  
   
  Nachdem Sie dem Berichtsdatenbereich Elemente hinzugefügt haben, können Sie Felder in Berichtselemente auf der Entwurfsoberfläche ziehen und so bestimmen, wo die Daten auf der Berichtsseite angezeigt werden.  
@@ -105,7 +106,7 @@ ms.locfileid: "74190044"
 -   [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-##  <a name="ReptPartGallery"></a> Berichtsteilkatalog  
+##  <a name="the-report-part-gallery"></a><a name="ReptPartGallery"></a> Berichtsteilkatalog  
  Die einfachste Methode zum Erstellen eines Berichts besteht darin, auf dem Berichtsserver oder einem in eine SharePoint-Website integrierten Berichtsserver nach einem vorhandenen Berichtsteil zu suchen (z. B. eine Tabelle oder ein Diagramm).  
   
  Wenn Sie auf der Registerkarte Einfügen auf **Berichtsteile** klicken, wird der Berichtsteilkatalog geöffnet. Dort können Sie Berichtsteile suchen, die Sie Ihrem Bericht hinzufügen. Sie können die Berichtsteile nach dem Namen des Berichtsteils (vollständig oder teilweise), nach der Person, von der der Berichtsteil erstellt oder zuletzt geändert wurde, nach dem letzten Änderungsdatum, dem Speicherort oder dem Typ des Berichtsteils filtern. Sie konnten z. B. nach allen Diagrammen suchen, die in der vorhergehenden Woche von einem oder mehreren Ihrer Kollegen erstellt wurden.  
@@ -116,7 +117,7 @@ ms.locfileid: "74190044"
  Sie können die Suchergebnisse als Miniaturansichten oder in Listenform anzeigen und nach Name, Erstellungs- und Änderungsdatum und dem Ersteller sortieren. Weitere Informationen finden Sie unter [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="PropertiesPane"></a> Eigenschaften (Bereich in Berichts-Generator)  
+##  <a name="the-properties-pane-report-builder"></a><a name="PropertiesPane"></a> Eigenschaften (Bereich in Berichts-Generator)  
  Mit jedem Element in einem Bericht, Datenbereichen, Bildern und Textfeldern und im Berichtshauptteil selbst, sind Eigenschaften verknüpft. Beispiel: Die Eigenschaft BorderColor für ein Textfeld gibt den Farbwert für den Rahmen des Textfelds an, während die Eigenschaft PageSize für den Bericht die Seitengröße des Berichts angibt.  
   
  Diese Eigenschaften werden im Bereich "Eigenschaften" angezeigt. Die Eigenschaften im Bereich ändern sich je nach ausgewähltem Berichtselement.  
@@ -142,7 +143,7 @@ ms.locfileid: "74190044"
  Der Eigenschaftenbereich enthält drei Schaltflächen am oberen Rand: Category, Alphabetize, und Property Pages. Klicken Sie auf die Schaltfläche Kategorie und Alphabetisieren, um zwischen den Ansichten des Eigenschaftenbereichs zu wechseln. Klicken Sie auf die Schaltfläche **Eigenschaftenseiten** , um das Eigenschaftendialogfeld für ein ausgewähltes Berichtselement zu öffnen.  
   
   
-##  <a name="GroupPane"></a> Gruppierung (Bereich in Berichts-Generator)  
+##  <a name="the-grouping-pane-report-builder"></a><a name="GroupPane"></a> Gruppierung (Bereich in Berichts-Generator)  
  Gruppen werden verwendet, um die Berichtsdaten in einer visuellen Hierarchie zu organisieren und Ergebnisse zu berechnen. Sie können die Zeilen- und Spaltengruppen innerhalb eines Datenbereichs auf der Entwurfsoberflache und im Gruppierungsbereich anzeigen. Der Gruppierungsbereich hat zwei Bereiche: Row Groups und Column Groups. Wenn Sie einen Datenbereich wählen, werden im Gruppierungsbereich alle Gruppen innerhalb dieses Datenbereichs in Form einer hierarchischen Liste angezeigt: Untergeordnete Gruppen werden eingerückt unter den übergeordneten Gruppen angezeigt.  
   
  ![Zeilengruppen im Berichts-Generator](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Zeilengruppen im Berichts-Generator")  
@@ -154,7 +155,7 @@ ms.locfileid: "74190044"
  Weitere Informationen finden Sie unter [Gruppierungsbereich &#40;Berichts-Generator&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md) und [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
   
-##  <a name="RunMode"></a> Anzeigen einer Berichtsvorschau im Ausführungsmodus  
+##  <a name="previewing-your-report-in-run-mode"></a><a name="RunMode"></a> Anzeigen einer Berichtsvorschau im Ausführungsmodus  
  In der Berichtsentwurfsansicht arbeiten Sie nicht mit tatsächlichen Daten, sondern mit einer durch den Feldnamen oder Ausdruck angegebenen Darstellung der Daten. Wenn die tatsächlichen Daten im Kontext des entworfenen Berichts angezeigt werden sollen, können Sie den Bericht ausführen, um eine Vorschau der Daten aus der zugrunde liegenden Datenbank im Berichtslayout anzuzeigen. Durch Wechseln zwischen dem Entwurf und der Ausführung des Berichts können Sie den Entwurf des Berichts anpassen und die Ergebnisse sofort anzeigen. Um die Vorschau des Berichts anzuzeigen, klicken Sie auf **Ausführen** in der **Ansichten** group on the ribbon.  
   
  Wenn Sie auf **Ausführen**klicken, stellt der Berichts-Generator eine Verbindung mit den Berichtsdatenquellen her. Die Daten werden auf dem Computer zwischengespeichert und mit dem Layout kombiniert, und anschließend wird der Bericht im HTML-Viewer gerendert. Sie können den Bericht beliebig oft ausführen, während Sie weiterhin am Entwurf des Berichts arbeiten. Wenn Sie mit dem Entwurf des Berichts zufrieden sind, können Sie ihn auf dem Berichtsserver speichern. Dort kann er von Benutzern mit den entsprechenden Berechtigungen angezeigt werden.  

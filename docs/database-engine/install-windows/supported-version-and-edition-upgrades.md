@@ -1,5 +1,6 @@
 ---
-title: Unterstützte Versions- und Editionsupgrades in SQL Server 2016 | Microsoft-Dokumentation
+title: Unterstützte Versions- und Editionsupgrades in SQL Server 2016
+description: In diesem Artikel finden Sie Informationen zu den unterstützten Versions- und Editionsupgrades für SQL Server 2016.
 ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql
@@ -15,14 +16,14 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 99b6522316928fcd7397d27c1a5c85d927a8e0b9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 70486130ebdd5b8fd0f8481f3c94558036b4dbac
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67934863"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434147"
 ---
-# <a name="supported-version-and-edition-upgrades"></a>Unterstützte Versions- und Editionsupgrades
+# <a name="supported-version--edition-upgrades-sql-server-2016"></a>Unterstützte Versions- und Editionsupgrades in SQL Server 2016
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -54,7 +55,7 @@ ms.locfileid: "67934863"
 
 -   Wenn Sie ein Upgrade von RC1 oder früheren Versionen von SQL Server 2016 auf RC3 oder höher durchführen, muss PolyBase vor dem Upgrade deinstalliert und danach wieder installiert werden.
   
-## <a name="upgrades-from-earlier-versions-to-includesssql15-mdincludessssql15-mdmd"></a>Upgrades von früheren Versionen auf [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssql15-md"></a>Upgrades von früheren Versionen auf [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  
  
 SQL Server 2016 unterstützt ein Upgrade von folgenden Versionen von SQL Server:
  
@@ -104,7 +105,7 @@ In der nachfolgenden Tabelle sind die unterstützten Szenarien für das Upgrade 
 
  \* Microsoft-Unterstützung zum Aktualisieren von Release Candidate-Software ist speziell für Kunden vorgesehen, die am Technology Adoption Program (TAP) teilgenommen haben. 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]-Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+###  <a name="sssql15-md-support-for-ssversion2005"></a><a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]-Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
 In diesem Abschnitt wird die [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] -Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]erläutert. In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]können Sie die folgenden Schritte ausführen:  
   
 -   Anfügen einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank (MDF-/LDF-Dateien) an eine [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]-Instanz der Datenbank-Engine.  
@@ -138,7 +139,7 @@ Szenarien, die in der Liste nicht aufgeführt sind, werden nicht unterstützt. D
   
 -   Unterstützung von benutzerdefinierten Integration Services-Drittanbieterkomponenten für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sowie Ausführen und Upgrade der Komponenten.  
   
-## <a name="includesssql15-mdincludessssql15-mdmd-edition-upgrade"></a>[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Editionsupgrade  
+## <a name="sssql15-md-edition-upgrade"></a>[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Editionsupgrade  
 In der folgenden Tabelle sind die unterstützten Szenarien für das Editionsupgrade in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]aufgeführt.  
   
 Schrittweise Anweisungen zum Ausführen eines Editionsupgrades finden Sie unter [Aktualisieren auf eine andere Edition von SQL Server 2016 &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
@@ -146,7 +147,7 @@ Schrittweise Anweisungen zum Ausführen eines Editionsupgrades finden Sie unter 
 |Upgrade von|Upgrade auf|  
 |------------------|----------------|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL und Core)**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise |  
-|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise Evaluation**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL- oder Core-Lizenz) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Entwickler <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> Upgrades von Evaluation (kostenlose Edition) auf eine kostenpflichtige Edition werden für eigenständige Installationen, für gruppierte Installationen jedoch nicht unterstützt.|  
+|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise Evaluation**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL- oder Core-Lizenz) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Entwickler <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> Upgrades von Evaluation (kostenlose Edition) auf eine kostenpflichtige Edition werden für eigenständige Installationen, für gruppierte Installationen jedoch nicht unterstützt. Diese Begrenzung gilt nicht für eigenständige Instanzen, die auf einem Failovercluster von Windows installiert sind, der Mitglied einer Verfügbarkeitsgruppe ist.|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL- oder Core-Lizenz)|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL- oder Core-Lizenz) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL- oder Core-Lizenz) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  

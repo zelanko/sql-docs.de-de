@@ -1,5 +1,6 @@
 ---
 title: Detail-Eigenschaft | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die Detail-Eigenschaft der SoapException-Klasse von Reporting Services, insbesondere über die XML-Elemente, die die Eigenschaft definieren.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 087f7f6da8882f181c55a187438d4493ec5b1a9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 929c597fda9b97c5ffdb24a0aed236f68727a3fd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991555"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215619"
 ---
 # <a name="detail-property"></a>Detail-Eigenschaft
   Die XML-Struktur der **Detail**-Eigenschaft der **SoapException**-Klasse in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sieht wie folgt aus:  

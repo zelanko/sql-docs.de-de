@@ -1,5 +1,6 @@
 ---
 title: Berichts-Generator in SQL Server | Microsoft-Dokumentation
+description: Der Berichts-Generator ist ein Tool für das Erstellen paginierter Berichte. Bei der Erstellung eines Berichts geben Sie die Daten an, die abgerufen werden sollen, wo sie abgerufen werden sollen und wie sie angezeigt werden sollen.
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67688514"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290896"
 ---
 # <a name="report-builder-in-sql-server"></a>Berichts-Generator in SQL Server
 
@@ -30,7 +31,7 @@ Sie können einen paginierten Bericht auch im Power BI-Dienst veröffentlichen. 
   
  Dieser paginierte Bericht enthält eine Matrix mit Zeilen- und Spaltengruppen, Sparklines, Indikatoren und einem Zusammenfassungskreisdiagramm in der Eckzelle sowie eine Karte mit zwei Sätzen geografischer Daten, die durch Farbe und Kreisgröße dargestellt werden.  
   
-##  <a name="JumpStartReptCreation"></a> Beschleunigte Berichtserstellung  
+##  <a name="jump-start-report-creation"></a><a name="JumpStartReptCreation"></a> Beschleunigte Berichtserstellung  
   
 -   **Beginnen Sie mit einem freigegebenen Dataset**. Freigegebene Datasets sind Abfragen, die auf einer freigegebenen Datenquelle basieren und auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtserver im einheitlichen Modus oder im integrieren SharePoint-Modus gespeichert sind.  
   
@@ -40,7 +41,7 @@ Sie können einen paginierten Bericht auch im Power BI-Dienst veröffentlichen. 
   
 -   **Beginnen Sie Ihren Bericht mit Berichtsteilen**. Berichtsteile sind Berichtselemente, die separat auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver im einheitlichen Modus oder im integrierten SharePoint-Modus veröffentlicht wurden. Berichtsteile können in anderen Berichten wiederverwendet werden. Berichtselemente wie Tabellen, Matrizen, Diagramme und Bilder können als Berichtsteile veröffentlicht werden.  
   
-##  <a name="DesignRept"></a> Entwerfen des Berichts  
+##  <a name="design-your-report"></a><a name="DesignRept"></a> Entwerfen des Berichts  
   
 -   **Erstellen Sie paginierte Berichte mit Tabellen-, Matrix-, Diagramm- und Freiformberichtslayouts.** Erstellen Sie Tabellenberichte für spaltenbasierte Daten, Matrixberichte für zusammengefasste Daten (wie Kreuztabellenberichten oder PivotTable-Berichten), Diagrammberichte für grafische Daten und Freiformberichte für alle anderen Daten. In Berichte können andere Berichte und Diagramme sowie Listen, Grafiken und Steuerelemente für dynamische webbasierte Anwendungen eingebettet werden.  
   
@@ -55,7 +56,7 @@ Sie können einen paginierten Bericht auch im Power BI-Dienst veröffentlichen. 
   
 -   **Betten Sie Bilder und andere Ressourcen ein** , oder verweisen Sie auf diese Ressourcen (auch externe Inhalte).  
   
-##  <a name="ManageRpt"></a> Verwalten des Berichts  
+##  <a name="manage-your-report"></a><a name="ManageRpt"></a> Verwalten des Berichts  
   
 -   **Speichern Sie die Definition des Berichts** auf Ihrem Computer oder dem Berichtsserver speichern, wo Sie ihn verwalten und für andere Benutzer freigeben können.  
   

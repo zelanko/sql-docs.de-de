@@ -1,7 +1,7 @@
 ---
 title: Grundlegendes zur Java EE-Unterstützung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 53caa00a6fe0430614b74f91ab28ccb5ef4aa742
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: 5a60f1d7fb137c18761c630d5c69c3ea4328b5a9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903717"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271346"
 ---
 # <a name="understanding-java-ee-support"></a>Grundlegendes zur Java EE-Unterstützung
 
@@ -39,7 +39,7 @@ JDBC-Treiber 7.2: Der Treiber ist in der Datei **mssql-jdbc-7.2.2.jre8.jar** ode
 
 JDBC-Treiber 7.4: Der Treiber ist in der Datei **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** oder **mssql-jdbc-7.4.1.jre12.jar** enthalten.
 
-JDBC-Treiber 8.2: Der Treiber ist in der Datei **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** oder **mssql-jdbc-8.2.1.jre13.jar** enthalten.
+JDBC Driver 8.2: Der Treiber ist in der Datei **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** oder **mssql-jdbc-8.2.2.jre13.jar** enthalten.
 
 Der Klassenname wird jedes Mal verwendet, wenn Sie den Treiber mit der JDBC-Klasse „DriverManager“ laden und wenn Sie den Klassennamen des Treibers in einer beliebigen Treiberkonfiguration angeben. Für das Konfigurieren einer Datenquelle in einem Java EE-Anwendungsserver kann es beispielsweise erforderlich sein, den Treiberklassennamen einzugeben.  
   

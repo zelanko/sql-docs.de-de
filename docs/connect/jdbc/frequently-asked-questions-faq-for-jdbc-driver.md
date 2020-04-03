@@ -1,7 +1,7 @@
 ---
-title: Häufig gestellte Fragen (FAQ) zum JDBC-Treiber | Microsoft-Dokumentation
+title: Häufig gestellte Fragen (FAQ) zum JDBC-Treiber
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e982c4b90c1c856d67720301fdf13595872b18c2
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: b91e728eb9ea3403db0f0b40c5d32ce16f542408
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903617"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271376"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Häufig gestellte Fragen (FAQ) zum JDBC-Treiber
 
@@ -31,17 +31,17 @@ Der JDBC-Treiber ist ein Open-Source-Produkt, und den Quellcode finden Sie auf [
 **Welche Versionen von SQL Server und Java werden vom Treiber unterstützt?**  
 Detaillierte Informationen hierzu finden Sie auf der Seite [Supportmatrix für den Microsoft JDBC-Treiber für SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
-**Was ist der Unterschied zwischen den im Microsoft Download Center verfügbaren JDBC-Treiberpaketen und dem auf GitHub verfügbaren JDBC-Treiber?**  
-Die im GitHub-Repository für den Microsoft JDBC-Treiber verfügbaren JDBC-Treiberdateien bilden den Kern des JDBC-Treibers und stehen unter der im Repository aufgeführten Open-Source-Lizenz. Die Treiberpakete im Microsoft Download Center enthalten zusätzliche Bibliotheken für die integrierte Windows-Authentifizierung und die Aktivierung von XA-Transaktionen mit dem JDBC-Treiber. Diese zusätzliche Bibliotheken stehen unter der Lizenz, die im herunterladbaren Paket enthalten ist.
+**Was ist der Unterschied zwischen den im [Microsoft Download Center](download-microsoft-jdbc-driver-for-sql-server.md) verfügbaren JDBC-Treiberpaketen und dem auf GitHub verfügbaren JDBC-Treiber?**  
+Die im GitHub-Repository für den Microsoft JDBC-Treiber verfügbaren JDBC-Treiberdateien bilden den Kern des JDBC-Treibers und stehen unter der im Repository aufgeführten Open-Source-Lizenz. Die Treiberpakete im [Microsoft Download Center](download-microsoft-jdbc-driver-for-sql-server.md) enthalten zusätzliche Bibliotheken für die integrierte Windows-Authentifizierung und die Aktivierung von XA-Transaktionen mit dem JDBC-Treiber. Diese zusätzliche Bibliotheken stehen unter der Lizenz, die im herunterladbaren Paket enthalten ist.
 
 **Was sollte ich wissen, bevor ich meinen Treiber aktualisiere?**  
 Der Microsoft JDBC-Treiber 8.2 unterstützt die JDBC-Spezifikationen 4.2 sowie 4.3 (teilweise), und das Installationspaket enthält drei JAR-Klassenbibliotheken:
 
 | JAR                        | JDBC-Spezifikation            | JDK-Version |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.2.jre13.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.2.jre11.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Der Microsoft JDBC-Treiber 7.4 unterstützt die JDBC-Spezifikationen 4.2 sowie 4.3 (teilweise), und das Installationspaket enthält drei JAR-Klassenbibliotheken:

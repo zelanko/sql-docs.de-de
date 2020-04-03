@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 75d8b98726a758e0533053dbdf8d2e03b3bfdf0d
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896991"
 ---
 # <a name="date-and-time-data"></a>Datums- und Zeitdaten
@@ -105,7 +105,7 @@ Der Typ eines Microsoft SqlClient-Datenanbieters eines Parameterobjekts wird vom
 >  Uhrzeitwerte, die kleiner als 0 oder größer oder gleich 24 Stunden sind, lösen eine <xref:System.ArgumentException> aus.  
   
 ### <a name="creating-parameters"></a>Erstellen von Parametern  
-Sie können ein <xref:Microsoft.Data.SqlClient.SqlParameter>-Objekt erstellen, indem Sie seinen Konstruktor verwenden oder es zu einer <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> -Sammlung hinzufügen, indem Sie die `Add`-Methode von <xref:Microsoft.Data.SqlClient.SqlParameterCollection> aufrufen. Die `Add`-Methode verwendet als Eingabe entweder Konstruktorargumente oder ein vorhandenes Parameterobjekt.  
+Sie können ein <xref:Microsoft.Data.SqlClient.SqlParameter>-Objekt mithilfe dessen Konstruktors erstellen, oder indem Sie es zu einer <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A>-Sammlung hinzufügen, indem Sie die `Add`-Methode von <xref:Microsoft.Data.SqlClient.SqlParameterCollection> aufrufen. Die `Add`-Methode verwendet als Eingabe entweder Konstruktorargumente oder ein vorhandenes Parameterobjekt.  
   
 Die nächsten Abschnitte in diesem Thema enthalten Beispiele zum Angeben von Datums- und Uhrzeitparametern.
   

@@ -1,5 +1,6 @@
 ---
 title: Exportieren in eine PDF-Datei (Berichts-Generator) | Microsoft-Dokumentation
+description: Die PDF-Renderingerweiterung rendert im Berichts-Generator paginierte Berichte in Dateien, die in Adobe Acrobat und anderen PDF-Viewern von Drittanbietern geöffnet werden können.
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 134cf6f645a3e120b1949e8a2dcc175748e1a042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e9c00901c1a409ec2a8a52476b201f2bf7992017
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078268"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342856"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportieren als PDF-Datei (Berichts-Generator und SSRS)
   Die PDF-Renderingerweiterung rendert paginierte [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichte in einem Dateiformat, das in Adobe Acrobat und anderen PDF-Viewern von Drittanbietern geöffnet werden kann, die das Format PDF 1.3 unterstützen. Obwohl PDF 1.3 mit Adobe Acrobat 4.0 oder höheren Versionen kompatibel ist, wird Adobe Acrobat von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erst ab Version 11.0 unterstützt. Die Renderingerweiterung erfordert keine Adobe-Software, um Berichte zu rendern. Zum Anzeigen oder Drucken von Berichten im PDF-Format sind allerdings PDF-Viewer wie Adobe Acrobat erforderlich.  
@@ -25,7 +26,7 @@ ms.locfileid: "77078268"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> Schriftarteinbettung  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a> Schriftarteinbettung  
  Wenn möglich, bettet die PDF-Renderingerweiterung die Teilmenge jeder Schriftart ein, die benötigt wird, um den Bericht in der PDF-Datei anzuzeigen. Schriftarten, die im Bericht verwendet werden, müssen auf dem Berichtsserver installiert sein. Wenn der Berichtsserver einen Bericht im PDF-Format generiert, verwendet er zum Erstellen von Zeichenzuordnungen in der PDF-Datei die in der Schriftart gespeicherten Informationen, auf die der Bericht verweist. Ist die Schriftart, auf die verwiesen wird, nicht auf dem Berichtsserver installiert, enthält die resultierende PDF-Datei möglicherweise nicht die richtigen Zuordnungen und wird nicht ordnungsgemäß angezeigt.  
   
  Schriftarten werden in die PDF-Datei eingebettet, wenn die folgenden Bedingungen erfüllt sind:  
@@ -54,7 +55,7 @@ ms.locfileid: "77078268"
   
  Die in die PDF-Datei eingebetteten Schriftarten sind in den Eigenschaften der Schriftart enthalten, die als Metadaten mit der Datei gespeichert werden.  
   
-##  <a name="Metadata"></a> Metadaten  
+##  <a name="metadata"></a><a name="Metadata"></a> Metadaten  
  Zusätzlich zum Berichtslayout schreibt die PDF-Renderingerweiterung folgende Metadaten in das PDF Document Information Dictionary.  
   
 |PDF-Eigenschaft|Erstellt von|  
@@ -67,7 +68,7 @@ ms.locfileid: "77078268"
 |**CreationDate**|Berichtsausführungszeit im **datetime** -PDF-Format|  
   
   
-##  <a name="Interactivity"></a> Interaktivität  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interaktivität  
  Einige interaktive Elemente werden in PDF unterstützt. Im Folgenden werden spezifische Funktionsweisen beschrieben.  
   
 ### <a name="show-and-hide"></a>Einblenden und Ausblenden  
@@ -88,7 +89,7 @@ ms.locfileid: "77078268"
  Links in Berichten werden als durch Klicken aktivierbare Links in der PDF-Datei gerendert. Beim Klicken auf den Link öffnet Acrobat den Standardbrowser des Clients und navigiert zur Link-URL.  
   
   
-##  <a name="Compression"></a> Komprimierung  
+##  <a name="compression"></a><a name="Compression"></a> Komprimierung  
  Die Bildkomprimierung basiert auf dem ursprünglichen Dateityp des Bilds. Die PDF-Renderingerweiterung komprimiert PDF-Dateien standardmäßig.  
   
  Damit die Bildkomprimierung in der PDF-Datei möglichst erhalten bleibt, werden JPEG-Bilder im JPEG- und alle anderen Bildtypen im BMP-Format gespeichert.  
@@ -97,7 +98,7 @@ ms.locfileid: "77078268"
 >  PDF-Dateien bieten keine Unterstützung für das Einbetten von PNG-Bildern.  
   
   
-##  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Geräteinformationseinstellungen  
  Sie können einige Standardeinstellungen für diesen Renderer ändern, indem Sie die Geräteinformationseinstellungen ändern. Weitere Informationen finden Sie unter [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md).  
   
   

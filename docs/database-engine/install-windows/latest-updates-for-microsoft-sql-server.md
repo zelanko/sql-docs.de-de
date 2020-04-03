@@ -12,18 +12,22 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 975ea7d96e50dbdb375580919a5cac5503e831c2
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6d81ddb24d11e9357819b43338341b818fb35583
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79198271"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434097"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Neueste Updates für Microsoft SQL Server
 
 Sie können Updates für Ihre SQL Server-Produkte an zentraler Stelle finden und verwalten. Folgen Sie dem [Blog zu den Releases von SQL Server](https://aka.ms/sqlreleases), um Informationen zu Updates zu erhalten und die Updates herunterzuladen.
 
-Auf dieser Seite sind die neuesten Updates für alle unterstützten Versionen von SQL Server aufgeführt. Weitere Informationen zu den unterstützten Produkten finden Sie auf der Seite zum [Microsoft-Produktlebenszyklus](https://support.microsoft.com/lifecycle/).
+Auf dieser Seite sind die neuesten Updates für alle unterstützten Versionen von SQL Server aufgeführt. 
+
+Weitere Informationen zu vorherigen Updates finden Sie im [Blog zu SQL Server-Builds](https://sqlserverbuilds.blogspot.com/). 
+
+Weitere Informationen zu den unterstützten Produkten finden Sie auf der Seite zum [Microsoft-Produktlebenszyklus](https://support.microsoft.com/lifecycle/). 
 
 ## <a name="latest-updates"></a>Neueste Updates
 
@@ -66,3 +70,5 @@ Jeder der folgenden Links liefert Informationen zu allen relevanten Produkten un
   - [SQL Server-Dokumentation](https://msdn.microsoft.com/sqlserver/default.aspx)
   - [SQL Server-Dokumentation](https://technet.microsoft.com/sqlserver/default.aspx)
   - [SQL Server-Produktinformationen](https://www.microsoft.com/sqlserver/default.aspx)
+  - [Blog zu SQL Server-Builds](https://sqlserverbuilds.blogspot.com/)
+  - [Releaseblogs zu SQL Server](https://aka.ms/sqlreleases)

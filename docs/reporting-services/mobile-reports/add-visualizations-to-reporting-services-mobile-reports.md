@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen von Visualisierungen zu mobilen Reporting Services-Berichten | Microsoft-Dokumentation
+description: 'Hier erhalten Sie Informationen zu den drei grundlegenden Diagrammtypen, die Sie für mobile Berichte in den Reporting Services verwenden können: Zeit, Kategorie und Gesamt sowie die entsprechenden Vergleichsdiagramme.'
 ms.date: 09/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316600"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447987"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Hinzufügen von Visualisierungen zu mobilen Reporting Services-Berichten
 Diagramme sind ein wesentlicher Bestandteil der Visualisierung von Daten. Erfahren Sie mehr über die Diagramme, die Sie in mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten verwenden können, um eine große Bandbreite von Szenarien abzudecken. 
@@ -143,7 +144,7 @@ Treemap-Diagramme zeigen Metriken an, indem sie deren Werte in Flächen und Farb
 
      * Unter **Größe repräsentiert** ein numerisches Feld für die Größe der Kacheln aus.
      * Unter **Farbe repräsentiert** ein numerisches Feld für die Farbe der Kacheln aus. 
-     * [optional] **Benutzerdefinierter Mittenwert**: Sie können die Einstellung **Benutzerdefinierter Mittenwert** nur dann verwenden, wenn als Visualisierungstyp „Wärmebild mit benutzerdefiniertem Mittenwert“ ausgewählt wurde.
+     * [optional] **Benutzerdefinierter Mittenwert**: Sie können die Einstellung **Benutzerdefinierter Mittenwert** nur dann verwenden, wenn als Visualisierungstyp „HeatMapWithCustomCenterValue“ ausgewählt wurde.
      
          Der Mittenwert legt die Farbe einer Kachel fest. Je näher die Metrik dem Mittenwert kommt, desto grüner ist die Kachel. Je weiter die Metrik vom Mittenwert entfernt ist, desto röter ist die Kachel.
      

@@ -1,5 +1,6 @@
 ---
 title: Konvertieren eines SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse
+description: Verwenden Sie diese Verfahren, um eine Sitzung für erweiterte Ereignisse zu erstellen, die einem vorhandenen SQL-Ablaufverfolgungsskript entspricht, das Sie konvertieren möchten.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b41947e50cd2cdd283af77a8d3ee4168f208f57e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7a516a5cbfe8a225d228b4a1722da2ac51ceb99c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255752"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433977"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse
 

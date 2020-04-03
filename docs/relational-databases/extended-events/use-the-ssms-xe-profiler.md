@@ -1,5 +1,6 @@
 ---
 title: Verwenden des SSMS XEvent Profilers
+description: Der XEvent Profiler zeigt eine Liveansicht erweiterter Ereignisse an. Hier erfahren Sie, warum dieser Profiler verwendet werden sollte, lernen wichtige Features kennen und erfahren, wie Sie mit der Anzeige erweiterter Ereignisse beginnen.
 ms.date: 10/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b500713053e8ea65722a10e2bf93ec566d9fbdd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fe9f63f1ae9b007da18f1b81ed23cd1c49bbfcbd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75251405"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487548"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>Verwenden des SSMS XEvent Profilers
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Der XEvent Profiler ist ein Feature von SQL Server Management Studio (SSMS), das ein Liveanzeigefenster mit erweiterten Ereignissen anzeigt. In dieser Übersicht werden die Gründe für die Verwendung dieses Profilers, seine wichtigsten Funktionen sowie die ersten Schritte zum Anzeigen erweiterter Ereignisse beschrieben.
 
 ## <a name="why-would-i-use-the-xevent-profiler"></a>Warum sollte ich den XEvent-Profiler verwenden?
@@ -33,7 +34,7 @@ Im Gegensatz zum SQL Profiler ist der XEvent Profiler direkt in SSMS integriert 
 ## <a name="prerequisites"></a>Voraussetzungen
 Dieses Feature ist nur in SQL Server Management Studio (SSMS) v17.3 oder höher verfügbar. Stellen Sie sicher, dass Sie die neueste Version verwenden. Die neueste Version ist [hier](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) zu finden.
 
-## <a id="getting-started"></a>Erste Schritte
+## <a name="getting-started"></a><a id="getting-started"></a>Erste Schritte
 Um auf den XEvent Profiler zuzugreifen, gehen Sie folgendermaßen vor:
 
 1. Öffnen Sie **SQL Server Management Studio**.

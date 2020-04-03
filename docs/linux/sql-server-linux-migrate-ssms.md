@@ -1,6 +1,6 @@
 ---
 title: Exportieren und Importieren einer Datenbank unter Linux
-description: ''
+description: In diesem Artikel wird beschrieben, wie Sie mit SQL Server Management Studio und Sqlpackage.exe eine Datenbank unter SQL Server für Linux exportieren und importieren.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f99ff799ec91ea455cc37bd994c8555330a8ff0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8602f17b88400f7b0dbac6b4015dbfaf6f85fd65
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68105554"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216644"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Exportieren und Importieren einer Datenbank unter Linux mit SSMS oder Sqlpackage.exe unter Windows
 
@@ -62,7 +62,7 @@ Die *.BACPAC-Datei wird erfolgreich an dem von Ihnen ausgewählten Speicherort e
 
 Die *.BACPAC-Datei wird importiert, um eine neue Datenbank auf dem von Ihnen angegebenen Zielserver zu erstellen.
 
-## <a id="sqlpackage"></a> SqlPackage-Befehlszeilenoption
+## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> SqlPackage-Befehlszeilenoption
 
 Es ist auch möglich, das Befehlszeilentool SQL Server Data Tools (SSDT), [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx), zum Exportieren und Importieren von BACPAC-Dateien zu verwenden.
 

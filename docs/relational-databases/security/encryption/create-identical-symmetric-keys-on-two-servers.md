@@ -12,12 +12,12 @@ ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a64aac5fa64a7ace7c55f7fb3c7b70b8cf9e44c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 77707d460262864cafa8884281c69fb957945f20
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74957460"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80243390"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Erstellen identischer symmetrischer Schlüssel auf zwei Servern
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ SQL Server 2016 verwendet den Hashalgorithmus SHA1 für die Verschlüsselung. Ab
 - Stellen Sie sicher, dass Ihre SQL Server 2017-Installation mindestens auf das kumulative Update 2 (CU2) aktualisiert ist.
   - Wichtige Details finden Sie unter [Kumulatives Update 2 (CU2) für SQL Server 2017](https://support.microsoft.com/help/4052574).
 - Nach der Installation von CU2 aktivieren Sie das Ablaufverfolgungsflag 4631 in SQL Server 2017: `DBCC TRACEON(4631, -1);`
-  - Das Ablaufverfolgungsflag 4631 ist neu in SQL Server 2017. Das Ablaufverfolgungsflag 4631 muss global auf `ON` gesetzt sein, bevor Sie den Hauptschlüssel, das Zertifikat oder den symmetrischen Schlüssel in SQL Server 2017 erstellen. Dadurch können diese erstellten Elemente mit SQL Server 2016 und früheren Versionen zusammenarbeiten.
+  - Das Ablaufverfolgungsflag 4631 ist neu in SQL Server 2017. Das Ablaufverfolgungsflag 4631 muss global auf `ON` gesetzt sein, bevor Sie den Hauptschlüssel, das Zertifikat oder den symmetrischen Schlüssel in SQL Server 2017 erstellen. Dadurch können diese erstellten Elemente mit SQL Server 2016 und früheren Versionen zusammenarbeiten.
 
 Weitere Anleitungen finden Sie unter folgenden Themen:
 

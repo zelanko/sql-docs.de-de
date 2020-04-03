@@ -1,5 +1,6 @@
 ---
 title: Ausblenden eines Elements (Berichts-Generator) | Microsoft-Dokumentation
+description: Sie können die Sichtbarkeit eines Berichtselements im Berichts-Generator festlegen. Sie können einen Berichtsparameter oder einen anderen Ausdruck festlegen, um ein Element unter gewissen Bedingungen auszublenden.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00d0544c6580e54f34b16bcce9dac2ce8604efdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dab0377e1f558c48be751b523c7129feefb18e66
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079050"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342784"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ausblenden eines Elements (Berichts-Generator und SSRS)
   Legen Sie die Sichtbarkeit eines Berichtselements fest, wenn Sie ein Element basierend auf einem Berichtsparameter oder einem anderen von Ihnen angegebenen Ausdruck bedingt ausblenden möchten.  

@@ -1,5 +1,6 @@
 ---
 title: 'Problembehandlung: PolyBase-Kerberos-Konnektivität | Microsoft-Dokumentation'
+description: Sie können die in PolyBase integrierte interaktive Diagnose verwenden, um Authentifizierungsprobleme bei PolyBase mit einem durch Kerberos geschützten Hadoop-Cluster beheben.
 author: alazad-msft
 ms.author: alazad
 ms.reviewer: mikeray
@@ -10,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 23aaaef5f85b814bda8f576fc6a0cfe671fea8e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909144"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215855"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Problembehandlung: PolyBase-Kerberos-Konnektivität
 
@@ -100,7 +101,7 @@ Das Tool wird unabhängig von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 ## <a name="arguments"></a>Argumente
 
-| Argument | Beschreibung|
+| Argument | BESCHREIBUNG|
 | --- | --- |
 | *Namenknotenadresse* | Die IP oder der FQDN des Namenknotens. Verweist auf das „LOCATION“-Argument Ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“.|
 | *Namenknotenport* | Der Port des Namensknotens. Verweist auf das „LOCATION“-Argument Ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“. Zum Beispiel „8020“. |

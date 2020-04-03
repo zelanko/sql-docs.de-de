@@ -1,5 +1,6 @@
 ---
 title: Sicherheit (Berichts-Generator) | Microsoft-Dokumentation
+description: Die Sicherheitsfeatures des Berichts-Generators beziehen sich auf Speicherorte für die Veröffentlichung, veröffentlichte Berichte, externe Datenquellen und darauf basierende Modelle. Außerdem gehören interaktive Features dazu.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1d2c4c195b0d21d2090e13eff578cc533871da4d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190098"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290836"
 ---
 # <a name="security-report-builder"></a>Sicherheit (Berichts-Generator)
   Der Berichts-Generator ist eine Clientanwendung für die Berichterstellung, die für die Verwendung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver konzipiert wurde. Der Berichtsserver kann im einheitlichen Modus als eigenständiger Server oder zur Unterstützung von Berichten auf einer SharePoint-Website im integrierten SharePoint-Modus konfiguriert werden.  
@@ -34,7 +35,7 @@ ms.locfileid: "74190098"
   
  In diesem Thema erfahren Sie, wie Sicherheitsfunktionen zum Verwalten und Schützen von Berichten und berichtsbezogenen Elementen verwendet werden.  
   
-##  <a name="ReportServers"></a> Grundlegendes zur Sicherheit für Berichtsserver  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> Grundlegendes zur Sicherheit für Berichtsserver  
  Das Veröffentlichen und Anzeigen von Berichten sind privilegierte Vorgänge. Ein Berichtsserveradministrator stellt durch Berechtigungen sicher, dass nur autorisierte Benutzer Berichte auf den folgenden Berichtsservertypen veröffentlichen und anzeigen können:  
   
 -   Im einheitlichen Modus konfigurierter Berichtsserver  
@@ -54,7 +55,7 @@ ms.locfileid: "74190098"
      Wenden Sie sich an den SharePoint-Websiteadministrator, wenn Sie keine Verbindung mit einer SharePoint-Website herstellen können.  
   
   
-##  <a name="Reports"></a> Grundlegendes zur Sicherheit für veröffentlichte Berichte und berichtsbezogene Elemente  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> Grundlegendes zur Sicherheit für veröffentlichte Berichte und berichtsbezogene Elemente  
  Die Sicherheit für Berichte und berichtsbezogene Elemente wird vom Berichtsserveradministrator verwaltet. Zu berichtsbezogenen Elementen zählen eingebettete und freigegebene Datenquellen sowie die zugehörigen Anmeldeinformationen, freigegebene Datasets, Parameter, Berichtsteile und Modelle.  
   
  Berichte und berichtsbezogene Elemente und Vorgänge können auf einem Berichtsserver oder einer SharePoint-Website unabhängig voneinander geschützt werden. Die Berechtigung für den Zugriff auf Elemente und Vorgänge wird mithilfe von Sicherheitsrichtlinien erteilt, durch die ein Benutzer- oder Gruppenkonto einer Berechtigungsebene für ein Element zugeordnet wird. Berechtigungen für einen Container, z. B. ein Ordner, werden von Elementen im Container geerbt, um die Komplexität und den Aufwand für die Verwaltung von Richtlinien zu reduzieren. Wenn ein Benutzer z. B. die spezifische Berechtigung "Berichte anzeigen" für einen Ordner besitzt, gilt diese Berechtigung für die Elemente im Ordner.  
@@ -81,7 +82,7 @@ ms.locfileid: "74190098"
  Weitere Informationen finden Sie unter [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="Data"></a> Grundlegendes zur Sicherheit für Berichtsdaten und externe Datenquellen  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> Grundlegendes zur Sicherheit für Berichtsdaten und externe Datenquellen  
  Sie können in einem Bericht auf Daten aus externen Datenquellen zugreifen, indem Sie im Bericht eine eingebettete Datenquelle erstellen oder einen Verweis auf eine freigegebene Datenquelle oder ein freigegebenes Dataset hinzufügen.  
   
  Für jede externe Datenquelle müssen Sie Anmeldeinformationen mit entsprechenden Berechtigungen für den Zugriff auf die Quelle und die zugrunde liegenden Daten angeben. Der Datenquellenbesitzer gibt den erforderlichen Anmeldeinformationstyp für diesen Zugriff an.  
@@ -96,13 +97,13 @@ ms.locfileid: "74190098"
  Weitere Informationen über Datenquellen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
-##  <a name="Models"></a> Grundlegendes zu Modellen und Sicherheitsfiltern  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> Grundlegendes zu Modellen und Sicherheitsfiltern  
  Wenn Daten aus einem auf externen Daten basierenden Berichtsmodell abgerufen werden, können Sie im Modell Sicherheitsfilter anwenden. So können Daten gut geschützt werden, da jeder Benutzer, der einen Bericht ausführt, nur die Daten sieht, für die er über Berechtigungen verfügt.  
   
  Berichtsparameter werden nicht für die Sicherheit auf Zeilenebene verwendet. Sie verhindern nicht, dass Benutzer oder Benutzergruppen bestimmte Datenzeilen sehen. Die Sicherheit der im Bericht angezeigten Daten muss mit Sicherheitsfiltern oder der Modellelementsicherheit gewährleistet werden.  
   
   
-##  <a name="Interactive"></a> Grundlegendes zur Sicherheit der Berichterstellung für interaktive Funktionen  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> Grundlegendes zur Sicherheit der Berichterstellung für interaktive Funktionen  
  In Berichten werden häufig Parameter verwendet, um Benutzern die interaktive Anpassung ihrer Ansicht eines Berichts zu ermöglichen. Die folgenden bewährten Tipps helfen Ihnen, gut durchdachte Berichte zu erstellen:  
   
 -   Verwenden Sie Parameter, die auf Abfrageparametern basieren und vom Typ **Text** sind, nur, wenn Sie gültige Werte geben. Durch eine Liste verfügbarer Werte stellen Sie sicher, dass Benutzer nur gültige Werte auswählen. Ohne eine solche Liste ist es nicht möglich, die Werte einzuschränken, die ein Benutzer eingeben kann.  

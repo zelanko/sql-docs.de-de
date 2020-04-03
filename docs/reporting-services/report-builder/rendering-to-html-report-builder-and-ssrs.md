@@ -1,5 +1,6 @@
 ---
 title: Rendern von HTML (Berichts-Generator) | Microsoft-Dokumentation
+description: Im Berichts-Generator rendert die HTML-Renderingerweiterung einen paginierten Bericht ins HTML-Format. Es können vollständige HTML-Seiten oder Fragmente zum Einbetten in andere Seiten erstellt werden.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6b8a27924bcceefe54d4a4663e3d55888920dbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5862081622d9d5c1a42fa8806ae482f02919a7b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082484"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290872"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendern in das HTML-Format (Berichts-Generator und SSRS)
   Die HTML-Renderingerweiterung rendert einen paginierten Bericht im HTML-Format. Die Renderingerweiterung kann außerdem vollständige HTML-Seiten oder HTML-Fragmente zum Einbetten in andere HTML-Seiten erstellen. HTML wird stets mit UTF-8-Codierung erstellt.  
@@ -27,11 +28,11 @@ ms.locfileid: "77082484"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> Rendern in das MHTML-Format  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> Rendern in das MHTML-Format  
  Die HTML-Renderingerweiterung kann Berichte im MHTML-Format (MIME Encapsulation of Aggregate HTML Documents) rendern. MHTML erweitert HTML, um codierte Objekte in das HTML-Dokument einzubetten, z. B. Bilder. Mit der MHTML-Renderingerweiterung können Sie Ressourcen wie Bilder, Dokumente oder andere Binärdateien als MIME-Strukturen (Multipurpose Internet Mail Extensions) in den Berichts-HTML-Code in einer einzelnen Datei einbetten. Daneben sind MHTML-Berichte zur Einbettung in E-Mail-Nachrichten geeignet, da alle Ressourcen in den Bericht eingeschlossen sind. Zwar rendert eigentlich die HTML-Renderingerweiterung MHTML, aber diese Funktion kann auch als MHTML-Renderingerweiterung bezeichnet werden.  
   
   
-##  <a name="BrowserSupport"></a> Browserunterstützung  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a> Browserunterstützung  
  Diese Renderingerweiterung unterstützt die folgenden Browserversionen:  
   
 -   Internet Explorer 5.5 und höher  
@@ -43,7 +44,7 @@ ms.locfileid: "77082484"
  Aufgrund von browserübergreifenden Überlegungen kann der gerenderte Bericht je nach Browser leicht unterschiedlich ausfallen. So enthält z. B. das Textfeld die Eigenschaft „WritingMode“. Diese Eigenschaft wird in Firefox nicht unterstützt.  
   
   
-##  <a name="HTMLSpecificRenderingRules"></a> HTML-spezifische Renderingregeln  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a> HTML-spezifische Renderingregeln  
  Die folgenden HTML-spezifischen Regeln werden beim Rendern angewendet:  
   
 -   Der Renderer erstellt eine HTML-Tabellenstruktur mit allen Elementen in jeder **ReportItems** -Auflistung, falls mehr als eine vorhanden ist.  
@@ -61,7 +62,7 @@ ms.locfileid: "77082484"
 -   Alle Koordinaten und Berichtselementgrößen werden in Millimeter konvertiert. Alle anderen Größen, einschließlich der Stileigenschaften, behalten ihre ursprünglichen Einheiten bei. Größen- und Positionsunterschiede, die kleiner als 0,2 mm sind, werden als 0 mm behandelt.  
   
   
-##  <a name="Interactivity"></a> Interaktivität  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interaktivität  
  Einige interaktive Elemente werden in HTML unterstützt. Im Folgenden werden spezifische Funktionsweisen beschrieben.  
   
 ### <a name="show-and-hide"></a>Einblenden und Ausblenden  
@@ -84,10 +85,10 @@ ms.locfileid: "77082484"
   
  Zusätzliche Suchfunktionen werden vom ReportViewer Web Forms-Steuerelement bereitgestellt.  
   
-##  <a name="FontsOnClient"></a> Schriftarten auf dem Clientcomputer
+##  <a name="fonts-on-the-client-computer"></a><a name="FontsOnClient"></a> Schriftarten auf dem Clientcomputer
  Wenn eine benutzerdefinierte Schriftart in dem Bericht verwendet wird, muss diese auf dem Computer installiert sein, der zum Anzeigen des Berichts verwendet wird (dem Clientcomputer), damit der Bericht fehlerfrei angezeigt wird. Wenn die Schriftart nicht auf dem Clientcomputer installiert ist, wird der Bericht in einer Standardschriftart anstelle der benutzerdefinierten Schriftart angezeigt.
   
-##  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Geräteinformationseinstellungen  
  Sie können einige Standardeinstellungen für diesen Renderer ändern, einschließlich des Modus für das Rendern. Ändern Sie dazu die Geräteinformationseinstellungen. Weitere Informationen finden Sie unter [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md).  
   
   

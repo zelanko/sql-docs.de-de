@@ -1,6 +1,6 @@
 ---
 title: 'Verwalten des Failovers einer Verfügbarkeitsgruppe: SQL Server für Linux'
-description: ''
+description: 'In diesem Artikel werden Failoverarten erläutert: automatisches, geplantes manuelles und erzwungenes manuelles Failover. Beim automatischen und beim geplanten manuellen Failover bleiben alle Daten erhalten.'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 92d9a7518e0a6176199f39dcd69c87ea25c8004d
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280882"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216849"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover der Always On-Verfügbarkeitsgruppe unter Linux
 
@@ -24,7 +24,7 @@ Im Kontext einer Verfügbarkeitsgruppe können die primäre und die sekundäre R
 
 Hintergrundinformationen zum Failover finden Sie unter [Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
 
-## <a name="failover"></a>Manuelles Failover
+## <a name="manual-failover"></a><a name="failover"></a>Manuelles Failover
 
 Verwenden Sie die Clusterverwaltungstools für ein Failover einer Verfügbarkeitsgruppe, die von einem externen Cluster-Manager verwaltet wird. Wenn z. B. eine Lösung einen Linux-Cluster mithilfe von Pacemaker verwaltet, verwenden Sie `pcs`, um manuelle Failover auf RHEL oder Ubuntu durchzuführen. Auf dem SLES verwenden Sie `crm`. 
 
@@ -43,7 +43,7 @@ Das manuelle Failover erfolgt in zwei Schritten.
 
    [Entfernen Sie im nächsten Schritt die Speicherorteinschränkung](#removeLocConstraint).
 
-#### <a name="manualMove"></a> Schritt 1: Manuelles Failover durch Verschieben der Verfügbarkeitsgruppenressource
+#### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> Schritt 1: Manuelles Failover durch Verschieben der Verfügbarkeitsgruppenressource
 
 Führen Sie den entsprechenden Befehl für Ihre Verteilung aus, um ein Failover von einer Verfügbarkeitsgruppenressource namens *ag_cluster* auf den Clusterknoten namens *nodeName2* durchzuführen:
 
@@ -62,7 +62,7 @@ Führen Sie den entsprechenden Befehl für Ihre Verteilung aus, um ein Failover 
 >[!IMPORTANT]
 >Nachdem Sie ein manuelles Failover einer Ressource ausgeführt haben, müssen Sie eine Speicherorteinschränkung entfernen, die automatisch hinzugefügt wird.
 
-#### <a name="removeLocConstraint"> </a> Schritt 2: Entfernen der Speicherorteinschränkung
+#### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> Schritt 2: Entfernen der Speicherorteinschränkung
 
 Während eines manuellen Failovers fügt der `pcs`-Befehl `move` oder der `crm`-Befehl `migrate` eine Speicherorteinschränkung hinzu, damit die Ressource auf dem neuen Zielknoten platziert wird. Um die neue Einschränkung anzuzeigen, führen Sie den folgenden Befehl nach dem Verschieben der Ressource aus:
 
@@ -107,7 +107,7 @@ Weitere Informationen finden Sie unter:
 - [Pacemaker - Move Resources Manually (Pacemaker – Manuelles Verschieben von Ressourcen)](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES Administration Guide - Resources (SLES-Verwaltungsleitfaden – Ressourcen)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
-## <a name="forceFailover"></a> Erzwungenes Failover 
+## <a name="force-failover"></a><a name="forceFailover"></a> Erzwungenes Failover 
 
 Ein erzwungenes Failover ist ausschließlich für die Notfallwiederherstellung gedacht. In diesem Fall können Sie kein Failover mit Clusterverwaltungstools durchführen, da das primäre Rechenzentrum ausgefallen ist. Wenn Sie ein Failover auf ein nicht synchronisiertes sekundäres Replikat erzwingen, ist Datenverlust möglich. Erzwingen Sie ein Failover nur, wenn Sie den Dienst für die Verfügbarkeitsgruppe sofort wiederherstellen müssen und bereit sind, das Risiko des Datenverlustes in Kauf zu nehmen.
 

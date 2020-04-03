@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 9dfbb1192c160fb032afa6dbb56ee7b24b80bcd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75241216"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80386189"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Versionshinweise zu „SqlPackage.exe“
 
@@ -38,10 +38,10 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 |Plattform|Download|Veröffentlichungsdatum|Version|Entwickeln
 |:---|:---|:---|:---|:---|
-|Windows|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2113703)|13. Dezember 2019|18.4.1|15.0.4630.1|
-|macOS .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2113705)|13. Dezember 2019| 18.4.1|15.0.4630.1|
-|Linux .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2113331)|13. Dezember 2019| 18.4.1|15.0.4630.1|
-|Windows .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2113704)|13. Dezember 2019| 18.4.1|15.0.4630.1|
+|Windows|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2113703)|13. Dezember 2019|18.4.1|15.0.4630.1|
+|macOS .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2113705)|13. Dezember 2019| 18.4.1|15.0.4630.1|
+|Linux .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2113331)|13. Dezember 2019| 18.4.1|15.0.4630.1|
+|Windows .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2113704)|13. Dezember 2019| 18.4.1|15.0.4630.1|
 
 ### <a name="fixes"></a>Fehlerbehebungen
 | Fix | Details |
@@ -49,6 +49,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom |  In Version 18.3.1 wurde eine ScriptDom-Analyseregression eingeführt, bei der „RENAME“ fälschlicherweise als Token der obersten Ebene behandelt wurde, sodass die Analyse mit einem Fehler abgebrochen wurde.
 | &nbsp; | &nbsp; |
 
+### <a name="known-issues"></a>Bekannte Probleme 
+
+| Funktion | Details |
+| :------ | :------ |
+| Bereitstellung |  In Version 18.4.1 wurde eine Regression eingeführt, welche den Fehler „Der Objektverweis ist nicht auf eine Instanz eines Objekts festgelegt.“ verursacht, wenn von einem extern angemeldeten Benutzer eine DACPAC-Datei bereitgestellt oder eine BACPAC-Datei importiert wird. Die Problemumgehung besteht in der Verwendung von sqlpackage 18.4. Zudem wird das Problem in der nächsten Version von sqlpackage behoben. | 
+| &nbsp; | &nbsp; |
 
 ## <a name="184-sqlpackage"></a>18.4 sqlpackage
 

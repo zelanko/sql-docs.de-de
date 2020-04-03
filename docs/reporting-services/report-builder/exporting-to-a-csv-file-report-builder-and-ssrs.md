@@ -1,5 +1,6 @@
 ---
 title: Exportieren als CSV-Datei (Berichts-Generator) | Microsoft-Dokumentation
+description: Im Berichts-Generator rendert die CSV-Renderingerweiterung paginierte Berichte in das Format Nur-Text, das von vielen Anwendungen gelesen werden kann und mit ihnen kompatibel ist.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1104054faef55ca3b3b661ea210c279c9aa55841
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078367"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342880"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportieren als CSV-Datei (Berichts-Generator und SSRS)
   Die durch Trennzeichen getrennte CSV-Renderingerweiterung (Comma-Separated Value) rendert paginierte Berichte als vereinfachte Darstellung der Daten eines Berichts in einem standardisierten Nur-Text-Format, das leicht lesbar und mit anderen Anwendungen austauschbar ist.  
@@ -27,7 +28,7 @@ ms.locfileid: "77078367"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> CSV-Rendering  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> CSV-Rendering  
  Ein CSV-Bericht, der mit den Standardeinstellungen gerendert wurde, besitzt folgende Merkmale:  
   
 -   Das standardmäßige Feldtrennzeichen ist ein Komma (,).  
@@ -95,7 +96,7 @@ ms.locfileid: "77078367"
  Weitere Informationen finden Sie unter [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
   
-##  <a name="RenderingModes"></a> Renderermodi  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> Renderermodi  
  Für die CSV-Renderingerweiterung stehen zwei Modi zur Verfügung. Ein Modus ist für Excel, der andere für Anwendungen von Drittanbietern optimiert, die eine strikte CSV-Kompatibilität mit der CSV-Spezifikation in RFC 4180 erfordern. Je nach verwendetem Modus werden Peerdatenbereiche unterschiedlich behandelt.  
   
 ### <a name="default-mode"></a>Standardmodus  
@@ -119,7 +120,7 @@ ms.locfileid: "77078367"
 #### <a name="formatting"></a>Formatierung  
  Die Werte sind unformatiert.  
   
-##  <a name="Interactivity"></a> Interaktivität  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interaktivität  
  Interaktivität wird von keinem der durch diesen Renderer generierten CSV-Formate unterstützt. Die folgenden interaktiven Elemente werden nicht gerendert:  
   
 -   Links  
@@ -137,7 +138,7 @@ ms.locfileid: "77078367"
 -   Lesezeichen  
   
   
-##  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Geräteinformationseinstellungen  
  Sie kännen einige Standardeinstellungen für diesen Renderer ändern, beispielsweise den Modus für das Rendern, die Zeichen, die als Trennzeichen verwendet werden können, und die Zeichen, die als Textqualifizierer für die Standardzeichenfolge verwendet werden können. Ändern Sie dazu die Geräteinformationseinstellungen. Weitere Informationen finden Sie unter [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
   

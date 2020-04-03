@@ -1,5 +1,6 @@
 ---
 title: Suchen nach Objekten mit den meisten Sperren mithilfe von erweiterten Ereignissen
+description: In diesem Artikel wird die Suche nach Objekten mit den meisten Sperren veranschaulicht. Datenbankadministratoren müssen möglicherweise die Objekte mit den meisten Sperren ermitteln, um die Leistung der Datenbank zu verbessern.
 ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66a28ef1b0f6dcd683097bcd6b8d38a07fe15204
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d173a174323beab2323fcba856be89062dc5e774
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234476"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434027"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>Suchen der Objekte, die über die meisten Sperren verfügen
 

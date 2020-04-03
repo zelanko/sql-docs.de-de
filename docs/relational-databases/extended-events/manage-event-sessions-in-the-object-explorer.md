@@ -1,5 +1,6 @@
 ---
 title: Verwalten von Ereignissitzungen im Objekt-Explorer
+description: Im Objekt-Explorer können Sie Aktionen für erweiterte Ereignisse ausführen, z. B. Erstellen, Starten oder Löschen, Exportieren, Importieren, Bearbeiten oder Löschen von Sitzungen für erweiterte Ereignisse.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d7019b369999afe8c28660a6a533e61b1d01c29
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 390e8d4c65951f7b2b6c1f17d161a8ddc6d71242
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234533"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434087"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Verwalten von Ereignissitzungen im Objekt-Explorer
 
@@ -116,7 +117,7 @@ STATE = STOP
   
 4.  Klicken Sie nach der Überarbeitung der Ereignissitzung auf **OK**.  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>Skript für eine Ereignissitzung als Definition mit [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>Skript für eine Ereignissitzung als Definition mit [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  Sowohl der Assistent für neue Sitzungen als auch das Dialogfeld "Neue Sitzung" verfügen über eine Skriptoption, die den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code generiert, der die Sitzung für erweiterte Ereignisse definiert.  
   
  Sie können auf den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code für eine vorhandene Sitzung für erweiterte Ereignisse zugreifen, indem Sie mit der rechten Maustaste auf den Sitzungsnamen klicken, die Option **Skript für Sitzung als**und dann **Erstellen in**auswählen.  

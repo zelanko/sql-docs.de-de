@@ -1,5 +1,6 @@
 ---
 title: Installieren von PolyBase unter Windows | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie PolyBase als Einzelknoten oder PolyBase-Erweiterungsgruppe installieren. Für die Installation können Sie einen Installations-Assistenten oder die Eingabeaufforderung verwenden. Schließlich müssen Sie PolyBase aktivieren.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d6c9585f536c92e1f2776831434614c59919ddf3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288474"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80217120"
 ---
 # <a name="install-polybase-on-windows"></a>Installieren von PolyBase unter Windows
 
@@ -95,7 +96,7 @@ Wenn Sie PolyBase einmal installiert haben, können Sie dies nicht mehr ändern.
    > Nach der Installation müssen Sie das [PolyBase-Feature aktivieren](#enable).
 
 
-##  <a name="installing"></a> Verwenden einer Eingabeaufforderung.
+##  <a name="use-a-command-prompt"></a><a name="installing"></a> Verwenden einer Eingabeaufforderung.
 
 Verwenden Sie die Werte in dieser Tabelle, um Installationsskripte zu erstellen. Die SQL Server-PolyBase-Engine und der SQL Server PolyBase-Datenverschiebungsdienst müssen unter demselben Konto ausgeführt werden. In einer PolyBase-Gruppe mit horizontaler Skalierung müssen PolyBase-Dienste auf allen Knoten unter demselben Domänenkonto ausgeführt werden.  
    
@@ -151,7 +152,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-## <a id="enable"></a> Aktivieren von PolyBase
+## <a name="enable-polybase"></a><a id="enable"></a> Aktivieren von PolyBase
 
 Nach der Installation muss PolyBase aktiviert werden, um auf die Features zugreifen zu können. Verwenden Sie dafür den folgenden Transact-SQL-Befehl: Bei Instanzen von SQL Server 2019, die während der Installation von Big Data-Clustern bereitgestellt wurden, ist diese Einstellung standardmäßig aktiviert.
 
@@ -166,7 +167,7 @@ RECONFIGURE;
 
 PolyBase installiert drei Benutzerdatenbanken, und zwar DWConfiguration, DWDiagnostics und DWQueue. Diese Datenbanken sind für die Verwendung durch PolyBase bestimmt. Nehmen Sie keine Änderungen vor, und löschen Sie sie nicht.  
    
-### <a id="confirminstall"></a> Bestätigen der Installation  
+### <a name="how-to-confirm-installation"></a><a id="confirminstall"></a> Bestätigen der Installation  
 
 Führen Sie den folgenden Befehl aus. Wenn PolyBase installiert ist, wird 1 zurückgegeben. Andernfalls ist der Wert 0.  
 

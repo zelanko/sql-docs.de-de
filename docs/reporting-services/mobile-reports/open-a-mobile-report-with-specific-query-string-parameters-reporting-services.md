@@ -1,5 +1,6 @@
 ---
 title: Öffnen eines mobilen Berichts mit bestimmten Abfragezeichenfolgenparametern | Microsoft-Dokumentation
+description: Bei mobilen Reporting Services-Berichten mit Parametern und einer Datenquelle können Sie Abfrageparameter in der Berichts-URL verwenden, um ihn mit den angegebenen Werten zu öffnen.
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7204574d10b674c7cea4e08fb570c3550fe33e03
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f953a8ee9371f3e8919d53f017f27a7e863a52ca
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62500014"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448393"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>Öffnen eines mobilen Berichts mit bestimmten Abfragezeichenfolgenparametern | Reporting Services
 Im Fall eines mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Berichts mit Parametern und einer [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]- oder [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)]-Datenquelle können Sie Abfragezeichenfolgenparameter in die Berichts-URL aufnehmen, sodass der Bericht automatisch mit den von Ihnen angegebenen Werten geöffnet wird. 
@@ -35,7 +36,7 @@ Im Fall eines mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-m
     
     `https://sampleserver/reports/adventureworks-reports/adventureworks-load-on-demand?TimeChartLoD.category=Clothing` 
     
-     **Für eine SQL Server-Datenquelle**: Der Abfragezeichenfolgenparameter ist fast identisch, weist jedoch das \@-Symbol vor dem Namen des Felds auf:
+     **Für eine SQL Server-Datenquelle**: Der Abfragezeichenfolgenparameter ist fast identisch, enthält jedoch das \@-Zeichen vor dem Namen des Felds:
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.@<field-name>=<parameter-value>`
 

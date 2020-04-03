@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90c7c7863228ce210e56e76ab3e12c77e7ccc902
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "70963574"
+ms.locfileid: "80407982"
 ---
 Jede Verfügbarkeitsgruppe hat nur ein primäres Replikat. Das primäre Replikat lässt Lese- und Schreibvorgänge zu. Sie können ein Failover ausführen, um das primäre Replikat zu ändern. In einer Verfügbarkeitsgruppe für Hochverfügbarkeit automatisiert der Cluster-Manager den Failovervorgang. In einer Verfügbarkeitsgruppe mit dem Clustertyp „NONE“ erfolgt der Failovervorgang manuell. 
 
@@ -76,19 +76,26 @@ So führen ein manuelles Failover ohne Datenverlust aus:
    ```
 
    Diese Einstellung stellt sicher, dass für jede aktive Transaktion ein Commit auf das primäre Replikat und auf mindestens ein synchrones sekundäres Replikat ausgeführt wurde. 
-
-4. Stufen Sie das primäre Replikat auf ein sekundäres Replikat herunter. Anschließend ist es schreibgeschützt. Um die Rolle auf `SECONDARY` zu aktualisieren, führen Sie diesen Befehl auf der SQL Server-Instanz aus, die das primäre Replikat hostet:
-
+   >[!NOTE]
+   >Diese Einstellung ist nicht failoverspezifisch und sollte anhand der Umgebungsanforderungen festgelegt werden.
+   
+4. Schalten Sie das primäre Replikat offline, um Rollenänderungen vorzubereiten.
    ```SQL
-   ALTER AVAILABILITY GROUP [ag1] 
-        SET (ROLE = SECONDARY); 
+   ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
 5. Stufen Sie das sekundäre Zielreplikat auf ein primäres hoch. 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
-   ```  
+   ``` 
+
+6. Aktualisieren Sie die Rolle des alten Replikats auf `SECONDARY`, und führen Sie den folgenden Befehl auf der SQL Server-Instanz aus, die das primäre Replikat hostet:
+
+   ```SQL
+   ALTER AVAILABILITY GROUP [ag1] 
+        SET (ROLE = SECONDARY); 
+   ```
 
    > [!NOTE] 
    > Verwenden Sie [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql) (Verfügbarkeitsgruppe löschen), um eine Verfügbarkeitsgruppe zu löschen. Führen Sie bei Verfügbarkeitsgruppen, die mit dem Clustertyp „NONE“ oder „EXTERNAL“ erstellt wurden, den Befehl für alle Replikate aus, die der Verfügbarkeitsgruppe angehören.

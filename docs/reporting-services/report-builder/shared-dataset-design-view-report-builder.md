@@ -1,5 +1,6 @@
 ---
 title: Entwurfsansicht für freigegebene Datasets (Berichts-Generator) | Microsoft-Dokumentation
+description: Verwenden Sie im Berichts-Generator das Fenster „Shared Dataset Design“ (Design für freigegebene Datasets), um Datasets für die Freigabe zu erstellen. Veröffentlichen Sie Ihre freigegebenen Datasets auf einem Berichtsserver, um sie in mehreren Berichten verwenden zu können.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be5689ab2d098fab41bc8e73acb6e945991c4e6f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ece66b7fbe027f8119bb8703df58ca94098ed515
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190026"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290787"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Freigegebene Datasetentwurfsansicht (Report Builder)
   In einem Bericht stellt ein Dataset Berichtsdaten dar, die als Ergebnis der Ausführung einer Abfrage für eine externe Datenquelle zurückgegeben werden. Freigegebene Datasets werden auf einem Berichtsserver veröffentlicht und können in mehreren Berichten verwendet werden. Sie können Datasets erstellen, um Sie für andere freizugeben. Im Fenster „Freigegebene Datasetentwurfsansicht“ wählen Sie eine freigegebene Datenquelle aus, geben Eigenschaften für das freigegebene Dataset an und erstellen im Abfrage-Designer eine Abfrage.  
@@ -22,7 +23,7 @@ ms.locfileid: "74190026"
   
  Weitere Informationen zum Arbeiten mit Daten in einem Bericht finden Sie unter [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
-##  <a name="Ribbon"></a> Menüband  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a> Menüband  
  Das Menüband bietet schnellen Zugriff auf die Befehle, die Sie zur Ausführung einer Aufgabe benötigen. Befehle sind in die folgenden logischen Gruppen unterteilt: Verbindung, Dataset und Abfrage-Designer.  
   
 ### <a name="connection"></a>Verbindung  
@@ -58,7 +59,7 @@ ms.locfileid: "74190026"
  Weitere Informationen finden Sie im Thema für den jeweiligen Datenquellentyp unter [Hinzufügen von Daten aus externen Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
   
-##  <a name="DesignSurface"></a> Abfrage-Designer-Oberfläche  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a> Abfrage-Designer-Oberfläche  
  Ein Abfrage-Designer hilft Ihnen, eine Abfrage in der für die externe Datenquelle erforderlichen Syntax zu erstellen.  
   
  Bei einigen Datenquellentypen ist ein grafischer Abfrage-Designer verfügbar, mit dem Sie die Metadaten in einer externen Datenquelle durchsuchen können. Sie können Namen interaktiv vom Metadatenbereich in die Abfrageentwurfsoberfläche ziehen oder die gewünschten Namen interaktiv auswählen.  
@@ -68,7 +69,7 @@ ms.locfileid: "74190026"
  Für jeden Datenquellentyp gelten bestimmte Anforderungen für die von der externen Datenquelle unterstützten Abfragen. Weitere Informationen finden Sie im Thema für den jeweiligen Datenquellentyp unter [Hinzufügen von Daten aus externen Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) und [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
-##  <a name="Results"></a> Anzeigen von Abfrageergebnissen  
+##  <a name="viewing-query-results"></a><a name="Results"></a> Anzeigen von Abfrageergebnissen  
  Durch die Abfragen, die Sie in der Entwurfsansicht für freigegebene Datasets erstellen, werden beim Verarbeiten des Berichts Daten über die Datenverbindung abgerufen.  
   
  Führen Sie die Abfrage aus, um Beispieldaten von der Datenverbindung anzuzeigen. So können Sie sicherstellen, dass die Abfrage den erwarteten Datentyp zurückgibt. Die Spalten im Resultset stammen aus den Metadaten für Datenschemas aus der Datenverbindung. Die Spaltennamen werden zur Datasetfeldauflistung. Die im Abfrageresultset angezeigten Werte der Daten sind Entwurfszeitdaten. Nachdem Sie das freigegebene Dataset als Definition des freigegebenen Datasets auf dem Berichtsserver gespeichert haben, wird nur der Abfragetext gespeichert. Die Daten im Abfrageresultset werden nicht gespeichert.  
@@ -85,7 +86,7 @@ ms.locfileid: "74190026"
  Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)" basiert.  
   
   
-##  <a name="Save"></a> Speichern des freigegebenen Datasets  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a> Speichern des freigegebenen Datasets  
  Klicken Sie zum Speichern der erstellten Abfrage auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern** oder **Speichern unter**. Navigieren Sie zum entsprechenden Ordner auf dem Berichtsserver, und speichern Sie die freigegebene Datasetdefinition. Das freigegebene Dataset steht anderen Benutzern erst zur Verfügung, wenn Sie es auf dem Berichtsserver speichern.  
   
   

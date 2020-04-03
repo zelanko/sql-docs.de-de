@@ -1,5 +1,6 @@
 ---
 title: Verwenden von Reporting Services SOAP-Headern | Microsoft-Dokumentation
+description: Verwenden Sie Reporting Services SOAP-Header, um Vorgänge in einer einzelnen Transaktion zusammenzufassen, den Sitzungszustand zu verwalten und Eigenschaften anhand der Pfads oder der ID eines Elements abzurufen.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99a4ac18003defd2a6b3cffdd4bc1d2955c44816
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7f0cb5dc846e8f1f7e292366c7f938366b53de2d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63026011"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216196"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Verwenden von Reporting Services SOAP-Headern
   Die Kommunikation mit einer Webdienstmethode über SOAP erfolgt nach einem Standardformat. Teil dieses Formats bilden die Daten, die in einem XML-Dokument verschlüsselt sind. Das XML-Dokument besteht aus einem **Envelope**-Stammelement, das sich wiederum aus einem erforderlichen **Textkörper**-Element und einem optionalen **Header**-Element zusammensetzt. Das **Textelement** enthält die für die Meldung spezifischen Daten. Das optionale **Header**-Element kann zusätzliche Informationen umfassen, die sich nicht direkt auf die spezifische Meldung beziehen. Die untergeordneten Elemente des **Header**-Elements werden SOAP-Header genannt.  

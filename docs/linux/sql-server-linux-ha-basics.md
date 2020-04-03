@@ -1,6 +1,6 @@
 ---
 title: Hochverfügbarkeit von SQL Server für Linux-Bereitstellungen
-description: Hier erfahren Sie mehr über die verschiedenen Optionen für Hochverfügbarkeit, die für SQL Server für Linux verfügbar sind, z. B. Always On-Verfügbarkeitsgruppen, Failoverclusterinstanzen (FCI) und Protokollversand.
+description: Hier lernen Sie die verschiedenen Optionen für Hochverfügbarkeit für SQL Server für Linux kennen, z. B. Always On-Verfügbarkeitsgruppen, Failoverclusterinstanzen und Protokollversand.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75656609"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216680"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Grundlagen zur SQL Server-Verfügbarkeit für Linux-Bereitstellungen
 
@@ -22,7 +22,7 @@ ms.locfileid: "75656609"
 
 Ab [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] wird [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sowohl unter Linux als auch Windows unterstützt. Ebenso wie bei Windows-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Bereitstellungen müssen auch [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Datenbanken und -Instanzen unter Linux hochverfügbar sein. In diesem Artikel werden die technischen Aspekte der Planung und Bereitstellung von hochverfügbaren Linux-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Datenbanken und -Instanzen sowie einige Unterschiede zu Windows-basierten Installationen beschrieben. Da Linux-Experten möglicherweise noch nicht mit [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] vertraut sind und sich [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Experten unter Umständen noch nie mit Linux befasst haben, werden in diesem Artikel an einigen Stellen Konzepte vorgestellt, die für die ein oder andere Zielgruppe neu sind.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Verfügbarkeitsoptionen für Linux-Bereitstellungen
+## <a name="ssnoversion-md-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Verfügbarkeitsoptionen für Linux-Bereitstellungen
 Neben der Sicherung und Wiederherstellung sind die folgenden drei Features sowohl für Linux als auch für Windows-basierte Bereitstellungen verfügbar:
 -   Always On-Verfügbarkeitsgruppen
 -   Always On-Failoverclusterinstanzen
@@ -51,7 +51,7 @@ In der folgenden Liste sind einige gängige Befehle aufgeführt. Für diese sind
 -   `systemctl`: Dienste starten, stoppen oder aktivieren.
 -   Text-Editor-Befehle. Unter Linux gibt es verschiedene Text-Editoren, z. B. vi und emacs.
 
-## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Übliche Aufgaben bei Verfügbarkeitskonfigurationen von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Linux
+## <a name="common-tasks-for-availability-configurations-of-ssnoversion-md-on-linux"></a>Übliche Aufgaben bei Verfügbarkeitskonfigurationen von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Linux
 In diesem Abschnitt werden Aufgaben beschrieben, die für alle Linux-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Bereitstellungen üblicherweise anfallen.
 
 ### <a name="ensure-that-files-can-be-copied"></a>Sicherstellen, dass Dateien kopiert werden können
@@ -84,7 +84,7 @@ Eine weitere Option ist eine NFS-Freigabe (Network File System). Diese kann alle
 ### <a name="configure-the-firewall"></a>Konfigurieren der Firewall
 Linux-Distributionen verfügen ähnlich wie Windows über eine integrierte Firewall. Wenn Ihr Unternehmen eine externe Firewall für Server verwendet, ist es möglicherweise akzeptabel, die Linux-Firewall zu deaktivieren. Unabhängig davon, welche Firewall wo aktiviert wird, müssen bestimmte Ports geöffnet werden. In der folgenden Tabelle werden die Ports aufgeführt, die üblicherweise für hochverfügbare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Bereitstellungen unter Linux erforderlich sind.
 
-| Portnummer | type     | Beschreibung                                                                                                                 |
+| Portnummer | type     | BESCHREIBUNG                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS: `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (falls verwendet): Endpunktzuordnung                                                                                          |
@@ -120,7 +120,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
-### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Installieren von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Verfügbarkeitspaketen
+### <a name="install-ssnoversion-md-packages-for-availability"></a>Installieren von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Verfügbarkeitspaketen
 Bei einer einfachen Windows-basierten Installation von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] werden neben der Engine noch einige zusätzliche Komponenten installiert. Unter Linux wird hingegen nur die [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Engine installiert. Weitere Komponenten sind optional. Für hochverfügbare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Instanzen unter Linux sollten zwei Pakete mit [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] installiert werden: der [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Agent (*mssql-server-agent*) und das Hochverfügbarkeitspaket (*mssql-server-ha*). Der [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Agent ist prinzipiell optional. Da er jedoch der [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Auftragsplaner ist und für den Protokollversand benötigt wird, sollte er installiert werden. Auf Windows-basierten Installationen ist der [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Agent nicht optional.
 
 >[!NOTE]
@@ -204,10 +204,10 @@ Die Speicherorte für Protokolle von Pacemaker-Clustern unterscheiden sich je na
 
 Wenn Sie den Standardspeicherort für Protokolle ändern möchten, müssen Sie `corosync.conf` anpassen.
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Planen von Pacemaker-Clustern für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-ssnoversion-md"></a>Planen von Pacemaker-Clustern für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 In diesem Abschnitt werden die wichtigen Punkte beschrieben, die Sie bei der Planung eines Pacemaker-Clusters berücksichtigen müssen.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Virtualisieren von Linux-basierten Pacemaker-Clustern für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-ssnoversion-md"></a>Virtualisieren von Linux-basierten Pacemaker-Clustern für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Wenn Sie virtuelle Computer für Linux-basierte [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Bereitstellungen für Verfügbarkeitsgruppen und Failoverclusterinstanzen nutzen, gelten dieselben Regeln wie für ihre Windows-basierten Gegenstücke. Microsoft stellt für virtualisierte [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Bereitstellungen grundlegende Supportrichtlinien im Artikel [Microsoft-Support: KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment) bereit. Darüber hinaus gelten für verschiedene Hypervisoren wie Microsoft Hyper-V und VMware ESXi möglicherweise noch andere Regeln aufgrund plattformspezifischer Unterschiede.
 
 Bei der Virtualisierung von Verfügbarkeitsgruppen und Failoverclusterinstanzen müssen Sie sicherstellen, dass für die Knoten eines bestimmten Pacemaker-Clusters Antiaffinität festgelegt ist. Wenn in einer Verfügbarkeitsgruppe oder Failoverclusterinstanz die VMs, die [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] hosten, für Hochverfügbarkeit konfiguriert sind, sollten diese niemals auf demselben Hypervisorhost ausgeführt werden. Wenn z. B. eine Failoverclusterinstanz mit zwei Knoten bereitgestellt wird, müssen *mindestens* drei Hypervisorhosts vorhanden sein, damit eine VM, die einen Knoten hostet, bei einem Hostausfall an anderer Stelle platziert werden kann. Das ist vor allem dann wichtig, wenn Features wie die Livemigration oder vMotion verwendet werden.

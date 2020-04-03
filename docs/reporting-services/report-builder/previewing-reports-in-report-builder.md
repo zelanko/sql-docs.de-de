@@ -1,5 +1,6 @@
 ---
 title: Anzeigen einer Berichtsvorschau im Berichts-Generator | Microsoft-Dokumentation
+description: Wenn Sie einen paginierten Bericht in den Reporting Services erstellen, können Sie eine Vorschau des Berichts anzeigen, um zu überprüfen, ob der Bericht das anzeigt, was Sie möchten.
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36c1c3172e4d37963340fdbebce85eff9b5086b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c5af8a22b4cba1fd7d2ad43629b379e351b207b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580712"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342752"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Anzeigen einer Berichtsvorschau in Berichts-Generator
   Während Sie einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht erstellen, sollten Sie ihn häufig in der Vorschau anzuzeigen, um zu überprüfen, ob die gewünschten Daten angezeigt werden. Klicken Sie auf **Ausführen**, um den Bericht in der Vorschau anzuzeigen. Der Bericht wird im Seitenansichtsmodus gerendert.  

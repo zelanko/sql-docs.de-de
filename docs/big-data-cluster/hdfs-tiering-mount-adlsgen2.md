@@ -9,12 +9,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 481e0170e14b978f9fa26689a71383d981313a57
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252008"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215380"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Einbinden von ADLS Gen2 für HDFS-Tiering in einen Big Data-Cluster
 
@@ -27,13 +27,13 @@ Die folgenden Abschnitte zeigen ein Beispiel für die Konfiguration von HDFS-Tie
   - **azdata**
   - **kubectl**
 
-## <a id="load"></a> Laden von Daten in Azure Data Lake Storage Gen2
+## <a name="load-data-into-azure-data-lake-storage"></a><a id="load"></a> Laden von Daten in Azure Data Lake Storage Gen2
 
 Im folgenden Abschnitt wird beschrieben, wie Sie Azure Data Lake Storage Gen2 zum Testen des HDFS-Tierings einrichten. Wenn Sie bereits Daten in Azure Data Lake Storage gespeichert haben, können Sie diesen Abschnitt überspringen, um Ihre eigenen Daten zu verwenden.
 
-1. [Erstellen eines Azure Data Lake Storage Gen2-Speicherkontos](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+1. [Erstellen eines Azure Data Lake Storage Gen2-Speicherkontos](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
-1. [Erstellen Sie einen Blobcontainer oder ein Dateisystem](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) für Ihre externen Daten in diesem Speicherkonto.
+1. [Erstellen Sie ein Dateisystem](/azure/storage/blobs/data-lake-storage-explorer) in diesem Speicherkonto für Ihre Daten.
 
 1. Laden Sie eine CSV- oder Parquet-Datei in den Container hoch. Dies sind die externen HDFS-Daten, die im Big Data-Cluster in HDFS eingebunden werden.
 
@@ -46,9 +46,9 @@ Um OAuth-Anmeldeinformationen zum Einbinden zu verwenden, müssen Sie die folgen
 1. Wechseln Sie zum [Azure-Portal](https://portal.azure.com).
 1. Rufen Sie Azure Active Directory auf. Dieser Dienst sollte Ihnen in der linken Navigationsleiste angezeigt werden.
 1. Klicken Sie in der rechten Navigationsleiste auf „App-Registrierungen“, und erstellen Sie eine neue Registrierung.
-1. Erstellen Sie eine Webanwendung, und befolgen Sie die Anweisungen des Assistenten. **Merken Sie sich den Namen der App, die Sie hier erstellen**. Sie müssen diesen Namen Ihrem ADLS-Konto als autorisierter Benutzer hinzufügen. Notieren Sie sich auch die Anwendungsclient-ID, die in der Übersicht angezeigt wird, wenn Sie die App auswählen.
-1. Navigieren Sie zu „Certificates&secrets“ (Zertifikate und Geheimnisse), sobald die neue Webanwendung erstellt wurde, erstellen Sie einen **neuen Clientschlüssel**, und wählen Sie eine Schlüsseldauer aus. **Fügen Sie das Geheimnis hinzu**.
-1.  Wechseln Sie zurück zur Seite „App-Registrierungen“, und klicken Sie oben auf „Endpunkte“. **Notieren Sie sich die URL des „OAuth-Tokenendpunkts (v2)“** .
+1. Erstellen Sie eine Web-App, und befolgen Sie die Anweisungen des Assistenten. **Merken Sie sich den Namen der App, die Sie hier erstellen**. Sie müssen diesen Namen Ihrem ADLS-Konto als autorisierter Benutzer hinzufügen. Notieren Sie sich auch die Anwendungsclient-ID, die in der Übersicht angezeigt wird, wenn Sie die App auswählen.
+1. Navigieren Sie zu „Certificates&secrets“ (Zertifikate und Geheimnisse), sobald die neue Webanwendung erstellt wurde, erstellen Sie einen **neuen geheimen Clientschlüssel**, und wählen Sie eine Schlüsseldauer aus. **Fügen Sie das Geheimnis hinzu**.
+1.     Navigieren Sie zurück zur Seite App-Registrierungen, und klicken Sie oben auf „Endpunkte“. **Notieren Sie sich die URL des „OAuth-Tokenendpunkts (v2)“**.
 1. Für OAuth sollten Sie nun folgende Punkte notiert haben:
 
     - Die „Anwendungsclient-ID“ der Webanwendung
@@ -99,7 +99,7 @@ Sie können die Einbindung auch mithilfe von Zugriffsschlüsseln durchführen, d
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
-## <a id="mount"></a> Einbinden des HDFS-Remotespeichers
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Einbinden des HDFS-Remotespeichers
 
 Nachdem Sie die MOUNT_CREDENTIALS-Umgebungsvariable für Zugriffsschlüssel oder die Verwendung von OAuth festgelegt haben, können Sie mit der Einbindung beginnen. In den folgenden Schritten wird der HDFS-Remotespeicher in Azure Data Lake in den lokalen HDFS-Speicher Ihres Big Data-Clusters eingebunden.
 
@@ -127,7 +127,7 @@ Nachdem Sie die MOUNT_CREDENTIALS-Umgebungsvariable für Zugriffsschlüssel oder
 
 Wenn die Einbindung erfolgreich war, sollten Sie in der Lage sein, die HDFS-Daten abzufragen und Spark-Aufträge dafür auszuführen. Sie wird im HDFS für Ihren Big Data-Cluster an dem Speicherort angezeigt, der durch `--mount-path` angegeben wird.
 
-## <a id="status"></a> Abrufen des Status von Einbindungen
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> Abrufen des Status von Einbindungen
 
 Verwenden Sie den folgenden Befehl, um die Status aller Einbindungen in Ihrem Big Data-Cluster aufzulisten:
 
@@ -149,7 +149,7 @@ Im folgenden Beispiel wird die Einbindung aktualisiert. Durch diese Aktualisieru
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> Löschen der Einbindung
+## <a name="delete-the-mount"></a><a id="delete"></a> Löschen der Einbindung
 
 Verwenden Sie zum Löschen den Einbindung den Befehl **azdata bdc hdfs mount delete**, und geben Sie den Einbindungspfad in HDFS an:
 

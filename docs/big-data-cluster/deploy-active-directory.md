@@ -9,12 +9,12 @@ ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 2bbacb2bdeeb409f08e6e68438535bc0d6671b01
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190580"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79487618"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus
 
@@ -77,19 +77,19 @@ Das BDC-Domänendienstkonto muss in der Lage sein, Benutzer-, Gruppen- und Compu
 
     ![image15](./media/deploy-active-directory/image15.png)
 
-1. Klicken Sie auf **Hinzufügen...** , und fügen Sie den Benutzer **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]bdcDSA** hinzu.
+1. Klicken Sie auf **Hinzufügen…** , und fügen Sie den Benutzer **bdcDSA** hinzu.
 
     ![image16](./media/deploy-active-directory/image16.png)
 
     ![image17](./media/deploy-active-directory/image17.png)
 
-1. Wählen Sie den Benutzer **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]bdcDSA** aus, und deaktivieren Sie alle Berechtigungen. Klicken Sie anschließend auf **Erweitert**.
+1. Wählen Sie den Benutzer **bdcDSA** aus, und deaktivieren Sie alle Berechtigungen. Klicken Sie anschließend auf **Erweitert**.
 
 1. Klicken Sie auf **Hinzufügen**.
 
     ![image18](./media/deploy-active-directory/image18.png)
 
-    - Klicken Sie auf **Prinzipal auswählen**, fügen Sie **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]bdcDSA** ein, und klicken Sie auf „OK“.
+    - Klicken Sie auf **Prinzipal auswählen**, fügen Sie **bdcDSA** ein, und klicken Sie auf „OK“.
 
     - Legen Sie den **Typ** auf **Zulassen** fest.
 
@@ -113,7 +113,7 @@ Das BDC-Domänendienstkonto muss in der Lage sein, Benutzer-, Gruppen- und Compu
 
 - Klicken Sie auf **Hinzufügen**.
 
-    - Klicken Sie auf **Prinzipal auswählen**, fügen Sie **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]bdcDSA** ein, und klicken Sie auf „OK“.
+    - Klicken Sie auf **Prinzipal auswählen**, fügen Sie **bdcDSA** ein, und klicken Sie auf „OK“.
 
     - Legen Sie den **Typ** auf **Zulassen** fest.
 
@@ -127,7 +127,7 @@ Das BDC-Domänendienstkonto muss in der Lage sein, Benutzer-, Gruppen- und Compu
 
 - Klicken Sie auf **Hinzufügen**.
 
-    - Klicken Sie auf **Prinzipal auswählen**, fügen Sie **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]bdcDSA** ein, und klicken Sie auf „OK“.
+    - Klicken Sie auf **Prinzipal auswählen**, fügen Sie **bdcDSA** ein, und klicken Sie auf „OK“.
 
     - Legen Sie den **Typ** auf **Zulassen** fest.
 
@@ -166,7 +166,7 @@ Für die AD-Integration sind die folgenden Parameter erforderlich. Fügen Sie di
 
 - `security.activeDirectory.ouDistinguishedName`: DN (Distinguished Name) einer Organisationseinheit (OE), in der alle während der Clusterbereitstellung erstellten AD-Konten gespeichert werden. Wenn die Domäne den Namen `contoso.local` aufweist, lautet der DN der Organisationseinheit `OU=BDC,DC=contoso,DC=local`.
 
-- `security.activeDirectory.dnsIpAddresses`: Liste der IP-Adressen der Domänencontroller.
+- `security.activeDirectory.dnsIpAddresses` enthält die Liste der IP-Adressen der DNS-Server der Domäne. 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: Liste der FQDNs der Domänencontroller. Der FQDN enthält den Computer-/Hostnamen eines Domänencontrollers. Wenn Sie über mehrere Domänencontroller verfügen, können Sie hier eine Liste angeben. Beispiel: `HOSTNAME.CONTOSO.LOCAL`
 
@@ -250,7 +250,7 @@ Sie finden hier ein Beispielskript für die [ Bereitstellung eines SQL Server-Bi
 
 Sie sollten jetzt alle erforderlichen Parameter für eine BDC-Bereitstellung mit Active Directory-Integration festgelegt haben.
 
-Eine vollständige Dokumentation zur Bereitstellung von [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] finden Sie in der [offiziellen Dokumentation](deployment-guidance.md).
+Sie können nun den mit Azure Directory integrierten BDC-Cluster mithilfe des `azdata`-Befehls und des kubeadm-prod-Bereitstellungsprofils bereitstellen. Eine vollständige Dokumentation, wie Sie [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] bereitstellen, finden Sie unter [Bereitstellen von Big Data-Cluster für SQL Server in Kubernetes](deployment-guidance.md).
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>Überprüfen der Reverse-DNS-Einträge für den Domänencontroller
 
@@ -325,3 +325,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - Pro Domäne (Active Directory) ist aktuell nur ein BDC zulässig. Die Aktivierung mehrerer BDCs pro Domäne ist für eine zukünftige Version geplant.
 
 - Keine der AD-Gruppen, die in Sicherheitskonfigurationen angegeben werden, können auf DomainLocal begrenzt werden. Sie können den Bereich einer AD-Gruppe überprüfen, indem Sie [diese Anweisungen befolgen](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+
+- Das AD-Konto, das verwendet werden kann, um sich bei BDC anzumelden, ist aus derselben Domäne zulässig, die für BDC konfiguriert wurde. Anmeldungen aus anderen vertrauenswürdigen Domänen sind für ein späteres Release geplant.

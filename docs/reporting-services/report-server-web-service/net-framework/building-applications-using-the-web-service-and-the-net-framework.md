@@ -1,5 +1,6 @@
 ---
 title: Erstellen von Anwendungen mit dem Webdienst und .NET Framework | Microsoft-Dokumentation
+description: Ein Berichtsserver-Webdienstclient kommuniziert über SOAP mit einem Berichtsserver. Verwenden Sie .NET Framework, um Webdienstclients für beliebige Webdienste zu erstellen.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f22f1b32318f5f6440b4506adcbb4926224908e3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 37d6552c328daff4793ea65d9670752378e1ab3b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284646"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509761"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Erstellen von Anwendungen mit dem Webdienst und .NET Framework
   Mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] können Sie bekannte Programmierkonstrukte wie z. B. Methoden, einfache Typen und benutzerdefinierte komplexe Typen für die Arbeit mit Webdiensten verwenden. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] enthält eine Infrastruktur und Tools, mit denen Sie Webdienstclients erstellen können, die jeden Webdienst von World Wide Web Consortium (W3C) aufrufen können, der den Standards entspricht.  
@@ -46,7 +47,7 @@ ms.locfileid: "63284646"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Creating the Web Service Proxy (Erstellen des Webdienstproxys)](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|In diesem Artikel werden die Möglichkeiten beschrieben, dem Projekt mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] eine Proxyklasse hinzuzufügen.|  
 |[Web Service Authentication (Webdienstauthentifizierung)](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|Beschreibt, wie Aufrufe des Berichtsserver-Webdiensts authentifiziert werden.|  

@@ -1,7 +1,7 @@
 ---
 title: OPENJSON (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
@@ -18,12 +18,12 @@ ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 48cd04467283683cf1dc54f300b2c4ff21fb8248
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3411558599f3637325906d00ca91c4c90314cf62
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68632142"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448499"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -128,7 +128,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
   
  **Ergebnisse**  
   
-|Key|value|  
+|Schlüssel|Wert|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -230,7 +230,7 @@ Die Spalten, die die OPENJSON-Funktion zurückgibt, hängen von der WITH-Option 
         |Wert der Typspalte|JSON-Datentyp|  
         |------------------------------|--------------------|  
         |0|NULL|  
-        |1|string|  
+        |1|Zeichenfolge|  
         |2|INT|  
         |3|TRUE/FALSE|  
         |4|array|  
@@ -374,7 +374,33 @@ DECLARE @json NVARCHAR(max)  = N'{
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))
 ```  
-  
+
+### <a name="example-6---simple-example-with-json-content"></a>Beispiel 6: Einfaches Beispiel mit JSON-Inhalten
+
+```sql
+--simple cross apply example
+DECLARE @JSON NVARCHAR(MAX) = N'[
+{
+"OrderNumber":"SO43659",
+"OrderDate":"2011-05-31T00:00:00",
+"AccountNumber":"AW29825",
+"ItemPrice":2024.9940,
+"ItemQuantity":1
+},
+{
+"OrderNumber":"SO43661",
+"OrderDate":"2011-06-01T00:00:00",
+"AccountNumber":"AW73565",
+"ItemPrice":2024.9940,
+"ItemQuantity":3
+}
+]'
+
+SELECT root.[key] AS [Order],TheValues.[key], TheValues.[value]
+FROM OPENJSON ( @JSON ) AS root
+CROSS APPLY OPENJSON ( root.value) AS TheValues
+```
+
 ## <a name="see-also"></a>Weitere Informationen
 
  [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   

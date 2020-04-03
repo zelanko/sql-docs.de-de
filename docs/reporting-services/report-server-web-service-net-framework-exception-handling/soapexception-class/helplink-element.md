@@ -1,5 +1,6 @@
 ---
 title: HelpLink-Element | Microsoft-Dokumentation
+description: Dieser Artikel informiert Sie über das Element „HelpLink“ der Eigenschaft „Detail“, einschließlich der Argumente der HelpLink-URL.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ed62c34095adc2e9c039d1780f616530679b601
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5a03f514b2305676d93ada0119326c101595f9c3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68307580"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215670"
 ---
 # <a name="helplink-element"></a>HelpLink-Element
   Das **HelpLink** -Element der **Detail** -Eigenschaft ist eine URL-Zeichenfolge, die vom Berichtsserver generiert wird. Die URL steuert eine Webseite an, die von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Hilfe und Support verwaltet wird. Sie liefert zusätzliche Hilfestellungen und Artikel der Kowledge Base zu bestimmten Fehlern, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]auftreten. Die URL hat folgende Syntax:  
   
- **https://** www\.microsoft.com **/** products **/** ee **/** transform.aspx **?EvtSrc**=v_alue_ **&EvtID**=_value_ **&ProdName**=_value_ **&ProdVer**=*value*  
+ **https://** www\.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=v_alue_**&EvtID**=_value_**&ProdName**=_value_**&ProdVer**=*value*  
   
  In der folgenden Tabelle sind die Argumente der **HelpLink** -URL aufgeführt.  
   
-|Argument|value|  
+|Argument|Wert|  
 |--------------|-----------|  
 |**EvtSrc**|"Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings"|  
 |**EvtID**|Der Fehlercode für den Berichtsserver, z. B. rsReservedItem.|  

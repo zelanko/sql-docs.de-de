@@ -1,5 +1,6 @@
 ---
 title: Arbeiten mit simulierten Daten in mobilen Reporting Services-Berichten | Microsoft-Dokumentation
+description: Wenn Sie ein Katalogelement auf der Entwurfsoberfläche platzieren, generiert der Publisher für mobile Berichte simulierte Daten für dieses Element. Entwerfen Sie Ihre Prototypen mit den simulierten Daten.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39640b3ce6e8d3c8760e3c1a1153949426eba80c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62474869"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448367"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Arbeiten mit simulierten Daten in mobilen Reporting Services-Berichten
 Wenn Sie ein Katalogelement auf der Entwurfsoberfläche platzieren, generiert [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] sofort simulierte Daten für dieses Element. Diese Daten erfüllen zahlreiche nützliche Funktionen beim Erstellen von mobilen Berichten.   

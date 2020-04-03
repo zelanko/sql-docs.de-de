@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e90aea4fc05a01f67527e33cac4ba90913405c7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 5c95568167d1a783ed8d605bc64bc60a135046f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287664"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380671"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -69,7 +69,7 @@ Erstellt eine neue Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 ```
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -956,7 +956,7 @@ Bevor eine partitionierte Tabelle mithilfe von CREATE TABLE erstellt wird, müss
 - FOREIGN KEY-Einschränkungen können nur auf Tabellen verweisen, die sich innerhalb derselben Datenbank auf demselben Server befinden. Datenbankübergreifende referenzielle Integrität muss durch Trigger implementiert werden. Weitere Informationen finden Sie unter [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md).
 - FOREIGN KEY-Einschränkungen können auf eine andere Spalte in derselben Tabelle verweisen. Ein solcher Verweis wird als Eigenverweis bezeichnet.
 - Die REFERENCES-Klausel einer FOREIGN KEY-Einschränkung auf Spaltenebene kann nur eine Verweisspalte auflisten. Diese Spalte muss denselben Datentyp aufweisen wie die Spalte, für die die Einschränkung definiert wurde.
-- Die REFERENCES-Klausel einer FOREIGN KEY-Einschränkung auf Tabellenebene muss ebenso viele Verweisspalten haben, wie sich Spalten in der Einschränkungsspaltenliste befinden. Der Datentyp jeder Verweisspalte muss ebenfalls mit dem der entsprechenden Spalte in der Spaltenliste übereinstimmen.
+- Die REFERENCES-Klausel einer FOREIGN KEY-Einschränkung auf Tabellenebene muss ebenso viele Verweisspalten haben, wie sich Spalten in der Einschränkungsspaltenliste befinden. Der Datentyp jeder Verweisspalte muss ebenfalls mit dem der entsprechenden Spalte in der Spaltenliste übereinstimmen. Die Verweisspalten müssen in derselben Reihenfolge angegeben werden, die verwendet wurde, als die Spalten des Primärschlüssels oder spezielle Einschränkungen für die Verweistabelle angegeben wurden.
 - CASCADE, SET NULL oder SET DEFAULT können nicht angegeben werden, wenn eine Spalte vom Typ **timestamp** Teil des Fremdschlüssels oder des Schlüssels ist, auf den verwiesen wird.
 - CASCADE, SET NULL, SET DEFAULT und NO ACTION können für Tabellen kombiniert werden, die referenzielle Beziehungen untereinander aufweisen. Wenn das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Einstellung NO ACTION feststellt, wird die Verarbeitung beendet und ein Rollback für verbundene CASCADE-, SET NULL- und SET DEFAULT-Aktionen ausgeführt. Wenn eine DELETE-Anweisung eine Kombination aus CASCADE-, SET NULL-, SET DEFAULT- und NO ACTION-Aktionen bewirkt, werden alle CASCADE-, SET NULL- und SET DEFAULT-Aktionen angewendet, bevor das [!INCLUDE[ssDE](../../includes/ssde-md.md)] nach der möglichen Angabe von NO ACTION sucht.
 - Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] verfügt über keine vordefinierte Grenze hinsichtlich der Anzahl von FOREIGN KEY-Einschränkungen, die eine Tabelle, die auf andere Tabellen verweist, enthalten kann, oder hinsichtlich der Anzahl von FOREIGN KEY-Einschränkungen im Besitz anderer Tabellen, die auf eine bestimmte Tabelle verweisen.

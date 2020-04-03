@@ -1,5 +1,6 @@
 ---
 title: Veröffentlichen von Datenquellen und Berichten | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Datenquellen und Berichte veröffentlichen, damit Personen, die Berechtigungen für den Berichtsserver oder die SharePoint-Website haben, Ihren Bericht ausführen können.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5a043efe7e80805a9d2c1c18dc86a425f01be7f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 93e0c70d19d4f64278603c062e4f59aedd97070b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190461"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510071"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Veröffentlichen von Datenquellen und Berichten
   Vor dem Veröffentlichen Ihres Berichts sollten Sie ihn in der Vorschau anzeigen. Sie können die Gestaltung weiter optimieren, bis Sie mit den Ergebnissen zufrieden sind.  

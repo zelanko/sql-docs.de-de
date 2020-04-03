@@ -1,5 +1,6 @@
 ---
 title: 'Schnellstart: Erweiterte Ereignisse in SQL Server'
+description: In diesem Schnellstart erfahren Sie, wie Sie erweiterte Ereignisse verwenden. Dabei handelt es sich um ein einfaches Leistungsüberwachungssystem, das zum Erfassen von Daten dient, um Probleme SQL Server zu überwachen und zu behandeln.
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f38c8c3097009a755355e5a7b50e55b55faba3cb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242922"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487648"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Schnellstart: Erweiterte Ereignisse in SQL Server
 
@@ -108,7 +109,7 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
 
     ![Neue Sitzung > Ereignisse > Konfigurieren > Filter (Prädikat) > Feld](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Klicken Sie auf die Registerkarte **Filter (Prädikat)** . Klicken Sie anschließend auf **Klicken Sie hier, um eine Klausel hinzuzufügen**, um alle SQL SELECT-Anweisungen zu erfassen, die eine HAVING-Klausel aufweisen.
+7. Klicken Sie auf die Registerkarte **Filter (Prädikat)**. Klicken Sie anschließend auf **Klicken Sie hier, um eine Klausel hinzuzufügen**, um alle SQL SELECT-Anweisungen zu erfassen, die eine HAVING-Klausel aufweisen.
 
 8. Wählen Sie in der Dropdownliste **Feld** die Option **sqlserver.sql_text**aus.
    - Wählen Sie für **Operator** einen LIKE-Operator aus.
@@ -423,7 +424,7 @@ Bestimmte Szenarien für Ereignissitzungen, die auf den Zugriff von Sperren ausg
 In der folgenden Tabelle sind die für erweiterte Ereignisse verwendeten Begriffe aufgeführt. Zudem werden ihre Bedeutungen beschrieben.
 
 
-| Begriff | Beschreibung |
+| Begriff | BESCHREIBUNG |
 | :--- | :---------- |
 | Ereignissitzung | Ein Konstrukt, das um mindestens ein Ereignis angeordnet ist, sowie unterstützende Elemente (wie Aktionen) stellen Ziele dar. Die CREATE EVENT SESSION-Anweisung erstellt jede Ereignissitzung. Sie können eine Ereignissitzung mithilfe der ALTER-Anweisung bei Bedarf starten und beenden. <br/> <br/> Eine Ereignissitzung wird gelegentlich nur als *Sitzung*bezeichnet, wenn der Kontext verdeutlicht, dass es sich um eine *Ereignissitzung*handelt. <br/> <br/> Weitere Informationen zu Ereignissitzungen finden Sie unter: [SQL Server Extended Events Sessions (Erweiterte Ereignissitzungen in SQL Server)](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | Ereignis | Ein bestimmtes Vorkommen im System, das von einer aktiven Ereignissitzung überwacht wird. <br/> <br/> Das Ereignis *sql_statement_completed* stellt z. B. den Zeitpunkt dar, zu dem jede angegebene T-SQL-Anweisung abgeschlossen wird. Das Ereignis kann seine Dauer und andere Daten melden. |
@@ -555,7 +556,7 @@ Die Systemansichten für erweiterte Ereignisse umfassen Folgendes:
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## <a name="appendix1"></a> Anhang: SELECT-Anweisungen zur Vorabermittlung des Berechtigungsbesitzers
+## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a><a name="appendix1"></a> Anhang: SELECT-Anweisungen zur Vorabermittlung des Berechtigungsbesitzers
 
 In diesem Artikel erwähnte Berechtigungen:
 

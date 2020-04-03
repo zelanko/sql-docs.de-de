@@ -1,5 +1,6 @@
 ---
 title: Berechtigungserteilung in benutzerdefinierten Assemblys | Microsoft-Dokumentationen
+description: Hier erfahren Sie, wie Sie Berechtigungen erteilen, um eine benutzerdefinierte Assembly zu implementieren, die sichere Aufrufe an geschützte Ressourcen in Ihrem System übermittelt.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dabfe56423a08c6624adc6da322cf442e5a63b7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2b3f4600c4c03fe356f5694f0d9a6cd5bc7afb98
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194325"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217057"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Berechtigungserteilung in benutzerdefinierten Assemblys
   Standardmäßig wird Code von benutzerdefinierten Assemblys mit dem eingeschränkten Berechtigungssatz **Execution** ausgeführt. In einigen Fällen möchten Sie vielleicht eine benutzerdefinierte Assembly implementieren, die gesicherte Aufrufe an geschützte Ressourcen innerhalb Ihres Sicherheitssystems durchführt (z. B. an Dateien oder die Registrierung). Hierzu müssen Sie folgende Schritte durchführen:  

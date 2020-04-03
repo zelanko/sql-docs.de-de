@@ -1,7 +1,7 @@
 ---
 title: Transparente Datenverschlüsselung (TDE) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/09/2019
+ms.date: 03/24/2020
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 498fe2391cd3e8109aed3f6e1e02436234ffe6f7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: a45cddab6506fcd7b3affb262b956bcf97f30b72
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288264"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80271456"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE (Transparent Data Encryption)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,17 +64,14 @@ ms.locfileid: "79288264"
   
  ![Zeigt die im Thema beschriebene Hierarchie an](../../../relational-databases/security/encryption/media/tde-architecture.png "Zeigt die im Thema beschriebene Hierarchie an")  
   
-## <a name="using-transparent-data-encryption"></a>Verwenden der transparenten Datenverschlüsselung  
- Führen Sie folgende Schritte aus, um TDE zu verwenden:  
+## <a name="enable-tde"></a>Aktivieren von TDE  
+ Befolgen Sie die folgenden Schritte, um Transparent Data Protection (TDE) zu aktivieren: 
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Erstellen Sie einen Hauptschlüssel  
-  
--   Erstellen oder beziehen Sie ein vom Hauptschlüssel geschütztes Zertifikat  
-  
--   Erstellen Sie einen Verschlüsselungsschlüssel für die Datenbank, und schützen Sie ihn durch das Zertifikat  
-  
+-   Erstellen Sie einen Hauptschlüssel    
+-   Erstellen oder beziehen Sie ein vom Hauptschlüssel geschütztes Zertifikat    
+-   Erstellen Sie einen Verschlüsselungsschlüssel für die Datenbank, und schützen Sie ihn durch das Zertifikat    
 -   Legen Sie fest, dass für die Datenbank Verschlüsselung verwendet wird  
   
  Im folgenden Beispiel wird die Verschlüsselung und Entschlüsselung der `AdventureWorks2012` -Datenbank gezeigt, wobei ein auf dem Server `MyServerCert`installiertes Zertifikat verwendet wird.  
@@ -146,7 +143,7 @@ GO
 > [!TIP]  
 > Verwenden Sie SQL Server Audit oder SQL-Datenbanküberwachung, um die Veränderungen im TDE-Status einer Datenbank zu überwachen. Bei SQL Server wird TDE unter der Überwachungsaktionsgruppe DATABASE_CHANGE_GROUP nachverfolgt, die in [SQL Server Audit-Aktionsgruppen und -Aktionen](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md) enthalten ist.
   
-### <a name="restrictions"></a>Beschränkungen  
+## <a name="restrictions"></a>Beschränkungen  
  Die folgende Vorgänge sind während der ersten Datenbankverschlüsselung, einer Schlüsseländerung oder der Datenbankentschlüsselung nicht erlaubt:  
   
 -   Löschen einer Datei aus einer Dateigruppe in der Datenbank  
@@ -196,8 +193,26 @@ GO
  Beim Erstellen von Datenbankdateien ist die sofortige Dateiinitialisierung nicht verfügbar, wenn TDE aktiviert ist.  
   
  Um den Verschlüsselungsschlüssel für die Datenbank mit einem asymmetrischen Schlüssel zu verschlüsseln, muss sich der asymmetrische Schlüssel auf einem erweiterbaren Schlüsselverwaltungsanbieter befinden.  
+
+## <a name="tde-scan"></a>TDE-Überprüfung
+
+Damit Transparent Data Encryption (TDE) für eine Datenbank aktiviert werden kann, muss [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Verschlüsselungsüberprüfung durchführen, bei der alle Seiten aus den Datendateien in den Pufferpool gelesen und die verschlüsselten Seiten dann auf den Datenträger geschrieben werden. Mit [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] wurde die Syntax für das Anhalten und Fortsetzen des TDE-Scans eingeführt, mit der Sie den Scan während unternehmenskritischen Zeiten oder hoher Auslastung des Systems anhalten und später fortsetzen können, damit Benutzer über mehr Kontrolle über den Verschlüsselungsscan verfügen.
+
+Verwenden Sie die folgende Syntax, um den TDE-Verschlüsselungsscan anzuhalten:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+Auf ähnliche Weise können Sie den TDE-Verschlüsselungsscan mithilfe der folgenden Syntax fortsetzen:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+`encryption_scan_state` wurde der dynamischen Verwaltungssicht `sys.dm_database_encryption_keys` hinzugefügt, um den aktuellen Status des Verschlüsselungsscans anzuzeigen. Außerdem wurde eine neue Spalte namens `encryption_scan_modify_date` hinzugefügt, die das Datum und die Uhrzeit der letzten Änderung des Status des Verschlüsselungsscans enthält. Beachten Sie außerdem, dass beim Start eine Meldung im Fehlerprotokoll protokolliert wird, die angibt, dass ein vorhandener Scan pausiert wurde, wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz neu gestartet wird, während die Verschlüsselungsüberprüfung angehalten ist.
   
-### <a name="transparent-data-encryption-and-transaction-logs"></a>Transparente Datenverschlüsselung und Transaktionsprotokolle  
+## <a name="tde-and-transaction-logs"></a>TDE und Transaktionsprotokolle  
  Die Aktivierung einer Datenbank für die Verwendung von TDE führt dazu, dass der verbleibende Teil des virtuellen Transaktionsprotokolls auf 0 festgelegt wird. Dadurch wird ein neues virtuelles Transaktionsprotokoll erzwungen. Dies gewährleistet, dass in den Transaktionsprotokollen kein Klartext verbleibt, nachdem die Datenbank für die Verschlüsselung eingerichtet wurde. Sie können den Status der Protokolldateiverschlüsselung erkennen, wenn Sie die `encryption_state`-Spalte in der `sys.dm_database_encryption_keys`-Sicht anzeigen, wie in diesem Beispiel:  
   
 ```  
@@ -217,39 +232,44 @@ GO
   
  Nachdem ein Verschlüsselungsschlüssel für die Datenbank zweimal geändert wurde, muss eine Protokollsicherung ausgeführt werden, bevor der Verschlüsselungsschlüssel für die Datenbank wieder geändert werden kann.  
   
-### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>Transparente Datenverschlüsselung und die tempdb-Systemdatenbank  
+## <a name="tde-and-tempdb"></a>TDE und tempdb 
  Die tempdb-Systemdatenbank wird verschlüsselt, wenn eine beliebige andere Datenbank in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz mithilfe von TDE verschlüsselt ist. Dies könnte sich auf die Leistung unverschlüsselter Datenbanken der gleichen Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]auswirken. Weitere Informationen über die tempdb-Systemdatenbank finden Sie unter [tempdb-Datenbank](../../../relational-databases/databases/tempdb-database.md).  
   
-### <a name="transparent-data-encryption-and-replication"></a>Transparente Datenverschlüsselung und Replikation  
+## <a name="tde-and-replication"></a>TDE und Replikation  
  Daten aus einer TDE-aktivierten Datenbank werden bei der Replikation nicht automatisch in einer verschlüsselten Form repliziert. Sie müssen TDE separat aktivieren, wenn Sie die Verteilungs- und Abonnentendatenbanken schützen möchten. Bei der Snapshotreplikation sowie bei der ursprünglichen Verteilung von Daten für die Transaktions- und Mergereplikation können Daten in unverschlüsselten Zwischendateien gespeichert werden – dies sind z. B. die BCP-Dateien.  Während der Transaktions- oder Mergereplikation kann die Verschlüsselung aktiviert werden, um den Kommunikationskanal zu schützen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
-  
-### <a name="transparent-data-encryption-and-filestream-data"></a>Transparente Datenverschlüsselung und FILESTREAM-Daten  
+
+## <a name="tde-and-always-on"></a>TDE und Always On
+ Sie können [eine verschlüsselte Datenbank zu einer Always On-Verfügbarkeitsgruppe hinzufügen](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md). 
+ 
+ Erstellen Sie den Hauptschlüssel und Zertifikate oder einen asymmetrischen Schlüssel (EKM) auf allen sekundären Replikaten, um die Datenbanken zu verschlüsseln, die Mitglied einer Verfügbarkeitsgruppe sind, bevor Sie den [Datenbankverschlüsselungsschlüssel](../../../t-sql/statements/create-database-encryption-key-transact-sql.md) auf dem primären Replikat erstellen. 
+ 
+ Wenn ein Zertifikat verwendet wird, um den Datenbankverschlüsselungsschlüssel (DEK) zu schützen, [sichern Sie das Zertifikat](../../../t-sql/statements/backup-certificate-transact-sql.md), das auf dem primären Replikat erstellt wurde, und [erstellen Sie dann das Zertifikat aus einer Datei](../../../t-sql/statements/create-certificate-transact-sql.md) auf allen sekundären Replikaten, bevor Sie den Datenbankverschlüsselungsschlüssel auf dem primären Replikat erstellen. 
+
+## <a name="tde-and-filestream-data"></a>TDE und Filestreamdaten  
  FILESTREAM-Daten werden nicht verschlüsselt, auch dann nicht, wenn TDE aktiviert ist.  
 
 <a name="scan-suspend-resume"></a>
 
-## <a name="transparent-data-encryption-tde-scan"></a>TDE-Überprüfung (Transparent Data Encryption)
+## <a name="remove-tde"></a>Entfernen von TDE
 
-Damit Transparent Data Encryption (TDE) für eine Datenbank aktiviert werden kann, muss [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Verschlüsselungsüberprüfung durchführen, bei der alle Seiten aus den Datendateien in den Pufferpool gelesen und die verschlüsselten Seiten dann auf den Datenträger geschrieben werden. Mit [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] wurde die Syntax für das Anhalten und Fortsetzen des TDE-Scans eingeführt, mit der Sie den Scan während unternehmenskritischen Zeiten oder hoher Auslastung des Systems anhalten und später fortsetzen können, damit Benutzer über mehr Kontrolle über den Verschlüsselungsscan verfügen.
-
-Verwenden Sie die folgende Syntax, um den TDE-Verschlüsselungsscan anzuhalten:
+Mithilfe der ALTER DATABASE-Anweisung können Sie die Verschlüsselung einer Datenbank entfernen.
 
 ```sql
-ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 ```
 
-Auf ähnliche Weise können Sie den TDE-Verschlüsselungsscan mithilfe der folgenden Syntax fortsetzen:
+Der Status der Datenbank wird mit der dynamischen Verwaltungssicht [sys.dm_database_encryption_keys](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) angezeigt.
 
-```sql
-ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
-```
+Warten Sie, bis die Entschlüsselung abgeschlossen ist, bevor Sie den Datenbankverschlüsselungsschlüssel mithilfe von [DROP DATABASE ENCRYPTION KEY](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md) entfernen.
 
-`encryption_scan_state` wurde der dynamischen Verwaltungssicht `sys.dm_database_encryption_keys` hinzugefügt, um den aktuellen Status des Verschlüsselungsscans anzuzeigen. Außerdem wurde eine neue Spalte namens `encryption_scan_modify_date` hinzugefügt, die das Datum und die Uhrzeit der letzten Änderung des Status des Verschlüsselungsscans enthält. Beachten Sie außerdem, dass beim Start eine Meldung im Fehlerprotokoll protokolliert wird, die angibt, dass ein vorhandener Scan pausiert wurde, wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz neu gestartet wird, während die Verschlüsselungsüberprüfung angehalten ist.
+> [!IMPORTANT]  
+> Sichern Sie Hauptschlüssel und Zertifikat, die für TDE verwendet werden, an einem sicheren Speicherort. Der Hauptschlüssel und das Zertifikat sind erforderlich, um Sicherungen wiederherzustellen, die erstellt wurden, solange die Datenbank mit TDE verschlüsselt war. Nach Entfernung des Datenbankverschlüsselungsschlüssels erstellen Sie eine Protokollsicherung und dann eine neue vollständige Sicherung der verschlüsselten Datenbank.  
+
+## <a name="tde-and-buffer-pool-extension"></a>TDE und Pufferpoolerweiterung  
+
+Dateien, die mit der Pufferpoolerweiterung (BPE, Buffer Pool Extension) zusammenhängen, werden bei der Verschlüsselung der Datenbank mit TDE nicht verschlüsselt. Für mit BPE zusammenhängende Dateien müssen Sie Verschlüsselungstools auf Dateisystemebene verwenden, z. B. Bitlocker oder EFS.  
   
-## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Transparente Datenverschlüsselung und Pufferpoolerweiterung  
- Dateien, die mit der Pufferpoolerweiterung (BPE, Buffer Pool Extension) zusammenhängen, werden bei der Verschlüsselung der Datenbank mit TDE nicht verschlüsselt. Für mit BPE zusammenhängende Dateien müssen Sie Verschlüsselungstools auf Dateisystemebene verwenden, z. B. Bitlocker oder EFS.  
-  
-## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Transparente Datenverschlüsselung und In-Memory OLTP  
+## <a name="tde-and-in-memory-oltp"></a>TDE und In-Memory-OLTP  
  TDE kann auf einer Datenbank aktiviert werden, die über In-Memory OLTP-Objekte verfügt. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] werden In-Memory OLTP-Protokolldatensätze und Daten verschlüsselt, wenn TDE aktiviert ist. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] werden In-Memory OLTP-Protokolldatensätze verschlüsselt, wenn TDE aktiviert ist, aber Dateien in der MEMORY_OPTIMIZED_DATA-Dateigruppe werden nicht verschlüsselt.  
   
 ## <a name="related-tasks"></a>Related Tasks  

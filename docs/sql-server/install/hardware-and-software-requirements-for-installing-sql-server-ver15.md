@@ -1,7 +1,8 @@
 ---
-title: Hardware- und Softwareanforderungen für die Installation von SQL Server | Microsoft-Dokumentation
+title: 'SQL Server 2019: Hardware- und Softwareanforderungen'
+description: Eine Liste der Hardware-, Software- und Betriebssystemanforderungen für die Installation und Ausführung von SQL Server 2019
 ms.custom: sqlfreshmay19
-ms.date: 11/04/2019
+ms.date: 02/19/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -44,62 +45,31 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aca31d10c030c360dcd82d6c4851df700bc3c4fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4dce96a698b9d4c84adbfdafdfbb7ac9056aac05
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74319053"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79428171"
 ---
-# <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Hardware- und Softwareanforderungen für die Installation von SQL Server
+# <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019: Hardware- und Softwareanforderungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel sind die Mindestanforderungen an die Hardware und Software aufgeführt, um [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] auf dem Windows-Betriebssystem zu installieren und auszuführen.
+In diesem Artikel sind die Mindestanforderungen an die Hardware und Software aufgeführt, um SQL Server 2019 auf dem Windows-Betriebssystem zu installieren und auszuführen.
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] führt Unterstützung für [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] unter Linux ein. Weitere Informationen finden Sie unter [Installationsleitfaden für die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Linux](../../linux/sql-server-linux-setup.md#system). 
+Die Hardware- und Softwareanforderungen für andere Versionen von SQL Server finden Sie unter:
+- [SQL Server 2016 und 2017](hardware-and-software-requirements-for-installing-sql-server.md)
+- [SQL Server unter Linux](../../linux/sql-server-linux-setup.md#system)
+- [Big Data-Cluster](../../big-data-cluster/deployment-guidance.md)
 
-**Probieren Sie es aus:**  
-  
-- Download von SQL Server aus dem [**Evaluierungscenter**.](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-rc) 
-  
-<!-- 
-- Spin up a Virtual Machine with [**SQL Server 2017**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) already installed.  
--->
-  
-**Die folgenden Überlegungen betreffen alle Editionen:**  
-  
-- Das[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup blockiert Installationen auf schreibgeschützten, zugeordneten oder komprimierten Laufwerken.  
-  
-- Bei der Installation tritt ein Fehler auf, wenn Sie das Setup über eine Remotedesktopverbindung mit den Medien auf einer lokalen Ressource im RDC-Client starten. Für die Remoteinstallation müssen sich die Medien auf einer Netzwerkfreigabe oder lokal auf dem physischen oder virtuellen Computer befinden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsmedien befinden sich entweder auf einer Netzwerkfreigabe, einem zugeordneten Laufwerk, einem lokalen Laufwerk oder werden einem virtuellen Computer als ISO zur Verfügung gestellt.
-- Beim[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup werden die folgenden vom Produkt benötigten Softwarekomponenten installiert:  
-  
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
-  
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setuphilfsdateien  
-
-##  <a name="hwswr"></a> Hardware- und Softwareanforderungen  
-Die folgenden Anforderungen gelten für alle Installationen:  
-  
-|Komponente|Anforderung|  
-|---------------|-----------------|  
-|Betriebssystem|Windows 10 TH1 1507 oder höher<br/><br>Windows Server 2016 oder höher<br/><br/>
-|.NET Framework|Die mindestens erforderlichen Betriebssysteme umfassen die mindestens erforderliche Version von .NET Framework.|  
-|Netzwerksoftware|Die unterstützten Betriebssysteme für [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] verfügen über integrierte Netzwerksoftware. Benannte Instanzen und Standardinstanzen einer eigenständigen Installation unterstützen die folgenden Netzwerkprotokolle: Freigegebener Arbeitsspeicher, Named Pipes und TCP/IP<br/><br/> |  
-|Festplatte|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] erfordert mindestens 6 GB verfügbaren Festplattenspeicher.<br/><br/> Der erforderliche freie Festplattenspeicher ist von den installierten [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] -Komponenten abhängig. Weitere Informationen finden Sie unter [Anforderungen an den Festplattenspeicherplatz](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) weiter unten in diesem Artikel. Informationen zu unterstützten Speichertypen für Datendateien finden Sie unter [Speichertypen für Datendateien](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
-|Überwachen|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] erfordert eine Super VGA-Grafikkarte mit einer Mindestauflösung von 800x600 Pixel.|  
-|Internet|Zur Nutzung des Internets ist ein Internetzugang erforderlich (möglicherweise gebührenpflichtig).|  
-
-> [!NOTE]
-> Wegen des Virtualisierungsaufwands ist das Ausführen von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] auf einer VM langsamer als das systeminterne Ausführen.  
-
-> [!IMPORTANT]
-> Es gibt zusätzliche Hardware- und Softwareanforderungen für die PolyBase-Funktion. Weitere Informationen finden Sie unter [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)(Erste Schritte mit PolyBase).  
-  
-##  <a name="pmosr"></a> Anforderungen an Prozessor, Arbeitsspeicher und Betriebssystem  
+##  <a name="hardware-requirements"></a><a name="pmosr"></a> Hardwareanforderungen  
  Der folgende Arbeitsspeicher- und Prozessoranforderungen gelten für alle Editionen von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  
   
 |Komponente|Anforderung|  
 |---------------|-----------------|  
+|Festplatte|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] erfordert mindestens 6 GB verfügbaren Festplattenspeicher.<br/><br/> Der erforderliche freie Festplattenspeicher ist von den installierten [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] -Komponenten abhängig. Weitere Informationen finden Sie unter [Anforderungen an den Festplattenspeicherplatz](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) weiter unten in diesem Artikel. Informationen zu unterstützten Speichertypen für Datendateien finden Sie unter [Speichertypen für Datendateien](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
+|Überwachen|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] erfordert eine Super VGA-Grafikkarte mit einer Mindestauflösung von 800x600 Pixel.|  
+|Internet|Zur Nutzung des Internets ist ein Internetzugang erforderlich (möglicherweise gebührenpflichtig).|  
 |Arbeitsspeicher \*|**Minimum:**<br/><br/> Express-Editionen: 512 MB<br/><br/> Alle anderen Editionen: 1 GB<br/><br/> **Empfohlen.**<br/><br/> Express-Editionen: 1 GB<br/><br/> Alle anderen Editionen: Mindestens 4 GB. Mit zunehmender Datenbankgröße sollte außerdem der Speicher erhöht werden, um eine optimale Leistung sicherzustellen.|  
 |Prozessorgeschwindigkeit:|**Mindestens:** x64-Prozessor: 1,4 GHz<br/><br/> **Empfohlen.** 2,0 GHz oder schneller|  
 |Prozessortyp|x64-Prozessor: AMD Opteron, AMD Athlon 64, Intel Xeon mit Intel EM64T-Unterstützung, Intel Pentium IV mit EM64T-Unterstützung|  
@@ -109,19 +79,28 @@ Die folgenden Anforderungen gelten für alle Installationen:
   
  \* Zur Installation der [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]-Komponente in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) sind mindestens 2 GB RAM erforderlich. Dies unterscheidet sich von den Arbeitsspeichermindestanforderungen von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]. Informationen zum Installieren von DQS finden Sie unter [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
 
-**Server Core-Unterstützung:**
 
-Installationen von SQL Server 2019 werden im Server Core-Modus folgender Windows Server-Editionen unterstützt:
+##  <a name="software-requirements"></a><a name="hwswr"></a> Softwareanforderungen  
 
-|                              |
-| :------------------------  |
-| Windows Server 2019 Core | 
-| Windows Server 2016 Core |
-| &nbsp; | 
+Die folgenden Anforderungen gelten für alle Installationen:  
+  
+|Komponente|Anforderung|  
+|---------------|-----------------|  
+|Betriebssystem|Windows 10 TH1 1507 oder höher<br/><br>Windows Server 2016 oder höher<br/><br/>
+|.NET Framework|Die mindestens erforderlichen Betriebssysteme umfassen die mindestens erforderliche Version von .NET Framework.|  
+|Netzwerksoftware|Die unterstützten Betriebssysteme für [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] verfügen über integrierte Netzwerksoftware. Benannte Instanzen und Standardinstanzen einer eigenständigen Installation unterstützen die folgenden Netzwerkprotokolle: Freigegebener Arbeitsspeicher, Named Pipes und TCP/IP<br/><br/> |  
 
-Weitere Informationen zum Installieren von SQL Server unter Server Core finden Sie unter [Installieren von SQL Server unter Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+Beim[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup werden die folgenden vom Produkt benötigten Softwarekomponenten installiert:  
+  
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setuphilfsdateien  
 
-###  <a name="TOP_Principal"></a> Betriebssystemkompatibilität   
+
+> [!IMPORTANT]
+> Es gibt zusätzliche Hardware- und Softwareanforderungen für die PolyBase-Funktion. Weitere Informationen finden Sie unter [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)(Erste Schritte mit PolyBase).  
+  
+
+##  <a name="operating-system-support"></a><a name="TOP_Principal"></a> Betriebssystemunterstützung 
 
 Die folgende Tabelle zeigt, welche Editionen von SQL Server 2019 mit welchen Windows-Versionen kompatibel sind:  
   
@@ -134,16 +113,29 @@ Die folgende Tabelle zeigt, welche Editionen von SQL Server 2019 mit welchen Win
 | Windows Server 2016 Datacenter    |    Ja     |    Ja    |    Ja   | Ja |   Ja   |
 | Windows Server 2016 Standard      |    Ja     |    Ja    |    Ja   | Ja |   Ja   |
 | Windows Server 2016 Essentials    |    Ja     |    Ja    |    Ja   | Ja |   Ja   |
-| Windows 10 Enterprise             |    Nein      |    Ja    |    Ja   | Nein  |   Ja   |
-| Windows 10 Professional           |    Nein      |    Ja    |    Ja   | Nein  |   Ja   |
-| Windows 10 Home                   |    Nein      |    Ja    |    Ja   | Nein  |   Ja   |
+| Windows 10 Enterprise             |    Nein       |    Ja    |    Ja   | Nein   |   Ja   |
+| Windows 10 Professional           |    Nein       |    Ja    |    Ja   | Nein   |   Ja   |
+| Windows 10 Home                   |    Nein       |    Ja    |    Ja   | Nein   |   Ja   |
 | &nbsp; | &nbsp; |
 
 
-##  <a name="CrossLanguageSupport"></a> Sprachübergreifende Unterstützung  
+### <a name="server-core-support"></a>Server Core-Unterstützung
+
+Installationen von SQL Server 2019 werden im Server Core-Modus folgender Windows Server-Editionen unterstützt:
+
+|                              |
+| :------------------------  |
+| Windows Server 2019 Core | 
+| Windows Server 2016 Core |
+| &nbsp; | 
+
+Weitere Informationen zum Installieren von SQL Server unter Server Core finden Sie unter [Installieren von SQL Server unter Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md). 
+
+
+##  <a name="cross-language-support"></a><a name="CrossLanguageSupport"></a> Sprachübergreifende Unterstützung  
  Weitere Informationen zu sprachübergreifender Unterstützung und Überlegungen zur Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lokalisierten Sprachen finden Sie unter [Lokale Sprachversionen in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md).  
   
-##  <a name="HardDiskSpace"></a> Anforderungen an den Festplattenspeicherplatz  
+##  <a name="disk-space-requirements"></a><a name="HardDiskSpace"></a> Speicherplatzanforderungen  
  Während der Installation von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]erstellt Windows Installer temporäre Dateien auf dem Systemlaufwerk. Überprüfen Sie, ob Sie über mindestens 6,0 GB freien Speicherplatz auf dem Systemlaufwerk für diese Dateien verfügen, bevor Sie Setup ausführen, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu installieren oder zu aktualisieren. Diese Anforderung gilt auch dann, wenn Sie Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Nichtstandard-Laufwerk installieren.  
   
  Die tatsächlichen Anforderungen für den Festplattenspeicherplatz basieren auf der Systemkonfiguration und den Funktionen, die Sie installieren möchten. In der folgenden Tabelle sind die Speicherplatzanforderungen für die Komponenten von [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] aufgeführt.  
@@ -168,7 +160,7 @@ Die folgende Tabelle zeigt, welche Editionen von SQL Server 2019 mit welchen Win
   
  *Die Onlinedokumentation erfordert 200 MB Festplattenspeicherplatz.  
   
-##  <a name="StorageTypes"></a> Speichertypen für Datendateien  
+##  <a name="storage-types-for-data-files"></a><a name="StorageTypes"></a> Speichertypen für Datendateien  
  Für Datendateien werden folgende Speichertypen unterstützt:  
   
 - Lokaler Datenträger 
@@ -182,7 +174,7 @@ Die folgende Tabelle zeigt, welche Editionen von SQL Server 2019 mit welchen Win
   
   
   
-##  <a name="DC_support"></a> Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Domänencontroller  
+##  <a name="installing-ssnoversion-on-a-domain-controller"></a><a name="DC_support"></a> Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Domänencontroller  
  Aus Sicherheitsgründen sollte [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] nicht auf einem Domänencontroller installiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup wird die Installation auf einem Computer, der als Domänencontroller fungiert, nicht blockieren, es gelten jedoch die folgenden Einschränkungen:  
   
 - Sie können keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste auf einem Domänencontroller unter einem lokalen Dienstkonto ausführen.    
@@ -192,7 +184,18 @@ Die folgende Tabelle zeigt, welche Editionen von SQL Server 2019 mit welchen Win
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird auf einem schreibgeschützten Domänencontroller nicht unterstützt. Beim Setup von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können keine Sicherheitsgruppen erstellt oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonten für einen schreibgeschützten Domänencontroller bereitgestellt werden. In diesem Szenario tritt ein Setupfehler auf. 
 - Eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird in einer Umgebung, in der nur auf einen schreibgeschützten Domänencontroller zugegriffen werden kann, nicht unterstützt. 
   
-## <a name="see-also"></a>Weitere Informationen  
- [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
+## <a name="installation-media"></a>Installationsmedien
+
+Relevante Installationsmedien können Sie unter den folgenden Hyperlinks herunterladen: 
+  
+- [SQL Server Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)
+- [Neueste Updates für Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+
+Alternativ können Sie auch eine [Azure-VM mit SQL Server erstellen](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal), obwohl SQL Server auf einer VM aufgrund des Virtualisierungsmehraufwands langsamer ausgeführt wird als in einer nativen Umgebung.
+
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Nachdem Sie sich über die Hardware- und Softwareanforderungen für die Installation von SQL Server informiert haben, können Sie mit dem [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md) beginnen oder sich die [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md) durchlesen.
+
 

@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173571"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215743"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Datenpersistenz mit SQL Server-Big Data-Clustern in Kubernetes
 
@@ -33,6 +33,8 @@ Im Folgenden sind einige wichtige Aspekte aufgeführt, die beim Planen der Speic
 - Wenn der Speicheranbieter für die Speicherklasse, die Sie in der Konfiguration bereitstellen, keine dynamische Bereitstellung unterstützt, müssen Sie die persistenten Volumes vorab erstellen. Die dynamische Bereitstellung wird beispielsweise nicht vom `local-storage`-Anbieter unterstützt. Weitere Informationen zu einem mit `kubeadm` bereitgestellten Kubernetes-Cluster finden Sie in diesem [Beispielskript](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu).
 
 - Wenn Sie einen Big Data-Cluster bereitstellen, können Sie für alle Komponenten im Cluster dieselbe Speicherklasse konfigurieren. Als bewährte Methode für eine Produktionsbereitstellung benötigen verschiedene Komponenten jedoch unterschiedliche Speicherkonfigurationen, um verschiedene Workloads in Bezug auf die Größe oder den Durchsatz zu unterstützen. Sie können die im Controller angegebene Standardspeicherkonfiguration für jede SQL Server-Masterinstanz und für alle Datasets und Speicherpools überschreiben. Diese Schritte werden in diesem Artikel anhand von Beispielen veranschaulicht.
+
+- Bei der Berechnung der Größenanforderungen für den Speicherpool müssen Sie den Replikationsfaktor berücksichtigen, mit dem HDFS konfiguriert ist.  Der Replikationsfaktor kann bei der Bereitstellung in der Konfigurationsdatei für die Clusterbereitstellung konfiguriert werden. Der Standardwert für die dev-test-Profile (d. h. `aks-dev-test` oder `kubeadm-dev-test`) ist 2. Für die Profile, die für Produktionsbereitstellungen empfohlen werden (d. h. `kubeadm-prod`) lautet der Standardwert 3. Als Best Practice empfehlen wir Ihnen, dass Sie Ihre Produktionsbereitstellung eines Big Data-Clusters mit einem Replikationsfaktor für HDFS von mindestens 3 konfigurieren. Der Wert des Replikationsfaktors beeinflusst die Anzahl an Instanzen im Speicherpool: Sie müssen mindestens so viele Speicherpoolinstanzen bereitstellen, dass sie dem Wert des Replikationsfaktors entsprechen. Zusätzlich müssen Sie die Speichergröße entsprechend anpassen. Berücksichtigen Sie dabei auch Daten, die in HDFS entsprechend dem Wert des Replikationsfaktors repliziert werden. Weitere Informationen zur Datenreplikation in HDFS finden Sie [hier](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication). 
 
 - Ab SQL Server 2019 CU1 können Sie die Speicherkonfigurationseinstellungen nach der Bereitstellung nicht mehr ändern. Das bedeutet, dass sie nach der Bereitstellung weder den persistente Volumeanspruch der einzelnen Instanzen ändern, noch Skalierungsvorgänge durchführen können. Daher sollte das Speicherlayout vor der Bereitstellung eines Big Data-Clusters sorgfältig geplant werden.
 
@@ -101,7 +103,7 @@ azdata bdc config init --source aks-dev-test --target custom
 Bei diesem Vorgang werden zwei Dateien erstellt (`bdc.json` und `control.json`), die Sie entweder manuell oder mithilfe des Befehls `azdata bdc config` anpassen können. Sie können eine Kombination aus den Bibliotheken „jsonpath“ und „jsonpatch“ verwenden, um Möglichkeiten zum Bearbeiten von Konfigurationsdateien bereitzustellen.
 
 
-### <a id="config-samples"></a> Konfigurieren von Speicherklassennamen und/oder der Anspruchsgröße
+### <a name="configure-storage-class-name-andor-claims-size"></a><a id="config-samples"></a> Konfigurieren von Speicherklassennamen und/oder der Anspruchsgröße
 
 Die Größe der persistenten Volumeansprüche, die für alle im Cluster bereitgestellten Pods bereitgestellt werden, beträgt standardmäßig 10 GB. Sie können diesen Wert vor der Clusterbereitstellung in einer benutzerdefinierten Konfigurationsdatei anpassen und auf Ihre ausgeführten Workloads abstimmen.
 

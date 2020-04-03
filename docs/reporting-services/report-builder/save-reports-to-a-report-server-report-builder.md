@@ -1,5 +1,6 @@
 ---
 title: Speichern von Berichten auf einem Berichtsserver (Berichts-Generator) | Microsoft-Dokumentation
+description: Im Berichts-Generator können Sie einen Bericht auf einem Berichtsserver veröffentlichen, damit andere Benutzer sich diesen ansehen können. Bei jeder Ausführung des veröffentlichten Berichts werden Ihnen die aktuellen Daten angezeigt.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6f16f6e58a227c25a2c631a949a96e73e5aaf8a1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580663"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290800"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Speichern von Berichten auf einem Berichtsserver (Berichts-Generator)
   Im Berichts-Generator können Sie eine Berichtsdefinition auf einem Berichtsserver speichern (auch bekannt als Bericht veröffentlichen). Wenn der Bericht auf einem Berichtsserver gespeichert wird, können andere Benutzer den Bericht anzeigen. Bei jeder Ausführung des veröffentlichten Berichts rufen Sie die aktuellen Daten ab. Exportieren Sie den Bericht in ein anderes Dateiformat, und speichern Sie es, um eine statische Kopie eines gerenderten Berichts zu speichern, oder speichern Sie Versionen von gerenderten Berichten mit der Funktion zum Berichtsverlauf.  
@@ -23,7 +24,7 @@ ms.locfileid: "65580663"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>So speichern Sie einen Bericht auf einem Berichtsserver  
   
-1.  Klicken Sie über die Schaltfläche Berichts-Generator auf **Speichern**. Das Dialogfeld **Speichern unter** _\<Berichtselement>_ wird geöffnet.  
+1.  Klicken Sie über die Schaltfläche Berichts-Generator auf **Speichern**. Das Dialogfeld **Speichern unter**_\<Berichtselement>_ wird geöffnet.  
   
     > [!NOTE]  
     >  Wenn Sie einen Bericht erneut speichern, wird er automatisch am vorherigen Speicherort erneut gespeichert. Verwenden Sie die Option Speichern unter, um den Speicherort zu ändern.  
@@ -38,7 +39,7 @@ ms.locfileid: "65580663"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>So speichern Sie einen Bericht unter einem anderen Namen  
   
-1.  Klicken Sie auf die Schaltfläche "Berichts-Generator" und anschließend auf **Speichern unter**. Das Dialogfeld **Speichern unter** _\<Berichtselement>_ wird geöffnet.  
+1.  Klicken Sie auf die Schaltfläche "Berichts-Generator" und anschließend auf **Speichern unter**. Das Dialogfeld **Speichern unter**_\<Berichtselement>_ wird geöffnet.  
   
 2.  Wechseln Sie zu dem Speicherort auf dem Berichtsserver oder zu der Dateifreigabe, in der Sie den Bericht speichern möchten.  
   

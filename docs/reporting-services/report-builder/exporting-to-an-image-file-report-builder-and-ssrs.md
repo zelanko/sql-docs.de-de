@@ -1,5 +1,6 @@
 ---
 title: Exportieren in eine Bilddatei (Berichts-Generator) | Microsoft-Dokumentation
+description: Die Bildrenderingerweiterung rendert paginierte Berichte im Berichts-Generator als Bitmap- oder Metadatei. Die Standardeinstellung ist eine TIFF-Datei, die auf mehreren Seiten angezeigt werden kann.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2393769b4d6ca1676833b4e208e7f09dfcd444df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d5a3bd0cd2dfdba8b34ff6dc97f56fb3eaf53306
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081378"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342845"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>Exportieren in eine Bilddatei (Berichts-Generator und SSRS)
   Die Bildrenderingerweiterung rendert einen paginierten Bericht als Bitmap- oder Metadatei. Standardmäßig erstellt die Bildrenderingerweiterung eine TIFF-Datei des Berichts, die auf mehreren Seiten angezeigt werden kann. Nachdem der Client das Bild erhalten hat, kann es in einem Image Viewer angezeigt und gedruckt werden. Dieses Thema enthält für das Bildrendering spezifische Informationen und beschreibt Ausnahmen zu den Renderingregeln.  
@@ -23,7 +24,7 @@ ms.locfileid: "77081378"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SupportedImageFormats"></a> Unterstützte Bildformate  
+##  <a name="supported-image-formats"></a><a name="SupportedImageFormats"></a> Unterstützte Bildformate  
  In der folgenden Tabelle werden die Dateierweiterung und der MIME-Typ für jedes Bildrendererformat angezeigt.  
   
 |**Typ**|**Erweiterung**|**MIMEType**|  
@@ -37,11 +38,11 @@ ms.locfileid: "77081378"
 |EMFPlus|EMF|image/emf|  
   
   
-##  <a name="RenderingMultiplePages"></a> Rendern von mehreren Seiten  
+##  <a name="rendering-multiple-pages"></a><a name="RenderingMultiplePages"></a> Rendern von mehreren Seiten  
  TIFF ist das einzige Format, das mehrseitige Dokumente in einer einzelnen Datei unterstützt. Andere Formate, wie JPG oder PNG, geben jeweils nur eine Seite aus und erfordern für jede Seite einen separaten Aufruf der Renderingerweiterung.  
   
   
-##  <a name="Interactivity"></a> Interaktivität  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interaktivität  
  Interaktivität wird von keinem der durch diesen Renderer generierten Bildformate unterstützt. Die folgenden interaktiven Elemente werden nicht gerendert:  
   
 -   Links  
@@ -59,7 +60,7 @@ ms.locfileid: "77081378"
 -   Lesezeichen  
   
   
-##  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Geräteinformationseinstellungen  
  Sie können einige Standardeinstellungen für diesen Renderer ändern, indem Sie die Geräteinformationseinstellungen ändern. Weitere Informationen finden Sie unter [Image Device Information Settings](../../reporting-services/image-device-information-settings.md).  
   
   

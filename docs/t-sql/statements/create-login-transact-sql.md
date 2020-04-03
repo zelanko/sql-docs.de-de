@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fe202e213f200dcf98a7f0479c29451d36b8a8f
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 57639c3705f38396fdc3ebf5dd65b34c145c324d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77255974"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526795"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -59,7 +59,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
@@ -170,7 +170,7 @@ GO
 
 Im folgenden Beispiel wird ein Anmeldename für einen bestimmten Benutzer erstellt, und es wird ein Kennwort zugewiesen. Die Option `MUST_CHANGE` erfordert, dass Benutzer dieses Kennwort ändern, wenn sie das erste Mal eine Verbindung mit dem Server herstellen.
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>'
@@ -185,7 +185,7 @@ GO
 
 Im folgenden Beispiel wird unter Verwendung des Benutzers der Anmeldename für einen bestimmten Benutzer erstellt. Dieser Anmeldename wird den Anmeldeinformationen zugeordnet.
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>',
@@ -197,7 +197,7 @@ GO
 
 Im folgenden Beispiel wird der Anmeldename für eine bestimmte Benutzer-ID von einem Zertifikat in der Masterdatenbank erstellt.
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
 
 ```sql
 USE MASTER;
@@ -213,7 +213,7 @@ GO
 
 Im folgenden Beispiel wird ein Anmeldename von einem Windows-Domänenkonto erstellt.
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
 
 ```sql
 CREATE LOGIN [<domainName>\<login_name>] FROM WINDOWS;
@@ -243,6 +243,18 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO
 ```
 
+### <a name="g-creating-a-login-with-multiple-arguments"></a>G. Erstellen einer Anmeldung mit mehreren Argumenten
+
+Im folgenden Beispiel sehen Sie, wie Sie mehrere Argumente mit Kommas zwischen den einzelnen Argumenten als eine Zeichenfolge verbinden.
+
+```sql
+CREATE LOGIN [MyUser]
+WITH PASSWORD = 'MyPassword',
+DEFAULT_DATABASE = MyDatabase,
+CHECK_POLICY = OFF,
+CHECK_EXPIRATION = OFF ;
+```
+
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
@@ -266,7 +278,7 @@ GO
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 CREATE LOGIN login_name
  { WITH <option_list> }
@@ -278,7 +290,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Argumente
 
-*login_name* Gibt den Anmeldenamen an, der erstellt wird. Azure SQL-Datenbank Singleton/Pool für elastische Datenbanken unterstützt nur SQL-Anmeldungen. Um Konten für Azure Active Directory-Benutzer zu erstellen, verwenden Sie die [CREATE USER](create-user-transact-sql.md)-Anweisung.
+*login_name* Gibt den Anmeldenamen an, der erstellt wird. Einzelne und Pooldatenbanken in Azure SQL-Datenbank und Datenbanken in Azure Synapse Analytics (früher: Azure SQL Data Warehouse) unterstützen nur SQL-Anmeldungen. Verwenden Sie die [CREATE USER](create-user-transact-sql.md)-Anweisung, um Konten für Azure Active Directory-Benutzer oder Benutzeranmeldungen, die keiner Anmeldung zugewiesen sind, zu erstellen. Weitere Informationen finden Sie unter [Verwalten von Anmeldungen in Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 PASSWORD **='** password* *'* Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet.
 
@@ -289,10 +301,10 @@ SID = *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für An
 ## <a name="remarks"></a>Bemerkungen
 
 - Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
-- Ein Skript zum Übertragen von Anmeldenamen finden unter [Übertragen von Benutzernamen und Kennwörtern zwischen Instanzen von SQL Server](https://support.microsoft.com/kb/918992).
 - Durch das Erstellen eines Anmeldenamens wird der neue Anmeldename automatisch aktiviert, und diesem Anmeldenamen wird die **CONNECT SQL**-Berechtigung auf Serverebene gewährt.
-- Der [Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md) muss mit dem Anmeldetyp übereinstimmen, damit der Zugriff gewährt wird.
-- Informationen zum Entwerfen eines Berechtigungssystems finden Sie unter [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
+
+> [!IMPORTANT]
+> Unter [Verwalten von Anmeldungen in Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) finden Sie weitere Informationen zum Arbeiten mit Anmeldungen und Benutzern in Azure SQL-Datenbank.
 
 ## <a name="login"></a>Anmeldename
 
@@ -302,31 +314,15 @@ Die **CREATE LOGIN**-Anweisung muss die einzige Anweisung in einem Batch sein.
 
 In einigen Methoden zum Herstellen einer Verbindung mit SQL-Datenbank, z.B. **sqlcmd**, müssen Sie den Servernamen von SQL-Datenbank mit der *\<login>* @ *\<server>* -Notation an den Anmeldenamen in der Verbindungszeichenfolge anfügen. Wenn Ihr Anmeldename beispielsweise `login1` und der vollqualifizierte Name des Servers von SQL-Datenbank `servername.database.windows.net` lautet, sollte der Parameter *username* der Verbindungszeichenfolge `login1@servername` lauten. Da die Gesamtlänge des *username*-Parameters 128 Zeichen beträgt, ist *login_name* auf 127 Zeichen abzüglich der Länge des Servernamens beschränkt. Im Beispiel darf `login_name` nur 117 Zeichen lang sein, da `servername` 10 Zeichen enthält.
 
-In SQL-Datenbank muss eine Verbindung mit der Masterdatenbank bestehen, um einen Anmeldenamen erstellen zu können.
+In SQL-Datenbank müssen Sie mit der Masterdatenbank verbunden sein und über die entsprechenden Berechtigungen verfügen, um eine Anmeldung zu erstellen. Weitere Informationen finden Sie unter [Erstellen zusätzlicher Anmeldungen und Benutzer mit Verwaltungsberechtigungen](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
 
 Mithilfe von SQL Server-Regeln können Sie einen Anmeldenamen für die SQL Server-Authentifizierung im Format \<loginname>@\<servername> erstellen. Wenn der [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Servername **myazureserver** und der Anmeldename **myemail@live.com** lauten, müssen Sie den Anmeldenamen als **myemail@live.com@myazureserver** bereitstellen.
 
 In SQL-Datenbank werden Anmeldedaten, die für die Authentifizierung einer Verbindung und für Firewallregeln auf Serverebene erforderlich sind, über einen gewissen Zeitraum in jeder Datenbank gespeichert. Dieser Cache wird regelmäßig aktualisiert. Führen Sie [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) aus, um eine Aktualisierung des Authentifizierungscache zu erzwingen und sicherzustellen, dass eine Datenbank über die aktuelle Version der Tabelle mit Anmeldenamen verfügt.
 
-Weitere Informationen zu Anmeldenamen für SQL-Datenbank finden Sie unter [Verwalten von Datenbanken und Anmeldenamen in der Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
-
 ## <a name="permissions"></a>Berechtigungen
 
-Neue Anmeldenamen können nur mit den Anmeldenamen des Serverebenenprinzipals (im Bereitstellungsprozess erstellt) oder von Mitgliedern der `loginmanager`-Datenbankrolle in der Masterdatenbank erstellt werden. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) und unter [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
-
-## <a name="logins"></a>Anmeldungen
-
-- Erfordert eine **ALTER ANY LOGIN**-Berechtigung auf dem Server oder eine Mitgliedschaft bei der festen Serverrolle**securityadmin**. Dieser Befehl kann nur auf dem Azure AD-Konto (Azure Active Directory) mit der **ALTER ANY LOGIN**-Berechtigung auf dem Server oder mit einer Mitgliedschaft bei der Serverrolle „securityadmin“ ausgeführt werden
-- Muss in dem gleichen Verzeichnis, das auch für den Azure SQL-Datenbank-Server verwendet wird, ein Azure AD-Mitglied sein
-
-## <a name="after-creating-a-login"></a>Nach dem Erstellen eines Anmeldenamens
-
-Nach dem Erstellen eines Anmeldenamens kann mit diesem Namen eine Verbindung mit der SQL-Datenbank hergestellt werden. Er verfügt jedoch nur über die der Rolle **public** erteilten Berechtigungen. Ziehen Sie die Ausführung einiger der folgenden Aktivitäten in Betracht.
-
-- Erstellen Sie zum Herstellen einer Verbindung mit einer Datenbank einen Datenbankbenutzer für den Anmeldenamen in dieser Datenbank. Weitere Informationen finden Sie unter [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md).
-- Verwenden Sie für die Erteilung von Berechtigungen für einen Benutzer in einer Datenbank die Anweisung **ALTER SERVER ROLE** ... **ADD MEMBER**-Anweisung zum Hinzufügen des Benutzer zu einer der integrierten Datenbankrollen oder einer benutzerdefinierten Rolle oder zum Erteilen von Berechtigungen für den Benutzer über die direkte Verwendung der Anweisung [GRANT](../../t-sql/statements/grant-transact-sql.md). Weitere Informationen finden Sie unter [Benutzer ohne Administratorrechte](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) und in den Artikeln zu den Anweisungen [Zusätzliche Administratorrollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)- und [GRANT](grant-transact-sql.md)-Anweisung.
-- Wenn Sie serverweite Berechtigungen erteilen möchten, erstellen Sie in der Masterdatenbank einen Datenbankbenutzer, und verwenden Sie die Anweisung **ALTER SERVER ROLE** ... **ADD MEMBER**-Anweisung zum Hinzufügen des Benutzers zu einer der administrativen Serverrollen. Weitere Informationen finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) und unter [Serverrollen](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
-- Gewähren Sie mit der **GRANT**-Anweisung Berechtigungen auf Serverebene für den neuen Anmeldenamen oder für eine Rolle, die den Anmeldenamen enthält. Weitere Informationen finden Sie unter [GRANT](../../t-sql/statements/grant-transact-sql.md).
+Neue Anmeldenamen können nur mit den Anmeldenamen des Serverebenenprinzipals (im Bereitstellungsprozess erstellt) oder von Mitgliedern der `loginmanager`-Datenbankrolle in der Masterdatenbank erstellt werden. Weitere Informationen finden Sie unter [Erstellen zusätzlicher Anmeldungen und Benutzer mit Verwaltungsberechtigungen](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
 
 ## <a name="examples"></a>Beispiele
 
@@ -386,7 +382,7 @@ GO
 
 ## <a name="syntax"></a>Syntax
 
-```sql
+```syntaxsql
 -- Syntax for Azure SQL Database managed instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
@@ -424,6 +420,9 @@ SID **=** *sid*: Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur f�
 - Azure AD-Anmeldenamen werden in „sys.server_principals“ aufgeführt. Für Anmeldenamen, die Azure AD-Benutzern zugeordnet sind, ist der Wert der Typspalte auf **E** und „type_desc“ ist auf **EXTERNAL_LOGIN** festgelegt. Für Anmeldenamen, die Azure AD-Gruppen zugeordnet sind, ist der Wert der Typspalte auf **X** und „type_desc“ ist auf **EXTERNAL_GROUP** festgelegt.
 - Ein Skript zum Übertragen von Anmeldenamen finden unter [Übertragen von Benutzernamen und Kennwörtern zwischen Instanzen von SQL Server](https://support.microsoft.com/kb/918992).
 - Durch das Erstellen eines Anmeldenamens wird der neue Anmeldename automatisch aktiviert, und diesem Anmeldenamen wird die **CONNECT SQL**-Berechtigung auf Serverebene gewährt.
+
+> [!IMPORTANT]
+> Unter [Verwalten von Anmeldungen in Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins) finden Sie weitere Informationen zum Arbeiten mit Anmeldungen und Benutzern in Azure SQL-Datenbank.
 
 ## <a name="logins-and-permissions"></a>Anmeldenamen und Berechtigungen
 
@@ -562,7 +561,7 @@ GO
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse Analytics
 CREATE LOGIN login_name
  { WITH <option_list> }
@@ -676,7 +675,7 @@ GO
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 

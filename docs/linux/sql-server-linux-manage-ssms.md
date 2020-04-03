@@ -1,6 +1,6 @@
 ---
 title: Verwenden von SSMS zum Verwalten von SQL Server für Linux
-description: ''
+description: In diesem Artikel wird SQL Server Management Studio eingeführt, eine integrierte Umgebung, in der Sie auf SQL Server-Komponenten zugreifen sowie diese konfigurieren, verwalten und entwickeln können.
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/21/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3ddc3ffa91b62956fdfef91ff3c19a784fc2fe2b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68000095"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216657"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Verwenden von SQL Server Management Studio unter Windows zum Verwalten von SQL Server für Linux
 
@@ -63,7 +63,7 @@ Führen Sie zum Herstellen einer Verbindung die folgenden grundlegenden Schritte
    | **Anmeldung** | Geben Sie den Namen eines Benutzers ein, der Zugriff auf eine Datenbank auf dem Server hat (z. B. das standardmäßig beim Setup erstellte **SA**-Konto). |
    | **Kennwort** | Geben Sie das Kennwort für den angegebenen Benutzer ein (für das **SA**-Konto haben Sie dieses während des Setups erstellt). |
 
-    ![SQL Server Management Studio: Verbinden mit einem SQL-Datenbank-Server](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio: Herstellen einer Verbindung mit dem SQL-Datenbank-Server](./media/sql-server-linux-manage-ssms/connect.png)
 
 1. Klicken Sie auf **Verbinden**.
 
@@ -91,7 +91,7 @@ Nachdem Sie eine Verbindung mit Ihrem Server hergestellt haben, können Sie eine
 
 1. Klicken Sie auf die Schaltfläche **Ausführen**, um die Abfrage auszuführen und die Ergebnisse anzuzeigen.
 
-   ![Erfolg. Verbinden mit einem SQL-Datenbank-Server: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![Erfolg. Herstellen einer Verbindung mit dem SQL-Datenbank-Server: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Obwohl es möglich ist, fast jede beliebige Verwaltungsaufgabe mit Transact-SQL-Abfragen auszuführen, ist SSMS ein grafisches Tool, das die Verwaltung von SQL Server erleichtert. In den folgenden Abschnitten finden Sie einige Beispiele für die Verwendung der grafischen Benutzeroberfläche.
 
@@ -144,5 +144,5 @@ Wenn ein Bereich erweitert wird, fragt der Aktivitätsmonitor die Instanz nach I
 - [Was ist SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Export and Import a database with SSMS (Exportieren und Importieren einer Datenbank mit SSMS)](sql-server-linux-migrate-ssms.md)
 - [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
-- [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)
+- [Tutorial: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Überwachen der Serverleistung und -aktivität](../relational-databases/performance/server-performance-and-activity-monitoring.md)

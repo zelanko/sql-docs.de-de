@@ -8,19 +8,19 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/05/2020
 ms.author: JRoth
-ms.openlocfilehash: eb842769490b521b248ed4114953b8d828fa80d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286404"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434117"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Verbindungsmodule für Microsoft SQL-Datenbanken
 
 Dieser Artikel bietet Links zum Download von Verbindungsmodulen oder *Treibern*, die Ihre Clientprogramme für die Interaktion mit der Plattform [Microsoft SQL Server](../relational-databases/database-features.md) und ihrem Pendant in der Cloud, [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/), verwenden können. Treiber sind für verschiedene Programmiersprachen verfügbar und können unter folgenden Betriebssystemen ausgeführt werden:
 
 - Linux
-- MacOS
+- macOS
 - Windows
 
 **Konflikt zwischen objektorientierter Programmierung und relationalem Datenbankformat:**
@@ -34,17 +34,6 @@ Im vorliegenden Artikel sind diesen beiden Arten von Verbindungstreibern zwei se
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>Treiber für den relationalen Zugriff
-
-<!--
-Each given Microsoft Download Center page should be enhanced
-with a link to the next NEWER version page, on the day that the
-original page is no longer the latest because the newer page is being added.
-But this policy is not agreed on or observed,
-putting the links in the following table at risk for being outdated.
-
-PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
--->
 
 | Sprache | Download des SQL-Treibers |
 | :------- | :---------------------- |
@@ -76,14 +65,15 @@ In der folgenden Tabelle sind Beispiele für ORM-Frameworks aufgelistet, die Cli
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Webseiten zum Erstellen einer App
+
 Über **[https://aka.ms/sqldev](https://aka.ms/sqldev)** gelangen Sie zu einer Reihe von Webseiten zum *Erstellen einer App*. Diese Webseiten enthalten Informationen zu zahlreichen Kombinationen aus Programmiersprache, Betriebssystem und SQL-Verbindungstreiber. Webseiten zum Erstellen einer App bieten u. a. die folgenden Informationen:
 
 - Ausführliche Informationen zum Einstieg für jede Kombination aus Sprache, Betriebssystem und Treiber.
-    - Anweisungen zum Installieren der neuesten SQL-Verbindungstreiber.
+  - Anweisungen zum Installieren der neuesten SQL-Verbindungstreiber.
 - Codebeispiele für jedes der folgenden Elemente:
-    - Objektrelationale Codebeispiele.
-    - ORM-Codebeispiele
-    - Columnstore-Index-Demonstrationen zum Erzielen einer wesentlich schnelleren Leistung.
+  - Objektrelationale Codebeispiele.
+  - ORM-Codebeispiele
+  - Columnstore-Index-Demonstrationen zum Erzielen einer wesentlich schnelleren Leistung.
 
 **Erster Bildschirm einer Webseite zum Erstellen einer App:**  
 ![Screenshot des ersten Bildschirms einer Webseite zum Erstellen einer App](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
@@ -94,6 +84,7 @@ In der folgenden Tabelle sind Beispiele für ORM-Frameworks aufgelistet, die Cli
 &nbsp;
 
 ## <a name="related-links"></a>Verwandte Links
+
 - [Codebeispiele zum Herstellen einer Verbindung mit Azure SQL-Datenbank in der Cloud mit Java und anderen Sprachen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)
 
 <!--

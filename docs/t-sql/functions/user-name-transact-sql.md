@@ -24,12 +24,12 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f8a3f4dbdbaa9cbd2cf1c99a86ad6f3573ab11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 21c085bd942b368259444698cabf5dfa44d0fbe1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73844336"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526785"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,6 +53,9 @@ USER_NAME ( [ id ] )
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn *id* nicht angegeben ist, wird der aktuelle Benutzer im aktuellen Kontext vermutet. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben. Wenn USER_NAME aufgerufen wird, ohne nach einer EXECUTE AS-Anweisung eine *d* anzugeben, gibt USER_NAME den Namen des Benutzers zurück, dessen Identität angenommen wurde. Falls ein Windows-Prinzipal über eine Mitgliedschaft in einer Gruppe auf die Datenbank zugreift, gibt USER_NAME den Namen des Windows-Prinzipals anstelle der Gruppe zurück.  
+ 
+> [!NOTE]
+> Obwohl die USER_NAME-Funktion in Azure SQL-Datenbank unterstützt wird, wird die Verwendung von *Ausführen als* mit USER_NAME nicht in Azure SQL-Datenbank unterstützt. 
   
 ## <a name="examples"></a>Beispiele  
   
@@ -123,7 +126,7 @@ Zelig
 DBO
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-user_name-without-an-id"></a>E. Verwenden von USER_NAME ohne ID  
  Das folgende Beispiel sucht nach dem Namen des aktuellen Benutzers, ohne eine ID anzugeben.  

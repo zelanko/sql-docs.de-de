@@ -1,5 +1,6 @@
 ---
 title: Verwenden von „Try und Catch“-Blöcken | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie eine weitere Schutzschicht vor ungültigen Anforderungen bereitstellen, indem Sie angebrachte Ausnahmebehandlung mithilfe von Try/Catch-Blöcken anwenden.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 055c1a98dd1c77f19712be66dc2b4dcaa6060b60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 51f6c4d3cbc7751df8e7685835057c4c5e58daa9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62992176"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216356"
 ---
 # <a name="using-try-and-catch-blocks"></a>Verwenden von „Try und Catch“-Blöcken
   Nachdem Sie ungültige Anforderungen an den Berichtsserver eingeschränkt haben, indem Sie bedingte Anweisungen zum Code hinzugefügt haben, sollten Sie mithilfe von try/catch-Blöcken eine adäquate Ausnahmebehandlung festlegen. Diese Technik stellt eine weitere Stufe des Schutzes gegen ungültige Anforderungen dar. Wenn eine Anforderung an den Berichtsserver in einem try-Block enthalten ist und diese Anforderung dazu führt, dass der Berichtsserver eine Ausnahme auslöst, wird die Ausnahme im catch-Block erfasst. Damit wird ein unerwarteter Abbruch Ihrer Anwendung verhindert. Sobald die Ausnahme erfasst ist, können Sie den Benutzer mit der Ausnahme anweisen, einen anderen Vorgang auszuführen, oder Sie teilen ihm einfach auf freundliche Weise mit, dass ein Fehler aufgetreten ist. Sie können dann einen finally-Block verwenden, um einen Cleanup vorhandener Ressourcen durchzuführen. Idealerweise sollten Sie einen Plan für die allgemeine Ausnahmebehandlung generieren, um eine unnötige Verdoppelung von try/catch-Blöcken zu vermeiden.  

@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112288"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216259"
 ---
 # <a name="hybrid-buffer-pool"></a>Hybrider Pufferpool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +96,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 Verwenden Sie beim Formatieren Ihres PMEM-Geräts unter Windows die größte verfügbare Zuordnungseinheit für NTFS (2 MB in Windows Server 2019), und stellen Sie sicher, dass das Gerät für DAX (DirectAccess) formatiert wurde.
 
-Verwenden Sie das Modell für die Speicherzuordnung mit großen Seiten, das mit [Ablaufverfolgungsflag 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) aktiviert werden kann. Ablaufverfolgungsflag 834 ist ein Startablaufverfolgungsflag.
-
-Bei Verwendung des Modells für die Speicherzuordnung mit großen Seiten müssen unter Windows [gesperrte Seiten im Speicher](./enable-the-lock-pages-in-memory-option-windows.md) verwendet werden.
+Verwenden Sie [gesperrte Seiten im Arbeitsspeicher](./enable-the-lock-pages-in-memory-option-windows.md) unter Windows.
 
 Dateigrößen müssen ein Vielfaches von 2 MB sein (Modulo 2 MB muss 0 (Null) sein).
 

@@ -21,17 +21,17 @@ ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 381eb06e646f98b3ec092cbaa4b6431677be559c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ea01281d77206ceccfe8598efc31d073ceea9391
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906885"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448265"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Konvertiert numerische Daten in Zeichenfolgen.  
+  Konvertiert numerische Daten in Zeichenfolgen. Die Zeichendaten sind rechtsbündig und weisen eine angegebene Länge und Dezimalgenauigkeit auf. 
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  **varchar**  
   
 ## <a name="remarks"></a>Bemerkungen  
- Falls angegeben, sollten die Werte für die Parameter *length* und *decimal* der STR-Funktion positiv sein. Die Zahl wird standardmäßig, oder wenn der Dezimalstellenparameter 0 beträgt, auf eine ganze Zahl gerundet. Die angegebene Länge sollte größer oder gleich dem Teil der Zahl vor dem Dezimalpunkt plus dem Vorzeichen (falls vorhanden) sein. Ein kurzer *float_expression*-Ausdruck wird in der angegebenen Länge rechtsbündig ausgerichtet, während ein langer *float_expression*-Ausdruck auf die angegebene Anzahl der Dezimalstellen gekürzt wird. Beispielsweise ergibt STR(12 **,** 10) den Wert 12. Dieser Wert wird im Resultset rechtsbündig ausgerichtet. STR(1223 **,** 2) schneidet das Resultset zu ** hingegen ab. Zeichenfolgenfunktionen können geschachtelt werden.  
+ Falls angegeben, sollten die Werte für die Parameter *length* und *decimal* der STR-Funktion positiv sein. Die Zahl wird standardmäßig, oder wenn der Dezimalstellenparameter 0 beträgt, auf eine ganze Zahl gerundet. Die angegebene Länge sollte größer oder gleich dem Teil der Zahl vor dem Dezimalpunkt plus dem Vorzeichen (falls vorhanden) sein. Ein kurzer *float_expression*-Ausdruck wird in der angegebenen Länge rechtsbündig ausgerichtet, während ein langer *float_expression*-Ausdruck auf die angegebene Anzahl der Dezimalstellen gekürzt wird. Beispielsweise ergibt STR(12, 10) den Wert 12. Dieser Wert wird im Resultset rechtsbündig ausgerichtet. Bei STR(1223, 2) wird das Resultset jedoch auf \*\* gekürzt. Zeichenfolgenfunktionen können geschachtelt werden.  
   
 > [!NOTE]  
 >  Wenn Sie Daten in das Unicodeformat konvertieren wollen, verwenden Sie STR innerhalb einer CONVERT- oder [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md)-Konvertierungsfunktion.  

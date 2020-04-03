@@ -1,5 +1,6 @@
 ---
 title: Abrufen von Daten aus freigegebenen Datasets in mobilen Reporting Services-Berichten | Microsoft-Dokumentation
+description: Der Publisher für mobile Berichte von SQL Server kann mithilfe einer freigegebenen Datenquelle, die in einem Reporting Services-Webportal konfiguriert ist, auf Daten aus nahezu allen Quellen zugreifen.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4cc5e1538d1575e05e1eecd3959c98404cdbf5d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63061154"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448246"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Abrufen von Daten aus freigegebenen Datasets in mobilen Reporting Services-Berichten
 Neben dem [Laden von Daten aus Excel-Dateien](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) kann der Publisher für mobile Berichte von Microsoft SQL Server auch auf Daten aus nahezu allen Quellen zugreifen. Für den Zugriff auf Daten wird eine freigegebene Datenquelle benötigt, die auf einem Reporting Services-Webportal konfiguriert ist. Erfahren Sie mehr über das [Erstellen freigegebener Datenquellen](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) und das [Erstellen freigegebener Datasets](../../reporting-services/report-data/manage-shared-datasets.md).  
@@ -22,7 +23,7 @@ Nachdem freigegebene Datenquellen und freigegebene Datasets auf dem Reporting Se
   
 Nachdem Sie eine Verbindung mit einem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Server aus der [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]hergestellt haben, ist das Verbinden eines mobilen Berichts mit einem freigegebener Dataset einfach.   
   
-1. Wählen Sie auf der Registerkarte **Daten** **Daten hinzufügen**aus.  
+1. Wählen Sie auf der Registerkarte **Daten****Daten hinzufügen**aus.  
   
 2. Wählen Sie **Berichtsserver**aus.   
   

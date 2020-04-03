@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7b1c32e3e569b8c29dd75df1fafb98bb7c0c979f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73983033"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486578"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE-Anweisungen – HEADERYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -97,7 +97,7 @@ FROM <backup_device>
 |**BackupDescription**|**nvarchar(255)**|Beschreibung des Sicherungssatzes.|  
 |**BackupType**|**smallint**|Sicherungstyp:<br /><br /> **1** = Datenbank<br /><br /> **2** = Transaktionsprotokoll<br /><br /> **4** = Datei<br /><br /> **5** = Datenbank differenziell<br /><br /> **6** = Datei differenziell<br /><br /> **7** = Teilweise<br /><br /> **8** = Teilweise differenziell|  
 |**ExpirationDate**|**datetime**|Ablaufdatum für den Sicherungssatz.|  
-|**Compressed**|**BYTE(1)**|Ob der Sicherungssatz mit der softwarebasierten Kompression komprimiert wird.<br /><br /> **0** = Nein<br /><br /> **1** = Ja|  
+|**Compressed**|**BIT(1)**|Ob der Sicherungssatz mit der softwarebasierten Kompression komprimiert wird.<br /><br /> **0** = Nein<br /><br /> **1** = Ja|  
 |**Position**|**smallint**|Position des Sicherungssatzes auf dem Volume (Verwendung mit der Option FILE =).|  
 |**DeviceType**|**tinyint**|Zahl, die dem für den Sicherungsvorgang verwendeten Medientyp entspricht.<br /><br /> Datenträger:<br /><br /> **2** = Logisch<br /><br /> **102** = Physisch<br /><br /> Band:<br /><br /> **5** = Logisch<br /><br /> **105** = Physisch<br /><br /> Virtuelles Medium:<br /><br /> **7** = Logisch<br /><br /> **107** = Physisch<br /><br /> Namen und Nummern von logischen Medien sind in **sys.backup_devices** gespeichert. Weitere Informationen finden Sie unter [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|Name des Benutzers, der den Sicherungsvorgang ausgeführt hat.|  
@@ -145,7 +145,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|Sicherungstyp in Form einer Zeichenfolge. Folgende Werte sind möglich:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|Eindeutige ID des Sicherungssatzes, die zur Identifizierung des Sicherungssatzes auf dem Medium dient.|  
 |**CompressedBackupSize**|**bigint**|Bytezahl des Sicherungssatzes. Für nicht komprimierte Sicherungen entspricht dieser Wert dem Wert für **BackupSize**.<br /><br /> Zur Berechnung des Komprimierungsverhältnisses verwenden Sie **CompressedBackupSize** und **BackupSize**.<br /><br /> Während eines **msdb**-Upgrades wird dieser Wert mit dem Wert der Spalte **BackupSize** abgeglichen.|  
-|**containment**|**tinyint** not NULL|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Zeigt den Kapselungsstatus der Datenbank an.<br /><br /> 0 = Datenbankkapselung ist deaktiviert<br /><br /> 1 = Datenbank ist in Teilkapselung|  
+|**containment**|**tinyint** not NULL|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Zeigt den Kapselungsstatus der Datenbank an.<br /><br /> 0 = Datenbankkapselung ist deaktiviert<br /><br /> 1 = Datenbank ist in Teilkapselung|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Der Verschlüsselungsalgorithmus, der zum Verschlüsseln der Sicherung verwendet wird. NO_Encryption gibt an, dass die Sicherung nicht verschlüsselt wurde. Wenn Sie der richtige Wert nicht bestimmt werden kann sollte der Wert NULL sein.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Der Fingerabdruck der Verschlüsselung, der verwendet werden kann, um das Zertifikat oder den asymmetrischen Schlüssel in der Datenbank zu ermitteln. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
 |**EncryptorType**|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Verwendeter Verschlüsselungstyp: Zertifikat oder asymmetrischer Schlüssel. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  

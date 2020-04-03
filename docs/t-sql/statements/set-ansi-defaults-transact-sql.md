@@ -21,12 +21,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02353688efb79b4c2dbb7c4bc3d9ed0d4d5e0a37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9fa8bd2c029ea65bb03e21543212dd11b65f2242
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67913944"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80345456"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -44,13 +44,14 @@ SET ANSI_DEFAULTS { ON | OFF }
 ```
 
 ```
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse and Parallel Data Warehouse
 
 SET ANSI_DEFAULTS ON
 ```
 
 ## <a name="remarks"></a>Bemerkungen  
-ANSI_DEFAULTS ist eine serverseitige Einstellung, die vom Client nicht verändert wird. Der Client verwaltet eigene Einstellungen. Diese Einstellungen sind standardmäßig das Gegenstück zur Servereinstellung. Benutzer sollten die Servereinstellung nicht ändern. Zum Ändern des Clientverhaltens sollten Benutzer SQL_COPT_SS_PRESERVE_CURSORS verwenden. Weitere Informationen finden Sie unter [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
+ANSI_DEFAULTS ist eine serverseitige Einstellung, mit der sich das Verhalten für alle Clientverbindungen aktivieren lässt. Der Client fordert die Einstellung in der Regel bei der Initialisierung der Verbindung oder Sitzung an. Benutzer sollten die Servereinstellung nicht ändern.   
+Zum Ändern des Clientverhaltens sollten Benutzer die clientspezifischen Methoden wie `SQL_COPT_SS_PRESERVE_CURSORS` verwenden. Weitere Informationen finden Sie unter [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).
   
 Wird die Option aktiviert (ON), werden die folgenden ISO-Einstellungen aktiviert:  
   
@@ -63,9 +64,9 @@ Wird die Option aktiviert (ON), werden die folgenden ISO-Einstellungen aktiviert
   
 Diese SET-Optionen gemäß ISO-Standard definieren zusammen die Abfrageverarbeitungsumgebung für die Dauer der Arbeitssitzung des Benutzers oder für den Zeitraum, in dem ein Trigger oder eine gespeicherte Prozedur ausgeführt wird. Die aufgeführten SET-Optionen schließen jedoch nicht alle Optionen ein, die erforderlich wären, um dem ISO-Standard zu entsprechen.  
   
-Beim Verwenden von Indizes für berechnete Spalten und indizierte Sichten, müssen vier dieser Standardwerte (ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS und QUOTED_IDENTIFIER) auf ON festgelegt sein. Diese Standardwerte gehören zu den insgesamt sieben SET-Optionen, für die bestimmte Werte beim Erstellen und Ändern von Indizes für berechnete Spalten und indizierte Sichten zugewiesen werden müssen. Die anderen SET-Optionen lauten ARITHABORT (ON), CONCAT_NULL_YIELDS_NULL (ON) und NUMERIC_ROUNDABORT (OFF). Weitere Informationen zu den erforderlichen Einstellungen der SET-Option mit indizierten Sichten und Indizes für berechnete Spalten finden Sie im Abschnitt [Überlegungen beim Verwenden von SET-Anweisungen](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).  
+Beim Verwenden von Indizes für berechnete Spalten und indizierte Sichten müssen vier dieser Standardwerte (`ANSI_NULLS`, `ANSI_PADDING`, `ANSI_WARNINGS` und `QUOTED_IDENTIFIER`) auf ON (Ein) festgelegt sein. Diese Standardwerte gehören zu den insgesamt sieben SET-Optionen, für die bestimmte Werte beim Erstellen und Ändern von Indizes für berechnete Spalten und indizierte Sichten zugewiesen werden müssen. Die anderen SET-Optionen sind `ARITHABORT` (ON), `CONCAT_NULL_YIELDS_NULL` (ON) und `NUMERIC_ROUNDABORT` (OFF) (Aus). Weitere Informationen zu den erforderlichen Einstellungen der SET-Option mit indizierten Sichten und Indizes für berechnete Spalten finden Sie im Abschnitt [Überlegungen beim Verwenden von SET-Anweisungen](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).  
   
-Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen für ANSI_DEFAULTS beim Herstellen einer Verbindung automatisch ON fest. Treiber und Anbieter legen anschließend CURSOR_CLOSE_ON_COMMIT und IMPLICIT_TRANSACTIONS auf OFF fest. Die OFF-Einstellungen für CURSOR_CLOSE_ON_COMMIT und IMPLICIT_TRANSACTIONS können in ODBC-Datenquellen, in ODBC-Verbindungsattributen oder in OLE DB-Verbindungseigenschaften konfiguriert werden, die in der Anwendung festgelegt werden, bevor die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt wird. ANSI_DEFAULTS wird für Verbindungen von DB-Library-Anwendungen standardmäßig auf OFF festgelegt.  
+Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen für ANSI_DEFAULTS beim Herstellen einer Verbindung automatisch ON fest. Treiber und Anbieter legen anschließend CURSOR_CLOSE_ON_COMMIT und IMPLICIT_TRANSACTIONS auf OFF fest. Diese OFF-Einstellungen für `CURSOR_CLOSE_ON_COMMIT` und `IMPLICIT_TRANSACTIONS` können in ODBC-Datenquellen, in ODBC-Verbindungsattributen oder in OLE DB-Verbindungseigenschaften konfiguriert werden, die in der Anwendung festgelegt werden, bevor die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt wird. Der Standardwert von `ANSI_DEFAULTS` lautet OFF für Verbindungen von DB-Library-Anwendungen.  
   
 Wenn SET ANSI_DEFAULTS ausgeführt wird, wird QUOTED_IDENTIFIER zur Analysezeit festgelegt, und die folgenden Optionen werden zur Ausführungszeit festgelegt:  
   

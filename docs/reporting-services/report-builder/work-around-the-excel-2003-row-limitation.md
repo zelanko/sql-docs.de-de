@@ -1,5 +1,6 @@
 ---
 title: Umgehung der Zeilenbeschränkung in Excel 2003 | Microsoft-Dokumentation
+description: Sie können die Zeilenbeschränkung von Excel 2003 beim Exportieren paginierter Berichte nach Excel umgehen, indem Sie einen Seitenumbruch nach einer bestimmten Anzahl von Zeilen erzwingen.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 940f5fd22d35ac0a90106c7a325e435e1d479bc4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577783"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290727"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   In diesem Thema wird erläutert, wie Sie beim Exportieren von paginierten Berichten nach Excel die Zeilenbeschränkung von Excel 2003 umgehen. Die Problemumgehung bezieht sich auf einen Bericht, der nur eine Tabelle enthält.  
@@ -29,7 +30,7 @@ ms.locfileid: "65577783"
   
 2.  Klicken Sie mit der rechten Maustaste auf die Datenzeile in der Tabelle, und klicken Sie anschließend auf **Gruppe hinzufügen** > **Übergeordnete Gruppe** , um eine äußere Tabellengruppe hinzuzufügen.  
   
-     ![Select the Parent Group](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Select the Parent Group")  
+     ![Auswählen der übergeordneten Gruppe](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Auswählen der übergeordneten Gruppe")  
   
 3.  Geben Sie die folgende Formel im Ausdrucksfeld **Gruppieren nach** ein, und klicken Sie dann auf **OK** , um die übergeordnete Gruppe hinzuzufügen.  
   
@@ -41,19 +42,19 @@ ms.locfileid: "65577783"
   
 4.  Löschen Sie die Gruppenspalte, indem Sie mit der rechten Maustaste auf die Spaltenüberschrift klicken, auf **Spalten löschen**klicken, **Nur Spalten löschen**auswählen und anschließend auf **OK**klicken.  
   
-     ![Delete a group column](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Delete a group column")  
+     ![Löschen einer Gruppenspalte](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Löschen einer Gruppenspalte")  
   
 5.  Klicken Sie mit der rechten Maustaste im Bereich **Zeilengruppen** auf **Gruppe 1** , und klicken Sie dann auf **Gruppeneigenschaften**.  
   
-     ![View group properties](../../reporting-services/report-builder/media/groupproperties-updated.png "View group properties")  
+     ![Anzeigen von Gruppeneigenschaften](../../reporting-services/report-builder/media/groupproperties-updated.png "Anzeigen von Gruppeneigenschaften")  
   
 6.  Wählen Sie im Dialogfeld **Gruppeneigenschaften** auf der Seite **Sortierung** die Standardsortierungsoption aus, und klicken Sie auf **Löschen**.  
   
-     ![Delete default sorting](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "Delete default sorting")  
+     ![Löschen der Standardsortierung](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "Löschen der Standardsortierung")  
   
 7.  Klicken Sie auf der Seite **Seitenumbrüche** auf **Zwischen den einzelnen Instanzen einer Gruppe** , und klicken Sie auf **OK**.  
   
-     ![Set page breaks](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "Set page breaks")  
+     ![Festlegen von Seitenumbrüchen](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "Festlegen von Seitenumbrüchen")  
   
 8.  Speichern Sie den Bericht. Beim Exportieren des Berichts nach Excel wird dieser in mehrere Arbeitsblätter exportiert. Jedes Arbeitsblatt enthält maximal 65.000 Zeilen.  
   

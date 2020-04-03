@@ -1,5 +1,6 @@
 ---
 title: Exportieren im XML-Format (Berichts-Generator) | Microsoft-Dokumentation
+description: Im Berichts-Generator rendert die XML-Renderingerweiterung einen paginierten Bericht ins XML-Format. Importieren Sie XML-Dateien in eine Datenbank, verwenden Sie sie als eine Nachricht, oder Senden Sie diese an Anwendungen.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ac6d962838191365048b3c41d5a8efd367d8355
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71e3b5102fa1ff37e7cea22562919b202889ecc3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079307"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342839"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportieren nach XML (Berichts-Generator und SSRS)
   Die XML-Renderingerweiterung gibt einen paginierten Bericht im XML-Format zurück. Das Schema der Bericht-XML-Ausgabe hängt vom jeweiligen Bericht ab und enthält nur Daten. Layoutinformationen werden von der XML-Renderingerweiterung nicht gerendert, und die Paginierung wird nicht beibehalten. Der von dieser Erweiterung generierte XML-Code kann in eine Datenbank importiert, als XML-Datennachricht verwendet oder an eine benutzerdefinierte Anwendung gesendet werden.  
@@ -21,7 +22,7 @@ ms.locfileid: "77079307"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> Berichtselemente  
+##  <a name="report-items"></a><a name="ReportItems"></a> Berichtselemente  
  In der folgenden Tabelle wird beschrieben, wie Berichtselemente gerendert werden.  
   
 |Element|Renderingverhalten|  
@@ -52,7 +53,7 @@ ms.locfileid: "77079307"
 -   **Images, lines, and custom report items** werden ignoriert.  
   
   
-##  <a name="DataTypes"></a> Datentypen  
+##  <a name="data-types"></a><a name="DataTypes"></a> Datentypen  
  Dem Textfeldelement oder -attribut wird basierend auf den im Textfeld angezeigten Werten ein XSD-Datentyp zugewiesen.  
   
 |Wert aller Textfeldelemente|Zugewiesener Datentyp|  
@@ -68,7 +69,7 @@ ms.locfileid: "77079307"
 |Andere|**xsd:string**|  
   
   
-##  <a name="XMLSpecificRenderingRules"></a> XML-spezifische Renderingregeln  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> XML-spezifische Renderingregeln  
  In den folgenden Abschnitten wird beschrieben, wie die XML-Renderingerweiterungen die Elemente innerhalb des Berichts interpretieren.  
   
 ### <a name="report-body"></a>Hauptteil des Berichts  
@@ -80,7 +81,7 @@ ms.locfileid: "77079307"
   
  Die Werte für die Variablen lauten wie folgt:  
   
-|Name|value|  
+|Name|Wert|  
 |----------|-----------|  
 |Bericht|Report.DataElementName|  
 |ReportURL|URL-codierte absolute URL zum Bericht auf dem Server.|  
@@ -150,15 +151,15 @@ ms.locfileid: "77079307"
  Wenn der DataElementOutput-Eigenschaftswert „Output“ lautet, wird die Kopfzeile eines wiederholten Elements als untergeordnetes Element des Detailelements gerendert.  
   
   
-##  <a name="CustomFormatsXSLTransformations"></a> Benutzerdefinierte Formate und XSL-Transformationen  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> Benutzerdefinierte Formate und XSL-Transformationen  
  Von der XML-Renderingerweiterung erstellte XML-Dateien können mithilfe von XSL-Transformationen (XSLT) in beinahe jedes Format transformiert werden. Mit dieser Funktion können Daten in Formaten erstellt werden, die von den vorhandenen Renderingerweiterungen nicht unterstützt werden. Bevor Sie eine eigene Renderingerweiterung erstellen, sollten Sie die Verwendung der XML-Renderingerweiterung und von XSLT in Betracht ziehen.  
   
   
-##  <a name="DuplicateName"></a> Doppelte Namen  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> Doppelte Namen  
  Wenn doppelte Datenelementnamen innerhalb des gleichen Bereichs vorhanden sind, zeigt der Renderer eine Fehlermeldung an.  
   
   
-##  <a name="XSLTTransformations"></a> XSLT-Transformationen  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a> XSLT-Transformationen  
  Der XML-Renderer kann eine serverseitige XSLT-Transformation für die ursprünglichen XML-Daten übernehmen. Wenn eine XSLT-Transformation übernommen wird, gibt der Renderer den transformierten Inhalt statt der ursprünglichen XML-Daten aus. Die Transformation tritt auf dem Server, nicht auf dem Client auf.  
   
  Die XSLT-Transformation, die für die Ausgabe übernommen werden soll, wird entweder in der Berichtsdefinitionsdatei mithilfe der DataTransform-Eigenschaft des Berichts oder mithilfe des *DeviceInfo* -XSLT-Parameters definiert. Wenn beide Werte festgelegt werden, tritt die Transformation bei jeder Verwendung des XML-Renderers auf. Wenn Abonnements verwendet werden, muss die XSLT-Transformation in der DataTransform-RDL-Eigenschaft definiert werden.  
@@ -166,7 +167,7 @@ ms.locfileid: "77079307"
  Ist eine XSLT-Datei sowohl in der DataTransform-Definitionseigenschaft als auch der Geräteinformationseinstellung angegeben, tritt die in DataTransform angegebene XSLT-Transformation zuerst auf. Anschließend findet die von den Geräteinformationseinstellungen festgelegte XSLT-Transformation statt.  
   
   
-###  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Geräteinformationseinstellungen  
  Sie können einige Standardeinstellungen für diesen Renderer ändern, indem Sie die Geräteinformationseinstellungen ändern. Dazu gehören:  
   
 -   Eine auf die XML-Ausgabe anzuwendende Transformation (XSLT).  

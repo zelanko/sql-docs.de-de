@@ -8,12 +8,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 427aff5fe9911fde59f3f37077fc9c2306d2bd42
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67910481"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487598"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Beispiel: Skript für die unbeaufsichtigte SQL Server-Installation unter Ubuntu
 
@@ -31,6 +31,9 @@ Dieses Bash-Beispielskript installiert SQL Server 2017 unter Ubuntu 16.04 ohne i
 - Weitere Systemanforderungen finden Sie unter [Systemanforderungen für SQL Server für Linux](sql-server-linux-setup.md#system).
 
 ## <a name="sample-script"></a>Beispielskript
+
+> [!NOTE]
+> Das Skript kann fehlschlagen, wenn SQL Server zu langsam gestartet wird. Der Grund ist, dass das Skript mit einem Nicht-Null-Status beendet wird. Durch Entfernen des Parameters `-e` aus der ersten Zeile wird dieses Problem unter Umständen behoben.
 
 ```bash
 #!/bin/bash -e

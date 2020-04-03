@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: f0f244c15f4183f3214ae28efc2bf3300c571f0e
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 8575a966dba903b17a6c5dcb015eb4471faf28a8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335759"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80290756"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -104,7 +104,7 @@ Wenn MIN/MAX-Aggregate in der SELECT-Liste der Definition der materialisierten S
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- Die materialisierte Sicht wird bei einem UPDATE oder DELETE in den referenzierten Basistabellen deaktiviert.  Diese Einschränkung gilt nicht für INSERT-Anweisungen.  Um die materialisierte Sicht erneut zu aktivieren, führen Sie ALTER MATERIALIZED INDEX mit REBUILD aus.
+- Die materialisierte Sicht wird bei einem UPDATE oder DELETE in den referenzierten Basistabellen deaktiviert.  Diese Einschränkung gilt nicht für INSERT-Anweisungen.  Führen Sie ALTER MATERIALIZED VIEW mit REBUILD aus, um die materialisierte Sicht wieder zu aktivieren.
   
 ## <a name="remarks"></a>Bemerkungen
 
@@ -125,7 +125,7 @@ ALTER TABLE SWITCH wird nicht für Tabellen unterstützt, die in materialisierte
 |Szenario|Der materialisierten Sicht neu hinzuzufügende Spalten|Comment|  
 |-----------------|---------------|-----------------|
 |COUNT_BIG() fehlt in der SELECT-Liste der Definition einer materialisierten Sicht.| COUNT_BIG (*) |Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich.|
-|SUM(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, und „a“ ist ein Ausdruck, der NULL-Werte zulässt. |COUNT_BIG (a) |Benutzer müssen der Definition der materialisierten Sicht den Ausdruck „a“ manuell hinzufügen.|
+|SUM(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, und „a“ ist ein Ausdruck, der Nullwerte zulässt. |COUNT_BIG (a) |Benutzer müssen der Definition der materialisierten Sicht den Ausdruck „a“ manuell hinzufügen.|
 |AVG(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, wobei „a“ ein Ausdruck ist.|SUM(a), COUNT_BIG(a)|Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich.|
 |STDEV(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, wobei „a“ ein Ausdruck ist.|SUM(a), COUNT_BIG(a), SUM(square(a))|Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich. |
 | | | |

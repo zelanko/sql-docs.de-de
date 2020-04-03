@@ -1,7 +1,7 @@
 ---
 title: Ablaufverfolgungsflags (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/11/2020
+ms.date: 03/27/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e19d4af33285f68033dbcead3f7bc275b2e029cb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 3296dad876dc0f3ce95a29dc1b9f21f38db7b0a5
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288634"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402594"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – Ablaufverfolgungsflags
 
@@ -184,10 +184,11 @@ In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssn
 |**9939**|Aktiviert parallele Pläne und parallele Scanvorgänge von speicheroptimierten Tabellen und Tabellenvariablen in DML-Vorgängen, die auf speicheroptimierte Tabellen oder Tabellenvariablen verweisen, solange sie in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] nicht das Ziel des DML-Vorgangs sind. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/4013877).<br /><br />**Hinweis:** Das Ablaufverfolgungsflag 9939 ist nicht erforderlich, wenn das Ablaufverfolgungsflag 4199 auch explizit aktiviert ist.<br /><br />**Bereich:** global oder Sitzung oder Abfrage (QUERYTRACEON)|   
 |**10204**|Deaktiviert die Zusammenführung/Neukomprimierung während der Neuorganisation des Columnstore-Index. Wenn in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ein Columnstore-Index neu organisiert wird, werden alle kleinen komprimierten Zeilengruppen automatisch in größeren komprimierten Zeilengruppen zusammengeführt, und alle Zeilengruppen mit einer große Anzahl von gelöschten Zeilen werden neu komprimiert.<br /><br />**Hinweis:** Das Ablaufverfolgungsflag 10204 wird nicht auf Columnstore-Indizes angewendet, die in speicheroptimierten Tabellen erstellt werden.<br /><br />**Bereich:** global oder Sitzung|   
 |**10316**|Aktiviert die Erstellung von zusätzlichen Indizes in [internen speicheroptimierten temporalen Staging-Tabellen](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) neben dem Standardindex. Wenn bestimmte Abfragemuster Spalten enthalten, die nicht vom Standardindex abgedeckt werden, sollten Sie zusätzliche hinzufügen.<br /><br />**Hinweis:** Systemversionierte temporale Tabellen für speicheroptimierte Tabellen sind dafür vorgesehen, dass sie hohen Transaktionsdurchsatz bereitstellen. Denken Sie daran, dass das Erstellen zusätzlicher Indizes einen Mehraufwand für DML-Vorgänge hervorrufen kann, die Zeilen in der aktuellen Tabelle aktualisieren oder löschen. Mit den zusätzlichen Indizes sollten Sie versuchen, das richtige Gleichgewicht zwischen der Leistung von temporalen Abfragen und DML-Aufwand zu finden.<br /><br />**Bereich:** global oder Sitzung|
-|**11023**|Deaktiviert die Verwendung der letzten permanenten Samplingrate für alle nachfolgenden Statistikupdates, in denen keine Samplingrate explizit als Teil der [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)-Anweisung angegeben wurde. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/4039284).<br /><br />**Bereich:** global oder Sitzung|    
-|**11024**|Aktiviert das Auslösen des automatischen Updates von Statistiken, wenn die Änderungsanzahl einer Partition den lokalen [Schwellenwert](../../relational-databases/statistics/statistics.md#AutoUpdateStats) überschreitet. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/4041811).<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und höheren Builds verfügbar.<br /><br />**Bereich:** global oder Sitzung| 
-|**11047**|Wendet das Standardtimeout, das von `query wait (s)` oder der `REQUEST_MEMORY_GRANT_TIMEOUT_SEC`-Konfiguration von Resource Governor festgelegt wird, auf die Columnstore-Indexerstellungsvorgänge an. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/4480641).<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU5, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 und höheren Builds verfügbar.<br /><br />**Bereich:** global oder Sitzung|  
-
+|**11023**|Deaktiviert die Verwendung der letzten permanenten Samplingrate für alle nachfolgenden Statistikupdates, in denen keine Samplingrate explizit als Teil der [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)-Anweisung angegeben wurde. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/4039284).<br /><br />**Bereich:** nur global|    
+|**11024**|Aktiviert das Auslösen des automatischen Updates von Statistiken, wenn die Änderungsanzahl einer Partition den lokalen [Schwellenwert](../../relational-databases/statistics/statistics.md#AutoUpdateStats) überschreitet. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/4041811).<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und höheren Builds verfügbar.<br /><br />**Bereich:** nur global| 
+|**11047**|Wendet das Standardtimeout, das von `query wait (s)` oder der `REQUEST_MEMORY_GRANT_TIMEOUT_SEC`-Konfiguration von Resource Governor festgelegt wird, auf die Columnstore-Indexerstellungsvorgänge an. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/4480641).<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU5, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 und höheren Builds verfügbar.<br /><br />**Bereich:** nur global| 
+|**11064**|Verbessert die Skalierbarkeit von Vorgängen, bei denen Daten in Columnstore-Indizes geladen werden, indem die Speicherverteilung zwischen den Anweisungen `SELECT` und `INSERT` optimiert wird. Weitere Informationen zum Laden von Daten in einen Columnstore-Index finden Sie unter [Columnstore-Indizes: Leitfaden zum Datenladevorgang](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md).<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höheren Builds verfügbar.<br /><br />**Bereich:** nur global| 
+|**11068**|Verwendet den für den maximalen Grad an Parallelität (MAXDOP) konfigurierten Wert für Einfügevorgänge in Columnstore-Indizes. Weitere Informationen zum Überschreiben von Parallelitätsgraden finden Sie im [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism).<br /><br />**Wichtig:** Dieses Ablaufverfolgungsflag ist nur wirksam, wenn auch das Ablaufverfolgungsflag 11064 aktiviert ist.<br /><br />**Wichtig:** Verwenden Sie dieses Ablaufverfolgungsflag, wenn schnellere Datenladevorgänge gegenüber der Beibehaltung der Qualität von [Columnstore-Segmenten](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment) bevorzugt werden. Dieses Ablaufverfolgungsflag kann beim Laden von 1.048.577 Zeilen in einen Columnstore bspw. zu mehr als einer komprimierten Zeilengruppe führen, wenn der Einfügevorgang im Parallelmodus ausgeführt wird. Ohne dieses Ablaufverfolgungsflag würde der Einfügevorgang eine einzelne komprimierte Zeilengruppe hervorbringen.<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höheren Builds verfügbar.<br /><br />**Bereich:** nur global| 
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird das Ablaufverfolgungsflag 3205 für alle Sitzungen auf Serverebene mithilfe von DBCC TRACEON festgelegt.  

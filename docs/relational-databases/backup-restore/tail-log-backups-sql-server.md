@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: f069a36982a624dceee4f2be38633ec6998f1eb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 22fda4d5e11b562ea3162ed14766ed085977200e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68041340"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510041"
 ---
 # <a name="tail-log-backups-sql-server"></a>Protokollfragmentsicherungen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68041340"
   
 > **HINWEIS:** Nicht für alle Wiederherstellungsszenarien ist eine Sicherung des Protokollfragments erforderlich. Sie benötigen keine Sicherung des Protokollfragments, wenn der Wiederherstellungspunkt in einer früheren Protokollsicherung enthalten ist. Eine Sicherung des Protokollfragments ist auch dann nicht erforderlich, wenn Sie eine Datenbank verschieben oder ersetzen (überschreiben) und sie nicht für einen Zeitpunkt nach der letzten Sicherung wiederherstellen müssen.  
   
-   ##  <a name="TailLogScenarios"></a> Szenarien, die eine Sicherung des Protokollfragments erfordern  
+   ##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> Szenarien, die eine Sicherung des Protokollfragments erfordern  
  In den folgenden Szenarien wird empfohlen, eine Sicherung des Protokollfragments auszuführen:  
   
 -   Wenn die Datenbank online ist und Sie einen Wiederherstellungsvorgang für die Datenbank ausführen möchten, beginnen Sie mit der Sicherung des Protokollfragments: Verwenden Sie zur Vermeidung eines Fehlers bei einer Onlinedatenbank … Die Option WITH NORECOVERY der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung [BACKUP](../../t-sql/statements/backup-transact-sql.md).  
@@ -47,10 +47,10 @@ ms.locfileid: "68041340"
   
 |BACKUP LOG-Option|Kommentare|  
 |-----------------------|--------------|  
-|NORECOVERY|Verwenden Sie NORECOVERY immer dann, wenn Sie vorhaben, einen Wiederherstellungsvorgang in der Datenbank fortzusetzen. Mit NORECOVERY wird die Datenbank in den Wiederherstellungszustand versetzt. Damit wird sichergestellt, dass sich die Datenbank nach der Sicherung des Protokollfragments nicht ändert. Das Protokoll wird abgeschnitten, es sei denn, die NO_TRUNCATE-Option oder COPY_ONLY-Option ist ebenfalls angegeben.<br /><br /> **Wichtig:** Verwenden Sie NO_TRUNCATE nur, wenn die Datenbank beschädigt ist.|  
+|NORECOVERY|Verwenden Sie NORECOVERY immer dann, wenn Sie vorhaben, einen Wiederherstellungsvorgang in der Datenbank fortzusetzen. Mit NORECOVERY wird die Datenbank in den Wiederherstellungszustand versetzt. Damit wird sichergestellt, dass sich die Datenbank nach der Sicherung des Protokollfragments nicht ändert. Das Protokoll wird abgeschnitten, es sei denn, die NO_TRUNCATE-Option oder COPY_ONLY-Option ist ebenfalls angegeben.<br /><br /> **Wichtig:** Verwenden Sie NO_TRUNCATE nur, wenn die Datenbank beschädigt ist. Möglicherweise müssen Sie die Datenbank in den [Einzelbenutzermodus](../../relational-databases/databases/set-a-database-to-single-user-mode.md) versetzen, um exklusiven Zugriff zu erhalten, bevor Sie die Wiederherstellung mit NORECOVERY durchführen. Versetzen Sie die Datenbank nach der Wiederherstellung wieder in den Multibenutzermodus. |  
 |CONTINUE_AFTER_ERROR|Verwenden Sie CONTINUE_AFTER_ERROR nur dann, wenn Sie das Fragment einer beschädigten Datenbank sichern.<br /><br /> Wenn Sie das Protokollfragment in einer beschädigten Datenbank sichern, sind einige der Metadaten, die normalerweise in Protokollsicherungen erfasst werden, eventuell nicht verfügbar. Weitere Informationen finden Sie in diesem Thema unter [Sicherungen des Protokollfragments mit unvollständigen Sicherungsmetadaten](#IncompleteMetadata).|  
   
-##  <a name="IncompleteMetadata"></a> Sicherungen des Protokollfragments mit unvollständigen Sicherungsmetadaten  
+##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a> Sicherungen des Protokollfragments mit unvollständigen Sicherungsmetadaten  
  Eine Protokollfragmentsicherung erfasst das Protokollfragment selbst dann, wenn die Datenbank offline geschaltet oder beschädigt ist oder wenn Datendateien fehlen. Dies kann zu unvollständigen Metadaten aus den Wiederherstellungsinformationsbefehlen und aus **msdb**führen. In diesem Fall sind jedoch nur die Metadaten unvollständig; das erfasste Protokoll ist vollständig und kann verwendet werden.  
   
  Enthält eine Sicherung des Protokollfragments unvollständige Metadaten, wird der Eintrag [has_incomplete_metadata](../../relational-databases/system-tables/backupset-transact-sql.md) in der **backupset** -Tabelle auf **1**festgelegt. Auch in der Ausgabe von [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)ist **HasIncompleteMetadata** auf **1**festgelegt.  
@@ -63,7 +63,7 @@ ms.locfileid: "68041340"
 -   **type_desc**  
 -   **is_readonly**  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  Informationen zum Erstellen einer Sicherung der Protokolldatei finden Sie unter [Sichern des Transaktionsprotokolls bei beschädigter Datenbank &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md).  
   
  Informationen zum Wiederherstellen einer Transaktionsprotokollsicherung finden Sie unter [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  

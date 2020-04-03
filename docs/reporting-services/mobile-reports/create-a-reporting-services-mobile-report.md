@@ -1,5 +1,6 @@
 ---
 title: Erstellen eines mobilen Berichts in Reporting Services | Microsoft-Dokumentation
+description: Erstellen Sie mit dem Publisher für mobile Berichte mobile SQL Server Reporting Services-Berichte mit flexiblen Elementen für mobile Berichte für alle Bildschirmgrößen.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 08076ebf437841f5d60d957df934fc7de6406ded
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316457"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448217"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Erstellen eines mobilen Berichts in Reporting Services
 Mit dem Publisher für mobile Berichte von SQL Server können Sie schnell mobile Berichte für SQL Server Reporting Services erstellen, die sich problemlos an jede Bildschirmgröße anpassen. Das Tool bietet eine Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten sowie flexible Elemente für mobile Berichte.  
@@ -42,7 +43,7 @@ Wenn Sie zum ersten Mal einen mobilen Bericht erstellen, können Sie den Publish
   
 6. Wählen Sie **Lokales Excel** oder **Berichtsserver**aus.  
   
-   >**Tipps**: Wenn Sie Daten aus Excel hinzufügen, stellen Sie sicher, dass:  
+   >**Tipps**: Wenn Sie Daten aus Excel hinzufügen, stellen Sie Folgendes sicher:  
     >* Sie [die Excel-Daten vorbereiten](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) , damit diese in Ihrem mobilen Bericht funktionieren.  
     >* Sie die Datei zuerst schließen.  
 7. Wählen Sie die gewünschten Arbeitsblätter und anschließend **Importieren**aus.   

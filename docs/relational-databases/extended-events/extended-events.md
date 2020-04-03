@@ -1,5 +1,6 @@
 ---
 title: Übersicht über XEvents – SQL Server
+description: Bei der Architektur für erweiterte Ereignisse in SQL Server können Sie die Daten sammeln, die erforderlich sind, um Leistungsprobleme zu identifizieren und zu beheben. Die Architektur kann konfiguriert und skaliert werden.
 ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34ebcae99f096d095839cb533fb6efe58b113050
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3dbd6e4beee31e90d0354345bb25e4f0c32fc969
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234600"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434047"
 ---
 # <a name="extended-events-overview"></a>Übersicht über erweiterte Ereignisse
 
@@ -29,7 +30,7 @@ ms.locfileid: "75234600"
 
 Weitere Informationen zu „Erweiterte Ereignisse“ finden Sie unter [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Vorteile von erweiterten Ereignissen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="benefits-of-ssnoversion-extended-events"></a>Vorteile von erweiterten Ereignissen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 „Erweiterte Ereignisse“ ist ein schlankes Leistungsüberwachungssystem, das minimale Leistungsressourcen verwendet. „Erweiterte Ereignisse“ stellt zwei grafische Benutzeroberflächen zum Erstellen, Ändern, Anzeigen und Analysieren von Sitzungsdaten bereit. Diese Oberflächen haben folgende Namen:
 
@@ -41,7 +42,7 @@ Weitere Informationen zu „Erweiterte Ereignisse“ finden Sie unter [Schnellst
   
  In der folgenden Tabelle werden die Konzepte von "Erweiterte Ereignisse" beschrieben.  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Pakete für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Beschreibt die „Erweiterte Ereignisse“-Pakete, die Objekte enthalten. Diese Objekte werden verwendet, um Daten abzurufen und zu verarbeiten, wenn eine „Erweiterte Ereignisse“-Sitzung ausgeführt wird.|  
 |[Ziele für erweiterte Ereignisse von SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Beschreibt die Ereignisconsumer, die während einer Ereignissitzung Daten empfangen können.|  

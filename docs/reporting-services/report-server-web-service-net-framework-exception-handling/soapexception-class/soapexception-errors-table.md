@@ -1,5 +1,6 @@
 ---
 title: Tabelle für SoapException-Fehler | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die Fehler, die über Methoden durch eine SoapException im Berichtsserver-Webdienst zugänglich sind.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 95427ddaa6d220afe3397a138f9b5baa085f324d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d8025cc433a8ef6b773b51d86452a6a2f6b07534
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991543"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215635"
 ---
 # <a name="soapexception-errors-table"></a>Tabelle für SoapException-Fehler
   Der Berichtsserver generiert die Fehler und Fehlermeldungen in der SOAP-Ausnahme ausgehend von Fehlern, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]auftreten. In folgender Tabelle sehen Sie die Fehler, die über Methoden durch eine **SoapException** im Berichtsserver-Webdienst zugänglich sind. Die Tabelle ist nach den Methoden geordnet, die die Ausnahme auslösen.  

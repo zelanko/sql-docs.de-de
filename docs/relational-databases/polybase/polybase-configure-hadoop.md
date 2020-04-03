@@ -1,5 +1,6 @@
 ---
 title: 'Zugreifen auf externe Daten: Hadoop – PolyBase'
+description: In diesem Artikel wird PolyBase im Rahmen einer SQL Server-Instanz mit Hadoop verwendet. PolyBase eignet sich für Ad-hoc-Abfragen externer Tabellen sowie das Importieren und Exportieren von Daten.
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 27fa4b36df7248ceee2a484d57ab77d28ca50247
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286904"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215867"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop
 
@@ -66,7 +67,7 @@ Zunächst konfigurieren Sie SQL Server PolyBase für die Verwendung Ihres Hadoop
   
    ![Beenden und Starten von PolyBase-Diensten in „Services.msc“](../../relational-databases/polybase/media/polybase-stop-start.png "Beenden und Starten von PolyBase-Diensten in „Services.msc“")  
   
-## <a id="pushdown"></a> Aktivieren der Weitergabeberechnung  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Aktivieren der Weitergabeberechnung  
 
 Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung für Ihren Hadoop-Cluster:  
   

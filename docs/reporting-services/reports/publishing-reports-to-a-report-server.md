@@ -1,5 +1,6 @@
 ---
 title: Veröffentlichen von Berichten auf einem Berichtsserver | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie mit den Bereitstellungsfeatures in SQL Server Data Tools (SSDT) Berichte auf einem Berichtsserver veröffentlichen.
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c4891d308c81a82ecb3f371cca8812111467bc37
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72359407"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510091"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Veröffentlichen von Berichten auf einem Berichtsserver
   Nachdem Sie einen Bericht oder eine Reihe von Berichten entworfen und getestet haben, können Sie die Bereitstellungsfunktionen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwenden, um die Berichte auf einem Berichtsserver zu veröffentlichen. Sie können einzelne Berichte oder ein Berichtsserverprojekt veröffentlichen, das mehrere Berichte und Datenquellen enthalten kann. Die einfachste Möglichkeit zum Veröffentlichen mehrerer Berichte ist die Veröffentlichung eines Berichtsserverprojekts. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwendet den Begriff *Bereitstellen*anstelle von *Veröffentlichen*. Die beiden Begriffe sind austauschbar.  
@@ -39,7 +40,7 @@ Die Berechtigung wird durch rollenbasierte Sicherheit bestimmt, die vom Berichts
 ## <a name="project-configurations"></a>Projektkonfigurationen  
  Die Berichterstellungsumgebung kann mehrere Berichtsserver und verschiedene Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aufweisen. Sie können mehrere Konfigurationen erstellen und dann je nach Bereitstellungsszenario eine andere verwenden. Projektkonfigurationen schließen Eigenschaften zum Erstellen von Berichten ein, z. B. den Ordner, in dem die erstellten Berichte vorübergehend gespeichert werden, und die Behandlung von Erstellungsproblemen. Die Konfigurationen verfügen außerdem über Eigenschaften, mit denen Sie den Speicherort und die Version des Berichtsservers und die Ordner auf dem Berichtsserver angeben.  
   
- Standardmäßig stellt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] drei Projektkonfigurationen bereit: **DebugLocal**, **Debug**und **Release**. Die Standardkonfiguration ist DebugLocal. Mit der DebugLocal-Konfiguration können Sie Berichte in der Regel in einem lokalen Vorschaufenster anzeigen, mit der Debug-Konfiguration können Sie Berichte auf einem Testserver veröffentlichen, und mit der Release-Konfiguration veröffentlichen Sie Berichte auf einem Produktionsserver. Die aktive Konfiguration wird auf der Standardsymbolleiste in der Dropdownliste Projektmappenkonfigurationen angezeigt. Wenn Sie eine andere Konfiguration verwenden möchten, wählen Sie sie aus der Liste aus.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] stellt standardmäßig drei Projektkonfigurationen bereit: **DebugLocal**, **Debug** und **Release**. Die Standardkonfiguration ist DebugLocal. Mit der DebugLocal-Konfiguration können Sie Berichte in der Regel in einem lokalen Vorschaufenster anzeigen, mit der Debug-Konfiguration können Sie Berichte auf einem Testserver veröffentlichen, und mit der Release-Konfiguration veröffentlichen Sie Berichte auf einem Produktionsserver. Die aktive Konfiguration wird auf der Standardsymbolleiste in der Dropdownliste Projektmappenkonfigurationen angezeigt. Wenn Sie eine andere Konfiguration verwenden möchten, wählen Sie sie aus der Liste aus.  
   
  ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png) 
   

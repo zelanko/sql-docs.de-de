@@ -1,5 +1,6 @@
 ---
 title: Berichtsserver-Webdienstendpunkte | Microsoft-Dokumentation
+description: Der Berichtsserver-Webdienst stellt drei Endpunkte für die Verwaltung eines Berichtsservers sowie für das Ausführen von und die Navigation in Berichten bereit.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 19daac65c808691be20621d6718b4b71e33b83f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a546ba4143b7f0cc63281ce9e7a95a4eb6910366
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284628"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509751"
 ---
 # <a name="report-server-web-service-endpoints"></a>Report Server-Webdienst-Endpunkte
   Der Report Server-Webdienst stellt mehrere Endpunkte für die Verwaltung eines Berichtsservers sowie für das Ausführen von Berichten und die Berichtsnavigation bereit.  
@@ -63,7 +64,7 @@ https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
   
 |Proxyendpunkt|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|Stellt die APIs für das Verwalten eines Berichtsservers bereit, der für den integrierten SharePoint-Modus konfiguriert ist.<br /><br /> Hinweis: Dieser Endpunkt ist in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] veraltet.|  
+|<xref:ReportService2006>|Stellt die APIs für das Verwalten eines Berichtsservers bereit, der für den integrierten SharePoint-Modus konfiguriert ist.<br /><br /> Hinweis: Die Unterstützung für diesen Endpunkt wird in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] eingestellt.|  
 |<xref:ReportService2010>|Stellt die APIs für das Verwalten eines Berichtsservers bereit, der entweder für den einheitlichen Modus oder für den integrierten SharePoint-Modus konfiguriert ist.|  
 |<xref:ReportExecution2005>|Stellt die APIs für die Ausführung von Berichten und die Berichtsnavigation bereit.|  
 |<xref:ReportServiceAuthentication>|Stellt die APIs zum Authentifizieren von Benutzern für einen Berichtsserver bereit, wenn die SharePoint-Webanwendung für die Formularauthentifizierung konfiguriert ist.|  

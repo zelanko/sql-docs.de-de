@@ -10,12 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c3de07aaa65e2dac2859aaf5c0be3e63e0f22dcf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258793"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434127"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Aktualisieren auf eine andere Edition von SQL Server (Setup)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75258793"
 - [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
-> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a failover cluster instance: (Auf einer Failoverclusterinstanz:)** Running edition upgrade on one of the nodes of (Das Ausführen eines Editionsupgrades auf einem der Knoten der) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz ist ausreichend. Dieser Knoten kann entweder aktiv oder passiv sein, und die Engine schaltet während des Editionsupgrades die Ressourcen nicht offline. Nach dem Editionsupgrade muss entweder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz oder das Failover auf einem anderen Knoten neu gestartet werden.  
+> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einer Failoverclusterinstanz:** Die Ausführung eines Editionsupgrades auf einem der Knoten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz reicht aus. Dieser Knoten kann entweder aktiv oder passiv sein, und die Engine schaltet während des Editionsupgrades die Ressourcen nicht offline. Nach dem Editionsupgrade muss entweder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz oder das Failover auf einem anderen Knoten neu gestartet werden.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
 Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie auf der Remotefreigabe ein Domänenkonto mit Leseberechtigungen verwenden.  
@@ -39,7 +39,7 @@ Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. W
   
 ## <a name="procedure"></a>Verfahren  
   
-### <a name="to-upgrade-to-a-different-edition-of-includessnoversionincludesssnoversion-mdmd"></a>So führen Sie ein Upgrade auf eine andere Edition von [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] durch  
+### <a name="to-upgrade-to-a-different-edition-of-ssnoversion"></a>So führen Sie ein Upgrade auf eine andere Edition von [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] durch  
   
 1.  Legen Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsmedium ein. Doppelklicken Sie im Stammordner auf setup.exe, oder starten Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationscenter über die Konfigurationstools. Wenn Sie eine Installation über eine Netzwerkfreigabe vornehmen möchten, suchen Sie den Stammordner in der Freigabe, und doppelklicken Sie auf setup.exe.  
   
@@ -78,7 +78,15 @@ Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. W
 -   Die Größe und der Wiederherstellungsmodus für tempdb und Systemdatenbanken bleiben nach dem Upgrade unverändert. Konfigurieren Sie diese Einstellungen bei Bedarf neu. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 -   Vorlagendatenbanken verbleiben nach dem Upgrade auf dem Computer.  
-  
+
+> [!NOTE]  
+> Wenn die Prozedur bei der Engine_SqlEngineHealthCheck-Regel fehlschlägt, können Sie die Installationsoption über die Befehlszeile verwenden, um diese spezifische Regel zu überspringen, damit der Upgradevorgang erfolgreich abgeschlossen werden kann. Öffnen Sie eine Eingabeaufforderung, und legen Sie den Pfad fest, unter dem sich die SQL Server-Setupdatei („Setup.exe“) befindet, um die Überprüfung dieser Regel zu überspringen. Geben Sie dann den folgenden Befehl ein: 
+
+```console
+setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriatePid> /SkipRules=Engine_SqlEngineHealthCheck
+```
+
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Upgrade von SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Abwärtskompatibilität](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  

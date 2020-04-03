@@ -1,7 +1,7 @@
 ---
 title: Verwenden des JDBC-Treibers | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 965c8aa6e47c230d2d876f81300f2bb890e2c16e
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: d5bf434fa5ca6718e4ce926188564e38ce308ae5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903537"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271336"
 ---
 # <a name="using-the-jdbc-driver"></a>Verwenden des JDBC-Treibers
 
@@ -27,7 +27,7 @@ Dieser Abschnitt enthält Anleitungen, um in kurzer Zeit mit [!INCLUDE[jdbcNoVer
 
 Der Microsoft JDBC-Treiber bietet verschiedene JAR-Dateien, die in Verbindung mit Ihren bevorzugten Einstellungen für die Java Runtime Environment (JRE) verwendet werden können:
 
-Der Microsoft JDBC-Treiber 8.2 für SQL Server bietet die Klassenbibliotheksdateien **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** und **mssql-jdbc-8.2.1.jre13.jar**.
+Der Microsoft JDBC-Treiber 8.2 für SQL Server bietet die Klassenbibliotheksdateien **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** und **mssql-jdbc-8.2.2.jre13.jar**.
 
 Der Microsoft JDBC-Treiber 7.4 für SQL Server bietet die Klassenbibliotheksdateien **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** und **mssql-jdbc-7.4.1.jre12.jar**.
 
@@ -61,31 +61,31 @@ Wenn Sie JDBC-Treiber 7.2 verwenden, legen Sie fest, dass der Klassenpfad die Da
 
 Wenn Sie den JDBC-Treiber 7.4 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** oder **mssql-jdbc-7.4.1.jre12.jar** enthält.
 
-Wenn Sie den JDBC-Treiber 8.2 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** oder **mssql-jdbc-8.2.1.jre13.jar** enthält.
+Wenn Sie den JDBC-Treiber 8.2 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** oder **mssql-jdbc-8.2.2.jre13.jar** enthält.
 
 Wenn im Klassenpfad kein Eintrag für die richtige JAR-Datei vorhanden ist, löst eine Anwendung die allgemeine Ausnahme `Class not found` aus.  
 
 ### <a name="for-microsoft-jdbc-driver-82"></a>Für Microsoft JDBC-Treiber 8.2
 
-Die Datei **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** oder **mssql-jdbc-8.2.1.jre13.jar** wird im folgenden Verzeichnis installiert:
+Die Dateien **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** und **mssql-jdbc-8.2.2.jre13.jar** werden unter den folgenden Verzeichnissen installiert:
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.1.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre8.jar
 
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.1.jre11.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre11.jar
 
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.1.jre13.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre13.jar
 ```
 
 Der folgende Codeausschnitt stellt ein Beispiel für die CLASSPATH-Anweisung dar, die für eine Windows-Anwendung verwendet wird:
 
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.1.jre11.jar`
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.2.jre11.jar`
 
 Der folgende Codeausschnitt stellt ein Beispiel für die CLASSPATH-Anweisung dar, die für eine Linux/Unix-Anwendung verwendet wird:
 
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.1.jre11.jar`
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.2.jre11.jar`
 
-Stellen Sie sicher, dass die CLASSPATH-Anweisung nur einen Microsoft JDBC-Treiber für SQL Server enthält, z. B. **mssql-jdbc-8.2.1.jre8.jar**, **mssql-jdbc-8.2.1.jre11.jar** oder **mssql-jdbc-8.2.1.jre13.jar**.
+Stellen Sie sicher, dass die CLASSPATH-Anweisung nur eine [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Datei enthält, z. B. entweder **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** oder **mssql-jdbc-8.2.2.jre13.jar**.
 
 ### <a name="for-microsoft-jdbc-driver-74"></a>Für Microsoft JDBC-Treiber 7.4
 

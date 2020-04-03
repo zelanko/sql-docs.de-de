@@ -8,13 +8,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
-ms.date: 06/28/2018
-ms.openlocfilehash: f5a1391865b2f08d6eb127fc360d94437c08155e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.date: 03/17/2020
+ms.openlocfilehash: 3a45b9164d2d81983e9a40f0395189979d4daa7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286484"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448254"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -78,7 +78,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/DiagnosticsFile:**|**/df**|{string}|Gibt eine Datei an, in der Diagnoseprotokolle gespeichert werden. |
 |**/MaxParallelism:**|**/mp**|{int}| Gibt den Parallelitätsgrad für gleichzeitige Vorgänge in einer Datenbank an. Der Standardwert ist 8. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Gibt an, ob vorhandene Dateien von sqlpackage.exe überschrieben werden sollen. Bei Angabe von FALSE wird die Aktion von „sqlpackage.exe“ abgebrochen, wenn eine vorhandene Datei gefunden wird. Der Standardwert ist TRUE. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe /Action:Publish /?. |
+|**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe /Action:Extract /?. |
 |**/Quiet:**|**/q**|{True&#124;False}|Gibt an, ob ausführliches Feedback unterdrückt wird. Der Standardwert lautet „False“. |
 |**/SourceConnectionString:**|**/scs**|{string}|Gibt eine gültige SQL Server/Azure-Verbindungszeichenfolge für die Quelldatenbank an. Die Angabe dieses Parameters schließt die Verwendung aller anderen Quellparameter aus. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Definiert den Namen der Quelldatenbank. |
@@ -111,7 +111,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|Gibt an, ob Beziehungen zwischen Benutzern und Anmeldenamen ignoriert werden.|
 |**/p:**|LongRunningCommandTimeout=(INT32)| Gibt das Timeout für zeitintensive Befehle beim Ausführen von Abfragen an SQL Server in Sekunden zurück. Verwenden Sie „0“, um unbegrenzt zu warten.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|Gibt den Typ des Hintergrundspeichers an, der während der Extraktion für das Schemamodell verwendet wird.|
-|**/p:**|TableData=(STRING)|Gibt die Tabelle an, aus der Daten extrahiert werden. Geben Sie den Tabellennamen mit oder ohne Klammern um die Namensteile im folgenden Format an: Schemaname.Tabellen-ID.|
+|**/p:**|TableData=(STRING)|Gibt die Tabelle an, aus der Daten extrahiert werden. Geben Sie den Tabellennamen mit oder ohne Klammern um die Namensteile im folgenden Format an: Schemaname.Tabellen-ID. Diese Option kann mehrfach angegeben werden.|
 |**/p:**| TempDirectoryForTableData=(STRING)|Gibt das temporäre Verzeichnis an, das zum Puffern von Tabellendaten verwendet wird, bevor diese in die Paketdatei geschrieben werden.|
 |**/p:**|VerifyExtraction=(BOOLEAN)|Gibt an, ob die extrahierte DACPAC-Datei überprüft werden soll.|
 
@@ -277,7 +277,7 @@ Durch eine SqlPackage.exe-Exportaktion wird eine Livedatenbank aus SQL Server bz
 |**/DiagnosticsFile:**|**/df**|{string}|Gibt eine Datei an, in der Diagnoseprotokolle gespeichert werden. |
 |**/MaxParallelism:**|**/mp**|{int}| Gibt den Parallelitätsgrad für gleichzeitige Vorgänge in einer Datenbank an. Der Standardwert ist 8. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Gibt an, ob vorhandene Dateien von sqlpackage.exe überschrieben werden sollen. Bei Angabe von FALSE wird die Aktion von „sqlpackage.exe“ abgebrochen, wenn eine vorhandene Datei gefunden wird. Der Standardwert ist TRUE. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe /Action:Publish /?.|
+|**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe /Action:Export /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Gibt an, ob ausführliches Feedback unterdrückt wird. Der Standardwert lautet „False“.|
 |**/SourceConnectionString:**|**/scs**|{string}|Gibt eine gültige SQL Server/Azure-Verbindungszeichenfolge für die Quelldatenbank an. Die Angabe dieses Parameters schließt die Verwendung aller anderen Quellparameter aus. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Definiert den Namen der Quelldatenbank. |
@@ -299,7 +299,7 @@ Durch eine SqlPackage.exe-Exportaktion wird eine Livedatenbank aus SQL Server bz
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Gibt das Datenbank-Sperrtimeout für Abfragen an SQL Server in Sekunden an. Verwenden Sie „-1“, um unbegrenzt zu warten.|
 |**/p:**|LongRunningCommandTimeout=(INT32)| Gibt das Timeout für zeitintensive Befehle beim Ausführen von Abfragen an SQL Server in Sekunden zurück. Verwenden Sie „0“, um unbegrenzt zu warten.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|Gibt den Typ des Hintergrundspeichers an, der während der Extraktion für das Schemamodell verwendet wird.|
-|**/p:**|TableData=(STRING)|Gibt die Tabelle an, aus der Daten extrahiert werden. Geben Sie den Tabellennamen mit oder ohne Klammern um die Namensteile im folgenden Format an: Schemaname.Tabellen-ID.|
+|**/p:**|TableData=(STRING)|Gibt die Tabelle an, aus der Daten extrahiert werden. Geben Sie den Tabellennamen mit oder ohne Klammern um die Namensteile im folgenden Format an: Schemaname.Tabellen-ID. Diese Option kann mehrfach angegeben werden.|
 |**/p:**|TempDirectoryForTableData=(STRING)|Gibt das temporäre Verzeichnis an, das zum Puffern von Tabellendaten verwendet wird, bevor diese in die Paketdatei geschrieben werden.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Gibt an, wie die Ziel-Engine-Version erwartet wird. Dies hat Auswirkungen darauf, ob Objekte zugelassen werden, die von Microsoft Azure SQL-Datenbank-Servern mit V12-Funktionen unterstützt werden, z. B. speicheroptimierte Tabellen in der generierten BACPAC.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Gibt an, ob die unterstützten Volltextdokumenttypen für die Microsoft Azure SQL-Datenbank v12 überprüft werden sollen.|
@@ -317,7 +317,7 @@ Durch eine SqlPackage.exe-Importaktion werden das Schema und die Tabellendaten a
 |**/Diagnostics:**|**/d**|{True&#124;False}|Gibt an, ob die Diagnoseprotokollierung in der Konsole ausgegeben wird. Der Standardwert lautet „False“. |
 |**/DiagnosticsFile:**|**/df**|{string}|Gibt eine Datei an, in der Diagnoseprotokolle gespeichert werden. |
 |**/MaxParallelism:**|**/mp**|{int}| Gibt den Parallelitätsgrad für gleichzeitige Vorgänge in einer Datenbank an. Der Standardwert ist 8. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe /Action:Publish /?.|
+|**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe /Action:Import /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Gibt an, ob ausführliches Feedback unterdrückt wird. Der Standardwert lautet „False“.|
 |**/SourceFile:**|**/sf**|{string}|Gibt eine Quelldatei an, die als Quelle für eine Aktion verwendet werden soll. Bei Verwendung dieses Parameters sind keine anderen Quellparameter zulässig. |
 |**/TargetConnectionString:**|**/tcs**|{string}|Gibt eine gültige SQL Server/Azure-Verbindungszeichenfolge für die Zieldatenbank an. Die Angabe dieses Parameters schließt die Verwendung aller anderen Zielparameter aus. |
@@ -362,7 +362,7 @@ Durch eine **SqlPackage.exe**-Berichtsaktion wird ein XML-Bericht der Änderunge
 |**/OutputPath:**|**/op**|{string}|Gibt den Dateipfad an, in dem Ausgabedateien generiert werden. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Gibt an, ob vorhandene Dateien von sqlpackage.exe überschrieben werden sollen. Bei Angabe von FALSE wird die Aktion von „sqlpackage.exe“ abgebrochen, wenn eine vorhandene Datei gefunden wird. Der Standardwert ist TRUE. |
 |**/Profile:**|**/pr**|{string}|Gibt den Dateipfad zu einem DAC-Veröffentlichungsprofil an. Im Profil ist eine Auflistung von Eigenschaften und Variablen definiert, die beim Generieren von Ausgaben verwendet werden. |
-|**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe /Action:Publish /?. |
+|**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe /Action:DeployReport /?. |
 |**/Quiet:**|**/q**|{True&#124;False}|Gibt an, ob ausführliches Feedback unterdrückt wird. Der Standardwert lautet „False“. |
 |**/SourceConnectionString:**|**/scs**|{string}|Gibt eine gültige SQL Server/Azure-Verbindungszeichenfolge für die Quelldatenbank an. Die Angabe dieses Parameters schließt die Verwendung aller anderen Quellparameter aus. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Definiert den Namen der Quelldatenbank. |
@@ -527,7 +527,7 @@ Durch eine **SqlPackage.exe**-Skriptaktion wird ein inkrementelles Transact-SQL-
 |**/OutputPath:**|**/op**|{string}|Gibt den Dateipfad an, in dem Ausgabedateien generiert werden. |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|Gibt an, ob vorhandene Dateien von sqlpackage.exe überschrieben werden sollen. Bei Angabe von FALSE wird die Aktion von „sqlpackage.exe“ abgebrochen, wenn eine vorhandene Datei gefunden wird. Der Standardwert ist TRUE. |
 |**/Profile:**|**/pr**|{string}|Gibt den Dateipfad zu einem DAC-Veröffentlichungsprofil an. Im Profil ist eine Auflistung von Eigenschaften und Variablen definiert, die beim Generieren von Ausgaben verwendet werden.|
-|**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe /Action:Publish /?.|
+|**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe /Action:Script /?.|
 |**/Quiet:**|**/q**|{True&#124;False}|Gibt an, ob ausführliches Feedback unterdrückt wird. Der Standardwert lautet „False“.|
 |**/SourceConnectionString:**|**/scs**|{string}|Gibt eine gültige SQL Server/Azure-Verbindungszeichenfolge für die Quelldatenbank an. Die Angabe dieses Parameters schließt die Verwendung aller anderen Quellparameter aus. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Definiert den Namen der Quelldatenbank. |

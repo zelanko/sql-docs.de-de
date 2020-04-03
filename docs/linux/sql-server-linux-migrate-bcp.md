@@ -1,6 +1,6 @@
 ---
 title: Massenkopieren von Daten in SQL Server für Linux
-description: ''
+description: In diesem Artikel wird das bcp-Hilfsprogramm beschrieben. Sie können das bcp-Hilfsprogramm verwenden, um große Mengen von Zeilen in SQL Server-Tabellen zu importieren oder um Daten aus SQL Server-Tabellen in Datendateien zu exportieren.
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/30/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cd1af76a6cd22e8f8004c869127585f66e03badc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68127322"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216609"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Massenkopieren von Daten mit BCP in SQL Server für Linux
 
@@ -79,7 +79,7 @@ Im Terminalfenster sollte Folgendes angezeigt werden:
 ```
 
 ### <a name="import-data-from-the-source-data-file"></a>Importieren von Daten aus der Quelldatendatei
-Kopieren Sie die folgenden Befehle, und fügen Sie sie in das Terminalfenster ein. Dieser Befehl stellt mit `bcp` eine Verbindung mit der lokalen SQL Server-Instanz (**localhost**) her und importiert die Daten aus der Datendatei ( **~/test_data.txt**) in die Tabelle (**TestEmployees**) in der Datenbank (**BcpSampleDB**). Denken Sie daran, den Benutzernamen und `<your_password>` vor dem Ausführen der Befehle nach Bedarf zu ersetzen.
+Kopieren Sie die folgenden Befehle, und fügen Sie sie in das Terminalfenster ein. Dieser Befehl stellt mit `bcp` eine Verbindung mit der lokalen SQL Server-Instanz (**localhost**) her und importiert die Daten aus der Datendatei (**~/test_data.txt**) in die Tabelle (**TestEmployees**) in der Datenbank (**BcpSampleDB**). Denken Sie daran, den Benutzernamen und `<your_password>` vor dem Ausführen der Befehle nach Bedarf zu ersetzen.
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','

@@ -1,8 +1,8 @@
 ---
-title: Inlining benutzerdefinierter Skalarfunktionen in Datenbanken von Microsoft SQL Server | Microsoft-Dokumentation
-description: In diesem Artikel wird das Inlining benutzerdefinierter Skalarfunktionen erläutert, um die Leistung von Abfragen zu verbessern, die benutzerdefinierte Skalarfunktionen in SQL Server (2019 und höher) und Azure SQL-Datenbank aufrufen.
+title: Inlining benutzerdefinierter Skalarfunktionen in Microsoft SQL Server | Microsoft-Dokumentation
+description: In diesem Artikel wird das Inlining benutzerdefinierter Skalarfunktionen erläutert, um die Leistung von Abfragen zu verbessern, die benutzerdefinierte Skalarfunktionen in SQL Server (2019 und höher) aufrufen.
 ms.custom: ''
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287404"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486557"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dieser Artikel stellt eine Einführung in das Inlining benutzerdefinierter Skalarfunktionen dar. Dabei handelt es sich um ein Feature für die [intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md). Durch dieses Feature wird die Leistung von Abfragen verbessert, die benutzerdefinierte Skalarfunktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] aufrufen.
+Dieser Artikel stellt eine Einführung in das Inlining benutzerdefinierter Skalarfunktionen dar. Dabei handelt es sich um ein Feature für die [intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md). Durch dieses Feature wird die Leistung von Abfragen verbessert, die benutzerdefinierte Skalarfunktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) aufrufen.
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Benutzerdefinierte T-SQL-Skalarfunktionen
 Benutzerdefinierte Funktionen (User-defined functions, UDF), die in [!INCLUDE[tsql](../../includes/tsql-md.md)] implementiert werden und einen einzelnen Datenwert zurückgeben, werden als benutzerdefinierte T-SQL-Skalarfunktionen bezeichnet. Benutzerdefinierte T-SQL-Funktionen sind gut geeignet, um Code in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen wiederzuverwenden und Modularität zu erreichen. Einige Berechnungen (z.B. komplexe Geschäftsregeln) können einfacher in imperativer UDF-Form ausgedrückt werden. Mit benutzerdefinierten Funktionen können Sie eine komplexe Logik erstellen, ohne komplexe SQL-Abfragen schreiben zu können.

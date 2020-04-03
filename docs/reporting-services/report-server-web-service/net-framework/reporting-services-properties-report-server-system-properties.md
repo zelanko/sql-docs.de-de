@@ -1,5 +1,6 @@
 ---
 title: Berichtsserver-Systemeigenschaften | Microsoft-Dokumentation
+description: Systemeigenschaften gelten global für die Berichtsserver-Datenbank. Sie können viele dieser Eigenschaften mit den Webdienstmethoden lesen oder ändern.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30455d77efff3c9a9e4f48b9cbeccfa983001220
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ecb90d65a011e5bb00c66f5f6ccd32ab4be663ee
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128816"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509632"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Berichtsserver-Eigenschaften: Berichtsserver-Systemeigenschaften
   Die folgenden Namen der Systemeigenschaften sind reserviert. Sie können keine benutzerdefinierten Eigenschaften des gleichen Namens erstellen. Sie können viele dieser Eigenschaften mit den Webdienstmethoden lesen oder ändern.  

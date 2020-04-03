@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 39273f66a62f713e7aa95c3ce20d9ed3204776e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288294"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380811"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,8 +177,10 @@ Legt den Protokolliergrad für SQL Server-Failoverclustering fest. Diese Option 
   
 -   2: Fehler und Warnungen  
   
+In Ressourcenfailoverszenarios kann die Ressourcen-DLL in SQL Server ein Speicherabbild abrufen, bevor ein Failover durchgeführt wird. Dies gilt sowohl für FCI- als auch für Verfügbarkeitsgruppentechnologien. Wenn die Ressourcen-DDL in SQL Server feststellt, dass es bei einer SQL Server-Ressource zu einem Fehler kam, verwendet die Ressourcen-DLL in SQL Server das Hilfsprogramm Sqldumper.exe, um ein Speicherabbild des SQL Server-Prozesses abzurufen. Sie müssen die folgenden drei Eigenschaften als Voraussetzung festlegen, damit das Hilfsprogramm Sqldumper.exe das Speicherabbild bei einem Ressourcenfailover erfolgreich erstellen kann: SqlDumperDumpTimeOut, SqlDumperDumpPath, SqlDumperDumpFlags.
+
 SQLDUMPEREDUMPFLAGS  
-Bestimmt den Typ der Dumpdateien, die vom SQL Server-Hilfsprogramm SQLDumper generiert werden. Die Standardeinstellung ist 0. Weitere Informationen finden Sie im [Knowledge Base-Artikel zum SQL Server Dumper-Hilfsprogramm](https://go.microsoft.com/fwlink/?LinkId=206173).  
+Bestimmt den Typ der Dumpdateien, die vom SQL Server-Hilfsprogramm SQLDumper generiert werden. Die Standardeinstellung ist 0. Dezimalwerte anstelle von Hexadezimalwerten werden für diese Einstellung verwendet. Verwenden Sie für ein Miniabbild den Wert 288. Für ein Miniabbild mit indirektem Arbeitsspeicher verwenden Sie den Wert 296. Für ein gefiltertes Abbild verwenden Sie den Wert 33024. Weitere Informationen finden Sie im [Knowledge Base-Artikel zum SQL Server Dumper-Hilfsprogramm](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
 Der Speicherort, an dem das Hilfsprogramm SQLDumper die Dumpdateien speichert. Weitere Informationen finden Sie im [Knowledge Base-Artikel zum SQL Server Dumper-Hilfsprogramm](https://go.microsoft.com/fwlink/?LinkId=206173).  
@@ -304,7 +306,7 @@ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../
 |[Festlegen von In-Memory Database-Optionen](#MemoryOptimized)|MEMORY_OPTIMIZED|
 
   
-###  <a name="Affinity"></a> Festlegen der Prozessaffinität  
+###  <a name="setting-process-affinity"></a><a name="Affinity"></a> Festlegen der Prozessaffinität  
 Die Beispiele in diesem Abschnitt veranschaulichen, wie die Prozessaffinität für CPUs und NUMA-Knoten festgelegt wird. In den Beispielen wird davon ausgegangen, dass der Server 256 CPUs umfasst, die in vier Gruppen von jeweils 16 NUMA-Knoten unterteilt sind. Den NUMA-Knoten oder CPUs sind keine Threads zugewiesen.  
   
 -   Gruppe 0: NUMA-Knoten 0 bis 3, CPUs 0 bis 63  
@@ -351,7 +353,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
-###  <a name="Diagnostic"></a> Setting diagnostic log options  
+###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
   
@@ -387,7 +389,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a> Festlegen der Failoverclustereigenschaften  
+###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> Festlegen der Failoverclustereigenschaften  
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
@@ -401,7 +403,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-###  <a name="ChangeClusterContextExample"></a> B. Ändern des Clusterkontexts eines Verfügbarkeitsreplikats  
+###  <a name="b-changing-the-cluster-context-of-an-availability-replica"></a><a name="ChangeClusterContextExample"></a> B. Ändern des Clusterkontexts eines Verfügbarkeitsreplikats  
 Im folgenden Beispiel wird der HADR-Clusterkontext der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert. Im Beispiel wird der vollständige Clusterobjektname, `clus01`, angegeben, um den Ziel-WSFC-Cluster `clus01.xyz.com` anzugeben.  
   
 ```sql  
@@ -410,7 +412,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ### <a name="setting-buffer-pool-extension-options"></a>Festlegen der Pufferpoolerweiterungsoptionen  
   
-####  <a name="BufferPoolExtension"></a> A. Festlegen der Pufferpoolerweiterungsoption  
+####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> A. Festlegen der Pufferpoolerweiterungsoption  
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
@@ -439,7 +441,7 @@ SET BUFFER POOL EXTENSION ON
 GO   
 ```  
 
-### <a name="MemoryOptimized"></a> Festlegen von In-Memory Database-Optionen
+### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a> Festlegen von In-Memory Database-Optionen
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 

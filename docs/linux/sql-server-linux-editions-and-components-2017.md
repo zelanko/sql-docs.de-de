@@ -1,5 +1,6 @@
 ---
 title: Editionen und unterstützte Funktionen von SQL Server 2017 – Linux
+description: Dieser Artikel bietet detaillierte Informationen zu den Features, die von den verschiedenen Editionen von SQL Server 2017 unter Linux unterstützt werden. Er hilft Ihnen, aus den verfügbaren Editionen und Komponenten eine Auswahl zu treffen.
 ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
@@ -24,12 +25,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: c7394bf48f6bc32664e7d0a96af96ac0f3d1116f
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288444"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402668"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2017 unter Linux
 
@@ -77,7 +78,7 @@ Informationen zu den Funktionen (Features), die von der Developer, Enterprise Co
 
 Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
-##  <a name="Cross-BoxScaleLimits"></a> Skalierungsgrenzen  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> Skalierungsgrenzen  
   
 |Funktion|Enterprise|Standard|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,27 +91,27 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 <sup>1</sup> Die Enterprise Edition mit einer Lizenzierung auf der Grundlage von Serverlizenz + Clientzugriffslizenz (CAL) (für neue Verträge nicht verfügbar) ist auf maximal 20 Kerne pro SQL Server-Instanz beschränkt. Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen. Weitere Informationen finden Sie unter [Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
-##  <a name="RDBMSHA"></a> RDBMS: Hochverfügbarkeit  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> RDBMS: Hochverfügbarkeit  
   
 |Funktion|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|Protokollversand|Ja|Ja|Ja|Nein|  
-|Sicherungskomprimierung|Ja|Ja|Nein|Nein| 
-|Datenbankmomentaufnahme|Ja|Nein|Nein|Nein|
-|Always On-Failoverclusterinstanzen<sup>1</sup>|Ja|Ja|Nein|Nein| 
-|AlwaysOn-Verfügbarkeitsgruppen<sup>2</sup>|Ja|Nein|Nein|Nein|
-|Basis-Verfügbarkeitsgruppen<sup>3</sup>|Nein|Ja|Nein|Nein|
-|Mindestreplikate für Commitverfügbarkeitsgruppen|Ja|Ja|Nein|Nein|
-|Verfügbarkeitsgruppe ohne Cluster|Ja|Ja|Nein|Nein|
-|Onlineseiten- und Onlinedateiwiederherstellung|Ja|Nein|Nein|Nein|
-|Online-Indizierung|Ja|Nein|Nein|Nein|
-|Fortsetzbare Neuerstellung von online geschalteten Indizes|Ja|Nein|Nein|Nein|
-|Onlineschemaänderung|Ja|Nein|Nein|Nein|
-|Schnelle Wiederherstellung|Ja|Nein|Nein|Nein|
-|Gespiegelte Sicherungen|Ja|Nein|Nein|Nein|
-|Hinzufügen von Speicher im laufenden Systembetrieb und CPU|Ja|Nein|Nein|Nein|
-|Verschlüsselte Sicherung|Ja|Ja|Nein|Nein|
-|Hybridsicherung in Azure (Sicherung über URL)|Ja|Ja|Nein|Nein|
+|Protokollversand|Ja|Ja|Ja|Nein |  
+|Sicherungskomprimierung|Ja|Ja|Nein |Nein | 
+|Datenbankmomentaufnahme|Ja|Nein |Nein |Nein |
+|Always On-Failoverclusterinstanzen<sup>1</sup>|Ja|Ja|Nein |Nein | 
+|AlwaysOn-Verfügbarkeitsgruppen<sup>2</sup>|Ja|Nein |Nein |Nein |
+|Basis-Verfügbarkeitsgruppen<sup>3</sup>|Nein |Ja|Nein |Nein |
+|Mindestreplikate für Commitverfügbarkeitsgruppen|Ja|Ja|Nein |Nein |
+|Verfügbarkeitsgruppe ohne Cluster|Ja|Ja|Nein |Nein |
+|Onlineseiten- und Onlinedateiwiederherstellung|Ja|Nein |Nein |Nein |
+|Online-Indizierung|Ja|Nein |Nein |Nein |
+|Fortsetzbare Neuerstellung von online geschalteten Indizes|Ja|Nein |Nein |Nein |
+|Onlineschemaänderung|Ja|Nein |Nein |Nein |
+|Schnelle Wiederherstellung|Ja|Nein |Nein |Nein |
+|Gespiegelte Sicherungen|Ja|Nein |Nein |Nein |
+|Hinzufügen von Speicher im laufenden Systembetrieb und CPU|Ja|Nein |Nein |Nein |
+|Verschlüsselte Sicherung|Ja|Ja|Nein |Nein |
+|Hybridsicherung in Azure (Sicherung über URL)|Ja|Ja|Nein |Nein |
   
 <sup>1</sup> Bei der Enterprise Edition entspricht die Anzahl der Knoten dem Maximum des Betriebssystems. Bei der Standard Edition werden nur zwei Knoten unterstützt. 
 
@@ -118,32 +119,32 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 
 <sup>3</sup> Bei der Standard Edition werden Basis-Verfügbarkeitsgruppen unterstützt. Eine Basis-Verfügbarkeitsgruppe unterstützt zwei Replikate mit einer Datenbank. Weitere Informationen über Basis-Verfügbarkeitsgruppen finden Sie unter [Basis-Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
-##  <a name="RDBMSSP"></a> RDBMS: Skalierbarkeit und Leistung  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> RDBMS: Skalierbarkeit und Leistung  
   
 |Funktion|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Ja|Ja|Ja|Ja|  
 |Große Objektbinärdateien in gruppierten Columnstore-Indizes|Ja|Ja|Ja|Ja|  
-|Onlineneuerstellung für nicht gruppierten Columnstore-Index|Ja|Nein|Nein|Nein|
+|Onlineneuerstellung für nicht gruppierten Columnstore-Index|Ja|Nein |Nein |Nein |
 |In-Memory-OLTP <sup>1</sup>|Ja|Ja|Ja|Ja|
 |Persistenter Hauptspeicher|Ja|Ja|Ja|Ja|
 |Tabellen- und Indexpartitionierung|Ja|Ja|Ja|Ja|  
 |Datenkomprimierung|Ja|Ja|Ja|Ja|
-|Resource Governor|Ja|Nein|Nein|Nein|  
-|Parallelverarbeitung für partitionierte Tabellen|Ja|Nein|Nein|Nein|
-|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Ja|Nein|Nein|Nein|
-|Ressourcenkontrolle für E/A-Vorgänge|Ja|Nein|Nein|Nein|  
+|Resource Governor|Ja|Nein |Nein |Nein |  
+|Parallelverarbeitung für partitionierte Tabellen|Ja|Nein |Nein |Nein |
+|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Ja|Nein |Nein |Nein |
+|Ressourcenkontrolle für E/A-Vorgänge|Ja|Nein |Nein |Nein |  
 |Verzögerte Dauerhaftigkeit|Ja|Ja|Ja|Ja|
-|Automatische Optimierung|Ja|Nein|Nein|Nein|
-|Adaptive Joins im Batchmodus|Ja|Nein|Nein|Nein|
-|Feedback zur Speicherzuweisung im Batchmodus|Ja|Nein|Nein|Nein|
+|Automatische Optimierung|Ja|Nein |Nein |Nein |
+|Adaptive Joins im Batchmodus|Ja|Nein |Nein |Nein |
+|Feedback zur Speicherzuweisung im Batchmodus|Ja|Nein |Nein |Nein |
 |Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen|Ja|Ja|Ja|Ja|
 |Verbesserungen beim massenhaften Einfügen|Ja|Ja|Ja|Ja|
 
 
 <sup>1</sup> Die Größe der In-Memory OLTP-Daten und des Columnstore-Segmentcaches sind auf die Größe des Arbeitsspeichers beschränkt, die von der Edition im Bereich Kapazitätsgrenzen festgelegt wird. Den maximale Grad an Parallelität ist beschränkt. Der Grad an Prozessparallelität (Degree of Parallelism, DOP) für eine Indexerstellung ist auf 2 DOP für die Standard Edition und auf 1 DOP für die Web und die Express Edition beschränkt. Dies gilt für Columnstore-Indizes, die über datenträgerbasierte Tabellen und speicheroptimierte Tabellen erstellt wurden.
 
-##  <a name="RDBMSS"></a> RDBMS: Sicherheit  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a> RDBMS: Sicherheit  
   
 |Funktion|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
@@ -152,31 +153,31 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Dynamische Datenmaskierung|Ja|Ja|Ja|Ja|   
 |Allgemeine Überwachung|Ja|Ja|Ja|Ja| 
 |Feine Überwachung|Ja|Ja|Ja|Ja| 
-|Transparente Datenbankverschlüsselung|Ja|Nein|Nein|Nein|   
+|Transparente Datenbankverschlüsselung|Ja|Nein |Nein |Nein |   
 |Benutzerdefinierte Rollen|Ja|Ja|Ja|Ja| 
 |Eigenständige Datenbanken|Ja|Ja|Ja|Ja| 
-|Verschlüsselung von Sicherungen|Ja|Ja|Nein|Nein|  
+|Verschlüsselung von Sicherungen|Ja|Ja|Nein |Nein |  
 
-##  <a name="RDBMSM"></a> RDBMS: Verwaltbarkeit  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> RDBMS: Verwaltbarkeit  
   
 |Funktion|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
 |Dedizierte Administratorverbindung|Ja|Ja|Ja|Ja, mit Ablaufverfolgungsflag|   
 |PowerShell-Skriptunterstützung|Ja|Ja|Ja|Ja| 
 |Unterstützung für Komponentenvorgänge der Datenschichtanwendung: Extrahieren, Bereitstellen, Aktualisieren, Löschen|Ja|Ja|Ja|Ja| 
-|Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|Ja|Ja|Ja|Nein|  
-|Sammler von Leistungsdaten|Ja|Ja|Ja|Nein|
-|Standardleistungsberichte|Ja|Ja|Ja|Nein|
-|Planhinweislisten und Planeinfrierung für Planhinweislisten|Ja|Ja|Ja|Nein| 
+|Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|Ja|Ja|Ja|Nein |  
+|Sammler von Leistungsdaten|Ja|Ja|Ja|Nein |
+|Standardleistungsberichte|Ja|Ja|Ja|Nein |
+|Planhinweislisten und Planeinfrierung für Planhinweislisten|Ja|Ja|Ja|Nein | 
 |Direkte Abfrage von indizierten Sichten (mittels NOEXPAND-Hinweis)|Ja|Ja|Ja|Ja| 
-|Automatische Wartung für indizierte Sichten|Ja|Ja|Ja|Nein|
-|Verteilte partitionierte Sichten|Ja|Nein|Nein|Nein| 
-|Parallele Indexvorgänge|Ja|Nein|Nein|Nein|  
-|Automatische Verwendung indizierter Sichten mittels Abfrageoptimierer|Ja|Nein|Nein|Nein| 
-|Parallele Konsistenzprüfung|Ja|Nein|Nein|Nein| 
-|SQL Server-Steuerungspunkt für das Hilfsprogramm|Ja|Nein|Nein|Nein|    
+|Automatische Wartung für indizierte Sichten|Ja|Ja|Ja|Nein |
+|Verteilte partitionierte Sichten|Ja|Nein |Nein |Nein | 
+|Parallele Indexvorgänge|Ja|Nein |Nein |Nein |  
+|Automatische Verwendung indizierter Sichten mittels Abfrageoptimierer|Ja|Nein |Nein |Nein | 
+|Parallele Konsistenzprüfung|Ja|Nein |Nein |Nein | 
+|SQL Server-Steuerungspunkt für das Hilfsprogramm|Ja|Nein |Nein |Nein |    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |Funktion|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -191,17 +192,17 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Volltextsuche und semantische Suche|Ja|Ja|Ja|Ja|
 |Angabe der Sprache in einer Abfrage|Ja|Ja|Ja|Ja|
 |Service Broker (Messaging)|Ja|Ja|Nein (nur Client)|Nein (nur Client)|
-|Transact-SQL-Endpunkte|Ja|Ja|Ja|Nein|
+|Transact-SQL-Endpunkte|Ja|Ja|Ja|Nein |
 |Graph|Ja|Ja|Ja|Ja|  
 
 
 <sup>1</sup> Die Aufskalierung mit mehreren Computeknoten erfordert einen Hauptknoten.
 
-## <a name="IS"></a> Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
 Informationen über die Features von Integration Services (SSIS), die von den einzelnen Editionen von [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [Von den SQL Server-Editionen unterstützte Integration Services-Funktionen](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
-##  <a name="SLS"></a> Räumliche und ortsbezogene Dienste  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a> Räumliche und ortsbezogene Dienste  
   
 |Funktionsname|Enterprise|Standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -209,7 +210,7 @@ Informationen über die Features von Integration Services (SSIS), die von den ei
 |Planarer und geodätischer Datentyp|Ja|Ja|Ja|Ja| 
 |Erweiterte räumliche Bibliotheken|Ja|Ja|Ja|Ja|   
 |Importieren/Exportieren räumlicher Industriestandard-Datenformate|Ja|Ja|Ja|Ja|   
-## <a name="Unsupported"></a> Nicht unterstützte Features und Dienste
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> Nicht unterstützte Features und Dienste
 
 Die folgenden Features und Dienste stehen in SQL Server 2017 für Linux nicht zur Verfügung. Die Unterstützung dieser Features wird im Laufe der Zeit ausgeweitet.
 
@@ -228,6 +229,7 @@ Die folgenden Features und Dienste stehen in SQL Server 2017 für Linux nicht zu
 | &nbsp; | Alerts |
 | &nbsp; | Protokolllese-Agent |
 | &nbsp; | Managed Backup |
+| &nbsp; | Multiserververwaltung mithilfe von MSX/TSX |
 | **Hochverfügbarkeit** | Datenbankspiegelung  |
 | **Security** | Erweiterbare Schlüsselverwaltung |
 | &nbsp; | Azure AD-Authentifizierung für Verbindungsserver | 

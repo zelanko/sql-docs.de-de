@@ -1,5 +1,6 @@
 ---
 title: Erweiterte Anzeige von Zieldaten aus erweiterten Ereignissen
+description: Verwenden Sie die erweiterten Features von SQL Server Management Studio, um umfassende Details zu Zieldaten aus erweiterten Ereignissen anzuzeigen. Sie können Daten anzeigen, exportieren und bearbeiten.
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5bf55c020e773e8d724a3c84bcee4dd78307a4f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 298cebbde96d9de3eadcb6c11ae59b43f2e973d5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255759"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434037"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server
 
@@ -132,7 +133,7 @@ Die Option **Zieldaten anzeigen** zeigt die Daten an, die bisher erfasst wurden.
 
 Im Bereich **Objekt-Explorer** können Sie die Knoten erweitern und dann mit der rechten Maustaste auf folgende Optionen klicken:
 
-- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** >  *[Ihre_Sitzung]*  >  *[Ihr_Zielknoten]*  > **Zieldaten anzeigen**.
+- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > *[Ihr_Zielknoten]* > **Zieldaten anzeigen**.
 
 
 Die Zieldaten werden in SSMS in einem Bereich im Registerkartenformat angezeigt. Dies wird im folgenden Screenshot gezeigt.
@@ -152,7 +153,7 @@ Die Zieldaten werden in SSMS in einem Bereich im Registerkartenformat angezeigt.
 Wenn Ihre Ereignissitzung aktiv ist, können Sie die Ereignisdaten in Echtzeit anzeigen, so wie sie vom Ziel empfangen werden.
 
 
-- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** >  *[Ihre_Sitzung]*  > **Livedaten anzeigen**.
+- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Livedaten anzeigen**.
 
 
 ![Ihre Sitzung > Livedaten anzeigen](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -160,7 +161,7 @@ Wenn Ihre Ereignissitzung aktiv ist, können Sie die Ereignisdaten in Echtzeit a
 
 Die Datenanzeige wird in einem von Ihnen angegebenen Intervall aktualisiert. Siehe **Maximale Verteilungslatenzzeit** unter:
 
-- **Erweiterte Ereignisse** > **Sitzungen** >  *[Ihre_Sitzung]*  > **Eigenschaften** > **Erweitert** > **Maximale Verteilungslatenzzeit**
+- **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Eigenschaften** > **Erweitert** > **Maximale Verteilungslatenzzeit**
 
 
 

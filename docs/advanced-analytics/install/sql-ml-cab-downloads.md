@@ -3,18 +3,18 @@ title: Herunterladen von Updates für die Offlineinstallation
 description: Herunterladen von Python- und R-CAB-Dateien für SQL Server Machine Learning Services Diese CAB-Dateien enthalten Updates für das Machine Learning Services-Feature (Python und R) und werden für die Installation von SQL Server auf einem Server ohne Internetzugang verwendet.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/13/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b50e11995cc1f07b848a460ecd096f97d7b7f9b
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 4a4ed0e63c0a4502321a21f04f5b65e878fcca17
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256686"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290737"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>CAB-Dateidownloads für kumulative Updates für SQL Server Machine Learning Services
 
@@ -42,7 +42,38 @@ Beginnen Sie mit einer Baselineinstallation.  Bei SQL Server 2016 R Services kö
 
 Sie können auch kumulative Updates anwenden.
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+
+## <a name="sql-server-2019-cabs"></a>CAB-Dateien für SQL Server 2019
+
+CAB-Dateien werden in umgekehrter chronologischer Reihenfolge aufgelistet. Wenn Sie die CAB-Dateien herunterladen und auf den Zielcomputer übertragen, speichern Sie diese in einem passenden Ordner wie etwa **Downloads** oder im Setup-Ordner „%temp%“ des Benutzers.
+
+|Release | Komponente | Downloadlink | Behobene Probleme |
+|------- | --------- | ------------- | ---------------- |
+|**[SQL Server 2019 CU3](https://support.microsoft.com/help/4538853)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.293_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118178)  |  |
+| | R Server              | [SRS_9.4.7.717_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118177)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Python-Server         | [SPS_9.4.7.717_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118342)  |  |
+|**[SQL Server 2019 CU2](https://support.microsoft.com/help/4536075)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2085686)  |  |
+| | R Server              | [SRS_9.4.7.35_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2113250)   |  |
+| | Microsoft Python Open | [SPO_4.5.12.692_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2113303) |  |
+| | Python-Server         | [SPS_9.4.7.35_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2113067)   |  |
+|**[SQL Server 2019 CU1](https://support.microsoft.com/help/4527376)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2085686)  |  |
+| | R Server              | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2085792)   |  |
+| | Microsoft Python Open | [SPO_4.5.12.120_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2085793) |  |
+| | Python-Server         | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2085685)   |  |
+|**Erstes Release** | | | |
+| | Microsoft R Open       | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686)  |  |
+| | R Server               | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792)|   |  |
+| | Microsoft Python Open  | [SPO_4.5.12.120_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085793) |  |
+| | Python-Server          | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085685)   |  |
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
 ## <a name="sql-server-2017-cabs"></a>CAB-Dateien für SQL Server 2017
 
@@ -50,12 +81,12 @@ CAB-Dateien werden in umgekehrter chronologischer Reihenfolge aufgelistet. Wenn 
 
 |Release  |Komponente | Downloadlink  | Behobene Probleme | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU19](https://support.microsoft.com/en-us/help/4535007/)** |  |  |  |
+|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)** |  |  |  |
 | | Microsoft R Open | [SRO_3.3.3.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106367&clcid=1033) | Korrigiert den Fehler, bei dem `sp_execute_external_script` beim Ausführung eines R-Skripts eine Warnmeldung anzeigt |
 | | R Server| [SRS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106460&clcid=1033) | Keine Veränderungen im Vergleich zu Vorgängerversionen. |
 | | Microsoft Python Open | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) | Keine Veränderungen im Vergleich zu Vorgängerversionen. |
 | | Python-Server | [SPS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106459&clcid=1033) | Korrigiert den Fehler, bei dem `sp_execute_external_script` beim Ausführen eines Python-Skripts in manchen Fällen Daten verliert, wenn der Datentyp „varbinary“ oder „binary“ in Form von OutputDataSet an SQL Server zurückgegeben wird. |
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)-[CU17](https://support.microsoft.com/en-us/help/4515579/)-[CU18](https://support.microsoft.com/en-us/help/4527377/)** |  |  |  |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)-[CU17](https://support.microsoft.com/help/4515579/)-[CU18](https://support.microsoft.com/help/4527377/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| Im Paket enthaltene Binärdateien sind jetzt signiert. |
 | | R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| Im Paket enthaltene Binärdateien sind jetzt signiert. |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| Im Paket enthaltene Binärdateien sind jetzt signiert. |

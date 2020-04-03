@@ -1,25 +1,40 @@
 ---
 title: Versionshinweise
-titleSuffix: Azure Data Studio
 description: Azure Data Studio-Versionshinweise
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: alayu; sstein
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 02/19/2020
-ms.openlocfilehash: 3b37609f6db3e9dc8fa0d6622574054686552350
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.date: 03/18/2020
+ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408861"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215479"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](download.md)**
+
+## <a name="march-2020"></a>März 2020
+
+18. März 2020 &nbsp; / &nbsp; Version: 1.16.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Erweiterte Diagrammunterstützung auf SQL Server-Notebooks | Benutzer können bei der Ausführung einer SQL-Abfrage in einer Codezelle Diagramme erstellen und speichern. |
+| Weitere Funktionen für das Erstellen von Jupyter-Books | Benutzer können nun mithilfe eines Notebooks eigene Jupyter-Books erstellen. |
+| Erweiterte AAD-Unterstützung für die Postgres-Erweiterung | |
+| Es wurden viele Zugriffsfehler behoben | [Liste der Zugriffsfehler](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
+| Merge von VS Code zu 1.42 | Dieses Release enthält Updates für VS Code aus den drei vorherigen VS Code-Releases. Weitere Informationen finden Sie in den [Versionshinweisen](https://code.visualstudio.com/updates/v1_42). |
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## <a name="february-hotfix"></a>Februar (Hotfix)
 
@@ -49,6 +64,7 @@ ms.locfileid: "78408861"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>Bekanntes Problem
+
 - Benutzer unter macOS Catalina müssen mit der rechten Maustaste auf Azure Data Studio klicken, und anschließend „Öffnen“ auswählen.
 
 ## <a name="december-2019-hotfix"></a>Dezember 2019 (Hotfix)
@@ -144,6 +160,7 @@ ms.locfileid: "78408861"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Bekannte Probleme
+
 - Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) In seltenen Fällen, in denen das Notebook falsch serialisiert wurde
 
@@ -163,6 +180,7 @@ ms.locfileid: "78408861"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Bekannte Probleme
+
 - Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) In seltenen Fällen, in denen das Notebook falsch serialisiert wurde
 
@@ -201,10 +219,9 @@ ms.locfileid: "78408861"
 | Fehler und Issues wurden behoben. | Wenn in früheren Releases von Azure Data Studio beim Herstellen einer Verbindung über das Dialogfeld „Verbindung“ eine Benutzerdatenbank ausgewählt wurde, war der resultierende Objekt-Explorer-Eintrag auf diese einzelne Datenbank beschränkt. Dieses Verhalten wurde im aktuellen Release so angepasst, dass Eigenschaften auf Serverebene auch im Objekt-Explorer angezeigt werden. <br/> Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
 
-
 ## <a name="june-2019"></a>Juni 2019
 
-6\. Juni 2019 &nbsp; / &nbsp; Version: 1.8.0 
+6\. Juni 2019 &nbsp; / &nbsp; Version: 1.8.0
 
 &nbsp;
 
@@ -220,6 +237,7 @@ ms.locfileid: "78408861"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Bekannte Probleme
+
 - Datenbankverwaltungstool-Erweiterungen für Windows
     - „Eigenschaften“ kann nicht über den getrennten Serverknoten aufgerufen werden.
     - „Eigenschaften“ kann nicht für Azure-Server aufgerufen werden.

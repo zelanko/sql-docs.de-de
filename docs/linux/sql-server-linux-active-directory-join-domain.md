@@ -1,7 +1,7 @@
 ---
 title: Verknüpfen von SQL Server für Linux mit Active Directory
 titleSuffix: SQL Server
-description: ''
+description: Diese Artikel enthält Anleitungen zum Hinzufügen eines Linux-Hostcomputers für SQL Server zu einer AD-Domäne. Sie können ein integriertes SSSD-Paket oder AD-Drittanbieter verwenden.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761874"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216191"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Verknüpfen eines Hosts für SQL Server für Linux mit einer Active Directory-Domäne
 
@@ -129,7 +129,7 @@ Nachdem Sie die Basiskonfiguration und die Konnektivität mit dem Domänencontro
 - [Option 1: Verwenden eines SSSD-Pakets](#option1)
 - [Option 2: Verwenden von OpenLDAP-Drittanbietertools](#option2)
 
-### <a id="option1"></a> Option 1: Verwenden des SSSD-Pakets für den Beitritt zur AD-Domäne
+### <a name="option-1-use-sssd-package-to-join-ad-domain"></a><a id="option1"></a> Option 1: Verwenden des SSSD-Pakets für den Beitritt zur AD-Domäne
 
 Bei dieser Methode wird der SQL Server-Host mithilfe von **realmd** und **SSSD**-Paketen mit einer AD-Domäne verknüpft.
 
@@ -160,7 +160,7 @@ Führen Sie die folgenden Schritte aus, um einen SQL Server-Host mit einer Acti
 
 1. Wenn Sie bei der Installation des Pakets für den Kerberos-Client aufgefordert werden, einen Bereichsnamen einzugeben, geben Sie Ihren Domänennamen in Großbuchstaben ein.
 
-1. Nachdem Sie sich vergewissert haben, dass Ihr DNS ordnungsgemäß konfiguriert wurde, führen Sie den folgenden Befehl aus, um der Domäne beizutreten. Sie müssen sich mit einem AD-Konto authentifizieren, das über ausreichende Berechtigungen in AD verfügt, um einen neuen Computer mit der Domäne verknüpfen zu können. Mithilfe des folgenden Befehls wird ein neues Computerkonto in AD und die KEYTAB-Datei für den Host ( **/etc/krb5.keytab**) erstellt, die Domäne in der Datei **/etc/sssd/sssd.conf** wird konfiguriert, und die Datei **/etc/krb5.conf** wird aktualisiert.
+1. Nachdem Sie sich vergewissert haben, dass Ihr DNS ordnungsgemäß konfiguriert wurde, führen Sie den folgenden Befehl aus, um der Domäne beizutreten. Sie müssen sich mit einem AD-Konto authentifizieren, das über ausreichende Berechtigungen in AD verfügt, um einen neuen Computer mit der Domäne verknüpfen zu können. Mithilfe des folgenden Befehls wird ein neues Computerkonto in AD und die KEYTAB-Datei für den Host (**/etc/krb5.keytab**) erstellt, die Domäne in der Datei **/etc/sssd/sssd.conf** wird konfiguriert, und die Datei **/etc/krb5.conf** wird aktualisiert.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -203,7 +203,7 @@ Führen Sie die folgenden Schritte aus, um einen SQL Server-Host mit einer Acti
 
 Weitere Informationen finden Sie in der Red Hat-Dokumentation zum [Ermitteln und Verknüpfen von Identitätsdomänen](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 
-### <a id="option2"></a> Option 2: Verwenden von OpenLDAP-Drittanbietertools
+### <a name="option-2-use-third-party-openldap-provider-utilities"></a><a id="option2"></a> Option 2: Verwenden von OpenLDAP-Drittanbietertools
 
 Sie können auch Hilfsprogramme von Drittanbietern wie [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) oder [Centrify](https://www.centrify.com/) verwenden. In diesem Artikel können aber keine Anweisungen zu den einzelnen Hilfsprogrammen bereitgestellt werden. Sie müssen zunächst mithilfe eines dieser Hilfsprogramme den Linux-Host für SQL Server mit der Domäne verknüpfen, bevor Sie fortfahren können.  
 

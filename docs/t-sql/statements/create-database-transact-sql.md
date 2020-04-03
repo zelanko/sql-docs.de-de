@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft-Dokumentation
 description: Erstellen von Datenbanksyntax für SQL Server, Azure SQL-Datenbank, Azure Synapse Analytics und Analytics Platform System
 ms.custom: ''
-ms.date: 02/07/2020
+ms.date: 03/16/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b809d3512c16a366f8f4add88cf8a0b091156d2
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.openlocfilehash: 1e20a18a405bc0bf2bf8fe94926d5bf4a6cb30ec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074478"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448414"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -75,7 +75,7 @@ In SQL Server erstellt diese Anweisung eine neue Datenbank sowie die verwendeten
 
 Erstellen einer Datenbank
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name
 [ CONTAINMENT = { NONE | PARTIAL } ]
 [ ON
@@ -134,7 +134,7 @@ FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY
 
 Anfügen einer Datenbank
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name
     ON <filespec> [ ,...n ]
     FOR { { ATTACH [ WITH <attach_database_option> [ , ...n ] ] }
@@ -151,7 +151,7 @@ CREATE DATABASE database_name
 
 Erstellen einer Datenbankmomentaufnahme
 
-```sql
+```syntaxsql
 CREATE DATABASE database_snapshot_name
     ON
     (
@@ -201,7 +201,7 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Gilt für**: [!INCLUDE[
 
 Gibt die Ebene des nicht transaktionalen FILESTREAM-Zugriffs auf die Datenbank an.
 
-|value|Beschreibung|
+|Wert|BESCHREIBUNG|
 |-----------|-----------------|
 |OFF|Nicht transaktionaler Zugriff ist deaktiviert.|
 |READONLY|FILESTREAM-Daten in dieser Datenbank können von nicht transaktionalen Prozessen gelesen werden.|
@@ -432,7 +432,7 @@ Sie können mit einer `CREATE DATABASE`-Anweisung eine Datenbank und die Dateien
 
 Maximal 32.767 Datenbanken können auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angegeben werden.
 
-Jede Datenbank hat einen Besitzer, der besondere Aktivitäten in der Datenbank ausführen kann. Der Besitzer ist der Benutzer, der die Datenbank erstellt. Der Datenbankbesitzer kann mit [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) geändert werden.
+Jede Datenbank hat einen Besitzer, der besondere Aktivitäten in der Datenbank ausführen kann. Der Besitzer ist der Benutzer, der die Datenbank erstellt. Der Datenbankbesitzer kann mit [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) geändert werden.
 
 Einige Datenbankfeatures sind von Features oder im Dateisystem enthaltenen Features abhängig, damit eine Datenbank vollständig funktionieren kann. Einige Beispiele von Features, die von verschiedenen Dateisystemfeatures abhängig sind, umfassen:
 
@@ -837,7 +837,7 @@ GO
 - [Anfügen und Trennen von Datenbanken](../../relational-databases/databases/database-detach-and-attach-sql-server.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
-- [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)
+- [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)
 - [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)
 - [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)
 - [Datenbank-Momentaufnahmen](../../relational-databases/databases/database-snapshots-sql-server.md)
@@ -864,7 +864,7 @@ Im [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Datenbank Singleton/Poo
 
 ### <a name="create-a-database"></a>Erstellen einer Datenbank
 
-```sql
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
@@ -900,7 +900,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ### <a name="copy-a-database"></a>Kopieren einer Datenbank
 
-```
+```stntaxsql
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
@@ -1230,7 +1230,7 @@ In einer verwalteten Azure SQL-Datenbank-Instanz wird diese Anweisung zum Erstel
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]
 ```
@@ -1300,7 +1300,7 @@ In Azure Synapse kann diese Anweisung mit einer Azure SQL-Datenbank-Serverinsta
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
     [ MAXSIZE = {
@@ -1411,7 +1411,7 @@ In Analytics Platform System wird diese Anweisung verwendet, um in einer Analyti
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 CREATE DATABASE database_name
 WITH (
     [ AUTOGROW = ON | OFF , ]

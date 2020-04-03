@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: e333a2e489f178ff1301001822f80ec24354184c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558366"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448408"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -87,7 +87,7 @@ BULK INSERT
 
 *table_name:* der Name der Tabelle oder Ansicht, in die der Massenimport von Daten erfolgen soll. Es können nur Sichten verwendet werden, deren Spalten alle auf dieselbe Basistabelle verweisen. Weitere Informationen über die Einschränkungen beim Laden von Daten in Sichten finden Sie unter [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).
 
-**'** _data_file_ **'** : Dies ist der vollständige Pfad der Datendatei mit den Daten, die in die angegebene Tabelle oder Ansicht importiert werden sollen. Mithilfe von BULK INSERT können Daten von einem Datenträger oder aus Azure Blob Storage importiert werden, einschließlich eines Netzwerks, einer Diskette, einer Festplatte usw.
+**'**_data_file_ **'**: Dies ist der vollständige Pfad der Datendatei mit den Daten, die in die angegebene Tabelle oder Ansicht importiert werden sollen. Mithilfe von BULK INSERT können Daten von einem Datenträger oder aus Azure Blob Storage importiert werden, einschließlich eines Netzwerks, einer Diskette, einer Festplatte usw.
 
 Für *data_file* muss ein gültiger Pfad auf dem Server, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, angegeben werden. Wenn *data_file* eine Remotedatei ist, geben Sie den UNC-Namen (Universal Naming Convention) an. Ein UNC-Name weist das Format \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*. Beispiel:
 
@@ -102,11 +102,11 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 kann sich data
 > [!IMPORTANT]
 > Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
 
-**'** _data_source_name_ **'** 
+**'** _data_source_name_ **'**
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 und Azure SQL-Datenbank.
 Es handelt sich um eine benannte externe Datenquelle, die auf den Azure Blob-Speicherort der Datei verweist, welche importiert wird. Die externe Datenquelle muss mithilfe der in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 hinzugefügten `TYPE = BLOB_STORAGE`-Option erstellt werden. Weitere Informationen finden Sie unter [CREATE EXTERNAL DATA SOURCE (CREATE EXTERNAL DATA SOURCE)](../../t-sql/statements/create-external-data-source-transact-sql.md). Ein Beispiel dafür finden Sie unter [Importieren von Daten aus einer Datei in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
-BATCHSIZE **=** _batch_size:_ gibt die Anzahl der Zeilen in einem Batch an. Jeder Batch wird als eine Transaktion auf den Server kopiert. Falls ein Fehler erzeugt wird, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Transaktion jedes Batches ein Commit oder Rollback aus. In der Standardeinstellung werden alle Daten, die sich in der angegebenen Datendatei befinden, als ein Batch behandelt. Informationen zu Leistungsaspekten finden Sie unter "Hinweise" weiter unten in diesem Thema.
+BATCHSIZE **=**_batch_size:_ gibt die Anzahl der Zeilen in einem Batch an. Jeder Batch wird als eine Transaktion auf den Server kopiert. Falls ein Fehler erzeugt wird, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Transaktion jedes Batches ein Commit oder Rollback aus. In der Standardeinstellung werden alle Daten, die sich in der angegebenen Datendatei befinden, als ein Batch behandelt. Informationen zu Leistungsaspekten finden Sie unter "Hinweise" weiter unten in diesem Thema.
 
 CHECK_CONSTRAINTS: gibt an, dass alle Einschränkungen, die für die Zieltabelle oder -ansicht gelten, während des Massenimportvorgangs überprüft werden müssen. Ohne die Option CHECK_CONSTRAINTS werden alle CHECK- und FOREIGN KEY-Einschränkungen ignoriert, und nach Abschluss des Vorgangs wird die Einschränkung in der Tabelle als nicht vertrauenswürdig gekennzeichnet.
 
@@ -120,7 +120,7 @@ Die Deaktivierung von Einschränkungen (das Standardverhalten) kann z. B. erwün
 > [!NOTE]
 > Die Option MAXERRORS kann zur Einschränkungsüberprüfung nicht verwendet werden.
 
-CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'** _code_page_ **'** }: gibt die Codepage für die in der Datendatei enthaltenen Daten an. CODEPAGE ist nur dann von Bedeutung, wenn die Daten **char**-, **varchar**- oder **text**-Spalten mit Zeichenwerten enthalten, die größer als **127** oder kleiner als **32** sind. Ein Beispiel finden Sie unter [Angeben einer Codepage](#d-specifying-a-code-page).
+CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'**_code_page_**'** }: gibt die Codepage für die in der Datendatei enthaltenen Daten an. CODEPAGE ist nur dann von Bedeutung, wenn die Daten **char**-, **varchar**- oder **text**-Spalten mit Zeichenwerten enthalten, die größer als **127** oder kleiner als **32** sind. Ein Beispiel finden Sie unter [Angeben einer Codepage](#d-specifying-a-code-page).
 
 > [!IMPORTANT]
 > Die Option CODEPAGE wird unter Linux für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] nicht unterstützt. Für [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] ist nur die Option **'RAW'** für CODEPAGE zulässig.
@@ -136,7 +136,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 |*Codepage*|Bestimmte Codepagenummer, z. B. 850.<br /><br /> **&#42;&#42; Wichtig &#42;&#42;** In Versionen vor [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wird die Codepage 65001 (UTF-8-Codierung) nicht unterstützt.|
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widenative'** }: gibt an, dass BULK INSERT den Importvorgang mithilfe des angegebenen DATAFILETYPE-Werts ausführt.
+DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }: gibt an, dass BULK INSERT den Importvorgang mithilfe des angegebenen DATAFILETYPE-Werts ausführt.
 
 &nbsp;
 
@@ -148,7 +148,7 @@ DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widen
 |**widenative**|Native (Datenbank-) Datentypen, außer in **char**-, **varchar**- und **text**-Spalten, in denen Date als Unicode gespeichert werden. Erstellen Sie die Datendatei **widenative** durch das Massenimportieren von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Hilfsprogramms **bcp**.<br /><br /> Der Wert vom Datentyp **widenative** bietet eine höhere Leistung als der **widechar**-Wert. Falls die Datendatei erweiterte [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-Zeichen enthält, geben Sie **widenative** an.<br /><br /> Weitere Informationen finden Sie unter [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|
 | &nbsp; | &nbsp; |
 
-ERRORFILE **='** _file_name_ **':** gibt die Datei an, die zum Erfassen der Zeilen verwendet wird, die Formatierungsfehler enthalten und nicht in ein OLE DB-Rowset konvertiert werden können. Diese Zeilen werden aus der Datendatei unverändert in diese Fehlerdatei kopiert.
+ERRORFILE **='**_file_name_**':** gibt die Datei an, die zum Erfassen der Zeilen verwendet wird, die Formatierungsfehler enthalten und nicht in ein OLE DB-Rowset konvertiert werden können. Diese Zeilen werden aus der Datendatei unverändert in diese Fehlerdatei kopiert.
 
 Die Fehlerdatei wird bei Ausführung des Befehls erstellt. Falls die Datei bereits vorhanden ist, tritt ein Fehler auf. Darüber hinaus wird eine Kontrolldatei mit der Erweiterung .ERROR.txt erstellt. Diese Datei enthält einen Verweis auf jede Zeile in der Fehlerdatei und stellt eine Fehlerdiagnose bereit. Sobald die Fehler korrigiert wurden, können die Daten geladen werden.
 **Anwendungsbereich:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
@@ -184,7 +184,7 @@ MAXERRORS **=** _max_errors_: Hiermit wird die maximale Anzahl von Syntaxfehlern
 > [!NOTE]
 > Die Option MAX_ERRORS kann nicht zur Einschränkungsüberprüfung oder zum Konvertieren der Datentypen **money** und **bigint** verwendet werden.
 
-ORDER ( { *column* [ ASC | DESC ] } [ **,** ... *n* ] ): gibt an, wie die Daten in der Datendatei sortiert werden. Die Leistung des Massenkopierens wird verbessert, wenn die zu importierenden Daten entsprechend dem gruppierten Index der Tabelle (falls vorhanden) sortiert sind. Wenn die Datendatei in einer anderen Reihenfolge sortiert wird, die von der Reihenfolge eines Schlüssels des gruppierten Indexes abweicht, oder die Tabelle keinen gruppierten Index hat, wird die ORDER-Klausel ignoriert. Die angegebenen Spaltennamen müssen gültige Spaltennamen in der Zieltabelle sein. Standardmäßig geht der Masseneinfügevorgang davon aus, dass die Datendatei nicht sortiert ist. Beim optimierten Massenimport wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auch überprüft, ob die importierten Daten sortiert sind.
+ORDER ( { *column* [ ASC | DESC ] } [ **,**... *n* ] ): gibt an, wie die Daten in der Datendatei sortiert werden. Die Leistung des Massenkopierens wird verbessert, wenn die zu importierenden Daten entsprechend dem gruppierten Index der Tabelle (falls vorhanden) sortiert sind. Wenn die Datendatei in einer anderen Reihenfolge sortiert wird, die von der Reihenfolge eines Schlüssels des gruppierten Indexes abweicht, oder die Tabelle keinen gruppierten Index hat, wird die ORDER-Klausel ignoriert. Die angegebenen Spaltennamen müssen gültige Spaltennamen in der Zieltabelle sein. Standardmäßig geht der Masseneinfügevorgang davon aus, dass die Datendatei nicht sortiert ist. Beim optimierten Massenimport wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auch überprüft, ob die importierten Daten sortiert sind.
 
 *n*: ist ein Platzhalter, der anzeigt, dass mehrere Spalten angegeben werden können.
 
@@ -220,9 +220,9 @@ FORMATFILE **=** '_format_file_path_': gibt den vollständigen Pfad einer Format
 **Anwendungsbereich:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 und Azure SQL-Datenbank.
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 kann sich format_file_path in Azure Blob Storage befinden.
 
-FIELDTERMINATOR **='** _field_terminator_ **':** gibt das Feldabschlusszeichen an, das für Datendateien vom Typ **char** und **widechar** verwendet werden soll. Standardmäßig wird \t (Tabstoppzeichen) als Feldabschlusszeichen verwendet. Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
+FIELDTERMINATOR **='**_field_terminator_**':** gibt das Feldabschlusszeichen an, das für Datendateien vom Typ **char** und **widechar** verwendet werden soll. Standardmäßig wird \t (Tabstoppzeichen) als Feldabschlusszeichen verwendet. Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
-ROWTERMINATOR **='** _row_terminator_ **':** gibt das Zeilenabschlusszeichen an, das für **char**- und **widechar**-Datendateien verwendet werden soll. Standardmäßig wird **\r\n** (Neue-Zeile-Zeichen) als Zeilenabschlusszeichen verwendet. Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
+ROWTERMINATOR **='**_row_terminator_**':** gibt das Zeilenabschlusszeichen an, das für **char**- und **widechar**-Datendateien verwendet werden soll. Standardmäßig wird **\r\n** (Neue-Zeile-Zeichen) als Zeilenabschlusszeichen verwendet. Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
 ## <a name="compatibility"></a>Kompatibilität
 
@@ -310,7 +310,7 @@ Vor [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 wurden CSV-Da
 
  Informationen dazu, wann Zeileneinfügevorgänge, die durch den Massenimport in SQL Server-Instanzen ausgeführt werden, im Transaktionsprotokoll protokolliert werden, finden Sie unter [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Die minimale Protokollierung wird in Azure SQL-Datenbank nicht unterstützt.
 
-## <a name="Limitations"></a> Einschränkungen
+## <a name="restrictions"></a><a name="Limitations"></a> Einschränkungen
 
 Bei Verwendung einer Formatdatei mit BULK INSERT können maximal 1024 Felder angegeben werden. Dieser Höchstwert entspricht der maximalen Zahl zulässiger Spalten in einer Tabelle. Wenn Sie eine Formatdatei mit BULK INSERT und einer Datendatei verwenden, in der mehr als 1024 Felder enthalten sind, löst BULK INSERT den Fehler 4822 aus. Das [Hilfsprogramm bcp](../../tools/bcp-utility.md) unterliegt dieser Einschränkung nicht. Verwenden Sie deshalb für Datendateien mit mehr als 1024 Feldern BULK INSERT ohne Formatdatei, oder verwenden Sie den Befehl **bcp**.
 
@@ -464,6 +464,24 @@ CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH ( TYPE = BLOB_STORAGE,
           LOCATION = 'https://****************.blob.core.windows.net/invoices'
           , CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage');
+```
+Eine weitere Möglichkeit, auf das Speicherkonto zuzugreifen, sind [verwaltete Identitäten](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). Befolgen Sie hierzu die [Schritte 1 bis 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps), um SQL-Datenbank für den Zugriff auf den Speicher über die verwaltete Identität zu konfigurieren. Anschließend können Sie Codebeispiele wie unten beschrieben implementieren.
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
 );
 
 BULK INSERT Sales.Invoices
