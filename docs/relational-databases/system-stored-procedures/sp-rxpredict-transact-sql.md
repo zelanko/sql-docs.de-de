@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86b9cd8a9327eb8afaf9945ca09629362062011f
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 45afb5e861aee7b8cf253f6c241a884b54ff9451
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517452"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662837"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Generiert einen vorhergesagten Wert für eine bestimmte Eingabe, die aus einem M
 
 Bietet die Bewertung von R- und Python-Machine Learning-Modellen in nahezu Echtzeit. `sp_rxPredict`ist eine gespeicherte Prozedur, die `rxPredict` als Wrapper für die [R-Funktion in RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) und [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)und die [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python-Funktion in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) und [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)bereitgestellt wird. Es ist in C++ geschrieben und speziell für Scoring-Operationen optimiert.
 
-Obwohl das Modell mit R oder Python erstellt werden muss, kann es, sobald es serialisiert und in einem binären Format auf einer Zieldatenbankmodulinstanz gespeichert ist, von dieser Datenbankmodulinstanz verbraucht werden, selbst wenn die R- oder Python-Integration nicht installiert ist. Weitere Informationen finden Sie unter [Echtzeitbewertung mit sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
+Obwohl das Modell mit R oder Python erstellt werden muss, kann es, sobald es serialisiert und in einem binären Format auf einer Zieldatenbankmodulinstanz gespeichert ist, von dieser Datenbankmodulinstanz verbraucht werden, selbst wenn die R- oder Python-Integration nicht installiert ist. Weitere Informationen finden Sie unter [Echtzeitbewertung mit sp_rxPredict](https://docs.microsoft.com/sql/machine-learning/real-time-scoring).
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +53,7 @@ Eine gültige SQL-Abfrage
 Es wird eine Score-Spalte sowie alle Pass-Through-Spalten aus der Eingabedatenquelle zurückgegeben.
 Zusätzliche Score-Spalten, z. B. Konfidenzintervall, können zurückgegeben werden, wenn der Algorithmus die Generierung solcher Werte unterstützt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Um die Verwendung der gespeicherten Prozedur zu aktivieren, muss SQLCLR auf der Instance aktiviert sein.
 
@@ -64,7 +64,7 @@ Der Benutzer `EXECUTE` benötigt die Berechtigung für die Datenbank.
 
 ### <a name="supported-algorithms"></a>Unterstützte Algorithmen
 
-Verwenden Sie zum Erstellen und Trainieren eines Modells einen der unterstützten Algorithmen für R oder Python, der von [SQL Server 2Machine Learning Services (R oder Python),](https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning) [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services), SQL Server Machine Learning Server [(Standalone) (R oder Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)oder [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)bereitgestellt wird.
+Verwenden Sie zum Erstellen und Trainieren eines Modells einen der unterstützten Algorithmen für R oder Python, der von [SQL Server 2Machine Learning Services (R oder Python),](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning) [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), SQL Server Machine Learning Server [(Standalone) (R oder Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)oder [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)bereitgestellt wird.
 
 #### <a name="r-revoscaler-models"></a>R: RevoScaleR-Modelle
 
