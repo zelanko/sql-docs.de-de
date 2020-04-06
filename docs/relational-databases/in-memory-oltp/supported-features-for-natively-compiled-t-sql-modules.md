@@ -219,7 +219,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 
 -   Systemfunktionen: @@rowcount. Durch Anweisungen in nativ kompilierten gespeicherten Prozeduren wird @@rowcount aktualisiert, und Sie können @@rowcount in einer nativ kompilierten gespeicherten Prozedur verwenden, um die Anzahl der Zeilen zu bestimmen, die von der letzten Anweisung betroffen sind, die innerhalb der nativ kompilierten gespeicherten Prozedur ausgeführt wurde. Allerdings wird @@rowcount am Anfang und am Ende der Ausführung einer nativ kompilierten gespeicherten Prozedur auf 0 zurückgesetzt.  
 
--   Sicherheitsfunktionen: IS_MEMBER({'Gruppe' | 'Rolle'}), IS_ROLEMEMBER ('Rolle' [, 'database_principal']), IS_SRVROLEMEMBER ('Rolle' [, 'Anmeldename']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['Anmeldename']), SUSER_SID(['Anmeldename'] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['Benutzer']), USER_NAME([ID]), CONTEXT_INFO().
+-   Sicherheitsfunktionen: IS_MEMBER({'Gruppe' | 'Rolle'}), IS_ROLEMEMBER ('Rolle' [, 'database_principal']), IS_SRVROLEMEMBER ('Rolle' [, 'Anmeldename']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['Anmeldename']), SUSER_SID(['Anmeldename'] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['Benutzer']), USER_NAME([id]), CONTEXT_INFO().
 
 -   Die Ausführungen nativer Module können geschachtelt werden.
 
@@ -244,13 +244,13 @@ Die folgenden DML-Anweisungen werden unterstützt.
 ##  <a name="limitations-on-sorting"></a><a name="los"></a> Einschränkungen bei der Sortierung  
  Sie können mehr als 8.000 Zeilen in einer Abfrage sortieren, die [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) verwendet. Ohne die [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) kann [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) eine Sortierung von bis zu 8.000 Zeilen durchführen (weniger Zeilen, falls es Verknüpfungen gibt).  
 
- Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die Fehlermeldung angezeigt: **Msg 41398, Level 16, State 1, Procedure *\<ProzedurName>* , Line *\<ZeilenNummer>* Der Operator TOP kann maximal 8192 Zeilen zurückgeben; *\<Zahl>* wurde angefordert.**  
+ Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die folgende Fehlermeldung angezeigt: **Meldung 41398, Ebene 16, Status 1, Prozedur *\<Prozedurname>* , Zeile *\<Zeilennummer>* Der Operator TOP kann maximal 8192 Zeilen zurückgeben; *\<Zahl>* wurden angefordert.**  
 
  Wenn keine TOP-Klausel vorhanden ist, kann eine beliebige Anzahl von Zeilen mit ORDER BY sortiert werden.  
 
  Wenn keine ORDER BY-Klausel verwendet wird, können Sie jeden ganzzahligen Wert mit dem TOP-Operator verwenden.  
 
- Beispiel mit TOP N = 8192: Wird kompiliert  
+ Beispiel mit TOP N = 8192: Wird kompiliert  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -263,7 +263,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- Beispiel mit TOP N > 8192: Kann nicht kompiliert werden  
+ Beispiel mit TOP N > 8192: Kann nicht kompiliert werden.  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -292,7 +292,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- **Einschränkungen für zurückgegebene Zeilen:** Es gibt zwei Fälle, in denen sich die Anzahl der Zeilen, die vom TOP-Operator zurückgegeben werden können, u. U. verringert:  
+ **Einschränkungen für die zurückgegebenen Zeilen:** Es gibt zwei Fälle, in denen die Anzahl von Zeilen, die vom TOP-Operator zurückgegeben werden kann, verringert wird:  
 
 -   Verwenden von JOINs in der Abfrage  Die Auswirkungen von JOINs auf die Einschränkung sind vom Abfrageplan abhängig.  
 
