@@ -12,12 +12,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 907fc65dc781ed3308e2f6752ab09702c5d7c16a
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68136530"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625501"
 ---
 # <a name="sql-server-2012-release-notes"></a>Versionsanmerkungen zu SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ Bei der Installation von SQL Server unter Windows Server 2008 R2 Server Core SP1
   
 **Problemumgehung:** Führen Sie zum Einrichten der Semantic Language Statistics-Datenbank als erforderliche Komponente für die semantische Indizierung folgende Schritte aus:  
   
-1.  Suchen Sie das Windows Installer-Paket SemanticLanguageDatabase.msi auf den SQL Server-Installationsmedien, und führen Sie es aus, um die Datenbank zu extrahieren. Laden Sie die Semantic Language Statistics-Datenbank für SQL Server 2012 Express aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582) ) herunter, und führen Sie dann das Windows Installer-Paket aus.  
+1.  Suchen Sie das Windows Installer-Paket SemanticLanguageDatabase.msi auf den SQL Server-Installationsmedien, und führen Sie es aus, um die Datenbank zu extrahieren. Laden Sie die Semantic Language Statistics-Datenbank für SQL Server 2012 Express aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=52681) (https://www.microsoft.com/download/details.aspx?id=52681) ) herunter, und führen Sie dann das Windows Installer-Paket aus.  
   
 2.  Verschieben Sie die Datenbank in einen geeigneten Datenordner. Falls Sie die Datenbank im Standardverzeichnis belassen, müssen die Berechtigungen geändert werden, bevor sie erfolgreich angefügt werden kann.  
   

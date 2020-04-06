@@ -9,12 +9,12 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256865"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607835"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Upgraden von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -66,10 +66,10 @@ In diesem Abschnitt wird erläutert, wie ein BDC für SQL Server von einem unter
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   Das folgende Skript verwendet beispielsweise das Imagetag `2019-CU1-ubuntu-16.04`:
+   Das folgende Skript verwendet beispielsweise das Imagetag `2019-CU4-ubuntu-16.04`:
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -96,7 +96,7 @@ Ein Timeout kann auftreten, wenn bestimmte Komponenten nicht in der zugewiesenen
 Sie können die Timeouts für ein Upgrade erhöhen, indem Sie die Parameter **--controller-timeout** und **--component-timeout** nutzen, um höhere Werte festzulegen, wenn Sie das Upgrade initiieren. Diese Option ist nur ab SQL Server 2019 CU2 verfügbar. Beispiel:
 
    ```bash
-   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout** gibt die Wartezeit in Minuten an, bis der Controller oder die Controllerdatenbank das Upgrade abgeschlossen hat.
 **--component-timeout** gibt die Zeitdauer an, in der jede nachfolgende Phase des Upgrades abgeschlossen sein muss.

@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79218055"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665366"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -231,7 +231,7 @@ Die einfachste Möglichkeit, um die Arbeit mit [!INCLUDE[ssNoVersion](../include
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|Partitionsbasierte Modellierung | Sie können externe Skripts Ihrer Daten partitionsbasiert verarbeiten, indem Sie die neuen Parameter verwenden, die zu `sp_execute_external_script` hinzugefügt wurden. Diese Funktion unterstützt anstelle eines großen Modells das Trainieren von einer Vielzahl kleiner Modelle (ein Modell pro Datenpartition). Siehe [Erstellen von partitionsbasierten Modellen](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).|
+|Partitionsbasierte Modellierung | Sie können externe Skripts Ihrer Daten partitionsbasiert verarbeiten, indem Sie die neuen Parameter verwenden, die zu `sp_execute_external_script` hinzugefügt wurden. Diese Funktion unterstützt anstelle eines großen Modells das Trainieren von einer Vielzahl kleiner Modelle (ein Modell pro Datenpartition). Siehe [Erstellen von partitionsbasierten Modellen](../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).|
 |Windows Server-Failovercluster| Sie können Hochverfügbarkeit für Machine Learning Services in einem Windows Server-Failovercluster konfigurieren.|
 | &nbsp; | &nbsp; |
 

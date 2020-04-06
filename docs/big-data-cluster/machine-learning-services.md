@@ -8,18 +8,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd8e1b948d259b4c233aebcb3614dea5b3e72129
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252025"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664130"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>Ausführen von Python- und R-Skripts mit Machine Learning Services auf SQL Server-Big Data-Clustern
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sie können Python- und R-Skripts auf der Masterinstanz eines [SQL Server-Big Data-Clusters](big-data-cluster-overview.md) mit [Machine Learning Services](../advanced-analytics/index.yml) ausführen.
+Sie können Python- und R-Skripts auf der Masterinstanz eines [SQL Server-Big Data-Clusters](big-data-cluster-overview.md) mit [Machine Learning Services](../machine-learning/index.yml) ausführen.
 
 > [!NOTE]
 > Sie können mit den [SQL Server-Spracherweiterungen](../language-extensions/language-extensions-overview.md) auch Java-Code auf der Masterinstanz ausführen. Wenn Sie die folgenden Schritte befolgen, werden auch die Spracherweiterungen aktiviert.
@@ -82,7 +82,7 @@ Sie können nun Python- und R-Skripts auf der Masterinstanz von Big Data-Cluster
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-+ [Schnellstart: Erstellen und Ausführen einfacher Python-Skripts mit SQL Server-Machine Learning Services](../advanced-analytics/tutorials/quickstart-python-create-script.md)
-+ [Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in Python mit SQL Server Machine Learning Services](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
-+ [Schnellstart: Erstellen und Ausführen einfacher R-Skripts mit SQL Server-Machine Learning Services](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in R mit SQL Server-Machine Learning Services](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)
++ [Schnellstart: Erstellen und Ausführen einfacher Python-Skripts mit SQL Server-Machine Learning Services](../machine-learning/tutorials/quickstart-python-create-script.md)
++ [Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in Python mit SQL Server Machine Learning Services](../machine-learning/tutorials/quickstart-python-train-score-model.md)
++ [Schnellstart: Erstellen und Ausführen einfacher R-Skripts mit SQL Server-Machine Learning Services](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in R mit SQL Server-Machine Learning Services](../machine-learning/tutorials/quickstart-r-train-score-model.md)
