@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79ee8bba588f7d429cf0a6fd279ec4b8d0271262
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271426"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742332"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Versionshinweise für SQL Server Data Tools (SSDT)
 
@@ -106,7 +106,6 @@ _SSDT für Visual Studio 2017._
 | Bekanntes Problem | Details |
 | :---------- | :------ |
 | Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. | Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt. |
-| SSDT für Visual Studio 2017 (ab Version 15.8) unterstützt das Erstellen von Paketen nicht, die Teradata als Quelle oder Ziel verwenden. | Verwenden Sie SSDT für Visual Studio 2017 (15.8). |
 | Die Power Query-Quelle unterstützt möglicherweise kein OData v4, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
 | Die Power Query-Quelle unterstützt möglicherweise kein ODBC für die Verbindung mit Oracle, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
 | Die Power Query-Quelle ist nicht lokalisiert. | &nbsp; |
@@ -134,7 +133,6 @@ _SSDT für Visual Studio 2017._
 | Bekanntes Problem | Details |
 | :---------- | :------ |
 | Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. | Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt. |
-| SSDT für Visual Studio 2017 (ab Version 15.8) unterstützt das Erstellen von Paketen nicht, die Teradata als Quelle oder Ziel verwenden. | Verwenden Sie SSDT für Visual Studio 2017 (15.8). |
 | Datenquellen in Paketbereitstellungsmodell können nicht erstellt oder bearbeitet werden. | Datenquellen-Assistenten wird nicht geöffnet. |
 | Die Power Query-Quelle unterstützt möglicherweise kein OData v4, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
 | Die Power Query-Quelle unterstützt möglicherweise kein ODBC für die Verbindung mit Oracle, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
@@ -164,7 +162,6 @@ _SSDT für Visual Studio 2017._
 | Bekanntes Problem | Details |
 | :---------- | :------ |
 | Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. | Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt. |
-| SSDT für Visual Studio 2017 (ab Version 15.8) unterstützt das Erstellen von Paketen nicht, die Teradata als Quelle oder Ziel verwenden. | Verwenden Sie SSDT für Visual Studio 2017 (15.8). |
 | Datenquellen in Paketbereitstellungsmodell können nicht erstellt oder bearbeitet werden. | Datenquellen-Assistenten wird nicht geöffnet. |
 | Die Power Query-Quelle unterstützt möglicherweise kein OData v4, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
 | Die Power Query-Quelle unterstützt möglicherweise kein ODBC für die Verbindung mit Oracle, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
@@ -198,7 +195,6 @@ _SSDT für Visual Studio 2017._
 | Bekanntes Problem | Details |
 | :---------- | :------ |
 | Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. | Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt. |
-| SSDT für Visual Studio 2017 (ab Version 15.8) unterstützt das Erstellen von Paketen nicht, die Teradata als Quelle oder Ziel verwenden. | Verwenden Sie SSDT für Visual Studio 2017 (15.8). |
 | Die Power Query-Quelle unterstützt möglicherweise kein OData v4, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
 | Die Power Query-Quelle unterstützt möglicherweise kein ODBC für die Verbindung mit Oracle, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
 | Die Power Query-Quelle ist nicht lokalisiert. | &nbsp; |
@@ -218,7 +214,6 @@ Ein Problem wurde behoben, bei dem die Bereitstellung eines SSIS-Projekts in Azu
 ### <a name="known-issues"></a>Bekannte Probleme:
 
 - Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
-- SSDT für Visual Studio 2017 (15.8.2) unterstützt das Erstellen von Paketen nicht, die Oracle bzw. Teradata als Quelle oder Ziel verwenden. Verwenden Sie SSDT für Visual Studio 2017 (15.8).
 
 ## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1,&nbsp; SSDT für VS 2017
 
@@ -237,7 +232,6 @@ _SSDT für Visual Studio 2017._
 
 - Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
 - Die Bereitstellung von SSIS-Projekten, die Pakete mit Skripttask- bzw. Flatfilezielen für Azure-SSIS enthalten, führt dazu, dass die Pakete nicht in Azure-SSIS ausgeführt werden können.
-- SSDT für Visual Studio 2017 (15.8.1) unterstützt das Erstellen von Paketen nicht, die Oracle bzw. Teradata als Quelle oder Ziel verwenden. Verwenden Sie SSDT für Visual Studio 2017 (15.8).
 
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8,&nbsp; SSDT für VS 2017
