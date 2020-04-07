@@ -6,12 +6,12 @@ metadata:
   title: Microsoft SQL-Dokumentation | Microsoft-Dokumentation
   description: Informationen zur Verwendung von Azure SQL Services und SQL Server für die Verwaltung Ihrer Datenbankanforderungen, sowohl auf lokaler Ebene als auch in der Cloud
   ms.topic: hub-page
-  ms.openlocfilehash: 42bba30813744d9dfeb20e1042ba3a57f1ee99c6
-  ms.sourcegitcommit: 700c07312d1ffc034e7a684cbf4265afc7c84993
+  ms.openlocfilehash: c593194a2c254baaec71cf7874e6ffd2d1883740
+  ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/27/2020
-  ms.locfileid: "76831669"
+  ms.lasthandoff: 04/04/2020
+  ms.locfileid: "80664353"
 highlightedContent:
   items:
   - title: Testen Sie SQL Server 2019
@@ -85,7 +85,7 @@ conceptualContent:
       url: https://docs.microsoft.com/azure/dms/dms-overview
       itemType: whats-new
     - text: SQL Server Machine Learning Services
-      url: advanced-analytics/index.yml
+      url: machine-learning/index.yml
       itemType: whats-new
   - title: Installieren
     links:
@@ -174,6 +174,6 @@ additionalContent:
       - text: Microsoft Analytics Platform System
         url: analytics-platform-system/index.md
       - text: SQL Server Machine Learning Services (R und Python)
-        url: advanced-analytics/index.yml
+        url: machine-learning/index.yml
       - text: Azure Machine Learning
         url: https://docs.microsoft.com/azure/machine-learning/
