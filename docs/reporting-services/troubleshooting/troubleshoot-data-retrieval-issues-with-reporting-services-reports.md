@@ -1,5 +1,6 @@
 ---
-title: Behandlung von Problemen beim Abrufen von Daten in Reporting Services-Berichten | Microsoft-Dokumentation
+title: Behandlung von Problemen beim Abrufen von Daten in Reporting Services-Berichten
+description: In diesem Artikel erfahren Sie, wie Sie Probleme beim Abrufen von Berichtsdaten über die lokale Vorschau eines Berichts oder durch Ausführen eines Berichts auf dem Berichtsserver diagnostizieren und beheben.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d62cff71d6967203ab3980624b1f7b192fb89906
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574426"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664448"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Behandlung von Problemen beim Abrufen von Daten in Reporting Services-Berichten
 Der erste Schritt bei der Berichtsverarbeitung ist das Abrufen der Berichtsdaten für jedes Dataset durch Ausführen der Datasetabfrage. Wenn Sie einen Bericht lokal in der Vorschau anzeigen, müssen für die Datenquellenverbindungen und Anmeldeinformationen ausreichende Berechtigungen zum Abrufen der Daten auf den Computer verwendet werden. Wenn Sie einen Bericht auf dem Berichtsserver ausführen, müssen für die Datenquellenverbindungen und Anmeldeinformationen ausreichende Berechtigungen zum Abrufen der Daten auf den Berichtsserver verwendet werden. Dieses Thema soll Ihnen beim Behandeln von Problemen beim Abrufen von Berichtsdaten helfen.   
@@ -57,7 +58,7 @@ Wenn Sie im Dialogfeld Dataseteigenschaften eine Abfrage definieren und dann das
 Gehen Sie zum Auffüllen der Datasetfeldauflistung wie folgt vor:  
 * Stellen Sie sicher, dass Sie über die Berechtigungen zum Abrufen von Feldinformationen aus der Datenbank verfügen. Bei einigen Datenquellen verfügen Sie möglicherweise über Berechtigungen für den Zugriff auf die Datenquelle, jedoch nicht für den Zugriff auf die Tabelle oder Spalte. Sie verfügen eventuell über die Berechtigung für den Zugriff auf eine Sicht, jedoch über keine Berechtigungen für die Ausführung der gespeicherten Prozeduren, mit denen die Sicht erstellt wird. Um Ihren Zugriff auf spezifische Tabellen oder Spalten in einer Datenbank zu überprüfen, verifizieren Sie die Abfrageergebnisse in einer separaten Anwendung, z. B. SQL Server Management Studio, unter Verwendung derselben Berechtigungen, die Sie für den Bericht verwenden. Wenn Sie die für Ihre Abfrage gewünschten Ergebnisse nicht sehen können, wenden Sie sich an den Systemadministrator, um Ihre Berechtigungen für die Daten anzupassen.   
 * Führen Sie die Abfrage im Abfragebereich des Dialogfelds **Dataseteigenschaften** aus. Weitere Informationen finden Sie im Artikel über [Berichtsdatasets (Berichts-Generator 3.0 und SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
-* Fügen Sie manuell Felder hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich (Berichts-Generator 3.0 und SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
+* Fügen Sie manuell Felder hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich (Berichts-Generator 3.0 und SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

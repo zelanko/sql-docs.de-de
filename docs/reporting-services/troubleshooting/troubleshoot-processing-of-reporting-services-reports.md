@@ -1,5 +1,6 @@
 ---
-title: Problembehandlung bei der Verarbeitung von Reporting Services-Berichten | Microsoft-Dokumentation
+title: Problembehandlung bei der Verarbeitung von Reporting Services-Berichten
+description: In diesem Artikel erfahren Sie, wie Sie Probleme beheben, die auftreten, wenn der Berichtsprozessor Daten und Layoutinformationen kombiniert und Eigenschaftsausdrücke der Berichtselemente auswertet.
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d10dc9e4e5808fbc9c315cb262a1b2136c73029
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573868"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664443"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Problembehandlung bei der Verarbeitung von Reporting Services-Berichten
 Nachdem die Berichtsdaten abgerufen wurden, kombiniert der Berichtsprozessor die Daten mit den Layoutinformationen. Jede Berichtselementeigenschaft, die über einen Ausdruck verfügt, wird im Kontext der mit dem Layout kombinierten Daten ausgewertet. Dieses Thema soll Ihnen beim Behandeln der folgenden Probleme helfen.   
@@ -23,7 +24,7 @@ Zur Laufzeit kombiniert der Berichtsprozessor Daten- und Layoutelemente in der B
   
 Der Berichtsprozessor überprüft, ob die Berichtsdefinition (RDL-Datei) mit dem Schema übereinstimmt, das in der Namespacedeklaration am Anfang der RDL-Datei angegeben wird. Weitere Informationen zu RDL-Schemas finden Sie unter [Suchen der Berichtsdefinitions-Schemaversion (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
-Zudem müssen die Berichtsausdrücke, die zur Laufzeit ausgewertet werden, mit einer Reihe von Regeln übereinstimmen, die sicherstellen, dass die Daten und das Layout des Berichts ordnungsgemäß kombiniert werden können. Wenn der Berichtsprozessor ein Problem feststellt, wird eventuell die folgende Meldung angezeigt: Die Definition des Berichts `<report name>` ist ungültig.  
+Zudem müssen die Berichtsausdrücke, die zur Laufzeit ausgewertet werden, mit einer Reihe von Regeln übereinstimmen, die sicherstellen, dass die Daten und das Layout des Berichts ordnungsgemäß kombiniert werden können. Wenn der Berichtsprozessor ein Problem erkennt, wird Ihnen möglicherweise die folgende Meldung angezeigt: Die Definition des Berichts `<report name>` ist ungültig.  
   
 ### <a name="report-item-expressions-can-only-refer-to-fields-within-the-current-dataset-scope-or-if-inside-an-aggregate-the-specified-dataset-scope"></a>Ein Ausdruck für ein Berichtselement kann nur auf Felder verweisen, die sich im aktuellen Datasetbereich oder, wenn der Ausdruck zu einer Aggregatfunktion gehört, im angegebenen Datasetbereich befinden.  
   

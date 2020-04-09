@@ -1,5 +1,6 @@
 ---
-title: Fehler- und Ereignisreferenz (Reporting Services) | Microsoft-Dokumentation
+title: Fehler- und Ereignisreferenz (Reporting Services)
+description: Hier erfahren Sie mehr über das Anzeigen der ID, des Typs, der Kategorie, der Quelle und der Beschreibung für verschiedene Berichtsserverereignisse. Zu diesen Ereignissen zählen Fehler-, Warnungs- und Informationstypen.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9bfaa996eb0a0bf02440268c68a8a543470fd022
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68258544"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664398"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Fehler- und Ereignisreferenz (Reporting Services)
 

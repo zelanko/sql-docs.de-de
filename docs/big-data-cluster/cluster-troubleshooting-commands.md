@@ -1,5 +1,5 @@
 ---
-title: Überwachen und Behandeln von Problemen
+title: Problembehandlung für Kubernetes
 titleSuffix: SQL Server big data clusters
 description: Dieser Artikel enthält nützliche Befehle zum Überwachen und Behandeln von Problemen in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: mihaelablendea
@@ -9,21 +9,21 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ab57972b9ba0d758ff692887fa8d93d7f731d0a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70153630"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664185"
 ---
-# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>Überwachung und Problembehandlung von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>Problembehandlung für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] auf Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In diesem Artikel werden verschiedene nützliche Kubernetes-Befehle beschrieben, die Sie zum Überwachen und Behandeln von Problemen in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] verwenden können. Sie erfahren zudem, wie Sie ausführliche Informationen zu einem Pod oder anderen Kubernetes-Artefakten erhalten, die sich im Big-Data-Cluster befinden. In diesem Artikel werden auch allgemeine Aufgaben behandelt, z. B. das Kopieren in oder aus einem Container, der einen der folgenden Big-Data-Clusterdienste für SQL Server ausführt.
 
 > [!TIP]
-> Für die Überwachung des Status von Big Data-Clusterkomponenten können Sie [**azdata bdc status**](deployment-guidance.md#status)-Befehle oder die integrierten [Notebooks zur Problembehandlung](manage-notebooks.md) verwenden, die mit Azure Data Studio bereitgestellt werden.
+> Für die Überwachung des Status von Big Data-Clusterkomponenten können Sie [**azdata bdc status**](deployment-guidance.md#status)-Befehle oder die integrierten [Notebooks zur Problembehandlung](notebooks-manage-bdc.md) verwenden, die mit Azure Data Studio bereitgestellt werden.
 
 > [!TIP]
 > Führen Sie die folgenden **kubectl**-Befehle auf einem Windows- (cmd oder PS) oder einem Linux-(bash)-Clientcomputer aus. Diese müssen zuvor im Cluster authentifiziert und für einen Clusterkontext ausgeführt werden. Für einen zuvor erstellten AKS-Cluster können Sie beispielsweise `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` ausführen, um die Konfigurationsdatei des Kubernetes-Clusters herunterzuladen und den Clusterkontext festzulegen.

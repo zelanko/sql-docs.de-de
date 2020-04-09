@@ -1,5 +1,6 @@
 ---
-title: Behandlung von Problemen bei Abonnements und Übermittlung in Reporting Services | Microsoft-Dokumentation
+title: Behandlung von Problemen bei Abonnements und Übermittlung in Reporting Services
+description: In diesem Artikel erfahren Sie, wie Sie Probleme beim Arbeiten mit Berichtsabonnements, -zeitplänen und -übermittlungen in SQL Server Reporting Services diagnostizieren und beheben.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 577ca01b2764df923c0208934c597e17e8412ff2
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572115"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662754"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Behandlung von Problemen bei Abonnements und Übermittlung in Reporting Services
   
@@ -24,7 +25,7 @@ Dieses Thema soll Ihnen beim Behandeln von Problemen helfen, die beim Arbeiten m
 Die Abonnementseite in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] enthält den Status eines Abonnements. Wenn jedoch ein Problem mit dem Abonnement auftritt, befinden sich die detaillierten Informationen in den [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Protokollen. 
 ![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
 
-**Ablaufverfolgungsprotokolle** : Die Ablaufverfolgungsprotokolle sind Textdateien, die in diesen Pfad geschrieben werden: `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
+**Ablaufverfolgungsprotokolle:** Bei den Ablaufverfolgungsprotokollen handelt es sich um Textdateien, die in diesen Pfad geschrieben werden: `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
 
 Im Folgenden sehen Sie ein Beispiel für einen Protokolleintrag:
 
@@ -52,7 +53,7 @@ Hierbei steht \<error message> für zusätzliche Fehlermeldungsinformationen, di
   
 Weitere Informationen zum Verwenden eines lokalen SMTP-Dienstes für die E-Mail-Übermittlung von Berichten finden Sie unter "Konfigurieren eine Berichtsservers für die E-Mail-Übermittlung".  
   
-## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>Fehler beim Senden von E-Mail: Der Server hat die Absenderadresse zurückgewiesen. Die Serverantwort lautet: 454 5.7.3. Client ist nicht berechtigt, Mail an diesen Server zu übermitteln.  
+## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>Fehler beim Senden von E-Mails: Der Server hat die Absenderadresse zurückgewiesen. Die Serverantwort lautete: 454 5.7.3 Client ist nicht berechtigt, Mail an diesen Server zu übermitteln.  
 Dieser Fehler tritt auf, wenn die Sicherheitsrichtlinieneinstellungen auf dem SMTP-Server nur authentifizierten Benutzern das Senden von E-Mails für die nachfolgende Übermittlung ermöglichen. Falls der SMTP-Server keine E-Mail-Sendungen von anonymen Benutzern akzeptiert, wenden Sie sich an den Systemadministrator, um die Berechtigung für die Verwendung des Servers zu erhalten.  
 > Dieser Fehler kann außerdem auftreten, wenn Sie einen Exchange-Servernamen als SMTP-Server angeben. Wenn Sie einen Server mit Exchange für die E-Mail-Übermittlung verwenden möchten, müssen Sie den Namen des für den Server mit Exchange konfigurierten SMTP-Gateways angeben. Diese Informationen erhalten Sie von Ihrem Exchange-Administrator.  
   

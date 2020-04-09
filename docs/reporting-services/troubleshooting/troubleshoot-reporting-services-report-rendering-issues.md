@@ -1,5 +1,6 @@
 ---
-title: 'Reporting Services-Problembehandlung: Probleme beim Rendern von Berichten | Microsoft-Dokumentation'
+title: Reporting Services-Problembehandlung, Probleme beim Rendern von Berichten
+description: In diesem Artikel erfahren Sie, wie Sie Anzeigeprobleme beim Senden des kompilierten Berichts und der Layoutdaten an einen Berichtsrenderer in SQL Server Reporting Services diagnostizieren und beheben.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f8c5029d66a068d43ebc659592697fd2914fd2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a834ee415fd725c26314b95d507b86ff5280f78
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574686"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662784"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services-Problembehandlung, Probleme beim Rendern von Berichten
 Nach dem Kombinieren der Berichtsdaten und der Layoutinformationen wird der kompilierte Bericht an einen Berichtsrenderer gesendet. Wenn Sie z. B. lokal eine Vorschau eines Berichts anzeigen, verwenden Sie den HTML-Renderer zum Anzeigen des kompilierten Berichts. Dieses Thema soll Ihnen beim Behandeln von Problemen beim Rendern von Berichten helfen.   
@@ -58,9 +59,9 @@ Wenn die Datenquelle für einen Microsoft SharePoint-Listenverbindungstyp konfig
 `Query execution failed for dataset 'DataSet1'.`   
 `The request failed with HTTP status 401: Unauthorized.`  
   
-**Problemumgehung:** Ändern Sie die Datenquelle, um gespeicherte Anmeldeinformationen statt der Windows-Anmeldeinformationen zu verwenden.  
+**So können Sie dieses Problem umgehen:** Ändern Sie die Datenquelle, um gespeicherte Anmeldeinformationen statt der Windows-Anmeldeinformationen zu verwenden.  
   
-**Dieses Problem betrifft:** Browser, die so konfiguriert wurden, dass Anmeldeinformationen angefordert werden.  
+**Dieses Problem gilt für:** Browser, die so konfiguriert sind, dass Anmeldeinformationen angefordert werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Fehler und Ereignisse (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

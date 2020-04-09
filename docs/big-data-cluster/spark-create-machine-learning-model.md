@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d51cc4164cbb40ff647cad337240e689696b449
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255915"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531126"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>Erstellen, Exportieren und Bewerten von Machine Learning-Modellen in Spark auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -52,7 +52,7 @@ In diesem Beispiel werden Erhebungsdaten (**AdultCensusIncome.csv**) zum Erstell
 
    Dieses Notebook enthält Zellen mit den erforderlichen Befehlen für diesen Beispielabschnitt.
 
-1. Öffnen Sie das Notebook in Azure Data Studio, und führen Sie jeden Codeblock aus. Weitere Informationen zum Arbeiten mit Notebooks finden Sie unter [Verwenden von Notebooks in SQL Server](notebooks-guidance.md).
+1. Öffnen Sie das Notebook in Azure Data Studio, und führen Sie jeden Codeblock aus. Weitere Informationen zum Arbeiten mit Notebooks finden Sie unter [Verwenden von Notebooks mit SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 Die Daten werden zuerst in Spark eingelesen und in Trainings-und Testdatasets aufgeteilt. Anschließend trainiert der Code ein Pipelinemodell mit den Trainingsdaten. Abschließend wird das Modell in ein MLeap-Bundle exportiert.
 
@@ -61,7 +61,7 @@ Die Daten werden zuerst in Spark eingelesen und in Trainings-und Testdatasets au
 
 ## <a name="model-scoring-with-sql-server"></a>Modellbewertung mit SQL Server
 
-Da sich das Spark ML-Pipelinemodell nun in einem allgemeinen [MLeap-Bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html)-Serialisierungsformat befindet, können Sie das Modell in Java ohne die Verwendung von Spark bewerten. 
+Da sich das Spark ML-Pipelinemodell nun in einem allgemeinen [MLeap-Bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html)-Serialisierungsformat befindet, können Sie das Modell in Java ohne die Verwendung von Spark bewerten.
 
 In diesem Beispiel wird die [Java-Spracherweiterung](../language-extensions/language-extensions-overview.md) in SQL Server verwendet. Um das Modell in SQL Server bewerten zu können, müssen Sie zunächst eine Java-Anwendung erstellen, die das Modell in Java laden und bewerten kann. Den Beispielcode für diese Java-Anwendung finden Sie im [Ordner „mssql-mleap-app“](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app).
 

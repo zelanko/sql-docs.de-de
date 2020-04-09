@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
-ms.date: 12/04/2019
-ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 01/04/2020
+ms.openlocfilehash: 0497915a9f1f0f2a50eafeed70f9dde4550bd1f0
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866038"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531164"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (SSRS-Konfigurations-Manager)
 
@@ -91,6 +91,13 @@ Es gibt drei Typen von Anmeldeinformationen, die für eine Verbindung mit einer 
   
 Wenn die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] für die Windows-Authentifizierung konfiguriert wird und wenn diese sich in derselben Domäne wie der Berichtsserver-Computer oder einer vertrauenswürdigen Domäne befindet, können Sie die Verbindung so konfigurieren, dass das Dienstkonto oder ein Domänenbenutzerkonto verwendet wird, das Sie als Verbindungseigenschaft für das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool verwalten. Wenn sich der Datenbankserver in einer anderen Domäne befindet oder wenn Sie die Arbeitsgruppensicherheit verwenden, müssen Sie die Verbindung so konfigurieren, dass ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank-Anmeldename verwendet wird. Stellen Sie in diesem Fall sicher, dass die Verbindung verschlüsselt ist.  
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Beim Verwenden der verwalteten Azure SQL-Datenbank-Instanz, um Berichtsserver-Datenbanken zu hosten, ist die SQL Server-Authentifizierung der einzige unterstützte Anmeldeinformationstyp. Beachten Sie zudem, dass die verwaltete Instanz keine Berichtsserverinstanz hosten kann.
+
+::: moniker-end
+
 #### <a name="using-service-accounts-and-integrated-security"></a>Verwenden von Dienstkonten und der integrierten Sicherheit
 
 Sie können die integrierte Sicherheit von Windows verwenden, um eine Verbindung über das Berichtsserver-Dienstkonto herzustellen. Das Dienstkonto erhält eine Anmeldeberechtigung für die Berichtsserver-Datenbank. Diese Art der Anmeldeinformationen wird standardmäßig vom Setupprogramm ausgewählt, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der Standardkonfiguration installieren.  
@@ -105,14 +112,7 @@ Sie können ein Windows-Benutzerkonto für die Verbindung zwischen Berichtsserve
 
 #### <a name="using-a-sql-server-login"></a>Verwenden eines SQL Server-Anmeldenamens
 
-Sie können einen einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen festlegen, mit dem die Verbindung zur Berichtsserver-Datenbank hergestellt wird. Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden und sich die Berichtsserver-Datenbank auf einem Remotecomputer befindet, sollten Sie die Übertragung der Daten zwischen den Servern mithilfe von IPSec schützen. Wenn Sie einen Datenbank-Anmeldenamen verwenden, müssen Sie die Berichtsserver-Datenbank jedes Mal aktualisieren, wenn Sie das Kennwort oder das Konto ändern.  
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-> [!NOTE]
-> Wenn Sie zum Hosten von Reporting Services 2019-Datenbanken eine verwaltete Azure SQL-Instanz verwenden, ist die Unterstützung für die Verbindung auf die Verwendung der SQL Server-Anmeldeinformationen beschränkt.
-
-::: moniker-end
+Sie können einen einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen festlegen, mit dem die Verbindung zur Berichtsserver-Datenbank hergestellt wird. Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden und sich die Berichtsserver-Datenbank auf einem Remotecomputer befindet, sollten Sie die Übertragung der Daten zwischen den Servern mithilfe von IPsec schützen. Wenn Sie einen Datenbank-Anmeldenamen verwenden, müssen Sie die Berichtsserver-Datenbank jedes Mal aktualisieren, wenn Sie das Kennwort oder das Konto ändern.
 
 ### <a name="database-permissions"></a>Datenbankberechtigungen
 

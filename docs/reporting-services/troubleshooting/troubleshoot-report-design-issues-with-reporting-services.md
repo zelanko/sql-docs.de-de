@@ -1,5 +1,6 @@
 ---
-title: 'Problembehandlung: Berichtsentwürfe in Reporting Services | Microsoft-Dokumentation'
+title: Behandlung von Problemen in Reporting Services
+description: In diesem Artikel erfahren Sie, wie Sie Probleme beim Berichtsentwurf diagnostizieren und beheben, die beim Erstellen des Berichtslayouts in der Designansicht in einer Berichtserstellungsanwendung auftreten können.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd38603a00c01187c131c2f515c2a4c6c1cb858e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573845"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662813"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Behandlung von Problemen in Reporting Services
 Probleme bei der Berichtserstellung können auftreten, wenn Sie das Berichtslayout in der Entwurfsansicht in einer Berichterstellungsanwendung erstellen. Dieses Thema soll Ihnen beim Behandeln der folgenden Probleme helfen.   
@@ -41,7 +42,7 @@ Die integrierten Felder [&PageNumber] und [&TotalPages] sind nur im Seitenkopf u
 Wenn Sie [&PageNumber] oder [&TotalPages] in einem Bericht hinzufügen möchten, müssen Sie zuerst einen Seitenkopf oder einen Seitenfuß hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen eines Seitenkopfs](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
-> Das Einschließen von [&TotalPages] im Seitenkopf oder Seitenfuß kann Auswirkungen auf die Verarbeitung des Berichts haben. Weitere Informationen finden Sie unter "Problembehandlung bei Berichten: In ein bestimmtes Dateiformat exportierte Berichte".  
+> Das Einschließen von [&TotalPages] im Seitenkopf oder Seitenfuß kann Auswirkungen auf die Verarbeitung des Berichts haben. Weitere Informationen finden Sie im Artikel zur Problembehandlung bei Berichten: In ein bestimmtes Dateiformat exportierte Berichte.  
 [Problembehandlung bei der Verarbeitung von Reporting Services-Berichten](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md).  
   
 ## <a name="how-do-i-design-two-tables-or-a-chart-and-a-table-to-display-side-by-side"></a>Wie entwerfe ich zwei Tabellen oder ein Diagramm und eine Tabelle so, dass sie nebeneinander angezeigt werden?  
