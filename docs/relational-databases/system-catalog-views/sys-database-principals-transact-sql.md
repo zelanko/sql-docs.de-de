@@ -1,5 +1,5 @@
 ---
-title: sys. database_principals (Transact-SQL) | Microsoft-Dokumentation
+title: sys.database_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32c5e56526b0e3ee06dc570e35b81bdfb4b14ce7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: feed483cf3ee08c0652e55de51b1f73fc087ed39
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76761844"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873116"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,25 +34,25 @@ ms.locfileid: "76761844"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Der Name des Prinzipals, der innerhalb der Datenbank eindeutig ist.|  
-|**principal_id**|**int**|Die ID des Prinzipals, die innerhalb der Datenbank eindeutig ist.|  
-|**type**|**char (1)**|Prinzipaltyp:<br /><br /> A = Anwendungsrolle<br /><br /> C = Einem Zertifikat zugeordneter Benutzer<br /><br /> E = externer Benutzer aus Azure Active Directory<br /><br /> G = Windows-Gruppe<br /><br /> K = Einem asymmetrischen Schlüssel zugeordneter Benutzer<br /><br /> R = Datenbankrolle<br /><br /> S = SQL-Benutzer<br /><br /> U = Windows-Benutzer<br /><br /> X = externe Gruppe aus Azure Active Directory Gruppe oder Anwendungen|  
-|**type_desc**|**nvarchar (60)**|Beschreibung des Prinzipaltyps.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
-|**default_schema_name**|**sysname**|Der Name, der verwendet werden soll, wenn der SQL-Name kein Schema angibt. NULL für Prinzipale, die nicht vom Typ S, U oder A sind.|  
+|**name**|**Sysname**|Der Name des Prinzipals, der innerhalb der Datenbank eindeutig ist.|  
+|**Principal_id**|**int**|Die ID des Prinzipals, die innerhalb der Datenbank eindeutig ist.|  
+|**type**|**char(1)**|Prinzipaltyp:<br /><br /> A = Anwendungsrolle<br /><br /> C = Einem Zertifikat zugeordneter Benutzer<br /><br /> E = Externer Benutzer aus Azure Active Directory<br /><br /> G = Windows-Gruppe<br /><br /> K = Einem asymmetrischen Schlüssel zugeordneter Benutzer<br /><br /> R = Datenbankrolle<br /><br /> S = SQL-Benutzer<br /><br /> U = Windows-Benutzer<br /><br /> X = Externe Gruppe aus Azure Active Directory-Gruppe oder -Anwendungen|  
+|**type_desc**|**nvarchar(60)**|Beschreibung des Prinzipaltyps.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
+|**default_schema_name**|**Sysname**|Name, der verwendet werden soll, wenn SQL-Name kein Schema angibt. NULL für Prinzipale, die nicht vom Typ S, U oder A sind.|  
 |**create_date**|**datetime**|Der Zeitpunkt, zu dem der Prinzipal erstellt wurde.|  
 |**modify_date**|**datetime**|Der Zeitpunkt, zu dem der Prinzipal zum letzten Mal geändert wurde.|  
-|**owning_principal_id**|**int**|ID des Prinzipals, der der Besitzer dieses Prinzipals ist. Alle festgelegten Daten bankrollen befinden sich standardmäßig im Besitz von **dbo** .|  
-|**sid**|**varbinary(85)**|Sicherheits-ID (SID) des Prinzipals.  NULL für SYS und INFORMATION SCHEMAS.|  
+|**owning_principal_id**|**int**|ID des Prinzipals, der der Besitzer dieses Prinzipals ist. Alle festen Datenbankrollen sind standardmäßig im Besitz von **dbo.**|  
+|**Sid**|**varbinary(85)**|Sicherheits-ID (SID) des Prinzipals.  NULL für SYS und INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Falls 1, stellt diese Zeile einen Eintrag für eine der festen Datenbankrollen dar: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader oder db_denydatawriter.|  
-|**authentication_type**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Gibt den Authentifizierungstyp an. Im folgenden sind die möglichen Werte und ihre Beschreibungen aufgeführt.<br /><br /> 0: keine Authentifizierung<br />1: instanzauthentifizierung<br />2: Daten Bank Authentifizierung<br />3: Windows-Authentifizierung|  
-|**authentication_type_desc**|**nvarchar (60)**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Beschreibung des Authentifizierungstyps. Im folgenden sind die möglichen Werte und ihre Beschreibungen aufgeführt.<br /><br /> Keine: keine Authentifizierung<br />Instanz: instanzauthentifizierung<br />Datenbank: Daten Bank Authentifizierung<br />Windows: Windows-Authentifizierung|  
-|**default_language_name**|**sysname**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Gibt die Standardsprache für diesen Prinzipal an.|  
-|**default_language_lcid**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Gibt die Standard-LCID für diesen Prinzipal an.|  
-|**allow_encrypted_value_modifications**|**bit**|**Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Verhindert bei Massenkopiervorgängen kryptografische Metadatenüberprüfungen auf dem Server. Dies ermöglicht dem Benutzer das Massen Kopieren von Daten, die mit Always Encrypted verschlüsselt werden, zwischen Tabellen oder Datenbanken, ohne die Daten zu entschlüsseln. Der Standardwert ist OFF. |      
+|**authentication_type**|**int**|**Gilt**für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] : und höher.<br /><br /> Gibt den Authentifizierungstyp an. Im Folgenden sind die möglichen Werte und deren Beschreibungen zu finden.<br /><br /> 0 : Keine Authentifizierung<br />1 : Instanzauthentifizierung<br />2 : Datenbankauthentifizierung<br />3 : Windows-Authentifizierung<br />4 : Azure Active Directory-Authentifizierung|  
+|**authentication_type_desc**|**nvarchar(60)**|**Gilt**für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] : und höher.<br /><br /> Beschreibung des Authentifizierungstyps. Im Folgenden sind die möglichen Werte und deren Beschreibungen zu finden.<br /><br /> NONE : Keine Authentifizierung<br />INSTANCE : Instanzauthentifizierung<br />DATENBANK : Datenbankauthentifizierung<br />WINDOWS : Windows-Authentifizierung<br />EXTERNAL: Azure Active Directory-Authentifizierung|  
+|**default_language_name**|**Sysname**|**Gilt**für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] : und höher.<br /><br /> Gibt die Standardsprache für diesen Prinzipal an.|  
+|**default_language_lcid**|**int**|**Gilt**für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] : und höher.<br /><br /> Gibt die Standard-LCID für diesen Prinzipal an.|  
+|**allow_encrypted_value_modifications**|**bit**|**Gilt**für [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]und höher, .<br /><br /> Verhindert bei Massenkopiervorgängen kryptografische Metadatenüberprüfungen auf dem Server. Auf diese Weise kann der Benutzer Daten, die mit Always Encrypted verschlüsselt sind, zwischen Tabellen oder Datenbanken verschlüsseln, ohne die Daten zu entschlüsseln. Der Standardwert ist OFF. |      
   
-## <a name="remarks"></a>Bemerkungen  
- Die *PasswordLastSetTime* -Eigenschaften sind in allen unterstützten Konfigurationen von SQL Server verfügbar, die anderen Eigenschaften sind jedoch nur verfügbar, wenn SQL Server unter Windows Server 2003 oder höher ausgeführt wird und sowohl CHECK_POLICY als auch CHECK_EXPIRATION aktiviert sind. Weitere Informationen finden Sie unter Kenn [Wort Richtlinie](../../relational-databases/security/password-policy.md) .
-Die Werte der principal_id werden möglicherweise wieder verwendet, wenn Prinzipale gelöscht wurden und daher nicht unbedingt immer zunehmen.
+## <a name="remarks"></a>Hinweise  
+ Die *PasswordLastSetTime-Eigenschaften* sind für alle unterstützten Konfigurationen von SQL Server verfügbar, die anderen Eigenschaften sind jedoch nur verfügbar, wenn SQL Server unter Windows Server 2003 oder höher ausgeführt wird und sowohl CHECK_POLICY als auch CHECK_EXPIRATION aktiviert sind. Weitere Informationen finden Sie unter [Kennwortrichtlinie.](../../relational-databases/security/password-policy.md)
+Die Werte der principal_id können wiederverwendet werden, wenn die Auftraggeber fallen gelassen wurden und daher nicht garantiert ständig steigen.
   
 ## <a name="permissions"></a>Berechtigungen  
  Jeder Benutzer kann den eigenen Benutzernamen, die Systembenutzer und die festen Datenbankrollen anzeigen. Zum Anzeigen anderer Benutzer ist ALTER ANY USER oder eine Berechtigung für den Benutzer erforderlich. Zum Anzeigen benutzerdefinierter Rollen ist ALTER ANY ROLE oder die Mitgliedschaft in der Rolle erforderlich.  
@@ -89,13 +89,13 @@ JOIN sys.schemas AS s
     ON o.schema_id = s.schema_id;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: Auflisten aller Berechtigungen von Daten Bank Prinzipale  
+### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: Auflisten aller Berechtigungen von Datenbankprinzipalen  
  Mit der folgenden Abfrage werden die Berechtigungen aufgelistet, die Datenbankprinzipalen ausdrücklich gewährt oder verweigert wurden.  
   
 > [!IMPORTANT]  
->  Die Berechtigungen fester Daten bankrollen werden in `sys.database_permissions`nicht angezeigt. Daher können Datenbankprinzipale über zusätzliche Berechtigungen verfügen, die hier nicht aufgeführt werden.  
+>  Die Berechtigungen für feste Datenbankrollen `sys.database_permissions`werden in nicht angezeigt. Daher können Datenbankprinzipale über zusätzliche Berechtigungen verfügen, die hier nicht aufgeführt werden.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -105,8 +105,8 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: Auflisten von Berechtigungen für Schema Objekte in einer Datenbank  
- Mit der folgenden Abfrage `sys.database_principals` werden `sys.database_permissions` die `sys.objects` Berechtigungen `sys.schemas` und in und aufgelistet, um Berechtigungen aufzulisten, die bestimmten Schema Objekten erteilt oder verweigert wurden.  
+### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: Auflisten von Berechtigungen für Schemaobjekte in einer Datenbank  
+ Die folgende `sys.database_principals` Abfrage `sys.database_permissions` `sys.objects` wird `sys.schemas` verknüpft und mit und zum Auflisten von Berechtigungen, die bestimmten Schemaobjekten gewährt oder verweigert wurden.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -122,11 +122,11 @@ JOIN sys.schemas AS s
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Eigenständige Datenbankbenutzer: Erstellen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
- [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  
+ [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [sys.server_principals &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [Sicherheitskatalogansichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Enthaltene Datenbankbenutzer - Machen Sie Ihre Datenbank portierbar](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
+ [Herstellen einer Verbindung mit SQL-Datenbank mithilfe der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  
   
   
 
