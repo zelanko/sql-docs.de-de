@@ -12,12 +12,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e50fd6037b10008029d5373348605d11726b6199
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91a8515417d25c2ef9f23d1698811a5f872227db
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70148037"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664268"
 ---
 # <a name="install-sql-server-database-engine"></a>Installieren der SQL Server-Datenbank-Engine
 
@@ -39,15 +39,15 @@ Wenn Sie im Installations-Assistenten von **[!INCLUDE[ssNoVersion](../../include
 -   [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md) – optionale Komponente  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [Machine Learning Services](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R und Python) und [Spracherweiterungen](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) – optionale Komponente
+-   [Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R und Python) und [Spracherweiterungen](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) – optionale Komponente
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
--   [Machine Learning Services (datenbankintern)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R und Python) – optionale Komponente
+-   [Machine Learning Services (datenbankintern)](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R und Python) – optionale Komponente
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
--   [R Services (datenbankintern)](../../advanced-analytics/install/sql-r-services-windows-install.md) – optionale Komponente
+-   [R Services (datenbankintern)](../../machine-learning/install/sql-r-services-windows-install.md) – optionale Komponente
 ::: moniker-end
 
 -   Volltextsuche – optionale Komponente  

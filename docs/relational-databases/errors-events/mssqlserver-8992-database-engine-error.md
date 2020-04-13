@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25d673f7f385649afb0a46ae65a61e3eb0f270f9
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479675"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531073"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+|Element|Wert|
+|:---|:---|
 |Produktname|SQL Server|  
 |Ereignis-ID|8992|  
 |Ereignisquelle|MSSQLSERVER|  
@@ -43,9 +43,9 @@ Dieser Fehler kann auftreten, wenn eine oder mehrere Systemtabellen manuell auf 
 Dieser Fehler kann beim Ausführen von DBCC CHECKDB für eine Datenbank auftreten, die von SQL Server 2000 auf SQL Server 2005 oder höher aktualisiert wurde. In SQL Server 2000 enthält DBCC CHECKDB die DBCC CHECKCATALOG-Funktion nicht. Deshalb wird der Fehler nicht vor dem Upgrade abgefangen, es sei denn, DBCC CHECKCATALOG wurde ausdrücklich für die Datenbank in SQL Server 2000 ausgeführt.  
   
 In Verbindung mit Fehler 8992 werden möglicherweise folgende Fehler angezeigt:  
-|||
-|-|-| 
+
 |Meldungs-ID|Fehlertext|
+|:---|:---|
 |3851|Eine ungültige Zeile (%ls) wurde in der sys.%ls%ls-Systemtabelle gefunden.|
 |3852|Für die Zeile (%ls) in sys.%ls%ls ist keine entsprechende Zeile (%ls) in sys.%ls%ls vorhanden.|
 |3853|Für das Attribut (%ls) der Zeile (%ls) in sys.%ls%ls ist keine entsprechende Zeile (%ls) in sys.%ls%ls vorhanden.|
