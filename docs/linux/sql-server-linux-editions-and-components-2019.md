@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402661"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002786"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2019 unter Linux
 
@@ -152,7 +152,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Dynamische Datenmaskierung|Ja|Ja|Ja|Ja|   
 |Allgemeine Überwachung|Ja|Ja|Ja|Ja| 
 |Feine Überwachung|Ja|Ja|Ja|Ja| 
-|Transparente Datenbankverschlüsselung|Ja|Nein |Nein |Nein |   
+|Transparente Datenbankverschlüsselung|Ja|Ja|Nein |Nein |   
 |Benutzerdefinierte Rollen|Ja|Ja|Ja|Ja| 
 |Eigenständige Datenbanken|Ja|Ja|Ja|Ja| 
 |Verschlüsselung von Sicherungen|Ja|Ja|Nein |Nein |  
@@ -227,7 +227,6 @@ Die folgenden Features und Dienste stehen für SQL Server 2019 für Linux nicht 
 | **SQL Server-Agent** |  Subsysteme: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Managed Backup |
-| &nbsp; | Multiserververwaltung mithilfe von MSX/TSX |
 | **Hochverfügbarkeit** | Datenbankspiegelung  |
 | **Security** | Erweiterbare Schlüsselverwaltung |
 | &nbsp; | Azure AD-Authentifizierung für Verbindungsserver | 

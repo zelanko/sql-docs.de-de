@@ -29,12 +29,12 @@ ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca4bfd07491b25659253ca56eb1c16adb414544b
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121560"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809837"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,9 +70,14 @@ END CATCH
   
  Ein TRY…CATCH-Konstrukt darf sich nicht über mehrere Batches erstrecken. Ein TRY…CATCH-Konstrukt darf sich nicht über mehrere Blöcke von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen erstrecken. So darf sich ein TRY…CATCH-Konstrukt beispielsweise nicht über zwei BEGIN…END-Blöcke von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und nicht über ein IF…ELSE-Konstrukt erstrecken.  
   
- Ist der Code in einem TRY-Block fehlerfrei, wird nach Abschluss der letzten Anweisung im TRY-Block die Steuerung an die Anweisung übergeben, die direkt auf die dazugehörige END CATCH-Anweisung folgt. Enthält der in einen TRY-Block eingeschlossene Code einen Fehler, wird die Steuerung an die erste Anweisung im dazugehörigen CATCH-Block übergeben. Ist die END CATCH-Anweisung die letzte Anweisung in einer gespeicherten Prozedur oder in einem Trigger, wird die Steuerung wieder an die Anweisung zurückgegeben, die die gespeicherte Prozedur aufgerufen bzw. den Trigger ausgelöst hat.  
-  
- Wenn die Ausführung des Codes im CATCH-Block abgeschlossen ist, wird die Steuerung an die Anweisung übergeben, die direkt auf die END CATCH-Anweisung folgt. Fehler, die von einem CATCH-Block aufgefangen werden, werden nicht an die aufrufende Anwendung zurückgegeben. Falls Fehlerinformationen an die Anwendung zurückgegeben werden sollen, müssen im Code im CATCH-Block bestimmte Mechanismen dafür verwendet werden, z. B. SELECT-Resultsets oder die RAISERROR-Anweisung und die PRINT-Anweisung.  
+ Ist der Code in einem TRY-Block fehlerfrei, wird nach Abschluss der letzten Anweisung im TRY-Block die Steuerung an die Anweisung übergeben, die direkt auf die dazugehörige END CATCH-Anweisung folgt.
+ 
+ Enthält der in einen TRY-Block eingeschlossene Code einen Fehler, wird die Steuerung an die erste Anweisung im dazugehörigen CATCH-Block übergeben. Wenn die Ausführung des Codes im CATCH-Block abgeschlossen ist, wird die Steuerung an die Anweisung übergeben, die direkt auf die END CATCH-Anweisung folgt. 
+ 
+ > [!NOTE] 
+ > Ist die END CATCH-Anweisung die letzte Anweisung in einer gespeicherten Prozedur oder in einem Trigger, wird die Steuerung wieder an die Anweisung zurückgegeben, die die gespeicherte Prozedur aufgerufen bzw. den Trigger ausgelöst hat. 
+ 
+ Fehler, die von einem CATCH-Block aufgefangen werden, werden nicht an die aufrufende Anwendung zurückgegeben. Falls Fehlerinformationen an die Anwendung zurückgegeben werden sollen, müssen im Code im CATCH-Block bestimmte Mechanismen dafür verwendet werden, z. B. SELECT-Resultsets oder die RAISERROR-Anweisung und die PRINT-Anweisung.  
   
  TRY…CATCH-Konstrukte können geschachtelt werden. Entweder ein TRY-Block oder ein CATCH-Block kann geschachtelte TRY…CATCH-Konstrukte enthalten. So kann beispielsweise ein CATCH-Block ein eingebettetes TRY…CATCH-Konstrukt enthalten, das Fehler behandelt, die vom CATCH-Code festgestellt werden.  
   

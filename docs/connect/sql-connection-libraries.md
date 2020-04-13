@@ -1,23 +1,23 @@
 ---
 title: Verbindungsbibliotheken für Microsoft SQL-Datenbanken | Microsoft-Dokumentation
 description: Dieser Artikel bietet Links zum Download von Modulen, die eine Verbindung mit Microsoft SQL Server und Azure SQL-Datenbank mit verschiedenen Clientprogrammiersprachen ermöglichen.
-author: RothJa
+author: David-Engel
 ms.prod: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.custom: ''
 ms.topic: article
-ms.date: 03/05/2020
-ms.author: JRoth
-ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/06/2020
+ms.author: v-daenge
+ms.openlocfilehash: a60c1314164ddc6b662914d828e4bf5973f38d2f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79434117"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219379"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Verbindungsmodule für Microsoft SQL-Datenbanken
 
-Dieser Artikel bietet Links zum Download von Verbindungsmodulen oder *Treibern*, die Ihre Clientprogramme für die Interaktion mit der Plattform [Microsoft SQL Server](../relational-databases/database-features.md) und ihrem Pendant in der Cloud, [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/), verwenden können. Treiber sind für verschiedene Programmiersprachen verfügbar und können unter folgenden Betriebssystemen ausgeführt werden:
+Dieser Artikel bietet Links zum Download von Verbindungsmodulen oder *Treibern*, die Ihre Clientprogramme für die Interaktion mit der Plattform [Microsoft SQL Server](../relational-databases/database-features.md) und ihrem Pendant in der Cloud, [Azure SQL-Datenbank](/azure/sql-database/), verwenden können. Treiber sind für verschiedene Programmiersprachen verfügbar und können unter folgenden Betriebssystemen ausgeführt werden:
 
 - Linux
 - macOS
@@ -44,7 +44,7 @@ Im vorliegenden Artikel sind diesen beiden Arten von Verbindungstreibern zwei se
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc, Installationsanweisungen](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Herunterladen des ODBC-Treibers](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Ruby-Treiber, Installationsanweisungen](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby-Downloadseite](https://rubyinstaller.org/downloads/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -60,7 +60,7 @@ In der folgenden Tabelle sind Beispiele für ORM-Frameworks aufgelistet, die Cli
 | Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-60-build-an-app-webpages" />
 
