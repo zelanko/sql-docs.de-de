@@ -63,6 +63,8 @@
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
     - name: Planen von Paketen in Azure mit SSMS
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+    - name: Migrieren zu Azure-Prozessen und -Tools
+      href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
 - name: Installieren von Integration Services
   href: ../integration-services/install-windows/install-integration-services.md
 - name: Paralleles Installieren von Integration Services-Versionen
@@ -477,7 +479,7 @@
         - name: OData-Quelle
           href: ../integration-services/data-flow/odata-source.md
           items:
-            - name: 'Lernprogramm: Verwenden der OData-Quelle'
+            - name: 'Tutorial: Verwenden der OData-Quelle'
               href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
             - name: Bereitstellen einer OData-Quellabfrage zur Laufzeit
               href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
@@ -821,7 +823,7 @@
           href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
         - name: <= (Kleiner als oder gleich) (SSIS-Ausdruck)
           href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
-        - name: '? : (Bedingt) (SSIS-Ausdruck)'
+        - name: '? decodiert werden: (Bedingt) (SSIS-Ausdruck)'
           href: ../integration-services/expressions/conditional-ssis-expression.md
     - name: Funktionen (SSIS-Ausdruck)
       href: ../integration-services/expressions/functions-ssis-expression.md
@@ -1724,7 +1726,7 @@
       href: ../integration-services/microsoft-connector-for-sap-bw-f1-help.md
     - name: Zertifizierung von SAP
       href: ../integration-services/certification-by-sap.md
-- name: Lernprogramme
+- name: Tutorials
   href: ../integration-services/integration-services-tutorials.md
   items:
     - name: Erstellen eines Pakets
