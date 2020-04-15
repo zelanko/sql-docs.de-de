@@ -1,5 +1,5 @@
 ---
-title: Datentyp Bezeichner und Deskriptoren | Microsoft-Dokumentation
+title: Datentyp-Bezeichner und Deskriptoren | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2019
 ms.prod: sql
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - data types [ODBC], descriptors
 - concise data types [ODBC]
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 748f2452d20b618ae0011e2e1ac4e24af098ac06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f65bc86213f99112daf17c67a4ca522490d32149
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019047"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284483"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Datentypbezeichner und Deskriptoren
-Die in den Abschnitten SQL- [Daten](../../../odbc/reference/appendixes/sql-data-types.md) Typen und [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) weiter oben in diesem Anhang aufgeführten Datentypen sind "präzise" Datentypen: jeder Bezeichner verweist auf einen einzelnen Datentyp. Zwischen dem Bezeichner und dem Datentyp besteht eine eins-zu-eins-Entsprechung. Deskriptoren verwenden jedoch nicht in allen Fällen einen einzelnen Wert, um Datentypen zu identifizieren. In einigen Fällen verwenden Sie den Datentyp "Verbose" und einen typsubcode. Für alle Datentypen mit Ausnahme von DateTime-und interval-Datentypen ist der ausführliche Typbezeichner identisch mit dem präzisen Typbezeichner, und der Wert in SQL_DESC_DATETIME_INTERVAL_CODE gleich 0 (null) ist. Für DateTime-und interval-Datentypen wird jedoch ein ausführlicher Typ (SQL_DATETIME oder SQL_INTERVAL) in SQL_DESC_TYPE gespeichert, ein präziser Typ wird in SQL_DESC_CONCISE_TYPE gespeichert, und ein Subcode für jeden präzisen Typ wird in SQL_DESC_DATETIME_INTERVAL_CODE gespeichert. Das Festlegen eines dieser Felder wirkt sich auf die anderen Felder aus. Weitere Informationen zu diesen Feldern finden Sie in der Beschreibung der [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) -Funktion.  
+Die Datentypen, die in den Abschnitten [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) und [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) weiter oben in diesem Anhang aufgeführt sind, sind "präzise" Datentypen: Jeder Bezeichner bezieht sich auf einen einzelnen Datentyp. Es besteht eine 1:1-Entsprechung zwischen dem Bezeichner und dem Datentyp. Deskriptoren verwenden jedoch nicht in allen Fällen einen einzigen Wert, um Datentypen zu identifizieren. In einigen Fällen verwenden sie einen "verbose" Datentyp und einen Typuntercode. Für alle Datentypen außer Datums- und Intervalldatentypen entspricht der ausführliche Typbezeichner dem prägnanten Typbezeichner, und der Wert in SQL_DESC_DATETIME_INTERVAL_CODE gleich 0 ist. Bei Datums- und Intervalldatentypen wird jedoch ein ausführlicher Typ (SQL_DATETIME oder SQL_INTERVAL) in SQL_DESC_TYPE gespeichert, ein prägnanter Typ wird in SQL_DESC_CONCISE_TYPE gespeichert, und ein Untercode für jeden prägnanten Typ wird in SQL_DESC_DATETIME_INTERVAL_CODE gespeichert. Das Festlegen eines dieser Felder wirkt sich auf die anderen Felder aus. Weitere Informationen zu diesen Feldern finden Sie in der [SQLSetDescField-Funktionsbeschreibung.](../../../odbc/reference/syntax/sqlsetdescfield-function.md)  
   
- Wenn das Feld SQL_DESC_TYPE oder SQL_DESC_CONCISE_TYPE für einige Datentypen festgelegt ist, werden die Felder SQL_DESC_DATETIME_INTERVAL_PRECISION, SQL_DESC_LENGTH, SQL_DESC_PRECISION und SQL_DESC_SCALE automatisch auf die Standardwerte festgelegt, die für die Daten gelten. Sorte. Weitere Informationen finden Sie in der Beschreibung des SQL_DESC_TYPE-Felds in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Wenn einer der Standardwerte festgelegt ist, sollte die Anwendung das Deskriptorfeld explizit durch einen **SQLSetDescField**-Befehl festlegen.  
+ Wenn das Feld SQL_DESC_TYPE oder SQL_DESC_CONCISE_TYPE für einige Datentypen festgelegt ist, werden die Felder SQL_DESC_DATETIME_INTERVAL_PRECISION, SQL_DESC_LENGTH, SQL_DESC_PRECISION und SQL_DESC_SCALE automatisch auf Standardwerte festgelegt, sofern dies für den Datentyp gilt. Weitere Informationen finden Sie in der Beschreibung des Felds SQL_DESC_TYPE in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Wenn einer der gesetzten Standardwerte nicht geeignet ist, sollte die Anwendung das Deskriptorfeld explizit über einen Aufruf von **SQLSetDescField**festlegen.  
   
- In der folgenden Tabelle werden die präzisere Typkennung, der ausführliche Typbezeichner und der typsubcode für jeden DateTime-und Interval-SQL-und C-Typbezeichner angezeigt. Wie diese Tabelle zeigt, haben die Felder SQL_DESC_TYPE und SQL_DESC_DATETIME_INTERVAL_CODE für DateTime-und interval-Datentypen die gleichen Manifest-Konstanten sowohl für SQL-Datentypen (in Implementierungs Deskriptoren) als auch für C-Datentypen (in der Anwendung Deskriptoren).  
+ Die folgende Tabelle zeigt den prägnanten Typbezeichner, den ausführlichen Typbezeichner und den Typuntercode für jeden SQL- und C-Typbezeichner für Datums- und Intervallzeit. Wie aus dieser Tabelle hervorgeht, weisen die Felder SQL_DESC_TYPE und SQL_DESC_DATETIME_INTERVAL_CODE für Datumszeit- und Intervalldatentypen dieselben Manifestkonstanten sowohl für SQL-Datentypen (in Implementierungsdeskriptoren) als auch für C-Datentypen (in Anwendungsdeskriptoren) auf.  
   
-|Präziser SQL-Typ|Präziser C-Typ|Verbose-Typ|DATETIME_INTERVAL_CODE|  
+|Prägnanter SQL-Typ|Prägnante C-Typ|Ausführlicher Typ|DATETIME_INTERVAL_CODE|  
 |----------------------|--------------------|------------------|------------------------------|  
 |SQL_TYPE_DATE|SQL_C_TYPE_DATE|SQL_DATETIME|SQL_CODE_DATE|  
 |SQL_TYPE_TIME|SQL_C_TYPE_TIME|SQL_DATETIME|SQL_CODE_TIME|  

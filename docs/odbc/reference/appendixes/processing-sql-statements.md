@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von SQL-Anweisungen | Microsoft-Dokumentation
+title: Verarbeiten von SQL-Anweisungen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,35 +12,35 @@ helpviewer_keywords:
 - SQL statements [ODBC], cursor library
 - cursor library [ODBC], statement processing
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9452ade90f6967dff6d72d5692efcf91b93154d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eda640f6e810eeccbfa17ea2b6ba7c1b19b28e08
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057242"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308001"
 ---
 # <a name="processing-sql-statements"></a>Verarbeiten von SQL-Anweisungen
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
   
- Die ODBC-Cursor Bibliothek übergibt alle SQL-Anweisungen direkt an den Treiber, mit Ausnahme der folgenden:  
+ Die ODBC-Cursorbibliothek übergibt alle SQL-Anweisungen direkt an den Treiber mit Ausnahme der folgenden:  
   
--   Positionierte UPDATE-und DELETE-Anweisungen  
+-   Positionierte Aktualisierungs- und Löschanweisungen  
   
--   **Select for Update** -Anweisungen  
+-   **SELECT FOR UPDATE-Anweisungen**  
   
--   SQL-Anweisungen im Batch Modus  
+-   Batched SQL-Anweisungen  
   
- Um positionierte UPDATE-und DELETE-Anweisungen auszuführen und den Cursor in einer Zeile zum Aufrufen von **SQLGetData** für diese Zeile zu positionieren, erstellt die Cursor Bibliothek eine gesuchte Anweisung, die die Zeile identifiziert.  
+ Um positionierte Aktualisierungs- und Löschanweisungen auszuführen und den Cursor in einer Zeile zu positionieren, um **SQLGetData** für diese Zeile aufzurufen, erstellt die Cursorbibliothek eine gesuchte Anweisung, die die Zeile identifiziert.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
--   [Verarbeiten von positionierten UPDATE- und DELETE-Anweisungen](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md)  
+-   [Processing Positioned Update and Delete Statements (Verarbeiten einer positionierten Aktualisierung und von DELETE-Anweisungen)](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md)  
   
--   [Verarbeiten von SELECT FOR UPDATE-Anweisungen](../../../odbc/reference/appendixes/processing-select-for-update-statements.md)  
+-   [Processing SELECT FOR UPDATE Statements (Verarbeiten der Anweisung SELECT FOR UPDATE)](../../../odbc/reference/appendixes/processing-select-for-update-statements.md)  
   
--   [Verarbeiten von Batches von SQL-Anweisungen](../../../odbc/reference/appendixes/processing-batches-of-sql-statements.md)  
+-   [Processing Batches of SQL Statements (Verarbeiten von Batches von SQL-Anweisungen)](../../../odbc/reference/appendixes/processing-batches-of-sql-statements.md)  
   
--   [Erstellen von searched-Anweisungen](../../../odbc/reference/appendixes/constructing-searched-statements.md)
+-   [Erstellen von komplexen Anweisungen](../../../odbc/reference/appendixes/constructing-searched-statements.md)
