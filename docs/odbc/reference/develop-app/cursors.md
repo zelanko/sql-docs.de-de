@@ -16,25 +16,25 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c9179506ac96c1902c40de271f6024ed7e5c54d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da899e4dc47daff03c31277b3edd4d9c642b87cb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002005"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305291"
 ---
 # <a name="cursors"></a>Cursor
-Eine Anwendung ruft Daten mit einem *Cursor*ab. Ein Cursor unterscheidet sich von einem Resultset: ein Resultset ist der Satz von Zeilen, der bestimmte Suchkriterien erfüllt, wohingegen es sich bei einem Cursor um die Software handelt, die diese Zeilen an die Anwendung zurückgibt. Der namens *Cursor,* wie er auf Datenbanken angewendet wird, stammt wahrscheinlich vom blinkende Cursor auf einem Computerterminal. Ebenso wie dieser Cursor die aktuelle Position auf dem Bildschirm anzeigt und wo die typisierten Wörter als nächstes angezeigt werden, gibt ein Cursor in einem Resultset die aktuelle Position im Resultset an und welche Zeile als nächstes zurückgegeben wird.  
+Eine Anwendung ruft Daten mit einem *Cursor*ab. Ein Cursor unterscheidet sich von einem Resultset: Ein Resultset ist der Satz von Zeilen, der bestimmten Suchkriterien entspricht, während ein Cursor die Software ist, die diese Zeilen an die Anwendung zurückgibt. Der *Namenscursor,* wie er für Datenbanken gilt, stammt wahrscheinlich vom blinkenden Cursor auf einem Computerterminal. Genauso wie dieser Cursor die aktuelle Position auf dem Bildschirm angibt und wo die eingegebenen Wörter als nächstes angezeigt werden, zeigt ein Cursor eines Resultsets die aktuelle Position im Resultset an und welche Zeile als nächstes zurückgegeben wird.  
   
- Das Cursor Modell in ODBC basiert auf dem Cursor Modell in eingebettetem SQL. Ein wichtiger Unterschied zwischen diesen Modellen ist die Art und Weise, wie Cursor geöffnet werden. In eingebettetem SQL muss ein Cursor explizit deklariert und geöffnet werden, bevor er verwendet werden kann. In ODBC wird ein Cursor implizit geöffnet, wenn eine Anweisung ausgeführt wird, die ein Resultset erstellt. Wenn der Cursor geöffnet wird, wird er vor der ersten Zeile des Resultsets positioniert. In eingebetteten SQL und ODBC muss ein Cursor geschlossen werden, nachdem er von der Anwendung verwendet wurde.  
+ Das Cursormodell in ODBC basiert auf dem Cursormodell in Embedded SQL. Ein bemerkenswerter Unterschied zwischen diesen Modellen ist die Art und Weise, wie Cursor geöffnet werden. In Embedded SQL muss ein Cursor explizit deklariert und geöffnet werden, bevor er verwendet werden kann. In ODBC wird ein Cursor implizit geöffnet, wenn eine Anweisung ausgeführt wird, die ein Resultset erstellt. Wenn der Cursor geöffnet wird, wird er vor der ersten Zeile des Resultsets positioniert. Sowohl in Embedded SQL als auch in ODBC muss ein Cursor geschlossen werden, nachdem die Anwendung ihn verwendet hat.  
   
- Verschiedene Cursor haben unterschiedliche Eigenschaften. Der häufigste Cursortyp, der als *Vorwärts Cursor* bezeichnet wird, kann nur durch das Resultset vorwärts verschoben werden. Um zu einer vorherigen Zeile zurückzukehren, muss die Anwendung den Cursor schließen und erneut öffnen und dann Zeilen vom Anfang des Resultsets lesen, bis die erforderliche Zeile erreicht ist. Vorwärts Cursor bieten einen schnellen Mechanismus zum Durchführen eines einzelnen Durchlaufs eines Resultsets.  
+ Verschiedene Cursor haben unterschiedliche Eigenschaften. Der häufigste Cursortyp, der als Vorwärtscursor bezeichnet *wird,* kann nur durch das Resultset vorwärts bewegt werden. Um zu einer vorherigen Zeile zurückzukehren, muss die Anwendung den Cursor schließen und erneut öffnen und dann Zeilen vom Anfang des Resultsets lesen, bis sie die erforderliche Zeile erreicht. Vorwärtscursor bieten einen schnellen Mechanismus, um einen einzelnen Durchgang durch ein Resultset zu machen.  
   
- Vorwärts Cursor sind weniger nützlich für bildschirmbasierte Anwendungen, in denen der Benutzer einen rückwärts-und vorwärts Bildlauf durch die Daten ausführt. Solche Anwendungen können einen Vorwärts Cursor verwenden, indem Sie das Resultset einmal lesen, die Daten lokal zwischenspeichern und einen Bildlauf durchführen. Dies funktioniert jedoch nur mit kleinen Datenmengen. Eine bessere Lösung ist die Verwendung eines *scrollbaren Cursors,* der zufälligen Zugriff auf das Resultset bereitstellt. Solche Anwendungen können auch die Leistung erhöhen, indem Sie mehr als eine Zeile mit Daten gleichzeitig abrufen, indem Sie als *Block Cursor* bezeichnet werden. Weitere Informationen zu Blockcursorn finden [Sie unter Verwenden von Blockcursorn](../../../odbc/reference/develop-app/using-block-cursors.md).  
+ Vorwärtscursor sind weniger nützlich für bildschirmbasierte Anwendungen, bei denen der Benutzer durch die Daten hin- und herscrollt. Solche Anwendungen können einen Vorwärtscursor verwenden, indem sie das Resultset einmal lesen, die Daten lokal zwischenspeichern und selbst einen Bildlauf durchführen. Dies funktioniert jedoch nur bei kleinen Datenmengen. Eine bessere Lösung besteht darin, einen *scrollbaren Cursor* zu verwenden, der zufälligen Zugriff auf das Resultset bietet. Solche Anwendungen können auch die Leistung erhöhen, indem sie mehr als eine Zeile daten gleichzeitig abrufen, indem sie einen so genannten *Blockcursor verwenden.* Weitere Informationen zu Blockcursorn finden Sie unter [Verwenden von Blockcursors](../../../odbc/reference/develop-app/using-block-cursors.md).  
   
- Der Vorwärts Cursor ist der Standard Cursortyp in ODBC und wird in den folgenden Abschnitten erläutert. Weitere Informationen zu Blockcursorn und scrollfähigen Cursorn finden Sie unter [Blockieren von Cursorn](../../../odbc/reference/develop-app/block-cursors.md) und [scrollbaren Cursorn](../../../odbc/reference/develop-app/scrollable-cursors.md)  
+ Der Forward-Only-Cursor ist der Standardcursortyp in ODBC und wird in den folgenden Abschnitten erläutert. Weitere Informationen zu Blockcursorn und scrollbaren Cursorn finden Sie unter [Blockcursor und](../../../odbc/reference/develop-app/block-cursors.md) [Scrollable Cursors](../../../odbc/reference/develop-app/scrollable-cursors.md).  
   
 > [!IMPORTANT]  
->  Das Ausführen eines Commits oder Rollbacks einer Transaktion durch explizites Aufrufen von **SQLEndTran** oder durch Betrieb im Autocommit-Modus bewirkt, dass einige Datenquellen alle Cursor in allen Anweisungen für eine Verbindung schließen. Weitere Informationen finden Sie in den SQL_CURSOR_COMMIT_BEHAVIOR-und SQL_CURSOR_ROLLBACK_BEHAVIOR-Attributen in der Beschreibung der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) -Funktion.
+>  Das Commit oder Rollback einer Transaktion, entweder durch explizites Aufrufen von **SQLEndTran** oder durch Ausführen von AutoCommit-Modus, bewirkt, dass einige Datenquellen alle Cursor für alle Anweisungen für eine Verbindung schließen. Weitere Informationen finden Sie in den SQL_CURSOR_COMMIT_BEHAVIOR- und SQL_CURSOR_ROLLBACK_BEHAVIOR-Attributen in der [SQLGetInfo-Funktionsbeschreibung.](../../../odbc/reference/syntax/sqlgetinfo-function.md)
