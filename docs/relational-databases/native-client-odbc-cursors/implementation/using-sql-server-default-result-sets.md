@@ -1,5 +1,5 @@
 ---
-title: Verwenden SQL Server Standard Resultsets | Microsoft-Dokumentation
+title: Verwenden von SQL Server-Standardergebnissätzen | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - result sets [ODBC], default
 - ODBC applications, cursors
 ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfd3ef8ec56f458bb57b1898a1bf7212534b7af1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 08926660face8061abdf8352d0c4a84ad7e67f8a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784487"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305385"
 ---
 # <a name="using-sql-server-default-result-sets"></a>Verwenden von SQL Server-Standardresultsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,11 +36,11 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_CONCURRENCY, SQL_CONCUR_READ_ONLY, SQL_IS_INTEGER
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_ARRAY_SIZE, 1, SQL_IS_INTEGER);  
 ```  
   
- Wenn diese Attribute auf ihre Standardwerte festgelegt sind [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , verwendet der Native Client-ODBC-Treiber ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standardresultset. Standardresultsets können für beliebige, von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützte SQL-Anweisungen verwendet werden und stellen die effizienteste Methode für die Übertragung des gesamten Resultsets an den Client dar.  
+ Wenn diese Attribute auf ihre Standardwerte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] festgelegt werden, verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Native Client ODBC-Treiber ein Standardresultat. Standardresultsets können für beliebige, von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützte SQL-Anweisungen verwendet werden und stellen die effizienteste Methode für die Übertragung des gesamten Resultsets an den Client dar.  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Einführung in die Unterstützung von Mars (Multiple Active Result Sets); Anwendungen können nun über mehr als ein aktives Standard Resultset pro Verbindung verfügen. MARS ist standardmäßig nicht aktiviert.  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Einführung der Unterstützung für mehrere aktive Resultsets (MARS); Anwendungen können jetzt mehr als ein aktives Standardergebnissatz pro Verbindung haben. MARS ist standardmäßig nicht aktiviert.  
   
- Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] unterstützten Standardresultsets nicht mehrere aktive Anweisungen über die gleiche Verbindung. Nach der Ausführung einer SQL-Anweisung über eine Verbindung akzeptiert der Server keine Befehle vom Client für diese Verbindung (außer der Anforderung zum Abbrechen des restlichen Resultsets), bis alle Zeilen im Resultset verarbeitet wurden. Um den Rest eines teilweise verarbeiteten Resultsets abzubrechen, rufen Sie [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) oder [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md) auf, wobei der *fOption* -Parameter auf SQL_CLOSE festgelegt ist. Um ein teilweise verarbeitetes Resultset abzuschließen und auf das vorhanden sein eines anderen Resultsets zu testen, müssen Sie [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)aufzurufen. Wenn eine ODBC-Anwendung versucht, einen Befehl für ein Verbindungs Handle durchzuführen, bevor ein Standardresultset vollständig verarbeitet wurde, generiert der-Befehl SQL_ERROR, und ein **SQLGetDiagRec** -Befehl gibt Folgendes zurück:  
+ Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] unterstützten Standardresultsets nicht mehrere aktive Anweisungen über die gleiche Verbindung. Nach der Ausführung einer SQL-Anweisung über eine Verbindung akzeptiert der Server keine Befehle vom Client für diese Verbindung (außer der Anforderung zum Abbrechen des restlichen Resultsets), bis alle Zeilen im Resultset verarbeitet wurden. Um den Rest eines teilweise verarbeiteten Resultsets abzubrechen, rufen Sie [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) oder [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md) auf, wobei der Parameter *fOption* auf SQL_CLOSE festgelegt ist. Um ein teilweise verarbeitetes Resultset zu beenden und auf das Vorhandensein eines anderen Resultsets zu testen, rufen Sie [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)auf. Wenn eine ODBC-Anwendung versucht, einen Befehl für ein Verbindungshandle zu verwenden, bevor ein Standardergebnissatz vollständig verarbeitet wurde, generiert der Aufruf SQL_ERROR und ein Aufruf von **SQLGetDiagRec** gibt zurück:  
   
 ```  
 szSqlState: "HY000", pfNativeError: 0  

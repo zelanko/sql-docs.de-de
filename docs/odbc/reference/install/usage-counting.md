@@ -1,5 +1,5 @@
 ---
-title: Verwendungs Zählung | Microsoft-Dokumentation
+title: Nutzungszählung | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,34 +13,34 @@ helpviewer_keywords:
 - installing ODBC components [ODBC], usage counts
 - subkeys [ODBC], usage counts
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: edf9976dd3e5d890b46919808e896a8e81a0cd93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d516a591bfde47522c0ccfe08bd2bd706218e07
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093794"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296020"
 ---
 # <a name="usage-counting"></a>Zählen der Verwendung
 > [!NOTE]  
->  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur in früheren Versionen von Windows explizit installieren.  
+>  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur explizit auf früheren Windows-Versionen installieren.  
   
- Zwei Arten von Verwendungs Anzahlen werden in der Registrierung für jede Komponente verwaltet: eine Anzahl von Komponenten Verwendungs Daten und eine oder mehrere optionale Datei Verwendungs Zähler. Die Anzahl der Komponenten Verwendungs Hilfen ermöglicht der Installer-dll, Registrierungseinträge zu verwalten. Sie wird im Wert usagecount unter den unter Schlüsseln ODBC Core, Driver und Translator gespeichert. Das Format des usagecount-Werts und weitere Informationen zu diesen unter Schlüsseln finden Sie unter [Registrierungseinträge für ODBC-Komponenten](../../../odbc/reference/install/registry-entries-for-odbc-components.md).  
+ In der Registrierung werden für jede Komponente zwei Arten von Verwendungszahlen beibehalten: eine Anzahl der Komponentenverwendung und eine oder mehrere optionale Anzahl von Dateiverwendungen. Die Anzahl der Komponentenverwendungen hilft der Installations-DLL, Registrierungseinträge zu verwalten. Sie wird im UsageCount-Wert unter den Unterschlüsseln ODBC Core, Treiber und Übersetzer gespeichert. Informationen zum Format des UsageCount-Werts und weitere Informationen zu diesen Unterschlüsseln finden Sie unter [Registrierungseinträge für ODBC-Komponenten](../../../odbc/reference/install/registry-entries-for-odbc-components.md).  
   
- Wenn eine Komponente erstmalig installiert wird, erstellt die Installationsprogramm-dll einen Unterschlüssel dafür und legt die Daten für den Wert usagecount in diesem Unterschlüssel auf 1 fest. Wenn die Komponente erneut installiert wird, erhöht die Installer-dll die Verwendungs Anzahl. Wenn die Komponente entfernt wird, verringert die Installer-dll die Verwendungs Anzahl. Wenn die Verwendungs Anzahl auf 0 (null) fällt, entfernt die Installationsprogramm-dll den Unterschlüssel für die Komponente.  
+ Wenn eine Komponente zum ersten Mal installiert wird, erstellt die Installations-DLL einen Unterschlüssel dafür und legt die Daten für den UsageCount-Wert in diesem Unterschlüssel auf 1 fest. Wenn die Komponente erneut installiert wird, erhöht die Installations-DLL die Nutzungsanzahl. Wenn die Komponente entfernt wird, dekrementiert die Installations-DLL die Verwendungsanzahl. Wenn die Verwendungsanzahl auf 0 sinkt, entfernt die Installations-DLL den Unterschlüssel für die Komponente.  
   
 > [!CAUTION]  
->  Treiber-Manager-Dateien sollten von einer Anwendung nicht physisch entfernt werden, wenn die Anzahl der Komponenten und die Anzahl der Datei Nutzung Null erreicht.  
+>  Eine Anwendung sollte Driver Manager-Dateien nicht physisch entfernen, wenn die Anzahl der Komponentenverwendung und die Anzahl der Dateiverwendungen Null erreichen.  
   
- Datei Verwendungs Zähler helfen, zu bestimmen, wann eine Datei tatsächlich kopiert oder gelöscht werden muss, anstatt die Verwendungs Anzahl zu erhöhen oder zu dekrementieren. Dies ist wichtig, da ODBC-Komponenten und somit die Dateien in ODBC-Komponenten gemeinsam genutzt werden und von verschiedenen Anwendungen installiert oder entfernt werden können. Die Anwendung kann Treiber-und Konvertierungs Dateien löschen, wenn die Anzahl der Komponenten Verwendung und die Anzahl der Datei Nutzung Null erreichen. Treiber-Manager-Dateien sollten jedoch nicht gelöscht werden, wenn die Anzahl der Komponenten Verwendung und die Anzahl der Datei Verwendung Null erreicht haben, da diese Dateien von anderen Anwendungen verwendet werden können, die die Anzahl der Datei Auslastung nicht erhöht haben.  
+ Anhand der Dateiverwendung wird ermittelt, wann eine Datei tatsächlich kopiert oder gelöscht werden muss, anstatt die Verwendungsanzahl zu erhöhen oder zu dekrementieren. Dies ist wichtig, da ODBC-Komponenten und damit die Dateien in ODBC-Komponenten gemeinsam genutzt werden und von einer Vielzahl von Anwendungen installiert oder entfernt werden können. Die Anwendung kann Treiber- und Übersetzerdateien löschen, wenn die Anzahl der Komponentenverwendung und die Dateinutzungsanzahl Null erreichen. Treiber-Manager-Dateien sollten jedoch nicht gelöscht werden, wenn sowohl die Anzahl der Komponentenverwendung als auch die Dateinutzungsanzahl Null erreicht haben, da diese Dateien von anderen Anwendungen verwendet werden können, die die Dateinutzungsanzahl nicht erhöht haben.  
   
 > [!NOTE]  
->  Die Anzahl von Datei Verwendungs Anzahlen ist in Microsoft® Windows NT®/Windows2000. optional.  
+>  Die Anzahl der Dateiverwendungen ist in Microsoft® WindowsNT®/Windows2000 optional.  
   
- Die Anzahl von Datei Verwendungs Anzahlen wird durch das Setup Programm verwaltet, nachdem **sqlinstalldrivermanager**, **sqlinstalldriverex**, **sqlinstalltranslatorex**, **sqlremovedrivermanager**, **sqlremovedriver**oder **sqlremovetranslator**aufgerufen wurde.  
+ Die Anzahl der Dateiverwendungen wird vom Setupprogramm verwaltet, nachdem **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLInstallTranslatorEx**, **SQLRemoveDriverManager**, **SQLRemoveDriverManager , SQLRemoveDriver**oder **SQLRemoveTranslator**aufgerufen wurden.  
   
- Wenn eine Komponente erstmalig installiert wird, erstellt das Setup Programm oder die Installationsprogramm-dll für jede Datei in der Komponente, die sich nicht bereits im System befindet, einen Wert unter dem folgenden Schlüssel:  
+ Wenn eine Komponente zum ersten Mal installiert wird, erstellt das Installationsprogramm oder die Installations-DLL einen Wert unter dem folgenden Schlüssel für jede Datei in dieser Komponente, die sich noch nicht auf dem System befindet:  
   
 > [!NOTE]  
 >  HKEY_LOCAL_MACHINE  
@@ -53,17 +53,17 @@ ms.locfileid: "68093794"
 >   
 >  CurrentVersion  
 >   
->  SharedDLLs  
+>  SharedDlls  
   
- Die Daten für diese Werte werden auf 1 festgelegt, und die Datei wird in das System kopiert. Wenn die Komponente erneut installiert wird, erhöht das Setup Programm oder die Installationsprogramm-dll die Verwendungs Zähler. Wenn die Komponente entfernt wird, verringert das Setup Programm oder die Installationsprogramm-dll die Verwendungs Zähler. Wenn eine Verwendungs Anzahl auf 0 (null) fällt, wird der Wert für die Datei vom Setup Programm oder von der Installationsprogramm-dll entfernt Treiber-Manager-Dateien sollten nicht gelöscht werden.  
+ Die Daten für diese Werte werden auf 1 festgelegt und die Datei in das System kopiert. Wenn die Komponente erneut installiert wird, erhöht das Installationsprogramm oder die Installations-DLL die Verwendungszahlen. Wenn die Komponente entfernt wird, dekrementiert das Installationsprogramm oder die Installations-DLL die Verwendungsanzahl. Wenn die Verwendungsanzahl auf 0 fällt, entfernt das Installationsprogramm oder die Installations-DLL den Wert für die Datei und löscht die Datei, wenn es sich bei der Komponente um einen Treiber oder Übersetzer handelt. Treiber-Manager-Dateien sollten nicht gelöscht werden.  
   
- Das Format des Werts der Datei Verwendungs Anzahl ist in der folgenden Tabelle dargestellt.  
+ Das Format des Werts für die Anzahl der Dateiverwendungen wird in der folgenden Tabelle angezeigt.  
   
-|Name|Datentyp|Data|  
+|Name|Datentyp|Daten|  
 |----------|---------------|----------|  
-|*vollständiger Pfad*|REG_DWORD|*count*|  
+|*Full-Path*|REG_DWORD|*count*|  
   
- Nehmen wir beispielsweise an, dass ein Treiber für Informix die Dateien Infrmx32. dll und Infrmx32. hlp verwendet und dass dieser Treiber zweimal installiert wurde. Die Werte unter dem Unterschlüssel SharedDLLs für den Informix-Treiber lauten wie folgt:  
+ Angenommen, ein Treiber für Informix verwendet die Dateien Infrmx32.dll und Infrmx32.hlp, und nehmen Sie an, dass dieser Treiber zweimal installiert wurde. Die Werte unter dem Unterschlüssel SharedDlls für den Informix-Treiber lauten wie folgt:  
   
 ```  
 C:\WINDOWS\SYSTEM32\INFRMX32.DLL : REG_DWORD : 0x2  

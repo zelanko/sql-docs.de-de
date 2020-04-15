@@ -1,5 +1,5 @@
 ---
-title: SQL-Konformitäts Ebenen (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
+title: SQL-Konformitätsstufen (ODBC-Treiber für Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - SQL conformance levels [ODBC]
 - ODBC driver for Oracle [ODBC], conformance levels
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 241f4f3da12f63c15d917a0e47cb13ad0e96e6e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e283bbc13f0d0dda055b047b027f7b9816502df5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063349"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300680"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL-Konformitätsgrad (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Der ODBC-Treiber für Oracle unterstützt die minimale SQL-Grammatik und Core SQL-Grammatik und unterstützt außerdem die folgenden ODBC-Erweiterungen für SQL:  
+ Der ODBC-Treiber für Oracle unterstützt die Minimale SQL-Grammatik und Core SQL-Grammatik und unterstützt auch die folgenden ODBC-Erweiterungen für SQL:  
   
--   Datums-, Uhrzeit-und Zeitstempel Daten  
+-   Datums-, Uhrzeit- und Zeitstempeldaten  
   
--   Linke und Rechte äußere Joins  
+-   Linke und rechte äußere Verknüpfungen  
   
 -   Numerische Funktionen:  
   
@@ -39,35 +39,35 @@ ms.locfileid: "68063349"
     |Ceiling|Log10|second|truncate|  
     |Cos|Mod|Signieren||  
     |Exp|Pi|sin||  
-    |Etage|Potenz|sqrt||  
+    |Etage|Power|sqrt||  
   
 -   Datumsfunktionen:  
   
     |||||  
     |-|-|-|-|  
-    |CURDATE|DayOfWeek|MonthName|second|  
-    |Cursor Zeit|Dayofyear|minute|week|  
-    |Tagname|Hour|now|year|  
-    |DayOfMonth|Month (Monat)|quarter||  
+    |Curdate|Dayofweek|Monthname|second|  
+    |Curtime|Dayofyear|minute|week|  
+    |Tagesname|Hour|now|year|  
+    |Tagdesmonat|Monat|quarter||  
   
 -   Zeichenfolgenfunktionen:  
   
     |||||  
     |-|-|-|-|  
-    |Ascii|Left|Richting|UCase|  
-    |Char|Länge|RTRIM||  
-    |Concat|Ltrim|SOUNDEX||  
+    |Ascii|Left|Rechts|Ucase|  
+    |Char|Länge|Rtrim||  
+    |Concat|Ltrim|Soundex||  
     |Lcase|Replace|substring||  
   
--   Typkonvertierungs Funktion:  
+-   Typ-Konvertierungsfunktion:  
   
     ||  
     |-|  
     |Convert|  
   
--   System Funktionen:  
+-   Systemfunktionen:  
   
     ||  
     |-|  
-    |IFNULL|  
+    |Ifnull|  
     |Benutzer|

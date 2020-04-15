@@ -1,5 +1,5 @@
 ---
-title: Konvertierungen von SQL in C | Microsoft-Dokumentation
+title: Konvertierungen von SQL in C | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9795126f2cd7c39ebd23ed34fde73664388b235f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 83e4a72ba995d4fff796cdf8ec081a9ef9828936
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783845"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301753"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime-Datentypkonvertierungen von SQL in C
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,12 +30,12 @@ ms.locfileid: "73783845"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
-|SQL_WCHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
-|SQL_TYPE_DATE|OK|12|13|12|13, 23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|OK|10, 23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7, 8|OK|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18, 22|7, 8, 20|20|7, 20|OK|21|16|16|  
+|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
+|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
+|SQL_TYPE_DATE|OK|12|13|12|13,23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|OK|10,23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7,8|OK|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|OK|21|16|16|  
   
 ## <a name="key-to-symbols"></a>Aufschlüsselung der Symbole  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73783845"
 |OK|Keine Konvertierungsprobleme|  
 |1|Es gelten die Regeln vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |2|Führende und nachfolgende Leerzeichen werden ignoriert.|  
-|3|Die Zeichenfolge wird in Datum, Uhrzeit, Zeitzone oder Zeitunterschied der Zeitzone zerlegt und kann bis zu 9 Stellen für Sekundenbruchteile enthalten. Wenn die Angabe des Zeitunterschieds einer Zeitzone analysiert wird, wird die Zeitangabe in die Clientzeitzone konvertiert. Wenn während der Konvertierung ein Fehler auftritt, wird ein Diagnosedaten Satz mit SQLSTATE 22018 und der Meldung "Überlauf des DateTime-Felds" generiert.|  
+|3|Die Zeichenfolge wird in Datum, Uhrzeit, Zeitzone oder Zeitunterschied der Zeitzone zerlegt und kann bis zu 9 Stellen für Sekundenbruchteile enthalten. Wenn die Angabe des Zeitunterschieds einer Zeitzone analysiert wird, wird die Zeitangabe in die Clientzeitzone konvertiert. Wenn während dieser Konvertierung ein Fehler auftritt, wird ein Diagnosedatensatz mit SQLSTATE 22018 und der Meldung "Datetime-Feldüberlauf" generiert.|  
 |4|Wenn der Wert kein gültiger DATE-, timestamp- oder timestampoffset-Wert ist, wird ein Diagnosedatensatz mit SQLSTATE 22018 und der Meldung "Ungültiger Zeichenwert für Konvertierungsangabe" generiert.|  
 |5|Wenn die Zeitangabe ungleich Null ist, dann wird ein Diagnosedatensatz mit SQLSTATE 01S07 und der Meldung "Teilbereiche wurden abgeschnitten" generiert.|  
 |6|Wenn der Wert kein gültiger Time-, timestamp- oder timestampoffset-Wert ist, wird ein Diagnosedatensatz mit SQLSTATE 22018 und der Meldung "Ungültiger Zeichenwert für Konvertierungsangabe" generiert.|  
@@ -65,9 +65,9 @@ ms.locfileid: "73783845"
 |21|Wenn der Puffer groß genug ist, um einen SQL_SS_TIMESTAMPOFFSET_STRUCT-Wert aufzunehmen, wird der Wert als SQL_SS_TIMESTAMPOFFSET_STRUCT zurückgegeben. Andernfalls wird ein Diagnosedatensatz mit SQLSTATE 22003 und der Meldung "Numerischer Wert außerhalb des Gültigkeitsbereichs" generiert.|  
 |22|Der Wert wird in die Clientzeitzone konvertiert, bevor das Datum extrahiert wird. Dadurch wird für die Konsistenz mit anderen Konvertierungen mit timestampoffset-Typen gesorgt. Tritt während dieser Konvertierung ein Fehler auf, wird ein Diagnosedatensatz mit SQLSTATE 22008 und der Meldung "Überlauf im Datetime-Feld" generiert. Dies könnte in einem Datum resultieren, das sich von dem Wert unterscheidet, der sich durch einfaches Abschneiden ergibt.|  
   
- Die Tabelle in diesem Thema beschreibt die Konvertierung der Typen, die an den Client zurückgegeben werden, aus den in der Bindung verwendeten Typen. Wenn der in SQLBindParameter angegebene Servertyp für Ausgabeparameter nicht mit dem tatsächlichen Typ auf dem Server identisch ist, wird vom Server eine implizite Konvertierung durchgeführt, und der an den Client zurückgegebene Typ entspricht dem Typ, der durch SQLBindParameter angegeben wird. Dies kann zu unerwarteten Konvertierungs Ergebnissen führen, wenn sich die Konvertierungsregeln des Servers von denen unterscheiden, die in der obigen Tabelle aufgeführt sind. Wenn beispielsweise ein Standarddatum bereitgestellt werden muss, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1900-1-1 statt des aktuellen Datums.  
+ Die Tabelle in diesem Thema beschreibt die Konvertierung der Typen, die an den Client zurückgegeben werden, aus den in der Bindung verwendeten Typen. Wenn bei Ausgabeparametern der in SQLBindParameter angegebene Servertyp nicht mit dem tatsächlichen Typ auf dem Server übereinstimmt, wird eine implizite Konvertierung vom Server durchgeführt, und der an den Client zurückgegebene Typ stimmt mit dem in SQLBindParameter angegebenen Typ überein. Dies kann zu unerwarteten Konvertierungsergebnissen führen, wenn sich die Konvertierungsregeln des Servers von den in der obigen Tabelle aufgeführten unterscheiden. Wenn beispielsweise ein Standarddatum bereitgestellt werden muss, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1900-1-1 statt des aktuellen Datums.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datums-und Uhrzeit Verbesserungen &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Datums- und Uhrzeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Unterstütztes Cursor Modell (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
+title: Unterstütztes Cursormodell (Visual FoxPro ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - rowset cursors [ODBC]
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e623c0ce5135a4b2e558be9c405ec2757e605ceb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cf3400f24e20a8fa864404612bf07ea44efce49e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080716"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301126"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Unterstütztes Cursormodell (Visual FoxPro-ODBC-Treiber)
-Der Visual FoxPro-ODBC-Treiber unterstützt sowohl *Block* (*Rowset*) als auch *statische* Cursor. Statische Cursor werden für jeden Treiber unterstützt, der der ODBC-Konformität der Ebene 1 entspricht. Der Treiber unterstützt keine dynamischen, keysetgesteuerten oder gemischten (Keyset-und Dynamic-Cursor).  
+Der Visual FoxPro ODBC-Treiber unterstützt sowohl *Block-* *als*auch *statische* Cursor. Statische Cursor werden für alle Treiber unterstützt, die der ODBC-Konformität der Stufe 1 entsprechen. Der Treiber unterstützt keine dynamischen, Keyset-gesteuerten oder gemischten (Keyset- und dynamischen) Cursor.  
   
- Die Anwendung kann [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) mit einer SQL_CURSOR_TYPE Option SQL_CURSOR_FORWARD_ONLY (Block Cursor) oder SQL_CURSOR_STATIC (statischer Cursor) aufrufen.  
+ Ihre Anwendung kann [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) mit einer SQL_CURSOR_TYPE Option SQL_CURSOR_FORWARD_ONLY (Blockcursor) oder SQL_CURSOR_STATIC (statischer Cursor) aufrufen.  
   
 > [!NOTE]  
->  Wenn Sie **SQLSetStmtOption** mit einer anderen SQL_CURSOR_TYPE Option als SQL_CURSOR_FORWARD_ONLY oder SQL_CURSOR_STATIC aufrufen, gibt die Funktion SQL_SUCCESS_WITH_INFO mit dem SQLSTATE-Wert 01s02 (Optionswert geändert) zurück. Der Treiber legt alle nicht unterstützten Cursor Modi auf SQL_CURSOR_STATIC fest.  
+>  Wenn Sie **SQLSetStmtOption** mit einer anderen SQL_CURSOR_TYPE Option als SQL_CURSOR_FORWARD_ONLY oder SQL_CURSOR_STATIC aufrufen, gibt die Funktion SQL_SUCCESS_WITH_INFO mit einem SQLSTATE von 01S02 zurück (Optionswert geändert). Der Treiber legt alle nicht unterstützten Cursormodi auf SQL_CURSOR_STATIC.  
   
- Weitere Informationen zu Cursor Typen und zu **SQLSetStmtOption**finden Sie in der [ODBC Programmer es Reference](../../odbc/reference/odbc-programmer-s-reference.md).  
+ Weitere Informationen zu Cursortypen und **zu SQLSetStmtOption**finden Sie in der [ODBC-Programmiererreferenz](../../odbc/reference/odbc-programmer-s-reference.md).  
   
 ## <a name="block-cursor"></a>Blockcursor  
- Ein Schreib geschütztes Resultset mit vorwärts scrollen, das an den Client zurückgegeben wird und für die Verwaltung des Speichers für die Daten verantwortlich ist.  
+ Ein vorwärts scrollendes, schreibgeschütztes Resultset wurde an den Client zurückgegeben, der für die Verwaltung des Speichers für die Daten verantwortlich ist.  
   
 ## <a name="static-cursor"></a>Statischer Cursor  
- Eine Momentaufnahme eines Datasets, das von der Abfrage definiert wird. Statische Cursor entsprechen nicht den Echt Zeit Änderungen der zugrunde liegenden Daten durch andere Benutzer. Der Arbeitsspeicher Puffer des Cursors wird von der ODBC-Cursor Bibliothek verwaltet, die vorwärts-und Rückwärtsscrollen ermöglicht.  
+ Eine Momentaufnahme eines Datensatzes, der von der Abfrage definiert wird. Statische Cursor spiegeln keine Echtzeitänderungen der zugrunde liegenden Daten durch andere Benutzer wider. Der Speicherpuffer des Cursors wird von der ODBC-Cursorbibliothek verwaltet, die ein Vorwärts- und Rückwärts-Scrollen ermöglicht.  
   
 ## <a name="rowset"></a>Rowset  
- Blöcke der in einem Cursor gespeicherten Daten, die aus einer Datenquelle abgerufene Zeilen darstellen.
+ In einem Cursor gespeicherte Datenblöcke, die Zeilen darstellen, die aus einer Datenquelle abgerufen wurden.

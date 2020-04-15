@@ -1,5 +1,5 @@
 ---
-title: Sqlcompleteasync-Funktion | Microsoft-Dokumentation
+title: SQLCompleteAsync-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,29 +12,29 @@ f1_keywords:
 helpviewer_keywords:
 - SQLCompleteAsync function [ODBC]
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5e50e8128bb80b290e7610d9cc846dd3e148e398
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4e09d61ef516e846798dd3af2d07dafa78af4605
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118627"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299655"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync-Funktion
-**Konformitäts**  
- Eingeführte Version: ODBC 3,8  
+**Konformität**  
+ Eingeführte Version: ODBC 3.8  
   
- Einhaltung von Standards: keine  
+ Einhaltung der Standards: Keine  
   
  **Zusammenfassung**  
- **Sqlcompleteasync** kann verwendet werden, um zu bestimmen, wann eine asynchrone Funktion mithilfe der Benachrichtigungs-oder Abruf basierten Verarbeitung abgeschlossen wurde. Weitere Informationen zu asynchronen Vorgängen finden Sie unter [asynchrone Ausführung](../../../odbc/reference/develop-app/asynchronous-execution.md).  
+ **SQLCompleteAsync** kann verwendet werden, um zu bestimmen, wann eine asynchrone Funktion mithilfe einer Benachrichtigungs- oder Polling-basierten Verarbeitung abgeschlossen ist. Weitere Informationen zu asynchronen Vorgängen finden Sie unter [Asynchrone Ausführung](../../../odbc/reference/develop-app/asynchronous-execution.md).  
   
- **Sqlcompleteasync** ist nur im ODBC-Treiber-Manager implementiert.  
+ **SQLCompleteAsync** wird nur im ODBC Driver Manager implementiert.  
   
- Im Benachrichtigungs basierten asynchronen Verarbeitungsmodus muss **sqlcompleteasync** aufgerufen werden, nachdem der Treiber-Manager das Ereignis Objekt ausgelöst hat, das für die Benachrichtigung verwendet wird. **Sqlcompleteasync** schließt die asynchrone Verarbeitung ab, und die asynchrone Funktion generiert einen Rückgabecode.  
+ Im benachrichtigungsbasierten asynchronen Verarbeitungsmodus muss **SQLCompleteAsync** aufgerufen werden, nachdem der Treiber-Manager das für die Benachrichtigung verwendete Ereignisobjekt auslöst. **SQLCompleteAsync** schließt die asynchrone Verarbeitung ab, und die asynchrone Funktion generiert einen Rückgabecode.  
   
- Im Abruf basierten asynchronen Verarbeitungsmodus stellt **sqlcompleteasync** eine Alternative zum Aufrufen der ursprünglichen asynchronen Funktion dar, ohne dass die Argumente im ursprünglichen asynchronen Funktionsaufruf angegeben werden müssen. **Sqlcompleteasync** kann unabhängig davon verwendet werden, ob die ODBC-Cursor Bibliothek aktiviert ist.  
+ Im abfragebasierten asynchronen Verarbeitungsmodus ist **SQLCompleteAsync** eine Alternative zum Aufrufen der ursprünglichen asynchronen Funktion, ohne die Argumente im ursprünglichen asynchronen Funktionsaufruf angeben zu müssen. **SQLCompleteAsync** kann unabhängig davon verwendet werden, ob die ODBC-Cursorbibliothek aktiviert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,32 +48,32 @@ SQLRETURN SQLCompleteAsync(
   
 ## <a name="arguments"></a>Argumente  
  *HandleType*  
- Der Der Typ des Handles, für das die asynchrone Verarbeitung beendet werden soll. Gültige Werte sind SQL_HANDLE_DBC oder SQL_HANDLE_STMT.  
+ [Eingabe] Der Typ des Handles, für das die asynchrone Verarbeitung abgeschlossen werden soll. Gültige Werte werden SQL_HANDLE_DBC oder SQL_HANDLE_STMT.  
   
- *Bewältigen*  
- Der Das Handle, für das die asynchrone Verarbeitung beendet werden soll. Wenn *handle* kein gültiges Handle des Typs ist, der durch den- *Handlertyp*angegeben wird, gibt **sqlcompleteasync** SQL_INVALID_HANDLE zurück.  
+ *Handle*  
+ [Eingabe] Das Handle, für das die asynchrone Verarbeitung abgeschlossen werden soll. Wenn *Handle* kein gültiges Handle des von *HandleType*angegebenen Typs ist, gibt **SQLCompleteAsync** SQL_INVALID_HANDLE zurück.  
   
- Wenn *handle* kein gültiges Handle des Typs ist, der durch den- *Handlertyp*angegeben wird, gibt **sqlcompleteasync** SQL_INVALID_HANDLE zurück.  
+ Wenn *Handle* kein gültiges Handle des von *HandleType*angegebenen Typs ist, gibt **SQLCompleteAsync** SQL_INVALID_HANDLE zurück.  
   
- *Asynkretcodeptr*  
- Ausgeben Zeiger auf einen Puffer, der den Rückgabecode der asynchronen API enthält. Wenn *asynkretcodeptr* NULL ist, gibt **sqlcompleteasync** SQL_ERROR zurück.  
+ *AsyncRetCodePtr*  
+ [Ausgabe] Zeiger auf einen Puffer, der den Rückgabecode der asynchronen API enthält. Wenn *AsyncRetCodePtr* NULL ist, gibt **SQLCompleteAsync** SQL_ERROR zurück.  
   
 ## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_ERROR, SQL_NO_DATA oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlcompleteasync** SQL_SUCCESS zurückgibt, sollte eine Anwendung den Rückgabecode der asynchronen Funktion aus dem Puffer erhalten, auf den von *asynkretcodeptr*verwiesen wird. Der zugeordnete SQLSTATE kann, sofern vorhanden, durch den Aufruf von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_STMT und einem Anweisungs Handle oder einem *Handlertyp* von SQL_HANDLE_DBC und einem Verbindungs Handle abgerufen werden. Diese Diagnosedaten Sätze sind der asynchronen Funktion und nicht dieser **sqlcompleteasync** -Funktion zugeordnet.  
+ Wenn **SQLCompleteAsync** SQL_SUCCESS zurückgibt, sollte eine Anwendung den Rückgabecode der asynchronen Funktion aus dem Puffer abrufen, auf den *AsyncRetCodePtr*zeigt. Die zugeordnete SQLSTATE kann ggf. abgerufen werden, indem **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT und einem Anweisungshandle oder einem *HandleType* von SQL_HANDLE_DBC und einem Verbindungshandle aufgerufen wird. Diese Diagnosedatensätze sind der asynchronen Funktion zugeordnet, nicht dieser **SQLCompleteAsync-Funktion.**  
   
- **Sqlcompleteasync** gibt einen anderen Code als SQL_SUCCESS zurück, um anzugeben, dass **sqlcompleteasync** nicht ordnungsgemäß aufgerufen wird. **Sqlcompleteasync** stellt in diesem Fall keinen Diagnosedaten Satz bereit. Folgende Rückgabecodes sind möglich:  
+ **SQLCompleteAsync** gibt einen anderen Code als SQL_SUCCESS zurück, um anzugeben, dass **SQLCompleteAsync** nicht korrekt aufgerufen wird. **SQLCompleteAsync** gibt in diesem Fall keinen Diagnosedatensatz. Mögliche Rücksendecodes sind:  
   
--   SQL_INVALID_HANDLE: das Handle, das von " *Lenker Type* " und " *handle* " angegeben wird, ist kein gültiges Handle.  
+-   SQL_INVALID_HANDLE: Das von *HandleType* und *Handle* angegebene Handle ist kein gültiges Handle.  
   
--   SQL_ERROR: " *asynkretcodeptr* " ist NULL, oder die asynchrone Verarbeitung ist für das Handle nicht aktiviert.  
+-   SQL_ERROR: *AsyncRetCodePtr* ist NULL oder die asynchrone Verarbeitung ist für das Handle nicht aktiviert.  
   
--   SQL_NO_DATA: im Benachrichtigungs Modus wird kein asynchroner Vorgang ausgeführt, oder der Treiber-Manager hat die Anwendung nicht benachrichtigt. Im Abruf Modus wird kein asynchroner Vorgang ausgeführt.  
+-   SQL_NO_DATA: Im Benachrichtigungsmodus wird kein asynchroner Vorgang ausgeführt, oder der Treiber-Manager hat die Anwendung nicht benachrichtigt. Im Abrufmodus wird kein asynchroner Vorgang ausgeführt.  
   
 ## <a name="comments"></a>Kommentare  
- Im Abruf basierten asynchronen Verarbeitungsmodus kann *asynkretcodeptr* SQL_STILL_EXECUTING werden, wenn **sqlcompleteasync** SQL_SUCCESS zurückgibt. Die Anwendung sollte den Abruf fortsetzen, bis *asynkretcodeptr* nicht SQL_STILL_EXECUTING ist. Im Benachrichtigungs basierten asynchronen Verarbeitungsmodus wird *asynkretcodeptr* nie SQL_STILL_EXECUTING.  
+ Im abfragebasierten asynchronen Verarbeitungsmodus kann *AsyncRetCodePtr* SQL_STILL_EXECUTING sein, wenn **SQLCompleteAsync** SQL_SUCCESS zurückgibt. Die Anwendung sollte die Abfrage so lange beibehalten, bis *AsyncRetCodePtr* nicht SQL_STILL_EXECUTING ist. Im benachrichtigungsbasierten asynchronen Verarbeitungsmodus wird *AsyncRetCodePtr* nie SQL_STILL_EXECUTING.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Asynchrone Ausführung (Abrufmethode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

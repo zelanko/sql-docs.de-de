@@ -1,5 +1,5 @@
 ---
-title: Funktionen, die Zeichen folgen Parameter akzeptieren | Microsoft-Dokumentation
+title: Funktionen, die Zeichenfolgenparameter akzeptieren | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - functions [ODBC], string parameters
 - string parameters [ODBC]
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4165dd51437f143351835bc1739ffb8279bd04ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 01d0f143c72f57e946f7fe2bf52a50910d4e56aa
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952487"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286300"
 ---
 # <a name="functions-accepting-string-parameters"></a>Funktionen, die Zeichenfolgenparameter akzeptieren
-Alle Funktionen, die Zeichen folgen Parameter annehmen, werden in Unicode konvertiert. (Die "W"-Form der Funktion wird exportiert.) Die Anzahl von Bytes wird in die Anzahl der Zeichen für die entsprechenden ODBC-APIs konvertiert. Dies gilt für die folgenden Funktionen:  
+Alle Funktionen, die Zeichenfolgenparameter annehmen, werden in Unicode konvertiert. (Die Form "W" der Funktion wird exportiert.) Die Anzahl der Bytes wird in die Anzahl der Zeichen für die entsprechenden ODBC-APIs konvertiert. Dies gilt für folgende Funktionen:  
   
 -   **SQLConnect**  
   
@@ -34,7 +34,7 @@ Alle Funktionen, die Zeichen folgen Parameter annehmen, werden in Unicode konver
   
 -   **SQLDescribeCol**  
   
--   **SQLError** (durch **SQLGetDiagField**ersetzt)  
+-   **SQLError** (ersetzt durch **SQLGetDiagField**)  
   
 -   **SQLExecDirect**  
   
@@ -46,9 +46,9 @@ Alle Funktionen, die Zeichen folgen Parameter annehmen, werden in Unicode konver
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (wird zu **SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** (wird **SQLGetStmtAttr**)  
   
--   **SQLSetStmtOption** (wird zu **SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** (wird **SQLSetStmtAttr**)  
   
 -   **SQLGetConnectOption**  
   
@@ -64,6 +64,6 @@ Alle Funktionen, die Zeichen folgen Parameter annehmen, werden in Unicode konver
   
 -   **'SQLSpecialColumns'**  
   
--   **Configdsnex**  
+-   **ConfigDSNEx**  
   
--   **ConfigDSN ausgeführt werden**
+-   **ConfigDSN**

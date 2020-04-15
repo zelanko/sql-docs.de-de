@@ -1,5 +1,5 @@
 ---
-title: Cursor Bibliotheks Vorgänge | Microsoft-Dokumentation
+title: Cursorbibliotheksoperationen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursor library
 - cursor library [ODBC], backward compatibility
 ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad141939a548aa008ef7109d0adaec5b3a8c6c3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a2297e72aacad7ea91b7af934a47bebbc61f0686
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68001997"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301617"
 ---
 # <a name="cursor-library-operations"></a>Cursorbibliotheksvorgänge
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
   
- Wenn eine Anwendung, die mit einem ODBC *2. x* -Treiber arbeitet, Aufrufe an die ODBC *3. x* -Cursor Bibliothek durchführt, kann die Anwendung möglicherweise ODBC *3. x* -Funktionen verwenden, die nicht vom ODBC *2. x* -Treiber unterstützt werden. Ein anwendungswriter sollte jedoch darauf achten, dass diese Features verwendet werden. Die Verwendung der ODBC *3. x* -Cursor Bibliothek macht keinen ODBC *2. x* -Treiber in einen ODBC *3. x* -Treiber.
+ Wenn eine Anwendung, die mit einem ODBC *2.x-Treiber* arbeitet, Aufrufe an die ODBC *3.x-Cursorbibliothek* ausführt, kann die Anwendung möglicherweise ODBC *3.x-Funktionen* verwenden, die vom ODBC *2.x-Treiber* nicht unterstützt werden. Ein Anwendungsschreiber sollte jedoch vorsichtig sein, wie diese Features verwendet werden. Durch die Verwendung der ODBC *3.x-Cursorbibliothek* wird kein ODBC *2.x-Treiber* zu einem ODBC *3.x-Treiber.*

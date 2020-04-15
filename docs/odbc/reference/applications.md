@@ -1,5 +1,5 @@
 ---
-title: Anwendungen | Microsoft-Dokumentation
+title: Anwendungen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,42 +16,42 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f15b5e8eb6eb7c63ab771030f0c31e8c9ff92724
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9184986883f64bd082ca1db472d887609d3071bd
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135676"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306551"
 ---
 # <a name="applications"></a>Anwendungen
-Eine *Anwendung* ist ein Programm, das die ODBC-API aufruft, um auf Daten zuzugreifen. Obwohl viele Arten von Anwendungen möglich sind, sind die meisten in drei Kategorien unterteilt, die in diesem Handbuch als Beispiele verwendet werden.  
+Eine *Anwendung* ist ein Programm, das die ODBC-API aufruft, um auf Daten zuzugreifen. Obwohl viele Arten von Anwendungen möglich sind, lassen sich die meisten in drei Kategorien einteilen, die in diesem Handbuch als Beispiele verwendet werden.  
   
--   **Generische Anwendungen** Diese werden auch als verkleinerte Anwendungen oder externe Anwendungen bezeichnet. Generische Anwendungen sind für die Arbeit mit einer Vielzahl von unterschiedlichen DBMSs konzipiert. Beispiele hierfür sind ein tabellenkalkulationstabellen-oder Statistikpaket, das ODBC zum Importieren von Daten zur weiteren Analyse und ein Textverarbeitungs Tool verwendet, das ODBC verwendet, um eine Mailingliste aus einer Datenbank zu erhalten.  
+-   **Generische Anwendungen** Diese werden auch als schrumpfverpackte Anwendungen oder Standardanwendungen bezeichnet. Generische Anwendungen sind für die Arbeit mit einer Vielzahl unterschiedlicher DBMS konzipiert. Beispiele hierfür sind ein Tabellenkalkulations- oder Statistikpaket, das ODBC zum Importieren von Daten für weitere Analysen verwendet, und ein Textverarbeitungsprogramm, das ODBC verwendet, um eine Mailingliste aus einer Datenbank abzurufen.  
   
-     Eine wichtige Unterkategorie von generischen Anwendungen sind Anwendungsentwicklungsumgebungen wie PowerBuilder oder Microsoft® Visual Basic®. Obwohl die mit diesen Umgebungen erstellten Anwendungen wahrscheinlich nur mit einem einzelnen DBMS funktionieren, muss die Umgebung selbst mit mehreren DBMSs funktionieren.  
+     Eine wichtige Unterkategorie generischer Anwendungen sind Anwendungsentwicklungsumgebungen wie PowerBuilder oder Microsoft® Visual Basic®. Obwohl die mit diesen Umgebungen erstellten Anwendungen wahrscheinlich nur mit einem einzelnen DBMS funktionieren, muss die Umgebung selbst mit mehreren DBMS arbeiten.  
   
-     Was alle generischen Anwendungen gemeinsam haben, besteht darin, dass Sie unter DBMSs hochgradig interoperabel sind und ODBC in einer relativ generischen Weise verwenden müssen. Weitere Informationen zur Interoperabilität finden Sie unter [Auswählen eines Interoperabilitäts Niveaus](../../odbc/reference/develop-app/choosing-a-level-of-interoperability.md).  
+     Allen generischen Anwendungen gemeinsam ist, dass sie unter DBMS sehr interoperabel sind und ODBC relativ allgemein verwenden müssen. Weitere Informationen zur Interoperabilität finden Sie unter [Auswählen eines Interoperabilitätsgrads](../../odbc/reference/develop-app/choosing-a-level-of-interoperability.md).  
   
--   **Vertikale Anwendungen** Vertikale Anwendungen führen eine einzelne Art von Aufgabe aus, z. b. Bestell Eintrag oder Nachverfolgung von Produktionsdaten, und arbeiten mit einem Datenbankschema, das vom Entwickler der Anwendung gesteuert wird. Für einen bestimmten Kunden kann die Anwendung mit einem einzelnen DBMS verwendet werden. Beispielsweise kann ein kleines Unternehmen die Anwendung mit dBASE verwenden, während ein großes Unternehmen es mit Oracle verwenden könnte.  
+-   **Vertikale Anwendungen** Vertikale Anwendungen führen einen einzelnen Aufgabentyp aus, z. B. Auftragserfassung oder Nachverfolgung von Fertigungsdaten, und arbeiten mit einem Datenbankschema, das vom Entwickler der Anwendung gesteuert wird. Für einen bestimmten Kunden arbeitet die Anwendung mit einem einzelnen DBMS. Beispielsweise kann ein kleines Unternehmen die Anwendung mit dBase verwenden, während ein großes Unternehmen sie mit Oracle verwenden kann.  
   
-     Die Anwendung verwendet ODBC so, dass die Anwendung nicht an ein DBMS gebunden ist, obwohl Sie möglicherweise an eine begrenzte Anzahl von DBMSs gebunden ist, die eine ähnliche Funktionalität bereitstellen. Der Anwendungsentwickler kann die Anwendung daher unabhängig vom DBMS verkaufen. Vertikale Anwendungen sind interoperabel, wenn Sie entwickelt werden, aber manchmal so geändert werden, dass Sie nicht interoperablen Code enthalten, wenn der Kunde ein DBMS ausgewählt hat.  
+     Die Anwendung verwendet ODBC in einer Weise, dass die Anwendung nicht an ein DBMS gebunden ist, obwohl sie an eine begrenzte Anzahl von DBMS gebunden sein könnte, die ähnliche Funktionen bieten. Somit kann der Anwendungsentwickler die Anwendung unabhängig vom DBMS verkaufen. Vertikale Anwendungen sind interoperabel, wenn sie entwickelt werden, werden aber manchmal so geändert, dass sie nicht interoperablen Code enthalten, sobald der Kunde ein DBMS ausgewählt hat.  
   
--   **Benutzerdefinierte Anwendungen** Benutzerdefinierte Anwendungen werden verwendet, um eine bestimmte Aufgabe in einem einzelnen Unternehmen auszuführen. Beispielsweise kann eine Anwendung in einem großen Unternehmen Umsatzdaten aus mehreren Abteilungen erfassen (von denen jeder ein anderes DBMS verwendet) und einen einzelnen Bericht erstellt. ODBC wird verwendet, da es sich um eine gängige Schnittstelle handelt und Programmierer daran gewöhnt sind, mehrere Schnittstellen erlernen zu müssen. Solche Anwendungen sind im Allgemeinen nicht interoperabel und werden in bestimmte DBMSs und Treiber geschrieben.  
+-   **Benutzerdefinierte Anwendungen** Benutzerdefinierte Anwendungen werden verwendet, um eine bestimmte Aufgabe in einem einzigen Unternehmen auszuführen. Beispielsweise kann eine Anwendung in einem großen Unternehmen Verkaufsdaten aus mehreren Abteilungen (von denen jede ein anderes DBMS verwendet) sammeln und einen einzelnen Bericht erstellen. ODBC wird verwendet, weil es eine gemeinsame Schnittstelle ist und Programmierer davor bewahrt, mehrere Schnittstellen zu erlernen. Solche Anwendungen sind in der Regel nicht interoperabel und werden auf bestimmte DBMS und Treiber geschrieben.  
   
- Eine Reihe von Aufgaben wird allen Anwendungen gemeinsam verwendet, unabhängig davon, wie Sie ODBC verwenden. Im wesentlichen definieren Sie den Fluss einer beliebigen ODBC-Anwendung. Die Aufgaben lauten:  
+ Eine Reihe von Aufgaben sind allen Anwendungen gemeinsam, unabhängig davon, wie sie ODBC verwenden. Zusammengenommen definieren sie weitgehend den Fluss jeder ODBC-Anwendung. Die Aufgaben sind:  
   
--   Wählen Sie eine Datenquelle aus, und verbinden Sie Sie.  
+-   Auswählen einer Datenquelle und Herstellen einer Verbindung mit ihr.  
   
--   Eine SQL-Anweisung für die Ausführung wird übermittelt.  
+-   Senden einer SQL-Anweisung zur Ausführung.  
   
--   Abrufen von Ergebnissen (sofern vorhanden).  
+-   Abrufen von Ergebnissen (falls vorhanden).  
   
 -   Verarbeitungsfehler.  
   
--   Commit oder Rollback der Transaktion, die die SQL-Anweisung einschließt.  
+-   Übertragen oder Zurückfahren der Transaktion, die die SQL-Anweisung einschließt.  
   
--   Die Verbindung mit der Datenquelle wird getrennt.  
+-   Trennen der Verbindung zur Datenquelle.  
   
- Da die meisten Datenzugriffs arbeiten mit SQL ausgeführt werden, ist der primäre Task, bei dem Anwendungen ODBC verwenden, SQL-Anweisungen zu übermitteln und die von diesen Anweisungen generierten Ergebnisse abzurufen. Andere Aufgaben, für die Anwendungen ODBC verwenden, umfassen das ermitteln und Anpassen von Treiberfunktionen und das Durchsuchen des Daten Bank Katalogs.
+ Da die meisten Datenzugriffsarbeiten mit SQL ausgeführt werden, besteht die primäre Aufgabe, für die Anwendungen ODBC verwenden, darin, SQL-Anweisungen zu übermitteln und die ergebnisse (falls vorhanden) abzurufen, die durch diese Anweisungen generiert werden. Weitere Aufgaben, für die Anwendungen ODBC verwenden, sind das Bestimmen und Anpassen der Treiberfunktionen und das Durchsuchen des Datenbankkatalogs.

@@ -1,5 +1,5 @@
 ---
-title: Interoperabilität von SQL-Anweisungen | Microsoft-Dokumentation
+title: Interoperabilität von SQL-Anweisungen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC]
 - interoperability of SQL statements [ODBC], about interoperability
 ms.assetid: 3b24c499-829c-4e65-90cf-a3a0f6d0a186
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ed366acde11778342387d3bcb152a6619a6a3778
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d3d7a76c67096d2e76fe1cd3d4b15f73122699e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138867"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302801"
 ---
 # <a name="interoperability-of-sql-statements"></a>Interoperabilität von SQL-Anweisungen
-Wie beim Rest einer Anwendung können SQL-Anweisungen interoperabel oder DBMS-spezifisch sein. Ebenso wie der restliche Anwendungs Bedarf hängt die Wahl der interoperablen SQL-Anweisungen vom Anwendungstyp ab. Bei benutzerdefinierten Anwendungen ist die Wahrscheinlichkeit geringer, dass Sie interoperable SQL-Anweisungen verwenden, da Sie in der Regel für die Nutzung der Funktionen eines oder möglicherweise zweier DBMSs konzipiert sind. Generische Anwendungen verwenden interoperable SQL-Anweisungen, da Sie für die Arbeit mit einer Vielzahl von DBMSs entwickelt wurden. Und vertikale Anwendungen fallen in der Regel dazwischen, was eine bestimmte Funktionsebene erfordert, aber andernfalls die Verwendung von interoperablen SQL-Anweisungen.  
+Wie der Rest einer Anwendung können SQL-Anweisungen interoperabel oder DBMS-spezifisch sein. Und wie der Rest der Anwendung hängt die Wahl, wie interoperable SQL-Anweisungen sein müssen, vom Anwendungstyp ab. Benutzerdefinierte Anwendungen verwenden seltener interoperable SQL-Anweisungen, da sie in der Regel so konzipiert sind, dass sie die Funktionen eines oder möglicherweise zweier DBMS ausnutzen. Generische Anwendungen verwenden interoperable SQL-Anweisungen, da sie für die Verwendung mit einer Vielzahl von DBMS entwickelt wurden. Und vertikale Anwendungen liegen in der Regel irgendwo dazwischen und erfordern ein gewisses Maß an Funktionalität, aber ansonsten die Verwendung interoperabler SQL-Anweisungen.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Auswählen einer SQL-Grammatik](../../../odbc/reference/develop-app/choosing-an-sql-grammar.md)  
   

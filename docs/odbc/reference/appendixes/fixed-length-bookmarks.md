@@ -1,5 +1,5 @@
 ---
-title: Lesezeichen mit fester Länge | Microsoft-Dokumentation
+title: Feste Länge Lesezeichen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - compatibility [ODBC], bookmarks
 - fixed-length bookmarks [ODBC]
 ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5877a6cb7a99803f854338321e333c87037c2e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f90c5888a68506c056b2a56fce516080148528e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913585"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306981"
 ---
 # <a name="fixed-length-bookmarks"></a>Textmarke mit fester Länge
-Wenn ein ODBC *3. x* -Treiber mit einer ODBC *2. x* -Anwendung verwendet werden soll, die Lesezeichen mit fester Länge verwendet, muss der Treiber Folgendes unterstützen:  
+Wenn ein ODBC *3.x-Treiber* mit einer ODBC *2.x-Anwendung* arbeiten soll, die Lesezeichen mit fester Länge verwendet, muss der Treiber Folgendes unterstützen:  
   
--   SQL_UB_ON als Wert für die Option SQL_USE_BOOKMARKS Anweisung aus. (SQL_UB_ON in ODBC *3. x*als veraltet markiert.)  
+-   SQL_UB_ON als Wert für die SQL_USE_BOOKMARKS-Anweisungsoption. (SQL_UB_ON ist in ODBC *3.x*veraltet.)  
   
--   Die SQL_GET_BOOKMARK Anweisungs Option.
+-   Die SQL_GET_BOOKMARK Anweisungsoption.
