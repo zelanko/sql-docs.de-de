@@ -1,5 +1,5 @@
 ---
-title: Einführung in SQL und ODBC | Microsoft-Dokumentation
+title: Einführung in SQL und ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 27ed4223-89ff-4044-8bb9-19c8eafa8ad8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 911f7b71f3d0ae555853560a33744a3fc333512d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8cffbbf47bbd8febfb5fa4187ead92f40b3a11e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093735"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295893"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>Einführung in SQL und ODBC
-ODBC wurde erstellt, um eine einheitliche Zugriffsmethode auf verschiedene oder heterogene Datenbankverwaltungssysteme (Database Management Systems, DBMSs) bereitzustellen. In dieser Einführung werden Konzepte im Zusammenhang mit der Entwicklung von ODBC erläutert.  
+ODBC wurde entwickelt, um eine einheitliche Methode für den Zugriff auf verschiedene oder heterogene Datenbankverwaltungssysteme (DBMS) bereitzustellen. In dieser Einführung werden Konzepte im Zusammenhang mit der Entwicklung von ODBC erläutert.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Structured Query Language (SQL) (Structured Query Language, SQL)](../../odbc/reference/structured-query-language-sql.md)  
   

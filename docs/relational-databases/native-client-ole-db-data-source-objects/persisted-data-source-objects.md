@@ -1,5 +1,5 @@
 ---
-title: Persistente Datenquellen Objekte | Microsoft-Dokumentation
+title: Persistente Datenquellenobjekte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3355b086d884d68f829c34fb461589e4a46e05fc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73771471"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297255"
 ---
 # <a name="persisted-data-source-objects"></a>Persistente Datenquellenobjekte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt persistente Datenquellen Objekte mit der **IPersistFile** -Schnittstelle.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter unterstützt persistente Datenquellenobjekte mit der **IPersistFile-Schnittstelle.**  
   
 ## <a name="examples"></a>Beispiele  
  **A. Persistentes Speichern der Datenquelleninitialisierung:**  
@@ -231,6 +231,6 @@ HRESULT InitFromPersistedDS
  Die **IPersistFile::Save**-Methode kann vor oder nach dem Aufruf von **IDBInitialize::Initialize** aufgerufen werden. Durch Aufruf der Methode nach einer erfolgreichen Rückgabe von **IDBInitialize::Initialize** wird sichergestellt, dass eine gültige Datenquellenspezifikation persistent gespeichert wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenquellen Objekte &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Datenquellenobjekte &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

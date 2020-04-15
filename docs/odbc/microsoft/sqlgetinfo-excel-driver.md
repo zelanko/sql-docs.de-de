@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (Excel-Treiber) | Microsoft-Dokumentation
+title: SQLGetInfo (Excel-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Excel Driver
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba2e23bf4b3c464c5483897c0a9dd3e6c9dea626
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a96b135bbd8d44b82e645fac59ddea795666f3f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003281"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298580"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (Excel-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Informationen zu Excel-Treibern. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Excel-Treiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** unterstützt den SQL_FILE_USAGE Informationstyp. Der zurückgegebene Wert ist eine 16-Bit-Ganzzahl, die angibt, wie der Treiberdateien direkt in einer Datenquelle behandelt:  
+ **SQLGetInfo** unterstützt den SQL_FILE_USAGE-Informationstyp. Der zurückgegebene Wert ist eine 16-Bit-Ganzzahl, die angibt, wie der Treiber Dateien in einer Datenquelle direkt behandelt:  
   
--   SQL_FILE_NOT_SUPPORTED: der Treiber ist kein Single-Tier-Treiber.  
+-   SQL_FILE_NOT_SUPPORTED - Der Treiber ist kein einstufiger Treiber.  
   
--   SQL_FILE_TABLE: ein Single-Tier-Treiber behandelt Dateien in einer Datenquelle als Tabellen.  
+-   SQL_FILE_TABLE - Ein einstufiger Treiber behandelt Dateien in einer Datenquelle als Tabellen.  
   
--   SQL_FILE_QUALIFIER: ein Single-Tier-Treiber behandelt Dateien in einer Datenquelle als Qualifizierer.  
+-   SQL_FILE_QUALIFIER - Ein einstufiger Treiber behandelt Dateien in einer Datenquelle als Qualifizierer.  
   
- Der ODBC-Treiber gibt SQL_FILE_TABLE für Microsoft exceldriver zurück, da jede Datei eine Tabelle ist.  
+ Der ODBC-Treiber gibt SQL_FILE_TABLE für microsoft Exceldriver zurück, da jede Datei eine Tabelle ist.  
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ISAM|Version|Format der Versionsnummern|  
+|Isam|Version|Format der Versionsnummern|  
 |----------|-------------|-------------------------------|  
 |Microsoft Excel|3.0|03.00.0000|  
-||4.0|04.00.0000|  
+||4,0|04.00.0000|  
 ||5.0/7.0|05.00.0000|  
 ||97/2000|08.00.0000|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68003281"
  "." (Excel 5.0/7.0/97)  
   
 ## <a name="sql_catalog_term"></a>SQL_CATALOG_TERM  
- "Directory" (Excel 3.0/4.0)  
+ "Verzeichnis" (Excel 3.0/4.0)  
   
  "Arbeitsmappe" (Excel 5.0/7.0/97)  
   

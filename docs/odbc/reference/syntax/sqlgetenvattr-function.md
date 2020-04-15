@@ -1,5 +1,5 @@
 ---
-title: SQLGetEnvAttr-Funktion | Microsoft-Dokumentation
+title: SQLGetEnvAttr-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -18,21 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetEnvAttr function [ODBC]
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0940a5a2c70a7b670ca6a81521759fd08e60461e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 77cd24386a8eea6769aee59f3674b681c516d9ed
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68345626"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81285310"
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr-Funktion
-**Konformitäts**  
- Eingeführte Version: ODBC 3,0 Standards Compliance: ISO 92  
+**Konformität**  
+ Eingeführte Version: ODBC 3.0-Normkonformität: ISO 92  
   
  **Zusammenfassung**  
- **SQLGetEnvAttr** gibt die aktuelle Einstellung eines Umgebungs Attributs zurück.  
+ **SQLGetEnvAttr** gibt die aktuelle Einstellung eines Umgebungsattributs zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,59 +47,59 @@ SQLRETURN SQLGetEnvAttr(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Environment-THandle*  
- Der Umgebungs Handle.  
+ *EnvironmentHandle*  
+ [Eingabe] Umgebungshandle.  
   
  *Attribut*  
- Der Das abzurufende Attribut.  
+ [Eingabe] Attribut, das abgerufen werden soll.  
   
  *ValuePtr*  
- Ausgeben Ein Zeiger auf einen Puffer, in dem der aktuelle Wert des durch das *Attribut*angegebenen Attributs zurückgegeben werden soll.  
+ [Ausgabe] Zeiger auf einen Puffer, in dem der aktuelle Wert des von *Attribut*angegebenen Attributs zurückgegeben werden soll.  
   
- Wenn *ValuePtr* den Wert NULL hat, gibt *stringlengthptr* weiterhin die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten) zurück, die im Puffer zurückgegeben werden können, auf den *ValuePtr*zeigt.  
+ Wenn *ValuePtr* NULL ist, gibt *StringLengthPtr* weiterhin die Gesamtzahl der Bytes (mit Ausnahme des Null-Beendigungszeichens für Zeichendaten) zurück, auf die im Puffer von *ValuePtr*verwiesen wird.  
   
- *Pufferlänge*  
- Der Wenn *ValuePtr* auf eine Zeichenfolge verweist, sollte dieses Argument der Länge von \* *ValuePtr*entsprechen. Wenn \* *ValuePtr* eine ganze Zahl ist, wird *BufferLength* ignoriert. Wenn * \*ValuePtr* eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlgetenvattrw**), muss das *BufferLength* -Argument eine gerade Zahl sein. Wenn der Attribut Wert keine Zeichenfolge ist, wird *BufferLength* nicht verwendet.  
+ *BufferLength*  
+ [Eingabe] Wenn *ValuePtr* auf eine Zeichenfolge verweist, sollte \*dieses Argument die Länge von *ValuePtr*sein. Wenn \* *ValuePtr* eine ganze Zahl ist, wird *BufferLength* ignoriert. Wenn * \*ValuePtr* eine Unicode-Zeichenfolge ist (beim Aufrufen von **SQLGetEnvAttrW**), muss das *BufferLength-Argument* eine gerade Zahl sein. Wenn der Attributwert keine Zeichenfolge ist, wird *BufferLength* nicht verwendet.  
   
- *Stringlengthptr*  
- Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens) zurückgegeben werden soll, die in * \*ValuePtr*zurückgegeben werden können. Wenn *ValuePtr* ein NULL-Zeiger ist, wird keine Länge zurückgegeben. Wenn der Attribut Wert eine Zeichenfolge ist und die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *BufferLength*ist, werden \*die Daten in *ValuePtr* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt und vom Treiber auf Null beendet.  
+ *StringLengthPtr*  
+ [Ausgabe] Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes (mit Ausnahme des Null-Beendigungszeichens) zurückgegeben werden soll, die in * \*ValuePtr*zurückgegeben werden können. Wenn *ValuePtr* ein Nullzeiger ist, wird keine Länge zurückgegeben. Wenn der Attributwert eine Zeichenfolge ist und die Anzahl der zurückzugebenden Bytes größer \*oder gleich *BufferLength*ist, werden die Daten in *ValuePtr* auf *BufferLength* abzüglich der Länge eines Null-Beendigungszeichens abgeschnitten und vom Treiber null beendet.  
   
 ## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLGetEnvAttr** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_ENV und einem *handle* von *environmenthandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLGetEnvAttr** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
+ Wenn **SQLGetEnvAttr** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert abgerufen werden, indem **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_ENV und einem *Handle* von *EnvironmentHandle*aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgeführt, die normalerweise von **SQLGetEnvAttr** zurückgegeben werden, und es werden die SQLSTATE-Werte im Kontext dieser Funktion erläutert. Die Notation "(DM)" geht den Beschreibungen von SQLSTATEs voraus, die vom Treiber-Manager zurückgegeben werden. Der jedem SQLSTATE-Wert zugeordnete Rückgabecode ist SQL_ERROR, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01004|Zeichen folgen Daten, rechts abgeschnitten|Die in \* *ValuePtr* zurückgegebenen Daten wurden als *BufferLength* abzüglich des NULL-Beendigungs Zeichens abgeschnitten. Die Länge des nicht abgeschnittene Zeichen folgen Werts wird in **stringlengthptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
-|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
-|HY010|Funktions Sequenz Fehler|(DM) **SQL_ATTR_ODBC_VERSION** noch nicht über **SQLSetEnvAttr**festgelegt. Sie müssen **SQL_ATTR_ODBC_VERSION** nicht explizit festlegen, wenn Sie **sqlzuzugchandlestd**verwenden.|  
-|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
-|HY092|Ungültiger Attribut/Options Bezeichner|Der für das Argument- *Attribut* angegebene Wert war nicht gültig für die Version von ODBC, die vom Treiber unterstützt wird.|  
-|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Optionales Feature nicht implementiert|Der für das Argument- *Attribut* angegebene Wert war ein gültiges ODBC-Umgebungs Attribut für die Version von ODBC, die vom Treiber unterstützt, jedoch nicht vom Treiber unterstützt wurde.|  
-|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der Treiber, der dem *environmenthandle* entspricht, unterstützt die-Funktion nicht.|  
+|01000|Allgemeine Warnung|Treiberspezifische Informationsmeldung. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01004|String-Daten, rechts abgeschnitten|Die in \* *ValuePtr* zurückgegebenen Daten wurden als *BufferLength* abzüglich des Nullbeendigungszeichens abgeschnitten. Die Länge des nicht abgeschnittenen Zeichenfolgenwerts wird in **StringLengthPtr*zurückgegeben. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, für den es keine bestimmte SQLSTATE gab und für den keine implementierungsspezifische SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText-Puffer* zurückgegebene Fehlermeldung beschreibt den Fehler und seine Ursache.|  
+|HY001|Speicherzuweisungsfehler|Der Treiber konnte den erforderlichen Speicher nicht zuweisen, um die Ausführung oder den Abschluss der Funktion zu unterstützen.|  
+|HY010|Funktionssequenzfehler|(DM) **SQL_ATTR_ODBC_VERSION** wurde noch nicht über **SQLSetEnvAttr**festgelegt. Sie müssen **SQL_ATTR_ODBC_VERSION** nicht explizit festlegen, wenn Sie **SQLAllocHandleStd**verwenden.|  
+|HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicherobjekte nicht zugegriffen werden konnte, möglicherweise aufgrund niedriger Speicherbedingungen.|  
+|HY092|Ungültiger Attribut-/Optionsbezeichner|Der für das Argument *Attribut* angegebene Wert war für die vom Treiber unterstützte ODBC-Version ungültig.|  
+|HY117|Die Verbindung wird aufgrund eines unbekannten Transaktionsstatus unterbrochen. Nur Trennen und Schreibgeschützte sind zulässig.|(DM) Weitere Informationen zum angehaltenen Zustand finden Sie unter [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Optionale Funktion nicht implementiert|Der für das Argument *Attribut* angegebene Wert war ein gültiges ODBC-Umgebungsattribut für die vom Treiber unterstützte ODBC-Version, wurde jedoch vom Treiber nicht unterstützt.|  
+|IM001|Treiber unterstützt diese Funktion nicht|(DM) Der dem *EnvironmentHandle* entsprechende Treiber unterstützt die Funktion nicht.|  
   
 ## <a name="comments"></a>Kommentare  
- Eine Liste der Attribute finden Sie unter [sqlsettenvattr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). Es sind keine treiberspezifischen Umgebungs Attribute vorhanden. Wenn das *Attribut* ein Attribut angibt, das eine Zeichenfolge zurückgibt, muss *ValuePtr* ein Zeiger auf einen Puffer sein, in dem die Zeichenfolge zurückgegeben werden soll. Die maximale Länge der Zeichenfolge, einschließlich des NULL-Terminierungs Byte, ist *BufferLength* -bytes.  
+ Eine Liste der Attribute finden Sie unter [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). Es sind keine treiberspezifischen Umgebungsattribute vorhanden. Wenn *Attribute* ein Attribut angibt, das eine Zeichenfolge zurückgibt, muss *ValuePtr* ein Zeiger auf einen Puffer sein, in dem die Zeichenfolge zurückgegeben werden soll. Die maximale Länge der Zeichenfolge, einschließlich des Null-Beendigungsbyts, ist *BufferLength-Bytes.*  
   
- **SQLGetEnvAttr** kann jederzeit zwischen der Zuordnung und der Freigabe eines Umgebungs Handles aufgerufen werden. Alle Umgebungs Attribute, die von der Anwendung für die Umgebung erfolgreich festgelegt wurden, bleiben so lange erhalten, bis **SQLFreeHandle** für das *Environment-THandle* -Attribut mit dem *Typ* "SQL_HANDLE_ENV" aufgerufen wird. In ODBC 3 *. x*kann gleichzeitig mehr als ein Umgebungs Handle zugeordnet werden. Ein Umgebungs Attribut in einer Umgebung ist nicht betroffen, wenn eine andere Umgebung zugeordnet wurde.  
+ **SQLGetEnvAttr** kann jederzeit zwischen der Zuweisung und dem Freiwerden eines Umgebungshandles aufgerufen werden. Alle Umgebungsattribute, die von der Anwendung für die Umgebung erfolgreich festgelegt wurden, bleiben bestehen, bis **SQLFreeHandle** für *EnvironmentHandle* mit einem *HandleType* von SQL_HANDLE_ENV aufgerufen wird. In ODBC 3 *.x*können mehrere Umgebungshandles gleichzeitig zugewiesen werden. Ein Umgebungsattribut für eine Umgebung ist nicht betroffen, wenn eine andere Umgebung zugewiesen wurde.  
   
 > [!NOTE]
->  Das SQL_ATTR_OUTPUT_NTS-Umgebungs Attribut wird von Standard kompatiblen Anwendungen unterstützt. Wenn **SQLGetEnvAttr** aufgerufen wird, gibt der ODBC 3 *. x* -Treiber-Manager immer SQL_TRUE für dieses Attribut zurück. SQL_ATTR_OUTPUT_NTS kann nur durch einen **SQLSetEnvAttr**-Befehl SQL_TRUE festgelegt werden.  
+>  Das SQL_ATTR_OUTPUT_NTS-Umgebungsattribut wird von standardkonformen Anwendungen unterstützt. Wenn **SQLGetEnvAttr** aufgerufen wird, gibt der ODBC 3 *.x-Treiber-Manager* immer SQL_TRUE für dieses Attribut zurück. SQL_ATTR_OUTPUT_NTS kann nur durch einen Aufruf von **SQLSetEnvAttr**auf SQL_TRUE festgelegt werden.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
 |Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Zurückgeben der Einstellung eines Verbindungs Attributs|[SQLGetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|Zurückgeben der Einstellung eines Anweisungs Attributs|[SQLGetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
-|Festlegen eines Verbindungs Attributs|[SQLSetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
-|Festlegen eines Umgebungs Attributs|[SQLSetEnvAttr-Funktion](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
-|Festlegen eines Anweisungs Attributs|[SQLSetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|Zurückgeben der Einstellung eines Verbindungsattributs|[SQLGetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|Zurückgeben der Einstellung eines Anweisungsattributs|[SQLGetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
+|Festlegen eines Verbindungsattributs|[SQLSetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
+|Festlegen eines Umgebungsattributs|[SQLSetEnvAttr-Funktion](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
+|Festlegen eines Anweisungsattributs|[SQLSetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

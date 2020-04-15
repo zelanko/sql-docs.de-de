@@ -1,5 +1,5 @@
 ---
-title: Eingebettetes SQL | Microsoft-Dokumentation
+title: Eingebettete SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,29 +14,29 @@ helpviewer_keywords:
 - ODBC [ODBC], SQL
 - embedded SQL [ODBC]
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6a7fa2b3105aedee6cb054c5d5dfa76f3c430f35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ad6fd2753d026f026d72a7aa8f68d5d48ce03cb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915425"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306673"
 ---
 # <a name="embedded-sql"></a>Embedded SQL
-Die erste Methode zum Senden von SQL-Anweisungen an das DBMS ist eingebettetes SQL. Da SQL keine Variablen und Anweisungen zur Ablauf Steuerung verwendet, wird es häufig als Daten Bank Untersprache verwendet, die zu einem in einer herkömmlichen Programmiersprache geschriebenen Programm, wie z. b. C oder COBOL, hinzugefügt werden kann. Dies ist eine zentrale Idee für eingebettetes SQL: Platzieren von SQL-Anweisungen in einem Programm, das in einer Host Programmiersprache geschrieben ist. Zum Einbetten von SQL-Anweisungen in eine Host Sprache werden die folgenden Techniken verwendet:  
+Die erste Technik zum Senden von SQL-Anweisungen an das DBMS ist Embedded SQL. Da SQL keine Variablen und "Control-of-Flow"-Anweisungen verwendet, wird es häufig als Datenbankuntersprache verwendet, die einem Programm hinzugefügt werden kann, das in einer herkömmlichen Programmiersprache wie C oder COBOL geschrieben ist. Dies ist eine zentrale Idee von Embedded SQL: Platzieren von SQL-Anweisungen in einem Programm, das in einer Host-Programmiersprache geschrieben ist. Kurz gesagt, die folgenden Techniken werden verwendet, um SQL-Anweisungen in eine Hostsprache einzubetten:  
   
--   Eingebettete SQL-Anweisungen werden von einem speziellen SQL-präcompiler verarbeitet. Alle SQL-Anweisungen beginnen mit einem Einführungs und enden mit einem Abschluss Zeichen, das beide die SQL-Anweisung für den Precompiler markieren. Der Introduction und das Abschluss Zeichen unterscheiden sich von der Host Sprache. Beispielsweise ist der Introduction "Exec SQL" in C und "&SQL (" in Mumps, und das Abschluss Zeichen ist ein Semikolon (;) in C und eine schließende Klammer in Mumps.  
+-   Eingebettete SQL-Anweisungen werden von einem speziellen SQL-Vorcompiler verarbeitet. Alle SQL-Anweisungen beginnen mit einem Introducer und enden mit einem Terminator, die beide die SQL-Anweisung für den Vorkompilierer kennzeichnen. Der Einführungs- und Terminator wird je nach Hostsprache variiert. Der Einfrichter ist z. B. "EXEC SQL" in C und "&SQL(" in MUMPS, und der Terminator ist ein Semikolon (;) in C und einer rechten Klammer in MUMPS.  
   
--   Variablen aus dem Anwendungsprogramm, so genannte Host Variablen, können in eingebetteten SQL-Anweisungen immer dann verwendet werden, wenn Konstanten zulässig sind. Diese können für Eingaben verwendet werden, um eine SQL-Anweisung an eine bestimmte Situation und die Ausgabe anzupassen, um die Ergebnisse einer Abfrage zu erhalten.  
+-   Variablen aus dem Anwendungsprogramm, so genannte Hostvariablen, können in eingebetteten SQL-Anweisungen überall dort verwendet werden, wo Konstanten zulässig sind. Diese können bei der Eingabe verwendet werden, um eine SQL-Anweisung an eine bestimmte Situation anzupassen, und für die Ausgabe, um die Ergebnisse einer Abfrage zu erhalten.  
   
--   Abfragen, die eine einzelne Daten Zeile zurückgeben, werden mit einer SELECT-Anweisung in Singleton behandelt. Diese Anweisung gibt sowohl die Abfrage als auch die Host Variablen an, in die Daten zurückgegeben werden sollen.  
+-   Abfragen, die eine einzelne Datenzeile zurückgeben, werden mit einer singleton SELECT-Anweisung behandelt. Diese Anweisung gibt sowohl die Abfrage als auch die Hostvariablen an, in denen Daten zurückgegeben werden sollen.  
   
--   Abfragen, die mehrere Daten Zeilen zurückgeben, werden mit Cursorn verarbeitet. Ein Cursor verfolgt die aktuelle Zeile in einem Resultset. Die DECLARE CURSOR-Anweisung definiert die Abfrage, die Open-Anweisung beginnt mit der Verarbeitung der Abfrage, die FETCH-Anweisung ruft aufeinander folgende Daten Zeilen ab, und die Close-Anweisung beendet die Verarbeitung der Abfrage.  
+-   Abfragen, die mehrere Datenzeilen zurückgeben, werden mit Cursorn behandelt. Ein Cursor verfolgt die aktuelle Zeile innerhalb eines Resultsets. Die DECLARE CURSOR-Anweisung definiert die Abfrage, die OPEN-Anweisung beginnt die Abfrageverarbeitung, die FETCH-Anweisung ruft aufeinanderfolgende Datenzeilen ab, und die CLOSE-Anweisung beendet die Abfrageverarbeitung.  
   
--   Während ein Cursor geöffnet ist, können positionierte UPDATE-und positionierte DELETE-Anweisungen verwendet werden, um die Zeile zu aktualisieren oder zu löschen, die derzeit vom Cursor ausgewählt wird.  
+-   Während ein Cursor geöffnet ist, können positionierte Aktualisierungs- und Positionierte Löschanweisungen verwendet werden, um die aktuell vom Cursor ausgewählte Zeile zu aktualisieren oder zu löschen.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Embedded SQL – Beispiel](../../odbc/reference/embedded-sql-example.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Spaltenweise Bindung | Microsoft-Dokumentation
+title: Spaltenweise Bindung | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083383"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299150"
 ---
 # <a name="column-wise-binding"></a>Spaltenbezogenes Binden
-Wenn die spaltenweise Bindung verwendet wird, bindet eine Anwendung ein oder zwei oder in einigen Fällen drei Arrays an jede Spalte, für die Daten zurückgegeben werden sollen. Das erste Array enthält die Datenwerte, und das zweite Array enthält Länge/Indikator Puffer. Indikatoren und Längenwerte können in separaten Puffern gespeichert werden, indem die SQL_DESC_INDICATOR_PTR-und SQL_DESC_OCTET_LENGTH_PTR Deskriptorfelder auf verschiedene Werte festgelegt werden. Wenn dies der Fall ist, wird ein drittes Array gebunden. Jedes Array enthält so viele Elemente, wie Zeilen im Rowset vorhanden sind.  
+Bei verwendung der spaltenweisen Bindung bindet eine Anwendung ein oder zwei oder in einigen Fällen drei Arrays an jede Spalte, für die Daten zurückgegeben werden sollen. Das erste Array enthält die Datenwerte, und das zweite Array enthält Längen-/Indikatorpuffer. Indikatoren und Längenwerte können in separaten Puffern gespeichert werden, indem die SQL_DESC_INDICATOR_PTR- und SQL_DESC_OCTET_LENGTH_PTR Deskriptorfelder auf unterschiedliche Werte gesetzt werden. Wenn dies geschieht, ist ein drittes Array gebunden. Jedes Array enthält so viele Elemente wie Zeilen im Rowset.  
   
- Die Anwendung deklariert, dass Sie eine spaltenweise Bindung mit dem SQL_ATTR_ROW_BIND_TYPE Statement-Attribut verwendet, das den Bindungstyp für rowsetpuffer anstelle von Parametersatz Puffern bestimmt. Der Treiber gibt die Daten für jede Zeile in aufeinander folgenden Elementen jedes Arrays zurück. Die folgende Abbildung zeigt, wie die spaltenweise Bindung funktioniert.  
+ Die Anwendung deklariert, dass sie spaltenweise Bindung mit dem SQL_ATTR_ROW_BIND_TYPE-Anweisungsattribut verwendet, das den Bindungstyp für Rowsetpuffer im Gegensatz zu Parametersatzpuffern bestimmt. Der Treiber gibt die Daten für jede Zeile in aufeinanderfolgenden Elementen jedes Arrays zurück. Die folgende Abbildung zeigt, wie spaltenweise Bindung funktioniert.  
   
- ![Spalten&#45;Weise Bindung von drei Spalten](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![Spalte&#45;kluge Bindung von drei Spalten](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- Der folgende Code bindet z. b. 10-Element-Arrays an die Spalten OrderID, SalesPerson und Status:  
+ Der folgende Code bindet z. B. 10-Element-Arrays an die Spalten OrderID, SalesPerson und Status:  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

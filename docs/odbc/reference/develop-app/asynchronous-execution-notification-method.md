@@ -1,5 +1,5 @@
 ---
-title: Asynchrone Ausführung (Benachrichtigungs Methode) | Microsoft-Dokumentation
+title: Asynchrone Ausführung (Benachrichtigungsmethode) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,56 +8,56 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66b806b698164b306eee4dc7d4c48fbe7835adae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 250e71dcb47d44a6e437d12c269ea23fa6fb3c2c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077062"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306411"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Asynchrone Ausführung (Benachrichtigungsmethode)
-ODBC ermöglicht die asynchrone Ausführung von Verbindungs-und Anweisungs Vorgängen. Ein Anwendungs Thread kann eine ODBC-Funktion im asynchronen Modus aufzurufen, und die Funktion kann zurückgeben, bevor der Vorgang beendet ist, sodass der Anwendungs Thread andere Aufgaben ausführen kann. Im Windows 7 SDK hat eine Anwendung für asynchrone Anweisungs-oder Verbindungs Vorgänge festgestellt, dass der asynchrone Vorgang mit der Abruf Methode durchgeführt wurde. Weitere Informationen finden Sie unter [asynchrone Ausführung (Abruf Methode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Ab dem Windows 8 SDK können Sie mithilfe der Benachrichtigungs Methode ermitteln, ob ein asynchroner Vorgang fertiggestellt ist.  
+ODBC ermöglicht die asynchrone Ausführung von Verbindungs- und Anweisungsvorgängen. Ein Anwendungsthread kann eine ODBC-Funktion im asynchronen Modus aufrufen, und die Funktion kann zurückgegeben werden, bevor der Vorgang abgeschlossen ist, sodass der Anwendungsthread andere Aufgaben ausführen kann. Im Windows 7 SDK hat eine Anwendung für asynchrone Anweisungs- oder Verbindungsvorgänge festgestellt, dass der asynchrone Vorgang mithilfe der Abrufmethode abgeschlossen wurde. Weitere Informationen finden Sie unter [Asynchrone Ausführung (Polling-Methode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Ab dem Windows 8 SDK können Sie mithilfe der Benachrichtigungsmethode feststellen, dass ein asynchroner Vorgang abgeschlossen ist.  
   
- In der Abruf Methode müssen Anwendungen die asynchrone Funktion jedes Mal aufgerufen werden, wenn Sie den Status des Vorgangs wünscht. Die Benachrichtigungs Methode ähnelt Callback und Wait in ADO.net. ODBC verwendet jedoch Win32-Ereignisse als Benachrichtigungs Objekt.  
+ In der Abrufmethode müssen Anwendungen die asynchrone Funktion jedes Mal aufrufen, wenn sie den Status des Vorgangs aufrufen möchten. Die Benachrichtigungsmethode ähnelt dem Rückruf und wartet in ADO.NET. ODBC verwendet jedoch Win32-Ereignisse als Benachrichtigungsobjekt.  
   
- Die ODBC-Cursor Bibliothek und die asynchrone ODBC-Benachrichtigung können nicht gleichzeitig verwendet werden. Wenn Sie beide Attribute festlegen, wird ein Fehler mit SQLSTATE S1119 zurückgegeben (die Cursor Bibliothek und die asynchrone Benachrichtigung können nicht gleichzeitig aktiviert werden).  
+ Die ODBC-Cursorbibliothek und die asynchrone ODBC-Benachrichtigung können nicht gleichzeitig verwendet werden. Wenn Sie beide Attribute festlegen, wird ein Fehler mit SQLSTATE S1119 zurückgegeben (Cursorlibrary und asynchrone Benachrichtigung können nicht gleichzeitig aktiviert werden).  
   
- Informationen für Treiber Entwickler finden Sie [unter Benachrichtigung über die Beendigung der asynchronen Funktion](../../../odbc/reference/develop-driver/notification-of-asynchronous-function-completion.md) .  
+ Informationen für Treiberentwickler finden Sie unter [Benachrichtigung über den Abschluss asynchroner Funktionen.](../../../odbc/reference/develop-driver/notification-of-asynchronous-function-completion.md)  
   
 > [!NOTE]  
->  Die Benachrichtigungs Methode wird mit der Cursor Bibliothek nicht unterstützt. Eine Anwendung empfängt eine Fehlermeldung, wenn Sie versucht, die Cursor Bibliothek über SQLSetConnectAttr zu aktivieren, wenn die Benachrichtigungs Methode aktiviert ist.  
+>  Die Benachrichtigungsmethode wird mit der Cursorbibliothek nicht unterstützt. Eine Anwendung erhält eine Fehlermeldung, wenn sie versucht, die Cursorbibliothek über SQLSetConnectAttr zu aktivieren, wenn die Benachrichtigungsmethode aktiviert ist.  
   
 ## <a name="overview"></a>Übersicht  
- Wenn eine ODBC-Funktion im asynchronen Modus aufgerufen wird, wird das Steuerelement sofort mit dem Rückgabecode SQL_STILL_EXECUTING an die aufrufende Anwendung zurückgegeben. Die Anwendung muss die Funktion wiederholt Abfragen, bis Sie etwas anderes als SQL_STILL_EXECUTING zurückgibt. Die Abruf Schleife erhöht die CPU-Auslastung und führt in vielen asynchronen Szenarien zu einer schlechten Leistung.  
+ Wenn eine ODBC-Funktion im asynchronen Modus aufgerufen wird, wird das Steuerelement sofort mit dem Rückgabecode SQL_STILL_EXECUTING an die aufrufende Anwendung zurückgegeben. Die Anwendung muss die Funktion wiederholt abrufen, bis sie etwas anderes als SQL_STILL_EXECUTING zurückgibt. Die Abrufschleife erhöht die CPU-Auslastung, was in vielen asynchronen Szenarien zu einer schlechten Leistung führt.  
   
- Wenn das Benachrichtigungs Modell verwendet wird, ist das Abruf Modell deaktiviert. Anwendungen sollten die ursprüngliche Funktion nicht erneut aufzurufen. Aufrufen der [sqlcompleteasync-Funktion](../../../odbc/reference/syntax/sqlcompleteasync-function.md) , um den asynchronen Vorgang abzuschließen. Wenn eine Anwendung die ursprüngliche Funktion erneut aufruft, bevor der asynchrone Vorgang beendet ist, wird der Aufruf SQL_ERROR mit SQLSTATE IM017 zurückgegeben (der Abruf ist im asynchronen Benachrichtigungs Modus deaktiviert).  
+ Bei jeder Verwendung des Benachrichtigungsmodells wird das Abrufmodell deaktiviert. Anwendungen sollten die ursprüngliche Funktion nicht erneut aufrufen. Rufen Sie [die SQLCompleteAsync-Funktion](../../../odbc/reference/syntax/sqlcompleteasync-function.md) auf, um den asynchronen Vorgang abzuschließen. Wenn eine Anwendung die ursprüngliche Funktion erneut aufruft, bevor der asynchrone Vorgang abgeschlossen ist, gibt der Aufruf SQL_ERROR mit SQLSTATE IM017 zurück (Polling ist im asynchronen Benachrichtigungsmodus deaktiviert).  
   
- Wenn Sie das Benachrichtigungs Modell verwenden, kann die Anwendung **SQLCancel** oder **sqlcancelhandle** aufzurufen, um eine Anweisung oder einen Verbindungsvorgang abzubrechen. Wenn die Abbruch Anforderung erfolgreich ist, wird von ODBC SQL_SUCCESS zurückgegeben. Diese Meldung weist nicht darauf hin, dass die Funktion tatsächlich abgebrochen wurde. Gibt an, dass die Abbruch Anforderung verarbeitet wurde. Ob die Funktion tatsächlich abgebrochen wird, ist Treiber abhängig und Datenquellen abhängig. Wenn ein Vorgang abgebrochen wird, signalisiert der Treiber-Manager weiterhin das Ereignis. Der Treiber-Manager gibt SQL_ERROR im Rückgabecode Puffer zurück, und der Status lautet SQLSTATE HY008 (Vorgang abgebrochen), um anzugeben, dass der Abbruch erfolgreich war. Wenn die Funktion die normale Verarbeitung abgeschlossen hat, gibt der Treiber-Manager SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurück.  
+ Bei Verwendung des Benachrichtigungsmodells kann die Anwendung **SQLCancel** oder **SQLCancelHandle** aufrufen, um eine Anweisung oder einen Verbindungsvorgang abzubrechen. Wenn die Abbruchanforderung erfolgreich ist, gibt ODBC SQL_SUCCESS zurück. Diese Meldung gibt nicht an, dass die Funktion tatsächlich abgebrochen wurde. Es gibt an, dass die Abbruchanforderung verarbeitet wurde. Ob die Funktion tatsächlich abgebrochen wird, ist treiberabhängig und datenquellenabhängig. Wenn ein Vorgang abgebrochen wird, signalisiert der Treiber-Manager weiterhin das Ereignis. Der Treiber-Manager gibt SQL_ERROR im Rückgabecodepuffer zurück, und der Status ist SQLSTATE HY008 (Vorgang abgebrochen), um anzuzeigen, dass die Abbrechenierung erfolgreich ist. Wenn die Funktion die normale Verarbeitung abgeschlossen hat, gibt der Treiber-Manager SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurück.  
   
-### <a name="downlevel-behavior"></a>Downlevelverhalten  
- Die Version des ODBC-Treiber-Managers, die diese Benachrichtigung unterstützt, ist ODBC 3,81.  
+### <a name="downlevel-behavior"></a>Downlevel-Verhalten  
+ Die ODBC Driver Manager-Version, die diese Benachrichtigung vollständig unterstützt, ist ODBC 3.81.  
   
-|ODBC-Version der Anwendung|Treiber-Manager-Version|Treiberversion|Verhalten|  
+|Anwendung ODBC Version|Treiber-Manager-Version|Treiberversion|Verhalten|  
 |------------------------------|----------------------------|--------------------|--------------|  
-|Neue Anwendung einer beliebigen ODBC-Version|ODBC 3,81|ODBC 3,80-Treiber|Die Anwendung kann diese Funktion verwenden, wenn der Treiber diese Funktion unterstützt, andernfalls führt der Treiber-Manager zu einem Fehler.|  
-|Neue Anwendung einer beliebigen ODBC-Version|ODBC 3,81|Pre-ODBC 3,80-Treiber|Der Treiber-Manager führt einen Fehler aus, wenn der Treiber dieses Feature nicht unterstützt.|  
-|Neue Anwendung einer beliebigen ODBC-Version|Pre-ODBC 3,81|Any|Wenn diese Funktion von der Anwendung verwendet wird, werden die neuen Attribute von einem alten Treiber-Manager als Treiber spezifische Attribute betrachtet, und für den Treiber sollte ein Fehler ausgegeben werden. Diese Attribute werden von einem neuen Treiber-Manager nicht an den Treiber übergeben.|  
+|Neue Anwendung einer beliebigen ODBC-Version|ODBC 3,81|ODBC 3.80 Treiber|Die Anwendung kann diese Funktion verwenden, wenn der Treiber diese Funktion unterstützt, andernfalls wird der Treiber-Manager fehlerfrei.|  
+|Neue Anwendung einer beliebigen ODBC-Version|ODBC 3,81|Pre-ODBC 3.80 Treiber|Der Treiber-Manager wird fehlerfrei angezeigt, wenn der Treiber diese Funktion nicht unterstützt.|  
+|Neue Anwendung einer beliebigen ODBC-Version|VorODBC 3.81|Any|Wenn die Anwendung diese Funktion verwendet, betrachtet ein alter Treiber-Manager die neuen Attribute als treiberspezifische Attribute, und der Treiber sollte fehlerfrei sein. Ein neuer Treiber-Manager gibt diese Attribute nicht an den Treiber weiter.|  
   
- Eine Anwendung sollte die Treiber-Manager-Version überprüfen, bevor Sie diese Funktion verwenden. Andernfalls ist das Verhalten nicht definiert, wenn ein schlecht geschriebener Treiber nicht fehlerhaft ist und die Treiber-Manager-Version vor ODBC 3,81 ist.  
+ Eine Anwendung sollte die Treiber-Manager-Version überprüfen, bevor sie diese Funktion verwendet. Andernfalls ist das Verhalten nicht definiert, wenn ein schlecht geschriebener Treiber keinen Fehler auslöst und die Treiber-Manager-Version vor ODBC 3.81 liegt.  
   
 ## <a name="use-cases"></a>Anwendungsfälle  
- Dieser Abschnitt zeigt Anwendungsfälle für die asynchrone Ausführung und den Abruf Mechanismus.  
+ In diesem Abschnitt werden Anwendungsfälle für die asynchrone Ausführung und den Abrufmechanismus angezeigt.  
   
 ### <a name="integrate-data-from-multiple-odbc-sources"></a>Integrieren von Daten aus mehreren ODBC-Quellen  
- Eine Daten Integrations Anwendung Ruft asynchron Daten aus mehreren Datenquellen ab. Einige Daten stammen aus Remote Datenquellen, und einige Daten stammen aus lokalen Dateien. Die Anwendung kann erst fortgesetzt werden, wenn die asynchronen Vorgänge abgeschlossen sind.  
+ Eine Datenintegrationsanwendung ruft daten asynchron aus mehreren Datenquellen ab. Einige der Daten stammen aus Entferntdatenquellen und einige Daten aus lokalen Dateien. Die Anwendung kann erst fortgesetzt werden, wenn die asynchronen Vorgänge abgeschlossen sind.  
   
- Anstatt wiederholt einen Vorgang abzufragen, um zu ermitteln, ob er fertig ist, kann die Anwendung ein Ereignis Objekt erstellen und einem ODBC-Verbindungs Handle oder einem ODBC-Anweisungs Handle zuordnen. Die Anwendung ruft dann APIs für die Synchronisierung von Betriebssystemen auf, um auf ein Ereignis Objekt oder viele Ereignis Objekte (sowohl ODBC-Ereignisse als auch andere Windows-Ereignisse) zu warten. ODBC signalisiert das Ereignis Objekt, wenn der entsprechende asynchrone ODBC-Vorgang abgeschlossen ist.  
+ Anstatt einen Vorgang wiederholt abzuwählen, um festzustellen, ob er abgeschlossen ist, kann die Anwendung ein Ereignisobjekt erstellen und es einem ODBC-Verbindungshandle oder einem ODBC-Anweisungshandle zuordnen. Die Anwendung ruft dann Betriebssystemsynchronisierungs-APIs auf, um auf ein Ereignisobjekt oder viele Ereignisobjekte (sowohl ODBC-Ereignisse als auch andere Windows-Ereignisse) zu warten. ODBC signalisiert das Ereignisobjekt, wenn der entsprechende asynchrone ODBC-Vorgang abgeschlossen ist.  
   
- Unter Windows werden Win32-Ereignis Objekte verwendet, die dem Benutzer ein einheitliches Programmiermodell bereitstellen. Treiber-Manager auf anderen Plattformen können die für diese Plattformen spezifische ereignisobjektimplementierung verwenden.  
+ Unter Windows werden Win32-Ereignisobjekte verwendet, die dem Benutzer ein einheitliches Programmiermodell bieten. Treiber-Manager auf anderen Plattformen können die für diese Plattformen spezifische Ereignisobjektimplementierung verwenden.  
   
- Im folgenden Codebeispiel wird die Verwendung von asynchronen Verbindungs-und Anweisungs Benachrichtigungen veranschaulicht:  
+ Das folgende Codebeispiel veranschaulicht die Verwendung von verbindungs- und Anweisungsasynchronbenachrichtigungen:  
   
 ```  
 // This function opens NUMBER_OPERATIONS connections and executes one query on statement of each connection.  
@@ -295,8 +295,8 @@ Cleanup:
   
 ```  
   
-### <a name="determining-if-a-driver-supports-asynchronous-notification"></a>Ermitteln, ob ein Treiber eine asynchrone Benachrichtigung unterstützt  
- Eine ODBC-Anwendung kann ermitteln, ob ein ODBC-Treiber die asynchrone Benachrichtigung durch Aufrufen von [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)unterstützt. Der ODBC-Treiber-Manager ruft folglich **SQLGetInfo** des Treibers mit SQL_ASYNC_NOTIFICATION auf.  
+### <a name="determining-if-a-driver-supports-asynchronous-notification"></a>Bestimmen, ob ein Treiber asynchrone Benachrichtigung unterstützt  
+ Eine ODBC-Anwendung kann feststellen, ob ein ODBC-Treiber asynchrone Benachrichtigungen unterstützt, indem [sie SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)aufruft. Der ODBC-Treiber-Manager ruft daher die **SQLGetInfo** des Treibers mit SQL_ASYNC_NOTIFICATION auf.  
   
 ```  
 SQLUINTEGER InfoValue;  
@@ -321,31 +321,31 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
 }  
 ```  
   
-### <a name="associating-a-win32-event-handle-with-an-odbc-handle"></a>Zuordnen eines Win32-Ereignis Handles zu einem ODBC-Handle  
- Anwendungen sind für das Erstellen von Win32-Ereignis Objekten mithilfe der entsprechenden Win32-Funktionen verantwortlich. Eine Anwendung kann ein Win32-Ereignis Handle einem ODBC-Verbindungs Handle oder einem ODBC-Anweisungs Handle zuordnen.  
+### <a name="associating-a-win32-event-handle-with-an-odbc-handle"></a>Zuordnen eines Win32-Ereignishandles zu einem ODBC-Handle  
+ Anwendungen sind für die Erstellung von Win32-Ereignisobjekten mit den entsprechenden Win32-Funktionen verantwortlich. Eine Anwendung kann ein Win32-Ereignishandle einem ODBC-Verbindungshandle oder einem ODBC-Anweisungshandle zuordnen.  
   
- Verbindungs Attribute SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE und SQL_ATTR_ASYNC_DBC_EVENT bestimmen, ob ODBC im asynchronen Modus ausgeführt wird und ob ODBC den Benachrichtigungs Modus für ein Verbindungs Handle aktiviert. Anweisungs Attribute SQL_ATTR_ASYNC_ENABLE und SQL_ATTR_ASYNC_STMT_EVENT bestimmen, ob ODBC im asynchronen Modus ausgeführt wird und ob ODBC den Benachrichtigungs Modus für ein Anweisungs Handle aktiviert.  
+ Verbindungsattribute SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE und SQL_ATTR_ASYNC_DBC_EVENT bestimmen, ob ODBC im asynchronen Modus ausgeführt wird und ob ODBC den Benachrichtigungsmodus für ein Verbindungshandle aktiviert. Anweisungsattribute SQL_ATTR_ASYNC_ENABLE und SQL_ATTR_ASYNC_STMT_EVENT bestimmen, ob ODBC im asynchronen Modus ausgeführt wird und ob ODBC den Benachrichtigungsmodus für ein Anweisungshandle aktiviert.  
   
 |SQL_ATTR_ASYNC_ENABLE oder SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT oder SQL_ATTR_ASYNC_DBC_EVENT|Mode|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
-|Aktivieren|ungleich NULL|Asynchrone Benachrichtigung|  
-|Aktivieren|NULL|Asynchroner Abruf|  
-|Disable|beliebig|Synchron|  
+|Aktivieren|nicht-NULL|Asynchrone Benachrichtigung|  
+|Aktivieren|NULL|Asynchrones Polling|  
+|Disable|any|Synchron|  
   
- Eine Anwendung kann den asynchronen Betriebsmodus tempordisch deaktivieren. ODBC ignoriert Werte von SQL_ATTR_ASYNC_DBC_EVENT, wenn der asynchrone Vorgang auf Verbindungs Ebene deaktiviert ist. ODBC ignoriert Werte von SQL_ATTR_ASYNC_STMT_EVENT, wenn der asynchrone Vorgang auf Anweisungs Ebene deaktiviert ist.  
+ Eine Anwendung kann den asynchronen Betriebsmodus vorübergehend deaktivieren. ODBC ignoriert Werte von SQL_ATTR_ASYNC_DBC_EVENT, wenn der asynchrone Vorgang auf Verbindungsebene deaktiviert ist. ODBC ignoriert Werte von SQL_ATTR_ASYNC_STMT_EVENT, wenn der asynchrone Vorgang auf Anweisungsebene deaktiviert ist.  
   
- Synchroner Aufrufen von **SQLSetStmtAttr** und **SQLSetConnectAttr**  
- -   **SQLSetConnectAttr** unterstützt asynchrone Vorgänge, aber der Aufruf von **SQLSetConnectAttr** , um SQL_ATTR_ASYNC_DBC_EVENT festzulegen, ist immer synchron.  
+ Synchroner Aufruf von **SQLSetStmtAttr** und **SQLSetConnectAttr**  
+ -   **SQLSetConnectAttr** unterstützt asynchrone Vorgänge, aber der Aufruf von **SQLSetConnectAttr** zum Festlegen SQL_ATTR_ASYNC_DBC_EVENT ist immer synchron.  
   
 -   **SQLSetStmtAttr** unterstützt keine asynchrone Ausführung.  
   
- Fehlerausgabe Szenario  
- Wenn **SQLSetConnectAttr** vor dem Herstellen einer Verbindung aufgerufen wird, kann der Treiber-Manager nicht bestimmen, welcher Treiber verwendet werden soll. Daher gibt der Treiber-Manager Erfolg für **SQLSetConnectAttr** zurück, aber das Attribut kann nicht im Treiber festgelegt werden. Diese Attribute werden vom Treiber-Manager festgelegt, wenn die Anwendung eine Verbindungsfunktion aufruft. Der Treiber-Manager führt möglicherweise zu einem Fehler, da der Treiber keine asynchronen Vorgänge unterstützt.  
+ Fehlerszenario  
+ Wenn **SQLSetConnectAttr** aufgerufen wird, bevor eine Verbindung hergestellt wird, kann der Treiber-Manager nicht bestimmen, welcher Treiber verwendet werden soll. Daher gibt der Treiber-Manager den Erfolg für **SQLSetConnectAttr** zurück, aber das Attribut ist möglicherweise nicht bereit, im Treiber festzulegen. Der Treiber-Manager legt diese Attribute fest, wenn die Anwendung eine Verbindungsfunktion aufruft. Der Treiber-Manager kann fehlerfrei sein, da der Treiber keine asynchronen Vorgänge unterstützt.  
   
- Vererbung von Verbindungs Attributen  
- In der Regel erben die Anweisungen einer Verbindung die Verbindungs Attribute. Allerdings ist das Attribut SQL_ATTR_ASYNC_DBC_EVENT nicht vererbbar und wirkt sich nur auf die Verbindungs Vorgänge aus.  
+ Vererbung von Verbindungsattributen  
+ Normalerweise erben die Anweisungen einer Verbindung die Verbindungsattribute. Das Attribut SQL_ATTR_ASYNC_DBC_EVENT ist jedoch nicht vererbbar und wirkt sich nur auf die Verbindungsvorgänge aus.  
   
- Um ein Ereignis Handle einem ODBC-Verbindungs Handle zuzuordnen, ruft eine ODBC-Anwendung die ODBC-API **SQLSetConnectAttr** auf und gibt SQL_ATTR_ASYNC_DBC_EVENT als das-Attribut und das-Ereignis Handle als Attribut Wert an. Das neue ODBC-Attribut SQL_ATTR_ASYNC_DBC_EVENT ist vom Typ SQL_IS_POINTER.  
+ Um ein Ereignishandle einem ODBC-Verbindungshandle zuzuordnen, ruft eine ODBC-Anwendung ODBC-API **SQLSetConnectAttr** auf und gibt SQL_ATTR_ASYNC_DBC_EVENT als Attribut und das Ereignishandle als Attributwert an. Das neue ODBC-Attribut SQL_ATTR_ASYNC_DBC_EVENT ist vom Typ SQL_IS_POINTER.  
   
 ```  
 HANDLE hEvent;  
@@ -357,7 +357,7 @@ hEvent = CreateEvent(
             );  
 ```  
   
- Normalerweise erstellen Anwendungen automatisch zurückgesetzte Ereignis Objekte. Das Ereignis Objekt wird von ODBC nicht zurückgesetzt. Anwendungen müssen sicherstellen, dass sich das Objekt nicht im signalisierten Zustand befindet, bevor Sie eine asynchrone ODBC-Funktion aufrufen.  
+ Normalerweise erstellen Anwendungen Ereignisobjekte für das automatische Zurücksetzen. ODBC setzt das Ereignisobjekt nicht zurück. Anwendungen müssen sicherstellen, dass sich das Objekt nicht im signalisierten Zustand befindet, bevor asynchrone ODBC-Funktionen aufgerufen werden.  
   
 ```  
 SQLRETURN retcode;  
@@ -367,17 +367,17 @@ retcode = SQLSetConnectAttr ( hDBC,
                               SQL_IS_POINTER);          // Length Indicator  
 ```  
   
- SQL_ATTR_ASYNC_DBC_EVENT ist ein nur Treiber-Manager-Attribut, das nicht im Treiber festgelegt wird.  
+ SQL_ATTR_ASYNC_DBC_EVENT ist ein Nur-Treiber-Attribut, das nicht im Treiber festgelegt wird.  
   
- Der Standardwert SQL_ATTR_ASYNC_DBC_EVENT ist NULL. Wenn der Treiber keine asynchrone Benachrichtigung unterstützt, wird beim Aktivieren oder festlegen SQL_ATTR_ASYNC_DBC_EVENT SQL_ERROR mit SQLState HY092 (Ungültiger Attribut-/Optionsbezeichner) zurückgegeben.  
+ Der Standardwert von SQL_ATTR_ASYNC_DBC_EVENT ist NULL. Wenn der Treiber keine asynchrone Benachrichtigung unterstützt, gibt das Abrufen oder Festlegen SQL_ATTR_ASYNC_DBC_EVENT SQL_ERROR mit SQLSTATE HY092 (Ungültiger Attribut-/Optionsbezeichner) zurück.  
   
- Wenn der letzte SQL_ATTR_ASYNC_DBC_EVENT Wert, der für ein ODBC-Verbindungs Handle festgelegt wurde, nicht NULL ist und die Anwendung den asynchronen Modus durch Festlegen des Attributs SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE mit SQL_ASYNC_DBC_ENABLE_ON festgelegt hat die Funktion, die den asynchronen Modus unterstützt, erhält eine Abschluss Benachrichtigung. Wenn der letzte SQL_ATTR_ASYNC_DBC_EVENT Wert, der in einem ODBC-Verbindungs Handle festgelegt ist, NULL ist, sendet ODBC keine Benachrichtigung an die Anwendung, unabhängig davon, ob der asynchrone Modus aktiviert ist.  
+ Wenn der letzte SQL_ATTR_ASYNC_DBC_EVENT Wert, der für ein ODBC-Verbindungshandle festgelegt wurde, nicht NULL ist und der asynchrone Modus der Anwendung durch Festlegen des Attributs SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE mit SQL_ASYNC_DBC_ENABLE_ON festgelegt wird, erhält das Aufrufen einer ODBC-Verbindungsfunktion, die den asynchronen Modus unterstützt, eine Abschlussbenachrichtigung. Wenn der letzte SQL_ATTR_ASYNC_DBC_EVENT Wert für ein ODBC-Verbindungshandle NULL ist, sendet ODBC der Anwendung keine Benachrichtigung, unabhängig davon, ob der asynchrone Modus aktiviert ist.  
   
- Eine Anwendung kann SQL_ATTR_ASYNC_DBC_EVENT vor oder nach dem Festlegen des-Attributs festlegen SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE.  
+ Eine Anwendung kann SQL_ATTR_ASYNC_DBC_EVENT vor oder nach dem Festlegen des Attributs festlegen, SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE.  
   
- Anwendungen können das SQL_ATTR_ASYNC_DBC_EVENT-Attribut für ein ODBC-Verbindungs Handle festlegen, bevor Sie eine Verbindungsfunktion aufrufen (**SQLCONNECT**, **sqlbrowseconnetct**oder **SQLDriverConnect**). Da der ODBC-Treiber-Manager nicht weiß, welcher ODBC-Treiber von der Anwendung verwendet wird, wird SQL_SUCCESS zurückgegeben. Wenn die Anwendung eine Verbindungsfunktion aufruft, prüft der ODBC-Treiber-Manager, ob der Treiber die asynchrone Benachrichtigung unterstützt. Wenn der Treiber keine asynchrone Benachrichtigung unterstützt, wird der ODBC-Treiber-Manager mit SQLSTATE S1_118 SQL_ERROR zurückgegeben (der Treiber unterstützt keine asynchrone Benachrichtigung). Wenn der Treiber die asynchrone Benachrichtigung unterstützt, ruft der ODBC-Treiber-Manager den Treiber auf und legt die entsprechenden Attribute SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK und SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT fest.  
+ Anwendungen können das SQL_ATTR_ASYNC_DBC_EVENT-Attribut für ein ODBC-Verbindungshandle festlegen, bevor sie eine Verbindungsfunktion aufrufen (**SQLConnect**, **SQLBrowseConnect**oder **SQLDriverConnect**). Da der ODBC-Treiber-Manager nicht weiß, welchen ODBC-Treiber die Anwendung verwenden wird, gibt er SQL_SUCCESS zurück. Wenn die Anwendung eine Verbindungsfunktion aufruft, überprüft der ODBC-Treiber-Manager, ob der Treiber asynchrone Benachrichtigungen unterstützt. Wenn der Treiber keine asynchrone Benachrichtigung unterstützt, gibt der ODBC-Treiber-Manager SQL_ERROR mit SQLSTATE-S1_118 zurück (Driver unterstützt keine asynchrone Benachrichtigung). Wenn der Treiber asynchrone Benachrichtigungen unterstützt, ruft der ODBC-Treiber-Manager den Treiber auf und legt die entsprechenden Attribute SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK und SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT fest.  
   
- Ebenso Ruft eine Anwendung **SQLSetStmtAttr** für ein ODBC-Anweisungs Handle auf und gibt das SQL_ATTR_ASYNC_STMT_EVENT Attribut an, um die asynchrone Benachrichtigung auf Anweisungs Ebene zu aktivieren oder zu deaktivieren. Da eine Anweisungs Funktion immer aufgerufen wird, nachdem die Verbindung hergestellt wurde, gibt **SQLSetStmtAttr** SQL_ERROR mit SQLSTATE S1_118 zurück (der Treiber unterstützt keine asynchrone Benachrichtigung), wenn der entsprechende Treiber keine asynchronen Vorgänge unterstützt oder der Treiber einen asynchronen Vorgang unterstützt, jedoch keine asynchrone Benachrichtigung unterstützt.  
+ In ähnlicher Weise ruft eine Anwendung **SQLSetStmtAttr** für ein ODBC-Anweisungshandle auf und gibt das SQL_ATTR_ASYNC_STMT_EVENT-Attribut an, um asynchrone Benachrichtigungen auf Anweisungsebene zu aktivieren oder zu deaktivieren. Da eine Anweisungsfunktion immer aufgerufen wird, nachdem die Verbindung hergestellt wurde, gibt **SQLSetStmtAttr** sofort SQL_ERROR mit SQLSTATE S1_118 (Driver unterstützt keine asynchrone Benachrichtigung) sofort zurück, wenn der entsprechende Treiber keine asynchronen Vorgänge unterstützt oder der Treiber asynchronen Betrieb unterstützt, aber keine asynchrone Benachrichtigung unterstützt.  
   
 ```  
 SQLRETURN retcode;  
@@ -387,19 +387,19 @@ retcode = SQLSetStmtAttr ( hSTMT,
                            SQL_IS_POINTER);           // length Indicator  
 ```  
   
- SQL_ATTR_ASYNC_STMT_EVENT, die auf NULL festgelegt werden kann, ist ein nur Treiber-Manager-Attribut, das nicht im Treiber festgelegt wird.  
+ SQL_ATTR_ASYNC_STMT_EVENT, die auf NULL festgelegt werden kann, ist ein Nur-Treiber-Attribut, das nicht im Treiber festgelegt wird.  
   
- Der Standardwert SQL_ATTR_ASYNC_STMT_EVENT ist NULL. Wenn der Treiber keine asynchrone Benachrichtigung unterstützt, wird das SQL_ATTR_ASYNC_ STMT_EVENT Attribut SQL_ERROR mit SQLState HY092 (Ungültiger Attribut-/Optionsbezeichner) zurückgegeben.  
+ Der Standardwert von SQL_ATTR_ASYNC_STMT_EVENT ist NULL. Wenn der Treiber keine asynchrone Benachrichtigung unterstützt, gibt das Abrufen oder Festlegen des SQL_ATTR_ASYNC_ STMT_EVENT-Attributs SQL_ERROR mit SQLSTATE HY092 (Ungültiger Attribut-/Optionsbezeichner) zurück.  
   
- Eine Anwendung sollte dem gleichen Ereignis Handle nicht mehr als einem ODBC-Handle zuordnen. Andernfalls geht eine Benachrichtigung verloren, wenn zwei asynchrone ODBC-Funktionsaufrufe für zwei Handles, die dasselbe Ereignis Handle verwenden, ausgeführt werden. Um zu vermeiden, dass ein Anweisungs Handle das gleiche Ereignis Handle vom Verbindungs Handle erbt, gibt ODBC SQL_ERROR mit SQLSTATE IM016 zurück (das Anweisungs Attribut kann nicht in das Verbindungs Handle gesetzt werden), wenn eine Anwendung SQL_ATTR_ASYNC_STMT_EVENT auf einem Verbindungs Handle festlegt.  
+ Eine Anwendung sollte nicht dasselbe Ereignishandle mehr als einem ODBC-Handle zuordnen. Andernfalls geht eine Benachrichtigung verloren, wenn zwei asynchrone ODBC-Funktionsaufrufe für zwei Handles abgeschlossen werden, die dasselbe Ereignishandle verwenden. Um zu vermeiden, dass ein Anweisungshandle dasselbe Ereignishandle vom Verbindungshandle erbt, gibt ODBC SQL_ERROR mit SQLSTATE IM016 zurück (Anweisungsattribut kann nicht in Verbindungshandle festgelegt werden), wenn eine Anwendung SQL_ATTR_ASYNC_STMT_EVENT für ein Verbindungshandle festlegt.  
   
 ### <a name="calling-asynchronous-odbc-functions"></a>Aufrufen von asynchronen ODBC-Funktionen  
- Nachdem Sie die asynchrone Benachrichtigung aktiviert und einen asynchronen Vorgang gestartet haben, kann die Anwendung jede ODBC-Funktion abrufen. Wenn die Funktion zu dem Satz von Funktionen gehört, die den asynchronen Vorgang unterstützen, erhält die Anwendung eine Abschluss Benachrichtigung, sobald der Vorgang abgeschlossen ist, unabhängig davon, ob die Funktion fehlgeschlagen ist oder erfolgreich war.  Die einzige Ausnahme besteht darin, dass die Anwendung eine ODBC-Funktion mit einer ungültigen Verbindung oder einem ungültigen Anweisungs Handle aufruft. In diesem Fall erhält ODBC das Ereignis Handle nicht und legt es auf den signalisierten Zustand fest.  
+ Nach dem Aktivieren der asynchronen Benachrichtigung und dem Starten eines asynchronen Vorgangs kann die Anwendung jede ODBC-Funktion aufrufen. Wenn die Funktion zu den Funktionen gehört, die den asynchronen Vorgang unterstützen, erhält die Anwendung eine Abschlussbenachrichtigung, wenn der Vorgang abgeschlossen ist, unabhängig davon, ob die Funktion fehlgeschlagen oder erfolgreich war.  Die einzige Ausnahme ist, dass die Anwendung eine ODBC-Funktion mit einem ungültigen Verbindungs- oder Anweisungshandle aufruft. In diesem Fall erhält ODBC den Ereignishandle nicht und setzt es auf den signalisierten Zustand.  
   
- Die Anwendung muss sicherstellen, dass das zugeordnete Ereignis Objekt in einem nicht signalisierten Zustand ist, bevor ein asynchroner Vorgang für das entsprechende ODBC-Handle gestartet wird. Das Ereignis Objekt wird von ODBC nicht zurückgesetzt.  
+ Die Anwendung muss sicherstellen, dass sich das zugeordnete Ereignisobjekt in einem nicht signalisierten Zustand befindet, bevor ein asynchroner Vorgang für das entsprechende ODBC-Handle gestartet wird. ODBC setzt das Ereignisobjekt nicht zurück.  
   
-### <a name="getting-notification-from-odbc"></a>Benachrichtigung von ODBC erhalten  
- Ein Anwendungs Thread kann **WaitForSingleObject** zum warten auf ein Ereignis handle oder **WaitForMultipleObjects** zum warten auf ein Array von Ereignis Handles und angehalten, bis ein oder alle der Ereignis Objekte signalisiert werden oder das Timeout Intervall abläuft.  
+### <a name="getting-notification-from-odbc"></a>Abrufen von Benachrichtigungen von ODBC  
+ Ein Anwendungsthread kann **WaitForSingleObject** aufrufen, um auf ein Ereignishandle zu warten, oder **WaitForMultipleObjects** aufrufen, um auf ein Array von Ereignishandles zu warten und angehalten zu werden, bis eines oder alle Ereignisobjekte signalisiert werden oder das Timeoutintervall verstreicht.  
   
 ```  
 DWORD dwStatus = WaitForSingleObject(  

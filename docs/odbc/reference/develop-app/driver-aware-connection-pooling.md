@@ -1,5 +1,5 @@
 ---
-title: Treiber fähiges Verbindungs Pooling | Microsoft-Dokumentation
+title: Treiber-Aware-Verbindungspooling | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,34 +8,34 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5dee7ee2b08e4b3b0249ede7f999cfb23d8db944
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 70b70c841f37bd69179137c807c0dadcfd932d2b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68047053"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287600"
 ---
 # <a name="driver-aware-connection-pooling"></a>Treiberfähiges Verbindungspooling
-Treiber fähiges Verbindungspooling ist ein neues Feature des Treiber-Managers in Windows 8. Treiber fähiges Verbindungspooling ermöglicht es Treiber Entwicklern, das Verbindungspooling Verhalten in Ihrem ODBC-Treiber anzupassen.  
+Treiber-fähiges Verbindungspooling ist eine neue Funktion des Treiber-Managers in Windows 8. Das treiberbewusste Verbindungspooling ermöglicht es Treiberautoren, das Verbindungspoolverhalten in ihrem ODBC-Treiber anzupassen.  
   
 > [!NOTE]  
->  Treiber fähiges Verbindungspooling wird bei der Cursor Bibliothek nicht unterstützt. Eine Anwendung empfängt eine Fehlermeldung, wenn versucht wird, die Cursor Bibliothek über SQLSetConnectAttr zu aktivieren, wenn das Verbindungspooling für Treiber aktiviert ist.  
+>  Treiberfähiges Verbindungspooling wird mit der Cursorbibliothek nicht unterstützt. Eine Anwendung erhält eine Fehlermeldung, wenn sie versucht, die Cursorbibliothek über SQLSetConnectAttr zu aktivieren, wenn das treiberbewusste Verbindungspooling aktiviert ist.  
   
- Treiber fähiges Verbindungspooling behandelt die folgenden Probleme im Zusammenhang mit dem Treiber-Manager-Verbindungspooling:  
+ Das treiberbewusste Verbindungspooling behebt die folgenden Probleme im Zusammenhang mit dem Treiber-Manager-Verbindungspooling:  
   
- **Pool Fragmentierung** Der Treiber-Manager gibt nur dann eine Verbindung aus dem Pool zurück, wenn es sich um eine genaue Entsprechung mit der Verbindungs Zeichenfolge einer neuen Verbindungsanforderung handelt.  Ein Grund dafür, dass der Treiber-Manager eine genaue Entsprechung erfordert, ist, dass der Treiber-Manager nicht alle treiberspezifischen Verbindungs Zeichenfolgen-Schlüsselwörter und deren Wert versteht.  Einige Schlüsselwort Werte für Verbindungs Zeichenfolgen (z. b. der Name der Datenbank) erfordern jedoch möglicherweise keine genaue Entsprechung, da der Treiber die Datenbank in weniger Zeit ändern kann, die zum Öffnen einer neuen Verbindung benötigt wird (der genaue Zeitunterschied hängt von der Datenquelle ab). Und Unterschiede in einigen Verbindungs Attributen (z. b. SQL_ATTR_CURRENT_CATALOG) können mehr Zeit in Anspruch nehmen als die Unterschiede in anderen Attributen (z. b. SQL_ATTR_LOGIN_TIMEOUT). Dies kann auch verhindern, dass der Treiber-Manager die kostengünstigste, wiederverwendbare Verbindung aus dem Pool verwendet. Wenn ein Treiber viele neue Verbindungen erstellen muss, kann die Leistung einer Anwendung verringert werden, und die Skalierbarkeit der Datenquelle kann abnehmen. Die Pool Fragmentierung kann mit dem Treiber fähigen Verbindungspooling reduziert werden, da ein Treiber die Kosten für die Wiederverwendung einer Verbindung im Pool für eine Verbindungsanforderung besser einschätzen kann.  
+ **Poolfragmentierung** Der Treiber-Manager gibt eine Verbindung aus dem Pool nur dann zurück, wenn es sich um eine exakte Übereinstimmung mit der Verbindungszeichenfolge einer neuen Verbindungsanforderung handelt.  Ein Grund für den Treiber-Manager, eine genaue Übereinstimmung zu verlangen, ist, dass der Treiber-Manager nicht jedes treiberspezifische Verbindungszeichenfolgenschlüsselwort und seinen Wert versteht.  Einige Schlüsselwortwerte für Verbindungszeichenfolgen (z. B. der Name der Datenbank) erfordern jedoch möglicherweise keine genaue Übereinstimmung, da der Treiber die Datenbank in weniger als der Zeit ändern kann, die zum Öffnen einer neuen Verbindung erforderlich ist (die genaue Zeitdifferenz hängt von der Datenquelle ab). Und Unterschiede in einigen Verbindungsattributen (z. B. SQL_ATTR_CURRENT_CATALOG) können mehr Zeit in Anspruch nehmen, sich zu ändern, als Unterschiede in anderen Attributen (z. B. SQL_ATTR_LOGIN_TIMEOUT). Auch dies kann verhindern, dass der Treiber-Manager die kostengünstigste, wiederverwendbare Verbindung aus dem Pool verwendet. Wenn ein Treiber viele neue Verbindungen erstellen muss, kann die Leistung einer Anwendung und die Skalierbarkeit der Datenquelle verringern. Die Poolfragmentierung kann durch fahrerbewusstes Verbindungspooling reduziert werden, da ein Treiber die Kosten für die Wiederverwendung einer Verbindung im Pool für eine Verbindungsanforderung besser abschätzen kann.  
   
- **Keine Berücksichtigung der Anwendungs** Einstellung Einige Datenquellen können neue Verbindungen effizient öffnen (im Gegensatz zum Zurücksetzen einiger Attribute). Daher kann es sein, dass eine Anwendung eine neue Verbindung öffnet, anstatt zu versuchen, eine nicht übereinstimmende Verbindung aus dem Pool wiederzuverwenden und einige Werte zurückzusetzen (obwohl dies während der Initialisierungs Phrase des Verbindungspools langsamer sein kann). Bei einigen Anwendungen wird der Server jedoch möglicherweise kleiner, und es werden weniger Verbindungen geöffnet, obwohl es möglicherweise zu größeren Kosten kommt, um die Konflikte für das korrekte Verhalten zu beheben. Ohne Treiber fähiges Verbindungspooling können Sie diese Art von Vorgängen nicht effektiv angeben, da der Treiber-Manager nicht alle treiberspezifischen Verbindungs Attribute erkennt. Treiber fähiges Verbindungspooling ermöglicht einem Treiber das Abrufen der Benutzereinstellungen (mit einem treiberspezifischen Attribut von SQLSetConnectAttr), um die Kosten für die Wiederverwendung einer Verbindung aus dem Pool basierend auf der Benutzereinstellung besser einschätzen zu können.  
+ **Keine Berücksichtigung der Anwendungspräferenz** Einige Datenquellen können effizient neue Verbindungen öffnen (im Vergleich zum Zurücksetzen einiger Attribute), daher kann es vorkommen, dass eine Anwendung eine neue Verbindung öffnet, anstatt zu versuchen, eine leicht übereinstimmende Verbindung aus dem Pool wiederzuverwenden und einige Werte zurückzusetzen (obwohl dies während der Initialisierungsphrase des Verbindungspools möglicherweise langsamer ist). Einige Anwendungen können jedoch die Serverlast kleiner halten und weniger Verbindungen öffnen, obwohl es möglicherweise höhere Kosten für die Behebung der Inkongruenzen für das korrekte Verhalten gibt. Ohne treiberorientiertes Verbindungspooling können Sie diese Art von Voreinstellung nicht effektiv angeben, da der Treiber-Manager nicht alle treiberspezifischen Verbindungsattribute erkennt. Das treiberorientierte Verbindungspooling ermöglicht es einem Treiber, die Benutzereinstellung (mit einem treiberspezifischen Attribut von SQLSetConnectAttr) abzuerhalten, sodass er die Kosten für die Wiederverwendung einer Verbindung aus dem Pool basierend auf den Einstellungen eines Benutzers besser abschätzen kann.  
   
- Weitere Informationen zum Treiber fähigen Verbindungspooling finden Sie unter [entwickeln von Verbindungs Pool Informationen in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ Weitere Informationen zum treiberbewussten Verbindungspooling finden Sie unter [Entwickeln von Verbindungspool-Awareness in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
 ## <a name="determining-driver-support"></a>Bestimmen der Treiberunterstützung  
- Treiber fähiges Verbindungspooling ist ein optionales Feature, das von einem Treiber möglicherweise nicht unterstützt wird. Verwenden Sie den SQL_DRIVER_AWARE_POOLING_SUPPORTED *InfoType* von [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), um zu bestimmen, ob er von einem Treiber unterstützt wird.  
+ Treiber-fähiges Verbindungspooling ist eine optionale Funktion, die ein Treiber möglicherweise nicht unterstützt. Um zu ermitteln, ob ein Treiber dies unterstützt, verwenden Sie den SQL_DRIVER_AWARE_POOLING_SUPPORTED *InfoType* von [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
   
-## <a name="how-to-enable-driver-aware-connection-pooling"></a>Aktivieren von Treiber fähiger Verbindungs Pooling  
- Eine Anwendung kann die Verbindung mit dem Verbindungspooling eines Treibers verwenden, indem das SQL_ATTR_CONNECTION_POOLING-Attribut auf SQL_CP_DRIVER_AWARE mit [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)festgelegt wird. Wenn ein Treiber keine Informationen zum Verbindungspool unterstützt, wird das Verbindungspooling des Treiber-Managers verwendet (identisch mit der Angabe, ob SQL_CP_ONE_PER_HENV statt SQL_CP_DRIVER_AWARE). Diese Funktion kann von ODBC 2. x-und 3. x-Anwendungen aktiviert werden.  
+## <a name="how-to-enable-driver-aware-connection-pooling"></a>So aktivieren Sie das Pooling für treiberbewusste Verbindungen  
+ Eine Anwendung kann die Verbindungspool-Awareness eines Treibers verwenden, indem sie das Attribut SQL_ATTR_CONNECTION_POOLING auf SQL_CP_DRIVER_AWARE mit [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). Wenn ein Treiber die Bekanntheit des Verbindungspools nicht unterstützt, wird das Driver Manager-Verbindungspooling verwendet (so, als ob SQL_CP_ONE_PER_HENV angegeben wurde, anstatt SQL_CP_DRIVER_AWARE). ODBC 2.x- und 3.x-Anwendungen können diese Funktion aktivieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Entwickeln eines ODBC-Treibers](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
+ [Developing an ODBC Driver (Entwickeln eines ODBC-Treibers)](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

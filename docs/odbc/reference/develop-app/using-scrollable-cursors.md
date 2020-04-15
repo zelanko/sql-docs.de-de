@@ -1,5 +1,5 @@
 ---
-title: Verwenden von scrollfähigen Cursorn | Microsoft-Dokumentation
+title: Verwenden von scrollbaren Cursorn | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 33f2050be5a0fb1b6d58bf00dd8c76c33219a237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a73f001146691edb8a59d8eee503ae3762fc541
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079570"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289131"
 ---
 # <a name="using-scrollable-cursors"></a>Verwenden von scrollbaren Cursor
 Die Verwendung eines scrollbaren Cursors erfordert die folgenden drei Schritte:  
   
-1.  Bestimmen Sie die Cursor Funktionen.  
+1.  Bestimmen Sie die Cursorfunktionen.  
   
 2.  Richten Sie den Cursor ein.  
   
 3.  Scrollen und Abrufen von Zeilen.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Festlegen der Cursorfähigkeiten](../../../odbc/reference/develop-app/determining-cursor-capabilities.md)  
   

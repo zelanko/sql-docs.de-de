@@ -1,5 +1,5 @@
 ---
-title: Einschränkungen für Bezeichner | Microsoft-Dokumentation
+title: Einschränkungen von Bezeichnern | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: b3466382-71cb-4f82-8318-092a8fcef3df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 251ae0e4e94cec903e2c4b5cf687ed9b8b41dfc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7154f2db09b69e6376b1fe3af1de3f2c646ee94e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952391"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286250"
 ---
 # <a name="identifiers-limitations"></a>Einschränkungen für Bezeichner
-Wenn ein Bezeichner ein Leerzeichen oder ein spezielles Symbol enthält, muss der Bezeichner in backanführungs Zeichen eingeschlossen werden. Ein gültiger Name ist eine Zeichenfolge, die nicht länger als 64 Zeichen ist, deren erstes Zeichen kein Leerzeichen sein darf. Gültige Namen dürfen keine Steuerzeichen oder die folgenden Sonderzeichen enthalten: "&#124; # *? [ ] . ! $ .  
+Wenn ein Bezeichner ein Leerzeichen oder ein spezielles Symbol enthält, muss der Bezeichner in annullierungen Zeichenzeichen eingeschlossen werden. Ein gültiger Name ist eine Zeichenfolge mit nicht mehr als 64 Zeichen, von denen das erste Zeichen kein Leerzeichen sein darf. Gültige Namen dürfen keine Steuerzeichen oder die folgenden Sonderzeichen enthalten: ' &#124; * ? [ ] . ! $ .  
   
- Verwenden Sie die in der SQL-Grammatik aufgelisteten reservierten Wörter in Anhang C der *ODBC-Programmier Referenz* (oder Kurzform der reservierten Wörter) nicht als Bezeichner (d. h. Tabellen-oder Spaltennamen), es sei denn, Sie schließen das Wort in Anführungszeichen (') ein.
+ Verwenden Sie die reservierten Wörter, die in der SQL-Grammatik in Anhang C der *ODBC-Programmiererreferenz* aufgeführt sind (oder die Kurzform dieser reservierten Wörter), nicht als Bezeichner (d. h. Tabellen- oder Spaltennamen), es sei denn, Sie umgeben das Wort in Anführungszeichen (').

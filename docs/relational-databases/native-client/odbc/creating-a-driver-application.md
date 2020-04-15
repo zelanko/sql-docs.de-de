@@ -1,5 +1,5 @@
 ---
-title: Erstellen SQL Native Client ODBC-App
+title: SQL Native Client ODBC-App erstellen
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - ODBC, driver extensions
 - function calls [ODBC]
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cf46cdf2fb658623a549f3eef160ae6293ab9c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1b210066caedef8a1efe6c702860f434f483269a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247391"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303731"
 ---
 # <a name="creating-a-driver-application"></a>Erstellen einer Treiberanwendung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "75247391"
 |Treiber|Verarbeitet alle ODBC-Funktionsaufrufe von der Anwendung, stellt eine Verbindung zu einer Datenquelle her, übergibt SQL-Anweisungen von der Anwendung an die Datenquelle und gibt Ergebnisse an die Anwendung zurück. Bei Bedarf übersetzt der Treiber ODBC SQL-Code von der Anwendung in den von der Datenquelle verwendeten systemeigenen SQL-Code.|  
 |Datenquelle|Enthält alle Informationen, die ein Treiber für den Zugriff auf eine bestimmte Instanz der Daten in einem DBMS benötigt.|  
   
- Eine Anwendung, die den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber für die Kommunikation mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einer Instanz von verwendet, führt die folgenden Aufgaben aus:  
+ Eine Anwendung, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die den nativen Client-ODBC-Treiber verwendet, um mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu kommunizieren, führt die folgenden Aufgaben aus:  
   
 -   Verbindung mit einer Datenquelle  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75247391"
   
 -   Beenden der Verbindung mit der Datenquelle  
   
- Eine komplexere Anwendung, die für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber geschrieben wurde, kann auch die folgenden Aufgaben ausführen:  
+ Eine komplexere Anwendung, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die für den Native Client ODBC-Treiber geschrieben wurde, kann auch die folgenden Aufgaben ausführen:  
   
 -   Verwenden von Cursorn, um die Position in einem Resultset zu bestimmen  
   
@@ -67,9 +67,9 @@ ms.locfileid: "75247391"
   
 -   Aufrufen von Katalogfunktionen für die Abfrage der Attribute eines Resultsets  
   
--   Ausführen von Massen Kopier Vorgängen  
+-   Ausführen von Massenkopiervorgängen  
   
--   Verwalten von großen Daten Vorgängen (**varchar (max)**, **nvarchar (max)** und **varbinary (max)** -Spalten)  
+-   Verwalten großer Datenvorgänge (**varchar(max)**, **nvarchar(max)** und **varbinary(max)**  
   
 -   Verwenden einer Logik zum Wiederherstellen einer Verbindung, um bei der Konfiguration der Datenbankspiegelung ein Failover zu ermöglichen  
   
@@ -77,23 +77,21 @@ ms.locfileid: "75247391"
   
  Um ODBC-Funktionen aufrufen können, muss eine C- oder C++-Anwendung die Headerdateien sql.h, sqlext.h und sqltypes.h enthalten. Um API-Funktionen des ODBC-Installationsprogramms aufrufen zu können, muss eine Anwendung die Headerdatei odbcinst.h enthalten. Eine ODBC-Unicode-Anwendung muss die Headerdatei sqlucode.h enthalten. ODBC-Anwendungen müssen mit der Datei odbc32.lib verknüpft werden. ODBC-Anwendungen, die API-Funktionen des ODBC-Installationsprogramms aufrufen, müssen mit der Datei odbccp32.lib verknüpft werden. Diese Dateien sind im Windows Platform SDK enthalten.  
   
- Viele ODBC-Treiber, einschließlich [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des Native Client-ODBC-Treibers, bieten Treiber spezifische ODBC-Erweiterungen. Um die Vorteile von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-treiberspezifischen Erweiterungen zu nutzen, sollte eine Anwendung die Header Datei sqlncli. h enthalten. Diese Headerdatei enthält Folgendes:  
+ Viele ODBC-Treiber, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einschließlich des Native Client ODBC-Treibers, bieten treiberspezifische ODBC-Erweiterungen an. Um die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Vorteile von Treiber-spezifischen Erweiterungen für native Client ODBC nutzen zu können, sollte eine Anwendung die Headerdatei sqlncli.h enthalten. Diese Headerdatei enthält Folgendes:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client-ODBC-Treiber spezifische Verbindungs Attribute.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC-Treiber-spezifische Verbindungsattribute.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client-ODBC-Treiber spezifische Anweisungs Attribute.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC-Treiber-spezifische Anweisungsattribute.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client-ODBC-Treiber spezifische Spalten Attribute.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC-Treiber-spezifische Spaltenattribute.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische Datentypen  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische Datentypen  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische, benutzerdefinierte Datentypen  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische, benutzerdefinierte Datentypen  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client-ODBC-Treiber spezifische [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) -Typen.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC-Treiber-spezifische [SQLGetInfo-Typen.](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Diagnose Felder für Native Client-ODBC-Treiber.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC-Treiberdiagnosefelder.  
   
 -   Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spezifische, dynamische Diagnosefunktionscodes  
   
@@ -105,14 +103,14 @@ ms.locfileid: "75247391"
   
 -   Aufrufen der API-Funktionen für verteilte Abfragemetadaten für Listen mit verknüpften Servern und den zugehörigen Katalogen  
   
- Jede C-oder C++-ODBC-Anwendung, die die Massen Kopier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Funktion des Native Client ODBC-Treibers verwendet, muss mit der Datei sqlncli11. lib verknüpft werden. Anwendungen, die die API-Funktionen für verteilte Abfragemetadaten aufrufen, müssen ebenfalls mit der Datei sqlncli11.lib verknüpft werden. Die Dateien sqlncli. h und sqlncli11. lib werden als Teil der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Entwicklertools verteilt. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verzeichnisse Include und Lib müssen sich wie im folgenden Beispiel in den Verzeichnissen INCLUDE und LIB des Compilers befinden:  
+ Jede C- oder C++-ODBC-Anwendung, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die die Massenkopierfunktion des Native Client ODBC-Treibers verwendet, muss mit der Datei sqlncli11.lib verknüpft werden. Anwendungen, die die API-Funktionen für verteilte Abfragemetadaten aufrufen, müssen ebenfalls mit der Datei sqlncli11.lib verknüpft werden. Die Dateien sqlncli.h und sqlncli11.lib werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als Teil der Entwicklertools verteilt. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verzeichnisse Include und Lib müssen sich wie im folgenden Beispiel in den Verzeichnissen INCLUDE und LIB des Compilers befinden:  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- Ob es erforderlich ist, dass bei der Anwendung mehrere ODBC-Aufrufe gleichzeitig ausstehen können, ist eine Entwurfsentscheidung, die früh im Prozess der Erstellung einer Anwendung getroffen werden muss. Es gibt zwei Methoden zur Unterstützung mehrerer gleichzeitiger ODBC-Aufrufe, die in den verbleibenden Themen dieses Abschnitts beschrieben werden. Weitere Informationen finden Sie in der [ODBC Programmer es Reference](https://go.microsoft.com/fwlink/?LinkId=45250).  
+ Ob es erforderlich ist, dass bei der Anwendung mehrere ODBC-Aufrufe gleichzeitig ausstehen können, ist eine Entwurfsentscheidung, die früh im Prozess der Erstellung einer Anwendung getroffen werden muss. Es gibt zwei Methoden zur Unterstützung mehrerer gleichzeitiger ODBC-Aufrufe, die in den verbleibenden Themen dieses Abschnitts beschrieben werden. Weitere Informationen finden Sie in der [ODBC-Programmiererreferenz](https://go.microsoft.com/fwlink/?LinkId=45250).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -121,6 +119,6 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
 -   [Multithreadanwendungen](../../../relational-databases/native-client/odbc/creating-a-driver-application-multithreaded-applications.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client &#40;ODBC-&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

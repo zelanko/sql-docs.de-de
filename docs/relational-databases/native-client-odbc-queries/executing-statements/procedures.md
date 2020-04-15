@@ -1,5 +1,5 @@
 ---
-title: Prozeduren | Microsoft-Dokumentation
+title: Verfahren | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - statements [ODBC], stored procedures
 - ODBC applications, stored procedures
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66db10c8ac64fee4e6e9ccbc405ab5b804adb32a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 59d971f4d835470924874b0a08a648d36d98c0f9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779522"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297911"
 ---
 # <a name="procedures"></a>Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Eine gespeicherte Prozedur ist ein vorkompiliertes ausführbares Objekt, das eine oder mehrere [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen enthält. Gespeicherte Prozeduren können Ein- und Ausgabeparameter enthalten und auch einen ganzzahligen Rückgabecode ausgeben. Eine Anwendung kann kann mithilfe von Katalogfunktionen verfügbare gespeicherte Prozeduren auflisten.  
   
- ODBC-Anwendungen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sollten gespeicherte Prozeduren nur mithilfe der direkten Ausführung aufrufen. Bei einer Verbindung mit früheren Versionen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]von implementiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Native Client-ODBC-Treiber die [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360) , indem eine temporäre gespeicherte Prozedur erstellt wird, die dann für **SQLExecute**aufgerufen wird. Es erhöht den Aufwand, damit **SQLPrepare** eine temporäre gespeicherte Prozedur erstellt, die nur die gespeicherte Ziel Prozedur aufruft und die gespeicherte Ziel Prozedur direkt ausführt. Selbst bei einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss der Aufruf eines zusätzlichen Roundtrips durch das Netzwerk vorbereitet und ein Ausführungsplan, mit dem nur der Ausführungsplan der gespeicherten Prozedur aufgerufen wird, erstellt werden.  
+ ODBC-Anwendungen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sollten gespeicherte Prozeduren nur mithilfe der direkten Ausführung aufrufen. Wenn eine Verbindung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] früheren Versionen von hergestellt wird, implementiert der native Client ODBC-Treiber [die SQLPrepare-Funktion,](https://go.microsoft.com/fwlink/?LinkId=59360) indem eine temporäre gespeicherte Prozedur erstellt wird, die dann auf **SQLExecute**aufgerufen wird. Es erhöht den Aufwand, dass **SQLPrepare** eine temporäre gespeicherte Prozedur erstellt, die nur die gespeicherte Zielprozedur aufruft, anstatt die gespeicherte Zielprozedur direkt auszuführen. Selbst bei einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss der Aufruf eines zusätzlichen Roundtrips durch das Netzwerk vorbereitet und ein Ausführungsplan, mit dem nur der Ausführungsplan der gespeicherten Prozedur aufgerufen wird, erstellt werden.  
   
  Beim Ausführen einer gespeicherten Prozedur sollten ODBC-Anwendungen die ODBC CALL-Syntax verwenden. Der Treiber ist für die Verwendung eines Remoteprozeduraufrufsmechanismus zum Aufrufen der Prozedur optimiert, sofern die ODBC CALL-Syntax verwendet wird. Dies ist effizienter als der Mechanismus, der verwendet wird, um eine [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE-Anweisung an den Server zu senden.  
   

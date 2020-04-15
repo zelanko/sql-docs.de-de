@@ -12,18 +12,18 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5f1aabd23a587e681c33aed4b4119523444219
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 093cb7352a7f509b0afcc061e2691311bb183169
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402610"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298130"
 ---
 # <a name="odbc-driver-for-oracle"></a>ODBC-Treiber für Oracle
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den [ODBC-Treiber von Oracle](https://www.oracle.com/database/technologies/releasenote-odbc-ic.html).  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
  Mit dem Microsoft® ODBC-Treiber für Oracle können Sie Ihre ODBC-kompatible Anwendung mit einer Oracle-Datenbank verbinden. Der ODBC-Treiber für Oracle entspricht der ODBC-Spezifikation (Open Database Connectivity), die in der *ODBC-Programmiererreferenz*beschrieben ist. Es ermöglicht den Zugriff auf PL/SQL-Pakete, XA/DTC-Integration und Oracle-Zugriff über Internet Information Services (IIS).  
   

@@ -1,5 +1,5 @@
 ---
-title: Beispiel für Treiber-Manager-Diagnose | Microsoft-Dokumentation
+title: Treiber-Manager-Diagnosebeispiel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: af8f2d35-d1bf-495c-af25-630654542b7d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 95392367b70af3eb820f0943af5dc668783a3fe5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 839095e5544cab73cdddd4f4b17a3d8d52136c9c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046959"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305811"
 ---
 # <a name="driver-manager-diagnostic-example"></a>Beispiel für die Diagnose des Treiber-Managers
-Der Treiber-Manager kann auch Diagnosemeldungen generieren. Wenn eine Anwendung z. b. eine ungültige Richtungs Option an **SQLDataSources**übergeben hat, kann der Treiber-Manager die folgenden Werte von **SQLGetDiagRec**formatieren und zurückgeben:  
+Der Treiber-Manager kann auch Diagnosemeldungen generieren. Wenn z. B. eine Anwendung eine Option für ungültige Richtung an **SQLDataSources**übergeben hat, kann der Treiber-Manager die folgenden Werte aus **SQLGetDiagRec**formatieren und zurückgeben:  
   
 ```  
 SQLSTATE:         "HY103"  
@@ -30,4 +30,4 @@ Native Error:      0
 Diagnostic Msg:   "[Microsoft][ODBC Driver Manager]Direction option out of range"  
 ```  
   
- Da der Fehler im Treiber-Manager aufgetreten ist, wurden der Diagnose Meldung für den Hersteller ([Microsoft]) und dessen Bezeichner ([ODBC Driver Manager]) Präfixe hinzugefügt.
+ Da der Fehler im Treiber-Manager aufgetreten ist, wurden der Diagnosenachricht für den Hersteller ([Microsoft]) und dem Bezeichner ([ODBC Driver Manager]) Präfixe hinzugefügt.

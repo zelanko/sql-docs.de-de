@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren von Daten mit SQLBulkOperations | Microsoft-Dokumentation
+title: Aktualisieren von Daten mit SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,27 +12,27 @@ helpviewer_keywords:
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d1aa9b3300cba78f34e876a8501dbaaa421390a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b96e3a43b8385910e4260cf51dea7e4ff508200
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091665"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298484"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>Aktualisieren von Daten mit SQLBulkOperations
-Anwendungen können mithilfe eines Aufrufs von **SQLBulkOperations**Massen Aktualisierungs-, Lösch-, Abruf-oder Einfügevorgänge für die zugrunde liegende Tabelle in der Datenquelle ausführen. Das Aufrufen von **SQLBulkOperations** ist eine bequeme Alternative zum Erstellen und Ausführen einer SQL-Anweisung. Ein ODBC-Treiber kann positionierte Updates auch dann unterstützen, wenn die Datenquelle keine positionierten SQL-Anweisungen unterstützt. Es ist Teil des Paradigmas, mithilfe von Funktionsaufrufen den gesamten Datenbankzugriff zu erreichen.  
+Anwendungen können Massenaktualisierungs-, Lösch-, Abruf- oder Einfügevorgänge für die zugrunde liegende Tabelle in der Datenquelle mit einem Aufruf von **SQLBulkOperations**ausführen. Das Aufrufen von **SQLBulkOperations** ist eine praktische Alternative zum Erstellen und Ausführen einer SQL-Anweisung. Es ermöglicht einem ODBC-Treiber die Unterstützung positionierter Updates, auch wenn die Datenquelle keine positionierten SQL-Anweisungen unterstützt. Es ist Teil des Paradigmas, einen vollständigen Datenbankzugriff durch Funktionsaufrufe zu erreichen.  
   
- **SQLBulkOperations** arbeitet mit dem aktuellen Rowset und kann nur nach einem **SQLFetch** -oder **SQLFetchScroll**-Aufrufs verwendet werden. Die Anwendung gibt die Zeilen an, die aktualisiert, gelöscht oder aktualisiert werden sollen, indem Ihre Lesezeichen zwischengespeichert werden. Der Treiber ruft die neuen Daten für zu Aktualisier Ende Zeilen oder die neuen Daten, die in die zugrunde liegende Tabelle eingefügt werden sollen, aus den rowsetpuffern ab.  
+ **SQLBulkOperations** arbeitet mit dem aktuellen Rowset und kann nur nach einem Aufruf von **SQLFetch** oder **SQLFetchScroll**verwendet werden. Die Anwendung gibt die Zeilen an, die aktualisiert, gelöscht oder aktualisiert werden sollen, indem ihre Lesezeichen zwischengespeichert werden. Der Treiber ruft die neuen Daten für zu aktualisierende Zeilen oder die neuen Daten, die in die zugrunde liegende Tabelle eingefügt werden sollen, aus den Rowsetpuffern ab.  
   
- Die Rowsetgröße, die von **SQLBulkOperations** verwendet werden soll, wird durch einen-Befehl von **SQLSetStmtAttr** mit dem *Attribut* Argument SQL_ATTR_ROW_ARRAY_SIZE festgelegt. Anders als bei **SQLSetPos**, bei dem nur nach einem **SQLFetch** -oder **SQLFetchScroll**-Befehl eine neue Rowsetgröße verwendet wird, verwendet **SQLBulkOperations** nach dem Aufrufen von **SQLSetStmtAttr**die neue Rowsetgröße.  
+ Die von **SQLBulkOperations** zu verwendende Rowsetgröße wird durch einen Aufruf von **SQLSetStmtAttr** mit dem *Attributargument* SQL_ATTR_ROW_ARRAY_SIZE festgelegt. Im Gegensatz zu **SQLSetPos**, das eine neue Rowsetgröße erst nach einem Aufruf von **SQLFetch** oder **SQLFetchScroll**verwendet, verwendet **SQLBulkOperations** die neue Rowsetgröße nach dem Aufruf von **SQLSetStmtAttr**.  
   
- Da die meisten Interaktionen mit relationalen Datenbanken mit SQL durchgeführt werden, wird **SQLBulkOperations** nicht häufig unterstützt. Ein Treiber kann ihn jedoch problemlos emulieren, indem er eine **Update**-, **Delete**-oder **Insert** -Anweisung erstellt und ausführt.  
+ Da die meisten Interaktionen mit relationalen Datenbanken über SQL erfolgen, wird **SQLBulkOperations** nicht umfassend unterstützt. Ein Treiber kann ihn jedoch leicht emulieren, indem er eine **UPDATE-,** **DELETE-** oder **INSERT-Anweisung** erstellt und ausführt.  
   
- Um zu ermitteln, welche Vorgänge von **sqlbulkoperation** unterstützt werden, ruft eine Anwendung **SQLGetInfo** mit der Option SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 oder SQL_STATIC_CURSOR_ATTRIBUTES1 Information auf (je nach Cursortyp).  
+ Um zu bestimmen, welche Vorgänge **SQLBulkOperation** unterstützt, ruft eine Anwendung SQLGetInfo mit der **SQL_DYNAMIC_CURSOR_ATTRIBUTES1-,** SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1-, SQL_KEYSET_CURSOR_ATTRIBUTES1- oder SQL_STATIC_CURSOR_ATTRIBUTES1-Informationsoption auf (je nach Typ des Cursors).  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Aktualisieren von Zeilen durch Textmarken mit SQLBulkOperations](../../../odbc/reference/develop-app/updating-rows-by-bookmark-with-sqlbulkoperations.md)  
   

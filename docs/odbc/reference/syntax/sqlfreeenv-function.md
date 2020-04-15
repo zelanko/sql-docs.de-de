@@ -1,5 +1,5 @@
 ---
-title: Sqlfreenv-Funktion | Microsoft-Dokumentation
+title: SQLFreeEnv-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - SQLFreeEnv function [ODBC]
 ms.assetid: 32000150-e120-445e-b269-43200f813b2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f5158799441fb0cb8d0ab4f0119b1b1ecdb94dc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6f036c6feca31985afdddddb63df683f6c0daae
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002950"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81285800"
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv-Funktion
-**Konformitäts**  
- Eingeführte Version: ODBC 1,0 Standards Compliance: deprecated  
+**Konformität**  
+ Eingeführte Version: ODBC 1.0-Standards-Konformität: Veraltet  
   
  **Zusammenfassung**  
- In ODBC *3. x*wurde die ODBC 2,0-Funktion **sqlfreeenv** durch **SQLFreeHandle**ersetzt. Weitere Informationen finden Sie unter [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ In ODBC *3.x*wurde die ODBC 2.0-Funktion **SQLFreeEnv** durch **SQLFreeHandle**ersetzt. Weitere Informationen finden Sie unter [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 > [!NOTE]
->  Weitere Informationen dazu, was der Treiber-Manager diese Funktion zuordnet, wenn eine ODBC *2. x* -Anwendung mit einem ODBC *3. x* -Treiber arbeitet, finden Sie unter [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Driver Guidelines for abwärts Compatibility.  
+>  Weitere Informationen darüber, was der Treiber-Manager dieser Funktion zuordnet, wenn eine ODBC *2.x-Anwendung* mit einem ODBC *3.x-Treiber* arbeitet, finden Sie unter [Zuordnen veralteter Funktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiberrichtlinien für Abwärtskompatibilität.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

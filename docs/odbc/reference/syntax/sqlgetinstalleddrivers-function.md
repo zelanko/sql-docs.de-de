@@ -1,5 +1,5 @@
 ---
-title: Sqlgetinstalleddrivers-Funktion | Microsoft-Dokumentation
+title: SQLGetInstalledDrivers-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetInstalledDrivers function [ODBC]
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9e7b079e2b66f4e1ba7b3233a6aaa20cd9908a67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 24793473bf4f25253ac11673df852d10cfb2c558
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061526"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303327"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers-Funktion
-**Konformitäts**  
- Eingeführte Version: ODBC 1,0  
+**Konformität**  
+ Eingeführte Version: ODBC 1.0  
   
  **Zusammenfassung**  
- **Sqlgetinstalleddrivers** liest den Abschnitt [ODBC Drivers] der Systeminformationen und gibt eine Liste mit Beschreibungen der installierten Treiber zurück.  
+ **SQLGetInstalledDrivers** liest den Abschnitt [ODBC Drivers] der Systeminformationen und gibt eine Liste der Beschreibungen der installierten Treiber zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,33 +44,33 @@ BOOL SQLGetInstalledDrivers(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *lpszbuf*  
- Ausgeben Liste mit Beschreibungen der installierten Treiber. Weitere Informationen zur Listenstruktur finden Sie unter "comments".  
+ *lpszBuf*  
+ [Ausgabe] Liste der Beschreibungen der installierten Treiber. Informationen zur Listenstruktur finden Sie unter "Kommentare".  
   
- *cbbuf Max*  
- Der Länge von *lpszbuf*.  
+ *cbBufMax*  
+ [Eingabe] Länge von *lpszBuf*.  
   
- *pcbbuf*  
- Ausgeben Die Gesamtanzahl der Bytes (mit Ausnahme des NULL-Terminierungs Byte), die in *lpszbuf*zurückgegeben wurde. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbbufmax*ist, wird die Liste der Treiber Beschreibungen in *lpszbuf* auf *cbbufmax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcbbuf out* -Argument kann ein NULL-Zeiger sein.  
+ *pcbBufOut*  
+ [Ausgabe] Gesamtanzahl der Bytes (mit Ausnahme des Null-Beendigungsbytes), die in *lpszBuf*zurückgegeben wurden. Wenn die Anzahl der zurückzugebenden Bytes größer oder gleich *cbBufMax*ist, wird die Liste der Treiberbeschreibungen in *lpszBuf* auf *cbBufMax* abzüglich des Null-Beendigungszeichens abgeschnitten. Das *Argument pcbBufOut* kann ein Nullzeiger sein.  
   
 ## <a name="returns"></a>Rückgabe  
- Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
+ Die Funktion gibt TRUE zurück, wenn sie erfolgreich ist, FALSE, wenn sie fehlschlägt.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlgetinstalleddrivers** "false" zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **SQLGetInstalledDrivers** FALSE zurückgibt, kann ein zugeordneter * \*pfErrorCode-Wert* abgerufen werden, indem **SQLInstallError**aufgerufen wird. In der folgenden Tabelle sind die * \*pfErrorCode-Werte* aufgeführt, die von **SQLInstallerError** zurückgegeben werden können, und es werden die einzelnen Werte im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pfErrorCode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Das *lpszbuf* -Argument war NULL oder ungültig, oder das *cbbufmax* -Argument war kleiner als oder gleich 0.|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|Komponente wurde in der Registrierung nicht gefunden.|Der Installer konnte den Abschnitt [ODBC Drivers] in der Registrierung nicht finden.|  
-|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines fehlenden Speichers nicht ausführen.|  
+|ODBC_ERROR_GENERAL_ERR|Allgemeiner Installationsfehler|Es ist ein Fehler aufgetreten, für den kein spezifischer Installationsfehler aufgetreten ist.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge|Das *Argument lpszBuf* war NULL oder ungültig, oder das *argument cbBufMax* war kleiner oder gleich 0.|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|Komponente, die in der Registrierung nicht gefunden wurde|Das Installationsprogramm konnte den Abschnitt [ODBC-Treiber] in der Registrierung nicht finden.|  
+|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines Speichermangels nicht ausführen.|  
   
 ## <a name="comments"></a>Kommentare  
- Jede Treiber Beschreibung wird mit einem NULL-Byte beendet, und die gesamte Liste wird mit einem NULL-Byte beendet. (Das heißt, zwei NULL-Bytes markieren das Ende der Liste.) Wenn der zugeordnete Puffer nicht groß genug ist, um die gesamte Liste aufzunehmen, wird die Liste ohne Fehler abgeschnitten. Wenn ein NULL-Zeiger als *lpszbuf*übergeben wird, wird ein Fehler zurückgegeben.  
+ Jede Treiberbeschreibung wird mit einem NULL-Byte beendet, und die gesamte Liste wird mit einem NULL-Byte beendet. (Das heißt, zwei Nullbytes markieren das Ende der Liste.) Wenn der zugewiesene Puffer nicht groß genug ist, um die gesamte Liste aufzunehmen, wird die Liste fehlerfrei abgeschnitten. Ein Fehler wird zurückgegeben, wenn ein Nullzeiger als *lpszBuf*übergeben wird.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
 |Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Zurückgeben von Treiber Beschreibungen und-Attributen|[SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|
+|Zurückgeben von Treiberbeschreibungen und -attributen|[SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|

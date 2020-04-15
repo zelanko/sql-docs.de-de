@@ -1,5 +1,5 @@
 ---
-title: Use a-Anweisung (ODBC) | Microsoft-Dokumentation
+title: Verwenden einer Anweisung (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3624253fa70ca12078a981d694c5e50b5030ce01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 62c422e0fb5c5afe481b2d11a477523ca1466df3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781174"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284360"
 ---
 # <a name="use-a-statement-odbc"></a>Verwenden einer Anweisung (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "73781174"
   
 5.  Führen Sie eine Anweisung direkt mit SQLExecDirect aus.  
   
-     \- oder –  
+     \- oder -  
   
      Wenn die Anweisung vorbereitet wurde, führen Sie sie mehrmals mit [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)aus.  
   
-     \- oder –  
+     \- oder -  
   
      Rufen Sie eine Katalogfunktion auf, die Ergebnisse zurückgibt.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "73781174"
   
      Rufen Sie eine Zeile nach der anderen über das Resultset einer Anweisung ab.  
   
-     \- oder –  
+     \- oder -  
   
      Rufen Sie mehrere Zeilen gleichzeitig über das Resultset mithilfe eines Blockcursors ab.  
   
-     \- oder –  
+     \- oder -  
   
      Rufen Sie [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) auf, um die Anzahl der Zeilen, die von einer INSERT-, UPDATE- oder DELETE-Anweisung betroffen sind, zu bestimmen.  
   
@@ -73,6 +73,6 @@ ms.locfileid: "73781174"
 8.  Rufen Sie [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) mit einem *HandleType* von SQL_HANDLE_STMT auf, um das Anweisungshandle freizugeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gewusst-wie-Themen zum Ausführen von Abfragen &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Ausführen von Abfragen How-to-Topics &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

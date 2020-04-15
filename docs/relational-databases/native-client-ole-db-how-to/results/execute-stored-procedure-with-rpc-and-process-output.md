@@ -1,5 +1,5 @@
 ---
-title: Gespeicherte Prozedur, RPC, Ausgabe
+title: Gespeicherte Prozedur, RPC, Ausgang
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - RPC syntax
 - stored procedures [SQL Server], RPC syntax
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9148f3aca9a5ea66407a2b471516cc4eade16f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 385a0930b817c4f897619903ae1fa8501fa763ce
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244469"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302201"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Ausführen der gespeicherten Prozedur mit dem RPC und der Prozessausgabe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: Unterschlüssel für ODBC-Kern | Microsoft-Dokumentation
+title: ODBC Core Subkey | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - registry entries for components [ODBC], core subkey
 - core subkey [ODBC]
 ms.assetid: 055b31fc-f96c-450b-a596-d4570079fbf2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98c9380083eb5a0ad796f436af271564676b757d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9e6bfcf3c1efa87076e6d3e27a438cde6f794157
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094012"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304054"
 ---
 # <a name="odbc-core-subkey"></a>Unterschlüssel für ODBC-Kernkomponenten
-Der Wert unter dem ODBC Core-Unterschlüssel gibt die Verwendungs Anzahl für die Kernkomponenten an (Treiber-Manager, Cursor Bibliothek, Installer-DLL usw.). Das Format dieses Werts ist in der folgenden Tabelle dargestellt.  
+Der Wert unter dem Unterschlüssel ODBC Core gibt die Verwendungsanzahl für die Kernkomponenten an (Treiber-Manager, Cursorbibliothek, Installations-DLL usw.). Das Format dieses Werts wird in der folgenden Tabelle angezeigt.  
   
-|Name|Datentyp|Data|  
+|Name|Datentyp|Daten|  
 |----------|---------------|----------|  
-|Usagecount|REG_DWORD|*count*|  
+|UsageCount|REG_DWORD|*count*|  
   
- Nehmen wir beispielsweise an, dass die ODBC-Kernkomponenten von den Setup Programmen für drei verschiedene Anwendungen und zwei unterschiedliche Treiber installiert wurden. Der Wert unter dem ODBC Core-Unterschlüssel lautet wie folgt:  
+ Angenommen, die ODBC Core-Komponenten wurden von den Setup-Programmen für drei verschiedene Anwendungen und zwei verschiedene Treiber installiert. Der Wert unter dem Unterschlüssel ODBC Core wäre:  
   
 ```  
 UsageCount : REG_DWORD : 0x5  

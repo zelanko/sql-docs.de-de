@@ -1,5 +1,5 @@
 ---
-title: Standard Unterschlüssel | Microsoft-Dokumentation
+title: Standard-Unterschlüssel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - registry entries for data sources [ODBC], default subkey
 - subkeys [ODBC], default subkey
 ms.assetid: a2259db8-feb7-4f0a-afc8-88e235d86be7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: adcb9175913603a0d13fb2587e62d41b52939042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5bfca9c5c81d94e3d337f8d349fbbd4ceb87dbdc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094203"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298390"
 ---
 # <a name="default-subkey"></a>Standardunterschlüssel
-Die Registrierung kann eine Standarddaten Quelle mit dem Standard Unterschlüssel angeben. Dieser Unterschlüssel ist ein Sonderfall eines unter Schlüssels für die Datenquellen Spezifikation und hat dieselben Werte wie jeder andere Datenquellen Spezifikations Unterschlüssel. Der einzige Unterschied besteht darin, dass er nicht als Wert unter dem Unterschlüssel für ODBC-Datenquellen aufgeführt ist.
+Die Registrierung kann eine Standarddatenquelle mit dem Standardunterschlüssel angeben. Dieser Unterschlüssel ist ein Sonderfall eines Datenquellenspezifikationsunterschlüssels und hat die gleichen Werte wie jeder andere Unterschlüssel für die Datenquellenspezifikation. Der einzige Unterschied besteht darin, dass es nicht als Wert unter dem Unterschlüssel ODBC-Datenquellen aufgeführt ist.

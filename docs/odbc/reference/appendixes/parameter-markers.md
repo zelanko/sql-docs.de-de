@@ -1,5 +1,5 @@
 ---
-title: Parameter Markierungen | Microsoft-Dokumentation
+title: Parameter-Marker | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,33 +10,33 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], minimum SQL syntax supported
 - parameter markers [ODBC]
 ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: acb8d5f9687798bc0efa514ee8646b16140fcd36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 132473de586094f79dd34c999d44f6dd59aefaef
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100586"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303571"
 ---
 # <a name="parameter-markers"></a>Parametermarker
-In Übereinstimmung mit der SQL-92-Spezifikation kann eine Anwendung keine Parametermarker an den folgenden Speicherorten platzieren. Eine umfassendere Liste finden Sie in der SQL-92-Spezifikation.  
+Gemäß der SQL-92-Spezifikation kann eine Anwendung keine Parametermarkierungen an den folgenden Speicherorten platzieren. Eine umfassendere Liste finden Sie in der SQL-92-Spezifikation.  
   
--   In einer **Auswahl** Liste  
+-   In einer **SELECT-Liste**  
   
--   Als beide *Ausdrücke* in einem *Vergleichs-Prädikat*  
+-   Da beide *Ausdrücke* in einem *Vergleichsprädikat*  
   
 -   Als beide Operanden eines binären Operators  
   
--   Sowohl der erste als auch der zweite Operanden eines **between** -Vorgangs.  
+-   Als erster und zweiter Operand eines **BETWEEN-Betriebs**  
   
--   Sowohl der erste als auch der dritte Operanden eines **between** -Vorgangs.  
+-   Als erster und dritter Operand eines **BETWEEN-Betriebs**  
   
--   Sowohl der Ausdruck als auch der erste Wert eines **in** -Vorgangs.  
+-   Da sowohl der Ausdruck als auch der erste Wert eines **IN-Vorgangs**  
   
--   Als Operand eines unären +-oder-Vorgangs  
+-   Als Operand einer unären + oder - Operation  
   
--   Als Argument eines *Satzes-Funktions Verweises*  
+-   Als Argument eines *set-function-reference*  
   
- Weitere Informationen zu Parameter Markierungen finden Sie in der SQL-92-Spezifikation. Weitere Informationen zu Parametern finden Sie unter [Anweisungs Parameter](../../../odbc/reference/develop-app/statement-parameters.md).
+ Weitere Informationen zu Parametermarkierungen finden Sie in der SQL-92-Spezifikation. Weitere Informationen zu Parametern finden Sie unter [Anweisungsparameter](../../../odbc/reference/develop-app/statement-parameters.md).

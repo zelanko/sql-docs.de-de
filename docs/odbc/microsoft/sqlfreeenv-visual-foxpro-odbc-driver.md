@@ -1,5 +1,5 @@
 ---
-title: Sqlfrekov (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
+title: SQLFreeEnv (Visual FoxPro ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeEnv function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 83011775-e31d-4663-b68b-999113a20d5b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e3dcb0a37bcefa3922d3cf7a5ad5fc9b7eb1476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e50e03f7c549b903ab52a6d449de0ddc516bf0fc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053723"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280610"
 ---
 # <a name="sqlfreeenv-visual-foxpro-odbc-driver"></a>SQLFreeEnv (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro ODBC-Treiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: vollständig  
+ Support: Voll  
   
- ODBC-API-Konformität: kernstufe  
+ ODBC-API-Konformität: Kernebene  
   
- Schließt den Visual FoxPro-ODBC-Treiber und gibt den dem Treiber zugeordneten Arbeitsspeicher frei.  
+ Schließt den Visual FoxPro ODBC-Treiber und gibt den gesamten Speicher frei, der dem Treiber zugeordnet ist.  
   
- Weitere Informationen finden Sie in der *ODBC Programmer es Reference*unter [sqlfredenv](../../odbc/reference/syntax/sqlfreeenv-function.md) .
+ Weitere Informationen finden Sie unter [SQLFreeEnv](../../odbc/reference/syntax/sqlfreeenv-function.md) in der *ODBC-Programmiererreferenz*.

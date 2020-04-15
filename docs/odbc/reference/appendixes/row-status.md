@@ -1,5 +1,5 @@
 ---
-title: Zeilen Status | Microsoft-Dokumentation
+title: Zeilenstatus | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,25 +13,25 @@ helpviewer_keywords:
 - row status [ODBC]
 - cache [ODBC]
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a62bad0e69a8bf8b5365575f97e4791cbbf270d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d4ae4169dc3f2a491663f4a86c564cfee5c2f4d6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057107"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305099"
 ---
 # <a name="row-status"></a>Zeilenstatus
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
   
- Die Cursor Bibliothek erstellt einen Puffer im Cache für den Zeilen Status. Die Cursor Bibliothek Ruft Werte für das Zeilen Status Array (angegeben mit dem SQL_ATTR_ROW_STATUS_PTR-Anweisungs Attribut) aus diesem Puffer ab. Die Cursor Bibliothek legt den Puffer für jede Zeile auf Folgendes fest:  
+ Die Cursorbibliothek erstellt einen Puffer im Cache für den Zeilenstatus. Die Cursorbibliothek ruft Werte für das Zeilenstatusarray (mit dem Attribut SQL_ATTR_ROW_STATUS_PTR Anweisung angegeben) aus diesem Puffer ab. Für jede Zeile legt die Cursorbibliothek diesen Puffer auf:  
   
--   SQL_ROW_DELETED, wenn eine positionierte DELETE-Anweisung in der Zeile ausgeführt wird.  
+-   SQL_ROW_DELETED, wenn eine positionierte löschanweisung in der Zeile ausgeführt wird.  
   
--   SQL_ROW_ERROR, wenn beim Abrufen der Zeile aus der Datenquelle mit **SQLFetch**ein Fehler auftritt.  
+-   SQL_ROW_ERROR, wenn ein Fehler beim Abrufen der Zeile aus der Datenquelle mit **SQLFetch**auftritt.  
   
--   SQL_ROW_SUCCESS, wenn die Zeile mit **SQLFetch**erfolgreich aus der Datenquelle abgerufen wurde.  
+-   SQL_ROW_SUCCESS, wenn die Zeile mit **SQLFetch**erfolgreich aus der Datenquelle abgerufen wird.  
   
--   SQL_ROW_UPDATED, wenn eine positionierte UPDATE-Anweisung in der Zeile ausgeführt wird.
+-   SQL_ROW_UPDATED, wenn eine positionierte Aktualisierungsanweisung in der Zeile ausgeführt wird.

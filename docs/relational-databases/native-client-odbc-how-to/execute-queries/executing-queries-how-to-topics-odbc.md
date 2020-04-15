@@ -1,5 +1,5 @@
 ---
-title: Gewusst-wie-Themen zum Ausführen von Abfragen (ODBC) | Microsoft-Dokumentation
+title: Ausführen von Abfragen How-to-Topics (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15ef01785355baa21dc2516168d13fbd886abe27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4953454b761c0c0031d6a31e7762dff7193d7c25
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781353"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302285"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Themen zur Vorgehensweise zum Ausführen von Abfragen (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "73781353"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Verwenden Sie eine Anweisung &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
+-   [Verwenden einer Anweisung &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
   
--   [Festlegen der Cursor Optionen &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
+-   [Festlegen von Cursoroptionen &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
   
--   [Direktes Ausführen einer Anweisung &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
+-   [Ausführen einer Anweisung direkt &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
   
 -   [Vorbereiten und Ausführen einer Anweisung &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
   

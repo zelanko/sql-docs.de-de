@@ -1,5 +1,5 @@
 ---
-title: Status Übergangs Überprüfungen | Microsoft-Dokumentation
+title: Statusübergangsprüfungen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - state transition checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 0706db7d-e125-4845-a13a-7fe4308f7360
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b337d317092ad6ae20cc91236d69c1314de96bce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7dc1ddc126a2d652dfdb038cbb0e510f9735d7b0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107282"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299705"
 ---
 # <a name="state-transition-checks"></a>Überprüfungen des Statusübergangs
-Der Treiber-Manager überprüft, ob der Zustand der Umgebung, der Verbindung oder der Anweisung für die aufgerufene Funktion geeignet ist. Beispielsweise muss sich eine Verbindung in einem zugewiesenen Zustand befinden, wenn **SQLCONNECT** aufgerufen wird. eine-Anweisung muss sich in einem vorbereiteten Zustand befinden, wenn **SQLExecute** aufgerufen wird. Der Treiber-Manager gibt SQL_ERROR für Zustands Übergangs Fehler zurück.
+Der Treiber-Manager überprüft, ob der Zustand der Umgebung, der Verbindung oder der Anweisung für die aufgerufene Funktion geeignet ist. Beispielsweise muss sich eine Verbindung in einem zugewiesenen Zustand befinden, wenn **SQLConnect** aufgerufen wird. Eine Anweisung muss sich in einem vorbereiteten Zustand befinden, wenn **SQLExecute** aufgerufen wird. Der Treiber-Manager gibt SQL_ERROR für Zustandsübergangsfehler zurück.

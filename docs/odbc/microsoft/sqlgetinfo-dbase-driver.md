@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (dBase-Treiber) | Microsoft-Dokumentation
+title: SQLGetInfo (dBASE-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - SQLGetInfo function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLGetInfo
 ms.assetid: 42ffdc9c-281b-4df5-ac6d-7b34f15ecd4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7ba029c2f75fc715b1286a950cf11c1658bdab35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ac88f3b563ef7811d9112d8ef7169f533691938
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003304"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298600"
 ---
 # <a name="sqlgetinfo-dbase-driver"></a>SQLGetInfo (dBASE-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Informationen zu dBASE-Treibern. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält dBASE-Treiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** unterstützt den SQL_FILE_USAGE Informationstyp. Der zurückgegebene Wert ist eine 16-Bit-Ganzzahl, die angibt, wie der Treiberdateien direkt in einer Datenquelle behandelt:  
+ **SQLGetInfo** unterstützt den SQL_FILE_USAGE-Informationstyp. Der zurückgegebene Wert ist eine 16-Bit-Ganzzahl, die angibt, wie der Treiber Dateien in einer Datenquelle direkt behandelt:  
   
--   SQL_FILE_NOT_SUPPORTED: der Treiber ist kein Single-Tier-Treiber.  
+-   SQL_FILE_NOT_SUPPORTED - Der Treiber ist kein einstufiger Treiber.  
   
--   SQL_FILE_TABLE: ein Single-Tier-Treiber behandelt Dateien in einer Datenquelle als Tabellen.  
+-   SQL_FILE_TABLE - Ein einstufiger Treiber behandelt Dateien in einer Datenquelle als Tabellen.  
   
--   SQL_FILE_QUALIFIER: ein Single-Tier-Treiber behandelt Dateien in einer Datenquelle als Qualifizierer.  
+-   SQL_FILE_QUALIFIER - Ein einstufiger Treiber behandelt Dateien in einer Datenquelle als Qualifizierer.  
   
  Der ODBC-Treiber gibt SQL_FILE_TABLE zurück, da jede Datei eine Tabelle ist.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "68003304"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ISAM|Version|Format der Versionsnummern|  
+|Isam|Version|Format der Versionsnummern|  
 |----------|-------------|-------------------------------|  
-|DBASE|3.0|03.00.0000|  
-||4.0|04.00.0000|  
+|Dbase|3.0|03.00.0000|  
+||4,0|04.00.0000|  
 ||5.0|05.00.0000|  
   
 ## <a name="sql_ddl_index"></a>SQL_DDL_INDEX  

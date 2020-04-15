@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit einer Datenquelle | Microsoft-Dokumentation
+title: Herstellen einer Verbindung zu einer Datenquelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - CoCreateInstance method
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ba503bbf77f386af280b0fbe3a3441e2ccae378
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e4ec6125d3c8fe2469f599b3f11c1888383de6e5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73763819"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290473"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Herstellen einer Verbindung zu einer Datenquelle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Der Consumer muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zunächst eine Instanz eines Datenquellen Objekts erstellen, indem er die **CoCreateInstance** -Methode aufrufen, um auf den Native Client OLE DB-Anbieter zuzugreifen. Ein eindeutiger Klassenbezeichner (CLSID) identifiziert jeden OLE DB-Anbieter. Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ist der Klassen Bezeichner CLSID_SQLNCLI10. Sie können auch das Symbol SQLNCLI_CLSID verwenden, das in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter aufgelöst wird, der in der sqlncli. h verwendet wird, auf die Sie verweisen.  
+  Um auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den nativen Client-OLE-DB-Anbieter zugreifen zu können, muss der Consumer zunächst eine Instanz eines Datenquellenobjekts erstellen, indem er die **CoCreateInstance-Methode aufruft.** Ein eindeutiger Klassenbezeichner (CLSID) identifiziert jeden OLE DB-Anbieter. Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den nativen Client-OLE-DB-Anbieter ist der Klassenbezeichner CLSID_SQLNCLI10. Sie können auch das Symbol SQLNCLI_CLSID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden, das in den nativen Client-OLE-DB-Anbieter aufgelöst wird, der in der sqlncli.h verwendet wird, auf die Sie verweisen.  
   
  Das Datenquellenobjekt macht die **IDBProperties**-Schnittstelle verfügbar, die der Consumer verwendet, um grundlegende Authentifizierungsinformationen wie Servername, Datenbankname, Benutzer-ID und Kennwort bereitzustellen. Die **IDBProperties::SetProperties**-Methode wird aufgerufen, um diese Eigenschaften festzulegen.  
   
@@ -43,7 +43,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- Dieser **cokreateinstance-Code** erstellt ein einzelnes-Objekt der-Klasse, die mit CLSID_SQLNCLI10 verknüpft ist (CSLID, das den Daten und dem Code zugeordnet ist, die zum Erstellen des-Objekts verwendet werden). IID_IDBInitialize ist ein Verweis auf den Bezeichner der Schnittstelle (**IDBInitialize**), die zur Kommunikation mit dem Objekt verwendet werden soll.  
+ Dieser Aufruf von **CoCreateInstance** erstellt ein einzelnes Objekt der Klasse, die CLSID_SQLNCLI10 zugeordnet ist (CSLID, die den Daten und dem Code zugeordnet sind, die zum Erstellen des Objekts verwendet werden). IID_IDBInitialize ist ein Verweis auf den Bezeichner der Schnittstelle (**IDBInitialize**), die zur Kommunikation mit dem Objekt verwendet werden soll.  
   
  Die folgende Funktion ist eine Beispielfunktion, die eine Verbindung zur Datenquelle initiiert und herstellt.  
   

@@ -1,5 +1,5 @@
 ---
-title: Unterstützung für Regeln, Trigger, Standardwerte und gespeicherte Prozeduren | Microsoft-Dokumentation
+title: Unterstützung für Regeln, Trigger, Standardwerte und gespeicherte Prozeduren | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,261 +26,261 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2fcf8e7c80b2712313cba81199489dc7cb06dce0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080775"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301137"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Unterstützung für Regeln, Trigger, Standardwerte und gespeicherte Prozeduren (Visual FoxPro-ODBC-Treiber)
-Mithilfe des Visual FoxPro-ODBC-Treibers können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherten Prozeduren erstellt werden. Die Anwendung kann jedoch mit vorhandenen Regeln, Triggern, Standardwerten oder gespeicherten Prozeduren interagieren, wenn Sie in einer Datenbank gespeicherte Visual FoxPro-Daten einfügt, aktualisiert oder löscht.  
+Sie können Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte Prozeduren nicht mit dem Visual FoxPro ODBC-Treiber erstellen. Ihre Anwendung kann jedoch mit vorhandenen Regeln, Triggern, Standardwerten oder gespeicherten Prozeduren interagieren, während sie Invisual FoxPro-Daten einfügt, aktualisiert oder löscht, die in einer Datenbank gespeichert sind.  
   
- In der folgenden Tabelle werden die Visual FoxPro-Befehle und-Funktionen aufgelistet, die vom Visual FoxPro-ODBC-Treiber unterstützt werden, wenn die Befehle oder Funktionen in Regeln, Triggern, Standardwerten oder gespeicherten Prozeduren vorhanden sind  
+ In der folgenden Tabelle sind die Visual FoxPro-Befehle und -Funktionen aufgeführt, die vom Visual FoxPro ODBC-Treiber unterstützt werden, wenn die Befehle oder Funktionen in Regeln, Triggern, Standardwerten oder gespeicherten Prozeduren vorhanden sind.  
   
- Wenn Ihre Anwendung mit Daten interagiert, deren Regeln, Trigger, Standardwerte oder gespeicherte Prozeduren beliebige andere Visual FoxPro-Befehle oder-Funktionen aufzurufen, generiert der Treiber einen Fehler. Eine Liste der Befehle und Funktionen, die nicht vom Treiber unterstützt werden, finden Sie unter [nicht unterstützte Visual FoxPro-Befehle und-Funktionen](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) .  
+ Wenn Ihre Anwendung mit Daten interagiert, deren Regeln, Trigger, Standardwerte oder gespeicherte Prozeduren andere Visual FoxPro-Befehle oder -Funktionen aufrufen, generiert der Treiber einen Fehler. Eine Liste der Befehle und Funktionen, die vom Treiber nicht unterstützt werden, finden Sie unter [Nicht unterstützte Visual FoxPro-Befehle und -Funktionen.](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)  
   
 > [!TIP]  
->  Wenn Sie bedingten Code in Regeln, Trigger oder gespeicherte Prozeduren einfügen möchten, die die Befehle bestimmen, die beim Aufrufen durch den Treiber ausgeführt werden sollen, können Sie die **Version ()** -Funktion verwenden. Die **Version ()** -Funktion gibt "Visual FoxPro-ODBC-Treiber * \<Version>*" zurück, wenn Sie vom Treiber aufgerufen wird.  
+>  Wenn Sie bedingten Code in Ihre Regeln, Trigger oder gespeicherten Prozeduren einfügen möchten, die die Befehle bestimmen, die ausgeführt werden sollen, wenn sie vom Treiber aufgerufen werden, können Sie die **Version( -Funktion** verwenden. Die **VERSION( )-Funktion** gibt "Visual FoxPro ODBC Driver * \<version>*" zurück, wenn sie vom Treiber aufgerufen wird.  
   
-## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>In Regeln, Triggern, Standardwerten und gespeicherten Prozeduren unterstützte Visual FoxPro-Befehle und-Funktionen  
+## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Visual FoxPro-Befehle und -Funktionen werden in Regeln, Triggern, Standardwerten und gespeicherten Prozeduren unterstützt  
   
 ||||  
 |-|-|-|  
-|$-Operator|Operator %|&-Befehl|  
-|&& -Befehl|* Befehl|=-Befehl|  
+|• Operator|%-Operator|&-Befehl|  
+|&& -Befehl|* Befehl|= Befehl|  
   
 ## <a name="a"></a>Ein  
   
 ||||  
 |-|-|-|  
-|Abs ()-Funktion|Acopy ()-Funktion|Befehl Tabellen hinzufügen|  
-|Adatabases ()-Funktion|Adbobjects ()-Funktion|AERROR ()-Funktion|  
-|Adel ()-Funktion|Aelement ()-Funktion|Alen ()-Funktion|  
-|AFields ()-Funktion|AINS ()-Funktion|ALTER TABLE (SQL-Befehl)|  
-|Alias ()-Funktion|ALLTRIM ()-Funktion|Befehl "aus Array anfügen"|  
-|AND-Operator|Befehl Anfügen|Memo Befehl Anfügen|  
-|Befehl "aus" Anfügen|Befehl "Allgemein anhängen"|Ascan ()-Funktion|  
-|Befehl "Prozeduren anhängen"|ASC ()-Funktion|Asubscript ()-Funktion|  
-|ASIN ()-Funktion|Asort ()-Funktion|Atan ()-Funktion|  
-|AT ()-Funktion|AT_C ()-Funktion|Atcline ()-Funktion|  
-|ATC ()-Funktion|ATCC ()-Funktion|Out ()-Funktion|  
-|Atline ()-Funktion|ATN2 ()-Funktion||  
-|Average-Befehl|Acos ()-Funktion||  
+|ABS( ) Funktion|ACOPY( ) Funktion|ADD TABLE-Befehl|  
+|ADATABASES( ) Funktion|ADBOBJECTS( ) Funktion|AERROR( ) Funktion|  
+|ADEL( ) Funktion|AELEMENT( ) Funktion|ALEN( ) Funktion|  
+|AFIELDS( ) Funktion|AINS( ) Funktion|ALTER TABLE (SQL-Befehl)|  
+|ALIAS( ) Funktion|ALLTRIM( ) Funktion|APPEND VON ARRAY Befehl|  
+|UND Operator|APPEND-Befehl|APPEND MEMO-Befehl|  
+|APPEND VON Befehl|APPEND GENERAL Befehl|ASCAN( ) Funktion|  
+|APPEND PROCEDURES-Befehl|ASC( ) Funktion|ASUBSCRIPT( ) Funktion|  
+|ASIN( ) Funktion|ASORT( ) Funktion|ATAN( ) Funktion|  
+|AT( ) Funktion|AT_C( ) Funktion|ATCLINE( ) Funktion|  
+|ATC( ) Funktion|ATCC( ) Funktion|AUSED( ) Funktion|  
+|ATLINE( ) Funktion|ATN2( ) Funktion||  
+|AVERAGE-Befehl|ACOS( ) Funktion||  
   
 ## <a name="b"></a>B  
   
 ||||  
 |-|-|-|  
-|BEGIN TRANSACTION-Befehl|BETWEEN ()-Funktion|Bitnot ()-Funktion|  
-|BITCLEAR ()-Funktion|BITLSHIFT ()-Funktion|Bitset ()-Funktion|  
-|BITOR ()-Funktion|BITRSHIFT ()-Funktion|Leerer Befehl|  
-|Bittest ()-Funktion|BITXOR ()-Funktion||  
-|BOF ()-Funktion|BITAND ()-Funktion||  
+|BEGIN TRANSACTION-Befehl|ZWISCHEN( ) Funktion|BITNOT( ) Funktion|  
+|BITCLEAR( ) Funktion|BITLSHIFT( ) Funktion|BITSET( ) Funktion|  
+|BITOR( ) Funktion|BITRSHIFT( ) Funktion|BLANK-Befehl|  
+|BITTEST( ) Funktion|BITXOR( ) Funktion||  
+|BOF( ) Funktion|BITAND( ) Funktion||  
   
 ## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
-|Befehl berechnen|Candidate ()-Funktion|Chr ()-Funktion|  
-|CDX ()-Funktion|Ceiling ()-Funktion|Befehle schließen|  
-|CHRTRAN ()-Funktion|Chrtranc ()-Funktion|Befehl zum Kopieren von Indizes|  
-|Cmonth ()-Funktion|Befehl "Continue"|Erweiterten Befehl "Struktur kopieren"|  
-|Befehl "Befehle Kopieren"|Befehl "Struktur kopieren"|In Befehl Kopieren|  
-|Befehl "Tag kopieren"|Befehl "in Array kopieren"|Cpconvert ()-Funktion|  
-|COS ()-Funktion|COUNT-Befehl|CTOD ()-Funktion|  
-|Cpcurrent ()-Funktion|Cpdbf ()-Funktion|Currsorsetprop ()-Funktion|  
-|CTOT ()-Funktion|Currsorgetprop ()-Funktion||  
-|Currval ()-Funktion|CDOW ()-Funktion||  
+|CALCULATE-Befehl|CANDIDATE( ) Funktion|CHR( ) Funktion|  
+|CDX( ) Funktion|CEILING( ) Funktion|CLOSE-Befehle|  
+|CHRTRAN( ) Funktion|CHRTRANC( ) Funktion|COPY INDEXES-Befehl|  
+|CMONTH( ) Funktion|CONTINUE-Befehl|COPY STRUCTURE EXTENDED Befehl|  
+|BEFEHL COPY PROCEDURES|COPY STRUCTURE-Befehl|COPY TO-Befehl|  
+|COPY TAG-Befehl|COPY TO ARRAY-Befehl|CPCONVERT( ) Funktion|  
+|COS( ) Funktion|COUNT-Befehl|CTOD( ) Funktion|  
+|CPCURRENT( ) Funktion|CPDBF( ) Funktion|CURSORSETPROP( ) Funktion|  
+|CTOT( ) Funktion|CURSORGETPROP( ) Funktion||  
+|CURVAL( ) Funktion|CDOW( ) Funktion||  
   
 ## <a name="d"></a>D  
   
 ||||  
 |-|-|-|  
-|Date ()-Funktion|DateTime ()-Funktion|Day ()-Funktion|  
-|DBC ()-Funktion|DBF ()-Funktion|DBGetProp ()-Funktion|  
-|Dbused ()-Funktion|DELETE (SQL-Befehl)|DELETE-Befehl|  
-|DELETE TAG-Befehl|DELETED ()-Funktion|Absteigende ()-Funktion|  
-|Difference ()-Funktion|Dimensions Befehl|DISKSPACE ()-Funktion|  
-|DMY ()-Funktion|Do Case... ENDCASE-Befehl|Do-Befehl|  
-|Do While... ENDDO-Befehl|Dow ()-Funktion|Dto c ()-Funktion|  
-|Dtor ()-Funktion|DTOs ()-Funktion|DTOT ()-Funktion|  
+|DATE( ) Funktion|DATETIME( ) Funktion|DAY( ) Funktion|  
+|DBC( ) Funktion|DBF( ) Funktion|DBGETPROP( ) Funktion|  
+|DBUSED( ) Funktion|DELETE (SQL-Befehl)|DELETE-Befehl|  
+|DELETE TAG-Befehl|DELETED( ) Funktion|DESCENDING( ) Funktion|  
+|DIFFERENCE( ) Funktion|DIMENSION-Befehl|DISKSPACE( ) Funktion|  
+|DMY( ) Funktion|DO FALL ... ENDCASE-Befehl|DO-Befehl|  
+|TUN, WÄHREND ... ENDDO-Befehl|DOW( ) Funktion|DTOC( ) Funktion|  
+|DTOR( ) Funktion|DTOS( ) Funktion|DTOT( ) Funktion|  
   
 ## <a name="e"></a>E  
   
 ||||  
 |-|-|-|  
-|Empty ()-Funktion|Evaluieren ()-Funktion|Exit-Befehl|  
-|Error ()-Funktion|Exp ()-Funktion||  
-|Befehl "Transaktions Ende"|EOF ()-Funktion||  
+|EMPTY( ) Funktion|EVALUATE( ) Funktion|EXIT-Befehl|  
+|ERROR( ) Funktion|EXP( ) Funktion||  
+|END TRANSACTION-Befehl|EOF( ) Funktion||  
   
 ## <a name="f"></a>F  
   
 ||||  
 |-|-|-|  
-|F count ()-Funktion|Sdate ()-Funktion|Field ()-Funktion|  
-|FILE ()-Funktion|Filter ()-Funktion|Fldlist ()-Funktion|  
-|Flock ()-Funktion|Floor ()-Funktion|Flush-Befehl|  
-|Für... Endfor-Befehl|FOR ()-Funktion|Found ()-Funktion|  
-|Befehl "freie Tabelle"|F Size ()-Funktion|"F time ()"-Funktion|  
-|FullPath ()-Funktion|Funktionsbefehl|FV ()-Funktion|  
+|FCOUNT( ) Funktion|FDATE( ) Funktion|FIELD( ) Funktion|  
+|FILE( ) Funktion|FILTER( ) Funktion|FLDLIST( ) Funktion|  
+|FLOCK( ) Funktion|FLOOR( ) Funktion|FLUSH-Befehl|  
+|Für... ENDFOR-Befehl|FOR( ) Funktion|FOUND( ) Funktion|  
+|FREE TABLE Befehl|FSIZE( ) Funktion|FTIME( ) Funktion|  
+|FULLPATH( ) Funktion|FUNKTION-Befehl|FV( ) Funktion|  
   
 ## <a name="g"></a>G  
   
 ||||  
 |-|-|-|  
-|Gather-Befehl|GETNEXTMODIFIED ()-Funktion|Gehe-/GOTO-Befehl|  
-|GETFLDSTATE ()-Funktion|Gomonth ()-Funktion||  
-|Getcp ()-Funktion|Getenv ()-Funktion||  
+|GATHER-Befehl|GETNEXTMODIFIED( ) Funktion|GO/GOTO-Befehl|  
+|GETFLDSTATE( ) Funktion|GOMONTH( ) Funktion||  
+|GETCP( ) Funktion|GETENV( ) Funktion||  
   
 ## <a name="h"></a>H  
   
 |||  
 |-|-|  
-|Header ()-Funktion|Hour ()-Funktion|  
+|HEADER( ) Funktion|HOUR( ) Funktion|  
   
 ## <a name="i"></a>I  
   
 ||||  
 |-|-|-|  
-|Idxcollate ()-Funktion|Wenn... Befehl "umdif"|IIf ()-Funktion|  
-|Einzbc ()-Funktion|INDEX-Befehl|InList ()-Funktion|  
-|INSERT-SQL-Befehl|INT ()-Funktion|Isalpha ()-Funktion|  
-|Isblank ()-Funktion|IsDigit ()-Funktion|Isexclusive ()-Funktion|  
-|Isleadbyte ()-Funktion|IsLower ()-Funktion|IsNull ()-Funktion|  
-|Isschreib only ()-Funktion|IsUpper ()-Funktion||  
+|IDXCOLLATE( ) Funktion|Wenn... ENDIF-Befehl|IIF( ) Funktion|  
+|INDBC( ) Funktion|INDEX-Befehl|INLIST( ) Funktion|  
+|INSERT-SQL-Befehl|INT( ) Funktion|ISALPHA( ) Funktion|  
+|ISBLANK( ) Funktion|ISDIGIT( ) Funktion|ISEXCLUSIVE( ) Funktion|  
+|ISLEADBYTE( ) Funktion|ISLOWER( ) Funktion|ISNULL( ) Funktion|  
+|ISREADONLY( ) Funktion|ISUPPER( ) Funktion||  
   
 ## <a name="k"></a>K  
   
 ||||  
 |-|-|-|  
-|Key ()-Funktion|Keymatch ()-Funktion||  
+|KEY( ) Funktion|KEYMATCH( ) Funktion||  
   
 ## <a name="l"></a>L  
   
 ||||  
 |-|-|-|  
-|Left ()-Funktion|LEFTC ()-Funktion|Likec ()-Funktion|  
-|LENC ()-Funktion|Like ()-Funktion|Lock ()-Funktion|  
-|Lokaler Befehl|Befehl Suchen|Lookup ()-Funktion|  
-|Log ()-Funktion|Log10 ()-Funktion|LTRIM ()-Funktion|  
-|Lower ()-Funktion|LPARAMETERS-Befehl||  
-|LUpdate ()-Funktion|LEN ()-Funktion||  
+|LINKS( ) Funktion|LEFTC( ) Funktion|LIKEC( ) Funktion|  
+|LENC( ) Funktion|LIKE( ) Funktion|LOCK( ) Funktion|  
+|LOCAL-Befehl|LOCATE-Befehl|LOOKUP( ) Funktion|  
+|LOG( ) Funktion|LOG10( ) Funktion|LTRIM( ) Funktion|  
+|LOWER( ) Funktion|LPARAMETERS-Befehl||  
+|LUPDATE( ) Funktion|LEN( ) Funktion||  
   
 ## <a name="m"></a>M  
   
 ||||  
 |-|-|-|  
-|System Speicher Variable _MLINE|Max ()-Funktion|MDX ()-Funktion|  
-|MDY ()-Funktion|Memlines ()-Funktion|Message ()-Funktion|  
-|MIN ()-Funktion|Minute ()-Funktion|MLINE ()-Funktion|  
-|MOD ()-Funktion|MONTH ()-Funktion|MTON ()-Funktion|  
+|_MLINE Systemspeichervariable|MAX( ) Funktion|MDX( ) Funktion|  
+|MDY( ) Funktion|MEMLINES( ) Funktion|MESSAGE( ) Funktion|  
+|MIN( ) Funktion|MINUTE( ) Funktion|MLINE( ) Funktion|  
+|MOD( ) Funktion|MONAT( ) Funktion|MTON( ) Funktion|  
   
 ## <a name="n"></a>N  
   
 ||||  
 |-|-|-|  
-|NDX ()-Funktion|Normalize ()-Funktion|Not-Operator|  
-|Hinweis Befehl|NTOM ()-Funktion|NvL ()-Funktion|  
+|NDX( ) Funktion|NORMALIZE( ) Funktion|NOT Operator|  
+|HINWEIS Befehl|NTOM( ) Funktion|NVL( ) Funktion|  
   
 ## <a name="o"></a>O  
   
 ||||  
 |-|-|-|  
-|Vorkommen ()-Funktion|OLDVAL ()-Funktion|Befehl bei Fehler|  
-|Befehl "on Key"|ON ()-Funktion|Befehl "Datenbank öffnen"|  
-|OR-Operator|Order ()-Funktion|OS ()-Funktion|  
+|OCCURS( ) Funktion|OLDVAL( ) Funktion|ON ERROR-Befehl|  
+|ON KEY-Befehl|ON( ) Funktion|OPEN DATABASE-Befehl|  
+|OR-Operator|ORDER( ) Funktion|OS( ) Funktion|  
   
 ## <a name="p"></a>P  
   
 ||||  
 |-|-|-|  
-|Pack-Befehl|Parameters ()-Funktion|Payment ()-Funktion|  
-|Parameter Befehl|Primary ()-Funktion|Privater Befehl|  
-|PI ()-Funktion|Program ()-Funktion|Proper ()-Funktion|  
-|Prozedur Befehl|PV ()-Funktion||  
-|Öffentlicher Befehl|PADL () &#124; PADR () &#124; padc ()-Funktionen||  
+|PACK-Befehl|PARAMETERS( ) Funktion|ZAHLUNG( ) Funktion|  
+|PARAMETERS-Befehl|PRIMARY( ) Funktion|PRIVATE-Befehl|  
+|PI( ) Funktion|PROGRAMM( ) Funktion|PROPER( ) Funktion|  
+|PROCEDURE-Befehl|PV( ) Funktion||  
+|PUBLIC-Befehl|PADL( ) &#124; PADR( ) &#124; PADC( ) Funktionen||  
   
 ## <a name="r"></a>R  
   
 ||||  
 |-|-|-|  
-|Rand ()-Funktion|Rat ()-Funktion|RATC ()-Funktion|  
-|Ratline ()-Funktion|Rückruf Befehl|Reccount ()-Funktion|  
-|RecNo ()-Funktion|Recsize ()-Funktion|Regionaler Befehl|  
-|Relation ()-Funktion|Befehl "Tabelle entfernen"|Replace-Befehl|  
-|Aus Array ersetzen (Befehl)|Replizieren ()-Funktion|Befehl "Wiederholen"|  
-|Rückgabe Befehl|Right ()-Funktion|Rightc ()-Funktion|  
-|Rlock ()-Funktion|Rollback-Befehl|Round ()-Funktion|  
-|Rtod ()-Funktion|RTRIM ()-Funktion||  
+|RAND( ) Funktion|RAT( ) Funktion|RATC( ) Funktion|  
+|RATLINE( ) Funktion|RECALL-Befehl|RECCOUNT( ) Funktion|  
+|RECNO( ) Funktion|RECSIZE( ) Funktion|REGIONAL-Befehl|  
+|RELATION( ) Funktion|REMOVE TABLE-Befehl|REPLACE-Befehl|  
+|REPLACE VON ARRAY Befehl|REPLICATE( ) Funktion|RETRY-Befehl|  
+|RETURN-Befehl|RECHTS( ) Funktion|RIGHTC( ) Funktion|  
+|RLOCK( ) Funktion|ROLLBACK-Befehl|ROUND( ) Funktion|  
+|RTOD( ) Funktion|RTRIM( ) Funktion||  
   
 ## <a name="s"></a>E  
   
 ||||  
 |-|-|-|  
-|Scan Vorgang... Endscan-Befehl|Punkt Befehl|SEC ()-Funktion|  
-|SECONDS ()-Funktion|Seek-Befehl|Seek ()-Funktion|  
-|Befehl auswählen|Select ()-Funktion|SELECT-SQL-Befehl|  
-|SET BLOCKSIZE-Befehl|Befehl "ausführen" festlegen|Jahrhundert festlegen|  
-|SET COLLATE-Befehl|Datenbankbefehl festlegen|Befehl "Datum festlegen"|  
-|Standardbefehl festlegen|SET DELETED-Befehl|SET EXACT-Befehl|  
-|SET EXCLUSIVE-Befehl|Befehl "f" festlegen|Befehl "Felder festlegen"|  
-|Filter Befehl festlegen|Fixed-Befehl festlegen|Befehl "FullPath festlegen"|  
-|Befehl "f-Woche festlegen"|Befehl "Stunden festlegen"|Befehl "Index festlegen"|  
-|Befehl "Lock festlegen"|Befehl "MULTILOCKS festlegen"|Near-Befehl festlegen|  
-|Befehl "nocptrans" festlegen|Benachrichtigungs Befehl festlegen|SET NULL-Befehl|  
-|Befehl "optimieren" festlegen|Befehl "Bestellung festlegen"|SET PATH-Befehl|  
-|Befehl "Prozedur festlegen"|Beziehungs Befehl festlegen|Befehl "Beziehung aus festlegen"|  
-|SET REPROCESS-Befehl|Befehl "Skip" festlegen|Befehl "udfparser festlegen"|  
-|SET UNIQUE-Befehl|Befehl "Volume festlegen"|Set ()-Funktion|  
-|Setfldstate ()-Funktion|Sign ()-Funktion|Sin ()-Funktion|  
-|Skip-Befehl|Sortier Befehl|Space ()-Funktion|  
-|SQRT ()-Funktion|Store-Befehl|Str ()-Funktion|  
-|"Strauv ()"-Funktion|"Stretran ()"-Funktion|Stuff ()-Funktion|  
-|Stuffc ()-Funktion|Substr ()-Funktion|SUBSTRC ()-Funktion|  
-|Sum-Befehl|SYS (2011)-Funktion||  
+|Scan... ENDSCAN-Befehl|SCATTER-Befehl|SEC( ) Funktion|  
+|SECONDS( ) Funktion|SEEK-Befehl|SEEK( ) Funktion|  
+|SELECT-Befehl|SELECT( ) Funktion|SELECT-SQL-Befehl|  
+|SET BLOCKSIZE-Befehl|SET CARRY-Befehl|SET CENTURY Befehl|  
+|SET COLLATE-Befehl|SET DATABASE-Befehl|SET DATE-Befehl|  
+|SET DEFAULT-Befehl|SET DELETED-Befehl|SET EXACT-Befehl|  
+|SET EXCLUSIVE-Befehl|SET FDOW-Befehl|SET FIELDS-Befehl|  
+|SET FILTER-Befehl|SET FIXED Befehl|SET FULLPATH Befehl|  
+|SET FWEEK-Befehl|SET HOURS-Befehl|SET INDEX-Befehl|  
+|SET LOCK-Befehl|BEFEHL SET MULTILOCKS|SET NEAR-Befehl|  
+|SET NOCPTRANS Befehl|SET NOTIFY-Befehl|SET NULL-Befehl|  
+|SET OPTIMIZE Befehl|SET ORDER-Befehl|SET PATH-Befehl|  
+|SET PROCEDURE-Befehl|SET RELATION-Befehl|SET RELATION OFF Befehl|  
+|SET REPROCESS-Befehl|SET SKIP-Befehl|SET UDFPARMS Befehl|  
+|SET UNIQUE-Befehl|SET VOLUME-Befehl|SET( ) Funktion|  
+|SETFLDSTATE( ) Funktion|SIGN ( ) Funktion|SIN( ) Funktion|  
+|SKIP-Befehl|SORT-Befehl|SPACE( ) Funktion|  
+|SQRT( ) Funktion|STORE-Befehl|STR( ) Funktion|  
+|STRCONV( ) Funktion|STRTRAN( ) Funktion|STUFF( ) Funktion|  
+|STUFFC( ) Funktion|SUBSTR( ) Funktion|SUBSTRC( ) Funktion|  
+|SUM-Befehl|SYS(2011) Funktion||  
   
 ## <a name="t"></a>T  
   
 ||||  
 |-|-|-|  
-|System Speicher Variable _TALLY|System Speicher Variable _TRIGGERLEVEL|Tagcount ()-Funktion|  
-|TABLEUPDATE ()-Funktion|Tag ()-Funktion|Target ()-Funktion|  
-|Tagno ()-Funktion|Tan ()-Funktion|Trim ()-Funktion|  
-|Time ()-Funktion|Befehl Gesamt|Txnlevel ()-Funktion|  
-|Tto c ()-Funktion|Ttod ()-Funktion||  
-|Type ()-Funktion|Tablerevert ()-Funktion||  
+|_TALLY Systemspeichervariable|_TRIGGERLEVEL Systemspeichervariable|TAGCOUNT( ) Funktion|  
+|TABLEUPDATE( ) Funktion|TAG( ) Funktion|TARGET( ) Funktion|  
+|TAGNO( ) Funktion|TAN( ) Funktion|TRIM( ) Funktion|  
+|TIME( ) Funktion|TOTAL-Befehl|TXNLEVEL( ) Funktion|  
+|TTOC( ) Funktion|TTOD( ) Funktion||  
+|TYPE( ) Funktion|TABLEREVERT( ) Funktion||  
   
 ## <a name="u"></a>U  
   
 ||||  
 |-|-|-|  
-|Unique ()-Funktion|Befehl zum Entsperren|Befehl verwenden|  
-|Befehl "Aktualisieren"|Upper ()-Funktion||  
-|USED ()-Funktion|UPDATE (SQL-Befehl)||  
+|UNIQUE( ) Funktion|UNLOCK-Befehl|USE-Befehl|  
+|UPDATE-Befehl|UPPER( ) Funktion||  
+|USED( ) Funktion|UPDATE (SQL-Befehl)||  
   
 ## <a name="v"></a>V  
   
 ||||  
 |-|-|-|  
-|Val ()-Funktion|Version ()-Funktion||  
+|VAL( ) Funktion|VERSION( ) Funktion||  
   
 ## <a name="w"></a>W  
   
 ||||  
 |-|-|-|  
-|Week ()-Funktion|||  
+|WOCHE( ) Funktion|||  
   
 ## <a name="y"></a>J  
   
 ||||  
 |-|-|-|  
-|Year ()-Funktion|||  
+|JAHR( ) Funktion|||  
   
 ## <a name="z"></a>Z  
   
 ||||  
 |-|-|-|  
-|Befehl "zap"|||
+|ZAP-Befehl|||

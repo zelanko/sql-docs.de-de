@@ -1,5 +1,5 @@
 ---
-title: SQLPrimaryKeys (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
+title: SQLPrimaryKeys (Visual FoxPro ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,27 +10,27 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLPrimaryKeys function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8dbe2903-efdc-45e0-a079-9e357c5fd81b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e85e60cde86c9483e69a8c43de14ef64eb914119
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 83631d22bd07017c4eba8f6af171443ab8c76d9c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68030701"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301545"
 ---
 # <a name="sqlprimarykeys-visual-foxpro-odbc-driver"></a>SQLPrimaryKeys (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro ODBC-Treiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: vollständig  
+ Support: Voll  
   
  ODBC-API-Konformität: Ebene 2  
   
- Gibt die Spaltennamen zurück, die den Primärschlüssel für eine Tabelle bilden. Die Implementierung des Visual FoxPro-ODBC-Treibers von **SQLPrimaryKeys** verhält sich wie folgt:  
+ Gibt die Spaltennamen zurück, aus denen der Primärschlüssel für eine Tabelle besteht. Die Visual FoxPro ODBC-Treiberimplementierung von **SQLPrimaryKeys** verhält sich wie folgt:  
   
--   Ignoriert das *sztableowner* -Argument und das *cbtableowner* -Argument.  
+-   Ignoriert die Argumente *szTableOwner* und *cbTableOwner.*  
   
--   Kann nur für Datenbanken verwendet werden, die Daten [Banken](../../odbc/microsoft/visual-foxpro-terminology.md)sind. Der Treiber gibt den Fehler "Treiber wird diese Funktion nicht unterstützt" zurück, wenn es sich bei der Datenquelle um ein Verzeichnis mit [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)handelt.  
+-   Funktioniert nur für Datenquellen, die [Datenbanken](../../odbc/microsoft/visual-foxpro-terminology.md)sind. Der Treiber gibt den Fehler "Driver unterstützt diese Funktion nicht" zurück, wenn die Datenquelle ein Verzeichnis [freier Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)ist.  
   
- Weitere Informationen finden Sie unter [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md) in der *ODBC Programmer es Reference*.
+ Weitere Informationen finden Sie unter [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md) in der *ODBC-Programmiererreferenz*.

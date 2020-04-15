@@ -1,5 +1,5 @@
 ---
-title: SQLGetData und Blockcursorn | Microsoft-Dokumentation
+title: SQLGetData- und Blockcursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 12599cdc-7725-4faf-bcae-e163ea0f5851
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4841d8d923ff73d187569df3d7f9e29daf0f4e48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b60d7093552b8f1dbed87d9ad8840ddb5a9e0799
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107399"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299750"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData und Blockcursor
-**SQLGetData** funktioniert für eine einzelne Spalte einer einzelnen Zeile und kann kein Array mit Daten aus mehreren Zeilen abrufen. Dies liegt daran, dass die primäre Verwendung von **SQLGetData** das Abrufen von Long-Daten in Teilen ist, und es gibt nur wenig oder keinen Grund, dies für mehr als eine Zeile gleichzeitig zu erledigen.  
+**SQLGetData** arbeitet für eine einzelne Spalte einer einzelnen Zeile und kann kein Array abrufen, das Daten aus mehreren Zeilen enthält. Dies liegt daran, dass **sqlGetData** in erster Linie zum Abrufen langer Daten in Teilen verwendet wird, und es gibt wenig oder keinen Grund, dies für mehr als eine Zeile gleichzeitig zu tun.  
   
- Um **SQLGetData** mit einem Block Cursor zu verwenden, ruft eine Anwendung zuerst **SQLSetPos** auf, um den Cursor in einer einzelnen Zeile zu positionieren. Anschließend wird **SQLGetData** für eine Spalte in dieser Zeile aufgerufen. Dieses Verhalten ist jedoch optional. Um festzustellen, ob ein Treiber die Verwendung von **SQLGetData** mit Block Cursorn unterstützt, ruft eine Anwendung **SQLGetInfo** mit der SQL_GETDATA_EXTENSIONS-Option auf.
+ Um **SQLGetData** mit einem Blockcursor zu verwenden, ruft eine Anwendung **SQLSetPos** zuerst auf, um den Cursor in einer einzelnen Zeile zu positionieren. Anschließend wird **SQLGetData** für eine Spalte in dieser Zeile auf. Dieses Verhalten ist jedoch optional. Um zu ermitteln, ob ein Treiber die Verwendung von **SQLGetData** mit Blockcursorn unterstützt, ruft eine Anwendung **SQLGetInfo** mit der Option SQL_GETDATA_EXTENSIONS auf.

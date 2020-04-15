@@ -1,5 +1,5 @@
 ---
-title: Einschränkungen der ALTER TABLE-Anweisung | Microsoft-Dokumentation
+title: ALTER TABLE-Anweisungsbeschränkungen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - ODBC SQL grammar, ALTER TABLE statement limitations
 - ALTER TABLE statement limitations [ODBC]
 ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1333cd6cd5946b7a3a70152e12f4d3decfa7fed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 19afa8b07b0051de9ce45ec652ea337c0f689f52
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138434"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304699"
 ---
 # <a name="alter-table-statement-limitations"></a>Einschränkungen der ALTER TABLE-Anweisung
-Wenn der dBASE-oder Paradox-Treiber verwendet wird, kann die Struktur der Tabelle nach dem Erstellen eines Indexes und einem hinzugefügten neuen Datensatz nicht von der ALTER TABLE-Anweisung geändert werden, es sei denn, der Index wird gelöscht und der Inhalt der Tabelle gelöscht.  
+Wenn der treiber dBASE oder Paradox verwendet wird, kann die Struktur der Tabelle nach dem Erstellen eines Indexes und dem Neuen Datensatz nicht durch die ALTER TABLE-Anweisung geändert werden, es sei denn, der Index wird gelöscht und der Inhalt der Tabelle gelöscht.  
   
- ALTER TABLE-Anweisungen werden für Microsoft Excel-oder Text-Treiber nicht unterstützt.  
+ ALTER TABLE-Anweisungen werden für die Microsoft Excel- oder Texttreiber nicht unterstützt.  
   
 > [!NOTE]  
->  Wenn Sie den Paradox-Treiber verwenden, ohne den Borland-Datenbank-Engine zu implementieren, werden ALTER TABLE-Anweisungen nicht unterstützt. nur Lese-und Anfügen-Anweisungen sind zulässig.
+>  Wenn Sie den Paradox-Treiber verwenden, ohne die Borland Database Engine zu implementieren, werden ALTER TABLE-Anweisungen nicht unterstützt. nur Lese- und Anhängensanweisungen sind zulässig.
