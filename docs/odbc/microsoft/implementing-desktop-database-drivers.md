@@ -1,5 +1,5 @@
 ---
-title: Implementieren von Desktop-Daten Bank Treibern | Microsoft-Dokumentation
+title: Implementieren von Desktopdatenbanktreibern | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb4f4c2b1e9658e1e0199ec6d856ef21db80cf07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0b25a5e8ed7a39a11b207c185f47855c7670473e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952354"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290610"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementieren der Desktop-Datenbanktreiber
-Anweisungen und technische Hinweise zum Implementieren und Einrichten der Microsoft ODBC Desktop-Datenbanktreiber finden Sie in der Online Hilfe zum ODBC-Datenquellen-Administrator. Auf diese Datei kann während der Treiber Setup Routinen vom [Microsoft ODBC-Datenquellen-Administrator](../../odbc/admin/odbc-data-source-administrator.md)zugegriffen werden.  
+Anweisungen und technische Hinweise zum Implementieren und Einrichten der Microsoft ODBC Desktop-Datenbanktreiber finden Sie in der Onlinehilfe des ODBC-Datenquellenadministrators. Auf diese Datei kann während der Treibereinrichtungsroutinen vom [Microsoft ODBC Data Source Administrator](../../odbc/admin/odbc-data-source-administrator.md)zugegriffen werden.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Dateien für die Verwendung mit den Desktop-Datenbanktreibern](../../odbc/microsoft/files-to-use-with-the-desktop-database-drivers.md)  
   
@@ -32,7 +32,7 @@ Anweisungen und technische Hinweise zum Implementieren und Einrichten der Micros
   
 -   [Hardware- und Softwareanforderungen](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
--   [Deskriptoren mit Desktop-Daten Bank Treibern](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
+-   [Deskriptoren mit Desktopdatenbanktreibern](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
 -   [Diagnose für Desktop-Datenbanktreiber](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   
@@ -44,7 +44,7 @@ Anweisungen und technische Hinweise zum Implementieren und Einrichten der Micros
   
 -   [Setup-DLL](../../odbc/microsoft/setup-dll.md)  
   
--   [Übersetzungs-DLLs und Desktop-Datenbanktreiber](../../odbc/microsoft/translation-dlls-and-desktop-database-drivers.md)  
+-   [Konvertierungs-DLLs und Desktop-Datenbanktreiber](../../odbc/microsoft/translation-dlls-and-desktop-database-drivers.md)  
   
 -   [Kompatibilität von Desktop-Datenbanktreibern](../../odbc/microsoft/desktop-database-driver-compatibility.md)  
   

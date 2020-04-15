@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69f7994848d02d6e5e0036aaf132e6294f8d5d90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 983f797022c38026ce5d2c9060835c9c6c0fbf3f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761627"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283010"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB-Typunterstützung für Tabellenwertparameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "73761627"
   In diesem Thema wird die OLE DB-Typunterstützung für Tabellenwertparameter beschrieben.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>Tabellenwertparameter-Rowsetobjekt  
- Sie können ein spezielles Rowsetobjekt für Tabellenwertparameter erstellen. Sie erstellen das Tabellenwert Parameter-Rowsetobjekt mithilfe von ITableDefinitionWithConstraints:: kreatetablewitheinschränkungs-oder IOpenRowset:: OpenRowset. Legen Sie hierzu das *eKind*-Element des *pTableID*-Parameters auf DBKIND_GUID_NAME fest, und geben Sie für das *guid*-Element CLSID_ROWSET_INMEMORY an. Der Servertyp Name für den Tabellenwert Parameter muss im *pwszName* -Member von *pTableID* angegeben werden, wenn IOpenRowset:: OPENROWSET verwendet wird. Das Tabellenwertparameter-Rowsetobjekt verhält sich wie ein reguläres Objekt des OLE DB-Anbieters von SQL Server Native Client.  
+ Sie können ein spezielles Rowsetobjekt für Tabellenwertparameter erstellen. Sie können das Rowsetobjekt für Tabellenwertparameter mithilfe von ITableDefinitionWithConstraints::CreateTableWithConstraints oder IOpenRowset::OpenRowset erstellen. Legen Sie hierzu das *eKind*-Element des *pTableID*-Parameters auf DBKIND_GUID_NAME fest, und geben Sie für das *guid*-Element CLSID_ROWSET_INMEMORY an. Der Servertypname für den Tabellenwertparameter muss bei Verwendung von IOpenRowset:: OPENROWSET im *pwszName*-Element von *pTableID* angegeben werden. Das Tabellenwertparameter-Rowsetobjekt verhält sich wie ein reguläres Objekt des OLE DB-Anbieters von SQL Server Native Client.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -57,10 +57,10 @@ CoType RowsetTVP
  Konvertierungen zu und von DBTYPE_TABLE für andere Typen werden nicht unterstützt. Außer bei einer Konvertierung von DBTYPE_TABLE zu DBTYPE_TABLE gibt IConvertType::CanConvert bei einer nicht unterstützten Konvertierung für jede Anforderung S_FALSE zurück. Hierbei wird die Angabe von DBCONVERTFLAGS_PARAMETER für das Command-Objekt angenommen.  
   
 ## <a name="methods"></a>Methoden  
- Informationen zu OLE DB Methoden, die Tabellenwert Parameter unterstützen, finden Sie [unter OLE DB Tabellenwert Parameter-Typunterstützung &#40;Methoden&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
+ Weitere Informationen zu OLE DB-Methoden, die Tabellenwertparameter unterstützen, finden Sie unter [OLE DB-Unterstützung von Tabellenwertparametern &#40;Methoden&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Eigenschaften  
- Informationen zu OLE DB Eigenschaften, die Tabellenwert Parameter unterstützen, finden Sie [unter OLE DB Tabellenwert Parameter-Typunterstützung &#40;Eigenschaften&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ Weitere Informationen zu OLE DB-Eigenschaften, die Tabellenwertparameter unterstützen, finden Sie unter [OLE DB-Unterstützung von Tabellenwertparametern &#40;Eigenschaften&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tabellenwertparameter &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

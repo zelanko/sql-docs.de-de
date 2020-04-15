@@ -1,5 +1,5 @@
 ---
-title: Unterstützung für große UDTs | Microsoft-Dokumentation
+title: Support für große UDTs | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d8621aac563f9211f7d4ee0c9ebd8f557e33bea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780482"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281763"
 ---
 # <a name="support-for-large-udts"></a>Unterstützung für große UDTs
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,12 +25,12 @@ ms.locfileid: "73780482"
   
  In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]kann das Beispiel nicht ausgeführt werden.  
   
- Weitere Informationen zur Unterstützung für große UDTs finden Sie unter [große benutzerdefinierte CLR-Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Weitere Informationen zur Unterstützung großer UDTs finden Sie unter [Große, benutzerdefinierte CLR-Typen &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
  Das erste Codelisting ist der C#-Quellcode. Fügen Sie den Code in eine Datei mit dem Namen LargeStringUDT.cs ein, und kompilieren Sie ihn zu einer DLL. Kopieren Sie LargeStringUDT.dll in das Stammverzeichnis des Laufwerks C.  
   
- Das zweite Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt die Assembly in der Master-Datenbank.  
+ Die zweite [!INCLUDE[tsql](../../includes/tsql-md.md)]( ) Codeliste erstellt die Assembly in der Masterdatenbank.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und user32.lib. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73780482"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Das vierte Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die Assembly aus der Master-Datenbank.  
+ Die vierte [!INCLUDE[tsql](../../includes/tsql-md.md)]( ) Codeliste löscht die Assembly aus der Masterdatenbank.  
   
 ```  
 // LargeStringUDT.cs  

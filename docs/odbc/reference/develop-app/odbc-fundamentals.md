@@ -1,5 +1,5 @@
 ---
-title: ODBC-Grundlagen | Microsoft-Dokumentation
+title: ODBC Grundlagen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: bdaa40d5-1c63-4aee-94fb-7b2edd0bdc47
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b0f093559c463b22df0444e740eb4c314f062e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1e5a7acafc186653cc3acaca5245a842ec278a54
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086294"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302312"
 ---
 # <a name="odbc-fundamentals"></a>ODBC-Grundlagen
-Dieser Abschnitt enthält die folgenden Themen:  
+In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Ziehpunkte](../../../odbc/reference/develop-app/handles.md)  
   
@@ -30,4 +30,4 @@ Dieser Abschnitt enthält die folgenden Themen:
   
 -   [Umgebungs-, Verbindungs- und Anweisungsattribute](../../../odbc/reference/develop-app/environment-connection-and-statement-attributes.md)  
   
--   [Tabellen und Sichten](../../../odbc/reference/develop-app/tables-and-views.md)
+-   [Tabellen und Ansichten](../../../odbc/reference/develop-app/tables-and-views.md)

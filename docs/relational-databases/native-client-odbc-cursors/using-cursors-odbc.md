@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Cursorn (ODBC) | Microsoft-Dokumentation
+title: Verwenden von Cursorn (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - cursors [ODBC]
 - ODBC cursors
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59a7e18c69ffa8d928dc38eaefcaf89249c18b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: be512713462a9518856de2a16db749490ea24366
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784081"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306301"
 ---
 # <a name="using-cursors-odbc"></a>Verwenden von Cursorn (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,19 +35,19 @@ ms.locfileid: "73784081"
   
 -   Mehrere Parallelitätsoptionen  
   
--   Positionierte Updates.  
+-   Positionierte Aktualisierungen.  
   
- ODBC-Anwendungen deklarieren und öffnen Cursor oder verwenden cursorspezifische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nur selten. ODBC öffnet automatisch einen Cursor für jedes Resultset, das von einer SQL-Anweisung zurückgegeben wird. Die Eigenschaften der Cursor werden mithilfe von Anweisungs Attributen gesteuert, die mit [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) festgelegt werden, bevor die SQL-Anweisung ausgeführt wird. Die ODBC-API-Funktionen zum Verarbeiten der Resultsets unterstützen sämtliche Cursorfunktionalitäten einschließlich Abrufen, Durchführen eines Bildlaufs und positionierte Updates.  
+ ODBC-Anwendungen deklarieren und öffnen Cursor oder verwenden cursorspezifische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nur selten. ODBC öffnet automatisch einen Cursor für jedes Resultset, das von einer SQL-Anweisung zurückgegeben wird. Die Eigenschaften der Cursor werden durch Anweisungsattribute gesteuert, die mit [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) festgelegt wurden, bevor die SQL-Anweisung ausgeführt wird. Die ODBC-API-Funktionen zum Verarbeiten der Resultsets unterstützen sämtliche Cursorfunktionalitäten einschließlich Abrufen, Durchführen eines Bildlaufs und positionierte Updates.  
   
  Dies ist ein Vergleich der Funktionsweise von Cursorn in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts und ODBC-Anwendungen.  
   
-|Action|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
+|Aktion|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
-|Definieren des Cursorverhaltens|Angeben durch DECLARE CURSOR-Parameter|Festlegen von Cursor Attributen mithilfe von [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)|  
-|Öffnen eines Cursors|DECLARE Cursor geöffnet *cursor_name*|**SQLExecDirect** oder **SQLExecute**|  
-|Zeilen abrufen|FETCH|**SQLFetch** oder [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)|  
+|Definieren des Cursorverhaltens|Angeben durch DECLARE CURSOR-Parameter|Festlegen von Cursorattributen mithilfe von [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)|  
+|Öffnen eines Cursors|DECLARE CURSOR *OPEN cursor_name*|**SQLExecDirect** oder **SQLExecute**|  
+|Abrufen von Zeilen|FETCH|**SQLFetch** oder [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)|  
 |Positioniertes Update|WHERE CURRENT OF-Klausel mit UPDATE oder DELETE|**SQLSetPos**|  
-|Schließen eines Cursors|Schließen *cursor_name* Aufhebung der Freigabe|[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)|  
+|Schließen eines Cursors|SCHLIEßEN *cursor_name* DEALLOCATE|[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)|  
   
  Die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementierten Servercursor unterstützen die Funktionalität des ODBC-Cursormodells. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Treiber verwendet Servercursor, um die Cursorfunktionalität der ODBC-API zu unterstützen.  
   
@@ -61,19 +61,19 @@ ms.locfileid: "73784081"
   
 -   [Cursoreigenschaften](../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
--   [Details zur Cursor Programmierung &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+-   [Details zur Cursorprogrammierung &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
 -   [Bildläufe und Abrufen von Zeilen](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows.md)  
   
 -   [Positionierte Updates &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [CLOSE &#40;Transact-SQL-&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Cursor](../../relational-databases/cursors.md)   
- [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL-&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [FETCH &#40;Transact-SQL-&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

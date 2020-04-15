@@ -1,5 +1,5 @@
 ---
-title: Aktivieren der Ablauf Verfolgung | Microsoft-Dokumentation
+title: Aktivieren der Ablaufverfolgung | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tracing options [ODBC], enabling
 ms.assetid: 48e318bd-2487-4708-a698-ea01f36a45e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 24f80e0e81e4be8895d59256492b868c53aab7b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 80bd4023a0260b67d11d7b4ded1bb810b81e0ab2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046791"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287350"
 ---
 # <a name="enabling-tracing"></a>Aktivieren der Ablaufverfolgung
-Die Ablauf Verfolgung kann auf die folgenden drei Arten aktiviert werden:  
+Die Ablaufverfolgung kann auf drei Arten aktiviert werden:  
   
--   Legen Sie die Schlüsselwörter **Trace** und **Tracefile** im Registrierungs Eintrag ODBC. ini fest. Dadurch wird die Ablauf Verfolgung aktiviert oder deaktiviert, wenn **sqlprovichandle** mit dem *Typ* "SQL_HANDLE_ENV" aufgerufen wird. Diese Optionen werden im Dialogfeld ODBC-Datenquellen-Administrator auf der Registerkarte Ablauf Verfolgung festgelegt, das beim Einrichten der Datenquelle angezeigt wird. Weitere Informationen finden Sie unter [Registrierungseinträge für Datenquellen](../../../odbc/reference/install/registry-entries-for-data-sources.md).  
+-   Legen Sie die Schlüsselwörter **Trace** und **TraceFile** im Registrierungseintrag Odbc.ini fest. Dadurch wird die Ablaufverfolgung aktiviert oder deaktiviert, wenn **SQLAllocHandle** mit einem *HandleType* von SQL_HANDLE_ENV aufgerufen wird. Diese Optionen werden auf der Registerkarte Ablaufverfolgung des Dialogfelds ODBC-Datenquellenadministrator festgelegt, das während der Datenquelleneinrichtung angezeigt wird. Weitere Informationen finden Sie unter [Registrierungseinträge für Datenquellen](../../../odbc/reference/install/registry-entries-for-data-sources.md).  
   
--   Aufrufen von **SQLSetConnectAttr** , um das SQL_ATTR_TRACE-Verbindungs Attribut auf SQL_OPT_TRACE_ON festzulegen. Dadurch wird die Ablauf Verfolgung für die Dauer der Verbindung aktiviert oder deaktiviert. Weitere Informationen finden Sie in der Beschreibung der [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) -Funktion.  
+-   Rufen Sie **SQLSetConnectAttr** auf, um das SQL_ATTR_TRACE Verbindungsattribut auf SQL_OPT_TRACE_ON festzulegen. Dadurch wird die Ablaufverfolgung für die Dauer der Verbindung aktiviert oder deaktiviert. Weitere Informationen finden Sie in der [SQLSetConnectAttr-Funktionsbeschreibung.](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)  
   
--   Verwenden Sie **odbcsharedtraceflag** , um die Ablauf Verfolgung dynamisch zu aktivieren bzw. zu deaktivieren. (Weitere Informationen finden Sie im nächsten Thema [Dynamic Tracing](../../../odbc/reference/develop-app/dynamic-tracing.md).)
+-   Verwenden Sie **ODBCSharedTraceFlag,** um die Ablaufverfolgung dynamisch ein- oder auszuschalten. (Weitere Informationen finden Sie im nächsten Thema, [Dynamic Tracing](../../../odbc/reference/develop-app/dynamic-tracing.md).)

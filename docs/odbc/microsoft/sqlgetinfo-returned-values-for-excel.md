@@ -1,5 +1,5 @@
 ---
-title: Von SQLGetInfo zurückgegebene Werte für Excel | Microsoft-Dokumentation
+title: SQLGetInfo zurückgegebene Werte für Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c544668ebadab4a20b07f53fca9e1b501f6b1cf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5e285e8978ae357201458ca9289616df7d404811
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003172"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298540"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>Von SQLGetInfo zurückgegebenen Werte für Excel
-In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argument und die von **SQLGetInfo**zurückgegebenen Werte aufgelistet. Diese Informationen können abgerufen werden, indem die im *finfotype* -Argument aufgeführte C-Sprache #defines an **SQLGetInfo** übergeben wird. Weitere Informationen zu den von **SQLGetInfo**zurückgegebenen Werten finden Sie in der *ODBC Programmer es Reference*.  
+In der folgenden Tabelle sind die C-Sprache #defines für das *fInfoType-Argument* und die entsprechenden Werte aufgeführt, die von **SQLGetInfo**zurückgegeben werden. Diese Informationen können abgerufen werden, indem sie die aufgelistete C-Sprache #defines im *FInfoType-Argument* an **SQLGetInfo** übergeben. Weitere Informationen zu den von **SQLGetInfo**zurückgegebenen Werten finden Sie in der *ODBC-Programmiererreferenz*.  
   
 > [!NOTE]  
->  Wenn **SQLGetInfo** eine 32-Bit-Bitmaske zurückgibt, stellt ein vertikaler Strich (&#124;) ein bitweises OR dar.  
+>  Wenn **SQLGetInfo** eine 32-Bit-Bitmaske zurückgibt, stellt ein vertikaler Balken (&#124;) ein bitweises ODER dar.  
   
-|Infotype|Rückgabewert|  
+|Infotyp|Rückgabewert|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Alle festgelegt|  
+|SQL_AGGREGATE_FUNCTIONS|Alle sets|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -81,22 +81,22 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Der DSN aus ODBC. ini oder "", wenn das Treiber Schlüsselwort in "ODBC. ini" verwendet wird.|  
+|SQL_DATA_SOURCE_NAME|Die DSN von Odbc.ini oder "", wenn DRIVER-Schlüsselwort in Odbc.ini verwendet wird|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|Aktuelles Datenbankverzeichnis|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|Auswärts|  
+|SQL_DBMS_NAME|"EXCEL"|  
 |SQL_DBMS_VER|Mehrere Werte|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Wird vom Treiber-Manager verarbeitet.|  
-|SQL_DRIVER_HENV|Wird vom Treiber-Manager verarbeitet.|  
-|SQL_DRIVER_HLIB|Wird vom Treiber-Manager verarbeitet.|  
-|SQL_DRIVER_HSTMT|Wird vom Treiber-Manager verarbeitet.|  
-|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
+|SQL_DRIVER_HDBC|Vom Treiber-Manager behandelt.|  
+|SQL_DRIVER_HENV|Vom Treiber-Manager behandelt.|  
+|SQL_DRIVER_HLIB|Vom Treiber-Manager behandelt.|  
+|SQL_DRIVER_HSTMT|Vom Treiber-Manager behandelt.|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* gibt das Builddatum an)|  
+|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn* gibt das Builddatum an)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_GETDATA_EXTENSIONS|Mehrere Werte|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (zurück Anführungszeichen)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (Zitat zurück)|  
 |SQL_KEYWORDS|Mehrere Werte|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -122,7 +122,7 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_MAX_COLUMNS_IN_INDEX|0|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
-|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Wenn Sie den Microsoft Excel-Treiber verwenden, kann eine CREATE TABLE Anweisung 256 Spalten zulassen, aber das 255-Spalten Limit ist weiterhin gültig, und eine INSERT-Anweisung in die Spalte 256 schlägt fehl.|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Bei Verwendung des Microsoft Excel-Treibers kann eine CREATE TABLE-Anweisung 256 Spalten zulassen, aber das 255-Spalten-Limit ist weiterhin gültig, und ein Einfügen in Spalte 256 schlägt fehl.|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|0|  
 |SQL_MAX_CURSOR_NAME_LEN|64|  
 |SQL_MAX_DRIVER_CONNECTIONS|64|  
@@ -141,9 +141,9 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Mehrere Werte|  
-|SQL_ODBC_SAG_CLI_ Konformität|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Aus Treiber-Manager|  
+|SQL_ODBC_VER|Vom Treiber-Manager|  
 |SQL_OJ_CAPABILITIES|Mehrere Werte|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Mehrere Werte|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|Auswärts|  
-|SQL_SPECIAL_CHARACTERS|"\`\@#$%^&~\*\_} {" ';:?/><,.! "-+=\\ [] &#124; "|  
+|SQL_SERVER_NAME|"EXCEL"|  
+|SQL_SPECIAL_CHARACTERS|"A"";:?/><,.!'\`\@#$%^&\*\_-+=\\ []&#124;"|  
 |SQL_STRING_FUNCTIONS|Mehrere Werte|  
 |SQL_SUBQUERIES|Mehrere Werte|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|Glaub|  
+|SQL_TABLE_TERM|"TABELLE"|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Mehrere Werte|  

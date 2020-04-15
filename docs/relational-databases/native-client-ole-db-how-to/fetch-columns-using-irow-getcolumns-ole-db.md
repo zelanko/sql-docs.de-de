@@ -1,5 +1,5 @@
 ---
-title: 'Abrufen von Spalten mithilfe von IRow:: GetColumns (OLE DB) | Microsoft-Dokumentation'
+title: Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d95f551a965758db6f6140770d6823543d6922d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c790ccc8e57a3df3bb7ddcdeee06a5c4e0805496
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73768239"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295846"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "73768239"
 -   Wie zweimal auf eine Spalte zugegriffen wird. Das erste Mal wird die Spaltenbreite erfasst, und später wird auf die eigentlichen Daten zugegriffen. Wenn in der DBCOLUMNACCESS-Struktur **pData** NULL und **cbMaxLen** 0 ist, wird beim Aufruf von **IRow**-**GetColumns()** nur die Spaltenlänge zurückgegeben. In diesem Fall kann **IRow->GetColumns()** wieder in der gleichen Spalte aufgerufen werden, um die eigentlichen Daten abzurufen.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmeldeinformationen beibehalten müssen, sollten Sie diese mit der [Win32-Krypto-API](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>So rufen Sie Spalten mithilfe von IRow::GetColumns ab  
   

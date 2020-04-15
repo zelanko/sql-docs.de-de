@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Text Datei Treiber) | Microsoft-Dokumentation
+title: SQLConfigDataSource (Textdateitreiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,32 +11,32 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], Text File Driver
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 46bb00fb01ed3fee8098420794af089f2d8b981e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2d2809f9b15dd6843e4404c7cf1887c3caa015a3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054082"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283920"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (Textdateitreiber)
 > [!NOTE]  
->  In diesem Thema werden Treiber spezifische Informationen zu Textdateien bereitstellt. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Textdateitreiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Die **SQLConfigDataSource** -Funktion, die verwendet wird, um eine Datenquelle hinzuzufügen, zu ändern oder zu löschen, verwendet dynamisch die folgenden Schlüsselwörter.  
+ Die **SQLConfigDataSource-Funktion,** die zum Hinzufügen, Ändern oder Löschen einer Datenquelle verwendet wird, verwendet dynamisch die folgenden Schlüsselwörter.  
   
 |Schlüsselwort|BESCHREIBUNG|  
 |-------------|-----------------|  
-|CHARACTERSET|Für den Text Treiber, OEM oder ANSI.|  
-|COLNAMEHEADER|Gibt für den Text Treiber an, ob der erste Datensatz der Daten die Spaltennamen angibt. Entweder true oder false.|  
-|DefaultDir|Die Pfadspezifikation für das Verzeichnis.|  
-|Beschreibung|Eine Beschreibung der Daten in der Datenquelle.<br /><br /> Dadurch wird die gleiche Option wie die **Beschreibung** im Setup Dialogfeld festgelegt.|  
+|Characterset|Für den Texttreiber, OEM oder ANSI.|  
+|COLNAMEHEADER|Gibt für den Texttreiber an, ob der erste Datensatz die Spaltennamen angibt. Entweder TRUE oder FALSE.|  
+|DEFAULTDIR|Die Pfadspezifikation zum Verzeichnis.|  
+|DESCRIPTION|Eine Beschreibung der Daten in der Datenquelle.<br /><br /> Dadurch wird die gleiche Option wie **Beschreibung** im Dialogfeld Setup festgelegt.|  
 |DRIVER|Die Pfadspezifikation für die Treiber-DLL.|  
-|DriverID|Eine ganzzahlige ID für den Treiber. 27 (Text)|  
-|Extensions|Listet die Dateinamen Erweiterungen der Text Dateien in der Datenquelle auf.<br /><br /> Dadurch wird die gleiche Option wie die **Erweiterungs Liste** im Setup Dialogfeld festgelegt.|  
-|RA|Dateityp Text|  
-|FILETYPE|Dateityp für den Text Treiber (Text).|  
-|FORMAT|Für den Text Treiber kann FixedLength, tabdelikoff, csvdelikoff (durch Kommas) oder durch Trennzeichen () (durch das in den Klammern angegebene Sonderzeichen) sein. Das Sonderzeichen ist ein Zeichen lang und kann im Zeichen-, Dezimal-oder Hexadezimal Format vorliegen.|  
-|MaxScanRows|Die Anzahl der Zeilen, die beim Festlegen des Datentyps einer Spalte auf Grundlage vorhandener Daten gescannt werden sollen.<br /><br /> Für den Text Treiber können Sie eine Zahl zwischen 1 und 32767 für die Anzahl der zu überprüfenden Zeilen eingeben. Allerdings ist der Wert immer standardmäßig 25. (Eine Zahl außerhalb des Limits gibt einen Fehler zurück.)<br /><br /> Dadurch wird die Option für die **zu über** prüfenden Zeilen im Setup Dialogfeld festgelegt.|  
-|READONLY|TRUE, wenn die Datei schreibgeschützt werden soll. FALSE, wenn die Datei nicht schreibgeschützt sein soll.<br /><br /> Dadurch wird die gleiche **Option wie im** Setup Dialogfeld schreibgeschützt festgelegt.|
+|DRIVERID|Eine ganzzahlige ID für den Treiber. 27 (Text)|  
+|Erweiterungen|Listet die Dateinamenerweiterungen der Textdateien in der Datenquelle auf.<br /><br /> Dadurch wird die gleiche Option wie **Erweiterungsliste** im Dialogfeld Setup festgelegt.|  
+|Fil|Dateityp Text|  
+|Filetype|Dateityp für den Texttreiber (Text).|  
+|FORMAT|Für den Texttreiber können FIXEDLENGTH, TABDELIMITED, CSVDELIMITED (durch ein Komma) oder DELIMITED() (durch das in den Klammern angegebene Sonderzeichen) sein. Das Sonderzeichen ist ein Zeichen lang und kann im Zeichen-, Dezimal- oder Hexadezimalformat vorliegen.|  
+|MAXSCANROWS|Die Anzahl der Zu scannenden Zeilen beim Festlegen des Datentyps einer Spalte basierend auf vorhandenen Daten.<br /><br /> Für den Texttreiber können Sie eine Zahl von 1 bis 32767 für die Anzahl der zu scannenden Zeilen eingeben. Der Wert wird jedoch immer standardmäßig auf 25 wertsein. (Eine Zahl außerhalb des Limits gibt einen Fehler zurück.)<br /><br /> Dadurch wird die gleiche Option wie **Zeilen zum Scannen** im Setup-Dialogfeld festgelegt.|  
+|READONLY|TRUE, um Datei schreibgeschützt zu machen; FALSE, um die Datei nicht schreibgeschützt zu machen.<br /><br /> Dadurch wird die gleiche Option wie **Nur lesen** im Dialogfeld Setup festgelegt.|

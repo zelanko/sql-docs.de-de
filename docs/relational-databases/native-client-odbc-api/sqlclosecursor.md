@@ -1,5 +1,5 @@
 ---
-title: SQLCloseCursor | Microsoft-Dokumentation
+title: SQLCloseCursor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLCloseCursor function
 ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21565a3eb897c66175ce91a375bdb0b04b767d74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fb20bfa7ca76b8156ef2400e6db3235c590680ba
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787466"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302626"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLCloseCursor** ersetzt [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) durch den *options* Wert SQL_CLOSE. Beim Empfang von **SQLCloseCursor**verwirft der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber ausstehende Resultsetzeilen. Beachten Sie, dass die Spalten- und Parameterbindungen der Anweisung (sofern vorhanden) von **SQLCloseCursor**nicht geändert werden.  
+  **SQLCloseCursor** ersetzt [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) durch den *Optionswert* SQL_CLOSE. Beim Empfang von **SQLCloseCursor**verwirft der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber ausstehende Resultsetzeilen. Beachten Sie, dass die Spalten- und Parameterbindungen der Anweisung (sofern vorhanden) von **SQLCloseCursor**nicht geändert werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   

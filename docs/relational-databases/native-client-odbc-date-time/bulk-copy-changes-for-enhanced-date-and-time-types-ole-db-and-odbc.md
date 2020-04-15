@@ -1,5 +1,5 @@
 ---
-title: Massen kopieren, erweiterte Typen, OLE DB
+title: Bulk Copy, erweiterte Typen, OLE DB
 ms.custom: ''
 ms.date: 12/18/2019
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - ODBC, bulk copy operations
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50d1eb4d7a6070572e674f5ee7f8794837e63aa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5fa94f57a783fc4bdb12f17baa0dbbcb54f61ee4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225257"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301831"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen (OLE DB und ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,9 +64,9 @@ ms.locfileid: "75225257"
 ```  
   
 ## <a name="character-data-files"></a>Zeichendatendateien  
- In Zeichen Datendateien werden Datums-und Uhrzeitwerte wie im Abschnitt "Datenformate: Zeichen folgen und Literale" der [Datentyp Unterstützung für ODBC-Datums-und Uhrzeit Verbesserungen](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) für ODBC oder der [Datentyp Unterstützung für OLE DB Datums-und Uhrzeit Verbesserungen](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) für OLE DB dargestellt.  
+ In Zeichendatendateien werden Datums- und Uhrzeitwerte wie im Abschnitt "Datenformate: Zeichenfolgen und Literale" der [Datentypunterstützung für ODBC-Datums- und -Zeitverbesserungen](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) für ODBC oder der [Datentypunterstützung für OLE DB-Datums- und -Zeitverbesserungen](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) für OLE DB dargestellt.  
   
- In systemeigenen Daten werden die Datums-und Uhrzeitwerte für die vier neuen Typen als TDS-Darstellungen mit einer Skala von 7 dargestellt (da dies der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützte Höchstwert ist und bcp-Datendateien die Skala dieser Spalten nicht speichern). Es erfolgt keine Änderung an der Speicherung der vorhandenen **datetime**- und **smalldatetime**-Typen oder ihrer Tabular Data Stream-Entsprechungen (TDS).  
+ In systemeigenen Datenflös werden Datums- und Uhrzeitwerte für die vier neuen Typen als tDS-Darstellungen mit einer Skala von 7 dargestellt (da dies das Maximum ist, das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und bcp-Datendateien unterstützt wird, speichern sie nicht den Maßstab dieser Spalten). Es erfolgt keine Änderung an der Speicherung der vorhandenen **datetime**- und **smalldatetime**-Typen oder ihrer Tabular Data Stream-Entsprechungen (TDS).  
   
  Die Speichergrößen für die anderen Speichertypen sind für OLE DB wie folgt:  
   
@@ -93,9 +93,9 @@ ms.locfileid: "75225257"
 ||||
 
 ## <a name="bcp-types-in-sqlnclih"></a>BCP-Typen in sqlncli.h  
- Die folgenden Typen werden in sqlncli.h definiert, um mit den BCP API-Erweiterungen für ODBC verwendet zu werden. Diese Typen werden mit dem *eUserDataType* -Parameter von IBCPSession:: bcpcolf MT in OLE DB übergeben.  
+ Die folgenden Typen werden in sqlncli.h definiert, um mit den BCP API-Erweiterungen für ODBC verwendet zu werden. Diese Typen werden mit dem Parameter *eUserDataType* von IBCPSession::BCPColFmt in OLE DB übergeben.  
   
-|Dateispeichertyp|Datentyp in der Hostdatei|Geben Sie sqlncli. h für die Verwendung mit IBCPSession:: bcpcolbmt ein.|value|  
+|Dateispeichertyp|Datentyp in der Hostdatei|Geben Sie sqlncli.h für die Verwendung mit IBCPSession ein::BCPColFmt|Wert|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
@@ -108,12 +108,12 @@ ms.locfileid: "75225257"
 ## <a name="bcp-data-type-conversions"></a>BCP-Datentypkonvertierungen  
  Die folgenden Tabellen enthalten Konvertierungsinformationen.  
   
- **OLE DB Hinweis** Die folgenden Konvertierungen werden von IBCPSession ausgeführt. IRowsetFastLoad verwendet OLE DB Konvertierungen gemäß der Definition in [Konvertierungen, die vom Client zum Server ausgeführt werden](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Beachten Sie, dass datetime-Werte auf 1/300stel einer Sekunde gerundet werden und dass für smalldatetime-Werte die Sekunden vom Server auf null festgelegt werden, nachdem die unten beschriebenen Clientkonvertierungen durchgeführt wurden. Datetime-Rundung wird durch Stunden und Minuten, aber nicht durch das Datum weitergegeben.  
+ **OLE DB-Hinweis** Die folgenden Konvertierungen werden von IBCPSession ausgeführt. IRowsetFastLoad nutzt OLE DB-Konvertierungen gemäß der Definition unter [Konvertierungen von Client zu Server](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Beachten Sie, dass datetime-Werte auf 1/300stel einer Sekunde gerundet werden und dass für smalldatetime-Werte die Sekunden vom Server auf null festgelegt werden, nachdem die unten beschriebenen Clientkonvertierungen durchgeführt wurden. Datetime-Rundung wird durch Stunden und Minuten, aber nicht durch das Datum weitergegeben.  
   
-|Bis --><br /><br /> Von|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|Bis --><br /><br /> From|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Time|–|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Time|Nicht zutreffend|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
@@ -131,7 +131,7 @@ ms.locfileid: "75225257"
 |-|Es wird keine Konvertierung unterstützt.<br /><br /> Es wird ein ODBC-Diagnosedatensatz mit SQLSTATE 07006 und der Meldung "Attributverletzung beschränkter Datentypen" generiert.|  
 |1|Wenn die bereitgestellten Daten ungültig sind, wird ein ODBC-Diagnosedatensatz mit SQLSTATE 22007 und der Meldung "Ungültiges Datetime-Format" generiert. Für datetimeoffset-Werte muss der Uhrzeitteil nach der Konvertierung in das UTC-Format innerhalb des gültigen Bereichs liegen, und zwar selbst dann, wenn keine Konvertierung in UTC angefordert wird. Das liegt daran, dass TDS und der Server immer die Uhrzeit in datetimeoffset-Werten für UTC normalisieren. Darum muss der Client überprüfen, dass sich die Zeitkomponenten innerhalb des nach Konvertierung zu UTC unterstützten Bereichs befinden.|  
 |2|Die Uhrzeitkomponente wird ignoriert.|  
-|3|Bei ODBC wird ein Diagnosedaten Satz mit SQLSTATE 22001 und der Meldung ' String Data, Right truncated ' generiert, wenn eine Kürzung mit Datenverlust auftritt. die Anzahl der Sekundenbruchteile (Dezimalstellen) wird anhand der Größe der Ziel Spalte entsprechend der folgende Tabelle: Für Spaltengrößen, die den Bereich in der Tabelle übersteigen, werden 7 Dezimalstellen impliziert. Diese Konvertierung sollte bis zu neun Dezimalstellen für Sekundenbruchteile ermöglichen, das von ODBC zugelassene Maximum.<br /><br /> **Typ:** DBTIME2<br /><br /> **Implizierte Skala 0** 8<br /><br /> **Implizierte Skala 1.7** 10, 16<br /><br /> <br /><br /> **Typ:** DBTIMESTAMP<br /><br /> **Implizierte Skala 0:** 19<br /><br /> **Implizierte Skala 1.. 7:** 21.. 27<br /><br /> <br /><br /> **Typ:** DBTIMESTAMPOFFSET<br /><br /> **Implizierte Skala 0:** 26<br /><br /> **Implizierte Skala 1.. 7:** 28.. 34<br /><br /> Für OLE DB wird ein Fehler generiert, wenn eine Kürzung mit Datenverlust auftritt. Für „datetime2“ wird die Anzahl der Dezimalstellen für Sekundenbruchteile anhand der Größe der Zielspalte gemäß der folgenden Tabelle bestimmt: Für Spaltengrößen, die den Bereich in der Tabelle übersteigen, werden 9 Dezimalstellen impliziert. Diese Konvertierung sollte bis zu neun Dezimalstellen für Sekundenbruchteile ermöglichen, das von OLE&nbsp;DB zugelassene Maximum.<br /><br /> **Typ:** DBTIME2<br /><br /> **Implizierte Skala 0** 8<br /><br /> **Implizierte Skala 1.. 9** 1.. 9<br /><br /> <br /><br /> **Typ:** DBTIMESTAMP<br /><br /> **Implizierte Skala 0:** 19<br /><br /> **Implizierte Skala 1.. 9:** 21.. 29<br /><br /> <br /><br /> **Typ:** DBTIMESTAMPOFFSET<br /><br /> **Implizierte Skala 0:** 26<br /><br /> **Implizierte Skala 1.. 9:** 28.. 36|  
+|3|Bei ODBC wird bei Einem Abschneiden mit Datenverlust ein Diagnosedatensatz mit SQLSTATE 22001 und meldung 'String data, right berunked' generiert. Die Anzahl der Sekundenziffern (der Maßstab) wird anhand der Größe der Zielspalte gemäß der folgenden Tabelle ermittelt. Für Spaltengrößen, die den Bereich in der Tabelle übersteigen, werden 7 Dezimalstellen impliziert. Diese Konvertierung sollte bis zu neun Dezimalstellen für Sekundenbruchteile ermöglichen, das von ODBC zugelassene Maximum.<br /><br /> **Typ:** DBTIME2<br /><br /> **Implizierte Dezimalstellen 0** 8<br /><br /> **Implizierte Skala 1..7** 10,16<br /><br /> <br /><br /> **Typ:** DBTIMESTAMP<br /><br /> **Implizierte Dezimalstellen 0:** 19<br /><br /> **Implizierte Skala 1..7:** 21..27<br /><br /> <br /><br /> **Typ:** DBTIMESTAMPOFFSET<br /><br /> **Implizierte Dezimalstellen 0:** 26<br /><br /> **Implizierte Skala 1..7:** 28..34<br /><br /> Für OLE DB wird ein Fehler generiert, wenn eine Kürzung mit Datenverlust auftritt. Für „datetime2“ wird die Anzahl der Dezimalstellen für Sekundenbruchteile anhand der Größe der Zielspalte gemäß der folgenden Tabelle bestimmt: Für Spaltengrößen, die den Bereich in der Tabelle übersteigen, werden 9 Dezimalstellen impliziert. Diese Konvertierung sollte bis zu neun Dezimalstellen für Sekundenbruchteile ermöglichen, das von OLE&nbsp;DB zugelassene Maximum.<br /><br /> **Typ:** DBTIME2<br /><br /> **Implizierte Dezimalstellen 0** 8<br /><br /> **Implizierte Dezimalstellen 1..9**1..9<br /><br /> <br /><br /> **Typ:** DBTIMESTAMP<br /><br /> **Implizierte Dezimalstellen 0:** 19<br /><br /> **Implizierte Dezimalstellen 1..9:** 21..29<br /><br /> <br /><br /> **Typ:** DBTIMESTAMPOFFSET<br /><br /> **Implizierte Dezimalstellen 0:** 26<br /><br /> **Implizierte Dezimalstellen 1..9:** 28..36|  
 |4|Die Datumskomponente wird ignoriert.|  
 |5|Die Zeitzone wird auf UTC festgelegt (zum Beispiel 00:00).|  
 |6|Die Uhrzeit wird auf 0 (Null) festgelegt.|  
@@ -141,9 +141,9 @@ ms.locfileid: "75225257"
 |10|Wenn es während einer Konvertierung vom Client zum Server zu Kürzungen mit Datenverlust kommt, wird ein Fehler angezeigt (OLE DB), und es wird ein Diagnosedatensatz mit SQLSTATE 22008 und der Meldung "Überlauf im Datetime-Feld" generiert. Dieser Fehler tritt auch dann auf, wenn der Wert außerhalb des Bereichs liegt, der vom UTC-Bereich, den der Server verwendet, dargestellt werden kann. Wenn während einer Konvertierung vom Server zum Client eine Kürzung der Sekunden oder Sekundenbruchteile auftritt, wird lediglich eine Warnung angezeigt.|  
 |11|Wenn eine Kürzung mit Datenverlust auftritt, wird ein Diagnosedatensatz generiert.<br /><br /> Bei einer Konvertierung vom Server zum Client handelt es sich dabei um eine Warnung (ODBC SQLSTATE S1000).<br /><br /> Bei einer Konvertierung vom Client zum Server handelt es sich dabei um einen Fehler (ODBC SQLSTATE 22001).|  
 |12|Die Sekunden werden auf null festgelegt, und die Sekundenbruchteile werden verworfen. Kein Kürzungsfehler ist möglich.|  
-|–|Das Verhalten von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und früheren Versionen ist beibehalten worden.|  
+|Nicht zutreffend|Das Verhalten von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und früheren Versionen ist beibehalten worden.|  
 |||
 
 ## <a name="see-also"></a>Weitere Informationen  
- [Datums-und Uhrzeit Verbesserungen &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
- [Datums-und Uhrzeit Verbesserungen &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Datums- und Uhrzeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
+ [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

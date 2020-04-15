@@ -1,5 +1,5 @@
 ---
-title: ODBC-Übersicht | Microsoft-Dokumentation
+title: ODBC Übersicht | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 945ebced0703c109ac64c374e31d2e76b556e7ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a0515a882cd7d1c97a60e9262942bd7c397b0b2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67944839"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298290"
 ---
 # <a name="odbc-overview"></a>Übersicht über ODBC
-Die Open Database Connectivity (ODBC) ist eine weit verbreitete Anwendungsprogrammierschnittstelle (API) für Datenbankzugriff. Es basiert auf den CLI-Spezifikationen (calllevel Interface) von Open Group und ISO/IEC für Datenbank-APIs und verwendet strukturierte Abfragesprache (SQL) als Datenbankzugriffs Sprache.  
+Die Open Database Connectivity (ODBC) ist eine weit verbreitete Anwendungsprogrammierschnittstelle (API) für Datenbankzugriff. Es basiert auf den CLI-Spezifikationen (Call-Level Interface) von Open Group und ISO/IEC für Datenbank-APIs und verwendet Structured Query Language (SQL) als Datenbankzugriffssprache.  
   
- ODBC ist für maximale *Interoperabilität* konzipiert, d. h. die Fähigkeit einer einzelnen Anwendung, auf unterschiedliche Datenbankverwaltungssysteme (DBMSs) mit demselben Quellcode zuzugreifen. Datenbankanwendungen aufrufen Funktionen in der ODBC-Schnittstelle, die in datenbankspezifischen Modulen implementiert werden, die als *Treiber*bezeichnet werden. Die Verwendung von Treibern isoliert Anwendungen von datenbankspezifischen aufrufen auf die gleiche Weise, wie Druckertreiber Textverarbeitungsprogramme von druckerspezifischen Befehlen isolieren. Da Treiber zur Laufzeit geladen werden, muss ein Benutzer nur einen neuen Treiber hinzufügen, um auf ein neues DBMS zuzugreifen. die Anwendung muss nicht neu kompiliert oder neu verknüpft werden.  
+ ODBC ist für maximale *Interoperabilität* ausgelegt, d. h. die Fähigkeit einer einzelnen Anwendung, auf verschiedene Datenbankverwaltungssysteme (DbMS) mit demselben Quellcode zuzugreifen. Datenbankanwendungen rufen Funktionen in der ODBC-Schnittstelle auf, die in datenbankspezifischen Modulen implementiert sind, die als *Treiber*bezeichnet werden. Die Verwendung von Treibern isoliert Anwendungen von datenbankspezifischen Aufrufen auf die gleiche Weise wie Druckertreiber Textverarbeitungsprogramme von druckerspezifischen Befehlen isolieren. Da Treiber zur Laufzeit geladen werden, muss ein Benutzer nur einen neuen Treiber hinzufügen, um auf ein neues DBMS zuzugreifen. Es ist nicht erforderlich, die Anwendung neu zu kompilieren oder neu zu verknüpfen.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Warum wurde ODBC erstellt?](../../odbc/reference/why-was-odbc-created.md)  
   

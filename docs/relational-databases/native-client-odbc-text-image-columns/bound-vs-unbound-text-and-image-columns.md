@@ -1,5 +1,5 @@
 ---
-title: Gebundene und ungebundene Text-und image-Spalten | Microsoft-Dokumentation
+title: Gebunden vs. Ungebundene Text- und Bildspalten | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d23b999c40aaa6a7cd8200185f18f14ac759403f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0cfa05f7019342d63ab6f3092c3b6df5ae6e8daa
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73778872"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297734"
 ---
-# <a name="bound-vs-unbound-text-and-image-columns"></a>Gebundene im Vergleich zu ungebundenen Text- und Image-Spalten
+# <a name="bound-vs-unbound-text-and-image-columns"></a>Vergleich von gebundenen und ungebundenen Text- und Image-Spalten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Bei der Verwendung von Server Cursorn wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Native Client-ODBC-Treiber so optimiert, dass die Daten für ungebundene **Text**-, **ntext**-oder **Image** -Spalten zum Zeitpunkt der Ausführung von **SQLFetch** nicht übertragen werden. Die **Text**-, **ntext**-oder **Image** -Daten werden erst dann vom Server abgerufen, wenn die Anwendung [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) für die Spalte ausgibt.  
+  Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verwendung von Servercursorn ist der Native Client ODBC-Treiber so optimiert, dass die Daten für ungebundene **Text-,** **ntext-** oder **Bildspalten** zum Zeitpunkt der **SqlFetch-Arbeit** nicht übertragen werden. Die **Text-,** **ntext-** oder **Bilddaten** werden erst dann vom Server abgerufen, wenn die Anwendung [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) für die Spalte ausgibt.  
   
- Viele Anwendungen können so geschrieben werden, dass keine Text-, **ntext**-oder **Image** -Daten angezeigt werden, während ein Benutzer einfach einen **Bildlauf**nach oben und unten in einem Cursor durchführt. Wenn ein Benutzer eine Zeile auswählt, um weitere Details zu erhalten, kann die Anwendung **SQLGetData** aufrufen, um die **Text**-, **ntext**-oder **Image** -Daten abzurufen. Dadurch wird verhindert, dass die **Text**-, **ntext**-oder **Image** -Daten für eine der Zeilen übertragen werden, die der Benutzer nicht ausgewählt hat, und daher kann die Übertragung sehr großer Datenmengen verhindert werden.  
+ Viele Anwendungen können so geschrieben werden, dass keine **Text-,** **ntext-** oder **Bilddaten** angezeigt werden, während ein Benutzer einfach in einem Cursor nach oben und unten scrollt. Wenn ein Benutzer eine Zeile auswählt, um mehr Details zu erhalten, kann die Anwendung **SQLGetData** aufrufen, um den **Text,** **ntext**oder **Bilddaten** abzurufen. Dadurch wird verhindert, dass die **Text-,** **ntext-** oder **Bilddaten** für eine der Zeilen übertragen werden, die der Benutzer nicht auswählt, und kann daher die Übertragung sehr großer Datenmengen verhindern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von Text-und image-Spalten](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)   
+ [Verwalten von Text- und Bildspalten](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)   
  [Cursorverhalten](../../relational-databases/native-client-odbc-cursors/cursor-behaviors.md)  
   
   

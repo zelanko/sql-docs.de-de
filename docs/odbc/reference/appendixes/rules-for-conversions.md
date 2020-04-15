@@ -1,5 +1,5 @@
 ---
-title: Regeln für Konvertierungen | Microsoft-Dokumentation
+title: Regeln für Conversions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,92 +13,92 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9ca64355a80ce8892f0ea0494e165d934d8d7a88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c49177d62fffc3b3b5c47a25bf3fb421d7564245
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057093"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305086"
 ---
 # <a name="rules-for-conversions"></a>Regeln für Konvertierungen
-Die Regeln in diesem Abschnitt gelten für Konvertierungen, die numerische Literale einschließen. Für diese Regeln sind die folgenden Begriffe definiert:  
+Die Regeln in diesem Abschnitt gelten für Konvertierungen mit numerischen Literalen. Für die Zwecke dieser Regeln werden die folgenden Begriffe definiert:  
   
--   *Speicherzuweisung:* Beim Senden von Daten an eine Tabellenspalte in einer-Datenbank. Dies tritt bei Aufrufen von **SQLExecute**, **SQLExecDirect**und **SQLSetPos**auf. Während der Speicherzuweisung bezieht sich "target" auf eine Daten Bank Spalte, und "Source" bezieht sich auf Daten in Anwendungs Puffern.  
+-   *Speicherzuweisung:* Beim Senden von Daten in eine Tabellenspalte in einer Datenbank. Dies tritt bei Aufrufen von **SQLExecute**, **SQLExecDirect**und **SQLSetPos**auf. Während der Speicherzuweisung bezieht sich "target" auf eine Datenbankspalte und "Quelle" auf Daten in Anwendungspuffern.  
   
--   *Abruf Zuweisung:* Beim Abrufen von Daten aus der Datenbank in Anwendungs Puffer. Dies tritt bei Aufrufen von **SQLFetch**, **SQLGetData**, **SQLFetchScroll**und **SQLSetPos**auf. Während der Abruf Zuweisung bezieht sich "target" auf die Anwendungs Puffer, und "Quelle" bezieht sich auf die Daten Bank Spalte.  
+-   *Abrufauftrag:* Beim Abrufen von Daten aus der Datenbank in Anwendungspuffer. Dies tritt bei Aufrufen von **SQLFetch**, **SQLGetData**, **SQLFetchScroll**und **SQLSetPos**auf. Bei der Abrufzuweisung bezieht sich "target" auf die Anwendungspuffer und "Quelle" auf die Datenbankspalte.  
   
--   *CS:* Der Wert in der zeichenquelle.  
+-   *CS:* Der Wert in der Zeichenquelle.  
   
 -   *NT:* Der Wert im numerischen Ziel.  
   
 -   *NS:* Der Wert in der numerischen Quelle.  
   
--   *CT:* Der Wert im Zeichen Ziel.  
+-   *CT:* Der Wert im Zeichenziel.  
   
--   Genauigkeit eines exakten numerischen Literals: die Anzahl der enthaltenen Ziffern.  
+-   Genauigkeit eines genauen numerischen Literals: die Anzahl der darin enthaltenen Ziffern.  
   
--   Die Skala eines exakten numerischen Literals: die Anzahl der Ziffern rechts neben dem ausgedrückten oder impliziten Zeitraum.  
+-   Die Skala eines genauen numerischen Literals: die Anzahl der Ziffern rechts neben dem ausgedrückten oder impliziten Punkt.  
   
--   Die Genauigkeit eines ungefähren numerischen Literals: die Genauigkeit der Mantisse.  
+-   Die Genauigkeit eines ungefähren numerischen Liters: die Genauigkeit seiner Mantisse.  
   
-## <a name="character-source-to-numeric-target"></a>Zeichenquelle zum numerischen Ziel  
- Im folgenden werden die Regeln für die Umstellung von einer zeichenquelle (CS) in ein numerisches Ziel (NT) aufgeführt:  
+## <a name="character-source-to-numeric-target"></a>Zeichenquelle zu numerischem Ziel  
+ Im Folgenden sind die Regeln für die Konvertierung von einer Zeichenquelle (CS) in ein numerisches Ziel (NT) enthalten:  
   
-1.  Ersetzen Sie CS durch den Wert, der durch Entfernen aller führenden oder nachfolgenden Leerzeichen in CS abgerufen wird. Wenn CS keine gültige *numerische Literale*ist, wird SQLSTATE 22018 (ungültiger Zeichen Wert für Umwandlungs Spezifikation) zurückgegeben.  
+1.  Ersetzen Sie CS durch den erhaltenen Wert, indem Sie alle führenden oder nachgestellten Leerzeichen in CS entfernen. Wenn CS kein gültiges *numerisches Literal*ist, wird SQLSTATE 22018 (Ungültiger Zeichenwert für die Umwandlungsspezifikation) zurückgegeben.  
   
-2.  Ersetzen Sie CS durch den Wert, den Sie erhalten haben, indem Sie führende Nullen vor dem Dezimaltrennzeichen, nachfolgende Nullen nach dem Dezimaltrennzeichen oder beides entfernen.  
+2.  Ersetzen Sie CS durch den erhaltenen Wert, indem Sie führende Nullen vor dem Dezimaltrennzeichen entfernen, Nullen nach dem Dezimaltrennzeichen oder beides nachfolgen.  
   
-3.  Konvertieren von CS in NT. Wenn die Konvertierung zu einem Verlust signifikanter Ziffern führt, wird SQLSTATE 22003 (numerischer Wert außerhalb des gültigen Bereichs) zurückgegeben. Wenn die Konvertierung zu einem Verlust nicht signifikanter Ziffern führt, wird SQLSTATE 01s07 (Bruchteil der Bruchteil) zurückgegeben.  
+3.  Konvertieren Sie CS in NT. Wenn die Konvertierung zu einem Verlust signifikanter Ziffern führt, wird SQLSTATE 22003 (Numeric value a of range) zurückgegeben. Wenn die Konvertierung zum Verlust nicht signifikanter Ziffern führt, wird SQLSTATE 01S07 (Fractional-Abschneide) zurückgegeben.  
   
-## <a name="numeric-source-to-character-target"></a>Numerische Quelle zum Zeichen Ziel  
- Im folgenden werden die Regeln für die Umstellung von einer numerischen Quelle (NS) in ein Zeichen Ziel (CT) aufgeführt:  
+## <a name="numeric-source-to-character-target"></a>Numerische Quelle für Zeichenziel  
+ Im Folgenden sind die Regeln für die Konvertierung von einer numerischen Quelle (NS) in ein Zeichenziel (CT) enthalten:  
   
-1.  LT ist die Länge in Zeichen von CT. Bei der Abruf Zuweisung entspricht lt der Länge des Puffers in Zeichen abzüglich der Anzahl von Bytes im NULL-Beendigungs Zeichen für diesen Zeichensatz.  
+1.  Lassen Sie LT die Länge in Zeichen von CT sein. Bei der Abrufzuweisung ist LT gleich der Länge des Puffers in Zeichen abzüglich der Anzahl der Bytes im Null-Beendigungszeichen für diesen Zeichensatz.  
   
-2.  Denen  
+2.  Fällen:  
   
-    -   Wenn NS ein genauer numerischer Typ ist, lassen Sie den Wert für die kürzeste Zeichenfolge, die der Definition von *Exact-numeric-Literale* entspricht, damit identisch sein, dass die Skala von "YP" mit der Skala von NS identisch ist, und der interpretierte Wert von "YP" ist der absolute Wert von "NS".  
+    -   Wenn NS ein exakter numerischer Typ ist, lassen Sie YP die kürzeste Zeichenfolge gleich, die der Definition von *exact-numeric-literal* entspricht, so dass die Skala von YP mit der Skala von NS identisch ist und der interpretierte Wert von YP der absolute Wert von NS ist.  
   
-    -   Wenn NS ein Ungefährer numerischer Typ ist, lassen Sie die folgende Zeichenfolge aus:  
+    -   Wenn NS ein ungefährer numerischer Typ ist, lassen Sie YP wie folgt eine Zeichenfolge sein:  
   
          Schreibweise:  
   
-         Wenn NS gleich 0 ist, ist der Wert 0.  
+         Wenn NS gleich 0 ist, ist YP 0.  
   
-         Let ysn ist die kürzeste Zeichenfolge, die der Definition von Exact-*numeric-Literale* entspricht und deren interpretierter Wert der absolute Wert von NS ist. Wenn die Länge von ysn kleiner als der (*Precision* + 1) des Datentyps NS ist, lassen Sie den Wert von "typiysn".  
+         Lassen Sie YSN die kürzeste Zeichenfolge sein, die der Definition von*exact-numerisch-literal* entspricht und deren interpretierter Wert der absolute Wert von NS ist. Wenn die Länge von YSN kleiner als die *(Genauigkeit* + 1) des Datentyps von NS ist, lassen Sie YP gleich YSN.  
   
-         Andernfalls ist "YP" die kürzeste Zeichenfolge, die der Definition des *ungefähren numerischen Literals* entspricht, dessen interpretierter Wert der absolute Wert von NS ist und dessen *Mantisse* aus einer einzelnen *Ziffer* , die nicht "0" ist, gefolgt von einem *Zeitraum* und einer *Ganzzahl ohne*Vorzeichen besteht.  
+         Andernfalls ist YP die kürzeste Zeichenfolge, die der Definition von *ungefähr-numerischem Literal* entspricht, dessen interpretierter Wert der absolute Wert von NS ist und dessen *Mandissa* aus einer einzelnen *Ziffer* besteht, die nicht '0' ist, gefolgt von einem *Punkt* und einer *unsignierten ganzzahligen*.  
   
 3.  Schreibweise:  
   
-    -   Wenn NS kleiner als 0 ist, lassen Sie die folgenden Schritte durchführen:  
+    -   Wenn NS kleiner als 0 ist, lassen Sie Y das Ergebnis sein:  
   
-         "-"  &#124;&#124; YP  
+         '-' &#124;&#124; YP  
   
-         wobei ' &#124;&#124; ' der Operator für die Zeichen folgen Verkettung ist.  
+         wobei '&#124;&#124;' der Zeichenfolgenverkettungsoperator ist.  
   
-         Andernfalls ist Y gleich.  
+         Andernfalls lassen Sie Y gleich YP.  
   
-4.  Die Länge in Zeichen Y.  
+4.  Lassen Sie LY die Länge in Zeichen von Y sein.  
   
 5.  Schreibweise:  
   
-    -   Wenn der Wert lt ist, wird CT auf Y festgelegt.  
+    -   Wenn LY LT gleich ist, wird CT auf Y gesetzt.  
   
-    -   Wenn ly kleiner als lt ist, wird CT auf der rechten Seite durch die entsprechende Anzahl von Leerzeichen auf Y erweitert festgelegt.  
+    -   Wenn LY kleiner als LT ist, wird CT auf Y auf der rechten Seite um eine entsprechende Anzahl von Leerzeichen erweitert.  
   
-         Andernfalls (ly > lt) kopieren Sie die ersten lt-Zeichen von Y in CT.  
+         Andernfalls (LY > LT) kopieren Sie die ersten LT-Zeichen von Y in CT.  
   
          Schreibweise:  
   
-         Wenn es sich um eine Speicherzuweisung handelt, geben Sie den Fehler SQLSTATE 22001 (String Data, Right-truncated) zurück.  
+         Wenn es sich um eine Speicherzuweisung handelt, geben Sie den Fehler SQLSTATE 22001 zurück (Zeichenfolgendaten, rechts abgeschnitten).  
   
-         Wenn dies eine Abruf Zuweisung ist, wird die Warnung SQLSTATE 01004 (String Data, Right-truncated) zurückgegeben. Wenn der Kopiervorgang zum Verlust von Bruch Ziffern führt (außer nachfolgende Nullen), wird der Treiber definiert, ob einer der folgenden Punkte zutrifft:  
+         Wenn es sich um eine Abrufzuweisung handelt, geben Sie die Warnung SQLSTATE 01004 (String-Daten, rechts abgeschnitten) zurück. Wenn die Kopie zum Verlust von Bruchziffern führt (außer nachfolgenden Nullen), wird der Treiber definiert, ob eine der folgenden Folgen auftritt:  
   
-         (1) der Treiber verkürzt die Zeichenfolge in Y auf eine geeignete Skala (die ebenfalls NULL sein kann) und schreibt das Ergebnis in CT.  
+         (1) Der Treiber kürt die Zeichenfolge in Y auf eine entsprechende Skala (die auch Null sein kann) und schreibt das Ergebnis in CT.  
   
-         (2) der Treiber rundet die Zeichenfolge in Y auf eine entsprechende Skala (die ebenfalls NULL sein kann) und schreibt das Ergebnis in CT.  
+         (2) Der Treiber umrundet die Zeichenfolge in Y auf eine entsprechende Skala (die auch Null sein kann) und schreibt das Ergebnis in CT.  
   
-         (3) der Treiber wird weder abgeschnitten noch gerundet, sondern kopiert lediglich die ersten lt-Zeichen von Y in CT.
+         (3) Der Fahrer kürzt und dreht sich nicht, sondern kopiert nur die ersten LT-Zeichen von Y in CT.

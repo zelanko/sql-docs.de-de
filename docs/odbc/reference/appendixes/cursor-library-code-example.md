@@ -1,5 +1,5 @@
 ---
-title: Code Beispiel für Cursor Bibliothek | Microsoft-Dokumentation
+title: Beispiel für Cursor-Bibliothekscode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cdbc751ecf6ed2427809c70707226f335a7b8d4b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019075"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284680"
 ---
 # <a name="cursor-library-code-example"></a>Codebeispiel für Cursorbibliothek
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
   
- Im folgenden Beispiel wird die-Cursor Bibliothek verwendet, um die ID der Bestellung, das Öffnungs Datum und den Status aus der Orders-Tabelle abzurufen. Anschließend werden 20 Daten Zeilen angezeigt. Wenn der Benutzer diese Daten aktualisiert, aktualisiert der Code die rowsetpuffer und führt eine positionierte UPDATE-Anweisung aus. Schließlich wird der Benutzer zur Eingabe der Richtung aufgefordert, um den Prozess zu durchlaufen.  
+ Im folgenden Beispiel wird die Cursorbibliothek verwendet, um die ID, das offene Datum und den Status jedes Auftrags aus der Tabelle ORDERS abzurufen. Anschließend werden 20 Datenzeilen angezeigt. Wenn der Benutzer diese Daten aktualisiert, aktualisiert der Code die Rowsetpuffer und führt eine positionierte Updateanweisung aus. Schließlich wird der Benutzer aufgefordert, die Richtung zu scrollen, und wiederholt den Vorgang.  
   
 ```  
 #define ROWS 20  

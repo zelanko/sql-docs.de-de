@@ -1,5 +1,5 @@
 ---
-title: Typen von Datenquellen | Microsoft-Dokumentation
+title: Arten von Datenquellen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], types
 ms.assetid: a5e3f966-3357-4827-afbc-6153682d26bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6424d7b6a6a48c36adb00ca877eadc6c69e064f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 69ac838bebcbe9581cf2424a99b6b503af526fe7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67951836"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286732"
 ---
 # <a name="types-of-data-sources"></a>Typen von Datenquellen
-Es gibt zwei Arten von Datenquellen: Computer Datenquellen und Datei Datenquellen. Obwohl beide ähnliche Informationen über die Quelle der Daten enthalten, unterscheiden Sie sich in der Art und Weise, wie diese Informationen gespeichert werden. Aufgrund dieser Unterschiede werden Sie in etwas anderen Formen verwendet.  
+Es gibt zwei Arten von Datenquellen: Computerdatenquellen und Dateidatenquellen. Obwohl beide ähnliche Informationen über die Quelle der Daten enthalten, unterscheiden sie sich in der Art und Weise, wie diese Informationen gespeichert werden. Aufgrund dieser Unterschiede werden sie auf etwas andere Weise verwendet.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Computerdatenquellen](../../odbc/reference/machine-data-sources.md)  
   

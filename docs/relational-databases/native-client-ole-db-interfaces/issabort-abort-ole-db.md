@@ -1,5 +1,5 @@
 ---
-title: 'ISSAbort:: Abort (OLE DB) | Microsoft-Dokumentation'
+title: ISSAbort::Abort (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - Abort method
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d66d37da3ba2de7f12cefb8f806c44d5dd967003
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8ce2c92dad8c0ff97cdbcf4e77a58e8dd6ceb18c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73763179"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303981"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73763179"
   
 Die **ISSAbort** -Schnittstelle, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verfügbar gemacht wird, stellt die **ISSAbort::Abort** -Methode bereit. Sie dient dazu, das aktuelle Rowset sowie Befehle abzubrechen, die mit dem Befehl, der das Rowset ursprünglich generierte, verknüpft sind und noch nicht ausgeführt wurden.  
   
- **ISSAbort** ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-anbieterspezifische Schnittstelle, die mit **QueryInterface** für das **IMultipleResults** -Objekt verfügbar ist, das von **ICommand:: Execute** oder **IOpenRowset:: OPENROWSET**zurückgegeben wird.  
+ **ISSAbort** ist eine für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anbieter spezifische Schnittstelle, die bei Verwendung von **QueryInterface** für das **IMultipleResults** -Objekt, das von **ICommand::Execute** oder **IOpenRowset::OpenRowset**zurückgegeben wird, verfügbar ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ HRESULT Abort(void);
 >  Wenn der Serverstatus „XACT_ABORT“ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] auf ON festgelegt ist, werden bei Ausführung von **ISSAbort::Abort** alle aktuellen impliziten oder expliziten Transaktionen beendet und ein Rollback ausgeführt, wenn eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]besteht. Frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] brechen die aktuelle Transaktion nicht ab.  
   
 ## <a name="arguments"></a>Argumente  
- Keine.  
+ Keine  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  S_OK  
@@ -61,7 +61,7 @@ HRESULT Abort(void);
  Der Batch wurde nicht abgebrochen.  
   
  E_FAIL  
- Ein Anbieter spezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie, wenn Sie die [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) -Schnittstelle verwenden.  
+ Ein anbieterspezifischer Fehler ist aufgetreten. Für detaillierte Informationen verwenden Sie die [ISQLServerErrorInfo-Schnittstelle.](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)  
   
  E_UNEXPECTED  
  Die Methode wurde unerwartet aufgerufen. Zum Beispiel ist das Objekt in einem Zombiezustand, da **ISSAbort::Abort** bereits aufgerufen wurde.  

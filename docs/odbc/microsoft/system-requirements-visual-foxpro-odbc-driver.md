@@ -1,5 +1,5 @@
 ---
-title: System Anforderungen (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
+title: Systemanforderungen (Visual FoxPro ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,42 +16,42 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 762d6c3647081c1745ab6a11d7f00d7a7072bd7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d02681709edb3a22144469df7c9abbda34e6e083
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939808"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301441"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Systemanforderungen (Visual FoxPro-ODBC-Treiber)
-Die Systemanforderungen für die Installation geben das mindestens erforderliche Betriebssystem und den erforderlichen Speicherplatz für die erfolgreiche Installation des Treibers an. Nachdem Sie den Treiber installiert haben, können Sie die jeweilige Anwendungssoftware auswählen, die Sie für den Zugriff auf Visual FoxPro-Daten verwenden möchten.  
+Die Systemanforderungen für die Installation stellen den Mindestbetriebssystem- und Festplattenspeicher bereit, der für die erfolgreiche Installation des Treibers erforderlich ist. Nachdem Sie den Treiber installiert haben, können Sie die spezifische Anwendungssoftware auswählen, die Sie für den Zugriff auf Visual FoxPro-Daten verwenden möchten.  
   
 ## <a name="installation-requirements"></a>Installationsanforderungen  
- Informationen zu den Installationsanforderungen und anderen Informationen finden [Sie auf der Visual FoxPro-ODBC-Treiber-Download Website](https://go.microsoft.com/fwlink/?LinkId=121318).  
+ Installationsanforderungen und andere Informationen finden Sie [auf der Download-Site des Visual FoxPro ODBC-Treibers](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
-## <a name="accessing-visual-foxpro-data"></a>Zugreifen auf Visual FoxPro-Daten  
- Für den Zugriff auf Microsoft Visual FoxPro oder FoxPro 2. *x* -Daten benötigen Sie Folgendes:  
+## <a name="accessing-visual-foxpro-data"></a>Zugriff auf Visual FoxPro-Daten  
+ So greifen Sie auf Microsoft Visual FoxPro oder FoxPro 2 zu. *x* Daten benötigen Sie Folgendes:  
   
--   ODBC-Client Software (wird automatisch mit dem Treiber installiert)  
+-   ODBC Client Software (automatisch mit dem Treiber installiert)  
   
--   Microsoft Visual FoxPro-ODBC-Treiber  
+-   Microsoft Visual FoxPro ODBC-Treiber  
   
--   Beliebige der folgenden Typen von Anwendungssoftware:  
+-   Alle der folgenden Arten von Anwendungssoftware:  
   
-    -   Microsoft Office Anwendung wie Microsoft Excel oder Microsoft Word  
+    -   Microsoft Office-Anwendung wie Microsoft Excel oder Microsoft Word  
   
-    -   ODBC-Anwendung der C-oder C++-Sprache  
+    -   C- oder C++-Sprache ODBC-Anwendung  
   
     -   Microsoft Visual Basic ODBC-Anwendung  
   
--   Beliebige der folgenden Datentypen:  
+-   Alle der folgenden Datentypen:  
   
-    -   Visual FoxPro- [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) oder ein Verzeichnis mit [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   Visual [FoxPro-Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) oder ein Verzeichnis [kostenloser Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
-    -   FoxPro 2,0, 2,5, 2,6, [Tabelle](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   FoxPro 2.0, 2.5, 2.6 [Tabelle](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
- Der Visual FoxPro-ODBC-Treiber unterstützt Doppelbyte-Zeichensätze (DBCS). Weitere Informationen finden Sie [unter internationaler Support](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
+ Der Visual FoxPro ODBC-Treiber unterstützt Doppelbyte-Zeichensätze (DBCS). Weitere Informationen finden Sie unter [Internationaler Support](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
- Der Treiber unterstützt keine 16-Bit-Anwendungen von Microsoft Windows 3,1.
+ Der Treiber unterstützt keine 16-Bit-Microsoft Windows 3.1-Anwendungen.

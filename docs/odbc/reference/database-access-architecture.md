@@ -1,5 +1,5 @@
 ---
-title: Datenbankzugriffs Architektur | Microsoft-Dokumentation
+title: Datenbankzugriffsarchitektur | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC]
 ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1fba8cf4f3f3553fafd2296e294db3a9105de330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b0993dc9891d6ed74f6d149692dac2555346d3d1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135559"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306501"
 ---
 # <a name="database-access-architecture"></a>Architektur für den Datenbankzugriff
-Eine der Fragen in der Entwicklung von ODBC war, welcher Teil der Datenbankzugriffs Architektur zu standardisieren ist. Die im vorherigen Abschnitt (eingebettete SQL, SQL-Module und CLIs) beschriebenen SQL-Programmierschnittstellen sind nur ein Teil dieser Architektur. Da ODBC in erster Linie dazu gedacht war, persönliche computerbasierte Anwendungen mit Minicomputer und Main Frame-DBMSs zu verbinden, gab es auch eine Reihe von Netzwerkkomponenten, von denen einige standardisiert werden könnten.  
+Eine der Fragen bei der Entwicklung von ODBC war, welcher Teil der Datenbankzugriffsarchitektur zu standardisieren war. Die im vorherigen Abschnitt beschriebenen SQL-Programmierschnittstellen - Embedded SQL, SQL-Module und CLIs - sind nur ein Teil dieser Architektur. Da ODBC in erster Linie dazu gedacht war, PC-basierte Anwendungen mit Minicomputer- und Mainframe-DBMS zu verbinden, gab es auch eine Reihe von Netzwerkkomponenten, von denen einige standardisiert werden konnten.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Datenbankzugriff über ein Netzwerk](../../odbc/reference/network-database-access.md)  
   

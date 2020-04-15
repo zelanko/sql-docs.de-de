@@ -11,28 +11,28 @@ helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2e5896456f3c4f8074b62f6e1d4707cc7c41d21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 27df569ba94cd5acb22ba2ee974751bd5d80d1b6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73770804"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297001"
 ---
 # <a name="sessions"></a>Sitzungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Sitzung stellt eine einzelne Verbindung zu einer Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von dar.  
+  Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbietersitzung stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine einzelne Verbindung zu einer Instanz von dar.  
   
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erfordert, dass Sitzungen den Transaktions Bereich für eine Datenquelle begrenzen. Alle mit einem bestimmten Sitzungsobjekt erstellten Befehlsobjekte nehmen an der lokalen oder verteilten Transaktion des Sitzungsobjekts teil.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter erfordert, dass Sitzungen den Transaktionsbereich für eine Datenquelle begrenzen. Alle mit einem bestimmten Sitzungsobjekt erstellten Befehlsobjekte nehmen an der lokalen oder verteilten Transaktion des Sitzungsobjekts teil.  
   
  Das erste für die initialisierte Datenquelle erstellte Sitzungsobjekt empfängt die bei Initialisierung hergestellte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindung. Wenn alle Verweise auf die Schnittstellen des Sitzungsobjekts freigegeben werden, wird die Verbindung zur Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für ein anderes für die Datenquelle erstelltes Sitzungsobjekt verfügbar.  
   
  Ein zusätzliches für die Datenquelle erstelltes Sitzungsobjekt stellt eine eigene Verbindung zur Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, wie von der Datenquelle angegeben. Die Verbindung zur Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird unterbrochen, wenn die Anwendung alle Verweise auf Objekte freigibt, die in dieser Sitzung erstellt wurden.  
   
- Im folgenden Beispiel wird veranschaulicht, wie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwendet wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um eine Verbindung mit einer-Datenbank herzustellen:  
+ Im folgenden Beispiel wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] veranschaulicht, wie Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativen Client-OLE-DB-Anbieter zum Herstellen einer Verbindung mit einer Datenbank verwenden:  
   
 ```  
 int main()  
@@ -181,14 +181,14 @@ EXIT:
 }  
 ```  
   
- Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herstellen einer Verbindung von Native Client OLE DB-Anbieter Sitzungs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekten mit einer Instanz von kann einen erheblichen mehr Aufwand für Anwendungen generieren, die Sitzungs Objekte ständig erstellen und freigeben. Der Aufwand kann minimiert werden, indem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Sitzungs Objekte effizient verwaltet werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB-Anbieter Anwendungen können die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung eines Sitzungs Objekts aktiv halten, indem Sie einen Verweis auf mindestens eine Schnittstelle des Objekts beibehalten.  
+ Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbinden von Sitzungsobjekten des nativen Client-OLE-DB-Anbieters mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann erheblichen Overhead für Anwendungen generieren, die kontinuierlich Sitzungsobjekte erstellen und freigeben. Der Overhead kann minimiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden, indem Sitzungsobjekte des nativen Client-OLE-DB-Anbieters effizient verwaltet werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client-OLE-DB-Anbieteranwendungen können die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung eines Sitzungsobjekts aktiv halten, indem ein Verweis auf mindestens eine Schnittstelle des Objekts beibehalten wird.  
   
  Durch Aufrechterhalten eines Pools von Verweisen auf Befehlserstellungsobjekte können aktive Verbindungen für diese Sitzungsobjekte im Pool aktiviert bleiben. Wenn Sitzungsobjekte angefordert werden, übergibt der Poolverwaltungscode einen gültigen **IDBCreateCommand**-Schnittstellenzeiger an die Anwendungsmethode, die die Sitzung anfordert. Wenn die Anwendungsmethode die Sitzung nicht mehr erfordert, gibt die Methode den Schnittstellenzeiger an den Poolverwaltungscode zurück, anstatt den Verweis der Anwendung auf das Befehlserstellungsobjekt freizugeben.  
   
 > [!NOTE]  
->  Im vorherigen Beispiel wird die **IDBCreateCommand**-Schnittstelle verwendet, da die **ICommand**-Schnittstelle die **GetDBSession **-Methode implementiert. Dies ist die einzige Methode im Befehls- oder Rowsetbereich, mit der ein Objekt die Sitzung bestimmen kann, in der es erstellt wurde. Daher ermöglicht einzig ein Befehlsobjekt einer Anwendung das Abrufen eines Datenquellobjekt-Zeigers, von dem aus weitere Sitzungen erstellt werden können.  
+>  Im vorherigen Beispiel wird die **IDBCreateCommand**-Schnittstelle verwendet, da die **ICommand**-Schnittstelle die **GetDBSession**-Methode implementiert. Dies ist die einzige Methode im Befehls- oder Rowsetbereich, mit der ein Objekt die Sitzung bestimmen kann, in der es erstellt wurde. Daher ermöglicht einzig ein Befehlsobjekt einer Anwendung das Abrufen eines Datenquellobjekt-Zeigers, von dem aus weitere Sitzungen erstellt werden können.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenquellen Objekte &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Datenquellenobjekte &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tabellennamen | Microsoft-Dokumentation
+title: Tabellennamen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - SQL grammar [ODBC], table names
 - table names [ODBC]
 ms.assetid: f7a5cb0a-3be7-4f46-82f9-64ffdbceaa9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5dd8de055521f4a1831d20a9a34bedb9309d1de6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 91a415cd456186f18ef358b9d504145f78152774
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939786"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303121"
 ---
 # <a name="table-names"></a>Tabellennamen
-Wenn der dBASE-, Microsoft Excel-, Paradox-oder Text-Treiber verwendet wird, können Tabellennamen, die in der from-Klausel von SELECT oder DELETE auftreten, nach der INTO-Klausel in INSERT und After Update, CREATE TABLE und DROP TABLE einen gültigen Pfad, Primärnamen und eine gültige Dateinamenerweiterung enthalten. .  
+Wenn der Treiber dBASE, Microsoft Excel, Paradox oder Text verwendet wird, können Tabellennamen, die in der FROM-Klausel von SELECT oder DELETE nach der INTO-Klausel in INSERT und nach UPDATE, CREATE TABLE und DROP TABLE vorkommen, einen gültigen Pfad, einen primären Namen und eine Dateinamenerweiterung enthalten.  
   
- Die Verwendung eines Tabellennamens an einer anderen Stelle in einer SQL-Anweisung unterstützt nicht die Verwendung von Pfaden oder Erweiterungen, akzeptiert jedoch nur den Primärnamen (z. b. EMP aus c:\abc\emp).  
+ Die Verwendung eines Tabellennamens an anderer Stelle in einer SQL-Anweisung unterstützt nicht die Verwendung von Pfaden oder Erweiterungen, akzeptiert jedoch nur den primären Namen (z. B. EMP FROM C:-ABC-EMP).  
   
- Korrelations Namen (Aliase) können verwendet werden. Beispiel:  
+ Korrelationsnamen (Aliase) können verwendet werden. Beispiel:  
   
 ```  
 SELECT *    

@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Paradox-Treiber) | Microsoft-Dokumentation
+title: SQLConfigDataSource (Paradox-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,36 +11,36 @@ helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLConfigDataSource
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 33cc778d921b90a460dab6bda352fd7627d2cf7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68e60d7ca9c37865c1b265297d24591638a44965
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054074"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283930"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (Paradox-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Informationen zu Paradox-Treibern. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält paradox driverspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Die **SQLConfigDataSource** -Funktion, die verwendet wird, um eine Datenquelle hinzuzufügen, zu ändern oder zu löschen, verwendet dynamisch die folgenden Schlüsselwörter.  
+ Die **SQLConfigDataSource-Funktion,** die zum Hinzufügen, Ändern oder Löschen einer Datenquelle verwendet wird, verwendet dynamisch die folgenden Schlüsselwörter.  
   
 |Schlüsselwort|BESCHREIBUNG|  
 |-------------|-----------------|  
-|CollatingSequence|Die Reihenfolge, in der die Felder sortiert werden.<br /><br /> Wenn der Paradox-Treiber verwendet wird, kann die Sequenz "ASCII (Standard)", "International", "Swedish-Finnish" oder "Norwegian-Danish" sein.<br /><br /> Dadurch wird die gleiche Option wie die **Sortierreihenfolge** im Setup Dialogfeld festgelegt.|  
-|DBQ|Der Name der Datenbankdatei.<br /><br /> Dadurch wird die gleiche Option wie die **Datenbank** im Setup Dialogfeld festgelegt.|  
-|DefaultDir|Die Pfadspezifikation für das Verzeichnis.|  
-|Beschreibung|Eine Beschreibung der Daten in der Datenquelle.<br /><br /> Dadurch wird die gleiche Option wie die **Beschreibung** im Setup Dialogfeld festgelegt.|  
+|COLLATINGSEQUENCE|Die Reihenfolge, in der die Felder sortiert werden.<br /><br /> Wenn der Paradox-Treiber verwendet wird, kann die Sequenz ASCII (Standard), International, Schwedisch-Finnisch oder Norwegisch-Dänisch sein.<br /><br /> Dadurch wird die gleiche Option wie **Sequenz sammeln** im Dialogfeld Setup festgelegt.|  
+|Dbq|Der Name der Datenbankdatei.<br /><br /> Dadurch wird die gleiche Option wie **Datenbank** im Dialogfeld Setup festgelegt.|  
+|DEFAULTDIR|Die Pfadspezifikation zum Verzeichnis.|  
+|DESCRIPTION|Eine Beschreibung der Daten in der Datenquelle.<br /><br /> Dadurch wird die gleiche Option wie **Beschreibung** im Dialogfeld Setup festgelegt.|  
 |DRIVER|Die Pfadspezifikation für die Treiber-DLL.|  
-|DriverID|Eine ganzzahlige ID für den Treiber.<br /><br /> 26 (Paradox 3. x)<br /><br /> 282 (Paradox 4. x)<br /><br /> 538 (Paradox 5. x)|  
-|Ausschließliche|Bestimmt, ob die Datenbank im exklusiven Modus geöffnet wird (nur von einem Benutzer gleichzeitig aufgerufen) oder im freigegebenen Modus (Zugriff durch mehrere Benutzer gleichzeitig). Kann true (exklusiver Modus) oder false (Shared-Modus) sein.<br /><br /> Dadurch wird im Setup Dialogfeld dieselbe Option wie **exklusiv** festgelegt.|  
-|RA|Dateityp Paradox 3. x, Paradox 4. x oder Paradox 5. x|  
-|FILETYPE|Dateityp für den Text Treiber (Text).|  
-|PageTimeout|Gibt den Zeitraum in Sekunden an, in dem eine Seite (falls nicht verwendet) im Puffer verbleibt, bevor Sie entfernt wird. Der Standardwert ist 600 Zehntelsekunden (60 Sekunden). Beachten Sie, dass diese Option für alle Datenquellen gilt, die den ODBC-Treiber verwenden.<br /><br /> Dadurch wird die gleiche Option wie das **Seiten Timeout** im Setup Dialogfeld festgelegt.|  
-|Paradoxinetpath|Der vollständige Pfad des Verzeichnisses, das eine Paradox-Sperr Datenbank enthält, da Sie entweder die Datei Pdoxusrs.net (in Paradox 4) enthält.* x*) oder die Paradox.NET-Datei (in Paradox 5).* x*). Wenn das Verzeichnis keine dieser Dateien enthält, erstellt der Paradox-Treiber einen. Weitere Informationen zu diesen Dateien finden Sie in der Paradox-Dokumentation.<br /><br /> Bevor ein Netzwerk Verzeichnis ausgewählt werden kann, muss ein Paradox-Benutzername eingegeben werden.<br /><br /> Dadurch wird die gleiche Option wie **Select Network Directory** im Setup Dialogfeld festgelegt.|  
-|Paradoxinetstyle|Für den Paradox-Treiber der Netzwerk Zugriffs Stil, der für den Zugriff auf Paradox-Daten verwendet werden soll: entweder "3. x" für Paradox 3. *x* oder "4. x" für Paradox 4. *x* oder 5. *x*. Kann auf "3. x" oder "4. x" festgelegt werden, wenn die Version Paradox 4 ist. *x* oder 5. *x*; Wenn die Version Paradox 3 ist. *x*, der Stil muss "3. x" lauten.<br /><br /> Dadurch wird die gleiche Option wie **net Style** im Setup Dialogfeld festgelegt.|  
-|"Paradoxiname"|Für den Paradox-Treiber der Paradox-Benutzername.<br /><br /> Dadurch wird die gleiche Option wie der **Benutzer Name** im Setup Dialogfeld festgelegt.|  
-|PWD|Das Kennwort.<br /><br /> Hierbei handelt es sich um ein optionales Schlüsselwort, das vom Treiber niemals in die Datei geschrieben wird. Sie wird in einem-Befehl für **SQLDriverConnect** mit Kenn Wort geschützten Paradox-Dateien verwendet. Das verwendete Kennwort ist gültig, wenn eine Tabelle geöffnet wird. Wenn kein Kennwort in der Verbindungs Zeichenfolge angegeben wird, wird kein Kennwort für diese Tabelle festgelegt. Wenn Tabellen über unterschiedliche Kenn Wörter verfügen, kann mehr als eine Sitzung nicht in derselben Sitzung geöffnet werden, und die Tabellen können auch nicht verknüpft werden.|  
-|READONLY|TRUE, wenn die Datei schreibgeschützt werden soll. FALSE, wenn die Datei nicht schreibgeschützt sein soll.<br /><br /> Dadurch wird die gleiche **Option wie im** Setup Dialogfeld schreibgeschützt festgelegt.|  
-|Threads|Die Anzahl der Hintergrundthreads, die von der Engine verwendet werden sollen. Dieser Wert ist 3 und kann nicht geändert werden.<br /><br /> Dadurch wird die gleiche Option wie **Threads** im Setup Dialogfeld festgelegt.|
+|DRIVERID|Eine ganzzahlige ID für den Treiber.<br /><br /> 26 (Paradox 3.x)<br /><br /> 282 (Paradox 4.x)<br /><br /> 538 (Paradox 5.x)|  
+|Exklusive|Legt fest, ob die Datenbank im exklusiven Modus (auf den jeweils nur ein Benutzer zugreifen) oder im freigegebenen Modus (auf den jeweils mehr als ein Benutzer zugreifen) geöffnet wird. Kann true (exklusiver Modus) oder false (shared mode) sein.<br /><br /> Dadurch wird die gleiche Option wie **Exklusiv** im Dialogfeld Setup festgelegt.|  
+|Fil|Dateityp Paradox 3.x, Paradox 4.x oder Paradox 5.x|  
+|Filetype|Dateityp für den Texttreiber (Text).|  
+|PAGETIMEOUT|Gibt den Zeitraum in Zehntelsekunden an, in dem eine Seite (falls nicht verwendet) im Puffer verbleibt, bevor sie entfernt wird. Der Standardwert ist 600 Zehntelsekunden (60 Sekunden). Beachten Sie, dass diese Option für alle Datenquellen gilt, die den ODBC-Treiber verwenden.<br /><br /> Dadurch wird dieselbe Option wie **Seitentimeout** im Dialogfeld Setup festgelegt.|  
+|PARADOXNETPATH|Der vollständige Pfad des Verzeichnisses, das eine Paradox-Sperrdatenbank enthält, da es entweder die PDOXUSRS.net-Datei enthält (in Paradox 4.* x*) oder die PARADOX.net Datei (in Paradox 5.* x*). Wenn das Verzeichnis keine dieser Dateien enthält, erstellt der Paradox-Treiber eine. Informationen zu diesen Dateien finden Sie in der Paradox-Dokumentation.<br /><br /> Bevor ein Netzwerkverzeichnis ausgewählt werden kann, muss ein Paradox-Benutzername eingegeben werden.<br /><br /> Dadurch wird dieselbe Option wie **Netzwerkverzeichnis** auswählen im Dialogfeld Setup festgelegt.|  
+|PARADOXNETSTYLE|Für den Paradox-Treiber ist der Netzwerkzugriffsstil für den Zugriff auf Paradox-Daten zu verwenden: entweder "3.x" für Paradox 3. *x* oder "4.x" für Paradox 4. *x* oder 5. *x*. Kann auf "3.x" oder "4.x" gesetzt werden, wenn die Version Paradox 4 ist. *x* oder 5. *x*; wenn die Version Paradox 3 ist. *x*muss der Stil "3.x" sein.<br /><br /> Dadurch wird die gleiche Option wie **Net Style** im Dialogfeld Setup festgelegt.|  
+|PARADOXUSERNAME|Für den Paradox-Treiber den Paradox-Benutzernamen.<br /><br /> Dadurch wird dieselbe Option wie **Benutzername** im Dialogfeld Setup festgelegt.|  
+|PWD|Das Kennwort.<br /><br /> Dies ist ein optionales Schlüsselwort und wird nie vom Treiber in die Datei geschrieben. Es wird in einem Aufruf von **SQLDriverConnect** gegen kennwortgesicherte Paradox-Dateien verwendet. Das verwendete Kennwort ist gültig, wenn eine Tabelle geöffnet wird. Wenn in der Verbindungszeichenfolge kein Kennwort übergeben wird, wird kein Kennwort für diese Tabelle eingerichtet. Wenn Tabellen unterschiedliche Kennwörter haben, können nicht mehr als eine in derselben Sitzung geöffnet werden, und die Tabellen können auch nicht verknüpft werden.|  
+|READONLY|TRUE, um Datei schreibgeschützt zu machen; FALSE, um die Datei nicht schreibgeschützt zu machen.<br /><br /> Dadurch wird die gleiche Option wie **Nur lesen** im Dialogfeld Setup festgelegt.|  
+|Threads|Die Anzahl der Hintergrundthreads, die das Modul verwenden soll. Dieser Wert ist 3 und kann nicht geändert werden.<br /><br /> Dadurch wird die gleiche Option wie **Threads** im Dialogfeld Setup festgelegt.|

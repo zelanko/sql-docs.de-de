@@ -1,5 +1,5 @@
 ---
-title: Deklarieren der Anwendungs&#39;s ODBC-Version | Microsoft-Dokumentation
+title: Deklarieren der Anwendung&#39;s ODBC-Version | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,36 +15,36 @@ helpviewer_keywords:
 - connecting to data source [ODBC], declaring ODBC version
 - version declaration [ODBC]
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea97e3cd7a8fee3b3397524bf2c48c428d6a0be0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ba346ed7f7a261446110c5513026d20a86fd3a19
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076840"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81285230"
 ---
-# <a name="declaring-the-application39s-odbc-version"></a>Deklarieren der Anwendungs&#39;s ODBC-Version
-Bevor eine Anwendung eine Verbindung zuordnet, muss Sie das SQL_ATTR_ODBC_VERSION Environment-Attribut festlegen. Dieses Attribut gibt an, dass die Anwendung der ODBC *2. x* -oder ODBC *3. x* -Spezifikation folgt, wenn die folgenden Elemente verwendet werden:  
+# <a name="declaring-the-application39s-odbc-version"></a>Deklarieren der Anwendung&#39;s ODBC-Version
+Bevor eine Anwendung eine Verbindung zuweist, muss sie das SQL_ATTR_ODBC_VERSION Umgebungsattribut festlegen. Dieses Attribut besagt, dass die Anwendung die ODBC *2.x-* oder ODBC *3.x-Spezifikation* folgt, wenn die folgenden Elemente verwendet werden:  
   
--   **Sqlstates**. Viele SQLSTATE-Werte unterscheiden sich in ODBC *2. x* und ODBC *3. x*.  
+-   **SQLSTATEs**. Viele SQLSTATE-Werte unterscheiden sich in ODBC *2.x* und ODBC *3.x*.  
   
--   **Datums-, Uhrzeit-und Timestamp-Typbezeichner**. In der folgenden Tabelle werden die Typbezeichner für Datums-, Uhrzeit-und Zeitstempel Daten in ODBC *2. x* und ODBC *3. x*angezeigt.  
+-   **Datums-, Uhrzeit- und Zeitstempeltypbezeichner**. Die folgende Tabelle zeigt die Typbezeichner für Datums-, Uhrzeit- und Zeitstempeldaten in ODBC *2.x* und ODBC *3.x*.  
   
-    |ODBC *2. x*|ODBC *3. x*|  
+    |ODBC *2.x*|ODBC *3.x*|  
     |----------------|----------------|  
     |**SQL-Typenbezeichner**||  
     |SQL_DATE|SQL_TYPE_DATE|  
     |SQL_TIME|SQL_TYPE_TIME|  
     |SQL_TIMESTAMP|SQL_TYPE_TIMESTAMP|  
-    |**C-Typbezeichner**||  
+    |**C-Typ-Bezeichner**||  
     |SQL_C_DATE|SQL_C_TYPE_DATE|  
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   _CatalogName_-**Argument in SQLTables**.   In ODBC *2. x*werden die Platzhalter Zeichen ("%" und "_") im *CatalogName* -Argument wörtlich behandelt. In ODBC *3. x*werden Sie als Platzhalter Zeichen behandelt. Daher kann eine Anwendung, die auf die ODBC *2. x* -Spezifikation folgt, diese nicht als Platzhalter Zeichen verwenden und nicht mit Escapezeichen versehen, wenn Sie als Literale verwendet werden. Eine Anwendung, die der ODBC *3. x* -Spezifikation folgt, kann diese als Platzhalter Zeichen verwenden oder Sie mit Escapezeichen versehen und als Literale verwenden. Weitere Informationen finden Sie unter [Argumente in Katalog Funktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+-   _CatalogName-Argument_  **in SQLTables**. In ODBC *2.x*werden die Platzhalterzeichen ("%" und "_") im *CatalogName-Argument* wörtlich behandelt. In ODBC *3.x*werden sie als Platzhalterzeichen behandelt. Daher kann eine Anwendung, die der ODBC *2.x-Spezifikation* folgt, diese nicht als Platzhalterzeichen verwenden und sie nicht entkommen, wenn sie als Literale verwendet werden. Eine Anwendung, die der ODBC *3.x-Spezifikation* folgt, kann diese als Platzhalterzeichen verwenden oder sie umgehen und als Literale verwenden. Weitere Informationen finden Sie unter [Argumente in Katalogfunktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
- Die Treiber ODBC *3. x* Driver Manager und ODBC *3. x* überprüfen die Version der ODBC-Spezifikation, auf die eine Anwendung geschrieben wird, und reagieren entsprechend. Wenn die Anwendung z. b. der ODBC *2. x* -Spezifikation folgt und **SQLExecute** aufruft, bevor **SQLPrepare**aufgerufen wird, gibt der ODBC *3. x* -Treiber-Manager SQLSTATE S1010 (Funktions Sequenz Fehler) zurück. Wenn die Anwendung der ODBC *3. x* -Spezifikation folgt, gibt der Treiber-Manager SQLSTATE HY010 (Funktions Sequenz Fehler) zurück. Weitere Informationen finden Sie unter abwärts [Kompatibilität und Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
+ Die Treiber ODBC *3.x* Driver Manager und ODBC *3.x* überprüfen die Version der ODBC-Spezifikation, auf die eine Anwendung geschrieben ist, und reagieren entsprechend. Wenn die Anwendung beispielsweise der ODBC *2.x-Spezifikation* folgt und **SQLExecute** aufruft, bevor **SIE SQLPrepare**aufruft, gibt der ODBC *3.x-Treiber-Manager* SQLSTATE S1010 (Funktionssequenzfehler) zurück. Wenn die Anwendung der ODBC *3.x-Spezifikation* folgt, gibt der Treiber-Manager SQLSTATE HY010 (Funktionssequenzfehler) zurück. Weitere Informationen finden Sie unter [Abwärtskompatibilität und Konformität von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
 > [!IMPORTANT]  
->  Anwendungen, die der ODBC *3. x* -Spezifikation folgen, müssen bedingten Code verwenden, um die Verwendung von Funktionen in ODBC *3. x* beim Arbeiten mit ODBC *2. x* -Treibern zu vermeiden. ODBC *2. x* -Treiber unterstützen keine neuen Funktionen in ODBC *3. x* , nur weil die Anwendung deklariert, dass Sie auf die ODBC *3. x* -Spezifikation folgt. Darüber hinaus unterstützen ODBC *3. x* -Treiber keine Funktionen, die neu in ODBC *3. x* sind, sondern nur, weil die Anwendung deklariert, dass Sie auf die ODBC *2. x* -Spezifikation folgt.
+>  Anwendungen, die der ODBC *3.x-Spezifikation* folgen, müssen bedingten Code verwenden, um zu vermeiden, dass odBC *3.x* bei der Arbeit mit ODBC *2.x-Treibern* eine neue Funktionalität verwendet. ODBC *2.x-Treiber* unterstützen keine Funktionalität, die für ODBC *3.x* neu ist, nur weil die Anwendung deklariert, dass sie der ODBC *3.x-Spezifikation* folgt. Darüber hinaus unterstützen ODBC *3.x-Treiber* nicht die Funktionalität, die für ODBC *3.x* neu ist, nur weil die Anwendung deklariert, dass sie der ODBC *2.x-Spezifikation* folgt.

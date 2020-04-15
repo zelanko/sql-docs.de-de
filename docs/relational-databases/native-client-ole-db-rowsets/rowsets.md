@@ -14,15 +14,15 @@ helpviewer_keywords:
 - OLE DB rowsets, about rowsets
 - rowsets [OLE DB]
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a7156f90b2db2de328f37fa046811475bdde2a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: da51990e310b7903ce90d0369e30ff098103e141
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761676"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300248"
 ---
 # <a name="rowsets"></a>Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "73761676"
   
 -   [Erstellen eines Rowsets mit 'IopenRowset'](../../relational-databases/native-client-ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
   
--   [Erstellen von Rowsets mit 'ICommand::Execute'](../../relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
+-   [Erstellen von Rowsets mit ICommand::Execute](../../relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
   
 -   [Eigenschaften und Verhaltensweisen von Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   

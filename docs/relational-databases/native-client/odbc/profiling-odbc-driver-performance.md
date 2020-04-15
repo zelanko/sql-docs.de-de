@@ -1,5 +1,5 @@
 ---
-title: Profilerstellung der ODBC-Treiber Leistung | Microsoft-Dokumentation
+title: Profilerstellung der ODBC-Treiberleistung | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2bd869b16cc6ec81d77ce0256859de1ed8c1d0e3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73760707"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303666"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Leistungsprofilerstellung des ODBC-Treibers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "73760707"
   
 -   Durch Herstellen einer Verbindung zu einer Datenquelle, die die Protokollierung angibt  
   
--   Aufrufen von [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) zum Festlegen von treiberspezifischen Attributen, die die Profilerstellung steuern.  
+-   Aufrufen von [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) zum Festlegen treiberspezifischer Attribute, die die Profilerstellung steuern.  
   
  Jeder Anwendungsprozess erhält eine eigene Kopie des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treibers, und die Profilerstellung erfolgt global für die Kombination aus einer Treiberkopie und einem Anwendungsprozess. Wenn die Profilerstellung in der Anwendung aktiviert wird, zeichnet die Profilerstellung Informationen über alle im Treiber dieser Anwendung aktiven Verbindungen auf. Das betrifft auch die Verbindungen, die die Profilerstellung nicht ausdrücklich angefordert haben.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73760707"
   
  Wenn eine Anwendung mit der Profilerstellung in einer Protokolldatei beginnt und eine zweite Anwendung versucht, die Profilerstellung in derselben Protokolldatei zu beginnen, kann die zweite Anwendung keine Profildaten protokollieren. Wenn die zweite Anwendung mit der Profilerstellung beginnt, nachdem die erste Anwendung ihren Treiber entladen hat, überschreibt die zweite Anwendung die Protokolldatei der ersten Anwendung.  
   
- Wenn eine Anwendung eine Verbindung mit einer Datenquelle herstellt, für die die Profilerstellung aktiviert ist, wird SQL_ERROR zurückgegeben, wenn die Anwendung **SQLSetConnectOption** aufruft, um die Protokollierung zu starten Wenn Sie **SQLGetDiagRec** aufrufen, wird Folgendes zurückgegeben:  
+ Wenn eine Anwendung eine Verbindung zu einer Datenquelle herstellt, für die die Profilerstellung aktiviert ist, gibt der Treiber SQL_ERROR zurück, wenn die Anwendung **SQLSetConnectOption** aufruft, um die Protokollierung zu starten. Ein Aufruf von **SQLGetDiagRec** gibt dann Folgendes zurück:  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -77,7 +77,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Anwendungsprofilstatistiken  
   
-|SQLPERF-Feld|BESCHREIBUNG|  
+|SQLPERF-Feld|Beschreibung|  
 |-------------------|-----------------|  
 |TimerResolution|Minimale Auflösung der Uhrzeit des Servers in Millisekunden. Dies wird gewöhnlich als 0 (null) angegeben und sollte nur verwendet werden, wenn die angegebene Zahl sehr groß ist. Wenn die minimale Auflösung der Serveruhrzeit größer als das wahrscheinliche Intervall einiger der zeitgeberbasierten Statistikwerte ist, könnte die Statistikdatenmenge unnötig größer werden.|  
 |SQLidu|Anzahl der INSERT-Anweisungen, DELETE-Anweisungen oder UPDATE-Anweisungen nach SQL_PERF_START|  
@@ -85,9 +85,9 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Anzahl der SELECT-Anweisungen, die nach SQL_PERF_START verarbeitet wurden|  
 |SQLSelectRows|Anzahl von Zeilen, die nach SQL_PERF_START ausgewählt wurden|  
 |Transaktionen|Anzahl der Benutzertransaktionen nach SQL_PERF_START, einschließlich der Rollbacks. Wenn eine ODBC-Anwendung mit SQL_AUTOCOMMIT_ON ausgeführt wird, wird jeder Befehl als Transaktion betrachtet.|  
-|SQLPrepares|Anzahl der [SQLPrepare-Funktions](https://go.microsoft.com/fwlink/?LinkId=59360) Aufrufe nach SQL_PERF_START.|  
-|ExecDirects|Anzahl von **SQLExecDirect** -aufrufen nach SQL_PERF_START.|  
-|SQLExecutes|Anzahl von **SQLExecute** -aufrufen nach SQL_PERF_START.|  
+|SQLPrepares|Anzahl der [SQLPrepare Function-Aufrufe](https://go.microsoft.com/fwlink/?LinkId=59360) nach SQL_PERF_START.|  
+|ExecDirects|Anzahl der **SQLExecDirect-Aufrufe** nach SQL_PERF_START.|  
+|SQLExecutes|Anzahl der **SQLExecute-Aufrufe** nach SQL_PERF_START.|  
 |CursorOpens|Anzahl der Male, die der Treiber nach SQL_PERF_START einen Servercursor geöffnet hat|  
 |CursorSize|Anzahl von Zeilen in den Resultsets, die nach SQL_PERF_START von Cursorn geöffnet wurden|  
 |CursorUsed|Anzahl von Zeilen, die nach SQL_PERF_START über den Treiber von Cursorn abgerufen wurden|  
@@ -115,13 +115,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Zeitstatistiken  
   
-|SQLPERF-Feld|BESCHREIBUNG|  
+|SQLPERF-Feld|Beschreibung|  
 |-------------------|-----------------|  
 |msExecutionTime|Die kumulierte Verarbeitungszeit des Treibers nach SQL_PERF_START, einschließlich der Wartezeit des Treibers auf Antworten vom Server|  
 |msNetworkServerTime|Die kumulierte Wartezeit des Treibers auf Antworten vom Server|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client &#40;ODBC-&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Gewusst-wie-Themen zur Profilerstellung für ODBC-Treiber &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Profiling ODBC Driver Performance How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

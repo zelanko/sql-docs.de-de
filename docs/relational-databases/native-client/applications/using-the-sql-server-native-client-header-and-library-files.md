@@ -1,5 +1,5 @@
 ---
-title: Native Client-, Header-und Bibliotheksdateien
+title: Native Client-, Header- und Bibliotheksdateien
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd697e0e1ab788413af5e35f9d947fc7e784759f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 91c5d5bdac12e99a74f21a54d1303d90435f7534
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75258725"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303892"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Verwenden der SQL Server Native Client-Header- und Bibliotheksdateien
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Header- und Bibliotheksdateien werden mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert. Es ist wichtig, beim Entwickeln von Anwendungen alle für die Entwicklung erforderlichen Dateien in die Entwicklungsumgebung zu kopieren. Weitere Informationen zum Installieren und erneuten verteilen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] von Native Client finden Sie unter [Installieren von SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Header- und Bibliotheksdateien werden mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert. Es ist wichtig, beim Entwickeln von Anwendungen alle für die Entwicklung erforderlichen Dateien in die Entwicklungsumgebung zu kopieren. Weitere Informationen zum Installieren und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Weiterverteilen von Native Client finden Sie unter [Installieren von SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Header- und -Bibliotheksdateien werden am folgenden Speicherort installiert:  
   
- *% Program Files%* \Microsoft SQL server\110\sdk  
+ *%PROGRAM FILES%*, Microsoft SQL Server, 110, SDK  
   
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Headerdatei (sqlncli.h) wird verwendet, um Ihren benutzerdefinierten Anwendungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Datenzugriffsfunktionalitäten hinzuzufügen. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Headerdatei enthält alle Definitionen, Attribute, Eigenschaften und Schnittstellen, die Sie mit den neuen, in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Funktionen nutzen können.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75258725"
  OLE DB-Anwendungen, die den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwenden, brauchen nur auf sqlncli.h zu verweisen. Wenn eine Anwendung MDAC (SQLOLEDB) und den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwendet, kann sowohl auf sqloledb.h als auch auf sqlncli.h verwiesen werden, unter der Voraussetzung, dass sqloledb.h zuerst angegeben wird.  
   
 ## <a name="using-the-sql-server-native-client-header-file"></a>Verwenden der SQL Server Native Client-Headerdatei  
- Um die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Header Datei zu verwenden, müssen Sie eine **include** -Anweisung innerhalb des C/C++-Programmiercodes verwenden. In den folgenden Abschnitten wird beschrieben, wie Sie dies sowohl für OLE DB- als auch für ODBC-Anwendungen durchführen können.  
+ Um die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Headerdatei zu verwenden, müssen Sie eine **Include-Anweisung** in Ihrem C/C++-Programmiercode verwenden. In den folgenden Abschnitten wird beschrieben, wie Sie dies sowohl für OLE DB- als auch für ODBC-Anwendungen durchführen können.  
   
 > [!NOTE]  
 >  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Header- und Bibliotheksdateien können nur mithilfe von Visual Studio C++ 2002 oder höher kompiliert werden.  
@@ -63,7 +63,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  Die erste der oben stehenden Codezeilen sollte weggelassen werden, wenn sowohl die OLE DB- als auch die ODBC-API von der Anwendung verwendet werden. Wenn die Anwendung außerdem eine **include** -Anweisung für sqloledb. h enthält, muss die **include** -Anweisung für sqlncli. h darauf folgen.  
+>  Die erste der oben stehenden Codezeilen sollte weggelassen werden, wenn sowohl die OLE DB- als auch die ODBC-API von der Anwendung verwendet werden. Wenn die Anwendung eine **include-Anweisung** für sqloledb.h enthält, muss die **include-Anweisung** für sqlncli.h danach kommen.  
   
  Verwenden Sie für das Erstellen einer Verbindung mit einer Datenquelle über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client die Zeichenfolge "SQLNCLI11" als Anbietername.  
   
@@ -76,7 +76,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  Die erste Codezeile, die oben gezeigt wird, sollte weggelassen werden, wenn sowohl OLE DB-als auch ODBC-APIs von der Anwendung verwendet werden. Wenn die Anwendung über eine `#include`-Anweisung für odbcss.h verfügt, sollte diese entfernt werden.  
+>  Die erste oben gezeigte Codezeile sollte weggelassen werden, wenn sowohl OLE DB- als auch ODBC-APIs von der Anwendung verwendet werden. Wenn die Anwendung über eine `#include`-Anweisung für odbcss.h verfügt, sollte diese entfernt werden.  
   
  Verwenden Sie für das Erstellen einer Verbindung mit einer Datenquelle über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client die Zeichenfolge "SQL Server Native Client 11.0" als Treibernamen.  
   
@@ -100,7 +100,7 @@ include "sqlncli.h";
   
  Wenn Sie beispielsweise eine Anwendung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und der zugeordneten Bibliotheksdatei (sqlncli11.lib) und Headerdatei (sqlncli.h) aus \Programme\Microsoft SQL Server\110\SDK kompilieren, sollten Sie (als Beispiel wird ODBC verwendet) in der Verbindungszeichenfolge unbedingt "DRIVER={SQL Server Native Client 11.0}" angeben.  
   
- Weitere Informationen finden Sie unter Ausführen von [Massen Kopier Vorgängen](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md).  
+ Weitere Informationen finden Sie unter [Durchführen von Massenkopiervorgängen](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 6: Trennen der Verbindung mit der Datenquelle | Microsoft-Dokumentation'
+title: 'Schritt 6: Trennen sie von der Datenquelle | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - data sources [ODBC], disconnecting
 - disconnecting from data source [ODBC]
 ms.assetid: 6ad759ba-4721-4d8f-9b26-de976d4fc1a0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 65cc2ae8d2c2248a733e6efa9537fd3b40bb8fd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: df8cd94435d74bf813b0b64be0753a0beb44d354
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114124"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302791"
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>Schritt 6: Trennen der Verbindung mit der Datenquelle
-Der letzte Schritt besteht darin, die Verbindung mit der Datenquelle zu trennen, wie in der folgenden Abbildung dargestellt. Zuerst gibt die Anwendung alle Anweisungs Handles durch Aufrufen von **SQLFreeHandle**frei. Weitere Informationen finden Sie unter [Freigeben eines Anweisungs Handles](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  
+Der letzte Schritt besteht darin, die Verbindung zur Datenquelle zu trennen, wie in der folgenden Abbildung dargestellt. Zuerst gibt die Anwendung alle Anweisungshandles frei, indem **SIE SQLFreeHandle aufruft.** Weitere Informationen finden Sie unter [Befreien eines Anweisungshandles](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  
   
  ![Zeigt das Trennen einer Verbindung zu einer Datenquelle](../../../odbc/reference/develop-app/media/pr17.gif "pr17")  
   
- Als nächstes trennt die Anwendung die Verbindung mit der Datenquelle mit **SQLDisconnect** und gibt das Verbindungs Handle mit **SQLFreeHandle**frei. Weitere Informationen finden Sie unter [Trennen der Verbindung mit einer Datenquelle oder einem Treiber](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
+ Als Nächstes trennt die Anwendung die Verbindung zur Datenquelle mit **SQLDisconnect** und gibt das Verbindungshandle mit **SQLFreeHandle**frei. Weitere Informationen finden Sie unter [Trennen von einer Datenquelle oder einem Treiber](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
   
- Schließlich gibt die Anwendung das Umgebungs Handle mit **SQLFreeHandle** frei und entlädt den Treiber-Manager. Weitere Informationen finden Sie unter [Zuordnen des Umgebungs Handles](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).
+ Schließlich gibt die Anwendung den Umgebungshandle mit **SQLFreeHandle** frei und entlädt den Treiber-Manager. Weitere Informationen finden Sie unter [Zuweisen des Umgebungshandles](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).

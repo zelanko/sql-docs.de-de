@@ -1,5 +1,5 @@
 ---
-title: Sqlinstallererror-Funktion | Microsoft-Dokumentation
+title: SQLInstallerError-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLInstallerError [ODBC]
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ab9461d87a3df2efc98c38e4c72cee4c247fee7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e749237cf87c5054b8273f38531d9336d316e040
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138025"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302101"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError-Funktion
-**Konformitäts**  
- Eingeführte Version: ODBC 3,0  
+**Konformität**  
+ Eingeführte Version: ODBC 3.0  
   
  **Zusammenfassung**  
- **Sqlinstallererror** gibt Fehler-oder Statusinformationen für die ODBC-Installer-Funktionen zurück.  
+ **SQLInstallerError** gibt Fehler- oder Statusinformationen für die ODBC-Installationsfunktionen zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,37 +46,37 @@ RETCODE SQLInstallerError(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *IError*  
- Der Fehler Datensatznummer. Gültige Zahlen liegen zwischen 1 und 8.  
+ *iError*  
+ [Eingabe] Fehlerdatensatznummer. Gültige Zahlen sind von 1 bis 8.  
   
- *pferrorcode*  
- Ausgeben Installationsprogramm Fehlercode. (Weitere Informationen finden Sie unter "Kommentare").  
+ *pfErrorCode*  
+ [Ausgabe] Installer-Fehlercode. (Weitere Informationen finden Sie unter "Kommentare.")  
   
- *lpszerrormsg*  
- Ausgeben Zeiger auf den Speicher für den Fehlermeldungs Text.  
+ *lpszErrorMsg*  
+ [Ausgabe] Zeiger auf den Speicher für den Fehlermeldungstext.  
   
- *cberrormsgmax*  
- Der Maximale Länge des *szErrorMsg* -Puffers. Dieser Wert muss kleiner oder gleich SQL_MAX_MESSAGE_LENGTH minus dem NULL-Terminierungs Zeichen sein.  
+ *cbErrorMsgMax*  
+ [Eingabe] Maximale Länge des *szErrorMsg-Puffers.* Dies muss kleiner oder gleich SQL_MAX_MESSAGE_LENGTH abzüglich des Null-Beendigungszeichens sein.  
   
- *cberrormsgmax*  
- Der Maximale Länge des *szErrorMsg* -Puffers. Dieser Wert muss kleiner oder gleich SQL_MAX_MESSAGE_LENGTH minus dem NULL-Terminierungs Zeichen sein.  
+ *cbErrorMsgMax*  
+ [Eingabe] Maximale Länge des *szErrorMsg-Puffers.* Dies muss kleiner oder gleich SQL_MAX_MESSAGE_LENGTH abzüglich des Null-Beendigungszeichens sein.  
   
- *pcberrormsg*  
- Ausgeben Ein Zeiger auf die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens), die in *lpszerrormsg*zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cberrormsgmax*ist, wird der Fehlermeldungs Text in *lpszerrormsg* auf *cberrormsgmax* abzüglich der NULL-Beendigungs Zeichen Bytes abgeschnitten. Das *pcberrormsg* -Argument kann ein NULL-Zeiger sein.  
+ *pcbErrorMsg*  
+ [Ausgabe] Zeiger auf die Gesamtzahl der Bytes (mit Ausnahme des Null-Beendigungszeichens), die in *lpszErrorMsg*zurückgegeben werden können. Wenn die Anzahl der zurückzugebenden Bytes größer oder gleich *cbErrorMsgMax*ist, wird der Fehlermeldungstext in *lpszErrorMsg* auf *cbErrorMsgMax* abzüglich der Null-Beendigungszeichenbytes abgeschnitten. Das Argument *pcbErrorMsg* kann ein Nullzeiger sein.  
   
 ## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA oder SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnose  
- **Sqlinstallererror** sendet keine Fehler Werte für sich selbst. **Sqlinstallererror** gibt SQL_NO_DATA zurück, wenn keine Fehlerinformationen abgerufen werden können (in diesem Fall ist " *staufrorcode* " nicht definiert). Wenn **sqlinstallererror** aus irgendeinem Grund, der normalerweise SQL_ERROR zurückgeben würde, nicht auf Fehler Werte zugreifen kann, gibt **sqlinstallererror** SQL_ERROR zurück, stellt jedoch keine Fehler Werte bereit. Wenn Sie die Länge der Warnungs Zeichenfolge (*lpszerrormsg*) nicht kennen, können Sie *lpszerrormsg* auf NULL festlegen und **sqlinstallererror**aufzurufen. **Sqlinstallererror** gibt dann die Länge der Warnungs Zeichenfolge in *cberrormsgmax*zurück. Wenn der Puffer für die Fehlermeldung zu kurz ist, gibt **sqlinstallererror** SQL_SUCCESS_WITH_INFO zurück und gibt den korrekten Wert von " *pferrorcode* " für **sqlinstallererror**zurück.  
+ **SQLInstallerError** gibt keine Fehlerwerte für sich selbst. **SQLInstallerError** gibt SQL_NO_DATA zurück, wenn keine Fehlerinformationen abgerufen werden können (in diesem Fall ist *pfErrorCode* nicht definiert). Wenn **SQLInstallerError** aus irgendeinem Grund, der normalerweise SQL_ERROR zurückgeben würde, nicht auf Fehlerwerte zugreifen kann, gibt **SQLInstallerError** SQL_ERROR, gibt jedoch keine Fehlerwerte zurück. Wenn Sie die Länge der Warnzeichenfolge (*lpszErrorMsg*) nicht kennen, können Sie *lpszErrorMsg* auf NULL setzen und **SQLInstallerError**aufrufen. **SQLInstallerError** gibt dann die Länge der Warnungszeichenfolge in *cbErrorMsgMax*zurück. Wenn der Puffer für die Fehlermeldung zu kurz ist, gibt **SQLInstallerError** SQL_SUCCESS_WITH_INFO und den richtigen *pfErrorCode-Wert* für **SQLInstallerError**zurück.  
   
- Um zu ermitteln, ob ein Abschneiden in der Fehlermeldung aufgetreten ist, kann eine Anwendung den Wert im *cberrormsgmax* -Argument mit der tatsächlichen Länge des Nachrichten Texts vergleichen, der in das *pcberrormsg* -Argument geschrieben wurde. Wenn es zu einem Abschneiden kommt, sollte die richtige Pufferlänge für *lpszerrormsg* zugewiesen werden, und **sqlinstallererror** sollte erneut mit dem entsprechenden *IError* -Datensatz aufgerufen werden.  
+ Um zu bestimmen, ob eine Kürzung in der Fehlermeldung aufgetreten ist, kann eine Anwendung den Wert im Argument *cbErrorMsgMax* mit der tatsächlichen Länge des in das Argument *pcbErrorMsg* geschriebenen Nachrichtentexts vergleichen. Wenn eine Abschneide erfolgt, sollte die richtige Pufferlänge für *lpszErrorMsg* zugewiesen werden, und **SQLInstallerError** sollte mit dem entsprechenden *iError-Datensatz* erneut aufgerufen werden.  
   
 ## <a name="comments"></a>Kommentare  
- Eine Anwendung ruft **sqlinstallererror** auf, wenn ein vorheriger Aufruf der ODBC-Installationsfunktion false zurückgibt. ODBC Installer-und Treiber-oder Konvertierungs Setup Funktionen stellen NULL oder mehr Fehler nur dann bereit, wenn die Funktion fehlschlägt (gibt false zurück); Daher ruft eine Anwendung **sqlinstallererror** nur auf, wenn eine ODBC-Installationsfunktion fehlschlägt.  
+ Eine Anwendung ruft **SQLInstallerError** auf, wenn ein vorheriger Aufruf der ODBC-Installationsfunktion FALSE zurückgibt. ODBC Installer und Treiber- oder Übersetzer-Setup-Funktionen nach Null oder mehr Fehler nur, wenn die Funktion fehlschlägt (gibt FALSE zurück); Daher ruft eine Anwendung **SQLInstallerError** erst auf, nachdem eine ODBC-Installationsfunktion fehlschlägt.  
   
- Die Fehler Warteschlange des ODBC-Installers wird bei jedem Aufruf einer neuen Installer-Funktion geleert. Daher kann eine Anwendung nicht erwarten, dass Fehler für andere Funktionen als vom letzten Installer-Funktionsaufrufen abgerufen werden.  
+ Die ODBC-Installationsfehlerwarteschlange wird jedes Mal geleert, wenn eine neue Installationsfunktion aufgerufen wird. Daher kann eine Anwendung nicht erwarten, Fehler für andere Funktionen als vom letzten Installationsfunktionsaufruf abzurufen.  
   
- Zum Abrufen mehrerer Fehler für einen Funktionsaufruf Ruft eine Anwendung **sqlinstallererror** mehrmals auf.  
+ Um mehrere Fehler für einen Funktionsaufruf abzurufen, ruft eine Anwendung **SQLInstallerError** mehrmals auf.  
   
- Wenn keine zusätzlichen Informationen vorhanden sind, gibt **sqlinstallererror** SQL_NO_DATA zurück, das " *pferrorcode* "-Argument ist nicht definiert, das *pcberrormsg* -Argument ist gleich "0", und das *lpszerrormsg* -Argument enthält ein einzelnes Null-Beendigungs Zeichen (es sei denn, das *cberrormsgmax* -Argument ist gleich 0).
+ Wenn keine zusätzlichen Informationen vorhanden sind, gibt **SQLInstallerError** SQL_NO_DATA zurück, das *argument pfErrorCode* ist nicht definiert, das *Argument pcbErrorMsg* gleich 0 und das Argument *lpszErrorMsg* enthält ein einzelnes NULL-Beendigungszeichen (es sei denn, das Argument *cbErrorMsgMax* ist gleich 0).

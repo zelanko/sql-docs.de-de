@@ -1,5 +1,5 @@
 ---
-title: SELECT-SQL-Befehl | Microsoft-Dokumentation
+title: SELECT - SQL-Befehl | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85f281aefe79a09806c42e13cd771f976362d053
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 640189a5a31d0c21642b037e906bd6361690a9a5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67943788"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300940"
 ---
 # <a name="select---sql-command"></a>SELECT (SQL-Befehl)
 Ruft Daten aus einer oder mehreren Tabellen ab.  
   
- Der Visual FoxPro-ODBC-Treiber unterstützt die native Visual FoxPro-Sprachsyntax für diesen Befehl. Treiber spezifische Informationen finden Sie unter **Treiber Hinweise**.  
+ Der Visual FoxPro ODBC-Treiber unterstützt die native Visual FoxPro-Sprachsyntax für diesen Befehl. Treiberspezifische Informationen finden Sie unter **Treiberhinweise**.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,130 +45,130 @@ FROM [DatabaseName!]Table [Local_Alias]
 ## <a name="arguments"></a>Argumente  
   
 > [!NOTE]  
->  Eine *Unterabfrage*, auf die in den folgenden Argumenten verwiesen wird, ist eine SELECT-Abfrage innerhalb einer SELECT-Option und muss in Klammern eingeschlossen werden. Sie können in der WHERE-Klausel bis zu zwei Unterabfragen auf derselben Ebene (nicht in einem anderen) enthalten. (Weitere Informationen finden Sie im Abschnitt zu den Argumenten.) Unterabfragen können mehrere Joinbedingungen enthalten.  
+>  Eine *Unterabfrage*, auf die in den folgenden Argumenten verwiesen wird, ist ein SELECT innerhalb eines SELECT und muss in Klammern eingeschlossen werden. Sie können bis zu zwei Unterabfragen auf derselben Ebene (nicht geschachtelt) in der WHERE-Klausel haben. (Siehe diesen Abschnitt der Argumente.) Unterabfragen können mehrere Verknüpfungsbedingungen enthalten.  
   
- [Alle &#124; verschieden]   [*Alias*.] *Select_Item* [as *Column_Name*] [, [*Alias*.] *Select_Item* [as *Column_Name*]...]  
- Die SELECT-Klausel gibt die Felder, Konstanten und Ausdrücke an, die in den Abfrage Ergebnissen angezeigt werden.  
+ [ALLE &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*] [,*[Alias*.] *Select_Item* [AS *Column_Name*] ...]  
+ Die SELECT-Klausel gibt die Felder, Konstanten und Ausdrücke an, die in den Abfrageergebnissen angezeigt werden.  
   
- Standardmäßig werden alle Zeilen in den Abfrage Ergebnissen angezeigt.  
+ Standardmäßig zeigt ALL alle Zeilen in den Abfrageergebnissen an.  
   
- Unterschiedlich schließt Duplikate von Zeilen aus den Abfrage Ergebnissen aus.  
+ DISTINCT schließt Duplikate von Zeilen aus den Abfrageergebnissen aus.  
   
 > [!NOTE]  
->  Sie können nur einmal pro SELECT-Klausel verwenden.  
+>  Sie können DISTINCT nur einmal pro SELECT-Klausel verwenden.  
   
- *Alias*. qualifiziert übereinstimmende Elementnamen. Jedes Element, das Sie mit *Select_Item* angeben, generiert eine Spalte der Abfrageergebnisse. Wenn mindestens zwei Elemente denselben Namen haben, schließen Sie den Tabellenalias und einen Punkt vor dem Elementnamen ein, um zu verhindern, dass Spalten dupliziert werden.  
+ *Alias*. qualifiziert übereinstimmende Elementnamen. Jedes Element, das Sie mit *Select_Item* angeben, generiert eine Spalte der Abfrageergebnisse. Wenn zwei oder mehr Elemente denselben Namen haben, schließen Sie den Tabellenalias und einen Punkt vor dem Elementnamen ein, um zu verhindern, dass Spalten dupliziert werden.  
   
- *Select_Item* gibt ein Element an, das in die Abfrageergebnisse eingeschlossen werden soll. Ein Element kann eines der folgenden sein:  
+ *Select_Item* gibt ein Element an, das in die Abfrageergebnisse einbezogen werden soll. Ein Element kann einer der folgenden sein:  
   
--   Der Name eines Felds aus einer Tabelle in der from-Klausel.  
+-   Der Name eines Felds aus einer Tabelle in der FROM-Klausel.  
   
--   Eine-Konstante, die angibt, dass der gleiche Konstante Wert in jeder Zeile der Abfrageergebnisse angezeigt werden soll.  
+-   Eine Konstante, die angibt, dass derselbe Konstantenwert in jeder Zeile der Abfrageergebnisse angezeigt werden soll.  
   
--   Ein Ausdruck, der den Namen einer benutzerdefinierten Funktion aufweisen kann.  
+-   Ein Ausdruck, der der Name einer benutzerdefinierten Funktion sein kann.  
   
  **Benutzerdefinierte Funktionen mit SELECT**  
   
- Obwohl die Verwendung von benutzerdefinierten Funktionen in der SELECT-Klausel offensichtliche Vorteile bietet, sollten Sie auch die folgenden Einschränkungen beachten:  
+ Obwohl die Verwendung benutzerdefinierter Funktionen in der SELECT-Klausel offensichtliche Vorteile hat, sollten Sie auch die folgenden Einschränkungen berücksichtigen:  
   
--   Die Geschwindigkeit von Vorgängen, die mit SELECT ausgeführt werden, kann durch die Geschwindigkeit eingeschränkt werden, mit der solche benutzerdefinierten Funktionen ausgeführt werden. Manipulationen mit hohem Volumen, die benutzerdefinierte Funktionen betreffen, können besser durch die Verwendung von API und benutzerdefinierten Funktionen erzielt werden, die in C oder in der Assemblysprache geschrieben wurden.  
+-   Die Geschwindigkeit der mit SELECT ausgeführten Vorgänge kann durch die Geschwindigkeit begrenzt werden, mit der solche benutzerdefinierten Funktionen ausgeführt werden. Manipulationen mit hohem Volumen mit benutzerdefinierten Funktionen können möglicherweise besser durch die Verwendung von API- und benutzerdefinierten Funktionen in C- oder Assemblysprache durchgeführt werden.  
   
--   Die einzige zuverlässige Möglichkeit, Werte an benutzerdefinierte Funktionen zu übergeben, die von SELECT aufgerufen werden, ist die Argumentliste, die an die Funktion übergeben wird, wenn Sie aufgerufen wird.  
+-   Die einzige zuverlässige Möglichkeit, Werte an benutzerdefinierte Funktionen zu übergeben, die von SELECT aufgerufen werden, ist die Argumentliste, die an die Funktion übergeben wird, wenn sie aufgerufen wird.  
   
--   Selbst wenn Sie experimentieren und eine vermeintlich verbotene Bearbeitung entdecken, die in einer bestimmten Version von FoxPro ordnungsgemäß funktioniert, gibt es keine Garantie dafür, dass Sie in späteren Versionen weiterhin funktioniert.  
+-   Selbst wenn Sie experimentieren und eine angeblich verbotene Manipulation entdecken, die in einer bestimmten Version von FoxPro korrekt funktioniert, gibt es keine Garantie, dass sie in späteren Versionen weiterfunktioniert.  
   
- Abgesehen von diesen Einschränkungen sind benutzerdefinierte Funktionen in der SELECT-Klausel zulässig. Beachten Sie jedoch, dass die Verwendung von SELECT die Leistung beeinträchtigen könnte.  
+ Abgesehen von diesen Einschränkungen sind benutzerdefinierte Funktionen in der SELECT-Klausel akzeptabel. Denken Sie jedoch daran, dass die Verwendung von SELECT die Leistung beeinträchtigen kann.  
   
- Die folgenden Feld Funktionen sind für die Verwendung mit einem SELECT-Element verfügbar, bei dem es sich um ein Feld oder einen Ausdruck mit einem Feld handelt:  
+ Die folgenden Feldfunktionen stehen für die Verwendung mit einem ausgesuchten Element zur Verfügung, das ein Feld oder ein Ausdruck mit einem Feld ist:  
   
--   AVG (*Select_Item*): Average a Average a Column of numeric Data.  
+-   AVG(*Select_Item*)-Durchschnittlich eine Spalte mit numerischen Daten.  
   
--   COUNT (*Select_Item*): zählt die Anzahl von SELECT-Elementen in einer Spalte. COUNT (*) zählt die Anzahl der Zeilen in der Abfrageausgabe.  
+-   COUNT(*Select_Item*)-Zählt die Anzahl der ausgewählten Elemente in einer Spalte. COUNT(*) zählt die Anzahl der Zeilen in der Abfrageausgabe.  
   
--   MIN (*Select_Item*): bestimmt den kleinsten Wert *Select_Item* in einer Spalte.  
+-   MIN(*Select_Item*)- Bestimmt den kleinsten Wert von *Select_Item* in einer Spalte.  
   
--   Max (*Select_Item*): bestimmt den größten Wert *Select_Item* in einer Spalte.  
+-   MAX(*Select_Item*)- Bestimmt den größten Wert von *Select_Item* in einer Spalte.  
   
--   Sum (*Select_Item*): Gesamtergebnis einer Spalte mit numerischen Daten.  
+-   SUM(*Select_Item*)-Totaliert eine Spalte mit numerischen Daten.  
   
- Feld Funktionen können nicht geschachtelt werden.  
+ Sie können Feldfunktionen nicht verschachteln.  
   
- Wie *Column_Name*  
- Gibt die Überschrift für eine Spalte in der Abfrageausgabe an. Dies ist nützlich, wenn *Select_Item* ein Ausdruck ist oder eine Feldfunktion enthält und Sie der Spalte einen aussagekräftigen Namen einräumen möchten. *Column_Name* kann ein Ausdruck sein, aber keine Zeichen (z. b. Leerzeichen) enthalten, die in Tabellen Feldnamen nicht zulässig sind.  
+ AS *Column_Name*  
+ Gibt die Überschrift für eine Spalte in der Abfrageausgabe an. Dies ist nützlich, wenn *Select_Item* ein Ausdruck ist oder eine Feldfunktion enthält und Sie der Spalte einen aussagekräftigen Namen geben möchten. *Column_Name* kann ein Ausdruck sein, darf aber keine Zeichen (z. B. Leerzeichen) enthalten, die in Tabellenfeldnamen nicht zulässig sind.  
   
- Aus [*DatabaseName*!] *Tabelle* [*Local_Alias*] [, [*DatabaseName*!] *Tabelle* [*Local_Alias*]...]  
- Listet die Tabellen auf, die die Daten enthalten, die von der Abfrage abgerufen werden. Wenn keine Tabelle geöffnet ist, zeigt Visual FoxPro das Dialogfeld **Öffnen** an, in dem Sie den Datei Speicherort angeben können. Nachdem Sie geöffnet wurde, bleibt die Tabelle geöffnet, nachdem die Abfrage abgeschlossen wurde.  
+ VON [*Datenbankname*!] *Tabelle* [*Local_Alias*] [, [*Datenbankname*!] *Tabelle* [*Local_Alias*] ...]  
+ Listet die Tabellen auf, die die von der Abfrage abgerufenen Daten enthalten. Wenn keine Tabelle geöffnet ist, zeigt Visual FoxPro das Dialogfeld **Öffnen** an, damit Sie den Speicherort der Datei angeben können. Nach dem Öffnen bleibt die Tabelle geöffnet, nachdem die Abfrage abgeschlossen ist.  
   
- *DatabaseName*! Gibt den Namen einer anderen Datenbank als der an, die mit der Datenquelle angegeben ist. Wenn die Datenbank nicht mit der Datenquelle angegeben ist, müssen Sie den Namen der Datenbank einschließen, in der die Tabelle enthalten ist. Schließen Sie das Ausrufezeichen (!) nach dem Datenbanknamen und vor dem Tabellennamen ein.  
+ *DatabaseName*! gibt den Namen einer anderen Datenbank als der mit der Datenquelle angegebenen an. Sie müssen den Namen der Datenbank einschließen, die die Tabelle enthält, wenn die Datenbank nicht mit der Datenquelle angegeben ist. Fügen Sie das Ausrufezeichen (!) nach dem Datenbanknamen und vor dem Tabellennamen ein.  
   
- *Local_Alias* gibt einen temporären Namen für die in *Table*benannte Tabelle an. Wenn Sie einen lokalen Alias angeben, müssen Sie den lokalen Alias anstelle des Tabellennamens in der SELECT-Anweisung verwenden. Der lokale Alias hat keine Auswirkung auf die Visual FoxPro-Umgebung.  
+ *Local_Alias* gibt einen temporären Namen für die Tabelle mit dem Namen in *Tabelle*an. Wenn Sie einen lokalen Alias angeben, müssen Sie den lokalen Alias anstelle des Tabellennamens in der SELECT-Anweisung verwenden. Der lokale Alias wirkt sich nicht auf die Visual FoxPro-Umgebung aus.  
   
- Wobei *joinCondition* [und *joinCondition* ...]    [Und &#124; oder *filtercondition* [und &#124; oder *filtercondition* ...]]  
- Weist Visual FoxPro an, nur bestimmte Datensätze in die Abfrageergebnisse einzubeziehen. Dabei ist erforderlich, um Daten aus mehreren Tabellen abzurufen.  
+ WO *JoinCondition* [UND *JoinCondition* ...]    [UND &#124; ODER *FilterCondition* [und &#124; ODER *FilterCondition* ...]]  
+ Weist Visual FoxPro an, nur bestimmte Datensätze in die Abfrageergebnisse aufzunehmen. WHERE ist erforderlich, um Daten aus mehreren Tabellen abzurufen.  
   
- *JoinCondition* gibt Felder an, die die Tabellen in der from-Klausel verknüpfen. Wenn Sie mehr als eine Tabelle in eine Abfrage einschließen, sollten Sie eine Joinbedingung für jede Tabelle nach dem ersten angeben.  
+ *JoinCondition* gibt Felder an, die die Tabellen in der FROM-Klausel verknüpfen. Wenn Sie mehr als eine Tabelle in eine Abfrage einschließen, sollten Sie für jede Tabelle nach der ersten Tabelle eine Join-Bedingung angeben.  
   
 > [!IMPORTANT]  
->  Beachten Sie beim Erstellen von Joinbedingungen die folgenden Informationen:  
+>  Berücksichtigen Sie beim Erstellen von Verknüpfungsbedingungen die folgenden Informationen:  
   
--   Wenn Sie zwei Tabellen in eine Abfrage einschließen und keine Joinbedingung angeben, wird jeder Datensatz in der ersten Tabelle mit jedem Datensatz in der zweiten Tabelle verknüpft, solange die Filterbedingungen erfüllt sind. Eine solche Abfrage kann lange Ergebnisse verursachen.  
+-   Wenn Sie zwei Tabellen in eine Abfrage einschließen und keine Join-Bedingung angeben, wird jeder Datensatz in der ersten Tabelle mit jedem Datensatz in der zweiten Tabelle verknüpft, solange die Filterbedingungen erfüllt sind. Eine solche Abfrage kann zu langen Ergebnissen führen.  
   
--   Gehen Sie beim beitreten von Tabellen mit leeren Feldern vorsichtig vor, da Visual FoxPro leere Felder abgleicht. Beispielsweise, wenn Sie dem Kunden beitreten. ZIP und Rechnung. ZIP und wenn der Kunde 100 leere Postleitzahlen enthält und die Rechnung 400 leere Postleitzahlen enthält, enthält die Abfrageausgabe 40.000 zusätzliche Datensätze, die sich aus den leeren Feldern ergeben. Verwenden Sie die **empty ()** -Funktion, um leere Datensätze aus der Abfrageausgabe auszuschließen.  
+-   Seien Sie vorsichtig, wenn Sie Tabellen mit leeren Feldern verknüpfen, da Visual FoxPro leeren Feldern entspricht. Zum Beispiel, wenn Sie auf CUSTOMER beitreten. ZIP und INVOICE. ZIP und wenn CUSTOMER 100 leere Postleitzahlen und INVOICE 400 leere Postleitzahlen enthält, enthält die Abfrageausgabe 40.000 zusätzliche Datensätze, die sich aus den leeren Feldern ergeben. Verwenden Sie die Funktion **EMPTY( ),** um leere Datensätze aus der Abfrageausgabe zu entfernen.  
   
--   Sie müssen den and-Operator verwenden, um mehrere Joinbedingungen zu verbinden. Jede Joinbedingung weist die folgende Form auf:  
+-   Sie müssen den AND-Operator verwenden, um mehrere Verknüpfungsbedingungen zu verbinden. Jede Join-Bedingung hat die folgende Form:  
   
      *FieldName1-Vergleich FieldName2*  
   
-     *FieldName1* ist der Name eines Felds aus einer Tabelle, *FieldName2* ist der Name eines Felds aus einer anderen Tabelle, und der *Vergleich* ist einer der Operatoren, die in der folgenden Tabelle beschrieben werden.  
+     *FieldName1* ist der Name eines Felds aus einer Tabelle, *FieldName2* der Name eines Felds aus einer anderen Tabelle, und *Vergleich* ist einer der in der folgenden Tabelle beschriebenen Operatoren.  
   
 |Operator|Vergleich|  
 |--------------|----------------|  
 |=|Gleich|  
 |==|Genau gleich|  
-|LIKE|SQL like|  
-|<>,! =, #|Ungleich|  
+|LIKE|SQL LIKE|  
+|<>, !=, #|Ungleich|  
 |>|Mehr als|  
 |>=|Mehr als oder gleich|  
 |<|Kleiner als|  
 |<=|Kleiner als oder gleich|  
   
- Wenn Sie den =-Operator mit Zeichen folgen verwenden, verhält er sich abhängig von der Einstellung von SET ANSI anders. Wenn SET ANSI auf OFF festgelegt ist, behandelt Visual FoxPro Zeichen folgen Vergleiche auf eine Weise, die xbase-Benutzern vertraut. Wenn SET ANSI auf ON festgelegt ist, befolgt Visual FoxPro ANSI-Standards für Zeichen folgen Vergleiche. Weitere Informationen zur Durchführung von Zeichen folgen vergleichen durch Visual FoxPro finden Sie unter [SET ANSI](../../odbc/microsoft/set-ansi-command.md) und [Set Exact](../../odbc/microsoft/set-exact-command.md) .  
+ Wenn Sie den Operator = mit Zeichenfolgen verwenden, funktioniert er je nach Einstellung von SET ANSI unterschiedlich. Wenn SET ANSI auf OFF festgelegt ist, behandelt Visual FoxPro Zeichenfolgenvergleiche in einer Weise, die Xbase-Benutzern vertraut ist. Wenn SET ANSI auf ON festgelegt ist, folgt Visual FoxPro den ANSI-Standards für Zeichenfolgenvergleiche. Weitere Informationen dazu, wie Visual FoxPro Zeichenfolgenvergleiche durchführt, finden Sie unter [SET ANSI](../../odbc/microsoft/set-ansi-command.md) und [SET EXACT.](../../odbc/microsoft/set-exact-command.md)  
   
- *Filtercondition* gibt die Kriterien an, die Datensätze erfüllen müssen, damit Sie in die Abfrageergebnisse eingeschlossen werden. Sie können beliebig viele Filterbedingungen in eine Abfrage einschließen, indem Sie Sie mit dem and-Operator oder or-Operator verbinden. Sie können auch den Not-Operator verwenden, um den Wert eines logischen Ausdrucks umzukehren, oder Sie können **empty ()** verwenden, um nach einem leeren Feld zu suchen. *Filtercondition* kann in den folgenden Beispielen beliebige Formulare annehmen:  
+ *FilterCondition* gibt die Kriterien an, die Datensätze erfüllen müssen, um in die Abfrageergebnisse einbezogen zu werden. Sie können beweitete Filterbedingungen in eine Abfrage aufnehmen, wie Sie möchten, und sie mit dem OPERATOR AND oder OR verbinden. Sie können auch den Operator NOT verwenden, um den Wert eines logischen Ausdrucks umzukehren, oder Sie können **EMPTY(** verwenden, um nach einem leeren Feld zu suchen. *FilterCondition* kann eines der Formulare in den folgenden Beispielen annehmen:  
   
  **Beispiel 1** *FieldName1 Vergleich FieldName2*  
   
  `customer.cust_id = orders.cust_id`  
   
- **Beispiel 2** *: FieldName-Vergleichs Ausdruck*  
+ **Beispiel 2** *FieldName-Vergleichsausdruck*  
   
  `payments.amount >= 1000`  
   
- **Beispiel 3** *FieldName Comparison* all (*Unterabfrage*)  
+ **Beispiel 3** *FieldName Vergleich* ALL (*Unterquery*)  
   
  `company < ALL ;`  
   
  `(SELECT company FROM customer WHERE country = "USA")`  
   
- Wenn die Filterbedingung all einschließt, muss das Feld die Vergleichs Bedingung für alle Werte erfüllen, die von der Unterabfrage generiert werden, bevor der Datensatz in den Abfrage Ergebnissen enthalten ist.  
+ Wenn die Filterbedingung ALL enthält, muss das Feld die Vergleichsbedingung für alle Von der Unterabfrage generierten Werte erfüllen, bevor der Datensatz in die Abfrageergebnisse aufgenommen wird.  
   
- **Beispiel 4** *FieldName-Vergleich* Any &#124; some (*Unterabfrage*)  
+ **Beispiel 4** *FieldName Vergleich* ANY &#124; SOME (*Unterquery*)  
   
  `company < ANY ;`  
   
  `(SELECT company FROM customer WHERE country = "USA")`  
   
- Wenn die Filterbedingung oder einige enthält, muss das Feld die Vergleichs Bedingung für mindestens einen der von der Unterabfrage generierten Werte erfüllen.  
+ Wenn die Filterbedingung ANY oder SOME enthält, muss das Feld die Vergleichsbedingung für mindestens einen der von der Unterabfrage generierten Werte erfüllen.  
   
- Im folgenden Beispiel wird überprüft, ob die Werte im-Feld innerhalb eines angegebenen Wertebereichs liegen:  
+ Im folgenden Beispiel wird überprüft, ob die Werte im Feld innerhalb eines angegebenen Wertebereichs liegen:  
   
- **Beispiel 5** *Feldname* [nicht] zwischen *Start_Range* und *End_Range*  
+ **Beispiel 5** *FieldName* [NOT] ZWISCHEN *Start_Range* und *End_Range*  
   
  `customer.postalcode BETWEEN 90000 AND 99999`  
   
- Im folgenden Beispiel wird überprüft, ob mindestens eine Zeile die Kriterien in der Unterabfrage erfüllt. Wenn die Filterbedingung vorhanden ist, wird die Filterbedingung als true ausgewertet (. T.), es sei denn, die Unterabfrage ergibt den leeren Satz.  
+ Im folgenden Beispiel wird überprüft, ob mindestens eine Zeile die Kriterien in der Unterabfrage erfüllt. Wenn die Filterbedingung EXISTS enthält, wird die Filterbedingung als True (. T.) es sei denn, die Unterabfrage wird zum leeren Satz ausgewertet.  
   
- **Beispiel 6** [nicht] vorhanden (*Unterabfrage*)  
+ **Beispiel 6** [NOT] EXISTS (*Unterabfrage*)  
   
  `EXISTS ;`  
   
@@ -176,60 +176,60 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `orders.postalcode)`  
   
- **Beispiel 7** *FieldName* [NOT] in *Value_Set*  
+ **Beispiel 7** *FieldName* [NOT] IN *Value_Set*  
   
  `customer.postalcode NOT IN ("98052","98072","98034")`  
   
- Wenn die Filterbedingung in einschließt, muss das Feld einen der-Werte enthalten, bevor sein Datensatz in den Abfrage Ergebnissen enthalten ist.  
+ Wenn die Filterbedingung IN enthält, muss das Feld einen der Werte enthalten, bevor sein Datensatz in die Abfrageergebnisse aufgenommen wird.  
   
- **Beispiel 8** *FieldName* [NOT] in (*Unterabfrage*)  
+ **Beispiel 8** *FieldName* [NOT] IN (*Unterquery*)  
   
  `customer.cust_id IN ;`  
   
  `(SELECT orders.cust_id FROM orders WHERE orders.city="Seattle")`  
   
- Hier muss das Feld einen der Werte enthalten, die von der Unterabfrage zurückgegeben werden, bevor der Datensatz in den Abfrage Ergebnissen enthalten ist.  
+ Hier muss das Feld einen der von der Unterabfrage zurückgegebenen Werte enthalten, bevor der Datensatz in die Abfrageergebnisse aufgenommen wird.  
   
- **Beispiel 9** *FieldName* [nicht] wie *cexpression*  
+ **Beispiel 9** *FieldName* [NOT] LIKE *cExpression*  
   
  `customer.country NOT LIKE "USA"`  
   
- Diese Filterbedingung sucht nach jedem Feld, das *cexpression*entspricht. Sie können das Prozentzeichen (%) verwenden. und Unterstrich Zeichen (_) als Teil von *cexpression*. Der Unterstrich stellt ein einzelnes unbekanntes Zeichen in der Zeichenfolge dar.  
+ Diese Filterbedingung sucht nach jedem Feld, das mit *cExpression*übereinstimmt. Sie können das Prozentzeichen (%) verwenden. und unterstrichen ( _ ) Platzhalterzeichen als Teil von *cExpression*. Der Unterstrich stellt ein einzelnes unbekanntes Zeichen in der Zeichenfolge dar.  
   
- Gruppieren nach *GroupColumn* [, *GroupColumn* ...]  
- Gruppiert Zeilen in der Abfrage auf der Grundlage von Werten in einer oder mehreren Spalten. *GroupColumn* kann eine der folgenden sein:  
+ GRUPPE VON *GroupColumn* [, *GroupColumn* ...]  
+ Gruppiert Zeilen in der Abfrage basierend auf Werten in einer oder mehreren Spalten. *GroupColumn* kann eine der folgenden sein:  
   
--   Der Name eines regulären Tabellen Felds.  
+-   Der Name eines regulären Tabellenfelds.  
   
 -   Ein Feld, das eine SQL-Feldfunktion enthält.  
   
--   Ein numerischer Ausdruck, der den Speicherort der Spalte in der Ergebnistabelle angibt. (Die linke linke Spaltennummer ist 1.)  
+-   Ein numerischer Ausdruck, der die Position der Spalte in der Ergebnistabelle angibt. (Die linke Spaltennummer ist 1.)  
   
- Mit *filtercondition*  
- Gibt eine Filterbedingung an, die Gruppen erfüllen müssen, um in die Abfrageergebnisse eingeschlossen zu werden. Muss mit Group by verwendet werden und kann beliebig viele Filterbedingungen enthalten, die mit dem and-Operator oder or-Operator verbunden sind. Sie können auch verwenden, um den Wert eines logischen Ausdrucks umzukehren.  
+ HAVING *FilterCondition*  
+ Gibt eine Filterbedingung an, die Gruppen erfüllen müssen, um in die Abfrageergebnisse einbezogen zu werden. HAVING sollte mit GROUP BY verwendet werden und kann beweitet viele Filterbedingungen enthalten, die über den AND- oder ODER-Operator verbunden sind. Sie können auch NOT verwenden, um den Wert eines logischen Ausdrucks umzukehren.  
   
- " *Filtercondition* " kann keine Unterabfrage enthalten.  
+ *FilterCondition* kann keine Unterabfrage enthalten.  
   
- Eine WITH-Klausel ohne Group By-Klausel verhält sich wie eine WHERE-Klausel. Sie können lokale Aliase und Feld Funktionen in der-Klausel verwenden. Verwenden Sie eine WHERE-Klausel, um die Leistung zu beschleunigen, wenn die-Klausel keine Feld Funktionen enthält.  
+ Eine HAVING-Klausel ohne GROUP BY-Klausel verhält sich wie eine WHERE-Klausel. Sie können lokale Aliase und Feldfunktionen in der HAVING-Klausel verwenden. Verwenden Sie eine WHERE-Klausel für eine schnellere Leistung, wenn Ihre HAVING-Klausel keine Feldfunktionen enthält.  
   
- [Union [all] *SelectCommand*]  
- Kombiniert die endgültigen Ergebnisse einer SELECT-Option mit den Endergebnissen einer anderen SELECT-Option. In der Standardeinstellung werden die kombinierten Ergebnisse von Union überprüft und doppelte Zeilen vermieden. Verwenden Sie Klammern, um mehrere Union-Klauseln zu kombinieren.  
+ [UNION [ALL] *SELECTCommand*]  
+ Kombiniert die Endergebnisse eines SELECT mit den Endergebnissen eines anderen SELECT. Standardmäßig überprüft UNION die kombinierten Ergebnisse und eliminiert doppelte Zeilen. Verwenden Sie Klammern, um mehrere UNION-Klauseln zu kombinieren.  
   
- All verhindert, dass Union doppelte Zeilen aus den kombinierten Ergebnissen entfernt.  
+ ALL verhindert, dass UNION doppelte Zeilen aus den kombinierten Ergebnissen eliminiert.  
   
- Union-Klauseln befolgen die folgenden Regeln:  
+ UNION-Klauseln folgen diesen Regeln:  
   
--   Unterabfragen können nicht mithilfe von Union kombiniert werden.  
+-   Sie können UNION nicht zum Kombinieren von Unterabfragen verwenden.  
   
--   Beide SELECT-Befehle müssen in der Abfrageausgabe die gleiche Anzahl von Spalten aufweisen.  
+-   Beide SELECT-Befehle müssen die gleiche Anzahl von Spalten in ihrer Abfrageausgabe aufweisen.  
   
--   Jede Spalte in den Abfrage Ergebnissen einer SELECT-Abfrage muss denselben Datentyp und dieselbe Breite aufweisen wie die entsprechende Spalte in der anderen SELECT-Spalte.  
+-   Jede Spalte in den Abfrageergebnissen eines SELECT muss denselben Datentyp und dieselbe Breite aufweisen wie die entsprechende Spalte in der anderen SELECT.  
   
--   Nur die endgültige SELECT-Klausel kann eine ORDER BY-Klausel aufweisen, die auf Ausgabespalten nach Zahl verweisen muss. Wenn eine ORDER BY-Klausel eingeschlossen wird, wirkt sich dies auf das gesamte Ergebnis aus.  
+-   Nur die endgültige SELECT kann eine ORDER BY-Klausel haben, die auf Ausgabespalten nach Zahl verweisen muss. Wenn eine ORDER BY-Klausel enthalten ist, wirkt sie sich auf das vollständige Ergebnis aus.  
   
- Sie können auch die Union-Klausel verwenden, um einen äußeren Join zu simulieren.  
+ Sie können auch die UNION-Klausel verwenden, um eine äußere Verknüpfung zu simulieren.  
   
- Wenn Sie zwei Tabellen in einer Abfrage verknüpfen, sind nur Datensätze mit übereinstimmenden Werten in den Verknüpfungs Feldern in der Ausgabe enthalten. Wenn ein Datensatz in der übergeordneten Tabelle keinen entsprechenden Datensatz in der untergeordneten Tabelle enthält, ist der Datensatz in der übergeordneten Tabelle nicht in der Ausgabe enthalten. Mit einem äußeren Join können Sie alle Datensätze in der übergeordneten Tabelle in der Ausgabe zusammen mit den übereinstimmenden Datensätzen in der untergeordneten Tabelle einschließen. Zum Erstellen eines äußeren Joins in Visual FoxPro müssen Sie einen gruppierten SELECT-Befehl verwenden, wie im folgenden Beispiel gezeigt:  
+ Wenn Sie zwei Tabellen in einer Abfrage verknüpfen, werden nur Datensätze mit übereinstimmenden Werten in den Verknüpfungsfeldern in die Ausgabe einbezogen. Wenn ein Datensatz in der übergeordneten Tabelle keinen entsprechenden Datensatz in der untergeordneten Tabelle enthält, ist der Datensatz in der übergeordneten Tabelle nicht in der Ausgabe enthalten. Mit einer äußeren Verknüpfung können Sie alle Datensätze in der übergeordneten Tabelle in die Ausgabe einschließen, zusammen mit den übereinstimmenden Datensätzen in der untergeordneten Tabelle. Um eine äußere Verknüpfung in Visual FoxPro zu erstellen, müssen Sie einen geschachtelten SELECT-Befehl verwenden, wie im folgenden Beispiel:  
   
 ```  
 SELECT customer.company, orders.order_id, orders.emp_id ;  
@@ -243,45 +243,45 @@ WHERE customer.cust_id NOT IN ;
 ```  
   
 > [!NOTE]  
->  Stellen Sie sicher, dass Sie den Speicherplatz einschließen, der jedem Semikolon unmittelbar vorangestellt ist. Andernfalls erhalten Sie eine Fehlermeldung.  
+>  Stellen Sie sicher, dass Sie den Raum einschließen, der unmittelbar vor jedem Semikolon steht. Andernfalls wird eine Fehlermeldung angezeigt.  
   
- Der-Abschnitt des-Befehls vor der Union-Klausel wählt Datensätze aus beiden Tabellen aus, die übereinstimmende Werte aufweisen. Die Kunden Unternehmen, denen keine Rechnungen zugeordnet sind, sind nicht enthalten. Der Abschnitt des Befehls nach der Union-Klausel wählt Datensätze in der Customer-Tabelle aus, die keine übereinstimmenden Datensätze in der Orders-Tabelle aufweisen.  
+ Der Abschnitt des Befehls vor der UNION-Klausel wählt Datensätze aus beiden Tabellen aus, die übereinstimmende Werte aufweisen. Die Debitorenunternehmen, denen keine zugeordneten Rechnungen zugeordnet sind, sind nicht enthalten. Der Abschnitt des Befehls nach der UNION-Klausel wählt Datensätze in der Debitorentabelle aus, die keine übereinstimmenden Datensätze in der Tabelle "Aufträge" enthalten.  
   
- Beachten Sie in Bezug auf den zweiten Abschnitt des Befehls Folgendes:  
+ Beachten Sie den zweiten Abschnitt des Befehls wie folgt:  
   
--   Die SELECT-Anweisung innerhalb der Klammern wird zuerst verarbeitet. Diese Anweisung erstellt eine Auswahl aller Kunden zahlen in der Orders-Tabelle.  
+-   Die SELECT-Anweisung in den Klammern wird zuerst verarbeitet. Dieser Auszug erstellt eine Auswahl aller Debitorennummern in der Tabelle "Aufträge".  
   
--   Die WHERE-Klausel ermittelt alle Kundennummern in der Customer-Tabelle, die nicht in der Orders-Tabelle enthalten sind. Da im ersten Abschnitt des Befehls alle Unternehmen mit einer Kundennummer in der Tabelle Orders bereitgestellt wurden, sind alle Unternehmen in der Customer-Tabelle nun in den Abfrage Ergebnissen enthalten.  
+-   Die WHERE-Klausel findet alle Debitorennummern in der Debitorentabelle, die nicht in der Tabelle "Bestellungen" enthalten sind. Da der erste Abschnitt des Befehls alle Unternehmen mit einer Kundennummer in der Tabelle "Bestellungen" bereitgestellt hat, werden nun alle Unternehmen in der Kundentabelle in die Abfrageergebnisse einbezogen.  
   
--   Da die Strukturen von Tabellen, die in einer Union enthalten sind, identisch sein müssen, gibt es in der zweiten SELECT-Anweisung zwei Platzhalter, um *Orders. order_id* und *Orders. emp_id* in der ersten SELECT-Anweisung darzustellen.  
+-   Da die Strukturen der Tabellen, die in einer UNION enthalten sind, identisch sein müssen, gibt es in der zweiten SELECT-Anweisung zwei Platzhalter, die *orders.order_id* und *orders.emp_id* aus der ersten SELECT-Anweisung darstellen.  
   
     > [!NOTE]  
-    >  Die Platzhalter müssen denselben Typ aufweisen wie die Felder, die Sie darstellen. Wenn es sich bei dem Feld um einen Datentyp handelt, sollte der Platzhalter {//} lauten. Wenn das Feld ein Zeichenfeld ist, muss der Platzhalter eine leere Zeichenfolge ("") sein.  
+    >  Die Platzhalter müssen denselben Typ wie die Felder aufweisen, die sie darstellen. Wenn es sich bei dem Feld um einen Datumstyp handelt, sollte der Platzhalter . Wenn es sich bei dem Feld um ein Zeichenfeld handelt, sollte der Platzhalter die leere Zeichenfolge ("" " sein" sein.  
   
- Order by *Order_Item* [ASC &#124; Besc] [, *Order_Item* [ASC &#124; de]...]  
- Sortiert die Abfrageergebnisse auf der Grundlage der Daten in einer oder mehreren Spalten. Jede *Order_Item* muss einer Spalte in den Abfrage Ergebnissen entsprechen und kann eine der folgenden sein:  
+ ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC] ...]  
+ Sortiert die Abfrageergebnisse basierend auf den Daten in einer oder mehreren Spalten. Jede *Order_Item* muss einer Spalte in den Abfrageergebnissen entsprechen und kann eine der folgenden sein:  
   
--   Ein Feld in einer FROM-Tabelle, das auch ein SELECT-Element in der Main SELECT-Klausel ist (nicht in einer Unterabfrage).  
+-   Ein Feld in einer FROM-Tabelle, das auch ein ausgewähltes Element in der SELECT-Hauptklausel (nicht in einer Unterabfrage) ist.  
   
--   Ein numerischer Ausdruck, der den Speicherort der Spalte in der Ergebnistabelle angibt. (Die Spalte ganz links ist Nummer 1.)  
+-   Ein numerischer Ausdruck, der die Position der Spalte in der Ergebnistabelle angibt. (Die linke Spalte ist die Nummer 1.)  
   
- ASC gibt eine aufsteigende Reihenfolge für Abfrageergebnisse entsprechend der Bestell Elemente an und ist die Standardeinstellung für Order by.  
+ ASC gibt eine aufsteigende Reihenfolge für Abfrageergebnisse entsprechend der Auftragsposition oder den Artikeln an und ist die Standardeinstellung für ORDER BY.  
   
- Der absteigend gibt eine absteigende Reihenfolge für Abfrageergebnisse an.  
+ DESC gibt eine absteigende Reihenfolge für Abfrageergebnisse an.  
   
- Die Abfrageergebnisse werden ungeordnet angezeigt, wenn Sie keine Bestellung mit Order by angeben.  
+ Abfrageergebnisse werden ungeordnet angezeigt, wenn Sie keine Bestellung mit ORDER BY angeben.  
   
 ## <a name="remarks"></a>Bemerkungen  
- SELECT ist ein SQL-Befehl, der wie ein beliebiger anderer Visual FoxPro-Befehl in Visual FoxPro integriert ist. Wenn Sie SELECT zum Darstellen einer Abfrage verwenden, wird die Abfrage von Visual FoxPro interpretiert, und die angegebenen Daten werden aus den Tabellen abgerufen. Sie können eine SELECT-Abfrage entweder im Eingabe Aufforderungs Fenster oder in einem Visual FoxPro-Programm erstellen (wie bei jedem anderen Visual FoxPro-Befehl).  
+ SELECT ist ein SQL-Befehl, der wie jeder andere Visual FoxPro-Befehl in Visual FoxPro integriert ist. Wenn Sie SELECT zum Stellen einer Abfrage verwenden, interpretiert Visual FoxPro die Abfrage und ruft die angegebenen Daten aus den Tabellen ab. Sie können eine SELECT-Abfrage entweder im Eingabeaufforderungsfenster oder in einem Visual FoxPro-Programm erstellen (wie bei jedem anderen Visual FoxPro-Befehl).  
   
 > [!NOTE]  
->  Select verwendet nicht die aktuelle Filterbedingung, die mit Set Filter angegeben wird.  
+>  SELECT beachtet nicht die aktuelle Filterbedingung, die mit SET FILTER angegeben wurde.  
   
-## <a name="driver-remarks"></a>Hinweise zu Treibern  
- Wenn die Anwendung die ODBC-SQL-Anweisung SELECT an die Datenquelle sendet, konvertiert der Visual FoxPro-ODBC-Treiber den Befehl ohne Übersetzung in den Befehl Visual FoxPro SELECT, es sei denn, der Befehl enthält eine ODBC-Escapesequenz. In eine ODBC-Escapesequenz eingeschlossene Elemente werden in die Syntax von Visual FoxPro konvertiert. Weitere Informationen zur Verwendung von ODBC-Escapesequenzen finden Sie unter [Zeit-und Datumsfunktionen](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) und in der *Microsoft ODBC Programmer es Reference (Escapesequenzen* [in ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)).  
+## <a name="driver-remarks"></a>Driver-Bemerkungen  
+ Wenn Ihre Anwendung die ODBC SQL-Anweisung SELECT an die Datenquelle sendet, konvertiert der Visual FoxPro ODBC-Treiber den Befehl ohne Übersetzung in den Befehl Visual FoxPro SELECT, es sei denn, der Befehl enthält eine ODBC-Escapesequenz. Elemente, die in einer ODBC-Escapesequenz eingeschlossen sind, werden in Visual FoxPro-Syntax konvertiert. Weitere Informationen zur Verwendung von ODBC-Escape-Sequenzen finden Sie unter [Zeit- und Datumsfunktionen](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) und in der *Referenz des Microsoft ODBC-Programmierers*unter [Escape-Sequenzen in ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
- [INSERT-SQL](../../odbc/microsoft/insert-sql-command.md)   
- [ANSI festlegen](../../odbc/microsoft/set-ansi-command.md)   
- [exakte festlegen](../../odbc/microsoft/set-exact-command.md)
+ [TABELLE ERSTELLEN - SQL](../../odbc/microsoft/create-table-sql-command.md)   
+ [EINFÜGEN - SQL](../../odbc/microsoft/insert-sql-command.md)   
+ [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   
+ [GENAU FESTLEGEN](../../odbc/microsoft/set-exact-command.md)

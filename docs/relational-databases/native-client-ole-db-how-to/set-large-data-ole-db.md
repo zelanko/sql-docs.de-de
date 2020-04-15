@@ -1,5 +1,5 @@
 ---
-title: Festlegen von großen Datenmengen (OLE DB) | Microsoft-Dokumentation
+title: Festlegen großer Datenmengen (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fd06c01ddbb92679bc728350850f487b1ad5db8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f26efff82abaaba40caaf9d2868f716e8bb1e308
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73766047"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298270"
 ---
 # <a name="set-large-data-ole-db"></a>Festlegen von großen Daten (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "73766047"
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmeldeinformationen beibehalten müssen, sollten Sie diese mit der [Win32-Krypto-API](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ## <a name="procedures"></a>Prozeduren  
   
 #### <a name="to-set-blob-data"></a>So legen Sie BLOB-Daten fest  
   
-1.  Erstellen Sie eine DBOBJECT-Struktur, die beschreibt, wie auf die BLOB-Spalte zugegriffen werden soll. Legen Sie das Element **dwFlag** der DBOBJECT-Struktur auf STGM_READ fest, und legen Sie das iid-Element auf **IID_ISequentialStream** (die Schnittstelle, die verfügbar gemacht werden soll) fest.  
+1.  Erstellen Sie eine DBOBJECT-Struktur, die beschreibt, wie auf die BLOB-Spalte zugegriffen werden soll. Legen Sie das **dwFlag** -Element der DBOBJECT-Struktur auf STGM_READ fest, und legen Sie das iid-Element auf **IID_ISequentialStream** (die verfügbar zu machende Schnittstelle) fest.  
   
 2.  Legen Sie die Eigenschaften in der DBPROPSET_ROWSET-Eigenschaftengruppe so fest, dass das Rowset aktualisiert werden kann.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73766047"
 
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
 ### <a name="code"></a>Code  

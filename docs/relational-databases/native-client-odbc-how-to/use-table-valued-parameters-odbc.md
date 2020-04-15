@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Tabellenwert Parametern (ODBC) | Microsoft-Dokumentation
+title: Verwenden von Tabellenwertparametern (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ea30d6b1e0a90a4feec188698fd452903cf83ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1572330ee537976f32e4cca082f46d9e451189d4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780021"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298040"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Verwenden von Tabellenwertparametern (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   In diesem Beispiel wird veranschaulicht, wie mit Tabellenwertparametern mehrere Zeilen mit mehreren Spalten und einem Aufruf des Servers eingefügt werden.  
   
- Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Weitere Beispiele mit Tabellenwertparametern finden Sie unter [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
+ Weitere Informationen zu Tabellenwertparametern finden Sie unter [Tabellenwertparameter &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Weitere Beispiele mit Tabellenwertparametern finden Sie unter [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
   
 ## <a name="example"></a>Beispiel  
  Sie benötigen eine ODBC-Datenquelle mit dem Namen TVPDemo. Die Standarddatenbank für TVPDemo kann jede Testdatenbank auf dem Computer sein. Diese Datenquelle muss auf dem ODBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client basieren.  

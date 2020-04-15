@@ -11,40 +11,40 @@ helpviewer_keywords:
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1d02ef5827ff9d121c19dd055f97feea5184758
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 01fdd3727c25df2985009936c742bc20265f8f74
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095360"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304401"
 ---
 # <a name="conversions-ole-db"></a>Konvertierungen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In diesem Abschnitt wird erläutert, wie Sie zwischen **DateTime** -und **DateTimeOffset** -Werten konvertieren. Die in diesem Abschnitt beschriebenen Konvertierungen werden entweder von OLE DB bereitgestellt oder sind eine konsistente Erweiterung von OLE DB.  
+  In diesem Abschnitt wird die Konvertierung zwischen **datetime**- und **datetimeoffset**-Werten beschrieben. Die in diesem Abschnitt beschriebenen Konvertierungen werden entweder von OLE DB bereitgestellt oder sind eine konsistente Erweiterung von OLE DB.  
   
  Das Format für Literale und Zeichenfolgen für Datums- und Zeitangaben in OLE DB entspricht normalerweise ISO und hängt nicht von der Gebietsschemaeinstellung des Clients ab. Eine Ausnahme ist DBTYPE_DATE, wo der Standard OLE-Automatisierung ist. Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client allerdings nur zwischen Typen konvertiert, wenn Daten vom oder zum Client übertragen werden, kann eine Anwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client nicht dazu zwingen, zwischen DBTYPE_DATE und Zeichenfolgenformaten zu konvertieren. Andernfalls verwenden Zeichenfolgen die folgenden Formate (Text in Klammern gibt ein optionales Element an):  
   
--   **DateTime** -und **DateTimeOffset** -Zeichen folgen haben folgendes Format:  
+-   Das Format der **datetime**- und **datetimeoffset**-Zeichenfolgen ist das folgende:  
   
-     *JJJJ*-*mm*-*DD*[ *HH*:*mm*:*SS*[.* 9999999*] [± *HH*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.* 9999999*][ *hh*:*mm*]]  
   
 -   Das Format für **Uhrzeiten** lautet wie folgt:  
   
-     *HH*:*mm*:*SS*[.* 9999999*]  
+     *hh*:*mm*:*ss*[.* 9999999*]  
   
--   Das Format von **Datums** Zeichenfolgen lautet:  
+-   Das Format von **date**-Zeichenfolgen ist das folgende:  
   
-     *JJJJ*-*mm*-*DD*  
+     *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
 >  Frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und SQLOLEDB haben OLE-Konvertierungen implementiert, falls Standardkonvertierungen fehlgeschlagen sind. Als Ergebnis unterscheiden sich einige von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 sowie höheren Versionen ausgeführte Konvertierungen von der OLE DB-Spezifikation.  
   
- Konvertierungen von Zeichenfolgen ermöglichen Flexibilität bei Leerstellen- und Feldbreite. Weitere Informationen finden Sie im Abschnitt "Datenformate: Zeichen folgen und Literale" unter [Datentyp Unterstützung für OLE DB Datums-und Uhrzeit Verbesserungen](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Konvertierungen von Zeichenfolgen ermöglichen Flexibilität bei Leerstellen- und Feldbreite. Weitere Informationen finden Sie im Abschnitt "Datenformate: Zeichenfolgen und Literale" im Abschnitt [Datentypunterstützung für OLE DB Datums- und Zeitverbesserungen](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Folgende sind allgemeine Konvertierungsregeln:  
   
@@ -72,6 +72,6 @@ ms.locfileid: "74095360"
  Beschreibt date/time-Konvertierungen, die zwischen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) und einer Clientanwendung durchgeführt werden, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB geschrieben wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datums-und Uhrzeit Verbesserungen &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

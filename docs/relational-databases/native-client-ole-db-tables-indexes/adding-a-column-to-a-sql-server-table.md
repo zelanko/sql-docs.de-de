@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Spalte zu einer SQL Server Tabelle | Microsoft-Dokumentation
+title: Hinzufügen einer Spalte zu einer SQL Server-Tabelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, columns
 - adding columns
 ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45048935e9d636a95af1c77eb8f7a88153d22106
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1b848875ba70c0b31e29de6cb54852c403bd109a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73788513"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283050"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Hinzufügen einer Spalte zu einer SQL Server-Tabelle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die **ITableDefinition:: AddColumn** -Funktion zur Verfügung. Mit dieser Funktion können Consumer einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle eine Spalte hinzufügen.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter macht die **Funktion ITableDefinition::AddColumn** verfügbar. Mit dieser Funktion können Consumer einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle eine Spalte hinzufügen.  
   
- Wenn Sie einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle eine Spalte hinzufügen, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Consumer des Native Client OLE DB-Anbieters wie folgt eingeschränkt:  
+ Wenn Sie einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spalte hinzufügen, ist der Consumer des nativen Client-OLE-DB-Anbieters wie folgt eingeschränkt:  
   
 -   Wenn DBPROP_COL_AUTOINCREMENT VARIANT_TRUE ist, muss DBPROP_COL_NULLABLE VARIANT_FALSE sein.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73788513"
   
 -   Für alle anderen Spaltendefinitionen muss DBPROP_COL_NULLABLE  VARIANT_TRUE sein.  
   
- Consumer geben den Tabellennamen als Unicode-Zeichenfolge in das Element *pwszName* der Vereinigung *uName* des Parameters *pTableID* ein. Das Element *eKind* von *pTableID* muss DBKIND_NAME sein.  
+ Consumer geben den Tabellennamen als Unicode-Zeichenfolge in das *pwszName*-Element der *uName*-Vereinigung des *pTableID*-Parameters ein. Das *eKind*-Element von *pTableID* muss DBKIND_NAME sein.  
   
  Der neue Spaltenname wird als Unicode-Zeichenfolge im *pwszName*-Element der *uName*-Vereinigung des *dbcid*-Elements des DBCOLUMNDESC-Parameters *pColumnDesc* angegeben. Das *eKind*-Element muss DBKIND_NAME sein.  
   

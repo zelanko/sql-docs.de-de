@@ -1,5 +1,5 @@
 ---
-title: Freigeben eines Anweisungs Handles (ODBC) | Microsoft-Dokumentation
+title: Befreien eines Statement Handle ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - handles [ODBC], statement
 - freeing statement handles [ODBC]
 ms.assetid: ee18e2f1-2690-4cc1-9e5c-e20244e5d480
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 638cf9fb3c7af73130cf1413559b9baee2a354c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 01e4cb46edf1b1a0f1c6dfaa0273c1dd5b392686
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069779"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305615"
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>Freigeben einer Anweisungshandle-ODBC
-Wie bereits erwähnt, ist es effizienter,-Anweisungen wiederzuverwenden, als Sie zu löschen und neue zuzuweisen. Vor dem Ausführen einer neuen SQL-Anweisung für eine-Anweisung müssen Anwendungen sicherstellen, dass die aktuellen Anweisungs Einstellungen geeignet sind. Dazu zählen beispielsweise Anweisungsattribute, Parameterbindungen und Resultsetbindungen. Im Allgemeinen müssen die Bindung von Parametern und Resultsets für die alte SQL-Anweisung aufgehoben werden (durch Aufrufen von **SQLFreeStmt** mit den Optionen SQL_RESET_PARAMS und SQL_UNBIND) und für die neue SQL-Anweisung erneut.  
+Wie bereits erwähnt, ist es effizienter, Anweisungen wiederzuverwenden, als sie fallen zu lassen und neue zuzuweisen. Vor dem Ausführen einer neuen SQL-Anweisung für eine Anweisung sollten Anwendungen sicherstellen, dass die aktuellen Anweisungseinstellungen angemessen sind. Dazu zählen beispielsweise Anweisungsattribute, Parameterbindungen und Resultsetbindungen. Im Allgemeinen müssen Parameter und Ergebnismengen für die alte SQL-Anweisung ungebunden sein (durch Aufrufen von **SQLFreeStmt** mit den optionen SQL_RESET_PARAMS und SQL_UNBIND) und für die neue SQL-Anweisung zurückgefordert werden.  
   
- Wenn die Anwendung die Verwendung der-Anweisung abgeschlossen hat, wird **SQLFreeHandle** aufgerufen, um die-Anweisung freizugeben. Nach dem Freigeben der-Anweisung handelt es sich um einen Fehler bei der Anwendungsprogrammierung, bei dem das-Handle der Anweisung in einem Rückruf einer ODBC-Funktion verwendet wird. Dies hat nicht definierte, aber wahrscheinlich schwerwiegende Konsequenzen.  
+ Wenn die Anwendung die Anweisung verwendet hat, ruft sie **SQLFreeHandle** auf, um die Anweisung freizugeben. Nach dem Loslassen der Anweisung ist es ein Anwendungsprogrammierfehler, das Handle der Anweisung in einem Aufruf einer ODBC-Funktion zu verwenden. dies hat undefinierte, aber wahrscheinlich fatale Folgen.  
   
- Wenn **SQLFreeHandle** aufgerufen wird, gibt der Treiber die-Struktur frei, die zum Speichern von Informationen über die-Anweisung verwendet wird.  
+ Wenn **SQLFreeHandle** aufgerufen wird, gibt der Treiber die Struktur frei, die zum Speichern von Informationen über die Anweisung verwendet wird.  
   
  **SQLDisconnect** gibt automatisch alle Anweisungen für eine Verbindung frei.
