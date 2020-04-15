@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtOption-Funktion | Microsoft-Dokumentation
+title: SQLGetStmtOption-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC]
 ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2f99078de7fccdd662fd0056b92453780da445d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e3e7bd7a48dbf2116702b52f4963bb545e809352
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68030670"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303282"
 ---
 # <a name="sqlgetstmtoption-function"></a>SQLGetStmtOption-Funktion
-**Konformitäts**  
- Eingeführte Version: ODBC 1,0 Standards Compliance: deprecated  
+**Konformität**  
+ Eingeführte Version: ODBC 1.0-Standards-Konformität: Veraltet  
   
  **Zusammenfassung**  
- In ODBC 3. *x*, die ODBC 2,0-Funktion **SQLGetStmtOption** wurde durch **SQLGetStmtAttr**ersetzt. Weitere Informationen finden Sie unter [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
+ In ODBC 3. *x*, die ODBC 2.0-Funktion **SQLGetStmtOption** wurde durch **SQLGetStmtAttr**ersetzt. Weitere Informationen finden Sie unter [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
 > [!NOTE]  
->  Weitere Informationen dazu, wie der Treiber-Manager diese Funktion bei ODBC 2 zuordnet. die *x* -Anwendung arbeitet mit ODBC 3. zum *x* -Treiber finden Sie unter [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Driver Guidelines for abwärts Compatibility.  
+>  Weitere Informationen darüber, was der Treiber-Manager dieser Funktion zuordnet, wenn ein ODBC 2. *x-Anwendung* arbeitet mit einem ODBC 3. *x-Treiber,* siehe [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiberrichtlinien für Die Abwärtskompatibilität.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

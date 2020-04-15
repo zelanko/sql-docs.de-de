@@ -1,5 +1,5 @@
 ---
-title: Visual FoxPro-Sprachreferenz | Microsoft-Dokumentation
+title: Visuelle FoxPro-Sprachreferenz | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - commands for FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], commands
 ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 88993a80fa629c2f4cdc8448483fc8a65a6f2adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 97615b04861c02d4319e7a301043bb9f3c17e8c3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087823"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304783"
 ---
 # <a name="visual-foxpro-language-reference"></a>Visual FoxPro-Sprachreferenz
-Dieser Abschnitt enthält die folgenden Themen:  
+In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [ALTER TABLE (SQL-Befehl)](../../odbc/microsoft/alter-table-sql-command.md)  
   
@@ -29,35 +29,35 @@ Dieser Abschnitt enthält die folgenden Themen:
   
 -   [DELETE (SQL-Befehl)](../../odbc/microsoft/delete-sql-command.md)  
   
--   [DELETE TAG-Befehl](../../odbc/microsoft/delete-tag-command.md)  
+-   [Befehl DELETE TAG](../../odbc/microsoft/delete-tag-command.md)  
   
--   [DROP TABLE-Befehl](../../odbc/microsoft/drop-table-command.md)  
+-   [Befehl DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
   
--   [INDEX-Befehl](../../odbc/microsoft/index-command.md)  
+-   [Befehl INDEX](../../odbc/microsoft/index-command.md)  
   
 -   [INSERT (SQL-Befehl)](../../odbc/microsoft/insert-sql-command.md)  
   
 -   [SELECT (SQL-Befehl)](../../odbc/microsoft/select-sql-command.md)  
   
--   [SET ANSI-Befehl](../../odbc/microsoft/set-ansi-command.md)  
+-   [Befehl SET ANSI](../../odbc/microsoft/set-ansi-command.md)  
   
--   [SET BLOCKSIZE-Befehl](../../odbc/microsoft/set-blocksize-command.md)  
+-   [Befehl SET BLOCKSIZE](../../odbc/microsoft/set-blocksize-command.md)  
   
--   [SET COLLATE-Befehl](../../odbc/microsoft/set-collate-command.md)  
+-   [Befehl SET COLLATE](../../odbc/microsoft/set-collate-command.md)  
   
--   [SET DELETED-Befehl](../../odbc/microsoft/set-deleted-command.md)  
+-   [Befehl SET DELETED](../../odbc/microsoft/set-deleted-command.md)  
   
--   [SET EXACT-Befehl](../../odbc/microsoft/set-exact-command.md)  
+-   [Befehl SET EXACT](../../odbc/microsoft/set-exact-command.md)  
   
--   [SET EXCLUSIVE-Befehl](../../odbc/microsoft/set-exclusive-command.md)  
+-   [Befehl SET EXCLUSIVE](../../odbc/microsoft/set-exclusive-command.md)  
   
--   [SET NULL-Befehl](../../odbc/microsoft/set-null-command.md)  
+-   [Befehl SET NULL](../../odbc/microsoft/set-null-command.md)  
   
--   [SET PATH-Befehl](../../odbc/microsoft/set-path-command.md)  
+-   [Befehl SET PATH](../../odbc/microsoft/set-path-command.md)  
   
--   [SET REPROCESS-Befehl](../../odbc/microsoft/set-reprocess-command.md)  
+-   [Befehl SET REPROCESS](../../odbc/microsoft/set-reprocess-command.md)  
   
--   [SET UNIQUE-Befehl](../../odbc/microsoft/set-unique-command.md)  
+-   [Befehl SET UNIQUE](../../odbc/microsoft/set-unique-command.md)  
   
 -   [UPDATE (SQL-Befehl)](../../odbc/microsoft/update-sql-command.md)  
   

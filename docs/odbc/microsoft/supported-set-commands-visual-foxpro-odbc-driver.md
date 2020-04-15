@@ -1,5 +1,5 @@
 ---
-title: Unterstützte Set-Befehle (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
+title: Unterstützte SET-Befehle (Visual FoxPro ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,34 +16,34 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver [ODBC], SET commands
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54cc247827a176bc9921884ae318120b07108293
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e4139751de61738903e4e152535fb75bf30a97a3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939866"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303131"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>Unterstützte SET-Befehle (Visual FoxPro-ODBC-Treiber)
-Die Anwendung kann die folgenden Visual FoxPro- **Set** -Befehle an eine Datenquelle senden:  
+Ihre Anwendung kann die folgenden Visual FoxPro **SET-Befehle** an eine Datenquelle senden:  
   
- [ANSI festlegen](../../odbc/microsoft/set-ansi-command.md)  
+ [SET ANSI](../../odbc/microsoft/set-ansi-command.md)  
   
- [Blockgröße festlegen](../../odbc/microsoft/set-blocksize-command.md)  
+ [SET BLOCKSIZE](../../odbc/microsoft/set-blocksize-command.md)  
   
- [COLLATE festlegen](../../odbc/microsoft/set-collate-command.md)  
+ [SET COLLATE](../../odbc/microsoft/set-collate-command.md)  
   
- [gelöschte Gruppe](../../odbc/microsoft/set-deleted-command.md)  
+ [SET GELÖSCHT](../../odbc/microsoft/set-deleted-command.md)  
   
- [exakte festlegen](../../odbc/microsoft/set-exact-command.md)  
+ [GENAU FESTLEGEN](../../odbc/microsoft/set-exact-command.md)  
   
- [exklusiv festlegen](../../odbc/microsoft/set-exclusive-command.md)  
+ [SET EXCLUSIVE](../../odbc/microsoft/set-exclusive-command.md)  
   
  [SET NULL](../../odbc/microsoft/set-null-command.md)  
   
- [Pfad festlegen](../../odbc/microsoft/set-path-command.md)  
+ [SET PATH](../../odbc/microsoft/set-path-command.md)  
   
- [Neuverarbeitung festlegen](../../odbc/microsoft/set-reprocess-command.md)  
+ [SET REPROCESS](../../odbc/microsoft/set-reprocess-command.md)  
   
- [eindeutig festlegen](../../odbc/microsoft/set-unique-command.md)
+ [SET UNIQUE](../../odbc/microsoft/set-unique-command.md)

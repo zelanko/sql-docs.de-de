@@ -10,18 +10,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], ODBC
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e325793a7b703c445be836f6f427645acda3370
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f3716acbcc1b8ea648b5edc03e277983936da557
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138850"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288091"
 ---
 # <a name="is-odbc-the-answer"></a>Ist ODBC die Antwort?
-Bevor Sie sich mit der Frage der Interoperabilität befassen, berücksichtigen Sie die folgende Frage: sollte die Anwendung ODBC überhaupt verwenden? Dies mag eine merkwürdige Frage in einem Leitfaden zu ODBC sein, aber es ist tatsächlich eine legitime Frage. ODBC wurde nicht zum vollständigen ersetzen der systemeigenen Datenbank-APIs entworfen, und wurde nicht für die Bereitstellung von Datenbankzugriff in allen Fällen konzipiert. Es wurde entwickelt, um eine gemeinsame Schnittstelle für Datenbanken bereitzustellen, die es den Anwendungs Programmierern erleichtern soll, sich über Links zu mehreren Datenbanken zu informieren und diese beizubehalten.  
+Bevor Sie sich mit der Frage der Interoperabilität befassen, sollten Sie die folgende Frage berücksichtigen: Sollte die Anwendung ODBC überhaupt verwenden? Dies mag eine seltsame Frage in einem Leitfaden zu ODBC zu stellen scheinen, aber es ist in der Tat eine legitime. ODBC wurde nicht entwickelt, um systemeigene Datenbank-APIs vollständig zu ersetzen, noch wurde es entwickelt, um Datenbankzugriff unter allen Umständen bereitzustellen. Es wurde entwickelt, um eine gemeinsame Schnittstelle zu Datenbanken zu bieten und sollte Anwendungsprogrammierer davon befreien, Links zu mehreren Datenbanken zu erfahren und zu pflegen.  
   
- Benutzerdefinierte Anwendungen sind Hauptkandidaten für Native Datenbank-APIs. Der Hauptgrund ist, dass benutzerdefinierte Anwendungen häufig mit einem einzelnen DBMS funktionieren und nicht interoperabel sein müssen. Native Datenbank-APIs können besser funktionieren als ODBC, um die Funktionen eines bestimmten DBMS verfügbar zu machen, und möglicherweise Funktionen verfügbar machen, die nicht von ODBC verfügbar gemacht werden. Da die Entwickler von benutzerdefinierten Anwendungen in der Regel mit der systemeigenen Datenbank-API für Ihr DBMS vertraut sind, gibt es kaum einen Grund, ODBC zu erlernen. Es ist jedoch interessant zu beachten, dass bei einigen DBMSs ODBC die native Database-API ist.  
+ Benutzerdefinierte Anwendungen sind die besten Kandidaten für systemeigene Datenbank-APIs. Der Hauptgrund dafür ist, dass benutzerdefinierte Anwendungen häufig mit einem einzelnen DBMS arbeiten und nicht interoperabel sein müssen. Native Datenbank-APIs können einen besseren Job als ODBC leisten, um die Funktionen eines bestimmten DBMS verfügbar zu machen, und möglicherweise Funktionen verfügbar machen, die nicht von ODBC verfügbar gemacht werden. Da die Entwickler von benutzerdefinierten Anwendungen in der Regel mit der nativen Datenbank-API für ihr DBMS vertraut sind, gibt es wenig Grund, ODBC zu lernen. Es ist jedoch interessant festzustellen, dass ODBC für einige DBMS die native Datenbank-API ist.  
   
- Welche Anwendungen sind also Kandidaten für ODBC? Die besten Kandidaten sind Anwendungen, die mit mehr als einem DBMS funktionieren. Dies umfasst praktisch alle allgemeinen und vertikalen Anwendungen. Es umfasst auch eine Reihe von benutzerdefinierten Anwendungen. Beispielsweise sind benutzerdefinierte Anwendungen, die mehrere verschiedene DBMSs verwenden, viel einfacher und leichter mit ODBC zu schreiben als mit mehreren nativen APIs. Benutzerdefinierte Anwendungen, die mit ODBC geschrieben wurden, sind viel leichter zu migrieren, wenn ein Unternehmen von einem DBMS zu einem anderen wechselt oder die gleiche Anwendung für andere DBMSs bereitstellt.
+ Welche Bewerbungen sind also Kandidaten für ODBC? Die besten Kandidaten sind Bewerbungen, die mit mehr als einem DBMS arbeiten. Dies umfasst praktisch alle generischen und vertikalen Anwendungen. Es enthält auch eine Reihe von benutzerdefinierten Anwendungen. Beispielsweise sind benutzerdefinierte Anwendungen, die mehrere verschiedene DBMS verwenden, viel einfacher und einfacher mit ODBC zu schreiben als mit mehreren systemeigenen APIs. Und benutzerdefinierte Anwendungen, die mit ODBC geschrieben wurden, sind viel einfacher zu migrieren, wenn ein Unternehmen von einem DBMS zu einem anderen wechselt oder dieselbe Anwendung für verschiedene DBMS bereitstellt.

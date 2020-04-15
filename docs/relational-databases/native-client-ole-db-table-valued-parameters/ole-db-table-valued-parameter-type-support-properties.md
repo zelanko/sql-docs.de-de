@@ -1,5 +1,5 @@
 ---
-title: OLE DB Tabellenwert Parameter-Typs (Eigenschaften)
+title: OLE DB Tabellenwertparametertyp (Eigenschaften)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fbb516647b76a720adfd855af3f6205d3814e0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2f289da99108bb51c90f9f15bbe8d39a20a6be78
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242768"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283165"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB-Unterstützung von Tabellenwertparameter-Typen (Eigenschaften)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,11 +26,11 @@ ms.locfileid: "75242768"
   Dieses Thema stellt Informationen zu OLE DB-Eigenschaften und -Eigenschaftensätzen bereit, die Tabellenwertparameter-Rowsetobjekten zugeordnet werden.  
   
 ## <a name="properties"></a>Eigenschaften  
- Im Folgenden werden die Eigenschaften aufgelistet, die durch die IRowsetInfo::GetProperties-Methode für Tabellenwertparameter-Rowsetobjekte verfügbar gemacht werden. Beachten Sie, dass alle Tabellenwertparameter-Rowseteigenschaften schreibgeschützt sind. Daher führt der Versuch, die Eigenschaften über IOpenRowset:: OPENROWSET oder ITableDefinitionWithConstraints:: up-Methode festzulegen, zu einem Fehler, und es wird kein Objekt erstellt.  
+ Im Folgenden werden die Eigenschaften aufgelistet, die durch die IRowsetInfo::GetProperties-Methode für Tabellenwertparameter-Rowsetobjekte verfügbar gemacht werden. Beachten Sie, dass alle Tabellenwertparameter-Rowseteigenschaften schreibgeschützt sind. Daher führt der Versuch, die Eigenschaften über die Methoden IOpenRowset::OpenRowset oder ITableDefinitionWithConstraints::CreateTableWithConstraints auf ihren Nichtstandardwert festzulegen, zu einem Fehler, und es wird kein Objekt erstellt.  
   
  Im Tabellenwertparameter-Rowsetobjekt nicht implementierte Eigenschaften werden hier nicht aufgelistet. Eine vollständige Liste von Eigenschaften finden Sie in der OLE DB-Dokumentation in den Windows Data Access Components.  
   
-|Eigenschafts-ID|value|  
+|Eigenschafts-ID|Wert|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -78,7 +78,7 @@ ms.locfileid: "75242768"
  Die folgenden Eigenschaftensätze unterstützen Tabellenwertparameter.  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- Diese Eigenschaft wird vom Consumer beim Erstellen eines Tabellenwert Parameter-Rowsetobjekts mithilfe von ITableDefinitionWithConstraints:: foratetablewitheinschränkungen für jede Spalte über die DBCOLUMNDESC-Struktur verwendet, falls erforderlich.  
+ Diese Eigenschaft wird vom Consumer ggf. beim Erstellen eines Rowsetobjekts für Tabellenwertparameter mithilfe von ITableDefinitionWithConstraints::CreateTableWithConstraints für alle Spaten durch die DBCOLUMNDESC-Struktur verwendet.  
   
 |Eigenschafts-ID|Eigenschaftswert|  
 |-----------------|--------------------|  
@@ -86,7 +86,7 @@ ms.locfileid: "75242768"
 |||
 
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Diese Eigenschaften werden vom Consumer gelesen, während beim Festlegen spezifischer Eigenschaften über den Tabellenwert Parameter die Typinformationen des Tabellenwert Parameters in Aufrufen von ISSCommandWithParameters:: GetParameterProperties ermittelt und vom Consumer festgelegt werden. mithilfe von ISSCommandWithParameters:: SetParameterProperties.  
+ Diese Eigenschaften werden vom Consumer beim Erkennen der Typinformationen der Tabellenwertparameter in Aufrufen an ISSCommandWithParameters::GetParameterProperties gelesen und beim Festlegen bestimmter Eigenschaften des Tabellenwertparameters durch ISSCommandWithParameters::SetParameterProperties festgelegt.  
   
  In der folgenden Tabelle werden detaillierte Beschreibungen dieser Eigenschaften bereitgestellt.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "75242768"
 |||
 
 ## <a name="see-also"></a>Weitere Informationen  
- [OLE DB Typunterstützung für Tabellenwert Parameter](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [Unterstützung des OLE DB-Tabellenwertparameterstyps](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [Verwenden von Tabellenwertparametern &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

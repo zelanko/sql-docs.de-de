@@ -1,5 +1,5 @@
 ---
-title: NOT NULL in CREATE TABLE-Anweisungen | Microsoft-Dokumentation
+title: NICHT NULL in CREATE TABLE-Anweisungen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - not null [ODBC]
 - interoperability [ODBC], not null
 ms.assetid: 3fb69943-f0c9-4ed2-aa42-20440e37e49d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 808cddbd805db09d1b5c356d5b5af5734a5dcc16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 490f4a7e49acdad5f919ad21f93d479b03099eb4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086319"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302388"
 ---
 # <a name="not-null-in-create-table-statements"></a>NOT NULL in CREATE TABLE-Anweisungen
-Einige Datenbanken und insbesondere Desktop Datenbanken unterstützen die **not NULL** -Spalten Einschränkung in **CREATE TABLE** -Anweisungen nicht. Weitere Informationen finden Sie unter der Option SQL_NON_NULLABLE_COLUMNS in der Beschreibung der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) -Funktion.
+Einige Datenbanken, insbesondere Desktopdatenbanken, unterstützen die **NOT NULL-Spalteneinschränkung** in CREATE **TABLE-Anweisungen** nicht. Weitere Informationen finden Sie unter SQL_NON_NULLABLE_COLUMNS Option in der [SQLGetInfo-Funktionsbeschreibung.](../../../odbc/reference/syntax/sqlgetinfo-function.md)

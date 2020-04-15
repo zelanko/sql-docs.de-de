@@ -1,5 +1,5 @@
 ---
-title: Zuordnen und Freigeben von Puffern | Microsoft-Dokumentation
+title: Zuweisen und Befreien von Puffern | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - allocating buffers [ODBC]
 - freeing buffers [ODBC]
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b783c2fc6766f0e2d2685724169894160c15ffc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6aab888d24fcbc987b3db921436f14812618519
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077187"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288400"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Zuweisen und Freigeben von Puffern
-Alle Puffer werden von der Anwendung zugeordnet und freigegeben. Wenn ein Puffer nicht verzögert wird, muss er nur für die Dauer des Aufrufes einer Funktion vorhanden sein. Beispielsweise gibt **SQLGetInfo** den Wert zurück, der einer bestimmten Option im Puffer zugeordnet ist, auf den das *infovalueptr* -Argument zeigt. Dieser Puffer kann direkt nach dem Aufrufen von **SQLGetInfo**freigegeben werden, wie im folgenden Codebeispiel gezeigt:  
+Alle Puffer werden von der Anwendung zugewiesen und freigegeben. Wenn ein Puffer nicht zurückgestellt wird, muss er nur für die Dauer des Aufrufs einer Funktion vorhanden sein. **SQLGetInfo** gibt z. B. den Wert zurück, der einer bestimmten Option im Puffer zugeordnet ist, auf den das *Argument InfoValuePtr* zeigt. Dieser Puffer kann unmittelbar nach dem Aufruf von **SQLGetInfo**freigegeben werden, wie im folgenden Codebeispiel gezeigt:  
   
 ```  
 SQLSMALLINT   InfoValueLen;  
@@ -34,7 +34,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- Da verzögerte Puffer in einer Funktion angegeben und in einer anderen Funktion verwendet werden, handelt es sich um einen Anwendungs Programmierfehler, der einen verzögerten Puffer freigibt, während der Treiber weiterhin erwartet, dass er vorhanden ist. Beispielsweise wird die Adresse des \* *ValuePtr* -Puffers zur späteren Verwendung durch **SQLFetch**an **SQLBindCol** weitergegeben. Dieser Puffer kann erst freigegeben werden, wenn die Bindung der Spalte aufgehoben wird, z. b. mit einem-Befehl von **SQLBindCol** oder **SQLFreeStmt** , wie im folgenden Codebeispiel gezeigt:  
+ Da verzögerte Puffer in einer Funktion angegeben und in einer anderen verwendet werden, ist es ein Anwendungsprogrammierfehler, um einen verzögerten Puffer freizugeben, während der Treiber weiterhin erwartet, dass er vorhanden ist. Beispielsweise wird die Adresse \*des *ValuePtr-Puffers* zur späteren Verwendung durch **SQLFetch**an **SQLBindCol** übergeben. Dieser Puffer kann erst freigegeben werden, wenn die Spalte ungebunden ist, z. B. bei einem Aufruf von **SQLBindCol** oder **SQLFreeStmt,** wie im folgenden Codebeispiel gezeigt:  
   
 ```  
 SQLRETURN    rc;  
@@ -59,7 +59,7 @@ SQLFreeStmt(hstmt, SQL_UNBIND);
 free(ValuePtr);  
 ```  
   
- Ein solcher Fehler kann problemlos auftreten, indem der Puffer lokal in einer Funktion deklariert wird. der Puffer wird freigegeben, wenn die Anwendung die Funktion verlässt. Der folgende Code verursacht z. b. ein nicht definiertes und wahrscheinlich schwerwiegender Verhalten im Treiber:  
+ Ein solcher Fehler kann leicht gemacht werden, indem der Puffer lokal in einer Funktion deklariert wird. Der Puffer wird freigegeben, wenn die Anwendung die Funktion verlässt. Der folgende Code verursacht z. B. undefiniertes und wahrscheinlich fatales Verhalten im Treiber:  
   
 ```  
 SQLRETURN   rc;  

@@ -1,5 +1,5 @@
 ---
-title: Optimistische Parallelität | Microsoft-Dokumentation
+title: Optimistische Parallelität | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - concurrency control [ODBC]
 - optimistic concurrency [ODBC]
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f5f4b7101718ea8372c9635a064dc81e1d8f6c1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 30eba3ea03b4c798a74a8cb928014b582846607b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023390"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282484"
 ---
 # <a name="optimistic-concurrency"></a>Optimistische Nebenläufigkeit
-Die *optimistische* Parallelität leitet den Namen von der vollständigen Annahme ab, dass Konflikte zwischen Transaktionen selten auftreten. Es ist ein Konflikt aufgetreten, wenn eine andere Transaktion eine Daten Zeile zwischen dem Zeitpunkt, zu dem Sie von der aktuellen Transaktion gelesen wird, und dem Zeitpunkt, zu dem Sie aktualisiert oder gelöscht wird, aktualisiert oder gelöscht hat. Dies ist das Gegenteil der *pessimistischen* Parallelität oder Sperrung, bei der der Anwendungsentwickler der Meinung ist, dass derartige Kollisionen üblich sind.  
+*Optimistische Parallelität* leitet ihren Namen von der optimistischen Annahme ab, dass Es selten zu Kollisionen zwischen Transaktionen kommen wird. Eine Kollision soll aufgetreten sein, wenn eine andere Transaktion eine Datenzeile zwischen dem Zeitpunkt, zu dem sie von der aktuellen Transaktion gelesen wird, und dem Zeitpunkt, zu dem sie aktualisiert oder gelöscht wird, aktualisiert oder gelöscht wird. Es ist das Gegenteil von *pessimistischer Parallelität* oder Sperrung, bei der der Anwendungsentwickler der Ansicht ist, dass solche Kollisionen an der Tagesordnung sind.  
   
- In optimistischer Parallelität wird eine Zeile bis zum Aktualisieren oder Löschen der Zeit gesperrt. An diesem Punkt wird die Zeile erneut angezeigt und geprüft, ob Sie seit dem letzten Lesen geändert wurde. Wenn die Zeile geändert wurde, schlägt die Aktualisierung oder Löschung fehl und muss erneut versucht werden.  
+ Bei optimistischer Parallelität bleibt eine Zeile entsperrt, bis die Zeit kommt, sie zu aktualisieren oder zu löschen. An diesem Punkt wird die Zeile erneut gelesen und überprüft, um festzustellen, ob sie seit dem letzten Lesen geändert wurde. Wenn sich die Zeile geändert hat, schlägt die Aktualisierung oder das Löschen fehl und muss erneut versucht werden.  
   
- Um zu ermitteln, ob eine Zeile geändert wurde, wird die neue Version anhand einer zwischengespeicherten Version der Zeile überprüft. Diese Überprüfung kann auf der Zeilen Version basieren, wie z. b. der Zeitstempel-Spalte in SQL Server oder den Werten der einzelnen Spalten in der Zeile. Viele DBMSs unterstützen keine Zeilen Versionen.  
+ Um festzustellen, ob eine Zeile geändert wurde, wird ihre neue Version mit einer zwischengespeicherten Version der Zeile abgeglichen. Diese Überprüfung kann auf der Zeilenversion basieren, z. B. der Zeitstempelspalte in SQL Server oder den Werten jeder Spalte in der Zeile. Viele DBMS unterstützen keine Zeilenversionen.  
   
- Die optimistische Parallelität kann von der Datenquelle oder der Anwendung implementiert werden. In jedem Fall sollte die Anwendung eine niedrige Transaktions Isolationsstufe verwenden, z. b. Read Commit. die Verwendung einer höheren Ebene negiert die erhöhte Parallelität, die durch die Verwendung optimistischer Parallelität erzielt wurde.  
+ Optimistische Parallelität kann von der Datenquelle oder der Anwendung implementiert werden. In beiden Fällen sollte die Anwendung eine niedrige Transaktionsisolationsstufe verwenden, z. B. Read Committed. Die Verwendung einer höheren Ebene negiert die erhöhte Parallelität, die durch die Verwendung optimistischer Parallelität gewonnen wird.  
   
- Wenn die vollständige Parallelität durch die Datenquelle implementiert wird, legt die Anwendung das SQL_ATTR_CONCURRENCY-Anweisungs Attribut auf SQL_CONCUR_ROWVER oder SQL_CONCUR_VALUES fest. Um eine Zeile zu aktualisieren oder zu löschen, führt Sie eine positionierte UPDATE-oder DELETE-Anweisung aus oder ruft **SQLSetPos** genauso wie bei der pessimistischen Parallelität auf. der Treiber oder die Datenquelle gibt SQLSTATE 01001 (Cursor Vorgangs Konflikt) zurück, wenn die Aktualisierung oder der Löschvorgang aufgrund eines Konflikts fehlschlägt.  
+ Wenn die Quellquelle eine optimistische Parallelität implementiert, legt die Anwendung das Attribut SQL_ATTR_CONCURRENCY Anweisung auf SQL_CONCUR_ROWVER oder SQL_CONCUR_VALUES fest. Um eine Zeile zu aktualisieren oder zu löschen, führt sie eine positionierte Aktualisierungs- oder Löschanweisung aus oder ruft **SQLSetPos** auf, genau wie bei pessimistischer Parallelität. Der Treiber oder die Datenquelle gibt SQLSTATE 01001 (Cursor-Vorgangskonflikt) zurück, wenn die Aktualisierung oder löschung aufgrund einer Kollision fehlschlägt.  
   
- Wenn die Anwendung selbst vollständige Parallelität implementiert, legt Sie das Attribut SQL_ATTR_CONCURRENCY Anweisung auf SQL_CONCUR_READ_ONLY fest, um eine Zeile zu lesen. Wenn die Zeilen Versionen verglichen werden und die Spalte Zeilen Version nicht bekannt ist, wird **SQLSpecialColumns** mit der Option SQL_ROWVER aufgerufen, um den Namen dieser Spalte zu bestimmen.  
+ Wenn die Anwendung selbst eine optimistische Parallelität implementiert, legt sie das Attribut SQL_ATTR_CONCURRENCY Anweisung auf SQL_CONCUR_READ_ONLY zum Lesen einer Zeile fest. Wenn zeilenversionen verglichen werden und die Zeilenversionsspalte nicht bekannt ist, ruft sie **SQLSpecialColumns** mit der Option SQL_ROWVER auf, um den Namen dieser Spalte zu bestimmen.  
   
- Die Anwendung aktualisiert oder löscht die Zeile durch Erhöhen der Parallelität auf SQL_CONCUR_LOCK (um Schreibzugriff auf die Zeile zu erhalten) und durch Ausführen einer **Update** -oder **Delete** -Anweisung mit einer **Where** -Klausel, die die Version oder die Werte der Zeile angibt, wenn Sie von der Anwendung gelesen wurde. Wenn sich die Zeile seitdem geändert hat, schlägt die Anweisung fehl. Wenn die Zeile von der **Where** -Klausel nicht eindeutig identifiziert wird, kann die Anweisung auch andere Zeilen aktualisieren oder löschen. Zeilen Versionen identifizieren immer eindeutig Zeilen, aber Zeilen Werte identifizieren nur Zeilen eindeutig, wenn Sie den Primärschlüssel enthalten.
+ Die Anwendung aktualisiert oder löscht die Zeile, indem sie die Parallelität auf SQL_CONCUR_LOCK erhöht (um Schreibzugriff auf die Zeile zu erhalten) und eine **UPDATE-** oder **DELETE-Anweisung** mit einer **WHERE-Klausel** ausführt, die die Version oder die Werte angibt, die die Zeile beim Lesen der Zeile hatte. Wenn sich die Zeile seitdem geändert hat, schlägt die Anweisung fehl. Wenn die **WHERE-Klausel** die Zeile nicht eindeutig identifiziert, kann die Anweisung auch andere Zeilen aktualisieren oder löschen. Zeilenversionen identifizieren Zeilen immer eindeutig, Zeilenwerte jedoch nur dann eindeutig, wenn sie den Primärschlüssel enthalten.

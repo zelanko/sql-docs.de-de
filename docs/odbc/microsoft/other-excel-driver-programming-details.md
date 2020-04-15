@@ -1,5 +1,5 @@
 ---
-title: Weitere Informationen zur Programmierung von Excel-Treibern | Microsoft-Dokumentation
+title: Andere Excel-Treiberprogrammierdetails | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 464d454928b575e5151b09663d96b1f837356761
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d7a932d99ba30e84de0ccd4cfbcce1516cd2fad9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043770"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291000"
 ---
 # <a name="other-excel-driver-programming-details"></a>Weitere Informationen zur Programmierung von Excel-Treibern
 > [!NOTE]  
->  Dieser Abschnitt enthält Informationen zu ODBC-Funktionen und anderen Programmier Details für Excel-Treiber. Allgemeine Informationen zu einer Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieser Abschnitt enthält Excel-Treiberspezifische Informationen zu ODBC-Funktionen und anderen Programmierdetails. Allgemeine Informationen zu einer Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [SQLBindParameter (Excel-Treiber)](../../odbc/microsoft/sqlbindparameter-excel-driver.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68043770"
   
 -   [SQLGetTypeInfo (Excel-Treiber)](../../odbc/microsoft/sqlgettypeinfo-excel-driver.md)  
   
--   [SQLSetConnectOption (Excel-Treiber)](../../odbc/microsoft/sqlsetconnectoption-excel-driver.md)  
+-   [SQLSetConnectOption (Access-Treiber)](../../odbc/microsoft/sqlsetconnectoption-excel-driver.md)  
   
 -   [SQLStatistics (Excel-Treiber)](../../odbc/microsoft/sqlstatistics-excel-driver.md)  
   

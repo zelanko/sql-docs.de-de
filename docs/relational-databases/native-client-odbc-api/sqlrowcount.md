@@ -1,5 +1,5 @@
 ---
-title: SQLRowCount | Microsoft-Dokumentation
+title: SQLRowCount | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLRowCount function
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 676e2cc86a6b41a1bc778160611a9a967336390f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3cfb76dbd1732e32238c484f589d3b4696ff89d2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785693"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302306"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73785693"
   
  Darüber hinaus kann die Anwendung ein Array von Statuswerten verwenden, die mithilfe des SQL_ATTR_PARAM_STATUS_PTR-Anweisungsattributs gebunden sind, um die Arrayoffsets der ungültigen Parameterzeilen zu erfassen. Die Anwendung kann das Statusarray durchsuchen, um die tatsächliche Anzahl verarbeiteter Zeilen zu bestimmen.  
   
- Wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT-, Update-, DELETE-oder MERGE-Anweisung mit einer OUTPUT-Klausel ausgeführt wird, gibt SQLRowCount nicht die Anzahl der betroffenen Zeilen zurück, bis alle Zeilen im Resultset, das von der OUTPUT-Klausel generiert wurde, genutzt wurden. Um diese Zeilen zu sverarbeiten, rufen Sie SQLFetch oder SQLFetchScroll auf. SQLResultCols gibt-1 zurück, bis alle Ergebniszeilen verarbeitet wurden. Nachdem SQLFetch oder SQLFetchScroll SQL_NO_DATA zurückgegeben hat, muss die Anwendung SQLRowCount aufrufen, um die Anzahl der betroffenen Zeilen zu bestimmen, bevor SQLMoreResults aufgerufen wird, um zum nächsten Ergebnis zu gelangen.  
+ Wenn [!INCLUDE[tsql](../../includes/tsql-md.md)] eine INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung mit einer OUTPUT-Klausel ausgeführt wird, gibt SQLRowCount die Anzahl der betroffenen Zeilen erst zurück, wenn alle Zeilen im Resultset, die von der OUTPUT-Klausel generiert wurden, verbraucht wurden. Um diese Zeilen zu verwenden, rufen Sie SQLFetch oder SQLFetchScroll auf. SQLResultCols gibt -1 zurück, bis alle Ergebniszeilen verbraucht wurden. Nachdem SQLFetch oder SQLFetchScroll SQL_NO_DATA zurückgegeben haben, muss die Anwendung SQLRowCount aufrufen, um die Anzahl der betroffenen Zeilen zu ermitteln, bevor SQLMoreResults aufgerufen wird, um zum nächsten Ergebnis zu wechseln.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLRowCount-Funktion](https://go.microsoft.com/fwlink/?LinkId=59367)   

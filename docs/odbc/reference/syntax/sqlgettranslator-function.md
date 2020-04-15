@@ -1,5 +1,5 @@
 ---
-title: Sqlgettranslator-Funktion | Microsoft-Dokumentation
+title: SQLGetTranslator-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetTranslator function [ODBC]
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f769d3c5b2dcfe5d2aa8a431695cb18a52893b91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bcd5aeebab8539b8b94db56ff30892f4a7dbbac1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68030651"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303271"
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator-Funktion
-**Konformitäts**  
- Eingeführte Version: ODBC 2,0  
+**Konformität**  
+ Eingeführte Version: ODBC 2.0  
   
  **Zusammenfassung**  
- **Sqlgettranslator** zeigt ein Dialogfeld an, in dem ein Benutzer einen Übersetzer auswählen kann.  
+ **SQLGetTranslator** zeigt ein Dialogfeld an, aus dem ein Benutzer einen Übersetzer auswählen kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,60 +50,60 @@ BOOL SQLGetTranslator(
   
 ## <a name="arguments"></a>Argumente  
  *hwndParent*  
- Der Handle des übergeordneten Fensters.  
+ [Eingabe] Übergeordnetes Fensterhandle.  
   
- *lpszname*  
- [Eingabe/Ausgabe] Der Name des Konvertierers aus den Systeminformationen.  
+ *lpszName*  
+ [Eingang/Ausgang] Name des Übersetzers aus den Systeminformationen.  
   
- *cbnamemax*  
- Der Maximale Länge des *lpszname* -Puffers.  
+ *cbNameMax*  
+ [Eingabe] Maximale Länge des *lpszName-Puffers.*  
   
- *pcbnameout*  
- [Eingabe/Ausgabe] Die Gesamtanzahl der Bytes (mit Ausnahme des NULL-Terminierungs Byte), die in *lpszname*übergeben oder zurückgegeben wurde. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbnamemax*ist, wird der Konvertierungs Name in *lpszname* auf *cbnamemax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcbnameout* -Argument kann ein NULL-Zeiger sein.  
+ *pcbNameOut*  
+ [Eingang/Ausgang] Gesamtanzahl der Bytes (mit Ausnahme des Null-Beendigungsbytes), die in *lpszName*übergeben oder zurückgegeben wurden. Wenn die Anzahl der zurückzugebenden Bytes größer oder gleich *cbNameMax*ist, wird der Übersetzername in *lpszName* auf *cbNameMax* abzüglich des Null-Beendigungszeichens abgeschnitten. Das *Argument pcbNameOut* kann ein Nullzeiger sein.  
   
- *lpszpath*  
- Ausgeben Vollständiger Pfad der Übersetzungs-DLL.  
+ *lpszPath*  
+ [Ausgabe] Vollständiger Pfad der Übersetzungs-DLL.  
   
- *cbpathmax*  
- Der Maximale Länge des *lpszpath* -Puffers.  
+ *cbPathMax*  
+ [Eingabe] Maximale Länge des *lpszPath-Puffers.*  
   
- *pcbpathout*  
- Ausgeben Die Gesamtanzahl der Bytes (mit Ausnahme des NULL-Beendigungs Byte), die in *lpszpath*zurückgegeben wurde. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbpathmax*ist, wird der Übersetzungs-DLL-Pfad in *lpszpath* auf *cbpathmax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcbpathout* -Argument kann ein NULL-Zeiger sein.  
+ *pcbPathOut*  
+ [Ausgabe] Gesamtanzahl der Bytes (mit Ausnahme des Null-Beendigungsbytes), die in *lpszPath*zurückgegeben werden. Wenn die Anzahl der zurückzugebenden Bytes größer oder gleich *cbPathMax*ist, wird der Übersetzungs-DLL-Pfad in *lpszPath* auf *cbPathMax* abzüglich des Nullbeendigungszeichens abgeschnitten. Das *Argument pcbPathOut* kann ein Nullzeiger sein.  
   
- *pvoption*  
- [Output] 32-Bit-Übersetzungs Option.  
+ *pvOption*  
+ [Ausgabe] 32-Bit-Übersetzungsoption.  
   
 ## <a name="returns"></a>Rückgabe  
- Die Funktion gibt true zurück, wenn Sie erfolgreich ist, false, wenn Sie fehlschlägt oder wenn der Benutzer das Dialogfeld abbricht.  
+ Die Funktion gibt TRUE zurück, wenn sie erfolgreich ist, FALSE, wenn sie fehlschlägt oder wenn der Benutzer das Dialogfeld abbricht.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlgettranslator** "false" zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **SQLGetTranslator** FALSE zurückgibt, kann ein zugeordneter * \*pfErrorCode-Wert* abgerufen werden, indem **SQLInstallError**aufgerufen wird. In der folgenden Tabelle sind die * \*pfErrorCode-Werte* aufgeführt, die von **SQLInstallerError** zurückgegeben werden können, und es werden die einzelnen Werte im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pfErrorCode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Das *cbnamemax* -oder *cbpathmax* -Argument war kleiner oder gleich 0 (null).|  
-|ODBC_ERROR_INVALID_HWND|Ungültiges Fenster handle.|Das *hwndParent* -Argument war ungültig oder NULL.|  
-|ODBC_ERROR_INVALID_NAME|Ungültiger Treiber-oder Konvertierungs Name|Das *lpszname* -Argument war ungültig. Sie konnte nicht in der Registrierung gefunden werden.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|Die Treiber-oder Konvertierungs-Setup Bibliothek konnte nicht geladen werden.|Die Konvertierungs Bibliothek konnte nicht geladen werden.|  
-|ODBC_ERROR_INVALID_OPTION|Ungültige Transaktions Option|Das *pvoption* -Argument enthielt einen ungültigen Wert.|  
-|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines fehlenden Speichers nicht ausführen.|  
+|ODBC_ERROR_GENERAL_ERR|Allgemeiner Installationsfehler|Es ist ein Fehler aufgetreten, für den kein spezifischer Installationsfehler aufgetreten ist.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge|Das Argument *cbNameMax* oder *cbPathMax* war kleiner oder gleich 0.|  
+|ODBC_ERROR_INVALID_HWND|Ungültiges Fensterhandle|Das *Argument hwndParent* war ungültig oder NULL.|  
+|ODBC_ERROR_INVALID_NAME|Ungültiger Treiber- oder Übersetzername|Das *Argument lpszName* war ungültig. Sie konnte in der Registrierung nicht gefunden werden.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|Die Treiber- oder Übersetzereinrichtungsbibliothek konnte nicht geladen werden.|Die Übersetzerbibliothek konnte nicht geladen werden.|  
+|ODBC_ERROR_INVALID_OPTION|Ungültige Transaktionsoption|Das *argument pvOption* enthielt einen ungültigen Wert.|  
+|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines Speichermangels nicht ausführen.|  
   
 ## <a name="comments"></a>Kommentare  
- Wenn *hwndParent* NULL ist oder wenn *lpszname*, *lpszpath*oder *pvoption* ein NULL-Zeiger ist, gibt **sqlgettranslator** den Wert false zurück. Andernfalls wird die Liste der installierten Konvertierer im folgenden Dialogfeld angezeigt.  
+ Wenn *hwndParent* null ist oder wenn *lpszName*, *lpszPath*oder *pvOption* ein Nullzeiger ist, gibt **SQLGetTranslator** FALSE zurück. Andernfalls wird die Liste der installierten Übersetzer im folgenden Dialogfeld angezeigt.  
   
  ![Dialogfeld "Konvertierungsprogramm auswählen"](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
   
- Wenn " *lpszname* " einen gültigen Übersetzungs Namen enthält, wird dieser ausgewählt. Andernfalls wird \<kein Konvertierungs> ausgewählt.  
+ Wenn *lpszName* einen gültigen Übersetzernamen enthält, wird dieser ausgewählt. Andernfalls \<wird kein> ausgewählt.  
   
- Wenn der Benutzer keine \<Konvertierungs> auswählt, wird der Inhalt von *lpszname*, *lpszpath*und *pvoption* nicht berührt. **Sqlgettranslator** legt *pcbnameout* und *pcbpathout* auf 0 fest und gibt true zurück.  
+ Wenn der Benutzer \<Keine Übersetzer-> wählt, werden die Inhalte von *lpszName*, *lpszPath*und *pvOption* nicht berührt. **SQLGetTranslator** setzt *pcbNameOut* und *pcbPathOut* auf 0 und gibt TRUE zurück.  
   
- Wenn der Benutzer einen Übersetzer auswählt, ruft **sqlgettranslator** **ConfigTranslator** in der Setup-DLL des Konvertierungs Programms auf. Wenn **ConfigTranslator** false zurückgibt, kehrt **sqlgettranslator** in das zugehörige Dialogfeld zurück. Wenn **ConfigTranslator** true zurückgibt, gibt **sqlgettranslator** den Wert true zusammen mit dem ausgewählten Übersetzungs Namen, dem Pfad und der Übersetzungs Option zurück.  
+ Wenn der Benutzer einen Übersetzer wählt, ruft **SQLGetTranslator** **ConfigTranslator** in der Setup-DLL des Übersetzers auf. Wenn **ConfigTranslator** FALSE zurückgibt, kehrt **SQLGetTranslator** zu seinem Dialogfeld zurück. Wenn **ConfigTranslator** TRUE zurückgibt, gibt **SQLGetTranslator** TRUE zusammen mit dem ausgewählten Übersetzernamen, Pfad und der Übersetzungsoption zurück.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
 |Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Konfigurieren eines Konvertierers|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
-|Erhalten eines Translation-Attributs|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|Festlegen eines Translation-Attributs|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
+|Konfigurieren eines Übersetzers|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
+|Abrufen eines Übersetzungsattributs|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|Festlegen eines Übersetzungsattributs|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

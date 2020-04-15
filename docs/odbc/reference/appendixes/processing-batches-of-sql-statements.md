@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Batches von SQL-Anweisungen | Microsoft-Dokumentation
+title: Verarbeiten von Batches von SQL-Anweisungen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - batches [ODBC], processing batches of SQL statements
 ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f952b21267b73c7ae508f46d896dbfdbb4160e20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec0e4b67d75b1ff1b14eb11682869041717a4055
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100569"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308031"
 ---
 # <a name="processing-batches-of-sql-statements"></a>Verarbeiten von Batches von SQL-Anweisungen
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
   
- Die Cursor Bibliothek unterstützt keine Batches von SQL-Anweisungen, einschließlich der SQL-Anweisungen, für die das Attribut der SQL_ATTR_PARAMSET_SIZE Anweisung größer als 1 ist. Wenn eine Anwendung einen Batch von SQL-Anweisungen an die Cursor Bibliothek übermittelt, sind die Ergebnisse nicht definiert.
+ Die Cursorbibliothek unterstützt keine Batches von SQL-Anweisungen, einschließlich SQL-Anweisungen, für die das attribut SQL_ATTR_PARAMSET_SIZE-Anweisung größer als 1 ist. Wenn eine Anwendung einen Batch von SQL-Anweisungen an die Cursorbibliothek sendet, sind die Ergebnisse nicht definiert.

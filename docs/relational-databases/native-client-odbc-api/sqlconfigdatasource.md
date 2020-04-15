@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource | Microsoft-Dokumentation
+title: SQLConfigDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLConfigDataSource function
 ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ef8d24c1caba7e2dfa96ce33a828ca98bb6e898
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 816ce460d140ddbdd1c018092cb0c3b0857355b8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787489"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302561"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt verschiedene-spezifische Schlüsselwort-Wert-Paare für Attribut Zeichenfolgen der Datenquellen Konfiguration.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client ODBC-Treiber unterstützt verschiedene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Schlüsselwort-Wert-Paare für Datenquellenkonfigurationsattributzeichenfolgen.  
   
- Eine Liste der Schlüsselwörter, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verfügbar sind, finden Sie unter Verwenden von [Verbindungs Zeichenfolgen-Schlüsselwörtern mit SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Eine Liste der schlüsselwörter, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die im Native Client ODBC-Treiber verfügbar sind, finden Sie unter [Verwenden von Verbindungszeichenfolgenschlüsselwörtern mit SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLConfigDataSource-Funktion](https://go.microsoft.com/fwlink/?LinkId=59337)   

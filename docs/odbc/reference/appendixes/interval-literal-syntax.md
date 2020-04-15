@@ -1,5 +1,5 @@
 ---
-title: Interval-Literalsyntax | Microsoft-Dokumentation
+title: Intervallliterale Syntax | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,68 +12,68 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - ODBC literals [ODBC], interval
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6352a5ae894adb09f714a78386bfecfa3ce1df77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3387b07a8e769206a6a495addff4287000691fec
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041621"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290570"
 ---
 # <a name="interval-literal-syntax"></a>Syntax von Intervallliteralen
-Die folgende Syntax wird für intervallliterale in ODBC verwendet.  
+Die folgende Syntax wird für Intervallliterale in ODBC verwendet.  
   
- *Interval-Literale:: = Interval* [+*&#124;*-] *Intervall-Zeichen folgen Intervall-Qualifizierer*  
+ *intervall-literal ::= INTERVAL* [+*&#124;*-] *intervall-string interval-qualifier*  
   
- *Interval-String* :: = *Zitat* { *year-month-Literale* &#124; *Tag-Time-Literale* }- *Anführungs* Zeichen  
+ *interval-string* ::= *Anführungszeichen* , *Jahr-Monat-Literal* &#124; *Tag-Zeit-Literal-Anführungszeichen* *quote*  
   
- *year-month-Literale* :: = *Jahre-Wert* &#124; [*Jahre-Wert* -] *Monate-Wert*  
+ *Jahr-Monats-Literal* ::= *Jahreswert* &#124; [*Jahreswert* -] *Monatswert*  
   
- *Day-time-Literale* :: = *Day-time-interval* &#124; *Zeitintervall*  
+ *Day-Time-Literal* ::= *Day-Time-Intervall* &#124; *Zeitintervall*  
   
- *Day-time-interval* :: = *Days-Value* [*Hours-Value* [:*Minutes-Value*[:*seconds-Value*]]]  
+ *Tageszeitintervall* ::= *Tage-Wert* [*Stundenwert* [:*Minuten-Wert*[:*Sekunden-Wert*]]]  
   
- *Zeitintervall* :: = *Stunden-Wert* [:*Minutes-Wert* [:*seconds-Wert* ]]  
+ *Zeitintervall* ::= *Stundenwert* [:*Minuten-Wert* [:*Sekundenwert* ] ]  
   
- &#124; *Minuten-Wert* [:*seconds-Wert* ]  
+ &#124; *Minutenwert* [:*Sekundenwert* ]  
   
  &#124; *Sekunden-Wert*  
   
- *years-Value* :: = *DateTime-Value*  
+ *Jahreswert* ::= *Datumszeitwert*  
   
- *Monate-Wert* :: = *DateTime-Value*  
+ *Monatswert* ::= *Datumszeitwert*  
   
- *Days-Value* :: = *DateTime-Value*  
+ *days-Wert* ::= *Datumszeitwert*  
   
- *Hours-Value* :: = *DateTime-Value*  
+ *Stundenwert* ::= *Datumszeitwert*  
   
- *Minutes-Value* :: = *DateTime-Value*  
+ *Minuten-Wert* ::= *Datumszeitwert*  
   
- *seconds-Value* :: = *seconds-ganzzahliger Wert* [. [ *Sekundenbruchteile*] ]  
+ *Sekundenwert* ::= *Sekunden-Ganzzahlwert* [.[ *Sekunden-Fraktion*] ]  
   
- *seconds-integer-value* :: = *unsigned-Integer*  
+ *Sekunden-Ganzzahlwert* ::= *nicht signierte Ganzzahl*  
   
- *seconds-Bruchteil* :: = *unsigned-Integer*  
+ *Sekunden-Fraktion* ::= *nicht signierte Ganzzahl*  
   
- *DateTime-Value* :: = *unsigned-Integer*  
+ *datumsweise::=* *nicht signierte Ganzzahl*  
   
- *Interval-Qualifizierer* :: = *Start-Field* -to *-End-Field* &#124; *Single-DateTime-Field*  
+ *Intervall-Qualifizierer* ::= *Startfeld* zum *Endfeld* &#124; *Single-Datetime-Feld*  
   
- *Start-Field* :: = *Non-Second-DateTime-Field* [(*Intervall-führende-Feld Genauigkeit* )]  
+ *Startfeld* ::= *nicht-zweites Datum-Time-Feld* [(*intervallführendes Feld -Präzision* )]  
   
- *End-Field* :: = *Non-Second-DateTime-Field* &#124; Sekunde [(*Intervall-Bruch Sekunden-Genauigkeit*)]  
+ *Endfeld* ::= *nicht-zweite-Datetime-Feld* &#124; SECOND[(*intervall-fractional-seconds-precision*)]  
   
- *Single-DateTime-Field* :: = *Non-Second-DateTime-Field* [(*Interval-Leading-Field-Precision*)] &#124; Second [(*Interval-Leading-Field-Precision* [, (*Intervall-Sekundenbruchteile-Genauigkeit*)]  
+ *Single-Datetime-Feld* ::= *nicht-zweites-Datumsuhr-Feld* [(*Intervall-führende-Feld-Präzision*)] &#124; SECOND[(*interval-leading-field-precision* [, (*interval-fractional-seconds-precision*)]  
   
- *DateTime-Field* :: = *nicht-Second-DateTime-Field* &#124; Sekunde  
+ *datumszeitliches Feld* ::= *nicht-zweites Datum-Uhrzeitfeld* &#124; ZWEITE  
   
- *nicht-Second-DateTime-Field* :: = Jahr &#124; Monat &#124; Tag &#124; Stunde &#124; Minute  
+ *Nicht-zweites-Datumszeitfeld* ::= JAHR &#124; MONAT &#124; TAG &#124; Stunde &#124; MINUTE  
   
- *Interval-Sekundenbruchteile-Genauigkeit* :: = *unsignierte Ganzzahl*  
+ *intervall-fractional-seconds-precision* ::= *unsigned-integer*  
   
- *Interval-Leading-Field-Precision* :: = *unsigned-Integer*  
+ *intervall-führende Feldgenauigkeit* ::= *unsigniert-ganzzahlig*  
   
- *Anführungs* Zeichen:: = '  
+ *Zitat* ::= '  
   
- *unsigned-Integer* :: = *Digit...*
+ *unsigned-integer* ::= *ziffer...*

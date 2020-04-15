@@ -1,5 +1,5 @@
 ---
-title: Installationsprogramm-dll | Microsoft-Dokumentation
+title: Installer-DLL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - installing ODBC components [ODBC], installer DLL functions
 - installer DLL [ODBC]
 ms.assetid: e2b92afb-64ce-4ce0-84ad-6a4276646e68
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c1c50c70920b6ca37a51a0ab048fa81344802f20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d51d69d013fe2d2fc78171fa64c1caf7e19d5eca
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094119"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301065"
 ---
 # <a name="installer-dll"></a>Installationsprogramm-DLL
 > [!NOTE]  
->  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur in früheren Versionen von Windows explizit installieren.  
+>  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur explizit auf früheren Windows-Versionen installieren.  
   
- Die Installationsprogramm-dll enthält Funktionen zum Installieren und Entfernen von ODBC-Komponenten, zur Verwaltung von Registrierungsinformationen zu diesen Komponenten und zur Verwaltung von Registrierungsinformationen zu Datenquellen. Sie wird von Microsoft geschrieben und kann neu verteilt werden. Eine umfassende Beschreibung der Funktionen in der Installationsprogramm-dll finden Sie unter [installationsdll-API-Referenz](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  
+ Die Installations-DLL enthält Funktionen zum Installieren und Entfernen von ODBC-Komponenten, zum Verwalten von Registrierungsinformationen zu diesen Komponenten und zum Verwalten von Registrierungsinformationen zu Datenquellen. Es wird von Microsoft geschrieben und kann weiterverteilt werden. Eine vollständige Beschreibung der Funktionen in der Installations-DLL finden Sie unter [Installer-DLL-API-Referenz](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Registrierungseinträge für ODBC-Komponenten](../../../odbc/reference/install/registry-entries-for-odbc-components.md)   

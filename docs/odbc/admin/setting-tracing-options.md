@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Ablauf Verfolgungs Optionen | Microsoft-Dokumentation
+title: Festlegen von Ablaufverfolgungsoptionen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,55 +12,55 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], tracing options
 - tracing options [ODBC], ODBC data source administrator
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 13e8caf9f3a9643f8063d6227258245a603f1665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 21bee5d903459423a134389e62db844f5f63c9c1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901633"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307196"
 ---
 # <a name="setting-tracing-options"></a>Festlegen von Ablaufverfolgungsoptionen
-Mithilfe der Registerkarte Ablauf **Verfolgung** des Dialog Felds **ODBC-Datenquellen-Administrator** können Sie konfigurieren, wie ODBC-Funktionsaufrufe verfolgt werden.  
+Auf der Registerkarte **Ablaufverfolgung** des Dialogfelds **ODBC Data Source Administrator** können Sie konfigurieren, wie ODBC-Funktionsaufrufe verfolgt werden.  
   
-## <a name="how-tracing-works"></a>Funktionsweise der Ablauf Verfolgung  
- Wenn Sie die Ablauf Verfolgung über die Registerkarte Ablauf **Verfolgung** starten, protokolliert der Treiber-Manager alle ODBC-Funktionsaufrufe für alle anschließenden Anwendungen. ODBC-Funktionsaufrufe von Anwendungen, die vor dem Start der Ablauf Verfolgung ausgeführt werden, werden nicht protokolliert. ODBC-Funktionsaufrufe werden in einer von Ihnen angegebenen Protokolldatei aufgezeichnet.  
+## <a name="how-tracing-works"></a>Funktionsweise der Ablaufverfolgung  
+ Wenn Sie die Ablaufverfolgung über die Registerkarte **Ablaufverfolgung** starten, protokolliert der Treiber-Manager alle ODBC-Funktionsaufrufe für alle nachträglich ausgeführten Anwendungen. ODBC-Funktionsaufrufe von Anwendungen, die ausgeführt werden, bevor die Ablaufverfolgung gestartet wird, werden nicht protokolliert. ODBC-Funktionsaufrufe werden in einer von Ihnen angegebenen Protokolldatei aufgezeichnet.  
   
- Die Ablauf Verfolgung wird erst beendet, wenn Sie auf Ablauf **Verfolgung beenden**klicken. Beachten Sie, dass die Protokolldatei während der Ablauf Verfolgung weiterhin zunimmt und dies die Leistung aller ODBC-Anwendungen beeinträchtigt.  
+ Die Ablaufverfolgung wird erst beendet, nachdem Sie auf **Ablaufverfolgung jetzt beenden**geklickt haben. Denken Sie daran, dass die Protokollierung während der Folgenden-Protokollierung weiter zunimmt und sich dies auf die Leistung aller ODBC-Anwendungen auswirkt.  
   
- Weitere Informationen zur Ablauf Verfolgung finden Sie unter Ablauf [Verfolgung](../../odbc/reference/develop-app/tracing.md).  
+ Weitere Informationen zur Ablaufverfolgung finden Sie unter [Ablaufverfolgung](../../odbc/reference/develop-app/tracing.md).  
   
-### <a name="changes-in-odbc-tracing"></a>Änderungen in der ODBC-Ablauf Verfolgung  
- Vor MDAC 2,7 SP2 konnte die ODBC-Ablauf Verfolgung nur auf Computer Ebene ausgeführt werden, bei der die Ablauf Verfolgung Details zu allen ODBC-Anwendungen bereitstellt, die unter allen Identitäten ausgeführt werden. Dies umfasste die Ablauf Verfolgung für ODBC-bezogene Aktivitäten, die bei Prozessen auftreten können, die für andere lokale Benutzerkonten erstellt oder ausgeführt wurden, sowie integrierte Sicherheits Prinzipale wie der lokale Dienst und der Netzwerkdienst.  
+### <a name="changes-in-odbc-tracing"></a>Änderungen in der ODBC-Ablaufverfolgung  
+ Vor MDAC 2.7 SP2 durfte die ODBC-Ablaufverfolgung nur maschinenweit erfolgen, bei dem Trace-Captures offengelegte Details zu allen ODBC-Anwendungen erfassen, die unter beliebigen Identitäten ausgeführt werden. Dies umfasste die Ablaufverfolgung von ODBC-bezogenen Aktivitäten, die für Prozesse auftreten können, die im Auftrag anderer lokaler Benutzerkonten erstellt oder ausgeführt werden, und integrierte Sicherheitsprinzipale wie den lokalen Dienst und den Netzwerkdienst.  
   
- Standardmäßig verwendet die ODBC-Ablauf Verfolgung jetzt den Einzelbenutzermodus. Wenn Sie ein lokaler Administrator sind, können Sie die Computer weite Ablauf Verfolgung jedoch weiterhin mit dem ODBC-Datenquellen-Administrator aktivieren.  
+ Standardmäßig verwendet die ODBC-Ablaufverfolgung jetzt den Benutzermodus. Wenn Sie jedoch ein lokaler Administrator sind, können Sie die maschinenweite Ablaufverfolgung weiterhin mithilfe des ODBC-Datenquellenadministrators aktivieren.  
   
- So konfigurieren Sie den ODBC-Ablauf Verfolgungs Modus:  
+ So konfigurieren Sie den ODBC-Ablaufverfolgungsmodus:  
   
-1.  Wenn dies erforderlich ist, melden Sie sich mit einem Konto an, das Mitglied der lokalen Administratoren Gruppe ist.  
+1.  Melden Sie sich ggf. mit einem Konto an, das mitglied in der Gruppe Lokale Administratoren ist.  
   
-2.  Öffnen Sie unter "Verwaltung" den ODBC-Datenquellen-Administrator.  
+2.  Öffnen Sie unter Administrative Tools den ODBC-Datenquellenadministrator.  
   
-3.  Klicken auf die Registerkarte Ablauf **Verfolgung** .  
+3.  Klicken Sie auf die Registerkarte **Ablaufverfolgung.**  
   
-4.  Konfigurieren Sie den Ablauf Verfolgungs Modus mithilfe des Kontrollkästchens **Computer weite Ablauf Verfolgung für alle Benutzer Identitäten** :  
+4.  Konfigurieren Sie den Ablaufverfolgungsmodus mithilfe des **Kontrollkästchens Machine-Wide-Ablaufverfolgung für alle Benutzeridentitäten:**  
   
-5.  Aktivieren Sie das Kontrollkästchen, um die Computer weite Ablauf Verfolgung zu aktivieren.  
+5.  Um die maschinenweite Ablaufverfolgung zu aktivieren, aktivieren Sie das Kontrollkästchen.  
   
-6.  Deaktivieren Sie das Kontrollkästchen, um zur Ablauf Verfolgung pro Benutzer zurückzukehren.  
+6.  Um zur Ablaufverfolgung pro Benutzer zurückzukehren, deaktivieren Sie das Kontrollkästchen.  
   
 7.  Klicken Sie auf **Anwenden**.  
   
 > [!NOTE]  
->  Wenn Sie die Ablauf Verfolgung bereits in einem Modus gestartet haben, müssen Sie die Ablauf Verfolgung abbrechen und in den anderen Modus wechseln, damit der Modus erfolgreich geändert wird.  
+>  Wenn Sie die Ablaufverfolgung bereits in einem Modus gestartet haben, müssen Sie die Ablaufverfolgung beenden und in den anderen Modus wechseln, damit der Modus erfolgreich geändert werden kann.  
   
 > [!IMPORTANT]  
->  Die Computer weite Ablauf Verfolgung sollte nur aktiviert werden, wenn Sie benötigt wird. Andernfalls sollte Sie deaktiviert bleiben.  
+>  Die maschinenweite Ablaufverfolgung sollte nur dann aktiviert werden, wenn sie benötigt wird. Andernfalls sollte es deaktiviert werden.  
   
-## <a name="visual-studio-analyzer-tracing"></a>Visual Studio Analyzer Ablauf Verfolgung  
+## <a name="visual-studio-analyzer-tracing"></a>Visual Studio Analyzer-Ablaufverfolgung  
   
 > [!IMPORTANT]  
->  Die Unterstützung für Visual Studio Analyzer wurde ab Windows 8 entfernt (Visual Studio Analyzer war nur in früheren Versionen von Visual Studio enthalten.) Verwenden Sie für einen alternativen Mechanismus zur Problembehandlung die Auftrags Ablauf Verfolgung.  
+>  Die Unterstützung für Visual Studio Analyzer wurde ab Windows 8 entfernt (Visual Studio Analyzer war nur in älteren Versionen von Visual Studio enthalten). Verwenden Sie für einen alternativen Fehlerbehebungsmechanismus die BID-Ablaufverfolgung.  
   
- Die Visual Studio® Analyzer-Ablauf Verfolgung bietet Informationen zur Leistung und zum Debuggen der ODBC-Schicht. Alle ausgehenden Ereignisse werden auf der Oberfläche der obersten Ebene ausgelöst, sodass Sie so genau wie möglich in Bezug auf die in den ODBC-Komponenten aufgewendeten Zeit vorhanden sind. Visual Studio Analyzer Ablauf Verfolgung erfordert die Registrierung einer beliebigen Ereignis Quelle, wenn die Quelle eingerichtet ist. Weitere Informationen zu dieser Art der Ablauf Verfolgung finden Sie in der Visual Studio-Dokumentation.
+ Visual Studio® Analyzer Tracing bietet Leistungs- und Debuginformationen zum ODBC-Layer. Alle ausgehenden Ereignisse werden an der Schnittstelle der obersten Ebene ausgelöst, um ein möglichst genaues Bild über die in ODBC-Komponenten verbrachte Zeit zu erhalten. Visual Studio Analyzer Tracing erfordert, dass sich eine Ereignisquelle registriert, wenn die Quelle eingerichtet ist. Weitere Informationen zu dieser Art der Ablaufverfolgung finden Sie in der Visual Studio-Dokumentation.

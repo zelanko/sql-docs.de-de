@@ -1,5 +1,5 @@
 ---
-title: SQL-Module | Microsoft-Dokumentation
+title: SQL-Module | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - modules [ODBC]
 - SQL statements [ODBC], modules
 ms.assetid: 07551472-87ee-4765-951f-1364ed32f0c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b5cef56cec30e5ad09500135e05884bf55d5dde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 351d1c6a34413b385bd76dfebb009b34c4c0f150
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076224"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280424"
 ---
 # <a name="sql-modules"></a>SQL-Module
-Die zweite Methode zum Senden von SQL-Anweisungen an das DBMS ist die Verwendung von Modulen. Kurz gesagt besteht ein Modul aus einer Gruppe von Prozeduren, die von der Host Programmiersprache aufgerufen werden. Jede Prozedur enthält eine einzelne SQL-Anweisung, und die Daten werden über Parameter an und aus der Prozedur übermittelt.  
+Die zweite Technik zum Senden von SQL-Anweisungen an das DBMS erfolgt über Module. Kurz gesagt, ein Modul besteht aus einer Gruppe von Prozeduren, die aus der Host-Programmiersprache aufgerufen werden. Jede Prozedur enthält eine einzelne SQL-Anweisung, und Daten werden über Parameter an und von der Prozedur übergeben.  
   
- Ein Modul kann als Objektbibliothek betrachtet werden, die mit dem Anwendungscode verknüpft ist. Die Art und Weise, in der die Prozeduren und der Rest der Anwendung verknüpft sind, ist jedoch implementierungsabhängig. Die Prozeduren können z. b. in den Objektcode kompiliert und direkt mit dem Anwendungscode verknüpft werden. Sie können auf dem DBMS kompiliert und gespeichert werden, und es können Aufrufe von Zugriffs Plan Bezeichner erfolgen, die im Anwendungscode abgelegt werden, oder Sie können zur Laufzeit interpretiert werden.  
+ Ein Modul kann als Objektbibliothek betrachtet werden, die mit dem Anwendungscode verknüpft ist. Wie genau die Verfahren und der Rest der Anwendung miteinander verknüpft sind, hängt jedoch von der Implementierung ab. Die Prozeduren können z. B. in Objektcode kompiliert und direkt mit dem Anwendungscode verknüpft werden, sie können kompiliert und auf dem DBMS gespeichert werden und Aufrufe von Zugriffsplanbezeichnern, die im Anwendungscode platziert sind, oder sie können zur Laufzeit interpretiert werden.  
   
- Der Hauptvorteil von Modulen besteht darin, dass Sie SQL-Anweisungen ordnungsgemäß von der Programmiersprache trennen. Theoretisch sollte es möglich sein, eine Änderung zu ändern, ohne die andere zu ändern und Sie einfach neu zu verknüpfen.
+ Der Hauptvorteil von Modulen besteht darin, dass sie SQL-Anweisungen sauber von der Programmiersprache trennen. Theoretisch sollte es möglich sein, das eine zu ändern, ohne das andere zu ändern und sie einfach neu zu verknüpfen.

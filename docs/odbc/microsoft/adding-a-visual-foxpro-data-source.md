@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Visual FoxPro-Datenquelle | Microsoft-Dokumentation
+title: Hinzufügen einer Visual FoxPro-Datenquelle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,41 +11,41 @@ helpviewer_keywords:
 - Visual FoxPro data source [ODBC], adding
 - adding data sources [ODBC], Visual FoxPro ODBC driver
 ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5203a7216faa008aade21c4e3e1dc54fc794461b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1fd0c0f929ca00b7cf731dc92f07f69b6503f884
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901444"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307141"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Hinzufügen einer Visual FoxPro-Datenquelle
-Um von Ihrer Anwendung aus auf Visual FoxPro-Daten zuzugreifen, müssen Sie über eine Datenquelle verfügen. Sie können eine Datenquelle wie folgt erstellen:  
+Um auf Visual FoxPro-Daten aus Ihrer Anwendung zugreifen zu können, benötigen Sie eine Datenquelle. Sie können eine Datenquelle wie folgt erstellen:  
   
--   In einer Anwendung, wie z. b. Microsoft® Word, Microsoft Excel oder Microsoft Access, das ODBC-Treiber verwendet.  
+-   In einer Anwendung, z. B. Microsoft® Word, Microsoft Excel oder Microsoft Access, die ODBC-Treiber verwendet.  
   
--   Außerhalb Ihrer Anwendung mithilfe der Systemsteuerung Microsoft Windows® 95, Microsoft Windows 98 oder Microsoft Windows NT®/Windows 2000.  
+-   Außerhalb Ihrer Anwendung verwenden Sie die Systemsteuerung Microsoft Windows® 95, Microsoft Windows 98 oder Microsoft Windows NT®/Windows 2000.  
   
- Nachdem eine Datenquelle auf dem System vorhanden ist, können Sie jedes Mal, wenn Sie auf Visual FoxPro-Daten zugreifen möchten, dieselbe Datenquelle wieder verwenden. Wenn Sie über mehrere unterschiedliche Datenbanken oder Tabellen verfügen, auf die Sie zugreifen möchten, können Sie für jede Datenbank oder jedes Verzeichnis eine separate Datenquelle erstellen.  
+ Nachdem auf Ihrem System eine Datenquelle vorhanden ist, können Sie dieselbe Datenquelle jedes Mal wiederverwenden, wenn Sie auf Visual FoxPro-Daten zugreifen möchten. Wenn Sie über mehrere verschiedene Datenbanken oder Tabellen verfügen, auf die Sie zugreifen möchten, können Sie für jede Datenbank oder jedes Verzeichnis eine separate Datenquelle erstellen.  
   
- Mit der folgenden Prozedur wird eine Datenquelle mithilfe der Systemsteuerung erstellt. Weitere Informationen zum Erstellen einer Datenquelle aus einer Anwendung finden Sie unter Zugreifen auf [Visual FoxPro-Daten aus Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md).  
+ Mit dem folgenden Verfahren wird mithilfe der Systemsteuerung eine Datenquelle erstellt. Weitere Informationen zum Erstellen einer Datenquelle aus einer Anwendung finden Sie [unter Zugriff auf Visual FoxPro-Daten von Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md).  
   
 ### <a name="to-add-a-visual-foxpro-data-source"></a>So fügen Sie eine Visual FoxPro-Datenquelle hinzu  
   
-1.  Öffnen Sie auf Computern, auf denen Windows 2000 ausgeführt wird, die Windows-Systemsteuerung, und doppelklicken Sie auf Verwaltung.  
+1.  Öffnen Sie auf Computern, auf denen Windows 2000 ausgeführt wird, das Windows-Bedienfeld, und doppelklicken Sie auf Verwaltungstools.  
   
-2.  Doppelklicken Sie auf Datenquellen (ODBC), um das Dialogfeld ODBC-Datenquellen-Administrator zu öffnen. Dieses Symbol ist verfügbar, nachdem Sie den Visual FoxPro-ODBC-Treiber oder eine beliebige ODBC-Treibersoftware installiert haben.  
+2.  Doppelklicken Sie auf Datenquellen (ODBC), um das Dialogfeld ODBC Data Source Administrator zu öffnen. Dieses Symbol ist verfügbar, nachdem Sie den Visual FoxPro ODBC-Treiber oder eine ODBC-Treibersoftware installiert haben.  
   
     > [!NOTE]  
-    >  Wenn Sie eine frühere Version von Windows ausführen, öffnen Sie die Windows-Systemsteuerung, und doppelklicken Sie auf 32-Bit-ODBC oder ODBC, um das Dialogfeld ODBC-Datenquellen-Administrator zu öffnen.  
+    >  Wenn Sie eine frühere Windows-Version ausführen, öffnen Sie das Windows-Bedienfeld, und doppelklicken Sie auf 32-Bit-ODBC oder ODBC, um das Dialogfeld ODBC-Datenquellenadministrator zu öffnen.  
   
-3.  Klicken Sie auf "Hinzufügen".  
+3.  Klicken Sie auf Hinzufügen.  
   
-4.  Wählen Sie im Dialogfeld neue Datenquelle erstellen die Option Microsoft Visual FoxPro-Treiber aus, und klicken Sie dann auf Fertigstellen.  
+4.  Wählen Sie im Dialogfeld Neue Datenquelle erstellen die Option Microsoft Visual FoxPro Driver aus, und klicken Sie dann auf Fertig stellen.  
   
-5.  Geben Sie im [Dialogfeld Setup für ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)den Datenquellen Namen und die Beschreibung ein, wählen Sie den Datenbanktyp aus, wählen Sie die Datenbank oder das Verzeichnis aus, und klicken Sie dann auf OK.  
+5.  Geben Sie im [Dialogfeld ODBC Visual FoxPro Setup](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)den Namen und die Beschreibung der Datenquelle ein, wählen Sie den Datenbanktyp aus, wählen Sie die Datenbank oder das Verzeichnis aus, und klicken Sie dann auf OK.  
   
-     Der neue Datenquellen Name wird im Dialogfeld ODBC-Datenquellen-Administrator auf der Registerkarte Benutzer-DSN in der Liste Benutzerdaten Quellen angezeigt.  
+     Der neue Datenquellenname wird in der Liste Benutzerdatenquellen auf der Registerkarte Benutzer-DSN im Dialogfeld ODBC-Datenquellenadministrator angezeigt.  
   
-6.  Klicken Sie auf OK, um die neue Datenquelle zu speichern, und schließen Sie das Dialogfeld ODBC-Datenquellen-Administrator.
+6.  Klicken Sie auf OK, um die neue Datenquelle zu speichern und das Dialogfeld ODBC Data Source Administrator zu schließen.

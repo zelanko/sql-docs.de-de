@@ -1,5 +1,5 @@
 ---
-title: SQLSetScrollOptions-Funktion | Microsoft-Dokumentation
+title: SQLSetScrollOptions-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -18,30 +18,30 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC]
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 77a85caefadb54c3db2716c4db18b504e02da996
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 056fc203581e1d5d8323b09ac62d692093d8c0f5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68342938"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287266"
 ---
 # <a name="sqlsetscrolloptions-function"></a>SQLSetScrollOptions-Funktion
-**Konformitäts**  
- Eingeführte Version: ODBC 1,0 Standards Compliance: deprecated  
+**Konformität**  
+ Eingeführte Version: ODBC 1.0-Standards-Konformität: Veraltet  
   
  **Zusammenfassung**  
- In ODBC *3. x*wurde die ODBC 2,0-Funktion **SQLSetScrollOptions** durch Aufrufe von **SQLGetInfo** und **SQLSetStmtAttr**ersetzt.  
+ In ODBC *3.x*wurde die ODBC 2.0-Funktion **SQLSetScrollOptions** durch Aufrufe von **SQLGetInfo** und **SQLSetStmtAttr**ersetzt.  
   
 > [!NOTE]
->  Weitere Informationen dazu, was der Treiber-Manager diese Funktion zuordnet, wenn eine ODBC *2. x* -Anwendung mit einem ODBC *3. x* -Treiber arbeitet, finden Sie unter [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Driver Guidelines for abwärts Compatibility.  
+>  Weitere Informationen darüber, was der Treiber-Manager dieser Funktion zuordnet, wenn eine ODBC *2.x-Anwendung* mit einem ODBC *3.x-Treiber* arbeitet, finden Sie unter [Zuordnen veralteter Funktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiberrichtlinien für Abwärtskompatibilität.  
 > 
 > [!NOTE]
->  Wenn der Treiber-Manager **SQLSetScrollOptions** für eine Anwendung zuordnet, die mit einem ODBC *3. x* -Treiber arbeitet, der **SQLSetScrollOptions**nicht unterstützt, legt der Treiber-Manager die SQL_ROWSET_SIZE Anweisungs Option, nicht das SQL_ATTR_ROW_ARRAY_SIZE Statement-Attribut, auf das *rowsetsize* -Argument in **sqlsetscrolloption**fest. Daher kann **SQLSetScrollOptions** nicht von einer Anwendung verwendet werden, wenn mehrere Zeilen durch einen-Befehl von **SQLFetch** oder **SQLFetchScroll**abgerufen werden. Diese Option kann nur verwendet werden, wenn mehrere Zeilen durch einen **sqlextendebug**-Befehl abgerufen werden.  
+>  Wenn der Treiber-Manager **SQLSetScrollOptions** für eine Anwendung zuordnet, die mit einem ODBC *3.x-Treiber* arbeitet, der **SQLSetScrollOptions**nicht unterstützt, legt der Treiber-Manager die SQL_ROWSET_SIZE-Anweisungsoption und nicht das SQL_ATTR_ROW_ARRAY_SIZE-Anweisungsattribut auf das *RowsetSize-Argument* in **SQLSetScrollOption**fest. Daher kann **SQLSetScrollOptions** nicht von einer Anwendung verwendet werden, wenn mehrere Zeilen durch einen Aufruf von **SQLFetch** oder **SQLFetchScroll**abgerufen werden. Sie kann nur verwendet werden, wenn mehrere Zeilen durch einen Aufruf von **SQLExtendedFetch**abgerufen werden.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn Ihre Anwendung unter einem 64-Bit-Betriebssystem ausgeführt wird, finden Sie weitere [Informationen unter ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md).  
+ Wenn Ihre Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird, finden Sie weitere Informationen unter [ODBC 64-Bit Information](../../../odbc/reference/odbc-64-bit-information.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren des ODBC-Treibers für Oracle | Microsoft-Dokumentation
+title: Konfigurieren des ODBC-Treibers für Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,33 +11,33 @@ helpviewer_keywords:
 - configuring ODBC driver for Oracle [ODBC]
 - ODBC driver for Oracle [ODBC], configuring
 ms.assetid: 0a5f827c-0b80-4627-85cb-f10292b9fb33
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc163f53c9dc234702f6f74426eb65f57cec26b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1bbdbe36ed9e6f254e2b738479698bd9eece09f8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096679"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281370"
 ---
 # <a name="configuring-the-odbc-driver-for-oracle"></a>Konfigurieren des ODBC-Treibers für Oracle
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Sie können die Leistung des ODBC-Treibers für Oracle steuern, indem Sie die Daten Umgebung kennen und die Parameter der Datenquellen Verbindung im Dialogfeld [ODBC-Datenquellen-Administrator](../../odbc/admin/odbc-data-source-administrator.md) oder mithilfe von Verbindungs Zeichenfolgen-Parametern ordnungsgemäß festlegen. Das Dialogfeld enthält die folgenden Steuerelemente für das Herstellen einer Verbindung mit einer Datenquelle mithilfe des Dialog Felds oder mithilfe von Verbindungs Zeichenfolgen:  
+ Sie können die Leistung des ODBC-Treibers für Oracle steuern, indem Sie die Datenumgebung kennen und die Parameter der Datenquellenverbindung über das Dialogfeld [ODBC Data Source Administrator](../../odbc/admin/odbc-data-source-administrator.md) oder über Verbindungszeichenfolgenparameter korrekt festlegen. Das Dialogfeld enthält die folgenden Steuerelemente zum Herstellen einer Verbindung mit einer Datenquelle über das Dialogfeld oder mithilfe von Verbindungszeichenfolgen:  
   
--   **Registerkarte Benutzer-DSN** Listet die Namen der Datenquellen auf, die sich lokal auf dem Computer befinden.  
+-   **Registerkarte Benutzer DSN** Listet die Datenquellennamen auf, die lokal auf dem Computer sind.  
   
--   **Registerkarte System-DSN** Ermöglicht das Hinzufügen oder Entfernen einer Systemdaten Quelle. Auf System Datenquellen kann von allen Benutzern auf dem lokalen Computer zugegriffen werden.  
+-   **Registerkarte System DSN** Ermöglicht das Hinzufügen oder Entfernen einer Systemdatenquelle. Auf Systemdatenquellen können alle Benutzer auf dem lokalen Computer zugreifen.  
   
--   **Registerkarte Datei-DSN** Ermöglicht das Hinzufügen oder Entfernen einer Datei Datenquelle auf dem lokalen Computer. Datei Datenquellen können von allen Benutzern gemeinsam genutzt werden, die den gleichen Treiber installiert haben.  
+-   **Datei-DSN-Registerkarte** Ermöglicht das Hinzufügen oder Entfernen einer Dateidatenquelle vom lokalen Computer. Dateidatenquellen können von allen Benutzern gemeinsam genutzt werden, für die derselbe Treiber installiert ist.  
   
 -   **Registerkarte Treiber** Listet die installierten ODBC-Treiber auf.  
   
--   **Registerkarte Ablauf Verfolgung** Hiermit können Sie angeben, wie der ODBC-Treiber-Manager Aufrufe von ODBC-Funktionen verfolgt. Sie können die Ablauf Verfolgung für jede installierte ODBC-Anwendung separat konfigurieren.  
+-   **Registerkarte Tracing** Hier können Sie angeben, wie der ODBC-Treiber-Manager Aufrufe von ODBC-Funktionen nachverfolgt. Sie können die Ablaufverfolgung für jede installierte ODBC-Anwendung separat konfigurieren.  
   
--   **Registerkarte Verbindungs Pooling** Ermöglicht es Ihnen, Verbindungsoptionen für jeden installierten Treiber auszuwählen.  
+-   **Registerkarte "Verbindungspooling"** Ermöglicht die Auswahl der Verbindungsoptionen für jeden installierten Treiber.  
   
--   Info- **Registerkarte** Listet die installierten ODBC-Komponenten Dateien auf.  
+-   **Über Tab** Listet die installierten ODBC-Komponentendateien auf.  
   
- Nachdem Sie eine Datenquelle hinzugefügt haben, können Sie das Dialogfeld **ODBC-Datenquellen-Administrator** verwenden, um den Zugriff auf die Datenquelle zu konfigurieren. Wählen Sie eine Datenquelle aus, und klicken Sie dann auf eine der Registerkarten, um die Informationen zu bearbeiten oder zu überprüfen.
+ Nachdem Sie eine Datenquelle hinzugefügt haben, können Sie das Dialogfeld **ODBC-Datenquellenadministrator** verwenden, um den Zugriff auf ihre Datenquelle zu konfigurieren. Wählen Sie eine Datenquelle aus, und klicken Sie dann auf eine der Registerkarten, um die Informationen zu bearbeiten oder zu überprüfen.

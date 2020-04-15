@@ -1,5 +1,5 @@
 ---
-title: SQLParamOptions-Funktion | Microsoft-Dokumentation
+title: SQLParamOptions-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -18,27 +18,27 @@ f1_keywords:
 helpviewer_keywords:
 - SQLParamOptions function [ODBC]
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ebcd3da4f5e7d57bbc8883ebf7409ff5ea106f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 209cfe6444918a40f5199af1f1a839050a3a6a57
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68343526"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306911"
 ---
 # <a name="sqlparamoptions-function"></a>SQLParamOptions-Funktion
-**Konformitäts**  
- Eingeführte Version: ODBC 1,0 Standards Compliance: deprecated  
+**Konformität**  
+ Eingeführte Version: ODBC 1.0-Standards-Konformität: Veraltet  
   
  **Zusammenfassung**  
- Die ODBC 2,0-Funktion **SQLParamOptions** wurde in ODBC 3 ersetzt. *x* durch Aufrufe von [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ Die ODBC 2.0-Funktion **SQLParamOptions** wurde in ODBC 3 ersetzt. *x* durch Aufrufe von [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]  
->  Weitere Informationen dazu, wie der Treiber-Manager diese Funktion bei ODBC 2 zuordnet. die *x* -Anwendung arbeitet mit ODBC 3. zum *x* -Treiber finden Sie unter [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Driver Guidelines for abwärts Compatibility.  
+>  Weitere Informationen darüber, was der Treiber-Manager dieser Funktion zuordnet, wenn ein ODBC 2. *x-Anwendung* arbeitet mit einem ODBC 3. *x-Treiber,* siehe [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiberrichtlinien für Die Abwärtskompatibilität.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Weitere Informationen finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung unter einem 64-Bit-Betriebssystem ausgeführt wird.  
+ Siehe [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Anhang F: ODBC-Cursor Bibliothek | Microsoft-Dokumentation'
+title: 'Anhang F: ODBC-Cursorbibliothek | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,37 +13,37 @@ helpviewer_keywords:
 - cursor library [ODBC], about cursor library
 - cursor library [ODBC]
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bfffd95dd88b0a25be682a3df581e55825ed9ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec7982150bfa805c7093ab445400ef5ad1ee070c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68090832"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292430"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Anhang F: ODBC-Cursorbibliothek
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
   
- Die ODBC-Cursor Bibliothek (odbccr32. dll) unterstützt die Verwendung von scrollfähigen Cursorn für alle Treiber, die dem API-Konformitäts Grad der Ebene 1 entsprechen und von Entwicklern mit Ihren Anwendungen oder Treibern neu verteilt werden können. Die Cursor Bibliothek unterstützt auch positionierte UPDATE-und DELETE-Anweisungen für von **Select** -Anweisungen generierte Resultsets. Obwohl es nur statische und Vorwärts Cursor unterstützt, erfüllt die Cursor Bibliothek die Anforderungen vieler Anwendungen. Außerdem bietet Sie eine gute Leistung, insbesondere für Resultsets kleiner und mittlerer Größe, sowie für Anwendungen, die keine gute Cursor Unterstützung haben.  
+ Die ODBC-Cursorbibliothek (Odbccr32.dll) unterstützt Block-Scrollable-Cursor für alle Treiber, die der Level 1-API-Konformitätsstufe entsprechen und von Entwicklern mit ihren Anwendungen oder Treibern neu verteilt werden können. Die Cursorbibliothek unterstützt auch positionierte Aktualisierungs- und Löschanweisungen für Resultsets, die von **SELECT-Anweisungen** generiert werden. Obwohl sie nur statische und vorwärtsgerichtete Cursor unterstützt, erfüllt die Cursorbibliothek die Anforderungen vieler Anwendungen. Darüber hinaus kann es eine gute Leistung bieten, insbesondere für kleine bis mittlere Ergebnissätze und für Anwendungen, die keine gute Cursorunterstützung haben.  
   
- Die Cursor Bibliothek ist eine Dynamic Link Library (dll), die sich zwischen dem Treiber-Manager und dem Treiber befindet. Wenn eine Anwendung eine Funktion aufruft, ruft der Treiber-Manager die Funktion in der Cursor Bibliothek auf, die entweder die Funktion ausführt oder Sie im angegebenen Treiber aufruft. Für eine bestimmte Verbindung gibt eine Anwendung an, ob die Cursor Bibliothek immer verwendet wird. Sie wird verwendet, wenn der Treiber keine scrollbaren Cursor unterstützt oder nie verwendet wird.  
+ Die Cursorbibliothek ist eine Dynamic-Link-Bibliothek (DLL), die sich zwischen dem Treiber-Manager und dem Treiber befindet. Wenn eine Anwendung eine Funktion aufruft, ruft der Treiber-Manager die Funktion in der Cursorbibliothek auf, die entweder die Funktion oder im angegebenen Treiber ausführt. Für eine bestimmte Verbindung gibt eine Anwendung an, ob die Cursorbibliothek immer verwendet wird, wenn der Treiber keine scrollbaren Cursor unterstützt oder nie verwendet wird.  
   
- Die Cursor Bibliothek wird als Treiber für den Treiber-Manager angezeigt. Wenn sich die Cursor Bibliothek zwischen dem Treiber-Manager und einem ODBC *2. x* -Treiber befindet, wird die Cursor Bibliothek als ODBC *2. x* -Treiber angezeigt. Wenn sich die Cursor Bibliothek zwischen dem Treiber-Manager und einem ODBC *3. x* -Treiber befindet, wird die Cursor Bibliothek als ODBC *3. x* -Treiber angezeigt. Welches Verhalten von der Cursor Bibliothek angezeigt wird, hängt von der Version des Treibers ab, mit der er arbeitet, mit Ausnahme von Bindungs Offsets, die sowohl für ODBC *2. x* -als auch für ODBC *3. x* -Treiber unterstützt wird.  
+ Die Cursorbibliothek wird als Treiber für den Treiber-Manager angezeigt. Wenn sich die Cursorbibliothek zwischen dem Treiber-Manager und einem ODBC *2.x-Treiber* befindet, wird die Cursorbibliothek als ODBC *2.x-Treiber* angezeigt. Wenn sich die Cursorbibliothek zwischen dem Treiber-Manager und einem ODBC *3.x-Treiber* befindet, wird die Cursorbibliothek als ODBC *3.x-Treiber* angezeigt. Das Verhalten der Cursorbibliothek hängt von der Version des Treibers ab, mit dem sie arbeitet, mit Ausnahme von Bindungsoffsets, die sowohl für ODBC *2.x-* als auch für ODBC *3.x-Treiber* unterstützt werden.  
   
- Zum Implementieren von Blockcursorn in **SQLFetch** und **SQLFetchScroll**Ruft die Cursor Bibliothek wiederholt **SQLFetch** im Treiber auf. Zum Implementieren von Bildlauf werden die Daten, die Sie im Arbeitsspeicher und in den Datenträger Dateien abgerufen haben, zwischengespeichert Wenn eine Anwendung ein neues Rowset anfordert, ruft die Cursor Bibliothek Sie nach Bedarf vom Treiber oder Cache ab.  
+ Um Blockcursor in **SQLFetch** und **SQLFetchScroll**zu implementieren, ruft die Cursorbibliothek **SQLFetch** im Treiber wiederholt auf. Um das Scrollen zu implementieren, werden die Daten zwischengespeichert, die es im Arbeitsspeicher und in Datenträgerdateien abgerufen hat. Wenn eine Anwendung ein neues Rowset anfordert, ruft die Cursorbibliothek es bei Bedarf vom Treiber oder Cache ab.  
   
- Um positionierte UPDATE-und DELETE-Anweisungen zu implementieren, erstellt die Cursor Bibliothek eine **Update** -oder **Delete** -Anweisung mit einer **Where** -Klausel, die den zwischengespeicherten Wert der einzelnen gebundenen Spalten in der Zeile angibt. Wenn eine positionierte UPDATE-Anweisung ausgeführt wird, aktualisiert die Cursor Bibliothek Ihren Cache von den Werten in den rowsetpuffern.  
+ Um positionierte Aktualisierungs- und Löschanweisungen zu implementieren, erstellt die Cursorbibliothek eine **UPDATE-** oder **DELETE-Anweisung** mit einer **WHERE-Klausel,** die den zwischengespeicherten Wert jeder gebundenen Spalte in der Zeile angibt. Wenn eine positionierte Updateanweisung ausgeführt wird, aktualisiert die Cursorbibliothek ihren Cache von den Werten in den Rowset-Puffern.  
   
- Weitere Informationen zur ODBC-Cursor Bibliothek finden Sie in den folgenden Abschnitten dieses Anhangs:  
+ Weitere Informationen zur ODBC-Cursorbibliothek finden Sie in den folgenden Abschnitten dieses Anhangs:  
   
--   [Verwenden der ODBC-Cursorbibliothek](../../../odbc/reference/appendixes/using-the-odbc-cursor-library.md)  
+-   [Using the ODBC Cursor Library (Verwenden der ODBC-Cursorbibliothek)](../../../odbc/reference/appendixes/using-the-odbc-cursor-library.md)  
   
--   [Ausführen einer positionierten Aktualisierung und von DELETE-Anweisungen](../../../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md)  
+-   [Executing Positioned Update and Delete Statements (Ausführen einer positionierten Aktualisierung und von DELETE-Anweisungen)](../../../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md)  
   
--   [Codebeispiel für Cursorbibliothek](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
+-   [Cursor-Bibliothek-Codebeispiel](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
   
--   [Hinweise zur Implementierung](../../../odbc/reference/appendixes/implementation-notes.md)  
+-   [Implementierungshinweise](../../../odbc/reference/appendixes/implementation-notes.md)  
   
--   [ODBC-Cursorbibliothek – Fehlercodes](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)
+-   [ODBC Cursor Library Error Codes (ODBC-Cursorbibliothek – Fehlercodes)](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)

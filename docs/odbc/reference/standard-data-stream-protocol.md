@@ -1,5 +1,5 @@
 ---
-title: Standard-Datenstrom Protokoll | Microsoft-Dokumentation
+title: Standard-Data Stream-Protokoll | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2018
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - standardizing database access [ODBC], data stream protocol
 - standard data stream protocol [ODBC]
 ms.assetid: 1d234d17-2927-4c98-9fae-550c1370f829
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 996121d437ac3ad93f05b758bd44f30d3dac6151
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0e959170ea5df50786451acb6a574ea2765298af
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081851"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280209"
 ---
 # <a name="standard-data-stream-protocol"></a>Standardmäßiges Datenstromprotokoll
-Ein Standard-Datenstrom Protokoll ist eine Möglichkeit für den Zugriff auf Daten in heterogenen DBMSs. Tatsächlich ist ein Standard-Datenstrom Protokoll bereits vorhanden:
+Ein Standarddatenstromprotokoll ist eine Möglichkeit, auf Daten in heterogenen DBMS zuzugreifen. Tatsächlich ist bereits ein Standarddatenstromprotokoll vorhanden:
 
-- Der ANSI/ISO-RDA-Standard (Remote Database Access): [ISO/IEC 9579:2000](https://www.iso.org/iso/catalogue_detail.htm?csnumber=30615). Obwohl das ANSI/ISO-System eine Zusage anzeigt, ist es noch heute nicht weit verbreitet.
+- Der AnSI/ISO Remote Database Access (RDA)-Standard: [ISO/IEC 9579:2000](https://www.iso.org/iso/catalogue_detail.htm?csnumber=30615). Obwohl das ANSI/ISO-System vielversprechend ist, ist es heute nicht weit verbreitet.

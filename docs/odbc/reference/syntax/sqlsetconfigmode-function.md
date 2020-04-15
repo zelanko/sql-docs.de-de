@@ -1,5 +1,5 @@
 ---
-title: Sqlsetconfigmode-Funktion | Microsoft-Dokumentation
+title: SQLSetConfigMode-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetConfigMode function [ODBC]
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2f2bcd3fef2946e5b983c1bbdeee1efe4776512
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c36da48fa1493f61131d23a07f7a820b67ebac82
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018918"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293280"
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode-Funktion
-**Konformitäts**  
- Eingeführte Version: ODBC 3,0  
+**Konformität**  
+ Eingeführte Version: ODBC 3.0  
   
  **Zusammenfassung**  
- **Sqlsetconfigmode** legt den Konfigurations Modus fest, der angibt, wo sich der Eintrag "ODBC. ini" mit den DSN-Werten in den Systeminformationen befindet.  
+ **SQLSetConfigMode** legt den Konfigurationsmodus fest, der angibt, wo sich der Odbc.ini-Eintrag mit DSN-Werten in den Systeminformationen befindet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,8 +42,8 @@ BOOL SQLSetConfigMode(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *wconfigmode*  
- Der Der installerkonfigurationsmodus (siehe "Kommentare"). Der Wert in *wconfigmode* kann wie folgt lauten:  
+ *wConfigMode*  
+ [Eingabe] Der Installationskonfigurationsmodus (siehe "Kommentare"). Der Wert in *wConfigMode* kann wie:  
   
  ODBC_USER_DSN  
   
@@ -52,29 +52,29 @@ BOOL SQLSetConfigMode(
  ODBC_BOTH_DSN  
   
 ## <a name="returns"></a>Rückgabe  
- Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
+ Die Funktion gibt TRUE zurück, wenn sie erfolgreich ist, FALSE, wenn sie fehlschlägt.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlsetconfigmode** false zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **SQLSetConfigMode** FALSE zurückgibt, kann ein zugeordneter * \*pfErrorCode-Wert* abgerufen werden, indem **SQLInstallError**aufgerufen wird. In der folgenden Tabelle sind die * \*pfErrorCode-Werte* aufgeführt, die von **SQLInstallerError** zurückgegeben werden können, und es werden die einzelnen Werte im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pfErrorCode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_INVALID_PARAM_SEQUENCE|Ungültige Parameter Sequenz.|Das *wconfigmode* -Argument enthielt nicht ODBC_USER_DSN, ODBC_SYSTEM_DSN oder ODBC_BOTH_DSN.|  
+|ODBC_ERROR_INVALID_PARAM_SEQUENCE|Ungültige Parametersequenz|Das *wConfigMode-Argument* enthielt keine ODBC_USER_DSN, ODBC_SYSTEM_DSN oder ODBC_BOTH_DSN.|  
   
 ## <a name="comments"></a>Kommentare  
- Diese Funktion wird verwendet, um festzulegen, wo der Eintrag "ODBC. ini" mit den DSN-Werten in den Systeminformationen aufgeführt wird. Wenn *wconfigmode* ODBC_USER_DSN ist, ist der DSN ein Benutzer-DSN, und die Funktion liest aus dem Eintrag "ODBC. ini" in HKEY_CURRENT_USER. Wenn Sie ODBC_SYSTEM_DSN ist, ist der DSN ein System-DSN, und die Funktion liest aus dem Eintrag "ODBC. ini" in HKEY_LOCAL_MACHINE. Wenn Sie ODBC_BOTH_DSN, wird HKEY_CURRENT_USER versucht, und wenn Sie fehlschlägt, wird HKEY_LOCAL_MACHINE verwendet.  
+ Diese Funktion wird verwendet, um festzulegen, wo sich die DSN-Werte von Odbc.ini in den Systeminformationen befinden. Wenn *wConfigMode* ODBC_USER_DSN ist, ist der DSN ein Benutzer-DSN und die Funktion liest aus dem Odbc.ini-Eintrag in HKEY_CURRENT_USER. Wenn es ODBC_SYSTEM_DSN ist, ist der DSN ein System-DSN und die Funktion liest aus dem Odbc.ini-Eintrag in HKEY_LOCAL_MACHINE. Wenn es ODBC_BOTH_DSN ist, wird HKEY_CURRENT_USER versucht, und wenn es fehlschlägt, wird HKEY_LOCAL_MACHINE verwendet.  
   
- Diese Funktion wirkt sich nicht auf **sqlkreatedatasource** und **SQLDriverConnect**aus. Der Konfigurations Modus muss festgelegt werden, wenn ein Treiber aus der Registrierung liest, indem er **sqlgetprivateprofilestring** aufführt oder durch Aufrufen von **sqlwrite teprivateprofilestring**in die Registrierung schreibt. Aufrufe von **sqlgetprivateprofilestring** und **sqlschreiteprivateprofilestring** verwenden den Konfigurations Modus, um zu ermitteln, auf welchem Teil der Registrierung gearbeitet werden soll.  
+ Diese Funktion wirkt sich nicht auf **SQLCreateDataSource** und **SQLDriverConnect**aus. Der Konfigurationsmodus muss festgelegt werden, wenn ein Treiber aus der Registrierung liest, indem er **SQLGetPrivateProfileString** aufruft oder in die Registrierung schreibt, indem **er SQLWritePrivateProfileString**aufruft. Aufrufe von **SQLGetPrivateProfileString** und **SQLWritePrivateProfileString** verwenden den Konfigurationsmodus, um zu wissen, auf welchem Teil der Registrierung ausgeführt werden soll.  
   
 > [!CAUTION]  
->  **Sqlsetconfigmode** sollte nur bei Bedarf aufgerufen werden. Wenn der Modus nicht ordnungsgemäß festgelegt wurde, funktioniert das ODBC-Installationsprogramm möglicherweise nicht ordnungsgemäß.  
+>  **SQLSetConfigMode** sollte nur aufgerufen werden, wenn dies erforderlich ist. Wenn der Modus nicht ordnungsgemäß eingestellt ist, funktioniert der ODBC Installer möglicherweise nicht ordnungsgemäß.  
   
- **Sqlsetconfigmode** bewirkt eine direkte Registrierungs Änderung des Konfigurations Modus. Dies unterscheidet sich vom Prozess der Änderung des Konfigurations Modus durch einen **SQLConfigDataSource**-Befehl. Durch einen **SQLConfigDataSource** -Befehl wird der Konfigurations Modus so festgelegt, dass Benutzer-und System-DSNs beim Ändern eines DSN unterschieden werden. Vor der Rückgabe setzt **SQLConfigDataSource** den Konfigurations Modus auf bothdsn zurück.  
+ **SQLSetConfigMode** nimmt eine direkte Registrierungsänderung des Konfigurationsmodus vor. Dies ist abgesehen vom Prozess der Änderung des Konfigurationsmodus durch einen Aufruf von **SQLConfigDataSource**. Ein Aufruf von **SQLConfigDataSource** legt den Konfigurationsmodus fest, um Benutzer- und System-DSNs beim Ändern einer DSN zu unterscheiden. Vor der Rückkehr setzt **SQLConfigDataSource** den Konfigurationsmodus auf BOTHDSN zurück.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
 |Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Erstellen einer Datenquelle|[Sqlkreatedatasource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
-|Herstellen einer Verbindung mit einer Datenquelle über eine Verbindungs Zeichenfolge oder ein Dialogfeld|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
-|Abrufen des Konfigurations Modus|[Sqlgetconfigmode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|
+|Erstellen einer Datenquelle|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
+|Herstellen einer Verbindung mit einer Datenquelle über eine Verbindungszeichenfolge oder ein Dialogfeld|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Abrufen des Konfigurationsmodus|[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|

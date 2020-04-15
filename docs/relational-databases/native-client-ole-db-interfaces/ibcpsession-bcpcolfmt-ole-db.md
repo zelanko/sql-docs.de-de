@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0471fc5fe8d7fc8b3b55d6fec39780e60f591db9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a32000dbe2cd4a01b544bd11f6c5b282933dc013
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73765688"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307418"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,14 +70,14 @@ HRESULT BCPColFmt(
   
  Sie müssen nicht alle Daten in einer Benutzerdatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle kopieren. Um eine Spalte zu überspringen, geben Sie das Format der Daten für die Spalte an, indem Sie den idxServerCol-Parameter auf 0 festlegen. Um ein Feld zu überspringen, sind dennoch alle Informationen erforderlich, damit die Methode ordnungsgemäß funktioniert.  
   
- **Hinweis** Die [IBCPSession:: bcpschreitefmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) -Funktion kann verwendet werden, um die über **BCPColFmt**bereitgestellte Format Spezifikation beizubehalten.  
+ **Hinweis:** Mit der [IBCPSession::BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)-Funktion kann die über **BCPColFmt** zur Verfügung gestellte Formatspezifikation permanent gespeichert werden.  
   
 ## <a name="arguments"></a>Argumente  
- *idxuserdatacol*[in]  
+ *idxUserDataCol*[in]  
  Der Feldindex in der Datendatei des Benutzers  
   
  *eUserDataType*[in]  
- Der Felddatentyp in der Datendatei des Benutzers. Die verfügbaren Datentypen werden in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Headerdatei (sqlncli.h) im Format BCP_TYPE_XXX aufgeführt, z. B. BCP_TYPE_SQLINT4. Ist der BCP_TYPE_DEFAULT-Wert festgelegt, versucht der Anbieter den gleichen Typ zu verwenden wie der Tabellen- oder Sichtspaltentyp. Wenn das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eUserDataType **-Argument BCP_TYPE_SQLDECIMAL oder BCP_TYPE_SQLNUMERIC lautet, gilt für Massenkopiervorgänge aus ** in eine Datei:  
+ Der Felddatentyp in der Datendatei des Benutzers. Die verfügbaren Datentypen werden in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Headerdatei (sqlncli.h) im Format BCP_TYPE_XXX aufgeführt, z. B. BCP_TYPE_SQLINT4. Ist der BCP_TYPE_DEFAULT-Wert festgelegt, versucht der Anbieter den gleichen Typ zu verwenden wie der Tabellen- oder Sichtspaltentyp. Wenn das **eUserDataType**-Argument BCP_TYPE_SQLDECIMAL oder BCP_TYPE_SQLNUMERIC lautet, gilt für Massenkopiervorgänge aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datei:  
   
 -   Wenn die Quellspalte nicht dezimal oder numerisch ist, werden die Standardgenauigkeit und die Standardanzahl von Dezimalstellen verwendet.  
   
@@ -97,7 +97,7 @@ HRESULT BCPColFmt(
   
  Der **cbUserData** -Wert stellt die Anzahl der Datenbytes dar. Werden Zeichendaten durch Unicode-Zeichen dargestellt, repräsentiert ein positiver **cbUserData** -Parameterwert die Anzahl der Zeichen multipliziert mit der Größe (in Byte) der einzelnen Zeichen.  
   
- *pbuserdataterm*[size_is] [in]  
+ *pbUserDataTerm*[size_is] [in]  
  Die Abschlusszeichensequenz, die für das Feld verwendet werden soll. Dieser Parameter ist in erster Linie für Zeichendatentypen nützlich, da alle anderen Typen eine feste Länge besitzen oder, im Falle von Binärdaten, einen Indikator für die Länge erfordern, um die Anzahl der vorhandenen Bytes präzise zu erfassen.  
   
  Legen Sie diesen Parameter auf NULL fest, um zu vermeiden, dass extrahierte Daten terminiert werden, oder um anzugeben, dass Daten in einer Benutzerdatei nicht terminiert werden.  
@@ -117,7 +117,7 @@ HRESULT BCPColFmt(
  Die Methode wurde erfolgreich ausgeführt.  
   
  E_FAIL  
- Ein Anbieter spezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) -Schnittstelle.  
+ Ein anbieterspezifischer Fehler ist aufgetreten, um detaillierte Informationen über die [ISQLServerErrorInfo-Schnittstelle](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) zu verwenden.  
   
  E_UNEXPECTED  
  Die Methode wurde unerwartet aufgerufen. Die [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)-Methode wurde beispielsweise erst nach dem Aufruf dieser Methode aufgerufen.  

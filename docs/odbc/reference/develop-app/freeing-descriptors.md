@@ -1,5 +1,5 @@
 ---
-title: Freigeben von Deskriptoren | Microsoft-Dokumentation
+title: Freiwerden von Deskriptoren | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - freeing descriptors [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe489222c026c1499135b716f0485bb04f51bad9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: af30ceb29e032764b89aa2069086aa898a7d35db
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069769"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305601"
 ---
 # <a name="freeing-descriptors"></a>Freigeben von Deskriptoren
-Explizit zugeordnete Deskriptoren können entweder explizit freigegeben werden, indem **SQLFreeHandle** mit dem *Handlertyp* SQL_HANDLE_DESC aufgerufen wird, oder implizit, wenn das Verbindungs Handle freigegeben wird. Wenn ein explizit zugeordneter Deskriptor freigegeben wird, werden alle Anweisungs Handles, auf die der freigegebene Deskriptor angewendet wird, automatisch auf die Deskriptoren zurückgesetzt, die Ihnen implizit zugeordnet  
+Explizit zugewiesene Deskriptoren können entweder explizit freigegeben werden, indem **SQLFreeHandle** mit *HandleType* von SQL_HANDLE_DESC aufgerufen wird, oder implizit, wenn das Verbindungshandle freigegeben wird. Wenn ein explizit zugewiesener Deskriptor freigegeben wird, werden alle Anweisungshandles, auf die der angewendete freigegebene Deskriptor angewendet wurde, automatisch auf die deskriptoren zurückgesetzt, die ihnen implizit zugewiesen wurden.  
   
- Implizit zugeordnete Deskriptoren können nur durch Aufrufen von **SQLDisconnect**freigegeben werden, wodurch alle in der Verbindung geöffneten Anweisungen oder Deskriptoren gelöscht werden, oder durch Aufrufen von **SQLFreeHandle** mit dem *Handlertyp* SQL_HANDLE_STMT, um ein Anweisungs Handle und alle implizit zugeordneten Deskriptoren, die der Anweisung zugeordnet sind, freizugeben. Ein implizit zugeordneter Deskriptor kann nicht freigegeben werden, indem **SQLFreeHandle** mit dem *Typ* "SQL_HANDLE_DESC" aufgerufen wird.  
+ Implizit zugewiesene Deskriptoren können nur durch Aufrufen von **SQLDisconnect**freigegeben werden, das alle Anweisungen oder Deskriptoren löscht, die für die Verbindung geöffnet sind, oder indem **SQLFreeHandle** mit einem *HandleType* von SQL_HANDLE_STMT aufgerufen wird, um ein Anweisungshandle und alle implizit zugewiesenen Deskriptoren freizugeben, die der Anweisung zugeordnet sind. Ein implizit zugewiesener Deskriptor kann nicht durch Aufrufen von **SQLFreeHandle** mit einem *HandleType* von SQL_HANDLE_DESC freigegeben werden.  
   
- Auch wenn freigegeben, bleibt ein implizit zugeordneter Deskriptor gültig, und **SQLGetDescField** kann für seine Felder aufgerufen werden.
+ Selbst wenn diese freigegeben ist, bleibt ein implizit zugewiesener Deskriptor gültig, und **SQLGetDescField** kann für seine Felder aufgerufen werden.

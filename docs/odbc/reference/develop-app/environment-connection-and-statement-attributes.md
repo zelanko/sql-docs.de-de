@@ -1,5 +1,5 @@
 ---
-title: Umgebungs-, Verbindungs-und Anweisungs Attribute | Microsoft-Dokumentation
+title: Umgebungs-, Verbindungs- und Anweisungsattribute | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - connection attributes [ODBC]
 - statement attributes [ODBC]
 ms.assetid: 9e15b276-3b7a-428a-b72f-a3ddfe1ba1ce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4606b4345cc52d1371649449890400e01dbc5f51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 86cecaf0b82c7b6d15b3f37262507d2cff0c3c10
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114354"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300930"
 ---
 # <a name="environment-connection-and-statement-attributes"></a>Umgebungs-, Verbindungs- und Anweisungsattribute
 ODBC definiert eine Reihe von Attributen, die Umgebungen, Verbindungen oder Anweisungen zugeordnet sind.  
   
- Umgebungs Attribute wirken sich auf die gesamte Umgebung aus, z. b., ob Verbindungspooling aktiviert ist. Umgebungs Attribute werden mit **SQLSetEnvAttr** festgelegt und mit **SQLGetEnvAttr**abgerufen.  
+ Umgebungsattribute wirken sich auf die gesamte Umgebung aus, z. B. ob das Verbindungspooling aktiviert ist. Umgebungsattribute werden mit **SQLSetEnvAttr** festgelegt und mit **SQLGetEnvAttr**abgerufen.  
   
- Verbindungs Attribute wirken sich einzeln auf jede Verbindung aus, z. b. wie lange ein Treiber beim Herstellen einer Verbindung mit einer Datenquelle warten soll, bevor ein Timeout eintritt. Verbindungs Attribute werden mit **SQLSetConnectAttr** festgelegt und mit **SQLGetConnectAttr**abgerufen. Weitere Informationen zu Verbindungs Attributen finden Sie unter [Verbindungs Attribute](../../../odbc/reference/develop-app/connection-attributes.md).  
+ Verbindungsattribute wirken sich individuell auf jede Verbindung aus, z. B. wie lange ein Treiber warten soll, während er versucht, eine Verbindung mit einer Datenquelle herzustellen, bevor ein Timeout durchgeführt wird. Verbindungsattribute werden mit **SQLSetConnectAttr** festgelegt und mit **SQLGetConnectAttr**abgerufen. Weitere Informationen zu Verbindungsattributen finden Sie unter [Verbindungsattribute](../../../odbc/reference/develop-app/connection-attributes.md).  
   
- Anweisungs Attribute wirken sich einzeln auf jede Anweisung aus, z. b. ob eine Anweisung asynchron ausgeführt werden soll. Anweisungs Attribute werden mit **SQLSetStmtAttr** festgelegt und mit **SQLGetStmtAttr**abgerufen. Einige Anweisungs Attribute sind schreibgeschützte Attribute und können nicht festgelegt werden. Beispielsweise ist das SQL_ATTR_ROW_NUMBER Anweisungs Attribut, das verwendet wird, um die Nummer der aktuellen Zeile im Cursor abzurufen, schreibgeschützt. Weitere Informationen zu Anweisungs Attributen finden Sie unter [Anweisungs Attribute](../../../odbc/reference/develop-app/statement-attributes.md).  
+ Anweisungsattribute wirken sich individuell auf jede Anweisung aus, z. B. ob eine Anweisung asynchron ausgeführt werden soll. Anweisungsattribute werden mit **SQLSetStmtAttr** festgelegt und mit **SQLGetStmtAttr**abgerufen. Einige Anweisungsattribute sind schreibgeschützte Attribute und können nicht festgelegt werden. Beispielsweise ist das attribut SQL_ATTR_ROW_NUMBER Anweisung, das zum Abrufen der Nummer der aktuellen Zeile im Cursor verwendet wird, schreibgeschützt. Weitere Informationen zu Anweisungsattributen finden Sie unter [Anweisungsattribute](../../../odbc/reference/develop-app/statement-attributes.md).  
   
- Zusätzlich zu den Attributen, die von ODBC definiert werden, kann ein Treiber seine eigenen Verbindungs-und Anweisungs Attribute definieren. Treiber definierte Attribute müssen bei einer offenen Gruppe registriert werden, um sicherzustellen, dass zwei Treiber Hersteller nicht denselben ganzzahligen Wert anderen, proprietären Attributen zuweisen. Weitere Informationen finden Sie unter [Treiber spezifische Datentypen, deskriptortypen, Informationstypen, Diagnose Typen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
+ Zusätzlich zu den von ODBC definierten Attributen kann ein Treiber seine eigenen Verbindungs- und Anweisungsattribute definieren. Treiberdefinierte Attribute müssen bei Open Group registriert werden, um sicherzustellen, dass zwei Treiberanbieter unterschiedlichen, proprietären Attributen nicht denselben Ganzzahlwert zuweisen. Weitere Informationen finden Sie unter [Treiberspezifische Datentypen, Deskriptortypen, Informationstypen, Diagnosetypen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
- Eine umfassende Liste der Attribute finden Sie unter [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)und [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md). Die meisten Attribute werden auch in der Beschreibung der ODBC-Funktion beschrieben, die Sie betreffen.
+ Eine vollständige Liste der Attribute finden Sie unter [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)und [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md). Die meisten Attribute werden auch in der Beschreibung der ODBC-Funktion beschrieben, die sie beeinflussen.

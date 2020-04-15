@@ -1,5 +1,5 @@
 ---
-title: SQL-92-Konformität | Microsoft-Dokumentation
+title: SQL-92-Konformität | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,35 +13,35 @@ helpviewer_keywords:
 - SQL-92 compliance [ODBC]
 - ODBC desktop database drivers [ODBC], SQL-92 compliance
 ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5d8ed2818b466d16591be8b70478221d7ac84df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ac0ae5873e545afb8fcac9dd003c984b1ed303a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063368"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300700"
 ---
 # <a name="sql-92-compliance"></a>SQL-92-Konformität
-Die ODBC Desktop-Datenbanktreiber und die zugrunde liegende Microsoft Jet-Engine sind nicht SQL-92-kompatibel. Sie unterstützen viele Features, die in SQL-92 definiert wurden. Einige Features, die im Treiber unterstützt werden, werden in SQL-92 nicht unterstützt. Weitere Informationen finden Sie im *Microsoft Jet Datenbank-Engine Programmer es Guide*. Im folgenden sind die Hauptunterschiede zwischen den beiden aufgeführt:  
+Die ODBC-Desktopdatenbanktreiber und das zugrunde liegende Microsoft Jet-Modul sind nicht SQL-92-kompatibel. Sie unterstützen viele Funktionen, die in SQL-92 definiert wurden. Einige im Treiber unterstützte Funktionen werden in SQL-92 nicht unterstützt. Weitere Informationen finden Sie im *Microsoft Jet Database Engine Programmer es Guide*. Im Folgenden sind die hauptwichtigsten Unterschiede zwischen den beiden:  
   
--   Die SQL-Daten, die von den Desktop-Daten Bank Treibern verwendet werden, unterstützen leistungsfähigere Ausdrücke als die von SQL-92.  
+-   Die von den Desktopdatenbanktreibern verwendete SQL unterstützt leistungsfähigere Ausdrücke als die von SQL-92 angegebenen.  
   
--   Für das between-Prädikat gelten verschiedene Regeln.  
+-   Für das Prädikat ZWISCHEN gelten andere Regeln.  
   
--   Der von den Desktop-Daten Bank Treibern und ANSI SQL verwendete SQL unterstützt verschiedene Schlüsselwörter.  
+-   Die von den Desktopdatenbanktreibern und ANSI SQL verwendete SQL unterstützt verschiedene Schlüsselwörter.  
   
- Die folgenden SQL-92-Features werden von Microsoft Jet SQL nicht unterstützt:  
+ Die folgenden SQL-92-Funktionen werden von Microsoft Jet SQL nicht unterstützt:  
   
--   Sicherheitsanweisungen, z. b. Grant und Lock.  
+-   Sicherheitsanweisungen, z. B. GRANT und LOCK.  
   
--   Unterschieden mit Aggregat Funktions verweisen.  
+-   DISTINCT mit aggregierten Funktionsreferenzen.  
   
- Die folgenden Features sind Erweiterungen in SQL, die von den Desktop-Daten Bank Treibern verwendet werden, die nicht von SQL-92 angegeben werden:  
+ Die folgenden Features sind Verbesserungen in SQL, die von den Desktopdatenbanktreibern verwendet werden und nicht von SQL-92 angegeben werden:  
   
--   Die Transform-Anweisung, die Unterstützung für Kreuz Tabellen Abfragen bereitstellt.  
+-   Die TRANSFORM-Anweisung, die Unterstützung für Kreuztabellenabfragen bereitstellt.  
   
 -   Zusätzliche Aggregatfunktionen (**StDev** und **VarP**).  
   
 > [!NOTE]  
->  Die Desktop-Datenbanktreiber unterstützen die Standard-ANSI-Syntax für% (Prozent) und _ (Unterstrich), nicht * (Sternchen) und? (Fragezeichen).
+>  Die Desktopdatenbanktreiber unterstützen die standardmäßige ANSI-Syntax für % (Prozent) und _ (Unterstrich), nicht * (Sternchen) und ? (Fragezeichen).

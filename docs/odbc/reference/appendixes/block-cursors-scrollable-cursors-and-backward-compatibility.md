@@ -1,5 +1,5 @@
 ---
-title: Block Cursor, scrollbare Cursor und Abwärtskompatibilität | Microsoft-Dokumentation
+title: Blockieren von Cursorn, scrollbaren Cursorn und Abwärtskompatibilität | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursors
 - block cursors [ODBC]
 ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 433647481b2b73c22e00657c430d98177d3d4524
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe24362f1a49577a7fb494f768947080d0ab6e9e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125219"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292310"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Blockcursor, scrollbarer Cursor und Abwärtskompatibilität
-Das vorhanden sein von **SQLFetchScroll** und **SQLExtendedFetch** stellt die erste Clear-Teilung in ODBC zwischen der Anwendungsprogrammierschnittstelle (Application Programming Interface, API) dar. dabei handelt es sich um den Satz von Funktionen, den die Anwendung aufruft, und um die Service Provider Interface (SPI), die den Satz von Funktionen darstellt, den der Treiber implementiert. Diese Aufteilung ist erforderlich, damit ODBC *3. x*, das **SQLFetchScroll**verwendet, mit den Standards abgeglichen wird und auch mit ODBC *2. x*kompatibel ist, das **sqlextendecodfetch**verwendet.  
+Das Vorhandensein von **SQLFetchScroll** und **SQLExtendedFetch** stellt die erste klare Aufteilung in ODBC zwischen der APPLICATION Programming Interface (API), dem Satz von Funktionen, die die Anwendung aufruft, und der Dienstanbieterschnittstelle (Service Provider Interface, SPI), dem Satz von Funktionen, die der Treiber implementiert, dar. Diese Aufteilung ist notwendig, damit ODBC *3.x*, das **SQLFetchScroll**verwendet, mit den Standards ausgerichtet ist und auch mit ODBC *2.x*kompatibel ist, das **SQLExtendedFetch**verwendet.  
   
- Die ODBC *3. x* -API, d. h. der Satz von Funktionen, die die Anwendung aufruft, umfasst **SQLFetchScroll** und verwandte Anweisungs Attribute. Der ODBC *3. x* SPI, d. h. der Satz von Funktionen, den der Treiber implementiert, umfasst **SQLFetchScroll**, **SQLExtendedFetch**und verwandte Anweisungs Attribute. Da ODBC diese Aufteilung zwischen der API und der SPI nicht formal erzwingt, ist es möglich, dass ODBC *3. x* -Anwendungen **sqlextenentdfetch** und verwandte Anweisungs Attribute aufruft. Hierfür gibt es jedoch keinen Grund für die ODBC *3. x* -Anwendung. Weitere Informationen zu APIs und SPIs finden Sie unter Einführung in die [ODBC-Architektur](../../../odbc/reference/odbc-architecture.md).  
+ Die ODBC *3.x-API,* die den Satz von Funktionen ist, die die Anwendung aufruft, enthält **SQLFetchScroll** und zugehörige Anweisungsattribute. Der ODBC *3.x* SPI, der Satz von Funktionen, die der Treiber implementiert, enthält **SQLFetchScroll**, **SQLExtendedFetch**und zugehörige Anweisungsattribute. Da ODBC diese Aufteilung zwischen api und SPI formal nicht erzwingt, ist es für ODBC *3.x-Anwendungen* möglich, **SQLExtendedFetch** und zugehörige Anweisungsattribute aufzurufen. Es gibt jedoch keinen Grund für ODBC *3.x-Anwendung,* dies zu tun. Weitere Informationen zu APIs und SPIs finden Sie in der Einführung in [ODBC Architecture](../../../odbc/reference/odbc-architecture.md).  
   
- Informationen zu den Funktionen und Anweisungs Attributen, die eine ODBC *3. x* -Anwendung mit Block-und Bild lauffähigen Cursorn verwenden soll, finden Sie unter [Blockcursor, scrollfähige Cursor und Abwärtskompatibilität für ODBC 3. x-Anwendungen](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
+ Informationen darüber, welche Funktionen und Anweisungsattribute eine ODBC *3.x-Anwendung* mit Block- und Scrollable-Cursor verwenden sollte, finden Sie unter [Blockcursor, Scrollable Cursors und Backward Compatibility for ODBC 3.x Applications](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
--   [Funktionen des Treiber-Managers](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)  
+-   [What the Driver Manager Does (Was der Treibermanager tut)](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)  
   
--   [Funktionen des Treibers](../../../odbc/reference/appendixes/what-the-driver-does.md)
+-   [What the Driver Does (Was der Treiber tut)](../../../odbc/reference/appendixes/what-the-driver-does.md)

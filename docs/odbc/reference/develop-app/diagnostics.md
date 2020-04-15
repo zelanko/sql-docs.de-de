@@ -1,5 +1,5 @@
 ---
-title: Diagnose | Microsoft-Dokumentation
+title: Diagnose | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - functions [ODBC], diagnostic information
 - diagnostic information [ODBC], about diagnostic information
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd6640c0dc06d9e957176717ef26aa3e444ffa9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a09f46d3fd6aa2f9b9c7310af6d3ddc90f78389f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68022520"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305151"
 ---
 # <a name="diagnostics"></a>Diagnose
-Funktionen in ODBC geben Diagnoseinformationen auf zwei Arten zurück. Der Rückgabecode gibt den allgemeinen Erfolg oder Misserfolg der Funktion an, während Diagnosedaten Sätze ausführliche Informationen über die Funktion bereitstellen. Mindestens ein Diagnosedaten Satz-der Header Daten Satz-wird zurückgegeben, auch wenn die Funktion erfolgreich ausgeführt wurde.  
+Funktionen in ODBC geben Diagnoseinformationen auf zwei Arten zurück. Der Rückgabecode gibt den Gesamterfolg oder Misserfolg der Funktion an, während Diagnosedatensätze detaillierte Informationen über die Funktion bereitstellen. Mindestens ein Diagnosedatensatz - der Headerdatensatz - wird zurückgegeben, auch wenn die Funktion erfolgreich ist.  
   
- Diagnoseinformationen werden zur Entwicklungszeit zum Erfassen von Programmierfehlern verwendet, z. b. ungültige Handles und Syntax Fehler in hart codierten SQL-Anweisungen. Sie wird zur Laufzeit verwendet, um Laufzeitfehler und-Warnungen wie das Abschneiden von Daten, Zugriffs Verletzungen und Syntax Fehler in SQL-Anweisungen abzufangen, die vom Benutzer eingegeben wurden.  
+ Diagnoseinformationen werden zur Entwicklungszeit verwendet, um Programmierfehler wie ungültige Handles und Syntaxfehler in hartcodierten SQL-Anweisungen abzufangen. Es wird zur Laufzeit verwendet, um Laufzeitfehler und Warnungen wie Datenkürzungen, Zugriffsverletzungen und Syntaxfehler in SQL-Anweisungen abzufangen, die vom Benutzer eingegeben wurden.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Rückgabecodes](../../../odbc/reference/develop-app/return-codes-odbc.md)  
   

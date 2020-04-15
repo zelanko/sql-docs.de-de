@@ -1,5 +1,5 @@
 ---
-title: Vorbereiten und Ausführen einer Anweisung (ODBC) | Microsoft-Dokumentation
+title: Vorbereiten und Ausführen einer Anweisung (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - statement execution
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eaf7e3518f369639ba3d2eb854a103ff839276c7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781385"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294062"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Vorbereiten und Ausführen von Anweisungen (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,21 +27,21 @@ ms.locfileid: "73781385"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>So bereiten Sie eine Anweisung vor und führen sie dann mehrmals aus  
   
-1.  Ruft die [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360) auf, um die Anweisung vorzubereiten.  
+1.  Rufen Sie [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) auf, um die Anweisung vorzubereiten.  
   
-2.  Optional können Sie [sqlnumparser](https://go.microsoft.com/fwlink/?LinkId=58404) zum Ermitteln der Anzahl der Parameter in der vorbereiteten Anweisung aufzurufen.  
+2.  Rufen Sie optional [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) auf, um die Anzahl der Parameter in der vorbereiteten Anweisung zu bestimmen.  
   
 3.  Optional führen Sie für jeden Parameter in der vorbereiteten Anweisung Folgendes aus:  
   
-    -   Aufrufen von [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) zum Abrufen von Parameterinformationen.  
+    -   Rufen Sie [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) auf, um Parameterinformationen abzurufen.  
   
-    -   Binden Sie jeden Parameter mithilfe von [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)an eine Programm Variable. Richten Sie alle Data-at-Execution-Parameter ein.  
+    -   Binden Sie jeden Parameter mithilfe von [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)an eine Programmvariable. Richten Sie alle Data-at-Execution-Parameter ein.  
   
 4.  Für jede Ausführung einer vorbereiteten Anweisung gilt:  
   
     -   Wenn die Anweisung über Parametermarkierungen verfügt, fügen Sie die Datenwerte in den gebundenen Parameterpuffer ein.  
   
-    -   Ruft [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) auf, um die vorbereitete Anweisung auszuführen.  
+    -   Rufen Sie [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) auf, um die vorbereitete Anweisung auszuführen.  
   
     -   Wenn Data-at-Execution-Eingabeparameter verwendet werden, gibt [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) SQL_NEED_DATA zurück. Senden Sie die Daten in Blöcken mithilfe von [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) und [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
@@ -57,11 +57,11 @@ ms.locfileid: "73781385"
   
     -   Legen Sie das SQL_ATTR_PARAMS_STATUS_PTR-Attribut fest, sodass es auf ein Array mit S SQLUSSMALLINT-Variablen zeigt, welche die Parameterstatusindikatoren enthalten.  
   
-2.  Erstellen Sie SQLPrepare, um die Anweisung vorzubereiten.  
+2.  Rufen Sie SQLPrepare auf, um die Anweisung vorzubereiten.  
   
-3.  Optional können Sie [sqlnumparser](https://go.microsoft.com/fwlink/?LinkId=58404) zum Ermitteln der Anzahl der Parameter in der vorbereiteten Anweisung aufzurufen.  
+3.  Rufen Sie optional [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) auf, um die Anzahl der Parameter in der vorbereiteten Anweisung zu bestimmen.  
   
-4.  Optional können Sie für jeden Parameter in der vorbereiteten Anweisung SQLDescribeParam aufrufen, um Parameterinformationen abzurufen.  
+4.  Optional rufen Sie für jeden Parameter in der vorbereiteten Anweisung SQLDescribeParam auf, um Parameterinformationen abzurufen.  
   
 5.  Führen Sie folgende Aktionen für jeden Parametermarker durch:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73781385"
   
     -   Weisen Sie ein Array mit S-Parameterpuffern zu, um Datenlängen zu speichern.  
   
-    -   Aufrufen von SQLBindParameter, um die Parameter Datenwert-und Daten Längen Arrays an den Anweisungs Parameter zu binden.  
+    -   Rufen Sie SQLBindParameter auf, um die Parameterdatenwert- und Datenlängenarrays an den Anweisungsparameter zu binden.  
   
     -   Falls der Parameter ein Data-at-Execution-Textparameter oder –Imageparameter ist, richten Sie ihn ein.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "73781385"
   
     -   Legen Sie das SQL_ATTR_PARAMS_STATUS_PTR-Attribut fest, sodass es auf ein Array mit S SQLUSSMALLINT-Variablen zeigt, welche die Parameterstatusindikatoren enthalten.  
   
-3.  Erstellen Sie SQLPrepare, um die Anweisung vorzubereiten.  
+3.  Rufen Sie SQLPrepare auf, um die Anweisung vorzubereiten.  
   
-4.  Aufrufen Sie für jede Parameter Markierung SQLBindParameter, um den Parameter Datenwert und den Daten Längen Zeiger auf die Variablen im ersten Element des Arrays mit Strukturen zu verweisen, die in Schritt 1 zugewiesen wurden. Falls der Parameter ein Data-at-Execution-Parameter ist, richten Sie ihn ein.  
+4.  Rufen Sie für jede Parametermarkierung SQLBindParameter auf, um den Parameterdatenwert und den Datenlängenzeiger auf ihre Variablen im ersten Element des In Schritt 1 zugeordneten Strukturarrays zu verweisen. Falls der Parameter ein Data-at-Execution-Parameter ist, richten Sie ihn ein.  
   
 5.  Für jede Ausführung einer vorbereiteten Anweisung gilt:  
   
@@ -114,6 +114,6 @@ ms.locfileid: "73781385"
     -   Wenn Data-at-Execution-Eingabeparameter verwendet werden, gibt SQLExecute SQL_NEED_DATA zurück. Senden Sie die Daten in Blöcken mithilfe von SQLParamData und SQLPutData.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gewusst-wie-Themen zum Ausführen von Abfragen &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Ausführen von Abfragen How-to-Topics &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

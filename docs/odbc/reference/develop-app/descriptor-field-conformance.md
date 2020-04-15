@@ -1,5 +1,5 @@
 ---
-title: Deskriptorfeld Konformität | Microsoft-Dokumentation
+title: Deskriptor-Feldkonformität | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,45 +13,45 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: afdb1f18ad641224d13373436dd58f1919a3d280
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cce33adfdbfceef56936b22c549b6762521b4798
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952345"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305931"
 ---
 # <a name="descriptor-field-conformance"></a>Deskriptorfeldübereinstimmung
-In der folgenden Tabelle ist die Übereinstimmungs Stufe der einzelnen ODBC-deskriptorheader Felder angegeben, in denen diese ordnungsgemäß definiert ist.  
+Die folgende Tabelle gibt die Konformitätsstufe jedes ODBC-Deskriptorheaderfelds an, wobei dies genau definiert ist.  
   
 |Funktion|Übereinstimmungsebene|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|Core|  
 |SQL_DESC_ARRAY_SIZE|Core|  
-|SQL_DESC_ARRAY_STATUS_PTR|Core (für APD, IPR und IRD); Ebene 1 (für die ARD)|  
+|SQL_DESC_ARRAY_STATUS_PTR|Kern (für APD, IPR und IRD); Stufe 1 (für ARD)|  
 |SQL_DESC_BIND_OFFSET_PTR|Core|  
 |SQL_DESC_BIND_TYPE|Core|  
 |SQL_DESC_COUNT|Core|  
 |SQL_DESC_ROWS_PROCESSED_PTR|Core|  
   
- In der folgenden Tabelle ist die Übereinstimmungs Stufe der einzelnen ODBC-Deskriptordatensatz-Felder angegeben, in denen diese klar definiert ist.  
+ Die folgende Tabelle gibt die Konformitätsstufe jedes ODBC-Deskriptordatensatzfelds an, wobei dies genau definiert ist.  
   
 |Funktion|Übereinstimmungsebene|  
 |--------------|-----------------------|  
-|SQL_DESC_AUTO_UNIQUE_VALUE|Ebene 2|  
+|SQL_DESC_AUTO_UNIQUE_VALUE|Ebene 2|  
 |SQL_DESC_BASE_COLUMN_NAME|Core|  
 |SQL_DESC_BASE_TABLE_NAME|Ebene 1|  
 |SQL_DESC_CASE_SENSITIVE|Core|  
-|SQL_DESC_CATALOG_NAME|Ebene 2|  
+|SQL_DESC_CATALOG_NAME|Ebene 2|  
 |SQL_DESC_CONCISE_TYPE|Core|  
 |SQL_DESC_DATA_PTR|Core|  
-|SQL_DESC_DATETIME_INTERVAL_-Code|Kern [1]|  
-|SQL_DESC_DATETIME_INTERVAL_ Genauigkeit|Kern [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ CODE|Kern[1]|  
+|SQL_DESC_DATETIME_INTERVAL_ PRECISION|Kern[1]|  
 |SQL_DESC_DISPLAY_SIZE|Core|  
 |SQL_DESC_FIXED_PREC_SCALE|Core|  
 |SQL_DESC_INDICATOR_PTR|Core|  
-|SQL_DESC_LABEL|Ebene 2|  
+|SQL_DESC_LABEL|Ebene 2|  
 |SQL_DESC_LENGTH|Core|  
 |SQL_DESC_LITERAL_PREFIX|Core|  
 |SQL_DESC_LITERAL_SUFFIX|Core|  
@@ -60,7 +60,7 @@ In der folgenden Tabelle ist die Übereinstimmungs Stufe der einzelnen ODBC-desk
 |SQL_DESC_NULLABLE|Core|  
 |SQL_DESC_OCTET_LENGTH|Core|  
 |SQL_DESC_OCTET_LENGTH_PTR|Core|  
-|SQL_DESC_PARAMETER_TYPE|Kern/Ebene 2 [2]|  
+|SQL_DESC_PARAMETER_TYPE|Kern/Stufe 2[2]|  
 |SQL_DESC_PRECISION|Core|  
 |SQL_DESC_ROWVER|Ebene 1|  
 |SQL_DESC_SCALE|Core|  
@@ -73,6 +73,6 @@ In der folgenden Tabelle ist die Übereinstimmungs Stufe der einzelnen ODBC-desk
 |SQL_DESC_UNSIGNED|Core|  
 |SQL_DESC_UPDATABLE|Core|  
   
- [1] die Unterstützung für diese Daten Satz Felder ist nur erforderlich, wenn der Treiber die anwendbaren Datentypen unterstützt.  
+ [1] Unterstützung für diese Datensatzfelder ist nur erforderlich, wenn der Treiber die entsprechenden Datentypen unterstützt.  
   
- [2] für die Konformität auf Kern Ebene muss der Treiber SQL_PARAM_INPUT unterstützen. Bei der Schnittstellen Konformität der Ebene 2 muss der Treiber auch SQL_PARAM_INPUT_OUTPUT und SQL_PARAM_OUTPUT unterstützen.
+ [2] Für die Übereinstimmung auf Core-Ebene muss der Treiber SQL_PARAM_INPUT unterstützen. Für die Level 2-Schnittstellenkonformität muss der Treiber auch SQL_PARAM_INPUT_OUTPUT und SQL_PARAM_OUTPUT unterstützen.
