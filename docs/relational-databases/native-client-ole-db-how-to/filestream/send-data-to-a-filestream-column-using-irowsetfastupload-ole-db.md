@@ -1,5 +1,5 @@
 ---
-title: Daten FileStream, IRowsetFastUpload (OLE DB)
+title: DatenFILESTREAM, IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 545190d2852d617fa7d73f4aaf464d15b7f1327b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d298d9c4677d6b50ad0234a85e3d51b4bb8478ae
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225954"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295628"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Senden von Daten an eine FILESTREAM-Spalte mithilfe von IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Dieses Beispiel verwendet die IRowsetFastUpload-Schnittstelle, um zwischen 4 MB und 4 GB Daten an eine FILESTREAM-Spalte zu senden.  
   
- Weitere Informationen zur FILESTREAM-Funktion finden Sie [unter FILESTREAM-Unterstützung &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Weitere Informationen zur Dateistream-Funktion finden Sie unter [FILESTREAM-Unterstützung &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Beispiel  
- Bevor Sie dieses Beispiel kompilieren und ausführen, aktivieren Sie die FILESTREAM-Unterstützung ([aktivieren und Konfigurieren von FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Aktivieren Sie die FILESTREAM-Unterstützung, bevor Sie dieses Beispiel kompilieren und ausführen ([Aktivieren und Konfigurieren von FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   

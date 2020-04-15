@@ -1,5 +1,5 @@
 ---
-title: Konformitäts Ebenen | Microsoft-Dokumentation
+title: Konformitätsstufen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - conformance levels [ODBC]
 - conformance levels [ODBC], about conformance levels
 ms.assetid: f776d467-5d5d-4761-9043-3dad5f73c610
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 507d23e6f7a344e9d3fe4a17cf34903235803426
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7c986cb6ce407a44798869c722b9b62dc8b1052d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083168"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299090"
 ---
 # <a name="conformance-levels"></a>Übereinstimmungsebenen
-ODBC-Treiber erhalten der Anwendung Zugriff auf verschiedene Datenquellen. Mit jedem Treiber kann die Anwendung zur Laufzeit bestimmen, welche ODBC-Funktionen und welche SQL-Grammatik der Treiber und die einzelnen Datenquellen unterstützen. Dies ist keine Voraussetzung für Anwendungen, die für die Arbeit mit einem einzelnen Treiber oder einem kleinen, bekannten Satz von Treibern entwickelt wurden, da diese Anwendungen einfach in die Funktionen dieses Treibers oder der Treiber geschrieben werden können. Damit Anwendungen Treiber-und Datenquellen Funktionen entdecken können, sind zwei Bereiche der Konformität verfügbar: die ODBC-Schnittstelle und die SQL-Grammatik.  
+ODBC-Treiber gewähren der Anwendung Zugriff auf verschiedene Datenquellen. Mit jedem Treiber kann die Anwendung zur Laufzeit bestimmen, welche ODBC-Funktionen und welche SQL-Grammatik der Treiber und jede Datenquelle unterstützt. Dies ist keine Anforderung von Anwendungen, die für die Arbeit mit einem einzelnen Treiber oder einem kleinen, bekannten Satz von Treibern entwickelt wurden, da diese Anwendungen einfach auf die Funktionen dieses oder dieser Treiber geschrieben werden können. Damit Anwendungen Treiber- und Datenquellenfunktionen ermitteln können, stehen zwei Konformitätsbereiche zur Verfügung: die ODBC-Schnittstelle und die SQL-Grammatik.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Ebenen der Schnittstellenübereinstimmung](../../../odbc/reference/develop-app/interface-conformance-levels.md)  
   

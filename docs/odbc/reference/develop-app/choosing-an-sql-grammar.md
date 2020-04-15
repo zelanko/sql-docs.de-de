@@ -1,5 +1,5 @@
 ---
-title: Auswählen einer SQL-Grammatik | Microsoft-Dokumentation
+title: Auswählen einer SQL-Grammatik | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], SQL grammar
 - SQL grammar [ODBC], selecting
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f7bf7e77f892f10de17402b59e732523d58fbc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2ca9911d3c88f2f540ff1332d77a2e1ebc6a4942
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036549"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299160"
 ---
 # <a name="choosing-an-sql-grammar"></a>Auswählen einer SQL-Grammatik
-Die erste Entscheidung, die Sie beim Erstellen von SQL-Anweisungen treffen müssen, ist die zu verwendende Grammatik. Zusätzlich zu den Grammatiken, die in den verschiedenen Standard Textteilen verfügbar sind, wie z. b. Open Group, ANSI und ISO, definiert praktisch jeder DBMS-Anbieter seine eigene Grammatik, die jeweils leicht vom Standard abweicht.  
+Die erste Entscheidung, die beim Erstellen von SQL-Anweisungen getroffen werden soll, ist die grammatikalische Grammatik, die verwendet werden soll. Zusätzlich zu den Grammatiken, die von den verschiedenen Normungsgremien wie Open Group, ANSI und ISO zur Verfügung stehen, definiert praktisch jeder DBMS-Anbieter seine eigene Grammatik, die jeweils geringfügig vom Standard abgeht.  
   
- [Anhang C: SQL-Grammatik:](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)beschreibt die minimale SQL-Grammatik, die alle ODBC-Treiber unterstützen müssen. Diese Grammatik ist eine Teilmenge der Einstiegsebene von SQL-92. Treiber können zusätzliche Grammatik unterstützen, um den von SQL-92 definierten Übergangs Ebenen zwischen, vollständig 127-2 oder von der durch SQL-definierten Übergangs Ebene zu entsprechen. Weitere Informationen finden Sie unter [minimale SQL-Grammatik](../../../odbc/reference/appendixes/sql-minimum-grammar.md) in Anhang C: SQL-Grammatik und SQL-92.  
+ [Anhang C: SQL Grammar](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)beschreibt die minimale SQL-Grammatik, die alle ODBC-Treiber unterstützen müssen. Diese Grammatik ist eine Teilmenge der Einstiegsebene von SQL-92. Treiber können zusätzliche Grammatik unterstützen, um den von SQL-92 definierten Zwischen-, Voll- oder FIPS 127-2-Übergangsstufen zu entsprechen. Weitere Informationen finden Sie unter SQL Minimum Grammar in Anhang C: SQL Grammar und SQL-92.For more information, see [SQL Minimum Grammar](../../../odbc/reference/appendixes/sql-minimum-grammar.md) in Appendix C: SQL Grammar, and SQL-92.  
   
- Anhang *C definiert auch* Escapesequenzen, die eine Standard Grammatik für häufig verfügbare sprach Features wie äußere Joins enthalten, die nicht von der SQL-92-Grammatik abgedeckt werden. Weitere Informationen finden Sie unter [ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) -Escapesequenzen in Anhang C: SQL [](../../../odbc/reference/develop-app/escape-sequences.md)-Grammatik und Escapesequenzen weiter unten in diesem Abschnitt.  
+ Anhang C definiert auch *Escapesequenzen,* die Standardgrammatik für allgemein verfügbare Sprachfeatures enthalten, z. B. äußere Verknüpfungen, die nicht von der SQL-92-Grammatik abgedeckt werden. Weitere Informationen finden Sie weiter unten in diesem Abschnitt unter [ODBC Escape Sequences](../../../odbc/reference/appendixes/odbc-escape-sequences.md) in Anhang C: SQL Grammar und [Escape Sequences](../../../odbc/reference/develop-app/escape-sequences.md).  
   
- Die gewählte Grammatik wirkt sich darauf aus, wie der Treiber die Anweisung verarbeitet. Treiber müssen SQL-92 SQL und die ODBC-definierten Escapesequenzen in DBMS-spezifische SQL-Informationen ändern. Da die meisten SQL-Grammatiken auf einem oder mehreren der verschiedenen Standards basieren, führen die meisten Treiber nur wenig oder gar keine Arbeit aus, um diese Anforderung zu erfüllen. Sie besteht häufig nur aus der Suche nach den von ODBC definierten Escapesequenzen und der Ersetzung durch die DBMS-spezifische Grammatik. Wenn ein Treiber auf eine Grammatik stößt, wird davon ausgegangen, dass die Grammatik DBMS-spezifisch ist, und die SQL-Anweisung ohne Änderung an die Datenquelle zur Ausführung übergibt.  
+ Die ausgewählte Grammatik wirkt sich darauf aus, wie der Treiber die Anweisung verarbeitet. Treiber müssen SQL-92 SQL und die ODBC-definierten Escapesequenzen in DBMS-spezifischeSQL ändern. Da die meisten SQL-Grammatiken auf einem oder mehreren der verschiedenen Standards basieren, leisten die meisten Treiber wenig oder gar keine Arbeit, um diese Anforderung zu erfüllen. Es besteht oft nur darin, nach den von ODBC definierten Escapesequenzen zu suchen und sie durch DBMS-spezifische Grammatik zu ersetzen. Wenn ein Treiber auf Grammatik stößt, die er nicht erkennt, geht er davon aus, dass die Grammatik DBMS-spezifisch ist, und übergibt die SQL-Anweisung ohne Änderung an die Datenquelle für die Ausführung.  
   
- Daher gibt es wirklich zwei Optionen für die Grammatik: die SQL-92-Grammatik (und die ODBC-Escapesequenzen) und eine DBMS-spezifische Grammatik. Von den beiden ist nur die SQL-92-Grammatik interoperabel, sodass alle interoperablen Anwendungen Sie verwenden sollten. Anwendungen, die nicht interoperabel sind, können die SQL-92-Grammatik oder eine DBMS-spezifische Grammatik verwenden. DBMS-spezifische Grammatiken haben zwei Vorteile: Sie können alle Features ausnutzen, die nicht von SQL-92 abgedeckt werden, und Sie sind geringfügig schneller, da Sie vom Treiber nicht geändert werden müssen. Diese Funktion kann teilweise durch Festlegen des Attributs SQL_ATTR_NOSCAN Anweisung erzwungen werden, das den Treiber daran hindert, Escapesequenzen zu suchen und zu ersetzen.  
+ Daher gibt es wirklich zwei Möglichkeiten der Grammatik zu verwenden: die SQL-92-Grammatik (und die ODBC-Escape-Sequenzen) und eine DBMS-spezifische Grammatik. Von den beiden ist nur die SQL-92-Grammatik interoperabel, daher sollten alle interoperablen Anwendungen sie verwenden. Anwendungen, die nicht interoperabel sind, können die SQL-92-Grammatik oder eine DBMS-spezifische Grammatik verwenden. DBMS-spezifische Grammatiken haben zwei Vorteile: Sie können alle Features ausnutzen, die nicht von SQL-92 abgedeckt sind, und sie sind geringfügig schneller, da der Treiber sie nicht ändern muss. Das letztgenannte Feature kann teilweise erzwungen werden, indem das SQL_ATTR_NOSCAN Anweisungsattribut gesetzt wird, wodurch der Treiber die Suche nach Escapesequenzen verhindert und ersetzt.  
   
- Wenn die SQL-92-Grammatik verwendet wird, kann die Anwendung ermitteln, wie Sie vom Treiber durch Aufrufen von **SQLNativeSql**geändert wird. Dies ist beim Debuggen von Anwendungen häufig nützlich. **SQLNativeSql** akzeptiert eine SQL-Anweisung und gibt Sie zurück, nachdem der Treiber Sie geändert hat. Da diese Funktion den Übereinstimmungs Grad der Kernschnittstelle hat, wird Sie von allen Treibern unterstützt.
+ Wenn die SQL-92-Grammatik verwendet wird, kann die Anwendung ermitteln, wie sie vom Treiber geändert wird, indem sie **SQLNativeSql**aufruft. Dies ist häufig nützlich, wenn Anwendungen gedebugft werden. **SQLNativeSql** akzeptiert eine SQL-Anweisung und gibt sie zurück, nachdem der Treiber sie geändert hat. Da sich diese Funktion in der Core-Schnittstellenkonformitätsebene befindet, wird sie von allen Treibern unterstützt.

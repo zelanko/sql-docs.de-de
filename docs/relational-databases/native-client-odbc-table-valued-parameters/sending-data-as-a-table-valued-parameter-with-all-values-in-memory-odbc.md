@@ -1,5 +1,5 @@
 ---
-title: Tabellenwert Parameter, Werte im Arbeitsspeicher (ODBC)
+title: Tabellenwertparameter, Werte im Speicher (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6530c3b558f26e3f75f5cff63f33f2e58c119c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 042dd929e2000000042618d84dc0195ec57a3e9c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246387"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297799"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Senden von Daten als Tabellenwertparameter mit allen Werten im Arbeitsspeicher (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In diesem Thema wird beschrieben, wie Daten als Tabellenwertparameter an eine gespeicherte Prozedur gesendet werden, wenn alle Werte im Speicher abgelegt sind. Ein weiteres Beispiel zur Veranschaulichung von Tabellenwert Parametern finden Sie unter [Verwenden von Tabellenwert Parametern &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  In diesem Thema wird beschrieben, wie Daten als Tabellenwertparameter an eine gespeicherte Prozedur gesendet werden, wenn alle Werte im Speicher abgelegt sind. Ein weiteres Beispiel, das Tabellenwertparameter demonstriert, finden Sie unter Verwenden von [Tabellenwertparametern &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Voraussetzung  
  In dieser Prozedur wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl auf dem Server ausgeführt wurde:  
@@ -89,7 +89,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  In der zweiten Phase der Parameterbindung erfolgt das Binden der Spalten für den Tabellenwertparameter. Der Parameterfokus wird zunächst auf die Ordnungszahl des Tabellenwertparameters festgelegt. Anschließend werden die Spalten des Tabellen Werts mit SQLBindParameter auf dieselbe Weise gebunden, wie Sie wären, wenn Sie Parameter der gespeicherten Prozedur sind, jedoch mit Spalten Ordnungen für ParameterNumber. Wenn es weitere Tabellenwertparameter gäbe, würden wir den Fokus abwechselnd auf jeden einzelnen festlegen und die jeweiligen Spalten binden. Schließlich wird der Parameterfokus auf 0 (null) zurückgesetzt.  
+3.  In der zweiten Phase der Parameterbindung erfolgt das Binden der Spalten für den Tabellenwertparameter. Der Parameterfokus wird zunächst auf die Ordnungszahl des Tabellenwertparameters festgelegt. Dann werden Spalten des Tabellenwerts mit SQLBindParameter auf die gleiche Weise gebunden, wie sie wären, wenn es sich um Parameter der gespeicherten Prozedur handelt, jedoch mit Spaltenordinals für ParameterNumber. Wenn es weitere Tabellenwertparameter gäbe, würden wir den Fokus abwechselnd auf jeden einzelnen festlegen und die jeweiligen Spalten binden. Schließlich wird der Parameterfokus auf 0 (null) zurückgesetzt.  
   
     ```cpp
     // Bind columns for the table-valued parameter (param 2).  
@@ -105,8 +105,7 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  Füllen Sie die Parameterpuffer auf. 
-  `cbTVP` wird auf die Anzahl der an den Server zu sendenden Zeilen festgelegt.  
+4.  Füllen Sie die Parameterpuffer auf. `cbTVP` wird auf die Anzahl der an den Server zu sendenden Zeilen festgelegt.  
   
     ```cpp
     // Populate parameters.  

@@ -1,5 +1,5 @@
 ---
-title: Details zur ODBC-API-Implementierung | Microsoft-Dokumentation
+title: ODBC-API-Implementierungsdetails | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - ODBC, SQL Server-specific behaviors
 - functions [ODBC]
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb05bdc934fe8f42a4f0f6589d0f75d38ca621fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 880c38483b3896f95ccfde4f8237d6d0acbf8e3c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787869"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302704"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73787869"
   
  In der Referenz zum ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sind nicht sämtliche ODBC-Funktionsaufrufe dokumentiert. Es werden nur diejenigen Funktionen besprochen, die über treiberspezifische Parameter verfügen oder ein treiberspezifisches Verhalten zeigen, wenn sie mit dem ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verwendet werden.  
   
- Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client entspricht der Spezifikation für ODBC 3.51. Um eine umfassende Referenz zu ODBC 3,51 zu erhalten, laden Sie das Microsoft Data Access Components SDK aus dem [Developer Center für Datenzugriff und-Speicherung](https://go.microsoft.com/fwlink?linkid=4173)herunter, oder zeigen Sie die [ODBC-Programmier Referenz](https://go.microsoft.com/fwlink/?LinkId=45250) Online an.  
+ Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client entspricht der Spezifikation für ODBC 3.51. Laden Sie das Microsoft Data Access Components SDK aus dem [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173)herunter, oder sehen Sie sich die [ODBC-Programmiererreferenz](https://go.microsoft.com/fwlink/?LinkId=45250) online an.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -135,7 +135,7 @@ ms.locfileid: "73787869"
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client &#40;ODBC-&#41; Referenz](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+ [SQL Server Native Client &#40;ODBC&#41; Referenz](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [Erstellen von Anwendungen mit SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

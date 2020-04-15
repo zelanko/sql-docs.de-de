@@ -1,5 +1,5 @@
 ---
-title: Hardware-und Software Anforderungen (ODBC) | Microsoft-Dokumentation
+title: Hardware- und Softwareanforderungen (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,44 +13,44 @@ helpviewer_keywords:
 - system requirements [ODBC], desktop database drivers
 - requirements [ODBC], desktop database drivers
 ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6c09ddcac1409da08fedeaf946ac7fb9f6ef668e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe69775e379e9a9d661b4ddf81e577b738fcf34d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952443"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295240"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>Hardware- und Softwareanforderungen (ODBC)
 In diesem Thema werden die Anforderungen für die Verwendung der ODBC Desktop-Datenbanktreiber aufgeführt.  
   
 ## <a name="hardware-requirements"></a>Hardwareanforderungen  
- Um die ODBC Desktop-Datenbanktreiber zu verwenden, benötigen Sie Folgendes:  
+ Um die ODBC Desktop-Datenbanktreiber verwenden zu können, benötigen Sie Folgendes:  
   
--   Ein IBM-kompatibler persönlicher Computer.  
+-   Ein IBM-kompatibler PC.  
   
 -   Eine Festplatte mit 6 MB freiem Speicherplatz.  
   
--   Mindestens 16 MB Arbeitsspeicher (RAM).  
+-   Mindestens 16 MB Arbeitsspeicher (RAM) mit zu zufälligem Zugriff.  
   
 ## <a name="software-requirements"></a>Softwareanforderungen  
- Für den Zugriff auf Daten mit einem ODBC-Treiber benötigen Sie Folgendes:  
+ Um mit einem ODBC-Treiber auf Daten zuzugreifen, benötigen Sie Folgendes:  
   
 -   Der ODBC-Treiber.  
   
--   Der 32-Bit-ODBC-Treiber-Manager, Version 3,51 oder höher (odbc32. dll).  
+-   Der 32-Bit ODBC Driver Manager, Version 3.51 oder neuer (Odbc32.dll).  
   
--   Microsoft Windows 95 oder höher oder Windows NT 4,0 oder Windows 2000.  
+-   Microsoft Windows 95 oder höher oder Windows NT 4.0 oder Windows 2000.  
   
 -   Eine Stapelgröße von mindestens 20 KB für eine Anwendung, die einen Microsoft ODBC-Treiber verwendet.  
   
- Bei Verwendung von Microsoft Windows NT 4,0 oder Windows 2000 ist der 32-Bit-Treiber Thread sicher, aber nur durch die Verwendung eines globalen Semaphors, der den Zugriff auf den Treiber steuert. Die gleichzeitige Verwendung des Treibers ist unter Windows NT sehr eingeschränkt. Der gesamte Zugriff auf die Jet-ISAM-Schicht wird für alle Anwendungen, die das Microsoft Jet-Modul verwenden, mit einem einzigen Thread versehen.  
+ Bei Verwendung von Microsoft Windows NT 4.0 oder Windows 2000 ist der 32-Bit-Treiber threadsicher, jedoch nur durch die Verwendung eines globalen Semaphors, das den Zugriff auf den Treiber steuert. Die gleichzeitige Verwendung des Treibers ist unter Windows NT sehr eingeschränkt. Der gesamte Zugriff auf die Jet ISAM-Schicht wird für alle Anwendungen, die das Microsoft Jet-Modul verwenden, ein threadiert.  
   
- Wenn Sie mehrere 16-Bit-Anwendungen unter Windows unter Windows (WOW) auf Microsoft Windows NT 4,0 ausführen, müssen die Anwendungen in separaten Speicherbereichen ausgeführt werden. (Der gleiche Speicherplatz kann nicht verwendet werden, da ODBC nicht mehrere Umgebungen im gleichen Prozess unterstützt.) Um eine Anwendung in einem separaten Speicherbereich auszuführen, wählen Sie das Anwendungssymbol im Programm-Manager aus, öffnen Sie das Menü **Datei** , klicken Sie auf **Eigenschaften**, und klicken Sie dann auf **in getrennter Speicherbereich ausführen**.  
+ Wenn mehrere 16-Bit-Anwendungen unter Windows unter Windows (WOW) unter Microsoft Windows NT 4.0 ausgeführt werden, müssen die Anwendungen in separaten Arbeitsspeichern ausgeführt werden. (Derselbe Speicherplatz kann nicht verwendet werden, da ODBC mehrere Umgebungen im gleichen Prozess nicht unterstützt.) Um eine Anwendung in einem separaten Speicherbereich auszuführen, wählen Sie das Symbol der Anwendung im Programm-Manager aus, öffnen Sie das **Menü Datei** und klicken Sie auf **Eigenschaften**, und klicken Sie dann auf Ausführen im **separaten Speicherbereich**.  
   
- Die Verwendung dieser Treiber mit 16-Bit-Anwendungen unter Windows 95 wird nicht unterstützt.  
+ Die Verwendung dieser Treiber durch 16-Bit-Anwendungen unter Windows 95 wird nicht unterstützt.  
   
-## <a name="driver-specific-hardware-and-software-requirements"></a>Treiber spezifische Hardware-und Software Anforderungen  
+## <a name="driver-specific-hardware-and-software-requirements"></a>Treiberspezifische Hardware- und Softwareanforderungen  
   
--   MicrosoftAccess und dbasedrivers erfordern möglicherweise Änderungen in den Dateien Autoexec. bat oder config. sys.
+-   Die MicrosoftAccess- und dBASE-Treiber erfordern möglicherweise Änderungen in den Dateien Autoexec.bat oder Config.sys.

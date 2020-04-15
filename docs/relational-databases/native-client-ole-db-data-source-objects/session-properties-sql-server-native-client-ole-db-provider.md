@@ -1,5 +1,5 @@
 ---
-title: Sitzungs Eigenschaften, SQL Native Client OLE DB
+title: Sitzungseigenschaften, SQL Native Client OLE DB
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,29 +11,29 @@ helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6b0a6b512798e4da90555f7a7e195bfbcfbe97d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 4d4b2bef0bf37b4400ac2cfcb672e43ba4f5abcb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75231768"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297162"
 ---
 # <a name="session-properties---sql-server-native-client-ole-db-provider"></a>Sitzungseigenschaften – OLE DB-Anbieter von SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter interpretiert OLE DB Sitzungs Eigenschaften wie folgt.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter interpretiert ole DB-Sitzungseigenschaften wie folgt.  
   
-|Eigenschafts-ID|BESCHREIBUNG|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt alle Isolations Stufen für Autocommit-Transaktionen mit Ausnahme des DBPROPVAL_TI_CHAOS Chaos Level.|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt alle Autocommit-Transaktionsisolationsebenen mit Ausnahme der Chaosebene DBPROPVAL_TI_CHAOS.|  
 |||
 
- Im anbieterspezifischen Eigenschaften Satz DBPROPSET_SQLSERVERSESSION definiert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter die folgende zusätzliche Sitzungs Eigenschaft.  
+ Im anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERSESSION [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert der native Client-OLE-DB-Anbieter die folgende zusätzliche Sitzungseigenschaft.  
   
-|Eigenschafts-ID|BESCHREIBUNG|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
 |SSPROP_QUOTEDCATALOGNAMES|Typ: VT_BOOL<br /><br /> R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: In CATALOG-Einschränkung zugelassene Bezeichner in Anführungszeichen.<br /><br /> VARIANT_TRUE: Bezeichner in Anführungszeichen werden für eine CATALOG-Einschränkung für die Schemarowsets erkannt, die Unterstützung für verteilte Abfragen bieten.<br /><br /> VARIANT_FALSE: Bezeichner in Anführungszeichen werden nicht für eine CATALOG-Einschränkung für die Schemarowsets erkannt, die Unterstützung für verteilte Abfragen bieten.<br /><br /> Weitere Informationen zu Schemarowsets, die Unterstützung für verteilte Abfragen bieten, finden Sie unter [Unterstützung von verteilten Abfragen in Schemarowsets](../../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md).|  
 |SSPROP_ALLOWNATIVEVARIANT|Typ: VT_BOOL<br /><br /> R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Bestimmt, ob die Daten als DBTYPE_VARIANT oder DBTYPE_SQLVARIANT abgerufen werden.<br /><br /> VARIANT_TRUE: Der Spaltentyp wird als DBTYPE_SQLVARIANT zurückgegeben. In diesem Fall enthält der Puffer die SSVARIANT-Struktur.<br /><br /> VARIANT_FALSE: Der Spaltentyp wird als DBTYPE_VARIANT zurückgegeben und der Puffer enthält die VARIANT-Struktur.|  
@@ -41,6 +41,6 @@ ms.locfileid: "75231768"
 |||
 
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenquellen Objekte &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Datenquellenobjekte &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

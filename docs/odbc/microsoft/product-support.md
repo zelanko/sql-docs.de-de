@@ -1,5 +1,5 @@
 ---
-title: Produkt Support | Microsoft-Dokumentation
+title: Produkt-Support | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - product support [ODBC]
 ms.assetid: 585c41c6-5c5a-437e-a4b4-e32a346b478d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09e62da5bf1f68ddf5ad2ab974d85cfb8dec859a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: baabb4b5beb1c089ae1d53b7de08d14955d83158
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67988090"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304851"
 ---
 # <a name="product-support"></a>Produktsupport
-Der Produktsupport für ODBC wird von Microsoft Support Services bereitgestellt. Da viele Microsoft-Produkte ODBC als Kernkomponente verwenden und auch ODBC-Treiber neu verteilen, wird ODBC von Microsoft Product Support Services als Teil jedes Produkts betrachtet, das ODBC als Komponente enthält. Die Unterstützung für ODBC wird in Übereinstimmung mit dem Supportvertrag dieses Produkts bereitgestellt. Weitere Informationen finden Sie in der jeweiligen Produktdokumentation.
+Der Produktsupport für ODBC wird von Microsoft Product Support Services bereitgestellt. Da viele Microsoft-Produkte ODBC als Kernkomponente verwenden und auch ODBC-Treiber weiterverteilen, betrachtet Microsoft Product Support Services ODBC als Teil jedes Produkts, das ODBC als Komponente enthält. Die Unterstützung für ODBC erfolgt in Übereinstimmung mit der Supportvereinbarung dieses Produkts. Weitere Informationen finden Sie in der jeweiligen Produktdokumentation.

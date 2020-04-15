@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Datentyp bezeichgern | Microsoft-Dokumentation
+title: Verwenden von Datentyp-Bezeichnern | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - data types [ODBC], identifiers
 - identifiers [ODBC], data types
 ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5e9fea64986bf595676540d74bb87a6e62521c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8be8eef0441d48ed03ea6ccf8f656627c1dd9b63
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070007"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301421"
 ---
 # <a name="using-data-type-identifiers"></a>Verwenden von Datentypbezeichnern
-Anwendungen verwenden Datentyp Bezeichner auf zwei Arten: zum Beschreiben der Puffer für den Treiber und zum Abrufen von Metadaten über das Resultset vom Treiber, damit Sie bestimmen können, welche Art von C-Puffer zum Speichern der Daten verwendet werden sollen. Anwendungen nennen die folgenden Funktionen, um diese Aufgaben auszuführen:  
+Anwendungen verwenden Datentypbezeichner auf zwei Arten: um ihre Puffer für den Treiber zu beschreiben und Metadaten über das Resultset vom Treiber abzurufen, damit sie bestimmen können, welche Art von C-Puffer zum Speichern der Daten verwendet werden sollen. Anwendungen rufen die folgenden Funktionen auf, um diese Aufgaben auszuführen:  
   
--   **SQLBindParameter**, **SQLBindCol**und **SQLGetData** , um den C-Datentyp von Anwendungs Puffern zu beschreiben.  
+-   **SQLBindParameter**, **SQLBindCol**und **SQLGetData** - um den C-Datentyp von Anwendungspuffern zu beschreiben.  
   
--   **SQLBindParameter** : Beschreibt den SQL-Datentyp dynamischer Parameter.  
+-   **SQLBindParameter** - um den SQL-Datentyp dynamischer Parameter zu beschreiben.  
   
--   **SQLColAttribute** und **SQLDescribeCol** : um die SQL-Datentypen von Resultsetspalten abzurufen.  
+-   **SQLColAttribute** und **SQLDescribeCol** - zum Abrufen der SQL-Datentypen von Resultsetspalten.  
   
--   **Sqldescribeparameter** -zum Abrufen der SQL-Datentypen von Parametern.  
+-   **SQLDescribeParameter** - zum Abrufen der SQL-Datentypen von Parametern.  
   
--   **SQLColumns**, **sqlprocedurecolumschlag**und **SQLSpecialColumns** : um die SQL-Datentypen verschiedener Schema Informationen abzurufen  
+-   **SQLColumns**, **SQLProcedureColumns**und **SQLSpecialColumns** - zum Abrufen der SQL-Datentypen verschiedener Schemainformationen  
   
--   **SQLGetTypeInfo** -zum Abrufen einer Liste unterstützter Datentypen  
+-   **SQLGetTypeInfo** - zum Abrufen einer Liste unterstützter Datentypen  
   
- Datentyp Bezeichner werden im SQL_DESC_CONCISE_TYPE-Feld eines Deskriptors gespeichert. Die deskriptorfunktionen **SQLSetDescField** und **SQLSetDescRec** können mit den entsprechenden Typen verwendet werden, um die in der vorherigen Liste aufgeführten Aufgaben auszuführen. Weitere Informationen finden Sie unter [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).
+ Datentypbezeichner werden im SQL_DESC_CONCISE_TYPE Feld eines Deskriptors gespeichert. Die Deskriptorfunktionen **SQLSetDescField** und **SQLSetDescRec** können mit den entsprechenden Typen verwendet werden, um die in der vorherigen Liste aufgeführten Aufgaben auszuführen. Weitere Informationen finden Sie unter [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).

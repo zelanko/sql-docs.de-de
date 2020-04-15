@@ -1,5 +1,5 @@
 ---
-title: Tabellenwert Parameter (ODBC) | Microsoft-Dokumentation
+title: Tabellenwertparameter (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f53e1780beaea56ba659c11771d469163a964971
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c303a1b3b8a9a42792feb6802e9f09fabc1e3ca3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790465"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297750"
 ---
 # <a name="table-valued-parameters-odbc"></a>Tabellenwertparameter (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Die ODBC-Unterstützung für Tabellenwertparameter ermöglicht einer Clientanwendung die effizientere Versendung von parametrisierten Daten an einen Server, indem mehrere Zeilen über einen Aufruf an den Server gesendet werden.  
   
- Informationen zu Tabellenwert Parametern auf dem Server finden Sie unter [Verwenden von Tabellenwert Parametern &#40;Datenbank-Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Informationen zu Tabellenwertparametern auf dem Server finden Sie unter Verwenden von [Tabellenwertparametern &#40;Datenbankmodul&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  In ODBC gibt es zwei Methoden zum Versenden von Tabellenwertparametern an den Server:  
   
--   Alle Tabellenwert Parameter-Daten können sich im Arbeitsspeicher befinden, wenn SQLExecDirect oder SQLExecute aufgerufen wird. Wenn es mehrere Zeilen im Tabellenwert gibt, werden diese Daten in Arrays gespeichert.  
+-   Alle Parameterdaten mit Tabellenwert können sich zum Zeitpunkt des Aufrufs von SQLExecDirect oder SQLExecute im Arbeitsspeicher befinden. Wenn es mehrere Zeilen im Tabellenwert gibt, werden diese Daten in Arrays gespeichert.  
   
--   Eine Anwendung kann Daten bei der Ausführung für einen Tabellenwert Parameter angeben, wenn SQLExecDirect oder SQLExecute aufgerufen wird. In diesem Fall können Datenzeilen für den Tabellenwertparameter in Batches oder einzeln bereitgestellt werden, um die Speicheranforderungen zu reduzieren.  
+-   Eine Anwendung kann Data-at-Execution für einen Tabellenwertparameter angeben, wenn SQLExecDirect oder SQLExecute aufgerufen wird. In diesem Fall können Datenzeilen für den Tabellenwertparameter in Batches oder einzeln bereitgestellt werden, um die Speicheranforderungen zu reduzieren.  
   
  Die erste Option aktiviert gespeicherte Prozeduren, um mehr Geschäftslogik zu kapseln. Beispielsweise könnte eine einzeln gespeicherte Prozedur eine gesamte Bestellungseingabetransaktion kapseln, wenn die Bestellartikel als Tabellenwertparameter übergeben werden. Diese Option ist sehr effizient, da nur ein einzelner Roundtrip zum Server erforderlich ist. Alternativ könnten Sie verschiedene Prozeduren verwenden, um die Bestellungskopfzeile und die Bestellartikel separat zu behandeln. In diesem Fall wäre jedoch weiterer Code und ein komplexerer Vertrag zwischen Client und Server erforderlich.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73790465"
  Beschreibt, wie eine Anwendung Metadaten für einen vorbereiteten Prozeduraufruf abrufen kann.  
   
  [Zusätzliche Tabellenwertparameter-Metadaten](../../relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md)  
- Beschreibt, wie sqlprocedurecolrens, SQLTables und SQLColumns zum Abrufen von Metadaten für einen Tabellenwert Parameter verwendet werden.  
+ Beschreibt die Verwendung von SQLProcedureColumns, SQLTables und SQLColumns zum Abrufen von Metadaten für einen Tabellenwertparameter.  
   
  [Tabellenwertparameter-Datenkonvertierung und andere Fehler und Warnungen](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Beschreibt, wie Fehler in Tabellenwertparameter-Spaltenwerten verarbeitet werden.  
@@ -81,7 +81,7 @@ ms.locfileid: "73790465"
  Beschreibt die Durchführung der häufigsten Aufgaben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Tabellenwert Parameter &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Tabellenbewertete Parameter &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

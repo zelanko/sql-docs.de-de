@@ -1,5 +1,5 @@
 ---
-title: Typbezeichner | Microsoft-Dokumentation
+title: Typ-Bezeichner | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - identifiers [ODBC], type
 - type identifiers [ODBC], about type identifiers
 ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79aa4de5d722208195477f7ffef53cac6c61a2de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a274a19eaa0a2fdf98bcaa9ef42406ee8a6b6461
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093025"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306431"
 ---
 # <a name="type-identifiers"></a>Typenbezeichner
-Um SQL-und C-Datentypen zu beschreiben, definiert ODBC zwei Sätze von *typbezeichlen*. Ein Typbezeichner beschreibt den Typ einer SQL-Spalte oder eines C-Puffers. Dabei handelt es sich um einen **#define** Wert, der im Allgemeinen als Funktions Argument und in den Metadaten zurückgegeben wird.  
+Um SQL- und C-Datentypen zu beschreiben, definiert ODBC zwei Sätze von *Typbezeichnern*. Ein Typbezeichner beschreibt den Typ einer SQL-Spalte oder eines C-Puffers. Es handelt **sich um** einen #define Wert und wird in der Regel als Funktionsargument übergeben oder in Metadaten zurückgegeben.  
   
- Der folgende Befehl von **SQLBindParameter** bindet z. b. eine Variable vom Typ SQL_DATE_STRUCT an einen Datums Parameter in einer SQL-Anweisung. Der C-Typbezeichner SQL_C_TYPE_DATE gibt den Typ der *Datums* Variablen an, und der SQL-Typbezeichner SQL_TYPE_DATE den Typ des dynamischen Parameters angibt.  
+ Der folgende Aufruf von **SQLBindParameter** bindet z. B. eine Variable vom Typ SQL_DATE_STRUCT an einen Datumsparameter in einer SQL-Anweisung. Der C-Typbezeichner SQL_C_TYPE_DATE gibt den Typ der *Date-Variablen* an, und der SQL-Typbezeichner SQL_TYPE_DATE den Typ des dynamischen Parameters angibt.  
   
 ```  
 SQL_DATE_STRUCT Date;  

@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit einer Datenquelle (ODBC) | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit einer Datenquelle (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data sources
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb1f2133aa335f266da75e00638dbb484dae1431
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ae59e0bdb005d296341970f4582100b15a0dfdf7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784716"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307711"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Herstellen einer Verbindung mit einer Datenquelle (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,15 +42,15 @@ ms.locfileid: "73784716"
   
 -   **SQLBrowseConnect**  
   
- Weitere Informationen zum Herstellen von Verbindungen mit einer Datenquelle, einschließlich der verschiedenen Optionen für Verbindungs Zeichenfolgen, finden [Sie unter Verwenden von Verbindungs Zeichenfolgen-Schlüsselwörtern mit SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Weitere Informationen zum Herstellen von Verbindungen mit einer Datenquelle, einschließlich der verschiedenen verfügbaren Verbindungszeichenfolgenoptionen, finden Sie unter [Verwenden von Verbindungszeichenfolgenschlüsselwörtern mit SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="sqlconnect"></a>SQLConnect  
- **SQLCONNECT** ist die einfachste Verbindungsfunktion. Sie akzeptiert drei Parameter: Datenquellenname, Benutzer-ID und Kennwort. Verwenden Sie **SQLCONNECT** , wenn diese drei Parameter alle Informationen enthalten, die zum Herstellen einer Verbindung mit der Datenbank erforderlich sind. Erstellen Sie dazu eine Liste mit Datenquellen mithilfe von **SQLDataSources**. Benutzer zur Eingabe einer Datenquelle, Benutzer-ID und eines Kennworts auffordern und dann **SQLCONNECT**aufzurufen.  
+ **SQLConnect** ist die einfachste Verbindungsfunktion. Sie akzeptiert drei Parameter: Datenquellenname, Benutzer-ID und Kennwort. Verwenden Sie **SQLConnect,** wenn diese drei Parameter alle Informationen enthalten, die zum Herstellen einer Verbindung mit der Datenbank erforderlich sind. Erstellen Sie dazu eine Liste von Datenquellen mit **SQLDataSources**; den Benutzer zur Eingabe einer Datenquelle, einer Benutzer-ID und eines Kennworts aufzufordern; und rufen Sie dann **SQLConnect auf.**  
   
- **SQLCONNECT** geht davon aus, dass ein Datenquellen Name, eine Benutzer-ID und ein Kennwort zum Herstellen einer Verbindung mit einer Datenquelle ausreichen und dass die ODBC-Datenquelle alle anderen Informationen enthält, die der ODBC-Treiber zum Herstellen der Verbindung benötigt. Im Gegensatz zu [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) und [sqlbrowseconnetct](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)verwendet **SQLCONNECT** keine Verbindungs Zeichenfolge.  
+ **SQLConnect** geht davon aus, dass ein Datenquellenname, eine Benutzer-ID und ein Kennwort ausreichen, um eine Verbindung mit einer Datenquelle herzustellen, und dass die ODBC-Datenquelle alle anderen Informationen enthält, die der ODBC-Treiber zum Herstellen der Verbindung benötigt. Im Gegensatz zu [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) und [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)verwendet **SQLConnect** keine Verbindungszeichenfolge.  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
- **SQLDriverConnect** wird verwendet, wenn mehr Informationen als Name der Datenquelle, Benutzer-ID und Kennwort erforderlich sind. Einer der Parameter für **SQLDriverConnect** ist eine Verbindungs Zeichenfolge, die Treiber spezifische Informationen enthält. Sie können **SQLDriverConnect** anstelle von **SQLCONNECT** aus den folgenden Gründen verwenden:  
+ **SQLDriverConnect** wird verwendet, wenn mehr Informationen als der Datenquellenname, die Benutzer-ID und das Kennwort erforderlich sind. Einer der Parameter für **SQLDriverConnect** ist eine Verbindungszeichenfolge, die treiberspezifische Informationen enthält. Aus den folgenden Gründen können Sie **SQLDriverConnect** anstelle von **SQLConnect** verwenden:  
   
 -   Um zum Zeitpunkt des Verbindungsaufbaus treiberspezifische Informationen anzugeben.  
   
@@ -58,20 +58,20 @@ ms.locfileid: "73784716"
   
 -   Um eine Verbindung herzustellen, ohne eine ODBC-Datenquelle zu verwenden.  
   
- Die **SQLDriverConnect** -Verbindungs Zeichenfolge enthält eine Reihe von Schlüsselwort-Wert-Paaren, mit denen alle von einem ODBC-Treiber unterstützten Verbindungsinformationen angegeben werden. Bei allen vom Treiber unterstützten Verbindungsinformationen unterstützt jeder Treiber über die treiberspezifischen Schlüsselwörter hinaus die standardmäßigen ODBC-Schlüsselwörter (DSN, FILEDSN, DRIVER, UID, PWD und SAVEFILE). **SQLDriverConnect** kann verwendet werden, um eine Verbindung ohne Datenquelle herzustellen. Beispielsweise kann eine Anwendung, die so konzipiert ist, dass Sie eine DSN-lose Verbindung mit einer Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von herstellt, **SQLDriverConnect** mit einer Verbindungs Zeichenfolge aufruft, die die Anmelde-ID, das Kennwort, die Netzwerk Bibliothek, den Servernamen für die Verbindung und die zu verwendende Standarddatenbank definiert.  
+ Die **SQLDriverConnect-Verbindungszeichenfolge** enthält eine Reihe von Schlüsselwort-Wert-Paaren, die alle Verbindungsinformationen angeben, die von einem ODBC-Treiber unterstützt werden. Bei allen vom Treiber unterstützten Verbindungsinformationen unterstützt jeder Treiber über die treiberspezifischen Schlüsselwörter hinaus die standardmäßigen ODBC-Schlüsselwörter (DSN, FILEDSN, DRIVER, UID, PWD und SAVEFILE). **SQLDriverConnect** kann verwendet werden, um eine Verbindung ohne Datenquelle herzustellen. Beispielsweise kann eine Anwendung, die eine "DSN-less"-Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu einer Instanz von herstellen soll, **SQLDriverConnect** mit einer Verbindungszeichenfolge aufrufen, die die Anmelde-ID, das Kennwort, die Netzwerkbibliothek, den Servernamen, mit dem eine Verbindung hergestellt werden soll, und die zu verwendende Standarddatenbank definiert.  
   
- Bei der Verwendung von **SQLDriverConnect**stehen zwei Optionen zur Verfügung, um den Benutzer zur Eingabe von erforderlichen Verbindungsinformationen aufzufordern:  
+ Bei verwendung von **SQLDriverConnect**gibt es zwei Optionen, um den Benutzer zur Eingabe aller erforderlichen Verbindungsinformationen aufzufragen:  
   
 -   Dialogfeld "Anwendung"  
   
-     Sie können ein Anwendungs Dialogfeld erstellen, in dem Sie zur Eingabe von Verbindungsinformationen aufgefordert werden, und dann **SQLDriverConnect** mit einem NULL-Fenster Handle und *DriverCompletion* auf SQL_DRIVER_NOPROMPT festlegen. Diese Parametereinstellungen verhindern, dass der ODBC-Treiber ein eigenes Dialogfeld öffnet. Diese Methode wird verwendet, wenn die Benutzeroberfläche der Anwendung gesteuert werden muss.  
+     Sie können ein Anwendungsdialogfeld erstellen, das zur Eingabe von Verbindungsinformationen auffordert, und dann **SQLDriverConnect** mit einem NULL-Fensterhandle aufrufen und *DriverCompletion* auf SQL_DRIVER_NOPROMPT festgelegt. Diese Parametereinstellungen verhindern, dass der ODBC-Treiber ein eigenes Dialogfeld öffnet. Diese Methode wird verwendet, wenn die Benutzeroberfläche der Anwendung gesteuert werden muss.  
   
 -   Dialogfeld "Filter"  
   
-     Sie können die Anwendung so codieren, dass Sie ein gültiges Fenster Handle an **SQLDriverConnect** übergibt, und den *DriverCompletion* -Parameter auf SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT oder SQL_DRIVER_COMPLETE_REQUIRED festlegen. Der Treiber generiert dann ein Dialogfeld, um den Benutzer zur Eingabe von Verbindungsinformationen aufzufordern. Diese Methode vereinfacht den Anwendungscode.  
+     Sie können die Anwendung codieren, um ein gültiges Fensterhandle an **SQLDriverConnect** zu übergeben, und den *Parameter DriverCompletion* auf SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT oder SQL_DRIVER_COMPLETE_REQUIRED festlegen. Der Treiber generiert dann ein Dialogfeld, um den Benutzer zur Eingabe von Verbindungsinformationen aufzufordern. Diese Methode vereinfacht den Anwendungscode.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
- **Sqlbrowseconnetct**verwendet, wie **SQLDriverConnect**, eine Verbindungs Zeichenfolge. Mithilfe von **sqlbrowseconnetct**kann eine Anwendung jedoch zur Laufzeit eine vollständige Verbindungs Zeichenfolge iterativ mit der Datenquelle erstellen. Dadurch kann die Anwendung zwei Funktionen erfüllen:  
+ **SQLBrowseConnect**verwendet, z. B. **SQLDriverConnect**, eine Verbindungszeichenfolge. Mit **SQLBrowseConnect**kann eine Anwendung jedoch eine vollständige Verbindungszeichenfolge iterativ mit der Datenquelle zur Laufzeit erstellen. Dadurch kann die Anwendung zwei Funktionen erfüllen:  
   
 -   Erstellen eigener Dialogfelder, um zur Eingabe dieser Informationen aufzufordern, wodurch die Kontrolle über die Benutzeroberfläche beibehalten wird.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "73784716"
   
      Beispielsweise kann der Benutzer zunächst das Netzwerk nach Servern durchsuchen und, sobald er einen Server ausgewählt hat, diesen nach Datenbanken durchsuchen, auf die der Treiber zugreifen kann.  
   
- Wenn **sqlbrowseconnetct** eine erfolgreiche Verbindung abschließt, wird eine Verbindungs Zeichenfolge zurückgegeben, die bei nachfolgenden Aufrufen von **SQLDriverConnect**verwendet werden kann.  
+ Wenn **SQLBrowseConnect** eine erfolgreiche Verbindung abschließt, wird eine Verbindungszeichenfolge zurückgegeben, die bei nachfolgenden Aufrufen von **SQLDriverConnect**verwendet werden kann.  
   
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber gibt bei erfolgreicher Ausführung von **SQLCONNECT**, **SQLDriverConnect**oder **sqlbrowseconnct**immer SQL_SUCCESS_WITH_INFO zurück. Wenn eine ODBC-Anwendung nach dem Abrufen von SQL_SUCCESS_WITH_INFO **SQLGetDiagRec** aufruft, kann Sie folgende Meldungen erhalten:  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client ODBC-Treiber gibt immer SQL_SUCCESS_WITH_INFO für eine erfolgreiche **SQLConnect**, **SQLDriverConnect**oder **SQLBrowseConnect**zurück. Wenn eine ODBC-Anwendung **SQLGetDiagRec** aufruft, nachdem sie SQL_SUCCESS_WITH_INFO erhalten hat, kann sie die folgenden Meldungen empfangen:  
   
  5701  
  Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Kontext des Benutzers in die in der Datenquelle angegebene Standarddatenbank oder, wenn für die Datenquelle keine Standarddatenbank angegeben ist, in die Standarddatenbank der zur Verbindung verwendeten Anmelde-ID einfügt.  
@@ -100,7 +100,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- Sie können die Meldungen 5701 und 5703 ignorieren; sie dienen nur zu Informationszwecken. Den Rückgabecode SQL_SUCCESS_WITH_INFO hingegen sollten Sie nicht ignorieren, da auch andere Meldungen als 5701 oder 5703 zurückgegeben werden können. Wenn ein Treiber z. b. eine Verbindung mit einem Server herstellt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem eine Instanz von mit veralteten gespeicherten Katalog Prozeduren ausgeführt wird, ist einer der Fehler, der durch **SQLGetDiagRec** nach einer SQL_SUCCESS_WITH_INFO zurückgegeben wird,  
+ Sie können die Meldungen 5701 und 5703 ignorieren; sie dienen nur zu Informationszwecken. Den Rückgabecode SQL_SUCCESS_WITH_INFO hingegen sollten Sie nicht ignorieren, da auch andere Meldungen als 5701 oder 5703 zurückgegeben werden können. Wenn ein Treiber z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung zu einem Server herstellt, auf dem eine Instanz mit veralteten gespeicherten Katalogprozeduren ausgeführt wird, lautet einer der Fehler, die nach einer SQL_SUCCESS_WITH_INFO über **SQLGetDiagRec** zurückgegeben werden:  
   
 ```  
 SqlState:   01000  
@@ -112,7 +112,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- Die Fehler Behandlungs Funktion einer Anwendung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindungen sollte **SQLGetDiagRec** aufrufen, bis SQL_NO_DATA zurückgegeben wird. Anschließend sollte Sie auf alle Nachrichten reagieren, die nicht mit einem *pfNative* -Code von 5701 oder 5703 zu tun haben.  
+ Die Fehlerbehandlungsfunktion einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anwendung für Verbindungen sollte **SQLGetDiagRec** aufrufen, bis sie SQL_NO_DATA zurückgibt. Es sollte dann auf andere Nachrichten als die mit einem *pfNative-Code* von 5701 oder 5703 reagieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Kommunikation mit SQL Server &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  

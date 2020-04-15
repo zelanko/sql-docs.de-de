@@ -7,15 +7,15 @@ ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 380d76fe0740a6c43584a68f9353d85539867fe3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5d822362e9f9f7e70e4421056383aae8ddef03dc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761401"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303351"
 ---
 # <a name="metadata-discovery"></a>Metadatenermittlung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "73761401"
   
  Das Angeben des Metadatenformats mit [bcp_setbulkmode](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)führt ebenfalls zu einer Leistungsverbesserung.  
   
- [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) verfügt über eine neue *eOption* zum Steuern des Verhaltens von bcp_readfmt: **bcpdelta ayread fmt**.  
+ [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) hat eine neue *eOption,* um das Verhalten von bcp_readfmt zu steuern: **BCPDELAYREADFMT**.  
   
  Die folgenden ODBC-Funktionen wurden in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] verbessert, um verbesserte Metadatenermittlung bereitzustellen:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "73761401"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: GetParameterInfo (Weitere Informationen finden Sie unter [ICommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md) )  
+-   ICommandWithParameters::GetParameterInfo (Weitere Informationen finden Sie unter [ICommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md).)  
   
  Das Angeben des Metadatenformats mit IBCPSession::BCPSetBulkMode führt ebenfalls zu einer Leistungsverbesserung.  
   

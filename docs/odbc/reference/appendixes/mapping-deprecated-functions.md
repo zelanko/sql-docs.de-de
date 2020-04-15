@@ -1,5 +1,5 @@
 ---
-title: Mapping als veraltet markierte Funktionen | Microsoft-Dokumentation
+title: Zuordnen veralteter Funktionen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,47 +15,47 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a4e89cd9281520e70ec5fb289c6050e77ec6194c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990712"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299880"
 ---
 # <a name="mapping-deprecated-functions"></a>Zuordnen veralteter Funktionen
-In diesem Abschnitt wird beschrieben, wie veraltete Funktionen vom ODBC *3. x* -Treiber-Manager zugeordnet werden, um die Abwärtskompatibilität von ODBC *3. x* -Treibern zu gewährleisten, die mit ODBC *2. x* -Anwendungen verwendet werden. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung aus. Da jede der ODBC *2. x* -Funktionen in der folgenden Liste der entsprechenden ODBC *3. x* -Funktion zugeordnet ist, wenn Sie in einem ODBC *3. x* -Treiber aufgerufen wird, muss der ODBC *3.* x-Treiber die ODBC *2. x* -Funktionen nicht implementieren.  
+In diesem Abschnitt wird beschrieben, wie veraltete Funktionen vom ODBC *3.x-Treiber-Manager* zugeordnet werden, um die Abwärtskompatibilität von ODBC *3.x-Treibern* zu gewährleisten, die mit ODBC *2.x-Anwendungen* verwendet werden. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung aus. Da jede der ODBC *2.x-Funktionen* in der folgenden Liste der entsprechenden ODBC *3.x-Funktion* zugeordnet ist, wenn sie in einem ODBC *3.x-Treiber* aufgerufen wird, muss der ODBC *3.x-Treiber* die ODBC *2.x-Funktionen* nicht implementieren.  
   
- Die Zuordnung in der Liste wird ausgelöst, wenn der Treiber ein ODBC *3. x* -Treiber ist und der Treiber die zugeordnete Funktion nicht unterstützt.  
+ Die Zuordnung in der Liste wird ausgelöst, wenn der Treiber ein ODBC *3.x-Treiber* ist und der Treiber die Zugfunktion nicht unterstützt.  
   
- In der folgenden Tabelle werden alle duplizierten Funktionen aufgelistet, die in ODBC *3. x*eingeführt wurden.  
+ In der folgenden Tabelle sind alle duplizierten Funktionen aufgeführt, die in ODBC *3.x*eingeführt wurden.  
   
-|ODBC *2. x* -Funktion|ODBC *3. x* -Funktion|  
+|ODBC *2.x-Funktion*|ODBC *3.x-Funktion*|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
 |**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
-|**SQLError**|**SQLGetDiagRec**|  
+|**Sqlerror**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt** mit der *Option* SQL_DROP|**SQLFreeHandle**|  
+|**SQLFreeStmt** mit *einer Option* der SQL_DROP|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**'SQLGetStmtAttr'**|  
-|**SQLParamOptions**|**SQLSetStmtAttr**|  
+|**SQLParamOptionen**|**SQLSetStmtAttr**|  
 |**SQLSetConnectOption**|**SQLSetConnectAttr**|  
 |**SQLSetParam**[2]|**SQLBindParameter**|  
-|**Sqlsetscrolloption**|**SQLSetStmtAttr**|  
+|**SQLSetScrollOption**|**SQLSetStmtAttr**|  
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
-|**SQLtransact**|**SQLEndTran**|  
+|**SQLTransact**|**SQLEndTran**|  
   
- [1] auch wenn diese Funktion in ODBC *2. x*nicht vorhanden ist, ist Sie in den Open Group-und ISO-Standards enthalten.  
+ [1] Obwohl diese Funktion in ODBC *2.x*nicht existierte, ist sie in den Open Group- und ISO-Standards.  
   
- [2] Dies ist eine ODBC 1,0-Funktion.  
+ [2] Dies ist eine ODBC 1.0-Funktion.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [SQLAllocConnect-Zuordnung](../../../odbc/reference/appendixes/sqlallocconnect-mapping.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sqlrateconnetction-Funktion | Microsoft-Dokumentation
+title: SQLRateConnection-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLRateConnection function [ODBC]
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74d7e2c52167682f0993006db3a1125ca741cf35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d29033460a7f89fc4a8b1c371a4d32bdf94a2a05
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053639"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288880"
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection-Funktion
-**Konformitäts**  
- Eingeführte Version: ODBC 3,81 Standards Compliance: ODBC  
+**Konformität**  
+ Eingeführte Version: ODBC 3.81 Standard-Konformität: ODBC  
   
  **Zusammenfassung**  
- **Sqlrateconnetction** bestimmt, ob ein Treiber eine vorhandene Verbindung im Verbindungspool wieder verwenden kann.  
+ **SQLRateConnection** bestimmt, ob ein Treiber eine vorhandene Verbindung im Verbindungspool wiederverwenden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,20 +39,20 @@ SQLRETURN  SQLRateConnection(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *hrequest*  
- Der Ein Tokenhandle, das die neue Anwendungs Verbindungsanforderung darstellt.  
+ *hRequest*  
+ [Eingabe] Ein Tokenhandle, das die neue Anwendungsverbindungsanforderung darstellt.  
   
- *hcandidateconnetzction*  
- Der Die vorhandene Verbindung im Verbindungspool. Die Verbindung muss sich im geöffneten Zustand befinden.  
+ *hCandidateConnection*  
+ [Eingabe] Die vorhandene Verbindung im Verbindungspool. Die Verbindung muss sich in einem geöffneten Zustand befinden.  
   
- *frequiredtransaktioneintragung*  
- Der Wenn true, erfordert die Wiederverwendung der *hcandidateconnetction* der vorhandenen Verbindung für die neue Verbindungsanforderung (*hrequest*) eine zusätzliche Eintragung.  
+ *fRequiredTransactionEnlistment*  
+ [Eingabe] Wenn TRUE, erfordert die Wiederverwendung der *hCandidateConnection* der vorhandenen Verbindung für die neue Verbindungsanforderung (*hRequest*) eine zusätzliche Einschreibung.  
   
- *Transid*  
- Der Wenn *frequiredtransaktionenlistment* auf true festgelegt ist, stellt *Transid* die DTC-Transaktion dar, die von der Anforderung eingetragen wird. Wenn *frequiredtransaktionumlistment* false ist, wird *Transid* ignoriert.  
+ *transId*  
+ [Eingabe] Wenn *fRequiredTransactionEnlistment* TRUE ist, stellt *transId* die DTC-Transaktion dar, die von der Anforderung eingeschrieben wird. Wenn *fRequiredTransactionEnlistment* FALSE ist, wird *transId* ignoriert.  
   
- *wird entfernt*  
- Ausgeben die Wiederverwendungs Bewertung von *hcandidateconnetction*für den *hrequest*. Diese Bewertung liegt zwischen 0 und 100 (einschließlich).  
+ *pRating*  
+ [Ausgabe] *hCandidateConnection*'s Wiederverwendungsbewertung für *hRequest*. Diese Bewertung liegt zwischen 0 und 100 (inklusive).  
   
 ## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_ERROR oder SQL_INVALID_HANDLE.  
@@ -61,29 +61,29 @@ SQLRETURN  SQLRateConnection(
  Der Treiber-Manager verarbeitet keine Diagnoseinformationen, die von dieser Funktion zurückgegeben werden.  
   
 ## <a name="remarks"></a>Bemerkungen  
- **Sqlrateconnetction** erzeugt ein Ergebnis zwischen 0 und 100 (einschließlich), das angibt, wie gut eine vorhandene Verbindung mit der Anforderung übereinstimmt.  
+ **SQLRateConnection** erzeugt eine Punktzahl zwischen 0 und 100 (inklusive), die angibt, wie gut eine vorhandene Verbindung mit der Anforderung übereinstimmt.  
   
-|Punkte|Bedeutung (Wenn SQL_SUCCESS zurückgegeben wird)|  
+|Ergebnis|Bedeutung (wenn SQL_SUCCESS zurückgegeben wird)|  
 |-----------|-----------------------------------------------|  
-|0|*hcandidateconnetction* darf für den *hrequest*nicht wieder verwendet werden.|  
-|Alle Werte zwischen 1 und 98 (einschließlich)|Je höher das Ergebnis, desto näher die *hcandidateconnetzction* mit *hrequest*.|  
-|99|Es gibt nur falsche Übereinstimmungen in unbedeutenden Attributen.  Der Treiber-Manager sollte die Bewertungs Schleife abbrechen.|  
-|100|Perfekte Entsprechung.  Der Treiber-Manager sollte die Bewertungs Schleife abbrechen.|  
-|Jeder andere Wert größer als 100|*hcandidateconnetction* ist als unzustellbar gekennzeichnet und wird auch in einer zukünftigen Verbindungsanforderung nicht wieder verwendet.|  
+|0|*hCandidateConnection* darf für *hRequest*nicht wiederverwendet werden.|  
+|Alle Werte zwischen 1 und 98 (inklusive)|Je höher die Punktzahl, desto näher ist die Übereinstimmung von *hCandidateConnection* mit *hRequest*.|  
+|99|Es gibt nur Inkongruenzen in unbedeutenden Attributen.  Der Treiber-Manager sollte die Bewertungsschleife beenden.|  
+|100|PerfekteS Match.  Der Treiber-Manager sollte die Bewertungsschleife beenden.|  
+|Jeder andere Wert größer als 100|*hCandidateConnection* ist als tot markiert und wird auch in einer zukünftigen Verbindungsanforderung nicht wiederverwendet.|  
   
- Der Treiber-Manager markiert eine Verbindung als unzustellbar, wenn der Rückgabecode etwas anderes als SQL_SUCCESS (einschließlich SQL_SUCCESS_WITH_INFO) oder die Bewertung größer als 100 ist. Diese unzustellbare Verbindung wird nicht wieder verwendet (auch bei zukünftigen Verbindungsanforderungen) und wird schließlich nach dem Durchlaufen von CPTimeout überschritten. Der Treiber-Manager findet weiterhin eine weitere Verbindung aus dem Pool, um die Rate zu bewerten.  
+ Der Treiber-Manager markiert eine Verbindung als tot, wenn der Rückgabecode etwas anderes als SQL_SUCCESS (einschließlich SQL_SUCCESS_WITH_INFO) ist oder die Bewertung größer als 100 ist. Diese tote Verbindung wird nicht wiederverwendet (auch in zukünftigen Verbindungsanforderungen) und wird schließlich nach dem Verstreich von CPTimeout zeitumzichert. Der Treiber-Manager sucht weiterhin eine weitere Verbindung aus dem Pool, um zu bewerten.  
   
- Wenn der Treiber-Manager eine Verbindung wieder verwendet, deren Ergebnis streng kleiner als 100 (einschließlich 99) ist, ruft der Treiber-Manager SQLSetConnectAttr (SQL_ATTR_DBC_INFO_TOKEN) auf, um die Verbindung wieder in den von der Anwendung angeforderten Zustand zurückzusetzen. Der Treiber sollte die Verbindung in diesem Funktions aufrufsbefehl nicht zurücksetzen.  
+ Wenn der Treiber-Manager eine Verbindung wiederverwendet hat, deren Punktzahl deutlich kleiner als 100 ist (einschließlich 99), ruft der Treiber-Manager SQLSetConnectAttr(SQL_ATTR_DBC_INFO_TOKEN) auf, um die Verbindung wieder in den von der Anwendung angeforderten Zustand zurückzusetzen. Der Treiber sollte die Verbindung in diesem Funktionsaufruf nicht zurücksetzen.  
   
- Wenn *frequiredtransaktionslistment* auf true festgelegt ist, benötigt die Wiederverwendung von *hcandidateconnetction* eine zusätzliche Eintragung (*Transid* ! = null) oder austragungs Zeichen (*Transid* = = null). Dies gibt die Kosten für die Wiederverwendung einer Verbindung an und gibt an, ob der Treiber die Verbindung eintragen und austragen soll, wenn die Verbindung wieder verwendet werden soll. Wenn *frequiretransaktionslistment* den Wert false hat, sollte der Treiber den Wert *Transid*ignorieren.  
+ Wenn *fRequiredTransactionEnlistment* TRUE ist, benötigt die Wiederverwendung von *hCandidateConnection* eine zusätzliche Registrierung (*transId* != NULL) oder unenlistment (*transId* == NULL). Dies gibt die Kosten für die Wiederverwendung einer Verbindung an und ob der Treiber die Verbindung ein- und ausschreiben soll, wenn er die Verbindung wiederverwenden möchte. Wenn *fRequireTransactionEnlistment* FALSE ist, sollte der Treiber den Wert von *transId*ignorieren.  
   
- Der Treiber-Manager garantiert, dass das übergeordnete HENV-Handle von *hrequest* und *hcandidateconnetction* identisch ist. Der Treiber-Manager garantiert, dass die der *hrequest* -und *hcandidateconnetction* zugeordneten Pool-IDs identisch sind.  
+ Der Treiber-Manager garantiert, dass das übergeordnete HENV-Handle von *hRequest* und *hCandidateConnection* identisch ist. Der Treiber-Manager garantiert, dass die Pool-ID, die *hRequest* und *hCandidateConnection* zugeordnet ist, identisch ist.  
   
- Anwendungen sollten diese Funktion nicht direkt aufzurufen. Ein ODBC-Treiber, der Treiber fähiges Verbindungspooling unterstützt, muss diese Funktion implementieren.  
+ Anwendungen sollten diese Funktion nicht direkt aufrufen. Ein ODBC-Treiber, der treiberbewusstes Verbindungspooling unterstützt, muss diese Funktion implementieren.  
   
- Fügen Sie sqlspi. h für die ODBC-Treiberentwicklung ein.  
+ Fügen Sie sqlspi.h für die ODBC-Treiberentwicklung ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Entwickeln eines ODBC-Treibers](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Treiber fähiges Verbindungs Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
+ [Treiber-Aware-Verbindungspooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Developing Connection-Pool Awareness in an ODBC Driver (Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber)](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

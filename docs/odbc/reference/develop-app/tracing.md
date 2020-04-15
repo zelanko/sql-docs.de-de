@@ -1,5 +1,5 @@
 ---
-title: Ablauf Verfolgung | Microsoft-Dokumentation
+title: Ablaufverfolgung | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - tracing options [ODBC], about tracing
 - driver manager [ODBC], tracing
 ms.assetid: 77ed4c6c-d976-4eb2-8526-a12697b0ef83
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1a00861365df27357099176151bcd681e15e585e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4a08047409b203916fe5403cf28802d8570647cf
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67985115"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298047"
 ---
 # <a name="tracing"></a>Ablaufverfolgung
-Der ODBC-Treiber-Manager verfügt über eine Ablauf Verfolgungs Funktion, mit der die Abfolge von Funktionsaufrufen durch eine ODBC-Anwendung aufgezeichnet und in eine Protokolldatei umgewandelt werden kann. Die Ablauf Verfolgung wird von einer Trace-dll ausgeführt, die Aufrufe zwischen der Anwendung und dem Treiber-Manager sowie zwischen dem Treiber-Manager und dem Treiber erfasst. Diese Methode der Ablauf Verfolgung ersetzt die vom ODBC 2 *. x* -Treiber-Manager ausgeführte Ablauf Verfolgung und die in ODBC 2 *. x* durchgeführte Ablauf Verfolgung durch ODBC Spy.  
+Der ODBC-Treiber-Manager verfügt über eine Ablaufverfolgungsfunktion, mit der die Sequenz von Funktionsaufrufen einer ODBC-Anwendung aufgezeichnet und in eine Protokolldatei transkribiert werden kann. Die Ablaufverfolgung wird durch eine Ablaufverfolgungs-DLL durchgeführt, die Aufrufe zwischen der Anwendung und dem Treiber-Manager sowie zwischen dem Treiber-Manager und dem Treiber erfasst. Diese Methode der Ablaufverfolgung ersetzt die Ablaufverfolgung, die vom ODBC 2 *.x* Driver Manager und der in ODBC 2 *.x* von ODBC Spy ausgeführten Ablaufverfolgung durchgeführt wird.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Ablaufverfolgungs-DLL](../../../odbc/reference/develop-app/trace-dll.md)  
   
--   [Ablaufverfolgungsdatei](../../../odbc/reference/develop-app/trace-file.md)  
+-   [Trace-Datei](../../../odbc/reference/develop-app/trace-file.md)  
   
 -   [Aktivieren der Ablaufverfolgung](../../../odbc/reference/develop-app/enabling-tracing.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Festlegen und Festlegen von Deskriptorfeldern | Microsoft-Dokumentation
+title: Abrufen und Festlegen von Deskriptorfeldern | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], retrieving or setting field values
 ms.assetid: 394fe500-803d-463f-ae95-f8eb87b66bc8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 930a062477fa1459413ea98073d3ca13a574a82e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 783dc26316032dd8441b72fea04d2c03596e791e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139063"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305541"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>Abrufen und Festlegen von Deskriptorfeldern
-In diesem Abschnitt werden die Methoden beschrieben, die eine Anwendung verwenden kann, um die Werte in Deskriptorfeldern abzurufen oder festzulegen.  
+In diesem Abschnitt werden die Methoden beschrieben, mit denen eine Anwendung die Werte in Deskriptorfeldern abrufen oder festlegen kann.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Abrufen von Deskriptorhandles](../../../odbc/reference/develop-app/obtaining-descriptor-handles.md)  
   

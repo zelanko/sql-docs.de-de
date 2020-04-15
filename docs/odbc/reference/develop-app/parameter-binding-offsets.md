@@ -1,5 +1,5 @@
 ---
-title: Parameter Bindungs Offsets | Microsoft-Dokumentation
+title: Parameterbindungsversätze | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - offsets of parameters [ODBC]
 - binding offsets of parameters [ODBC]
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d0dbddc71b0d647246d10dad16ad72d533df16de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: de67b230883f3cf8a582e73ce82e8c4bd7d21ad0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023348"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282490"
 ---
 # <a name="parameter-binding-offsets"></a>Offsets der Parameterbindung
-Eine Anwendung kann angeben, dass ein Offset zu gebundenen Parameter Puffer Adressen und die entsprechenden Längen-/indikatorpufferadressen hinzugefügt werden, wenn **SQLExecDirect** oder **SQLExecute** aufgerufen wird. Das Ergebnis dieser Ergänzungen bestimmt die Adressen, die in diesen Vorgängen verwendet werden.  
+Eine Anwendung kann angeben, dass ein Offset zu gebundenen Parameterpufferadressen und den entsprechenden Längen-/Indikatorpufferadressen hinzugefügt wird, wenn **SQLExecDirect** oder **SQLExecute** aufgerufen wird. Das Ergebnis dieser Ergänzungen bestimmt die Adressen, die in diesen Vorgängen verwendet werden.  
   
- Bindungs Offsets ermöglichen es einer Anwendung, Bindungen zu ändern, ohne dass **SQLBindParameter** für zuvor gebundene Parameter aufgerufen wird. Durch einen **SQLBindParameter** -Befehl zum erneuten Binden eines Parameters werden die Puffer Adresse und der Längen-/indikatorenzeiger geändert. Durch die erneute Bindung mit einem Offset wird hingegen einfach der vorhandene gebundene Parameter Puffer Adresse und der Länge/Indikator-Puffer Adresse ein Offset hinzugefügt. Wenn Offsets verwendet werden, sind die Bindungen eine "Vorlage" für die Art und Weise, wie die Anwendungs Puffer angelegt werden, und die Anwendung kann diese "Vorlage" durch Ändern des Offsets in verschiedene Speicherbereiche verschieben. Ein neuer Offset kann jederzeit angegeben werden und wird immer den ursprünglich gebundenen Werten hinzugefügt.  
+ Bindungsoffsets ermöglichen es einer Anwendung, Bindungen zu ändern, ohne **SQLBindParameter** für zuvor gebundene Parameter aufzurufen. Ein Aufruf von **SQLBindParameter** zum erneuten Binden eines Parameters ändert die Pufferadresse und den Längen-/Indikatorzeiger. Die Neubindung mit einem Offset hingegen fügt der vorhandenen gebundenen Parameterpufferadresse und Längen-/Indikatorpufferadresse einfach einen Offset hinzu. Wenn Offsets verwendet werden, sind die Bindungen eine "Vorlage" dafür, wie die Anwendungspuffer angeordnet sind, und die Anwendung kann diese "Vorlage" in verschiedene Speicherbereiche verschieben, indem sie den Offset ändert. Ein neuer Offset kann jederzeit angegeben werden und wird immer zu den ursprünglich gebundenen Werten hinzugefügt.  
   
- Um einen Bindungs Offset anzugeben, legt die Anwendung das SQL_ATTR_PARAM_BIND_OFFSET_PTR Statement-Attribut auf die Adresse eines SQLINTEGER-Puffers fest. Bevor die Anwendung eine Funktion aufruft, die die Bindungen verwendet, platziert Sie einen Offset in Bytes in diesem Puffer, sofern weder die Parameter Puffer Adresse noch die Länge/Indikator-Puffer Adresse 0 ist und der gebundene Parameter in der SQL-Anweisung vorliegt. Die Summe der Adresse und des Offsets muss eine gültige Adresse sein. (Dies bedeutet, dass entweder der Offset und die Adresse, zu der der Offset hinzugefügt wird, ungültig sein können, solange die Summe eine gültige Adresse ist.)  
+ Um einen Bindungsoffset anzugeben, legt die Anwendung das SQL_ATTR_PARAM_BIND_OFFSET_PTR-Anweisungsattribut auf die Adresse eines SQLINTEGER-Puffers fest. Bevor die Anwendung eine Funktion aufruft, die die Bindungen verwendet, platziert sie einen Offset in Bytes in diesem Puffer, solange weder die Parameterpufferadresse noch die Length/Indicator-Pufferadresse 0 ist und der gebundene Parameter in der SQL-Anweisung liegt. Die Summe der Adresse und des Offsets muss eine gültige Adresse sein. (Dies bedeutet, dass entweder der Offset oder die Adresse, der der Offset hinzugefügt wird, ungültig sein kann, solange ihre Summe eine gültige Adresse ist.)  
   
 > [!NOTE]  
->  Bindungs Offsets werden von ODBC 2 nicht unterstützt. *x* -Treiber.
+>  Bindungsoffsets werden von ODBC 2 nicht unterstützt. *x-Treiber.*

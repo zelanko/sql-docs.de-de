@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten einer SQL-Anweisung | Microsoft-Dokumentation
+title: Verarbeiten einer SQL-Anweisung | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ helpviewer_keywords:
 - SQL statements [ODBC]
 - ODBC [ODBC], SQL
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dfbf23f0be369ae540dac33d33a3e3c1505d5ebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 349a62034d598c1bfb44b891b91359d5ff184b7e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076282"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280520"
 ---
 # <a name="processing-a-sql-statement"></a>Verarbeiten von SQL-Anweisungen
-Bevor Sie die Techniken zur programmgesteuerten Verwendung von SQL erörtern, muss erläutert werden, wie eine SQL-Anweisung verarbeitet wird. Die erforderlichen Schritte gelten für alle drei Techniken, obwohl die einzelnen Techniken Sie zu unterschiedlichen Zeitpunkten ausführen. In der folgenden Abbildung werden die Schritte zum Verarbeiten einer SQL-Anweisung gezeigt, die im restlichen Teil dieses Abschnitts erläutert werden.  
+Bevor Sie die Techniken für die programmgesteuerte Verwendung von SQL diskutieren, müssen Sie die Verarbeitung einer SQL-Anweisung besprechen. Die beteiligten Schritte sind allen drei Techniken gemeinsam, obwohl jede Technik sie zu unterschiedlichen Zeiten ausführt. Die folgende Abbildung zeigt die Schritte bei der Verarbeitung einer SQL-Anweisung, die im weiteren Verlauf dieses Abschnitts erläutert werden.  
   
  ![Schritte zum Verarbeiten einer SQL-Anweisung](../../odbc/reference/media/pr01.gif "pr01")  
   
- Ein DBMS führt die folgenden fünf Schritte aus, um eine SQL-Anweisung zu verarbeiten:  
+ Um eine SQL-Anweisung zu verarbeiten, führt ein DBMS die folgenden fünf Schritte aus:  
   
-1.  Das DBMS analysiert zunächst die SQL-Anweisung. Die Anweisung wird in einzelne Wörter unterteilt, die als Token bezeichnet werden, und es wird sichergestellt, dass die Anweisung über ein gültiges Verb und gültige Klauseln verfügt usw. In diesem Schritt können Syntax Fehler und falsche Rechtschreib folgen erkannt werden.  
+1.  Das DBMS analysiert zuerst die SQL-Anweisung. Es teilt die Anweisung in einzelne Wörter auf, die als Token bezeichnet werden, stellt sicher, dass die Anweisung über ein gültiges Verb und gültige Klauseln verfügt usw. In diesem Schritt können Syntaxfehler und Rechtschreibfehler erkannt werden.  
   
-2.  Das DBMS überprüft die-Anweisung. Die-Anweisung wird anhand des System Katalogs überprüft. Sind alle Tabellen, die in der-Anweisung benannt sind, in der Datenbank vorhanden? Sind alle Spalten vorhanden, und sind die Spaltennamen eindeutig? Verfügt der Benutzer über die erforderlichen Berechtigungen zum Ausführen der Anweisung? Bestimmte Semantik Fehler können in diesem Schritt erkannt werden.  
+2.  Das DBMS überprüft die Anweisung. Die Anweisung wird mit dem Systemkatalog überprüft. Sind alle in der Anweisung genannten Tabellen in der Datenbank vorhanden? Sind alle Spalten vorhanden und sind die Spaltennamen eindeutig? Verfügt der Benutzer über die erforderlichen Berechtigungen zum Ausführen der Anweisung? In diesem Schritt können bestimmte semantische Fehler erkannt werden.  
   
-3.  Das DBMS generiert einen Zugriffs Plan für die-Anweisung. Der Zugriffs Plan ist eine binäre Darstellung der Schritte, die erforderlich sind, um die Anweisung auszuführen. Dies ist die DBMS-Entsprechung von ausführbarem Code.  
+3.  Das DBMS generiert einen Zugriffsplan für die Anweisung. Der Zugriffsplan ist eine binäre Darstellung der Schritte, die zum Ausführen der Anweisung erforderlich sind. Es ist das DBMS-Äquivalent von ausführbarem Code.  
   
-4.  Das DBMS optimiert den Zugriffs Plan. Es werden verschiedene Möglichkeiten zum Durchführen des Zugriffs Plans untersucht. Kann ein Index verwendet werden, um eine Suche zu beschleunigen? Sollte das DBMS zuerst eine Such Bedingung auf Tabelle a anwenden und es dann mit Tabelle B verknüpfen, oder sollte es mit dem Join beginnen und danach die Such Bedingung verwenden? Kann eine sequenzielle Suche durch eine Tabelle vermieden oder auf eine Teilmenge der Tabelle reduziert werden? Nach dem untersuchen der alternativen wählt das DBMS eine davon aus.  
+4.  Das DBMS optimiert den Zugriffsplan. Es werden verschiedene Möglichkeiten zur Durchführung des Zugangsplans untersucht. Kann ein Index verwendet werden, um eine Suche zu beschleunigen? Soll das DBMS zunächst eine Suchbedingung auf Tabelle A anwenden und dann mit Tabelle B verknüpfen, oder sollte es mit der Verknüpfung beginnen und die Suchbedingung danach verwenden? Kann eine sequenzielle Suche durch eine Tabelle vermieden oder auf eine Teilmenge der Tabelle reduziert werden? Nachdem das DBMS die Alternativen untersucht hat, wählt es eine davon aus.  
   
-5.  Das DBMS führt die Anweisung durch Ausführen des Zugriffs Plans aus.  
+5.  Das DBMS führt die Anweisung aus, indem es den Zugriffsplan ausführt.  
   
- Die Schritte, die zum Verarbeiten einer SQL-Anweisung verwendet werden, variieren je nach Umfang des benötigten Datenbankzugriffs und der benötigten Zeit. Die Ausführung einer SQL-Anweisung erfordert keinen Zugriff auf die Datenbank und kann sehr schnell erfolgen. Die Optimierung ist dagegen ein sehr CPU-intensiver Prozess und erfordert Zugriff auf den System Katalog. Bei einer komplexen, Multitable-Abfrage kann der Optimierer tausende unterschiedlicher Methoden zum Ausführen derselben Abfrage untersuchen. Die Kosten für eine ineffiziente Ausführung der Abfrage sind jedoch in der Regel so hoch, dass die für die Optimierung aufgewendeten Zeit mehr als eine höhere Ausführungsgeschwindigkeit bei der Abfrage ist. Dies ist noch wichtiger, wenn ein optimierter Zugriffs Plan immer wieder verwendet werden kann, um wiederkehrende Abfragen auszuführen.
+ Die Schritte, die zum Verarbeiten einer SQL-Anweisung verwendet werden, variieren in der Menge des Datenbankzugriffs, den sie benötigen, und der Zeit, die sie benötigen. Das Analysieren einer SQL-Anweisung erfordert keinen Zugriff auf die Datenbank und kann sehr schnell durchgeführt werden. Die Optimierung hingegen ist ein sehr CPU-intensiver Prozess und erfordert Zugriff auf den Systemkatalog. Bei einer komplexen Abfrage mit mehreren Tabellen kann der Optimierer Tausende von verschiedenen Möglichkeiten zur Durchführung derselben Abfrage untersuchen. Die Kosten für die ineffiziente Ausführung der Abfrage sind jedoch in der Regel so hoch, dass die für die Optimierung aufgew. Dies ist umso wichtiger, wenn derselbe optimierte Zugriffsplan immer wieder verwendet werden kann, um sich wiederholende Abfragen auszuführen.
