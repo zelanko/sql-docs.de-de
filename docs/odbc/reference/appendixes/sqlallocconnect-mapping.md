@@ -1,5 +1,5 @@
 ---
-title: Sqlordcconnect-Zuordnung | Microsoft-Dokumentation
+title: SQLAllocConnect-Zuordnung | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SQLAllocConnect function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLAllocConnect
 ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 65c23f41ea9176c460c8fb32ece5e74dfb803541
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 25e72cd3830cea8504983f4348f6c200261490f4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68065023"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305521"
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect-Zuordnung
-Wenn eine Anwendung **sqlzucconnect** über einen ODBC 3 aufruft. *x* -Treiber: der Befehl **sqlzuordcconnect**(*HENV*, *phdbc*) wird **sqlzuzuordchandle** wie folgt zugeordnet:  
+Wenn eine Anwendung **SQLAllocConnect** über einen ODBC 3 aufruft. *x-Treiber* wird der Aufruf von **SQLAllocConnect**(*henv*, *phdbc*) **SQLAllocHandle** wie folgt zugeordnet:  
   
-1.  Der Treiber-Manager weist eine Verbindung zu und gibt Sie an die Anwendung zurück.  
+1.  Der Treiber-Manager weist eine Verbindung zu und gibt sie an die Anwendung zurück.  
   
 2.  Wenn die Anwendung eine Verbindung herstellt, ruft der Treiber-Manager  
   
@@ -31,4 +31,4 @@ Wenn eine Anwendung **sqlzucconnect** über einen ODBC 3 aufruft. *x* -Treiber: 
     SQLAllocHandle(SQL_HANDLE_DBC, InputHandle, OutputHandlePtr)  
     ```  
   
-     im Treiber, bei dem *InputHandle* auf *HENV*festgelegt ist und *outputhandleptr* auf *phdbc*festgelegt ist.
+     im Treiber mit *InputHandle* auf *henv*gesetzt und *OutputHandlePtr* auf *phdbc*gesetzt.

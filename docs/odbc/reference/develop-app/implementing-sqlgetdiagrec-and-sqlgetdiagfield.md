@@ -1,5 +1,5 @@
 ---
-title: Implementieren von SQLGetDiagRec und SQLGetDiagField | Microsoft-Dokumentation
+title: Implementieren von SQLGetDiagRec und SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4c090af19a9296e46e3036ca23f6c97298bcb1b8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68216378"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300140"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Implementieren von SQLGetDiagRec und SQLGetDiagField
-**SQLGetDiagRec** und **SQLGetDiagField** werden vom Treiber-Manager und den einzelnen Treibern implementiert. Der Treiber-Manager und jeder Treiber behalten Diagnosedaten Sätze für jede Umgebung, jede Verbindung, jede Anweisung und dieses Deskriptorhandle bei und gibt diese Datensätze nur frei, wenn eine andere Funktion mit diesem Handle aufgerufen oder das Handle freigegeben wird.  
+**SQLGetDiagRec** und **SQLGetDiagField** werden vom Treiber-Manager und jedem Treiber implementiert. Der Treiber-Manager und jeder Treiber verwalten Diagnosedatensätze für jede Umgebung, verbindung, Anweisung und Deskriptor-Handle, und geben diese Datensätze nur dann frei, wenn eine andere Funktion mit diesem Handle aufgerufen wird oder das Handle freigegeben wird.  
   
- Obwohl sowohl der Treiber-Manager als auch der Treiber den ersten Statusdaten Satz gemäß der [Rangfolge der Statusdaten Sätze](../../../odbc/reference/develop-app/sequence-of-status-records.md)bestimmen müssen, bestimmt der Treiber-Manager die endgültige Sequenz von Datensätzen.  
+ Obwohl sowohl der Treiber-Manager als auch jeder Treiber den ersten Statusdatensatz entsprechend den Rankings in [der Sequenz von Statusdatensätzen](../../../odbc/reference/develop-app/sequence-of-status-records.md)bestimmen müssen, bestimmt der Treiber-Manager die endgültige Sequenz der Datensätze.  
   
- **SQLGetDiagRec** und **SQLGetDiagField** veröffentlichen keine Diagnosedaten Sätze über sich selbst.  
+ **SQLGetDiagRec** und **SQLGetDiagField** veröffentlichen keine Diagnosedatensätze über sich selbst.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Regeln der Diagnosebehandlung](../../../odbc/reference/develop-app/diagnostic-handling-rules.md)  
   

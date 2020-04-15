@@ -1,5 +1,5 @@
 ---
-title: Von SQLGetInfo zurückgegebene Werte für Paradox | Microsoft-Dokumentation
+title: SQLGetInfo zurückgegebene Werte für Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ helpviewer_keywords:
 - Paradox driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8745580b1e478c2cfa9548887affb64e07322779
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d53d912941079865328ab97fae0f0f814a76114
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898819"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298530"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>Von SQLGetInfo zurückgegebenen Werte für Paradox
-In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argument und die von **SQLGetInfo**zurückgegebenen Werte aufgelistet. Diese Informationen können abgerufen werden, indem die im *finfotype* -Argument aufgeführte C-Sprache #defines an **SQLGetInfo** übergeben wird. Weitere Informationen zu den von **SQLGetInfo**zurückgegebenen Werten finden Sie in der *ODBC Programmer es Reference*.  
+In der folgenden Tabelle sind die C-Sprache #defines für das *fInfoType-Argument* und die entsprechenden Werte aufgeführt, die von **SQLGetInfo**zurückgegeben werden. Diese Informationen können abgerufen werden, indem sie die aufgelistete C-Sprache #defines im *FInfoType-Argument* an **SQLGetInfo** übergeben. Weitere Informationen zu den von **SQLGetInfo**zurückgegebenen Werten finden Sie in der *ODBC-Programmiererreferenz*.  
   
 > [!NOTE]  
->  Wenn **SQLGetInfo** eine 32-Bit-Bitmaske zurückgibt, stellt ein vertikaler Strich (&#124;) ein bitweises OR dar.  
+>  Wenn **SQLGetInfo** eine 32-Bit-Bitmaske zurückgibt, stellt ein vertikaler Balken (&#124;) ein bitweises ODER dar.  
   
-|Infotype|Rückgabewert|  
+|Infotyp|Rückgabewert|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Alle festgelegt|  
+|SQL_AGGREGATE_FUNCTIONS|Alle sets|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|Mehrere Werte|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|Befinden|  
+|SQL_CATALOG_TERM|"Verzeichnis"|  
 |SQL_CATALOG_USAGE|Mehrere Werte|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Der DSN aus ODBC. ini oder "", wenn das Treiber Schlüsselwort in "ODBC. ini" verwendet wird.|  
-|SQL_DATA_SOURCE_READ_ONLY|"N" (hängt von der Datenquelle ab)|  
+|SQL_DATA_SOURCE_NAME|Die DSN von Odbc.ini oder "", wenn DRIVER-Schlüsselwort in Odbc.ini verwendet wird|  
+|SQL_DATA_SOURCE_READ_ONLY|"N" (Dies hängt von der Datenquelle ab.)|  
 |SQL_DATABASE_NAME|Aktuelles Datenbankverzeichnis|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|Gewissen|  
+|SQL_DBMS_NAME|"PARADOX"|  
 |SQL_DBMS_VER|Mehrere Werte|  
 |SQL_DDL_INDEX|Mehrere Werte|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Wird vom Treiber-Manager verarbeitet.|  
-|SQL_DRIVER_HENV|Wird vom Treiber-Manager verarbeitet.|  
-|SQL_DRIVER_HLIB|Wird vom Treiber-Manager verarbeitet.|  
-|SQL_DRIVER_HSTMT|Wird vom Treiber-Manager verarbeitet.|  
-|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
+|SQL_DRIVER_HDBC|Vom Treiber-Manager behandelt.|  
+|SQL_DRIVER_HENV|Vom Treiber-Manager behandelt.|  
+|SQL_DRIVER_HLIB|Vom Treiber-Manager behandelt.|  
+|SQL_DRIVER_HSTMT|Vom Treiber-Manager behandelt.|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* gibt das Builddatum an)|  
+|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn* gibt das Builddatum an)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_GETDATA_EXTENSIONS|Mehrere Werte|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (zurück Anführungszeichen)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (Zitat zurück)|  
 |SQL_KEYWORDS|Mehrere Werte|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -119,7 +119,7 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_MAX_CHAR_LITERAL_LEN|255|  
 |SQL_MAX_COLUMN_NAME_LEN|25|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 (Limit unbekannt oder nicht zutreffend)|  
+|SQL_MAX_COLUMNS_IN_INDEX|0 (Limit Unbekannt oder Nicht anwendbar)|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  
@@ -141,9 +141,9 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Mehrere Werte|  
-|SQL_ODBC_SAG_CLI_ Konformität|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Aus Treiber-Manager|  
+|SQL_ODBC_VER|Vom Treiber-Manager|  
 |SQL_OJ_CAPABILITIES|Mehrere Werte|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Mehrere Werte|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|Gewissen|  
-|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ';:?/><,.! " [] &#124; "|  
+|SQL_SERVER_NAME|"PARADOX"|  
+|SQL_SPECIAL_CHARACTERS|"-%"\`&*_-+=\\"";:?/><,.!' []&#124;"|  
 |SQL_STRING_FUNCTIONS|Mehrere Werte|  
 |SQL_SUBQUERIES|Mehrere Werte|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|Glaub|  
+|SQL_TABLE_TERM|"TABELLE"|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Mehrere Werte|  

@@ -1,5 +1,5 @@
 ---
-title: Implementierungs Hinweise | Microsoft-Dokumentation
+title: Erläuterungen zur Umsetzung | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 95b60ba35a867135cfc1f823e08b1a99f0262ca9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 970188a2fca45706405e398cece0f04d38dfdc68
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135744"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284311"
 ---
 # <a name="implementation-notes"></a>Hinweise zur Implementierung
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
   
- In diesem Abschnitt wird beschrieben, wie die ODBC-Cursor Bibliothek implementiert wird. Es wird beschrieben, wie die Cursor Bibliothek den Cache beibehält, SQL-Anweisungen ausführt und ODBC-Funktionen implementiert.  
+ In diesem Abschnitt wird beschrieben, wie die ODBC-Cursorbibliothek implementiert wird. Es beschreibt, wie die Cursorbibliothek ihren Cache verwaltet, SQL-Anweisungen ausführt und ODBC-Funktionen implementiert.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
--   [Cache der Cursorbibliothek](../../../odbc/reference/appendixes/cursor-library-cache.md)  
+-   [Cursorbibliothek-Cache](../../../odbc/reference/appendixes/cursor-library-cache.md)  
   
--   [Verarbeiten von SQL-Anweisungen](../../../odbc/reference/appendixes/processing-sql-statements.md)  
+-   [Erstellen von SQL-Anweisungen](../../../odbc/reference/appendixes/processing-sql-statements.md)  
   
 -   [ODBC-Funktionen und die Cursorbibliothek](../../../odbc/reference/appendixes/odbc-functions-and-the-cursor-library.md)

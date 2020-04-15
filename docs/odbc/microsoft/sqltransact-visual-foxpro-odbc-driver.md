@@ -1,5 +1,5 @@
 ---
-title: SQLtransact (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
+title: SQLTransact (Visual FoxPro ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLTransact function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 92cf86c0-f7a8-44d7-b59f-a1342677440b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e554a8669b6e6e95e234a5b939477a8bb2f7b8cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3910f24578bcbc409a84573e994c0680ed5949b2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948864"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299220"
 ---
 # <a name="sqltransact-visual-foxpro-odbc-driver"></a>SQLTransact (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro ODBC-Treiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: vollständig  
+ Support: Voll  
   
- ODBC-API-Konformität: kernstufe  
+ ODBC-API-Konformität: Kernebene  
   
- Fordert einen Commit-oder Rollback-Vorgang für alle aktiven Vorgänge für alle Anweisungs Handles (*hstmt*s) an, die einer Verbindung zugeordnet sind, oder für alle Verbindungen, die dem Umgebungs Handle, *HENV*, zugeordnet sind. **SQLTransact** funktioniert nur für Datenquellen, bei denen es sich um Daten [Banken](../../odbc/microsoft/visual-foxpro-terminology.md)handelt.  
+ Fordert einen Commit- oder Rollbackvorgang für alle aktiven Vorgänge für alle Anweisungshandles *(hstmt*s) an, die einer Verbindung zugeordnet sind, oder für alle Verbindungen, die mit dem Umgebungshandle, *henv*, verknüpft sind. **SQLTransact** funktioniert nur für Datenquellen, die [Datenbanken](../../odbc/microsoft/visual-foxpro-terminology.md)sind.  
   
- Wenn ein Commit im manuellen Modus fehlschlägt, bleibt die Transaktion aktiv. Sie können für die Transaktion ein Rollback ausführen oder den Commit-Vorgang wiederholen. Wenn ein Commitvorgang im automatischen Transaktionsmodus fehlschlägt, wird für die Transaktion automatisch ein Rollback ausgeführt. die Transaktion kann nicht inaktiv sein.  
+ Wenn ein Commit im manuellen Modus fehlschlägt, bleibt die Transaktion aktiv. Sie können einen Rollback für die Transaktion oder einen erneuten Vorgang des Commits auswählen. Wenn ein Commit-Vorgang im automatischen Transaktionsmodus fehlschlägt, wird ein automatischer Rollback für die Transaktion ausgeführt. Die Transaktion kann nicht inaktiv sein.  
   
- Weitere Informationen finden Sie unter [SQLTransact](../../odbc/reference/syntax/sqltransact-function.md) in der *ODBC Programmer es Reference*.
+ Weitere Informationen finden Sie unter [SQLTransact](../../odbc/reference/syntax/sqltransact-function.md) in der *ODBC-Programmiererreferenz*.

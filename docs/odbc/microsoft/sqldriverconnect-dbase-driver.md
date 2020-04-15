@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (dBase-Treiber) | Microsoft-Dokumentation
+title: SQLDriverConnect (dBASE-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], dBASE Driver
 ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 238931112d55214c239dab732f951a197d359615
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 39d3d062ef8371ce37f812216cbb642d103eff98
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053920"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302921"
 ---
 # <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect (dBASE-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Informationen zu dBASE-Treibern. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält dBASE-Treiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLDriverConnect** ermöglicht Ihnen das Herstellen einer Verbindung mit einem Treiber, ohne eine Datenquelle (DSN) zu erstellen.  
+ **Mit SQLDriverConnect** können Sie eine Verbindung zu einem Treiber herstellen, ohne eine Datenquelle (DSN) zu erstellen.  
   
- Die folgenden Schlüsselwörter werden in der Verbindungs Zeichenfolge für alle Treiber unterstützt: **DSN**, **DBQ**und **fil**.  
+ Die folgenden Schlüsselwörter werden in der Verbindungszeichenfolge für alle Treiber unterstützt: **DSN**, **DBQ**und **FIL**.  
   
- Wenn der Paradox-Treiber verwendet wird, können andere Benutzer die Datei nicht öffnen, nachdem eine Kenn Wort geschützte Datei von einem Benutzer geöffnet wurde.  
+ Wenn der Paradox-Treiber verwendet wird, nachdem eine kennwortgeschützte Datei von einem Benutzer geöffnet wurde, dürfen andere Benutzer dieselbe Datei nicht öffnen.  
   
- In der folgenden Tabelle sind die minimalen Schlüsselwörter aufgeführt, die zum Herstellen einer Verbindung mit den einzelnen Treibern erforderlich sind, sowie ein Beispiel für Schlüsselwort-Wert-Paare, die mit **SQLDriverConnect** Eine vollständige Liste der DriverID-Werte finden Sie unter [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).  
+ Die folgende Tabelle zeigt die minimalen Schlüsselwörter, die zum Herstellen einer Verbindung mit jedem Treiber erforderlich sind, und enthält ein Beispiel für Schlüsselwort-Wert-Paare, die mit **SQLDriverConnect**verwendet werden. Eine vollständige Liste der DRIVERID-Werte finden Sie unter [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).  
   
 > [!NOTE]  
->  Wenn DBQ oder DefaultDir für dbasedriver nicht angegeben wird, stellt der Treiber eine Verbindung mit dem aktuellen Verzeichnis her.  
+>  Wenn DBQ oder DefaultDir für den dBASEdriver nicht angegeben ist, stellt der Treiber eine Verbindung mit dem aktuellen Verzeichnis her.  
   
 |Treiber|Schlüsselwörter erforderlich|Beispiele|  
 |------------|-----------------------|--------------|  
-|dBASE|Treiber, DriverID|Treiber = {Microsoft dBase-Treiber (*. dbf)}; Dbq = c:\temp; DriverID = 277|
+|Dbase|Treiber, DriverID|Driver= 'Microsoft dBASE Driver (*.dbf)'; DBQ=c:-temp; TreiberID=277|

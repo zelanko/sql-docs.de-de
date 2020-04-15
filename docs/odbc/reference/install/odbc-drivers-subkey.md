@@ -1,5 +1,5 @@
 ---
-title: Unterschlüssel für ODBC-Treiber | Microsoft-Dokumentation
+title: ODBC-Treiber-Subkey | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - registry entries for components [ODBC], drivers subkey
 - drivers subkey [ODBC]
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eb54ba7becad42d8d9d2c2870c02db37a3c7d89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dd1f8d3293e35a543cce6b5079d9c6e10a331a88
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093980"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304031"
 ---
 # <a name="odbc-drivers-subkey"></a>Unterschlüssel für ODBC-Treiber
-Mit den Werten unter dem Unterschlüssel ODBC-Treiber werden die installierten Treiber aufgelistet. Das Format dieser Werte wird in der folgenden Tabelle dargestellt.  
+Die Werte unter dem Unterschlüssel ODBC-Treiber listen die installierten Treiber auf. Das Format dieser Werte wird in der folgenden Tabelle angezeigt.  
   
-|Name|Datentyp|Data|  
+|Name|Datentyp|Daten|  
 |----------|---------------|----------|  
-|*Treiber Beschreibung*|REG_SZ|**Lierter**|  
+|*Treiberbeschreibung*|REG_SZ|**Installiert**|  
   
- Der *Treiber Beschreibungs* Name wird vom Treiber Entwickler definiert. Dies ist normalerweise der Name des DBMS, das dem Treiber zugeordnet ist.  
+ Der Name der *Treiberbeschreibung* wird vom Treiberentwickler definiert. Es ist in der Regel der Name des DBMS, das dem Treiber zugeordnet ist.  
   
- Nehmen wir beispielsweise an, dass Treiber für formatierte Textdateien und SQL Server installiert wurden. Die Werte unter dem Unterschlüssel ODBC-Treiber können wie folgt lauten:  
+ Angenommen, es wurden Treiber für formatierte Textdateien und SQL Server installiert. Die Werte unter dem Unterschlüssel ODBC-Treiber können wie:  
   
 ```  
 Text : REG_SZ : Installed  

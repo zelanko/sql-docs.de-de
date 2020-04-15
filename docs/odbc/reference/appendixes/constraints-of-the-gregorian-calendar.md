@@ -1,5 +1,5 @@
 ---
-title: Einschränkungen des gregorianischen Kalenders | Microsoft-Dokumentation
+title: Einschränkungen des Gregorianischen Kalenders | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - data types [ODBC], Gregorian calendar
 - Gregorian calendar [ODBC]
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f67d313f5a1261dba1f88e9ef3a70d30c1cd503
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f88842c7426e17af1fdc0533b8b97e2c559de237
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019185"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284760"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>Einschränkungen des gregorianischen Kalenders
-Die Datums-und datetime-Datentypen und die nachfolgenden Felder der Intervall Datentypen müssen den Einschränkungen des gregorianischen Kalenders entsprechen. Diese Einschränkungen lauten wie folgt:  
+Datums- und Datumszeitdatentypen sowie die nachfolgenden Felder von Intervalldatentypen müssen den Einschränkungen des Gregorianischen Kalenders entsprechen. Diese Einschränkungen lauten wie folgt:  
   
--   Der Wert des Monats Felds muss zwischen 1 und 12 (einschließlich) liegen.  
+-   Der Wert des Monatsfelds muss zwischen 1 und 12 liegen, einschließlich.  
   
--   Der Wert des Tages Felds muss zwischen 1 und der Anzahl der Tage im Monat liegen. Die Anzahl der Tage im Monat wird von den Werten der Felder Jahr und Monat bestimmt und kann 28, 29, 30 oder 31 sein. (Die Anzahl der Tage im Monat kann auch davon abhängen, ob es sich um ein Schaltjahr handelt.)  
+-   Der Wert des Felds "Tag" muss im Bereich von 1 bis zur Anzahl der Tage im Monat liegen. Die Anzahl der Tage im Monat wird anhand der Werte der Felder "Jahr" und "Monate" ermittelt und kann 28, 29, 30 oder 31 betragen. (Die Anzahl der Tage im Monat kann auch davon abhängen, ob es sich um ein Schaltjahr handelt.)  
   
--   Der Wert des Felds "Hour" muss zwischen 0 und 23 (einschließlich) liegen.  
+-   Der Wert des Stundenfelds muss zwischen 0 und 23 liegen, einschließlich.  
   
--   Der Wert des Felds Minute muss zwischen 0 und 59 (einschließlich) liegen.  
+-   Der Wert des Minutenfelds muss zwischen 0 und 59 liegen, einschließlich.  
   
--   Im Feld "nachfolgende Sekunden" der Intervall Datentypen muss der Wert des Felds "seconds" zwischen 0 und 59,9 (*n*) (einschließlich) liegen, wobei *n* die Anzahl der Ziffern in der Genauigkeit der Sekundenbruchteile ist.  
+-   Für das Nachspiel Sekunden der Intervalldatentypen muss der Wert des Sekundenfelds zwischen 0 und 59,9(n) liegen, *einschließlich,* wobei n die Anzahl der Ziffern in der Sekundengenauigkeit ist.*n*  
   
--   Im Feld "nachfolgende Sekunden" der DateTime-Datentypen muss der Wert des Felds "seconds" zwischen 0 und 61,9 (*n*) (einschließlich) liegen, wobei *n* die Anzahl von 9 Ziffern angibt und der Wert von *n* die Genauigkeit der Sekundenbruchteile ist. (Der Bereich von Sekunden lässt bis zu zwei Schaltsekunden zu, um die Synchronisierung der zeitgleich zeitig beizubehalten.)
+-   Für das Feld "Nachsekunden" der Datetime-Datentypen muss der Wert des Sekundenfelds zwischen 0 und 61,9(*n*) liegen, einschließlich, wobei *n* die Anzahl der "9"-Ziffern angibt und der Wert von *n* die Sekundengenauigkeit ist. (Der Sekundenbereich erlaubt bis zu zwei Schaltsekunden, um die Synchronisation der Siderealzeit aufrechtzuerhalten.)

@@ -1,5 +1,5 @@
 ---
-title: SQL-Konformitäts Ebenen | Microsoft-Dokumentation
+title: SQL-Konformitätsstufen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7862b2e3a86c6d98a51c73ecb470d59bcfe29dc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 875330ac78588566b4b1c212f7a65d2841127a61
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107524"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301381"
 ---
 # <a name="sql-conformance-levels"></a>SQL-Übereinstimmungsebenen
-Die von einem Treiber unterstützte Ebene der SQL-92-Grammatik wird durch den Wert angegeben, der von einem **SQLGetInfo** -Aufgabentyp mit dem SQL_SQL_CONFORMANCE Informationstyp zurückgegeben wird. Dies gibt an, ob der Treiber dem Eintrag, der in SQL-92 definierten Übergangs-, zwischen-oder vollständigen Ebene entspricht.  
+Die von einem Treiber unterstützte SQL-92-Grammatikebene wird durch den Wert angegeben, der von einem Aufruf von **SQLGetInfo** mit dem SQL_SQL_CONFORMANCE-Informationstyp zurückgegeben wird. Dies gibt an, ob der Treiber den in SQL-92 definierten Ebenen Entry, FIPS Transitional, Intermediate oder Full entspricht.  
   
- Alle ODBC-Treiber müssen die minimale SQL-Grammatik unterstützen, die in Anhang C: SQL-Grammatik [unter minimale SQL](../../../odbc/reference/appendixes/sql-minimum-grammar.md) -Grammatik beschrieben wird. Diese Grammatik ist eine Teilmenge der Einstiegsebene von SQL-92. Treiber unterstützen möglicherweise zusätzliche SQL und sind mit dem SQL-92-Eintrag, der zwischen-oder der vollständigen Ebene oder der Übergangsstufe "fps 127-2" konform. Treiber, die einer bestimmten Stufe von SQL-92 127-2 oder der Funktion "SQL-" entsprechen, können zusätzliche Features unterstützen, die in einer der höheren Ebenen noch nicht vollständig kompatibel sind. Um zu ermitteln, ob eine Funktion unterstützt wird, sollte eine Anwendung **SQLGetInfo** mit dem entsprechenden Informationstyp aufrufen. Der Konformitäts Grad einer SQL-Funktion wird im entsprechenden Informationstyp beschrieben. (Weitere Informationen finden Sie in der Beschreibung der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) -Funktion.)
+ Alle ODBC-Treiber müssen die in [SQL Minimum Grammar](../../../odbc/reference/appendixes/sql-minimum-grammar.md) in Anhang C: SQL Grammar beschriebene Mindestsql-Grammatik unterstützen. Diese Grammatik ist eine Teilmenge der Einstiegsebene von SQL-92. Treiber unterstützen möglicherweise zusätzliche SQL und sind der SQL-92-Einstiegs-, Zwischen- oder Vollebene oder der FIPS 127-2-Übergangsebene entsprechend. Treiber, die eine bestimmte SQL-92- oder FIPS 127-2-Stufe erfüllen, können zusätzliche Funktionen in einer der höheren Ebenen unterstützen, aber nicht vollständig an diese Ebene angepasst sein. Um zu bestimmen, ob ein Feature unterstützt wird, sollte eine Anwendung **SQLGetInfo** mit dem entsprechenden Informationstyp aufrufen. Die Konformitätsstufe eines SQL-Features wird im entsprechenden Informationstyp beschrieben. (Siehe [sqlGetInfo-Funktionsbeschreibung.)](../../../odbc/reference/syntax/sqlgetinfo-function.md)

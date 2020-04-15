@@ -1,5 +1,5 @@
 ---
-title: Erstellen von interoperablen SQL-Anweisungen | Microsoft-Dokumentation
+title: Erstellen interoperabler SQL-Anweisungen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 87ad7b8b36c80d86e0c3ac0335dd6f348a30c7bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1eccdef63b7d06a456a07f5f1a9ccad987d2de29
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002243"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282514"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Konstruieren von interoperablen SQL­-Anweisungen
-Wie in den vorherigen Abschnitten erwähnt, sollten interoperable Anwendungen die ODBC-SQL-Grammatik verwenden. Abgesehen von der Verwendung dieser Grammatik werden von interoperablen Anwendungen jedoch einige zusätzliche Probleme verursacht. Was bewirkt eine Anwendung beispielsweise, wenn Sie eine Funktion verwenden möchten, z. b. äußere Joins, die nicht von allen Datenquellen unterstützt wird?  
+Wie in den vorherigen Abschnitten erwähnt, sollten interoperable Anwendungen die ODBC SQL-Grammatik verwenden. Abgesehen von der Verwendung dieser Grammatik sind jedoch eine Reihe zusätzlicher Probleme mit interoperablen Anwendungen konfrontiert. Was macht eine Anwendung beispielsweise, wenn sie ein Feature verwenden möchte, z. B. äußere Verknüpfungen, das nicht von allen Datenquellen unterstützt wird?  
   
- An diesem Punkt muss der anwendungswriter einige Entscheidungen darüber treffen, welche sprach Features erforderlich und welche optional sind. In den meisten Fällen kann die Anwendung nur mit diesem Treiber ausgeführt werden, wenn ein bestimmter Treiber keine von der Anwendung benötigte Funktion unterstützt. Wenn das Feature jedoch optional ist, kann die Anwendung das Feature umgehen. Beispielsweise können diese Teile der Schnittstelle deaktiviert werden, die dem Benutzer die Verwendung der Funktion ermöglichen.  
+ An dieser Stelle muss der Anwendungsschreiber einige Entscheidungen darüber treffen, welche Sprachfeatures erforderlich und welche optional sind. In den meisten Fällen weigert sich die Anwendung einfach, mit diesem Treiber zu arbeiten, wenn ein bestimmter Treiber eine von der Anwendung benötigte Funktion nicht unterstützt. Wenn die Funktion jedoch optional ist, kann die Anwendung das Feature umgehen. Beispielsweise können die Teile der Schnittstelle deaktiviert werden, die es dem Benutzer ermöglichen, die Funktion zu verwenden.  
   
- Um zu ermitteln, welche Features unterstützt werden, beginnen Anwendungen mit dem Aufruf von **SQLGetInfo** mit der Option SQL_SQL_CONFORMANCE. Die SQL-Kompatibilitäts Ebene gibt der Anwendung einen allgemeinen Überblick darüber, welche SQL unterstützt wird. Um diese Ansicht zu verfeinern, ruft die Anwendung **SQLGetInfo** mit einer beliebigen Anzahl anderer Optionen auf. Eine umfassende Liste dieser Optionen finden Sie in der Beschreibung der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) -Funktion. Schließlich gibt **SQLGetTypeInfo** Informationen zu den Datentypen zurück, die von der Datenquelle unterstützt werden. In den folgenden Abschnitten werden einige mögliche Faktoren aufgelistet, die Anwendungen beim Erstellen interoperabel SQL-Anweisungen beobachten sollten.  
+ Um zu bestimmen, welche Features unterstützt werden, rufen Anwendungen **SQLGetInfo** mit der Option SQL_SQL_CONFORMANCE auf. Die SQL-Konformitätsebene gibt der Anwendung eine umfassende Ansicht, welche SQL unterstützt wird. Um diese Ansicht zu verfeinern, ruft die Anwendung **SQLGetInfo** mit einer reihe anderer Optionen auf. Eine vollständige Liste dieser Optionen finden Sie in der [SQLGetInfo-Funktionsbeschreibung.](../../../odbc/reference/syntax/sqlgetinfo-function.md) Schließlich gibt **SQLGetTypeInfo** Informationen zu den von der Datenquelle unterstützten Datentypen zurück. In den folgenden Abschnitten werden eine Reihe möglicher Faktoren aufgeführt, auf die Anwendungen beim Erstellen interoperabler SQL-Anweisungen achten sollten.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Katalog- und Schemaverwendung](../../../odbc/reference/develop-app/catalog-and-schema-usage.md)  
   

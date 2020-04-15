@@ -1,5 +1,5 @@
 ---
-title: Cursor Verhalten | Microsoft-Dokumentation
+title: Cursorverhalten | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sensitivity behavior of cursor
 - ODBC cursors, cursor behaviors
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06a19a173fdd6f70b19e9a63c214616909708eec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f2e3400e52cd0b7574c07a3cf813b4cbca317df2
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784734"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305466"
 ---
 # <a name="cursor-behaviors"></a>Cursorverhalten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ODBC unterstützt die ISO-Optionen für die Definition des Verhaltens von Cursorn durch Angabe ihrer Bildlauffähigkeit und Sensitivität. Diese Verhaltensweisen werden angegeben, indem die Optionen SQL_ATTR_CURSOR_SCROLLABLE und SQL_ATTR_CURSOR_SENSITIVITY bei einem [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)-Befehl festgelegt werden. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber implementiert diese Optionen, indem er Servercursor mit den folgenden Eigenschaften anfordert.  
+  ODBC unterstützt die ISO-Optionen für die Definition des Verhaltens von Cursorn durch Angabe ihrer Bildlauffähigkeit und Sensitivität. Diese Verhaltensweisen werden durch Festlegen der SQL_ATTR_CURSOR_SCROLLABLE- und SQL_ATTR_CURSOR_SENSITIVITY-Optionen für einen Aufruf von [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)angegeben. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber implementiert diese Optionen, indem er Servercursor mit den folgenden Eigenschaften anfordert.  
   
 |Einstellungen für das Cursorverhalten|Angeforderte Servercursoreigenschaften|  
 |------------------------------|---------------------------------------------|  
@@ -42,15 +42,15 @@ ms.locfileid: "73784734"
 |SQL_NONSCROLLABLE und SQL_INSENSITIVE|Standardresultset (Vorwärts, schreibgeschützt)|  
 |SQL_NONSCROLLABLE und SQL_UNSPECIFIED|Standardresultset (Vorwärts, schreibgeschützt)|  
   
- Versions basierte vollständige Parallelität erfordert eine **Zeitstempel** -Spalte in der zugrunde liegenden Tabelle. Wenn eine Versions basierte vollständige Parallelitäts Steuerung für eine Tabelle angefordert wird, die keine **Zeitstempel** -Spalte aufweist, verwendet der Server wertebasierte vollständige Parallelität.  
+ Versionsbasierte optimistische Parallelität erfordert eine **Zeitstempelspalte** in der zugrunde liegenden Tabelle. Wenn eine versionsbasierte optimistische Parallelitätssteuerung für eine Tabelle angefordert wird, die keine **Zeitstempelspalte** enthält, verwendet der Server eine wertbasierte optimistische Parallelität.  
   
 ## <a name="scrollability"></a>Bildlauffähigkeit  
- Wenn SQL_ATTR_CURSOR_SCROLLABLE auf SQL_SCROLLABLE festgelegt ist, unterstützt der Cursor alle unterschiedlichen Werte für den *FetchOrientation* -Parameter von [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Wenn SQL_ATTR_CURSOR_SCROLLABLE auf SQL_NONSCROLLABLE festgelegt ist, unterstützt der Cursor nur einen *FetchOrientation* -Wert von SQL_FETCH_NEXT.  
+ Wenn SQL_ATTR_CURSOR_SCROLLABLE auf SQL_SCROLLABLE festgelegt ist, unterstützt der Cursor alle verschiedenen Werte für den *FetchOrientation-Parameter* von [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Wenn SQL_ATTR_CURSOR_SCROLLABLE auf SQL_NONSCROLLABLE festgelegt ist, unterstützt der Cursor nur den *FetchOrientation-Wert* von SQL_FETCH_NEXT.  
   
 ## <a name="sensitivity"></a>Sensitivität  
  Wenn SQL_ATTR_CURSOR_SENSITIVITY auf SQL_SENSITIVE festgelegt ist, spiegelt der Cursor Datenänderungen wider, die vom aktuellen Benutzer oder über Commitvorgänge anderer Benutzer ausgeführt werden. Wenn SQL_ATTR_CURSOR_SENSITIVITY auf SQL_INSENSITIVE festgelegt ist, spiegelt der Cursor keine Datenänderungen wider.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- Verwenden von [Cursor Eigenschaften](properties/cursor-properties.md) [(ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) 
+ [Verwenden von Cursors (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) [Cursor-Eigenschaften](properties/cursor-properties.md) 
   
   

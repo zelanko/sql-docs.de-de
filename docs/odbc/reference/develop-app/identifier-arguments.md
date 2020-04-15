@@ -1,5 +1,5 @@
 ---
-title: Bezeichnerargumente | Microsoft-Dokumentation
+title: Identifier-Argumente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,27 +12,27 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93cf744cf105762fb90a92049d6698e67a19d58c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6831eab30daebe37baecebe3ed7053537d7de8f8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138995"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300160"
 ---
 # <a name="identifier-arguments"></a>Bezeichnerargumente
-Wenn eine Zeichenfolge in einem bezeichnerargument in Anführungszeichen gesetzt wird, entfernt der Treiber führende und nachfolgende Leerzeichen und behandelt die Zeichenfolge innerhalb der Anführungszeichen. Wenn die Zeichenfolge nicht in Anführungszeichen eingeschlossen wird, entfernt der Treiber nachfolgende Leerzeichen und fasst die Zeichenfolge in Großbuchstaben um. Wenn ein bezeichnerargument auf einen NULL-Zeiger festgelegt wird, wird SQL_ERROR und SQLSTATE HY009 (Ungültige Verwendung des NULL-Zeigers) zurückgegeben, es sei denn, das Argument ist ein Katalog Name, und Kataloge  
+Wenn eine Zeichenfolge in einem Bezeichnerargument zitiert wird, entfernt der Treiber führende und nachfolgende Leerzeichen und behandelt buchstäblich die Zeichenfolge innerhalb der Anführungszeichen. Wenn die Zeichenfolge nicht zitiert wird, entfernt der Treiber nachfolgende Leerzeichen und faltet die Zeichenfolge in Großbuchstaben. Wenn Sie ein Bezeichnerargument auf einen Nullzeiger festlegen, werden SQL_ERROR und SQLSTATE HY009 (Ungültige Verwendung von NULL-Zeiger) zurückgegeben, es sei denn, das Argument ist ein Katalogname, und Kataloge werden nicht unterstützt.  
   
- Diese Argumente werden als bezeichnerargumente behandelt, wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist. In diesem Fall ist der Unterstrich (_) und das Prozentzeichen (%). wird als das eigentliche Zeichen und nicht als Suchmuster behandelt. Diese Argumente werden entweder als normales Argument oder Muster Argument behandelt, je nach Argument, wenn dieses Attribut auf SQL_FALSE festgelegt ist.  
+ Diese Argumente werden als Bezeichnerargumente behandelt, wenn das Attribut SQL_ATTR_METADATA_ID Anweisung auf SQL_TRUE festgelegt ist. In diesem Fall werden der Unterstrich (_) und das Prozentzeichen (%) werden als das tatsächliche Zeichen und nicht als Suchmusterzeichen behandelt. Diese Argumente werden je nach Argument entweder als gewöhnliches Argument oder als Musterargument behandelt, wenn dieses Attribut auf SQL_FALSE festgelegt ist.  
   
- Obwohl Bezeichner, die Sonderzeichen enthalten, in SQL-Anweisungen angegeben werden müssen, dürfen Sie nicht in Anführungszeichen eingeschlossen werden, wenn Sie als Katalog Funktionsargumente übermittelt werden, da an Katalog Funktionen übergebenen Anführungszeichen buchstäblich interpretiert werden Nehmen wir beispielsweise an, dass das bezeichneranführungs Zeichen (das Treiber spezifisch und durch **SQLGetInfo**zurückgegeben wird) ein doppeltes Anführungszeichen (") ist. Der erste **SQLTables** -Befehl gibt ein Resultset zurück, das Informationen über die Tabelle mit den zu zahlenden Konten enthält, während der zweite-Rückruf Informationen über die Tabelle "Konten bezahlt" zurückgibt, die wahrscheinlich nicht beabsichtigt war.  
+ Obwohl Bezeichner, die Sonderzeichen enthalten, in SQL-Anweisungen zitiert werden müssen, dürfen sie nicht zitiert werden, wenn sie als Katalogfunktionsargumente übergeben werden, da An katalogfunktionen übergebene Anführungszeichen wörtlich interpretiert werden. Angenommen, das Bezeichneranführungszeichen (das treiberspezifisch ist und über **SQLGetInfo**zurückgegeben wird) ist ein doppeltes Anführungszeichen ("). Der erste Aufruf von **SQLTables** gibt ein Resultset zurück, das Informationen über die Tabelle "Kreditorenkonten" enthält, während der zweite Aufruf Informationen über die Tabelle "Accounts Payable" zurückgibt, was wahrscheinlich nicht beabsichtigt ist.  
   
 ```  
 SQLTables(hstmt1, NULL, 0, NULL, 0, "Accounts Payable", SQL_NTS, NULL, 0);  
 SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);  
 ```  
   
- Bezeichner in Anführungszeichen werden verwendet, um einen echten Spaltennamen von einer Pseudo Spalte mit demselben Namen, wie z. b. ROWID in Oracle, zu unterscheiden. Wenn "ROWID" in einem Argument einer Katalog Funktion übermittelt wird, funktioniert die Funktion mit der ROWID-Pseudo Spalte, sofern vorhanden. Wenn die Pseudo Spalte nicht vorhanden ist, kann die Funktion mit der Spalte "ROWID" verwendet werden. Wenn ROWID in einem Argument einer Katalog Funktion übermittelt wird, funktioniert die Funktion mit der ROWID-Spalte.  
+ Zitierte Bezeichner werden verwendet, um einen echten Spaltennamen von einer Pseudospalte mit demselben Namen zu unterscheiden, z. B. ROWID in Oracle. Wenn "ROWID" in einem Argument einer Katalogfunktion übergeben wird, funktioniert die Funktion mit der ROWID-Pseudospalte, falls vorhanden. Wenn die Pseudospalte nicht vorhanden ist, funktioniert die Funktion mit der Spalte "ROWID". Wenn ROWID in einem Argument einer Katalogfunktion übergeben wird, funktioniert die Funktion mit der ROWID-Spalte.  
   
- Weitere Informationen zu [Bezeichnern in Anführungszeichen finden Sie](../../../odbc/reference/develop-app/quoted-identifiers.md)unter Bezeichner in Anführungszeichen.
+ Weitere Informationen zu angesetzten Bezeichnern finden Sie unter [Quoted Identifiers](../../../odbc/reference/develop-app/quoted-identifiers.md).

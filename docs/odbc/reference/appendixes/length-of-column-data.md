@@ -1,5 +1,5 @@
 ---
-title: Länge der Spaltendaten | Microsoft-Dokumentation
+title: Länge der Spaltendaten | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: c762c881-ebe0-4eac-84d5-f30281fc3eca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d2998eace4772624a1e6590ab2541577147f5c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d0b7ad515661cce4c5b1d407be768cc3da131bb4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041610"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304931"
 ---
 # <a name="length-of-column-data"></a>Länge von Spaltendaten
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
   
- Die Cursor Bibliothek erstellt einen Puffer im Cache für jeden length/Indicator-Puffer, der an das Resultset mit **SQLBindCol**gebunden ist. Die Werte in diesen Puffern werden verwendet, um eine **Where** -Klausel zu erstellen, wenn Sie positionierte UPDATE-oder DELETE-Anweisungen emuliert. Diese Puffer werden von den rowsetpuffern aktualisiert, wenn Daten aus der Datenquelle abgerufen und positionierte UPDATE-Anweisungen ausgeführt werden.  
+ Die Cursorbibliothek erstellt einen Puffer im Cache für jeden Längen-/Indikatorpuffer, der mit **SQLBindCol**an das Resultset gebunden ist. Es verwendet die Werte in diesen Puffern, um eine **WHERE-Klausel** zu erstellen, wenn es positionierte Aktualisierungs- oder Löschanweisungen emuliert. Es aktualisiert diese Puffer aus den Rowset-Puffern, wenn Daten aus der Datenquelle abgerufen werden und wenn positionierte Aktualisierungsanweisungen ausgeführt werden.  
   
- Wenn der C-Typ eines Daten Puffers SQL_C_CHAR oder SQL_C_BINARY ist und der Wert für die Länge/Anzeige SQL_NTS ist, wird die Zeichen folgen Länge der Daten in den Längen-/Indikatorpuffer eingefügt.  
+ Wenn der C-Typ eines Datenpuffers SQL_C_CHAR oder SQL_C_BINARY ist und der Längen-Indikator-Wert SQL_NTS ist, wird die Zeichenfolgenlänge der Daten in den Längen-/Indikatorpuffer eingefügt.  
   
 > [!NOTE]  
->  Die Cursor Bibliothek aktualisiert Ihren Cache für eine Spalte nicht, wenn **StrLen_or_IndPtr* im entsprechenden rowsetpuffer SQL_DATA_AT_EXEC oder das Ergebnis des SQL_LEN_DATA_AT_EXEC Makros ist.
+>  Die Cursorbibliothek aktualisiert ihren Cache für eine Spalte nicht, wenn **StrLen_or_IndPtr* im entsprechenden Rowset-Puffer SQL_DATA_AT_EXEC oder das Ergebnis des SQL_LEN_DATA_AT_EXEC-Makros ist.

@@ -1,5 +1,5 @@
 ---
-title: SQLFetch (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
+title: SQLFetch (Visual FoxPro ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLFetch function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 6198a006-6f25-4328-8403-2aba29b7041f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0087234d48c60779d783a934c99767b2a3613306
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6179dc5eccb6bf28d59f511965997bdef8b82d43
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053770"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304141"
 ---
 # <a name="sqlfetch-visual-foxpro-odbc-driver"></a>SQLFetch (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro ODBC-Treiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: vollständig  
+ Support: Voll  
   
- ODBC-API-Konformität: kernstufe  
+ ODBC-API-Konformität: Kernebene  
   
- Ruft eine Zeile aus einem Resultset in die Speicherorte ab, die von den vorherigen Aufrufen von [SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md)angegeben wurden. Bereitet den Treiber für einen [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) -aufrufswert für die ungebundenen Spalten vor.  
+ Ruft eine Zeile aus einem Resultset in die Speicherorte ab, die durch die vorherigen Aufrufe von [SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md)angegeben wurden. Bereitet den Treiber für einen Aufruf von [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) für die ungebundenen Spalten vor.  
   
- Weitere Informationen finden Sie unter [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) in der *ODBC Programmer es Reference*.
+ Weitere Informationen finden Sie unter [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) in der *ODBC-Programmiererreferenz*.

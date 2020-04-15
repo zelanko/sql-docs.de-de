@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions | Microsoft-Dokumentation
+title: SQLGetFunctions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLGetFunctions function
 ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4588e453087e71a55b104c997129a93de2edf1a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ba11e930640c87c25fe5b2d300fdd3a857534e30
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786310"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299651"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiberschnittstelle entspricht den drei definierten Konformitätsstufen für ODBC (ISO, Open Group und ODBC Level 2). **SQLGetFunctions** meldet, dass alle ODBC-Funktionen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt werden.  
+  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiberschnittstelle entspricht den drei definierten Konformitätsstufen für ODBC (ISO, Open Group und ODBC Level 2). **SQLGetFunctions** berichtet, dass alle ODBC-Funktionen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client ODBC-Treiber unterstützt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLGetFunctions-Funktion](https://go.microsoft.com/fwlink/?LinkId=59353)   

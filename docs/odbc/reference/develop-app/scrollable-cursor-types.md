@@ -1,5 +1,5 @@
 ---
-title: Scrollbare Cursor Typen | Microsoft-Dokumentation
+title: Scrollbare Cursortypen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,33 +11,33 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 63f29269ea209875a2e775cf8d523302fcb9a976
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061629"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304231"
 ---
 # <a name="scrollable-cursor-types"></a>Scrollbare Cursortypen
-Die vier Typen von scrollfähigen Cursorn sind statisch, dynamisch, keysetgesteuert und gemischt. Statische Cursor erkennen wenige oder keine Änderungen, sind aber relativ kostengünstig zu implementieren. Dynamische Cursor erkennen alle Änderungen, sind aber aufwendig zu implementieren. Keysetgesteuerte und gemischte Cursor befinden sich dazwischen und erkennen die meisten Änderungen, aber weniger Kosten als dynamische Cursor.  
+Die vier Typen von scrollbaren Cursorn sind statisch, dynamisch, Keyset-gesteuert und gemischt. Statische Cursor erkennen nur wenige oder keine Änderungen, sind aber relativ kostengünstig zu implementieren. Dynamische Cursor erkennen alle Änderungen, sind jedoch teuer zu implementieren. Keyset-gesteuerte und gemischte Cursor liegen dazwischen und erkennen die meisten Änderungen, jedoch mit weniger Kosten als dynamische Cursor.  
   
- Die folgenden Begriffe werden verwendet, um die Merkmale der einzelnen scrollfähigen Cursor Typen zu definieren:  
+ Die folgenden Begriffe werden verwendet, um die Eigenschaften der einzelnen Scroll-Cursortypen zu definieren:  
   
--   **Eigene Updates, Löschungen und Einfügungen.** Aktualisierungen, Löschungen und Einfügungen, die über den Cursor durchgeführt werden, entweder durch einen **SQLBulkOperations** -oder **SQLSetPos** -Befehl oder eine positionierte UPDATE-oder DELETE-Anweisung.  
+-   **Eigene Aktualisierungen, Löschungen und Einfügungen.** Aktualisierungen, Löschungen und Einfügungen, die über den Cursor erstellt werden, entweder mit einem Aufruf von **SQLBulkOperations** oder **SQLSetPos** oder mit einer positionierten Aktualisierungs- oder Löschanweisung.  
   
--   **Andere Updates, Löschungen und Einfügungen.** Updates, Löschungen und Einfügungen, die nicht vom Cursor vorgenommen werden, einschließlich derjenigen, die von anderen Vorgängen in derselben Transaktion, von anderen Transaktionen und von anderen Anwendungen vorgenommenen Vorgängen durchgeführt wurden.  
+-   **Andere Aktualisierungen, Löschungen und Einfügungen.** Aktualisierungen, Löschungen und Einfügungen, die nicht vom Cursor vorgenommen wurden, einschließlich der Vorgänge, die von anderen Vorgängen in derselben Transaktion, von anderen Transaktionen und von anderen Anwendungen vorgenommen wurden.  
   
--   **Mitglied.** Der Satz von Zeilen im Resultset.  
+-   **Mitgliedschaft.** Der Satz von Zeilen im Resultset.  
   
--   **Reihenfolge.** Die Reihenfolge, in der Zeilen vom Cursor zurückgegeben werden.  
+-   **Bestellung.** Die Reihenfolge, in der Zeilen vom Cursor zurückgegeben werden.  
   
--   **Werte.** Die Werte in den einzelnen Zeilen im Resultset.  
+-   **Werte.** Die Werte in jeder Zeile im Resultset.  
   
- Informationen zum Aktualisieren, löschen und Einfügen von Daten finden Sie unter Übersicht über das Aktualisieren von [Daten](../../../odbc/reference/develop-app/updating-data-overview.md).  
+ Informationen zum Aktualisieren, Löschen und Einfügen von Daten finden Sie unter Aktualisieren der [Datenübersicht](../../../odbc/reference/develop-app/updating-data-overview.md).  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Statische ODBC-Cursor](../../../odbc/reference/develop-app/odbc-static-cursors.md)  
   

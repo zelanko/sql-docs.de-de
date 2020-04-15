@@ -1,5 +1,5 @@
 ---
-title: Protokollierte und nicht protokollierte Änderungen | Microsoft-Dokumentation
+title: Protokollierte vs. nicht protokollierte Änderungen | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 502a4eeb657d4bc9e92a2cda25e152329b281567
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dc7fb913bef4083b045a0c1c010bdedbc43135c5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790604"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297664"
 ---
-# <a name="logged-vs-unlogged-modifications"></a>Protokollierte und nicht protokollierte Änderungen
+# <a name="logged-vs-unlogged-modifications"></a>Vergleich von protokollierten und nicht protokollierten Änderungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Eine Anwendung kann anfordern, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Native Client-ODBC-Treiber keine **Text**-, **ntext**-und **Image** -Änderungen protokolliert. Diese Option sollte jedoch mit Vorsicht eingesetzt werden. Er sollte nur für Situationen verwendet werden, in denen die **Text**-, **ntext**-oder **Image** -Daten nicht von entscheidender Bedeutung sind und Daten Besitzer bereit sind, die Fähigkeit zum Wiederherstellen von Daten für eine höhere Leistung abzuwägen.  
+  Eine Anwendung kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anfordern, dass der native Client ODBC-Treiber **keine Text-,** **ntext-** und **Bildänderungen** protokolliert. Diese Option sollte jedoch mit Vorsicht eingesetzt werden. Es sollte nur für Situationen verwendet werden, in denen die **Text-,** **ntext-** oder **Bilddaten** nicht kritisch sind und Datenbesitzer bereit sind, die Fähigkeit zur Wiederherstellung von Daten für eine höhere Leistung zu tauschen.  
   
- Die Protokollierung von **Text**-, **ntext**-und **Image** -Änderungen wird gesteuert, indem [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) aufgerufen wird, wobei der- *Attribut* Parameter auf SQL_SOPT_SS_ TEXTPTR_LOGGING und *ValuePtr* auf SQL_TL_ON oder SQL_TL_OFF festgelegt ist.  
+ Die Protokollierung von **Text-,** **ntext-** und **Bildänderungen** wird durch Aufrufen von [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) gesteuert, wobei der *Attributparameter* auf SQL_SOPT_SS_ TEXTPTR_LOGGING festgelegt ist und *ValuePtr* auf SQL_TL_ON oder SQL_TL_OFF festgelegt ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Text und Imagespalten](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  

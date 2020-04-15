@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM-Unterstützung (ODBC) | Microsoft-Dokumentation
+title: FILESTREAM-Support (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,32 +11,32 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], ODBC
 - ODBC, FILESTREAM support
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4e7d2e57b68ed9ab3ae117c543361f810952ba9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 29a7f6ae6cb26c5ddf27f6e495b5348ddd8fe006
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761197"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303741"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM-Unterstützung (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt die verbesserte FILESTREAM-Funktion. Weitere Informationen zu dieser Funktion finden Sie [unter FILESTREAM-Unterstützung](../../../relational-databases/native-client/features/filestream-support.md). Ein Beispiel zur Veranschaulichung der ODB-Unterstützung für FILESTREAM finden [Sie unter inkrementelles senden und empfangen von Daten mit FILESTREAM &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
+  ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt die verbesserte FILESTREAM-Funktion. Weitere Informationen zu dieser Funktion finden Sie unter [FILESTREAM Support](../../../relational-databases/native-client/features/filestream-support.md). Ein Beispiel, das die ODB-Unterstützung für FILESTREAM demonstriert, finden Sie unter [Senden und Empfangen von Daten inkrementell mit FILESTREAM &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
- Um **varbinary (max)** -Werte mit einer Größe von mehr als 2 GB zu senden und zu empfangen, muss eine Anwendung Parameter mit SQLBindParameter, wobei *ColumnSize* auf **SQL_SS_LENGTH_UNLIMITED**festgelegt ist, und den Inhalt der *StrLen_or_IndPtr* auf **SQL_DATA_AT_EXEC** vor SQLExecDirect oder SQLExecute festlegen.  
+ Um **varbinary(max)-Werte** größer als 2 GB zu senden und zu empfangen, muss eine Anwendung Parameter binden, indem sie SQLBindParameter mit *ColumnSize* auf **SQL_SS_LENGTH_UNLIMITED**festgelegt und den Inhalt von *StrLen_or_IndPtr* vor SQLExecDirect oder SQLExecute **auf SQL_DATA_AT_EXEC** festlegen.  
   
- Wie bei allen Data-at-Execution-Parametern werden die Daten mit SQLParamData und SQLPutData bereitgestellt.  
+ Wie bei jedem Data-at-Execution-Parameter werden die Daten mit SQLParamData und SQLPutData bereitgestellt.  
   
- Sie können SQLGetData aufrufen, um Daten in Blöcken für eine FILESTREAM-Spalte abzurufen, wenn die Spalte nicht an SQLBindCol gebunden ist.  
+ Sie können SQLGetData aufrufen, um Daten in Blöcken für eine FILESTREAM-Spalte abzurufen, wenn die Spalte nicht mit SQLBindCol verbunden ist.  
   
- Sie können FILESTREAM-Daten aktualisieren, wenn Sie an SQLBindCol gebunden sind.  
+ Sie können FILESTREAM-Daten aktualisieren, wenn sie mit SQLBindCol verbunden sind.  
   
- Wenn Sie SQLFetch für eine gebundene Spalte aufzurufen, wird die Warnung "Daten abgeschnitten" angezeigt, wenn der Puffer nicht groß genug ist, um den gesamten Wert zu speichern. Ignorieren Sie diese Warnung, und aktualisieren Sie die Daten in dieser gebundenen Spalte mit SQLParamData-und SQLPutData-aufrufen. Sie können FILESTREAM-Daten mithilfe von SQLSetPos aktualisieren, wenn Sie mit SQLBindCol gebunden sind.  
+ Wenn Sie SQLFetch für eine gebundene Spalte aufrufen, erhalten Sie eine Warnung "Daten abgeschnitten", wenn der Puffer nicht groß genug ist, um den gesamten Wert aufzunehmen. Ignorieren Sie diese Warnung, und aktualisieren Sie die Daten in dieser gebundenen Spalte mit SQLParamData- und SQLPutData-Aufrufen. Sie können FILESTREAM-Daten mithilfe von SQLSetPos aktualisieren, wenn sie mit SQLBindCol verbunden sind.  
   
 ## <a name="example"></a>Beispiel  
- FILESTREAM-Spalten Verhalten sich genau wie **varbinary (max)** -Spalten, aber ohne Größenbeschränkung. Sie werden als SQL_VARBINARY gebunden. (SQL_LONGVARBINARY wird mit Imagespalten verwendet, und es gelten Einschränkungen für diesen Typ. Beispielsweise SQL_LONGVARBINARY nicht als Output-Parameter verwendet werden.) In den folgenden Beispielen wird direkter NTFS-Zugriff für FILESTREAM-Spalten gezeigt. In diesen Beispielen wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Code in der Datenbank ausgeführt wurde:  
+ FILESTREAM-Spalten verhalten sich genau wie **varbinary(max)-Spalten,** jedoch ohne Größenbeschränkung. Sie werden als SQL_VARBINARY gebunden. (SQL_LONGVARBINARY wird mit Imagespalten verwendet, und es gelten Einschränkungen für diesen Typ. Beispielsweise SQL_LONGVARBINARY connot als Ausgabeparameter verwendet werden.) Die folgenden Beispiele zeigen den direkten NTFS-Zugriff für FILESTREAM-Spalten. In diesen Beispielen wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Code in der Datenbank ausgeführt wurde:  
   
 ```  
 CREATE TABLE fileStreamDocs(  

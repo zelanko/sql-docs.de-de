@@ -1,5 +1,5 @@
 ---
-title: Long Data und SQLSetPos und SQLBulkOperations | Microsoft-Dokumentation
+title: Lange Daten und SQLSetPos und SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,35 +14,35 @@ helpviewer_keywords:
 - updating data [ODBC], long data
 - SQLBulkOperations function [ODBC], long data
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 578c85331a65c15cb25b5d9b75b7156ab509e910
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4bc6c5d2da2f796a7c312971635fc36bc2fae8af
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036412"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287864"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long-Daten, SQLSetPos und SQLBulkOperations
-Wie bei Parametern in SQL-Anweisungen können lange Daten beim Aktualisieren von Zeilen mit **SQLBulkOperations** oder **SQLSetPos** oder beim Einfügen von Zeilen mit **SQLBulkOperations**gesendet werden. Die Daten werden in Teilen mit mehreren Aufrufen von **SQLPutData**gesendet. Spalten, für die Daten zur Ausführungszeit gesendet werden, werden als *Data-at-Execution-Spalten*bezeichnet.  
+Wie bei Parametern in SQL-Anweisungen können lange Daten gesendet werden, wenn Zeilen mit **SQLBulkOperations** oder **SQLSetPos** aktualisiert werden oder Zeilen mit **SQLBulkOperations**eingefügt werden. Die Daten werden in Teilen mit mehreren Aufrufen von **SQLPutData**gesendet. Spalten, für die Daten zur Ausführungszeit gesendet werden, werden als *Data-at-Execution-Spalten*bezeichnet.  
   
 > [!NOTE]  
->  Eine Anwendung kann alle Datentypen zur Ausführungszeit mit **SQLPutData**senden, obwohl nur Zeichen-und Binärdaten in Teilen gesendet werden können. Wenn die Daten jedoch klein genug sind, um in einen einzelnen Puffer zu passen, gibt es in der Regel keinen Grund, **SQLPutData**zu verwenden. Es ist viel einfacher, den Puffer zu binden, sodass der Treiber die Daten aus dem Puffer abrufen kann.  
+>  Eine Anwendung kann tatsächlich jede Art von Daten zur Ausführungszeit mit **SQLPutData**senden, obwohl nur Zeichen- und Binärdaten in Teilen gesendet werden können. Wenn die Daten jedoch klein genug sind, um in einen einzelnen Puffer zu passen, gibt es im Allgemeinen keinen Grund, **SQLPutData**zu verwenden. Es ist viel einfacher, den Puffer zu binden und den Treiber die Daten aus dem Puffer abrufen zu lassen.  
   
- Da lange Datenspalten in der Regel nicht gebunden werden, muss die Anwendung die Spalte vor dem Aufrufen von **SQLBulkOperations** oder **SQLSetPos** binden und die Bindung nach dem Aufrufen von **SQLBulkOperations** oder **SQLSetPos**aufheben. Die Spalte muss gebunden werden, da **SQLBulkOperations** oder **SQLSetPos** nur für gebundene Spalten funktioniert und die Bindung aufgehoben werden muss, damit **SQLGetData** zum Abrufen von Daten aus der Spalte verwendet werden kann.  
+ Da lange Datenspalten in der Regel nicht gebunden sind, muss die Anwendung die Spalte binden, bevor sie **SQLBulkOperations** oder **SQLSetPos** aufruft, und die Bindung nach dem Aufruf von **SQLBulkOperations** oder **SQLSetPos**aufkleben. Die Spalte muss gebunden werden, da **SQLBulkOperations** oder **SQLSetPos** nur für gebundene Spalten arbeitet und ungebunden sein muss, damit **SQLGetData** zum Abrufen von Daten aus der Spalte verwendet werden kann.  
   
- Zum Senden von Daten zur Ausführungszeit führt die Anwendung die folgenden Schritte aus:  
+ Um Daten zur Ausführungszeit zu senden, führt die Anwendung die folgenden Schritte aus:  
   
-1.  Platziert einen 32-Bit-Wert im rowsetpuffer anstelle eines Datenwerts. Dieser Wert wird später an die Anwendung zurückgegeben, sodass die Anwendung Sie auf einen sinnvollen Wert festlegen muss, z. b. die Nummer der Spalte oder das Handle einer Datei, die Daten enthält.  
+1.  Platziert einen 32-Bit-Wert im Rowset-Puffer anstelle eines Datenwerts. Dieser Wert wird später an die Anwendung zurückgegeben, daher sollte die Anwendung ihn auf einen aussagekräftigen Wert festlegen, z. B. die Nummer der Spalte oder das Handle einer Datei, die Daten enthält.  
   
-2.  Legt den Wert im Längen-/Indikatorpuffer auf das Ergebnis des SQL_LEN_DATA_AT_EXEC (*length*)-Makros fest. Dieser Wert gibt dem Treiber an, dass die Daten für den Parameter mit **SQLPutData**gesendet werden. Der *Längen* Wert wird verwendet, wenn lange Daten an eine Datenquelle gesendet werden, die wissen müssen, wie viele Bytes von langen Daten gesendet werden, damit der Speicherplatz vorab zugeordnet werden kann. Um zu ermitteln, ob eine Datenquelle diesen Wert erfordert, ruft die Anwendung **SQLGetInfo** mit der SQL_NEED_LONG_DATA_LEN-Option auf. Dieses Makro muss von allen Treibern unterstützt werden. Wenn die Datenquelle die Byte Länge nicht benötigt, kann Sie vom Treiber ignoriert werden.  
+2.  Legt den Wert im Längen-/Indikatorpuffer auf das Ergebnis des Makros*SQL_LEN_DATA_AT_EXEC(Länge*) fest. Dieser Wert gibt dem Treiber an, dass die Daten für den Parameter mit **SQLPutData**gesendet werden. Der *Längenwert* wird beim Senden langer Daten an eine Datenquelle verwendet, die wissen muss, wie viele Bytes langer Daten gesendet werden, damit Speicherplatz vorab zugewiesen werden kann. Um zu bestimmen, ob eine Datenquelle diesen Wert erfordert, ruft die Anwendung **SQLGetInfo** mit der Option SQL_NEED_LONG_DATA_LEN auf. Alle Treiber müssen dieses Makro unterstützen. Wenn die Datenquelle die Bytelänge nicht benötigt, kann der Treiber sie ignorieren.  
   
-3.  Ruft **SQLBulkOperations** oder **SQLSetPos**auf. Der Treiber ermittelt, dass ein Längen-/Indikatorpuffer das Ergebnis des SQL_LEN_DATA_AT_EXEC (*length*)-Makros enthält und SQL_NEED_DATA als Rückgabewert der Funktion zurückgibt.  
+3.  Ruft **SQLBulkOperations** oder **SQLSetPos**auf. Der Treiber stellt fest, dass ein Längen-/Indikatorpuffer das Ergebnis des*SQL_LEN_DATA_AT_EXEC-Makros*enthält und gibt SQL_NEED_DATA als Rückgabewert der Funktion zurück.  
   
-4.  Ruft **SQLParamData** als Reaktion auf den SQL_NEED_DATA Rückgabewert auf. Wenn Long-Daten gesendet werden müssen, gibt **SQLParamData** SQL_NEED_DATA zurück. Im Puffer, auf den das *ValuePtrPtr* -Argument zeigt, gibt der Treiber den eindeutigen Wert zurück, den die Anwendung in den rowsetpuffer eingefügt hat. Wenn mehr als eine Data-at-Execution-Spalte vorhanden ist, verwendet die Anwendung diesen Wert, um zu ermitteln, für welche Spalte Daten gesendet werden sollen. der Treiber muss keine Daten für Data-at-Execution-Spalten in einer bestimmten Reihenfolge anfordern.  
+4.  Ruft **SQLParamData** als Antwort auf den SQL_NEED_DATA Rückgabewert auf. Wenn lange Daten gesendet werden müssen, gibt **SQLParamData** SQL_NEED_DATA zurück. Im Puffer, auf den das *ValuePtrPtr-Argument* zeigt, gibt der Treiber den eindeutigen Wert zurück, den die Anwendung im Rowset-Puffer platziert hat. Wenn mehr als eine Data-at-Execution-Spalte vorhanden ist, verwendet die Anwendung diesen Wert, um zu bestimmen, für welche Spalte Daten gesendet werden sollen. Der Treiber ist nicht verpflichtet, Daten für Data-at-Execution-Spalten in einer bestimmten Reihenfolge anzufordern.  
   
-5.  Ruft **SQLPutData** auf, um die Spaltendaten an den Treiber zu senden. Wenn die Spaltendaten nicht in einen einzelnen Puffer passen, wie es häufig bei langen Daten der Fall ist, ruft die Anwendung **SQLPutData** wiederholt auf, um die Daten in Teilen zu senden. der Treiber und die Datenquelle müssen die Daten neu zuweisen. Wenn die Anwendung auf NULL endenden Zeichen folgen Daten übergibt, muss der Treiber oder die Datenquelle das NULL-Beendigungs Zeichen als Teil des neuzuordnungs Prozesses entfernen.  
+5.  Ruft **SQLPutData** auf, um die Spaltendaten an den Treiber zu senden. Wenn die Spaltendaten nicht in einen einzelnen Puffer passen, wie dies bei langen Daten häufig der Fall ist, ruft die Anwendung **SQLPutData** wiederholt auf, um die Daten in Teilen zu senden. Es liegt an dem Treiber und der Datenquelle, die Daten wieder zusammenzusetzen. Wenn die Anwendung null-beendete Zeichenfolgendaten übergibt, muss der Treiber oder die Datenquelle das NULL-Beendigungszeichen als Teil des Reassembly-Prozesses entfernen.  
   
-6.  Ruft **SQLParamData** erneut auf, um anzugeben, dass alle Daten für die Spalte gesendet wurden. Wenn Data-at-Execution-Spalten vorhanden sind, für die keine Daten gesendet wurden, gibt der Treiber SQL_NEED_DATA und den eindeutigen Wert für die nächste Data-at-Execution-Spalte zurück. die Anwendung kehrt zu Schritt 5 zurück. Wenn Daten für alle Data-at-Execution-Spalten gesendet wurden, werden die Daten für die Zeile an die Datenquelle gesendet. **SQLParamData** gibt dann SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurück und kann beliebige SQLSTATE-Objekte zurückgeben, die von **SQLBulkOperations** oder **SQLSetPos** zurückgegeben werden können.  
+6.  Ruft **SQLParamData** erneut auf, um anzugeben, dass alle Daten für die Spalte gesendet wurden. Wenn Daten bei der Ausführung vorhanden sind, für die keine Daten gesendet wurden, gibt der Treiber SQL_NEED_DATA und den eindeutigen Wert für die nächste Spalte "Data-at-Execution" zurück. die Anwendung kehrt zu Schritt 5 zurück. Wenn Daten für alle Data-at-Execution-Spalten gesendet wurden, werden die Daten für die Zeile an die Datenquelle gesendet. **SQLParamData** gibt dann SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurück und kann alle SQLSTATE zurückgeben, die **SQLBulkOperations** oder **SQLSetPos** zurückgeben können.  
   
- Nachdem **SQLBulkOperations** oder **SQLSetPos** SQL_NEED_DATA zurückgegeben und die Daten vollständig für die letzte Data-at-Execution-Spalte gesendet wurden, befindet sich die-Anweisung in einem Daten Zustands Bedarf. In diesem Zustand kann die Anwendung nur **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**oder **SQLGetDiagRec**aufrufen. alle anderen Funktionen geben SQLSTATE HY010 (Funktions Sequenz Fehler) zurück. Durch den Aufruf von **SQLCancel** wird die Ausführung der-Anweisung abgebrochen und in den vorherigen Zustand zurückversetzt. Weitere Informationen finden Sie unter [Anhang B: ODBC-Status Übergangs Tabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
+ Nachdem **SQLBulkOperations** oder **SQLSetPos** SQL_NEED_DATA zurückgegeben und bevor Daten vollständig für die letzte Data-at-Execution-Spalte gesendet wurden, befindet sich die Anweisung im Status "Need Data". In diesem Zustand kann die Anwendung nur **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**oder **SQLGetDiagRec**aufrufen . Alle anderen Funktionen geben SQLSTATE HY010 (Funktionssequenzfehler) zurück. Durch Aufrufen von **SQLCancel** wird die Ausführung der Anweisung abgebrochen und in den vorherigen Zustand zurückgesendet. Weitere Informationen finden Sie in [Anhang B: ODBC-Zustandsübergangstabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).

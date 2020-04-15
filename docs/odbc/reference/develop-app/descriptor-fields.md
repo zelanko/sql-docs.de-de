@@ -1,5 +1,5 @@
 ---
-title: Deskriptorfelder | Microsoft-Dokumentation
+title: Deskriptorfelder | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5025bf5eee4b0b65342e7ce47cbbde4ae9ef6b7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 94e70de7d237c2eca9aee81979cb19d5295561b5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106170"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305921"
 ---
 # <a name="descriptor-fields"></a>Deskriptorfelder
-Deskriptoren enthalten *Header* -und *Daten Satz* Felder, in denen Spalten oder Parameter vollständig beschrieben werden.  
+Deskriptoren enthalten *Header-* und *Datensatzfelder,* die Spalten oder Parameter vollständig beschreiben.  
   
- Ein Deskriptor enthält eine einzelne Kopie der folgenden Header Felder. Das Ändern eines Header Felds wirkt sich auf alle Spalten oder Parameter aus.  
+ Ein Deskriptor enthält eine einzelne Kopie der folgenden Headerfelder. Das Ändern eines Kopfzeilenfeldes wirkt sich auf alle Spalten oder Parameter aus.  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ Deskriptoren enthalten *Header* -und *Daten Satz* Felder, in denen Spalten oder 
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- Ein Deskriptor enthält keine oder mehrere deskriptordaten Sätze. Jeder Datensatz beschreibt eine Spalte oder einen Parameter, abhängig vom Typ des Deskriptors. Wenn eine neue Spalte oder ein neuer Parameter gebunden wird, wird dem Deskriptor ein neuer Datensatz hinzugefügt. Wenn eine Spalte oder ein Parameter nicht gebunden ist, wird ein Datensatz aus dem Deskriptor entfernt. Jeder Datensatz enthält eine einzelne Kopie der folgenden Felder:  
+ Ein Deskriptor enthält null oder mehr Deskriptordatensätze. Jeder Datensatz beschreibt eine Spalte oder einen Parameter, abhängig vom Typ des Deskriptors. Wenn eine neue Spalte oder ein neuer Parameter gebunden ist, wird dem Deskriptor ein neuer Datensatz hinzugefügt. Wenn eine Spalte oder ein Parameter ungebunden ist, wird ein Datensatz aus dem Deskriptor entfernt. Jeder Datensatz enthält eine einzelne Kopie der folgenden Felder:  
   
 |||  
 |-|-|  
@@ -54,9 +54,9 @@ Deskriptoren enthalten *Header* -und *Daten Satz* Felder, in denen Spalten oder 
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- Viele Anweisungs Attribute entsprechen dem Header Feld eines Deskriptors. Wenn diese Attribute durch einen Aufruf von **SQLSetStmtAttr** festgelegt werden und das entsprechende Deskriptorheaderfeld durch Aufrufen von **SQLSetDescField** festgelegt wird, hat dies die gleiche Wirkung. Das gleiche gilt für **SQLGetStmtAttr** und **SQLGetDescField**, von denen beide dieselben Informationen abrufen. Das Aufrufen der Anweisungs Funktionen anstelle der deskriptorfunktionen hat den Vorteil, dass ein Deskriptorhandle nicht abgerufen werden muss.  
+ Viele Anweisungsattribute entsprechen dem Kopfzeilenfeld eines Deskriptors. Das Festlegen dieser Attribute durch einen Aufruf von **SQLSetStmtAttr** und das Festlegen des entsprechenden Deskriptorheaderfelds durch Aufrufen von **SQLSetDescField** haben den gleichen Effekt. Dasselbe gilt für **SQLGetStmtAttr** und **SQLGetDescField**, die beide dieselben Informationen abrufen. Das Aufrufen der Anweisungsfunktionen anstelle der Deskriptorfunktionen hat den Vorteil, dass kein Deskriptorhandle abgerufen werden muss.  
   
- Die folgenden Header Felder können durch Festlegen der Anweisungs Attribute festgelegt werden:  
+ Die folgenden Headerfelder können durch Festlegen von Anweisungsattributen festgelegt werden:  
   
 |||  
 |-|-|  
@@ -64,7 +64,7 @@ Deskriptoren enthalten *Header* -und *Daten Satz* Felder, in denen Spalten oder 
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Anzahl der Datensätze](../../../odbc/reference/develop-app/record-count.md)  
   

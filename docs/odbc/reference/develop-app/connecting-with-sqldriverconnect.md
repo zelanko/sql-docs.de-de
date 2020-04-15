@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit SQLDriverConnect | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit SQLDriverConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b8285ca9fddf0e1b77ca171414e4c00b0029d110
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6cd95364d8a5316a50d9f55616236a8677bf99e4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036505"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299070"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Herstellen einer Verbindung mit SQLDriverConnect
-**SQLDriverConnect** wird zum Herstellen einer Verbindung mit einer Datenquelle mithilfe einer Verbindungs Zeichenfolge verwendet. **SQLDriverConnect** wird aus den folgenden Gründen anstelle von **SQLCONNECT** verwendet:  
+**SQLDriverConnect** wird verwendet, um mithilfe einer Verbindungszeichenfolge eine Verbindung mit einer Datenquelle herzustellen. **SQLDriverConnect** wird aus den folgenden Gründen anstelle von **SQLConnect** verwendet:  
   
--   , Damit die Anwendung Treiber spezifische Verbindungsinformationen verwenden können.  
+-   Damit die Anwendung treiberspezifische Verbindungsinformationen verwendet.  
   
 -   Um anzugeben, dass der Treiber den Benutzer zur Eingabe von Verbindungsinformationen auffordert.  
   
--   , Um eine Verbindung herzustellen, ohne eine Datenquelle anzugeben.  
+-   So stellen Sie eine Verbindung her, ohne eine Datenquelle anzugeben.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Treiberspezifische Verbindungsinformationen](../../../odbc/reference/develop-app/driver-specific-connection-information.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sqlgetdebug | Microsoft-Dokumentation
+title: SQLGetDescRec | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,44 +10,44 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLGetDescRec function
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9363fca515ba712e8968da57bf046bf2690e3ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 42c8a45bb50e5fda8946cc3819aa4702f5c2fb3f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787287"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299560"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In diesem Thema werden die SQLGetDescRec-Funktionalität erläutert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die für Native Client spezifisch ist.  
+  In diesem Thema wird die SQLGetDescRec-Funktionalität erläutert, die für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den systemeigenen Client spezifisch ist.  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec und Tabellenwertparameter  
- SQLGetDescRec kann verwendet werden, um Werte für Attribute von Tabellenwert Parametern und Tabellenwert Parameter-Spalten zu erhalten. Der *RecNumber* -Parameter von sqlgetdebug entspricht dem *ParameterNumber* -Parameter von SQLBindParameter.  
+ SQLGetDescRec kann verwendet werden, um Werte für Attribute von Tabellenparametern und Tabellenwertparameterspalten abzubekommen. Der *RecNumber-Parameter* von SQLGetDescRec entspricht dem *ParameterNumber-Parameter* von SQLBindParameter.  
   
- Tabellenwertparameter-Spalten sind nur verfügbar, wenn das Deskriptorheaderfeld SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl eines Datensatzes festgelegt ist, für den SQL_DESC_TYPE auf SQL_SS_TABLE eingestellt ist. Weitere Informationen zu SQL_SOPT_SS_PARAM_FOCUS von finden Sie unter [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
+ Tabellenwertparameter-Spalten sind nur verfügbar, wenn das Deskriptorheaderfeld SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl eines Datensatzes festgelegt ist, für den SQL_DESC_TYPE auf SQL_SS_TABLE eingestellt ist. Weitere Informationen zu SQL_SOPT_SS_PARAM_FOCUS finden Sie unter [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
- Sqlgetdebug gibt die folgenden Daten zurück:  
+ SQLGetDescRec gibt die folgenden Daten zurück:  
   
 |Parameter|Tabellenwertparameter|Tabellenwertparameter-Spalten und andere Parameter|  
 |---------------|-----------------------------|----------------------------------------------------------|  
 |*Name*|Der formale Parametername für einen Aufruf einer gespeicherten Prozedur; andernfalls eine Zeichenfolge mit der Länge 0.|Der Tabellenwertparameter-Spaltenname.|  
-|*Typeptr*|SQL_DESC_TYPE. Bei Tabellenwertparametern ist dies SQL_SS_TABLE.|SQL_DESC_TYPE|  
-|*Subtypeptr*|Undefined|SQL_DESC_DATETIME_INTERVAL_CODE (für Datensätze vom Typ SQL_DATETIME oder SQL_INTERVAL)|  
-|*Verlängert*|0|SQL_DESC_OCTET_LENGTH|  
-|*"Precisionptr"*|0|SQL_DESC_PRECISION|  
-|*Scaleptr*|0|SQL_DESC_SCALE|  
-|*Nullableptr*|1|SQL_DESC_NULLABLE|  
+|*TypPtr*|SQL_DESC_TYPE. Bei Tabellenwertparametern ist dies SQL_SS_TABLE.|SQL_DESC_TYPE|  
+|*SubTypePtr*|Nicht definiert|SQL_DESC_DATETIME_INTERVAL_CODE (für Datensätze vom Typ SQL_DATETIME oder SQL_INTERVAL)|  
+|*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
+|*PrecisionPtr*|0|SQL_DESC_PRECISION|  
+|*ScalePtr*|0|SQL_DESC_SCALE|  
+|*NullablePtr*|1|SQL_DESC_NULLABLE|  
   
- Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Weitere Informationen zu Tabellenwertparametern finden Sie unter [Tabellenwertparameter &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescrec-support-for-enhanced-date-and-time-features"></a>SQLGetDescRec-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die für Datums-/Uhrzeittypen zurückgegebenen Werte lauten wie folgt:  
   
-||*Typeptr*|*Subtypeptr*|*Verlängert*|*"Precisionptr"*|*Scaleptr*|  
+||*TypPtr*|*SubTypePtr*|*LengthPtr*|*PrecisionPtr*|*ScalePtr*|  
 |-|---------------|------------------|-----------------|--------------------|----------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
@@ -56,13 +56,13 @@ ms.locfileid: "73787287"
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
- Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Datums- und Zeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgetdescrec-support-for-large-clr-udts"></a>SQLGetDescRec-Unterstützung für große CLR-UDTs  
- **Sqlgetdebug** unterstützt große benutzerdefinierte CLR-Typen (User-Defined Types, UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLGetDescRec** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [Große benutzerdefinierte CLR-Typen &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
+ [Sqlgetdescrec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

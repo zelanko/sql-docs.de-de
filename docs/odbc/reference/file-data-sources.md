@@ -1,5 +1,5 @@
 ---
-title: Datei Datenquellen | Microsoft-Dokumentation
+title: Dateidatenquellen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d27f168640b25652ed0fd40154ebfb677ef9300
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0661aa424a7a118b8b12f4bf8433987ff83bd788
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68068639"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306651"
 ---
 # <a name="file-data-sources"></a>Dateidatenquellen
-*Datei Datenquellen* werden in einer Datei gespeichert, sodass Verbindungsinformationen von einem einzelnen Benutzer wiederholt verwendet oder von mehreren Benutzern gemeinsam verwendet werden können. Wenn eine Datei Datenquelle verwendet wird, stellt der Treiber-Manager die Verbindung mit der Datenquelle mithilfe der Informationen in einer DSN-Datei her. Diese Datei kann wie jede andere Datei bearbeitet werden. Eine Datei Datenquelle hat keinen Datenquellen Namen, wie eine Computer Datenquelle, und ist nicht für einen Benutzer oder Computer registriert.  
+*Dateidatenquellen* werden in einer Datei gespeichert und ermöglichen die wiederholte Verwendung von Verbindungsinformationen durch einen einzelnen Benutzer oder die von mehreren Benutzern gemeinsam genutzt werden. Wenn eine Dateidatenquelle verwendet wird, stellt der Treiber-Manager die Verbindung zur Datenquelle mithilfe der Informationen in einer Dsn-Datei her. Diese Datei kann wie jede andere Datei bearbeitet werden. Eine Dateidatenquelle hat keinen Datenquellennamen, ebenso wie eine Computerdatenquelle, und ist nicht für einen Benutzer oder Computer registriert.  
   
- Eine Datei Datenquelle optimiert den Verbindungsprozess, da die DSN-Datei die Verbindungs Zeichenfolge enthält, die andernfalls für einen aufzurufenden Befehl der **SQLDriverConnect** -Funktion erstellt werden müsste. Ein weiterer Vorteil der DSN-Datei besteht darin, dass Sie auf einen beliebigen Computer kopiert werden kann, sodass identische Datenquellen von vielen Computern verwendet werden können, sofern Sie den entsprechenden Treiber installiert haben. Eine Datei Datenquelle kann auch von Anwendungen gemeinsam genutzt werden. Eine Datenquelle, die für die Datenquelle verwendet werden kann, kann in einem Netzwerk platziert und von mehreren Anwendungen gleichzeitig verwendet werden.  
+ Eine Dateidatenquelle optimiert den Verbindungsprozess, da die Dsn-Datei die Verbindungszeichenfolge enthält, die andernfalls für einen Aufruf der **SQLDriverConnect-Funktion** erstellt werden müsste. Ein weiterer Vorteil der .dsn-Datei ist, dass sie auf jeden Computer kopiert werden kann, so dass identische Datenquellen von vielen Computern verwendet werden können, solange sie den entsprechenden Treiber installiert haben. Eine Dateidatenquelle kann auch von Anwendungen gemeinsam genutzt werden. Eine gemeinsam genutzte Dateidatenquelle kann in einem Netzwerk platziert und gleichzeitig von mehreren Anwendungen verwendet werden.  
   
- Eine DSN-Datei kann auch nicht mehr in der Share Bare Datei enthalten sein. Eine nicht Shareable. DSN-Datei befindet sich auf einem einzelnen Computer und verweist auf eine Computer Datenquelle. Nicht gemeinsam verwendbare Datei Datenquellen bestehen hauptsächlich darin, die einfache Konvertierung von Computer Datenquellen in Datei Datenquellen zu ermöglichen, sodass eine Anwendung nur für die Verwendung von Datei Datenquellen entworfen werden kann. Wenn der Treiber-Manager die Informationen in einer nicht Share baren Datei Datenquelle sendet, stellt er bei Bedarf eine Verbindung mit der Computer Datenquelle her, auf die die DSN-Datei verweist.  
+ Eine .dsn-Datei kann auch nicht mehr gemeinsam nutzen können. Eine nicht gemeinsam nutzende .dsn-Datei befindet sich auf einem einzelnen Computer und zeigt auf eine Computerdatenquelle. Nicht gemeinsam nutzende Dateidatenquellen existieren hauptsächlich, um die einfache Konvertierung von Maschinendatenquellen in Dateidatenquellen zu ermöglichen, sodass eine Anwendung so konzipiert werden kann, dass sie ausschließlich mit Dateidatenquellen funktioniert. Wenn der Treiber-Manager die Informationen in einer nicht gemeinsam nutzenden Dateidatenquelle sendet, stellt er bei Bedarf eine Verbindung mit der Computerdatenquelle her, auf die die DSN-Datei verweist.  
   
- Weitere Informationen zu Datei Datenquellen finden Sie unter [Herstellen einer Verbindung mithilfe von Datei Datenquellen](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)oder in der Beschreibung der [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) -Funktion.
+ Weitere Informationen zu Dateidatenquellen finden Sie unter [Verbinden mit Dateidatenquellen](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)oder in der [SQLDriverConnect-Funktionsbeschreibung.](../../odbc/reference/syntax/sqldriverconnect-function.md)

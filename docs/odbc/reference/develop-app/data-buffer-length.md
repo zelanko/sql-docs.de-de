@@ -1,5 +1,5 @@
 ---
-title: Länge des Daten Puffers | Microsoft-Dokumentation
+title: Datenpufferlänge | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 40fe9d23f14d4a7af80fe31a418cccf7133b7252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d4a4e9a739201d74cfc6c4f7c18e64b91e0fabe4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067418"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305261"
 ---
 # <a name="data-buffer-length"></a>Datenpufferlänge
-Die Anwendung übergibt die Byte Länge des Daten Puffers an den Treiber in einem Argument mit dem Namen *BufferLength* oder einem ähnlichen Namen. Beispielsweise gibt die Anwendung im folgenden Befehl von **SQLBindCol**die Länge des *ValuePtr* -Puffers (**sizeof (***ValuePtr***)**) an:  
+Die Anwendung übergibt die Bytelänge des Datenpuffers an den Treiber in einem Argument namens *BufferLength* oder einem ähnlichen Namen. Beispielsweise gibt die Anwendung im folgenden Aufruf von **SQLBindCol**die Länge des *ValuePtr-Puffers* an (**size of(***ValuePtr***):**  
   
 ```  
 SQLCHAR      ValuePtr[50];  
@@ -31,17 +31,17 @@ SQLINTEGER   ValueLenOrInd;
 SQLBindCol(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);  
 ```  
   
- Ein Treiber gibt immer die Anzahl von Bytes und nicht die Anzahl der Zeichen im Puffer Längenargument einer Funktion zurück, die über ein Output String-Argument verfügt.  
+ Ein Treiber gibt immer die Anzahl der Bytes und nicht die Anzahl der Zeichen im Argument Pufferlänge einer Funktion zurück, die über ein Ausgabezeichenfolgenargument verfügt.  
   
- Datenpuffer Längen sind nur für Ausgabepuffer erforderlich. der Treiber verwendet diese, um das Schreiben über das Ende des Puffers zu vermeiden. Der Treiber prüft die Länge des Daten Puffers jedoch nur, wenn der Puffer Daten variabler Länge enthält, z. b. Zeichen-oder Binärdaten. Wenn der Puffer Daten fester Länge enthält, z. b. eine ganze Zahl oder eine Datums Struktur, ignoriert der Treiber die Länge des Daten Puffers und geht davon aus, dass der Puffer groß genug ist, um die Daten zu speichern. Das heißt, es werden niemals Daten fester Länge abgeschnitten. Daher ist es wichtig, dass die Anwendung einen ausreichend großen Puffer für Daten mit fester Länge zuweist.  
+ Datenpufferlängen sind nur für Ausgabepuffer erforderlich. Der Treiber verwendet sie, um zu vermeiden, dass das Ende des Puffers überschrieben wird. Der Treiber überprüft die Datenpufferlänge jedoch nur, wenn der Puffer Daten mit variabler Länge enthält, z. B. Zeichen- oder Binärdaten. Wenn der Puffer Daten fester Länge enthält, z. B. eine ganze Zahl oder datumsstruktur, ignoriert der Treiber die Datenpufferlänge und geht davon aus, dass der Puffer groß genug ist, um die Daten zu halten. das heißt, es werden niemals Daten fester Länge abgeschnitten. Daher ist es wichtig, dass die Anwendung einen ausreichend großen Puffer für Daten fester Länge zuweist.  
   
- Wenn eine Kürzung von nicht-Datenausgabe Zeichenfolgen auftritt (z. b. der für **SQLGetCursorName**zurückgegebene Cursor Name), ist die zurückgegebene Länge im Puffer Längenargument die maximal mögliche Zeichen Länge.  
+ Wenn ein Abschneiden von Nicht-Datenausgabezeichenfolgen erfolgt (z. B. der für **SQLGetCursorName**zurückgegebene Cursorname), ist die zurückgegebene Länge im Argument Pufferlänge die maximal mögliche Zeichenlänge.  
   
- Für Eingabepuffer sind keine Datenpuffer Längen erforderlich, da der Treiber nicht in diese Puffer schreibt.  
+ Datenpufferlängen sind für Eingabepuffer nicht erforderlich, da der Treiber nicht in diese Puffer schreibt.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
--   [Verwenden von Längen-/indikatorenwerten](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)  
+-   [Verwenden von Längen-/Indikatorwerten](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)  
   
 -   [Datenlänge, Pufferlänge und Abschneiden](../../../odbc/reference/develop-app/data-length-buffer-length-and-truncation.md)  
   

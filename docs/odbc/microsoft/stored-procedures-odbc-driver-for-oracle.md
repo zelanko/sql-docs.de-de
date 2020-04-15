@@ -1,5 +1,5 @@
 ---
-title: Gespeicherte Prozeduren (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
+title: Gespeicherte Prozeduren (ODBC-Treiber für Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cef0c3737dbca640d6b842fc495c14c925c35723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ed0dadb81f31492f0dca8801a8ba925a81eacdb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948817"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299180"
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>Gespeicherte Prozeduren (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
  Dieser Abschnitt umfasst die folgenden Themen:  
   
@@ -27,6 +27,6 @@ ms.locfileid: "67948817"
   
 -   [Verwenden von Synonymen mit gespeicherten Prozeduren](../../odbc/microsoft/using-synonyms-with-stored-procedures.md)  
   
--   [Widerrufen und Erteilen von Berechtigungen beim Verwenden gespeicherter Prozeduren](../../odbc/microsoft/revoking-and-granting-rights-when-using-stored-procedures.md)  
+-   [Entziehen und Erteilen von Berechtigungen beim Verwenden gespeicherter Prozeduren](../../odbc/microsoft/revoking-and-granting-rights-when-using-stored-procedures.md)  
   
 -   [Zurückgeben von Arrayparametern aus gespeicherten Prozeduren](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)

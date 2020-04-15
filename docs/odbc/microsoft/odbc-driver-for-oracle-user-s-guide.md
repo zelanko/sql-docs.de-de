@@ -1,5 +1,5 @@
 ---
-title: Leitfaden für den ODBC-Treiber für Oracle-Benutzer&#39;s | Microsoft-Dokumentation
+title: ODBC-Treiber für Oracle-Benutzer&#39;s-Handbuch | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ca4e8aa690aae9c8c3e30ed73745f2054dc396
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81293151"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>Leitfaden für den ODBC-Treiber für Oracle-Benutzer&#39;s
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC-Treiber für Oracle-Benutzer-&#39;-Handbuch
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
+>  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Der ODBC-Treiber für Oracle-Benutzerhandbuch soll die Setup Hilfe ergänzen, auf die über den [ODBC-Datenquellen-Administrator](../../odbc/admin/odbc-data-source-administrator.md)zugegriffen werden kann.  
+ Der ODBC-Treiber für Oracle-Benutzerhandbuch soll die Einrichtungshilfe ergänzen, auf die über den [ODBC-Datenquellenadministrator](../../odbc/admin/odbc-data-source-administrator.md)zugegriffen werden kann.  
   
- Dieser Abschnitt enthält die folgenden Themen:  
+ In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   [Treiberversionsschema](../../odbc/microsoft/driver-version-scheme.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67915789"
   
 -   [Konfigurieren des ODBC-Treibers für Oracle](../../odbc/microsoft/configuring-the-odbc-driver-for-oracle.md)  
   
--   [Herstellen einer Verbindung mit einer Datenquelle](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
+-   [Herstellen der Verbindung mit einer Datenquelle](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
   
 -   [Bestimmen der installierten Oracle-Komponenten](../../odbc/microsoft/determining-installed-oracle-components.md)  
   

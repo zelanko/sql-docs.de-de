@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
+title: SQLGetFunctions (Visual FoxPro ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,26 +10,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da74bbb64a76f6c3ff6c55754798b975dab83826
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: af7ad2368847ff271dcf81759d6fa06b8a79fb0a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003330"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298610"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro ODBC-Treiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: vollständig  
+ Support: Voll  
   
  ODBC-API-Konformität: Ebene 1  
   
- Gibt true für alle unterstützten Funktionen zurück.  
+ Gibt TRUE für alle unterstützten Funktionen zurück.  
   
- Der Visual FoxPro-ODBC-Treiber unterstützt alle ODBC-API-Kernfunktionen und Funktionen der Ebene 1. In der folgenden Tabelle wird angegeben, ob der Treiber eine bestimmte Ebene 2-Funktion unterstützt.  
+ Der Visual FoxPro ODBC-Treiber unterstützt alle FUNKTIONEN VON ODBC API Core und Level 1. Die folgende Tabelle gibt an, ob der Treiber eine bestimmte Level 2-Funktion unterstützt.  
   
 |*Funktion*|Unterstützt|  
 |----------------|---------------|  
@@ -51,4 +51,4 @@ ms.locfileid: "68003330"
 |SQL_API_SQLSETSCROLLOPTIONS|Ja|  
 |SQL_API_SQLTABLEPRIVILEGES|Nein|  
   
- Weitere Informationen finden Sie unter [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) in der *ODBC Programmer es Reference*.
+ Weitere Informationen finden Sie unter [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) in der *ODBC-Programmiererreferenz*.
