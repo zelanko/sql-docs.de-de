@@ -14,10 +14,10 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "73728485"
 ---
 # <a name="create-a-model-master-data-services"></a>Erstellen eines Modells (Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "73728485"
 ## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
--   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
+-   Sie müssen über die Berechtigung zum Zugriff auf den Funktionsbereich **Systemadministration** verfügen.  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -55,31 +55,31 @@ ms.locfileid: "73728485"
   
  Für jedes erstellte Modell wird dem Raster eine Zeile mit acht Spalten hinzugefügt. Die acht Spalten lauten:  
   
--   **Status**: der Status des Modells. Wenn Sie auf die Schaltfläche **Modell speichern** klicken, wird das ![Aktualisier](../master-data-services/media/mds-model-status-updating.png "Wird aktualisiert") Bare Bild angezeigt, das angibt, dass das Modell aktualisiert wird. Wenn beim Erstellen oder Bearbeiten eines Modells Fehler auftreten, wird das ![Fehler](../master-data-services/media/mds-model-status-error.png "Fehler") Bild angezeigt. Andernfalls ist der Status OK, und das Bild ![OK](../master-data-services/media/mds-model-status-ok.png "OK") angezeigt.  
+-   **Status**: Der Status des Modells. Wenn Sie auf die Schaltfläche **Modell speichern** klicken, wird das ![Aktualisierungsbild](../master-data-services/media/mds-model-status-updating.png "Wird aktualisiert") angezeigt, das angibt, dass das Modell aktualisiert wird. Wenn beim Erstellen oder Bearbeiten eines Modells Fehler auftreten, wird das ![Fehlerbild](../master-data-services/media/mds-model-status-error.png "Fehler") angezeigt. Andernfalls ist der Status OK, und das Bild ![OK](../master-data-services/media/mds-model-status-ok.png "OK") angezeigt.  
   
--   **Name**: der Modellname.  
+-   **Name**: Der Name des Modells.  
   
--   **Beschreibung**: die Modellbeschreibung.  
+-   **Beschreibung**: Die Beschreibung des Modells.  
   
--   **Tage für Protokoll Beibehaltung**: die Anzahl der Tage, die das Protokoll für das Modell aufbewahrt wird.  
+-   **Tage für Protokollbeibehaltung**: Die Beibehaltungsdauer des Protokolls für das Modell in Tagen.  
   
--   **Erstellt von**: der Benutzername des Benutzers, der das Modell erstellt hat.  
+-   **Erstellt von**: Der Benutzername des Benutzers, der das Modell erstellt hat.  
   
--   **Erstellungsdatum und-Uhrzeit**: das Datum und die Uhrzeit der Erstellung des Modells.  
+-   **Erstellungsdatum und -uhrzeit**: Das Datum und die Uhrzeit der Erstellung des Modells.  
   
--   **Aktualisiert von**: der Benutzername des Benutzers, der das Modell zuletzt aktualisiert hat.  
+-   **Aktualisiert von**: Der Benutzername des Benutzers, der das Modell zuletzt aktualisiert hat.  
   
--   **Aktualisiertes Datum und Uhrzeit**: Datum und Uhrzeit der letzten Aktualisierung des Modells.  
+-   **Aktualisierungsdatum und -uhrzeit**: Das Datum und die Uhrzeit der letzten Aktualisierung des Modells.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Erstellen Sie eine Entität &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
+-   [Erstellen einer Entität &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Modelle &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
  [Entitäten &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [&#40;Master Data Services eines Modells löschen&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Modell &#40;Master Data Services bearbeiten&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [Löschen eines Modells &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [Bearbeiten von Modell &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
  [Transaktionen &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

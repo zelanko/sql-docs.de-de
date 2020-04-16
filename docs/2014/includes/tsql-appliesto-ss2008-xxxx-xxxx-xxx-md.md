@@ -1,1 +1,1 @@
-**THIS TOPIC APPLIES TO:** ![ja](media/yes-icon.png "ja")SQL Server \(ab 2008\) ![keine](media/no-icon.png "nein")Azure SQL-Datenbank ![kein](media/no-icon.png "nein")Azure SQL Data Warehouse ![kein](media/no-icon.png "nein")Parallel Data Warehouse
+**THIS TOPIC APPLIES TO:** ![ja](media/yes-icon.png "ja")SQL Server \(ab 2008\) ![keine](media/no-icon.png "Nein")Azure SQL-Datenbank ![kein](media/no-icon.png "nein")Azure SQL Data Warehouse ![kein](media/no-icon.png "nein")Parallel Data Warehouse
