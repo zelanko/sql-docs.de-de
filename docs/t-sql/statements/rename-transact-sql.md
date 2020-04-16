@@ -9,20 +9,20 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13488d4ab9fe2622322eb6e66c653391ff4415b3
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68141272"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625510"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Benennt eine vom Benutzer erstellte Tabelle in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] um. Benennt eine vom Benutzer erstellte Tabelle oder Datenbank in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] um.
+Benennt eine vom Benutzer erstellte Tabelle in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] um. Benennt eine vom Benutzer erstellte Tabelle, eine Spalte in einer vom Benutzer erstellten Tabelle oder eine Datenbank in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] um.
 
 > [!NOTE]
-> Verwenden Sie zum Umbenennen einer Datenbank in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)][ALTER DATABASE (Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Um eine Datenbank in Azure SQL-Datenbank umzubenennen, verwenden Sie die Anweisung [ALTER DATABASE (Azure SQL-Datenbank)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Verwenden Sie die gespeicherte Prozedur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_renamedb[, um eine Datenbank in ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md) umzubenennen.
+> Verwenden Sie zum Umbenennen einer Datenbank in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)][ALTER DATABASE (Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Um eine Datenbank in Azure SQL-Datenbank umzubenennen, verwenden Sie die Anweisung [ALTER DATABASE (Azure SQL-Datenbank)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Verwenden Sie die gespeicherte Prozedur [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md), um eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umzubenennen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,6 +45,9 @@ RENAME OBJECT [::] [ [ database_name . [ schema_name ] . ] | [ schema_name . ] ]
 -- Rename a database
 RENAME DATABASE [::] database_name TO new_database_name
 [;]
+
+-- Rename a column 
+RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name COLUMN column_name TO new_column_name [;]
 ```
 
 ## <a name="arguments"></a>Argumente
@@ -69,6 +72,12 @@ RENAME DATABASE [::] [ *Datenbankname* TO *neuer_Datenbankname*
 - DWDiagnostics
 - DWQueue
 
+
+RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* COLUMN *column_name* TO *new_column_name*
+**GILT FÜR:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+Ändert den Namen einer Spalte in einer Tabelle. 
+
 ## <a name="permissions"></a>Berechtigungen
 
 Zur Ausführung dieses Befehls benötigen Sie folgende Berechtigung:
@@ -85,11 +94,17 @@ Sie können keine externen Tabellen, Indizes oder Sichten umbenennen. Anstatt si
 
 Sie können keine Tabellen oder Datenbanken umbenennen, während diese verwendet werden. Das Umbenennen einer Tabelle erfordert eine exklusive Sperre für die Tabelle. Wenn die Tabelle verwendet wird, müssen Sie möglicherweise die Sitzungen beenden, die die Tabelle verwenden. Zum Beenden einer Sitzung können Sie den KILL-Befehl nutzen. Verwenden Sie den KILL-Befehl mit Bedacht, da für nicht per Commit festgeschriebene Arbeit ein Rollback ausgeführt wird, wenn eine Sitzung beendet wird. Sitzungen in SQL Data Warehouse wird die „SID“ vorangestellt. Geben Sie 'SID' und die Sitzungsnummer ein, wenn Sie den KILL-Befehl aufrufen. Dieses Beispiel zeigt eine Liste der aktiven oder im Leerlauf befindlichen Sitzungen an und beendet dann die Sitzung „SID1234“.
 
+### <a name="rename-column-restrictions"></a>Einschränkungen für das Umbenennen von Spalten
+
+Eine Spalte, die für die Tabellenverteilung verwendet wird, kann nicht umbenannt werden. Es können auch keine Spalten in einer externen oder temporären Tabelle umbenannt werden. 
+
 ### <a name="views-are-not-updated"></a>Sichten werden nicht aktualisiert
 
 Wenn Sie eine Datenbank umbenennen, werden alle Sichten ungültig, die den vorherigen Datenbanknamen verwenden. Dieses Verhalten gilt für Sichten innerhalb und außerhalb der Datenbank. Wenn z.B. die Sales-Datenbank umbenannt wird, wird eine Sicht ungültig, die `SELECT * FROM Sales.dbo.table1` enthält. Sie können dieses Problem beheben, indem Sie entweder keine dreiteiligen Namen in Sichten verwenden oder die Sichten aktualisieren, damit diese auf den neuen Datenbanknamen verweisen.
 
 Beim Umbenennen einer Tabelle werden Sichten nicht aktualisiert, damit diese auf den neuen Tabellennamen verweisen. Jede Sicht (innerhalb oder außerhalb der Datenbank), die auf den vorherigen Tabellennamen verweist, wird ungültig. Zum Beheben dieses Problems können Sie alle Sichten aktualisieren, damit sie auf den neuen Tabellennamen verweisen.
+
+Beim Umbenennen einer Spalte werden Sichten nicht auf den neuen Spaltennamen aktualisiert. Sichten zeigen so lange den alten Spaltennamen an, bis eine ALTER VIEW-Anweisung ausgeführt wird. In bestimmten Fällen können Sichten ungültig werden und müssen gelöscht und neu erstellt werden.
 
 ## <a name="locking"></a>Sperren
 
@@ -150,4 +165,17 @@ WHERE status='Active' OR status='Idle';
 
 -- Terminate a session using the session_id.
 KILL 'SID1234';
+```
+
+### <a name="e-rename-a-column"></a>E. Umbenennen einer Spalte 
+
+**GILT FÜR:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+In diesem Beispiel wird die Spalte „FName“ der Tabelle „Customer“ in „FirstName“ umbenannt.
+
+```sql
+-- Rename the Fname column of the customer table
+RENAME OBJECT::Customer COLUMN FName TO FirstName;
+
+RENAME OBJECT mydb.dbo.Customer COLUMN FName TO FirstName;
 ```

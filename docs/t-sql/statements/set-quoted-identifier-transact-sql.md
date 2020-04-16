@@ -25,12 +25,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f49a731b57b56c5c4499d6d46f7fe8a70875ec1d
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68008891"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550174"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -55,18 +55,18 @@ SET QUOTED_IDENTIFIER ON
 ```
 
 ## <a name="remarks"></a>Bemerkungen
+Wenn `SET QUOTED_IDENTIFIER` auf ON festgelegt ist, können Bezeichner durch doppelte Anführungszeichen (" ") begrenzt werden. Literale müssen in diesem Fall durch einfache Anführungszeichen (' ') begrenzt werden. Alle Zeichenfolgen, die durch doppelte Anführungszeichen begrenzt werden, werden als Objektbezeichner interpretiert. Daher müssen Bezeichner in Anführungszeichen nicht den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Regeln für Bezeichner entsprechen. Sie können reservierte Schlüsselwörter darstellen und Zeichen einschließen, die in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichnern sonst nicht zulässig sind. Doppelte Anführungszeichen dürfen nicht zum Begrenzen von Ausdrücken mit Literalzeichenfolgen verwendet werden, da Literalzeichenfolgen in einfache Anführungszeichen eingeschlossen werden müssen. Ist ein einfaches Anführungszeichen (') Teil des Zeichenfolgenliterals, kann es durch zwei einfache Anführungszeichen (") dargestellt werden. `SET QUOTED_IDENTIFIER` muss auf ON festgelegt sein, wenn in der Datenbank reservierte Schlüsselwörter für Objektnamen verwendet werden.
 
-Wenn SET QUOTED_IDENTIFIER auf ON festgelegt ist, können Bezeichner in Anführungszeichen eingeschlossen werden, und Literale müssen in einfache Anführungszeichen eingeschlossen werden. Wenn SET QUOTED_IDENTIFIER auf OFF festgelegt ist, können Bezeichner nicht in Anführungszeichen eingeschlossen werden und müssen allen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md). Literale können in einfache oder doppelte Anführungszeichen eingeschlossen werden.
+Wenn `SET QUOTED_IDENTIFIER` auf OFF festgelegt ist, können Bezeichner nicht in Anführungszeichen eingeschlossen werden und müssen allen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md). Literale können in einfache oder doppelte Anführungszeichen eingeschlossen werden. Eine in doppelte Anführungszeichen eingeschlossene Literalzeichenfolge kann eingebundene einfache Anführungszeichen, wie z. B. Apostrophe, enthalten.
 
-Wenn SET QUOTED_IDENTIFIER auf ON (Standardeinstellung) festgelegt ist, werden alle in doppelten Anführungszeichen eingeschlossenen Zeichenfolgen als Objektbezeichner interpretiert. Daher müssen Bezeichner in Anführungszeichen nicht den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Regeln für Bezeichner entsprechen. Sie können reservierte Schlüsselwörter darstellen und Zeichen einschließen, die in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichnern sonst nicht zulässig sind. Doppelte Anführungszeichen dürfen nicht zum Begrenzen von Ausdrücken mit Literalzeichenfolgen verwendet werden, da Literalzeichenfolgen in einfache Anführungszeichen eingeschlossen werden müssen. Wenn ein einfaches Anführungszeichen ( **'** ) Teil der Literalzeichenfolge ist, kann es durch zwei einfache Anführungszeichen ( **"** ) dargestellt werden. SET QUOTED_IDENTIFIER muss auf ON festgelegt sein, wenn reservierte Schlüsselwörter für Objektnamen in der Datenbank verwendet werden.
+> [!NOTE]
+> QUOTED_IDENTIFIER wirkt sich nicht auf Begrenzungsbezeichner aus, die in eckige Klammern ([ ]) eingeschlossen sind.
 
-Wenn SET QUOTED_IDENTIFIER auf OFF festgelegt ist, können Literalzeichenfolgen in Ausdrücken in einfache oder doppelte Anführungszeichen eingeschlossen werden. Eine in doppelte Anführungszeichen eingeschlossene Literalzeichenfolge kann eingebundene einfache Anführungszeichen, wie z. B. Apostrophe, enthalten.
+`SET QUOTED_IDENTIFIER` muss auf ON festgelegt sein, wenn Indizes für berechnete Spalten oder indizierte Sichten erstellt oder geändert werden. Ist `SET QUOTED_IDENTIFIER` auf OFF festgelegt, schlagen CREATE-, UPDATE-, INSERT- und DELETE-Anweisungen in Tabellen mit Indizes für berechneten Spalte oder in Tabellen mit indizierten Sichten fehl. Weitere Informationen zu den erforderlichen Einstellungen der SET-Option mit indizierten Sichten und Indizes für berechnete Spalten finden Sie unter [Überlegungen beim Verwenden von SET-Anweisungen](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).
 
-SET QUOTED_IDENTIFIER muss beim Erstellen oder Ändern von Indizes auf berechneten Spalten oder indizierten Sichten auf ON festgelegt sein. Wenn SET QUOTED_IDENTIFIER auf OFF festgelegt ist, schlagen die CREATE-, UPDATE-, INSERT- und DELETE-Anweisungen in Tabellen mit Indizes auf berechneten Spalten oder indizierten Sichten fehl. Weitere Informationen zu den erforderlichen Einstellungen der SET-Option mit indizierten Sichten und Indizes für berechnete Spalten finden Sie unter [SET-Anweisungen](../../t-sql/statements/set-statements-transact-sql.md) im Abschnitt „Überlegungen beim Verwenden von SET-Anweisungen“.
+`SET QUOTED_IDENTIFIER` muss auf ON festgelegt sein, wenn Sie einen gefilterten Index erstellen.
 
-SET QUOTED_IDENTIFIER muss beim Erstellen eines gefilterten Indexes auf ON festgelegt sein.
-
-SET QUOTED_IDENTIFIER muss auf ON festgelegt sein, wenn Sie XML-Datentypmethoden aufrufen.
+`SET QUOTED_IDENTIFIER` muss auf ON festgelegt sein, wenn Sie XML-Datentypmethoden aufrufen.
 
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen QUOTED_IDENTIFIER beim Herstellen einer Verbindung automatisch auf ON fest. Diese Einstellung kann in ODBC-Datenquellen, in ODBC-Verbindungsattributen oder in OLE DB-Verbindungseigenschaften konfiguriert werden. SET QUOTED_IDENTIFIER ist für Verbindungen von DB-Library-Anwendungen standardmäßig auf OFF festgelegt.
 
@@ -76,32 +76,30 @@ Wenn eine gespeicherte Prozedur erstellt wird, werden die SET QUOTED_IDENTIFIER-
 
 Wird SET QUOTED_IDENTIFIER innerhalb einer gespeicherten Prozedur ausgeführt, wird die Einstellung nicht geändert.
 
-Ist SET ANSI_DEFAULTS auf ON festgelegt, ist SET QUOTED_IDENTIFIER aktiviert.
+Wenn `SET ANSI_DEFAULTS` auf ON festgelegt ist, wird auch QUOTED_IDENTIFIER auf ON festgelegt.
 
-SET QUOTED_IDENTIFIER entspricht auch der QUOTED_IDENTIFIER-Einstellung von ALTER DATABASE. Weitere Informationen zu den Datenbankeinstellungen finden Sie unter [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+`SET QUOTED_IDENTIFIER` entspricht auch der QUOTED_IDENTIFIER-Einstellung von [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
-SET QUOTED_IDENTIFIER wird während der Analysezeit wirksam und hat nur Auswirkungen auf die Analyse, nicht auf die Abfrageausführung.
+`SET QUOTED_IDENTIFIER` wird während der Analysezeit von [!INCLUDE[tsql](../../includes/tsql-md.md)] wirksam und hat nur Auswirkungen auf die Analyse, nicht auf die Optimierung oder Ausführung der Abfrage.
 
-Für einen allgemeinen Ad-hoc-Batch beginnt die Analyse unter Verwendung der aktuellen Einstellungen der Sitzung für QUOTED_IDENTIFIER. Bei der Analyse des Batches verändert jedes Auftreten von SET QUOTED_IDENTIFIER ab diesem Punkt das Analyseverhalten, und diese Einstellung wird für die Sitzung gespeichert. Nachdem der Batch analysiert und ausgeführt wird, wird die QUOTED_IDENTIFER-Einstellung der Sitzung abhängig vom letzten Auftreten von SET QUOTED_IDENTIFIER im Batch festgelegt.
+Für einen allgemeinen Ad-hoc-Batch beginnt die Analyse unter Verwendung der aktuellen Einstellungen der Sitzung für QUOTED_IDENTIFIER. Bei der Analyse des Batches verändert jedes Auftreten von `SET QUOTED_IDENTIFIER` ab diesem Zeitpunkt das Analyseverhalten, und diese Einstellung wird für die Sitzung gespeichert. Nachdem der Batch analysiert und ausgeführt wurde, wird die QUOTED_IDENTIFER-Einstellung der Sitzung basierend auf dem letzten Auftreten von `SET QUOTED_IDENTIFIER` im Batch festgelegt.
 
-Statische SQL-Anweisungen in einer gespeicherten Prozedur werden mithilfe der QUOTED_IDENTIFIER-Einstellung des Batches analysiert, der die gespeicherte Prozedur erstellt oder geändert hat. SET QUOTED_IDENTIFIER hat beim Auftreten im Textkörper einer gespeicherten Prozedur als statische SQL-Anweisung keinerlei Auswirkungen.
+Statische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einer gespeicherten Prozedur werden mithilfe der QUOTED_IDENTIFIER-Einstellung des Batches analysiert, der die gespeicherte Prozedur erstellt oder geändert hat. `SET QUOTED_IDENTIFIER` hat beim Auftreten im Textkörper einer gespeicherten Prozedur als statische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung keinerlei Auswirkungen.
 
-Für einen geschachtelten Batch, der sp_executesql oder exec() verwendet, beginnt die Analyse unter Verwendung der QUOTED_IDENTIFIER-Einstellung der Sitzung. Wenn sich der geschachtelte Batch innerhalb einer gespeicherten Prozedur befindet, startet die Analyse unter Verwendung der QUOTED_IDENTIFIER-Einstellung der gespeicherten Prozedur. Bei der Analyse des geschachtelten Batches verändert jedes Auftreten von SET QUOTED_IDENTIFIER ab diesem Zeitpunkt das Analyseverhalten, aber die QUOTED_IDENTIFIER-Einstellung der Sitzung wird nicht aktualisiert.
+Für einen geschachtelten Batch, der `sp_executesql` oder `exec()` verwendet, beginnt die Analyse bei Verwendung der QUOTED_IDENTIFIER-Einstellung der Sitzung. Wenn sich der geschachtelte Batch innerhalb einer gespeicherten Prozedur befindet, startet die Analyse bei Verwendung der QUOTED_IDENTIFIER-Einstellung der gespeicherten Prozedur. Bei der Analyse des geschachtelten Batches verändert jedes Auftreten von `SET QUOTED_IDENTIFIER` ab diesem Zeitpunkt das Analyseverhalten, aber die QUOTED_IDENTIFIER-Einstellung der Sitzung wird nicht aktualisiert.
 
-Die Verwendung von Klammern, **[** und **]** , zum Begrenzen von Bezeichnern ist nicht von der QUOTED_IDENTIFIER-Einstellung betroffen.
-
-Um die aktuelle Einstellung anzuzeigen, führen Sie die folgende Abfrage aus.
+Um die aktuelle Einstellung anzuzeigen, führen Sie die folgende Abfrage aus:
 
 ```sql
 DECLARE @QUOTED_IDENTIFIER VARCHAR(3) = 'OFF';
-IF ( (256 & @@OPTIONS) = 256 ) SET @QUOTED_IDENTIFIER = 'ON';
-SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
+IF ( (256 & @@OPTIONS) = 256 ) 
+SET @QUOTED_IDENTIFIER = 'ON';
 
+SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 ```
 
 ## <a name="permissions"></a>Berechtigungen
-
-Erfordert die Mitgliedschaft in der public-Rolle.
+Erfordert die Mitgliedschaft in der Rolle `PUBLIC`.
 
 ## <a name="examples"></a>Beispiele
 
@@ -112,15 +110,15 @@ Im folgenden Beispiel wird dargestellt, dass die `SET QUOTED_IDENTIFIER`-Einstel
 ```sql
 SET QUOTED_IDENTIFIER OFF
 GO
--- An attempt to create a table with a reserved keyword as a name
--- should fail.
+
+-- Create statement fails.
 CREATE TABLE "select" ("identity" INT IDENTITY NOT NULL, "order" INT NOT NULL);
 GO
 
 SET QUOTED_IDENTIFIER ON;
 GO
 
--- Will succeed.
+-- Create statement succeeds.
 CREATE TABLE "select" ("identity" INT IDENTITY NOT NULL, "order" INT NOT NULL);
 GO
 
@@ -143,6 +141,7 @@ GO
 ```sql
 SET QUOTED_IDENTIFIER OFF;
 GO
+
 USE AdventureWorks2012;
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
     WHERE TABLE_NAME = 'Test')
@@ -197,17 +196,17 @@ GO
  ```
 
 ## <a name="see-also"></a>Weitere Informationen
-
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
-- [CREATE DEFAULT](../../t-sql/statements/create-default-transact-sql.md)
-- [CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)
-- [CREATE RULE](../../t-sql/statements/create-rule-transact-sql.md)
-- [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)
-- [CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
-- [Datentypen](../../t-sql/data-types/data-types-transact-sql.md)
-- [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)
-- [SELECT](../../t-sql/queries/select-transact-sql.md)
-- [SET-Anweisungen](../../t-sql/statements/set-statements-transact-sql.md)
-- [SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)
-- [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)    
+[CREATE DEFAULT](../../t-sql/statements/create-default-transact-sql.md)    
+[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)    
+[CREATE RULE](../../t-sql/statements/create-rule-transact-sql.md)    
+[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)    
+[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)    
+[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)    
+[Datentypen](../../t-sql/data-types/data-types-transact-sql.md)    
+[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)    
+[SELECT](../../t-sql/queries/select-transact-sql.md)    
+[SET-Anweisungen](../../t-sql/statements/set-statements-transact-sql.md)    
+[SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)    
+[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)    
+[Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md)

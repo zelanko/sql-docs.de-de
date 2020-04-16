@@ -1,5 +1,6 @@
 ---
 title: Vorbereiten von Daten für den Massenexport oder -import
+description: In diesem Artikel erfahren Sie, wie Sie Massenimport- und -exportvorgänge planen, welche Anforderungen an das Datendateiformat bestehen und wann Sie das Hilfsprogramm BCP verwenden.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b5aecdf222ea325f67a23b728ed29ee40e768387
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0248ca835794b71531a2d2f8c0b75b6b75911929
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056416"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980393"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>Vorbereiten von Daten für den Massenexport oder -import
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "74056416"
   
 -   Die Daten können ein Zeichenformat oder ein systemeigenes binäres Format, einschließlich Unicode, aufweisen.  
   
--   Zum Importieren von Daten mithilfe des Befehls **bcp** , einer BULK INSERT-Anweisung oder einer INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung muss die Zieltabelle bereits vorhanden sein.  
+-   Zum Importieren von Daten mithilfe des Befehls **bcp**, einer BULK INSERT-Anweisung oder einer INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung muss die Zieltabelle bereits vorhanden sein.  
   
 -   Jedes Feld in der Datendatei muss mit der entsprechenden Spalte in der Zieltabelle kompatibel sein. Ein **int** -Feld kann z. B. nicht in eine **datetime** -Spalte geladen werden. Weitere Informationen finden Sie unter [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md) und [Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
@@ -70,13 +71,13 @@ ms.locfileid: "74056416"
   
      Für den Massenimport von Daten aus einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro- oder Visual FoxPro-Tabellendatei (.dbf) oder einer [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Arbeitsblattdatei (.xls), müssen die Daten in eine CSV-Datei umgewandelt werden, die den vorangehenden Einschränkungen entspricht. Die Dateierweiterung lautet normalerweise .csv. Anschließend kann die Datei mit der Dateinamenerweiterung .csv als Datendatei in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Massenimportvorgang verwendet werden.  
   
-     In 32-Bit-Systemen ist es jedoch möglich, CSV-Daten mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [mit dem OLE DB-Anbieter für Jet in eine](../../t-sql/functions/openrowset-transact-sql.md) -Tabelle ohne Massenimportoptimierungen zu importieren. Jet behandelt Textdateien als Tabellen mit dem durch eine schema.ini-Datei, die sich im gleichen Verzeichnis wie die Datenquelle befindet, festgelegten Schema.  Für CSV-Daten ist einer der Parameter in der Datei schema.ini "FORMAT=CSVDelimited". Für diese Lösung Kenntnisse über die Jet Test IISAMm-Vorgänge, die zugehörige Verbindungszeichenfolgensyntax, die Verwendung von „schema.ini“, die Einstellungsoptionen für die Registrierung usw., erforderlich.  Die besten Informationsquellen hierfür sind die Microsoft Access-Hilfe und Knowledge Base (KB)-Artikel. Weitere Informationen finden Sie unter [Initializing the Text Data Source Driver](https://msdn.microsoft.com/library/office/ff834391.aspx), [Verwendung eine verteilten Abfrage von SQLServer 7.0 mit einem verknüpften Server gesicherten Access-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=128504)(maschinell übersetzter Artikel), [Verwendung von Jet OLE DB-Provider 4.0 an ISAM-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=128505)(maschinell übersetzter Artikel) und [Gewusst wie: Öffnen Sie getrennte Textdateien mit der Jet-Provider Text IIsam (maschinell übersetzter Artikel)](https://go.microsoft.com/fwlink/?LinkId=128501).  
+     In 32-Bit-Systemen ist es jedoch möglich, CSV-Daten mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [mit dem OLE DB-Anbieter für Jet in eine](../../t-sql/functions/openrowset-transact-sql.md) -Tabelle ohne Massenimportoptimierungen zu importieren. Jet behandelt Textdateien als Tabellen mit dem durch eine schema.ini-Datei, die sich im gleichen Verzeichnis wie die Datenquelle befindet, festgelegten Schema.  Für CSV-Daten ist einer der Parameter in der Datei schema.ini "FORMAT=CSVDelimited". Für diese Lösung Kenntnisse über die Jet Test IISAMm-Vorgänge, die zugehörige Verbindungszeichenfolgensyntax, die Verwendung von „schema.ini“, die Einstellungsoptionen für die Registrierung usw., erforderlich.  Die besten Informationsquellen hierfür sind die Microsoft Access-Hilfe und Knowledge Base (KB)-Artikel. Weitere Informationen finden Sie unter [Initializing the Text Data Source Driver (Initialisieren des Text-Datenquellentreibers)](https://msdn.microsoft.com/library/office/ff834391.aspx), [How To Use a SQL Server 7.0 Distributed Query with a Linked Server to Secured Access Databases (Verwenden einer verteilten SQL Server 7.0-Abfrage mit einem Verbindungsserver zu Datenbanken mit gesichertem Zugriff)](https://go.microsoft.com/fwlink/?LinkId=128504), [HOW TO: Use Jet OLE DB Provider 4.0 to Connect to ISAM Databases (Vorgehensweise: Verwenden von Jet OLE DB 4.0 zum Herstellen einer Verbindung mit ISAM-Datenbanken)](https://go.microsoft.com/fwlink/?LinkId=128505) und [How To Open Delimited Text Files Using the Jet Provider's Text IIsam (Öffnen durch Trennzeichen getrennter Textdateien mit Text-IISAM des Jet-Anbieters)](https://go.microsoft.com/fwlink/?LinkId=128501).  
   
  Darüber hinaus ist Folgendes für den Massenimport von Daten aus einer Datendatei in eine Tabelle erforderlich:  
   
 -   Benutzer müssen über INSERT- und SELECT-Berechtigungen für die Tabelle verfügen. Benutzer müssen auch über eine ALTER TABLE-Berechtigung verfügen, wenn sie Optionen wie das Deaktivieren von Einschränkungen verwenden, für die DLL-Vorgänge (Data Definition Language) erforderlich sind.  
   
--   Wenn Sie für das Massenimportieren von Daten BULK INSERT oder INSERT ... SELECT * FROM OPENROWSET(BULK...) verwenden, muss entweder das Sicherheitsprofil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses (wenn sich der Benutzer mit dem bereitgestellten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen anmeldet) oder die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldung, die beim Delegieren der Sicherheit verwendet wird, über Zugriff für Lesevorgänge auf die Datendatei verfügen. Darüber hinaus muss der Benutzer zum Lesen der Datei über die ADMINISTER BULK OPERATIONS-Berechtigung verfügen.  
+-   Wenn Sie für das Massenimportieren von Daten BULK INSERT oder INSERT ... SELECT * FROM OPENROWSET(BULK...) verwenden, muss entweder das Sicherheitsprofil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses (wenn sich der Benutzer mit dem bereitgestellten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen anmeldet) oder die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldung, die beim Delegieren der Sicherheit verwendet wird, über Zugriff für Lesevorgänge auf die Datendatei verfügen. Darüber hinaus muss der Benutzer zum Lesen der Datei über die ADMINISTER BULK OPERATIONS-Berechtigung verfügen.  
   
 > [!NOTE]  
 >  Das Massenimportieren in eine partitionierte Sicht wird nicht unterstützt, und Versuche, einen Massenimport von Daten in eine partitionierte Sicht auszuführen, schlagen fehl.  

@@ -1,6 +1,6 @@
 ---
 title: CONTAINS (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+description: Transact-SQL-Referenz für das language-Element CONTAINS Wird für die Suche nach Wörtern oder Ausdrücken in einem anderen Ausdruck verwendet.
 ms.date: 08/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2aaad92d3e90d460426c12f6b0a6f5a695bc901
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982831"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517636"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ CONTAINS (
  Gibt an, dass die Abfrage alle volltextindizierten Spalten in der Tabelle durchsucht, die in der FROM-Klausel für die festgelegte Suchbedingung angegeben werden. Die Spalten in der CONTAINS-Klausel müssen aus einer einzelnen Tabelle mit einem Volltextindex stammen. Sofern *language_term* nicht angegeben ist, muss die Sprache aller Spalten in der Tabelle identisch sein.  
   
  PROPERTY ( *column_name* , '*property_name*')  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
   
  Gibt eine Dokumenteigenschaft an, in der nach der angegebenen Suchbedingung gesucht werden soll.  
   
@@ -246,7 +246,7 @@ Gibt eine Übereinstimmung für ein genaues Wort oder einen genauen Ausdruck an.
  Weitere Informationen zu generischen NEAR-Begriffen finden Sie unter [Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
  \<custom_proximity_term>  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.
   
  Gibt eine Übereinstimmung von Wörtern oder Ausdrücken sowie optional den maximalen Abstand zwischen den Suchbegriffen an. Sie können auch angeben, dass Suchbegriffe in der exakten Reihenfolge gesucht werden müssen, in der Sie sie (\<match_order>) angegeben haben.  
   
@@ -422,7 +422,7 @@ GO
   
 ### <a name="e-using-contains-with-proximity_term"></a>E. Verwenden von CONTAINS mit \<proximity_term>  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
   
  Im folgenden Beispiel wird in der `Production.ProductReview`-Tabelle nach allen Kommentaren gesucht, die das Wort `bike` maximal 10 Begriffe vom Wort `control` entfernt und in der angegebenen Reihenfolge enthalten (d.h. `bike` vor `control`).  
   
@@ -519,7 +519,7 @@ GO
   
 ### <a name="k-querying-on-a-document-property"></a>K. Abfragen von Dokumenteigenschaften  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher. 
   
  Die folgende Abfrage sucht nach einer indizierten Eigenschaft (`Title`) in der `Document`-Spalte der `Production.Document`-Tabelle. Die Abfrage gibt nur Dokumente zurück, deren `Title`-Eigenschaft die Zeichenfolge `Maintenance` oder `Repair` enthält.  
   

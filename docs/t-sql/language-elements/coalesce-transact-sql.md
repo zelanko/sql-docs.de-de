@@ -1,6 +1,6 @@
 ---
 title: COALESCE (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+description: Transact-SQL-Referenz zum COALESCE-Ausdruck, der den Wert des ersten Ausdrucks zurückgibt, der nicht NULL ergibt
 ms.date: 08/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +21,12 @@ ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e3692da70cf2d503dc994646a6cb2e92a05fe94
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950293"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517686"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) belieb
 Gibt den Datentyp des _expression_-Ausdrucks zurück, der in der Datentyprangfolge am höchsten steht. Falls für alle Ausdrücke NULL nicht zulässig ist, wird das Ergebnis entsprechend eingegeben.  
   
 ## <a name="remarks"></a>Bemerkungen  
-`NULL` gibt `COALESCE` zurück, wenn alle Argumente `NULL` sind. Mindestens einer der NULL-Werte muss ein typisierter `NULL`-Wert sein.  
+`COALESCE` gibt `NULL` zurück, wenn alle Argumente `NULL` sind. Mindestens einer der NULL-Werte muss ein typisierter `NULL`-Wert sein.  
   
 ## <a name="comparing-coalesce-and-case"></a>Vergleich zwischen COALESCE und CASE  
 Der `COALESCE`-Ausdruck ist eine syntaktische Kurzform für den `CASE`-Ausdruck.  Dies bedeutet, dass der Code `COALESCE`(_expression1_, _...n_) vom Abfrageoptimierer in den folgenden `CASE`-Ausdruck umgeschrieben wird:  
@@ -65,7 +65,7 @@ END
   
 Daher werden die Eingabewerte (_expression1_, _expression2_, _expressionN_ usw.) mehrmals ausgewertet. Außerdem wird ein Wertausdruck, der eine Unterabfrage enthält, als nicht deterministisch angesehen, und die Unterabfrage wird zweimal ausgewertet. Dieses Ergebnis entspricht dem SQL-Standard. In beiden Fällen können zwischen der ersten Auswertung und kommenden Auswertungen unterschiedliche Ergebnisse zurückgegeben werden.  
   
-Beispiel: Wenn der Code `COALESCE((subquery), 1)` ausgeführt wird, wird die Unterabfrage zweimal ausgewertet. Folglich können Sie abhängig von der Isolationsstufe der Abfrage unterschiedliche Ergebnisse erhalten. Beispielsweise kann der Code auf der `NULL`-Isolationsstufe in einer Mehrbenutzerumgebung `READ COMMITTED` zurückgeben. Um sicherzustellen, dass beständige Ergebnisse zurückgegeben werden, verwenden Sie die `SNAPSHOT ISOLATION`-Isolationsstufe oder ersetzen `COALESCE` durch die `ISNULL`-Funktion. Alternativ können Sie die Abfrage neu schreiben, um die Unterabfrage in eine untergeordnete SELECT-Anweisung zu verschieben, wie im folgenden Beispiel gezeigt:  
+Beispiel: Wenn der Code `COALESCE((subquery), 1)` ausgeführt wird, wird die Unterabfrage zweimal ausgewertet. Folglich können Sie abhängig von der Isolationsstufe der Abfrage unterschiedliche Ergebnisse erhalten. Beispielsweise kann der Code auf der `READ COMMITTED`-Isolationsstufe in einer Mehrbenutzerumgebung `NULL` zurückgeben. Um sicherzustellen, dass beständige Ergebnisse zurückgegeben werden, verwenden Sie die `SNAPSHOT ISOLATION`-Isolationsstufe oder ersetzen `COALESCE` durch die `ISNULL`-Funktion. Alternativ können Sie die Abfrage neu schreiben, um die Unterabfrage in eine untergeordnete SELECT-Anweisung zu verschieben, wie im folgenden Beispiel gezeigt:  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -189,7 +189,7 @@ Total Salary
 (12 row(s) affected)
 ```  
   
-### <a name="c-simple-example"></a>C. Einfaches Beispiel  
+### <a name="c-simple-example"></a>C: Einfaches Beispiel  
 Im folgenden Beispiel wird veranschaulicht, wie `COALESCE` die Daten aus der ersten Spalte auswählt, die einen Wert ungleich NULL aufweist. In diesem Beispiel wird angenommen, dass die `Products`-Tabelle die folgenden Daten enthält:  
   
 ```  
@@ -219,7 +219,7 @@ NULL         White      PN9876         White
   
 Beachten Sie, dass der `FirstNotNull`-Wert in der ersten Zeile `PN1278`, nicht `Socks, Mens` ist. Grund hierfür ist, dass die `Name`-Spalte im Beispiel nicht als Parameter für `COALESCE` angegeben wurde.  
   
-### <a name="d-complex-example"></a>D. Komplexes Beispiel  
+### <a name="d-complex-example"></a>D: Komplexes Beispiel  
 Im folgenden Beispiel werden die Werte in drei Spalten mit `COALESCE` verglichen und nur die Werte ungleich NULL zurückgegeben, die in den Spalten gefunden wurden.  
   
 ```sql  

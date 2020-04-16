@@ -1,5 +1,6 @@
 ---
 title: Erstellen einer Formatdatei (SQL Server) | Microsoft-Dokumentation
+description: Beim Massenimport oder -export einer SQL Server-Tabelle kann eine Formatdatei verwendet werden, um Datendateien zu schreiben, ohne Datendateien aus anderen Programmen im großen Umfang bearbeiten und lesen zu müssen.
 ms.custom: ''
 ms.date: 02/23/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95ac8a8a42523d513a6025d85308c4e130c044c8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68035820"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980482"
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68035820"
  Im Allgemeinen sind XML-Formatdateien und Nicht-XML-Formatdateien austauschbar. Es empfiehlt sich jedoch, für neue Formatdateien die XML-Syntax zu verwenden, weil sich im Vergleich zu Nicht-XML-Formatdateien mehrere Vorteile ergeben.  
   
 > [!NOTE]  
->  Die zum Lesen der Formatdatei verwendete Version des Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, identisch oder eine höhere Version sein. Das [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Hilfsprogramm **bcp** liest z. B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]bcp**in** generiert wurden, aber das [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Hilfsprogramm **bcp** liest keine Formatdateien der Version 11.0, die von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]bcp**in** generiert wurden.  
+>  Die zum Lesen der Formatdatei verwendete Version des Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, identisch oder eine höhere Version sein. Das [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Hilfsprogramm **bcp** liest z. B. Formatdateien der Version 10.0, die von **bcp** in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] generiert wurden, aber das [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Hilfsprogramm **bcp** liest keine Formatdateien der Version 11.0, die von **bcp** in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] generiert wurden.  
   
  In diesem Thema wird die Verwendung des [Hilfsprogramms bcp](../../tools/bcp-utility.md) zum Erstellen einer Formatdatei für eine bestimmte Tabelle erläutert. Die Formatdatei basiert auf der angegebenen Datentypoption ( **-n**, **-c**, **-w**oder **-N**) sowie auf den Tabellen- bzw. Sichttrennzeichen.  
   
@@ -151,7 +152,7 @@ Die folgende Beispielformatdatei für eine Tabelle mit 5 Spalten beinhaltet die 
   
 ```  
   
- Wenn Sie versuchen Daten mithilfe von „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ...“ oder „`bcp in -c -C65001 -f format_file``BULK INSERT`/ ... `OPENROWSET` ...“ in `FORMATFILE='format_file' CODEPAGE=65001` zu importieren, haben Informationen zur Sortierung/Codepage Priorität gegenüber der 65001-Option.  
+ Wenn Sie versuchen Daten mithilfe von „`bcp in -c -C65001 -f format_file` ...“ oder „`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ...“ in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu importieren, haben Informationen zur Sortierung/Codepage Priorität gegenüber der 65001-Option.  
 Wenn Sie daher eine Formatdatei generieren, müssen Sie die Sortierungsinformationen manuell aus der generierten Formatdatei löschen, bevor Sie die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurückimportieren.  
 Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen aufgeführt.  
   
@@ -195,7 +196,7 @@ Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|Gibt die XML-Formatdatei an.|  
 |**-c**|Gibt Zeichendaten an.|  
-|**-t** `,`|Gibt ein Komma ( **,** ) als Feldabschlusszeichen an.<br /><br /> Hinweis: Wenn von der Datendatei das standardmäßige Feldabschlusszeichen (`\t`) verwendet wird, ist der **-t** -Schalter nicht erforderlich.|  
+|**-t** `,`|Gibt ein Komma ( **,** ) als Feldabschlusszeichen an.<br /><br /> Hinweis: Wenn von der Datendatei das Standardfeldabschlusszeichen (`\t`) verwendet wird, ist der **-t**-Schalter nicht erforderlich.|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
  Geben Sie an der Windows-Eingabeaufforderung den folgenden `bcp` -Befehl ein:  

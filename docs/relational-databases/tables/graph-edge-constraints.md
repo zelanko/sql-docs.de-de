@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea69255ecd92b8df7fbaa9199e948ae171bfaebb
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70873885"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625562"
 ---
 # <a name="edge-constraints"></a>Edgeeinschränkungen
 
@@ -50,7 +50,7 @@ Ein Beispiel: Sie haben die Knoten `Product` und `Customer` in Ihrem Graph und v
 Durch Erstellen einer Edgeeinschränkung wird nicht automatisch ein entsprechender Index in den `$from_id`- und `$to_id`-Spalten der Edgetabelle erstellt. Es empfiehlt sich, manuell einen Index in einem `$from_id`,`$to_id`-Spaltenpaar zu erstellen, wenn Sie Punktsuchabfragen oder OLTP-Workloads verarbeiten.
 
 ### <a name="on-delete-referential-actions-on-edge-constraints"></a>ON DELETE: referenzielle Aktionen bei Edgeeinschränkungen
-Mit kaskadierende Aktionen für eine Edgeeinschränkung können Benutzer die von der Datenbank-Engine durchzuführenden Aktionen definieren, wenn ein Benutzer die Knoten löscht, die der angegebene Edge verbindet. Die folgenden referenziellen Aktionen können definiert werden:  
+Mit kaskadierende Aktionen für eine Edgeeinschränkung können Benutzer die von der Datenbank-Engine durchzuführenden Aktionen definieren, wenn ein Benutzer die Knoten löscht, die über den angegebenen Edge verbunden werden. Die folgenden referenziellen Aktionen können definiert werden:  
 *NO ACTION*   
 Die Datenbank-Engine löst einen Fehler aus, wenn Sie versuchen, einen Knoten zu löschen, der über verbundene Edges verfügt.  
 
@@ -59,7 +59,7 @@ Wenn ein Knoten aus der Datenbank gelöscht wird, werden auch die verbundenen Ed
 
 ## <a name="working-with-edge-constraints"></a>Arbeiten mit Edgeeinschränkungen
 
-Sie können mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Edgeeinschränkung in [!INCLUDE[tsql](../../includes/tsql-md.md)] definieren. Eine Edgeeinschränkung kann nur in einer Graph-Edgetabelle definiert werden. Zum Erstellen, Löschen oder Ändern einer Edgeeinschränkung müssen Sie über die **ALTER**-Berechtigung für die Tabelle verfügen.
+Sie können mit [!INCLUDE[tsql](../../includes/tsql-md.md)] eine Edgeeinschränkung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definieren. Eine Edgeeinschränkung kann nur in einer Graph-Edgetabelle definiert werden. Zum Erstellen, Löschen oder Ändern einer Edgeeinschränkung müssen Sie über die **ALTER**-Berechtigung für die Tabelle verfügen.
 
 ### <a name="create-edge-constraints"></a>Erstellen von Edgeeinschränkungen
 

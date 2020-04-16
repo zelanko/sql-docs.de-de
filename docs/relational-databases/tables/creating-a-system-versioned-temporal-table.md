@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165220"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809856"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
 
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - Die **PERIOD** -Spalten dürfen keine NULL-Werte zulassen, auch wenn keine Angabe zur NULL-Zulässigkeit gemacht wurde. Wenn für **PERIOD**-Spalten explizit angegeben ist, dass NULL-Werte zulässig sind, tritt bei der Anweisung **CREATE TABLE** ein Fehler auf.
 - Das Schema der Verlaufstabelle muss im Hinblick auf Spaltenanzahl, Spaltennamen, Sortierung und Datentypen stets an die aktuelle oder temporale Tabelle angepasst sein.
 - Eine anonyme Verlaufstabelle wird automatisch im gleichen Schema wie die aktuelle oder temporale Tabelle erstellt.
-- Der Name der anonymen Verlaufstabelle weist das folgende Format auf: *MSSQL_TemporalHistoryFor_<Objekt-ID_der_aktuellen_temporalen_Tabelle>_[Suffix]* . Das Suffix ist optional und wird nur hinzugefügt, wenn der erste Teil des Tabellennamens nicht eindeutig ist.
+- Der Name der anonymen Verlaufstabelle weist das folgende Format auf: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* . Das Suffix ist optional und wird nur hinzugefügt, wenn der erste Teil des Tabellennamens nicht eindeutig ist.
 - Die Verlaufstabelle wird als Rowstoretabelle erstellt. Sofern möglich, wird die PAGE-Komprimierung angewendet; andernfalls wird die Verlaufstabelle nicht komprimiert. Einige Tabellenkonfigurationen, z. B. SPARSE-Spalten, lassen beispielsweise keine Komprimierung zu.
 - Für die Verlaufstabelle wird ein gruppierter Standardindex mit einem automatisch generierten Namen im Format *IX_<history_table_name>* erstellt. Der gruppierte Index enthält die **PERIOD** -Spalten (Ende, Anfang).
 - Informationen zum Erstellen der aktuellen Tabelle als speicheroptimierte Tabelle finden Sie unter [Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).
@@ -164,9 +164,8 @@ ALTER TABLE InsurancePolicy
 
 - Das Hinzufügen von Spalten, die keine NULL-Werte zulassen, mit Standardwerten zu einer vorhandenen Tabelle mit Daten ist in allen Editionen außer SQL Server Enterprise Edition ein Datengrößenvorgang (in SQL Server Enterprise Edition wäre es ein Metadatenvorgang). Bei einer vorhandenen großen Verlaufstabelle mit Daten in SQL Server Standard Edition kann das Hinzufügen einer Nicht-NULL-Spalte ein aufwendiger Vorgang sein.
 - Einschränkungen für Spalten des Zeitraumstarts und -endes müssen sorgfältig gewählt werden:
-
   - Der Standardwert für die Startspalte gibt an, ab welchem Zeitpunkt vorhandene Zeilen als gültig betrachtet werden. Es kann kein Zeitpunkt in der Zukunft als datetime-Wert angegeben werden.
-  - Die Endzeit muss als maximaler Wert für eine bestimmte datetime2-Genauigkeit angegeben werden.
+  - Die Endzeit muss als maximaler Wert für eine bestimmte datetime2-Genauigkeit angegeben werden, z. B. `9999-12-31 23:59:59` oder `9999-12-31 23:59:59.9999999`.
 - Durch das Hinzufügen eines Zeitraums wird für die aktuelle Tabelle eine Datenkonsistenzprüfung durchgeführt, um sicherzustellen, dass die Standardwerte für Zeitraumspalten gültig sind.
 - Wenn bei der Aktivierung von **SYSTEM_VERSIONING** eine vorhandene Verlaufstabelle angegeben wird, erfolgt eine Datenkonsistenzprüfung der aktuellen Tabelle und der Verlaufstabelle. Diese kann übersprungen werden, indem Sie **DATA_CONSISTENCY_CHECK = OFF** als zusätzlichen Parameter angeben.
 

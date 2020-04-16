@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb926c0696f0e926f91297ee5b719bbafce3eda8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909116"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219359"
 ---
 # <a name="tracing-driver-operation"></a>Ablaufverfolgung für Treibervorgänge
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,8 +59,8 @@ ms.locfileid: "80909116"
 |WARNING|Kennzeichnet ein mögliches Problem.|  
 |INFO|Stellt informative Meldungen bereit.|  
 |FINE|Stellt Ablaufverfolgungsinformationen einschließlich grundlegender Informationen zum Erstellen und Löschen von Objekten. Außerdem alle von den öffentlichen Methoden ausgelösten Ausnahmen.|  
-|FINER|Stellt ausführliche Ablaufverfolgungsinformationen einschließlich aller Ein- und Ausstiegspunkte von öffentlichen Methoden mit den zugeordneten Parameterdatentypen und allen öffentlichen Eigenschaften für öffentliche Klassen bereit. Außerdem Eingabeparameter, Ausgabeparameter und Methodenrückgabewerte mit Ausnahme der Rückgabewerttypen CLOB, BLOB, NCLOB, Reader und \<stream>.<br /><br /> In Version 1.2 des JDBC-Treibers waren die folgenden Protokollierungskategorien vorhanden, die auch den Protokolliergrad FINE aufweisen: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA und [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Diese wurden ab Version 2.0 auf den Grad FINER hochgestuft.|  
-|FINEST|Stellt sehr ausführliche Ablaufverfolgungsinformationen bereit. Dieser Grad ist der niedrigste Protokolliergrad.<br /><br /> In Version 1.2 von JDBC Driver waren die folgenden Protokollierungskategorien vorhanden, die auch den Protokolliergrad FINEST aufweisen: TDS.DATA und TDS.TOKEN. Diese behalten ab Version 2.0 den Protokolliergrad FINEST bei.|  
+|FINER|Stellt ausführliche Ablaufverfolgungsinformationen einschließlich aller Ein- und Ausstiegspunkte von öffentlichen Methoden mit den zugeordneten Parameterdatentypen und allen öffentlichen Eigenschaften für öffentliche Klassen bereit. Außerdem Eingabeparameter, Ausgabeparameter und Methodenrückgabewerte mit Ausnahme der Rückgabewerttypen CLOB, BLOB, NCLOB, Reader und \<stream>.<br /><br /> In Version 1.2 des JDBC-Treibers waren die folgenden Protokollierungskategorien vorhanden, die auch den Protokolliergrad FINE aufweisen: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA und [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Diese wurden ab Version 2.0 auf den Grad FINER hochgestuft.|  
+|FINEST|Stellt sehr ausführliche Ablaufverfolgungsinformationen bereit. Dieser Grad ist der niedrigste Protokolliergrad.<br /><br /> In Version 1.2 des JDBC-Treibers waren die folgenden Protokollierungskategorien vorhanden, die auch den Protokolliergrad FINEST aufweisen: TDS.DATA und TDS.TOKEN. Diese behalten ab Version 2.0 den Protokolliergrad FINEST bei.|  
 |OFF|Schaltet die Protokollierung aus.|  
 |ALL|Aktiviert die Protokollierung aller Meldungen.|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "80909116"
 |XA|Protokolliert Meldungen für alle XA-Transaktionen in der Klasse [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md). Die Anwendungen können den Protokolliergrad auf FINE und FINER festlegen.|  
 |KerbAuthentication|Mit dieser Kategorie werden Meldungen zur Kerberos-Authentifizierung Typ 4 protokolliert (wenn die Verbindungseigenschaft **authenticationScheme** auf **JavaKerberos** festgelegt ist). Für die Anwendung kann der Protokolliergrad auf FINE oder FINER festgelegt werden.|  
 |TDS.DATA|Protokolliert Meldungen, die Konversationen auf TDS-Protokollebene zwischen Treiber und SQL Server enthalten. Die ausführlichen Inhalte jedes gesendeten und empfangenen TDS-Pakets werden in ASCII und hexadezimal protokolliert. Die Anmeldeinformationen (Benutzernamen und Kennwörter) werden nicht protokolliert. Alle sonstigen Daten werden protokolliert.<br /><br /> Diese Kategorie erstellt sehr ausführliche Meldungen. Sie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.|  
-|TDS.Channel|Diese Kategorie verfolgt Aktionen der TCP-Kommunikationskanäle mit SQL Server. Die protokollierten Meldungen umfassen das Öffnen und Schließen von Sockets sowie Lese- und Schreibvorgänge. Außerdem werden Meldungen zum Herstellen einer SSL (Secure Sockets Layer)-Verbindung mit SQL Server verfolgt.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINE, FINER oder FINEST festgelegt wird.|  
+|TDS.Channel|Diese Kategorie verfolgt Aktionen der TCP-Kommunikationskanäle mit SQL Server. Die protokollierten Meldungen umfassen das Öffnen und Schließen von Sockets sowie Lese- und Schreibvorgänge. Außerdem werden Meldungen für das Herstellen einer Transport Layer Security-Verbindung (TLS) mit SQL Server, zuvor als Secure Sockets Layer (SSL) bezeichnet, verfolgt.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINE, FINER oder FINEST festgelegt wird.|  
 |TDS.Writer|Diese Kategorie verfolgt Schreibvorgänge für den TDS-Kanal. Beachten Sie, dass nur die Länge der Schreibvorgänge verfolgt wird, nicht deren Inhalt. Diese Kategorie verfolgt außerdem Probleme, wenn zum Abbrechen der Ausführung einer Anweisung ein Achtungssignal gesendet wird.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.|  
 |TDS.Reader|Diese Kategorie verfolgt bestimmte Lesevorgänge für den TDS-Kanal mit dem Grad FINEST. Die Nachverfolgung mit dem Grad FINEST kann ausführlich ausfallen. Mit den Graden WARNING und SEVERE wird in dieser Kategorie verfolgt, wenn der Treiber ein ungültiges TDS-Protokoll von SQL Server empfängt, bevor der Treiber die Verbindung trennt.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINER und FINEST festgelegt wird.|  
 |TDS.Command|Diese Kategorie verfolgt Zustandsübergänge auf niedriger Ebene und sonstige Informationen zur Ausführung von TDS-Befehlen wie der Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, Abrufvorgängen von ResultSet-Cursorn, Commits usw.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.|  

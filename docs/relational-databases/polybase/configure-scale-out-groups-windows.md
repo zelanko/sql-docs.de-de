@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc70544fdb0bb79ef97d5026ad8b985ad8add2ba
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216079"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80443384"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Konfigurieren von PolyBase-Erweiterungsgruppen unter Windows
 
@@ -87,7 +87,10 @@ Nachdem das Setup abgeschlossen ist, können beide Computer als PolyBase-Gruppen
 3. Führen Sie „services.msc“ auf den Computeknoten (PQTH4A CMP02) aus.
   
 4. Fahren Sie die PolyBase-Engine herunter, und starten Sie den PolyBase-Datenverschiebedienst neu.
-  
+
+> [!NOTE] 
+> Wird der Polybase-Engine-Dienst auf dem Hauptknoten neu gestartet oder beendet, werden die DMS-Dienste (Data Movement Service) beendet, sobald der Kommunikationskanal zwischen DMS und Polybase-Engine-Dienst (DW) geschlossen wird. Wird die DW-Engine mehr als zweimal neu gestartet, wechselt der DMS-Dienst für 90 Minuten in einen Ruhezeitraum, währenddessen kein erneuter automatischer Startversuch ausgeführt wird. Starten Sie in diesem Fall den Dienst auf allen Knoten manuell.
+
 ## <a name="optional-remove-a-compute-node"></a>Optional: Entfernen eines Serverknotens  
   
 1. Stellen Sie eine Verbindung mit dem Computeknoten SQL Server (PQTH4A-CMP02) her.

@@ -1,5 +1,6 @@
 ---
 title: Massenimport und -export von Daten (SQL Server) | Microsoft-Dokumentation
+description: In SQL Server wird der Massenexport von Daten aus einer SQL Server-Tabelle und der Massenimport in eine SQL Server-Tabelle oder eine nicht partitionierte Sicht unterstützt.
 ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
@@ -25,12 +26,12 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 462df4c5acf09d5de57a237c8fd68e5a394fb0dc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74c9d7286363984825d51fb3598f246da422f88d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71680816"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980492"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Massenimport und -export von Daten (SQL Server)
 
@@ -60,7 +61,7 @@ ms.locfileid: "71680816"
 
 ## <a name="format-files"></a><a name="FFs"></a> Formatdateien
 
-Das Hilfsprogramm [bcp](../../tools/bcp-utility.md)sowie die Anweisungen [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)und [INSERT... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) unterstützen alle die Verwendung einer als *Formatdatei* bezeichneten speziellen Datei zum Speichern von Formatinformationen für jedes Feld in einer Datendatei. In einer Formatdatei können auch Informationen zu der korrespondierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle enthalten sein. Über die Formatdatei können alle Formatinformationen bereitgestellt werden, die für den Massenexport von Daten aus einer Instanz und für den Massenimport von Daten in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erforderlich sind.
+Das Hilfsprogramm [bcp](../../tools/bcp-utility.md) sowie die Anweisungen [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [INSERT... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) unterstützen alle die Verwendung einer als *Formatdatei* bezeichneten speziellen Datei zum Speichern von Formatinformationen für jedes Feld in einer Datendatei. In einer Formatdatei können auch Informationen zu der korrespondierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle enthalten sein. Über die Formatdatei können alle Formatinformationen bereitgestellt werden, die für den Massenexport von Daten aus einer Instanz und für den Massenimport von Daten in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erforderlich sind.
 
 > [!IMPORTANT]
 > Das Hilfsprogramm „bcp“ kann nicht zum Importieren oder Exportieren von Daten zwischen Azure Blob Storage und Azure SQL-Datenbank verwendet werden. Verwenden Sie hierzu die Anweisungen [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).

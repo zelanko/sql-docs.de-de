@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28329315313f6f08f84aa2d8944eef55d26fdd46
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75548281"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873166"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -105,7 +105,7 @@ DELETE
  Der in der FROM-*table_source*-Klausel angegebene Alias, der die Tabelle oder Sicht darstellt, aus der die Zeilen gelöscht werden sollen.  
   
  *server_name*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Der Name des Servers (der einen Verbindungsservernamen oder die Funktion [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) als Servernamen verwendet), auf dem sich die Tabelle oder die Sicht befindet. Wenn *server_name* angegeben ist, sind *database_name* und *schema_name* erforderlich.  
   
@@ -123,7 +123,7 @@ DELETE
  Die Sicht, auf die *table_or_view_name* verweist, muss aktualisierbar sein und auf genau eine Basistabelle in der FROM-Klausel der Sichtdefinition verweisen. Weitere Informationen zu aktualisierbaren Ansichten finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Entweder die Funktion [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), abhängig von den Funktionen des Anbieters.  
   
@@ -192,7 +192,7 @@ DELETE
  TOP kann nicht in einer DELETE-Anweisung mit partitionierten Sichten verwendet werden.  
   
 ## <a name="locking-behavior"></a>Sperrverhalten  
- Eine DELETE-Anweisung ruft immer eine exklusive (X) Sperre für die von ihr geänderte Tabelle ab und hält diese Sperre bis zum Abschluss der Transaktion aufrecht. Eine exklusive Sperre (X) bewirkt, dass keine andere Transaktion Daten ändern kann. Lesevorgänge können nur mithilfe des NOLOCK-Hinweises oder der READ UNCOMMITTED-Isolationsstufe ausgeführt werden. Sie können Tabellenhinweise angeben, um dieses Standardverhalten für die Dauer der DELETE-Anweisung zu überschreiben, indem Sie eine andere Sperrmethode angeben. Es wird jedoch empfohlen, dass Hinweise nur von erfahrenen Entwicklern und Datenbankadministratoren und nur als letzte Möglichkeit verwendet werden. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Eine DELETE-Anweisung ruft standardmäßig eine beabsichtigte exklusive Sperre (IX) für das von ihr geänderte Tabellenobjekt ab und hält diese Sperre bis zum Abschluss der Transaktion aufrecht. Eine beabsichtigte exklusive Sperre (IX) bewirkt, dass mit keiner anderen Transaktion Daten geändert werden können. Lesevorgänge können nur mithilfe des NOLOCK-Hinweises oder der READ UNCOMMITTED-Isolationsstufe ausgeführt werden. Sie können Tabellenhinweise angeben, um dieses Standardverhalten für die Dauer der DELETE-Anweisung zu überschreiben, indem Sie eine andere Sperrmethode angeben. Es wird jedoch empfohlen, dass Hinweise nur von erfahrenen Entwicklern und Datenbankadministratoren und nur als letzte Möglichkeit verwendet werden. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Wenn Zeilen aus einem Heap gelöscht werden, können von [!INCLUDE[ssDE](../../includes/ssde-md.md)] Zeilen- oder Seitensperren für den Vorgang verwendet werden. Demzufolge bleiben die durch den Löschvorgang geleerten Seiten dem Heap zugeordnet. Wenn die Zuordnung leerer Seiten nicht aufgehoben wird, kann der zugehörige Speicherplatz nicht für andere Objekte in der Datenbank verwendet werden.  
   
@@ -200,7 +200,7 @@ DELETE
   
 -   Geben Sie den TABLOCK-Hinweis in der DELETE-Anweisung an. Mithilfe des TABLOCK-Hinweises wird durch den Löschvorgang eine exklusive Sperre für die Tabelle statt einer Zeilen- oder Seitensperre angefordert. Dadurch ist es möglich, die Zuordnung der Seiten aufzuheben. Weitere Informationen zu dem TABLOCK-Hinweis finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
--   Verwenden Sie TRUNCATE TABLE, wenn alle Zeilen aus der Tabelle gelöscht werden sollen.  
+-   Verwenden Sie `TRUNCATE TABLE`, wenn alle Zeilen aus der Tabelle gelöscht werden sollen.  
   
 -   Erstellen Sie einen gruppierten Index für den Heap, bevor Sie die Zeilen löschen. Nach dem Löschen der Zeilen können Sie den gruppierten Index löschen. Diese Methode ist zeitaufwändiger als die vorherigen Methoden und beansprucht mehr temporäre Ressourcen.  
   
@@ -208,14 +208,14 @@ DELETE
 >  Leere Seiten können zu jeder Zeit mithilfe der Anweisung `ALTER TABLE <table_name> REBUILD` aus einem Heap gelöscht werden.  
   
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
- Die DELETE-Anweisung wird immer vollständig protokolliert.  
+Die DELETE-Anweisung wird immer vollständig protokolliert.  
   
 ## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
- Für die Zieltabelle sind DELETE-Berechtigungen erforderlich. SELECT-Berechtigungen werden ebenfalls benötigt, wenn die Anweisung eine WHERE-Klausel enthält.  
+ Für die Zieltabelle sind `DELETE`-Berechtigungen erforderlich. `SELECT`-Berechtigungen werden ebenfalls benötigt, wenn die Anweisung eine WHERE-Klausel enthält.  
   
- Mitglieder der festen Serverrolle **sysadmin**, der festen Datenbankrollen **db_owner** und **db_datawriter** und der Tabellenbesitzer erhalten standardmäßig DELETE-Berechtigungen. Mitglieder der Rollen **sysadmin**, **db_owner** und **db_securityadmin** sowie der Tabellenbesitzer können Berechtigungen an andere Benutzer übertragen.  
+ DELETE-Berechtigungen werden standardmäßig Mitgliedern der festen Serverrolle `sysadmin` und der festen Datenbankrollen `db_owner` und `db_datawriter` sowie Tabellenbesitzern erteilt. Mitglieder der Rollen `sysadmin`, `db_owner` und `db_securityadmin` sowie der Tabellenbesitzer können Berechtigungen an andere Benutzer übertragen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -241,7 +241,7 @@ GO
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie die Anzahl von Zeilen beschränkt wird, die gelöscht werden.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Löschen einer Reihe von Zeilen mithilfe der WHERE-Klausel  
- Im folgenden Beispiel werden alle Zeilen der Tabelle `ProductCostHistory` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] gelöscht, bei denen der Wert `StandardCost` in der Spalte `1000.00` überschritten wird.  
+ Im folgenden Beispiel werden alle Zeilen der Tabelle `ProductCostHistory` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] gelöscht, bei denen der Wert `1000.00` in der Spalte `StandardCost` überschritten wird.  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -338,7 +338,7 @@ GO
 ###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> Löschen von Zeilen aus einer Remotetabelle  
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen mit einem [Verbindungsserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) oder einer [Rowsetfunktion](../../t-sql/functions/rowset-functions-transact-sql.md) aus einer Remotezieltabelle gelöscht werden, um auf die Remotetabelle zu verweisen. Eine Remotetabelle ist auf einem anderen Server oder in einer anderen Instanz von SQL Server vorhanden.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Löschen von Daten aus einer Remotetabelle mithilfe eines Verbindungsservers  
  Im folgenden Beispiel werden Zeilen aus einer Remotetabelle gelöscht. In diesem Beispiel wird zunächst mithilfe von [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ein Link zur Remotedatenquelle erstellt. Der Name des Verbindungsservers (`MyLinkServer`) wird anschließend als Teil des vierteiligen Objektnamens in der Form *server.catalog.schema.object* angegeben.  

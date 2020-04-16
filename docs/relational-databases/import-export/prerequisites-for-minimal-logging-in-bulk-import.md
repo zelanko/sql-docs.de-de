@@ -1,5 +1,6 @@
 ---
 title: Voraussetzungen für die minimale Protokollierung beim Massenimport | Microsoft-Dokumentation
+description: Bei einer einfachen Wiederherstellung oder einem massenprotokollierten Wiederherstellungsmodell wird durch die minimale Protokollierung von Massenimportvorgängen die Wahrscheinlichkeit verringert, dass durch einen Vorgang der gesamte Protokollspeicherplatz belegt wird.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 69872eeb356ff4dbd530bf0c752cdf02706d8344
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70910832"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980120"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Voraussetzungen für die minimale Protokollierung beim Massenimport
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

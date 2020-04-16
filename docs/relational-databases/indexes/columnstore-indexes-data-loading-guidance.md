@@ -11,12 +11,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a91cffde531d7d72564df6935a48aff91dae8187
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286674"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550220"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore-Indizes: Leitfaden zum Datenladevorgang
 
@@ -47,7 +47,7 @@ Das Massenladen verfügt über diese integrierten Leistungsoptimierungen:
 
 -   **Reduzierte Protokollierung:** Daten, die direkt in komprimierte Zeilengruppen geladen werden, reduzieren die Protokollgröße erheblich. Wenn Daten beispielsweise 10-fach komprimiert werden, fällt das entsprechende Transaktionsprotokoll etwa 10 mal kleiner aus, ohne dass TABLOCK oder das massenprotokollierte Wiederherstellungsmodell benötigt werden. Alle Daten, die in eine Delta-Zeilengruppe gehen, werden vollständig protokolliert. Dies schließt alle Batchgrößen ein, die weniger als 102.400 Zeilen sind.  Die bewährte Vorgehensweise ist die Verwendung einer Batchgröße >= 102400. Da kein TABLOCK erforderlich ist, können Sie die Daten parallel laden. 
 
--   **Minimale Protokollierung:** Sie können die Protokollierung weiter reduzieren, indem Sie die Voraussetzungen für die [minimale Protokollierung](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md) erfüllen. Jedoch führt TABLOCK, anders als beim Laden von Daten in einen Rowstore, statt zu einer Massenupdatesperre zu einer X-Sperre für die Tabelle, weshalb Daten nicht parallel geladen werden können. Weitere Informationen zum Sperren finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung[(../sql-server-transaction-locking-and-row-versioning-guide.md).
+-   **Minimale Protokollierung:** Sie können die Protokollierung weiter reduzieren, indem Sie die Voraussetzungen für die [minimale Protokollierung](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md) erfüllen. Jedoch führt TABLOCK, anders als beim Laden von Daten in einen Rowstore, statt zu einer Massenupdatesperre zu einer X-Sperre für die Tabelle, weshalb Daten nicht parallel geladen werden können. Weitere Informationen zu Sperren finden Sie unter [Sperren und Zeilenversionsverwaltung](../sql-server-transaction-locking-and-row-versioning-guide.md).
 
 -   **Sperrenoptimierung:** Die X-Sperre in einer Zeilengruppe wird automatisch abgerufen, wenn Daten in eine komprimierte Zeilengruppe geladen werden. Beim Massenladen in eine Deltazeilengruppe wird eine X-Sperre für die Zeilengruppe abgerufen, aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sperrt PAGE/EXTENT weiterhin, da die X-Zeilengruppensperre nicht Teil der Sperrhierarchie ist.  
   
@@ -97,7 +97,7 @@ SELECT <list of columns> FROM <Staging Table>
 -   **Protokolloptimierung:** Reduzierte Protokollierung beim Laden der Daten in eine komprimierte Zeilengruppe.   
 -   **Sperrenoptimierung:** Beim Laden in komprimierte Zeilengruppen wird die X-Sperre für Zeilengruppen abgerufen. Bei der Deltazeilengruppe wird eine X-Sperre für die Zeilengruppe abgerufen, aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sperrt PAGE/EXTENT weiterhin, da die X-Zeilengruppensperre nicht Teil der Sperrhierarchie ist.  
   
- Wenn Sie über einen oder mehrere nicht gruppierte Indizes verfügen, erfolgt keine Sperren- oder Protokollierungsoptimierung für den Indext selbst, sondern die Optimierungen für den gruppierten Columnstore-Index, die oben beschrieben wurden, sind weiterhin vorhanden.  
+ Wenn Sie über einen oder mehrere nicht gruppierte Indizes verfügen, erfolgt keine Sperren- oder Protokollierungsoptimierung für den Index selbst, sondern es bleiben die oben beschriebenen Optimierungen für den gruppierten Columnstore-Index weiterhin vorhanden.  
   
 ## <a name="what-is-trickle-insert"></a>Was ist das Anwenden der Einfügung?
 

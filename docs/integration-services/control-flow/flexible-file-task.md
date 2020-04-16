@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83ef614593641b762a628838354a6a3bef9dfadd
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72807413"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607856"
 ---
 # <a name="flexible-file-task"></a>Flexibler Dateitask
 
@@ -44,18 +44,19 @@ Die folgenden Eigenschaften sind für den **Kopiervorgang** verfügbar.
 - **SourceConnectionType:** Gibt den Typ des Quellverbindungs-Managers an.
 - **SourceConnection:** Gibt den Quellverbindungs-Manager an.
 - **SourceFolderPath:** Gibt den Pfad des Quellordners an.
-- **SourceFileName:** Gibt den Namen der Quelldatei an. Wenn diese Angabe leer gelassen wird, wird der Quellordner kopiert.
+- **SourceFileName:** Gibt den Namen der Quelldatei an. Wenn diese Angabe leer gelassen wird, wird der Quellordner kopiert. Folgende Platzhalter dürfen im Quelldateinamen verwendet werden: `*` (entspricht 0 (Null) oder mehr Zeichen), `?` (entspricht 0 (Null) oder einem Zeichen) und `^` (Escapezeichen).
 - **SearchRecursively:** Gibt an, ob Unterordner rekursiv kopiert werden sollen.
 - **DestinationConnectionType:** Gibt den Typ des Zielverbindungs-Managers an.
 - **DestinationConnection:** Gibt den Zielverbindungs-Manager an.
 - **DestinationFolderPath:** Gibt den Pfad des Zielordners an.
-- **DestinationFileName:** Gibt den Namen der Zieldatei an.
+- **DestinationFileName:** Gibt den Namen der Zieldatei an. Wenn diese Angabe leer gelassen wird, werden die Namen der Quelldatei verwendet.
 
 Die folgenden Eigenschaften sind für den **Löschvorgang** verfügbar.
 - **ConnectionType:** Gibt den Typ des Verbindungs-Managers an.
 - **Connection:** Gibt den Verbindungs-Manager an.
 - **FolderPath:** Gibt den Ordnerpfad an.
-- **FileName:** Gibt den Dateinamen an. Wenn diese Angabe leer gelassen wird, wird der Ordner gelöscht. Für Azure Blob Storage wird das Löschen des Ordners nicht unterstützt.
+- **FileName:** Gibt den Dateinamen an. Wenn diese Angabe leer gelassen wird, wird der Ordner gelöscht. Für Azure Blob Storage wird das Löschen des Ordners nicht unterstützt. Folgende Platzhalter dürfen im Dateinamen verwendet werden: `*` (entspricht 0 (Null) oder mehr Zeichen), `?` (entspricht 0 (Null) oder einem Zeichen) und `^` (Escapezeichen).
+- **DeleteRecursively:** Gibt an, ob Dateien rekursiv gelöscht werden sollen
 
 ***Hinweise zur Konfiguration der Dienstprinzipalberechtigung***
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bb59afd2044fc1614bdf0303702d72a5435728ea
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fd01462987ef425af32c8537f1fc99218d59e290
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928437"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219429"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Schützen von JDBC-Treiberanwendungen
 
@@ -32,7 +32,7 @@ In den Themen in diesem Abschnitt werden einige häufige Sicherheitsrisiken besc
 | [Sichern von Verbindungszeichenfolgen](../../connect/jdbc/securing-connection-strings.md) | Beschreibt Verfahren zum Schützen von Informationen, mit denen eine Verbindung mit einer Datenquelle hergestellt wird.                                                                                    |
 | [Überprüfen der Benutzereingabe](../../connect/jdbc/validating-user-input.md)             | Beschreibt Verfahren zum Überprüfen von Benutzereingaben.                                                                                                                          |
 | [Anwendungssicherheit](../../connect/jdbc/application-security.md)               | Beschreibt die Verwendung von Java-Richtlinienberechtigungen zum Sichern einer JDBC-Treiberanwendung.                                                                                |
-| [Verwenden der SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)               | Beschreibt das Herstellen eines sicheren Kommunikationskanals mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mithilfe von Secure Sockets Layer (SSL). |
+| [Verwenden von Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)               | Beschreibt das Herstellen eines sicheren Kommunikationskanals mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mithilfe von Transport Layer Security (TLS), zuvor als Secure Sockets Layer (SSL) bezeichnet. |
 | [FIPS-Modus](../../connect/jdbc/fips-mode.md)                                     | In diesem Artikel wird die Verwendung des JDBC-Treibers im FIPS-konformen Modus beschrieben.                                                                                                              |
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5099b46b611043dcbfa0f5b4c3ca4e72c70a5800
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568083"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607866"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack für Integration Services (SSIS)
 
@@ -193,6 +193,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## <a name="release-notes"></a>Versionsinformationen
+
+### <a name="version-1180"></a>Version 1.18.0
+
+#### <a name="improvements"></a>Verbesserungen
+
+1. Für flexible Dateitasks wurden drei Verbesserungen eingeführt: (1) Es wurde Unterstützung für Platzhalter bei Kopier-/Löschvorgängen hinzugefügt. (2) Der Benutzer kann die rekursive Suche bei Löschvorgängen aktivieren/deaktivieren. (3) Der Name der Zieldatei kann bei Kopiervorgängen leer bleiben, um den Namen der Quelldatei beizubehalten.
 
 ### <a name="version-1170"></a>Version 1.17.0
 

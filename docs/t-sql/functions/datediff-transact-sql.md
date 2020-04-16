@@ -1,6 +1,6 @@
 ---
 title: DATEDIFF (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+description: Transact-SQL-Referenz für die Funktion DATEDIFF Gibt den numerischen Unterschied zwischen einem Start- und einem Enddatum basierend auf dem datepart-Wert zurück.
 ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -31,12 +31,12 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d74f65d119de40a2a02902076eebe6ae42bf4ce5
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68731131"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517511"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 
@@ -106,7 +106,7 @@ Die **int**-Differenz zwischen *startdate* und *enddate*, ausgedrückt in der du
   
 Beispielsweise gibt `SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` -2 zurück, was darauf hindeutet, dass 2036 ein Schaltjahr sein muss. Dieser Fall bedeutet Folgendes: Wenn wir mit _startdate_ „2036-03-01-01“ beginnen und dann -2 Tage zählen, erreichen wir das _enddate_ „2036-02-28“.
   
-Bei einem Rückgabewert, der sich außerhalb des gültigen Bereichs für **int** (-2,147,483,648 bis + 2,147,483,647) befindet, gibt `DATEDIFF` einen Fehler zurück.  Der maximale Unterschied zwischen **startdate** und *enddate* beträgt für *millisecond* 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden. Für **second** beträgt der maximale Unterschied 68 Jahre, 19 Tage, 3 Stunden, 14 Minuten und 7 Sekunden.
+Bei einem Rückgabewert, der sich außerhalb des gültigen Bereichs für **int** (-2,147,483,648 bis + 2,147,483,647) befindet, gibt `DATEDIFF` einen Fehler zurück.  Der maximale Unterschied zwischen *startdate* und *enddate* beträgt für **millisecond** 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden. Für **second** beträgt der maximale Unterschied 68 Jahre, 19 Tage, 3 Stunden, 14 Minuten und 7 Sekunden.
   
 Wenn *startdate* und *enddate* jeweils nur ein Uhrzeitwert zugewiesen ist und *datepart* kein Zeit-*datepart* ist, gibt `DATEDIFF` 0 (null) zurück.
   

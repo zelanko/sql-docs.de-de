@@ -1,5 +1,6 @@
 ---
 title: Beibehalten von NULL-Werten oder Standardwerten während des Massenimports
+description: Für den Massenimport in SQL Server laden sowohl BCP als auch BULK INSERT Standardwerte, um NULL-Werte zu ersetzen. Sie können aber auch für beide Optionen die NULL-Werte beibehalten.
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,19 +22,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c4a92c1d98bfc7af773cac1be7aedb7113c5b28
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055959"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980382"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Beibehalten von NULL-Werten oder Standardwerten während des Massenimports (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Wenn Daten in eine Tabelle importiert werden, werden standardmäßig alle für die Spalten in der Tabelle definierten Standardwerte durch den Befehl [bcp](../../tools/bcp-utility.md) und die Anweisung [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) überwacht.  Wenn beispielsweise ein NULL-Feld in einem Datenfeld vorkommt, wird stattdessen der Standardwert für die Spalte geladen.  Sowohl mit dem Befehl [bcp](../../tools/bcp-utility.md) als auch mit der Anweisung [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) können Sie angeben, dass NULL-Werte beibehalten werden sollen.
 
-Eine reguläre INSERT-Anweisung hingegen behält den NULL-Wert bei, statt einen Standardwert einzufügen. Die INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) -Anweisung zeigt dasselbe grundlegende Verhalten wie eine reguläre INSERT-Anweisung, unterstützt jedoch zusätzlich einen [Tabellenhinweis](../../t-sql/queries/hints-transact-sql-table.md) zum Einfügen der Standardwerte.
+Eine reguläre INSERT-Anweisung hingegen behält den NULL-Wert bei, statt einen Standardwert einzufügen. Die INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)-Anweisung zeigt dasselbe grundlegende Verhalten wie eine reguläre INSERT-Anweisung, unterstützt jedoch zusätzlich einen [Tabellenhinweis](../../t-sql/queries/hints-transact-sql-table.md) zum Einfügen der Standardwerte.
 
 |Outline|
 |---|

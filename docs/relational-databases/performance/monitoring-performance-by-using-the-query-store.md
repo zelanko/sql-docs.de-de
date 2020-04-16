@@ -1,7 +1,7 @@
 ---
 title: Überwachen der Leistung mit dem Abfragespeicher | Microsoft -Dokumentation
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44d90d6f77433c3dceba4d3bf16de10d6eb70c36
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448174"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012416"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
 
@@ -34,9 +34,9 @@ Informationen zum Betrieb des Abfragespeichers in Azure [!INCLUDE[ssSDS](../../i
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Aktivieren des Abfragespeichers
 
- Der Abfragespeicher ist bei neuen Datenbanken standardmäßig nicht aktiviert.
+ Standardmäßig ist der Abfragespeicher für neue SQL Server- und Azure Synapse Analytics-Datenbanken (SQL DW) nicht aktiviert. Für neue Azure SQL-Datenbanken ist er hingegen aktiviert.
 
-## <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Verwenden der Seite „Abfragespeicher“ in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Verwenden der Seite „Abfragespeicher“ in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 1. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf eine Datenbank und anschließend auf **Eigenschaften**.
 
@@ -47,7 +47,7 @@ Informationen zum Betrieb des Abfragespeichers in Azure [!INCLUDE[ssSDS](../../i
 
 3. Wählen Sie im Feld **Betriebsmodus (angefordert)** die Option **Lesen und schreiben** aus.
 
-## <a name="use-transact-sql-statements"></a>Verwenden von Transact-SQL-Anweisungen
+### <a name="use-transact-sql-statements"></a>Verwenden von Transact-SQL-Anweisungen
 
 Verwenden Sie die Anweisung **ALTER DATABASE**, um den Abfragespeicher für eine bestimmte Datenbank zu aktivieren. Beispiel:
 

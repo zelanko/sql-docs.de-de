@@ -3,7 +3,7 @@ title: Als veraltet markierte Features der Datenbank-Engine | Microsoft-Dokument
 titleSuffix: SQL Server 2019
 description: Erfahren Sie mehr über die veralteten Features der Datenbank-Engine, die weiterhin in SQL Server 2017 (14.x) verfügbar sind, aber nicht in neuen Anwendungen verwendet werden sollten.
 ms.custom: seo-lt-2019
-ms.date: 03/30/2020
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -17,33 +17,31 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9e5bccc61c9c1f395e49a7a0a601271ed46f3502
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402605"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550164"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2017
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-In diesem Thema werden die veralteten Features von SQL Server-Datenbank-Engine beschrieben, die in der aktuellen Version von SQL Server 2017 (14.x) weiterhin verfügbar sind. Veraltete Features sollten in neuen Anwendungen nicht verwendet werden.  
+  In diesem Thema werden die als veraltet markierten Funktionen von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] beschrieben, die in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]noch verfügbar sind. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  
+  
+Wenn eine Funktion als veraltet markiert ist, bedeutet dies:\
 
-Wenn eine Funktion als veraltet markiert ist, bedeutet dies:
+- Die Funktion ist ausschließlich im Wartungsmodus. Es werden keine weiteren Änderungen vorgenommen, auch solche nicht, die mit der Interoperabilität mit neuen Funktionen zu tun haben.
+- Wir bemühen uns, veraltete Funktionen in zukünftigen Versionen zu belassen, um Upgrades zu vereinfachen. In seltenen Fällen kann es jedoch vorkommen, dass eine veraltete Funktion aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entfernt wird, weil sie zukünftige Innovationen beschränkt.
+- Für neue Entwicklungen wird empfohlen, in diesen keine veralteten Funktionen zu verwenden.      
 
-- Die Funktion ist ausschließlich im Wartungsmodus. Es werden keine weiteren Änderungen vorgenommen, auch solche nicht, die mit der Interoperabilität mit neuen Features zu tun haben.
+Sie können die Nutzung als veraltet markierter Funktionen mithilfe des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objektleistungsindikators "Als veraltet markierte Funktion" und Ablaufverfolgungsereignissen überwachen. Weitere Informationen finden Sie unter [Verwenden von SQL Server-Objekten](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
-- Wir bemühen uns, veraltete Funktionen in zukünftigen Versionen zu belassen, um Upgrades zu vereinfachen. In seltenen Fällen kann es jedoch vorkommen, dass ein veraltetes Feature endgültig aus SQL Server entfernt wird, weil es zukünftige Innovationen einschränkt.
-
-- Für neue Entwicklungen wird empfohlen, in diesen keine veralteten Funktionen zu verwenden.
-
-Sie können die Nutzung von veralteten Features mithilfe des Objekts „SQLServer:Deprecated Features“, das einen Leistungsindikator darstellt, und mithilfe von Ablaufverfolgungsereignissen überwachen. Weitere Informationen finden Sie unter [Verwenden von SQL Server-Objekten](../relational-databases/performance-monitor/use-sql-server-objects.md).
-
-Die Werte dieser Zähler sind auch durch Ausführung der folgenden Anweisung verfügbar:
+Die Werte dieser Indikatoren sind auch durch Ausführung folgender Anweisung verfügbar:  
 
 ```sql
-SELECT * FROM sys.dm_os_performance_counter
+SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
@@ -77,31 +75,21 @@ Upgrade von Version 100 (SQL Server 2008 und SQL Server 2008 R2) | Wenn die 
 | Als veraltet markierte Funktion | Ersatz | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
 | Die Verschlüsselung mit RC4 oder RC4_128 ist veraltet. Die Entfernung ist für die nächste Version geplant. Die Entschlüsselung von RC4 und RC4_128 ist nicht veraltet. | Verwenden Sie einen anderen Verschlüsselungsalgorithmus, z. B. AES. | Veralteter Verschlüsselungsalgorithmus | 253 |
-
-### <a name="hash-algorithms"></a>Hashalgorithmen
-
-| Als veraltet markierte Funktion | Ersatz | Feature name | Feature ID |
-|--------------------|-------------|--------------|------------|
 | Die Verwendung von MD2, MD4, MD5, SHA und SHA1 ist veraltet. | Verwenden Sie stattdessen SHA2_256 oder SHA2_512. Ältere Algorithmen funktionieren zwar weiterhin, lösen jedoch ein Ereignis aus, das auf die Veraltung hinweist. |Veralteter Hashalgorithmus | Keine |
 
 ### <a name="remote-servers"></a>Remoteserver
 
 | Als veraltet markierte Funktion | Ersatz | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
-| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern. sp_addserver kann nur mit der lokalen Option verwendet werden. | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
+| sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br /> sp_remoteoption|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern. sp_addserver kann nur mit der lokalen Option verwendet werden. | sp_addremotelogin<br /><br />sp_addserver <br /><br /> sp_dropremotelogin <br /><br /> sp_helpremotelogin <br /><br > sp_remoteoption | 70 <br /><br /> 69 <br /><br /> 71 <br /><br /> 72 <br /><br /> 73 |
 | \@\@remserver | Ersetzen Sie Remoteserver mithilfe von Verbindungsservern. | Keine | Keine |
 | SET REMOTE_PROC_TRANSACTIONS|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern. | SET REMOTE_PROC_TRANSACTIONS | 110 |
 
-### <a name="set-options"></a>SET-Optionen
+### <a name="transact-sql"></a>Transact-SQL
 
 | Als veraltet markierte Funktion | Ersatz | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
 | **SET ROWCOUNT** für die **INSERT**-, **UPDATE**-Anweisung und die **DELETE** -Anweisung | TOP-Schlüsselwort | SET ROWCOUNT | 109 |
-
-### <a name="table-hints"></a>Tabellenhinweise
-
-| Als veraltet markierte Funktion | Ersatz | Feature name | Feature ID |
-|--------------------|-------------|--------------|------------|
 | HOLDLOCK-Tabellenhinweis ohne Klammern. | Verwenden Sie HOLDLOCK mit Klammern. | HOLDLOCK-Tabellenhinweis ohne Klammern | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>Funktionen, die ab einer zukünftigen Version von SQL Server veraltet sind
@@ -131,12 +119,6 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 | Hindi <br /><br /> Mazedonisch | Diese Sortierungen sind in SQL Server 2005 (9.x) und höher vorhanden, aber nicht über fn_helpcollations sichtbar. Verwenden Sie stattdessen Macedonian_FYROM_90 und Indic_General_90.|Hindi <br /><br /> Mazedonisch |
 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 | Azeri_Latin_100 <br /><br /> Azeri_Cyrilllic_100 | Azeri_Latin_90 <br /><br /> Azeri_Cyrilllic_90 |
 
-### <a name="configuration"></a>Konfiguration
-
-| Als veraltet markierte Funktion | Ersatz | Feature name |
-|--------------------|-------------|--------------|
-| SET ANSI_NULLS OFF und ANSI_NULLS OFF-Datenbankoption<br /><br />SET ANSI_PADDING OFF und ANSI_PADDING OFF-Datenbankoption<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF und CONCAT_NULL_YIELDS_NULL OFF-Datenbankoption<br /><br />SET OFFSETS | Keine. <br /><br /> ANSI_NULLS, ANSI_PADDING und CONCAT_NULLS_YIELDS_NULL werden stets auf ON festgelegt. SET OFFSETS ist nicht verfügbar. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
-
 ### <a name="data-types"></a>Datentypen
 
 | Als veraltet markierte Funktion | Ersatz | Feature name |
@@ -144,14 +126,17 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 | sp_addtype <br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE | sp_addtype<br /><br /> sp_droptype |
 | **timestamp** -Syntax für **rowversion** -Datentyp | **rowversion** -Datentypsyntax | timestamp |
 | Fähigkeit, NULL-Werte in **timestamp** -Spalten einzufügen | Verwenden Sie stattdessen DEFAULT. | INSERT NULL in TIMESTAMP-Spalten |
-| Tabellenoption 'text in row'|Verwenden Sie stattdessen die Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)**. Weitere Informationen finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Tabellenoption 'text in row' |
-| Datentypen:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Verwenden Sie stattdessen die Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)**.|Datentypen: **text**, **ntext** oder **image**. |
+| Tabellenoption 'text in row'|Verwenden Sie stattdessen die Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** . Weitere Informationen finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Tabellenoption 'text in row' |
+| Datentypen:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Verwenden Sie stattdessen die Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** .|Datentypen: **text**, **ntext** oder **image**. |
 
 ### <a name="database-management"></a>Datenbankverwaltung
 
 | Als veraltet markierte Funktion | Ersatz | Feature name |
 |--------------------|-------------|--------------|
 | sp_attach_db <br /><br /> sp_attach_single_file_db|CREATE DATABASE-Anweisung mit der FOR ATTACH-Option. Verwenden Sie die FOR ATTACH_REBUILD_LOG-Option, um mehrere Protokolldateien neu zu erstellen, wenn mindestens eine Datei einen neuen Speicherort aufweist. | sp_attach_db <br /><br /> sp_attach_single_file_db |
+| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
+| sp_dbremove | DROP DATABASE | sp_dbremove |
+| sp_renamedb | MODIFY NAME in ALTER DATABASE | sp_renamedb |
 
 ### <a name="database-objects"></a>Datenbankobjekte
 
@@ -161,7 +146,6 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 | CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule | CHECK-Schlüsselwort in CREATE TABLE und ALTER TABLE | CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule |
 | sp_change_users_login | Verwenden Sie ALTER USER. | sp_change_users_login |
 | sp_depends | sys.dm_sql_referencing_entities und sys.dm_sql_referenced_entities | sp_depends |
-| sp_renamedb | MODIFY NAME in ALTER DATABASE | sp_renamedb |
 | sp_getbindtoken | Verwenden Sie MARS oder verteilte Transaktionen. | sp_getbindtoken |
 
 ### <a name="database-options"></a>Datenbankoptionen
@@ -201,12 +185,6 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc | Verwenden Sie stattdessen die CLR-Integration. | sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc |
 | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Verwenden Sie CREATE_LOGIN<br /><br /> Verwenden Sie DROP LOGIN und das IsIntegratedSecurityOnly-Argument von SERVERPROPERTY. | xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig |
 
-### <a name="function"></a>Funktion
-
-| Als veraltet markierte Funktion | Ersatz | Feature name |
-|--------------------|-------------|--------------|
-| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
-
 ### <a name="high-availability"></a>Hochverfügbarkeit
 
 | Als veraltet markierte Funktion | Ersatz | Feature name |
@@ -235,12 +213,6 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 |--------------------|-------------|--------------|
 | Angeben des SQLOLEDB-Anbieters für Verbindungsserver. | SQL Server Native Client (SQLNCLI) | SQLOLEDDB für Verbindungsserver |
 
-### <a name="locking"></a>Sperren
-
-| Als veraltet markierte Funktion | Ersatz | Feature name |
-|--------------------|-------------|--------------|
-| sp_lock | sys.dm_tran_locks | sp_lock |
-
 ### <a name="metadata"></a>Metadaten
 
 | Als veraltet markierte Funktion | Ersatz | Feature name |
@@ -258,13 +230,6 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 | Als veraltet markierte Funktion | Ersatz | Feature name |
 |--------------------|-------------|--------------|
 | DB-Library<br /><br />Embedded SQL für C|Obwohl Datenbank-Engine weiterhin Verbindungen von vorhandenen Anwendungen unterstützt, die die DB-Library- und Embedded SQL-APIs verwenden, gehören die Dateien bzw. die Dokumentationen, die zum Programmieren von Anwendungen erforderlich sind, die diese APIs verwenden, nicht mehr zum Lieferumfang. In einer der kommenden Versionen von SQL Server-Datenbank-Engine wird die Unterstützung für Verbindungen von DB-Library- oder Embedded SQL-Anwendungen eingestellt. Verwenden Sie DB-Library bzw. Embedded SQL nicht zum Entwickeln neuer Anwendungen. Entfernen Sie alle Abhängigkeiten von DB-Library bzw. Embedded SQL, wenn Sie vorhandene Anwendungen ändern. Verwenden Sie anstelle dieser APIs den SQLClient-Namespace oder eine API wie ODBC. SQL Server 2019 (15.x) enthält nicht die DB-Library-DLL, die zum Ausführen dieser Anwendungen erforderlich ist. Zum Ausführen von DB-Library- oder Embedded SQL-Anwendungen muss die DB-Library-DLL aus SQL Server-Version 6.5, 7.0 oder 2000 (8.x) verfügbar sein. | Keine |
-
-### <a name="removable-databases"></a>Austauschbare Datenbanken
-
-| Als veraltet markierte Funktion | Ersatz | Feature name |
-|--------------------|-------------|--------------|
-| sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable |
-| sp_dbremove | DROP DATABASE | sp_dbremove |
 
 ### <a name="security"></a>Sicherheit
 
@@ -288,12 +253,6 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 | Intrinsische PERMISSIONS-Funktion | Fragen Sie stattdessen sys.fn_my_permissions ab. | PERMISSIONS |
 | SETUSER | EXECUTE AS | SETUSER |
 | RC4- und DESX-Verschlüsselungsalgorithmen|Verwenden Sie einen anderen Algorithmus, z. B. AES. | DESX-Algorithmus |
-
-### <a name="set-options"></a>SET-Optionen
-
-| Als veraltet markierte Funktion | Ersatz | Feature name |
-|--------------------|-------------|--------------|
-| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) und [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
 
 ### <a name="server-configuration-options"></a>Serverkonfigurationsoptionen
 
@@ -319,11 +278,14 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 |--------------------|-------------|--------------|
 | Projektmappen-Explorer in SQL Server Management Studio | | Keine |
 
-### <a name="system-stored-procedures"></a>Gespeicherte Systemprozeduren
+### <a name="system-stored-procedures-and-functions"></a>Gespeicherte Systemprozeduren und Funktionen
 
 | Als veraltet markierte Funktion | Ersatz | Feature name |
 |--------------------|-------------|--------------|
 | sp_db_increased_partitions | Keine. In SQL Server 2019 (15.x) wird standardmäßig wird eine höhere Anzahl von Partitionen unterstützt. | sp_db_increased_partitions |
+| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br /> fn_servershareddrives |
+| fn_get_sql | sys.dm_exec_sql_text | fn_get_sql |
+| sp_lock | sys.dm_tran_locks | sp_lock |
 
 ### <a name="system-tables"></a>Systemtabellen
 
@@ -338,12 +300,6 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 |--------------------|-------------|--------------|
 | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values|[Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md) | sp_trace_create<br /><br />sp_trace_setevent<br /><br />sp_trace_setfilter<br /><br />sp_trace_setstatus<br /><br />fn_trace_geteventinfo<br /><br />fn_trace_getfilterinfo<br /><br />fn_trace_getinfo<br /><br />fn_trace_gettable<br /><br />sys.traces<br /><br />sys.trace_events<br /><br />sys.trace_event_bindings<br /><br />sys.trace_categories<br /><br />sys.trace_columns<br /><br />sys.trace_subclass_values |
 
-### <a name="system-functions"></a>Systemfunktionen
-
-| Als veraltet markierte Funktion | Ersatz | Feature name |
-|--------------------|-------------|--------------|
-| fn_virtualservernodes<br /><br />fn_servershareddrives | sys.dm_os_cluster_nodes<br /><br />sys.dm_io_cluster_shared_drives | fn_virtualservernodes<br /><br />fn_servershareddrives |
-
 ### <a name="system-views"></a>Systemsichten
 
 | Als veraltet markierte Funktion | Ersatz | Feature name |
@@ -357,14 +313,6 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 | Verwendung des vardecimal-Speicherformats | Das Vardecimal-Speicherformat ist veraltet. Bei der Datenkomprimierung in SQL Server 2019 (15.x) werden Dezimalwerte sowie andere Datentypen komprimiert. Es wird empfohlen, dass Sie die Datenkomprimierung statt des vardecimal-Speicherformats verwenden. | Vardecimal-Speicherformat |
 | Verwenden Sie die sp_db_vardecimal_storage_format-Prozedur.|Das Vardecimal-Speicherformat ist veraltet. Bei der Datenkomprimierung in SQL Server 2019 (15.x) werden Dezimalwerte sowie andere Datentypen komprimiert. Es wird empfohlen, dass Sie die Datenkomprimierung statt des vardecimal-Speicherformats verwenden. | sp_db_vardecimal_storage_format |
 | sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)|Verwenden Sie stattdessen die Datenkomprimierung und die sp_estimate_data_compression_savings-Prozedur. |sp_estimated_rowsize_reduction_for_vardecimal |
-
-### <a name="table-hints"></a>Tabellenhinweise
-
-| Als veraltet markierte Funktion | Ersatz | Feature name |
-|--------------------|-------------|--------------|
-| Angeben von NOLOCK oder READUNCOMMITTED in der FROM-Klausel einer UPDATE- oder DELETE-Anweisung | Entfernen Sie die NOLOCK- oder READUNCOMMITTED-Tabellenhinweise aus der FROM-Klausel. | NOLOCK oder READUNCOMMITTED in UPDATE oder DELETE |
-| Angeben von Tabellenhinweisen ohne das WITH-Schlüsselwort|Verwenden Sie WITH.|Tabellenhinweis ohne WITH |
-| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="text-pointers"></a>Textzeiger
 
@@ -386,13 +334,18 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 | GROUP BY ALL|Verwenden Sie eine benutzerdefinierte einzelfallspezifische Lösung mit UNION oder abgeleiteter Tabelle. | GROUP BY ALL |
 | ROWGUIDCOL als Spaltenname in DML-Anweisungen|Verwenden Sie $rowguid.|ROWGUIDCOL |
 | IDENTITYCOL als Spaltenname in DML-Anweisungen|Verwenden Sie $identity.|IDENTITYCOL |
-| Verwendung von #, ## als Name für eine temporäre Tabelle oder eine temporäre gespeicherte Prozedur|Verwenden Sie mindestens ein zusätzliches Zeichen.|'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|185|  
-| Verwendung von \@, \@\@ oder \@\@ als Transact-SQL-Bezeichner|\@, \@\@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden.|'\@' und Namen, die mit '\@\@' beginnen, als Transact-SQL-Bezeichner |
+| Verwendung von #, ## als Name für eine temporäre Tabelle oder eine temporäre gespeicherte Prozedur | Verwenden Sie mindestens ein zusätzliches Zeichen.|'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren
+| Verwendung von \@, \@\@ oder \@\@ als Transact-SQL-Bezeichner | \@, \@\@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden. | '\@' und Namen, die mit '\@\@' beginnen, als Transact-SQL-Bezeichner |
 | Verwendung des DEFAULT-Schlüsselworts als Standardwert.|Verwenden Sie das Wort DEFAULT nicht als Standardwert. | DEFAULT-Schlüsselwort als Standardwert |
 | Verwendung eines Leerzeichens als Trennzeichen zwischen Tabellenhinweisen|Trennen Sie die Tabellenhinweise durch Kommas. | Mehrere Tabellenhinweise ohne Komma |
-| Die Auswahlliste einer indizierten Aggregatsicht muss im Kompatibilitätsmodus 90 COUNT_BIG (\*) enthalten. | Verwenden Sie COUNT_BIG(\*). | Indexsicht-Auswahlliste ohne COUNT_BIG(\*)|2|  
+| Die Auswahlliste einer indizierten Aggregatsicht muss im Kompatibilitätsmodus 90 COUNT_BIG (\*) enthalten. | Verwenden Sie COUNT_BIG(\*). | Indexsicht-Auswahlliste ohne COUNT_BIG(\*) |
 | Das indirekte Anwenden von Tabellenhinweisen auf einen Aufruf einer Tabellenwertfunktion (Table Valued Function, TVF) mit mehreren Anweisungen über eine Sicht.|Keine.|Indirekte TVF-Hinweise |
-| ALTER DATABASE-Syntax:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| ALTER DATABASE-Syntax:<br /><br />MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE | MODIFY FILEGROUP READ_ONLY<br /><br />MODIFY FILEGROUP READ_WRITE | MODIFY FILEGROUP READONLY<br /><br />MODIFY FILEGROUP READWRITE |
+| SET ANSI_NULLS OFF und ANSI_NULLS OFF-Datenbankoption<br /><br />SET ANSI_PADDING OFF und ANSI_PADDING OFF-Datenbankoption<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF und CONCAT_NULL_YIELDS_NULL OFF-Datenbankoption<br /><br />SET OFFSETS | Keine. <br /><br /> ANSI_NULLS, ANSI_PADDING und CONCAT_NULLS_YIELDS_NULL werden stets auf ON festgelegt. SET OFFSETS ist nicht verfügbar. | SET ANSI_NULLS OFF <br /><br /> SET ANSI_PADDING OFF<br /><br />SET CONCAT_NULL_YIELDS_NULL OFF<br /><br />SET OFFSETS<br /><br />ALTER DATABASE SET ANSI_NULLS OFF<br /><br />ALTER DATABASE SET ANSI_PADDING OFF <br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF |
+| SET FMTONLY | [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) und [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md). | SET FMTONLY |
+| Angeben von NOLOCK oder READUNCOMMITTED in der FROM-Klausel einer UPDATE- oder DELETE-Anweisung | Entfernen Sie die NOLOCK- oder READUNCOMMITTED-Tabellenhinweise aus der FROM-Klausel. | NOLOCK oder READUNCOMMITTED in UPDATE oder DELETE |
+| Angeben von Tabellenhinweisen ohne das WITH-Schlüsselwort | Verwenden Sie WITH. | Tabellenhinweis ohne WITH |
+| INSERT_HINTS | | INSERT_HINTS |
 
 ### <a name="tools"></a>Tools
 
@@ -415,7 +368,8 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 
 > [!NOTE]
 > Der **OUTPUT** -Cookieparameter für **sp_setapprole** ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(50)** zurück. Wenn Entwickler **varbinary(50)** zugeordnet haben, erfordert die Anwendung möglicherweise Änderungen, wenn die Cookierückgabegröße in einer zukünftigen Version steigt. Obwohl es sich nicht um ein Veraltungsproblem handelt, wird dies in diesem Thema erwähnt, da die Anwendungsanpassungen ähnlich sind. Weitere Informationen finden Sie unter [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
+  
+## <a name="see-also"></a>Weitere Informationen  
+ [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+  
 
-## <a name="see-also"></a>Weitere Informationen
-
- [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)

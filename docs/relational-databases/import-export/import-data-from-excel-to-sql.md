@@ -1,5 +1,6 @@
 ---
 title: Importieren von Daten aus Excel in SQL | Microsoft-Dokumentation
+description: In diesem Artikel werden die Methoden zum Importieren von Daten aus Excel in SQL Server oder Azure SQL-Datenbank beschrieben. Einige Methoden erfordern nur einen einzigen Schritt, für andere ist als Zwischenschritt eine Textdatei erforderlich.
 ms.custom: sqlfreshmay19
 ms.date: 09/30/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bbb114a2d3ae3f5655f4d5a60a2842af77170b6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245269"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980575"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importieren von Daten aus Excel in SQL Server oder Azure SQL-Datenbank
 

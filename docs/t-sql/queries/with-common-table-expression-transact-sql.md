@@ -1,6 +1,6 @@
 ---
 title: WITH common_table_expression (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: ''
+description: Transact-SQL-Referenz für die Verwendung von allgemeinen Tabellenausdrücken (Common Table Expressions, CTE) in Abfragen
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -27,12 +27,12 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d82ec259664eaa0573f841b9fea21fd705b23ee5
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287304"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517604"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ Ein gültiger Bezeichner für den allgemeinen Tabellenausdruck. *expression_name
  *CTE_query_definition*  
  Gibt eine SELECT-Anweisung an, mit deren Resultset der allgemeine Tabellenausdruck aufgefüllt wird. Die SELECT-Anweisung für *CTE_query_definition* muss die gleichen Anforderungen erfüllen wie für das Erstellen einer Ansicht. Als Ausnahme gilt, dass mit einem allgemeinen Tabellenausdruck kein anderer allgemeiner Tabellenausdruck definiert werden kann. Weitere Informationen finden Sie im Abschnitt „Hinweise“ und unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Wenn *CTE_query_definition* mehrfach definiert ist, müssen die Abfragedefinitionen durch einen der folgenden Mengenoperator verbunden werden: UNION ALL, UNION, EXCEPT oder INTERSECT.  
+ Wenn *CTE_query_definition* mehrfach definiert wurde, müssen die Abfragedefinitionen durch einen der folgenden Mengenoperatoren verbunden werden: UNION ALL, UNION, EXCEPT oder INTERSECT.  
   
 ## <a name="remarks"></a>Bemerkungen  
   
@@ -171,7 +171,7 @@ Die folgenden Richtlinien gelten für nicht rekursive allgemeine Tabellenausdrü
   
 -   Wird ein allgemeiner Tabellenausdruck in einer Anweisung verwendet, die zu einem Batch gehört, muss auf die vorangehende Anweisung ein Semikolon folgen.  
   
--   Wenn allgemeine Tabellenausdrücke in von `sp_prepare` vorbereiteten Anweisungen verwendet werden, verhalten sie sich wie andere `SELECT`-Anweisungen in PDW. Wenn allgemeine Tabellenausdrücke jedoch in von `sp_prepare` vorbereiteten CETAS-Anweisungen verwendet werden, kann das Verhalten aufgrund der Art und Weise, wie die Bindung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert wird, von `sp_prepare` und anderen PDW-Anweisungen abweichen. Wenn in einer `SELECT`-Anweisung, die auf einen allgemeinen Tabellenausdruck verweist, eine falsche, im allgemeinen Tabellenausdruck nicht vorhandene Spalte verwendet wird, wird `sp_prepare` ohne Erkennung des Fehlers durchlaufen. Stattdessen wird der Fehler jedoch während `sp_execute` ausgelöst.  
+-   Wenn allgemeine Tabellenausdrücke in von `sp_prepare` vorbereiteten Anweisungen verwendet werden, verhalten sie sich wie andere `SELECT`-Anweisungen in PDW. Wenn allgemeine Tabellenausdrücke jedoch in von `sp_prepare` vorbereiteten CETAS-Anweisungen verwendet werden, kann das Verhalten aufgrund der Art und Weise, wie die Bindung für `sp_prepare` implementiert wird, von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anderen PDW-Anweisungen abweichen. Wenn in einer `SELECT`-Anweisung, die auf einen allgemeinen Tabellenausdruck verweist, eine falsche, im allgemeinen Tabellenausdruck nicht vorhandene Spalte verwendet wird, wird `sp_prepare` ohne Erkennung des Fehlers durchlaufen. Stattdessen wird der Fehler jedoch während `sp_execute` ausgelöst.  
   
 ## <a name="examples"></a>Beispiele  
   

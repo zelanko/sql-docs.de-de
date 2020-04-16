@@ -1,5 +1,6 @@
 ---
 title: Massenzugriff auf Daten in Azure Blob Storage
+description: In diesen Transact-SQL-Beispielen wird veranschaulicht, wie Sie mit den Anweisungen BULK INSERT und OPENROWSET direkt auf eine Datei in einem Azure Blob Storage-Konto zugreifen.
 ms.description: Transact-SQL examples that use BULK INSERT and OPENROWSET to access data in an Azure Blob storage account.
 ms.date: 10/22/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 08e81abbc21671881affc80fc9b7f0346cd490f7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ed55e856a6a23da04b6f3a2812699c2b457a220
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056008"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980461"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Beispiele für Massenzugriff auf Daten in Azure Blob Storage
 

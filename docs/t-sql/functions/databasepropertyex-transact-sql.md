@@ -20,12 +20,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9384317f0e58e77a6bb51fe066458dcf956882ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 997d227c3c5a2ea493d96c4b55f5b42f8a8c9845
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448305"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531215"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft angibt. *
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] erkennt unvollständige E/A-Vorgänge, die durch Stromausfälle oder andere Systemunterbrechungen verursacht wurden.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Ungültige Eingabe<br /><br /> Basisdatentyp: **int**| 
 |IsVerifiedClone|Die Datenbank ist nur eine Kopie der Schemas und Statistiken einer Benutzerdatenbank, die mit der DBBC CLONEDATABASE-Option WITH VERIFY_CLONEDB erstellt wurde. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/help/3177838).|**Gilt für**: Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Ungültige Eingabe<br /><br /> Basisdatentyp: **int**| 
 |IsXTPSupported|Gibt an, ob die Datenbank In-Memory-OLTP unterstützt, d.h. das Erstellen und Verwenden von speicheroptimierten Tabellen und nativ kompilierten Modulen.<br /><br /> Spezifisch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported ist unabhängig von der Existenz von MEMORY_OPTIMIZED_DATA-Dateigruppen, die für die Erstellung von In-Memory-OLTP-Objekten benötigt werden.|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Ungültige Eingabe, ein Fehler oder nicht anwendbar<br /><br /> Basisdatentyp: **int**|  
-|LastGoodCheckDbTime|Datum und Uhrzeit der letzten Ausführung von DBCC CHECKDB in der angegebenen Datenbank. <sup>1</sup> Wenn DBCC CHECKDB in einer Datenbank noch nicht ausgeführt wurde, wird 1900-01-01 00:00:00.000 zurückgegeben.|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ab SP2.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] ab CU9.</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] oder höher.</br>Azure SQL-Datenbank.<br/><br/>Ein datetime-Wert<br /><br /> NULL: Ungültige Eingabe<br /><br /> Basisdatentyp: **datetime**| 
+|LastGoodCheckDbTime|Datum und Uhrzeit der letzten Ausführung von DBCC CHECKDB in der angegebenen Datenbank. <sup>1</sup> Wenn DBCC CHECKDB in einer Datenbank noch nicht ausgeführt wurde, wird 1900-01-01 00:00:00.000 zurückgegeben.|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ab SP2.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] ab CU9</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] oder höher.</br>Azure SQL-Datenbank.<br/><br/>Ein datetime-Wert<br /><br /> NULL: Ungültige Eingabe<br /><br /> Basisdatentyp: **datetime**| 
 |LCID|Der zur Sortierung verwendete Windows-Gebietsschemabezeichner (LCID, Locale Identifier).|LCID-Wert (im Dezimalformat).<br /><br /> Basisdatentyp: **int**|  
 |MaxSizeInBytes|Maximale Datenbankgröße in Bytes.|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **bigint**|  
 |Wiederherstellung|Datenbank-Wiederherstellungsmodell|FULL: Vollständiges Wiederherstellungsmodell<br /><br /> BULK_LOGGED: Massenprotokolliertes Modell<br /><br /> SIMPLE: Einfaches Wiederherstellungsmodell<br /><br /> Basisdatentyp: **nvarchar(128)**|  
