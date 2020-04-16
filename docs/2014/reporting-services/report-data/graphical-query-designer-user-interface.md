@@ -19,20 +19,20 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fbf2bdf2249209da0c46c7ba4e1dc95df6789c5e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78173354"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388544"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Grafische Benutzeroberfläche des Abfrage-Designers
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet einen grafischen Abfrage-Designer und einen textbasierten Abfrage-Designer zum Erstellen von Abfragen, um Daten aus einer relationalen Datenbank für ein Berichtsdataset im Berichts-Designer abzurufen. Verwenden Sie den grafischen Abfrage-Designer zum interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Datenquellentypen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB und ODBC. Verwenden Sie den textbasierten Abfrage-Designer, um mehrere [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen, komplexe Abfragen oder Befehlssyntax und ausdrucksbasierte Abfragen anzugeben. Weitere Informationen finden Sie unter [Benutzeroberfläche des textbasierten Abfrage-Designers](../text-based-query-designer-user-interface.md). Weitere Informationen zum Arbeiten mit bestimmten Datenquellen Typen finden Sie unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md).
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet einen grafischen Abfrage-Designer und einen textbasierten Abfrage-Designer zum Erstellen von Abfragen, um Daten aus einer relationalen Datenbank für ein Berichtsdataset im Berichts-Designer abzurufen. Verwenden Sie den grafischen Abfrage-Designer zum interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Datenquellentypen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB und ODBC. Verwenden Sie den textbasierten Abfrage-Designer, um mehrere [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen, komplexe Abfragen oder Befehlssyntax und ausdrucksbasierte Abfragen anzugeben. Weitere Informationen finden Sie unter [Benutzeroberfläche des textbasierten Abfrage-Designers](../text-based-query-designer-user-interface.md). Weitere Informationen zum Arbeiten mit bestimmten Datenquellentypen finden Sie unter Hinzufügen von [Daten zu einem Bericht &#40;Berichts-Generator und SSRS-&#41;](report-datasets-ssrs.md).
 
  erforderlich.
 
 ## <a name="graphical-query-designer"></a>Grafischer Abfrage-Designer
- Der grafische Abfrage-Designer unterstützt drei Typen von Abfragebefehlen: **Text**, **StoredProcedure** oder **TableDirect**. Bevor Sie eine Abfrage für Ihr Dataset erstellen, müssen Sie eine Befehlstypoption auf der Seite Abfrage im Dialogfeld [Dataseteigenschaften](../dataset-properties-dialog-box-query.md) auswählen.
+ Der grafische Abfrage-Designer unterstützt drei Typen von Abfragebefehlen: **Text**, **StoredProcedure**oder **TableDirect**. Bevor Sie eine Abfrage für Ihr Dataset erstellen, müssen Sie eine Befehlstypoption auf der Seite Abfrage im Dialogfeld [Dataseteigenschaften](../dataset-properties-dialog-box-query.md) auswählen.
 
  Die folgenden Optionen sind als Abfragetyp verfügbar:
 
@@ -68,7 +68,7 @@ ms.locfileid: "78173354"
 #### <a name="toolbar-for-the-graphical-query-designer"></a>Symbolleiste des grafischen Abfrage-Designers
  Die Symbolleiste des grafischen Abfrage-Designers stellt Schaltflächen bereit, mit denen Sie [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfragen mithilfe der grafischen Benutzeroberfläche entwerfen können.
 
-|Taste|Beschreibung|
+|Taste|BESCHREIBUNG|
 |------------|-----------------|
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer.|
 |**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
@@ -76,13 +76,13 @@ ms.locfileid: "78173354"
 |![Rasterbereich ein-/ausblenden (Umschaltfläche)](../media/rsqdicon-showhidegrid.gif "Rasterbereich ein-/ausblenden (Umschaltfläche)")|Ein- und Ausblenden des Rasterbereichs.|
 |![SQL-Bereich ein-/ausblenden (Umschaltfläche)](../media/rsqdicon-showhidesql.gif "SQL-Bereich ein-/ausblenden (Umschaltfläche)")|Ein- und Ausblenden des SQL-Bereichs.|
 |![Ergebnisbereich ein-/ausblenden (Umschaltfläche)](../media/rsqdicon-showhideresult.gif "Ergebnisbereich ein-/ausblenden (Umschaltfläche)")|Ein- und Ausblenden des Ergebnisbereichs.|
-|![Abfrage ausführen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Abfrage ausführen")|Führen Sie die Abfrage aus.|
-|![SQL im SQL-Bereich überprüfen](../media/rsqdicon-verifysql.gif "Überprüfen von SQL im SQL-Bereich (Schaltfläche)")|Überprüfen, ob die Syntax des Abfragetexts richtig ist.|
-|![Aufsteigende Sortierung für ausgewähltes Feld festlegen](../media/rsqdicon-sortascending.gif "Festlegen des aufsteigenden Sortierens für das ausgewählte Feld")|Festlegen der Sortierreihenfolge auf **Aufsteigend sortieren** für die ausgewählte Spalte im Diagrammbereich.|
-|![Absteigende Sortierung für ausgewähltes Feld festlegen](../media/rsqdicon-sortdescending.gif "Festlegen des absteigenden Sortierens für das ausgewählte Feld")|Festlegen der Sortierreihenfolge auf **Absteigend sortieren** für die ausgewählte Spalte im Diagrammbereich.|
-|![Filter aus ausgewähltem Feld entfernen](../media/rsqdicon-removefilter.gif "Entfernen des Filters auf dem ausgewählten Feld")|Entfernen Sie den Filter für die ausgewählte Spalte im Diagrammbereich, für den angegeben ist, dass er einen Filter hat (![Filtergraphik neben der ausgewählten Filterspalte](../media/rsqdicon-filter.gif "Filtergrafik neben der ausgewählten Filterspalte")).|
-|![GROUP BY für das ausgewählte Feld verwenden](../media/rsqdicon-usegroupby.gif "Verwenden von GROUP BY für das ausgewählte Feld")|Ein- und Ausblenden der **Gruppieren nach** -Spalte im Rasterbereich. Wenn die Umschaltfläche **Gruppieren nach** aktiviert ist, wird eine zusätzliche Spalte namens **Gruppieren nach** im Rasterbereich angezeigt, und für jeden Wert der ausgewählten Spalten in der Abfrage wird standardmäßig **Gruppieren nach**verwendet, sodass die ausgewählte Spalte in eine GROUP BY-Klausel im SQL-Text aufgenommen wird. Verwenden Sie die Schaltfläche Gruppieren nach, um automatisch eine GROUP BY-Klausel hinzuzufügen, die alle Spalten in der SELECT-Klausel enthält. Schließen Sie jede Nicht-Aggregatspalte in die GROUP BY-Klausel ein, wenn die SELECT-Klausel Aggregatfunktionsaufrufe (beispielsweise SUM(ColumnName)) enthält und im Resultset angezeigt werden soll.<br /><br /> Für die Anzeige im Ergebnisbereich muss für jede Spalte in der Abfrage eine Aggregatfunktion für die Verwendung beim Berechnen des im Ergebnisbereich anzuzeigenden Werts definiert sein, oder die Spalte in der Abfrage muss in der GROUP BY-Klausel der SQL-Abfrage angegeben sein.|
-|![Neue Tabelle zum Diagrammbereich hinzufügen](../media/rsqdicon-addtable.gif "Hinzufügen eines Diagrammbereichs zur neuen Tabelle")|Hinzufügen einer neuen Tabelle aus der Datenquelle zum Diagrammbereich.<br /><br /> **Hinweis** Wenn Sie eine neue Tabelle hinzufügen, versucht der Abfrage-Designer, Fremdschlüsselbeziehungen aus der Datenquelle zuzuordnen. Bestätigen Sie nach dem Hinzufügen einer Tabelle, dass die durch Verknüpfungen zwischen den Tabellen dargestellten Fremdschlüsselbeziehungen richtig sind.|
+|![Abfrage ausführen](../../analysis-services/media/rsqdicon-run.gif "Abfrage ausführen")|Führen Sie die Abfrage aus.|
+|![SQL im SQL-Bereich überprüfen](../media/rsqdicon-verifysql.gif "SQL im SQL-Bereich überprüfen")|Überprüfen, ob die Syntax des Abfragetexts richtig ist.|
+|![Aufsteigende Sortierung für ausgewähltes Feld festlegen](../media/rsqdicon-sortascending.gif "Aufsteigende Sortierung für ausgewähltes Feld festlegen")|Festlegen der Sortierreihenfolge auf **Aufsteigend sortieren** für die ausgewählte Spalte im Diagrammbereich.|
+|![Absteigende Sortierung für ausgewähltes Feld festlegen](../media/rsqdicon-sortdescending.gif "Absteigende Sortierung für ausgewähltes Feld festlegen")|Festlegen der Sortierreihenfolge auf **Absteigend sortieren** für die ausgewählte Spalte im Diagrammbereich.|
+|![Filter aus ausgewähltem Feld entfernen](../media/rsqdicon-removefilter.gif "Filter aus ausgewähltem Feld entfernen")|Entfernen Sie den Filter für die ausgewählte Spalte im Diagrammbereich, für den angegeben ist, dass er einen Filter hat (![Filtergraphik neben der ausgewählten Filterspalte](../media/rsqdicon-filter.gif "Filtergrafik neben der ausgewählten Filterspalte")).|
+|![GROUP BY für das ausgewählte Feld verwenden](../media/rsqdicon-usegroupby.gif "GROUP BY für das ausgewählte Feld verwenden")|Ein- und Ausblenden der **Gruppieren nach** -Spalte im Rasterbereich. Wenn die Umschaltfläche **Gruppieren nach** aktiviert ist, wird eine zusätzliche Spalte namens **Gruppieren nach** im Rasterbereich angezeigt, und für jeden Wert der ausgewählten Spalten in der Abfrage wird standardmäßig **Gruppieren nach**verwendet, sodass die ausgewählte Spalte in eine GROUP BY-Klausel im SQL-Text aufgenommen wird. Verwenden Sie die Schaltfläche Gruppieren nach, um automatisch eine GROUP BY-Klausel hinzuzufügen, die alle Spalten in der SELECT-Klausel enthält. Schließen Sie jede Nicht-Aggregatspalte in die GROUP BY-Klausel ein, wenn die SELECT-Klausel Aggregatfunktionsaufrufe (beispielsweise SUM(ColumnName)) enthält und im Resultset angezeigt werden soll.<br /><br /> Für die Anzeige im Ergebnisbereich muss für jede Spalte in der Abfrage eine Aggregatfunktion für die Verwendung beim Berechnen des im Ergebnisbereich anzuzeigenden Werts definiert sein, oder die Spalte in der Abfrage muss in der GROUP BY-Klausel der SQL-Abfrage angegeben sein.|
+|![Neue Tabelle zum Diagrammbereich hinzufügen](../media/rsqdicon-addtable.gif "Neue Tabelle zum Diagrammbereich hinzufügen")|Hinzufügen einer neuen Tabelle aus der Datenquelle zum Diagrammbereich.<br /><br /> **Hinweis** Wenn Sie eine neue Tabelle hinzufügen, versucht der Abfrage-Designer, Fremdschlüsselbeziehungen aus der Datenquelle zuzuordnen. Bestätigen Sie nach dem Hinzufügen einer Tabelle, dass die durch Verknüpfungen zwischen den Tabellen dargestellten Fremdschlüsselbeziehungen richtig sind.|
 
 #### <a name="example"></a>Beispiel
  Die folgende Abfrage gibt die Liste der Nachnamen aus der [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] Personen **-Tabelle der** -Datenbank zurück:
@@ -113,12 +113,12 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-the-command-type-tabledirect"></a>Schaltflächen der Symbolleiste für den TableDirect-Befehlstyp
  Die Symbolleiste des grafischen Abfrage-Designers stellt eine Dropdownliste mit Tabellen der Datenquelle bereit. In der folgenden Tabelle wird jede Schaltfläche und ihre Funktion aufgelistet.
 
-|Taste|Beschreibung|
+|Taste|BESCHREIBUNG|
 |------------|-----------------|
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer.|
 |**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
 |![Generischer Abfrage-Designer (Symbol)](../media/icongenericquerydesigner.gif "Generischer Abfrage-Designer (Symbol)")|Wechseln zwischen dem standardmäßigen Abfrage-Designer und dem grafischen Abfrage-Designer, wobei die Ansicht des Abfragetexts oder der gespeicherten Prozedur beibehalten wird.|
-|![Abfrage ausführen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Abfrage ausführen")|Auswählen aller Spalten aus der ausgewählten Tabelle.|
+|![Abfrage ausführen](../../analysis-services/media/rsqdicon-run.gif "Abfrage ausführen")|Auswählen aller Spalten aus der ausgewählten Tabelle.|
 
 ### <a name="command-type-storedprocedure"></a>StoredProcedure-Befehlstyp
  Für den **StoredProcedure** -Befehlstyp zeigt der grafische Abfrage-Designer eine Dropdownliste der verfügbaren gespeicherten Prozeduren aus der Datenquelle und einen Ergebnisbereich an. Die folgende Tabelle beschreibt die Funktion jedes Bereichs.
@@ -131,11 +131,11 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-command-type-storedprocedure"></a>Schaltflächen der Symbolleiste für den StoredProcedure-Befehlstyp
  Die Symbolleiste des grafischen Abfrage-Designers stellt eine Dropdownliste mit gespeicherten Prozeduren der Datenquelle bereit. In der folgenden Tabelle wird jede Schaltfläche und ihre Funktion aufgelistet.
 
-|Taste|Beschreibung|
+|Taste|BESCHREIBUNG|
 |------------|-----------------|
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer.|
 |**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
-|![Abfrage ausführen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Abfrage ausführen")|Ausführen der ausgewählten gespeicherten Prozedur.|
+|![Abfrage ausführen](../../analysis-services/media/rsqdicon-run.gif "Abfrage ausführen")|Ausführen der ausgewählten gespeicherten Prozedur.|
 |Dropdownliste der gespeicherten Prozeduren|Klicken Sie auf den Pfeil nach unten, um eine Liste verfügbarer gespeicherter Prozeduren aus der Datenquelle anzuzeigen. Klicken Sie auf eine gespeicherte Prozedur aus der Liste, um sie auszuwählen.|
 
 #### <a name="example"></a>Beispiel
@@ -144,6 +144,6 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`
 
 ## <a name="see-also"></a>Weitere Informationen
- [Abfrage Entwurfs Tools in Berichts-Designer SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md) [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator-und SSRS&#41;SQL Server-](report-datasets-ssrs.md) [Verbindungstyp](sql-server-connection-type-ssrs.md) &#40;SSRS&#41;OLE DB- [Verbindungstyp &#40;SSRS](ole-db-connection-type-ssrs.md)&#41;[Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md) [Oracle-Verbindungstyp](oracle-connection-type-ssrs.md) [](../report-server/rsreportdesigner-configuration-file.md) [](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md) &#40;
+ [Abfrageentwurfstools in Berichtsdesigner SQL Server-Datentools &#40;SSRS&#41;](query-design-tools-ssrs.md) [Hinzufügen von Daten zu einem &#40;Berichtsberichts-Generator und SSRS-&#41;](report-datasets-ssrs.md) [SQL Server-Verbindungstyp &#40;SSRS-&#41;](sql-server-connection-type-ssrs.md) [OLE DB-Verbindungstyp &#40;SSRS&#41;](ole-db-connection-type-ssrs.md) Hinzufügen von Daten zu einem &#40;[Berichts-Generator und SSRS-&#41;](report-datasets-ssrs.md) [Oracle-Verbindungstyp &#40;SSRS-&#41;](oracle-connection-type-ssrs.md) [RSReportDesigner-Konfigurationsdateientwurfsabfragen](../report-server/rsreportdesigner-configuration-file.md) [und&#41;&#40;-ansichten](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
 
 

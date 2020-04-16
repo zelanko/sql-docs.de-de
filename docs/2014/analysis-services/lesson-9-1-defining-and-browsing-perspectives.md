@@ -1,5 +1,5 @@
 ---
-title: Definieren und Durchsuchen von Perspektiven | Microsoft-Dokumentation
+title: Definieren und Durchsuchen von Perspektiven | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "69493777"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definieren und Durchsuchen von Perspektiven
@@ -41,7 +41,7 @@ ms.locfileid: "69493777"
   
      ![Neue Perspektive in der Spalte "Perspektivenname"](../../2014/tutorials/media/l9-perspectives-2.gif "Neue Perspektive in der Spalte "Perspektivenname"")  
   
-3.  Ändern Sie den Perspektiven Namen `Internet Sales`in.  
+3.  Ändern Sie den `Internet Sales`Perspektivnamen in .  
   
 4.  Legen Sie in der nächsten Zeile **Internet Sales-Sales Amount**als Standardmeasure fest.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "69493777"
   
 5.  Deaktivieren Sie die Kontrollkästchen der folgenden Objekte:  
   
-    -   `Reseller Sales`Measure-Gruppe  
+    -   `Reseller Sales`Messgruppe  
   
-    -   **Sales Kontingents** -Measure-Gruppe  
+    -   **Sales Quotas** -Measuregruppe  
   
-    -   **Sales Kontingents 1** Measure Group  
+    -   **Sales Quotas 1** -Measuregruppe  
   
     -   **Reseller** -Cubedimension  
   
@@ -66,23 +66,23 @@ ms.locfileid: "69493777"
   
     -   **Employee** -Cubedimension  
   
-    -   **Promotioncubedimension**  
+    -   **Promotion** -Cubedimension  
   
-    -   **Umsatz** des Wiederverkäufers KPI  
+    -   **Reseller Revenue** -KPI  
   
-    -   Benannte Menge für **große Wiederverkäufer**  
+    -   Benannte Menge**Large Resellers**  
   
-    -   Berechnetes Element **Total Sales Amount**  
+    -   Berechnetes Element**Total Sales Amount**  
   
-    -   Berechnetes Element der **Gesamtproduktkosten**  
+    -   Berechnetes Element**Total Product Cost**  
   
-    -   Berechnetes Element für **Reseller GPM**  
+    -   Berechnetes Element**Reseller GPM**  
   
-    -   Berechnetes **GPM** -Element Gesamt  
+    -   Berechnetes Element**Total GPM**  
   
-    -   Berechnetes Element **Reseller Sales Ratio to All Products**  
+    -   Berechnetes Element**Reseller Sales Ratio to All Products**  
   
-    -   Berechnetes Element **Total Sales Ratio to All Products**  
+    -   Berechnetes Element**Total Sales Ratio to All Products**  
   
      Diese Objekte stehen nicht im Zusammenhang mit Internetverkäufen (Internet Sales).  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493777"
   
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **Perspektiven** auf die Schaltfläche **Neue Perspektive** .  
   
-2.  Ändern Sie den Namen der neuen Perspektive in `Reseller Sales`.  
+2.  Ändern Sie den Namen `Reseller Sales`der neuen Perspektive in .  
   
 3.  Legen Sie **Reseller Sales-Sales Amount** als Standardmeasure fest.  
   
@@ -101,29 +101,29 @@ ms.locfileid: "69493777"
   
 4.  Deaktivieren Sie die Kontrollkästchen der folgenden Objekte:  
   
-    -   `Internet Sales`Measure-Gruppe  
+    -   `Internet Sales`Messgruppe  
   
-    -   **Internet Sales Reason** -Measure-Gruppe  
+    -   **Internet Sales Reason** -Measuregruppe  
   
     -   **Customer** -Cubedimension  
   
-    -   **Internet Sales Order Details-Cubedimension**  
+    -   **Internet Sales Order Details** -Cubedimension  
   
     -   **Sales Reason** -Cubedimension  
   
-    -   **Internet Sales Details** Drillthrough Action Drillthrough Action  
+    -   **Internet Sales Details Drillthrough Action** -Drillthroughaktion  
   
-    -   Berechnetes Element **Total Sales Amount**  
+    -   Berechnetes Element**Total Sales Amount**  
   
-    -   Berechnetes Element der **Gesamtproduktkosten**  
+    -   Berechnetes Element**Total Product Cost**  
   
-    -   Berechnetes **Internet-GPM** -Element  
+    -   Berechnetes Element**Internet GPM**  
   
-    -   Berechnetes **GPM** -Element Gesamt  
+    -   Berechnetes Element**Total GPM**  
   
-    -   Berechnetes Element **Internet Sales Ratio to All Products**  
+    -   Berechnetes Element**Internet Sales Ratio to All Products**  
   
-    -   Berechnetes Element **Total Sales Ratio to All Products**  
+    -   Berechnetes Element**Total Sales Ratio to All Products**  
   
      Diese Objekte stehen nicht im Zusammenhang mit Verkäufen durch Wiederverkäufer (Reseller Sales).  
   
@@ -131,28 +131,28 @@ ms.locfileid: "69493777"
   
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **Perspektiven** auf die Schaltfläche **Neue Perspektive** .  
   
-2.  Ändern Sie den Namen der neuen Perspektive in `Sales Summary`.  
+2.  Ändern Sie den Namen `Sales Summary`der neuen Perspektive in .  
   
     > [!NOTE]  
     >  Es kann kein berechnetes Measure als Standardmeasure angegeben werden.  
   
 3.  Deaktivieren Sie die Kontrollkästchen der folgenden Objekte:  
   
-    -   `Internet Sales`Measure-Gruppe  
+    -   `Internet Sales`Messgruppe  
   
-    -   `Reseller Sales`Measure-Gruppe  
+    -   `Reseller Sales`Messgruppe  
   
-    -   **Internet Sales Reason** -Measure-Gruppe  
+    -   **Internet Sales Reason** -Measuregruppe  
   
-    -   **Sales Kontingents** -Measure-Gruppe  
+    -   **Sales Quotas** -Measuregruppe  
   
-    -   **Sales Quotas1** Measure-Gruppe  
+    -   **Sales Quotas1** -Measuregruppe  
   
-    -   **Internet Sales Order Details-Cubedimension**  
+    -   **Internet Sales Order Details** -Cubedimension  
   
     -   **Sales Reason** -Cubedimension  
   
-    -   **Internet Sales Details** Drillthrough Action Drillthrough Action  
+    -   **Internet Sales Details Drillthrough Action** -Drillthroughaktion  
   
 4.  Aktivieren Sie die Kontrollkästchen der folgenden Objekte:  
   
@@ -176,15 +176,15 @@ ms.locfileid: "69493777"
   
      ![Datenverbindungs-Assistent in Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Datenverbindungs-Assistent in Excel")  
   
-6.  Wählen `Internet Sales` Sie in der Liste **Perspektive** aus, und überprüfen Sie dann die Measures und Dimensionen im Metadatenbereich.  
+6.  Wählen `Internet Sales` Sie in der Liste **Perspektive** aus, und überprüfen Sie dann die Kennzahlen und Dimensionen im Metadatenbereich.  
   
      Es werden nur die Objekte angezeigt, die für die Internet Sales-Perspektive angegeben wurden.  
   
 7.  Erweitern Sie im Bereich Metadaten die Option **Measures**.  
   
-     Beachten Sie, dass `Internet Sales` nur die Measure-Gruppe sowie die berechneten Elemente **Internet-GPM** und **Internet Sales für alle Produkte** angezeigt werden.  
+     Beachten Sie, `Internet Sales` dass nur die Measuregruppe zusammen mit dem **Internet-GPM** und dem **Internet-Verkaufsverhältnis zu allen** berechneten Mitgliedern angezeigt wird.  
   
-8.  Wählen Sie im Modell erneut Excel aus. Wählen Sie `Sales Summary` aus.  
+8.  Wählen Sie im Modell erneut Excel aus. Wählen Sie `Sales Summary`aus.  
   
      In jeder der Measuregruppen wird nur ein einzelnes Measure angezeigt, wie in der folgenden Abbildung dargestellt.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "69493777"
  [Definieren und Durchsuchen von Übersetzungen](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Eröffnen](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [Perspektiven](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [Perspektiven in mehrdimensionalen Modellen](multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

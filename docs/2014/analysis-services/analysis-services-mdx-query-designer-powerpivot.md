@@ -1,5 +1,5 @@
 ---
-title: Analysis Services MDX-Abfrage-Designer (Power Pivot) | Microsoft-Dokumentation
+title: Analysedienste MDX-Abfrage-Designer (PowerPivot) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "66062466"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Analysis Services MDX-Abfrage-Designer (PowerPivot)
-  Der Analysis Services Multidimensional Expression (MDX)-Abfrage-Designer stellt eine grafische Benutzeroberfläche bereit, die Sie beim Erstellen von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] MDX-Abfragen für eine Datenquelle unterstützt. Der grafische MDX-Abfrage-Designer verfügt über zwei Modi: Entwurfsmodus und Abfragemodus. Jeder Modus stellt einen Metadatenbereich bereit, in dem Sie Elemente aus den ausgewählten Cubes ziehen können, um eine MDX-Abfrage zum Abrufen der gewünschten Daten zu erstellen.  
+  Der MDX-Abfrage-Designer (Analysis Services Multidimensional Expression) stellt eine grafische Benutzeroberflächen bereit, mit der Sie MDX-Abfragen für eine [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenquelle erstellen können. Der grafische MDX-Abfrage-Designer verfügt über zwei Modi: Entwurfsmodus und Abfragemodus. Jeder Modus stellt einen Metadatenbereich bereit, in dem Sie Elemente aus den ausgewählten Cubes ziehen können, um eine MDX-Abfrage zum Abrufen der gewünschten Daten zu erstellen.  
   
 > [!IMPORTANT]  
 >  Benutzer greifen auf Datenquellen zu, wenn sie Abfragen erstellen und ausführen. Sie sollten minimale Berechtigungen für die Datenquellen gewähren, z. B. nur Leseberechtigungen.  
@@ -42,20 +42,20 @@ ms.locfileid: "66062466"
 |Filter (Bereich)|Wird zum Auswählen von Dimensionen und zugehörigen Hierarchien verwendet, um Daten an der Quelle zu filtern und die zurückgegebenen Daten zu beschränken.|  
 |Daten (Bereich)|Zeigt die Spaltenüberschriften für das Resultset an, während Sie Elemente aus dem Metadatenbereich und dem Bereich für berechnete Elemente ziehen. Aktualisiert automatisch das Resultset, wenn die Schaltfläche **Automatisch ausführen** ausgewählt wird.|  
   
- Sie können Dimensionen, Measures und KPIs aus dem Metadatenbereich sowie berechnete Elemente aus dem Bereich für berechnete Elemente in den Datenbereich ziehen. Im Filterbereich können Sie Dimensionen und zugehörige Hierarchien auswählen sowie Filterausdrücke festlegen, um die für eine Abfrage zur Verfügung stehenden Daten zu beschränken. Wenn die UMSCHALT Fläche **autoExecute** (![autoExecute the Query](media/rsqdicon-autoexecute.gif "Automatisches Ausführen der Abfrage")) auf der Symbolleiste ausgewählt ist, führt der Abfrage-Designer die Abfrage jedes Mal aus, wenn Sie ein Metadatenobjekt im Datenbereich ablegen. Sie können die Abfrage manuell mithilfe der Schaltfläche **Ausführen** (![Abfrage ausführen](media/rsqdicon-run.gif "Abfrage ausführen")) auf der Symbolleiste ausführen.  
+ Sie können Dimensionen, Measures und KPIs aus dem Metadatenbereich sowie berechnete Elemente aus dem Bereich für berechnete Elemente in den Datenbereich ziehen. Im Filterbereich können Sie Dimensionen und zugehörige Hierarchien auswählen sowie Filterausdrücke festlegen, um die für eine Abfrage zur Verfügung stehenden Daten zu beschränken. Wenn die Umschaltfläche **AutoExecute** (![Abfrage automatisch ausführen](media/rsqdicon-autoexecute.gif "Abfrage automatisch ausführen")) in der Symbolliste angeklickt wird, führt der Abfrage-Designer die Abfrage jedes Mal aus, wenn Sie ein Metadatenobjekt im Datenbereich ablegen. Sie können die Abfrage mithilfe der Schaltfläche **Ausführen** (![Abfrage ausführen](media/rsqdicon-run.gif "Abfrage ausführen")) in der Symbolleiste manuell ausführen.  
   
  Wenn Sie in diesem Modus eine MDX-Abfrage erstellen, werden die folgenden zusätzlichen Eigenschaften automatisch in die Abfrage eingeschlossen:  
   
- Element **Eigenschaften** MEMBER_CAPTION MEMBER_UNIQUE_NAME  
+ **Elementeigenschaften** MEMBER_CAPTION, MEMBER_UNIQUE_NAME  
   
- **Zell Eigenschaften** Wert, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME font_size, FONT_FLAGS  
+ **Zelleigenschaften** VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
   
  Um eigene zusätzliche Eigenschaften anzugeben, müssen Sie die MDX-Abfrage im Abfragemodus manuell bearbeiten.  
   
  Das Importieren einer MDX-Abfrage aus einer Datei wird nicht unterstützt.  
   
 > [!NOTE]  
->  Weitere Informationen über MDX und allgemeine Informationen über den MDX-Abfrage-Designer finden Sie in "MDX-Abfrage-Editor (Analysis Services – Mehrdimensionale Daten)" in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=98335).  
+>  Weitere Informationen zu MDX sowie allgemeine Informationen zum MDX-Abfrage-Designer finden Sie in „MDX-Abfrage-Editor (Analysis Services – mehrdimensionale Daten)“ in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=98335).  
   
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Symbolleiste des grafischen MDX-Abfrage-Designers im Entwurfsmodus  
  Die Symbolleiste des Abfrage-Designers stellt Schaltflächen bereit, die Ihnen beim Entwurf von MDX-Abfragen mit der grafischen Oberfläche helfen. In der folgenden Tabelle sind die Schaltflächen und ihre Funktionen aufgeführt.  
@@ -64,18 +64,18 @@ ms.locfileid: "66062466"
 |------------|-----------------|  
 |**Als Text bearbeiten**|Nicht aktiviert für diesen Datenquellentyp.|  
 |**Importieren**|Importieren einer vorhandenen Abfrage aus einer Berichtsdefinitionsdatei (.rdl) im Dateisystem.|  
-|![Ändern der MDX-Abfragesicht](media/rsqdicon-commandtypemdx.gif "Ändern der MDX-Abfragesicht")|Wechselt zum MDX-Befehlstyp.|  
-|![Aktualisieren der Ergebnisdaten](media/rsqdicon-refresh.gif "Aktualisieren der Ergebnisdaten")|Aktualisieren von Metadaten aus der Datenquelle.|  
+|![Zur MDX-Abfrageansicht wechseln](media/rsqdicon-commandtypemdx.gif "Zur MDX-Abfrageansicht wechseln")|Wechselt zum MDX-Befehlstyp.|  
+|![Ergebnisdaten aktualisieren](media/rsqdicon-refresh.gif "Ergebnisdaten aktualisieren")|Aktualisieren von Metadaten aus der Datenquelle.|  
 |![Berechnetes Element hinzufügen](media/rsqdicon-addcalculatedmember.gif "Berechnetes Element hinzufügen")|Zeigt das Dialogfeld **Generator für berechnete Elemente** an.|  
-|![Umschalten zum Anzeigen von leeren Zellen](media/rsqdicon-showemptycells.gif "Umschalten zum Anzeigen von leeren Zellen")|Schaltet zwischen dem Anzeigen und Nichtanzeigen von leeren Zellen im Datenbereich um. (Dies entspricht dem Verwenden der NON EMPTY-Klausel in MDX.)|  
-|![Automatisches Ausführen der Abfrage](media/rsqdicon-autoexecute.gif "Automatisches Ausführen der Abfrage")|Bei jeder Änderung wird die Abfrage automatisch ausgeführt, und das Ergebnis wird angezeigt. Die Ergebnisse werden im Datenbereich angezeigt.|  
+|![Leere Zellen anzeigen/nicht anzeigen](media/rsqdicon-showemptycells.gif "Leere Zellen anzeigen/nicht anzeigen")|Schaltet zwischen dem Anzeigen und Nichtanzeigen von leeren Zellen im Datenbereich um. (Dies entspricht dem Verwenden der NON EMPTY-Klausel in MDX.)|  
+|![Abfrage automatisch ausführen](media/rsqdicon-autoexecute.gif "Abfrage automatisch ausführen")|Bei jeder Änderung wird die Abfrage automatisch ausgeführt, und das Ergebnis wird angezeigt. Die Ergebnisse werden im Datenbereich angezeigt.|  
 |![Aggregationen anzeigen (Schaltfläche)](media/rsqdicon-showaggregations.gif "Aggregationen anzeigen (Schaltfläche)")|Zeigt Aggregationen im Datenbereich an.|  
-|![Löschen](media/rsqdicon-delete.gif "Löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|  
-|![Dialogfeld für Abfrageparameter (Symbol)](media/iconqueryparameter.gif "Dialogfeld für Abfrageparameter (Symbol)")|Anzeigen des Dialogfelds **Abfrageparameter** . Bei der Angabe von Werten für einen Abfrageparameter wird automatisch ein Parameter mit demselben Namen erstellt.|  
+|![Richtlinie](media/rsqdicon-delete.gif "Löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|  
+|![Symbol für das Dialogfeld „Abfrageparameter“](media/iconqueryparameter.gif "Symbol für das Dialogfeld „Abfrageparameter“")|Anzeigen des Dialogfelds **Abfrageparameter** . Bei der Angabe von Werten für einen Abfrageparameter wird automatisch ein Parameter mit demselben Namen erstellt.|  
 |![Abfrage vorbereiten (Schaltfläche)](media/rsqdicon-preparequery.gif "Abfrage vorbereiten (Schaltfläche)")|Bereitet die Abfrage vor.|  
-|![Ausführen der Abfrage](media/rsqdicon-run.gif "Abfrage ausführen")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|  
-|![Abbrechen der Abfrage](media/rsqdicon-cancel.gif "Abbrechen der Abfrage")|Abbrechen der Abfrage.|  
-|![Wechseln in den Entwurfs Modus](media/rsqdicon-designmode.gif "Wechselt in den Entwurfsmodus")|Umschalten zwischen Entwurfsmodus und Abfragemodus.|  
+|![Abfrage ausführen](media/rsqdicon-run.gif "Abfrage ausführen")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|  
+|![Abfrage abbrechen](media/rsqdicon-cancel.gif "Abfrage abbrechen")|Abbrechen der Abfrage.|  
+|![In Entwurfsmodus wechseln](media/rsqdicon-designmode.gif "Wechselt in den Entwurfsmodus")|Umschalten zwischen Entwurfsmodus und Abfragemodus.|  
   
 ## <a name="graphical-mdx-query-designer-in-query-mode"></a>Grafischer MDX-Abfrage-Designer im Abfragemodus  
  Wenn Sie vom grafischen Abfrage-Designer in den **Abfragemodus** wechseln möchten, klicken Sie auf der Symbolleiste auf die Schaltfläche **Entwurfsmodus** .  
@@ -104,12 +104,12 @@ ms.locfileid: "66062466"
   
 -   **Als Text bearbeiten**  
   
--   **Berechnetes Element hinzufügen** (![berechnetes Element hinzufügen](media/rsqdicon-addcalculatedmember.gif "Berechnetes Element hinzufügen"))  
+-   **Berechnetes Element hinzufügen** (![Berechnetes Element hinzufügen](media/rsqdicon-addcalculatedmember.gif "Berechnetes Element hinzufügen"))  
   
--   **Leere Zellen anzeigen** (![zum Anzeigen leerer Zellen umschalten](media/rsqdicon-showemptycells.gif "Umschalten zum Anzeigen von leeren Zellen"))  
+-   **Leere Zellen anzeigen** (![Schaltfläche zum ein-/ausblenden leerer Zellen](media/rsqdicon-showemptycells.gif "Leere Zellen anzeigen/nicht anzeigen"))  
   
--   **AutoExecute** (![Abfrage automatisch ausführen](media/rsqdicon-autoexecute.gif "Automatisches Ausführen der Abfrage"))  
+-   **AutoExecute** (![Abfrage automatisch ausführen](media/rsqdicon-autoexecute.gif "Abfrage automatisch ausführen"))  
   
--   **Aggregationen anzeigen** (![Schaltfläche Aggregationen anzeigen](media/rsqdicon-showaggregations.gif "Aggregationen anzeigen (Schaltfläche)"))  
+-   **Aggregationen anzeigen** (![Schaltfläche „Aggregationen anzeigen“](media/rsqdicon-showaggregations.gif "Aggregationen anzeigen (Schaltfläche)"))  
   
   

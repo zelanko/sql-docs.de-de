@@ -1,5 +1,6 @@
 ---
-title: Ausführen von SQL-Abfragen mit der ExecuteXmlReader-Methode
+title: Ausführen von SQL-Abfragen mit der ExecuteXMLReader-Methode
+description: Erfahren Sie, wie Sie SQL-Abfragen mithilfe der ExecuteXmlReader-Methode des SqlXmlCommand-Objekts zum Ausführen von Befehlen ausführen.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23b28209db43753b7185a87311ec6d338bcaccbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9acfa4eecb97902f20a0ba25762e2b14f2d5c756
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75251529"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81387994"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Ausführen von SQL-Abfragen mithilfe der 'ExecuteXMLReader'-Methode
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Anstatt die executedestream-Methode zu verwenden, können Sie die ExecuteXmlReader-Methode des SqlXmlCommand-Objekts verwenden, um Befehle auszuführen. Diese Methode gibt ein XmlReader-Objekt zurück, das für die weitere Verarbeitung des Ergebnisses verwendet werden kann (in diesem Beispiel werden die Element-oder Attributnamen und die Werte gedruckt).  
+  Anstatt die ExecuteToStream-Methode zu verwenden, können Sie die ExecuteXmlReader-Methode des SqlXmlCommand-Objekts verwenden, um Befehle auszuführen. Diese Methode gibt ein XmlReader-Objekt zurück, das für die weitere Verarbeitung des Ergebnisses verwendet werden kann (in diesem Beispiel wird das Element oder die Attributnamen und die Werte gedruckt).  
   
 > [!NOTE]  
 >  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen.  

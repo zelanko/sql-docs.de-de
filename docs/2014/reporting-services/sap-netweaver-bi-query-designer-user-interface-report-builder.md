@@ -1,5 +1,5 @@
 ---
-title: Benutzeroberfläche des Abfrage-Designers für SAP NetWeaver BI (Berichts-Generator) | Microsoft-Dokumentation
+title: SAP NetWeaver BI Query Designer Benutzeroberfläche (Berichts-Generator) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,14 @@ ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aebffe75cf3644717315cd80c82cc753e3256f57
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: d3dc9e21a9bea5c188b32ccc01b7d1fa6d15fa98
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78174949"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388643"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des Abfrage-Designers für SAP NetWeaver BI (Berichts-Generator)
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt einen grafischen Abfrage-Designer zum Erstellen von MDX-Abfragen (Multidimensional Expression) für eine SAP NetWeaver® Business Intelligence-Datenquelle bereit. Der grafische MDX-Abfrage-Designer verfügt über zwei Modi: Entwurfsmodus und Abfragemodus. Jeder Modus bietet einen Metadatenbereich, aus dem Sie Elemente aus einem InfoCube, einem MultiProvider oder einer für die Datenquelle definierten, webfähigen Abfrage ziehen können, um eine MDX-Abfrage zu erstellen, die bei der Berichtsverarbeitung Daten abruft.
 
 > [!IMPORTANT]
@@ -33,7 +32,7 @@ ms.locfileid: "78174949"
 ## <a name="graphical-query-designer-in-design-mode"></a>Grafischer Abfrage-Designer im Entwurfsmodus
  Wenn Sie in der Datenansicht des Berichts-Designers ein Dataset mit einer [!INCLUDE[SAP_DPE_BW_1](../includes/sap-dpe-bw-1-md.md)] -Datenquelle bearbeiten, wird der grafische Abfrage-Designer im Entwurfsmodus geöffnet.
 
- ![Abfrage-Designer mithilfe von MDX im Entwurfsmodus](media/rsqd-dssapbw-mdx-designmode.gif "Abfrage-Designer mithilfe von MDX im Entwurfsmodus")
+ ![Verwenden von MDX im Entwurfsmodus des Abfrage-Designers](media/rsqd-dssapbw-mdx-designmode.gif "Verwenden von MDX im Entwurfsmodus des Abfrage-Designers")
 
  In der folgenden Tabelle sind die Bereiche in diesem Modus aufgeführt.
 
@@ -49,19 +48,19 @@ ms.locfileid: "78174949"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>Symbolleiste für den grafischen Abfrage-Designer im Entwurfsmodus
  Die Symbolleiste des Abfrage-Designers stellt Schaltflächen bereit, die Ihnen beim Entwurf von MDX-Abfragen mit der grafischen Oberfläche helfen. In der folgenden Tabelle werden die Schaltflächen und ihre Funktionen beschrieben.
 
-|Schaltfläche|Beschreibung|
+|Schaltfläche|BESCHREIBUNG|
 |------------|-----------------|
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer. Nicht verfügbar für diesen Datenquellentyp.|
 |**Importieren**|Importieren einer vorhandenen Abfrage aus einer Berichtsdefinitionsdatei (.rdl) im Dateisystem.|
-|![Aktualisieren der Datasetfelder](media/rsqdicon-refreshfields.gif "Aktualisieren der Datasetfelder")|Aktualisieren von Metadaten aus der Datenquelle.|
-|![Berechnetes Element hinzufügen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Berechnetes Element hinzufügen")|Zeigt das Dialogfeld **Generator für berechnete Elemente** an.|
-|![Umschalten zum Anzeigen von leeren Zellen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Umschalten zum Anzeigen von leeren Zellen")|Umschalten zwischen Einblenden und Ausblenden leerer Zellen im Datenbereich. (Dies entspricht dem Verwenden der NON EMPTY-Klausel in MDX.)|
-|![Automatisches Ausführen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Automatisches Ausführen der Abfrage")|Automatisches Ausführen der Abfrage und Anzeigen des Ergebnisses, sobald eine Änderung vorgenommen wird, beispielsweise Löschen einer Spalte im Datenbereich. Die Ergebnisse werden im Datenbereich angezeigt.|
-|![Löschen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|
-|![Symbol für das Dialogfeld „Abfrageparameter“](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Symbol für das Dialogfeld „Abfrageparameter“")|Anzeigen des Dialogfelds **Variablen** . Diese Schaltfläche ist nur aktiviert, wenn es sich bei dem ausgewählten Cube um einen Abfragecube handelt (da nur Abfragecubes Variablen unterstützen). Wenn Sie einer Variablen einen Standardwert zuweisen, wird ein entsprechender Berichtsparameter erstellt.|
-|![Ausführen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Abfrage ausführen")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|
-|![Abbrechen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Abbrechen der Abfrage")|Abbrechen der Abfrage.|
-|![Wechseln in den Entwurfs Modus](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Wechselt in den Entwurfsmodus")|Umschalten zwischen Entwurfsmodus und Abfragemodus.|
+|![Datasetfelder aktualisieren](media/rsqdicon-refreshfields.gif "Aktualisieren der Datasetfelder")|Aktualisieren von Metadaten aus der Datenquelle.|
+|![Berechnetes Element hinzufügen](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Berechnetes Element hinzufügen")|Zeigt das Dialogfeld **Generator für berechnete Elemente** an.|
+|![Leere Zellen anzeigen/nicht anzeigen](../analysis-services/media/rsqdicon-showemptycells.gif "Leere Zellen anzeigen/nicht anzeigen")|Umschalten zwischen Einblenden und Ausblenden leerer Zellen im Datenbereich. (Dies entspricht dem Verwenden der NON EMPTY-Klausel in MDX.)|
+|![Abfrage automatisch ausführen](../analysis-services/media/rsqdicon-autoexecute.gif "Abfrage automatisch ausführen")|Automatisches Ausführen der Abfrage und Anzeigen des Ergebnisses, sobald eine Änderung vorgenommen wird, beispielsweise Löschen einer Spalte im Datenbereich. Die Ergebnisse werden im Datenbereich angezeigt.|
+|![Richtlinie](../analysis-services/media/rsqdicon-delete.gif "Löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|
+|![Symbol für das Dialogfeld „Abfrageparameter“](../analysis-services/media/iconqueryparameter.gif "Symbol für das Dialogfeld „Abfrageparameter“")|Anzeigen des Dialogfelds **Variablen** . Diese Schaltfläche ist nur aktiviert, wenn es sich bei dem ausgewählten Cube um einen Abfragecube handelt (da nur Abfragecubes Variablen unterstützen). Wenn Sie einer Variablen einen Standardwert zuweisen, wird ein entsprechender Berichtsparameter erstellt.|
+|![Abfrage ausführen](../analysis-services/media/rsqdicon-run.gif "Abfrage ausführen")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|
+|![Abfrage abbrechen](../analysis-services/media/rsqdicon-cancel.gif "Abfrage abbrechen")|Abbrechen der Abfrage.|
+|![In Entwurfsmodus wechseln](../analysis-services/media/rsqdicon-designmode.gif "Wechselt in den Entwurfsmodus")|Umschalten zwischen Entwurfsmodus und Abfragemodus.|
 
 ## <a name="graphical-query-designer-in-query-mode"></a>Grafischer Abfrage-Designer im Abfragemodus
  Klicken Sie zum Umschalten des grafischen Abfrage-Designers in den Abfragemodus auf der Symbolleiste auf die Umschaltfläche **Entwurfsmodus** .
@@ -91,13 +90,13 @@ ms.locfileid: "78174949"
 
 -   **Als Text bearbeiten**
 
--   **Berechnetes Element hinzufügen** (![berechnetes Element hinzufügen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Berechnetes Element hinzufügen"))
+-   **Berechnetes Element hinzufügen** (![Berechnetes Element hinzufügen](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Berechnetes Element hinzufügen"))
 
--   **Leere Zellen anzeigen** (![zum Anzeigen leerer Zellen umschalten](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Umschalten zum Anzeigen von leeren Zellen"))
+-   **Leere Zellen anzeigen** (![Schaltfläche zum ein-/ausblenden leerer Zellen](../analysis-services/media/rsqdicon-showemptycells.gif "Leere Zellen anzeigen/nicht anzeigen"))
 
--   **AutoExecute** (![Abfrage automatisch ausführen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Automatisches Ausführen der Abfrage"))
+-   **AutoExecute** (![Abfrage automatisch ausführen](../analysis-services/media/rsqdicon-autoexecute.gif "Abfrage automatisch ausführen"))
 
--   **Löschen** (![Löschen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Löschen"))
+-   **Löschen** (![Löschen](../analysis-services/media/rsqdicon-delete.gif "Löschen"))
 
 ## <a name="see-also"></a>Weitere Informationen
  [Abfrage-Designer &#40;Berichts-Generator&#41;](../../2014/reporting-services/query-designers-report-builder.md)

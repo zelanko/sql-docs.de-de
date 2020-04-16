@@ -1,5 +1,5 @@
 ---
-title: Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services (Berichts-Generator und SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd352eccbe0cba2d29c7c446eef00bea5415084d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 39f94bc7fd247a1608385f009fcb8d117b8c628f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176910"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388537"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services (Berichts-Generator und SSRS)
   Um eine MDX-Abfrage von einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenquelle zu parametrisieren, müssen Sie der Abfrage einen Abfrageparameter hinzufügen. Im MDX-Abfrage-Designer können Sie im Entwurfsmodus und im Abfragemodus einen Abfrageparameter hinzufügen, indem Sie einen Filter angeben. Nachdem Sie die Abfrage mit einem Abfrageparameter definiert haben, erstellt Reporting Services automatisch einen Berichtsparameter und ein Dataset für die Bereitstellung der Liste mit gültigen Werten. Dies ermöglicht einem Benutzer, einen Wert anzugeben, der direkt an die Abfrage übergeben wird.
@@ -59,7 +59,7 @@ ms.locfileid: "78176910"
 
 2.  Klicken Sie auf der Symbolleiste auf **Entwurf** , um in den Abfragemodus zu wechseln.
 
-3.  Klicken Sie auf der MDX-Abfrage-Designer-Symbolleiste auf **Abfrageparameter** (![Symbol für das Dialogfeld „Abfrageparameter“](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Symbol für das Dialogfeld „Abfrageparameter“")). Das Dialogfeld Abfrageparameter wird geöffnet.
+3.  Klicken Sie auf der MDX-Abfrage-Designer-Symbolleiste auf **Abfrageparameter** (![Symbol für das Dialogfeld „Abfrageparameter“](../../analysis-services/media/iconqueryparameter.gif "Symbol für das Dialogfeld „Abfrageparameter“")). Das Dialogfeld Abfrageparameter wird geöffnet.
 
 4.  Klicken Sie in der Spalte **Parameter** auf **\<Parameter eingeben>** , und geben Sie dann den Namen eines Parameters ein.
 
@@ -82,6 +82,6 @@ ms.locfileid: "78176910"
      Um das Dataset anzuzeigen, das verfügbare Werte für den Berichtsparameter enthält, klicken Sie mit der rechten Maustaste auf einen leeren Bereich im Berichtsdatenbereich, und klicken Sie dann auf **Ausgeblendete Datasets anzeigen**. Der Berichtsdatenbereich zeigt alle Datasets im Bericht an.
 
 ## <a name="see-also"></a>Weitere Informationen
- [Analysis Services Verbindungstyp für MDX-&#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services MDX-Abfrage-Designer-Benutzeroberfläche](analysis-services-mdx-query-designer-user-interface.md)
+ [Verbindungstyp der Analysedienste für MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services MDX Query Designer Benutzeroberfläche](analysis-services-mdx-query-designer-user-interface.md)
 
 

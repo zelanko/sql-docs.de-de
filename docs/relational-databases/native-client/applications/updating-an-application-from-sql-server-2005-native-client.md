@@ -1,5 +1,5 @@
 ---
-title: Native Client, Update-App SQL 2005
+title: Update von SQL 2005
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c047d243804b13733a7380ced362546ceda1e294
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 3287f5faf6d748a433a425c1ecf505bbe551d3b2
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81302503"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388299"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Aktualisieren einer Anwendung von SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "81302503"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 war im Lieferumfang von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] enthalten. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 war im Lieferumfang von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] enthalten.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 war im Lieferumfang von [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] enthalten. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 war im Lieferumfang von [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] enthalten.  
   
-|Geändertes Verhalten in SQL Server Native Client seit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Beschreibung|  
+|Geändertes Verhalten in SQL Server Native Client seit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|BESCHREIBUNG|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB füllt nur Zahlen bis zur definierten Anzahl von Dezimalstellen auf.|Bei Konvertierungen, bei denen konvertierte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Daten an [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]den Server gesendet werden, legt Native Client (beginnend in ) nachfolgende Nullen in Daten nur bis zur maximalen Länge von **Datumszeitwerten** auf. In SQL Server Native Client 9.0 wurden Zahlen bis zu 9 Stellen aufgefüllt.|  
 |Überprüfen Sie DBTYPE_DBTIMESTAMP auf ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (beginnend in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) implementiert die OLE DB-Anforderung für *bScale* in ICommandWithParameter::SetParameterInfo, die für DBTYPE_DBTIMESTAMP auf die Sekundengenauigkeit festgelegt werden soll.|  

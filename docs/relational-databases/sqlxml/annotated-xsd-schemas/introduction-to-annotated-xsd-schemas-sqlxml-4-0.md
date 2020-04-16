@@ -1,5 +1,6 @@
 ---
-title: Einführung in XSD-Schemas mit Anmerkungen (SQLXML)
+title: Einführung in annotierte XSD-Schemas (SQLXML)
+description: Erfahren Sie mehr über das Erstellen von XML-Ansichten relationaler Daten mithilfe der XML-Schemadefinitionssprache (XSD) (SQLXML 4.0).
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,22 +23,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81791c2b48e414f4f147bfff47cf1d9166d4a2a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c165ca271c3230399d54363f22d2b220e5427830
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247055"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388656"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Einführung in XSD-Schemas mit Anmerkungen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Sie können mit der XML-Schemadefinitionssprache (XSD) XML-Sichten von relationalen Daten erstellen. Diese Sichten können dann mit XPath (XML Path)-Abfragen abgefragt werden. Dieser Vorgang gleicht prinzipiell dem Erstellen von Sichten mit CREATE VIEW-Anweisungen und dem Definieren von SQL-Abfragen für diese Sichten.  
   
- Ein XML-Schema beschreibt die Struktur eines XML-Dokuments und beschreibt außerdem die verschiedenen Einschränkungen der Daten im Dokument. Wenn XQuery-Abfragen mit dem XSD-Schema angegeben werden, wird die Struktur des resultierenden XML-Dokuments durch das Schema bestimmt, mit dem die Abfrage ausgeführt wird.  
+ Ein XML-Schema beschreibt die Struktur eines XML-Dokuments und beschreibt auch die verschiedenen Einschränkungen für die Daten im Dokument. Wenn XQuery-Abfragen mit dem XSD-Schema angegeben werden, wird die Struktur des resultierenden XML-Dokuments durch das Schema bestimmt, mit dem die Abfrage ausgeführt wird.  
   
- In einem XSD-Schema schließt das ** \<XSD: Schema>** -Element das gesamte Schema ein. Alle Element Deklarationen müssen im ** \<XSD: Schema>** -Element enthalten sein. Sie können Attribute beschreiben, die den Namespace definieren, in dem sich das Schema befindet, und die Namespaces, die im Schema als Eigenschaften des ** \<XSD: Schema->** Elements verwendet werden.  
+ In einem XSD-Schema umschließt das ** \<xsd:schema>-Element** das gesamte Schema. Alle Elementdeklarationen müssen im ** \<xsd:schema>-Element** enthalten sein. Sie können Attribute beschreiben, die den Namespace definieren, in dem sich das Schema befindet, und die Namespaces, die im Schema als Eigenschaften des ** \<xsd:schema>** Elements verwendet werden.  
   
- Ein gültiges XSD-Schema muss das ** \<XSD: Schema>** -Element enthalten, das wie folgt definiert ist:  
+ Ein gültiges XSD-Schema muss das ** \<xsd:schema>-Element** enthalten, das wie folgt definiert ist:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -46,7 +47,7 @@ ms.locfileid: "75247055"
 </xsd:schema>  
 ```  
   
- Das ** \<XSD: Schema>** -Element wird von der XML-Schema-Namespace http://www.w3.org/2001/XMLSchemaSpezifikation unter abgeleitet.  
+ Das ** \<xsd:schema>-Element** wird von der http://www.w3.org/2001/XMLSchemaXML-Schema-Namespacespezifikation unter abgeleitet.  
   
 ## <a name="annotations-to-the-xsd-schema"></a>Anmerkungen zum XSD-Schema  
  Sie können ein XSD-Schema mit Anmerkungen angeben, welche die Zuordnung zu einer Datenbank beschreiben, die Datenbank abfragen und die Ergebnisse in Form eines XML-Dokuments zurückgeben. Anmerkungen werden bereitgestellt, um ein XSD-Schema Datenbanktabellen und -spalten zuzuordnen. XPath-Abfragen können für die XML-Sicht, die durch das XSD-Schema erstellt wird, angegeben werden, um die Datenbank abzufragen und die Ergebnisse als XML-Dokument zu erhalten.  
@@ -54,10 +55,10 @@ ms.locfileid: "75247055"
 > [!NOTE]  
 >  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 unterstützt die XSD-Schemasprache die Anmerkungen, die in der XDR-Schemasprache (XML-Data Reduced) mit Anmerkungen in [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] eingeführt wurden. XDR-Anmerkungen sind in SQLXML 4.0 veraltet.  
   
- Im Kontext relationaler Datenbanken ist es nützlich, das beliebige XSD-Schema einem relationalen Datenspeicher zuzuordnen. Dies lässt sich beispielsweise erreichen, indem das XSD-Schema mit Anmerkungen versehen wird. Ein XSD-Schema mit Anmerkungen wird als Zuordnungsschema ** bezeichnet, das Informationen dazu bereitstellt, wie XML-Daten dem relationalen Speicher zugeordnet werden. Ein Zuordnungsschema ist im Grunde eine XML-Sicht der relationalen Daten. Diese Zuordnungen können verwendet werden, um relationale Daten als XML-Dokument abzurufen.  
+ Im Kontext relationaler Datenbanken ist es nützlich, das beliebige XSD-Schema einem relationalen Datenspeicher zuzuordnen. Dies lässt sich beispielsweise erreichen, indem das XSD-Schema mit Anmerkungen versehen wird. Ein XSD-Schema mit den Anmerkungen wird als *Zuordnungsschema*bezeichnet, das Informationen darüber bereitstellt, wie XML-Daten dem relationalen Speicher zugeordnet werden sollen. Ein Zuordnungsschema ist im Grunde eine XML-Sicht der relationalen Daten. Diese Zuordnungen können verwendet werden, um relationale Daten als XML-Dokument abzurufen.  
   
 ## <a name="namespace-for-annotations"></a>Namespace für Anmerkungen  
- In einem XSD-Schema werden Anmerkungen mithilfe des Namespace **urn: Schemas-Microsoft-com: Mapping-Schema**angegeben. Wie im folgenden Beispiel gezeigt, besteht die einfachste Möglichkeit, den Namespace anzugeben, darin, ihn im ** \<XSD: Schema->** -Tag anzugeben.  
+ In einem XSD-Schema werden Anmerkungen mithilfe des Namespace **urn:schemas-microsoft-com:mapping-schema**angegeben. Wie im folgenden Beispiel gezeigt, ist es am einfachsten, den Namespace im ** \<xsd:schema->-Tag** anzugeben.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -66,10 +67,10 @@ ms.locfileid: "75247055"
 </xsd:schema>  
 ```  
   
- Es kann ein beliebiges Namespacepräfix verwendet werden. In dieser Dokumentation wird das **SQL** -Präfix verwendet, um den Namespace der Anmerkung anzugeben und Anmerkungen in diesem Namespace von denjenigen in anderen Namespaces zu unterscheiden.  
+ Es kann ein beliebiges Namespacepräfix verwendet werden. In dieser Dokumentation **sql** wird das sql-Präfix verwendet, um den Annotationsnamespace zu bezeichnen und Anmerkungen in diesem Namespace von denen in anderen Namespaces zu unterscheiden.  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>Beispiel eines XSD-Schemas mit Anmerkungen  
- Im folgenden Beispiel besteht das XSD-Schema aus einem ** \<Person. Contact->** Element. Das ** \<Employee>** -Element verfügt über das **ContactID** -Attribut und ** \<den FirstName->** und den ** \<LastName->** untergeordneten Elementen:  
+ Im folgenden Beispiel besteht das XSD-Schema aus einem ** \<Person.Contact**>-Element. Das ** \<Employee>-Element** verfügt über ein **ContactID-Attribut** und ** \<FirstName>** und ** \<LastName>** untergeordneteelemente Elemente:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -110,7 +111,7 @@ ms.locfileid: "75247055"
 </xsd:schema>  
 ```  
   
- Im Zuordnungs Schema wird das ** \<Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Beispieldatenbank mithilfe der **SQL: Relation** -Anmerkung zugeordnet. Die Attribute "konid", "fname" und "lname" werden den Spalten "ContactID", "FirstName" und "LastName" in der Tabelle "Person. Contact" mithilfe der **SQL: Field** -Anmerkungen zugeordnet.  
+ Im Zuordnungsschema ** \<** wird das Contact>-Element der Tabelle Person.Contact in der AdventureWorks-Beispieldatenbank mithilfe der **sql:relation-Anmerkung** zugeordnet. Die Attribute ConID, FName und LName werden den Spalten ContactID, FirstName und LastName in der Tabelle Person.Contact mithilfe der **sql:field-Anmerkungen** zugeordnet.  
   
  Dieses XSD-Schema mit Anmerkungen stellt die XML-Sicht der relationalen Daten bereit. Diese XML-Sicht kann mit der XPath-Sprache abgefragt werden. Xpath-Abfragen geben als Ergebnis ein XML-Dokument zurück statt eines Rowsets, das von SQL-Abfragen zurückgegeben wird.  
   
@@ -120,18 +121,18 @@ ms.locfileid: "75247055"
 ## <a name="other-resources"></a>Weitere Ressourcen  
  Weitere Informationen zu XSD (XML Schema Definition Language), XPath (XML Path Language) und XSLT (Extensible Stylesheet Language Transformations) finden Sie auf den folgenden Websites:  
   
--   XML Schema Part 0: Primer, W3C-Empfehlung (https://www.w3.org/TR/xmlschema-0/)  
+-   XML-Schema Teil 0: Primer, W3C-Empfehlung (https://www.w3.org/TR/xmlschema-0/)  
   
 -   XML-Schema Teil 1: Strukturen, W3C-Empfehlung (https://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2: Datatypes, W3C-Empfehlung (https://www.w3.org/TR/xmlschema-2/)  
+-   XML-Schema Teil 2:Datentypen, W3C-Empfehlung (https://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (https://www.w3.org/TR/xpath)  
+-   XML-Pfadsprache (XPath) (https://www.w3.org/TR/xpath)  
   
 -   XSL-Transformationen (XSLT) (https://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Überlegungen zur Schema Sicherheit mit Anmerkungen &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [XDR-Schemas mit Anmerkungen &#40;in SQLXML 4,0 als veraltet markiert&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [Annotierte Schemasicherheitsüberlegungen &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [Annotierte XDR-Schemas &#40;in SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

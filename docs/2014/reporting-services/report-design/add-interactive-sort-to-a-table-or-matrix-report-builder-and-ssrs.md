@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 961a2a76f2a839ccc9fa8fb90027bec180d870d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "66106640"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix (Berichts-Generator und SSRS)
@@ -30,18 +30,18 @@ ms.locfileid: "66106640"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="BackToTop"></a>In diesem Artikel  
- [Sortieren von Detail Zeilen für eine Tabelle ohne Gruppen](#SortingDetailRows)  
+##  <a name="in-this-article"></a><a name="BackToTop"></a> In diesem Artikel  
+ [Sortieren von Detailzeilen für eine Tabelle ohne Gruppen](#SortingDetailRows)  
   
- [Sortieren einer übergeordneten Zeilen Gruppe der obersten Ebene für eine Tabelle oder eine Matrix](#SortingTopLevelParent)  
+ [Sortieren einer übergeordneten Zeilengruppe der obersten Ebene für eine Tabelle oder eine Matrix](#SortingTopLevelParent)  
   
- [Sortieren von untergeordneten Gruppen oder Detail Zeilen für eine Gruppe](#SortingChildGroups)  
+ [Sortieren von untergeordneten Gruppen oder Detailzeilen für eine Gruppe](#SortingChildGroups)  
   
- [Sortieren von Zeilen anhand eines komplexen Gruppierungs Ausdrucks](#SortingMultipleRowGroups)  
+ [Sortieren von Zeilen anhand eines komplexen Gruppierungsausdrucks](#SortingMultipleRowGroups)  
   
  [Synchronisieren der Sortierreihenfolge für mehrere Datenbereiche](#SynchronizingSortOrder)  
   
-##  <a name="SortingDetailRows"></a>Sortieren von Detail Zeilen für eine Tabelle ohne Gruppen  
+##  <a name="sorting-detail-rows-for-a-table-with-no-groups"></a><a name="SortingDetailRows"></a> Sortieren von Detailzeilen für eine Tabelle ohne Gruppen  
  Fügen Sie einem Spaltenheader eine interaktive Sortierschaltfläche hinzu, um es Benutzern zu ermöglichen, auf den Spaltenheader zu klicken und die Detailzeilen in einer Tabelle nach den in der betreffenden Spalte angezeigten Werten zu sortieren.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>So fügen Sie einem Spaltenheader eine interaktive Sortierschaltfläche hinzu, um die Tabelle nach Werten zu sortieren  
@@ -62,9 +62,9 @@ ms.locfileid: "66106640"
   
  Sie können den Sortierungsvorgang überprüfen, indem Sie mit **Ausführen** eine Vorschau des Berichts anzeigen und dann auf die interaktiven Sortierschaltflächen klicken.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [zurück zum Anfang](#BackToTop)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
-##  <a name="SortingTopLevelParent"></a>Sortieren einer übergeordneten Zeilen Gruppe der obersten Ebene für eine Tabelle oder eine Matrix  
+##  <a name="sorting-a-top-level-parent-row-group-for-a-table-or-matrix"></a><a name="SortingTopLevelParent"></a> Sortieren einer übergeordneten Zeilengruppe der obersten Ebene für eine Tabelle oder eine Matrix  
  Fügen Sie einem Spaltenheader eine interaktive Sortierschaltfläche hinzu, um es Benutzern zu ermöglichen, auf den Spaltenheader zu klicken und die übergeordneten Gruppenzeilen in einer Tabelle oder Matrix nach den in der betreffenden Spalte angezeigten Werten zu sortieren. Die Reihenfolge der untergeordneten Gruppen bleibt unverändert.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>So fügen Sie einem Spaltenheader eine interaktive Sortierschaltfläche hinzu, um Gruppen zu sortieren  
@@ -86,9 +86,9 @@ ms.locfileid: "66106640"
   
  Sie können den Sortierungsvorgang überprüfen, indem Sie mit **Ausführen** eine Vorschau des Berichts anzeigen und dann auf die interaktiven Sortierschaltflächen klicken.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [zurück zum Anfang](#BackToTop)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
-##  <a name="SortingChildGroups"></a>Sortieren von untergeordneten Gruppen oder Detail Zeilen für eine Gruppe  
+##  <a name="sorting-child-groups-or-detail-rows-for-a-group"></a><a name="SortingChildGroups"></a> Sortieren von untergeordneten Gruppen oder Detailzeilen für eine Gruppe  
  Fügen Sie einer Gruppenkopfzeile eine interaktive Sortierschaltfläche hinzu, um es Benutzern zu ermöglichen, die Werte einer untergeordneten Gruppe von einer übergeordneten Gruppe oder aber die Detailzeilen für die innerste untergeordnete Gruppe zu sortieren.  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>So fügen Sie einem Textfeld in einem Gruppenzeilenheader eine interaktive Sortierschaltfläche hinzu, um untergeordnete Gruppen oder Detailzeilen zu sortieren  
@@ -101,17 +101,17 @@ ms.locfileid: "66106640"
   
 4.  Klicken Sie unter **Zu sortierende Elemente auswählen**auf eine der folgenden Optionen:  
   
-    -   **Details** Klicken Sie auf **Details** , um die Detail Zeilen zu sortieren. Wählen Sie in der Dropdownliste das Feld aus, nach dem die Sortierung erfolgen soll. Bei Verwendung dieser Option müssen Sie den Wert angeben, nach dem die Sortierung erfolgen soll.  
+    -   **Details** Klicken Sie auf **Details** , um die Detailzeilen zu sortieren. Wählen Sie in der Dropdownliste das Feld aus, nach dem die Sortierung erfolgen soll. Bei Verwendung dieser Option müssen Sie den Wert angeben, nach dem die Sortierung erfolgen soll.  
   
-    -   **Gruppen** Klicken Sie auf **Gruppen** , um die untergeordneten Gruppen Werte zu sortieren. Bei Verwendung dieser Option wird der Ausdruck für **Sortieren nach** automatisch aus dem Gruppierungsausdruck eingetragen.  
+    -   **Gruppen** Klicken Sie auf **Gruppen** , um die Werte der untergeordneten Gruppen zu sortieren. Bei Verwendung dieser Option wird der Ausdruck für **Sortieren nach** automatisch aus dem Gruppierungsausdruck eingetragen.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  Sie können den Sortierungsvorgang überprüfen, indem Sie mit **Ausführen** eine Vorschau des Berichts anzeigen und dann auf die interaktiven Sortierschaltflächen klicken.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [zurück zum Anfang](#BackToTop)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
-##  <a name="SortingMultipleRowGroups"></a>Sortieren von Zeilen anhand eines komplexen Gruppierungs Ausdrucks  
+##  <a name="sorting-rows-based-on-a-complex-group-expression"></a><a name="SortingMultipleRowGroups"></a> Sortieren von Zeilen anhand eines komplexen Gruppierungsausdrucks  
  Fügen Sie einem Spaltenheader eine interaktive Sortierschaltfläche hinzu, um es Benutzern zu ermöglichen, auf den Spaltenheader zu klicken und die kombinierten übergeordneten und untergeordneten Gruppen zu sortieren. Um diesen Effekt zu erzielen, müssen Sie den Gruppierungsausdruck in eine Zusammensetzung beider Gruppen ändern. Angenommen, in einer Matrix werden Gesamtwerte für die Lagerbestände eines Geschäfts angezeigt, wobei die Artikel nach Farbe und nach Größe gruppiert sind. Wenn Sie die Zeilen nach Kombination von Farbe und Größe sortieren möchten und keine getrennten Gruppen für Farbe und Größe verwendet werden sollen, können Sie eine Gruppe definieren, die auf der Kombination von Farbe und Größe beruht. Weitere Informationen zum Definieren von Gruppenausdrücken finden Sie unter [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](expression-examples-report-builder-and-ssrs.md).  
   
  In der folgenden Prozedur bezeichnen die Begriffe Tablix-Datenbereiche. Weitere Informationen finden Sie unter [Zonen des Tablix-Datenbereichs (Berichts-Generator und SSRS)](tablix-data-region-areas-report-builder-and-ssrs.md).  
@@ -166,9 +166,9 @@ ms.locfileid: "66106640"
   
  Sie können den Sortierungsvorgang überprüfen, indem Sie mit **Ausführen** eine Vorschau des Berichts anzeigen und dann auf die interaktive Sortierschaltfläche klicken. Die Matrix wird nach den kombinierten Werten des Gruppierungsausdrucks sortiert, jedoch wird jeder einzelne Wert in einer eigenen Spalte angezeigt.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [zurück zum Anfang](#BackToTop)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
-##  <a name="SynchronizingSortOrder"></a>Synchronisieren der Sortierreihenfolge für mehrere Datenbereiche  
+##  <a name="synchronizing-sort-order-for-multiple-data-regions"></a><a name="SynchronizingSortOrder"></a> Synchronisieren der Sortierreihenfolge für mehrere Datenbereiche  
  Fügen Sie eine interaktive Sortierschaltfläche hinzu, die es Benutzern ermöglicht, auf eine Sortierschaltfläche zu klicken und mehrere Datenbereiche zu sortieren. Wenn Sie eine interaktive Sortierschaltfläche erstellen, können Sie angeben, ob die Sortierung für mehrere Datenbereiche anhand desselben Berichtsdatasets synchronisiert werden soll. Zum Beispiel kann ein Bericht eine Matrix und ein Diagramm enthalten, in denen die Daten grafisch dargestellt sind. Wenn ein Benutzer die Sortierreihenfolge der Zeilen in der Matrix ändert, wird das Diagramm automatisch mit derselben Sortierreihenfolge angezeigt.  
   
  Zum Synchronisieren der Sortierreihenfolge müssen Sie für die Datenbereiche oder zu sortierenden Gruppen identische Sortierungsausdrücke verwenden und den Bereich für die Sortierung als gemeinsamen Vorgänger beider Datenbereiche definieren. Der gemeinsame Vorgänger kann ein Dataset sein, mit dem beide Datenbereiche verknüpft sind, oder ein enthaltender Datenbereich, in dem beide Datenbereiche angezeigt werden. Angenommen, in einem Bericht sind eine Matrix und ein Diagramm angegeben, in denen Daten aus demselben Dataset angezeigt werden, und die in einer Liste enthalten sind. Zum Synchronisieren der Sortierungsaktion müssen Sie die interaktive Sortierung für eine Spalte in der Matrix angeben und den Bereich für die Liste festlegen. Wenn der Benutzer die Matrix sortiert, wird das Diagramm ebenfalls sortiert.  
@@ -215,11 +215,11 @@ ms.locfileid: "66106640"
   
  Sie können den Sortierungsvorgang überprüfen, indem Sie mit **Ausführen** eine Vorschau des Berichts anzeigen und dann auf die interaktive Sortierschaltfläche klicken. Die Matrix wird nach den kombinierten Werten des Gruppierungsausdrucks sortiert, jedoch wird jeder einzelne Wert in einer eigenen Spalte angezeigt.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [zurück zum Anfang](#BackToTop)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [Zurück zum Anfang](#BackToTop)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Interaktive Sortier &#40;Berichts-Generator und SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)   
+ [Interaktive Sortierung (Berichts-Generator und SSRS)](interactive-sort-report-builder-and-ssrs.md)   
  [Sortieren von Daten in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Untersuchen der Flexibilität eines Tablix-Datenbereichs (Berichts-Generator und SSRS)](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
   

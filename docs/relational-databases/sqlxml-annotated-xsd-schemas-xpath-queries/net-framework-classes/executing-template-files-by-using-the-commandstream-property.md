@@ -1,5 +1,6 @@
 ---
-title: Ausführen von Vorlagen Dateien mit der CommandStream-Eigenschaft
+title: Ausführen von Vorlagendateien mit der CommandStream-Eigenschaft
+description: Erfahren Sie, wie Sie Vorlagendateien ausführen, die aus SQL- oder XPath-Abfragen bestehen, indem Sie die CommandStream-Eigenschaft des SqlXmlCommand-Objekts verwenden.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8741f9f4a094e33aa8da52d6a27d5169e2b09866
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a3b7922921c64c9afb7ef37be57db23a32470eaf
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75251478"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388363"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Ausführen von Vorlagendateien mit der 'CommandStream'-Eigenschaft
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In diesem Beispiel wird veranschaulicht, wie Vorlagen Dateien, die aus SQL-oder XPath-Abfragen bestehen, mithilfe der CommandStream-Eigenschaft des SqlXmlCommand-Objekts angegeben werden können. In dieser Anwendung wird ein filestreamobject für eine Befehlsdatei geöffnet, und der Dateistream wird als CommandStream zugewiesen, der ausgeführt wird.  
+  In diesem Beispiel wird veranschaulicht, wie Vorlagendateien, die aus SQL- oder XPath-Abfragen bestehen, mithilfe der CommandStream-Eigenschaft des SqlXmlCommand-Objekts angegeben werden können. In dieser Anwendung wird ein FileStreamobject für eine Befehlsdatei geöffnet, und der Dateistream wird als CommandStream zugewiesen, der ausgeführt wird.  
   
- Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType. Template (nicht als TemplateFile) angegeben.  
+ Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType.Template (nicht als TemplateFile) angegeben.  
   
  Es folgt die Beispiel-XML-Vorlage:  
   
@@ -84,7 +85,7 @@ class Test
   
 1.  Speichern Sie die in diesem Beispiel bereitgestellte XML-Vorlage in einem Ordner.  
   
-2.  Speichern Sie den c#-Code (DocSample.cs), der in diesem Beispiel bereitgestellt wird, im selben Ordner, in dem das Schema gespeichert ist. (Wenn Sie die Dateien in einem anderen Ordner speichern, müssen Sie den Code bearbeiten und den entsprechenden Verzeichnispfad für das Zuordnungsschema angeben.)  
+2.  Speichern Sie den in diesem Beispiel bereitgestellten Code (DocSample.cs) in demselben Ordner, in dem das Schema gespeichert ist. (Wenn Sie die Dateien in einem anderen Ordner speichern, müssen Sie den Code bearbeiten und den entsprechenden Verzeichnispfad für das Zuordnungsschema angeben.)  
   
 3.  Kompilieren Sie den Code. Verwenden Sie zur Kompilierung des Codes an der Eingabeaufforderung die folgende Zeichenfolge:  
   

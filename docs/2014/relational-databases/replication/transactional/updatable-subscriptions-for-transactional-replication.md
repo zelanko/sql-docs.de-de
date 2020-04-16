@@ -18,13 +18,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "62655494"
 ---
-# <a name="updatable-subscriptions-for-transactional-replication"></a>Aktualisierbare Abonnements für die Transaktionsreplikation
+# <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
@@ -56,7 +56,7 @@ ms.locfileid: "62655494"
  **So wechseln Sie den Updatemodus**  
   
  Zum Wechseln des Updatemodus müssen Sie die Veröffentlichung und das Abonnement für beide Modi aktivieren und zwischen beiden nach Bedarf wechseln. Weitere Informationen finden Sie unter  
-[Wechseln Sie zwischen Update Modi für ein Aktualisier bares Transaktions Abonnement](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Wechseln Zwischen Aktualisierungsmodi für ein updatableTransaktionsabonnement](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Überlegungen zur Verwendung von aktualisierbaren Abonnements  
   
@@ -108,11 +108,9 @@ ms.locfileid: "62655494"
   
 -   Für Spalten des Datentyps `SQL_VARIANT`: Daten werden beim Einfügen oder Aktualisieren auf dem Abonnenten vom Warteschlangenlese-Agent auf die folgende Weise zugeordnet, wenn sie vom Abonnenten in die Warteschlange kopiert werden:  
   
-    -   
-  `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` und `SMALLMONEY` werden `NUMERIC` zugeordnet.  
+    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` und `SMALLMONEY` werden `NUMERIC` zugeordnet.  
   
-    -   
-  `BINARY` und `VARBINARY` werden `VARBINARY`-Daten zugeordnet.  
+    -   `BINARY` und `VARBINARY` werden `VARBINARY`-Daten zugeordnet.  
   
 ### <a name="conflict-detection-and-resolution"></a>Konflikterkennung und -lösung  
   
@@ -125,8 +123,8 @@ ms.locfileid: "62655494"
     -   Wenn Konflikte zu erwarten sind, gehen Sie folgendermaßen vor: Verwenden Sie keine FOREIGN KEY-Einschränkungen auf dem Verleger oder dem Abonnenten, wenn Sie die Konfliktlösung "Abonnent gewinnt" verwenden; verwenden Sie keine FOREIGN KEY-Einschränkungen auf dem Abonnenten, wenn Sie die Konfliktlösung "Verleger gewinnt" verwenden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
- [Transaktions Replikation](transactional-replication.md)   
+ [Peer-to-Peer-Transaktionsreplikation](peer-to-peer-transactional-replication.md)   
+ [Transaktionsreplikation](transactional-replication.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../publish/publish-data-and-database-objects.md)   
  [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Abonnement Sicht (Master Data Services) | Microsoft-Dokumentation
+title: Erstellen einer Abonnementansicht (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "65479945"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Erstellen einer Abonnementsicht (Master Data Services)
-  Erstellen Sie eine Abonnement Sicht, wenn Sie eine Sicht Ihrer Daten in der Datenbank für [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] die Verwendung durch Abonnement Systeme erstellen möchten.  
+  Erstellen Sie eine Abonnementansicht, wenn Sie eine [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Ansicht Ihrer Daten in der Datenbank erstellen möchten, die sie von abonnierenden Systemen verwenden können.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
@@ -36,13 +36,13 @@ ms.locfileid: "65479945"
   
 2.  Klicken Sie auf der Menüleiste auf **Sichten erstellen**.  
   
-3.  Klicken Sie auf der Seite **Abonnement Sichten** auf **Abonnement Sicht hinzufügen**.  
+3.  Klicken Sie auf der Seite **Abonnementansichten** auf **Abonnementansicht hinzufügen**.  
   
-4.  Geben Sie im Bereich **Abonnement Sicht erstellen** im Feld **Name der Abonnement Sicht** einen Namen für die Ansicht ein.  
+4.  Geben Sie im Bereich **Abonnementansicht erstellen** im Feld **Abonnementansichtsname** einen Namen für die Ansicht ein.  
   
 5.  Wählen Sie aus der Liste **Modell** ein Modell aus.  
   
-6.  Wählen Sie entweder die Option **Version** oder Versionsflag aus, und wählen Sie dann aus der entsprechenden Liste aus. ****  
+6.  Wählen Sie entweder die Option **Version** oder **Version Flag** aus, und wählen Sie dann aus der entsprechenden Liste aus.  
   
     > [!TIP]  
     >  Erstellen Sie auf Grundlage eines Versionsflags eine Abonnementsicht. Wenn Sie eine Version sperren, können Sie das Flag einer geöffneten Version erneut zuweisen, ohne die Abonnementsicht zu aktualisieren.  
@@ -56,8 +56,8 @@ ms.locfileid: "65479945"
 10. Klicken Sie auf **Speichern**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Daten &#40;Master Data Services werden exportiert&#41;](overview-exporting-data-master-data-services.md)   
- [&#40;Master Data Services eine Abonnement Sicht löschen&#41;](delete-a-subscription-view-master-data-services.md)   
- [Erstellen Sie ein Versionsflag &#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  
+ [Exportieren von Daten &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
+ [Löschen einer Abonnementansicht &#40;Master Data Services&#41;](delete-a-subscription-view-master-data-services.md)   
+ [Erstellen eines Versionsflags &#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  
   
   
