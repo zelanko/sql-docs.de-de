@@ -1,22 +1,22 @@
 ---
-title: Erweiterbarkeitsframework-API für Microsoft SQL Server
+title: Erweiterbarkeitsframework-API
 titleSuffix: SQL Server Language Extensions
-description: ''
+description: Sie können das Erweiterbarkeitsframework verwenden, um Programmiersprachenerweiterungen für SQL Server zu schreiben. Bei der Erweiterbarkeitsframework-API für Microsoft SQL Server handelt es sich um eine API, die von einer Programmiersprachenerweiterung verwendet werden kann, um mit SQL Server zu interagieren und um Daten mit SQL Server auszutauschen.
 author: dphansen
 ms.author: davidph
-ms.date: 03/30/2020
+ms.date: 04/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba2405be5b4bb4805c524197bbac4ee9baa73ce
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: bc33ebc4ae271841cba2de73cb9168e1a41e7b69
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517711"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012426"
 ---
-# <a name="extensibility-framework-api-for-microsoft-sql-server"></a>Erweiterbarkeitsframework-API für Microsoft SQL Server
+# <a name="extensibility-framework-api-for-sql-server"></a>Erweiterbarkeitsframework-API für SQL Server
 
 Sie können das Erweiterbarkeitsframework verwenden, um Programmiersprachenerweiterungen für SQL Server zu schreiben. Bei der Erweiterbarkeitsframework-API für Microsoft SQL Server handelt es sich um eine API, die von einer Programmiersprachenerweiterung verwendet werden kann, um mit SQL Server zu interagieren und um Daten mit SQL Server auszutauschen.
 
