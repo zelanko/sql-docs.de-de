@@ -11,7 +11,7 @@
       href: administration/best-practices-for-replication-administration.md
     - name: Häufig gestellte Fragen
       href: administration/frequently-asked-questions-for-replication-administrators.md
-- name: Gewusst-wie-Anleitungen
+- name: Anleitungen
   items:
     - name: Verwalten
       items:
@@ -362,7 +362,7 @@
         - name: Replikation zu SQL-Datenbank +
           href: 'https://docs.microsoft.com/azure/sql-database/replication-to-sql-database'
         - name: Replikation mit SQL-Datenbank MI +
-          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance.md'
+          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance'
         - name: Erneutes Veröffentlichen von Daten
           href: republish-data.md
         - name: Replikation über das Internet
@@ -443,7 +443,7 @@
               href: non-sql/ibm-db2-subscribers.md
             - name: Andere Nicht-SQL-Abonnenten
               href: non-sql/other-non-sql-server-subscribers.md
-- name: Lernprogramme
+- name: Tutorials
   href: replication-tutorials.md
   items:
     - name: Vorbereiten des Servers für die Replikation

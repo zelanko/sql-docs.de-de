@@ -1,5 +1,6 @@
 ---
-title: Entwerfen von Assemblys Microsoft-Dokumentation
+title: Entwerfen von Baugruppen | Microsoft Docs
+description: In diesem Artikel werden Faktoren beschrieben, die beim Entwerfen einer Assembly für den Host auf SQL Server zu berücksichtigen sind, einschließlich Desonieren, Verwalten und Einschränkungen für Assemblys.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 205347e9d70ae378e10245c45d2580767eafbd8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028034"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488048"
 ---
 # <a name="assemblies---designing"></a>Assemblys: Entwurf
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema werden die folgenden Faktoren beschrieben, die Sie beim Entwerfen von Assemblys berücksichtigen sollten:  
   
--   Assemblys Verpacken  
+-   Verpackungsbaugruppen  
   
--   Verwalten der Assembly-Sicherheit  
+-   Verwalten der Assemblysicherheit  
   
 -   Einschränkungen für Assemblys  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68028034"
   
  Sie sollten Folgendes beachten, wenn Sie Code in einer Assembly verpacken:  
   
--   CLR-benutzerdefinierte Typen und Indizes, die von CLR-benutzerdefinierten Funktionen abhängen, können bewirken, dass sich persistente Daten in der Datenbank befinden, die von der Assembly abhängen. Das Bearbeiten des Codes einer Assembly ist in der Regel komplexer, wenn persistente Daten vorhanden sind, die von der Assembly in der Datenbank abhängen. Auf diesem Grund ist es im Allgemeinen besser, Code, von dem die Abhängigkeiten persistenter Daten abhängen (z. B. benutzerdefinierte Typen und Indizes, die benutzerdefinierte Funktionen verwenden), von Code zu trennen, der keine solchen Abhängigkeiten persistenter Daten aufweist. Weitere Informationen finden Sie unter [implementieren](../../relational-databases/clr-integration/assemblies-implementing.md) von Assemblys und [Alter Assembly &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
+-   CLR-benutzerdefinierte Typen und Indizes, die von CLR-benutzerdefinierten Funktionen abhängen, können bewirken, dass sich persistente Daten in der Datenbank befinden, die von der Assembly abhängen. Das Bearbeiten des Codes einer Assembly ist in der Regel komplexer, wenn persistente Daten vorhanden sind, die von der Assembly in der Datenbank abhängen. Auf diesem Grund ist es im Allgemeinen besser, Code, von dem die Abhängigkeiten persistenter Daten abhängen (z. B. benutzerdefinierte Typen und Indizes, die benutzerdefinierte Funktionen verwenden), von Code zu trennen, der keine solchen Abhängigkeiten persistenter Daten aufweist. Weitere Informationen finden Sie unter [Implementieren von Assemblys](../../relational-databases/clr-integration/assemblies-implementing.md) und [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
 -   Wenn verwalteter Code höhere Berechtigungen verlangt, ist es besser, diesen Code in einer anderen Assembly als den Code zu speichern, für den die höheren Berechtigungen nicht erforderlich sind.  
   
@@ -54,11 +55,10 @@ ms.locfileid: "68028034"
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE ermöglicht Assemblys den uneingeschränkten Zugriff auf Ressourcen innerhalb und außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Code, der aus einer UNSAFE-Assembly ausgeführt wird, kann nicht verwalteten Code aufrufen.  
   
- Wenn Sie UNSAFE angeben, kann der Code in der Assembly außerdem Vorgänge ausführen, die von der CLR-Überprüfung als typunsicher betrachtet werden. Diese Vorgänge können potenziell auf unkontrollierte Weise auf Speicherpuffer im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozessraum zugreifen. UNSAFE-Assemblys können außerdem potenziell das Sicherheitssystem von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder der CLR unterlaufen. UNSAFE-Berechtigungen sollten nur hochgradig vertrauenswürdigen Assemblys durch erfahrene Entwickler oder Administratoren erteilt werden. Nur Mitglieder der festen Server Rolle **sysadmin** können unsichere Assemblys erstellen.  
+ Wenn Sie UNSAFE angeben, kann der Code in der Assembly außerdem Vorgänge ausführen, die von der CLR-Überprüfung als typunsicher betrachtet werden. Diese Vorgänge können potenziell auf unkontrollierte Weise auf Speicherpuffer im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozessraum zugreifen. UNSAFE-Assemblys können außerdem potenziell das Sicherheitssystem von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder der CLR unterlaufen. UNSAFE-Berechtigungen sollten nur hochgradig vertrauenswürdigen Assemblys durch erfahrene Entwickler oder Administratoren erteilt werden. Nur Mitglieder der **sysadmin** Fixed Server-Rolle können UNSAFE-Assemblys erstellen.  
   
 ## <a name="restrictions-on-assemblies"></a>Einschränkungen für Assemblys  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] belegt verwalteten Code in Assemblys mit einigen Einschränkungen, damit sichergestellt wird, dass diese auf zuverlässige und skalierbare Weise ausgeführt werden können. Dies bedeutet, dass bestimmte Vorgänge, die die Robustheit des Servers beeinträchtigen könnten, in SAFE- und EXTERNAL_ACCESS-Assemblys nicht zulässig sind.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] belegt verwalteten Code in Assemblys mit einigen Einschränkungen, damit sichergestellt wird, dass diese auf zuverlässige und skalierbare Weise ausgeführt werden können. Dies bedeutet, dass bestimmte Vorgänge, die die Robustheit des Servers beeinträchtigen könnten, in SAFE- und EXTERNAL_ACCESS-Assemblys nicht zulässig sind.  
   
 ### <a name="disallowed-custom-attributes"></a>Unzulässige benutzerdefinierte Attribute  
  Assemblys dürfen nicht mit den folgenden benutzerdefinierten Attributen mit Anmerkungen versehen werden:  
@@ -84,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>Unzulässige .NET Framework-APIs  
- Jede [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API, die mit einem der unzulässigen **Hostschutzattribute** kommentiert wird, kann nicht von sicheren und EXTERNAL_ACCESS Assemblys aufgerufen werden.  
+ Jede [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API, die mit einer der **unzulässigen HostProtectionAttributes** versehen ist, kann nicht von SAFE und EXTERNAL_ACCESS Assemblys aufgerufen werden.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -118,7 +118,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Assemblys &#40;Datenbank-Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Assemblys &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Sicherheit der CLR-Integration](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

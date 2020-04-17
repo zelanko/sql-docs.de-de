@@ -1,6 +1,6 @@
 ---
-title: Installieren & Konfigurieren der DW wideworldimporters-Beispieldatenbank
-description: Befolgen Sie diese Anweisungen, um die Beispieldatenbank "wideworldimportersdw" mit SQL Server Management Studio herunterzuladen, zu installieren und zu konfigurieren.
+title: Installieren & konfigurieren DW WideWorldImporters-Beispieldatenbank
+description: Befolgen Sie diese Anweisungen zum Herunterladen, Installieren und Konfigurieren der WideWorldImportersDW-Beispieldatenbank mit SQL Server Management Studio.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -11,65 +11,65 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: eb5940de6968707bac66cbaa8d3c91ce930868e3
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 2f640415ecdc2ae4a48220aeec2a2c78ed79807c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112304"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488545"
 ---
-# <a name="wideworldimportersdw-installation-and-configuration"></a>Installation und Konfiguration von wideworldimportersdw
+# <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW Installation und Konfiguration
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
-Installations-und Konfigurations Anweisungen für die wideworldimportersdw-Datenbank.
+Installations- und Konfigurationsanweisungen für die WideWorldImportersDW-Datenbank.
 
-- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (oder höher) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Um die vollständige Version des Beispiels zu verwenden, verwenden Sie SQL Server Evaluation/Developer/Enterprise Edition.
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Um die besten Ergebnisse zu erzielen, verwenden Sie die Version vom Juni 2016 oder höher.
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (oder höher) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Verwenden Sie SQL Server Evaluation/Developer/Enterprise Edition, um die Vollversion des Beispiels zu verwenden.
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Für die besten Ergebnisse verwenden Sie die Version Juni 2016 oder höher.
 
 ## <a name="download"></a>Download
 
 Die neueste Version des Beispiels:
 
-[Wide-World-importierungsrelease](https://go.microsoft.com/fwlink/?LinkID=800630)
+[Weit-Welt-Importeur-Release](https://go.microsoft.com/fwlink/?LinkID=800630)
 
-Laden Sie die Beispieldatenbank "wideworldimportersdw Database Backup/BacPac" herunter, die Ihrer Edition von SQL Server oder Azure SQL-Datenbank entspricht.
+Laden Sie das Beispiel WideWorldImportersDW-Datenbanksicherung/-bacpac herunter, das Ihrer Edition von SQL Server oder Azure SQL Database entspricht.
 
-Der Quellcode zum erneuten Erstellen der Beispieldatenbank ist unter folgendem Speicherort verfügbar. Beachten Sie, dass die Daten Population auf ETL aus der OLTP-Datenbank (wideworldimporters) basiert:
+Der Quellcode zum Neuerstellen der Beispieldatenbank ist am folgenden Speicherort verfügbar. Beachten Sie, dass die Datenpopulation auf ETL aus der OLTP-Datenbank (WideWorldImporters) basiert:
 
-[Wide-World-importierungsource](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[Weitwelt-Importeur-Quelle](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ## <a name="install"></a>Installieren
 
 
 ### <a name="sql-server"></a>SQL Server
 
-Zum Wiederherstellen einer Sicherung in einer SQL Server Instanz können Sie Management Studio verwenden.
+Um eine Sicherung auf einer SQL Server-Instanz wiederherzustellen, können Sie Management Studio verwenden.
 
-1. Öffnen Sie SQL Server Management Studio und stellen Sie eine Verbindung mit der Ziel SQL Server Instanz her.
-2. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**.
-3. Wählen Sie **Gerät** aus, und klicken Sie auf die Schaltfläche **...**
-4. Wählen Sie im Dialogfeld **Sicherungs**Medien aus, klicken Sie auf **Hinzufügen**, navigieren Sie im Dateisystem des Servers zu der Datenbanksicherung, und wählen Sie die Sicherung aus. Klicken Sie auf **OK**.
-5. Ändern Sie ggf. den Zielort für die Daten-und Protokolldateien im Bereich " **Dateien** ". Beachten Sie, dass es eine bewährte Vorgehensweise ist, Daten-und Protokolldateien auf verschiedenen Laufwerken zu platzieren.
-6. Klicken Sie auf **OK**. Dadurch wird die Daten Bank Wiederherstellung initiiert. Nachdem der Vorgang abgeschlossen ist, wird die Datenbank "wideworldimporters" auf der SQL Server-Instanz installiert.
+1. Öffnen Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der SQL Server-Zielinstanz her.
+2. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken,** und wählen Sie **Datenbank wiederherstellen**aus.
+3. Wählen Sie **Gerät** und klicken Sie auf die Schaltfläche **...**
+4. Klicken Sie im Dialogfeld **Sicherungsgeräte auswählen**auf **Hinzufügen**, navigieren Sie zur Datenbanksicherung im Dateisystem des Servers, und wählen Sie die Sicherung aus. Klicken Sie auf **OK**.
+5. Ändern Sie bei Bedarf den Zielspeicherort für die Daten- und Protokolldateien im Bereich **Dateien.** Beachten Sie, dass es am besten ist, Daten und Protokolldateien auf verschiedenen Laufwerken zu platzieren.
+6. Klicken Sie auf **OK**. Dadurch wird die Datenbankwiederherstellung initiiert. Nach Abschluss der Datei ist die Datenbank WideWorldImporters auf Ihrer SQL Server-Instance installiert.
 
 ### <a name="azure-sql-database"></a>Azure SQL-Datenbank
 
-Zum Importieren einer BacPac-Datenbank in eine neue SQL-Datenbank können Sie Management Studio verwenden.
+Um ein Bacpac in eine neue SQL-Datenbank zu importieren, können Sie Management Studio verwenden.
 
-1. optionale Wenn Sie noch keine SQL Server in Azure haben, navigieren Sie zum [Azure-Portal](https://portal.azure.com/) , und erstellen Sie eine neue SQL-Datenbank. Beim Erstellen einer Datenbank erstellen Sie einen Server. Notieren Sie sich den Server.
-   - In [diesem Tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) finden Sie Informationen zum Erstellen einer Datenbank in wenigen Minuten.
-2. Öffnen Sie SQL Server Management Studio, und stellen Sie in Azure eine Verbindung mit Ihrem Server her
-3. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Datenebenenanwendung importieren**aus.
-4. Wählen Sie unter **Import Einstellungen** die Option **aus lokalem Datenträger importieren aus** , und wählen Sie die BacPac-Datei der Beispieldatenbank aus dem Dateisystem aus.
-5. Ändern Sie unter **Datenbankeinstellungen** den Datenbanknamen in *wideworldimportersdw* , und wählen Sie die zu verwendende Ziel Edition und das Dienst Ziel aus.
-6. Klicken Sie auf **weiter** und **Beenden** , um die Bereitstellung zu starten. Dies nimmt einige Minuten in Anspruch. Wenn Sie ein Dienst Ziel angeben, das kleiner als S2 ist, kann es länger dauern.
+1. (optional) Wenn Sie noch nicht über einen SQL Server in Azure verfügen, navigieren Sie zum [Azure-Portal,](https://portal.azure.com/) und erstellen Sie eine neue SQL-Datenbank. Beim Erstellen einer Datenbank erstellen Sie einen Server. Notieren Sie sich den Server.
+   - In [diesem Tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) zum Erstellen einer Datenbank in wenigen Minuten
+2. Öffnen Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit Ihrem Server in Azure her.
+3. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken,** und wählen Sie **Datentier-Anwendung importieren**aus.
+4. Wählen Sie in den **Importeinstellungen** **Import von einem lokalen Datenträger** aus und wählen Sie das Bacpac der Beispieldatenbank aus Ihrem Dateisystem aus.
+5. Ändern Sie unter **Datenbankeinstellungen** den Datenbanknamen in *WideWorldImportersDW,* und wählen Sie die zu verwendende Zieledition und das Dienstziel aus.
+6. Klicken Sie auf **Weiter** und **Beenden,** um die Bereitstellung zu starten. Dies nimmt einige Minuten in Anspruch. Wenn Sie ein Dienstziel angeben, das niedriger als S2 ist, kann es länger dauern.
 
 ## <a name="configuration"></a>Konfiguration
 
-[Gilt für SQL Server 2016 (und höher) Developer/Evaluation/Enterprise Edition]
+[Gilt für SQL Server 2016 (und höher) Entwickler/Evaluierung/Enterprise Edition]
 
-Die Beispieldatenbank kann polybase verwenden, um Dateien in Hadoop oder Azure BLOB Storage abzufragen. Diese Funktion wird jedoch nicht standardmäßig mit SQL Server installiert. Sie müssen Sie während SQL Server Setup auswählen. Daher ist ein Schritt nach der Installation erforderlich.
+Die Beispieldatenbank kann PolyBase verwenden, um Dateien in Hadoop oder Azure-Blobspeicher abzufragen. Diese Funktion ist jedoch nicht standardmäßig mit SQL Server installiert – Sie müssen es während der EINRICHTUNG von SQL Server auswählen. Daher ist ein Schritt nach der Installation erforderlich.
 
-1. Stellen Sie in SQL Server Management Studio eine Verbindung mit der Datenbank wideworldimportersdw her, und öffnen Sie ein neues Abfragefenster.
-2. Führen Sie den folgenden T-SQL-Befehl aus, um die Verwendung von polybase in der Datenbank zu aktivieren:
+1. Stellen Sie in SQL Server Management Studio eine Verbindung mit der WideWorldImportersDW-Datenbank her, und öffnen Sie ein neues Abfragefenster.
+2. Führen Sie den folgenden T-SQL-Befehl aus, um die Verwendung von PolyBase in der Datenbank zu aktivieren:
 
-   Führen Sie [Anwendung] aus. [Configuration_ApplyPolyBase]
+   EXECUTE [Anwendung]. [Configuration_ApplyPolyBase]

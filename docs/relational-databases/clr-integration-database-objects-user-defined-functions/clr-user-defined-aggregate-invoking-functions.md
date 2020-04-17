@@ -1,5 +1,6 @@
 ---
-title: Aufrufen von benutzerdefinierten CLR-Aggregatfunktionen | Microsoft-Dokumentation
+title: Aufrufen von benutzerdefinierten CLR-Aggregatfunktionen | Microsoft Docs
+description: Verwenden Sie in der SQL Server CLR-Integration Transact-SQL SELECT, um benutzerdefinierte CLR-Aggregate aufzurufen, vorbehaltlich der Regeln, die für Systemaggregatfunktionen gelten.
 ms.custom: ''
 ms.date: 01/15/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 286967567a48b35252f097ce6b88193c4e3bcb95
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028369"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488409"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>Benutzerdefinierte CLR-Aggregate: Aufrufen von Funktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,16 +31,16 @@ ms.locfileid: "68028369"
   
  Es gelten folgende zusätzliche Regeln:  
   
--   Der aktuelle Benutzer muss über die **Execute** -Berechtigung für das benutzerdefinierte Aggregat verfügen.  
+-   Der aktuelle Benutzer muss über die **EXECUTE-Berechtigung** für das benutzerdefinierte Aggregat verfügen.  
   
--   Benutzerdefinierte Aggregate müssen mit einem zweiteiligen Namen in Form von *schema_name. udagg_name*aufgerufen werden.  
+-   Benutzerdefinierte Aggregate müssen mit einem zweiteiligen Namen in Form von *schema_name.udagg_name*aufgerufen werden.  
   
--   Der Argumenttyp des benutzerdefinierten Aggregats muss mit dem *INPUT_TYPE* des Aggregats, wie in der **Create Aggregate** -Anweisung definiert, identisch oder implizit konvertiert werden kann.  
+-   Der Argumenttyp des benutzerdefinierten Aggregats muss mit dem *input_type* des Aggregats übereinstimmen oder implizit konvertierbar sein, wie in der **CREATE AGGREGATE-Anweisung** definiert.  
   
--   Der Rückgabetyp des benutzerdefinierten Aggregats muss mit dem *return_type* in der **Create Aggregate** -Anweisung identisch sein.  
+-   Der Rückgabetyp des benutzerdefinierten Aggregats muss mit dem *return_type* in der **CREATE AGGREGATE-Anweisung** übereinstimmen.  
   
 ## <a name="example-1"></a>Beispiel 1  
- Im folgenden finden Sie ein Beispiel für eine benutzerdefinierte Aggregatfunktion, die eine Reihe von Zeichen folgen Werten verkettet, die aus einer Spalte in einer Tabelle entnommen werden:  
+ Im Folgenden finden Sie ein Beispiel für eine benutzerdefinierte Aggregatfunktion, die einen Satz von Zeichenfolgenwerten verkettet, die aus einer Spalte in einer Tabelle entnommen wurden:  
   
  [C#]  
   
@@ -196,7 +197,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Nachdem Sie den Code in **MyAgg. dll**kompiliert haben, können Sie das Aggregat in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt registrieren:  
+ Nachdem Sie den Code in **MyAgg.dll**kompiliert haben, können Sie das Aggregat wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] folgt registrieren:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -208,7 +209,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  Visual C++-Datenbankobjekte wie Skalarwertfunktionen, die mit der Compileroption /clr:pure kompiliert wurden, werden für die Ausführung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht unterstützt.  
   
- Wie bei den meisten Aggregaten befindet sich der Großteil der Logik in der **Akkumulations** Methode. Hier wird die Zeichenfolge, die als Parameter an die **Akkumulations** Methode übergeben wird, an das **StringBuilder** -Objekt angehängt, das in der **Init** -Methode initialisiert wurde. Wenn Sie davon ausgehen, dass dies nicht der erste Zeitpunkt ist, an dem die **Akkumulations** Methode aufgerufen wurde, wird auch ein Komma an den **StringBuilder** angehängt, bevor die über gegebene Zeichenfolge angefügt wird. Am Ende der Berechnungs Aufgaben wird die Beendigungs **Methode aufgerufen, die die** **StringBuilder** -Methode als Zeichenfolge zurückgibt.  
+ Wie bei den meisten Aggregaten befindet sich der Großteil der Logik in der **Accumulate-Methode.** Hier wird die Zeichenfolge, die als Parameter an die **Accumulate-Methode** übergeben wird, an das **StringBuilder-Objekt** angehängt, das in der **Init-Methode** initialisiert wurde. Unter der Annahme, dass **dieaccumulate-Methode** nicht zum ersten Mal aufgerufen wurde, wird vor dem Anfügen der übergebenen Zeichenfolge auch ein Komma an den **StringBuilder** angehängt. Am Ende der Rechenaufgaben wird die **Terminate-Methode** aufgerufen, die den **StringBuilder** als Zeichenfolge zurückgibt.  
   
  Angenommen, eine Tabelle mit folgendem Schema liegt vor:  
   
@@ -241,7 +242,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>Beispiel 2  
- Das folgende Beispiel zeigt ein Aggregat, das zwei Parameter für die **Akkumulations** Methode aufweist.  
+ Das folgende Beispiel zeigt ein Aggregat, das zwei Parameter für die **Accumulate-Methode** enthält.  
   
  [C#]  
   

@@ -1,5 +1,6 @@
 ---
-title: Assemblyeigenschaften (Seite Allgemein) | Microsoft-Dokumentation
+title: Baugruppeneigenschaften (Allgemeine Seite) | Microsoft Docs
+description: Sie können Eigenschaften für eine Assembly anzeigen oder ändern, die auf SQL Server gehostet wird. Dazu gehören Assemblyname und -besitzer, Berechtigungssatz und andere Eigenschaften.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cab96fb470e4cc19da0612163f364d6339841985
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 64e1847db5477ce556824d1b424649f617a0fa9f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68027973"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488019"
 ---
 # <a name="assemblies---properties"></a>Assemblys: Eigenschaften
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe dieser Seite können Sie die für die Assembly festgelegten Eigenschaften anzeigen und ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Assemblyname**  
  Zeigt den Assemblynamen an, der immer mit dem Namen der CLR-Assembly übereinstimmt.  
   

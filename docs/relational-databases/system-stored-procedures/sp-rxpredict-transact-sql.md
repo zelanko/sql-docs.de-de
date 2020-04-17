@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c12349e48f474b53957ffac55415ccc0689eeca
-ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
+ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81012437"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488536"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ Eine gültige SQL-Abfrage
 Es wird eine Score-Spalte sowie alle Pass-Through-Spalten aus der Eingabedatenquelle zurückgegeben.
 Zusätzliche Score-Spalten, z. B. Konfidenzintervall, können zurückgegeben werden, wenn der Algorithmus die Generierung solcher Werte unterstützt.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Um die Verwendung der gespeicherten Prozedur zu aktivieren, muss SQLCLR auf der Instance aktiviert sein.
 
@@ -64,7 +64,7 @@ Der Benutzer `EXECUTE` benötigt die Berechtigung für die Datenbank.
 
 ### <a name="supported-algorithms"></a>Unterstützte Algorithmen
 
-Verwenden Sie zum Erstellen und Trainieren eines Modells einen der unterstützten Algorithmen für R oder Python, der von [SQL Server Machine Learning Services (R oder Python)](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning), SQL Server [2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), SQL Server Machine Learning Server [(Standalone) (R oder Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)oder [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)bereitgestellt wird.
+Verwenden Sie zum Erstellen und Trainieren eines Modells einen der unterstützten Algorithmen für R oder Python, der von [SQL Server Machine Learning Services (R oder Python)](https://docs.microsoft.com/sql/machine-learning/sql-server-machine-learning-services), SQL Server [2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), SQL Server Machine Learning Server [(Standalone) (R oder Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)oder [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)bereitgestellt wird.
 
 #### <a name="r-revoscaler-models"></a>R: RevoScaleR-Modelle
 

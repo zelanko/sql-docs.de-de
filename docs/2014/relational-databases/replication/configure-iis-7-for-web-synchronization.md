@@ -13,12 +13,12 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721540"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486989"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Konfigurieren von IIS 7 für die Websynchronisierung
   Die Vorgehensweisen in diesem Thema führen Sie durch den Prozess zum manuellen Konfigurieren von [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Internetinformationsdiensten (IIS) Version 7 oder höher zur Verwendung mit der Websynchronisierung für die Mergereplikation. 
@@ -28,11 +28,11 @@ ms.locfileid: "62721540"
  Eine Übersicht über den gesamten Konfigurationsprozess finden Sie unter [Konfigurieren der Websynchronisierung](configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Stellen Sie sicher, dass in Ihrer Anwendung nur [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] oder höhere Versionen verwendet werden und dass keine früheren Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auf dem IIS-Server installiert sind. Frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können Fehler verursachen wie: "Das Format einer Meldung war während der Websynchronisierung ungültig. Stellen Sie sicher, dass die Replikationskomponenten auf dem Webserver ordnungsgemäß konfiguriert sind."  
+>  Stellen Sie sicher, dass in Ihrer Anwendung nur [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] oder höhere Versionen verwendet werden und dass keine früheren Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auf dem IIS-Server installiert sind. Frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können zu Fehlern führen, zum Beispiel: "Das Format einer Nachricht war während der Websynchronisierung ungültig. Stellen Sie sicher, dass die Replikationskomponenten auf dem Webserver ordnungsgemäß konfiguriert sind."  
   
  Zur Verwendung der Websynchronisierung müssen Sie IIS 7 mithilfe der folgenden Schritte konfigurieren. Jeder Schritt wird in diesem Thema im Detail beschrieben.  
   
-1.  Installieren und konfigurieren Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den replikationslistener auf dem Computer, auf dem IIS ausgeführt wird.  
+1.  Installieren und konfigurieren Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikationslistener auf dem Computer mit IIS.  
   
 2.  Konfigurieren Sie SSL (Secure Sockets Layer). SSL wird für die Kommunikation zwischen IIS und allen Abonnenten benötigt.  
   
@@ -42,19 +42,19 @@ ms.locfileid: "62721540"
   
 ## <a name="installing-the-sql-server-replication-listener"></a>Installieren der SQL Server-Replikationsüberwachung  
 
-Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent zum Konfigurieren der Websynchronisierung der IIS-Versionen 5 und 6 ist für IIS-Version 7.0 und höher nicht verfügbar. **Ab SQL Server 2012 sollten Sie SQL Server mit Replikation installieren, um die Websynchronisierungs Komponente auf dem IIS-Server zu verwenden. Dies kann die kostenlose SQL Server Express Edition sein.**
+Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent zum Konfigurieren der Websynchronisierung der IIS-Versionen 5 und 6 ist für IIS-Version 7.0 und höher nicht verfügbar. **Beginnend mit SQL Server 2012 empfiehlt sich für die Nutzung der Web-Sync-Komponente auf dem IIS-Server die Installation des SQL Servers mit Replikation. Dabei kann es sich um die kostenlose SQL Server Express-Edition handeln.**
   
 #### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>So installieren und konfigurieren Sie die SQL Server-Replikationsüberwachung  
   
 1. Installieren Sie die SQL Server-Replikation auf dem IIS-Computer.
 
-2.  Erstellen Sie ein neues Dateiverzeichnis für die Datei replisapi.dll auf dem Computer mit IIS. Dieses Verzeichnis kann an einem beliebigen Ort erstellt werden, es wird jedoch die Erstellung im Verzeichnis \<*Laufwerk*>:\Inetpub empfohlen. Erstellen Sie beispielsweise das Verzeichnis \<*Laufwerk*>:\Inetpub\SQLReplication\\.  
+2.  Erstellen Sie ein neues Dateiverzeichnis für die Datei replisapi.dll auf dem Computer mit IIS. Dieses Verzeichnis kann an einem beliebigen Ort erstellt werden, es wird jedoch das Erstellen im Verzeichnis \<*Laufwerk*>:\Inetpub empfohlen. Erstellen Sie beispielsweise das Verzeichnis \<*Laufwerk*>:\Inetpub\SQLReplication\\.  
   
 3.  Kopieren Sie die Datei replisapi.dll aus dem Verzeichnis [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]\com\ in das Dateiverzeichnis, das Sie in Schritt&#160;1 erstellt haben.  
   
 4.  Registrieren Sie replisapi.dll:  
   
-    1.  Klicken Sie auf **Start** und dann auf **Ausführen**. Geben Sie **** `cmd`im Feld Öffnen ein, und klicken Sie dann auf **OK**.  
+    1.  Klicken Sie im **Startmenü**auf **Ausführen**. Geben **Open** Sie `cmd`im Feld Öffnen ein , und klicken Sie dann auf **OK**.  
   
     2.  Führen Sie in dem in Schritt 1 erstellten Verzeichnis den folgenden Befehl aus:  
   
@@ -66,9 +66,9 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     1.  Klicken Sie im **Internetinformationsdienste-Manager**im Bereich **Verbindungen** mit der rechten Maustaste auf **Standardwebsite**, und wählen Sie dann **Virtuelles Verzeichnis hinzufügen**aus.  
   
-    2.  Geben **** Sie `SQLReplication`als Alias ein.  
+    2.  Geben **Alias**Sie `SQLReplication`für Alias ein.  
   
-    3.  Geben Sie **** Laufwerk>:\Inetpub\SQLReplication**\< für \\Physischer Pfad** ein, und klicken Sie dann auf **OK**.  
+    3.  Geben Sie **\<Laufwerk>:\Inetpub\SQLReplication\\** für **Physischer Pfad** ein, und klicken Sie dann auf **OK**.  
   
 7.  Konfigurieren Sie IIS für die Ausführung von replisapi.dll.  
   
@@ -78,11 +78,11 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     3.  Klicken Sie im Bereich **Aktionen** auf **Modulzuordnung hinzufügen**.  
   
-    4.  Geben **** Sie `replisapi.dll`unter Anforderungs Pfad den Namen ein.  
+    4.  Geben **Request** Sie für `replisapi.dll`Request Path ein.  
   
     5.  Wählen Sie in der Dropdownliste **Modul** die Option **IsapiModule**aus.  
   
-    6.  Geben Sie **** Laufwerk>:\Inetpub\SQLReplication\replisapi.dll** für \<Ausführbare Datei** ein.  
+    6.  Geben Sie **\<Laufwerk>:\Inetpub\SQLReplication\replisapi.dll** für **Ausführbare Datei** ein.  
   
     7.  Geben Sie unter **Name**`Replisapi` ein.  
   
@@ -155,9 +155,9 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 ###### <a name="to-test-the-certificate"></a>So testen Sie das Zertifikat  
   
-1.  Klicken Sie im **Internetinformationsdienste (IIS)-Manager**auf **Standard Website.**  
+1.  Klicken Sie unter **Internet Information Services (IIS)-Manager**auf **Standardwebsite.**  
   
-2.  Klicken Sie im Bereich **Aktionen** auf **:443(https) \*durchsuchen**.  
+2.  Klicken Sie im Bereich **Aktionen** auf \*:443(https) **durchsuchen**.  
   
 3.  Internet Explorer wird geöffnet und zeigt folgende Meldung an: "Es besteht ein Problem mit dem Sicherheitszertifikat der Website". Diese Warnung besagt, dass das zugeordnete Zertifikat nicht von einer bekannten Zertifizierungsstelle ausgestellt wurde und möglicherweise nicht vertrauenswürdig ist. Dies ist eine erwartete Warnung, klicken Sie deshalb auf **Laden dieser Website fortsetzen (nicht empfohlen)**.  
   
@@ -168,7 +168,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
  Führen Sie die folgenden Schritte aus, um die minimalen Berechtigungen für das Konto, unter dem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung ausgeführt wird, zu konfigurieren. Die Schritte in der folgenden Vorgehensweise gelten für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 2008 mit IIS 7.0.  
   
- Führen Sie die unten genannten Schritte aus, und stellen Sie zusätzlich sicher, dass die Veröffentlichungszugriffsliste die erforderlichen Anmeldenamen enthält. Weitere Informationen zu PAL finden Sie unter [Sichern des Verlegers](security/secure-the-publisher.md).  
+ Führen Sie die unten genannten Schritte aus, und stellen Sie zusätzlich sicher, dass die Veröffentlichungszugriffsliste die erforderlichen Anmeldenamen enthält. Weitere Informationen zur PAL finden Sie unter [Sichern des Verlegers](security/secure-the-publisher.md).  
   
  **Wichtig** Das in diesem Abschnitt erstellte Konto ist das Konto, das während der Synchronisierung eine Verbindung mit dem Verleger und dem Verteiler herstellt. Dieses Konto muss als SQL-Anmeldekonto auf dem Verteilungs- und Veröffentlichungsserver hinzugefügt werden.  
   
@@ -188,7 +188,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 1.  Erstellen Sie ein lokales Konto auf dem Computer mit IIS:  
   
-    1.  Öffnen Sie den **Server-Manager**. Klicken Sie im Startmenü mit der rechten Maustaste auf **Arbeitsplatz**, und klicken Sie dann auf **Verwalten**.  
+    1.  Öffnen Sie **Den Server-Manager**. Klicken Sie im Startmenü mit der rechten Maustaste auf **Arbeitsplatz**, und klicken Sie dann auf **Verwalten**.  
   
     2.  Erweitern Sie in **Server-Manager**den Knoten **Konfiguration**, und erweitern Sie dann **Lokale Benutzer und Gruppen**.  
   
@@ -272,7 +272,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 1.  Stellen Sie sicher, dass die Netzwerkeinstellungen auf dem Abonnenten ordnungsgemäß eingerichtet wurden:  
   
-    1.  Klicken [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sie in Internet Explorer im **Menü Extras** auf **Internet Optionen**.  
+    1.  Klicken [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sie in Internet Explorer im Menü **Extras** auf **Internetoptionen**.  
   
     2.  Klicken Sie auf der Registerkarte **Verbindungen** auf **Einstellungen**.  
   
@@ -280,10 +280,10 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     4.  Wird ein Proxyserver verwendet, klicken Sie auf **Proxyserver für LAN verwenden** und **Proxyserver für lokale Adressen umgehen**und dann auf **OK**.  
   
-2.  Stellen Sie auf dem Abonnenten in Internet Explorer eine Verbindung mit dem Server im Diagnosemodus her, indem Sie an die Adresse für replisapi.dll `?diag` anhängen. Beispiel: **https://server.domain.com/directory/replisapi.dll?diag**.  
+2.  Stellen Sie auf dem Abonnenten in Internet Explorer eine Verbindung mit dem Server im Diagnosemodus her, indem Sie an die Adresse für replisapi.dll `?diag` anhängen. Beispiel: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
     > [!NOTE]  
-    >  Im oben aufgeführten Beispiel sollte **server.domain.com** durch den im Abschnitt **Serverzertifikate** in IIS-Manager aufgeführten genauen **Ausgestellt an** -Namen ersetzt werden.  
+    >   Im oben aufgeführten Beispiel sollte **server.domain.com** durch den im Abschnitt **Serverzertifikate** in IIS-Manager aufgeführten genauen **Ausgestellt an** -Namen ersetzt werden.  
   
 3.  Wenn das für IIS angegebene Zertifikat nicht vom Windows-Betriebssystem erkannt wird, wird das Dialogfeld **Sicherheitshinweis** angezeigt. Dieser Hinweis wird möglicherweise angezeigt, weil das Zertifikat ein Testzertifikat ist oder es von einer Zertifizierungsstelle ausgestellt wurde, die von Windows nicht erkannt wird.  
   
@@ -319,6 +319,6 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Websynchronisierung für Mergereplikation](web-synchronization-for-merge-replication.md)   
- [Websynchronisierung konfigurieren](configure-web-synchronization.md)  
+ [Konfigurieren der Websynchronisierung](configure-web-synchronization.md)  
   
   

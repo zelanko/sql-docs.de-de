@@ -1,5 +1,6 @@
 ---
-title: Sicherheit bei der CLR-Integration | Microsoft-Dokumentation
+title: CLR-Integrationssicherheit | Microsoft Docs
+description: Die SQL Server-Integration mit der .NET Framework CLR-Sicherheit verwaltet den Zugriff zwischen Objekten. Sicherheitsüberprüfungen, die an Objekten durchgeführt werden, hängen von den beteiligten Aufrufen ab.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cfcc3f4d65901da34152a6fce21b436750c15fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 561ba77b01af31c30341c5af7fa22b68ede413f6
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118510"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487117"
 ---
 # <a name="clr-integration-security"></a>Sicherheit der CLR-Integration
 
@@ -36,8 +37,7 @@ ms.locfileid: "68118510"
   
 -   Benutzerdefinierter Code sollte nicht in der Lage sein, nur deshalb unbefugten Zugriff auf Systemressourcen zu erlangen, weil er im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozess ausgeführt wird.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kombiniert jetzt das benutzerbasierte Sicherheitsmodell von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem auf dem Codezugriff basierenden Sicherheitsmodell der CLR. Einige Vorteile dieses kombinierten Sicherheitsansatzes werden in diesem Abschnitt erläutert.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kombiniert jetzt das benutzerbasierte Sicherheitsmodell von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem auf dem Codezugriff basierenden Sicherheitsmodell der CLR. Einige Vorteile dieses kombinierten Sicherheitsansatzes werden in diesem Abschnitt erläutert.  
   
  In der folgenden Tabelle sind die Themen dieses Abschnitts aufgeführt.  
   

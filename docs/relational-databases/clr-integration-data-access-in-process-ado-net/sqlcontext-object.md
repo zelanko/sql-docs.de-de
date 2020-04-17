@@ -1,5 +1,6 @@
 ---
-title: SqlContext-Objekt | Microsoft-Dokumentation
+title: SqlContext-Objekt | Microsoft Docs
+description: Wenn Sie verwalteten Code in SQL Server in einer Benutzerverbindung aufrufen, wird der Zugriff auf den Kontext des Aufrufers in einem SqlContext-Objekt abstrahiert.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 746ce8cec228b6fe9a9d36c4e0287ad7c2f3c517
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cd6d3091b155ae829e368bdd182b3da8286c7194
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67951677"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487536"
 ---
 # <a name="sqlcontext-object"></a>SqlContext-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,15 +28,15 @@ ms.locfileid: "67951677"
   
  Der Kontext des aufrufenden Codes wird in einem **SqlContext** -Objekt abstrahiert. Weitere Informationen zu **SqlTriggerContext** -Methoden und -Eigenschaften finden Sie in der Referenzdokumentation zur **Microsoft.SqlServer.Server.SqlTriggerContext** -Klasse im [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -SDK.  
   
- **SqlContext** ermöglicht den Zugriff auf die folgenden Komponenten:  
+ **SqlContext** stellt den Zugriff auf folgende Komponenten bereit:  
   
--   **SqlPipe**: das **SqlPipe** -Objekt stellt die "Pipe" dar, über die die Ergebnisse an den Client weitergeleitet werden. Weitere Informationen zum **SqlPipe** -Objekt finden Sie unter [SqlPipe-Objekt](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
+-   **SqlPipe**: Das **SqlPipe** -Objekt stellt die "Pipe" dar, d. h. den Kanal, durch den die Ergebnisse den Client erreichen. Weitere Informationen zum **SqlPipe-Objekt** finden Sie unter [SqlPipe-Objekt](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
   
--   **SqlTriggerContext**: das **SqlTriggerContext** -Objekt kann nur innerhalb eines CLR-Auslösers abgerufen werden. Es stellt Informationen über den Vorgang bereit, durch den der Trigger ausgelöst wurde, sowie eine Übersicht der aktualisierten Spalten. Weitere Informationen zum **SqlTriggerContext** -Objekt finden Sie unter [SqlTriggerContext-Objekt](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
+-   **SqlTriggerContext**: Das **SqlTriggerContext** -Objekt kann nur innerhalb eines CLR-Triggers abgerufen werden. Es stellt Informationen über den Vorgang bereit, durch den der Trigger ausgelöst wurde, sowie eine Übersicht der aktualisierten Spalten. Weitere Informationen zum **SqlTriggerContext-Objekt** finden Sie unter [SqlTriggerContext-Objekt](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
   
--   **IsAvailable**: die **IsAvailable** -Eigenschaft wird verwendet, um die Kontext Verfügbarkeit zu bestimmen.  
+-   **IsAvailable**: Die **IsAvailable** -Eigenschaft wird verwendet, um die Verfügbarkeit des Kontexts zu ermitteln.  
   
--   **Windows Identity: die**Windows Identity- **Eigenschaft wird zum Abrufen der Windows** -Identität des Aufrufers verwendet.  
+-   **WindowsIdentity**: Die **WindowsIdentity** -Eigenschaft wird verwendet, um die Windows-Identität des aufrufenden Programms abzurufen.  
   
 ## <a name="determining-context-availability"></a>Bestimmen der Kontextverfügbarkeit  
  Fragen Sie die **SqlContext** -Klasse ab, um zu ermitteln, ob der gerade ausgeführte Code prozessintern ausgeführt wird. Überprüfen Sie dazu die **IsAvailable** -Eigenschaft des **SqlContext** -Objekts. Die **IsAvailable** -Eigenschaft ist schreibgeschützt und gibt **True** zurück, wenn der aufrufende Code innerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird und auf andere **SqlContext** -Elemente zugegriffen werden kann. Wenn die **IsAvailable** -Eigenschaft **False**zurückgibt, lösen alle anderen **SqlContext** -Elemente eine **InvalidOperationException**-Ausnahme aus, falls sie verwendet werden. Wenn **IsAvailable****False**zurückgibt, schlagen alle Versuche, ein Verbindungsobjekt zu öffnen, bei denen "context connection=true" festgelegt ist, fehl.  

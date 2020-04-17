@@ -1,5 +1,6 @@
 ---
-title: Neuerungen bei der CLR-Integration in&#39;| Microsoft-Dokumentation
+title: Was ist neu in clR Integration | Microsoft Docs
+description: Microsoft SQL Server, der CLR hostet, wird als CLR-Integration bezeichnet. In diesem Artikel werden neue Funktionen in der CLR-Integration in SQL Server 2012 beschrieben.
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,25 +10,25 @@ ms.topic: conceptual
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d37d476808f80cf132037542d17cb3de61eeccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d27bf0d925d3a98dda488fb85aff7446434cc8ad
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68134875"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488089"
 ---
-# <a name="clr-integration---what39s-new"></a>CLR-Integration-What&#39;s new
+# <a name="clr-integration---what39s-new"></a>CLR-Integration - Was&#39;ist neu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Die folgenden Funktionen sind neue CLR-Integrationsfunktionen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]:  
   
--   In Version 4 der CLR fangen CLR-Datenbankobjekte nicht länger Ausnahmen aufgrund eines beschädigten Status ab. Diese Ausnahmen werden jetzt in der CLR-Integrationshostingebene abgefangen. Diese Ausnahmen können weiterhin von den CLR-Datenbankkomponenten abgefangen werden, indem ein Code-Attribut ([\<legacykorruptedstateexceptionspolicy>-Element](https://go.microsoft.com/fwlink/?LinkId=204954)) festgelegt wird. Diese Vorgehensweise wird jedoch nicht empfohlen, da die Ergebnisse nicht zuverlässig sind, wenn eine Ausnahme aufgrund eines beschädigten Status auftritt.  
+-   In Version 4 der CLR fangen CLR-Datenbankobjekte nicht länger Ausnahmen aufgrund eines beschädigten Status ab. Diese Ausnahmen werden jetzt in der CLR-Integrationshostingebene abgefangen. Diese Ausnahmen können weiterhin von den CLR-Datenbankkomponenten abgefangen werden, indem ein Codeattribut ([\<legacyCorruptedStateExceptionsPolicy> Element](https://go.microsoft.com/fwlink/?LinkId=204954)) gesetzt wird. Diese Vorgehensweise wird jedoch nicht empfohlen, da die Ergebnisse nicht zuverlässig sind, wenn eine Ausnahme aufgrund eines beschädigten Status auftritt.  
   
 -   Wegen der strengen Sicherheitsanforderungen von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] verwenden CLR-Datenbankkomponenten weiterhin das Codezugriffssicherheitsmodell, das in CLR, Version 2.0, definiert wurde.  
   
--   In CLR, Version 4, generiert ein Format Fehler in einem **System. TimeSpan** -Wert **System. FormatExceptions**. Vor Version 4 der CLR wurde ein Format Fehler in einem **System. TimeSpan** -Wert ignoriert. Datenbankanwendungen, die auf dem Verhalten vor Version 4 der CLR basieren, sollten mit einem Datenbank-Kompatibilitäts Grad (**ALTER DATABASE-Kompatibilitäts Grad**) von 100 oder niedriger ausgeführt werden. Weitere Informationen finden Sie unter [<TimeSpan_LegacyFormatMode>-Element](https://go.microsoft.com/fwlink/?LinkId=205109).  
+-   In CLR Version 4 generiert ein Formatfehler in einem **System.TimeSpan-Wert** einen **System.FormatExceptions**. Vor Version 4 der CLR wurde ein Formatfehler in einem **System.TimeSpan-Wert** ignoriert. Datenbankanwendungen, die sich auf das Verhalten vor Version 4 der CLR verlassen, sollten mit einer Datenbankkompatibilitätsstufe (**ALTER DATABASE Compatibility Level**) von 100 oder niedriger ausgeführt werden. Weitere Informationen finden Sie unter [<TimeSpan_LegacyFormatMode> Element](https://go.microsoft.com/fwlink/?LinkId=205109).  
   
--   Version 4 der CLR unterstützt Unicode 5.1. Sortiervorgänge, die Akzentzeichen und Symbole einschließen, werden verbessert. Wenn die Anwendung das Legacysortierverhalten benötigt, können Kompatibilitätsprobleme auftreten. Um die Legacy Sortierung zu aktivieren, muss der Datenbank-Kompatibilitäts Grad (**ALTER DATABASE-Kompatibilitäts Grad**) auf 100 oder niedriger festgelegt werden. Damit dies unterstützt wird, installiert [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sort00001000.dll im .NET Framework 4-Verzeichnis (C:\Windows\Microsoft.NET\Framework\v4.0.30319). Weitere Informationen finden [ \<Sie unter compatsortnlsversion>-Element](https://go.microsoft.com/fwlink/?LinkId=205110).  
+-   Version 4 der CLR unterstützt Unicode 5.1. Sortiervorgänge, die Akzentzeichen und Symbole einschließen, werden verbessert. Wenn die Anwendung das Legacysortierverhalten benötigt, können Kompatibilitätsprobleme auftreten. Um die Legacysortierung zu aktivieren, muss die Datenbankkompatibilitätsstufe (**ALTER DATABASE Compatibility Level**) auf 100 oder niedriger festgelegt werden. Damit dies unterstützt wird, installiert [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sort00001000.dll im .NET Framework 4-Verzeichnis (C:\Windows\Microsoft.NET\Framework\v4.0.30319). Weitere Informationen finden Sie unter [ \<CompatSortNLSVersion> Element](https://go.microsoft.com/fwlink/?LinkId=205110).  
   
--   Die folgenden Spalten wurden zu [sys. dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)hinzugefügt: **total_processor_time_ms**, **total_allocated_memory_kb**und **survived_memory_kb**.  
+-   Die folgenden Spalten wurden [zu sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)hinzugefügt: **total_processor_time_ms**, **total_allocated_memory_kb**und **survived_memory_kb**.  
   
   

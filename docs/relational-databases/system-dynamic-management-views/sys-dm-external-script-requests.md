@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 67e24b9c5c4ccd5f6ab2159ed5924474ff77bc84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664281"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488199"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,14 +32,14 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
   
 > [!NOTE] 
 >  
-> Diese dynamische Verwaltungsansicht (DMV) ist nur verfügbar, wenn Sie die Funktion installiert und aktiviert haben, die die Ausführung externer Skripts unterstützt. Weitere Informationen finden Sie unter [R-Dienste in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) und [Machine Learning Services (R, Python) in SQL Server 2017 und höher](../../machine-learning/what-is-sql-server-machine-learning.md).  
+> Diese dynamische Verwaltungsansicht (DMV) ist nur verfügbar, wenn Sie die Funktion installiert und aktiviert haben, die die Ausführung externer Skripts unterstützt. Weitere Informationen finden Sie unter [R-Dienste in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) und [Machine Learning Services (R, Python) in SQL Server 2017 und höher](../../machine-learning/sql-server-machine-learning-services.md).  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**unique identifier**|Die ID des Prozesses, der die externe Skriptanforderung gesendet hat. Dies entspricht der Prozess-ID, die von[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
-|language|**Nvarchar**|Schlüsselwort, das einer unterstützten Skriptsprache entspricht. |  
+|language|**nvarchar**|Schlüsselwort, das einer unterstützten Skriptsprache entspricht. |  
 |degree_of_parallelism|**int**|Zahl, die die Anzahl von parallelen Prozessen angibt, die erstellt wurden. Dieser Wert kann sich von der Anzahl von parallelen Prozessen unterscheiden, die angefordert wurden.|  
-|external_user_name|**Nvarchar**|Das Windows-Workerkonto, unter dem das Skript ausgeführt wurde.|  
+|external_user_name|**nvarchar**|Das Windows-Workerkonto, unter dem das Skript ausgeführt wurde.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
@@ -48,7 +48,7 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
 >   
 >  Benutzer, die externe Skripts ausführen, müssen die zusätzliche Berechtigung EXECUTE ANY EXTERNAL SCRIPT haben, aber diese dynamische Verwaltungssicht kann von Administratoren ohne diese Berechtigung verwendet werden. 
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 
 Diese Sicht kann über die Skriptsprachen-ID gefiltert werden.
 

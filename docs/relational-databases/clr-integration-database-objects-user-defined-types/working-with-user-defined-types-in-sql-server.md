@@ -1,5 +1,6 @@
 ---
-title: Arbeiten mit benutzerdefinierten Typen in SQL Server | Microsoft-Dokumentation
+title: Arbeiten mit benutzerdefinierten Typen in SQL Server | Microsoft Docs
+description: Sie können über die Transact-SQL-Sprache mithilfe der regulären Abfragesyntax auf die UDT-Funktionalität in SQL Server zugreifen. Definieren Sie UDT-Tabellen und -Spalten, und bearbeiten Sie UDT-Daten.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7d03b0143c2823af1ffde3254655b37b066e675
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0dd3ba726d4b23b5dc3b8aa58188b0c259a7c3f9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028234"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486904"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Arbeiten mit benutzerdefinierten Typen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Mithilfe der regulären Abfrage Syntax können Sie von der Sprache aus auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionalität des benutzerdefinierten Typs (User-Defined Type, UDT) zugreifen. UDTs können für die Definition von Datenbankobjekten, als Variablen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, in Funktionen und gespeicherten Prozeduren und als Argumente in Funktionen und gespeicherten Prozeduren verwendet werden.  
+  Sie können über die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Sprache auf die Funktionalität des benutzerdefinierten Typs (UDT) zugreifen, indem Sie die reguläre Abfragesyntax verwenden. UDTs können für die Definition von Datenbankobjekten, als Variablen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, in Funktionen und gespeicherten Prozeduren und als Argumente in Funktionen und gespeicherten Prozeduren verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Definieren von UDT-Tabellen und -Spalten](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md)  

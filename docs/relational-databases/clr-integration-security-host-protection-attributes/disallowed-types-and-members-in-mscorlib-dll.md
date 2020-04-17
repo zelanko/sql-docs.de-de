@@ -1,5 +1,6 @@
 ---
-title: Unzulässige Typen und Member in "mscorlib. dll" | Microsoft-Dokumentation
+title: Unzulässige Typen und Member in mscorlib.dll | Microsoft Docs
+description: Die SQL Server CLR-Programmierung lässt einen Typ oder Member mit einigen Werten für die HostProtectionResource-Enumerumere nicht zu. In diesem Artikel werden nicht zulässige Werte von mscorlib.dll aufgeführt.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51a9f87ef3b9ceb4a8bded8f2c7f013f4f00a821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3c00877ce41cd15d27814bc67bf78bd32f6719ff
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028152"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486876"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>Unzulässige Typen und Elemente in "mscorlib.dll"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die CLR-Programmierung (Common Language Integration) lässt die Verwendung eines Typs oder Members nicht zu, der über ein **Host Schutz Attribut** verfügt, das ein **System angibt. Security. Berechtigungs-und hostschutzressourcenenumeration** mit einem Wert von **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronisierung**oder **UI**. In der folgenden Tabelle sind die Elemente und Typen der mscorlib.dll-Assembly aufgeführt, deren Hostschutzattribut-Werte nicht zulässig sind.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Die Common Language Integration (CLR)-Programmierung verbietet die Verwendung eines Typs oder Members mit einem **HostProtectionAttribute,** das eine **System.Security.Permissions.HostProtectionResource-Enumeration** mit dem Wert **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**oder **UI**angibt. In der folgenden Tabelle sind die Elemente und Typen der mscorlib.dll-Assembly aufgeführt, deren Hostschutzattribut-Werte nicht zulässig sind.  
   
 > [!NOTE]  
->  Diese Liste wurde von den unterstützten Assemblys generiert. Weitere Informationen finden Sie [unter Supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Diese Liste wurde von den unterstützten Assemblys generiert. Weitere Informationen finden Sie unter [Unterstützte .NET Framework-Bibliotheken](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
 |Typ oder Element|Hostschutzattribut-Wert(e)|  
 |--------------------|--------------------|  
@@ -35,22 +36,22 @@ ms.locfileid: "68028152"
 |System.Collections.Queue.Synchronized()|Synchronization|  
 |System.Collections.SortedList.Synchronized()|Synchronization|  
 |System.Collections.Stack.Synchronized()|Synchronization|  
-|System.Console.Beep()|Benutzeroberfläche|  
-|System.Console.get_Error()|Benutzeroberfläche|  
-|System.Console.get_In()|Benutzeroberfläche|  
-|System.Console.get_KeyAvailable()|Benutzeroberfläche|  
-|System.Console.get_Out()|Benutzeroberfläche|  
-|System.Console.OpenStandardError()|Benutzeroberfläche|  
-|System.Console.OpenStandardInput()|Benutzeroberfläche|  
-|System.Console.OpenStandardOutput()|Benutzeroberfläche|  
-|System.Console.Read()|Benutzeroberfläche|  
-|System.Console.ReadKey()|Benutzeroberfläche|  
-|System.Console.ReadLine()|Benutzeroberfläche|  
-|System.Console.SetError()|Benutzeroberfläche|  
-|System.Console.SetIn()|Benutzeroberfläche|  
-|System.Console.SetOut()|Benutzeroberfläche|  
-|System.Console.Write()|Benutzeroberfläche|  
-|System.Console.WriteLine()|Benutzeroberfläche|  
+|System.Console.Beep()|UI|  
+|System.Console.get_Error()|UI|  
+|System.Console.get_In()|UI|  
+|System.Console.get_KeyAvailable()|UI|  
+|System.Console.get_Out()|UI|  
+|System.Console.OpenStandardError()|UI|  
+|System.Console.OpenStandardInput()|UI|  
+|System.Console.OpenStandardOutput()|UI|  
+|System.Console.Read()|UI|  
+|System.Console.ReadKey()|UI|  
+|System.Console.ReadLine()|UI|  
+|System.Console.SetError()|UI|  
+|System.Console.SetIn()|UI|  
+|System.Console.SetOut()|UI|  
+|System.Console.Write()|UI|  
+|System.Console.WriteLine()|UI|  
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading, Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  
@@ -99,10 +100,10 @@ ms.locfileid: "68028152"
 |System.Threading.TimerBase|ExternalThreading, Synchronization|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Host Schutz Attribute und Programmierung der CLR-Integration](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Unzulässige Typen und Member in "Microsoft. VisualBasic. dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Unzulässige Typen und Member in "System. dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
- [Unzulässige Typen und Member in "System. Data. dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
+ [Host Protection-Attribute und CLR-Integrationsprogrammierung](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
+ [Unzulässige Typen und Member in Microsoft.VisualBasic.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Unzulässige Typen und Member in System.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [Unzulässige Typen und Member in System.Data.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
  [Unzulässige Typen und Elemente in 'System.Core.dll'](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
   
   

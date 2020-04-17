@@ -1,5 +1,6 @@
 ---
-title: SqlPipe-Objekt | Microsoft-Dokumentation
+title: SqlPipe-Objekt | Microsoft Docs
+description: Bei CLR-Datenbankobjekten, die in SQL Server ausgeführt werden, können Sie Ergebnisse mithilfe der Send-Methoden des SqlPipe-Objekts an die verbundene Pipe senden.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ecc3f87313b6ddcd48b7b0e527ba4effd58e624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913548"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487528"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +31,7 @@ ms.locfileid: "67913548"
  Für CLR-Datenbankobjekte (Common Language Runtime), die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden, können Sie die Ergebnisse mit der **Send** -Methode des **SqlPipe** -Objekts an die verbundene Pipe senden. Greifen Sie auf die **Pipe** -Eigenschaft des **SqlContext** -Objekts zu, um das **SqlPipe** -Objekt abzurufen. Die **SqlPipe** -Klasse gleicht konzeptionell der **Response** -Klasse in ASP.NET. Weitere Informationen finden Sie in der Referenzdokumentation zur SqlPipe-Klasse im .NET Framework Software Development Kit.  
   
 ## <a name="returning-tabular-results-and-messages"></a>Zurückgeben von Tabellenergebnissen und Meldungen  
- 
-  **SqlPipe** verfügt über eine **Send** -Methode, die drei Überladungen besitzt. Sie lauten wie folgt:  
+ **SqlPipe** verfügt über eine **Send** -Methode, die drei Überladungen besitzt. Sie lauten wie folgt:  
   
 -   `void Send(string message)`  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67913548"
   
  Die **Send** -Methode sendet Daten direkt an den Client oder Aufrufer. Normalerweise verwendet der Client die Ausgabe der **SqlPipe**-Methode, im Fall von geschachtelten gespeicherten CLR-Prozeduren kann es sich beim Consumer der Ausgabe jedoch auch um eine gespeicherte Prozedur handeln. Beispiel: Procedure1 ruft SqlCommand.ExecuteReader() mit dem Befehlstext "EXEC Procedure2" auf. Bei Procedure2 handelt es sich ebenfalls um eine verwaltete gespeicherte Prozedur. Wenn Procedure2 jetzt SqlPipe.Send( SqlDataRecord ) aufruft, wird die Zeile an den Reader von Procedure1 und nicht an den Client gesendet.  
   
- Die **Send** -Methode sendet eine Zeichen folgen Nachricht, die auf dem Client als Informations Meldung angezeigt wird, die [!INCLUDE[tsql](../../includes/tsql-md.md)]dem Ausdruck in entspricht. Die Methode kann mit **SqlDataRecord**auch ein einzeiliges Resultset oder mit **SqlDataReader**ein mehrzeiliges Resultset senden.  
+ Die **Send-Methode** sendet eine Zeichenfolgennachricht, die auf dem [!INCLUDE[tsql](../../includes/tsql-md.md)]Client als Informationsnachricht angezeigt wird, die PRINT in entspricht. Die Methode kann mit **SqlDataRecord**auch ein einzeiliges Resultset oder mit **SqlDataReader**ein mehrzeiliges Resultset senden.  
   
  Das **SqlPipe** -Objekt stellt außerdem eine **ExecuteAndSend** -Methode bereit. Mit dieser Methode kann ein Befehl (der als **SqlCommand** -Objekt übergeben wird) ausgeführt und Ergebnisse direkt zurück an den Aufrufer gesendet werden. Wenn im übermittelten Befehl Fehler vorhanden sind, werden Ausnahmen an die Pipe gesendet. Es wird jedoch auch eine Kopie an den aufrufenden verwalteten Code gesendet. Wenn der aufrufende Code die Ausnahme nicht abfängt, wird sie in der Liste aufwärts weitergeleitet an den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code und dann zweimal in der Ausgabe angezeigt. Wenn der aufrufende Code die Ausnahme abfängt, wird dem Client der Fehler angezeigt, es gibt jedoch keinen doppelten Fehler.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "67913548"
 ## <a name="returning-custom-result-sets"></a>Zurückgeben von benutzerdefinierten Resultsets  
  Verwaltete gespeicherte Prozeduren können Resultsets senden, die nicht von einem **SqlDataReader**stammen. Die **SendResultsStart** -Methode ermöglicht es gespeicherten Prozeduren zusammen mit **SendResultsRow** und **SendResultsEnd**, benutzerdefinierte Resultsets an den Client zu senden.  
   
- **Sendresulzstart** nimmt ein **SqlDataRecord** als Eingabe an. Die Methode kennzeichnet den Anfang eines Resultsets und erstellt mithilfe der Datensatzmetadaten die Metadaten zur Beschreibung des Resultsets. Der Wert des Datensatzes wird nicht mit **SendResultsStart**gesendet. Alle nachfolgenden Zeilen, die mit der **SendResultsRow**-Methode gesendet werden, müssen dieser Metadatendefinition entsprechen.  
+ **SendResultsStart** akzeptiert einen **SqlDataRecord** als Eingabe. Die Methode kennzeichnet den Anfang eines Resultsets und erstellt mithilfe der Datensatzmetadaten die Metadaten zur Beschreibung des Resultsets. Der Wert des Datensatzes wird nicht mit **SendResultsStart**gesendet. Alle nachfolgenden Zeilen, die mit der **SendResultsRow**-Methode gesendet werden, müssen dieser Metadatendefinition entsprechen.  
   
 > [!NOTE]  
->  Nach dem Aufruf der **SendResultsStart** -Methode können nur **SendResultsRow** und **SendResultsEnd** aufgerufen werden. Ein Aufruf einer beliebigen anderen Methode in der gleichen Instanz von **SqlPipe** verursacht eine **InvalidOperationException**. **Sendresulstiend** setzt **SqlPipe** auf den ursprünglichen Zustand zurück, in dem andere Methoden aufgerufen werden können.  
+>  Nach dem Aufruf der **SendResultsStart** -Methode können nur **SendResultsRow** und **SendResultsEnd** aufgerufen werden. Ein Aufruf einer beliebigen anderen Methode in der gleichen Instanz von **SqlPipe** verursacht eine **InvalidOperationException**. **SendResultsEnd** setzt **SqlPipe** auf den Ausgangszustand zurück, in dem andere Methoden aufgerufen werden können.  
   
 ### <a name="example"></a>Beispiel  
  Die gespeicherte **uspGetProductLine** -Prozedur gibt den Namen, die Produktnummer, die Farbe und den Listenpreis aller Produkte innerhalb einer bestimmten Produktlinie zurück. Diese gespeicherte Prozedur nimmt genaue Übereinstimmungen für *prodLine*an.  
@@ -142,7 +142,7 @@ EXEC uspGetProductLineVB 'T';
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SqlDataRecord-Objekt](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
- [Gespeicherte CLR-Prozeduren](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [GESPEICHERTe CLR-Prozeduren](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Von SQL Server verwendete prozessinterne spezifische Erweiterungen für ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

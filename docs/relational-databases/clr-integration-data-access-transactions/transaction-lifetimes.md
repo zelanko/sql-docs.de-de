@@ -1,5 +1,6 @@
 ---
-title: Transaktions Lebensdauer | Microsoft-Dokumentation
+title: Transaktionslebensdauer | Microsoft Docs
+description: Erfahren Sie mehr über die Transaktionslebensdauer in der SQL Server CLR-Integration. In gespeicherten Transact-SQL-Prozeduren gestarteten Transaktionen unterscheiden sich von Transaktionen, die in verwaltetem Code gestartet wurden.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa57b82d0e3f18e4ee1c3d0147935fa00cd5c06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1fed737c644ebb241a5761fffd2409c2556d28ea
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70874854"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487502"
 ---
 # <a name="transaction-lifetimes"></a>Lebensdauer von Transaktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "70874854"
   
 -   Wenn für eine Transaktion, die nicht in derselben Prozedur gestartet wurde, ein Commit ausgeführt wird, wird ein Laufzeitfehler verursacht.  
   
--   Der Versuch, einen Rollback für eine Transaktion auszuführen, der nicht in derselben Prozedur gestartet wurde, reagiert nicht mehr, da die Transaktion nicht mehr reagiert. Die Transaktion reagiert nicht mehr, bis der CLR-Code den Bereich verlässt. Dies kann hilfreich sein, wenn Sie innerhalb der Prozedur einen Fehler erkennen und sicherstellen möchten, dass die ganze Transaktion beendet wird.  
+-   Der Versuch, eine Transaktion zurückzuschlagen, die nicht in derselben Prozedur gestartet wurde, führt dazu, dass die Transaktion nicht mehr reagiert (verhindert, dass ein anderer Nebeneffektvorgang ausgeführt wird). Die Transaktion reagiert nicht mehr, bis der CLR-Code den Bereich verlässt. Dies kann hilfreich sein, wenn Sie innerhalb der Prozedur einen Fehler erkennen und sicherstellen möchten, dass die ganze Transaktion beendet wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CLR-Integration und Transaktionen](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

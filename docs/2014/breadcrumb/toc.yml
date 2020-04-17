@@ -404,21 +404,21 @@
                   tocHref: /sql/analysis-services/schema-rowsets/
                   topicHref: /sql/analysis-services/schema-rowsets/analysis-services-schema-rowsets
                 - name: Skripterstellung
-                  tocHref: /sql/analysis-services/scripting/
-                  topicHref: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla
+                  tocHref: 'https://docs.microsoft.com/analysis-services/assl'
+                  topicHref: 'https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla'
                   items:
                     - name: Objekte
-                      tocHref: /sql/analysis-services/scripting/objects/
-                      topicHref: /sql/analysis-services/scripting/objects/objects-assl
+                      tocHref: 'https://docs.microsoft.com/analysis-services/assl/objects'
+                      topicHref: 'https://docs.microsoft.com/analysis-services/assl/objects/objects-assl'
                     - name: Auflistungen
-                      tocHref: /sql/analysis-services/scripting/collections/
-                      topicHref: /sql/analysis-services/scripting/collections/collections-assl
+                      tocHref: 'https://docs.microsoft.com/analysis-services/assl/collections'
+                      topicHref: 'https://docs.microsoft.com/analysis-services/assl/collections/collections-assl'
                     - name: Eigenschaften
-                      tocHref: /sql/analysis-services/scripting/properties/
-                      topicHref: /sql/analysis-services/scripting/properties/properties-assl
+                      tocHref: 'https://docs.microsoft.com/analysis-services/assl/properties'
+                      topicHref: 'https://docs.microsoft.com/analysis-services/assl/properties/properties-assl'
                     - name: Datentypen
-                      tocHref: /sql/analysis-services/scripting/data-type/
-                      topicHref: /sql/analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl
+                      tocHref: 'https://docs.microsoft.com/analysis-services/assl/data-type'
+                      topicHref: 'https://docs.microsoft.com/analysis-services/assl/data-type/analysis-services-scripting-language-xml-data-types-assl'
                 - name: XMLA
                   tocHref: /sql/analysis-services/xmla/
                   topicHref: /sql/analysis-services/xmla/xml-for-analysis-xmla-reference
@@ -428,6 +428,6 @@
             - name: T-SQL-Tutorial
               tocHref: /sql/t-sql/
               topicHref: /sql/t-sql/tutorial-writing-transact-sql-statements
-            - name: Lernprogramme
+            - name: Tutorials
               tocHref: /sql/tutorials/
               topicHref: /sql/tutorials/tutorials-for-sql-server-2014
