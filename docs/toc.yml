@@ -222,6 +222,8 @@
               href: big-data-cluster/troubleshoot-active-directory.md
     - name: Verweis
       items:
+        - name: BDC-Partner
+          href: sql-server/partner-big-data-cluster.md
         - name: Referenz zur Bereitstellung
           items:
             - name: Konfigurationsdatei für die Bereitstellung
@@ -1385,6 +1387,15 @@
                       href: relational-databases/databases/database-properties-mirroring-page.md
                     - name: Seite „Abfragespeicher“
                       href: relational-databases/databases/database-properties-query-store-page.md
+    - name: Ereignisbenachrichtigung
+      href: relational-databases/service-broker/event-notifications.md
+      items:
+        - name: Implementieren
+          href: relational-databases/service-broker/implement-event-notifications.md
+        - name: Konfigurieren der Dialogsicherheit
+          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
+        - name: Abrufen von Informationen
+          href: relational-databases/service-broker/get-information-about-event-notifications.md
     - name: 'Filestream, Dateitabelle und BLOB'
       href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
       items:
@@ -1540,14 +1551,7 @@
         - name: Sequenzeigenschaften
           href: relational-databases/sequence-numbers/sequence-properties-general-page.md
     - name: Service Broker
-      href: relational-databases/service-broker/event-notifications.md
-      items:
-        - name: Implementieren
-          href: relational-databases/service-broker/implement-event-notifications.md
-        - name: Konfigurieren der Dialogsicherheit
-          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
-        - name: Abrufen von Informationen
-          href: relational-databases/service-broker/get-information-about-event-notifications.md
+      href: database-engine/configure-windows/sql-server-service-broker.md
     - name: Räumliche Daten
       href: relational-databases/spatial/spatial-data-sql-server.md
       items:
@@ -4370,8 +4374,6 @@
           href: database-engine/configure-windows/remote-servers.md
         - name: SQL Server-Monitor (Übersicht)
           href: database-engine/configure-windows/sql-server-monitor-overview.md
-        - name: Service Broker
-          href: database-engine/configure-windows/sql-server-service-broker.md
         - name: Pufferpoolerweiterung
           href: database-engine/configure-windows/buffer-pool-extension.md
         - name: Serverkonfigurationsoptionen
@@ -10073,8 +10075,6 @@
           href: sql-server/sql-server-docs-contribute.md
     - name: Partner
       items:
-        - name: Big Data-Cluster
-          href: sql-server/partner-big-data-cluster.md
         - name: Überwachung
           href: sql-server/partner-monitor-sql-server.md
         - name: Hochverfügbarkeit und Notfallwiederherstellung
@@ -10354,6 +10354,8 @@
                   href: relational-databases/errors-events/mssqlserver-4846-database-engine-error.md
             - name: Fehler 5000 bis 8000
               items:
+                - name: 5120
+                  href: relational-databases/errors-events/mssqlserver-5120-database-engine-error.md
                 - name: 5228
                   href: relational-databases/errors-events/mssqlserver-5228-database-engine-error.md
                 - name: 5229
@@ -10626,6 +10628,8 @@
                   href: relational-databases/errors-events/mssqlserver-17194-database-engine-error.md
                 - name: 17204
                   href: relational-databases/errors-events/mssqlserver-17204-database-engine-error.md
+                - name: 17207
+                  href: relational-databases/errors-events/mssqlserver-17207-database-engine-error.md
                 - name: 17300
                   href: relational-databases/errors-events/mssqlserver-17300-database-engine-error.md
                 - name: 17660

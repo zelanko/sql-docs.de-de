@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57ba6a83d48254bdd0d86fee9a5d2d6300cb58bc
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73729180"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728499"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Schützen einer Master Data Manager-Webanwendung
 
@@ -44,7 +44,7 @@ ms.locfileid: "73729180"
   
 5.  Wählen Sie in der Liste die Option **https**.  
   
-6.  Wählen Sie das SSL-Zertifikat aus.  
+6.  Wählen Sie das TLS/SSL-Zertifikat aus.  
   
 7.  Klicken Sie auf **OK**.  
   
@@ -65,6 +65,6 @@ ms.locfileid: "73729180"
 
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen Sie eine Master Data Manager-Webanwendung &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+ [Erstellen einer Master Data Manager-Webanwendung &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   
