@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fda014196d933ef9d5391ab4db798d821e43610
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "62833803"
 ---
 # <a name="ado-connection-manager"></a>ADO-Verbindungs-Manager
   Durch einen ADO-Verbindungs-Manager kann ein Paket eine Verbindung mit ADO-Objekten (ActiveX Data Objects) herstellen, wie z. B. einem Recordset. Dieser Verbindungs-Manager wird normalerweise für benutzerdefinierte Tasks verwendet, die in einer früheren Version einer Programmiersprache, wie z. B. Microsoft Visual Basic 6.0, erstellt wurden, oder für benutzerdefinierte Tasks, die Bestandteil einer vorhandenen Anwendung sind, die mithilfe von ADO eine Verbindung mit einer Datenquelle herstellt.  
   
- Wenn Sie einem Paket einen ADO-Verbindungs-Manager hinzu [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fügen, erstellt einen Verbindungs-Manager, der zur Laufzeit in eine ADO-Verbindung aufgelöst wird, die Eigenschaften des Verbindungs-Managers festlegt und der `Connections` -Auflistung im Paket den Verbindungs-Manager hinzufügt. Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `ADO` festgelegt.  
+ Wenn Sie einem Paket einen ADO-Verbindungs-Manager hinzufügen, erstellt einen Verbindungs-Manager, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] der zur Laufzeit in eine ADO-Verbindung aufgelöst wird, legt die Verbindungs-Manager-Eigenschaften fest und fügt den Verbindungs-Manager der `Connections` Auflistung im Paket hinzu. Die `ConnectionManagerType`-Eigenschaft des Verbindungs-Managers ist auf `ADO` festgelegt.  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>Problembehandlung des ADO-Verbindungs-Managers  
  Daten bestimmter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datumsdatentypen generieren beim Lesen durch einen ADO-Verbindungs-Manager die in der folgenden Tabelle dargestellten Ergebnisse.  
@@ -52,11 +52,11 @@ ms.locfileid: "62833803"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Konfigurieren OLE DB Verbindungs-Managers](ole-db-connection-manager.md)  
+-   [OLE DB-Verbindungs-Manager konfigurieren](ole-db-connection-manager.md)  
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Integration Services-Verbindungen &#40;SSIS&#41;](integration-services-ssis-connections.md)  
+ [Integration Services (SSIS) Connections (Integration Services-Verbindungen (SSIS))](integration-services-ssis-connections.md)  
   
   

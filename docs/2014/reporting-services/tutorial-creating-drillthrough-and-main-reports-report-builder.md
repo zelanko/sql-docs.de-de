@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9fe67c3fe0656924ea8e53c4c937a99b588b46b
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388497"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086883"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie zwei Berichtsarten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. Die folgende Abbildung zeigt die Berichte, die Sie erstellen.  
@@ -153,7 +153,7 @@ ms.locfileid: "81388497"
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
     > [!TIP]  
-    >  Wenn Sie die MDX-Abfrage nicht manuell erstellen möchten, klicken Sie auf das Symbol ![In den Entwurfsmodus wechseln](../analysis-services/media/rsqdicon-designmode.gif "Wechselt in den Entwurfsmodus"), wechseln Sie im Abfrage-Designer zum Abfragemodus, fügen Sie die abgeschlossene MDX in den Abfrage-Designer ein, und fahren Sie anschließend mit Schritt 6 unter [So erstellen Sie das Dataset](#DSkip) fort.  
+    >  Wenn Sie die MDX-Abfrage nicht manuell erstellen möchten, klicken Sie auf das Symbol ![In den Entwurfsmodus wechseln](media/rsqdicon-designmode.gif "Wechselt in den Entwurfsmodus"), wechseln Sie im Abfrage-Designer zum Abfragemodus, fügen Sie die abgeschlossene MDX in den Abfrage-Designer ein, und fahren Sie anschließend mit Schritt 6 unter [So erstellen Sie das Dataset](#DSkip) fort.  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -644,7 +644,7 @@ ms.locfileid: "81388497"
   
 4.  Klicken Sie auf den Typ **3 Zeichen** und anschließend auf **OK**.  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie im Bereich Messgerätdaten auf den Pfeil nach unten neben **(Keine Angabe)**. Wählen Sie `Net_QTY`aus.  
+5.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie im Bereich Messgerätdaten auf den Pfeil nach unten neben **(Keine Angabe)**. Klicken Sie auf `Net_QTY`.  
   
 6.  Wiederholen Sie die Schritte 2 bis 5 für die Zelle `[Sum(Net QTY)]` in der Zeilengruppe `[Product_Category_Name]` innerhalb von **Gesamt**.  
   
@@ -656,7 +656,7 @@ ms.locfileid: "81388497"
   
 3.  Klicken Sie auf den Typ **3 Zeichen** und anschließend auf **OK**.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie im Bereich Messgerätdaten auf den Pfeil nach unten neben **(Keine Angabe)**. Wählen Sie `Net_Sales`aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie im Bereich Messgerätdaten auf den Pfeil nach unten neben **(Keine Angabe)**. Klicken Sie auf `Net_Sales`.  
   
 5.  Wiederholen Sie die Schritte 1 bis 4 für die Zelle `[Sum(Net_Sales)]` in der Zeilengruppe `[Product_Category_Name]` innerhalb von **Gesamt**.  
   

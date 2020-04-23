@@ -16,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637807"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087060"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Behandlung von Problemen mit Paketausführungstools
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Funktionen und Tools, die Sie zur Behandlung von Problemen beim Ausführen von Paketen nach deren Fertigstellung und Bereitstellung verwenden können.  
@@ -52,13 +52,13 @@ ms.locfileid: "73637807"
   
 -   **Hinzufügen von beschreibenden Informationen zu den Fehlerausgaben**. Fügen Sie zusätzlich zu den beiden von der Fehlerausgabe bereitgestellten numerischen Bezeichnern beschreibende Informationen hinzu, um die Analyse der Fehlerausgabe zu vereinfachen.  
   
-     **Fügen Sie die Beschreibung des Fehlers hinzu**. Die Fehlerbeschreibungen können sehr leicht mithilfe der Skriptkomponente nachgeschlagen werden. Weitere Informationen finden Sie unter [Erweitern einer Fehlerausgabe für die Skript Komponente](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+     **Fügen Sie die Beschreibung des Fehlers hinzu.** Die Fehlerbeschreibungen können sehr leicht mithilfe der Skriptkomponente nachgeschlagen werden. Weitere Informationen finden Sie unter [Verbessern einer Fehlerausgabe für die Skriptkomponente](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Fügen Sie den Namen der Fehler Spalte hinzu**. Das Abrufen des zur Spalten-ID gehörenden Spaltennamens (die Spalten-ID wird von der Fehlerausgabe gespeichert) mithilfe der Skriptkomponente ist nicht einfach und erfordert zusätzliche Arbeitsschritte. Jede Spalten-ID in einem Datenfluss ist innerhalb dieses Datenflusstasks eindeutig und wird zur Entwurfszeit permanent im Paket gespeichert. Folgende Vorgehensweise wird zum Hinzufügen des Spaltennamens zur Fehlerausgabe empfohlen. Ein Beispiel für die Verwendung dieses Ansatzes finden [Sie unter Hinzufügen des Fehler Spaltennamens zu einer Fehlerausgabe](https://go.microsoft.com/fwlink/?LinkId=261546) auf Dougbert.com.  
+     **Fügen Sie den Namen der Fehlerspalte hinzu.** Das Abrufen des zur Spalten-ID gehörenden Spaltennamens (die Spalten-ID wird von der Fehlerausgabe gespeichert) mithilfe der Skriptkomponente ist nicht einfach und erfordert zusätzliche Arbeitsschritte. Jede Spalten-ID in einem Datenfluss ist innerhalb dieses Datenflusstasks eindeutig und wird zur Entwurfszeit permanent im Paket gespeichert. Folgende Vorgehensweise wird zum Hinzufügen des Spaltennamens zur Fehlerausgabe empfohlen. 
   
-    1.  **Erstellen Sie eine Nachschlage Tabelle mit Spaltennamen**. Erstellen Sie eine separate Anwendung, die die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-API zum Ausführen einer Iteration durch alle gespeicherten Pakete, alle Datenflüsse im Paket, alle Objekte im Datenfluss sowie alle Eingaben und Ausgaben im Datenflussobjekt verwendet. Die Anwendung sollte die Spalten-IDs und die Namen aller Spalten in einer Nachschlagetabelle zusammen mit der ID des übergeordneten Datenflusstasks und der ID des Pakets permanent speichern.  
+    1.  **Erstellen Sie eine Nachsuchtabelle mit Spaltennamen**. Erstellen Sie eine separate Anwendung, die die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-API zum Ausführen einer Iteration durch alle gespeicherten Pakete, alle Datenflüsse im Paket, alle Objekte im Datenfluss sowie alle Eingaben und Ausgaben im Datenflussobjekt verwendet. Die Anwendung sollte die Spalten-IDs und die Namen aller Spalten in einer Nachschlagetabelle zusammen mit der ID des übergeordneten Datenflusstasks und der ID des Pakets permanent speichern.  
   
-    2.  **Fügen Sie der Ausgabe den Spaltennamen hinzu**. Fügen Sie der Fehlerausgabe eine Transformation für Suche hinzu, die den Spaltennamen in der im vorherigen Schritt erstellten Nachschlagetabelle nachschlägt. Zum Nachschlagen können die Spalten-ID in der Fehlerausgabe, die Paket-ID (verfügbar über die Systemvariable System::PackageID) und die ID des Datenflusstasks (verfügbar über die Systemvariable System::TaskID) verwendet werden.  
+    2.  **Fügen Sie der Ausgabe den Spaltennamen**hinzu. Fügen Sie der Fehlerausgabe eine Transformation für Suche hinzu, die den Spaltennamen in der im vorherigen Schritt erstellten Nachschlagetabelle nachschlägt. Zum Nachschlagen können die Spalten-ID in der Fehlerausgabe, die Paket-ID (verfügbar über die Systemvariable System::PackageID) und die ID des Datenflusstasks (verfügbar über die Systemvariable System::TaskID) verwendet werden.  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Behandlung von Problemen bei der Paketausführung mithilfe von Vorgangsberichten  
  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sind Standardvorgangsberichte verfügbar, um Sie zu unterstützen, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete, die im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog bereitgestellt werden, zu überwachen. Sie können die Berichte zu Paketen verwenden, um den Status und Verlauf von Paketen anzuzeigen und ggf. die Ursache von Fehlern zu identifizieren.  
@@ -66,7 +66,7 @@ ms.locfileid: "73637807"
  Weitere Informationen finden Sie unter [Behandlung von Problemen in Berichten für die Paketausführung](troubleshooting-reports-for-package-execution.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>Behebung von Problemen bei der Paketausführung mithilfe von SSISDB-Sichten  
- Sie können eine Reihe von SSISDB-Datenbanksichten abfragen, um die Paketausführung und andere Informationen zu Vorgängen zu überwachen. Weitere Informationen finden Sie unter über [Wachen von Paket Ausführungen und anderen Vorgängen](../performance/monitor-running-packages-and-other-operations.md).  
+ Sie können eine Reihe von SSISDB-Datenbanksichten abfragen, um die Paketausführung und andere Informationen zu Vorgängen zu überwachen. Weitere Informationen finden Sie unter [Überwachen von Paketausführungen und anderen Vorgängen](../performance/monitor-running-packages-and-other-operations.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Behebung von Problemen bei der Paketausführung mithilfe der Protokollierung  
  Sie können die meisten Vorgänge beim Ausführen von Paketen durch Aktivieren der Protokollierung nachverfolgen. Bei der Protokollierung werden Informationen zu angegebenen Ereignissen zur späteren Analyse aufgezeichnet und in einer Datenbanktabelle, einer Flatfile, einer XML-Datei oder einem anderen unterstützten Ausgabeformat gespeichert.  
@@ -111,8 +111,5 @@ ms.locfileid: "73637807"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente](../configure-an-error-output-in-a-data-flow-component.md)  
-  
-## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546)(Hinzufügen des Fehlerspaltennamens zu einer Fehlerausgabe) auf dougbert.com.  
   
   

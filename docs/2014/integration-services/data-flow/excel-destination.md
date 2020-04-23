@@ -15,12 +15,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 84647752eb549bd5d3607637d679e58356597a6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827223"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087160"
 ---
 # <a name="excel-destination"></a>Excel-Ziel
   Das Excel-Ziel lädt Daten in Arbeitsblätter oder Bereiche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Arbeitsmappen.  
@@ -48,10 +48,9 @@ ms.locfileid: "62827223"
   
      Informationen dazu, wie Sie das Einschließen des einfachen Anführungszeichens vermeiden, finden Sie in diesem Blogpost: [Single quote is appended to all strings when data is transformed to excel when using Excel destination data flow component in SSIS package](https://go.microsoft.com/fwlink/?LinkId=400876)(Einzelnes Anführungszeichen wird an alle Zeichenfolgen angehängt, wenn Daten für Excel umgewandelt werden und die Excel-Ziel-Datenflusskomponente in SSIS verwendet wird), auf msdn.com.  
   
--   Das **Speichern von Memo (ntext)** ist. Zum erfolgreichen Speichern von Zeichenfolgen mit mehr als 255 Zeichen in einer Excel-Spalte muss der Treiber den Datentyp der Zielspalte als **memo** und nicht als **string**erkennen. Wenn die Zieltabelle bereits Datenzeilen enthält, müssen die ersten Zeilen, die vom Treiber als Stichprobe genommen werden, mindestens eine Instanz eines Werts mit mehr als 255 Zeichen in der Memospalte enthalten. Wenn die Ziel Tabelle während des Paket Entwurfs oder zur Laufzeit erstellt wird, muss für die CREATE TABLE-Anweisung LONGTEXT (oder eines der Synonyme) als Datentyp der Memo Spalte verwendet werden.  
+-   **Speichern von Memodaten (ntext)** Zum erfolgreichen Speichern von Zeichenfolgen mit mehr als 255 Zeichen in einer Excel-Spalte muss der Treiber den Datentyp der Zielspalte als **memo** und nicht als **string**erkennen. Wenn die Zieltabelle bereits Datenzeilen enthält, müssen die ersten Zeilen, die vom Treiber als Stichprobe genommen werden, mindestens eine Instanz eines Werts mit mehr als 255 Zeichen in der Memospalte enthalten. Wenn die Zieltabelle während des Paketentwurfs oder zur Laufzeit erstellt wird, muss die CREATE TABLE-Anweisung LONGTEXT (oder eines ihrer Synonyme) als Datentyp der Memo-Spalte verwenden.  
   
--   **Datentypen**. Der Excel-Treiber erkennt nur einen begrenzten Satz von Datentypen. Beispielsweise werden alle numerischen Spalten als Werte mit doppelter Genauigkeit (DT_R8) interpretiert, und alle Zeichenfolgenspalten (außer Memospalten) werden als Unicode-Zeichenfolgen mit 255 Zeichen (DT_WSTR) interpretiert. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden die Excel-Datentypen folgendermaßen zugeordnet:  
+-   **Datentypen**. Der Excel-Treiber erkennt nur einen begrenzten Satz von Datentypen. Beispielsweise werden alle numerischen Spalten als Werte mit doppelter Genauigkeit (DT_R8) interpretiert, und alle Zeichenfolgenspalten (außer Memospalten) werden als Unicode-Zeichenfolgen mit 255 Zeichen (DT_WSTR) interpretiert. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden die Excel-Datentypen folgendermaßen zugeordnet:  
   
     -   Numerisch – Gleitkommawert mit doppelter Genauigkeit (DT_R8)  
   
@@ -65,8 +64,7 @@ ms.locfileid: "62827223"
   
     -   Memo – Unicode-Textstream (DT_NTEXT)  
   
--   **Datentyp-und Längen Konvertierungen**. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden Datentypen nicht implizit konvertiert. Daher müssen Sie eventuell die Transformationen für abgeleitete Spalten und für die Datenkonvertierung verwenden, um Excel-Daten vor dem Laden in ein Nicht-Excel-Ziel explizit zu konvertieren bzw. um Nicht-Excel-Daten vor dem Laden in ein Excel-Ziel zu konvertieren. In diesem Fall kann es nützlich sein, das erste Paket mit dem Import/Export-Assistenten zu erstellen, mit dem die Konfiguration notwendiger Konvertierungen vorgenommen wird. Im Folgenden finden Sie einige Beispiele für ggf. erforderliche Konvertierungen:  
+-   **Datentyp- und Längenkonvertierungen**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden Datentypen nicht implizit konvertiert. Daher müssen Sie eventuell die Transformationen für abgeleitete Spalten und für die Datenkonvertierung verwenden, um Excel-Daten vor dem Laden in ein Nicht-Excel-Ziel explizit zu konvertieren bzw. um Nicht-Excel-Daten vor dem Laden in ein Excel-Ziel zu konvertieren. In diesem Fall kann es nützlich sein, das erste Paket mit dem Import/Export-Assistenten zu erstellen, mit dem die Konfiguration notwendiger Konvertierungen vorgenommen wird. Im Folgenden finden Sie einige Beispiele für ggf. erforderliche Konvertierungen:  
   
     -   Konvertierung zwischen Unicode-Excel-Zeichenfolgenspalten und Nicht-Unicode-Zeichenfolgenspalten mit bestimmten Codepages.  
   
@@ -83,15 +81,15 @@ ms.locfileid: "62827223"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Ziel-Editor für Excel** festlegen können:  
   
--   [Der Ziel-Editor für Excel &#40;Seite Verbindungs-Manager&#41;](../excel-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für Excel &#40;Seite Verbindungs-Manager&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für Excel &#40;Seite "Zuordnungen"&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für Excel &#40;Seite Zuordnungen&#41;](../excel-destination-editor-mappings-page.md)  
   
--   [Der Ziel-Editor für Excel &#40;Seite Fehlerausgabe&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Ziel-Editor für Excel &#40;Seite Fehlerausgabe&#41;](../excel-destination-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält alle Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](../common-properties.md)  
+-   [Allgemeine Eigenschaften](../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Excel](excel-custom-properties.md)  
   
@@ -105,17 +103,9 @@ ms.locfileid: "62827223"
   
 -   [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-content"></a>Verwandte Inhalte  
-  
--   Blogeintrag [Excel in Integration Services, Part 1 of 3: Connections and Components](https://go.microsoft.com/fwlink/?LinkId=217674)auf dougbert.com  
-  
--   Blogeintrag [Excel in Integration Services, Part 2 of 3: Tables and Data Types](https://go.microsoft.com/fwlink/?LinkId=217675)auf dougbert.com.  
-  
--   Blogeintrag [Excel in Integration Services, Part 3 of 3: Issues and Alternatives](https://go.microsoft.com/fwlink/?LinkId=217676)auf dougbert.com.  
-  
 ## <a name="see-also"></a>Weitere Informationen  
  [Excel-Quelle](excel-source.md)   
- [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variablen](../integration-services-ssis-variables.md)   
  [Datenfluss](data-flow.md)   
  [Arbeiten mit Excel-Dateien mit dem Skripttask](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

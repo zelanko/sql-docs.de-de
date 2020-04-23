@@ -21,12 +21,12 @@ ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2ab23134ef193c4dfc17c901fc7d41e1af2083d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e6d870ec12a896ff9046aa2e05df1e1f6220dc17
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62768376"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087080"
 ---
 # <a name="logging-in-the-script-task"></a>Protokollieren im Skripttask
   Durch Verwendung der Protokollierung in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paketen können Sie detaillierte Informationen über Status, Ergebnisse und Probleme der Ausführung aufzeichnen, indem Sie vordefinierte Ereignisse bzw. benutzerdefinierte Meldungen für die spätere Analyse erfassen. Der Skripttask kann die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>-Methode des `Dts`-Objekts verwenden, um benutzerdefinierte Daten zu protokollieren. Wenn die Protokollierung aktiviert ist und im Dialogfeld **SSIS-Protokolle konfigurieren** auf der Registerkarte **Details** das **ScriptTaskLogEntry**-Ereignis für die Protokollierung ausgewählt ist, dann speichert ein einzelner Aufruf der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>-Methode die Ereignisinformationen in allen Protokollanbietern, die für den Task konfiguriert wurden.  
@@ -94,9 +94,7 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Blog-Artikel, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=165644) (Protokollieren von benutzerdefinierten Ereignissen für Integration Services-Tasks), auf „dougbert.com“  
-  
-![Integration Services Symbol (klein)](../../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integrationsdienste-Symbol (klein)](../../media/dts-16.gif "Integration Services (kleines Symbol)")  **Bleiben Sie mit Integration Services auf dem Laufenden**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Protokollierung &#40;SSIS&#41;](../../performance/integration-services-ssis-logging.md)  
